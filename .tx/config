@@ -2,6 +2,7 @@
 host = https://www.transifex.com
 
 [forums.all]
-source_file = language/myproj.pot
+source_file = language/en.php
+file_filter = language/<lang>.php
 source_lang = en_US
 type = PHP_ARRAY
