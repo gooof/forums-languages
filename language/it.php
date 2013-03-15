@@ -13487,32 +13487,33 @@ if (empty($lang) || !is_array($lang))
 
 
 $lang = array_merge($lang, array(
-      'ACP_LEXICON_EXPLAIN'    => 'Here you can set terms in the lexicon, and / or contributions automatically to a tooltip should be.',
-      'ACRONYM'        => 'Acronyme',
-      'ACRONYMS'        => 'Acronyme und Abk&uuml;rzungen',
-      'ACRONYM_EXPLAIN' => 'Insert a space before / after the term, if you like to only find entire words. Without spaces the term was also found in longer words.',
-      'ADD_TERM'        => 'Add new term.',
-      'ALLOW_ACRONYM'        => 'Activate the showing of terms in posts:',
-      'ALLOW_ACRONYM_EXPLAIN'        => 'For terms from the lexicon acronyms would be inserted automatically.',
-      'ALLOW_ACRONYM_IN_WORDS'        => 'Allow terms in words:',
-      'ALLOW_ACRONYM_IN_WORDS_EXPLAIN'        => 'Find terms also inside from words, if you sont insert space before/after the term.',
+	'ACP_LEXICON_EXPLAIN'    => 'Here you can set terms in the lexicon, and / or contributions automatically to a tooltip should be.',
+	'ACRONYM'        => 'Acronyme',
+	'ACRONYMS'        => 'Acronyme und Abk&uuml;rzungen',
+	'ACRONYM_EXPLAIN' => 'Insert a space before / after the term, if you like to only find entire words. Without spaces the term was also found in longer words.',
+	'ADD_TERM'        => 'Add new term.',
+	'ALLOW_ACRONYM'        => 'Activate the showing of terms in posts:',
+	'ALLOW_ACRONYM_EXPLAIN'        => 'For terms from the lexicon acronyms would be inserted automatically.',
+	'ALLOW_ACRONYM_IN_WORDS'        => 'Allow terms in words:',
+	'ALLOW_ACRONYM_IN_WORDS_EXPLAIN'        => 'Find terms also inside from words, if you sont insert space before/after the term.',
 
-      'DESCRIPTION' => 'Descrizione',
-      'DESCRIPTION_EXPLAIN' => 'This text would be shown as tooltip and in the lexicon.',
+	'DESCRIPTION' => 'Descrizione',
+	'DESCRIPTION_EXPLAIN' => 'This text would be shown as tooltip and in the lexicon.',
 
-      'ENTER_TERM'  => 'You must insert a term and a description.',
-      'EDIT_TERM'  => 'Edit term',
-      'LEXICON'  => 'Lexicon',
-      'LONG_DESC' => 'Long description',
-      'LONG_DESC_EXPLAIN' => 'This text would be shown only in the lexicon.',
+	'ENTER_TERM'  => 'You must insert a term and a description.',
+	'EDIT_TERM'  => 'Edit term',
+	'LEXICON'  => 'Lexicon',
+	'LONG_DESC' => 'Long description',
+	'LONG_DESC_EXPLAIN' => 'This text would be shown only in the lexicon.',
 
-      'NO_TERM'  => 'No term selected for edit.',
+	'NO_TERM'  => 'No term selected for edit.',
 
-      'TERM' => 'Term',
-      'TERM_ADDED'    => ' Term succesfully added.',
-      'TERM_DESC' => 'Insert a term.',
-      'TERM_REMOVED'    => 'The selected term was succesfully deleted.',
-      'TERM_UPDATED'    => 'The selected term was succesfully updated.',));
+	'TERM' => 'Term',
+	'TERM_ADDED'    => ' Term succesfully added.',
+	'TERM_DESC' => 'Insert a term.',
+	'TERM_REMOVED'    => 'The selected term was succesfully deleted.',
+	'TERM_UPDATED'    => 'The selected term was succesfully updated.',
+));
 
 #######language/en/acp/modules.php#######
 
@@ -13840,10 +13841,7 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/acp/phpbb_seo.php#######
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
+
 $lang = array_merge($lang, array(
 	'ACP_CAT_PHPBB_SEO'	=> 'phpBB SEO',
 	'ACP_MOD_REWRITE'	=> 'URL Rewriting settings',
@@ -14001,16 +13999,6 @@ $lang = array_merge($lang, array(
 ));
 #######language/en/acp/posting.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ACP_BBCODES_EXPLAIN'		=> 'BBCode is a special implementation of HTML offering greater control over what and how something is displayed. From this page you can add, remove and edit custom BBCodes.',
@@ -14050,17 +14038,6 @@ $lang = array_merge($lang, array(
 	'TOKEN_DEFINITION'		=> 'What can it be?',
 	'TOO_MANY_BBCODES'		=> 'You cannot create any more BBCodes. Please remove one or more BBCodes then try again.',
 
-	'tokens'	=>	array(
-		'TEXT'			=> 'Qualsiasi testo, inclusi con caratteri stranieri, numeri, ecc... Non usare questo segnaposto nei tag HTML. In alternativa usa IDENTIFIER, INTTEXT o SIMPLETEXT.',
-		'SIMPLETEXT'	=> 'Caratteri dall’alfabeto latino (A-Z), numeri, spazi, virgole, punti, segno meno, segno più, trattino e underscore',
-		'INTTEXT'		=> 'Caratteri Unicode, numeri, spazi, virgole, punti, segno meno, segno più, trattino, underscore e spazi bianchi.',
-		'IDENTIFIER'	=> 'Caratteri dall’alfabeto latino (A-Z), numeri, trattino e underscore',
-		'NUMBER'		=> 'No.',
-		'EMAIL'			=> 'E-mail',
-		'URL'			=> 'Un URL valido usando qualsiasi protocollo (http, ftp, etc… non possono essere usati a causa di exploit javascript). Se non è definito, &quot;http://&quot; verrà aggiunto davanti alla stringa.',
-		'LOCAL_URL'		=> 'Un URL locale. L’URL deve essere relativo alla pagina in cui si trova l’argomento e non può contenere il nome del server, né un protocollo.',
-		'COLOR'			=> 'Un colore definito per HTML, sia in forma numerica <samp>#FF1234</samp> o un <a href="http://www.w3.org/TR/CSS21/syndata.html#value-def-color">colore con chiave CSS</a> tipo <samp>fuchsia</samp> o <samp>InactiveBorder</samp>'
-	)
 ));
 
 $lang = array_merge($lang, array(

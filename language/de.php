@@ -13525,32 +13525,33 @@ if (empty($lang) || !is_array($lang))
 
 
 $lang = array_merge($lang, array(
-      'ACP_LEXICON_EXPLAIN'    => 'Hier kannst du Begriffe einstellen, die im Lexikon angezeigt und/oder in Beiträgen automatisch mit einem Tooltip versehen werden sollen. ',
-      'ACRONYM'        => 'Acronyme',
-      'ACRONYMS'        => 'Acronyme und Abkürzungen',
-      'ACRONYM_EXPLAIN' => 'Wichtig: Dieser Text wird im Beitrag gefunden und mit dem gewählten Begriff und Beschreibung ersetzt.<br />Füge Leerzeichen vor und nach dem Begriff ein, wenn nur ganze Wörter gefunden werden sollen. Ohne Leerzeichen wird der Begriff auch in zusammengesetzten Wörtern gefunden.<br />Füge keine Satz- oder Sonderzeichen wie (.\+*?[^]$(){}=!<>|:) an den Anfang oder das Ende des Wortes wenn Du dort ein Leerzeichen eingibst, sonst kann es nicht gefunden werden.',
-      'ADD_TERM'        => 'Neuen Begriff hinzufügen',
-      'ALLOW_ACRONYM'        => 'Anzeigen der Akronyme in Beiträgen aktivieren:',
-      'ALLOW_ACRONYM_EXPLAIN'        => 'In Beiträgen werden für im Lexikon vorhandene Wörter automatisch Akronyme einfügt.',
-      'ALLOW_ACRONYM_IN_WORDS'        => 'Akronyme in Worten erlauben:',
-      'ALLOW_ACRONYM_IN_WORDS_EXPLAIN'        => 'Findet Lexikonbegriffe auch innerhalb von Worten, wenn du nicht vor/hinter dem Begriff Leerzeichen einfügst.',
+	'ACP_LEXICON_EXPLAIN'    => 'Hier kannst du Begriffe einstellen, die im Lexikon angezeigt und/oder in Beiträgen automatisch mit einem Tooltip versehen werden sollen. ',
+	'ACRONYM'        => 'Acronyme',
+	'ACRONYMS'        => 'Acronyme und Abkürzungen',
+	'ACRONYM_EXPLAIN' => 'Wichtig: Dieser Text wird im Beitrag gefunden und mit dem gewählten Begriff und Beschreibung ersetzt.<br />Füge Leerzeichen vor und nach dem Begriff ein, wenn nur ganze Wörter gefunden werden sollen. Ohne Leerzeichen wird der Begriff auch in zusammengesetzten Wörtern gefunden.<br />Füge keine Satz- oder Sonderzeichen wie (.\+*?[^]$(){}=!<>|:) an den Anfang oder das Ende des Wortes wenn Du dort ein Leerzeichen eingibst, sonst kann es nicht gefunden werden.',
+	'ADD_TERM'        => 'Neuen Begriff hinzufügen',
+	'ALLOW_ACRONYM'        => 'Anzeigen der Akronyme in Beiträgen aktivieren:',
+	'ALLOW_ACRONYM_EXPLAIN'        => 'In Beiträgen werden für im Lexikon vorhandene Wörter automatisch Akronyme einfügt.',
+	'ALLOW_ACRONYM_IN_WORDS'        => 'Akronyme in Worten erlauben:',
+	'ALLOW_ACRONYM_IN_WORDS_EXPLAIN'        => 'Findet Lexikonbegriffe auch innerhalb von Worten, wenn du nicht vor/hinter dem Begriff Leerzeichen einfügst.',
 
-      'DESCRIPTION' => 'Beschreibung',
-      'DESCRIPTION_EXPLAIN' => 'Dieser Text wird als Tooltip und im Lexikon angezeigt.',
+	'DESCRIPTION' => 'Beschreibung',
+	'DESCRIPTION_EXPLAIN' => 'Dieser Text wird als Tooltip und im Lexikon angezeigt.',
 
-      'ENTER_TERM'  => 'Du musst einen Begriff und seine Erklärung eingeben.',
-      'EDIT_TERM'  => 'Begriff bearbeiten',
-      'LEXICON'  => 'Lexikon',
-      'LONG_DESC' => 'Längere Erklärung',
-      'LONG_DESC_EXPLAIN' => 'Dieser Text wird nur im Lexikon angezeigt.',
+	'ENTER_TERM'  => 'Du musst einen Begriff und seine Erklärung eingeben.',
+	'EDIT_TERM'  => 'Begriff bearbeiten',
+	'LEXICON'  => 'Lexikon',
+	'LONG_DESC' => 'Längere Erklärung',
+	'LONG_DESC_EXPLAIN' => 'Dieser Text wird nur im Lexikon angezeigt.',
 
-      'NO_TERM'  => 'Kein Begriff zum Bearbeiten ausgewählt.',
+	'NO_TERM'  => 'Kein Begriff zum Bearbeiten ausgewählt.',
 
-      'TERM' => 'Begriff',
-      'TERM_ADDED'    => ' Begriff erfolgreich hinzugefügt.',
-      'TERM_DESC' => 'Gib einen Begriff ein.',
-      'TERM_REMOVED'    => 'Der ausgewählte  Begriff wurde erfolgreich entfernt.',
-      'TERM_UPDATED'    => 'Der ausgewählte  Begriff wurde erfolgreich aktualisiert.',));
+	'TERM' => 'Begriff',
+	'TERM_ADDED'    => ' Begriff erfolgreich hinzugefügt.',
+	'TERM_DESC' => 'Gib einen Begriff ein.',
+	'TERM_REMOVED'    => 'Der ausgewählte  Begriff wurde erfolgreich entfernt.',
+	'TERM_UPDATED'    => 'Der ausgewählte  Begriff wurde erfolgreich aktualisiert.',
+));
 
 #######language/en/acp/modules.php#######
 
@@ -13860,10 +13861,7 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/acp/phpbb_seo.php#######
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
+
 $lang = array_merge($lang, array(
 	'ACP_CAT_PHPBB_SEO'	=> 'SEO Optimierung',
 	'ACP_MOD_REWRITE'	=> 'SEO-URL',
@@ -14021,16 +14019,6 @@ $lang = array_merge($lang, array(
 ));
 #######language/en/acp/posting.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ACP_BBCODES_EXPLAIN'		=> 'BBCode is a special implementation of HTML offering greater control over what and how something is displayed. From this page you can add, remove and edit custom BBCodes.',
@@ -14070,17 +14058,6 @@ $lang = array_merge($lang, array(
 	'TOKEN_DEFINITION'		=> 'What can it be?',
 	'TOO_MANY_BBCODES'		=> 'You cannot create any more BBCodes. Please remove one or more BBCodes then try again.',
 
-	'tokens'	=>	array(
-		'TEXT'			=> 'Jeder Text, einschließlich fremder Zeichen, Ziffern usw. Du solltest dieses Token nicht innerhalb von HTML-Tags verwenden, sondern IDENTIFIER, INTTEXT oder SIMPLETEXT vorziehen.',
-		'SIMPLETEXT'	=> 'Zeichen des lateinischen Alphabets (A-Z), Ziffern, Leerzeichen, Komma, Punkt, Minus, Plus und Unterstrich',
-		'INTTEXT'		=> 'Unicode-Buchstaben, Ziffern, Leerzeichen, Komma, Punkt, Minus, Plus, Bindestrich, Unterstrich und Leerräume.',
-		'IDENTIFIER'	=> 'Zeichen des lateinischen Alphabets (A-Z), Ziffern, Bindestrich und Unterstrich',
-		'NUMBER'		=> 'Nr',
-		'EMAIL'			=> 'E-Mail',
-		'URL'			=> 'URL',
-		'LOCAL_URL'		=> 'Eine lokale URL. Muss relativ zur Themenansicht angegeben werden; Protokoll und Domain darf nicht vorangestellt werden.',
-		'COLOR'			=> 'Farbe'
-	)
 ));
 
 $lang = array_merge($lang, array(
