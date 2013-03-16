@@ -1,18 +1,12 @@
 ﻿#######language/en/calendar.php#######
 
-if (empty($lang) || !is_array($lang))
-{
-    $lang = array();
-}
-
 $lang = array_merge($lang, array(
-	'WHEN'				=> 'Termin',
-
+	'WHEN'					=> 'Termin',
 	'ALL_DAY'				=> 'Ganztägiger Termin',
 	'AM'					=> 'vormittags',
 	'CALENDAR_TITLE'		=> 'Kalender',
-	'CALENDAR_NUMBER_ATTEND'=> 'Die Anzahl von Leuten, die du zu diesem Termin einlädst',
-	'CALENDAR_NUMBER_ATTEND_EXPLAIN'=> '(gebe für dich selbst eine 1 ein)',
+	'CALENDAR_NUMBER_ATTEND'	=> 'Die Anzahl von Leuten, die du zu diesem Termin einlädst',
+	'CALENDAR_NUMBER_ATTEND_EXPLAIN'	=> '(gebe für dich selbst eine 1 ein)',
 	'CALENDAR_RESPOND'		=> 'Bitte registriere dich hier für den Termin',
 	'CALENDAR_WILL_ATTEND'	=> 'Wirst du an diesem Termin teilnehmen?',
 	'COL_HEADCOUNT'			=> 'Anzahl',
@@ -31,22 +25,22 @@ $lang = array_merge($lang, array(
 	'INVALID_EVENT'			=> 'Der Termin, den du abonnieren möchtest, exisiert nicht.',
 	'INVITE_INFO'			=> 'Eingeladen',
 	'OCCURS_EVERY'			=> 'Wiederholt sich',
-	'RECURRING_EVENT_CASE_1_STR'    => '%1$s Tag im %4$s - jedes %5$s. Jahr',
-	'RECURRING_EVENT_CASE_2_STR'    => '%3$s %2$s im %4$s - jedes %5$s. Jahr',
-	'RECURRING_EVENT_CASE_3_STR'    => '%3$s %2$s von vollen Wochen im %4$s - jedes %5$s. Jahr',
-	'RECURRING_EVENT_CASE_3b_STR'    => '%2$s der ersten Teilwoche im %4$s - jedes %5$s. Jahr',
-	'RECURRING_EVENT_CASE_4_STR'    => '%3$s vom letzten %2$s im %4$s - jedes %5$s. Jahr',
-	'RECURRING_EVENT_CASE_5_STR'    => '%3$s vom letzten %2$s von vollen Wochen im %4$s - jedes %5$s. Jahr',
-	'RECURRING_EVENT_CASE_5b_STR'    => '%2$s der letzten Teilwoche im %4$s - jedes %5$s. Jahr',
-	'RECURRING_EVENT_CASE_6_STR'    => '%1$s Tag des Monats - jeden %5$s. Monat',
-	'RECURRING_EVENT_CASE_7_STR'    => '%3$s %2$s des Monats - jeden %5$s. Monat',
-	'RECURRING_EVENT_CASE_8_STR'    => '%3$s %2$s von vollen Wochen im Monat - jeden %5$s. Monat',
-	'RECURRING_EVENT_CASE_8b_STR'    => '%2$s der ersten Teilwoche im Monat - jeden %5$s. Monat',
-	'RECURRING_EVENT_CASE_9_STR'    => '%3$s des letzten %2$s des Monats - jeden %5$s. Monat',
-	'RECURRING_EVENT_CASE_10_STR'    => '%3$s des letzten %2$s von vollen Wochen im Monat - jeden %5$s. Monat',
-	'RECURRING_EVENT_CASE_10b_STR'    => '%2$s der letzten Teilwoche im Monat - jeden %5$s. Monat',
-	'RECURRING_EVENT_CASE_11_STR'    => '%2$s - jede %5$s Woche',
-	'RECURRING_EVENT_CASE_12_STR'    => 'Jeden %5$s Tag',
+	'RECURRING_EVENT_CASE_1_STR'	=> '%1$s Tag im %4$s - jedes %5$s. Jahr',
+	'RECURRING_EVENT_CASE_2_STR'	=> '%3$s %2$s im %4$s - jedes %5$s. Jahr',
+	'RECURRING_EVENT_CASE_3_STR'	=> '%3$s %2$s von vollen Wochen im %4$s - jedes %5$s. Jahr',
+	'RECURRING_EVENT_CASE_3b_STR'	=> '%2$s der ersten Teilwoche im %4$s - jedes %5$s. Jahr',
+	'RECURRING_EVENT_CASE_4_STR'	=> '%3$s vom letzten %2$s im %4$s - jedes %5$s. Jahr',
+	'RECURRING_EVENT_CASE_5_STR'	=> '%3$s vom letzten %2$s von vollen Wochen im %4$s - jedes %5$s. Jahr',
+	'RECURRING_EVENT_CASE_5b_STR'	=> '%2$s der letzten Teilwoche im %4$s - jedes %5$s. Jahr',
+	'RECURRING_EVENT_CASE_6_STR'	=> '%1$s Tag des Monats - jeden %5$s. Monat',
+	'RECURRING_EVENT_CASE_7_STR'	=> '%3$s %2$s des Monats - jeden %5$s. Monat',
+	'RECURRING_EVENT_CASE_8_STR'	=> '%3$s %2$s von vollen Wochen im Monat - jeden %5$s. Monat',
+	'RECURRING_EVENT_CASE_8b_STR'	=> '%2$s der ersten Teilwoche im Monat - jeden %5$s. Monat',
+	'RECURRING_EVENT_CASE_9_STR'	=> '%3$s des letzten %2$s des Monats - jeden %5$s. Monat',
+	'RECURRING_EVENT_CASE_10_STR'	=> '%3$s des letzten %2$s von vollen Wochen im Monat - jeden %5$s. Monat',
+	'RECURRING_EVENT_CASE_10b_STR'	=> '%2$s der letzten Teilwoche im Monat - jeden %5$s. Monat',
+	'RECURRING_EVENT_CASE_11_STR'	=> '%2$s - jede %5$s Woche',
+	'RECURRING_EVENT_CASE_12_STR'	=> 'Jeden %5$s Tag',
 	'LOCAL_DATE_FORMAT'		=> '%1$s %2$s, %3$s',
 	'MAYBE'					=> 'evtl.',
 	'MONTH'					=> 'Monat',
@@ -70,12 +64,6 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/calendarpost.php#######
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ALL_DAY'					=> 'Ganztägiger Termin',
@@ -121,19 +109,18 @@ $lang = array_merge($lang, array(
 	'RECURRING_EVENT_TYPE_EXPLAIN'	=> 'Hinweis: Die Wahlmöglichkeiten beginnen mit einem Buchstaben, die die Frequenz kennzeichen: J - Jährlich, M - Monatlich, W - Wöchentlich, T - Täglich',
 	'RECURRING_EVENT_FREQ'		=> 'Termin-Intervall',
 	'RECURRING_EVENT_FREQ_EXPLAIN'	=> 'Dieser Wert entspricht [Y] in der Auswahl oben',
-	'RECURRING_EVENT_CASE_1'    => 'J: [X.] Tag im [Monat] jedes [Y.] Jahr',
-	'RECURRING_EVENT_CASE_2'    => 'J: [X.] [Wochentag] im [Monat] jedes [Y.] Jahr',
-	'RECURRING_EVENT_CASE_3'    => 'J: [X.] [Wochentag] von vollen Wochen im [Monat] jedes [Y.] Jahr',
-	'RECURRING_EVENT_CASE_4'    => 'J: [X.] vom letzten [Wochentag] im [Monat] jedes [Y.] Jahr',
-	'RECURRING_EVENT_CASE_5'    => 'J: [X.] vom letzten [Wochentag] von vollen Wochen im [Monat] jedes [Y.] Jahr',
-	'RECURRING_EVENT_CASE_6'    => 'M: [X.] Tag des Monats jeden [Y.] Monat',
-	'RECURRING_EVENT_CASE_7'    => 'M: [X.] [Wochentag] des Monats jeden [Y.] Monat',
-	'RECURRING_EVENT_CASE_8'    => 'M: [X.] [Wochentag] von vollen Wochen des Monats jeden [Y.] Monat',
-	'RECURRING_EVENT_CASE_9'    => 'M: [X.] des letzten [Wochentag] des Monats jeden [Y.] Monat',
-	'RECURRING_EVENT_CASE_10'    => 'M: [X.] des letzten [Wochentag] von vollen Wochen des Monats jeden [Y.] Monat',
-	'RECURRING_EVENT_CASE_11'    => 'W: [Wochentag] jede [Y.] Woche',
-	'RECURRING_EVENT_CASE_12'    => 'T: Jeden [Y.] Tag',
-
+	'RECURRING_EVENT_CASE_1'	=> 'J: [X.] Tag im [Monat] jedes [Y.] Jahr',
+	'RECURRING_EVENT_CASE_2'	=> 'J: [X.] [Wochentag] im [Monat] jedes [Y.] Jahr',
+	'RECURRING_EVENT_CASE_3'	=> 'J: [X.] [Wochentag] von vollen Wochen im [Monat] jedes [Y.] Jahr',
+	'RECURRING_EVENT_CASE_4'	=> 'J: [X.] vom letzten [Wochentag] im [Monat] jedes [Y.] Jahr',
+	'RECURRING_EVENT_CASE_5'	=> 'J: [X.] vom letzten [Wochentag] von vollen Wochen im [Monat] jedes [Y.] Jahr',
+	'RECURRING_EVENT_CASE_6'	=> 'M: [X.] Tag des Monats jeden [Y.] Monat',
+	'RECURRING_EVENT_CASE_7'	=> 'M: [X.] [Wochentag] des Monats jeden [Y.] Monat',
+	'RECURRING_EVENT_CASE_8'	=> 'M: [X.] [Wochentag] von vollen Wochen des Monats jeden [Y.] Monat',
+	'RECURRING_EVENT_CASE_9'	=> 'M: [X.] des letzten [Wochentag] des Monats jeden [Y.] Monat',
+	'RECURRING_EVENT_CASE_10'	=> 'M: [X.] des letzten [Wochentag] von vollen Wochen des Monats jeden [Y.] Monat',
+	'RECURRING_EVENT_CASE_11'	=> 'W: [Wochentag] jede [Y.] Woche',
+	'RECURRING_EVENT_CASE_12'	=> 'T: Jeden [Y.] Tag',
 	'RETURN_CALENDAR'			=> '%sZurück zum Kalender%s',
 	'START_DATE'				=> 'Beginn Datum',
 	'START_TIME'				=> 'Beginn Zeit',
@@ -148,21 +135,9 @@ $lang = array_merge($lang, array(
 	'VIEW_EVENT'				=> '%sAngelegten Termin ansehen%s',
 	'WEEK'						=> 'Woche',
 	'ZERO_LENGTH_EVENT'			=> 'Ein Termin kann nicht zur gleichen Zeit beginnen und enden!',
-
 ));
 
 #######language/en/captcha_qa.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'CAPTCHA_QA'				=> 'Q&amp;A',
@@ -188,21 +163,9 @@ $lang = array_merge($lang, array(
 
 	'QA_ERROR_MSG'				=> 'Bitte fülle alle Felder aus und gebe mindestens eine Antwort an.',
 	'QA_LAST_QUESTION'			=> 'Du kannst nicht alle Fragen löschen, solange das Plugin aktiv ist.',
-
 ));
 
 #######language/en/captcha_recaptcha.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'RECAPTCHA_LANG'				=> 'de',
@@ -219,17 +182,6 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/common.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'TRANSLATION_INFO'	=> 'phpBB3 Forum von <a href="http://www.phpbb8.de/">phpBB8.de</a>',
@@ -596,7 +548,6 @@ $lang = array_merge($lang, array(
 	'NO_USERS'					=> 'Die von dir ausgewählten Benutzer existieren nicht.',
 	'NO_USER_SPECIFIED'			=> 'Es wurde kein Benutzername angegeben.',
 
-
 	'OCCUPATION'				=> 'Tätigkeit',
 	'OFFLINE'					=> 'Offline',
 	'ONLINE'					=> 'Online',
@@ -922,7 +873,6 @@ $lang = array_merge($lang, array(
 
 	'default_dateformat'	=> 'D j. M Y, H:i', // Mon Jan 01, 2007 1:37 pm
 
-
 	'PORTAL'				=> 'Portal',
 	'FORUM_PORTAL'			=> 'Portal',
 	'TO_DAY'				=> 'Datum: %s',
@@ -1077,49 +1027,49 @@ $lang = array_merge($lang, array(
 	'FORUM_LOW_POSTCOUNT'	=> 'Du hast nicht genügend Beiträge um dieses Forum zu betreten.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'Du hast nicht genügend Beiträge um dieses Thema lesen zu kännen.',
 
-	'RSS_CHAN_LIST_TITLE' => 'Foren',
-	'RSS_CHAN_LIST_DESC' => 'Dieser Channel gibt einen Überblick über unsere RSS Feeds.',
-	'RSS_CHAN_LIST_DESC_MODULE' => 'This channel list is listing the RSS feeds available for : %s.',
-	'RSS_ANNOUCES_DESC' => 'This feeds is listing all the global announcements of : %s',
-	'RSS_ANNOUNCES_TITLE' => 'Ankündigungen: %s',
-	'GYM_LAST_POST_BY' => 'letzter Beitrag von ',
-	'GYM_FIRST_POST_BY' => 'Geschrieben von ',
-	'GYM_LINK' => 'Link',
-	'GYM_SOURCE' => 'Quelle',
-	'RSS_MORE' => 'mehr',
-	'RSS_CHANNELS' => 'Channels',
-	'RSS_CONTENT' => 'Digest',
-	'RSS_SHORT' => 'Kurze Liste',
-	'RSS_LONG' => 'Lange Liste',
-	'RSS_NEWS' => 'News',
-	'RSS_NEWS_DESC' => 'Letzte News von',
-	'RSS_REPORTED_UNAPPROVED' => 'This item is currently waiting for approval.',
-	'GYM_HOME' => 'Home Page',
-	'GYM_FORUM_INDEX' => 'Forum Index',
-	'GYM_LASTMOD_DATE' => 'Zuletzt bearbeitet am',
-	'GYM_SEO' => 'Suchmaschinen',
-	'GYM_MINUTES' => 'Minute(n)',
-	'GYM_SQLEXPLAIN' => 'SQL Explain Report',
-	'GYM_SQLEXPLAIN_MSG' => 'Logged in as admin, you can check the %s for this page.',
-	'GOOGLE_SITEMAP' => 'Sitemap',
-	'GOOGLE_SITEMAP_OF' => 'Sitemap von',
-	'GOOGLE_SITEMAPINDEX' => 'Sitemap',
-	'GOOGLE_NUMBER_OF_SITEMAP' => 'Number of Sitemaps in this Google SitemapIndex',
-	'GOOGLE_NUMBER_OF_URL' => 'Number of URLs in this Google Sitemap',
-	'GOOGLE_SITEMAP_URL' => 'Sitemap URL',
-	'GOOGLE_CHANGEFREQ' => 'Change freq.',
-	'GOOGLE_PRIORITY' => 'priority',
-	'RSS_FEED' => 'RSS',
-	'RSS_2_LINK' => 'RSS 2.0',
-	'RSS_UPDATE' => 'Update in',
-	'RSS_LAST_UPDATE' => 'letztes Update',
-	'RSS_SUBSCRIBE_POD' => '<h2>Bookmark diesen Feed!</h2>wähle deinen Service.',
-	'RSS_SUBSCRIBE' => 'Um den Feed manuell aufzunehmen benutze bitte die folgende Adresse:',
-	'RSS_ITEM_LISTED' => 'Ein einziger Beitrag gelistet.',
-	'RSS_ITEMS_LISTED' => 'Themen gelistet.',
-	'RSS_VALID' => 'RSS 2.0 ValidFeed',
-	'RSS_1XREDIR' => 'This RSS feed was moved',
-	'RSS_1XREDIR_MSG' => 'This RSS feed was moved, you will now find it using this URL',
+	'RSS_CHAN_LIST_TITLE'	=> 'Foren',
+	'RSS_CHAN_LIST_DESC'	=> 'Dieser Channel gibt einen Überblick über unsere RSS Feeds.',
+	'RSS_CHAN_LIST_DESC_MODULE'	=> 'This channel list is listing the RSS feeds available for : %s.',
+	'RSS_ANNOUCES_DESC'	=> 'This feeds is listing all the global announcements of : %s',
+	'RSS_ANNOUNCES_TITLE'	=> 'Ankündigungen: %s',
+	'GYM_LAST_POST_BY'	=> 'letzter Beitrag von ',
+	'GYM_FIRST_POST_BY'	=> 'Geschrieben von ',
+	'GYM_LINK'	=> 'Link',
+	'GYM_SOURCE'	=> 'Quelle',
+	'RSS_MORE'	=> 'mehr',
+	'RSS_CHANNELS'	=> 'Channels',
+	'RSS_CONTENT'	=> 'Digest',
+	'RSS_SHORT'	=> 'Kurze Liste',
+	'RSS_LONG'	=> 'Lange Liste',
+	'RSS_NEWS'	=> 'News',
+	'RSS_NEWS_DESC'	=> 'Letzte News von',
+	'RSS_REPORTED_UNAPPROVED'	=> 'This item is currently waiting for approval.',
+	'GYM_HOME'	=> 'Home Page',
+	'GYM_FORUM_INDEX'	=> 'Forum Index',
+	'GYM_LASTMOD_DATE'	=> 'Zuletzt bearbeitet am',
+	'GYM_SEO'	=> 'Suchmaschinen',
+	'GYM_MINUTES'	=> 'Minute(n)',
+	'GYM_SQLEXPLAIN'	=> 'SQL Explain Report',
+	'GYM_SQLEXPLAIN_MSG'	=> 'Logged in as admin, you can check the %s for this page.',
+	'GOOGLE_SITEMAP'	=> 'Sitemap',
+	'GOOGLE_SITEMAP_OF'	=> 'Sitemap von',
+	'GOOGLE_SITEMAPINDEX'	=> 'Sitemap',
+	'GOOGLE_NUMBER_OF_SITEMAP'	=> 'Number of Sitemaps in this Google SitemapIndex',
+	'GOOGLE_NUMBER_OF_URL'	=> 'Number of URLs in this Google Sitemap',
+	'GOOGLE_SITEMAP_URL'	=> 'Sitemap URL',
+	'GOOGLE_CHANGEFREQ'	=> 'Change freq.',
+	'GOOGLE_PRIORITY'	=> 'priority',
+	'RSS_FEED'	=> 'RSS',
+	'RSS_2_LINK'	=> 'RSS 2.0',
+	'RSS_UPDATE'	=> 'Update in',
+	'RSS_LAST_UPDATE'	=> 'letztes Update',
+	'RSS_SUBSCRIBE_POD'	=> '<h2>Bookmark diesen Feed!</h2>wähle deinen Service.',
+	'RSS_SUBSCRIBE'	=> 'Um den Feed manuell aufzunehmen benutze bitte die folgende Adresse:',
+	'RSS_ITEM_LISTED'	=> 'Ein einziger Beitrag gelistet.',
+	'RSS_ITEMS_LISTED'	=> 'Themen gelistet.',
+	'RSS_VALID'	=> 'RSS 2.0 ValidFeed',
+	'RSS_1XREDIR'	=> 'This RSS feed was moved',
+	'RSS_1XREDIR_MSG'	=> 'This RSS feed was moved, you will now find it using this URL',
 
 	'MISSING_DIV' 		=> 'Shoutbox Div kannn nicht gefunden werden.',
 	'LOADING' 			=> 'laden...',
@@ -1203,7 +1153,6 @@ $lang = array_merge($lang, array(
 	'LATEST_POST_TIME'	=> 'zuletzt geantwortet',
 	'LATEST_POSTER'	=> 'Letzter Schreiber',
 
-
 	'SUBJECT_PREFIX'	=> 'Titel Präfix',
 	'SELECT_A_PREFIX'	=> 'Präfix Auswahl',
 	'SUBJECT_PREFIX_QUICK_MOD'	=> 'Präfix Schnellauswahl',
@@ -1249,17 +1198,6 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/groups.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ALREADY_DEFAULT_GROUP'		=> 'Die ausgewählte Gruppe ist bereits deine Hauptgruppe.',
@@ -1320,17 +1258,6 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/install.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ADMIN_CONFIG'				=> 'Administrator-Konfiguration',
@@ -1870,9 +1797,7 @@ $lang = array_merge($lang, array(
 	'VIEWING_FILE_DIFF'				=> 'Dateiunterschiede anzeigen',
 
 	'WRONG_INFO_FILE_FORMAT'	=> 'Ungültiges Dateiformat',
-));
 
-$lang = array_merge($lang, array(
 	'CONFIG_BOARD_EMAIL_SIG'		=> 'Danke, die Board-Administration',
 	'CONFIG_SITE_DESC'				=> 'Ein kurzer Text, der dein Forum beschreibt',
 	'CONFIG_SITENAME'				=> 'deinedomain.tld',
@@ -1919,20 +1844,7 @@ $lang = array_merge($lang, array(
 
 #######language/en/mcp.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
-
 $lang = array_merge($lang, array(
-	'MERGE_POSTS'			=> 'Beiträge verschieben',
-
 	'ACTION'				=> 'Vorgang',
 	'ACTION_NOTE'			=> 'Vorgang/Hinweis',
 	'ADD_FEEDBACK'			=> 'Feedback hinzufügen',
@@ -2106,6 +2018,7 @@ $lang = array_merge($lang, array(
 	'MCP_WARN_POST'			=> 'Für spezifischen Beitrag verwarnen',
 	'MCP_WARN_USER'			=> 'Benutzer verwarnen',
 
+	'MERGE_POSTS'			=> 'Beiträge verschieben',
 	'MERGE_POSTS_CONFIRM'	=> 'Bist du dir sicher, dass du die ausgewählten Beiträge in das ausgewählte Thema verschieben möchtest?',
 	'MERGE_TOPIC_EXPLAIN'	=> 'Mit dem folgenden Formular kannst du Beiträge in ein anderes Thema verschieben. Die Beiträge werden aus diesem Thema entfernt und in das andere Thema integriert. Sie erscheinen dort zusammen mit den anderen Beiträgen in ihrer zeitlichen Abfolge.<br />Bitte gib die ID des Ziel-Themas an oder wähle mit „Thema auswählen“ ein Thema aus.',
 	'MERGE_TOPIC_ID'		=> 'Primärschlüssel (ID) des Ziel-Themas',
@@ -2286,17 +2199,6 @@ $lang = array_merge($lang, array(
 
 #######language/en/memberlist.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
-
 $lang = array_merge($lang, array(
 	'ABOUT_USER'			=> 'Profil',
 	'ACTIVE_IN_FORUM'		=> 'Am meisten aktiv in Forum',
@@ -2306,9 +2208,7 @@ $lang = array_merge($lang, array(
 	'AFTER'					=> 'Nach dem',
 
 	'ALL'					=> 'Alle',
-
 	'BEFORE'				=> 'Vor dem',
-
 	'CC_EMAIL'				=> 'Eine Kopie dieser E-Mail an mich senden.',
 	'CONTACT_USER'			=> 'Kontaktdaten',
 
@@ -2330,7 +2230,6 @@ $lang = array_merge($lang, array(
 	'FLOOD_EMAIL_LIMIT'		=> 'Du kannst derzeit keine weitere E-Mail versenden. Bitte versuche es später erneut.',
 
 	'GROUP_LEADER'			=> 'Gruppenleiter',
-
 	'HIDE_MEMBER_SEARCH'	=> 'Das Suchformular ausblenden',
 
 	'IM_ADD_CONTACT'		=> 'Kontakt hinzufügen',
@@ -2403,43 +2302,29 @@ $lang = array_merge($lang, array(
 
 	'WWW'					=> 'Website',
 
-
-
 	'SEARCH_USER_POSTS'		=> 'Beiträge des Benutzers suchen',
 	'SEARCH_USER_TOPICS'	=> 'Themen die dieses Mitglied eröffnet hat',
-	'COMMENTS' => 'Kommentare',
-	'COMMENTS_VIEW' => '&#187; alle Kommentare ansehen',
-	'COMMENTS_ADD' => 'Deine Bewertung für den User',
-	'ADD_COMMENT' => 'Kommentar und Bewertung abschicken',
-	'COMM_CHECK_VALUE1' => 'Du hast schon zu viele Kommentare zu diesem User abgegeben.',
-	'COMM_OWNPROFILE' => 'In deinem eigenen Profil kannst du keine Kommentare hinterlassen.',	
-	'COMM_STATS' => 'Bewertungsstatistik:',
-	'COMM_NOTLOGGED' => 'Du musst eingeloggt sein um Kommentare verfassen zu kännen.',
-	'COMM_POSITIVE' => 'Positiv',
-	'COMM_NEGATIVE' => 'Negativ',
-	'COMM_NEUTRAL' => 'Neutral',
-	'COMM_DEL' => 'läschen',
-	'USER_COMM_POS' => 'Positive Kommentare:',
-	'USER_COMM_NEUT' => 'Neutral Kommentare:',
-	'USER_COMM_NEG' => 'Negative Kommentare:',
-	'USER_COMM_RANK' => 'Gesamt gute Bewertungen:',
-	'USER_COMM_PERCENT' => 'Gesamtbewertung des Users:',
+	'COMMENTS'	=> 'Kommentare',
+	'COMMENTS_VIEW'	=> '&#187; alle Kommentare ansehen',
+	'COMMENTS_ADD'	=> 'Deine Bewertung für den User',
+	'ADD_COMMENT'	=> 'Kommentar und Bewertung abschicken',
+	'COMM_CHECK_VALUE1'	=> 'Du hast schon zu viele Kommentare zu diesem User abgegeben.',
+	'COMM_OWNPROFILE'	=> 'In deinem eigenen Profil kannst du keine Kommentare hinterlassen.',	
+	'COMM_STATS'	=> 'Bewertungsstatistik:',
+	'COMM_NOTLOGGED'	=> 'Du musst eingeloggt sein um Kommentare verfassen zu kännen.',
+	'COMM_POSITIVE'	=> 'Positiv',
+	'COMM_NEGATIVE'	=> 'Negativ',
+	'COMM_NEUTRAL'	=> 'Neutral',
+	'COMM_DEL'	=> 'läschen',
+	'USER_COMM_POS'	=> 'Positive Kommentare:',
+	'USER_COMM_NEUT'	=> 'Neutral Kommentare:',
+	'USER_COMM_NEG'	=> 'Negative Kommentare:',
+	'USER_COMM_RANK'	=> 'Gesamt gute Bewertungen:',
+	'USER_COMM_PERCENT'	=> 'Gesamtbewertung des Users:',
 
 ));
 
 #######language/en/portal.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
-
 
 $lang = array_merge($lang, array(
 	'ACP_MINI'				=> 'Admin',
@@ -2449,7 +2334,7 @@ $lang = array_merge($lang, array(
 
 	'CHAT_LINK'			=>	'[ Online Chat ]',	
 	'COMMENTS'			=> 'Kommentare',
-	'COPY_RIGHT_BOTTOM' => 'Support Seite & Partner',
+	'COPY_RIGHT_BOTTOM'	=> 'Support Seite & Partner',
 
 	'CURRENT_STYLE'		=> 'Aktueller Style ist:',	
 
@@ -2459,26 +2344,26 @@ $lang = array_merge($lang, array(
 
 	'INDEX_OF_FORUMS'	=> 'Forenindex',	
 	'ICON_ANNOUNCEMENT'	=> 'Ankündigung',
-	'ICONS_EXPLAIN'         => 'Symbolerklärung', 	
-	'FORUM_IMAGES_EXPLAIN'  => 'Forumsymbole',
-	'POST_IMAGES_EXPLAIN'   => 'Beitragssymbole',
-	'LOG_ME_IN_SHORT'   => 'Eingeloggt bleiben',	
+	'ICONS_EXPLAIN'		=> 'Symbolerklärung', 	
+	'FORUM_IMAGES_EXPLAIN'	=> 'Forumsymbole',
+	'POST_IMAGES_EXPLAIN'	=> 'Beitragssymbole',
+	'LOG_ME_IN_SHORT'		=> 'Eingeloggt bleiben',	
  
-	'MERITS'            => 'Verdienste',			
+	'MERITS'			=> 'Verdienste',			
 	'MEMBER_INFO'		=> 'Mitgliederinfo',		
 	'MEMBERS'			=> 'Mitglieder',
 
-	'NO_NEWS'           => 'Es sind derzeit keine Beiträge zum Anzeigen verfügbar',
+	'NO_NEWS'			=> 'Es sind derzeit keine Beiträge zum Anzeigen verfügbar',
 	'NO_MODS'			=> 'Keine Mods vorhanden.',
 	'NO_ADMINS'			=> 'Keine Admins vorhanden.',
 	'ONLINE_USERS'		=> 'User Online',
-	'ONLINE_USERS_SHOW' => '[ Online Liste anschauen ]',
+	'ONLINE_USERS_SHOW'	=> '[ Online Liste anschauen ]',
 	'PORTAL'			=> 'Portal',
 
 	'PICTURES'			=> 'Bilder',	
 	'POST_COMMENTS'		=> 'Kommentare erstellen',
 	'PORTAL_DEVELOPMENT'=> 'Portal Entwicklung',
-	'PHP_SUPPORT_SITES' => 'php Support Seiten',
+	'PHP_SUPPORT_SITES'	=> 'php Support Seiten',
 	'POSTER'			=> 'Autor',
 	'POST_IMG'			=> 'Beitrag',	
 	'POST_NEW_IMG'		=> 'Neuer Beitrag',	
@@ -2493,7 +2378,7 @@ $lang = array_merge($lang, array(
 	'SITE_SURVEY'	=> 'Seiten Umfrage',	
 	'QUICK_STATISTICS'	=> 'Seitenstatistik',	
 	
-	'STYLE_SELECT_ALLOW' => 'Stylewechsel erlauben', 	
+	'STYLE_SELECT_ALLOW'	=> 'Stylewechsel erlauben', 	
  
 	'SUBMIT_LINK'	=> 'Link übermitteln',	
 	'THEME_NEWS_UPDATES'	=> 'Theme News & Updates',	
@@ -2504,7 +2389,7 @@ $lang = array_merge($lang, array(
 
 	'USER_COUNTRY_FLAG'		=> 'Landesflagge',
 	'USER_REAL_NAME' 		=> 'Echter Name',
-	'USER_REAL_NAME_EXPLAIN' => 'Vorname des Users',
+	'USER_REAL_NAME_EXPLAIN'	=> 'Vorname des Users',
  
 	'VIEW_COMMENTS'	=> 'Kommentare anschauen',
 
@@ -2514,16 +2399,15 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_MONTH'	=> 'Nächsten Monat ansehen',
 
 	'SITE_LINK_TXT_EXPLAIN'	=> 'Wir freuen uns über jeden Link zu uns. Du kannst den folgenden HTML Code in deinem Forum nutzen:<br />',
-	'SITE_LINK_TXT_EXPLAIN2' => '&#187; ',
-	'GOTO_TOP_IMG' => 'Nach oben',
-	'GOTO_BOTTOM_IMG' => 'Nach unten',
-	'BOOKMARK_ON' => 'Beitrag als Lesezeichen',
-	'BOOKMARK_OFF' => 'Lesezeichen entfernen',
-
-	'L_CLOCK'    => 'Lokale Zeit',
-	'BASIC_RULES' => 'Grundregeln',
-	'POLL_BLOCK' => 'Umfragen Block',
-	'SMILIES' => 'Smilies',
+	'SITE_LINK_TXT_EXPLAIN2'	=> '&#187; ',
+	'GOTO_TOP_IMG'	=> 'Nach oben',
+	'GOTO_BOTTOM_IMG'	=> 'Nach unten',
+	'BOOKMARK_ON'	=> 'Beitrag als Lesezeichen',
+	'BOOKMARK_OFF'	=> 'Lesezeichen entfernen',
+	'L_CLOCK'		=> 'Lokale Zeit',
+	'BASIC_RULES'	=> 'Grundregeln',
+	'POLL_BLOCK'	=> 'Umfragen Block',
+	'SMILIES'		=> 'Smilies',
 
 	'FONT_COLOR'				=> 'Schriftfarbe',
 	'FONT_HUGE'					=> 'Riesig',
@@ -2534,20 +2418,20 @@ $lang = array_merge($lang, array(
 	'FONT_TINY'					=> 'Winzig',	
 	'HIDE_ME_SHORT'				=> 'Verstecke mich für diesen Login.',
 	
-	'COLOR_DARK_RED' => 'Dunkelrot',
-	'COLOR_RED' => 'Rot',
-	'COLOR_ORANGE' => 'Orange',
-	'COLOR_BROWN' => 'Braun',
-	'COLOR_YELLOW' => 'Gelb',
-	'COLOR_GREEN' => 'Grün',
-	'COLOR_OLIVE' => 'Oliv',
-	'COLOR_CYAN' => 'Cyan',
-	'COLOR_BLUE' => 'Blau',
-	'COLOR_DARK_BLUE' => 'Dunkelblau',
-	'COLOR_INDIGO' => 'Indigo',
-	'COLOR_VIOLET' => 'Violett',
-	'COLOR_WHITE' => 'Weiß',
-	'COLOR_BLACK' => 'Schwarz',
+	'COLOR_DARK_RED'	=> 'Dunkelrot',
+	'COLOR_RED'	=> 'Rot',
+	'COLOR_ORANGE'	=> 'Orange',
+	'COLOR_BROWN'	=> 'Braun',
+	'COLOR_YELLOW'	=> 'Gelb',
+	'COLOR_GREEN'	=> 'Grün',
+	'COLOR_OLIVE'	=> 'Oliv',
+	'COLOR_CYAN'	=> 'Cyan',
+	'COLOR_BLUE'	=> 'Blau',
+	'COLOR_DARK_BLUE'	=> 'Dunkelblau',
+	'COLOR_INDIGO'	=> 'Indigo',
+	'COLOR_VIOLET'	=> 'Violett',
+	'COLOR_WHITE'	=> 'Weiß',
+	'COLOR_BLACK'	=> 'Schwarz',
 	
 	'URL' 			=> 'URL',
 	
@@ -2557,7 +2441,6 @@ $lang = array_merge($lang, array(
 	'NO_SEARCH'		=> 'Es tut uns leid, aber dir ist nicht erlaubt, die Suche zu benutzen oder du hast keine Foren.',	
 	'FORUM_RULES'	=> 'Forumsregeln',
 	'SHOUTBOX'		=> 'Shoutbox - Chat',
-
 
 	'ST_NEW'				=> 'Heute neu',
 	'ST_NEW_POSTS'			=> 'Neue Beiträge',
@@ -2576,15 +2459,15 @@ $lang = array_merge($lang, array(
 	'FILES_PER_POST'		=> 'Anhänge pro Beitrag',
 	'FILES_PER_TOPIC'		=> 'Anhänge pro Beitrag',
 	'FILES_PER_USER'		=> 'Anhänge pro Benutzer',
-	'ST_TOT_VISIT'				=> 'Besuche insgesamt',
-	'ST_LAT_VISIT'				=> 'Deine IP',
-	'TOP_COUNT'         		=> 'heruntergeladen',
-	'TOP_DATE'         			=> 'hinzugefügt am',
-	'TOP_FILENAME'         		=> 'Dateien',
-	'TOP_FILESIZE'         		=> 'Grä&szlig;e',
-	'TOP_TEL'         			=> 'Top Downloads',
-	'TOP_X'         			=> 'mal',
-	'VIEW_TOPIC_ATTACHMENTS' 	=> 'Anhänge insgesamt',
+	'ST_TOT_VISIT'			=> 'Besuche insgesamt',
+	'ST_LAT_VISIT'			=> 'Deine IP',
+	'TOP_COUNT'				=> 'heruntergeladen',
+	'TOP_DATE'				=> 'hinzugefügt am',
+	'TOP_FILENAME'			=> 'Dateien',
+	'TOP_FILESIZE'			=> 'Grä&szlig;e',
+	'TOP_TEL'				=> 'Top Downloads',
+	'TOP_X'					=> 'mal',
+	'VIEW_TOPIC_ATTACHMENTS'=> 'Anhänge insgesamt',
 
 	'ACRONYM'			=> 'Acronyme',
 	'ACRONYMS'			=> 'Acronyme und Abkürzungen',
@@ -2628,7 +2511,7 @@ $lang = array_merge($lang, array(
 
 	'WELCOME_SITE'	=> 'Willkommen bei %s',
 	'SITE_LINK_TXT'		=> 'Link zu uns',
-	'SCROLLING_BLOCKS_DISABLED' => 'Block ist wärend des bearbeitens der Bläcke ausgeblendet.',
+	'SCROLLING_BLOCKS_DISABLED'	=> 'Block ist wärend des bearbeitens der Bläcke ausgeblendet.',
 	'YOUR_LANG'			=> 'Aktuelle Sprache:',
 	'PRINT'			=> 'Drucken',
 	'CLOCK'		=> 'Uhr',	
@@ -2664,17 +2547,6 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/posting.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ADD_ATTACHMENT'			=> 'Dateianhang hochladen',
@@ -2872,17 +2744,6 @@ $lang = array_merge($lang, array(
 
 #######language/en/search.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
-
 $lang = array_merge($lang, array(
 	'ALL_AVAILABLE'			=> 'Alle verfügbaren',
 	'ALL_RESULTS'			=> 'Alle Ergebnisse',
@@ -2952,17 +2813,6 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/ucp.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'TERMS_OF_USE_CONTENT'	=> 'Mit dem Zugriff auf „%1$s“ wird zwischen dir und dem Betreiber ein Vertrag mit folgenden Regelungen geschlossen:</p>
@@ -3502,17 +3352,6 @@ $lang = array_merge($lang, array(
 
 #######language/en/viewforum.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
-
 $lang = array_merge($lang, array(
 	'ACTIVE_TOPICS'			=> 'Aktive Themen',
 	'ANNOUNCEMENTS'			=> 'Bekanntmachungen',
@@ -3547,17 +3386,6 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/viewtopic.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ATTACHMENT'						=> 'Dateianhang',
@@ -3642,88 +3470,76 @@ $lang = array_merge($lang, array(
 
 #######language/en/mods/abbcode.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
-
 $lang = array_merge($lang, array(
-	"ABBC3_HELP_TITLE"			=> "BBCode Box 3 :: Hilfeseite",
-	"ABBC3_HELP_DESC"			=> "Beschreibung",
-	"ABBC3_HELP_WRITE"			=> "Dein geschriebener Text",
-	"ABBC3_HELP_VIEW"			=> "Ergebnis",
-	"ABBC3_HELP_ABOUT"			=> 'This site powered by <a href="http://www.userboard.org">www.UserBoard.org</a>',
-	"ABBC3_HELP_ALT"			=> "Infos about this editor",
+	"ABBC3_HELP_TITLE"			=> "Advanced BBCode box 3 :: Help Page",
+	"ABBC3_HELP_DESC"			=> "Description",
+	"ABBC3_HELP_WRITE"			=> "Your write format",
+	"ABBC3_HELP_VIEW"			=> "Our show format",
+	"ABBC3_HELP_ABOUT"			=> 'Advanced BBCode Box 3 by <a href="http://www.mssti.com/phpbb3" onclick="window.open(this.href);return false;">mssti</a>',
+	"ABBC3_HELP_ALT"			=> "Advanced BBCode Box 3 (aka ABBC3)",
 
-	"ABBC3_RESIZE_SMALL"		=> 'Klicke auf diese Leiste um das Bild in voller Größe anzuzeigen.',
-	"ABBC3_RESIZE_ZOOM_IN"		=> 'vergrößern: %1$s x %2$s',
-	"ABBC3_RESIZE_CLOSE"		=> 'schließen',
-	"ABBC3_RESIZE_ZOOM_OUT"		=> 'verkleinern',
-	"ABBC3_RESIZE_FILESIZE"		=> 'Dieses Bild wurde in der Größe verändert. Klicke auf diese Leiste um das Bild in voller Größe anzuzeigen. Das Original Bild hat eine Größe von %1$sx%2$s und eine Dateigröße von %3$sKB.',
-	"ABBC3_RESIZE_NOFILESIZE"	=> 'Dieses Bild wurde in der Größe verändert. Klicke auf diese Leiste um das Bild in voller Größe anzuzeigen. Das Original Bild hat eine Größe von %1$sx%2$s.',
-	"ABBC3_RESIZE_FULLSIZE"		=> 'Klicke auf diese Leiste um das Bild in voller Größe anzuzeigen.',
-	"ABBC3_RESIZE_NUMBER"		=> 'Bild %1$s von %2$s',
-	"ABBC3_RESIZE_PLAY"			=> 'Slideshow',
-	"ABBC3_RESIZE_PAUSE"		=> 'Slideshow stoppen',
+	"ABBC3_RESIZE_SMALL"		=> 'Click this bar to view the full image.',
+	"ABBC3_RESIZE_ZOOM_IN"		=> 'Zoom in (real dimensions: %1$s x %2$s)',
+	"ABBC3_RESIZE_CLOSE"		=> 'Close',
+	"ABBC3_RESIZE_ZOOM_OUT"		=> 'Zoom out',
+	"ABBC3_RESIZE_FILESIZE"		=> 'This image has been resized. The original image is sized %1$s x %2$s and weights %3$sKB.',
+	"ABBC3_RESIZE_NOFILESIZE"	=> 'This image has been resized. The original image is sized %1$s x %2$s.',
+	"ABBC3_RESIZE_FULLSIZE"		=> 'Image resized to : %1$s % of its original size [ %2$s x %3$s ]',
+	"ABBC3_RESIZE_NUMBER"		=> 'Image %1$s of %2$s',
+	"ABBC3_RESIZE_PLAY"			=> 'Play slideshow',
+	"ABBC3_RESIZE_PAUSE"		=> 'Pause slideshow',
 	"ABBC3_POPBOX_REVERSETEXT"	=> 'Click the image to shrink it.',
 
-	"ABBC3_HIGHSLIDE_LOADINGTEXT"		=> 'lade...',
-	"ABBC3_HIGHSLIDE_LOADINGTITLE"		=> 'zum abbrechen bitte klicken',
+	"ABBC3_HIGHSLIDE_LOADINGTEXT"		=> 'Loading...',
+	"ABBC3_HIGHSLIDE_LOADINGTITLE"		=> 'Click to cancel',
 	"ABBC3_HIGHSLIDE_FOCUSTITLE"		=> 'Click to bring to front',
-	"ABBC3_HIGHSLIDE_FULLEXPANDTITLE"	=> 'Erweitern auf die tatsächliche Größe',
-	"ABBC3_HIGHSLIDE_FULLEXPANDTEXT"	=> 'Vollansicht',
-	"ABBC3_HIGHSLIDE_CREDITSTEXT"		=> 'powered <i>UserBoard Highslide</i>',
-	"ABBC3_HIGHSLIDE_CREDITSTITLE"		=> 'go to the Highslide JS homepage',
-	"ABBC3_HIGHSLIDE_PREVIOUSTEXT"		=> 'vorheriges',
-	"ABBC3_HIGHSLIDE_PREVIOUSTITLE"		=> 'vorheriges (Linkspfeil)',
-	"ABBC3_HIGHSLIDE_NEXTTEXT"			=> 'nächstes',
-	"ABBC3_HIGHSLIDE_NEXTTITLE"			=> 'nächstes (Rechtspfeil)',
-	"ABBC3_HIGHSLIDE_MOVETITLE"			=> 'schieben',
-	"ABBC3_HIGHSLIDE_MOVETEXT"			=> 'schieben',
-	"ABBC3_HIGHSLIDE_CLOSETEXT"			=> 'schließen',
-	"ABBC3_HIGHSLIDE_CLOSETITLE"		=> 'schließen (ESC)',
-	"ABBC3_HIGHSLIDE_RESIZETITLE"		=> 'Größenänderung',
-	"ABBC3_HIGHSLIDE_PLAYTEXT"			=> 'Slideshow',
-	"ABBC3_HIGHSLIDE_PLAYTITLE"			=> 'Play Slideshow (spacebar)',
+	"ABBC3_HIGHSLIDE_FULLEXPANDTITLE"	=> 'Expand to actual size',
+	"ABBC3_HIGHSLIDE_FULLEXPANDTEXT"	=> 'Full size',
+	"ABBC3_HIGHSLIDE_CREDITSTEXT"		=> 'Powered by <i>Highslide JS</i>',
+	"ABBC3_HIGHSLIDE_CREDITSTITLE"		=> 'Go to the Highslide JS homepage',
+	"ABBC3_HIGHSLIDE_PREVIOUSTEXT"		=> 'Previous',
+	"ABBC3_HIGHSLIDE_PREVIOUSTITLE"		=> 'Previous (arrow left)',
+	"ABBC3_HIGHSLIDE_NEXTTEXT"			=> 'Next',
+	"ABBC3_HIGHSLIDE_NEXTTITLE"			=> 'Next (arrow right)',
+	"ABBC3_HIGHSLIDE_MOVETITLE"			=> 'Move',
+	"ABBC3_HIGHSLIDE_MOVETEXT"			=> 'Move',
+	"ABBC3_HIGHSLIDE_CLOSETEXT"			=> 'Close',
+	"ABBC3_HIGHSLIDE_CLOSETITLE"		=> 'Close (esc)',
+	"ABBC3_HIGHSLIDE_RESIZETITLE"		=> 'Resize',
+	"ABBC3_HIGHSLIDE_PLAYTEXT"			=> 'Play',
+	"ABBC3_HIGHSLIDE_PLAYTITLE"			=> 'Play slideshow (spacebar)',
 	"ABBC3_HIGHSLIDE_PAUSETEXT"			=> 'Pause',
-	"ABBC3_HIGHSLIDE_PAUSETITLE"		=> 'Slideshow Pause (spacebar)',
-	"ABBC3_HIGHSLIDE_NUMBER"			=> 'Dies ist Bild %1 von %2',
-	"ABBC3_HIGHSLIDE_RESTORETITLE"		=> 'Klicke auf das Bild um es zu schließen oder halte gedrückt um es zu bewegen. Mit den Pfeiltasten geht es zum nächsten und vorherigen Bild.',
+	"ABBC3_HIGHSLIDE_PAUSETITLE"		=> 'Pause slideshow (spacebar)',
+	"ABBC3_HIGHSLIDE_NUMBER"			=> 'Image %1 of %2',
+	"ABBC3_HIGHSLIDE_RESTORETITLE"		=> 'Click to close image, click and drag to move. Use arrow keys for next and previous.',
 
-	"BBCODE_STYLES_TIP"			=> "Tipp: Styles können schnell auf den gewählten Text übertragen werden.",
+	"BBCODE_STYLES_TIP"			=> "Tip: Styles can be applied quickly to selected text.",
 
-	"ABBC3_ERROR"				=> "Fehler : ",
-	"ABBC3_ERROR_TAG"			=> "Unbekannter Fehler beim Benutzen des Tags : ",
-	"ABBC3_NO_EXAMPLE"			=> "Kein Beispiel vorhanden",
+	"ABBC3_ERROR"				=> "Error : ",
+	"ABBC3_ERROR_TAG"			=> "Unexpected Error using tag : ",
+	"ABBC3_NO_EXAMPLE"			=> "No data example",
 
-	"ABBC3_ID"					=> "Gebe Identifier ein :",
-	"ABBC3_NOID"				=> "Du hast keinen Identifier eingegeben",
-	"ABBC3_LINK"				=> "Gib einen Link ein für ",
-	"ABBC3_DESC"				=> "Gib eine Beschreibung ein für ",
-	"ABBC3_NAME"				=> "Beschreibung",
-	"ABBC3_NOLINK"				=> "Du hast keinen Link eingegeben für ",
-	"ABBC3_NODESC"				=> "Du hast keine Beschreibung eingegeben für ",
-	"ABBC3_WIDTH"				=> "Gib die Breite ein",
-	"ABBC3_WIDTH_NOTE"			=> "Notiz: Der Wert kann in Prozent angegeben werden",
-	"ABBC3_NOWIDTH"				=> "Du hast keine Breite angegeben",
-	"ABBC3_HEIGHT"				=> "Gib die Höhe ein",
-	"ABBC3_HEIGHT_NOTE"			=> "Notiz: Der Wert kann in Prozent angegeben werden",
-	"ABBC3_NOHEIGHT"			=> "Du hast keine Höhe angegeben",
+	"ABBC3_ID"					=> "Enter identifier :",
+	"ABBC3_NOID"				=> "You did not write the identifier",
+	"ABBC3_LINK"				=> "Enter a link for ",
+	"ABBC3_DESC"				=> "Enter a description for ",
+	"ABBC3_NAME"				=> "Description",
+	"ABBC3_NOLINK"				=> "You did not write a link for ",
+	"ABBC3_NODESC"				=> "You did not write a description for ",
+	"ABBC3_WIDTH"				=> "Enter the width",
+	"ABBC3_WIDTH_NOTE"			=> "Note: The value can be expressed as a percentage",
+	"ABBC3_NOWIDTH"				=> "You did not write the width",
+	"ABBC3_HEIGHT"				=> "Enter the height",
+	"ABBC3_HEIGHT_NOTE"			=> "Note: The value can be expressed as a percentage",
+	"ABBC3_NOHEIGHT"			=> "You did not write the height",
 
-	"ABBC3_NOTE"				=> "Notiz",
-	"ABBC3_EXAMPLE"				=> "Beispiel",
-	"ABBC3_EXAMPLES"			=> "Beispiele",
-	"ABBC3_UNAUTHORISED"		=> "Die folgenden Wärter dürfen nicht benutzt werden: <br /><strong> %s </strong>",
-	"SAMPLE_TEXT"				=> "Beispiel Text",
-));
+	"ABBC3_NOTE"				=> "Note",
+	"ABBC3_EXAMPLE"				=> "Example",
+	"ABBC3_EXAMPLES"			=> "Examples",
+	"ABBC3_UNAUTHORISED"		=> "You cannot use certain words : <br /><strong> %s </strong>",
+	"SAMPLE_TEXT"				=> "This is a sample text",
 
-$lang = array_merge($lang, array(
+
 	"ABBC3_FONT_MOVER"			=> "Font type",
 	"ABBC3_FONT_TIP"			=> "[font=Comic Sans MS]text[/font]",
 	"ABBC3_FONT_NOTE"			=> "Note: You can use your own font-family",
@@ -3951,7 +3767,7 @@ $lang = array_merge($lang, array(
 	"ABBC3_ANCHOR_MOVER"		=> "Anchor",
 	"ABBC3_ANCHOR_TIP"			=> "[anchor=(this anchor name) goto=(the name of another anchor)]text[/anchor]",
 	"ABBC3_ANCHOR_EXAMPLE"		=> "[anchor=a1 goto=a2]Go to anchor a2[/anchor]",
-	"ABBC3_ANCHOR_VIEW"			=> "[anchor=help0 goto=help_1]Go to link 1[/anchor]<br /> or  [anchor=help1]this is the link 1[/anchor]",
+	"ABBC3_ANCHOR_VIEW"			=> "[anchor=help0 goto=help_1]Go to link 1[/anchor]<br /> or [anchor=help1]this is the link 1[/anchor]",
 
 	"ABBC3_URL_TAG"				=> "page",
 	"ABBC3_URL_MOVER"			=> "Web address",	
@@ -4091,18 +3907,6 @@ $lang = array_merge($lang, array(
 
 #######language/en/mods/acp_abbcodes.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
-
-
 $lang = array_merge($lang, array(
 	'ACP_ABBCODES'						=> 'BBCode Box',
 	'ACP_ABBCODES_EXPLAIN'				=> 'Hier kannst Du die verfügbaren Stile für <strong>[ <a href="http://www.mssti.com/phpbb3" target="_blank">BBCode-Box</a> ]</strong> auf deinem Board Einstellen.<br/>Du darfst existierende Stile verändern, neu laden, deactivieren oder reactivieren. Du kannst auch sehen, wie ein Stil aussehen wird, wenn du die Vorschaufunktion benutzt. <br/><em>Der eigestellte Stil wird durch ein (*) gekennzeichnet. Es ist auch aufgeführt wie viele User einen Stil derzeit benutzen.</em>',
@@ -4143,9 +3947,6 @@ $lang = array_merge($lang, array(
 	'ABBCODES_VIDEO_SIZE'				=> 'Video Grä&szlig;e',
 	'ABBCODES_VIDEO_SIZE_EXPLAIN'		=> 'Standard Breite x Hähe für gepostete Videos über den BBCode [bbvideo=*]*[/bbvideo].',
 
-));
-
-$lang = array_merge($lang, array(
 	'ABBCODES_SETINGS'					=> 'ABBC3 settings',
 	'ABBCODES_SETINGS_EXPLAIN'			=> 'Here you can determine the basic operation of <strong>ABBC3</strong>, enable or disable, and among other settings adjust the default values for the background.',
 
@@ -4174,20 +3975,7 @@ $lang = array_merge($lang, array(
 	'ABBCODES_DEACTIVATED'				=> 'Ausgeschaltet',
 ));
 
-
 #######language/en/mods/acp_formel1.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
-
 
 $lang = array_merge($lang, array(
 	'ACP_F1_MANAGEMENT'								=> 'Formel1 Tippspiel',
@@ -4344,10 +4132,7 @@ $lang = array_merge($lang, array(
 	'ACP_F1_RACES_RACE_UPDATED'						=> 'Renn Datenbank erfolgreich aktualisiert',
 	'ACP_F1_RACES_RACE_DELETED'						=> 'Der Eintrag wurde erfolgreich gelöscht',
 	'ACP_F1_RACES_ERROR_RACENAME'					=> 'Bitte gib alle benötigten Felder an',
-));
 
-
-$lang = array_merge($lang, array(
 	'ACP_FORMEL_MANAGEMENT'			=> 'Formel1 Tippspiel',
 	'ACP_FORMEL_SETTINGS'			=> 'Formel1 Einstellungen',
 	'ACP_FORMEL_DRIVERS'			=> 'Formel1 Fahrer',
@@ -4374,26 +4159,15 @@ $lang = array_merge($lang, array(
 	'LOG_FORMEL_DRIVER_ADDED'		=> 'F1 Tipp Fahrer hinzugefügt',
 	'LOG_FORMEL_DRIVER_EDITED'		=> 'F1 Tipp Fahrer-ID %s bearbeitet',
 	'LOG_FORMEL_DRIVER_DELETED'		=> 'F1 Tipp Fahrer-ID %s gelöscht',
-	'ACP_F1_SETTINGS_COUNTDOWN'						=> 'Countdown',
-	'ACP_F1_SETTINGS_SHOW_COUNTDOWN_TITLE'			=> 'Countdown Titel',
-	'ACP_F1_SETTINGS_SHOW_COUNTDOWN_DESC'			=> 'Countdown Beschreibung',
-	'ACP_F1_SETTINGS_SHOW_COUNTDOWN_TEXT'			=> 'Text für Countdown abgelaufen',
-	'ACP_F1_SETTINGS_SHOW_COUNTDOWN_STOP'			=> 'Countdown bis',
+	'ACP_F1_SETTINGS_COUNTDOWN'					=> 'Countdown',
+	'ACP_F1_SETTINGS_SHOW_COUNTDOWN_TITLE'		=> 'Countdown Titel',
+	'ACP_F1_SETTINGS_SHOW_COUNTDOWN_DESC'		=> 'Countdown Beschreibung',
+	'ACP_F1_SETTINGS_SHOW_COUNTDOWN_TEXT'		=> 'Text für Countdown abgelaufen',
+	'ACP_F1_SETTINGS_SHOW_COUNTDOWN_STOP'		=> 'Countdown bis',
 
 ));
 
 #######language/en/mods/acp_user_reminder.php#######
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'TITLE'											=> 'Titel',
@@ -4522,15 +4296,6 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/mods/ajaxchecks.php#######
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
 
 $lang = array_merge($lang, array(
 	'AJAX_CHECK_USERNAME_FALSE'		=>	'Dieser Benutzername wird bereits benutzt',
@@ -4552,17 +4317,6 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/mods/arcade.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ARCADE'							=> 'Onlinespiele',
@@ -4641,9 +4395,7 @@ $lang = array_merge($lang, array(
 	'ARCADE_RULES_COMMENT_CANNOT'				=> 'Du <strong>kannst nicht</strong> Kommentare schreiben',
 	'ARCADE_RULES_IGNORE_CONTROL_CANNOT'		=> 'Du <strong>kannst nicht</strong> das Spiellimit ignorieren',
 	'ARCADE_RULES_RESOLUTION_CANNOT'			=> 'Du <strong>kannst nicht</strong> die Aufläsung des Spiels ändern',
-));
 
-$lang = array_merge($lang, array(
 	'ARCADE_SYNC_MODE_NOT_SUPPORTED'		=> 'Die Sync-Modus der ausgewählt wurde, wird nicht unterstützt.',
 	'ARCADE_NO_ID_ERROR'					=> 'Um diese Funktion zu nutzen muss eine ID eingegeben wurden sein.',
 	'ARCADE_NO_TOTAL_TYPE_ERROR'			=> 'Die gesamte Art, der ausgewählt wurde, wird nicht unterstützt.',
@@ -4653,18 +4405,13 @@ $lang = array_merge($lang, array(
 	'NO_GAME_ID'							=> 'Es wurde kein richtiges Spiel ausgewählt.',
 	'NO_CAT_ID'								=> 'Diese Kategorie ist nicht mehr verfügbar.',
 	'LOGIN_VIEWARCADE'						=> 'Der Vorstand verlangt von dir eingeloggt zu sein, um diese Kategorie anzugucken.',
-));
 
-
-$lang = array_merge($lang, array(
 	'ARCADE_SELECT_CATEGORY' 		=> 'wähle eine Kategorie',
 	'ARCADE_GAME_NAME' 				=> 'Name des Spieles',
 	'ARCADE_GAME_DESC' 				=> 'Beschreibung',
 	'ARCADE_LEADERS'				=> 'Sieger',
 	'ARCADE_SELECT_GAME' 			=> 'Spiel auswählen',
-));
 
-$lang = array_merge($lang, array(
 	'ARCADE_DOWNLOAD'					=> 'Download',
 	'ARCADE_VIEW'						=> 'Ansicht',
 	'ARCADE_CREATE'						=> 'erstellen',
@@ -4673,9 +4420,7 @@ $lang = array_merge($lang, array(
 	'ARCADE_DOWNLOAD_AS_EXPLAIN'		=> 'Select a download format for the file.',
 	'ARCADE_DOWNLOAD_FORMAT'			=> 'Select a download format for %s',
 	'ARCADE_DOWNLOAD_MISSING_FILES'		=> 'There was an error processing the download.<br /><br />Please contact the administrator and inform them the following files are missing:<br /><strong>%s</strong>',
-));
 
-$lang = array_merge($lang, array(
 	'ARCADE_WELCOME' 					=> 'Willkommen im Onlinespiele Bereich!',
 	'ARCADE_NEWEST_GAMES' 				=> 'Neuste Spiele',
 	'ARCADE_ADV_SEARCH'					=> 'Erweiterte Suche nach Spielen',
@@ -4690,9 +4435,7 @@ $lang = array_merge($lang, array(
 	'ARCADE_USER_INFO' 					=> 'Benutzerinformationen',
 	'ARCADE_WELCOME_CHAMP'				=> '%s ist der neue %s Champion mit einem Highscore von %s!',
 	'ARCADE_PLAYED_GAMES_HIGHLIGHT'		=> 'Spiele hervorheben in denen du keinen Highscore hast.',
-));
 
-$lang = array_merge($lang, array(
 	'ARCADE_WELCOME_WINS'	 			=> 'Gesamt Siege',
 	'ARCADE_WELCOME_PLAYS' 				=> 'Spiele gespielt',
 	'ARCADE_WELCOME_TIME' 				=> 'gespielte Zeit',
@@ -4700,14 +4443,10 @@ $lang = array_merge($lang, array(
 	'ARCADE_TOTAL_PLAYED'				=> 'Die Onlinegames aus unserem Forum wurden schon <b>%s</b> mal gespielt mit einer Gesamtzeit von <b>%s</b>.',
 	'ARCADE_TOTAL_DOWNLOAD'				=> 'There has been <b>%s</b> game download from the arcade.',
 	'ARCADE_TOTAL_DOWNLOADS'			=> 'There has been <b>%s</b> game downloads from the arcade.',
-));
 
-$lang = array_merge($lang, array(
 	'ARCADE_LOGIN_CAT'					=> 'Zum Anzeigen oder Spielen in dieser Kategorie brauchst du ein Passwort.',
 	'ARCADE_LOGIN_EXPLAIN'				=> 'Du musst angemeldet sein, um diese Onlinespiele Funktion nutzen zu kännen.',
-));
 
-$lang = array_merge($lang, array(
 	'ARCADE_DAY' 						=> 'Tag',
 	'ARCADE_DAYS' 						=> 'Tage',
 	'ARCADE_HOUR' 						=> 'Stunde',
@@ -4716,14 +4455,9 @@ $lang = array_merge($lang, array(
 	'ARCADE_MINS' 						=> 'Minuten',
 	'ARCADE_SEC' 						=> 'Sekunde',
 	'ARCADE_SECS' 						=> 'Sekunden',
-));
-
-$lang = array_merge($lang, array(
 	'ARCADE_DECIMAL_SEP'			=> ',',
 	'ARCADE_THOUSANDS_SEP'			=> '.',
-));
 
-$lang = array_merge($lang, array(
 	'ARCADE_GAME_CHAMPION' 				=> 'Champion',
 	'ARCADE_GAME_CHAMPION_COMMENT' 		=> 'Champion’s Kommentar',
 	'ARCADE_RESOLUTION' 				=> 'Wähle deine Aufläsung des Spieles',
@@ -4733,9 +4467,7 @@ $lang = array_merge($lang, array(
 	'ARCADE_TOP_SCORES' 				=> 'Top Spiel-Ergebnisse',
 	'ARCADE_LIMIT_PLAY_TYPE_POSTS'		=> 'Du brauchst insgesamt <strong>%s</strong> Beiträg(e) um in dieser Kategorie spielen zu kännen. Du brauchst noch <strong>%s</strong> Beiträg(e) mehr um hier spielen zu kännen.',
 	'ARCADE_LIMIT_PLAY_TYPE_DAYS'		=> 'Du brauchst insgesamt <strong>%s</strong> Beiträg(e) in den letzten <strong>%s</strong> Tagen um in dieser Kategorie spielen zu kännen. Du brauchst noch <strong>%s</strong> Beiträg(e) mehr um hier spielen zu kännen in den letzten <strong>%s</strong> Tagen.',
-));
 
-$lang = array_merge($lang, array(
 	'ARCADE_SEARCH_NO_MATCHES'			=> 'Keine Spiele in der Suche mit dem passenden Begriff gefunden. Bitte versuche es erneut.',
 	'ARCADE_SEARCH_DESCRIPTION'			=> 'Gebe hier das Wort ein, nach dem du suchst.',
 	'ARCADE_SEARCH_RESULTS_FOR'			=> 'Suchergebnisse für %s',
@@ -4761,14 +4493,10 @@ $lang = array_merge($lang, array(
 
 	'CAT_RULES'							=> 'Kategorie Regeln',
 	'CAT_RULES_LINK_CLICK'				=> 'Bitte klicke hier, um die Kategorie Regeln zu lesen.',
-));
 
-$lang = array_merge($lang, array(
 	'ARCADE_ONLINE' 					=> 'Wer spielt hier gerade?',
 	'ARCADE_OFFLINE' 					=> 'Derzeit laufen keine Onlinespiele.',
-));
 
-$lang = array_merge($lang, array(
 	'VIEWING_ARCADE'					=> 'Onlinespiele anzeigen',
 	'PLAYING_GAME'						=> 'spiele das Spiele %s',
 	'DOWNLOADING_GAME'					=> 'Downloading arcade game %s',
@@ -4779,9 +4507,7 @@ $lang = array_merge($lang, array(
 	'VIEWING_ARCADE_STATS_GAME_USER'	=> 'Onlinespiele Statistik über das Spiel %s vom Benutzer %s',
 	'VIEWING_ARCADE_SEARCH'				=> 'Onlinepsiele suchen',
 	'VIEWING_ARCADE_FAVS'				=> 'Onlinespiele Favoriten',
-));
 
-$lang = array_merge($lang, array(
 	'ARCADE_STATS_PAGE_TITLE'				=> 'Onlinespiele Statistik',
 	'ARCADE_STATS_USER_GAME_PAGE_TITLE'		=> 'Spiele Statistik für %s',
 	'ARCADE_STATS_SCORE_PAGE_TITLE'			=> 'Spiele Statistik für %s - %s',
@@ -4826,15 +4552,10 @@ $lang = array_merge($lang, array(
 	'ARCADE_TOTAL_GAMES'					=> 'Derzeit sind <b>%s</b> Spiele installiert und es werden immer mehr.',
 	'ARCADE_USER_HIGHSCORES'				=> 'Zeige Benutzer Highscores',
 	'ARCADE_USER_SCORES'					=> 'Zeige alle Benutzer Ergebnisse',
-));
 
-$lang = array_merge($lang, array(
 	'ARCADE_POPUP_HIGHUSER' 			=> 'Highscore für <strong>%s</strong>: %s (%s)',
 	'ARCADE_POP_NO_HIGHSCORE' 			=> 'Keine Highscore für %s',
-));
 
-
-$lang = array_merge($lang, array(
 	'ARCADE_COOKIE_ERROR'				=> 'Es wurde ein Fehler beim Lesen der Session-Daten gefunden.<br />Bitte stelle sicher, dass du Cookies in deinem Web-Browser aktiviert hast. Sollte es trotzdem Probleme mit diesem Fehler geben versuche es bitte in einem anderen Web-Browser.',
 	'ARCADE_IBPROV3_ERROR'				=> 'Die vorgelegten Daten zu diesem Punkt wurde beschädigt.<br />Spiele das Spiel erneut. Wenn du die Nachricht mehr als einmal bekommst, wende dich bitte an den Administrator. Meist ist dies ein Fehler des Spieles.',
 	'ARCADE_POPUP_DONE' 				=> 'Vielen Dank für das Spielen von %s.<br /><br />%sKlicke hier um das Spiel %s nochmal zu spielen%s<br /><br />%sFenster schliessen%s',
@@ -4858,10 +4579,7 @@ $lang = array_merge($lang, array(
 	'ARCADE_HIGH_SCORE_SAVED' 			=> 'Du bist der neue Champion von %s.  Dein Ergebnis mit %s hat den alten Highscore %s überboten.',
 	'ARCADE_HIGH_SCORE_SAVED_NEW' 		=> 'Du bist der neue Champion von %s.  Dein Ergebnis mit %s ist dein erster in diesem Spiel, herzlichen Glückwunsch.',
 	'ARCADE_REDIRECT'					=> 'Wirst du nicht automatisch weitergeleitet, klicke bitte auf %sdiesen Link hier%s um zur nächsten Seite zu kommen.',
-));
 
-
-$lang = array_merge($lang, array(
 	'ARCADE_PLAYS'						=> 'gespielt',
 	'ARCADE_CATEGORY'					=> 'Kategorie',
 	'ARCADE_CATEGORYS'					=> 'Kategorien',
@@ -4902,294 +4620,262 @@ $lang = array_merge($lang, array(
 	'RETURN_TO_ARCADE'			=> 'Zurück in die Spielhalle',
 ));
 #######language/en/mods/arcade_challenge.php#######
-if (!defined('IN_PHPBB'))
-{
-   exit;
-}
-if (empty($lang) || !is_array($lang))
-{
-   $lang = array();
-}
-$lang = array_merge($lang, array(
 
-  'ARCADE_CHALLENGE_END_WINNER'         => 'You won in <a href="%s"><b>%s</b></a>.<br />%s Results: %s points, your result: %s points',
-  'ARCADE_CHALLENGE_END_LOSER'          => 'You lost the competition in <a href="%s"><b>%s</b></a><br />%s Results: %s points, your result: %s points',
-  'ARCADE_CHALLENGE_END_WINNER_POINTS'  => 'Congratulations, you won the challenge for playing <a href="%s"><b>%s</b></a>, so you will receive %s %s.<br />%s scored %s points, you scored %s points',
-  'ARCADE_CHALLENGE_END_LOSER_POINTS'   => 'You lost in <a href="%s"><b>%s</b></a> so you lose %s %s.<br />%s result: %s points, your result: %s points',
-  'ARCADE_CHALLENGE_END_TIE'            => 'The games was tie in <a href="%s"><b>%s</b></a>.<br />%s Results: %s points, your result: %s points',
-  'ARCADE_CHALLENGE_END_TIE_POINTS'     => 'The competition was tie in <a href="%s"><b>%s</b></a>, so no one won the bet(%s %s).<br />%s\'s result:%s points, own results:%s points',
-  'ARCADE_CHALLENGE_END'                => 'Arcade Challenge Result',
-  'ARCADE_CHALLENGE_POPUP_GAME'         => '%s%s%s',
-  'ARCADE_CHALLENGE_POPUP_TITLE'        => 'Challenge-opponent:(%s), Game:(%s), Record:(%s), Champion:(%s)',
-  'ARCADE_CHALLENGE_POPUP_NO_HIGHUSER'  => 'Challenge-opponent:(%s), Game:(%s)',
-  'ARCADE_CHALLENGE_OPTIONS'            => 'Challenge options',
-  'ARCADE_CHALLENGE_CHAMP'              => 'Champion Challenge',
-  'ARCADE_CHALLENGE_CHAMP_STAT'         => 'Champion Statistics',
-  'ARCADE_CHALLENGE_PLAY_TREAT'         => 'You have a new challenge invitation, please accept or reject!<br /><br /><b>%sGo to challenge%s / %sGo to game%s</b>',
-  'ARCADE_CHALLENGE_PLAY_OFF'           => 'Currently, you cannot start a new game until you have played the previous challenge !<br /><br />Pending game:',
-  'ARCADE_CHALLENGE_PLAYS_OFF'          => 'Currently, you cannot start a new game until you have played the previous challenges !<br /><br />Pending games:',
-	'CHALLENGE'                           => 'Challenge',
-	'CHALLENGES'                          => 'Challenges',
-	'CHALLENGE_NO'                        => 'There are no challenges for you.',
-	'CHALLENGE_EXPLAIN'                   => 'Calling user to play challenge in a flash game',
-	'CHALLENGE_DISABLE'                   => 'Arcade Challenge is offline!',
-  'CHALLENGE_SELECT_GAME'               => 'Select a game',
-  'CHALLENGE_SELECT_GAME_EXPLAIN'       => 'You will play in the selected game',
-  'CHALLENGE_SELECT_USERNAME'           => 'Name of user',
-  'CHALLENGE_SELECT_USERNAME_EXPLAIN'   => 'You will play against the selected user!',
-  'CHALLENGE_SELECT_POINTS'             => 'Challenge bet',
-  'CHALLENGE_SELECT_POINTS_EXPLAIN'     => 'You will play for these points',
-  'CHALLENGE_BID_MIN'                   => 'Minimum bet',
-  'CHALLENGE_BID_MAX'                   => 'Maximum bet',
-  'CHALLENGE_BID_FIX'                   => 'The bet is fix',
-  'CHALLENGE_ONGOING'                   => 'Challenges in progress',
-  'CHALLENGE_ONGOING_NO'                => 'There are no pending challenges for you.',
-  'CHALLENGE_ONGOING_PLAY'              => '<a href="%s"><img src="%s" class="image"\></a> Start game: <a href="%s"><b>%s</b></a>,',
-  'CHALLENGE_ONGOING_PLAY_OFF'          => '<img src="%s" class="image"\> <b>%s</b> played,',
-  'CHALLENGE_ONGOING_CAMP_NOT_PLAY'     => ', has not played it.',
-  'CHALLENGE_ONGOING_CAMP_F_PLAY'       => ', has played already.',
-  'CHALLENGE_ONGOING_CHAMP'             => ' %s opponent: %s%s',
-  'CHALLENGE_ONGOING_CHAMP_P'           => ' Challenge bet: <b>%s</b> %s.',
-  'CHALLENGE_PENDANT'                   => 'Pending challenges',
-  'CHALLENGE_PENDANT_NO'                => 'Currently, you have no pending challenges',
-  'CHALLENGE_PENDANT_OUT'               => 'You called %s to compete in  <a href="%s"><b>%s</b></a>',
-  'CHALLENGE_PENDANT_POINTS'            => 'You bet to the challenge <b>%s</b> %s.',
-  'CHALLENGE_PENDANT_ID'                => 'Delete selected',
-  'CHALLENGE_PENDANT_FULL'              => 'Delete all',
-  'CHALLENGE_PENDANT_PM'                => 'Notify selected via PM',
-  'CHALLENGE_DELET'                     => 'Expiration time',
-  'CHALLENGE_ERROR_REPORT'              => 'Error report',
-  'CHALLENGE_ARC_STT'                   => 'Statement',
-  'CHALLENGE_USER'                      => 'User',
-  'CHALLENGE_TROFY'                     => 'Trophy',
-  'CHALLENGE_PLAYS'                     => 'Played',
-  'CHALLENGE_LOSS'                      => 'Lost',
-  'CHALLENGE_STT_NO'                    => 'Not played yet',
-  'CHALLENGE_A_TROFY'                   => 'Arcade * Trofy',
-  'CHALLENGE_A_PLAYS'                   => 'Arcade * Played',
-  'CHALLENGE_A_TIMES'                   => 'Arcade * Play time',
-  'CHALLENGE_C_TROFY'                   => 'Challenge * Trophy',
-  'CHALLENGE_C_TIES'                    => 'Challenge * Ties',
-  'CHALLENGE_C_LOSS'                    => 'Challenge * Lost',
-  'CHALLENGE_C_PLAYS'                   => 'Challenge * Played',
-  'CHALLENGE_C_TIMES'                   => 'Challenge * Play time',
-  'CHALLENGE_ARCADE_USERS_COUNT'        => 'Number of users: <b>(%s)</b>',
-  'CHALLENGE_HOME'                      => 'Arcade challenge',
-  'CHALLENGE_TOP'                       => 'Top 6',
-  'CHALLENGE_TOP_GAMES'                 => 'Top Games',
-  'CHALLENGE_FRESH'                     => 'Latest winners',
-  'CHALLENGE_TOTAL_CHAMP'               => 'So far <b>%s</b> took place in this competition <b>%s</b> to draw. Time spent on competitions <b>%s</b> ',
-  'CHALLENGE_FRESH_GAME_TIME'           => 'End of competition » %s',
-  'CHALLENGE_FRESH_WINNER'              => ' %s won the game ',
-  'CHALLENGE_FRESH_LOSER'               => ' opponent was:%s',
-  'CHALLENGE_FRESH_SCORE_DESC'          => '%s the result of %s points<br />%s the result of %s points',
-  'CHALLENGE_STAT'                      => 'Challenge statistic',
-  'CHALLENGE_LEADERS'                   => 'Leaders of Trophys',
-  'CHALLENGE_ALL_TIME'                  => 'Time spent on competitions',
-  'CHALLENGE_UT_TIME'                   => 'Last won competition',
-  'CHALLENGE_PLAY'                      => 'Competitions played',
-  'CHALLENGE_TIE'                       => 'Tie',
-  'CHALLENGE_TIE_ALL'                   => 'Tie competition',
-  'CHALLENGE_U_LOSS'                    => 'Lost competition',
-  'CHALLENGE_WINS'                      => 'Competitions won',
-  'CHALLENGE_TIME'                      => 'Total play time',
-  'CHALLENGE_ADV'                       => 'Opponent',
-  'CHALLENGE_END'                       => 'End of Competition',
-  'CHALLENGE_TOP_WINS'                  => '%s won (%s) competition.',
-  'CHALLENGE_STAT_USER_GAME_TITLE'      => 'statistic of %s\'s challenges',
-  'CHALLENGE_NOT_PLAYING'               => 'Never played in Challenge',
-  'CHALLENGE_NOT_HS'                    => 'The user still has not got a trophy!',
-  'CHALLENGE_USER_LIST'                 => 'List all of challenges',
-  'CHALLENGE_TROFY_LIST'                => 'List Trophys',
-  'CHALLENGE_NO_CHAMP'                  => '<center><b>Currently, there are no arcade challenges </b></center>',
-  'CHALLENGE_COUNT'                     => 'Number of challenges: <b>(%s)</b>',
-  'CHALLENGE_STAT_DISABLE'              => 'The statistic currently disabled!',
-  'CHALLENGE_FRIENDS_NAME'              => 'Friends name',
-  'CHALLENGE_REPORT_TITLE'              => 'Report game',
-  'CHALLENGE_REPORT_NO_PERMISSION'      => 'You have no permission to send reports!',
-  'CHALLENGE_REPORT_SUCCESS'			      => 'Report successfully submitted.',
-  'CHALLENGE_REPORT_ADDED'              => 'Thank you for submitting a report about <strong>%s</strong>.<br /><br />This report will be reviewed by the administrator and appropriate action will be taken.  If more information is required the administrator will be in contact with you.',
-  'CHALLENGE_SMILE'                     => 'Smilies are',
-  'CHALLENGE_REPORT_DUP'                => 'This game has been reported already!',
-  'CHALLENGE_REPORT_GAME'               => 'It received (%s) game error reports.',
-  'CHALLENGE_REPORT_GAMES'              => 'It received (%s) games error reports.',
-  'CHALLENGE_REPORT_NO_CHALL'           => 'The game what you want to report is not in your list or you played the games succesfully, so you cacn not report this game!',
-  'CHALLENGE_OPPONENT_USER_NULL'        => 'You have not specified a user name!',
-  'CHALLENGE_OPPONENT_USER_NO'          => 'User not found!',
-  'CHALLENGE_USER_ERROR'                => 'You cannot challenge yourself!',
-  'CHALLENGE_USER_NO_CHALL'             => 'You cannot call %s to challenge because they are not allowed the challenges!',
-  'CHALLENGE_CHALL_ERROR'               => 'Arcade challenge failed!<br /><br />',
-  'CHALLENGE_GAMES_PLAY_PERMISSION'     => '%s has no permissions to play! <a href="%s"><b>%s</b></a>',                         
-  'CHALLENGE_GAMES_CHALL_PERMISSION'    => '%shas no permission to play challenge in <a href="%s"><b>%s</b></a>!',
-  'CHALLENGE_NOT_GAME'                  => 'This game does not exist!',
-  'CHALLENGE_DUPLICATION'               => 'You called %s already in <a href="%s"><b>%s</b></a>, and the competition is not over yet.',
-  'CHALLENGE_OPPONENT_DUPLICATION'      => '%s already called you in <a href="%s"><b>%s</b></a>, and the competition is not over yet',
-  'CHALLENGE_RAND_NO_GAME'              => 'Currently, there is no game in which a challenge can start!',
-  'CHALLENGE_RAND_DISABLE'              => 'The random challenge currently disabled!',
-  'CHALLENGE_NO_POINTS'                 => 'the bet is to big, %s you have currently <b>(%s)</b> %s!',
-  'CHALLENGE_NO_POINTS_PLAY'            => '%s you have no enough points to play this game, this games costs <b>(%s)</b> %s !',
-  'CHALLENGE_OPPONENT_NO_POINTS'        => '%s user have not enough points,%s has currently <b>(%s)</b> %.',
-  'CHALLENGE_OPPONENT_NO_POINTS_PLAY'   => '<b>%s</b> user have not enough points to play!',
-  'CHALLENGE_POINTS_MIN_ERROR'          => 'minimum bet <b>%s</b> %s !',
-  'CHALLENGE_POINTS_MAX_ERROR'          => 'maximum bet <b>%s</b> %s !',
-  'CHALLENGE_POINTS_COST_CH'            => 'The given value is same with your points, but the game costs <b>(%s)</b> %s so you cant play this game, please select lower bet!',
-  'CHALLENGE_POINTS_COST_OP'            => 'The given value is same with <b>%s</b> but the game costs <b>(%s)</b> %s so the selected user cant play this game, please select lower bet!',
-  'CHALLENGE_SUCCESSFUL'                => 'You called seccesfully %s to a challenge in <a href="%s"><b>%s</b></a>, but We can not notify %s cause the user can not adopt pms.',
-  'CHALLENGE_SUCCESSFUL_PM'             => 'The challenge is successful in <a href="%s"><b>%s</b></a>, we notified <b>%s</b> about it.',
-  'CHALLENGE_NO_VALUE'                  => 'You have not selected challenge!',
-  'CHALLENGE_ALREADY_EXISTS'            => 'This challenge has already been accepted or deleted!',
-  'CHALLENGE_INFO_CHALL_USER'           => 'We notified %s about your decision.',
-  'CHALLENGE_INFO_ACCEPT_GAME'          => 'start the game: %s.',
-  'CHALLENGE_INFO_ACCEPT_GAMES'         => 'start the games: %s.',
-  'CHALLENGE_INFO_REJECTION_GAME'       => 'deleted challenge: %s.',
-  'CHALLENGE_INFO_REJECTION_GAMES'      => 'deleted challenges: %s.',
-  'CHALLENGE_INFO_PENDANT_USER'         => 'We warned %s about the following',
-  'CHALLENGE_INFO_PENDANT_GAME'         => 'challenge: %s.',
-  'CHALLENGE_INFO_PENDANT_GAMES'        => 'challenges: %s.',
-  'CHALLENGE_GO'                        => '<br /><b> %s>>>Go to challenge<<<%s </b>',
-  'CHALLENGE_BACK_UP'                   => '<br /><br />%sBack to challenges.%s',
-  'CHALLENGE_RANDOM'                    => 'Random challenge',
-  'CHALLENGE_RANDOM_NEW'                => '<br /><br />%sRandom challenge again%s',
-  'CHALLENGE_AKTIV_OP'                  => 'Accept selected',
-  'CHALLENGE_DELET_OP'                  => 'Reject selected',
-  'CHALLENGE_INFO_CHALL_USER_PM_OFF_AK' => 'The accepting of challenge is suecsfully, but We can not notify %s cause the user can not adopt pms.',
-  'CHALLENGE_INFO_CHALL_USER_PM_OFF'    => 'The deleting of hallenge is sucesfully,but We can not notify %s cause the user can not adopt pms.',
-  'CHALLENGE_PM_USER_OFF'               => 'You can not notify %s cause the user can not adopt pms.',
-  'CHALLENGE_PM_SUBJECT'                => 'Arcade Challenge',
-  'CHALLENGE_PM_MESSAGE'                => '<a href="%s"><img src="%s"\></a><br />I would like to challenge you in <a href="%s"><b>(%s)</b></a>',
-  'CHALLENGE_PM_MESSAGE_POINTS'         => '<a href="%s"><img src="%s"\></a><br />I would like to challenge you in <a href="%s"><b>(%s)</b></a>, and I bet <b>%s</b> %s.<br />',
-  'CHALLENGE_PM_ACCEPT_GAME'            => '%s accepted the challenge in: %s.',
-  'CHALLENGE_PM_ACCEPT_GAMES'           => '%s accepted the challenges in: %s.',
-  'CHALLENGE_PM_REJECTION_GAME'         => '%s rejected the challenge in: %s.',
-  'CHALLENGE_PM_REJECTION_GAMES'        => '%s rejected the challenges in: %s.',
-  'CHALLENGE_PM_WITHDRAWAL_GAME'        => '%s withdrew the challenge in: %s.',
-  'CHALLENGE_PM_WITHDRAWAL_GAMES'       => '%s withdrew the challenges in: %s.',
-  'CHALLENGE_PM_PENDANT_GAME'           => '%s warns you, please accept or reject the challenge. Please decide!<br />Game: %s.',
-  'CHALLENGE_PM_PENDANT_GAMES'          => '%s warns you, please accept or reject the challenges. Please decide!<br />Games: %s.',
-  'CHALLENGE_PM_CALLED_OUT'             => '%s called you to challenge in <a href="%s"><b>%s</b></a>',
-  'CHALLENGE_PM_CALLED_POINTS'          => ' - Bet <b>%s</b> %s.',
-  'CHALLENGE_PM_AC_DE'                  => '<br /><br />Do you accept the challenge ? <b>( %sYes%s / %sNo%s )</b>',
-  'CHALLENGE_VIEWING'                   => 'View arcade challenge',
-  'CHALLENGE_VIEWING_STAT'              => 'View arcade challenge statistics',
-  'CHALLENGE_VIEWING_STAT_USER'         => 'Arcade challenge statistics: view %s user',
-  'CHALLENGE_VIEWING_REPORT'            => 'Arcade challenge game errorreport game: %s',
-  'CHALLENGE_VIEWING_RANDOM'            => 'Arcade challenge random challenge',
-  'CHALLENGE_VIEWING_STT'               => 'Arcade challenge view stat',
-  'CHALLENGE_VIEWING_GAME_STAT'         => 'Arcade challenge statistics:view %s game',
+$lang = array_merge($lang, array(
+	'ARCADE_CHALLENGE_END_WINNER'		=> 'You won in <a href="%s"><b>%s</b></a>.<br />%s Results: %s points, your result: %s points',
+	'ARCADE_CHALLENGE_END_LOSER'		=> 'You lost the competition in <a href="%s"><b>%s</b></a><br />%s Results: %s points, your result: %s points',
+	'ARCADE_CHALLENGE_END_WINNER_POINTS'=> 'Congratulations, you won the challenge for playing <a href="%s"><b>%s</b></a>, so you will receive %s %s.<br />%s scored %s points, you scored %s points',
+	'ARCADE_CHALLENGE_END_LOSER_POINTS'	=> 'You lost in <a href="%s"><b>%s</b></a> so you lose %s %s.<br />%s result: %s points, your result: %s points',
+	'ARCADE_CHALLENGE_END_TIE'			=> 'The games was tie in <a href="%s"><b>%s</b></a>.<br />%s Results: %s points, your result: %s points',
+	'ARCADE_CHALLENGE_END_TIE_POINTS'	=> 'The competition was tie in <a href="%s"><b>%s</b></a>, so no one won the bet(%s %s).<br />%s\'s result:%s points, own results:%s points',
+	'ARCADE_CHALLENGE_END'				=> 'Arcade Challenge Result',
+	'ARCADE_CHALLENGE_POPUP_GAME'		=> '%s%s%s',
+	'ARCADE_CHALLENGE_POPUP_TITLE'		=> 'Challenge-opponent:(%s), Game:(%s), Record:(%s), Champion:(%s)',
+	'ARCADE_CHALLENGE_POPUP_NO_HIGHUSER'=> 'Challenge-opponent:(%s), Game:(%s)',
+	'ARCADE_CHALLENGE_OPTIONS'			=> 'Challenge options',
+	'ARCADE_CHALLENGE_CHAMP'			=> 'Champion Challenge',
+	'ARCADE_CHALLENGE_CHAMP_STAT'		=> 'Champion Statistics',
+	'ARCADE_CHALLENGE_PLAY_TREAT'		=> 'You have a new challenge invitation, please accept or reject!<br /><br /><b>%sGo to challenge%s / %sGo to game%s</b>',
+	'ARCADE_CHALLENGE_PLAY_OFF'			=> 'Currently, you cannot start a new game until you have played the previous challenge !<br /><br />Pending game:',
+	'ARCADE_CHALLENGE_PLAYS_OFF'		=> 'Currently, you cannot start a new game until you have played the previous challenges !<br /><br />Pending games:',
+	'CHALLENGE'							=> 'Challenge',
+	'CHALLENGES'						=> 'Challenges',
+	'CHALLENGE_NO'						=> 'There are no challenges for you.',
+	'CHALLENGE_EXPLAIN'					=> 'Calling user to play challenge in a flash game',
+	'CHALLENGE_DISABLE'					=> 'Arcade Challenge is offline!',
+	'CHALLENGE_SELECT_GAME'				=> 'Select a game',
+
+	'CHALLENGE_SELECT_GAME_EXPLAIN'		=> 'You will play in the selected game',
+	'CHALLENGE_SELECT_USERNAME'			=> 'Name of user',
+	'CHALLENGE_SELECT_USERNAME_EXPLAIN'	=> 'You will play against the selected user!',
+	'CHALLENGE_SELECT_POINTS'			=> 'Challenge bet',
+	'CHALLENGE_SELECT_POINTS_EXPLAIN'	=> 'You will play for these points',
+	'CHALLENGE_BID_MIN'					=> 'Minimum bet',
+	'CHALLENGE_BID_MAX'					=> 'Maximum bet',
+	'CHALLENGE_BID_FIX'					=> 'The bet is fix',
+	'CHALLENGE_ONGOING'					=> 'Challenges in progress',
+	'CHALLENGE_ONGOING_NO'				=> 'There are no pending challenges for you.',
+	'CHALLENGE_ONGOING_PLAY'			=> '<a href="%s"><img src="%s" class="image"\></a> Start game: <a href="%s"><b>%s</b></a>,',
+	'CHALLENGE_ONGOING_PLAY_OFF'		=> '<img src="%s" class="image"\> <b>%s</b> played,',
+	'CHALLENGE_ONGOING_CAMP_NOT_PLAY'	=> ', has not played it.',
+	'CHALLENGE_ONGOING_CAMP_F_PLAY'		=> ', has played already.',
+	'CHALLENGE_ONGOING_CHAMP'			=> ' %s opponent: %s%s',
+	'CHALLENGE_ONGOING_CHAMP_P'			=> ' Challenge bet: <b>%s</b> %s.',
+	'CHALLENGE_PENDANT'					=> 'Pending challenges',
+	'CHALLENGE_PENDANT_NO'				=> 'Currently, you have no pending challenges',
+	'CHALLENGE_PENDANT_OUT'				=> 'You called %s to compete in  <a href="%s"><b>%s</b></a>',
+	'CHALLENGE_PENDANT_POINTS'			=> 'You bet to the challenge <b>%s</b> %s.',
+	'CHALLENGE_PENDANT_ID'				=> 'Delete selected',
+	'CHALLENGE_PENDANT_FULL'			=> 'Delete all',
+	'CHALLENGE_PENDANT_PM'				=> 'Notify selected via PM',
+	'CHALLENGE_DELET'					=> 'Expiration time',
+	'CHALLENGE_ERROR_REPORT'			=> 'Error report',
+	'CHALLENGE_ARC_STT'					=> 'Statement',
+	'CHALLENGE_USER'					=> 'User',
+	'CHALLENGE_TROFY'					=> 'Trophy',
+	'CHALLENGE_PLAYS'					=> 'Played',
+	'CHALLENGE_LOSS'					=> 'Lost',
+	'CHALLENGE_STT_NO'					=> 'Not played yet',
+	'CHALLENGE_A_TROFY'					=> 'Arcade * Trofy',
+	'CHALLENGE_A_PLAYS'					=> 'Arcade * Played',
+	'CHALLENGE_A_TIMES'					=> 'Arcade * Play time',
+	'CHALLENGE_C_TROFY'					=> 'Challenge * Trophy',
+	'CHALLENGE_C_TIES'					=> 'Challenge * Ties',
+	'CHALLENGE_C_LOSS'					=> 'Challenge * Lost',
+	'CHALLENGE_C_PLAYS'					=> 'Challenge * Played',
+	'CHALLENGE_C_TIMES'					=> 'Challenge * Play time',
+	'CHALLENGE_ARCADE_USERS_COUNT'		=> 'Number of users: <b>(%s)</b>',
+	'CHALLENGE_HOME'					=> 'Arcade challenge',
+	'CHALLENGE_TOP'						=> 'Top 6',
+	'CHALLENGE_TOP_GAMES'				=> 'Top Games',
+	'CHALLENGE_FRESH'					=> 'Latest winners',
+	'CHALLENGE_TOTAL_CHAMP'				=> 'So far <b>%s</b> took place in this competition <b>%s</b> to draw. Time spent on competitions <b>%s</b> ',
+	'CHALLENGE_FRESH_GAME_TIME'			=> 'End of competition » %s',
+	'CHALLENGE_FRESH_WINNER'			=> ' %s won the game ',
+	'CHALLENGE_FRESH_LOSER'				=> ' opponent was:%s',
+	'CHALLENGE_FRESH_SCORE_DESC'		=> '%s the result of %s points<br />%s the result of %s points',
+	'CHALLENGE_STAT'					=> 'Challenge statistic',
+	'CHALLENGE_LEADERS'					=> 'Leaders of Trophys',
+	'CHALLENGE_ALL_TIME'				=> 'Time spent on competitions',
+	'CHALLENGE_UT_TIME'					=> 'Last won competition',
+	'CHALLENGE_PLAY'					=> 'Competitions played',
+	'CHALLENGE_TIE'						=> 'Tie',
+	'CHALLENGE_TIE_ALL'					=> 'Tie competition',
+	'CHALLENGE_U_LOSS'					=> 'Lost competition',
+	'CHALLENGE_WINS'					=> 'Competitions won',
+	'CHALLENGE_TIME'					=> 'Total play time',
+	'CHALLENGE_ADV'						=> 'Opponent',
+	'CHALLENGE_END'						=> 'End of Competition',
+	'CHALLENGE_TOP_WINS'				=> '%s won (%s) competition.',
+	'CHALLENGE_STAT_USER_GAME_TITLE'	=> 'statistic of %s\'s challenges',
+	'CHALLENGE_NOT_PLAYING'				=> 'Never played in Challenge',
+	'CHALLENGE_NOT_HS'					=> 'The user still has not got a trophy!',
+	'CHALLENGE_USER_LIST'				=> 'List all of challenges',
+	'CHALLENGE_TROFY_LIST'				=> 'List Trophys',
+	'CHALLENGE_NO_CHAMP'				=> '<center><b>Currently, there are no arcade challenges </b></center>',
+	'CHALLENGE_COUNT'					=> 'Number of challenges: <b>(%s)</b>',
+	'CHALLENGE_STAT_DISABLE'			=> 'The statistic currently disabled!',
+	'CHALLENGE_FRIENDS_NAME'			=> 'Friends name',
+	'CHALLENGE_REPORT_TITLE'			=> 'Report game',
+	'CHALLENGE_REPORT_NO_PERMISSION'	=> 'You have no permission to send reports!',
+	'CHALLENGE_REPORT_SUCCESS'			=> 'Report successfully submitted.',
+	'CHALLENGE_REPORT_ADDED'			=> 'Thank you for submitting a report about <strong>%s</strong>.<br /><br />This report will be reviewed by the administrator and appropriate action will be taken.  If more information is required the administrator will be in contact with you.',
+	'CHALLENGE_SMILE'					=> 'Smilies are',
+	'CHALLENGE_REPORT_DUP'				=> 'This game has been reported already!',
+	'CHALLENGE_REPORT_GAME'				=> 'It received (%s) game error reports.',
+	'CHALLENGE_REPORT_GAMES'			=> 'It received (%s) games error reports.',
+	'CHALLENGE_REPORT_NO_CHALL'			=> 'The game what you want to report is not in your list or you played the games succesfully, so you cacn not report this game!',
+	'CHALLENGE_OPPONENT_USER_NULL'		=> 'You have not specified a user name!',
+	'CHALLENGE_OPPONENT_USER_NO'		=> 'User not found!',
+	'CHALLENGE_USER_ERROR'				=> 'You cannot challenge yourself!',
+	'CHALLENGE_USER_NO_CHALL'			=> 'You cannot call %s to challenge because they are not allowed the challenges!',
+	'CHALLENGE_CHALL_ERROR'				=> 'Arcade challenge failed!<br /><br />',
+	'CHALLENGE_GAMES_PLAY_PERMISSION'	=> '%s has no permissions to play! <a href="%s"><b>%s</b></a>',
+	'CHALLENGE_GAMES_CHALL_PERMISSION'	=> '%shas no permission to play challenge in <a href="%s"><b>%s</b></a>!',
+	'CHALLENGE_NOT_GAME'				=> 'This game does not exist!',
+	'CHALLENGE_DUPLICATION'				=> 'You called %s already in <a href="%s"><b>%s</b></a>, and the competition is not over yet.',
+	'CHALLENGE_OPPONENT_DUPLICATION'	=> '%s already called you in <a href="%s"><b>%s</b></a>, and the competition is not over yet',
+	'CHALLENGE_RAND_NO_GAME'			=> 'Currently, there is no game in which a challenge can start!',
+	'CHALLENGE_RAND_DISABLE'			=> 'The random challenge currently disabled!',
+	'CHALLENGE_NO_POINTS'				=> 'the bet is to big, %s you have currently <b>(%s)</b> %s!',
+	'CHALLENGE_NO_POINTS_PLAY'			=> '%s you have no enough points to play this game, this games costs <b>(%s)</b> %s !',
+	'CHALLENGE_OPPONENT_NO_POINTS'		=> '%s user have not enough points,%s has currently <b>(%s)</b> %.',
+	'CHALLENGE_OPPONENT_NO_POINTS_PLAY'	=> '<b>%s</b> user have not enough points to play!',
+	'CHALLENGE_POINTS_MIN_ERROR'		=> 'minimum bet <b>%s</b> %s !',
+	'CHALLENGE_POINTS_MAX_ERROR'		=> 'maximum bet <b>%s</b> %s !',
+	'CHALLENGE_POINTS_COST_CH'			=> 'The given value is same with your points, but the game costs <b>(%s)</b> %s so you cant play this game, please select lower bet!',
+	'CHALLENGE_POINTS_COST_OP'			=> 'The given value is same with <b>%s</b> but the game costs <b>(%s)</b> %s so the selected user cant play this game, please select lower bet!',
+	'CHALLENGE_SUCCESSFUL'				=> 'You called seccesfully %s to a challenge in <a href="%s"><b>%s</b></a>, but We can not notify %s cause the user can not adopt pms.',
+	'CHALLENGE_SUCCESSFUL_PM'			=> 'The challenge is successful in <a href="%s"><b>%s</b></a>, we notified <b>%s</b> about it.',
+	'CHALLENGE_NO_VALUE'				=> 'You have not selected challenge!',
+	'CHALLENGE_ALREADY_EXISTS'			=> 'This challenge has already been accepted or deleted!',
+	'CHALLENGE_INFO_CHALL_USER'			=> 'We notified %s about your decision.',
+	'CHALLENGE_INFO_ACCEPT_GAME'		=> 'start the game: %s.',
+	'CHALLENGE_INFO_ACCEPT_GAMES'		=> 'start the games: %s.',
+	'CHALLENGE_INFO_REJECTION_GAME'		=> 'deleted challenge: %s.',
+	'CHALLENGE_INFO_REJECTION_GAMES'	=> 'deleted challenges: %s.',
+	'CHALLENGE_INFO_PENDANT_USER'		=> 'We warned %s about the following',
+	'CHALLENGE_INFO_PENDANT_GAME'		=> 'challenge: %s.',
+	'CHALLENGE_INFO_PENDANT_GAMES'		=> 'challenges: %s.',
+	'CHALLENGE_GO'						=> '<br /><b> %s>>>Go to challenge<<<%s </b>',
+	'CHALLENGE_BACK_UP'					=> '<br /><br />%sBack to challenges.%s',
+	'CHALLENGE_RANDOM'					=> 'Random challenge',
+	'CHALLENGE_RANDOM_NEW'				=> '<br /><br />%sRandom challenge again%s',
+	'CHALLENGE_AKTIV_OP'				=> 'Accept selected',
+	'CHALLENGE_DELET_OP'				=> 'Reject selected',
+	'CHALLENGE_INFO_CHALL_USER_PM_OFF_AK'	=> 'The accepting of challenge is suecsfully, but We can not notify %s cause the user can not adopt pms.',
+	'CHALLENGE_INFO_CHALL_USER_PM_OFF'		=> 'The deleting of hallenge is sucesfully,but We can not notify %s cause the user can not adopt pms.',
+	'CHALLENGE_PM_USER_OFF'				=> 'You can not notify %s cause the user can not adopt pms.',
+	'CHALLENGE_PM_SUBJECT'				=> 'Arcade Challenge',
+	'CHALLENGE_PM_MESSAGE'				=> '<a href="%s"><img src="%s"\></a><br />I would like to challenge you in <a href="%s"><b>(%s)</b></a>',
+	'CHALLENGE_PM_MESSAGE_POINTS'		=> '<a href="%s"><img src="%s"\></a><br />I would like to challenge you in <a href="%s"><b>(%s)</b></a>, and I bet <b>%s</b> %s.<br />',
+	'CHALLENGE_PM_ACCEPT_GAME'			=> '%s accepted the challenge in: %s.',
+	'CHALLENGE_PM_ACCEPT_GAMES'			=> '%s accepted the challenges in: %s.',
+	'CHALLENGE_PM_REJECTION_GAME'		=> '%s rejected the challenge in: %s.',
+	'CHALLENGE_PM_REJECTION_GAMES'		=> '%s rejected the challenges in: %s.',
+	'CHALLENGE_PM_WITHDRAWAL_GAME'		=> '%s withdrew the challenge in: %s.',
+	'CHALLENGE_PM_WITHDRAWAL_GAMES'		=> '%s withdrew the challenges in: %s.',
+	'CHALLENGE_PM_PENDANT_GAME'			=> '%s warns you, please accept or reject the challenge. Please decide!<br />Game: %s.',
+	'CHALLENGE_PM_PENDANT_GAMES'		=> '%s warns you, please accept or reject the challenges. Please decide!<br />Games: %s.',
+	'CHALLENGE_PM_CALLED_OUT'			=> '%s called you to challenge in <a href="%s"><b>%s</b></a>',
+	'CHALLENGE_PM_CALLED_POINTS'		=> ' - Bet <b>%s</b> %s.',
+	'CHALLENGE_PM_AC_DE'				=> '<br /><br />Do you accept the challenge ? <b>( %sYes%s / %sNo%s )</b>',
+	'CHALLENGE_VIEWING'					=> 'View arcade challenge',
+	'CHALLENGE_VIEWING_STAT'			=> 'View arcade challenge statistics',
+	'CHALLENGE_VIEWING_STAT_USER'		=> 'Arcade challenge statistics: view %s user',
+	'CHALLENGE_VIEWING_REPORT'			=> 'Arcade challenge game errorreport game: %s',
+	'CHALLENGE_VIEWING_RANDOM'			=> 'Arcade challenge random challenge',
+	'CHALLENGE_VIEWING_STT'				=> 'Arcade challenge view stat',
+	'CHALLENGE_VIEWING_GAME_STAT'		=> 'Arcade challenge statistics:view %s game',
 ));
+
 #######language/en/mods/calendar.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
 $lang = array_merge($lang, array(
-	'DISPLAY_CALENDAR_INDEX'						=> 'Kalender im Forum Index?',
-    '12_HOURS'								=> '12 Stunden',
-    '24_HOURS'								=> '24 Stunden',
-    'AUTO_POPULATE_EVENT_FREQUENCY'			=> 'Anzeige Wiederkehrende Termine',
-    'AUTO_POPULATE_EVENT_FREQUENCY_EXPLAIN'	=> 'Wie oft (in Tagen) sollen wiederkehrende Termine im Kalender angezeigt werden?  Wenn du 0 wählst, werden wiederkehrende Termine nicht in den Kalender eingetragen!',
-    'AUTO_POPULATE_EVENT_LIMIT'				=> 'Anzeige-Begrenzung',
-    'AUTO_POPULATE_EVENT_LIMIT_EXPLAIN'		=> 'Wieviel Tage im Vorraus sollen wiederkehrende Termine angezeigt und angelegt werden?  Mit anderen Worten, willst du wiederkehrende Termine nur 30, 45 oder mehr Tage vor dem Termin sehen? Trage keine zu hohe Zahl ein. Wird die Zahl verringert hat dies nur Auswirkungen auf neue Termine, alte bleiben im Kalender vorhanden.',
-    'AUTO_PRUNE_EVENT_FREQUENCY'			=> 'Automatisches Löschen alter Termine',
-    'AUTO_PRUNE_EVENT_FREQUENCY_EXPLAIN'	=> 'Wie häufig (in Tagen) sollen alte Termine vom Kalender gelöscht werden?  Wenn du 0 wählst, werden alte Termine nicht gelöscht, du musst sie manuell entfernen.',
-    'AUTO_PRUNE_EVENT_LIMIT'				=> 'Begrenzung automatisches Löschen',
-    'AUTO_PRUNE_EVENT_LIMIT_EXPLAIN'		=> 'Nach wie vielen Tagen soll der Termin der Löschliste hinzugefügt werden? Mit anderen Worten, sollen alle Termine 0, 30 oder 90 Tage nach Ende des Events erhalten bleiben?',
-    'CALENDAR_ETYPE_NAME'					=> 'Name Termin-Typ',
-    'CALENDAR_ETYPE_COLOR'					=> 'Farbe Termin-Typ',
-    'CALENDAR_ETYPE_ICON'					=> 'Icon URL Termin-Typ',
-    'CALENDAR_SETTINGS_EXPLAIN'				=> 'Kalender-Einstellungen',
-    'CHANGE_EVENTS_TO'						=> 'Ändere alle Termine dieses Typs zu',
-    'CLICK_PLUS_HOUR'						=> 'Verschiebe ALLE Termine um eine Stunde.',
-    'CLICK_PLUS_HOUR_EXPLAIN'				=> 'Die Möglichkeit, alle Termine im Kalender um +/- eine Stunde zu verschieben hilft dir, wenn du die Sommerzeiteinstellungen des Forums zurückstellst.  Bemerkung: Anklicken der Links, um Termine zu verschieben, führt zum Verlust aller Änderungen, die du oben gemacht hast.  Bitte sende das Formular erst ab, um deine Arbeit zu sichern, bevor du Termine um +/- eine Stunde verschiebst.',
-    'COLOR'									=> 'Farbe',
-    'CREATE_EVENT_TYPE'						=> 'Neuer Termin-Typ',
-    'DATE_FORMAT'							=> '|j. M Y|',
-    'DATE_FORMAT_EXPLAIN'					=> 'Versuche &quot;M d, Y&quot;',
-    'DATE_TIME_FORMAT'						=> 'Datums- und Zeitformat',
-    'DATE_TIME_FORMAT_EXPLAIN'				=> 'Versuche &quot;M d, Y h:i a&quot; oder &quot;M d, Y H:i&quot;',
-    'DELETE'								=> 'Löschen',
-    'DELETE_ALL_EVENTS'						=> 'Lösche alle Vorkommen dieses Termins',
-    'DELETE_ETYPE'							=> 'Lösche Termin-Typ',
-    'DELETE_ETYPE_EXPLAIN'					=> 'Sicher, dass du diesen Termin-Typ löschen willst?',
-    'DELETE_LAST_EVENT_TYPE'				=> 'Warnung: Das ist der letzte Termin-Typ!',
-    'DELETE_LAST_EVENT_TYPE_EXPLAIN'		=> 'Wenn dieser Termin-Typ gelöscht wird, gibt es keinen Termin mehr! Erst wenn ein neuer Termin-Typ angelegt wurde, können wieder Termine eingetragen werden.',
-    'DISPLAY_12_OR_24_HOURS'				=> 'Anzeige Zeit-Format',
-    'DISPLAY_12_OR_24_HOURS_EXPLAIN'		=> 'Sollen die Zeiten im 12-Stunden-Format mit AM/PM oder im 24-Stunden-Format angezeigt werden?  Dies betrifft nicht die Anzeige beim Benutzer - diese wird in deren Profil eingestellt.  Dies betrifft nur die Pulldown-Menus der Zeiten-Auswahl beim Anlegen/Bearbeiten von Terminen und Zeit-Felder bei der Tagesansicht.',
-    'DISPLAY_HIDDEN_GROUPS'					=> 'Zeige versteckte Gruppen',
-    'DISPLAY_HIDDEN_GROUPS_EXPLAIN'			=> 'Sollen Benutzer versteckte Benutzergruppen sehen und zu Terminen einladen können? Wenn diese Option deaktiviert ist, können nur (Gruppen-)Administratoren Mitglieder versteckter Gruppen sehen bzw. zu Terminen einladen.',
-    'DISPLAY_NAME'							=> 'Angezeigter Name (kann LEER sein)',
-    'DISPLAY_EVENTS_ONLY_1_DAY'				=> 'Zeige Termine 1 Tag',
-    'DISPLAY_EVENTS_ONLY_1_DAY_EXPLAIN'		=> 'Zeige Termine nur an dem Tag, an dem sie beginnen (ignoriert das Enddatum/die Endzeit).',
-    'DISPLAY_FIRST_WEEK'					=> 'Zeige aktuelle Woche',
-    'DISPLAY_FIRST_WEEK_EXPLAIN'			=> 'Soll die aktuelle Woche auf dem Forum-Index angezeigt werden?',
-    'DISPLAY_NEXT_EVENTS'					=> 'Zeige die nächsten Termine',
-    'DISPLAY_NEXT_EVENTS_EXPLAIN'			=> 'Wieviele Termine sollen auf dem Index angezeigt werden? Diese Option wird ignoriert, wenn die Anzeige der aktuellen Woche aktiviert ist.',
-    'DISPLAY_TRUNCATED_SUBJECT'				=> 'Betreff abkürzen',
-    'DISPLAY_TRUNCATED_SUBJECT_EXPLAIN'		=> 'Lange Bezeichnungen im Betreff benötigen viel Platz im Kalender.  Wie viele Zeichen sollen im Betreff des Termins angezeigt werden? (0 eingeben, wenn die Anzahl nicht beschränkt werden soll)',
-    'EDIT'									=> 'Bearbeiten',
-    'EDIT_ETYPE'							=> 'Termin-Typ bearbeiten',
-    'EDIT_ETYPE_EXPLAIN'					=> 'Wähle aus, wie dieser Termin-Typ angezeigt wird',
-    'FIRST_DAY'								=> 'Erster Tag',
-    'FIRST_DAY_EXPLAIN'						=> 'Welcher Tag ist der erste Wochentag?',
-    'FULL_NAME'								=> 'Name',
-    'FRIDAY'								=> 'Freitag',
-    'ICON_URL'								=> 'URL für Icon',
-    'MANAGE_ETYPES'							=> 'Verwaltung Termin-Typen',
-    'MANAGE_ETYPES_EXPLAIN'					=> 'Termin-Typen helfen den Kalender zu organisieren. Du kannst hier Termin-Typen hinzufügen, bearbeiten oder löschen.',
-    'MINUS_HOUR'							=> 'Verschiebe alle Termine um eine Stunde zurück (-).',
-    'MONDAY'								=> 'Montag',
-    'NO_EVENT_TYPE_ERROR'					=> 'Termin-Typ nicht gefunden',
-    'PLUS_HOUR'								=> 'Verschiebe alle Termine um eine Stunde vorwärts (+).',
-    'PLUS_HOUR_CONFIRM'						=> 'Sicher, daß du alle Termine um %1$s Stunde(n) verschieben willst?',
-    'PLUS_HOUR_SUCCESS'						=> 'Alle Termine erfolgreich um %1$s Stunde(n) verschoben.',
-    'SATURDAY'								=> 'Samstag',
-    'SUNDAY'								=> 'Sonntag',
-    'TIME_FORMAT'							=> 'Zeitformat',
-    'TIME_FORMAT_EXPLAIN'					=> 'Versuche &quot;h:i a&quot; oder &quot;H:i&quot;',
-    'THURSDAY'								=> 'Donnerstag',
-    'TUESDAY'								=> 'Dienstag',
-    'USER_CANNOT_MANAGE_CALENDAR'			=> 'Du hast leider keine Berechtigung, die Kalender-Einstellungen oder Termin-Typen zu verwalten',
-    'WEDNESDAY'								=> 'Mittwoch',
+	'DISPLAY_CALENDAR_INDEX'				=> 'Kalender im Forum Index?',
+	'12_HOURS'								=> '12 Stunden',
+	'24_HOURS'								=> '24 Stunden',
+	'AUTO_POPULATE_EVENT_FREQUENCY'			=> 'Anzeige Wiederkehrende Termine',
+	'AUTO_POPULATE_EVENT_FREQUENCY_EXPLAIN'	=> 'Wie oft (in Tagen) sollen wiederkehrende Termine im Kalender angezeigt werden?  Wenn du 0 wählst, werden wiederkehrende Termine nicht in den Kalender eingetragen!',
+	'AUTO_POPULATE_EVENT_LIMIT'				=> 'Anzeige-Begrenzung',
+	'AUTO_POPULATE_EVENT_LIMIT_EXPLAIN'		=> 'Wieviel Tage im Vorraus sollen wiederkehrende Termine angezeigt und angelegt werden?  Mit anderen Worten, willst du wiederkehrende Termine nur 30, 45 oder mehr Tage vor dem Termin sehen? Trage keine zu hohe Zahl ein. Wird die Zahl verringert hat dies nur Auswirkungen auf neue Termine, alte bleiben im Kalender vorhanden.',
+	'AUTO_PRUNE_EVENT_FREQUENCY'			=> 'Automatisches Löschen alter Termine',
+	'AUTO_PRUNE_EVENT_FREQUENCY_EXPLAIN'	=> 'Wie häufig (in Tagen) sollen alte Termine vom Kalender gelöscht werden?  Wenn du 0 wählst, werden alte Termine nicht gelöscht, du musst sie manuell entfernen.',
+	'AUTO_PRUNE_EVENT_LIMIT'				=> 'Begrenzung automatisches Löschen',
+	'AUTO_PRUNE_EVENT_LIMIT_EXPLAIN'		=> 'Nach wie vielen Tagen soll der Termin der Löschliste hinzugefügt werden? Mit anderen Worten, sollen alle Termine 0, 30 oder 90 Tage nach Ende des Events erhalten bleiben?',
+	'CALENDAR_ETYPE_NAME'					=> 'Name Termin-Typ',
+	'CALENDAR_ETYPE_COLOR'					=> 'Farbe Termin-Typ',
+	'CALENDAR_ETYPE_ICON'					=> 'Icon URL Termin-Typ',
+	'CALENDAR_SETTINGS_EXPLAIN'				=> 'Kalender-Einstellungen',
+	'CHANGE_EVENTS_TO'						=> 'Ändere alle Termine dieses Typs zu',
+	'CLICK_PLUS_HOUR'						=> 'Verschiebe ALLE Termine um eine Stunde.',
+	'CLICK_PLUS_HOUR_EXPLAIN'				=> 'Die Möglichkeit, alle Termine im Kalender um +/- eine Stunde zu verschieben hilft dir, wenn du die Sommerzeiteinstellungen des Forums zurückstellst.  Bemerkung: Anklicken der Links, um Termine zu verschieben, führt zum Verlust aller Änderungen, die du oben gemacht hast.  Bitte sende das Formular erst ab, um deine Arbeit zu sichern, bevor du Termine um +/- eine Stunde verschiebst.',
+	'COLOR'									=> 'Farbe',
+	'CREATE_EVENT_TYPE'						=> 'Neuer Termin-Typ',
+	'DATE_FORMAT'							=> '|j. M Y|',
+	'DATE_FORMAT_EXPLAIN'					=> 'Versuche &quot;M d, Y&quot;',
+	'DATE_TIME_FORMAT'						=> 'Datums- und Zeitformat',
+	'DATE_TIME_FORMAT_EXPLAIN'				=> 'Versuche &quot;M d, Y h:i a&quot; oder &quot;M d, Y H:i&quot;',
+	'DELETE'								=> 'Löschen',
+	'DELETE_ALL_EVENTS'						=> 'Lösche alle Vorkommen dieses Termins',
+	'DELETE_ETYPE'							=> 'Lösche Termin-Typ',
+	'DELETE_ETYPE_EXPLAIN'					=> 'Sicher, dass du diesen Termin-Typ löschen willst?',
+	'DELETE_LAST_EVENT_TYPE'				=> 'Warnung: Das ist der letzte Termin-Typ!',
+	'DELETE_LAST_EVENT_TYPE_EXPLAIN'		=> 'Wenn dieser Termin-Typ gelöscht wird, gibt es keinen Termin mehr! Erst wenn ein neuer Termin-Typ angelegt wurde, können wieder Termine eingetragen werden.',
+	'DISPLAY_12_OR_24_HOURS'				=> 'Anzeige Zeit-Format',
+	'DISPLAY_12_OR_24_HOURS_EXPLAIN'		=> 'Sollen die Zeiten im 12-Stunden-Format mit AM/PM oder im 24-Stunden-Format angezeigt werden?  Dies betrifft nicht die Anzeige beim Benutzer - diese wird in deren Profil eingestellt.  Dies betrifft nur die Pulldown-Menus der Zeiten-Auswahl beim Anlegen/Bearbeiten von Terminen und Zeit-Felder bei der Tagesansicht.',
+	'DISPLAY_HIDDEN_GROUPS'					=> 'Zeige versteckte Gruppen',
+	'DISPLAY_HIDDEN_GROUPS_EXPLAIN'			=> 'Sollen Benutzer versteckte Benutzergruppen sehen und zu Terminen einladen können? Wenn diese Option deaktiviert ist, können nur (Gruppen-)Administratoren Mitglieder versteckter Gruppen sehen bzw. zu Terminen einladen.',
+	'DISPLAY_NAME'							=> 'Angezeigter Name (kann LEER sein)',
+	'DISPLAY_EVENTS_ONLY_1_DAY'				=> 'Zeige Termine 1 Tag',
+	'DISPLAY_EVENTS_ONLY_1_DAY_EXPLAIN'		=> 'Zeige Termine nur an dem Tag, an dem sie beginnen (ignoriert das Enddatum/die Endzeit).',
+	'DISPLAY_FIRST_WEEK'					=> 'Zeige aktuelle Woche',
+	'DISPLAY_FIRST_WEEK_EXPLAIN'			=> 'Soll die aktuelle Woche auf dem Forum-Index angezeigt werden?',
+	'DISPLAY_NEXT_EVENTS'					=> 'Zeige die nächsten Termine',
+	'DISPLAY_NEXT_EVENTS_EXPLAIN'			=> 'Wieviele Termine sollen auf dem Index angezeigt werden? Diese Option wird ignoriert, wenn die Anzeige der aktuellen Woche aktiviert ist.',
+	'DISPLAY_TRUNCATED_SUBJECT'				=> 'Betreff abkürzen',
+	'DISPLAY_TRUNCATED_SUBJECT_EXPLAIN'		=> 'Lange Bezeichnungen im Betreff benötigen viel Platz im Kalender.  Wie viele Zeichen sollen im Betreff des Termins angezeigt werden? (0 eingeben, wenn die Anzahl nicht beschränkt werden soll)',
+	'EDIT'									=> 'Bearbeiten',
+	'EDIT_ETYPE'							=> 'Termin-Typ bearbeiten',
+	'EDIT_ETYPE_EXPLAIN'					=> 'Wähle aus, wie dieser Termin-Typ angezeigt wird',
+	'FIRST_DAY'								=> 'Erster Tag',
+	'FIRST_DAY_EXPLAIN'						=> 'Welcher Tag ist der erste Wochentag?',
+	'FULL_NAME'								=> 'Name',
+	'FRIDAY'								=> 'Freitag',
+	'ICON_URL'								=> 'URL für Icon',
+	'MANAGE_ETYPES'							=> 'Verwaltung Termin-Typen',
+	'MANAGE_ETYPES_EXPLAIN'					=> 'Termin-Typen helfen den Kalender zu organisieren. Du kannst hier Termin-Typen hinzufügen, bearbeiten oder löschen.',
+	'MINUS_HOUR'							=> 'Verschiebe alle Termine um eine Stunde zurück (-).',
+	'MONDAY'								=> 'Montag',
+	'NO_EVENT_TYPE_ERROR'					=> 'Termin-Typ nicht gefunden',
+	'PLUS_HOUR'								=> 'Verschiebe alle Termine um eine Stunde vorwärts (+).',
+	'PLUS_HOUR_CONFIRM'						=> 'Sicher, daß du alle Termine um %1$s Stunde(n) verschieben willst?',
+	'PLUS_HOUR_SUCCESS'						=> 'Alle Termine erfolgreich um %1$s Stunde(n) verschoben.',
+	'SATURDAY'								=> 'Samstag',
+	'SUNDAY'								=> 'Sonntag',
+	'TIME_FORMAT'							=> 'Zeitformat',
+	'TIME_FORMAT_EXPLAIN'					=> 'Versuche &quot;h:i a&quot; oder &quot;H:i&quot;',
+	'THURSDAY'								=> 'Donnerstag',
+	'TUESDAY'								=> 'Dienstag',
+	'USER_CANNOT_MANAGE_CALENDAR'			=> 'Du hast leider keine Berechtigung, die Kalender-Einstellungen oder Termin-Typen zu verwalten',
+	'WEDNESDAY'								=> 'Mittwoch',
 
 ));
 
 #######language/en/mods/displaymails.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 $lang = array_merge($lang, array(
 	'DISPLAYMAILS_TITLE'	=> 'Liste aller User-Mail Adressen',
-	'DISPLAYMAILS_DESC' => 'Hier werden alle Mail-Adressen der registrierten User gelistet, um diese in (Online-)E-Mail Programmen wie MS Outlook, GMX oder Firebird zu nutzen! TIPP: Verwende das BCC-Feld um allen User unsichtbar voneinander eine Mail zukommen zu lassen. Du kannst zwischen den drei Ansichten bzw. Ausgabearten wechseln. Ausserdem kannst du die Maildaten in eine .csv Datei exportieren!',
+	'DISPLAYMAILS_DESC'	=> 'Hier werden alle Mail-Adressen der registrierten User gelistet, um diese in (Online-)E-Mail Programmen wie MS Outlook, GMX oder Firebird zu nutzen! TIPP: Verwende das BCC-Feld um allen User unsichtbar voneinander eine Mail zukommen zu lassen. Du kannst zwischen den drei Ansichten bzw. Ausgabearten wechseln. Ausserdem kannst du die Maildaten in eine .csv Datei exportieren!',
 	'DISPLAYMAILS_COUNT'	=> 'Es werden %s Mails angezeigt.',
 	'DISPLAYMAILS_DESIGN'	=> 'Ausgabevariante:',
 	'CSV_FILESIZE'			=> 'Die .csv Datei wurde erfolgreich generiert und ist %s gro&szlig;.',
 	'CSV_DOWNLOADLINK'		=> 'Die Datei wurde im Ordner root/store gespeichert. Klicke %s, um die Datei herunterzuladen.',
 	'CSV_ERROR'				=> 'Die .csv Datei konnte nicht generiert werden. Bitte überprüfe die Ordner Zugriffsrechte für den Ordner "Store".',
 	'CSV_DESC'				=> 'Adressen als .csv exportieren?',
-	));
+));
 
 #######language/en/mods/dm_eds.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'EDS_BACK_INDEX'		=> 'Zurück zum Index',
@@ -5201,7 +4887,7 @@ $lang = array_merge($lang, array(
 	'EDS_COST_ERROR'		=> 'Du hast nicht genügend %1$s für diesen Download',
 	'EDS_COST_FREE'			=> 'Dieser Download ist kostenlos',
 	'EDS_COST_OK'			=> 'Du hast ausreichend %1$s für diesen Download',
-	'EDS_DL_NOEXISTS'       => 'Dieser Download existiert nicht',
+	'EDS_DL_NOEXISTS'		=> 'Dieser Download existiert nicht',
 	'EDS_DOWNLOAD'			=> 'Download',
 	'EDS_DOWNLOADS'			=> 'Downloads',
 	'EDS_DOWNLOAD_EXPLAIN'	=> 'Klicke rechts auf das Icon, um die gewünschte Datei runterzuladen',
@@ -5237,95 +4923,73 @@ $lang = array_merge($lang, array(
 
 #######language/en/mods/exif_data.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 $lang = array_merge($lang, array(
 	'EXIF-DATA'					=> 'EXIF-Daten',
 	'EXIF_APERTURE'				=> 'Blende',
 	'EXIF_CAM_MODEL'			=> 'Kamera-Modell',
 	'EXIF_DATE'					=> 'Bild aufgenommen am',
 	'EXIF_EXPOSURE'				=> 'Belichtungszeit',
-		'EXIF_EXPOSURE_EXP'			=> '%s Sek',// 'EXIF_EXPOSURE' unit
+	'EXIF_EXPOSURE_EXP'			=> '%s Sek',// 'EXIF_EXPOSURE' unit
 	'EXIF_EXPOSURE_BIAS'		=> 'Belichtungskorrektur',
-		'EXIF_EXPOSURE_BIAS_EXP'	=> '%s LW',// 'EXIF_EXPOSURE_BIAS' unit
+	'EXIF_EXPOSURE_BIAS_EXP'	=> '%s LW',// 'EXIF_EXPOSURE_BIAS' unit
 	'EXIF_EXPOSURE_PROG'		=> 'Belichtungsprogramm',
-		'EXIF_EXPOSURE_PROG_0'		=> 'Nicht definiert',
-		'EXIF_EXPOSURE_PROG_1'		=> 'Manuell',
-		'EXIF_EXPOSURE_PROG_2'		=> 'Normal-Programm',
-		'EXIF_EXPOSURE_PROG_3'		=> 'Blendenpriorität',
-		'EXIF_EXPOSURE_PROG_4'		=> 'Verschlusspriorität',
-		'EXIF_EXPOSURE_PROG_5'		=> 'Kreativ-Programm (ausgerichtet auf Schärfentiefe)',
-		'EXIF_EXPOSURE_PROG_6'		=> 'Action-Programm (ausgerichtet auf schnelle Verschlussgeschwindigkeit)',
-		'EXIF_EXPOSURE_PROG_7'		=> 'Portrait-Modus (für CloseUp-Fotos mit unscharfem Hintergrund)',
-		'EXIF_EXPOSURE_PROG_8'		=> 'Landschaftsmodus (für Landschaftsfotos mit scharfem Hintergrund)',
+	'EXIF_EXPOSURE_PROG_0'		=> 'Nicht definiert',
+	'EXIF_EXPOSURE_PROG_1'		=> 'Manuell',
+	'EXIF_EXPOSURE_PROG_2'		=> 'Normal-Programm',
+	'EXIF_EXPOSURE_PROG_3'		=> 'Blendenpriorität',
+	'EXIF_EXPOSURE_PROG_4'		=> 'Verschlusspriorität',
+	'EXIF_EXPOSURE_PROG_5'		=> 'Kreativ-Programm (ausgerichtet auf Schärfentiefe)',
+	'EXIF_EXPOSURE_PROG_6'		=> 'Action-Programm (ausgerichtet auf schnelle Verschlussgeschwindigkeit)',
+	'EXIF_EXPOSURE_PROG_7'		=> 'Portrait-Modus (für CloseUp-Fotos mit unscharfem Hintergrund)',
+	'EXIF_EXPOSURE_PROG_8'		=> 'Landschaftsmodus (für Landschaftsfotos mit scharfem Hintergrund)',
 	'EXIF_FLASH'				=> 'Blitz',
-		'EXIF_FLASH_CASE_0'			=> 'Blitz wurde nicht ausgelöst',
-		'EXIF_FLASH_CASE_1'			=> 'Blitz wurde ausgelöst',
-		'EXIF_FLASH_CASE_5'			=> 'Kein Messblitz-Licht zurückgeworfen',
-		'EXIF_FLASH_CASE_7'			=> 'Messblitz-Licht zurückgeworfen',
-		'EXIF_FLASH_CASE_8'			=> 'Ein, Blitz wurde nicht ausgelöst',
-		'EXIF_FLASH_CASE_9'			=> 'Blitz wurde ausgelöst, Blitz erzwingen-Modus',
-		'EXIF_FLASH_CASE_13'		=> 'Blitz wurde ausgelöst, Blitz erzwingen-Modus, kein Messblitz-Licht zurückgeworfen',
-		'EXIF_FLASH_CASE_15'		=> 'Blitz wurde ausgelöst, Blitz erzwingen-Modus, Messblitz-Licht zurückgeworfen',
-		'EXIF_FLASH_CASE_16'		=> 'Blitz wurde nicht ausgelöst, Blitz unterdrücken-Modus',
-		'EXIF_FLASH_CASE_20'		=> 'Deaktiviert, Blitz wurde nicht ausgelöst, kein Messblitz-Licht zurückgeworfen',
-		'EXIF_FLASH_CASE_24'		=> 'Blitz wurde nicht ausgelöst, Automodus',
-		'EXIF_FLASH_CASE_25'		=> 'Blitz wurde ausgelöst, Automodus',
-		'EXIF_FLASH_CASE_29'		=> 'Blitz wurde ausgelöst, Automodus, kein Messblitz-Licht zurückgeworfen',
-		'EXIF_FLASH_CASE_31'		=> 'Blitz wurde ausgelöst, Automodus, Messblitz-Licht zurückgeworfen',
-		'EXIF_FLASH_CASE_32'		=> 'Keine Blitzfunktion',
-		'EXIF_FLASH_CASE_48'		=> 'Deaktiviert, Keine Blitzfunktion',
-		'EXIF_FLASH_CASE_65'		=> 'Blitz wurde ausgelöst, Rote-Augen-Reduzierung',
-		'EXIF_FLASH_CASE_69'		=> 'Blitz wurde ausgelöst, Rote-Augen-Reduzierung, kein Messblitz-Licht zurückgeworfen',
-		'EXIF_FLASH_CASE_71'		=> 'Blitz wurde ausgelöst, Rote-Augen-Reduzierung, Messblitz-Licht zurückgeworfen',
-		'EXIF_FLASH_CASE_73'		=> 'Blitz wurde ausgelöst, Blitz erzwingen-Modus, Rote-Augen-Reduzierung',
-		'EXIF_FLASH_CASE_77'		=> 'Blitz wurde ausgelöst, Blitz erzwingen-Modus, Rote-Augen-Reduzierung, kein Messblitz-Licht zurückgeworfen',
-		'EXIF_FLASH_CASE_79'		=> 'Blitz wurde ausgelöst, Blitz erzwingen-Modus, Rote-Augen-Reduzierung, Messblitz-Licht zurückgeworfen',
-		'EXIF_FLASH_CASE_80'		=> 'Deaktiviert, Rote-Augen-Reduzierung',
-		'EXIF_FLASH_CASE_88'		=> 'Blitz wurde nicht ausgelöst, Rote-Augen-Reduzierung',
-		'EXIF_FLASH_CASE_89'		=> 'Blitz wurde ausgelöst, Automodus, Rote-Augen-Reduzierung',
-		'EXIF_FLASH_CASE_93'		=> 'Blitz wurde ausgelöst, Automodus, kein Messblitz-Licht zurückgeworfen, Rote-Augen-Reduzierung',
-		'EXIF_FLASH_CASE_95'		=> 'Blitz wurde ausgelöst, Automodus, Messblitz-Licht zurückgeworfen, Rote-Augen-Reduzierung',
+	'EXIF_FLASH_CASE_0'			=> 'Blitz wurde nicht ausgelöst',
+	'EXIF_FLASH_CASE_1'			=> 'Blitz wurde ausgelöst',
+	'EXIF_FLASH_CASE_5'			=> 'Kein Messblitz-Licht zurückgeworfen',
+	'EXIF_FLASH_CASE_7'			=> 'Messblitz-Licht zurückgeworfen',
+	'EXIF_FLASH_CASE_8'			=> 'Ein, Blitz wurde nicht ausgelöst',
+	'EXIF_FLASH_CASE_9'			=> 'Blitz wurde ausgelöst, Blitz erzwingen-Modus',
+	'EXIF_FLASH_CASE_13'		=> 'Blitz wurde ausgelöst, Blitz erzwingen-Modus, kein Messblitz-Licht zurückgeworfen',
+	'EXIF_FLASH_CASE_15'		=> 'Blitz wurde ausgelöst, Blitz erzwingen-Modus, Messblitz-Licht zurückgeworfen',
+	'EXIF_FLASH_CASE_16'		=> 'Blitz wurde nicht ausgelöst, Blitz unterdrücken-Modus',
+	'EXIF_FLASH_CASE_20'		=> 'Deaktiviert, Blitz wurde nicht ausgelöst, kein Messblitz-Licht zurückgeworfen',
+	'EXIF_FLASH_CASE_24'		=> 'Blitz wurde nicht ausgelöst, Automodus',
+	'EXIF_FLASH_CASE_25'		=> 'Blitz wurde ausgelöst, Automodus',
+	'EXIF_FLASH_CASE_29'		=> 'Blitz wurde ausgelöst, Automodus, kein Messblitz-Licht zurückgeworfen',
+	'EXIF_FLASH_CASE_31'		=> 'Blitz wurde ausgelöst, Automodus, Messblitz-Licht zurückgeworfen',
+	'EXIF_FLASH_CASE_32'		=> 'Keine Blitzfunktion',
+	'EXIF_FLASH_CASE_48'		=> 'Deaktiviert, Keine Blitzfunktion',
+	'EXIF_FLASH_CASE_65'		=> 'Blitz wurde ausgelöst, Rote-Augen-Reduzierung',
+	'EXIF_FLASH_CASE_69'		=> 'Blitz wurde ausgelöst, Rote-Augen-Reduzierung, kein Messblitz-Licht zurückgeworfen',
+	'EXIF_FLASH_CASE_71'		=> 'Blitz wurde ausgelöst, Rote-Augen-Reduzierung, Messblitz-Licht zurückgeworfen',
+	'EXIF_FLASH_CASE_73'		=> 'Blitz wurde ausgelöst, Blitz erzwingen-Modus, Rote-Augen-Reduzierung',
+	'EXIF_FLASH_CASE_77'		=> 'Blitz wurde ausgelöst, Blitz erzwingen-Modus, Rote-Augen-Reduzierung, kein Messblitz-Licht zurückgeworfen',
+	'EXIF_FLASH_CASE_79'		=> 'Blitz wurde ausgelöst, Blitz erzwingen-Modus, Rote-Augen-Reduzierung, Messblitz-Licht zurückgeworfen',
+	'EXIF_FLASH_CASE_80'		=> 'Deaktiviert, Rote-Augen-Reduzierung',
+	'EXIF_FLASH_CASE_88'		=> 'Blitz wurde nicht ausgelöst, Rote-Augen-Reduzierung',
+	'EXIF_FLASH_CASE_89'		=> 'Blitz wurde ausgelöst, Automodus, Rote-Augen-Reduzierung',
+	'EXIF_FLASH_CASE_93'		=> 'Blitz wurde ausgelöst, Automodus, kein Messblitz-Licht zurückgeworfen, Rote-Augen-Reduzierung',
+	'EXIF_FLASH_CASE_95'		=> 'Blitz wurde ausgelöst, Automodus, Messblitz-Licht zurückgeworfen, Rote-Augen-Reduzierung',
 	'EXIF_FOCAL'				=> 'Brennweite',
-		'EXIF_FOCAL_EXP'			=> '%s mm',// 'EXIF_FOCAL' unit
+	'EXIF_FOCAL_EXP'			=> '%s mm',// 'EXIF_FOCAL' unit
 	'EXIF_ISO'					=> 'ISO-Empfindlichkeit',
 	'EXIF_METERING_MODE'		=> 'Belichtungs- Messmethode',
-		'EXIF_METERING_MODE_0'		=> 'Unbekannt',
-		'EXIF_METERING_MODE_1'		=> 'Durchschnitt',
-		'EXIF_METERING_MODE_2'		=> 'Mittenbetont',
-		'EXIF_METERING_MODE_3'		=> 'Spot',
-		'EXIF_METERING_MODE_4'		=> 'Multi-Spot',
-		'EXIF_METERING_MODE_5'		=> 'Multi-Segment',
-		'EXIF_METERING_MODE_6'		=> 'Teilbild',
-		'EXIF_METERING_MODE_255'	=> 'Andere',
+	'EXIF_METERING_MODE_0'		=> 'Unbekannt',
+	'EXIF_METERING_MODE_1'		=> 'Durchschnitt',
+	'EXIF_METERING_MODE_2'		=> 'Mittenbetont',
+	'EXIF_METERING_MODE_3'		=> 'Spot',
+	'EXIF_METERING_MODE_4'		=> 'Multi-Spot',
+	'EXIF_METERING_MODE_5'		=> 'Multi-Segment',
+	'EXIF_METERING_MODE_6'		=> 'Teilbild',
+	'EXIF_METERING_MODE_255'	=> 'Andere',
 	'EXIF_NOT_AVAILABLE'		=> 'nicht verfügbar',
 	'EXIF_WHITEB'				=> 'Weißabgleich',
-		'EXIF_WHITEB_AUTO'			=> 'Automatisch',
-		'EXIF_WHITEB_MANU'			=> 'Manuell',
-
+	'EXIF_WHITEB_AUTO'			=> 'Automatisch',
+	'EXIF_WHITEB_MANU'			=> 'Manuell',
 	'SHOW_EXIF'					=> 'ein-/ausblenden',
 ));
 
 #######language/en/mods/formel1.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'FORMEL_TITLE'					=> 'Formel1 Tippspiel',
@@ -5422,20 +5086,9 @@ $lang = array_merge($lang, array(
 
 	'VIEWING_F1WEBTIPP'				=> 'Betrachtet das Formel1 Tippspiel',
 
-
 ));
 
 #######language/en/mods/gallery.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
 
 $lang = array_merge($lang, array(
 	'ADD_UPLOAD_FIELD'				=> 'Weitere Felder zum Hochladen hinzufügen',
@@ -5708,16 +5361,6 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/mods/gallery_acp.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
 
 $lang = array_merge($lang, array(
 	'ACP_GALLERY_CLEANUP_EXPLAIN'	=> 'Hier kannst du Überreste aus der Galerie entfernen.',
@@ -6147,16 +5790,6 @@ $lang = array_merge($lang, array(
 
 #######language/en/mods/gallery_mcp.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 $lang = array_merge($lang, array(
 	'CHOOSE_ACTION'					=> 'gewünschte Aktion auswählen',
 
@@ -6246,16 +5879,6 @@ $lang = array_merge($lang, array(
 
 #######language/en/mods/gallery_ucp.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 $lang = array_merge($lang, array(
 	'ACCESS_CONTROL_ALL'			=> 'Jeden',
 	'ACCESS_CONTROL_REGISTERED'		=> 'Registrierte Benutzer',
@@ -6319,24 +5942,12 @@ $lang = array_merge($lang, array(
 
 #######language/en/mods/hangman.php#######
 
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if ( empty($lang) || !is_array($lang) )
-{
-	$lang = array();
-}
-
-
 $lang = array_merge($lang, array(
 	'HANGMAN_NO_HANGMANWORDS'		=> 'Keine Hangmanwörter',
-	'HANGMAN_TOP'                   => 'TOP - ',
-    'HANGMAN_RETURN_BACK_OVERVIEW'	=> 'Klicke %shier%s um zurück zur Überblicksseite zu kommen',
-	'DELETE_MARKED_HANGMEN_SUCCESS' => '%d Hangman(s) wurden erfolgreich gelöscht',
-    'DELETE_MARKED_HANGMEN'			=> 'Bist du sicher, daß du alle markierten Hangmans löschen willst?',
+	'HANGMAN_TOP'					=> 'TOP - ',
+	'HANGMAN_RETURN_BACK_OVERVIEW'	=> 'Klicke %shier%s um zurück zur Überblicksseite zu kommen',
+	'DELETE_MARKED_HANGMEN_SUCCESS'	=> '%d Hangman(s) wurden erfolgreich gelöscht',
+	'DELETE_MARKED_HANGMEN'			=> 'Bist du sicher, daß du alle markierten Hangmans löschen willst?',
 	'HANGMAN_NO_HIGHSCORES'			=> 'Keine Hangman Highscores',
 	'HANGMAN_DELETE'				=> 'Hangman löschen',
 	'CLOSE_WINDOW'					=> 'Fenster schließen',
@@ -6345,9 +5956,9 @@ $lang = array_merge($lang, array(
 	'HANGMAN_VIEW_ONLINE'			=> 'Spielt Hangman',
 
 	'HANGMAN_TITLE'					=> 'Hangman MOD',
-	'ACP_HANGMAN_INSERT_FIRST_FILL' => 'Hangman Tabellen wurden mit den Standardwerten befüllt',
+	'ACP_HANGMAN_INSERT_FIRST_FILL'	=> 'Hangman Tabellen wurden mit den Standardwerten befüllt',
 	'ACP_HANGMAN_REMOVE_TABLES'		=> 'Hangman Tabellen erfolgreich entfernt',
-	
+
 	'HANGMAN_VERSION'				=> '0.1.0',
 	'HANGMAN_COPYRIGHT'				=> 'Hangman Mod v.%s &copy; by <a href="http://vfalcone.ru/forum/" onclick="window.open(this.href); return false">El_Teniente, </a><a href="http://www.spieleresidenz.de" onclick="window.open(this.href); return false">Wuerzi</a> &amp; <a href="http://die-muellers.org" onclick="window.open(this.href); return false">femu</a>',
 	'HANGMAN_OVERALL_HEADLINE'		=> 'Hangman Version',
@@ -6358,7 +5969,7 @@ $lang = array_merge($lang, array(
 	'STATUS_TIME'					=> '%s Zeit abgelaufen!',
 	'STATUS_WON'					=> '%s erraten von: %s',
 	'STATUS_UNLIMITED'				=> 'Unbegrenzt!',	
-  
+
 	'HIGHSCORE_PAGE' 				=> 'Highscore',
 	'PREV_PAGE' 					=> 'Vorherige Seite',
 	'HELP_PAGE' 					=> 'Hilfe',
@@ -6366,9 +5977,9 @@ $lang = array_merge($lang, array(
 	'CREATION_PAGE'					=> 'Neues Hangman',
 	'OVERVIEW_PAGE'					=> 'Überblicks-Seite',
 	'CREATION_DONE_PAGE' 			=> 'Hangman erstellen',
-	'TOTAL_HANGMAN_PLAYERS'         => 'Spieler gesamt: %d',
+	'TOTAL_HANGMAN_PLAYERS'			=> 'Spieler gesamt: %d',
 	'TOTAL_HANGMANS'				=> 'Insgesamt erstellte Hangmans: %d',
-	
+
 	'HANGMAN_CREATOR' 				=> 'Ersteller',
 	'HANGMAN_DATE' 					=> 'Erstelldatum',
 	'HANGMAN_LEASE_DATE'			=> 'Tage',
@@ -6376,7 +5987,7 @@ $lang = array_merge($lang, array(
 	'HANGMAN_MAX_TRIES'				=> 'Versuche',
 	'HANGMAN_STATUS'				=> 'Status',
 	'HANGMAN_QUESS_TABLE'			=> 'Hangman Quess Table',
-	
+
 	'FILTER_HEADLINE'				=> 'Filter:&nbsp;',
 	'FILTER_UNQUESSED'				=> 'Noch nicht erratene',
 	'FILTER_WON'					=> 'Gewonnene',
@@ -6442,8 +6053,8 @@ $lang = array_merge($lang, array(
 	'QUESS_NOBODY'					=> 'Niemand hat sich bisher am Hangman versucht!',
 	'TRY_A_WORD'					=> 'Ein Wort versuchen',
 	'TRY'							=> 'Versuchen',	
-	
-	'HIGHSCORE_USER'		    	=> 'Benutzername',
+
+	'HIGHSCORE_USER'				=> 'Benutzername',
 	'HIGHSCORE_WON'					=> 'Gewonnene',
 	'HIGHSCORE_LOST'				=> 'Verlorene',
 	'HIGHSCORE_CREATED'				=> 'Erstellte',
@@ -6452,9 +6063,9 @@ $lang = array_merge($lang, array(
 	'HIGHSCORE_W_LETTERS'			=> 'Falsche Buchstaben',
 	'HIGHSCORE_ASC'					=> 'Aufsteigend',
 	'HIGHSCORE_DESC'				=> 'Absteigend',
-	
+
 	'HIGHSCORE_FILTER_WON'			=> 'Nach Gewinnen',
-	'HIGHSCORE_FILTER_LOST'	  		=> 'Nach Verlusten',
+	'HIGHSCORE_FILTER_LOST'			=> 'Nach Verlusten',
 	'HIGHSCORE_FILTER_SCORE'		=> 'Nach Punkten',
 	'HIGHSCORE_FILTER_CREATED'		=> 'Nach Erstellten',
 	'HIGHSCORE_FILTER_R_LETTERS'	=> 'Nach r.Buchstaben',
@@ -6507,17 +6118,6 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/mods/info_acp_dm_eds.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ACP_ADD'							=> 'Hinzufügen',
@@ -6664,7 +6264,6 @@ Viel Spaß damit!',
 	
 	'NOT_UPLOADED'						=> '',
 
-
 	'ACP_EXTERN'					=> 'Externer Link Upload',
 	'ACP_WEBSPACE'				=> 'eine Datei hochladen',
 	'ACP_CAT_IMAGE'				=> 'Bild URL',
@@ -6681,17 +6280,6 @@ Viel Spaß damit!',
 ));
 
 #######language/en/mods/info_acp_football.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ACP_FOOTBALL'					=> 'Fussball',
@@ -6817,9 +6405,6 @@ $lang = array_merge($lang, array(
 	'LOG_FOOTBALL_GOOGLE'				=> '<strong>Gadget football_google.xml gelöscht</strong>',
 	'LOG_FOOTBALL_MENU'					=> '<strong>Tipprunden-Menu geändert</strong>',
 	'LOG_FOOTBALL_SETTINGS'				=> '<strong>Tipprunde-Einstellungen geändert</strong>',
-
-
-
 
 	'ACP_FOOTBALL_EXTRA'					=> 'Sondertipps',
 	'ACP_FOOTBALL_EXTRA_MANAGE'				=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Sondertipps verwalten',
@@ -7636,62 +7221,50 @@ $lang = array_merge($lang, array(
 
 	'YEAR'									=> 'Jahr',
 ));
+
 #######language/en/mods/info_acp_hangman.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if ( empty($lang) || !is_array($lang) )
-{
-	$lang = array();
-}
-
-
 $lang = array_merge($lang, array(
-	'ACP_IMPORT_BONUS'							=> 'Import Bonus',
-	'ACP_IMPORT_BONUS_EXP'                      => 'Soll der Benutzer, der im Import genannt wird, einen Bonus für den Import erhalten (gilt für den gesamten Import)?',
-	'ACP_IMPORT_BONUS_SIZE'                     => 'Höhe des Bonus',
-	'ACP_IMPORT_BONUS_SIZE_EXP'                 => 'Höhe des Bonus für den Import Job',
-	'ACP_HANGMAN_BOT'                           => 'Aktiviere den Hangman Bot',
-	'ACP_HANGMAN_BOT_EXP'                       => 'Wenn aktiviert, wird statt des Benutzers Anonymous der Hangman Bot Name auf der Überblicks- und der Highscore Seite angezeigt',
-	'ACP_HANGMAN_BOT_NAME'                      => 'Name des Hangman Bots',
-	'ACP_HANGMAN_BOT_NAME_EXP'                  => 'Gib den gewünschten Namen für den Hangman Bot an',
-	'ACP_HANGMAN_ANONYMOUS_POINTS'				=> 'Punkte für Gäste',
-	'ACP_HANGMAN_ANONYMOUS_POINTS_EXP'			=> 'Sollen anonyme Benutzer Punkte erhalten/verlieren? Gilt auch für den Import von Hangmans, wenn der Anonymous Benutzer verwendet wird',
-	'ACP_HANGMAN_CREATOR_BONUS'					=> 'Ersteller Bonus',
-	'ACP_HANGMAN_CREATOR_BONUS_EXP'				=> 'Soll der Ersteller einen Bonus erhalten, wenn jemand seinen Hangman nicht erraten hat?',
-	'ACP_HANGMAN_CREATOR_BONUS_SIZE'			=> 'Ersteller Bonus für falsch raten',
-	'ACP_HANGMAN_CREATOR_BONUS_SIZE_EXP'		=> 'Wieviele Punkte soll der Ersteller gutgeschrieben bekommen, wenn ein Hangman <strong>nicht</strong> nicht erraten wurde?',
-	'ACP_HANGMAN_INCORRECT_VALUES'				=> 'Ungültige Werte eingegeben. Beim Export von x bis y müssen beide Werte eingegeben und markiert werden!',
-	'ACP_HANGMAN_IMPORT_SQLERR'					=> 'SQL Fehler bei Hangman #%d',
-	'ACP_HANGMAN_SKIPPED_ERROR'					=> 'Wort übersprungen <strong>%s</strong>. Fehler: %s',
-	'ACP_HANGMAN_IMPORT_STOP'                   => 'Import nach %d Hangman abgebrochen',
-	'ACP_HANGMAN_IMPORT_SUCCESS'                => 'Import von %d Hangmans abgeschlossen',
+	'ACP_IMPORT_BONUS'					=> 'Import Bonus',
+	'ACP_IMPORT_BONUS_EXP'				=> 'Soll der Benutzer, der im Import genannt wird, einen Bonus für den Import erhalten (gilt für den gesamten Import)?',
+	'ACP_IMPORT_BONUS_SIZE'				=> 'Höhe des Bonus',
+	'ACP_IMPORT_BONUS_SIZE_EXP'			=> 'Höhe des Bonus für den Import Job',
+	'ACP_HANGMAN_BOT'					=> 'Aktiviere den Hangman Bot',
+	'ACP_HANGMAN_BOT_EXP'				=> 'Wenn aktiviert, wird statt des Benutzers Anonymous der Hangman Bot Name auf der Überblicks- und der Highscore Seite angezeigt',
+	'ACP_HANGMAN_BOT_NAME'				=> 'Name des Hangman Bots',
+	'ACP_HANGMAN_BOT_NAME_EXP'			=> 'Gib den gewünschten Namen für den Hangman Bot an',
+	'ACP_HANGMAN_ANONYMOUS_POINTS'		=> 'Punkte für Gäste',
+	'ACP_HANGMAN_ANONYMOUS_POINTS_EXP'	=> 'Sollen anonyme Benutzer Punkte erhalten/verlieren? Gilt auch für den Import von Hangmans, wenn der Anonymous Benutzer verwendet wird',
+	'ACP_HANGMAN_CREATOR_BONUS'			=> 'Ersteller Bonus',
+	'ACP_HANGMAN_CREATOR_BONUS_EXP'		=> 'Soll der Ersteller einen Bonus erhalten, wenn jemand seinen Hangman nicht erraten hat?',
+	'ACP_HANGMAN_CREATOR_BONUS_SIZE'	=> 'Ersteller Bonus für falsch raten',
+	'ACP_HANGMAN_CREATOR_BONUS_SIZE_EXP'=> 'Wieviele Punkte soll der Ersteller gutgeschrieben bekommen, wenn ein Hangman <strong>nicht</strong> nicht erraten wurde?',
+	'ACP_HANGMAN_INCORRECT_VALUES'		=> 'Ungültige Werte eingegeben. Beim Export von x bis y müssen beide Werte eingegeben und markiert werden!',
+	'ACP_HANGMAN_IMPORT_SQLERR'			=> 'SQL Fehler bei Hangman #%d',
+	'ACP_HANGMAN_SKIPPED_ERROR'			=> 'Wort übersprungen <strong>%s</strong>. Fehler: %s',
+	'ACP_HANGMAN_IMPORT_STOP'			=> 'Import nach %d Hangman abgebrochen',
+	'ACP_HANGMAN_IMPORT_SUCCESS'		=> 'Import von %d Hangmans abgeschlossen',
 	'ACP_RESET_CREATED_CONFIRM_MESSAGE'			=> 'Bist du sicher, daß du den Zähler für erstellte Hangmans zurücksetzen willst?',
 	'ACP_DELETE_EXP_CONFIRM_MESSAGE'			=> 'Bist du sicher, daß du alle abgelaufenen Hangmans löschen willst?',
 	'ACP_DELETE_WON_CONFIRM_MESSAGE'			=> 'Bist du sicher, daß du alle gelösten Hangmans aus der DB löschen willst?',
 	'ACP_DELETE_HIGHSCORE_CONFIRM_MESSAGE'		=> 'Bist du sicher, daß du alle Hangman Highscores löschen willst?',
 	'ACP_DELETE_ALL_HANGMANS_CONFIRM_MESSAGE' 	=> 'Bist du sicher, daß du alle Hangmans löschen willst?',
 
-	'ACP_RES_CREATED_HANGMANS'  => 'Den Zähler für erstellte Hangmans zurücksetzen',
-	'ACP_RESET_CREATED_HANGMANS'=> 'Der Zähler für erstellte Hangmans wurde erfolgreich zurückgesetzt!',
-	'LOG_RESET_CREATED_HANGMANS'=> 'Der Zähler für erstellte Hangmans wurde zurückgesetzt',
-
-	'ACP_HANGMAN_SKIP'          => 'Das Wort %s wurde ignoriert, weil ',
-	'ACP_HANGMAN_SKIP_FEW'		=> '&#8226; es nicht genügend Buchstaben hat',
-	'ACP_HANGMAN_SKIP_ALREADY'  => '&#8226; es bereits in der DB exisitiert',
-	'ACP_HANGMAN_SKIP_PARSING'  => '&#8226; es ungültige Zeichen enthält:[%s]',
-	'ACP_HANGMAN_SKIP_BBCODED'	=> '&#8226; enthält bbcode',
-
-	'ACP_POINTS_NOTICE'         => 'Du hast zwar den Ultimate Points Mod installiert, aber deaktiviert. Daher kannst du hier nichts weiter einstellen.',
-	'ACP_HANGMAN_NOFILE'        => 'Sorry, dieser Dateiname existiert nicht.',
-	'ACP_BOARD_HANGMAN'         => 'Hangman Status',
-	'ACP_BOARD_HANGMAN_ENABLE' 	=> 'Hangman aktivert',
-	'ACP_ALLOW_BBCODE'          => 'bbCode in der Beschreibung und in der Hilfe',
+	'ACP_RES_CREATED_HANGMANS'		=> 'Den Zähler für erstellte Hangmans zurücksetzen',
+	'ACP_RESET_CREATED_HANGMANS'	=> 'Der Zähler für erstellte Hangmans wurde erfolgreich zurückgesetzt!',
+	'LOG_RESET_CREATED_HANGMANS'	=> 'Der Zähler für erstellte Hangmans wurde zurückgesetzt',
+	'ACP_HANGMAN_SKIP'				=> 'Das Wort %s wurde ignoriert, weil ',
+	'ACP_HANGMAN_SKIP_FEW'			=> '&#8226; es nicht genügend Buchstaben hat',
+	'ACP_HANGMAN_SKIP_ALREADY'		=> '&#8226; es bereits in der DB exisitiert',
+	'ACP_HANGMAN_SKIP_PARSING'		=> '&#8226; es ungültige Zeichen enthält:[%s]',
+	'ACP_HANGMAN_SKIP_BBCODED'		=> '&#8226; enthält bbcode',
+	'ACP_POINTS_NOTICE'				=> 'Du hast zwar den Ultimate Points Mod installiert, aber deaktiviert. Daher kannst du hier nichts weiter einstellen.',
+	'ACP_HANGMAN_NOFILE'		=> 'Sorry, dieser Dateiname existiert nicht.',
+	'ACP_BOARD_HANGMAN'			=> 'Hangman Status',
+	'ACP_BOARD_HANGMAN_ENABLE'	=> 'Hangman aktivert',
+	'ACP_ALLOW_BBCODE'			=> 'bbCode in der Beschreibung und in der Hilfe',
 	'ACP_ALLOW_BBCODE_EXP'		=> 'Dürfen bbCodes in der Beschreibung und in der Hilfe verwendet werden?',
-	'ACP_ALLOW_SMILIES'         => 'Smilies in der Beschreibung und in der Hilfe',
+	'ACP_ALLOW_SMILIES'			=> 'Smilies in der Beschreibung und in der Hilfe',
 	'ACP_ALLOW_SMILIES_EXP'		=> 'Dürfen Smilies in der Beschreibung und in der Hilfe verwendet werden?',
 	'ACP_HANGMAN_MANAGEMENT' 	=> 'Hangman Verwaltung',
 	'ACP_HANGMAN_SETTINGS' 		=> 'Hangman Einstellungen',
@@ -7712,7 +7285,7 @@ $lang = array_merge($lang, array(
 	'ACP_POINTS_MOD_INSTALLED'	=> 'Soll das Ultimate Points System verwendet werden?',
 	'ACP_POINTS_MOD_WON'		=> 'Punkte für ein gewonnenes Hangman',
 	'ACP_POINTS_MOD_LOST'		=> 'Punkteabzug für ein verlorenes Hangman',
-	'ACP_POINTS_MOD_CREATOR_REWARD' =>'Punkte für den Ersteller, wenn Hangman nicht gelöst wurde',
+	'ACP_POINTS_MOD_CREATOR_REWARD'	=>'Punkte für den Ersteller, wenn Hangman nicht gelöst wurde',
 	'ACP_POINTS_MOD_CREATED'	=> 'Punkte für ein neu erstelltes Hangman',
 	'ACP_POINTS_MOD_LETTERS'	=> 'Punkte für erratene Buchstaben',
 	'ACP_POINTS_INTERNAL'		=> 'Internes Punktesystem',
@@ -7814,17 +7387,6 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/mods/info_acp_points.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ACP_POINTS'						=> 'Ultimate Points',
@@ -8057,17 +7619,6 @@ $lang = array_merge($lang, array(
 
 #######language/en/mods/info_ucp_arcade.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
-
 $lang = array_merge($lang, array(
 	'UCP_ARCADE'							=> 'Spiele',
 	'UCP_ARCADE_SETTINGS'					=> 'Einstellungen',
@@ -8084,35 +7635,18 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/mods/info_ucp_arcade_challenge.php#######
-if (!defined('IN_PHPBB'))
-  {
-    exit;
-  }
-  if (empty($lang) || !is_array($lang))
-  {
-      $lang = array();
-  }
-  $lang = array_merge($lang, array(
-  
-  'UCP_ARCADE_CHALLENGE'          => 'Challenge',
-  'UCP_CHALLENGE_ON'              => 'Enable Challenges',
-  'UCP_CHALLENGE_ON_EXPLAIN'      => 'If enabled users can challenge against each other',
-  'UCP_CHALLENGE_PM_ON'           => 'The challenge can use the PM',
-  'UCP_CHALLENGE_PM_ON_EXPLAIN'   => 'If enabled you got a PM about every challange.',
-  'UCP_CHALLENGE_STAT_AC'         => 'Number of statistic data on a page',
-  'UCP_CHALLENGE_STAT_AC_EXPLAIN' => 'The users statistic will be listed by The given value on a page.',
+
+$lang = array_merge($lang, array(
+	'UCP_ARCADE_CHALLENGE'			=> 'Challenge',
+	'UCP_CHALLENGE_ON'				=> 'Enable Challenges',
+	'UCP_CHALLENGE_ON_EXPLAIN'		=> 'If enabled users can challenge against each other',
+	'UCP_CHALLENGE_PM_ON'			=> 'The challenge can use the PM',
+	'UCP_CHALLENGE_PM_ON_EXPLAIN'	=> 'If enabled you got a PM about every challange.',
+	'UCP_CHALLENGE_STAT_AC'			=> 'Number of statistic data on a page',
+	'UCP_CHALLENGE_STAT_AC_EXPLAIN'	=> 'The users statistic will be listed by The given value on a page.',
 ));
+
 #######language/en/mods/info_ucp_gallery.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
 
 $lang = array_merge($lang, array(
 	'UCP_GALLERY'						=> 'Galerie',
@@ -8124,17 +7658,6 @@ $lang = array_merge($lang, array(
 
 #######language/en/mods/info_ucp_shop.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
-
 $lang = array_merge($lang, array(
 	'UCP_SHOP'					=> 'Shop',
 	'UCP_SHOP_INVENTORY'		=> 'Inventar',
@@ -8144,17 +7667,6 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/mods/lang_football.php#######
-
-if (!defined('IN_PHPBB'))
-{
-    exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-    $lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ADD_NEW_TEAM'					=> 'The team was added to the WebTip. ',
@@ -8560,24 +8072,15 @@ $lang = array_merge($lang, array(
 
 	'ZERO_POINTS'					=> 'Zero Points',
 	
-	'FOOTBALL_COPY'					=> '<a href="http://football.bplaced.net/" title="phpBB3 Football">phpBB3 Football</a> Version %1s'
+	'FOOTBALL_COPY'					=> '<a href="http://football.bplaced.net/" title="phpBB3 Football">phpBB3 Football</a> Version %1s',
 ));
 
 #######language/en/mods/lang_wwh.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 $lang = array_merge($lang, array(
 	'WHO_WAS_HERE'						=> 'Wer war da?',
 	'WHO_WAS_HERE_LATEST1'				=> 'zuletzt um',
-	'WHO_WAS_HERE_LATEST2'				=> '',//used for parts like o'clock in the timedisplay (last at vw:xy "o'clock")
+	'WHO_WAS_HERE_LATEST2'				=> '', //used for parts like o-clock in the timedisplay (last at vw:xy o-clock)
 	'WHO_WAS_HERE_USERS_TOTAL'				=> 'Insgesamt waren <strong>%d</strong> Besucher online: ',
 	'WHO_WAS_HERE_USERS_ZERO_TOTAL'			=> 'Insgesamt waren <strong>0</strong> Besucher online: ',
 	'WHO_WAS_HERE_USER_TOTAL'				=> 'Insgesamt war <strong>%d</strong> Besucher online: ',
@@ -8607,15 +8110,6 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/mods/lang_wwh_acp.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
 
 $lang = array_merge($lang, array(
 	'WWH_DISP_SET'				=> 'Einstellungen für die Anzeige',
@@ -8665,44 +8159,22 @@ $lang = array_merge($lang, array(
 
 #######language/en/mods/lexicon.php#######
 
-
-if (empty($lang) || !is_array($lang))
-{
-    $lang = array();
-}
-
-
-
-
 $lang = array_merge($lang, array(
-  'LEXICON_TITLE'  =>   'Fachwort-Lexikon',
-  'LEXICON_WORD'  =>   'Fachwort',
-  'LEXICON_ABC'  =>   'Begriffe mit %s',
-  'LEXICON_ABC_TITLE'  =>   'Begriffe mit',
-  'LEXICON_ALL_TERMS'  =>   'alle Begriffe',
-  'LEXICON_ALL'  =>   'alle',
-  'LEXICON_DESCRIPTION'  =>   'Erläuterungen zu Fachbegriffen',
-	'LEXICON_TEXT'	=> 'Unser Lexikon bietet dir jede Menge Fachbegriffe, die dir bei der Auswahl eines Begriffs detailliert und umfassend erklärt werden.<br />
+	'LEXICON_TITLE'			=> 'Fachwort-Lexikon',
+	'LEXICON_WORD'			=> 'Fachwort',
+	'LEXICON_ABC'			=> 'Begriffe mit %s',
+	'LEXICON_ABC_TITLE'		=> 'Begriffe mit',
+	'LEXICON_ALL_TERMS'		=> 'alle Begriffe',
+	'LEXICON_ALL'			=> 'alle',
+	'LEXICON_DESCRIPTION'	=> 'Erläuterungen zu Fachbegriffen',
+	'LEXICON_TEXT'			=> 'Unser Lexikon bietet dir jede Menge Fachbegriffe, die dir bei der Auswahl eines Begriffs detailliert und umfassend erklärt werden.<br />
 			Wähle zunächst den gewünschten Buchstaben um Begriffe anzuzeigen die mit dem Anfangsbuchstaben beginnen. Das komplette Lexikon ist alphabetisch aufgebaut.',
-
-  'LEXICON_WORD'  =>   'Fachwort',
-  'LEXICON_WORDS_TITLE'  =>   'Lexikon',
-  'LEXICON_REPLACEMENT'  =>   'Erklärung',
-  'LEXICON_REPLACEMENT1'  =>   'Erklärung (de)',
+	'LEXICON_WORD'			=> 'Fachwort',
+	'LEXICON_WORDS_TITLE'	=> 'Lexikon',
+	'LEXICON_REPLACEMENT'	=> 'Erklärung',
 ));
 
 #######language/en/mods/phoogle.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ADMIN_SETTINGS'				=> 'Einstellungen für Admins',
@@ -8825,7 +8297,7 @@ $lang = array_merge($lang, array(
 	'PHOOGLE_SHOW_TYPE' 			=> 'Zeige Kartentypanzeige?',
 	'PHOOGLE_SMALL' 				=> 'klein',
 	'PHOOGLE_SPECIAL_MARKERS' 		=> 'Spezielle / Reservierte Marker',
-	'PHOOGLE_SPECIAL_MARKERS_EXPLAIN' => 'Stelle auf &quot;Ja&quot; um die Administrators und Moderatoren Map Marker mit diesen Speziellen Marker zu überschreiben.<br />Stelle auf &quot;Nein&quot; um die Administratoren und Moderatoren Map Marker anzuzeigen.',
+	'PHOOGLE_SPECIAL_MARKERS_EXPLAIN'	=> 'Stelle auf &quot;Ja&quot; um die Administrators und Moderatoren Map Marker mit diesen Speziellen Marker zu überschreiben.<br />Stelle auf &quot;Nein&quot; um die Administratoren und Moderatoren Map Marker anzuzeigen.',
 	'PHOOGLE_SPECIAL_MARKERS_SUB'	=> '<strong>Achtung</strong>: Marker 1 ist <strong>IMMER</strong> der vom Administrator, und Marker 2 ist <strong>IMMER</strong> der vom Moderator.',
 	'PHOOGLE_START'					=> 'Start',
 	'PHOOGLE_TERRAIN'				=> 'Zeige Geländekartentyp?',
@@ -8856,64 +8328,44 @@ $lang = array_merge($lang, array(
 	'VIEWING_PHOOGLE' 				=> 'Schaut sich die Phoogle Map an',
 	'WIDTH_ABBR'					=> 'B',
 ));
+
 #######language/en/mods/pm_search.php#######
 
-if(!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if(empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 $lang = array_merge($lang, array(
-	'DATE' => 'Datum',
+	'DATE'	=> 'Datum',
 
-	'RECEIVED_AT' => 'empfangen',
+	'RECEIVED_AT'	=> 'empfangen',
 
-	'SENDER' => 'Sender',
-	'BOTH' => 'egal',
+	'SENDER'	=> 'Sender',
+	'BOTH'	=> 'egal',
 
-	'PM_SEARCH_EXPLAIN' => 'Du kannst ein Minus - vor einem Wort eingeben, damit PNs mit diesem Wort nicht aufgelistet werden.',
+	'PM_SEARCH_EXPLAIN'	=> 'Du kannst ein Minus - vor einem Wort eingeben, damit PNs mit diesem Wort nicht aufgelistet werden.',
 
-	'SEARCH_ALL_WORDS' => 'PNs die alle Wärter beinhalten',
-	'SEARCH_ANY_WORD' => 'PNs die einzelne Wärtern beinhalten',
+	'SEARCH_ALL_WORDS'	=> 'PNs die alle Wärter beinhalten',
+	'SEARCH_ANY_WORD'	=> 'PNs die einzelne Wärtern beinhalten',
 
-	'PM_SEARCH_ALL_WORDS' => 'Suche nach allen Wärtern',
-	'PM_SEARCH_ALL_WORDS_EXPLAIN' => 'Satz auf yes, um auf alle Worte nur, identisch sein, der gleich ein + Zeichen vor der jedes Wort. Legen Sie auf Nein, um nach allen Wörtern suchen und benutzen Sie + vor Wörtern, die in der PMs sein muss Dieser Schlüssel wird nicht verwendet, im Sender / Empfänger zu suchen.',
-	'PM_SEARCH_WORD_ONLY' => 'Nur Wort Suche',
-	'PM_SEARCH_WORD_ONLY_EXPLAIN' => 'Findet nur ganze Wärter, etwas wie &quot;Game&quot; wird keine PN finden in der &quot;Games&quot; steht.',
-	'PM_SEARCH_EXACT_QUERY' => 'Suche nach der genauen Eingabe',
-	'PM_SEARCH_EXACT_QUERY_EXPLAIN' => 'Wähle ja, wenn Du mächtest, das die genaue Wortgruppe gefunden werden soll. + und - werden nicht mehr beachtet.',
-	'PM_SEARCH_CASE' => 'Gro&szlig;-und Kleinschreibung beachten',
-	'PM_SEARCH_CASE_EXPLAIN' => 'Setze dieses auf &quot;Ja&quot; damit Gro&szlig;-und Kleinschreibung beachtetet wird.',
-	'PM_SEARCH_CURRENT' => 'Aktuellen Ordner durchsuchen',
-	'PM_SEARCH_CURRENT_EXPLAIN' => 'Setze dieses auf &quot;Ja&quot; damit nur der aktuelle Ordner durchsucht wird.',
-	'PM_SEARCH_AUTHOR' => 'Suche nach Absender oder Empfänger',
-	'PM_SEARCH_AUTHOR_EXPLAIN' => 'Hier werden nur PNs von dem eingegebenen Absender(n) oder Empfänger(n) angezeigt.<br />Für eine Suche nach mehreren Sender(n) oder Empfänger(n), trenne diese einfach durch ein Komma (,).',
+	'PM_SEARCH_ALL_WORDS'	=> 'Suche nach allen Wärtern',
+	'PM_SEARCH_ALL_WORDS_EXPLAIN'	=> 'Satz auf yes, um auf alle Worte nur, identisch sein, der gleich ein + Zeichen vor der jedes Wort. Legen Sie auf Nein, um nach allen Wörtern suchen und benutzen Sie + vor Wörtern, die in der PMs sein muss Dieser Schlüssel wird nicht verwendet, im Sender / Empfänger zu suchen.',
+	'PM_SEARCH_WORD_ONLY'	=> 'Nur Wort Suche',
+	'PM_SEARCH_WORD_ONLY_EXPLAIN'	=> 'Findet nur ganze Wärter, etwas wie &quot;Game&quot; wird keine PN finden in der &quot;Games&quot; steht.',
+	'PM_SEARCH_EXACT_QUERY'	=> 'Suche nach der genauen Eingabe',
+	'PM_SEARCH_EXACT_QUERY_EXPLAIN'	=> 'Wähle ja, wenn Du mächtest, das die genaue Wortgruppe gefunden werden soll. + und - werden nicht mehr beachtet.',
+	'PM_SEARCH_CASE'	=> 'Gro&szlig;-und Kleinschreibung beachten',
+	'PM_SEARCH_CASE_EXPLAIN'	=> 'Setze dieses auf &quot;Ja&quot; damit Gro&szlig;-und Kleinschreibung beachtetet wird.',
+	'PM_SEARCH_CURRENT'	=> 'Aktuellen Ordner durchsuchen',
+	'PM_SEARCH_CURRENT_EXPLAIN'	=> 'Setze dieses auf &quot;Ja&quot; damit nur der aktuelle Ordner durchsucht wird.',
+	'PM_SEARCH_AUTHOR'	=> 'Suche nach Absender oder Empfänger',
+	'PM_SEARCH_AUTHOR_EXPLAIN'	=> 'Hier werden nur PNs von dem eingegebenen Absender(n) oder Empfänger(n) angezeigt.<br />Für eine Suche nach mehreren Sender(n) oder Empfänger(n), trenne diese einfach durch ein Komma (,).',
 
-	'SEARCH_PM_FOLDERS' => 'PN Suche…',
+	'SEARCH_PM_FOLDERS'	=> 'PN Suche…',
 
-	'UCP_PM_SEARCH' => 'PN Suche',
+	'UCP_PM_SEARCH'	=> 'PN Suche',
 
-	'NO_AUTH_PM_SEARCH' => 'Du hast keine Berechtigungen die PN Suche zu benutzen.',
-	'ADDED_PM_SEARCH_PERMISSIONS' => 'Berechtigungen für die PN Suche hinzugefügt.',
+	'NO_AUTH_PM_SEARCH'	=> 'Du hast keine Berechtigungen die PN Suche zu benutzen.',
+	'ADDED_PM_SEARCH_PERMISSIONS'	=> 'Berechtigungen für die PN Suche hinzugefügt.',
 ));
 
 #######language/en/mods/points.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if ( empty($lang) || !is_array($lang) )
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ACP_POINTS'						=> 'Ultimate Points',
@@ -9151,17 +8603,6 @@ $lang = array_merge($lang, array(
 
 #######language/en/mods/prime_notify.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
-
 $lang = array_merge($lang, array(
 	'PRIME_NOTIFY_POST_CONTENT'			=> 'Benachrichtige mit Beitragsinhalt',
 	'PRIME_NOTIFY_POST_CONTENT_EXPLAIN'	=> 'Den Beitragsinhalt in der Benachrichtigungs-eMail mitsenden?',
@@ -9174,50 +8615,29 @@ $lang = array_merge($lang, array(
 
 #######language/en/mods/profilecomments.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
-
 $lang = array_merge($lang, array(
-   'ALLUSER'			=> 'Username',
-   'ALLRATING'		=> 'Bewertung',
-   'ALLCOMMENTS'		=> 'Feedback / Kommentare',
-   'PROFILE_COMMENTS'       	=> 'Profil Kommentare',
-   'PROFILE_COMMENTS_REMOVE'    => 'Profil Kommentare: Kommentare entfernen',
-   'COMMENT_ADDED'       		=> 'hinzugefügt',
-   'COMM_PAGE'            		=> 'Seite',
-   'COMM_JUMPTOPAGE'            => 'Springe zur Seite',
-   'COMM_OF'           			=> 'von',
-   'COMM_SYSTEM'           		=> 'System',
-  'COMMENT_EMAIL_SUBJECT'         => 'Du hast eine Profil Bewertung erhalten',
-   'COMM_WELCOME'         		=> 'Glückwunsch, Du hast eine Bewertung erhalten von:',
-   'COMM_DELETE' 				=> 'läschen',
-   'COMMENT_NOT_DELETED'       		=> 'Du hast keine Berechtigungen Profil Kommentare zu entfernen,',
-   'COMMENT_DELETED'       		=> 'Das Profil Kommentar wurde erfolgreich geläscht,',
-   'COMMENT_CLICKHERE' 			=> 'hier klicken',
-   'COMM_LOCATION' 				=> 'Bewertungen lesen',
-   'COMMENT_BUTTON_GO' 			=> 'weiter',
-   'COMM_NOT_ADD' 				=> 'Das Kommentar konnte leider nicht hinzugefügt werden.', 
+	'ALLUSER'				=> 'Username',
+	'ALLRATING'				=> 'Bewertung',
+	'ALLCOMMENTS'			=> 'Feedback / Kommentare',
+	'PROFILE_COMMENTS'		=> 'Profil Kommentare',
+	'PROFILE_COMMENTS_REMOVE'	=> 'Profil Kommentare: Kommentare entfernen',
+	'COMMENT_ADDED'		=> 'hinzugefügt',
+	'COMM_PAGE'			=> 'Seite',
+	'COMM_JUMPTOPAGE'	=> 'Springe zur Seite',
+	'COMM_OF'			=> 'von',
+	'COMM_SYSTEM'		=> 'System',
+	'COMMENT_EMAIL_SUBJECT'	=> 'Du hast eine Profil Bewertung erhalten',
+	'COMM_WELCOME'		=> 'Glückwunsch, Du hast eine Bewertung erhalten von:',
+	'COMM_DELETE' 				=> 'läschen',
+	'COMMENT_NOT_DELETED'		=> 'Du hast keine Berechtigungen Profil Kommentare zu entfernen,',
+	'COMMENT_DELETED'			=> 'Das Profil Kommentar wurde erfolgreich geläscht,',
+	'COMMENT_CLICKHERE' 			=> 'hier klicken',
+	'COMM_LOCATION' 				=> 'Bewertungen lesen',
+	'COMMENT_BUTTON_GO' 			=> 'weiter',
+	'COMM_NOT_ADD' 				=> 'Das Kommentar konnte leider nicht hinzugefügt werden.', 
 ));
+
 #######language/en/mods/shadow_topics.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'SHADOW_TOPICS_TIME'			=> 'Stunden. <small>(bei 0 wird der Link nicht automatisch geläscht)</small>',
@@ -9225,17 +8645,6 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/mods/shop.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'UPS_EASY_SHOP'					=> 'Forum Shop',
@@ -9348,26 +8757,13 @@ $lang = array_merge($lang, array(
 	'UCP_SHOP_SELL_PRICE_UPDATED'	=> 'Der Verkaufspreis des Artikels wurde erfolgreich aktualisiert',
 	'UCP_SHOP_NO_SALE'				=> 'Nicht zum Verkauf',
 	'UCP_SHOP_IN_POINTS'			=> 'in %1$s',
-));
 
-$lang = array_merge($lang, array(
 	'SHOP_ITEM_PERMISSION'			=> 'Du besitzt diese Befugnis bereits. Der Kaufpreis wurde dir zurück erstattet.',
 	'SHOP_ITEM_GROUP'				=> 'Du bist bereits Mitglied dieser Gruppe',
 	'SHOP_OPTION_NOT_EXIST'			=> 'Die gewählte Berechtigungsoption existiert nicht.<br />Bitte informiere den Administrator!',
 ));
 
 #######language/en/mods/shout.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'MISSING_DIV' 			=> 'Shoutbox Div kannn nicht gefunden werden.',
@@ -9392,17 +8788,8 @@ $lang = array_merge($lang, array(
 	
 	'SHOUTBOX'				=> 'Shoutbox - Chat',
 ));
+
 #######language/en/mods/stats.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
 
 $lang = array_merge($lang, array(	
 	'STATS'								=> 'Statistiken',	
@@ -9644,30 +9031,16 @@ $lang = array_merge($lang, array(
 	'NOVEMBER'						=> 'November',
 	'DECEMBER'						=> 'Dezember',
 ));
+
 #######language/en/mods/syndication.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'CUSTOM_SYNDICATION_TITLE'							=> 'Eigenen Feed erstellen',
-
 	'INVALID_INPUT'													=> 'Dieses Skript wurde falsch aufgerufen.',
-
 	'NOTHING_SELECTED'											=> 'Bite wählen Sie mindestens ein Forum oder “Alle Foren” aus.',
 	'NUMBER_ITEMS'												=> 'Zahl der Einträge in diesem Feed',
-
 	'PRIVATE_FEED'													=> 'privater Feed',
 	'PRIVATE_FEED_CHANCEL'									=> "Der Zugriff auf diesen Feed ist beschränkt. Bitte melden Sie sich mit Ihren normalen Benutzerdaten an.",
-
 	'SELECT_FORUMS'												=> 'Foren auswählen',
 	'SELECT_FORUMS_EXPLAIN'									=> 'Wählen Sie die Foren aus, die Ihr Feed enthalten soll.',
 	'SERVICE_UNAVAILABLE'										=> 'Entschuldigung, aber diese Funktion wurde von einem Administrator deaktiviert.',
@@ -9704,23 +9077,11 @@ $lang = array_merge($lang, array(
 	'SYNDICATION_TOPICS_GLOBAL_TITLE'				=> 'Neueste Themen in “%s”',
 	'SYNDICATION_TOPICS_VARIOUS_DESCRIPTION'	=> 'Verschiedene neueste Themen im Forum “%s”.',
 	'SYNDICATION_TOPICS_VARIOUS_TITLE'				=> 'Verschiedene neueste Themen in “%s”',
-
 	'TOPICS_OR_POSTS'											=> 'Themen oder Beiträge',
 	'TOPICS_OR_POSTS_EXPLAIN'								=> ' Bitte wählen Sie aus, ob der Feed nur die Thementitel und den ersten Beitrag oder alle Beiträge enthalten soll.',
 ));
 
 #######language/en/acp/attachments.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ACP_ATTACHMENT_SETTINGS_EXPLAIN'	=> 'Hier kannst du die Einstellungen für Dateianhänge und verknüpfte Spezialkategorien vornehmen.',
@@ -9860,17 +9221,6 @@ $lang = array_merge($lang, array(
 
 #######language/en/acp/ban.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
-
 $lang = array_merge($lang, array(
 	'1_HOUR'		=> '1 Stunde',
 	'30_MINS'		=> '30 Minuten',
@@ -9919,20 +9269,8 @@ $lang = array_merge($lang, array(
 
 #######language/en/acp/board.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
-
 $lang = array_merge($lang, array(
 	'SYSTEM_DST'					=> 'Automatische Zeitumstellung',
-
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Hier kannst du einige grundlegende Einstellungen deines Boards vornehmen, ihm einen passenden Namen und eine Beschreibung geben und, neben anderen Werten, die Standard-Einstellungen für Zeitzone und Sprache anpassen.',
 	'CUSTOM_DATEFORMAT'				=> 'Eigenes …',
@@ -9949,9 +9287,7 @@ $lang = array_merge($lang, array(
 	'SYSTEM_TIMEZONE'				=> 'Zeitzone',
 	'WARNINGS_EXPIRE'				=> 'Gültigkeit von Verwarnungen',
 	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Die Anzahl der Tage, nach denen eine Verwarnung automatisch aus dem Benutzer-Profil gelöscht wird.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_BOARD_FEATURES_EXPLAIN'	=> 'Hier kannst du einige Funktionen des Boards aktivieren bzw. deaktivieren.',
 
 	'ALLOW_ATTACHMENTS'			=> 'Dateianhänge erlauben',
@@ -9981,9 +9317,7 @@ $lang = array_merge($lang, array(
 	'ALLOW_TOPIC_NOTIFY'		=> 'Abonnieren von Themen erlauben',
 	'BOARD_PM'					=> 'Private Nachrichten',
 	'BOARD_PM_EXPLAIN'			=> 'Aktiviert Private Nachrichten für alle Benutzer.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_AVATAR_SETTINGS_EXPLAIN'	=> 'Avatare sind im Allgemeinen kleine, einzigartige Bilder, mit denen sich die Mitglieder identifizieren können. Abhängig vom Style werden diese Bilder normalerweise unter dem Benutzernamen angezeigt, wenn Themen betrachtet werden. Hier kannst du die Art der Avatar-Nutzung festlegen. Bitte denke daran, dass du das von dir angegebene Verzeichnis erstellen und sicherstellen musst, dass es vom Webserver beschreibbar ist, damit Avatare hochgeladen werden können. Bedenke außerdem, dass Dateigrößen-Beschränkungen nur bei hochgeladenen Avataren greifen, nicht jedoch bei von anderen Seiten verlinkten Bildern.',
 
 	'ALLOW_AVATARS'					=> 'Avatare erlauben',
@@ -10004,9 +9338,7 @@ $lang = array_merge($lang, array(
 	'MAX_FILESIZE_EXPLAIN'			=> 'Für hochgeladene Avatare.',
 	'MIN_AVATAR_SIZE'				=> 'Minimale Abmessungen für Avatare',
 	'MIN_AVATAR_SIZE_EXPLAIN'		=> 'Breite &times; Höhe in Pixel',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_MESSAGE_SETTINGS_EXPLAIN'		=> 'Hier kannst du alle Standard-Einstellungen für Private Nachrichten vornehmen.',
 
 	'ALLOW_BBCODE_PM'			=> 'BBCode in Privaten Nachrichten erlauben',
@@ -10032,9 +9364,7 @@ $lang = array_merge($lang, array(
 	'PM_EDIT_TIME_EXPLAIN'		=> 'Limitiert die Zeit zur Bearbeitung einer gesendeten, aber noch ungelesenen Privaten Nachricht. Um dieses Verhalten abzuschalten, stelle als Wert 0 ein.',
 	'PM_MAX_RECIPIENTS'			=> 'Maximale Anzahl zulässiger Empfänger',
 	'PM_MAX_RECIPIENTS_EXPLAIN'	=> 'Die maximale Anzahl zulässiger Empfänger für eine Private Nachricht. Bei einem Wert von 0 sind unbegrenzt viele Empfänger zulässig. Diese Einstellung kann gruppenbezogen in den Gruppeneinstellungen angepasst werden.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_POST_SETTINGS_EXPLAIN'			=> 'Hier kannst du alle Standard-Einstellungen für Beiträge vornehmen.',
 	'ALLOW_POST_LINKS'					=> 'Links in Beiträgen/Privaten Nachrichten erlauben',
 	'ALLOW_POST_LINKS_EXPLAIN'			=> '„Nein“ deaktiviert den <code>[URL]</code> BBCode-Tag und die automatische Verlinkung von URLs.',
@@ -10074,9 +9404,7 @@ $lang = array_merge($lang, array(
 	'SMILIES_LIMIT_EXPLAIN'			=> 'Die maximale Anzahl an Smilies in einem Beitrag. Um keine Begrenzung festzulegen, stelle als Wert 0 ein.',
 	'SMILIES_PER_PAGE'				=> 'Smilies pro Seite',
 	'TOPICS_PER_PAGE'				=> 'Themen pro Seite',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_SIGNATURE_SETTINGS_EXPLAIN'	=> 'Hier kannst du alle Standard-Einstellungen für Signaturen vornehmen.',
 
 	'MAX_SIG_FONT_SIZE'				=> 'Maximale Schriftgröße',
@@ -10091,9 +9419,7 @@ $lang = array_merge($lang, array(
 	'MAX_SIG_SMILIES_EXPLAIN'		=> 'Die maximal erlaubte Anzahl an Smilies in der Signatur. Um keine Begrenzung festzulegen, stelle als Wert 0 ein.',
 	'MAX_SIG_URLS'					=> 'Maximale Links',
 	'MAX_SIG_URLS_EXPLAIN'			=> 'Die maximal erlaubte Anzahl der Links in der Signatur. Um keine Begrenzung festzulegen, stelle als Wert 0 ein.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_REGISTER_SETTINGS_EXPLAIN'		=> 'Hier kannst du Einstellungen bezüglich der Registrierung und der Mitgliederprofile vornehmen.',
 
 	'ACC_ACTIVATION'				=> 'Benutzerkonto-Aktivierung',
@@ -10260,9 +9586,7 @@ $lang = array_merge($lang, array(
 	'YES_READ_MARKING'				=> 'Serverseitige Gelesen-Markierung aktivieren',
 	'YES_READ_MARKING_EXPLAIN'		=> 'Speichert Informationen zu gelesenen/ungelesenen Beiträgen in der Datenbank statt im Cookie.',
 	'YES_UNREAD_SEARCH'				=> 'Aktiviert die Suche nach ungelesenen Beiträgen',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB unterstützt Authentifizierungs-Plugins oder -Module. Mit diesen kannst du festlegen, wie Benutzer authentifiziert werden, wenn sie sich im Forum anmelden. Standardmäßig gibt es drei Plugins: DB, LDAP und Apache. Nicht alle Methoden benötigen zusätzliche Angaben, fülle daher nur Felder aus, wenn sie für die gewählte Methode von Belang sind.',
 
 	'AUTH_METHOD'				=> 'Authentifizierungs-Methode wählen',
@@ -10288,11 +9612,8 @@ $lang = array_merge($lang, array(
 	'LDAP_USER_EXPLAIN'				=> 'Lasse das Feld für eine anonyme Verbindung frei. Wenn ausgefüllt, wird phpBB den angegebenen Benutzer dazu verwenden, um sich für die Suche nach dem passenden Benutzer wie <samp>uid=Benutzername,ou=Organisationseinheit,o=Firma,c=DE</samp> anzumelden. Erforderlich bei Active Directory-Servern.',
 	'LDAP_USER_FILTER'				=> 'LDAP Benutzer-Filter',
 	'LDAP_USER_FILTER_EXPLAIN'		=> 'Du kannst optional die durchsuchten Objekte durch weitere Filter einschränken. Zum Beispiel führt <samp>objectClass=posixGruppe</samp> zur Benutzung von <samp>(&amp;(uid=$username)(objectClass=posixGruppe))</samp>.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Hier kannst du einige Einstellungen bezüglich Server und Domain vornehmen. Bitte stelle sicher, dass die Daten, die du eingibst, auch wirklich stimmen, denn fehlerhafte Angaben könnten zu E-Mails führen, die falsche Informationen enthalten. Wenn du den Domain-Namen eingibst, denk daran, dass http:// oder eine andere Protokoll-Bezeichnung darin enthalten ist. Ändere den Port nur, wenn du weißt, dass dein Server einen anderen Port nutzt; Port 80 ist in den allermeisten Fällen richtig.',
-
 	'ENABLE_GZIP'				=> 'gzip-Komprimierung aktivieren',
 	'ENABLE_GZIP_EXPLAIN'		=> 'Der Seiteninhalt wird vor dem Senden an den Benutzer komprimiert. Dies kann den Netzverkehr reduzieren, wird aber auch zu einer Erhöhung der CPU-Last sowohl auf Server- als auch auf Benutzerseite führen. Erfordert, dass die zlib-Erweiterung von PHP geladen ist.',
 	'FORCE_SERVER_VARS'			=> 'Erzwinge Server-URL-Einstellungen',
@@ -10315,11 +9636,8 @@ $lang = array_merge($lang, array(
 	'SMILIES_PATH_EXPLAIN'		=> 'Pfad von deinem phpBB-Hauptverzeichnis aus, z.&nbsp;B. <samp>images/smilies</samp>.',
 	'UPLOAD_ICONS_PATH'			=> 'Speicherpfad der Dateityp-Gruppen-Symbole',
 	'UPLOAD_ICONS_PATH_EXPLAIN'	=> 'Pfad von deinem phpBB-Hauptverzeichnis aus, z.&nbsp;B. <samp>images/upload_icons</samp>.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_SECURITY_SETTINGS_EXPLAIN'		=> 'Hier können die Einstellungen zu Sitzungen und zur Anmeldung festgelegt werden.',
-
 	'ALL'							=> 'Alle',
 	'ALLOW_AUTOLOGIN'				=> 'Dauerhafte Anmeldung erlauben',
 	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Legt fest, ob Benutzer sich automatisch bei jedem Besuch des Boards anmelden können.',
@@ -10365,11 +9683,8 @@ $lang = array_merge($lang, array(
 	'REFERER_VALID_EXPLAIN'			=> 'Wenn aktiviert, wird der Referrer von POST-Anfragen gegen die Einstellungen des Hostnamen/Skript-Pfads geprüft. Dies kann bei Boards zu Problemen führen, die mehrere Domains oder eine externe Anmeldung nutzen.',
 	'TPL_ALLOW_PHP'					=> 'Erlaube PHP in Templates',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Wenn diese Option eingeschaltet ist, werden <code>PHP</code>- und <code>INCLUDEPHP</code>-Anweisungen in Templates erkannt und ausgeführt.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_EMAIL_SETTINGS_EXPLAIN'	=> 'Diese Informationen werden benötigt, wenn das Board E-Mails an deine Benutzer sendet. Stelle bitte sicher, dass die von dir angegebene Adresse gültig ist; geblockte oder nicht zustellbare Nachrichten werden an diese Adresse geschickt. Falls dein Webhosting-Provider keinen PHP-basierten E-Mail Service anbietet, kannst du deine Nachrichten auch direkt über SMTP versenden. Dies erfordert die Angabe der Adresse eines geeigneten Servers (frage falls nötig deinen Provider). Falls der Server eine Authentifizierung erfordert (und nur, wenn dies der Fall ist), gib den Benutzernamen und das Passwort ein und wähle eine Authentifizierungsmethode aus.',
-
 	'ADMIN_EMAIL'					=> 'Administratoren dürfen mir Informationen per E-Mail schicken',
 	'ADMIN_EMAIL_EXPLAIN'			=> 'Diese technische Kontakt-Adresse wird als Antwort-Adresse für alle E-Mails genommen. Sie wird in allen E-Mails als <samp>Rückleitungs</samp>- und <samp>Absender</samp>-Adresse verwendet.',
 	'BOARD_EMAIL_FORM'				=> 'E-Mails über das Board versenden',
@@ -10403,11 +9718,8 @@ $lang = array_merge($lang, array(
 	'SMTP_USERNAME_EXPLAIN'			=> 'Gib nur einen Benutzernamen ein, wenn dein SMTP-Server dies erfordert.',
 	'USE_SMTP'						=> 'SMTP-Server für E-Mail nutzen',
 	'USE_SMTP_EXPLAIN'				=> 'Wähle „Ja“ aus, wenn du E-Mails über einen SMTP-Server senden möchtest (oder musst), anstatt die PHP-eigene Mail-Funktion zu nutzen.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_JABBER_SETTINGS_EXPLAIN'	=> 'Hier kannst du die Nutzung von <a href="http://de.wikipedia.org/wiki/Jabber">Jabber</a> für Instant Messages und Benachrichtigungen des Boards aktivieren und kontrollieren. Jabber ist ein OpenSource-Protokoll und daher für jeden verfügbar. Einige Jabber-Server nutzen Gateways oder Transport-Dienste, die es dir erlauben, Benutzer anderer Netzwerke zu kontaktieren. Nicht alle Server bieten alle Transport-Dienste an, und Änderungen an den Protokollen können Transport-Dienste am Funktionieren hindern. Stelle sicher, dass du die korrekten Daten eines bereits registrierten Jabber-Kontos eingibst — phpBB verwendet die Daten so, wie sie hier eingegeben sind.',
-
 	'JAB_ENABLE'				=> 'Jabber aktivieren',
 	'JAB_ENABLE_EXPLAIN'		=> 'Aktiviert die Nutzung von Jabber-Nachrichten und -Benachrichtigungen.',
 	'JAB_GTALK_NOTE'			=> 'Beachte, dass GTalk nicht funktionieren wird, da die <samp>dns_get_record</samp>-Funktion nicht gefunden werden konnte. Diese Funktion ist in PHP 4 nicht verfügbar und nicht in Windows-Plattformen implementiert. Sie funktioniert derzeit nicht auf BSD-basierten Systemen inklusive Mac OS.',
@@ -10424,17 +9736,12 @@ $lang = array_merge($lang, array(
 	'JAB_USE_SSL_EXPLAIN'		=> 'Wenn aktiviert, wird versucht, eine sichere Verbindung zu verwenden. Der Jabber-Port wird auf 5223 geändert, sofern Port 5222 angegeben ist.',
 	'JAB_USERNAME'				=> 'Jabber-Benutzername oder JID',
 	'JAB_USERNAME_EXPLAIN'		=> 'Gebe einen bereits registrierten Benutzernamen oder eine gültige JID an. Der Benutzername wird nicht auf Gültigkeit geprüft. Wenn du nur einen Benutzernamen angibst, wird die JID aus dem Benutzernamen und dem oben festgelegten Server ermittelt. Gebe ansonsten eine gültige JID wie <samp>user@jabber.org</samp> ein.',
-));
 
-
-$lang = array_merge($lang, array(
 	'ACP_WELCOME_PM_EXPLAIN'	=> 'Hier können Sie die Nachricht definieren, die neu registrierte Benutzer erhalten wenn diese sich das erste mal einloggen.',
-
 	'WPM_SETTINGS'				=> 'Einstellungen',
 	'WPM_ENABLE'				=> 'Willkommens PN aktivieren',
 	'WPM_SEND_ID'				=> 'PN Absender ID',
 	'WPM_SEND_ID_EXPLAIN'		=> 'Trage hier die User ID ein von dem die PN kommen soll, meistens vom Admin also ID <b>2</b>.',
-
 	'WPM_SUBJECT'				=> 'Betreff',
 	'WPM_SUBJECT_EXPLAIN'		=> 'Betreff der Privaten Nachricht.',
 	'WPM_MESSAGE'				=> 'Nachricht',
@@ -10442,14 +9749,11 @@ $lang = array_merge($lang, array(
 	'WPM_VARS'					=> 'Dyn-Codes',
 	'WPM_VARS_EXPLAIN'			=> 'Diese Codes geben den echten Wert aus der Datenbank wieder.',
 	'WPM_VARIABLES'				=> '<strong>{USERNAME}</strong>: Username<br /><strong>{USER_IP}</strong>: User IP<br /><strong>{USER_REGDATE}</strong>: Anmelde-Datum.<br /><strong>{USER_EMAIL}</strong>: User Email.<br /><strong>{SITE_NAME}</strong>: Forum Name.<br /><strong>{SITE_DESC}</strong>: Forum Beschreibung.',
-
 	'WPM_PREVIEW'				=> 'Vorschau',
 	'WPM_PREVIEW_EXPLAIN'		=> 'Du musst die Nachricht zunächst absenden um die Vorschau zu sehen.',
-));
-$lang = array_merge($lang, array(
+
 	'LOG_NEW_USER'				=> 'Log neue User',
 	'LOG_NEW_USER_EXPLAIN'		=> 'Dies zeigt neue Mitglieder im Admin Log an.',
-
 	'NO_REF_VALIDATION'				=> 'Keine',
 	'REF_HOST'						=> 'Prüfe nur den Hostnamen',
 	'REF_PATH'						=> 'Prüfe auch den Skript-Pfad',
@@ -10465,9 +9769,9 @@ $lang = array_merge($lang, array(
 	'ACP_COMMENTS_PP'	=> 'Wieviele Kommentare sollen pro Seite angezeigt werden?',
 	'ACP_COMMENTS_ENABLE'	=> 'Profil Kommentare aktivieren?',
 	'ACP_COMMENTS_CANDELETE'	=> 'Which group is admin and can delete comments? Be sure of this setting before turning profile comments on',
-	'ACP_PF_TVIEW_ENABLE' => 'Do you want to place a link to the member comments in the topicview?',
-	'ACP_PF_HOW_MANY' => 'How many recent comments you want to show in profile?',
-	'ACP_PF_ALLOW_USERS_DELETE' => 'Dürfen Mitglieder ihre eigenen Profile verwalten (Kommentare läschen)?',
+	'ACP_PF_TVIEW_ENABLE'	=> 'Do you want to place a link to the member comments in the topicview?',
+	'ACP_PF_HOW_MANY'	=> 'How many recent comments you want to show in profile?',
+	'ACP_PF_ALLOW_USERS_DELETE'	=> 'Dürfen Mitglieder ihre eigenen Profile verwalten (Kommentare läschen)?',
 	'DISABLE_ACP_LOGIN'		=> 'Zusätzlichen Admin Login deaktivieren',
 	'DISABLE_ACP_LOGIN_EXPLAIN'	=> 'Soll der extra Login für den Adminbereich deaktiviert werden? Ein Zugang zum Adminbereich ist dann ohne zusätzlichen Login mäglich.',
 
@@ -10482,21 +9786,9 @@ $lang = array_merge($lang, array(
 	'MIN_TIME_TERMS'			=> 'Minimale Zeit für die Bestätigung der Nutzungsbedingungen',
 	'MIN_TIME_TERMS_EXPLAIN'	=> 'Die Nutzungsbedingungen können vor Ablauf dieser Zeit nicht bestätigt werden.',
 
-
 ));
 
 #######language/en/acp/bots.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'BOTS'				=> 'Bots verwalten',
@@ -10534,22 +9826,10 @@ $lang = array_merge($lang, array(
 
 #######language/en/acp/common.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
-
 $lang = array_merge($lang, array(
 	'ACP_MANAGE_FORUMS'			=> 'Foren verwalten &sup2;',
 	'ACP_MANAGE_FORUMS_OLD'		=> 'Foren verwalten &sup1;',
 	'DATABASE_SERVER_INFO'	=> 'Hilfe und Support Forum',
-
 
 	'ACP_ADMINISTRATORS'		=> 'Administratoren',
 	'ACP_ADMIN_LOGS'			=> 'Administrations-Protokoll',
@@ -10802,15 +10082,10 @@ $lang = array_merge($lang, array(
 	'USER_CONTROL_PANEL'	=> 'Persönlicher Bereich',
 
 	'WARNING'				=> 'Warnung',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_PHP_INFO_EXPLAIN'	=> 'Auf dieser Seite findest du Informationen zu der auf deinem Server installierten PHP-Version. Sie enthält Details zu den geladenen Modulen, den verfügbaren Variablen und Einstellungen. Diese Informationen können bei der Problemsuche hilfreich sein. Bitte beachte, dass manche Internet-Provider die hier angezeigten Informationen aus Sicherheitsgründen einschränken. Du solltest keine Informationen von dieser Seite veröffentlichen, sofern dich nicht ein offizielles Team-Mitglied des Support-Forums dazu auffordert.',
-
 	'NO_PHPINFO_AVAILABLE'	=> 'Es konnten keine Informationen über deine PHP-Installation ermittelt werden. phpinfo() wurde vermutlich aus Sicherheitsgründen deaktiviert.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_ADMIN_LOGS_EXPLAIN'	=> 'Diese Liste zeigt alle Vorgänge, die von Board-Administratoren durchgeführt wurden. Du kannst nach Benutzername, Datum, IP-Adresse oder Vorgang sortieren.',
 	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'Diese Liste zeigt alle Vorgänge, die durch das Board selbst ausgeführt wurden. Dieses Protokoll stellt dir Informationen zur Lösung spezifischer Probleme bereit, wie z.&nbsp;B. die Nicht-Auslieferung von E-Mails. Du kannst nach Benutzername, Datum, IP-Adresse oder Vorgang sortieren.',
 	'ACP_MOD_LOGS_EXPLAIN'		=> 'Diese Liste zeigt alle Vorgänge, die von Moderatoren an Foren, Themen, Beiträgen und Benutzern ausgeführt wurden — inklusive von Sperrungen. Du kannst nach Benutzername, Datum, IP-Adresse oder Vorgang sortieren.',
@@ -10818,15 +10093,11 @@ $lang = array_merge($lang, array(
 	'ALL_ENTRIES'				=> 'Alle Einträge',
 
 	'DISPLAY_LOG'	=> 'Einträge der letzten Zeit anzeigen',
-
 	'NO_ENTRIES'	=> 'Es existiert kein Protokoll-Eintrag für diesen Zeitraum.',
-
 	'SORT_IP'		=> 'IP-Adresse',
 	'SORT_DATE'		=> 'Datum',
 	'SORT_ACTION'	=> 'Vorgang',
-));
 
-$lang = array_merge($lang, array(
 	'ADMIN_INTRO'				=> 'Diese Übersicht gibt dir einen schnellen Überblick über die verschiedenen Foren Statistiken. <label><b>Auf jeder Seite in diesem Adminbereich findest du weitere Hilfe, wie du die einzelnen Funktionen richtig nutzt.</b></label>',
 	'ADMIN_LOG'					=> 'Protokollierte Administrations-Vorgänge',
 	'ADMIN_LOG_INDEX_EXPLAIN'	=> 'Diese Liste gibt dir einen Überblick über die letzten fünf von Administratoren durchgeführten Vorgänge. Eine vollständige Liste erreichst du über den entsprechenden Menüpunkt oder den unten stehenden Link.',
@@ -10914,9 +10185,7 @@ $lang = array_merge($lang, array(
 	'SORT_REMINDER'		=> 'Anzahl Erinnerungen',
 
 	'USER_IS_INACTIVE'		=> 'Benutzer ist inaktiv',
-));
 
-$lang = array_merge($lang, array(
 	'EXPLAIN_SEND_STATISTICS'	=> 'Bitte übermittle Informationen über deinen Server und deine Board-Konfiguration für statistische Analysen an phpBB.com. Alle Daten, die dich selbst oder deine Website identifizieren könnten, wurden entfernt — die Daten sind vollkommen <strong>anonym</strong>. Entscheidungen über zukünftige phpBB-Versionen werden auf Basis dieser Daten getroffen. Die statistischen Daten werden öffentlich zur Verfügung gestellt. Die Daten werden auch mit dem PHP-Projekt ausgetauscht, das die Programmiersprache betreut, in der phpBB geschrieben ist.',
 	'EXPLAIN_SHOW_STATISTICS'	=> 'Mit der folgenden Schaltfläche kannst du alle Informationen anzeigen, die übermittelt werden.',
 	'DONT_SEND_STATISTICS'		=> 'Kehre zum Administrations-Bereich zurück, wenn du keine statistischen Daten an phpBB.com senden möchtest.',
@@ -10925,9 +10194,7 @@ $lang = array_merge($lang, array(
 	'SEND_STATISTICS'			=> 'Statistische Informationen senden',
 	'SHOW_STATISTICS'			=> 'Details anzeigen',
 	'THANKS_SEND_STATISTICS'	=> 'Vielen Dank für die Übermittlung deiner Informationen.',
-));
 
-$lang = array_merge($lang, array(
 	'LOG_ACL_ADD_USER_GLOBAL_U_'		=> '<strong>Benutzerrechte eines Benutzers hinzugefügt oder geändert</strong><br />» %s',
 	'LOG_ACL_ADD_GROUP_GLOBAL_U_'		=> '<strong>Benutzerrechte einer Gruppe hinzugefügt oder geändert</strong><br />» %s',
 	'LOG_ACL_ADD_USER_GLOBAL_M_'		=> '<strong>Globale Moderationsrechte eines Benutzers hinzugefügt oder geändert</strong><br />» %s',
@@ -10970,7 +10237,7 @@ $lang = array_merge($lang, array(
 
 	'LOG_BAN_EXCLUDE_USER'	=> '<strong>Benutzer von Sperre ausgenommen</strong> auf Grund „<em>%1$s</em>“<br />» %2$s',
 	'LOG_BAN_EXCLUDE_IP'	=> '<strong>IP von Sperre ausgenommen</strong> auf Grund „<em>%1$s</em>“<br />» %2$s',
-	'LOG_BAN_EXCLUDE_EMAIL' => '<strong>E-Mail von Sperre ausgenommen</strong> auf Grund „<em>%1$s</em>“<br />» %2$s',
+	'LOG_BAN_EXCLUDE_EMAIL'	=> '<strong>E-Mail von Sperre ausgenommen</strong> auf Grund „<em>%1$s</em>“<br />» %2$s',
 	'LOG_BAN_USER'			=> '<strong>Benutzer gesperrt</strong> auf Grund „<em>%1$s</em>“<br />» %2$s',
 	'LOG_BAN_IP'			=> '<strong>IP gesperrt</strong> auf Grund „<em>%1$s</em>“<br />» %2$s',
 	'LOG_BAN_EMAIL'			=> '<strong>E-Mail gesperrt</strong> auf Grund „<em>%1$s</em>“<br />» %2$s',
@@ -11236,7 +10503,7 @@ $lang = array_merge($lang, array(
 	'LOG_USER_GROUP_RESIGN'			=> '<strong>Aus Gruppe ausgetreten</strong><br />» %s',
 
 	'LOG_WARNING_DELETED'		=> '<strong>Verwarnung eines Benutzer gelöscht</strong><br />» %s',
-	'LOG_WARNINGS_DELETED'		=> '<strong>Verwarnungen von %2$s Benutzern gelöscht</strong><br />» %1$s', // Example: '<strong>Deleted 2 user warnings</strong><br />» username'
+	'LOG_WARNINGS_DELETED'		=> '<strong>Verwarnungen von %2$s Benutzern gelöscht</strong><br />» %1$s',
 	'LOG_WARNINGS_DELETED_ALL'	=> '<strong>Verwarnungen aller Benutzer gelöscht</strong><br />» %s',
 
 	'LOG_WORD_ADD'			=> '<strong>Zensiertes Wort hinzugefügt</strong><br />» %s',
@@ -11245,18 +10512,18 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ACP_CAT_PHPBB_SEO' => 'SEO Optimierung',
-	'ACP_MOD_REWRITE' => 'SEO-URL',
-	'ACP_PHPBB_SEO_CLASS' => 'SEO Einstellungen',
-	'ACP_FORUM_URL' => 'Forum URL Verwaltung',
-	'ACP_HTACCESS' => '.htaccess',
-	'SEO_LOG_INSTALL_PHPBB_SEO' => '<strong>SEO Optimierung installiert</strong>',
-	'SEO_LOG_INSTALL_PHPBB_SEO_FAIL' => '<strong>SEO Optimierung - install attempt failed</strong>',
-	'SEO_LOG_UNINSTALL_PHPBB_SEO' => '<strong>SEO Optimierung deinstallieren</strong>',
-	'SEO_LOG_UNINSTALL_PHPBB_SEO_FAIL' => '<strong>SEO Optimierung deinstallation fehlgeschlagen</strong>',
-	'SEO_LOG_CONFIG_SETTINGS' => '<strong>Wichtige SEO Information</strong>',
-	'SEO_LOG_CONFIG_FORUM_URL' => '<strong>Error Forum URLs</strong>',
-	'SEO_LOG_CONFIG_HTACCESS' => '<strong>New .htaccess</strong>',
+	'ACP_CAT_PHPBB_SEO'	=> 'SEO Optimierung',
+	'ACP_MOD_REWRITE'	=> 'SEO-URL',
+	'ACP_PHPBB_SEO_CLASS'	=> 'SEO Einstellungen',
+	'ACP_FORUM_URL'	=> 'Forum URL Verwaltung',
+	'ACP_HTACCESS'	=> '.htaccess',
+	'SEO_LOG_INSTALL_PHPBB_SEO'	=> '<strong>SEO Optimierung installiert</strong>',
+	'SEO_LOG_INSTALL_PHPBB_SEO_FAIL'	=> '<strong>SEO Optimierung - install attempt failed</strong>',
+	'SEO_LOG_UNINSTALL_PHPBB_SEO'	=> '<strong>SEO Optimierung deinstallieren</strong>',
+	'SEO_LOG_UNINSTALL_PHPBB_SEO_FAIL'	=> '<strong>SEO Optimierung deinstallation fehlgeschlagen</strong>',
+	'SEO_LOG_CONFIG_SETTINGS'	=> '<strong>Wichtige SEO Information</strong>',
+	'SEO_LOG_CONFIG_FORUM_URL'	=> '<strong>Error Forum URLs</strong>',
+	'SEO_LOG_CONFIG_HTACCESS'	=> '<strong>New .htaccess</strong>',
 	'ACP_WELCOME_PM'		=> 'Willkommens-PN',
 	'LOG_CONFIG_WELCOME_PM'	=> '<strong>Wichtige Willkommens PN Einstellungen</strong>',
 	'LOG_USER_CREATED'		=> '<strong>Neues Mitglied angemeldet</strong><br />&#187; %s',
@@ -11336,8 +10603,8 @@ $lang = array_merge($lang, array(
 	'AVAILABLE_FORUM_IMAGE_EXPLAIN'	=> 'Anzeigen einer Liste der verfügbaren Forum Bilder (Bilder/Forum_icons /). Fahre mit der Maus über ein Bild, um den Pfadnamen zu sehen.',
 	'SHOW_FORUM_IMAGES'		=> 'Verfügbare Foren Bilder anzeigen.',
 
-	'MOD_IMAGES'  => 'Der Bildermod erlaubt dem Admin, Bilder zum Bearbeiten auszuwählen, wo Bilder im momentanen Admin Style aufbewahrt werden.',
-	'MOD_ICONS'   => 'Der Bildermod erlaubt dem Admin, Bilder zum Bearbeiten auszuwählen, wo icons im momentanen Admin Style aufbewahr werden.',
+	'MOD_IMAGES'	=> 'Der Bildermod erlaubt dem Admin, Bilder zum Bearbeiten auszuwählen, wo Bilder im momentanen Admin Style aufbewahrt werden.',
+	'MOD_ICONS'		=> 'Der Bildermod erlaubt dem Admin, Bilder zum Bearbeiten auszuwählen, wo icons im momentanen Admin Style aufbewahr werden.',
 
 	'ACP_MODULES_CONFIG'		=> 'Module',
 	'ACP_CAT_PORTAL2'		=> 'Portal Konfiguration',
@@ -11347,9 +10614,9 @@ $lang = array_merge($lang, array(
 
 	'ACP_PORTAL_CONFIG'		=> 'Portal Konfiguration',
 	'ACP_PORTAL_VARS_CONFIG'	=> 'Andere veränderbare Block-Einstellungen',
-  	'ACP_CAT_VARS_CONFIG'	=> 'Portal Einstellungen',
-  	'ACP_VARS_CONFIG'		=> 'Zusätzliche Einstellungen',
-  	'ACP_CAT_WELCOME_CONFIG'	=> 'Willkommensnachricht',
+	'ACP_CAT_VARS_CONFIG'	=> 'Portal Einstellungen',
+	'ACP_VARS_CONFIG'		=> 'Zusätzliche Einstellungen',
+	'ACP_CAT_WELCOME_CONFIG'	=> 'Willkommensnachricht',
 
 	'ADM_LOGOUT'			=> 'ACP Logout',
 	'ADM_LOGGED_OUT'		=> 'Du wurdest erfolgreich vom Administrations-Bereich abgemeldet.',
@@ -11371,12 +10638,12 @@ $lang = array_merge($lang, array(
 	'ACP_CALENDAR_DELETE_EVENT_TYPE'	=> 'Event Typ läschen',
 	'ACP_CALENDAR_ETYPES'		=> 'Kalender Event Typen',
 
-	'ACP_GYM_SITEMAPS' => 'GYM Sitemaps &amp; RSS',
-	'ACP_GYM_MAIN' => 'Main configuration',
-	'ACP_GYM_GOOGLE_MAIN' => 'Google Sitemaps',
-	'ACP_GYM_RSS_MAIN' => 'RSS Feeds',
-	'ACP_GYM_YAHOO_MAIN' => 'Yahoo! url list',
-	'ACP_GYM_HTML_MAIN' => 'HTML sitemaps',
+	'ACP_GYM_SITEMAPS'	=> 'GYM Sitemaps &amp; RSS',
+	'ACP_GYM_MAIN'	=> 'Main configuration',
+	'ACP_GYM_GOOGLE_MAIN'	=> 'Google Sitemaps',
+	'ACP_GYM_RSS_MAIN'	=> 'RSS Feeds',
+	'ACP_GYM_YAHOO_MAIN'	=> 'Yahoo! url list',
+	'ACP_GYM_HTML_MAIN'	=> 'HTML sitemaps',
 	'ACP_UP_FAVICON'		=> 'Favicon, Browser-Icon',
 	'LOG_CONFIG_FAVICON_DEL'	=> '<strong>Favicon entfernt</strong>',
 	'LOG_CONFIG_FAVICON_ADD'	=> '<strong>Favicon hinzugefügt</strong>',
@@ -11571,56 +10838,49 @@ $lang = array_merge($lang, array(
 	'NO_CATS'				=> 'Keine Kategorien',
 	'IN_CAT'				=> 'Smilie ist in einer Kategorie',
 
-
-
-
 	'PAGE_ID_INVALID'			=> 'Die gewählte Seite ist ungültig.',
 	'PAGE_NOT_FOUND'			=> 'Die gewählte Seite existiert nicht oder du hast keine Berechtigung diese Seite aufzurufen.',
 
-	'ACP_MANAGE_PAGES' => 'Eigene Seiten (Homepage)',
-	'ACP_PAGES' => 'Eigene statische Seiten',
-	'ACP_PAGES_EXPLAIN' => 'Hier kannst du deinem Forum statische Seiten hinzufügen und bearbeiten.',
-	'ADD_PAGE' => 'Eine neue Seite hinzufügen',
-	'GO_TO_PAGE' => 'Seite ansehen',
-	'MUST_SELECT_PAGE' => 'Du musst eine Seite auswählen',
-	'NO_PAGE_DESC' => 'Du hast keine Beschreibung der Seiten eingegeben.',
-	'NO_PAGE_TITLE' => 'Du hast keinen Titel für die Seiten angegeben.',
-	'NO_PAGE_CONTENT' => 'Du hast noch keinen Inhalt für die Seiten hinterlegt.',
-	'PAGE'     => 'Seite ',
-	'PAGES'     => 'Seiten',
-	'PAGE_ADDED' => 'Die Seite wurde erfolgreich hinzugefügt.',
-	'PAGE_AUTHOR' => 'Verfasser der Seite',
-	'PAGE_CONTENT' => 'Inhalt der Seite',
-	'PAGE_DESC' => 'Beschreibung',
-	'PAGE_DESC_EXPLAIN' => 'Trage hier eine kurze Beschreibung der Seite ein, die du erstellen willst. Diese wird auch in der Seiten Übersicht angezeigt, damit die Leser wissen was sich hinter dem Link verbirgt.',
-	'PAGE_DISPLAY' => 'Seite aktivieren',
-	'PAGE_DISPLAY_EXPLAIN' => 'Bei der Einstellung "Nein" wird die Seite öffentlich nicht zugänglich. Administratoren und Moderatoren können jederzeit direkt auf die Seite zugreifen.',
-	'PAGE_DISPLAY_GUESTS' => 'Seite den Besuchern anzeigen',
-	'PAGE_DISPLAY_GUESTS_EXPLAIN' => 'Bei der Einstellung "Nein" wird die Seite nur den registrierten Benutzern zugänglich.',
-	'PAGE_HIDDEN' => 'Diese Seite ist versteckt. Lediglich Administratoren und Moderatoren können sie sehen. Du kannst es im ACP aktivieren.',
-	'PAGE_LINK' => 'Seiten-Link',
-	'PAGE_MAKE_HIDDEN' => 'Verstecken',
-	'PAGE_MAKE_VISIBLE' => 'Sichtbar machen',
-	'PAGE_NOT_VISIBLE' => 'Die ausgewählte Seite ist jetzt öffentlich nicht sichtbar.',
-	'PAGE_ORDER' => 'Seiten Reihenfolge',
-	'PAGE_ORDER_EXPLAIN' => 'Wenn eine Liste von Seiten angezeigt wird, kannst du die Reihenfolge der Seiten definieren indem du hier eine Zahl einstellst. In diesem Bereich werden dann die Seiten aufsteigend sortiert.',
-	'PAGE_TITLE' => 'Kalender',
-	'PAGE_UPDATED' => 'Die Seite wurde erfolgreich aktualisiert.',
-	'PAGE_URL' => 'URL-ID',
-	'PAGE_URL_EXPLAIN' => 'Diese ID wird so zu sagen der Dateiname in der URL. Verwende kleine Buchstaben, Zahlen und Bindestriche. Falls nicht, generiert das System es vom Seitentitel.',
-	'PAGE_VISIBLE' => 'Die ausgewählte Seite wird nun angezeigt.',
-	'STATIC_PAGES_MOD_UPDATED' => '<strong>Die Modifikation für Statische Seiten aktualisiert auf die Version » %s</strong>',
-	'STATIC_PAGES_MOD_INSTALLED' => '<strong>Die Modifikation für Statische Seiten wurde installiert - MOD Version ist » %s</strong>',
+	'ACP_MANAGE_PAGES'	=> 'Eigene Seiten (Homepage)',
+	'ACP_PAGES'	=> 'Eigene statische Seiten',
+	'ACP_PAGES_EXPLAIN'	=> 'Hier kannst du deinem Forum statische Seiten hinzufügen und bearbeiten.',
+	'ADD_PAGE'	=> 'Eine neue Seite hinzufügen',
+	'GO_TO_PAGE'	=> 'Seite ansehen',
+	'MUST_SELECT_PAGE'	=> 'Du musst eine Seite auswählen',
+	'NO_PAGE_DESC'	=> 'Du hast keine Beschreibung der Seiten eingegeben.',
+	'NO_PAGE_TITLE'	=> 'Du hast keinen Titel für die Seiten angegeben.',
+	'NO_PAGE_CONTENT'	=> 'Du hast noch keinen Inhalt für die Seiten hinterlegt.',
+	'PAGE'			=> 'Seite ',
+	'PAGES'			=> 'Seiten',
+	'PAGE_ADDED'	=> 'Die Seite wurde erfolgreich hinzugefügt.',
+	'PAGE_AUTHOR'	=> 'Verfasser der Seite',
+	'PAGE_CONTENT'	=> 'Inhalt der Seite',
+	'PAGE_DESC'	=> 'Beschreibung',
+	'PAGE_DESC_EXPLAIN'	=> 'Trage hier eine kurze Beschreibung der Seite ein, die du erstellen willst. Diese wird auch in der Seiten Übersicht angezeigt, damit die Leser wissen was sich hinter dem Link verbirgt.',
+	'PAGE_DISPLAY'	=> 'Seite aktivieren',
+	'PAGE_DISPLAY_EXPLAIN'	=> 'Bei der Einstellung "Nein" wird die Seite öffentlich nicht zugänglich. Administratoren und Moderatoren können jederzeit direkt auf die Seite zugreifen.',
+	'PAGE_DISPLAY_GUESTS'	=> 'Seite den Besuchern anzeigen',
+	'PAGE_DISPLAY_GUESTS_EXPLAIN'	=> 'Bei der Einstellung "Nein" wird die Seite nur den registrierten Benutzern zugänglich.',
+	'PAGE_HIDDEN'	=> 'Diese Seite ist versteckt. Lediglich Administratoren und Moderatoren können sie sehen. Du kannst es im ACP aktivieren.',
+	'PAGE_LINK'	=> 'Seiten-Link',
+	'PAGE_MAKE_HIDDEN'	=> 'Verstecken',
+	'PAGE_MAKE_VISIBLE'	=> 'Sichtbar machen',
+	'PAGE_NOT_VISIBLE'	=> 'Die ausgewählte Seite ist jetzt öffentlich nicht sichtbar.',
+	'PAGE_ORDER'	=> 'Seiten Reihenfolge',
+	'PAGE_ORDER_EXPLAIN'	=> 'Wenn eine Liste von Seiten angezeigt wird, kannst du die Reihenfolge der Seiten definieren indem du hier eine Zahl einstellst. In diesem Bereich werden dann die Seiten aufsteigend sortiert.',
+	'PAGE_TITLE'	=> 'Kalender',
+	'PAGE_UPDATED'	=> 'Die Seite wurde erfolgreich aktualisiert.',
+	'PAGE_URL'	=> 'URL-ID',
+	'PAGE_URL_EXPLAIN'	=> 'Diese ID wird so zu sagen der Dateiname in der URL. Verwende kleine Buchstaben, Zahlen und Bindestriche. Falls nicht, generiert das System es vom Seitentitel.',
+	'PAGE_VISIBLE'	=> 'Die ausgewählte Seite wird nun angezeigt.',
+	'STATIC_PAGES_MOD_UPDATED'	=> '<strong>Die Modifikation für Statische Seiten aktualisiert auf die Version » %s</strong>',
+	'STATIC_PAGES_MOD_INSTALLED'	=> '<strong>Die Modifikation für Statische Seiten wurde installiert - MOD Version ist » %s</strong>',
 
 	'LOG_PAGE_ADDED'	=> '<strong>Statische Seite hinzugefügt</strong><br />» %s',
 	'LOG_PAGE_UPDATED'	=> '<strong>Statische Seite aktualisiert</strong><br />» %s',
 	'LOG_PAGE_REMOVED'	=> '<strong>Statische Seite entfernt</strong><br />» %s',
 
-
-
 	'ACP_SMILIES_CATEGORIES'	=> 'Smilies Kategorien',
-
-
 	'WWH_CONFIG'				=> 'Konfiguration "Wer War Da?"',
 	'WWH_TITLE'					=> 'Wer War Da?',
 
@@ -11812,7 +11072,6 @@ $lang = array_merge($lang, array(
 	'RT_REPORT'			=> 'Beitrag melden',
 	'RT_OTHERS'			=> 'andere Seiten',
 
-
 	'ACP_ACCOUNT_ADDED'			=> 'Der Account wurde erstellt, der User kann sich nun mit dem Usernamen und dem Passwort, das an die angebene E-Mail Adresse gesandt wurde, einloggen',
 	'ACP_ACCOUNT_INACTIVE'		=> 'Der Account wurde erstellt. Trotzdem verlangt dieses Forum eine Account-Aktivierung.<br />Ein Aktivierungsschlüssel wurde an die E-Mail Andresse, die von dir für den User angegeben wurde, gesandt.',
 	'ACP_ACCOUNT_INACTIVE_ADMIN'=> 'Der Account wurde erstellt. Trotzdem verlangt dieses Forum eine Account-Aktivierung durch einen Administrator.<br />Eine E-Mail wurde an die Administratoren gesandt und der User wird informiert werden, wenn der Account aktiviert wurde.',
@@ -11832,8 +11091,8 @@ $lang = array_merge($lang, array(
 	'CONTINUE_EDIT_USER'		=> '%1$sKlicke hier um das Profil zu bearbeiten  %2$s’s profile%3$s', // e.g.: Click here to edit Joe’s profile.
 	'LOG_USER_ADDED'			=> '<strong>Neuer User hinzugefügt</strong><br />» %s',
 
-	'TOO_LONG_NEW_USERNAME'     => '<strong>Username zu lang</strong><br />',
-	'TOO_SHORT_NEW_USERNAME'     => '<strong>Username zu kurz</strong><br />',
+	'TOO_LONG_NEW_USERNAME'		=> '<strong>Username zu lang</strong><br />',
+	'TOO_SHORT_NEW_USERNAME'	=> '<strong>Username zu kurz</strong><br />',
 
 	'AUTO_GROUP'			=> 'Auto Gruppen Konfiguration',
 	'GROUP_MIN_POSTS'		=> 'Minimale Beiträge',
@@ -11845,29 +11104,17 @@ $lang = array_merge($lang, array(
 	'DEFAULT_AUTO_GROUP'	=> 'Automatik einschalten',
 	'DEFAULT_AUTO_GROUP_EXPLAIN'	=> 'User werden darauf aus ihrer default-Gruppe in diese Gruppe hinzugefügt.',
 
-
-));
-
-
-
-$lang = array_merge($lang, array(
-
-
 	'ALTT_ACTIVE'				=> 'Beitrags Titel in der Forenansicht anzeigen, Titel werden an die Befugnisse des Users angepasst ob dieser den Titel sehen darf oder nicht.',
-
 	'ALTT_CHAR_LIMIT'			=> 'Anzahl der Zeichen die angezeigt werden sollen',
 	'ALTT_CHAR_LIMIT_EXP'		=> '0 oder 64 wenn nicht gekürzt werden soll',
 	'ALTT_CONFIG'				=> 'Konfiguration',
 	'ALTT_CONFIG_SAVED'			=> 'Einstellungen gespeichert',
 	'ALTT_CREATE_INDEX'			=> 'Es wird ein Index zur Datenbank hinzugefügt, der die Geschwindigekti der MOD erhöht. Wenn dein Board viele Themen hat, kann dies einen Moment dauern',
-
 	'ALTT_LASTPOST'				=> 'Letzter Beitragstitel',
 	'ALTT_LASTPOST_EXP'			=> 'Wenn diese Option auf "Nein" gesetzt wird, wird der Titel des letzten Themas angezeigt.',
-
 	'ALTT_INSTALL'				=> 'NV advanced topic titles v%s installieren',
 	'ALTT_INSTALLED'			=> 'Herzlichen Glückwunsch, du hast so eben NV advanced topic titles v%s installiert.',
 	'ALTT_INSTALLED_NOT'		=> 'NV advanced topic titles v%s konnte nicht installiert werden.',
-
 	'ALTT_TITLE'				=> 'Beitrags-Titel',
 
 	'ALTT_UPDATE'				=> 'NV advanced topic titles aktualisieren',
@@ -11915,7 +11162,6 @@ $lang = array_merge($lang, array(
 	'GALLERY_POPUP_HELPLINE'			=> 'Öffne ein Popup in dem du deine neuesten Bilder auswählen und neue Bilder hochladen kannst.',
 
 	'GALLERY_TRANSLATION_INFO'			=> '',
-
 	'IMAGES'							=> 'Bilder',
 	'IMG_BUTTON_UPLOAD_IMAGE'			=> 'Bild hochladen',
 
@@ -12027,9 +11273,7 @@ $lang = array_merge($lang, array(
 	'ACP_ARCADE_UTILITIES_DOWNLOADS'			=> 'Download games',
 	'ACP_ARCADE_UTILITIES_DOWNLOAD_STATS'		=> 'Download statistics',
 	'ACP_ARCADE_UTILITIES_USER_GUIDE'			=> 'User Guide',
-));
 
-$lang = array_merge($lang, array(
 	'NO_CAT'							=> 'Es gibt noch keine Kategorien in die Spiele installiert werden kännten.',
 	'NO_ADD_GAMES'						=> 'Derzeit keinen neuen Spiele zum installieren vorhanden.<br />',
 	'NO_UNPACK_GAMES'					=> 'Currently there are no games waiting to be unpacked to the arcade.<br />',
@@ -12501,19 +11745,14 @@ $lang = array_merge($lang, array(
 	'ARCADE_GAME_FILESIZE_EXPLAIN'			=> 'Die gesamte Dateigrä&szlig;e des Flashspiels inklusive aller zusätzlichen Dateien.', 
 
 	'ARCADE_GAME_JACKPOT'					=> 'Jackpot gesamt', 
-	'ARCADE_GAME_JACKPOT_EXPLAIN'			=> 'Ändern Sie die Hähe des Jackpots für dieses Spiel, falls verwendet.',  
+	'ARCADE_GAME_JACKPOT_EXPLAIN'			=> 'Ändern Sie die Hähe des Jackpots für dieses Spiel, falls verwendet.',
 	'ARCADE_GAME_POINTS_SETTINGS'			=> 'Einstellungen für Spielpunkte', 
 	'ARCADE_GAME_POINTS_SETTINGS_EXPLAIN'	=> 'Hier kännen Sie festlegen, auf welche Weise ein Punktesystem auf die Spielhalle angewendet werden soll.',
 	'ARCADE_GAME_REWARD'					=> 'Belohnung', 
 	'ARCADE_GAME_REWARD_EXPLAIN'			=> 'Die Anzahl an Punkten, die man für ein gewonnenes Spiel bekommt.', 
 
-
-
-
-
-
 	'ARCADE_GAME_USE_JACKPOT'				=> 'Nutze Jackpot', 
-	'ARCADE_GAME_USE_JACKPOT_EXPLAIN'		=> 'Aktiviert die Nutzung des Jackpots für dieses Spiel. Dies überschreibt sowohl die Kategorien- als auch die globale Einstellung.',      
+	'ARCADE_GAME_USE_JACKPOT_EXPLAIN'		=> 'Aktiviert die Nutzung des Jackpots für dieses Spiel. Dies überschreibt sowohl die Kategorien- als auch die globale Einstellung.',
 	'ARCADE_GAME_ZERO_NEGATIVE_SCORE'		=> 'Erlaube Null- oder negative Punkte', 
 	'ARCADE_GAME_ZERO_NEGATIVE_SCORE_EXPLAIN'	=> 'Wenn diese Option aktiviert ist, erlaubt die Spielhalle das Übermitteln von Punkteständen kleiner oder gleich Null.', 
 	'ARCADE_GLOBAL_GAME_COST'				=> 'Globale Spielkosten', 
@@ -12527,11 +11766,8 @@ $lang = array_merge($lang, array(
 	'ARCADE_JACKPOT_MINIMUM'				=> 'Jackpotminimum', 
 	'ARCADE_JACKPOT_MINIMUM_EXPLAIN'		=> 'Dies ist die minimale Grä&szlig;e des Jackpots.', 
 
-
-
-
 	'ARCADE_GLOBAL_GAME_AUTOSIZE'			=> 'Spielgrä&szlig;e automatisch erkennen', 
-	'ARCADE_GLOBAL_GAME_AUTOSIZE_EXPLAIN'	=> 'Falls aktiviert, versucht die Spielhalle automatisch, die Aufläsung eines Spiels zu erkennen. Diese Einstellung berücksichtigt alle anderen Einstellungen für die Breite/Hähe von Spielen.',    
+	'ARCADE_GLOBAL_GAME_AUTOSIZE_EXPLAIN'	=> 'Falls aktiviert, versucht die Spielhalle automatisch, die Aufläsung eines Spiels zu erkennen. Diese Einstellung berücksichtigt alle anderen Einstellungen für die Breite/Hähe von Spielen.',
 	'ARCADE_OVERRIDE_USER_SORT'				=> 'Überschreibe Benutzersortierung',
 	'ARCADE_OVERRIDE_USER_SORT_EXPLAIN'		=> 'Falls diese Option aktiviert ist, wird die von Benutzern des Forums vorgenommenen Sortierungsreihenfolge im UCP mit den unten festgelegten Optionen überschrieben.',
 	'ARCADE_POINTS_DETECT_DISABLED'			=> 'Die Spielhalle hat entdeckt, dass Sie den/das <strong>%s</strong> installiert und deaktiviert haben.',
@@ -12542,7 +11778,7 @@ $lang = array_merge($lang, array(
 	'ARCADE_RESET_JACKPOT_EXPLAIN'			=> 'Dies wird alle Jackpots für alle Spiele der Spielhalle leeren.', 
 	'ARCADE_RESET_POINTS'					=> 'Punkte zurücksetzen', 
 	'ARCADE_RESET_POINTS_DONE'				=> 'Alle Punkte erfolgreich zurückgesetzt.', 
-	'ARCADE_RESET_POINTS_EXPLAIN'			=> 'Dies wird alle Punkte für jedes Spiel und/oder jede Kategorie zurücksetzen.',       
+	'ARCADE_RESET_POINTS_EXPLAIN'			=> 'Dies wird alle Punkte für jedes Spiel und/oder jede Kategorie zurücksetzen.',
 	'ARCADE_SIMPLE_POINTS_SYSTEM'			=> 'Simple Points System', 
 	'ARCADE_ULTIMATE_POINTS_SYSTEM'	=> 'Ultimate Points System',
 	'ARCADE_USE_POINTS'						=> 'Verwende Punktesystem', 
@@ -12652,22 +11888,10 @@ $lang = array_merge($lang, array(
 	'TOTAL_IMAGES_OTHER'				=> 'Bilder insgesamt: <strong>%d</strong>',
 	'TOTAL_IMAGES_ZERO'					=> 'Bilder insgesamt: <strong>0</strong>',
 
-
 ));
 
 
 #######language/en/acp/database.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ACP_BACKUP_EXPLAIN'	=> 'Hier kannst du all deine phpBB-Daten sichern. Du kannst die Sicherung in deinem <samp>store/</samp>-Ordner speichern oder sie direkt herunterladen. Abhängig von der Konfiguration deines Servers kannst du die Datei auf verschiedene Arten komprimieren.',
@@ -12709,17 +11933,6 @@ $lang = array_merge($lang, array(
 
 #######language/en/acp/email.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
-
 $lang = array_merge($lang, array(
 	'ACP_MASS_EMAIL_EXPLAIN'		=> 'Hier kannst du eine Nachricht per E-Mail an alle Mitglieder des Boards oder einer spezifischen Gruppe senden, <strong>sofern diese den Erhalt von Informationen per E-Mail zugelassen haben</strong>. Dazu wird eine E-Mail an die festgelegte administrative E-Mail-Adresse verschickt und alle Empfänger als Blindkopie (BCC) hinzugefügt. Standardmäßig wird pro 50 Empfänger eine solche E-Mail versandt; bei mehreren Empfängern werden mehrere E-Mails versandt. Bitte habe nach dem Absenden Geduld, wenn du eine Nachricht an eine große Gruppe schickst und breche den Vorgang nicht ab. Bei einer Massen-E-Mail ist es normal, dass ihr Versand länger dauert. Du wirst benachrichtigt, sobald der Vorgang abgeschlossen wurde.',
 	'ALL_USERS'						=> 'Alle Mitglieder',
@@ -12751,17 +11964,6 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/acp/forums.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'AUTO_PRUNE_DAYS'			=> 'Seit dem letzten Beitrag vergangene Tage',
@@ -12898,20 +12100,9 @@ $lang = array_merge($lang, array(
 
 #######language/en/acp/groups.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
-
 $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE_EXPLAIN'		=> 'Hier kannst du alle Benutzergruppen verwalten. Du kannst bestehende löschen oder ändern oder neue Gruppen erstellen, Gruppenleiter auswählen, den Gruppenstatus (offen, versteckt, geschlossen) ändern sowie Name und Beschreibung der Gruppe einstellen.',
-	'GROUP_ADD_USERS'						=> 'Benutzer hinzufügen',
+	'GROUP_ADD_USERS'				=> 'Benutzer hinzufügen',
 	'ADD_USERS_EXPLAIN'				=> 'Hier kannst du neue Tipper zur Liga-Tipprunde hinzufügen. Bitte gib je einen Benutzernamen pro Zeile ein. ',
 
 	'COPY_PERMISSIONS_EXPLAIN'		=> 'Um die Konfiguration deines neuen Forums zu erleichtern, kannst du die Berechtigungen eines bestehenden Forums kopieren.',
@@ -12978,8 +12169,8 @@ $lang = array_merge($lang, array(
 	'GROUP_USERS_EXIST'				=> 'Die gewählten Benutzer sind bereits Mitglied der Gruppen.',
 	'GROUP_USERS_REMOVE'			=> 'Benutzer aus der Gruppe entfernt; neue Hauptgruppen erfolgreich eingestellt.',
 
-	'MAKE_DEFAULT_FOR_ALL'	=> 'Zur Hauptgruppe jedes Mitglieds machen',
-	'MEMBERS'				=> 'Mitglieder',
+	'MAKE_DEFAULT_FOR_ALL'		=> 'Zur Hauptgruppe jedes Mitglieds machen',
+	'MEMBERS'					=> 'Mitglieder',
 
 	'NO_GROUP'					=> 'Die von dir ausgewählte Benutzergruppe existiert nicht.',
 	'NO_GROUPS_CREATED'			=> 'Es wurden bislang keine Gruppen erstellt.',
@@ -13004,14 +12195,7 @@ $lang = array_merge($lang, array(
 
 #######language/en/acp/k_blocks.php#######
 
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 $lang = array_merge($lang, array(
-
 	'KBP_TITLE' 			=> 'Block Verwaltung',
 	'KBP_TITLE_EXPLAIN'		=> 'Hier können die Portal Blöcke bearbeitet, verschoben oder erstellt werden.',
 	'ACP_BLOCKS' 		=> 'Blöcke',
@@ -13057,15 +12241,15 @@ $lang = array_merge($lang, array(
 	'BLOCK_UPDATED'			=> 'Block upgedated',
 	'DO_NOT_EDIT'			=> '(Diesen Wert nicht ändern)',
 	
-	'PORTAL_BLOCKS_ENABLED' => 'Portal Blöcke eingeschaltet',
+	'PORTAL_BLOCKS_ENABLED'	=> 'Portal Blöcke eingeschaltet',
 	
 	'BLOCK_G_COUNT'					=> 'Allgemeiner Bestand an Blöcken',
 	'BLOCK_G_COUNT_EXPLAIN'	=> 'Die Anzahl der Ankündigungen, Newsartikel oder Letzten Themen, die angezeigt werden sollen, falls Scrollen in ihren zugehörigen Blöcken verboten ist.',
 	
-	'HAS_VARS' => 'Hat dieser Block Variablen?',
-	'HAS_VARS_EXPLAIN' => 'Wähle JA aus, falls der Block veränderbare Variablen enthält (woanders einstellen)',
+	'HAS_VARS'	=> 'Hat dieser Block Variablen?',
+	'HAS_VARS_EXPLAIN'	=> 'Wähle JA aus, falls der Block veränderbare Variablen enthält (woanders einstellen)',
 	'HTML'	=> 'HTML',
-	'BBCODE' => 'BBCodes',
+	'BBCODE'	=> 'BBCodes',
 
 	'CONFIRM_OPERATION_BLOCKS'		=> 'Möchtest du diesen Block löschen?',
 	'MUST_SELECT_VALID_BLOCK_DATA'	=> 'Ungültige Block-ID',
@@ -13076,26 +12260,14 @@ $lang = array_merge($lang, array(
 
 #######language/en/acp/k_config.php#######
 
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 $lang = array_merge($lang, array(
-
 	'PORTAL' 			=> 'Portal',
 	'RULES' 		=> 'Regeln',
 	'BLOCKS_RULES' 	=> 'Regeln bearbeiten',
-
 	'PORTAL_MAIN'			=> 'Hauptkonfiguration von Block/Portal',
-	
 	'PORTAL_BLOCKS_WIDTH' 	=> 'Block Breite (Linke und rechte Blöcke)',
-	
 	'PORTAL_SCROLL_RECENT'	=> 'Scrollen erlaubt',
 	'PORTAL_SCROLL_LINKS'	=> 'Scroll Links',
-	
-
 	
 	'BLOCKS_UPDATED'		=> 'Portal Info upgedated',
 	'BLOCK_DEFAULT'			=> 'Allgemein',
@@ -13105,7 +12277,6 @@ $lang = array_merge($lang, array(
 	'BLOCK_FIVE_COLUMN'		=> 'Fünf Spalten',
 	'HEADER_MENU'			=> 'Oberes Menü',
 	'BLOCKS_UPDATE_FILES'	=> 'Dateien updaten',
-	
 	'PBLOCK_HEADER'			=> 'Stargate aka Kiss Portal Block Manager (Future Development!) ',
 	'PBLOCK_NAME'			=> 'Name des Blocks',
 	'PBLOCK_CLASS'			=> 'Klasse',
@@ -13120,19 +12291,18 @@ $lang = array_merge($lang, array(
 	'PORTAL_VERSION_EXPLAIN'	=> 'Zeigt die aktuelle Version des Portals an',
 	'PORTAL_MAIN'			=> 'Hauptkonfiguration von Block/Portal',
 	'PORTAL_BLOCKS_WIDTH' 	=> 'Block Breite (Linke und rechte Blöcke)',
-	'PORTAL_CONFIG_UPDATED' => 'Portalkonfiguration gespeichert!... ',
+	'PORTAL_CONFIG_UPDATED'	=> 'Portalkonfiguration gespeichert!... ',
 	'PORTAL_BLOCKS_ENABLED'	=> 'Portal Blöcke eingeschaltet',
 
-	'PORTAL_BLOCKS_LEFT_ENABLED' => 'Aktiviere linke Blöcke',
-	'PORTAL_BLOCKS_RIGHT_ENABLED' => 'Aktiviere rechte Blöcke',
-	'PORTAL_BLOCKS_CENTRE_ENABLED' => 'Aktiviere mittige Blöcke',
+	'PORTAL_BLOCKS_LEFT_ENABLED'	=> 'Aktiviere linke Blöcke',
+	'PORTAL_BLOCKS_RIGHT_ENABLED'	=> 'Aktiviere rechte Blöcke',
+	'PORTAL_BLOCKS_CENTRE_ENABLED'	=> 'Aktiviere mittige Blöcke',
 	'PORTAL_SCROLL_RECENT'		=> 'Scrollen erlaubt',
 	'PORTAL_SCROLL_LINKS'		=> 'Scroll Links',
-	
 
-	'PORTAL_SET_LAYOUT_NEW'	=> 'Stelle das Block Layout/Style für die Willkommensseite ein (Neu - optional)',
-	'PORTAL_SET_LAYOUT'		=> 'Stelle das Block Layout/Style für die Seite ein (Allgemeine Option)',
-	'PORTAL_SET_LAYOUT_EXPLAIN'			=> 'Default layout Stargate aka Kiss Portal (siehe Dropdown Optionen).',
+	'PORTAL_SET_LAYOUT_NEW'		=> 'Stelle das Block Layout/Style für die Willkommensseite ein (Neu - optional)',
+	'PORTAL_SET_LAYOUT'			=> 'Stelle das Block Layout/Style für die Seite ein (Allgemeine Option)',
+	'PORTAL_SET_LAYOUT_EXPLAIN'		=> 'Default layout Stargate aka Kiss Portal (siehe Dropdown Optionen).',
 	
 	'BLOCKS_UPDATED'		=> 'Portal Info upgedated',
 	'BLOCK_DEFAULT'			=> 'Allgemein',
@@ -13143,23 +12313,14 @@ $lang = array_merge($lang, array(
 	'HEADER_MENU'			=> 'Oberes Menü',
 	'BLOCKS_UPDATE_FILES'	=> 'Dateien updaten',	
 
-		
 	'PORTAL_BLOCKS_WIDTH_EXPLAIN'		=> 'Andere Blockbreiten sind propotional - Zentrierte Blöcke benutzen 100% des verfügbaren Platzes. Falls du zwei Blöcke zentriert anzeigst, benutzt dementsprechend jeder 50%, drei Blöcke 33% usw.',		
 	'PORTAL_BLOCKS_ENABLED_EXPLAIN'	=> 'Blöcke aktivieren (Blöcke können einzeln aktiviert/deaktiviert werden; siehe Verwalte/Bearbeite Blöcke)',		
 	'PORTAL_SET_LAYOUT_NEW_EXPLAIN'	=> 'Neues Layout für die News/Willkommen Seite',		
-
-	'GENERATE' => '>Erstelle HTML-Datei des Blocks',
 ));
+
 #######language/en/acp/k_menus.php#######
 
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 $lang = array_merge($lang, array(
-
 	'ACP_MENUS' 		=> 'Menüs',
 		
 	'MENUS_HEADER_ADMIN'	=> 'Menü Verwaltung',
@@ -13230,24 +12391,13 @@ $lang = array_merge($lang, array(
 	'MENU_APPEND_SID'	=> 'SID',
 	'MENU_APPEND_UID'	=> 'UID',
 	'MENU_APPEND_SID_EXPLAIN'	=> 'Die SID könnte für Code/Blöcke benötigt werden.',
-	'MENU_APPEND_UID_EXPLAIN'	=> 'Die User ID könnte für Code/Blöcke benötigt werden.'
-	
-	
-));
-$lang = array_merge($lang, array(
+	'MENU_APPEND_UID_EXPLAIN'	=> 'Die User ID könnte für Code/Blöcke benötigt werden.',
 	'ACP_MESSAGE_SETTINGS_EXPLAIN'	=> 'Hier kannst du alle Standard-Einstellungen für Private Nachrichten vornehmen.',
 ));
 
 #######language/en/acp/k_modules.php#######
 
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 $lang = array_merge($lang, array(
-	
 	'ID'			=> 'ID',
 	'NAME'			=> 'Name',
 	'TYPE'			=> 'Typ',
@@ -13260,35 +12410,26 @@ $lang = array_merge($lang, array(
 	'NAME_EXPLAIN'			=> '',
 	'AUTHOR_EXPLAIN'		=> 'Autor der Nachricht',
 	'TYPE_EXPLAIN'			=> 'Module Typ: 1 = Willkommensblock, 2 = Style Info Block,<br /> 3,4,5,6 etc = Style ID für den Style Status Block.',
-	'INFO_EXPLAIN'  		=> 'Text von dem Willkommensblock in der Portal Mitte. <i>HTML-Code ist erlaubt.</i>',
+	'INFO_EXPLAIN'			=> 'Text von dem Willkommensblock in der Portal Mitte. <i>HTML-Code ist erlaubt.</i>',
 	'LINK_EXPLAIN'			=> 'Link zur einer Seite.',
 	'IMAGE_EXPLAIN' 		=> 'Modulbild falls irgendeines benötigt wird.<br />( URL mit http:// )',
 	'LAST_UPDATE_EXPLAIN'	=> 'Letzes Update... Beispiel: Sun 12 Dec 2007',
 	'EDIT' 					=> 'Bearbeiten',
 	'EDIT_EXPLAIN'			=> 'Das Modul bearbeiten',
 	'DELETE_EXPLAIN'		=> 'Spielergebnis löschen und Status auf 1 setzen.',
-	
-	
 ));
+
 #######language/en/acp/k_portal.php#######
 
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 $lang = array_merge($lang, array(
-
 	'PORTAL' 			=> 'Portal',
-	'K_PORTAL_TITLE' 			=> 'Portal Informationen',
+	'K_PORTAL_TITLE' 	=> 'Portal Informationen',
 	'TITLE_EXPLAIN'		=> 'Hier hast du die Möglichkeit, deine Mitglieder per Mail zu erinnern, die sich nicht aktiv am Forum beteiligen',	
-
-	'PORTAL_MAIN'			=> 'Hauptkonfiguration von Block/Portal',
+	'PORTAL_MAIN'		=> 'Hauptkonfiguration von Block/Portal',
 	
 	'PORTAL_BLOCKS_WIDTH' 	=> 'Block Breite (Linke und rechte Blöcke)',
-	'PORTAL_BLOCKS_LEFT_ENABLED' => 'Aktiviere linke Blöcke',
-	'PORTAL_BLOCKS_RIGHT_ENABLED' => 'Aktiviere rechte Blöcke',
+	'PORTAL_BLOCKS_LEFT_ENABLED'	=> 'Aktiviere linke Blöcke',
+	'PORTAL_BLOCKS_RIGHT_ENABLED'	=> 'Aktiviere rechte Blöcke',
 	'PORTAL_SCROLL_RECENT'	=> 'Scrollen erlaubt',
 	'PORTAL_SCROLL_LINKS'	=> 'Scroll Links',
 	'PORTAL_SET_LAYOUT_NEW'	=> 'Stelle das Block Layout/Style für die Willkommensseite ein (Neu - optional)',
@@ -13311,14 +12452,9 @@ $lang = array_merge($lang, array(
 	'PBLOCK_DATE'			=> 'Datum',
 	'PBLOCK_UPDATE'			=> 'Update',
 	'PBLOCK_SITE'			=> 'Seite',	
-	
 ));
-#######language/en/acp/k_vars.php#######
 
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
+#######language/en/acp/k_vars.php#######
 
 $lang = array_merge($lang, array(
 	'NEWS_SETTINGS'		=> '[Block] News / Nachrichten',
@@ -13328,7 +12464,7 @@ $lang = array_merge($lang, array(
 	'PORTAL_BLOCKS_WIDTH'		=> 'Block Breite (Linke und rechte Blöcke)',
 	'PORTAL_BLOCKS_WIDTH_EXPLAIN'	=> 'Andere Blockbreiten sind propotional - Zentrierte Blöcke benutzen 100% des verfügbaren Platzes. Falls du zwei Blöcke zentriert anzeigst, benutzt dementsprechend jeder 50%, drei Blöcke 33% usw.',
 	'RECENT_SETTINGS'			=> '[Block] Neuste Beiträge',
-	'NUMBER_OF_RECENT_ITEMS_TO_DISPLAY' => 'Wieviele neuste Beiträge sollen in dem Block angezeigt werden',
+	'NUMBER_OF_RECENT_ITEMS_TO_DISPLAY'	=> 'Wieviele neuste Beiträge sollen in dem Block angezeigt werden',
 	'TOPPOSTER_SETTINGS'			=> '[Block] Vielschreiber',
 	'MUSIC_SETTINGS'			=> '[Block] Musik Player',
 	'MUSIC_ID'				=> 'Deine Playlist ID',
@@ -13349,64 +12485,63 @@ $lang = array_merge($lang, array(
 	'DREI_TEXT'				=> '[eigener Block] block_3.html',
 	'VIER_TEXT'				=> '[eigener Block] block_4.html',
 
-	'NEWS_FORUM_ID' => 'News Foren',
-	'NEWS_FORUM_ID_EXPLAIN' => 'Wähle Foren aus denen die Beiträge für den Block kommen sollen, wählst du mehr als 15 Foren, werden alle Foren ausgewählt.',
+	'NEWS_FORUM_ID'	=> 'News Foren',
+	'NEWS_FORUM_ID_EXPLAIN'	=> 'Wähle Foren aus denen die Beiträge für den Block kommen sollen, wählst du mehr als 15 Foren, werden alle Foren ausgewählt.',
 		
-	'NUMBER_OF_NEWS_ITEMS_TO_DISPLAY' => 'News Artikel',
-	'NUMBER_OF_NEWS_ITEMS_TO_DISPLAY_EXPLAIN' => 'Die Anzahl der News, die auf der Portalseite angezeigt werden sollen.',
-	'MAX_NEWS_ITEM_LENGTH' => 'Länge jeder News',
-	'MAX_NEWS_ITEM_LENGTH_EXPLAIN' => 'Maximale Länge eines jeder Nachricht.<br />Tipp: 2500',
-	'ALLOW_NEWS' => 'News aktivieren',
-	'ALLOW_NEWS_EXPLAIN' => 'Diese Funktion macht den Block Nachrichten auf der Portal Seite sichtbar.',
+	'NUMBER_OF_NEWS_ITEMS_TO_DISPLAY'	=> 'News Artikel',
+	'NUMBER_OF_NEWS_ITEMS_TO_DISPLAY_EXPLAIN'	=> 'Die Anzahl der News, die auf der Portalseite angezeigt werden sollen.',
+	'MAX_NEWS_ITEM_LENGTH'	=> 'Länge jeder News',
+	'MAX_NEWS_ITEM_LENGTH_EXPLAIN'	=> 'Maximale Länge eines jeder Nachricht.<br />Tipp: 2500',
+	'ALLOW_NEWS'	=> 'News aktivieren',
+	'ALLOW_NEWS_EXPLAIN'	=> 'Diese Funktion macht den Block Nachrichten auf der Portal Seite sichtbar.',
 	
 	'ANNOUNCE_SETTINGS'		=> '[Block] Ankündigungen',
 	
-	'ANNOUNCE_FORUM_ID' => 'Foren für die Ankündigungen',	
-	'ANNOUNCE_FORUM_ID_EXPLAIN' => 'Wähle Foren aus denen die Beiträge für den Block kommen sollen, wählst du mehr als 15 Foren, werden alle Foren ausgewählt.',	
-	'NUMBER_OF_ANNOUNCE_ITEMS_TO_DISPLAY' => 'Anzahl der Ankündigungen, die du anzeigen lassen willst',
-	'NUMBER_OF_ANNOUNCE_ITEMS_TO_DISPLAY_EXPLAIN' => 'Die Anzahl der Ankündigungen, die du auf der Portal Seite anzeigen lassen willst.',
-	'MAX_ANNOUNCE_ITEM_LENGTH' => 'Länge der Ankündigungen',
-	'MAX_ANNOUNCE_ITEM_LENGTH_EXPLAIN' => 'Maximale Länge einer jeden Ankündigung.<br />Tipp: <strong>5000</strong>',
-	'ALLOW_ANNOUNCE' => 'Ankündigungen anzeigen?',
-	'ALLOW_ANNOUNCE_EXPLAIN' => 'Erlaube, Ankündigungen auf der Portal Seite anzeigen zu lassen.',	
+	'ANNOUNCE_FORUM_ID'	=> 'Foren für die Ankündigungen',	
+	'ANNOUNCE_FORUM_ID_EXPLAIN'	=> 'Wähle Foren aus denen die Beiträge für den Block kommen sollen, wählst du mehr als 15 Foren, werden alle Foren ausgewählt.',	
+	'NUMBER_OF_ANNOUNCE_ITEMS_TO_DISPLAY'	=> 'Anzahl der Ankündigungen, die du anzeigen lassen willst',
+	'NUMBER_OF_ANNOUNCE_ITEMS_TO_DISPLAY_EXPLAIN'	=> 'Die Anzahl der Ankündigungen, die du auf der Portal Seite anzeigen lassen willst.',
+	'MAX_ANNOUNCE_ITEM_LENGTH'	=> 'Länge der Ankündigungen',
+	'MAX_ANNOUNCE_ITEM_LENGTH_EXPLAIN'	=> 'Maximale Länge einer jeden Ankündigung.<br />Tipp: <strong>5000</strong>',
+	'ALLOW_ANNOUNCE'	=> 'Ankündigungen anzeigen?',
+	'ALLOW_ANNOUNCE_EXPLAIN'	=> 'Erlaube, Ankündigungen auf der Portal Seite anzeigen zu lassen.',	
 
 	'BOT_SETTINGS'	=> '[Block] Bot-Tracker',
-	'ALLOW_BOT_DISPLAY' => 'Erlaube Bot Bericht',
-	'ALLOW_BOT_DISPLAY_EXPLAIN' => 'Aktiviere/Deaktiviere Bot Bericht.',	
-	'NUMBER_OF_BOTS_TO_DISPLAY' => 'Anzahl der Bots, die angezeigt werden sollen',
-	'NUMBER_OF_BOTS_TO_DISPLAY_EXPLAIN' => 'Du kannst die Anzahl der angezeigten Bots festlegen.', 
+	'ALLOW_BOT_DISPLAY'	=> 'Erlaube Bot Bericht',
+	'ALLOW_BOT_DISPLAY_EXPLAIN'	=> 'Aktiviere/Deaktiviere Bot Bericht.',	
+	'NUMBER_OF_BOTS_TO_DISPLAY'	=> 'Anzahl der Bots, die angezeigt werden sollen',
+	'NUMBER_OF_BOTS_TO_DISPLAY_EXPLAIN'	=> 'Du kannst die Anzahl der angezeigten Bots festlegen.', 
 	
-	'LINKS_SETTINGS' => 'Link Einstellugen',
-	'NUMBER_OF_LINKS_TO_DISPLAY' => 'Zahl der angezeigten Links',
-	'NUMBER_OF_LINKS_TO_DISPLAY_EXPLAIN' => 'Die Anzahl der Links, die angezeigt werden sollen',
-	'LINKS_SCROLL_AMOUNT' => 'Zu scrollende Links',
-	'LINKS_SCROLL_AMOUNT_EXPLAIN' => 'Die Anzahl der zu scrollenden Links',
-	'LINK_TO_US' => 'Link zu uns',
-	'LINK_TO_US_EXPLAIN' => 'Einen Link zu unserer Seite anzeigen',
-	'LINK_FORUM_ID' => 'Die ID des Forums, das für Linkbilder.',
-	'LINK_FORUM_ID_EXPLAIN' => 'Erstelle ein Forum, um Linkbilder-Uploads zu verwenden und füge hier die ID ein...',	
+	'LINKS_SETTINGS'	=> 'Link Einstellugen',
+	'NUMBER_OF_LINKS_TO_DISPLAY'	=> 'Zahl der angezeigten Links',
+	'NUMBER_OF_LINKS_TO_DISPLAY_EXPLAIN'	=> 'Die Anzahl der Links, die angezeigt werden sollen',
+	'LINKS_SCROLL_AMOUNT'	=> 'Zu scrollende Links',
+	'LINKS_SCROLL_AMOUNT_EXPLAIN'	=> 'Die Anzahl der zu scrollenden Links',
+	'LINK_TO_US'	=> 'Link zu uns',
+	'LINK_TO_US_EXPLAIN'	=> 'Einen Link zu unserer Seite anzeigen',
+	'LINK_FORUM_ID'	=> 'Die ID des Forums, das für Linkbilder.',
+	'LINK_FORUM_ID_EXPLAIN'	=> 'Erstelle ein Forum, um Linkbilder-Uploads zu verwenden und füge hier die ID ein...',	
 	
-	'LINKS_SCROLL_DIRECTION' => 'Scroll Richtung',
-	'LINKS_SCROLL_DIRECTION_EXPLAIN' => 'Die Richtung, in welche die Links gescrollt werden sollen',
-	'FOOTER_IMAGES' => 'Grafiken im Footer',
-	'ALLOW_FOOTER_IMAGES' => 'Grafiken im Footer aktivieren',
-	'ALLOW_FOOTER_IMAGES_EXPLAIN' => 'Sollen die verlinkten Grafiken am Ende der Seite angezeigt werden?',
+	'LINKS_SCROLL_DIRECTION'	=> 'Scroll Richtung',
+	'LINKS_SCROLL_DIRECTION_EXPLAIN'	=> 'Die Richtung, in welche die Links gescrollt werden sollen',
+	'FOOTER_IMAGES'	=> 'Grafiken im Footer',
+	'ALLOW_FOOTER_IMAGES'	=> 'Grafiken im Footer aktivieren',
+	'ALLOW_FOOTER_IMAGES_EXPLAIN'	=> 'Sollen die verlinkten Grafiken am Ende der Seite angezeigt werden?',
 	
-	'K_SHOW_SMILIES' => 'Smilies in Quick Reply aktivieren',
-	'K_SHOW_SMILIES_EXPLAIN' => 'Sollen Smilies in Quick Reply angezeigt werden?',
+	'K_SHOW_SMILIES'	=> 'Smilies in Quick Reply aktivieren',
+	'K_SHOW_SMILIES_EXPLAIN'	=> 'Sollen Smilies in Quick Reply angezeigt werden?',
 	
-	'SHOW_BLOCKS_ON_INDEX' => 'Blöcke auf anderen Seiten',
-	'SHOW_BLOCKS_ON_INDEX_L' => 'Die linken Blöcke auf dem Index anzeigen?',
-	'SHOW_BLOCKS_ON_INDEX_R' => 'Die rechten Blöcke auf dem Index anzeigen?',
+	'SHOW_BLOCKS_ON_INDEX'	=> 'Blöcke auf anderen Seiten',
+	'SHOW_BLOCKS_ON_INDEX_L'	=> 'Die linken Blöcke auf dem Index anzeigen?',
+	'SHOW_BLOCKS_ON_INDEX_R'	=> 'Die rechten Blöcke auf dem Index anzeigen?',
 	
-	'DISPLAY_BLOCKS_GLOBAL' => 'Blöcke auch in Foren und Beiträgen anzeigen?', 
-	'DISPLAY_BLOCKS_GLOBAL_EXPLAIN' => 'Zeigt die linken / rechten Blöcke zusätzlich bei der Foren- und Themenansicht sofern diese für den Index aktiviert sind. (bei schmalen Styles nicht zu empfehlen)',
+	'DISPLAY_BLOCKS_GLOBAL'	=> 'Blöcke auch in Foren und Beiträgen anzeigen?', 
+	'DISPLAY_BLOCKS_GLOBAL_EXPLAIN'	=> 'Zeigt die linken / rechten Blöcke zusätzlich bei der Foren- und Themenansicht sofern diese für den Index aktiviert sind. (bei schmalen Styles nicht zu empfehlen)',
 	'ANNOUNCE_TYPE'	=> 'Typ der Ankündigungen',
 	'ANNOUNCE_TYPE_EXPLAIN'	=> 'Welche Art der Ankündigungen sollen angezeigt werden?<br />0 = ist normale Beiträge<br />2 = nur Ankündigungen<br />3 = Globale An.<br />5 = alle Ankündigungen',
-	'CLOCKS' => '[Block] Uhr',
-	'SCHNELLANTWORT' => 'Soll die Schnellantwort-Box in den Beiträgen angezeigt werden?',
-	'CLOCKS_CHANGE' => 'Wähle deine Portal Block Uhr<br />teste welches Dein Favorit ist!',
-
+	'CLOCKS'	=> '[Block] Uhr',
+	'SCHNELLANTWORT'	=> 'Soll die Schnellantwort-Box in den Beiträgen angezeigt werden?',
+	'CLOCKS_CHANGE'	=> 'Wähle deine Portal Block Uhr<br />teste welches Dein Favorit ist!',
 
 	'RULES' 		=> 'Regeln',
 	'BLOCKS_RULES' 	=> 'Regeln bearbeiten',
@@ -13421,32 +12556,19 @@ $lang = array_merge($lang, array(
 	'BLOCK_FOUR_COLUMN'		=> 'Vier Spalten',
 	'BLOCK_FIVE_COLUMN'		=> 'Fünf Spalten',
 	'HEADER_MENU'			=> 'Oberes Menü',
-	'PORTAL_CONFIG_UPDATED' => 'Portalkonfiguration gespeichert!... ',
-	'PORTAL_BLOCKS_LEFT_ENABLED' => 'Aktiviere linke Blöcke',
-	'PORTAL_BLOCKS_RIGHT_ENABLED' => 'Aktiviere rechte Blöcke',
-	'PORTAL_BLOCKS_CENTRE_ENABLED' => 'Aktiviere mittige Blöcke',
+	'PORTAL_CONFIG_UPDATED'	=> 'Portalkonfiguration gespeichert!... ',
+	'PORTAL_BLOCKS_LEFT_ENABLED'	=> 'Aktiviere linke Blöcke',
+	'PORTAL_BLOCKS_RIGHT_ENABLED'	=> 'Aktiviere rechte Blöcke',
+	'PORTAL_BLOCKS_CENTRE_ENABLED'	=> 'Aktiviere mittige Blöcke',
 	'PORTAL_SET_LAYOUT_NEW_EXPLAIN'	=> 'Neues Layout für die News/Willkommen Seite',		
 	'PORTAL_SET_LAYOUT_EXPLAIN'			=> 'Default layout Stargate aka Kiss Portal (siehe Dropdown Optionen).',		
 	'POLL_POLLS' 			=> 'Wieviele Umfragen sollen angezeigt werden',
 	'POLL_POLLS_EXPLAIN' 	=> '',
 	'POLL_VOTING_EXPLAIN' 	=> '',
 	'POLL_VOTING' 		=> 'Darf in dem Umfrage Block abgestimmt werden',
-
-
-	
 ));
+
 #######language/en/acp/language.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ACP_FILES'						=> 'Sprachdateien Administrations-Bereich',
@@ -13515,56 +12637,33 @@ $lang = array_merge($lang, array(
 
 #######language/en/acp/lexicon.php#######
 
-
-if (empty($lang) || !is_array($lang))
-{
-    $lang = array();
-}
-
-
-
-
 $lang = array_merge($lang, array(
-	'ACP_LEXICON_EXPLAIN'    => 'Hier kannst du Begriffe einstellen, die im Lexikon angezeigt und/oder in Beiträgen automatisch mit einem Tooltip versehen werden sollen. ',
-	'ACRONYM'        => 'Acronyme',
-	'ACRONYMS'        => 'Acronyme und Abkürzungen',
-	'ACRONYM_EXPLAIN' => 'Wichtig: Dieser Text wird im Beitrag gefunden und mit dem gewählten Begriff und Beschreibung ersetzt.<br />Füge Leerzeichen vor und nach dem Begriff ein, wenn nur ganze Wörter gefunden werden sollen. Ohne Leerzeichen wird der Begriff auch in zusammengesetzten Wörtern gefunden.<br />Füge keine Satz- oder Sonderzeichen wie (.\+*?[^]$(){}=!<>|:) an den Anfang oder das Ende des Wortes wenn Du dort ein Leerzeichen eingibst, sonst kann es nicht gefunden werden.',
-	'ADD_TERM'        => 'Neuen Begriff hinzufügen',
-	'ALLOW_ACRONYM'        => 'Anzeigen der Akronyme in Beiträgen aktivieren:',
-	'ALLOW_ACRONYM_EXPLAIN'        => 'In Beiträgen werden für im Lexikon vorhandene Wörter automatisch Akronyme einfügt.',
-	'ALLOW_ACRONYM_IN_WORDS'        => 'Akronyme in Worten erlauben:',
-	'ALLOW_ACRONYM_IN_WORDS_EXPLAIN'        => 'Findet Lexikonbegriffe auch innerhalb von Worten, wenn du nicht vor/hinter dem Begriff Leerzeichen einfügst.',
+	'ACP_LEXICON_EXPLAIN'	=> 'Hier kannst du Begriffe einstellen, die im Lexikon angezeigt und/oder in Beiträgen automatisch mit einem Tooltip versehen werden sollen. ',
+	'ACRONYM'				=> 'Acronyme',
+	'ACRONYMS'				=> 'Acronyme und Abkürzungen',
+	'ACRONYM_EXPLAIN'		=> 'Wichtig: Dieser Text wird im Beitrag gefunden und mit dem gewählten Begriff und Beschreibung ersetzt.<br />Füge Leerzeichen vor und nach dem Begriff ein, wenn nur ganze Wörter gefunden werden sollen. Ohne Leerzeichen wird der Begriff auch in zusammengesetzten Wörtern gefunden.<br />Füge keine Satz- oder Sonderzeichen wie (.\+*?[^]$(){}=!<>|:) an den Anfang oder das Ende des Wortes wenn Du dort ein Leerzeichen eingibst, sonst kann es nicht gefunden werden.',
+	'ADD_TERM'				=> 'Neuen Begriff hinzufügen',
+	'ALLOW_ACRONYM'			=> 'Anzeigen der Akronyme in Beiträgen aktivieren:',
+	'ALLOW_ACRONYM_EXPLAIN'	=> 'In Beiträgen werden für im Lexikon vorhandene Wörter automatisch Akronyme einfügt.',
+	'ALLOW_ACRONYM_IN_WORDS'	=> 'Akronyme in Worten erlauben:',
+	'ALLOW_ACRONYM_IN_WORDS_EXPLAIN'	=> 'Findet Lexikonbegriffe auch innerhalb von Worten, wenn du nicht vor/hinter dem Begriff Leerzeichen einfügst.',
 
-	'DESCRIPTION' => 'Beschreibung',
-	'DESCRIPTION_EXPLAIN' => 'Dieser Text wird als Tooltip und im Lexikon angezeigt.',
-
-	'ENTER_TERM'  => 'Du musst einen Begriff und seine Erklärung eingeben.',
-	'EDIT_TERM'  => 'Begriff bearbeiten',
-	'LEXICON'  => 'Lexikon',
-	'LONG_DESC' => 'Längere Erklärung',
-	'LONG_DESC_EXPLAIN' => 'Dieser Text wird nur im Lexikon angezeigt.',
-
-	'NO_TERM'  => 'Kein Begriff zum Bearbeiten ausgewählt.',
-
-	'TERM' => 'Begriff',
-	'TERM_ADDED'    => ' Begriff erfolgreich hinzugefügt.',
-	'TERM_DESC' => 'Gib einen Begriff ein.',
-	'TERM_REMOVED'    => 'Der ausgewählte  Begriff wurde erfolgreich entfernt.',
-	'TERM_UPDATED'    => 'Der ausgewählte  Begriff wurde erfolgreich aktualisiert.',
+	'DESCRIPTION'			=> 'Beschreibung',
+	'DESCRIPTION_EXPLAIN'	=> 'Dieser Text wird als Tooltip und im Lexikon angezeigt.',
+	'ENTER_TERM'	=> 'Du musst einen Begriff und seine Erklärung eingeben.',
+	'EDIT_TERM'		=> 'Begriff bearbeiten',
+	'LEXICON'		=> 'Lexikon',
+	'LONG_DESC'		=> 'Längere Erklärung',
+	'LONG_DESC_EXPLAIN'	=> 'Dieser Text wird nur im Lexikon angezeigt.',
+	'NO_TERM'		=> 'Kein Begriff zum Bearbeiten ausgewählt.',
+	'TERM'			=> 'Begriff',
+	'TERM_ADDED'	=> ' Begriff erfolgreich hinzugefügt.',
+	'TERM_DESC'		=> 'Gib einen Begriff ein.',
+	'TERM_REMOVED'	=> 'Der ausgewählte  Begriff wurde erfolgreich entfernt.',
+	'TERM_UPDATED'	=> 'Der ausgewählte  Begriff wurde erfolgreich aktualisiert.',
 ));
 
 #######language/en/acp/modules.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ACP_MODULE_MANAGEMENT_EXPLAIN'	=> 'Hier kannst du alle Module verwalten. Bitte beachte, dass der Administrations-Bereich eine Menüstruktur mit drei Ebenen (Kategorie -> Kategorie -> Modul) hat, während die anderen eine mit zwei Ebenen (Kategorie -> Modul) haben, die beibehalten werden muss. Bitte beachte, dass du dich selbst aussperren kannst, wenn du die für die Modulverwaltung selbst zuständigen Module deaktivierst oder ausblendest.',
@@ -13613,17 +12712,6 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/acp/permissions.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ACP_PERMISSIONS_EXPLAIN'	=> 'Mit welchem Status soll man die Dateien herunterladen können?<br />- Gäste: jeder Gast und jedes Mitglied dürfen Dateien in der Kategorie runterladen.<br />- Registrierte Benutzer: jedes Mitglied darf Dateien in der Kategorie runterladen.<br />- Selbstgemachte Gruppe: nur ein Mitglied aus der Gruppe darf Dateien in der Kategorie runterladen.',
@@ -13867,31 +12955,31 @@ $lang = array_merge($lang, array(
 	'ACP_MOD_REWRITE'	=> 'SEO-URL',
 	'ACP_PHPBB_SEO_CLASS'	=> 'SEO Einstellungen',
 	'ACP_PHPBB_SEO_CLASS_EXPLAIN'	=> 'You can here set up various options of the phpBB SEO mod rewrite.<br/>The various default settings such as the delimiters and suffixes still must be set up in phpbb_seo_class.php, since changing these implies an .htaccess update and most likely appropriate redirections.%s',
-	'ACP_PHPBB_SEO_VERSION' => 'Version',
-	'ACP_SEO_SUPPORT_FORUM' => 'Support-Forum',
+	'ACP_PHPBB_SEO_VERSION'	=> 'Version',
+	'ACP_SEO_SUPPORT_FORUM'	=> 'Support-Forum',
 	'ACP_FORUM_URL'	=> 'Forum URL Verwaltung',
 	'ACP_FORUM_URL_EXPLAIN'		=> 'Trage hier die richtigen Namen der Kategorie ein oder klicke einfach auf "Absenden".<br/>Die grünen Felder bedeuten das die URLs / Kategorien / Foren im Cache liegen und so ohne IDs angezeigt werden. Dies ist besonders für Suchmaschinen von enormen Vorteil.<br/><br/><!-- b style="color:red">Hinweis</b><ul><b>any-title-fxx/</b> will always be properly redirected but it won\'t be the case if you edit <b>any-title/</b> to <b>something-else/</b>.<br/> In such case, <b>any-title/</b> will for now be treated as a forum that does not exist if you do not set appropriate redirections.</ul -->',
 	'ACP_NO_FORUM_URL'	=> '<b>Forum URL Verwaltung deaktiviert<b><br/>Only PRO.<br/>',
 	'ACP_HTACCESS'	=> '.htaccess',
 	'ACP_HTACCESS_EXPLAIN'	=> 'This tool will help you out building your .htacess.<br/>The version proposed bellow is based on your phpbb_seo/phpbb_seo_class.php settings.<br/>You can edit the $seo_ext and $seo_static values before you install the .htaccess to get personalized URLs.<br/>You can for example choose to use .htm instead of .html, \'message\' instead of \'post\' \'mysite-team\' instead of \'the-team\' and so on.<br/>If you edit these while they where already indexed in SE, you\'ll need personalized redirections.<br/>The default settings are not bad at all, you can skip this step without worries if you prefer.<br/>It\'s though the best time to do it, doing it after a while will require some personalized redirections.<br/>By default the following .htaccess shall be uploaded in the domain\'s root (eg where www.example.com is linked).<br/>If phpBB is installed in a sub folder, hitting the more option below will add an option to upload it in the phpBB folder instead.',
 	'SEO_HTACCESS_RBASE'	=> '.htaccess location',
-	'SEO_HTACCESS_RBASE_EXPLAIN' => 'Put the .htaccess in the phpBB folder ?<br/>The RewriteBase setting allow to put the forum\'s .htaccess in it\'s folder. It\'s usually more convenient to put the .htaccess in the domain\'s root folder even when phpBB is installed in a sub-folder, but you may prefer to put it in the forum folder instead.',
+	'SEO_HTACCESS_RBASE_EXPLAIN'	=> 'Put the .htaccess in the phpBB folder ?<br/>The RewriteBase setting allow to put the forum\'s .htaccess in it\'s folder. It\'s usually more convenient to put the .htaccess in the domain\'s root folder even when phpBB is installed in a sub-folder, but you may prefer to put it in the forum folder instead.',
 	'SEO_HTACCESS_SLASH'	=> 'RegEx Right Slash',
 	'SEO_HTACCESS_SLASH_EXPLAIN'	=> 'Depending on the specific host you are using, you might have to get rid of or add the slash ("/") at the beginning of the right part of each rewriterules. This particular slash is used by default when .htaccess are located at the root level. It\'s the contrary for when phpBB would be installed in a sub-folder and you\'d want to use an .htaccess in the same folder.<br/>Default settings should generally work, but if it\'s not the case, try regenerating an .htaccess by hitting the "Re-generate" button.',
 	'SEO_HTACCESS_WSLASH'	=> 'RegEx Left Slash',
 	'SEO_HTACCESS_WSLASH_EXPLAIN'	=> 'Depending on the specific host you are using, you might have to add a slash ("/") at the beginning of the left part of each rewriterules. This particular slash ("/") is never used by default.<br/>Default settings should generally work, but if it\'s not the case, try regenerating an .htaccess by hitting the "Re-generate" button.',
 	'SEO_MORE_OPTION'	=> 'More Options',
-	'SEO_MORE_OPTION_EXPLAIN' => 'If the first suggested .htaccess does not work.<br/>First make sure mod_rewrite is activated on your server.<br/>Then, make sure you uploaded it in the right folder, and that another one is not perturbing.<br/>If not enough, hit the "more option" button.',
-	'SEO_HTACCESS_SAVE' => 'Save the .htaccess',
-	'SEO_HTACCESS_SAVE_EXPLAIN' => 'If checked, an .htaccess files will be generated upon submit in the phpbb_seo/cache/ folder. It\'s ready to go with your last settings, bou will still have to move it in the right place.',
+	'SEO_MORE_OPTION_EXPLAIN'	=> 'If the first suggested .htaccess does not work.<br/>First make sure mod_rewrite is activated on your server.<br/>Then, make sure you uploaded it in the right folder, and that another one is not perturbing.<br/>If not enough, hit the "more option" button.',
+	'SEO_HTACCESS_SAVE'	=> 'Save the .htaccess',
+	'SEO_HTACCESS_SAVE_EXPLAIN'	=> 'If checked, an .htaccess files will be generated upon submit in the phpbb_seo/cache/ folder. It\'s ready to go with your last settings, bou will still have to move it in the right place.',
 	'SEO_HTACCESS_ROOT_MSG'	=> 'Once you are ready, you can select the .htaccess code, and paste it in a .htaccess file or use the "Save .htaccess" option bellow.<br/> This .htaccess is meant to be used in the domain\'s root folder (eg : in the folder where www.example.com/ is installed).',
-	'SEO_HTACCESS_FOLDER_MSG' => 'Once you are ready, you can select the .htaccess code, and paste it in a .htaccess file or use the "Save .htaccess" option bellow.<br/> This .htaccess is meant to be used in the phpBB folder (eg : in the folder where phpBB is installed www.example.com/phpbb/).',
-	'SEO_HTACCESS_CAPTION' => 'Caption',
-	'SEO_HTACCESS_CAPTION_COMMENT' => 'Comments',
-	'SEO_HTACCESS_CAPTION_STATIC' => 'Static parts, editable in phpbb_seo_class.php',
-	'SEO_HTACCESS_CAPTION_DELIM' => 'Delimiters, editable in phpbb_seo_class.php',
-	'SEO_HTACCESS_CAPTION_SUFFIX' => 'Suffixes, editable in phpbb_seo_class.php',
-	'SEO_HTACCESS_CAPTION_SLASH' => 'Optional slashes',
+	'SEO_HTACCESS_FOLDER_MSG'	=> 'Once you are ready, you can select the .htaccess code, and paste it in a .htaccess file or use the "Save .htaccess" option bellow.<br/> This .htaccess is meant to be used in the phpBB folder (eg : in the folder where phpBB is installed www.example.com/phpbb/).',
+	'SEO_HTACCESS_CAPTION'	=> 'Caption',
+	'SEO_HTACCESS_CAPTION_COMMENT'	=> 'Comments',
+	'SEO_HTACCESS_CAPTION_STATIC'	=> 'Static parts, editable in phpbb_seo_class.php',
+	'SEO_HTACCESS_CAPTION_DELIM'	=> 'Delimiters, editable in phpbb_seo_class.php',
+	'SEO_HTACCESS_CAPTION_SUFFIX'	=> 'Suffixes, editable in phpbb_seo_class.php',
+	'SEO_HTACCESS_CAPTION_SLASH'	=> 'Optional slashes',
 	'SEO_SLASH_DEFAULT'	=> 'Default',
 	'SEO_SLASH_ALT'		=> 'Alternate',
 	'SEO_MOD_TYPE_ER'	=> 'The mod rewrite type is not set up properly in phpbb_seo/phpbb_seo_class.php.', 
@@ -13977,48 +13065,48 @@ $lang = array_merge($lang, array(
 	'ACP_SEO_SIMPLE'	=> 'Simple',
 	'ACP_SEO_MIXED'		=> 'Mixed',
 	'ACP_SEO_ADVANCED'	=> 'Advanced',
-	'url_rewrite' => 'Activate URL rewriting',
-	'url_rewrite_explain' => 'Once you will have set up the below options, and generated your personalized .htaccess, you can activate URL rewriting and check if your rewritten URLs do work properly. If you get 404 errors, it\'s most likely an .htaccess issue, try some of the .htaccess tool option to generate a new one.',
-	'modrtype' => 'URL rewriting type',
-	'modrtype_explain' => 'The phpBB SEO premod is compatible with the three phpBB SEO mod rewrite.<br/>The <a href="http://www.phpbb-seo.com/boards/simple-seo-url/simple-phpbb3-seo-url-vt1566.html" title="More details about the Simple mod"><b>Simple</b></a> one,the <a href="http://www.phpbb-seo.com/boards/mixed-seo-url/mixed-phpbb3-seo-url-vt1565.html" title="More details about the Mixed mod"><b>Mixed</b></a>one and the <a href="http://www.phpbb-seo.com/boards/advanced-seo-url/advanced-phpbb3-seo-url-vt1219.html" title="More details about the Advanced mod"><b>Advanced</b></a> one.<br/><b style="color:red">Please Note</b><br/><ul style="margin-left:20px">Modifying this option will change all your URLs in your web site.<br/>Doing it with an already indexed web site should thus be considered	with as much care as when migrating and not to often.<br/>So you\'d better be decided to go for it or not.</ul>',
-	'profile_inj' => 'Profiles and groups injection',
-	'profile_inj_explain' => 'You can here chose to inject nicknames, group names and user message page (optional see below) in their URLs instead of the default static rewriting, <b>phpBB/nickname-uxx.html</b> instead of <b>phpBB/membrexx.html</b>.<br/><b style="color:red">Please Note</b><br/>Changing this option requires and .htaccess update',
-	'profile_noids' => 'Profiles ID removing',
-	'profile_noids_explain' => 'When Profiles and groups injection is activated, you can here chose to use <b>example.com/phpBB/member/nickname</b> instead of the default <b>example.com/phpBB/nickname-uxx.html</b>. phpBB Uses an extra, but light, SQL query on such pages without user id.<br/><b style="color:red">Please Note</b><br/> Special characters won\'t be hadled the same by all browser. FF always urlencodes (<a href="http://www.php.net/urlencode">urlencode()</a>), and as it seems using Latin1 first, when IE and Opera do not. For advanced urlencoding options, please read the install file.<br/>Changing this option requires and .htaccess update',
-	'rewrite_usermsg' => 'Search User Page rewriting',
-	'rewrite_usermsg_explain' => 'This option mostly makes sens if you allow public access to both profiles and search.<br/> Using this option most likely implies a greater use of the search functions and thus a heavier server load.<br/> The URL rewriting type (with and without ID) follows the one set for profiles and groups.<br/><b>phpBB/messages/nickname</b> VS <b>phpBB/nickname-mxx.html</b> VS <b>phpBB/messagesxx.html</b>.<br/><b style="color:red">Please Note</b><br/>ID removing on these links will imply the same limitation as per the user profiles.<br/>Changing this option requires and .htaccess update',
-	'rem_sid' => 'SID Removing',
-	'rem_sid_explain' => 'SID will be removed from 100% of the URLs passing through the phpbb_seo class, for guests thus bots.<br/>This ensure bots won\'t see any SID on forum, topic and post URLs, but visitors that do not accept cookies will most likely create more than one session.<br/>The Zero duplicate http 301 redirect url with SID for guest and bots by default.',
-	'rem_hilit' => 'Highlights Removing',
-	'rem_hilit_explain' => 'Highlights will be removed from 100% of the URLs passing through the phpbb_seo class, for guests thus bots.<br/>This ensure bots won\'t see any Highlights on forum, topic and post URLs.<br/>The Zero duplicate will automatically follow this setting, eg http 301 redirect url with highlights for guest and bots.',
-	'rem_small_words' => 'Remove small words',
-	'rem_small_words_explain' => 'Allow to remove all words of less than three letters in rewritten URLs.<br/><b style="color:red">Please Note</b><br/><ul style="margin-left:20px">The filtering will change potentially a lot of URLs in your web site.<br/>Starting to use it with an already indexed web site should thus be considered	with as much care as when migrating and not to often.<br/>So you\'d better be decided to go for it or not.</ul>',
-	'virtual_folder' => 'Virtual Folder',
-	'virtual_folder_explain' => 'Allow to add the forum URL as a virtual folder in topic URLs.<br/><u>Example :</u><ul style="margin-left:20px"><b>forum-title-fxx/topic-title-txx.html</b> VS <b>topic-title-txx.html</b><br/>for a topic URL.</ul><br/><b style="color:red">Please Note</b><br/><ul style="margin-left:20px">The Virtual folder injection option can change all your web site\'s URLs almost too easily.<br/>Starting to use it with an already indexed web site should thus be considered with as much care as when migrating and not to often.<br/>So you\'d better be decided to go for it or not.</ul>',
-	'virtual_root' => 'Virtual Root',
-	'virtual_root_explain' => 'If phpBB is installed in a sud folder (example phpBB3/), you can simulate a root install for rewritten links.<br/><u>Example :</u><ul style="margin-left:20px"><b>phpBB3/forum-title-fxx/topic-title-txx.html</b> VS <b>forum-title-fxx/topic-title-txx.html</b><br/>for a topic URL.</ul><br/>This can be handy to shorten URLs a bit, especially if you are using the "Virtual Folder" feature. UnRewritten links will continue to appear and work in the phpBB folder.<br/><br/><b style="color:red">Please Note :</b><br/><ul style="margin-left:20px">Using this option requires to use a home page for the forum index (like forum.html).<br/> This option can change all your web site\'s URLs almost too easily.<br/>Starting to use it with an already indexed web site should thus be considered with as much care as when migrating and not to often.<br/>So you\'d better be decided to go for it or not.</ul>',
-	'cache_layer' => 'Forum URL caching',
-	'cache_layer_explain' => 'Turns on the cache for forum URLs and allow to separate forum titles from their URL<br/><u>Example :</u><ul style="margin-left:20px"><b>forum-title-fxx/</b> VS <b>any-title-fxx/</b><br/>for a forum URL.</ul><br/><b style="color:red">Please Note</b><br/><ul style="margin-left:20px">This option will allow you to change your forum URL, thus potentially many topic URLS if you are using the Virtual Folder option.<br/>The topic URLs will always be redirected properly with the Zero Duplicate.<br/>It will as well be the case for forum URL as long as you keep the delimiter and IDs, see below.</ul>',
-	'rem_ids' => 'Forum ID Removing',
-	'rem_ids_explain' => 'Get rid of the IDs and delimiters in forum URLs. Only apply if Forum URL caching is activated.<br/><u>Example :</u><ul style="margin-left:20px"><b>any-title-fxx/</b> VS <b>any-title/</b><br/>for a forum URL.</ul><br/><b style="color:red">Please Note</b><br/><ul style="margin-left:20px">This option will allow you to change your forum URL, thus potentially many topic URLS if you are using the Virtual Folder option.<br/>The topic URLs will always be redirected properly with the Zero Duplicate.<br/><u>It will not always be the case with the forum URLs :</u><br/><ul style="margin-left:20px"><b>any-title-fxx/</b> will always be properly redirected but it won\'t be the case if you edit <b>any-title/</b> to <b>something-else/</b>.<br/> In such case, <b>any-title/</b> will for now be treated as a forum that does not exist.<br/>So you\'d better be decided to go for it or not, but it can really be powerful SEO wise.</ul></ul>',
-	'ACP_ZERO_DUPE_OFF' => 'Off',
-	'ACP_ZERO_DUPE_MSG' => 'Post',
-	'ACP_ZERO_DUPE_GUEST' => 'Guest',
-	'ACP_ZERO_DUPE_ALL' => 'All',
-	'zero_dupe' =>'Zero duplictate',
-	'zero_dupe_explain' => 'The following settings concerns the Zero duplicate, you can modify them upon your needs.<br/>These do not imply any .htacess update.',
-	'zero_dupe_on' => 'Activate the Zero duplictate',
-	'zero_dupe_on_explain' => 'Allow to activate and desactivate the Zero duplicate redirections.',
-	'zero_dupe_strict' => 'Strict Mode',
-	'zero_dupe_strict_explain' => 'When activated, the zero dupe will check if the requested URL exactly matches the one attended.<br/>When set to no, the zero dupe will make sure the attended url is the fist part of the one requested.<br/>The interest is to make it easier to deal with mods that could interfere with the zero dupe by adding GET vars.',
-	'zero_dupe_post_redir' => 'Posts Redirections',
-	'zero_dupe_post_redir_explain' => 'This option will determine how to handle post urls; it can take four values :<ul style="margin-left:20px"><li><b>&nbsp;off</b>, do not redirect post url, whatever the case,</li><li><b>&nbsp;post</b>, only make sure postxx.html is used for a post url,</li><li><b>&nbsp;guest</b>, redirect guests if required to the corresponding topic url rather than to the postxx.html, and only make sure postxx.html is used for logged users,<li><b>&nbsp;all</b>, redirect if required to the corresponding topic url.</li></ul><br/><b style="color:red">Please Note</b><br/><ul style="margin-left:20px">Keeping the <b>postxx.html</b> URLs is harmless SEO wise as long as you keep the disallow on post urls in your robots.txt.<br/>Redirecting them all will most likely produce the most redirections among all.<br/>If you redirect postxx.html in all cases, this as well mean that a message that would be posted in a thread and then moved in another one will see it\'s url changing, which thanks to the zero duplicate mod is of no harm SEO wise, but the previous link to the post won\'t link to it anymore in such case.</ul>.',
-	'no_dupe' => 'No duplictate',
-	'no_dupe_on' => 'Activate The No duplictate',
-	'no_dupe_on_explain' => 'The No duplicate mod remplaces posts URLs with the corresponding Topic URL (with pagination).<br/>It does not add any SQL, just a LEFT JOIN on a query already being performed, this could still mean a bit more work but should not be a problem for server load.',
+	'url_rewrite'	=> 'Activate URL rewriting',
+	'url_rewrite_explain'	=> 'Once you will have set up the below options, and generated your personalized .htaccess, you can activate URL rewriting and check if your rewritten URLs do work properly. If you get 404 errors, it\'s most likely an .htaccess issue, try some of the .htaccess tool option to generate a new one.',
+	'modrtype'	=> 'URL rewriting type',
+	'modrtype_explain'	=> 'The phpBB SEO premod is compatible with the three phpBB SEO mod rewrite.<br/>The <a href="http://www.phpbb-seo.com/boards/simple-seo-url/simple-phpbb3-seo-url-vt1566.html" title="More details about the Simple mod"><b>Simple</b></a> one,the <a href="http://www.phpbb-seo.com/boards/mixed-seo-url/mixed-phpbb3-seo-url-vt1565.html" title="More details about the Mixed mod"><b>Mixed</b></a>one and the <a href="http://www.phpbb-seo.com/boards/advanced-seo-url/advanced-phpbb3-seo-url-vt1219.html" title="More details about the Advanced mod"><b>Advanced</b></a> one.<br/><b style="color:red">Please Note</b><br/><ul style="margin-left:20px">Modifying this option will change all your URLs in your web site.<br/>Doing it with an already indexed web site should thus be considered	with as much care as when migrating and not to often.<br/>So you\'d better be decided to go for it or not.</ul>',
+	'profile_inj'	=> 'Profiles and groups injection',
+	'profile_inj_explain'	=> 'You can here chose to inject nicknames, group names and user message page (optional see below) in their URLs instead of the default static rewriting, <b>phpBB/nickname-uxx.html</b> instead of <b>phpBB/membrexx.html</b>.<br/><b style="color:red">Please Note</b><br/>Changing this option requires and .htaccess update',
+	'profile_noids'	=> 'Profiles ID removing',
+	'profile_noids_explain'	=> 'When Profiles and groups injection is activated, you can here chose to use <b>example.com/phpBB/member/nickname</b> instead of the default <b>example.com/phpBB/nickname-uxx.html</b>. phpBB Uses an extra, but light, SQL query on such pages without user id.<br/><b style="color:red">Please Note</b><br/> Special characters won\'t be hadled the same by all browser. FF always urlencodes (<a href="http://www.php.net/urlencode">urlencode()</a>), and as it seems using Latin1 first, when IE and Opera do not. For advanced urlencoding options, please read the install file.<br/>Changing this option requires and .htaccess update',
+	'rewrite_usermsg'	=> 'Search User Page rewriting',
+	'rewrite_usermsg_explain'	=> 'This option mostly makes sens if you allow public access to both profiles and search.<br/> Using this option most likely implies a greater use of the search functions and thus a heavier server load.<br/> The URL rewriting type (with and without ID) follows the one set for profiles and groups.<br/><b>phpBB/messages/nickname</b> VS <b>phpBB/nickname-mxx.html</b> VS <b>phpBB/messagesxx.html</b>.<br/><b style="color:red">Please Note</b><br/>ID removing on these links will imply the same limitation as per the user profiles.<br/>Changing this option requires and .htaccess update',
+	'rem_sid'	=> 'SID Removing',
+	'rem_sid_explain'	=> 'SID will be removed from 100% of the URLs passing through the phpbb_seo class, for guests thus bots.<br/>This ensure bots won\'t see any SID on forum, topic and post URLs, but visitors that do not accept cookies will most likely create more than one session.<br/>The Zero duplicate http 301 redirect url with SID for guest and bots by default.',
+	'rem_hilit'	=> 'Highlights Removing',
+	'rem_hilit_explain'	=> 'Highlights will be removed from 100% of the URLs passing through the phpbb_seo class, for guests thus bots.<br/>This ensure bots won\'t see any Highlights on forum, topic and post URLs.<br/>The Zero duplicate will automatically follow this setting, eg http 301 redirect url with highlights for guest and bots.',
+	'rem_small_words'	=> 'Remove small words',
+	'rem_small_words_explain'	=> 'Allow to remove all words of less than three letters in rewritten URLs.<br/><b style="color:red">Please Note</b><br/><ul style="margin-left:20px">The filtering will change potentially a lot of URLs in your web site.<br/>Starting to use it with an already indexed web site should thus be considered	with as much care as when migrating and not to often.<br/>So you\'d better be decided to go for it or not.</ul>',
+	'virtual_folder'	=> 'Virtual Folder',
+	'virtual_folder_explain'	=> 'Allow to add the forum URL as a virtual folder in topic URLs.<br/><u>Example :</u><ul style="margin-left:20px"><b>forum-title-fxx/topic-title-txx.html</b> VS <b>topic-title-txx.html</b><br/>for a topic URL.</ul><br/><b style="color:red">Please Note</b><br/><ul style="margin-left:20px">The Virtual folder injection option can change all your web site\'s URLs almost too easily.<br/>Starting to use it with an already indexed web site should thus be considered with as much care as when migrating and not to often.<br/>So you\'d better be decided to go for it or not.</ul>',
+	'virtual_root'	=> 'Virtual Root',
+	'virtual_root_explain'	=> 'If phpBB is installed in a sud folder (example phpBB3/), you can simulate a root install for rewritten links.<br/><u>Example :</u><ul style="margin-left:20px"><b>phpBB3/forum-title-fxx/topic-title-txx.html</b> VS <b>forum-title-fxx/topic-title-txx.html</b><br/>for a topic URL.</ul><br/>This can be handy to shorten URLs a bit, especially if you are using the "Virtual Folder" feature. UnRewritten links will continue to appear and work in the phpBB folder.<br/><br/><b style="color:red">Please Note :</b><br/><ul style="margin-left:20px">Using this option requires to use a home page for the forum index (like forum.html).<br/> This option can change all your web site\'s URLs almost too easily.<br/>Starting to use it with an already indexed web site should thus be considered with as much care as when migrating and not to often.<br/>So you\'d better be decided to go for it or not.</ul>',
+	'cache_layer'	=> 'Forum URL caching',
+	'cache_layer_explain'	=> 'Turns on the cache for forum URLs and allow to separate forum titles from their URL<br/><u>Example :</u><ul style="margin-left:20px"><b>forum-title-fxx/</b> VS <b>any-title-fxx/</b><br/>for a forum URL.</ul><br/><b style="color:red">Please Note</b><br/><ul style="margin-left:20px">This option will allow you to change your forum URL, thus potentially many topic URLS if you are using the Virtual Folder option.<br/>The topic URLs will always be redirected properly with the Zero Duplicate.<br/>It will as well be the case for forum URL as long as you keep the delimiter and IDs, see below.</ul>',
+	'rem_ids'	=> 'Forum ID Removing',
+	'rem_ids_explain'	=> 'Get rid of the IDs and delimiters in forum URLs. Only apply if Forum URL caching is activated.<br/><u>Example :</u><ul style="margin-left:20px"><b>any-title-fxx/</b> VS <b>any-title/</b><br/>for a forum URL.</ul><br/><b style="color:red">Please Note</b><br/><ul style="margin-left:20px">This option will allow you to change your forum URL, thus potentially many topic URLS if you are using the Virtual Folder option.<br/>The topic URLs will always be redirected properly with the Zero Duplicate.<br/><u>It will not always be the case with the forum URLs :</u><br/><ul style="margin-left:20px"><b>any-title-fxx/</b> will always be properly redirected but it won\'t be the case if you edit <b>any-title/</b> to <b>something-else/</b>.<br/> In such case, <b>any-title/</b> will for now be treated as a forum that does not exist.<br/>So you\'d better be decided to go for it or not, but it can really be powerful SEO wise.</ul></ul>',
+	'ACP_ZERO_DUPE_OFF'	=> 'Off',
+	'ACP_ZERO_DUPE_MSG'	=> 'Post',
+	'ACP_ZERO_DUPE_GUEST'	=> 'Guest',
+	'ACP_ZERO_DUPE_ALL'	=> 'All',
+	'zero_dupe'	=>'Zero duplictate',
+	'zero_dupe_explain'	=> 'The following settings concerns the Zero duplicate, you can modify them upon your needs.<br/>These do not imply any .htacess update.',
+	'zero_dupe_on'	=> 'Activate the Zero duplictate',
+	'zero_dupe_on_explain'	=> 'Allow to activate and desactivate the Zero duplicate redirections.',
+	'zero_dupe_strict'	=> 'Strict Mode',
+	'zero_dupe_strict_explain'	=> 'When activated, the zero dupe will check if the requested URL exactly matches the one attended.<br/>When set to no, the zero dupe will make sure the attended url is the fist part of the one requested.<br/>The interest is to make it easier to deal with mods that could interfere with the zero dupe by adding GET vars.',
+	'zero_dupe_post_redir'	=> 'Posts Redirections',
+	'zero_dupe_post_redir_explain'	=> 'This option will determine how to handle post urls; it can take four values :<ul style="margin-left:20px"><li><b>&nbsp;off</b>, do not redirect post url, whatever the case,</li><li><b>&nbsp;post</b>, only make sure postxx.html is used for a post url,</li><li><b>&nbsp;guest</b>, redirect guests if required to the corresponding topic url rather than to the postxx.html, and only make sure postxx.html is used for logged users,<li><b>&nbsp;all</b>, redirect if required to the corresponding topic url.</li></ul><br/><b style="color:red">Please Note</b><br/><ul style="margin-left:20px">Keeping the <b>postxx.html</b> URLs is harmless SEO wise as long as you keep the disallow on post urls in your robots.txt.<br/>Redirecting them all will most likely produce the most redirections among all.<br/>If you redirect postxx.html in all cases, this as well mean that a message that would be posted in a thread and then moved in another one will see it\'s url changing, which thanks to the zero duplicate mod is of no harm SEO wise, but the previous link to the post won\'t link to it anymore in such case.</ul>.',
+	'no_dupe'	=> 'No duplictate',
+	'no_dupe_on'	=> 'Activate The No duplictate',
+	'no_dupe_on_explain'	=> 'The No duplicate mod remplaces posts URLs with the corresponding Topic URL (with pagination).<br/>It does not add any SQL, just a LEFT JOIN on a query already being performed, this could still mean a bit more work but should not be a problem for server load.',
 ));
-#######language/en/acp/posting.php#######
 
+#######language/en/acp/posting.php#######
 
 $lang = array_merge($lang, array(
 	'ACP_BBCODES_EXPLAIN'		=> 'BBCode is a special implementation of HTML offering greater control over what and how something is displayed. From this page you can add, remove and edit custom BBCodes.',
@@ -14058,9 +13146,6 @@ $lang = array_merge($lang, array(
 	'TOKEN_DEFINITION'		=> 'What can it be?',
 	'TOO_MANY_BBCODES'		=> 'You cannot create any more BBCodes. Please remove one or more BBCodes then try again.',
 
-));
-
-$lang = array_merge($lang, array(
 	'ACP_ICONS_EXPLAIN'		=> 'Hier kannst du die Symbole hinzufügen, bearbeiten oder entfernen, die Benutzer zu Beiträgen oder Themen hinzufügen können. Diese Themen- und Beitrags-Symbole werden in der Forenübersicht neben der Themenüberschrift bzw. neben der Beitragsüberschrift im Thema angezeigt. Du kannst außerdem Symbol-Pakete installieren und erstellen.',
 	'ACP_SMILIES_EXPLAIN'	=> 'Smilies oder Emoticons sind typischerweise kleine, gelegentlich animierte, Bilder, mit denen man Launen und Gefühle ausdrücken kann. Hier kannst du Smilies, die Benutzer in ihren Beiträgen und Privaten Nachrichten verwenden können, hinzufügen, bearbeiten oder löschen. Es können außerdem Smilie-Pakete installiert und erstellt werden.',
 	'ADD_SMILIES'			=> 'Smilies hinzufügen',
@@ -14068,7 +13153,7 @@ $lang = array_merge($lang, array(
 	'ADD_ICONS'				=> 'Mehrere Beitrags-Symbole hinzufügen',
 	'AFTER_ICONS'			=> 'Nach %s',
 	'AFTER_SMILIES'			=> 'Nach %s',
-
+	'FIRST'					=> 'am Anfang',
 	'CODE'						=> 'Code',
 	'CURRENT_ICONS'				=> 'Derzeitige Beitrags-Symbole',
 	'CURRENT_ICONS_EXPLAIN'		=> 'Wähle, was mit den aktuell eingestellten Beitrags-Symbolen geschehen soll.',
@@ -14079,8 +13164,6 @@ $lang = array_merge($lang, array(
 	'DISPLAY_POSTING'			=> 'Auf Verfassen-Seite',
 	'DISPLAY_POSTING_NO'		=> 'Nicht auf Verfassen-Seite',
 
-
-
 	'EDIT_ICONS'				=> 'Beitrags-Symbole bearbeiten',
 	'EDIT_SMILIES'				=> 'Smilies bearbeiten',
 	'EMOTION'					=> 'Beschreibung',
@@ -14089,7 +13172,6 @@ $lang = array_merge($lang, array(
 	'EXPORT_SMILIES'			=> 'Smilie-Paket erzeugen',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sMit diesem Link kannst du die Konfiguration der installierten Smilies in eine Datei <samp>smilies.pak</samp> schreiben. Diese kann nach dem Download dazu verwendet werden, ein <samp>.zip</samp>- oder <samp>.tgz</samp>-Archiv zu erstellen, welches alle Smilies und die <samp>smilies.pak</samp> Konfigurations-Datei enthält.%s',
 
-	'FIRST'			=> 'am Anfang',
 
 	'ICONS_ADD'				=> 'Neues Beitrags-Symbol hinzufügen',
 	'ICONS_NONE_ADDED'		=> 'Kein Beitrags-Symbol wurde hinzugefügt.',
@@ -14114,7 +13196,6 @@ $lang = array_merge($lang, array(
 	'IMPORT_SMILIES'		=> 'Smilie-Paket installieren',
 
 	'KEEP_ALL'			=> 'Alle behalten',
-
 	'MASS_ADD_SMILIES'	=> 'Mehrere Smilies hinzufügen',
 
 	'NO_ICONS_ADD'		=> 'Es sind keine Symbole verfügbar, die hinzugefügt werden könnten.',
@@ -14126,9 +13207,8 @@ $lang = array_merge($lang, array(
 	'NO_SMILIES_EXPORT'	=> 'Es gibt keine Smilies, mit denen ein Paket erstellt werden könnte.',
 	'NO_SMILIES_PAK'	=> 'Keine Smilie-Pakete gefunden.',
 
-	'PAK_FILE_NOT_READABLE'		=> 'Die <samp>.pak</samp>-Datei konnte nicht gelesen werden.',
-
-	'REPLACE_MATCHES'	=> 'Treffer ersetzen',
+	'PAK_FILE_NOT_READABLE'	=> 'Die <samp>.pak</samp>-Datei konnte nicht gelesen werden.',
+	'REPLACE_MATCHES'		=> 'Treffer ersetzen',
 
 	'SELECT_PACKAGE'			=> 'Paket-Datei auswählen',
 	'SMILIES_ADD'				=> 'Neuen Smilie hinzufügen',
@@ -14156,9 +13236,8 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'Smilie',
 	'SMILIES_WIDTH'				=> 'Breite',
 
-	'TOO_MANY_SMILIES'			=> 'Dein Beitrag enthält zu viele Smilies. Die maximal erlaubte Anzahl von Smilies ist %d.',
-
-	'WRONG_PAK_TYPE'	=> 'Das angegebene Paket enthielt ungültige Daten.',
+	'TOO_MANY_SMILIES'		=> 'Dein Beitrag enthält zu viele Smilies. Die maximal erlaubte Anzahl von Smilies ist %d.',
+	'WRONG_PAK_TYPE'		=> 'Das angegebene Paket enthielt ungültige Daten.',
 ));
 
 $lang = array_merge($lang, array(
@@ -14250,17 +13329,6 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/acp/profile.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ADDED_PROFILE_FIELD'	=> 'Benutzerdefiniertes Profilfeld erfolgreich hinzugefügt.',
@@ -14383,17 +13451,6 @@ $lang = array_merge($lang, array(
 
 #######language/en/acp/prune.php#######
 
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
-
 $lang = array_merge($lang, array(
 	'ACP_PRUNE_USERS_EXPLAIN'	=> 'Dieser Bereich erlaubt es dir, Benutzer deines Boards zu löschen oder zu deaktivieren. Benutzerkonten können anhand verschiedener Kriterien selektriert werden: der Beitragszahl, der letzten Aktivität usw. Die Kriterien können kombiniert werden, so dass du die betroffenen Benutzer weiter einschränken kannst. So kannst du z.&nbsp;B. Benutzer löschen, die weniger als 10 Beiträge haben und deren letzte Aktivität vor dem 2002-01-01 war. Alternativ kannst du die Kriterien auch überspringen, indem du eine Liste von Benutzernamen direkt in das Textfeld eingibst (jeden Benutzer in eine Zeile). Gehe mit diesem Tool vorsichtig um! Wenn ein Benutzer gelöscht ist, gibt es keine Funktion, um diesen Vorgang rückgängig zu machen.',
 
@@ -14401,7 +13458,7 @@ $lang = array_merge($lang, array(
 	'DEACTIVATE_DELETE_EXPLAIN'	=> 'Wähle aus, ob der Benutzer deaktiviert oder gelöscht werden soll. Ein deaktivierter Benutzer kann in der Benutzerverwaltung wieder aktiviert werden, eine Löschung hingegen ist endgültig.',
 	'DELETE_USERS'				=> 'Löschen',
 	'DELETE_USER_POSTS'			=> 'Lösche Beiträge der gelöschten Benutzer',
-	'DELETE_USER_POSTS_EXPLAIN' => 'Entfernt zusätzlich die Beiträge der gelöschten Benutzer. Hat keine Auswirkung, wenn die Benutzer deaktiviert werden.',
+	'DELETE_USER_POSTS_EXPLAIN'	=> 'Entfernt zusätzlich die Beiträge der gelöschten Benutzer. Hat keine Auswirkung, wenn die Benutzer deaktiviert werden.',
 
 	'JOINED_EXPLAIN'			=> 'Gib ein Datum im Format <kbd>JJJJ-MM-TT</kbd> an.',
 
@@ -14418,18 +13475,12 @@ $lang = array_merge($lang, array(
 	'USER_PRUNE_FAILURE'		=> 'Keine Benutzer entsprachen den ausgewählten Kriterien.',
 
 	'WRONG_ACTIVE_JOINED_DATE'	=> 'Das eingegebene Datum ist falsch, es wird in der Forum <kbd>JJJJ-MM-TT</kbd> erwartet.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_PRUNE_FORUMS_EXPLAIN'	=> 'Diese Funktion löscht alle Themen, die in der von dir festgelegten Zeit weder beantwortet noch gelesen wurden. Gibst du keinen Zeitraum an, so werden alle Beiträge gelöscht. Themen mit Umfragen und Bekanntmachungen werden nur gelöscht, sofern du die entsprechenden Optionen aktiviert hast.',
-
 	'FORUM_PRUNE'		=> 'Löschen inaktiver Themen',
-
 	'NO_PRUNE'			=> 'Es wurden in keinem Forum Themen gelöscht.',
-
 	'SELECTED_FORUM'	=> 'Forum auswählen',
 	'SELECTED_FORUMS'	=> 'Foren auswählen',
-
 	'POSTS_PRUNED'					=> 'Beiträge gelöscht',
 	'PRUNE_ANNOUNCEMENTS'			=> 'Ankündigungen automatisch löschen',
 	'PRUNE_FINISHED_POLLS'			=> 'Abgeschlossene Umfragen löschen',
@@ -14441,22 +13492,10 @@ $lang = array_merge($lang, array(
 	'PRUNE_OLD_POLLS_EXPLAIN'		=> 'Löscht Themen mit Umfragen, in denen im angegebenen Zeitraum keine Abstimmung erfolgte.',
 	'PRUNE_STICKY'					=> 'Wichtige Themen automatisch löschen',
 	'PRUNE_SUCCESS'					=> 'Das Löschen inaktiver Themen war erfolgreich.',
-
 	'TOPICS_PRUNED'		=> 'Themen gelöscht',
 ));
 
 #######language/en/acp/search.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Hier kannst du die Indizes der Such-Backends verwalten. Da normalerweise nur ein Backend genutzt wird, solltest du alle Indizes löschen, die du nicht verwendest. Nach der Änderung bestimmter Such-Einstellungen (z.&nbsp;B. die minimal/maximal indizierten Zeichen) kann es sinnvoll sein, den Suchindex neu aufzubauen, damit er die Änderungen berücksichtigt.',
@@ -14530,17 +13569,6 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/acp/styles.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ACP_IMAGESETS_EXPLAIN'	=> 'Grafiksammlungen fassen alle Schaltflächen, Symbole und weitere nicht Style-spezifische Grafiken zusammen, die vom Board verwendet werden. Hier kannst du bestehende Grafiksammlungen ändern, löschen und normalisieren.',
@@ -14892,7 +13920,7 @@ $lang = array_merge($lang, array(
 	'TEMPLATE_ERR_NAME_EXIST'	=> 'Ein Template mit diesem Namen existiert bereits.',
 	'TEMPLATE_ERR_NAME_LONG'	=> 'Der Name des Templates darf nicht länger als 30 Zeichen sein.',
 	'TEMPLATE_ERR_NOT_TEMPLATE'	=> 'Das angegebene Archiv enthält kein gültiges Template.',
-	'TEMPLATE_ERR_REQUIRED_OR_INCOMPLETE' => 'Die neue Template-Sammlung erfordert, dass das Template %s installiert ist und keine Daten von anderen Templates erbt.',
+	'TEMPLATE_ERR_REQUIRED_OR_INCOMPLETE'	=> 'Die neue Template-Sammlung erfordert, dass das Template %s installiert ist und keine Daten von anderen Templates erbt.',
 	'TEMPLATE_ERR_STYLE_NAME'	=> 'Du musst einen Namen für dieses Template angeben.',
 	'TEMPLATE_EXPORT'			=> 'Templates downloaden und speichern',
 	'TEMPLATE_EXPORT_EXPLAIN'	=> 'Du kannst hier deine geänderten Dateien sichern.<hr><b>Die Backup Funktion ist noch in der Beta-Phase. Fehler/Probs bitte im Hilfe Forum melden.</b><br /><br />',
@@ -14951,17 +13979,6 @@ $lang = array_merge($lang, array(
 ));
 
 #######language/en/acp/users.php#######
-
-if (!defined('IN_PHPBB'))
-{
-	exit;
-}
-
-if (empty($lang) || !is_array($lang))
-{
-	$lang = array();
-}
-
 
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Signatur-Vorschau',
@@ -15067,4 +14084,3 @@ $lang = array_merge($lang, array(
 	'USER_WARNING_LOG_DELETED'		=> 'Es sind keine Informationen verfügbar. Vermutlich wurde der Eintrag im Log gelöscht.',
 	'USER_TOOLS'					=> 'Standard-Funktionen',
 ));
-
