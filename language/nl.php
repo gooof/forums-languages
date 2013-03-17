@@ -264,7 +264,7 @@ $lang = array_merge($lang, array(
 	'CLICK_VIEW_PRIVMSG'	=> '%sGa naar je Postvak IN%s',
 	'COLLAPSE_VIEW'			=> 'Inklappen',
 	'CLOSE_WINDOW'			=> 'Sluit het scherm',
-	'COLOUR_SWATCH'			=> 'Kleurenpalet',
+	'COLOUR_SWATCH'			=> 'Webveilig kleurenpalet',
 	'COMMA_SEPARATOR'		=> ', ',	// Used in pagination of ACP & prosilver, use localised comma if appropriate, eg: Ideographic or Arabic
 	'CONFIRM'				=> 'Bevestigen',
 	'CONFIRM_CODE'			=> 'Bevestigingscode',
@@ -302,7 +302,7 @@ $lang = array_merge($lang, array(
 	'VIEWED_COUNT_NONE'		=> 'Nog niet bekeken',
 
 	'EDIT_POST'							=> 'Wijzig bericht',
-	'EMAIL'								=> 'E-mail', // Short form for EMAIL_ADDRESS
+	'EMAIL'								=> 'Een geldig e-mailadres', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'E-mailadres',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Er ging iets fout bij het versturen van de mail op <strong>regel %1$s</strong>. Antwoord: %2$s',
 	'EMPTY_SUBJECT'						=> 'Je moet een onderwerp opgeven bij het plaatsen van een nieuw bericht.',
@@ -342,7 +342,7 @@ $lang = array_merge($lang, array(
 	'FORUM_LOCATION'		=> 'Forumlocatie',
 	'FORUM_LOCKED'			=> 'Forum gesloten',
 	'FORUM_RULES'			=> 'Forumregels',
-	'FORUM_RULES_LINK'		=> 'Klik hier om de forumregels te lezen.',
+	'FORUM_RULES_LINK'		=> 'Link naar de forumregels',
 	'FROM'					=> 'van',
 	'FSOCK_DISABLED'		=> 'De actie kon niet worden uitgevoerd omdat de fsock-functies uitgeschakeld zijn, of omdat de betreffende server niet werd gevonden.',
 	'FSOCK_TIMEOUT'			=> 'Er is een time-out opgetreden tijdens het lezen van de netwerk stream.',
@@ -424,7 +424,7 @@ $lang = array_merge($lang, array(
 	'INTERESTS'					=> 'Interesses',
 	'INVALID_DIGEST_CHALLENGE'	=> 'Ongeldige samenstelling van karakters.',
 	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> is mogelijk een vals e-mailadres.',
-	'IP'						=> 'IP',
+	'IP'						=> 'Gebruikers-IP',
 	'IP_BLACKLISTED'			=> 'Jouw IP %1$s is geblokkeerd omdat deze op de zwarte lijst staat. Voor meer informatie zie %2$s.',
 
 	'JABBER'				=> 'Jabber',
@@ -497,7 +497,7 @@ $lang = array_merge($lang, array(
 	'NEW_POST'					=> 'Nieuw bericht',	// Not used anymore
 	'NEW_POSTS'					=> 'Nieuwe berichten',	// Not used anymore
 	'NEXT'						=> 'Volgende',		// Used in pagination
-	'NEXT_STEP'					=> 'Volgende',
+	'NEXT_STEP'					=> 'Ga door naar de volgende stap',
 	'NEVER'						=> 'Nooit',
 	'NO'						=> 'Nee',
 	'NOT_ALLOWED_MANAGE_GROUP'	=> 'Je hebt geen permissies om deze groep te beheren.',
@@ -514,12 +514,12 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_OPERATION'			=> 'Je beschikt niet over de juiste permissies om deze procedure af te ronden.',
 	'NO_CONNECT_TO_SMTP_HOST'	=> 'Verbinding met SMTP-server mislukt : %1$s : %2$s',
 	'NO_BIRTHDAYS'				=> 'Er zijn vandaag geen jarigen.',
-	'NO_EMAIL_MESSAGE'			=> 'Er is geen e-mailbericht opgegeven.',
+	'NO_EMAIL_MESSAGE'			=> 'Het berichtveld is nog leeg.',
 	'NO_EMAIL_RESPONSE_CODE'	=> 'De mailserver gaf geen antwoord.',
-	'NO_EMAIL_SUBJECT'			=> 'Er is geen e-mailonderwerp opgegeven.',
+	'NO_EMAIL_SUBJECT'			=> 'Je hebt geen onderwerp opgegeven.',
 	'NO_FORUM'					=> 'Het geselecteerde forum bestaat niet (meer).',
 	'NO_FORUMS'					=> 'Er zijn geen forums beschikbaar.',
-	'NO_GROUP'					=> 'De opgevraagde gebruikersgroep bestaat niet (meer).',
+	'NO_GROUP'					=> 'Geen groep opgegeven.',
 	'NO_GROUP_MEMBERS'			=> 'Deze groep heeft momenteel nog geen leden.',
 	'NO_IPS_DEFINED'			=> 'Er zijn geen IP’s of hosts opgegeven.',
 	'NO_MEMBERS'				=> 'Er zijn geen leden die aan de zoekopdracht voldoen.',
@@ -542,10 +542,10 @@ $lang = array_merge($lang, array(
 	'NO_TOPICS'					=> 'Er zijn geen onderwerpen of berichten in dit forum.',
 	'NO_TOPICS_TIME_FRAME'		=> 'Er zijn in dit forum in de gekozen periode geen berichten geplaatst.',
 	'NO_UNREAD_PM'				=> '<strong>0</strong> ongelezen berichten',
-	'NO_UNREAD_POSTS'			=> 'Geen ongelezen berichten',
+	'NO_UNREAD_POSTS'			=> 'Er zijn geen ongelezen berichten in dit onderwerp.',
 	'NO_UPLOAD_FORM_FOUND'		=> 'Upload bevestigd, maar er werd geen geldig uploadformulier gevonden.',
 	'NO_USER'					=> 'De opgevraagde gebruiker bestaat niet.',
-	'NO_USERS'					=> 'De opgevraagde gebruikers bestaan niet (meer).',
+	'NO_USERS'					=> 'Je hebt geen gebruikers ingevuld.',
 	'NO_USER_SPECIFIED'			=> 'Er is geen gebruikersnaam opgegeven.',
 
 	'OCCUPATION'				=> 'Beroep',
@@ -634,7 +634,7 @@ $lang = array_merge($lang, array(
 	'RETURN_FORUM'				=> '%sKeer terug naar het laatst geopende forum%s',
 	'RETURN_PAGE'				=> '%sKeer terug naar de vorige pagina%s',
 	'RETURN_TOPIC'				=> '%sKeer terug naar het laatst gelezen onderwerp%s',
-	'RETURN_TO'					=> 'Keer terug naar',
+	'RETURN_TO'					=> 'Terugkeren naar…',
 	'FEED'						=> 'Feed',
 	'FEED_NEWS'					=> 'Nieuws',
 	'FEED_TOPICS_ACTIVE'		=> 'Actieve onderwerpen',
@@ -842,7 +842,7 @@ $lang = array_merge($lang, array(
 	'VIEW_TOPIC_MOVED'			=> 'Verplaatst: ',
 	'VIEW_TOPIC_POLL'			=> 'Poll: ',
 	'VIEW_TOPIC_STICKY'			=> 'Sticky: ',
-	'VISIT_WEBSITE'				=> 'Bezoek website',
+	'VISIT_WEBSITE'				=> 'WWW',
 
 	'WARNINGS'			=> 'Waarschuwingen',
 	'WARN_USER'			=> 'Waarschuw gebruiker',
@@ -1500,7 +1500,7 @@ $lang = array_merge($lang, array(
 	'MYSQL_SCHEMA_UPDATE_REQUIRED'	=> 'Jouw MySQL database schema voor phpBB is verouderd. phpBB detecteerde een schema voor MySQL 3.x/4.x, Maar de server draait op MySQL %2$s.<br /><strong>Voordat je verder gaat met bijwerken, moet je eerst je schema bijwerken.</strong><br /><br />Refereer alstublieft aan het <a href="http://www.phpbb.com/kb/article/doesnt-have-a-default-value-errors/">Knowledge Base artikel over het bijwerken van het MySQL schema</a>. Indien je problemen ondervind gebruik dan alstublieft <a href="http://www.phpbb.com/community/viewforum.php?f=46">onze support forums</a>.',
 
 	'NAMING_CONFLICT'			=> 'Naam conflict: %s en %s zijn beide aliassen<br /><br />%s',
-	'NEXT_STEP'					=> 'Volgende',
+	'NEXT_STEP'					=> 'Ga door naar de volgende stap',
 	'NOT_FOUND'					=> 'Onvindbaar',
 	'NOT_UNDERSTAND'			=> 'Kon %s #%d niet verstaan, tabel %s ("%s")',
 	'NO_CONVERTORS'				=> 'Er zijn geen beschikbare en bruikbare converters aanwezig.',
@@ -2268,7 +2268,7 @@ $lang = array_merge($lang, array(
 	'NO_VIEW_USERS'			=> 'Je bent niet bevoegd om de gebruikerslijst of profielen te bekijken.',
 
 	'ORDER'					=> 'Volgorde',
-	'OTHER'					=> 'Het past niet binnen een categorie, gebruik het omschrijvingveld.',
+	'OTHER'					=> 'Andere',
 
 	'POST_IP'				=> 'Geplaatst van IP/domein',
 
@@ -3392,7 +3392,7 @@ $lang = array_merge($lang, array(
 	'NO_ATTACHMENT_SELECTED'=> 'Je hebt geen bijlage opgegeven om te downloaden of te tonen.',
 	'NO_NEWER_TOPICS'		=> 'Er zijn geen nieuwere onderwerpen in dit forum',
 	'NO_OLDER_TOPICS'		=> 'Er zijn geen oudere onderwerpen in dit forum',
-	'NO_UNREAD_POSTS'		=> 'Geen ongelezen berichten',
+	'NO_UNREAD_POSTS'		=> 'Er zijn geen ongelezen berichten in dit onderwerp.',
 	'NO_VOTE_OPTION'		=> 'Je moet een optie selecteren om te stemmen.',
 	'NO_VOTES'				=> 'Geen stemmen',
 
@@ -3422,7 +3422,7 @@ $lang = array_merge($lang, array(
 	'VIEW_TOPIC_POST'		=> '1 bericht',
 	'VIEW_TOPIC_POSTS'		=> '%d berichten',
 	'VIEW_UNREAD_POST'		=> 'Eerste ongelezen',
-	'VISIT_WEBSITE'			=> 'Bezoek website',
+	'VISIT_WEBSITE'			=> 'WWW',
 	'VOTE_SUBMITTED'		=> 'Je stem is verwerkt',
 	'VOTE_CONVERTED'		=> 'Je stem wijzigen is niet mogelijk voor geconverteerde polls',
 
@@ -7862,7 +7862,7 @@ $lang = array_merge($lang, array(
 	'NO_TEAM_SHORTNAME'				=> 'Short name of the team is missing! Please enter a short name!',
 	'NO_USER'						=> 'De opgevraagde gebruiker bestaat niet.',
 	'NO_USERID'						=> 'The User chosen by you does not exist. ',
-	'NO_USERS'						=> 'De opgevraagde gebruikers bestaan niet (meer).',
+	'NO_USERS'						=> 'Je hebt geen gebruikers ingevuld.',
 	'NO_WIN_MATCHDAYS'				=> 'This WebTip does not contain any matchday winnings!',
 	'NO_WIN_SEASON'					=> 'This WebTip does not contain any seasonal winnings!',
 	'NOT_CLOSED'					=> 'This matchday was not closed yet!',
@@ -9837,7 +9837,7 @@ $lang = array_merge($lang, array(
 	'ACP_CAPTCHA'				=> 'CAPTCHA',
 
 	'ACP_CAT_DATABASE'			=> 'Database',
-	'ACP_CAT_DOT_MODS'			=> '.Mods',
+	'ACP_CAT_DOT_MODS'			=> 'Mods',
 	'ACP_CAT_FORUMS'			=> 'Forums',
 	'ACP_CAT_GENERAL'			=> 'Algemeen',
 	'ACP_CAT_MAINTENANCE'		=> 'Onderhoud',
@@ -9989,7 +9989,7 @@ $lang = array_merge($lang, array(
 
 	'BACK'					=> 'Terug',
 
-	'COLOUR_SWATCH'			=> 'Kleurenpalet',
+	'COLOUR_SWATCH'			=> 'Webveilig kleurenpalet',
 	'CONFIG_UPDATED'		=> 'Configuratie succesvol gewijzigd.',
 
 	'DEACTIVATE'				=> 'Deactiveren',
@@ -10012,7 +10012,7 @@ $lang = array_merge($lang, array(
 	'GLOBAL_MASK'			=> 'Algemene permissiemaskers',
 
 	'INSTALL'				=> 'Installeren',
-	'IP'					=> 'IP',
+	'IP'					=> 'Gebruikers-IP',
 	'IP_HOSTNAME'			=> 'IP-adressen en hostnamen',
 
 	'LOGGED_IN_AS'			=> 'Je bent ingelogd als:',
@@ -10047,7 +10047,7 @@ $lang = array_merge($lang, array(
 
 	'REMIND'							=> 'Herinner',
 	'RESYNC'							=> 'Synchroniseer',
-	'RETURN_TO'							=> 'Keer terug naar',
+	'RETURN_TO'							=> 'Terugkeren naar…',
 
 	'SELECT_ANONYMOUS'		=> 'Selecteer anonieme gebruiker',
 	'SELECT_OPTION'			=> 'Selecteer optie',
@@ -10452,7 +10452,7 @@ $lang = array_merge($lang, array(
 	'LOG_USER_DELETED'		=> '<strong>Gebruiker verwijderd</strong><br />» %s',
 	'LOG_USER_DEL_ATTACH'	=> '<strong>Alle bijlagen van de gebruiker verwijderd</strong><br />» %s',
 	'LOG_USER_DEL_AVATAR'	=> '<strong>Avatar gebruiker verwijderd</strong><br />» %s',
-	'LOG_USER_DEL_OUTBOX'	=> '<strong>Gebruikers `postvak uit` geleegd</strong><br />» %s',
+	'LOG_USER_DEL_OUTBOX'	=> '<strong>Gebruikers `postvak uit\' geleegd</strong><br />» %s',
 	'LOG_USER_DEL_POSTS'	=> '<strong>Alle berichten van de gebruiker verwijderd</strong><br />» %s',
 	'LOG_USER_DEL_SIG'		=> '<strong>Onderschrift gebruiker verwijderd</strong><br />» %s',
 	'LOG_USER_INACTIVE'		=> '<strong>Gebruiker gedeactiveerd</strong><br />» %s',
@@ -11941,8 +11941,8 @@ $lang = array_merge($lang, array(
 	'MASS_MESSAGE'			=> 'Je bericht',
 	'MASS_MESSAGE_EXPLAIN'	=> 'Het bericht wordt verzonden zonder tekst-opmaak. Alle opmaak wordt voor het verzenden verwijderd.',
 
-	'NO_EMAIL_MESSAGE'		=> 'Er is geen e-mailbericht opgegeven.',
-	'NO_EMAIL_SUBJECT'		=> 'Er is geen e-mailonderwerp opgegeven.',
+	'NO_EMAIL_MESSAGE'		=> 'Het berichtveld is nog leeg.',
+	'NO_EMAIL_SUBJECT'		=> 'Je hebt geen onderwerp opgegeven.',
 ));
 
 #######language/en/acp/forums.php#######
@@ -12014,7 +12014,7 @@ $lang = array_merge($lang, array(
 	'FORUM_PRUNE_SETTINGS'				=> 'Automatische forum-opruim instellingen',
 	'FORUM_RESYNCED'					=> 'Forum "%s" is succesvol gesynchroniseerd',
 	'FORUM_RULES_EXPLAIN'				=> 'Forumregels worden weergegeven op elke pagina van het desbetreffende forum.',
-	'FORUM_RULES_LINK'					=> 'Klik hier om de forumregels te lezen.',
+	'FORUM_RULES_LINK'					=> 'Link naar de forumregels',
 	'FORUM_RULES_LINK_EXPLAIN'			=> 'Je kunt hier de URL naar het bericht of de pagina met de forumregels geven. Dit overschrijft wel de tekstuele forumregels.',
 	'FORUM_RULES_PREVIEW'				=> 'Forumregels voorbeeld',
 	'FORUM_RULES_TOO_LONG'				=> 'De forumregels moeten korter zijn dan 4000 tekens.',
@@ -12154,10 +12154,10 @@ $lang = array_merge($lang, array(
 	'MAKE_DEFAULT_FOR_ALL'		=> 'Maak standaard groep voor elk lid',
 	'MEMBERS'					=> 'Leden',
 
-	'NO_GROUP'					=> 'De opgevraagde gebruikersgroep bestaat niet (meer).',
+	'NO_GROUP'					=> 'Geen groep opgegeven.',
 	'NO_GROUPS_CREATED'			=> 'Nog geen groepen aangemaakt.',
 	'NO_PERMISSIONS'			=> 'Kopieer de permissies niet',
-	'NO_USERS'					=> 'De opgevraagde gebruikers bestaan niet (meer).',
+	'NO_USERS'					=> 'Je hebt geen gebruikers ingevuld.',
 	'NO_USERS_ADDED'			=> 'Geen gebruikers toegevoegd aan groep.',
 	'NO_VALID_USERS'			=> 'Je hebt geen bestaande gebruiker ingevuld voor deze actie.',
 
@@ -13360,7 +13360,7 @@ $lang = array_merge($lang, array(
 	'DISPLAY_AT_PROFILE_EXPLAIN'	=> 'De gebruiker kan het profielveld binnenin het gebruikerspaneel wijzigen.',
 	'DISPLAY_AT_REGISTER'			=> 'Weergeven op de registratiepagina',
 	'DISPLAY_AT_REGISTER_EXPLAIN'	=> 'Wanneer deze optie is ingeschakeld, zal het veld worden weergegeven tijdens het registreren.',
-	'DISPLAY_ON_VT'					=> 'Bekijk in `bekijk onderwerp` scherm',
+	'DISPLAY_ON_VT'					=> 'Bekijk in `bekijk onderwerp\' scherm',
 	'DISPLAY_ON_VT_EXPLAIN'			=> 'Als deze optie is ingeschakeld, zal het veld worden getoond in het miniprofiel bij een onderwerp.',
 	'DISPLAY_PROFILE_FIELD'			=> 'Profielveld publiek weergeven',
 	'DISPLAY_PROFILE_FIELD_EXPLAIN'	=> 'De profielvelden zullen worden getoond op alle locaties aangegeven in de serverprestatie instellingen. Indien je voor "nee" hebt gekozen, zal het veld van onderwerppagina’s, profielen en de ledenlijst niet worden getoond.',
@@ -13391,7 +13391,7 @@ $lang = array_merge($lang, array(
 	'FIRST_OPTION'				=> 'Eerste keuze',
 
 	'HIDE_PROFILE_FIELD'			=> 'Verberg profielveld',
-	'HIDE_PROFILE_FIELD_EXPLAIN'	=> 'Verberg het profielveld voor alle andere gebruikers, behalve voor de gebruiker, beheerders en moderators, waarvoor dit veld standaard zichtbaar is. Indien de optie `tonen in gebruikerspaneel` is uitgeschakeld, kan de gebruiker dit veld niet meer zien of wijzigen en kan dit veld alleen nog worden aangepast door een beheerder.',
+	'HIDE_PROFILE_FIELD_EXPLAIN'	=> 'Verberg het profielveld voor alle andere gebruikers, behalve voor de gebruiker, beheerders en moderators, waarvoor dit veld standaard zichtbaar is. Indien de optie `tonen in gebruikerspaneel\' is uitgeschakeld, kan de gebruiker dit veld niet meer zien of wijzigen en kan dit veld alleen nog worden aangepast door een beheerder.',
 
 	'INVALID_CHARS_FIELD_IDENT'	=> 'Veld identificatie mag alleen kleine letters en _ bevatten',
 	'INVALID_FIELD_IDENT_LEN'	=> 'Veld identificatie mag maximaal 17 tekens lang zijn.',
