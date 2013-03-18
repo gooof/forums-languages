@@ -2257,7 +2257,7 @@ $lang = array_merge($lang, array(
 	'NO_VIEW_USERS'			=> 'Du har inte tillåtelse att visa medlemslistan eller profiler.',
 
 	'ORDER'					=> 'Ordning',
-	'OTHER'					=> 'The reported message does not fit into any other category, please use the further information field.',
+	'OTHER'					=> 'Annat',
 
 	'POST_IP'				=> 'Postat från IP/domän',
 
@@ -13079,42 +13079,42 @@ $lang = array_merge($lang, array(
 #######language/en/acp/posting.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_BBCODES_EXPLAIN'		=> 'BBCode is a special implementation of HTML offering greater control over what and how something is displayed. From this page you can add, remove and edit custom BBCodes.',
-	'ADD_BBCODE'				=> 'Add a new BBCode',
+	'ACP_BBCODES_EXPLAIN'		=> 'BBCode är en speciell variant av HTML som ger större kontroll över vad och hur någonting visas. Från denna sida kan du lägga till, ta bort och redigera egna BBCodes.',
+	'ADD_BBCODE'				=> 'Lägg till en ny BBCode',
 
-	'BBCODE_DANGER'				=> 'The BBCode you are trying to add seems to use a {TEXT} token inside a HTML attribute. This is a possible XSS security issue. Try using the more restrictive {SIMPLETEXT} or {INTTEXT} types instead. Only proceed if you understand the risks involved and you consider the use of {TEXT} absolutely unavoidable.',
-	'BBCODE_DANGER_PROCEED'		=> 'Proceed', //'I understand the risk',
+	'BBCODE_DANGER'				=> 'BBCode-koden som du försöker lägga till verkar använda ett {TEXT} tecken inom en HTML attribut. Det här är ett möjligt XSS-säkerhetsproblem. Försök att använda de mera begränsade typerna {SIMPLETEXT} eller {INTTEXT} istället. Fortsätt med denna operation endast om du förstår riskerna som det innebär och anser det vara absolut oundvikligt att använda  {TEXT} i detta fall.',
+	'BBCODE_DANGER_PROCEED'		=> 'Fortsätt!', //'I understand the risk',
 
-	'BBCODE_ADDED'				=> 'BBCode added successfully.',
-	'BBCODE_EDITED'				=> 'BBCode edited successfully.',
-	'BBCODE_NOT_EXIST'			=> 'The BBCode you selected does not exist.',
-	'BBCODE_HELPLINE'			=> 'Help line',
-	'BBCODE_HELPLINE_EXPLAIN'	=> 'This field contains the mouse over text of the BBCode.',
-	'BBCODE_HELPLINE_TEXT'		=> 'Help line text',
-	'BBCODE_HELPLINE_TOO_LONG'	=> 'The help line you entered is too long.',
+	'BBCODE_ADDED'				=> 'BBCode lades till.',
+	'BBCODE_EDITED'				=> 'BBCode ändrades.',
+	'BBCODE_NOT_EXIST'			=> 'BBCoden som du valde finns inte.',
+	'BBCODE_HELPLINE'			=> 'Hjälptext',
+	'BBCODE_HELPLINE_EXPLAIN'	=> 'Detta fält innehåller texten som visas när man för musen över denna BBCode.',
+	'BBCODE_HELPLINE_TEXT'		=> 'Hjälptext',
+	'BBCODE_HELPLINE_TOO_LONG'	=> 'Hjälptexten du angav är för lång.',
 
-	'BBCODE_INVALID_TAG_NAME'	=> 'The BBCode tag name that you selected already exists.',
-	'BBCODE_INVALID'			=> 'Your BBCode is constructed in an invalid form.',
-	'BBCODE_OPEN_ENDED_TAG'		=> 'Your custom BBCode must contain both an opening and a closing tag.',
-	'BBCODE_TAG'				=> 'Tag',
-	'BBCODE_TAG_TOO_LONG'		=> 'The tag name you selected is too long.',
-	'BBCODE_TAG_DEF_TOO_LONG'	=> 'The tag definition that you have entered is too long, please shorten your tag definition.',
-	'BBCODE_USAGE'				=> 'BBCode usage',
+	'BBCODE_INVALID_TAG_NAME'	=> 'BBCode-taggnamnet som du valde finns redan.',
+	'BBCODE_INVALID'			=> 'Din BBCode är konstruerad på ett felaktigt sätt.',
+	'BBCODE_OPEN_ENDED_TAG'		=> 'Din egen BBCode måste innehålla både en öppnings- och stängningstagg. Den får inte innehålla specialtecken.',
+	'BBCODE_TAG'				=> 'Tagg',
+	'BBCODE_TAG_TOO_LONG'		=> 'Taggnamnet som du valde är för långt.',
+	'BBCODE_TAG_DEF_TOO_LONG'	=> 'Taggdefinitionen du angav är för lång, korta ner din taggdefinition.',
+	'BBCODE_USAGE'				=> 'BBCode-användning',
 	'BBCODE_USAGE_EXAMPLE'		=> '[highlight={COLOR}]{TEXT}[/highlight]<br /><br />[font={SIMPLETEXT1}]{SIMPLETEXT2}[/font]',
-	'BBCODE_USAGE_EXPLAIN'		=> 'Here you define how to use the BBCode. Replace any variable input by the corresponding token (%ssee below%s).',
+	'BBCODE_USAGE_EXPLAIN'		=> 'Här kan du definiera hur BBCoden ska användas. Ersätt variabelinmatning med motsvarande token (%sse nedan%s).',
 
-	'EXAMPLE'						=> 'Example:',
-	'EXAMPLES'						=> 'Examples:',
+	'EXAMPLE'						=> 'Exempel:',
+	'EXAMPLES'						=> 'Exempel:',
 
-	'HTML_REPLACEMENT'				=> 'HTML replacement',
+	'HTML_REPLACEMENT'				=> 'HTML-ersättning',
 	'HTML_REPLACEMENT_EXAMPLE'		=> '&lt;span style="background-color: {COLOR};"&gt;{TEXT}&lt;/span&gt;<br /><br />&lt;span style="font-family: {SIMPLETEXT1};"&gt;{SIMPLETEXT2}&lt;/span&gt;',
-	'HTML_REPLACEMENT_EXPLAIN'		=> 'Here you define the default HTML replacement. Do not forget to put back tokens you used above!',
+	'HTML_REPLACEMENT_EXPLAIN'		=> 'Här kan du definiera standard HTML-ersättningen. Glöm inte att sätta tillbaka alla token du använde ovan!',
 
 	'TOKEN'					=> 'Token',
-	'TOKENS'				=> 'Tokens',
-	'TOKENS_EXPLAIN'		=> 'Tokens are placeholders for user input. The input will be validated only if it matches the corresponding definition. If needed, you can number them by adding a number as the last character between the braces, e.g. {TEXT1}, {TEXT2}.<br /><br />Within the HTML replacement you can also use any language string present in your language/ directory like this: {L_<em>&lt;STRINGNAME&gt;</em>} where <em>&lt;STRINGNAME&gt;</em> is the name of the translated string you want to add. For example, {L_WROTE} will be displayed as “wrote” or its translation according to user’s locale.<br /><br /><strong>Please note that only tokens listed below are able to be used within custom BBCodes.</strong>',
-	'TOKEN_DEFINITION'		=> 'What can it be?',
-	'TOO_MANY_BBCODES'		=> 'You cannot create any more BBCodes. Please remove one or more BBCodes then try again.',
+	'TOKENS'				=> 'Token',
+	'TOKENS_EXPLAIN'		=> 'En token är en informationsbärare för användarinmatningar. Inmatningen kommer endast kontrolleras om den matchar den motsvarande definitionen. Om det behövs kan du numrera de genom att lägga till ett nummer som det sista tecknet i klammerparentesen, t.ex. {TEXT1}, {TEXT2}.<br /><br />Inom HTML-ersättningen kan du också använda alla språksträngar som finns i din language/-katalog på detta sätt: {L_<em>&lt;STRÄNGNAMN&gt;</em>} där <em>&lt;STRINGNAME&gt;</em> är namnet av den översatta strängen som du vill lägga till. Till exempel, {L_WROTE} kommer att visas som “skrev” eller dess översättning beroende på användarens språkinställning.<br /><br /><strong>Observera att endast de token som visas nedan kan användas i egna BBCodes.</strong>',
+	'TOKEN_DEFINITION'		=> 'Vad kan det vara?',
+	'TOO_MANY_BBCODES'		=> 'Du kan inte skapa fler BBCodes. Ta bort en eller flera BBCodes och försök igen.',
 
 	'ACP_ICONS_EXPLAIN'		=> 'Från denna sida kan du lägga till, ta bort och redigera de ikoner som användare kan lägga till trådar och inlägg. Dessa ikoner visas generellt bredvid trådtiteln i kategorierna, eller bredvid inläggstitlarna i trådarna. Du kan också installera och skapa nya paket med ikoner.',
 	'ACP_SMILIES_EXPLAIN'	=> 'Smilies är oftast små, ibland animerade, bilder som används för att uttrycka en känsla. Från denna sida kan du lägga till, ta bort och redigera de smilies som användare kan använda i sina inlägg och personliga meddelanden. Du kan också installera nya paket med smilies.',
