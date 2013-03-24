@@ -1,4 +1,6 @@
-﻿#######language/en/calendar.php#######
+﻿<?php
+
+#######language/en/calendar.php#######
 
 $lang = array_merge($lang, array(
 	'WHEN'					=> 'Event',
