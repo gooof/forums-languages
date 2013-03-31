@@ -1,14 +1,9 @@
 [main]
 host = https://www.transifex.com
+lang_map = zh_TW:zh-cmn-hant, zh:zh-cmn-hans, pt_BR:pt_br, sr@latin:sr, sr:sr_x_cyr, es_AR:es_ar, es_MX:es_mx
 
 [forums.all]
 source_file = language/en.php
 file_filter = language/<lang>.php
 source_lang = en_US
 type = PHP_ARRAY
-
-[forums.all]
-source_file = po/en.po
-file_filter = po/<lang>.po
-source_lang = en_US
-type = PO
