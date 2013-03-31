@@ -6338,10 +6338,6 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ACP_FOOTBALL_FEATURES'				=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Tipprunden Funktionen',
-	'ACP_FOOTBALL_FEATURES_EXPLAIN'		=> 'Hier kannst du einige Funktionen der Tipprunde aktivieren bzw. deaktivieren',
-	'ACP_FOOTBALL_USERGUIDE'			=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Benutzerhilfe',
-	'ACP_FOOTBALL_USERGUIDE_EXPLAIN'	=> 'Hier findest du Hilfe für die Einstellungen des phpBB3 Football MODs.<br />Wenn du Fragen hast, dann schaue bitte immer zuerst hier!',
 
 	'BANK'								=> 'Tipprunden Konto verwalten',
 	'BANK_EXPLAIN'						=> 'Sollen Tipprunden Konten mit Einsätzen und Gewinnen gepflegt werden?',
@@ -6937,13 +6933,6 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ACP_FOOTBALL_FEATURES'				=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Tipprunden Funktionen',
-	'ACP_FOOTBALL_FEATURES_EXPLAIN'		=> 'Hier kannst du einige Funktionen der Tipprunde aktivieren bzw. deaktivieren',
-	'ACP_FOOTBALL_USERGUIDE'			=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Benutzerhilfe',
-	'ACP_FOOTBALL_USERGUIDE_EXPLAIN'	=> 'Hier findest du Hilfe für die Einstellungen des phpBB3 Football MODs.<br />Wenn du Fragen hast, dann schaue bitte immer zuerst hier!',
-
-	'BANK'								=> 'Tipprunden Konto verwalten',
-	'BANK_EXPLAIN'						=> 'Sollen Tipprunden Konten mit Einsätzen und Gewinnen gepflegt werden?',
 
 	'DELETE_GOOGLE_ACCESS'				=> 'Google Gadget football_google.xml löschen. ',
 
@@ -6983,8 +6972,6 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ACP_FOOTBALL_MENU'					=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Menü Einstellungen',
-	'ACP_FOOTBALL_MENU_EXPLAIN'			=> 'Hier kannst du Forenverweise als Menueinträge für das Tipprunden-Menue hinterlegen. Den Menutext kannst Du dabei frei wählen, aslo dem Link zum Forum einen anderen Namen geben. ',
 
 	'MENU_DESC1'						=> 'Text Link 1',
 	'MENU_DESC2'						=> 'Text Link 2',

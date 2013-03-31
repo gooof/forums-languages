@@ -2457,37 +2457,37 @@ $lang = array_merge($lang, array(
 	'ST_TOT_FILES'			=> 'File(s)',
 	'ST_PORTAL_STARTDATE'	=> 'since',
 
-	'FILES_ATTACHMENTS'		=> 'Statistiken der Anh&auml;nge',
+	'FILES_ATTACHMENTS'		=> 'Attachment Statistics',
 	'FILES_PER_DAY'			=> 'Прикачувања во еден ден',
-	'FILES_PER_POST'		=> 'Anh&auml;nge pro Beitrag',
-	'FILES_PER_TOPIC'		=> 'Anh&auml;nge pro Beitrag',
-	'FILES_PER_USER'		=> 'Anh&auml;nge pro Benutzer',
-	'ST_TOT_VISIT'			=> 'Besuche insgesamt',
-	'ST_LAT_VISIT'			=> 'Deine IP',
-	'TOP_COUNT'				=> 'heruntergeladen',
-	'TOP_DATE'				=> 'hinzugef&uuml;gt am',
-	'TOP_FILENAME'			=> 'Dateien',
-	'TOP_FILESIZE'			=> 'Gr&ouml;&szlig;e',
+	'FILES_PER_POST'		=> 'Attachments per post',
+	'FILES_PER_TOPIC'		=> 'Attachments per topic',
+	'FILES_PER_USER'		=> 'Attachments per user',
+	'ST_TOT_VISIT'			=> 'Total visitors',
+	'ST_LAT_VISIT'			=> 'Your IP',
+	'TOP_COUNT'				=> 'downloaded',
+	'TOP_DATE'				=> 'added on',
+	'TOP_FILENAME'			=> 'Files',
+	'TOP_FILESIZE'			=> 'Filesize',
 	'TOP_TEL'				=> 'Top Downloads',
-	'TOP_X'					=> 'mal',
-	'VIEW_TOPIC_ATTACHMENTS'=> 'Anh&auml;nge insgesamt',
+	'TOP_X'					=> 'times',
+	'VIEW_TOPIC_ATTACHMENTS'=> 'Total Attachments',
 
-	'ACRONYM'			=> 'Acronyme',
-	'ACRONYMS'			=> 'Acronyme und Abk&uuml;rzungen',
-	'ACRONYM_TOTAL'		=> 'Alle Acronyme in der Datenbank',
-	'ACRONYM_REPLACEMENT'	=> 'Acronym Eintragungen',
+	'ACRONYM'			=> 'Acronyms',
+	'ACRONYMS'			=> 'Acronyms and Abbreviations',
+	'ACRONYM_TOTAL'		=> 'All acronyms in database',
+	'ACRONYM_REPLACEMENT'	=> 'Acronym entries',
 	'ACRONYM_URL'			=> 'Acronym url',
-	'TOTAL_FILES_COUNT'		=> 'Dateien in der Datenbank',
-	'ST_TOT_ACTIVE_POSTERS'	=> 'Aktive Schreiber',
-	'ST_TOT_ATTACH_SIZE'		=> 'Anhangsgr&ouml;sse',
-	'ST_TOT_FILES_SIZE'		=> 'Dateigr&ouml;sse',
+	'TOTAL_FILES_COUNT'		=> 'Files in the database',
+	'ST_TOT_ACTIVE_POSTERS'	=> 'Active writer',
+	'ST_TOT_ATTACH_SIZE'		=> 'Attachment Size',
+	'ST_TOT_FILES_SIZE'		=> 'Filesize',
 	'ST_TOT_ACRONYM'		=> 'Acronyms',
-	'ST_TOT_FLAGS'		=> 'Flaggen',
-	'ST_TOT_PICTURES'		=> 'Bilder',
-	'ST_TOT_KB_ARTICLES'		=> 'KB Artikel',
-	'ST_TOT_POSTS'		=> 'Artikel',
-	'ST_TOT_TOPICS'		=> 'Themen',
-	'ST_TOT_CHAT_USERS'		=> 'User im Chat',
+	'ST_TOT_FLAGS'		=> 'Flags',
+	'ST_TOT_PICTURES'		=> 'Pictures',
+	'ST_TOT_KB_ARTICLES'		=> 'KB Article',
+	'ST_TOT_POSTS'		=> 'Article',
+	'ST_TOT_TOPICS'		=> 'Теми',
+	'ST_TOT_CHAT_USERS'		=> 'Users in Chat',
 	'USER_GENDERS'		=> 'User Genders',
 	'USERS_WITH_GENDER'		=> 'Users with gender',
 	'MALE_FEMALE_RATIO'		=> 'Male/Female Ratio',
@@ -2526,9 +2526,9 @@ $lang = array_merge($lang, array(
 	'ANNOUNCEMENTS'	=> 'Известувања',
 	'BIRTHDAY'	=> 'Роденден',			
 	'BLOG'		=> 'Blog',
-	'BOARD_MINI_NAV'=> 'Untermenü',
+	'BOARD_MINI_NAV'=> 'Submenu',
 	'BOARD_STYLE'	=> 'Мој Стил на форумот',
-	'BOARD_NAV'	=> 'Forum Navigation',
+	'BOARD_NAV'	=> 'Forum navigation',
 	'DOWNLOADS'	=> 'Симнување',
 	'FORUM_CATEGORIES'=> 'Forum Categories',
 	'LINKS'		=> 'Links',
@@ -6303,10 +6303,6 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ACP_FOOTBALL_FEATURES'				=> 'Prediction league features',
-	'ACP_FOOTBALL_FEATURES_EXPLAIN'		=> 'Here you can activate some functions of the Prediction league or deactivate',
-	'ACP_FOOTBALL_USERGUIDE'			=> 'Football guide',
-	'ACP_FOOTBALL_USERGUIDE_EXPLAIN'	=> 'Hier findest du Hilfe für die Einstellungen des phpBB3 Football MODs.<br />Wenn du Fragen hast, dann schaue bitte immer zuerst hier!',
 
 	'BANK'								=> 'Manage prediction league account',
 	'BANK_EXPLAIN'						=> 'Should prediction league accounts be maintained with bets and profits?',
@@ -6350,7 +6346,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_FOOTBALL_MENU'					=> 'Menu settings',
-	'ACP_FOOTBALL_MENU_EXPLAIN'			=> 'Here you can deposit community references as a Menueinträge for the Prediction league menu. You can choose the Menutext, besides, freely, give another name aslo to the link to the community. ',
+	'ACP_FOOTBALL_MENU_EXPLAIN'			=> 'Here you can deposit community references as a navigation for the Prediction league menu. You can choose the Menutext, besides, freely, give another name aslo to the link to the community. ',
 
 	'MENU_DESC1'						=> 'Text Link 1',
 	'MENU_DESC2'						=> 'Text Link 2',
@@ -6902,13 +6898,6 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ACP_FOOTBALL_FEATURES'				=> 'Prediction league features',
-	'ACP_FOOTBALL_FEATURES_EXPLAIN'		=> 'Here you can activate some functions of the Prediction league or deactivate',
-	'ACP_FOOTBALL_USERGUIDE'			=> 'Football guide',
-	'ACP_FOOTBALL_USERGUIDE_EXPLAIN'	=> 'Hier findest du Hilfe für die Einstellungen des phpBB3 Football MODs.<br />Wenn du Fragen hast, dann schaue bitte immer zuerst hier!',
-
-	'BANK'								=> 'Manage prediction league account',
-	'BANK_EXPLAIN'						=> 'Should prediction league accounts be maintained with bets and profits?',
 
 	'DELETE_GOOGLE_ACCESS'				=> 'Extinguish Google Gadget football_google.xml. ',
 
@@ -6948,8 +6937,6 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ACP_FOOTBALL_MENU'					=> 'Menu settings',
-	'ACP_FOOTBALL_MENU_EXPLAIN'			=> 'Here you can deposit community references as a Menueinträge for the Prediction league menu. You can choose the Menutext, besides, freely, give another name aslo to the link to the community. ',
 
 	'MENU_DESC1'						=> 'Text Link 1',
 	'MENU_DESC2'						=> 'Text Link 2',
@@ -12527,10 +12514,10 @@ $lang = array_merge($lang, array(
 	'PORTAL_BLOCKS_CENTRE_ENABLED'	=> 'Enable Portal Blocks Centre',
 	'PORTAL_SET_LAYOUT_NEW_EXPLAIN'	=> 'New layout for News/Welcome page',		
 	'PORTAL_SET_LAYOUT_EXPLAIN'			=> 'Default layout Stargate aka Kiss Portal (see dropdown options).',		
-	'POLL_POLLS' 			=> 'Wieviele Umfragen sollen angezeigt werden',
+	'POLL_POLLS' 			=> 'How many polls you want to appear',
 	'POLL_POLLS_EXPLAIN' 	=> '',
 	'POLL_VOTING_EXPLAIN' 	=> '',
-	'POLL_VOTING' 		=> 'Darf in dem Umfrage Block abgestimmt werden',
+	'POLL_VOTING' 		=> 'May be voted in the poll portal block',
 ));
 
 #######language/en/acp/language.php#######
@@ -12604,8 +12591,8 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_LEXICON_EXPLAIN'	=> 'Here you can set terms in the lexicon, and / or contributions automatically to a tooltip should be.',
-	'ACRONYM'				=> 'Acronyme',
-	'ACRONYMS'				=> 'Acronyme und Abk&uuml;rzungen',
+	'ACRONYM'				=> 'Acronyms',
+	'ACRONYMS'				=> 'Acronyms and Abbreviations',
 	'ACRONYM_EXPLAIN'		=> 'Insert a space before / after the term, if you like to only find entire words. Without spaces the term was also found in longer words.',
 	'ADD_TERM'				=> 'Add new term.',
 	'ALLOW_ACRONYM'			=> 'Activate the showing of terms in posts:',
