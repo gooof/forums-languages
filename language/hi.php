@@ -60,7 +60,7 @@ $lang = array_merge($lang, array(
 	'WATCH_CALENDAR_TURN_OFF'	=> 'Stop watching the calendar',
 	'WATCH_EVENT_TURN_ON'	=> 'Watch this event',
 	'WATCH_EVENT_TURN_OFF'	=> 'Stop watching this event',
-	'WEEK'					=> 'Woche',
+	'WEEK'					=> 'सप्ताह',
 	'WEEK_OF'				=> 'Week of ',
 	'ZEROTH_FROM'			=> '0th from ',
 ));
@@ -135,7 +135,7 @@ $lang = array_merge($lang, array(
 	'USER_CANNOT_POST_EVENT'	=> 'You do not have permission to create events.',
 	'USER_CANNOT_VIEW_EVENT'	=> 'You do not have permission to view this event.',
 	'VIEW_EVENT'				=> '%sView your submitted event%s',
-	'WEEK'						=> 'Woche',
+	'WEEK'						=> 'सप्ताह',
 	'ZERO_LENGTH_EVENT'			=> 'The event cannot end at the same time it starts.',
 ));
 
@@ -155,7 +155,7 @@ $lang = array_merge($lang, array(
 	'QUESTIONS'					=> 'Questions',
 	'QUESTIONS_EXPLAIN'			=> 'For every form submission where you have enabled the Q&amp;A plugin, users will be asked one of the questions specified here. To use this plugin at least one question must be set in the default language. These questions should be easy for your target audience to answer but beyond the ability of a bot capable of running a Google™ search. Using a large and regularly changed set of questions will yield the best results. Enable the strict setting if your question relies on mixed case, punctuation or whitespace.',
 	'QUESTION_DELETED'			=> 'Question deleted',
-	'QUESTION_LANG'				=> 'Language',
+	'QUESTION_LANG'				=> 'भाषा',
 	'QUESTION_LANG_EXPLAIN'		=> 'The language this question and its answers are written in.',
 	'QUESTION_STRICT'			=> 'Strict check',
 	'QUESTION_STRICT_EXPLAIN'	=> 'Enable to enforce mixed case, punctuation and whitespace.',
@@ -875,7 +875,7 @@ $lang = array_merge($lang, array(
 
 	'default_dateformat'	=> 'D M d, Y g:i a', // Mon Jan 01, 2007 1:37 pm
 
-	'PORTAL'				=> 'Portal',
+	'PORTAL'				=> 'पोर्टल',
 	'FORUM_PORTAL'			=> 'Portal',
 	'TO_DAY'				=> 'Date: %s',
 	'USER_COUNTRY_FLAG'			=> 'Country Flag',
@@ -892,14 +892,14 @@ $lang = array_merge($lang, array(
 	'LOGIN_ERROR_USER_REAL_NAME'	=> 'Your real name (first or given name) is incorrect or too short (between 3 and 30 characters).',
 	
 	'FLASH_IS_OFF'		=> '[flash] is <em>OFF</em>',
-	'FLASH_IS_ON'			=> '[flash] is <em>ON</em>',
+	'FLASH_IS_ON'			=> '[फ्लैश] <em>चालू</em> है',
 
 	'FONT_COLOR'			=> 'Font colour',
 	'MORE_SMILIES'		=> 'View more smilies',
 	'K_QUICK_REPLY'		=> 'Quick Reply',
 	'ADD_SMILIES'			=> 'Add smilies',
 	'ATTACH_SIG'			=> 'Attach your signature',
-	'DISABLE_BBCODE'		=> 'Disable BBCode',
+	'DISABLE_BBCODE'		=> 'BBCode अक्षम करें',
 	'DISABLE_MAGIC_URL'		=> 'Don\'t automatically parse URLs',
 	'DISABLE_SMILIES'		=> 'Disable smilies',
 	'RECENT_REPLY'		=> 'View latest reply to topic',
@@ -918,7 +918,7 @@ $lang = array_merge($lang, array(
 	'ARRANGE_OFF'			=> 'Safe Layout',
 	'CALENDAR'			=> 'Calendar',
 	'WHEN'				=> 'Termin',
-	'WEEK'				=> 'Woche',
+	'WEEK'				=> 'सप्ताह',
 	'NEWSBOX_LOGIN'		=> 'Bereits registriert ? Dann hier einloggen !',
 	'NEWSBOX_REG'			=> 'Jetzt kostenlos <a href="ucp.php?mode=register">registrieren</a> und alle Funktionen nutzen.',
 	'NEWSBOX_WELCOME'		=> 'Willkommen im Forum',
@@ -1189,11 +1189,11 @@ $lang = array_merge($lang, array(
 	'CAT_UPDATED'			=> 'The category was successfully updated.',
 	'IMAGES'		=> 'चित्र',
 	'FLASH_IS_OFF'	=> '[flash] is <em>OFF</em>',
-	'FLASH_IS_ON'	=> '[flash] is <em>ON</em>',
+	'FLASH_IS_ON'	=> '[फ्लैश] <em>चालू</em> है',
 	'FLOOD_ERROR'	=> 'You cannot make another post so soon after your last.',
 	'FONT_COLOR'	=> 'Font colour',
-	'FONT_SMALL'	=> 'Small',
-	'FONT_TINY'		=> 'Tiny',
+	'FONT_SMALL'	=> 'छोटा सा',
+	'FONT_TINY'		=> 'छोटे',
 	'MORE_SMILIES'	=> 'View more smilies',
 	'SMILIES'		=> 'Smilies',
 
@@ -1213,9 +1213,9 @@ $lang = array_merge($lang, array(
 	'GROUP_AVATAR'						=> 'Group avatar',
 	'GROUP_CHANGE_DEFAULT'				=> 'Are you sure you want to change your default membership to the group “%s”?',
 	'GROUP_CLOSED'						=> 'Closed',
-	'GROUP_DESC'						=> 'Group description',
-	'GROUP_HIDDEN'						=> 'Hidden',
-	'GROUP_INFORMATION'					=> 'Usergroup information',
+	'GROUP_DESC'						=> 'समूह विवरण',
+	'GROUP_HIDDEN'						=> 'छिपा हुआ',
+	'GROUP_INFORMATION'					=> 'Usergroup जानकारी',
 	'GROUP_IS_CLOSED'					=> 'This is a closed group, new members can only join upon invitation of a group leader.',
 	'GROUP_IS_FREE'						=> 'This is a freely open group, all new members are welcome.',
 	'GROUP_IS_HIDDEN'					=> 'This is a hidden group, only members of this group can view its membership.',
@@ -1227,7 +1227,7 @@ $lang = array_merge($lang, array(
 	'GROUP_JOIN_PENDING_CONFIRM'		=> 'Are you sure you want to request joining the selected group?',
 	'GROUP_JOINED'						=> 'Successfully joined selected group.',
 	'GROUP_JOINED_PENDING'				=> 'Successfully requested group membership. Please wait for a group leader to approve your membership.',
-	'GROUP_LIST'						=> 'Manage users',
+	'GROUP_LIST'						=> 'उपयोगकर्ताओं का प्रबंधन करें',
 	'GROUP_MEMBERS'						=> 'Group members',
 	'GROUP_NAME'						=> 'Group name',
 	'GROUP_OPEN'						=> 'Open',
@@ -1421,28 +1421,29 @@ $lang = array_merge($lang, array(
 		<p>Clicking the button below will take you to your Administration Control Panel (ACP). Take some time to examine the options available to you. Remember that help is available online via the <a href="http://www.phpbb.com/support/documentation/3.0/">Documentation</a> and the <a href="http://www.phpbb.com/community/viewforum.php?f=46">support forums</a>, see the <a href="%3$s">README</a> for further information.</p><p><strong>Please now delete, move or rename the install directory before you use your board. If this directory is still present, only the Administration Control Panel (ACP) will be accessible.</strong></p>',
 	'INSTALL_INTRO'				=> 'स्थापना में आपका स्वागत हैं',
 
-	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
+	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
 
 	<ul>
-		<li>आंकड़ाकोष प्रकार - आंकड़ाकोष जो आप उपयोग मे लाना चाहते हैं </li>
-		<li>आंकड़ाकोष सर्वर का होस्टनाम या DSN - आंकड़ाकोष सर्वर का पता ।</li>
-		<li>आंकड़ाकोष सर्वर पोर्ट - आंकड़ाकोष सर्वर का पोर्ट (सामान्यतः इसे बदलने की जरुरत नही)।</li>
-		<li>आंकड़ाकोष नाम - आंकड़ाकोष का नाम सर्वर मे।</li>
-		<li>आंकड़ाकोष सर्वर का उपयोक्ता नाम एवं गुप्तशब्द  - आंकड़ाकोष मे पहुँचने का सत्रारंभ आंकड़ा।</li>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
 	</ul>
 
 	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
 
-	<p>phpBB3 निम्न आंकड़ाकोषो का समर्थन करता हैं:</p>
+	<p>phpBB3 supports the following databases:</p>
 	<ul>
 		<li>MySQL 3.23 or above (MySQLi supported)</li>
 		<li>PostgreSQL 7.3+</li>
 		<li>SQLite 2.8.2+</li>
-		<li>Firebird 2.0+</li>
+		<li>Firebird 2.1+</li>
 		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
 		<li>Oracle</li>
 	</ul>
-	
+
 	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'स्थापना प्रारम्भ करने हेतु ,कृपया निम्न बटन दबाये.',
 	'INSTALL_LOGIN'				=> 'सत्रारंभ',
@@ -1460,7 +1461,7 @@ $lang = array_merge($lang, array(
 	'INST_ERR_DB_NO_MYSQLI'		=> 'The version of MySQL installed on this machine is incompatible with the “MySQL with MySQLi Extension” option you have selected. Please try the “MySQL” option instead.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 2.8.2.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'The version of Oracle installed on this machine requires you to set the <var>NLS_CHARACTERSET</var> parameter to <var>UTF8</var>. Either upgrade your installation to 9.2+ or change the parameter.',
-	'INST_ERR_DB_NO_FIREBIRD'	=> 'The version of Firebird installed on this machine is older than 2.0, please upgrade to a newer version.',
+	'INST_ERR_DB_NO_FIREBIRD'	=> 'The version of Firebird installed on this machine is older than 2.1, please upgrade to a newer version.',
 	'INST_ERR_DB_NO_FIREBIRD_PS'=> 'The database you selected for Firebird has a page size less than 8192, it must be at least 8192.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'The database you have selected was not created in <var>UNICODE</var> or <var>UTF8</var> encoding. Try installing with a database in <var>UNICODE</var> or <var>UTF8</var> encoding.',
 	'INST_ERR_DB_NO_NAME'		=> 'कोई आंकड़ाकोष नाम निर्धारित नहीं है ।',
@@ -1611,7 +1612,7 @@ $lang = array_merge($lang, array(
 	'COMPLETE_LOGIN_TO_BOARD'		=> 'You should now <a href="../ucp.php?mode=login">login to your board</a> and check if everything is working fine. Do not forget to delete, rename or move your install directory!',
 	'CONTINUE_UPDATE_NOW'			=> 'अब अपडेट क्रिया को ज़ारी रखें ',		// Shown within the database update script at the end if called from the updater
 	'CONTINUE_UPDATE'				=> 'Continue update now',					// Shown after file upload to indicate the update process is not yet finished
-	'CURRENT_FILE'					=> 'Current original file',
+	'CURRENT_FILE'					=> 'Begin of Conflict - Original File code before update',
 	'CURRENT_VERSION'				=> 'वर्तमान वर्ज़न',
 
 	'DATABASE_TYPE'						=> 'आंकड़ाकोष प्रकार',
@@ -1821,7 +1822,7 @@ $lang = array_merge($lang, array(
 	'SMILIES_CRYING'				=> 'रोना या बहुत दुखी',
 	'SMILIES_EMARRASSED'			=> 'Embarrassed',
 	'SMILIES_EVIL'					=> 'शैतान या पूरा पागल ',
-	'SMILIES_EXCLAMATION'			=> ' Exclamation',
+	'SMILIES_EXCLAMATION'			=> 'विस्मय बोधक',
 	'SMILIES_GEEK'					=> 'Geek',
 	'SMILIES_IDEA'					=> 'उपाय ',
 	'SMILIES_LAUGHING'				=> 'हसना ',
@@ -1838,7 +1839,7 @@ $lang = array_merge($lang, array(
 	'SMILIES_TWISTED_EVIL'			=> 'उल्टा शैतान',
 	'SMILIES_UBER_GEEK'				=> 'Uber Geek',
 	'SMILIES_VERY_HAPPY'			=> 'बहुत खुश',
-	'SMILIES_WINK'					=> 'Wink',
+	'SMILIES_WINK'					=> 'पलक',
 
 	'TOPICS_TOPIC_TITLE'			=> 'phpBB3 में आपका स्वागत हैं। ',
 ));
@@ -2359,7 +2360,7 @@ $lang = array_merge($lang, array(
 	'NO_ADMINS'			=> 'No admins assigned.',
 	'ONLINE_USERS'		=> 'Online Users',
 	'ONLINE_USERS_SHOW'	=> '[ View Online List ]',
-	'PORTAL'			=> 'Portal',
+	'PORTAL'			=> 'पोर्टल',
 
 	'PICTURES'			=> 'Pictures',	
 	'POST_COMMENTS'		=> 'Post Comments',
@@ -2411,12 +2412,12 @@ $lang = array_merge($lang, array(
 	'SMILIES'		=> 'Smilies',
 
 	'FONT_COLOR'				=> 'Font colour',
-	'FONT_HUGE'					=> 'Huge',
-	'FONT_LARGE'				=> 'Large',
-	'FONT_NORMAL'				=> 'Normal',
-	'FONT_SIZE'					=> 'Font size',
-	'FONT_SMALL'				=> 'Small',
-	'FONT_TINY'					=> 'Tiny',	
+	'FONT_HUGE'					=> 'बहुत बड़ा',
+	'FONT_LARGE'				=> 'बड़े',
+	'FONT_NORMAL'				=> 'सामान्य',
+	'FONT_SIZE'					=> 'फ़ॉन्ट का आकार',
+	'FONT_SMALL'				=> 'छोटा सा',
+	'FONT_TINY'					=> 'छोटे',	
 	'HIDE_ME_SHORT'				=> 'Hide me this session.',
 	
 	'COLOR_DARK_RED'	=> 'Dark Red',
@@ -2554,10 +2555,10 @@ $lang = array_merge($lang, array(
 	'ADD_ATTACHMENT_EXPLAIN'	=> 'यदि आप एक से अधिक फ़ाइल जोड़ना चाहते तो अधिक जानकरी नीचे दें.',
 	'ADD_FILE'					=> 'फ़ाइल जोड़ें',
 	'ADD_POLL'					=> 'चुनाव जोड़ें',
-	'ADD_POLL_EXPLAIN'			=> 'If you do not want to add a poll to your topic leave the fields blank.',
-	'ALREADY_DELETED'			=> 'Sorry but this message is already deleted.',
+	'ADD_POLL_EXPLAIN'			=> 'यदि आप अपने विषय के लिए एक सर्वेक्षण जोड़ने के लिए चाहते हैं नहीं फ़ील्ड्स खाली छोड़ दें।',
+	'ALREADY_DELETED'			=> 'क्षमा करें, लेकिन इस संदेश को पहले ही हटाया है।',
 	'ATTACH_DISK_FULL'			=> 'There is not enough free disk space to post this attachment.',
-	'ATTACH_QUOTA_REACHED'		=> 'Sorry, the board attachment quota has been reached.',
+	'ATTACH_QUOTA_REACHED'		=> 'माफ करना, बोर्ड लगाव कोटा तक पहुँच गया है।',
 	'ATTACH_SIG'				=> 'Attach your signature',
 
 	'BBCODE_A_HELP'				=> 'Inline uploaded attachment: [attachment=]filename.ext[/attachment]',
@@ -2579,10 +2580,10 @@ $lang = array_merge($lang, array(
 	'BUMP_ERROR'				=> 'आप इस विषय को अंतिम स्तम्भ के बाद इतने जल्दी उछाल नहीं सकते.',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Sorry but you may only delete posts which have not been replied to.',
-	'CANNOT_EDIT_POST_LOCKED'	=> 'This post has been locked. You can no longer edit that post.',
+	'CANNOT_EDIT_POST_LOCKED'	=> 'इस पोस्ट के बंद कर दिया गया है। आप अब कि पोस्ट संपादित कर सकते हैं।',
 	'CANNOT_EDIT_TIME'			=> 'You can no longer edit or delete that post.',
 	'CANNOT_POST_ANNOUNCE'		=> 'Sorry but you cannot post announcements.',
-	'CANNOT_POST_STICKY'		=> 'Sorry but you cannot post sticky topics.',
+	'CANNOT_POST_STICKY'		=> 'क्षमा करें, लेकिन आप चिपचिपा विषय पोस्ट नहीं कर सकते।',
 	'CHANGE_TOPIC_TO'			=> 'Change topic type to',
 	'CLOSE_TAGS'				=> 'टैग बन्द करें',
 	'CURRENT_TOPIC'				=> 'वर्तमान विषय',
@@ -2593,7 +2594,7 @@ $lang = array_merge($lang, array(
 	'DELETE_OWN_POSTS'			=> 'क्षमा चाहते हैं पर आप केवल अपने स्तम्भ को मिटा सकते हैं.',
 	'DELETE_POST_CONFIRM'		=> 'Are you sure you want to delete this post?',
 	'DELETE_POST_WARN'			=> 'मिटाने के बाद स्तम्भ वापस नहीं लाया जा सकता',
-	'DISABLE_BBCODE'			=> 'Disable BBCode',
+	'DISABLE_BBCODE'			=> 'BBCode अक्षम करें',
 	'DISABLE_MAGIC_URL'			=> 'Don\'t automatically parse URLs',
 	'DISABLE_SMILIES'			=> 'Disable smilies',
 	'DISALLOWED_CONTENT'		=> 'The upload was rejected because the uploaded file was identified as a possible attack vector.',
@@ -2604,34 +2605,34 @@ $lang = array_merge($lang, array(
 	'DRAFT_TITLE'				=> 'ड्राफ्ट शीर्षक',
 
 	'EDIT_REASON'				=> 'स्तम्भ को संशोधित करने का प्रयोजन',
-	'EMPTY_FILEUPLOAD'			=> 'अपलोड किया गया फ़ाइल रिक्त हैं.',
+	'EMPTY_FILEUPLOAD'			=> 'अपलोड की गई फ़ाइल खाली है।',
 	'EMPTY_MESSAGE'				=> 'You must enter a message when posting.',
 	'EMPTY_REMOTE_DATA'			=> 'File could not be uploaded, please try uploading the file manually.',
 
 	'FLASH_IS_OFF'				=> '[flash] is <em>OFF</em>',
-	'FLASH_IS_ON'				=> '[flash] is <em>ON</em>',
+	'FLASH_IS_ON'				=> '[फ्लैश] <em>चालू</em> है',
 	'FLOOD_ERROR'				=> 'You cannot make another post so soon after your last.',
 	'FONT_COLOR'				=> 'Font colour',
-	'FONT_COLOR_HIDE'			=> 'Hide font colour',
-	'FONT_HUGE'					=> 'Huge',
-	'FONT_LARGE'				=> 'Large',
-	'FONT_NORMAL'				=> 'Normal',
-	'FONT_SIZE'					=> 'Font size',
-	'FONT_SMALL'				=> 'Small',
-	'FONT_TINY'					=> 'Tiny',
+	'FONT_COLOR_HIDE'			=> 'फ़ॉन्ट रंग छुपाएँ',
+	'FONT_HUGE'					=> 'बहुत बड़ा',
+	'FONT_LARGE'				=> 'बड़े',
+	'FONT_NORMAL'				=> 'सामान्य',
+	'FONT_SIZE'					=> 'फ़ॉन्ट का आकार',
+	'FONT_SMALL'				=> 'छोटा सा',
+	'FONT_TINY'					=> 'छोटे',
 
 	'GENERAL_UPLOAD_ERROR'		=> 'Could not upload attachment to %s.',
 
 	'IMAGES_ARE_OFF'			=> '[img] <em>बन्द</em> हैं',
 	'IMAGES_ARE_ON'				=> '[img] <em>चालू</em> हैं',
-	'INVALID_FILENAME'			=> '%s is an invalid filename.',
+	'INVALID_FILENAME'			=> '%s कोई फ़ाइल नाम अमान्य है।',
 
 	'LOAD'						=> 'लादो',
 	'LOAD_DRAFT'				=> 'ड्राफ्ट को लादो',
-	'LOAD_DRAFT_EXPLAIN'		=> 'Here you are able to select the draft you want to continue writing. Your current post will be cancelled, all current post contents will be deleted. View, edit and delete drafts within your User Control Panel.',
+	'LOAD_DRAFT_EXPLAIN'		=> 'यहाँ आप प्रारूप लेखन जारी रखें करने के लिए इच्छित का चयन करने के लिए कर सकते हैं। अपने वर्तमान पद रद्द किया जाएगा, सभी वर्तमान पोस्ट सामग्री हटा दिया जाएगा। देखें, संपादित करें और हटाएँ अपने उपयोगकर्ता नियंत्रण कक्ष के भीतर ड्राफ्ट।',
 	'LOGIN_EXPLAIN_BUMP'		=> 'You need to login in order to bump topics within this forum.',
-	'LOGIN_EXPLAIN_DELETE'		=> 'You need to login in order to delete posts within this forum.',
-	'LOGIN_EXPLAIN_POST'		=> 'You need to login in order to post within this forum.',
+	'LOGIN_EXPLAIN_DELETE'		=> 'आप इस मंच के भीतर पदों को नष्ट करने के लिए लॉगइन करने के लिए की जरूरत है।',
+	'LOGIN_EXPLAIN_POST'		=> 'आप के भीतर इस मंच पोस्ट करने के लिए लॉगइन करने के लिए की जरूरत है।',
 	'LOGIN_EXPLAIN_QUOTE'		=> 'You need to login in order to quote posts within this forum.',
 	'LOGIN_EXPLAIN_REPLY'		=> 'You need to login in order to reply to topics within this forum.',
 
@@ -2655,15 +2656,15 @@ $lang = array_merge($lang, array(
 
 	'PARTIAL_UPLOAD'			=> 'The uploaded file was only partially uploaded.',
 	'PHP_SIZE_NA'				=> 'The attachment’s file size is too large.<br />Could not determine the maximum size defined by PHP in php.ini.',
-	'PHP_SIZE_OVERRUN'			=> 'The attachment’s file size is too large, the maximum upload size is %d MB.<br />Please note this is set in php.ini and cannot be overridden.',
-	'PLACE_INLINE'				=> 'Place inline',
+	'PHP_SIZE_OVERRUN'			=> 'The attachment’s file size is too large, the maximum upload size is %1$d %2$s.<br />Please note this is set in php.ini and cannot be overridden.',
+	'PLACE_INLINE'				=> 'इनलाइन रखें',
 	'POLL_DELETE'				=> 'पोल मिटाएँ',
 	'POLL_FOR'					=> 'पोल चलाएँ ',
 	'POLL_FOR_EXPLAIN'			=> 'Enter 0 or leave blank for a never ending poll.',
 	'POLL_MAX_OPTIONS'			=> 'Options per user',
 	'POLL_MAX_OPTIONS_EXPLAIN'	=> 'This is the number of options each user may select when voting.',
 	'POLL_OPTIONS'				=> 'पोल विकल्प',
-	'POLL_OPTIONS_EXPLAIN'		=> 'Place each option on a new line. You may enter up to <strong>%d</strong> options.',
+	'POLL_OPTIONS_EXPLAIN'		=> 'प्रत्येक विकल्प एक नई लाइन पर जगह है। आप <strong>%d</strong> विकल्प करने के लिए दर्ज कर सकते हैं।',
 	'POLL_OPTIONS_EDIT_EXPLAIN'	=> 'Place each option on a new line. You may enter up to <strong>%d</strong> options. If you remove or add options all previous votes will be reset.',
 	'POLL_QUESTION'				=> 'पोल प्रश्न',
 	'POLL_TITLE_TOO_LONG'		=> 'The poll title must contain fewer than 100 characters.',
@@ -2677,11 +2678,11 @@ $lang = array_merge($lang, array(
 	'POST_DELETED'				=> 'This message has been deleted successfully.',
 	'POST_EDITED'				=> 'This message has been edited successfully.',
 	'POST_EDITED_MOD'			=> 'This message has been edited successfully, but it will need to be approved by a moderator before it is publicly viewable.',
-	'POST_GLOBAL'				=> 'Global',
-	'POST_ICON'					=> 'Post icon',
-	'POST_NORMAL'				=> 'Normal',
-	'POST_REVIEW'				=> 'Post review',
-	'POST_REVIEW_EDIT'			=> 'Post review',
+	'POST_GLOBAL'				=> 'ग्लोबल',
+	'POST_ICON'					=> 'पद चिह्न',
+	'POST_NORMAL'				=> 'सामान्य',
+	'POST_REVIEW'				=> 'पोस्ट की समीक्षा',
+	'POST_REVIEW_EDIT'			=> 'पोस्ट की समीक्षा',
 	'POST_REVIEW_EDIT_EXPLAIN'	=> 'This post has been altered by another user while you were editing it. You may wish to review the current version of this post and adjust your edits.',
 	'POST_REVIEW_EXPLAIN'		=> 'At least one new post has been made to this topic. You may wish to review your post in light of this.',
 	'POST_STORED'				=> 'This message has been posted successfully.',
@@ -2700,8 +2701,8 @@ $lang = array_merge($lang, array(
 	'SMILIES_ARE_ON'			=> 'Smilies are <em>ON</em>',
 	'STICKY_ANNOUNCE_TIME_LIMIT'=> 'Sticky/Announcement time limit',
 	'STICK_TOPIC_FOR'			=> 'Stick topic for',
-	'STICK_TOPIC_FOR_EXPLAIN'	=> 'Enter 0 or leave blank for a never ending Sticky/Announcement.',
-	'STYLES_TIP'				=> 'Tip: Styles can be applied quickly to selected text.',
+	'STICK_TOPIC_FOR_EXPLAIN'	=> '0 दर्ज करें या एक कभी नहीं समाप्त चिपचिपा/घोषणा के लिए खाली छोड़ दें। कृपया ध्यान दें कि इस नंबर पोस्ट की तारीख से संबंधित है।',
+	'STYLES_TIP'				=> 'टिप: शैलियाँ जल्दी से चयनित पाठ पर लागू किया जा सकता।',
 
 	'TOO_FEW_CHARS'				=> 'Your message contains too few characters.',
 	'TOO_FEW_CHARS_LIMIT'		=> 'Your message contains %1$d characters. The minimum number of characters you need to enter is %2$d.',
@@ -2718,7 +2719,7 @@ $lang = array_merge($lang, array(
 
 	'UNAUTHORISED_BBCODE'		=> 'You cannot use certain BBCodes: %s.',
 	'UNGLOBALISE_EXPLAIN'		=> 'To switch this topic back from being global to a normal topic, you need to select the forum you wish this topic to be displayed.',
-	'UPDATE_COMMENT'			=> 'Update comment',
+	'UPDATE_COMMENT'			=> 'अद्यतन टिप्पणी',
 	'URL_INVALID'				=> 'The URL you specified is invalid.',
 	'URL_NOT_FOUND'				=> 'The file specified could not be found.',
 	'URL_IS_OFF'				=> '[url] is <em>OFF</em>',
@@ -5567,7 +5568,7 @@ $lang = array_merge($lang, array(
 	'PERMISSION_A_LIST'				=> 'Can see album',
 	'PERMISSION_A_RESTRICT'			=> 'Can restrict access',
 	'PERMISSION_A_UNLIMITED'		=> 'Unlimited number of personal subalbums',
-	'PERMISSION_C'					=> 'Comments &amp; Rating',
+	'PERMISSION_C'					=> 'Comments',
 	'PERMISSION_C_DELETE'			=> 'Can delete own comments',
 	'PERMISSION_C_EDIT'				=> 'Can edit own comments',
 	'PERMISSION_C_POST'				=> 'Can comment on image',
@@ -5725,7 +5726,7 @@ $lang = array_merge($lang, array(
 
 	'VIEW_IMAGE_URL'				=> 'View Image-URL on imagepage',
 
-	'WATERMARK'						=> 'Watermark',
+	'WATERMARK'						=> 'वॉटरमार्क',
 	'WATERMARK_HEIGHT'				=> 'Minimum-height for watermark',
 	'WATERMARK_HEIGHT_EXP'			=> 'To avoid small images from being covered by the watermark, you may enter a minimum height of the image here. If the image is smaller, the watermark will not be viewed.',
 	'WATERMARK_IMAGES'				=> 'Watermark images',
@@ -7249,7 +7250,7 @@ $lang = array_merge($lang, array(
 	'ACP_DELETE'				=> 'मिटाएँ',
 	'ACP_YES'					=> 'हाँ',
 	'ACP_NO'					=> 'नहीं',
-	'ACP_NONEMOD'				=> 'None',
+	'ACP_NONEMOD'				=> 'कोई नहीं',
 	'ACP_TITLE'					=> 'Hangman deleting',
 	'ACP_TEXT'					=> 'Do you want to delete %s ?',
 	'ACP_TEXT_SCORE' 			=> 'Delete creators score?',
@@ -8956,7 +8957,7 @@ $lang = array_merge($lang, array(
 	'CUSTOM_PROFILE_FIELD'				=> 'Custom Profile Field',
 	'CPF_TOP_X'							=> 'Top %1$d %2$s',
 	'TOTAL_VALUES_SET_PROMPT'			=> 'Total users who have set %s',
-	'DEFAULT'							=> 'Default',
+	'DEFAULT'							=> 'डिफ़ॉल्ट',
 	
 	'VIEWING_STATS'						=> 'Viewing phpBB Statistics',
 	
@@ -10672,7 +10673,7 @@ $lang = array_merge($lang, array(
 	'PHOOGLE_API_LANG_EXPLAIN'	=> '',
 	'LOG_STANDARD'		=> '&#187; Neuer Standard Style',
 	'UPLOAD_FILES'		=> 'Manage file uploads',
-	'PORTAL'			=> 'Portal',
+	'PORTAL'			=> 'पोर्टल',
 	'ACP_DOWNLOAD'		=> 'डॉउनलोड',
 
 	'ACP_CAT_PHOOGLE'			=> 'Phoogle Map',
@@ -12076,18 +12077,18 @@ $lang = array_merge($lang, array(
 	'GROUP_DELETE'					=> 'Remove member from group',
 	'GROUP_DELETED'					=> 'Group deleted and user default groups set successfully.',
 	'GROUP_DEMOTE'					=> 'Demote group leader',
-	'GROUP_DESC'					=> 'Group description',
+	'GROUP_DESC'					=> 'समूह विवरण',
 	'GROUP_DETAILS'					=> 'समूह विवरण',
 	'GROUP_EDIT_EXPLAIN'			=> 'Here you can edit an existing group. You can change its name, description and type (open, closed, etc.). You can also set certain group wide options such as colouration, rank, etc. Changes made here override users’ current settings. Please note that group members can override group-avatar settings, unless you set appropriate user permissions.',
 	'GROUP_ERR_USERS_EXIST'			=> 'The specified users are already members of this group.',
 	'GROUP_FOUNDER_MANAGE'			=> 'Founder manage only',
 	'GROUP_FOUNDER_MANAGE_EXPLAIN'	=> 'Restrict management of this group to founders only. Users having group permissions are still able to see this group as well as this group’s members.',
-	'GROUP_HIDDEN'					=> 'Hidden',
+	'GROUP_HIDDEN'					=> 'छिपा हुआ',
 	'GROUP_LANG'					=> 'Group language',
 	'GROUP_LEAD'					=> 'Group leaders',
 	'GROUP_LEADERS_ADDED'			=> 'New leaders added to group successfully.',
 	'GROUP_LEGEND'					=> 'Display group in legend',
-	'GROUP_LIST'					=> 'Manage users',
+	'GROUP_LIST'					=> 'उपयोगकर्ताओं का प्रबंधन करें',
 	'GROUP_LIST_EXPLAIN'			=> 'This is a complete list of all the current users with membership of this group. You can delete members (except in certain special groups) or add new ones as you see fit.',
 	'GROUP_MEMBERS'					=> 'Group members',
 	'GROUP_MEMBERS_EXPLAIN'			=> 'This is a complete listing of all the members of this usergroup. It includes separate sections for leaders, pending and existing members. From here you can manage all aspects of who has membership of this group and what their role is. To remove a leader but keep them in the group use Demote rather than delete. Similarly use Promote to make an existing member a leader.',
@@ -12211,7 +12212,7 @@ $lang = array_merge($lang, array(
 #######language/en/acp/k_config.php#######
 
 $lang = array_merge($lang, array(
-	'PORTAL' 			=> 'Portal',
+	'PORTAL' 			=> 'पोर्टल',
 	'RULES' 		=> 'Rules',
 	'BLOCKS_RULES' 	=> 'Rules Edit',
 	'PORTAL_MAIN'			=> 'Main Block/Portal Configuration',
@@ -12372,7 +12373,7 @@ $lang = array_merge($lang, array(
 #######language/en/acp/k_portal.php#######
 
 $lang = array_merge($lang, array(
-	'PORTAL' 			=> 'Portal',
+	'PORTAL' 			=> 'पोर्टल',
 	'K_PORTAL_TITLE' 	=> 'Portal Information',
 	'TITLE_EXPLAIN'		=> 'Here you will be able to remind your users that have been not been active on your board',	
 	'PORTAL_MAIN'		=> 'Main Block/Portal Configuration',
@@ -12748,7 +12749,7 @@ $lang = array_merge($lang, array(
 	'CREATE_ROLE_FROM'			=> 'Use settings from…',
 	'CUSTOM'					=> 'Custom…',
 
-	'DEFAULT'					=> 'Default',
+	'DEFAULT'					=> 'डिफ़ॉल्ट',
 	'DELETE_ROLE'				=> 'Delete role',
 	'DELETE_ROLE_CONFIRM'		=> 'Are you sure you want to remove this role? Items having this role assigned will <strong>not</strong> loose their permission settings.',
 	'DISPLAY_ROLE_ITEMS'		=> 'View items using this role',
@@ -13614,7 +13615,7 @@ $lang = array_merge($lang, array(
 	'FONT_COLOUR'			=> 'Font colour',
 	'FONT_FACE'				=> 'Font face',
 	'FONT_FACE_EXPLAIN'		=> 'You can specify multiple fonts separated by commas. If a user doesn’t have the first font installed the first other working font will be chosen.',
-	'FONT_SIZE'				=> 'Font size',
+	'FONT_SIZE'				=> 'फ़ॉन्ट का आकार',
 
 	'GLOBAL_IMAGES'			=> 'Global',
 
