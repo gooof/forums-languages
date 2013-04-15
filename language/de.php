@@ -339,7 +339,7 @@ $lang = array_merge($lang, array(
 	'FORUMS'				=> 'Foren',
 	'FORUMS_MARKED'			=> 'Foren wurden als gelesen markiert.',
 	'FORUM_CAT'				=> 'Kategorie',
-	'FORUM_INDEX'			=> 'Foren-Übersicht',
+	'FORUM_INDEX'			=> 'Forum',
 	'FORUM_LINK'			=> 'Forums-Link',
 	'FORUM_LOCATION'		=> 'Aktuelle Tätigkeit',
 	'FORUM_LOCKED'			=> 'Forum gesperrt',
@@ -547,7 +547,7 @@ $lang = array_merge($lang, array(
 	'NO_UNREAD_POSTS'			=> 'Keine ungelesenen Beiträge',
 	'NO_UPLOAD_FORM_FOUND'		=> 'Ein Datei-Upload wurde angestoßen, aber es wurde kein gültiges Upload-Formular gefunden.',
 	'NO_USER'					=> 'Der von dir ausgewählte Benutzer existiert nicht.',
-	'NO_USERS'					=> 'Diese Tipprunde hat keine Teilnehmer!',
+	'NO_USERS'					=> 'Du hast keine Benutzer angegeben.',
 	'NO_USER_SPECIFIED'			=> 'Es wurde kein Benutzername angegeben.',
 
 	'OCCUPATION'				=> 'Tätigkeit',
@@ -886,7 +886,7 @@ $lang = array_merge($lang, array(
 	'TITLE'				=> 'Titel',
 	'READ_FULL'				=> 'ganze Nachricht lesen',
 	'DONT_HAVE_ACCOUNT' 			=> 'Wir sind eine kostenlose<br />Community. Alle sind Willkommen.<br />',
-	'FORUM_INDEX'				=> 'Foren-Übersicht',
+	'FORUM_INDEX'				=> 'Forum',
 	'PROFILE_SMALL'			=> 'UCP',
 	'POST_BY_POSTER'			=> 'von',
 	'LOGIN_ERROR_USER_REAL_NAME'	=> 'Dein echter Name (Vor- oder Nachname) ist nicht korrekt oder zu kurz (zwischen 3 und 30 Zeichen).',
@@ -895,7 +895,7 @@ $lang = array_merge($lang, array(
 	'FLASH_IS_ON'			=> '[flash] ist <em>AN</em>',
 
 	'FONT_COLOR'			=> 'Schriftfarbe',
-	'MORE_SMILIES'		=> 'Mehr Smilies ansehen',
+	'MORE_SMILIES'		=> 'Mehr Smilies anzeigen',
 	'K_QUICK_REPLY'		=> 'Schnellantwort',
 	'ADD_SMILIES'			=> 'Smilies hinzufügen',
 	'ATTACH_SIG'			=> 'Signatur anhängen',
@@ -1194,7 +1194,7 @@ $lang = array_merge($lang, array(
 	'FONT_COLOR'	=> 'Schriftfarbe',
 	'FONT_SMALL'	=> 'Klein',
 	'FONT_TINY'		=> 'Winzig',
-	'MORE_SMILIES'	=> 'Mehr Smilies ansehen',
+	'MORE_SMILIES'	=> 'Mehr Smilies anzeigen',
 	'SMILIES'		=> 'Smilies',
 
 ));
@@ -1210,7 +1210,7 @@ $lang = array_merge($lang, array(
 	'CANNOT_RESIGN_GROUP'		=> 'Du kannst aus dieser Gruppe nicht austreten. Du kannst nur aus offenen und allgemein offenen Gruppen austreten.',
 	'CHANGED_DEFAULT_GROUP'		=> 'Du hast die Hauptgruppe erfolgreich geändert.',
 
-	'GROUP_AVATAR'						=> 'Gruppenavatar',
+	'GROUP_AVATAR'						=> 'Gruppen-Avatar',
 	'GROUP_CHANGE_DEFAULT'				=> 'Bist du dir sicher, dass du „%s“ zu deiner Hauptgruppe machen möchtest?',
 	'GROUP_CLOSED'						=> 'Geschlossen',
 	'GROUP_DESC'						=> 'Gruppenbeschreibung',
@@ -2345,7 +2345,7 @@ $lang = array_merge($lang, array(
 	'HOME'				=> 'Heim',
 
 	'INDEX_OF_FORUMS'	=> 'Forenindex',	
-	'ICON_ANNOUNCEMENT'	=> 'Ankündigung',
+	'ICON_ANNOUNCEMENT'	=> 'Bekanntmachung',
 	'ICONS_EXPLAIN'		=> 'Symbolerklärung', 	
 	'FORUM_IMAGES_EXPLAIN'	=> 'Forumsymbole',
 	'POST_IMAGES_EXPLAIN'	=> 'Beitragssymbole',
@@ -2644,7 +2644,7 @@ $lang = array_merge($lang, array(
 
 	'MESSAGE_BODY_EXPLAIN'		=> 'Gib deine Nachricht hier ein. Sie darf nicht mehr als <strong>%d</strong> Zeichen enthalten.',
 	'MESSAGE_DELETED'			=> 'Der Beitrag wurde erfolgreich gelöscht.',
-	'MORE_SMILIES'				=> 'Mehr Smilies ansehen',
+	'MORE_SMILIES'				=> 'Mehr Smilies anzeigen',
 
 	'NOTIFY_REPLY'				=> 'Mich benachrichtigen, sobald eine Antwort geschrieben wurde',
 	'NOT_UPLOADED'				=> 'Datei konnte nicht hochgeladen werden.',
@@ -3360,7 +3360,7 @@ $lang = array_merge($lang, array(
 
 	'FORUM_PERMISSIONS'		=> 'Berechtigungen in diesem Forum',
 
-	'ICON_ANNOUNCEMENT'		=> 'Ankündigung',
+	'ICON_ANNOUNCEMENT'		=> 'Bekanntmachung',
 	'ICON_STICKY'			=> 'Wichtig',
 
 	'LOGIN_NOTIFY_FORUM'	=> 'Du wurdest über ein neues Thema in diesem Forum informiert. Bitte melde dich an, um es anzusehen.',
@@ -7868,7 +7868,7 @@ $lang = array_merge($lang, array(
 	'NO_TEAM_SHORTNAME'				=> 'Kurzbezeichnung des Teams fehlt. Bitte einen Kurznamen angeben. ',
 	'NO_USER'						=> 'Der von dir ausgewählte Benutzer existiert nicht.',
 	'NO_USERID'						=> 'Der von dir ausgewählte Tipper existiert nicht. ',
-	'NO_USERS'						=> 'Diese Tipprunde hat keine Teilnehmer!',
+	'NO_USERS'						=> 'Du hast keine Benutzer angegeben.',
 	'NO_WIN_MATCHDAYS'				=> 'In dieser Tipprunde gibt es keine Spieltagsgewinne. ',
 	'NO_WIN_SEASON'					=> 'In dieser Tipprunde gibt es keine Saisongewinne. ',
 	'NOT_CLOSED'					=> 'Dieser Spieltag wurde noch nicht geschlossen. ',
@@ -8913,14 +8913,14 @@ $lang = array_merge($lang, array(
 	'TOP_TOPICS_BY_BOOKMARKS'			=> 'Top %d Themen (Lesezeichen)',
 	'TOP_TOPICS_BY_SUBSCRIPTIONS'		=> 'Top %d Themen (Abonnieren)',
 	'MEMBERS'							=> 'Mitglieder',
-	'TOTAL_MEMBERS'						=> 'Gesamt Mitglieder',
+	'TOTAL_MEMBERS'						=> 'Mitglieder insgesamt',
 	'TOTAL_REG_USERS'					=> 'Gesamt registrierte Benutzer',
 	'MOST_ONLINE'						=> 'Meiste Benutzer online',
 	'INCLUDING_BOTS'					=> 'incl. Bots',
 	'TOTAL_ONLINE'						=> 'Gesamt Benutzer online',
 	'ONLINE_ON'							=> 'am',
 	'TOTAL_HIDDEN'						=> 'Gesamt unsichtbare Benutzer online',
-	'TOTAL_MEMBERS_ONLINE'				=> 'Total members online',
+	'TOTAL_MEMBERS_ONLINE'				=> 'Mitglieder online',
 	'TOP_USERS_BY_POSTS'				=> 'Top %d Benutzer (Beiträge)',
 	'TOP_USERS_BY_TOPICS'				=> 'Top %d Benutzer (Themen)',
 	'TOP_FRIENDS'						=> 'Top %d Freunde',
@@ -12101,7 +12101,7 @@ $lang = array_merge($lang, array(
 
 	'GROUP_APPROVE'					=> 'Mitglied aufnehmen',
 	'GROUP_APPROVED'				=> 'Freigegebene Mitglieder',
-	'GROUP_AVATAR'					=> 'Gruppenavatar',
+	'GROUP_AVATAR'					=> 'Gruppen-Avatar',
 	'GROUP_AVATAR_EXPLAIN'			=> 'Dieses Bild wird in den Gruppendetails angezeigt.',
 	'GROUP_CLOSED'					=> 'Geschlossen',
 	'GROUP_COLOR'					=> 'Gruppen-Farbe',
@@ -12163,14 +12163,14 @@ $lang = array_merge($lang, array(
 	'NO_GROUP'					=> 'Die von dir ausgewählte Benutzergruppe existiert nicht.',
 	'NO_GROUPS_CREATED'			=> 'Es wurden bislang keine Gruppen erstellt.',
 	'NO_PERMISSIONS'			=> 'Du hast keine Berechtigungen kopiert.',
-	'NO_USERS'					=> 'Diese Tipprunde hat keine Teilnehmer!',
+	'NO_USERS'					=> 'Du hast keine Benutzer angegeben.',
 	'NO_USERS_ADDED'			=> 'Es wurden keine Benutzer der Gruppe hinzugefügt.',
 	'NO_VALID_USERS'			=> 'Du hast keine Benutzer angegeben, für die dieser Vorgang möglich wäre.',
 
 	'SPECIAL_GROUPS'			=> 'Systemgruppen',
 	'SPECIAL_GROUPS_EXPLAIN'	=> 'Systemgruppen sind spezielle Gruppen, die nicht gelöscht oder bearbeitet werden können. Allerdings kannst du Benutzer hinzufügen und Grundeinstellungen ändern.',
 
-	'TOTAL_MEMBERS'				=> 'Gesamt Mitglieder',
+	'TOTAL_MEMBERS'				=> 'Mitglieder insgesamt',
 
 	'USERS_APPROVED'				=> 'Benutzer erfolgreich bestätigt',
 	'USER_DEFAULT'					=> 'Standardrang',
