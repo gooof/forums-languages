@@ -9782,6 +9782,7 @@ $lang = array_merge($lang, array(
 	'ACP_MANAGE_FORUMS'			=> 'Foroak kudeatu',
 	'ACP_MANAGE_FORUMS_OLD'		=> 'Manage forums v1',
 	'DATABASE_SERVER_INFO'	=> 'Datubasearen zerbitzaria',
+	'ADD_USERS'					=> 'Erabiltzaileak gehitu',
 
 	'ACP_ADMINISTRATORS'		=> 'Administrariak',
 	'ACP_ADMIN_LOGS'			=> 'Administrarien saioa',
@@ -10470,8 +10471,7 @@ $lang = array_merge($lang, array(
 	'ACP_FOOTBALL_FEATURES_EXPLAIN'		=> 'Here you can activate or disable some features of the tip round.',
 	'ACP_FOOTBALL_USERGUIDE'			=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> User Help',
 	'ACP_FOOTBALL_USERGUIDE_EXPLAIN'	=> 'Here you will find help for the settings of our Football MOD.<br />If you have any questions, then look here first please.',
-	'ADD_USERS'							=> 'Add Users',
-	'STATUS'							=> 'Message status',
+	'X_STATUS'							=> 'Status',
 	'PORTAL_SETTINGS_TITLE'				=> 'Portal -> Portal Settings',
 	'PORTAL_SETTINGS_EXPLAIN'			=> 'Here you can set general portal block settings.',
 	'PORTAL_BLOCKS_TITLE'				=> 'Portal Blocks',
@@ -12867,7 +12867,6 @@ $lang = array_merge($lang, array(
 
 	'ADD_GROUPS'				=> 'Taldeak gehitu',
 	'ADD_PERMISSIONS'			=> 'Baimenak gehitu',
-	'ADD_USERS'					=> 'Add Users',
 	'ADVANCED_PERMISSIONS'		=> 'Baimen aurreratuak',
 	'ALL_GROUPS'				=> 'Talde guztiak aukeratu',
 	'ALL_NEVER'					=> 'Guztiak <samp>INOIZ EZ</samp>',

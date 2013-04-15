@@ -9783,6 +9783,7 @@ $lang = array_merge($lang, array(
 	'ACP_MANAGE_FORUMS'			=> 'Manage forums v2',
 	'ACP_MANAGE_FORUMS_OLD'		=> 'Manage forums v1',
 	'DATABASE_SERVER_INFO'	=> 'Help and Support',
+	'ADD_USERS'					=> 'Add users',
 
 	'ACP_ADMINISTRATORS'		=> 'ຜູ້ເບິ່ງແຍງລະບົບ',
 	'ACP_ADMIN_LOGS'			=> 'Admin log',
@@ -10471,8 +10472,7 @@ $lang = array_merge($lang, array(
 	'ACP_FOOTBALL_FEATURES_EXPLAIN'		=> 'Here you can activate or disable some features of the tip round.',
 	'ACP_FOOTBALL_USERGUIDE'			=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> User Help',
 	'ACP_FOOTBALL_USERGUIDE_EXPLAIN'	=> 'Here you will find help for the settings of our Football MOD.<br />If you have any questions, then look here first please.',
-	'ADD_USERS'							=> 'Add Users',
-	'STATUS'							=> 'Message status',
+	'X_STATUS'							=> 'Status',
 	'PORTAL_SETTINGS_TITLE'				=> 'Portal -> Portal Settings',
 	'PORTAL_SETTINGS_EXPLAIN'			=> 'Here you can set general portal block settings.',
 	'PORTAL_BLOCKS_TITLE'				=> 'Portal Blocks',
@@ -12868,7 +12868,6 @@ $lang = array_merge($lang, array(
 
 	'ADD_GROUPS'				=> 'Add groups',
 	'ADD_PERMISSIONS'			=> 'Add Permissions',
-	'ADD_USERS'					=> 'Add Users',
 	'ADVANCED_PERMISSIONS'		=> 'Advanced Permissions',
 	'ALL_GROUPS'				=> 'Select all groups',
 	'ALL_NEVER'					=> 'All <samp>NEVER</samp>',

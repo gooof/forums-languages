@@ -9773,6 +9773,7 @@ $lang = array_merge($lang, array(
 	'ACP_MANAGE_FORUMS'			=> 'إدارة المنتديات',
 	'ACP_MANAGE_FORUMS_OLD'		=> 'Manage forums v1',
 	'DATABASE_SERVER_INFO'	=> 'خادم قاعدة البيانات',
+	'ADD_USERS'					=> 'إضافة أعضاء',
 
 	'ACP_ADMINISTRATORS'		=> 'المدراء',
 	'ACP_ADMIN_LOGS'			=> 'سجلات المدير',
@@ -10461,8 +10462,7 @@ $lang = array_merge($lang, array(
 	'ACP_FOOTBALL_FEATURES_EXPLAIN'		=> 'Here you can activate or disable some features of the tip round.',
 	'ACP_FOOTBALL_USERGUIDE'			=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> User Help',
 	'ACP_FOOTBALL_USERGUIDE_EXPLAIN'	=> 'Here you will find help for the settings of our Football MOD.<br />If you have any questions, then look here first please.',
-	'ADD_USERS'							=> 'Add Users',
-	'STATUS'							=> 'Message status',
+	'X_STATUS'							=> 'Status',
 	'PORTAL_SETTINGS_TITLE'				=> 'Portal -> Portal Settings',
 	'PORTAL_SETTINGS_EXPLAIN'			=> 'Here you can set general portal block settings.',
 	'PORTAL_BLOCKS_TITLE'				=> 'Portal Blocks',
@@ -12858,7 +12858,6 @@ $lang = array_merge($lang, array(
 
 	'ADD_GROUPS'				=> 'إضافة مجموعات',
 	'ADD_PERMISSIONS'			=> 'إضافة صلاحيات',
-	'ADD_USERS'					=> 'Add Users',
 	'ADVANCED_PERMISSIONS'		=> 'صلاحيات متقدمة',
 	'ALL_GROUPS'				=> 'إختر المجموعات كلها',
 	'ALL_NEVER'					=> '<samp>أبداً</samp> للجميع',

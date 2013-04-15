@@ -9819,6 +9819,7 @@ $lang = array_merge($lang, array(
 	'ACP_MANAGE_FORUMS'			=> 'Foren verwalten &sup2;',
 	'ACP_MANAGE_FORUMS_OLD'		=> 'Foren verwalten &sup1;',
 	'DATABASE_SERVER_INFO'	=> 'Hilfe und Support Forum',
+	'ADD_USERS'					=> 'Benutzer hinzufügen',
 
 	'ACP_ADMINISTRATORS'		=> 'Administratoren',
 	'ACP_ADMIN_LOGS'			=> 'Administrations-Protokoll',
@@ -10507,8 +10508,7 @@ $lang = array_merge($lang, array(
 	'ACP_FOOTBALL_FEATURES_EXPLAIN'		=> 'Hier kannst du einige Funktionen der Tipprunde aktivieren bzw. deaktivieren',
 	'ACP_FOOTBALL_USERGUIDE'			=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Benutzerhilfe',
 	'ACP_FOOTBALL_USERGUIDE_EXPLAIN'	=> 'Hier findest du Hilfe für die Einstellungen des phpBB3 Football MODs.<br />Wenn du Fragen hast, dann schaue bitte immer zuerst hier!',
-	'ADD_USERS'							=> 'Add Users',
-	'STATUS'							=> 'Status',
+	'X_STATUS'							=> 'Status',
 	'PORTAL_SETTINGS_TITLE'				=> 'Portal -> Portal Einstellungen',
 	'PORTAL_SETTINGS_EXPLAIN'			=> 'Hier lassen sich allgemeine Einstellungen des Portals und der Portal Blöcke einstellen.',
 	'PORTAL_BLOCKS_TITLE'				=> 'Portal Blöcke',
@@ -12886,7 +12886,6 @@ $lang = array_merge($lang, array(
 
 	'ADD_GROUPS'				=> 'Gruppen hinzufügen',
 	'ADD_PERMISSIONS'			=> 'Berechtigungen hinzufügen',
-	'ADD_USERS'					=> 'Add Users',
 	'ADVANCED_PERMISSIONS'		=> 'Erweiterte Berechtigungen',
 	'ALL_GROUPS'				=> 'Alle Gruppen auswählen',
 	'ALL_NEVER'					=> 'Alle <strong>Nie</strong>',
