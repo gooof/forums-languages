@@ -5762,7 +5762,7 @@ $lang = array_merge($lang, array(
 	'UC_THUMBNAIL_EXP'				=> 'Wird auch für den BBCode benutzt.',
 	'UNLOCKED'						=> 'Entsperrt',
 	'UPDATE_BBCODE'					=> 'BBCode aktualisieren',
-	'UPLOAD_IMAGES'					=> 'Style Image Upload',
+	'UPLOAD_IMAGES'					=> 'Style Bilder Upload',
 
 	'VIEW_IMAGE_URL'				=> 'Link zum Bild auf der Imagepage anzeigen',
 
@@ -10515,7 +10515,7 @@ $lang = array_merge($lang, array(
 	'PORTAL_BLOCKS_TITLE'				=> 'Portal Blöcke',
 	'PORTAL_MENU_TITLE'					=> 'Portal Menü Manager',
 	'USER_REMINDER_TITLE'				=> 'User Reminder',
-	'PORTAL_MENU_EXPLAIN'				=> 'Here you can manage your portal menus.',
+	'PORTAL_MENU_EXPLAIN'				=> 'Hier kannst du die Portal Menüs verwalten.',
 
 	'ACP_TOUR_DEL'					=> 'Turnier löschen',
 	'ACP_TOUR_DEL_DESC'				=> 'Wähle das zu löschende Turnier',
@@ -10660,7 +10660,7 @@ $lang = array_merge($lang, array(
 	'ACP_UP_IMAGESETS'		=> 'Upload Center',
 	'UPLOAD_EDIT'			=> 'Hochladen',
 	'UPLOAD_RANKS'		=> 'Rang Grafik Upload',
-	'UPLOAD_IMAGES'		=> 'Style Image Upload',
+	'UPLOAD_IMAGES'		=> 'Style Bilder Upload',
 	'UPLOAD_SMILIES'		=> 'Smilies Upload',
 	'UPLOAD_ICONS'		=> 'Beitrags/Gruppen Icons',
 	'ACP_CAT_PORTAL'		=> 'Portal',
@@ -12484,7 +12484,7 @@ $lang = array_merge($lang, array(
 	'MENU_ICON'				=> 'Menü Minibild',
 	'MENU_ICON_BIG'			=> 'Bild zum Menüeintrag',
 	'MENU_NDX'				=> 'NDX',
-	'MENU_NDX_BIG'			=> 'Menu Index (sort order)',
+	'MENU_NDX_BIG'			=> 'Menü (Sortierreihenfolge)',
 	'MENU_TYPE'				=> 'Typ',
 	'MENU_TYPE_BIG'			=> 'Dateityp',
 	'MENU_UPDATED'			=> 'Menü upgedated',

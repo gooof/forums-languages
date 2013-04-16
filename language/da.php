@@ -5724,7 +5724,7 @@ $lang = array_merge($lang, array(
 	'UC_THUMBNAIL_EXP'				=> 'Also used for the BBCode.',
 	'UNLOCKED'						=> 'Låst op',
 	'UPDATE_BBCODE'					=> 'Update BBCode',
-	'UPLOAD_IMAGES'					=> 'Upload multiple images',
+	'UPLOAD_IMAGES'					=> 'Style Image Upload',
 
 	'VIEW_IMAGE_URL'				=> 'View Image-URL on imagepage',
 
@@ -10625,7 +10625,7 @@ $lang = array_merge($lang, array(
 	'ACP_UP_IMAGESETS'		=> 'Upload Center',
 	'UPLOAD_EDIT'			=> 'Upload',
 	'UPLOAD_RANKS'		=> 'Rank Upload',
-	'UPLOAD_IMAGES'		=> 'Upload multiple images',
+	'UPLOAD_IMAGES'		=> 'Style Image Upload',
 	'UPLOAD_SMILIES'		=> 'Smilies Upload',
 	'UPLOAD_ICONS'		=> 'Topic Icon Upload',
 	'ACP_CAT_PORTAL'		=> 'Portal',
