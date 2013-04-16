@@ -10807,7 +10807,7 @@ $lang = array_merge($lang, array(
 	'FORM_INVALID_UID'				=> 'invalid user_id!',
 	'ARCADE_TOUR'					=> 'Arcade Tournament Addon',
 	'ACP_CAT_TOUR'					=> 'Tournament',
-
+	'ACP_ARCADE_EXTRAS'				=> 'Arcade Extras',
 
 
 	'ACP_CAT_PHPBB_SEO'	=> 'phpBB SEO',
