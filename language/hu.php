@@ -6,6 +6,7 @@ $lang = array_merge($lang, array(
 	'WHEN'					=> 'Event',
 	'ALL_DAY'				=> 'All Day Event',
 	'AM'					=> 'AM',
+	'PM_TIME'				=> 'PÜ',
 	'CALENDAR_TITLE'		=> 'Calendar',
 	'CALENDAR_NUMBER_ATTEND'	=> 'The number of people you are bringing to this event',
 	'CALENDAR_NUMBER_ATTEND_EXPLAIN'	=> '(enter 1 for yourself)',
