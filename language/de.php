@@ -7502,6 +7502,7 @@ $lang = array_merge($lang, array(
 	'ACP_POINTS_USERGUIDE_EXPLAIN'		=> 'Hier findest du Hilfe für die Einstellungen des Ultimate Points.<br />Wenn du Fragen hast, dann schaue bitte immer zuerst hier!',
 	'ACP_USER_POINTS_TITLE'				=> 'Punkte Einstellungen',
 
+	'BANK_COST'							=> 'Kontoführungsgebühren pro Periode',
 	'BANK_COST_EXPLAIN'					=> 'Die Kosten für die Kontoführung pro Periode (0 zum deaktivieren)',
 	'BANK_ENABLE'						=> 'Bank aktivieren',
 	'BANK_ENABLE_EXPLAIN'				=> 'Wenn deaktiviert, ist ein Zugriff auf das Bank Modul nicht möglich',

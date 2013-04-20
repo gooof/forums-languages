@@ -7467,6 +7467,7 @@ $lang = array_merge($lang, array(
 	'ACP_POINTS_USERGUIDE_EXPLAIN'		=> 'Here you get help on how to use the Ultimate Points.<br />So if you have questions, please always look here first, before you ask questions on the support sites!',
 	'ACP_USER_POINTS_TITLE'				=> 'Ultimate Points Settings',
 
+	'BANK_COST'							=> 'Account costs per period',
 	'BANK_COST_EXPLAIN'					=> 'Here you set the price, that users have to pay every period for their bank account (set 0 to disable this feature)',
 	'BANK_ENABLE'						=> 'Enable bank module',
 	'BANK_ENABLE_EXPLAIN'				=> 'This will allow users to use the bank module',
