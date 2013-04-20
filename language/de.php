@@ -7502,7 +7502,6 @@ $lang = array_merge($lang, array(
 	'ACP_POINTS_USERGUIDE_EXPLAIN'		=> 'Hier findest du Hilfe für die Einstellungen des Ultimate Points.<br />Wenn du Fragen hast, dann schaue bitte immer zuerst hier!',
 	'ACP_USER_POINTS_TITLE'				=> 'Punkte Einstellungen',
 
-	'BANK_COST'							=> 'Bankkosten',
 	'BANK_COST_EXPLAIN'					=> 'Die Kosten für die Kontoführung pro Periode (0 zum deaktivieren)',
 	'BANK_ENABLE'						=> 'Bank aktivieren',
 	'BANK_ENABLE_EXPLAIN'				=> 'Wenn deaktiviert, ist ein Zugriff auf das Bank Modul nicht möglich',
@@ -8426,36 +8425,28 @@ $lang = array_merge($lang, array(
 #######language/en/mods/pm_search.php#######
 
 $lang = array_merge($lang, array(
-	'DATE'	=> 'Datum',
-
+	'DATE'			=> 'Datum',
 	'RECEIVED_AT'	=> 'empfangen',
-
-	'SENDER'	=> 'Sender',
-	'BOTH'	=> 'egal',
-
-	'PM_SEARCH_EXPLAIN'	=> 'Du kannst ein Minus - vor einem Wort eingeben, damit PNs mit diesem Wort nicht aufgelistet werden.',
-
-	'SEARCH_ALL_WORDS'	=> 'PNs die alle Wörter beinhalten',
-	'SEARCH_ANY_WORD'	=> 'PNs die einzelne Wörtern beinhalten',
-
-	'PM_SEARCH_ALL_WORDS'	=> 'Suche nach allen Wörtern',
+	'SENDER'		=> 'Sender',
+	'BOTH'			=> 'egal',
+	'PM_SEARCH_EXPLAIN'			=> 'Du kannst ein Minus - vor einem Wort eingeben, damit PNs mit diesem Wort nicht aufgelistet werden.',
+	'SEARCH_ALL_WORDS'			=> 'PNs die alle Wörter beinhalten',
+	'SEARCH_ANY_WORD'			=> 'PNs die einzelne Wörtern beinhalten',
+	'PM_SEARCH_ALL_WORDS'		=> 'Suche nach allen Wörtern',
 	'PM_SEARCH_ALL_WORDS_EXPLAIN'	=> 'Satz auf yes, um auf alle Worte nur, identisch sein, der gleich ein + Zeichen vor der jedes Wort. Legen Sie auf Nein, um nach allen Wörtern suchen und benutzen Sie + vor Wörtern, die in der PMs sein muss Dieser Schlüssel wird nicht verwendet, im Sender / Empfänger zu suchen.',
-	'PM_SEARCH_WORD_ONLY'	=> 'Nur Wort Suche',
+	'PM_SEARCH_WORD_ONLY'			=> 'Nur Wort Suche',
 	'PM_SEARCH_WORD_ONLY_EXPLAIN'	=> 'Findet nur ganze Wörter, etwas wie &quot;Game&quot; wird keine PN finden in der &quot;Games&quot; steht.',
-	'PM_SEARCH_EXACT_QUERY'	=> 'Suche nach der genauen Eingabe',
+	'PM_SEARCH_EXACT_QUERY'			=> 'Suche nach der genauen Eingabe',
 	'PM_SEARCH_EXACT_QUERY_EXPLAIN'	=> 'Wähle ja, wenn Du mächtest, das die genaue Wortgruppe gefunden werden soll. + und - werden nicht mehr beachtet.',
-	'PM_SEARCH_CASE'	=> 'Gro&szlig;-und Kleinschreibung beachten',
-	'PM_SEARCH_CASE_EXPLAIN'	=> 'Setze dieses auf &quot;Ja&quot; damit Gro&szlig;-und Kleinschreibung beachtetet wird.',
-	'PM_SEARCH_CURRENT'	=> 'Aktuellen Ordner durchsuchen',
-	'PM_SEARCH_CURRENT_EXPLAIN'	=> 'Setze dieses auf &quot;Ja&quot; damit nur der aktuelle Ordner durchsucht wird.',
-	'PM_SEARCH_AUTHOR'	=> 'Suche nach Absender oder Empfänger',
-	'PM_SEARCH_AUTHOR_EXPLAIN'	=> 'Hier werden nur PNs von dem eingegebenen Absender(n) oder Empfänger(n) angezeigt.<br />Für eine Suche nach mehreren Sender(n) oder Empfänger(n), trenne diese einfach durch ein Komma (,).',
-
-	'SEARCH_PM_FOLDERS'	=> 'PN Suche…',
-
-	'UCP_PM_SEARCH'	=> 'PN Suche',
-
-	'NO_AUTH_PM_SEARCH'	=> 'Du hast keine Berechtigungen die PN Suche zu benutzen.',
+	'PM_SEARCH_CASE'				=> 'Gro&szlig;-und Kleinschreibung beachten',
+	'PM_SEARCH_CASE_EXPLAIN'		=> 'Setze dieses auf &quot;Ja&quot; damit Gro&szlig;-und Kleinschreibung beachtetet wird.',
+	'PM_SEARCH_CURRENT'				=> 'Aktuellen Ordner durchsuchen',
+	'PM_SEARCH_CURRENT_EXPLAIN'		=> 'Setze dieses auf &quot;Ja&quot; damit nur der aktuelle Ordner durchsucht wird.',
+	'PM_SEARCH_AUTHOR'				=> 'Suche nach Absender oder Empfänger',
+	'PM_SEARCH_AUTHOR_EXPLAIN'		=> 'Hier werden nur PNs von dem eingegebenen Absender(n) oder Empfänger(n) angezeigt.<br />Für eine Suche nach mehreren Sender(n) oder Empfänger(n), trenne diese einfach durch ein Komma (,).',
+	'SEARCH_PM_FOLDERS'				=> 'PN Suche…',
+	'UCP_PM_SEARCH'					=> 'PN Suche',
+	'NO_AUTH_PM_SEARCH'				=> 'Du hast keine Berechtigungen die PN Suche zu benutzen.',
 	'ADDED_PM_SEARCH_PERMISSIONS'	=> 'Berechtigungen für die PN Suche hinzugefügt.',
 ));
 
@@ -8477,7 +8468,7 @@ $lang = array_merge($lang, array(
 	'BANK_BALANCE'						=> 'Kontostand',
 	'BANK_BUTTON_DEPOSIT'				=> 'Einzahlen',
 	'BANK_BUTTON_WITHDRAW'				=> 'Abheben',
-	'ACP_BANK_COST'						=> 'Kontoführungsgebühren pro Periode',
+	'BANK_COST'							=> 'Kontoführungsgebühren pro Periode',
 	'BANK_DEPOSIT_SMALL_AMOUNT'			=> 'Der kleinste Betrag zum Einzahlen lautet %1$s %2$s.',
 	'BANK_DEPOSIT_WITHDRAW'				=> 'Einzahlung & Abhebung',
 	'BANK_DESCRIPTION'					=> 'Du befindest dich hier in unserer Hausbank. Bei uns gibt es nur geringe Kontoführungsgebühren, dafür erhältst du aber hier auch ein paar Zinsen für deine schwer verdienten %s.<br /><br /> Eine Geldanlage auf der Bank könnte sich - neben den Guthabenzinsen - durchaus für dich lohnen, denn auf der Bank ist dein Geld sicher und es kann dir nicht gestohlen werden.<br /><br />',
@@ -8642,7 +8633,6 @@ $lang = array_merge($lang, array(
 	'POINTS_TOTAL'						=> 'Gesamtes Barvermögen: %1$s %2$s',
 	'POINTS_TRANSFER'					=> 'Schenken',
 	'POINTS_VIEWING'					=> 'Ist in der Punkte Konsole',
-
 	'ROBBERY_AMOUNTLOSE'				=> 'Falls du erwischt wirst, werden dir als Strafe übrigens noch<strong> %s Prozent</strong> des Betrages, den du klauen wolltest, von deinem eigenen Konto abgezogen!<br /><br />',
 	'ROBBERY_BAD'						=> 'Dumm gelaufen ... dein Diebstahlversuch ist fehlgeschlagen!',
 	'ROBBERY_CHANCE'					=> 'Erfolgswahrscheinlichkeit',
@@ -8668,8 +8658,6 @@ $lang = array_merge($lang, array(
 	'ROBBERY_TO_MUCH_FROM_USER'			=> 'Du versuchst mehr zu klauen, als der Benutzer überhaupt hat',
 	'ROBBERY_USAGE_INFO_LOTTERY'		=> 'Deine Strafe für den fehlgeschlagenen Diebstahl wurde in den Lotterie Jackpot einbezahlt. Besten Dank dafür!',
 	'ROBBERY_USAGE_INFO_USER'			=> 'Deine Strafe für den fehlgeschlagenen Diebstahl wurde an %1$s überwiesen. Vielen Dank in seinem/ihrem Namen!',
-
-
 	'TRANSFER_AMOUNT'					=> 'Betrag den du verschenken willst',
 	'TRANSFER_COMMENT'					=> 'Kommentar',
 	'TRANSFER_DESCRIPTION'				=> 'Hier kannst du einem anderen Benutzer ein paar %1$s schenken.<br /><br />Einfach den Betrag eingeben und absenden.<br /><br />Dieser Vorgang wird dann auch in deine Logs eingetragen.<br /><br />',
@@ -8684,7 +8672,6 @@ $lang = array_merge($lang, array(
 	'TRANSFER_SET_USERNAME'				=> '<b>Name des Benutzers, dem du was Gutes tun willst:</b>',
 	'TRANSFER_TITLE'					=> '%1$s Schenkung',
 	'TRANSFER_TO_NAME'					=> 'Du willst <strong>%1$s</strong> etwas Gutes tun und ein paar <strong>%2$s</strong> verschenken!',
-
 	'UP_INSERT_FIRST_FILL'				=> 'Die Tabllen des Ultimate Points wurden erfolgreich mit den Grundwerten befüllt.',
 	'UP_REMOVE_CONFIG_ENTRIES'			=> 'Die Einträge in der Config Tabelle wurden erfolgreich entfernt',
 	'UP_REMOVE_FORUM_ENTRIES'			=> 'Die Einträge in der Forums Tabelle wurden erfolgreich entfernt',
@@ -11790,7 +11777,7 @@ $lang = array_merge($lang, array(
 	'ARCADE_LEADERS_HEADER_EXPLAIN'			=> 'Dies ist die Anzahl der Topspieler, die im Topspieler-Bereich des Arcade Header angezeigt werden.',
 	'ARCADE_ANNOUNCE_GAME'					=> 'Benachrichtigung neue Spiele',
 	'ARCADE_ANNOUNCE_GAME_EXPLAIN'			=> 'Wenn aktiviert, postet die Spielhalle nach dem Hinzufügen eines neuen Spiels eine Benachrichtigung in das entsprechende Forum.  <b>Bitte beachte, auf einmal immer nur eine kleine Anzahl Spiele mit dieser Option hinzuzufügen, um eine zu hohe Serverlast zu vermeiden.</b><br /><br />Folgende Platzhalter können im Benachrichtigungspost verwendet werden: <ul><li>[game_id]</li><li>[game_name]</li><li>[game_desc]</li><li>[game_image]</li><li>[game_link]</li><li>[download_link]</li><li>[stats_link]</li></ul>',
-	'ARCADE_ANNOUNCE_FORUM'					=> 'Forum für Beanchrichtigungen',
+	'ARCADE_ANNOUNCE_FORUM'					=> 'Forum für Benachrichtigungen',
 	'ARCADE_ANNOUNCE_FORUM_EXPLAIN'			=> 'In dieses Forum werden die Benachrichtigungen gepostet.',
 	'ARCADE_ANNOUNCE_SUBJECT'				=> 'Betreff Benachrichtigung',
 	'ARCADE_ANNOUNCE_SUBJECT_EXPLAIN'		=> 'Dies ist der Betreff des Benachrichtigungsposts für das Spiel.',

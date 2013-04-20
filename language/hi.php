@@ -7466,7 +7466,6 @@ $lang = array_merge($lang, array(
 	'ACP_POINTS_USERGUIDE_EXPLAIN'		=> 'Here you get help on how to use the Ultimate Points.<br />So if you have questions, please always look here first, before you ask questions on the support sites!',
 	'ACP_USER_POINTS_TITLE'				=> 'Ultimate Points Settings',
 
-	'BANK_COST'							=> 'The cost for maintaining a bank account',
 	'BANK_COST_EXPLAIN'					=> 'Here you set the price, that users have to pay every period for their bank account (set 0 to disable this feature)',
 	'BANK_ENABLE'						=> 'Enable bank module',
 	'BANK_ENABLE_EXPLAIN'				=> 'This will allow users to use the bank module',
@@ -8389,36 +8388,28 @@ $lang = array_merge($lang, array(
 #######language/en/mods/pm_search.php#######
 
 $lang = array_merge($lang, array(
-	'DATE'	=> 'Date',
-
+	'DATE'			=> 'Date',
 	'RECEIVED_AT'	=> 'Received',
-
-	'SENDER'	=> 'Sender',
-	'BOTH'	=> 'दोनों ',
-
-	'PM_SEARCH_EXPLAIN'	=> 'Place + in front of a word which must be found and - in front of a word which must not be found.',
-
-	'SEARCH_ALL_WORDS'	=> 'Search for all terms',
-	'SEARCH_ANY_WORD'	=> 'Search for any word',
-
-	'PM_SEARCH_ALL_WORDS'	=> 'Search for all words',
+	'SENDER'		=> 'Sender',
+	'BOTH'			=> 'दोनों ',
+	'PM_SEARCH_EXPLAIN'			=> 'Place + in front of a word which must be found and - in front of a word which must not be found.',
+	'SEARCH_ALL_WORDS'			=> 'Search for all terms',
+	'SEARCH_ANY_WORD'			=> 'Search for any word',
+	'PM_SEARCH_ALL_WORDS'		=> 'Search for all words',
 	'PM_SEARCH_ALL_WORDS_EXPLAIN'	=> 'Set to yes to match on all words only, that equals a + sign in front of every word. Set to no to search for any word and use + in front of words that must be in the PM’s. This key is not used in the Sender / Recipient search.',
-	'PM_SEARCH_WORD_ONLY'	=> 'Word search only',
+	'PM_SEARCH_WORD_ONLY'			=> 'Word search only',
 	'PM_SEARCH_WORD_ONLY_EXPLAIN'	=> 'Only match on whole words. Set to no for search on partial words. This key is not used in the Sender / Recipient search.',
-	'PM_SEARCH_EXACT_QUERY'	=> 'Search for the exact query as entered',
+	'PM_SEARCH_EXACT_QUERY'			=> 'Search for the exact query as entered',
 	'PM_SEARCH_EXACT_QUERY_EXPLAIN'	=> 'Select yes if you want to search for the exact phrase. + and - will not be parsed.',
-	'PM_SEARCH_CASE'	=> 'Search case sensitive',
-	'PM_SEARCH_CASE_EXPLAIN'	=> 'Set to yes for a case sensitive search.',
-	'PM_SEARCH_CURRENT'	=> 'Search current folder',
-	'PM_SEARCH_CURRENT_EXPLAIN'	=> 'Set to yes for search in current folder only. No will search all folders.',
-	'PM_SEARCH_AUTHOR'	=> 'Search for sender or recipient',
-	'PM_SEARCH_AUTHOR_EXPLAIN'	=> 'The search for sender(s) or recipient(s) will search for sender in PM’s to you and recipient in PM’s from you.<br />To search for several sender(s) or recipient(s), separate them with a comma (,).',
-
-	'SEARCH_PM_FOLDERS'	=> 'PM Search…',
-
-	'UCP_PM_SEARCH'	=> 'PM Search',
-
-	'NO_AUTH_PM_SEARCH'	=> 'You don’t have permissions to use PM search.',
+	'PM_SEARCH_CASE'				=> 'Search case sensitive',
+	'PM_SEARCH_CASE_EXPLAIN'		=> 'Set to yes for a case sensitive search.',
+	'PM_SEARCH_CURRENT'				=> 'Search current folder',
+	'PM_SEARCH_CURRENT_EXPLAIN'		=> 'Set to yes for search in current folder only. No will search all folders.',
+	'PM_SEARCH_AUTHOR'				=> 'Search for sender or recipient',
+	'PM_SEARCH_AUTHOR_EXPLAIN'		=> 'The search for sender(s) or recipient(s) will search for sender in PM’s to you and recipient in PM’s from you.<br />To search for several sender(s) or recipient(s), separate them with a comma (,).',
+	'SEARCH_PM_FOLDERS'				=> 'PM Search…',
+	'UCP_PM_SEARCH'					=> 'PM Search',
+	'NO_AUTH_PM_SEARCH'				=> 'You don’t have permissions to use PM search.',
 	'ADDED_PM_SEARCH_PERMISSIONS'	=> 'Successfully added permissions for PM Search.',
 ));
 
@@ -8440,7 +8431,7 @@ $lang = array_merge($lang, array(
 	'BANK_BALANCE'						=> 'Balance',
 	'BANK_BUTTON_DEPOSIT'				=> 'Deposit',
 	'BANK_BUTTON_WITHDRAW'				=> 'Withdraw',
-	'ACP_BANK_COST'						=> 'Account costs per period',
+	'BANK_COST'							=> 'Account costs per period',
 	'BANK_DEPOSIT_SMALL_AMOUNT'			=> 'The smallest amount you can deposit is %s %s.',
 	'BANK_DEPOSIT_WITHDRAW'				=> 'Deposit & Withdraw',
 	'BANK_DESCRIPTION'					=> 'Your are here in our bank. We only count low costs for a payout, but we also pay money with a defined interest rate. If you open an account, you can save your money from being robbed. So it’s worth to think about it.<br /><br />',
@@ -8605,7 +8596,6 @@ $lang = array_merge($lang, array(
 	'POINTS_TOTAL'						=> 'Sum of the points of the displayed users',
 	'POINTS_TRANSFER'					=> 'Allow Transfers',
 	'POINTS_VIEWING'					=> 'Browsing points console',
-
 	'ROBBERY_AMOUNTLOSE'				=> 'If you are not successful, you will loose additionally <strong> %s percent</strong> of the value you wanted to rob!<br /><br />',
 	'ROBBERY_BAD'						=> 'Sorry ... your robbery has failed!',
 	'ROBBERY_CHANCE'					=> 'Chance to make a successful robbery',
@@ -8631,8 +8621,6 @@ $lang = array_merge($lang, array(
 	'ROBBERY_TO_MUCH_FROM_USER'			=> 'You are trying to rob more than the user has.',
 	'ROBBERY_USAGE_INFO_LOTTERY'		=> 'Your penalty for the failed robbery value was transferred to the Lottery Jackpot. Many thanks for this!',
 	'ROBBERY_USAGE_INFO_USER'			=> 'Your penalty for the failed robbery value was transferred to %1$s. In his/her name we like to thank you very much!',
-
-
 	'TRANSFER_AMOUNT'					=> 'Amount to transfer',
 	'TRANSFER_COMMENT'					=> 'Comment',
 	'TRANSFER_DESCRIPTION'				=> 'Here you can transfer a few %1$s. Simply add the name and the amount of points of the user you like to donate and click send. The transfer will be logged in your log files.',
@@ -8647,7 +8635,6 @@ $lang = array_merge($lang, array(
 	'TRANSFER_SET_USERNAME'				=> '<b>Name of the user you want to make a donation:</b>',
 	'TRANSFER_TITLE'					=> '%1$s Transfer',
 	'TRANSFER_TO_NAME'					=> 'You want to transfer some <strong>%2$s</strong> to <strong>%1$s</strong>',
-
 	'UP_INSERT_FIRST_FILL'				=> 'The tables were filled successfully with some basic datas.',
 	'UP_REMOVE_CONFIG_ENTRIES'			=> 'The entries in the config table were removed successfully',
 	'UP_REMOVE_FORUM_ENTRIES'			=> 'The entries in the forums table were removed successfully',
