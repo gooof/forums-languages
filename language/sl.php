@@ -2523,7 +2523,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'Uporabniška nadzorna plošča', 
+	'UCP'		=> 'User Control Panel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Administracija',
 	'ANNOUNCEMENTS'	=> 'Razglas',
@@ -3194,7 +3194,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Preveč naslovnikov.',
 	'TOO_MANY_REGISTERS'		=> 'Presegli ste največje število poizkusov registracije za to sejo. Prosimo, poskusite znova malo kasneje.',
 
-	'UCP'						=> 'Uporabniška nadzorna plošča',
+	'UCP'						=> 'User Control Panel',
 	'UCP_ACTIVATE'				=> 'Aktiviraj račun',
 	'UCP_ADMIN_ACTIVATE'		=> 'Prosimo upoštevajte, da morate vpisati veljaven e-poštni naslov, da bo vaš račun lahko aktiviran. Administrator bo pregledal vašo prijavo in če bo odobrena, boste prejeli potrditveno e-pošto na naslov, ki ste ga navedli.',
 	'UCP_AIM'					=> 'AOL Instant Messenger',
@@ -10125,7 +10125,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Pokaži vse operacije',
 
-	'UCP'					=> 'Uporabniška nadzorna plošča',
+	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> 'Vsako uporabniško ime napiši v drugo vrstico.',
 	'USER_CONTROL_PANEL'	=> 'Uporabniška nadzorna plošča',
 
