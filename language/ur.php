@@ -2522,7 +2522,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'User Control Panel', 
+	'UCP'		=> 'پروفایل کنٹرول پینل', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'انتظامیہ',
 	'ANNOUNCEMENTS'	=> 'اعلانات',
@@ -3191,7 +3191,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'آپ نے بہت زیادہ وصول کنندگان کو ایک ذاتی پیغام بھیجنے کی کوشش کی.',
 	'TOO_MANY_REGISTERS'		=> 'آپ اس سیشن کے لئے رجسٹریشن کی کوششوں کی زیادہ سے زیادہ تعداد سے تجاوز کر چکے ہیں. براہ مہربانیکچھ دیر بعد دوبارہ کوشش کریں.',
 
-	'UCP'						=> 'User Control Panel',
+	'UCP'						=> 'پروفایل کنٹرول پینل',
 	'UCP_ACTIVATE'				=> 'اکائونٹ چالو کریں',
 	'UCP_ADMIN_ACTIVATE'		=> 'براہ مہربانی نوٹ کریں کہ اکائونٹ چالو کرنے سے پہلے آپکو ایک درست ای میل کی دینے کی ضرورت ہے. منتظمین آپکے اکائونٹ کا جائزہ لیں گے اور توژیق کے بعد آپکو ای میل کر دی جائے گی.',
 	'UCP_AIM'					=> 'AOL فوری پیغام رساں',
@@ -10124,7 +10124,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'تمام اعمال دکھائیں',
 
-	'UCP'					=> 'User Control Panel',
+	'UCP'					=> 'پروفایل کنٹرول پینل',
 	'USERNAMES_EXPLAIN'		=> 'ہر رکنیتی نام الگ سطر پر لکھیں',
 	'USER_CONTROL_PANEL'	=> 'صارف کنٹرول پینل',
 
