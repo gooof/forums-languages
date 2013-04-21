@@ -2511,7 +2511,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'Kontrollpanel', 
+	'UCP'		=> 'User Control Panel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Administration',
 	'ANNOUNCEMENTS'	=> 'Anslag',
@@ -3182,7 +3182,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Du försökte sända ett privat meddelande till för många mottagare.',
 	'TOO_MANY_REGISTERS'		=> 'Du har överskridit det maximala antalet tillåtna registreringsförsök för denna session. Försök igen senare.',
 
-	'UCP'						=> 'Kontrollpanel',
+	'UCP'						=> 'User Control Panel',
 	'UCP_ACTIVATE'				=> 'Aktivera konto',
 	'UCP_ADMIN_ACTIVATE'		=> 'Observera att du måste ange en giltig e-postadress för att ditt konto ska kunna aktiveras. Forumadministratörerna kommer att granska ditt konto och om det godkänns så kommer du då att få ett e-postmeddelande till e-postadressen du anger.',
 	'UCP_AIM'					=> 'AOL Instant Messenger',
@@ -10113,7 +10113,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Visa alla händelser',
 
-	'UCP'					=> 'Kontrollpanel',
+	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> 'Placera varje användarnamn på en ny rad.',
 	'USER_CONTROL_PANEL'	=> 'Kontrollpanel',
 

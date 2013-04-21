@@ -2522,7 +2522,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'Painel de Controlo do Utilizador', 
+	'UCP'		=> 'User Control Panel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Administração',
 	'ANNOUNCEMENTS'	=> 'Anúncios',
@@ -3230,7 +3230,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Muitos Destinatários.',
 	'TOO_MANY_REGISTERS'		=> 'Excedeu o número máximo de tentativas de Registo para esta sessão. Tente novamente mais tarde.',
 
-	'UCP'						=> 'Painel de Controlo do Utilizador',
+	'UCP'						=> 'User Control Panel',
 	'UCP_ACTIVATE'				=> 'Ativar Registo',
 	'UCP_ADMIN_ACTIVATE'		=> 'Tem de introduzir um endereço de email válido para que o Registo seja ativado. <br />O Administrador verificará o seu Registo, e, se for Aprovado, receberá um email para ativar a sua conta.',
 	'UCP_AIM'					=> 'Mensageiro Instantâneo AOL',
@@ -10161,7 +10161,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Mostrar todas as operações',
 
-	'UCP'					=> 'Painel de Controlo do Utilizador',
+	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> 'Insira cada um dos Utilizadores em linhas separadas.',
 	'USER_CONTROL_PANEL'	=> 'Painel de Utilizadores',
 

@@ -2521,7 +2521,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'Панель керування', 
+	'UCP'		=> 'User Control Panel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Адміністрування',
 	'ANNOUNCEMENTS'	=> 'Оголошення',
@@ -3192,7 +3192,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Ви намагались відправити приватне повідомлення занадто багатьом одержувачам',
 	'TOO_MANY_REGISTERS'		=> 'Ви перевищили максимальну кількість спроб реєстрації протягом цієї сесії. Спробуйте, будь-ласка, пізніше.',
 
-	'UCP'						=> 'Панель керування',
+	'UCP'						=> 'User Control Panel',
 	'UCP_ACTIVATE'				=> 'Активувати обліковий запис',
 	'UCP_ADMIN_ACTIVATE'		=> 'Зауважте, що необхідно ввести правильну адресу електронної пошти перед активацією. Адміністратор перегляне ваш обліковий запис і у випадку схвалення ви отримаєте e-mail повідомлення на задану вами адресу.',
 	'UCP_AIM'					=> 'AOL Instant Messenger',
@@ -10123,7 +10123,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Показати усі дії',
 
-	'UCP'					=> 'Панель керування',
+	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> 'Вкажіть кожне ім\'я користувача з нової стрічки',
 	'USER_CONTROL_PANEL'	=> 'Панель керування',
 

@@ -2522,7 +2522,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'לוח בקרה למשתמש', 
+	'UCP'		=> 'User Control Panel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'ניהול ראשי',
 	'ANNOUNCEMENTS'	=> 'הכרזות',
@@ -3193,7 +3193,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'ניסית לשלוח הודעה פרטית ליותר מדי נמענים.',
 	'TOO_MANY_REGISTERS'		=> 'עברת את המספר המירבי של נסיונות הרשמה לחיבור זה. נסה שנית מאוחר יותר.',
 
-	'UCP'						=> 'לוח בקרה למשתמש',
+	'UCP'						=> 'User Control Panel',
 	'UCP_ACTIVATE'				=> 'הפעל חשבון',
 	'UCP_ADMIN_ACTIVATE'		=> 'שים לב שאתה צריך להזין כתובת דואר אלקטרוני חוקית לפני שחשבונך יופעל. המנהל הראשי יסקור את חשבונך ואם יאשר, תקבל הודעת דואר אלקטרוני לכתובת שציינת.',
 	'UCP_AIM'					=> 'AOL Instant Messenger',
@@ -10124,7 +10124,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'הצג את כל הפעולות',
 
-	'UCP'					=> 'לוח בקרה למשתמש',
+	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> 'הכנס כל שם משתמש בשורה נפרדת.',
 	'USER_CONTROL_PANEL'	=> 'לוח בקרה למשתמש',
 

@@ -2522,7 +2522,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'Ovládací panel užívateľa', 
+	'UCP'		=> 'User Control Panel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Administrácia',
 	'ANNOUNCEMENTS'	=> 'Oznámenia',
@@ -3193,7 +3193,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Pokúsili ste sa poslať súkromný správu príliš veľa príjemcom',
 	'TOO_MANY_REGISTERS'		=> 'Prekročili ste maximálny počet pokusov o registráciu počas tohto spojenia. Skúste to neskôr, prosím.',
 
-	'UCP'						=> 'Ovládací panel užívateľa',
+	'UCP'						=> 'User Control Panel',
 	'UCP_ACTIVATE'				=> 'Aktivovať konto',
 	'UCP_ADMIN_ACTIVATE'		=> 'Uvedomte si, prosím, že budete potrebovať vložiť platnú e-mailovú adresu predtým, než bude Vaše konto aktivované. Administrátor skontroluje Vaše konto a ak ho povolí, budete o tom informovaní e-mailom na adrese, ktorú zadáte počas registrácie.',
 	'UCP_AIM'					=> 'AOL Instant Messenger',
@@ -10124,7 +10124,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Ukázať všetky operácie',
 
-	'UCP'					=> 'Ovládací panel užívateľa',
+	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> 'Vložte každé užívateľské meno na nový riadok',
 	'USER_CONTROL_PANEL'	=> 'Užívateľský ovládací panel',
 

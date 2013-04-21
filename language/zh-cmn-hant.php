@@ -2522,7 +2522,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> '會員控制台 (UCP)', 
+	'UCP'		=> 'User Control Panel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> '管理員',
 	'ANNOUNCEMENTS'	=> '公告',
@@ -3193,7 +3193,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> '您嘗試要發送的私人訊息，設定了太多的收件人。',
 	'TOO_MANY_REGISTERS'		=> '你嘗試註冊的次數太多，請稍後再試。',
 
-	'UCP'						=> '會員控制台 (UCP)',
+	'UCP'						=> 'User Control Panel',
 	'UCP_ACTIVATE'				=> '啟用帳號',
 	'UCP_ADMIN_ACTIVATE'		=> '在帳號啟用前您必須輸入一個有效的 e-mail 位址，管理員將審核您的帳號，如果審核通過，您將會收到寄往您提供的 e-mail 位址的啟用通知。',
 	'UCP_AIM'					=> 'AOL 即時訊息',
@@ -10124,7 +10124,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> '顯示所有的操作',
 
-	'UCP'					=> '會員控制台 (UCP)',
+	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> '請每一行輸入一個會員名稱。',
 	'USER_CONTROL_PANEL'	=> '會員控制台',
 

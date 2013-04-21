@@ -2522,7 +2522,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'Panel de Control de Usuario', 
+	'UCP'		=> 'User Control Panel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Administración',
 	'ANNOUNCEMENTS'	=> 'Anuncios',
@@ -3193,7 +3193,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Intentó enviar un mensaje privado a demasiados destinatarios',
 	'TOO_MANY_REGISTERS'		=> 'Ha excedido el número máximo de intentos de registros para esta sesión. Por favor inténtelo más tarde.',
 
-	'UCP'						=> 'Panel de Control de Usuario',
+	'UCP'						=> 'User Control Panel',
 	'UCP_ACTIVATE'				=> 'Activar cuenta',
 	'UCP_ADMIN_ACTIVATE'		=> 'Por favor observe que necesita introducir una dirección de email válida antes de que su cuenta sea activada. El administrador revisará su cuenta y si la aprueba, recibirá un email en la direccion que introdujo.',
 	'UCP_AIM'					=> 'AOL Instant Messenger',
@@ -10124,7 +10124,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Mostrar todas las operaciones',
 
-	'UCP'					=> 'Panel de Control de Usuario',
+	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> 'Inserte cada nombre de usuario en una línea diferente',
 	'USER_CONTROL_PANEL'	=> 'Panel de Control del Usuario',
 

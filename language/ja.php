@@ -2535,7 +2535,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'ユーザーCP', 
+	'UCP'		=> 'User Control Panel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Admin',
 	'ANNOUNCEMENTS'	=> '告知トピック',
@@ -3209,7 +3209,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> '受取人が多過ぎます',
 	'TOO_MANY_REGISTERS'		=> 'ユーザー登録に何度も失敗したため、このセッションによるアクセスを強制的に制限しました。しばらく時間が経ってからもう一度ユーザー登録してください。',
 
-	'UCP'						=> 'ユーザーCP',
+	'UCP'						=> 'User Control Panel',
 	'UCP_ACTIVATE'				=> '有効アカウント',
 	'UCP_ADMIN_ACTIVATE'		=> '有効なメールアドレスをご入力ください。入力したメールアドレスへアカウント有効化メールが送信されます。',
 	'UCP_AIM'					=> 'AOL インスタントメッセンジャ',
@@ -10140,7 +10140,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Show all operations',
 
-	'UCP'					=> 'ユーザーCP',
+	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> '１行につき１つのユーザー名を入力してください',
 	'USER_CONTROL_PANEL'	=> 'ユーザーCP',
 

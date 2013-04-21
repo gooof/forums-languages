@@ -2486,7 +2486,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'Brukerkontrollpanel', 
+	'UCP'		=> 'User Control Panel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Administration',
 	'ANNOUNCEMENTS'	=> 'Annonseringer',
@@ -3159,7 +3159,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'For mange mottakere',
 	'TOO_MANY_REGISTERS'		=> 'Du kan ikke forsøke å registrere deg så mange ganger på en gang. Prøv igjen senere.',
 
-	'UCP'						=> 'Brukerkontrollpanel',
+	'UCP'						=> 'User Control Panel',
 	'UCP_ACTIVATE'				=> 'Aktiver brukerkonto',
 	'UCP_ADMIN_ACTIVATE'		=> 'Merk deg et du må oppgi en eksisterende e-postadresse for å kunne aktivere brukerkontoen din. Administratoren kommer til å se på brukerkontoen din, og hvis han/hun godkjenner den, vil en e-post bli sendt til den oppgitte adressen.',
 	'UCP_AIM'					=> 'AOL Instant Messenger',
@@ -10090,7 +10090,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Show all operations',
 
-	'UCP'					=> 'Brukerkontrollpanel',
+	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> 'Skriv alle brukernavn på en egen linie.',
 	'USER_CONTROL_PANEL'	=> 'Bruker kontrollpanel',
 

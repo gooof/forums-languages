@@ -2522,7 +2522,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'Членски панел', 
+	'UCP'		=> 'User Control Panel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Администрација',
 	'ANNOUNCEMENTS'	=> 'Известувања',
@@ -3193,7 +3193,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Премногу примачи',
 	'TOO_MANY_REGISTERS'		=> 'Премногу пати пробавте да се регистрирате . Ве молиме да се обидите малку покасно.',
 
-	'UCP'						=> 'Членски панел',
+	'UCP'						=> 'User Control Panel',
 	'UCP_ACTIVATE'				=> 'Активирај членство',
 	'UCP_ADMIN_ACTIVATE'		=> 'Мора да ставите точна емаил адреса за да го активирате членството. Администраторот ке го разгледа вашето членство ,и ако го одобри истот ке ви испрати емаил на дадената адреса.',
 	'UCP_AIM'					=> 'AOL Инстатн месенџер',
@@ -10124,7 +10124,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Прикажи ги сите операции',
 
-	'UCP'					=> 'Членски панел',
+	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> 'Внеси го секое членско име во нов ред.',
 	'USER_CONTROL_PANEL'	=> 'Членски контролен панел',
 

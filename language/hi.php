@@ -2521,7 +2521,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'उपयोगकर्ता  नियंत्रण पट्टिका', 
+	'UCP'		=> 'User Control Panel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'प्रशासक',
 	'ANNOUNCEMENTS'	=> 'सूचना ',
@@ -3192,7 +3192,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'कई प्राप्तकर्ता।',
 	'TOO_MANY_REGISTERS'		=> 'पंजीकृरण हेतु आप अधिकतम उपलब्ध प्रयत्न कर चुके है कृपया बाद में प्रयत्न करें ।',
 
-	'UCP'						=> 'उपयोगकर्ता  नियंत्रण पट्टिका',
+	'UCP'						=> 'User Control Panel',
 	'UCP_ACTIVATE'				=> 'खाता सक्रिय करें',
 	'UCP_ADMIN_ACTIVATE'		=> 'कृपया ध्यान दे सक्रिय होने से पहले आपको वैध ई-मेल पता भरना है । प्रशासक जाँच करेगा और सही होने पर आपके बताए गए पते पर ई-मेल करेग।',
 	'UCP_AIM'					=> 'AOL त्वरित संदेशक',
@@ -10123,7 +10123,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Show all operations',
 
-	'UCP'					=> 'उपयोगकर्ता  नियंत्रण पट्टिका',
+	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> 'सभी उपयोक्ता नाम को अलग लाईन पर लिखें।',
 	'USER_CONTROL_PANEL'	=> 'उपयोक्ता नियंत्रण पट्टिका',
 

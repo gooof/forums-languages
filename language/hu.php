@@ -2521,7 +2521,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'Felhasználói vezérlőpult', 
+	'UCP'		=> 'User Control Panel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Adminisztráció',
 	'ANNOUNCEMENTS'	=> 'Közlemények',
@@ -3190,7 +3190,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Túl sok címzettet adtál meg.',
 	'TOO_MANY_REGISTERS'		=> 'Túllépted a legfeljebb engedélyezett regisztrációkísérletek számát. Kérjük, próbálkozz később.',
 
-	'UCP'						=> 'Felhasználói vezérlőpult',
+	'UCP'						=> 'User Control Panel',
 	'UCP_ACTIVATE'				=> 'Azonosító aktiválása',
 	'UCP_ADMIN_ACTIVATE'		=> 'Kérjük, vedd figyelembe, hogy egy valós e-mail címet kell megadnod, hogy az azonosítód aktiválva lehessen. Az adminisztrátor át fogja nézni az azonosítód, és ha jóváhagyja, kapni fogsz egy e-mailt a megadott címre.',
 	'UCP_AIM'					=> 'AOL Instant Messenger',
@@ -10121,7 +10121,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Összes művelet megjelenítése',
 
-	'UCP'					=> 'Felhasználói vezérlőpult',
+	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> 'Minden felhasználónevet külön sorba írj.',
 	'USER_CONTROL_PANEL'	=> 'Felhasználói vezérlőpult',
 

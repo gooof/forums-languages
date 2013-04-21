@@ -2522,7 +2522,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'Brugerkontrolpanel', 
+	'UCP'		=> 'User Control Panel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Administration',
 	'ANNOUNCEMENTS'	=> 'Bekendtgørelser',
@@ -3193,7 +3193,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Du forsøgte at sende en privat besked til for mange modtagere.',
 	'TOO_MANY_REGISTERS'		=> 'Du har overskredet det maksimale antal tilmeldingsforsøg for denne session. Prøv venligst igen senere.',
 
-	'UCP'						=> 'Brugerkontrolpanel',
+	'UCP'						=> 'User Control Panel',
 	'UCP_ACTIVATE'				=> 'Aktiver konto',
 	'UCP_ADMIN_ACTIVATE'		=> 'Bemærk venligst at du skal indtaste en gyldig emailadresse for at din konto kan aktiveres. Administratoren vil gennemgå din konto og hvis denne godkendes, vil du modtage en email på den adresse du har angivet.',
 	'UCP_AIM'					=> 'AOL Instant Messenger',
@@ -10124,7 +10124,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Vis alle handlinger',
 
-	'UCP'					=> 'Brugerkontrolpanel',
+	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> 'Anfør alle brugernavne på en selvstændig linie.',
 	'USER_CONTROL_PANEL'	=> 'Brugerkontrolpanel',
 

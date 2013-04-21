@@ -2516,7 +2516,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'لوحة التحكم', 
+	'UCP'		=> 'User Control Panel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'الإدارة',
 	'ANNOUNCEMENTS'	=> 'إعلانات',
@@ -3183,7 +3183,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'عدد كبير من المستقبلين',
 	'TOO_MANY_REGISTERS'		=> 'لقد تجاوزت الحد الأقصى من محاولات التسجيل لهذه الجلسة، يرجى المحاولة مرة أخرى في وقت لاحق',
 
-	'UCP'						=> 'لوحة التحكم',
+	'UCP'						=> 'User Control Panel',
 	'UCP_ACTIVATE'				=> 'تنشيط الحساب',
 	'UCP_ADMIN_ACTIVATE'		=> 'يرجى العلم بأنه عليك إدخال بريد إلكتروني صحيح لينشّط حسابك، سيراجع المدير حسابك وإذا تمت الموافقة عليه ستستقبل بريد إلكتروني على العنوان الذي اخترته',
 	'UCP_AIM'					=> 'ماسنجر AOL',
@@ -10114,7 +10114,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'عـرض العمليات جميعها',
 
-	'UCP'					=> 'لوحة التحكم',
+	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> 'ضع كل اسم مستخدم في سطر منفصل',
 	'USER_CONTROL_PANEL'	=> 'لوحة تحكم العضو',
 

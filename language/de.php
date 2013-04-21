@@ -2521,7 +2521,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Uhr',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'UCP', 
+	'UCP'		=> 'Persönlicher Bereich', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Administration',
 	'ANNOUNCEMENTS'	=> 'Bekanntmachungen',
@@ -3231,7 +3231,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Du hast versucht, eine Private Nachricht an zu viele Empfänger zu senden.',
 	'TOO_MANY_REGISTERS'		=> 'Du hast die zulässige Zahl von Registrierungs-Versuchen in dieser Sitzung überschritten. Bitte versuche es später erneut.',
 
-	'UCP'						=> 'UCP',
+	'UCP'						=> 'Persönlicher Bereich',
 	'UCP_ACTIVATE'				=> 'Benutzerkonto aktivieren',
 	'UCP_ADMIN_ACTIVATE'		=> 'Bitte beachte, dass du eine gültige E-Mail-Adresse angeben musst, bevor dein Benutzerkonto aktiviert wird. Ein Administrator wird dein Benutzerkonto überprüfen und wenn er es freigibt, erhältst du eine Nachricht an die angegebene E-Mail-Adresse.',
 	'UCP_AIM'					=> 'AOL-Webname',
@@ -10160,7 +10160,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Alle Vorgänge anzeigen',
 
-	'UCP'					=> 'UCP',
+	'UCP'					=> 'Persönlicher Bereich',
 	'USERNAMES_EXPLAIN'		=> 'Verwende für jeden Benutzernamen eine neue Zeile.',
 	'USER_CONTROL_PANEL'	=> 'Persönlicher Bereich',
 

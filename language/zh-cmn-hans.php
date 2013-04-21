@@ -2522,7 +2522,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> '用户控制面板', 
+	'UCP'		=> 'User Control Panel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> '管理',
 	'ANNOUNCEMENTS'	=> '公告',
@@ -3193,7 +3193,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> '收件人过多',
 	'TOO_MANY_REGISTERS'		=> '在这次对话中您已经超过注册的最大尝试次数。请稍后再尝试。',
 
-	'UCP'						=> '用户控制面板',
+	'UCP'						=> 'User Control Panel',
 	'UCP_ACTIVATE'				=> '激活帐号',
 	'UCP_ADMIN_ACTIVATE'		=> '请注意在帐号激活前您必须输入一个有效的 Email 地址，管理员将审核您的帐号，如果审核通过将会发送通知邮件到您提供的 Email 地址。',
 	'UCP_AIM'					=> 'AIM 帐户',
@@ -10124,7 +10124,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> '显示所有操作',
 
-	'UCP'					=> '用户控制面板',
+	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> '在同一行上分开排列用户名',
 	'USER_CONTROL_PANEL'	=> '用户控制面板',
 

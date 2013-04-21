@@ -2522,7 +2522,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'Papan Pengaturan Pengguna', 
+	'UCP'		=> 'User Control Panel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Administrasi',
 	'ANNOUNCEMENTS'	=> 'Pengumuman',
@@ -3193,7 +3193,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Anda mencoba mengirimkan pesan kepada penerima yang terlalu banyak.',
 	'TOO_MANY_REGISTERS'		=> 'Anda telah mencapai angka pendaftaran maksimum yang dicoba di sesi ini. Mohon coba beberapa saat lagi.',
 
-	'UCP'						=> 'Papan Pengaturan Pengguna',
+	'UCP'						=> 'User Control Panel',
 	'UCP_ACTIVATE'				=> 'Aktifkan nama',
 	'UCP_ADMIN_ACTIVATE'		=> 'Harap diperhatikan bahwa anda harus memasukan alamat e-mail yang resmi sebelum account anda diaktifkan. Administrator akan meninjau account anda dan jika disetujui anda akan menerima e-mail ke alamat yang anda tentukan.',
 	'UCP_AIM'					=> 'AOL Instant Messenger',
@@ -10124,7 +10124,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Tampilkan semua operasi',
 
-	'UCP'					=> 'Papan Pengaturan Pengguna',
+	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> 'Tempatkan setiap nama pengguna di baris baru.',
 	'USER_CONTROL_PANEL'	=> 'Papan Pengaturan Pengguna',
 

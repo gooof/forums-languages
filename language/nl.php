@@ -2522,7 +2522,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'Gebruikerspaneel', 
+	'UCP'		=> 'User Control Panel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Beheer',
 	'ANNOUNCEMENTS'	=> 'Mededelingen',
@@ -3193,7 +3193,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Teveel ontvangers',
 	'TOO_MANY_REGISTERS'		=> 'Je hebt het maximaal aantal registratie-pogingen in deze sessie bereikt. Probeer het later nog eens.',
 
-	'UCP'						=> 'Gebruikerspaneel',
+	'UCP'						=> 'User Control Panel',
 	'UCP_ACTIVATE'				=> 'Account activeren',
 	'UCP_ADMIN_ACTIVATE'		=> 'Je dient een geldig e-mailadres op te geven om je account te kunnen activeren. Het beheer zal je registratie controleren en bij goedkeuring krijg je een e-mail op het opgegeven adres.',
 	'UCP_AIM'					=> 'AOL Instant Messenger',
@@ -10142,7 +10142,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Toon alle werkingen',
 
-	'UCP'					=> 'Gebruikerspaneel',
+	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> 'Plaats elke gebruikersnaam op een nieuwe lijn',
 	'USER_CONTROL_PANEL'	=> 'Gebruikerspaneel',
 

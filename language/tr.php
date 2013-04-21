@@ -2522,7 +2522,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'Kullanıcı Kontrol Paneli', 
+	'UCP'		=> 'User Control Panel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Yönetim',
 	'ANNOUNCEMENTS'	=> 'Duyurular',
@@ -3193,7 +3193,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Çok fazla alıcıya bir özel mesaj göndermeyi denediniz.',
 	'TOO_MANY_REGISTERS'		=> 'Bu oturum için en fazla kayıt girişimi sayısını aştınız. Lütfen daha sonra tekrar deneyin.',
 
-	'UCP'						=> 'Kullanıcı Kontrol Paneli',
+	'UCP'						=> 'User Control Panel',
 	'UCP_ACTIVATE'				=> 'Hesabı aktifleştir',
 	'UCP_ADMIN_ACTIVATE'		=> 'Not: Hesabınız aktif edebilmek için doğru bir e-posta adresi girmelisiniz. Yöneticiler hesabınızı inceleyecekler ve eğer onaylarlarsa belirttiğiniz adrese bir e-posta alacaksınız.',
 	'UCP_AIM'					=> 'AOL Instant Messenger',
@@ -10124,7 +10124,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Tüm işlemleri göster',
 
-	'UCP'					=> 'Kullanıcı Kontrol Paneli',
+	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> 'Her kullanıcı adını ayrı bir satıra yerleştirin.',
 	'USER_CONTROL_PANEL'	=> 'Kullanıcı Kontrol Paneli',
 

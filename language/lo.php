@@ -2522,7 +2522,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'ແຜງຄວບຄຸມຜຸ້ໃຊ້ງານ', 
+	'UCP'		=> 'User Control Panel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Administration',
 	'ANNOUNCEMENTS'	=> 'ປະກາດລວມ',
@@ -3193,7 +3193,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'You tried to send a private message to too many recipients.',
 	'TOO_MANY_REGISTERS'		=> 'You have exceeded the maximum number of registration attempts for this session. Please try again later.',
 
-	'UCP'						=> 'ແຜງຄວບຄຸມຜຸ້ໃຊ້ງານ',
+	'UCP'						=> 'User Control Panel',
 	'UCP_ACTIVATE'				=> 'Activate account',
 	'UCP_ADMIN_ACTIVATE'		=> 'Please note that you will need to enter a valid e-mail address before your account is activated. The administrator will review your account and if approved you will receive an e-mail at the address you specified.',
 	'UCP_AIM'					=> 'AOL Instant Messenger',
@@ -10124,7 +10124,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Show all operations',
 
-	'UCP'					=> 'ແຜງຄວບຄຸມຜຸ້ໃຊ້ງານ',
+	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> 'Place each username on a separate line.',
 	'USER_CONTROL_PANEL'	=> 'ແຜງຄວບຄຸມຜູ້ໃຊ້ງານ',
 

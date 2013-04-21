@@ -2522,7 +2522,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'Асабісты раздзел', 
+	'UCP'		=> 'User Control Panel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Адміністраванне',
 	'ANNOUNCEMENTS'	=> 'Аб\'явы',
@@ -3193,7 +3193,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Вы паспрабавалі адправіць асабістае паведамленне занадта вялікай колькасці атрымальнікаў.',
 	'TOO_MANY_REGISTERS'		=> 'Вы вычарпалі лімітавую колькасць спроб рэгістрацыі для дадзенай сесіі. Паўторыце спробу пазней.',
 
-	'UCP'						=> 'Асабісты раздзел',
+	'UCP'						=> 'User Control Panel',
 	'UCP_ACTIVATE'				=> 'Актываваць уліковы запіс',
 	'UCP_ADMIN_ACTIVATE'		=> 'Звернеце ўвагу на тое, што вы павінны ўвесці правільны адрас электроннай пошты перад актывацыяй. Адміністратар праверыць ваш уліковы запіс і адправіць на паказаны адрас ліст, якb змяшчае спасылку для актывацыі ўліковага запісу.',
 	'UCP_AIM'					=> 'AIM',
@@ -10124,7 +10124,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Паказаць усе дзеянні',
 
-	'UCP'					=> 'Асабісты раздзел',
+	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> 'Уводзіце кожнае імя на новым радку.',
 	'USER_CONTROL_PANEL'	=> 'Асабісты раздзел',
 

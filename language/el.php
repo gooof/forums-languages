@@ -2522,7 +2522,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'Πίνακας Ελέγχου Μέλους', 
+	'UCP'		=> 'User Control Panel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Διαχείριση',
 	'ANNOUNCEMENTS'	=> 'Ανακοινώσεις',
@@ -3192,7 +3192,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Προσπαθήσατε να στείλετε ένα προσωπικό μήνυμα σε πάρα πολλούς παραλήπτες.',
 	'TOO_MANY_REGISTERS'		=> 'Έχετε υπερβεί τον αριθμό προσπαθειών εγγραφής για αυτή την σύνοδο. Παρακαλώ δοκιμάστε πάλι αργότερα.',
 
-	'UCP'						=> 'Πίνακας Ελέγχου Μέλους',
+	'UCP'						=> 'User Control Panel',
 	'UCP_ACTIVATE'				=> 'Ενεργοποίηση λογαριασμού',
 	'UCP_ADMIN_ACTIVATE'		=> 'Σημειώστε ότι πρέπει να εισάγετε αληθή διεύθυνση ηλεκτρονικού ταχυδρομείου πριν ενεργοποιηθεί ο λογαριασμός σας. Ο διαχειριστής θα ελέγξει τον λογαριασμό σας και αν τον εγκρίνει θα σας αποσταλεί μήνυμα ηλεκτρονικού ταχυδρομείου στην διεύθυνση που δώσατε.',
 	'UCP_AIM'					=> 'AOL Instant Messenger',
@@ -10124,7 +10124,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Προβολή όλων των ενεργειών',
 
-	'UCP'					=> 'Πίνακας Ελέγχου Μέλους',
+	'UCP'					=> 'User Control Panel',
 	'USERNAMES_EXPLAIN'		=> 'Βάλτε το κάθε όνομα μέλους σε διαφορετική γραμμή.',
 	'USER_CONTROL_PANEL'	=> 'Πίνακας ελέγχου μέλους',
 
