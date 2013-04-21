@@ -2617,7 +2617,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'User Control Panel', 
+	'UCP'		=> 'کنترل پنل کاربري', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'مديريت',
 	'ANNOUNCEMENTS'	=> 'اعلان ها',
@@ -3341,7 +3341,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'شما تلاش كرديد پيام خصوصي را به تعداد زيادي گيرنده ارسال نماييد.',
 	'TOO_MANY_REGISTERS'		=> 'شما بیش از حد مجاز برای ثبت نام تلاش کردید. به دلیل مسائل امنیتی فعلا نمی توانید ثبت نام کنید. لطفا بعدا دوباره تلاش کنید.',
 
-	'UCP'						=> 'User Control Panel',
+	'UCP'						=> 'کنترل پنل کاربري',
 	'UCP_ACTIVATE'				=> 'فعال كردن نام كاربري شما',
 	'UCP_ADMIN_ACTIVATE'		=> 'براي ثبت نام بايد ايميل واقعي و درست وارد كنيد.',
 	'UCP_AIM'					=> 'پیام رسان AOL',
@@ -10294,7 +10294,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Show all operations',
 
-	'UCP'					=> 'User Control Panel',
+	'UCP'					=> 'کنترل پنل کاربري',
 	'USERNAMES_EXPLAIN'		=> 'هر کاربر در هر خط تفکيک شود.',
 	'USER_CONTROL_PANEL'	=> 'کنترل پنل کاربري',
 

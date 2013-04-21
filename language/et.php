@@ -2470,7 +2470,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'User Control Panel', 
+	'UCP'		=> 'Juhtpaneel', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Administratsioon',
 	'ANNOUNCEMENTS'	=> 'Teadaanded',
@@ -3132,7 +3132,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Proovisid saata privaatsõnumit liiga paljudele kasutajatele korraga.',
 	'TOO_MANY_REGISTERS'		=> 'Sa oled ületanud maksimaalsete registreerimiskatsete arvu sellel sessioonil. Proovi hiljem uuesti.',
 
-	'UCP'						=> 'User Control Panel',
+	'UCP'						=> 'Juhtpaneel',
 	'UCP_ACTIVATE'				=> 'Aktiveeri kasutaja',
 	'UCP_ADMIN_ACTIVATE'		=> 'Sa pead sisestama korrektse e-posti aadressi, et su kasutaja aktiveeritaks. Administraator vaatab su kasutaja üle ja kui ta su foorumisse laseb, saad sa selle kohta e-kirja.',
 	'UCP_AIM'					=> 'AOL Messenger',
@@ -10063,7 +10063,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Näita kõiki operatsioone',
 
-	'UCP'					=> 'User Control Panel',
+	'UCP'					=> 'Juhtpaneel',
 	'USERNAMES_EXPLAIN'		=> 'Paiguta iga kasutajanimi eraldi reale.',
 	'USER_CONTROL_PANEL'	=> 'Kasutaja juhtpaneel',
 

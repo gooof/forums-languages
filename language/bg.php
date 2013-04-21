@@ -2511,7 +2511,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'User Control Panel', 
+	'UCP'		=> 'Потребителски панел', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Администрация',
 	'ANNOUNCEMENTS'	=> 'Съобщения',
@@ -3181,7 +3181,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Прекалено много получатели',
 	'TOO_MANY_REGISTERS'		=> 'Вие превишихте броя позволени регистрации. Моля, опитайте по-късно.',
 
-	'UCP'						=> 'User Control Panel',
+	'UCP'						=> 'Потребителски панел',
 	'UCP_ACTIVATE'				=> 'Активирай акаунта',
 	'UCP_ADMIN_ACTIVATE'		=> 'Трябва да въведете валиден email адрес преди акаунта Ви да бъде активиран. Администратора ще прегледа регистрацията, ако я одобри ще получите информация на email адреса.',
 	'UCP_AIM'					=> 'AOL IM',
@@ -10112,7 +10112,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Покажи всички операции',
 
-	'UCP'					=> 'User Control Panel',
+	'UCP'					=> 'Потребителски панел',
 	'USERNAMES_EXPLAIN'		=> 'Всяко име на различен ред',
 	'USER_CONTROL_PANEL'	=> 'Потребителски контролен панел',
 

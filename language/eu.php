@@ -2522,7 +2522,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'User Control Panel', 
+	'UCP'		=> 'Erabiltzailearen Kontrol Panela', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Administrazioa',
 	'ANNOUNCEMENTS'	=> 'Iragarkiak',
@@ -3192,7 +3192,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Mezu pribatua hartzaile gehiegiri bidaltzen saiatu zara.',
 	'TOO_MANY_REGISTERS'		=> 'Izen-emate gehienezko kopurua gainditu duzu saio honetarako. Mesedez, saiatu zaitez beranduago.',
 
-	'UCP'						=> 'User Control Panel',
+	'UCP'						=> 'Erabiltzailearen Kontrol Panela',
 	'UCP_ACTIVATE'				=> 'Kontua gaitu',
 	'UCP_ADMIN_ACTIVATE'		=> 'Mesedez, kontuan izan posta elektroniko helbide baliagarria sartu behar duzula kontua gaitu baino lehen. Administratzaileak zure kontua aztertu eta gero onartzen baldin badu, mezu bat bidaliko zaizu helbide horretara.',
 	'UCP_AIM'					=> 'AOL Instant Messenger',
@@ -10123,7 +10123,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Eragiketa guztiak erakutsi',
 
-	'UCP'					=> 'User Control Panel',
+	'UCP'					=> 'Erabiltzailearen Kontrol Panela',
 	'USERNAMES_EXPLAIN'		=> 'Erabiltzaile izen bakoitza lerro ezberdin batean jarri.',
 	'USER_CONTROL_PANEL'	=> 'Erabiltzaile Kontrol Panela',
 

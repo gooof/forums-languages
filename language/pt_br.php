@@ -2522,7 +2522,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'User Control Panel', 
+	'UCP'		=> 'Painel de Controle do Usuário', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Administração',
 	'ANNOUNCEMENTS'	=> 'Anúncios',
@@ -3193,7 +3193,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Você tentou enviar uma mensagem particular a muitos destinatários.',
 	'TOO_MANY_REGISTERS'		=> 'Você excedeu o número máximo de tentativas de registro para esta sessão. Por favor, tente novamente mais tarde.',
 
-	'UCP'						=> 'User Control Panel',
+	'UCP'						=> 'Painel de Controle do Usuário',
 	'UCP_ACTIVATE'				=> 'Ativar registro',
 	'UCP_ADMIN_ACTIVATE'		=> 'Você precisará escrever um endereço de e-mail válido para que o seu registro seja ativado. O administrador revisará a sua conta, e se aprovada, você vai receber um e-mail com as informações para ativar o seu registro.',
 	'UCP_AIM'					=> 'AIM',
@@ -10124,7 +10124,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Exibir todas as operações',
 
-	'UCP'					=> 'User Control Panel',
+	'UCP'					=> 'Painel de Controle do Usuário',
 	'USERNAMES_EXPLAIN'		=> 'Insira cada usuário em uma linha separada.',
 	'USER_CONTROL_PANEL'	=> 'Painel de Controle do Usuário',
 

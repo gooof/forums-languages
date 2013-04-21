@@ -2515,7 +2515,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'User Control Panel', 
+	'UCP'		=> 'Vartotojo valdymo pultas', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Administravimas',
 	'ANNOUNCEMENTS'	=> 'Svarbūs pranešimai',
@@ -3186,7 +3186,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Jūs bandėte išsiųsti asmeninę žinutę per dideliam gavėjų skaičiui.',
 	'TOO_MANY_REGISTERS'		=> 'Šios sesijos metu daugiau bandyti registruotis negalite. Pabandykite vėliau.',
 
-	'UCP'						=> 'User Control Panel',
+	'UCP'						=> 'Vartotojo valdymo pultas',
 	'UCP_ACTIVATE'				=> 'Aktyvuoti vartotojo vardą',
 	'UCP_ADMIN_ACTIVATE'		=> 'Įsidėmėkite, kad prieš aktyvuojant vartotojo vardą turėsite įrašyti tikrą el. pašto adresą. Kai administratorius peržiūrės ir patvirtins jūsų vartotojo vardą, el. pašto adresu, kurį nurodėte, gausite laišką.',
 	'UCP_AIM'					=> 'AOL Instant Messenger',
@@ -10117,7 +10117,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Rodyti visas operacijas',
 
-	'UCP'					=> 'User Control Panel',
+	'UCP'					=> 'Vartotojo valdymo pultas',
 	'USERNAMES_EXPLAIN'		=> 'Kiekvieną vartotojo vardą rašykite naujoje eilutėje.',
 	'USER_CONTROL_PANEL'	=> 'Vartotojo valdymo pultas',
 

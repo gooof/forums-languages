@@ -2522,7 +2522,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'User Control Panel', 
+	'UCP'		=> 'Thiết lập cá nhân', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Quản trị viên',
 	'ANNOUNCEMENTS'	=> 'Thông báo',
@@ -3193,7 +3193,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Có quá nhiều người nhận.',
 	'TOO_MANY_REGISTERS'		=> 'Bạn đã vượt quá số lượng đăng ký thành viên cho phép trong phiên kết nối này. Hãy thử lại vào lúc khác!',
 
-	'UCP'						=> 'User Control Panel',
+	'UCP'						=> 'Thiết lập cá nhân',
 	'UCP_ACTIVATE'				=> 'Kích hoạt tài khoản',
 	'UCP_ADMIN_ACTIVATE'		=> 'Lưu ý rằng bạn cần phải nhập vào một địa chỉ Email hợp lệ trước khi tài khoản của bạn được kích hoạt. Người quản trị sẽ xem qua tài khoản của bạn và nếu được chấp nhận bạn sẽ nhận được một Email thông báo đến địa chỉ Email mà bạn đã nhập.',
 	'UCP_AIM'					=> 'Tài khoản AIM',
@@ -10124,7 +10124,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Hiển thị tất cả câu hỏi',
 
-	'UCP'					=> 'User Control Panel',
+	'UCP'					=> 'Thiết lập cá nhân',
 	'USERNAMES_EXPLAIN'		=> 'Xác định mỗi tên thành viên trên một hàng nhất định.',
 	'USER_CONTROL_PANEL'	=> 'Bảng điều khiển thành viên',
 

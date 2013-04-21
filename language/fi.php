@@ -2522,7 +2522,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'User Control Panel', 
+	'UCP'		=> 'Omat asetukset', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Ylläpito',
 	'ANNOUNCEMENTS'	=> 'Tiedotteet',
@@ -3193,7 +3193,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Yritit lähettää yksityisviestin liian monelle vastaanottajalle.',
 	'TOO_MANY_REGISTERS'		=> 'Olet yrittänyt rekisteröityä liian monta kertaa. Yritä myöhemmin uudestaan.',
 
-	'UCP'						=> 'User Control Panel',
+	'UCP'						=> 'Omat asetukset',
 	'UCP_ACTIVATE'				=> 'Aktivoi tunnukset',
 	'UCP_ADMIN_ACTIVATE'		=> 'Huomaa, että antamasi sähköpostiosoitteen tulee olla toimiva, jotta tunnuksesi voidaan aktivoida. Ylläpitäjä tarkistaa tietosi ja ilmoittaa hyväksymisestä sähköpostilla.',
 	'UCP_AIM'					=> 'AOL Instant Messenger',
@@ -10124,7 +10124,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Näytä kaikki toimenpiteet',
 
-	'UCP'					=> 'User Control Panel',
+	'UCP'					=> 'Omat asetukset',
 	'USERNAMES_EXPLAIN'		=> 'Laita jokainen käyttäjätunnus omalle rivillensä',
 	'USER_CONTROL_PANEL'	=> 'Käyttäjien hallintapaneeli',
 

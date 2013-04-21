@@ -2522,7 +2522,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'User Control Panel', 
+	'UCP'		=> 'Panoul utilizatorului', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Administrare',
 	'ANNOUNCEMENTS'	=> 'Anunţuri',
@@ -3193,7 +3193,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Aţi încercat să trimiteţi un mesaj privat la prea mulţi destinatari.',
 	'TOO_MANY_REGISTERS'		=> 'Aţi depăşit numărul maxim de încercări de înregistrare pentru această sesiune. Vă rugăm încercaţi mai târziu.',
 
-	'UCP'						=> 'User Control Panel',
+	'UCP'						=> 'Panoul utilizatorului',
 	'UCP_ACTIVATE'				=> 'Activare cont',
 	'UCP_ADMIN_ACTIVATE'		=> 'Trebuie să introduceţi o adresă de e-mail validă înainte de activarea contului dumneavoastră. Administratorul va verifica acest cont şi, dacă îl va aproba, veţi primi un e-mail la adresa specificată.',
 	'UCP_AIM'					=> 'AOL Instant Messenger',
@@ -10124,7 +10124,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Arată toate operaţiile',
 
-	'UCP'					=> 'User Control Panel',
+	'UCP'					=> 'Panoul utilizatorului',
 	'USERNAMES_EXPLAIN'		=> 'Introduceţi fiecare nume de utilizator pe linii separate.',
 	'USER_CONTROL_PANEL'	=> 'Panoul utilizatorului',
 

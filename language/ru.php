@@ -2522,7 +2522,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'User Control Panel', 
+	'UCP'		=> 'Личный раздел', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Администрирование',
 	'ANNOUNCEMENTS'	=> 'Объявления',
@@ -3193,7 +3193,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Вы попытались отправить личное сообщение слишком большому числу получателей.',
 	'TOO_MANY_REGISTERS'		=> 'Вы исчерпали предельное количество попыток регистрации для данной сессии. Повторите попытку позднее.',
 
-	'UCP'						=> 'User Control Panel',
+	'UCP'						=> 'Личный раздел',
 	'UCP_ACTIVATE'				=> 'Активировать учётную запись',
 	'UCP_ADMIN_ACTIVATE'		=> 'Обратите внимание на то, что вы должны ввести правильный адрес электронной почты перед активацией. Администратор проверит вашу учётную запись и отправит на указанный адрес письмо, содержащее ссылку для активации учётной записи.',
 	'UCP_AIM'					=> 'AIM',
@@ -10124,7 +10124,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Показать все действия',
 
-	'UCP'					=> 'User Control Panel',
+	'UCP'					=> 'Личный раздел',
 	'USERNAMES_EXPLAIN'		=> 'Вводите каждое имя на новой строке.',
 	'USER_CONTROL_PANEL'	=> 'Личный раздел',
 

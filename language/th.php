@@ -2528,7 +2528,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'User Control Panel', 
+	'UCP'		=> 'ตั้งค่าส่วนตัว', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'การดูแลระบบ',
 	'ANNOUNCEMENTS'	=> 'ประกาศ',
@@ -3212,7 +3212,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'ผู้รับมากเกินไป',
 	'TOO_MANY_REGISTERS'		=> 'มีผู้ลงทะเบียนมากเกินไป กรุณาลองใหม่อีกครั้ง',
 
-	'UCP'						=> 'User Control Panel',
+	'UCP'						=> 'ตั้งค่าส่วนตัว',
 	'UCP_ACTIVATE'				=> 'บัญชีรายชื่อสามารถใช้งานได้',
 	'UCP_ADMIN_ACTIVATE'		=> 'คุณต้องระบุอีเมลที่ใช้งานได้จริง เพราะเมื่อผู้ดูแลระบบตรวจสอบบัญชีรายชื่อ และอนุมัติบัญชีของคุณจะได้รับแจ้งตาม อีเมล ที่คุณระบุไว้',
 	'UCP_AIM'					=> 'AOL Instant Messenger',
@@ -10143,7 +10143,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'แสดงการดำเนินการทั้งหมด',
 
-	'UCP'					=> 'User Control Panel',
+	'UCP'					=> 'ตั้งค่าส่วนตัว',
 	'USERNAMES_EXPLAIN'		=> 'ใส่ชื่อผู้ใช้ คนละบรรทัด บรรทัดละหนึ่งคน.',
 	'USER_CONTROL_PANEL'	=> 'ส่วนจัดการผู้ใช้',
 

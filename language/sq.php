@@ -2513,7 +2513,7 @@ $lang = array_merge($lang, array(
 	'CLOCK'		=> 'Clock',	
 	'STAFF'		=> 'Team',	
 	'TOP_POSTERS'	=> 'Top Poster',
-	'UCP'		=> 'User Control Panel', 
+	'UCP'		=> 'Paneli i Antarit', 
 	'USER_INFO'	=> 'User Information',	
 	'ACP_SMALL'	=> 'Administrimi',
 	'ANNOUNCEMENTS'	=> 'Lajmërimet',
@@ -3184,7 +3184,7 @@ $lang = array_merge($lang, array(
 	'TOO_MANY_RECIPIENTS'		=> 'Ju u munduat t\'u dërgoni mesazh shumë përdoruesve.',
 	'TOO_MANY_REGISTERS'		=> 'Ju keni kaluar numrin maksimal të mundësive për regjistrim këtë seancë. Ju lutem provojeni më vonë.',
 
-	'UCP'						=> 'User Control Panel',
+	'UCP'						=> 'Paneli i Antarit',
 	'UCP_ACTIVATE'				=> 'Aktivizo llogari',
 	'UCP_ADMIN_ACTIVATE'		=> 'Vini re që duhet të shkruani një adresë të vlefshme e-mail para se të aktivizoni llogarinë. Administratorët do të rishikojnë llogarinë tuaj dhe nëse aprovohet ju do të merrni një e-mail në adresën tuaj.',
 	'UCP_AIM'					=> 'AOL Instant Messenger',
@@ -10115,7 +10115,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Show all operations',
 
-	'UCP'					=> 'User Control Panel',
+	'UCP'					=> 'Paneli i Antarit',
 	'USERNAMES_EXPLAIN'		=> 'Vendos çdo pseudonim në kryerradhë.',
 	'USER_CONTROL_PANEL'	=> 'Paneli i Antarit',
 
