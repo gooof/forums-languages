@@ -4346,7 +4346,7 @@ $lang = array_merge($lang, array(
 	'ARCADE_DISABLE'					=> 'Die Onlinespiele sind derzeit abgeschaltet.<br /><br /><i>Nur ein Administrator kann diesen Bereich freigeben.</i>',
 	'ARCADE_DISABLED'					=> 'Die Onlinespiele sind derzeit nicht aktiviert.',
 
-	'ARCADE_GAMES_SORT_ORDER'			=> 'Onlinespiele sortieren',
+	'ARCADE_GAMES_SORT_ORDER'			=> 'Onlinespiele sortieren nach',
 	'ARCADE_GAMES_SORT_DIR'				=> 'Richtung beim Sortieren',
 	'ARCADE_GAMES_PER_PAGE'				=> 'Spiele pro Seite',
 	'ARCADE_SEND_PM'					=> 'Private Nachricht senden bei einem Highscore-Verlust',
