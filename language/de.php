@@ -6187,7 +6187,7 @@ $lang = array_merge($lang, array(
 	'ORDER_BY_W_LETTERS'			=> 'Nach f.Buchstaben',
 
 	'ADD_POINTS_PAGE'				=> 'Zusatzpunkte',
-	'HELP_ADD_POINTS'				=> 'Da es der Admin es aktiviert hat, kannst du zusätzliche Punkte erhalten, wenn du Hangmans erstellst. Denn jedes Mal, wenn dem dein Hangman nicht erraten wurde, erhälst du %1$s Punkte zusätzlich.',
+	'HELP_ADD_POINTS'				=> 'Zusätzliche kannst du Punkte erhalten, wenn du Hangmans erstellst. Denn jedes Mal, wenn ein Mitglied dein erstelltes Hangman nicht erraten hat, erhälst du %1$s Punkte zusätzlich.',
 	'HELP_TITLE'					=> 'Hilfe zum Hangman Spiel',	
 	'HELP_OVERVIEW'					=> 'Hier werden die Hangmans angezeigt die erstellt wurden, Sortierung nach Erstelldatum (ganz neue vorn). Über einen *Klick* auf den <strong>Titel</strong> des Hangman, gelangst du in das Spiel. Sollte die Zeit abgelaufen sein, kannst du das Hangman nicht mehr spielen! Hat es jemand anders erraten, geht das natürlich auch nicht.<br />
 		Über nächste Seite oder Vorherige Seite kannst du zu anderen Hangmans wechseln (pro Seite werden 25 Hangmans angezeigt).<br />',				
