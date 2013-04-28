@@ -6187,7 +6187,7 @@ $lang = array_merge($lang, array(
 	'ORDER_BY_W_LETTERS'			=> 'Nach f.Buchstaben',
 
 	'ADD_POINTS_PAGE'				=> 'Zusatzpunkte',
-	'HELP_ADD_POINTS'				=> 'Zusätzliche kannst du Punkte erhalten, wenn du Hangmans erstellst. Denn jedes Mal, wenn ein Mitglied dein erstelltes Hangman nicht erraten hat, erhälst du %1$s Punkte zusätzlich.',
+	'HELP_ADD_POINTS'				=> 'Zusätzlich kannst du Punkte erhalten, wenn du Hangmans erstellst. Denn jedes Mal, wenn ein Mitglied dein erstelltes Hangman nicht erraten hat, erhälst du %1$s Punkte zusätzlich.',
 	'HELP_TITLE'					=> 'Hilfe zum Hangman Spiel',	
 	'HELP_OVERVIEW'					=> 'Hier werden die Hangmans angezeigt die erstellt wurden, Sortierung nach Erstelldatum (ganz neue vorn). Über einen *Klick* auf den <strong>Titel</strong> des Hangman, gelangst du in das Spiel. Sollte die Zeit abgelaufen sein, kannst du das Hangman nicht mehr spielen! Hat es jemand anders erraten, geht das natürlich auch nicht.<br />
 		Über nächste Seite oder Vorherige Seite kannst du zu anderen Hangmans wechseln (pro Seite werden 25 Hangmans angezeigt).<br />',				
@@ -7542,7 +7542,7 @@ $lang = array_merge($lang, array(
 	'FORUM_PERPOST'						=> 'Punkte pro Beitrag',
 	'FORUM_PERPOST_EXPLAIN'				=> 'Hier kannst du einstellen, wieviele Punkte ein Benutzer für das Schreiben eines <strong>Beitrages (Antwort)</strong> erhalten soll. Bitte beachte, daß der Benutzer auch die zusätzlich Punkte erhält, die du in den Erweiterten Punkteeinstellung vorgenommen hast.<br /> Setze hier 0, wenn die Benutzer keine Punkte bekommen sollen. Damit wird auch gleichzeite die Vergabe der erweiterten Punkt ausgeschaltet!',
 	'FORUM_PERTOPIC'					=> 'Punkte pro Thema',
-	'FORUM_PERTOPIC_EXPLAIN'			=> 'Hier kannst du einstellen, wieviele Punkte ein Benutzer für das Schreiben eines <strong>neuen Themas</strong> erhalten soll. Bitte beachte, daß der Benutzer auch die zusätzlich Punkte erhält, die du in den Erweiterten Punkteeinstellung vorgenommen hast.<br /> Setze hier 0, wenn die Benutzer keine Punkte bekommen sollen. Damit wird auch gleichzeite die Vergabe der erweiterten Punkt ausgeschaltet!',
+	'FORUM_PERTOPIC_EXPLAIN'			=> 'Hier kannst du einstellen, wieviele Punkte ein Benutzer für das Schreiben eines <strong>neuen Themas</strong> erhalten soll. Bitte beachte, dass der Benutzer auch die zusätzlich Punkte erhält, die du in den Erweiterten Punkteeinstellung vorgenommen hast.<br /> Setze hier 0, wenn die Benutzer keine Punkte bekommen sollen. Damit wird auch gleichzeite die Vergabe der erweiterten Punkt ausgeschaltet!',
 	'FORUM_POINT_SETTINGS'				=> 'Ultimate Points Einstellungen',
 	'FORUM_POINT_SETTINGS_EXPLAIN'		=> 'Hier kannst du Forenbasierend einstellen, wofür die Benutzer Punkte erhalten sollen. Du kannst festlegen, wieviele Punkte sie für das Verfassen eines neuen Themas, für das Schreiben eines normalen Beitrages (Antwort) oder für das Bearbeiten ihrer Beiträge erhalten sollen. Auf diese Weise kannst du genau steueren, in welchem Forem Benutzer Punkte erhalten und in welchen nicht.',
 	'FORUM_POINT_SETTINGS_UPDATED'		=> 'Die Punkte für alle Foren wurden aktualisiert',
