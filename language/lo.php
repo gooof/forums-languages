@@ -10054,7 +10054,7 @@ $lang = array_merge($lang, array(
 
 	'BACK'					=> 'Back',
 
-	'COLOUR_SWATCH'			=> 'Colour swatch',
+	'COLOUR_SWATCH'			=> 'ສີຕົວຢ່າງ',
 	'CONFIG_UPDATED'		=> 'Configuration updated successfully.',
 
 	'DEACTIVATE'				=> 'Deactivate',
@@ -10112,7 +10112,7 @@ $lang = array_merge($lang, array(
 
 	'REMIND'							=> 'Remind',
 	'RESYNC'							=> 'Resync',
-	'RETURN_TO'							=> 'Return to',
+	'RETURN_TO'							=> 'ກັບໄປ',
 
 	'SELECT_ANONYMOUS'		=> 'Select anonymous user',
 	'SELECT_OPTION'			=> 'Select option',
@@ -10124,7 +10124,7 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Show all operations',
 
-	'UCP'					=> 'User Control Panel',
+	'UCP'					=> 'ແຜງຄວບຄຸມຜູ້ໃຊ້ງານ',
 	'USERNAMES_EXPLAIN'		=> 'Place each username on a separate line.',
 	'USER_CONTROL_PANEL'	=> 'User Control Panel',
 
@@ -10210,8 +10210,6 @@ $lang = array_merge($lang, array(
 
 	'BROWSER_LANGUAGE'			=> 'Enable Browser Language Detection',
 	'BROWSER_LANGUAGE_EXPLAIN'	=> 'Enables the browser language detection for guest users not to use the default language of the board. Choose no to disable the feature.',
-	'ADFREE_IMAGE'				=> 'Image URL for <acronym title="Displays a graphic in the footer of the forum.">Adfree Call2Pay</acronym>',
-	'ADFREE_IMAGE_EXPLAIN'		=> 'You want a ad-free forum. But bear the costs alone? Then this is the right way. By the registered user your graphics come to the payment page to donate for your forum, there is the user also explains how it all works. Leave the field blank to disable the graphics and the link. <a href="http://www.phpbb9.de/phpbb-funktionen-technik/unser-forum-ohne-werbung-t33964.html" target="_blank">Mehr Informationen</a><br /><sub><a style="font-size:80%;" href="http://img.userboard.org/uploads/support/images/spende-de.png" target="_blank">(Demo Bild)</a> <a style="font-size:80%;" href="http://www.phpbb9.de/adfree.phpbb3?fid='.$hs_forum_data['forum_id'].'" target="_blank">(Dein Link zur Zahlungsseite)</a></sub>',
 	'SOCIALSHARE'				=> 'Social Buttons',
 	'SOCIALSHARE_EXPLAIN'		=> 'Shows "Like" Buttons from Facebook, Google+, Twitter and AddThis.',
 	'HOOK_SYNTAXHIGHLIGHT'		=> 'Enable syntax highlighting BBCode',
@@ -10246,8 +10244,7 @@ $lang = array_merge($lang, array(
 	'AVATAR_MINI_SHOW_EXPLAIN'	=> 'With this function are the avatars of the authors of the recent posts; even appears for example in the forum index and the forums. <a href="http://www.phpbb9.de/neue-forum-funktionen/mini-avatar-index-forum-der-spalte-letzter-beitrag-t42836.html" target="_blank">See how it works</a>',
 	'AVATAR_MINI_SIZE'			=> 'Mini avatar size (in the index or forums)',
 	'AVATAR_MINI_SIZE_EXPLAIN'	=> 'Maximum height or width of the avatars in the index or the forums to appear.',
-	'ABBCODES_GROUPS_EXPLAIN'	=> 'group which may see this button',
-
+	'ABBCODES_GROUPS_EXPLAIN'	=> '<strong>Manage groups : </strong>If there are no selected groups all users can use this bbcode.<br />In order to select (or un-select) multiple groups, you must use Ctrl-Click (or Cmd-Click on Mac) items to add them. If you forget to hold down Ctrl/Cmd when clicking an item, then all the previously selected items are lost.',
 	'HIDE_POLL_RESULTS'			=> 'Hide poll results',
 	'HIDE_POLL_RESULTS_EXPLAIN'	=> 'The results are only shown when the survey is completed or when polls open if the user has voted, more <a href="http://www.phpbb9.de/neue-forum-funktionen/umfrageergebnisse-verstecken-t37450.html">Hide poll results.</a>',
 	'HIDE_LINKS'				=> 'Hide links for guests',
@@ -10259,8 +10256,8 @@ $lang = array_merge($lang, array(
 	'MOBILESTYLE_MENU'			=> 'Mobile Style',
 	'MOBILESTYLE'				=> 'Enable detection of mobile devices?',
 	'MOBILESTYLE_EXPLAIN'		=> 'Activates a specially-optimized design for mobile devices, which perfectly adapts to the resolution. <br /> If the detection is disabled, users see only the normal styles of the forum. <a href="http://www.phpbb9.de/neue-forum-funktionen/mobile-style-t42589.html" target="_blank">read more</a>',
-	'POST_NUMBERS'				=> 'Post number into topics',
-	'POST_NUMBERS_EXPLAIN'		=> 'Shows in each subject in posts, the number of the current post to eg: #14',
+	'POST_NUMBERS'				=> 'Display post numbers in topics',
+	'POST_NUMBERS_EXPLAIN'		=> 'Adds the number of each post in viewtopic. Additionally, clicking on that number will popup a window with the direct link to that post.',
 	'SUB_DEFAULT'				=> 'Standard (separated by , )',
 	'SUB_COLUMN'				=> 'In 2 columns next to each other',
 	'SUB_NEWROW'				=> 'Among themselves',

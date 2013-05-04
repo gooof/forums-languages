@@ -10032,20 +10032,20 @@ $lang = array_merge($lang, array(
 
 	'ACP_WORDS'					=> 'Word censoring',
 
-	'ACTION'				=> 'Action',
+	'ACTION'				=> 'Vepro',
 	'ACTIONS'				=> 'Actions',
 	'ACTIVATE'				=> 'Activate',
-	'ADD'					=> 'Add',
+	'ADD'					=> 'Shto',
 	'ADMIN'					=> 'Administration',
 	'ADMIN_INDEX'			=> 'Admin index',
 	'ADMIN_PANEL'			=> 'Administration Control Panel',
 
-	'ADM_LOGOUT'			=> 'ACP&nbsp;Logout',
-	'ADM_LOGGED_OUT'		=> 'Successfully logged out from Administration Control Panel',
+	'ADM_LOGOUT'			=> 'Ç\'identifikohu nga ACP',
+	'ADM_LOGGED_OUT'		=> 'U ç\'identifikuat me sukses nga Paneli i Administratorit',
 
-	'BACK'					=> 'Back',
+	'BACK'					=> 'Mbrapa',
 
-	'COLOUR_SWATCH'			=> 'Colour swatch',
+	'COLOUR_SWATCH'			=> 'Zgjedhje e ngjyrave',
 	'CONFIG_UPDATED'		=> 'Configuration updated successfully.',
 
 	'DEACTIVATE'				=> 'Deactivate',
@@ -10053,12 +10053,12 @@ $lang = array_merge($lang, array(
 	'DIRECTORY_NOT_DIR'			=> 'The entered path “%s” is not a directory.',
 	'DIRECTORY_NOT_WRITABLE'	=> 'The entered path “%s” is not writable.',
 	'DISABLE'					=> 'Disable',
-	'DOWNLOAD'					=> 'Download',
-	'DOWNLOAD_AS'				=> 'Download as',
+	'DOWNLOAD'					=> 'Shkarko',
+	'DOWNLOAD_AS'				=> 'Shkarko si',
 	'DOWNLOAD_STORE'			=> 'Download or store file',
 	'DOWNLOAD_STORE_EXPLAIN'	=> 'You may directly download the file or save it in your <samp>store/</samp> folder.',
 
-	'EDIT'					=> 'Edit',
+	'EDIT'					=> 'Modifiko',
 	'ENABLE'				=> 'Enable',
 	'EXPORT_DOWNLOAD'		=> 'Download',
 	'EXPORT_STORE'			=> 'Store',
@@ -10069,7 +10069,7 @@ $lang = array_merge($lang, array(
 
 	'INSTALL'				=> 'Install',
 	'IP'					=> 'IP',
-	'IP_HOSTNAME'			=> 'IP addresses or hostnames',
+	'IP_HOSTNAME'			=> 'Adresa IP ose emra hostesh',
 
 	'LOGGED_IN_AS'			=> 'You are logged in as:',
 	'LOGIN_ADMIN'			=> 'To administer the board you must be an authenticated user.',
@@ -10082,28 +10082,28 @@ $lang = array_merge($lang, array(
 	'MENU_TOGGLE'			=> 'Hide or display the side menu',
 	'MORE'					=> 'More',			// Not used at the moment
 	'MORE_INFORMATION'		=> 'More information »',
-	'MOVE_DOWN'				=> 'Move down',
-	'MOVE_UP'				=> 'Move up',
+	'MOVE_DOWN'				=> 'Sposto poshtë',
+	'MOVE_UP'				=> 'Sposto lart',
 
 	'NOTIFY'				=> 'Notification',
 	'NO_ADMIN'				=> 'You are not authorised to administer this board.',
 	'NO_EMAILS_DEFINED'		=> 'No valid e-mail addresses found.',
-	'NO_PASSWORD_SUPPLIED'	=> 'You cannot login without a password.',
+	'NO_PASSWORD_SUPPLIED'	=> 'Ju nuk mund të identifikoheni pa një fjalëkalim.',
 
 	'OFF'					=> 'Off',
 	'ON'					=> 'On',
 
-	'PARSE_BBCODE'						=> 'Parse BBCode',
-	'PARSE_SMILIES'						=> 'Parse smilies',
-	'PARSE_URLS'						=> 'Parse links',
-	'PERMISSIONS_TRANSFERRED'			=> 'Successfully transferred permissions from <strong>%s</strong>, you are now able to browse the board with this user’s permissions.<br />Please note that admin permissions were not transferred. You are able to revert to your permission set at any time.',
+	'PARSE_BBCODE'						=> 'Shfaq BBCode',
+	'PARSE_SMILIES'						=> 'Shfaq smilies',
+	'PARSE_URLS'						=> 'Shfaq links',
+	'PERMISSIONS_TRANSFERRED'			=> 'Të drejtat u transferuan me sukses nga <strong>%s</strong>, Tashmë ju mund të shfletoni bordin me të drejtat e këtij përdoruesi.<br />Vini re që të drejtat e Administratorit nuk u transferuan. Ju keni mundësi të ktheni të drejtat tuaja në çdo kohë.',
 	'PERMISSIONS_TRANSFERRED_EXPLAIN'	=> 'You currently have the permissions from %1$s. You are able to browse the board with this user’s permissions, but not access the administration control panel since admin permissions were not transferred. You can <a href="%2$s"><strong>revert to your permission set</strong></a> at any time.',
 	'PIXEL'								=> 'px',
 	'PROCEED_TO_ACP'					=> '%sProceed to the ACP%s',
 
 	'REMIND'							=> 'Remind',
-	'RESYNC'							=> 'Resync',
-	'RETURN_TO'							=> 'Return to',
+	'RESYNC'							=> 'Sinkronizim',
+	'RETURN_TO'							=> 'Kthehu tek',
 
 	'SELECT_ANONYMOUS'		=> 'Select anonymous user',
 	'SELECT_OPTION'			=> 'Select option',
@@ -10115,11 +10115,11 @@ $lang = array_merge($lang, array(
 
 	'SHOW_ALL_OPERATIONS'	=> 'Show all operations',
 
-	'UCP'					=> 'User Control Panel',
+	'UCP'					=> 'Paneli i Antarit',
 	'USERNAMES_EXPLAIN'		=> 'Place each username on a separate line.',
 	'USER_CONTROL_PANEL'	=> 'User Control Panel',
 
-	'WARNING'				=> 'Warning',
+	'WARNING'				=> 'Paralajmërim',
 
 	'ACP_PHP_INFO_EXPLAIN'	=> 'This page lists information on the version of PHP installed on this server. It includes details of loaded modules, available variables and default settings. This information may be useful when diagnosing problems. Please be aware that some hosting companies will limit what information is displayed here for security reasons. You are advised to not give out any details on this page except when asked by <a href="http://www.phpbb.com/about/team/">official team members</a> on the support forums.',
 	'NO_PHPINFO_AVAILABLE'	=> 'Information about your PHP configuration is unable to be determined. Phpinfo() has been disabled for security reasons.',
@@ -10128,13 +10128,13 @@ $lang = array_merge($lang, array(
 	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'This lists the actions carried out by the board itself. This log provides you with information you are able to use for solving specific problems, for example non-delivery of e-mails. You can sort by username, date, IP or action. If you have appropriate permissions you can also clear individual operations or the log as a whole.',
 	'ACP_MOD_LOGS_EXPLAIN'		=> 'This lists all actions done on forums, topics and posts as well as actions carried out on users by moderators, including banning. You can sort by username, date, IP or action. If you have appropriate permissions you can also clear individual operations or the log as a whole.',
 	'ACP_USERS_LOGS_EXPLAIN'	=> 'This lists all actions carried out by users or on users (reports, warnings and user notes).',
-	'ALL_ENTRIES'				=> 'All entries',
+	'ALL_ENTRIES'				=> 'Të gjitha hyrjet',
 
-	'DISPLAY_LOG'	=> 'Display entries from previous',
-	'NO_ENTRIES'	=> 'No log entries for this period.',
-	'SORT_IP'		=> 'IP address',
-	'SORT_DATE'		=> 'Date',
-	'SORT_ACTION'	=> 'Log action',
+	'DISPLAY_LOG'	=> 'Trego hyrjet nga hera e fundit',
+	'NO_ENTRIES'	=> 'Nuk ka hyrje për këtë periudhë.',
+	'SORT_IP'		=> 'Adresa IP',
+	'SORT_DATE'		=> 'Data',
+	'SORT_ACTION'	=> 'Historiku i veprimeve',
 
 	'ADMIN_INTRO'				=> 'Thank you for choosing phpBB as your board solution. This screen will give you a quick overview of all the various statistics of your board. The links on the left hand side of this screen allow you to control every aspect of your board experience. Each page will have instructions on how to use the tools.',
 	'ADMIN_LOG'					=> 'Logged administrator actions',
@@ -10142,14 +10142,14 @@ $lang = array_merge($lang, array(
 	'AVATAR_DIR_SIZE'			=> 'Avatar directory size',
 
 	'BOARD_STARTED'		=> 'Board started',
-	'BOARD_VERSION'		=> 'Board version',
+	'BOARD_VERSION'		=> 'Versioni i bordit',
 
-	'DATABASE_SIZE'			=> 'Database size',
+	'DATABASE_SIZE'			=> 'Masa e bazës së informacionit',
 
-	'FILES_PER_DAY'		=> 'Attachments per day',
+	'FILES_PER_DAY'		=> 'Shtojca në ditë',
 	'FORUM_STATS'		=> 'Board statistics',
 
-	'GZIP_COMPRESSION'	=> 'GZip Compression',
+	'GZIP_COMPRESSION'	=> 'Kompresioni GZip',
 
 	'NOT_AVAILABLE'		=> 'Not available',
 	'NUMBER_FILES'		=> 'Number of attachments',
@@ -10183,7 +10183,7 @@ $lang = array_merge($lang, array(
 	'RESYNC_STATS_EXPLAIN'			=> 'Recalculates the total number of posts, topics, users and files.',
 	'RUN'							=> 'Run now',
 
-	'STATISTIC'					=> 'Statistic',
+	'STATISTIC'					=> 'Statistika',
 	'STATISTIC_RESYNC_OPTIONS'	=> 'Resynchronise or reset statistics',
 
 	'TOPICS_PER_DAY'	=> 'Topics per day',
@@ -10201,8 +10201,6 @@ $lang = array_merge($lang, array(
 
 	'BROWSER_LANGUAGE'			=> 'Enable Browser Language Detection',
 	'BROWSER_LANGUAGE_EXPLAIN'	=> 'Enables the browser language detection for guest users not to use the default language of the board. Choose no to disable the feature.',
-	'ADFREE_IMAGE'				=> 'Image URL for <acronym title="Displays a graphic in the footer of the forum.">Adfree Call2Pay</acronym>',
-	'ADFREE_IMAGE_EXPLAIN'		=> 'You want a ad-free forum. But bear the costs alone? Then this is the right way. By the registered user your graphics come to the payment page to donate for your forum, there is the user also explains how it all works. Leave the field blank to disable the graphics and the link. <a href="http://www.phpbb9.de/phpbb-funktionen-technik/unser-forum-ohne-werbung-t33964.html" target="_blank">Mehr Informationen</a><br /><sub><a style="font-size:80%;" href="http://img.userboard.org/uploads/support/images/spende-de.png" target="_blank">(Demo Bild)</a> <a style="font-size:80%;" href="http://www.phpbb9.de/adfree.phpbb3?fid='.$hs_forum_data['forum_id'].'" target="_blank">(Dein Link zur Zahlungsseite)</a></sub>',
 	'SOCIALSHARE'				=> 'Social Buttons',
 	'SOCIALSHARE_EXPLAIN'		=> 'Shows "Like" Buttons from Facebook, Google+, Twitter and AddThis.',
 	'HOOK_SYNTAXHIGHLIGHT'		=> 'Enable syntax highlighting BBCode',
@@ -10237,8 +10235,7 @@ $lang = array_merge($lang, array(
 	'AVATAR_MINI_SHOW_EXPLAIN'	=> 'With this function are the avatars of the authors of the recent posts; even appears for example in the forum index and the forums. <a href="http://www.phpbb9.de/neue-forum-funktionen/mini-avatar-index-forum-der-spalte-letzter-beitrag-t42836.html" target="_blank">See how it works</a>',
 	'AVATAR_MINI_SIZE'			=> 'Mini avatar size (in the index or forums)',
 	'AVATAR_MINI_SIZE_EXPLAIN'	=> 'Maximum height or width of the avatars in the index or the forums to appear.',
-	'ABBCODES_GROUPS_EXPLAIN'	=> 'group which may see this button',
-
+	'ABBCODES_GROUPS_EXPLAIN'	=> '<strong>Manage groups : </strong>If there are no selected groups all users can use this bbcode.<br />In order to select (or un-select) multiple groups, you must use Ctrl-Click (or Cmd-Click on Mac) items to add them. If you forget to hold down Ctrl/Cmd when clicking an item, then all the previously selected items are lost.',
 	'HIDE_POLL_RESULTS'			=> 'Hide poll results',
 	'HIDE_POLL_RESULTS_EXPLAIN'	=> 'The results are only shown when the survey is completed or when polls open if the user has voted, more <a href="http://www.phpbb9.de/neue-forum-funktionen/umfrageergebnisse-verstecken-t37450.html">Hide poll results.</a>',
 	'HIDE_LINKS'				=> 'Hide links for guests',
@@ -10250,8 +10247,8 @@ $lang = array_merge($lang, array(
 	'MOBILESTYLE_MENU'			=> 'Mobile Style',
 	'MOBILESTYLE'				=> 'Enable detection of mobile devices?',
 	'MOBILESTYLE_EXPLAIN'		=> 'Activates a specially-optimized design for mobile devices, which perfectly adapts to the resolution. <br /> If the detection is disabled, users see only the normal styles of the forum. <a href="http://www.phpbb9.de/neue-forum-funktionen/mobile-style-t42589.html" target="_blank">read more</a>',
-	'POST_NUMBERS'				=> 'Post number into topics',
-	'POST_NUMBERS_EXPLAIN'		=> 'Shows in each subject in posts, the number of the current post to eg: #14',
+	'POST_NUMBERS'				=> 'Display post numbers in topics',
+	'POST_NUMBERS_EXPLAIN'		=> 'Adds the number of each post in viewtopic. Additionally, clicking on that number will popup a window with the direct link to that post.',
 	'SUB_DEFAULT'				=> 'Standard (separated by , )',
 	'SUB_COLUMN'				=> 'In 2 columns next to each other',
 	'SUB_NEWROW'				=> 'Among themselves',
