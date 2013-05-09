@@ -10261,7 +10261,8 @@ $lang = array_merge($lang, array(
 	'SUB_NEWROW'				=> 'Among themselves',
 	'TOPIC_STATS'				=> 'Bookmark, Subscribers and Thanks statistics in Topics',
 	'TOPIC_STATS_EXPLAIN'		=> 'Enables a special bar in topics and shows also total numbers of them in forums. (e.g. how many users have subscribed to the topic) <a href="http://www.phpbb9.de/neue-forum-funktionen/themen-statistik-lesezeichen-abonnenten-bedankungen-themenlinks-t42739.html" target="_blank">More informations</a>',
-
+	'TITLE_USER_REMINDER'		=> 'User Reminder',
+	'TITLE_USER_REMINDER_EXPLAIN'	=> 'Here you will be able to remind your users that have been not been active on your board',
 ));
 
 $lang = array_merge($lang, array(
