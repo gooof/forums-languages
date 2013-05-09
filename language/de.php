@@ -8691,8 +8691,8 @@ $lang = array_merge($lang, array(
 	'PRIME_NOTIFY_PM_CONTENT'			=> 'Benachrichtige mit PMinhalt',
 	'PRIME_NOTIFY_PM_CONTENT_EXPLAIN'	=> 'Den PM-Inhalt in der Benachrichtigungs-eMail mitsenden?',
 	
-	'PRIME_NOTIFY_FORUM_VISIT_MSG'		=> 'Bis zum erneuten Besuch des Forum werden keine weiteren Benachrichtigungen gesendet. ',
-	'PRIME_NOTIFY_TOPIC_VISIT_MSG'		=> 'Bis zum erneuten Besuch des Topics werden keine weiteren Benachrichtigungen gesendet. ',
+	'PRIME_NOTIFY_FORUM_VISIT_MSG'		=> 'Bis zum erneuten Besuch des Forums werden keine weiteren Benachrichtigungen gesendet. ',
+	'PRIME_NOTIFY_TOPIC_VISIT_MSG'		=> 'Bis zum erneuten Besuch des Themas werden keine weiteren Benachrichtigungen gesendet. ',
 ));
 
 #######language/en/mods/profilecomments.php#######
@@ -10260,7 +10260,6 @@ $lang = array_merge($lang, array(
 	'MOBIQUO_IS_CHROME'				=> 'Tapatalk: Notifier für Chrom aktivieren',
 	'MOBIQUO_IS_CHROME_EXPLAIN'		=> 'Für Benutzer des Forums die den Browser Google Chome verwenden mit "Tapatalk Notifier" Addon. Tapatalk Notifier für Chrome ist ein Web-Browser-Erweiterung, die Sie mit einer kleinen Warnung benachrichtigt, wenn eine neue Private Nachricht vorhanden ist.',
 	'MOBIQUO_GUEST_OKAY'			=> 'Tapatalk: Gäste allgemein zulassen?',
-	'MOBIQUO_GUEST_OKAY_EXPLAIN'	=> 'Allow guests to browser your fourm on tapatalk.',
 	'MOBIQUO_HIDE_FORUM_ID'			=> 'Tapatalk: Diese Foren verstecken',
 	'MOBIQUO_HIDE_FORUM_ID_EXPLAIN'	=> 'Wähle hier Foren die du nicht in Tapatalk anzeigen lassen willst.',
 	'MOBIQUO_PUSH'					=> 'Tapatalk: Push-Benachrichtigung aktivieren',
@@ -10268,7 +10267,6 @@ $lang = array_merge($lang, array(
 	'TAPATALK_PUSH_KEY'				=> 'Tapatalk: Push Notification Key',
 	'TAPATALK_PUSH_KEY_EXPLAIN'		=> 'Zu finden ist der Key unter Tapatalk.com -> Forum Owner Area -> Advanced -> Push Notification Key.<br />Der Key ist nicht zwingend erforderlich, macht die Push Meldungen der App aber komplett.',
 	'TAPATALK_FORUM_READ_ONLY'		=> 'Tapatalk: Forum nur lesen',
-	'TAPATALK_FORUM_READ_ONLY_EXPLAIN'	=> 'Create new topic will be forbidden from seletecd forums from App',
 	'POST_NUMBERS'				=> 'Beitragsnummer in Themen anzeigen',
 	'POST_NUMBERS_EXPLAIN'		=> 'Zeigt in jedem Thema die Zahl des aktuellen Beitrags an z.B.: #14 <a href="http://www.phpbb9.de/neue-forum-funktionen/beitragsnummern-themen-post-number-t42718.html" target="_blank">Mehr Informationen</a>',
 	'SPAM_GUESTLINKS'			=> 'Spamschutz: Gästen erlauben Links zu posten',
@@ -10299,7 +10297,8 @@ $lang = array_merge($lang, array(
 	'SUB_NEWROW'				=> 'Untereinander',
 	'TOPIC_STATS'				=> 'Lesezeichen, Abonnenten und Bedankungen Statistiken',
 	'TOPIC_STATS_EXPLAIN'		=> 'Für Foren- und Themen-Ansichten; Aktiviert in den Themen eine Leiste mit der diese einfacher Abonniert und Lesezeichen gesetzt werden können. Zudem blendet es Themenlinks und eine Statistik in der Leiste ein, z.B. wieviele das Thema abonniert haben.<br />Zusätzlich werden in Foren; Symbole mit den Gesamtzahlen über die Bookmarks, Abonnenten und Likes/Bedankungen angezeigt. <a href="http://www.phpbb9.de/neue-forum-funktionen/themen-statistik-lesezeichen-abonnenten-bedankungen-themenlinks-t42739.html" target="_blank">Mehr Informationen</a>',
-
+	'TITLE_USER_REMINDER'		=> 'User Reminder',
+	'TITLE_USER_REMINDER_EXPLAIN'	=> 'Hier hast du die Möglichkeit, deine Mitglieder per Mail zu erinnern, die sich nicht aktiv am Forum beteiligen.',
 ));
 
 $lang = array_merge($lang, array(

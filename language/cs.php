@@ -7407,7 +7407,7 @@ $lang = array_merge($lang, array(
 	'HANGMAN_TITLE'					=> 'Hangman MOD',
 	'EXPLAIN'					=> 'This is the Main Page for Exporting or Importing Hangmans in XML. <br />If you want to Import a File Browse it and then choose Import. This will import the Hangmans.<br />If you want to Export some Hangmans choose the range from/to of Hangmans you like to export and then press Export,<br />then your browser will send you a file. You have to choose where to save and then the download starts. As with import, use smaller exports (max. 1000 records)!',
 	'EXPORT'					=> 'Export',
-	'IMPORT'					=> 'Hangman - Import',
+	'IMPORT'					=> 'Import',
 	'IMPORT_EXPLAIN'			=> 'If you like to change the standard import settings, you can change below values. Please mark the field behind then!<br />So the basic settings are <strong>Anonymous</strong> as username and a maximum of <strong>1000</strong> of Hangmans to import (you shouldn\'t even try more at once to avoid errors - exceeding time limit or memory).',
 	'CHOOSEFILE'				=> 'Choose a file',
 	'EXPORT_START_AT'			=> 'Begin at which ID',
@@ -10221,8 +10221,7 @@ $lang = array_merge($lang, array(
 	'TOPIC_TITLE_SIZE_EXPLAIN'	=> 'Carrying case 0 or 64 if the title should not be cut <br /> Default: 30',
 	'MOBIQUO_IS_CHROME'				=> 'Enable Tapatalk Notifier in Chrome',
 	'MOBIQUO_IS_CHROME_EXPLAIN'		=> 'Users of your forum on Google Chome Browser will be notified with "Tapatalk Notifier". Tapatalk Notifier for Chrome is a web browser extension that notify you with a small alert when you received a new Private Message from your forum members.',
-	'MOBIQUO_GUEST_OKAY'			=> 'Allow Guests',
-	'MOBIQUO_GUEST_OKAY_EXPLAIN'	=> 'Allow guests to browser your fourm on tapatalk.',
+	'MOBIQUO_GUEST_OKAY'			=> 'Allow Guests to browse forum',
 	'MOBIQUO_HIDE_FORUM_ID'			=> 'Hide Forums',
 	'MOBIQUO_HIDE_FORUM_ID_EXPLAIN'	=> 'Hide forums you don\'t want them to be listed in Tapatalk app.',
 	'MOBIQUO_PUSH'					=> 'Enable Tapatalk Push Notification',
@@ -10230,7 +10229,6 @@ $lang = array_merge($lang, array(
 	'TAPATALK_PUSH_KEY'				=> 'Tapatalk push key',
 	'TAPATALK_PUSH_KEY_EXPLAIN'		=> 'A push_key to verify your forum push certification, you can fill here with the push key you registered in Tapatalk.com. This is not mandatory but if you enter this key, it will make push feature perfect .',
 	'TAPATALK_FORUM_READ_ONLY'		=> 'Forum Read Only',
-	'TAPATALK_FORUM_READ_ONLY_EXPLAIN'	=> 'Create new topic will be forbidden from seletecd forums from App',
 	'POST_NUMBERS'				=> 'Display post numbers in topics',
 	'POST_NUMBERS_EXPLAIN'		=> 'Adds the number of each post in viewtopic. Additionally, clicking on that number will popup a window with the direct link to that post.',
 	'SPAM_GUESTLINKS'			=> 'Spam protection: Allow guests to post links',
@@ -10261,7 +10259,8 @@ $lang = array_merge($lang, array(
 	'SUB_NEWROW'				=> 'Among themselves',
 	'TOPIC_STATS'				=> 'Bookmark, Subscribers and Thanks statistics in Topics',
 	'TOPIC_STATS_EXPLAIN'		=> 'Enables a special bar in topics and shows also total numbers of them in forums. (e.g. how many users have subscribed to the topic) <a href="http://www.phpbb9.de/neue-forum-funktionen/themen-statistik-lesezeichen-abonnenten-bedankungen-themenlinks-t42739.html" target="_blank">More informations</a>',
-
+	'TITLE_USER_REMINDER'		=> 'User Reminder',
+	'TITLE_USER_REMINDER_EXPLAIN'	=> 'Here you will be able to remind your users that have been not been active on your board',
 ));
 
 $lang = array_merge($lang, array(
