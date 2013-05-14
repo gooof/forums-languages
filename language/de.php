@@ -11598,7 +11598,7 @@ $lang = array_merge($lang, array(
 	'RESET_USER_ALL_CONFIRM'			=> 'Sicher, dass du alle Daten dieses Spielers zurücksetzen möchtest?',
 
 	'CAT_ADMIN'							=> 'Spiele Kategorie Verwaltung',
-	'CAT_ADMIN_EXPLAIN'					=> 'Hier können Sie Kategorien erstellen und Links. Jede Kategorie kann eine unbegrenzte Anzahl von Unterkategorien. Hier können Sie hinzufügen, editieren, löschen, sperren, entsperren einzelnen Kategorien sowie bestimmte zusätzliche Kontrollen. Wenn Ihre Kategorien und Spiele haben out of sync können Sie auch jeden resynchronise.',
+	'CAT_ADMIN_EXPLAIN'					=> 'Hier kannst du Kategorien und Links für die Spielhalle erstellen. Jede Kategorie kann eine unbegrenzte Anzahl an Unterkategorien erhalten. Hier kannst du individuelle Kategorien hinzufügen, ändern, löschen, sperren und entsperren, sowie zusätzliche Kontrollen festlegen. Wenn deine Kategorien und Spiele asynchron sind, kannst du sie außerdem neu synchronisieren.',
 	'CAT_CREATED'						=> 'Kategorie wurde erfolgreich erstellt.',
 	'CAT_DELETE'						=> 'Kategorie gelöscht',
 	'CAT_DELETE_EXPLAIN'				=> 'Das unten stehende Formular erlaubt es dir, eine Kategorie zu löschen. Wenn die Kategorie Spiele oder Links beinhaltet, kannst du auswählen, wohin du diese verschieben willst.',
