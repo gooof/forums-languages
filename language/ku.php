@@ -2737,6 +2737,8 @@ $lang = array_merge($lang, array(
 	'BBCODE_F_TYPE_HELP'		=> 'Typeface',
 	'BBCODE_TAB_HELP'		=> 'Add a Tab one (The text must also be in the [tab] ... [/ tab] to be inserted)',
 	'BBCODE_E_HELP'		=> 'List: Add list element',
+	'REPLY_TO_MESSAGE'	=> 'Reply to message',
+
 ));
 
 #######language/en/search.php#######
