@@ -2441,7 +2441,7 @@ $lang = array_merge($lang, array(
 	
 	'UPLOAD_LINK'	=> 'Upload',
 	'FM_RADIO'		=> 'FM Radio',
-	'MP3_POPUP'		=> 'Musik Player äffnen',
+	'MP3_POPUP'		=> 'Musik Player öffnen',
 	'NO_SEARCH'		=> 'Du bist leider nicht berechtigt, die Suche zu verwenden.',	
 	'FORUM_RULES'	=> 'Forumsregeln',
 	'SHOUTBOX'		=> 'Shoutbox - Chat',
@@ -2742,7 +2742,7 @@ $lang = array_merge($lang, array(
 	'FONT_COLOR'			=> 'Schriftfarbe',
 	'BBCODE_F_COLOR_HELP'	=> 'Standartschriftfarbe',
 	'BBCODE_F_TYPE_HELP'		=> 'Schriftart',
-	'BBCODE_TAB_HELP'		=> 'F?ge einen Tab ein (Der Text muss auch in [tab] ... [/tab] eingef?gt sein)',
+	'BBCODE_TAB_HELP'		=> 'Füge einen Tab ein (Der Text muss auch in [tab] ... [/tab] eingefügt sein)',
 	'BBCODE_E_HELP'		=> 'Aufzählung: Listenelement hinzufügen',
 	'REPLY_TO_MESSAGE'	=> 'Antwort auf Beitrag',
 
@@ -3477,12 +3477,12 @@ $lang = array_merge($lang, array(
 #######language/en/mods/abbcode.php#######
 
 $lang = array_merge($lang, array(
-	'ABBC3_HELP_TITLE'			=> 'BBCode Box 3 :: Hilfeseite',
+	'ABBC3_HELP_TITLE'			=> 'BBCode Box :: Hilfeseite',
 	'ABBC3_HELP_DESC'			=> 'Beschreibung',
 	'ABBC3_HELP_WRITE'			=> 'Dein geschriebener Text',
 	'ABBC3_HELP_VIEW'			=> 'Ergebnis',
 	'ABBC3_HELP_ABOUT'			=> 'This site powered by <a href="http://www.userboard.org">www.UserBoard.org</a>',
-	'ABBC3_HELP_ALT'			=> 'Infos about this editor',
+	'ABBC3_HELP_ALT'			=> 'BBCode Box',
 
 	'ABBC3_RESIZE_SMALL'		=> 'Klicke auf diese Leiste um das Bild in voller Größe anzuzeigen.',
 	'ABBC3_RESIZE_ZOOM_IN'		=> 'vergrößern: %1$s x %2$s',
@@ -3551,7 +3551,7 @@ $lang = array_merge($lang, array(
 	'ABBC3_FONT_NOTE'			=> 'Notiz: Du kannst deine eigene Schriftenfamilie benutzen',
 	'ABBC3_FONT_VIEW'			=> '<span style="font-family:Comic Sans MS">Das ist ein Beispieltext</span>',
 
-	'ABBC3_FONT_ABBC3'			=> 'Exklusive',
+	'ABBC3_FONT_ABBC3'			=> 'BBCode Box',
 	'ABBC3_FONT_SAFE'			=> 'Standard',
 	'ABBC3_FONT_WIN'			=> 'Windows',
 
@@ -3914,7 +3914,7 @@ $lang = array_merge($lang, array(
 #######language/en/mods/acp_abbcodes.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_ABBCODES'						=> 'BBCode Box',
+	'ACP_ABBCODES'						=> 'BBcode Box',
 	'ACP_ABBCODES_EXPLAIN'				=> 'Hier kannst Du die verfügbaren Stile für <strong>[ <a href="http://www.mssti.com/phpbb3" target="_blank">BBCode-Box</a> ]</strong> auf deinem Board Einstellen.<br/>Du darfst existierende Stile verändern, neu laden, deactivieren oder reactivieren. Du kannst auch sehen, wie ein Stil aussehen wird, wenn du die Vorschaufunktion benutzt. <br/><em>Der eigestellte Stil wird durch ein (*) gekennzeichnet. Es ist auch aufgeführt wie viele User einen Stil derzeit benutzen.</em>',
 	'ABBCODES_CUSTOM_BBCODES'			=> 'Standard BBCodes',
 	'ABBCODES_CUSTOM_BBCODES_EXPLAIN'	=> 'Anzeige der Standard bbcodes icons. Diese Funktion ermöglicht das Vereinigen mit anderen Video bbcodes wie [youtube] und fügt deine eigenen bbcodes ein (Wenn vorhanden).',
@@ -3930,7 +3930,7 @@ $lang = array_merge($lang, array(
 
 	'ABBCODES_RESIZE'					=> 'Grö&szlig;enänderung gro&szlig;er Bilder',
 	'ABBCODES_RESIZE_EXPLAIN'			=> 'Dies repariert einen Fehler des [img] bbcode wenn ein übergro&szlig;es Bild eingefügt wird dessen Breite grö&szlig;er ist als die Breite des Beitrags Inhaltes.',
-	'ABBCODES_JAVASCRIPT_EXPLAIN'		=> '<strong>Note : </strong> <em>AdvancedBox JS</em> is an JavaScript software used to display images in full size.<br />Also you can use <strong>ABBC3</strong> with other\'s script. This modifications are totally optionals. Each script have his own support. I\'m not responsible about it. I will not answer question/problem/bug or any kind of issues about them.',
+	'ABBCODES_JAVASCRIPT_EXPLAIN'		=> '<strong>Hinweis:</strong> <em>AdvancedBox JS</em> ist ein JavaScript und wird verwendet, um Bilder in voller Größe anzuzeigen.',
 	'ABBCODES_RESIZE_METHOD'			=> 'Grö&szlig;enänderungs Methode',
 	'ABBCODES_RESIZE_METHOD_EXPLAIN'	=> 'Wähle welche Art zum Anzeigen des Bildes verwendet werden soll.',
 	'ABBCODES_RESIZE_BAR'				=> 'Vergrößerungsnotiz',
@@ -3953,13 +3953,13 @@ $lang = array_merge($lang, array(
 	'ABBCODES_VIDEO_SIZE'				=> 'Video Grö&szlig;e',
 	'ABBCODES_VIDEO_SIZE_EXPLAIN'		=> 'Standard Breite x Höhe für gepostete Videos über den BBCode [bbvideo=*]*[/bbvideo].',
 
-	'ABBCODES_SETINGS'					=> 'ABBC3 settings',
-	'ABBCODES_SETINGS_EXPLAIN'			=> 'Here you can determine the basic operation of <strong>ABBC3</strong>, enable or disable, and among other settings adjust the default values for the background.',
+	'ABBCODES_SETINGS'					=> 'BBcode Box Einstellungen',
+	'ABBCODES_SETINGS_EXPLAIN'			=> 'Hier können grundlegende Einstellungen des BBCode Box Editors festgelegt werden, wie auch Einstellungen zum automatischen Bildverkleinerer oder das Hintergrundbild des Editors.',
 
-	'ABBCODES_EDIT'						=> 'ABBC3 edit bbcode',
+	'ABBCODES_EDIT'						=> 'BBcode der BBCode Box ändern',
 	'ABBCODES_EDIT_EXPLAIN'				=> 'Here you can determine where will be displayed or who can use it and the image of each bbcode.',
 
-	'ABBCODES_CONFIG'					=> 'ABBC3 Component config',
+	'ABBCODES_CONFIG'					=> 'BBCode Box Einstellungen',
 	'ABBCODES_CONFIG_EXPLAIN'			=> 'From this page you can alter the order of tags on posting page or edit the icons,',
 	'ABBCODES_GROUPS_EXPLAIN'			=> '<strong>Manage groups : </strong>If there are no selected groups all users can use this bbcode.<br />In order to select (or un-select) multiple groups, you must use Ctrl-Click (or Cmd-Click on Mac) items to add them. If you forget to hold down Ctrl/Cmd when clicking an item, then all the previously selected items are lost.',
 
@@ -4369,7 +4369,7 @@ $lang = array_merge($lang, array(
 	'NO_PERMISSION_ARCADE_SCORE'		=> 'Sie haben nicht die Erlaubnis, um Ihre Punktzahl zu speichern. Wenn Sie glauben, dass dies ein Fehler wenden Sie sich bitte an den Administrator.',
 	'NO_PERMISSION_ARCADE_VIEW'			=> 'Sie haben nicht die Erlaubnis, um diese Kategorie sehen zu dürfen. Wenn Sie glauben, dass dies ein Fehler wenden Sie sich bitte an den Administrator.',
 	'NO_PERMISSION_ARCADE_PLAY'			=> 'Sie haben nicht die Erlaubnis, um Spiele in dieser Kategorie spielen zu dürfen. Wenn Sie glauben, dass dies ein Fehler wenden Sie sich bitte an den Administrator.',
-	'NO_PERMISSION_ARCADE_PLAY_POPUP'	=> 'Sie haben nicht die Erlaubnis, um Spiele in einem neuen Fenster zu äffnen. Wenn Sie glauben, dass dies ein Fehler wenden Sie sich bitte an den Administrator.',
+	'NO_PERMISSION_ARCADE_PLAY_POPUP'	=> 'Sie haben nicht die Erlaubnis, um Spiele in einem neuen Fenster zu öffnen. Wenn Sie glauben, dass dies ein Fehler wenden Sie sich bitte an den Administrator.',
 	'NO_PERMISSION_ARCADE_RATE'			=> 'Sie haben nicht die Erlaubnis, um Spiele zu bewerten. Wenn Sie glauben, dass dies ein Fehler wenden Sie sich bitte an den Administrator.',
 	'NO_PERMISSION_ARCADE_COMMENT'		=> 'Sie haben nicht die Erlaubnis, um einen Kommentar abzugeben. Wenn Sie glauben, dass dies ein Fehler wenden Sie sich bitte an den Administrator.',
 	'NO_PERMISSION_ARCADE_DOWNLOAD'		=> 'Keine Erlaubnis zum Download.',
@@ -4386,7 +4386,7 @@ $lang = array_merge($lang, array(
 	'ARCADE_PERMISSIONS'				=> 'Spiele Berechtigungen',
 
 	'ARCADE_RULES_PLAY_CAN'						=> 'Du <strong>kannst</strong> hier Spiele spielen',
-	'ARCADE_RULES_PLAY_POPUP_CAN'				=> 'Du <strong>kannst</strong> Spiele in neuem Fenster äffnen',
+	'ARCADE_RULES_PLAY_POPUP_CAN'				=> 'Du <strong>kannst</strong> Spiele in neuem Fenster öffnen',
 	'ARCADE_RULES_SCORE_CAN'					=> 'Du <strong>kannst</strong> Highscores speichern',
 	'ARCADE_RULES_DOWNLOAD_CAN'					=> 'Du <strong>kannst</strong> downloaden',
 	'ARCADE_RULES_RATE_CAN'						=> 'Du <strong>kannst</strong> Spiele bewerten',
@@ -4394,7 +4394,7 @@ $lang = array_merge($lang, array(
 	'ARCADE_RULES_IGNORE_CONTROL_CAN'			=> 'Du <strong>kannst</strong> das Spiellimit ignorieren',
 	'ARCADE_RULES_RESOLUTION_CAN'				=> 'Du <strong>kannst</strong> die Auflösung des Spiels ändern',
 	'ARCADE_RULES_PLAY_CANNOT'					=> 'Du <strong>kannst nicht</strong> hier Spiele spielen',
-	'ARCADE_RULES_PLAY_POPUP_CANNOT'			=> 'Du <strong>kannst nicht</strong> Spiele in neuem Fenster äffnen',	
+	'ARCADE_RULES_PLAY_POPUP_CANNOT'			=> 'Du <strong>kannst keine</strong> Spiele in neuen Fenstern öffnen',	
 	'ARCADE_RULES_SCORE_CANNOT'					=> 'Du <strong>kannst nicht</strong> Highscores speichern',
 	'ARCADE_RULES_DOWNLOAD_CANNOT'				=> 'Du <strong>kannst nicht</strong> downloaden',
 	'ARCADE_RULES_RATE_CANNOT'					=> 'Du <strong>kannst nicht</strong> Spiele bewerten',
@@ -10897,19 +10897,18 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_WELCOME_CONFIG'	=> 'Willkommensnachricht',
 	'ACP_WELCOME_CONFIG'		=> 'Willkommesnachricht',
 	'ACP_PORTAL_WELCOME_EXPLAIN'=> '',
-
 	'ADM_LOGOUT'			=> 'ACP Logout',
 	'ADM_LOGGED_OUT'		=> 'Du wurdest erfolgreich vom Administrations-Bereich abgemeldet.',
 	'LOG_REFERER_INVALID'	=> '<strong>Überprüfung des Referrers gescheitert</strong><br />»Referrer war „<em>%1$s</em>“. Anfrage wurde abgewiesen und Sitzung beendet.',
 
-	'ACP_ABBCODES'			=> 'BBCode Box',
-	'LOG_CONFIG_ABBCODES'	=> '<strong>Ändere Editor Einstellungen</strong>',
-	'LOG_CONFIG_ABBCODES_ERROR'	=> '<strong>Fehler beim speichern der Editor Einstellungen</strong>',
+	'ACP_ABBCODES'			=> 'BBcode Box',
+	'LOG_CONFIG_ABBCODES'	=> '<strong>Änderte Editor Einstellungen</strong>',
+	'LOG_CONFIG_ABBCODES_ERROR'	=> '<strong>Fehler beim Speichern der Editor Einstellungen</strong>',
 	'LOG_RESET_ABBCODES'		=> '<strong>Zurücksetzen der Editor Einstellungen</strong>',
-	'LOG_RESET_ABBCODES_ERROR'	=> '<strong>Fehler beim zurücksetzen der Editor Einstellungen</strong>',
+	'LOG_RESET_ABBCODES_ERROR'	=> '<strong>Fehler beim Zurücksetzen der Editor Einstellungen</strong>',
 	'RESET_ABBCODES_EXPLAIN'	=> 'Bist Du sicher das <em>alle bbcodes</em> auf Ihre Standard Einstellungen zurückgesetzt werden sollen?',
 	'RESET_CONFIG_EXPLAIN'	=> 'Bist Du sicher das der <strong>BBCode Editor</strong> auf die Standard Einstellungen zurückgesetzt werden soll?',
-	'ACP_ABBC3_SETTINGS'		=> 'BBCode Box Einstellungen',
+	'ACP_ABBC3_SETTINGS'		=> 'BBcode Box Einstellungen',
 	'ACP_ABBC3_BBCODES'		=> 'BBCode Box Komponenten',
 	'ACP_GALLERY_WATERMARK'	=> 'Galerie Wasserzeichen',
 	'ACP_GALLERY_WATERMARK_EXPLAIN'	=> 'Füge hier das Wasserzeichen für die Bilder-Galerie ein!',
@@ -10990,10 +10989,10 @@ $lang = array_merge($lang, array(
 	'ACP_REPORT_DELETE'		=> 'Lösche Bericht',
 	'ACP_REPORT_MANAGE'		=> 'Berichte verwalten (Ansehen/Löschen)',
 	'ACP_REPORT_EDIT'		=> 'Bearbeite Eintrag',
-	'ACP_REPORT_WELCOME'		=> 'Willkommensnachricht hinzufügen/bearbeiten',
+	'ACP_REPORT_WELCOME'	=> 'Willkommensnachricht hinzufügen/bearbeiten',
 	'BLOCK_VIEWED_BY'		=> 'Betrachtet von',
 	'BLOCK_USERGROUPS'		=> 'Usergruppen',
-	'FORUM_PORTAL'		=> 'Portal',	
+	'FORUM_PORTAL'			=> 'Portal',	
 	'PORTAL_PAGE'			=> 'Portal Seite',		
 	'PHOOGLE_API_LANG'		=> 'Google Sprache',
 	'PHOOGLE_API_LANG_EXPLAIN'	=> '',
@@ -11001,6 +11000,8 @@ $lang = array_merge($lang, array(
 	'UPLOAD_FILES'		=> 'Datei Uploads verwalten',
 	'PORTAL'			=> 'Portal',
 	'ACP_DOWNLOAD'		=> 'Downloads',
+	'ARCADE_RESYNC_HIGHSCORES'	=> 'Highscores neu berechnen',
+	'ARCADE_RESYNC_HIGHSCORES_EXPLAIN'	=> 'Resynchronisiert die Highscores bei Fehlern und trägt den richtigen Sieger für jedes Spiel ein.',
 
 	'ACP_CAT_PHOOGLE'			=> 'Phoogle Map',
 	'ACP_USER_PHOOGLE'			=> 'Phoogle Map',

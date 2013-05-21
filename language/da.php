@@ -3439,12 +3439,12 @@ $lang = array_merge($lang, array(
 #######language/en/mods/abbcode.php#######
 
 $lang = array_merge($lang, array(
-	'ABBC3_HELP_TITLE'			=> 'Advanced BBCode box 3 :: Help Page',
+	'ABBC3_HELP_TITLE'			=> 'BBCode Box :: Help Page',
 	'ABBC3_HELP_DESC'			=> 'Beskrivelse',
 	'ABBC3_HELP_WRITE'			=> 'Your write format',
 	'ABBC3_HELP_VIEW'			=> 'Our show format',
 	'ABBC3_HELP_ABOUT'			=> 'This site powered by <a href="http://www.userboard.org">www.UserBoard.org</a>',
-	'ABBC3_HELP_ALT'			=> 'Advanced BBCode Box 3',
+	'ABBC3_HELP_ALT'			=> 'BBCode Box',
 
 	'ABBC3_RESIZE_SMALL'		=> 'Click this bar to view the full image.',
 	'ABBC3_RESIZE_ZOOM_IN'		=> 'Zoom in (real dimensions: %1$s x %2$s)',
@@ -3513,7 +3513,7 @@ $lang = array_merge($lang, array(
 	'ABBC3_FONT_NOTE'			=> 'Note: You can use your own font-family',
 	'ABBC3_FONT_VIEW'			=> '[font=Comic Sans MS]This is a sample text[/font]',
 
-	'ABBC3_FONT_ABBC3'			=> 'ABBC Box 3',
+	'ABBC3_FONT_ABBC3'			=> 'BBCode Box',
 	'ABBC3_FONT_SAFE'			=> 'Safe list',
 	'ABBC3_FONT_WIN'			=> 'Win default',
 
@@ -3876,7 +3876,7 @@ $lang = array_merge($lang, array(
 #######language/en/mods/acp_abbcodes.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_ABBCODES'						=> 'Advanced BBcodes Box',
+	'ACP_ABBCODES'						=> 'BBcode Box',
 	'ACP_ABBCODES_EXPLAIN'				=> 'Here you can view the available styles for the BBCode box set on your board. <br /> You can modify existing styles, invite newly-activate, or reactivieren. You can also see how a style is, if you use the preview function. <br /> <em> eigestellte style is marked by an (*). It is also listed how many users currently use a style. </em>',
 	'ABBCODES_CUSTOM_BBCODES'			=> 'Standard BBCodes',
 	'ABBCODES_CUSTOM_BBCODES_EXPLAIN'	=> 'Display the default bbcodes icons. This feature allows combining with other video bbcodes like [youtube] and add your own bbcodes one (if any).',
@@ -3892,7 +3892,7 @@ $lang = array_merge($lang, array(
 
 	'ABBCODES_RESIZE'					=> 'Resize larger images',
 	'ABBCODES_RESIZE_EXPLAIN'			=> 'This corrects the error of the [img] bbcode, when someone publishes a picture that exceeds the width of your forum.',
-	'ABBCODES_JAVASCRIPT_EXPLAIN'		=> '<strong>Note : </strong> <em>AdvancedBox JS</em> is an JavaScript software used to display images in full size.<br />Also you can use <strong>ABBC3</strong> with other’s script. This modifications are totally optionals. Each script have his own support. I’m not responsible about it. I will not answer question/problem/bug or any kind of issues about them.',
+	'ABBCODES_JAVASCRIPT_EXPLAIN'		=> '<strong>Note : </strong> <em>AdvancedBox JS</em> is an JavaScript software used to display images in full size.',
 	'ABBCODES_RESIZE_METHOD'			=> 'Resize method',
 	'ABBCODES_RESIZE_METHOD_EXPLAIN'	=> 'Choose how to display resized images to full size, in all possible situations.',
 	'ABBCODES_RESIZE_BAR'				=> 'Resizer note',
@@ -3915,13 +3915,13 @@ $lang = array_merge($lang, array(
 	'ABBCODES_VIDEO_SIZE'				=> 'Video dimensions',
 	'ABBCODES_VIDEO_SIZE_EXPLAIN'		=> 'Default width and height for posted video.',
 
-	'ABBCODES_SETINGS'					=> 'ABBC3 settings',
+	'ABBCODES_SETINGS'					=> 'BBCode Box settings',
 	'ABBCODES_SETINGS_EXPLAIN'			=> 'Here you can determine the basic operation of <strong>ABBC3</strong>, enable or disable, and among other settings adjust the default values for the background.',
 
-	'ABBCODES_EDIT'						=> 'ABBC3 edit bbcode',
+	'ABBCODES_EDIT'						=> 'BBCode Box edit bbcode',
 	'ABBCODES_EDIT_EXPLAIN'				=> 'Here you can determine where will be displayed or who can use it and the image of each bbcode.',
 
-	'ABBCODES_CONFIG'					=> 'ABBC3 Component config',
+	'ABBCODES_CONFIG'					=> 'BBCode Box Config',
 	'ABBCODES_CONFIG_EXPLAIN'			=> 'From this page you can alter the order of tags on posting page or edit the icons,',
 	'ABBCODES_GROUPS_EXPLAIN'			=> '<strong>Manage groups : </strong>If there are no selected groups all users can use this bbcode.<br />In order to select (or un-select) multiple groups, you must use Ctrl-Click (or Cmd-Click on Mac) items to add them. If you forget to hold down Ctrl/Cmd when clicking an item, then all the previously selected items are lost.',
 
@@ -3937,7 +3937,7 @@ $lang = array_merge($lang, array(
 	'ABBCODES_SYNC'						=> 'Synchronise order',
 	'ABBCODES_RESYNC_SUCCESS'			=> 'The bbcode order have been resynchronised.',
 
-	'ABBCODES_MOD_DISABLE'				=> '<strong>Advanced BBcodes Box 3</strong> is disabled.<br />',
+	'ABBCODES_MOD_DISABLE'				=> '<strong>BBcode Box</strong> is disabled.<br />',
 	'ABBCODES_STATUS'					=> 'status',
 	'ABBCODES_ACTIVATED'				=> 'activated',
 	'ABBCODES_DEACTIVATED'				=> 'deactivated',
@@ -10862,20 +10862,19 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_WELCOME_CONFIG'	=> 'Welcome Massage',
 	'ACP_WELCOME_CONFIG'		=> 'Welcome Message',
 	'ACP_PORTAL_WELCOME_EXPLAIN'=> '',
-
 	'ADM_LOGOUT'			=> 'ACP&nbsp;log ud',
 	'ADM_LOGGED_OUT'		=> 'Du er logget af administratorkontrolpanelet',
 	'LOG_REFERER_INVALID'	=> '<strong>Validering af reference fejlede</strong><br />»Referencen var “<em>%1$s</em>”. Request blev afvist og sessionen afsluttet.',
 
-	'ACP_ABBCODES'			=> 'Advanced BBcodes Box',
-	'LOG_CONFIG_ABBCODES'	=> '<strong>Altered ABBC3 settings</strong>',
-	'LOG_CONFIG_ABBCODES_ERROR'	=> '<strong>Error while save ABBC3 settings</strong>',
-	'LOG_RESET_ABBCODES'		=> '<strong>Reset ABBC3 settings</strong>',
-	'LOG_RESET_ABBCODES_ERROR'	=> '<strong>Error while reset ABBC3 settings</strong>',
+	'ACP_ABBCODES'			=> 'BBcode Box',
+	'LOG_CONFIG_ABBCODES'	=> '<strong>Altered BBCode Box settings</strong>',
+	'LOG_CONFIG_ABBCODES_ERROR'	=> '<strong>Error while save BBCode Box settings</strong>',
+	'LOG_RESET_ABBCODES'		=> '<strong>Reset BBCode Box settings</strong>',
+	'LOG_RESET_ABBCODES_ERROR'	=> '<strong>Error while reset BBCode Box settings</strong>',
 	'RESET_ABBCODES_EXPLAIN'	=> 'Are you sure you wish to reset <em>all bbcodes</em> to default settings?',
-	'RESET_CONFIG_EXPLAIN'	=> 'Are you sure you wish to reset <strong>ABBC3</strong> to default settings?',
-	'ACP_ABBC3_SETTINGS'		=> 'ABBC3 Settings',
-	'ACP_ABBC3_BBCODES'		=> 'ABBC3 BBCodes',
+	'RESET_CONFIG_EXPLAIN'	=> 'Are you sure you wish to reset <strong>BBCode Box</strong> to default settings?',
+	'ACP_ABBC3_SETTINGS'		=> 'BBcode Box Settings',
+	'ACP_ABBC3_BBCODES'		=> 'BBCode Box BBCodes',
 	'ACP_GALLERY_WATERMARK'	=> 'Watermark',
 	'ACP_GALLERY_WATERMARK_EXPLAIN'	=> 'Upload here your watermark for gallery images!',
 	'ACP_CALENDAR'			=> 'Calendar',
@@ -10955,10 +10954,10 @@ $lang = array_merge($lang, array(
 	'ACP_REPORT_DELETE'		=> 'Delete Report',
 	'ACP_REPORT_MANAGE'		=> 'Manage Reports (View / Delete)',
 	'ACP_REPORT_EDIT'		=> 'Edit Entry',
-	'ACP_REPORT_WELCOME'		=> 'Edit Welcome message',
+	'ACP_REPORT_WELCOME'	=> 'Edit Welcome message',
 	'BLOCK_VIEWED_BY'		=> 'Who can see the Block',
 	'BLOCK_USERGROUPS'		=> 'User Groups',
-	'FORUM_PORTAL'		=> 'Portal',	
+	'FORUM_PORTAL'			=> 'Portal',	
 	'PORTAL_PAGE'			=> 'Portal Page',		
 	'PHOOGLE_API_LANG'		=> 'Google Language',
 	'PHOOGLE_API_LANG_EXPLAIN'	=> '',
@@ -10966,6 +10965,8 @@ $lang = array_merge($lang, array(
 	'UPLOAD_FILES'		=> 'Manage file uploads',
 	'PORTAL'			=> 'Portal',
 	'ACP_DOWNLOAD'		=> 'Downloads',
+	'ARCADE_RESYNC_HIGHSCORES'	=> 'Resync highscores',
+	'ARCADE_RESYNC_HIGHSCORES_EXPLAIN'	=> 'Update the current highscore holder of all games. You need it only for errors.',
 
 	'ACP_CAT_PHOOGLE'			=> 'Phoogle Map',
 	'ACP_USER_PHOOGLE'			=> 'Phoogle Map',
