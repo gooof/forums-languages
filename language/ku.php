@@ -3907,14 +3907,11 @@ $lang = array_merge($lang, array(
 	'ABBCODES_VIDEO_SIZE'				=> 'Video dimensions',
 	'ABBCODES_VIDEO_SIZE_EXPLAIN'		=> 'Default width and height for posted video.',
 
-	'ABBCODES_SETINGS'					=> 'BBCode Box settings',
-	'ABBCODES_SETINGS_EXPLAIN'			=> 'Here you can determine the basic operation of <strong>ABBC3</strong>, enable or disable, and among other settings adjust the default values for the background.',
-
 	'ABBCODES_EDIT'						=> 'BBCode Box edit bbcode',
 	'ABBCODES_EDIT_EXPLAIN'				=> 'Here you can determine where will be displayed or who can use it and the image of each bbcode.',
 
 	'ABBCODES_CONFIG'					=> 'BBCode Box Config',
-	'ABBCODES_CONFIG_EXPLAIN'			=> 'From this page you can alter the order of tags on posting page or edit the icons,',
+	'ABBCODES_CONFIG_EXPLAIN'			=> 'Here you can determine the basic operation of <strong>BBCode Box Editor</strong>, enable or disable, and among other settings adjust the default values for the background.',
 	'ABBCODES_GROUPS_EXPLAIN'			=> '<strong>Manage groups : </strong>If there are no selected groups all users can use this bbcode.<br />In order to select (or un-select) multiple groups, you must use Ctrl-Click (or Cmd-Click on Mac) items to add them. If you forget to hold down Ctrl/Cmd when clicking an item, then all the previously selected items are lost.',
 
 	'ABBCODES_TIP'						=> 'Tag tip',
