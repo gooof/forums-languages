@@ -3957,7 +3957,7 @@ $lang = array_merge($lang, array(
 	'ABBCODES_SETINGS_EXPLAIN'			=> 'Hier können grundlegende Einstellungen des BBCode Box Editors festgelegt werden, wie auch Einstellungen zum automatischen Bildverkleinerer oder das Hintergrundbild des Editors.',
 
 	'ABBCODES_EDIT'						=> 'BBcode der BBCode Box ändern',
-	'ABBCODES_EDIT_EXPLAIN'				=> 'Here you can determine where will be displayed or who can use it and the image of each bbcode.',
+	'ABBCODES_EDIT_EXPLAIN'				=> 'Hier kannst Du die Reihenfolge der Tags verändern oder die Icons Editieren die beim Erstellen im Editor angezeigt werden sollen, auch können Gruppen festgelegt werden, die diese sehen dürfen.',
 
 	'ABBCODES_CONFIG'					=> 'BBCode Box Einstellungen',
 	'ABBCODES_CONFIG_EXPLAIN'			=> 'From this page you can alter the order of tags on posting page or edit the icons,',
