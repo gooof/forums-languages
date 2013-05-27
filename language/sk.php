@@ -10826,6 +10826,7 @@ $lang = array_merge($lang, array(
 	'BLOCK_RIGHT'			=> 'shifting to right',
 	'BLOCK_LEFT'			=> 'shifting to left',
 
+	'ACP_PM_OVERVIEW'		=> 'PM Survey',
 	'ACP_K_BLOCKS_ADD'		=> 'Add a Portal Block',
 	'ACP_K_BLOCKS_EDIT'		=> 'Edit Block',
 	'ACP_K_BLOCKS_DELETE'	=> 'Delete Blocks',
