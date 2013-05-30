@@ -11056,6 +11056,7 @@ $lang = array_merge($lang, array(
 	'LOG_PHOOGLE_USER_EDITED'	=> '<strong>Geändertes Phoogle Map Mitglied</strong><br />» %s',
 	'LOG_PHOOGLE_MAP_EDITED'	=> '<strong>Geänderte Phoogle Map Konfiguration</strong>',
 	'LOG_PHOOGLE_EVENT_REMOVED'	=> '<strong>Gelöschte Phoogle Map Ereignisse</strong><br />» %s',
+	'PM_SUBJECT'				=> 'Betreff',
 
 	'ACP_DONATION'				=> 'Spenden',
 	'ACP_DONATION_CONFIG'		=> 'Spenden Einstellungen',
@@ -11143,10 +11144,10 @@ $lang = array_merge($lang, array(
 	'LIST_DONORS'			=> '%s Spender',
 
 	'NOTE_1'				=> 'HTML kann verwendet werden.',
-	'NOTE_2'				=> 'If you want to display the username of the members who visit these pages, just add USERNAME and it will be replaced with their real username.',
+	'NOTE_2'				=> 'Wenn du den Usernamen eines Mitglieds anzeigen lassen möchtest, schreibe an die Stelle wo er erscheinen soll <code>USERNAME</code>, dies wird mit dem richtigen Usernamen ersetzt. ',
 
 	'IPN_ENABLE'							=> 'IPN aktivieren',
-	'IPN_ENABLE_EXPLAIN'					=> 'IPN (Instant Payment Notification) is a feature that allows the MOD to automatically add donor in the donors list and donors group and send PM notifications, every time a donation is received.',
+	'IPN_ENABLE_EXPLAIN'					=> 'IPN (Instant Payment Notification) ist eine Funktion mit der das Spenden Mod automatisch Bestätigungen von z.B. PayPal erhalten kann. Der Spender kann so direkt nach der Spende eine PN erhalten und in die gewünschte Gruppe verschoben werden. Außerdem erhälst du als Admin eine Benachrichtigung.',
 
 	'IPN_PAYZA_SECURITY_CODE'				=> 'Payza IPN Sicherheitscode',
 	'IPN_PAYZA_SECURITY_CODE_EXPLAIN'		=> 'Gebe den IPN-Sicherheitscode ein, der von deinem Payza Konto generiert wurde.',
@@ -11157,7 +11158,7 @@ $lang = array_merge($lang, array(
 	'IPN_LIBERTYRESERVE_STORE_NAME'			=> 'Liberty Reserve IPN Shopname',
 	'IPN_LIBERTYRESERVE_STORE_NAME_EXPLAIN'	=> 'Gebe hier den Shop Namen deines Liberty Reserve Kontos ein.',
 	'IPN_PAYPAL_INSTRUCTIONS'				=> 'PayPal IPN-Anweisungen',
-	'IPN_PAYPAL_INSTRUCTIONS_EXPLAIN'		=> 'To enable the PayPal IPN, login to your PayPal account and navigate to "History" > "IPN History". On this page click the "turn on IPN" link to go to the IPN settings page. Once you are on the IPN settings page, select "Receive IPN messages (Enabled)" and add the PayPal IPN URL in the "Notification URL" input field. Click "Save" and you are done.',
+	'IPN_PAYPAL_INSTRUCTIONS_EXPLAIN'		=> 'Zum aktivieren der PayPal IPN logge dich zunächst in deinen PayPal Account ein, navigiere dann zu "Kontoauszug" > "IPN-Verlauf". Auf dieser Seite klicke auf "sofortige Zahlungsbestätigungen aktivieren" oder falls schon aktiviert auf die Einstellungsseite. Hier kannst du nun die hier angegebene PayPal IPN URL in die "Benachrichtigungs-URL" Box eintragen. Klicke zum Schluss auf "Speichern" und das wars schon.',
 	'IPN_PAYPAL_URL'						=> 'Deine PayPal IPN URL',
 	'IPN_WEBMONEY_INSTRUCTIONS'				=> 'WebMoney IPN-Anweisungen',
 	'IPN_WEBMONEY_INSTRUCTIONS_EXPLAIN'		=> 'Derzeit gibt es keine speziellen WebMoney-IPN-Einstellungen.',
