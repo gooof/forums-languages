@@ -11057,6 +11057,7 @@ $lang = array_merge($lang, array(
 	'LOG_PHOOGLE_USER_EDITED'	=> '<strong>Edited Phoogle Map User</strong><br />? %s',
 	'LOG_PHOOGLE_MAP_EDITED'	=> '<strong>Edited Phoogle Map Config</strong>',
 	'LOG_PHOOGLE_EVENT_REMOVED'	=> '<strong>Removed Phoogle Map event</strong><br />? %s',
+	'PM_SUBJECT'				=> 'Título',
 
 	'ACP_DONATION'				=> 'Donations',
 	'ACP_DONATION_CONFIG'		=> 'Configuration',
