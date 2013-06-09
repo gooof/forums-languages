@@ -2761,7 +2761,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Mehr Smilies anzeigen',
 
 	'NOTIFY_REPLY'				=> 'Mich benachrichtigen, sobald eine Antwort geschrieben wurde',
-	'NOTIFY_REPLY_SHORT'		=> 'Benachrichtige mich über Antworten',
+	'NOTIFY_REPLY_SHORT'		=> 'Benachrichtige mich bei Antworten',
 	'NOT_UPLOADED'				=> 'Datei konnte nicht hochgeladen werden.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Du kannst keine bestehenden Umfrageoptionen löschen.',
 	'NO_PM_ICON'				=> 'Kein PN-Symbol',
