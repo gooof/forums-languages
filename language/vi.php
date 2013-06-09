@@ -2762,6 +2762,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Xem tất cả biểu tượng vui',
 
 	'NOTIFY_REPLY'				=> 'Thông báo cho tôi khi có bài viết trả lời',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Không thể tải lên được tập tin.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Bạn không thể xoá những đối tượng bình chọn đang có.',
 	'NO_PM_ICON'				=> 'Không dùng biểu tượng tin nhắn',

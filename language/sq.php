@@ -2753,6 +2753,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'View more smilies',
 
 	'NOTIFY_REPLY'				=> 'Më njofto kur dikush përgjigjet',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Skedari nuk mund të ngarkohet.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Ju nuk mund të fshini opsionet e sondazhit ekzistues.',
 	'NO_PM_ICON'				=> 'Nuk ka ikonë MP',

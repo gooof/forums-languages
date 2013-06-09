@@ -2761,6 +2761,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'További emotikonok',
 
 	'NOTIFY_REPLY'				=> 'E-mail küldése új hozzászólás érkezésekor',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Az állományt nem sikerült feltölteni.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Nem törölhetsz már létező választási lehetőséget.',
 	'NO_PM_ICON'				=> 'Nincs PÜ ikon',

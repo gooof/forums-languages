@@ -2762,6 +2762,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Accéder à davantage d’émoticônes',
 
 	'NOTIFY_REPLY'				=> 'M’envoyer une notification lorsqu’une réponse a été publiée',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Le fichier n’a pas pu être transféré.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Vous ne pouvez pas supprimer les options déjà en place sur un sondage.',
 	'NO_PM_ICON'				=> 'Aucune icône de MP',

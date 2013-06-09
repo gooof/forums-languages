@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Visualizza tutte le emoticon',
 
 	'NOTIFY_REPLY'				=> 'Avvisami via e-mail di risposte a questo argomento',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Invio del file fallito.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Non puoi eliminare voci del sondaggio.',
 	'NO_PM_ICON'				=> 'Nessuna',

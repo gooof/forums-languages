@@ -2762,6 +2762,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Lisää hymiöitä',
 
 	'NOTIFY_REPLY'				=> 'Ilmoita vastauksesta sähköpostiini',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Tiedoston siirto epäonnistui.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Et voi poistaa voimassaolevia äänestysvaihtoehtoja',
 	'NO_PM_ICON'				=> 'Ei YV ikonia',

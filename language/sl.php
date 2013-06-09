@@ -2763,6 +2763,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Več smeškov',
 
 	'NOTIFY_REPLY'				=> 'Obvesti me, ko kdo objavi prispevek',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Datoteke ni bilo moč naložiti.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Obstoječih možnosti ankete ne morete izbrisati.',
 	'NO_PM_ICON'				=> 'Ni ikone ZS',

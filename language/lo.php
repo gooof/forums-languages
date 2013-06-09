@@ -2762,6 +2762,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'ເບີ່ງຮູບສະແດງອາລົມເຕີ່ມ',
 
 	'NOTIFY_REPLY'				=> 'ເຕືອນຂ້ອຍເມື່ອມີຄົນຕອບ',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'ໄຟລບໍ່ສາມາດອັບໂຫລດໄດ້',
 	'NO_DELETE_POLL_OPTIONS'	=> 'You cannot delete existing poll options.',
 	'NO_PM_ICON'				=> 'ບໍ່ມີ PM icon',

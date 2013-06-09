@@ -2762,6 +2762,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Lihat tanda senyuman yang lain',
 
 	'NOTIFY_REPLY'				=> 'Beritahukan saya apabila balasan dipostkan',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'File tidak dapat diupload.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Anda tidak dapat menghapus pilihan pemungutan suara yang ada.',
 	'NO_PM_ICON'				=> 'Tidak ada ikon PM',

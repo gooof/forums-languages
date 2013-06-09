@@ -2762,6 +2762,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> '查看更多表情',
 
 	'NOTIFY_REPLY'				=> '有人回复时，给我发送一封Email',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> '文件上传失败。',
 	'NO_DELETE_POLL_OPTIONS'	=> '您无法删除现有的投票选项',
 	'NO_PM_ICON'				=> '没有 PM 图标',

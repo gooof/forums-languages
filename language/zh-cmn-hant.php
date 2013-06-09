@@ -2762,6 +2762,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> '顯示更多表情符號',
 
 	'NOTIFY_REPLY'				=> '當有人回覆文章時通知我',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> '檔案上傳失敗。',
 	'NO_DELETE_POLL_OPTIONS'	=> '您不能刪除現有的票選項目',
 	'NO_PM_ICON'				=> '沒有私人訊息圖示',

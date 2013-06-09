@@ -2762,6 +2762,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Яшчэ смайлікі…',
 
 	'NOTIFY_REPLY'				=> 'Паведамляць мне аб атрыманні адказу',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Не атрымалася загрузіць файл.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Вы не можаце выдаляць наяўныя варыянты адказаў.',
 	'NO_PM_ICON'				=> 'Няма значка АП',

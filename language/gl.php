@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Ver máis risoños',
 
 	'NOTIFY_REPLY'				=> 'Enviarme un correo-e cando se publique unha resposta',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Non se puido subir o arquivo.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Non podes eliminar opcións de enquisas existentes',
 	'NO_PM_ICON'				=> 'Non hai icona ningunha de MP',

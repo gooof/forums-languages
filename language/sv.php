@@ -2751,6 +2751,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Visa fler smilies',
 
 	'NOTIFY_REPLY'				=> 'Meddela mig när tråden besvaras',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Filen kunde inte laddas upp.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Du kan inte ta bort existerande omröstningsalternativ.',
 	'NO_PM_ICON'				=> 'Ingen PM-ikon',

@@ -2741,6 +2741,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Pogledajte još smajlija',
 
 	'NOTIFY_REPLY'				=> 'Pošaljite mi email kada neko odgovori',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Fajl se ne može poslati.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Ne možete obrisati postojeće opcije glasanja',
 	'NO_PM_ICON'				=> 'Bez PM ikonice',

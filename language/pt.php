@@ -2762,6 +2762,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Ver mais Emoções',
 
 	'NOTIFY_REPLY'				=> 'Enviar-me email sempre que tiver uma nova resposta',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Não foi possível enviar o Ficheiro.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Não pode apagar opções de votação existentes.',
 	'NO_PM_ICON'				=> 'MP sem ícone',

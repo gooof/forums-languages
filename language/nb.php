@@ -2726,6 +2726,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'View more smilies',
 
 	'NOTIFY_REPLY'				=> 'Send meg en e-post når svar er postet',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Filen kan ikke lastes opp.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Du kan ikke slette eksisterende avstemningsinnstillinger.',
 	'NO_PM_ICON'				=> 'Ingen PM-ikon',

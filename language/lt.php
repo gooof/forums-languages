@@ -2755,6 +2755,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Rodyti daugiau šypsenėlių',
 
 	'NOTIFY_REPLY'				=> 'Perspėti mane, kai bus parašytas atsakymas',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Failo įkelti nepavyko.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Jūs negalite ištrinti egzistuojančių apklausos atsakymų variantų.',
 	'NO_PM_ICON'				=> 'AŽ ikonos nėra',

@@ -2762,6 +2762,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Daha fazla ifade görüntüle',
 
 	'NOTIFY_REPLY'				=> 'Mesaja cevap geldiğinde bana bildir',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Dosya yüklenemedi.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Var olan anket seçeneklerini silemezsiniz.',
 	'NO_PM_ICON'				=> 'ÖM ikonu yok',

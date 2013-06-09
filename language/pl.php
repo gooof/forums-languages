@@ -2766,6 +2766,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Pokaż więcej uśmieszków',
 
 	'NOTIFY_REPLY'				=> 'Powiadom mnie, jeśli ktoś odpowie',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Nie można wysłać pliku.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Nie możesz usunąć istniejących opcji ankiety.',
 	'NO_PM_ICON'				=> 'Brak',

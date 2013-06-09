@@ -2762,6 +2762,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Mostra més emoticones',
 
 	'NOTIFY_REPLY'				=> 'Avisa’m quan s’envïi una resposta',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'No s’ha pogut penjar el fitxer.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'No podeu eliminar les opcions de l’enquesta que ja existeixen.',
 	'NO_PM_ICON'				=> 'Sense icona MP',

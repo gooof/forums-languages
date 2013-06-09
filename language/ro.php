@@ -2762,6 +2762,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Vezi mai multe zâmbete',
 
 	'NOTIFY_REPLY'				=> 'Notifică-mă când este scris un răspuns',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Fişierul nu a putut fi încărcat.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Nu puteţi şterge opţiunile existente ale chestionarului.',
 	'NO_PM_ICON'				=> 'Nicio iconiţă MP',

@@ -2710,6 +2710,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Vaata veel smailisid.',
 
 	'NOTIFY_REPLY'				=> 'Teata mulle, kui vastus postitatakse.',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Faili ei saa üles laadida.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Sa ei saa kustutada olemasolevaid hääletuse valikuid.',
 	'NO_PM_ICON'				=> 'Pole PS ikooni',

@@ -2761,6 +2761,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Більше смайликів',
 
 	'NOTIFY_REPLY'				=> 'Повідомте мене, коли в цю тему надійде відповідь',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Не вдалося завантажити файл.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Ви не можете видалити існуючі варіанти відповідей',
 	'NO_PM_ICON'				=> 'Немає значка ПП',

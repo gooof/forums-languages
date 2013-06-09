@@ -2754,6 +2754,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'خەندەی زیاتر ببینە',
 
 	'NOTIFY_REPLY'				=> 'ئاگادارم بکەوە کاتێک وەڵامێک نێردرا',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'نەتوانرا پەڕگە بار بکرێت.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'ناتوانیت هەڵبژاردنە هەبووەکانی ڕاپرسی بسڕیتەوە.',
 	'NO_PM_ICON'				=> 'پ ت ئایکۆنی نییە',

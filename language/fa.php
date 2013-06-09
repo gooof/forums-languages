@@ -2857,6 +2857,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'مشاهده شکلک هاي بيشتر',
 
 	'NOTIFY_REPLY'				=> 'درصورتي که به مبحث پاسخ داده شد مرا باخبر کن !',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'فايل آپلود نشد.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'شما تمی توانید تنضیمات فعلی را حذف کنید',
 	'NO_PM_ICON'				=> 'بدون آيكن پيغام',

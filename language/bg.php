@@ -2751,6 +2751,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Виж всички усмивки',
 
 	'NOTIFY_REPLY'				=> 'Изпрати ми email щом в темата се появи отговор',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Файл-а не може да бъде качен.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Вие не можете да изтривате съществуващи отговори на анкета',
 	'NO_PM_ICON'				=> 'Без икона',

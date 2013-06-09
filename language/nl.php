@@ -2762,6 +2762,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Toon meer smilies',
 
 	'NOTIFY_REPLY'				=> 'Breng mij op de hoogte van nieuwe reacties',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Het bestand kan niet worden geüpload.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Je kunt de pollopties waarop al is gestemd niet meer verwijderen.',
 	'NO_PM_ICON'				=> 'Geen PB-icoon',

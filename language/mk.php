@@ -2762,6 +2762,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Види ги сите смајлиња',
 
 	'NOTIFY_REPLY'				=> 'Испрати ми мејл штом ќе има одговор на темата',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'фајлот не можеше да биде поставен.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Вие не можете да избришите постоечки опции на анкетата',
 	'NO_PM_ICON'				=> 'Без икона',

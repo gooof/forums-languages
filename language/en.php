@@ -2762,6 +2762,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'View more smilies',
 
 	'NOTIFY_REPLY'				=> 'Notify me when a reply is posted',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'File could not be uploaded.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'You cannot delete existing poll options.',
 	'NO_PM_ICON'				=> 'No PM icon',

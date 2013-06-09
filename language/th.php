@@ -2768,6 +2768,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'รูปแสดงอารมณ์อื่นๆ',
 
 	'NOTIFY_REPLY'				=> 'แจ้งเตือนเมื่อมีผู้ตอบ',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'ไฟล์ไม่สามารถ Upload ได้',
 	'NO_DELETE_POLL_OPTIONS'	=> 'คุณไม่สามารถลบแบบสำรวจได้',
 	'NO_PM_ICON'				=> 'ไม่มี ไอคอน PM ',

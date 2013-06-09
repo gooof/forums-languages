@@ -2762,6 +2762,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'צפה בסמיילים נוספים',
 
 	'NOTIFY_REPLY'				=> 'הודע לי כאשר תגובה נשלחת',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'הקובץ לא ניתן להעלאה.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'אתה לא יכול למחוק אפשרויות סקר קיימות.',
 	'NO_PM_ICON'				=> 'ללא סמל להודעה פרטית',

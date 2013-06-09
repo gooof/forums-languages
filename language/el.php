@@ -2762,6 +2762,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Προβολή περισσοτέρων εικονιδίων',
 
 	'NOTIFY_REPLY'				=> 'Να ενημερωθώ μόλις υπάρξει απάντηση σε αυτή την δημοσίευση',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Το αρχείο δεν μπορεί να φορτωθεί.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Δεν μπορείτε να διαγράψετε τις υπάρχουσες επιλογές του δημοψηφίσματος.',
 	'NO_PM_ICON'				=> 'Κανένα ΠΜ σύμβολο',

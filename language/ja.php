@@ -2775,6 +2775,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'スマイリーを全て表示する',
 
 	'NOTIFY_REPLY'				=> '返信が投稿されたら通知する',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'ファイルをアップロードできませんでした',
 	'NO_DELETE_POLL_OPTIONS'	=> '投票オプションに既に票が存在するため削除できません',
 	'NO_PM_ICON'				=> 'アイコンなし',

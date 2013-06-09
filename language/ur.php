@@ -2762,6 +2762,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'زیادہ مسکانیں دیکھیں',
 
 	'NOTIFY_REPLY'				=> 'مجھے مطلع کریں جب ایک جواب پوسٹ کیا ہے.',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'فائل کو اپلوڈ نہیں کیا جا سکا',
 	'NO_DELETE_POLL_OPTIONS'	=> 'آپ موجودہ انتخابات کے اختیارات کو ختم نہیں کر سکتے.',
 	'NO_PM_ICON'				=> 'کوئی PM آئیکن نہیں',

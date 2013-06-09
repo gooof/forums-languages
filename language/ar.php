@@ -2756,6 +2756,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'عرض كل الابتسامات',
 
 	'NOTIFY_REPLY'				=> 'أبلغني عند وجود ردود',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'لا يمكن إرفاق الملف',
 	'NO_DELETE_POLL_OPTIONS'	=> 'لا يمكنك حذف خيارات التصويت',
 	'NO_PM_ICON'				=> 'بدون أيقونة',

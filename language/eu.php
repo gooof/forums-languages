@@ -2762,6 +2762,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Irrifartxo (emotikono) gehiago ikusi',
 
 	'NOTIFY_REPLY'				=> 'Erantzunen bat bidaltzerakoan jakinarazi',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Ezin izan da fitxategia gehitu.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Ezin dituzu inkestako aukerak ezabatu.',
 	'NO_PM_ICON'				=> 'MPko irudirik gabe',

@@ -2762,6 +2762,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'				=> 'Ďalšie smajlíky',
 
 	'NOTIFY_REPLY'				=> 'Upozorniť ma emailom na odpovede',
+	'NOTIFY_REPLY_SHORT'		=> 'Notify me of replies',
 	'NOT_UPLOADED'				=> 'Súbor nemôže byť nahraný.',
 	'NO_DELETE_POLL_OPTIONS'	=> 'Nemôžete vymazať existujúce odpovede',
 	'NO_PM_ICON'				=> 'Žiadna SS ikona',
