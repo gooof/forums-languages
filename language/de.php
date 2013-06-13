@@ -4644,7 +4644,7 @@ $lang = array_merge($lang, array(
 	'VIEWING_ARCADE_STATS_USER'			=> 'Onlinespiele Statistik von %s',
 	'VIEWING_ARCADE_STATS_GAME'			=> 'Onlinespiele Statistik über %s',
 	'VIEWING_ARCADE_STATS_GAME_USER'	=> 'Onlinespiele Statistik über das Spiel %s vom Benutzer %s',
-	'VIEWING_ARCADE_SEARCH'				=> 'Onlinepsiele suchen',
+	'VIEWING_ARCADE_SEARCH'				=> 'Durchsucht die Onlinepsiele',
 	'VIEWING_ARCADE_FAVS'				=> 'Onlinespiele Favoriten',
 
 	'ARCADE_STATS_PAGE_TITLE'				=> 'Onlinespiele Statistik',
