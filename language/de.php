@@ -9977,7 +9977,7 @@ $lang = array_merge($lang, array(
 	'REFERER_VALID'					=> 'Referrer prüfen',
 	'REFERER_VALID_EXPLAIN'			=> 'Wenn aktiviert, wird der Referrer von POST-Anfragen gegen die Einstellungen des Hostnamen/Skript-Pfads geprüft. Dies kann bei Boards zu Problemen führen, die mehrere Domains oder eine externe Anmeldung nutzen.',
 	'IMAGEHOSTER'			=> 'Imagehoster',
-	'IMAGEHOSTER_EXPLAIN'	=> 'Du kannst hier für den Editor ein Button mit deinem Lieblings-Imagehoster einstellen, der dann beim Anklicken mit einem bequemen Upload-Bereich angezeigt wird.',
+	'IMAGEHOSTER_EXPLAIN'	=> 'Du kannst hier für den Editor einen Button mit deinem Lieblings-Imagehoster einstellen, der dann beim Anklicken mit einem bequemen Upload-Bereich angezeigt wird.',
 	'BIRTHDAY_EMAILS'			=> 'Geburtstagsmail senden',
 	'BIRTHDAY_EMAILS_EXPLAIN'	=> 'Sendet einem User eine Email mit einem Herzlichen Glückwunsch Text an seinem Geburtstag.',
 
