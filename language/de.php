@@ -11135,6 +11135,8 @@ $lang = array_merge($lang, array(
 	'ACP_DOWNLOAD'		=> 'Downloads',
 	'ARCADE_RESYNC_HIGHSCORES'	=> 'Highscores neu berechnen',
 	'ARCADE_RESYNC_HIGHSCORES_EXPLAIN'	=> 'Resynchronisiert die Highscores bei Fehlern und trägt den richtigen Sieger für jedes Spiel ein.',
+	'PREFIX_STANDARD'	=> 'Standard Präfix',
+	'PREFIX_STANDARD_EXPLAIN'	=> 'Standard Präfixe werden für neue Themen voreingestellt. User die Berechtigungen zum Ändern des Präfixes haben, können diesen verändern, bei allen anderen wird der Standard Präfix automatisch gesetzt. (wenn mehrere Standard Präfixe in einem Forum gesetzt sind, kann nur das erste als Standard verwendet werden)',
 
 	'ACP_CAT_PHOOGLE'			=> 'Phoogle Map',
 	'ACP_USER_PHOOGLE'			=> 'Phoogle Map',
