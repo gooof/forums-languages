@@ -11101,6 +11101,7 @@ $lang = array_merge($lang, array(
 	'ARCADE_RESYNC_HIGHSCORES_EXPLAIN'	=> 'Update the current highscore holder of all games. You need it only for errors.',
 	'PREFIX_STANDARD'	=> 'Standard Prefix',
 	'PREFIX_STANDARD_EXPLAIN'	=> 'Standard prefixes are predefined for new topics. Users that have permissions to change the prefix, can still change the default prefix, for all others it\'s set automatically. (if more than one standard prefix placed in a forum, only the first can be used as standard)',
+	'SORT'						=> 'Sắp xếp',
 
 	'ACP_CAT_PHOOGLE'			=> 'Phoogle Map',
 	'ACP_USER_PHOOGLE'			=> 'Phoogle Map',
