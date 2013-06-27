@@ -783,12 +783,12 @@ $lang = array_merge($lang, array(
 	'TOTAL_PM'			=> '1 پيغام خصوصي در کل',
 	'TOTAL_PMS'			=> '%d پيغام خصوصي در کل',
 	'TOTAL_POSTS'		=> 'تعداد پست ها',
-	'TOTAL_POSTS_OTHER'	=> 'تعداد پست ها <strong>%d</strong>',
+	'TOTAL_POSTS_OTHER'	=> 'Total posts <strong>%s</strong>',
 	'TOTAL_POSTS_ZERO'	=> 'کل پست ها <strong>0</strong>',
 	'TOPIC_REPORTED'	=> 'This topic has been reported',
-	'TOTAL_TOPICS_OTHER'=> 'تعداد مبحث ها <strong>%d</strong>',
+	'TOTAL_TOPICS_OTHER'=> 'Total topics <strong>%s</strong>',
 	'TOTAL_TOPICS_ZERO'	=> 'کل مبحث ها <strong>0</strong>',
-	'TOTAL_USERS_OTHER'	=> 'تعداد کاربران <strong>%d</strong>',
+	'TOTAL_USERS_OTHER'	=> 'Total members <strong>%s</strong>',
 	'TOTAL_USERS_ZERO'	=> 'تعداد کاربران <strong>0</strong>',
 	'TRACKED_PHP_ERROR'	=> 'خطاهاي زنجيره PHP: %s',
 
@@ -976,11 +976,11 @@ $lang = array_merge($lang, array(
 	'USERS_PER_DAY_ZERO'	=> 'Members per day <strong>None</strong>',
 	'USERS_PER_YEAR_OTHER'	=> 'Members per year <strong>%s</strong>',
 	'USERS_PER_YEAR_ZERO'	=> 'Members per year <strong>None</strong>',
-	'TOTAL_POSTS_OTHER'		=> 'تعداد پست ها <strong>%d</strong>',
+	'TOTAL_POSTS_OTHER'		=> 'Total posts <strong>%s</strong>',
 	'TOTAL_POSTS_ZERO'		=> 'کل پست ها <strong>0</strong>',
-	'TOTAL_TOPICS_OTHER'	=> 'تعداد مبحث ها <strong>%d</strong>',
+	'TOTAL_TOPICS_OTHER'	=> 'Total topics <strong>%s</strong>',
 	'TOTAL_TOPICS_ZERO'		=> 'کل مبحث ها <strong>0</strong>',
-	'TOTAL_USERS_OTHER'		=> 'تعداد کاربران <strong>%d</strong>',
+	'TOTAL_USERS_OTHER'		=> 'Total members <strong>%s</strong>',
 	'TOTAL_USERS_ZERO'		=> 'تعداد کاربران <strong>0</strong>',
 	'TOTAL_FILES_OTHER'		=> 'Total attachments <strong>%s</strong>',
 	'TOTAL_FILES_ZERO'		=> 'Total attachments <strong>0</strong>',
@@ -5721,7 +5721,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_GALLERY_CLEANUP_EXPLAIN'	=> 'Here you can delete some remains.',
-	'ACP_GALLERY_OVERVIEW'			=> 'phpBB Gallery',
+	'ACP_GALLERY_OVERVIEW'			=> 'Gallery',
 	'ACP_GALLERY_OVERVIEW_EXPLAIN'	=> 'Here are some statistics about your gallery.',
 	'ACP_IMPORT_ALBUMS'				=> 'Import Images',
 	'ACP_IMPORT_ALBUMS_EXPLAIN'		=> 'Here you can bulk import images from the file system. Before importing images, please be sure to resize them by hand.',
@@ -5867,7 +5867,7 @@ $lang = array_merge($lang, array(
 
 	'GALLERY_ALBUMS_TITLE'			=> 'Gallery Albums Control',
 	'GALLERY_CONFIG'				=> 'Gallery Configuration',
-	'GALLERY_CONFIG_EXPLAIN'		=> 'You can change the general settings of phpBB Gallery here.',
+	'GALLERY_CONFIG_EXPLAIN'		=> 'You can change the general settings of the Gallery here.',
 	'GALLERY_CONFIG_UPDATED'		=> 'Gallery Configuration has been updated successfully.',
 	'GALLERY_INDEX'					=> 'Gallery-Index',
 	'GALLERY_PURGE_CACHE_EXPLAIN'	=> 'If you use the Thumbnail Cache feature you must clear your thumbnail cache after changing your thumbnail settings in “Gallery configuration“ to make them regenerated.',
@@ -7863,7 +7863,7 @@ $lang = array_merge($lang, array(
 	'POINTS_DISABLEMSG_EXPLAIN'			=> 'Message to display, when the Ultimate Points System is disabled',
 	'POINTS_ENABLE'						=> 'Enable Points',
 	'POINTS_ENABLE_EXPLAIN'				=> 'Allow users to use Ultimate Points',
-	'POINTS_GALLERY'					=> 'phpBB Gallery Integration',
+	'POINTS_GALLERY'					=> 'Gallery Integration',
 	'POINTS_GALLERY_EXPLAIN'			=> 'As it looks like, you have the phpBB Gallery from nickvergessen installed. If you are using version 1.0.2 or greater of the Gallery, you can here setup some of the needed values.<br /><br />Please check the userguide for further important infomations!',
 	'POINTS_GALLERY_DENY_VIEW'			=> 'User cannot see images, if they don’t have enough points',
 	'POINTS_GALLERY_DENY_VIEW_EXPLAIN'	=> 'If you activate this option, users cannot view images, if they don’t have enough points left. They will only see the thumbnails',
@@ -11915,7 +11915,7 @@ $lang = array_merge($lang, array(
 	'IMG_BUTTON_UPLOAD_IMAGE'			=> 'Upload image',
 
 	'PERSONAL_ALBUM'					=> 'Personal Album',
-	'PHPBB_GALLERY'						=> 'phpBB Gallery',
+	'PHPBB_GALLERY'						=> 'Gallery',
 
 
 	'LOG_ALBUM_ADD'							=> '<strong>Created new album</strong><br />» %s',
@@ -12633,8 +12633,8 @@ $lang = array_merge($lang, array(
 	'NOT_UPLOADED'						=> '',
 	'ACP_STATS_INFO'		=> 'آمار و اطلاعات',
 	'ACP_STATS_ADDONS'		=> 'Add-Ons',
-	'ACP_GALLERY_OVERVIEW'				=> 'phpBB Gallery',
-	'TOTAL_IMAGES_OTHER'				=> 'Images total: <strong>%d</strong>',
+	'ACP_GALLERY_OVERVIEW'				=> 'Gallery',
+	'TOTAL_IMAGES_OTHER'				=> 'Images total: <strong>%s</strong>',
 	'TOTAL_IMAGES_ZERO'					=> 'Images total: <strong>0</strong>',
 
 ));

@@ -5610,7 +5610,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_GALLERY_CLEANUP_EXPLAIN'	=> 'Hier kannst du Überreste aus der Galerie entfernen.',
-	'ACP_GALLERY_OVERVIEW'			=> 'Galerie Übersicht',
+	'ACP_GALLERY_OVERVIEW'			=> 'Galerie',
 	'ACP_GALLERY_OVERVIEW_EXPLAIN'	=> 'Hier findest du ein paar Statistiken zu deiner Galerie.',
 	'ACP_IMPORT_ALBUMS'				=> 'Neue Bilder importieren',
 	'ACP_IMPORT_ALBUMS_EXPLAIN'		=> 'Hier kannst Du die Anzahl von Bilder eingeben, die importiert werden sollen. Bevor Du die Bilder importierst, ändere die Größe von Hand mit einer Bildbearbeitungssoftware.',
@@ -5756,7 +5756,7 @@ $lang = array_merge($lang, array(
 
 	'GALLERY_ALBUMS_TITLE'			=> 'Galerie Alben Kontrolle',
 	'GALLERY_CONFIG'				=> 'Galerie Konfiguration',
-	'GALLERY_CONFIG_EXPLAIN'		=> 'Hier kannst du die Allgemeinen Einstellungen von Galerie durchführen.',
+	'GALLERY_CONFIG_EXPLAIN'		=> 'Hier kannst du die Allgemeinen Einstellungen der Galerie bearbeiten.',
 	'GALLERY_CONFIG_UPDATED'		=> 'Galerie Konfiguration wurde erfolgreich aktualisiert',
 	'GALLERY_INDEX'					=> 'Galerie-Index',
 	'GALLERY_PURGE_CACHE_EXPLAIN'	=> 'Nach Vorschaubild Einstellungsänderungen in der „Galerie Konfiguration“, sollte der Vorschaubilder Cache geleert werden. Damit die Einstellungen nicht nur für neue Bilder greifen.',
@@ -7749,7 +7749,7 @@ $lang = array_merge($lang, array(
 	'POINTS_DISABLEMSG_EXPLAIN'			=> 'Nachricht, die angezeigt wird, wenn der Ulitmate Points deaktiviert ist',
 	'POINTS_ENABLE'						=> 'Punkte aktivieren',
 	'POINTS_ENABLE_EXPLAIN'				=> 'Erlaube den Benutzern den Ultimate Points zu verwenden',
-	'POINTS_GALLERY'					=> 'Gallery Integration',
+	'POINTS_GALLERY'					=> 'Galerie Integration',
 	'POINTS_GALLERY_EXPLAIN'			=> 'Hier kannst Du ein paar Grundwerte für die Galerie eintragen.',
 	'POINTS_GALLERY_DENY_VIEW'			=> 'Benutzer kann keine Bilder ansehen ohne die benötigten Punkte',
 	'POINTS_GALLERY_DENY_VIEW_EXPLAIN'	=> 'Wenn du diese Option aktivierst, können Benutzer keine Bilder im Vollbildmodus ansehen (sondern nur das Thumbnail), wenn sie nicht die benötigten Punkte haben um ein Bild anzusehen.',
@@ -11746,7 +11746,7 @@ $lang = array_merge($lang, array(
 	'IMG_BUTTON_UPLOAD_IMAGE'			=> 'Bild hochladen',
 
 	'PERSONAL_ALBUM'					=> 'Persönliches Album',
-	'PHPBB_GALLERY'						=> 'phpBB Galerie',
+	'PHPBB_GALLERY'						=> 'Galerie',
 
 
 	'LOG_ALBUM_ADD'							=> '<strong>Alben erstellt</strong><br />» %s',
@@ -12464,8 +12464,8 @@ $lang = array_merge($lang, array(
 	'NOT_UPLOADED'						=> '',
 	'ACP_STATS_INFO'		=> 'Statistik',
 	'ACP_STATS_ADDONS'		=> 'Add-Ons',
-	'ACP_GALLERY_OVERVIEW'				=> 'Galerie Übersicht',
-	'TOTAL_IMAGES_OTHER'				=> 'Bilder insgesamt: <strong>%d</strong>',
+	'ACP_GALLERY_OVERVIEW'				=> 'Galerie',
+	'TOTAL_IMAGES_OTHER'				=> 'Bilder insgesamt: <strong>%s</strong>',
 	'TOTAL_IMAGES_ZERO'					=> 'Bilder insgesamt: <strong>0</strong>',
 
 ));
