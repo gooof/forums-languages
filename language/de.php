@@ -5610,7 +5610,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_GALLERY_CLEANUP_EXPLAIN'	=> 'Hier kannst du Überreste aus der Galerie entfernen.',
-	'ACP_GALLERY_OVERVIEW'			=> 'Galerie',
+	'ACP_GALLERY_OVERVIEW'			=> 'Galerie Übersicht',
 	'ACP_GALLERY_OVERVIEW_EXPLAIN'	=> 'Hier findest du ein paar Statistiken zu deiner Galerie.',
 	'ACP_IMPORT_ALBUMS'				=> 'Neue Bilder importieren',
 	'ACP_IMPORT_ALBUMS_EXPLAIN'		=> 'Hier kannst Du die Anzahl von Bilder eingeben, die importiert werden sollen. Bevor Du die Bilder importierst, ändere die Größe von Hand mit einer Bildbearbeitungssoftware.',
@@ -12464,7 +12464,7 @@ $lang = array_merge($lang, array(
 	'NOT_UPLOADED'						=> '',
 	'ACP_STATS_INFO'		=> 'Statistik',
 	'ACP_STATS_ADDONS'		=> 'Add-Ons',
-	'ACP_GALLERY_OVERVIEW'				=> 'Galerie',
+	'ACP_GALLERY_OVERVIEW'				=> 'Galerie Übersicht',
 	'TOTAL_IMAGES_OTHER'				=> 'Bilder insgesamt: <strong>%s</strong>',
 	'TOTAL_IMAGES_ZERO'					=> 'Bilder insgesamt: <strong>0</strong>',
 
