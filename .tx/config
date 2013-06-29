@@ -1,6 +1,6 @@
 [main]
 host = https://www.transifex.com
-lang_map = zh_TW:zh-cmn-hant, zh:zh-cmn-hans, pt_BR:pt_br, sr:sr_x_cyr, es_AR:es_ar, es_MX:es_mx
+lang_map = zh_TW:zh_cmn_hant, zh:zh_cmn_hans, pt_BR:pt_br, sr:sr_x_cyr, es_AR:es_ar, es_MX:es_mx
 
 [forums.all]
 source_file = language/en.php
