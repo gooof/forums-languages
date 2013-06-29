@@ -187,7 +187,7 @@ $lang = array_merge($lang, array(
 #######language/en/common.php#######
 
 $lang = array_merge($lang, array(
-	'TRANSLATION_INFO'	=> '<br />Türkçe çeviri: <a href="http://www.phpbbturkey.com/">phpBB Türkiye</a>',
+	'TRANSLATION_INFO'	=> 'Türkçe çeviri: <a href="http://www.phpbbturkey.com/">phpBB Türkiye</a>',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
 	'USER_LANG'			=> 'tr',

@@ -187,7 +187,7 @@ $lang = array_merge($lang, array(
 #######language/en/common.php#######
 
 $lang = array_merge($lang, array(
-	'TRANSLATION_INFO'	=> 'Traducción al Español Argentino por <a href="http://www.phpbbargentina.com/">phpBB Argentina</a> con la colaboración de <a href="http://www.phpbb-es.com/">phpbb-es.com</a>',
+	'TRANSLATION_INFO'	=> 'Traducción al Español Argentino por <a href="http://www.phpbbargentina.com/">phpBB Argentina</a>',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
 	'USER_LANG'			=> 'es-ar',

@@ -187,7 +187,7 @@ $lang = array_merge($lang, array(
 #######language/en/common.php#######
 
 $lang = array_merge($lang, array(
-	'TRANSLATION_INFO'	=> 'Danish translation &amp; support by <a href="http://www.olympusdkteam.dk">Olympus DK Team</a>',
+	'TRANSLATION_INFO'	=> 'Danish translation <a href="http://www.olympusdkteam.dk">Olympus DK Team</a>',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|j. M Y|',	// 01 Jan 2007 (with Relative days enabled)
 	'USER_LANG'			=> 'da',

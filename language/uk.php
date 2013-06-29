@@ -187,7 +187,7 @@ $lang = array_merge($lang, array(
 #######language/en/common.php#######
 
 $lang = array_merge($lang, array(
-	'TRANSLATION_INFO'	=> 'Український переклад &copy 2005-2011 <a class="copyright" target="_blank" href="http://phpbb.com.ua/">Українська підтримка phpBB</a>',
+	'TRANSLATION_INFO'	=> 'Український переклад <a class="copyright" target="_blank" href="http://phpbb.com.ua/">phpBB.com.ua</a>',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
 	'USER_LANG'			=> 'uk',

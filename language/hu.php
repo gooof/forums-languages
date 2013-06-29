@@ -187,7 +187,7 @@ $lang = array_merge($lang, array(
 #######language/en/common.php#######
 
 $lang = array_merge($lang, array(
-	'TRANSLATION_INFO'	=> 'Magyar fordítás © <a href="http://phpbb.hu/">Magyar phpBB Közösség</a>',
+	'TRANSLATION_INFO'	=> 'Magyar fordítás <a href="http://phpbb.hu/">phpbb.hu</a>',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|Y.m.d.|',	// 01 Jan 2007 (with Relative days enabled)
 	'USER_LANG'			=> 'hu',

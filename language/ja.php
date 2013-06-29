@@ -187,7 +187,7 @@ $lang = array_merge($lang, array(
 #######language/en/common.php#######
 
 $lang = array_merge($lang, array(
-	'TRANSLATION_INFO'	=> 'Japanese translation principally by <a href="http://bbmods.info/bbs/" onclick="window.open(this.href, \'_blank\'); return false;" title="new window">ocean</a>',
+	'TRANSLATION_INFO'	=> '日本語訳 <a href="http://bbmods.info/bbs/" onclick="window.open(this.href, \'_blank\'); return false;" title="new window">ocean</a>',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|Y M d|',	// 01 Jan 2007 (with Relative days enabled)
 	'USER_LANG'			=> 'ja',

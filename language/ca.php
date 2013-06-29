@@ -187,7 +187,7 @@ $lang = array_merge($lang, array(
 #######language/en/common.php#######
 
 $lang = array_merge($lang, array(
-	'TRANSLATION_INFO'	=> '<a href="http://abrodos.wordpress.com/phpbb/">Traducció del phpBB: Isaac Garcia Abrodos</a>',
+	'TRANSLATION_INFO'	=> '<a href="http://www.userboard.org">Traducció del UserBoard</a>',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
 	'USER_LANG'			=> 'ca',
