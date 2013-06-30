@@ -187,7 +187,7 @@ $lang = array_merge($lang, array(
 #######language/en/common.php#######
 
 $lang = array_merge($lang, array(
-	'TRANSLATION_INFO'	=> '&copy; 2007-2010 Traducido ao galego pola <a href="http://www.ciberirmandade.org/foros/">CiberIrmandade da Fala</a>',
+	'TRANSLATION_INFO'	=> 'Traducido ao galego pola <a href="http://www.ciberirmandade.org/foros/">CiberIrmandade da Fala</a>',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
 	'USER_LANG'			=> 'gl',

@@ -187,7 +187,7 @@ $lang = array_merge($lang, array(
 #######language/en/common.php#######
 
 $lang = array_merge($lang, array(
-	'TRANSLATION_INFO'	=> 'מבוסס על <a href="http://www.phpbb.co.il">phpBB.co.il - פורומים בעברית</a>. כל הזכויות שמורות &copy; 2008 - phpBB.co.il.',
+	'TRANSLATION_INFO'	=> 'מבוסס על <a href="http://www.phpbb.co.il">phpBB.co.il - פורומים בעברית</a>. כל הזכויות שמורות ',
 	'DIRECTION'			=> 'rtl',
 	'DATE_FORMAT'		=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
 	'USER_LANG'			=> 'he',
