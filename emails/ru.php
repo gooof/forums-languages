@@ -1,16 +1,16 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Активируйте учётную запись пользователя
 
-Hello,
+Здравствуйте!
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+Учётная запись пользователя {USERNAME} была деактивирована либо заново создана. Вы должны проверить профиль этого пользователя и (если требуется) активировать его.
 
-Use this link to view the user\'s profile:
+Ссылка на просмотр профиля пользователя:
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+Ссылка для активации учётной записи:
 {U_ACTIVATE}
 
 
@@ -21,14 +21,14 @@ Use this link to activate the account:
 
 $email = array_merge($email, array(
 	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Это письмо отправлено вам администратором конференции «{SITENAME}». Если это сообщение является спамом, содержит оскорбления или другие неприятные вам высказывания, пожалуйста, свяжитесь с администратором конференции по адресу:
 
 {CONTACT_EMAIL}
 
-Include this full e-mail (particularly the headers). 
+Включите данное сообщение целиком (особенно заголовки).
 
-Message sent to you follows:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Отправленное вам сообщение:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
@@ -40,13 +40,13 @@ Message sent to you follows:
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Учётная запись активирована
 
-Hello {USERNAME},
+Здравствуйте, {USERNAME}!
 
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
+Ваша учётная запись на конференции «{SITENAME}» была активирована администратором. Теперь вы можете войти на конференцию.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ваш пароль был сохранён в безопасном виде в базе данных конференции. Если вы забудете пароль, то сможете получить новый, используя адрес email, заданный при регистрации.
 
 {EMAIL_SIG}',
 ));
@@ -54,23 +54,23 @@ Your password has been securely stored in our database and cannot be retrieved. 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Добро пожаловать на конференцию «{SITENAME}»
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Пожалуйста, сохраните это сообщение. Параметры вашей учётной записи таковы:
 
 ----------------------------
-Username: {USERNAME}
+Имя пользователя: {USERNAME}
 
-Board URL: {U_BOARD}
+Адрес конференции: {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+Ваша учётная запись в настоящее время неактивна и должна быть одобрена администратором прежде, чем вы сможете войти на конференцию. После активации вашей учётной записи вам придёт ещё одно сообщение.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ваш пароль надёжно сохранён в нашей базе данных и не может быть извлечён из неё. Если вы всё же забудете свой пароль, то вы сможете восстановить его, используя для этого адрес электронной почты, связанный с вашей учётной записью.
 
-Thank you for registering.
+Благодарим за регистрацию!
 
 {EMAIL_SIG}',
 ));
@@ -213,115 +213,113 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Добро пожаловать на конференцию «{SITENAME}»
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+В соответствии с COPPA ваша учётная запись не была активирована.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Пожалуйста, распечатайте это сообщение и попросите своего родителя или опекуна подписать его и поставить дату. Затем отправьте его по факсу:
 
 {FAX_INFO}
 
-OR mail it to:
+Или по почте:
 
 {MAIL_INFO}
 
 ------------------------------ CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+Permission to participate at “{SITENAME}” - {U_BOARD}
 
 Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Email: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO “{SITENAME}” TO STORE THIS INFORMATION.
+I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD.
+I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM “{SITENAME}” AT ANY TIME.
 
 
-Parent or guardian 
+Parent or guardian
 (print your name here): _____________________
 
-(sign here): __________________ 
+(sign here): __________________
 
 Date: _______________
 
 ------------------------------ CUT HERE ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Как только администратор получит эту форму по факсу или по почте, ваша учётная запись будет активирована.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ваш пароль надёжно сохранен в нашей базе данных и не может быть извлечён из неё. Если вы всё же забудете свой пароль, то вы сможете восстановить его, используя для этого адрес электронной почты, связанный с вашей учётной записью.
 
-Thank you for registering.
+Благодарим за регистрацию!
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Добро пожаловать на конференцию «{SITENAME}»
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+В соответствии с COPPA ваша учётная запись не была активирована.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Пожалуйста, распечатайте это сообщение и попросите своего родителя или опекуна подписать его и поставить дату. Затем отправьте его по факсу:
 
 {FAX_INFO}
 
-OR mail it to:
+Или по почте:
 
 {MAIL_INFO}
 
 ------------------------------ CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+Permission to participate at “{SITENAME}” — {U_BOARD}
 
 Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Email: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO “{SITENAME}” TO STORE THIS INFORMATION.
+I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD.
+I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM “{SITENAME}” AT ANY TIME.
 
 
-Parent or guardian 
+Parent or guardian
 (print your name here): _____________________
 
-(sign here): __________________ 
+(sign here): __________________
 
 Date: _______________
 
 ------------------------------ CUT HERE ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Как только администратор получит эту форму по факсу или по почте, ваша учётная запись будет активирована.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ваш пароль надёжно сохранен в нашей базе данных и не может быть извлечён из неё. Если вы всё же забудете свой пароль, то вы сможете восстановить его, используя для этого адрес электронной почты, связанный с вашей учётной записью.
 
-Thank you for registering.
+Благодарим за регистрацию!
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} «{SITENAME}» — Сообщение от друга
 
-Hello {TO_USERNAME},
+Здравствуйте, {TO_USERNAME}!
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Это сообщение отправлено с конференции «{SITENAME}» пользователем {FROM_USERNAME}, который считает, что вам может быть интересна данная тема:
 
 {TOPIC_NAME}
 
-You can find it at:
+Вы можете найти её по этому адресу:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Исходное сообщение от {FROM_USERNAME} следует ниже. Учтите, что данное сообщение не было просмотрено или одобрено администрацией конференции. Если вы хотите пожаловаться на это сообщение, то можете связаться с администратором по адресу {BOARD_CONTACT}. При отправке сообщения на этот адрес, пожалуйста, процитируйте заголовки полученного письма.
 
 ----------
 
@@ -379,39 +377,38 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Уведомление о новом сообщении — «{FORUM_NAME}»
 
-Hello {USERNAME},
+Здравствуйте, {USERNAME}!
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+Вы получили это сообщение потому, что следите за форумом «{FORUM_NAME}» на конференции «{SITENAME}». В этом форуме со времени вашего последнего посещения появились новые сообщения в теме «{TOPIC_TITLE}». Вы можете перейти по следующей ссылке для просмотра последних непрочитанных сообщений. Новые уведомления не будут приходить, пока вы не просмотрите тему.
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Если вы хотите просмотреть тему, перейдите по следующей ссылке:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Если вы хотите просмотреть форум, перейдите по следующей ссылке:
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Если вы больше не хотите следить за форумом, то либо щёлкните по находящейся в нём ссылке «Отписаться от форума», либо перейдите по следующей ссылке:
 
 {U_STOP_WATCHING_FORUM}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} Вы были включены в группу
 
-Congratulations,
+Поздравляем!
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+Вы были приняты в группу «{GROUP_NAME}» на конференции «{SITENAME}».
+Это было проделано лидером группы или администратором сайта, обратитесь к ним за дополнительной информацией. 
 
-You can view your groups information here:
+Перейдите по ссылке, чтобы увидеть информацию о вашем членстве в группах:
 {U_GROUP}
 
 {EMAIL_SIG}
@@ -421,12 +418,12 @@ You can view your groups information here:
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Ваша просьба была удовлетворена
 
-Congratulations,
+Поздравляем!
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+Ваша просьба о вступлении в группу «{GROUP_NAME}» на конференции «{SITENAME}» была удовлетворена.
+Перейдите по ссылке, чтобы увидеть информацию о вашем членстве в группах: 
 
 {U_GROUP}
 
@@ -437,12 +434,12 @@ Click on the following link to see your group membership.
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} Просьба о вступлении в группу
 
-Dear {USERNAME},
+Уважаемый(ая) {USERNAME}!
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+Пользователь «{REQUEST_USERNAME}» попросил о вступлении в группу «{GROUP_NAME}», лидером которой вы являетесь на конференции «{SITENAME}» .
+Чтобы удовлетворить или отклонить эту просьбу, перейдите по следующей ссылке:
 
 {U_PENDING}
 
@@ -453,23 +450,24 @@ To approve or deny this request for group membership please visit the following 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB установлен
 
-Congratulations,
+Поздравляем!
 
-You have successfully installed phpBB on your server.
+Вы успешно установили phpBB на сервер.
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Это сообщение содержит важную информацию, касающуюся только что установленного phpBB. Сохраните это сообщение. Ваш пароль надёжно сохранён в нашей базе данных и не может быть извлечён из неё. Если вы всё же забудете свой пароль, то вы сможете восстановить его, используя для этого адрес электронной почты, связанный с вашей учётной записью.
 
-----------------------------
-Username: {USERNAME}
+---------------------------------
+Имя пользователя: {USERNAME}
 
-Board URL: {U_BOARD}
-----------------------------
+Адрес конференции:	{U_BOARD}
+---------------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
+Полезная информация о phpBB находится в папке docs и на странице поддержки phpBB.com — http://www.phpbb.com/support/
+Сайт официальной русскоязычной поддержки phpBB — http://www.phpbbguru.net
 
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+Для обеспечения безопасности конференции настоятельно рекомендуется следить за обновлениями, что вы можете легко осуществить, подписавшись на рассылку phpBB.com по указанной выше ссылке.
 
 {EMAIL_SIG}',
 ));
@@ -509,15 +507,15 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} Уведомление о новой теме — «{FORUM_NAME}»
 
-Hello {USERNAME},
+Здравствуйте, {USERNAME}!
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+Вы получили это сообщение потому, что следите за форумом «{FORUM_NAME}» на конференции «{SITENAME}». В этом форуме с момента вашего последнего посещения появилась новая тема «{TOPIC_TITLE}». Вы можете перейти по ссылке, чтобы просмотреть её. Новые уведомления не будут приходить, пока вы не просмотрите форум:
 
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Если вы больше не хотите следить за форумом, то либо щёлкните по находящейся в нём ссылке «Отписаться от форума», либо перейдите по следующей ссылке:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -527,24 +525,11 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{PM_SUBJECT}"
+	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Жалоба на личное сообщение {PM_SUBJECT} закрыта
 
-Hello {USERNAME},
+Здравствуйте, {USERNAME}!
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed. If you have further questions, please contact {CLOSER_NAME} by private message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{PM_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
+Вы получили это уведомление потому, что отправленная вами жалоба на личное сообщение {PM_SUBJECT}, полученное вами на конференции «{SITENAME}», была просмотрена модератором или администратором. После просмотра жалоба была закрыта. По возникшим вопросам свяжитесь с {CLOSER_NAME} (пользователь, закрывший жалобу) посредством личного сообщения.
 
 
 {EMAIL_SIG}',
@@ -553,16 +538,29 @@ You are receiving this notification because the report you filed regarding the p
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Жалоба на сообщение {PM_SUBJECT} удалена
 
-Hello {USERNAME},
+Здравствуйте, {USERNAME}!
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+Вы получили это уведомление потому, что отправленная вами жалоба на личное сообщение {PM_SUBJECT}, полученное вами на конференции «{SITENAME}», была удалена модератором или администратором.
 
-If you want to view the post, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Сообщение одобрено — «{POST_SUBJECT}»
+
+Здравствуйте, {USERNAME}!
+
+Вы получили это уведомление потому, что ваше сообщение «{POST_SUBJECT}» на конференции «{SITENAME}» было одобрено модератором или администратором.
+
+Если вы хотите просмотреть свое сообщение, перейдите по следующей ссылке:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Если вы хотите просмотреть тему, перейдите по следующей ссылке:
 {U_VIEW_TOPIC}
 
 
@@ -572,13 +570,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Сообщение отклонено — «{POST_SUBJECT}»
 
-Hello {USERNAME},
+Здравствуйте, {USERNAME}!
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Вы получили это уведомление потому, что ваше сообщение «{POST_SUBJECT}» на конференции «{SITENAME}» было отклонено модератором или администратором.
 
-The following reason was given for the disapproval:
+Сообщение было отклонено по следующей причине:
 
 {REASON}
 
@@ -675,19 +673,19 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} Новое личное сообщение
 
-Hello {USERNAME},
+Здравствуйте, {USERNAME}!
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+Вам пришло новое личное сообщение от {AUTHOR_NAME} на конференции «{SITENAME}» с темой:
 
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+Вы можете прочитать это сообщение, перейдя по следующей ссылке:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+Помните, вы можете отказаться от получения подобных уведомлений, если измените настройки в своём личном разделе.
 
 {EMAIL_SIG}',
 ));
@@ -709,16 +707,16 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+Здравствуйте, {TO_USERNAME}!
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Ниже следует письмо, отправленное вам пользователем {FROM_USERNAME} через вашу учётную запись на конференции «{SITENAME}». Если это сообщение является спамом, содержит оскорбления или другие неприятные вам высказывания, пожалуйста, свяжитесь с администратором конференции по адресу:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Включите данное сообщение целиком (особенно заголовки). Пожалуйста, учтите, что обратный адрес этого письма принадлежит пользователю {FROM_USERNAME}.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Посланное вам сообщение:
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 ',
@@ -728,16 +726,16 @@ Message sent to you follows
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+Здравствуйте, {TO_USERNAME}!
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Ниже следует письмо, отправленное вам пользователем {FROM_USERNAME} через вашу учётную запись на конференции «{SITENAME}». Если это сообщение является спамом, содержит оскорбления или другие неприятные вам высказывания, пожалуйста, свяжитесь с администратором конференции по адресу:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Включите данное сообщение целиком. Пожалуйста, учтите, что адрес отправителя является адресом учётной записи конференции для мгновенных сообщений.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Посланное вам сообщение:
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 ',
@@ -746,24 +744,11 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Жалоба закрыта — «{POST_SUBJECT}»
 
-Hello {USERNAME},
+Здравствуйте, {USERNAME}!
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
+Вы получили это уведомление потому, что поданная вами жалоба на сообщение «{POST_SUBJECT}» в теме «{TOPIC_TITLE}» на конференции «{SITENAME}» была рассмотрена модератором или администратором. После рассмотрения жалоба была закрыта. По возникшим в дальнейшем вопросам свяжитесь с {CLOSER_NAME} посредством личного сообщения.
 
 
 {EMAIL_SIG}',
@@ -772,13 +757,26 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Жалоба удалена — «{POST_SUBJECT}»
 
-Hello {USERNAME},
+Здравствуйте, {USERNAME}!
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+Вы получили это уведомление потому, что поданная вами жалоба на сообщение «{POST_SUBJECT}» в теме «{TOPIC_TITLE}» на конференции «{SITENAME}» была удалена модератором или администратором.
 
-If you want to view the topic, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Тема одобрена — «{TOPIC_TITLE}»
+
+Здравствуйте, {USERNAME}!
+
+Вы получили это уведомление потому, что ваша тема «{TOPIC_TITLE}» на конференции «{SITENAME}» была одобрена модератором или администратором.
+
+Если вы хотите просмотреть тему, перейдите по следующей ссылке:
 {U_VIEW_TOPIC}
 
 
@@ -788,13 +786,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Тема отклонена — «{TOPIC_TITLE}»
 
-Hello {USERNAME},
+Здравствуйте, {USERNAME}!
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Вы получили это уведомление потому, что ваша тема «{TOPIC_TITLE}» на конференции «{SITENAME}» была отклонена модератором или администратором.
 
-The following reason was given for the disapproval:
+Тема была отклонена по следующей причине:
 
 {REASON}
 
@@ -805,22 +803,22 @@ The following reason was given for the disapproval:
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Уведомление об ответе — «{TOPIC_TITLE}»
 
-Hello {USERNAME},
+Здравствуйте, {USERNAME}!
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+Вы получили это сообщение потому, что следите за темой «{TOPIC_TITLE}» на конференции «{SITENAME}». В этой теме со времени вашего последнего посещения появилось новое сообщение. Вы можете перейти по ссылке, чтобы прочитать поступившие ответы; новые уведомления не будут приходить, пока вы не просмотрите тему.
 
-If you want to view the newest post made since your last visit, click the following link:
+Если вы хотите просмотреть самое новое сообщение с момента вашего последнего посещения, перейдите по следующей ссылке:
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Если вы хотите просмотреть всю тему, перейдите по следующей ссылке:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Если вы хотите просмотреть форум, перейдите по следующей ссылке:
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+Если вы больше не хотите следить за темой, то либо щёлкните по находящейся в ней ссылке «Отписаться от темы», либо перейдите по следующей ссылке:
 
 {U_STOP_WATCHING_TOPIC}
 
@@ -830,47 +828,25 @@ If you no longer wish to watch this topic you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Повторная активация учётной записи
 
-Hello {USERNAME},
+Здравствуйте, {USERNAME}!
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
-
-{U_ACTIVATE}
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
-
-Hello {USERNAME}
-
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
-
-To use the new password you need to activate it. To do this click the link provided below.
+Ваша учётная запись на конференции «{SITENAME}» была отключена, скорее всего из-за внесенных в ваш профиль изменений. Чтобы вновь её активировать, перейдите по этой ссылке:
 
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+{EMAIL_SIG}',
+));
 
-Password: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+
+$email = array_merge($email, array(
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Ваша учётная запись была отключена
+
+Здравствуйте, {USERNAME}!
+
+Ваша учётная запись на конференции «{SITENAME}» была отключена, скорее всего из-за внесенных в ваш профиль изменений. Администратор конференции должен активировать вашу учётную запись, чтобы вы смогли ей пользоваться. После активации вы получите повторное уведомление.
 
 {EMAIL_SIG}',
 ));
@@ -878,20 +854,42 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} Активация нового пароля
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+Здравствуйте, {USERNAME}!
 
-Please keep this e-mail for your records. Your account information is as follows:
+Вы получили это письмо потому, что вы (либо кто-то, выдающий себя за вас) попросили выслать новый пароль для вашей учётной записи на конференции «{SITENAME}». Если вы не просили выслать пароль, то не обращайте внимания на это письмо, если же подобные письма будут продолжать приходить, обратитесь к администратору конференции.
+
+Прежде чем использовать новый пароль, вы должны его активировать. Для этого перейдите по ссылке:
+
+{U_ACTIVATE}
+
+В случае успешной активации вы сможете входить на конференцию, используя следующий пароль:
+
+Пароль: {PASSWORD}
+
+Вы сможете сменить этот пароль на странице редактирования профиля в личном разделе. Если у вас возникнут какие-либо трудности, обратитесь к администратору конференции.
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Повторная активация учётной записи на конференции «{SITENAME}»
+
+Администратор конференции запросил повторную активацию вашей учётной записи. В настоящее время ваша учётная запись неактивна.
+Для активации учётной записи следуйте предложенным ниже инструкциям.
+
+Сохраните это сообщение. Параметры вашей учётной записи таковы:
 
 ----------------------------
-Username: {USERNAME}
+Имя пользователя: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ваш пароль надёжно сохранён в нашей базе данных и не может быть извлечён из неё. Если вы всё же забудете свой пароль, то вы сможете восстановить его, используя для этого адрес электронной почты, связанный с вашей учётной записью.
 
-Please visit the following link to reactivate your account:
+Перейдите по следующей ссылке для активации учётной записи:
 
 {U_ACTIVATE}
 
@@ -1004,15 +1002,15 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Напоминание об отключённой учётной записи
 
-Hello {USERNAME},
+Здравствуйте, {USERNAME}!
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+Данное уведомление отправлено вам для напоминания о том, ваша учётная запись на конференции «{SITENAME}», зарегистрированная {REGISTER_DATE}, до сих пор остаётся неактивной. Если вы хотите активировать эту учётную запись, то щёлкните по ссылке ниже:
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+Благодарим за регистрацию на конференции «{SITENAME}» и надеемся на ваше участие в обсуждениях.
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +1018,24 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Добро пожаловать на конференцию «{SITENAME}»
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Пожалуйста, сохраните это сообщение. Параметры вашей учётной записи таковы:
 
 ----------------------------
-Username: {USERNAME}
+Имя пользователя: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ваш пароль надёжно сохранён в нашей базе данных и не может быть извлечён из неё. Если вы всё же забудете свой пароль, то вы сможете восстановить его, используя для этого адрес электронной почты, связанный с вашей учётной записью.
 
-Please visit the following link in order to activate your account:
+Щёлкните по ссылке ниже для активации учётной записи:
 
 {U_ACTIVATE}
 
 
-Thank you for registering.
+Благодарим за регистрацию!
 
 {EMAIL_SIG}',
 ));
@@ -1045,21 +1043,21 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Добро пожаловать на конференцию «{SITENAME}»
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Пожалуйста, сохраните это сообщение. Параметры вашей учётной записи таковы:
 
 ----------------------------
-Username: {USERNAME}
+Имя пользователя: {USERNAME}
 
-Board URL: {U_BOARD}
+Адрес конференции: {U_BOARD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ваш пароль надёжно сохранён в нашей базе данных и не может быть извлечён из неё. Если вы всё же забудете свой пароль, то вы сможете восстановить его, используя для этого адрес электронной почты, связанный с вашей учётной записью.
 
-Thank you for registering.
+Благодарим за регистрацию!
 
 {EMAIL_SIG}',
 ));
@@ -1067,25 +1065,25 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Добро пожаловать на конференцию «{SITENAME}»
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Рекомендуется сохранить это сообщение. Параметры вашей учётной записи таковы:
 
 ----------------------------
-Username: {USERNAME}
+Имя пользователя: {USERNAME}
 
-Board URL: {U_BOARD}
+Адрес конференции: {U_BOARD}
 ----------------------------
 
-Please visit the following link in order to activate your account:
+Щёлкните по ссылке ниже для активации учётной записи:
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ваш пароль надёжно сохранён в нашей базе данных и не может быть извлечён из неё. Если вы всё же забудете свой пароль, то вы сможете восстановить его, используя для этого адрес электронной почты, связанный с вашей учётной записью.
 
-Thank you for registering.
+Благодарим за регистрацию!
 
 {EMAIL_SIG}',
 ));

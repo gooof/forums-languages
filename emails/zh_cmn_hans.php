@@ -1,16 +1,16 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} 用户帐号激活
 
-Hello,
+您好,
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+用户帐号 "{USERNAME}" 刚刚建立但是还处于未激活状态, 您需要检查用户的资料(如果需要的话)并妥当处理这个帐号.
 
-Use this link to view the user\'s profile:
+用户资料链接:
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+用户帐号激活链接:
 {U_ACTIVATE}
 
 
@@ -21,13 +21,13 @@ Use this link to activate the account:
 
 $email = array_merge($email, array(
 	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+以下是由 "{SITENAME}" 的管理员发送给您的email. 如果这个邮件是垃圾邮件, 或包含非法内容请联系该论坛的管理员, 联系地址:
 
 {CONTACT_EMAIL}
 
-Include this full e-mail (particularly the headers). 
+包含完整email?(特别是邮件头). 
 
-Message sent to you follows:
+发送给您的邮件如下:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -40,13 +40,12 @@ Message sent to you follows:
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} 帐号已激活
 
-Hello {USERNAME},
+您好, {USERNAME},
 
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
-
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+您在"{SITENAME}"上的帐号已经被管理员激活, 您现在可以登陆了。
+在论坛数据库中只保存加密后的密码, 无法反向解密. 如果您不慎忘记密码, 你只能使用您的注册邮箱进行密码重设.
 
 {EMAIL_SIG}',
 ));
@@ -54,23 +53,23 @@ Your password has been securely stored in our database and cannot be retrieved. 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} 欢迎来到 "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+请保留这封email作为备份. 您的帐号信息如下:
 
 ----------------------------
-Username: {USERNAME}
+用户名: {USERNAME}
 
-Board URL: {U_BOARD}
+论坛链接: {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+您的帐号尚处于未激活状态, 需要由论坛的管理员审查后激活. 当帐号通过时您会收到另一封email通知.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+请不要遗失自己的密码, 因为用户密码需要编码加密后存入数据库, 此过程不可逆, 我们不能再从中得到您的密码. 当然, 如果您不慎遗失了自己的密码, 您可以重新申请一个密码, 但是帐号将需要按照这样的方式重新激活一次.
 
-Thank you for registering.
+感谢您的注册.
 
 {EMAIL_SIG}',
 ));
@@ -213,25 +212,25 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} 欢迎来到 "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+根据 COPPA, 您的帐号暂时是未激活的.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+请打印如下的内容并经您的父母或监护人签字后传真至:
 
 {FAX_INFO}
 
-OR mail it to:
+或邮寄至:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
+------------------------------ 由这里剪下 ------------------------------
 Permission to participate at "{SITENAME}" - {U_BOARD}
 
 Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Email: {EMAIL_ADDRESS}
 
 I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
 I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
@@ -245,14 +244,14 @@ Parent or guardian
 
 Date: _______________
 
------------------------------- CUT HERE ------------------------------
+------------------------------ 由这里剪下 ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+一旦管理员通过传真或邮件接收到以上的表单您的帐号将被激活.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+请不要遗失自己的密码, 因为用户密码需要编码加密后存入数据库, 此过程不可逆, 所以我们不能再从中得到您的密码. 当然, 如果您不慎遗失了自己的密码, 您可以重新申请一个密码, 但是帐号将需要按照这样的方式重新激活一次.
 
-Thank you for registering.
+感谢您的注册.
 
 {EMAIL_SIG}
 ',
@@ -261,25 +260,25 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} 欢迎来到 "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+根据 COPPA, 您的帐号暂时是未激活的.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+请打印如下的内容并经您的父母或监护人签字后传真至:
 
 {FAX_INFO}
 
-OR mail it to:
+或邮寄至:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
+------------------------------ 由这里剪下 ------------------------------
 Permission to participate at "{SITENAME}" - {U_BOARD}
 
 Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Email: {EMAIL_ADDRESS}
 
 I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
 I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
@@ -293,14 +292,14 @@ Parent or guardian
 
 Date: _______________
 
------------------------------- CUT HERE ------------------------------
+------------------------------ 由这里剪下 ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+一旦管理员通过传真或邮件接收到以上的表单您的帐号将被激活.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+请不要遗失自己的密码, 因为用户密码需要编码加密后存入数据库, 此过程不可逆, 所以我们不能再从中得到您的密码. 当然, 如果您不慎遗失了自己的密码, 您可以重新申请一个密码, 但是帐号将需要按照这样的方式重新激活一次.
 
-Thank you for registering.
+感谢您的注册.
 
 {EMAIL_SIG}
 ',
@@ -309,19 +308,19 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - 给朋友发送email
 
 Hello {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+这个email由 {FROM_USERNAME} 发送自 "{SITENAME}",  他/她觉得您可能会对这些内容感兴趣:
 
 {TOPIC_NAME}
 
-You can find it at:
+您可以在如下链接中浏览:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+ {FROM_USERNAME} 发送的邮件内容也在下面包含, 请注意这些内容并没有经过论坛管理员批准或审查. 如果您对这类邮件表示不满, 请联系论坛管理员 {BOARD_CONTACT}. 请在邮件中包含这个邮件的邮件头内容.
 
 ----------
 
@@ -379,21 +378,21 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} 版面帖子通知 - "{FORUM_NAME}"
 
 Hello {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+您收到这个通知是因为您设置了在 "{SITENAME}" 上监视版面 "{FORUM_NAME}". 这个版面上刚有人回复了主题 "{TOPIC_TITLE}". 您可以使用下面的链接查看这个主题, 在您查看这个主题前不会再有任何通知.
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+如果您想查看这个主题，点击下面的链接：
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+如果您想查看这个版面，点击下面的链接：
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+如果您不想再监视这个版面, 您可以在上面的版面中点击 "取消订阅版面" 链接或点击下面的链接:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -404,14 +403,14 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} 您已经加入这个用户组
 
-Congratulations,
+恭喜,
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+您已经在 "{SITENAME}" 上被加入用户组 "{GROUP_NAME}".
+这个操作由用户组管理者或论坛管理员完成, 可以联系他们得到更多的信息.
 
-You can view your groups information here:
+您可以通过下面的链接查看您的用户组信息:
 {U_GROUP}
 
 {EMAIL_SIG}
@@ -421,12 +420,12 @@ You can view your groups information here:
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} 您的请求已经被批准
 
-Congratulations,
+恭喜,
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+您在 "{SITENAME}" 上加入 "{GROUP_NAME}" 用户组的请求已经被批准.
+点击下面的链接可以看到您的用户组信息.
 
 {U_GROUP}
 
@@ -437,12 +436,12 @@ Click on the following link to see your group membership.
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} 加入用户组的申请
 
-Dear {USERNAME},
+{USERNAME}, 您好:
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+用户 "{REQUEST_USERNAME}" 请求加入您在 "{SITENAME}" 中管理的用户组 "{GROUP_NAME}".
+如果您需要进行批准或者驳回操作, 请使用如下链接:
 
 {U_PENDING}
 
@@ -453,23 +452,23 @@ To approve or deny this request for group membership please visit the following 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB 安装成功
 
-Congratulations,
+恭喜！
 
-You have successfully installed phpBB on your server.
+您已经成功地安装了phpBB。
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+这封信包含了重要的安装信息，请妥善保管。注意数据库中的密码是被加密过的，无法直接读取，若您不幸遗失此密码，就只能再申请一个新的密码了。
 
 ----------------------------
-Username: {USERNAME}
+用户名：{USERNAME}
 
-Board URL: {U_BOARD}
+论坛地址：{U_BOARD}
 ----------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
+您可以在安装目录的“docs”文件夹，以及phpBB.com的支持页面“http://www.phpbb.com/support/”找到一些有用的信息。
 
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+为了保障您的论坛安全稳定，我们强烈建议您订阅邮件列表以便随时获得最新的发布消息，地址如下：
 
 {EMAIL_SIG}',
 ));
@@ -509,15 +508,15 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} 新主题通知 - "{FORUM_NAME}"
 
 Hello {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+您收到这个通知是因为您在 "{SITENAME}" 上订阅了版面 "{FORUM_NAME}". 刚刚有人在这个版面发表了新主题 "{TOPIC_TITLE}". 您可以点击下面的链接查看版面, 在您查看版面前不会再有更多的通知.
 
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+如果您不希望再监视这个版面, 您可以点击版面页面上的 "取消订阅" 链接或者点击下面的链接:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -527,24 +526,13 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{PM_SUBJECT}"
+	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} 举报已关闭 - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+{USERNAME},
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed. If you have further questions, please contact {CLOSER_NAME} by private message.
+您好!
 
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{PM_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
+您在 "{SITENAME}" 上对于私人短信"{PM_SUBJECT}" 的举报已经被版主或管理员关闭. 如果您有任何问题, 请站内联系 {CLOSER_NAME}.
 
 
 {EMAIL_SIG}',
@@ -553,16 +541,31 @@ You are receiving this notification because the report you filed regarding the p
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} 举报已删除 - "{PM_SUBJECT}"
+
+{USERNAME},
+
+您好!
+
+您在 "{SITENAME}" 上对于私人短信"{PM_SUBJECT}" 的举报已经被版主或管理员删除. 
+
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} 帖子被批准 - "{POST_SUBJECT}"
 
 Hello {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+您收到这个通知是因为您在 "{SITENAME}" 上的帖子 "{POST_SUBJECT}" 已经被版主或管理员批准.
 
-If you want to view the post, click the following link:
+您可以点击下面的链接查看您的帖子:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+您可以点击下面的链接查看这个主题:
 {U_VIEW_TOPIC}
 
 
@@ -572,13 +575,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} 帖子未批准 - "{POST_SUBJECT}"
 
 Hello {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+您收到这个通知是因为您在 "{SITENAME}" 上发表的帖子 "{POST_SUBJECT}" 未通过版主或管理员批准.
 
-The following reason was given for the disapproval:
+不批准的理由是:
 
 {REASON}
 
@@ -675,19 +678,19 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} 收到新的私人短信
 
 Hello {USERNAME},
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+您在 "{SITENAME}" 上的帐号收到了来自 "{AUTHOR_NAME}"的站内短信, 标题为:
 
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+您可以使用下面的链接查看短信:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+您的个人设置中允许论坛在此类事件中通知您, 如果您不希望再次收到这样的通知, 您可以在个人资料设置中关闭它.
 
 {EMAIL_SIG}',
 ));
@@ -711,13 +714,13 @@ $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
 Hello {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+您在 "{SITENAME}" 上的帐号收到了来自 {FROM_USERNAME} 的新email, 下面是email的内容. 如果是垃圾邮件或其他对您产生冒犯的内容请联系论坛的管理员, 通过如下的地址:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+在反馈中请包含完整的email内容 (特别是邮件头). 请注意这个email的回复地址已经被设置为帐号 {FROM_USERNAME}.
 
-Message sent to you follows
+以下是发送给您的内容
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -730,13 +733,13 @@ $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
 Hello {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+您在 "{SITENAME}" 上的帐号收到了来自 {FROM_USERNAME} 的新消息, 下面是消息的内容. 如果是垃圾消息或其他对您产生冒犯的内容请联系论坛的管理员, 通过如下的地址:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+反馈中请包含这个完整的信息. 请注意发送者的地址已经被设置到论坛 IM 帐号.
 
-Message sent to you follows
+以下是发送给您的内容
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -746,11 +749,11 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} 举报被关闭 - "{POST_SUBJECT}"
 
 Hello {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
+您收到这个通知是因为您在 "{SITENAME}" 上对主题 "{TOPIC_TITLE}" 中的帖子 "{POST_SUBJECT}" 的举报已经被版主或管理员处理后关闭. 如果您有更多的问题请使用站内短信联系 {CLOSER_NAME}.
 
 
 {EMAIL_SIG}',
@@ -759,11 +762,11 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} 举报被删除 - "{POST_SUBJECT}"
 
 Hello {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
+您收到这个通知是因为您在 "{SITENAME}" 上对主题 "{TOPIC_TITLE}" 中的帖子 "{POST_SUBJECT}" 的举报已经被版主或管理员删除.
 
 
 {EMAIL_SIG}',
@@ -772,13 +775,13 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} 主题已被批准 - "{TOPIC_TITLE}"
 
 Hello {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+您收到这个通知, 因为您在 "{SITENAME}" 上发表的主题 "{TOPIC_TITLE}" 已经被版主或管理员批准.
 
-If you want to view the topic, click the following link:
+如果您希望查看这个主题, 请点击下面的链接:
 {U_VIEW_TOPIC}
 
 
@@ -788,13 +791,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} 主题未批准 - "{TOPIC_TITLE}"
 
 Hello {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+您收到这个通知是因为您在 "{SITENAME}" 上发表的主题 "{TOPIC_TITLE}" 未通过版主或管理员的批准.
 
-The following reason was given for the disapproval:
+不批准的理由是:
 
 {REASON}
 
@@ -805,22 +808,22 @@ The following reason was given for the disapproval:
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} 主题回复通知 - "{TOPIC_TITLE}"
 
 Hello {USERNAME},
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+您收到这个通知, 因为您在 "{SITENAME}" 上订阅了主题 "{TOPIC_TITLE}". 有人刚刚回复这个主题. 您可以使用下面的链接访问这个新回复, 在您访问这个回复之前不会再有更多的通知.
 
-If you want to view the newest post made since your last visit, click the following link:
+如果您希望查看最新的帖子, 点击下面的链接:
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+如果您想查看这个主题，点击下面的链接：
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+如果您想查看这个版面，点击下面的链接；
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+如果您不希望再监视这个主题, 您可以点击主题浏览页面中的 "停止监视这个主题" 链接, 或者点击下面的链接:
 
 {U_STOP_WATCHING_TOPIC}
 
@@ -830,47 +833,25 @@ If you no longer wish to watch this topic you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} 重新激活您的帐户
 
-Hello {USERNAME},
+您好 {USERNAME}，
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
-
-{U_ACTIVATE}
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
-
-Hello {USERNAME}
-
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
-
-To use the new password you need to activate it. To do this click the link provided below.
+您在 "{SITENAME}" 的帐户正处于未激活状态, 原因可能是您修改了自己的资料. 要重新激活它，请点击如下链接：
 
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+{EMAIL_SIG}',
+));
 
-Password: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+
+$email = array_merge($email, array(
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} 您的帐户处于未激活状态
+
+您好 {USERNAME},
+
+您在 "{SITENAME}" 的帐户正处于未激活状态, 原因可能是您修改了自己的资料. 要继续使用, 您需要等待论坛管理员重新激活它. 激活后, 您将收到另一封通知信件.
 
 {EMAIL_SIG}',
 ));
@@ -878,20 +859,42 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} 激活新密码
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+您好 {USERNAME}，
 
-Please keep this e-mail for your records. Your account information is as follows:
+您会收到这封信，是因为您（或其他人的错误操作）为您在 "{SITENAME}" 的帐户申请了新密码。如果您没有申请，请忽略这封信。如果您多次收到这封信，请联系管理员。
+
+要使用新密码，您需要点击如下链接激活它：
+
+{U_ACTIVATE}
+
+成功后您将可以使用如下密码登录：
+
+密码：{PASSWORD}
+
+您将可以在个人资料里修改它。如果您遇到困难请联系管理员。
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} 重新激活您在 "{SITENAME}" 上的帐号
+
+论坛管理员需要您的帐号重新激活. 您的帐号暂时处于未激活状态.
+请使用如下的步骤重新激活您的帐号.
+
+请保存这封email作为记录. 您的帐号信息如下:
 
 ----------------------------
 Username: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+您的密码被加密后存储于数据库中. 如果您忘记了以前的密码, 您可以重新申请密码并像这次一样重新激活您的帐号.
 
-Please visit the following link to reactivate your account:
+请访问下面的链接重新激活您的帐号:
 
 {U_ACTIVATE}
 
@@ -1004,15 +1007,15 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} 帐户尚未激活
 
-Hello {USERNAME},
+您好 {USERNAME}，
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+您于 {REGISTER_DATE} 在 "{SITENAME}" 注册了一个新账户，但尚未激活。要激活它，请点击如下链接：
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+感谢您在本站注册，我们期待您的进一步参与！
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +1023,24 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} 欢迎光临 "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+请妥善保管这封信件。您的帐户信息如下所示：
 
 ----------------------------
-Username: {USERNAME}
+用户名：{USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+请注意避免遗失密码，因为数据库中保存的密码已被加密，无法直接读取。但是，如果您不幸遗忘了它，您还可以申请一个新的密码，并通过与激活此账户相同的方式激活它。
 
-Please visit the following link in order to activate your account:
+您的帐户尚未激活，请点击下面的链接激活它：
 
 {U_ACTIVATE}
 
 
-Thank you for registering.
+感谢您的注册！
 
 {EMAIL_SIG}',
 ));
@@ -1045,21 +1048,21 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} 欢迎光临 "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+请妥善保管这封信件。您的帐户信息如下所示：
 
 ----------------------------
-Username: {USERNAME}
+用户名：{USERNAME}
 
-Board URL: {U_BOARD}
+论坛链接: {U_BOARD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+请注意避免遗失密码，因为数据库中保存的密码已被加密。如果遗忘密码，您可以重新申请一个，并通过与激活此账户相同的方式激活它。
 
-Thank you for registering.
+感谢您的注册！
 
 {EMAIL_SIG}',
 ));
@@ -1067,25 +1070,25 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} 欢迎光临 "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+请妥善保管这封信件。您的帐户信息如下所示：
 
 ----------------------------
-Username: {USERNAME}
+用户名：{USERNAME}
 
-Board URL: {U_BOARD}
+论坛链接: {U_BOARD}
 ----------------------------
 
-Please visit the following link in order to activate your account:
+您的帐户尚未激活，请点击下面的链接激活它：
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+请注意避免遗失密码，因为数据库中保存的密码已被加密。如果您忘了密码，可以重新申请一个，并通过与激活此账户相同的方式激活它。
 
-Thank you for registering.
+感谢您的注册！
 
 {EMAIL_SIG}',
 ));

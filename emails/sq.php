@@ -1,16 +1,16 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Aktivizimi i llogarise së përdoruesit
 
-Hello,
+Përshëndetje,
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+Llogaria e mbajtur nga "{USERNAME}" është ç\'aktivizuar ose është e sapokrijuar, ju duhet të kontrolloni detajet e këtij përdoruesi (nëse kërkohet) dhe ta mirëmbani.
 
-Use this link to view the user\'s profile:
+Përdor linkun për të aktivizuar profilin e përdoruesit:
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+Përdor linkun për të aktivizuar llogarinë:
 {U_ACTIVATE}
 
 
@@ -20,19 +20,15 @@ Use this link to activate the account:
 
 
 $email = array_merge($email, array(
-	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+	'email/admin_send_email.txt' 		=> '{MESSAGE}
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Mesazhi është dërguar nga faqja "{SITENAME}". Nëqoftëse ky mesazh konsiderohet si spam, abuziv ose komente ofenduese, ju lutem kontaktoni adresën e mëposhtme:
 
 {CONTACT_EMAIL}
 
-Include this full e-mail (particularly the headers). 
-
-Message sent to you follows:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-{MESSAGE}
-
-
 {EMAIL_SIG}
 ',
 ));
@@ -40,13 +36,11 @@ Message sent to you follows:
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Llogaria u aktivizua
 
-Hello {USERNAME},
+Përshëndetje {USERNAME},
 
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
-
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Llogaria juaj pranë "{SITENAME}" u aktivizua. Ju tashmë mund të identifikoheni me pseudonimin dhe fjalëkalimin që morët me e-mail e mëparshëm.
 
 {EMAIL_SIG}',
 ));
@@ -54,23 +48,24 @@ Your password has been securely stored in our database and cannot be retrieved. 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Mirë se vini tek "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Ju lutem ruajeni këtë  e-mail. Informacioni i llogarise tuaj është si vijon:
 
 ----------------------------
-Username: {USERNAME}
+Pseudonimi: {USERNAME}
+Fjalëkalimi: {PASSWORD}
 
-Board URL: {U_BOARD}
+URL i Bordit: {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+Llogaria juaj është përkohësisht jo altive. Administratori i bordit duhet ta aktivizojë atë para se ju të mund të identifikoheni. Ju do të merrni një e-mail tjetër kur kjo të ndodhë.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Mos harroni fjalëkalimin tuaj. Eshtë ruajtur në Bazën e informacionit dhe ne nuk mund ta gjejmë atë për ju. Gjithsesi, nëse kjo ndodh ju mund të kërkoni një fjalëkalim tjetër që do tju duhet ta aktivizoni në të njëjtën mënyrë që po aktivizoni llogarinë tuaj.
 
-Thank you for registering.
+Faleminderit që u regjistruat.
 
 {EMAIL_SIG}',
 ));
@@ -217,9 +212,9 @@ $email = array_merge($email, array(
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+In compliance with the COPPA your account is currently inactive.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Please print this message out and have your parent or guardian sign and date it. Then fax it to:
 
 {FAX_INFO}
 
@@ -248,9 +243,9 @@ Date: _______________
 ------------------------------ CUT HERE ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Once the administrator has received the above form via fax or regular mail your account will be activated.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Please do not forget your password as it has been encrypted in our database and we cannot retrieve it for you. However, should you forget your password you can request a new one which will be activated in the same way as this account.
 
 Thank you for registering.
 
@@ -265,9 +260,9 @@ $email = array_merge($email, array(
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+In compliance with the COPPA your account is currently inactive.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Please print this message out and have your parent or guardian sign and date it. Then fax it to:
 
 {FAX_INFO}
 
@@ -279,6 +274,7 @@ OR mail it to:
 Permission to participate at "{SITENAME}" - {U_BOARD}
 
 Username: {USERNAME}
+Password: {PASSWORD}
 E-mail: {EMAIL_ADDRESS}
 
 I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
@@ -296,9 +292,9 @@ Date: _______________
 ------------------------------ CUT HERE ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Once the administrator has received the above form via fax or regular mail your account will be activated.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Please do not forget your password as it has been encrypted in our database and we cannot retrieve it for you. However, should you forget your password you can request a new one which will be activated in the same way as this account.
 
 Thank you for registering.
 
@@ -311,17 +307,17 @@ Thank you for registering.
 $email = array_merge($email, array(
 	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
 
-Hello {TO_USERNAME},
+Pershendetje {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Ky e-mail u dërgua nga "{SITENAME}" prej {FROM_USERNAME} që mendoi që ju mund të jeni i/e interesuar për temën e mëposhtme:
 
 {TOPIC_NAME}
 
-You can find it at:
+Ju mund të gjeni këtë temë të plotë tek:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Një mesazh nga  {FROM_USERNAME} mund të jetë i përfshirë me poshtë. Ju lutem vini re që ky mesazh nuk është parë ose miratuar nga Bordi i Administratorëve. Nëse doni të ankoheni që moret këtë e-mail ju lutem kontaktoni Bordin e Administratorëve në  {BOARD_CONTACT}. Ju lutem përfshini të plotë këtë mesazh kur të kontaktoni.
 
 ----------
 
@@ -379,21 +375,21 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Postim i ri në - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Përshëndetje {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+Ju po merrni këtë lajmërim pasi jeni abonuar tek forumi "{FORUM_NAME}" në "{SITENAME}". Ky forum ka patur një përgjigje në temën "{TOPIC_TITLE}" që nga vizita juaj e fundit. Ju mund të përdorni linkun e mëposhtëm për të parë përgjigjen e fundit të palexuar. Ju nuk do të merrni më njoftime për këtë forum derisa të vizitoni temën.
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Nëse doni të shikoni temën, klikoni linkun e mëposhtëm:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Nëse doni të shikoni forumin, klikoni linkun e mëposhtëm:
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Nëse nuk doni të merrni më njoftime për këtë forum, ju mund të klikoni "Hiq abonimin e temës" në forumin përkatës, ose mund të klikoni linkun e mëposhtëm:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -404,14 +400,14 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} Jeni bashkuar me këtë grup
 
-Congratulations,
+Urime,
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+Ju jeni bashkuar me grupin "{GROUP_NAME}" në "{SITENAME}".
+Ky vendim u mor nga një lider grupi ose administrator. Kontaktoni me ta për më shumë informacion.
 
-You can view your groups information here:
+Ju mund të shikoni informacionin e grupit tuaj këtu:
 {U_GROUP}
 
 {EMAIL_SIG}
@@ -421,12 +417,12 @@ You can view your groups information here:
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Kërkesa juaj është miratuar
 
-Congratulations,
+Urime,
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+Kërkesa juaj për t\'u bashkuar me grupin "{GROUP_NAME}" në "{SITENAME}" është miratuar.
+Klikoni linkun e mëposhtëm për të parë antarsimin tuaj në grup.
 
 {U_GROUP}
 
@@ -437,12 +433,12 @@ Click on the following link to see your group membership.
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} Kërkesë për tu bashkuar në grup
 
-Dear {USERNAME},
+Përshendetje {USERNAME},
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+Një përdorues ka bërë kërkesë për tu bashkuar me grupin "{GROUP_NAME}" që ju moderoni në "{SITENAME}".
+Për të aprovuar ose refuzuar këtë kërkesë për antarësim në grup ju lutemi të vizitoni linkun e mëposhtëm:
 
 {U_PENDING}
 
@@ -459,17 +455,18 @@ Congratulations,
 
 You have successfully installed phpBB on your server.
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+This e-mail contains important information on your installation that you should keep safe. The password has been encrypted in the database and cannot be recovered, although you can request a new password should you lose this one.
 
 ----------------------------
 Username: {USERNAME}
+Password: {PASSWORD}
 
 Board URL: {U_BOARD}
 ----------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
+Useful information on your phpBB installation can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
 
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+In order to keep the board safe and secure, it is highly recommended that you keep current with software releases which can be easily done by subscribing to phpBB.com\'s mailing list, located at the above URL.
 
 {EMAIL_SIG}',
 ));
@@ -509,15 +506,15 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} Temë e re në "{FORUM_NAME}"
 
-Hello {USERNAME},
+Përshëndetje {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+Ju po merrni këtë lajmërim pasi ju jeni abonuar në forumin "{FORUM_NAME}" në "{SITENAME}". Në forum ka një temë të re që nga vizita juaj e fundit, "{TOPIC_TITLE}". Ju mund të perdorni linkun e mëposhtem për të parë forumin. Ju nuk do të merrni më lajmërime për këtë forum deri sa t\'a vizitoni atë.
 
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Nëse nuk dëshironi të merrni më njoftime nga ky forum ju mund të klikoni "Hiq abonimin e forumit" në forumin përkatës, ose duke klikuar linkun e mëposhtëm:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -572,13 +569,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Postim i pamiratuar - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Përshëndetje {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Ju po merrni këtë lajmërim sepse postimi juaj "{POST_SUBJECT}" në "{SITENAME}" nuk u miratua nga një moderator ose administrator.
 
-The following reason was given for the disapproval:
+Arsyeja e mëposhtme u dha për këtë mos miratim:
 
 {REASON}
 
@@ -675,19 +672,19 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} Mesazh Privat
 
-Hello {USERNAME},
+Përshëndetje {USERNAME},
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+Ju keni marrë një mesazh privat nga "{AUTHOR_NAME}" në llogarinë tuaj tek "{SITENAME}" me subjektin e mëposhtëm:
 
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+Ju mund të shikoni këtë mesazh duke klikuar linkun e mëposhtëm:
 
 {U_INBOX}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+Ju keni kërkuar që të lajmëroheni sa herë merrni mesazh privat. Ju kujtojmë që ju mund të zgjidhni që të mos lajmëroheni për mesazhet e reja duke ndryshuar opsionet e duhura në profilin tuaj.
 
 {EMAIL_SIG}',
 ));
@@ -708,16 +705,15 @@ To read the comment , click the link below.
 
 
 $email = array_merge($email, array(
-	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_email.txt' 		=> 'Përshëndetje {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Email i mëposhtëm ju është dërguar nga {FROM_USERNAME} nëpërmjet llogarisë tuaj në  "{SITENAME}". Nëse ky mesazh është spam, abuziv ose përmban komente ofenduese ju lutemi kontaktoni bordin e administratorëve në adresën e mëposhtme:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Përfshini të plotë këtë e-mail. Vini re që adresa e përgjigjes së ketij e-mail është vënë ajo e  {FROM_USERNAME}.
 
-Message sent to you follows
+Mesazhi i dërguar vazhdon më poshtë.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -727,16 +723,15 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_im.txt' 		=> 'Përshëndetje {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Mesazhi i mëposhtëm ju është dërguar nga {FROM_USERNAME} nëpërmjet llogarisë tuaj në "{SITENAME}". Nëse ky mesazh është spam, abuziv ose përmban komente ofenduese ju lutemi kontaktoni bordin e administratorëve në adresën e mëposhtme:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Përfshini të plotë këtë mesazh. Vini re që adresa e dërguesit është ruajtur në llogaritë IM të bordit.
 
-Message sent to you follows
+Mesazhi i dërguar vazhdon më poshtë.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -746,12 +741,11 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Raportimi u mbyll - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Përshëndetje {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
-
+Ju po merrni këtë lajmërim sepse raportimi që ju bëtë për postimin "{POST_SUBJECT}" në "{TOPIC_TITLE}" tek "{SITENAME}" u mor parasysh nga një moderator ose administrator. Pas kësaj raportimi u mbyll. Nëse keni pyetje të mëtejshme kontaktoni {CLOSER_NAME} me një mesazh privat.
 
 {EMAIL_SIG}',
 ));
@@ -759,11 +753,11 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Raportimi u fshi - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Përshëndetje {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
+Ju po merrni këtë lajmërim sepse raportimi që ju bëtë për postimin "{POST_SUBJECT}" në "{TOPIC_TITLE}" tek "{SITENAME}" u fshi nga një moderator ose administrator.
 
 
 {EMAIL_SIG}',
@@ -805,36 +799,37 @@ The following reason was given for the disapproval:
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:}  Përgjigjuni postimit - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Përshëndetje {USERNAME},
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+Sapo i janë përgjigjur temës në të cilën ju jeni abonuar, "{TOPIC_TITLE}" në forumin "{SITENAME}". Mund të jenë postuar përgjigje të tjera gjithashtu, por ju nuk do të merrni njoftime të tjera derisa ju të vizitoni forumin përsëri.
 
-If you want to view the newest post made since your last visit, click the following link:
+Tema dhe postimi i fundit ndodhen këtu:
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Tema ndodhet këtu::
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Forumi ndodhet këtu:
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+{EMAIL_SIG}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Informacion për të ndërprerë abonimin:
 
-{U_STOP_WATCHING_TOPIC}
-
-{EMAIL_SIG}',
+Për të shkëputur abonimin nga kjo temë, ju lutemi vizitoni këtë faqe:
+{U_STOP_WATCHING_TOPIC}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Riaktivizo llogarinë
 
-Hello {USERNAME},
+Përshëndetje {USERNAME},
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
+Llogaria juaj tek "{SITENAME}" është ç\'aktivizuar, mbase nga ndryshimet e bëra në profilin tuaj. Për të riaktivizuar llogarinë tuaj klikoni linkun e mëposhtëm:
 
 {U_ACTIVATE}
 
@@ -844,11 +839,11 @@ Your account on "{SITENAME}" has been deactivated, most likely due to changes ma
 
 
 $email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Llogaria juaj është ç\'aktivizuar
 
-Hello {USERNAME},
+Përshëndetje {USERNAME},
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
+Llogaria juaj tek "{SITENAME}" është ç\'aktivizuar, ndoshta si pasojë e ndryshimeve të bëra në profilin tuaj. Administratori i bordit duhet ta aktivizojë para se ju të identifikoheni. Ju do të lajmëroheni me nje e-mail kur kjo të ndodhë.
 
 {EMAIL_SIG}',
 ));
@@ -856,21 +851,21 @@ Your account on "{SITENAME}" has been deactivated, most likely due to changes ma
 
 
 $email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} Aktivizimi i fjalëkalimit
 
-Hello {USERNAME}
+Përshëndetje {USERNAME}
 
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
+Ju po merrni këtë lajmërim sepse ju (ose dikush tjetër duke pretenduar që ishit ju) keni kërkuar që një fjalëkalim i ri tju dërgohet për llogarinë tuaj tek "{SITENAME}". Nëse ju nuk e kërkuat këtë lajmërim ju lutem injorojeni. Nëse vazhdon tju vije ky lajmërim ju lutemi kontaktoni bordin e administratorëve.
 
-To use the new password you need to activate it. To do this click the link provided below.
+Për të përdorur fjalëkalimin e ri ju duhet ta aktivizoni atë. Për të bërë këtë klikoni linkun më poshtë.
 
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+Ju do të mund të identifikoheni me fjalëkalimin e mëposhtëm:
 
-Password: {PASSWORD}
+Fjalëkalimi: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+Ju mund ta ndryshoni këtë fjalëkalim tek paneli i antarit në faqen e profilit. Nëse keni vështirësi kontaktoni bordin e administratorëve.
 
 {EMAIL_SIG}',
 ));
@@ -878,20 +873,19 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Riaktivizoni llogarinë tuaj në "{SITENAME}"
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+Një Administrator ka kërkuar që llogaria juaj të riaktivizohet. Llogaria juaj nuk është aktive për momentin. Ju lurtemi të ndiqni hapat e mëposhtëm për të riaktivizuar llogarinë tuaj.
 
-Please keep this e-mail for your records. Your account information is as follows:
+Ruani këtë email për kujtesen tuaj. Informacioni i llogarisë tuaj është si më poshtë:
 
 ----------------------------
-Username: {USERNAME}
+Pseudonimi: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Fjalëkalimi juaj është koduar në databazën tonë. Nëse e harroni, ju mund të kërkoni një fjalëkalim të ri, i cili do të duhet të aktivizohet në të njëjtën mënyrë si në këtë rast.
 
-Please visit the following link to reactivate your account:
+Klikoni linkun e mëposhtëm për të riaktivizuar llogarinë tuaj:
 
 {U_ACTIVATE}
 
@@ -1004,15 +998,15 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Ju duhet të aktivizoni Llogarinë tuaj
 
-Hello {USERNAME},
+Përshëndetje {USERNAME},
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+Më {REGISTER_DATE} ju keni rregjistruar një llogari tek faqja "{SITENAME}".  Deri më sot ju nuk e keni aktivizuar atë. Për të aktivizuar llogarinë tuaj klikoni në linkun e mëposhtëm.
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+Faleminderit për rregjistrimin tek "{SITENAME}"
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +1014,23 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Mirë se vini tek "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Ju lutem ruajeni këtë e-mail. Informacioni i llogarisë tuaj është si më poshtë:
 
 ----------------------------
-Username: {USERNAME}
+Pseudonimi: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Fjalëkalimi juaj është ruajtur në bazën e të dhënave. Nëse ju e harroni mund të kërkoni një fjalëkalim të ri i cili do të aktivizohet në të njëjtën mënyrë si kjo llogari.
 
-Please visit the following link in order to activate your account:
+Llogaria juaj është për momentin e ç\'aktivizuar. Ju nuk mund ta përdorni atë deri kur të klikoni në linkun me poshtë:
 
 {U_ACTIVATE}
 
-
-Thank you for registering.
+Faleminderit që u regjistruat.
 
 {EMAIL_SIG}',
 ));
@@ -1045,21 +1038,22 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Mirë se vini tek "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Ju lutemi ruajeni këtë e-mail në arkivin tuaj, pasi janë të dhënat e identifikimit në Dea Portal. Informacionet e llogaris së hapur janë:
 
 ----------------------------
-Username: {USERNAME}
+Pseudonimi: {USERNAME}
+Fjalëkalimi: {PASSWORD}
 
-Board URL: {U_BOARD}
+Adresa e portalit: {U_BOARD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Mos harroni fjalëkalimin tuaj pasi ai është ruajtur në bazën e informacionit dhe ne nuk mund ta rikuperojmë atë. Gjithsesi, nëse e harroni, ju mund të kërkoni një fjalëkalim te ri i cili do të riaktivizohet në të njëjtën mënyrë si kjo llogari.
 
-Thank you for registering.
+Faleminderit për rregjistrimin.
 
 {EMAIL_SIG}',
 ));
@@ -1067,26 +1061,30 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Mirë se vini në "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Ju sapo jeni rregjistruar në forumin tonë.
 
-----------------------------
-Username: {USERNAME}
-
-Board URL: {U_BOARD}
-----------------------------
-
-Please visit the following link in order to activate your account:
+Vini re! Llogaria juaj akoma nuk është aktive. Ju duhet të aktivizoni llogarinë tuaj duke klikuar adresën e mëposhtme:
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
 
-Thank you for registering.
+Këto janë informacionet për tu identifikuar në forum pasi llogaria të jetë aktivizuar. Ju lutemi akrivoni këtë e-mail në skedarët tuaj:
 
+----------------------------
+Pseudonimi: {USERNAME}
+Fjalëkalimi: {PASSWORD}
+
+Adresa e forumit: {U_BOARD}
+----------------------------
+
+
+Ju lutemi të mos harroni fjalëkalimin tuaj pasi është koduar në databazën tonë dhe ne nuk mund ta rekuperojmë atë për ju. Gjithsesi, nëse e harroni, ju mund të kërkoni një fjalëkalim të ri i cili do të aktivizohet në të njëjtën mënyrë si kjo llogari.
+
+Faleminderit për rregjistrimin.
 {EMAIL_SIG}',
 ));
 

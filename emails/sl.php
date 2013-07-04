@@ -1,16 +1,16 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Aktivacija uporabniškega računa
 
-Hello,
+Pozdravljeni,
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+Uporabniški račun "{USERNAME}" je bil onemogočen oziroma na novo ustvarjen. Prosimo, poglejte podrobnosti tega uporabniškega računa.
 
-Use this link to view the user\'s profile:
+Uporabite spodnjo povezavo za ogled uporabniškega profila:
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+Uporabite spodnjo povezavo za aktivacijo uporabniškega računa:
 {U_ACTIVATE}
 
 
@@ -21,13 +21,13 @@ Use this link to activate the account:
 
 $email = array_merge($email, array(
 	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Spodnje e-sporočilo vam je poslal administrator spletne strani "{SITENAME}". Če menite, da je to sporočilo spam, vsebuje neprimerno vsebino ali kaj drugega, prosimo kontaktirajte administratorja foruma na naslednji e-naslov:
 
 {CONTACT_EMAIL}
 
-Include this full e-mail (particularly the headers). 
+Vključi cel email.
 
-Message sent to you follows:
+Sporočilo:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -40,13 +40,13 @@ Message sent to you follows:
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Račun aktiviran
 
-Hello {USERNAME},
+Pozdravljeni, {USERNAME},
 
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
+Vaš uporabniški račun na spletni strani "{SITENAME}" je bil aktiviran s strani administratorjev - sedaj se lahko prijavite.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Prosimo, ne pozabite svojega gesla, saj je v naši bazi zakodirano in vam ga v primeru, da ga pozabite oz. izgubite, ne bomo mogli posredovati. Če izgubite geslo, lahko zaprosite za novega.
 
 {EMAIL_SIG}',
 ));
@@ -54,23 +54,23 @@ Your password has been securely stored in our database and cannot be retrieved. 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Dobrodošli na spletni strani "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Prosimo, ohranite to e-sporočilo, saj vsebuje podatke o vašem uporabniškem računu. Vaši uporabniški podatki so naslednji:
 
 ----------------------------
-Username: {USERNAME}
+Uporabniško ime: {USERNAME}
 
-Board URL: {U_BOARD}
+Spletni naslov: {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+Uporabniški račun je trenutno še onemogočen, saj ga mora administrator strani ročno potrditi, preden se lahko prijavite. Ko bo administrator to storil, boste o tem obveščeni prek e-pošte.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Prosimo, ne pozabite svojega gesla, saj je v naši bazi zakodirano in vam ga v primeru, da ga pozabite oz. izgubite, ne bomo mogli posredovati. Če izgubite geslo, lahko zaprosite za novega.
 
-Thank you for registering.
+Hvala vam za registracijo.
 
 {EMAIL_SIG}',
 ));
@@ -213,46 +213,46 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> 'Zadeva: Dobrodošli na "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+S privolitvijo akta COPPA je vaš račun trenutno neaktiven.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Prosimo, natisnite to sporočilo in naj ga vaš starš ali skrbnik podpiše ter pripiše datum. Nato ga pošljite po faksu na:
 
 {FAX_INFO}
 
-OR mail it to:
+ALI preko navadne pošte na naslov:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ ODREŽI TUKAJ ------------------------------
+Dovoljujem udeležbo na spletni strani "{SITENAME}" - {U_BOARD}
 
-Username: {USERNAME}
+Uporabniško ime: {USERNAME}
 E-mail: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+PREGLEDAL/A SEM INFROMACIJE, KI JIH JE VNESEL MOJ OTROK, IN S PODPISOM DOVOLJUJEM, DA "{IME STRANI}" TE INFORMACIJE SHRANI. 
+ZAVEDAM SE, DA SO TE INFORMACIJE LAHKO KADARKOLI SPREMENJENE Z VNOSOM GESLA. 
+ZAVEDAM SE, DA LAHKO KADARKOLI ZAPROSIM, DA SE INFORMACIJE ODSTRANIJO S STRANI "{IME STRANI}".
 
 
-Parent or guardian 
-(print your name here): _____________________
+Starš ali skrbnik
+(čitljivo napišite ime in priimek): _____________________
 
-(sign here): __________________ 
+(podpis): __________________ 
 
-Date: _______________
+Datum: _______________
 
------------------------------- CUT HERE ------------------------------
+------------------------------ ODREŽI TUKAJ ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Ko bo administrator zgoraj navedeno prejel preko faksa ali navadne pošte, bo vaš račun aktiviran.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Prosimo, ne pozabite svojega gesla, saj je v naši bazi zakodirano in vam ga v primeru, da ga pozabite oz. izgubite, ne bomo mogli posredovati. Če izgubite geslo, lahko zaprosite za novega.
 
-Thank you for registering.
+Hvala za vašo registracijo.
 
 {EMAIL_SIG}
 ',
@@ -261,46 +261,46 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> 'Zadeva: Dobrodošli na "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+S privolitvijo akta COPPA je vaš račun trenutno neaktiven.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Prosimo, natisnite to sporočilo in naj ga vaš starš ali skrbnik podpiše ter pripiše datum. Nato ga pošljite po faksu na:
 
 {FAX_INFO}
 
-OR mail it to:
+ALI preko navadne pošte na naslov:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ ODREŽI TUKAJ ------------------------------
+Dovoljujem udeležbo na spletni strani "{SITENAME}" - {U_BOARD}
 
-Username: {USERNAME}
+Uporabniško ime: {USERNAME}
 E-mail: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+PREGLEDAL/A SEM INFROMACIJE, KI JIH JE VNESEL MOJ OTROK, IN S PODPISOM DOVOLJUJEM, DA "{SITENAME}" TE INFORMACIJE SHRANI. 
+ZAVEDAM SE, DA SO TE INFORMACIJE LAHKO KADARKOLI SPREMENJENE Z VNOSOM GESLA. 
+ZAVEDAM SE, DA LAHKO KADARKOLI ZAPROSIM, DA SE INFORMACIJE ODSTRANIJO S STRANI "{SITENAME}".
 
 
-Parent or guardian 
-(print your name here): _____________________
+Starš ali skrbnik
+(čitljivo napišite ime in priimek): _____________________
 
-(sign here): __________________ 
+(podpis): __________________ 
 
-Date: _______________
+Datum: _______________
 
------------------------------- CUT HERE ------------------------------
+------------------------------ ODREŽI TUKAJ ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Ko bo administrator zgoraj navedeno prejel preko faksa ali navadne pošte, bo vaš račun aktiviran.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Prosimo, ne pozabite svojega gesla, saj je v naši bazi zakodirano in vam ga v primeru, da ga pozabite oz. izgubite, ne bomo mogli posredovati. Če izgubite geslo, lahko zaprosite za novega.
 
-Thank you for registering.
+Hvala za vašo registracijo.
 
 {EMAIL_SIG}
 ',
@@ -309,19 +309,19 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - Prijateljski e-mail
 
-Hello {TO_USERNAME},
+Pozdravljeni, {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+To e-sporočilo je bil poslano s spletne strani "{SITENAME}" od uporabnika {FROM_USERNAME}, ki meni, da bi vas ena izmed tem na forumu lahko zanimala:
 
 {TOPIC_NAME}
 
-You can find it at:
+Temo lahko najdete na spodnji povezavi:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Uporabnik {FROM_USERNAME} vam pošilja tudi spodnje sporočilo. Sporočilo ni bilo videno oziroma potrjeno s strani administratorja. Če se želite zoper to sporočilo pritožiti, prosimo kontaktirajte administratorja strani na naslednji naslov: {BOARD_CONTACT}. Pri pošiljanju pritožbe navedite oz. citirajte prejeto sporočilo.
 
 ----------
 
@@ -379,21 +379,21 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Obvestilo o novih prispevkih na spletnem forumu - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Pozdravljeni, {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+To sporočilo ste prejeli, ker spremljate forum "{FORUM_NAME}" na spletni strani "{SITENAME}". Ta forum ima od vašega zadnjega obiska nove prispevke v temi "{TOPIC_TITLE}". Nove prispevke si lahko ogledate na spodnji povezavi. Sporočil o novih prispevkih ne boste prejemali, dokler ne obiščete teme oz. foruma, ki ga spremljate. 
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Če si želite ogledati temo, kliknite na spodnjo povezavo:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Če si želite ogledati forum, kliknite na spodnjo povezavo:
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Če ne želite več prejemati sporočil o novih prispevkih na forumu, kliknite na spodnjo povezavo:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -404,14 +404,14 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} Dodani ste bili v novo uporabniško skupino
 
-Congratulations,
+Čestitamo,
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+Dodani ste bili v uporabniško skupino "{GROUP_NAME}" na spletni strani "{SITENAME}".
+Dodal vas je vodja skupine oz. administrator strani - za več informacij kontaktirajte vodjo oz. administratorja strani.
 
-You can view your groups information here:
+Informacije o uporabniški skupini lahko vidite na spodnji povezavi:
 {U_GROUP}
 
 {EMAIL_SIG}
@@ -421,12 +421,12 @@ You can view your groups information here:
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Vaša zahteva je bila odobrena
 
-Congratulations,
+Čestitamo,
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+Vaša zahteva za pridružitev v uporabniško skupino "{GROUP_NAME}" na spletni strani "{SITENAME}" je bila odobrena.
+Za seznam članov v skupini kliknite na spodnjo povezavo:
 
 {U_GROUP}
 
@@ -437,12 +437,12 @@ Click on the following link to see your group membership.
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} Zahteva za pridružitev uporabniški skupini je zaključena
 
-Dear {USERNAME},
+Spoštovani {USERNAME},
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+Uporabnik/-ca "{REQUEST_USERNAME}" je podal/-a zahtevo za pridružitev uporabniški skupini "{GROUP_NAME}", katere vodja ste na spletnem forumu "{SITENAME}".
+Za več informacij o zahtevku oz. za potrditev ali zavrnitev le-tega obiščite spodnjo povezavo:
 
 {U_PENDING}
 
@@ -453,23 +453,23 @@ To approve or deny this request for group membership please visit the following 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB nameščen
 
-Congratulations,
+Čestitamo,
 
-You have successfully installed phpBB on your server.
+Usprešno ste namestili phpBB.
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+To e-sporočilo vsebuje pomembne podatke o vaši namestitvi, zato jih shranite na varno mesto. Geslo je zakodirano v bazi, zato ga ne morete povrniti, lahko pa zahtevate novega.
 
 ----------------------------
-Username: {USERNAME}
+Uporabniško ime: {USERNAME}
 
-Board URL: {U_BOARD}
+Spletni naslov: {U_BOARD}
 ----------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
+Vse splošne informacije o namestitvi in pomoči lahko najdete na spletnem naslovu - http://www.phpbb.com/support/
 
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+Priporočamo, da forum redno nadgrajujete, saj s tem ohranite njegovo varnost. Da boste pa še bolj na tekočem s posodobitvami, obstaja na zgornjem naslovu mailing lista.
 
 {EMAIL_SIG}',
 ));
@@ -509,15 +509,15 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} Obvestilo o novi temi - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Pozdravljeni, {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+To sporočilo ste prejeli, ker spremljate forum "{FORUM_NAME}" na spletni strani "{SITENAME}". Ta forum ima od vašega zadnjega obiska novo temo "{TOPIC_TITLE}". Temo lahko pogledate na spodnji povezavi. Sporočil o novih temah ne boste dobivali, dokler ne obiščete foruma.
 
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Če ne želite več prejemati obvestil o novih temah na forumu, kliknite na spodnjo povezavo.
 
 {U_STOP_WATCHING_FORUM}
 
@@ -527,24 +527,11 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{PM_SUBJECT}"
+	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Prijava zaprta - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+Pozdravljeni, {USERNAME},
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed. If you have further questions, please contact {CLOSER_NAME} by private message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{PM_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
+To sporočilo ste prejeli, ker je bila vaša prijava zasebnega sporočila "{PM_SUBJECT}" na spletni strani "{SITENAME}" obravnavana s strani moderatorjev oz. administratorjev. Prijava je bila po obravnavi zaprta. Če imate kakšno vprašanje, kontaktirajte uporabnika "{CLOSER_NAME}" preko zasebnih sporočil.
 
 
 {EMAIL_SIG}',
@@ -553,16 +540,29 @@ You are receiving this notification because the report you filed regarding the p
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Prijava izbrisana - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+Pozdravljeni, {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+To sporočilo ste prejeli, ker je bila vaša prijava zasebnega sporočila "{PM_SUBJECT}" na spletni strani "{SITENAME}" izbrisana s strani moderatorja ali administratorja.
 
-If you want to view the post, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/post_approved.txt' 		=> '﻿{EMAILSUBJECT:} Prispevek odobren - "{POST_SUBJECT}"
+
+Pozdravljeni, {USERNAME},
+
+To sporočilo ste prejeli, ker je bil vaš prispevek "{POST_SUBJECT}" na spletni strani "{SITENAME}" odobren s strani moderatorja oz. administratorja.
+
+Če želite videti svoj prispevek, kliknite na spodnjo povezavo:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Če želite videti temo, kliknite na spodnjo povezavo:
 {U_VIEW_TOPIC}
 
 
@@ -572,13 +572,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Prispevek zavrnjen - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Pozdravljeni, {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+To sporočilo ste prejeli, ker je bil vaš prispevek "{POST_SUBJECT}" na spletni strani "{SITENAME}" zavrnjen s strani moderatorja oz. administratorja.
 
-The following reason was given for the disapproval:
+Spodaj je naveden razlog za zavrnitev prispevka.
 
 {REASON}
 
@@ -675,19 +675,19 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} Novo zasebno sporočilo
 
-Hello {USERNAME},
+Pozdravljeni, {USERNAME},
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+Na forumu "{SITENAME}" ste prejeli zasebno sporočilo od "{AUTHOR_NAME}" s sledečim naslovom:
 
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+Sporočilo si lahko ogledate s klikom na spodnjo povezavo:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+Zahtevali ste, da vas obveščamo o novih zasebnih sporočilih. To lahko kadarkoli spremenite v svojem profilu na spletni strani.
 
 {EMAIL_SIG}',
 ));
@@ -709,15 +709,15 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+Pozdravljeni, {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Sledeče e-sporočilo vam pošilja uporabnik {FROM_USERNAME} v vaš uporabniški račun na spletni strani "{SITENAME}". Če menite, da je to e-sporočilo spam, vsebuje neprimerno vsebino ali kaj drugega, prosimo kontaktirajte administratorja foruma na naslednji e-naslov:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Vključen bo celoten email. Pomnite, da odgovor na ta email bo poslan iz {FROM_USERNAME}.
 
-Message sent to you follows
+Sporočilo:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -728,15 +728,15 @@ Message sent to you follows
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+Pozdravljeni, {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Sledeče e-sporočilo vam pošilja uporabnik {FROM_USERNAME} v vaš uporabniški račun na spletni strani "{SITENAME}". Če menite, da je to e-sporočilo spam, vsebuje neprimerno vsebino ali kaj drugega, prosimo kontaktirajte administratorja foruma na naslednji e-naslov:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Vključen bo celoten email. Pomnite, da odgovor bo bil poslan iz IM računa, ki je naveden na forumu.
 
-Message sent to you follows
+Sporočilo:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -746,24 +746,11 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Prijava zaprta - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Pozdravljeni, {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
+To sporočilo ste prejeli, ker je bila vaša prijava prispevka "{POST_SUBJECT}" v temi "{TOPIC_TITLE}" na spletni strani "{SITENAME}" obravnavana s strani moderatorjev oz. administratorjev. Prijava je bila po obravnavi zaprta. Če imate kakšno vprašanje, kontaktirajte uporabnika "{CLOSER_NAME}" preko zasebnih sporočil.
 
 
 {EMAIL_SIG}',
@@ -772,13 +759,26 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Prijava izbrisana - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Pozdravljeni, {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+To sporočilo ste prejeli, ker je bila vaša prijava prispevka "{POST_SUBJECT}" v temi "{TOPIC_TITLE}" na spletni strani "{SITENAME}" izbrisana s strani moderatorja ali administratorja.
 
-If you want to view the topic, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Tema odobrena - "{TOPIC_TITLE}"
+
+Pozdravljeni, {USERNAME},
+
+To sporočilo ste prejeli, ker je bila vaša tema "{TOPIC_TITLE}" na spletni strani "{SITENAME}" odobrena s strani moderatorja oz. administratorja.
+
+Za ogled teme kliknite na spodnjo povezavo:
 {U_VIEW_TOPIC}
 
 
@@ -788,13 +788,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Tema zavrnjena - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Pozdravljeni, {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+To sporočilo ste prejeli, ker je bila vaša tema "{TOPIC_TITLE}" na spletni strani "{SITENAME}" zavrnjena s strani moderatorja oz. administratorja.
 
-The following reason was given for the disapproval:
+Spodaj je naveden razlog za zavrnitev teme:
 
 {REASON}
 
@@ -805,22 +805,22 @@ The following reason was given for the disapproval:
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Obvestilo o novem prispevku v temi - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Pozdravljeni, {USERNAME},
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+Sporočilo ste prejeli, ker spremljate temo "{TOPIC_TITLE}" na spletni strani "{SITENAME}". Tema je od vašega zadnjega obiska prejela nov prispevek. Dokler ne boste obiskali teme, ne boste več prejemali obvestil o novih prispevkih v izbrani temi.
 
-If you want to view the newest post made since your last visit, click the following link:
+Za ogled novih prispevkov kliknite na:
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Za ogled teme kliknite na:
 {U_TOPIC}
 
 If you want to view the forum, click the following link:
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+Za prenehanje prejemanja teh sporočil kliknite na:
 
 {U_STOP_WATCHING_TOPIC}
 
@@ -830,47 +830,25 @@ If you no longer wish to watch this topic you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Vaš uporabniški račun je ponovno omogočen
 
-Hello {USERNAME},
+Pozdravljeni, {USERNAME},
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
-
-{U_ACTIVATE}
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
-
-Hello {USERNAME}
-
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
-
-To use the new password you need to activate it. To do this click the link provided below.
+Vaš uporabniški račun na spletni strani "{SITENAME}" je bil deaktiviran najverjetneje zaradi sprememb, narejenih v vašem profilu. Za aktivacijo računa kliknite na spodnjo povezavo.
 
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+{EMAIL_SIG}',
+));
 
-Password: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+
+$email = array_merge($email, array(
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Vaš uporabniški račun je bil deaktiviran
+
+Pozdravljeni, {USERNAME},
+
+Vaš uporabniški račun na spletni strani "{SITENAME}" je bil deaktiviran najverjetneje zaradi sprememb, narejenih v vašem profilu. Preden se lahko ponovno prijavite, vam mora administrator ponovno aktivirati uporabniški račun. Ko bo administrator to storil, boste o tem obveščeni prek e-sporočila.
 
 {EMAIL_SIG}',
 ));
@@ -878,20 +856,43 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} Aktivacija novega gesla
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+Pozdravljeni, {USERNAME}
 
-Please keep this e-mail for your records. Your account information is as follows:
+To sporočilo ste prejeli, ker ste zahtevali novo geslo za svoj uporabniški račun na spletni strani "{SITENAME}". Če temu ni tako, to sporočilo ignorirajte. Če taka sporočila prejemate neprestano, prosimo kontaktirajte administratorja strani.
+
+Novo geslo morate pred uporabo aktivirati. To storite s klikom na spodnjo povezavo:
+
+{U_ACTIVATE}
+
+Če je bila aktivacija gesla uspešna, se lahko s spodaj navedenim geslom prijavite na spletno stran.
+
+Geslo: {PASSWORD}
+
+Seveda lahko geslo spremenite prek uporabniškega profila na spletni strani. Če imate pri tem težave, kontaktirajte administratorja strani.
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reaktivacija vašega uporabniškega računa na strani "{SITENAME}" 
+
+Administrator je zahteval za reaktivacijo vašega uporabniškega računa. Trenutno je neaktiven.
+Za ponovno aktivacijo svojega uporabniškega računa sledite spodnjim navodilom.
+
+Prosimo, ohranite to e-sporočilo, saj vsebuje podatke o vašem uporabniškem
+računu. Vaši podatki o uporabniškem računu so sledeči:
 
 ----------------------------
-Username: {USERNAME}
+Uporabniško ime: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Vaše geslo je v naši bazi kodirano. Če ga pozabite, lahko zaprosite za novega.
 
-Please visit the following link to reactivate your account:
+Za aktivacijo svojega uporabniškega računa kliknite spodnjo povezavo:
 
 {U_ACTIVATE}
 
@@ -1004,15 +1005,15 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Obvestilo o neaktivnosti uporabniškega računa
 
-Hello {USERNAME},
+Pozdravljeni, {USERNAME},
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+Dne {REGISTER_DATE} ste si ustvarili uporabniški račun na spletni strani "{SITENAME}". Do danes ga še niste aktivirali, kar je potrebno storiti, preden se lahko prijavite na spletno stran. Za aktivacijo kliknite na spodnjo povezavo:
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+Hvala vam za registracijo na "{SITENAME}", veselimo se vašega obiska.
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +1021,24 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Dobrodošli na spletni strani "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Vaše uporabniške informacije so sledeče:
 
 ----------------------------
-Username: {USERNAME}
+Uporabniško ime: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Vaše geslo je v naši bazi kodirano. Če ga pozabite, lahko zahtevate novega, ki ga aktivirate po istem postopku kot ta uporabniški račun.
 
-Please visit the following link in order to activate your account:
+Vaš uporabniški račun trenutno ni aktiviran. Brez aktivacije se ne morete prijaviti na spletno stran. Za aktivacijo uporabite spodnjo povezavo:
 
 {U_ACTIVATE}
 
 
-Thank you for registering.
+Hvala vam za registracijo.
 
 {EMAIL_SIG}',
 ));
@@ -1045,21 +1046,21 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Dobrodošli na spletni strani "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Vaše uporabniške informacije so sledeče:
 
 ----------------------------
-Username: {USERNAME}
+Uporabniško ime: {USERNAME}
 
-Board URL: {U_BOARD}
+Spletni naslov: {U_BOARD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Prosimo, ne pozabite svojega gesla, saj je v naši bazi zakodirano in vam ga ne bomo mogli posredovati, če ga pozabite oz. izgubite. Če se to vseeno zgodi, lahko zaprosite za novega.
 
-Thank you for registering.
+Hvala vam za registracijo.
 
 {EMAIL_SIG}',
 ));
@@ -1067,25 +1068,25 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Dobrodošli na "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Vaše uporabniške informacije so sledeče:
 
 ----------------------------
-Username: {USERNAME}
+Uporabniško ime: {USERNAME}
 
-Board URL: {U_BOARD}
+Spletni naslov: {U_BOARD}
 ----------------------------
 
-Please visit the following link in order to activate your account:
+Vaš uporabniški račun trenutno ni aktiviran - za aktivacijo kliknite na spodnjo povezavo:
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Prosimo, ne pozabite svojega gesla, saj je v naši bazi zakodirano in vam ga ne bomo mogli posredovati, če ga pozabite oz. izgubite. Če se to vseeno zgodi, lahko zaprosite za novega.
 
-Thank you for registering.
+Hvala vam za registracijo.
 
 {EMAIL_SIG}',
 ));

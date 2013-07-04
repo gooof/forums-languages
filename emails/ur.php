@@ -1,16 +1,16 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} صارف اکائونٹ چالو کریں
 
-Hello,
+اسلام علیکم ،
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+"{USERNAME}" کا کھاتہ یا تو غیر فعال ہے، یا یہ ایک نیا کھاتہ ہے۔ آ] اس کا معائنہ کریں (اگر ضرورت ہو تو) اور کوئی مناسب اقدام اٹھائیں
 
-Use this link to view the user\'s profile:
+رکن کی پروفائل دیکھنے کے لئے نیچھے دئیے گئے لنک پر کلک کریں :
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+نیچھے دئیے گئے لنک سے اکائونٹ فعال کریں
 {U_ACTIVATE}
 
 
@@ -21,32 +21,16 @@ Use this link to activate the account:
 
 $email = array_merge($email, array(
 	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+زیل کا پرقی مراسلہ آپ کو "{SITENAME}" کے منتظم کی جانب سے بھیجا گیا ہے۔ اگر اس مراسلے مین غلیظ الفاط، یا ایس لفاظ جو زاتیات  پر مبنی ہیں شامل ہیں تو آپ  اس فورم کے منتظم اعلٰی سے زیل کے برقی پتہ پر رابطہ کریں۔
 
 {CONTACT_EMAIL}
 
-Include this full e-mail (particularly the headers). 
+اور اس جوابی مراسلے مین مکمل مراسلہ بشمول مراسلے کے ہیڈر کے ضرور اقتباس میں بھیجیں۔
 
-Message sent to you follows:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+آپ کو بھیجا گیا پیغام hsb zil oy
+~~~~~~~~~~~~
 
 {MESSAGE}
-
-
-{EMAIL_SIG}
-',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
-
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
 
 {EMAIL_SIG}',
 ));
@@ -54,23 +38,34 @@ Your password has been securely stored in our database and cannot be retrieved. 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_activated.txt' 		=> 'subject: اکائونٹ چالو کر دیا گیا ہے
+
+اسلام علیکم {USERNAME},
+
+{SITENAME} پر آپکا اکائونٹ چالو کر دیا گیا ہے. آپ پہلے ای میل میں موصول ہوئے رکنی نام سے لاگن کر سکتے ہیں. 
+
+آپکا پاس ورڈ ہماری ڈیٹا بیس میں محفوط کیا جا چکا ہے جسے عام طریقے سے دیکھا نہیں جا سکتا. اگر آپ پاس ورڈ بھول جائیں تو آپ اسے {SITENAME} پر رجسٹر ہوئے ای میل کے زریعے بحال کر سکتے ہیں. 
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} "%1$s" پر خوش آمدید
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+برائے مہربانی اس ای-میل کو اپنے ریکارڈ کے لیے رکھیں. 
 
-----------------------------
-Username: {USERNAME}
+---------------------------------------------
+رکنیتی نام:  {USERNAME}
+بورڈ کا ربط: {BOARD_URL}
+---------------------------------------------
 
-Board URL: {U_BOARD}
-----------------------------
+یہ اکاؤنٹ فی الوقت غیر فعال ہے اور کسی منتظم کی جانب سے منظوری کا منتظر ہے. ایسا ہونے کے بعد ای-میل کر دی جائے گی. 
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
-
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
-Thank you for registering.
+رجسٹر کرنے کا شکریہ
 
 {EMAIL_SIG}',
 ));
@@ -213,117 +208,116 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" پر خوش آمدید
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+COPPA کے عمل میں آپکا اکائونٹ فی الحال غیر فعال ہے. 
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+براہ مہربانی اس پیغام کو پرنٹ کریں اور اپنے والدین کے تاریخ کے ساتھ دستخط کروائیں. پھر اسکو زیلی پتہ پر فیکس کریں
 
 {FAX_INFO}
 
-OR mail it to:
+یا میل کریں
+
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+----------------------- یہاں سے کاٹیں ---------------------------------
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+"{SITENAME}" - {U_BOARD} پر شمولیت کی اجازت
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+رکنی نام:  {USERNAME}
+ای-میل:  {EMAIL_ADDRESS}
+
+میں نے اپنے بچے کی طرف سے دی گئی تفصیلات کو پڑھ لیا ہے اور "{SITENAME}" کو اجازت دیتا ہوں کہ وہ یہ معلومات محفوظ کر سکتے ہیں. 
+
+میں‌سمجھ سکتا ہوں کہ یہ معلومات پاسورڈ داخل کرنے بعد تبدیل کی جا سکتی ہیں. 
+
+میں سمجھ سکتا ہوں کہ میں "{SITENAME}" سے ان معلومات کو ختم کرنے کی درخواست کر سکتا ہوں.
+
+والدین یا سرپرست
+(اپنا نام یہاں لکھیں): ____________________________
+
+(یہاں‌دستخط کریں): ______________________________
+
+تاریخ: _____________________________
+
+----------------------- یہاں سے کاٹیں -------------------------------------------------
+
+ایک بار منتظم کو فیکس یا باقاعدہ ای میل کے ذریعے اوپر فارم موصول ہوا ، آپ کے اکاؤنٹ کو چالو کیا جائے گا.
+
+رجسٹر کرنے کا شکریہ
 
 
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
-
-
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
-
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
-Thank you for registering.
-
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" پر خوش آمدید
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+COPPA کے عمل میں آپکا اکائونٹ فی الحال غیر فعال ہے. 
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+براہ مہربانی اس پیغام کو پرنٹ کریں اور اپنے والدین کے تاریخ کے ساتھ دستخط کروائیں. پھر اسکو زیلی پتہ پر فیکس کریں
 
 {FAX_INFO}
 
-OR mail it to:
+یا میل کریں
+
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+----------------------- یہاں سے کاٹیں ---------------------------------
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+"{SITENAME}" - {U_BOARD} پر شمولیت کی اجازت
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+رکنی نام:  {USERNAME}
+ای-میل:  {EMAIL_ADDRESS}
+
+میں نے اپنے بچے کی طرف سے دی گئی تفصیلات کو پڑھ لیا ہے اور "{SITENAME}" کو اجازت دیتا ہوں کہ وہ یہ معلومات محفوظ کر سکتے ہیں. 
+
+میں‌سمجھ سکتا ہوں کہ یہ معلومات پاسورڈ داخل کرنے بعد تبدیل کی جا سکتی ہیں. 
+
+میں سمجھ سکتا ہوں کہ میں "{SITENAME}" سے ان معلومات کو ختم کرنے کی درخواست کر سکتا ہوں.
+
+والدین یا سرپرست
+(اپنا نام یہاں لکھیں): ____________________________
+
+(یہاں‌دستخط کریں): ______________________________
+
+تاریخ: _____________________________
+
+----------------------- یہاں سے کاٹیں -------------------------------------------------
+
+ایک بار منتظم کو فیکس یا باقاعدہ ای میل کے ذریعے اوپر فارم موصول ہوا ، آپ کے اکاؤنٹ کو چالو کیا جائے گا.
+
+رجسٹر کرنے کا شکریہ
 
 
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
-
-
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
-
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
-Thank you for registering.
-
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - دوست کو ای-میل کریں
 
-Hello {TO_USERNAME},
+اسلام علیکم {TO_USERNAME}
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+یہ ای-میل "{SITENAME}" سے {FROM_USERNAME} کی طرف سے بھیجی گئی ہے جو سمجھتے ہیں کہ آپ شاید درج ذیل موضوع میں دلچسپی رکھ سکتے ہیں.
 
 {TOPIC_NAME}
 
-You can find it at:
+آپ اسکو یہاں تلاش کر سکتے ہیں
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
-
-----------
+{FROM_USERNAME} کی طرف سے پیغام شامل بھی ہو سکتا ہے. براہ کرم نوٹ فرمائیں کہ یہ پیغام منظور شدہ نہیں ہے اگر آپ اس بارے میں شکا یت کرنا چاہتے ہیں تو بورڈ منتظم کو {BOARD_CONTACT} پر رابطہ کریں.
+-------------------------
 
 {MESSAGE}',
 ));
@@ -379,97 +373,95 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} فورم پوسٹ کی اہم اطلاع - "{FORUM_NAME}"
 
-Hello {USERNAME},
+اسلام علیکم {USERNAME}،
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+آپکو یہ اطلاع اس لیے دی جا رہی ہے کیونکہ آپ "{SITENAME}" پر فورم "{FORUM_NAME}" کو دیکھ رہے ہیں. اس فورم میں موضوع "{TOPIC_TITLE}" میں ایک نیا جواب موصول ہوا ہے. درج ذیل لنک پر کلک کر کے آپ اسے دیکھ سکتے ہیں. 
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+اگر آپ موضوع دیکھنا چاہتے ہیں تو ذیل میں لنک پر کلک کریں.
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+اگر آپ فورم دیکھنا چاہتے ہیں تو زیل میں لنک پر کلک کریں.
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
-
+اگر آپ س فورم کو مزید نہیں‌دیکھنا چاہتے تو زیل میں لنک پر کلک کریں.
 {U_STOP_WATCHING_FORUM}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} آپ کو اس گروہ میں شامل کیا گیا ہے.
 
-Congratulations,
+مبارکباد تسلیم کریں، 
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+آپکو "{SITENAME"  پر، گروہ "{GROUP_NAME}" میں شامل کیا گیا ہے.
+یہ عمل گروہ کے رہنما یا منتظم کی طرف سے کیا گیا ہے.  مزید معلومات کے لیے ان سے رابطہ کریں.
 
-You can view your groups information here:
+آپ اپنے گروہ کی تفصیلات یہاں دیکھ سکتے ہیں.
 {U_GROUP}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} آپ کی درخواست کی منظوری
 
-Congratulations,
+السلام علیکم!
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+مبـــارک باد!
+
+بحوالہ "{SITENAME}" پر آپ کی درخواست برائے رکنیت "{GROUP_NAME}" آپ کو مطلع کیا جاتا ہے کہ آپ کی درخواست منظور کر لی گئی ہے ـ گروپ کی رکنیت ملاحظہ کرنے کے لیے آپ ذیل کے ربط کو استعمال کر سکتے ہیں:
 
 {U_GROUP}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} گروہ کی رکنیت کے لیے درخواست
 
-Dear {USERNAME},
+مکرمی {USERNAME},
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+ "{GROUP_NAME}" نامی گروہ میں رکنیت کے لیے درخواست موصول ہوئی ہے 
+
+اس درخواست کی منظوری یا نامنظوری کے بارے میں فیصلہ کے لیے ذیل کے ربط کا دورہ کریں ـ
+
+شکریہ
 
 {U_PENDING}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} PHPBB اسنٹال ہو گیا ہے.
 
-Congratulations,
+مبارک تسلیم کریں،
 
-You have successfully installed phpBB on your server.
+آپ نے کامیابی سے اپنے سرور پر PHPBB انسٹال کر لیا ہے. 
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+اس ای-میل میں آپکو اکائونٹ سے متعلق اہم اطلاعات موجود ہیں اور آپ اسے حوالہ کے لیے سنبھال کر رکھیں. آپکا پاسورڈ ہماری ڈیٹابیس میں‌محفوظ طریقہ سے شامل کر دیا گیا ہے. اگر آپ پاسورڈ بھول جائیں تو اپنے رجسٹرڈ شدہ ای-میل کے زریعے اسے ریسیٹ کر سکتے ہیں.
 
-----------------------------
-Username: {USERNAME}
+--------------------------------------------------------
+رکنیتی نام: {USERNAME}
+بورڈ کا ربط: {U_BOARD}
+--------------------------------------------------------
 
-Board URL: {U_BOARD}
-----------------------------
+PHPbb سے متعلق اہم معلومات فائلز میں یا PHPbb کی حمائیتی سائٹ پر پڑھی جا سکتی ہیں. http://www.phpbb.com/support/
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
-
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+اپنے بورڈ کو محفوظ رکھنے کے لیے آپ سے درخواست ہے کہ آپ موجودہ سافٹ وئیر کو اپ ڈیٹ رکھیں. آپکی آسانی کے لیے، ای-میلز کی ایک فہرست اوپر دیے گئے صفحے پر دیکھی جا سکتی ہے.
 
 {EMAIL_SIG}',
 ));
@@ -509,15 +501,15 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> 'موضوع: نئے موضوع کے بارے میں اہم اطلاع - "{FORUM_NAME}"
 
-Hello {USERNAME},
+اسلام علیکم {USERNAME}
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+آپ کو یہ اطلاع اس لیے موصول ہوئی ہے کیونکہ آپ "{SITENAME}" پر "{FORUM_NAME}" پر نظر رکھے ہوئے ہیں. اس فورم پر آپکے آخری دورہ کے بعد ایک نیا موضوع شروع ہوا ہے، "{TOPIC_TITLE}". آپ فورم کو دیکھنے کے لیے مندرجہ زیل لنک استعمال کر سکتے ہیں. آپکو فورم کا دورہ کرنے تک کوئی ای میل نہیں بھیجی جائے گی.
 
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+اگر آپ مزید اس فورم پر نظر نہیں‌رکھنا چاہتے تو آپ یا تو "فورم سے رکنیت ختم کریں" کے لنک کا استعمال کریں کو کہ  فورم میں اوپر ہے یا مندرجہ زیل لنک کا استعمال کریں.
 
 {U_STOP_WATCHING_FORUM}
 
@@ -527,25 +519,11 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{PM_SUBJECT}"
+	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} رپورٹ بند کر دی گئی ہے - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+اسلام علیکم {USERNAME}
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed. If you have further questions, please contact {CLOSER_NAME} by private message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{PM_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
-
+آپ اس اطلاع کو اس لیے موصول کر رہے ہیں کیونکہ آپکی ذاتی پیغام "{PM_SUBJECT}" پر درج کی گئی رپورٹ کو منتظمین کی طرف سے پڑھ لیا گیا ہے. اس رپورٹ کو بند کر دیا گیا ہے. اگر آپ اس بارے میں مزید جاننا چاہتے ہیں تو {CLOSER_NAME}  کو ذاتی پیغام میں رابطہ کریں. 
 
 {EMAIL_SIG}',
 ));
@@ -553,16 +531,28 @@ You are receiving this notification because the report you filed regarding the p
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} رپورٹ حذف کر دی گئی ہے - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+اسلام علیکم {USERNAME}،
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+آپکو یہ اطلاع اس لیے مل رہی ہے کیونکہ"{SITENAME}" پر آپکا رپورٹ کیے گئے ذاتی پیغام "{PM_SUBJECT}" کی رپورٹ کو منتظم یا مدیر کی طرف سے ختم کر دی گئی ہے.
 
-If you want to view the post, click the following link:
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} مراسلہ کی منظوری - "{POST_SUBJECT}"
+
+اسلام علیکم {USERNAME}
+
+آپ اس اطلاع کو اس لیے موصول کر رہے ہیں کیونکہ "{SITENAME}" پر آپکا مراسلہ "{POST_SUBJECT}" منتظمین کی طرف سے منظور کر لیا گیا ہے. 
+
+اگر آپ مراسلہ دیکھنا چاہتے ہیں تو مندرجہ زیل ربط کا استعمال کریں.
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+اگر آپ موضوع دیکھنا چاہتے ہیں تو مندرجہ زیل ربط کا استعمال کریں.
 {U_VIEW_TOPIC}
 
 
@@ -572,16 +562,15 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} مراسلہ "{POST_SUBJECT}" منظور نہیں ہوا.
 
-Hello {USERNAME},
+اسلام علیکم {USERNAME}،
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+آپ یہ اہم اطلاع اس لیے دیکھ رہی ہیں کیونکہ آپکا مراسلہ "{POST_SUBJECT}" "{SITENAME}" پر منتظم یا مدیر کی طرف سے منظور نہیں ہوا.
 
-The following reason was given for the disapproval:
+نامنظوری کی وجہ درج ذیل ہے.
 
-{REASON}
-
+ {REASON}
 
 {EMAIL_SIG}',
 ));
@@ -675,19 +664,21 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} نئے ذاتی پیغام کی آمد
 
-Hello {USERNAME},
+مکرمی {USERNAME}!
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+السلام علیکم !
+
+"{SITENAME}" پر آپ کے لیے "{AUTHOR_NAME}" کی جانب سے ایک ذاتی پیغام بہ عنوان  ذیل موصول ہوا ہے:
 
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+آپ اس نئے ذاتی پیغام کو  ذیل میں مہیا کیے گئے ربط پر ملاحظہ کر سکتے ہیں:
 
 {U_INBOX}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+اس اطلاع نامہ کے حصول کے لیے آپ نے اپنے کوائف نامہ میں درخواست کر رکھی ہے، یاد رھے کہ اگر آپپ آئندہ اس قسم کا اطلاع نامہ وصول نہیں کرنا چاہتے تو اپنے کوائف نامہ کی ترتیبات میں تبدیلی کے ذریعہ ایسا کر سکتے ہیں ـ
 
 {EMAIL_SIG}',
 ));
@@ -708,50 +699,64 @@ To read the comment , click the link below.
 
 
 $email = array_merge($email, array(
-	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_email.txt' 		=> 'مکرمی {TO_USERNAME}
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+السلام علیکم!
+
+ذیل میں ایک برقی خط ہے جو کہ آپ کو {FROM_USERNAME} کی جانب سے "{SITENAME}" پر موجود آپ کے کھاتہ کے ذریعہ ارسال کیا گیا ہے، اگر یہ پیغام غیر اخلاقی مواد یا نا زیبا کلمات پر مشتمل ہے تو آپ بورڈ کی انتظامیہ کو ذیل کے ربط کے ذریعہ مطلع کر سکتے ہیں ـ
+براہ کرم انتظامیہ کو مطلع کرتے وقت مکمل برقی مراسلہ کو  ہیڈر سمیت ااپنے پیغام میں بصورت اقتباس شامل کریں
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
-
-Message sent to you follows
+آپ کو بھیجا گیا برقی مراسلہ یہ ہے:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{MESSAGE}
+{MESSAGE}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/profile_send_im.txt' 		=> 'اسلام علیکم {USERNAME}،
+
+ذیل کا پیغام آپکو {FROM_USERNAME} کی طرف سے بھیجا گیا ہے. اگر اس پیغام میں‌ناذیبا الفاظ موجود ہیں تو یہاں‌رابطہ کریں.
+
+{BOARD_CONTACT}
+
+یہ پورا پیغام شامل کریں. براہ مہربانی نوٹ فرمائیں کہ بھیجنے والا پتہ بورڈ کے فوری پیغام رسانی کے اکائونٹ پر سیٹ ہے. 
+
+آپکو بھیجا گیا پیغام یہ ہے
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+{MESSAGE}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:}  شکایت نامہ کی بندش - "{POST_SUBJECT}"
+
+مکرمی {USERNAME}
+
+السلام علیکم!
+
+"{TOPIC_TITLE}" نامی موضوع میں "{POST_SUBJECT}" کے زیر عنوان مراسلہ کے بارے میں آپ کی شکایت کے سلسلہ میں  آپ کو مطلع کیا جاتا ہے کہ آپ کی جانب سے ارسال کی گئی شکایت پر فورم کے مدیر اور  بورڈ کی انتظامیہ نے مناسب کارروائی مکمل کر کے اش شکایت کو نمٹا دیا ہے ـ اگر اس سلسلہ میں آپ کے ذھن میں مزید کوئی سوال موجود ہے تو آپ  {CLOSER_NAME} سے بذریعہ ذاتی پیغام رابطہ کر سکتے ہیں ـ شکریہ
+
+
+{EMAIL_SIG}
 ',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} شکایت نام بسلسلہ مراسلہ "{POST_SUBJECT}" حذف ـ
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+مکرمی {USERNAME}
 
-{BOARD_CONTACT}
+السلام علیـــکم!
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
-
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-{MESSAGE}
-',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
-
+بحوالہ  "{SITENAME}" پر  "{TOPIC_TITLE}"  نامی موضوع میں مراسلہ بعنوان "{POST_SUBJECT}" کے سلسلہ میں آپ کا ارسال کر دہ شکایت نامہ، آپ کو  مطلع کیا جاتا ہے کہ فورم کے مدیر/بورڈ کی انتظامیہ نے آپ کے مراسلہ کو  حذف کر دیا ہے لہذا مطلع رھیں ـ
 
 {EMAIL_SIG}',
 ));
@@ -759,69 +764,54 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
+	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} موضوع "{TOPIC_TITLE}" کی منظوری
 
-Hello {USERNAME},
+مکرمی {USERNAME}
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
+السلام علیکم!
 
+بحوالہ  "{SITENAME}"  پر آپ کی جانب سے شروع کیا گیا موضوع "{TOPIC_TITLE}" آپ کو مطلع کیا جاتا ہے کہ آپ کا شروع کیا گیا موضوع انتظامیہ کی جانب سے اشاعت کے لیے منظور کر لیا گیا ہے، اگر آپ موضوع کا مطالعہ کرنا چاھتے ہیں تو ذیل کے ربط کو استعمال کریں:
 
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
-
-Hello {USERNAME},
-
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
-
-If you want to view the topic, click the following link:
 {U_VIEW_TOPIC}
 
-
 {EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} موضوع "{TOPIC_TITLE}" کی نا منظوری
 
-Hello {USERNAME},
+مکرمی {USERNAME}
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+السلام علیکم!
 
-The following reason was given for the disapproval:
+بحوالہ "{SITENAME}"  پر آپ کی جانب سے شروع کیا گیا موضوع بعوان "{TOPIC_TITLE}" آپ کو مطلع کیا جاتا ہے کہ آپ کی جانب سے شروع کیا گیا موضوع فورم کی انتظامیہ کی جانب سے مندرجہ ذیل وجوہ کی بنا پر اشاعت کے لیے منظور نہیں کیا گیا:
 
 {REASON}
 
-
 {EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> 'Subjetc: موضوع جواب کی اطلاع - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+اسلام علیکم {USERNAME}،
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+ آپکو یہ اطلاع یس لیے مل رہی کہ کیونکہ آپ "{SITENAME}" پر موضوع "{TOPIC_TITLE}" دیکھ رہے ہیں. اس موضوع پر ایک نیا جواب موصول ہوا ہے.
 
-If you want to view the newest post made since your last visit, click the following link:
+اگر آپ نیا ترین جواب دیکھنا چاہتے ہیں تو ذیل میں لنک پر کلک کریں.
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+اگر آپ موضوع دیکھنا چاہتے ہیں تو،
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+اگر آپ فورم دیکھنا چاہتے ہیں تو
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
-
+اگر آپ اس موضوع سے اپنی شراکت ختم کرنا چاہتے ہیں‌تو ذیل میں لنک پر کلک کریں.
 {U_STOP_WATCHING_TOPIC}
 
 {EMAIL_SIG}',
@@ -830,13 +820,49 @@ If you no longer wish to watch this topic you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} اپنا کھاتہ دوبارہ فعال کیجئے
+
+
+
+مکرمی {USERNAME}،
+
+
+
+السلام علیکم!
+
+
+
+آپ کے کوائف نامہ میں کی گئی تبدیلیوں کی بنا پر  "{SITENAME}" پر آپ کا کھاتہ غیر فعال ہو گیا ہے، براہ کرم اسے دوبارہ فعال بنانے کے لیے ذیل میں دیے گئے ربط پر کلک کریں:
+
+
+
+
+
+{U_ACTIVATE}
+
+
+
+{EMAIL_SIG}
+
+
+
+
+
+{EMAILSUBJECT:} Reactivate your account
+
+
 
 Hello {USERNAME},
+
+
 
 Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
 
+
+
 {U_ACTIVATE}
+
+
 
 {EMAIL_SIG}',
 ));
@@ -844,11 +870,15 @@ Your account on "{SITENAME}" has been deactivated, most likely due to changes ma
 
 
 $email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} آپ کا کھاتہ غیر فعال ہوگیا ہے
 
-Hello {USERNAME},
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
+مکرمی {USERNAME}
+
+السلام علیکم!
+
+"{SITENAME}"  پر آپ کا کھاتہ کوائف نامہ میں کی جانے والی تبدیلیوں کی بنا پر  غیر فعال ہو گیا ہے ـ آئندہ فورم پر متصل ہونے سے پہلے اسے  بورڈ کی انتظامیہ کی جانب  سے فعال کیا جانا ضروری ہے ـ جب آپ کا کھاتہ فعال ہو جا نے پر آپ کو ایک علیحدہ برقی مراسلہ کے ذریعہ مظع کیا جائے گا ـ
+
 
 {EMAIL_SIG}',
 ));
@@ -856,21 +886,25 @@ Your account on "{SITENAME}" has been deactivated, most likely due to changes ma
 
 
 $email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} نئے کلمہء عبو کی فعالیت
 
-Hello {USERNAME}
+مکرمی {USERNAME}
 
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
+السلام علیکم!
 
-To use the new password you need to activate it. To do this click the link provided below.
+آپ کو یہ اطلاع اس غرض سے ارسال کی جا رہی ہے کہ آپ نے ﴿یا کسی دوسرے شخص نے آپ کے نام سے﴾ نئے  کلمہء عبور کی فراھمی کے لیے درخواست کی ہے ـ جس پر کارروائی کرتے ہوئے  "{SITENAME}".  پر موجود آپ کے کھاتہ کے لیے ایک نیا کلمہء عبور آپ کو بھیجا جا رھا ہے ـ اگر آپ نے یہ درخواست  نہیں کی تو اس اطلاع نامہ پر کوئی توجہ نہ دیں ـ اس کے باوجود اگر  آپکو اس قسم کے مراسلے موصول ہو رہے ہیں تو  بورڈ کی انتظامیہ سے رابطہ کریں ـ
+
+اگر آپ نے اس سلسلہ میں درخواست کی ہے تو  نئے کلمہء عبور کو  استعمال کرنے سے پہلے اسے فعال کرنا ضروری ہے اگر آپ اسے فعال کرنا چاہتے ہیں تو ذیل میں دیے گئے ربط پر کلک کریں:
 
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+یہ عمل کامیابی سے مکمل کر لینے کے بعد آپ ذیل میں دیے گئے کلمہء عبور کے ذریعہ فورم سے متصل ہو سکیں گے:
 
-Password: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+کلمہء عبور: {PASSWORD}
+
+آپ اس کلمہء عبور کو اپنے کوائف نامہ میں مہیا شدہ سہولت  کے ذریعہ حسب دلخواہ تبدیل کر سکتے ہیں ـ اگر آپ کو اس سلسلہ میں کوئی مشکلات پیش ہو تو بورڈ کی انتظامیہ سے رجوع کریں ـ شکریہ
+
 
 {EMAIL_SIG}',
 ));
@@ -878,23 +912,22 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} براہ مہربانی "{SITENAME}" پر اپنا اکائونٹ دوبارہ چالو کریں.
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+بورڈ انتظامیہ کی طرف سے درخواست ہے کہ آپ اپنا اکائونٹ دوبارہ چالو کر سکتے ہیں.
+آپکا اکائونٹ فی الحال غیر فعال ہے.
+اپنا اکائونٹ چالو کرنے کے لیے مندرجہ زیل اقدام اٹھائیں.
 
-Please keep this e-mail for your records. Your account information is as follows:
+اس ای-میل کو اپنے ریکارڈ کیلیے رکھیں. آپکے اکائونٹ کی تفصیلات درج ذیل ہیں.
 
-----------------------------
-Username: {USERNAME}
-----------------------------
+-----------------------------------------
+رکنیتی نام: {USERNAME}
+-----------------------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
-Please visit the following link to reactivate your account:
+آپکا پاسورڈ محفوظ طریقے سے ہماری ڈیٹابیس میں شامل کر دیا گیا ہے. اگر آپ کسی موقع پر اسے بھول جائیں تو رجسٹرڈ شدہ ای-میل کے زریعے اسے ریسیٹ کر سکتے ہیں. 
+اپنے اکائونٹ کو دوبارہ چالو کرنے کے لیے ذیل میں لنک پر کلک کریں.
 
 {U_ACTIVATE}
-
 
 {EMAIL_SIG}',
 ));
@@ -1004,15 +1037,15 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} غیر فعال اکائونٹ کی اطلاع
 
-Hello {USERNAME},
+اسلام علیکم {USERNAME}،
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+یہ ایک اطلاع ہے کہ "{SITENAME}" پر آپکا اکائونٹ جو {REGISTER_DATE} کو بنایا گیا تھا، ابھی تک غیر فعال ہے. اگر آپ سے فعال کرنا چاہتے ہیں تو براہ مہربانی ذیل میں لنک پر کلک کریں.
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+"{SITENAME}" پر رجسٹر کرنے کا شکریہ اور ہم آپکی شرکت کی راہ دیکھتے ہیں.
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +1053,20 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" پر خوش آمدید
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+اس ای-میل کو اپنے ریکارڈ کیلیے رکھیں. آپکے اکائونٹ کی تفصیلات درج ذیل ہیں.
 
-----------------------------
-Username: {USERNAME}
-----------------------------
+-----------------------------------------
+رکنیتی نام: {USERNAME}
+-----------------------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
-Please visit the following link in order to activate your account:
+آپکا پاسورڈ محفوظ طریقے سے ہماری ڈیٹابیس میں شامل کر دیا گیا ہے. اگر آپ کسی موقع پر اسے بھول جائیں تو رجسٹرڈ شدہ ای-میل کے زریعے اسے ریسیٹ کر سکتے ہیں. 
+اپنے اکائونٹ کو چالو کرنے کے لیے ذیل میں لنک پر کلک کریں.
 
 {U_ACTIVATE}
-
-
-Thank you for registering.
 
 {EMAIL_SIG}',
 ));
@@ -1045,21 +1074,19 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" پر خوش آمدید
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+اس ای میل کو اپنے ریکارڈ کے لیے رکھیں. آپکی تفصیلات درج ذیل ہیں.
 
-----------------------------
-Username: {USERNAME}
+-------------------------------------------------------------
+رکنی نام: {USERNAME}
+بورڈ کا ربط: {U_BOARD}
+-------------------------------------------------------------
 
-Board URL: {U_BOARD}
-----------------------------
-
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
-Thank you for registering.
+آپکا پاسورڈ محفوظ‌طریقے سے ڈیٹابیس میں سٹور کر دیا گیا ہے. اگر آپ اپنا پاسورڈ بھول جائیں تو آپ درج شدہ ای میل کے زریعے اسے ری سیٹ کر سکتے ہیں. 
+رجسٹر کرنے کا شکریہ.
 
 {EMAIL_SIG}',
 ));
@@ -1067,25 +1094,24 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} آپکو {SITENAME} پر خوش آمدید
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+براہ کرم اس ای میل کو آپ اپنے پتے کے لیے رکھیں. آپکے اکائونٹ کی تفصیلات درج زیل ہیں.
 
-----------------------------
-Username: {USERNAME}
+-----------------------------------------------------------
+رکنی نام: {USERNAME}
+بورڈ کا ربط:‌ {U_BOARD}
+----------------------------------------------------------
 
-Board URL: {U_BOARD}
-----------------------------
-
-Please visit the following link in order to activate your account:
+اپنے اکائونٹ کو چالو کرنے کے لیے درج زیل ربط کا استعمال کریں
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+آپکا پاس ورڈ ہماری ڈیٹا بیس میں محفوظ ہو گیا ہے جسے عام طریقے سے دیکھا نہیں جا سکتا. اگر آپ سے بھول جائیں تو آپ اسے {SITENAME} پر رجسٹر شدہ ای میل کے زریعے بحال کر سکتے ہیں.
 
-Thank you for registering.
+رجسٹر کرنے کا شکریہ.
 
 {EMAIL_SIG}',
 ));

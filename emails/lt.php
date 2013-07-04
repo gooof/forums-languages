@@ -1,16 +1,16 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Vartotojo vardo aktyvavimas
 
-Hello,
+Sveiki,
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+Ką tik buvo sukurtas arba deaktyvuotas vartotojo vardas "{USERNAME}". Jeigu reikia, patikrinkite šio vartotojo aprašymą ir priimkite teisingą sprendimą.
 
-Use this link to view the user\'s profile:
+Paspaudę ant šios nuorodos pamatysite vartotojo aprašymą:
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+Paspaudę ant šios nuorodos aktyvuosite vartotojo vardą:
 {U_ACTIVATE}
 
 
@@ -20,14 +20,9 @@ Use this link to activate the account:
 
 
 $email = array_merge($email, array(
-	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+	'email/admin_send_email.txt' 		=> 'Jums rašo "{SITENAME}" diskusijų administratorius.
 
-{CONTACT_EMAIL}
-
-Include this full e-mail (particularly the headers). 
-
-Message sent to you follows:
+Laiško tekstas:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -40,13 +35,13 @@ Message sent to you follows:
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Vartotojo vardas aktyvuotas
 
-Hello {USERNAME},
+Sveiki {USERNAME},
 
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
+Jūsų vartotojo vardas "{SITENAME}" diskusijose buvo aktyvuotas. Jau galite prisijungti.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Jūsų slaptažodis saugiai saugomas mūsų duomenų bazėje ir mes negalime jums jo atsiųsti. Jeigu jį pamiršite, visada galėsite paprašyti naujo slaptažodžio, pasinaudoję el. paštu, kuris susietas su šiuo vartotojo vardu.
 
 {EMAIL_SIG}',
 ));
@@ -54,23 +49,23 @@ Your password has been securely stored in our database and cannot be retrieved. 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Sveiki atvykę į "{SITENAME}" diskusijas
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Išsaugokite šį laišką. Jūsų prisijungimo informacija:
 
 ----------------------------
-Username: {USERNAME}
+Vartotojo vardas: {USERNAME}
 
-Board URL: {U_BOARD}
+Diskusijų adresas: {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+Jūs negalėsite prisijungti, kol diskusijų administratorius nepatvirtins jūsų vartotojo vardo. Kai tik tai įvyks, gausite dar vieną el. laišką.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Jūsų slaptažodis saugiai saugomas mūsų duomenų bazėje ir mes negalime jums jo atsiųsti. Jeigu jį pamiršite, visada galėsite paprašyti naujo slaptažodžio, pasinaudoję el. paštu, kuris susietas su šiuo vartotojo vardu.
 
-Thank you for registering.
+Dėkojame, kad užsiregistravote.
 
 {EMAIL_SIG}',
 ));
@@ -213,46 +208,44 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Sveiki atvykę į "{SITENAME}" diskusijas
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+Įjungta apsaugos nuo vaikų funkcija (COPPA). Jūsų vartotojo vardas neaktyvus.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Išspausdinkite šį laišką ir duokite pasirašyti savo tėvams ar globėjams. Tada išsiųskite ją faksu:
 
 {FAX_INFO}
 
-OR mail it to:
+ARBA adresu:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ KIRPTI ČIA ------------------------------
+Leidimas dalyvauti "{SITENAME}" diskusijose - {U_BOARD}
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Vartotojo vardas: {USERNAME}
+El. pašto adresas: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+SUSIPAŽINAU SU INFORMACIJA, KURIĄ MAN PATEIKĖ MANO VAIKAS IR LEIDŽIU "{SITENAME}" PUSLAPIUI SAUGOTI ŠIĄ INFORMACIJĄ. SUPRANTU, KAD ŠIUOS DUOMENIS GALIMA BET KADA PAKEISTI ĮVEDUS SLAPTAŽODĮ. TAIP PAT SUPRANTU, KAD ŠI INFORMACIJA BUS PAŠALINTA IŠ "{SITENAME}" PUSLAPIO KAI TIK AŠ PAPRAŠYSIU.
 
 
-Parent or guardian 
-(print your name here): _____________________
+Tėvai arba globėjai 
+(jūsų vardas): _____________________
 
-(sign here): __________________ 
+(parašas): __________________ 
 
-Date: _______________
+Data: _______________
 
------------------------------- CUT HERE ------------------------------
+------------------------------ KIRPTI ČIA ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Kai tik administratorius gaus šią pasirašytą formą faksu arba paštu, jūsų vartotojo vardas bus aktyvuotas.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Jūsų slaptažodis saugiai saugomas mūsų duomenų bazėje ir mes negalime jums jo atsiųsti. Jeigu jį pamiršite, visada galėsite paprašyti naujo slaptažodžio, pasinaudoję el. paštu, kuris susietas su šiuo vartotojo vardu.
 
-Thank you for registering.
+Dėkojame, kad užsiregistravote.
 
 {EMAIL_SIG}
 ',
@@ -261,46 +254,44 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Sveiki atvykę į "{SITENAME}" diskusijas
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+Įjungta apsaugos nuo vaikų funkcija (COPPA). Jūsų vartotojo vardas neaktyvus.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Išspausdinkite šį laišką ir duokite pasirašyti savo tėvams ar globėjams. Tada išsiųskite ją faksu:
 
 {FAX_INFO}
 
-OR mail it to:
+ARBA adresu:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ KIRPTI ČIA ------------------------------
+Leidimas dalyvauti "{SITENAME}" diskusijose - {U_BOARD}
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Vartotojo vardas: {USERNAME}
+El. pašto adresas: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+SUSIPAŽINAU SU INFORMACIJA, KURIĄ MAN PATEIKĖ MANO VAIKAS IR LEIDŽIU "{SITENAME}" PUSLAPIUI SAUGOTI ŠIĄ INFORMACIJĄ. SUPRANTU, KAD ŠIUOS DUOMENIS GALIMA BET KADA PAKEISTI ĮVEDUS SLAPTAŽODĮ. TAIP PAT SUPRANTU, KAD ŠI INFORMACIJA BUS PAŠALINTA IŠ "{SITENAME}" PUSLAPIO KAI TIK AŠ PAPRAŠYSIU.
 
 
-Parent or guardian 
-(print your name here): _____________________
+Tėvai arba globėjai 
+(jūsų vardas): _____________________
 
-(sign here): __________________ 
+(parašas): __________________ 
 
-Date: _______________
+Data: _______________
 
------------------------------- CUT HERE ------------------------------
+------------------------------ KIRPTI ČIA ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Kai tik administratorius gaus šią pasirašytą formą faksu arba paštu, jūsų vartotojo vardas bus aktyvuotas.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Jūsų slaptažodis saugiai saugomas mūsų duomenų bazėje ir mes negalime jums jo atsiųsti. Jeigu jį pamiršite, visada galėsite paprašyti naujo slaptažodžio, pasinaudoję el. paštu, kuris susietas su šiuo vartotojo vardu.
 
-Thank you for registering.
+Dėkojame, kad užsiregistravote.
 
 {EMAIL_SIG}
 ',
@@ -309,19 +300,19 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} laiškas nuo "{SITENAME}" diskusijų dalyvio
 
-Hello {TO_USERNAME},
+Sveiki {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Šis laiškas jums siunčiamas nuo "{SITENAME}" diskusijų dalyvio {FROM_USERNAME}, kuris mano jog jus sudomins ši tema:
 
 {TOPIC_NAME}
 
-You can find it at:
+Ją galite perskaityti paspaudę ant nuorodos žemiau:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Taip pat dar žemiau galite perskaityti vartotojo {FROM_USERNAME} žinutę skirtą jums. Atsiminkite, kad šis laiškas nebuvo patikrintas diskusijų administratoriaus. Jeigu norite pasiskųsti apie tai, kad gavote šį laišką, susisiekite su juo adresu {BOARD_CONTACT}. Į savo laišką įtraukite ir šio laiško antraštes.
 
 ----------
 
@@ -379,39 +370,37 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Naujas pranešimas forume "{FORUM_NAME}"
 
-Hello {USERNAME},
+Sveiki {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+Jūs gavote šį laišką, nes "{SITENAME}" diskusijose esate užsiprenumeravę forumą "{FORUM_NAME}". Po jūsų paskutinio apsilankymo, temoje "{TOPIC_TITLE}" buvo parašytas naujas pranešimas. Norėdami peržiūrėti paskutinį neperskaitytą šios temos pranešimą, paspauskite ant žemiau esančios nuorodos. Kol joje neapsilankysite, daugiau laiškų apie naujus pranešimus šioje temoje negausite.
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Jeigu norite peržiūrėti visą temą, paspauskite ant šios nuorodos:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Jeigu norite peržiūrėti visą forumą, paspauskite ant šios nuorodos:
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Jeigu daugiau nebenorite prenumeruoti šio forumo, paspauskite ant nuorodos "Atsisakyti forumo" minėtame forume arba ant šios nuorodos:
 
 {U_STOP_WATCHING_FORUM}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} Jūs buvote priimtas į vartotojų grupę
 
-Congratulations,
+Sveikiname,
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+Grupės lyderis arba "{SITENAME}" diskusijų administratorius priėmė jus į grupę "{GROUP_NAME}".
 
-You can view your groups information here:
+Informaciją apie savo grupes galite matyti paspaudę ant šios nuorodos:
 {U_GROUP}
 
 {EMAIL_SIG}
@@ -421,12 +410,12 @@ You can view your groups information here:
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Jūsų prašymas patvirtintas
 
-Congratulations,
+Sveikiname,
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+Jūsų prašymas prisijungti prie grupės "{GROUP_NAME}" "{SITENAME}" diskusijose buvo patvirtintas.
+Žemiau esanti nuoroda parodo jūsų grupių narystę.
 
 {U_GROUP}
 
@@ -437,12 +426,12 @@ Click on the following link to see your group membership.
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} Vartotojo prašymas prisijungti prie jūsų grupės
 
-Dear {USERNAME},
+Brangus {USERNAME},
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+Prie jūsų moderuojamos grupės "{GROUP_NAME}" "{SITENAME}" diskusijose nori prisijungti vartotojas "{REQUEST_USERNAME}".
+Norėdami patvirtinti arba atmesti jo kandidatūrą paspauskite ant nuorodos žemiau:
 
 {U_PENDING}
 
@@ -453,23 +442,23 @@ To approve or deny this request for group membership please visit the following 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB sėkmingai įdiegta
 
-Congratulations,
+Sveikiname,
 
-You have successfully installed phpBB on your server.
+Jūsų sėkmingai savo serveryje įdiegėte phpBB.
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Išsaugokite šį laišką ir jame esančią informaciją. Jūsų slaptažodis saugiai saugomas mūsų duomenų bazėje ir mes negalime jums jo atsiųsti. Jeigu jį pamiršite, visada galėsite paprašyti naujo slaptažodžio, pasinaudoję el. paštu, kuris susietas su šiuo vartotojo vardu.
 
 ----------------------------
-Username: {USERNAME}
+Vartotojo vardas: {USERNAME}
 
-Board URL: {U_BOARD}
+Diskusijų URL: {U_BOARD}
 ----------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
+Daugiau naudingos informacijos apie phpBB galite rasti jūsų serveryje įdiegtos phpBB programinės įrangos dokumentacijos kataloge arba phpBB.com palaikymo puslapyje - http://www.phpbb.com/support/
 
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+Dėl saugumo rekomenduojame visada įdiegti naujausią phpBB versiją. Naujienas apie visus naujausius programinės įrangos leidimus galite gauti prisijungę prie el. pašto konferencijos, kurią rasite nuorodoje viršuje.
 
 {EMAIL_SIG}',
 ));
@@ -509,15 +498,15 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} Nauja tema forume "{FORUM_NAME}"
 
-Hello {USERNAME},
+Sveiki {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+Jūs gavote šį laišką, nes "{SITENAME}" diskusijose esate užsiprenumeravę forumą "{FORUM_NAME}". Po jūsų paskutinio apsilankymo, šiame forume buvo sukurta nauja tema, "{TOPIC_TITLE}". Norėdami peržiūrėti minėtą forumą, paspauskite ant žemiau esančios nuorodos. Kol joje neapsilankysite, daugiau laiškų apie naujas temas šiame forume negausite.
 
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Jeigu daugiau nebenorite prenumeruoti šio forumo, paspauskite ant nuorodos "Atsisakyti forumo" minėtame forume arba ant šios nuorodos:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -527,24 +516,11 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{PM_SUBJECT}"
+	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Raportas "{PM_SUBJECT}" uždarytas
 
-Hello {USERNAME},
+Sveiki {USERNAME},
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed. If you have further questions, please contact {CLOSER_NAME} by private message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{PM_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
+Jūs gavote šį laišką, nes moderatorius arba administratorius pasirūpino raportu, kurį apie asmeninę žinutę "{PM_SUBJECT}" užpildėte "{SITENAME}" diskusijose. Raportas uždarytas. Jeigu turite tolesnių klausimų, kreipkitės į {CLOSER_NAME} asmenine žinute.
 
 
 {EMAIL_SIG}',
@@ -553,16 +529,29 @@ You are receiving this notification because the report you filed regarding the p
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Raportas "{PM_SUBJECT}" ištrintas
 
-Hello {USERNAME},
+Sveiki {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+Jūs gavote šį laišką, nes moderatorius arba administratorius ištrynė raportą, kurį apie asmeninę žinutę "{PM_SUBJECT}" užpildėte "{SITENAME}" diskusijose.
 
-If you want to view the post, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Pranešimas "{POST_SUBJECT}" patvirtintas
+
+Sveiki {USERNAME},
+
+Jūsų gavote šį laišką, nes administratorius arba moderatorius "{SITENAME}" diskusijose patvirtinto jūsų pranešimą "{POST_SUBJECT}".
+
+Jeigu norite peržiūrėti pranešimą, paspauskite ant šios nuorodos:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Jeigu norite peržiūrėti visą temą, paspauskite ant šios nuorodos:
 {U_VIEW_TOPIC}
 
 
@@ -572,13 +561,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Pranešimas "{POST_SUBJECT}" atmestas
 
-Hello {USERNAME},
+Sveiki {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Jūs gavote šį laišką, nes moderatorius arba administratorius "{SITENAME}" diskusijose atmetė jūsų pranešimą "{POST_SUBJECT}".
 
-The following reason was given for the disapproval:
+Pranešimo atmetimo priežastis:
 
 {REASON}
 
@@ -675,19 +664,19 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} Jūs gavote naują asmeninę žinutę
 
-Hello {USERNAME},
+Sveiki {USERNAME},
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+"{SITENAME}" diskusijose nuo vartotojo "{AUTHOR_NAME}" jūs gavote naują asmeninę žinutę. Žinutės tema:
 
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+Norėdami ją perskaityti paspauskite ant nuorodos žemiau:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+Atsiminkite, kad visada galite išjungti laiško apie naujas asmenines žinutes siuntimą per savo aprašymą.
 
 {EMAIL_SIG}',
 ));
@@ -708,16 +697,15 @@ To read the comment , click the link below.
 
 
 $email = array_merge($email, array(
-	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_email.txt' 		=> 'Sveiki {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Šis laiškas jums siunčiamas nuo "{SITENAME}" diskusijų dalyvio {FROM_USERNAME}. Jeigu laiškas yra internetinė šiukšlė (spam), arba įžeidžiančio ar kitokio nemalonaus turinio, prašome susisiekti su diskusijų administratoriumi šiuo adresu:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Į savo laišką įtraukite ir šį laišką (įskaitant visas antraštes). Taip pat atminkite, kad atsakydami į šį laišką, nusiųsite pranešimą vartotojui {FROM_USERNAME}, todėl jeigu norite susisiekti su administratoriumi, turėsite sukurti naują laišką.
 
-Message sent to you follows
+Jums siunčiamo laiško tekstas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -727,16 +715,15 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_im.txt' 		=> 'Sveiki {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Ši žinutė jums siunčiama nuo "{SITENAME}" diskusijų dalyvio {FROM_USERNAME}. Jeigu žinutė yra internetinė šiukšlė (spam), arba įžeidžiančio ar kitokio nemalonaus turinio, prašome susisiekti su diskusijų administratoriumi šiuo adresu:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Į laišką įtraukite ir šią žinutę. Taip pat atminkite, kad šios žinutės siuntėjo adresas yra diskusijų lentos IM adresas.
 
-Message sent to you follows
+Jums siunčiamos žinutės tekstas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -746,24 +733,11 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Raportas "{POST_SUBJECT}" uždarytas
 
-Hello {USERNAME},
+Sveiki {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
+Jūs gavote šį laišką, nes "{SITENAME}" diskusijų moderatorius arba administratorius uždarė raportą "{POST_SUBJECT}", kurį užpildėte, temoje "{TOPIC_TITLE}". Jeigu turite dar kokių nors klausimų, susisiekite su {CLOSER_NAME} asmenine žinute.
 
 
 {EMAIL_SIG}',
@@ -772,13 +746,26 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Raportas "{POST_SUBJECT}" ištrintas
 
-Hello {USERNAME},
+Sveiki {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+Jūs gavote šį laišką, nes "{SITENAME}" diskusijų moderatorius arba administratorius ištrynė raportą "{POST_SUBJECT}", kurį užpildėte, temoje "{TOPIC_TITLE}".
 
-If you want to view the topic, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Tema "{TOPIC_TITLE}" patvirtinta
+
+Sveiki {USERNAME},
+
+Jūs gavote šį laišką, nes "{SITENAME}" diskusijų moderatorius arba administratorius patvirtino jūsų temą "{TOPIC_TITLE}".
+
+Jeigu norite peržiūrėti temą, paspauskite ant šios nuorodos:
 {U_VIEW_TOPIC}
 
 
@@ -788,13 +775,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Tema "{TOPIC_TITLE}" atmesta
 
-Hello {USERNAME},
+Sveiki {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Jūs gavote šį laišką, nes "{SITENAME}" diskusijų moderatorius arba administratorius atmetė jūsų temą "{TOPIC_TITLE}".
 
-The following reason was given for the disapproval:
+Temos atmetimo priežastis:
 
 {REASON}
 
@@ -805,22 +792,22 @@ The following reason was given for the disapproval:
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Naujas atsakymas temoje "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Sveiki {USERNAME},
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+Jūs gavote šį laišką, nes "{SITENAME}" diskusijose esate užsiprenumeravę temą "{TOPIC_TITLE}". Po jūsų paskutinio apsilankymo, šioje temoje buvo parašytas naujas pranešimas. Norėdami peržiūrėti visus naujus pranešimus, paspauskite ant žemiau esančios nuorodos. Kol jų neperžiūrėsite, daugiau laiškų apie naujus pranešimus šioje temoje negausite.
 
-If you want to view the newest post made since your last visit, click the following link:
+Jeigu norite peržiūrėti naujus pranešimus, paspauskite ant nuorodos žemiau:
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Jeigu norite peržiūrėti visą temą, paspauskite ant šios nuorodos:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Jeigu norite peržiūrėti visą forumą, paspauskite ant šios nuorodos:
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+Jeigu daugiau nebenorite prenumeruoti šios temos, paspauskite ant nuorodos "Atsisakyti temos" minėtoje temoje arba ant šios nuorodos:
 
 {U_STOP_WATCHING_TOPIC}
 
@@ -830,47 +817,25 @@ If you no longer wish to watch this topic you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Aktyvuokite savo vartotojo vardą
 
-Hello {USERNAME},
+Sveiki {USERNAME},
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
-
-{U_ACTIVATE}
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
-
-Hello {USERNAME}
-
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
-
-To use the new password you need to activate it. To do this click the link provided below.
+Greičiausiai dėl pakeitimų aprašyme, jūsų vartotojo vardas "{SITENAME}" diskusijose buvo deaktyvuotas. Jeigu norite vėl aktyvuoti savo vartotojo vardą, paspauskite ant nuorodos žemiau:
 
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+{EMAIL_SIG}',
+));
 
-Password: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+
+$email = array_merge($email, array(
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Jūsų vartotojo vardas buvo deaktyvuotas
+
+Sveiki {USERNAME},
+
+Greičiausiai dėl pakeitimų aprašyme, jūsų vartotojo vardas "{SITENAME}" diskusijose buvo deaktyvuotas. Jį turi aktyvuoti diskusijų administratorius. Kai tik tai įvyks, gausite dar vieną laišką.
 
 {EMAIL_SIG}',
 ));
@@ -878,20 +843,42 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} Naujo slaptažodžio patvirtinimas
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+Sveiki {USERNAME}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Jūs gavote šį laišką, nes "{SITENAME}" diskusijose paprašėte (arba kažkas apsimetantis jumis paprašė) naujo slaptažodžio. Jeigu neprašėte naujo slaptažodžio, tiesiog ignoruokite šį laišką, arba jeigu gaunate tokį laišką prieš savo norą nebe pirmą kartą, kreipkitės į diskusijų administratorių.
+
+Jeigu norite naudotis naujuoju slaptažodžiu, paspauskite ant nuorodos žemiau.
+
+{U_ACTIVATE}
+
+Sėkmingai jį patvirtinę nuo šiol galėsite prisijungti šiuo slaptažodžiu:
+
+Slaptažodis: {PASSWORD}
+
+Taip pat, bet kada galite pasikeisti slaptažodį per savo aprašymą. Jeigu iškilo kokių nors neaiškumų, susisiekite su diskusijų administratoriumi.
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Aktyvuokite savo vartotojo vardą "{SITENAME}" diskusijose
+
+Diskusijų administratorius paprašė dar kartą aktyvuoti savo vartotojo vardą.
+Norėdami tai padaryti, sekite instrukcijomis žemiau.
+
+Išsaugokite šį laišką. Jūsų prisijungimo informacija:
 
 ----------------------------
-Username: {USERNAME}
+Vartotojo vardas: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Jūsų slaptažodis saugiai saugomas mūsų duomenų bazėje ir mes negalime jums jo atsiųsti. Jeigu jį pamiršite, visada galėsite paprašyti naujo slaptažodžio, pasinaudoję el. paštu, kuris susietas su šiuo vartotojo vardu.
 
-Please visit the following link to reactivate your account:
+Jūs negalėsite prisijungti, kol nepaspausite ant šios nuorodos:
 
 {U_ACTIVATE}
 
@@ -1004,15 +991,15 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Priminimas apie neaktyvų vartotojo vardą
 
-Hello {USERNAME},
+Sveiki {USERNAME},
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+Šiuo laišku primename, kad {REGISTER_DATE} jūs užsiregistravote "{SITENAME}" diskusijose. Iki šiol jūs neaktyvavote savo vartotojo vardo. Jeigu norite jį aktyvuoti, aplankykite šią nuorodą:
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+Dėkojame, kad užsiregistravote "{SITENAME}" diskusijose. Tikimės jūsų dalyvavimo.
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +1007,24 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Sveiki atvykę į "{SITENAME}" diskusijas
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Išsaugokite šį laišką. Jūsų prisijungimo informacija:
 
 ----------------------------
-Username: {USERNAME}
+Vartotojo vardas: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Jūsų slaptažodis saugiai saugomas mūsų duomenų bazėje ir mes negalime jums jo atsiųsti. Jeigu jį pamiršite, visada galėsite paprašyti naujo slaptažodžio, pasinaudoję el. paštu, kuris susietas su šiuo vartotojo vardu.
 
-Please visit the following link in order to activate your account:
+Norėdami aktyvuoti savo vartotojo vardą aplankykite šią nuorodą:
 
 {U_ACTIVATE}
 
 
-Thank you for registering.
+Dėkojame, kad užsiregistravote.
 
 {EMAIL_SIG}',
 ));
@@ -1045,21 +1032,21 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Sveiki atvykę į "{SITENAME}" diskusijas
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Išsaugokite šį laišką. Jūsų prisijungimo informacija:
 
 ----------------------------
-Username: {USERNAME}
+Vartotojo vardas: {USERNAME}
 
-Board URL: {U_BOARD}
+Diskusijų adresas: {U_BOARD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Jūsų slaptažodis saugiai saugomas mūsų duomenų bazėje ir mes negalime jums jo atsiųsti. Jeigu jį pamiršite, visada galėsite paprašyti naujo slaptažodžio, pasinaudoję el. paštu, kuris susietas su šiuo vartotojo vardu.
 
-Thank you for registering.
+Dėkojame, kad užsiregistravote.
 
 {EMAIL_SIG}',
 ));
@@ -1067,25 +1054,25 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Sveiki atvykę į "{SITENAME}" diskusijas
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Išsaugokite šį laišką. Jūsų prisijungimo informacija:
 
 ----------------------------
-Username: {USERNAME}
+Vartotojo vardas: {USERNAME}
 
-Board URL: {U_BOARD}
+Diskusijų adresas: {U_BOARD}
 ----------------------------
 
-Please visit the following link in order to activate your account:
+Norėdami aktyvuoti savo vartotojo vardą aplankykite šią nuorodą:
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Jūsų slaptažodis saugiai saugomas mūsų duomenų bazėje ir mes negalime jums jo atsiųsti. Jeigu jį pamiršite, visada galėsite paprašyti naujo slaptažodžio, pasinaudoję el. paštu, kuris susietas su šiuo vartotojo vardu.
 
-Thank you for registering.
+Dėkojame, kad užsiregistravote.
 
 {EMAIL_SIG}',
 ));

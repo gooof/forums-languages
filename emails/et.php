@@ -1,16 +1,16 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Kasutaja konto aktiveerimine
 
-Hello,
+Tere,
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+Konto "{USERNAME}" on deaktiveeritud või vastloodud, peaksid kontrollima andmeid (kui vaja) ja kasutama neid vastavalt.
 
-Use this link to view the user\'s profile:
+Kasuta seda linki, et minna kasutaja profiili:
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+Kasuta seda linki, et aktiveerida konto:
 {U_ACTIVATE}
 
 
@@ -21,13 +21,13 @@ Use this link to activate the account:
 
 $email = array_merge($email, array(
 	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Järgnev on e-kiri saadetud teile foorumi "{SITENAME}" administraatorilt. Kui see on spämm, sisaldab sõimu või muid solvavaid kommentaare, siis võta ühendust foorumi administraatoriga:
 
 {CONTACT_EMAIL}
 
-Include this full e-mail (particularly the headers). 
+Pane kaasa täielik e-kiri (eriti päised). 
 
-Message sent to you follows:
+Sulle saadetud sõnum on järgnev:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -40,13 +40,11 @@ Message sent to you follows:
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Konto aktiveeritud
 
-Hello {USERNAME},
+Tere {USERNAME},
 
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
-
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Sinu konto foorumis "{SITENAME}" on nüüd aktiveeritud foorumi administraatori poolt, võid nüüd sisse logida.
 
 {EMAIL_SIG}',
 ));
@@ -54,23 +52,23 @@ Your password has been securely stored in our database and cannot be retrieved. 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Teretulemast "{SITENAME}" foorumisse
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Palume hoida see e-kiri alles. Sinu konto andmed on järgnevad:
 
 ----------------------------
-Username: {USERNAME}
+Kasutajanimi: {USERNAME}
+Parool: {PASSWORD}
 
-Board URL: {U_BOARD}
+Foorumi URL: {U_BOARD}
 ----------------------------
+Sinu kasutaja pole hetkel aktiveeritud. Selle kasutamiseks on vaja administraatori heakskiitu. Kui see sooritatakse, saad vastavasisulise kirja.
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+Sinu parool on meie andmebaasis turvaliselt salvestatud, seega ei saa me seda ununemise korral taastada. Kui sa siiski unustad oma parooli, saad sisestada uue parooli, mis aktiveeritakse sinu kasutajakontol märgitud e-posti aadressi kasutades.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
-Thank you for registering.
+Täname registreerimast
 
 {EMAIL_SIG}',
 ));
@@ -213,115 +211,113 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Teretulemast saidile "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+COPPA lepinguga on su konto hetkel mitteaktiivne.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Palun prindi see välja, lase vanemal või hooldajal alla kirjutada ning faksi see:
 
 {FAX_INFO}
 
-OR mail it to:
+VÕI maili see:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ LÕIKA SIIN ------------------------------
+Luba osa võtta lehest "{SITENAME}" - {U_BOARD}
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Kasutajanimi: {USERNAME}
+E-post: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
-
-
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
+MA OLEN OMA LAPSE ANTUD ANDMED ÜLE VAADANUD JA LUBAN LEHEKÜLJEL "{SITENAME}" NEED SALVESTADA.
+MA MÕISTAN, ET SEDA INFOT SAAB MUUTA IGAL AJAL, SISESTADES PAROOLI.
+MA MÕISTAN, ET VÕIN IGAL AJAL NÕUDA SELLE INFO EEMALDAMIST "{SITENAME}" LEHELT.
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Vanem või hooldaja
+(trüki siia oma nimi): _____________________
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+(allkiri): __________________
 
-Thank you for registering.
+Kuupäev: _______________
 
-{EMAIL_SIG}
-',
+------------------------------ LÕIKA SIIN ------------------------------
+
+
+Kui administraator on selle faksi või postiga saanud, aktiveeritakse su konto ja sulle teatatakse sellest.
+
+Palun ära unusta oma parooli kuna andmebaasis on see kodeeritud ja me ei saa seda sulle hiljem öelda. Kui juhtub, et unustad parooli, siis tuleb see aktiveerida samal viisil mis kontogi.
+
+Täname, et registreerisid.
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Teretulemast saidile "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+COPPA lepinguga on su konto hetkel mitteaktiivne.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Palun prindi see välja, lase vanemal või hooldajal alla kirjutada ning faksi see:
 
 {FAX_INFO}
 
-OR mail it to:
+VõI maili see:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ LÕIKA SIIN ------------------------------
+Luba osa võtta lehest "{SITENAME}" - {U_BOARD}
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Kasutajanimi: {USERNAME}
+E-post: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
-
-
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
+MA OLEN OMA LAPSE ANTUD ANDMED ÜLE VAADANUD JA LUBAN LEHEKÜLJEL "{SITENAME}" NEED SALVESTADA.
+MA MÕISTAN, ET SEDA INFOT SAAB MUUTA IGAL AJAL, SISESTADES PAROOLI.
+MA MÕISTAN, ET VÕIN IGAL AJAL NÕUDA SELLE INFO EEMALDAMIST "{SITENAME}" LEHELT.
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Vanem või hooldaja
+(trüki siia oma nimi): _____________________
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+(allkiri): __________________
 
-Thank you for registering.
+Kuupäev: _______________
 
-{EMAIL_SIG}
-',
+------------------------------ LÕIKA SIIN ------------------------------
+
+
+Kui administraator on selle faksi või postiga saanud, aktiveeritakse su konto ja sulle teatatakse.
+
+Palun ära unusta oma parooli, kuna andmebaasis on see kodeeritud ja me ei saa seda sulle hiljem öelda. Kui juhtub, et unustad parooli, siis tuleb see aktiveerida samal viisil mis kontogi.
+
+Täname, et registreerisid.
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-kiri sõbralt
 
-Hello {TO_USERNAME},
+Tere {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Selle e-kirja saatis "{SITENAME}" foorumilt kasutaja {FROM_USERNAME}, kes arvas, et sa võid olla huvitatud järgnevast teemast:
 
 {TOPIC_NAME}
 
-You can find it at:
+Leiad selle:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Sõnum kasutajalt {FROM_USERNAME} on ka kaasa pandud all. Seda kirja pole näinud foorumi administraatorid. Kui sa ei soovi seda e-kirja saada, võta ühendust administraatoriga: {BOARD_CONTACT}. Palun kopeeri selle kirja päis administraatoriga kontakteerumisel.
 
 ----------
 
@@ -379,21 +375,22 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Foorumist teatamine - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Tere {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+Saad selle teate, sest sa oled tellinud foorumi "{FORUM_NAME}"  "{SITENAME}" foorumites. Foorum on saanud uue vastuse teemas "{TOPIC_TITLE}" peale su eelmist külastust. 
+Võid kasutada järgnevat linki, et minna uue vastuse juurde, rohkem ei saadeta sulle teateid selle teema kohta, kuni sa pole teemat vaadanud.
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Kui soovid teemat vaadata, vajuta järgnevat linki:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Kui soovid foorumit vaadata, vajuta järgnevat linki:
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Kui sa ei soovi enam seda teemat tellida, võid vajutada "Ära telli teemat" linki foorumis või vajutada järgnevale lingile:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -404,14 +401,13 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} Sa oled lisatud kasutajagruppi
 
-Congratulations,
+Õnnitleme,
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
-
-You can view your groups information here:
+Sa oled lisatud "{GROUP_NAME}" gruppi "{SITENAME}" foorumites.
+Sind lisas grupi liider või foorumi administraator, kontakteeru nendega täpsema informatsiooni saamiseks.
+Võid vaadata grupi andmeid siin:
 {U_GROUP}
 
 {EMAIL_SIG}
@@ -421,12 +417,12 @@ You can view your groups information here:
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Sa oled soovitud gruppi vastu võetud
 
-Congratulations,
+Õnnitleme,
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+Sa oled "{GROUP_NAME}" gruppi "{SITENAME}" foorumites vastu võetud.
+Vajuta järgnevale lingile, et näha grupi liikmestaatust.
 
 {U_GROUP}
 
@@ -437,12 +433,11 @@ Click on the following link to see your group membership.
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} Avaldus grupiga liitumiseks
+{USERNAME},
 
-Dear {USERNAME},
-
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+Kasutaja "{REQUEST_USERNAME}" on avaldanud soovi liituda "{GROUP_NAME}" grupiga "{SITENAME}" foorumites.
+Et avaldus vastu võtta või tagasi lükata, vajuta järgnevat linki:
 
 {U_PENDING}
 
@@ -453,23 +448,22 @@ To approve or deny this request for group membership please visit the following 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB on installeeritud
 
-Congratulations,
+Palju õnne,
 
-You have successfully installed phpBB on your server.
+Sa oled oma serverisse edukalt installeerinud phpBB.
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+See e-kiri sisaldab informatsiooni, mida peaksid hoidma turvaliselt. Parool on andmebaasis krüpteeritud ja seda ei saa taastada, kuigi saab küsida uut parooli, mis aktiveeritakse sinu kasutajakontol määratud e-postiaadressi kasutades.
 
 ----------------------------
-Username: {USERNAME}
+Kasutajanim: {USERNAME}
 
-Board URL: {U_BOARD}
+Foorumi URL: {U_BOARD}
 ----------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
-
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+Kasulikku infot phpBB installeerimise ja kasutamise kohta leiab docs kaustast või phpBB.ee veebilehelt - http://www.phpbb.ee
+Et hoida foorumit turvalisena, on rangelt soovitatav uuendada alati tarkvara, kui uuendused on olemas.
 
 {EMAIL_SIG}',
 ));
@@ -509,16 +503,16 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} Uuest teemast teatamine - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Tere {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+Saad selle kirja, kuna tellid foorumit "{FORUM_NAME}" , "{SITENAME}" foorumites. Foorumisse on tehtud uus teema peale sinu viimast külastust: "{TOPIC_TITLE}".
+Võid kasutada järgnevat linki foorumi vaatamiseks, sulle ei saadeta rohkem teateid, kuni sa pole külastanud foorumit
 
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
-
+Kui sa ei soovi rohkem seda foorumit tellida, võid vajutada "Ära telli foorumit" lingile foorumis, või vajutada järgnevale lingile:
 {U_STOP_WATCHING_FORUM}
 
 {EMAIL_SIG}',
@@ -527,24 +521,11 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{PM_SUBJECT}"
+	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Raport suletud - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+Tere, {USERNAME},
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed. If you have further questions, please contact {CLOSER_NAME} by private message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{PM_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
+Saad selle teate, sest raport, mille esitasid privaatsõnumi "{PM_SUBJECT}" suhtes "{SITENAME}" foorumitese, on vaadatud üle moderaatori või administraatori poolt. Raport on nüüd suletud. Edasiste küsimuste tekkimise kontakteeru kasutajaga {CLOSER_NAME} privaatsõnumi teel.
 
 
 {EMAIL_SIG}',
@@ -553,16 +534,29 @@ You are receiving this notification because the report you filed regarding the p
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Raport kustutatud - "{PM_SUBJECT}"
 
 Hello {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+Saad selle teate, sest raport, mille esitasid privaatsõnumi "{PM_SUBJECT}" kohta "{SITENAME}" foorumites kustutati moderaatori või administraatori poolt.
 
-If you want to view the post, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/post_approved.txt' 		=> 'Pealkiri: Postitus on heaks kiidetud - "{POST_SUBJECT}"
+
+Tere {USERNAME},
+
+Sulle tuli see kiri, sest sinu postitus "{POST_SUBJECT}" lehel "{SITENAME}" on heakskiidetud moderaatori või administraatori poolt.
+
+Kui sa tahad vaadata postitust, vajuta allpool olevale lingile:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Kui sa tahad vaadata teemat, vajuta allpool olevale lingile:
 {U_VIEW_TOPIC}
 
 
@@ -572,13 +566,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> 'Pealkiri: Postitus ei ole heaks kiidetud - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Tere {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Sulle tuli see kiri, sest sinu postitus "{POST_SUBJECT}" lehel "{SITENAME}" ei ole heaks kiidetud moderaatori või administraatori poolt.
 
-The following reason was given for the disapproval:
+Põhjus:
 
 {REASON}
 
@@ -675,20 +669,19 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} Sulle on saabunud uus privaatsõnum
 
-Hello {USERNAME},
+Tere {USERNAME},
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+Sulle saatis uue privaatsõnumi kasutaja "{AUTHOR_NAME}" sinu kasutajale "{SITENAME}" foorumites järgneva pealkirjaga:
 
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+Saad vaadata sõnumit, kasutades järgnevat linki:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
-
+Oled soovinud, et sind teavitataks uue sõnumi saabumisest. Alati võid profiili muutes ka teavitamisest keelduda.
 {EMAIL_SIG}',
 ));
 
@@ -708,16 +701,16 @@ To read the comment , click the link below.
 
 
 $email = array_merge($email, array(
-	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_email.txt' 		=> 'Tere {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Järgnev on e-kiri, mille saatis {FROM_USERNAME} sinule "{SITENAME}"foorumites. Kui see kiri on spämm, sisaldab sõimu või muud solvavat kommentaari,
+palun võta ühendust foorumi administraatoriga järgneval aadressil:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Kaasa ka see e-kiri (eriti päis). Vastamise aadressiks on seotud kasutaja {FROM_USERNAME} aadress.
 
-Message sent to you follows
+Sulle saadetud sõnuv on järgnev
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -727,16 +720,16 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_im.txt' 		=> 'Hello {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Järgnev on sõnum, mille saatis {FROM_USERNAME} sinule "{SITENAME}" foorumites. Kui see kiri on spämm, sisaldab sõimu või muud solvavat kommentaari,
+palun võta ühendust foorumi administraatoriga järgneval aadressil:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Kaasa ka see e-kiri (eriti päis). Vastamise aadressiks on seotud kasutaja {FROM_USERNAME} IM aadress.
 
-Message sent to you follows
+Sulle saadetud sõnuv on järgnev
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -746,24 +739,11 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Raport suletud - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Tere {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
+Sa saad selle kirja, sest sinu raporteeritud postitus "{POST_SUBJECT}" teemas "{TOPIC_TITLE}" lehel "{SITENAME}" võeti ette moderaatori või administraatorid poolt. Raport suleti pärast vajalikke modereerimisi. Kui sul on küsimusi, siis kontakteeru kasutaja {CLOSER_NAME} privaatsõnumi teel.
 
 
 {EMAIL_SIG}',
@@ -772,13 +752,26 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Raport kustutatud - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Tere {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+Sa saad selle kirja, sest sinu raporteeritud postitus "{POST_SUBJECT}" teemas "{TOPIC_TITLE}" lehel "{SITENAME}" on kustutatud moderaatori või administraatorid poolt.
 
-If you want to view the topic, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/topic_approved.txt' 		=> 'Pealkiri: Teema on heaks kiidetud - "{TOPIC_TITLE}"
+
+Tere {USERNAME},
+
+Sulle tuli see kiri, sest sinu teema "{TOPIC_TITLE}" lehel "{SITENAME}" on heaks kiidetud moderaatori või administraatori poolt.
+
+Kui sa tahad vaadata teemat, vajuta allpool olevale lingile:
 {U_VIEW_TOPIC}
 
 
@@ -788,13 +781,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_disapproved.txt' 		=> 'Pealkiri: Teema ei ole heaks kiidetud - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Tere {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Sulle tuli see kiri, sest sinu teema "{TOPIC_TITLE}" lehel "{SITENAME}" ei ole heaks kiidetud moderaatori või administraatori poolt.
 
-The following reason was given for the disapproval:
+Põhjus:
 
 {REASON}
 
@@ -805,23 +798,19 @@ The following reason was given for the disapproval:
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Teemast teatamine - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Tere {USERNAME},
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
-
-If you want to view the newest post made since your last visit, click the following link:
+Saad selle teate, kuna tellid teemat "{TOPIC_TITLE}" "{SITENAME}" foorumist. See teema on saanud uue vastuse peale sinu eelmist külastust. Sa võid kasutada järgnevat linki uute vastuste vaatamiseks; selle teema kohta ei saadeta enam sulle teateid, kuni sa pole teemat külastanud.
+Kui sa soovid vaadata uusimat postitust peale sinu viimast külastust, vajuta järgnevale lingile:
 {U_NEWEST_POST}
-
-If you want to view the topic, click the following link:
+Kui soovid teemat vaadata, vajuta järgnevale lingile:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Kui soovid foorumit vaadata, vajuta järgnevale lingile:
 {U_FORUM}
-
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
-
+Kui sa ei soovi enam tellida seda teemat, võid vajutada "Ära telli teemat" linki teemas, või vajutada järgnevat linki:
 {U_STOP_WATCHING_TOPIC}
 
 {EMAIL_SIG}',
@@ -830,47 +819,25 @@ If you no longer wish to watch this topic you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Sinu kasutaja on deaktiveeritud
 
-Hello {USERNAME},
+Tere {USERNAME},
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
-
-{U_ACTIVATE}
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
-
-Hello {USERNAME}
-
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
-
-To use the new password you need to activate it. To do this click the link provided below.
+Sinu kasutaja "{SITENAME}" foorumis on deaktiveeritud, tõenäoliselt profiilis tehtud muudatuste pärast. Et aktiveerida oma kasutaja uuesti, pead vajutama järgnevale lingile:
 
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+{EMAIL_SIG}',
+));
 
-Password: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+
+$email = array_merge($email, array(
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Sinu kasutaja on deaktiveeritud
+
+Tere {USERNAME},
+
+Sinu kasutaja "{SITENAME}" foorumis on deaktiveeritud, tõenäoliselt profiilis tehtud muudatuste pärast. Foorumi administraator peab su kasutaja enne aktiveerima, kui saad sisse logida. Saad uue e-kirja, kui see on juhtunud.
 
 {EMAIL_SIG}',
 ));
@@ -878,20 +845,45 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} Aktiveeri oma kasutaja "{SITENAME}" foorumites uuesti
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+Foorumi administraator nõuab, et sa aktiveeriksid oma kasutaja uuesti. Sinu kasutaja pole hetkel aktiveeritud.
+Palun järgi juhiseid konto aktiveerimiseks.
 
-Please keep this e-mail for your records. Your account information is as follows:
+Palun hoia see e-kiri alles. Sinu kasutaja andmed on järgnevad:
 
 ----------------------------
-Username: {USERNAME}
+Kasutajanimi: {USERNAME}
+Parool: {PASSWORD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Sinu parool on meie andmebaasis krüpteeritud. Kui sa peaksid selle unustama, saad soovida uut parooli, mis aktiveeritakse nagu su kasutakontogi.
 
-Please visit the following link to reactivate your account:
+Palun külasta järgnevat linki oma konto aktiveerimiseks:
+
+{U_ACTIVATE}
+
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Aktiveeri oma kasutaja "{SITENAME}" foorumites uuesti
+
+Foorumi administraator nõuab, et sa aktiveeriksid oma kasutaja uuesti. Sinu konto pole hetkel aktiveeritud.
+Palun järgi juhiseid konto aktiveerimiseks.
+
+Palun hoia see e-kiri alles. Sinu kasutaja andmed on järgnevad:
+
+----------------------------
+Kasutajanimi: {USERNAME}
+----------------------------
+
+Sinu parool on meie andmebaasis turvaliselt salvestatud, seega ei saa me seda ununemise korral taastada. Kui sa siiski unustad oma parooli, saad sisestada uue parooli, mis aktiveeritakse sinu kasutajakontol märgitud e-postiaadressi kasutades.
+
+Palun külasta järgnevat linki oma konto aktiveerimiseks:
 
 {U_ACTIVATE}
 
@@ -1004,15 +996,14 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Ebaaktiivse kasutaja meeldetuletus
 
-Hello {USERNAME},
+Tere {USERNAME},
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
-
+See kiri on meeldetuletus sellest, et sinu konto "{SITENAME}" foorumites, registreerimiskuupäev{REGISTER_DATE}, on siiani aktiveerimata. Kui soovid praegu oma konto aktiveerida, saad seda teha alljärgneval lingil:
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+Täname registreerimast "{SITENAME}" foorumites, me ootame teie osalemist.
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +1011,24 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Tere tulemast "{SITENAME}" foorumitesse!
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Palun hoia see e-kiri alles. Sinu kasutaja andmed on järgnevad:
 
 ----------------------------
-Username: {USERNAME}
+Kasutajanimi: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Sinu parool on meie andmebaasis krüpteeritud. Kui sa peaksid selle unustama, saad soovida uut parooli, mis aktiveeritakse nagu su kasutajagi
 
-Please visit the following link in order to activate your account:
+Sinu kasutaja pole hetkel aktiveeritud. Külasta järgnevat linki aktiveerimiseks:
 
 {U_ACTIVATE}
 
 
-Thank you for registering.
+Täname registreerimast.
 
 {EMAIL_SIG}',
 ));
@@ -1045,21 +1036,23 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Tere tulemast "{SITENAME}" foorumitesse!
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Palume hoida seda e-kirja alles. Sinu kasutaja andmed on järgnevad:
 
 ----------------------------
-Username: {USERNAME}
+Kasutajanimi: {USERNAME}
 
-Board URL: {U_BOARD}
+
+Foorumi URL: {U_BOARD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Sinu parool on meie andmebaasis turvaliselt salvestatud, seega ei saa me seda ununemise korral taastada. Kui sa siiski unustad oma parooli, saad sisestada uue parooli, mis aktiveeritakse sinu kasutajakontol märgitud e-postiaadressi kasutades.
 
-Thank you for registering.
+
+Täname registreerimast.
 
 {EMAIL_SIG}',
 ));
@@ -1067,25 +1060,26 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Tere tulemast "{SITENAME}" foorumitesse!
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Palume seda e-kirja alles hoida. Sinu kasutaja andmed on järgnevad:
 
 ----------------------------
-Username: {USERNAME}
+Kasutajanimi: {USERNAME}
 
-Board URL: {U_BOARD}
+Foorumi URL: {U_BOARD}
 ----------------------------
-
-Please visit the following link in order to activate your account:
+Oma konto aktiveerimiseks vajuta allolevale lingile:
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Palun ära oma unusta oma parooli; meie andmebaasis on see krüpteritud, sellest tulenevalt me ei saa sedu sulle soovi korral tagastada.
 
-Thank you for registering.
+Kui sa siiski unustada oma parooli, saad soovida uut parooli, mis aktiveeritakse samal moel nagu sinu kasutajagi.
+
+Täname registreerimast.
 
 {EMAIL_SIG}',
 ));

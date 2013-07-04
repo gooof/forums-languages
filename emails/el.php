@@ -1,33 +1,34 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Ενεργοποίηση λογαριασμού μέλους
 
-Hello,
+Γεια σας,
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+Ο λογαριασμός που ανήκει στο μέλος "{USERNAME}" απενεργοποιήθηκε ή μόλις δημιουργήθηκε, Πρέπει να ελέγξετε τα στοιχεία αυτού του μέλους (εάν χρειάζεται) και να τον ενεργοποιήσετε.
 
-Use this link to view the user\'s profile:
+Χρησιμοποιήστε την ακόλουθη διαδρομή για να δείτε το προφίλ του μέλους:
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+Χρησιμοποιήστε την ακόλουθη διαδρομή για να ενεργοποιήσετε τον λογαριασμό:
 {U_ACTIVATE}
 
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Το ακόλουθο μήνυμα το  απέστειλε ένας διαχειριστής του "{SITENAME}". Εάν το μήνυμα αυτό είναι ανεπιθύμητο με ενοχλητικό ή και προσβλητικό περιεχόμενο σας παρακαλώ επικοινωνήστε με τον διαχειριστή της Δ. Συζήτησης στην ακόλουθη διεύθυνση:
 
 {CONTACT_EMAIL}
 
-Include this full e-mail (particularly the headers). 
+Συμπεριλάβετε το μήνυμα, (κυρίως τις κεφαλίδες του). 
 
-Message sent to you follows:
+Το περιεχόμενο του μηνύματος που σας απεστάλη:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -40,39 +41,44 @@ Message sent to you follows:
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Ενεργοποίηση λογαριασμού
 
-Hello {USERNAME},
+Γεια σου {USERNAME},
 
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
+Ο λογαριασμός σου στο "{SITENAME}" ενεργοποιήθηκε από τον διαχειριστή, τώρα μπορείς να συνδεθείς.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ο κωδικός πρόσβασης σας είναι κρυπτογραφημένος στην βάση μας και δεν μπορεί να ανακτηθεί. Αν τον ξεχάσετε μπορείτε να ζητήσετε νέον κωδικό που θα ενεργοποιηθεί με τον ίδιο τρόπο με αυτόν τον λογαριασμό.
 
-{EMAIL_SIG}',
+
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Καλώς ήρθατε στο "{SITENAME}" 
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Προσοχή! Κρατήστε αυτό το μήνυμα! Περιέχει βασικές πληροφορίες του λογαριασμού σας:
 
 ----------------------------
-Username: {USERNAME}
+Όνομα μέλους: {USERNAME}
 
-Board URL: {U_BOARD}
+Ιστοσελίδας σύνδεσμος: {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+Ο λογαριασμός σας προσωρινά είναι ανενεργός, για να συνδεθείτε πρώτα πρέπει να ενεργοποιηθεί από τον διαχειριστή του συστήματος πριν συνδεθείτε. Θα λάβετε ένα καινούργιο μήνυμα όταν αυτό θα είναι δυνατό.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ο κωδικός πρόσβασης σας είναι κρυπτογραφημένος στην βάση μας και δεν μπορεί να ανακτηθεί. Αν τον ξεχάσετε μπορείτε να ζητήσετε νέον κωδικό που θα ενεργοποιηθεί με τον ίδιο τρόπο με αυτόν τον λογαριασμό.
 
-Thank you for registering.
+Σας ευχαριστούμε για την εγγραφή σας.
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+
+
+',
 ));
 
 
@@ -213,46 +219,45 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Καλώς ήρθατε στο "{SITENAME}" 
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+Σύμφωνα με το διακήρυξη COPPA, ο λογαριασμός σας είναι προσωρινά ανενεργός.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Παρακαλώ εκτυπώστε το ακόλουθο κείμενο και δώστε το προς έγκριση και υπογραφή στον κηδεμόνα σας, κατόπιν στείλτε το με φαξ στο:
 
 {FAX_INFO}
 
-OR mail it to:
+ή με ηλεκτρονικό ταχυδρομείο:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ να κοπεί εδώ ------------------------------
+Έγκριση για συμμετοχή στο "{SITENAME}" - {U_BOARD}
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Όνομα χμέλους: {USERNAME}
+Διεύθυνση αλληλογραφίας: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
-
-
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
+ΕΧΩ ΕΞΕΤΑΣΕΙ ΤΑ ΣΤΟΙΧΕΙΑ ΠΟΥ ΜΟΥ ΠΡΟΣΚΟΜΙΣΕ ΤΟ ΠΑΙΔΙ ΜΟΥ ΚΑΙ ΕΠΙΤΡΕΠΩ ΣΤΟ "{SITENAME}" ΝΑ ΑΠΟΘΗΚΕΥΣΕΙ ΑΥΤΑ ΤΑ ΣΤΟΙΧΕΙΑ.
+ΚΑΤΑΝΟΩ, ΟΤΙ ΤΑ ΠΑΡΑΠΑΝΩ ΑΠΟΘΗΚΕΥΜΕΝΑ ΣΤΟΙΧΕΙΑ ΜΠΟΡΟΥΝ ΝΑ ΑΛΛΑΞΟΥΝ ΟΠΟΙΑΔΗΠΟΤΕ ΣΤΙΓΜΗ ΜΕ ΤΗΝ ΕΙΣΑΓΩΓΗ ΤΟΥ ΚΩΔΙΚΟΥ.
+ΚΑΤΑΝΟΩ, ΟΤΙ ΑΥΤΕΣ ΟΙ ΠΛΗΡΟΦΟΡΙΕΣ ΜΠΟΡΟΥΝ ΝΑ ΔΙΑΓΡΑΦΟΥΝ ΟΠΟΙΑΔΗΠΟΤΕ ΣΤΙΓΜΗ, ΑΠΟ ΤΟ {SITENAME} ,ΚΑΤΟΠΙΝ ΑΙΤΗΣΕΩΣ ΜΟΥ.
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Γονέας ή Κηδεμόνας
+(το Ονοματεπώνυμο σας): _____________________
 
-Thank you for registering.
+(Υπογραφή): __________________ 
+
+Ημερομηνία: _______________
+
+------------------------------ να κοπεί εδώ ------------------------------
+
+Από την στιγμή που ο διαχειριστής θα λάβει αυτό το έντυπο μέσω φαξ ή ηλεκτρονικού ταχυδρομείου, ο λογαριασμός θα ενεργοποιηθεί.
+Ο κωδικός πρόσβασης σας είναι κρυπτογραφημένος στην βάση μας και δεν μπορεί να ανακτηθεί. Αν τον ξεχάσετε μπορείτε να ζητήσετε νέον κωδικό που θα ενεργοποιηθεί με τον ίδιο τρόπο με αυτόν τον λογαριασμό.
+
+Σας ευχαριστούμε για την εγγραφή σας
 
 {EMAIL_SIG}
 ',
@@ -261,46 +266,45 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Καλώς ήρθατε στο "{SITENAME}" 
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+Σύμφωνα με το διακήρυξη COPPA, ο λογαριασμός σας είναι προσωρινά ανενεργός.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Παρακαλώ εκτυπώστε το ακόλουθο κείμενο και δώστε το προς έγκριση και υπογραφή στον κηδεμόνα σας, κατόπιν στείλτε το με φαξ στο:
 
 {FAX_INFO}
 
-OR mail it to:
+ή με ηλεκτρονικό ταχυδρομείο:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ να κοπεί εδώ ------------------------------
+Έγκριση για συμμετοχή στο "{SITENAME}" - {U_BOARD}
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Όνομα χμέλους: {USERNAME}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+Διεύθυνση αλληλογραφίας: {EMAIL_ADDRESS}
 
-
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
+ΕΧΩ ΕΞΕΤΑΣΕΙ ΤΑ ΣΤΟΙΧΕΙΑ ΠΟΥ ΜΟΥ ΠΡΟΣΚΟΜΙΣΕ ΤΟ ΠΑΙΔΙ ΜΟΥ ΚΑΙ ΕΠΙΤΡΕΠΩ ΣΤΟ "{SITENAME}" ΝΑ ΑΠΟΘΗΚΕΥΣΕΙ ΑΥΤΑ ΤΑ ΣΤΟΙΧΕΙΑ.
+ΚΑΤΑΝΟΩ, ΟΤΙ ΤΑ ΠΑΡΑΠΑΝΩ ΑΠΟΘΗΚΕΥΜΕΝΑ ΣΤΟΙΧΕΙΑ ΜΠΟΡΟΥΝ ΝΑ ΑΛΛΑΞΟΥΝ ΟΠΟΙΑΔΗΠΟΤΕ ΣΤΙΓΜΗ ΜΕ ΤΗΝ ΕΙΣΑΓΩΓΗ ΤΟΥ ΚΩΔΙΚΟΥ.
+ΚΑΤΑΝΟΩ, ΟΤΙ ΑΥΤΕΣ ΟΙ ΠΛΗΡΟΦΟΡΙΕΣ ΜΠΟΡΟΥΝ ΝΑ ΔΙΑΓΡΑΦΟΥΝ ΟΠΟΙΑΔΗΠΟΤΕ ΣΤΙΓΜΗ, ΑΠΟ ΤΟ {SITENAME} ,ΚΑΤΟΠΙΝ ΑΙΤΗΣΕΩΣ ΜΟΥ.
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Γονέας ή Κηδεμόνας
+(το Ονοματεπώνυμο σας): _____________________
 
-Thank you for registering.
+(Υπογραφή): __________________ 
+
+Ημερομηνία: _______________
+
+------------------------------ να κοπεί εδώ ------------------------------
+
+Από την στιγμή που ο διαχειριστής θα λάβει αυτό το έντυπο μέσω φαξ ή ηλεκτρονικού ταχυδρομείου, ο λογαριασμός θα ενεργοποιηθεί.
+Ο κωδικός πρόσβασης σας είναι κρυπτογραφημένος στην βάση μας και δεν μπορεί να ανακτηθεί. Αν τον ξεχάσετε μπορείτε να ζητήσετε νέον κωδικό που θα ενεργοποιηθεί με τον ίδιο τρόπο σε αυτόν τον λογαριασμό.
+Σας ευχαριστούμε για την εγγραφή σας
 
 {EMAIL_SIG}
 ',
@@ -309,23 +313,24 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} „{SITENAME}“ —  E-mail σε φίλο
 
-Hello {TO_USERNAME},
+Γεια σου {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Αυτό το μήνυμα αλληλογραφίας έχει σταλεί από το "{SITENAME}" από τον {FROM_USERNAME} ο οποίος πιστεύει ότι θα σας ενδιαφέρει το ακόλουθο θέμα:
 
 {TOPIC_NAME}
 
-You can find it at:
+Μπορείτε να το βρείτε εδώ:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Ένα μήνυμα από τον {FROM_USERNAME} επισυνάπτετε παρακάτω. Σημειώστε ότι αυτό το μήνυμα δεν έχει σταλεί ή αποδεχτεί από τους διαχειριστές της κοινότητας. Αν θέλετε να μην λαμβάνετε άλλο μηνύματα αλληλογραφίας παρακαλώ επικοινωνήστε με τον διαχειριστή της κοινότητας στο {BOARD_CONTACT}. Παρακαλούμε επισυνάψτε τα στοιχεία του μηνύματος όταν επικοινωνήσετε με αυτήν την διεύθυνση.
 
 ----------
 
-{MESSAGE}',
+{MESSAGE}
+',
 ));
 
 
@@ -379,39 +384,38 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Γνωστοποίηση απάντησης στη Δ. Συζήτηση - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Γεια σας  {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+Λάβατε αυτό το μήνυμα γιατί παρακολουθείτε την Δ. Συζήτηση, "{FORUM_NAME}" στο "{SITENAME}". Αναρτήθηκε ένα νέο μήνυμα στο Θέμα "{TOPIC_TITLE}" μετά την τελευταία σας επίσκεψη. Μπορείτε να χρησιμοποιήσετε την ακόλουθη σύνδεση για να δείτε την τελευταία αδιάβαστη απάντηση, δεν θα υπάρξει άλλη ειδοποίηση για αυτήν την ανάρτηση, μέχρι να επισκεφτείτε το Θέμα.
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Εάν θέλετε να κάνετε δείτε το θέμα, πατήστε τον ακόλουθο σύνδεσμο:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Εάν θέλετε να δείτε την Δ. Συζήτηση, πατήστε τον ακόλουθο σύνδεσμο:
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Εάν δεν επιθυμείτε πλέον, την παρακολούθηση του Θέματος επιλέξτε "Παύση παρακολούθησης αυτού του Θέματος" στο κάτω τμήμα της σελίδας του Θέματος ή πατήστε στον ακόλουθο δεσμό:
 
 {U_STOP_WATCHING_FORUM}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} Προστεθήκατε στην ομάδα
 
-Congratulations,
+Συγχαρητήρια,
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+Προστεθήκατε στην ομάδα "{GROUP_NAME}" στο "{SITENAME}".
+Αυτή η ενέργεια έγινε από κάποιον Συντονιστή Ομάδας ή Διαχειριστή της Δ. Συζήτησης, επικοινωνήστε μαζί τους για περαιτέρω πληροφορίες.
 
-You can view your groups information here:
+Μπορείτε να δείτε της πληροφορίες της ομάδας σας εδώ:
 {U_GROUP}
 
 {EMAIL_SIG}
@@ -421,12 +425,12 @@ You can view your groups information here:
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Το αίτημα σας εγκρίθηκε
 
-Congratulations,
+Συγχαρητήρια,
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+Το αίτημα σας για να γίνετε μέλος της ομάδας "{GROUP_NAME}" στο "{SITENAME}" εγκρίθηκε.
+Ακολουθήστε τον δεσμό για να δείτε τα στοιχεία τις ιδιότητες σας σαν μέλους.
 
 {U_GROUP}
 
@@ -437,12 +441,12 @@ Click on the following link to see your group membership.
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} Αίτηση για συμμετοχή στην ομάδα σας
 
-Dear {USERNAME},
+Αγαπητέ {USERNAME},
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+ένα μέλος "{REQUEST_USERNAME}" ζήτησε να ενταχθεί στην ομάδα "{GROUP_NAME}" που συντονίζετε στο "{SITENAME}".
+Για να εγκρίνετε ή να αρνηθείτε αυτήν την αίτηση παρακαλώ ακολουθήστε ον παρακάτω σύνδεσμο:
 
 {U_PENDING}
 
@@ -453,25 +457,27 @@ To approve or deny this request for group membership please visit the following 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} Εγκαταστάθηκε το phpBB
 
-Congratulations,
+Συγχαρητήρια,
 
-You have successfully installed phpBB on your server.
+εγκαταστήσατε επιτυχώς το phpBB στον διακομιστή σας.
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Αυτό το μήνυμα αλληλογραφίας περιέχει σημαντικές πληροφορίες για την εγκατάσταση σας που πρέπει να φυλαχτούν. Ο κωδικός πρόσβασης έχει αποθηκευτεί κρυπτογραφημένος στην βάση μας και δεν μπορεί να ανακτηθεί. Μπορείτε να τον επαναφέρετε χρησιμοποιώντας τη διεύθυνση ηλεκτρονικού ταχυδρομείου που συνδέεται με το λογαριασμό σας.
 
 ----------------------------
-Username: {USERNAME}
+Όνομα μέλους: {USERNAME}
 
-Board URL: {U_BOARD}
+
+Δεσμός κοινότητας: {U_BOARD}
 ----------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
+Χρήσιμες πληροφορίες για την εγκατάσταση του phpBB λογισμικού μπορούν να βρεθούν στον φάκελο "docs" στην εγκατάσταση σας και στην σελίδα υποστήριξης του phpBB.com - http://www.phpbb.com/support/
 
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+Για να κρατήσετε την κοινότητα σας ασφαλή και προστατευμένη, σας προτείνουμε να την κρατάτε ενημερωμένη με τις τρέχουσες εκδόσεις του λογισμικού που μπορεί να γίνει εύκολα αν γραφτείτε στην λίστα αλληλογραφίας του phpBB.com, που αναφέρετε πιο πάνω.
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
@@ -509,42 +515,30 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} Γνωστοποίηση νέου θέματος - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Γεια σας {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+Λάβατε αυτό το μήνυμα γιατί παρακολουθείτε την Δ. Συζήτηση, "{FORUM_NAME}" στο "{SITENAME}". Αναρτήθηκε νέο θέμα από την τελευταία σας επίσκεψη, "{TOPIC_TITLE}". Ακολουθήστε τον παρακάτω δεσμό για να το διαβάσετε. Δεν θα υπάρξει άλλη ειδοποίηση για αυτήν την ανάρτηση, μέχρι να επισκεφτείτε την Δ. Συζήτηση
 
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Εάν δεν επιθυμείτε πλέον, την παρακολούθηση του Θέματος επιλέξτε "Παύση παρακολούθησης αυτού του Θέματος" στο κάτω τμήμα της σελίδας του Θέματος ή πατήστε στον ακόλουθο δεσμό
 
 {U_STOP_WATCHING_FORUM}
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{PM_SUBJECT}"
+	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Κλείσιμο αναφοράς  -  "{PM_SUBJECT}"
 
 Hello {USERNAME},
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed. If you have further questions, please contact {CLOSER_NAME} by private message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{PM_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
+Έχετε λάβει αυτήν την ειδοποίηση επειδή η αναφορά που θέσατε με προσωπικό μήνυμα  "{PM_SUBJECT}" και "{SITENAME}" έχει χειριστεί από κάποιον συντονιστή ή από τον διαχειριστή. Η αναφορά μετά θα κλείσει. Εάν έχετε περισσότερες ερωτήσεις ελάτε σε επικοινωνία {CLOSER_NAME} με προσωπικό μήνυμα
 
 
 {EMAIL_SIG}',
@@ -553,37 +547,52 @@ You are receiving this notification because the report you filed regarding the p
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Διαγραφή αναφοράς- "{PM_SUBJECT}"
 
-Hello {USERNAME},
+Γεια σου {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+Έχετε λάβει αυτήν την ειδοποίηση επειδή η αναφορά που κάνατε για αυτό το προσωπικό μήνυμα "{PM_SUBJECT}" και  "{SITENAME}" έχει διαγραφεί από κάποιον συντονιστή ή από τον διαχειριστή
 
-If you want to view the post, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Αποδοχή θέματος - "{POST_SUBJECT}"
+
+Γεια σας {USERNAME},
+
+Λάβατε αυτήν την ειδοποίηση γιατί η δημοσίευση σας "{POST_SUBJECT}" στο "{SITENAME}" έγινε αποδεκτή από κάποιον συντονιστή ή διαχειριστή.
+
+Αν θέλετε να δείτε την δημοσίευση ακολουθήστε τον παρακάτω δεσμό:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Αν θέλετε να δείτε το θέμα ακολουθήστε τον παρακάτω δεσμό:
 {U_VIEW_TOPIC}
 
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Απόρριψη δημοσίευσης — „{POST_SUBJECT}“
 
-Hello {USERNAME},
+Γεια σας {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Λάβατε αυτήν την ειδοποίηση γιατί η δημοσίευση σας „{POST_SUBJECT}“ στο „{SITENAME}“ δεν έγινε αποδεκτή από κάποιον συντονιστή ή διαχειριστή.
 
-The following reason was given for the disapproval:
+Ο ακόλουθος λόγο δόθηκε για την μη αποδοχή:
 
 {REASON}
 
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
@@ -675,21 +684,22 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} Ένα νέο προσωπικό μήνυμα αφίχθη
 
-Hello {USERNAME},
+Γεια σας {USERNAME},
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+Έχετε λάβει ένα νέο προσωπικό μήνυμα από τον "{AUTHOR_NAME}" στο λογαριασμό σας του "{SITENAME}" με το ακόλουθο θέμα:
 
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+Μπορείτε να διαβάσετε το μήνυμα σας  ακολουθώντας τον παρακάτω σύνδεσμο:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+Έχετε επιλέξει να ειδοποιήστε για κάθε εισερχόμενο μήνυμα, να θυμάστε πως μπορείτε να απενεργοποιήσετε την λειτουργία της ειδοποίησης, αλλάζοντας την κατάλληλη ρύθμιση στο προφίλ σας.
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
@@ -709,15 +719,15 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+Γεια σας {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Το ακόλουθο είναι ένα email από τον {FROM_USERNAME} μέσο του λογαριασμού σας στο "{SITENAME}". Εάν το μήνυμα αυτό αποτελεί ενόχληση με προσβλητικό ή ανόητο περιεχόμενο παρακαλώ επικοινωνήστε με τον διαχειριστή της κοινότητας στην ακόλουθη διεύθυνση:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Να συμπεριλάβετε ολόκληρο το μήνυμα ιδίως τις κεφαλίδες. Έχετε υπόψη ότι ως διεύθυνση απάντησης έχει ορισθεί η διεύθυνση του {FROM_USERNAME}.
 
-Message sent to you follows
+Ακολουθεί το μήνυμα που σας απεστάλη
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -728,15 +738,15 @@ Message sent to you follows
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+Γεια σας {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+το ακόλουθο είναι ένα email από τον {FROM_USERNAME} μέσο του λογαριασμού σας στο "{SITENAME}". Εάν το μήνυμα αυτό αποτελεί ενόχληση με προσβλητικό ή ανόητο περιεχόμενο παρακαλώ επικοινωνήστε με τον διαχειριστή της κοινότητας στην ακόλουθη διεύθυνση:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Να συμπεριλάβετε ολόκληρο το μήνυμα. Έχετε υπόψη ότι ως  διεύθυνση απάντησης έχει ορισθεί o λογαριασμός του IM.
 
-Message sent to you follows
+Ακολουθεί το μήνυμα που σας απεστάλη
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -746,157 +756,167 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Αναφορά κλειδώματος — „{POST_SUBJECT}“
 
-Hello {USERNAME},
+Γεια σας {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
+Λαμβάνετε αυτην την ειδοποίηση γιατί η αναφορά που συμπληρώσατε στην δημοσίευση „{POST_SUBJECT}“  στο θέμα „{TOPIC_TITLE}“  στο „{SITENAME}“ χειρίσθηκε από έναν συντονιστή ή διαχειριστή. Η αναφορά κλειδώθηκε. Αν έχετε ερωτήσεις πάνω σε αυτό επικοινωνήστε με τον {CLOSER_NAME} χρησιμοποιώντας προσωπικό μήνυμα.
 
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Διαγραφή αναφοράς — „{POST_SUBJECT}“
 
-Hello {USERNAME},
+Γεια σας {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
+Λαμβάνετε αυτήν την ειδοποίηση γιατί η αναφορά που συμπληρώσατε στην δημοσίευση „{POST_SUBJECT}“ στο θέμα „{TOPIC_TITLE}“ στο „{TOPIC_TITLE}“ διεγράφη από κάποιον συντονιστή ή διαχειριστή.
 
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Αποδοχή θέματος — „{TOPIC_TITLE}“
 
-Hello {USERNAME},
+Γεια σας {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+Λάβατε αυτήν την ειδοποίηση γιατί το θέμα σας „{TOPIC_TITLE}“ στο „{SITENAME}“ έγινε αποδεκτό από κάποιον συντονιστή ή διαχειριστή.
 
-If you want to view the topic, click the following link:
+Αν θέλετε να δείτε το θέμα ακολουθήστε τον παρακάτω σύνδεσμο:
 {U_VIEW_TOPIC}
 
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Απόρριψη δημοσίευσης  — „{TOPIC_TITLE}“
 
-Hello {USERNAME},
+Γεια σας {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Λάβατε αυτήν την ειδοποίηση γιατί η δημοσίευση σας "{POST_SUBJECT}" στο "{SITENAME}" δεν έγινε αποδεκτή από κάποιον συντονιστή ή διαχειριστή.
 
-The following reason was given for the disapproval:
+Ο ακόλουθος λόγο δόθηκε για την μη αποδοχή:
 
 {REASON}
 
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Γνωστοποίηση απάντησης στη Θ. Ενότητα - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Γεια σας {USERNAME},
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+Λάβατε αυτό το μήνυμα γιατί παρακολουθείτε το θέμα, "{TOPIC_TITLE}" στο "{SITENAME}". Αναρτήθηκε ένα νέο μήνυμα στο θέμα μετά την τελευταία σας επίσκεψη. Δεν θα υπάρξει άλλη ειδοποίηση για αυτήν την ανάρτηση, μέχρι να επισκεφτείτε την Θ. Ενότητα.
 
-If you want to view the newest post made since your last visit, click the following link:
+Εάν θέλετε να δείτε τις νέες δημοσιεύσεις στο θέμα ακολουθήστε τον σύνδεσμο:
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Εάν θέλετε να δείτε το θέμα, πατήστε τον ακόλουθο σύνδεσμο:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Εάν θέλετε να δείτε την Δ. Συζήτηση, πατήστε τον ακόλουθο σύνδεσμο:
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+Εάν δεν επιθυμείτε πλέον, την παρακολούθηση του Θέματος επιλέξτε "Παύση παρακολούθησης αυτού του Θέματος" στο κάτω τμήμα της σελίδας του Θέματος ή πατήστε στον ακόλουθο σύνδεσμο
 
 {U_STOP_WATCHING_TOPIC}
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Επανεργοποίηστε τον λογαριασμό σας
 
-Hello {USERNAME},
+Γεια σας {USERNAME},
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
+Ο λογαριασμό σας στο "{SITENAME}" απενεργοποιήθηκε, πιθανότατα από αλλαγές που έγιναν στο προφίλ σας. Για να τον ενεργοποιήσετε ξανά ακολουθήστε τον παρακάτω σύνδεσμο:
 
 {U_ACTIVATE}
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Ο λογαριασμός σας απενεργοποιήθηκε
 
-Hello {USERNAME},
+Γεια σας {USERNAME},
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
+Ο λογαριασμό σας στο "{SITENAME}" απενεργοποιήθηκε, πιθανότατα από αλλαγές που έγιναν στο προφίλ σας. Ο διαχειριστής της κοινότητας θέλει να τον ενεργοποιήσετε πριν μπορέσετε να συνδεθείτε. Θα λάβετε και άλλη ειδοποίηση όταν γίνει αυτό.
 
-{EMAIL_SIG}',
+{EMAIL_SIG
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} Ενεργοποίηση νέου κωδικού πρόσβασης
 
-Hello {USERNAME}
+Γεια σας {USERNAME}
 
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
+Λάβατε αυτό το μήνυμα γιατί (ή κάποιος που προσποιήθηκε ότι ήσασταν εσείς) ζητήσατε να σας αποσταλεί νέος κωδικός σύνδεσης για τον λογαριασμό σας στο "{SITENAME}". Αν δεν το ζητήσατε εσείς παρακαλούμε αγνοήστε αυτό το μήνυμα, αν συνεχίσετε να το λαμβάνετε παρακαλώ επικοινωνήστε με τον διαχειριστή της Δ. Συζήτησης.
 
-To use the new password you need to activate it. To do this click the link provided below.
+Για να χρησιμοποιήσετε τον νέο κωδικό σας πρέπει να τον ενεργοποιήσετε. Για να το κάνετε αυτό ακολουθήστε τον παρακάτω σύνδεσμο.
 
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+Όταν ολοκληρωθεί η ενεργοποίηση θα μπορείτε να εισέλθετε χρησιμοποιώντας τον παρακάτω κωδικό πρόσβασης:
 
-Password: {PASSWORD}
+Κωδικός σύνδεσης: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+Μπορείτε φυσικά να αλλάξετε τον κωδικό πρόσβασης και μόνος σας απο το προφίλ σας. Αν συναντήσετε οποιαδήποτε δυσκολία παρακαλώ επικοινωνήστε με τον διαχειριστή της κοινότητας.
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Επανεργοποίηση του λογαριασμού σας στο "{SITENAME}" - {U_BOARD}
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+Ένας διαχειριστής ανάγκασε τον λογαριασμό σας σε ενανεργοποίηση. Ο λογαριασμός σας είναι προσωρινά ανενεργός.
+Παρακαλούμε ακολουθήστε τα παρακάτω βήματα για αν ενεργοποιήσετε ξανά τον λογαριασμό σας.
 
-Please keep this e-mail for your records. Your account information is as follows:
+Παρακαλούμε κρατήστε αυτό το μήνυμα στο αρχείο σας. Οι λεπτομέρειες του λογαριασμού σας είναι οι:
 
 ----------------------------
-Username: {USERNAME}
+Όνομα μέλους: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+	
+Ο κωδικός πρόσβασης αποθηκεύεται κρυπτογραφημένος στην βάση μας και δεν μπορεί να ανακτηθεί. Αν τον ξεχάσετε μπορείτε να ζητήσετε νέον κωδικό που θα ενεργοποιηθεί με τον ίδιο τρόπο σε αυτόν τον λογαριασμό.
 
-Please visit the following link to reactivate your account:
+Παρακαλώ ακολουθήστε τον παρακάτω σύνδεσμο για να ενεργοποιήσετε πάλι τον λογαριασμό σας:
 
 {U_ACTIVATE}
 
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
@@ -1004,15 +1024,66 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Υπενθύμιση ανενεργού λογαριασμού
 
-Hello {USERNAME},
+Γεια σας {USERNAME},
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+Αυτή η γνωστοποίηση  είναι μια υπενθύμιση ότι ο λογαριασμός σας στο  "{SITENAME}", που δημιουργήθηκε στις {REGISTER_DATE}, παραμένεις ανενεργός. Αν θέλετε να ενεργοποιήσετε το λογαριασμό αυτό, μπορείτε να επισκεφθείτε τον παρακάτω σύνδεσμο:
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+Ευχαριστούμε για την έγγραφη στο "{SITENAME}", περιμένουμε την συμμετοχή σας.
+
+{EMAIL_SIG}
+',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Καλώς ήρθατε στο „{SITENAME}“ — {U_BOARD}
+
+{WELCOME_MSG}
+
+Παρακαλούμε κρατήστε αυτό το μήνυμα στο αρχείο σας. Οι λεπτομέρειες του λογαριασμού σας είναι οι:
+
+----------------------------
+Όνομα μέλους: {USERNAME}
+----------------------------
+
+Ο κωδικός πρόσβασης σας είναι κρυπτογραφημένος στην βάση μας και δεν μπορεί να ανακτηθεί. Αν τον ξεχάσετε μπορείτε να ζητήσετε νέον κωδικό που θα ενεργοποιηθεί με τον ίδιο τρόπο σε αυτόν τον λογαριασμό.
+
+Επισκεφθείτε τον ακόλουθο σύνδεσμο για να ενεργοποιήσετε τον λογαριασμό σας:
+
+{U_ACTIVATE}
+
+
+Ευχαριστούμε για την εγγραφή σας.
+
+{EMAIL_SIG}
+',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Καλώς ήρθατε στο „{SITENAME}“ 
+
+{WELCOME_MSG}
+
+Παρακαλούμε κρατήστε αυτό το μήνυμα στο αρχείο σας. Οι λεπτομέρειες του λογαριασμού σας είναι οι:
+
+----------------------------
+Όνομα μέλους: {USERNAME}
+
+
+Ιστοσελίδας σύνδεσμος: {U_BOARD}
+----------------------------
+
+Ο κωδικός πρόσβασης έχει αποθυκευτεί κρυπτογραφημένος στην βάση μας και δεν μπορεί να ανακτηθεί. Αν τον ξεχάσετε μπορείτε να ζητήσετε νέον κωδικό που θα ενεργοποιηθεί με τον ίδιο τρόπο σε αυτόν τον λογαριασμό.
+
+
+Ευχαριστούμε για την εγγραφή σας.
 
 {EMAIL_SIG}',
 ));
@@ -1020,74 +1091,28 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Καλώς ήρθατε στο „{SITENAME}“ — {U_BOARD}
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Παρακαλούμε κρατήστε αυτό το μήνυμα στο αρχείο σας. Οι λεπτομέρειες του λογαριασμού σας είναι οι:
 
 ----------------------------
-Username: {USERNAME}
+Όνομα μέλους: {USERNAME}
+
+Σύνδεσμος ιστοσελίδας: {U_BOARD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
-Please visit the following link in order to activate your account:
+Παρακαλώ ακολουθήστε τον σύνδεσμο για να ενεργοποιήσετε τον λογαριασμό σας:
 
 {U_ACTIVATE}
 
+Ο κωδικός πρόσβασης αποθηκεύεται κρυπτογραφημένος στην βάση μας και δεν μπορεί να ανακτηθεί. Αν τον ξεχάσετε μπορείτε να ζητήσετε νέον κωδικό που θα ενεργοποιηθεί με τον ίδιο τρόπο σε αυτόν τον λογαριασμό.
 
-Thank you for registering.
+Ευχαριστούμε για την εγγραφή σας.
 
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
-
-{WELCOME_MSG}
-
-Please keep this e-mail for your records. Your account information is as follows:
-
-----------------------------
-Username: {USERNAME}
-
-Board URL: {U_BOARD}
-----------------------------
-
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
-Thank you for registering.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
-
-{WELCOME_MSG}
-
-Please keep this e-mail for your records. Your account information is as follows:
-
-----------------------------
-Username: {USERNAME}
-
-Board URL: {U_BOARD}
-----------------------------
-
-Please visit the following link in order to activate your account:
-
-{U_ACTIVATE}
-
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
-Thank you for registering.
-
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 

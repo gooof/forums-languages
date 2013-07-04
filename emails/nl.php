@@ -1,16 +1,16 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activeer gebruikersaccount
 
-Hello,
+Hallo,
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+Het account van "{USERNAME}" is gedeactiveerd of zojuist aangemaakt, je zou de gegevens van de gebruiker (indien nodig) kunnen controleren. 
 
-Use this link to view the user\'s profile:
+Gebruik deze link om de gegevens te controleren:
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+Gebruik deze link om het account te activeren:
 {U_ACTIVATE}
 
 
@@ -20,33 +20,17 @@ Use this link to activate the account:
 
 
 $email = array_merge($email, array(
-	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+	'email/admin_send_email.txt' 		=> 'Onderstaande e-mail werd naar jou gestuurd door een beheerder van "{SITENAME}". Als dit bericht ongewenste gegevens bevat, neem dan contact op met de beheerder van dit forum op het volgende e-mailadres:
 
 {CONTACT_EMAIL}
 
-Include this full e-mail (particularly the headers). 
+Sluit de volledige mail (inclusief header) bij.
 
-Message sent to you follows:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Verzonden bericht:
+~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
-
-{EMAIL_SIG}
-',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
-
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
 
 {EMAIL_SIG}',
 ));
@@ -54,23 +38,37 @@ Your password has been securely stored in our database and cannot be retrieved. 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account geactiveerd
+
+Hallo {USERNAME},
+
+Je account op "{SITENAME}" is geactiveerd door een beheerder, je kunt nu inloggen.
+
+Je wachtwoord is veilig opgeslagen in onze database en kan niet worden achterhaald. Als je je wachtwoord bent vergeten, kun je het laten resetten via bij het account behorende e-mailadres. 
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welkom op "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Deze e-mail bevat enkele belangrijke gegevens. Zorg dus dat je deze bewaart. Je gegevens zijn als volgt:
 
 ----------------------------
-Username: {USERNAME}
+Gebruikersnaam: {USERNAME}
 
-Board URL: {U_BOARD}
+Forum URL: {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+Op dit moment is je account inactief en moet door een beheerder worden goedgekeurd voordat je kunt inloggen. Je ontvangt een e-mail zodra dit is gebeurd.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Je wachtwoord is veilig opgeslagen in onze database en kan niet meer worden opgevraagd. In geval dat je het bent vergeten, kun je het laten resetten met het bij het account behorende e-mailadres.
 
-Thank you for registering.
+Bedankt voor je registratie.
 
 {EMAIL_SIG}',
 ));
@@ -213,46 +211,46 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welkom op "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+Door de COPPA-wetgeving is je account momenteel inactief.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Print dit bericht uit en laat je ouders/voogd dit formulier ondertekenen. Fax het daarna naar:
 
 {FAX_INFO}
 
-OR mail it to:
+Of e-mail het naar:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ KNIP HIER ------------------------------
+Toestemming om gebruik te maken van "{SITENAME}" - {U_BOARD}
 
-Username: {USERNAME}
+Gebruikersnaam: {USERNAME}
 E-mail: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+IK HEB DE INFORMATIE DIE MIJN KIND OPGEGEVEN HEEFT GECONTROLEERD EN GEEF BIJ DEZE TOESTEMMING AAN {SITENAME} OM DEZE GEGEVENS OP TE SLAAN.
+IK BEGRIJP DAT DEZE INFORMATIE ALTIJD VERANDERD KAN WORDEN DOOR MIDDEL VAN HET INVOEREN VAN EEN WACHTWOORD.
+IK BEGRIJP DAT ER ALTIJD VERZOCHT KAN WORDEN DEZE INFORMATIE TE VERWIJDEREN VAN {SITENAME}.
 
 
-Parent or guardian 
-(print your name here): _____________________
+Ouder of voogd
+(vul naam in): _____________________
 
-(sign here): __________________ 
+(handtekening): __________________
 
-Date: _______________
+Datum: _______________
 
------------------------------- CUT HERE ------------------------------
+------------------------------ KNIP HIER ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Als de beheerder het bovenstaande formulier heeft ontvangen via fax of e-mail, zal je account geactiveerd worden. 
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Jouw wachtwoord is veilig opgeslagen in onze database en kan niet worden opgevraagd. Indien je het bent vergeten, kun je het laten resetten in combinatie met het e-mailadres behorende bij het account.
 
-Thank you for registering.
+Bedankt voor je registratie.
 
 {EMAIL_SIG}
 ',
@@ -261,46 +259,46 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welkom op "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+Door de COPPA-wetgeving is je account momenteel inactief.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Print dit bericht uit en laat je ouders/voogd dit formulier ondertekenen. Fax het daarna naar:
 
 {FAX_INFO}
 
-OR mail it to:
+OF e-mail het naar:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ KNIP HIER ------------------------------
+Toestemming om gebruik te maken van "{SITENAME}" - {U_BOARD}
 
-Username: {USERNAME}
+Gebruikersnaam: {USERNAME}
 E-mail: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+IK HEB DE INFORMATIE DIE MIJN KIND OPGEGEVEN HEEFT GECONTROLEERD EN GEEF BIJ DEZE TOESTEMMING AAN {SITENAME} OM DEZE GEGEVENS OP TE SLAAN.
+IK BEGRIJP DAT DEZE INFORMATIE ALTIJD VERANDERD KAN WORDEN DOOR MIDDEL VAN HET INVOEREN VAN EEN WACHTWOORD.
+IK BEGRIJP DAT ER ALTIJD VERZOCHT KAN WORDEN DEZE INFORMATIE TE VERWIJDEREN VAN {SITENAME}.
 
 
-Parent or guardian 
-(print your name here): _____________________
+Ouder of voogd
+(vul naam in): _____________________
 
-(sign here): __________________ 
+(handtekening): __________________
 
-Date: _______________
+Datum: _______________
 
------------------------------- CUT HERE ------------------------------
+------------------------------ KNIP HIER ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Als de beheerder het bovenstaande formulier heeft ontvangen via fax of e-mail zal je account geactiveerd worden. 
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Jouw wachtwoord is veilig opgeslagen in onze database en kan niet worden opgevraagd. Indien je het bent vergeten, kun je het laten resetten in combinatie met het e-mailadres behorende bij het account.
 
-Thank you for registering.
+Bedankt voor je registratie.
 
 {EMAIL_SIG}
 ',
@@ -309,19 +307,19 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - Email een vriend
 
-Hello {TO_USERNAME},
+Hallo {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Deze e-mail is gestuurd via "{SITENAME}" door {FROM_USERNAME} die dacht dat je wel geïnteresseerd zou zijn in het volgende onderwerp:
 
 {TOPIC_NAME}
 
-You can find it at:
+Je kunt het hier vinden:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Hieronder zou een bericht van {FROM_USERNAME} kunnen staan. Dit bericht is niet gezien of goedgekeurd door een beheerder. Indien je een klacht hebt betreffende dit bericht, neem dan contact op met de beheerder via {BOARD_CONTACT}. Sluit de volledige e-mail (inclusief header) bij als je contact opneemt via dit e-mailadres.
 
 ----------
 
@@ -379,97 +377,92 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum berichtherinnering - {FORUM_NAME}
 
-Hello {USERNAME},
+Hallo {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+Je hebt deze e-mail ontvangen omdat je een onderwerp volgt in, "{FORUM_NAME}" op "{SITENAME}". Dit forum heeft een nieuw bericht in het onderwerp "{TOPIC_TITLE}" sinds je laatste bezoek. Je kunt de volgende link gebruiken om het laatste nieuwe bericht te lezen. Er zullen geen herinneringen meer gestuurd worden tot je dit onderwerp bezocht hebt.
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Als je naar het onderwerp wilt gaan, klik dan op de volgende link:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Als je naar het forum wilt gaan, klik dan op de volgende link:
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Als je dit forum niet langer wilt bekijken kun je klikken op "Geen abonnement meer op dit forum" in het juiste forum, of door op de volgende link te klikken:
 
 {U_STOP_WATCHING_FORUM}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} Je bent toegevoegd aan een gebruikersgroep
 
-Congratulations,
+Gefeliciteerd,
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+Je bent toegevoegd aan de "{GROUP_NAME}" groep op "{SITENAME}". 
+Deze actie is uitgevoerd door een groepsmoderator of door de beheerder. Neem contact met hen op voor meer informatie. 
 
-You can view your groups information here:
+Je kunt de groepsinformatie hier bekijken:
 {U_GROUP}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Je verzoek is geaccepteerd
 
-Congratulations,
+Gefeliciteerd,
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+Je verzoek om tot de gebruikersgroep "{GROUP_NAME}" op "{SITENAME}" toe te treden is geaccepteerd. Klik op de volgende link om je lidmaatschap van de groep te bekijken.
 
 {U_GROUP}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} Een verzoek ingediend om tot jouw groep toe te treden
 
-Dear {USERNAME},
+Beste {USERNAME},
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+Een gebruiker heeft verzocht om tot de groep "{GROUP_NAME}" toe te treden die jij modereert op {SITENAME}.
+Om dit verzoek te accepteren of te weigeren voor lidmaatschap van de groep, kun je op de volgende link klikken:
 
 {U_PENDING}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installatie geslaagd
 
-Congratulations,
+Gefeliciteerd,
 
-You have successfully installed phpBB on your server.
+Je hebt phpBB succesvol op je server geïnstalleerd.
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Deze e-mail bevat belangrijke informatie over je registratie en het is aan te raden om deze te bewaren. Je wachtwoord is veilig opgeslagen in onze database en kan niet worden opgevraagd. Indien je je wachtwoord bent vergeten, kun je deze laten resetten aan de hand van je opgegeven e-mailadres en gebruikersnaam.
 
 ----------------------------
-Username: {USERNAME}
+Gebruikersnaam: {USERNAME}
 
-Board URL: {U_BOARD}
+Forumadres: {U_BOARD}
 ----------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
+Belangrijke informatie over je phpBB-installatie vind je in de "docs" map van de installatie en op de website - http://www.phpbb.nl/documentatie
 
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+Om je forum veilig te houden, raden wij je aan om de meest recente versies van de forumsoftware bij te houden. Voor jouw gemak is er een nieuwsbrief beschikbaar, die je kunt vinden op bovengenoemde pagina.
 
 {EMAIL_SIG}',
 ));
@@ -509,15 +502,15 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} Nieuwe onderwerpherinnering - {FORUM_NAME}
 
-Hello {USERNAME},
+Hallo {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+Je ontvangt deze e-mail omdat je een forum in de gaten houdt, "{FORUM_NAME}" op {SITENAME}. Dit forum heeft een nieuw onderwerp "{TOPIC_TITLE}" sinds je laatste bezoek. Je kunt de volgende link gebruiken om het forum te bekijken, er zullen geen herinneringen meer gestuurd worden tot je dit forum hebt bezocht.
 
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Als je dit forum niet langer wilt bekijken, kun je klikken op "Geen abonnement meer op dit forum" in het juiste forum, of door op de volgende link te klikken:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -527,24 +520,11 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{PM_SUBJECT}"
+	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Melding gesloten - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+Hallo {USERNAME},
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed. If you have further questions, please contact {CLOSER_NAME} by private message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{PM_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
+Je hebt deze e-mail ontvangen omdat je melding over het privébericht "{PM_SUBJECT}" op "{SITENAME}" is afgehandeld door een moderator of een beheerder. Je melding is nu gesloten. Als je nog vragen hebt, neem dan contact op met {CLOSER_NAME} door middel van een PB.
 
 
 {EMAIL_SIG}',
@@ -553,16 +533,29 @@ You are receiving this notification because the report you filed regarding the p
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Melding verwijderd - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+Hallo {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+Je hebt deze e-mail ontvangen omdat je melding over het privébericht "{PM_SUBJECT}" op "{SITENAME}" is verwijderd door een moderator of een beheerder.
 
-If you want to view the post, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Bericht geaccepteerd - {POST_SUBJECT}
+
+Hallo {USERNAME},
+
+Je ontvangt deze e-mail omdat je bericht "{POST_SUBJECT}" op {SITENAME} is geaccepteerd door een moderator of beheerder. 
+
+Als je het bericht wilt bekijken, klik dan op de volgende link:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Als je het onderwerp wilt lezen, klik dan op de volgende link:
 {U_VIEW_TOPIC}
 
 
@@ -572,13 +565,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Bericht geweigerd - {POST_SUBJECT}
 
-Hello {USERNAME},
+Hallo {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Je ontvangt deze e-mail omdat je bericht "{POST_SUBJECT}" op {SITENAME} geweigerd is door een moderator of beheerder. 
 
-The following reason was given for the disapproval:
+De volgende reden is gegeven voor deze actie:
 
 {REASON}
 
@@ -675,19 +668,18 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} Er is een nieuw bericht
 
-Hello {USERNAME},
+Hallo {USERNAME},
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+Je hebt een nieuw bericht ontvangen van "{AUTHOR_NAME}" op het forum "{SITENAME}" met het volgende onderwerp:
 
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+Klik op de volgende link om je berichten te bekijken:
+{U_VIEW_MESSAGE}
 
-{U_INBOX}
-
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+Je kunt deze waarschuwingen eventueel uitschakelen via de instellingen in je profiel.
 
 {EMAIL_SIG}',
 ));
@@ -708,49 +700,48 @@ To read the comment , click the link below.
 
 
 $email = array_merge($email, array(
-	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_email.txt' 		=> 'Hallo {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Dit bericht bevat een e-mail die de gebruiker "{FROM_USERNAME}" naar jou gestuurd heeft via {SITENAME}. In geval van misbruik, neem contact op met de verzender van de e-mail of de beheerder van de site. De beheerder is te bereiken via het volgende e-mailadres:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Neem in dat geval de volledige tekst van deze e-mail in je bericht op, inclusief de headers van het bericht.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Let op! Het antwoordadres voor deze mail is het e-mailadres van "{FROM_USERNAME}".
 
-{MESSAGE}
-',
+Het volgende bericht is naar je verzonden:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+{MESSAGE}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_im.txt' 		=> 'Hallo {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Dit bericht bevat een e-mail die de gebruiker "{FROM_USERNAME}" naar jou gestuurd heeft via {SITENAME}. In geval van misbruik, neem contact op met de verzender van de e-mail of de beheerder van de site. De beheerder is te bereiken via het volgende e-mailadres:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Neem in dat geval de volledige tekst van deze e-mail in je bericht op.
+Let op, het adres van de afzender is ingesteld als "Instant Messenger" account van het forum.
 
-Message sent to you follows
+Het bericht dat naar jou is verzonden:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{MESSAGE}
-',
+{MESSAGE}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Melding gesloten - {POST_SUBJECT}
 
-Hello {USERNAME},
+Hallo {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
+Je hebt deze e-mail ontvangen omdat je melding over het bericht "{POST_SUBJECT}" in "{TOPIC_TITLE}" op {SITENAME} is afgehandeld door een moderator of een beheerder. Je melding is nu gesloten. Als je nog vragen hebt, neem dan contact op met {CLOSER_NAME} door middel van een PB.
 
 
 {EMAIL_SIG}',
@@ -759,11 +750,11 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Melding verwijderd - {POST_SUBJECT}
 
-Hello {USERNAME},
+Hallo {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
+Je hebt deze e-mail ontvangen omdat je melding over het bericht "{POST_SUBJECT}" in "{TOPIC_TITLE}" op {SITENAME} is verwijderd door een moderator of een beheerder.
 
 
 {EMAIL_SIG}',
@@ -772,13 +763,13 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Onderwerp goedgekeurd - {TOPIC_TITLE}
 
-Hello {USERNAME},
+Hallo {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+Je hebt deze e-mail ontvangen omdat je onderwerp "{TOPIC_TITLE}" op {SITENAME} is goedgekeurd door een moderator of een beheerder. 
 
-If you want to view the topic, click the following link:
+Als je het onderwerp wilt lezen, klik dan op de volgende link:
 {U_VIEW_TOPIC}
 
 
@@ -788,13 +779,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Onderwerp afgekeurd - {TOPIC_TITLE}
 
-Hello {USERNAME},
+Hallo {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Je ontvangt deze e-mail omdat je onderwerp "{TOPIC_TITLE}" op {SITENAME} is afgekeurd door een moderator of beheerder. 
 
-The following reason was given for the disapproval:
+De volgende reden is gegeven voor de afkeuring:
 
 {REASON}
 
@@ -805,22 +796,22 @@ The following reason was given for the disapproval:
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Melding van het plaatsen van een reactie - {TOPIC_TITLE}
 
-Hello {USERNAME},
+Hallo {USERNAME},
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+Je hebt deze e-mail ontvangen omdat je geabonneerd bent op het onderwerp: "{TOPIC_TITLE}" op {SITENAME}. Er is een reactie gekomen op dit onderwerp na je laatste bezoek. Je kunt de volgende link gebruiken om deze reactie(s) te bekijken. Je ontvangt geen e-mails meer over dit onderwerp totdat je het bezocht hebt.
 
-If you want to view the newest post made since your last visit, click the following link:
+Als je de laatste berichten sinds je laatste bezoek wilt zien, klik dan op de volgende link:
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Als je naar het onderwerp wilt gaan, klik dan op de volgende link:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Als je naar het forum wilt gaan, klik dan op de volgende link:
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+Als je geen e-mails wilt ontvangen, kun je op "Geen abonnement meer op dit onderwerp" klikken onderaan het onderwerp. Of klik op de volgende link:
 
 {U_STOP_WATCHING_TOPIC}
 
@@ -830,47 +821,25 @@ If you no longer wish to watch this topic you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Je moet je account opnieuw activeren!
 
-Hello {USERNAME},
+Hallo {USERNAME},
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
-
-{U_ACTIVATE}
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
-
-Hello {USERNAME}
-
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
-
-To use the new password you need to activate it. To do this click the link provided below.
+Je account op "{SITENAME}" is gedeactiveerd, waarschijnlijk door wijzigingen in je profiel. Om je account weer actief te maken dien je op onderstaande link te klikken:
 
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+{EMAIL_SIG}',
+));
 
-Password: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+
+$email = array_merge($email, array(
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Je account is gedeactiveerd
+
+Hallo {USERNAME},
+
+Je account op "{SITENAME}" is gedeactiveerd, dit komt waarschijnlijk door een wijziging in je profiel. De beheerder van het forum zal hem moeten activeren voordat je weer kunt inloggen. Je krijgt een e-mail wanneer dit gebeurd is.
 
 {EMAIL_SIG}',
 ));
@@ -878,20 +847,42 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} Nieuw wachtwoord activeren
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+Hallo {USERNAME},
 
-Please keep this e-mail for your records. Your account information is as follows:
+Je ontvangt deze e-mail omdat je (of iemand die namens jou) een nieuw wachtwoord aangevraagd heeft voor jouw account op {SITENAME}. Mocht je deze niet hebben aangevraagd, negeer deze e-mail dan en klik vooral niet op onderstaande link! Als je deze melding blijft ontvangen, neem dan contact op met de beheerder. 
+
+Om het nieuwe wachtwoord te activeren, hoef je alleen op deze link klikken:
+
+{U_ACTIVATE}
+
+Als het is gelukt kun je het volgende wachtwoord te gebruiken:
+
+Wachtwoord: {PASSWORD}
+
+Je kunt natuurlijk dit wachtwoord via je profiel wijzigen. Mocht je hiermee problemen hebben, neem dan contact op met de beheerder.
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Heractiveer je account op "{SITENAME}"
+
+Een beheerder heeft gevraagd om je account te heractiveren. Deze is momenteel inactief. 
+Volg de stappen hieronder om je account te heractiveren. 
+
+Bewaar deze e-mail goed. Je accountinformatie is als volgt:
 
 ----------------------------
-Username: {USERNAME}
+Gebruikersnaam: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Je wachtwoord is veilig opgeslagen in onze database en kan niet worden opgevraagd. Indien je het bent vergeten, kun je het laten resetten in combinatie met het e-mailadres behorende bij jouw account.
 
-Please visit the following link to reactivate your account:
+Volg onderstaande link om je account te heractiveren:
 
 {U_ACTIVATE}
 
@@ -1004,15 +995,15 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactief account herinnering
 
-Hello {USERNAME},
+Hallo {USERNAME},
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+Deze melding is een herinnering dat je account op"{SITENAME}", aangemaakt op {REGISTER_DATE}, nog inactief is. Als je dit account wilt activeren, kun je naar de volgende link gaan:
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+Bedankt voor je registratie op "{SITENAME}", en we zien je graag op het forum.
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +1011,24 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welkom bij "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Bewaar deze e-mail goed ter informatie. Je accountinformatie is als volgt:
 
 ----------------------------
-Username: {USERNAME}
+Gebruikersnaam: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Je wachtwoord is veilig opgeslagen in onze database en kan niet worden opgevraagd. Indien je het bent vergeten, kun je het laten resetten in combinatie met het e-mailadres behorende bij het account.
 
-Please visit the following link in order to activate your account:
+Bezoek de volgende link om je account te activeren:
 
 {U_ACTIVATE}
 
 
-Thank you for registering.
+Dank je voor het registreren.
 
 {EMAIL_SIG}',
 ));
@@ -1045,21 +1036,21 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welkom op "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Bewaar deze e-mail goed ter informatie. Je accountinformatie is als volgt:
 
 ----------------------------
-Username: {USERNAME}
+Gebruikersnaam: {USERNAME}
 
-Board URL: {U_BOARD}
+Forum URL: {U_BOARD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Je wachtwoord is veilig opgeslagen in onze database en kan niet worden opgevraagd. Indien je het bent vergeten, kun je het laten resetten in combinatie met het e-mailadres behorende bij het account.
 
-Thank you for registering.
+Bedankt voor je registratie!
 
 {EMAIL_SIG}',
 ));
@@ -1067,25 +1058,25 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welkom op "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Bewaar deze e-mail goed ter informatie. Je accountinformatie is als volgt:
 
 ----------------------------
-Username: {USERNAME}
+Gebruikersnaam: {USERNAME}
 
-Board URL: {U_BOARD}
+Forum URL: {U_BOARD}
 ----------------------------
 
-Please visit the following link in order to activate your account:
+Ga naar de volgende link om je account te activeren:
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Je wachtwoord is veilig opgeslagen in onze database en kan niet worden opgevraagd. Indien je het bent vergeten, kun je het laten resetten in combinatie met het e-mailadres behorende bij het account.
 
-Thank you for registering.
+Bedankt voor je registratie!
 
 {EMAIL_SIG}',
 ));

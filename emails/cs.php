@@ -1,18 +1,13 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Aktivovat uživatelský účet
 
-Hello,
+Dobrý den,
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+účet, který vlastní "{USERNAME}" byl deaktivován nebo nově vytvořen, měl byste zkontrolovat jeho údaje, pokud je to nutné, a aktivovat jeho účet pomocí následujícího odkazu:
 
-Use this link to view the user\'s profile:
-{U_USER_DETAILS}
-
-Use this link to activate the account:
 {U_ACTIVATE}
-
 
 {EMAIL_SIG}',
 ));
@@ -21,32 +16,17 @@ Use this link to activate the account:
 
 $email = array_merge($email, array(
 	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Následující zpráva vám byla zaslána administrátorem fóra "{SITENAME}". Pokud je tato zpráva spam, obsahuje pohoršující nebo jiné komentáře, které shledáváte jako nevhodné, kontaktujte prosím správce fóra na následující adrese:
 
 {CONTACT_EMAIL}
 
-Include this full e-mail (particularly the headers). 
+Přiložte celý e-mail, obzvláště hlavičky. 
 
-Message sent to you follows:
+Následuje zpráva pro vás:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
-
-{EMAIL_SIG}
-',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
-
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
 
 {EMAIL_SIG}',
 ));
@@ -54,23 +34,35 @@ Your password has been securely stored in our database and cannot be retrieved. 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Účet byl aktivován
+
+Dobrý den {USERNAME},
+
+váš účet na "{SITENAME}" byl aktivován administrátorem. Nyní se můžete přihlásit.
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Vítejte na "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Prosím, uschovejte si tento e-mail pro případné zapomenutí údajů, následují vaše přihlašovací údaje:
 
 ----------------------------
-Username: {USERNAME}
+Uživatelské jméno: {USERNAME}
 
-Board URL: {U_BOARD}
+URL fóra:         {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+Váš účet je momentálně neaktivní, administrátor fóra jej bude muset aktivovat, než se budete moci přihlásit. Obdržíte další e-mail, až toto administrátor provede.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Prosíme, nezapomeňte, že vaše heslo je zašifrováno v naší databázi a nelze jej získat zpět. Pokud jej přesto zapomenete nebo ztratíte, zašleme vám nové, které ale budete muset aktivovat stejným způsobem jako tento účet.
 
-Thank you for registering.
+Děkujeme za vaši registraci.
 
 {EMAIL_SIG}',
 ));
@@ -213,115 +205,115 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Vítejte na "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+Z důvodů pravidel COPPA (vyhláška o ochraně mládeže na internetu platící v USA) je váš účet neaktivní.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Prosím vytiskněte tuto stránku, a nechte ji podepsat rodiči. Poté ji odešlete na následující faxový účet:
 
 {FAX_INFO}
 
-OR mail it to:
+nebo na e-mail:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ ODSTŘIHNĚTE ZDE ------------------------------
+Potvrzení přístupu k "{SITENAME}" - {U_BOARD}
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Uživatelské jméno: {USERNAME}
+Email: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
-
-
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
+ZKONTROLOVAL/A JSEM ÚDAJE, KTERÉ BYLY POSKYTNUTY MÝM DÍTĚTEM A SOUHLASÍM S JEJICH UCHOVÁNÍM NA "{SITENAME}". 
+JSEM SEZNÁMEN/A S TÍM, ŽE TYTO ÚDAJE LZE KDYKOLIV ZMĚNIT ZADÁNÍM HESLA.
+JSEM SEZNÁMEN/A S TÍM, ŽE MOHU KDYKOLIV POŽÁDAT O TO, ABY TATO DATA BYLA STAŽENA A SMAZÁNA Z "{SITENAME}".
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Rodič nebo zákonný zástupce
+(Napište své jméno): _____________________
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+(podpis): __________________ 
 
-Thank you for registering.
+Datum: _______________
 
-{EMAIL_SIG}
-',
+------------------------------ ODSTŘIHNĚTE ZDE ------------------------------
+
+
+Váš účet je momentálně neaktivní, administrátor fóra jej bude muset aktivovat, než se budete moci přihlásit. Administrátor jej aktivuje, jakmile obdrží prohlášení uvedené výše. Obdržíte další e-mail, až toto administrátor provede.
+
+Prosíme nezapomeňte, že vaše heslo je zašifrováno v naší databázi a nelze jej získat zpět. Pokud jej přesto zapomenete nebo ztratíte, zašleme vám nové, které ale budete muset aktivovat stejným způsobem jako tento účet.
+
+Děkujeme za vaši registraci.
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Vítejte na "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+Z důvodů pravidel COPPA (vyhláška o ochraně mládeže na internetu platící v USA) je váš účet neaktivní.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Prosím vytiskněte tuto stránku, a nechte ji podepsat rodiči. Poté ji odešlete na následující fax:
 
 {FAX_INFO}
 
-OR mail it to:
+nebo na e-mail:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+Nakonec vám přijde e-mail aktivující váš účet
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+------------------------------ ODSTŘIHNĚTE ZDE ------------------------------
+Potvrzení přístupu k "{SITENAME}" - {U_BOARD}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+Uživatelské jméno: {USERNAME}
+E-mailová adresa: {EMAIL_ADDRESS}
 
-
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
+ZKONTROLOVAL/A JSEM ÚDAJE, KTERÉ BYLY POSKYTNUTY MÝM DÍTĚTEM A SOUHLASÍM S JEJICH UCHOVÁNÍM NA "{SITENAME}". 
+JSEM SEZNÁMEN/A S TÍM, ŽE TYTO ÚDAJE LZE KDYKOLIV ZMĚNIT ZADÁNÍM HESLA.
+JSEM SEZNÁMEN/A S TÍM, ŽE MOHU KDYKOLIV POŽÁDAT O TO, ABY TATO DATA BYLA STAŽENA A SMAZÁNA Z "{SITENAME}".
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Rodič nebo zákonný zástupce
+(Napište své jméno): _____________________
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+(podpis): __________________ 
 
-Thank you for registering.
+Datum: _______________
 
-{EMAIL_SIG}
-',
+------------------------------ ODSTŘIHNĚTE ZDE ------------------------------
+
+
+Váš účet je momentálně neaktivní, administrátor fóra jej bude muset aktivovat, než se budete moci přihlásit. Obdržíte další e-mail, až toto administrátor provede.
+
+Prosíme nezapomeňte, že vaše heslo je zašifrováno v naší databázi a nelze jej získat zpět. Pokud jej přesto zapomenete nebo ztratíte, zašleme vám nové, které ale budete muset aktivovat stejným způsobem jako tento účet.
+
+Děkujeme za vaši registraci.
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} {SITENAME} - e-mail kamarádovi o tématu
 
-Hello {TO_USERNAME},
+Dobrý den {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+tento e-mail byl odeslán z "{SITENAME}" uživatelem {FROM_USERNAME}, který se domnívá, že by vás mohlo zajímat následující téma:
 
 {TOPIC_NAME}
 
-You can find it at:
+Které najdete zde:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Zpráva od uživatele {FROM_USERNAME} může být uvedena níže. Berte na vědomí, že tato zpráva nebyla kontrolována administrátory fóra. Pokud si chcete stěžovat ohledně obdržení tohoto e-mailu, kontaktujte administrátora na adrese {BOARD_EMAIL}. Ocitujte prosím hlavičky tohoto e-mailu do stížnosti.
 
 ----------
 
@@ -379,97 +371,94 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '
+{EMAILSUBJECT:} Upozornění na nový příspěvek na fóru - {FORUM_NAME}
 
-Hello {USERNAME},
+Dobrý den {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+obdrželi jste toto upozornění, protože sledujete fórum "{FORUM_NAME}" na stránce {SITENAME}. Toto fórum zaznamenalo novou odpověď na téma "{TOPIC_TITLE}" od vaší poslední návštěvy. Můžete použít následujícího odkazu pro zobrazení poslední nepřečtené odpovědi, nebude vám zaslán žádný další e-mail, dokud nezobrazíte toto téma.
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Chcete-li zobrazit téma, klikněte na následující odkaz:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Chcete-li zobrazit fórum, klikněte na následující odkaz:
 {U_FORUM}
-
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+ 
+Pokud již dále nechcete sledovat toto téma, použijte odkaz "Nesledovat toto fórum" na samotném fóru, nebo použijte tento odkaz:
 
 {U_STOP_WATCHING_FORUM}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} Byli jste přidáni do uživatelské skupiny
 
-Congratulations,
+Gratulujeme,
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+byli jste přidáni do skupiny "{GROUP_NAME}" na stránce {SITENAME}.
+Tato akce byla provedena administrátorem nebo moderátorem skupiny, kontaktujte je pro více informací.
 
-You can view your groups information here:
+Zde jsou informace o vaši nové skupině:
 {U_GROUP}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Vaše žádost byla odsouhlasena
 
-Congratulations,
+Gratulujeme,
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+vaše žádost vstoupit do skupiny "{GROUP_NAME}" na stránce {SITENAME} byla schválena.
+Zde jsou další informace o vaší nové skupině:
 
 {U_GROUP}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} Žádost o vstup do skupiny
 
-Dear {USERNAME},
+Dobrý den {USERNAME},
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+uživatel "{REQUEST_USERNAME}" zažádal o vstup do skupiny "{GROUP_NAME}", kterou vedete na "{SITENAME}".
+Pro schválení této žádosti použijte následující odkaz:
 
 {U_PENDING}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} Nová instalace phpBB
 
-Congratulations,
+Gratulujeme,
 
-You have successfully installed phpBB on your server.
+úspěšně jste nainstalovali phpBB na váš server.
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Tento e-mail obsahuje důležité informace a vaší instalaci, prosíme, uschovejte jej. Prosíme, nezapomeňte, že vaše heslo je zašifrováno v databázi a nelze jej získat zpět, ale je možné si nechat poslat nové.
 
 ----------------------------
-Username: {USERNAME}
+Uživatelské jméno: {USERNAME}
 
-Board URL: {U_BOARD}
+Adresa fóra:       {U_BOARD}
 ----------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
+Užitečné informace o phpBB lze nalézt ve složce docs u vaší instalace, nebo na stránce podpory phpBB - http://www.phpbb.com/support/, případně české podpory - http://www.phpbb.cz
 
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+Doporučujeme sledovat novinky v nových verzích našeho systému pro zajištění bezpečnosti vašeho fóra, novinky vám můžeme zasílat automaticky, pokud se přihlásíte na mailing list, který je na výše uvedeném odkazu.
 
 {EMAIL_SIG}',
 ));
@@ -509,15 +498,15 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} Upozornění na odpověď v tématu - {FORUM_NAME}
 
-Hello {USERNAME},
+Dobrý den {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+tento e-mail jste obdržel/a jelikož sledujete téma "{FORUM_NAME}" na {SITENAME}. Toto téma zaznamenalo od vaší poslední návštěvy nový příspěvek v tématu "{TOPIC_TITLE}". Dokud toto fórum nenavštívíte, nedostanete další e-mail.
 
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Pokud si již nepřejete sledovat toto téma, můžete sledování ukončit buď kliknutím na "Ukončit sledování tohoto tématu" nacházející se ve spodní části tématu, nebo kliknutím na následující odkaz:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -527,24 +516,11 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{PM_SUBJECT}"
+	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Hlášení uzavřeno - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+Dobrý den {USERNAME},
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed. If you have further questions, please contact {CLOSER_NAME} by private message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{PM_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
+zpráva "{PM_SUBJECT}", kterou jste nahlásili na "{SITENAME}" byla zpracována administrátorem nebo moderátorem. Hlášení bylo uzavřeno, pokud máte další dotazy, kontaktujte {CLOSER_NAME} soukromou zprávou na fóru.
 
 
 {EMAIL_SIG}',
@@ -553,16 +529,29 @@ You are receiving this notification because the report you filed regarding the p
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Hlášení odstraněno - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+Dobrý den {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+hlášení o zprávě "{PM_SUBJECT}", které jste odeslali na "{SITENAME}" bylo moderátorem odstraněno.
 
-If you want to view the post, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Schválení příspěvku - {POST_SUBJECT}
+
+Dobrý den {USERNAME},
+
+dostal jste toto upozornění, protože váš příspěvek "{POST_SUBJECT}" na {SITENAME} byl schválen moderátorem nebo administrátorem.
+
+Pokud chcete zobrazit příspěvek, klikněte na tento odkaz:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Pokud chcete zobrazit celé téma, klikněte na tento odkaz:
 {U_VIEW_TOPIC}
 
 
@@ -572,13 +561,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Neschválení příspěvku - {POST_SUBJECT}
 
-Hello {USERNAME},
+Dobrý den {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+dostal jste toto upozornění, protože váš příspěvek "{POST_SUBJECT}" na {SITENAME} nebyl schválen moderátorem nebo administrátorem.
 
-The following reason was given for the disapproval:
+Zde je důvod neschválení:
 
 {REASON}
 
@@ -675,19 +664,19 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} Nová soukromá zpráva
 
-Hello {USERNAME},
+Dobrý den {USERNAME},
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+obdrželi jste novou soukromou zprávu od "{AUTHOR_NAME}" na fóru "{SITENAME}" s následujícím předmětem:
 
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+Celou zprávu si můžete přečíst, když kliknete na následující odkaz:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+Nastavení zasílání e-mailů si můžete nastavit v uživatelském panelu.
 
 {EMAIL_SIG}',
 ));
@@ -709,49 +698,46 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+Dobrý den {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+byl vám zaslán e-mail od {FROM_USERNAME} z {SITENAME}. Pokud tento e-mail obsahuje spam, hanlivé výrazy nebo jiné komentáře, které pokládáte za útočné, kontaktujte administrátora na následující adrese:
 
-{BOARD_CONTACT}
+{BOARD_EMAIL}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Následuje celá zpráva (podrobnosti jsou v hlavičce). Pamatujte, že když kliknete na odpovědět, odpovíte tomuto uživateli: {FROM_USERNAME}.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Celá zpráva
+~~~~~~~~~~~
 
-{MESSAGE}
-',
+{MESSAGE}',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+Dobrý den {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+obdrželi jste zprávu od uživatele {FROM_USERNAME} z {SITENAME}. Pokud je tato zpráva spam, kontaktujte administrátora fóra na následující adrese:
 
-{BOARD_CONTACT}
+{BOARD_EMAIL}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Následuje celá zpráva. Pamatujte, že adresa odesílatele byla nastavena na IM účet fóra.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Celá zpráva
+~~~~~~~~~~~
 
-{MESSAGE}
-',
+{MESSAGE}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Nahlášení příspěvku uzavřeno - {POST_SUBJECT}
 
-Hello {USERNAME},
+Dobrý den {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
-
+hlášení, které jste zaslal kvůli příspěvku "{POST_SUBJECT}" v "{TOPIC_TITLE}" na {SITENAME} bylo uzavřeno moderátorem nebo administrátorem. Pro další dotazy na {CLOSER_NAME} použijte soukromou zprávu.
 
 {EMAIL_SIG}',
 ));
@@ -759,12 +745,11 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Smazání nahlášení příspěvku - {POST_SUBJECT}
 
-Hello {USERNAME},
+Dobrý den {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
-
+obdrželi jste tuto zprávu, protože vaše hlášení kvůli příspěvku "{POST_SUBJECT}" v "{TOPIC_TITLE}" na {SITENAME} bylo smazáno moderátorem nebo administrátorem.
 
 {EMAIL_SIG}',
 ));
@@ -772,13 +757,13 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Schválení tématu - {TOPIC_TITLE}
 
-Hello {USERNAME},
+Dobrý den {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+obdrželi jste toto oznámení, protože vaše téma "{TOPIC_TITLE}" na {SITENAME} bylo schváleno moderátorem nebo administrátorem.
 
-If you want to view the topic, click the following link:
+Pokud chcete zobrazit celé téma, klikněte na tento odkaz:
 {U_VIEW_TOPIC}
 
 
@@ -788,13 +773,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Neschválení tématu - {TOPIC_TITLE}
 
-Hello {USERNAME},
+Dobrý den {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+obdrželi jste toto upozornění, protože vaše téma "{TOPIC_TITLE}" na {SITENAME} bylo zamítnuto moderátorem nebo administrátorem.
 
-The following reason was given for the disapproval:
+Zde je důvod neschválení:
 
 {REASON}
 
@@ -805,22 +790,22 @@ The following reason was given for the disapproval:
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Upozornění na odpověď v tématu - {TOPIC_TITLE}
 
-Hello {USERNAME},
+Dobrý den {USERNAME},
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+obdrželi jste toto upozornění, protože sledujete téma "{TOPIC_TITLE}" na {SITENAME}. Toto téma zaznamenalo od vaší poslední návštěvy nový příspěvek. Dokud toto téma nenavštívíte, neobdržíte o něm žádné další e-maily.
 
-If you want to view the newest post made since your last visit, click the following link:
+Pokud chcete zobrazit nejnovější příspěvek od doby vaší poslední návštěvy, klikněte na následující odkaz:
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Pokud chcete zobrazit celé téma, použijte následující odkaz:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Chcete-li zobrazit fórum, klikněte na následující odkaz:
 {U_FORUM}
-
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+ 
+Pokud si již nepřejete sledovat toto téma, můžete sledování ukončit buď kliknutím na "Ukončit sledování tohoto tématu" nacházející se ve spodní části tématu, nebo kliknutím na následující odkaz:
 
 {U_STOP_WATCHING_TOPIC}
 
@@ -830,47 +815,25 @@ If you no longer wish to watch this topic you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reaktivace vašeho účtu
 
-Hello {USERNAME},
+Dobrý den {USERNAME},
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
-
-{U_ACTIVATE}
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
-
-Hello {USERNAME}
-
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
-
-To use the new password you need to activate it. To do this click the link provided below.
+váš účet na "{SITENAME}" byl deaktivován. Reaktivaci provedete kliknutím na tento odkaz:
 
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+{EMAIL_SIG}',
+));
 
-Password: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+
+$email = array_merge($email, array(
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Váš účet byl deaktivován
+
+Dobrý den {USERNAME},
+
+váš účet na "{SITENAME}" byl deaktivován, pravděpodobně kvůli změnám v profilu. Než se budete moci přihlásit, budete muset vyčkat, než účet znovu aktivuje administrátor. Jakmile jej aktivuje, obdržíte další e-mail.
 
 {EMAIL_SIG}',
 ));
@@ -878,20 +841,41 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} Aktivace nového hesla
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+Dobrý den {USERNAME},
 
-Please keep this e-mail for your records. Your account information is as follows:
+obdrželi jste tento e-mail, protože někdo zažádal o nové heslo přes naše fórum. Pokud jste o nové heslo nežádali, tento e-mail ignorujte.
+
+Aktivace nového hesla:
+
+{U_ACTIVATE}
+
+K přihlášení použijte toto heslo:
+
+Heslo: {PASSWORD}
+
+Heslo můžete změnit ve vašem profilu. Pokud s tím budete mít jakékoliv potíže, kontaktujte administrátora.
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reaktivujte svůj účet na "{SITENAME}"
+
+Administrátor fóra uvalil na váš účet nucenou reaktivaci. Váš účet je nyní neaktivní.
+Následujte uvedené kroky pro jeho reaktivaci.
+
+Prosíme, ponechejte si tento e-mail pro záznam. Informace o vašem účtu následují:
 
 ----------------------------
-Username: {USERNAME}
+Uživatelské jméno: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
-Please visit the following link to reactivate your account:
+Vaše heslo bylo zašifrováno v naší databázi. Pokud byste zapomněli vaše heslo, můžete zažádat o nové, které bude muset být reaktivováno stejně jako nyní tento účet.
+Přejděte na následující odkaz pro reaktivaci vašeho účtu:
 
 {U_ACTIVATE}
 
@@ -1004,15 +988,14 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Neaktivní účet
 
-Hello {USERNAME},
+Dobrý den {USERNAME},
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
-
+{REGISTER_DATE} jste si registroval nový účet na "{SITENAME}". Zatím není váš účet aktivní. Pro aktivaci se musíte přihlásit. 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+Děkujeme za registraci na našem webu "{SITENAME}".
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +1003,24 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Vítejte na "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Prosím, uschovejte si tento e-mail pro případné zapomenutí údajů, následují vaše přihlašovací údaje:
 
 ----------------------------
-Username: {USERNAME}
+Uživatelské jméno: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Prosíme, nezapomeňte, že vaše heslo je zašifrováno v naší databázi a nelze jej zpětně získat. Pokud jej přesto zapomenete nebo ztratíte, zašleme vám nové, které ale budete muset aktivovat stejným způsobem jako tento účet.
 
-Please visit the following link in order to activate your account:
+Váš účet je nyní neaktivní, k aktivaci dojde po navštívení tohoto odkazu:
 
 {U_ACTIVATE}
 
 
-Thank you for registering.
+Děkujeme za vaši registraci.
 
 {EMAIL_SIG}',
 ));
@@ -1045,21 +1028,21 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Vítejte na "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Prosím, uschovejte si tento e-mail pro případné zapomenutí údajů, následují vaše přihlašovací údaje:
 
 ----------------------------
-Username: {USERNAME}
-
-Board URL: {U_BOARD}
+Uživatelské jméno: {USERNAME}
+ 
+URL fóra:          {U_BOARD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Prosíme, nezapomeňte, že vaše heslo je zašifrováno v naší databázi a nelze jej zpětně získat. Pokud jej přesto zapomenete nebo ztratíte, zašleme vám nové, které ale budete muset aktivovat stejným způsobem jako tento účet.
 
-Thank you for registering.
+Děkujeme za vaši registraci.
 
 {EMAIL_SIG}',
 ));
@@ -1067,25 +1050,25 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Vítejte na "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Prosím, uschovejte si tento e-mail pro případné zapomenutí údajů, následují vaše přihlašovací údaje:
 
 ----------------------------
-Username: {USERNAME}
-
-Board URL: {U_BOARD}
+Uživatelské jméno: {USERNAME}
+ 
+URL fóra:          {U_BOARD}
 ----------------------------
 
-Please visit the following link in order to activate your account:
+Váš účet je momentálně neaktivní, aktivovat jej můžete kliknutím na následující odkaz:
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Prosíme, nezapomeňte, že vaše heslo je zašifrováno v naší databázi a nelze jej zpětně získat. Pokud jej přesto zapomenete nebo ztratíte, zašleme vám nové, které ale budete muset aktivovat stejným způsobem jako tento účet.
 
-Thank you for registering.
+Děkujeme za vaši registraci.
 
 {EMAIL_SIG}',
 ));

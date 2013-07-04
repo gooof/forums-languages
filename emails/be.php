@@ -1,16 +1,16 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Актывуйце ўліковы запіс карыстальніка
 
-Hello,
+Добры дзень!
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+Уліковы запіс карыстальніка {USERNAME} быў дэактываваны альбо зноўку створаны. Вы павінны праверыць профіль гэтага карыстальніка і (калі патрабуецца) актываваць яго.
 
-Use this link to view the user\'s profile:
+Спасылка на прагляд профіля карыстальніка:
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+Спасылка для актывацыі ўліковага запісу:
 {U_ACTIVATE}
 
 
@@ -21,14 +21,14 @@ Use this link to activate the account:
 
 $email = array_merge($email, array(
 	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Гэты ліст адпраўлены вам адміністратарам канферэнцыі «{SITENAME}». Калі гэтае паведамленне з\'яўляецца спамам, утрымоўвае абразы або іншыя прыкрыя вам выказвання, калі ласка, звяжыцеся з адміністратарам канферэнцыі па адрасе:
 
 {CONTACT_EMAIL}
 
-Include this full e-mail (particularly the headers). 
+Уключыце дадзенае паведамленне цалкам (асабліва загалоўкі).
 
-Message sent to you follows:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Адпраўленае вам паведамленне:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
@@ -40,37 +40,38 @@ Message sent to you follows:
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Уліковы запіс актываваны
 
-Hello {USERNAME},
+Добры дзень, {USERNAME}!
 
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
+Ваш уліковы запіс на канферэнцыі «{SITENAME}» быў актываваны адміністратарам. Зараз вы можаце ўваходзіць на канферэнцыю. 
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ваш пароль быў захаваны ў бяспечным выглядзе ў базе дадзеных канферэнцыі. Калі Вы забудзеце пароль, то зможаце атрымаць новы, выкарыстоўваючы адрас email, зададзены пры рэгістрацыі.
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Сардэчна запрашаем на канферэнцыю «{SITENAME}»
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Калі ласка, захаваеце гэтае паведамленне. Параметры вашага ўліковага запісу такія:
 
 ----------------------------
-Username: {USERNAME}
+Імя карыстальніка: {USERNAME}
 
-Board URL: {U_BOARD}
+Адрас канферэнцыі: {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+Ваш уліковы запіс зараз неактыўны і павінен быць адобраны адміністратарам перш, чым вы зможаце ўвайсці на канферэнцыю. Пасля актывацыі вашага ўліковага запісу вам прыйдзе яшчэ адно паведамленне. 
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ваш пароль надзейна захаваны ў нашай базе дадзеных і не можа быць здабыты з яе. Калі вы ўсё жа забудзецеся на свой пароль, то вы зможаце аднавіць яго, выкарыстоўваючы для гэтага адрас электроннай пошты, звязаны з вашым уліковым запісам. 
 
-Thank you for registering.
+Дзякуем за рэгістрацыю!
 
 {EMAIL_SIG}',
 ));
@@ -213,29 +214,29 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Сардэчна запрашаем на канферэнцыю «{SITENAME}»
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+У адпаведнасці з COPPA ваш уліковы запіс не быў актываваны.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Калі ласка, раздрукуйце гэтае паведамленне і папытаеце свайго бацьку або апякуна падпісаць яго і паставіць дату. Затым адпраўце яго па факсе:
 
 {FAX_INFO}
 
-OR mail it to:
+Або па пошце:
 
 {MAIL_INFO}
 
 ------------------------------ CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+Permission to participate at “{SITENAME}” - {U_BOARD}
 
 Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Email: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
+I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO “{SITENAME}” TO STORE THIS INFORMATION. 
 I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM “{SITENAME}” AT ANY TIME.
 
 
 Parent or guardian 
@@ -248,11 +249,11 @@ Date: _______________
 ------------------------------ CUT HERE ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Як толькі адміністратар атрымае гэтую форму па факсе або па пошце, ваш уліковы запіс будзе актываваны.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ваш пароль надзейна захаваны ў нашай базе дадзеных і не можа быць здабыты з яе. Калі вы ўсё жа забудзеце на свой пароль, то вы зможаце аднавіць яго, выкарыстоўваючы для гэтага адрас электроннай пошты, звязаны з вашым уліковым запісам.
 
-Thank you for registering.
+Дзякуем за рэгістрацыю!
 
 {EMAIL_SIG}
 ',
@@ -261,29 +262,29 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Сардэчна запрашаем на канферэнцыю «{SITENAME}»
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+У адпаведнасці з COPPA ваш уліковы запіс не быў актываваны.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Калі ласка, раздрукуйце гэтае паведамленне і папытаеце свайго бацьку або апякуна падпісаць яго і паставіць дату. Затым адпраўце яго па факсе:
 
 {FAX_INFO}
 
-OR mail it to:
+Або па пошце:
 
 {MAIL_INFO}
 
 ------------------------------ CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+Permission to participate at “{SITENAME}” — {U_BOARD}
 
 Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Email: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
+I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO “{SITENAME}” TO STORE THIS INFORMATION. 
 I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM “{SITENAME}” AT ANY TIME.
 
 
 Parent or guardian 
@@ -296,11 +297,11 @@ Date: _______________
 ------------------------------ CUT HERE ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Як толькі адміністратар атрымае гэтую форму па факсе або па пошце, ваш уліковы запіс будзе актываваны.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ваш пароль надзейна захаваны ў нашай базе дадзеных і не можа быць здабыты з яе. Калі вы ўсё жа забудзеце свой пароль, то вы зможаце аднавіць яго, выкарыстоўваючы для гэтага адрас электроннай пошты, звязаны з вашым уліковым запісам.
 
-Thank you for registering.
+Дзякуем за рэгістрацыю!
 
 {EMAIL_SIG}
 ',
@@ -309,19 +310,19 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} «{SITENAME}» — Ліст сябра
 
-Hello {TO_USERNAME},
+Добры дзень, {TO_USERNAME}!
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Дадзены ліст быў адпраўлены з канферэнцыі «{SITENAME}» карыстальнікам {FROM_USERNAME}, які лічыць, што вам можа быць цікавая дадзеная тэма:
 
 {TOPIC_NAME}
 
-You can find it at:
+Вы можаце знайсці яе па гэтым адрасе:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Зыходнае паведамленне ад {FROM_USERNAME} варта ніжэй. Улічыце, што дадзенае паведамленне не было прагледжана або ўхвалена адміністрацыяй форума. Калі вы жадаеце паскардзіцца на гэты ліст, то можаце звязацца з адміністратарам па адрасе {BOARD_EMAIL}. Пры адпраўцы паведамлення на гэты адрас, калі ласка, працытуйце загалоўкі атрыманага ліста.
 
 ----------
 
@@ -379,21 +380,21 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Апавяшчэнне аб новым паведамленні - «{FORUM_NAME}»
 
-Hello {USERNAME},
+Добры дзень, {USERNAME}!
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+Вы атрымалі гэтае паведамленне таму, што сочыце за форумам «{FORUM_NAME}» на канферэнцыі «{SITENAME}». У гэтым форуме са часу вашага апошняга наведвання з\'явілася новае паведамленне ў тэме «{TOPIC_TITLE}». Вы можаце перайсці па спасылцы, каб праглядзець апошняе непрачытанае паведамленне; новыя апавяшчэнні не будуць прыходзіць, пакуль вы не праглядзіце тэму.
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Калі вы жадаеце праглядзець тэму, перайдзіце па наступнай спасылцы:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Калі вы жадаеце праглядзець форум, перайдзіце па наступнай спасылцы:
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Калі вы больш не жадаеце сачыць за форумам, то альбо пстрыкніце па змешчанай у ім спасылцы «Адпісацца ад форума», альбо перайдзіце па наступнай спасылцы:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -404,14 +405,14 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} Вы былі ўключаныя ў групу
 
-Congratulations,
+Віншуем!
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+Вы былі прынятыя ў групу «{GROUP_NAME}» на канферэнцыі «{SITENAME}».
+Гэта было прароблена лідэрам групы або адміністратарам бачыны, звернецеся да іх за дадатковай інфармацыяй. 
 
-You can view your groups information here:
+Перайдзіце па спасылцы, каб убачыць інфармацыю аб вашым чалецтве ў групах:
 {U_GROUP}
 
 {EMAIL_SIG}
@@ -421,12 +422,12 @@ You can view your groups information here:
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Ваш запыт быў здаволеная
 
-Congratulations,
+Віншуем!
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+Ваш запыт аб уступе ў групу «{GROUP_NAME}» на канферэнцыі «{SITENAME}» быў здаволены.
+Перайдзіце па спасылцы, каб убачыць інфармацыю аб вашым чалецтве ў групах: 
 
 {U_GROUP}
 
@@ -437,12 +438,12 @@ Click on the following link to see your group membership.
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} Запыт аб уступе ў групу
 
-Dear {USERNAME},
+Паважаны(ая) {USERNAME},
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+На канферэнцыі «{SITENAME}» карыстальнік "{REQUEST_USERNAME}" папытаў аб уступе ў групу «{GROUP_NAME}», лідэрам якой вы з\'яўляецеся.
+Каб задаволіць або адхіліць гэты запыт, перайдзіце па наступнай спасылцы:
 
 {U_PENDING}
 
@@ -453,23 +454,23 @@ To approve or deny this request for group membership please visit the following 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB усталяваны
 
-Congratulations,
+Віншуем!
 
-You have successfully installed phpBB on your server.
+Вы паспяхова ўсталявалі phpBB на сервер.
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Гэтае паведамленне ўтрымоўвае важную інфармацыю аб усталёўцы, якую варта захаваць. Пароль захаваны ў базе дадзеных у зашыфраваным выглядзе і не можа быць адноўлены ў выпадку страты. Калі вы ўсё жа забудзеце пароль, то зможаце запытаць новы.
 
-----------------------------
-Username: {USERNAME}
+---------------------------------
+Імя карыстальніка: 	   {USERNAME}
 
-Board URL: {U_BOARD}
-----------------------------
+Адрас канферэнцыі: {U_BOARD}
+---------------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
+Карысная інфармацыя аб phpBB знаходзіцца ў тэчцы docs і на старонцы падтрымкі phpBB.com - http://www.phpbb.com/support/
 
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+Для забеспячэння бяспекі канферэнцыі настойліва рэкамендуецца сачыць за абнаўленнямі, што вы можаце лёгка ажыццявіць, падпісаўшыся на рассылку phpBB.com па пазначанай вышэй спасылцы.
 
 {EMAIL_SIG}',
 ));
@@ -509,42 +510,30 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} Апавяшчэнне аб новай тэме — «{FORUM_NAME}»
 
-Hello {USERNAME},
+Добры дзень, {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+Вы атрымалі гэтае паведамленне таму, што сочыце за форумам «{FORUM_NAME}» на канферэнцыі «{SITENAME}». У гэтым форуме з моманту вашага апошняга наведвання з\'явілася новая тэма «{TOPIC_TITLE}». Вы можаце перайсці па спасылцы, каб праглядзець яе. Новыя апавяшчэнні не будуць прыходзіць, пакуль вы не праглядзіце форум:
 
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Калі вы больш не жадаеце сачыць за форумам, то альбо пстрыкніце па змешчанай у ім спасылцы «Адпісацца ад форума», альбо перайдзіце па наступнай спасылцы:
 
 {U_STOP_WATCHING_FORUM}
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{PM_SUBJECT}"
+	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Скарга на асабістае паведамленне {PM_SUBJECT} зачыненая
 
-Hello {USERNAME},
+Добры дзень, {USERNAME}!
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed. If you have further questions, please contact {CLOSER_NAME} by private message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{PM_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
+Вы атрымалі гэтае апавяшчэнне таму, што адпраўленая вамі скарга на асабістае паведамленне {PM_SUBJECT}, атрыманае вамі на канферэнцыі «{SITENAME}», была прагледжана мадэратарам або адміністратарам. Пасля прагляду скарга была зачынена. Па пытаннях звяжыцеся з {CLOSER_NAME} (карыстальнік, які зачыніў скаргу) пасродкам асабістага паведамлення. 
 
 
 {EMAIL_SIG}',
@@ -553,16 +542,29 @@ You are receiving this notification because the report you filed regarding the p
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Скарга на паведамленне {PM_SUBJECT} выдаленая
 
-Hello {USERNAME},
+Добры дзень, {USERNAME}!
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+Вы атрымалі гэтае апавяшчэнне таму, што адпраўленая вамі скарга на асабістае паведамленне {PM_SUBJECT}, атрыманае вамі на канферэнцыі «{SITENAME}», была выдалена мадэратарам або адміністратарам.
 
-If you want to view the post, click the following link:
+
+(EMAIL_SIG)',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Паведамленне ўхвалена — «{POST_SUBJECT}»
+
+Добры дзень, {USERNAME}!
+
+Вы атрымалі гэтае апавяшчэнне таму, што ваша паведамленне «{POST_SUBJECT}» на канферэнцыі «{SITENAME}» было ўхвалена мадэратарам або адміністратарам.
+
+Калі вы жадаеце праглядзець сваё паведамленне, перайдзіце па наступнай спасылцы:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Калі вы жадаеце праглядзець тэму, перайдзіце па наступнай спасылцы:
 {U_VIEW_TOPIC}
 
 
@@ -572,13 +574,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Паведамленне адхілена — «{POST_SUBJECT}»
 
-Hello {USERNAME},
+Добры дзень, {USERNAME}!
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Вы атрымалі гэтае апавяшчэнне таму, што ваша паведамленне «{POST_SUBJECT}» на канферэнцыі «{SITENAME}» было адхілена мадэратарам або адміністратарам.
 
-The following reason was given for the disapproval:
+Паведамленне было адхілена па наступным чынніку:
 
 {REASON}
 
@@ -675,21 +677,22 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} Новае асабістае паведамленне
 
-Hello {USERNAME},
+Добры дзень, {USERNAME}!
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+Вам прыйшло новае асабістае паведамленне ад {AUTHOR_NAME} на канферэнцыі «{SITENAME}» з тэмай:
 
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+Вы можаце прачытаць гэтае паведамленне, пяройдучы па наступнай спасылцы:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+Памятайце, вы можаце адмовіцца ад атрымання падобных апавяшчэнняў, калі зменіце налады ў сваім асабістым раздзеле.
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
@@ -709,16 +712,16 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+Добры дзень, {TO_USERNAME}!
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Ніжэй ёсць ліст, адпраўлены вам карыстальнікам {FROM_USERNAME} праз ваш уліковы запіс на канферэнцыі «{SITENAME}». Калі гэтае паведамленне з\'яўляецца спамам, утрымоўвае абразы або іншыя прыкрыя вам выказвання, калі ласка звяжыцеся з адміністратарам канферэнцыі па адрасе:
 
-{BOARD_CONTACT}
+{BOARD_EMAIL}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Уключыце дадзенае паведамленне цалкам (асабліва загалоўкі). Калі ласка ўлічыце, што зваротны адрас гэтага ліста прыналежыць карыстальніку {FROM_USERNAME}.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Пасланае вам паведамленне:
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 ',
@@ -728,16 +731,16 @@ Message sent to you follows
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+Добры дзень, {TO_USERNAME}!
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Ніжэй ёсць ліст, адпраўлены вам карыстальнікам {FROM_USERNAME} праз ваш уліковы запіс на канферэнцыі «{SITENAME}». Калі гэтае паведамленне з\'яўляецца спамам, утрымоўвае абразы або іншыя прыкрыя вам выказвання, калі ласка звяжыцеся з адміністратарам канферэнцыі па адрасе:
 
-{BOARD_CONTACT}
+{BOARD_EMAIL}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Уключыце дадзенае паведамленне цалкам. Калі ласка ўлічыце, што адрас адпраўніка з\'яўляецца адрасам уліковага запісу канферэнцыі для імгненных паведамленняў.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Пасланае вам паведамленне:
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 ',
@@ -746,24 +749,11 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Скарга зачыненая — «{POST_SUBJECT}»
 
-Hello {USERNAME},
+Добры дзень, {USERNAME}!
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
+Вы атрымалі гэтае апавяшчэнне таму, што пададзеная вамі скарга на паведамленне «{POST_SUBJECT}» у тэме «{TOPIC_TITLE}» на канферэнцыі «{SITENAME}» была разгледжаная мадэратарам або адміністратарам. Пасля разгляду скарга была зачыненая. Па ўзніклых у далейшым пытанням звяжыцеся з {CLOSER_NAME} пасродкам асабістага паведамлення.
 
 
 {EMAIL_SIG}',
@@ -772,13 +762,26 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Скарга выдаленая — «{POST_SUBJECT}»
 
-Hello {USERNAME},
+Добры дзень, {USERNAME}!
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+Вы атрымалі гэтае апавяшчэнне таму, што пададзеная вамі скарга на паведамленне «{POST_SUBJECT}» у тэме «{TOPIC_TITLE}» на канферэнцыі «{SITENAME}» была выдаленая мадэратарам або адміністратарам.
 
-If you want to view the topic, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Тэма ўхваленая — «{TOPIC_TITLE}»
+
+Добры дзень, {USERNAME}!
+
+Вы атрымалі гэтае апавяшчэнне таму, што ваша тэма «{TOPIC_TITLE}» на канферэнцыі «{SITENAME}» была ўхваленая мадэратарам або адміністратарам.
+
+Калі вы жадаеце праглядзець тэму, перайдзіце па наступнай спасылцы:
 {U_VIEW_TOPIC}
 
 
@@ -788,13 +791,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Тэма адхіленая — «{TOPIC_TITLE}»
 
-Hello {USERNAME},
+Добры дзень, {USERNAME}!
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Вы атрымалі гэтае апавяшчэнне таму, што ваша тэма «{TOPIC_TITLE}» на канферэнцыі «{SITENAME}» была адхіленая мадэратарам або адміністратарам.
 
-The following reason was given for the disapproval:
+Тэма была адхіленая па наступным чынніку:
 
 {REASON}
 
@@ -805,22 +808,22 @@ The following reason was given for the disapproval:
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Апавяшчэнне аб адказе - «{TOPIC_TITLE}»
 
-Hello {USERNAME},
+Добры дзень, {USERNAME}!
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+Вы атрымалі гэтае паведамленне таму, што сочыце за тэмай «{TOPIC_TITLE}» на канферэнцыі «{SITENAME}». У гэтай тэме з часу вашага апошняга наведвання з\'явілася новае паведамленне. Вы можаце перайсці па спасылцы, каб прачытаць якія паступілі адказы; новыя апавяшчэнні не будуць прыходзіць, пакуль вы не праглядзіце тэму.
 
-If you want to view the newest post made since your last visit, click the following link:
+Калі вы жадаеце праглядзець самае новае паведамленне з моманту вашага апошняга наведвання, перайдзіце па наступнай спасылцы:
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Калі вы жадаеце праглядзець усю тэму, перайдзіце па наступнай спасылцы:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Калі вы жадаеце праглядзець форум, перайдзіце па наступнай спасылцы:
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+Калі вы больш не жадаеце сачыць за тэмай, то альбо пстрыкніце па змешчанай у ёй спасылцы «Адпісацца ад тэмы», альбо перайдзіце па наступнай спасылцы:
 
 {U_STOP_WATCHING_TOPIC}
 
@@ -830,47 +833,25 @@ If you no longer wish to watch this topic you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Паўторная актывацыя ўліковага запісу
 
-Hello {USERNAME},
+Добры дзень, {USERNAME}!
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
-
-{U_ACTIVATE}
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
-
-Hello {USERNAME}
-
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
-
-To use the new password you need to activate it. To do this click the link provided below.
+Ваш уліковы запіс на канферэнцыі «{SITENAME}» быў адключаны, хутчэй усяго з-за занесеных у ваш профіль змен. Каб ізноў яе актываваць, перайдзіце па гэтай спасылцы:
 
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+{EMAIL_SIG}',
+));
 
-Password: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+
+$email = array_merge($email, array(
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Ваш уліковы запіс быў адключаны
+
+Добры дзень, {USERNAME}!
+
+Ваш уліковы запіс на канферэнцыі «{SITENAME}» быў адключаны, хутчэй усяго з-за занесеных у ваш профіль змен. Адміністратар канферэнцыі павінен актываваць ваш уліковы запіс, каб вы змаглі ім карыстацца. Пасля актывацыі вы атрымаеце паўторнае апавяшчэнне.
 
 {EMAIL_SIG}',
 ));
@@ -878,20 +859,43 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} Актывацыя новага пароля
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+Добры дзень, {USERNAME}!
 
-Please keep this e-mail for your records. Your account information is as follows:
+Вы атрымалі гэты ліст таму, што вы (альбо хтосьці, які выдае сябе за вас) папыталі выслаць новы пароль для вашага ўліковага запісу на канферэнцыі «{SITENAME}». Калі вы не прасілі выслаць пароль, то не звяртайце ўвагі на гэты ліст, калі жа падобныя лісты будуць працягваць прыходзіць, звернецеся да адміністратара канферэнцыі.
+
+Перш чым выкарыстаць новы пароль, вы павінны яго актываваць. Для гэтага перайдзіце па спасылцы:
+
+{U_ACTIVATE}
+
+У выпадку паспяховай актывацыі вы зможаце ўваходзіць на канферэнцыю, выкарыстаючы наступны пароль:
+
+Пароль: {PASSWORD}
+
+Вы зможаце змяніць гэты пароль на старонцы рэдагавання профіля ў асабістым раздзеле. Калі ў вас паўстануць якія-небудзь цяжкасці, звернецеся да адміністратара канферэнцыі.
+
+{EMAIL_SIG}
+',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Паўторная актывацыя ўліковага запісу на канферэнцыі «{SITENAME}»
+
+Адміністратар канферэнцыі запытаў паўторную актывацыю вашага ўліковага запісу. Ваш уліковы запіс зараз неактыўны.
+Для актывацыі ўліковага запісу выконвайце прапанаваныя ніжэй інструкцыі.
+
+Захавайце гэтае паведамленне. Параметры вашага ўліковага запісу такія:
 
 ----------------------------
-Username: {USERNAME}
+Імя карыстальніка: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ваш пароль надзейна захаваны ў нашай базе дадзеных і не можа быць здабыты з яе. Калі вы ўсё жа забудзеце свой пароль, то вы зможаце аднавіць яго, выкарыстоўваючы для гэтага адрас электроннай пошты, звязаны з вашым уліковым запісам.
 
-Please visit the following link to reactivate your account:
+Перайдзіце па наступнай спасылцы для актывацыі ўліковага запісу:
 
 {U_ACTIVATE}
 
@@ -1004,15 +1008,15 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Напамінак аб адключаным уліковым запісе
 
-Hello {USERNAME},
+Добры дзень, {USERNAME}!
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+Дадзенае апавяшчэнне адпраўлена вам для напаміну пра тое, што ваш уліковы запіс на канферэнцыі «{SITENAME}», зарэгістраваны {REGISTER_DATE}, да гэтага часу застаецца неактыўным. Калі вы жадаеце актываваць гэты ўліковы запіс, то пстрыкніце па спасылцы ніжэй: 
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+Дзякуем за рэгістрацыю на канферэнцыі «{SITENAME}» і спадзяемся на ваш удзел у абмеркаваннях.
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +1024,24 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Сардэчна запрашаем на канферэнцыю «{SITENAME}»
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Калі ласка, захаваеце гэтае паведамленне. Параметры вашага ўліковага запісу такія:
 
 ----------------------------
-Username: {USERNAME}
+Імя карыстальніка: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ваш пароль надзейна захаваны ў нашай базе дадзеных і не можа быць здабыты з яе. Калі вы ўсё жа забудзеце свой пароль, то вы зможаце аднавіць яго, выкарыстоўваючы для гэтага адрас электроннай пошты, звязаны з вашым уліковым запісам.
 
-Please visit the following link in order to activate your account:
+Пстрыкніце па спасылцы ніжэй для актывацыі ўліковага запісу:
 
 {U_ACTIVATE}
 
 
-Thank you for registering.
+Дзякуй за рэгістрацыю.
 
 {EMAIL_SIG}',
 ));
@@ -1045,21 +1049,21 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Сардэчна запрашаем на канферэнцыю «{SITENAME}»
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Калі ласка, захаваеце гэтае паведамленне. Параметры вашага ўліковага запісу такія:
 
 ----------------------------
-Username: {USERNAME}
-
-Board URL: {U_BOARD}
+Імя карыстальніка: {USERNAME}
+ 
+Адрас канферэнцыі: {U_BOARD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ваш пароль надзейна захаваны ў нашай базе дадзеных і не можа быць здабыты з яе. Калі вы ўсё жа забудзеце свой пароль, то вы зможаце аднавіць яго, выкарыстоўваючы для гэтага адрас электроннай пошты, звязаны з вашым уліковым запісам.
 
-Thank you for registering.
+Дзякуем за рэгістрацыю!
 
 {EMAIL_SIG}',
 ));
@@ -1067,25 +1071,25 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Сардэчна запрашаем на канферэнцыю «{SITENAME}»
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Рэкамендуецца захаваць гэта паведамленне. Параметры вашага ўліковага запісу такія:
 
 ----------------------------
-Username: {USERNAME}
-
-Board URL: {U_BOARD}
+Імя карыстальніка: {USERNAME}
+ 
+Адрас канферэнцыі: {U_BOARD}
 ----------------------------
 
-Please visit the following link in order to activate your account:
+Пстрыкніце па спасылцы ніжэй для актывацыі ўліковага запісу:
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ваш пароль надзейна захаваны ў нашай базе дадзеных і не можа быць здабыты з яе. Калі вы ўсё жа забудзеце свой пароль, то вы зможаце аднавіць яго, выкарыстоўваючы для гэтага адрас электроннай пошты, звязаны з вашым уліковым запісам.
 
-Thank you for registering.
+Дзякуем за рэгістрацыю!
 
 {EMAIL_SIG}',
 ));

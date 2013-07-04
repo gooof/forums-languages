@@ -1,16 +1,16 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Aktivera användarkonto
 
-Hello,
+Hej,
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+Kontot "{USERNAME}" har inaktiverats eller skapats, du bör granska användares uppgifter (om det krävs) och hantera det på lämpligt sätt.
 
-Use this link to view the user\'s profile:
+Använd denna länk för att visa användarens profil:
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+Använd denna länk för att aktivera kontot:
 {U_ACTIVATE}
 
 
@@ -20,33 +20,14 @@ Use this link to activate the account:
 
 
 $email = array_merge($email, array(
-	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+	'email/admin_send_email.txt' 		=> 'Följande är ett e-postmeddelande som har skickats till dig av en administratör på "{SITENAME}". Om detta meddelande är skräppost eller innehåller stötande/kränkande material/kommentarer, kontakta diskussionsforumets administratör på följande adress: {CONTACT_EMAIL}
 
-{CONTACT_EMAIL}
+Inkludera hela detta meddelande (framförallt överdelen).
 
-Include this full e-mail (particularly the headers). 
-
-Message sent to you follows:
+Meddelandet som skickades till dig följer nedan
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-
-
-{EMAIL_SIG}
-',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
-
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
 
 {EMAIL_SIG}',
 ));
@@ -54,23 +35,36 @@ Your password has been securely stored in our database and cannot be retrieved. 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Kontot aktiverat
+
+Hej {USERNAME},
+
+Ditt konto på "{SITENAME}" har nu aktiverats, du kan nu logga in. Ditt lösenord har krypterats i vår databas och kan inte hämtas därifrån av oss. Om du glömmer ditt lösenord så kan du nollställa det och begära ett nytt till e-postadressen, som hör ihop med ditt konto.
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Välkommen till "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Spara detta e-postmeddelande för framtida bruk. Dina kontouppgifter:
 
 ----------------------------
-Username: {USERNAME}
+Användarnamn: {USERNAME}
 
-Board URL: {U_BOARD}
+Forumadress: {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+Ditt konto är för närvarande inaktiverat, administratören måste aktivera det innan du kan logga in. Det kommer att sändas ett nytt e-postmeddelande när detta har skett.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Glöm inte bort ditt lösenord eftersom det har krypterats i vår databas och vi inte kan ge dig tillbaka det. 
+Skulle du glömma ditt lösenord så kan du dock begära ett nytt lösenord till e-postadressen, som hör ihop med ditt konto.
 
-Thank you for registering.
+Tack för att du registrerade dig.
 
 {EMAIL_SIG}',
 ));
@@ -213,46 +207,46 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Välkommen till "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+I enlighet med COPPA-lagen så är ditt konto för närvarande inaktiverat.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Skriv ut detta meddelande och be din förälder eller förmyndare att skriva under och datummärka det. Faxa det sedan till:
 
 {FAX_INFO}
 
-OR mail it to:
+ELLER skicka det per post till:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ KLIPP HÄR ------------------------------
+Tillåtelse att delta på "{SITENAME}" - {U_BOARD}
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Användarnamn: {USERNAME}
+E-postadress: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
-
-
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
+JAG HAR GRANSKAT INFORMATIONEN TILLHANDAHÅLLEN AV MITT BARN OCH TILLÅTER HÄRMED “{SITENAME}” ATT LAGRA DENNA INFORMATION. 
+JAG ÄR MEDVETEN OM ATT DENNA INFORMATION KAN ÄNDRAS NÄR SOM HELST GENOM ATT ANGE ETT LÖSENORD. 
+JAG ÄR MEDVETEN OM ATT JAG KAN BEGÄRA ATT DENNA INFORMATION TAS BORT FRÅN “{SITENAME}” NÄR SOM HELST.
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Förälder eller förmyndare
+(Texta ditt namn här): _____________________
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+(Underskrift): __________________ 
 
-Thank you for registering.
+Datum: _______________
+
+------------------------------ KLIPP HÄR ------------------------------
+
+
+När administratören mottagit ovanstående formulär via fax eller vanlig post så kommer ditt konto aktiveras.
+
+Glöm inte bort ditt lösenord eftersom det har krypterats i vår databas och vi inte kan ge dig tillbaka det. Om du skulle glömma ditt lösenord så kan du dock begära ett nytt lösenord till e-postadressen, som hör ihop med ditt konto.
+
+Tack för att du registrerade dig.
 
 {EMAIL_SIG}
 ',
@@ -261,67 +255,66 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Välkommen till "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+I enlighet med COPPA-lagen så är ditt konto för närvarande inaktiverat.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Skriv ut detta meddelande och be din förälder eller förmyndare att skriva under och datera det. Faxa det sedan till:
 
 {FAX_INFO}
 
-OR mail it to:
+ELLER skicka det per post till:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ KLIPP HÄR ------------------------------
+Tillåtelse att delta på "{SITENAME}" - {U_BOARD}
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Användarnamn: {USERNAME}
+E-postadress: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
-
-
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
+JAG HAR GRANSKAT INFORMATIONEN TILLHANDAHÅLLEN AV MITT BARN OCH TILLÅTER HÄRMED "{SITENAME}" ATT LAGRA DENNA INFORMATION. 
+JAG ÄR MEDVETEN OM ATT DENNA INFORMATION KAN ÄNDRAS NÄR SOM HELST GENOM ATT ANGE ETT LÖSENORD. 
+JAG ÄR MEDVETEN OM ATT JAG KAN BEGÄRA ATT DENNA INFORMATION TAS BORT FRÅN "{SITENAME}" NÄR SOM HELST.
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Förälder eller förmyndare
+(Texta ditt namn här): _____________________
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+(Underskrift): __________________ 
 
-Thank you for registering.
+Datum: _______________
 
-{EMAIL_SIG}
-',
+------------------------------ KLIPP HÄR ------------------------------
+
+
+När administratören mottagit ovanstående formulär via fax eller vanlig post så kommer ditt konto aktiveras.
+
+Glöm inte bort ditt lösenord eftersom det har krypterats i vår databas och vi inte kan ge dig tillbaka det. Om du skulle glömma ditt lösenord så kan du dock begära ett nytt lösenord till e-postadressen, som hör ihop med ditt konto.
+
+Tack för att du registrerade dig.
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" — Tipsa en vän
 
-Hello {TO_USERNAME},
+Hej {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Detta e-postmeddelande skickades från "{SITENAME}" av {FROM_USERNAME} som tror att du skulle vara intresserad av följande tråd:
 
 {TOPIC_NAME}
 
-You can find it at:
+Du kan hitta den här:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Ett meddelande från {FROM_USERNAME} kan också finnas nedan. Notera att detta meddelande inte har setts eller godkänts av administratörerna. Om du vill klaga på nedanstående meddelande, kontakta administratören på {BOARD_CONTACT}. Inkludera hela detta meddelande (framförallt överdelen) när du kontaktar denna adress.
 
 ----------
 
@@ -379,97 +372,89 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Meddelande om nytt inlägg i kategori — "{FORUM_NAME}"
 
-Hello {USERNAME},
+Hej {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+Du får detta meddelande för att du bevakar kategorin "{FORUM_NAME}" på "{SITENAME}". Denna kategori har fått ett nytt svar i tråden "{TOPIC_TITLE}" sedan ditt senaste besök. Du kan använda följande länk för att visa det senaste olästa svaret, inga fler meddelanden kommer att skickas till dig förrän du besökt tråden.
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Om du vill besöka tråden, klicka på följande länk:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Om du vill besöka kategorin, klicka på följande länk:
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Om du inte längre vill bevaka denna kategori kan du antingen klicka på "Sluta bevaka denna kategori"-länken som du hittar i kategorin ovan, eller genom att klicka på följande länk:
 
 {U_STOP_WATCHING_FORUM}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} Du har lagts till i en användargrupp
 
-Congratulations,
+Grattis,
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+Du har lagts till i gruppen "{GROUP_NAME}" på "{SITENAME}".
+Denna åtgärd utfördes av en gruppledare eller en administratör, kontakta någon av dem för mer information.
 
-You can view your groups information here:
+Du kan se information om gruppen här:
 {U_GROUP}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Din ansökan har godkänts
 
-Congratulations,
+Grattis,
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+Din ansökan om att bli medlem i gruppen "{GROUP_NAME}" på "{SITENAME}" har godkänts.
+Klicka på följande länk för att se ditt gruppmedlemskap.
 
 {U_GROUP}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
-
-Dear {USERNAME},
-
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
-
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} En ansökan om medlemskap i din grupp har gjorts
+Hej {USERNAME},
+Användaren "{REQUEST_USERNAME}" har ansökt om medlemskap i gruppen "{GROUP_NAME}" som du leder på "{SITENAME}".
+För att godkänna eller avslå denna ansökan, besök följande länk:
 {U_PENDING}
-
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installerat
 
-Congratulations,
+Grattis,
 
-You have successfully installed phpBB on your server.
+phpBB har installerats på din server.
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Detta e-postmeddelande innehåller viktig information om din installation som du bör förvara säkert. Lösenordet har krypterats i databasen och kan inte återfås, men du kan begära ett nytt lösenord till e-postadressen som hör ihop med ditt användarkonto på forumet.
 
 ----------------------------
-Username: {USERNAME}
+Användarnamn: {USERNAME}
 
-Board URL: {U_BOARD}
+Forum-URL: {U_BOARD}
 ----------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
+Användbar information om din phpBB installation kan hittas i docs-mappen i din installation, på phpBB.com\'s supportsida — http://www.phpbb.com/support/ och på svanska supporten - http://www.phpbb-se.com/forum/
 
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+För att hålla ditt diskussionsforum säkert så är det varmt rekommenderat att hålla sig uppdaterad med nya versioner av mjukvaran vilket enkelt kan göras genom att börja prenumerera på phpBB.com\'s nyhetsbrev, som finns tillgänglig på http://www.phpbb.com/support/
 
 {EMAIL_SIG}',
 ));
@@ -509,15 +494,16 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} Meddelande om ny tråd — "{FORUM_NAME}"
 
-Hello {USERNAME},
+Hej {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+Du får detta meddelande för att du bevakar kategorin "{FORUM_NAME}" på "{SITENAME}". Det har skapats en ny tråd, "{TOPIC_TITLE}", i denna kategori sedan ditt senaste besök.
+Du kan använda följande länk för att besöka denna kategori, inga fler meddelanden kommer att skickas till dig förrän du besökt kategorin.
 
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Om du inte längre vill bevaka denna kategori kan du antingen klicka på "Sluta bevaka denna kategori"-länken som du hittar i kategorin ovan, eller genom att klicka på följande länk:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -527,25 +513,11 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{PM_SUBJECT}"
+	'email/pm_report_closed.txt' 		=> '﻿{EMAILSUBJECT:} Rapport stängd - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+Hej {USERNAME},
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed. If you have further questions, please contact {CLOSER_NAME} by private message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{PM_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
-
+Du får detta meddelande eftersom rapporten du gjorde angående det privata meddelandet "{PM_SUBJECT}" på "{SITENAME}" nu har hanterats av en moderator eller administratör. Rapporten har markerats som avklarad och stängd. Kontakta {CLOSER_NAME} med ett personligt meddelande om du har några frågor.
 
 {EMAIL_SIG}',
 ));
@@ -553,16 +525,28 @@ You are receiving this notification because the report you filed regarding the p
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Rapport borttagen - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+Hej {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+Du får detta meddelande eftersom rapporten du gjorde angående det privata meddelandet "{PM_SUBJECT}" på "{SITENAME}" har tagits bort av en moderator eller administratör.
 
-If you want to view the post, click the following link:
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Inlägg godkänt — "{POST_SUBJECT}"
+
+Hej {USERNAME},
+
+Du får detta meddelande för att ditt inlägg "{POST_SUBJECT}" på "{SITENAME}" har godkänts av en moderator eller administratör.
+
+Om du vill besöka inlägget, klicka på följande länk:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Om du vill besöka tråden, klicka på följande länk:
 {U_VIEW_TOPIC}
 
 
@@ -572,13 +556,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Inlägg avslaget — "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Hej {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Du får detta meddelande för att ditt inlägg "{POST_SUBJECT}" på "{SITENAME}" avslagits av en moderator eller administratör.
 
-The following reason was given for the disapproval:
+Följande skäl gavs:
 
 {REASON}
 
@@ -675,19 +659,19 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} Nytt personligt meddelande
 
-Hello {USERNAME},
+Hej {USERNAME},
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+Du har fått ett nytt personligt meddelande från "{AUTHOR_NAME}" till ditt konto på "{SITENAME}" med ämnet:
 
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+Du kan läsa meddelandet genom att klicka på följande länk:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+Du har begärt att bli meddelad vid nya personliga meddelanden, men kom ihåg att du alltid kan välja att inte bli meddelad om nya meddelanden genom att ändra inställningarna i din profil.
 
 {EMAIL_SIG}',
 ));
@@ -709,15 +693,15 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+Hej {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Följande är ett e-postmeddelande som har skickats till dig från {FROM_USERNAME} via ditt konto på "{SITENAME}". Om detta meddelande är skräppost eller innehåller stötande/kränkande material/kommentarer, kontakta diskussionsforumets administratör på följande adress:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Inkludera hela detta meddelande (framförallt överdelen) när du kontaktar denna adress. Notera att svarsadressen för detta e-postmeddelande tillhör {FROM_USERNAME}.
 
-Message sent to you follows
+Meddelandet som skickades till dig följer nedan
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -728,15 +712,15 @@ Message sent to you follows
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+Hej {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Följande är ett meddelande som har skickats till dig från {FROM_USERNAME} via ditt konto på "{SITENAME}". Om detta meddelande är skräppost eller innehåller stötande/kränkande material/kommentarer, kontakta diskussionsforumets administratör på följande adress:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Inkludera hela detta meddelande när du kontaktar denna adress. Notera att svarsadressen för detta e-postmeddelande är satt till diskussionsforumets snabbmeddelandekonto.
 
-Message sent to you follows
+Meddelandet som skickades till dig följer nedan
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -746,24 +730,11 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Rapport stängd — "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Hej {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
+Du får detta meddelande eftersom rapporten du gjorde angående inlägget "{POST_SUBJECT}" i "{TOPIC_TITLE}" på "{SITENAME}" nu har hanterats av en moderator eller administratör. Rapporten har markerats som avklarad och stängd. Kontakta {CLOSER_NAME} med ett personligt meddelande om du har några frågor.
 
 
 {EMAIL_SIG}',
@@ -772,13 +743,25 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Rapport borttagen — "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Hej {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+Du får detta meddelande eftersom rapporten du gjorde angående inlägget "{POST_SUBJECT}" i "{TOPIC_TITLE}" på "{SITENAME}" har tagits bort av en moderator eller administratör.
 
-If you want to view the topic, click the following link:
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Tråd godkänd — "{TOPIC_TITLE}"
+
+Hej {USERNAME},
+
+Du får detta meddelande för att din tråd "{TOPIC_TITLE}" på "{SITENAME}" har godkänts av en moderator eller administratör.
+
+Om du vill besöka tråden, klicka på följande länk:
 {U_VIEW_TOPIC}
 
 
@@ -788,13 +771,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Tråd avslagen — "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Hej {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Du får detta meddelande för att din tråd "{TOPIC_TITLE}" på "{SITENAME}" har avslagits av en moderator eller administratör.
 
-The following reason was given for the disapproval:
+Följande skäl gavs:
 
 {REASON}
 
@@ -805,22 +788,22 @@ The following reason was given for the disapproval:
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Meddelande om svar på tråd — "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Hej {USERNAME},
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+Du får detta meddelande för att du bevakar tråden "{TOPIC_TITLE}" på "{SITENAME}". Denna tråd har besvarats sedan ditt senaste besök. Du kan använda följande länk för att läsa svaren som gjorts, inga fler meddelanden kommer att skickas förrän du besökt tråden.
 
-If you want to view the newest post made since your last visit, click the following link:
+Om du vill visa det nyaste inlägget som gjorts sedan ditt senaste besök, klicka på följande länk:
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Om du vill besöka tråden, klicka på följande länk:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Om du vill besöka kategorin, klicka på följande länk:
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+Om du inte längre vill bevaka denna tråd klickar du antingen på "Sluta bevaka denna tråd"-länken som du hittar ovanför tråden i länken ovan, eller genom att klicka på följande länk:
 
 {U_STOP_WATCHING_TOPIC}
 
@@ -830,47 +813,25 @@ If you no longer wish to watch this topic you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Återaktivera ditt konto
 
-Hello {USERNAME},
+Hej {USERNAME},
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
-
-{U_ACTIVATE}
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
-
-Hello {USERNAME}
-
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
-
-To use the new password you need to activate it. To do this click the link provided below.
+Ditt konto på "{SITENAME}" har inaktiverats, förmodligen på grund av att förändringar har gjorts till din profil. För att återaktivera ditt konto måste du klicka på länken nedan:
 
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+{EMAIL_SIG}',
+));
 
-Password: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+
+$email = array_merge($email, array(
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Ditt konto har inaktiverats
+
+Hej {USERNAME},
+
+Ditt konto på "{SITENAME}" har inaktiverats, förmodligen på grund av ändringar som har gjorts i din profil. Administratören måste aktivera det igen innan du kan logga in. Du kommer få ett nytt meddelande när detta har skett.
 
 {EMAIL_SIG}',
 ));
@@ -878,20 +839,42 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} Aktivera nytt lösenord
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+Hej {USERNAME},
 
-Please keep this e-mail for your records. Your account information is as follows:
+Du får detta meddelande för att du (eller någon som utger sig för att vara dig) har begärt ett nytt lösenord för ditt konto på "{SITENAME}". Om du inte begärt detta, ignorera detta meddelande. Om du fortsätter att få samma meddelande som detta, kontakta administratören.
+
+För att kunna använda det nya lösenordet måste du aktivera det. Klicka på nedanstående länk för att göra detta.
+
+{U_ACTIVATE}
+
+När du aktiverat det kan du logga in med ditt nya lösenord:
+
+Lösenord: {PASSWORD}
+
+Du kan självklart sedan byta detta lösenord i kontrollpanelen. Kontakta administratören om några problem uppstår.
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Återaktivera ditt konto på "{SITENAME}"
+
+En administratör har begärt att ditt konto återaktiveras. Ditt konto är för närvarande inaktiverat.
+Följ instruktionerna nedan för att återaktivera ditt konto.
+
+Spara detta e-postmeddelande för framtida bruk. 
 
 ----------------------------
-Username: {USERNAME}
+Ditt användarnamn: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ditt lösenord har krypteras i vår databas och kan inte hämtas därifrån av oss. Om du glömmer ditt lösenord så kan du nollställa det och begära ett nytt till e-postadressen, som hör ihop med ditt konto.
 
-Please visit the following link to reactivate your account:
+Klicka på följande länk för att åkteraktivera ditt konto:
 
 {U_ACTIVATE}
 
@@ -1004,15 +987,15 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Påminnelse om inaktivt konto
 
-Hello {USERNAME},
+Hej {USERNAME},
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+Detta meddelande är en påminnelse om att ditt konto på "{SITENAME}", skapad {REGISTER_DATE}, är inaktivt. Om du vill aktivera detta konto, besök följande länk:
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+Tack för att du registrerade dig på "{SITENAME}", vi ser fram emot ditt deltagande.
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +1003,45 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Välkommen till "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Spara detta e-postmeddelande för framtida bruk. Dina kontouppgifter:
 
 ----------------------------
-Username: {USERNAME}
+Användarnamn: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ditt lösenord har krypteras i vår databas och kan inte hämtas därifrån av oss. Om du glömmer ditt lösenord så kan du nollställa det och begära ett nytt till e-postadressen, som hör ihop med ditt konto.
 
-Please visit the following link in order to activate your account:
+Var god, besök följande länk för att aktivera ditt konto:
 
 {U_ACTIVATE}
 
+Tack för att du registrerade dig.
 
-Thank you for registering.
+{EMAIL_SIG}
+',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Välkommen till "{SITENAME}"
+
+{WELCOME_MSG}
+
+Spara detta e-postmeddelande för framtida bruk. Dina kontouppgifter:
+
+----------------------------
+Användarnamn: {USERNAME}
+Forumadress: {U_BOARD}
+----------------------------
+
+Ditt lösenord har krypterats i vår databas och kan inte hämtas därifrån av oss. Om du glömmer ditt lösenord så kan du nollställa det och begära ett nytt till e-postadressen, som hör ihop med ditt konto.
+
+Tack för att du registrerade dig.
 
 {EMAIL_SIG}',
 ));
@@ -1045,47 +1049,24 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Välkommen till "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Spara detta e-postmeddelande för framtida bruk. Dina kontouppgifter:
 
 ----------------------------
-Username: {USERNAME}
-
-Board URL: {U_BOARD}
+Användarnamn: {USERNAME}
+Forumadress: {U_BOARD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
-Thank you for registering.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
-
-{WELCOME_MSG}
-
-Please keep this e-mail for your records. Your account information is as follows:
-
-----------------------------
-Username: {USERNAME}
-
-Board URL: {U_BOARD}
-----------------------------
-
-Please visit the following link in order to activate your account:
+Ditt konto är för närvarande inaktiverat. Du kan inte använda det förrän du besökt följande länk:
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ditt lösenord har krypterats i vår databas och kan inte hämtas därifrån av oss. Om du glömmer ditt lösenord så kan du nollställa det och begära ett nytt till e-postadressen, som hör ihop med ditt konto.
 
-Thank you for registering.
+Tack för att du registrerade dig.
 
 {EMAIL_SIG}',
 ));

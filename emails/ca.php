@@ -1,16 +1,16 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activació d\'un compte d\'usuari
 
-Hello,
+Hola,
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+S\'ha desactivat o creat el compte de "{USERNAME}", cal que reviseu (si s\'escau) la informació d\'aquest usuari i el compte gestioneu adequadament.
 
-Use this link to view the user\'s profile:
+Utilitzeu aquest enllaç per visualitzar el perfil de l\'usuari:
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+Utilitzeu aquest enllaç per activar el compte:
 {U_ACTIVATE}
 
 
@@ -21,14 +21,14 @@ Use this link to activate the account:
 
 $email = array_merge($email, array(
 	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+L\'administrador de "{SITENAME}" us ha enviat el correu electrònic següent. Si es tracta de correu brossa, conté insults o comentaris ofensius poseu-vos en contacte amb l\'administrador del fòrum a l\'adreça electrònica següent:
 
 {CONTACT_EMAIL}
 
-Include this full e-mail (particularly the headers). 
+Incloeu aquest correu electrònic complet (especialment les capçaleres).
 
-Message sent to you follows:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+El missatge enviat es mostra a continuació
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
@@ -40,13 +40,13 @@ Message sent to you follows:
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Compte activat
 
-Hello {USERNAME},
+Hola {USERNAME},
 
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
+Un administrador ha activat el vostre compte a "{SITENAME}", ara ja podeu iniciar la sessió.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+La vostra contrasenya està emmagatzemada de forma segura a la base de dades i no podeu recuperar el text desencriptat. Si l\'oblideu, podeu reiniciar-la utilitzant el correu electrònic associat al vostre compte.
 
 {EMAIL_SIG}',
 ));
@@ -54,23 +54,23 @@ Your password has been securely stored in our database and cannot be retrieved. 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Benvingut a "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Si us plau, guardeu aquest correu electrònic per a la vostra informació. Les dades del vostre compte són les següents:
 
 ----------------------------
-Username: {USERNAME}
+Nom d\'usuari: {USERNAME}
 
-Board URL: {U_BOARD}
+URL del fòrum: {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+Actualment el vostre compte és inactiu i cal que l\'administrador del fòrum l\'activi abans que pugueu iniciar la sessió. Se us enviarà una altra notificació quan l’hagin activat.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+La vostra contrasenya està emmagatzemada de forma segura a la base de dades i no podeu recuperar el text desencriptat. Si l\'oblideu, podeu reiniciar-la utilitzant el correu electrònic associat al vostre compte.
 
-Thank you for registering.
+Gràcies per registrar-vos.
 
 {EMAIL_SIG}',
 ));
@@ -213,46 +213,46 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Benvingut a "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+En compliment de la normativa COPPA, actualment el vostre compte és inactiu.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Si us plau, imprimiu aquest missatge i feu que algun dels vostres pares o el vostre tutor el signi i el dati. Llavors envieu-lo per fax a:
 
 {FAX_INFO}
 
-OR mail it to:
+o envieu-lo per correu tradicional a:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ TALLEU PER AQUÍ ------------------------------
+Permis per participar a "{SITENAME}" - {U_BOARD}
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Nom d\'usuari: {USERNAME}
+Correu electrònic: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
-
-
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
+HE REVISAT LA INFORMACIÓ PROPORCIONADA PEL MEU FILL/A I PER LA PRESENT DONO EL MEU PERMÍS A "{SITENAME}" PER QUE EMMAGATZEMI AQUESTA INFORMACIÓ. 
+ENTENC QUE AQUESTA INFORMACIÓ ES POT CANVIAR EN QUALSEVOL MOMENT INTRODUÏNT UNA CONTRASENYA. 
+ENTENC QUE TINC DRET A DEMANAR QUE AQUESTA INFORMACIÓ S\'ELIMINI DE "{SITENAME}" EN QUALSEVOL MOMENT.
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Pare, mare o tutor 
+(nom): _____________________
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+(signatura): __________________ 
 
-Thank you for registering.
+Data: _______________
+
+------------------------------ TALLEU PER AQUÍ ------------------------------
+
+
+Un cop l\'administrador hagi rebut el formulari anterior per fax o per correu tradicional, el vostre compte serà activat.
+
+La vostra contrasenya està emmagatzemada de forma segura a la base de dades i no podeu recuperar el text desencriptat. Si l\'oblideu, podeu reiniciar-la utilitzant el correu electrònic associat al vostre compte.
+
+Gràcies per registrar-vos.
 
 {EMAIL_SIG}
 ',
@@ -261,46 +261,46 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Benvingut a "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+En compliment de la normativa COPPA, actualment el vostre compte és inactiu.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Si us plau, imprimiu aquest missatge i feu que algun dels vostres pares o el vostre tutor el signi i el dati. Llavors envieu-lo per fax a:
 
 {FAX_INFO}
 
-OR mail it to:
+o envieu-lo per correu tradicional a:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ TALLEU PER AQUÍ ------------------------------
+Permis per participar a "{SITENAME}" - {U_BOARD}
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Nom d\'usuari: {USERNAME}
+Correu electrònic: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
-
-
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
+HE REVISAT LA INFORMACIÓ PROPORCIONADA PEL MEU FILL/A I PER LA PRESENT DONO EL MEU PERMÍS A "{SITENAME}" PER QUE EMMAGATZEMI AQUESTA INFORMACIÓ. 
+ENTENC QUE AQUESTA INFORMACIÓ ES POT CANVIAR EN QUALSEVOL MOMENT INTRODUÏNT UNA CONTRASENYA. 
+ENTENC QUE TINC DRET A DEMANAR QUE AQUESTA INFORMACIÓ S\'ELIMINI DE "{SITENAME}" EN QUALSEVOL MOMENT.
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Pare, mare o tutor 
+(nom): _____________________
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+(signatura): __________________ 
 
-Thank you for registering.
+Data: _______________
+
+------------------------------ TALLEU PER AQUÍ ------------------------------
+
+
+Un cop l\'administrador hagi rebut el formulari anterior per fax o per correu tradicional, el vostre compte serà activat.
+
+La vostra contrasenya està emmagatzemada de forma segura a la base de dades i no podeu recuperar el text desencriptat. Si l\'oblideu, podeu reiniciar-la utilitzant el correu electrònic associat al vostre compte.
+
+Gràcies per registrar-vos.
 
 {EMAIL_SIG}
 ',
@@ -309,19 +309,19 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - Enviat per correu electrònic a un amic
 
-Hello {TO_USERNAME},
+Hola {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+{FROM_USERNAME} us ha enviat aquest correu electrònic des de "{SITENAME}" perquè creu que podeu estar interessat en el tema següent:
 
 {TOPIC_NAME}
 
-You can find it at:
+Podeu trobar-lo a:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+És possible que a continuació aparegui un missatge de {FROM_USERNAME}. Tingueu en compte que aquest missatge no ha estat vist ni aprovat pels administradors del fòrum. Si voleu queixar-vos per haver rebut aquest correu electrònic poseu-vos en contacte amb l\'administrador del fòrum a {BOARD_CONTACT} incloent-hi les capcaleres del missatge.
 
 ----------
 
@@ -379,21 +379,21 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Notificació d\'entrada nova en el fòrum "{FORUM_NAME}"
 
-Hello {USERNAME},
+Hola {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+Heu rebut aquesta notificació perquè esteu subscrits al fòrum, "{FORUM_NAME}" a "{SITENAME}". S\'ha publicat un resposta nova al tema "{TOPIC_TITLE}" d\'aquest fòrum des de la vostra darrera visita. Podeu utilitzar l\'enllaç següent per veure la darrera resposta no llegida, no rebreu més notificacions fins que visiteu el fòrum.
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Si voleu veure el tema, feu clic a l\'enllaç següent:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Si voleu veure el fòrum, feu clic a l\'enllaç següent:
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Si ja no voleu estar subscrit a aquest fòrum podeu fer clic a l\'enllaç "Cancel·la la subscripció a aquest fòrum" ubicat a la part inferior del fòrum indicat, o bé fent clic a l\'enllaç següent:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -404,14 +404,14 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} Se us ha afegit a aquest grup d\'usuaris
 
-Congratulations,
+Felicitats,
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+Se us ha afegit al grup "{GROUP_NAME}" de "{SITENAME}".
+Ho ha fet un líder del grup o l\'administrador del fòrum, poseu-vos-hi en contacte per obtenir més informació.
 
-You can view your groups information here:
+Podeu visualitzar la informació dels vostres grups aquí:
 {U_GROUP}
 
 {EMAIL_SIG}
@@ -421,12 +421,12 @@ You can view your groups information here:
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} S\'ha aprovat la vostra sol·licitud
 
-Congratulations,
+Felicitats,
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+S\'ha aprovat la vostra sol·licitud per afiliar-vos al grup "{GROUP_NAME}" de "{SITENAME}".
+Feu clic a l\'enllaç següent per visualitzar la vostra afiliació al grup.
 
 {U_GROUP}
 
@@ -437,12 +437,12 @@ Click on the following link to see your group membership.
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} S\'ha fet una sol·licitud per afiliar-se al vostre grup
 
-Dear {USERNAME},
+Benvolgut {USERNAME},
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+L’usuari "{REQUEST_USERNAME}" ha sol·licitat afiliar-se al grup "{GROUP_NAME}" que modereu a "{SITENAME}".
+Per aprovar o rebutjar aquesta sol·licitud d\'afiliació al grup visiteu l\'enllaç següent:
 
 {U_PENDING}
 
@@ -453,23 +453,23 @@ To approve or deny this request for group membership please visit the following 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} S\'ha instal·lat el phpBB
 
-Congratulations,
+Felicitats,
 
-You have successfully installed phpBB on your server.
+Heu instal·lat correctament el phpBB en el vostre servidor.
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Aquest correu electrònic conté informació important sobre la instal·lació i és recomanable que el conserveu per a futures referències. La vostra contrasenya està emmagatzemada de forma segura a la base de dades i no podeu recuperar el text desencriptat. Si l\'oblideu, podeu reiniciar-la utilitzant el correu electrònic associat al vostre compte.
 
 ----------------------------
-Username: {USERNAME}
+Nom d\'usuari: {USERNAME}
 
-Board URL: {U_BOARD}
+URL del fòrum: {U_BOARD}
 ----------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
+Podeu trobar informació útil sobre el phpBB al directori "docs" i a la pàgina d\'assistència de phpBB.com - http://www.phpbb.com/support/
 
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+Per mantenir els fòrums segurs és molt recomanable que mantingueu el fòrum actualitzat amb les versions més recents. Per a la vostra comoditat, hi ha una llista de correu disponible a la pàgina referenciada a sobre.
 
 {EMAIL_SIG}',
 ));
@@ -509,15 +509,15 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} Notificació de tema nou - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Hola {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+Heu rebut aquesta notificació perquè esteu subscrits al fòrum, "{FORUM_NAME}" a "{SITENAME}". S\'ha publicat un tema nou en aquest fòrum des de la vostra darrera visita. Podeu utilitzar l\'enllaç següent per veure el fòrum, no rebreu més notificacions fins que visiteu el fòrum.
 
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Si ja no voleu estar subscrit a aquest fòrum podeu fer clic a l\'enllaç "Cancel·la la subscripció a aquest fòrum" ubicat a la part inferior del fòrum indicat, o bé fent clic a l\'enllaç següent:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -527,11 +527,11 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{PM_SUBJECT}"
+	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Informe tancat - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+Hola {USERNAME},
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed. If you have further questions, please contact {CLOSER_NAME} by private message.
+Heu rebut aquesta notificació perquè l\'informe que heu fet del missatge privat "{PM_SUBJECT}" a "{SITENAME}" ha estat gestionat per un moderador o un administrador. L\'informe ja està tancat. Si teniu més preguntes poseu-vos en contacte amb {CLOSER_NAME} per missate privat.
 
 
 {EMAIL_SIG}',
@@ -540,11 +540,12 @@ You are receiving this notification because the report you filed regarding the p
 
 
 $email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{PM_SUBJECT}"
+	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Informe eliminat - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+Hola {USERNAME},
 
 You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
+Heu rebut aquesta notificació perquè l\'informe que heu fet de l\'entrada "{PM_SUBJECT}" a "{SITENAME}" ha estat eliminat per un moderador o un administrador.
 
 
 {EMAIL_SIG}',
@@ -553,16 +554,16 @@ You are receiving this notification because the report you filed regarding the p
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Entrada aprovada - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Hola {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+Heu rebut aquesta notificació perquè la vostra entrada "{POST_SUBJECT}" a "{SITENAME}" ha estat aprovada per un moderador o un administrador.
 
-If you want to view the post, click the following link:
+Si voleu visualitzar l\'entrada, feu clic a l\'enllaç següent:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Si voleu visualitzar el tema, feu clic a l\'enllaç següent:
 {U_VIEW_TOPIC}
 
 
@@ -572,13 +573,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Entrada rebutjada - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Hola {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Heu rebut aquesta notificació perquè la vostra entrada "{POST_SUBJECT}" a "{SITENAME}" ha estat rebutjada per un moderador o un administrador.
 
-The following reason was given for the disapproval:
+S\'ha donat la següent raó per al rebuig:
 
 {REASON}
 
@@ -675,19 +676,19 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} Ha arribat un missatge privat nou
 
-Hello {USERNAME},
+Hola {USERNAME},
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+Heu rebut un missatge privat nou de "{AUTHOR_NAME}" al vostre compte a "{SITENAME}" amb l\'assumpte següent:
 
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+Podeu visualitzar el missatge nou fent clic a l\'enllaç següent:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+Heu sol·licitat rebre notificacions quan arribin missatges privats nous, recordeu que podeu triar no rebre aquestes notificacions canviant l\'opció adequada del vostre perfil.
 
 {EMAIL_SIG}',
 ));
@@ -709,16 +710,16 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+Hola {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+{FROM_USERNAME} us ha enviat el correu electrònic següent a través del vostre compte a "{SITENAME}". Si es tracta de correu brossa, conté insults o comentaris ofensius poseu-vos en contacte amb l\'administrador del fòrum a l\'adreça electrònica següent:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Incloeu aquest correu electrònic complet (especialment les capçaleres). Tingueu en compte que l\'adreça de resposta utilitzada per aquest correu electrònic és la de {FROM_USERNAME}.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+El missatge enviat es mostra a continuació
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 ',
@@ -728,16 +729,16 @@ Message sent to you follows
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+Hola {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+{FROM_USERNAME} us ha enviat el missatge següent a través del vostre compte a "{SITENAME}". Si es tracta de correu brossa, conté insults o comentaris ofensius poseu-vos en contacte amb l\'administrador del fòrum a l\'adreça electrònica següent:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Incloeu aquest missatge complet. Tingueu en compte que l\'adreça d\'enviament utilitzada és la del compte del fòrum per a missatgeria instantània.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+El missatge enviat es mostra a continuació
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 ',
@@ -746,24 +747,11 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Informe tancat - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Hola {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
+Heu rebut aquesta notificació perquè l\'informe que heu fet de l\'entrada "{POST_SUBJECT}" al tema "{TOPIC_TITLE}" de "{SITENAME}" ha estat gestionat per un moderador o un administrador. Posteriorment s\'ha tancat l\'informe. Si teniu més preguntes poseu-vos en contacte amb {CLOSER_NAME} per missate privat.
 
 
 {EMAIL_SIG}',
@@ -772,13 +760,26 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Informe eliminat - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Hola {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+Heu rebut aquesta notificació perquè l\'informe que heu fet de l\'entrada "{POST_SUBJECT}" al tema "{TOPIC_TITLE}" de "{SITENAME}" ha estat eliminat per un moderador o un administrador.
 
-If you want to view the topic, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Tema aprovat - "{TOPIC_TITLE}"
+
+Hola {USERNAME},
+
+Heu rebut aquesta notificació perquè el vostre tema "{TOPIC_TITLE}" a "{SITENAME}" ha estat aprovat per un moderador o un administrador.
+
+Si voleu visualitzar el tema, feu clic a l\'enllaç següent:
 {U_VIEW_TOPIC}
 
 
@@ -788,13 +789,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Tema rebutjat - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Hola {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Heu rebut aquesta notificació perquè el vostre tema "{TOPIC_TITLE}" a "{SITENAME}" ha estat rebutjat per un moderador o un administrador.
 
-The following reason was given for the disapproval:
+S\'ha donat la següent raó per al rebuig:
 
 {REASON}
 
@@ -805,22 +806,22 @@ The following reason was given for the disapproval:
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Notificació de respostes al tema "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Hola {USERNAME},
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+Heu rebut aquesta notificació perquè esteu subscrits al tema, "{TOPIC_TITLE}" a "{SITENAME}". S\'ha publicat una resposta en aquest tema des de la vostra darrera visita. Podeu utilitzar l\'enllaç següent per veure les respostes que s\'han fet, no rebreu més notificacions fins que visiteu el tema.
 
-If you want to view the newest post made since your last visit, click the following link:
+Si voleu veure les entrades publicades des de la vostra darrera visita, feu clic al l\'enllaç següent:
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Si voleu veure el tema, feu clic al l\'enllaç següent:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Si voleu veure el fòrum, feu clic al l\'enllaç següent:
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+Si ja no voleu estar subscrit a aquest tema podeu fer clic a l\'enllaç "Cancel·la la subscripció a aquest tema" ubicat a la part inferior del tema indicat, o bé fent clic a l\'enllaç següent:
 
 {U_STOP_WATCHING_TOPIC}
 
@@ -830,47 +831,25 @@ If you no longer wish to watch this topic you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactiveu el vostre compte
 
-Hello {USERNAME},
+Hola {USERNAME},
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
-
-{U_ACTIVATE}
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
-
-Hello {USERNAME}
-
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
-
-To use the new password you need to activate it. To do this click the link provided below.
+El vostre compte a "{SITENAME}" ha estat desactivat, probablement degut a canvis en el vostre perfil. Per reactivar el vostre compte heu de fer clic a l\'enllaç següent:
 
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+{EMAIL_SIG}',
+));
 
-Password: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+
+$email = array_merge($email, array(
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} El vostre compte ha estat desactivat
+
+Hola {USERNAME},
+
+El vostre compte a "{SITENAME}" ha estat desactivat, probablement degut a canvis en el vostre perfil. Cal que l\'administrador del fòrum l\'activi abans que pugueu tornar a iniciar la sessió. Rebreu una altra notificació quan això passi.
 
 {EMAIL_SIG}',
 ));
@@ -878,20 +857,42 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} Activació de la contrasenya nova
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+Hola {USERNAME}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Heu rebut aquest correu electrònic perquè heu demanat (o algú en el vostre lloc) que se us envïi una contrasenya nova per al vostre compte a "{SITENAME}". Si no heu sol·licitat aquesta notificació, ignoreu-la. Si seguiu rebent-la poseu-vos en contacte amb l\'administrador del fòrum.
+
+Per utilitzar la nova contrasenya cal que l\'activeu. Per fer-ho feu clic a l\'enllaç següent.
+
+{U_ACTIVATE}
+
+Si el procés es realitza correctament podreu iniciar la sessió utilitzant la contrasenya següent:
+
+Contrasenya: {PASSWORD}
+
+Obviament, podeu canviar aquesta contrasenya a la pàgina del vostre perfil. Si teniu algun problema poseu-vos en contacte amb l\'administrador del fòrum.
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactiveu el vostre compte a "{SITENAME}"
+
+Un administrador del fòrum ha demanat la reactivació del vostre compte. Actualment el vostre compte és inactiu.
+Si us plau seguiu els passos llistats per reactivar el vostre compte.
+
+Si us plau, guardeu aquest correu electrònic per a la vostra informació. Les dades del vostre compte són les següents:
 
 ----------------------------
-Username: {USERNAME}
+Nom d\'usuari: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+La vostra contrasenya està emmagatzemada de forma segura a la base de dades i no podeu recuperar el text desencriptat. Si l\'oblideu, podeu reiniciar-la utilitzant el correu electrònic associat al vostre compte.
 
-Please visit the following link to reactivate your account:
+Si us plau, visiteu l\'enllaç següent per reactivar el vostre compte:
 
 {U_ACTIVATE}
 
@@ -1004,15 +1005,15 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Recordatori de compte inactiu
 
-Hello {USERNAME},
+Hola {USERNAME},
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+Aquesta notificació és un recordatori de que el vostre compte a "{SITENAME}", creat el {REGISTER_DATE}, segueix inactiu. Si desitgeu activar aquest compte, visiteu l’enllaç següent:
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+Gràcies per registrar-vos a "{SITENAME}", esperem la vostra participació.
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +1021,24 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Benvingut a "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Si us plau, guardeu aquest correu electrònic per a la vostra informació. Les dades del vostre compte són les següents:
 
 ----------------------------
-Username: {USERNAME}
+Nom d\'usuari: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+La vostra contrasenya està emmagatzemada de forma segura a la base de dades i no podeu recuperar el text desencriptat. Si l\'oblideu, podeu reiniciar-la utilitzant el correu electrònic associat al vostre compte.
 
-Please visit the following link in order to activate your account:
+Si us plau visiteu l\'enllaç següent per activar el vostre compte:
 
 {U_ACTIVATE}
 
 
-Thank you for registering.
+Gràcies per registrar-vos.
 
 {EMAIL_SIG}',
 ));
@@ -1045,21 +1046,21 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Benvingut a "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Si us plau, guardeu aquest correu electrònic per a la vostra informació. Les dades del vostre compte són les següents:
 
 ----------------------------
-Username: {USERNAME}
+Nom d\'usuari: {USERNAME}
 
-Board URL: {U_BOARD}
+URL del fòrum: {U_BOARD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+La vostra contrasenya està emmagatzemada de forma segura a la base de dades i no podeu recuperar el text desencriptat. Si l\'oblideu, podeu reiniciar-la utilitzant el correu electrònic associat al vostre compte.
 
-Thank you for registering.
+Gràcies per registrar-vos.
 
 {EMAIL_SIG}',
 ));
@@ -1067,25 +1068,25 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Benvingut a "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Si us plau, guardeu aquest correu electrònic per a la vostra informació. Les dades del vostre compte són les següents:
 
 ----------------------------
-Username: {USERNAME}
+Nom d\'usuari: {USERNAME}
 
-Board URL: {U_BOARD}
+URL del fòrum: {U_BOARD}
 ----------------------------
 
-Please visit the following link in order to activate your account:
+Si us plau, visiteu l\'enllaç següent per activar el vostre compte:
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+La vostra contrasenya està emmagatzemada de forma segura a la base de dades i no podeu recuperar el text desencriptat. Si l\'oblideu, podeu reiniciar-la utilitzant el correu electrònic associat al vostre compte.
 
-Thank you for registering.
+Gràcies per registrar-vos.
 
 {EMAIL_SIG}',
 ));

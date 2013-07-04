@@ -1,16 +1,16 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Cont de utilizator nou
 
-Hello,
+Salut,
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+Contul deţinut de "{USERNAME}" a fost dezactivat sau creat recent, ar fi indicat să verificaţi detaliile acestui utilizator (dacă este necesar), tratând problema cu importanţa cuvenită.
 
-Use this link to view the user\'s profile:
+Folosiţi această legătură pentru a vedea profilul utilizatorului:
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+Folosiţi această legătură pentru a activa contul:
 {U_ACTIVATE}
 
 
@@ -21,14 +21,14 @@ Use this link to activate the account:
 
 $email = array_merge($email, array(
 	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Următorul mesaj v-a fost trimis de către un administrator al "{SITENAME}". Dacă acest mesaj este spam, conţine comentarii abuzive sau are vreun conţinut ofensator, vă rugăm să contactaţi webmaster-ul forumului la următoarea adresă:
 
 {CONTACT_EMAIL}
 
-Include this full e-mail (particularly the headers). 
+Vă rugăm să includeţi acest email (mai ales header-ele).
 
-Message sent to you follows:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Urmează mesajul care vă este adresat:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
@@ -40,13 +40,13 @@ Message sent to you follows:
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Contul activat
 
-Hello {USERNAME},
+Salut {USERNAME},
 
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
+Contul dumneavoastră de pe "{SITENAME}" a fost activat de către un administrator. Acum puteţi să vă autentificaţi.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Parola a fost stocată în siguranţă în baza noastră de date şi nu poate fi extrasă. În cazul în care este uitată, veţi putea să o resetaţi folosind adresa de email asociată cu contul propriu.
 
 {EMAIL_SIG}',
 ));
@@ -54,23 +54,23 @@ Your password has been securely stored in our database and cannot be retrieved. 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Bine aţi venit la "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Vă rugăm sa păstraţi acest mesaj. Informaţia pentru contul dumneavoastră:
 
-----------------------------
-Username: {USERNAME}
+-----------------------------
+Nume utilizator  : {USERNAME}
 
-Board URL: {U_BOARD}
-----------------------------
+Adresa forumului : {U_BOARD}
+-----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+Contul dumneavoastră este momentan inactiv şi va fi aprobat de către un administrator înainte să vă puteţi autentifica. Un alt mesaj va fi trimis când se va întâmpla acest lucru.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Parola a fost stocată în siguranţă în baza noastră de date şi nu poate fi extrasă. În cazul în care este uitată, veţi putea să o resetaţi folosind adresa de email asociată cu contul propriu.
 
-Thank you for registering.
+Va mulţumim pentru înregistrare.
 
 {EMAIL_SIG}',
 ));
@@ -213,46 +213,46 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Bine aţi venit la "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+Conform actului COPPA, contul dumneavoastră este deocamdată inactiv.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Vă rugăm să tipăriţi acest mesaj şi să cereţi părintelui sau tutorelui dumneavoastră să-l semneze şi să-l dateze. Apoi trimiteţi-l prin fax la:
 
 {FAX_INFO}
 
-OR mail it to:
+Sau prin e-mail la:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ TAIE AICI ------------------------------
+Permisiune pentru participare la "{SITENAME}" - {U_BOARD}
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Nume utilizator: {USERNAME}
+Email: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
-
-
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
+AM REVĂZUT INFORMAŢIILE OFERITE DE COPILUL MEU ŞI PRIN ACEASTA ÎI PERMIT "{SITENAME}" SĂ STOCHEZE ACEASTĂ INFORMAŢIE.
+SUNT DE ACORD CU FAPTUL CĂ ACEASTĂ INFORMAŢIE POATE FI SCHIMBATĂ ORICÂND PRIN INTRODUCEREA UNEI PAROLE.
+AM INŢELES CĂ POT CERE CA ACEASTĂ INFORMAŢIE SĂ FIE ŞTEARSĂ ORICÂND DIN BAZA DE DATE A "{SITENAME}".
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Parinte sau tutore 
+(numele): _____________________
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+(semnătura): __________________ 
 
-Thank you for registering.
+Data: _______________
+
+------------------------------ TAIE AICI ------------------------------
+
+
+Îndată ce administratorul va primi formularul de mai sus prin fax sau email, contul dumneavoastră va fi activat.
+
+Parola a fost stocată în siguranţă în baza noastră de date şi nu poate fi extrasă. În cazul în care este uitată, veţi putea să o resetaţi folosind adresa de email asociată cu contul propriu.
+
+Vă mulţumim pentru înregistrare.
 
 {EMAIL_SIG}
 ',
@@ -261,46 +261,47 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Bine aţi venit la "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+Conform actului COPPA, contul dumneavoastră este deocamdată inactiv.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Vă rugăm să tipăriţi acest mesaj şi să cereţi părintelui sau tutorelui dumneavoastră să-l semneze şi să-l dateze. Apoi trimiteţi-l prin fax la:
 
 {FAX_INFO}
 
-OR mail it to:
+Sau prin e-mail la:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ TAIE AICI ------------------------------
+Permisiune pentru participare la "{SITENAME}" - {U_BOARD}
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Nume utilizator: {USERNAME}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+Email: {EMAIL_ADDRESS}
 
-
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
+AM REVĂZUT INFORMAŢIILE OFERITE DE COPILUL MEU ŞI PRIN ACEASTA ÎI PERMIT "{SITENAME}" SĂ STOCHEZE ACEASTĂ INFORMAŢIE.
+SUNT DE ACORD CU FAPTUL CĂ ACEASTĂ INFORMAŢIE POATE FI SCHIMBATĂ ORICÂND PRIN INTRODUCEREA UNEI PAROLE.
+AM INŢELES CĂ POT CERE CA ACEASTĂ INFORMAŢIE SĂ FIE ŞTEARSĂ ORICÂND DIN BAZA DE DATE A "{SITENAME}".
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Părinte sau tutore 
+(numele): _____________________
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+(semnătura): __________________ 
 
-Thank you for registering.
+Data: _______________
+
+------------------------------ TAIE AICI ------------------------------
+
+
+Îndată ce administratorul va primi formularul de mai sus prin fax sau email, contul dumneavoastră va fi activat.
+
+Parola a fost stocată în siguranţă în baza noastră de date şi nu poate fi extrasă. În cazul în care este uitată, veţi putea să o resetaţi folosind adresa de email asociată cu contul propriu.
+
+Vă mulţumim pentru înregistrare.
 
 {EMAIL_SIG}
 ',
@@ -309,19 +310,19 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" — E-mail către un prieten
 
-Hello {TO_USERNAME},
+Salut {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Acest email a fost transmis de pe "{SITENAME}" de către {FROM_USERNAME} care crede că sunteţi interesat de următorul topic:
 
 {TOPIC_NAME}
 
-You can find it at:
+Îl găsiţi la:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Un mesaj de la {FROM_USERNAME} poate fi inclus mai jos. Vă rugăm să reţineţi că acest mesaj nu a fost văzut sau acceptat de către administratorul forumului. Dacă vreţi să reclamaţi ceva în legătură cu acest e-mail, vă rugăm să contactaţi administratorul forumului la {BOARD_CONTACT}. Vă rugăm să includeţi header-ul masajului când contactaţi administratorul.
 
 ----------
 
@@ -379,21 +380,21 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Notificare de răspuns la mesaj în forumul - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Salut {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+Primiţi această notificare deoarece urmăriţi forumul "{FORUM_NAME}" pe "{SITENAME}". Acest forum a primit un nou răspuns la topicul "{TOPIC_TITLE}" de la ultima vizită. Puteţi să folosiţi legătura de mai jos pentru a vedea ultimul răspuns necitit. Nu vă vom mai anunţa de răspunsuri noi până nu vizitaţi topicul.
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Dacă doriţi să vizualizaţi acest subiect, apăsaţi pe următorul link:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Daca doriţi să vizualizaţi forumul, apăsaţi pe următorul link:
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Dacă nu mai doriţi să urmăriţi acest forum, puteţi să folosiţi legatura "Opreşte urmărirea acestui forum" care poate fi găsită în forumul de mai sus sau folosiţi următoarea legătură:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -404,14 +405,14 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} Aţi fost adăugat în acest grup
 
-Congratulations,
+Felicitări,
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+Aţi fost adăugat grupului "{GROUP_NAME}" de pe "{SITENAME}".
+Acţiunea a fost efectuată de către liderul de grup sau de administrator, contactaţi-i pentru mai multe informaţii.
 
-You can view your groups information here:
+Puteţi vizualiza informaţia grupului dumneavoastră aici:
 {U_GROUP}
 
 {EMAIL_SIG}
@@ -421,12 +422,12 @@ You can view your groups information here:
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Cererea dumneavoastră de aderare a fost aprobată
 
-Congratulations,
+Felicitări,
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+Cererea dumneavoastră de a vă alătura grupului "{GROUP_NAME}" pe "{SITENAME}" a fost aprobată.
+Folosiţi legătura de mai jos pentru a vedea informaţiile referitoare la apartenenţa la grup.
 
 {U_GROUP}
 
@@ -437,12 +438,12 @@ Click on the following link to see your group membership.
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} O cerere pentru aderare la grupul dumneavoastră
 
-Dear {USERNAME},
+Dragă {USERNAME},
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+Utilizator "{REQUEST_USERNAME}" a cerut să se alăture grupului "{GROUP_NAME}" pe care îl moderaţi pe "{SITENAME}".
+Pentru a aproba sau respinge cererea lui, vă rugăm să vizitaţi următoarea legătură:
 
 {U_PENDING}
 
@@ -453,23 +454,23 @@ To approve or deny this request for group membership please visit the following 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB a fost instalat
 
-Congratulations,
+Felicitări,
 
-You have successfully installed phpBB on your server.
+Aţi instalat cu succes phpBB pe serverul dumneavoastră.
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Acest email conţine informaţii importante despre instalare şi trebuie păstrate pentru a fi folosite ca referinţă. Parola a fost păstrată în siguranţă în baza noastră de date şi nu poate fi extrasă. În cazul în care este uitată, veţi putea să o resetaţi folosind adresa de email asociată cu contul propriu.
 
-----------------------------
-Username: {USERNAME}
+-----------------------------
+Nume utilizator  : {USERNAME}
 
-Board URL: {U_BOARD}
-----------------------------
+Adresa forumului : {U_BOARD}
+-----------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
+Informaţii folositoare despre instalarea phpBB pot fi găsite în dosarul docs sau pe paginile de suport de la phpBB.com — http://www.phpbb.com/support/ şi phpBB.ro - http://www.phpbb.ro 
 
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+Pentru a menţine în condiţii de siguranţă forumul, vă recomandăm să rămâneţi la curent cu actualizările software. Pentru mai multă uşurinţă, o lista de mail este disponibilă la adresa de mai sus.
 
 {EMAIL_SIG}',
 ));
@@ -509,15 +510,15 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} Notificare subiect nou - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Salut {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+Primiţi acest mesaj deoarece urmăriţi forumul "{FORUM_NAME}" la "{SITENAME}". Acest forum are un nou subiect de la ultima dumneavoastră vizită, "{TOPIC_TITLE}". Puteţi să vizualizaţi forumul urmând legătura de mai jos. Nu vă vom mai trimite notificări până nu vizitaţi forumul.
 
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Dacă nu mai doriţi să urmăriţi acest forum, puteţi să folosiţi legătura "Dezabonare forum" din forumul de mai sus sau folosiţi următoarea legătură:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -527,24 +528,11 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{PM_SUBJECT}"
+	'email/pm_report_closed.txt' 		=> 'Subiect: Raport închis - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+Salut {USERNAME},
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed. If you have further questions, please contact {CLOSER_NAME} by private message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{PM_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
+Primiţi aceasta notificare datorita raportului pe care l-aţi trimis privind mesajul privat "{PM_SUBJECT}" la "{SITENAME}" ce a fost evaluat de către un moderator sau administrator. Raportul este închis acum. Dacă aveţi alte întrebări, vă rugăm să luaţi legătura cu {CLOSER_NAME} prin intermediul unui mesaj privat.
 
 
 {EMAIL_SIG}',
@@ -553,16 +541,29 @@ You are receiving this notification because the report you filed regarding the p
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/pm_report_deleted.txt' 		=> 'Subiect: Raport şters - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+Salut {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+Primiţi aceasta notificare datorita raportului pe care l-aţi trimis privind mesajul privat "{PM_SUBJECT}" la "{SITENAME}" a fost şters de către un moderator sau administrator.
 
-If you want to view the post, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Mesaj aprobat — "{POST_SUBJECT}"
+
+Salut {USERNAME},
+
+Primiţi această notificare pentru că mesajul "{POST_SUBJECT}" la "{SITENAME}" a fost aprobat de un moderator sau administrator.
+
+Dacă doriţi să vizualizaţi mesajul, apăsaţi pe următorul link:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Dacă doriţi să vizualizaţi subiectul, apăsaţi pe următorul link:
 {U_VIEW_TOPIC}
 
 
@@ -572,13 +573,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Mesaj dezaprobat — "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Salut {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Primiţi această notificare pentru că mesajul dumneavoastră "{POST_SUBJECT}" la "{SITENAME}" a fost dezaprobat de un moderator sau administrator.
 
-The following reason was given for the disapproval:
+A fost dezaprobat din următorul motiv:
 
 {REASON}
 
@@ -675,19 +676,19 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} Aţi primit un nou mesaj privat
 
-Hello {USERNAME},
+Salut {USERNAME},
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+Aţi primit un nou mesaj privat de la "{AUTHOR_NAME}" în contul dumneavoastră de la "{SITENAME}" cu următorul subiect: 
 
-{SUBJECT}
+{SUBJECT}  
 
-You can view your new message by clicking on the following link:
+Puteţi să vedeţi noul dumneavoastră mesaj privat folosind următoarea legătură:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+Aţi cerut să fiţi anunţat dacă se întâmplă acest lucru, nu uitaţi că puteţi întotdeauna să alegeţi să nu fiţi anunţat dacă primiţi mesaje noi prin schimbarea setării corespunzătoare din profilul dumneavoastră.
 
 {EMAIL_SIG}',
 ));
@@ -709,35 +710,34 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+Salut {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Urmează un e-mail trimis de către {FROM_USERNAME} prin intermediul contului dumneavoastră de la "{SITENAME}". Dacă acest mesaj este spam, conţine comentarii abuzive sau are vreun conţinut ofensator, vă rugăm să contactaţi webmaster-ul forumului la următoarea adresă:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Vă rugăm să includeţi acest e-mail (mai ales header-ele). Adresa de răspuns pentru acest e-mail a fost setată către {FROM_USERNAME}.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Urmează mesajul care vă este adresat
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{MESSAGE}
-',
+{MESSAGE}',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+Salut {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Urmează un mesaj trimis de către {FROM_USERNAME} prin intermediul contului dumneavoastră pe "{SITENAME}". Dacă acest mesaj este spam, conţine comentarii abuzive sau are vreun conţinut ofensator, vă rugăm să contactaţi webmaster-ul forumului la următoarea adresă:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Vă rugăm să includeţi tot mesajul. Adresa de expeditor a fost setată la contul de IM precizat în forum.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Urmează mesajul care vă este adresat
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 ',
@@ -746,24 +746,11 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Raport închis - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Salut {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
+Primiţi acest mesaj deoarece raportul pe care l-aţi trimis relativ la mesajul "{POST_SUBJECT}" din subiectul "{TOPIC_TITLE}" aflat în "{SITENAME}" a fost procesat de către un moderator sau un administrator. Ulterior raportul a fost închis. Dacă mai aveţi întrebări contactaţi {CLOSER_NAME} folosind un mesaj personal.
 
 
 {EMAIL_SIG}',
@@ -772,13 +759,26 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Raport şters - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Salut {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+Primiţi această notificare pentru că raportul dumneavoastră pe care l-ţi completat la mesajul "{POST_SUBJECT}" în "{TOPIC_TITLE}" la "{SITENAME}" a fost şters de un moderator sau administrator.
 
-If you want to view the topic, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Subiect aprobat - "{TOPIC_TITLE}"
+
+Salut {USERNAME},
+
+Primiţi această notificare pentru că subiectul dumneavoastră "{TOPIC_TITLE}" la "{SITENAME}" a fost aprobat de un moderator sau administrator.
+
+Dacă doriţi să vizualizaţi subiectul, apăsaţi pe link-ul următor:
 {U_VIEW_TOPIC}
 
 
@@ -788,13 +788,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Subiect neaprobat - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Salut {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Primiţi această notificare pentru că subiectul dumneavoastră "{TOPIC_TITLE}" la "{SITENAME}" nu a fost aprobat de un moderator sau administrator.
 
-The following reason was given for the disapproval:
+Nu a fost aprobat din următorul motiv:
 
 {REASON}
 
@@ -805,22 +805,22 @@ The following reason was given for the disapproval:
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Notificare de răspuns la subiectul - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Salut {USERNAME},
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+Primiţi acest mesaj deoarece urmăriţi pentru răspunsuri subiectul "{TOPIC_TITLE}" la "{SITENAME}". Acest subiect a primit un răspuns de la ultima dumneavoastră vizită. Puteţi să vizualizaţi răspunsurile urmând legătura de mai jos. Nu vă vom mai trimite notificări până nu vizitaţi subiectul.
 
-If you want to view the newest post made since your last visit, click the following link:
+Dacă doriţi să vizualizaţi mesajele scrise de la ultima dumneavoastră vizită, urmaţi legătura de mai jos:
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Dacă doriţi să vizualizaţi subiectul, urmaţi legătura de mai jos:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Dacă doriţi să vizualizaţi forumul, urmaţi legătura de mai jos:
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+Dacă nu mai doriţi să urmăriţi acest subiect, puteţi să folosiţi legătura "Opreşte urmărirea acestui subiect" care poate fi găsită în josul topicului de mai sus sau folosiţi următoarea legătură:
 
 {U_STOP_WATCHING_TOPIC}
 
@@ -830,47 +830,25 @@ If you no longer wish to watch this topic you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivaţi-vă contul
 
-Hello {USERNAME},
+Salut {USERNAME},
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
-
-{U_ACTIVATE}
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
-
-Hello {USERNAME}
-
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
-
-To use the new password you need to activate it. To do this click the link provided below.
+Contul dumneavoastră de la "{SITENAME}" a fost dezactivat, cel mai probabil datorită unor modificări făcute profilului dumneavoastră. Pentru a vă reactiva contul, vă rugăm să folosiţi legătura de mai jos:
 
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+{EMAIL_SIG}',
+));
 
-Password: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+
+$email = array_merge($email, array(
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Contul dumneavoastră a fost dezactivat
+
+Salut {USERNAME},
+
+Contul dumneavoastră de la "{SITENAME}" a fost dezactivat, cel mai probabil datorită unor modificări făcute profilului dumneavoastră. Va fi nevoie ca administratorul forumului să vi-l activeze înainte să vă puteţi autentifica. Veţi primi un alt mesaj când se va întampla acest lucru.
 
 {EMAIL_SIG}',
 ));
@@ -878,20 +856,42 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} Activarea parolei noi
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+Salut {USERNAME},
 
-Please keep this e-mail for your records. Your account information is as follows:
+Aţi primit acestă notificare deoarece dumneavoastră (sau cineva pretinzând a fi dumneavoastră) aţi(a) cerut să vă fie trimisă o nouă parolă pentru contul dumneavoastră de la "{SITENAME}". Dacă nu aţi cerut acest lucru, atunci vă rugăm să-l ignoraţi, iar dacă il primiţi de mai multe ori, vă rugăm să contactaţi administratorul forumului.
+
+Pentru a vă folosi noua parolă, trebuie s-o activaţi folosind legătura de mai jos:
+
+{U_ACTIVATE}
+
+Dacă totul este în regulă, veţi putea sa vă autentificaţi folosind următoarea parolă:
+
+Parola: {PASSWORD}
+
+Evident, puteţi schimba această parolă din pagina de profil. Dacă întâmpinaţi dificultăţi, vă rugăm să contactaţi administratorul forumului.
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivarea contului de la "{SITENAME}"
+
+Administratorul forumului solicită reactivarea contului. Contul dumneavoastră este momentan inactiv.
+Vă rugăm să urmaţi paşii de mai jos pentru reactivarea contului.
+
+Vă rugăm să păstraţi acest e-mail în înregistrările personale. Informaţia despre contul dumneavoastră este:
 
 ----------------------------
-Username: {USERNAME}
+Nume de utilizator: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Parola a fost păstrată în siguranţă în baza noastră de date şi nu poate fi extrasă. În cazul în care este uitată, veţi putea să o resetaţi folosind adresa de email asociată cu contul propriu.
 
-Please visit the following link to reactivate your account:
+Vă rugăm să vizitaţi linkul următor pentru reactivarea contului:
 
 {U_ACTIVATE}
 
@@ -1004,15 +1004,15 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Reamintire cont inactiv
 
-Hello {USERNAME},
+Salut {USERNAME},
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+Acest mesaj este trimis pentru a vă reaminti că aveţi un cont inactiv la "{SITENAME}" creat în data de {REGISTER_DATE}. Dacă doriţi să activaţi acest cont, vă rugăm să folosiţi următoarea legătură:
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+Vă mulţumim că v-aţi înregistrat la "{SITENAME}", aşteptăm în continuare participarea dumneavoastră.
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +1020,24 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Bine aţi venit la "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Vă rugăm să păstraţi acest e-mail. Informaţia pentru contul dumneavoastră urmează aici:
 
 ----------------------------
-Username: {USERNAME}
+Utilizator: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Parola a fost păstrată în siguranţă în baza noastră de date şi nu poate fi extrasă. În cazul în care este uitată, veţi putea să o resetaţi folosind adresa de email asociată cu contul propriu.
 
-Please visit the following link in order to activate your account:
+Dacă doriţi să activaţi acest cont, vă rugăm să folosiţi următoarea legătură:
 
 {U_ACTIVATE}
 
 
-Thank you for registering.
+Mulţumim pentru înregistrare.
 
 {EMAIL_SIG}',
 ));
@@ -1045,21 +1045,21 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Bine aţi venit la "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Vă rugăm să păstraţi acest e-mail. Informaţia pentru contul dumneavoastră urmează aici:
 
-----------------------------
-Username: {USERNAME}
+-----------------------------
+Nume utilizator  : {USERNAME}
 
-Board URL: {U_BOARD}
-----------------------------
+Adresa forumului : {U_BOARD}
+-----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Parola a fost stocată în siguranţă în baza noastră de date şi nu poate fi extrasă. În cazul în care este uitată, veţi putea să o resetaţi folosind adresa de email asociată cu contul propriu.
 
-Thank you for registering.
+Vă mulţumim pentru înregistrare.
 
 {EMAIL_SIG}',
 ));
@@ -1067,25 +1067,25 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Bine aţi venit la "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Vă rugăm să păstraţi acest e-mail. Informaţia pentru contul dumneavoastră urmează aici:
 
-----------------------------
-Username: {USERNAME}
+-----------------------------
+Nume utilizator  : {USERNAME}
 
-Board URL: {U_BOARD}
-----------------------------
+Adresa forumului : {U_BOARD}
+-----------------------------
 
-Please visit the following link in order to activate your account:
+Dacă doriţi să activaţi acest cont, vă rugăm să folosiţi următoarea legătură:
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Parola a fost stocată în siguranţă în baza noastră de date şi nu poate fi extrasă. În cazul în care este uitată, veţi putea să o resetaţi folosind adresa de email asociată cu contul propriu.
 
-Thank you for registering.
+Vă mulţumim pentru înregistrare.
 
 {EMAIL_SIG}',
 ));

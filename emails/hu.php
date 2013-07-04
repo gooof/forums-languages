@@ -1,16 +1,16 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Azonosító aktiválása
 
-Hello,
+Üdvözlünk!
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+A "{USERNAME}" nevű azonosító deaktiválásra került, vagy újonnan létre lett hozva. Ellenőrizheted a felhasználó által megadott adatokat (amennyiben szükségesnek tartod) majd megteheted a szükséges lépéseket.
 
-Use this link to view the user\'s profile:
+A következő linkre kattintva a felhasználó profiljához jutsz:
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+A következő linkkel tudod aktiválni az azonosítót:
 {U_ACTIVATE}
 
 
@@ -21,14 +21,14 @@ Use this link to activate the account:
 
 $email = array_merge($email, array(
 	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+A következő e-mailt a "{SITENAME}" fórum egyik adminisztrátora küldte neked. Amennyiben ez az üzenet kéretlen levél, sértő vagy egyéb támadó megjegyzéseket tartalmaz számodra, kérünk, lépj kapcsolatba az oldal adminisztrátorával a következő e-mail címen:
 
 {CONTACT_EMAIL}
 
-Include this full e-mail (particularly the headers). 
+Idézd ezt az e-mailt (különösen ügyelve a fejlécre). 
 
-Message sent to you follows:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A neked szóló e-mail a következő:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
@@ -40,13 +40,13 @@ Message sent to you follows:
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Azonosítód aktiválásra került!
 
-Hello {USERNAME},
+Kedves {USERNAME}!
 
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
+Az azonosítód a "{SITENAME}" oldalon aktiválásra került, most már beléphetsz regisztrált felhasználóneveddel.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+A jelszavad biztonságosan került eltárolásra az adatbázisunkban, így nincs mód a kiderítésére. Ha esetleg mégis elfelejtenéd, akkor az azonosítódhoz társított e-mail cím segítségével igényelhetsz egy újat.
 
 {EMAIL_SIG}',
 ));
@@ -54,23 +54,23 @@ Your password has been securely stored in our database and cannot be retrieved. 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Üdvözlünk a "{SITENAME}" fórumon
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Őrizd meg ezt az e-mailt, mert elképzelhető, hogy a későbbiekben szükséged lesz rá. A fórumon létrehozott azonosító információi:
 
 ----------------------------
-Username: {USERNAME}
+Felhasználónév: {USERNAME}
 
-Board URL: {U_BOARD}
+Fórum URL: {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+A felhasználói azonosítód jelenleg inaktív, használatba vétele előtt a fórum adminisztrátorának aktiválnia kell. Amint megtörtént, egy másik értesítőt fogsz erről kapni e-mailben.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+A jelszavad biztonságosan került eltárolásra az adatbázisunkban, így nincs mód a kiderítésére. Ha esetleg mégis elfelejtenéd, akkor az azonosítódhoz társított e-mail cím segítségével igényelhetsz egy újat.
 
-Thank you for registering.
+Köszönjük, hogy regisztráltál!
 
 {EMAIL_SIG}',
 ));
@@ -213,46 +213,46 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Üdvözlünk a "{SITENAME}" fórumon!
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+A COPPA szabályainak értelmében az azonosítód jelenleg inaktív.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Nyomtasd ki az alábbi üzenetet, és kérd meg egy szülődet vagy gondviselődet, hogy írja alá, majd küldje el faxon az alábbi FAX-számra:
 
 {FAX_INFO}
 
-OR mail it to:
+vagy küldje el postai levélben a következő postacímre:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ PERFORÁCIÓ ------------------------------
+Engedély a "{SITENAME}" ({U_BOARD}) oldal fórumához történő csatlakozáshoz.
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Felhasználónév: {USERNAME}
+E-mail cím: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
-
-
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
+ELLENŐRIZTEM A GONDVISELETEMBEN LEVŐ FIATALKORÚ ÁLTAL MEGADOTT INFORMÁCIÓKAT, ÉS HOZZÁJÁRULOK, HOGY AZ ÁLTALA MEGADOTT ADATOKAT A "{SITENAME}" OLDAL FÓRUMÁN TÁROLJÁK.
+TISZTÁBAN VAGYOK VELE, HOGY EZEKET AZ ADATOKAT EGY JELSZÓ BEÍRÁSÁVAL BÁRMIKOR MEG LEHET VÁLTOZTATNI.
+TISZTÁBAN VAGYOK VELE, HOGY BÁRMIKOR KÉRVÉNYEZHETEM EZEN ADATOK TÖRLÉSÉT A "{SITENAME}" OLDAL FÓRUMÁBÓL. 
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Szülő vagy gondviselő
+(olvasható név): _____________________
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+(aláírás): __________________ 
 
-Thank you for registering.
+Dátum: _______________
+
+------------------------------ PERFORÁCIÓ ------------------------------
+
+
+Amint az adminisztrátorok megkapták a fenti engedélyt faxon vagy postán, az azonosító aktiválásra kerül.
+
+A jelszavad biztonságosan került eltárolásra az adatbázisunkban, így nincs mód a kiderítésére. Ha esetleg mégis elfelejtenéd, akkor az azonosítódhoz társított e-mail cím segítségével igényelhetsz egy újat.
+
+Köszönjük, hogy regisztráltál!
 
 {EMAIL_SIG}
 ',
@@ -261,46 +261,46 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Üdvözlünk a "{SITENAME}" fórumon!
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+A COPPA szabályainak értelmében az azonosítód jelenleg inaktív.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Nyomtasd ki az alábbi üzenetet, és kérd meg egy szülődet vagy gondviselődet, hogy írja alá, majd küldje el faxon az alábbi FAX-számra:
 
 {FAX_INFO}
 
-OR mail it to:
+vagy küldje el postai levélben a következő postacímre:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ PERFORÁCIÓ ------------------------------
+Engedély a "{SITENAME}" ({U_BOARD}) oldal fórumához történő csatlakozáshoz.
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Felhasználónév: {USERNAME}
+E-mail cím: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
-
-
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
+ELLENŐRIZTEM A GONDVISELETEMBEN LEVŐ FIATALKORÚ ÁLTAL MEGADOTT INFORMÁCIÓKAT, ÉS HOZZÁJÁRULOK, HOGY AZ ÁLTALA MEGADOTT ADATOKAT A "{SITENAME}" OLDAL FÓRUMÁN TÁROLJÁK.
+TISZTÁBAN VAGYOK VELE, HOGY EZEKET AZ ADATOKAT EGY JELSZÓ BEÍRÁSÁVAL BÁRMIKOR MEG LEHET VÁLTOZTATNI.
+TISZTÁBAN VAGYOK VELE, HOGY BÁRMIKOR KÉRVÉNYEZHETEM EZEN ADATOK TÖRLÉSÉT A "{SITENAME}" OLDAL FÓRUMÁBÓL. 
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Szülő vagy gondviselő
+(olvasható név): _____________________
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+(aláírás): __________________ 
 
-Thank you for registering.
+Dátum: _______________
+
+------------------------------ PERFORÁCIÓ ------------------------------
+
+
+Amint az adminisztrátorok megkapták a fenti engedélyt faxon vagy postán, az azonosító aktiválásra kerül.
+
+A jelszavad biztonságosan került eltárolásra az adatbázisunkban, így nincs mód a kiderítésére. Ha esetleg mégis elfelejtenéd, akkor az azonosítódhoz társított e-mail cím segítségével igényelhetsz egy újat.
+
+Köszönjük, hogy regisztráltál!
 
 {EMAIL_SIG}
 ',
@@ -309,19 +309,17 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - e-mail egy barátodtól
 
-Hello {TO_USERNAME},
+Kedves {TO_USERNAME}!
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Ezt az e-mailt a "{SITENAME}" fórumról {FROM_USERNAME} küldte neked, mert azt gondolta, a következő téma érdekelni fog: {TOPIC_NAME}
 
-{TOPIC_NAME}
-
-You can find it at:
+A következő linkre kattintva megtekintheted a témát:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+{FROM_USERNAME} lehet, hogy megjegyzést is fűzött a levélhez, amit alább olvashatsz. Kérjük, vedd figyelembe, hogy a következő üznetetet nem látta a fórum adminisztrátora. Ha problémát jelent számodra ezen üzenet tartalma, lépj kapcsolatba a fórum adminisztrátorával a következő címen: {BOARD_CONTACT}. Amennyiben kapcsolatba lépsz, kérjük, idézd ezt az e-mailt is, különös tekintettel a fejlécre.
 
 ----------
 
@@ -379,21 +377,21 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Fórumfigyelés értesítés - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Kedves {USERNAME}!
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+Ezt az e-mailt azért kapod, mert a "{SITENAME}" oldalon, a "{FORUM_NAME}" fórum figyelését kérted. Ebbe a fórumba, legutóbbi látogatásod óta, új hozzászólás érkezett a "{TOPIC_TITLE}" témába. A következő linkre kattintva eljuthatsz a legutóbbi olvasatlan válaszhoz, mindazonáltal újabb értesítést nem fogsz kapni, míg meg nem látogatod a fórumot.
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+A téma megtekintéséhez kattints a következő linkre:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+A fórum megtekintéséhez kattints a következő linkre:
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Amennyiben a továbbiakban nem kívánod figyelni a fórumot, kattints a "Leiratkozás a fórumról" linkre, melyet a fenti oldalon találsz, vagy egyszerűen kattints a következő linkre:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -404,14 +402,14 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} Sikeresen csatlakoztál egy felhasználói csoporthoz
 
-Congratulations,
+Gratulálunk!
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+A "{SITENAME}" oldalon hozzáadásra kerültél a "{GROUP_NAME}" csoporthoz.
+Ezt a fórum adminisztrátorának, vagy a csoport vezetőjének köszönheted. További információért fordult hozzájuk.
 
-You can view your groups information here:
+A csoport információit a következő linkre kattintva érheted el:
 {U_GROUP}
 
 {EMAIL_SIG}
@@ -421,12 +419,12 @@ You can view your groups information here:
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Kérelmed elfogadásra került
 
-Congratulations,
+Gratulálunk!
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+A csatlakozási kérelmed a "{SITENAME}" oldalon a "{GROUP_NAME}" csoportba elfogadásra került.
+Kattints a következő linke, hogy megtekintsd a csoporttagságod részleteit.
 
 {U_GROUP}
 
@@ -437,12 +435,12 @@ Click on the following link to see your group membership.
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} Csatlakozási kérelem a csoportodhoz
 
-Dear {USERNAME},
+Kedves {USERNAME}!
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+"{REQUEST_USERNAME}" jelezte, hogy csatlakozni szeretne a "{SITENAME}" oldalon a "{GROUP_NAME}" csoporthoz, melynek te vagy a vezetője.
+A csatlakozási kérelem elfogadásához vagy elutasításához látogass el a következő oldalra:
 
 {U_PENDING}
 
@@ -453,23 +451,23 @@ To approve or deny this request for group membership please visit the following 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB telepítve
 
-Congratulations,
+Gratulálunk!
 
-You have successfully installed phpBB on your server.
+Sikeresen telepítetted a phpBB-t a szerveredre.
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ez az e-mail fontos információkat tartalmaz az épp telepített fórumról, gondosan őrizd meg. A jelszavad biztonságosan került eltárolásra az adatbázisunkban, így nincs mód a kiderítésére. Ha esetleg mégis elfelejtenéd, akkor az azonosítódhoz társított e-mail cím segítségével igényelhetsz egy újat.
 
 ----------------------------
-Username: {USERNAME}
+Felhasználónév: {USERNAME}
 
-Board URL: {U_BOARD}
+Fórum URL: {U_BOARD}
 ----------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
+További hasznos információkat és a dokumentációt megtalálod a fórumod "docs" könyvtárában vagy a phpBB.com felhasználói segítségnyújtási oldalán a következő linken: http://www.phpbb.com/support/
 
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+Annak érdekében, hogy a fórumod biztonságos legyen, kimondottan javasoljuk, hogy tarts lépést a frissítésekkel. Ennek megkönnyítése érdekében a fenti oldalon feliratkozhatsz egy levelezőlistára.
 
 {EMAIL_SIG}',
 ));
@@ -509,15 +507,15 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} Fórumfigyelés értesítés - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Kedves {USERNAME}!
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+Ezt az e-mailt azért kapod, mert a "{SITENAME}" oldalon a "{FORUM_NAME}" fórum figyelését kérted. Ebbe a fórumba, legutóbbi látogatásod óta új témát nyitottak, melynek címe: "{TOPIC_TITLE}". A következő linkre kattintva eljuthatsz az új témába, mindazonáltal újabb értesítést nem fogsz kapni, míg meg nem látogatod a fórumot.
 
-{U_FORUM}
+{U_NEWEST_POST}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Amennyiben a továbbiakban nem kívánod figyelni a fórumot, kattints a "Leiratkozás a fórumról" linkre, melyet a fenti oldalon találsz, vagy egyszerűen kattints a következő linkre:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -527,24 +525,11 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{PM_SUBJECT}"
+	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Jelentés lezárva - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+Kedves {USERNAME}!
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed. If you have further questions, please contact {CLOSER_NAME} by private message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{PM_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
+Ezt az üzenetet azért kapod, mert a "{SITENAME}" oldalon a "{PM_SUBJECT}" privát üzenettel kapcsolatos jelentésed egy moderátor vagy adminisztrátor áttekintette. A jelentés lezárásra került. Amennyiben további kérdéseid vannak, lépj kapcsolatba privát üzenetben a jelentés lezárójával: {CLOSER_NAME}.
 
 
 {EMAIL_SIG}',
@@ -553,16 +538,29 @@ You are receiving this notification because the report you filed regarding the p
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Jelentés törölve - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+Kedves {USERNAME}!
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+Ezt az üzenetet azért kapod, mert a "{SITENAME}" oldalon a "{PM_SUBJECT}" privát üzenettel kapcsolatos jelentésed egy moderátor vagy adminisztrátor törölte.
 
-If you want to view the post, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Hozzászólásod jóváhagyásra került - "{POST_SUBJECT}"
+
+Kedves {USERNAME}!
+
+Ezt az üzenetet azért kapod, mert a "{POST_SUBJECT}" témájú hozzászólásod a "{SITENAME}" oldalon jóváhagyásra került egy adminisztrátor vagy egy moderátor által.
+
+Amennyiben meg szeretnéd tekinteni a hozzászólást, kattints a következő linkre:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Amennyiben meg szeretnéd tekinteni a témát, melyhez hozzászóltál, kattints a következő linkre:
 {U_VIEW_TOPIC}
 
 
@@ -572,13 +570,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Hozzászólásod elutasításra került - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Kedves {USERNAME}!
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Ezt az üzenetet azért kapod, mert a "{POST_SUBJECT}" témájú hozzászólásod a "{SITENAME}" oldalon elutasításra került egy adminisztrátor vagy egy moderátor által.
 
-The following reason was given for the disapproval:
+Az elutasítás indoka a következő:
 
 {REASON}
 
@@ -675,19 +673,18 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} Új privát üzeneted érkezett - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Kedves {USERNAME}!
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
-
+A "{SITENAME}" oldalon új privát üzenetet kaptál, melynek feladója "{AUTHOR_NAME}". Az üzenet témája:
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+A következő linkre kattintva tekintheted meg az érkezett üzenetet:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+Ezt az e-mailt azért kapod, mert beállítottad, hogy privát üzenet érkezéséről értesülni szeretnél. Ne felejtsd el, hogy bármikor kikapcsolhatod az ilyen értesítéseket a felhasználói vezérlőpultban.
 
 {EMAIL_SIG}',
 ));
@@ -709,49 +706,46 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+Kedves {TO_USERNAME}!
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+A következő üzenetet a "{SITENAME}" fórumról {FROM_USERNAME} küldte neked. Amennyiben ez az üzenet kéretlen, illetve számodra sértő vagy egyéb támadó megjegyzést tartalmaz, kérünk, lépj kapcsolatba az oldal adminisztrátorával a következő e-mail címen:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+A levélhez mellékeld ezt az üzenetet (különösen ügyelve a fejlécre). Ennek a levélnek a válaszcíme {FROM_USERNAME} e-mail címére van beállítva, így a választ ő kapja meg.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Az üzenet a következő:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{MESSAGE}
-',
+{MESSAGE}',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+Kedves {TO_USERNAME}!
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+A következő üzenetet a "{SITENAME}" fórumról {FROM_USERNAME} küldte neked. Amennyiben ez az üzenet kéretlen, illetve számodra sértő vagy egyéb támadó megjegyzést tartalmaz, kérünk, lépj kapcsolatba az oldal adminisztrátorával a következő e-mail címen:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+A levélhez mellékeld ezt az üzenetet. Kérjük, vedd figyelembe, hogy az üzenet küldőjének a fórum IM azonosítója került beállításra.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Az üzenet a következő:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{MESSAGE}
-',
+{MESSAGE}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Jelentés lezárva - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Kedves {USERNAME}!
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
-
+Ezt az üzenetet azért kapod, mert a "{SITENAME}" oldalon, a "{POST_SUBJECT}" hozzászólást a "{TOPIC_TITLE} témában jelentetted az adminisztrátorok és moderátorok felé. A jelentésed kezelése befejeződött, s ezzel lezárult. Amennyiben további kérdéseid vannak, lépj kapcsolatba privát üzenetben a jelentés lezárójával: {CLOSER_NAME}.
 
 {EMAIL_SIG}',
 ));
@@ -759,12 +753,11 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Jelentés törölve - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Kedves {USERNAME}!
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
-
+Ezt az üzenetet azért kapod, mert a "{SITENAME}" oldalon a "{POST_SUBJECT}" hozzászólást a "{TOPIC_TITLE} témában jelentetted az adminisztrátorok és moderátorok felé. A jelentésed törlésre került.
 
 {EMAIL_SIG}',
 ));
@@ -772,13 +765,13 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Téma jóváhagyva - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Kedves {USERNAME}!
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+Ezt az üzenetet azért kapod, mert a "{SITENAME}" oldalon az általad nyitott "{TOPIC_TITLE} témát jóváhagyta egy moderátor vagy egy adminisztrátor.
 
-If you want to view the topic, click the following link:
+A témát megtekintheted a következő linkre kattintva:
 {U_VIEW_TOPIC}
 
 
@@ -788,14 +781,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Téma elutasítva - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Kedves {USERNAME}!
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Ezt az üzenetet azért kapod, mert a "{SITENAME}" oldalon az általad nyitott "{TOPIC_TITLE}" témát egy moderátor vagy egy adminisztrátor elutasította.
 
-The following reason was given for the disapproval:
-
+Az elutasítás oka a következő:
 {REASON}
 
 
@@ -805,22 +797,22 @@ The following reason was given for the disapproval:
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Témafigyelés értesítés - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Kedves {USERNAME}!
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+Ezt az e-mailt azért kapod, mert a "{SITENAME}" oldalon a "{TOPIC_TITLE}" téma figyelését kérted. A témába a legutóbbi látogatásod óta új hozzászólás érkezett. A következő linkre kattintva megtekintheted az azóta született hozzászólásokat. Több értesítést nem fogsz kapni, amíg meg nem tekinted a témát.
 
-If you want to view the newest post made since your last visit, click the following link:
+Az utolsó látogatás óta érkezett legfrissebb hozzászólás megtekintéséhez kattints a következő linkre:
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+A téma megtekintéséhez kattints a következő linkre:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+A fórum megtekintéséhez kattints a következő linkre:
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+Amennyiben a továbbiakban nem kívánod figyelni a témát, kattints a "Leiratkozás a témáról" linkre, melyet a fenti oldalon találsz, vagy egyszerűen kattints a következő linkre:
 
 {U_STOP_WATCHING_TOPIC}
 
@@ -830,47 +822,25 @@ If you no longer wish to watch this topic you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Aktiváld az azonosítód
 
-Hello {USERNAME},
+Kedves {USERNAME}!
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
-
-{U_ACTIVATE}
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
-
-Hello {USERNAME}
-
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
-
-To use the new password you need to activate it. To do this click the link provided below.
+Az azonosítód a "{SITENAME}" oldalon deaktiválásra került, valószínűleg a profilodban történt változások miatt. Ahhoz, hogy újra aktív legyen, kattints a következő linkre:
 
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+{EMAIL_SIG}',
+));
 
-Password: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+
+$email = array_merge($email, array(
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Deaktivált azonosító
+
+Kedves {USERNAME}!
+
+Az azonosítód a "{SITENAME}" oldalon deaktiválásra került, valószínűleg a profilodban történt változások miatt. Ahhoz, hogy újra aktív legyen, egy adminisztrátornak aktiválnia kell azt. Amint ez megtörténik, küldünk egy újabb értesítést.
 
 {EMAIL_SIG}',
 ));
@@ -878,20 +848,42 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} Új jelszó aktiválása
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+Kedves {USERNAME}!
 
-Please keep this e-mail for your records. Your account information is as follows:
+Ezt az üzenetet azért kapod, mert te (vagy valaki a te nevedben) új jelszót kért a "{SITENAME}" oldalon levő azonosítódhoz. Ha nem te kérted ezt az üzenetet, úgy hagyd figyelmen kívül. Amennyiben továbbra is hasonlókat kapsz, vedd fel a kapcsolatot az oldal adminisztrátorával.
+
+Ahhoz, hogy használni tudd az új jelszót, aktiválod kell, ehhez kattints az alábbi linkre.
+
+{U_ACTIVATE}
+
+Ha ez sikeres volt, az alábbi jelszóval tudsz majd belépni:
+
+Jelszó: {PASSWORD}
+
+Természetesen ezt a jelszót meg tudod változtatni a profilodban. Amennyiben bármilyen problémád adódik, vedd fel a kapcsolatot az oldal adminisztrátorával.
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Aktiváld újra az azonosítód az "{SITENAME}" oldalon!
+
+A fórum egyik adminisztrátora újraaktiválásra kötelezte az azonosítód. Az azonosítód jelenleg inaktív.
+Az azonosítód újraaktiválásához kövesd a következő lépéseket.
+
+Kérjük, tartsd meg ezt az üzenetet. Az azonosítód adatai a következőek:
 
 ----------------------------
-Username: {USERNAME}
+Felhasználónév: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+A jelszavad biztonságosan került eltárolásra az adatbázisunkban, így nincs mód a kiderítésére. Ha esetleg mégis elfelejtenéd, akkor az azonosítódhoz társított e-mail cím segítségével igényelhetsz egy újat.
 
-Please visit the following link to reactivate your account:
+Az azonosítód újraaktiválásához kattints az alábbi linkre:
 
 {U_ACTIVATE}
 
@@ -1004,15 +996,15 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inaktív azonosító figyelmeztetés
 
-Hello {USERNAME},
+Kedves {USERNAME}!
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+Ez az értesítő egy emlékeztető, hogy a "{SITENAME}" oldalon {REGISTER_DATE}-kor regisztrált azonosítód máig inaktív. Amennyiben aktiválni szeretnéd az azonosítód, látogass el a következő linkre:
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+Köszönjük, hogy regisztráltál a "{SITENAME}" oldalon, várjuk a közreműködésed.
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +1012,23 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Üdvözlünk a "{SITENAME}" fórumon!
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Kérünk, tartsd meg ezt az üzenetet a továbbiakban. Az azonosítód adatai a következőek:
 
 ----------------------------
-Username: {USERNAME}
+Felhasználónév: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+A jelszavad biztonságosan került eltárolásra az adatbázisunkban, így nincs mód a kiderítésére. Ha esetleg mégis elfelejtenéd, akkor az azonosítódhoz társított e-mail cím segítségével igényelhetsz egy újat.
 
-Please visit the following link in order to activate your account:
+Az azonosítód a következő linkre kattintva aktiválhatod:
 
 {U_ACTIVATE}
 
-
-Thank you for registering.
+Köszönjük, hogy regisztráltál!
 
 {EMAIL_SIG}',
 ));
@@ -1045,21 +1036,21 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Üdvözlünk a "{SITENAME}" fórumon!
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Kérünk, tartsd meg ezt az üzenetet. Az azonosítód adatai a következőek:
 
 ----------------------------
-Username: {USERNAME}
+Felhasználónév: {USERNAME}
 
-Board URL: {U_BOARD}
+Fórum URL: {U_BOARD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+A jelszavad biztonságosan került eltárolásra az adatbázisunkban, így nincs mód a kiderítésére. Ha esetleg mégis elfelejtenéd, akkor az azonosítódhoz társított e-mail cím segítségével igényelhetsz egy újat.
 
-Thank you for registering.
+Köszönjük, hogy regisztráltál!
 
 {EMAIL_SIG}',
 ));
@@ -1067,25 +1058,25 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Üdvözlünk a "{SITENAME}" fórumon!
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Kérünk, tartsd meg ezt az üzenetet. Az azonosítód adatai a következőek:
 
 ----------------------------
-Username: {USERNAME}
+Felhasználónév: {USERNAME}
 
-Board URL: {U_BOARD}
+Fórum URL: {U_BOARD}
 ----------------------------
 
-Please visit the following link in order to activate your account:
+Az azonosítód jelenleg inaktív. A következő linkre kattintva aktiválhatod:
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+A jelszavad biztonságosan került eltárolásra az adatbázisunkban, így nincs mód a kiderítésére. Ha esetleg mégis elfelejtenéd, akkor az azonosítódhoz társított e-mail cím segítségével igényelhetsz egy újat.
 
-Thank you for registering.
+Köszönjük, hogy regisztráltál!
 
 {EMAIL_SIG}',
 ));

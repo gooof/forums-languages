@@ -1,16 +1,16 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activation du compte d’un utilisateur
 
-Hello,
+Bonjour,
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+Le compte de « {USERNAME} » a été désactivé ou nouvellement créé. Vous devriez, si nécessaire, gérer et vérifier les informations concernant cet utilisateur.
 
-Use this link to view the user\'s profile:
+Veuillez vous rendre sur ce lien afin de consulter le profil de l’utilisateur :
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+Veuillez vous rendre sur ce lien afin d’activer le compte :
 {U_ACTIVATE}
 
 
@@ -21,32 +21,17 @@ Use this link to activate the account:
 
 $email = array_merge($email, array(
 	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Ce qui suit est un courriel envoyé par un administrateur de « {SITENAME} ». Si ce message est un pourriel ou qu’il contient des commentaires que vous trouvez déplacés, veuillez contacter le webmestre du forum à l’adresse suivante :
 
 {CONTACT_EMAIL}
 
-Include this full e-mail (particularly the headers). 
+Incluez ce courriel en entier (particulièrement les en-têtes).
 
-Message sent to you follows:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Message qui vous a été envoyé :
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
-
-{EMAIL_SIG}
-',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
-
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
 
 {EMAIL_SIG}',
 ));
@@ -54,23 +39,37 @@ Your password has been securely stored in our database and cannot be retrieved. 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Compte activé
+
+Bonjour {USERNAME},
+
+Votre compte sur « {SITENAME} » a été activé par un administrateur, vous pouvez à présent vous connecter.
+
+Votre mot de passe a été stocké en toute sécurité dans notre base de données et ne pourra pas être retrouvé. Dans le cas où vous l’oubliez, vous pourrez le réinitialiser en utilisant l’adresse de courrier électronique associée à votre compte.
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Bienvenue sur « {SITENAME} »
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Veuillez conserver ce courriel dans vos archives. Les informations concernant votre compte sont les suivantes :
 
 ----------------------------
-Username: {USERNAME}
+Nom d’utilisateur : {USERNAME}
 
-Board URL: {U_BOARD}
+Lien du forum : {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+Votre compte est actuellement inactif et devra être approuvé par un administrateur avant que vous ne puissiez vous connecter. Un autre courriel sera envoyé lorsque cela aura été effectué.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Votre mot de passe a été stocké en toute sécurité dans notre base de données et ne pourra pas être retrouvé. Dans le cas où vous l’oubliez, vous pourrez le réinitialiser en utilisant l’adresse de courrier électronique associée à votre compte.
 
-Thank you for registering.
+Nous vous remercions de votre inscription.
 
 {EMAIL_SIG}',
 ));
@@ -213,115 +212,113 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Bienvenue sur « {SITENAME} »
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+En accord avec la COPPA, votre compte est actuellement inactif.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Veuillez imprimer ce message et le faire signer et dater par vos parents ou vos tuteurs. Puis, faxez-le à :
 
 {FAX_INFO}
 
-OR mail it to:
+Ou envoyez-le par courriel à :
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ COUPEZ ICI ------------------------------
+Permission de participer à « {SITENAME} » - {U_BOARD}
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Nom d’utilisateur : {USERNAME}
+Adresse de courrier électronique : {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
-
-
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
+J’AI VERIFIÉ L’INFORMATION FOURNIE PAR MON ENFANT ET DONNE LA PERMISSION À « {SITENAME} » DE STOCKER CETTE INFORMATION.
+JE CONÇOIS QUE CETTE INFORMATION PEUT ÊTRE MODIFIÉE A TOUT MOMENT EN ENTRANT UN MOT DE PASSE.
+JE SAIS QUE JE PEUX DEMANDER LE RETRAIT DE CETTE INFORMATION SUR « {SITENAME} » À TOUT MOMENT.
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Parent ou tuteur
+(inscrivez votre nom ici) : _____________________
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+(signez ici) : __________________ 
 
-Thank you for registering.
+Date : _______________
 
-{EMAIL_SIG}
-',
+------------------------------ COUPEZ ICI ------------------------------
+
+
+Une fois que l’administrateur aura reçu le texte ci-dessus par courriel, fax ou courrier ordinaire, votre compte sera activé.
+
+Votre mot de passe a été stocké en toute sécurité dans notre base de données et ne pourra pas être retrouvé. Dans le cas où vous l’oubliez, vous pourrez le réinitialiser en utilisant l’adresse de courrier électronique associée à votre compte.
+
+Nous vous remercions de votre inscription.
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Bienvenue sur « {SITENAME} »
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+En accord avec la COPPA, votre compte est actuellement inactif.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Veuillez imprimer ce message et le faire signer et dater par vos parents ou vos tuteurs. Puis, faxez-le à :
 
 {FAX_INFO}
 
-OR mail it to:
+Ou envoyez-le par courriel à :
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ COUPEZ ICI ------------------------------
+Permission de participer à « {SITENAME} » - {U_BOARD}
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Nom d’utilisateur : {USERNAME}
+Adresse de courrier électronique : {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
-
-
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
+J’AI VERIFIÉ L’INFORMATION FOURNIE PAR MON ENFANT ET DONNE LA PERMISSION À « {SITENAME} » DE STOCKER CETTE INFORMATION.
+JE CONÇOIS QUE CETTE INFORMATION PEUT ÊTRE MODIFIÉE A TOUT MOMENT EN ENTRANT UN MOT DE PASSE.
+JE SAIS QUE JE PEUX DEMANDER LE RETRAIT DE CETTE INFORMATION SUR « {SITENAME} » À TOUT MOMENT.
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Parent ou tuteur
+(inscrivez votre nom ici) : _____________________
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+(signez ici) : __________________ 
 
-Thank you for registering.
+Date : _______________
 
-{EMAIL_SIG}
-',
+------------------------------ COUPEZ ICI ------------------------------
+
+
+Une fois que l’administrateur aura reçu le texte ci-dessus par courriel, fax ou courrier ordinaire, votre compte sera activé.
+
+Votre mot de passe a été stocké en toute sécurité dans notre base de données et ne pourra pas être retrouvé. Dans le cas où vous l’oubliez, vous pourrez le réinitialiser en utilisant l’adresse de courrier électronique associée à votre compte.
+
+Nous vous remercions de votre inscription.
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} « {SITENAME} » - Envoi d’un courriel par un ami
 
-Hello {TO_USERNAME},
+Bonjour {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Ce courriel a été envoyé de « {SITENAME} » par {FROM_USERNAME}, qui a pensé que vous pourriez être intéressé(e) par le sujet suivant :
 
 {TOPIC_NAME}
 
-You can find it at:
+Vous pouvez le retrouver ici :
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Un message de la part de {FROM_USERNAME} peut également être inclus ci-dessous. Veuillez noter que ce message n’a pas été consulté ou approuvé par les administrateurs du forum. Si vous souhaitez vous plaindre à propos de la réception de ce courriel, veuillez contacter l’administrateur du forum sur {BOARD_CONTACT}. Veuillez citer les en-têtes du message lorsque vous contacterez cette adresse.
 
 ----------
 
@@ -379,97 +376,93 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Notification de publication d’un message dans un forum - « {FORUM_NAME} »
 
-Hello {USERNAME},
+Bonjour {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+Vous recevez cette notification car vous surveillez le forum « {FORUM_NAME} » sur « {SITENAME} ». Ce forum a reçu une nouvelle réponse sur le sujet « {TOPIC_TITLE} » depuis votre dernière visite. Vous pouvez utiliser le lien suivant afin de consulter la dernière réponse non lue, aucune nouvelle notification ne vous sera envoyée jusqu’à ce que vous visitiez le sujet.
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Si vous souhaitez consulter le sujet, veuillez cliquer sur le lien suivant :
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Si vous souhaitez consulter le forum, veuillez cliquer sur le lien suivant :
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Si vous ne souhaitez plus surveiller ce forum, vous pouvez cliquer sur le lien « Se désabonner au forum » situé au-dessous du forum en question ou cliquer sur le lien suivant :
 
 {U_STOP_WATCHING_FORUM}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} Vous avez été ajouté(e) à un groupe d’utilisateurs
 
-Congratulations,
+Félicitations,
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+Vous avez été ajouté(e) au groupe « {GROUP_NAME} » sur « {SITENAME} ».
+Cette action a été réalisée par le responsable du groupe ou par l’administrateur du site, contactez-les pour plus d’informations.
 
-You can view your groups information here:
+Vous pouvez consulter les informations de votre groupe ici :
 {U_GROUP}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Votre demande a été approuvée
 
-Congratulations,
+Félicitations,
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+Votre demande d’adhésion au groupe « {GROUP_NAME} » sur « {SITENAME} » a été approuvée.
+Cliquez sur le lien suivant afin de consulter les membres de votre groupe.
 
 {U_GROUP}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} Demande à rejoindre votre groupe
 
-Dear {USERNAME},
+Cher {USERNAME},
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+L’utilisateur « {REQUEST_USERNAME} » a demandé à rejoindre le groupe « {GROUP_NAME} » que vous modérez sur « {SITENAME} ».
+Veuillez vous rendre sur le lien suivant afin d’approuver ou de refuser cette demande d’adhésion au groupe :
 
 {U_PENDING}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB a été installé
 
-Congratulations,
+Félicitations,
 
-You have successfully installed phpBB on your server.
+Vous avez correctement installé phpBB sur votre serveur.
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ce courriel contient des informations importantes concernant votre installation et devrait être conservé précieusement. Votre mot de passe a été stocké en toute sécurité dans notre base de données et ne pourra pas être retrouvé. Dans le cas où vous l’oubliez, vous pourrez le réinitialiser en utilisant l’adresse de courrier électronique associée à votre compte.
 
 ----------------------------
-Username: {USERNAME}
+Nom d’utilisateur : {USERNAME}
 
-Board URL: {U_BOARD}
+Lien du forum : {U_BOARD}
 ----------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
+Des informations utiles concernant le logiciel phpBB peuvent être trouvées dans le dossier « docs » de votre installation, sur la page de support du site officiel (http://www.phpbb.com/support/) ou sur sa communauté francophone (http://www.phpbb.fr/).
 
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+Afin de garantir la sécurité de votre forum, nous vous recommandons fortement de toujours détenir la dernière version du logiciel. Pour votre confort, une liste de diffusion est disponible à la page référencée ci-dessus.
 
 {EMAIL_SIG}',
 ));
@@ -509,15 +502,15 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} Notification de publication d’un nouveau sujet - « {FORUM_NAME} »
 
-Hello {USERNAME},
+Bonjour {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+Vous recevez cette notification car vous surveillez le forum « {FORUM_NAME} » sur « {SITENAME} ». Ce forum a reçu un nouveau sujet depuis votre dernière visite, « {TOPIC_TITLE} ». Vous pouvez utiliser le lien suivant afin de consulter le forum, aucune nouvelle notification ne vous sera envoyée jusqu’à ce que vous visitiez le forum.
 
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Si vous ne souhaitez plus surveiller ce forum, vous pouvez cliquer sur le lien « Se désabonner au forum » situé au-dessous du forum en question ou cliquer sur le lien suivant :
 
 {U_STOP_WATCHING_FORUM}
 
@@ -527,24 +520,11 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{PM_SUBJECT}"
+	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Rapport fermé - « {PM_SUBJECT} »
 
-Hello {USERNAME},
+Bonjour {USERNAME},
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed. If you have further questions, please contact {CLOSER_NAME} by private message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{PM_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
+Vous recevez cette notification car le rapport que vous avez envoyé concernant le message privé « {PM_SUBJECT} » sur « {SITENAME} » a été traité par un modérateur ou un administrateur. Le rapport est à présent fermé. Si vous souhaitez obtenir plus d’informations, veuillez contacter {CLOSER_NAME} par message privé.
 
 
 {EMAIL_SIG}',
@@ -553,16 +533,29 @@ You are receiving this notification because the report you filed regarding the p
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Rapport supprimé - « {PM_SUBJECT} »
 
-Hello {USERNAME},
+Bonjour {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+Vous recevez cette notification car le rapport que vous avez envoyé concernant le message privé « {PM_SUBJECT} » sur « {SITENAME} » a été supprimé par un modérateur ou un administrateur.
 
-If you want to view the post, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Message approuvé - « {POST_SUBJECT} »
+
+Bonjour {USERNAME},
+
+Vous recevez cette notification car votre message « {POST_SUBJECT} » sur « {SITENAME} » a été approuvé par un modérateur ou un administrateur.
+
+Si vous souhaitez consulter le message, veuillez cliquer sur le lien suivant :
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Si vous souhaitez consulter le sujet, veuillez cliquer sur le lien suivant :
 {U_VIEW_TOPIC}
 
 
@@ -572,13 +565,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Message désapprouvé - « {POST_SUBJECT} »
 
-Hello {USERNAME},
+Bonjour {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Vous recevez cette notification car votre message « {POST_SUBJECT} » sur « {SITENAME} » a été désapprouvé par un modérateur ou un administrateur.
 
-The following reason was given for the disapproval:
+Les raisons suivantes ont été prononcées concernant la désapprobation :
 
 {REASON}
 
@@ -675,19 +668,19 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} Un nouveau message privé est arrivé
 
-Hello {USERNAME},
+Bonjour {USERNAME},
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+Vous avez reçu un nouveau message privé de « {AUTHOR_NAME} » sur votre compte de « {SITENAME} » dont le sujet est :
 
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+Vous pouvez consulter votre nouveau message en cliquant sur le lien suivant :
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+Vous avez demandé à recevoir une notification lors de cet évènement, sachez que vous pouvez toujours choisir de ne pas être notifié(e) lors de la réception de nouveaux messages en modifiant le réglage approprié dans votre profil.
 
 {EMAIL_SIG}',
 ));
@@ -709,48 +702,46 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+Bonjour {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Ce qui suit est un courriel qui vous a été envoyé par {FROM_USERNAME} par l’intermédiaire de votre compte sur « {SITENAME} ». Si ce message est un pourriel ou qu’il contient des commentaires que vous trouvez déplacés, veuillez contacter le webmestre du forum à l’adresse suivante :
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Incluez ce courriel en entier (particulièrement les en-têtes). Veuillez noter que l’adresse de réponse à ce courriel a été réglée avec celle de {FROM_USERNAME}.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Le message qui vous a été envoyé est le suivant :
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{MESSAGE}
-',
+{MESSAGE}',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+Bonjour {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Ce qui suit est un message qui vous a été envoyé par {FROM_USERNAME} par l’intermédiaire de votre compte sur « {SITENAME} ». Si ce message est un pourriel ou qu’il contient des commentaires que vous trouvez déplacés, veuillez contacter le webmestre du forum à l’adresse suivante :
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Incluez ce courriel en entier. Veuillez noter que l’adresse de l’expéditeur a été réglé sur le compte IM des forums.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Le message qui vous a été envoyé est le suivant :
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{MESSAGE}
-',
+{MESSAGE}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Rapport fermé - « {POST_SUBJECT} »
 
-Hello {USERNAME},
+Bonjour {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
+Vous recevez cette notification car le rapport que vous avez rempli sur le message « {POST_SUBJECT} » dans « {TOPIC_TITLE} » sur « {SITENAME} » a été vérifié par un modérateur ou un administrateur. Le rapport a alors été fermé. Si vous souhaitez avoir plus d’informations à ce sujet, veuillez contacter {CLOSER_NAME} par message privé.
 
 
 {EMAIL_SIG}',
@@ -759,11 +750,11 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Rapport supprimé - « {POST_SUBJECT} »
 
-Hello {USERNAME},
+Bonjour {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
+Vous recevez cette notification car le rapport du message « {POST_SUBJECT} » dans « {TOPIC_TITLE} » sur « {SITENAME} » a été supprimé par un modérateur ou un administrateur.
 
 
 {EMAIL_SIG}',
@@ -772,13 +763,14 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Sujet approuvé - « {TOPIC_TITLE} »
 
-Hello {USERNAME},
+Bonjour {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+Vous recevez cette notification car votre sujet « {TOPIC_TITLE} » sur « {SITENAME} » a été approuvé par un modérateur ou un administrateur.
 
-If you want to view the topic, click the following link:
+Si vous souhaitez consulter le sujet, veuillez cliquer sur le lien suivant :
+
 {U_VIEW_TOPIC}
 
 
@@ -788,13 +780,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Sujet désapprouvé - « {TOPIC_TITLE} »
 
-Hello {USERNAME},
+Bonjour {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Vous recevez cette notification car votre sujet « {TOPIC_TITLE} » sur « {SITENAME} » a été désapprouvé par un modérateur ou un administrateur.
 
-The following reason was given for the disapproval:
+Les raisons suivantes ont été prononcées concernant cette désapprobation :
 
 {REASON}
 
@@ -805,22 +797,22 @@ The following reason was given for the disapproval:
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Notification de publication d’une réponse à un sujet - « {TOPIC_TITLE} »
 
-Hello {USERNAME},
+Bonjour {USERNAME},
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+Vous recevez cette notification car vous surveillez le sujet « {TOPIC_TITLE} » sur « {SITENAME} ». Ce sujet a reçu une réponse depuis votre dernière visite. Vous pouvez utiliser le lien suivant afin de consulter les réponses qui ont été publiées, aucune nouvelle notification ne vous sera envoyée jusqu’à ce que vous visitez le sujet.
 
-If you want to view the newest post made since your last visit, click the following link:
+Si vous souhaitez consulter le nouveau message écrit depuis votre dernière visite, veuillez cliquer sur le lien suivant :
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Si vous souhaitez consulter le sujet, veuillez cliquer sur le lien suivant :
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Si vous souhaitez consulter le forum, veuillez cliquer sur le lien suivant :
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+Si vous ne souhaitez plus surveiller ce sujet, vous pouvez cliquer sur le lien « Se désabonner au sujet » situé en bas du sujet dont l’adresse est située ci-dessus ou cliquer sur le lien suivant :
 
 {U_STOP_WATCHING_TOPIC}
 
@@ -830,47 +822,25 @@ If you no longer wish to watch this topic you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Réactivez votre compte
 
-Hello {USERNAME},
+Bonjour {USERNAME},
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
-
-{U_ACTIVATE}
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
-
-Hello {USERNAME}
-
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
-
-To use the new password you need to activate it. To do this click the link provided below.
+Votre compte sur « {SITENAME} » a été désactivé, sûrement à cause de modifications effectuées sur votre profil. Afin de réactiver votre compte, vous devez cliquer sur le lien ci-dessous :
 
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+{EMAIL_SIG}',
+));
 
-Password: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+
+$email = array_merge($email, array(
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Votre compte a été désactivé
+
+Bonjour {USERNAME},
+
+Votre compte sur « {SITENAME} » a été désactivé, sûrement à cause de modifications effectuées sur votre profil. L’administrateur du forum devra l’activer avant que vous ne puissiez vous connecter. Vous recevrez une autre notification lorsque cela aura été effectué.
 
 {EMAIL_SIG}',
 ));
@@ -878,20 +848,42 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} Activation d’un nouveau mot de passe
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+Bonjour {USERNAME},
 
-Please keep this e-mail for your records. Your account information is as follows:
+Vous recevez cette notification car vous (ou quelqu’un se faisant passer pour vous) avez demandé qu’un nouveau mot de passe vous soit envoyé pour votre compte sur « {SITENAME} ». Si vous n’avez pas demandé cette modification, veuillez alors l’ignorer. Si vous continuez à recevoir cette notification, veuillez contacter l’administrateur du forum.
+
+Pour utiliser le nouveau mot de passe, vous avez besoin de l’activer. Pour cela, veuillez cliquer sur le lien ci-dessous :
+
+{U_ACTIVATE}
+
+Si cela a fonctionné, vous pourrez vous connecter en utilisant le mot de passe suivant :
+
+Mot de passe : {PASSWORD}
+
+Vous pouvez modifier ce mot de passe par l’intermédiaire de votre profil. Si vous éprouvez une quelconque difficulté durant ces étapes, veuillez contacter l’administrateur du forum.
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Réactivez votre compte sur « {SITENAME} »
+
+Un administrateur du forum demande à ce que votre compte soit réactivé. Votre compte est actuellement inactif.
+Veuillez suivre les étapes listées ici afin de réactiver votre compte.
+
+Veuillez conserver ce courriel dans vos archives. L’information de votre compte est la suivante :
 
 ----------------------------
-Username: {USERNAME}
+Nom d’utilisateur : {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Votre mot de passe a été stocké en toute sécurité dans notre base de données et ne pourra pas être retrouvé. Dans le cas où vous l’oubliez, vous pourrez le réinitialiser en utilisant l’adresse de courrier électronique associée à votre compte.
 
-Please visit the following link to reactivate your account:
+Veuillez vous rendre sur le lien suivant afin de réactiver votre compte :
 
 {U_ACTIVATE}
 
@@ -1004,15 +996,15 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Compte inactif
 
-Hello {USERNAME},
+Bonjour {USERNAME},
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+Cette notification est un rappel car votre compte sur « {SITENAME} », créé le {REGISTER_DATE}, demeure inactif. Si vous souhaitez activer ce compte, veuillez vous rendre sur le lien suivant :
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+Nous vous remercions de votre inscription sur « {SITENAME} » et attendons avec impatience votre participation.
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +1012,24 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Bienvenue sur « {SITENAME} »
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Veuillez conserver ce courriel dans vos archives. L’information concernant votre compte est la suivante :
 
 ----------------------------
-Username: {USERNAME}
+Nom d’utilisateur : {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Votre mot de passe a été stocké en toute sécurité dans notre base de données et ne pourra pas être retrouvé. Dans le cas où vous l’oubliez, vous pourrez le réinitialiser en utilisant l’adresse de courrier électronique associée à votre compte.
 
-Please visit the following link in order to activate your account:
+Veuillez vous rendre sur le lien suivant afin d’activer votre compte :
 
 {U_ACTIVATE}
 
 
-Thank you for registering.
+Nous vous remercions de votre inscription.
 
 {EMAIL_SIG}',
 ));
@@ -1045,21 +1037,21 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Bienvenue sur « {SITENAME} »
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Veuillez conserver ce courriel dans vos archives. Les informations concernant votre compte sont les suivantes :
 
 ----------------------------
-Username: {USERNAME}
+Nom d’utilisateur : {USERNAME}
 
-Board URL: {U_BOARD}
+Lien du forum : {U_BOARD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Votre mot de passe a été stocké en toute sécurité dans notre base de données et ne pourra pas être retrouvé. Dans le cas où vous l’oubliez, vous pourrez le réinitialiser en utilisant l’adresse de courrier électronique associée à votre compte.
 
-Thank you for registering.
+Nous vous remercions de votre inscription.
 
 {EMAIL_SIG}',
 ));
@@ -1067,25 +1059,25 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Bienvenue sur « {SITENAME} »
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Veuillez conserver ce courriel dans vos archives. Les informations concernant votre compte sont les suivantes :
 
 ----------------------------
-Username: {USERNAME}
+Nom d’utilisateur : {USERNAME}
 
-Board URL: {U_BOARD}
+Lien du forum : {U_BOARD}
 ----------------------------
 
-Please visit the following link in order to activate your account:
+Veuillez vous rendre sur le lien suivant afin d’activer votre compte :
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Votre mot de passe a été stocké en toute sécurité dans notre base de données et ne pourra pas être retrouvé. Dans le cas où vous l’oubliez, vous pourrez le réinitialiser en utilisant l’adresse de courrier électronique associée à votre compte.
 
-Thank you for registering.
+Nous vous remercions de votre inscription.
 
 {EMAIL_SIG}',
 ));

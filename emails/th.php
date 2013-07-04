@@ -1,40 +1,41 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '﻿{EMAILSUBJECT:} Activate user account
 
-Hello,
+ถึงคุณ {USERNAME}
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+ชื่อบัญชีของ "{USERNAME}" ได้ถูกระงับชั่วคราว หรือเพิ่งจะถูกสร้างขึ้นใหม่
+คุณควรตรวจสอบรายละเอียดของชื่อผู้ใช้นี้ (ถ้าจำเป็น)
 
-Use this link to view the user\'s profile:
+คุณสามารถดูข้อมูลส่วตตัวของผู้ใช้นี้ได้ที่ลิงค์ด้านล่างนี้:
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+คุณสามารถทำการยืนยันบัญชีของผู้ใช้นี้ได้ที่ลิงค์ด้านล่างนี้:
 {U_ACTIVATE}
 
+{EMAIL_SIG}
 
-{EMAIL_SIG}',
+Use this link to view the user\'s profile and activate the account:
+{U_VERIFY}',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
-
+ข้อความต่อไปนี้ถูกส่งถึงคุณโดยผู้ดูแลบอร์ดของเว็บ "{SITENAME}";
+ถ้าข้อความนี้ก่อความรำคาญให้คุณ กรุณาติดต่อ webmaster ของบอร์ด ตาม email นี้:
 {CONTACT_EMAIL}
+โดยให้คุณแนบข้อความทั้งหมดมาด้วย (โดยเฉพาะข้อความทางเทคนิคด้านบนนี้)
 
-Include this full e-mail (particularly the headers). 
-
-Message sent to you follows:
+ต่อไปนี้คือข้อความที่ส่งถึงคุณ
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
@@ -42,11 +43,12 @@ Message sent to you follows:
 $email = array_merge($email, array(
 	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
 
-Hello {USERNAME},
+ถึงคุณ {USERNAME}
 
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
+ชื่อสมาชิกองคุณที่เว็บ "{SITENAME}" ได้เปิดให้ใช้งานแล้ว โดย administrator 
+ตอนนี้คุณสามารถเข้าสู่ระบบได้แล้ว
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+รหัสผ่านของคุณ ถูกเก็บไว้ในฐานข้อมูลของเราอย่างปลอดภัยที่สุด และ ไม่มีใครสามารถเรียกดูได้. ในกรณีที่ลืมรหัสผ่านคุณสามารถเปลี่ยนรหัสได้ด้วยอีเมลที่ผู้กับชื่อสมาชิกของคุณ.
 
 {EMAIL_SIG}',
 ));
@@ -54,23 +56,16 @@ Your password has been securely stored in our database and cannot be retrieved. 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} ยินดีตอนรับสู่ "{SITENAME}" - {U_BOARD}
 
 {WELCOME_MSG}
-
-Please keep this e-mail for your records. Your account information is as follows:
-
-----------------------------
-Username: {USERNAME}
 
 Board URL: {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+บัญชีของคุณไม่สามารถใช้งานได้ และ จะต้องได้รับการอนุมัติ โดยผู้ดูแลระบบก่อนที่จะสามารถเข้าสู่ ระบบได้. คุณจะได้รับเมลแจ้งเมื่อผู้ดูแลระบบอนุมัติ
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
-Thank you for registering.
+รหัสผ่านของคุณ ถูกเก็บไว้ในฐานข้อมูลของเราอย่างปลอดภัยที่สุด.  และ ไม่มีใครสามารถเรียกดูได้. ในกรณีที่ลืมรหัสผ่านคุณสามารถเปลี่ยนรหัสได้ด้วยอีเมลที่ผู้กับชื่อสมาชิกของคุณ.
 
 {EMAIL_SIG}',
 ));
@@ -311,17 +306,19 @@ Thank you for registering.
 $email = array_merge($email, array(
 	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
 
-Hello {TO_USERNAME},
+ถึงคุณ {TO_USERNAME}
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
-
+ข้อความต่อไปนี้ถูกส่งถึงคุณโดย {FROM_USERNAME} จากเว็บ "{SITENAME}"
+ซึ่งเขาคิดว่าคุณอาจสนใจในหัวข้อนี้:
 {TOPIC_NAME}
 
-You can find it at:
-
+คุณสามารถอ่านได้ที่ลิงค์นี้:
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+อาจมีข้อความจาก {FROM_USERNAME} แนบต่อท้ายมาด้วย ซึ่งข้อความนี้ไม่ได้ถูกตรวจสอบโดยผู้ดูแลบอร์ด
+
+ถ้าคุณต้องการร้องเรียนเกี่ยวกับ e-mail นี้ กรุณาติดต่อผู้ดูแลบอร์ด ที่ {BOARD_CONTACT}
+โดยให้แนบข้อความทั้งหมดนี้มาด้วย
 
 ----------
 
@@ -379,26 +376,19 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} แจ้งมีการตอบกระทู้ - "{FORUM_NAME}"
 
-Hello {USERNAME},
+ถึงคุณ {USERNAME}
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
-
+คุณได้รับการแจ้งเตือนนี้ เพราะคุณได้ทำการเฝ้าดูฟอรัม "{FORUM_NAME}" ที่เว็บ {SITENAME}
+และมีการตอบในหัวข้อ "{TOPIC_TITLE}" หลังจากที่คุณออกจากระบบไปแล้ว คุณสามารถคลิกที่ลิงค์ด้านล่างนี้เพื่ออ่านข้อความที่ตอบ
+จะไม่มีการแจ้งเตือนใดๆอีกจนกว่าคุณจะเข้าไปอ่านในหัวข้อนี้
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
-{U_TOPIC}
-
-If you want to view the forum, click the following link:
-{U_FORUM}
-
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
-
+ถ้าคุณไม่ต้องการรับการแจ้งเตือนอีกต่อไป คุณสามารถคลิกที่ลิงค์ "ยกเลิกส่งเมลล์แจ้งเมื่อมีการตอบกระทู้นี้" ซึ่งจะอยู่ที่ด้านล่างของกระทู้นั้นๆ หรือจะคลิกที่ลิงค์ด้านล่างนี้ก็ได้:
 {U_STOP_WATCHING_FORUM}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
@@ -406,16 +396,16 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 $email = array_merge($email, array(
 	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
 
-Congratulations,
+ขอแสดงความยินดีด้วย
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+คุณได้รับอนุญาตให้เข้ากลุ่มผู้ใช้ "{GROUP_NAME}" บนเว็บ "{SITENAME}" เรียบร้อยแล้ว
+ซึ่งผู้ดูแลกลุ่ม หรือ ผู้ดูแลเว็บ ได้เป็นผู้จัดการให้
+ถ้าคุณต้องการข้อมูลเพิ่มเติม ให้ติดต่อกลับมาทางเรา
 
-You can view your groups information here:
+คุณสามารถดูรายละเอียดของกลุ่มผู้ใช้ได้ที่นี่:
 {U_GROUP}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
@@ -423,15 +413,13 @@ You can view your groups information here:
 $email = array_merge($email, array(
 	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
 
-Congratulations,
+ขอแสดงความยินดีด้วย
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
-
+คุณได้รับอนุญาตให้เข้าร่วมกลุ่มผู้ใช้ "{GROUP_NAME}" บนเว็บ "{SITENAME}" เรียบร้อยแล้ว
+คลิกที่ลิงค์ด้านล่างนี้ เพื่อดูสถานะการเป็นสมาชิกกลุ่มของคุณ
 {U_GROUP}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
@@ -439,27 +427,26 @@ Click on the following link to see your group membership.
 $email = array_merge($email, array(
 	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
 
-Dear {USERNAME},
+ถึงคุณ {USERNAME}
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
-
+ได้มีผู้ขอสมัครเข้าร่วมกลุ่ม "{GROUP_NAME}" ที่คุณดูแลอยู่บนเว็บ "{SITENAME}"
+ให้คลิกที่ลิงค์ด้านล่างนี้ เพื่อทำการอนุญาตหรือปฏิเสธ:
 {U_PENDING}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB ติดตั้งเรียบร้อยแล้ว
 
-Congratulations,
+ขอแสดงความยินดี
 
-You have successfully installed phpBB on your server.
+คุณได้ทำการติดตั้ง phpBB เสร็จเรียบร้อยแล้ว
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+กรุณาอย่าทำรหัสผ่านหาย ซึ่งรหัสผ่านนี้ได้ถูกเข้ารหัสไว้ในฐานข้อมูล และไม่สามารถส่งให้คุณได้
+อย่างไรก็ตาม ถ้าคุณลืมรหัสผ่าน คุณสามารถขอรหัสผ่านอันใหม่ได้
 
 ----------------------------
 Username: {USERNAME}
@@ -467,9 +454,10 @@ Username: {USERNAME}
 Board URL: {U_BOARD}
 ----------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
-
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+คุณสามารถอ่านรายละเอียดเพิ่มเติมได้ที่โฟลเดอร์ docs และ support page ของ phpBB.com - http://www.phpbb.com/support/
+เพื่อให้บอร์ดของคุณปลอดภัยที่สุด คุณควรจะหมั่นอัปเกรดเว็บบอร์ดให้เป็นเวอร์ชันล่าสุดอยู่เสมอ 
+ติดตามข่าวการอัพเกรด phpbb3 ภาษาไทยได้ที่ http://www.phpbbthailand.com
+คุณควรจะสมัครสมาชิกที่ลิงค์ด้านบน เพื่อรับการแจ้งเตือนเมื่อมีเว็บบอร์ดเวอร์ชันใหม่ออกมา 
 
 {EMAIL_SIG}',
 ));
@@ -509,16 +497,17 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} แจ้งมีหัวข้อใหม่ - "{FORUM_NAME}"
 
-Hello {USERNAME},
+ถึงคุณ {USERNAME}
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
-
+คุณได้รับการแจ้งเตือนนี้ เพราะคุณได้ตั้งค่าให้เตือนเมือมีข้อความใหม่ที่บอร์ด "{FORUM_NAME}" ที่เว็บ {SITENAME}
+และได้มีการสร้างหัวข้อใหม่ คือ "{TOPIC_TITLE}" หลังจากที่คุณออกจากระบบไปแล้ว
+คุณสามารถคลิกที่ลิงค์ด้านล่างนี้เพื่อเข้าไปอ่านในบอร์ดนั้น
+และจะไม่มีการแจ้งเตือนใดๆ อีกจนกว่าคุณจะเข้าไปอ่านในบอร์ดนั้น
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
-
+ถ้าคุณไม่ต้องการรับการแจ้งเตือนอีก คุณสามารถคลิกที่ลิงค์ "หยุดการเฝ้าดูหัวข้อนี้" ซึ่งจะอยู่ที่ด้านล่างของหัวข้อนั้นๆ หรือคลิกที่ลิงค์ด้านล่างนี้ก็ได้:
 {U_STOP_WATCHING_FORUM}
 
 {EMAIL_SIG}',
@@ -555,16 +544,16 @@ You are receiving this notification because the report you filed regarding the p
 $email = array_merge($email, array(
 	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+ถึงคุณ {USERNAME}
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+คุณได้รับการแจ้งเตือนนี้ เพราะข้อความของคุณ "{POST_SUBJECT}" ที่เว็บ "{SITENAME}"
+ได้รับการรับรองจากผู้ดูแลบอร์ดเรียบร้อยแล้ว
 
-If you want to view the post, click the following link:
+คลิกที่ลิงค์ด้านล่างนี้ เพื่อดูข้อความ:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+คลิกที่ลิงค์ด้านล่างนี้ เพื่อดูหัวข้อ:
 {U_VIEW_TOPIC}
-
 
 {EMAIL_SIG}',
 ));
@@ -574,11 +563,12 @@ If you want to view the topic, click the following link:
 $email = array_merge($email, array(
 	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+ถึงคุณ {USERNAME}
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+คุณได้รับการแจ้งเตือนนี้ เพราะข้อความของคุณ "{POST_SUBJECT}" ที่เว็บ "{SITENAME}"
+ได้ถูกปฏิเสธการรับรองจากผู้ดูแลบอร์ด
 
-The following reason was given for the disapproval:
+นี่คือเหตุผลของการปฏิเสธการรับรอง
 
 {REASON}
 
@@ -677,17 +667,16 @@ If you want to view the topic, click the following link:
 $email = array_merge($email, array(
 	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
 
-Hello {USERNAME},
+ถึงคุณ {USERNAME}
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
-
+มีข้อความส่วนตัว จาก "{AUTHOR_NAME}" ส่งมาถึงคุณ บนเว็บ "{SITENAME}"
+มีหัวข้อว่า
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+คุณสามารถอ่านข้อความได้โดยคลิกที่ลิงค์ด้านล่างนี้:
+{U_VIEW_MESSAGE}
 
-{U_INBOX}
-
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+คุณสามารถกำหนดไม่ให้มีการแจ้งเตือนได้ โดยการเปลี่ยนการตั้งค่าในข้อมูลส่วนตัว
 
 {EMAIL_SIG}',
 ));
@@ -709,15 +698,16 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+ถึงคุณ {TO_USERNAME}
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
-
+ข้อความต่อไปนี้ ได้ส่งถึงคุณโดย {FROM_USERNAME} ผ่านทางชื่อบัญชีของคุณบนเว็บ {SITENAME}
+ถ้าข้อความนี้ก่อความรำคาญให้คุณ กรุณาติดต่อ webmaster ของบอร์ดที่ email นี้:
 {BOARD_CONTACT}
+โดยให้คุณแนบข้อความทั้งหมดมาด้วย (โดยเฉพาะข้อความทางเทคนิคด้านบนนี้)
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+หมายเหตุ: ข้อความที่คุณตอบกลับ (Reply) จะถูกส่งไปให้ {FROM_USERNAME}
 
-Message sent to you follows
+ต่อไปนี้คือข้อความที่ส่งถึงคุณ
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -728,15 +718,15 @@ Message sent to you follows
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+ถึงคุณ {TO_USERNAME}
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
-
+ข้อความต่อไปนี้ ได้ส่งถึงคุณโดย {FROM_USERNAME} ผ่านทางชื่อบัญชีของคุณบนเว็บ {SITENAME}
+ถ้าข้อความนี้ก่อความรำคาญให้คุณ กรุณาติดต่อ webmaster ของบอร์ดที่ email นี้:
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+หมายเหตุ: ที่อยู่ของผู้ส่งข้อความ เป็นชื่อบัญชี IM ของบอร์ด
 
-Message sent to you follows
+ต่อไปนี้คือข้อความที่ส่งถึงคุณ
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -748,10 +738,10 @@ Message sent to you follows
 $email = array_merge($email, array(
 	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+ถึงคุณ {USERNAME}
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
-
+คุณได้รับการแจ้งเตือนนี้ เพราะรายงานที่คุณแจ้งเกี่ยวกับข้อความ "{POST_SUBJECT}" ในหัวข้อ "{TOPIC_TITLE}" ที่เว็บ "{SITENAME}"
+ได้ถูกปิดแล้ว ถ้าคุณมีข้อสงสัย กรุณาส่งข้อความส่วนตัวไปหา {CLOSER_NAME}
 
 {EMAIL_SIG}',
 ));
@@ -761,10 +751,10 @@ You are receiving this notification because the report you filed on the post "{P
 $email = array_merge($email, array(
 	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+ถึงคุณ {USERNAME}
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
-
+คุณได้รับการแจ้งเตือนนี้ เพราะรายงานที่คุณแจ้งเกี่ยวกับข้อความ "{POST_SUBJECT}" ในหัวข้อ "{TOPIC_TITLE}" ที่เว็บ "{SITENAME}"
+ได้ถูกลบโดยผู้ดูแลบอร์ดแล้ว
 
 {EMAIL_SIG}',
 ));
@@ -774,11 +764,12 @@ You are receiving this notification because the report you filed on the post "{P
 $email = array_merge($email, array(
 	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+ถึงคุณ {USERNAME}
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+คุณได้รับการแจ้งเตือนนี้ เพราะหัวข้อของคุณ "{TOPIC_TITLE}" ที่เว็บ "{SITENAME}"
+ได้รับการรับรองจากผู้ดูแลบอร์ดเรียบร้อยแล้ว
 
-If you want to view the topic, click the following link:
+คลิกที่ลิงค์ด้านล่างนี้ เพื่อดูหัวข้อ:
 {U_VIEW_TOPIC}
 
 
@@ -790,11 +781,12 @@ If you want to view the topic, click the following link:
 $email = array_merge($email, array(
 	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+ถึงคุณ {USERNAME}
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+คุณได้รับการแจ้งเตือนนี้ เพราะหัวข้อของคุณ "{TOPIC_TITLE}" ที่เว็บ "{SITENAME}"
+ได้ถูกปฏิเสธการรับรองจากผู้ดูแลบอร์ด
 
-The following reason was given for the disapproval:
+นี่คือเหตุผลของการปฏิเสธการรับรอง
 
 {REASON}
 
@@ -807,21 +799,18 @@ The following reason was given for the disapproval:
 $email = array_merge($email, array(
 	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+ถึงคุณ {USERNAME}
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+คุณได้รับการแจ้งเตือนนี้ เพราะคุณได้ทำการเฝ้าดูหัวข้อ "{TOPIC_TITLE}" ที่เว็บ {SITENAME}
+และมีการตอบในหัวข้อนี้หลังจากที่คุณออกจากระบบไปแล้ว
 
-If you want to view the newest post made since your last visit, click the following link:
+คุณสามารถคลิกที่ลิงค์ด้านล่างนี้เพื่ออ่านข้อความที่ตอบล่าสุด
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+หรือคลิกที่ลิงค์ด้านล่างนี้เพื่ออ่านหัวข้อทั้งหมด
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
-{U_FORUM}
-
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
-
+ถ้าคุณไม่ต้องการรับการแจ้งเตือนอีกต่อไป คุณสามารถคลิกที่ลิงค์ "หยุดการเฝ้าดูหัวข้อนี้" ซึ่งจะอยู่ที่ด้านล่างของหัวข้อนั้นๆ หรือจะคลิกที่ลิงค์ด้านล่างนี้ก็ได้:
 {U_STOP_WATCHING_TOPIC}
 
 {EMAIL_SIG}',
@@ -832,10 +821,10 @@ If you no longer wish to watch this topic you can either click the "Unsubscribe 
 $email = array_merge($email, array(
 	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
 
-Hello {USERNAME},
+ถึงคุณ {USERNAME}
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
-
+ชื่อบัญชีของคุณบนเว็บ "{SITENAME}" ได้ถูกระงับชั่วคราว อาจเกิดจากการเปลี่ยนแปลงข้อมูลส่วนตัวของคุณ
+ให้คุณคลิกที่ลิงค์ด้านล่างนี้ เพื่อทำการยืนยันชื่อบัญชีของคุณ ใหม่อีกครั้ง:
 {U_ACTIVATE}
 
 {EMAIL_SIG}',
@@ -846,9 +835,11 @@ Your account on "{SITENAME}" has been deactivated, most likely due to changes ma
 $email = array_merge($email, array(
 	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
 
-Hello {USERNAME},
+ถึงคุณ {USERNAME}
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
+ชื่อบัญชีของคุณบนเว็บ "{SITENAME}" ถูกระงับชั่วคราว ซึ่งอาจเกิดจากการเปลี่ยนแปลงข้อมูลส่วนตัว
+คุณต้องรอให้ผู้ดูแลบอร์ด ทำการยืนยันบัญชีให้คุณก่อน คุณจึงจะสามารถเข้าสู่ระบบได้
+คุณจะได้รับ e-mail แจ้งเตือน เมื่อผู้ดูแลบอร์ดได้ทำการยืนยันให้แล้ว
 
 {EMAIL_SIG}',
 ));
@@ -858,19 +849,22 @@ Your account on "{SITENAME}" has been deactivated, most likely due to changes ma
 $email = array_merge($email, array(
 	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
 
-Hello {USERNAME}
+ถึงคุณ {USERNAME}
 
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
+คุณได้รับจดหมายฉบับนี้เพราะคุณ (หรือบางคนที่ใช้ชื่อบัญชีของคุณ) ได้ทำการขอรหัสผ่านใหม่ บนเว็บ {SITENAME}
+ถ้าคุณไม่ได้ทำการขอรหัสผ่านใหม่ ขอให้คุณลบจดหมายฉบับนี้ทิ้ง และอย่าพยายามตอบกลับมา
+ถ้าคุณยังได้รับจดหมายฉบับนี้อยู่อีก กรุณาติดต่อ administrator ของบอร์ด
 
-To use the new password you need to activate it. To do this click the link provided below.
-
+ถ้าคุณได้ทำการขอรหัสผ่านใหม่ไว้ คุณต้องทำการยืนยันรหัสผ่านอันใหม่ของคุณเสียก่อน
+โดยการคลิกที่ลิงค์ด้านล่างนี้
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+หลังจากนั้น คุณจะสามารถเข้าสู่ระบบได้โดยใช้รหัสผ่านอันใหม่ คือ:
 
 Password: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+คุณสามารถเปลี่ยนแปลงรหัสผ่านใหม่ได้ด้วยตัวเอง ที่ข้อมูลส่วนตัว
+ถ้าคุณต้องการความช่วยเหลือ กรุณาติดต่อ administrator ของบอร์ด
 
 {EMAIL_SIG}',
 ));
@@ -878,21 +872,21 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} เปิดใช้งานบัญชีของคุณ "{SITENAME}" - {U_BOARD}
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+ผู้ดูแลบอร์ดได้ทำการระงับบัญชีของคุณชั่วคราว
+คุณจะไม่สามารถเข้าสู่ระบบได้ จนกว่าคุณจะทำการยืนยันบัญชีของคุณ โดยคลิกที่ลิงค์ด้านล่างนี้
 
-Please keep this e-mail for your records. Your account information is as follows:
+กรุณาเก็บรักษา e-mail นี้ไว้ให้ดี รายละเอียดชื่อบัญชีของคุณคือ:
 
 ----------------------------
 Username: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+กรุณาอย่าทำรหัสผ่านหาย ซึ่งรหัสผ่านนี้ได้ถูกเข้ารหัสไว้ในฐานข้อมูล และทางเราไม่สามารถส่งให้คุณได้
+อย่างไรก็ตาม ถ้าคุณลืมรหัสผ่าน คุณสามารถขอรหัสผ่านอันใหม่ได้ ซึ่งจะใช้วิธียืนยันชื่อบัญชีเหมือนเดิม
 
-Please visit the following link to reactivate your account:
-
+คลิกที่ลิงค์ด้านล่างนี้ เพื่อยืนยันบัญชีของคุณ:
 {U_ACTIVATE}
 
 
@@ -1004,15 +998,16 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} เตือนบัญชีไม่ได้ใช้งาน
 
-Hello {USERNAME},
+ถึงคุณ {USERNAME}
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
-
+ข้อความแจ้งเตือนเรื่องบัญชีของคุณที่เว็บ "{SITENAME}" สมัครสมาชิกไว้เมื่อวันที่ {REGISTER_DATE} และคุณยังไม่ได้ทำการยืนยันบัญชี
+กรุณาคลิกที่ลิงค์ด้านล่างนี้เพื่อยืนยันบัญชีของคุณ
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+ขอบคุณที่ทำการสมัครสมาชิกที่เว็บ "{SITENAME}"
+เราหวังอย่างยิ่งว่าคุณจะมาร่วมเป็นสมาชิกกับเรา
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +1015,23 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} ยินดีตอนรับสู่ "{SITENAME}" - {U_BOARD}
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+กรุณาเก็บรักษา e-mail นี้ไว้ รายละเอียดชื่อบัญชีของคุณคือ:
 
 ----------------------------
 Username: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+กรุณาอย่าทำรหัสผ่านหาย รหัสผ่านนี้ได้ถูกเข้ารหัสแลพเก็บไว้ในฐานข้อมูล และทางเราไม่สามารถส่งให้คุณใหม่ได้
+แต่อย่างไรก็ตาม ถ้าคุณลืมรหัสผ่าน คุณสามารถขอรหัสผ่านใหม่ได้ ซึ่งจะใช้วิธียืนยันชื่อบัญชีเหมือนเดิม
 
-Please visit the following link in order to activate your account:
-
+ขณะนี้บัญชีของคุณยังไม่ได้รับการยืนยัน กรุณาคลิกที่ลิงค์ด้านล่างนี้เพื่อทำการยืนยัน:
 {U_ACTIVATE}
 
-
-Thank you for registering.
+ขอบคุณที่ทำการสมัครสมาชิก
 
 {EMAIL_SIG}',
 ));
@@ -1045,11 +1039,33 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} ยินดีตอนรับสู่ "{SITENAME}" - {U_BOARD}
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+กรุณาเก็บรักษา e-mail นี้ไว้ให้ดี รายละเอียดชื่อบัญชีของคุณคือ:
+
+----------------------------
+Username: {USERNAME}
+Board URL: {U_BOARD}
+----------------------------
+
+กรุณาอย่าทำรหัสผ่านหาย รหัสผ่านนี้ได้ถูกเข้ารหัสแลพเก็บไว้ในฐานข้อมูล และทางเราไม่สามารถส่งให้คุณใหม่ได้
+แต่อย่างไรก็ตาม ถ้าคุณลืมรหัสผ่าน คุณสามารถขอรหัสผ่านใหม่ได้ ซึ่งจะใช้วิธียืนยันชื่อบัญชีเหมือนเดิม
+
+ขอบคุณที่ทำการสมัครสมาชิก
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} ยินดีตอนรับสู่ "{SITENAME}" - {U_BOARD}
+
+{WELCOME_MSG}
+
+กรุณาเก็บรักษา e-mail นี้ไว้ให้ดี รายละเอียดชื่อบัญชีของคุณคือ:
 
 ----------------------------
 Username: {USERNAME}
@@ -1057,35 +1073,14 @@ Username: {USERNAME}
 Board URL: {U_BOARD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
-Thank you for registering.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
-
-{WELCOME_MSG}
-
-Please keep this e-mail for your records. Your account information is as follows:
-
-----------------------------
-Username: {USERNAME}
-
-Board URL: {U_BOARD}
-----------------------------
-
-Please visit the following link in order to activate your account:
-
+ชื่อบัญชีของคุณยังไม่ได้รับการยืนยัน
+คุณจะยังไม่สามารถเข้าสู่ระบบได้ จนกว่าคุณจะคลิกเข้าไปที่ลิงค์ด้านล่างนี้:
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+กรุณาอย่าทำรหัสผ่านหาย รหัสผ่านนี้ได้ถูกเข้ารหัสแลพเก็บไว้ในฐานข้อมูล และทางเราไม่สามารถส่งให้คุณใหม่ได้
+แต่อย่างไรก็ตาม ถ้าคุณลืมรหัสผ่าน คุณสามารถขอรหัสผ่านใหม่ได้ ซึ่งจะใช้วิธียืนยันชื่อบัญชีเหมือนเดิม
 
-Thank you for registering.
+ขอบคุณที่ทำการสมัครสมาชิก
 
 {EMAIL_SIG}',
 ));

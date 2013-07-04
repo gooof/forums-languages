@@ -1,18 +1,15 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Aktiver brugerkonto
 
-Hello,
+Hej
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+Kontoen, der ejes af "{USERNAME}" er netop oprettet eller blevet deaktiveret. Du bedes kontrollere oplysningerne om denne bruger (hvis krævet) og aktivere den via disse links.
 
-Use this link to view the user\'s profile:
-{U_USER_DETAILS}
+Brugerens profil: {U_USER_DETAILS}
 
-Use this link to activate the account:
-{U_ACTIVATE}
-
+Aktivering af kontoen: {U_ACTIVATE}
 
 {EMAIL_SIG}',
 ));
@@ -21,32 +18,16 @@ Use this link to activate the account:
 
 $email = array_merge($email, array(
 	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Nedenstående email er sendt til dig fra en administrator på "{SITENAME}". Finder du indholdet af emailen anstødende eller på anden måde upassende bedes du kontakte boardets webmaster på denne adresse:
 
 {CONTACT_EMAIL}
 
-Include this full e-mail (particularly the headers). 
+Inkluder hele emailen (specielt overskrifterne).
 
-Message sent to you follows:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Indholdet af emailen er som følger:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-
-
-{EMAIL_SIG}
-',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
-
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
 
 {EMAIL_SIG}',
 ));
@@ -54,23 +35,37 @@ Your password has been securely stored in our database and cannot be retrieved. 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Konto aktiveret
+
+Hej {USERNAME}
+
+Din konto på "{SITENAME}" er nu aktiveret af en administrator. Du kan logge ind.
+
+Dit kodeord er gemt krypteret i vores database og kan derfor ikke genfindes eller genskabes. Skulle du glemme eller miste kodeordet, kan det nulstilles ved at anvende den emailadresse du anvendte ved din tilmelding, i kombination med dit brugernavn.
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Velkommen til "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Gem denne email til fremtidig brug. Din kontoinformation er som følger:
 
 ----------------------------
-Username: {USERNAME}
+Brugernavn: {USERNAME}
 
-Board URL: {U_BOARD}
+Boardets URL: {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+Din konto er på nuværende tidspunkt ikke aktiveret, den afventer godkendelse fra en boardadministrator, før du kan logge ind. Du modtager endnu en email, når dette er sket.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Dit kodeord er gemt krypteret og sikkert i vores database, og kan derfor ikke genfindes. Glemmer du kodeordet, er du istand til at nulstille det ved brug af emailadressen knyttet til din konto.
 
-Thank you for registering.
+Tak fordi du tilmeldte dig hos os.
 
 {EMAIL_SIG}',
 ));
@@ -213,115 +208,101 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Velkommen til "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+I overensstemmelse med COPPA lovgivning er din konto på nuværende tidspunkt ikke aktiv.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Udskriv venligst denne besked og få dine forældre eller værge til at underskrive og datere den. Fax den derefter til: {FAX_INFO}
 
-{FAX_INFO}
+ELLER send den til: {MAIL_INFO}
 
-OR mail it to:
+------------------------------ KLIP HER ------------------------------
+Tilladelse til at deltage på "{SITENAME}" - {U_BOARD}
 
-{MAIL_INFO}
+Brugernavn: {USERNAME}
+Email: {EMAIL_ADDRESS}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
-
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
-
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+JEG HAR LÆST INFORMATIONERNE MODTAGET FRA MIT BARN, OG GIVER HERMED "{SITENAME}" TILLADELSE TIL AT OPBEVARE DISSE INFORMATIONER. 
+JEG FORSTÅR, AT DISSE INFORMATIONER KAN ÆNDRES NÅR SOM HELST VED INDTASTNING AF ET KODEORD.
+JEG FORSTÅR, AT JEG NÅR SOM HELST KAN BEDE OM AT FÅ DISSE INFORMATIONER FJERNET FRA "{SITENAME}".
 
 
-Parent or guardian 
-(print your name here): _____________________
+Forældre eller værge
+(skriv dit navn her): _____________________
 
-(sign here): __________________ 
+(underskriv her): __________________ 
 
-Date: _______________
+Dato: _______________
 
------------------------------- CUT HERE ------------------------------
+------------------------------ KLIP HER ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Din konto vil blive aktiveret, så snart administratoren har modtaget den ovenstående formular via fax eller traditionel post.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Dit kodeord er gemt krypteret og sikkert i vores database, og kan derfor ikke genfindes. Glemmer du kodeordet, er du istand til at nulstille det ved brug af emailadressen knyttet til din konto.
 
-Thank you for registering.
+Tak fordi du tilmeldte dig hos os.
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Velkommen til "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+I overensstemmelse med COPPA lovgivning er din konto på nuværende tidspunkt ikke aktiv.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Udskriv venligst denne besked og få dine forældre eller værge til at underskrive og datere den. Fax den derefter til: {FAX_INFO}
 
-{FAX_INFO}
+ELLER send den til: {MAIL_INFO}
 
-OR mail it to:
+------------------------------ KLIP HER ------------------------------
+Tilladelse til at deltage på "{SITENAME}" - {U_BOARD}
 
-{MAIL_INFO}
+Brugernavn: {USERNAME}
+Email: {EMAIL_ADDRESS}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
-
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
-
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+JEG HAR LÆST INFORMATIONERNE MODTAGET FRA MIT BARN, OG GIVER HERMED "{SITENAME}" TILLADELSE TIL AT OPBEVARE DISSE INFORMATIONER. 
+JEG FORSTÅR, AT DISSE INFORMATIONER KAN ÆNDRES NÅR SOM HELST VED INDTASTNING AF ET KODEORD.
+JEG FORSTÅR, AT JEG NÅR SOM HELST KAN BEDE OM AT FÅ DISSE INFORMATIONER FJERNET FRA "{SITENAME}".
 
 
-Parent or guardian 
-(print your name here): _____________________
+Forældre eller værge
+(skriv dit navn her): _____________________
 
-(sign here): __________________ 
+(underskriv her): __________________
 
-Date: _______________
+Dato: _______________
 
------------------------------- CUT HERE ------------------------------
+------------------------------ KLIP HER ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Din konto vil blive aktiveret, så snart administratoren har modtaget den ovenstående formular via fax eller traditionel post.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Dit kodeord er gemt krypteret og sikkert i vores database, og kan derfor ikke genfindes. Glemmer du kodeordet, er du istand til at nulstille det ved brug af emailadressen knyttet til din konto.
 
-Thank you for registering.
+Tak fordi du tilmeldte dig hos os.
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - Email en ven
 
-Hello {TO_USERNAME},
+Hej {TO_USERNAME}
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Denne email er blevet sendt fra "{SITENAME}" af {FROM_USERNAME}, som tænkte du kunne være interesseret i emnet: {TOPIC_NAME}
 
-{TOPIC_NAME}
+Emnet findes via dette link: {U_TOPIC}
 
-You can find it at:
-
-{U_TOPIC}
-
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+En meddelelse fra {FROM_USERNAME} kan også være medtaget nedenfor. Bemærk venligst at denne meddelelse ikke er blevet set eller godkendt af boardets administratorer. Ønsker du at klage over denne email, bedes du kontakte boardets administratorer på {BOARD_EMAIL}. Citer venligst meddelelsens overskrift i forbindelse med indsendelse af klagen.
 
 ----------
 
@@ -379,21 +360,19 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Nyt indlæg i forummet - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Hej {USERNAME}
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+Du overvåger ovennævnte forum på "{SITENAME}". Der er indsendt et nyt indlæg i emnet "{TOPIC_TITLE}" siden dit seneste besøg. Der fremsendes ikke flere beskeder om forummet, før du har besøgt det. Benyt nedenstående link hvis du vil se:
 
-{U_NEWEST_POST}
+Seneste indlæg i forummet: {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
-{U_TOPIC}
+Emnet: {U_TOPIC}
 
-If you want to view the forum, click the following link:
-{U_FORUM}
+Forummet: {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Ønsker du ikke længere at få besked om nye indlæg i forummet, stoppes overvågningen ved at klikke på følgende link:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -404,72 +383,60 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} Du er optaget som medlem af ny brugergruppe
 
-Congratulations,
+Tillykke, du er nu blevet medlem af brugergruppen "{GROUP_NAME}" på "{SITENAME}".
+Denne handling blev udført af en gruppeleder eller en boardadministrator, kontakt dem for mere information.
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+Du kan se information om din gruppe her: {U_GROUP}
 
-You can view your groups information here:
-{U_GROUP}
-
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Din anmodning gruppemedlemskab er godkendt
 
-Congratulations,
+Tillykke, din anmodning om medlemskab af gruppen "{GROUP_NAME}" på "{SITENAME}" er blevet godkendt.
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+Du kan se information om din gruppe her: {U_GROUP}
 
-{U_GROUP}
-
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} Anmodning gruppemedlemsskab
 
-Dear {USERNAME},
+Hej {USERNAME}
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+Brugeren "{REQUEST_USERNAME}" anmoder om medlemskab af gruppen "{GROUP_NAME}", som du administrerer på "{SITENAME}".
 
-{U_PENDING}
+For at godkende eller afslå denne anmodning om gruppemedlemsskab, bedes du klikke på linket: {U_PENDING}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installeret
 
-Congratulations,
+Tillykke, du har med succes installeret phpBB på din server.
 
-You have successfully installed phpBB on your server.
-
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Denne email indeholder vigtig information om din installation og bør opbevares sikkert. Dit kodeord er gemt og krypteret sikkert i databasen, og kan derfor ikke genfindes. Glemmer du kodeordet, kan det nulstilles ved brug af emailadressen knyttet til din konto.
 
 ----------------------------
-Username: {USERNAME}
+Brugernavn: {USERNAME}
 
-Board URL: {U_BOARD}
+Boardets URL: {U_BOARD}
 ----------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
+Værdifuld information om phpBB-softwaren findes i docs-mappen i din installation og i supportforummet på www.phpbb.com - http://www.phpbb.com/support/ .
 
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+For at holde dit boardet sikkert og sikret, anbefales det kraftigt, at du holder boardet opdateret med de seneste softwarefrigivelser. Til orientering er en mailingliste tilgængelig på ovennævnte URL, ved at tilmelde sig den vil du modtage en email når nye frigivelser er tilgængelige.
 
 {EMAIL_SIG}',
 ));
@@ -509,15 +476,15 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} Nyt emne i forummet - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Hej {USERNAME}
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+Du overvåger ovennævnte forum på "{SITENAME}". Siden dit seneste besøg er emnet "{TOPIC_TITLE}" oprettet. Du modtager ikke flere beskeder vedrørende dette forum, før du har besøgt det. Brug nedenstående link til forummet:
 
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Ønsker du ikke længere at få besked om nye emner i forummet, stoppes overvågningen ved at klikke på følgende link:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -527,25 +494,11 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{PM_SUBJECT}"
+	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Rapport lukket - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+Hej {USERNAME}
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed. If you have further questions, please contact {CLOSER_NAME} by private message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{PM_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
-
+Din rapport vedrørende den private besked "{PM_SUBJECT}", du modtog på "{SITENAME}", er blevet behandlet af en redaktør eller administrator. Rapporten er nu lukket. Har du spørgsmål i den forbindelse, bedes du sende en privat besked til {CLOSER_NAME}.
 
 {EMAIL_SIG}',
 ));
@@ -553,18 +506,11 @@ You are receiving this notification because the report you filed regarding the p
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Rapport slettet - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+Hej {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
-
-If you want to view the post, click the following link:
-{U_VIEW_POST}
-
-If you want to view the topic, click the following link:
-{U_VIEW_TOPIC}
-
+Din rapport vedrørende den private besked "{PM_SUBJECT}", modtaget på "{SITENAME}", blev slettet af en redaktør eller administrator.
 
 {EMAIL_SIG}',
 ));
@@ -572,16 +518,31 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Indlæg godkendt - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Hej {USERNAME}
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Dit indlæg "{POST_SUBJECT}" på "{SITENAME}" er blevet godkendt af en redaktør eller administrator. Benyt nedenstående link hvis du vil se:
 
-The following reason was given for the disapproval:
+Indlægget: {U_VIEW_POST}
+
+Emnet: {U_VIEW_TOPIC}
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Indlæg afvist - "{POST_SUBJECT}"
+
+Hej {USERNAME}
+
+Dit indlæg "{POST_SUBJECT}" på "{SITENAME}" er blevet afvist af en redaktør eller administrator.
+
+Følgende begrundelse blev givet for afvisningen:
 
 {REASON}
-
 
 {EMAIL_SIG}',
 ));
@@ -675,19 +636,19 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} Ny privat besked er ankommet
 
-Hello {USERNAME},
+Hej {USERNAME}
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+Du har modtaget en privat besked fra "{AUTHOR_NAME}" til din konto på "{SITENAME}" med følgende titel:
 
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+Læs beskeden ved at klikke på dette link:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+Du har anmodet om at blive informeret ved nye private beskeder. Denne automatik kan fravælges i brugerkontrolpanelet under boardindstillingerne.
 
 {EMAIL_SIG}',
 ));
@@ -709,49 +670,40 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+Hej {TO_USERNAME}
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Denne email er sendt til dig fra {FROM_USERNAME} via din konto på "{SITENAME}". Finder du indholdet af emailen anstødende eller på anden måde upassende, kan boardets administratorer kontaktes på denne adresse:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Inkluder hele emailen (specielt overskrifterne). Bemærk venligst, at afsenderadressen på denne email tilhører {FROM_USERNAME}.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Indholdet af emailen er som følger:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{MESSAGE}
-',
+{MESSAGE}',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+Hej {TO_USERNAME}
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Beskeden er afsendt via din konto på "{SITENAME}". Afsender er boardets jabberkonto, og kan derfor ikke besvares. Finder du beskeden generende eller upassende, kan du rapportere den til boardets administratorer på denne emailadresse: {BOARD_CONTACT}. Kopier den fulde besked ind i emailen.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{BOARD_CONTACT}
-
-Include this full message. Please note that the sender address has been set to the boards IM account.
-
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-{MESSAGE}
-',
+{MESSAGE}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Rapport lukket - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Hej {USERNAME}
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
-
+Den rapport du har indgivet for indlægget "{POST_SUBJECT}" i "{TOPIC_TITLE}" på "{SITENAME}" er blevet behandlet af en redaktør eller administrator. Rapporten blev herefter lukket. Hvis du har yderligere spørgsmål, bedes du kontakte {CLOSER_NAME} via en privat besked.
 
 {EMAIL_SIG}',
 ));
@@ -759,28 +711,11 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Rapport slettet - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Hej {USERNAME}
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
-
-Hello {USERNAME},
-
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
-
-If you want to view the topic, click the following link:
-{U_VIEW_TOPIC}
-
+Den rapport du har indgivet for indlægget "{POST_SUBJECT}" i "{TOPIC_TITLE}" på "{SITENAME}" er blevet slettet af en redaktør eller af en administrator.
 
 {EMAIL_SIG}',
 ));
@@ -788,39 +723,49 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Emne godkendt - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Hej {USERNAME}
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Dit emne "{TOPIC_TITLE}" på "{SITENAME}"  er blevet godkendt af en redaktør eller administrator.
 
-The following reason was given for the disapproval:
+Klik på følgende link, for at se emnet: {U_VIEW_TOPIC}
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Emne afvist - "{TOPIC_TITLE}"
+
+Hej {USERNAME}
+
+Dit emne "{TOPIC_TITLE}" på "{SITENAME}" er blevet afvist af en redaktør eller administrator.
+
+Følgende begrundelse blev givet for afvisningen:
 
 {REASON}
 
-
 {EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Nyt indlæg i emnet - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Hej {USERNAME}
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+Du overvåger ovennævnte emne på "{SITENAME}", hvor der er indsendt indlæg siden dit seneste besøg. Du modtager ikke flere beskeder vedrørende dette emne, før du har besøgt det. Benyt nedenstående link hvis du vil se:
 
-If you want to view the newest post made since your last visit, click the following link:
-{U_NEWEST_POST}
+Seneste indlæg i emnet: {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
-{U_TOPIC}
+Emnet: {U_TOPIC}
 
-If you want to view the forum, click the following link:
-{U_FORUM}
+Forummet: {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+Ønsker du ikke længere at få besked om nye indlæg i emnet, stoppes overvågningen ved at klikke på følgende link:
 
 {U_STOP_WATCHING_TOPIC}
 
@@ -830,47 +775,25 @@ If you no longer wish to watch this topic you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Genaktiver din konto
 
-Hello {USERNAME},
+Hej {USERNAME},
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
-
-{U_ACTIVATE}
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
-
-Hello {USERNAME}
-
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
-
-To use the new password you need to activate it. To do this click the link provided below.
+Din konto på "{SITENAME}" er blevet deaktiveret. Sandsynligvis fordi der er foretaget ændringer i din profil. For at genaktivere din konto er du nødt til at klikke på følgende link:
 
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+{EMAIL_SIG}',
+));
 
-Password: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+
+$email = array_merge($email, array(
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Din konto er blevet deaktiveret
+
+Hej {USERNAME}
+
+Din konto på "{SITENAME}" er blevet deaktiveret, mest sandsynligt på grund af ændringer foretaget i din profil. Boardets administrator er nødt til at aktivere den før du kan logge ind. Du vil modtage endnu en besked når dette er sket.
 
 {EMAIL_SIG}',
 ));
@@ -878,23 +801,37 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} Aktivering af nyt kodeord
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+Hej {USERNAME}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Du modtager denne meddelelse fordi du (eller nogen der lader som om, de er dig) har bedt om at få et nyt kodeord tilsendt til din konto på "{SITENAME}". Har du ikke bedt om et nyt kodeord, kan du blot ignorere denne besked, og undlade at aktivere det nye kodeord. Bliver du ved med at modtage meddelelser herom, bedes du kontakte boardets administrator.
+
+Dit nye kodeord aktiveres ved at klikke på linket: {U_ACTIVATE}
+
+Når denne aktivering er udført, kan du logge ind med dette nye kodeord: {PASSWORD}
+
+Du kan selvfølgelig selv ændre ovennævnte nye kodeord via brugerkontrolpanelets profilindstillinger. Kontakt venligst boardets administratior, hvis du oplever problemer med det.
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Genaktiver din konto på "{SITENAME}"
+
+En boardadministrator beder om at du genaktiverer af din konto, den er derfor ikke aktiv i øjeblikket. Klik derfor venligst på nedenstående link for at genaktivere din konto:
+
+{U_ACTIVATE}
+
+Gem denne email til fremtidig brug. Din kontoinformation er følgende:
 
 ----------------------------
-Username: {USERNAME}
+Brugernavn: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
-Please visit the following link to reactivate your account:
-
-{U_ACTIVATE}
-
+Dit kodeord er gemt krypteret og sikkert i vores database, og kan derfor ikke genfindes. Glemmer du kodeordet, er du istand til at nulstille det ved brug af emailadressen knyttet til din konto.
 
 {EMAIL_SIG}',
 ));
@@ -1004,15 +941,15 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Påmindelse om inaktiv konto
 
-Hello {USERNAME},
+Hej {USERNAME},
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+Du modtager denne påmindelse, fordi den konto du oprettede {REGISTER_DATE} på "{SITENAME}" stadig er inaktiv. Klik venligst på nedenstående link hvis du ønsker at aktivere kontoen.
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+Tak for din tilmelding på "{SITENAME}", vi ser frem til din deltagelse.
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +957,23 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Velkommen til "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Gem denne email til fremtidig brug. Din kontoinformation er følgende:
 
 ----------------------------
-Username: {USERNAME}
+Brugernavn: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Dit kodeord er gemt krypteret og sikkert i vores database, og kan derfor ikke genfindes. Glemmer du kodeordet, er du istand til at nulstille det ved brug af emailadressen knyttet til din konto.
 
-Please visit the following link in order to activate your account:
+Klik venligst på nedenstående link for at aktivere din konto:
 
 {U_ACTIVATE}
 
-
-Thank you for registering.
+Tak fordi du tilmeldte dig.
 
 {EMAIL_SIG}',
 ));
@@ -1045,21 +981,21 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Velkommen til "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Gem denne email til fremtidig brug. Din kontoinformation er følgende:
 
 ----------------------------
-Username: {USERNAME}
+Brugernavn: {USERNAME}
 
-Board URL: {U_BOARD}
+Boardets URL: {U_BOARD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Dit kodeord er gemt krypteret og sikkert i vores database, og kan derfor ikke genfindes. Glemmer du kodeordet, er du istand til at nulstille det ved brug af emailadressen knyttet til din konto.
 
-Thank you for registering.
+Tak for din tilmelding.
 
 {EMAIL_SIG}',
 ));
@@ -1067,25 +1003,25 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Velkommen til "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Gem denne email til fremtidig brug. Din kontoinformation er følgende:
 
 ----------------------------
-Username: {USERNAME}
+Brugernavn: {USERNAME}
 
-Board URL: {U_BOARD}
+Boardets URL: {U_BOARD}
 ----------------------------
 
-Please visit the following link in order to activate your account:
+Klik venligst på nedenstående link for at aktivere din konto: 
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Dit kodeord er gemt krypteret og sikkert i vores database, og kan derfor ikke genfindes. Glemmer du kodeordet, er du istand til at nulstille det ved brug af emailadressen knyttet til din konto.
 
-Thank you for registering.
+Tak for din tilmelding.
 
 {EMAIL_SIG}',
 ));

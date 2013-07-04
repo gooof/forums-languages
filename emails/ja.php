@@ -1,37 +1,17 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} アカウントの有効化が必要です
 
-Hello,
+「{USERNAME}」さんのアカウントが無効化されたかまたは新規に作成されました。
+入力したプロフィール情報に間違いがないか、あるいは身に覚えがあるかどうかを確認の上
+もし問題が無ければアカウントを有効化してください。
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
-
-Use this link to view the user\'s profile:
+プロフィール情報を見るにはこちらをクリックしてください：
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+確認して問題が無ければこちらをクリックしてアカウントを有効化してください：
 {U_ACTIVATE}
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
-
-{CONTACT_EMAIL}
-
-Include this full e-mail (particularly the headers). 
-
-Message sent to you follows:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-{MESSAGE}
-
 
 {EMAIL_SIG}
 ',
@@ -40,39 +20,73 @@ Message sent to you follows:
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
+	'email/admin_send_email.txt' 		=> '
+このメールは フォーラムサイト「{SITENAME}」 の管理人が送信しました。
+メッセージがスパムや誹謗中傷などを含むものであれば下記アドレスからウェブマスターにご連絡ください。
 
-Hello {USERNAME},
+{CONTACT_EMAIL}
 
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
+上記アドレスにメールする場合、メールの全内容を（特にヘッダー情報を含めて）送信してください。
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+以下があなたへのメッセージです
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{EMAIL_SIG}',
+{MESSAGE}
+
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} アカウントが有効化されました
+
+{USERNAME} さん
+
+フォーラムサイト「{SITENAME}」 のアカウントが有効化されました。
+いつでもログインしていただけます。
+
+パスワードはデータベース内に暗号化された状態で保管されます。
+暗号化されたパスワードを元の状態に復元する事はできません。
+その為もしパスワードを忘れてしまった場合、そのパスワードは二度と取り戻す事ができない点にご注意ください。
+万が一パスワードを忘れてしまった場合、
+アカウントのメールアドレスを使用してパスワードを再発行できます。
+
+{EMAIL_SIG}
+',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} フォーラムサイト "{SITENAME}" へようこそ
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+このメールは大切に保管してください。
+あなたのアカウント情報はこちらです：
 
 ----------------------------
-Username: {USERNAME}
+ユーザー名： {USERNAME}
 
-Board URL: {U_BOARD}
+フォーラムURL： {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+現在、あなたのアカウントはまだ無効です。
+フォーラムサイト管理人がアカウントを有効化するまでログインする事はできません。
+アカウントが有効化され次第、その旨の通知メールが送信されます。
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+パスワードはデータベース内に暗号化された状態で保管されます。
+暗号化されたパスワードを元の状態に復元する事はできません。
+その為もしパスワードを忘れてしまった場合、そのパスワードは二度と取り戻す事ができない点にご注意ください。
+万が一パスワードを忘れてしまった場合、
+アカウントのメールアドレスを使用してパスワードを再発行できます。
 
-Thank you for registering.
+ユーザー登録して頂きありがとうございました。
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
@@ -213,46 +227,53 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} フォーラムサイト "{SITENAME}" へようこそ
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+アメリカ合衆国において施行されている COPPA（児童オンラインプライバシー保護法） に準拠し、あなたのアカウントを無効にしています。
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+アカウントを有効化するには、
+先ずこのメールを印刷してあなたの両親または保護者にサインと日付を記入してもらい、
+次にその用紙を下記 FAX 番号へ送信する必要があります：
 
 {FAX_INFO}
 
-OR mail it to:
+もしくは下記住所へ郵送してください：
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ 切り取り ----------------------------------------
+私は私の子供がフォーラムサイト "{SITENAME}" へ参加する事を認めます - {U_BOARD}
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+ユーザー名： {USERNAME}
+メールアドレス： {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+私は私の子供がインターネットで上記プライベート情報をあなたのサイトへ送信した事を確認しました。
+その上でこの情報がフォーラムサイト "{SITENAME}" で保管される事を認めます。
+パスワードを入力しさえすればいつでもこの情報を変更できる事を私は理解しています。
+フォーラムサイト "{SITENAME}" で保管されているこの情報の削除を、
+私はいつでもフォーラムサイト "{SITENAME}" に対し要求できる事を私は理解しています。 
 
+両親または保護者へ
+( あなたのお名前 ): _____________________
 
-Parent or guardian 
-(print your name here): _____________________
+( サイン ): __________________ 
 
-(sign here): __________________ 
+日付: _______________
 
-Date: _______________
+------------------------------ 切り取り -----------------------------------------
 
------------------------------- CUT HERE ------------------------------
+サインが済み次第、上記用紙を FAX または郵便でお送りください。
+フォーラムサイト管理人が受け取り次第、アカウントを有効化いたします。
 
+パスワードはデータベース内に暗号化された状態で保管されます。
+暗号化されたパスワードを元の状態に復元する事はできません。
+その為もしパスワードを忘れてしまった場合、そのパスワードは二度と取り戻す事ができない点にご注意ください。
+万が一パスワードを忘れてしまった場合、
+アカウントのメールアドレスを使用してパスワードを再発行できます。
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
-
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
-Thank you for registering.
+ユーザー登録して頂きありがとうございました。
 
 {EMAIL_SIG}
 ',
@@ -261,46 +282,53 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} フォーラムサイト "{SITENAME}" へようこそ
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+アメリカ合衆国において施行されている COPPA（児童オンラインプライバシー保護法） に準拠し、あなたのアカウントを無効にしています。
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+アカウントを有効化するには、
+先ずこのメールを印刷してあなたの両親または保護者にサインと日付を記入してもらい、
+次にその用紙を下記 FAX 番号へ送信する必要があります：
 
 {FAX_INFO}
 
-OR mail it to:
+または下記住所へ郵送してください：
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ 切り取り ----------------------------------------
+私は私の子供がフォーラムサイト "{SITENAME}" へ参加する事を認めます - {U_BOARD}
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+ユーザー名： {USERNAME}
+メールアドレス： {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+私は私の子供がインターネットで上記プライベート情報をあなたのサイトへ送信した事を確認しました。
+その上でこの情報がフォーラムサイト "{SITENAME}" で保管される事を認めます。
+パスワードを入力しさえすればいつでもこの情報を変更できる事を私は理解しています。
+フォーラムサイト "{SITENAME}" で保管されているこの情報の削除を、
+私はいつでもフォーラムサイト "{SITENAME}" に対し要求できる事を私は理解しています。 
 
+両親または保護者へ
+( あなたのお名前 ): _____________________
 
-Parent or guardian 
-(print your name here): _____________________
+( サイン ): __________________ 
 
-(sign here): __________________ 
+日付: _______________
 
-Date: _______________
+------------------------------ 切り取り -----------------------------------------
 
------------------------------- CUT HERE ------------------------------
+サインが済み次第、上記用紙を FAX または郵便でお送りください。
+フォーラムサイト管理人が受け取り次第、アカウントを有効化いたします。
 
+パスワードはデータベース内に暗号化された状態で保管されます。
+暗号化されたパスワードを元の状態に復元する事はできません。
+その為もしパスワードを忘れてしまった場合、そのパスワードは二度と取り戻す事ができない点にご注意ください。
+万が一パスワードを忘れてしまった場合、
+アカウントのメールアドレスを使用してパスワードを再発行できます。
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
-
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
-Thank you for registering.
+ユーザー登録して頂きありがとうございました。
 
 {EMAIL_SIG}
 ',
@@ -309,23 +337,28 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} フォーラムサイト "{SITENAME}" より - ユーザーからのお知らせ
 
-Hello {TO_USERNAME},
+{TO_USERNAME} さん
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+このメールは フォーラムサイト「{SITENAME}」 の ユーザー「{FROM_USERNAME}」 さんが送信しました。
+「{FROM_USERNAME}」さんはあなたが下記トピックに興味があると判断してこのお知らせメールを送信しています：
 
 {TOPIC_NAME}
 
-You can find it at:
+こちらをクリックすればトピックを閲覧できます：
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+以下のメッセージはフォーラムサイト管理人がチェックしているわけではない点にご注意ください。
+もしこのメールの受け取りについて苦情を述べたい場合、フォーラムサイト管理人の連絡先メールアドレス {BOARD_CONTACT} にメールしてください。
+その際、このメールの全内容を引用文として含めてください。
 
 ----------
+「{FROM_USERNAME}」さんからあなたへのメッセージ
 
-{MESSAGE}',
+{MESSAGE}
+',
 ));
 
 
@@ -379,21 +412,28 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} 新着記事の通知 - フォーラム "{FORUM_NAME}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+フォーラムサイト「{SITENAME}」 で
+フォーラム「{FORUM_NAME}」 の トピック「{TOPIC_TITLE}」 に返信記事が投稿されました。
+
+これはあなたが最後にフォーラムに訪れた日時より後に返信されたものです。
+下記リンクをクリックして返信を確認してください。
+トピックを見るまでフォーラムに新しい返信記事が投稿されても通知される事はありません。
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+トピックを確認するにはこちらをクリックしてください：
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+フォーラムを確認するにはこちらをクリックしてください：
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+新着記事の通知メールを停止したい場合、
+上記リンクのフォーラムで "このフォーラムのウォッチを解除する" をクリックするか
+こちらをクリックしてください：
 
 {U_STOP_WATCHING_FORUM}
 
@@ -404,14 +444,17 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} グループに追加されました
 
-Congratulations,
+おめでとうございます
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+フォーラムサイト「{SITENAME}」 で
+あなたは グループ「{GROUP_NAME}」 に追加されました。
 
-You can view your groups information here:
+このアクションはグループリーダーまたはフォーラムサイト管理人によって実行されました。
+このグループ参加についての詳細が知りたい場合、グループリーダーまたはフォーラムサイト管理人に直接お問い合わせください。
+
+グループ情報を見るにはこちらをクリックしてください：
 {U_GROUP}
 
 {EMAIL_SIG}
@@ -421,12 +464,14 @@ You can view your groups information here:
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} グループへの参加が承認されました
 
-Congratulations,
+おめでとうございます
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+フォーラムサイト「{SITENAME}」 で
+あなたは グループ「{GROUP_NAME}」 への参加を承認されました。
+
+グループのメンバーを確認するにはこちらをクリックしてください：
 
 {U_GROUP}
 
@@ -437,12 +482,14 @@ Click on the following link to see your group membership.
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} グループ参加の申請があります
 
-Dear {USERNAME},
+{GROUP_MODERATOR} さん
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+フォーラムサイト「{SITENAME}」 で
+ユーザー「{REQUEST_USERNAME}」 さんがあなたの管理する グループ「{GROUP_NAME}」 に参加を申請しました。
+
+申請を承認または却下するにはこちらをクリックしてください：
 
 {U_PENDING}
 
@@ -453,25 +500,32 @@ To approve or deny this request for group membership please visit the following 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB3 のインストールに成功しました
 
-Congratulations,
+おめでとうございます
 
-You have successfully installed phpBB on your server.
+phpBB3 のインストールに成功しました。
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+パスワードはデータベース内に暗号化された状態で保管されます。
+暗号化されたパスワードを元の状態に復元する事はできません。
+その為もしパスワードを忘れてしまった場合、そのパスワードは二度と取り戻す事ができない点にご注意ください。
+万が一パスワードを忘れてしまった場合、
+アカウントのメールアドレスを使用してパスワードを再発行できます。
 
 ----------------------------
-Username: {USERNAME}
+ユーザー名： {USERNAME}
 
-Board URL: {U_BOARD}
+フォーラムURL： {U_BOARD}
 ----------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
+phpBB3 のインストールに関して有益な情報を得るには phpBB3 パッケージ内の docs フォルダか、
+phpBB オフィシャルサイトのサポートページ - http://www.phpbb.com/support/ をご参照ください。
 
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+フォーラムサイトを安全かつ安定して運営するには、phpBB3 を常に最新のバージョンへアップデートしておく事を強く勧めます。
+上記オフィシャルサイトのメーリングリストに申し込めば phpBB3 の最新リリース情報をすぐに知る事ができるでしょう。
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
@@ -509,81 +563,99 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} 新着トピックの通知 - フォーラム "{FORUM_NAME}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+フォーラムサイト「{SITENAME}」 で
+フォーラム「{FORUM_NAME}」 に 新しいトピック「{TOPIC_TITLE}」 が投稿されました。
+
+これはあなたが最後にフォーラムに訪れた日時より後に投稿されたものです。
+下記リンクをクリックして新着トピックを確認してください。
+トピックを見るまでフォーラムに新しいトピックが投稿されても通知される事はありません。
 
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+新着トピックの通知メールを停止したい場合
+上記リンクのフォーラムでリンク "このフォーラムのウォッチを解除する" をクリックするか
+こちらをクリックしてください：
 
 {U_STOP_WATCHING_FORUM}
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{PM_SUBJECT}"
+	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} 通報 [ PM ] の審査が完了しました - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed. If you have further questions, please contact {CLOSER_NAME} by private message.
+フォーラムサイト「{SITENAME}」 で
+あなたが通報したプライベートメッセージ「{PM_SUBJECT}」 が
+モデレータまたはフォーラムサイト管理人によって審査されました。
 
+既に審査は完了しています。
+この件に関して何か疑問がある場合
+審査したユーザー {CLOSER_NAME} に PM してください。
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{PM_SUBJECT}"
+	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} 通報 [ PM ] は削除されました - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
+フォーラムサイト「{SITENAME}」 で
+あなたが通報したプライベートメッセージ「{PM_SUBJECT}」 が
+モデレータまたはフォーラムサイト管理人によって削除されました。
 
-
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} 投稿記事が承認されました - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+フォーラムサイト「{SITENAME}」 で
+あなたが投稿した記事「{POST_SUBJECT}」 がモデレータまたはフォーラムサイト管理人によって承認されました。
 
-If you want to view the post, click the following link:
+記事を確認したい場合はこちらのリンクをクリックしてください：
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+投稿先トピックを確認したい場合はこちらのリンクをクリックしてください：
 {U_VIEW_TOPIC}
 
-
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} 投稿記事が却下されました - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+フォーラムサイト「{SITENAME}」 で
+あなたが投稿した記事「{POST_SUBJECT}」 がモデレータまたはフォーラムサイト管理人によって却下されました。
 
-The following reason was given for the disapproval:
+却下された理由を確認するにはこちらをクリックしてください：
 
 {REASON}
 
-
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
@@ -675,21 +747,24 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} 新着プライベートメッセージの通知
 
-Hello {USERNAME},
+{USERNAME} さん
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+フォーラムサイト「{SITENAME}」 で
+ユーザー「{AUTHOR_NAME}」 さんからあなた宛へ下記件名のプライベートメッセージが届きました：
 
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+プライベートメッセージを確認するにはこちらをクリックしてください：
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+新着プライベートメッセージの通知メールを受け取りたくない場合
+ユーザーCP のプロフィール設定で該当のオプションを無効に設定してください。
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
@@ -709,16 +784,18 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+{TO_USERNAME} さん
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+フォーラムサイト「{SITENAME}」 経由で フォーラムのユーザー「{FROM_USERNAME}」 からあなたへメールが送信されました。
+メッセージがスパムや誹謗中傷などを含むものであれば下記アドレスからフォーラムサイト管理人にご連絡ください：
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+上記アドレスにメールを送る場合、メールの全内容を（ヘッダー情報を含めて）送信してください。
+このメールをそのまま返信すると フォーラムのユーザー「{FROM_USERNAME}」 にメールが送信されますのでご注意ください。
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+以下があなたへのメッセージです
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 ',
@@ -728,16 +805,18 @@ Message sent to you follows
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+{TO_USERNAME} さん
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+フォーラムサイト「{SITENAME}」 経由で フォーラムのユーザー「{FROM_USERNAME}」 からあなたへインスタントメッセージが送信されました。
+メッセージがスパムや誹謗中傷などを含むものであれば下記アドレスからフォーラムサイト管理人にご連絡ください：
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+上記アドレスにメールを送る場合、メールの全内容を（ヘッダー情報を含めて）送信してください。
+このメールをそのまま返信すると フォーラムのユーザー「{FROM_USERNAME}」 にメールが送信されますのでご注意ください。
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+以下があなたへのメッセージです
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 ',
@@ -746,157 +825,197 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} 通報の審査が完了しました - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
+フォーラムサイト「{SITENAME}」 で
+トピック「{TOPIC_TITLE}」 の 記事「{POST_SUBJECT}」 に対してあなたが行った通報が
+モデレータまたはフォーラムサイト管理人によって審査されました。
 
+既に審査は完了しています。
+この件に関して何か疑問がある場合
+審査したユーザー {CLOSER_NAME} に直接お問い合わせください。
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} 通報は削除されました - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
+フォーラムサイト「{SITENAME}」 で
+トピック「{TOPIC_TITLE}」 の 記事「{POST_SUBJECT}」 に対してあなたが行った通報が
+モデレータまたはフォーラムサイト管理人によって削除されました。
 
-
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} トピックが承認されました - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+フォーラムサイト「{SITENAME}」 で
+あなたが投稿したトピック「{TOPIC_TITLE}」 が
+モデレータまたはフォーラムサイト管理人によって承認されました。
 
-If you want to view the topic, click the following link:
+トピックを確認するにはこちらをクリックしてください：
 {U_VIEW_TOPIC}
 
-
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} トピックが却下されました - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+フォーラムサイト「{SITENAME}」 で
+あなたが投稿したトピック「{TOPIC_TITLE}」 が
+モデレータまたはフォーラムサイト管理人によって却下されました。
 
-The following reason was given for the disapproval:
+以下は却下された理由です：
 
 {REASON}
 
-
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} 新着記事の通知 - トピック "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+{USERNAME} さん
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+フォーラムサイト「{SITENAME}」 で
+トピック「{TOPIC_TITLE}」 に返信記事が投稿されました。
 
-If you want to view the newest post made since your last visit, click the following link:
+これはあなたが最後にトピックを見た日時より後に返信されたものです。
+下記 URL をクリックして返信をご確認ください。
+トピックを見るまでトピックに新しい返信記事が投稿されても通知される事はありません。
+
+新着記事を確認するにはこちらをクリックしてください：
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+トピックを確認するにはこちらをクリックしてください：
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+フォーラムを確認するにはこちらをクリックしてください：
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+新着記事の通知メールを停止したい場合
+上記のトピック URL にてリンク "このトピックのウォッチを解除する" をクリックするか
+こちらをクリックしてください：
 
 {U_STOP_WATCHING_TOPIC}
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} アカウントを有効化してください
 
-Hello {USERNAME},
+{USERNAME} さん
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
+フォーラムサイト「{SITENAME}」 で
+あなたのプロフィール情報が変更されたため、あなたのアカウントを一時的に無効にしています。
+
+こちらをクリックしてアカウントを有効化してください：
+
+{U_ACTIVATE}
+',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} アカウントが無効化されました
+
+{USERNAME} さん
+
+フォーラムサイト「{SITENAME}」 で
+あなたのプロフィール情報が変更されたため、あなたのアカウントを一時的に無効にしています。
+
+ログインするにはフォーラムサイト管理人がアカウントを有効化する必要があります。
+アカウントが有効化され次第、その旨の通知メールがこのメールアドレスに送信されます。
+
+{EMAIL_SIG}
+',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} 新しいパスワードの有効化
+
+{USERNAME} さん
+
+フォーラムサイト「{SITENAME}」 で
+あなた（またはあなたを装った誰か）が新しいパスワードの発行を要求しました。
+
+パスワードの発行に身に覚えがない場合はこのメールを無視してください。
+何度も同じメールが届く場合はフォーラムサイト管理人にご連絡ください。
+
+新しいパスワードを使用するにはパスワードの有効化が必要です。
+下記 URL をクリックしてパスワードを有効化してください。
 
 {U_ACTIVATE}
 
-{EMAIL_SIG}',
+有効化が完了し次第、下記パスワードでログインできます：
+
+パスワード： {PASSWORD}
+
+このパスワードは ユーザーCP のプロフィール編集ページで変更できます。
+何か問題がある場合はフォーラムサイト管理人にご連絡ください。
+
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} フォーラムサイト "{SITENAME}" のアカウントを有効化してください
 
-Hello {USERNAME},
+フォーラムサイト管理人があなたに対してアカウントの再有効化を要求しました。
+その為あなたのアカウントは現在、無効化されています。
+フォーラムサイトにログインするにはアカウントを再有効化する必要があります。
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
-
-Hello {USERNAME}
-
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
-
-To use the new password you need to activate it. To do this click the link provided below.
-
-{U_ACTIVATE}
-
-If successful you will be able to login using the following password:
-
-Password: {PASSWORD}
-
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
-
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
-
-Please keep this e-mail for your records. Your account information is as follows:
+このメールは大切に保管してください。
+あなたのアカウント情報はこちらです：
 
 ----------------------------
-Username: {USERNAME}
+ユーザー名： {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+パスワードはデータベース内に暗号化された状態で保管されます。
+暗号化されたパスワードを元の状態に復元する事はできません。
+その為もしパスワードを忘れてしまった場合、そのパスワードは二度と取り戻す事ができない点にご注意ください。
+万が一パスワードを忘れてしまった場合、
+アカウントのメールアドレスを使用してパスワードを再発行できます。
 
-Please visit the following link to reactivate your account:
+こちらをクリックしてアカウントを有効化してください：
 
 {U_ACTIVATE}
 
-
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
@@ -1004,15 +1123,50 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} アカウント有効化の催促
 
-Hello {USERNAME},
+{USERNAME} さん
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+フォーラムサイト「{SITENAME}」 で
+日付 {REGISTER_DATE} にユーザー登録した事を憶えていますか？
+
+フォーラムサイトにログインするにはアカウントを有効化する必要があります。
+もしまだ上記フォーラムサイトに登録ユーザーとして参加する意思がある場合
+下記 URL をクリックしてアカウントを有効化してください。
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+フォーラムサイト 「{SITENAME}」 に参加して頂ける事をお待ちしています。
+
+{EMAIL_SIG}
+',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} フォーラムサイト "{SITENAME}" へようこそ
+
+{WELCOME_MSG}
+
+このメールは大切に保管してください。
+あなたのアカウント情報はこちらです：
+
+----------------------------
+ユーザー名： {USERNAME}
+----------------------------
+
+パスワードはデータベース内に暗号化された状態で保管されます。
+暗号化されたパスワードを元の状態に復元する事はできません。
+その為もしパスワードを忘れてしまった場合、そのパスワードは二度と取り戻す事ができない点にご注意ください。
+万が一パスワードを忘れてしまった場合、
+アカウントのメールアドレスを使用してパスワードを再発行できます。
+
+こちらをクリックしてアカウントを有効化してください：
+
+{U_ACTIVATE}
+
+ご登録ありがとうございました。
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +1174,26 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} フォーラムサイト "{SITENAME}" へようこそ
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+このメールは大切に保管してください。
+あなたのアカウント情報はこちらです：
 
 ----------------------------
-Username: {USERNAME}
+ユーザー名： {USERNAME}
+
+フォーラムURL： {U_BOARD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+パスワードはデータベース内に暗号化された状態で保管されます。
+暗号化されたパスワードを元の状態に復元する事はできません。
+その為もしパスワードを忘れてしまった場合、そのパスワードは二度と取り戻す事ができない点にご注意ください。
+万が一パスワードを忘れてしまった場合、
+アカウントのメールアドレスを使用してパスワードを再発行できます。
 
-Please visit the following link in order to activate your account:
-
-{U_ACTIVATE}
-
-
-Thank you for registering.
+ご登録ありがとうございました。
 
 {EMAIL_SIG}',
 ));
@@ -1045,47 +1201,28 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} フォーラムサイト "{SITENAME}" へようこそ - {U_BOARD}
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+このメールは大切に保管してください。
+あなたのアカウント情報はこちらです：
 
 ----------------------------
-Username: {USERNAME}
-
-Board URL: {U_BOARD}
+ユーザー名： {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
-Thank you for registering.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
-
-{WELCOME_MSG}
-
-Please keep this e-mail for your records. Your account information is as follows:
-
-----------------------------
-Username: {USERNAME}
-
-Board URL: {U_BOARD}
-----------------------------
-
-Please visit the following link in order to activate your account:
+こちらをクリックしてアカウントを有効化してください：
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+パスワードはデータベース内に暗号化された状態で保管されます。
+暗号化されたパスワードを元の状態に復元する事はできません。
+その為もしパスワードを忘れてしまった場合、そのパスワードは二度と取り戻す事ができない点にご注意ください。
+万が一パスワードを忘れてしまった場合、
+アカウントのメールアドレスを使用してパスワードを再発行できます。
 
-Thank you for registering.
+ご登録ありがとうございました。
 
 {EMAIL_SIG}',
 ));

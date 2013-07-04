@@ -1,16 +1,16 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} چالاککردنی هەژماری بەکارهێنەر
 
-Hello,
+سڵاو،
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+هەژماری "{USERNAME}" ناچالاککرا یان بەم دواییانە دروستکرا پێویستە وردەکارییەکانی ئەم بەکارهێنەرە بپشکنیت (ئەگەر پێویستە).
 
-Use this link to view the user\'s profile:
+ئەم بەستەرە بەکار ببە بۆ بینینی پڕۆفایلی بەکارهێنەر:
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+ئەم بەستەرە بەکار ببە بۆ چالاککردنی هەژمارەکە
 {U_ACTIVATE}
 
 
@@ -20,18 +20,33 @@ Use this link to activate the account:
 
 
 $email = array_merge($email, array(
-	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+	'email/admin_send_email.txt' 		=> '{EMAILSUBJECT:} پەیام لەبەڕێوەبەری "{SITENAME}"
+ئەم نامەیە نێردراوە لەلایەن بەڕێوەبەری "{SITENAME}" ـەـوە. ئەگەر سپامە، تکایە پەیوەندی بە بەڕێوەبرانی مەکۆوە بکە بکە بەم ئیمەیلەی خوارەوە:
 
 {CONTACT_EMAIL}
 
-Include this full e-mail (particularly the headers). 
+هەموو نامەکەی تێهەڵکێشە بەسەردێڕیشەوە.
 
-Message sent to you follows:
+ئەم پەیامە نێدرا:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
+
+{EMAIL_SIG}
+
+',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} هەژمار چالاککرا
+
+سڵاو {USERNAME}،
+ئێستا هەژمارەکەت لە "{SITENAME}" چالاککرا لەلایەن بەڕێوەبەرێکەوە ،ئێستا دەتوانی بچیتە ژوورەوە.
+
+تێپەڕەوشەکەت بە باشی پارێزراوە لە بنکەدراوەکەماندا و ناتوانرێت بگێڕدرێتەوە. ئەگەر هاتوو بیرچووەوە، ئەتوانیت تێپەڕەوشەیەکی نوێ داوا بکەیت بە بەکارهێنانی ئەو ئیمەیلەی خۆت پێ تۆمار کردووە.
 
 {EMAIL_SIG}
 ',
@@ -40,39 +55,26 @@ Message sent to you follows:
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
-
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} بەخێربێیت بۆ "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+تکایە ئەم ئیمەیلە لە تۆمارەکانتدا بپارێزە، ئەمانەی خوارەوە زانیارییەکانی هەژمارەکەتن.
 
 ----------------------------
-Username: {USERNAME}
+ناوی بەکارهێنەر: {USERNAME}
 
-Board URL: {U_BOARD}
+بەستەری مەکۆ: {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+هەنووکە هەژمارەکەت ناچالاکە و پێویستی بە چالاککردنە لە لایەن بەڕێوەبەرێکەوە پێش ئەوەی بتوانیت بچیتە ژوورەوە. ئیمەیلێکی ترت پێ دەگات کاتێک کارەکە جێبەجێکرا.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+تێپەڕەوشەکەت بە باشی پارێزراوە لە بنکەدراوەکەماندا و ناتوانرێت بگێڕدرێتەوە. ئەگەر هاتوو بیرچووەوە، ئەتوانیت تێپەڕەوشەیەکی نوێ داوا بکەیت بە بەکارهێنانی ئەو ئیمەیلەی خۆت پێ تۆمار کردووە.
 
-Thank you for registering.
+سوپاس بۆ خۆتۆمارکردنت.
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
@@ -213,46 +215,47 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} بەخێربێیت بۆ "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+بەشداربوون لە COPPA، هەژمارەکەت ناچالاکە ئێستا.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+تکایە ئەم پەیامە چاپ بکە و باوانت یان بەخێوکەرت واژۆ و مێژووی لێ بدات. پاشان فاکسی بکە بۆ:
 
 {FAX_INFO}
 
-OR mail it to:
+یان پەیام بۆ:
 
 {MAIL_INFO}
 
 ------------------------------ CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+ڕێگەدانی بەبەشداربوونم لە "{SITENAME}" - {U_BOARD}
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+ناو: {USERNAME}
+پۆستی ئەلیکترۆنی: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
+I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION.
+I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD.
 I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
 
 
-Parent or guardian 
+باوان یان بەخێوکەر
 (print your name here): _____________________
 
-(sign here): __________________ 
+(sign here): __________________
 
 Date: _______________
 
 ------------------------------ CUT HERE ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+هەرکاتێک بەڕێوەبەر فۆڕمەکەی پێ گەیشت بە فاکس یان مەیل، هەژمارەکەت چالاک دەکرێت.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+تێپەڕەوشەکەت بە باشی پارێزراوە لە بنکەدراوەکەماندا و ناتوانرێت بگێڕدرێتەوە. ئەگەر هاتوو بیرچووەوە، ئەتوانیت تێپەڕەوشەیەکی نوێ داوا بکەیت بە بەکارهێنانی ئەو ئیمەیلەی خۆت پێ تۆمار کردووە.
 
-Thank you for registering.
+
+سوپاس بۆ خۆتۆمارکردنت.
 
 {EMAIL_SIG}
 ',
@@ -261,19 +264,22 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} بەخێرهاتی بۆ "{SITENAME}"
+
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+بەشداربوون لە COPPA، هەژمارەکەت ناچالاکە ئێستا.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+تکایە ئەم پەیامە چاپ بکە و باوانت یان بەخێوکەرت واژۆ و مێژووی لێ بدات. پاشان فاکسی بکە بۆ:
 
 {FAX_INFO}
 
-OR mail it to:
+یان پەیام بۆ:
 
 {MAIL_INFO}
+
+
 
 ------------------------------ CUT HERE ------------------------------
 Permission to participate at "{SITENAME}" - {U_BOARD}
@@ -281,26 +287,29 @@ Permission to participate at "{SITENAME}" - {U_BOARD}
 Username: {USERNAME}
 E-mail: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
+I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION.
+I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD.
 I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
 
 
-Parent or guardian 
+باوان یان بەخێوکەر
 (print your name here): _____________________
 
-(sign here): __________________ 
+(sign here): __________________
 
 Date: _______________
 
 ------------------------------ CUT HERE ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+هەرکاتێک بەڕێوەبەر فۆڕمەکەی پێ گەیشت بە فاکس یان مەیل، هەژمارەکەت چالاک دەکرێت.
 
-Thank you for registering.
+تێپەڕەوشەکەت بە باشی پارێزراوە لە بنکەدراوەکەماندا و ناتوانرێت بگێڕدرێتەوە. ئەگەر هاتوو بیرچووەوە، ئەتوانیت تێپەڕەوشەیەکی نوێ داوا بکەیت بە بەکارهێنانی ئەو ئیمەیلەی خۆت پێ تۆمار کردووە.
+
+
+سوپاس بۆ خۆتۆمارکردنت.
+
 
 {EMAIL_SIG}
 ',
@@ -309,19 +318,19 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - پەیام ناردن بۆ هاوڕێ
 
-Hello {TO_USERNAME},
+سڵاو{TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+ئەم نامەیە نێردراوە لە "{SITENAME}"ـەوە لەلایەن {FROM_USERNAME} وا بیری کردۆتەوە کە ئەم جۆرە بابەتانە بەلاتەوە گرنگ بێت:
 
 {TOPIC_NAME}
 
-You can find it at:
+دەتوانیت بیدۆزیتەوە لە:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+لەوانەیە پەیامێک لەلایەن {FROM_USERNAME} ـەوە نووسرابێت. تکایە سەرنجی ئەوە بدە کە ئەم پەیامە لەلایەن بەڕێوەبەرانی مەکۆوە نەبینراوە و پەسەند کرابێت. ئەگەر بەو پەیامە ڕازی نیت و ئارەزووی ناکەیت تکایە پەیوەندی بە بەڕێوەبەرانەوە بکە لە {BOARD_CONTACT}  تکایە ئاماژە بە سەرپەڕەی پەیام بکە کاتێک پەیوەندی بەم ناونیشانەوە دەکەیت.
 
 ----------
 
@@ -379,21 +388,21 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} ئاگادارکردنەوە لە پەیامی مەکۆوە - "{FORUM_NAME}"
 
-Hello {USERNAME},
+سڵاو {USERNAME}،
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+تۆ ئەم ئاگادارکردنەوەیەت پێ گەیشتووە لەبەرئەوەی چاودێری مەکۆی "{FORUM_NAME}" دەکەیت لە "{SITENAME}". لەم مەکۆیەد پەیامێکی نوێ نوسراوە بۆ بابەتی "{TOPIC_TITLE}" لە دوا سەردانتەوە، ئەتوانیت کرتە لەو بەستەرەی خوارەوە بکەیت بۆ بینینی دوا وەڵامی نەخوێندراوە، هیچ ئاگادارکردنەوەیەکی تر نانێردرێت هەتا بابەتەکە ئەبینیت.
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+ئەگەر دەتەوێت بابەتەکە ببینیت، کرتەی ئەم بەستەرەی خوارەوە بکە:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+ئەگەر ئەتەوێت مەکۆکەی ببینیت کرتەی ئەم بەستەرەی خوارەوە بکە:
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+ئەگەر ناتەوێت ئیتر نامەی ئاگاداری ئەو مەکۆیەت بۆ بێت، کرتەی "ناچالاکردنی بەشداری" بکە لە خوار مەکۆکە یان کرتەی ئەم بەستەرەی خوارەوە بکە:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -404,14 +413,14 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} تۆ زۆرکرایت لەم گرووپە
 
-Congratulations,
+پیرۆزبایی،
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+تۆ زۆرکرایت بۆ گرووپی "{GROUP_NAME}" لە "{SITENAME}".
+کردارەکە لەلایەن پێشڕەوی گرووپەکەوە کراوە، بۆ زانیاری زیاتر پەیوەندیان پێوە بگرە.
 
-You can view your groups information here:
+ئەتوانیت زانیاریی گرووپەکانت لێرە ببینیت:
 {U_GROUP}
 
 {EMAIL_SIG}
@@ -421,12 +430,12 @@ You can view your groups information here:
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} داواکاریەکەت پەسەندکرا
 
-Congratulations,
+پیرۆزبایی،
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+داواکاریەکەت بۆ بەشداربوون لەگرووپی "{GROUP_NAME}" لە "{SITENAME}" پەسەندکرا.
+کرتە لەم بەستەرە بکە بۆ بینینی زانیاریی ئەندامەتیت لە گرووپ.
 
 {U_GROUP}
 
@@ -437,12 +446,12 @@ Click on the following link to see your group membership.
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} داواکاری بۆ بەشداردبوونت لە گرووپ دروستکرا
 
-Dear {USERNAME},
+بەڕێز {USERNAME}،
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+ئەم بەکارهێنەرە "{REQUEST_USERNAME}" داوای کردووە کە بەشداربێت لە گرووپی "{GROUP_NAME}" کە تۆ چاودێریی دەکەیت لە "{SITENAME}".
+بۆ پەسەندکردن یان ڕەفزکردنی ئەم داوایە تکایە سەردانی ئەم بەستەرەی خوارەوە بکە:
 
 {U_PENDING}
 
@@ -453,25 +462,26 @@ To approve or deny this request for group membership please visit the following 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB دامەزرا
 
-Congratulations,
+پیرۆزە،
 
-You have successfully installed phpBB on your server.
+بە سەرکەتوویی phpBB ـت لەسەر راژەکارەکەت دامەزراند.
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
+ئەم ئیمەیلە زانیاری زۆر گرنگی تیادایە دەربارەی دامەزراندن کە پێویستە بە سەلامەتی بیپارێزیت. تێپەڕەوشەکەت بە باشی پارێزراوە لە بنکەدراوەکەماندا و ناتوانرێت بگێڕدرێتەوە. ئەگەر هاتوو بیرچووەوە، ئەتوانیت تێپەڕەوشەیەکی نوێ داوا بکەیت بە بەکارهێنانی ئەو ئیمەیلەی خۆت پێ تۆمار کردووە.
 ----------------------------
-Username: {USERNAME}
+ناوی بەکارهێنەر: {USERNAME}
 
-Board URL: {U_BOARD}
+بەستەری مەکۆ: {U_BOARD}
 ----------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
+ئەتوانیت زانیاری زیاتر بدۆزیتەوە لە بوخچەی بەڵگەنامەکانی دامەزراندنی phpBB و هەروەها لە ماڵپەڕی سەرەکی پاڵپشتیکردنی phpBB, http://www.phpbb.com/support. وەزانیاری زیاتر و پشتگیری بە زمانی کوردی لەم بەستەری خوارەوەیە:
+http://www.chawg.org/meko/viewforum.php?f=14
 
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+بۆ پاراستنی مەکۆکەت، ئامۆژگاریت دەکەین کە هەمیشە دوا وەشان بەکار ببەیت. بۆ زانیاریت مەیلین لیستێک ئامادەیە لەو بەستەرەی سەرەوە.
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
@@ -509,15 +519,15 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} ئاگادری بابەتی نوێ - "{FORUM_NAME}"
 
-Hello {USERNAME},
+سڵاو {USERNAME}،
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+ئەم ئاگاداریەت بۆ هاتووە، چونکە خۆت ئاگادارکردنەوەت هەڵبژاردوە لەم "{FORUM_NAME}" ــیە لە "{SITENAME}". ئەم مەکۆیە بابەتێکی نوێی تیادا نووسراوە لە دوا سەردانتەوە، "{TOPIC_TITLE}". دەتوانیت ئەم بەستەرە بەکاربەریت بۆ بینینی. هیچ ئاگادارکردنەوەیەکی تر نانێردرێت هەتا مەکۆکە ئەبینیت.
 
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+گەر ناتەوێت چیتر ئاگادارکردنەوەت بۆ بێت لە مەکۆی ناوبراوەوە ئەتوانیت کرتە لە "بەشدار نەبوون لە مەکۆ" بکەیت کە لە خوارەوەی مەکۆ نووسراوە یان کرتە لەم بەستەرەی خوارەوە بکە:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -527,42 +537,42 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{PM_SUBJECT}"
+	'email/pm_report_closed.txt' 		=> 'سەردێڕ: ڕاپۆرتی داخستن - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+سڵاو {USERNAME}،
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed. If you have further questions, please contact {CLOSER_NAME} by private message.
+ئەم ئاگادارییەت پێ گەیشتووە لەبەر ئەوەی ئەو ڕاپۆرتەی دەربارەی "{PM_SUBJECT}" دابووت لە "{SITENAME}" پەسەند کرا لە لایەن بەڕێوەبەر یان چاودێرێکەوە. ئێستا ڕاپۆرتەکە داخراوە. گەر پرسیاری زیاترت هەیە، تکایە پەیوەندی بە "{SITENAME}" ـەوە بکە بە پەیامی تایبەت.
 
-
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{PM_SUBJECT}"
+	'email/pm_report_deleted.txt' 		=> 'سەردێڕ: ڕاپۆترت سڕدرایەوە - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+سڵاو {USERNAME}،
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
+ئەم ئاگادارییەت پێ گەیشتووە لەبەر ئەوەی ڕاپۆرتەکەت لەسەر پەیامی تایبەتیی "{PM_SUBJECT}" لە "{SITENAME}" سڕدرایەوە لە لایەن بەڕێوەبەر یان چاودێرێکەوە.
 
-
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} بابەت پەسەندکرا - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+سڵاو {USERNAME}،
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+ئەم ئاگاداریەت بۆ هاتووە، چونکە پەیامەکەت "{POST_SUBJECT}" لە "{SITENAME}" لەلایەن چاودێر یان بەڕێوەبەرەوە پەسەندکرا.
 
-If you want to view the post, click the following link:
+بۆ بینینی پەیامەکەت کرتەی ئەم بەستەرە بکە:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+بۆ بینینی بابەتەکە کرتە لەم بەستەرە بکە:
 {U_VIEW_TOPIC}
 
 
@@ -572,13 +582,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} پەیام پەسەند نەکرا - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+سڵاو {USERNAME}،
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+ئەم ئاگاداریەت بۆ هاتووە، چونکە پەیامەکەت "{POST_SUBJECT}" لە "{SITENAME}" لەلایەن چاودێر یان بەڕێوەبەرەوە پەسەند نەکرا.
 
-The following reason was given for the disapproval:
+ئەمەش هۆکارەکەیەتی:
 
 {REASON}
 
@@ -675,19 +685,19 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} پەیامی تایبەتی نوێت بۆ هاتووە
 
-Hello {USERNAME},
+سڵاو {USERNAME}،
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+پەیامێکی تایبەتی نوێت بۆ هاتووە لەلایەن "{AUTHOR_NAME}" بۆ هەژمارەکەت لە "{SITENAME}" بەم ناونیشانەوە:
 
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+بۆ بینینی کرتە لەم بەستەرە بکە:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+خۆت داوات کردووە کە لەم ڕووداوە ئاگادار بکرێیتەوە. لە بیرت بێت کە ئەتوانیت ئەوە هەڵبژێریت کە لە هاتنی پەیامی تایبەتی ئاگادار نەکرێیتەوە لە پڕۆفایلەکەتدا.
 
 {EMAIL_SIG}',
 ));
@@ -708,16 +718,15 @@ To read the comment , click the link below.
 
 
 $email = array_merge($email, array(
-	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_email.txt' 		=> 'سڵاو {TO_USERNAME}،
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+ئەم پەیامەت بۆ نێردراوە لەلایەن {FROM_USERNAME} بە هۆی هەژمارەکەتەوە لە "{SITENAME}". گەر ئەم پەیامە سپامە، یان لێدوانی توند و نابەجێی تیادایە تکایە پەیوەندی بکە بەڕێوەبەرایەتی مەکۆکانەوە لە:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+ئەم ئیمەیلەی بە تەواوی تێ هەڵبکێشە (بە سەرپەڕەشەوە)، وریای ئەوە بە ناونیشانی وڵامدانەوە (reply) دەنێردرێت  بۆ {FROM_USERNAME}.
 
-Message sent to you follows
+ئەمە ناواخنی پەیامەکەیە:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -727,43 +736,31 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_im.txt' 		=> 'سڵاو {TO_USERNAME}،
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+ئەمەی خوارەوە پەیامێکە بۆت نێردراوە لەلایەن {FROM_USERNAME} بە هۆی هەژمارەکەتەوە لە "{SITENAME}". گەر ئەم پەیامە سپامە یان لێدوانی توند و نابەجێی تیادایە، پەیوەندی بکە بەڕێوەبەرایەتی مەکۆکانەوە لە:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+ئەم پەیامەی بە تەواوی تێ هەڵبکێشە، تکایە وریای ئەوە بە کە ناونیشانی نێرەر ڕێکخراوە بۆ هەژماری IM ـی مەکۆ.
 
-Message sent to you follows
+ئەمە ناواخنی پەیامەکەیە:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
+
+
 ',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} ڕاپۆرت داخرا - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+سڵاو {USERNAME}،
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
+ئەم پەیامەت بۆ هاتووە، چونکە جەنابتان ڕاپۆرتی پەیامی "{POST_SUBJECT}" ـتان کردووە لەبابەتی "{TOPIC_TITLE}" لە "{SITENAME}" لەلایەن چاودێر و بەڕێوەبەرانەوە چاوی لێکرا و داخرا. بۆ پرسیاری زیاتر پەیوەندی بکە بە {CLOSER_NAME} ـەوە.
 
 
 {EMAIL_SIG}',
@@ -772,13 +769,26 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} ڕاپۆرت سڕدرایەوە - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+سڵاو {USERNAME}،
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+ئەم پەیامەت بۆ هاتووە، چونکە جەنابتان ڕاپۆرتی ئەم پەیامەتان "{POST_SUBJECT}" کردووە لەبابەتی "{TOPIC_TITLE}" لە "{SITENAME}" لەلایەن چاودێر و بەڕێوەبەرانەوە چاوی لێکرا و سڕدرایەوە.
 
-If you want to view the topic, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} بابەت پەسەندکرا - "{TOPIC_TITLE}"
+
+سڵاو {USERNAME}،
+
+تۆ ئەم پەیامەت بۆ هاتووە، چونکە بابەتەکەت "{TOPIC_TITLE}" لە "{SITENAME}" پەسەندکرا لەلایەن بەڕێوەبەرەوە.
+
+بۆ بینینی بابەتەکە سەردانی ئەم بەستەرە بکە:
 {U_VIEW_TOPIC}
 
 
@@ -788,13 +798,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} بابەت پەسەند نەکرا - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+سڵاو {USERNAME}،
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+ئەم ئاگاداریەت بۆ هاتووە، چونکە بابەتەکەت "{TOPIC_TITLE}" لە "{SITENAME}" پەسەند نەکرا لەلایەن بەڕێوبەرەوە.
 
-The following reason was given for the disapproval:
+ئەمەش هۆکارەکەیەتی:
 
 {REASON}
 
@@ -805,22 +815,21 @@ The following reason was given for the disapproval:
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} ئاگاداری لە وەڵامدانەوەی بابەت - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+سڵاو {USERNAME}،
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
-
-If you want to view the newest post made since your last visit, click the following link:
+تۆ ئەم ئاگادارکردنەوەت بۆ هاتووە، چونکە ویستوتە ئاگادار بکرێیتەوە لەبابەتی  "{TOPIC_TITLE}" لە "{SITENAME}". ئەم بابەتەش وەڵامی نوێی تێدا نوسراوە لە دوا سەردانتەوە کرتە لەو بەستەرەی خوارەوە بکە بۆ بینینی وەڵامەکان، هیچ ئاگادارکردنەوەیەکی ترت پێ ناگات هەتا سەردانی بابەتەکە ئەکەیت
+گەر دەتەوێت نوێترین پەیام ببینیت لە دوا سەردانتەوە کرتە لەم بەستەرە بکە:
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+بۆ بینینی بابەتەکە، کرتە لەم بەستەرە بکە:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+بۆ بینینی مەکۆکان کرتە لەم بەستەرە بکە:
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+ئەگەر ناتەوێت چیتر ئاگادر بکرێیتەوە، ئەوە کرتە لە "بەشدار نەبوون لە بابەت" بکە کە لە خوارەوەی بابەتەکە نووسراوە یان کرتە لەم بەستەرە بکە:
 
 {U_STOP_WATCHING_TOPIC}
 
@@ -830,47 +839,25 @@ If you no longer wish to watch this topic you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} چالاککردنەوەی هەژمارەکەت
 
-Hello {USERNAME},
+سڵاو {USERNAME}،
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
-
-{U_ACTIVATE}
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
-
-Hello {USERNAME}
-
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
-
-To use the new password you need to activate it. To do this click the link provided below.
+هەژمارەکەت لە "{SITENAME}" ناچالاک کراوە، لەبەر ئەوەی هەندێک گۆڕانکاریت کردووە لە پڕۆفایلەکەت. بۆ چالاککردنەوەی پێویستە کرتە لەم بەستەرەی خوارەوە بکەیت.
 
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+{EMAIL_SIG}',
+));
 
-Password: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+
+$email = array_merge($email, array(
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} هەژمارەکەت ناچالاککرا
+
+سڵاو {USERNAME}،
+
+هەژمارەکەت لە"{SITENAME}" ناچالاک کرا، لەبەر ئەوەی هەندێک گۆڕانکاریت کردووە لە پڕۆفایلەکەت، پێویستە بەڕێوەبەر چالاکی بکات پێش ئەوەی بتوانیت بچیتە ژوورەوە. ئیمەیلێکی ترت پێ ئەگات کاتێک ئەم کارە ئەنجامدرا.
 
 {EMAIL_SIG}',
 ));
@@ -878,25 +865,47 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} چالاککردنی تێپەڕەوشەی نوێ
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+سڵاو {USERNAME}،
 
-Please keep this e-mail for your records. Your account information is as follows:
+ئەم ئاگادارییەت پێ گەیشتووە لەبەر ئەوەی خۆت (یان کەسێکی تر) داوای تێپەڕەوشەیەکی نوێی کردووە بۆ هەژمارەکەت لە "{SITENAME}". گەر داوای تێپەڕەوشەی نوێی نەکردووە، ئەم ئیمەیلە فەرامۆش بکە. گەر هەر بە بەردەوامی ئەم پەیامەت پێ ئەگات، تکایە بەڕێوەبەری مەکۆ ئاگادار بکەوە.
+
+بۆ بەکاربردنی تێپەڕەوشەی نوێ دەبێت چالاکی بکەیت، بۆ چالاککردنیشی دەبێت کرتە لەم بەستەرەی خوارەوە بکەیت:
+
+{U_ACTIVATE}
+
+ئەگەر سەرکەوتووانە کۆتایی هات دەتوانیت ئەم تێپەڕەوشەیە بەکاربەریت بۆ چوونەژوورەوە:
+
+تێپەڕەوشە: {PASSWORD}
+
+بە دڵنیاییەوە دەتوانیت خۆت تێپەڕەوشە بگۆڕیت لە ڕێگای پەڕەی پڕۆفایلەکەتەوە لە مەکۆکان. گەر هەر ئاڵۆزییەک هاتە ڕێت تکایە پەیوەندی بە بەڕێوەبەرانەوە بکە.
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} چالاککردنەوەی هەژمارەکەت لە "{SITENAME}"
+
+بەڕێوەبەرێکی مەکۆ داوای کردووە کە هەژمارەکەت چالاک بکرێتەوە. هەنووکە هەژمارەکەت ناچالاکە.
+
+تکایە ئەم ئیمەیلە لە تۆمارەکانتدا بپارێزە. ئەمەی خوارەوە زانیاریی هەژمارەکەتە:
 
 ----------------------------
-Username: {USERNAME}
+ناوی بەکارهێنەر: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+تێپەڕەوشەکەت بە باشی پارێزراوە لە بنکەدراوەکەماندا و ناتوانرێت بگێڕدرێتەوە. ئەگەر هاتوو بیرچووەوە، ئەتوانیت تێپەڕەوشەیەکی نوێ داوا بکەیت بە بەکارهێنانی ئەو ئیمەیلەی خۆت پێ تۆمار کردووە.
 
-Please visit the following link to reactivate your account:
+تکایە سەردانی ئەم بەستەرە بکە، بۆ چالاککردنەوەی هەژمارەکەت:
 
 {U_ACTIVATE}
 
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
@@ -1004,90 +1013,98 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} بەبیرهێنانەوەی هەژماری ناچالاک
 
-Hello {USERNAME},
+سڵاو {USERNAME}،
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+لە ڕێکەوتی {REGISTER_DATE} هەژمارێکی نوێت تۆمار کردووە لە "{SITENAME}". بەڵام تاوەکو ئێستا چالاک نەکراوە، ئێستا دەتوانیت چالاکی بکەیت بە کرتە کردن لەم بەستەرەی خوارەوە:
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+سوپاس بۆ خۆتۆمارکردنت لە "{SITENAME}"، خۆشحاڵین بە بەئەندامبوونت.
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} بەخێرهاتی بۆ  "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+تکایە ئەم ئیمەیلە لە تۆمارەکانتدا بپارێزە. ئەمەی خوارەوە زانیاریی هەژمارەکەتە:
 
 ----------------------------
-Username: {USERNAME}
+ناوی بەکارهێنەر: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+تێپەڕەوشەکەت بە باشی پارێزراوە لە بنکەدراوەکەماندا و ناتوانرێت بگێڕدرێتەوە. ئەگەر هاتوو بیرچووەوە، ئەتوانیت تێپەڕەوشەیەکی نوێ داوا بکەیت بە بەکارهێنانی ئەو ئیمەیلەی خۆت پێ تۆمار کردووە.
 
-Please visit the following link in order to activate your account:
+تکایە سەردانی بەستەری خوارەوە بکە بۆ چالاککرندی هەژمارەکەت:
 
 {U_ACTIVATE}
 
 
-Thank you for registering.
+سوپاس بۆ خۆتۆمارکردنت و بەهیوای کاتێکی خۆش لەگەڵماندا.
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} بەخێربێیت بۆ "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+تکایە ئەم ئیمەیلە لە تۆمارەکانتدا بپارێزە. ئەمەی خوارەوە زانیاریی هەژمارەکەتە:
 
 ----------------------------
-Username: {USERNAME}
+ناوی بەکارهێنەر: {USERNAME}
 
-Board URL: {U_BOARD}
+
+بەستەری مەکۆکان: {U_BOARD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+تێپەڕەوشەکەت بە باشی پارێزراوە لە بنکەدراوەکەماندا و ناتوانرێت بگێڕدرێتەوە. ئەگەر هاتوو بیرچووەوە، ئەتوانیت تێپەڕەوشەیەکی نوێ داوا بکەیت بە بەکارهێنانی ئەو ئیمەیلەی خۆت پێ تۆمار کردووە.
 
-Thank you for registering.
 
-{EMAIL_SIG}',
+سوپاس بۆ خۆتۆمارکردنت و بەهیوای کاتێکی خۆش لەگەڵماندا.
+
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} بەخێربێیت بۆ "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+تکایە ئەم ئیمەیلە لە تۆمارەکانتدا بپارێزە. ئەمەی خوارەوە زانیاریی هەژمارەکەتە:
 
 ----------------------------
-Username: {USERNAME}
+ناوی بەکارهێنەر: {USERNAME}
 
-Board URL: {U_BOARD}
+
+بەستەری مەکۆ: {U_BOARD}
 ----------------------------
 
-Please visit the following link in order to activate your account:
+تکایە سەردانی بەستەری خوارەوە بکە بۆ چالاککردنی هەژمارەکەت:
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+تێپەڕەوشەکەت بە باشی پارێزراوە لە بنکەدراوەکەماندا و ناتوانرێت بگێڕدرێتەوە. ئەگەر هاتوو بیرچووەوە، ئەتوانیت تێپەڕەوشەیەکی نوێ داوا بکەیت بە بەکارهێنانی ئەو ئیمەیلەی خۆت پێ تۆمار کردووە.
 
-Thank you for registering.
 
-{EMAIL_SIG}',
+سوپاس بۆ خۆتۆمارکردنت و بەهیوای کاتێکی خۆش لەگەڵماندا.
+
+{EMAIL_SIG}
+',
 ));
 
 

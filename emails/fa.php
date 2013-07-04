@@ -14,7 +14,8 @@ Use this link to activate the account:
 {U_ACTIVATE}
 
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
@@ -34,45 +35,58 @@ Message sent to you follows:
 
 
 {EMAIL_SIG}
+
+Powered by : www.Maghsad.com phpBB3 Farsi
+
+For getting or making your own FREE forum,visit www.phpBB.Maghsad.com !
 ',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} عضویت شما در {SITENAME} فعال شد
 
-Hello {USERNAME},
+{USERNAME}, سلام
 
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
+عضویت شما در {SITENAME} توسط یکی از مدیران تایید شد.
+هم اکنون می توانید به سایت وارد شوید.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+
+Powered by : www.Maghsad.com phpBB3 Farsi
+
+For getting or making your own FREE forum,visit www.phpBB.Maghsad.com !',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} به "{SITENAME}" خوش آمدید
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+اطلاعات اکانت شما به صورت زیر است :
 
 ----------------------------
 Username: {USERNAME}
+Password: {PASSWORD}
 
-Board URL: {U_BOARD}
+نشانی انجمن: {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+حساب کاربری شما غیر فع
+ال است و باید توسط مدیریت فعال شود.در صورت تایید یک ایمیل به شما ارسال خواهد شد.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Please do not forget your password as it has been encrypted in our database and we cannot retrieve it for you. However, should you forget your password you can request a new one which will be activated in the same way as this account.
 
-Thank you for registering.
+از ثبت نام شما ممنونیم
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+
+Powered by : www.Maghsad.com phpBB3 Farsi
+For getting or making your own FREE forum,visit www.phpBB.Maghsad.com !',
 ));
 
 
@@ -217,9 +231,9 @@ $email = array_merge($email, array(
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+In compliance with the COPPA your account is currently inactive.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Please print this message out and have your parent or guardian sign and date it. Then fax it to:
 
 {FAX_INFO}
 
@@ -248,13 +262,17 @@ Date: _______________
 ------------------------------ CUT HERE ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Once the administrator has received the above form via fax or regular mail your account will be activated.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Please do not forget your password as it has been encrypted in our database and we cannot retrieve it for you. However, should you forget your password you can request a new one which will be activated in the same way as this account.
 
 Thank you for registering.
 
 {EMAIL_SIG}
+
+Powered by : www.Maghsad.com phpBB3 Farsi
+
+For getting or making your own FREE forum,visit www.phpBB.Maghsad.com !
 ',
 ));
 
@@ -265,9 +283,9 @@ $email = array_merge($email, array(
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+In compliance with the COPPA your account is currently inactive.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Please print this message out and have your parent or guardian sign and date it. Then fax it to:
 
 {FAX_INFO}
 
@@ -279,6 +297,7 @@ OR mail it to:
 Permission to participate at "{SITENAME}" - {U_BOARD}
 
 Username: {USERNAME}
+Password: {PASSWORD}
 E-mail: {EMAIL_ADDRESS}
 
 I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
@@ -296,13 +315,17 @@ Date: _______________
 ------------------------------ CUT HERE ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Once the administrator has received the above form via fax or regular mail your account will be activated.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Please do not forget your password as it has been encrypted in our database and we cannot retrieve it for you. However, should you forget your password you can request a new one which will be activated in the same way as this account.
 
 Thank you for registering.
 
 {EMAIL_SIG}
+
+Powered by : www.Maghsad.com phpBB3 Farsi
+
+For getting or making your own FREE forum,visit www.phpBB.Maghsad.com !
 ',
 ));
 
@@ -325,7 +348,11 @@ A message from {FROM_USERNAME} may also be included below. Please note that this
 
 ----------
 
-{MESSAGE}',
+{MESSAGE}
+
+Powered by : www.Maghsad.com phpBB3 Farsi
+
+For getting or making your own FREE forum,visit www.phpBB.Maghsad.com !',
 ));
 
 
@@ -398,7 +425,11 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 {U_STOP_WATCHING_FORUM}
 
 {EMAIL_SIG}
-',
+
+
+Powered by : www.Maghsad.com phpBB3 Farsi
+
+For getting or making your own FREE forum,visit www.phpBB.Maghsad.com !',
 ));
 
 
@@ -415,6 +446,8 @@ You can view your groups information here:
 {U_GROUP}
 
 {EMAIL_SIG}
+
+Powered by : www.Maghsad.com phpBB3 Farsi
 ',
 ));
 
@@ -431,7 +464,8 @@ Click on the following link to see your group membership.
 {U_GROUP}
 
 {EMAIL_SIG}
-',
+
+Powered by : www.Maghsad.com phpBB3 Farsi',
 ));
 
 
@@ -441,12 +475,14 @@ $email = array_merge($email, array(
 
 Dear {USERNAME},
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
+A user has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
 To approve or deny this request for group membership please visit the following link:
 
 {U_PENDING}
 
 {EMAIL_SIG}
+
+Powered by : www.Maghsad.com phpBB3 Farsi
 ',
 ));
 
@@ -459,17 +495,18 @@ Congratulations,
 
 You have successfully installed phpBB on your server.
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+This e-mail contains important information on your installation that you should keep safe. The password has been encrypted in the database and cannot be recovered, although you can request a new password should you lose this one.
 
 ----------------------------
 Username: {USERNAME}
+Password: {PASSWORD}
 
 Board URL: {U_BOARD}
 ----------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
+Useful information on your phpBB installation can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.Maghsad.com/support/
 
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+In order to keep the board safe and secure, it is highly recommended that you keep current with software releases which can be easily done by subscribing to phpBB.com\'s mailing list, located at the above URL.
 
 {EMAIL_SIG}',
 ));
@@ -521,7 +558,9 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 {U_STOP_WATCHING_FORUM}
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+
+Powered by : www.Maghsad.com phpBB3 Farsi',
 ));
 
 
@@ -566,7 +605,10 @@ If you want to view the topic, click the following link:
 {U_VIEW_TOPIC}
 
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+
+Powered by : www.Maghsad.com phpBB3 Farsi
+',
 ));
 
 
@@ -583,7 +625,9 @@ The following reason was given for the disapproval:
 {REASON}
 
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+
+Powered by : www.Maghsad.com phpBB3 Farsi',
 ));
 
 
@@ -675,21 +719,27 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} شما یک پیام خصوصی جدید دارید
 
-Hello {USERNAME},
+سلام {USERNAME}
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+شما یک پیام خصوصی جدید دریافت کردید.
 
-{SUBJECT}
+سایت : {SITENAME}
+عنوان پیام : {SUBJECT}
+نویسنده پیام : {AUTHOR_NAME}
 
-You can view your new message by clicking on the following link:
+برای مشاهده و پاسخ گویی پیام، روی لینک زیر کلیک کنید:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
 
-{EMAIL_SIG}',
+یاد آوری:
+علت ارسال این پیام به شما، درخواست شخصی شما برای اطلاع رسانی در این سایت بوده است؛ بدیهی است در قسمت تنظیمات کاربری می توانید این ویژگی را غیر فعال کنید.
+
+{EMAIL_SIG}
+
+Powered by : www.Maghsad.com phpBB3 Farsi',
 ));
 
 
@@ -721,7 +771,9 @@ Message sent to you follows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-',
+
+
+Powered by : www.Maghsad.com phpBB3 Farsi',
 ));
 
 
@@ -740,7 +792,9 @@ Message sent to you follows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-',
+
+
+Powered by : www.Maghsad.com phpBB3 Farsi',
 ));
 
 
@@ -753,7 +807,10 @@ Hello {USERNAME},
 You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
 
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+
+
+Powered by : www.Maghsad.com phpBB3 Farsi',
 ));
 
 
@@ -766,7 +823,9 @@ Hello {USERNAME},
 You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
 
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+
+Powered by : www.Maghsad.com phpBB3 Farsi',
 ));
 
 
@@ -782,7 +841,10 @@ If you want to view the topic, click the following link:
 {U_VIEW_TOPIC}
 
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+
+
+Powered by : www.Maghsad.com phpBB3 Farsi',
 ));
 
 
@@ -799,13 +861,52 @@ The following reason was given for the disapproval:
 {REASON}
 
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+
+Powered by : www.Maghsad.com phpBB3 Farsi
+
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}" پاسخ به موضوع
+
+==================================
+++++++++++ Farsi +++++++++++++++
+==================================
+
+سلام {USERNAME}
+
+به موضوعی که شما تقاضای پیگیری آن را داده بودید پاسخی ارسال شده.
+
+لطفا توجه کنید ممکن است به این موضوع پاسخ های دیگری داده شود اما تازمانی که شما وارد سایت نشوید به هیچ وجه اطلاعیه دیگری در مورد این موضوع به شما ارسال نخواهد شد.
+
+موضوع مشترک شده : "{TOPIC_TITLE}"
+سایت مربوطه : "{SITENAME}"
+
+
+برای دیدن جدید ترین پست ارسال شده روی لینک زیر کلیک کنید :
+
+{U_NEWEST_POST}
+
+برای مشاهده تاپیک روی لینک زیر کلیک کنید :
+
+{U_TOPIC}
+
+برای مشاهده انجمن مربوط به این ارسال، روی لینک زیر کلیک کنید :
+
+{U_FORUM}
+
+اگر دیگر نمی خواهید این موضوع را پیگیری کنید روی لینک زیر کلیک کنید :
+
+{U_STOP_WATCHING_TOPIC}
+
+
+==================================
+++++++++++ ENGLISH +++++++++++++++
+==================================
 
 Hello {USERNAME},
 
@@ -889,7 +990,7 @@ Please keep this e-mail for your records. Your account information is as follows
 Username: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Your password has been encrypted in our database. Should you forget your password you can request a new one which will be activated in the same way as this account.
 
 Please visit the following link to reactivate your account:
 
@@ -1008,7 +1109,7 @@ $email = array_merge($email, array(
 
 Hello {USERNAME},
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+On {REGISTER_DATE} you registered a new account at "{SITENAME}". To date you have not activated this account which is a prerequisite for board login. For your convenience the activation link is repeated below.
 
 {U_ACTIVATE}
 
@@ -1030,16 +1131,18 @@ Please keep this e-mail for your records. Your account information is as follows
 Username: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Your password has been encrypted in our database. Should you forget your password you can request a new one which will be activated in the same way as this account.
 
-Please visit the following link in order to activate your account:
+Your account is currently inactive. You cannot use it until you visit the following link:
 
 {U_ACTIVATE}
 
 
 Thank you for registering.
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+
+Powered by : www.Maghsad.com phpBB3 Farsi',
 ));
 
 
@@ -1053,15 +1156,19 @@ Please keep this e-mail for your records. Your account information is as follows
 
 ----------------------------
 Username: {USERNAME}
+Password: {PASSWORD}
 
 Board URL: {U_BOARD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Please do not forget your password as it has been encrypted in our database and we cannot retrieve it for you. However, should you forget your password you can request a new one which will be activated in the same way as this account.
 
 Thank you for registering.
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+
+Powered by : www.Maghsad.com phpBB3 Farsi
+For getting or making your own FREE forum,visit www.phpBB.Maghsad.com !',
 ));
 
 
@@ -1075,19 +1182,24 @@ Please keep this e-mail for your records. Your account information is as follows
 
 ----------------------------
 Username: {USERNAME}
+Password: {PASSWORD}
 
 Board URL: {U_BOARD}
 ----------------------------
 
-Please visit the following link in order to activate your account:
+Your account is currently inactive. You cannot use it until you visit the following link:
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Please do not forget your password as it has been encrypted in our database and we cannot retrieve it for you. However, should you forget your password you can request a new one which will be activated in the same way as this account.
 
 Thank you for registering.
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+
+Powered by : www.Maghsad.com phpBB3 Farsi
+
+For getting or making your own FREE forum,visit www.phpBB.Maghsad.com !',
 ));
 
 

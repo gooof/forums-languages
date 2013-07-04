@@ -1,16 +1,16 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} تفعيل حساب عضو
 
-Hello,
+مرحباً,
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+الحساب الذي يملكه المستخدم "{USERNAME}" قد أوقف أو أعيد تكوينه , عليك التدقيق على تفاصيله (إذا كانت هناك حاجة لذلك) ومن ثم تشغيله باستعمال الوصلة التالية.
 
-Use this link to view the user\'s profile:
+لعرض ملف العضو اضغط على الوصلة التالية:
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+لتفعيل حساب العضو:
 {U_ACTIVATE}
 
 
@@ -21,13 +21,13 @@ Use this link to activate the account:
 
 $email = array_merge($email, array(
 	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+هذه رسالة من مدير  "{SITENAME}" . إذا كانت هذه الرسالة إعلانات أو تحتوي على لغة بذيئة أو أي كلام غير ملائم الرجاء مراسلة مسؤول الموقع على العنوان التالي:
 
 {CONTACT_EMAIL}
 
-Include this full e-mail (particularly the headers). 
+أرفق الرسالة التي أرسِلَت بالكامل (خصوصاً رأس الرسالة).
 
-Message sent to you follows:
+محتوى الرسالة:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -40,13 +40,14 @@ Message sent to you follows:
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} تم تفعيل الاشتراك
 
-Hello {USERNAME},
+مرحباً {USERNAME},
 
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
+حسابك في "{SITENAME}" قد تم تشغيله بواسطة المدير. تستطيع الآن الدخول للمنتدى.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+
+تم تشفير كلمة المرور الخاصة بك كإجراء أمني في قاعدة البيانات . في حال نسيتها لاحقاً , يمكنك الضغط على رابط نسيت كلمة المرور , و ستتمكن من إعادة تعيين كلمة المرور الخاصة بك .
 
 {EMAIL_SIG}',
 ));
@@ -54,23 +55,23 @@ Your password has been securely stored in our database and cannot be retrieved. 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} أهلاً وسهلاً بك في "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+الرجاء الاحتفاظ بهذه الرسالة . معلومات حسابك هي:
 
 ----------------------------
-Username: {USERNAME}
+اسم المستخدم: {USERNAME}
 
-Board URL: {U_BOARD}
+عنوان المنتدى: {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+حسابك الآن غير نشط , على مدير الموقع تشغيله قبل أن تستطيع الدخول . سوف يصلك بريد آخر يعلمك بذلك.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+لا تنسَ كلمة السر ، فقد تم تشفيرها في قاعدة البيانات ولن نستطيع استرجاعها . لكن , إذا نسيت كلمة السر تستطيع الطلب من المدير بإعادة تشغيل حسابك وتكوين كلمة سر جديدة.
 
-Thank you for registering.
+شكرا لتسجيلك معنا ومرحباً بك.
 
 {EMAIL_SIG}',
 ));
@@ -213,46 +214,47 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} مرحبا بك فى "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+حسابك غير نشطة حاليا.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+	
+يرجى طباعة هذه الرسالة وأن يكون لديك أحد الوالدين أو الوصي وتاريخ التوقيع عليه. ثم إرساله بالفاكس إلى :
 
 {FAX_INFO}
 
-OR mail it to:
+أو البريد الإلكتروني الى :
 
 {MAIL_INFO}
 
 ------------------------------ CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+إذن للمشاركة في "{SITENAME}" - {U_BOARD}
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+اسم المستخدم: {USERNAME}
+البريد الالكترونى: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+ولقد استعرضت المعلومات التي قدمتها وطفلي بموجبه منح الإذن ل"{SITENAME}" لتخزين هذه المعلومات. 
+أنا أفهم أن المعلومات يمكن أن تتغير فى أي وقت بواسطة كتابة الباسورد
+أفهم أنه قد تطلب هذه المعلومات عند إزالته من "(SITENAME)" في أي وقت.
 
 
-Parent or guardian 
-(print your name here): _____________________
+الوالد أو الوصي 
+(اكتب اسمك هنا): _____________________
 
-(sign here): __________________ 
+(وقع هنا): __________________ 
 
-Date: _______________
+التاريخ: _______________
 
 ------------------------------ CUT HERE ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+مرة واحدة كانت الإدارة قد وردت في النموذج أعلاه عن طريق الفاكس أو البريد العادي ، وسوف ينشط حسابك. 
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+كلمة السر الخاصة بك قد تم تخزنت بأمان في قاعدة البيانات الخاصة بنا والتي لا يمكن استردادها. في حالة نسيانك، سوف تكون قادرا على إعادة تعيينها باستخدام عنوان البريد الإلكتروني المرتبط بحسابك.
 
-Thank you for registering.
+شكرا لكم على تسجيلكم
 
 {EMAIL_SIG}
 ',
@@ -261,46 +263,48 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} مرحبا بك فى "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+حسابك غير نشطة حاليا.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+	
+يرجى طباعة هذه الرسالة وأن يكون لديك أحد الوالدين أو الوصي وتاريخ التوقيع عليه. ثم إرساله بالفاكس إلى :
 
 {FAX_INFO}
 
-OR mail it to:
+أو البريد الإلكتروني الى :
 
 {MAIL_INFO}
 
 ------------------------------ CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+إذن للمشاركة في "{SITENAME}" - {U_BOARD}
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+اسم المستخدم: {USERNAME}
+البريد الالكترونى: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+ولقد استعرضت المعلومات التي قدمتها وطفلي بموجبه منح الإذن ل"{SITENAME}" لتخزين هذه المعلومات. 
+أنا أفهم أن المعلومات يمكن أن تتغير فى أي وقت بواسطة كتابة الباسورد
+أفهم أنه قد تطلب هذه المعلومات إلى إزالته من "(SITENAME)" في أي وقت.
 
 
-Parent or guardian 
-(print your name here): _____________________
+الوالد أو الوصي 
+(اكتب اسمك هنا): _____________________
 
-(sign here): __________________ 
+(وقع هنا): __________________ 
 
-Date: _______________
+التاريخ: _______________
 
 ------------------------------ CUT HERE ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+مرة واحدة كانت الإدارة قد وردت في النموذج أعلاه عن طريق الفاكس أو البريد العادي ، وسوف ينشط حسابك. 
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+كلمة السر الخاصة بك قد تم تخزنت بأمان في قاعدة البيانات الخاصة بنا والتي لا يمكن استردادها. في حالة نسيانك، سوف تكون قادرا على إعادة تعيينها باستخدام عنوان البريد الإلكتروني المرتبط بحسابك.
 
-Thank you for registering.
+
+شكرا لكم على تسجيلكم
 
 {EMAIL_SIG}
 ',
@@ -309,19 +313,19 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - رسالة من صديق
 
-Hello {TO_USERNAME},
+مرحباً {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+أرسٍلَت هذا البريد من خلال الموقع "{SITENAME}" بواسطة العضو {FROM_USERNAME} الذي اعتقدَ بأن هذا الموضوع قد يهمك:
 
 {TOPIC_NAME}
 
-You can find it at:
+للوصول إلى الموضوع اضغط على الوصلة التالية:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+قد يكون العضو {FROM_USERNAME} أرسل لك تعليقاً أو رسالة . وهذه الرسالة وافق عليها مسؤول الموقع قبل الإرسال . إذا كانت هذه الرسالة إعلانات أو تحتوي على لغة بذيئة أو أي كلام غير ملائم الرجاء مراسلة مسؤول الموقع على العنوان التالي: {BOARD_CONTACT}. أرفق الرسالة التي تم أرسِلت بالكامل.
 
 ----------
 
@@ -379,21 +383,21 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} التذكير بالردود على المواضيع - "{FORUM_NAME}"
 
-Hello {USERNAME},
+مرحباً {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+أرسلت لك هذه الرسالة لأنك طلبت متابعة القسم , "{FORUM_NAME}" في "{SITENAME}" . أضيف الموضوع الجديد التالي "{TOPIC_TITLE}" تستطيع استعمال الوصلة التالية للوصول إلى الموضوع , لن تستلم تنبيها آخر حتى تقوم بزيارة الموضوع
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+إذا أردت مشاهدة الموضوع ، اتبع الرابط التالي :
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+إذا أردت مشاهدة المنتدى ، اتبع الرابط التالي :
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+إذا لم تكن ترغب بمتابعة القسم اضغط على  "توقف عن متابعة القسم" الموجودة في القسم المذكور أعلاه , أو بالضغط على الوصلة التالية:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -404,14 +408,14 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} تمت إضافتك للمجموعة
 
-Congratulations,
+مبروك,
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+قد أضِفتَ للمجموعة "{GROUP_NAME}" في "{SITENAME}".
+وقد أضِفتَ بواسطة رئيس الموقع أو المدير , راسلهم لمعلومات إضافية.
 
-You can view your groups information here:
+تستطيع الاطلاع على معلومات المجموعة هنا:
 {U_GROUP}
 
 {EMAIL_SIG}
@@ -421,12 +425,12 @@ You can view your groups information here:
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} تمت الموافقة على طلبك
 
-Congratulations,
+مبروك,
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+تمت الموافقة على طلبك للانضمام للمجموعة "{GROUP_NAME}" في "{SITENAME}".
+اضغط على الوصلة التالية للاطلاع على المجموعة.
 
 {U_GROUP}
 
@@ -437,12 +441,12 @@ Click on the following link to see your group membership.
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} طلب للاشتراك في المجموعة
 
-Dear {USERNAME},
+مرحباً {USERNAME},
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+طلب أحد الأعضاء الانضمام إلى المجموعة "{GROUP_NAME}" التي أنت رئيسها في "{SITENAME}".
+للموافقة أو رفض الطلب نرجو زيارة الوصلة التالية:
 
 {U_PENDING}
 
@@ -453,23 +457,21 @@ To approve or deny this request for group membership please visit the following 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} تثبيت منتدى phpBB
 
-Congratulations,
+مبروك,
 
-You have successfully installed phpBB on your server.
+تم تثبيت منتدى phpBB على موقعك بنجاح
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+تحتوي هذه الرسالة على معلومات مهمة يجب حفظها في مكان آمن . كلمة المرور قد تم تشفيرها في قاعدة البيانات ولن نستطيع استرجاعها . لكن , إذا نسيت كلمة السر تستطيع تكوين كلمة مرور جديدة من خلال خيار "نسيت كلمة المرور" سيطلب منك المنتدى إدخال اسم المستخدم والبريد المسجل وسيتم إرسال كلمة مرور جديدة لبريدك.
 
 ----------------------------
-Username: {USERNAME}
+اسم المستخدم: {USERNAME}
 
-Board URL: {U_BOARD}
+رابط المنتدى: {U_BOARD}
 ----------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
-
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+يمكنك معرفة المزيد من المعلومات من خلال ملف docs أو بزيارة موقع الدعم - http://www.phpbbarabia.com
 
 {EMAIL_SIG}',
 ));
@@ -509,15 +511,17 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} التذكير بموضوع جديد - "{FORUM_NAME}"
 
-Hello {USERNAME},
+مرحباً {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+أرسلت لك هذه الرسالة لأنك طلبت متابعة القسم , "{FORUM_NAME}" في "{SITENAME}" .
+
+تمت إضافة موضوع جديد منذ آخر زيارة لك بعنوان , "{TOPIC_TITLE}" . تستطيع استعمال الوصلة التالية للوصول إلى القسم , لن تستلم تنبيها آخر حتى تقوم بزيارة القسم
 
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+إذا لم تكن ترغب بمتابعة القسم اضغط على "توقف عن متابعة القسم" الموجودة في القسم المذكور أعلاه, أو بالضغط على الوصلة التالية:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -527,24 +531,11 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{PM_SUBJECT}"
+	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} تم إغلاق التبليغ - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+مرحباً {USERNAME},
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed. If you have further questions, please contact {CLOSER_NAME} by private message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{PM_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
+هذه التنبيه هو بخصوص التبليغ الذي قدمته حول الرسالة الخاصة   "{PM_SUBJECT}" في "{SITENAME}" حيث تمت مراجعته و معالجته بواسطة المشرف أو المدير. التبليغ الآن مغلق. إذا كانت لديك أسئلة أخرى , رجاءً راسل {CLOSER_NAME} برسالة خاصة.
 
 
 {EMAIL_SIG}',
@@ -553,16 +544,29 @@ You are receiving this notification because the report you filed regarding the p
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} تم حذف التبليغ - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+مرحباً {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+هذا التنبيه هو بخصوص التبليغ الذي قدمته عن الرسالة الخاصة  "{PM_SUBJECT}" في "{SITENAME}" حيث حذِف بواسطة المشرف أو المدير .
 
-If you want to view the post, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} الموافقة على مشاركتك - "{POST_SUBJECT}"
+
+مرحباً {USERNAME},
+
+أرسِلَت هذه الرسالة لأن مشاركتك "{POST_SUBJECT}" في "{SITENAME}" تمت الموافقة عليها المشرف أو مسؤول الموقع.
+
+إذا كنت تود الوصول إلى الرد اضغط على الوصلة التالية:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+إذا كنت تود الوصول إلى الموضوع اضغط على الوصلة التالية:
 {U_VIEW_TOPIC}
 
 
@@ -572,13 +576,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} عدم الموافقة على الموضوع - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+مرحباً {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+أرسِلَت هذه الرسالة لأن موضوعك باسم "{POST_SUBJECT}" في "{SITENAME}" لم تتم الموافقة عليه من المشرف أو مسؤول الموقع.
 
-The following reason was given for the disapproval:
+وذلك للأسباب التالية:
 
 {REASON}
 
@@ -675,19 +679,19 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} لديك رسالة خاصة جديدة
 
-Hello {USERNAME},
+مرحباً {USERNAME},
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+لقد وصلتك رسالة خاصة من العضو "{AUTHOR_NAME}" لصندوق رسائل الوارد في "{SITENAME}" بالعنوان التالي:
 
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+يمكنك قراءة الرسالة بالضغط على الوصلة التالية:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+تستطيع إيقاف عملية إخبارك بوصول الرسالة بتعطيل هذا الخيار عن طريق ملفك الشخصي.
 
 {EMAIL_SIG}',
 ));
@@ -709,15 +713,15 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+مرحباً {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+هذه الرسالة قد أرسلها {FROM_USERNAME} لحسابك في "{SITENAME}" . إذا كانت هذه الرسالة إعلانات أو تحتوي على لغة بذيئة أو أي كلام غير ملائم الرجاء مراسلة مسؤول الموقع على العنوان التالي:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+أرفق الرسالة التي أرسِلَت بالكامل وخصوصاً رأس الرسالة . لاحظ أن الرد لهذه الرسالة سيكون إلى {FROM_USERNAME}.
 
-Message sent to you follows
+هذه هي الرسالة المرسلة إليك
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -728,15 +732,15 @@ Message sent to you follows
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+مرحباً {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+هذه الرسالة قد أرسلها {FROM_USERNAME} لحسابك في "{SITENAME}" . إذا كانت هذه الرسالة إعلانات أو تحتوي على لغة بذيئة أو أي كلام غير ملائم الرجاء مراسلة مسؤول الموقع على العنوان التالي:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+أرفق الرسالة التي أرسِلَت بالكامل 
 
-Message sent to you follows
+الرسالة تحتوي:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -746,24 +750,11 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} تم إغلاق التقرير عن الموضوع - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+مرحباً {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
+أرسِلَت هذه الرسالة لأن تقريرك في الموضوع "{POST_SUBJECT}" في "{TOPIC_TITLE}" في "{SITENAME}" عُرِض بواسطة المشرف أو المسؤول العام . وأغلِقَ التقرير . إذا كانت لديك أي استفسارات يمكنك مراسلة العضو {CLOSER_NAME} برسالة خاصة.
 
 
 {EMAIL_SIG}',
@@ -772,13 +763,26 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} أغلِق التقرير عن الموضوع - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+مرحباً {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+أرسِلَت هذه الرسالة لأن تقريرك في الموضوع "{POST_SUBJECT}" في "{TOPIC_TITLE}" في "{SITENAME}" عُرِض بواسطة المشرف أو المسؤول العام . وحُذِف التقرير.
 
-If you want to view the topic, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} الموافقة على موضوعك - "{TOPIC_TITLE}"
+
+مرحباً {USERNAME},
+
+أرسِلَت هذه الرسالة لأن موضوعك باسم "{TOPIC_TITLE}" في "{SITENAME}"  تمت الموافقة عليه من المشرف أو مسؤول الموقع.
+
+إذا كنت تود الوصول إلى الموضوع اضغط على الوصلة التالية:
 {U_VIEW_TOPIC}
 
 
@@ -788,13 +792,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} عدم الموافقة على موضوعك - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+مرحباً {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+أرسِلَت هذه الرسالة لأن موضوعك باسم "{TOPIC_TITLE}" في "{SITENAME}" لم تتم الموافقة عليه من المشرف أو مسؤول الموقع.
 
-The following reason was given for the disapproval:
+وذلك للأسباب التالية:
 
 {REASON}
 
@@ -805,22 +809,22 @@ The following reason was given for the disapproval:
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} التذكير بالردود على الموضوع - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+مرحباً {USERNAME},
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+أرسلت لك هذه الرسالة لأنك طلبت متابعة الموضوع , "{TOPIC_TITLE}" في "{SITENAME}" . لقد وصل رد للموضوع منذ آخر زيارة لك . تستطيع استعمال الوصلة التالية للوصول إلى الرد , لن تستلم تنبيها آخر حتى تقوم بزيارة الموضوع.
 
-If you want to view the newest post made since your last visit, click the following link:
+إذا رغبت في زيارة آخر رد في الموضوع ، اضغط على الرابط :
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+إذا رغبت في زيارة الموضوع ، اضغط على الرابط :
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+إذا رغبت في مشاهدة المنتدى ، اضغط على الرابط :
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+إذا لم تكن ترغب بمتابعة الموضوع اضغط على "توقف عن متابعة الموضوع" الموجودة في آخر الموضوع المذكور أعلاه , أو بالضغط على الوصلة التالية:
 
 {U_STOP_WATCHING_TOPIC}
 
@@ -830,47 +834,25 @@ If you no longer wish to watch this topic you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} إعادة تفعيل حسابك
 
-Hello {USERNAME},
+مرحباً {USERNAME},
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
-
-{U_ACTIVATE}
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
-
-Hello {USERNAME}
-
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
-
-To use the new password you need to activate it. To do this click the link provided below.
+لقد توقّف حسابك في "{SITENAME}" , قد يرجع ذلك إلى تغييرات قمت بها لمعلوماتك الشخصية . حتى تعيد تشغيل حسابك عليك الضغط على الوصلة التالية:
 
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+{EMAIL_SIG}',
+));
 
-Password: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+
+$email = array_merge($email, array(
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} تم تعطيل حسابك
+
+مرحباً {USERNAME},
+
+حسابك في موقع "{SITENAME}" عطِّل , ربما بسبب تعديل في ملفك الشخصي . ولن تتمكن من استخدام حسابك إلا بعد إعادة تفعيله بواسطة مسؤول الموقع وسترسَل رسالة تنبيه بذلك.
 
 {EMAIL_SIG}',
 ));
@@ -878,20 +860,43 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} كلمة مرور جديدة
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+مرحباً {USERNAME},
 
-Please keep this e-mail for your records. Your account information is as follows:
+لقد وصلت لك هذه الرسالة لأنك (أو شخص يدعي أنه أنت) قد طلب كلمة سر جديدة ترسل لحسابك في "{SITENAME}" . إذا لم تكن أنت مقدم الطلب فتجاهل هذه الرسالة , إذا كانت هذه الرسالة تصلك باستمرار عليك الاتصال بمدير الموقع.
+
+لاستعمال كلمة المرور الجديدة عليك تشغيلها . للتشغيل اضغط على الوصلة التالية.
+
+{U_ACTIVATE}
+
+إذا تمت العملية بنجاح سوف تستطيع استعمال كلمة المرور التالية:
+
+كلمة المرور: {PASSWORD}
+
+طبعاً بوسعك تغيير كلمة المرور بنفسك خلال صفحة معلوماتك الشخصية في لوحة تحكمك. إذا واجهت صعوبة عليك الاتصال بمدير الموقع.
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} إعادة تفعيل حسابك في "{SITENAME}"
+
+مدير المنتدى يطلب منك إعادة تفعيل حسابك.
+
+اتبع الخطوات التالية لتفعيل حسابك.
+
+رجاءً احتفظ بهذه الرسالة. معلومات حسابك كالتالي:
 
 ----------------------------
-Username: {USERNAME}
+اسم المستخدم: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+كلمة السر تم تشفيرها في قاعدة البيانات ولن نستطيع استرجاعها . لكن , إذا نسيت كلمة السر تستطيع ستطيع تكوين كلمة مرور جديدة من خلال - دخول >> لقد نسيت كلمة المرور.
 
-Please visit the following link to reactivate your account:
+رجاءً قم زُر الوصلة التالية لتفعيل حسابك:
 
 {U_ACTIVATE}
 
@@ -1004,15 +1009,15 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} التذكير بتفعيل حسابك
 
-Hello {USERNAME},
+مرحباً {USERNAME},
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+بتاريخ {REGISTER_DATE} سجلتَ حسابا جديدا في موقع "{SITENAME}" . وتفعله بعد. ولتفعيله اضغط على الوصلة التالية:
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+شكراً لتسجيلك في موقع "{SITENAME}" , وبانتظار مشاركاتك معنا.
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +1025,24 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} أهلاً بك في "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+رجاءً بهذه الرسالة. معلومات حسابك كالتالي:
 
 ----------------------------
-Username: {USERNAME}
+اسم المستخدم: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+تم تشفير كلمة المرور في قاعدة البيانات .إذا فقدت كلمة المرور اطلب أخرى و ستكرر عملية التفعيل مرة أخرى
 
-Please visit the following link in order to activate your account:
+حسابك غير مفعل. ويمكنك تفعيله بالضغط على الوصلة التالية:
 
 {U_ACTIVATE}
 
 
-Thank you for registering.
+شكراً لتسجيلك معنا.
 
 {EMAIL_SIG}',
 ));
@@ -1045,21 +1050,21 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} مرحباً بك في "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+الرجاء الاحتفاظ بهذه الرسالة . بيانات حسابك كالتالي:
 
 ----------------------------
-Username: {USERNAME}
+اسم المستخدم: {USERNAME}
 
-Board URL: {U_BOARD}
+عنوان المنتدى: {U_BOARD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+لا تنسَ كلمة المرور ، فقد تم تشفيرها في قاعدة البيانات ولن نستطيع استرجاعها . لكن , إذا نسيت كلمة المرور تستطيع تكوين كلمة مرور جديدة من خلال - دخول >> لقد نسيت كلمة المرور , وسيطلب منك البرنامج إدخال اسم المستخدم والبريد المسجل وسترسَل كلمة مرور جديدة لبريدك.
 
-Thank you for registering.
+نشكرك لتسجيلك معنا ومرحباً بك.
 
 {EMAIL_SIG}',
 ));
@@ -1067,25 +1072,25 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} مرحباً بك في "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+الرجاء الاحتفاظ بهذه الرسالة. بيانات حسابك هي كالتالي:
 
 ----------------------------
-Username: {USERNAME}
+اسم المستخدم: {USERNAME}
 
-Board URL: {U_BOARD}
+عنوان المنتدى: {U_BOARD}
 ----------------------------
 
-Please visit the following link in order to activate your account:
+حسابك الآن غير نشط. لا تستطيع استعمال حسابك حتى تنتقل إلى الوصلة التالية:
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+لا تنسَ كلمة المرور، فقد تم تشفيرها في قاعدة البيانات ولن نستطيع استرجاعها . لكن , إذا نسيت كلمة المرور تستطيع تكوين كلمة مرور جديدة من خلال - دخول >> لقد نسيت كلمة المرور , وسيطلب منك البرنامج إدخال اسم المستخدم والبريد المسجل وسترسَل كلمة مرور جديدة لبريدك.
 
-Thank you for registering.
+نشكرك لتسجيلك ومرحباً بك.
 
 {EMAIL_SIG}',
 ));

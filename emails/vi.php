@@ -1,52 +1,42 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Kích hoạt tài khoản thành viên
 
-Hello,
+Chào bạn,
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+Tài khoản thành viên mang tên "{USERNAME}" vừa bị ngưng kích hoạt hoặc vừa mới đăng ký, bạn nên kiểm tra thông tin chi tiết về thành viên này nếu cần thiết và chọn thao tác xử lý phù hợp.
 
-Use this link to view the user\'s profile:
+Sử dụng liên kết này để xem thông tin cá nhân của thành viên:
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+Sử dụng liên kết này để kích hoạt tài khoản thành viên:
 {U_ACTIVATE}
 
-
 {EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
-
-{CONTACT_EMAIL}
-
-Include this full e-mail (particularly the headers). 
-
-Message sent to you follows:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-{MESSAGE}
-
+	'email/admin_send_email.txt' 		=> '﻿{MESSAGE}
 
 {EMAIL_SIG}
-',
+
+Email này được một nhà quản trị của "{SITENAME}" gửi đến cho bạn. Nếu email này là spam, chứa thông tin quấy nhiễu hay các bình luận bạn cho rằng là mang tính đã kích, hãy liên hệ với nhà quản trị web tại địa chỉ sau:
+
+{CONTACT_EMAIL}
+_EMAIL}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Tài khoản của bạn đã được kích hoạt
 
-Hello {USERNAME},
+Chào bạn, "{USERNAME}"
 
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
-
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Tài khoản thành viên của bạn trong website "{SITENAME}" đã được kích hoạt, ngay bây giờ bạn có thể đăng nhập vào hệ thống bằng tên thành viên và mật khẩu mà bạn đã nhận được trong Email mà chúng tôi đã gửi cho bạn trước đây.
 
 {EMAIL_SIG}',
 ));
@@ -54,23 +44,22 @@ Your password has been securely stored in our database and cannot be retrieved. 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Chào mừng bạn đã đến với "{SITENAME}" - {U_BOARD}
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Hãy giữ lại Email này cẩn thận. Thông tin về tài khoản thành viên của bạn như sau:
 
 ----------------------------
-Username: {USERNAME}
-
-Board URL: {U_BOARD}
+Tên thành viên: {USERNAME}
+Mật khẩu: {PASSWORD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+Tài khoản của bạn chưa được kích hoạt, hãy vui lòng chờ cho đến khi người quản trị kích hoạt tài khoản này thì bạn mới có thể đăng nhập được vào hệ thống. Bạn sẽ nhận được một Email thông báo khác khi việc kích hoạt hoàn tất.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Xin vui lòng đừng quên mật khẩu của bạn bởi vì nó đã được mã hoá trong cơ sở dữ liệu của hệ thống và chúng tôi không thể khôi phục lại nó cho bạn. Tuy nhiên, nếu bạn quên mật khẩu của mình, bạn có thể yêu cầu một mật khẩu mới và cũng cần phải được kích hoạt giống như tài khoản này.
 
-Thank you for registering.
+Cám ơn bạn đã đăng ký làm thành viên của chúng tôi!
 
 {EMAIL_SIG}',
 ));
@@ -213,119 +202,118 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Chào mừng bạn đã đến với "{SITENAME}" - {U_BOARD}
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+Bạn đã đồng ý với điều khoản đăng ký thành viên COPPA, vì thế tài khoản hiện tại của bạn sẽ chưa được kích hoạt.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
-
+Hãy vui lòng in Email này ra rồi đưa cho cha mẹ hay người bảo hộ của bạn ký tên và ghi ngày tháng vào đây. Sau đó Fax lại đến địa chỉ:
 {FAX_INFO}
 
-OR mail it to:
-
+Hoặc gửi Email về địa chỉ:
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+-8<----------------------------- CẮT TẠI ĐÂY ------------------------------
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Đồng ý cho phép tham gia vào website "{SITENAME}"
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+Tên thành viên: {USERNAME}
+Địa chỉ Email: {EMAIL_ADDRESS}
 
+TÔI ĐÃ XEM XÉT KỸ CÁC THÔNG TIN BÊN TRÊN VÀ ĐỒNG Ý CHO PHÉP ĐỨA TRẺ CỦA TÔI THAM GIA VÀO WEBSITE "{SITENAME}" VỚI NHỮNG THÔNG TIN LƯU TRỮ BÊN TRÊN. 
+TÔI BIẾT NHỮNG THÔNG TIN TRÊN CÓ THỂ ĐƯỢC THAY ĐỔI LẠI BẤT CỨ KHI NÀO VỚI MỘT MẬT KHẨU ĐĂNG NHẬP THÀNH CÔNG VÀO TÀI KHOẢN THÀNH VIÊN. 
+TÔI BIẾT TÔI CÓ THỂ YÊU CẦU NHỮNG THÔNG TIN TRÊN ĐƯỢC GỠ BỎ KHỎI WEBSITE "{SITENAME}" BẤT CỨ LÚC NÀO.
 
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
+Cha mẹ hoặc người bảo hộ 
+(Ghi rõ họ tên tại đây): ______________________________
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+(Ký tên tại đây): ____________________ 
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ngày tháng: _______________
 
-Thank you for registering.
+-8<----------------------------- CẮT TẠI ĐÂY ------------------------------
 
-{EMAIL_SIG}
-',
+Sau khi người quản trị nhận được cam kết bên trên thông qua địa chỉ Fax hay Email, tài khoản của bạn sẽ được kích hoạt.
+
+Xin vui lòng đừng quên mật khẩu của bạn bởi vì nó đã được mã hoá trong cơ sở dữ liệu của hệ thống và chúng tôi không thể khôi phục lại nó cho bạn. Tuy nhiên, nếu bạn quên mật khẩu của mình, bạn có thể yêu cầu một mật khẩu mới và cũng cần phải được kích hoạt giống như tài khoản này.
+
+Cám ơn bạn đã đăng ký làm thành viên của chúng tôi!
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Chào mừng bạn đã đến với "{SITENAME}" - {U_BOARD}
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+Bạn đã đồng ý với điều khoản đăng ký thành viên COPPA vì thế tài khoản hiện tại của bạn sẽ chưa được kích hoạt.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
-
+Hãy vui lòng in Email này ra rồi đưa cho cha mẹ hay người bảo hộ của bạn ký tên và ghi ngày tháng vào đây. Sau đó Fax lại đến địa chỉ:
 {FAX_INFO}
 
-OR mail it to:
-
+Hoặc gửi Email về địa chỉ:
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+-8<----------------------------- CẮT TẠI ĐÂY ------------------------------
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Đồng ý cho phép tham gia vào website "{SITENAME}"
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
+Tên thành viên: {USERNAME}
+Mật khẩu: {PASSWORD}
+Địa chỉ Email: {EMAIL_ADDRESS}
 
+TÔI ĐÃ XEM XÉT KỸ CÁC THÔNG TIN BÊN TRÊN VÀ ĐỒNG Ý CHO PHÉP ĐỨA TRẺ CỦA TÔI THAM GIA VÀO WEBSITE "{SITENAME}" VỚI NHỮNG THÔNG TIN LƯU TRỮ BÊN TRÊN. 
+TÔI BIẾT NHỮNG THÔNG TIN TRÊN CÓ THỂ ĐƯỢC THAY ĐỔI LẠI BẤT CỨ KHI NÀO VỚI MỘT MẬT KHẨU ĐĂNG NHẬP THÀNH CÔNG VÀO TÀI KHOẢN THÀNH VIÊN. 
+TÔI BIẾT TÔI CÓ THỂ YÊU CẦU NHỮNG THÔNG TIN TRÊN ĐƯỢC GỠ BỎ KHỎI WEBSITE "{SITENAME}" BẤT CỨ LÚC NÀO.
 
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
+Cha mẹ hoặc người bảo hộ 
+(Ghi rõ họ tên tại đây): ______________________________
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+(Ký tên tại đây): ____________________ 
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Ngày tháng: _______________
 
-Thank you for registering.
+-8<----------------------------- CẮT TẠI ĐÂY ------------------------------
 
-{EMAIL_SIG}
-',
+Sau khi người quản trị nhận được cam kết bên trên thông qua địa chỉ Fax hay Email, tài khoản của bạn sẽ được kích hoạt.
+
+Xin vui lòng đừng quên mật khẩu của bạn bởi vì nó đã được mã hoá trong cơ sở dữ liệu của hệ thống và chúng tôi không thể khôi phục lại nó cho bạn. Tuy nhiên, nếu bạn quên mật khẩu của mình, bạn có thể yêu cầu một mật khẩu mới và cũng cần phải được kích hoạt giống như tài khoản này.
+
+Cám ơn bạn đã đăng ký làm thành viên của chúng tôi!
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - Gửi Email giới thiệu chủ đề
 
-Hello {TO_USERNAME},
+Chào bạn, "{TO_USERNAME}"
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
-
+Email này được gửi đến bạn từ website "{SITENAME}" bởi thành viên "{FROM_USERNAME}" muốn giới thiệu với bạn về chủ đề dưới đây:
 {TOPIC_NAME}
 
-You can find it at:
-
+Bạn có thể xem chủ đề này tại đây:
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Nội dung Email mà "{FROM_USERNAME}" gửi đến bạn được đính kèm bên dưới. Cần lưu ý rằng việc gửi những Email giới thiệu như thế này không cần được xem xét hay chấp nhận bởi quản trị viên của website. Vì thế, nếu bạn cảm thấy bị làm phiền bởi những Email như thế này từ website chúng tôi, hãy liên hệ ngay với người quản trị theo địa chỉ Email dưới đây:
 
-----------
+{BOARD_CONTACT}
 
-{MESSAGE}',
+Hãy nhớ đính kèm bản sao của Email này, đặc biệt là phần tiêu đề Email khi bạn liên hệ với người quản trị qua địa chỉ Email trên.
+
+Nội dung Email gửi cho bạn như sau:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+{MESSAGE}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~',
 ));
 
 
@@ -379,97 +367,91 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Thông báo bài viết mới - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Chào bạn, "{USERNAME}"
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+Bạn nhận được thông báo này vì bạn đã chọn theo dõi chuyên mục "{FORUM_NAME}" trong website "{SITENAME}". Chuyên mục này vừa có một bài viết trả lời mới trong chủ đề "{TOPIC_TITLE}" kể từ lần ghé thăm trước của bạn. Bạn có thể bấm vào liên kết bên dưới để xem chủ đề này, sẽ không có thông báo nào nữa về chủ đề này gửi đến bạn cho đến khi bạn xem qua:
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Nếu bạn muốn xem chủ đề, hãy bấm vào liên kết dưới đây:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Nếu bạn muốn xem chuyên mục, hãy bấm vào liên kết dưới đây:
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
-
+Nếu bạn không muốn theo dõi chuyên mục này nữa, bạn có thể bấm vào liên kết "Ngừng theo dõi chuyên mục này" trong phần xem chuyên mục hay bấm vào liên kết dưới đây:
 {U_STOP_WATCHING_FORUM}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} Bạn đã được thêm vào một nhóm thành viên
 
-Congratulations,
+Xin chúc mừng!
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+Bạn đã được thêm vào làm thành viên của nhóm "{GROUP_NAME}" trong website "{SITENAME}".
+Quyết định này được thực hiện bởi người lãnh đạo của nhóm hoặc người quản trị của website, hãy liên hệ với họ để biết thêm thông tin.
 
-You can view your groups information here:
+Bạn có thể xem thông tin về nhóm của mình tại đây:
 {U_GROUP}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Yêu cầu tham gia vào nhóm của bạn đã được chấp nhận
 
-Congratulations,
+Xin chúc mừng!
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
-
+Yêu cầu tham gia vào nhóm "{GROUP_NAME}" của bạn trong website "{SITENAME}" đã được chấp nhận.
+Hãy bấm vào liên kết bên dưới để xem tư cách thành viên của bạn trong nhóm:
 {U_GROUP}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} Có yêu cầu tham gia vào nhóm của bạn
 
-Dear {USERNAME},
+Chào người điều hành của nhóm, "{USERNAME}"
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
-
+Một thành viên vừa gửi yêu cầu tham gia vào nhóm "{GROUP_NAME}" mà bạn đang điều hành trong website "{SITENAME}".
+Để chấp thuận hay từ chối yêu cầu này về tư cách thành viên trong nhóm, hãy bấm vào liên kết dưới đây:
 {U_PENDING}
 
-{EMAIL_SIG}
-',
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB đã được cài đặt thành công
 
-Congratulations,
+Xin chúc mừng!
 
-You have successfully installed phpBB on your server.
+Bạn đã cài đặt thành công hệ thống phpBB trên máy chủ của mình.
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Email này chứa những thông tin quan trọng trong quá trình cài đặt hệ thống của bạn, vì thế hãy cất giữ Email này an toàn. Mật khẩu đã được mã hoá trong cơ sở dữ liệu của hệ thống và không thể phục hồi lại được, mặc dù bạn có thể yêu cầu một mật khẩu mới nếu bạn lỡ quên mật khẩu hiện tại.
 
-----------------------------
-Username: {USERNAME}
+--------------------------------------------------------
+Tên thành viên: {USERNAME}
+Mật khẩu: {PASSWORD}
 
-Board URL: {U_BOARD}
-----------------------------
+Địa chỉ URL: {U_BOARD}
+--------------------------------------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
+Những thông tin hữu ích về việc cài đặt hệ thống phpBB bạn có thể tìm thấy trong thư mục "docs" của hệ thống hoặc tại trang hỗ trợ của phpBB.com - http://www.phpbb.com/support/
 
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+Ngoài ra, vì lý do giữ cho hệ thống an toàn và bảo mật, chúng tôi khuyến cáo bạn nên kiểm tra thường xuyên những thông tin phát hành về các phiên bản mới nhất của hệ thống bằng cách đăng ký tham gia vào danh sách Email thông báo của chúng tôi được cung cấp tại địa chỉ bên trên. Việc này rất nhanh chóng và dễ dàng.
 
 {EMAIL_SIG}',
 ));
@@ -509,16 +491,14 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} Thông báo chủ đề mới - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Chào bạn, "{USERNAME}"
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
-
+Bạn nhận được thông báo này vì bạn đã chọn theo dõi chuyên mục "{FORUM_NAME}" trong website "{SITENAME}". Chuyên mục này vừa có một chủ đề mới "{TOPIC_TITLE}" kể từ lần ghé thăm trước của bạn. Bạn có thể bấm vào liên kết bên dưới để xem chuyên mục này, sẽ không có thông báo nào nữa về chuyên mục này gửi đến bạn cho đến khi bạn xem qua:
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
-
+Nếu bạn không muốn theo dõi chuyên mục này nữa, bạn có thể bấm vào liên kết "Ngừng theo dõi chuyên mục này" trong phần xem chuyên mục hay bấm vào liên kết dưới đây:
 {U_STOP_WATCHING_FORUM}
 
 {EMAIL_SIG}',
@@ -553,18 +533,17 @@ You are receiving this notification because the report you filed regarding the p
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Bài viết của bạn đã được chấp nhận - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Chào bạn, "{USERNAME}"
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+Bạn nhận được thông báo này bởi vì bài viết của bạn "{POST_SUBJECT}" trong website "{SITENAME}" đã được chấp nhận bởi một điều hành viên hoặc quản trị viên của website.
 
-If you want to view the post, click the following link:
+Nếu bạn muốn xem bài viết, hãy bấm vào liên kết dưới đây:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Nếu bạn muốn xem chủ đề, hãy bấm vào liên kết dưới đây:
 {U_VIEW_TOPIC}
-
 
 {EMAIL_SIG}',
 ));
@@ -572,16 +551,14 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Bài viết của bạn bị từ chối - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Chào bạn, "{USERNAME}"
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Bạn nhận được thông báo này bởi vì bài viết của bạn "{POST_SUBJECT}" trong website "{SITENAME}" đã bị từ chối bởi một điều hành viên hoặc quản trị viên của website.
 
-The following reason was given for the disapproval:
-
+Nguyên nhân bài viết của bạn bị từ chối là:
 {REASON}
-
 
 {EMAIL_SIG}',
 ));
@@ -675,19 +652,17 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} Bạn có tin nhắn mới
 
-Hello {USERNAME},
+Chào bạn, "{USERNAME}"
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
-
+Bạn có một tin nhắn mới được gửi đến từ thành viên "{AUTHOR_NAME}" thông qua tài khoản của bạn trong website "{SITENAME}" với tiêu đề là:
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
-
+Bạn có thể xem nội dung của tin nhắn mới này bằng cách bấm vào liên kết dưới đây:
 {U_INBOX}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+Bạn đã yêu cầu thông báo cho bạn biết về điều này. Hãy nhớ rằng bạn luôn luôn có quyền lựa chọn tắt thông báo này mỗi khi có tin nhắn mới bằng cách thay đổi lại thiết lập cá nhân của mình trong hệ thống.
 
 {EMAIL_SIG}',
 ));
@@ -709,49 +684,46 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+Chào bạn, "{TO_USERNAME}"
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
-
+Dưới đây là Email được gửi đến cho bạn từ thành viên "{FROM_USERNAME}" thông qua tài khoản của bạn trong website "{SITENAME}". Nếu đây là thư rác, lừa đảo hay có nội dung không đúng đắn, bạn có thể liên hệ về điều này với người chủ của website theo địa chỉ Email dưới đây:
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Hãy nhớ đính kèm bản sao của Email này, đặc biệt là phần tiêu đề Email. Lưu ý rằng địa chỉ trả lời của Email này đã được thiết lập lại thành địa chỉ Email của thành viên "{FROM_USERNAME}".
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Nội dung Email gửi cho bạn như sau:
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 {MESSAGE}
-',
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+Chào bạn, "{TO_USERNAME}"
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
-
+Đây là tin nhắn được gửi đến cho bạn từ thành viên "{FROM_USERNAME}" thông qua tài khoản của bạn trong website "{SITENAME}". Nếu đây là thư rác, lừa đảo hay có nội dung không đúng đắn, bạn có thể liên hệ về điều này với người chủ của website theo địa chỉ Email dưới đây:
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Hãy nhớ đính kèm đầy đủ nội dung tin nhắn này. Lưu ý rằng địa chỉ của người gửi tin nhắn đã được thiết lập thành tài khoản tin nhắn nhanh trong website.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Nội dung tin nhắn gửi cho bạn như sau:
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 {MESSAGE}
-',
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Kết thúc báo cáo - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Chào bạn, "{USERNAME}"
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
-
+Bạn nhận được thông báo này vì báo cáo của bạn về bài viết "{POST_SUBJECT}" trong chủ đề "{TOPIC_TITLE}" tại website "{SITENAME}" đã được xử lý bởi một điều hành viên hoặc quản trị viên của website. Báo cáo này đã được kết thúc sau đó. Nếu bạn có bất cứ thắc mắc nào hãy liên hệ ngay với người đã kết thúc báo cáo này "{CLOSER_NAME}" bằng một tin nhắn cá nhân.
 
 {EMAIL_SIG}',
 ));
@@ -759,12 +731,11 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Kết thúc báo cáo - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Chào bạn, "{USERNAME}"
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
-
+Bạn nhận được thông báo này vì báo cáo của bạn về bài viết "{POST_SUBJECT}" trong chủ đề "{TOPIC_TITLE}" tại website "{SITENAME}" đã bị xoá bởi một điều hành viên hoặc quản trị viên của website.
 
 {EMAIL_SIG}',
 ));
@@ -772,56 +743,52 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Chủ đề được chấp nhận - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Chào bạn, "{USERNAME}"
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+Bạn nhận được thông báo này bởi vì chủ đề của bạn "{TOPIC_TITLE}" trong website "{SITENAME}" đã được chấp nhận bởi một điều hành viên hoặc quản trị viên của website.
 
-If you want to view the topic, click the following link:
+Nếu bạn muốn xem chủ đề này, hãy bấm vào liên kết dưới đây:
 {U_VIEW_TOPIC}
 
-
 {EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Chủ đề bị từ chối - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Chào bạn, "{USERNAME}"
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Bạn nhận được thông báo này bởi vì chủ đề của bạn "{TOPIC_TITLE}" trong website "{SITENAME}" đã bị từ chối bởi một điều hành viên hoặc quản trị viên của website.
 
-The following reason was given for the disapproval:
-
+Nguyên nhân chủ đề của bạn bị từ chối là:
 {REASON}
 
-
 {EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Thông báo có bài trả lời mới - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Chào bạn, "{USERNAME}"
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+Bạn nhận được thông báo này bởi vì bạn đã chọn theo dõi chủ đề "{TOPIC_TITLE}" trong website "{SITENAME}". Chủ đề này vừa có một bài trả lời mới kể từ lần ghé thăm trước của bạn. Bạn có thể bấm vào liên kết bên dưới để xem nội dung của bài trả lời và sẽ không có thông báo nào nữa gửi đến cho bạn về chủ đề này cho tới khi bạn đã xem nó:
 
-If you want to view the newest post made since your last visit, click the following link:
+Nếu bạn muốn xem bài viết mới nhất của chủ đề này kể từ lần ghé thăm trước của mình, hãy bấm vào liên kết dưới đây:
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Nếu bạn muốn xem chủ đề, hãy bấm vào liên kết dưới đây:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Nếu bạn muốn xem chuyên mục, hãy bấm vào liên kết dưới đây:
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
-
+Nếu bạn không muốn theo dõi chủ đề này nữa, bạn có thể bấm vào liên kết "Ngừng theo dõi chủ đề này" xuất hiện trong phần xem chủ đề hoặc bấm vào liên kết dưới đây:
 {U_STOP_WATCHING_TOPIC}
 
 {EMAIL_SIG}',
@@ -830,12 +797,11 @@ If you no longer wish to watch this topic you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Kích hoạt lại tài khoản của bạn
 
-Hello {USERNAME},
+Chào bạn, "{USERNAME}"
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
-
+Tài khoản của bạn trong website "{SITENAME}" đã bị ngưng kích hoạt, hầu hết thường gặp trường hợp này khi bạn thay đổi thông tin cá nhân dùng để đăng ký làm thành viên của mình. Để kích hoạt lại tài khoản của mình, bạn phải bấm vào liên kết dưới đây:
 {U_ACTIVATE}
 
 {EMAIL_SIG}',
@@ -844,33 +810,11 @@ Your account on "{SITENAME}" has been deactivated, most likely due to changes ma
 
 
 $email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Tài khoản của bạn đã bị ngưng kích hoạt
 
-Hello {USERNAME},
+Chào bạn, "{USERNAME}"
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
-
-Hello {USERNAME}
-
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
-
-To use the new password you need to activate it. To do this click the link provided below.
-
-{U_ACTIVATE}
-
-If successful you will be able to login using the following password:
-
-Password: {PASSWORD}
-
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+Tài khoản của bạn trong website "{SITENAME}" đã bị ngưng kích hoạt, hầu hết thường gặp trường hợp này khi bạn thay đổi thông tin cá nhân dùng để đăng ký làm thành viên của mình. Người quản trị của website sẽ cần phải kích hoạt lại tài khoản này trước khi bạn có thể sử dụng nó để đăng nhập vào hệ thống. Bạn sẽ được nhận một thông báo khác khi việc kích hoạt hoàn tất.
 
 {EMAIL_SIG}',
 ));
@@ -878,23 +822,44 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} Mật khẩu kích hoạt mới
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+Chào bạn, "{USERNAME}"
 
-Please keep this e-mail for your records. Your account information is as follows:
+Bạn nhận được thông báo này bởi vì chính bạn hoặc một ai đó giả danh bạn đã yêu cầu một mật khẩu mới từ tài khoản thành viên của bạn trong website "{SITENAME}". Nếu đây không phải là yêu cầu của bạn thì hãy quên thông báo này đi và sẽ không có thay đổi nào xảy ra. Bạn cũng có thể liên hệ với người quản trị về việc này.
 
-----------------------------
-Username: {USERNAME}
-----------------------------
-
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
-Please visit the following link to reactivate your account:
-
+Để sử dụng được mật khẩu mới, bạn cần phải kích hoạt nó bằng cách bấm vào liên kết dưới đây:
 {U_ACTIVATE}
 
+Nếu kích hoạt thành công bạn sẽ có thể đăng nhập được vào hệ thống với mật khẩu mới bên dưới:
+
+----------------------------------
+Mật khẩu: {PASSWORD}
+----------------------------------
+
+Bạn có thể chắc chắn thay đổi mật khẩu của mình trong phần thiết lập cá nhân của hệ thống. Nếu bạn gặp bất cứ khó khăn nào, xin đừng ngần ngại liên hệ ngay với người quản trị để được giúp đỡ.
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Kích hoạt lại tài khoản của bạn trong "{SITENAME}" - {U_BOARD}
+
+Một quản trị viên đã yêu cầu bạn phải kích hoạt lại tài khoản của mình. Tài khoản của bạn tạm thời ngưng kích hoạt.
+Bạn hãy vui lòng làm theo những bước dưới đây để kích hoạt lại tài khoản của mình.
+
+Hãy giữ Email này cẩn thận. Thông tin về tài khoản thành viên của bạn như sau:
+
+----------------------------------
+Tên thành viên: {USERNAME}
+----------------------------------
+
+Xin vui lòng đừng quên mật khẩu của bạn bởi vì nó đã được mã hoá trong cơ sở dữ liệu của hệ thống và chúng tôi không thể khôi phục lại nó cho bạn. Tuy nhiên, nếu bạn quên mật khẩu của mình, bạn có thể yêu cầu một mật khẩu mới và cũng cần phải được kích hoạt giống như tài khoản này.
+
+Hãy vui lòng bấm vào liên kết bên dưới để kích hoạt lại tài khoản của bạn:
+{U_ACTIVATE}
 
 {EMAIL_SIG}',
 ));
@@ -1004,15 +969,14 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Nhắc nhở tài khoản chưa kích hoạt
 
-Hello {USERNAME},
+Chào bạn, "{USERNAME}"
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
-
+Vào ngày {REGISTER_DATE}, bạn đã đăng ký một tài khoản thành viên mới trong website "{SITENAME}". Đến bây giờ, bạn vẫn chưa kích hoạt tài khoản này. Bạn phải thực hiện việc kích hoạt tài khoản theo yêu cầu này mới có thể đăng nhập được vào hệ thống. Để thuận tiện, bạn có thể bấm ngay vào liên kết kích hoạt tài khoản của mình dưới đây:
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+Cám ơn bạn đã đăng ký làm thành viên của website "{SITENAME}", chúng tôi đang mong chờ sự tham gia của bạn!
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +984,22 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Chào mừng bạn đã đến với "{SITENAME}" - {U_BOARD}
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Hãy giữ Email này cẩn thận. Thông tin về tài khoản thành viên của bạn như sau:
 
-----------------------------
-Username: {USERNAME}
-----------------------------
+----------------------------------
+Tên thành viên: {USERNAME}
+----------------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Mật khẩu của bạn đã được mã hoá trong cơ sở dữ liệu của hệ thống. Nếu bạn quên mật khẩu của mình, bạn có thể yêu cầu một mật khẩu mới và cũng cần phải được kích hoạt giống như tài khoản này.
 
-Please visit the following link in order to activate your account:
-
+Tài khoản của bạn hiện tại chưa được kích hoạt. Bạn không thể sử dụng tài khoản này để đăng nhập vào hệ thống cho đến khi bạn kích hoạt nó bằng cách bấm vào liên kết dưới đây:
 {U_ACTIVATE}
 
-
-Thank you for registering.
+Cám ơn bạn đã đăng ký làm thành viên của chúng tôi!
 
 {EMAIL_SIG}',
 ));
@@ -1045,21 +1007,20 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Chào mừng bạn đã đến với "{SITENAME}" - {U_BOARD}
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Hãy giữ Email này cẩn thận. Thông tin về tài khoản thành viên của bạn như sau:
 
-----------------------------
-Username: {USERNAME}
+----------------------------------
+Tên thành viên: {USERNAME}
+Mật khẩu: {PASSWORD}
+----------------------------------
 
-Board URL: {U_BOARD}
-----------------------------
+Xin vui lòng đừng quên mật khẩu của bạn bởi vì nó đã được mã hoá trong cơ sở dữ liệu của hệ thống và chúng tôi không thể khôi phục lại nó cho bạn. Tuy nhiên, nếu bạn quên mật khẩu của mình, bạn có thể yêu cầu một mật khẩu mới và cũng cần phải được kích hoạt giống như tài khoản này.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
-
-Thank you for registering.
+Cám ơn bạn đã đăng ký làm thành viên của chúng tôi!
 
 {EMAIL_SIG}',
 ));
@@ -1067,25 +1028,23 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Chào mừng bạn đã đến với "{SITENAME}" - {U_BOARD}
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Hãy giữ Email này cẩn thận. Thông tin về tài khoản thành viên của bạn như sau:
 
-----------------------------
-Username: {USERNAME}
+----------------------------------
+Tên thành viên: {USERNAME}
+Mật khẩu: {PASSWORD}
+----------------------------------
 
-Board URL: {U_BOARD}
-----------------------------
-
-Please visit the following link in order to activate your account:
-
+Tài khoản của bạn hiện tại chưa được kích hoạt. Bạn không thể sử dụng tài khoản này để đăng nhập vào hệ thống cho đến khi bạn kích hoạt nó bằng cách bấm vào liên kết dưới đây:
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Xin vui lòng đừng quên mật khẩu của bạn bởi vì nó đã được mã hoá trong cơ sở dữ liệu của hệ thống và chúng tôi không thể khôi phục lại nó cho bạn. Tuy nhiên, nếu bạn quên mật khẩu của mình, bạn có thể yêu cầu một mật khẩu mới và cũng cần phải được kích hoạt giống như tài khoản này.
 
-Thank you for registering.
+Cám ơn bạn đã đăng ký làm thành viên của chúng tôi!
 
 {EMAIL_SIG}',
 ));

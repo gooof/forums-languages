@@ -1,16 +1,16 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Kullanıcı hesabı aktifleştirme
 
-Hello,
+Merhaba,
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+"{USERNAME}" kullanıcı adı deaktif edildi veya yeni oluşturuldu. Bu kullanıcı hakkındaki bilgileri (eğer gerekiyorsa) kontrol etmelisiniz ve uygun olanı yapmalısınız.
 
-Use this link to view the user\'s profile:
+Bu bağlantıyı kullanarak kullanıcının profilini görüntüleyin:
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+Bu bağlantıyı kullanarak hesabı aktifleştirin:
 {U_ACTIVATE}
 
 
@@ -21,14 +21,12 @@ Use this link to activate the account:
 
 $email = array_merge($email, array(
 	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Aşağıdaki e-posta size "{SITENAME}" yöneticisi tarafından gönderildi. Eğer bu e-postanın spam olduğunu düşünüyorsanız veya içeriğinden rahatsız olduysanız lütfen alttaki e-posta adresini kullanarak mesaj panosunun webmasterı ile iletişime geçin:
 
 {CONTACT_EMAIL}
 
-Include this full e-mail (particularly the headers). 
-
-Message sent to you follows:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Size gönderilen e-posta:
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
@@ -40,13 +38,13 @@ Message sent to you follows:
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Hesap aktif edilmiştir
 
-Hello {USERNAME},
+Merhaba {USERNAME},
 
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
+"{SITENAME}" mesaj panosunda bulunan hesabınız bir yönetici tarafından aktif edildi, şimdi giriş yapabilirsiniz.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Şifreniz veritabanımızda güvenli bir şekilde saklanmaktadır ve ele geçirilemeyecek durumdadır. Eğer şifrenizi unutursanız, hesabınız ile tanımlı olan e-posta adresinizi kullanarak şifrenizi sıfırlayabilirsiniz.
 
 {EMAIL_SIG}',
 ));
@@ -54,23 +52,22 @@ Your password has been securely stored in our database and cannot be retrieved. 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" mesaj panosuna hoşgeldiniz
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Lütfen bu e-postayı saklayın. Kullanıcı bilgileriniz aşağıda bulunmaktadır:
 
 ----------------------------
-Username: {USERNAME}
-
-Board URL: {U_BOARD}
+Kullanıcı adı: {USERNAME}
+Mesaj panosu URL adresi: {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+Hesabınız şu an pasif durumdadır ve giriş yapabilmeniz için önce bir yönetici tarafından onaylanması gerekmektedir. Onay işlemi gerçekleştiğinde e-posta ile tekrar bilgilendirileceksiniz.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Şifreniz veritabanımızda güvenli bir şekilde saklanmaktadır ve ele geçirilemeyecek durumdadır. Eğer şifrenizi unutursanız, hesabınız ile tanımlı olan e-posta adresinizi kullanarak şifrenizi sıfırlayabilirsiniz.
 
-Thank you for registering.
+Üye olduğunuz için teşekkürler.
 
 {EMAIL_SIG}',
 ));
@@ -213,115 +210,113 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" forumlarına hoşgeldiniz
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+COPPA ilkelerine göre, hesabınız şu anda aktif değildir.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Lütfen bu mesajı yazdırın ve ailenize ya da velinize tarihi yazarak imzalatın. Daha sonra şuraya fakslayın:
 
 {FAX_INFO}
 
-OR mail it to:
+Veya e-posta gönderin:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ BURADAN KESINIZ ------------------------------
+"{SITENAME}" - {U_BOARD} katılma izni
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Kullanıcı adı: {USERNAME}
+E-posta: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
-
-
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
+"{SITENAME}" HAKKINDAKİ BİLGİLERİ ALDIM VE ADI GEÇEN KİŞİNİN ÜYELİĞİNİ ONAYLIYORUM.
+BU BİLGİLERİN HERHANGİ BİR ZAMANDA ŞİFRE VE KULLANICI ADI GİRİLEREK DEĞİŞTİRİLEBİLECEĞİNİ KABUL EDİYORUM.
+"{SITENAME}" SİTESİNİN İSTEDİĞİ ZAMAN BU BİLGİLERİ BENDEN TALEP EDEBİLECEĞİNİ KABUL EDİYORUM.
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Aile veya Sorumlunun
+(Adı): _____________________
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+(İmzası): __________________ 
 
-Thank you for registering.
+Tarih: _______________
 
-{EMAIL_SIG}
-',
+------------------------------ BURADAN KESINIZ ------------------------------
+
+
+Mesaj panosu yöneticisi üstteki formu faks ya da normal posta yoluyla aldıktan sonra, hesabınız aktifleştirilecektir.
+
+Şifreniz veritabanımızda güvenli bir şekilde saklanmaktadır ve ele geçirilemeyecek durumdadır. Eğer şifrenizi unutursanız, hesabınız ile tanımlı olan e-posta adresinizi kullanarak şifrenizi sıfırlayabilirsiniz.
+
+Kayıt olduğunuz için teşekkürler.
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" forumlarına hoşgeldiniz
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+COPPA ilkelerine göre, hesabınız şu anda aktif değildir.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Lütfen bu mesajı yazdırın ve ailenize ya da velinize tarihi yazarak imzalatın. Daha sonra şuraya fakslayın:
 
 {FAX_INFO}
 
-OR mail it to:
+Veya e-posta gönderin:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ BURADAN KESİNİZ ------------------------------
+"{SITENAME}" - {U_BOARD} katılma izni
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Kullanıcı adı: {USERNAME}
+E-posta: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
-
-
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
+"{SITENAME}" HAKKINDAKİ BİLGİLERİ ALDIM VE ADI GEÇEN KİŞİNİN ÜYELİĞİNİ ONAYLIYORUM.
+BU BİLGİLERİN HERHANGİ BİR ZAMANDA ŞİFRE VE KULLANICI ADI GİRİLEREK DEĞİŞTİRİLEBİLECEĞİNİ KABUL EDİYORUM.
+"{SITENAME}" SİTESİNİN İSTEDİĞİ ZAMAN BU BİLGİLERİ BENDEN TALEP EDEBİLECEĞİNİ KABUL EDİYORUM.
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Aile veya Sorumlunun
+(Adı): _____________________
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+(İmzası): __________________ 
 
-Thank you for registering.
+Tarih: _______________
 
-{EMAIL_SIG}
-',
+------------------------------ BURADAN KESİNİZ ------------------------------
+
+
+Mesaj panosu yöneticisi üstteki formu faks ya da normal posta yoluyla aldıktan sonra, hesabınız aktifleştirilecektir.
+
+Şifreniz veritabanımızda güvenli bir şekilde saklanmaktadır ve ele geçirilemeyecek durumdadır. Eğer şifrenizi unutursanız, hesabınız ile tanımlı olan e-posta adresinizi kullanarak şifrenizi sıfırlayabilirsiniz.
+
+Üye olduğunuz için teşekkürler.
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - Bir arkadaş e-postası
 
-Hello {TO_USERNAME},
+Merhaba {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Bu e-posta size "{SITENAME}" mesaj panosunda kayıtlı olan {FROM_USERNAME} kullanıcısı tarafından gönderildi, alttaki başlığın ilginizi çekebileceğini düşünüyor:
 
 {TOPIC_NAME}
 
-You can find it at:
+Buradan inceleyebilirsiniz:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+{FROM_USERNAME} kullanıcısı tarafından aşağıdaki bölüme bir mesaj eklenmiş olabilir. Not: Bu mesaj yöneticiler tarafından görüntülenemez veya onaylanamaz. Eğer bu mesajın içeriğinden rahatsız olduysanız lütfen {BOARD_CONTACT} adresinden mesaj panosu yöneticileri ile iletişime geçin. Bu adresle iletişime geçeceğiniz zaman lütfen bu mesajı alıntı yapın.
 
 ----------
 
@@ -379,21 +374,21 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum mesaj bildirisi - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Merhaba {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+Bu bildiriyi alıyorsunuz çünkü "{SITENAME}" mesaj panosunda "{FORUM_NAME}" isimli forumu takip ediyorsunuz. Bu forumdaki "{TOPIC_TITLE}" başlığına son ziyaretinizden sonra yeni cevaplar geldi. Alttaki bağlantıyı kullanarak son okunmamış cevabı görüntüleyebilirsiniz, başlığı ziyaret edene kadar daha fazla bildiri gönderilmeyecektir.
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Eğer başlığı görüntülemek istiyorsanız, alttaki bağlantıya tıklayın:
 {U_TOPIC}
-
-If you want to view the forum, click the following link:
+ 
+Eğer forumu görüntülemek istiyorsanız, alttaki bağlantıya tıklayın:
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Eğer bu forumu takip etmek istemiyorsanız forum içerisindeki "Bu foruma abone olmayı bırak" bağlantısını bulup kullanabilirsiniz, veya alttaki bağlantıya tıklayabilirsiniz:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -404,14 +399,14 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} Bu kullanıcı grubuna eklendiniz
 
-Congratulations,
+Tebrikler,
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+"{SITENAME}" mesaj panosunda bulunan "{GROUP_NAME}" grubuna eklendiniz.
+Bu eylem, bir grup lideri veya mesaj panosu yöneticisi tarafından yapılmış olabilir, daha fazla bilgi için onlarla iletişime geçin.
 
-You can view your groups information here:
+Grup bilgilerini buradan görüntüleyebilirsiniz:
 {U_GROUP}
 
 {EMAIL_SIG}
@@ -421,12 +416,12 @@ You can view your groups information here:
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Başvurunuz onaylandı
 
-Congratulations,
+Tebrikler,
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+"{SITENAME}" mesaj panosunda bulunan "{GROUP_NAME}" grubuna katılım isteğiniz onaylandı.
+Aşağıdaki bağlantıya tıklayarak grup üyeliğinizi inceleyebilirsiniz.
 
 {U_GROUP}
 
@@ -437,12 +432,12 @@ Click on the following link to see your group membership.
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} Grubunuza katılım için bir istek yapıldı
 
-Dear {USERNAME},
+Değerli {USERNAME},
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+"{SITENAME}" mesaj panosunda bulunan "{REQUEST_USERNAME}" adlı kullanıcı, yöneticisi olduğunuz "{GROUP_NAME}" grubuna katılmak istiyor.
+Grup üyeliğini onaylamak veya reddetmek için lütfen aşağıdaki bağlantıyı ziyaret edin:
 
 {U_PENDING}
 
@@ -453,23 +448,23 @@ To approve or deny this request for group membership please visit the following 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB yüklendi
 
-Congratulations,
+Tebrikler,
 
-You have successfully installed phpBB on your server.
+phpBB\'yi sunucunuza başarıyla yüklediniz.
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Bu e-posta kurulumunuz hakkında önemli bilgiler içermektedir ve gerektiğinde başvurma açısından saklanmalıdır. Şifreniz veritabanımızda güvenli bir şekilde saklanmaktadır ve ele geçirilemeyecek durumdadır. Eğer şifrenizi unutursanız, hesabınız ile tanımlı olan e-posta adresinizi kullanarak şifrenizi sıfırlayabilirsiniz.
 
 ----------------------------
-Username: {USERNAME}
+Kullanıcı adı: {USERNAME}
 
-Board URL: {U_BOARD}
+Mesaj Panosu URL adresi: {U_BOARD}
 ----------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
+phpBB yazılımı hakkında ihtiyacınız olabilecek bilgilere kurulumunuz içerisindeki docs klasöründen ve phpBB.com\'un destek sayfasından ulaşabilirsiniz. - http://www.phpbb.com/support/
 
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+Mesaj panonuzu güvende ve emniyette tutmanız için, yazılım güncelleme duyurularını takip etmenizi kesinlikle öneririz. Size yardımcı olması için, sayfanın altındaki e-posta listesini kullanabilirsiniz.
 
 {EMAIL_SIG}',
 ));
@@ -509,15 +504,15 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} Yeni başlık bildirisi - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Merhaba {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+Bu bildiriyi alıyorsunuz çünkü "{SITENAME}" mesaj panosunda "{FORUM_NAME}" isimli forumu takip ediyorsunuz. Bu forumda son ziyaretinizden sonra "{TOPIC_TITLE}" isimli yeni bir başlık açıldı. Alttaki bağlantıyı kullanarak bu forumu görüntüleyebilirsiniz, forumu ziyaret edene kadar daha fazla bildiri gönderilmeyecektir.
 
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Eğer bu forumu takip etmek istemiyorsanız forum içerisindeki "Bu foruma abone olmayı bırak" bağlantısını bulup kullanabilirsiniz, veya alttaki bağlantıya tıklayabilirsiniz:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -527,24 +522,11 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{PM_SUBJECT}"
+	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Bildiri kapatıldı - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+Merhaba {USERNAME},
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed. If you have further questions, please contact {CLOSER_NAME} by private message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{PM_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
+Bu bildiriyi alıyorsunuz çünkü "{SITENAME}" mesaj panosunda bildiri yaptığınız "{PM_SUBJECT}" başlıklı özel mesaj bir moderatör ya da yönetici tarafından incelendi. Bildiri şimdi kapatıldı. Eğer daha fazla sorunuz varsa, lütfen {CLOSER_NAME} kullanıcı adı ile özel mesaj yoluyla iletişime geçin.
 
 
 {EMAIL_SIG}',
@@ -553,16 +535,29 @@ You are receiving this notification because the report you filed regarding the p
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Bildiri silindi - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+Merhaba {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+Bu bildiriyi alıyorsunuz çünkü "{SITENAME}" mesaj panosunda bildiri yaptığınız "{PM_SUBJECT}" başlıklı özel mesaj bir moderatör ya da yönetici tarafından silindi.
 
-If you want to view the post, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Mesaj Onaylandı - "{POST_SUBJECT}"
+
+Merhaba {USERNAME},
+
+Bu bildiriyi alıyorsunuz çünkü "{SITENAME}" mesaj panosunda bulunan "{POST_SUBJECT}" başlıklı mesajınız bir moderatör veya yönetici tarafından onaylandı.
+
+Eğer mesajı görüntülemek istiyorsanız alttaki bağlantıya tıklayın:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Eğer başlığı görüntülemek istiyorsanız alttaki bağlantıya tıklayın:
 {U_VIEW_TOPIC}
 
 
@@ -572,13 +567,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Mesaj Onaylanmadı - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Merhaba {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Bu bildiriyi alıyorsunuz çünkü "{SITENAME}" mesaj panosunda bulunan "{POST_SUBJECT}" başlıklı mesajınız bir moderatör veya yönetici tarafından onaylanmadı.
 
-The following reason was given for the disapproval:
+Alttaki verilen sebepten dolayı onaylanmamıştır:
 
 {REASON}
 
@@ -675,19 +670,19 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} Yeni özel mesaj alındı
 
-Hello {USERNAME},
+Merhaba {USERNAME},
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+"{SITENAME}" mesaj panosundaki hesabınıza "{AUTHOR_NAME}" tarafından alttaki başlık altında gönderilen yeni bir özel mesaj aldınız:
 
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+Yeni mesajınızı alttaki bağlantıya tıklayarak görüntüleyebilirsiniz:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+Unutmayın ki uyarılma seçeneğini profilinizden istediğiniz zaman kapatabilirsiniz.
 
 {EMAIL_SIG}',
 ));
@@ -709,16 +704,16 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+Merhaba {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Bu e-posta size {FROM_USERNAME} tarafından "{SITENAME}" mesaj panosunda bulunan hesabınız aracılığı ile gönderildi. Eğer bu e-postanın spam olduğunu düşünüyorsanız veya içeriğinden rahatsız olduysanız lütfen alttaki e-posta adresiyle iletişime geçin.
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Bu e-posta size {FROM_USERNAME} tarafından gönderildi.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Alttaki mesaj size gönderildi:
+~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 ',
@@ -728,15 +723,15 @@ Message sent to you follows
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+Merhaba {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Bu e-posta size {FROM_USERNAME} tarafından "{SITENAME}" mesaj panosunda bulunan hesabınız aracılığı ile gönderildi. Eğer bu e-postanın spam olduğunu düşünüyorsanız veya içeriğinden rahatsız olduysanız lütfen alttaki e-posta adresiyle iletişime geçin.
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Not: Gönderici adresi mesaj panosunda bulunan IM hesabına (yahoo, icq, msn v.b.) göre ayarlandı.
 
-Message sent to you follows
+Alttaki mesaj size gönderildi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -746,24 +741,11 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Bildiri Kapatıldı - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Merhaba {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
+Bu bildiriyi alıyorsunuz çünkü "{SITENAME}" mesaj panosunda bulunan "{TOPIC_TITLE}" isimli başlıktaki "{POST_SUBJECT}" isimli mesaja yaptığınız bildiri bir moderatör veya yönetici tarafından incelendi. Bildiri daha sonra kapatıldı. Eğer başka sorunuz varsa {CLOSER_NAME} ile özel mesaj yoluyla iletişime geçin.
 
 
 {EMAIL_SIG}',
@@ -772,13 +754,26 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Bildiri silindi - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Merhaba {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+Bu bildiriyi alıyorsunuz çünkü "{SITENAME}" mesaj panosunda bulunan "{TOPIC_TITLE}" isimli başlıktaki "{POST_SUBJECT}" isimli mesaja yaptığınız bildiri bir moderatör veya yönetici tarafından silindi.
 
-If you want to view the topic, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Başlık onaylandı - "{TOPIC_TITLE}"
+
+Merhaba {USERNAME},
+
+Bu e-postayı alıyorsunuz çünkü "{SITENAME}" mesaj panosunda bulunan "{TOPIC_TITLE}" isimli başlığınız bir moderatör veya yönetici tarafından onaylandı.
+
+Eğer başlığı görüntülemek istiyorsanız, alttaki bağlantıya tıklayınız:
 {U_VIEW_TOPIC}
 
 
@@ -788,13 +783,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Başlık onaylanmadı - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Merhaba {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Bu bildiriyi alıyorsunuz çünkü "{SITENAME}" mesaj panosunda bulunan "{TOPIC_TITLE}" isimli başlığınız bir moderatör veya yönetici tarafından onaylanmadı.
 
-The following reason was given for the disapproval:
+Alttaki verilen sebepten dolayı onaylanmamıştır:
 
 {REASON}
 
@@ -805,22 +800,22 @@ The following reason was given for the disapproval:
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Başlık Cevap Bildirisi - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Merhaba {USERNAME},
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+Bu bildiriyi alıyorsunuz çünkü "{SITENAME}" mesaj panosundaki "{TOPIC_TITLE}" isimli başlığı takip ediyorsunuz. Bu başlığa son ziyaretinizden beri yeni bir cevap geldi. Alttaki bağlantıyı kullanarak verilen cevapları görüntüleyebilirsiniz, siz başlığı ziyaret edene kadar daha fazla bildiri gönderilmeyecektir.
 
-If you want to view the newest post made since your last visit, click the following link:
+Eğer son ziyaretinizden beri gelen yeni mesajı görüntülemek istiyorsanız, alttaki bağlantıya tıklayın:
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Eğer başlığı görüntülemek istiyorsanız, alttaki bağlantıya tıklayın:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Eğer forumu görüntülemek istiyorsanız, alttaki bağlantıya tıklayın:
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+Eğer bu başlığı takip etmek istemiyorsanız başlığın altındaki "Bu başlığa abone olmayı bırak" bağlantısını bulup kullanabilirsiniz, ya da alttaki bağlantıya tıklayabilirsiniz:
 
 {U_STOP_WATCHING_TOPIC}
 
@@ -830,47 +825,25 @@ If you no longer wish to watch this topic you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Hesabınızı yeniden aktif edin
 
-Hello {USERNAME},
+Merhaba {USERNAME},
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
-
-{U_ACTIVATE}
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
-
-Hello {USERNAME}
-
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
-
-To use the new password you need to activate it. To do this click the link provided below.
+"{SITENAME}" mesaj panosunda bulunan hesabınız aktif değil. Bu, genellikle profil değişikliklerinde olur. Hesabınızı aktif etmek için lütfen alttaki bağlantıya tıklayın: 
 
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+{EMAIL_SIG}',
+));
 
-Password: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+
+$email = array_merge($email, array(
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Hesabınızı deaktif edildi
+
+Merhaba {USERNAME},
+
+"{SITENAME}" mesaj panosunda bulunan hesabınız aktif değil, bu genellikle profil değişikliklerinde olur. Giriş yapmadan önce mesaj panosu yöneticisinin hesabınızı aktif hale getirmesi gerekiyor. Bu işlem yapıldığı zaman başka bir bildiri alacaksınız.
 
 {EMAIL_SIG}',
 ));
@@ -878,20 +851,42 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} Yeni şifre aktivasyonu
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+Merhaba {USERNAME}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Bu bildiriyi aldınız çünkü "{SITENAME}" mesaj panosunda bulunan hesabınızdan yeni şifre gönderilmesi için istekte bulunuldu. Eğer siz istemediyseniz lütfen mesaj panosu yöneticileriyle iletişime geçin ve bu bildiriyi yoksayın.
+
+Yeni şifrenizi kullanmak için hesabınızı aktif etmeniz gerekmektedir.Lütfen ilk önce alttaki bağlantıya tıklayarak hesabınızı aktif edin.
+
+{U_ACTIVATE}
+
+Yeni şifreniz ile giriş yapabilirsiniz:
+
+Şifre: {PASSWORD}
+
+Şifrenizi profilinizden değiştirebilirsiniz. Herhangi bir zorlukla karşılaşırsanız mesaj panosu yöneticileriyle iletişime geçebilirsiniz.
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" mesaj panosunda hesabınızın yeniden aktivasyonu
+
+Bir mesaj panosu yöneticisi, hesabınızın yeniden aktivasyon edilmesini istiyor. Hesabınız şu anda aktif değil.
+Hesabınızı yeniden aktif etmek için lütfen burada listelenen adımları takip edin.
+
+Lütfen bu e-postayı kayıtlarınızda saklayın. Hesap bilginiz alttaki gibidir:
 
 ----------------------------
-Username: {USERNAME}
+Kullanıcı adı: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Şifreniz veritabanımızda güvenli bir şekilde saklanmaktadır ve ele geçirilemeyecek durumdadır. Eğer şifrenizi unutursanız, hesabınız ile tanımlı olan e-posta adresinizi kullanarak şifrenizi sıfırlayabilirsiniz.
 
-Please visit the following link to reactivate your account:
+Hesabınızı yeniden aktif etmek için lütfen alttaki bağlantıyı ziyaret edin:
 
 {U_ACTIVATE}
 
@@ -1004,15 +999,15 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Aktif olmayan hesap hatırlatıcı
 
-Hello {USERNAME},
+Merhaba {USERNAME},
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+Bu bildiri "{SITENAME}" sitesinde, {REGISTER_DATE} tarihinde oluşturulmuş, aktif olmayan hesabınız için bir hatırlatıcı niteliğindedir. Eğer hesabınızı aktif hale getirmek istiyorsanız, lütfen alttaki bağlantıyı ziyaret edin:
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+"{SITENAME}" mesaj panosuna kayıt olduğunuz için teşekkür ederiz, katılımlarınızı bekliyoruz.
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +1015,24 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" forumlarına hoşgeldiniz
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Lütfen bu e-postayı saklayın. Kullanıcı bilginiz altta bulunmaktadır:
 
 ----------------------------
-Username: {USERNAME}
+Kullanıcı adı: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Şifreniz veritabanımızda güvenli bir şekilde saklanmaktadır ve ele geçirilemeyecek durumdadır. Eğer şifrenizi unutursanız, hesabınız ile tanımlı olan e-posta adresinizi kullanarak şifrenizi sıfırlayabilirsiniz.
 
-Please visit the following link in order to activate your account:
+Hesabınızı aktif hale getirmek için lütfen alttaki bağlantıyı ziyaret edin:
 
 {U_ACTIVATE}
 
 
-Thank you for registering.
+Kayıt olduğunuz için teşekkürler.
 
 {EMAIL_SIG}',
 ));
@@ -1045,21 +1040,20 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" mesaj panosuna hoşgeldiniz
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Lütfen bu e-postayı saklayınız. Kullanıcı bilgileriniz altta bulunmaktadır:
 
 ----------------------------
-Username: {USERNAME}
-
-Board URL: {U_BOARD}
+Kullanıcı adı: {USERNAME}
+Mesaj panosu URL adresi: {U_BOARD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Şifreniz veritabanımızda güvenli bir şekilde saklanmaktadır ve ele geçirilemeyecek durumdadır. Eğer şifrenizi unutursanız, hesabınız ile tanımlı olan e-posta adresinizi kullanarak şifrenizi sıfırlayabilirsiniz.
 
-Thank you for registering.
+Kayıt olduğunuz için teşekkür ederiz.
 
 {EMAIL_SIG}',
 ));
@@ -1067,25 +1061,24 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" mesaj panosuna hoşgeldiniz
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Lütfen bu e-postayı saklayın. Kullanıcı bilgileriniz altta bulunmaktadır:
 
 ----------------------------
-Username: {USERNAME}
-
-Board URL: {U_BOARD}
+Kullanıcı adı: {USERNAME}
+Mesaj panosu URL adresi: {U_BOARD}
 ----------------------------
 
-Please visit the following link in order to activate your account:
+Hesabınızı aktif hale getirmek için lütfen alttaki bağlantıyı ziyaret edin:
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Şifreniz veritabanımızda güvenli bir şekilde saklanmaktadır ve ele geçirilemeyecek durumdadır. Eğer şifrenizi unutursanız, hesabınız ile tanımlı olan e-posta adresinizi kullanarak şifrenizi sıfırlayabilirsiniz.
 
-Thank you for registering.
+Kayıt olduğunuz için teşekkür ederiz.
 
 {EMAIL_SIG}',
 ));

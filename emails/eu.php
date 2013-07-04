@@ -1,16 +1,16 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Erabiltzaile kontua gaitu.
 
-Hello,
+Kaixo,
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+"{USERNAME}"(r)en kontua ezgaitua edo berriki sortua izan da, erabiltzaile honen xehetasunak aztertu (beharrezkoa baldin bada) eta dagokion moduan kudeatu beharko zenuke.
 
-Use this link to view the user\'s profile:
+Lotura hau jarrai ezazu erabiltzailearen profila ikusteko:
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+Lotura hau jarrai ezazu kontua gaitzeko:
 {U_ACTIVATE}
 
 
@@ -21,14 +21,14 @@ Use this link to activate the account:
 
 $email = array_merge($email, array(
 	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Hurrengo hau "{SITENAME}"(e)ko administratzaileren batek bidalitako mezua duzu. Mezu hau spamtzat, edo komentario gehiegizko edo/eta irangarriak dituela baderitxozu, mesedez jar zaitez foroaren webmasterrarekin kontaktuan hurrengo helbidean: 
 
 {CONTACT_EMAIL}
 
-Include this full e-mail (particularly the headers). 
+E-mail hau osoan erantsi (batez ere goiburuak (headerrak))
 
-Message sent to you follows:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Bidalitako mezua:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
@@ -40,13 +40,13 @@ Message sent to you follows:
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
+	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Kontua gaituta
 
-Hello {USERNAME},
+Kaixo {USERNAME},
 
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
+Administradoreren batek zure kontua "{SITENAME}"(e)n gaitu egin du, bertara konektatu zaitezke orain.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Pasahitza era seguruan gorde da gure datubaseetan eta ezin da berriro lortu. Ahazten baldin baduzu, helbide elektronikoa erabiliz ezarri zenezake berria.
 
 {EMAIL_SIG}',
 ));
@@ -54,23 +54,24 @@ Your password has been securely stored in our database and cannot be retrieved. 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Ongietorria "{SITENAME}"(e)ra
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Mesedez, gorde ezazu mezu hau gerorako, zure kontuari buruzko informazioa bait du. Zure kontua: 
 
 ----------------------------
-Username: {USERNAME}
+Erabitzaile izena: {USERNAME}
+
 
 Board URL: {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+Zure kontua oraingoz ezgaituta dago, foroko administrariek gaitu beharko dute bertan izena eman dezazun. Beste e-mail mezu bat jasoko duzu hau gertatzerakoan.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Gogoratu zure pasahitza datubasean gorde dela era seguruan eta ezin dela bertatik berreskuratu. Dena dela, ahaztu egiten baldin baduzu, kontu hau gaitu den era berean gaituko den pasahitz berria eskatu zenezake.
 
-Thank you for registering.
+Eskerrik asko izena emateagatik.
 
 {EMAIL_SIG}',
 ));
@@ -213,13 +214,13 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}" 
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+In compliance with the COPPA act your account is currently inactive.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Please print this message out and have your parent or guardian sign and date it. Then fax it to:
 
 {FAX_INFO}
 
@@ -228,10 +229,10 @@ OR mail it to:
 {MAIL_INFO}
 
 ------------------------------ CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+Permission to participate at "{SITENAME}"
 
 Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Email: {EMAIL_ADDRESS}
 
 I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
 I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
@@ -248,9 +249,9 @@ Date: _______________
 ------------------------------ CUT HERE ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Once the administrator has received the above form via fax or regular mail your account will be activated.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Please do not forget your password as it has been encrypted in our database and we cannot retrieve it for you. However, should you forget your password you can request a new one which will be activated in the same way as this account.
 
 Thank you for registering.
 
@@ -261,13 +262,13 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}" 
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+In compliance with the COPPA act your account is currently inactive.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Please print this message out and have your parent or guardian sign and date it. Then fax it to:
 
 {FAX_INFO}
 
@@ -276,10 +277,11 @@ OR mail it to:
 {MAIL_INFO}
 
 ------------------------------ CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+Permission to participate at "{SITENAME}"
 
 Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+
+Email: {EMAIL_ADDRESS}
 
 I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
 I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
@@ -296,9 +298,9 @@ Date: _______________
 ------------------------------ CUT HERE ------------------------------
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Once the administrator has received the above form via fax or regular mail your account will be activated.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Please do not forget your password as it has been encrypted in our database and we cannot retrieve it for you. However, should you forget your password you can request a new one which will be activated in the same way as this account.
 
 Thank you for registering.
 
@@ -309,19 +311,19 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-maila lagun bati
 
-Hello {TO_USERNAME},
+Kaixo {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Mezu hau "{SITENAME}"(e)tik bidalia izan da {FROM_USERNAME}(e)gaitik hurrengo gaia interesatuko litzaizukelakoan:
 
 {TOPIC_NAME}
 
-You can find it at:
+Hemen ikusi zenezake:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Behekaldean {FROM_USERNAME}(r)en mezua ere egon daiteke. Mesedez, izan kontuan mezu hau ez dutela foroko administrariek onartu ezta irakurri ere. Mezu hau jasotzeari buruzko kexarik baldin baduzu, jar zaitez, mesedez, foroko administrariekin kontaktuan helbide honetan {BOARD_CONTACT}. Azpimarra itzazu mezu honen goiburuak (headerrak) helbide honetara joz gero.
 
 ----------
 
@@ -379,21 +381,21 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Mezu berria foroan - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Kaixo {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+"{SITENAME}"(e)ko "{FORUM_NAME}" forora harpidetuta zaudenez, zure azkeneko bisitatik hona "{TOPIC_TITLE}" gaiak mezu barriren bat duela jakinarazi nahi dizugu. Hurrengo lotura jarraituz, irakurrigabeko azkeneko erantzuna ikusi zenezake. Ez zaizu jakinarazpen gehiagorik bidaliko gaia bisitatu dezazun arte.
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Gaia ikusi nahi baduzu, jarrai ezazu hurrengo lotura:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Foroa ikusi nahi baduzu, jarrai ezazu hurrengo lotura:
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Ez baldin baduzu foroa gehiago jarraitu nahi "Foroaren harpidetza ezeztatu" loturan klikatu edo hurrengo lotura hau jarraitu:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -404,14 +406,14 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} Erabiltzaile talde honetara gehitu zaizu
 
-Congratulations,
+Zorionak,
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+"{SITENAME}"(e)ko "{GROUP_NAME}" taldera gehitua izan zara. 
+Ekintza hau taldeko erantzuleren batek edo foroko administrariren batek burutu du. Jar zaitez beraiekin harremanetan informazio gehiago nahi izanez gero.
 
-You can view your groups information here:
+Zure taldeetako informazioa ikusteko: 
 {U_GROUP}
 
 {EMAIL_SIG}
@@ -421,12 +423,12 @@ You can view your groups information here:
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Eskaera onartu zaizu
 
-Congratulations,
+Zorionak,
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+"{SITENAME}"(e)ko "{GROUP_NAME}" taldean sartzeko egin duzun eskaera onartu egin da. 
+Jarrai ezazu hurrengo lotura zure taldeko kidetza ikusteko:
 
 {U_GROUP}
 
@@ -437,12 +439,12 @@ Click on the following link to see your group membership.
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '{EMAILSUBJECT:} Zure taldeko kide izateko eskaera sortu da
 
-Dear {USERNAME},
+{USERNAME},
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+"{REQUEST_USERNAME}" erabiltzaileak "{SITENAME}"(e)n moderatzen duzun "{GROUP_NAME}" taldean sartzeko eskaera egin du. 
+Eskaera hau onartu edo ukatzeko, jarrai ezazu hurrengo lotura:
 
 {U_PENDING}
 
@@ -453,23 +455,24 @@ To approve or deny this request for group membership please visit the following 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB instalaturik
 
-Congratulations,
+Zorionak,
 
-You have successfully installed phpBB on your server.
+Phpbb zuzen instalatu egin da zure zerbitzarian.
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+E-mail mezu honek instalatu berri duzun foroari buruzko informazio garrantzitsua du. Pasahitza datubasean enkriptatu egin da eta ezinezkoa da berreskuratzea. Dena dela, pasahitza berria eskatu zenezake eta beste honelako mezu bat bidaliko zaizu.
 
 ----------------------------
-Username: {USERNAME}
+Erabiltzaile izena: {USERNAME}
 
-Board URL: {U_BOARD}
+
+Foroko URLa: {U_BOARD}
 ----------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
+Zure phpBB instalazioari buruzko informazio erabilgarria docs karpetan edota phpBB.com - http://www.phpbb.com/support/ euskarri orrian (ingelesez) aurkitu zenezake.
 
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+Foroa salbu eta seguru mantentzearren, azkenengo bertsioarekin eguneratuta mantendu dezazula gomendatzen dizugu biziki. Goikaldean duzun URLan aurkituko duzun korreo zerrendara harpidetuz errazago ezagutu zenitzake azkeneko eguneraketak.
 
 {EMAIL_SIG}',
 ));
@@ -509,15 +512,15 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} Gai berriaren jakinarazpena - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Kaixo {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+Jakinarazpen hau jaso duzu "{SITENAME}"(e)ko "{FORUM_NAME}" foroa jarraitzen zaudelako. Foro honek gai berria jaso du zure azkeneko bisitatik hona, "{TOPIC_TITLE}". Hurrengo lotura erabili zenezake foroa ikusteko. Ez zaizu jakinarazpen gehiagorik bidaliko foroa bisitatu dezazun arte. 
 
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Ez baduzu foro hau gehiago jarraitu nahi "Forora harpidetza ezeztatu" loturan klikatu zenezake bertan zaudenean edota lotura hau jarraituz:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -527,24 +530,13 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{PM_SUBJECT}"
+	'email/pm_report_closed.txt' 		=> 'Gaia: "{PM_SUBJECT}"(e)ri buruzko ohartarazpena itxi da
 
-Hello {USERNAME},
+Kaixo {USERNAME},
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed. If you have further questions, please contact {CLOSER_NAME} by private message.
+"{SITENAME}"(e)an "{PM_SUBJECT}" Mezu Pribatuari buruz egindako ohartarazpena moderadore edo administrari baten eskuetan dagoela jakinarazteko bidaltzen dizugu honako hau. 
 
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{PM_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
+Ohartarazpena itxi egin da, informazio gehiagorako jo ezazu {CLOSER_NAME}(r)engana Mezu Pribatu bitartez.
 
 
 {EMAIL_SIG}',
@@ -553,16 +545,29 @@ You are receiving this notification because the report you filed regarding the p
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/pm_report_deleted.txt' 		=> 'Gaia: "{PM_SUBJECT}"(e)ri buruzko ohartarazpena ezabatuta
 
-Hello {USERNAME},
+Kaixo {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+"{SITENAME}"(e)an "{PM_SUBJECT}" Mezu Pribatuari buruz egindako ohartarazpena moderadore edo administrariren batek ezabatu egin duela jakinarazteko bidaltzen dizugu honako hau. 
 
-If you want to view the post, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Mezua onarturik - "{POST_SUBJECT}"
+
+Kaixo {USERNAME},
+
+Mezu hau jaso duzu "{SITENAME}"(e)ra bidali duzun "{POST_SUBJECT}" mezua moderadoreren batek edo foroko administrariek onartu dutelako.
+
+Mezua ikusi nahi baduzu, jarraitu hurrengo lotura: 
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Gaia ikusi nahi baduzu, jarraitu hurrengo lotura:
 {U_VIEW_TOPIC}
 
 
@@ -572,13 +577,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Mezua onartu gabe - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Kaixo {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Mezu hau jaso duzu "{SITENAME}"(e)ra bidali duzun "{POST_SUBJECT}" mezua ez delako moderadore edo foro administrariekaitik onartu.
 
-The following reason was given for the disapproval:
+Onarpena ukatzeko hurrengo arrazoia eman da:
 
 {REASON}
 
@@ -675,19 +680,19 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} Mezu pribatu berria jaso duzu
 
-Hello {USERNAME},
+Kaixo {USERNAME},
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+"{AUTHOR_NAME}"(r)en mezu pribatu berria jaso duzu zure "{SITENAME}"(e)ko kontuan hurrengo izenburuarekin:
 
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+Mezua ikusteko jarraitu hurrengo lotura:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+Jakinarazi diezaizugula eskatu duzu. Ez baduzu jakinarazpen gehiagorik jaso nahi, alda ezazu aukera hori zure profilan.
 
 {EMAIL_SIG}',
 ));
@@ -709,16 +714,16 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+Kaixo {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Hurrengo hau {FROM_USERNAME}(e)k bere "{SITENAME}"(e)ko kontu bitartetik bidaltzen dizun mezua duzu. Mezua spama dela baderitxozu edo gehiegizko edo/eta iraingarriak iruditzen zaizkizun iruzkinak dituela baditu, mesedez jar zaitez foroko administrariekin kontaktuan helbide honetan:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Erantsi iezaiozu mezuari e-mail hau osoan (batez ere goiburuak (headerrak)). Kontuan izan erantzun helbidea {FROM_USERNAME}(r)ena dela.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Bidalitako mezua honako hau duzu:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 ',
@@ -728,16 +733,16 @@ Message sent to you follows
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+Kaixo {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Hurrengo hau {FROM_USERNAME}(e)k bere "{SITENAME}"(e)ko kontu bitartetik bidaltzen dizun mezua duzu.Mezua spama dela baderitxozu edo gehiegizko edo/eta iraingarriak iruditzen zaizkizun iruzkinak dituela baditu, mesedez jar zaitez foroko administrariekin kontaktuan helbide honetan:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Erantsi iezaiozu mezuari e-mail hau osoan (batez ere goiburuak (headerrak)). Kontuan izan bidaltzailearen helbidea foroko IM kontutik datorrela.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Bidalitako mezua honako hau duzu:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 ',
@@ -746,24 +751,11 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Berri-emate itxia - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Kaixo {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
+Mezu hau jaso duzu "{SITENAME}"(e)ko "{TOPIC_TITLE}" gaira bidalitako "{POST_SUBJECT}" mezuari buruz bidali zenuen berri-ematea moderadore edo foroko administrariren batek kudeatu egin duelako. Berri-ematea itxi egin da. Prozedurari buruzko zalantzarik izanez gero, jar zaitez {CLOSER_NAME}(r)ekin kontaktuan mezu pertsonalen bat bidaliz.
 
 
 {EMAIL_SIG}',
@@ -772,13 +764,26 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Berri-ematea ezabaturik - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Kaixo {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+Mezu hau jaso duzu "{SITENAME}"(e)ko "{TOPIC_TITLE}" gaira bidalitako "{POST_SUBJECT}" mezuari buruz bidali zenuen berri-ematea foroko moderadore edo administrariren batek ezabatu egin duela jakinarazteko.
 
-If you want to view the topic, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Gaia onartua - "{TOPIC_TITLE}"
+
+Kaixo {USERNAME},
+
+Mezu hau jaso duzu "{SITENAME}"(e)ra bidali duzun "{TOPIC_TITLE}" gaia moderadore edo foroko administrariren batek onartu egin duela jakinarazteko. 
+
+Gaia ikusteko, jarraitu hurrengo lotura:
 {U_VIEW_TOPIC}
 
 
@@ -788,13 +793,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Onartu gabeko gaia - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Kaixo {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Mezu hau jaso duzu "{SITENAME}"(e)ra bidali duzun "{TOPIC_TITLE}" gaia ez delako moderadore edo foroko administariren bategatik onartu jakinarazteko.
 
-The following reason was given for the disapproval:
+Onarpena ukatzeko hurrengo arrazoia eman da:
 
 {REASON}
 
@@ -805,22 +810,22 @@ The following reason was given for the disapproval:
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> 'Subject:"{TOPIC_TITLE}" - gaiari erantzun berriaren jakinarazpena 
 
-Hello {USERNAME},
+Kaixo {USERNAME},
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+Mezu hau jaso duzu "{SITENAME}"(e)ko "{FORUM_NAME}" foroa jarraitzen duzulako. Gai honek erantzun berri bat jaso du zure azkeneko bisitatik hona. Erantzuna ikusteko jarraitu hurrengo lotura. Ez da jakinarazpen berririk egingo gaia bisitatu dezazun arte.
 
-If you want to view the newest post made since your last visit, click the following link:
+Zure azkeneko bisitatik hona bidalitako azken mezuak ikusi nahi badituzu, jarraitu hurrengo lotura:
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Gaia ikusteko, jarraitu hurrengo lotura:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Foroa ikusteko, jarraitu hurrengo lotura
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+Ez baldin baduzu gaia gehiago jarraitu nahi,  gaiaren behekaldean agertuko zaizun "Gaira harpidetza ezeztatu" loturan klikatu zenezake edo hurrengo lotura hau jarraitu:
 
 {U_STOP_WATCHING_TOPIC}
 
@@ -830,47 +835,25 @@ If you no longer wish to watch this topic you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Zure kontua berriro gaitu
 
-Hello {USERNAME},
+Hola {USERNAME},
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
-
-{U_ACTIVATE}
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
-
-Hello {USERNAME}
-
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
-
-To use the new password you need to activate it. To do this click the link provided below.
+Zure "{SITENAME}"(e)ko kontua ezgaitua izan da. Seguruenik zure profilan eginiko aldaketengaitik gertatu da hau. Kontua berriro gaitzeko jarraitu hurrengo lotura:
 
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+{EMAIL_SIG}',
+));
 
-Password: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+
+$email = array_merge($email, array(
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Zure kontua ezgaitua izan da
+
+Kaixo {USERNAME},
+
+Zure "{SITENAME}"(e)ko kontua ezgaitua izan da. Seguruenik zure profilan eginiko aldaketengaitik gertatu da hau. Foroko administrariek kontua berriro gaitu beharko dute forora sartu zaitezen. Jakinarazpen berria jasoko duzu hau gertatzerakoan.
 
 {EMAIL_SIG}',
 ));
@@ -878,20 +861,42 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} Pasahitz berria gaitu
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+Kaixo {USERNAME}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Mezu hau jaso duzu pasahitz berria eskatu duzulako (zuk edo ordezkatu egin zaituen nonork) zure "{SITENAME}"(e)ko konturako. Ez baldin baduzu zuk eskatu, mesedez, bazter ezazu jakinarazpen hau, baina berriro jasoz gero, jar zaitez foroko administrariekin harremanetan.
+
+Pasahitz berria erabilteko, lehenik gaitu egin behar duzu. Pasahitza gaitzeko jarraitu hurrengo lotura:
+
+{U_ACTIVATE}
+
+Gaitzea zuzen burutu egin baldin bada, foroan pasahitz berriarekin sartu zaitezke:
+
+Pasahitza: {PASSWORD}
+
+Pasahitz hau gerorago alda zenezake Erabiltzaile Kontrol Paneletik. Arazorik izanez gero, jar zaitez foroko administrariekin harremanetan.
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Zure "{SITENAME}"(e)ko kontua berriro gaitzea
+
+Gaur egun, zure kontua ezgaiturik dago. Foroko administrariren batek kontua berriro gaitu dezazula eskatu du. 
+Mesedez, jarrai itzazu hemen zehazten zaizkizun pausuak kontua berriro gaitzeko.
+
+Mesedez, gorde ezazu e-mail hau gerorako zure kontuari buruzko informazio garrantzitsua bait du: 
 
 ----------------------------
-Username: {USERNAME}
+Erabiltzaile izena: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Pasahitza era seguruan gorde da gure datubaseetan eta ezin da berriro lortu. Ahazten baldin baduzu, helbide elektronikoa erabiliz ezarri zenezake berria.
 
-Please visit the following link to reactivate your account:
+Kontua berriro gaitzeko jarraitu hurrengo lotura:
 
 {U_ACTIVATE}
 
@@ -1004,15 +1009,15 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Jarduerarik gabeko kontuaren oroigarria
 
-Hello {USERNAME},
+Kaixo {USERNAME},
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+Honako hau idazten dizugu "{SITENAME}"(e)an {REGISTER_DATE}(e)an izena emandako kontuak ez duela jarduerarik erakutsi abisatzeko. Oraindik ez duzu kontua gaitu eta pausu hori beharrezkoa da foroan sartzeko. Kontua gaitzeko jarraitu hurrengo lotura: 
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+Eskerrik asko "{SITENAME}"(e)an izena emateagatik, zure parte-hartzearen zain gaituzu.
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +1025,24 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Ongietorri "{SITENAME}"(e)ra 
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Mesedez, gorde ezazu e-mail hau gerorako zure kontuari buruzko informazio garrantzitsua bait du: 
 
 ----------------------------
-Username: {USERNAME}
+Erabiltzaile izena: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Pasahitza era seguruan gorde da gure datubaseetan eta ezin da berriro lortu. Ahazten baldin baduzu, helbide elektronikoa erabiliz ezarri zenezake berria.
 
-Please visit the following link in order to activate your account:
+Zure kontua oraingoz ezgaituta dago. Kontua gaitzeko jarrai ezazu hurrengo lotura:
 
 {U_ACTIVATE}
 
 
-Thank you for registering.
+Eskerrik asko izena emateagatik.
 
 {EMAIL_SIG}',
 ));
@@ -1045,21 +1050,22 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Ongietorri "{SITENAME}"(e)ra 
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Mesedez, gorde ezazu e-mail hau gerorako zure kontuari buruzko informazio garrantzitsua bait du: 
 
 ----------------------------
-Username: {USERNAME}
+Erabiltzaile izena: {USERNAME}
 
-Board URL: {U_BOARD}
+
+Foroko URLa:  {U_BOARD} 
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Pasahitza era seguruan gorde da gure datubaseetan eta ezin da berriro lortu. Ahazten baldin baduzu, helbide elektronikoa erabiliz ezarri zenezake berria.
 
-Thank you for registering.
+Eskerrik asko izena emateagatik.
 
 {EMAIL_SIG}',
 ));
@@ -1067,25 +1073,26 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Ongietorri "{SITENAME}"(e)ra 
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Mesedez, gorde ezazu e-mail hau gerorako zure kontuari buruzko informazio garrantzitsua bait du: 
 
 ----------------------------
-Username: {USERNAME}
+Erabiltzaile izena: {USERNAME}
 
-Board URL: {U_BOARD}
+
+Foroko URLa:  {U_BOARD} 
 ----------------------------
 
-Please visit the following link in order to activate your account:
+Zure kontua oraindik ezgaituta dago. Kontua gaitzeko jarrai ezazu hurrengo lotura:
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Pasahitza era seguruan gorde da gure datubaseetan eta ezin da berriro lortu. Ahazten baldin baduzu, helbide elektronikoa erabiliz ezarri zenezake berria.
 
-Thank you for registering.
+Eskerrik asko izena emateagatik.
 
 {EMAIL_SIG}',
 ));

@@ -1,16 +1,16 @@
 ﻿<?php
 ﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Activate user account
+	'email/admin_activate.txt' 		=> '﻿{EMAILSUBJECT:} активирање на членски акаунт
 
-Hello,
+Здраво,
 
-The account owned by "{USERNAME}" has been deactivated or newly created, you should check the details of this user (if required) and handle it appropriately.
+Овој акаунт во сопственост на "{USERNAME}" беше деактивиран или ново регистриран, проверете ги деталите за овој член (ако е потребно) и средете го соодветно.
 
-Use this link to view the user\'s profile:
+Искористете го овој линк за да го видите профилот на овој член:
 {U_USER_DETAILS}
 
-Use this link to activate the account:
+Искористете го овој линк за да го видите акаунтот на овој член:
 {U_ACTIVATE}
 
 
@@ -20,14 +20,14 @@ Use this link to activate the account:
 
 
 $email = array_merge($email, array(
-	'email/admin_send_email.txt' 		=> '
-The following is an e-mail sent to you by an administrator of "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+	'email/admin_send_email.txt' 		=> '﻿
+Следната мејл порака е испратена од администраторите на "{SITENAME}". Ако оваа порака е спам, содржи навредливи работи или други коментари, ве молиме директно конатктирајте го Основачот на форумот или пак пријавете на следниот мејл:
 
 {CONTACT_EMAIL}
 
-Include this full e-mail (particularly the headers). 
+Доколку ги контактирате администраторите вклучете ја и оваа порака целосно.
 
-Message sent to you follows:
+Пораката што ја добивте е следната:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -40,13 +40,13 @@ Message sent to you follows:
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Account activated
+	'email/admin_welcome_activated.txt' 		=> '﻿{EMAILSUBJECT:} Акаунтот е активиран
 
-Hello {USERNAME},
+Здраво {USERNAME},
 
-Your account on "{SITENAME}" has now been activated, you may login using the username you received in a previous e-mail.
+Вашиот акаунт на "{SITENAME}" беше активиран од администраторите, сега може да се логирате .
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Вашата лозинка е сочувана во датабазата на форумот, и неможе да биде променете или избришана. Во случај да ја заборавите, имате можност да ја ресетирате користејќи ја вашата мејл адреса со која сте се регистрирале.
 
 {EMAIL_SIG}',
 ));
@@ -54,23 +54,23 @@ Your password has been securely stored in our database and cannot be retrieved. 
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/admin_welcome_inactive.txt' 		=> '﻿{EMAILSUBJECT:} Добредојдовте на "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Вашите акаунт информации се следните:
 
 ----------------------------
-Username: {USERNAME}
+Членско име: {USERNAME}
 
-Board URL: {U_BOARD}
+Линк до форумот: {U_BOARD}
 ----------------------------
 
-Your account is currently inactive and will need to be approved by an administrator before you can log in. Another email will be sent when this has occurred.
+Вашиот акаунт е моментално неактивен и треба да биде одобрен од администраторите на форумот пред да можете да се логирате на форумот. Ќе добиете друг мејл кога вашиот акаунт ќе биде активиран.
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Вашата лозинка е сочувана во датабазата на форумот, и неможе да биде променете или избришана. Во случај да ја заборавите, имате можност да ја ресетирате користејќи ја вашата мејл адреса со која сте се регистрирале.
 
-Thank you for registering.
+Ви благодариме што се регистриравте на форумот.
 
 {EMAIL_SIG}',
 ));
@@ -213,46 +213,46 @@ Spam? Tell us a note in the support forum http://help.forums3.com.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_resend_inactive.txt' 		=> '﻿{EMAILSUBJECT:} Добредојдовте на "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+Со запазување за законот за малолетници, вашиот акаунт е моментално неактивен.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Ве молиме испринтајте ја оваа порака и дајте им ја на вашите родители или старатели да ја потпишат и исто така да внесат датум на потпишување. Псле тоа испратете ни ја по факс на:
 
 {FAX_INFO}
 
-OR mail it to:
+Или на мејл поштата на:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ Одсечете го ова ------------------------------
+Дозвола за членство на "{SITENAME}" - {U_BOARD}
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Членско име: {USERNAME}
+Мејл: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
-
-
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
+ЈАС ГИ РАЗГЛЕДАВ СИТЕ ИНФОРМАЦИИ КОИ МИ ГИ ДОСТАВИ МОЕТО ДЕТЕ И ДОЗВОЛУВАМ НА "{SITENAME}" ДА ГИ ЗАЧУВА И ОДОБРИ ОВИЕ ИНФОРМАЦИИ. 
+РАЗБИРАМ ДЕКА ОВАА ИНФОРМАЦИЈА МОЖЕ ДА БИДЕ ПРОМЕНЕТА ВО БИЛО КОЕ ВРЕМЕ СО ВНЕСУВАЊЕ НА ЛОЗИНКАТА. 
+иСТО ТАКА РАЗБИРМ ДЕКА МОЖАМ ДА ПОБАРАМ ОВАА ИНФОРМАЦИЈА ДА БИДЕ ОДСТРАНЕТА ОД "{SITENAME}" ВО БИЛО КОЕ ВРЕМЕ.
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Родител или старател 
+(Вашето име со кирилични букви): _____________________
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+(Ваш потпис): __________________ 
 
-Thank you for registering.
+Датум: _______________
+
+------------------------------ Одсечете го ова ------------------------------
+
+
+веднаш по добивањето на оваа форма по факс или мејл вашиот акаунт ќе биде активиран.
+
+Вашата лозинка е сочувана во датабазата и неможе изменета или поправена. Ако во случај ја заборавите лозинката, имате опција за ресетирање на истата користејќи го вашиот мејл со кој се регистриравте.
+
+Ви благодариме за вашата регистрација.
 
 {EMAIL_SIG}
 ',
@@ -261,46 +261,46 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/coppa_welcome_inactive.txt' 		=> '﻿{EMAILSUBJECT:} Добредојдовте на "{SITENAME}"
 
 {WELCOME_MSG}
 
-In compliance with the COPPA, your account is currently inactive.
+Со запазување за законот за малолетници, вашиот акаунт е моментално неактивен.
 
-Please print this message and have your parent or guardian sign and date it. Then fax it to:
+Ве молиме испринтајте ја оваа порака и дајте им ја на вашите родители или старатели да ја потпишат и исто така да внесат датум на потпишување. Псле тоа испратете ни ја по факс на:
 
 {FAX_INFO}
 
-OR mail it to:
+Или на мејл поштата на:
 
 {MAIL_INFO}
 
------------------------------- CUT HERE ------------------------------
-Permission to participate at "{SITENAME}" - {U_BOARD}
+------------------------------ Одсечете го ова ------------------------------
+Дозвола за членство на "{SITENAME}" - {U_BOARD}
 
-Username: {USERNAME}
-E-mail: {EMAIL_ADDRESS}
+Членско име: {USERNAME}
+Мејл: {EMAIL_ADDRESS}
 
-I HAVE REVIEWED THE INFORMATION PROVIDED BY MY CHILD AND HEREBY GRANT PERMISSION TO "{SITENAME}" TO STORE THIS INFORMATION. 
-I UNDERSTAND THIS INFORMATION CAN BE CHANGED AT ANY TIME BY ENTERING A PASSWORD. 
-I UNDERSTAND THAT I MAY REQUEST FOR THIS INFORMATION TO BE REMOVED FROM "{SITENAME}" AT ANY TIME.
-
-
-Parent or guardian 
-(print your name here): _____________________
-
-(sign here): __________________ 
-
-Date: _______________
-
------------------------------- CUT HERE ------------------------------
+ЈАС ГИ РАЗГЛЕДАВ СИТЕ ИНФОРМАЦИИ КОИ МИ ГИ ДОСТАВИ МОЕТО ДЕТЕ И ДОЗВОЛУВАМ НА "{SITENAME}" ДА ГИ ЗАЧУВА И ОДОБРИ ОВИЕ ИНФОРМАЦИИ. 
+РАЗБИРАМ ДЕКА ОВАА ИНФОРМАЦИЈА МОЖЕ ДА БИДЕ ПРОМЕНЕТА ВО БИЛО КОЕ ВРЕМЕ СО ВНЕСУВАЊЕ НА ЛОЗИНКАТА. 
+иСТО ТАКА РАЗБИРМ ДЕКА МОЖАМ ДА ПОБАРАМ ОВАА ИНФОРМАЦИЈА ДА БИДЕ ОДСТРАНЕТА ОД "{SITENAME}" ВО БИЛО КОЕ ВРЕМЕ.
 
 
-Once the administrator has received the above form via fax or regular mail, your account will be activated.
+Родител или старател 
+(Вашето име со кирилични букви): _____________________
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+(Ваш потпис): __________________ 
 
-Thank you for registering.
+Датум: _______________
+
+------------------------------ Одсечете го ова ------------------------------
+
+
+веднаш по добивањето на оваа форма по факс или мејл вашиот акаунт ќе биде активиран.
+
+Вашата лозинка е сочувана во датабазата и неможе изменета или поправена. Ако во случај ја заборавите лозинката, имате опција за ресетирање на истата користејќи го вашиот мејл со кој се регистриравте.
+
+Ви благодариме за вашата регистрација.
 
 {EMAIL_SIG}
 ',
@@ -309,19 +309,19 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '﻿{EMAILSUBJECT:} "{SITENAME}" - Мејл до пријател
 
-Hello {TO_USERNAME},
+Здраво {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Овој мејл е пратен од "{SITENAME}" од {FROM_USERNAME} кој мисли дека вие може да бидете заинтересирани за следната темаc:
 
 {TOPIC_NAME}
 
-You can find it at:
+Може да ја најдете на:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Порака од {FROM_USERNAME} е вклучена подолу. Ве молиме запамтете дека ова порака не е одобрена од администраторите на форумот. Ако сакате да се пожалите во врска со примањето на оваа порака контактирајте ги администраторите на форумот {BOARD_CONTACT}. Ве молиме цитирајте ја пораката која сте ја добиле кога ќе ги контактирате администраторите.
 
 ----------
 
@@ -379,21 +379,21 @@ Link to {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Forum post notification - "{FORUM_NAME}"
+	'email/forum_notify.txt' 		=> '﻿{EMAILSUBJECT:} Известување за мислење во форум - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Здраво {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new reply to the topic "{TOPIC_TITLE}" since your last visit. You can use the following link to view the last unread reply, no more notifications will be sent until you visit the topic.
+Вие ја добивате оваа информација бидејќи го пратите овој форум, "{FORUM_NAME}" на "{SITENAME}". Овој форум има ново мислење во темата "{TOPIC_TITLE}" од вашата последна посета. Може да го искористите линкот подолу за да го видите непрочитаното мислење, нема да добивате повеќе информации за оваа тема доека не ја посетите.
 
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Ако сакате да ја видите темата, кликнете на следниот линк:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Ако сакате да го видите форумот, кликнете на следниот линк:
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Ако не сакате да го добивате известувања за овој форум, кликнете на "Престани со надгледување на форумот" линкот на форумот долу, или направете го тоа со кликање на следниот линк:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -404,14 +404,14 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} You have been added to this usergroup
+	'email/group_added.txt' 		=> '﻿{EMAILSUBJECT:} Вие бевте додадени во оваа членска група
 
-Congratulations,
+Честитки,
 
-You have been added to the "{GROUP_NAME}" group on "{SITENAME}".
-This action was done by a group leader or the site administrator, contact them for more information.
+Вие бевте додадени во групата "{GROUP_NAME}" на  "{SITENAME}".
+ова акција е направена од лидерот на групата или администраторите на форумот, контактирајте ги за повеќе информации.
 
-You can view your groups information here:
+Информацијата за вашата група може да ја видите овде:
 {U_GROUP}
 
 {EMAIL_SIG}
@@ -421,12 +421,12 @@ You can view your groups information here:
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Your request has been approved
+	'email/group_approved.txt' 		=> '﻿{EMAILSUBJECT:} Вашето барање беше одобрено
 
-Congratulations,
+Честитки,
 
-Your request to join the "{GROUP_NAME}" group on "{SITENAME}" has been approved.
-Click on the following link to see your group membership.
+Вие побаравте да се приклучите во групата "{GROUP_NAME}" на "{SITENAME}" и истата беше одобрена.
+Кликнете на линкот подолу за да го видите вашето членство во групата.
 
 {U_GROUP}
 
@@ -437,12 +437,12 @@ Click on the following link to see your group membership.
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> '{EMAILSUBJECT:} A request to join your group has been made
+	'email/group_request.txt' 		=> '﻿{EMAILSUBJECT:} Направено е барање за приклучување во група
 
-Dear {USERNAME},
+Почитувани {USERNAME},
 
-The user "{REQUEST_USERNAME}" has requested to join the group "{GROUP_NAME}" you moderate on "{SITENAME}".
-To approve or deny this request for group membership please visit the following link:
+Членот "{REQUEST_USERNAME}" испрати барање да се приклучи во групата "{GROUP_NAME}" вие имате модераторски права за ова на "{SITENAME}".
+За да го одбрите или одбиете ова барање за членство во група ве молиме постете го линкот подолу:
 
 {U_PENDING}
 
@@ -453,23 +453,23 @@ To approve or deny this request for group membership please visit the following 
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> '{EMAILSUBJECT:} phpBB installed
+	'email/installed.txt' 		=> '﻿{EMAILSUBJECT:} phpBB е успешно инсталиран
 
-Congratulations,
+Честитки,
 
-You have successfully installed phpBB on your server.
+Вие успешно го инсталиравте phpBB на вашиот сервер.
 
-This e-mail contains important information regarding your installation and should be kept for reference. Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Овој мејл ги содржи сите потребни информации за инсталацијата и треба да бидат сочувани за ваша потреба. Вашата лозинка е успешно сочувана во датабазата и неможе да биде избришана или променета. Доколку сте ја заборавиле имате можност да ја ресетирате користејќи го мејлот кој го внесовте при регистрацијата.
 
 ----------------------------
-Username: {USERNAME}
+Членско име: {USERNAME}
 
-Board URL: {U_BOARD}
+Линк на форумот: {U_BOARD}
 ----------------------------
 
-Useful information regarding the phpBB software can be found in the docs folder of your installation and on phpBB.com\'s support page - http://www.phpbb.com/support/
+Корисни информации за phpBB софтверот моќат да се најдат во docs фолдерот од вашата инсталација или пак на  phpBB страната за подршка - http://www.phpbb.com/support/
 
-In order to keep your board safe and secure, we highly recommended keeping current with software releases. For your convenience, a mailing list is available at the page referenced above.
+Со цел вашиот форум да биде безбеден и сигурен, ви препорачуваме да останете во тек со последните верзии на софтверот. За ваша погодност, мејл листа е достапна на странат реферирана погоре.
 
 {EMAIL_SIG}',
 ));
@@ -509,15 +509,15 @@ If you no longer wish to watch this album you can click the "Unsubscribe album" 
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/newtopic_notify.txt' 		=> '﻿{EMAILSUBJECT:} Известување за нова тема - "{FORUM_NAME}"
 
-Hello {USERNAME},
+Здраво {USERNAME},
 
-You are receiving this notification because you are watching the forum, "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+Го добивате ова известување бидејќи се имате преплатено за пратење на форумот, "{FORUM_NAME}" на "{SITENAME}". Овој форум има нова тема од вашата последна посета, "{TOPIC_TITLE}". Искористете го следниот линк за да го видите форумот, нема да добивате повеќе исвестувања се додека него посетите форумот.
 
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+Ако сакате да престанете со следење на форумот кликнете на "Престани со надгледување на форумот" линкот на дното на форумот, или со кликање на следниот линк:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -527,24 +527,11 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{PM_SUBJECT}"
+	'email/pm_report_closed.txt' 		=> '﻿{EMAILSUBJECT:} Пријавувањето е затворено - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+Здраво {USERNAME},
 
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" has been tended to by a moderator or administrator. The report is now closed. If you have further questions, please contact {CLOSER_NAME} by private message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{PM_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed regarding the private message "{PM_SUBJECT}" at "{SITENAME}" was deleted by a moderator or administrator.
+Го добивате ова известување бидејќи вашето пријавување на приватната порака "{PM_SUBJECT}" на "{SITENAME}" беше решено од модераторите или администраторите. Пријавувањето е затворено. Ако имате било какви прашања околу ова, ве молиме конттактирајте го {CLOSER_NAME} преку приватна порака.
 
 
 {EMAIL_SIG}',
@@ -553,16 +540,29 @@ You are receiving this notification because the report you filed regarding the p
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/pm_report_deleted.txt' 		=> '﻿{EMAILSUBJECT:} Пријавувањето е избришано - "{PM_SUBJECT}"
 
-Hello {USERNAME},
+Здраво {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+Го добивате ова известување бидејќи вашето пријавување на приватната порака "{PM_SUBJECT}" на "{SITENAME}" беше избришано од модераторите или администраторите.
 
-If you want to view the post, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/post_approved.txt' 		=> '﻿{EMAILSUBJECT:} Мислењето е одобрено - "{POST_SUBJECT}"
+
+Здраво {USERNAME},
+
+Го добивате ова известување бидејќи вашето мислење "{POST_SUBJECT}" на "{SITENAME}" беше одобрено од модераторите или администраторите.
+
+Ако сакате да го видите мислењето, кликнете на следниот линк:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Ако сакате да ја видите темата, кликнете на следниот линк:
 {U_VIEW_TOPIC}
 
 
@@ -572,13 +572,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/post_disapproved.txt' 		=> '﻿{EMAILSUBJECT:} Мислењето не е одобрено - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Здраво {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Го добивате ова известување бидејќи вашето мислење "{POST_SUBJECT}" на "{SITENAME}" не беше одобрено од модераторите или администраторите.
 
-The following reason was given for the disapproval:
+Следната причина беше дадена за неодобрувањето:
 
 {REASON}
 
@@ -675,19 +675,19 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/privmsg_notify.txt' 		=> '﻿{EMAILSUBJECT:} Добивте нова приватна порака
 
-Hello {USERNAME},
+Здраво {USERNAME},
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+Добивте приватна порака од "{AUTHOR_NAME}" на вашиот акаунт на "{SITENAME}" со следниот наслов:
 
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+Може да ја видите и прочитате пораката на следниот линк:
 
 {U_INBOX}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+Вие побаравте да бидете известени за нови приватни пораки, запомнете дека може и да не добивате известувања со изменување на подесувањата на вашиот профил.
 
 {EMAIL_SIG}',
 ));
@@ -708,16 +708,16 @@ To read the comment , click the link below.
 
 
 $email = array_merge($email, array(
-	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_email.txt' 		=> '﻿
+Здраво {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Следната порака е мејл пратен до вас од {FROM_USERNAME} со акаунт на "{SITENAME}". Доколку оваа порака е спам, содржи навредливи коментари или слично ве молиме контактирајте ги администраторите на форумот на следната мејл адреса:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Доколку ги контактирате администраторите вклучете ја и оваа порака целосно. Ве молиме запомнете дека адресата преку која е испратена е наместена на членскиот мејл од {FROM_USERNAME}.
 
-Message sent to you follows
+Пораката која е испратена до вас е:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -727,16 +727,16 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_im.txt' 		=> '﻿
+Здраво {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Оваа порака ви е испратена од {FROM_USERNAME} со акаунт на "{SITENAME}". Доколку оваа порака е спам, содржи навредливи коментари или слично ве молиме контактирајте ги администраторите на форумот на следната мејл адреса:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Доколку ги контактирате администраторите вклучете ја и оваа порака целосно. Ве молиме запомнете дека адресата преку која е испратена е наместена на форумската мејл адреса.
 
-Message sent to you follows
+Пораката која е испратена до вас е:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -746,24 +746,11 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Report closed - "{POST_SUBJECT}"
+	'email/report_closed.txt' 		=> '﻿{EMAILSUBJECT:} Пријавувањето е затворено - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Здраво {USERNAME},
 
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was handled by a moderator or by an administrator. The report was afterwards closed. If you have further questions contact {CLOSER_NAME} with a personal message.
-
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Report deleted - "{POST_SUBJECT}"
-
-Hello {USERNAME},
-
-You are receiving this notification because the report you filed on the post "{POST_SUBJECT}" in "{TOPIC_TITLE}" at "{SITENAME}" was deleted by a moderator or by an administrator.
+Ја добивате оваа информација бидејќи вашето пријавување на мислењето "{POST_SUBJECT}" во "{TOPIC_TITLE}" на "{SITENAME}" беше средено од модераторите или администраторите. Пријавувањето е затворено. Ако имате прашање околу ова ве молиме контактирајте го {CLOSER_NAME} преку приватна порака.
 
 
 {EMAIL_SIG}',
@@ -772,13 +759,26 @@ You are receiving this notification because the report you filed on the post "{P
 
 
 $email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+	'email/report_deleted.txt' 		=> '﻿{EMAILSUBJECT:} Пријавувањето е избришано - "{POST_SUBJECT}"
 
-Hello {USERNAME},
+Здраво {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+Ја добивате оваа информација бидејќи вашето пријавување на мислењето "{POST_SUBJECT}" во "{TOPIC_TITLE}" на "{SITENAME}" беше избришано од модераторите или администраторите.
 
-If you want to view the topic, click the following link:
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/topic_approved.txt' 		=> '﻿{EMAILSUBJECT:} Темата е одобрена - "{TOPIC_TITLE}"
+
+Здраво {USERNAME},
+
+Ја добивате оваа информација бидејќи вашата тема "{TOPIC_TITLE}" на "{SITENAME}" беше одобрена од модераторите или администраторите.
+
+Ако сакате да ја видите вашата тема, кликнете на следниот линк:
 {U_VIEW_TOPIC}
 
 
@@ -788,13 +788,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/topic_disapproved.txt' 		=> '﻿{EMAILSUBJECT:} Темата не е одобрена  - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Здраво {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Ја добивате оваа информација бидејќи вашата тема "{TOPIC_TITLE}" на "{SITENAME}" не беше одобрена од модераторите или администраторите.
 
-The following reason was given for the disapproval:
+Следната причина беше дадена за неодобрувањето на темата:
 
 {REASON}
 
@@ -805,22 +805,22 @@ The following reason was given for the disapproval:
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '﻿{EMAILSUBJECT:} Известување за ново мислење во тема - "{TOPIC_TITLE}"
 
-Hello {USERNAME},
+Здраво {USERNAME},
 
-You are receiving this notification because you are watching the topic, "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+Вие ја добивате оваа информација бидејќи ја следите темата, "{TOPIC_TITLE}" на "{SITENAME}". Во ова тема има ново мислење од вашата последна посета на форумот. На следниот линк може да го видите мислењето, нема да добивате повеќе известувања се додека не ја прегледате темата која ја пратите.
 
-If you want to view the newest post made since your last visit, click the following link:
+За да ги видите новите мислења на форумот направено по вашата последна посета, кликнете на следниот линк:
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Ако сакате да ја видите темата, кликнете на следниот линк:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Ако сакате да го видите форумот, кликнете на следниот линк:
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+Ако сакате да престанете со следење на форумот кликнете на "Престани со надгледување на форумот" линкот на дното на форумот, или со кликање на следниот линк:
 
 {U_STOP_WATCHING_TOPIC}
 
@@ -830,47 +830,25 @@ If you no longer wish to watch this topic you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reactivate your account
+	'email/user_activate.txt' 		=> '﻿{EMAILSUBJECT:} Реактивирајте го вашиот акаунт
 
-Hello {USERNAME},
+Здраво {USERNAME},
 
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. In order to reactivate your account you must click on the link below:
-
-{U_ACTIVATE}
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Your account has been deactivated
-
-Hello {USERNAME},
-
-Your account on "{SITENAME}" has been deactivated, most likely due to changes made to your profile. The administrator of the board will need to activate it before you can log in. You will receive another notification when this has occurred.
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} New password activation
-
-Hello {USERNAME}
-
-You are receiving this notification because you have (or someone pretending to be you has) requested a new password be sent for your account on "{SITENAME}". If you did not request this notification then please ignore it, if you keep receiving it please contact the board administrator.
-
-To use the new password you need to activate it. To do this click the link provided below.
+Вашиот акаунт на "{SITENAME}" беше деактивиран, најверојатно поради промените на вашиот профил. За да го реактивирате вашиот акаунт кликнете на линкот кој е подолу:
 
 {U_ACTIVATE}
 
-If successful you will be able to login using the following password:
+{EMAIL_SIG}',
+));
 
-Password: {PASSWORD}
 
-You can of course change this password yourself via the profile page. If you have any difficulties please contact the board administrator.
+
+$email = array_merge($email, array(
+	'email/user_activate_inactive.txt' 		=> '﻿{EMAILSUBJECT:} Вашиот акаунт беше деактивиран
+
+Здраво {USERNAME},
+
+Вашиот акаунт на "{SITENAME}" беше деактивиран, најверојатно поради промените направени на вашиот профил. Администраторите на форумот ќе треба да го активираат вашиот акаунт пред да може да се логирате. Ќе добиете друго известување кога вашиот акаунт ќе биде активиран.
 
 {EMAIL_SIG}',
 ));
@@ -878,20 +856,42 @@ You can of course change this password yourself via the profile page. If you hav
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reactivate your account on "{SITENAME}"
+	'email/user_activate_passwd.txt' 		=> '﻿{EMAILSUBJECT:} Активација на нова лозинка
 
-A board administrator requested that your account be reactivated. Your account is currently inactive.
-Please follow the steps listed here to reactivate your account.
+Здраво {USERNAME}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Вие го добивате ова известување зашто побаравте (или некој друг побарал) да биде испратен нова лозинка за пристап на "{SITENAME}". Доколку вие не сте побарале да се промени лозинката тогаш игнорирајте ја оваа информација, ако продолжите да го добивате ова ве молиме контаактирајте ги администраторите на форумот.
+
+За да ја користите новата лозинка, треба да ја активирате. За да ја активирате новата лозинка, кликнете на линкот подолу.
+
+{U_ACTIVATE}
+
+Ако активирањето е успешно вие ќе можете да се логирате со лозинката која е подолу:
+
+Лозинка: {PASSWORD}
+
+Оваа лозинка може да ја промените на вашиот членски контролен панел. Ако имате потешкотии околу ова ве молиме контактирајте ги администраторите на форумот.
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/user_reactivate_account.txt' 		=> '﻿{EMAILSUBJECT:} Реактивирајте го вашиот акаунт на "{SITENAME}"
+
+Администраторите на форумот бараат вашиот акаунт да биде повторно активиран.
+Ве молиме следете ги чекорите подолу за да го реактивирате вашиот акаунт.
+
+Вашите акаунт информации се следните:
 
 ----------------------------
-Username: {USERNAME}
+Членско име: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Вашата лозинка е сочувана во датабазата на форумот, и неможе да биде променете или избришана. Во случај да ја заборавите, имате можност да ја ресетирате користејќи ја вашата мејл адреса со која сте се регистрирале.
 
-Please visit the following link to reactivate your account:
+Ве молиме кликнете или копирајте го овој линк и залепете го во полето за пишување веб адреси и кликнете ентер за да го активирате вашиот акаунт:
 
 {U_ACTIVATE}
 
@@ -1004,15 +1004,15 @@ Alternatively, please do not hesitate to start your own topic, even if it is jus
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Inactive account reminder
+	'email/user_remind_inactive.txt' 		=> '﻿{EMAILSUBJECT:} Потсетник за неактивиран акаунт
 
-Hello {USERNAME},
+Здраво {USERNAME},
 
-This notification is a reminder that your account at "{SITENAME}", created on {REGISTER_DATE}, remains inactive. If you would like to activate this account, please visit the following link:
+Ова е потсетување дека вашиот акаунт на "{SITENAME}", креиран на {REGISTER_DATE}, е сеуште неактивен. Ако сакате да го активирате вашиот акаунт, ве молиме посетете го следниот линк:
 
 {U_ACTIVATE}
 
-Thank you for registering at "{SITENAME}", we look forward to your participation.
+Ви благодариме што се регистриравте на "{SITENAME}", ве молиме активирајте го вашиот акаунт за да имате целосен пристап на форумот.
 
 {EMAIL_SIG}',
 ));
@@ -1020,24 +1020,24 @@ Thank you for registering at "{SITENAME}", we look forward to your participation
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_resend_inactive.txt' 		=> '﻿{EMAILSUBJECT:} Добредојдовте на "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Вашите акаунт информации се следните::
 
 ----------------------------
-Username: {USERNAME}
+Членско име: {USERNAME}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Вашата лозинка е сочувана во датабазата на форумот, и неможе да биде променете или избришана. Во случај да ја заборавите, имате можност да ја ресетирате користејќи ја вашата мејл адреса со која сте се регистрирале.
 
-Please visit the following link in order to activate your account:
+Ве молиме кликнете или копирајте го овој линк и залепете го во полето за пишување веб адреси и кликнете ентер за да го активирате вашиот акаунт:
 
 {U_ACTIVATE}
 
 
-Thank you for registering.
+Ви благодариме што се регистриравте на форумот.
 
 {EMAIL_SIG}',
 ));
@@ -1045,21 +1045,21 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome.txt' 		=> '﻿{EMAILSUBJECT:} Добредојдовте на "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Вашите акаунт информации се следните:
 
 ----------------------------
-Username: {USERNAME}
+Членско име: {USERNAME}
 
-Board URL: {U_BOARD}
+Линк до форумот: {U_BOARD}
 ----------------------------
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Вашата лозинка е сочувана во датабазата на форумот, и неможе да биде променете или избришана. Во случај да ја заборавите, имате можност да ја ресетирате користејќи ја вашата мејл адреса со која сте се регистрирале.
 
-Thank you for registering.
+Ви благодариме што се регистриравте на форумот.
 
 {EMAIL_SIG}',
 ));
@@ -1067,25 +1067,25 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> '{EMAILSUBJECT:} Welcome to "{SITENAME}"
+	'email/user_welcome_inactive.txt' 		=> '﻿{EMAILSUBJECT:} Добредојдовте на "{SITENAME}"
 
 {WELCOME_MSG}
 
-Please keep this e-mail for your records. Your account information is as follows:
+Вашите акаунт информации се следните:
 
 ----------------------------
-Username: {USERNAME}
+Членско име: {USERNAME}
 
-Board URL: {U_BOARD}
+Линк до форумот: {U_BOARD}
 ----------------------------
 
-Please visit the following link in order to activate your account:
+Ве молиме кликнете или копирајте го овој линк и залепете го во полето за пишување веб адреси и кликнете ентер за да го активирате вашиот акаунт:
 
 {U_ACTIVATE}
 
-Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
+Вашата лозинка е сочувана во датабазата на форумот, и неможе да биде променете или избришана. Во случај да ја заборавите, имате можност да ја ресетирате користејќи ја вашата мејл адреса со која сте се регистрирале.
 
-Thank you for registering.
+Ви благодариме што се регистриравте на форумот.
 
 {EMAIL_SIG}',
 ));
