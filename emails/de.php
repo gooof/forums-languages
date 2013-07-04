@@ -1,4 +1,5 @@
-﻿﻿
+﻿<?php
+﻿
 $email = array_merge($email, array(
 	'email/admin_activate.txt' 		=> '%TTTTIIITLE% Benutzerkonto aktivieren
 
