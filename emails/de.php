@@ -1,7 +1,6 @@
-﻿﻿<?php
-
+﻿﻿
 $email = array_merge($email, array(
-	'email/admin_activate.txt' 		=> 'Subject: Benutzerkonto aktivieren
+	'email/admin_activate.txt' 		=> '%TTTTIIITLE% Benutzerkonto aktivieren
 
 Hallo,
 
@@ -44,7 +43,7 @@ Service powered by www.phpBB8.de
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_activated.txt' 		=> 'Subject: Benutzerkonto aktiviert
+	'email/admin_welcome_activated.txt' 		=> '%TTTTIIITLE% Benutzerkonto aktiviert
 
 Hallo {USERNAME},
 
@@ -58,7 +57,7 @@ Dein Passwort wurde sicher in unserer Datenbank gespeichert und kann nicht wiede
 
 
 $email = array_merge($email, array(
-	'email/admin_welcome_inactive.txt' 		=> 'Subject: Willkommen auf „{SITENAME}“
+	'email/admin_welcome_inactive.txt' 		=> '%TTTTIIITLE% Willkommen auf „{SITENAME}“
 
 {WELCOME_MSG}
 
@@ -82,7 +81,7 @@ Vielen Dank für deine Registrierung.
 
 
 $email = array_merge($email, array(
-	'email/birthday_email.txt' 		=> 'Subject: Herzlichen Glückwunsch zum Geburtstag!
+	'email/birthday_email.txt' 		=> '%TTTTIIITLE% Herzlichen Glückwunsch zum Geburtstag!
 
 Lieber {USERNAME},
  
@@ -104,7 +103,7 @@ Herzliche Grüße
 
 
 $email = array_merge($email, array(
-	'email/calendar_new_event.txt' 		=> 'Subject: Ein neuer Termin wurde in den Kalender eingetragen
+	'email/calendar_new_event.txt' 		=> '%TTTTIIITLE% Ein neuer Termin wurde in den Kalender eingetragen
 
 Hallo {USERNAME},
 
@@ -126,7 +125,7 @@ Verwende diesen Link, wenn du keine weiteren emails über neue Kalender-Termine 
 
 
 $email = array_merge($email, array(
-	'email/calendar_updated_event.txt' 		=> 'Subject: Ein Termin im Kalender wurde geändert
+	'email/calendar_updated_event.txt' 		=> '%TTTTIIITLE% Ein Termin im Kalender wurde geändert
 
 Hallo {USERNAME},
 
@@ -145,7 +144,7 @@ Verwende diesen Link, wenn du keine weiteren emails über diesen Kalender-Termin
 
 
 $email = array_merge($email, array(
-	'email/calendar_updated_reply.txt' 		=> 'Subject: Es gibt einen neuen oder geänderten Kalender-Kommentar
+	'email/calendar_updated_reply.txt' 		=> '%TTTTIIITLE% Es gibt einen neuen oder geänderten Kalender-Kommentar
 
 Hallo {USERNAME},
 
@@ -165,7 +164,7 @@ Verwende diesen Link, wenn du keine weiteren emails über diesen Kalender-Termin
 
 
 $email = array_merge($email, array(
-	'email/contact.txt' 		=> 'Subject: [Kontaktformular] {SUBJECT}
+	'email/contact.txt' 		=> '%TTTTIIITLE% [Kontaktformular] {SUBJECT}
 
 Guten Tag {ADM_USERNAME},
 
@@ -196,7 +195,7 @@ Spam? Teile uns dies bitte im Support Forum www.phpbb9.de mit.
 
 
 $email = array_merge($email, array(
-	'email/contact_no_reason.txt' 		=> 'Subject: [Kontaktformular] {SUBJECT}
+	'email/contact_no_reason.txt' 		=> '%TTTTIIITLE% [Kontaktformular] {SUBJECT}
 
 Guten Tag {ADM_USERNAME},
 
@@ -227,7 +226,7 @@ Spam? Teile uns dies bitte im Support Forum www.phpbb9.de mit.
 
 
 $email = array_merge($email, array(
-	'email/coppa_resend_inactive.txt' 		=> 'Subject: Willkommen auf „{SITENAME}“
+	'email/coppa_resend_inactive.txt' 		=> '%TTTTIIITLE% Willkommen auf „{SITENAME}“
 
 {WELCOME_MSG}
 
@@ -274,7 +273,7 @@ Vielen Dank für deine Registrierung.
 
 
 $email = array_merge($email, array(
-	'email/coppa_welcome_inactive.txt' 		=> 'Subject: Willkommen auf „{SITENAME}“
+	'email/coppa_welcome_inactive.txt' 		=> '%TTTTIIITLE% Willkommen auf „{SITENAME}“
 
 {WELCOME_MSG}
 
@@ -321,7 +320,7 @@ Vielen Dank für deine Registrierung.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> 'Subject: „{SITENAME}“ — Information über ein Thema
+	'email/email_notify.txt' 		=> '%TTTTIIITLE% „{SITENAME}“ — Information über ein Thema
 
 Hallo {TO_USERNAME},
 
@@ -391,7 +390,7 @@ Hier geht es zur {SITENAME}: {U_BOARD}.
 
 
 $email = array_merge($email, array(
-	'email/forum_notify.txt' 		=> 'Subject: Benachrichtigung über neue Antwort — „{FORUM_NAME}“
+	'email/forum_notify.txt' 		=> '%TTTTIIITLE% Benachrichtigung über neue Antwort — „{FORUM_NAME}“
 
 Hallo {USERNAME},
 
@@ -415,7 +414,7 @@ Wenn du das Forum nicht länger abonnieren möchtest, verwende entweder den Link
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> 'Subject: Du wurdest in eine Benutzergruppe aufgenommen
+	'email/group_added.txt' 		=> '%TTTTIIITLE% Du wurdest in eine Benutzergruppe aufgenommen
 
 Herzlichen Glückwunsch,
 
@@ -431,7 +430,7 @@ Du kannst deine Gruppendaten hier anzeigen:
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> 'Subject: Dein Mitgliedsantrag wurde bestätigt
+	'email/group_approved.txt' 		=> '%TTTTIIITLE% Dein Mitgliedsantrag wurde bestätigt
 
 Herzlichen Glückwunsch,
 
@@ -446,7 +445,7 @@ Besuche folgenden Link, um deine Mitgliedschaft anzuzeigen:
 
 
 $email = array_merge($email, array(
-	'email/group_request.txt' 		=> 'Subject: Eine Anfrage auf Gruppenmitgliedschaft wurde gestellt
+	'email/group_request.txt' 		=> '%TTTTIIITLE% Eine Anfrage auf Gruppenmitgliedschaft wurde gestellt
 
 Hallo {USERNAME},
 
@@ -461,7 +460,7 @@ Um diese Anfrage zu bestätigen oder abzulehnen, besuche den folgenden Link:
 
 
 $email = array_merge($email, array(
-	'email/installed.txt' 		=> 'Subject: phpBB erfolgreich installiert
+	'email/installed.txt' 		=> '%TTTTIIITLE% phpBB erfolgreich installiert
 
 Herzlichen Glückwunsch!
 
@@ -485,7 +484,7 @@ Um die Sicherheit deines Boards zu gewährleisten, empfehlen wir dir dringend, e
 
 
 $email = array_merge($email, array(
-	'email/newcomment_notify.txt' 		=> 'Subject: Benachrichtigung über neuen Kommentar — „{IMAGE_NAME}“
+	'email/newcomment_notify.txt' 		=> '%TTTTIIITLE% Benachrichtigung über neuen Kommentar — „{IMAGE_NAME}“
 
 Hallo {USERNAME},
 
@@ -501,7 +500,7 @@ Wenn du das Bild nicht länger beobachten möchtest, verwende den Link „Bild n
 
 
 $email = array_merge($email, array(
-	'email/newimage_notify.txt' 		=> 'Subject: Benachrichtigung über neues Bild — „{ALBUM_NAME}“
+	'email/newimage_notify.txt' 		=> '%TTTTIIITLE% Benachrichtigung über neues Bild — „{ALBUM_NAME}“
 
 Hallo {USERNAME},
 
@@ -517,7 +516,7 @@ Wenn du das Album nicht länger beobachten möchtest, verwende den Link „Album
 
 
 $email = array_merge($email, array(
-	'email/newtopic_notify.txt' 		=> 'Subject: Benachrichtigung über neues Thema — „{FORUM_NAME}“
+	'email/newtopic_notify.txt' 		=> '%TTTTIIITLE% Benachrichtigung über neues Thema — „{FORUM_NAME}“
 
 Hallo {USERNAME},
 
@@ -535,7 +534,7 @@ Wenn du das Forum nicht länger abonnieren möchtest, verwende entweder den Link
 
 
 $email = array_merge($email, array(
-	'email/pm_report_closed.txt' 		=> 'Subject: Meldung geschlossen — „{PM_SUBJECT}“
+	'email/pm_report_closed.txt' 		=> '%TTTTIIITLE% Meldung geschlossen — „{PM_SUBJECT}“
 
 Hallo {USERNAME},
 
@@ -548,7 +547,7 @@ du erhältst diese Nachricht, weil deine Meldung zur Privaten Nachricht „{PM_S
 
 
 $email = array_merge($email, array(
-	'email/pm_report_deleted.txt' 		=> 'Subject: Meldung gelöscht — „{PM_SUBJECT}“
+	'email/pm_report_deleted.txt' 		=> '%TTTTIIITLE% Meldung gelöscht — „{PM_SUBJECT}“
 
 Hallo {USERNAME},
 
@@ -561,7 +560,7 @@ du erhältst diese Nachricht, weil deine Meldung zur Privaten Nachricht „{PM_S
 
 
 $email = array_merge($email, array(
-	'email/post_approved.txt' 		=> 'Subject: Beitrag freigegeben — „{POST_SUBJECT}“
+	'email/post_approved.txt' 		=> '%TTTTIIITLE% Beitrag freigegeben — „{POST_SUBJECT}“
 
 Hallo {USERNAME},
 
@@ -580,7 +579,7 @@ Wenn du das Thema ansehen möchtest, verwende folgenden Link:
 
 
 $email = array_merge($email, array(
-	'email/post_disapproved.txt' 		=> 'Subject: Beitragsfreigabe verweigert — „{POST_SUBJECT}“
+	'email/post_disapproved.txt' 		=> '%TTTTIIITLE% Beitragsfreigabe verweigert — „{POST_SUBJECT}“
 
 Hallo {USERNAME},
 
@@ -597,7 +596,7 @@ Der folgende Grund wurde dafür angegeben:
 
 
 $email = array_merge($email, array(
-	'email/prime_notify_forum.txt' 		=> 'Subject: Forum Benachrichtigung - {FORUM_NAME}
+	'email/prime_notify_forum.txt' 		=> '%TTTTIIITLE% Forum Benachrichtigung - {FORUM_NAME}
 
 Hallo {USERNAME},
 
@@ -617,7 +616,7 @@ Nachricht:
 
 
 $email = array_merge($email, array(
-	'email/prime_notify_newtopic.txt' 		=> 'Subject: Neues Thema Benachrichtigung - {FORUM_NAME}
+	'email/prime_notify_newtopic.txt' 		=> '%TTTTIIITLE% Neues Thema Benachrichtigung - {FORUM_NAME}
 
 Hallo {USERNAME},
 
@@ -637,7 +636,7 @@ Nachricht:
 
 
 $email = array_merge($email, array(
-	'email/prime_notify_privmsg.txt' 		=> 'Subject: Neue private Nachricht: {SUBJECT}
+	'email/prime_notify_privmsg.txt' 		=> '%TTTTIIITLE% Neue private Nachricht: {SUBJECT}
 
 Hallo {USERNAME}, du hast unter deinem Konto auf "{SITENAME}" eine neue private Nachricht erhalten. Du kannst die Nachricht durch einen Klick auf den folgenden Link lesen und beantworten: {U_FORUM}: {U_INBOX}
 _____________________________________________________________________
@@ -655,7 +654,7 @@ Du hast darum gebeten, dass du ueber neue Persoenliche Mitteilungen (PM)benachri
 
 
 $email = array_merge($email, array(
-	'email/prime_notify_topic.txt' 		=> 'Subject: Antwort zum Thema - "{TOPIC_TITLE}"
+	'email/prime_notify_topic.txt' 		=> '%TTTTIIITLE% Antwort zum Thema - "{TOPIC_TITLE}"
 
 Hallo {USERNAME}, 
 
@@ -679,7 +678,7 @@ Wenn du das ganze Thema ansehen willst, dann klicke auf folgenden Link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> 'Subject: Neue Private Nachricht erhalten
+	'email/privmsg_notify.txt' 		=> '%TTTTIIITLE% Neue Private Nachricht erhalten
 
 Hallo {USERNAME},
 
@@ -749,7 +748,7 @@ Es folgt die an dich gesendete Nachricht
 
 
 $email = array_merge($email, array(
-	'email/report_closed.txt' 		=> 'Subject: Meldung geschlossen — „{POST_SUBJECT}“
+	'email/report_closed.txt' 		=> '%TTTTIIITLE% Meldung geschlossen — „{POST_SUBJECT}“
 
 Hallo {USERNAME},
 
@@ -762,7 +761,7 @@ du erhältst diese Nachricht, weil deine Meldung zum Beitrag „{POST_SUBJECT}�
 
 
 $email = array_merge($email, array(
-	'email/report_deleted.txt' 		=> 'Subject: Meldung gelöscht — „{POST_SUBJECT}“
+	'email/report_deleted.txt' 		=> '%TTTTIIITLE% Meldung gelöscht — „{POST_SUBJECT}“
 
 Hallo {USERNAME},
 
@@ -775,7 +774,7 @@ du erhältst diese Nachricht, weil deine Meldung zum Beitrag „{POST_SUBJECT}�
 
 
 $email = array_merge($email, array(
-	'email/topic_approved.txt' 		=> 'Subject: Thema freigegeben — „{TOPIC_TITLE}“
+	'email/topic_approved.txt' 		=> '%TTTTIIITLE% Thema freigegeben — „{TOPIC_TITLE}“
 
 Hallo {USERNAME},
 
@@ -791,7 +790,7 @@ Wenn du das Thema ansehen möchtest, verwende folgenden Link:
 
 
 $email = array_merge($email, array(
-	'email/topic_disapproved.txt' 		=> 'Subject: Themenfreigabe verweigert — „{TOPIC_TITLE}“
+	'email/topic_disapproved.txt' 		=> '%TTTTIIITLE% Themenfreigabe verweigert — „{TOPIC_TITLE}“
 
 Hallo {USERNAME},
 
@@ -808,7 +807,7 @@ Der folgende Grund wurde dafür angegeben:
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> 'Subject: Benachrichtigung über neue Antwort — „{TOPIC_TITLE}“
+	'email/topic_notify.txt' 		=> '%TTTTIIITLE% Benachrichtigung über neue Antwort — „{TOPIC_TITLE}“
 
 Hallo {USERNAME},
 
@@ -833,7 +832,7 @@ Wenn du das Thema nicht länger abonnieren möchtest, verwende entweder den Link
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> 'Subject: Reaktiviere dein Benutzerkonto
+	'email/user_activate.txt' 		=> '%TTTTIIITLE% Reaktiviere dein Benutzerkonto
 
 Hallo {USERNAME},
 
@@ -847,7 +846,7 @@ dein Benutzerkonto auf „{SITENAME}“ wurde deaktiviert; vermutlich, weil du �
 
 
 $email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> 'Subject: Dein Benutzerkonto wurde deaktiviert
+	'email/user_activate_inactive.txt' 		=> '%TTTTIIITLE% Dein Benutzerkonto wurde deaktiviert
 
 Hallo {USERNAME},
 
@@ -859,7 +858,7 @@ dein Benutzerkonto auf „{SITENAME}“ wurde deaktiviert, vermutlich, weil du �
 
 
 $email = array_merge($email, array(
-	'email/user_activate_passwd.txt' 		=> 'Subject: Aktivierung eines neuen Passworts
+	'email/user_activate_passwd.txt' 		=> '%TTTTIIITLE% Aktivierung eines neuen Passworts
 
 Hallo {USERNAME},
 
@@ -881,7 +880,7 @@ Du kannst dieses Passwort selbstverständlich in deinem persönlichen Bereich ä
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> 'Subject: Reaktiviere dein Benutzerkonto „{SITENAME}“
+	'email/user_reactivate_account.txt' 		=> '%TTTTIIITLE% Reaktiviere dein Benutzerkonto „{SITENAME}“
 
 Ein Board-Administrator hat eine erneute Aktivierung deines Benutzerkontos erzwungen. Dein Benutzerkonto ist derzeit inaktiv.
 Bitte folge den Anweisungen, um dein Konto wieder zu aktivieren.
@@ -905,7 +904,7 @@ Bitte besuche folgenden Link, um dein Benutzerkonto zu reaktivieren:
 
 
 $email = array_merge($email, array(
-	'email/user_reminder_delete_notify.txt' 		=> 'Subject: Löschung Deines Benutzerkontos auf "{SITENAME}"! 
+	'email/user_reminder_delete_notify.txt' 		=> '%TTTTIIITLE% Löschung Deines Benutzerkontos auf "{SITENAME}"! 
 
 Hallo {USERNAME},
 
@@ -921,7 +920,7 @@ Die Löschung Deines Kontos kann nicht mehr rückgängig gemacht werden. Solltes
 
 
 $email = array_merge($email, array(
-	'email/user_reminder_inactive.txt' 		=> 'Subject: Erinnerung von "{SITENAME}"! 
+	'email/user_reminder_inactive.txt' 		=> '%TTTTIIITLE% Erinnerung von "{SITENAME}"! 
 
 Hallo {USERNAME},
 
@@ -937,7 +936,7 @@ Wir freuen uns dich bald wieder bei uns zu sehen.
 
 
 $email = array_merge($email, array(
-	'email/user_reminder_inactive_still.txt' 		=> 'Subject: Zweite Erinnerung von "{SITENAME}"! 
+	'email/user_reminder_inactive_still.txt' 		=> '%TTTTIIITLE% Zweite Erinnerung von "{SITENAME}"! 
 
 Hallo {USERNAME},
 
@@ -963,7 +962,7 @@ Wir würden uns über deine baldige Beteiligung auf {SITENAME} sehr freuen.
 
 
 $email = array_merge($email, array(
-	'email/user_reminder_not_logged_in.txt' 		=> 'Subject: Erinnerung von "{SITENAME}"! 
+	'email/user_reminder_not_logged_in.txt' 		=> '%TTTTIIITLE% Erinnerung von "{SITENAME}"! 
 
 Hallo {USERNAME},
 
@@ -989,7 +988,7 @@ Wir freuen uns, dich bald auf {SITENAME} zu sehen.
 
 
 $email = array_merge($email, array(
-	'email/user_reminder_zero_poster.txt' 		=> 'Subject: Erinnerung von "{SITENAME}"! 
+	'email/user_reminder_zero_poster.txt' 		=> '%TTTTIIITLE% Erinnerung von "{SITENAME}"! 
 
 Hallo {USERNAME},
 
@@ -1007,7 +1006,7 @@ Anderenfalls zögere nicht, dein eigenes Thema zu erstellen, selbst wenn es auch
 
 
 $email = array_merge($email, array(
-	'email/user_remind_inactive.txt' 		=> 'Subject: Erinnerung an inaktives Benutzerkonto
+	'email/user_remind_inactive.txt' 		=> '%TTTTIIITLE% Erinnerung an inaktives Benutzerkonto
 
 Hallo {USERNAME},
 
@@ -1023,7 +1022,7 @@ Vielen Dank für deine Registrierung auf „{SITENAME}“, wir freuen uns über 
 
 
 $email = array_merge($email, array(
-	'email/user_resend_inactive.txt' 		=> 'Subject: Willkommen auf „{SITENAME}“
+	'email/user_resend_inactive.txt' 		=> '%TTTTIIITLE% Willkommen auf „{SITENAME}“
 
 {WELCOME_MSG}
 
@@ -1049,7 +1048,7 @@ Vielen Dank für deine Registrierung.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome.txt' 		=> 'Subject: Willkommen auf „{SITENAME}“
+	'email/user_welcome.txt' 		=> '%TTTTIIITLE% Willkommen auf „{SITENAME}“
 
 {WELCOME_MSG}
 
@@ -1071,7 +1070,7 @@ Vielen Dank für deine Registrierung.
 
 
 $email = array_merge($email, array(
-	'email/user_welcome_inactive.txt' 		=> 'Subject: Willkommen auf „{SITENAME}“
+	'email/user_welcome_inactive.txt' 		=> '%TTTTIIITLE% Willkommen auf „{SITENAME}“
 
 {WELCOME_MSG}
 
