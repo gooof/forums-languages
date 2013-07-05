@@ -1,5 +1,7 @@
 ﻿<?php
-﻿
+/*
+* fix
+*/
 $email = array_merge($email, array(
 	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Ny brukerkonto opprettet
 
