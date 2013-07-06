@@ -187,9 +187,7 @@ $lang = array_merge($lang, array(
 #######language/en/common.php#######
 
 $lang = array_merge($lang, array(
-	'TRANSLATION_INFO'	=> ' <html dir="rtl">
-<a href="http://phpbb.Maghsad.com/">phpBB Persian</a> | پشتیبانی
-<a href="http://phpbb.Maghsad.com/">phpBB فارسی</a> توسط <a href="http://Maghsad.com/">Maghsad</a>',
+	'TRANSLATION_INFO'	=> '<a href="http://phpbb.Maghsad.com/">phpBB Persian</a>',
 	'DIRECTION'			=> 'rtl',
 	'DATE_FORMAT'		=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
 	'USER_LANG'			=> 'fa',

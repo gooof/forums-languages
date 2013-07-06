@@ -187,7 +187,7 @@ $lang = array_merge($lang, array(
 #######language/en/common.php#######
 
 $lang = array_merge($lang, array(
-	'TRANSLATION_INFO'	=> '<br />Ελληνική μετάφραση από το <a href="http://phpbbgr.com/">phpbbgr.com</a>',
+	'TRANSLATION_INFO'	=> 'Ελληνική μετάφραση <a href="http://phpbbgr.com/">phpbbgr.com</a>',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
 	'USER_LANG'			=> 'el',

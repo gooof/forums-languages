@@ -187,7 +187,7 @@ $lang = array_merge($lang, array(
 #######language/en/common.php#######
 
 $lang = array_merge($lang, array(
-	'TRANSLATION_INFO'	=> 'phpBB 3ren euskarazko bertsioa. Itzultzailea, Ibon Idoiaga.<a href="http://www.bibliotecaspublicas.es/leioa/"> Leioako Udal Liburutegia</a> - <a href="http://www.librezale.org">Librezale</a>',
+	'TRANSLATION_INFO'	=> 'phpBB3 free Forum by <a href="http://www.userboard.org/">UserBoard.org</a> | All Rights Reserved.',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|Y M d|',	// 01 Jan 2007 (with Relative days enabled)
 	'USER_LANG'			=> 'eu',

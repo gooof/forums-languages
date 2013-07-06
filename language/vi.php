@@ -187,7 +187,7 @@ $lang = array_merge($lang, array(
 #######language/en/common.php#######
 
 $lang = array_merge($lang, array(
-	'TRANSLATION_INFO'	=> 'Vietnamese language pack for phpBB 3.0.x <a href="http://www.phpbb.com/customise/db/translation/vietnamese/">download and support</a>.',
+	'TRANSLATION_INFO'	=> 'tiếng Việt',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
 	'USER_LANG'			=> 'vi',
