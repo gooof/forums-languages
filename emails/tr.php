@@ -636,7 +636,7 @@ you have received a new private message to your account on "{SITENAME}". You can
 _____________________________________________________________________
 
 From: {AUTHOR_NAME}
-{EMAILSUBJECT:} {SUBJECT}
+Subject: {SUBJECT}
 Message:
 {MESSAGE}
 _____________________________________________________________________

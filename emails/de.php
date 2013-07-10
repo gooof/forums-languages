@@ -640,9 +640,11 @@ Nachricht:
 
 
 $email = array_merge($email, array(
-	'email/prime_notify_privmsg.txt' 		=> '{EMAILSUBJECT:} Neue private Nachricht: {SUBJECT}
+	'email/prime_notify_privmsg.txt' 		=> 'Subject: Neue private Nachricht: {SUBJECT}
 
-Hallo {USERNAME}, du hast unter deinem Konto auf "{SITENAME}" eine neue private Nachricht erhalten. Du kannst die Nachricht durch einen Klick auf den folgenden Link lesen und beantworten: {U_FORUM}: {U_INBOX}
+Hallo {USERNAME}, 
+
+du hast unter deinem Konto auf "{SITENAME}" eine neue private Nachricht erhalten. Du kannst die Nachricht durch einen Klick auf den folgenden Link lesen und beantworten: {U_FORUM}: {U_INBOX}
 _____________________________________________________________________
 
 Von: {AUTHOR_NAME}
