@@ -318,8 +318,8 @@ $lang = array_merge($lang, array(
 	'ERR_JAB_AUTH'						=> 'Kunne ikke autoriseres på Jabberserver.',
 	'ERR_JAB_CONNECT'					=> 'Kunne ikke forbinde til Jabberserver.',
 	'ERR_UNABLE_TO_LOGIN'				=> 'Det angivne brugernavn eller kodeord er ikke korrekt.',
-	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
-	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
+	'ERR_UNWATCHING'					=> 'Der opstod en fejl under forsøget på at slå overvågning fra.',
+	'ERR_WATCHING'						=> 'Der opstod en fejl under forsøget på at slå overvågning til.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'Den angivne phpBB sti synes at være ugyldig.',
 	'EXPAND_VIEW'						=> 'Udvidet visning',
 	'EXTENSION'							=> 'Filtype',
@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'Seneste besøg',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'LDAP-udvidelsesmodul ikke til rådighed.',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Kunne ikke forbinde til LDAP-server.',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'Der opstod en fejl under søgningen i LDAP-kataloget.',
 	'LEGEND'							=> 'Farveforklaring',
 	'LOCATION'							=> 'Geografisk sted',
 	'LOCK_POST'							=> 'Lås indlæg',
@@ -1703,7 +1703,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'Ikke tilgængelig',
 	'UNWRITABLE'				=> 'Ikke skrivbar',
 	'UPDATE_TOPICS_POSTED'		=> 'Opdaterer informationer om indsendte emner',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'Der opstod en fejl under forsøget på at opdatere informationer om indsendte emner. Du kan forsøge denne opdatering igen i ACP, når konverteringsprocessen er afsluttet.',
 	'VERIFY_OPTIONS'			=> 'Kontrollerer konverteringsmuligheder',
 	'VERSION'					=> 'Version',
 
@@ -10573,7 +10573,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>Flyttet forum</strong> %1$s <strong>op over</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>Synkroniseret forum</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>Der opstod en generel fejl</strong>: %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>Oprettet gruppen</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>Gruppen "%1$s" valgt som standardgruppe for</strong><br />» %2$s',

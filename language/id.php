@@ -318,8 +318,8 @@ $lang = array_merge($lang, array(
 	'ERR_JAB_AUTH'						=> 'Tidak dapat diotorisasikan ke sever Jabber.',
 	'ERR_JAB_CONNECT'					=> 'Tidak dapat dihubungkan ke sever Jabber.',
 	'ERR_UNABLE_TO_LOGIN'				=> 'Nama pengguna dan kata sandi yang anda masukkan salah.',
-	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
-	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
+	'ERR_UNWATCHING'					=> 'Error terjadi pada saat mencoba berhenti berlangganan.',
+	'ERR_WATCHING'						=> 'Error terjadi pada saat mencoba berlangganan.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'Path phpBB yang anda tentukan sepertinya salah.',
 	'EXPAND_VIEW'						=> 'Perluas tampilan',
 	'EXTENSION'							=> 'Ekstensi',
@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'Kunjungan terakhir',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'Ekstensi LDAP tidak tersedia.',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Tidak dapat tersambung ke LDAP server.',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'Kesalahan terjadi pada saaat mencari direktori LDAP.',
 	'LEGEND'							=> 'Daftar Grup',
 	'LOCATION'							=> 'Lokasi',
 	'LOCK_POST'							=> 'Tutup post',
@@ -1703,7 +1703,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'Tidak tersedia',
 	'UNWRITABLE'				=> 'Tidak dapat ditulis',
 	'UPDATE_TOPICS_POSTED'		=> 'Menggenerasikan topik yang dipost',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'Sebuah error terjadi pada saat menggenerasikan informasi topik yang dipost. Anda masih dapat mencoba tahap ini pada Papan Pengaturan Pengguna setelah proses konversi selesai.',
 	'VERIFY_OPTIONS'			=> 'Memverifikasi pilihan-pilihan konversi',
 	'VERSION'					=> 'Versi',
 
@@ -10572,7 +10572,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>Memindahkan forum</strong> %1$s <strong>jkeatas</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>Sinkronisasi ulang forum</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>Sebuah permasalah umum terjadi</strong>: %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>Menciptakan grup pengguna baru</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>Menjadikan default grup “%1$s” untuk anggota</strong><br />» %2$s',

@@ -318,8 +318,8 @@ $lang = array_merge($lang, array(
 	'ERR_JAB_AUTH'						=> 'غير مسموح باستخدام Jabber على الخادم',
 	'ERR_JAB_CONNECT'					=> 'لا يمكن الاتصال بخادم Jabber',
 	'ERR_UNABLE_TO_LOGIN'				=> 'خطأ في تسجيل الدخول. اسم المستخدم أو كلمة المرور غير صحيحة',
-	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
-	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
+	'ERR_UNWATCHING'					=> 'حدث خطأ أثناء محاولة إلغاء الاشتراك .',
+	'ERR_WATCHING'						=> 'حدث خطأ أثناء محاولة الاشتراك .',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'يبدو أن مسار phpBB الذي أدخلته غير صحيح',
 	'EXPAND_VIEW'						=> 'عرض موسع',
 	'EXTENSION'							=> 'امتدادات',
@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'آخر زيارة',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'امتداد LDAP غير متوفر',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'لا يمكن الاتصال بخادم LDAP',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'لقد حدث خطأ أثناء البحث عن امتداد LDAP',
 	'LEGEND'							=> 'ألوان المجموعات',
 	'LOCATION'							=> 'مكان',
 	'LOCK_POST'							=> 'إغلاق المشاركة',
@@ -1703,7 +1703,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'غير متوفر',
 	'UNWRITABLE'				=> 'غير قابل للكتابة',
 	'UPDATE_TOPICS_POSTED'		=> 'توليد معلومات المواضيع المنشورة',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'وقع خطأ أثناء توليد معلومات المواضيع المنشورة. تستطيع إعادة هذه الخطوة في لوحة تحكم الإدارة بعد أن ينتهي التحويل',
 	'VERIFY_OPTIONS'			=> 'التحقق من خيارات التحويل',
 	'VERSION'					=> 'الإصدار',
 
@@ -10562,7 +10562,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>نقل منتدى</strong> %1$s <strong>لأعلى</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>مزامنة المنتدى</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>يوجد خطأ عام</strong>: %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>إنشاء مجموعة مستخدمين جديدة</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>جعل المجموعة “%1$s” افتراضية للأعضاء</strong><br />» %2$s',

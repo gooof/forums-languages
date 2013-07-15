@@ -318,8 +318,8 @@ $lang = array_merge($lang, array(
 	'ERR_JAB_AUTH'						=> 'No se us ha pogut autoritzar al servidor Jabber.',
 	'ERR_JAB_CONNECT'					=> 'No s’ha pogut connectar amb el servidor Jabber.',
 	'ERR_UNABLE_TO_LOGIN'				=> 'El nom d’usuari o contrasenya especificats són incorrectes.',
-	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
-	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
+	'ERR_UNWATCHING'					=> 'S’ha produït un error en intentar cancel·lar la subscripció.',
+	'ERR_WATCHING'						=> 'S’ha produït un error en intentar crear la subscripció.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'El camí especificat per al phpBB no és vàlid.',
 	'EXPAND_VIEW'						=> 'Amplia la vista',
 	'EXTENSION'							=> 'Extensió',
@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'Darrera visita',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'Extensió LDAP no disponible.',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'No s’ha pogut connectar amb el servidor LDAP.',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'S’ha produït un error mentre es cercava el directori LDAP.',
 	'LEGEND'							=> 'Llegenda',
 	'LOCATION'							=> 'Ubicació',
 	'LOCK_POST'							=> 'Bloqueja l’entrada',
@@ -1703,7 +1703,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'No disponible',
 	'UNWRITABLE'				=> 'No escrivible',
 	'UPDATE_TOPICS_POSTED'		=> 'S’està generant la informació dels temes publicats',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'S’ha produït un error mentre es generava la informació dels temes publicats. Podeu reintentar aquest pas al TCA quan acabi el procés de conversió.',
 	'VERIFY_OPTIONS'			=> 'S’estan verificant les opcions de conversió',
 	'VERSION'					=> 'Versió',
 
@@ -10572,7 +10572,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>Ha mogut el fòrum </strong> %1$s <strong>a sobre de</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>Ha resincronitzat el fòrum</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>S’ha produït un error general</strong>: %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>Ha creat un nou grup d’usuaris</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>Ha fet de “%1$s” el grup per defecte dels membres</strong><br />» %2$s',

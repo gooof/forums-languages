@@ -318,8 +318,8 @@ $lang = array_merge($lang, array(
 	'ERR_JAB_AUTH'						=> 'Autorizzazione negata sul server Jabber.',
 	'ERR_JAB_CONNECT'					=> 'Impossibile connettersi al server Jabber.',
 	'ERR_UNABLE_TO_LOGIN'				=> 'Il nome utente o la password non sono corretti.',
-	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
-	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
+	'ERR_UNWATCHING'					=> 'Si è verificato un errore durante l’annullamento della sottoscrizione.',
+	'ERR_WATCHING'						=> 'Si è verificato un errore durante la sottoscrizione.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'Il percorso a phpBB specificato sembra non essere valido.',
 	'EXPAND_VIEW'						=> 'Espandi visuale',
 	'EXTENSION'							=> 'Estensione',
@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'Ultima visita',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'Estensione LDAP non disponibile.',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Impossibile connettersi al server LDAP.',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'Si è verificato un errore durante la ricerca della directory LDAP.',
 	'LEGEND'							=> 'Legenda',
 	'LOCATION'							=> 'Località',
 	'LOCK_POST'							=> 'Blocca messaggio',
@@ -1703,7 +1703,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'Non disponibile',
 	'UNWRITABLE'				=> 'Non scrivibile',
 	'UPDATE_TOPICS_POSTED'		=> 'Sto elaborando informazioni sugli argomenti inviati',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'Si è verificato un errore durante l’elaborazione delle informazioni sugli argomenti inviati. Puoi ritentare questo passaggio nel PCA dopo che il processo di conversione sarà completato.',
 	'VERIFY_OPTIONS'			=> 'Sto verificando le opzioni di conversione',
 	'VERSION'					=> 'Versione',
 
@@ -10569,7 +10569,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>Forum spostato</strong> %1$s <strong>sopra</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>Forum risincronizzato</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>Un errore generale ha avuto luogo</strong>: %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>Creato nuovo gruppo</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>Il gruppo “%1$s” è ora quello predefinito dei suoi membri</strong><br />» %2$s',

@@ -318,8 +318,8 @@ $lang = array_merge($lang, array(
 	'ERR_JAB_AUTH'						=> 'Nem sikerült az azonosítás a Jabber szerveren. ',
 	'ERR_JAB_CONNECT'					=> 'Nem sikerült csatlakozni a Jabber szerverhez.',
 	'ERR_UNABLE_TO_LOGIN'				=> 'A megadott felhasználói név vagy jelszó hibás.',
-	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
-	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
+	'ERR_UNWATCHING'					=> 'Hiba lépett fel a leiratkozás során.',
+	'ERR_WATCHING'						=> 'Hiba lépett fel a feliratkozás során.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'A megadott phpBB elérési útvonal feltehetőleg hibás.',
 	'EXPAND_VIEW'						=> 'Kinyitás',
 	'EXTENSION'							=> 'Kiterjesztés',
@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'Utolsó látogatás',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'Az LDAP kiterjesztés nem elérhető.',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Nem sikerült csatlakozni az LDAP szerverhez.',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'Hiba történt az LDAP könyvtár keresése közben.',
 	'LEGEND'							=> 'Magyarázat',
 	'LOCATION'							=> 'Tartózkodási hely',
 	'LOCK_POST'							=> 'Hozzászólás lezárása',
@@ -1702,7 +1702,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'Nem elérhető',
 	'UNWRITABLE'				=> 'Nem írható',
 	'UPDATE_TOPICS_POSTED'		=> 'Téma információk generálása',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'Hiba lépett fel a téma információk generálása közben. A konvertálás befejezése után az adminisztrátori vezérlőpultban újra megpróbálhatod ezt a lépést.',
 	'VERIFY_OPTIONS'			=> 'Konvertálás beállítások ellenőrzése',
 	'VERSION'					=> 'Verzió',
 
@@ -10569,7 +10569,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '%1$s <strong>fórum mozgatása</strong> %2$s <strong>fórum fölé</strong>',
 	'LOG_FORUM_SYNC'						=> '<strong>Fórum újraszinkronizálása</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>Általános hiba lépett fel</strong>: %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>Új csoport létrehozása</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>„%1$s” csoport elsődlegessé tétele a következő tagoknak:</strong><br />» %2$s',

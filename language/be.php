@@ -318,8 +318,8 @@ $lang = array_merge($lang, array(
 	'ERR_JAB_AUTH'						=> 'Не атрымалася аўтарызавацца на серверы Jabber.',
 	'ERR_JAB_CONNECT'					=> 'Не атрымалася падлучыцца да сервера Jabber.',
 	'ERR_UNABLE_TO_LOGIN'				=> 'Паказана няслушнае імя карыстальніка або пароль.',
-	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
-	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
+	'ERR_UNWATCHING'					=> 'Пры спробе адмовіцца ад падпіскі паўстала памылка.',
+	'ERR_WATCHING'						=> 'Пры спробе падпісацца паўстала памылка.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'Паказаны шлях да канферэнцыі няслушны.',
 	'EXPAND_VIEW'						=> 'Разгарнуць',
 	'EXTENSION'							=> 'Пашырэнне',
@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'Апошняе наведванне',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'Пашырэнне LDAP недаступна.',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Не атрымалася злучыцца з серверам LDAP.',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'Адбылася памылка пры пошуку каталогаў LDAP.',
 	'LEGEND'							=> 'Легенда',
 	'LOCATION'							=> 'Адкуль',
 	'LOCK_POST'							=> 'Заблакаваць паведамленне',
@@ -1703,7 +1703,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'Недаступна',
 	'UNWRITABLE'				=> 'Няма мае рацыю на запіс',
 	'UPDATE_TOPICS_POSTED'		=> 'Генераванне пераліку тэм, у якіх пісаў карыстальнік',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'Адбылася памылка пры генераванні пераліку тэм, у якіх пісаў карыстальнік. Вы можаце паўтарыць спробу выканаць гэты этап у адміністратарскім раздзеле пасля завяршэння працэсу канвертавання.',
 	'VERIFY_OPTIONS'			=> 'Праверка налад канвертавання',
 	'VERSION'					=> 'Версія',
 
@@ -10572,7 +10572,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>Перамешчаны форум</strong> %1$s <strong>над</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>Сінхранізаваны форум</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>Адбылася агульная памылка:</strong> %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>Створаная група карыстальнікаў</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>Прызначаная групай па змаўчанні для карыстальнікаў</strong><br />» %s',

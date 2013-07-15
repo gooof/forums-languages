@@ -318,8 +318,8 @@ $lang = array_merge($lang, array(
 	'ERR_JAB_AUTH'						=> 'Nu s-a putut autentifica la serverul de Jabber.',
 	'ERR_JAB_CONNECT'					=> 'Nu s-a putut conecta la serverul de Jabber.',
 	'ERR_UNABLE_TO_LOGIN'				=> 'Numele de utilizator sau parola specificată sunt greşite.',
-	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
-	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
+	'ERR_UNWATCHING'					=> 'Eroare la încercarea de dezabonare.',
+	'ERR_WATCHING'						=> 'Eroare la încercarea de abonare.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'Calea specificată către phpBB este invalidă.',
 	'EXPAND_VIEW'						=> 'Vizualizare extinsă',
 	'EXTENSION'							=> 'Extensie',
@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'Ultima vizită',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'Extensia LDAP nu este valabilă.',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Nu s-a putut efectua conexiunea la server-ul LDAP.',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'O eroare a apărut în timpul căutării în directorul LDAP.',
 	'LEGEND'							=> 'Legendă',
 	'LOCATION'							=> 'Localitate',
 	'LOCK_POST'							=> 'Închide mesaj',
@@ -1703,7 +1703,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'Nu este disponibil',
 	'UNWRITABLE'				=> 'Nu poate fi scris',
 	'UPDATE_TOPICS_POSTED'		=> 'Generează informaţiile subiectelor publicate',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'O eroare a apărut in timp ce se generau informaţiile subiectelor publicate. Poţi reîncerca efectuarea acestui pas din Panoul administratorului după ce procesul de conversie este finalizat.',
 	'VERIFY_OPTIONS'			=> 'Verificarea opţiunilor de conversie',
 	'VERSION'					=> 'Versiune',
 
@@ -10572,7 +10572,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>Forum mutat</strong> %1$s <strong>deasupra</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>Forum resincronizat</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>A fost întâlnită o eroare generală</strong>: %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>Grup nou de utilizatori creat</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>Grup “%1$s” făcut iniţial pentru membri</strong><br />» %s',

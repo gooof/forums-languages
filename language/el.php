@@ -318,8 +318,8 @@ $lang = array_merge($lang, array(
 	'ERR_JAB_AUTH'						=> 'Δεν έχετε εξουσιοδότηση για τον κεντρικό υπολογιστή  Jabber.',
 	'ERR_JAB_CONNECT'					=> 'Αδύνατη σύνδεση με τον κεντρικό υπολογιστή Jabber',
 	'ERR_UNABLE_TO_LOGIN'				=> 'Το διευκρινισμένο όνομα μέλους ή ο κωδικός πρόσβασης είναι ανακριβές.',
-	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
-	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
+	'ERR_UNWATCHING'					=> ' Ένα σφάλμα παρουσιάστηκε κατά την αποχώρηση συνδρομητή .',
+	'ERR_WATCHING'						=> 'Ένα σφάλμα παρουσιάστηκε κατά την εγγραφή συνδρομητή.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'Η διαδρομή του φακέλου phpBB είναι άκυρη.',
 	'EXPAND_VIEW'						=> 'Προβολή ανάπτυξης',
 	'EXTENSION'							=> 'Επέκταση ',
@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'Τελευταία επίσκεψη',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'Η επέκταση LDAP δεν επιτρέπεται.',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Δεν μπορεί να συνδεθεί στον κεντρικό υπολογιστή LDAP.',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'Προέκυψε σφάλμα κατά την αναζήτηση στον κατάλογο LDAP.',
 	'LEGEND'							=> 'Υπόμνημα',
 	'LOCATION'							=> 'Τοποθεσία',
 	'LOCK_POST'							=> 'Κλειδώστε δημοσίευση',
@@ -1703,7 +1703,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'Μη διαθέσιμο',
 	'UNWRITABLE'				=> 'Μη εγγράψιμο',
 	'UPDATE_TOPICS_POSTED'		=> 'Δημιουργία πληροφοριών θεμάτων',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'Προέκυψε ένα σφάλμα κατά την δημιουργία πληροφοριών θεμάτων. Μπορείτε να ξαναπροσπαθήσετε αυτό το βήμα από τον Πίνακα Ελέγχου Διαχειριστή μετά το τέλος της μετατροπής.',
 	'VERIFY_OPTIONS'			=> 'Επαλήθευση των επιλογών μετατροπής',
 	'VERSION'					=> 'Έκδοση',
 
@@ -10572,7 +10572,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>Μετακίνηση Δημ. συζήτησης</strong> %1$s <strong>πάνω</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>Επανασυγχρονισμός Δ. Συζήτησης</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>Ένα γενικό σφάλμα</strong>: %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>Δημιουργήθηκε νέα ομάδα</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>Η ομάδα “%1$s” δηλώθηκε σαν βασική για τα μέλη</strong><br />» %2$s',

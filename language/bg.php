@@ -318,8 +318,8 @@ $lang = array_merge($lang, array(
 	'ERR_JAB_AUTH'						=> 'Не мога да се оторизирам в Jabber сървъра.',
 	'ERR_JAB_CONNECT'					=> 'Не мога да се свържа към Jabber сървъра.',
 	'ERR_UNABLE_TO_LOGIN'				=> 'Грешка при вход. Името или паролата са грешни.',
-	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
-	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
+	'ERR_UNWATCHING'					=> 'Грешка при опит за отписване от бюлетина.',
+	'ERR_WATCHING'						=> 'Грешка при опит за абонамент.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'Пътя до phpBB форума е невалиден.',
 	'EXPAND_VIEW'						=> 'Разгърни',
 	'EXTENSION'							=> 'Разширение',
@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'Последно посещение',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'LDAP разширението не е валидно',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Грешка при връзка с LDAP сървъра',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'Грешка при опит за търсене на LDAP директорията.',
 	'LEGEND'							=> 'Легенда',
 	'LOCATION'							=> 'Местоположение',
 	'LOCK_POST'							=> 'Заключи мнението',
@@ -1693,7 +1693,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'Невалиден',
 	'UNWRITABLE'				=> 'не може да се пише в/у него ',
 	'UPDATE_TOPICS_POSTED'		=> 'Генериране на информация за теми',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'Грешка при генерирането на мненията в тема. След като приключи конвертирането можете да опитате отново да генерирате информация в администраторския панел.',
 	'VERIFY_OPTIONS'			=> 'Потвърдителни настройки',
 	'VERSION'					=> 'Версия',
 
@@ -10560,7 +10560,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>Преместен форум</strong> %1$s <strong>над</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>Ресинхронизиране на форум</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>Грешка</strong>: %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>Добавяне: потребителска група</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>Направена група по подразбиране</strong><br />» %s',

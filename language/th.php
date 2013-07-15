@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'เข้าชมล่าสุด',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'LDAP extension ไม่สามารถใช้งานได้.',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'ไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์ของ LDAP ',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'ผิดพลาด ไม่สามารถค้นหา LDAP directory.ได้ ',
 	'LEGEND'							=> 'กลุ่ม',
 	'LOCATION'							=> 'ที่อยู่',
 	'LOCK_POST'							=> 'ล็อกโพสต์',
@@ -1704,7 +1704,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'ใช้งานไม่ได้',
 	'UNWRITABLE'				=> 'เขียนไม่ได้',
 	'UPDATE_TOPICS_POSTED'		=> 'กำลังสร้างข้อมูลโพสต์ในกระทู้',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'มีความผิดพลาดขณะสร้างโพสต์ในกระทู้ คุณสามารถลองอีกครั้งหลังจากกระบวนการแปลงเสร็จสิ้น',
 	'VERIFY_OPTIONS'			=> 'การตรวจสอบตัวเลือกการแปลง',
 	'VERSION'					=> 'เวอร์ชั่น',
 

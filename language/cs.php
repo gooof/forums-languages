@@ -1703,7 +1703,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'Nedostupné',
 	'UNWRITABLE'				=> 'Nezapisovatelné',
 	'UPDATE_TOPICS_POSTED'		=> 'Generuji informace o&nbsp;odeslaných tématech',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'Objevila se chyba při generování informací o&nbsp;odeslaných tématech. Můžete se pokusit tento krok provést znovu přes Administraci fóra po skončení konverze.',
 	'VERIFY_OPTIONS'			=> 'Kontroluji nastavení převodu',
 	'VERSION'					=> 'Verze',
 
@@ -10570,7 +10570,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>Přesunuto fórum</strong> %1$s <strong>nad</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>Resynchronizace fóra</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>Obecná chyba fóra</strong>: %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>Vytvořena nová uživatelská skupina</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>Skupina „%1s“ byla nastavena jako výchozí pro uživatele</strong><br />» %2$s',

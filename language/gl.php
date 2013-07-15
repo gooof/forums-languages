@@ -318,8 +318,8 @@ $lang = array_merge($lang, array(
 	'ERR_JAB_AUTH'						=> 'Non se pode obter autorización no servidor Jabber.',
 	'ERR_JAB_CONNECT'					=> 'Non se pode conectar co servidor Jabber.',
 	'ERR_UNABLE_TO_LOGIN'				=> 'Erro ao iniciar sesión. O nome ou o contrasinal proporcionado é incorrecto.',
-	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
-	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
+	'ERR_UNWATCHING'					=> 'Houbo un erro ao tentar desubscribir.',
+	'ERR_WATCHING'						=> 'Houbo un erro ao tentar subscribir.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'A ruta do phpBB inserida semella non ser válida.',
 	'EXPAND_VIEW'						=> 'Expandir vista',
 	'EXTENSION'							=> 'Extensión',
@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'Última visita',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'Extensión LDAP non dispoñíbel',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Non se puido conectar co servidor LDAP',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'Houbo un erro ao tentar a procura no directorio LDAP.',
 	'LEGEND'							=> 'Lenda',
 	'LOCATION'							=> 'Ubicación',
 	'LOCK_POST'							=> 'Bloquear mensaxe',
@@ -1701,7 +1701,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'Non dispoñíbel',
 	'UNWRITABLE'				=> 'Non escribíbel',
 	'UPDATE_TOPICS_POSTED'		=> 'Xerando información dos temas publicados',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'Houbo un erro ao tentar xerar a información dos temas publicados. Podes tentar outra vez efectuar este paso no PCA logo de que o proceso de conversión estea completado.',
 	'VERIFY_OPTIONS'			=> 'Verificando as opcións de conversión',
 	'VERSION'					=> 'Versión',
 
@@ -10569,7 +10569,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>Foros movidos</strong> %1$s <strong>enriba</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>Foro sincronizado</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>Houbo un erro xeral</strong>: %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>Creado novo grupo de usuarios</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>Grupo por defecto para membros</strong><br />» %s',

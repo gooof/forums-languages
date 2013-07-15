@@ -318,8 +318,8 @@ $lang = array_merge($lang, array(
 	'ERR_JAB_AUTH'						=> 'Une erreur est survenue lors de l’authentification au serveur Jabber.',
 	'ERR_JAB_CONNECT'					=> 'Une erreur est survenue lors de la connexion au serveur Jabber.',
 	'ERR_UNABLE_TO_LOGIN'				=> 'Le nom d’utilisateur ou le mot de passe que vous avez spécifié est incorrect.',
-	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
-	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
+	'ERR_UNWATCHING'					=> 'Une erreur est survenue lorsque vous avez essayé de vous désabonner.',
+	'ERR_WATCHING'						=> 'Une erreur est survenue lorsque vous avez essayé de vous abonner.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'Le chemin que vous avez spécifié semble incorrect.',
 	'EXPAND_VIEW'						=> 'Agrandir',
 	'EXTENSION'							=> 'Extension',
@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'Dernière visite',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'L’extension LDAP est indisponible.',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Impossible de se connecter au serveur LDAP.',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'Une erreur est survenue lors de la recherche du répertoire LDAP.',
 	'LEGEND'							=> 'Légende ',
 	'LOCATION'							=> 'Localisation ',
 	'LOCK_POST'							=> 'Verrouiller le message',
@@ -1703,7 +1703,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'Indisponible',
 	'UNWRITABLE'				=> 'Écriture impossible',
 	'UPDATE_TOPICS_POSTED'		=> 'Production de l’information concernant les sujets publiés',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'Une erreur est survenue lors de la production de l’information concernant les sujets publiés. Une fois la procédure de conversion terminée, vous pourrez recommencer cette étape depuis le panneau de contrôle d’administration.',
 	'VERIFY_OPTIONS'			=> 'Vérification des options de conversion',
 	'VERSION'					=> 'Version',
 
@@ -10572,7 +10572,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>Déplacement du forum</strong> %1$s <strong>au-dessus de</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>Resynchronisation d’un forum</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>Une erreur générale est survenue</strong> : %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>Création d’un nouveau groupe d’utilisateurs</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>Le groupe « %1$s » a été défini comme groupe par défaut pour les membres</strong><br />» %2$s',

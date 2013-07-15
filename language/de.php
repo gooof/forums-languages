@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'Letzter Besuch',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'Die LDAP-Erweiterung steht nicht zur Verfügung.',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Es konnte keine Verbindung zum LDAP-Server aufgebaut werden.',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'Beim Durchsuchen des LDAP-Verzeichnisses ist ein Fehler aufgetreten.',
 	'LEGEND'							=> 'Legende',
 	'LOCATION'							=> 'Wohnort',
 	'LOCK_POST'							=> 'Beitrag sperren',
@@ -1702,7 +1702,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'Nicht verfügbar',
 	'UNWRITABLE'				=> 'Nicht beschreibbar',
 	'UPDATE_TOPICS_POSTED'		=> 'Ermittle Informationen über Themen mit eigenen Beiträgen',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'Während der Ermittlung der Informationen über Themen mit eigenen Beiträgen ist ein Fehler aufgetreten. Du kannst diesen Vorgang nach der Konvertierung im Administrations-Bereich erneut aufrufen.',
 	'VERIFY_OPTIONS'			=> 'Konvertierungs-Einstellungen überprüfen',
 	'VERSION'					=> 'Version',
 
@@ -10608,7 +10608,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>Forum verschoben</strong> %1$s <strong>über</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>Forum resynchronisiert</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>Ein allgemeiner Fehler ist aufgetreten</strong>: %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>Benutzergruppe erstellt</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>Gruppe „%1$s“ als Standardgruppe für Mitglieder gesetzt</strong><br />» %2$s',

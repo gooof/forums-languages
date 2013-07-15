@@ -318,8 +318,8 @@ $lang = array_merge($lang, array(
 	'ERR_JAB_AUTH'						=> 'Neuspjela autorizacija na Jabber server.',
 	'ERR_JAB_CONNECT'					=> 'Neuspjelo spajanje na Jabber server.',
 	'ERR_UNABLE_TO_LOGIN'				=> 'Greška prilikom prijavljivanja. Uneseno je netočno korisničko ime i/ili lozinka.',
-	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
-	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
+	'ERR_UNWATCHING'					=> 'Došlo je do greške prilikom odkazivanja pretplate.',
+	'ERR_WATCHING'						=> 'Greška prilikom pokušaja uspostave pretplate.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'phpBB putanja je neispravna.',
 	'EXPAND_VIEW'						=> 'Proširi prikaz',
 	'EXTENSION'							=> 'Ekstenzija',
@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'Zadnja posjeta',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'LDAP ekstenzija nije dozvoljena.',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Povezivanje sa LDAP serverom nije uspjelo.',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'Došlo je do pogreške tijekom pretraživanje LDAP direktorija.',
 	'LEGEND'							=> 'Legenda',
 	'LOCATION'							=> 'Lokacija',
 	'LOCK_POST'							=> 'Zaključaj post',
@@ -1703,7 +1703,7 @@ Sada imaš phpBB %1$s koji je uspješno instaliran. Molimo da nastaviš odabirom
 	'UNAVAILABLE'				=> 'Nedostupno',
 	'UNWRITABLE'				=> 'Nepre(za)pisljivo',
 	'UPDATE_TOPICS_POSTED'		=> 'Generiranje informacija postanih tema',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'Došlo je do greške prilikom generiranja informacija postanih tema. Ovaj korak možeš ponovo pokušati napraviti iz <em>AF-a</em>, nakon što proces konverzacije završi.',
 	'VERIFY_OPTIONS'			=> 'Verificiranje opcija konverzije',
 	'VERSION'					=> 'Verzija',
 
@@ -10572,7 +10572,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>Premješten forum</strong> %1$s <strong>gore</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>Resinkroniziran forum</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>Dogodila se općenita greška</strong>: %1$s <br />Â» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>Kreirana nova korisnička grupa</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>Grupa “%1$s” postavljena kao zadana za korisnike/ce</strong><br />» %2$s',

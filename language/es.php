@@ -318,8 +318,8 @@ $lang = array_merge($lang, array(
 	'ERR_JAB_AUTH'						=> 'No se puede autenticar en el servidor Jabber.',
 	'ERR_JAB_CONNECT'					=> 'No se puede conectar al servidor Jabber.',
 	'ERR_UNABLE_TO_LOGIN'				=> 'Error en identificación. El usuario o contraseña insertada es incorrecta.',
-	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
-	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
+	'ERR_UNWATCHING'					=> 'Ocurrió un error al intentar dejar de seguir tema.',
+	'ERR_WATCHING'						=> 'Ocurrió un error al intentar suscribirse.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'La ruta phpBB introducida parece no ser válida.',
 	'EXPAND_VIEW'						=> 'Expandir vista',
 	'EXTENSION'							=> 'Extensión',
@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'La última visita fue',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'Extensión LDAP no disponible',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'No se puede conectar al servidor LDAP',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'Ocurrió un error mientras se buscaba en el directorio LDAP.',
 	'LEGEND'							=> 'Referencia',
 	'LOCATION'							=> 'Ubicación',
 	'LOCK_POST'							=> 'Mensaje cerrado',
@@ -1703,7 +1703,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'No disponible',
 	'UNWRITABLE'				=> 'No escribe',
 	'UPDATE_TOPICS_POSTED'		=> 'Generando información de temas publicados',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'Ha ocurrido un error mientras generaba información de topics posteados. Puede reintentar este paso en el Panel de Administración (ACP) después de completar el proceso de conversión.',
 	'VERIFY_OPTIONS'			=> 'Verificando las opciones de conversión',
 	'VERSION'					=> 'Versión',
 
@@ -10572,7 +10572,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>Movido: foro</strong> %1$s <strong>encima de</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>Foro resincronizado</strong><br />» %1$s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>Ha ocurrido un error general</strong>: %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>: nuevo grupo de usuarios</strong><br />» %1$s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>Grupo por defecto para usuarios</strong><br />» %1$s',

@@ -318,8 +318,8 @@ $lang = array_merge($lang, array(
 	'ERR_JAB_AUTH'						=> 'Ei saanud tuvastada Jabber serverit.',
 	'ERR_JAB_CONNECT'					=> 'Ei saanud ühendada Jabber serveriga.',
 	'ERR_UNABLE_TO_LOGIN'				=> 'Sisestatud kasutajanimi või parool oli vale.',
-	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
-	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
+	'ERR_UNWATCHING'					=> 'Tellimuse peatamisel tekkis viga.',
+	'ERR_WATCHING'						=> 'Tellimisel tekkis viga.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'phpBB kaust serveris on ebakorrektne.',
 	'EXPAND_VIEW'						=> 'Laiendatud vaade',
 	'EXTENSION'							=> 'Laiend',
@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'Viimane külastus',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'LDAP lühend pole lubatud.',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Ei suutnud ühendada LDAP serveriga.',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'LDAP kaustast otsimisel tekkis viga.',
 	'LEGEND'							=> 'Legend',
 	'LOCATION'							=> 'Asukoht',
 	'LOCK_POST'							=> 'Sule postitus',
@@ -1679,7 +1679,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'Pole saadaval',
 	'UNWRITABLE'				=> 'Pole kirjutatav',
 	'UPDATE_TOPICS_POSTED'		=> 'Genereerin teemade infot',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'Teemade info genereerimisel ilmnes viga. Võid proovida seda uuesti teha AJP\'s peale konverteerimise lõpetamist.',
 	'VERIFY_OPTIONS'			=> 'Kontrollin konversiooni valikuid',
 	'VERSION'					=> 'Versioon',
 
@@ -10511,7 +10511,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>Foorum liigutatud</strong> %1$s <strong>kohale</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>Foorum resünkroniseeritud</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>Tekkis üldviga</strong>: %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>Uus kasutajagrupp loodud</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>Grupp “%1$s” muudetud vaikimisi grupiks kasutajatele</strong><br />» %2$s',
