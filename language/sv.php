@@ -318,8 +318,8 @@ $lang = array_merge($lang, array(
 	'ERR_JAB_AUTH'						=> 'Kunde inte autentisera på Jabberserver.',
 	'ERR_JAB_CONNECT'					=> 'Kunde inte ansluta till Jabberservern.',
 	'ERR_UNABLE_TO_LOGIN'				=> 'Det angivna användarnamnet eller lösenordet är felaktigt.',
-	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
-	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
+	'ERR_UNWATCHING'					=> 'Kunde inte avsluta bevakningen av denna tråd.',
+	'ERR_WATCHING'						=> 'Kunde inte bevaka denna tråd.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'Den angivna sökvägen till phpBB verkar vara felaktig.',
 	'EXPAND_VIEW'						=> 'Expandera',
 	'EXTENSION'							=> 'Filtyp',
@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'Senaste besöket',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'LDAP inte tillgängligt.',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Kunde inte ansluta till LDAP-server.',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'Ett fel inträffade i samband med sökningen i LDAP-registret.',
 	'LEGEND'							=> 'Förklaring',
 	'LOCATION'							=> 'Ort',
 	'LOCK_POST'							=> 'Lås inlägg',
@@ -1701,7 +1701,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'Ej tillgänglig',
 	'UNWRITABLE'				=> 'Ej skrivbar',
 	'UPDATE_TOPICS_POSTED'		=> 'Genererar trådpostningsinformation',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'Ett fel uppstod när trådpostningsinformationen skulle genereras. Du kan försöka göra detta igen i administrationspanelen efter att  konverteringen slutförts.',
 	'VERIFY_OPTIONS'			=> 'Bekräftar konverteringsinställningar',
 	'VERSION'					=> 'Version',
 
@@ -10561,7 +10561,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>Flyttade kategori</strong> %1$s <strong>ovanför</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>Synkroniserade kategori</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>Ett allmänt fel uppstod</strong>: %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>Ny användargrupp skapades</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>Gruppen “%1$s” gjordes till standardgrupp för medlemmar</strong><br />» %2$s',

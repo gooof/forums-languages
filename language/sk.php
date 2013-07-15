@@ -318,8 +318,8 @@ $lang = array_merge($lang, array(
 	'ERR_JAB_AUTH'						=> 'Nemôžem autorizovať užívateľa na Jabber serveri.',
 	'ERR_JAB_CONNECT'					=> 'Nemôžem sa pripojiť na Jabber server.',
 	'ERR_UNABLE_TO_LOGIN'				=> 'Chyba počas prihlasovania. Zadané užívateľské meno, alebo heslo je nesprávne.',
-	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
-	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
+	'ERR_UNWATCHING'					=> 'Pri odhlasovaní z odberu noviniek sa objavila chyba.',
+	'ERR_WATCHING'						=> 'Pri prihlasovaní k odberu noviniek sa objavila chyba.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'Vložená cesta k phpBB je neplatná.',
 	'EXPAND_VIEW'						=> 'Zväčšiť náhľad',
 	'EXTENSION'							=> 'Rozšírenie',
@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'Posledná návšteva',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'LDAP rozšírenie, nie je dostupné',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Nie je možné pripojiť sa na LDAP server',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'Došlo k chybe pri hľadaní v adresári LDAP.',
 	'LEGEND'							=> 'Legenda',
 	'LOCATION'							=> 'Bydlisko',
 	'LOCK_POST'							=> 'Zamknutý príspevok',
@@ -1703,7 +1703,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'Nedostupné',
 	'UNWRITABLE'				=> 'Nezapisovateľné',
 	'UPDATE_TOPICS_POSTED'		=> 'Generujem informácie o odoslaných témach',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'Objavila sa chyba počas generovania informácii o odoslaných témach. Môžete sa pokúsiť opakovať tento krok cez administráciu (ACP) po skončení konvertovania.',
 	'VERIFY_OPTIONS'			=> 'Kontrolujem nastavenia konverzie',
 	'VERSION'					=> 'Verzia',
 
@@ -10572,7 +10572,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>Fórum</strong> %1$s <strong>presunuté hore</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>Resynchronizácia fóra</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>Vyskytla sa všeobecná chyba</strong>: %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>Vytvorená nová užívateľská skupina</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>Skupina „%1$s“ nastavená ako prednastavená pre užívateľov</strong><br />» %2$s',

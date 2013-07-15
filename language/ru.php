@@ -1703,7 +1703,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'Недоступно',
 	'UNWRITABLE'				=> 'нет прав на запись',
 	'UPDATE_TOPICS_POSTED'		=> 'Создание списка тем, в которых писал пользователь',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'Произошла ошибка при создание списка тем, в которых писал пользователь. Вы можете повторить попытку выполнить этот этап в администраторском разделе после завершения процесса преобразования.',
 	'VERIFY_OPTIONS'			=> 'Проверка настроек конвертирования',
 	'VERSION'					=> 'Версия',
 
@@ -10572,7 +10572,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>Перемещён форум</strong> %1$s <strong>над</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>Синхронизирован форум</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>Произошла общая ошибка:</strong> %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>Создана группа пользователей</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>Группа “%1$s” установлена по умолчанию для пользователей</strong><br />» %2$s',

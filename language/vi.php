@@ -318,8 +318,8 @@ $lang = array_merge($lang, array(
 	'ERR_JAB_AUTH'						=> 'Không thể xác thực trên máy chủ Jabber.',
 	'ERR_JAB_CONNECT'					=> 'Không thể nối kết đến máy chủ Jabber.',
 	'ERR_UNABLE_TO_LOGIN'				=> 'Tên thành viên hoặc mật khẩu đã nhập không chính xác.',
-	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
-	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
+	'ERR_UNWATCHING'					=> 'Có lỗi xảy ra khi hủy đăng ký.',
+	'ERR_WATCHING'						=> 'Có lỗi xảy ra khi đăng ký.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'Đường dẫn đến hệ thống phpBB vừa nhập dường như không hợp lệ.',
 	'EXPAND_VIEW'						=> 'Xem toàn bộ',
 	'EXTENSION'							=> 'Đuôi tập tin đính kèm',
@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'Lần ghé thăm trước',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'Ứng dụng mở rộng LDAP không có sẵn.',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Không thể kết nối đến máy chủ LDAP.',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'Có lỗi xảy ra khi tìm kiếm thư mục LDAP.',
 	'LEGEND'							=> 'Chú thích',
 	'LOCATION'							=> 'Đến từ',
 	'LOCK_POST'							=> 'Khoá bài viết',
@@ -1703,7 +1703,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'Không có sẵn',
 	'UNWRITABLE'				=> 'Không thể ghi',
 	'UPDATE_TOPICS_POSTED'		=> 'Đang tạo thông tin cho các chủ đề đã gửi',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'Có một lỗi xảy ra trong khi tạo thông tin cho các chủ đề đã gửi. Bạn có thể thử lại một lần nữa bước này trong bảng điều khiển của quản trị viên sau khi quá trình chuyển đổi hoàn tất.',
 	'VERIFY_OPTIONS'			=> 'Đang xác thực các tùy chọn chuyển đổi',
 	'VERSION'					=> 'Phiên bản',
 
@@ -10572,7 +10572,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>Đã di chuyển chuyên mục</strong> %1$s <strong>lên trên</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>Đã đồng bộ lại chuyên mục</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>Lỗi tổng quát</strong>: %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>Nhóm thành viên mới đã được tạo</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>Đã chọn “%1$s” là nhóm mặc định cho các thành viên</strong><br />» %2$s',

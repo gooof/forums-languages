@@ -319,7 +319,7 @@ $lang = array_merge($lang, array(
 	'ERR_JAB_CONNECT'					=> 'Nepavyko prisijungti prie Jabber serverio.',
 	'ERR_UNABLE_TO_LOGIN'				=> 'Nurodytas vartotojo vardas arba slaptažodis yra neteisingas.',
 	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
-	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
+	'ERR_WATCHING'						=> 'Bandant užsisakyti perspėjimus įvyko klaida.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'Kelias iki phpBB yra netinkamas.',
 	'EXPAND_VIEW'						=> 'Išskleisti vaizdą',
 	'EXTENSION'							=> 'Išplėtimas',
@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'Paskutinis prisijungimas',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'Nepavyko rasti LDAP modulio.',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Nepavyko prisijungti prie LDAP serverio.',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'Ieškant LDAP direktorijoje įvyko klaida.',
 	'LEGEND'							=> 'Legenda',
 	'LOCATION'							=> 'Miestas',
 	'LOCK_POST'							=> 'Užrakinti pranešimą',
@@ -1702,7 +1702,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'Nėra',
 	'UNWRITABLE'				=> 'Tik skaitymui',
 	'UPDATE_TOPICS_POSTED'		=> 'Generuojama temų datos informacija',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'Generuojant temų datos informaciją įvyko klaida. Kai konversijos procesas bus baigtas, galėsite pabandyti padaryti tai dar kartą per administratoriaus valdymo pultą.',
 	'VERIFY_OPTIONS'			=> 'Tikrinamos konversijos galimybės',
 	'VERSION'					=> 'Versija',
 
@@ -10565,7 +10565,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>Perkeltas forumas</strong> %1$s <strong>aukščiau</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>Susinchronizuotas forumas</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>Įvyko pagrindinė klaida</strong>: %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>Sukurta nauja vartotojų grupė</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>Grupė “%1$s” padaryta pagrindine nariams</strong><br />» %2$s',

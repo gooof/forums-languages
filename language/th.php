@@ -318,8 +318,8 @@ $lang = array_merge($lang, array(
 	'ERR_JAB_AUTH'						=> 'ไม่สามารถยืนยันตัวตนบน Jabber server.',
 	'ERR_JAB_CONNECT'					=> 'ไม่สามารถติดต่อ Jabber server.',
 	'ERR_UNABLE_TO_LOGIN'				=> 'ชื่อผู้ใช้ และ หรัสผ่านไม่ถูกต้อง',
-	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
-	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
+	'ERR_UNWATCHING'					=> 'เกิดข้อผิดพลาดขณะที่พยายามจะยกเลิกการติดตาม.',
+	'ERR_WATCHING'						=> 'เกิดข้อผิดพลาดขณะที่พยายามติดตาม.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'พาร์ท PhpBB นี้ไม่ถูกต้อง',
 	'EXPAND_VIEW'						=> 'มุมมองที่ขยายได้',
 	'EXTENSION'							=> 'ชนิดของไฟล์',
@@ -10591,7 +10591,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>ย้ายบอร์ด</strong> %1$s <strong>ข้างบน</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>Re-synchronised บอร์ด</strong><br />? %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>A general error occured</strong>: %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>สร้างกลุ่มผู้ใช้ใหม่</strong><br />? %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>กลุ่ม “%1$s” ถูกตั้งเป็นค่าเริ่มต้นสำหรับสมาชิก</strong><br />? %2$s',

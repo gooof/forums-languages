@@ -318,8 +318,8 @@ $lang = array_merge($lang, array(
 	'ERR_JAB_AUTH'						=> 'Неможе да се направи авторизација на Jabber серверот.',
 	'ERR_JAB_CONNECT'					=> 'Неможе да се поврзе со Jabber серверор.',
 	'ERR_UNABLE_TO_LOGIN'				=> 'Грешка при најава. Внесено е неточно/неактивно Членско име или лозинка.',
-	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
-	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
+	'ERR_UNWATCHING'					=> 'Се појави грешка додека сакавте да ја одкажете претплатата.',
+	'ERR_WATCHING'						=> 'Се појави грешка при претплатата на ова мислење/тема.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'Патото кон скриптата изгледа неточно.',
 	'EXPAND_VIEW'						=> 'Издолжен поглед',
 	'EXTENSION'							=> 'Додаток',
@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'Попследна посета',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'LDAP додадокот не е достапен',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Не можеше да се конектира до LDAP серверот',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'Се појави грешка додека се пребаруваше LDAP директоријата.',
 	'LEGEND'							=> 'Легенда',
 	'LOCATION'							=> 'Локација',
 	'LOCK_POST'							=> 'Заклучи го мислењето',
@@ -1703,7 +1703,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'Невозможно',
 	'UNWRITABLE'				=> 'Неможе да се запише',
 	'UPDATE_TOPICS_POSTED'		=> 'Се генерираат темите и постираната информација',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'Се појави грешка при генерирање на информации за постираната тема. Можете да го поновите овој чекор во админ панелот по завршувањето на конвертирањето.',
 	'VERIFY_OPTIONS'			=> 'Верифицирање на опциите за конвертирање',
 	'VERSION'					=> 'Верзија',
 
@@ -10572,7 +10572,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>Преместен форум</strong> %1$s <strong>above</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>Форумоте ресихронизиран</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>Се појави главна грешка</strong>: %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>Креирана нова група</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>Групата “%1$s” основна за членовите</strong><br />» %2$s',

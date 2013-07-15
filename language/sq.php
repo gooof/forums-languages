@@ -1701,7 +1701,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'I padisponueshëm',
 	'UNWRITABLE'				=> 'I pashkruajtshëm',
 	'UPDATE_TOPICS_POSTED'		=> 'Duke gjeneruar informacionin e temave të postuara',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'Gabim gjatë gjenerimit të informacionit të temave të postuara. Ju mund të provoni përsëri nga ACP pasi të kompletohet proçesi i konvertimit.',
 	'VERIFY_OPTIONS'			=> 'Duke verifikuar opsionet e konvertimit',
 	'VERSION'					=> 'Versioni',
 

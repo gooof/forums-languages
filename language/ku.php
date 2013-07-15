@@ -318,8 +318,8 @@ $lang = array_merge($lang, array(
 	'ERR_JAB_AUTH'						=> 'نەتوانرا ڕێگە پێبدرێت لە ڕاژەکاری جابەر.',
 	'ERR_JAB_CONNECT'					=> 'نەتوانرا پەیوەندی بکرێت بە ڕاژەکاری جابەرەوە.',
 	'ERR_UNABLE_TO_LOGIN'				=> 'ناوی بەکارهێنەر یان تێپەڕەوشەی دیاریکراو نادروستە.',
-	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
-	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
+	'ERR_UNWATCHING'					=> 'هەڵەیەک ڕوویدا لە کاتی هەوڵدان بۆ بەشداری نەکردن.',
+	'ERR_WATCHING'						=> 'هەڵەیەک ڕوویدا لە کاتی هەوڵدان بۆ بەشداریکردن.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'وا دەردەکەوێت ڕێڕەوی دیاریکراوی phpBB نەگونجاو بێت.',
 	'EXPAND_VIEW'						=> 'فراوانکردنی بینین',
 	'EXTENSION'							=> 'درێژکراوە',
@@ -444,7 +444,7 @@ $lang = array_merge($lang, array(
 	'LAST_VISIT'						=> 'دوا سەردان',
 	'LDAP_NO_LDAP_EXTENSION'			=> 'درێژکراوەی LDAP نییە.',
 	'LDAP_NO_SERVER_CONNECTION'			=> 'نەتوانرا پەیوەندی بکرێت بە ڕاژەکاری LDAP ـیەوە.',
-	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
+	'LDAP_SEARCH_FAILED'				=> 'LDAP هەڵەیەک ڕوویدا لەکاتی گەڕان بۆ شوێنی',
 	'LEGEND'							=> 'پلەداران',
 	'LOCATION'							=> 'شوێن',
 	'LOCK_POST'							=> 'داخستنی پەیام',
@@ -1703,7 +1703,7 @@ $lang = array_merge($lang, array(
 	'UNAVAILABLE'				=> 'نابەردەستی',
 	'UNWRITABLE'				=> 'نەنووسێن',
 	'UPDATE_TOPICS_POSTED'		=> 'دروستکردنی زانیاری نێردراوی بابەتەکان',
-	'UPDATE_TOPICS_POSTED_ERR'	=> 'An error occurred while generating topics posted information. You can retry this step in the ACP after the conversion process is completed.',
+	'UPDATE_TOPICS_POSTED_ERR'	=> 'هەڵەیەک ڕوویدا لەکاتی دروستکردنی زانیاری نێردراوی بابەتەکان ،دەتوانی ئەو هەنگاوە دووبارەبکەیەوە لە کۆنترۆڵ پانێڵی بەڕێوەبەر لەدوای تەواوبوونی کرداری گۆڕینەکە.',
 	'VERIFY_OPTIONS'			=> 'دڵنیاکردنەوەی هەڵبژاردنەکانی گۆڕین',
 	'VERSION'					=> 'وەشان',
 
@@ -10564,7 +10564,7 @@ $lang = array_merge($lang, array(
 	'LOG_FORUM_MOVE_UP'						=> '<strong>مەکۆی گواستراوە</strong> %1$s <strong>لەسەرەوە</strong> %2$s',
 	'LOG_FORUM_SYNC'						=> '<strong>لەگەڵ-هێنانەوەی مەکۆ</strong><br />» %s',
 
-	'LOG_GENERAL_ERROR'	=> '<strong>A general error occurred</strong>: %1$s <br />» %2$s',
+	'LOG_GENERAL_ERROR'	=> '<strong>هەڵەیەکی گشتی ڕوویدا</strong>: %1$s <br />» %2$s',
 
 	'LOG_GROUP_CREATED'		=> '<strong>گرووپی نوێی بەکارهێنەر دروستکرا</strong><br />» %s',
 	'LOG_GROUP_DEFAULTS'	=> '<strong>گرووپی “%1$s” کرا بە بنەڕەت بۆ ئەندامان</strong><br />» %2$s',
