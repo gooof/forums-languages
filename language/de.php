@@ -924,7 +924,7 @@ $lang = array_merge($lang, array(
 	'NEWSBOX_REG'			=> 'Jetzt kostenlos <a href="ucp.php?mode=register">registrieren</a> und alle Funktionen nutzen.',
 	'NEWSBOX_WELCOME'		=> 'Willkommen im Forum',
 	'NEWSBOX_TITLE'		=> 'Willkommen im Forum',
-	'NEWSBOX_TEXT'		=> 'Du betrachtest das Forum derzeit als Gast und hast damit nur eingeschränkten Zugriff auf die Diskussionen und Funktionen im Forum. Wenn du dich kostenlos registrierst, kannst du neue Themen unter deinem Namen verfassen und mit anderen Mitglieder private Nachrichten austauschen, an Umfragen teilnehmen und weitere spezielle Funktionen nutzen. Die Registrierung ist einfach, unkompliziert, schnell und vor allem kostenlos, also registriere dich jetzt !',
+	'NEWSBOX_TEXT'		=> 'Du betrachtest das Forum derzeit als Gast und hast damit nur eingeschränkten Zugriff auf die Diskussionen und Funktionen im Forum. Wenn du dich kostenlos registrierst, kannst du neue Themen unter deinem Namen verfassen und mit anderen Mitgliedern private Nachrichten austauschen, an Umfragen teilnehmen und weitere spezielle Funktionen nutzen. Die Registrierung ist einfach, unkompliziert, schnell und vor allem kostenlos, also registriere dich jetzt !',
 	'AUTOMATIC'			=> 'Automatisch',
 	'GALLERY'			=> 'Galerie',
 	'GALLERY_EXPLAIN'	=> 'Bilder Galerie',
@@ -2863,6 +2863,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_TAB_HELP'		=> 'Füge einen Tab ein (Der Text muss auch in [tab] ... [/tab] eingefügt sein)',
 	'BBCODE_E_HELP'		=> 'Aufzählung: Listenelement hinzufügen',
 	'REPLY_TO_MESSAGE'	=> 'Antwort auf Beitrag',
+	'NO_LINKS_FOR_GUESTS'	=> 'Du darfst als Gast keine Links oder den BBCode [url] oder [url=] im Beitrag benutzen. Solltest Du Bilder verlinkt haben, hast du vermutlich unwissend einen Link mitgeschickt. Benutze zum Einfügen von Bildern bitten den Button in diesem Editor oder die Dateienanhänge. Du kannst dich aber auch jederzeit kostenlos registrieren um wieder Links benutzen zu können.',
 
 ));
 
@@ -8661,7 +8662,7 @@ $lang = array_merge($lang, array(
 	'INFO_GENERAL_INFORMATIONS'			=> 'Allgemeine Informationen',
 	'INFO_ATTACH'						=> 'Punkte für Dateianhänge in neuen Beiträgen',
 	'INFO_ADD_ATTACH'					=> 'Zusätzliche Punkte für jede neu angehängte Datei',
-	'INFO_NO_COST'						=> 'Derzeit musst du keine %1$s dafürausgeben',
+	'INFO_NO_COST'						=> 'Derzeit musst du keine %1$s dafür ausgeben',
 	'INFO_NO_POINTS'					=> 'Derzeit bekommst du keine %1$s dafür',
 	'INFO_POLL'							=> 'Punkte für neue Umfragen',
 	'INFO_POLL_OPTION'					=> 'Punkte für jede Auswahl in neuen Umfragen',
@@ -10468,6 +10469,7 @@ $lang = array_merge($lang, array(
 	'SEND_STATISTICS'			=> 'Statistische Informationen senden',
 	'SHOW_STATISTICS'			=> 'Details anzeigen',
 	'THANKS_SEND_STATISTICS'	=> 'Vielen Dank für die Übermittlung deiner Informationen.',
+	'LOG_TERM_DELETE'			=> '<strong>Ein Wort wurde aus dem Lexikon gelöscht</strong> <br />» %s',
 
 	'LOG_ACL_ADD_USER_GLOBAL_U_'		=> '<strong>Benutzerrechte eines Benutzers hinzugefügt oder geändert</strong><br />» %s',
 	'LOG_ACL_ADD_GROUP_GLOBAL_U_'		=> '<strong>Benutzerrechte einer Gruppe hinzugefügt oder geändert</strong><br />» %s',
@@ -13971,7 +13973,7 @@ $lang = array_merge($lang, array(
 	'HIDE_PROFILE_FIELD'			=> 'Profilfeld verstecken',
 	'HIDE_PROFILE_FIELD_EXPLAIN'	=> 'Versteckt das Feld vor allen Benutzern außer dem Benutzer selbst, Administratoren und Moderatoren, die dieses Feld weiterhin sehen können. Wenn die Anzeige des Felds im persönlichen Bereich deaktiviert ist, kann der Benutzer das Feld weder sehen noch ändern. Es kann dann nur von einem Administrator geändert werden.',
 
-	'INVALID_CHARS_FIELD_IDENT'	=> 'Der Feld-Kennung darf nur aus Kleinbuchstaben von a bis z und _ bestehen.',
+	'INVALID_CHARS_FIELD_IDENT'	=> 'Die Feld-Kennung darf nur aus Kleinbuchstaben von a bis z und _ bestehen.',
 	'INVALID_FIELD_IDENT_LEN'	=> 'Die Feld-Kennung kann maximal 17 Zeichen lang sein.',
 	'ISO_LANGUAGE'				=> 'Sprache [ %s ]',
 

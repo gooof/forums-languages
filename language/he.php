@@ -2864,6 +2864,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_TAB_HELP'		=> 'Add a Tab one (The text must also be in the [tab] ... [/ tab] to be inserted)',
 	'BBCODE_E_HELP'		=> 'List: Add list element',
 	'REPLY_TO_MESSAGE'	=> 'Reply to message',
+	'NO_LINKS_FOR_GUESTS'	=> 'Guests do not have permissions to post external links or email addresses and can not use BBCode [url] or [url=]. If you are posting images, you probably sent a link within. To insert images use the button in this editor or the file attachments. You are free to register any time to be able to use external links.',
 
 ));
 
@@ -10432,6 +10433,7 @@ $lang = array_merge($lang, array(
 	'SEND_STATISTICS'			=> 'שלח מידע סטטיסטי',
 	'SHOW_STATISTICS'			=> 'הצג פרטים',
 	'THANKS_SEND_STATISTICS'	=> 'תודה ששלחת את המידע.',
+	'LOG_TERM_DELETE'			=> '<strong>A word has been deleted from the lexicon</strong><br />» %s',
 
 	'LOG_ACL_ADD_USER_GLOBAL_U_'		=> '<strong>הוסיף או ערך הרשאות משתמש של משתמשים</strong><br />» %s',
 	'LOG_ACL_ADD_GROUP_GLOBAL_U_'		=> '<strong>הוסיף או ערך הרשאות משתמש של קבוצות</strong><br />» %s',
