@@ -13677,6 +13677,11 @@ $lang = array_merge($lang, array(
 	'BBCODE_DANGER'				=> '您嘗試新增的 BBCode 似乎是使用 {TEXT} 標記在 HTML 語法。這很有可能發生 XSS 安全問題。試試使用更多限制的 {SIMPLETEXT} 或 {INTTEXT} 型式取代。如果您瞭解潛在的風險，以及認為使用 {TEXT} 絕對無法避免的話，那麼繼續執行它。',
 	'BBCODE_DANGER_PROCEED'		=> '繼續執行', //'I understand the risk',
 
+	'ACP_REPARSE_BBCODES'		=> 'Reparse BBCodes',
+	'ACP_BBCODE_REPARSE'		=> 'Reparse BBCodes and Smilies for all posts',
+	'ACP_BBCODE_REPARSE_EXPLAIN'	=> 'Der Reparse liest die Beiträge neu ein, als würde man sie über den Editor bearbeiten.<br />So ist es möglich, gelöschte BBCodes in allen Beiträgen wiederherzustellen, ohne diese alle einzeln ändern zu müssen. Geänderte Smilie Grafiken oder gelöschte Smilies lassen sich hiermit ebenfalls ändern oder können in älteren Beiträgen wieder sichtbar gemacht werden.<br />Die Ausführung kann je nach Größe des Forums bis zu einer Stunde dauern.',
+	'ACP_BBCODE_REPARSE_CONFIRM'	=> 'The BBCode reparse can be running every 3 hours!<br />Please check previously if all works. To test, just change an old post in which something is supposed to do and change at least one character. If after the change or in the preview everything way it should, you can be start the reparse.',
+
 	'BBCODE_ADDED'				=> 'BBCode 增加成功。',
 	'BBCODE_EDITED'				=> 'BBCode 編輯成功。',
 	'BBCODE_NOT_EXIST'			=> '您所選擇的 BBCode 不存在。',

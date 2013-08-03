@@ -13677,6 +13677,11 @@ $lang = array_merge($lang, array(
 	'BBCODE_DANGER'				=> 'Codul BB pe care vreţi să-l adăugaţi pare să folosească simbolul {TEXT} în cadrul unui atribut HTML. Acesta poate fi o problemă de securitate XSS. Încercaţi să folosiţi tipuri mai restrictive de genul {SIMPLETEXT} sau {INTTEXT}. Continuaţi doar dacă înţelegeţi riscurile implicate şi consideraţi că folosirea {TEXT} este absolut de neevitat.',
 	'BBCODE_DANGER_PROCEED'		=> 'Continuă', //'I understand the risk',
 
+	'ACP_REPARSE_BBCODES'		=> 'Reparse BBCodes',
+	'ACP_BBCODE_REPARSE'		=> 'Reparse BBCodes and Smilies for all posts',
+	'ACP_BBCODE_REPARSE_EXPLAIN'	=> 'Der Reparse liest die Beiträge neu ein, als würde man sie über den Editor bearbeiten.<br />So ist es möglich, gelöschte BBCodes in allen Beiträgen wiederherzustellen, ohne diese alle einzeln ändern zu müssen. Geänderte Smilie Grafiken oder gelöschte Smilies lassen sich hiermit ebenfalls ändern oder können in älteren Beiträgen wieder sichtbar gemacht werden.<br />Die Ausführung kann je nach Größe des Forums bis zu einer Stunde dauern.',
+	'ACP_BBCODE_REPARSE_CONFIRM'	=> 'The BBCode reparse can be running every 3 hours!<br />Please check previously if all works. To test, just change an old post in which something is supposed to do and change at least one character. If after the change or in the preview everything way it should, you can be start the reparse.',
+
 	'BBCODE_ADDED'				=> 'Codul BB a fost adăugat cu succes.',
 	'BBCODE_EDITED'				=> 'Codul BB a fost modificat cu succes.',
 	'BBCODE_NOT_EXIST'			=> 'Codul BB pe care l-aţi selectat nu există.',

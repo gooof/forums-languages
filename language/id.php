@@ -13677,6 +13677,11 @@ $lang = array_merge($lang, array(
 	'BBCODE_DANGER'				=> 'BBCode yang anda coba tambahkan sepertinya menggunakan sebuah token {TEXT} di dalam sebuah atribut HTML. Hal ini memungkinkan masalah keamanan XSS. Coba gunakan yang lebih terbatas lagi seperti {SIMPLETEXT} atau {INTTEXT}. Silahkan proses jika anda mengerti resiko yang akan dihadapi jika {TEXT} harus digunakan.',
 	'BBCODE_DANGER_PROCEED'		=> 'Proses', //'I understand the risk',
 
+	'ACP_REPARSE_BBCODES'		=> 'Reparse BBCodes',
+	'ACP_BBCODE_REPARSE'		=> 'Reparse BBCodes and Smilies for all posts',
+	'ACP_BBCODE_REPARSE_EXPLAIN'	=> 'Der Reparse liest die Beiträge neu ein, als würde man sie über den Editor bearbeiten.<br />So ist es möglich, gelöschte BBCodes in allen Beiträgen wiederherzustellen, ohne diese alle einzeln ändern zu müssen. Geänderte Smilie Grafiken oder gelöschte Smilies lassen sich hiermit ebenfalls ändern oder können in älteren Beiträgen wieder sichtbar gemacht werden.<br />Die Ausführung kann je nach Größe des Forums bis zu einer Stunde dauern.',
+	'ACP_BBCODE_REPARSE_CONFIRM'	=> 'The BBCode reparse can be running every 3 hours!<br />Please check previously if all works. To test, just change an old post in which something is supposed to do and change at least one character. If after the change or in the preview everything way it should, you can be start the reparse.',
+
 	'BBCODE_ADDED'				=> 'BBCode berhasil ditambahkan.',
 	'BBCODE_EDITED'				=> 'BBCode berhasil diubah.',
 	'BBCODE_NOT_EXIST'			=> 'BBCode yang anda pilih tidak ada.',

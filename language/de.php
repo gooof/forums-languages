@@ -13695,6 +13695,11 @@ $lang = array_merge($lang, array(
 	'BBCODE_DANGER'				=> 'Der BBCode, den du anlegen möchtest, scheint ein {TEXT}-Token innerhalb eines HTML-Attributs zu nutzen. Dies ist ein möglicher Angriffspunkt für Cross-Site Scripting (XSS). Verwende stattdessen, wenn möglich, die restriktiveren {SIMPLETEXT}- oder {INTTEXT}-Typen. Fahre nur fort, wenn du dich dem Risiko bewusst bist und die Verwendung von {TEXT} unvermeidbar ist.',
 	'BBCODE_DANGER_PROCEED'		=> 'Fortfahren', //'I understand the risk',
 
+	'ACP_REPARSE_BBCODES'		=> 'Reparse BBCodes',
+	'ACP_BBCODE_REPARSE'		=> 'BBCodes und Smilies in allen Beiträgen neu einlesen',
+	'ACP_BBCODE_REPARSE_EXPLAIN'	=> 'Der Reparse liest die Beiträge neu ein, als würde man sie über den Editor bearbeiten.<br />So ist es möglich, gelöschte BBCodes in allen Beiträgen wiederherzustellen, ohne diese alle einzeln ändern zu müssen. Geänderte Smilie Grafiken oder gelöschte Smilies lassen sich hiermit ebenfalls ändern oder können in älteren Beiträgen wieder sichtbar gemacht werden.<br />Die Ausführung kann je nach Größe des Forums bis zu einer Stunde dauern.',
+	'ACP_BBCODE_REPARSE_CONFIRM'	=> 'Der BBCode Reparse kann nur alle 3 Stunden ausgeführt werden!<br />Prüfe bitte vorher ob alles funktioniert. Ändere dazu einfach einen alten Beitrag in dem sich etwas tun soll und ändere mindestens ein Zeichen. Ist nach der Änderung oder in der Vorschau alles so wie es soll, kann der Reparse gestartet werden.',
+
 	'BBCODE_ADDED'				=> 'BBCode erfolgreich hinzugefügt.',
 	'BBCODE_EDITED'				=> 'BBCode erfolgreich bearbeitet.',
 	'BBCODE_NOT_EXIST'			=> 'Der gewählte BBCode existiert nicht.',

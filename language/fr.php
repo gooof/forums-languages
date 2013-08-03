@@ -13677,6 +13677,11 @@ $lang = array_merge($lang, array(
 	'BBCODE_DANGER'				=> 'Le BBCode que vous essayez d’ajouter semble utiliser une chaîne de symboles {TEXT} dans un attribut HTML. Cela peut présenter une éventuelle faille de sécurité XSS. Veuillez plutôt essayer d’utiliser un type plus restrictif, tel que {SIMPLETEXT} ou {INTTEXT}. Ne procédez à cette opération que si vous comprenez les risque encourus et que vous considérez que l’utilisation de {TEXT} est absolumement inévitable.',
 	'BBCODE_DANGER_PROCEED'		=> 'Procéder', //'I understand the risk',
 
+	'ACP_REPARSE_BBCODES'		=> 'Reparse BBCodes',
+	'ACP_BBCODE_REPARSE'		=> 'Reparse BBCodes and Smilies for all posts',
+	'ACP_BBCODE_REPARSE_EXPLAIN'	=> 'Der Reparse liest die Beiträge neu ein, als würde man sie über den Editor bearbeiten.<br />So ist es möglich, gelöschte BBCodes in allen Beiträgen wiederherzustellen, ohne diese alle einzeln ändern zu müssen. Geänderte Smilie Grafiken oder gelöschte Smilies lassen sich hiermit ebenfalls ändern oder können in älteren Beiträgen wieder sichtbar gemacht werden.<br />Die Ausführung kann je nach Größe des Forums bis zu einer Stunde dauern.',
+	'ACP_BBCODE_REPARSE_CONFIRM'	=> 'The BBCode reparse can be running every 3 hours!<br />Please check previously if all works. To test, just change an old post in which something is supposed to do and change at least one character. If after the change or in the preview everything way it should, you can be start the reparse.',
+
 	'BBCODE_ADDED'				=> 'Le BBCode a été ajouté.',
 	'BBCODE_EDITED'				=> 'Le BBCode a été édité.',
 	'BBCODE_NOT_EXIST'			=> 'Le BBCode que vous avez sélectionné n’existe pas.',
