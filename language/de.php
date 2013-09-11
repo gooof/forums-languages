@@ -2658,7 +2658,7 @@ $lang = array_merge($lang, array(
 
 	'WELCOME_SITE'	=> 'Willkommen bei %s',
 	'SITE_LINK_TXT'		=> 'Link zu uns',
-	'SCROLLING_BLOCKS_DISABLED'	=> 'Block ist wärend des bearbeitens der Bläcke ausgeblendet.',
+	'SCROLLING_BLOCKS_DISABLED'	=> 'Block ist während des bearbeitens der Blöcke ausgeblendet.',
 	'YOUR_LANG'			=> 'Aktuelle Sprache:',
 	'PRINT'			=> 'Drucken',
 	'CLOCK'		=> 'Uhr',	
@@ -11480,7 +11480,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'BLOCK_LAYOUT'		=> 'Block Layout',
-	'BLOCK_LAYOUT_EXPLAIN'	=> 'Das Layout der Bläcke kann hier vom einfachen zum grafischen Layout umgestellt werden.',
+	'BLOCK_LAYOUT_EXPLAIN'	=> 'Das Layout der Portal Blöcke kann hier vom einfachen zum grafischen Layout umgestellt werden.',
 	'BLOCK_LAYOUT_LIGHT'		=> 'Light',
 	'BLOCK_LAYOUT_NORMAL'	=> 'Professionell',
 	'LOG_SHOUTBOX_RESET'		=> '<strong>Shoutbox geleert</strong>',
