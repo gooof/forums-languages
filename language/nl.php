@@ -8556,8 +8556,12 @@ $lang = array_merge($lang, array(
 	'PHOOGLE_USER_ZOOM_EXPLAIN' 	=> 'Zoom Level Profile Map will start at<br />Higher number = closer view',
 	'PHOOGLE_USE_SPECIAL_MARKERS' 	=> 'Use Special Markers?',
 	'PHOOGLE_VERSION' 				=> 'v0.2.0',
-	'WORD_IS'						=> ' is ', // space before and after. The word 'is' for use in map bubble "username is x.xxx miles from you."
-	'WORD_FROM_YOU'					=> ' from you', // space before. The words 'from you' for use in map bubble "username is x.xxx miles from you."
+	'PHOOGLE_ALLOW_COPPA_USERS'		=> 'Allow COPPA users to have map markers?',
+	'PHOOGLE_ALLOW_COPPA_USERS_EXPLAIN'		=> 'Allow your COPPA Registered users (children under 13 years old) to set/show map points?<br /><a href="http://www.coppa.org/comply.htm" target="_blank">COPPA - Childrens Online Privacy Protection Act</a>',
+	'PHOOGLE_UNIT_MEASURE'			=> 'Unit of Measure',
+	'PHOOGLE_UNIT_MEASURE_EXPLAIN'	=> 'Display distance between markers in miles or kilometers',
+	'WORD_IS'						=> ' is ', 		// space before and after. The word 'is' for use in map bubble "username is x.xxx miles from you."
+	'WORD_FROM_YOU'					=> ' from you',	// space before. The words 'from you' for use in map bubble "username is x.xxx miles from you."
 	'PHOOGLE_YES_ALLOW'				=> 'Click to Disallow %s\'s map point',
 	'PHOOGLE_YES_SHOW' 				=> 'Click to Turn \'Show Me\' OFF for %s',
 	'PHOOGLE_ZOOM_LIMIT' 			=> 'Maximum Zoom Level (Zoom Limit)',

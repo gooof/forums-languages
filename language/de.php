@@ -8515,7 +8515,7 @@ $lang = array_merge($lang, array(
 	'PHOOGLE_ICONS_EXPLAIN' 		=> '<strong>Benutzdefinierte Marker &amp; Schatten</strong><br />Jeder Map Marker besteht aus zwei Bilder: ein Bild im Vordergrund, und ein Schattenbild. Ein Schattenbild kann von mehreren Marker benutzt werden. Ändere die Marker indem Du den Marker und/oder den Schattenker in Deinem &quot;Marker Ordner&quot;. (Lade oben hoch, oder via FTP) ändere dann den Filenamen (ie. <i>my_icon.png</i>) ,Bildgrösse und Ankerpunkt auf der Tabelle. Sybole im PNG-Format mit Durchsichtigkeit.<br /><strong>Marker L &amp; H:</strong><br /> Gebe Breite und Länge des Bildes an (Maker nur mit selber Breite mal Höhe).<br /><strong>Anker X &amp; Y:</strong><br />Die Pixel Koordinate relativ zum oberen linken Eckpunkt des Symbols wo es auf der Map verankert wurde.<br /><strong>Schatten</strong><br />Folge obiger Anleitung für die Bildgrösse. Kein Ankerpunkt X &amp; Y für Schatten.',
 	'PHOOGLE_IMAGE_FOLDERS'			=> 'Marker Bildordner',
 	'PHOOGLE_INIT_ZOOM' 			=> 'Ausgangs Zoomeinstellung',
-	'PHOOGLE_INIT_ZOOM_EXPLAIN'		=> 'Zommeinstellung starten bei<br />Höherer Wert = nöhere Sicht',
+	'PHOOGLE_INIT_ZOOM_EXPLAIN'		=> 'Zoom startet bei diesem Wert (höherer Wert = nähere Ansicht).',
 	'PHOOGLE_LARGE' 				=> 'breit',
 	'PHOOGLE_LOC_TABLE' 			=> 'Längen und Breitengrad Deines Kartenzentrums',
 	'PHOOGLE_MAIN_MAP_SIZE' 		=> 'Konfiguration Hauptkarte',
@@ -8571,15 +8571,19 @@ $lang = array_merge($lang, array(
 	'PHOOGLE_USER_EDITED'			=> 'Mitglied erfolgreich geändert',
 	'PHOOGLE_USER_MARKERS' 			=> 'Marker der Mitglieder',
 	'PHOOGLE_USER_ZOOM' 			=> 'Profilkarten Zoomeinstellungen',
-	'PHOOGLE_USER_ZOOM_EXPLAIN' 	=> 'Zoomeinstellung auf der Profilkarte<br />Höherer Wert = nöhere Sicht',
+	'PHOOGLE_USER_ZOOM_EXPLAIN' 	=> 'Zoom in der Karte (höherer Wert = nähere Ansicht).',
 	'PHOOGLE_USE_SPECIAL_MARKERS' 	=> 'Spezielle Marker Benutzen?',
-	'PHOOGLE_VERSION' 				=> 'v0.1.0',
-	'WORD_IS'						=> ' ist ', // space before and after. The word 'is' for use in map bubble "username is x.xxx miles from you."
-	'WORD_FROM_YOU'					=> ' von Dir entfernt', // space before. The words 'from you' for use in map bubble "username is x.xxx miles from you."
+	'PHOOGLE_VERSION' 				=> 'v0.2.0',
+	'PHOOGLE_ALLOW_COPPA_USERS'		=> 'COPPA User Gruppe den Zugang erlauben?',
+	'PHOOGLE_ALLOW_COPPA_USERS_EXPLAIN'		=> 'Erlaube der COPPA registrierte Benutzer Gruppe in der Karte?<br /><a href="http://www.coppa.org/comply.htm" target="_blank">COPPA - Childrens Online Privacy Protection Act</a>',
+	'PHOOGLE_UNIT_MEASURE'			=> 'Maßeinheit',
+	'PHOOGLE_UNIT_MEASURE_EXPLAIN'	=> 'Zeigt den Abstand zwischen den Markierungen in Meilen oder Kilometern an.',
+	'WORD_IS'						=> ' ist ', 		// space before and after. The word 'is' for use in map bubble "username is x.xxx miles from you."
+	'WORD_FROM_YOU'					=> ' von Dir entfernt',	// space before. The words 'from you' for use in map bubble "username is x.xxx miles from you."
 	'PHOOGLE_YES_ALLOW'				=> 'Klicke um %s\'s Kartenpunkte zu verbieten',
 	'PHOOGLE_YES_SHOW' 				=> 'Klicke um \'Zeige\' OFF für %s',
 	'PHOOGLE_ZOOM_LIMIT' 			=> 'Maximum Zoom Level (Zoom Limit)',
-	'PHOOGLE_ZOOM_LIMIT_EXPLAIN' 	=> 'Verbietet es Mitglieder nöher als dies zu zoomen<br />Höherer Wert = nöhere Sicht. Stelle auf <strong>17</strong> um keine Limite zu setzen.',
+	'PHOOGLE_ZOOM_LIMIT_EXPLAIN' 	=> 'Mitglieder dürfen nicht weiter als bis zu dieser Zoomstufe vergrößern (höherer Wert = nähere Ansicht).<br />Stelle den Wert auf <strong>17</strong> ein um kein Limit zu setzen.',
 	'SET_EVENT_LOCATION'			=>'Setze Ort des Ereignisses',
 	'SET_LOCATION'					=>'Trage Deinen Ort ein',
 	'SET_USER_LOCATION'				=>'Setze Ort des Mitglieds',
@@ -10173,7 +10177,7 @@ $lang = array_merge($lang, array(
 	'ACP_PERMISSION_TRACE'		=> 'Berechtigungs-Verfolgung',
 	'ACP_PHP_INFO'				=> 'PHP-Information',
 	'ACP_POST_SETTINGS'			=> 'Beiträge',
-	'ACP_PRUNE_FORUMS'			=> 'Automatisches Löschen inaktiver Themen',
+	'ACP_PRUNE_FORUMS'			=> 'Löschen inaktiver Themen',
 	'ACP_PRUNE_USERS'			=> 'Automatisches Löschen inaktiver Benutzer',
 	'ACP_PRUNING'				=> 'Automatisches Löschen',
 
