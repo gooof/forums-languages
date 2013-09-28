@@ -1,4 +1,4 @@
-phpbb8.de Internationalization
+phpbb8.de Internationalisation (i18n)
 ================
 
 This repository is daily synced with our Transifex project. 
