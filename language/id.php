@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Ubah post',
 	'EMAIL'								=> 'E-mail', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'Alamat e-mail',
+	'EMAIL_INVALID_EMAIL'				=> 'Alamat e-mail yang anda masukkan tidak sah.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Pengiriman e-mail dijalankan dengan masalah pada <strong>baris %1$s</strong>. Responsi: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Anda harus memasukkan subjek jika memulai topik baru.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Anda harus memasukkan subjek jika membuat pesan baru.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Tidak ada post yang ada di dalam topik ini untuk batas waktu yang dipilih.',
 	'NO_FEED_ENABLED'			=> 'Pengumpan tidak tersedia di halaman ini.',
 	'NO_FEED'					=> 'Pengumpan yang diminta tidak tersedia.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Tidak ada subjek yang dimasukkan',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'Pencarian yang dimaksud tidak ada.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Tidak ada metode otentifikasi yang didukung.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Subjek',
 	'SUBMIT'					=> 'Ajukan',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Syarat Penggunaan',
 	'TEST_CONNECTION'	=> 'Coba koneksi',
 	'THE_TEAM'			=> 'Team',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Waktu',
 	
 	'TOO_LARGE'						=> 'Nilai yang anda masukkan terlalu besar.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> 'Siapa yang online',
 	'WRONG_PASSWORD'	=> 'Anda memasukkan kata sandi yang salah.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'Nomor ICQ yang anda masukkan salah.',
 	'WRONG_DATA_JABBER'			=> 'Nama yang anda masukkan bukan nama account jabber yang benar.',
@@ -2715,9 +2720,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s <em>Mati</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s <em>Hidup</em>',
 	'BBCODE_I_HELP'				=> 'Tulisan miring: [i]teks[/i]',
-	'BBCODE_L_HELP'				=> 'Daftar: [list]teks[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'Daftar item: [*]teks[/*]',
-	'BBCODE_O_HELP'				=> 'Daftar yang diurutkan: [list=]teks[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Masukkan gambar: [img]http://image_url[/img]',
 	'BBCODE_Q_HELP'				=> 'Kutip teks: [quote]text[/quote]',
 	'BBCODE_S_HELP'				=> 'Warna huruf: [color=red]text[/color]  Tips: anda dapat menggunakan color=#FF0000',
@@ -2938,6 +2943,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Cari istilah yang digunakan',
 	'SEARCHED_TOPIC'			=> 'Topik tercari',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Cari semua istilah atau gunakan query yang dimasukan',
 	'SEARCH_ANY_TERMS'			=> 'Cari semua istilah',
 	'SEARCH_AUTHOR'				=> 'Cari pengarang',
@@ -3102,7 +3108,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Di sini anda dapat mengubah naskah anda. Naskah tidak mengandung lampiran dan informasi pemungutan suara.',
 	'EMAIL_BANNED_EMAIL'		=> 'Alamat e-mail yang anda masukkan tidak diperbolehkan untuk digunakan.',
-	'EMAIL_INVALID_EMAIL'		=> 'Alamat e-mail yang anda masukkan tidak sah.',
 	'EMAIL_REMIND'				=> 'Alamat e-mail yang berhubungan dengan nama pengguna anda. Jika anda tidak mengubah alamat e-mail ini pada papan pengaturan pengguna, maka alamat e-mail ini adalah alamat e-mail yang anda daftarkan dengan nama anda.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Alamat e-mail sudah dugunakan.',
 	'EMPTY_DRAFT'				=> 'Anda harus memasukkan pesan untuk mengajukan perubahan anda.',
@@ -3183,8 +3188,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'oleh',
 	'MESSAGE_COLOURS'				=> 'Warna Pesan',
 	'MESSAGE_DELETED'				=> 'Pesan ini telah berhasil dihapus.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Riwayat Pesan',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Pesan in telah disingkirkan oleh pengarangnya sebelum dikirim.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'pada',
 	'MESSAGE_STORED'				=> 'Pesan ini telah berhasil dikirim.',
 	'MESSAGE_TO'					=> 'Kepada',

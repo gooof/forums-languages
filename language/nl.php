@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Wijzig bericht',
 	'EMAIL'								=> 'Een geldig e-mailadres', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'E-mailadres',
+	'EMAIL_INVALID_EMAIL'				=> 'Het opgegeven e-mailadres is ongeldig.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Er ging iets fout bij het versturen van de mail op <strong>regel %1$s</strong>. Antwoord: %2$s',
 	'EMPTY_SUBJECT'						=> 'Je moet een onderwerp opgeven bij het plaatsen van een nieuw bericht.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Je moet een onderwerp opgeven bij het plaatsen van een nieuw bericht.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Er zijn in dit onderwerp in de gekozen periode geen berichten geplaatst.',
 	'NO_FEED_ENABLED'			=> 'Feeds zijn op dit forum niet beschikbaar.',
 	'NO_FEED'					=> 'De opgevraagde feed is niet beschikbaar.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Geen titel opgegeven',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'De opgegeven zoekmodule bestaat niet',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Er zijn geen ondersteunende inlogmethodes',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Onderwerp',
 	'SUBMIT'					=> 'Bevestig',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Gebruikersvoorwaarden',
 	'TEST_CONNECTION'	=> 'Verbinding testen',
 	'THE_TEAM'			=> 'Het team',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Tijd',
 	
 	'TOO_LARGE'						=> 'De door jou ingevoerde waarde is te groot.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> 'Wie is er online',
 	'WRONG_PASSWORD'	=> 'Het opgegeven wachtwoord is onjuist.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'Het opgegeven ICQ-nummer is ongeldig.',
 	'WRONG_DATA_JABBER'			=> 'Het opgegeven Jabber-adres is ongeldig.',
@@ -2715,9 +2720,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s staat <em>UIT</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s staat <em>AAN</em>',
 	'BBCODE_I_HELP'				=> 'Cursieve tekst: [i]tekst[/i]',
-	'BBCODE_L_HELP'				=> 'Lijst: [list]tekst[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'Lijstpunt: [*]tekst[/*]',
-	'BBCODE_O_HELP'				=> 'Geordende lijst: [list=]tekst[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Afbeelding: [img]http://www.phpbb.nl/fotos/foto.jpg[/img]',
 	'BBCODE_Q_HELP'				=> 'Citeer tekst: [quote]tekst[/quote]',
 	'BBCODE_S_HELP'				=> 'Tekstkleur: [color=red]tekst[/color] Tip: je kunt ook dit gebruiken: #FF0000',
@@ -2938,6 +2943,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Gebruikte zoekterm',
 	'SEARCHED_TOPIC'			=> 'Doorzocht onderwerp',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Zoek naar elke term afzonderlijk, of gebruik de opdracht zoals opgegeven',
 	'SEARCH_ANY_TERMS'			=> 'Zoek naar één van de woorden',
 	'SEARCH_AUTHOR'				=> 'Zoek volgens auteur',
@@ -3102,7 +3108,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Hier kun je je concept bewerken. Concepten bevatten geen bijlage(n) en/of poll informatie.',
 	'EMAIL_BANNED_EMAIL'		=> 'Het opgegeven e-mailadres kan niet worden gebruikt.',
-	'EMAIL_INVALID_EMAIL'		=> 'Het opgegeven e-mailadres is ongeldig.',
 	'EMAIL_REMIND'				=> 'Dit moet het e-mailadres zijn dat je bij je account hebt opgegeven. Als je dit niet hebt veranderd in het gebruikerspaneel, dan is dit het e-mailadres dat je bij je registratie hebt gebruikt.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Het opgegeven e-mailadres is reeds in gebruik.',
 	'EMPTY_DRAFT'				=> 'Je moet een bericht opgeven om je wijzigingen op te slaan',
@@ -3183,8 +3188,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'door',
 	'MESSAGE_COLOURS'				=> 'Bericht kleuren',
 	'MESSAGE_DELETED'				=> 'Je bericht is verwijderd.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Berichtgeschiedenis',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Dit bericht werd door de auteur verwijderd, voordat het kon worden bezorgd.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'op',
 	'MESSAGE_STORED'				=> 'Je bericht is verzonden',
 	'MESSAGE_TO'					=> 'Naar',

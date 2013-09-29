@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Промени мнение',
 	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'Email адрес',
+	'EMAIL_INVALID_EMAIL'				=> 'Email адреса който сте въвели е невалиден.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Проблем при изпращането на email <strong>Ред %1$s</strong>. Отговор: %2$s',
 	'EMPTY_SUBJECT'						=> 'Трябва да въведете заглавие при пускане на нова тема.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Трябва да въведете заглавие.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Няма съществуващи мнения в това времево пространство.',
 	'NO_FEED_ENABLED'			=> 'Фийдовете са изключени за този форум.',
 	'NO_FEED'					=> 'Фийда не е наличен.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Няма въведено заглавие',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'Бекенда не съществува',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Няма поддържащи ауторизиращи методи',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Заглавие',
 	'SUBMIT'					=> 'Изпрати',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Условия за ползване',
 	'TEST_CONNECTION'	=> 'Тествай връзка',
 	'THE_TEAM'			=> 'Екип',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Време',
 	
 	'TOO_LARGE'						=> 'Въведената стойност е прекалено висока.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Провери го',
 	'WHO_IS_ONLINE'		=> 'Кой е на линия',
 	'WRONG_PASSWORD'	=> 'Въвели сте грешна парола.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'Невалиден ICQ номер.',
 	'WRONG_DATA_JABBER'			=> 'Невалидно Jabber акаунт име.',
@@ -2704,9 +2709,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s е <em>Изключен</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s е <em>Включен</em>',
 	'BBCODE_I_HELP'				=> 'Наклонен текст: [i]text[/i]  (alt+i)',
-	'BBCODE_L_HELP'				=> 'Създай списък: [list]текст[/list]  (alt+l)',
-	'BBCODE_LISTITEM_HELP'		=> 'Списък: [*]text[/*]',
-	'BBCODE_O_HELP'				=> 'Подреден списък: [list=]текст[/list]  (alt+o)',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Добави изображение: [img]http://image_url[/img]  (alt+p)',
 	'BBCODE_Q_HELP'				=> 'Цитиран текст: [quote]текст[/quote]  (alt+q)',
 	'BBCODE_S_HELP'				=> 'Цвят на текста: [color=red]текст[/color]  Съвет: можеш да използваш и =#FF0000',
@@ -2927,6 +2932,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Търси термин',
 	'SEARCHED_TOPIC'			=> 'Търсена тема',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Търси за коя да е от въведените думи',
 	'SEARCH_ANY_TERMS'			=> 'Търси за всички въведени думи',
 	'SEARCH_AUTHOR'				=> 'Търси по автор',
@@ -3090,7 +3096,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Тук можете да променяте черновите си. Те не съдържат информация за анкети и прикачени файлове.',
 	'EMAIL_BANNED_EMAIL'		=> 'Email адреса който сте въвели не може да бъде използван.',
-	'EMAIL_INVALID_EMAIL'		=> 'Email адреса който сте въвели е невалиден.',
 	'EMAIL_REMIND'				=> 'Това е email адреса, който сте въвели при регистрацията на акаунт.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Въведения email адрес вече се използва от друг потребител',
 	'EMPTY_DRAFT'				=> 'Трябва да въведете съобщения за да промените черновата',
@@ -3171,8 +3176,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'от',
 	'MESSAGE_COLOURS'				=> 'Цветове на съобщението',
 	'MESSAGE_DELETED'				=> 'Съобщението е изтрито успешно.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'История на съобщението',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Съобщението беше изтрито от автора си преди да пристигне до вас',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'на',
 	'MESSAGE_STORED'				=> 'Съобщението беше изпратено успешно',
 	'MESSAGE_TO'					=> 'До',

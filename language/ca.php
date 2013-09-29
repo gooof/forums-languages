@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Edita l’entrada',
 	'EMAIL'								=> 'Correu electrònic', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'Adreça electrònica',
+	'EMAIL_INVALID_EMAIL'				=> 'L’adreça electrònica que heu introduït no és vàlida.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'S’ha produït un error en enviar l’e-mail a la <strong>línia %1$s</strong>. Resposta: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Heu d’especificar un assumpte quan publiqueu un tema nou.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Heu d’especificar un assumpte quan redacteu un missatge nou.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'No existeix cap entrada en aquest tema per al període de temps seleccionat.',
 	'NO_FEED_ENABLED'			=> 'No hi ha canals d’informació disponibles en aquest fòrum.',
 	'NO_FEED'					=> 'El canal d’informació sol·licitat no està disponible.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'No s’ha especificat cap assumpte',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'El mòdul de cerca especificat no existeix.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'No hi ha cap dels mètodes d’autenticació permesos.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Assumpte',
 	'SUBMIT'					=> 'Tramet',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Condicions d’ús',
 	'TEST_CONNECTION'	=> 'Prova la connexió',
 	'THE_TEAM'			=> 'L’equip',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Data',
 	
 	'TOO_LARGE'						=> 'El valor que heu introduït és massa gran.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> 'Qui està connectat',
 	'WRONG_PASSWORD'	=> 'Heu introduït una contrasenya incorrecta.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'El número que heu introduït no és un número ICQ vàlid.',
 	'WRONG_DATA_JABBER'			=> 'El nom que heu introduït no és un nom de compte Jabber vàlid.',
@@ -2715,9 +2720,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> 'El %sBBCode%s està <em>INACTIU</em>',
 	'BBCODE_IS_ON'				=> 'El %sBBCode%s està <em>ACTIU</em>',
 	'BBCODE_I_HELP'				=> 'Text en cursiva: [i]text[/i]',
-	'BBCODE_L_HELP'				=> 'Llista: [list]text[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'Element de la llista: [*]text[/*]',
-	'BBCODE_O_HELP'				=> 'Llista ordenada: [list=]text[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Insereix una imatge: [img]http://url_imatge[/img]',
 	'BBCODE_Q_HELP'				=> 'Cita un text: [quote]text[/quote]',
 	'BBCODE_S_HELP'				=> 'Color de lletra: [color=red]text[/color]  Consell: també podeu utilitzar color=#FF0000',
@@ -2938,6 +2943,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Paraules utilitzades en la cerca',
 	'SEARCHED_TOPIC'			=> 'Tema on s’ha fet la cerca',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Cerca totes les paraules o utilitza la consulta literalment',
 	'SEARCH_ANY_TERMS'			=> 'Cerca qualsevol paraula',
 	'SEARCH_AUTHOR'				=> 'Cerca per autor',
@@ -3102,7 +3108,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Aquí podeu editar el vostre esborrany. Els esborranys no contenen informació d’enquestes ni fitxers adjunts.',
 	'EMAIL_BANNED_EMAIL'		=> 'L’adreça electrònica que heu introduït no està permesa.',
-	'EMAIL_INVALID_EMAIL'		=> 'L’adreça electrònica que heu introduït no és vàlida.',
 	'EMAIL_REMIND'				=> 'Aquesta ha de ser l’adreça electrònica associada al vostre compte. Si no l’heu canviada al Tauler de control de l’usuari, és l’adreça amb la que vau registrar el vostre compte.',
 	'EMAIL_TAKEN_EMAIL'			=> 'L’adreça electrònica que heu introduït ja està utilitzada.',
 	'EMPTY_DRAFT'				=> 'Heu d’introduir un missatge per trametre els canvis.',
@@ -3183,8 +3188,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'autor:',
 	'MESSAGE_COLOURS'				=> 'Colors del missatge',
 	'MESSAGE_DELETED'				=> 'Aquest missatge s’ha eliminat correctament.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Historial de missatges',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Aquest missatge ha estat eliminat pel seu autor abans que fos entregat.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'data:',
 	'MESSAGE_STORED'				=> 'S’ha enviat el missatge correctament.',
 	'MESSAGE_TO'					=> 'Per',

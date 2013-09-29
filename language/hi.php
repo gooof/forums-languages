@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'स्तम्भ सम्पादित करें',
 	'EMAIL'								=> 'ई-मेल', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'ई-मेल पता',
+	'EMAIL_INVALID_EMAIL'				=> 'आपके द्वारा भरा गया ई-मेल प।ता गलत है',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ran into problems sending e-mail at <strong>Line %1$s</strong>. Response: %2$s.',
 	'EMPTY_SUBJECT'						=> 'आपको विषय भरना ही पड़ेगा जब आप एक नया विषय प्रस्तुत रहें हैं।',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'आपको विषय भरना ही पड़ेगा जब आप एक नया संदेश कम्पोज कर रहें हैं।',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'चयनित समय पर इस विषय में कोई स्तम्भ नहीं हैं।',
 	'NO_FEED_ENABLED'			=> 'Feeds are not available on this board.',
 	'NO_FEED'					=> 'The requested feed is not available.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'प्रसंग निर्देशित नहीं हैं।',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'निर्देशित खोज बेकएन्ड उपलब्ध नहीं हैं।',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'कोई सहायक सत्यापन विधि नहीं हैं।',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'प्रसंग',
 	'SUBMIT'					=> 'जमा करें',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'उपयोग के नियम',
 	'TEST_CONNECTION'	=> 'सम्पर्क जांचें',
 	'THE_TEAM'			=> 'दल',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'समय',
 	
 	'TOO_LARGE'						=> 'The value you entered is too large.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'हुईश',
 	'WHO_IS_ONLINE'		=> 'अभी कौन आनलाइन हैं',
 	'WRONG_PASSWORD'	=> 'आपने गलत गुप्तशब्द भरा हैं।',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'आपके द्वारा भरा गया ICQ नंबर सही नहीं हैं।',
 	'WRONG_DATA_JABBER'			=> 'आपके द्वारा भरा गया जब्बेर खातानाम सही नहीं हैं।',
@@ -2713,9 +2718,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s is <em>OFF</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s is <em>ON</em>',
 	'BBCODE_I_HELP'				=> 'अक्षर इटेलिक करें : [i]text[/i]',
-	'BBCODE_L_HELP'				=> 'लिस्ट : [list]text[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'लिस्ट आइटम: [*]text[/*]',
-	'BBCODE_O_HELP'				=> 'आर्डरड लिस्ट : [list=]text[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'चित्र डाले: [img]http://image_url[/img]',
 	'BBCODE_Q_HELP'				=> 'अक्षर कॉट करें: [quote]text[/quote]',
 	'BBCODE_S_HELP'				=> 'फ़ॉन्ट के रंग: [color=red]text[/color]  Tip: you can also use color=#FF0000',
@@ -2936,6 +2941,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Search term used',
 	'SEARCHED_TOPIC'			=> 'खोजा गया विषय ',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'सभी उपयोग हुए शब्दो को खोजे या दिये गए प्रश्न का उपयोग करें  Search for all terms or use query as entered',
 	'SEARCH_ANY_TERMS'			=> 'किसी भी शब्द के लिए खोज',
 	'SEARCH_AUTHOR'				=> 'लेखक खोजें ',
@@ -3100,7 +3106,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'यहाँ आप अपने ड्राफ्ट को सुधार सकते हैं । ड्राफ्ट में कोई पोल की जानकारियाँ या संलग्नक नहीं होनी चाहिए ।',
 	'EMAIL_BANNED_EMAIL'		=> 'आपके द्वारा भरा गया ई-मेल पता को उपयोग के लिए अनुमति नहीं है।',
-	'EMAIL_INVALID_EMAIL'		=> 'आपके द्वारा भरा गया ई-मेल प।ता गलत है',
 	'EMAIL_REMIND'				=> 'This must be the e-mail address associated with your account. If you have not changed this via your user control panel then it is the e-mail address you registered your account with.',
 	'EMAIL_TAKEN_EMAIL'			=> 'भरा गया ई-मेल पता पहले से ही उपयोग मे है।',
 	'EMPTY_DRAFT'				=> 'You must enter a message to submit your changes.',
@@ -3181,8 +3186,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'द्वारा ',
 	'MESSAGE_COLOURS'				=> 'संदेश रंग',
 	'MESSAGE_DELETED'				=> 'This message has been deleted successfully.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'संदेश इतिहास',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'यह संदेश इसके लेखक द्वारा भेजने से पहले ही हटाया जा चुका है',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'पर',
 	'MESSAGE_STORED'				=> 'यह संदेश सफलतापुर्वक भेजा जा चुका है',
 	'MESSAGE_TO'					=> 'प्रति',

@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'ويرايش پست',
 	'EMAIL'								=> 'E-mail', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'آدرس ايميل',
+	'EMAIL_INVALID_EMAIL'				=> 'آدرس ايميل وارد شده اشتباه مي باشد.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ran into problems sending e-mail at <strong>Line %1$s</strong>. Response: %2$s.',
 	'EMPTY_SUBJECT'						=> 'شما بايد بهنگام ارسال مبحث جديد يک عنوان براي آن انتخاب کنيد.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'You must specify a subject when composing a new message.',
@@ -540,6 +541,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'No posts exist inside this topic for the selected time frame.',
 	'NO_FEED_ENABLED'			=> 'Feeds are not available on this board.',
 	'NO_FEED'					=> 'The requested feed is not available.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'هيچ عنواني انتخاب نشده است.',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'The specified search backend doesn’t exist.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'No supported authentication methods.',
@@ -712,9 +714,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'موضوع',
 	'SUBMIT'					=> 'ارسال',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'قوانين انجمن',
 	'TEST_CONNECTION'	=> 'تست اتصال',
 	'THE_TEAM'			=> 'ليست مديران',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'زمان',
 	
 	'TOO_LARGE'						=> 'The value you entered is too large.',
@@ -861,6 +865,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'جستجو',
 	'WHO_IS_ONLINE'		=> 'چه کسي حاضر است ؟',
 	'WRONG_PASSWORD'	=> 'شما کلمه عبور اشتباهي را وارد کرده ايد.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'شماره وارد شده شماره صحيحي براي ICQ نمي باشد',
 	'WRONG_DATA_JABBER'			=> 'نام وارد شده اکانت صحيح Jabber نمي باشد.',
@@ -2808,9 +2813,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s <em>غيرفعال است</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s <em>فعال است</em>',
 	'BBCODE_I_HELP'				=> 'نوشته کج : [i]متن[/i]',
-	'BBCODE_L_HELP'				=> 'ليست : [list]متن[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'بخش ليست : [*]متن[/*]',
-	'BBCODE_O_HELP'				=> 'ليست سفارشي : [list=]متن[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'درج تصوير : [img]http://image_url[/img]',
 	'BBCODE_Q_HELP'				=> 'نوشته نقل قول : [quote]text[/quote]',
 	'BBCODE_S_HELP'				=> 'رنگ فونت : [color=red]text[/color]  Tip: you can also use color=#FF0000',
@@ -3031,6 +3036,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'شرايط انتخاب شده',
 	'SEARCHED_TOPIC'			=> 'جستجوی پست ها',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'جستجوي همه موارد يا استفاده از دستورات وارد شده',
 	'SEARCH_ANY_TERMS'			=> 'جستجو براي تمام شرايط',
 	'SEARCH_AUTHOR'				=> 'جستجو براي نويسنده',
@@ -3248,7 +3254,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'اینجا می توانید پیش نویس هایی ه شامل پیوست (ضمیمه) یا نظرسنجی نباشند را ویرایش کنید.',
 	'EMAIL_BANNED_EMAIL'		=> 'نشانی e-mail وارد شده توسط شما برای استفاده مجاز نیست.',
-	'EMAIL_INVALID_EMAIL'		=> 'آدرس ايميل وارد شده اشتباه مي باشد.',
 	'EMAIL_REMIND'				=> 'باید همان نشانی e-mail ای باشد که در زمان ثبت نام استفاده کردید.',
 	'EMAIL_TAKEN_EMAIL'			=> 'آدرس ايميل وارد شده پيش از اين بکار گرفته شده بود.',
 	'EMPTY_DRAFT'				=> 'براي ثبت تغييرات خود بايد يک پيغام وارد کنيد.',
@@ -3329,8 +3334,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'توسط',
 	'MESSAGE_COLOURS'				=> 'رنگهاي پيغام ها',
 	'MESSAGE_DELETED'				=> 'اين پيغام با موفقيت حذف گرديد..',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'تاريخچه پيغام',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'این پیام قبل از اینکه به مقصد برسد، توسط نویسنده اش حذف شده است.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'در',
 	'MESSAGE_STORED'				=> 'اين پيغام با موفقيت ارسال شد.',
 	'MESSAGE_TO'					=> 'به',

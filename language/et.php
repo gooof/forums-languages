@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Muuda postitust',
 	'EMAIL'								=> 'E-post', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'E-postiaadress',
+	'EMAIL_INVALID_EMAIL'				=> 'Sisestatud e-posti aadress on ebakorrektne.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Tekkis probleem: Ran into problems sending e-mail at <strong>Line %1$s</strong>. Vastus: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Uut teemat tehes pead sisestama pealkirja.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Uut sõnumit tehes pead sisestama pealkirja',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Selles teemas valitud ajavahemikus postitused puuduvad.',
 	'NO_FEED_ENABLED'			=> 'Vood on siin foorumil keelatud.',
 	'NO_FEED'					=> 'Soovitud voog pole saadaval.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Pealkirja ei sisestatud',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'Valitud otsingupakki ei eksisteeri.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Pole toetatud tuvastamise meetodeid.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Pealkiri',
 	'SUBMIT'					=> 'Sisesta',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Kasutamistingimused',
 	'TEST_CONNECTION'	=> 'Kontrolli ühendust',
 	'THE_TEAM'			=> 'Juhtkond',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Kellaaeg',
 	
 	'TOO_LARGE'						=> 'Sisestatud väärtus on liiga suur.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Kes on',
 	'WHO_IS_ONLINE'		=> 'Kes on foorumil',
 	'WRONG_PASSWORD'	=> 'Sa sisestasid vale parooli',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'Sisestatud number pole korrektne ICQ number',
 	'WRONG_DATA_JABBER'			=> 'Sisestatud nimi pole korrektne Jabberi kasutajanimi',
@@ -2663,9 +2668,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBB-kood%s on <em>VÄLJAS</em>',
 	'BBCODE_IS_ON'				=> '%sBB-kood%s on <em>SEES</em>',
 	'BBCODE_I_HELP'				=> 'Kursiivtekst: [i]tekst[/i]',
-	'BBCODE_L_HELP'				=> 'Nimekiri: [list]tekst[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'Nimekirjaüksus [*]tekst[/*]',
-	'BBCODE_O_HELP'				=> 'Järjestatud nimekiri [list=]tekst[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Sisesta pilt: [img]http://pildi_url[/img]',
 	'BBCODE_Q_HELP'				=> 'Tsiteeri teksti: [quote]tekst[/quote]',
 	'BBCODE_S_HELP'				=> 'Fondi värv: [color=red]tekst[/color]  Vihje: võid ka kasutada #FF0000 värvi',
@@ -2886,6 +2891,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Otsingusõna kasutatud',
 	'SEARCHED_TOPIC'			=> 'Otsitud teema',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Otsi kõiki termineid või kasuta sõnu selles samas järjestuses',
 	'SEARCH_ANY_TERMS'			=> 'Otsi kõiki termineid',
 	'SEARCH_AUTHOR'				=> 'Otsi autori järgi',
@@ -3041,7 +3047,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Siin saad sa muuta oma mustandit. Mustandid ei sisalda manuseid ega hääletusi.',
 	'EMAIL_BANNED_EMAIL'		=> 'Sisestatud e-posti aadress pole lubatud.',
-	'EMAIL_INVALID_EMAIL'		=> 'Sisestatud e-posti aadress on ebakorrektne.',
 	'EMAIL_REMIND'				=> 'See peab olema sama aadress, mis on su profiiliski määratud. Kui sa pole seda muutnud läbi profiili, on see aadress, millega sa oma kasutaja registreerisid.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Sisestatud e-posti aadress on juba kasutuses.',
 	'EMPTY_DRAFT'				=> 'Sa pead sisestama sõnumi, et salvestada.',
@@ -3122,8 +3127,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'Postitas',
 	'MESSAGE_COLOURS'				=> 'Sõnumi värvid',
 	'MESSAGE_DELETED'				=> 'Postitus on edukalt kustutatud.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Sõnumite ajalugu.',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'See kirje on eemaldatud autori poolt enne kui see sai edastatud.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> '-',
 	'MESSAGE_STORED'				=> 'See sõnum on edukalt saadetud.',
 	'MESSAGE_TO'					=> 'Kellele',

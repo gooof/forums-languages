@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Επεξεργασία δημοσίευσης',
 	'EMAIL'								=> 'Ηλεκτρονικό ταχυδρομείο', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'Διεύθυνση ηλεκτρονικού ταχυδρομείου',
+	'EMAIL_INVALID_EMAIL'				=> 'Μη αποδεκτή εισαγωγή διεύθυνσης ηλεκτρονικού ταχυδρομείου.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Υπάρχει πρόβλημα κατά την αποστολή ηλεκτρονικού ταχυδρομείου στην <strong>Γραμμή %1$s</strong>. Απόκριση: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Πρέπει να διευκρινίσετε ένα θέμα κατά την δημοσίευση ενός νέου θέματος.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Πρέπει να διευκρινίσετε ένα θέμα κατά την δημιουργία  ενός νέου μηνύματος.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Δεν υπάρχουν νέες δημοσιεύσεις μέσα σε αυτό το θέμα αυτήν την περίοδο.',
 	'NO_FEED_ENABLED'			=> 'Η τροφοδοσίες δεν είναι διαθέσιμες σε αυτή την Δ. Συζήτηση.',
 	'NO_FEED'					=> 'Η ζητούμενη τροφοδοσία δεν είναι διαθέσιμη.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Κανένα θέμα διαθέσιμο',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'Η συγκεκριμένη μηχανή αναζήτησης δεν υπάρχει.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Δεν υπάρχουν μέθοδοι πιστοποίησης που να υποστηρίζονται.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Θέμα',
 	'SUBMIT'					=> 'Υποβολή',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Όροι χρήσης',
 	'TEST_CONNECTION'	=> 'Έλεγχος σύνδεσης',
 	'THE_TEAM'			=> 'Η ομάδα',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Ώρα',
 	
 	'TOO_LARGE'						=> 'Η τιμή που εισαγάγατε είναι πολύ μεγάλη.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Ποιος',
 	'WHO_IS_ONLINE'		=> 'Μέλη σε σύνδεση',
 	'WRONG_PASSWORD'	=> 'Ο κωδικός που εισάγατε είναι λάθος.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'Ο αριθμός που εισάγατε δεν είναι έγκυρος ICQ αριθμός.',
 	'WRONG_DATA_JABBER'			=> 'Το όνομα που εισάγατε δεν είναι ένας έγκυρος λογαριασμός Jabber.',
@@ -2715,9 +2720,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s είναι <em>ΚΛΕΙΣΤΟ</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s είναι <em>ΑΝΟΙΧΤΟ</em>',
 	'BBCODE_I_HELP'				=> 'Πλάγιο κείμενο: [i]κείμενο[/i]',
-	'BBCODE_L_HELP'				=> 'Λίστα: [list]κείμενο[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'Είδος λίστας: [*]κείμενο[/*]',
-	'BBCODE_O_HELP'				=> 'Σειρά λίστας: [list=]κείμενο [/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Προσθήκη εικόνας: [img]http://εικόνα_σύνδεσμος[/img]',
 	'BBCODE_Q_HELP'				=> 'Παράθεσης κείμενο: [quote]κείμενο[/quote]',
 	'BBCODE_S_HELP'				=> 'Χρώμα γραμματοσειράς: [color=red]κείμενο[/color] Συμβουλή : μπορείτε επίσης να χρησιμοποιήσετε το χρώμα=#FF0000',
@@ -2938,6 +2943,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Αναζήτησε χρησιμοποιούμενους όρους',
 	'SEARCHED_TOPIC'			=> 'Αναζήτησε θέμα',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Αναζήτησε όλους τους όρους ή όπως εισήχθη το ερώτημα',
 	'SEARCH_ANY_TERMS'			=> 'Αναζήτησε όλους τους όρους',
 	'SEARCH_AUTHOR'				=> 'Αναζήτηση αποστολέα',
@@ -3101,7 +3107,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Εδώ μπορείτε να επεξεργαστείτε τα πρόχειρα σας. Αυτά δεν περιλαμβάνουν συνημμένα ή πληροφορίες ψηφοφοριών.',
 	'EMAIL_BANNED_EMAIL'		=> 'Η διεύθυνση ηλεκτρονικού ταχυδρομείου που εισάγατε δεν επιτρέπετε να χρησιμοποιηθεί.',
-	'EMAIL_INVALID_EMAIL'		=> 'Μη αποδεκτή εισαγωγή διεύθυνσης ηλεκτρονικού ταχυδρομείου.',
 	'EMAIL_REMIND'				=> 'Αυτή πρέπει να είναι η διεύθυνση ηλεκτρονικού ταχυδρομείου που επιλέξατε κατά την εγγραφή σας. Εάν δεν έχετε αλλάξει αυτή μέσω του Πίνακα Ελέγχου Μέλους αυτή είναι έπειτα η διεύθυνση ηλεκτρονικού ταχυδρομείου που καταχωρήσατε τον λογαριασμό σας με',
 	'EMAIL_TAKEN_EMAIL'			=> 'Η εισαχθείσα διεύθυνση ηλεκτρονικού ταχυδρομείου χρησιμοποιείται ήδη.',
 	'EMPTY_DRAFT'				=> 'Πρέπει να εισάγετε κάποιο μήνυμα για να αποθηκευτούν οι αλλαγές.',
@@ -3182,8 +3187,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'από τον',
 	'MESSAGE_COLOURS'				=> 'Χρώματα μηνύματος',
 	'MESSAGE_DELETED'				=> 'Το μήνυμά σας διαγράφηκε επιτυχώς.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Ιστορικό μηνύματος',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Αυτό το μήνυμα διαγράφτηκε από τον συγγραφέα του πριν παραδοθεί.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'ανοιχτό',
 	'MESSAGE_STORED'				=> 'Επιτυχής αποστολή μηνύματος.',
 	'MESSAGE_TO'					=> 'Προς',

@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> '編集する',
 	'EMAIL'								=> 'メール', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'メールアドレス',
+	'EMAIL_INVALID_EMAIL'				=> '入力した メールアドレス は無効です',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'メール送信中にエラーが発生しました。<br /><strong>エラー行: %1$s</strong><br />サーバからのリスポンス: %2$s',
 	'EMPTY_SUBJECT'						=> 'トピックを投稿するには件名を入力する必要があります',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'メッセージを送信するには件名を入力する必要があります',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> '指定した期間内に返信された記事はありません',
 	'NO_FEED_ENABLED'			=> '掲示板のフィード機能が無効化されているため、フィードは利用できません',
 	'NO_FEED'					=> 'そのフィードを利用することはできません',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> '件名が入力されていません',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'その検索バックエンドは存在していません',
 	'NO_SUPPORTED_AUTH_METHODS'	=> '利用可能な認証方式がありません',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> '件名',
 	'SUBMIT'					=> '送信',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> '利用規約',
 	'TEST_CONNECTION'	=> 'サーバ接続テスト',
 	'THE_TEAM'			=> '管理・運営チーム',
+	'TIB'				=> 'TiB',
 	'TIME'				=> '日時',
 	
 	'TOO_LARGE'						=> '入力した値が大きすぎます',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> 'オンラインデータ',
 	'WRONG_PASSWORD'	=> 'パスワードが間違っています',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> '入力した ICQ が正しくありません',
 	'WRONG_DATA_JABBER'			=> '入力した Jabberアカウント名 が正しくありません',
@@ -2728,9 +2733,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s: <em>OFF</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s: <em>ON</em>',
 	'BBCODE_I_HELP'				=> 'イタリック（斜体）: [i]text[/i]',
-	'BBCODE_L_HELP'				=> 'リスト: [list]text[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'リスト要素: [*]text[/*]',
-	'BBCODE_O_HELP'				=> '番号付きリスト: [list=]text[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> '画像: [img]http://image_url[/img]',
 	'BBCODE_Q_HELP'				=> '引用: [quote]text[/quote]',
 	'BBCODE_S_HELP'				=> 'フォントカラー: [color=red]text[/color]  Tip: color=#FF0000 も可',
@@ -2952,6 +2957,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> '有効な検索キーワード',
 	'SEARCHED_TOPIC'			=> '検索されたトピック',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'AND検索 または クエリ検索',
 	'SEARCH_ANY_TERMS'			=> 'OR検索',
 	'SEARCH_AUTHOR'				=> '投稿者検索',
@@ -3118,7 +3124,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'ここでは下書きの編集を行うことができます。添付ファイルと投票を下書きに含めることはできません。',
 	'EMAIL_BANNED_EMAIL'		=> '入力した メールアドレス は禁止されています',
-	'EMAIL_INVALID_EMAIL'		=> '入力した メールアドレス は無効です',
 	'EMAIL_REMIND'				=> 'このフォーラムサイトであなたが登録したユーザーアカウントのメールアドレスを入力してください。ユーザーCP でメールアドレスを変更していない場合、ユーザー登録した際に入力したメールアドレスを入力してください。',
 	'EMAIL_TAKEN_EMAIL'			=> '入力した メールアドレス は既に他のユーザーによって使用されています',
 	'EMPTY_DRAFT'				=> '下書きをセーブするにはメッセージ本文を入力する必要があります',
@@ -3199,8 +3204,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'by',
 	'MESSAGE_COLOURS'				=> 'メッセージカラー',
 	'MESSAGE_DELETED'				=> 'メッセージを削除しました',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'メッセージの履歴',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'このメッセージは受信前に送信者によって既に削除されています',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'on',
 	'MESSAGE_STORED'				=> 'メッセージの送信に成功しました',
 	'MESSAGE_TO'					=> '受取人',

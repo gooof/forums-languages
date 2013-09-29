@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'แก้ไขโพสต์',
 	'EMAIL'								=> 'อีเมล์', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'ที่อยู่อีเมล์',
+	'EMAIL_INVALID_EMAIL'				=> 'คุณพิมพ์ อีเมล ไม่ถูกต้อง',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'การส่งเมล์มีปัญหาใน <strong>บรรทัดที่ %1$s</strong>. Response: %2$s.',
 	'EMPTY_SUBJECT'						=> 'กรุณากรอกหัวข้อด้วย',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'กรุณากรอกข้อความด้วย',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'ไม่มีข้อความในกระทู้นี้',
 	'NO_FEED_ENABLED'			=> 'ไม่มี Feeds สำหรับหมวดนี้.',
 	'NO_FEED'					=> 'ไม่มี Feed ที่ต้องการ.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'ไม่มีหัวข้อ',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'ไม่พบคำที่ค้นหา',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'ไม่รองรับการกำหนดสิทธิ์.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'หัวข้อ',
 	'SUBMIT'					=> 'ตั้งกระทู้',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'เงื่อนไขการใช้งาน',
 	'TEST_CONNECTION'	=> 'ทดสอบการเชื่อมต่อ',
 	'THE_TEAM'			=> 'ทีมงาน',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'เวลา',
 	
 	'TOO_LARGE'						=> 'ข้อมูลที่กรอกเข้ามายาวเกินไป.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> 'ผู้ใช้งานขณะนี้',
 	'WRONG_PASSWORD'	=> 'รหัสไม่ถูกต้อง',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'หมายเลข ICQ ไม่ถูกต้อง',
 	'WRONG_DATA_JABBER'			=> 'บัญชี Jabber ไม่ถูกต้อง',
@@ -2721,9 +2726,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s <em>ปิด</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s <em>เปิด</em>',
 	'BBCODE_I_HELP'				=> 'ตัวเอียง: [i]text[/i]',
-	'BBCODE_L_HELP'				=> 'ลิส: [list]text[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'ลิสรายการ: [*]text[/*]',
-	'BBCODE_O_HELP'				=> 'จัดเรียงลิส: [list=]text[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'ใส่รูป: [img]http://image_url[/img]',
 	'BBCODE_Q_HELP'				=> 'เครื่องหมายคำพูดในข้อความ: [quote]text[/quote]',
 	'BBCODE_S_HELP'				=> 'สีตัวอักษร: [color=red]text[/color]  สามารถใช้โค้ดสี  #FF0000 ได้',
@@ -2944,6 +2949,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'เงื่อนไขการค้นหาที่ใช้',
 	'SEARCHED_TOPIC'			=> 'ค้นหากระทู้',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'ค้นหาจากทุกส่วน หรือใช้ข้อความที่ระบุ',
 	'SEARCH_ANY_TERMS'			=> 'ค้นหาจากทุกส่วน',
 	'SEARCH_AUTHOR'				=> 'ค้นหาจากผู้แต่ง:',
@@ -3121,7 +3127,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'คุณสามารถแก้ไขข้อความร่างที่คุณบันทึกไว้ ข้อความร่างนี้ไม่สามารถเก็บไฟล์แนบ หรือข้อมูลแบบสำรวจ',
 	'EMAIL_BANNED_EMAIL'		=> 'E-mail นี้ถูกห้ามใช้งาน',
-	'EMAIL_INVALID_EMAIL'		=> 'คุณพิมพ์ อีเมล ไม่ถูกต้อง',
 	'EMAIL_REMIND'				=> 'อีเมลนี้ใช้ในการสมัครสมาชิก',
 	'EMAIL_TAKEN_EMAIL'			=> 'อีเมล์ที่คุณใช้มีผู้ใช้งานแล้วโปรดระบุอีเมล์ใหม่',
 	'EMPTY_DRAFT'				=> 'คุณต้องระบุ e-mail ที่คุณเปลี่ยน',
@@ -3202,8 +3207,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'โดย',
 	'MESSAGE_COLOURS'				=> 'สีข้อความ',
 	'MESSAGE_DELETED'				=> 'ข้อความถูกลบเรียบร้อยแล้ว',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'ประวัติข้อความ',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'ข้อความนี้ถูกย้ายโดยผู้เขียน ก่อนที่มันจะถูกส่งไป',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'เมื่อ',
 	'MESSAGE_STORED'				=> 'ข้อความถูกส่งไปเรียบร้อยแล้ว',
 	'MESSAGE_TO'					=> 'ถึง',

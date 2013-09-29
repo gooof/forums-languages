@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Mesajı düzenle',
 	'EMAIL'								=> 'E-posta', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'E-posta adresi',
+	'EMAIL_INVALID_EMAIL'				=> 'Girdiğiniz e-posta adresi hatalı.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'E-posta gönderilirken iç sunucu problemi oluştu <strong>Satır %1$s</strong>. Yanıt: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Yeni bir başlık göndereceğiniz zaman bir konu belirlemelisiniz.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Yeni bir mesaj oluşturacağınız zaman bir konu belirlemelisiniz.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Seçilen zaman çerçevesi için bu başlıkta hiç bir mesaj yok.',
 	'NO_FEED_ENABLED'			=> 'Bu mesaj panosunda Özet Akışları mevcut değil.',
 	'NO_FEED'					=> 'İstenilen Özet Akışı mevcut değil.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Hiç bir konu belirtilmedi.',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'Belirtilen arama bulunamıyor.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Yetki metotları desteklenmedi.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Konu',
 	'SUBMIT'					=> 'Gönder',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Kullanım koşulları',
 	'TEST_CONNECTION'	=> 'Bağlantı testi',
 	'THE_TEAM'			=> 'Takım',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Zaman',
 	
 	'TOO_LARGE'						=> 'Girdiğiniz değer çok büyük.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Kimdir',
 	'WHO_IS_ONLINE'		=> 'Kimler çevrimiçi',
 	'WRONG_PASSWORD'	=> 'Hatalı bir şifre girdiniz.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'Girdiğiniz numara, geçersiz bir ICQ numarası.',
 	'WRONG_DATA_JABBER'			=> 'Girilen ad, geçersiz bir Jabber hesap adı.',
@@ -2715,9 +2720,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s <em>KAPALI</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s <em>AÇIK</em>',
 	'BBCODE_I_HELP'				=> 'İtalik yazı: [i]metin[/i]',
-	'BBCODE_L_HELP'				=> 'Liste: [list]metin[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'Liste maddesi: [*]text[/*]',
-	'BBCODE_O_HELP'				=> 'Sıralı liste: [list=]metin[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Resim ekle: [img]http://resim_url[/img]',
 	'BBCODE_Q_HELP'				=> 'Alıntı yazısı: [quote]metin[/quote]',
 	'BBCODE_S_HELP'				=> 'Font rengi: [color=red]metin[/color] İpucu: ayrıca, color=#FF0000 şeklinde de kullanabilirsiniz',
@@ -2938,6 +2943,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Aranan terim',
 	'SEARCHED_TOPIC'			=> 'Başlık arandı',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Bütün terimler için ara ya da girilen önermeyi kullan',
 	'SEARCH_ANY_TERMS'			=> 'Herhangi bir terim için ara',
 	'SEARCH_AUTHOR'				=> 'Yazar için ara',
@@ -3102,7 +3108,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Buradan taslağınızı düzenleyebilirsiniz. Taslaklar eklenti ve anket bilgileri içermez.',
 	'EMAIL_BANNED_EMAIL'		=> 'Girdiğiniz e-posta adresinin kullanım izni yok.',
-	'EMAIL_INVALID_EMAIL'		=> 'Girdiğiniz e-posta adresi hatalı.',
 	'EMAIL_REMIND'				=> 'Bu, hesabınız ile ilişkilendirilmiş e-posta adresi olmalıdır. Eğer bunu kullanıcı kontrol paneliniz yardımıyla değiştirmediyseniz o zaman bu e-posta adresi, hesabınız ile kayıt olduğunuz e-posta adresinizdir.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Girilen e-posta adresi zaten kullanılıyor.',
 	'EMPTY_DRAFT'				=> 'Ayarlarınızı değiştirmek için bir mesaj girmelisiniz.',
@@ -3183,8 +3188,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'tarafından',
 	'MESSAGE_COLOURS'				=> 'Mesaj renkleri',
 	'MESSAGE_DELETED'				=> 'Bu mesaj başarıyla silindi.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Mesaj geçmişi',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Bu mesaj teslim edilmeden önce mesajın yazarı tarafından silindi.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'tarih',
 	'MESSAGE_STORED'				=> 'Bu mesaj başarıyla gönderildi.',
 	'MESSAGE_TO'					=> 'Kime',

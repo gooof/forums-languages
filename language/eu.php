@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Mezua aldatu',
 	'EMAIL'								=> 'Posta elektronikoa', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'Posta elektroniko helbidea',
+	'EMAIL_INVALID_EMAIL'				=> 'Sartutako posta elektroniko helbidea ez da baliogarria.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Arazoak posta elektronikoa bidaltzerakoan  <strong>%1$s lineara </strong>. Erantzuna: %2$s',
 	'EMPTY_SUBJECT'						=> 'Izenburua zehaztu behar duzu gai berri bat bidaltzerakoan.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Izenburua zehaztu behar duzu mezu berri bat idazterakoan.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Ez dago gai honi buruzko mezurik aukeratutako denbora tartean.',
 	'NO_FEED_ENABLED'			=> 'Ez dago jarioetara harpidetzeko aukerarik foro honetan.',
 	'NO_FEED'					=> 'Eskatutako jarioa ez dago eskuragarri.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Ez da izenbururik zehaztu',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'Ez dago horrelako bilaketa modulurik.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Ezin daitezke egiaztatze moduak eutsi.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Izenburua',
 	'SUBMIT'					=> 'Bidali',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Erabilera baldintzak',
 	'TEST_CONNECTION'	=> 'Konexioa frogatu',
 	'THE_TEAM'			=> 'Taldea',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Ordua',
 	
 	'TOO_LARGE'						=> 'Sartutako balorea handiegia da.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Nor da?',
 	'WHO_IS_ONLINE'		=> 'Nor dago konektaturik?',
 	'WRONG_PASSWORD'	=> 'Pasahitz okerra sartu duzu.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'Sartutako zenbakia ez da ICQ zenbaki baliozkoa.',
 	'WRONG_DATA_JABBER'			=> 'Sartutako izena ez da Jabber kontu izen baliozkoa.',
@@ -2715,9 +2720,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s <em>desgaituta</em>dago',
 	'BBCODE_IS_ON'				=> '%sBBCode%s <em>gaituta</em>dago',
 	'BBCODE_I_HELP'				=> 'Letra etzana: [i]testua[/i]  (alt+i)',
-	'BBCODE_L_HELP'				=> 'Zerrenda: [list]testua[/list]  (alt+l)',
-	'BBCODE_LISTITEM_HELP'		=> 'Gaia zerrendatu: [*]testua[/*]',
-	'BBCODE_O_HELP'				=> 'Zerrenda ordenatua: [list=]testua[/list]  (alt+o)',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Irudia txertatu: [img]http://irudia_url[/img]  (alt+p)',
 	'BBCODE_Q_HELP'				=> 'Testua aipatu: [quote]testua[/quote]  (alt+q)',
 	'BBCODE_S_HELP'				=> 'Letra kolorea: [color=red]testua[/color]  Tip: kolore kodeak ere erabili daitezke=#FF0000',
@@ -2938,6 +2943,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Bilatutako terminoa',
 	'SEARCHED_TOPIC'			=> 'Bilatutako mezua',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Termino guztiak bilatu',
 	'SEARCH_ANY_TERMS'			=> 'Edozein termino bilatu',
 	'SEARCH_AUTHOR'				=> 'Egileagatik bilatu',
@@ -3101,7 +3107,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Hemen zure zirriborroa aldatu zenezake. Zirriborroek ezin dute eranskinik ezta inkestarik eduki.',
 	'EMAIL_BANNED_EMAIL'		=> 'Sartutako posta elektroniko helbidea debekatuta dago.',
-	'EMAIL_INVALID_EMAIL'		=> 'Sartutako posta elektroniko helbidea ez da baliogarria.',
 	'EMAIL_REMIND'				=> 'Hau izan behar luke zure kontura uztarturiko posta elektroniko helbidea. Erabiltzaile kontrol paneletik ez baldin baduzu aldatu, izena ematerakoan sartutako helbidea bera litzateke.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Sartu duzun posta elektroniko helbidea dagoeneko erabiltzen da.',
 	'EMPTY_DRAFT'				=> 'Mezuren bat idatzi behar duzu aldaketak bidaltzeko.',
@@ -3182,8 +3187,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'Nork',
 	'MESSAGE_COLOURS'				=> 'Mezu koloreak',
 	'MESSAGE_DELETED'				=> 'Mezua zuzen ezabatu da',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Mezu historia',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Egileak mezu hau ezabatu egin du bidali aurretik.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'non',
 	'MESSAGE_STORED'				=> 'Mezua zuzen bidali da.',
 	'MESSAGE_TO'					=> 'Nori',

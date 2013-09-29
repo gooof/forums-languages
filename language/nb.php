@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Rediger innlegg',
 	'EMAIL'								=> 'E-post', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'E-postadresse',
+	'EMAIL_INVALID_EMAIL'				=> 'E-postadressen eksisterer ikke.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Problemer oppstod ved sending av e-post på <strong>linje %s</strong>. Respons: %s',
 	'EMPTY_SUBJECT'						=> 'Du må angi en emnetittel når du oppretter et nytt emne.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Du må skrive inn et emne når du skriver en ny melding.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Det finnes ingen innlegg i dette emnet for det valgte tidsrommet.',
 	'NO_FEED_ENABLED'			=> 'Feeds are not available on this board.',
 	'NO_FEED'					=> 'The requested feed is not available.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Intet emne er spesifisert',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'Det spesifiserte søkesystemet eksisterer ikke.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Ingen støttede godkjenningsmetoder.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Emne',
 	'SUBMIT'					=> 'OK',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Bruksbetingelser',
 	'TEST_CONNECTION'	=> 'Test tilkobling',
 	'THE_TEAM'			=> 'Forumledelse',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Tid',
 	
 	'TOO_LARGE'						=> 'The value you entered is too large.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> 'Hvem er i forumet',
 	'WRONG_PASSWORD'	=> 'Passordet er ikke gyldig.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'ICQ-nummeret er ikke gyldig.',
 	'WRONG_DATA_JABBER'			=> 'Jabber-brukernavnet er ikke gyldig.',
@@ -2679,9 +2684,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s er <em>AV</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s er <em>På</em>',
 	'BBCODE_I_HELP'				=> 'Kursiv tekst: [i]tekst[/i]  (alt i)',
-	'BBCODE_L_HELP'				=> 'Liste: [list]tekst[/list]  (alt l)',
-	'BBCODE_LISTITEM_HELP'		=> 'Element i liste: [*]tekst[/*]',
-	'BBCODE_O_HELP'				=> 'Sortert liste: [list=]tekst[/list]  (alt o)',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Sett inn bilde: [img]http://bildets_url[/img]  (alt p)',
 	'BBCODE_Q_HELP'				=> 'Siter tekst: [quote]tekst[/quote]  (alt q)',
 	'BBCODE_S_HELP'				=> 'Skriftfarge: [color=red]tekst[/color]  Tips: Du kan også bruke color=#FF0000.',
@@ -2902,6 +2907,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Søkeord:',
 	'SEARCHED_TOPIC'			=> 'Gjennomsøkt emne',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Finn innlegg som inneholder alle ordene (eller tilfredstiller spørringen)',
 	'SEARCH_ANY_TERMS'			=> 'Finn innlegg som inneholder minst ett av ordene',
 	'SEARCH_AUTHOR'				=> 'Finn kun innlegg skrevet av denne brukeren',
@@ -3068,7 +3074,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Her kan du endre kladden din. Kladder har ikke vedleggs- og avsemningsinformasjon.',
 	'EMAIL_BANNED_EMAIL'		=> 'E-postadressen du har oppgitt er forbudt av administrasjonen.',
-	'EMAIL_INVALID_EMAIL'		=> 'E-postadressen eksisterer ikke.',
 	'EMAIL_REMIND'				=> 'Dette må være e-postadressen du regitrerte deg med.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Den oppgitte e-postadressen er allerede i bruk.',
 	'EMPTY_DRAFT'				=> 'Du må skrive en melding for å lagre endringene.',
@@ -3149,8 +3154,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'av',
 	'MESSAGE_COLOURS'				=> 'Meldingsfarger',
 	'MESSAGE_DELETED'				=> 'Meldingen har blitt slettet.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Meldingshistorie',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Denne meldingen har blitt slettet av forfatteren.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'den',
 	'MESSAGE_STORED'				=> 'Meldingen er sendt.',
 	'MESSAGE_TO'					=> 'Til',

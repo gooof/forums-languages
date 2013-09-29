@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Editar mensaxe publicada',
 	'EMAIL'								=> 'Correo-e', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'Enderezo de correo-e',
+	'EMAIL_INVALID_EMAIL'				=> 'O enderezo de correo electrónico que inseriches non é correcto.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Houbo problemas ao enviar correo-e na <strong>Liña %1$s</strong>. Resposta: %2$s',
 	'EMPTY_SUBJECT'						=> 'Debes especificar un asunto ao enviar un novo tema.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Tes que especificar un asunto cando compoñas unha nova mensaxe.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Non hai mensaxes publicadas neste tema para o período de tempo seleccionado.',
 	'NO_FEED_ENABLED'			=> 'Os fluxos non están dispoñíbeis neste taboleiro.',
 	'NO_FEED'					=> 'O fluxo solicitado non está dispoñíbel.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Non se especificou asunto ningún',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'O backend de procura especificado non existe',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Non hai métodos de autenticación permitidos',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Asunto',
 	'SUBMIT'					=> 'Enviar',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Termos de uso',
 	'TEST_CONNECTION'	=> 'Probar conexión',
 	'THE_TEAM'			=> 'O equipo',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Data',
 	
 	'TOO_LARGE'						=> 'O valor que inseriches é grande de máis.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Quen é',
 	'WHO_IS_ONLINE'		=> 'Quen está en liña',
 	'WRONG_PASSWORD'	=> 'O contrasinal inserido é incorrecto.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'O número que inseriches non é un número ICQ válido.',
 	'WRONG_DATA_JABBER'			=> 'O nome que inseriches non é un nome de conta Jabber válido.',
@@ -2713,9 +2718,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s <em>INACTIVO</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s <em>ACTIVO</em>',
 	'BBCODE_I_HELP'				=> 'Texto en cursiva: [i]texto[/i] (alt+i)',
-	'BBCODE_L_HELP'				=> 'Lista: [list]texto[/list] (alt+l)',
-	'BBCODE_LISTITEM_HELP'		=> 'Elemento de lista: [*]texto[/*]',
-	'BBCODE_O_HELP'				=> 'Lista ordenada: [list=]texto[/list] (alt+o)',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Inserir imaxe: [img]http://url_da_imaxe[/img] (alt+p)',
 	'BBCODE_Q_HELP'				=> 'Cita: [quote]texto[/quote] (alt+q)',
 	'BBCODE_S_HELP'				=> 'Cor da fonte: [color=red]texto[/color] Nota: podes usar color=#FF0000',
@@ -2936,6 +2941,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Procurar termo usado',
 	'SEARCHED_TOPIC'			=> 'Tema procurado',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Procurar todos os termos ou usar a consulta tal e como se inseriu',
 	'SEARCH_ANY_TERMS'			=> 'Procurar por calquera termo',
 	'SEARCH_AUTHOR'				=> 'Procurar por autor',
@@ -3099,7 +3105,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Aquí poderás editar os teus rascuños. Os rascuños non conteñen anexos ou informacións de enquisas.',
 	'EMAIL_BANNED_EMAIL'		=> 'O correo electrónico que introduciches non está considerado como válido.',
-	'EMAIL_INVALID_EMAIL'		=> 'O enderezo de correo electrónico que inseriches non é correcto.',
 	'EMAIL_REMIND'				=> 'Isto debe ser o enderezo de correo-e asociado coa túa conta. Se non o mudaches a través do teu panel de control de usuario, entón é o enderezo co que rexistraches a túa conta.',
 	'EMAIL_TAKEN_EMAIL'			=> 'O enderezo de correo-e inserido xa está en uso',
 	'EMPTY_DRAFT'				=> 'Debes inserir unha mensaxe para enviar os teus trocos',
@@ -3180,8 +3185,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'por',
 	'MESSAGE_COLOURS'				=> 'Cores da mensaxe',
 	'MESSAGE_DELETED'				=> 'A túa mensaxe foi eliminada correctamente',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Historial da mensaxe',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Esta mensaxe foi eliminada polo seu autor antes de ser enviada',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'no',
 	'MESSAGE_STORED'				=> 'A mensaxe foi enviada correctamente',
 	'MESSAGE_TO'					=> 'Para',

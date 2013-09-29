@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Editar mensagem',
 	'EMAIL'								=> 'E-mail', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'Endereço de e-mail',
+	'EMAIL_INVALID_EMAIL'				=> 'Este endereço de e-mail é inválido.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ocorreu um problema ao enviar o e-mail na <strong>Linha %1$s</strong>. Erro: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Você deve especificar um título quando enviar um novo tópico.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Você deve especificar um título quando compor uma nova mensagem.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Não existem mensagens neste tópico no período selecionado.',
 	'NO_FEED_ENABLED'			=> 'Os feeds não estão disponíveis neste painel.',
 	'NO_FEED'					=> 'O feed solicitado não está disponível.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Nenhum título foi especificado.',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'O modo de pesquisa especificado não existe.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Nenhum método de autenticação suportado.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Título',
 	'SUBMIT'					=> 'Enviar',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Termos de uso',
 	'TEST_CONNECTION'	=> 'Testar conexão',
 	'THE_TEAM'			=> 'Equipe do fórum',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Tempo',
 	
 	'TOO_LARGE'						=> 'O valor que você digitou é muito grande.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Quem',
 	'WHO_IS_ONLINE'		=> 'Quem está online',
 	'WRONG_PASSWORD'	=> 'Você escreveu uma senha incorreta.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'O número ICQ informado não é válido.',
 	'WRONG_DATA_JABBER'			=> 'O nome de jabber informado não é válido.',
@@ -2715,9 +2720,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s está <em>Inativo</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s está <em>Ativo</em>',
 	'BBCODE_I_HELP'				=> 'Itálico: [i]texto[/i]',
-	'BBCODE_L_HELP'				=> 'Lista: [list]lista[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'Listar Itens: [*]texto[/*]',
-	'BBCODE_O_HELP'				=> 'Lista Ordenada: [list=]lista ordenada[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Imagem: [img]http://url_da_imagem[/img]',
 	'BBCODE_Q_HELP'				=> 'Citação: [quote]citação[/quote]',
 	'BBCODE_S_HELP'				=> 'Cor: [color=red]texto[/color]  Dica: Você também pode utilizar color=#FF0000',
@@ -2938,6 +2943,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Pesquisar por termo utilizado',
 	'SEARCHED_TOPIC'			=> 'Tópico pesquisado',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Pesquisar por todos os termos escritos',
 	'SEARCH_ANY_TERMS'			=> 'Pesquisar por qualquer termo',
 	'SEARCH_AUTHOR'				=> 'Pesquisar por autor',
@@ -3102,7 +3108,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Aqui você pode editar os seus rascunhos. Os rascunhos não contêm anexos e informações de enquetes.',
 	'EMAIL_BANNED_EMAIL'		=> 'Este endereço de e-mail foi banido.',
-	'EMAIL_INVALID_EMAIL'		=> 'Este endereço de e-mail é inválido.',
 	'EMAIL_REMIND'				=> 'Este deve ser o endereço de e-mail associado à sua conta. Se você não alterou este e-mail pelo painel de controle do usuário, este é o endereço que você informou ao se registrar.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Este endereço de e-mail já foi registrado em nosso banco de dados.',
 	'EMPTY_DRAFT'				=> 'Você deve escrever uma mensagem para enviar as suas modificações.',
@@ -3183,8 +3188,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'por',
 	'MESSAGE_COLOURS'				=> 'Cores da mensagem',
 	'MESSAGE_DELETED'				=> 'A mensagem foi excluída com sucesso.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Histórico de mensagens',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Esta mensagem foi excluída pelo autor antes de ser encaminhada.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'em',
 	'MESSAGE_STORED'				=> 'A sua mensagem foi enviada com sucesso.',
 	'MESSAGE_TO'					=> 'Para',

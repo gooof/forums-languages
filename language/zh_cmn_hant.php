@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> '編輯文章',
 	'EMAIL'								=> 'E-mail', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'E-mail 位址',
+	'EMAIL_INVALID_EMAIL'				=> '您輸入的 e-mail 位址是無效的。',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> '發送 e-mail 在 <strong>第 %1$s 行</strong> 遇到問題。回應訊息：%2$s。',
 	'EMPTY_SUBJECT'						=> '您必須為新主題指定一個標題。',
 	'EMPTY_MESSAGE_SUBJECT'				=> '您沒有輸入標題。',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> '在選定的時段中這個主題沒有文章存在。',
 	'NO_FEED_ENABLED'			=> '在這個論壇的消息來源是不可用的。',
 	'NO_FEED'					=> '所需求的消息來源是不可用的。',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> '沒有輸入標題',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> '指定的搜尋模組不存在。',
 	'NO_SUPPORTED_AUTH_METHODS'	=> '沒有可支援的認證方式。',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> '主題',
 	'SUBMIT'					=> '送出',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> '使用條款',
 	'TEST_CONNECTION'	=> '連結測試',
 	'THE_TEAM'			=> '管理團隊',
+	'TIB'				=> 'TiB',
 	'TIME'				=> '時間',
 	
 	'TOO_LARGE'						=> '您輸入的值太大。',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> '誰在線上',
 	'WRONG_PASSWORD'	=> '您輸入了錯誤的密碼。',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> '您輸入的數字不是一個有效的 ICQ 號碼。',
 	'WRONG_DATA_JABBER'			=> '您輸入的名字不是一個有效的 Jabber 帳號。',
@@ -2715,9 +2720,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s <em>禁止</em>使用',
 	'BBCODE_IS_ON'				=> '%sBBCode%s <em>允許</em>使用',
 	'BBCODE_I_HELP'				=> '斜體：[i]text[/i]',
-	'BBCODE_L_HELP'				=> '列表：[list]text[/list]',
-	'BBCODE_LISTITEM_HELP'		=> '列表條目：[*]text[/*]',
-	'BBCODE_O_HELP'				=> '有序列表：[list=]text[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> '插入圖片：[img]http://image_url[/img]',
 	'BBCODE_Q_HELP'				=> '引用文字：[quote]text[/quote]',
 	'BBCODE_S_HELP'				=> '文字顏色：[color=red]text[/color]  提示：您也可以使用 color=#FF0000',
@@ -2938,6 +2943,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> '使用過的關鍵字',
 	'SEARCHED_TOPIC'			=> '搜尋過的主題',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> '搜尋符合以上所有關鍵字的資料',
 	'SEARCH_ANY_TERMS'			=> '搜尋符合以上任一關鍵字的資料',
 	'SEARCH_AUTHOR'				=> '搜尋發表人',
@@ -3102,7 +3108,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> '在這裡您可以編輯您的草稿。草稿不能包含附加檔案和投票資訊。',
 	'EMAIL_BANNED_EMAIL'		=> '您輸入的 e-mail 位址已被禁止使用。',
-	'EMAIL_INVALID_EMAIL'		=> '您輸入的 e-mail 位址是無效的。',
 	'EMAIL_REMIND'				=> '您輸入的 e-mail 位址必須能讓我們聯絡到您。如果您從未在會員控制台做過更動，那麼它就是您註冊時所提供的 e-mail 位址。',
 	'EMAIL_TAKEN_EMAIL'			=> '您輸入的 e-mail 位址已經被他人使用。',
 	'EMPTY_DRAFT'				=> '您必須輸入內容才能送出更換。',
@@ -3183,8 +3188,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> '寄件人',
 	'MESSAGE_COLOURS'				=> '訊息顏色',
 	'MESSAGE_DELETED'				=> '文章已經成功刪除。',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> '這個私人訊息的歷史紀錄',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> '這個私人訊息在被送達前已經被寄件人移除。',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> '發送時間',
 	'MESSAGE_STORED'				=> '私人訊息已經成功發送。',
 	'MESSAGE_TO'					=> '收件人',

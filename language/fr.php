@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Éditer le message',
 	'EMAIL'								=> 'Adresse électronique ', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'Adresse de courrier électronique ',
+	'EMAIL_INVALID_EMAIL'				=> 'L’adresse de courrier électronique que vous avez saisie est incorrecte.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Une erreur est survenue lors de l’envoi du courriel à la <strong>ligne %1$s</strong>. Réponse : %2$s.',
 	'EMPTY_SUBJECT'						=> 'Veuillez spécifier le titre du nouveau sujet.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Veuillez spécifier le titre du nouveau message privé.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Aucun message n’a été publié dans ce sujet lors de la période spécifiée.',
 	'NO_FEED_ENABLED'			=> 'Les flux ne sont pas disponibles sur ce forum.',
 	'NO_FEED'					=> 'Le flux que vous recherchez n’est pas disponible.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Aucun sujet n’a été spécifié',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'Le &laquo; backend &raquo; de la recherche que vous avez spécifié n’existe pas.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Aucune méthode d’authentification n’est supportée.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Sujet ',
 	'SUBMIT'					=> 'Envoyer',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Conditions d’utilisation',
 	'TEST_CONNECTION'	=> 'Tester la connexion',
 	'THE_TEAM'			=> 'L’équipe',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Date',
 	
 	'TOO_LARGE'						=> 'La valeur que vous avez saisie est trop importante.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Qui est-ce ?',
 	'WHO_IS_ONLINE'		=> 'Qui est en ligne ?',
 	'WRONG_PASSWORD'	=> 'Le mot de passe que vous avez spécifié est incorrect.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'Le numéro ICQ que vous avez spécifié est incorrect.',
 	'WRONG_DATA_JABBER'			=> 'Le nom du compte Jabber que vous avez spécifié est incorrect.',
@@ -2715,9 +2720,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> 'Le %sBBCode%s est <em>désactivé</em>',
 	'BBCODE_IS_ON'				=> 'Le %sBBCode%s est <em>activé</em>',
 	'BBCODE_I_HELP'				=> 'Texte en italique : [i]texte[/i]',
-	'BBCODE_L_HELP'				=> 'Liste : [list]texte[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'Objet d’une liste : [*]texte[/*]',
-	'BBCODE_O_HELP'				=> 'Liste ordonnée : [list=]texte[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Insérer une image : [img]http://lien_de_l_image[/img]',
 	'BBCODE_Q_HELP'				=> 'Citer un texte : [quote]texte[/quote]',
 	'BBCODE_S_HELP'				=> 'Couleur de la police de caractères : [color=red]texte[/color] ou [color=#FF0000]texte[/color]',
@@ -2938,6 +2943,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Rechercher les termes utilisés ',
 	'SEARCHED_TOPIC'			=> 'Sujet recherché ',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Rechercher tous les termes ou utiliser une question comme élément',
 	'SEARCH_ANY_TERMS'			=> 'Rechercher n’importe quels de ces termes',
 	'SEARCH_AUTHOR'				=> 'Rechercher par auteur ',
@@ -3102,7 +3108,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Vous pouvez éditer ici votre brouillon. Les brouillons ne contiennent ni pièces jointes, ni sondages.',
 	'EMAIL_BANNED_EMAIL'		=> 'L’adresse de courrier électronique que vous avez saisie a été bannie de ce forum.',
-	'EMAIL_INVALID_EMAIL'		=> 'L’adresse de courrier électronique que vous avez saisie est incorrecte.',
 	'EMAIL_REMIND'				=> 'Ceci doit correspondre à l’adresse de courrier électronique qui est associée à votre compte. Si vous ne l’avez pas modifié par l’intermédiaire de votre panneau de contrôle de l’utilisateur, il s’agit de l’adresse de courrier électronique que vous avez saisie lors de votre inscription.',
 	'EMAIL_TAKEN_EMAIL'			=> 'L’adresse de courrier électronique que vous avez saisie est déjà utilisée.',
 	'EMPTY_DRAFT'				=> 'Vous devez saisir un message afin d’envoyer vos modifications.',
@@ -3183,8 +3188,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'par',
 	'MESSAGE_COLOURS'				=> 'Légende de couleurs des messages',
 	'MESSAGE_DELETED'				=> 'Ce message a été supprimé.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Historique du message ',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Ce message a été supprimé par son auteur avant qu’il ait été délivré.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'le',
 	'MESSAGE_STORED'				=> 'Le message a été envoyé.',
 	'MESSAGE_TO'					=> 'À',

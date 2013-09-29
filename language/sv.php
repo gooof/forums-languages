@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Redigera inlägg',
 	'EMAIL'								=> 'E-post', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'E-postadress',
+	'EMAIL_INVALID_EMAIL'				=> 'E-postadressen du angav är ogiltig.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Fel uppstod vid skickning av e-post vid <strong>rad %1$s</strong>. Svar: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Du måste ange ett ämne för att skapa en ny tråd.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Du måste ange ett ämne för ditt meddelande.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Inga inlägg finns i denna tråd inom den valda tidsramen.',
 	'NO_FEED_ENABLED'			=> 'Det går inte att prenumerera på flöden från detta forum.',
 	'NO_FEED'					=> 'Det begärda flödet är inte tillgängligt.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Inget ämne angavs',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'Det valda söksystemet finns inte.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Inga verifieringsmetoder stöds.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Ämne',
 	'SUBMIT'					=> 'Skicka',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Användarvillkor',
 	'TEST_CONNECTION'	=> 'Testa anslutning',
 	'THE_TEAM'			=> 'Teamet',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Tid',
 	
 	'TOO_LARGE'						=> 'Värdet du angav är för stort.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> 'Vilka är online',
 	'WRONG_PASSWORD'	=> 'Du angav ett felaktigt lösenord.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'Numret du angav är inte ett giltigt ICQ-nummer.',
 	'WRONG_DATA_JABBER'			=> 'Namnet du angav är inte ett giltigt Jabber-kontonamn.',
@@ -2704,9 +2709,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s är <em>AV</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s är <em>PÅ</em>',
 	'BBCODE_I_HELP'				=> 'Kursiv text: [i]text[/i]',
-	'BBCODE_L_HELP'				=> 'Lista: [list]text[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'Post i lista: [*]text[/*]',
-	'BBCODE_O_HELP'				=> 'Ordnad lista: [list=]text[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Infoga bild: [img]http://bild_url[/img]',
 	'BBCODE_Q_HELP'				=> 'Citera text: [quote]text[/quote]',
 	'BBCODE_S_HELP'				=> 'Textfärg: [color=red]text[/color]  Tips: du kan också använda color=#FF0000',
@@ -2927,6 +2932,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Sökterm använd',
 	'SEARCHED_TOPIC'			=> 'Sökte inom tråd',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Sök efter resultat som matchar alla termer eller använd frågan som den är angiven',
 	'SEARCH_ANY_TERMS'			=> 'Sök efter resultat som matchar någon av termerna',
 	'SEARCH_AUTHOR'				=> 'Sök efter författare',
@@ -3091,7 +3097,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Här kan du redigera dina utkast. Utkasten innehåller ingen bilage- eller omröstningsinformation.',
 	'EMAIL_BANNED_EMAIL'		=> 'E-postadressen du angav får inte användas.',
-	'EMAIL_INVALID_EMAIL'		=> 'E-postadressen du angav är ogiltig.',
 	'EMAIL_REMIND'				=> 'Detta måste vara e-postadressen som är associerad med ditt konto. Om du inte har ändrat den via kontrollpanelen så är detta e-postadressen som du registrerade ditt konto med.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Den angivna e-postadressen används redan av en annan användare.',
 	'EMPTY_DRAFT'				=> 'Du måste skriva ett meddelande för att spara dina ändringar.',
@@ -3172,8 +3177,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'från',
 	'MESSAGE_COLOURS'				=> 'Meddelandefärger',
 	'MESSAGE_DELETED'				=> 'Meddelandet togs bort.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Meddelandehistorik',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Detta meddelande togs bort av dess författare innan det levererats.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'on',
 	'MESSAGE_STORED'				=> 'Meddelandet skickades.',
 	'MESSAGE_TO'					=> 'Till',

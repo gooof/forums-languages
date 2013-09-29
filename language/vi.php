@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Sửa bài viết',
 	'EMAIL'								=> 'Gửi Email', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'Địa chỉ Email',
+	'EMAIL_INVALID_EMAIL'				=> 'Địa chỉ Email bạn vừa nhập không hợp lệ.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Có rắc rối xảy ra trong quá trình gửi Email tại <strong>Dòng %1$s</strong>. Nguyên nhân: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Bạn phải nhập tiêu đề cho chủ đề mới.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Bạn phải nhập tiêu đề cho tin nhắn mà mình muốn gửi.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Chủ đề này không có bài viết nào trong khoảng thời gian bạn vừa chọn.',
 	'NO_FEED_ENABLED'			=> 'Feeds không tồn tại trên diễn đàn này.',
 	'NO_FEED'					=> 'Feed yêu cầu không tồn tại.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Không có tiêu đề',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'Lựa chọn tìm kiếm bạn vừa thực hiện không tồn tại.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Không có phương thức xác thực nào được hỗ trợ trên máy chủ.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Tiêu đề',
 	'SUBMIT'					=> 'Chấp nhận',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Điều khoản đăng ký thành viên',
 	'TEST_CONNECTION'	=> 'Kiểm tra kết nối',
 	'THE_TEAM'			=> 'Ban điều hành',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Thời gian',
 	
 	'TOO_LARGE'						=> 'Giá trị bạn nhập vào quá lớn.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Tra cứu địa chỉ IP',
 	'WHO_IS_ONLINE'		=> 'Ai đang trực tuyến?',
 	'WRONG_PASSWORD'	=> 'Bạn vừa nhập mật khẩu không chính xác.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'Số tài khoản ICQ bạn vừa nhập không hợp lệ.',
 	'WRONG_DATA_JABBER'			=> 'Tên tài khoản Jabber bạn vừa nhập không hợp lệ.',
@@ -2715,9 +2720,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s đang <em>TẮT</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s đang <em>BẬT</em>',
 	'BBCODE_I_HELP'				=> 'Văn bản in nghiêng: [i]văn bản muốn in nghiêng[/i]',
-	'BBCODE_L_HELP'				=> 'Tạo danh sách: [list]văn bản muốn tạo danh sách[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'Mục liệt kê: [*]văn bản trong dòng liệt kê[/*]',
-	'BBCODE_O_HELP'				=> 'Tạo danh sách theo thứ tự: [list=]văn bản muốn tạo danh sách theo thứ tự[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Chèn hình: [img]http://địa chỉ URL tập tin hình ảnh[/img]',
 	'BBCODE_Q_HELP'				=> 'Trích dẫn văn bản: [quote]văn bản muốn trích dẫn[/quote]',
 	'BBCODE_S_HELP'				=> 'Màu chữ: [color=red]văn bản muốn tô màu[/color] Lưu ý: Bạn cũng có thể sử dụng dạng color=#FF0000',
@@ -2938,6 +2943,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Điều kiện tìm kiếm đã sử dụng',
 	'SEARCHED_TOPIC'			=> 'Chủ đề đã tìm kiếm',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Tìm kiếm theo tất cả điều kiện hoặc sử dụng truy vấn tìm kiếm đã nhập',
 	'SEARCH_ANY_TERMS'			=> 'Tìm kiếm theo bất kỳ điều kiện nào',
 	'SEARCH_AUTHOR'				=> 'Tìm kiếm theo tên tác giả',
@@ -3102,7 +3108,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Sử dụng bảng điều khiển này, bạn có thể sửa những bản nháp đã lưu của mình. Những bản nháp sẽ không chứa bất kỳ thông tin nào về các tập tin đính kèm hay bình chọn.',
 	'EMAIL_BANNED_EMAIL'		=> 'Địa chỉ Email bạn vừa nhập không được phép sử dụng.',
-	'EMAIL_INVALID_EMAIL'		=> 'Địa chỉ Email bạn vừa nhập không hợp lệ.',
 	'EMAIL_REMIND'				=> 'Bạn phải khai báo địa chỉ Email đang sử dụng cho tài khoản của mình. Nếu bạn không thay đổi địa chỉ này thông qua bảng điều khiển thành viên của mình, địa chỉ này sẽ được lấy từ địa chỉ Email mà bạn đã đăng ký thành viên.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Địa chỉ Email bạn vừa nhập đã được sử dụng bởi một thành viên khác.',
 	'EMPTY_DRAFT'				=> 'Bạn phải nhập nội dung cho bản nháp của mình.',
@@ -3183,8 +3188,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'bởi',
 	'MESSAGE_COLOURS'				=> 'Màu tin nhắn',
 	'MESSAGE_DELETED'				=> 'Bài viết này đã được xoá thành công.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Quá trình nhắn tin',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Tin nhắn này đã được gỡ bỏ bởi chính người gửi của nó trước khi chuyển đến người nhận.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'vào lúc',
 	'MESSAGE_STORED'				=> 'Tin nhắn này đã được gửi thành công.',
 	'MESSAGE_TO'					=> 'Người nhận',

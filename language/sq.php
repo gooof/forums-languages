@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Modifiko postimin',
 	'EMAIL'								=> 'Një adresë e-mail e vlefshme', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'Adresa E-mail',
+	'EMAIL_INVALID_EMAIL'				=> 'Adresa e-mail që ju futet ështe e pavlefshme.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Njoftoni për probleme duke njoftuar me e-mail në <strong>Line %1$s</strong>. Përgjigje: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Ju duhet të specifikoni një subjekt për temën e re.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Ju duhet të specifikoni një subjekt kur dërgoni një mesazh të ri.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Në këtë temë nuk ka postime për kohën e caktuar.',
 	'NO_FEED_ENABLED'			=> 'Feeds are not available on this board.',
 	'NO_FEED'					=> 'The requested feed is not available.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Subjekti i pa specifikuar',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'Kërkimi i specifikuar nuk ekziston.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Asnjë metodë autentikimi e suportuar.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Subjekti',
 	'SUBMIT'					=> 'Posto Përgjigjen',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Termat e përdorimit',
 	'TEST_CONNECTION'	=> 'Testo lidhjen',
 	'THE_TEAM'			=> 'Drejtuesit',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Koha',
 	
 	'TOO_LARGE'						=> 'The value you entered is too large.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Kush është',
 	'WHO_IS_ONLINE'		=> 'Kush është në linjë',
 	'WRONG_PASSWORD'	=> 'Ju vendosët një fjalëkalim të gabuar.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'Numri që shkruat nuk është një numër i vlefshëm ICQ.',
 	'WRONG_DATA_JABBER'			=> 'Emri që shkruat nuk është një emër i një llogarie të vlefshme për Jabber.',
@@ -2706,9 +2711,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s është <em>Mbyllur</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s është <em>Hapur</em>',
 	'BBCODE_I_HELP'				=> 'Tekst Italic: [i]tekst[/i]',
-	'BBCODE_L_HELP'				=> 'List: [list]tekst[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'Lista e elementeve: [*]tekst[/*]',
-	'BBCODE_O_HELP'				=> 'Listë e renditur: [list=]tekst[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Shto imazh: [img]http://image_url[/img]',
 	'BBCODE_Q_HELP'				=> 'Cito tekst: [quote]tekst[/quote]',
 	'BBCODE_S_HELP'				=> 'Ngjyra e shkrimit: [color=red]tekst[/color]  Këshillë: gjithashtu mund të përdorni color=#FF0000',
@@ -2929,6 +2934,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Kërko termin e përdorur.',
 	'SEARCHED_TOPIC'			=> 'Temat e kërkuara',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Kërko për të gjithë termat ose përdor kërkesën siç është',
 	'SEARCH_ANY_TERMS'			=> 'Kërko për çdo fjalë',
 	'SEARCH_AUTHOR'				=> 'Kërko për autorin',
@@ -3093,7 +3099,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Këtu ju mund të modifikoni mesazhet tuaja tëruajtura. Mesazhet e ruajtura nuk përmbajnë shtojca ose informacion për sondazhe.',
 	'EMAIL_BANNED_EMAIL'		=> 'Adresa e-mail që ju keni futur nuk është e lejuar të përdoret.',
-	'EMAIL_INVALID_EMAIL'		=> 'Adresa e-mail që ju futet ështe e pavlefshme.',
 	'EMAIL_REMIND'				=> 'Kjo duhet të jetë adresa juaj e-mail përkatëse e llogarisë tuaj. Nëse nuk e keni ndryshuar nëpërmjet panelit tuaj të përdoruesit atherë ajo është adresa me të cilën keni regjistruar këtë llogari.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Adresa e-mail që ju futët është tashmë në përdorim.',
 	'EMPTY_DRAFT'				=> 'Ju duhet të shkruani një mesazh për të pranuar ndryshimet.',
@@ -3174,8 +3179,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'nga',
 	'MESSAGE_COLOURS'				=> 'Ngjyrat e masazhit',
 	'MESSAGE_DELETED'				=> 'Ky mesazh u fshi me sukses.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Historiku i mesazhit',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Mesazhi u fshi nga autori i tij përpara se të dorëzohej.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'më',
 	'MESSAGE_STORED'				=> 'Mesazhi u dërgua me sukses.',
 	'MESSAGE_TO'					=> 'Për',

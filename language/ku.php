@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'دەستکاری پەیام بکە',
 	'EMAIL'								=> 'ئیمەیل', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'ناونیشانی ئیمەیل',
+	'EMAIL_INVALID_EMAIL'				=> 'ئەو پۆستی ئەلیکترۆنیەی نووسیوتە نادروستە.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> '%2$s :وەڵام  <strong>%1$s هێڵی</strong> خرایەوە نێو کێشەکان ،ناردنی ئیمەیڵ لە',
 	'EMPTY_SUBJECT'						=> 'پێویستە سەردێڕێک دیاری بکەیت کاتێک بابەتێکی نوێ دەنێریت.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'پێویستە سەردێڕێک دیاری بکەیت لە کاتی نووسینی پەیامێکی نوێدا.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'هیچ پەیامێک بوونی نییە لەم بابەتە لە چوارچێوەی کاتی دیاریکراودا.',
 	'NO_FEED_ENABLED'			=> 'Feed ـەکان چالاک نین لەم مەکۆیە.',
 	'NO_FEED'					=> 'feed ـی چالاککراو ئامادە نییە.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'هیچ سەردێڕێک نەنووسراوە',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'گەڕانی دیاریکراو بوونی نییە.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'هیچ ڕێگایەک بۆ سەلماندن پاڵپشتی نەکراوە.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'سەردێڕ',
 	'SUBMIT'					=> 'ناردن',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'مەرجەکانی بەکارهێنان',
 	'TEST_CONNECTION'	=> 'تاقیکردنەوەی پەیوەندی',
 	'THE_TEAM'			=> 'پلەداران',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'کات',
 	
 	'TOO_LARGE'						=> 'بەهای نووسراو زۆر گەورەیە',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> 'ئەوانەی لەسەر هێڵن',
 	'WRONG_PASSWORD'	=> 'تێپەڕەوشەیەکی هەڵەت لێدا.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'ئەو ژمارەیەی لێتداوە ژمارەیەکی دروستی ICQ نییە.',
 	'WRONG_DATA_JABBER'			=> 'ئەو ناوەی لێتداوەناوی هەژمارێکی دروستی جابەر نییە.',
@@ -2707,9 +2712,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s <strong>ناکارا</strong> ـیە',
 	'BBCODE_IS_ON'				=> '%sBBCode%s <strong>کارا</strong> ـیە',
 	'BBCODE_I_HELP'				=> 'دەقی لار: [i]دەق[/i]',
-	'BBCODE_L_HELP'				=> 'لیست: [list]دەق[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'دانەی لیست: [*]دەق[/*]',
-	'BBCODE_O_HELP'				=> 'لیستی ڕیزکراو: [list=]دەق[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'تێکردنی وێنە: [img]http://image_url[/img]',
 	'BBCODE_Q_HELP'				=> 'دەقی ئاماژە: [quote]دەق[/quote]',
 	'BBCODE_S_HELP'				=> 'ڕەنگی فۆنت: [color=red]دەق[/color]  سەرنج: هەروەها ئەتوانیت color=#FF0000 بەکارببەیت.',
@@ -2930,6 +2935,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'زاراوەی گەڕان بەکاربرا',
 	'SEARCHED_TOPIC'			=> 'بابەتە گەڕاوەکان',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'بگەڕێ بۆ هەموو زاراوەکان یان پرس بەکار ببە وەک لێدراوە',
 	'SEARCH_ANY_TERMS'			=> 'بگەڕێ بۆ هەر زاراوەیەک',
 	'SEARCH_AUTHOR'				=> 'گەڕان بۆ نووسەر',
@@ -3094,7 +3100,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Here you are able to edit your draft. Drafts do not contain attachment and poll information.',
 	'EMAIL_BANNED_EMAIL'		=> 'The e-mail address you entered is not allowed to be used.',
-	'EMAIL_INVALID_EMAIL'		=> 'ئەو پۆستی ئەلیکترۆنیەی نووسیوتە نادروستە.',
 	'EMAIL_REMIND'				=> 'This must be the e-mail address associated with your account. If you have not changed this via your user control panel then it is the e-mail address you registered your account with.',
 	'EMAIL_TAKEN_EMAIL'			=> 'The entered e-mail address is already in use.',
 	'EMPTY_DRAFT'				=> 'You must enter a message to submit your changes.',
@@ -3175,8 +3180,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'لە لایەن',
 	'MESSAGE_COLOURS'				=> 'Message colours',
 	'MESSAGE_DELETED'				=> 'ئەم پەیامە بە سەرکەوتوویی سڕدرایەوە.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Message history',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message has been removed by its author before it was delivered.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'لە ڕێکەوتی',
 	'MESSAGE_STORED'				=> 'This message has been sent successfully.',
 	'MESSAGE_TO'					=> 'To',

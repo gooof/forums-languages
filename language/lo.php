@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'ແກ້ໄຂຂໍ້ຄວາມ',
 	'EMAIL'								=> 'ອີເມລ', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'ທີ່ຢູ່ອີເມລ',
+	'EMAIL_INVALID_EMAIL'				=> 'The e-mail address you entered is invalid.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'ມີບັນຫາໃນການສົ່ງອີເມລໃນແຖວທີ່ <strong>%1$s</strong>. ຕອບສະຫນອງ: %2$s.',
 	'EMPTY_SUBJECT'						=> 'ທ່ານຕ້ອງໃສ່ຫົວຂໍ້ກະທູ້ກ່ອນຈຶ່ງຈະສາມາດຕັ້ງກະທູ້ໄດ້.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'ທ່ານຕ້ອງໃສ່ຫົວຂໍ້ຂອງຂໍ້ຄວາມກ່ອນ ຈຶ່ງຈະສາມາດສົ່ງຂໍ້ຄວາມໄດ້.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'ບໍ່ມີຂໍ້ຄວາມໃນກະທູ້ນີ້ສຳຫລັບຊ່ວງເວລາທີ່ທ່ານເລືອກ.',
 	'NO_FEED_ENABLED'			=> 'Feeds are not available on this board.',
 	'NO_FEED'					=> 'The requested feed is not available.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'ຍັງບໍ່ໄດ້ລະບຸຫົວຂໍ້ເທື່ອ',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'ຍັງບໍ່ໄດ້ກຳຫນົດລະບົບຄົ້ນຫາເທື່ອ.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'ບໍ່ຮອງຮັບການຢືນຢັນໂດຍວິທີນີ້.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'ຊື່ກະທູ້',
 	'SUBMIT'					=> 'ສົ່ງ',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'ເງື່ອນໄຂການໃຊ້ບໍລິການ',
 	'TEST_CONNECTION'	=> 'ທົດສອບການເຊື່ອມຕໍ່',
 	'THE_TEAM'			=> 'ລາຍຊື່ທີມງານ',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'ເວລາ',
 	
 	'TOO_LARGE'						=> 'The value you entered is too large.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> 'ສະມາຊິກທີ່ອອນໄລນ໌ຢູ່',
 	'WRONG_PASSWORD'	=> 'ທ່ານໃສ່ລະຫັດຜ່ານບໍ່ຖືກ.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'ທ່ານໃສ່ຫມາຍເລກ ICQ ບໍ່ຖືກ.',
 	'WRONG_DATA_JABBER'			=> 'ທ່ານໃສ່ຊື່ Jabber ບໍ່ຖືກ.',
@@ -2706,9 +2711,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s is <em>OFF</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s is <em>ON</em>',
 	'BBCODE_I_HELP'				=> 'Italic text: [i]text[/i]',
-	'BBCODE_L_HELP'				=> 'List: [list]text[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text[/*]',
-	'BBCODE_O_HELP'				=> 'Ordered list: [list=]text[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Insert image: [img]http://image_url[/img]',
 	'BBCODE_Q_HELP'				=> 'Quote text: [quote]text[/quote]',
 	'BBCODE_S_HELP'				=> 'Font color: [color=red]text[/color]  Tip: you can also use color=#FF0000',
@@ -2929,6 +2934,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Search term used',
 	'SEARCHED_TOPIC'			=> 'ຊອກຫາກະທູ້',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Search for all terms or use query as entered',
 	'SEARCH_ANY_TERMS'			=> 'Search for any terms',
 	'SEARCH_AUTHOR'				=> 'ຊອກຫາເຈົ້າຂອງກະທູ້',
@@ -3093,7 +3099,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Here you are able to edit your draft. Drafts do not contain attachment and poll information.',
 	'EMAIL_BANNED_EMAIL'		=> 'The e-mail address you entered is not allowed to be used.',
-	'EMAIL_INVALID_EMAIL'		=> 'The e-mail address you entered is invalid.',
 	'EMAIL_REMIND'				=> 'This must be the e-mail address associated with your account. If you have not changed this via your user control panel then it is the e-mail address you registered your account with.',
 	'EMAIL_TAKEN_EMAIL'			=> 'The entered e-mail address is already in use.',
 	'EMPTY_DRAFT'				=> 'You must enter a message to submit your changes.',
@@ -3174,8 +3179,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'by',
 	'MESSAGE_COLOURS'				=> 'Message colours',
 	'MESSAGE_DELETED'				=> 'ຂໍ້ຄວາມສ່ວນຕົວໄດ້ຖືກລຶບແລ້ວ',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Message history',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message has been removed by its author before it was delivered.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'on',
 	'MESSAGE_STORED'				=> 'This message has been sent successfully.',
 	'MESSAGE_TO'					=> 'To',

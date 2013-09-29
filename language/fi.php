@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Muokkaa viestiä',
 	'EMAIL'								=> 'Sähköposti', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'Sähköposti',
+	'EMAIL_INVALID_EMAIL'				=> 'Antamasi sähköpostiosoite on epäkelpo.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Sähköpostin lähettämisessä tapahtui virhe <strong>Rivi %s</strong>. Vastaus: %s',
 	'EMPTY_SUBJECT'						=> 'Sinun täytyy antaa otsikko aloittaessasi uutta ketjua.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Sinun täytyy antaa aihe kirjoittaessasi uutta viestiä.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Tässä viestiketjussa ei ole uusia viestejä valitsemaltasi aikaväliltä.',
 	'NO_FEED_ENABLED'			=> 'Syötteet eivät ole käytössä tällä keskustelufoorumilla.',
 	'NO_FEED'					=> 'Pyytämäsi syöte ei ole saatavilla.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Otsikkoa ei ole määritelty',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'Antamaasi hakumoottoria ei ole olemassa',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Ei tuettuja tunnistautumismenetelmiä',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Otsikko',
 	'SUBMIT'					=> 'Lähetä',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Käyttöehdot',
 	'TEST_CONNECTION'	=> 'Testaa yhteys',
 	'THE_TEAM'			=> 'Henkilökunta',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Aika',
 	
 	'TOO_LARGE'						=> 'Antamasi arvo on liian suuri.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> 'Paikallaolijat',
 	'WRONG_PASSWORD'	=> 'Annoit väärän salasanan.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'Antamasi numero ei ole kelvollinen ICQ numero.',
 	'WRONG_DATA_JABBER'			=> 'Antamasi nimi ei ole kelvollinen Jabber tilin nimi.',
@@ -2715,9 +2720,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s on <em>Poissa päältä</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s on <em>Käytössä</em>',
 	'BBCODE_I_HELP'				=> 'Kursivointi: [i]Teksti[/i]',
-	'BBCODE_L_HELP'				=> 'Lista: [list]Teksti[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'Listattava kohde: [*]teksti[/*]',
-	'BBCODE_O_HELP'				=> 'Järjestetty lista: [list=]text[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Lisää kuva: [img]http://kuvan_osoite[/img]',
 	'BBCODE_Q_HELP'				=> 'Lainaa tekstiä: [quote]Teksti[/quote]',
 	'BBCODE_S_HELP'				=> 'Fontin väri: [color=red]Teksti[/color]  Vinkki: voit käyttää myös color=#FF0000',
@@ -2938,6 +2943,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Käytetyt hakusanat',
 	'SEARCHED_TOPIC'			=> 'Haetut viestiketjut',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Hae kaikilla sanoilla tai käytä kirjoitettua hakua',
 	'SEARCH_ANY_TERMS'			=> 'Hae kaikilla vaihtoehdoilla',
 	'SEARCH_AUTHOR'				=> 'Hae käyttäjätunnuksella',
@@ -3102,7 +3108,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Täällä voit muokata luonnoksiasi. luonnoksissa ei ole mukana äänestystä tai liitetiedostoja.',
 	'EMAIL_BANNED_EMAIL'		=> 'Antamasi sähköpostiosoitteen käyttäminen ei ole sallittu.',
-	'EMAIL_INVALID_EMAIL'		=> 'Antamasi sähköpostiosoite on epäkelpo.',
 	'EMAIL_REMIND'				=> 'Tämän täytyy olla sama sähköpostiosoite, jonka annoit rekisteröityessäsi.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Antamasi sähköpostiosoite on jo käytössä.',
 	'EMPTY_DRAFT'				=> 'Sinun täyty antaa viesti lähettääksesi muutokset',
@@ -3183,8 +3188,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'Lähettäjä:',
 	'MESSAGE_COLOURS'				=> 'Viestin värit',
 	'MESSAGE_DELETED'				=> 'Viestisi on poistettu',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Viestihistoria',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Viestin lähettäjä on poistanut tämän viestin ennen kuin se voitiin toimittaa perille',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'päivämäärä:',
 	'MESSAGE_STORED'				=> 'Viestin lähetys onnistui',
 	'MESSAGE_TO'					=> 'Vastaanottaja',

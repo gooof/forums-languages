@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Редактировать сообщение',
 	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'Адрес email',
+	'EMAIL_INVALID_EMAIL'				=> 'Введённый адрес email неверен.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ошибка при отправке email в <strong>строке %1$s</strong>. Ответ сервера: %2$s.',
 	'EMPTY_SUBJECT'						=> 'При создании новой темы необходимо указать заголовок.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Вы должны указать тему нового сообщения.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'В теме нет сообщений за выбранный период времени.',
 	'NO_FEED_ENABLED'			=> 'Каналы новостей недоступны на этой конференции.',
 	'NO_FEED'					=> 'Запрашиваемый канал новостей недоступен.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Не указана тема',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'Указанный поисковый механизм отсутствует.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Метод аутентификации не поддерживается.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Заголовок',
 	'SUBMIT'					=> 'Отправить',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Общие правила',
 	'TEST_CONNECTION'	=> 'Проверить подключение',
 	'THE_TEAM'			=> 'Наша команда',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Время',
 	
 	'TOO_LARGE'						=> 'Введённое значение слишком велико.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Информация об IP-адресе',
 	'WHO_IS_ONLINE'		=> 'Кто сейчас на конференции',
 	'WRONG_PASSWORD'	=> 'Вы ввели неверный пароль.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'Введённый номер не являются правильным номером ICQ.',
 	'WRONG_DATA_JABBER'			=> 'Введённое имя не является правильным именем Jabber.',
@@ -2715,9 +2720,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s <em>ВЫКЛЮЧЕН</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s <em>ВКЛЮЧЁН</em>',
 	'BBCODE_I_HELP'				=> 'Наклонный текст: [i]text[/i]',
-	'BBCODE_L_HELP'				=> 'Список: [list]text[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'Элемент списка: [*]text[/*]',
-	'BBCODE_O_HELP'				=> 'Нумерованный список: [list=]text[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Вставить изображение: [img]http://image_url[/img]',
 	'BBCODE_Q_HELP'				=> 'Цитата: [quote]text[/quote]',
 	'BBCODE_S_HELP'				=> 'Цвет шрифта: [color=red]text[/color] Совет: вы можете использовать также конструкцию color=#FF0000',
@@ -2938,6 +2943,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Поисковый запрос',
 	'SEARCHED_TOPIC'			=> 'Поиск в теме',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Искать все слова',
 	'SEARCH_ANY_TERMS'			=> 'Искать любое слово/поиск с языком запросов',
 	'SEARCH_AUTHOR'				=> 'Поиск по автору',
@@ -3102,7 +3108,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Здесь вы можете редактировать черновик. Черновики не содержат вложений и опросов.',
 	'EMAIL_BANNED_EMAIL'		=> 'Введённый адрес email запрещён к использованию.',
-	'EMAIL_INVALID_EMAIL'		=> 'Введённый адрес email неверен.',
 	'EMAIL_REMIND'				=> 'Адрес email, связанный с вашей учётной записью. Если вы не изменили его в Личном разделе, то это адрес e-mail, указанный вами при регистрации.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Введённый адрес email уже используется другим пользователем.',
 	'EMPTY_DRAFT'				=> 'Вы должны ввести сообщение, чтобы подтвердить изменения.',
@@ -3183,8 +3188,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'by',
 	'MESSAGE_COLOURS'				=> 'Цвета сообщений',
 	'MESSAGE_DELETED'				=> 'Сообщение было успешно удалено.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'История сообщений',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Автор удалил это сообщение до того, как вы успели его прочесть.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'от',
 	'MESSAGE_STORED'				=> 'Ваше сообщение успешно отправлено.',
 	'MESSAGE_TO'					=> 'Кому',

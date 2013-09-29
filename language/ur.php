@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'مراسلہ کی تدوین',
 	'EMAIL'								=> 'برقی خط', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'ای میل ایڈریس',
+	'EMAIL_INVALID_EMAIL'				=> 'آپکا درج کیا گیا ای میل درست نہیں‌ہے.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'ای میل کی ترسیل میں مشکلات <strong>سطر %1$s</strong>. جواب: %2$s',
 	'EMPTY_SUBJECT'						=> 'موضوع کا عنوان لکھنا ضروری ہے',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'نیا مراسلہ لکھتے وقت عنوان کا اندراج لازمی ہے',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'مطلوبہ حدودِ اوقات کے مطابق اس موضوع میں میں کوئی مراسلے موجود نہیں ہیں',
 	'NO_FEED_ENABLED'			=> 'اس محفل پر فیڈ دستیاب نہیں ہیں',
 	'NO_FEED'					=> 'مطلوبہ فیڈ موجود نہیں ہے',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'کوئی عنوان معین نہیں کیا گیا',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'مخصوص تلاش کا کوئی پس منظر موجود نہیں‌ہے',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'کوئی حمائیتی تصدیقی طریقے موجود نہیں‌ہیں',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'عنوان',
 	'SUBMIT'					=> 'ارسال',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'رکنیت کی شرائط',
 	'TEST_CONNECTION'	=> 'آزمائشِ اتصال',
 	'THE_TEAM'			=> 'انتظامیہ',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'وقت',
 	
 	'TOO_LARGE'						=> 'آپکی داخل کی گئی قیمت بہت لمبی ہے.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'کون متصل ہے ',
 	'WHO_IS_ONLINE'		=> 'کون متصل ھے',
 	'WRONG_PASSWORD'	=> 'آپ نے غلط  پاس ورڈ فراہم کیا ہے',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'آپ کی جانب سے فراہم کردہ نمبر ICQ درست نہیں ہے',
 	'WRONG_DATA_JABBER'			=> ' jabber کھاتہ کا نام جو آپ نے فراہم کیا ہے درست نہیں ہے',
@@ -2715,9 +2720,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s <em>بند ہے</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s <em>کھلا ہے</em>',
 	'BBCODE_I_HELP'				=> 'اٹالک ٹیسٹ: [i]ٹیکسٹ[/i]',
-	'BBCODE_L_HELP'				=> 'لسٹ: [list]ٹیکسٹ[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'چیز لسٹ کریں: [*]ٹیکسٹ[/*]',
-	'BBCODE_O_HELP'				=> 'حکمی فہرست: [list=]ٹیکسٹ[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'تصویر لگائیں: [img]http://image_url[/img]',
 	'BBCODE_Q_HELP'				=> 'اقتباس کا متن: [quote]ٹیکسٹ[/quote]',
 	'BBCODE_S_HELP'				=> 'فونٹ کا رنگ: [color=red]ٹیکسٹ[/color] ٹِپ: آپ یہ بھی استعمال کر سکتے ہیں. color=FF0000',
@@ -2938,6 +2943,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'تلاش کی جانی والی اصطلاح',
 	'SEARCHED_TOPIC'			=> 'تلاش کیا گیا موضوع',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'تمام اصطلاحات کو تلاش کریں',
 	'SEARCH_ANY_TERMS'			=> 'کسی بھی اصطلاح کو تلاش کریں',
 	'SEARCH_AUTHOR'				=> 'مصنف کو تلاش کریں',
@@ -3100,7 +3106,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'یہاں آپ مسودے میں ترمیم کرنے کے قابل ہیں. مسودہ ملحق ہے اور سروے میں معلومات پر مشتمل نہیں ہے.',
 	'EMAIL_BANNED_EMAIL'		=> 'آپکا درج کیا گیا ای میل قابلِ استعمال نہیں‌ہے.',
-	'EMAIL_INVALID_EMAIL'		=> 'آپکا درج کیا گیا ای میل درست نہیں‌ہے.',
 	'EMAIL_REMIND'				=> 'یہ ای میل آپکے اکائونٹ سے منسلکہو ضروری  ہے. اگر آپ نے اسے صارف کنٹرول پینل میں تبدیل نہیں کیا تو یہی ای میل رجسٹریشن کے وقت استعمال کیا گیا تھا. ',
 	'EMAIL_TAKEN_EMAIL'			=> 'داخل ای میل ایڈریس پہلے سے استعمال میں ہے.',
 	'EMPTY_DRAFT'				=> 'آپ کو ایک پیغام میں داخل اپنی تبدیلیوں کو پیش کرنا لازمی ہے.',
@@ -3181,8 +3186,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'کی طرف سے',
 	'MESSAGE_COLOURS'				=> 'پیغام کے رنگ',
 	'MESSAGE_DELETED'				=> 'اس پیغام کو کامیابی سے خارج کر دیا گیا.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'پیغام کی تواریخ',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'اس پیغام کو اسکے مصنف کی طرف سے موصول ہونے سے پہلے ہی حذف کر دیا گیا ہے.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'پر',
 	'MESSAGE_STORED'				=> 'اس پیغام کو کامیابی سے بھیجا گیا ہے.',
 	'MESSAGE_TO'					=> 'کو',

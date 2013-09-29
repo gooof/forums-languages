@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'تعديل المشاركة',
 	'EMAIL'								=> 'بريد', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'البريد الإلكتروني',
+	'EMAIL_INVALID_EMAIL'				=> 'البريد الإلكتروني المدخل خاطئ',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'هناك مشكلة في إرسال البريد الإلكتروني في <strong>السطر %1$s</strong>. الرد: %2$s',
 	'EMPTY_SUBJECT'						=> 'ينبغي كتابة عنوان للموضوع',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'ينبغي عليك كتابة العنوان عند إنشاء رسالة جديدة',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'لا يوجد مشاركات في هذا الموضوع خلال الفترة الزمنية المحددة',
 	'NO_FEED_ENABLED'			=> 'لا يوجد تغذية متاحة لهذا المنتدى Feeds.',
 	'NO_FEED'					=> 'التغذية المطلوبة غير متاحة.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'لا يوجد عنوان محدد',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'البحث المحدد غير موجود',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'لا توجد صلاحيات دعم الطرق',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'عنوان',
 	'SUBMIT'					=> 'إرسال',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'شروط الاستخدام',
 	'TEST_CONNECTION'	=> 'اختبار الاتصال',
 	'THE_TEAM'			=> 'أعضاء الإدارة',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'الوقت',
 	
 	'TOO_LARGE'						=> 'القيمة المدخلية كبيرة جداً',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> 'الموجودون الآن',
 	'WRONG_PASSWORD'	=> 'لقد أدخلت كلمة مرور خاطئة',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'رقم ICQ الذي أدخلته قيمة خاطئة',
 	'WRONG_DATA_JABBER'			=> 'اسم حساب Jabber الذي أدخلته غير صحيح',
@@ -2709,9 +2714,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s<em>  غير متاح </em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s<em>  متاح  </em>',
 	'BBCODE_I_HELP'				=> 'مائل: [i]النص[/i]',
-	'BBCODE_L_HELP'				=> 'قائمة: [list]text[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'عنصر في قائمة: [*]text[/*]',
-	'BBCODE_O_HELP'				=> 'قائمة مرقمة: [list=]النص[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'صورة: [img]http://image_url[/img]',
 	'BBCODE_Q_HELP'				=> 'اقتباس: [quote]النص[/quote]',
 	'BBCODE_S_HELP'				=> 'لون الخط: [color=red]النص[/color]  =#FF0000يمكنك أيضاً اختيار اللون',
@@ -2932,6 +2937,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'كلمة البحث المستخدمة',
 	'SEARCHED_TOPIC'			=> 'المواضيع التي بُحِثَ فيها',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'ابحث عن الكلمات كلها أو استخدم سؤال البحث كما هو',
 	'SEARCH_ANY_TERMS'			=> 'ابحث عن أي كلمة',
 	'SEARCH_AUTHOR'				=> 'ابحث عن كاتب',
@@ -3092,7 +3098,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'هنا تستطيع تعديل مسوداتك ، المسودات لا تحتوي على المرفقات أو التصويت',
 	'EMAIL_BANNED_EMAIL'		=> 'البريد الإلكتروني المدخل غير مسموح به',
-	'EMAIL_INVALID_EMAIL'		=> 'البريد الإلكتروني المدخل خاطئ',
 	'EMAIL_REMIND'				=> 'ينبغي عليك إدخال البريد الإلكتروني الذي سجلت به',
 	'EMAIL_TAKEN_EMAIL'			=> 'البريد الإلكتروني المدخل موجود حالياً',
 	'EMPTY_DRAFT'				=> 'ينبغي عليك إدخال رسالة لإرسال تعديلاتك',
@@ -3173,8 +3178,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'بواسطة',
 	'MESSAGE_COLOURS'				=> 'ألوان الرسالة',
 	'MESSAGE_DELETED'				=> 'حُذِفَت المشاركة بنجاح',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'تاريخ الرسالة',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'لقد حذِفَت هذه الرسالة بواسطة الشخص المرسل قبل أن تُسلّم',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'في',
 	'MESSAGE_STORED'				=> 'أرسِلت الرسالة بنجاح',
 	'MESSAGE_TO'					=> 'إلى',

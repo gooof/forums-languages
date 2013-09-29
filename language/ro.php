@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Modifică mesaj',
 	'EMAIL'								=> 'E-mail', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'Adresă de e-mail',
+	'EMAIL_INVALID_EMAIL'				=> 'Adresa e-mail introdusă este invalidă.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Probleme în trimiterea e-mail-ului la <strong>Linia %1$s</strong>. Răspuns: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Trebuie să specificaţi un subiect când scrieţi un subiect nou.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Trebuie să specificaţi un subiect când compuneţi un mesaj nou.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Nu există niciun mesaj în interiorul acestui subiect pentru perioada de timp selectată.',
 	'NO_FEED_ENABLED'			=> 'Fluxurile nu sunt disponibile pentru acest forum.',
 	'NO_FEED'					=> 'Fluxul solicitat nu este disponibil.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Niciun subiect specificat',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'Backend-ul de căutare specificat nu există.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Nu există nicio metodă de autentificare.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Subiect',
 	'SUBMIT'					=> 'Trimite',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Termeni de utilizare',
 	'TEST_CONNECTION'	=> 'Testează conexiunea',
 	'THE_TEAM'			=> 'Echipa',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Data',
 	
 	'TOO_LARGE'						=> 'Valoarea specificată este prea mare.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Cine este',
 	'WHO_IS_ONLINE'		=> 'Cine este conectat',
 	'WRONG_PASSWORD'	=> 'Aţi introdus o parolă incorectă.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'Numărul introdus nu este un număr ICQ valid.',
 	'WRONG_DATA_JABBER'			=> 'Numele introdus nu este un nume de cont Jabber valid.',
@@ -2715,9 +2720,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s este <em>DEZACTIVAT</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s este <em>ACTIVAT</em>',
 	'BBCODE_I_HELP'				=> 'Text italic: [i]text[/i]',
-	'BBCODE_L_HELP'				=> 'Listă: [list]text[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'Listează articolele: [*]text[/*]',
-	'BBCODE_O_HELP'				=> 'Listă ordonată: [list=]text[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Adaugă imagine: [img]http://cale_imagine[/img]',
 	'BBCODE_Q_HELP'				=> 'Citează text: [quote]text[/quote]',
 	'BBCODE_S_HELP'				=> 'Culoare font: [color=red]text[/color]  Sfat: de asemenea puteţi folosi culorile hexazecimale culoare=#FF0000',
@@ -2938,6 +2943,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Caută termenul folosit',
 	'SEARCHED_TOPIC'			=> 'Subiect căutat',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Caută după toţi termenii sau foloseşte interogarea introdusă',
 	'SEARCH_ANY_TERMS'			=> 'Caută după orice termen',
 	'SEARCH_AUTHOR'				=> 'Caută după autor',
@@ -3102,7 +3108,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Aici puteţi modifica mesajul dumneavoastră în lucru. Mesajele în lucru nu conţin fişiere ataşate şi informaţii despre voturi.',
 	'EMAIL_BANNED_EMAIL'		=> 'Adresa e-mail introdusă nu este permisă spre utilizare.',
-	'EMAIL_INVALID_EMAIL'		=> 'Adresa e-mail introdusă este invalidă.',
 	'EMAIL_REMIND'				=> 'Aceasta trebuie să fie adresa de e-mail asociată contului dumneavoastră. Dacă nu aţi schimbat-o din Panoul utilizatorului, atunci este chiar adresa de e-mail cu care aţi înregistrat contul.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Adresa e-mail introdusă este deja utilizată.',
 	'EMPTY_DRAFT'				=> 'Trebuie să introduceţi un mesaj pentru a trimite modificările.',
@@ -3183,8 +3188,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'de',
 	'MESSAGE_COLOURS'				=> 'Culorile mesajului',
 	'MESSAGE_DELETED'				=> 'Acest mesaj a fost şters cu succes.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Istoricul mesajului',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Acest mesaj a fost şters de autor înainte să fie expediat.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'în',
 	'MESSAGE_STORED'				=> 'Mesajul acesta a fost transmis cu succes.',
 	'MESSAGE_TO'					=> 'Către',

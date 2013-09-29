@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Промени тема',
 	'EMAIL'								=> 'Емаил', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'Емаил Адреса',
+	'EMAIL_INVALID_EMAIL'				=> 'Емаил адресата што ја внесовте не е валидна.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Настана проблем при праќање на емаилот во <strong>Линија %1$s</strong>. Реакција: %2$s',
 	'EMPTY_SUBJECT'						=> 'Мора да напишете наслов на новата тема.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Мора да внесете наслов кога компонирате нова порака.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Нема мислења внатре во темата за одбраното време.',
 	'NO_FEED_ENABLED'			=> 'Feeds не се достапни на овој форум.',
 	'NO_FEED'					=> 'Бараниот feed не е достапен.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Нема внесено наслов',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'The specified search backend doesn’t exist',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Нема порджувачки методи за атачменти',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Наслов',
 	'SUBMIT'					=> 'Испрати',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Услови за употреба',
 	'TEST_CONNECTION'	=> 'Тестирај конекција',
 	'THE_TEAM'			=> 'Екипа',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Време',
 	
 	'TOO_LARGE'						=> 'Внесената вредност е премногу голема.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Види кој е (Whois)',
 	'WHO_IS_ONLINE'		=> 'Кој е Присутен',
 	'WRONG_PASSWORD'	=> 'Внесовте неточна Лозинка!',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'Бројот што го ставивте не е валиден  ICQ број.',
 	'WRONG_DATA_JABBER'			=> 'The name you entered is not a valid Jabber account name.',
@@ -2715,9 +2720,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s is <em>OFF</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s is <em>ON</em>',
 	'BBCODE_I_HELP'				=> 'Italic текст: [i]text[/i]',
-	'BBCODE_L_HELP'				=> 'Листа: [list]text[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'Листа на предмети: [*]text[/*]',
-	'BBCODE_O_HELP'				=> 'Среден лист: [list=]text[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Внеси слика: [img]http://image_url[/img]',
 	'BBCODE_Q_HELP'				=> 'Цитат текст: [quote]text[/quote]',
 	'BBCODE_S_HELP'				=> 'Боја на фонтот: [color=red]text[/color]  Tip: you can also use color=#FF0000',
@@ -2938,6 +2943,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Барај термин',
 	'SEARCHED_TOPIC'			=> 'Барај во тема',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Барај за сите букви кои се киристат',
 	'SEARCH_ANY_TERMS'			=> 'Барај за сите букви',
 	'SEARCH_AUTHOR'				=> 'Барај по автор',
@@ -3102,7 +3108,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Овде може да ги измнеувате вашите недовршени мислења. Недовршените мислења не содржат прикачувања или анкета информации.',
 	'EMAIL_BANNED_EMAIL'		=> 'Емаил адресата што ја внесовте е банирана.',
-	'EMAIL_INVALID_EMAIL'		=> 'Емаил адресата што ја внесовте не е валидна.',
 	'EMAIL_REMIND'				=> 'Ова мора да е емаил адресата што ја внесовте кога се регистриравте.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Внесената емаил адресае веќе во употреба',
 	'EMPTY_DRAFT'				=> 'Мора да внесете порака пред да испратите промени',
@@ -3183,8 +3188,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'Од',
 	'MESSAGE_COLOURS'				=> 'Промени бои',
 	'MESSAGE_DELETED'				=> 'Пораката успешно избришана.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Историја на пораката',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Оваа порака беше одстранета од авторот пред да пристигне',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'На',
 	'MESSAGE_STORED'				=> 'Пораката беше успешно испратена',
 	'MESSAGE_TO'					=> 'До',

@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Hozzászólás szerkesztése',
 	'EMAIL'								=> 'E-mail', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'E-mail cím',
+	'EMAIL_INVALID_EMAIL'				=> 'A megadott e-mail cím hibás.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Problémába ütköztünk egy levél elküldése során a <strong>%1$s.</strong> sorban. Válasz: %2$s',
 	'EMPTY_SUBJECT'						=> 'Új téma indításához meg kell adnod a téma címét.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Meg kell adnod az üzenet témáját.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Nincs a kiválasztott időtartamon belüli hozzászólás a témában.',
 	'NO_FEED_ENABLED'			=> 'Nincs elérhető csatorna ezen a fórumon.',
 	'NO_FEED'					=> 'A kívánt csatorna nem elérhető.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Nincs téma',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'A megadott keresési mechanizmus nem létezik.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Nincsen támogatott azonosítási eljárás.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Téma',
 	'SUBMIT'					=> 'Elküld',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Használati feltételek',
 	'TEST_CONNECTION'	=> 'Kapcsolat tesztelése',
 	'THE_TEAM'			=> 'A csapat',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Idő',
 	
 	'TOO_LARGE'						=> 'A megadott érték túl nagy.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'IP adatok',
 	'WHO_IS_ONLINE'		=> 'Ki van itt',
 	'WRONG_PASSWORD'	=> 'Hibás jelszót adtál meg.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'A megadott ICQ azonosító hibás.',
 	'WRONG_DATA_JABBER'			=> 'A megadott Jabber azonosító hibás.',
@@ -2714,9 +2719,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s <em>kikapcsolva</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s <em>bekapcsolva</em>',
 	'BBCODE_I_HELP'				=> 'Dőlt: [i]szöveg[/i]',
-	'BBCODE_L_HELP'				=> 'Lista: [list]szöveg[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'Lista elem: [*]szöveg[/*]',
-	'BBCODE_O_HELP'				=> 'Rendezett lista: [list=]szöveg[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Kép: [img]http://kep_url[/img]',
 	'BBCODE_Q_HELP'				=> 'Idézet: [quote]szöveg[/quote]',
 	'BBCODE_S_HELP'				=> 'Betűszín: [color=red]szöveg[/color] Tipp: a színt color=#FF0000 formában is megadhatod.',
@@ -2937,6 +2942,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Keresett kifejezés',
 	'SEARCHED_TOPIC'			=> 'Keresett téma',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Keresés az összes szóra vagy a keresési kifejezés pontos használata',
 	'SEARCH_ANY_TERMS'			=> 'Keresés bármely szóra',
 	'SEARCH_AUTHOR'				=> 'Szerző',
@@ -3099,7 +3105,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Itt szerkesztheted a piszkozatodat. A piszkozatokhoz nem kapcsolható csatolmány, illetve szavazás.',
 	'EMAIL_BANNED_EMAIL'		=> 'A megadott e-mail cím használata nem engedélyezett.',
-	'EMAIL_INVALID_EMAIL'		=> 'A megadott e-mail cím hibás.',
 	'EMAIL_REMIND'				=> 'Az azonosítódhoz tartozó e-mail cím. Ha nem változtattad meg a felhasználó vezérlőpultban, akkor ez az, amit a regisztrációkor megadtál.',
 	'EMAIL_TAKEN_EMAIL'			=> 'A megadott e-mail cím már használatban van.',
 	'EMPTY_DRAFT'				=> 'Az üzenet nem lehet üres.',
@@ -3180,8 +3185,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'Feladó:',
 	'MESSAGE_COLOURS'				=> 'Üzenet jelölések',
 	'MESSAGE_DELETED'				=> 'Az üzenet sikeresen törlésre került.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Kapcsolódó üzenetek',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Ezt az üzenetet a feladója törölte, mielőtt megérkezett volna.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'Dátum:',
 	'MESSAGE_STORED'				=> 'Az üzenet sikeresen elküldésre került.',
 	'MESSAGE_TO'					=> 'Címzett',

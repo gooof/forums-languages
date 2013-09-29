@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Edytuj post',
 	'EMAIL'								=> 'E-mail', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'Adres e-mail',
+	'EMAIL_INVALID_EMAIL'				=> 'Wpisany adres e-mail jest błędny.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Natrafiono na problemy przy wysyłaniu e-maila w <strong>linii %1$s</strong>. Odpowiedź: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Musisz wpisać tytuł postu.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Przed wysłaniem wiadomości musisz wpisać jej tytuł.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'W tym wątku nie napisano żadnego postu w wybranym zakresie czasu.',
 	'NO_FEED_ENABLED'			=> 'Kanały informacyjne są wyłączone na tym forum.',
 	'NO_FEED'					=> 'Żądany kanał informacyjny nie istnieje.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Nie wpisano tytułu.',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'Wybrany moduł wyszukiwania nie istnieje.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Nie istnieje żadna wspierana metoda uwierzytelniania.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Tytuł',
 	'SUBMIT'					=> 'Wyślij',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Warunki użytkowania',
 	'TEST_CONNECTION'	=> 'Testuj połączenie',
 	'THE_TEAM'			=> 'Ekipa',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Czas',
 	
 	'TOO_LARGE'						=> 'Podana wartość jest zbyt duża.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Kto to?',
 	'WHO_IS_ONLINE'		=> 'Kto przegląda forum',
 	'WRONG_PASSWORD'	=> 'Podałeś/aś nieprawidłowe hasło.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'Wpisany numer nie jest prawidłowym numerem ICQ.',
 	'WRONG_DATA_JABBER'			=> 'Wpisana nazwa nie jest prawidłową nazwą konta Jabber.',
@@ -2719,9 +2724,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s jest <em>wyłączony</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s jest <em>włączony</em>',
 	'BBCODE_I_HELP'				=> 'Pochylenie: [i]tekst[/i]',
-	'BBCODE_L_HELP'				=> 'Lista: [list]lista[/list])',
-	'BBCODE_LISTITEM_HELP'		=> 'Element listy: [*]tekst[/*]',
-	'BBCODE_O_HELP'				=> 'Lista uporządkowana: [list=]tekst[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Obrazek: [img]http://adres_www_obrazka[/img]',
 	'BBCODE_Q_HELP'				=> 'Cytat: [quote]tekst[/quote]',
 	'BBCODE_S_HELP'				=> 'Kolor: [color=red]tekst[/color]  Podpowiedź: możesz również opisać kolor HEXami',
@@ -2942,6 +2947,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Słowa kluczowe',
 	'SEARCHED_TOPIC'			=> 'Przeszukany wątek',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Szukaj wszystkich wyrazów lub całego wpisanego ciągu',
 	'SEARCH_ANY_TERMS'			=> 'Szukaj któregokolwiek z wyrazów',
 	'SEARCH_AUTHOR'				=> 'Szukaj autora',
@@ -3106,7 +3112,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Tutaj możesz zmienić swoją kopię roboczą. Kopie nie zawierają załączników i informacji o ankiecie.',
 	'EMAIL_BANNED_EMAIL'		=> 'Wpisany adres e-mail jest zablokowany.',
-	'EMAIL_INVALID_EMAIL'		=> 'Wpisany adres e-mail jest błędny.',
 	'EMAIL_REMIND'				=> 'To musi być adres e-mail związany z Twoim kontem. Jeżeli nie zmieniałeś go w panelu użytkownika, jest to adres podany w czasie rejestracji.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Wpisany adres e-mail jest już używany.',
 	'EMPTY_DRAFT'				=> 'Musisz wpisać wiadomość, żeby zapisać zmiany.',
@@ -3187,8 +3192,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'przez',
 	'MESSAGE_COLOURS'				=> 'Kolory wiadomości',
 	'MESSAGE_DELETED'				=> 'Wiadomość została usunięta.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Historia wiadomości',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Wiadomość została usunięta przez nadawcę zanim została dostarczona.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'on',
 	'MESSAGE_STORED'				=> 'Wiadomość została wysłana.',
 	'MESSAGE_TO'					=> 'do',

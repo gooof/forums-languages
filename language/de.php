@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Ändere Beitrag',
 	'EMAIL'								=> 'E-Mail', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'E-Mail-Adresse',
+	'EMAIL_INVALID_EMAIL'				=> 'Die von dir angegebene E-Mail-Adresse ist ungültig.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Probleme beim Mailversand in <strong>Zeile %1$s</strong>. Antwort: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Du musst einen Betreff angeben, wenn du ein neues Thema erstellen möchtest.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Du musst einen Betreff angeben, wenn du eine neue Nachricht verfassen möchtest.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Für den ausgewählten Zeitraum existieren keine Beiträge in diesem Thema.',
 	'NO_FEED_ENABLED'			=> 'Auf diesem Board sind keine Feeds verfügbar.',
 	'NO_FEED'					=> 'Der angeforderte Feed ist nicht verfügbar.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Kein Betreff vorhanden',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'Das angegebene Such-Backend existiert nicht.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Keine unterstützte Authentifizierungs-Methode vorhanden.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Betreff',
 	'SUBMIT'					=> 'Absenden',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Nutzungsbedingungen',
 	'TEST_CONNECTION'	=> 'Verbindung testen',
 	'THE_TEAM'			=> 'Das Team',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Zeit',
 	
 	'TOO_LARGE'						=> 'Der angegebene Wert ist zu groß.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> 'Wer ist online?',
 	'WRONG_PASSWORD'	=> 'Du hast ein fehlerhaftes Passwort angegeben.',
+	'WRONG_DATA_COLOUR'			=> 'Der von dir eingegebene Farbe-Wert ist ungültig.',
 
 	'WRONG_DATA_ICQ'			=> 'Die angegebene Nummer ist keine gültige ICQ-Nummer.',
 	'WRONG_DATA_JABBER'			=> 'Die angegebene ID ist keine gültige Jabber-ID.',
@@ -2714,9 +2719,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s ist <em>ausgeschaltet</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s ist <em>eingeschaltet</em>',
 	'BBCODE_I_HELP'				=> 'Kursiv: [i]Text[/i]',
-	'BBCODE_L_HELP'				=> 'Aufzählung: [list]Text[/list]',
+	'BBCODE_L_HELP'				=> 'Aufzählung: [list][*]Text[/list]', 
 	'BBCODE_LISTITEM_HELP'		=> 'Listeneintrag: [*]Text',
-	'BBCODE_O_HELP'				=> 'Geordnete Aufzählung: [list=]Text[/list]',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Bild einfügen: [img]http://bild_url[/img]',
 	'BBCODE_Q_HELP'				=> 'Zitat: [quote]Text[/quote]',
 	'BBCODE_S_HELP'				=> 'Schriftfarbe: [color=red]Text[/color]  Tipp: Du kannst auch color=#FF0000 benutzen',
@@ -2937,6 +2942,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Benutzte Suchanfrage',
 	'SEARCHED_TOPIC'			=> 'Durchsuchtes Thema',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Nach allen Begriffen suchen oder Suche wie angegeben verwenden',
 	'SEARCH_ANY_TERMS'			=> 'Nach einem Begriff suchen',
 	'SEARCH_AUTHOR'				=> 'Zu suchender Autor',
@@ -3140,7 +3146,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Hier hast du die Möglichkeit, deine Entwürfe zu ändern. Entwürfe enthalten keine Informationen zu Dateianhängen und Umfragen.',
 	'EMAIL_BANNED_EMAIL'		=> 'Die von dir angegebene E-Mail-Adresse darf nicht benutzt werden.',
-	'EMAIL_INVALID_EMAIL'		=> 'Die von dir angegebene E-Mail-Adresse ist ungültig.',
 	'EMAIL_REMIND'				=> 'Du musst die E-Mail-Adresse angeben, die in deinem Profil hinterlegt ist. Diese hast du bei der Registrierung angegeben oder nachträglich in deinem persönlichen Bereich geändert.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Die angegebene E-Mail-Adresse wird bereits verwendet.',
 	'EMPTY_DRAFT'				=> 'Du musst eine Nachricht eingeben, um deine Änderungen zu speichern.',
@@ -3221,8 +3226,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'von',
 	'MESSAGE_COLOURS'				=> 'Nachrichten-Farben',
 	'MESSAGE_DELETED'				=> 'Der Beitrag wurde erfolgreich gelöscht.',
+	'MESSAGE_EDITED'				=> 'Nachricht erfolgreich bearbeitet.',
 	'MESSAGE_HISTORY'				=> 'Nachrichten-Verlauf',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Diese Nachricht wurde von ihrem Autor gelöscht, bevor sie an dich ausgeliefert wurde.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Diese Nachricht wurde von ihrem Autor gelöscht.',
 	'MESSAGE_SENT_ON'				=> 'am',
 	'MESSAGE_STORED'				=> 'Die Nachricht wurde erfolgreich gesendet.',
 	'MESSAGE_TO'					=> 'An',

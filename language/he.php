@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'ערוך הודעה',
 	'EMAIL'								=> 'דואר אלקטרוני', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'כתובת דואר אלקטרוני',
+	'EMAIL_INVALID_EMAIL'				=> 'כתובת הדואר האלקטרוני שהזנת אינה חוקית.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'שגיאה בשליחת הדואר האלקטרוני ב<strong>שורה %1$s</strong>. תגובה: %2$s.',
 	'EMPTY_SUBJECT'						=> 'יש לציין כותרת בעת שליחת נושא חדש.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'יש לציין כותרת בעת שליחת הודעה חדשה.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'אין הודעות קיימות בנושא זה למסגרת הזמן שנבחרה.',
 	'NO_FEED_ENABLED'			=> 'הזנות לא זמינות במערכת זו.',
 	'NO_FEED'					=> 'ההזנה שביקשת לא זמינה.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'לא צויינה כותרת',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'שיטת החיפוש שצויינה אינה קיימת.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'אין שיטות אימות נתמכות.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'נושא',
 	'SUBMIT'					=> 'שלח',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'תנאי שימוש',
 	'TEST_CONNECTION'	=> 'בדוק חיבור',
 	'THE_TEAM'			=> 'הצוות',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'זמן',
 	
 	'TOO_LARGE'						=> 'הערך שהזנת גדול מידי.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'מי זה',
 	'WHO_IS_ONLINE'		=> 'מי מחובר',
 	'WRONG_PASSWORD'	=> 'הזנת סיסמה שגויה.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'המספר שהזנת אינו מספר ICQ חוקי.',
 	'WRONG_DATA_JABBER'			=> 'השם שהזנת אינו שם חשבון Jabber חוקי.',
@@ -2715,9 +2720,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s <em>כבוי</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s <em>פעיל</em>',
 	'BBCODE_I_HELP'				=> 'טקסט נטוי: [i]טקסט[/i]',
-	'BBCODE_L_HELP'				=> 'רשימה: [list]טקסט[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'פריט רשימה: [*]טקסט[/*]',
-	'BBCODE_O_HELP'				=> 'רשימה מסודרת: [list=]טקסט[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'הוספת תמונה: [img]כתובת התמונה[/img]',
 	'BBCODE_Q_HELP'				=> 'טקסט מצוטט: [quote]טקסט[/quote]',
 	'BBCODE_S_HELP'				=> 'צבע גופן: [color=red]טקסט[/color]  עצה: אתה יכול להשתמש גם בcolor=#FF0000',
@@ -2938,6 +2943,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'חפש לפי התנאים',
 	'SEARCHED_TOPIC'			=> 'החיפוש בוצע בנושא',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'חפש הודעות הכוללות את כל מילות המפתח או השתמש בשאילתא כפי שהוכנסה',
 	'SEARCH_ANY_TERMS'			=> 'חפש הודעות הכוללות לפחות אחת ממילות המפתח',
 	'SEARCH_AUTHOR'				=> 'חפש לפי שם מחבר ההודעה',
@@ -3102,7 +3108,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'כאן אתה יכול לערוך את הטיוטה שלך. הטיוטות אינן מכילות קבצים מצורפים ופרטי סקר.',
 	'EMAIL_BANNED_EMAIL'		=> 'כתובת הדואר האלקטרוני שהזנת אינה מורשת לשימוש.',
-	'EMAIL_INVALID_EMAIL'		=> 'כתובת הדואר האלקטרוני שהזנת אינה חוקית.',
 	'EMAIL_REMIND'				=> 'כתובת הדואר האלקטרוני חייבת להיות אותה הכתובת המשותפת עם החשבון שלך. אם אינך שינית אותה דרך לוח הבקרה למשתמש שלך אז זו אותה הכתובת אשר רשמת איתה את חשבונך.',
 	'EMAIL_TAKEN_EMAIL'			=> 'כתובת הדואר האלקטרוני שהוזנה כבר בשימוש.',
 	'EMPTY_DRAFT'				=> 'אתה חייב להזין הודעה כדי לשלוח את השינויים שלך.',
@@ -3183,8 +3188,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'על-ידי',
 	'MESSAGE_COLOURS'				=> 'צבעי הודעה',
 	'MESSAGE_DELETED'				=> 'ההודעה נמחקה בהצלחה.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'היסטורית ההודעה',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'הודעה זו נמחקה על-ידי הכותב לפני שהיא נמסרה.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'ב',
 	'MESSAGE_STORED'				=> 'ההודעה נשלחה בהצלחה.',
 	'MESSAGE_TO'					=> 'אל',

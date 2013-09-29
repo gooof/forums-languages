@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Upravit příspěvek',
 	'EMAIL'								=> 'E-mail', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'E-mail address',
+	'EMAIL_INVALID_EMAIL'				=> 'Vámi zadaná e-mailová adresa není platná.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ran into problems sending e-mail at <strong>Line %1$s</strong>. Response: %2$s.',
 	'EMPTY_SUBJECT'						=> 'You must specify a subject when posting a new topic.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'You must specify a subject when composing a new message.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'No posts exist inside this topic for the selected time frame.',
 	'NO_FEED_ENABLED'			=> 'Feeds are not available on this board.',
 	'NO_FEED'					=> 'The requested feed is not available.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'No subject specified',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'The specified search backend doesn’t exist.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'No supported authentication methods.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Subject',
 	'SUBMIT'					=> 'Submit',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Terms of use',
 	'TEST_CONNECTION'	=> 'Vyzkoušet připojení',
 	'THE_TEAM'			=> 'The team',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Time',
 	
 	'TOO_LARGE'						=> 'The value you entered is too large.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> 'Who is online',
 	'WRONG_PASSWORD'	=> 'You entered an incorrect password.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'The number you entered is not a valid ICQ number.',
 	'WRONG_DATA_JABBER'			=> 'The name you entered is not a valid Jabber account name.',
@@ -2715,9 +2720,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s je <em>vypnutý</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s je <em>zapnutý</em>',
 	'BBCODE_I_HELP'				=> 'Kurzíva: [i]text[/i]  (Alt + I)',
-	'BBCODE_L_HELP'				=> 'Seznam: [list]text[/list]  (Alt + L)',
-	'BBCODE_LISTITEM_HELP'		=> 'Položka seznamu: [*]text[/*]',
-	'BBCODE_O_HELP'				=> 'Uspořádaný seznam: [list=]text[/list]  (Alt + O)',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Vložit obrázek: [img]http://image_url[/img]  (Alt + P)',
 	'BBCODE_Q_HELP'				=> 'Citace: [quote]text[/quote]  (Alt + Q)',
 	'BBCODE_S_HELP'				=> 'Barva písma: [color=red]text[/color]  Tip: lze také použít formát #FF0000',
@@ -2938,6 +2943,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Text vyhledávání',
 	'SEARCHED_TOPIC'			=> 'Prohledávané téma',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Hledat všechny výrazy nebo přesnou shodu s&nbsp;dotazem',
 	'SEARCH_ANY_TERMS'			=> 'Hledat kterýkoliv z výrazů',
 	'SEARCH_AUTHOR'				=> 'Vyhledat autora',
@@ -3100,7 +3106,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Zde můžete upravovat koncepty. Koncepty nemohou obsahovat ankety a&nbsp;přílohy.',
 	'EMAIL_BANNED_EMAIL'		=> 'Zadaná e-mailová adresa je zabanovaná a&nbsp;nelze ji použít.',
-	'EMAIL_INVALID_EMAIL'		=> 'Vámi zadaná e-mailová adresa není platná.',
 	'EMAIL_REMIND'				=> 'Musíte uvést adresu nastavenou u&nbsp;vašeho účtu. Pokud jste ji neměnili, tak je to e-mailová adresa, se kterou jste se registrovali.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Vámi zadanou e-mailovou adresu má již registrovanou některý uživatel.',
 	'EMPTY_DRAFT'				=> 'Musíte vyplnit zprávu pro potvrzení změn',
@@ -3181,8 +3186,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'od',
 	'MESSAGE_COLOURS'				=> 'Barvy příspěvků',
 	'MESSAGE_DELETED'				=> 'Vaše zpráva byla odstraněna.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Historie příspěvků',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Zpráva byla smazána autorem dříve, než vám byla doručena.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'v',
 	'MESSAGE_STORED'				=> 'Zpráva byla odeslána.',
 	'MESSAGE_TO'					=> 'Pro',

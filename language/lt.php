@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Redaguoti pranešimą',
 	'EMAIL'								=> 'El. paštas', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'El. pašto adresas',
+	'EMAIL_INVALID_EMAIL'				=> 'El. pašto adresas, kurį įrašėte, yra neteisingas.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Siunčiant el. paštą <strong>eilutėje %1$s</strong> iškilo problemų. Priežastis: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Kurdami naują temą turite įrašyti jos pavadinimą.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Rašydami naują žinutę turite nurodyti jos temą.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Pasirinktu laiko periodu pranešimų šioje temoje nėra.',
 	'NO_FEED_ENABLED'			=> 'Šioje diskusijų lentoje srautų nėra.',
 	'NO_FEED'					=> 'Nurodytas srautas neprieinamas.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Nenurodyta tema',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'Nurodytas paieškos mechanizmas neegzistuoja.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Nepavyko rasti nei vieno palaikomo autentifikacijos metodo.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Pavadinimas',
 	'SUBMIT'					=> 'Siųsti',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Naudojimosi sąlygos',
 	'TEST_CONNECTION'	=> 'Patikrinti ryšį',
 	'THE_TEAM'			=> 'Komanda',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Laikas',
 	
 	'TOO_LARGE'						=> 'Reikšmė, kurią įrašėte, yra per didelė.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Informacija apie IP adresą',
 	'WHO_IS_ONLINE'		=> 'Dabar prisijungę',
 	'WRONG_PASSWORD'	=> 'Jūs įvedėte neteisingą slaptažodį.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'Jūs įvedėte neteisingą ICQ numerį.',
 	'WRONG_DATA_JABBER'			=> 'Jūs įvedėte neteisingą Jabber vartotojo vardą.',
@@ -2708,9 +2713,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBKodas%s yra <em>IŠJUNGTAS</em>',
 	'BBCODE_IS_ON'				=> '%sBBKodas%s yra <em>ĮJUNGTAS</em>',
 	'BBCODE_I_HELP'				=> 'Pasviręs tekstas: [i]tekstas[/i]',
-	'BBCODE_L_HELP'				=> 'Sąrašas: [list]tekstas[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'Sąrašo elementas: [*]tekstas[/*]',
-	'BBCODE_O_HELP'				=> 'Surūšiuotas sąrašas: [list=]tekstas[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Paveikslėlio įkėlimas: [img]http://vieta_iki_paveikslėlio[/img]',
 	'BBCODE_Q_HELP'				=> 'Cituojamas tekstas: [quote]tekstas[/quote]',
 	'BBCODE_S_HELP'				=> 'Šrifto spalva: [color=red]tekstas[/color]  Pastaba: taip pat galite naudoti ir color=#FF0000',
@@ -2931,6 +2936,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Ieškota',
 	'SEARCHED_TOPIC'			=> 'Ieškota temoje',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Ieškoti visų terminų arba naudoti užklausą',
 	'SEARCH_ANY_TERMS'			=> 'Ieškoti bet kurio termino',
 	'SEARCH_AUTHOR'				=> 'Autoriaus paieška',
@@ -3095,7 +3101,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Čia galite redaguoti savo juodraščius. Juodraščiuose nesaugomi prikabinti failai ar apklausos duomenys.',
 	'EMAIL_BANNED_EMAIL'		=> 'El. pašto adresas, kurį įrašėte, yra uždraustas.',
-	'EMAIL_INVALID_EMAIL'		=> 'El. pašto adresas, kurį įrašėte, yra neteisingas.',
 	'EMAIL_REMIND'				=> 'El. pašto adresas susietas su jūsų vartotojo vardu. Jeigu nekeitėte jo per vartotojo valdymo pultą, tai bus tas pats el. pašto adresas, kurį naudojote registruodamiesi diskusijose.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Vartotojas su nurodytu el. pašto adresu jau užregistruotas.',
 	'EMPTY_DRAFT'				=> 'Turite įrašyti juodraščio turinį.',
@@ -3176,8 +3181,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'by',
 	'MESSAGE_COLOURS'				=> 'Žinučių spalvos',
 	'MESSAGE_DELETED'				=> 'Ši žinutė sėkmingai ištrinta.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Žinutės istorija',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Žinutę, prieš ją išsiunčiant, ištrynė pats autorius.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'on',
 	'MESSAGE_STORED'				=> 'Žinutė išsiųsta sėkmingai.',
 	'MESSAGE_TO'					=> 'Kam',

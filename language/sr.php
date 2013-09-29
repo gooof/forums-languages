@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Izmeni post',
 	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'Email adresa',
+	'EMAIL_INVALID_EMAIL'				=> 'Email adresa koju ste uneli je neispravna.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Došlo je do problema prilokom slanja emaila u <strong>Liniji %1$s</strong>. Odgovor: %2$s',
 	'EMPTY_SUBJECT'						=> 'Morate uneti naslov kada pišete novu temu.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Morate uneti naslov kada pišete novu poruku.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Ne postoje postovi u ovoj temi za izabrani vremenski period.',
 	'NO_FEED_ENABLED'			=> 'Feed-ovi nisu omogućeni na ovom boardu.',
 	'NO_FEED'					=> 'Traženi feed je nedostupan.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Niste uneli naslov',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'Izabrani bekend pretrage ne postoji',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Nema podržanih metoda autorizacije',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Naslovu',
 	'SUBMIT'					=> 'Pošalji',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Uslovi korišćenja',
 	'TEST_CONNECTION'	=> 'Test konekcije',
 	'THE_TEAM'			=> 'Tim',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Vreme',
 	
 	'TOO_LARGE'						=> 'Vrednost koju ste uneli je prevelika.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Ko',
 	'WHO_IS_ONLINE'		=> 'Ko je OnLine',
 	'WRONG_PASSWORD'	=> 'Uneli ste pogrešnu šifru.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'Broj koji ste uneli nije ispravan icq broj.',
 	'WRONG_DATA_JABBER'			=> 'Ime koje ste uneli nije ispravan jabber nalog.',
@@ -2694,9 +2699,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBKod%s je <em>Isključen</em>',
 	'BBCODE_IS_ON'				=> '%sBBKod%s je <em>Uključen</em>',
 	'BBCODE_I_HELP'				=> 'Kosi tekst: [i]tekst[/i]  (alt+i)',
-	'BBCODE_L_HELP'				=> 'Lista: [list]tekst[/list]  (alt+l)',
-	'BBCODE_LISTITEM_HELP'		=> 'Lista stavki: [*]text[/*]',
-	'BBCODE_O_HELP'				=> 'Uređena lista: [list=]tekst[/list]  (alt+o)',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Ubaci sliku: [img]http://url_slike[/img]  (alt+p)',
 	'BBCODE_Q_HELP'				=> 'Citiraj tekst: [quote]tekst[/quote]  (alt+q)',
 	'BBCODE_S_HELP'				=> 'Boja fonta: [color=red]tekst[/color]  Trik: možete takođe koristiti color=#FF0000',
@@ -2917,6 +2922,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Traženi termin',
 	'SEARCHED_TOPIC'			=> 'Tražene teme',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Traži sve termine ili koristi upit kao što je napisan',
 	'SEARCH_ANY_TERMS'			=> 'Traži bilo koje termine',
 	'SEARCH_AUTHOR'				=> 'Pronađi autora',
@@ -3081,7 +3087,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Ovde možete izmeniti vaš nacrt. Nacrti ne sadrže prikačene fajlove i informacije o glasanju.',
 	'EMAIL_BANNED_EMAIL'		=> 'Email adresa koju ste uneli nije dozvoljena za korišćenje.',
-	'EMAIL_INVALID_EMAIL'		=> 'Email adresa koju ste uneli je neispravna.',
 	'EMAIL_REMIND'				=> 'Ovo mora biti email adresa koju ste uneli pri registraciji.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Email adresa koju ste uneli je već zauzeta',
 	'EMPTY_DRAFT'				=> 'Morate uneti poruku da bi poslali vaše izmene',
@@ -3162,8 +3167,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'od',
 	'MESSAGE_COLOURS'				=> 'Boje poruke',
 	'MESSAGE_DELETED'				=> 'Vaša poruka je uspešno obrisana',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Istorija poruke',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Ovu poruku je uklonio njen autor pre nego što je isporučena',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'na',
 	'MESSAGE_STORED'				=> 'Vaša poruka je uspešno poslata',
 	'MESSAGE_TO'					=> 'Za',

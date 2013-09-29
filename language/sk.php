@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Editovať príspevok',
 	'EMAIL'								=> 'E-mail', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'E-mailová adresa',
+	'EMAIL_INVALID_EMAIL'				=> 'Zadaná e-mailová adresa je neplatná.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Posielanie e-mailu zlyhalo na <strong>riadku %1$s</strong>. Odozva: %2$s',
 	'EMPTY_SUBJECT'						=> 'Pri zakladaní novej témy, musíte uviesť názov témy.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Musíte uviesť predmet pri písaní novej správy.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Neexistujú žiadne príspevky v tejto téme pre zvolený čas.',
 	'NO_FEED_ENABLED'			=> 'Exporty nie sú povolené na tomto fóre.',
 	'NO_FEED'					=> 'Zvolený export nie je dostupný.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Nebol zvolený predmet',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'Zvolený spôsob hľadania neexistuje',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Žiadne podporované autentifikačné metódy',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Predmet',
 	'SUBMIT'					=> 'Odoslať',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Pravidlá pre používanie',
 	'TEST_CONNECTION'	=> 'Testovať pripojenie',
 	'THE_TEAM'			=> 'Tím',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Čas',
 	
 	'TOO_LARGE'						=> 'Zadaná hodnota je príliš veľká.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Kto je to',
 	'WHO_IS_ONLINE'		=> 'Kto je on-line',
 	'WRONG_PASSWORD'	=> 'Zadali ste neplatné heslo.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'Zadané číslo nie je správne číslo ICQ.',
 	'WRONG_DATA_JABBER'			=> 'Zadané meno nie je správne pre jabber účet.',
@@ -2715,9 +2720,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s je <em>OFF</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s je <em>ON</em>',
 	'BBCODE_I_HELP'				=> 'Kurzíva: [i]text[/i]  (alt+i)',
-	'BBCODE_L_HELP'				=> 'Zoznam: [list]text[/list]  (alt+l)',
-	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text[/*]',
-	'BBCODE_O_HELP'				=> 'Usporiadaný zoznam: [list=]text[/list]  (alt+o)',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Vložiť obrázok: [img]http://adresa_obrázku[/img]  (alt+p)',
 	'BBCODE_Q_HELP'				=> 'Citácia: [quote]text[/quote]  (alt+q)',
 	'BBCODE_S_HELP'				=> 'Farba písma: [color=red]text[/color]  Tip: môžete použiť taktiež color=#FF0000',
@@ -2938,6 +2943,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Text vyhľadávania',
 	'SEARCHED_TOPIC'			=> 'Prehľadávaná téma',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Hľadať so všetkými podmienkami alebo text vyhľadávania presne tak, ako bol zadaný',
 	'SEARCH_ANY_TERMS'			=> 'Hľadať so všetkými podmienkami',
 	'SEARCH_AUTHOR'				=> 'Vyhľadať autora',
@@ -3102,7 +3108,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Tu môžete upraviť Váš koncept. Koncepty neobsahujú prílohu a anketu.',
 	'EMAIL_BANNED_EMAIL'		=> 'Nie je možné použiť zadanú e-mailovú adresu.',
-	'EMAIL_INVALID_EMAIL'		=> 'Zadaná e-mailová adresa je neplatná.',
 	'EMAIL_REMIND'				=> 'Musíte zadať e-mailovú adresu, ktorú máte nastavenú v profile. Ak ste si ju nemenili, tak je to adresa, ktorú ste zadali pri registrácii.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Zadaná e-mailová adresa je už používaná',
 	'EMPTY_DRAFT'				=> 'Musíte vložiť správu pre potvrdenie Vašich zmien',
@@ -3183,8 +3188,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'od',
 	'MESSAGE_COLOURS'				=> 'Farby správy',
 	'MESSAGE_DELETED'				=> 'Vaša správa bola úspešne odstránená',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'História správ',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Táto správa bola odstránená jej autorom ešte pred jej doručením',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'dňa',
 	'MESSAGE_STORED'				=> 'Vaša správa bola úspešne odoslaná',
 	'MESSAGE_TO'					=> 'Komu',

@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> '编辑此帖',
 	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'Email 地址',
+	'EMAIL_INVALID_EMAIL'				=> '您输入的 email 地址无效。',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> '发送email遇到问题 <strong>Line %1$s</strong>。Response: %2$s',
 	'EMPTY_SUBJECT'						=> '您必须为新主题指定一个标题。',
 	'EMPTY_MESSAGE_SUBJECT'				=> '您没有输入标题.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> '在选定的时间段中没有这个主题的帖子。',
 	'NO_FEED_ENABLED'			=> 'ATOM输出尚未启用.',
 	'NO_FEED'					=> '请求的ATOM输出无效.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> '没有输入标题',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> '指定的搜索模块不存在',
 	'NO_SUPPORTED_AUTH_METHODS'	=> '没有可支持的认证方法',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> '文章标题',
 	'SUBMIT'					=> '提交',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> '使用条款',
 	'TEST_CONNECTION'	=> '连接测试',
 	'THE_TEAM'			=> '团队',
+	'TIB'				=> 'TiB',
 	'TIME'				=> '时间',
 	
 	'TOO_LARGE'						=> '您输入的值太大了.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> '在线用户',
 	'WRONG_PASSWORD'	=> '您输入了错误的密码。',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> '您输入的数字不是一个有效的 ICQ 号码。',
 	'WRONG_DATA_JABBER'			=> '您输入的名字不是一个有效的 Jabber 帐号。',
@@ -2715,9 +2720,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s <em>禁止</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s <em>允许</em>',
 	'BBCODE_I_HELP'				=> '斜体：[i]text[/i]  (alt+i)',
-	'BBCODE_L_HELP'				=> '列表：[list]text[/list]  (alt+l)',
-	'BBCODE_LISTITEM_HELP'		=> '列表条目: [*]text[/*]',
-	'BBCODE_O_HELP'				=> '顺序列表：[list=]text[/list]  (alt+o)',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> '插入图像：[img]http://image_url[/img]  (alt+p)',
 	'BBCODE_Q_HELP'				=> '引用文字：[quote]text[/quote]  (alt+q)',
 	'BBCODE_S_HELP'				=> '字体颜色：[color=red]text[/color]  提示：您也可以使用 color=#FF0000',
@@ -2938,6 +2943,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> '使用的搜索条件',
 	'SEARCHED_TOPIC'			=> '查找的主题',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> '满足全部条件或使用输入的搜索串',
 	'SEARCH_ANY_TERMS'			=> '满足任意条件',
 	'SEARCH_AUTHOR'				=> '按作者搜索',
@@ -3102,7 +3108,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> '这里您可以编辑你的草稿。草稿不能包含附件和投票。',
 	'EMAIL_BANNED_EMAIL'		=> '您输入的 email 地址不允许使用。',
-	'EMAIL_INVALID_EMAIL'		=> '您输入的 email 地址无效。',
 	'EMAIL_REMIND'				=> '这必须是与您的帐户关联的 e-mail 地址。如果您没有通过管理界面改变过您的 e-mail 地址，它就是您在注册时使用的地址。',
 	'EMAIL_TAKEN_EMAIL'			=> '您输入的 email 地址已经被使用',
 	'EMPTY_DRAFT'				=> '您必须填入适当的内容才能提交更改',
@@ -3183,8 +3188,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> '由',
 	'MESSAGE_COLOURS'				=> '短信颜色',
 	'MESSAGE_DELETED'				=> '文章已被成功删除',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> '短信历史',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> '这条短信已经在发送前被它的作者删除',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> '时间',
 	'MESSAGE_STORED'				=> '短信发送成功',
 	'MESSAGE_TO'					=> '收件人',

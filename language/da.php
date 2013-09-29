@@ -307,6 +307,7 @@ $lang = array_merge($lang, array(
 	'EDIT_POST'							=> 'Rediger indlæg',
 	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'Emailadresse',
+	'EMAIL_INVALID_EMAIL'				=> 'Den indtastede emailadresse er ugyldig.',
 	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Løb ind i problemer med at sende email: <strong>Linie %1$s</strong>. Svar: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Du skal angive en titel når du skriver et nyt emne.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Du skal angive en titel når du skriver en ny besked.',
@@ -538,6 +539,7 @@ $lang = array_merge($lang, array(
 	'NO_POSTS_TIME_FRAME'		=> 'Ingen indlæg eksisterer i dette emne inden for det valgte tidsinterval.',
 	'NO_FEED_ENABLED'			=> 'Feeds er ikke tilgængelige på dette board.',
 	'NO_FEED'					=> 'Forlangte feed er ikke tilgængelig.',
+	'NO_STYLE_DATA'				=> 'Could not get style data',
 	'NO_SUBJECT'				=> 'Intet emne angivet.',								// Used for posts having no subject defined but displayed within management pages.
 	'NO_SUCH_SEARCH_MODULE'		=> 'Det angivne søgesystem findes ikke.',
 	'NO_SUPPORTED_AUTH_METHODS'	=> 'Ingen understøttede autentifikationsmetoder.',
@@ -710,9 +712,11 @@ $lang = array_merge($lang, array(
 	'SUBJECT'					=> 'Emne',
 	'SUBMIT'					=> 'Udfør',
 
+	'TB'				=> 'TB',
 	'TERMS_USE'			=> 'Betingelser for brug',
 	'TEST_CONNECTION'	=> 'Test forbindelse',
 	'THE_TEAM'			=> 'Holdet',
+	'TIB'				=> 'TiB',
 	'TIME'				=> 'Tid',
 	
 	'TOO_LARGE'						=> 'Den indtastede værdi er for stor.',
@@ -859,6 +863,7 @@ $lang = array_merge($lang, array(
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> 'Hvem er online',
 	'WRONG_PASSWORD'	=> 'Du indtastede et forkert kodeord.',
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
 	'WRONG_DATA_ICQ'			=> 'Det indtastede nummer er ikke et gyldigt ICQ-nummer.',
 	'WRONG_DATA_JABBER'			=> 'Det indtastede navn er ikke et gyldigt Jabberkontonavn.',
@@ -2715,9 +2720,9 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBkode%s er slået <em>FRA</em>',
 	'BBCODE_IS_ON'				=> '%sBBkode%s er slået <em>TIL</em>',
 	'BBCODE_I_HELP'				=> 'Kursiv tekst: [i]tekst[/i]',
-	'BBCODE_L_HELP'				=> 'Liste: [list]tekst[/list]',
-	'BBCODE_LISTITEM_HELP'		=> 'Listeelement: [*]tekst[/*]',
-	'BBCODE_O_HELP'				=> 'Sorteret liste: [list=]tekst[/list]',
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
+	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Indsæt billede: [img]http://billed_url[/img]',
 	'BBCODE_Q_HELP'				=> 'Citer tekst: [quote]tekst[/quote]',
 	'BBCODE_S_HELP'				=> 'Fontfarve: [color=red]tekst[/color]  Tip: du kan også bruge color=#FF0000',
@@ -2938,6 +2943,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Anvendt søgeord',
 	'SEARCHED_TOPIC'			=> 'Det søgte emne',
+	'SEARCHED_QUERY'			=> 'Searched query',
 	'SEARCH_ALL_TERMS'			=> 'Søg efter alle udtryk eller brug indtastet søgeparameter ',
 	'SEARCH_ANY_TERMS'			=> 'Søg efter alle udtryk',
 	'SEARCH_AUTHOR'				=> 'Søg efter en bestemt forfatter',
@@ -3102,7 +3108,6 @@ $lang = array_merge($lang, array(
 
 	'EDIT_DRAFT_EXPLAIN'		=> 'Her er du i stand til at redigere din kladde. Kladder indeholder ikke informationer om vedhæftede filer og afstemninger.',
 	'EMAIL_BANNED_EMAIL'		=> 'Den indtastede emailadresse er det ikke tilladt at anvende.',
-	'EMAIL_INVALID_EMAIL'		=> 'Den indtastede emailadresse er ugyldig.',
 	'EMAIL_REMIND'				=> 'Emailadressen tilknyttet din brugerkonto. Hvis du ikke har ændret denne i brugerkontrolpanelet, er det den samme emailadresse som den du tilmeldte dig med.',
 	'EMAIL_TAKEN_EMAIL'			=> 'Den indtastede emailadresse er allerede i brug.',
 	'EMPTY_DRAFT'				=> 'Du skal indtaste en besked for at kunne sende dine ændringer.',
@@ -3183,8 +3188,9 @@ $lang = array_merge($lang, array(
 	'MESSAGE_BY_AUTHOR'				=> 'af',
 	'MESSAGE_COLOURS'				=> 'Farveforklaring',
 	'MESSAGE_DELETED'				=> 'Dette indlæg er blevet slettet.',
+	'MESSAGE_EDITED'				=> 'Message successfully edited.',
 	'MESSAGE_HISTORY'				=> 'Historik for besked',
-	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'Denne besked er blevet fjernet af dens forfatter før den blev leveret.',
+	'MESSAGE_REMOVED_FROM_OUTBOX'	=> 'This message was deleted by its author.',
 	'MESSAGE_SENT_ON'				=> 'den',
 	'MESSAGE_STORED'				=> 'Denne besked er blevet sendt.',
 	'MESSAGE_TO'					=> 'Til',
