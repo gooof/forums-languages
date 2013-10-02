@@ -2721,7 +2721,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_I_HELP'				=> 'Kursiv: [i]Text[/i]',
 	'BBCODE_L_HELP'				=> 'Aufzählung: [list][*]Text[/list]', 
 	'BBCODE_LISTITEM_HELP'		=> 'Listeneintrag: [*]Text',
-	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
+	'BBCODE_O_HELP'				=> 'Geordnete Aufzählung: z. B. [list=1][*]Erster Punkt[/list] oder [list=a][*]Punkt a[/list]',
 	'BBCODE_P_HELP'				=> 'Bild einfügen: [img]http://bild_url[/img]',
 	'BBCODE_Q_HELP'				=> 'Zitat: [quote]Text[/quote]',
 	'BBCODE_S_HELP'				=> 'Schriftfarbe: [color=red]Text[/color]  Tipp: Du kannst auch color=#FF0000 benutzen',
@@ -2942,7 +2942,7 @@ $lang = array_merge($lang, array(
 
 	'SEARCHED_FOR'				=> 'Benutzte Suchanfrage',
 	'SEARCHED_TOPIC'			=> 'Durchsuchtes Thema',
-	'SEARCHED_QUERY'			=> 'Searched query',
+	'SEARCHED_QUERY'			=> 'Suchanfrage',
 	'SEARCH_ALL_TERMS'			=> 'Nach allen Begriffen suchen oder Suche wie angegeben verwenden',
 	'SEARCH_ANY_TERMS'			=> 'Nach einem Begriff suchen',
 	'SEARCH_AUTHOR'				=> 'Zu suchender Autor',
