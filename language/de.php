@@ -11048,7 +11048,7 @@ $lang = array_merge($lang, array(
 	'ACP_PLUGIN_UP'		=> 'nach oben',
 	'ACP_PLUGIN_DOWN'		=> 'nach unten',
 	'AVAILABLE_FORUM_IMAGE'	=> 'Verfügbare Bilder',
-	'AVAILABLE_FORUM_IMAGE_EXPLAIN'	=> 'Eine Liste der verfügbaren Bilder. Fahre mit der Maus über ein Bild, um den Namen zu sehen.',
+	'AVAILABLE_FORUM_IMAGE_EXPLAIN'	=> 'Eine Liste der verfügbaren Bilder. Fahre mit der Maus über ein Bild um den Dateinamen zu sehen.',
 	'SHOW_FORUM_IMAGES'		=> 'Verfügbare Foren Bilder anzeigen.',
 
 	'MOD_IMAGES'		=> 'Der Bildermod erlaubt dem Admin, Bilder zum Bearbeiten auszuwählen, wo Bilder im momentanen Admin Style aufbewahrt werden.',
@@ -13016,7 +13016,7 @@ $lang = array_merge($lang, array(
 	'PBLOCK_UPDATE'			=> 'Update',
 	'PBLOCK_SITE'			=> 'Seite',	
 	'BLOCKS_CONFIGURE'		=> 'Allgemeine Einstellungen des Portals',	
-	'PORTAL_CONFIG_UPDATED'	=> 'Portal Einstellungen wurden aktuallisiert.',
+	'PORTAL_CONFIG_UPDATED'	=> 'Portal Einstellungen wurden aktualisiert.',
 	'PORTAL_BLOCKS_ENABLED'	=> 'Portal Blöcke eingeschaltet',
 
 	'PORTAL_BLOCKS_LEFT_ENABLED'	=> 'Aktiviere linke Blöcke',
@@ -13279,7 +13279,7 @@ $lang = array_merge($lang, array(
 	'BLOCK_FOUR_COLUMN'		=> 'Vier Spalten',
 	'BLOCK_FIVE_COLUMN'		=> 'Fünf Spalten',
 	'HEADER_MENU'			=> 'Oberes Menü',
-	'PORTAL_CONFIG_UPDATED'	=> 'Portal Einstellungen wurden aktuallisiert.',
+	'PORTAL_CONFIG_UPDATED'	=> 'Portal Einstellungen wurden aktualisiert.',
 	'PORTAL_BLOCKS_LEFT_ENABLED'	=> 'Aktiviere linke Blöcke',
 	'PORTAL_BLOCKS_RIGHT_ENABLED'	=> 'Aktiviere rechte Blöcke',
 	'PORTAL_BLOCKS_CENTRE_ENABLED'	=> 'Aktiviere mittige Blöcke',
