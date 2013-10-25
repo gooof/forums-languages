@@ -10320,7 +10320,7 @@ $lang = array_merge($lang, array(
 	'RESYNC'							=> 'Resynchronisierung',
 	'RETURN_TO'							=> 'Zurück zu',
 
-	'SELECT_ANONYMOUS'		=> 'Gäste-Benutzerkonto auswählen',
+	'SELECT_ANONYMOUS'		=> 'Gäste-Benutzerkonto bearbeiten',
 	'SELECT_OPTION'			=> 'Option auswählen',
 
 	'SETTING_TOO_LOW'		=> 'Der für die Einstellung „%1$s“ angegebene Wert ist zu niedrig. Der Wert muss mindestens %2$d betragen.',
