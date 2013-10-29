@@ -1004,6 +1004,7 @@ $lang = array_merge($lang, array(
 	'ADAPT_HIDE_GUEST_POSTS'	=> '<i>Versteckter Inhalt. Anmeldung und ein Minimum von %d Beiträgen sind erforderlich.</i>',
 	'ADAPT_HIDE_POSTS'		=> '<i>Versteckter Inhalt. Ein Minimum von %d Beiträgen sind erforderlich.</i>',
 	'ADAPT_HIDE_GROUPS'		=> '<i>Versteckter Inhalt. Keine der Gruppen bei denen Du Mitglied bist, hat Zugriff.</i>',
+	'ADAPT_HIDE_THANKS'		=> '<i>Versteckter Inhalt. Gebe ein Danke um den Inhalt sehen zu können.</i>',
 	'RULES'					=> 'Regeln',
 	'FOLLOWERS'				=> 'Abonnenten',
 	'HAS_IMG'				=> 'Thema enthält %s Bild(er)',

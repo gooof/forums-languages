@@ -1006,6 +1006,7 @@ $lang = array_merge($lang, array(
 	'ADAPT_HIDE_GUEST_POSTS'	=> '<i>Hidden text. Registration and a minimum of %d post(s) are required.</i>',
 	'ADAPT_HIDE_POSTS'		=> '<i>Hidden text. A minimum of %d posts are required.</i>',
 	'ADAPT_HIDE_GROUPS'		=> '<i>Hidden text. None of the groups you are a member of have been granted access.</i>',
+	'ADAPT_HIDE_THANKS'		=> '<i>Hidden text. Hit the thank you button to see the text.</i>',
 	'RULES'					=> 'Rules',
 	'FOLLOWERS'				=> 'Followers',
 	'HAS_IMG'				=> '%s image(s) in first post',
