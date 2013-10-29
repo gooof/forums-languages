@@ -1005,6 +1005,7 @@ $lang = array_merge($lang, array(
 	'ADAPT_HIDE_POSTS'		=> '<i>Versteckter Inhalt. Ein Minimum von %d Beiträgen sind erforderlich.</i>',
 	'ADAPT_HIDE_GROUPS'		=> '<i>Versteckter Inhalt. Keine der Gruppen bei denen Du Mitglied bist, hat Zugriff.</i>',
 	'ADAPT_HIDE_THANKS'		=> '<i>Versteckter Inhalt. Gebe ein Danke um den Inhalt sehen zu können.</i>',
+	'BBCODE_DISPLAY_INTOPICS'	=> '<i>Dieser BBCode kann nur in der Themenansicht angezeigt werden.</i>',
 	'RULES'					=> 'Regeln',
 	'FOLLOWERS'				=> 'Abonnenten',
 	'HAS_IMG'				=> 'Thema enthält %s Bild(er)',
