@@ -14204,6 +14204,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Qui puoi gestire gli Indici del motore di ricerca. Poiché normalmente si utilizza solo un motore di ricerca dovresti cancellare tutti gli Indici di cui non fai uso. Dopo aver modificato alcune delle impostazioni di ricerca (es. il numero minimo o massimo dei caratteri) potrebbe essere utile ricreare l’Indice in modo che rifletta quelle modifiche.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Qui puoi definire quale motore di ricerca sarà utilizzato per l’indicizzazione dei messaggi e per le ricerche. Puoi impostare diverse opzioni che possono influire sull’elaborazione richiesta. Alcune di queste impostazioni sono le stesse per tutti i motori di ricerca.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Soglia parola comune',

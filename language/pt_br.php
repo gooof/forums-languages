@@ -14207,6 +14207,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Aqui você pode gerenciar todos os índices de pesquisa de seu fórum. Desde que você normalmente utilize apenas um modo de pesquisa, você deve excluir todos os outros os quais não utilizará. Depois de alterar algumas das configurações da pesquisa (ex. o número mínimo/máximo de caracteres), é preciso recriar o índice para que então tais configurações sejam refletidas.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Aqui você pode definir o modo de pesquisa que será utilizado para a execução deste sistema. Você pode determinar várias opções que podem influir em quantos processos estas ações serão solicitadas. Algumas destas configurações são as mesmas para todos os modos de pesquisa.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Limite de palavras comuns',

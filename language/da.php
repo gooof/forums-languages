@@ -14208,6 +14208,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Her kan du ændre og vedligeholde søgningen i søgemotorens indeks. Da du normalt kun bruger en motor bør alle de indeks du ikke bruger slettes. Efter ændring i søgeindstillingerne (f.eks. antallet af minimum og maksimum antal tegn), kan det være værd at overveje at genskabe indekset, for at afspejle disse ændringer.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Her defineres hvilke metoder søgemotoren skal anvende for at indeksere indlæg og udføre søgninger. Du kan definere flere muligheder, som påvirker hvor meget behandling de enkelte søgninger kræver. Nogle af indstillingerne er identiske for alle søgemotorer.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Grænse for definition af et alment ord',

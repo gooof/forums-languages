@@ -14206,6 +14206,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Hemendik bilaketa indizeak eta motoreak kudeatu zenitzake. Orokorrean indize bakarra baino ez denez erabiltzen, gainerakoak ezabatu egin beharko zenituzke. Bilaketaren ezarpenak itxuraldatu eta gero (adbez. gehienezko/gutxienezko karaktere kopurua) indizea ere alda dezazun komeniko litzake, aldaketa horiek islada ditzan.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Hemendik, mezuak indexatzeko eta bilaketak egiteko erabiliko den bilaketa motorea zehaztu zenezake. Eragiketok beharko duten prozesatze maila erabakiko duten ezarpenak zehaztu zenitzake. Ezarpen hauetariko batzuk berdinak izaten dira bilaketa motore guztientzako.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Hitz arrunt ataria',

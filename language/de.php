@@ -14225,6 +14225,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Hier kannst du die Indizes der Such-Backends verwalten. Da normalerweise nur ein Backend genutzt wird, solltest du alle Indizes löschen, die du nicht verwendest. Nach der Änderung bestimmter Such-Einstellungen (z.&nbsp;B. die minimal/maximal indizierten Zeichen) kann es sinnvoll sein, den Suchindex neu aufzubauen, damit er die Änderungen berücksichtigt.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Um den Suchindex neu aufzubauen, musst du vorher den vorhandenen Index löschen. Es kann nicht nach Wörtern gesucht werden, wenn kein Suchindex existiert.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Hier kannst du festlegen, welches Backend zur Indizierung von und zur Suche nach Beiträgen verwendet wird. Du kannst verschiedene Optionen festlegen, die die Verarbeitungszeit dieser Vorgänge beeinflussen können. Manche Einstellungen sind für alle Backends identisch.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Schwelle für häufig vorkommende Wörter',

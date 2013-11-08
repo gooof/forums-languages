@@ -14223,6 +14223,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'ここでは検索インデクスを管理できます。サーバの負担を少しでも軽くするため、利用していない検索バックエンドのインデクスは削除すべきです。検索設定を変更しても既に存在しているインデクスは影響を受けません。既存のインデクスに対して新しいインデクス設定ルールを反映するにはインデクスを再構築する必要があります。',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'ここでは検索バックエンドを指定できます（検索バックエンドとは記事のインデクス作成と検索処理を行うエンジンの事です）。また、検索処理に制限を課す事によってサーバ負荷を軽くする事もできます。バックエンド共通の設定項目もありますが、バックエンド独自の設定項目もあります。
 	<br /><br />
 	<em>インデクス (index) とは索引付けの事であり、具体的には記事が投稿された際に記事の件名と文章中に含まれるキーワードを抜き出してデータベースに保管する事を意味します。検索処理はデータベースに保管されたこのインデクス情報を基にして行われます。 phpBB3 では検索バックエンドは Fulltext mysql と Fulltext native がはじめから用意されており、ここでどちらを利用するかを選択できます。初期設定では Fulltext native が選択されています。 Fulltext mysql を使用するにはデータベースが MySQL である必要があります。</em>',

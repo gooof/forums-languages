@@ -14208,6 +14208,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Tukaj lahko urejate indekse iskalnega sistema. Normalno uporabljate samo en iskalni indeks, zato izbrišite vse indekse, ki jih ne boste uporabljali. Po ureditvi iskalnih nastavitev (npr. min/maks. znakov) je smiselno  rekreiranje indeksov, da se te spremembe upoštevajo.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Tukaj lahko nastavite, kateri iskalni sistem se bo uporabljal za indeksiranje tem in izvajanje iskanj. Nastavite lahko različne nastavitve, kar vpliva na to, obdelav potrebujejo te akcije. Nekatere izmed nastavitev, so enake za vse indekse iskalnega sistema.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Prag za skupne besede',

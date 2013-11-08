@@ -14193,6 +14193,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'От тук можете да управлявате търсещата машина. След промяна на някои настройки може да се наложи да пресъздадете индекса за да влязат промените в действие.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'От тук можете да дефинирате кой бекенд ще бъде използван за индексирането на мнения и търсене. Някой настройки са идентични за всички бек ендове.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Често употребявани думи',

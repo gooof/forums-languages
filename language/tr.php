@@ -14207,6 +14207,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Buradan arama uygulama indekslerini yönetebilirsiniz. Bir uygulamayı normal olarak kullanmadan önce kullanmadığınızın tüm indekslerini silmelisiniz. Arama ayarlarının bazılarını değiştirdikten sonra (ör. en düşük/en yüksek karakter sayısı) bu değişikliklere bağlı olarak indeks yeniden oluşturulabilir.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Buradan arama işlemleri ve mesaj indekslemesi için kullanılacak olan arama uygulaması belirleyebilirsiniz. Farklı seçenekler seçerek istenilen eylemlerin ne kadar işlem yapabileceğinin etkisini ölçebilirsiniz. Bu ayarların bazıları tüm arama motorları için aynıdır.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Genel kelime başlangıcı',

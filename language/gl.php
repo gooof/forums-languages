@@ -14204,6 +14204,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Aquí podes xestionar os índices do servidor de procura. Como normalmente empregarás un só servidor podes eliminar todos os índices que non uses. Logo de alterar algunha das opcións de procura (p.e. o número mínimo/máximo de caracteres) paga a pena refacer o índice para que reflicta estes trocos.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Aquí podes definir que servidor de procura usar para indexar mensaxes e executar procuras. Podes fixar varias opcións que poden influír na cantidade de procesos necesarios. Algunhas destas opcións tamén se aplicarán no motor de procura.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Límite de palabra común',

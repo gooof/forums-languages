@@ -14207,6 +14207,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Aquí podeu gestionar els índexs dels motor de cerques. Com que normalment només utilitzeu un motor, és recomanable que elimineu tots els índexs que no utilitzeu. Després de modificar alguna de les configuracions de les cerques (p.ex. el nombre mínim/màxim de caràcters) val la pena que recreeu l’índex per que reflecteixi aquests canvis.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Aquí podeu definir quin motor s’utilitzarà per indexar les entrades i realitzar les cerques. Podeu definir diverses opcions que poden influir en la quantitat de processament que requereixen aquestes accions. Algunes d’aquestes opcions són les mateixes per tots els motors de cerca.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Llindar per a paraules comuns',

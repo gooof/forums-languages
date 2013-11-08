@@ -14189,6 +14189,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Ovdje možeš upravljati backendskim indeksima pretraživanja.<br />Kako se obično koristi samo jedan backend, trebao/la bi izbrisati sve indekse od kojih nemaš koristi.<br />Nakon mijenjanja pojedinih (po)stavki pretraživanja [npr. minimalan/maksimalan broj znakova] bilo bi pametno ponovo kreirati indeks.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Ovdje možeš definirati koji backend pretraživanja će biti korišten za indeksiranje postova i vršenje pretraživanja [neke od postavki iste su za sve backende pretraživanja].',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Prag učestalih riječi',

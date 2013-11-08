@@ -14195,6 +14195,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Här kan du hantera söksystemens index. Eftersom du i vanliga fall endast använder ett system så bör du ta bort alla index som du inte använder. Efter ändring av vissa av sökinställningarna (t.ex. det maximala/minsta antalet tecken) så kan det vara värt att återskapa indexet för att reflektera dessa ändringar.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Här kan du definiera vilket söksystem som ska användas för att indexera inlägg och utföra sökningar. Du kan ställa in olika alternativ som kan påverka hur mycket behandling som dessa handlingar kräver. Vissa av dessa inställningar är samma för alla sökmotorsystem.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Tröskel för vanliga ord',

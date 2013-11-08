@@ -14199,6 +14199,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Čia galite valdyti paieškos indeksą. Kadangi dažniausiai naudosite tik vieną paieškos indekso saugojimo būdą, visus nenaudojamus ištrinkite. Jeigu pakeisite paieškos nustatymus (pvz.: minimalų/maksimalų simbolių skaičių), patartina sukurti indeksą iš naujo.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Čia galite nurodyti kokiu būdu bus saugomas paieškos indeksas. Galite aprašyti įvairius nustatymus, kurie įtakos, kiek resursų pareikalaus pranešimų rašymas ir paieškos vykdymas. Kai kurie iš šių nustatymų galioja visiems indekso saugojimo būdams.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Žodžių dažnumas',

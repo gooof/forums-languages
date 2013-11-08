@@ -14186,6 +14186,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Ovde možete podešavati indekse pozadine pretrage. Obzirom da normalno koristite samo jedan bekend trebalo bi da izbrišete sve indekse koje ne koristite. Pozle izmene nekih od opcija pretrage (npr. broj minimalnih/maksimalnih karaktera) može biti korisno da ponovo kreirate indeks tako da reflektuje ove izmene.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Ovde možete definisati koji će bekend pretrage biti korišćen za indeksiranjepostova i izvrešenje pretrage. Možete podesiti različite opcije koje će uticati na količinu procesiranja. Neke od ovih opcija su iste za sve bekende.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Tolerancija čestih reči',

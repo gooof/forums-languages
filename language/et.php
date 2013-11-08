@@ -14145,6 +14145,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Siin saad hallata otsingu indekseid. Kuna tavaliselt kasutada sa vaid ühte backend\'i, kustuta kõik teised indeksid, mida sa ei kasuta. Pärast mõnede otsinguseadete muutmist (näiteks miinimum/maksimumsümbolite arv) võib olla soovitav indeksi taasloomine.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Siin saad määrata, millist backend\'i kasutatakse postituste indekseerimisel ja otsimisel. Võid seada mitmeid valikuid. Mõned seaded on samad kõikidele backend\'idele.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Tavalise sõnalävi',

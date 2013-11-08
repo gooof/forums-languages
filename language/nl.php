@@ -14225,6 +14225,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Hier kun je de zoekindex methodes beheren. Omdat je onder normale omstandigheden slechts één methode gebruikt, kun je beter alle ongebruikte indexen verwijderen. Na het wijzigen van de zoekinstellingen (zoals het minimum-/maximaal aantal tekens), is het heropbouwen van de zoekindex aan te raden zodat deze de wijzigingen bevat.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Hier kun je opgeven welke zoekmethode gebruikt moet worden voor het indexeren van de berichten en het uitvoeren van zoekopdrachten. Je kunt verschillende opties instellen die mede de verwerking van deze acties bepalen. Sommige instellingen zijn voor alle zoekmethodes gelijk.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Frequente woordendrempel',

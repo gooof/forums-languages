@@ -14207,6 +14207,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Vous pouvez gérer ici les méthodes d’indexation de la recherche. Étant donné que le moteur de recherche n’utilise qu’une seule méthode d’indexation, vous devriez supprimer toutes les indexations inutilisées. Vous devriez également, après toute modification sur la plupart des réglages de la recherche comme le nombre minimum et maximum de caractères, recréer l’index afin qu’il prenne en compte ces modifications.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Vous pouvez définir ici la méthode d’indexation de la recherche qui sera utilisée lors de l’indexation de messages et l’exécution de recherches. Vous pouvez régler différentes options qui peuvent influencer sur le nombre d’exécutions que ces actions demandent. Certains de ces réglages sont les mêmes pour toutes les méthodes d’indexation du moteur de recherche.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Seuil de mot commun',

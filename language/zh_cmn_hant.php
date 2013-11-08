@@ -14207,6 +14207,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> '在這裡，您可以管理後端搜尋的索引。因為您通常只使用一個後端，您應該刪除所有不用的索引。改變搜尋設定 (例如最小/最大字數) 之後，應重新建立索引以反映那些更改。',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> '在這裡，您可以定義如何使用後端搜尋的文章索引和執行搜尋。您可以設定不同的選項以影響所需搜尋動作的執行。部分設定和和搜尋引擎的後端是一樣的。',
 
 	'COMMON_WORD_THRESHOLD'					=> '共有字詞門檻',

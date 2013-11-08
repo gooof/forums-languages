@@ -14211,6 +14211,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Jako że używasz tylko jednego backendu, powinieneś usunąć wszystkie indeksy, których nie używasz. Po zmianie części ustawień wyszukiwania (np. minimalna/maksymalna liczba znaków), może przydać się ponowne utworzenie indeksu, aby odpowiadał zmienionym ustawieniom.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Here you can define what search backend will be used for indexing posts and performing searches. You can set various options that can influence how much processing these actions require. Some of these settings are the same for all search engine backends.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Próg popularnych słów',

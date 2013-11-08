@@ -14207,6 +14207,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'یہاں‌آپ تلاش کے پس منظر اشاریہ کا انتظام کر سکتے ہیں. چونکہ آپ عام طور پر صرف ایک پس منظر استعمال کرتے ہیں تو آپکو دوسے تمام اشاریہ جات جو آپ استعمال نہیں‌کرتے، ختم کر دینے چاہیں. تلاش کی کچھ ترتیبات تبدیل کرنے کے بعد، جیسا کہ زیادہ سے زیادہ یا کم سے کم حروف کی تعداد، آپ اشاریہ جات دوبارہ بنا سکتے ہیں تاکہ یہ ان دی گئیں‌ترتیبات کی عکاسی کریں. ',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'یہاں آپ مراسلات اور تلاش کی کارکردگی کے لیے پس منظر تیار کر سکتے ہیں. ان میں سے کچھ ترتیبات تمام تلاشی انجن کے لیے ایک جیسی ہیں',
 
 	'COMMON_WORD_THRESHOLD'					=> 'عام الفاظ کی حد',

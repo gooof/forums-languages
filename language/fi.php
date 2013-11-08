@@ -14207,6 +14207,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Täällä voit hallita Hakutoiminnon sisällyluetteloa. Normaalisti käytössä on vain yksi sisällysluettelo, joten kannattaa poistaa ne luettelot, joita ei käytetä. Kun muokkaat joitakin asetuksia (esim, Minimi ja maksimimäärä merkejä) Kannattaa ehkä rakentaa sisällyluettelo uusiksi, jotta se ottaisi muutokset huomioon.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Täällä määräät, mitä tapaa käytetään Hakutoiminnossa ja mitä sisällysluetteloa käytetään. Voit asettaa joitain vaihtoehtoja, jotka määrittelevät kuinka paljon järjestelmä käyttää siihen resursseja. Osa asetuksista on yhteisiä jokaiselle hakukoneelle.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Yleisen sanan raja',

@@ -14426,6 +14426,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'در این بخش می توانید تنظیمات مربوط به جستجو را مدیریت کنید',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'در این بخش می توانید انتخاب کنید که از چه شاخصی برای نحوه جستجو استفاده شود.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'کلمات عام',

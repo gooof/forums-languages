@@ -14207,6 +14207,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Tu sa dajú spravovať vyhľadávacie indexy. Vzhľadom k tomu, že bežne používate len jeden index, mali by ste odstrániť všetky indexy, ktoré nepoužívate. Po zmene niektorých nastavení vyhľadávania (napr. minimálny/maximálny počet znakov) bude možno stáť za to vytvoriť nový index, aby sa prejavili nové zmeny.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Tu môžete definovať, aký backend bude použitý pre indexovanie príspevkov a vyhľadávanie. Môžete nastaviť rôzne možnosti, ktoré môžu ovplyvniť to, ako bude vyhľadávanie náročné na server. Niektoré z týchto nastavení sú rovnaké pre všetky backendy.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Hranice často používaného slova',

@@ -14197,6 +14197,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Këtu ju mund të menaxhoni indekset e motorrit të kërkimit. Meqënëse ju përdorni një motor kërkimi, duhet të fshini të gjithë indekset të cilët ju nuk përdorni. Pas ndryshimit të disa opsioneve të kërkimit (p.sh. numri minimal/maksimal i karaktereve) do të jetë mirë rikrijimi i indeksit, në mënyrë që të njohë ndryshimet.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Këtu mund të përcaktoni motorrin e kërkimit për indeksimin e postimeve dhe kryerjen e kërkimeve. Ju mund të vendosni opsione të ndryshme që influencojnë proçesin që i duhet kërkimit. Disa nga këto opsione janë të njëjtë për të gjithë motorrët e kërkimit.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Kufiri i fjalëve të zakonshme',

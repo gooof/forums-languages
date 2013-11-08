@@ -14197,6 +14197,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'هنا تستطيع إدارة خلفيات فهرسة البحث. بما أنك تستخدم خلفية واحدة لعملية البحث فعليك إزالة كل فهارس البحث غير المستخدمة. بعد تعديل بعض إعدادات البحث (على سبيل المثال:  أكبر/أقل عدد للحروف) قد يكون من المجدي إعادة تكوين الفهرسة لتفعيل تلك التغييرات',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'هنا تستطيع اختيار خلفية البحث التي تستعمل في فهرسة المواضيع وعمليات البحث. تستطيع ضبط العديد من الخيارات والتي قد تؤثر في مدى المعالجة المطلوبة لتنفيذ بعض المهام. بعض تلك الإعدادات مستخدمة لخلفيات البحث كلها',
 
 	'COMMON_WORD_THRESHOLD'					=> 'الدرجة الحرجة للكلمات المشهورة',

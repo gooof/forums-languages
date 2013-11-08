@@ -14207,6 +14207,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Aici puteţi administra indecşii căutării din spatele aplicaţiei. Din moment ce în mod normal folosiţi doar unul singur în backend, ar trebui să ştergeţi toţi indecşii pe care nu-i folosiţi. După ce modificaţi unele din setările de căutare (de exemplu numărul minim/maxim de caractere) s-ar putea să se justifice recrearea indexului astfel încât să reflecte aceste schimbări.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Aici puteţi defini ce căutare backend va fi folosită pentru indexarea mesajelor şi efectuarea căutărilor. Puteţi specifica numeroase opţiuni care pot influenţa cât de multă procesare necesită aceste acţiuni. Unele dintre aceste setări sunt aceleaşi pentru toate motoarele de căutare backend.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Limita pentru cuvânt comun',

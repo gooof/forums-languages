@@ -14204,6 +14204,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Itt a keresőmodulok indexeit kezelheted. Mivel alapvetően csak egy modult használsz, a többi nem használt modul indexeit érdmes törölnöd. Néhány kereső beállítás megváltoztatása után (pl. a karakterek minimum és maximum száma) tanácsos az indexeket újra létrehozni, hogy azok tükrözzék a változtatásokat.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Itt beállíthatod, hogy a fórum melyik keresőmodult használja a hozzászólások indexeléséhez és a keresésekhez. Emellett további beállításokat adhatsz meg, melyek ezeknek a műveleteknek a teljesítményigényét befolyásolják. A beállítások egy része az összes keresőmodulnál ugyanaz.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Gyakori szó küszöb',

@@ -14207,6 +14207,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> '这里您可以管理内容索引. 因为一般只使用一个后台, 您可以删除所有不用的索引. 在改变搜索设置(例如最小/最大字符串长度)后, 建议重新生成索引以体现修改.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> '这里您可以设置如何使用搜索和检索帖子. 您可以设置选项限制搜索动作的处理器负载. 一部分设定和和搜索引擎的设定是一样的.',
 
 	'COMMON_WORD_THRESHOLD'					=> '词频阈值',

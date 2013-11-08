@@ -14207,6 +14207,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'Di sini anda dapat mengatur indeks backend pencarian. Untuk normalnya, anda hanya menggunakan satu backend dan harus menghapus semua indeks yang tidak gunakan. Setelah melakukan pengubahan untuk beberapa pengaturan pencarian (contohnya; jumlah minimum/maksimum karakter) lebih baik untuk membuat ulang indeks sehingga dapat merefleksikan perubahan tersebut.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'Di sini anda bisa menentukan backend pencarian yang digunakan untuk indeks post dan melakukan pencarian. Anda bisa menggunakan berbagai macam pilihan yang dapat berpengaruh terhadap berapa banyak proses yang dibutuhkan untuk melakukan tindakan ini. Beberapa pengaturan memiliki backend mesin pencari yang sama.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'Kata umum masukan',

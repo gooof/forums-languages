@@ -14207,6 +14207,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'כאן אתה יכול לנהל את מאגרי שיטת החיפוש. מכיוון שאתה משתמש באופן רגיל בשיטה אחת אתה צריך למחוק את כל המאגרים אשר אינך משתמש בהם. לאחר שינוי כמה מהגדרות החיפוש (למשל מספר מינימלי/מקסימלי של תווים) כדאי ליצור מחדש את המאגר כך שהוא יושפע משינויים אלו.',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'כאן אתה יכול להגדיר איזו שיטת חיפוש תשומש לאגירת הודעות וביצוע חיפושים. אתה יכול לקבוע אפשרויות שונות אשר יכולות להשפיע כמה ביצוע פעולות אלו נדרש. כמה מהגדרות אלו מתאימות לכל שיטות מנוע החיפוש.',
 
 	'COMMON_WORD_THRESHOLD'					=> 'סף מילה נפוצה',

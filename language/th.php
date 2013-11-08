@@ -14230,6 +14230,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_SEARCH_INDEX_EXPLAIN'				=> 'คุณสามารถจัดการดัชนีวิธีการค้นหา คุณควรลบดัชนีที่คุณไม่ใช้ออกไป หลังจากแก้ไขค่าการค้นหาบางค่า (เข่น จำนวนตัวอักษร ต่ำสุด/สูงสุด ) คุณควรสร้างดัชนีใหม่ เพื่อให้เข้ากับการเปลี่ยนแปลง',
+	'ACP_SEARCH_INDEX_EXPLAIN_EXTRA'		=> 'Before you can rebuild the search index, you must delete all existing indexes. You can’t search by words, if no index exists.',
 	'ACP_SEARCH_SETTINGS_EXPLAIN'			=> 'คุณสามารถกำหนดว่าดัชนีการค้นหาใดจะถูกใช้สำหรับการโพสต์และการค้นหาต่างๆ คุณสามารถตั้งค่าได้หลากหลาย ในการกำหนดตัวเลือกที่มีผลกับการประมวลผล ',
 
 	'COMMON_WORD_THRESHOLD'					=> 'ค่านับเริ่มต้นคำสามัญ',
