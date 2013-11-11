@@ -10783,6 +10783,7 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_ADD'			=> '<strong>Додано цензор слів</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>Видалено цензор слів</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Змінено цензор слів</strong><br />» %s',
+	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 ));
 
 $lang = array_merge($lang, array(

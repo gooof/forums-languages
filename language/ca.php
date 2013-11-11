@@ -10784,6 +10784,7 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_ADD'			=> '<strong>Ha afegit la paraula censurada</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>Ha eliminat la paraula censurada</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Ha editat la paraula censurada</strong><br />» %s',
+	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 ));
 
 $lang = array_merge($lang, array(

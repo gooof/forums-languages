@@ -10784,6 +10784,7 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_ADD'			=> '<strong>已增加字詞過濾</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>已刪除字詞過濾</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>已編輯字詞過濾</strong><br />» %s',
+	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 ));
 
 $lang = array_merge($lang, array(

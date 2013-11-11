@@ -10781,6 +10781,7 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_ADD'			=> '<strong>Censura parola aggiunta</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>Censura parola cancellata</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Censura parola modificata</strong><br />» %s',
+	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 ));
 
 $lang = array_merge($lang, array(

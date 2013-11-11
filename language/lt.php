@@ -10777,6 +10777,7 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_ADD'			=> '<strong>Pridėtas naujas cenzūruojamas žodis</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>Ištrintas cenzūruojamas žodis</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Pakeistas cenzūruojamas žodis</strong><br />» %s',
+	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 ));
 
 $lang = array_merge($lang, array(

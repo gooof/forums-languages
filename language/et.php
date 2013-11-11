@@ -10723,6 +10723,7 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_ADD'			=> '<strong>Sõna tsensuur lisatud</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>Sõna tsensuur kustutatud</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Sõna tsensuur muudetud</strong><br />» %s',
+	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 ));
 
 $lang = array_merge($lang, array(

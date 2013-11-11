@@ -10784,6 +10784,7 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_ADD'			=> '<strong>添加敏感词</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>删除敏感词</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>编辑敏感词</strong><br />» %s',
+	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 ));
 
 $lang = array_merge($lang, array(

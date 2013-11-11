@@ -10820,6 +10820,7 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_ADD'			=> '<strong>Zensiertes Wort hinzugefügt</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>Zensiertes Wort entfernt</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Zensiertes Wort geändert</strong><br />» %s',
+	'RSYNC_TOPIC_IMGS'		=> '<strong>Themen mit Bildern resynchronisiert</strong>',
 ));
 
 $lang = array_merge($lang, array(

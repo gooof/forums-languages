@@ -10800,6 +10800,7 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_ADD'			=> '<strong>言語フィルタを追加しました</strong><br />≫ %s',
 	'LOG_WORD_DELETE'		=> '<strong>言語フィルタを削除しました</strong><br />≫ %s',
 	'LOG_WORD_EDIT'			=> '<strong>言語フィルタを編集しました</strong><br />≫ %s',
+	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 ));
 
 $lang = array_merge($lang, array(

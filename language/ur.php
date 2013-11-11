@@ -10784,6 +10784,7 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_ADD'			=> '<strong>سنسر لفظ شامل کیا</strong><br />»%s',
 	'LOG_WORD_DELETE'		=> '<strong>سنسر لفظ حذف کیا</strong><br />»%s',
 	'LOG_WORD_EDIT'			=> '<strong>سنسر لفظ ترمیم کیا</strong><br />»%s',
+	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 ));
 
 $lang = array_merge($lang, array(
