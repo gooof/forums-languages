@@ -12039,7 +12039,7 @@ $lang = array_merge($lang, array(
 	'CAT_DISPLAY_EXPLAIN'				=> 'Wählen Sie die Art, wie Sie wollen, dass die Kategorie angezeigt. Sie können den Namen, Bild oder beides angezeigt.',
 	'CAT_LINK'							=> 'Link',
 	'CAT_LINK_EXPLAIN'					=> 'Vollständiger URL (einschliesslich des Protokolls, zum Beispiel <samp>http://</samp>) zu der Adresse, auf die ein Benutzer nach dem Klicken geleitet wird.',
-	'CAT_LINK_TRACK'					=> 'Klicks loggen',
+	'CAT_LINK_TRACK'					=> 'Klicks zählen',
 	'CAT_LINK_TRACK_EXPLAIN'			=> 'Speichert wie oft der Link geklickt wurde.',
 	'CAT_NAME_EMPTY'					=> 'Du musst einen Namen für diese Kategorie eingeben.',
 	'CAT_PARENT'						=> 'übergeordnete Kategorie',
@@ -12512,7 +12512,7 @@ $lang = array_merge($lang, array(
 	'RESYNC_THANKSCOUNTS'				=> 'Bedankungen resynchronisieren',
 	'RESYNC_THANKSCOUNTS_EXPLAIN'		=> 'Neuberechnung der Anzahl der Bedankungen. Du musst diesen Vorgang nur nach dem Löschen von Beiträgen oder Themen ausführen.',
 	'RESYNC_THANKSCOUNTS_CONFIRM'		=> 'Bist du sicher, dass die Bedankungen resynchronisiert werden sollen?',
-	'LOG_RESYNC_THANKSCOUNTS'			=> '<strong>Benutzer Bedankungen resynchronisier</strong>',
+	'LOG_RESYNC_THANKSCOUNTS'			=> '<strong>Benutzer Bedankungen resynchronisiert</strong>',
 	'SET_DEFAULT_DATE_EXPLAIN'		=> 'Setzt automatisch das Standard Datum aus den Board-Einstellungen für alle User ein.',
 
 	'LOG_FORUM_COPY_DATA'	=> '<strong>Foren-Einstellungen kopiert</strong> für<br />» %2$s',
