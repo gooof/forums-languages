@@ -10782,6 +10782,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Censura parola cancellata</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Censura parola modificata</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14690,6 +14692,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Anteprima firma',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Questo utente è l’unico <i>fondatore</i>, non puoi farlo diventare un utente normale. Nel forum deve esserci per lo meno un socio fondatore. Se <i>devi</i> cambiare lo stato di questo utente fondatore, è prima obbligatorio promuovere un altro utente a fondatore.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'È già stato accettato un ban. La lista ban non è aggiornata.',
 	'BAN_SUCCESSFUL'		=> 'Ban utente eseguito.',

@@ -10804,6 +10804,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>ลบการกรองคำหยาบ</strong><br />? %s',
 	'LOG_WORD_EDIT'			=> '<strong>แก้ไขการกรองคำหยาบ</strong><br />? %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14718,6 +14720,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'ดูลายเซ็นต์',
 	'AT_LEAST_ONE_FOUNDER'	=> 'คุณไม่สามารถเปลี่ยนผู้ก่อตั้งนี้เป็นผู้ใช้ทั่วไปได้ ต้องมีผู้ก่อตั้งอย่างน้อยหนึ่งคนเพื่อใช่งานบอร์ด ถ้าคุณต้องการเปลี่ยนสถานะของผู้ก่อตั้งคนนี้ คุณต้องตั้งผู้ใช้คนอื่นเป็นผู้ก่อตั้งก่อน',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'แบนที่กรอกมีอยู่แล้ว รายการแบน ไม่ถูกอัพเดท',
 	'BAN_SUCCESSFUL'		=> 'กรอกการแบนสำเร็จ',

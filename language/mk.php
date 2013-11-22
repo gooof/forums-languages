@@ -10785,6 +10785,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Избришан збор за цензура</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Изменет збор за цензура</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14693,6 +14695,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Преглед на потпис',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Не можете да го смените овој основач во обичен член. На форумот треба да има најмалку еден основач. Ако сакате да им го смените статусот на овие членови, прво промовирајте друг член како основач .',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Банирањето дадено претходно е успешно внесено. Но бан листата не е апдејтувана.',
 	'BAN_SUCCESSFUL'		=> 'Успешно е внесено банирањето.',

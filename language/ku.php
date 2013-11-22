@@ -10777,6 +10777,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>سانسۆری سڕاوەی وشە</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>سانسۆری دەستکاریکراوی وشە</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14683,6 +14685,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'پیشبینی واژۆ',
 	'AT_LEAST_ONE_FOUNDER'	=> 'تۆ ناتوانی ئەو دۆزەرەوەیە بگۆرێ بۆ بەکارهێنەرێکی ئاسایی. پێویستە بەلایەنی کەم دۆزەرەوەیەک هەبێت چالاککرابێ بۆ ئەو مەکۆیە. ئەگەر دەتەوێ ئەو باری بەکارهێنەری دۆزەرەویەە بگۆڕی ،بەکارهێنەرێکی تر بەرزبکەوە بۆ ئەوەی ببێتە یەکەم دۆزەرەوە.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'ڕاگرتنەکە پێشووتر بەسەرکەوتوویی نووسرا. لیستی ڕاگرتنەکە نوێنەکرایەوە.',
 	'BAN_SUCCESSFUL'		=> 'ڕاگرتن بەسەرکەوتوویی نووسرا.',

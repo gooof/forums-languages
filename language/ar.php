@@ -10775,6 +10775,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>حذف كلمة ممنوعة</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>تعديل كلمة ممنوعة</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14683,6 +14685,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'معاينة التوقيع',
 	'AT_LEAST_ONE_FOUNDER'	=> 'لا يمكنك تحويل هذا المؤسس إلى عضو ، ينبغي أن يكون هناك مؤسس واحد على الأقل لهذا المنتدى ، إذا أردت تغيير هذا المؤسس إلى عضو عادي ينبغي عليك أولاً أن ترقّي عضوا آخر إلى مؤسس',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'لقد حظرتَ مسبقاً بنجاح. لم يحدث أي تغيير في قائمة الحظر',
 	'BAN_SUCCESSFUL'		=> 'تم الحظر بنجاح',

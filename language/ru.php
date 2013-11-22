@@ -10785,6 +10785,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Удалён цензор слов</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Изменён цензор слов</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14693,6 +14695,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Предварительный просмотр подписи',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Вы не можете понизить статус этого основателя до обычного пользователя. На конференции должен быть по крайней мере один основатель. Если вы хотите изменить статус основателя для этого пользователя, то сначала сделайте основателем другого пользователя.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Ранее запрет уже был осуществлён. Чёрный список не обновлён.',
 	'BAN_SUCCESSFUL'		=> 'Пользователь успешно добавлен в чёрный список.',

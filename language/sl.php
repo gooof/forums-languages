@@ -10786,6 +10786,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Izbrisan cenzor besed</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Spremenjen cenzor besed</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14694,6 +14696,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Predogled podpisa',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Tega ustanovitelja ne morete spremeniti v navadnega uporabnika. Za ta forum mora obstajati vsaj en ustanovitelj. Če želite spremeniti status ustanovitelja tega uporabnika, najprej v ustanovitelja povišajte nekoga drugega.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Ta blokada je bila že uspešno vnešena. Blokirna lista ni bila posodobljena.',
 	'BAN_SUCCESSFUL'		=> 'Blokada je bil uspešno vnešen.',

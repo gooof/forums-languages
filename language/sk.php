@@ -10785,6 +10785,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Odstránené cenzúrované slovo</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Upravené cenzúrované slovo</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14693,6 +14695,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Náhľad podpisu',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Nemôžete zmeniť tohto zakladateľa na bežného užívateľa. Vždy musí byť aspoň jeden aktívny zakladateľ fóra. Pokiaľ chcete zmeniť status tohto užívateľa, najskôr povýšte užívateľa na zakladateľa.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Ban bol úspešne udelený už predtým. Zoznam banov nebol aktualizovaný.',
 	'BAN_SUCCESSFUL'		=> 'Ban úspešne udelený.',

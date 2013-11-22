@@ -10786,6 +10786,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Slettet ordcensur</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Ændret ordcensur</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14694,6 +14696,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Vis signaturen',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Du kan ikke ændre denne grundlægger til en almindelig bruger. Der skal være mindst en grundlægger aktiveret på boardet. Hvis du ønsker at ændre denne brugers status, skal du først forfremme en anden bruger til grundlægger.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Udelukkelsen er tidligere udført. Udelukkelseslisten er ikke blevet opdateret.',
 	'BAN_SUCCESSFUL'		=> 'Udelukkelse er udført.',

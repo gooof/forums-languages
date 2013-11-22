@@ -10785,6 +10785,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Αφαιρέθηκε λογοκρισία λέξης</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Επεξεργάσθηκε λογοκρισία λέξης</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14694,6 +14696,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Προεπισκόπιση Υπογραφής',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Δεν είστε ικανοί να αλλάξετε αυτόν τον ιδρυτή σε ένα κανονικό μέλος. Πρέπει να είναι τουλάχιστον ένας ιδρυτής που διαχειρίζεται αυτή την Δ. Συζήτηση. Εάν θέλετε να αλλάξετε σε αυτή την Δ. Συζήτηση τον ιδρυτή, πρέπει πρώτα να δώσετε σε ένα άλλο μέλος την ιδιότητα του ιδρυτή.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Η λίστα απαγόρευσης έγινε προηγουμένως επιτυχώς. Η λίστα απαγόρευσης δεν έχει ενημερωθεί.',
 	'BAN_SUCCESSFUL'		=> 'Η λίστα απαγόρευσης ενημερώθηκε επιτυχώς.',

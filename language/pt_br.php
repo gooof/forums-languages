@@ -10785,6 +10785,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Palavra censurada excluída</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Palavra censurada editada</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14693,6 +14695,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Previsão da assinatura',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Você não pode alterar este fundador para um usuário normal. É necessário ter no mínimo um fundador para este painel. Se você deseja alterar os status deste fundador, deverá promover outro usuário para esta condição primeiro.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'O banimento já havia sido previamente informado. A lista de banimentos não foi atualizada.',
 	'BAN_SUCCESSFUL'		=> 'O banimento foi enviado com sucesso.',

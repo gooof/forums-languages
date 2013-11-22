@@ -10785,6 +10785,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Poisti sensuroitavan sanan</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Muokkasi sanojen sensurointia</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14693,6 +14695,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Allekirjoituksen esikatselu',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Et voi muuttaa tätä perustajaa normaaliksi käyttäjäksi. Keskustelufoorumilla täytyy olla vähintään yksi perustaja. Mikäli haluat ottaa perustajan oikeudet pois tältä käyttäjältä. Luo ensin jostain toisesta käyttäjästä perustaja.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Tämä porttikielto on jo annettu. Porttikieltolistaa ei ole päivitetty.',
 	'BAN_SUCCESSFUL'		=> 'Porttikielto on annettu',

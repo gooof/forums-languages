@@ -10789,6 +10789,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Usunięto cenzurowane słowo</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Zmodyfikowano cenzurowane słowo</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14697,6 +14699,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Podgląd podpisu',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Nie możesz odebrać sobie statusu założyciela forum, ponieważ jesteś jedynym założycielem forum. Musisz najpierw awansować na założyciela innego użytkownika.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Ban został już wcześniej nałożony, lista banów nie została zmieniona.',
 	'BAN_SUCCESSFUL'		=> 'Ban został nałożony.',

@@ -10822,6 +10822,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Palavra Censurada Apagada</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Palavra Censurada Editada</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14730,6 +14732,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Pré-visualização da Assinatura',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Não pode mudar este Fundador para um Utilizador normal. É necessário ter no mínimo um Fundador para este Fórum. Se quer mudar a situação deste Fundador, promova outro Utilizador à condição de Fundador primeiro.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'A expulsão já tinha sido previamente informada. A lista de expulsões não foi atualizada.',
 	'BAN_SUCCESSFUL'		=> 'Expulso com sucesso!',

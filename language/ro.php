@@ -10785,6 +10785,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Cuvânt restricţionat şters</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Cuvânt restricţionat modificat</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14693,6 +14695,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Previzualizare semnătură',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Nu sunteţi autorizat să schimbaţi acest fondator într-un utilizator normal. Trebuie să existe cel puţin un fondator activat pentru acest forum. Dacă vreţi să schimbaţi statul de fondator al acestui utilizator, promovaţi la acest statut un alt utilizator înainte de a efectua modificarea.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Restricţia a fost setată anterior cu succes. Lista cu interziceri nu a fost actualizată.',
 	'BAN_SUCCESSFUL'		=> 'Restricţie adăugată cu succes.',

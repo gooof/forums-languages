@@ -10801,6 +10801,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>言語フィルタを削除しました</strong><br />≫ %s',
 	'LOG_WORD_EDIT'			=> '<strong>言語フィルタを編集しました</strong><br />≫ %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14711,6 +14713,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'サインのプレビュー',
 	'AT_LEAST_ONE_FOUNDER'	=> 'このユーザーをウェブマスターから一般ユーザーに変更する事はできません。掲示板には最低１人のウェブマスターが存在している必要があります。このユーザーをウェブマスターから外したい場合、まず他のユーザーをウェブマスターに任命してください。',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'そのアクセス禁止データは既に入力されているため、アクセス禁止リストは更新されませんでした',
 	'BAN_SUCCESSFUL'		=> 'アクセス禁止に成功しました',

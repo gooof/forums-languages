@@ -10785,6 +10785,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>سنسر لفظ حذف کیا</strong><br />»%s',
 	'LOG_WORD_EDIT'			=> '<strong>سنسر لفظ ترمیم کیا</strong><br />»%s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14693,6 +14695,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'دستخط پیش منظر',
 	'AT_LEAST_ONE_FOUNDER'	=> 'آپ اس صارف کو بانی سے عام میں تبدیل نہیں کر سکتے. اس بورڈ کے لیے کم سے کم ایک بانی کا فعال رہنا ضروری ہے. اگر آپ اس صارف کو بانی سے عام میں‌تبدیل کرنا چاہتے ہیں تو دوسرے صارف کو پہلی بانی میں تبدیل کریں.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'پابندی پہلے کامیابی سے شامل کر دی گئی تھی. پابندی کی فہرست اپ ڈیٹ نہیں‌ ہوئی.',
 	'BAN_SUCCESSFUL'		=> 'پابندی کامیابی سے شامل کر دی گئی',

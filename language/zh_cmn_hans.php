@@ -10785,6 +10785,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>删除敏感词</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>编辑敏感词</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14693,6 +14695,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> '签名档预览',
 	'AT_LEAST_ONE_FOUNDER'	=> '您不能将创始人设置为普通用户. 这个论坛至少需要一名创始人. 如果您需要改变这个用户的等级, 请先提升另一位用户为创始人.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> '封禁在更早的时候已经输入完成, 封禁列表没有更新.',
 	'BAN_SUCCESSFUL'		=> '封禁输入完成.',

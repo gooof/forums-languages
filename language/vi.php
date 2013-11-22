@@ -10785,6 +10785,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Đã xoá từ kiểm duyệt</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Đã sửa từ kiểm duyệt</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14693,6 +14695,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Xem trước chữ ký cá nhân',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Bạn không thể thay đổi người sáng lập này trở thành một thành viên bình thường. Trong hệ thống chỉ cần ít nhất một thành viên là người sáng lập được chọn. Nếu bạn muốn thay đổi người sáng lập này thành các thành viên khác thì trước hết bạn phải là một người sáng lập.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Lệnh cấm đã được nhập vào thành công trước đây. Danh sách cấm sẽ không cần cập nhật.',
 	'BAN_SUCCESSFUL'		=> 'Lệnh cấm đã được thực hiện thành công.',

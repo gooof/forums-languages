@@ -10724,6 +10724,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Sõna tsensuur kustutatud</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Sõna tsensuur muudetud</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14631,6 +14633,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Signatuuri eelvaade',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Sa ei või seda foorumi asutajat muuta tavaliseks kasutajaks, määra enne keegi teine foorumi asutajaks.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Bänn on sisestatud juba varem. Bännide nimekirja ei uuendatud.',
 	'BAN_SUCCESSFUL'		=> 'Bänn edukalt sisestatud.',

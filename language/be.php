@@ -10785,6 +10785,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Выдалены цэнзар слоў</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Зменены цэнзар слоў</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14693,6 +14695,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Папярэдні прагляд подпісу',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Вы не можаце панізіць статут гэтага фундатара да звычайнага карыстальніка. На канферэнцыі павінен быць прынамсі адзін фундатар. Калі вы жадаеце змяніць статут фундатара для гэтага карыстальніка, то спачатку зрабіце фундатарам іншага карыстальніка.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Раней забарона ўжо быў ажыццёўлены. Чорны спіс не абноўлены.',
 	'BAN_SUCCESSFUL'		=> 'Карыстальнік паспяхова дададзены ў чорны спіс.',

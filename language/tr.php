@@ -10785,6 +10785,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Kelime sansürü silindi</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Kelime sansürü düzenlendi</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14693,6 +14695,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'İmza önizleme',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Bu kurucuyu normal bir kullanıcı olarak değiştiremezsiniz. Bu mesaj panosu için en az bir kurucunun aktif olması gerekmektedir. Eğer bu kullanıcıları kurucu durumundan terfi ettirmek istiyorsanız ilk önce başka bir kullanıcının kurucu olması gerekmektedir.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Önceki yasaklama başarıyla girildi. Yasaklama listesi güncellenmedi.',
 	'BAN_SUCCESSFUL'		=> 'Yasaklama başarıyla girildi',

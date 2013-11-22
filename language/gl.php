@@ -10782,6 +10782,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Eliminado censor de comentarios</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Censor de palabras editado</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14690,6 +14692,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Previsualización da sinatura',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Non podes estabelecer este fundador como un usuario normal. Ten que haber polo menos un fundador activado neste panel. Se desexas cambiar o estado deste usuario fundador, antes deberás estabelecer outro usuario como fundador.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'A prohibición foi inserida anteriormente de xeito correcto. Non se actualizou a lista de prohibicións.',
 	'BAN_SUCCESSFUL'		=> 'Prohibición inserida correctamente',

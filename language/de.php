@@ -10821,6 +10821,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Zensiertes Wort entfernt</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Zensiertes Wort geändert</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Themen mit Bildern resynchronisiert</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Anzeige für neue / ungelesene PNs auf 0 gesetzt bei</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14711,6 +14713,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Signatur-Vorschau',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Du kannst diesen Gründer nicht in einen normalen Benutzer umwandeln. Es muss mindestens ein Gründer in diesem Board vorhanden sein. Wenn du den Gründer-Status dieses Benutzers ändern willst, musst du zuerst einen anderen Benutzer zum Gründer ernennen.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Setzte Anzeige für neue / ungelesene PNs auf 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Die Sperre wurde bereits früher erfolgreich erstellt. Die Liste der Sperren wurde nicht aktualisiert.',
 	'BAN_SUCCESSFUL'		=> 'Sperre erfolgreich hinzugefügt.',

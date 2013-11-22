@@ -10803,6 +10803,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Censuur verwijderd</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Censuur gewijzigd</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14711,6 +14713,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Voorbeeld onderschrift.',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Het is niet toegestaan om de eigenaar te wijzigen naar een normale gebruiker. Er moet tenminste één eigenaar zijn ingesteld voor dit forum. Als je de status van deze eigenaar wilt aanpassen, promoveer dan eerst een andere gebruiker tot eigenaar.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'De ban was reeds ingevoerd. De banlijst is niet bijgewerkt.',
 	'BAN_SUCCESSFUL'		=> 'Ban succesvol ingevoerd.',

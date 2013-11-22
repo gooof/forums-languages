@@ -10784,6 +10784,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Видалено цензор слів</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Змінено цензор слів</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14692,6 +14694,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Перегляд підпису',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Ви не можете понизити статус цього засновника до звичайного користувача. На форумі повинен бути хоча б один засновник. Якщо ви хочете змінити статус засновника цього користувача, спочатку зробіть засновником іншого користувача.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Користувача було раніше додано до чорного списку. Чорний список не оновився.',
 	'BAN_SUCCESSFUL'		=> 'Користувача успішно додано в чорний список.',

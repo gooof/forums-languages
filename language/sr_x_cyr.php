@@ -10785,6 +10785,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Обрисан пречистач речи</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Учитан пречистач речи</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14693,6 +14695,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Преглед потписа',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Не можете да промените овога оснивача у обичног корисника. Бар један оснивач треба да буде омогућен за овај форум. Уколико желите да промените оснивачки статус за овог корисника, прво унапредите другог корисника да буде оснивач.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Забрана је већ претходно успешно унета. Списак забрана није ажуриран.',
 	'BAN_SUCCESSFUL'		=> 'Забрана је успешно унета.',

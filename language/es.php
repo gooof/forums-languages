@@ -10785,6 +10785,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Borrada: palabra censurada</strong><br />» %1$s',
 	'LOG_WORD_EDIT'			=> '<strong>Editada: palabra censurada</strong><br />» %1$s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14693,6 +14695,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Vista previa de la firma',
 	'AT_LEAST_ONE_FOUNDER'	=> 'No puede cambiar este Fundador en usuario normal. Tiene que haber al menos un Fundador para el Sitio. Si quiere cambiar el rango de Fundador de este usuario, promueva primero a otro usuario.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Esta exclusión ha sido introducida previamente. La lista no ha sido actualizada.',
 	'BAN_SUCCESSFUL'		=> 'Exclusión añadida correctamente.',

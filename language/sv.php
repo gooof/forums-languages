@@ -10774,6 +10774,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Tog bort ordcensurering</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Ändrade ordcensurering</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14681,6 +14683,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Förhandsvisning av signatur',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Du kan inte ändra denna grundare till normal användare. Det måste finnas minst en grundare aktiverad för detta forum. Om du vill ändra denna användares status, gör en annan användare till grundare först.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Bannlysningen hade redan införts sen tidigare. Bannlysningslistan uppdaterades inte.',
 	'BAN_SUCCESSFUL'		=> 'Bannlysningen infördes.',

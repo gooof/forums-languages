@@ -10773,6 +10773,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Изтриване: цензура на дума</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Промяна: цензура на дума</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14679,6 +14681,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Преглед на подписа',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Не можеш да направиш основателя нормален потребител. Трябва да има поне един основател във всеки форум. И все пак, ако искаш да направиш това, направи друг потребител основател и след това премахни този.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Бана е добавян вече. Списъка не е обновен.',
 	'BAN_SUCCESSFUL'		=> 'Бана е въведен успешно.',

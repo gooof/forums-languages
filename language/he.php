@@ -10785,6 +10785,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>מחק מילה מצונזרת</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>ערך מילה מצונזרת</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14693,6 +14695,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'תצוגת חתימה',
 	'AT_LEAST_ONE_FOUNDER'	=> 'אתה לא יכול לשנות את המייסד למשתמש רגיל. חובה שיהיה מייסד אחד לפחות הפעיל במערכת זו. אם אתה רוצה לשנת את מצב המשתמשים המייסדים, אפשר קודם למשתמש אחר להיות מייסד.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'החסימה הופעלה בהצלחה, אך הרשימה לא התעדכנה.',
 	'BAN_SUCCESSFUL'		=> 'החסימה הופעלה בהצלחה.',

@@ -10764,6 +10764,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Obrisana cenzura reči</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Izmenjena cenzura reči</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14672,6 +14674,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Pregled potpisa',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Niste u mogućnosti da promenite ovog osnivača u normalnog korisnika. Mora da postoji bar jedan omogućen osnivač za ovaj board. Ako želite da promenite osnivački status za ovog korisnika, prvo proglasite nekog drugog korisnika kao osnivača.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Zabrana je već prethodno uspešno uneta. Lista zabrana nije ažurirana.',
 	'BAN_SUCCESSFUL'		=> 'Uspešno uneta zabrana.',

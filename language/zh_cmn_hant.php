@@ -10785,6 +10785,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>已刪除字詞過濾</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>已編輯字詞過濾</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14693,6 +14695,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> '簽名檔預覽',
 	'AT_LEAST_ONE_FOUNDER'	=> '您不能將改變創始人為普通會員。這個討論區至少需要一位創始人。如果您要改變這個創始會員的地位，那麼請先提升另一位會員為創始人。',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> '封鎖在先前就已經輸入成功，封鎖列表沒有更新。',
 	'BAN_SUCCESSFUL'		=> '封鎖輸入成功。',

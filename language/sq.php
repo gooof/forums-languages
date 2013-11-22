@@ -10776,6 +10776,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Fshiu çensorues fjalësh</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Modifikoi çensorues fjalësh</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14683,6 +14685,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Parashikimi i firmës',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Ju nuk mund të ktheni krijuesin në përdorues normal. Duhet të jetë të paktën një krijues i aktivizuar për këtë bord. Nëse doni të ndryshoni statusin e këtij krijuesi, caktoni një përdorues tjetër si krijues.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Një përjashtim është bërë më parë. Lista e përjashtimeve nuk është e azhornuar.',
 	'BAN_SUCCESSFUL'		=> 'Përjashtimi u bë me sukses.',

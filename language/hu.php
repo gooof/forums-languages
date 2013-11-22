@@ -10782,6 +10782,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Cenzúrázott szó törlése</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Cenzúrázott szó szerkesztése</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14690,6 +14692,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Aláírás előnézet',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Nem léptetheted vissza ezt az alapítót sima felhasználóvá. A fórumon lennie kell legalább egy alapítónak. Ha meg akarod változtatni a felhasználó alapító státuszát, előbb léptess elő egy másik felhasználót alapítóvá.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'A kitiltás már korábban sikeresen megadásra került. A kitiltási lista nem lett frissítve.',
 	'BAN_SUCCESSFUL'		=> 'A kitiltás sikeresen megadásra került.',

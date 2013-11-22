@@ -10785,6 +10785,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Ha eliminat la paraula censurada</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Ha editat la paraula censurada</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14693,6 +14695,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Previsualització de signatura',
 	'AT_LEAST_ONE_FOUNDER'	=> 'No podeu convertir aquest fundador en un usuari normal. Cal que hi hagi com a mínim un fundador habilitat al fòrum. Si voleu canviar l’estat d’aquest usuari a no fundador, abans heu d’ascendir un altre usuari per que sigui el fundador.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Aquest bandeig ja s’havia introduït anteriorment. La llista de bandeig no s’ha actualitzat.',
 	'BAN_SUCCESSFUL'		=> 'S’ha introduït el bandeig correctament.',

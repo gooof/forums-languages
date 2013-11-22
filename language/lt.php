@@ -10778,6 +10778,8 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Ištrintas cenzūruojamas žodis</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Pakeistas cenzūruojamas žodis</strong><br />» %s',
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
+	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
+
 ));
 
 $lang = array_merge($lang, array(
@@ -14685,6 +14687,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADMIN_SIG_PREVIEW'		=> 'Parašo peržiūra',
 	'AT_LEAST_ONE_FOUNDER'	=> 'Jūs negalite pakeisti šio steigėjo į normalų vartotoją. Diskusijose turi būti bent vienas steigėjas. Jeigu norite pakeisti šio vartotojo steigėjo statusą, iš pradžių paskirkite steigėjo pareigas kitam vartotojui.',
+	'RESET_NEW_UNREAD_PM_COUNT'		=> 'Set indicator for new / unread PMs to 0',
 
 	'BAN_ALREADY_ENTERED'	=> 'Toks blokas jau egzistuoja. Blokuojamų vartotojų sąrašas nebuvo atnaujintas.',
 	'BAN_SUCCESSFUL'		=> 'Įrašas sėkmingai įtrauktas į blokuojamų sąrašą.',
