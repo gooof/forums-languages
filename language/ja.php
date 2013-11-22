@@ -2362,6 +2362,8 @@ $lang = array_merge($lang, array(
 	'WARNINGS_ZERO_TOTAL'	=> '警告はありません',
 
 	'YOU_SELECTED_TOPIC'	=> '選択したトピックの ID %d: %s',
+	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
+	'MCP_PREFIX_CHANGE'		=> 'Change Prefixes',
 
 ));
 

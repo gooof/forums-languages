@@ -2338,6 +2338,8 @@ $lang = array_merge($lang, array(
 	'WARNINGS_ZERO_TOTAL'	=> 'Inga varningar finns.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Du valde tråd nummer %d: %s.',
+	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
+	'MCP_PREFIX_CHANGE'		=> 'Change Prefixes',
 
 ));
 

@@ -2349,6 +2349,8 @@ $lang = array_merge($lang, array(
 	'WARNINGS_ZERO_TOTAL'	=> '没有警告',
 
 	'YOU_SELECTED_TOPIC'	=> '您选择了主题编号 %d: %s',
+	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
+	'MCP_PREFIX_CHANGE'		=> 'Change Prefixes',
 
 ));
 

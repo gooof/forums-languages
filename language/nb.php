@@ -2313,6 +2313,8 @@ $lang = array_merge($lang, array(
 	'WARNINGS_ZERO_TOTAL'	=> 'Ingen advarsler eksisterer.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Du valgte emnenummer %d: %s',
+	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
+	'MCP_PREFIX_CHANGE'		=> 'Change Prefixes',
 
 ));
 

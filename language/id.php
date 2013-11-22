@@ -2349,6 +2349,8 @@ $lang = array_merge($lang, array(
 	'WARNINGS_ZERO_TOTAL'	=> 'Tidak ada peringatan.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Anda memilih topik nomor %d: %s.',
+	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
+	'MCP_PREFIX_CHANGE'		=> 'Change Prefixes',
 
 ));
 

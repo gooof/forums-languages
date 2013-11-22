@@ -2442,6 +2442,8 @@ id تاپیک مقصد را وارد کنید یا برای جستجوی تاپ�
 	'WARNINGS_ZERO_TOTAL'	=> 'هيچ اخطاري موجود نمي باشد.',
 
 	'YOU_SELECTED_TOPIC'	=> 'شما تاپیک شماره %d: %s را انتخاب کردید.',
+	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
+	'MCP_PREFIX_CHANGE'		=> 'Change Prefixes',
 
 ));
 

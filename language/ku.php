@@ -2341,6 +2341,8 @@ $lang = array_merge($lang, array(
 	'WARNINGS_ZERO_TOTAL'	=> 'هیچ ئاگادارییەک بوونی نییە.',
 
 	'YOU_SELECTED_TOPIC'	=> 'تۆ دیاریت کرد بابەتی ژمارە %d: %s',
+	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
+	'MCP_PREFIX_CHANGE'		=> 'Change Prefixes',
 
 ));
 

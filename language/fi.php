@@ -2349,6 +2349,8 @@ $lang = array_merge($lang, array(
 	'WARNINGS_ZERO_TOTAL'	=> 'Ei olemassa olevia varoituksia',
 
 	'YOU_SELECTED_TOPIC'	=> 'Valitsit keskusteluketjun numero %d: %s',
+	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
+	'MCP_PREFIX_CHANGE'		=> 'Change Prefixes',
 
 ));
 

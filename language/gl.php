@@ -2347,6 +2347,8 @@ $lang = array_merge($lang, array(
 	'WARNINGS_ZERO_TOTAL'	=> 'Non hai advertencias',
 
 	'YOU_SELECTED_TOPIC'	=> 'Seleccionaches o tema número %d: %s',
+	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
+	'MCP_PREFIX_CHANGE'		=> 'Change Prefixes',
 
 ));
 

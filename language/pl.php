@@ -2353,6 +2353,8 @@ $lang = array_merge($lang, array(
 	'WARNINGS_ZERO_TOTAL'	=> 'Brak ostrzeżeń.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Wybrałeś wątek numer %d: %s.',
+	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
+	'MCP_PREFIX_CHANGE'		=> 'Change Prefixes',
 
 ));
 

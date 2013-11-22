@@ -2349,6 +2349,8 @@ $lang = array_merge($lang, array(
 	'WARNINGS_ZERO_TOTAL'	=> 'Không có cảnh cáo nào.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Bạn đã chọn chủ đề số <strong>%d</strong>: “%s”.',
+	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
+	'MCP_PREFIX_CHANGE'		=> 'Change Prefixes',
 
 ));
 

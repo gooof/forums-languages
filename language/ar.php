@@ -2343,6 +2343,8 @@ $lang = array_merge($lang, array(
 	'WARNINGS_ZERO_TOTAL'	=> 'لا يوجد تحذيرات حالياً',
 
 	'YOU_SELECTED_TOPIC'	=> 'قمت باختيار الموضوع رقم %d: %s',
+	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
+	'MCP_PREFIX_CHANGE'		=> 'Change Prefixes',
 
 ));
 
