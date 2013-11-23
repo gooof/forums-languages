@@ -1349,6 +1349,13 @@ $lang = array_merge($lang, array(
 	'POST_ROW'			=> '<span style="font-weight:bold;font-size:0.9em;">Beitrag:</span> <a href="%1$s">%2$s</a><br /> <span class="row-small">%3$s</span>',
 	'TOPIC_ROW'			=> '<span style="font-weight:bold;font-size:0.9em;">Thema:</span> <a href="%1$s">%2$s</a> <span class="row-small">(%3$s Antworten)</span><br /> <span class="row-small"> &raquo; In <a href="%4$s">%5$s</a></span>',
 
+	'PRIME_NOTIFY_POST_CONTENT'			=> 'Benachrichtige mit Beitragsinhalt',
+	'PRIME_NOTIFY_POST_CONTENT_EXPLAIN'	=> 'Den Beitragsinhalt in der Benachrichtigungs-eMail mitsenden?',
+	'PRIME_NOTIFY_PM_CONTENT'			=> 'Benachrichtige mit PMinhalt',
+	'PRIME_NOTIFY_PM_CONTENT_EXPLAIN'	=> 'Den PM-Inhalt in der Benachrichtigungs-eMail mitsenden?',
+	'PRIME_NOTIFY_FORUM_VISIT_MSG'		=> 'Bis zum erneuten Besuch des Forums werden keine weiteren Benachrichtigungen gesendet.',
+	'PRIME_NOTIFY_TOPIC_VISIT_MSG'		=> 'Bis zum erneuten Besuch des Topics werden keine weiteren Benachrichtigungen gesendet.',
+
 ));
 
 #######language/en/groups.php#######
@@ -2350,6 +2357,8 @@ $lang = array_merge($lang, array(
 	'YOU_SELECTED_TOPIC'	=> 'Du hast das Thema mit der ID %d ausgewählt: %s.',
 	'PREFIX_MCP_CHOOSE'		=> 'Wähle einen neuen Präfix für die ausgewählten Themen',
 	'MCP_PREFIX_CHANGE'		=> 'Präfix ändern',
+	'SHADOW_TOPICS_TIME'			=> 'Stunden <small>(bei 0 wird der Link nicht automatisch gelöscht)</small>',
+	'MCP_MAIN_SHADOW_FORUM_VIEW'	=> 'Shadow Topics anzeigen',
 
 ));
 
@@ -8860,18 +8869,6 @@ $lang = array_merge($lang, array(
 	'POINTS_ON_HAND'					=> 'Direkt verfügbar',
 ));
 
-#######language/en/mods/prime_notify.php#######
-
-$lang = array_merge($lang, array(
-	'PRIME_NOTIFY_POST_CONTENT'			=> 'Benachrichtige mit Beitragsinhalt',
-	'PRIME_NOTIFY_POST_CONTENT_EXPLAIN'	=> 'Den Beitragsinhalt in der Benachrichtigungs-eMail mitsenden?',
-	'PRIME_NOTIFY_PM_CONTENT'			=> 'Benachrichtige mit PMinhalt',
-	'PRIME_NOTIFY_PM_CONTENT_EXPLAIN'	=> 'Den PM-Inhalt in der Benachrichtigungs-eMail mitsenden?',
-	
-	'PRIME_NOTIFY_FORUM_VISIT_MSG'		=> 'Bis zum erneuten Besuch des Forums werden keine weiteren Benachrichtigungen gesendet. ',
-	'PRIME_NOTIFY_TOPIC_VISIT_MSG'		=> 'Bis zum erneuten Besuch des Themas werden keine weiteren Benachrichtigungen gesendet. ',
-));
-
 #######language/en/mods/profilecomments.php#######
 
 $lang = array_merge($lang, array(
@@ -8894,13 +8891,6 @@ $lang = array_merge($lang, array(
 	'COMM_LOCATION' 				=> 'Bewertungen lesen',
 	'COMMENT_BUTTON_GO' 			=> 'weiter',
 	'COMM_NOT_ADD' 				=> 'Das Kommentar konnte leider nicht hinzugefügt werden.', 
-));
-
-#######language/en/mods/shadow_topics.php#######
-
-$lang = array_merge($lang, array(
-	'SHADOW_TOPICS_TIME'			=> 'Stunden. <small>(bei 0 wird der Link nicht automatisch gelöscht)</small>',
-	'MCP_MAIN_SHADOW_FORUM_VIEW'	=> 'Shadow Topics anzeigen',
 ));
 
 #######language/en/mods/shop.php#######

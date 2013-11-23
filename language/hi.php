@@ -1349,6 +1349,13 @@ $lang = array_merge($lang, array(
 	'POST_ROW'			=> '<span style="font-weight:bold;font-size:0.9em;">Post:</span> <a href="%1$s">%2$s</a><br /> <span class="row-small">%3$s</span>',
 	'TOPIC_ROW'			=> '<span style="font-weight:bold;font-size:0.9em;">Topic:</span> <a href="%1$s">%2$s</a> <span class="row-small">(%3$s Replies)</span><br /> <span class="row-small"> &raquo; In <a href="%4$s">%5$s</a></span>',
 
+	'PRIME_NOTIFY_POST_CONTENT'			=> 'Notify post content',
+	'PRIME_NOTIFY_POST_CONTENT_EXPLAIN'	=> 'Include the post\'s content in the notification email?',
+	'PRIME_NOTIFY_PM_CONTENT'			=> 'Notify PM content',
+	'PRIME_NOTIFY_PM_CONTENT_EXPLAIN'	=> 'Include the private message in the notification email?',
+	'PRIME_NOTIFY_FORUM_VISIT_MSG'		=> 'No more notifications will be sent until you visit the forum.',
+	'PRIME_NOTIFY_TOPIC_VISIT_MSG'		=> 'No more notifications will be sent until you visit the topic.',
+
 ));
 
 #######language/en/groups.php#######
@@ -2349,6 +2356,8 @@ $lang = array_merge($lang, array(
 	'YOU_SELECTED_TOPIC'	=> 'You selected topic number %d: %s.',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
 	'MCP_PREFIX_CHANGE'		=> 'Change Prefixes',
+	'SHADOW_TOPICS_TIME'			=> 'Hours (enter 0 for permanently)',
+	'MCP_MAIN_SHADOW_FORUM_VIEW'	=> 'View shadow topics',
 
 ));
 
@@ -8822,18 +8831,6 @@ $lang = array_merge($lang, array(
 	'POINTS_ON_HAND'					=> 'Points on hand',
 ));
 
-#######language/en/mods/prime_notify.php#######
-
-$lang = array_merge($lang, array(
-	'PRIME_NOTIFY_POST_CONTENT'			=> 'Notify post content',
-	'PRIME_NOTIFY_POST_CONTENT_EXPLAIN'	=> 'Include the post\'s content in the notification email?',
-	'PRIME_NOTIFY_PM_CONTENT'			=> 'Notify PM content',
-	'PRIME_NOTIFY_PM_CONTENT_EXPLAIN'	=> 'Include the private message in the notification email?',
-	
-	'PRIME_NOTIFY_FORUM_VISIT_MSG'		=> 'No more notifications will be sent until you visit the forum. ',
-	'PRIME_NOTIFY_TOPIC_VISIT_MSG'		=> 'No more notifications will be sent until you visit the topic. ',
-));
-
 #######language/en/mods/profilecomments.php#######
 
 $lang = array_merge($lang, array(
@@ -8856,13 +8853,6 @@ $lang = array_merge($lang, array(
 	'COMM_LOCATION' 				=> 'You are reading comments of',
 	'COMMENT_BUTTON_GO' 			=> 'जाएँ',
 	'COMM_NOT_ADD' 				=> 'Sorry, comment not added', 
-));
-
-#######language/en/mods/shadow_topics.php#######
-
-$lang = array_merge($lang, array(
-	'SHADOW_TOPICS_TIME'			=> 'Hours (enter 0 for intact)',
-	'MCP_MAIN_SHADOW_FORUM_VIEW'	=> 'View shadow topics',
 ));
 
 #######language/en/mods/shop.php#######
