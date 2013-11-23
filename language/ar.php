@@ -11048,6 +11048,12 @@ $lang = array_merge($lang, array(
 	'ACP_CALENDAR_DELETE_EVENT_TYPE'	=> 'Delete event type',
 	'ACP_CALENDAR_ETYPES'		=> 'Manage Calendar Event Types',
 
+	'UNSELECT_GROUPS'			=> 'Unselect all groups',
+	'SMILIE_CAT_GROUPS'			=> 'Groups are allowed to see this category',
+	'SMILIE_CAT_GROUPS_EXPLAIN'	=> 'Users must have this group as the main group to see the category.<br />The use of the smiley codes is thus not protected, users can use the smilie codes, if known.<br />A maximum of 10 groups can be selected. Choose nothing to make them visible for all.',
+	'FOOTBALL_SEND_CRON_MAILS'	=> 'Send reminder emails',
+	'FOOTBALL_SEND_CRON_MAILS_EXPLAIN'	=> 'Daily sends reminder emails to the members of the betting, so that no one forgets participate on game days.',
+
 	'ACP_GYM_SITEMAPS'	=> 'GYM Sitemaps &amp; RSS',
 	'ACP_GYM_MAIN'	=> 'Main configuration',
 	'ACP_GYM_GOOGLE_MAIN'	=> 'Google Sitemaps',

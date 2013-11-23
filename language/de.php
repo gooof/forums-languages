@@ -11094,6 +11094,12 @@ $lang = array_merge($lang, array(
 	'ACP_CALENDAR_DELETE_EVENT_TYPE'	=> 'Event Typ löschen',
 	'ACP_CALENDAR_ETYPES'		=> 'Kalender Event Typen',
 
+	'UNSELECT_GROUPS'			=> 'Alle Gruppen abwählen',
+	'SMILIE_CAT_GROUPS'			=> 'Gruppen denen diese Kategorie angezeigt wird',
+	'SMILIE_CAT_GROUPS_EXPLAIN'	=> 'Benutzer müssen diese Gruppe als Hauptgruppe gesetzt haben, damit sie die Kategorie sehen dürfen.<br />Die Verwendung der Smilie Codes ist hierdurch nicht geschützt, Benutzer können die Smilie Codes verwenden, falls bekannt.<br />Maximal 10 Gruppen wählbar. Wähle keine Gruppe um sie für alle sichtbar zu machen.',
+	'FOOTBALL_SEND_CRON_MAILS'	=> 'Erinnerungsmails verschicken',
+	'FOOTBALL_SEND_CRON_MAILS_EXPLAIN'	=> 'Sendet automatisch und täglich Erinnerungsmails an die Mitglieder der Tipprunde, damit keiner vergisst an den Spieltagen teilzunehmen.',
+
 	'ACP_GYM_SITEMAPS'	=> 'GYM Sitemaps &amp; RSS',
 	'ACP_GYM_MAIN'	=> 'Main configuration',
 	'ACP_GYM_GOOGLE_MAIN'	=> 'Google Sitemaps',
@@ -12805,7 +12811,7 @@ $lang = array_merge($lang, array(
 	'FORUM_GATEWAY_INCOMING_OPTION'				=> 'Mail Collection Option',
 	'FORUM_GATEWAY_INCOMING_OPTION_EXPLAIN'		=> 'Select how messages will be collected for posting to the forum.',
 	'FORUM_GATEWAY_POP3'						=> 'Abrufen von POP3-Konto',
-	'FORUM_GATEWAY_CREATE_USERS'				=> 'Create Users for Unrecognised Authors',
+	'FORUM_GATEWAY_CREATE_USERS'				=> 'Accounts für unbekannte Absender erstellen',
 	'FORUM_GATEWAY_CREATE_USERS_EXPLAIN'		=> 'Incoming messages are matched to account holders by the From: e-mail address.  If this option is enabled, new accounts will be automatically created for unrecognised senders.  If this option is disabled then the guest account will be used.  New accounts will have a random password assigned.',
 	'FORUM_GATEWAY_OUTGOING_ENABLED'			=> 'Enable the Forum-To-Mail Gateway',
 	'FORUM_GATEWAY_OUTGOING_ENABLED_EXPLAIN'	=> 'This option enables the Forum-To-Mail Gateway where messages initially posted in this forum are sent to an e-mail address (usually a mailing list).',
