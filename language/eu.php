@@ -1279,6 +1279,8 @@ $lang = array_merge($lang, array(
 	'NO_NON_MEMBERS_DONATIONS'  => 'You have to be a registered user to donate',
 	'ADMIN_NOTIFICATION_PM_SUBJECT' => 'You\'ve got a donation',
 	'DONATION_NOTIFICATION'         => 'Donation Notification',
+	'TOPIC_AGE_WARNING'			=> 'You are attempting to reply to a topic that is %s old. Instead, please begin a new topic, or search for another related topic that may be more suitable.',
+	'TOPIC_AGE_WARNING_LOCK'	=> 'This topic is %s old. The forum administrator has chosen for old topics to be locked when a reply is attempted. Please begin a new topic or use the search feature to find a similar but newer topic.',
 
 	// FOLLOWER
 	'COMMENT_ADD'			=> 'New comment',
@@ -2358,8 +2360,23 @@ $lang = array_merge($lang, array(
 	'YOU_SELECTED_TOPIC'	=> '%d: %s zenbakidun gaia aukeratu duzu.',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
 	'MCP_PREFIX_CHANGE'		=> 'Change Prefixes',
-	'SHADOW_TOPICS_TIME'			=> 'Hours (enter 0 for permanently)',
+	'SHADOW_TOPICS_TIME'	=> 'Hours (enter 0 for permanently)',
 	'MCP_MAIN_SHADOW_FORUM_VIEW'	=> 'View shadow topics',
+	'DELETE_TOPIC_NOTIFY'	=> 'Notify the topic starter about deleting this topic?',
+	'DELETE_REASON'			=> 'Reason for deleting this topic',
+	'DELETE_EXPLAIN_NOTIFY'	=> 'Fill in the reason for deleting this topic. The reason will be shown in the PM. This will only work if you have checked the checkbox above.',
+	'LOCK_TOPIC_NOTIFY'		=> 'Notify the topic starter about locking this topic?',
+	'LOCK_REASON'			=> 'Reason for locking this topic',
+	'LOCK_EXPLAIN_NOTIFY'	=> 'Fill in the reason for locking this topic. The reason will be shown in the PM. This will only work if you have checked the checkbox above.',
+	'MOVE_TOPIC_NOTIFY'		=> 'Notify the topic starter about moving this topic',
+	'MOVE_REASON'			=> 'Reason for moving this topic',
+	'MOVE_EXPLAIN_NOTIFY'	=> 'Fill in the reason for moving this topic. The reason will be shown in the PM. This will only work if you have checked the checkbox above.',
+	'NTS_TOPIC_MOVED'		=> 'Hi,<br /><br />A topic called <strong><a href="%2$s">%1$s</a></strong> which has been started by you, has been moved to <strong><a href="%4$s">%5$s</a></strong> by a moderator or administrator.<br /><br /><strong>Reason for moving your topic:</strong> <em>%3$s</em><br /><br />Click on the following link to go to your topic:<br /><a href="%2$s">%1$s</a>',
+	'NTS_TOPIC_MOVED_SUBJECT'	=> 'Your topic has been moved',
+	'NTS_TOPIC_DELETED'		=> 'Hi,<br /><br />One of your topics called <strong>%1$s</strong> has been deleted by a moderator or administrator.<br /><br /><strong>Reason for deleting your topic:</strong> <em>%2$s</em><br /><br />Please reply this message if you\'ve got any further questions.',
+	'NTS_TOPIC_DELETE_SUBJECT'	=> 'Your topic has been deleted',
+	'NTS_TOPIC_LOCKED'		=> 'Hi,<br /><br />One of your topics called <a href="%3$s"><strong>%1$s</strong></a> has been locked by a moderator or administrator. This means you cannot reply or edit your topic anymore.<br /><br /><strong>Reason for locking your topic:</strong> <em>%2$s</em>.<br /><br />Click on the following link to go to your topic:<br /><a href="%3$s"><strong>%1$s</strong></a>',
+	'NTS_TOPIC_LOCK_SUBJECT'	=> 'Your topic has been locked',
 
 ));
 
@@ -10426,9 +10443,7 @@ $lang = array_merge($lang, array(
 	'TOPIC_STATS_EXPLAIN'		=> 'Enables a special bar in topics and shows also total numbers of them in forums. (e.g. how many users have subscribed to the topic) <a href="http://www.phpbb9.de/neue-forum-funktionen/themen-statistik-lesezeichen-abonnenten-bedankungen-themenlinks-t42739.html" target="_blank">More informations</a>',
 	'TITLE_USER_REMINDER'		=> 'User Reminder',
 	'TITLE_USER_REMINDER_EXPLAIN'	=> 'Here you will be able to remind your users that have been not been active on your board',
-));
 
-$lang = array_merge($lang, array(
 	'INACTIVE_DATE'					=> 'Jarduerarik gabe noiztik',
 	'INACTIVE_REASON'				=> 'Arrazoia',
 	'INACTIVE_REASON_MANUAL'		=> 'Administrariek ezgaitutako kontua',
@@ -11408,24 +11423,19 @@ $lang = array_merge($lang, array(
 	'ONE_MONTH'		=> 'One month',
 	'ONE_YEAR'		=> 'One year',
 	'TWO_YEARS'		=> 'Two years',
-));
 
-$lang = array_merge($lang, array(
+
 	'ACP_SUBJECT_PREFIX'				=> 'Subject Prefix',
 	'ACP_SUBJECT_PREFIX_ADD'			=> 'Create subject prefix',
 	'ACP_SUBJECT_PREFIX_EXPLAIN'		=> 'This page can be used to manage prefixes on a forum basis, by default all forums are collapsed to prevent this page from growing to big. Click on a forum name to display the prefixes that you\'ve set for this forum and edit them accordingly, you can also change the order in <em>(drag-drop)</em> in which they will be displayed.',
 	'ACP_SUBJECT_PREFIX_ADD_EXPLAIN'	=> 'On this page you can create new prefixes, or edit existing prefixes',
 	'ACP_STATS_GENERAL_INFO'			=> 'Estatistikak',
-	'ACP_SEOQUERYS'			=> 'SEO Queries',
-
 	'NO_PREFIXES'		=> 'You haven\'t created any subject prefixes yet',
 	'NO_PREFIX_COLOUR'	=> 'You must provide a valid prefix colour',
 	'NO_PREFIX_TITLE'	=> 'You must provide a Prefix title',
-
 	'MCP_SUBJECT_PREFIX'	=> 'Subject prefix moderator control',
-
 	'PREFIX_BOLD'					=> 'Prefix bold',
-	'PREFIX_ITALIC'				=> 'Prefix italic',
+	'PREFIX_ITALIC'					=> 'Prefix italic',
 	'PREFIX_COLOUR'					=> 'Prefix colour',
 	'PREFIX_COLOUR_EXPLAIN'			=> 'Define which colour will be used for this prefix.',
 	'PREFIX_FORUMS'					=> 'Prefix forums',
@@ -11435,38 +11445,29 @@ $lang = array_merge($lang, array(
 	'PREFIX_SUCCESSFULLY_ADDED'		=> 'The prefix has been created successfully!',
 	'PREFIX_SUCCESSFULLY_EDITED'	=> 'The prefix has been updated successfully!',
 	'PREFIX_TITLE'					=> 'Prefix title',
-
-	'SUBJECT_PREFIX'			=> 'Subject prefix',
-	'SUBJECT_PREFIX_QUICK_MOD'	=> 'Prefix quick select',
-	'SELECT_A_PREFIX'			=> 'Select a prefix',
-));
-
-$lang = array_merge($lang, array(
-	'ACP_MANAGE_ATTACHMENTS'			=> 'Fitxategi erantsiak antolatu',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'		=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'SUBJECT_PREFIX'				=> 'Subject prefix',
+	'SUBJECT_PREFIX_QUICK_MOD'		=> 'Prefix quick select',
+	'SELECT_A_PREFIX'				=> 'Select a prefix',
+	'ACP_SEOQUERYS'					=> 'SEO Queries',
+	'ACP_MANAGE_ATTACHMENTS'		=> 'Fitxategi erantsiak antolatu',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
 	'LOG_ATTACH_DEL'				=> '<strong>Attachments deleted</strong><br />» %s',
 	'LOG_ATTACH_REASSIGNED'			=> '<strong>Attachment reassigned to Post</strong><br />» ID %1$d - %2$s',
 	'TOTAL_SIZE'					=> 'Total size',
 	'DOWNLOADS'					=> 'Deskargak',
-	'LOG_TERM_ADD'		=> '<strong>A new word was added to the lexicon</strong><br />» %s',
-	'LOG_TERM_EDIT'		=> '<strong>A word from the lexicon has changed</strong><br />» %s',
-	'ACP_ADVENTCALENDAR'			=> 'Advent Calendar',
+	'LOG_TERM_ADD'			=> '<strong>A new word was added to the lexicon</strong><br />» %s',
+	'LOG_TERM_EDIT'			=> '<strong>A word from the lexicon has changed</strong><br />» %s',
+	'ACP_ADVENTCALENDAR'	=> 'Advent Calendar',
 	'ACP_RESTORE_DELETED_USERS'		=> 'Restore Deleted Users',
-));
-
-$lang = array_merge($lang, array(
-	'BLOCK_LAYOUT'		=> 'Block Layout',
+	'BLOCK_LAYOUT'			=> 'Block Layout',
 	'BLOCK_LAYOUT_EXPLAIN'	=> 'The blocks layout can be change from a simple to a graphical layout.',
-	'BLOCK_LAYOUT_LIGHT'		=> 'Light',
+	'BLOCK_LAYOUT_LIGHT'	=> 'Light',
 	'BLOCK_LAYOUT_NORMAL'	=> 'Professionell',
-	'LOG_SHOUTBOX_RESET'		=> '<strong>Clean-Up Shoutbox</strong>',
+	'LOG_SHOUTBOX_RESET'	=> '<strong>Clean-Up Shoutbox</strong>',
 	'SHOUT_LIMIT'			=> 'Clean up Shoutbox daily',
-	'SHOUTBOX_AUTO'		=> 'Activate Shoutbox AutoReload?<br />The result can cause the user to appear online, although it is not.',
-	'ACP_INTRO'			=> 'Intro',
+	'SHOUTBOX_AUTO'			=> 'Activate Shoutbox AutoReload?<br />The result can cause the user to appear online, although it is not.',
+	'ACP_INTRO'				=> 'Intro',
 
-));
-
-$lang = array_merge($lang, array(
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Fitxategi erantsiak antolatu',
 	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
 	'TOTAL_SIZE'				=> 'Total size',
@@ -11866,7 +11867,6 @@ $lang = array_merge($lang, array(
 
 	'LOGVIEW_VIEWALBUM'					=> 'View album',
 	'LOGVIEW_VIEWIMAGE'					=> 'View image',
-
 
 	'ACP_ARCADE_PERMISSIONS'							=> 'phpBB Arcade Permissions',
 	'ACP_ARCADE_PERMISSION_ROLES'						=> 'Arcade Permission Roles',
@@ -12771,6 +12771,16 @@ $lang = array_merge($lang, array(
 
 	'FORUM_BG'	=> 'Forum background image',
 	'FORUM_BG_EXPLAIN'	=> 'Adds a background image to the forum. If you want a transparent background, the checkbox must be marked or enter &quot;transparent&quot;. <br />E.g. http://img.userboard.org/images/forum_bg/002.gif',
+
+	'TAW_INTERVAL'					=> 'Topic Age Warning interval',
+	'TAW_INTERVAL_EXPLAIN'			=> 'Number of days, months or years after which a user will recieve the topic age warning. <strong>If set to 0, function will be disabled.</strong>',
+	'TAW_LOCK'						=> 'Lock old topic',
+	'TAW_LOCK_EXPLAIN'				=> 'If <code>Yes</code>, topics to which a user attempts to reply after the set interval will be automatically locked.',
+	'TAW_AUTHOR_EXEMPT'				=> 'Exempt author from Topic Age Warning',
+	'TAW_AUTHOR_EXEMPT_EXPLAIN'		=> 'If <code>Yes</code>, the author of the topic will be able to reply to their own topics, even after the set interval is passed.',
+	'TAW_LAST_POST'					=> 'Use Last Reply time',
+	'TAW_LAST_POST_EXPLAIN'			=> 'If <code>Yes</code>, the old topics will be determined using the time of the last reply to the topic. If <code>No</code>, old topics will be determined using the time of the topic\'s creation.',
+
 ));
 
 #######language/en/acp/groups.php#######

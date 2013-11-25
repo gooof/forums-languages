@@ -1279,6 +1279,8 @@ $lang = array_merge($lang, array(
 	'NO_NON_MEMBERS_DONATIONS'  => 'Du musst ein registrierter Benutzer sein um spenden zu können',
 	'ADMIN_NOTIFICATION_PM_SUBJECT' => 'Du hast eine Echtgeld Spende erhalten',
 	'DONATION_NOTIFICATION'         => 'Spenden Benachrichtigung',
+	'TOPIC_AGE_WARNING'			=> 'You are attempting to reply to a topic that is %s old. Instead, please begin a new topic, or search for another related topic that may be more suitable.',
+	'TOPIC_AGE_WARNING_LOCK'	=> 'This topic is %s old. The forum administrator has chosen for old topics to be locked when a reply is attempted. Please begin a new topic or use the search feature to find a similar but newer topic.',
 
 	// FOLLOWER
 	'COMMENT_ADD'			=> 'Neuen Kommentar',
@@ -2357,8 +2359,23 @@ $lang = array_merge($lang, array(
 	'YOU_SELECTED_TOPIC'	=> 'Du hast das Thema mit der ID %d ausgewählt: %s.',
 	'PREFIX_MCP_CHOOSE'		=> 'Wähle einen neuen Präfix für die ausgewählten Themen',
 	'MCP_PREFIX_CHANGE'		=> 'Präfix ändern',
-	'SHADOW_TOPICS_TIME'			=> 'Stunden <small>(bei 0 wird der Link nicht automatisch gelöscht)</small>',
+	'SHADOW_TOPICS_TIME'	=> 'Stunden <small>(bei 0 wird der Link nicht automatisch gelöscht)</small>',
 	'MCP_MAIN_SHADOW_FORUM_VIEW'	=> 'Shadow Topics anzeigen',
+	'DELETE_TOPIC_NOTIFY'	=> 'Notify the topic starter about deleting this topic?',
+	'DELETE_REASON'			=> 'Reason for deleting this topic',
+	'DELETE_EXPLAIN_NOTIFY'	=> 'Fill in the reason for deleting this topic. The reason will be shown in the PM. This will only work if you have checked the checkbox above.',
+	'LOCK_TOPIC_NOTIFY'		=> 'Notify the topic starter about locking this topic?',
+	'LOCK_REASON'			=> 'Reason for locking this topic',
+	'LOCK_EXPLAIN_NOTIFY'	=> 'Fill in the reason for locking this topic. The reason will be shown in the PM. This will only work if you have checked the checkbox above.',
+	'MOVE_TOPIC_NOTIFY'		=> 'Notify the topic starter about moving this topic',
+	'MOVE_REASON'			=> 'Reason for moving this topic',
+	'MOVE_EXPLAIN_NOTIFY'	=> 'Fill in the reason for moving this topic. The reason will be shown in the PM. This will only work if you have checked the checkbox above.',
+	'NTS_TOPIC_MOVED'		=> 'Hi,<br /><br />A topic called <strong><a href="%2$s">%1$s</a></strong> which has been started by you, has been moved to <strong><a href="%4$s">%5$s</a></strong> by a moderator or administrator.<br /><br /><strong>Reason for moving your topic:</strong> <em>%3$s</em><br /><br />Click on the following link to go to your topic:<br /><a href="%2$s">%1$s</a>',
+	'NTS_TOPIC_MOVED_SUBJECT'	=> 'Your topic has been moved',
+	'NTS_TOPIC_DELETED'		=> 'Hi,<br /><br />One of your topics called <strong>%1$s</strong> has been deleted by a moderator or administrator.<br /><br /><strong>Reason for deleting your topic:</strong> <em>%2$s</em><br /><br />Please reply this message if you\'ve got any further questions.',
+	'NTS_TOPIC_DELETE_SUBJECT'	=> 'Your topic has been deleted',
+	'NTS_TOPIC_LOCKED'		=> 'Hi,<br /><br />One of your topics called <a href="%3$s"><strong>%1$s</strong></a> has been locked by a moderator or administrator. This means you cannot reply or edit your topic anymore.<br /><br /><strong>Reason for locking your topic:</strong> <em>%2$s</em>.<br /><br />Click on the following link to go to your topic:<br /><a href="%3$s"><strong>%1$s</strong></a>',
+	'NTS_TOPIC_LOCK_SUBJECT'	=> 'Your topic has been locked',
 
 ));
 
@@ -10463,9 +10480,7 @@ $lang = array_merge($lang, array(
 	'TOPIC_STATS_EXPLAIN'		=> 'Für Foren- und Themen-Ansichten; Aktiviert in den Themen eine Leiste mit der diese einfacher Abonniert und Lesezeichen gesetzt werden können. Zudem blendet es Themenlinks und eine Statistik in der Leiste ein, z.B. wieviele das Thema abonniert haben.<br />Zusätzlich werden in Foren; Symbole mit den Gesamtzahlen über die Bookmarks, Abonnenten und Likes/Bedankungen angezeigt. <a href="http://www.phpbb9.de/neue-forum-funktionen/themen-statistik-lesezeichen-abonnenten-bedankungen-themenlinks-t42739.html" target="_blank">Mehr Informationen</a>',
 	'TITLE_USER_REMINDER'		=> 'User Reminder',
 	'TITLE_USER_REMINDER_EXPLAIN'	=> 'Hier hast du die Möglichkeit, deine Mitglieder per Mail zu erinnern, die sich nicht aktiv am Forum beteiligen.',
-));
 
-$lang = array_merge($lang, array(
 	'INACTIVE_DATE'					=> 'Inaktiv seit',
 	'INACTIVE_REASON'				=> 'Grund',
 	'INACTIVE_REASON_MANUAL'		=> 'Konto durch Administrator deaktiviert',
@@ -11445,24 +11460,19 @@ $lang = array_merge($lang, array(
 	'ONE_MONTH'		=> 'Einen Monat',
 	'ONE_YEAR'		=> 'Ein Jahr',
 	'TWO_YEARS'		=> 'Zwei Jahre',
-));
 
-$lang = array_merge($lang, array(
+
 	'ACP_SUBJECT_PREFIX'				=> 'Präfixe verwalten',
 	'ACP_SUBJECT_PREFIX_ADD'			=> 'Erstelle einen Titel Präfix',
 	'ACP_SUBJECT_PREFIX_EXPLAIN'		=> 'Auf dieser Seite können Präfixe verwaltet und erstellt werden.<br />Präfixe können für jedes Forum beliebig sortiert werden, nutze dafür die Pfeil-Buttons. Diese werden dann beim Erstellen oder Bearbeiten in dieser Reihenfolge angezeigt. Zudem können Foren nach Präfixen sortiert werden.',
 	'ACP_SUBJECT_PREFIX_ADD_EXPLAIN'	=> 'Auf dieser Seite kannst du neue Präfixe erstellen.',
 	'ACP_STATS_GENERAL_INFO'			=> 'Statistiken',
-	'ACP_SEOQUERYS'			=> 'SEO Verlauf',
-
 	'NO_PREFIXES'		=> 'Es wurden noch keine Präfixe erstellt.',
 	'NO_PREFIX_COLOUR'	=> 'Du hast keine korrekte Farbe ausgewählt',
 	'NO_PREFIX_TITLE'	=> 'Du musst einen Titel für den Präfix angeben',
-
 	'MCP_SUBJECT_PREFIX'	=> 'Präfix Moderationspanel',
-
 	'PREFIX_BOLD'					=> 'Präfix fettgedruckt',
-	'PREFIX_ITALIC'				=> 'Präfix kursiv',
+	'PREFIX_ITALIC'					=> 'Präfix kursiv',
 	'PREFIX_COLOUR'					=> 'Präfix Farbe',
 	'PREFIX_COLOUR_EXPLAIN'			=> 'Wähle eine passende Farbe für den Präfix',
 	'PREFIX_FORUMS'					=> 'Präfix Foren',
@@ -11472,38 +11482,29 @@ $lang = array_merge($lang, array(
 	'PREFIX_SUCCESSFULLY_ADDED'		=> 'Glückwunsch, der neue Präfix kann nun verwendet werden!',
 	'PREFIX_SUCCESSFULLY_EDITED'	=> 'Der Präfix wurde erfolgreich geändert!',
 	'PREFIX_TITLE'					=> 'Präfix Titel',
-
-	'SUBJECT_PREFIX'			=> 'Titel Präfix',
-	'SUBJECT_PREFIX_QUICK_MOD'	=> 'Präfix Schnellauswahl',
-	'SELECT_A_PREFIX'			=> 'Präfix Auswahl',
-));
-
-$lang = array_merge($lang, array(
-	'ACP_MANAGE_ATTACHMENTS'			=> 'Dateianhänge verwalten',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'		=> 'Hier kannst du Dateityp-Gruppen hinzufügen, ändern, entfernen oder deaktivieren. Du kannst ihnen auch eine Spezialkategorie zuweisen, den Download-Modus ändern oder auch ein Symbol festlegen, welches dann vor jedem zur Gruppe gehorenden Dateianhang angezeigt wird.',
+	'SUBJECT_PREFIX'				=> 'Titel Präfix',
+	'SUBJECT_PREFIX_QUICK_MOD'		=> 'Präfix Schnellauswahl',
+	'SELECT_A_PREFIX'				=> 'Präfix Auswahl',
+	'ACP_SEOQUERYS'					=> 'SEO Verlauf',
+	'ACP_MANAGE_ATTACHMENTS'		=> 'Dateianhänge verwalten',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Hier kannst du Dateityp-Gruppen hinzufügen, ändern, entfernen oder deaktivieren. Du kannst ihnen auch eine Spezialkategorie zuweisen, den Download-Modus ändern oder auch ein Symbol festlegen, welches dann vor jedem zur Gruppe gehorenden Dateianhang angezeigt wird.',
 	'LOG_ATTACH_DEL'				=> '<strong>Datei-Anhange gelöscht</strong><br />» %s',
 	'LOG_ATTACH_REASSIGNED'			=> '<strong>Anhang der Nachricht neu zugewiesen</strong><br />» ID %1$d - %2$s',
 	'TOTAL_SIZE'					=> 'Gesamtgröße',
 	'DOWNLOADS'					=> 'Downloads',
-	'LOG_TERM_ADD'		=> '<strong>Ein neues Wort wurde dem Lexikon hinzugefügt</strong><br />» %s',
-	'LOG_TERM_EDIT'		=> '<strong>Ein Wort aus dem Lexikon wurde geändert</strong><br />» %s',
-	'ACP_ADVENTCALENDAR'			=> 'Adventskalender',
+	'LOG_TERM_ADD'			=> '<strong>Ein neues Wort wurde dem Lexikon hinzugefügt</strong><br />» %s',
+	'LOG_TERM_EDIT'			=> '<strong>Ein Wort aus dem Lexikon wurde geändert</strong><br />» %s',
+	'ACP_ADVENTCALENDAR'	=> 'Adventskalender',
 	'ACP_RESTORE_DELETED_USERS'		=> 'Gelöschte User wiederherstellen',
-));
-
-$lang = array_merge($lang, array(
-	'BLOCK_LAYOUT'		=> 'Block Layout',
+	'BLOCK_LAYOUT'			=> 'Block Layout',
 	'BLOCK_LAYOUT_EXPLAIN'	=> 'Das Layout der Portal Blöcke kann hier vom einfachen zum grafischen Layout umgestellt werden.',
-	'BLOCK_LAYOUT_LIGHT'		=> 'Light',
+	'BLOCK_LAYOUT_LIGHT'	=> 'Light',
 	'BLOCK_LAYOUT_NORMAL'	=> 'Professionell',
-	'LOG_SHOUTBOX_RESET'		=> '<strong>Shoutbox geleert</strong>',
+	'LOG_SHOUTBOX_RESET'	=> '<strong>Shoutbox geleert</strong>',
 	'SHOUT_LIMIT'			=> 'Shoutbox täglich leeren (nur bei neuen Einträgen)',
-	'SHOUTBOX_AUTO'		=> 'Shoutbox Autoreload aktivieren?<br />Dadurch kann es sein das User online angezeigt werden obwohl sie es nicht sind',
-	'ACP_INTRO'			=> 'Intro (Startseite)',
+	'SHOUTBOX_AUTO'			=> 'Shoutbox Autoreload aktivieren?<br />Dadurch kann es sein das User online angezeigt werden obwohl sie es nicht sind',
+	'ACP_INTRO'				=> 'Intro (Startseite)',
 
-));
-
-$lang = array_merge($lang, array(
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Dateianhänge verwalten',
 	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Hier kannst du Dateityp-Gruppen hinzufügen, ändern, entfernen oder deaktivieren. Du kannst ihnen auch eine Spezialkategorie zuweisen, den Download-Modus ändern oder auch ein Symbol festlegen, welches dann vor jedem zur Gruppe gehorenden Dateianhang angezeigt wird.',
 	'TOTAL_SIZE'				=> 'Gesamtgröße',
@@ -11903,7 +11904,6 @@ $lang = array_merge($lang, array(
 
 	'LOGVIEW_VIEWALBUM'					=> 'Album anzeigen',
 	'LOGVIEW_VIEWIMAGE'					=> 'Bild anzeigen',
-
 
 	'ACP_ARCADE_PERMISSIONS'							=> 'Spiele Berechtigungen',
 	'ACP_ARCADE_PERMISSION_ROLES'						=> 'Spiele Berechtigungen Rollen',
@@ -12808,6 +12808,16 @@ $lang = array_merge($lang, array(
 
 	'FORUM_BG'	=> 'Forum-Hintergrund',
 	'FORUM_BG_EXPLAIN'	=> 'Fügt ein Hintergrundbild zum Forum hinzu.<br />z.B. http://img.userboard.org/images/forum_bg/002.gif<br /><a href="http://www.phpbb9.de/neue-forum-funktionen/forum-hintergrund-kategorie-hintergrunde-background-t42300.html" target="_blank">Weitere Infos zum Hintergrund.</a>',
+
+	'TAW_INTERVAL'					=> 'Topic Age Warning interval',
+	'TAW_INTERVAL_EXPLAIN'			=> 'Number of days, months or years after which a user will recieve the topic age warning. <strong>If set to 0, function will be disabled.</strong>',
+	'TAW_LOCK'						=> 'Lock old topic',
+	'TAW_LOCK_EXPLAIN'				=> 'If <code>Yes</code>, topics to which a user attempts to reply after the set interval will be automatically locked.',
+	'TAW_AUTHOR_EXEMPT'				=> 'Exempt author from Topic Age Warning',
+	'TAW_AUTHOR_EXEMPT_EXPLAIN'		=> 'If <code>Yes</code>, the author of the topic will be able to reply to their own topics, even after the set interval is passed.',
+	'TAW_LAST_POST'					=> 'Use Last Reply time',
+	'TAW_LAST_POST_EXPLAIN'			=> 'If <code>Yes</code>, the old topics will be determined using the time of the last reply to the topic. If <code>No</code>, old topics will be determined using the time of the topic\'s creation.',
+
 ));
 
 #######language/en/acp/groups.php#######
