@@ -667,6 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Пашыраны пошук',
 	'SEARCH_ADV_EXPLAIN'		=> 'Параметры пашыранага пошуку',
 	'SEARCH_KEYWORDS'			=> 'Ключавыя словы',
+	'SEARCH_PREFIX'				=> 'Ключавыя словы',
 	'SEARCHING_FORUMS'			=> 'Пошук у форумах',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Актыўныя тэмы',
 	'SEARCH_FOR'				=> 'Знайсці',

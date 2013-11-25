@@ -667,6 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Erweiterte Suche',
 	'SEARCH_ADV_EXPLAIN'		=> 'Zeigt die erweiterten Suchoptionen an',
 	'SEARCH_KEYWORDS'			=> 'Suche nach Wörtern',
+	'SEARCH_PREFIX'				=> 'Suche nach Wörtern',
 	'SEARCHING_FORUMS'			=> 'Durchsucht das Forum',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Aktive Themen',
 	'SEARCH_FOR'				=> 'Suche nach',
@@ -2362,20 +2363,20 @@ $lang = array_merge($lang, array(
 	'SHADOW_TOPICS_TIME'	=> 'Stunden <small>(bei 0 wird der Link nicht automatisch gelöscht)</small>',
 	'MCP_MAIN_SHADOW_FORUM_VIEW'	=> 'Shadow Topics anzeigen',
 	'DELETE_TOPIC_NOTIFY'	=> 'Notify the topic starter about deleting this topic?',
-	'DELETE_REASON'			=> 'Reason for deleting this topic',
+	'DELETE_REASON'			=> 'Grund für die Löschung des Themas',
 	'DELETE_EXPLAIN_NOTIFY'	=> 'Fill in the reason for deleting this topic. The reason will be shown in the PM. This will only work if you have checked the checkbox above.',
 	'LOCK_TOPIC_NOTIFY'		=> 'Notify the topic starter about locking this topic?',
-	'LOCK_REASON'			=> 'Reason for locking this topic',
+	'LOCK_REASON'			=> 'Grund für die Sperrung des Themas',
 	'LOCK_EXPLAIN_NOTIFY'	=> 'Fill in the reason for locking this topic. The reason will be shown in the PM. This will only work if you have checked the checkbox above.',
 	'MOVE_TOPIC_NOTIFY'		=> 'Notify the topic starter about moving this topic',
-	'MOVE_REASON'			=> 'Reason for moving this topic',
+	'MOVE_REASON'			=> 'Grund für das Verschieben des Themas',
 	'MOVE_EXPLAIN_NOTIFY'	=> 'Fill in the reason for moving this topic. The reason will be shown in the PM. This will only work if you have checked the checkbox above.',
 	'NTS_TOPIC_MOVED'		=> 'Hi,<br /><br />A topic called <strong><a href="%2$s">%1$s</a></strong> which has been started by you, has been moved to <strong><a href="%4$s">%5$s</a></strong> by a moderator or administrator.<br /><br /><strong>Reason for moving your topic:</strong> <em>%3$s</em><br /><br />Click on the following link to go to your topic:<br /><a href="%2$s">%1$s</a>',
-	'NTS_TOPIC_MOVED_SUBJECT'	=> 'Your topic has been moved',
+	'NTS_TOPIC_MOVED_SUBJECT'	=> 'Dein Thema wurde verschoben',
 	'NTS_TOPIC_DELETED'		=> 'Hi,<br /><br />One of your topics called <strong>%1$s</strong> has been deleted by a moderator or administrator.<br /><br /><strong>Reason for deleting your topic:</strong> <em>%2$s</em><br /><br />Please reply this message if you\'ve got any further questions.',
-	'NTS_TOPIC_DELETE_SUBJECT'	=> 'Your topic has been deleted',
+	'NTS_TOPIC_DELETE_SUBJECT'	=> 'Dein Thema wurde gelöscht',
 	'NTS_TOPIC_LOCKED'		=> 'Hi,<br /><br />One of your topics called <a href="%3$s"><strong>%1$s</strong></a> has been locked by a moderator or administrator. This means you cannot reply or edit your topic anymore.<br /><br /><strong>Reason for locking your topic:</strong> <em>%2$s</em>.<br /><br />Click on the following link to go to your topic:<br /><a href="%3$s"><strong>%1$s</strong></a>',
-	'NTS_TOPIC_LOCK_SUBJECT'	=> 'Your topic has been locked',
+	'NTS_TOPIC_LOCK_SUBJECT'	=> 'Dein Thema wurde gesperrt',
 
 ));
 
@@ -12811,11 +12812,11 @@ $lang = array_merge($lang, array(
 
 	'TAW_INTERVAL'					=> 'Topic Age Warning interval',
 	'TAW_INTERVAL_EXPLAIN'			=> 'Number of days, months or years after which a user will recieve the topic age warning. <strong>If set to 0, function will be disabled.</strong>',
-	'TAW_LOCK'						=> 'Lock old topic',
+	'TAW_LOCK'						=> 'Altes Thema sperren',
 	'TAW_LOCK_EXPLAIN'				=> 'If <code>Yes</code>, topics to which a user attempts to reply after the set interval will be automatically locked.',
 	'TAW_AUTHOR_EXEMPT'				=> 'Exempt author from Topic Age Warning',
 	'TAW_AUTHOR_EXEMPT_EXPLAIN'		=> 'If <code>Yes</code>, the author of the topic will be able to reply to their own topics, even after the set interval is passed.',
-	'TAW_LAST_POST'					=> 'Use Last Reply time',
+	'TAW_LAST_POST'					=> 'Benutze die Zeit der letzten Antwort',
 	'TAW_LAST_POST_EXPLAIN'			=> 'If <code>Yes</code>, the old topics will be determined using the time of the last reply to the topic. If <code>No</code>, old topics will be determined using the time of the topic\'s creation.',
 
 ));

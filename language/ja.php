@@ -667,6 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> '詳細検索',
 	'SEARCH_ADV_EXPLAIN'		=> '詳細検索ページへ移動します',
 	'SEARCH_KEYWORDS'			=> 'キーワード検索',
+	'SEARCH_PREFIX'				=> 'キーワード検索',
 	'SEARCHING_FORUMS'			=> '記事を検索中',
 	'SEARCH_ACTIVE_TOPICS'		=> '最近のトピック',
 	'SEARCH_FOR'				=> '検索',

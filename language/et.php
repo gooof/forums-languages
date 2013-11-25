@@ -667,6 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Täiendatud otsing',
 	'SEARCH_ADV_EXPLAIN'		=> 'Vaata täiendatud otsingu valikuid',
 	'SEARCH_KEYWORDS'			=> 'Otsi märksõnu',
+	'SEARCH_PREFIX'				=> 'Otsi märksõnu',
 	'SEARCHING_FORUMS'			=> 'Otsib foorumitest',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Vaata aktiivseid teemasid',
 	'SEARCH_FOR'				=> 'Otsi...',

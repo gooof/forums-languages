@@ -667,6 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'مفصل تلاش',
 	'SEARCH_ADV_EXPLAIN'		=> 'مفصل تلاش کے اختیارات کی نمائش',
 	'SEARCH_KEYWORDS'			=> 'اصطلاحات کی تلاش',
+	'SEARCH_PREFIX'				=> 'اصطلاحات کی تلاش',
 	'SEARCHING_FORUMS'			=> 'فورم میں تلاشی',
 	'SEARCH_ACTIVE_TOPICS'		=> 'فعال (ایکٹو) موضوعات دیکھیے',
 	'SEARCH_FOR'				=> 'تلاش برائے ــــ',

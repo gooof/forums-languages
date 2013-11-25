@@ -667,6 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'उन्नत खोज',
 	'SEARCH_ADV_EXPLAIN'		=> 'उन्नत खोज के विकल्प देखें',
 	'SEARCH_KEYWORDS'			=> 'कीवर्ड के लिए खोजें',
+	'SEARCH_PREFIX'				=> 'कीवर्ड के लिए खोजें',
 	'SEARCHING_FORUMS'			=> 'मंचो में खोज जारी हैं',
 	'SEARCH_ACTIVE_TOPICS'		=> 'सक्रिय विषयों को देखें ',
 	'SEARCH_FOR'				=> 'के लिए खोजें',

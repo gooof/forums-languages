@@ -86,7 +86,7 @@ Vielen Dank für deine Registrierung.
 $email = array_merge($email, array(
 	'email/birthday_email.txt' 		=> '{EMAILSUBJECT:} Herzlichen Glückwunsch zum Geburtstag!
 
-Lieber {USERNAME},
+Liebes Mitglied {USERNAME},
  
 es gibt da bei uns im Forum ein Gerücht: 
  

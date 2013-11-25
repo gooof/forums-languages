@@ -667,6 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Išplėstinė paieška',
 	'SEARCH_ADV_EXPLAIN'		=> 'Rodyti išplėstinės paieškos nustatymus',
 	'SEARCH_KEYWORDS'			=> 'Žodžio paieška',
+	'SEARCH_PREFIX'				=> 'Žodžio paieška',
 	'SEARCHING_FORUMS'			=> 'Ieško forumuose',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Peržiūrėti aktyvias temas',
 	'SEARCH_FOR'				=> 'Ieškoti',

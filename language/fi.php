@@ -667,6 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Tarkennettu haku',
 	'SEARCH_ADV_EXPLAIN'		=> 'Näytä tarkan haun vaihtoehdot',
 	'SEARCH_KEYWORDS'			=> 'Etsi avainsanoja',
+	'SEARCH_PREFIX'				=> 'Etsi avainsanoja',
 	'SEARCHING_FORUMS'			=> 'Etsimässä',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Näytä aktiiviset viestiketjut',
 	'SEARCH_FOR'				=> 'Etsi tätä',

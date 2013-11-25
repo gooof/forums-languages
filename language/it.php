@@ -667,6 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Ricerca avanzata',
 	'SEARCH_ADV_EXPLAIN'		=> 'Visualizza le opzioni di ricerca avanzata',
 	'SEARCH_KEYWORDS'			=> 'Ricerca per termini',
+	'SEARCH_PREFIX'				=> 'Ricerca per termini',
 	'SEARCHING_FORUMS'			=> 'Sta cercando nel forum',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Argomenti attivi',
 	'SEARCH_FOR'				=> 'Cerca per',

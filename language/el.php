@@ -667,6 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Ειδική αναζήτηση',
 	'SEARCH_ADV_EXPLAIN'		=> 'Δείτε την ειδική αναζήτηση',
 	'SEARCH_KEYWORDS'			=> 'Αναζήτηση για λέξεις-κλειδιά',
+	'SEARCH_PREFIX'				=> 'Αναζήτηση για λέξεις-κλειδιά',
 	'SEARCHING_FORUMS'			=> 'Αναζήτηση στις Δ. Συζητήσεις',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Προβολή ενεργών θεμάτων',
 	'SEARCH_FOR'				=> 'Αναζήτηση για',

@@ -667,6 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'گەڕانی پەرەسەندوو',
 	'SEARCH_ADV_EXPLAIN'		=> 'هەڵبژاردنە پەرەسەندووەکانی گەڕان ببینە',
 	'SEARCH_KEYWORDS'			=> 'بگەڕێ بۆ وشەکلیل',
+	'SEARCH_PREFIX'				=> 'بگەڕێ بۆ وشەکلیل',
 	'SEARCHING_FORUMS'			=> 'گەڕان لە مەکۆکان',
 	'SEARCH_ACTIVE_TOPICS'		=> 'بابەتە چالاکەکان ببینە',
 	'SEARCH_FOR'				=> 'بگەڕێ بۆ',

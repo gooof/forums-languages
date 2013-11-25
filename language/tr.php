@@ -667,6 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Gelişmiş arama',
 	'SEARCH_ADV_EXPLAIN'		=> 'Gelişmiş arama seçeneklerini görüntüle',
 	'SEARCH_KEYWORDS'			=> 'Anahtar kelimeleri ara',
+	'SEARCH_PREFIX'				=> 'Anahtar kelimeleri ara',
 	'SEARCHING_FORUMS'			=> 'Forumlar aranıyor',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Aktif başlıklar',
 	'SEARCH_FOR'				=> 'Aranacak',

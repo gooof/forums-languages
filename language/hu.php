@@ -667,6 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Részletes keresés',
 	'SEARCH_ADV_EXPLAIN'		=> 'Részletes keresés beállításainak megtekintése',
 	'SEARCH_KEYWORDS'			=> 'Kulcsszavak',
+	'SEARCH_PREFIX'				=> 'Kulcsszavak',
 	'SEARCHING_FORUMS'			=> 'Fórumok keresése',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Aktív témák',
 	'SEARCH_FOR'				=> 'Keresés',

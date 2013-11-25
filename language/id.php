@@ -667,6 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Pencarian lanjutan',
 	'SEARCH_ADV_EXPLAIN'		=> 'Lihat pilihan pencarian lanjutan',
 	'SEARCH_KEYWORDS'			=> 'Cari untuk kata kunci',
+	'SEARCH_PREFIX'				=> 'Cari untuk kata kunci',
 	'SEARCHING_FORUMS'			=> 'Pencarian forum',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Lihat topik yang aktif',
 	'SEARCH_FOR'				=> 'Cari',

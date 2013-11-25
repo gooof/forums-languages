@@ -667,6 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Tìm kiếm nâng cao',
 	'SEARCH_ADV_EXPLAIN'		=> 'Xem những lựa chọn tìm kiếm nâng cao',
 	'SEARCH_KEYWORDS'			=> 'Tìm kiếm với từ khoá',
+	'SEARCH_PREFIX'				=> 'Tìm kiếm với từ khoá',
 	'SEARCHING_FORUMS'			=> 'Đang tìm kiếm những chuyên mục',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Xem chủ đề đang hoạt động',
 	'SEARCH_FOR'				=> 'Tìm kiếm với từ khoá',

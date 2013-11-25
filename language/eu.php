@@ -667,6 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Bilaketa aurreratua',
 	'SEARCH_ADV_EXPLAIN'		=> '>Bilaketa aurreratuaren aukerak ikusi',
 	'SEARCH_KEYWORDS'			=> 'Hitz klabeak bilatu',
+	'SEARCH_PREFIX'				=> 'Hitz klabeak bilatu',
 	'SEARCHING_FORUMS'			=> 'Foroak bilatzen',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Gai aktiboak ikusi',
 	'SEARCH_FOR'				=> 'Bilatu',

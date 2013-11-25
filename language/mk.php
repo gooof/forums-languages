@@ -667,6 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Напредно барање',
 	'SEARCH_ADV_EXPLAIN'		=> 'Види ги напредните опции за барање',
 	'SEARCH_KEYWORDS'			=> 'Барај по одредени зборови',
+	'SEARCH_PREFIX'				=> 'Барај по одредени зборови',
 	'SEARCHING_FORUMS'			=> 'Барај по форуми',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Види ги активните теми',
 	'SEARCH_FOR'				=> 'Барај за',
