@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Wyszukiwanie zaawansowane',
 	'SEARCH_ADV_EXPLAIN'		=> 'Pokaż zaawansowane opcje wyszukiwania',
 	'SEARCH_KEYWORDS'			=> 'Szukaj słów kluczowych',
-	'SEARCH_PREFIX'				=> 'Szukaj słów kluczowych',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Przeszukuje forum',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Aktywne wątki',
 	'SEARCH_FOR'				=> 'Szukaj',
@@ -2764,6 +2764,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Podkreślenie: [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'Link: [url]http://adres_www[/url] or [url=http://adres_www]tekst[/url]',
 	'BUMP_ERROR'				=> 'Nie można przesunąć tego wątku w górę od razu po ostatnim poście.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Możesz usuwać tylko posty, na które jeszcze nie odpowiedziano.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Post został zablokowany. Nie możesz go edytować.',

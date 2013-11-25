@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Procura avanzada',
 	'SEARCH_ADV_EXPLAIN'		=> 'Ver as opcións avanzadas de procura',
 	'SEARCH_KEYWORDS'			=> 'Procurar por palabras clave',
-	'SEARCH_PREFIX'				=> 'Procurar por palabras clave',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Procurando foros',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Ver temas activos',
 	'SEARCH_FOR'				=> 'Procurar',
@@ -2758,6 +2758,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Subliñar texto: [u]texto[/u] (alt+u)',
 	'BBCODE_W_HELP'				=> 'Inserir URL: [url]http://url[/url] ou [url=http://url]Texto URL[/url] (alt+w)',
 	'BUMP_ERROR'				=> 'Non podes reactivar este tema tan cedo logo da última mensaxe publicada.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Sentímolo, pero só podes eliminar mensaxes que non teñan respostas.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Esta mensaxe foi bloqueada. A partires de agora xa non a poderás editar.',

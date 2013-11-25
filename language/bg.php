@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Разширено търсене',
 	'SEARCH_ADV_EXPLAIN'		=> 'Виж разширено търсене',
 	'SEARCH_KEYWORDS'			=> 'Търсене за ключови думи',
-	'SEARCH_PREFIX'				=> 'Търсене за ключови думи',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Търсене форуми',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Виж активните теми',
 	'SEARCH_FOR'				=> 'Търсене',
@@ -2749,6 +2749,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Подчертан текст: [u]текст[/u]  (alt+u)',
 	'BBCODE_W_HELP'				=> 'Добави URL адрес: [url]http://url[/url] или [url=http://url]URL текст[/url]  (alt+w)',
 	'BUMP_ERROR'				=> 'Вие не можете да избутате темата отново толкова скоро.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Вие не можете да изтривате Ваши мнения, на които е отговорено.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Мнението е заключено. Вече не можете да го променяте.',

@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'การค้นหาขั้นสูง',
 	'SEARCH_ADV_EXPLAIN'		=> 'แสดงตัวเลือกการค้นหาโดยละเอียด',
 	'SEARCH_KEYWORDS'			=> 'คีย์เวิร์ดสำหรับค้นหา',
-	'SEARCH_PREFIX'				=> 'คีย์เวิร์ดสำหรับค้นหา',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'กำลังค้นหาบอร์ด',
 	'SEARCH_ACTIVE_TOPICS'		=> 'แสดงกระทู้ที่เปิดดูแล้ว',
 	'SEARCH_FOR'				=> 'ค้นหาสำหรับ',
@@ -2766,6 +2766,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'ขีดเส้นใต้ข้อความ: [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'ใส่ URL: [url]http://url[/url] or [url=http://url]URL text[/url]',
 	'BUMP_ERROR'				=> 'คุณไม่สามารถ bump กระทู้นี้ได้ทันทีหลังจากการโพสต์ครั้งสุดท้าย',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'คุณสามารถลบโพสต์ที่ยังไม่ได้มีการตอบกลับเท่านั้น',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'ข้อความนี้ถูกล๊อก คุณไม่สามารถแก้ไขหรือลบข้อความนี้ได้',

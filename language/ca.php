@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Cerca avançada',
 	'SEARCH_ADV_EXPLAIN'		=> 'Mostra les opcions de cerca avançada',
 	'SEARCH_KEYWORDS'			=> 'Cerca paraules clau',
-	'SEARCH_PREFIX'				=> 'Cerca paraules clau',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Està cercant en els fòrums',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Mostra els temes actius',
 	'SEARCH_FOR'				=> 'Cerca',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Text subratllat: [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'Insereix una URL: [url]http://url[/url] o [url=http://url]text de l’URL[/url]',
 	'BUMP_ERROR'				=> 'No podeu reactivar aquest tema tan aviat després de la darrera entrada.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Només podeu eliminar entrades a les quals encara no s’ha respost.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Aquesta entrada ha estat bloquejada. Ja no podeu editar-la.',

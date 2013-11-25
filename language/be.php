@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Пашыраны пошук',
 	'SEARCH_ADV_EXPLAIN'		=> 'Параметры пашыранага пошуку',
 	'SEARCH_KEYWORDS'			=> 'Ключавыя словы',
-	'SEARCH_PREFIX'				=> 'Ключавыя словы',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Пошук у форумах',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Актыўныя тэмы',
 	'SEARCH_FOR'				=> 'Знайсці',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Падкрэслены тэкст: [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'Уставіць спасылку: [url]http://url[/url] або [url=http://url]URL text[/url]',
 	'BUMP_ERROR'				=> 'Вы не можаце паднімаць тэму адразу пасля апошняга паведамлення. Паспрабуйце ледзь пазней.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Выбачайце, але вы можаце выдаляць толькі паведамленні, не якія маюць адказаў.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Гэтае паведамленне было заблакавана, вы не можаце яго рэдагаваць.',

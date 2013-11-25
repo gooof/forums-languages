@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'ຊອກຫາແບບລະອຽດ',
 	'SEARCH_ADV_EXPLAIN'		=> 'ເບິ່ງຕົວເລືອກການຊອກຫາແບບລະອຽດ',
 	'SEARCH_KEYWORDS'			=> 'ຊອກຫາຄຳນີ້',
-	'SEARCH_PREFIX'				=> 'ຊອກຫາຄຳນີ້',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'ກຳລັງດຳເນີນການຊອກຫາ...',
 	'SEARCH_ACTIVE_TOPICS'		=> 'ເບິ່ງກະທູ້ທີ່ມີການໂຕ້ຕອບ',
 	'SEARCH_FOR'				=> 'ຊອກຫາ',
@@ -2751,6 +2751,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Underline text: [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'Insert URL: [url]http://url[/url] or [url=http://url]URL text[/url]',
 	'BUMP_ERROR'				=> 'You cannot bump this topic so soon after the last post.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Sorry but you may only delete posts which have not been replied to.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'ຂໍ້ຄວາມຖືກລັອກ ທ່ານບໍ່ສາມາດແກ້ໄຂ ຫລື ລືບໄດ້ອີກ',

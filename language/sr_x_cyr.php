@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Напредна претрага',
 	'SEARCH_ADV_EXPLAIN'		=> 'Преглед напредних могућности претраге',
 	'SEARCH_KEYWORDS'			=> 'Претрага по кључној речи',
-	'SEARCH_PREFIX'				=> 'Претрага по кључној речи',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Претрага форума',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Преглед активних тема',
 	'SEARCH_FOR'				=> 'Пронађи',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Подвучен текст: [u]текст[/u]',
 	'BBCODE_W_HELP'				=> 'Убаци URL: [url]http://url[/url] или [url=http://url]URL текст[/url]',
 	'BUMP_ERROR'				=> 'Не можете погурати ову тему тако брзо после задње поруке.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Жао нам је али можете брисати само поруке на које није одговорено.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Ова порука је закључана. Не можете више учитавати ту поруку.',

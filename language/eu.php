@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Bilaketa aurreratua',
 	'SEARCH_ADV_EXPLAIN'		=> '>Bilaketa aurreratuaren aukerak ikusi',
 	'SEARCH_KEYWORDS'			=> 'Hitz klabeak bilatu',
-	'SEARCH_PREFIX'				=> 'Hitz klabeak bilatu',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Foroak bilatzen',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Gai aktiboak ikusi',
 	'SEARCH_FOR'				=> 'Bilatu',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Testua azpimarratu: [u]testua[/u]  (alt+u)',
 	'BBCODE_W_HELP'				=> 'URLa txertatu: [url]http://url[/url] edo [url=http://url]URL testua[/url]  (alt+w)',
 	'BUMP_ERROR'				=> 'Oraindik ez da zure azken mezutik hona denbora tarte nahikorik igaro gai hau sustatzeko.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Barkatu baina erantzun gabeko mezuak baino ezin dituzu ezabatu.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Mezu hau itxi egin da. Ezin dezakezu aldatu.',

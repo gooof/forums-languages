@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Recherche avancée',
 	'SEARCH_ADV_EXPLAIN'		=> 'Accéder aux options de la recherche avancée',
 	'SEARCH_KEYWORDS'			=> 'Rechercher par mots-clés ',
-	'SEARCH_PREFIX'				=> 'Rechercher par mots-clés ',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Recherche dans les forums',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Consulter les sujets actifs',
 	'SEARCH_FOR'				=> 'Recherche de ',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Souligner un texte : [u]texte[/u]',
 	'BBCODE_W_HELP'				=> 'Insérer un lien : [url]http://lien[/url] ou [url=http://lien]texte du lien[/url]',
 	'BUMP_ERROR'				=> 'Vous ne pouvez pas remonter ce sujet aussitôt après en avoir publié un.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Vous ne pouvez pas supprimer les messages qui comportent une ou plusieurs réponses.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Ce message a été verrouillé, vous ne pouvez désormais plus l’éditer.',

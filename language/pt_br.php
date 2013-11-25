@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Pesquisa avançada',
 	'SEARCH_ADV_EXPLAIN'		=> 'Ver as opções da pesquisa avançada',
 	'SEARCH_KEYWORDS'			=> 'Pesquisar por palavras-chaves',
-	'SEARCH_PREFIX'				=> 'Pesquisar por palavras-chaves',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Pesquisando nos fóruns',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Pesquisar por tópicos ativos',
 	'SEARCH_FOR'				=> 'Procurar por',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Sublinhado: [u]texto[/u]',
 	'BBCODE_W_HELP'				=> 'Inserir URL: [url]http://url[/url] ou [url=http://url]texto da URL[/url]  (alt+w)',
 	'BUMP_ERROR'				=> 'Você não pode ressuscitar este tópico logo após uma última mensagem recente.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Você pode apenas excluir mensagens que não tenham recebido respostas.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Esta mensagem está trancada. Você não pode mais editar a mensagem.',

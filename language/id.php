@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Pencarian lanjutan',
 	'SEARCH_ADV_EXPLAIN'		=> 'Lihat pilihan pencarian lanjutan',
 	'SEARCH_KEYWORDS'			=> 'Cari untuk kata kunci',
-	'SEARCH_PREFIX'				=> 'Cari untuk kata kunci',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Pencarian forum',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Lihat topik yang aktif',
 	'SEARCH_FOR'				=> 'Cari',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Huruf bergaris bawah: [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'Masukkan URL: [url]http://url[/url] or [url=http://url]URL text[/url]',
 	'BUMP_ERROR'				=> 'Anda tidak dapat menggeser topik ini sebagimana adanya setelah pos terakhir.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Maaf anda hanya dapat menghapus pos yang belum dibalas.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Pos ini sudah dikunci. Anda tidak lagi bisa mengubahnya.',

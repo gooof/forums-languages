@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Pesquisa avançada',
 	'SEARCH_ADV_EXPLAIN'		=> 'Ver opções avançadas de pesquisa',
 	'SEARCH_KEYWORDS'			=> 'Palavra-Chave',
-	'SEARCH_PREFIX'				=> 'Palavra-Chave',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Pesquisando nos Fóruns',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Ver Tópicos ativos',
 	'SEARCH_FOR'				=> 'Pesquisar por',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Texto Sublinhado: [u]texto[/u]  (alt+u)',
 	'BBCODE_W_HELP'				=> 'Inserir URL: [url]http://url[/url] ou [url=http://url]texto da URL[/url]  (alt+w)',
 	'BUMP_ERROR'				=> 'Não pode ressuscitar este Tópico com uma última Mensagem tão recente.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Não pode pode apagar Mensagens que não foram respondidas.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Esta Mensagem foi bloqueada. Não pode pode editá-la.',

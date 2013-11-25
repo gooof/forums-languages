@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Täiendatud otsing',
 	'SEARCH_ADV_EXPLAIN'		=> 'Vaata täiendatud otsingu valikuid',
 	'SEARCH_KEYWORDS'			=> 'Otsi märksõnu',
-	'SEARCH_PREFIX'				=> 'Otsi märksõnu',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Otsib foorumitest',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Vaata aktiivseid teemasid',
 	'SEARCH_FOR'				=> 'Otsi...',
@@ -2708,6 +2708,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Allajoonitud tekst: [u]tekst[/u]',
 	'BBCODE_W_HELP'				=> 'Sisesta URL: [url]http://url[/url] või [url=http://url]URL\'i tekst[/url]',
 	'BUMP_ERROR'				=> 'Sa ei saa tõsta teemat nii kiiresti peale viimast postitust.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Sa võid ainult kustutada postitusi, millele pole vastatud',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'See postitus on suletud. Sa ei saa enam seda muuta.',

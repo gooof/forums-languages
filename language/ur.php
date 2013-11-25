@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'مفصل تلاش',
 	'SEARCH_ADV_EXPLAIN'		=> 'مفصل تلاش کے اختیارات کی نمائش',
 	'SEARCH_KEYWORDS'			=> 'اصطلاحات کی تلاش',
-	'SEARCH_PREFIX'				=> 'اصطلاحات کی تلاش',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'فورم میں تلاشی',
 	'SEARCH_ACTIVE_TOPICS'		=> 'فعال (ایکٹو) موضوعات دیکھیے',
 	'SEARCH_FOR'				=> 'تلاش برائے ــــ',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'خط کشیدہ عبارت:‌ [u]ٹیکسٹ[/u]',
 	'BBCODE_W_HELP'				=> 'URL داخلہ:‌ [url]http://url[/url] یا [url=http://url] URL ٹیکسٹ[/url]',
 	'BUMP_ERROR'				=> 'آپ اس موضوع کے آخری پوسٹ کے بعد نشر اتنی جلدی نہیں کر سکتے.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'معاف کیجئے گا آپ صرف وہ پوسٹس خارج کر سکتے ہیں جنکا جواب نہیں دیا گیا.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'اس پوسٹ کو بند کر دیا گیا ہے. آپ اس میں ترمیم نہیں کر سکتے.',

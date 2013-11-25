@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Kërkim i avancuar',
 	'SEARCH_ADV_EXPLAIN'		=> 'Shiko opsionet e kërkimit të avancuar',
 	'SEARCH_KEYWORDS'			=> 'Kërko për fjalë kyçe',
-	'SEARCH_PREFIX'				=> 'Kërko për fjalë kyçe',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Duke kërkuar forumet',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Temat më aktive',
 	'SEARCH_FOR'				=> 'Kërko për',
@@ -2751,6 +2751,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Nënvizo tekstin: [u]tekst[/u]',
 	'BBCODE_W_HELP'				=> 'Shto URL: [url]http://url[/url] or [url=http://url]URL tekst[/url]',
 	'BUMP_ERROR'				=> 'Ju nuk mund të lëvizni sipër këtë temë kaq shpejt pas postimit të fundit.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Më vjen keq, ju mund të fshini vetëm postimet që nuk u janë përgjigjur.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Ky postim është mbyllur. Ju nuk mund të modifikoni këtë postim.',

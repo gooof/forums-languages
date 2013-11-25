@@ -669,7 +669,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'جستجوي پيشرفته',
 	'SEARCH_ADV_EXPLAIN'		=> 'مشاهده تنظيمات جستجوي پيشرفته',
 	'SEARCH_KEYWORDS'			=> 'جستجو براي کلمات کليدي',
-	'SEARCH_PREFIX'				=> 'جستجو براي کلمات کليدي',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Searching forums',
 	'SEARCH_ACTIVE_TOPICS'		=> 'نمايش مبحث هاي فعال',
 	'SEARCH_FOR'				=> 'جستجو براي',
@@ -2853,6 +2853,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'نوشته زيرخط دار : [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'ايجاد URL : [url]http://url[/url] or [url=http://url]URL text[/url]',
 	'BUMP_ERROR'				=> 'شما نمی توانید پس از آخرین پست به این سرعت اغدام کنید',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'شما ممکن است پست هایی را که به آنها پاسخ نداده اید را حذف کنید',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'اين پست بسته شده است.شما نمي توانيد آنرا ويرايش کنيد.',

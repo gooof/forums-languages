@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Napredno iskanje',
 	'SEARCH_ADV_EXPLAIN'		=> 'Možnosti naprednega iskanja',
 	'SEARCH_KEYWORDS'			=> 'Iskanje po ključnih besedah',
-	'SEARCH_PREFIX'				=> 'Iskanje po ključnih besedah',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Iščem po forumu',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Poglej aktivne teme',
 	'SEARCH_FOR'				=> 'Išči za',
@@ -2761,6 +2761,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Podčrtano besedilo: [u]besedilo[/u]',
 	'BBCODE_W_HELP'				=> 'Vstavi URL: [url]http://url[/url] or [url=http://url]besedilo povezave[/url]',
 	'BUMP_ERROR'				=> 'Te teme ne morete obuditi tako kmalu po zadnjem prispevku.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Oprostite, vendar lahko brišete samo teme, na katere še ni bilo prispevkov.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Ta prispevek je bil zaklenjen. Ne morete ga več urejati.',

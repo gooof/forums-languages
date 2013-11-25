@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Napredna pretraga',
 	'SEARCH_ADV_EXPLAIN'		=> 'Pogledan napredne opcije pretrage',
 	'SEARCH_KEYWORDS'			=> 'Traži ključne reči',
-	'SEARCH_PREFIX'				=> 'Traži ključne reči',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Pretraga foruma',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Pogledaj aktivne teme',
 	'SEARCH_FOR'				=> 'Pronađi',
@@ -2739,6 +2739,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Podvučeni tekst: [u]tekst[/u]  (alt+u)',
 	'BBCODE_W_HELP'				=> 'Ubaci link: [url]http://url[/url] ili [url=http://url]URL tekst[/url]  (alt+w)',
 	'BUMP_ERROR'				=> 'Ne možete tako brzo maknuti ovu temu posle zadnjeg posta.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Žao nam je ali možete brisati samo poostove na koje nije odgovoreno.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Ovaj post je zaključan. Ne možete više menjati ovaj post.',

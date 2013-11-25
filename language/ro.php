@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Căutare avansată',
 	'SEARCH_ADV_EXPLAIN'		=> 'Vezi opţiuni căutare avansată',
 	'SEARCH_KEYWORDS'			=> 'Căutare după cuvinte cheie',
-	'SEARCH_PREFIX'				=> 'Căutare după cuvinte cheie',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Căutare forumuri',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Vezi subiecte active',
 	'SEARCH_FOR'				=> 'Căutare după',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Text subliniat: [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'Adaugă URL: [url]http://url[/url] sau [url=http://url]text URL[/url]',
 	'BUMP_ERROR'				=> 'Nu puteţi readuce subiectul acesta în atenţie atât de curând de la ultimul mesaj.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Ne pare rău, dar puteţi şterge numai mesajele la care nu s-a răspuns.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Acest mesaj a fost închis. Nu mai puteţi modifica mesajul.',

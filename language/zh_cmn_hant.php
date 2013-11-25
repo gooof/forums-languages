@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> '進階搜尋',
 	'SEARCH_ADV_EXPLAIN'		=> '檢視進階搜尋選項',
 	'SEARCH_KEYWORDS'			=> '搜尋關鍵字',
-	'SEARCH_PREFIX'				=> '搜尋關鍵字',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> '搜尋版面',
 	'SEARCH_ACTIVE_TOPICS'		=> '檢視最近討論的主題',
 	'SEARCH_FOR'				=> '搜尋',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> '底線：[u]text[/u]',
 	'BBCODE_W_HELP'				=> '插入連結：[url]http://url[/url] 或 [url=http://url]URL text[/url]',
 	'BUMP_ERROR'				=> '您不能在發表後馬上進行推文。',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> '很抱歉！您只能刪除尚無回覆的文章。',
 	'CANNOT_EDIT_POST_LOCKED'	=> '這篇文章已經被鎖定，您不能編輯它。',

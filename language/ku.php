@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'گەڕانی پەرەسەندوو',
 	'SEARCH_ADV_EXPLAIN'		=> 'هەڵبژاردنە پەرەسەندووەکانی گەڕان ببینە',
 	'SEARCH_KEYWORDS'			=> 'بگەڕێ بۆ وشەکلیل',
-	'SEARCH_PREFIX'				=> 'بگەڕێ بۆ وشەکلیل',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'گەڕان لە مەکۆکان',
 	'SEARCH_ACTIVE_TOPICS'		=> 'بابەتە چالاکەکان ببینە',
 	'SEARCH_FOR'				=> 'بگەڕێ بۆ',
@@ -2752,6 +2752,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'دەقی هەڵ بە ژێردا هاتوو: [u]دەق[/u]',
 	'BBCODE_W_HELP'				=> 'تێکردنی URL: [url]http://url[/url] یان [url=http://url]دەقی URL[/url]',
 	'BUMP_ERROR'				=> 'ناتوانی ئەوەندە زوو لەم پەیامە بدەیت لە دوای پەیامی پێشوو.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'ببورە بەڵام تۆ تەنها دەتوانیت ئێو پەیامانە بسڕیتەوە کە وەڵامیان نەدراوەتەوە.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'ئێم پەیامە داخراوە. چیتر ناتوانیت دەستکاری بکەیت.',

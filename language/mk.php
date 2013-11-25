@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Напредно барање',
 	'SEARCH_ADV_EXPLAIN'		=> 'Види ги напредните опции за барање',
 	'SEARCH_KEYWORDS'			=> 'Барај по одредени зборови',
-	'SEARCH_PREFIX'				=> 'Барај по одредени зборови',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Барај по форуми',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Види ги активните теми',
 	'SEARCH_FOR'				=> 'Барај за',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Подцртан текст: [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'Insert URL: [url]http://url[/url] or [url=http://url]URL text[/url]',
 	'BUMP_ERROR'				=> 'Неможете да потсетите на оваа тема толку брзо по последното мислење.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Вие не можете да избришите мислења на кои е веќе одговорено.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Мислењето е заклучено. Не може повеќе да го менувате.',

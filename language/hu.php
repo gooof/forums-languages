@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Részletes keresés',
 	'SEARCH_ADV_EXPLAIN'		=> 'Részletes keresés beállításainak megtekintése',
 	'SEARCH_KEYWORDS'			=> 'Kulcsszavak',
-	'SEARCH_PREFIX'				=> 'Kulcsszavak',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Fórumok keresése',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Aktív témák',
 	'SEARCH_FOR'				=> 'Keresés',
@@ -2759,6 +2759,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Aláhúzás: [u]szöveg[/u]',
 	'BBCODE_W_HELP'				=> 'Link: [url]http://url[/url] vagy [url=http://url]link szöveg[/url]',
 	'BUMP_ERROR'				=> 'Nem ugraszthatod előre a témát, mivel az utolsó hozzászólás nemrég került elküldésre.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Csak olyan hozzászólást törölhetsz, melyre még nem érkezett válasz.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'A hozzászólás lezárásra került. Már nem szerkesztheted ezt a hozzászólást.',

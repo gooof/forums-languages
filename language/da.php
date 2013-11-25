@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Avanceret søgning',
 	'SEARCH_ADV_EXPLAIN'		=> 'Vis avancerede søgemuligheder',
 	'SEARCH_KEYWORDS'			=> 'Søg efter nøgleord',
-	'SEARCH_PREFIX'				=> 'Søg efter nøgleord',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Søger fora',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Vis aktive emner',
 	'SEARCH_FOR'				=> 'Søg efter',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Understreg tekst: [u]tekst[/u]',
 	'BBCODE_W_HELP'				=> 'Indsæt URL: [url]http://url[/url] eller [url=http://url]URL-tekst[/url]',
 	'BUMP_ERROR'				=> 'Du kan ikke placere emnet øverst så hurtigt efter sidste indlæg.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Beklager, men du kan kun slette indlæg der ikke er blevet besvaret.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Dette indlæg er blevet låst. Du kan ikke længere redigere dette indlæg.',

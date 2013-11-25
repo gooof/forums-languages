@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Ειδική αναζήτηση',
 	'SEARCH_ADV_EXPLAIN'		=> 'Δείτε την ειδική αναζήτηση',
 	'SEARCH_KEYWORDS'			=> 'Αναζήτηση για λέξεις-κλειδιά',
-	'SEARCH_PREFIX'				=> 'Αναζήτηση για λέξεις-κλειδιά',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Αναζήτηση στις Δ. Συζητήσεις',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Προβολή ενεργών θεμάτων',
 	'SEARCH_FOR'				=> 'Αναζήτηση για',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Υπογραμμισμένο κείμενο: [u]κείμενο[/u]',
 	'BBCODE_W_HELP'				=> 'Προσθήκη συνδέσμου: [url]http://σύνδεσμος[/url] ή [url=http://σύνδεσμος]URL κείμενο[/url]',
 	'BUMP_ERROR'				=> 'Δεν μπορείτε να σημειώσετε αυτό το θέμα τόσο γρήγορα ως νέο μετά την τελευταία δημοσίευση.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Μπορείτε να διαγράψετε μόνο θέματα που δεν έχουν ακόμη απαντηθεί.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Το θέμα αυτό έχει κλειδωθεί, έτσι εσείς δεν μπορείτε να το επεξεργαστείτε πλέον άλλο.',

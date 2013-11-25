@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> '詳細検索',
 	'SEARCH_ADV_EXPLAIN'		=> '詳細検索ページへ移動します',
 	'SEARCH_KEYWORDS'			=> 'キーワード検索',
-	'SEARCH_PREFIX'				=> 'キーワード検索',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> '記事を検索中',
 	'SEARCH_ACTIVE_TOPICS'		=> '最近のトピック',
 	'SEARCH_FOR'				=> '検索',
@@ -2773,6 +2773,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'アンダーライン（下線）: [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'ハイパーリンク: [url]http://url[/url] または [url=http://url]URL text[/url]',
 	'BUMP_ERROR'				=> 'トピックに記事が投稿されて間もないため、しばらく時間が経つまでトピックを上げることはできません',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> '既に返信された記事を削除することはできません',
 	'CANNOT_EDIT_POST_LOCKED'	=> '凍結されているため記事を編集することはできません',

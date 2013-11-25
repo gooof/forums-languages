@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Tìm kiếm nâng cao',
 	'SEARCH_ADV_EXPLAIN'		=> 'Xem những lựa chọn tìm kiếm nâng cao',
 	'SEARCH_KEYWORDS'			=> 'Tìm kiếm với từ khoá',
-	'SEARCH_PREFIX'				=> 'Tìm kiếm với từ khoá',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Đang tìm kiếm những chuyên mục',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Xem chủ đề đang hoạt động',
 	'SEARCH_FOR'				=> 'Tìm kiếm với từ khoá',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Văn bản gạch chân: [u]văn bản muốn gạch chân[/u]',
 	'BBCODE_W_HELP'				=> 'Chèn địa chỉ URL: [url]http://địa chỉ URL[/url] hoặc [url=http://địa chỉ URL]Tên liên kết URL[/url] (Phím tắt: Alt + W)',
 	'BUMP_ERROR'				=> 'Bạn không thể đẩy chủ đề này liên tục cùng lúc được.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Xin lỗi, bạn chỉ có thể xoá những bài viết chưa được trả lời.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Bài viết này đã bị khoá. Bạn không thể sửa bài viết này.',

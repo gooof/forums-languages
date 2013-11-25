@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'उन्नत खोज',
 	'SEARCH_ADV_EXPLAIN'		=> 'उन्नत खोज के विकल्प देखें',
 	'SEARCH_KEYWORDS'			=> 'कीवर्ड के लिए खोजें',
-	'SEARCH_PREFIX'				=> 'कीवर्ड के लिए खोजें',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'मंचो में खोज जारी हैं',
 	'SEARCH_ACTIVE_TOPICS'		=> 'सक्रिय विषयों को देखें ',
 	'SEARCH_FOR'				=> 'के लिए खोजें',
@@ -2758,6 +2758,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'अक्षर उन्डरलाइन करेंUnderline text: [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'URL डाले: [url]http://url[/url] or [url=http://url]URL text[/url]',
 	'BUMP_ERROR'				=> 'आप इस विषय को अंतिम स्तम्भ के बाद इतने जल्दी उछाल नहीं सकते.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Sorry but you may only delete posts which have not been replied to.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'This post has been locked. You can no longer edit that post.',

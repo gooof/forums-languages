@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'חיפוש מתקדם',
 	'SEARCH_ADV_EXPLAIN'		=> 'צפה באפשרויות החיפוש המתקדם',
 	'SEARCH_KEYWORDS'			=> 'חיפוש מילות מפתח',
-	'SEARCH_PREFIX'				=> 'חיפוש מילות מפתח',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'מחפש בפורומים',
 	'SEARCH_ACTIVE_TOPICS'		=> 'הצג נושאים פעילים',
 	'SEARCH_FOR'				=> 'חפש',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'טקסט עם קו תחתון: [u]טקסט[/u]',
 	'BBCODE_W_HELP'				=> 'הוספת כתובת: [url]כתובת[/url] או [url=כתובת]טקסט לקישור[/url]',
 	'BUMP_ERROR'				=> 'אתה לא יכול להקפיץ נושא זה בזמן קצר כל כך מאז ההודעה האחרונה.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'סליחה אך אתה יכול למחוק רק הודעות שלא קיבלו תגובה.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'הודעה זו ננעלה. אתה לא יכול לערוך יותר את ההודעה.',

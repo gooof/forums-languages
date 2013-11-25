@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Išplėstinė paieška',
 	'SEARCH_ADV_EXPLAIN'		=> 'Rodyti išplėstinės paieškos nustatymus',
 	'SEARCH_KEYWORDS'			=> 'Žodžio paieška',
-	'SEARCH_PREFIX'				=> 'Žodžio paieška',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Ieško forumuose',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Peržiūrėti aktyvias temas',
 	'SEARCH_FOR'				=> 'Ieškoti',
@@ -2753,6 +2753,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Pabrauktas tekstas: [u]tekstas[/u]',
 	'BBCODE_W_HELP'				=> 'URL įtraukimas: [url]http://url[/url] arba [url=http://url]Tekstas apie URL[/url]',
 	'BUMP_ERROR'				=> 'Jūs negalite taip greitai rašyti kito pranešimo.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Jūs galite ištrinti tik tuos pranešimus į kuriuos nėra atsakyta.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Šis pranešimas buvo užrakintas. Jus nebegalite jo redaguoti.',

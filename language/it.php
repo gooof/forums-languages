@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Ricerca avanzata',
 	'SEARCH_ADV_EXPLAIN'		=> 'Visualizza le opzioni di ricerca avanzata',
 	'SEARCH_KEYWORDS'			=> 'Ricerca per termini',
-	'SEARCH_PREFIX'				=> 'Ricerca per termini',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Sta cercando nel forum',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Argomenti attivi',
 	'SEARCH_FOR'				=> 'Cerca per',
@@ -2758,6 +2758,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Sottolineato: [u]testo[/u]',
 	'BBCODE_W_HELP'				=> 'Collegamento: [url]http://url[/url] o [url=http://url]testo aggiuntivo[/url]',
 	'BUMP_ERROR'				=> 'Non puoi fare il bump di questo argomento così presto dopo l’ultimo messaggio.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Puoi cancellare solo i messaggi che non hanno avuto risposte.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Questo messaggio è stato bloccato. Non puoi modificarlo.',

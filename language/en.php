@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Advanced search',
 	'SEARCH_ADV_EXPLAIN'		=> 'View the advanced search options',
 	'SEARCH_KEYWORDS'			=> 'Search for keywords',
-	'SEARCH_PREFIX'				=> 'Search for keywords',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Searching forums',
 	'SEARCH_ACTIVE_TOPICS'		=> 'View active topics',
 	'SEARCH_FOR'				=> 'Search for',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Underline text: [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'Insert URL: [url]http://url[/url] or [url=http://url]URL text[/url]',
 	'BUMP_ERROR'				=> 'You cannot bump this topic so soon after the last post.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Sorry but you may only delete posts which have not been replied to.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'This post has been locked. You can no longer edit that post.',

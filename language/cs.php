@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Advanced search',
 	'SEARCH_ADV_EXPLAIN'		=> 'View the advanced search options',
 	'SEARCH_KEYWORDS'			=> 'Search for keywords',
-	'SEARCH_PREFIX'				=> 'Search for keywords',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Searching forums',
 	'SEARCH_ACTIVE_TOPICS'		=> 'View active topics',
 	'SEARCH_FOR'				=> 'Search for',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Podtržené: [u]text[/u]  (Alt + U)',
 	'BBCODE_W_HELP'				=> 'Vložit URL: [url]http://url[/url] nebo [url=http://url]text URL[/url]  (Alt + W)',
 	'BUMP_ERROR'				=> 'Nemůžete oživit téma tak brzy po odeslání předchozího příspěvku.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Omlouváme se, ale můžete mazat jen příspěvky, na které ještě nebylo odpovězeno.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Tento příspěvek byl zamknutý. Nemůžete tento příspěvek upravit.',

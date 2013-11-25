@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Розширений пошук',
 	'SEARCH_ADV_EXPLAIN'		=> 'Налаштування розширеного пошуку',
 	'SEARCH_KEYWORDS'			=> 'Пошук за ключовими словами',
-	'SEARCH_PREFIX'				=> 'Пошук за ключовими словами',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Пошук в форумах',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Активні теми',
 	'SEARCH_FOR'				=> 'Знайти',
@@ -2759,6 +2759,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Підкреслений текст: [u]текст[/u]  (alt+u)',
 	'BBCODE_W_HELP'				=> 'Вставити URL: [url]http://url[/url] чи [url=http://url]URL text[/url]  (alt+w)',
 	'BUMP_ERROR'				=> 'Ви не можете піднімати цю тему відразу після останнього повідомлення.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Вибачте, але ви можете видаляти лише ті повідомлення, на які ще надійшли відповіді.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Це повідомлення заблоковане. Ви більше не можете редагувати це повідомлення.',

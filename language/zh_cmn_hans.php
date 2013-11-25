@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> '高级搜索',
 	'SEARCH_ADV_EXPLAIN'		=> '查看高级搜索选项',
 	'SEARCH_KEYWORDS'			=> '按关键词搜索',
-	'SEARCH_PREFIX'				=> '按关键词搜索',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> '查找版面',
 	'SEARCH_ACTIVE_TOPICS'		=> '查看活跃的主题',
 	'SEARCH_FOR'				=> '查找',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> '下划线：[u]text[/u]  (alt+u)',
 	'BBCODE_W_HELP'				=> '插入链接：[url]http://url[/url] or [url=http://url]URL text[/url]  (alt+w)',
 	'BUMP_ERROR'				=> '您不能在发表后这么快就推举文章。',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> '对不起，您只能删除尚无回复的话题。',
 	'CANNOT_EDIT_POST_LOCKED'	=> '这篇帖子已经被锁定，您不能编辑它。',

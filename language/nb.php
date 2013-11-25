@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Avansert søk',
 	'SEARCH_ADV_EXPLAIN'		=> 'Se de avanserte søkevalgene',
 	'SEARCH_KEYWORDS'			=> 'Søk etter nøkkelord',
-	'SEARCH_PREFIX'				=> 'Søk etter nøkkelord',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Søker i forumene',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Se aktive emner',
 	'SEARCH_FOR'				=> 'Søk etter',
@@ -2724,6 +2724,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Understreket tekst: [u]tekst[/u]  (alt u)',
 	'BBCODE_W_HELP'				=> 'Sett inn URL: [url]http://url[/url] eller [url=http://url]URL tekst[/url]  (alt w)',
 	'BUMP_ERROR'				=> 'Du kan ikke bumpe dette emnet så raskt etter det forrige innlegget.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Du kan ikke slette innlegg som er svart på.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Emnet er stengt. Du kan ikke endre det lenger.',

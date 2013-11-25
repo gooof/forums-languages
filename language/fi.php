@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Tarkennettu haku',
 	'SEARCH_ADV_EXPLAIN'		=> 'Näytä tarkan haun vaihtoehdot',
 	'SEARCH_KEYWORDS'			=> 'Etsi avainsanoja',
-	'SEARCH_PREFIX'				=> 'Etsi avainsanoja',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Etsimässä',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Näytä aktiiviset viestiketjut',
 	'SEARCH_FOR'				=> 'Etsi tätä',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Alleviivaus: [u]Teksti[/u]',
 	'BBCODE_W_HELP'				=> 'Lisää URL: [url]http://url[/url] tai [url=http://url]Linkin teksti[/url]',
 	'BUMP_ERROR'				=> 'Et voi tönäistä tätä viestiketjua näin pian edellisen viestin jälkeen.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Pahoittelut, mutta voit poistaa vain ne viestit, joihin ei ole vastattu.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Viesti on lukittu. Et voi muokata viestiä.',

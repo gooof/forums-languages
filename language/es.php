@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Búsqueda avanzada',
 	'SEARCH_ADV_EXPLAIN'		=> 'Ver opciones de búsqueda avanzada',
 	'SEARCH_KEYWORDS'			=> 'Buscar palabras clave',
-	'SEARCH_PREFIX'				=> 'Buscar palabras clave',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Buscando Foros',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Ver temas activos',
 	'SEARCH_FOR'				=> 'Buscar',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Texto subrayado: [u]texto[/u]  (alt+u)',
 	'BBCODE_W_HELP'				=> 'Insertar URL: [url]http://url[/url] ó [url=http://url]URL texto[/url]  (alt+w)',
 	'BUMP_ERROR'				=> 'No puede activar este tema tan pronto.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Disculpe, solamente puede borrar mensajes que no hayan sido respondidos.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Este mensaje ha sido cerrado. Ya no puede editar este mensaje.',

@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'بحث متقدم',
 	'SEARCH_ADV_EXPLAIN'		=> 'عرض خيارات البحث المتقدم',
 	'SEARCH_KEYWORDS'			=> 'البحث عن الكلمات',
-	'SEARCH_PREFIX'				=> 'البحث عن الكلمات',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'بحث المنتديات',
 	'SEARCH_ACTIVE_TOPICS'		=> 'المواضيع النشطة',
 	'SEARCH_FOR'				=> 'البحث عن',
@@ -2754,6 +2754,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'تسطير: [u]النص[/u]',
 	'BBCODE_W_HELP'				=> 'عنوان الويب: [url]http://url[/url] أو [url=http://url]URL text[/url]',
 	'BUMP_ERROR'				=> 'لا يمكنك إرسال مشاركة بهذه السرعة فانتظر قليلاً',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'يمكنك حذف المواضيع التي لم يرد عليها فقط',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'هذا الموضوع مغلق. لا يمكنك الرد',

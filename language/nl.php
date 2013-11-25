@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Uitgebreid zoeken',
 	'SEARCH_ADV_EXPLAIN'		=> 'Toon de geavanceerde zoekopties',
 	'SEARCH_KEYWORDS'			=> 'Zoek naar trefwoorden',
-	'SEARCH_PREFIX'				=> 'Zoek naar trefwoorden',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Zoeken in forums',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Toon actieve onderwerpen',
 	'SEARCH_FOR'				=> 'Zoek naar',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Onderstreepte tekst: [u]tekst[/u]',
 	'BBCODE_W_HELP'				=> 'URL: [url]http://url[/url] of [url=http://url]URL tekst[/url]',
 	'BUMP_ERROR'				=> 'Je kunt dit onderwerp niet zo snel na het laatste bericht bumpen.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Je kunt alleen berichten verwijderen waarop nog niet is gereageerd.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Dit bericht is gesloten. Je kunt het daarom niet meer bewerken.',

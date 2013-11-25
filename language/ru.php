@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Расширенный поиск',
 	'SEARCH_ADV_EXPLAIN'		=> 'Параметры расширенного поиска',
 	'SEARCH_KEYWORDS'			=> 'Ключевые слова',
-	'SEARCH_PREFIX'				=> 'Ключевые слова',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Поиск в форумах',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Активные темы',
 	'SEARCH_FOR'				=> 'Найти',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Подчёркнутый текст: [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'Вставить ссылку: [url]http://url[/url] или [url=http://url]URL text[/url]',
 	'BUMP_ERROR'				=> 'Вы не можете поднимать тему сразу после последнего сообщения. Попробуйте чуть позже.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Извините, но вы можете удалять только сообщения, не имеющие ответов.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Это сообщение было заблокировано, вы не можете его редактировать.',

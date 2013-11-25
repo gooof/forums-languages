@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Pokročilé hľadanie',
 	'SEARCH_ADV_EXPLAIN'		=> 'Zobraziť možnosti pokročilého hľadania',
 	'SEARCH_KEYWORDS'			=> 'Hľadať kľúčové slová',
-	'SEARCH_PREFIX'				=> 'Hľadať kľúčové slová',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Prehľadáva fórum',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Zobraziť aktívne témy',
 	'SEARCH_FOR'				=> 'Hľadať',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Podčiarknuté: [u]text[/u]  (alt+u)',
 	'BBCODE_W_HELP'				=> 'Vložiť odkaz: [url]http://odkaz[/url] alebo [url=http://odkaz]text[/url]  (alt+w)',
 	'BUMP_ERROR'				=> 'Nemôžete odoslať nový príspevok tak skoro po predchádzajúcom príspevku, chvíľu počkajte a skúste to znova.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Prepáčte, ale môžete odstraňovať iba príspevky, na ktoré ešte nebola zaslaná odpoveď.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Tento príspevok bol zamknutý, už ho nemôžete upravovať.',

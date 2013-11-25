@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Gelişmiş arama',
 	'SEARCH_ADV_EXPLAIN'		=> 'Gelişmiş arama seçeneklerini görüntüle',
 	'SEARCH_KEYWORDS'			=> 'Anahtar kelimeleri ara',
-	'SEARCH_PREFIX'				=> 'Anahtar kelimeleri ara',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Forumlar aranıyor',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Aktif başlıklar',
 	'SEARCH_FOR'				=> 'Aranacak',
@@ -2760,6 +2760,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Altı çizgili yazı: [u]metin[/u]',
 	'BBCODE_W_HELP'				=> 'URL Ekle: [url]http://url[/url] veya [url=http://url]URL metni[/url]',
 	'BUMP_ERROR'				=> 'Son mesajınızdan bu kadar kısa bir süre içinde bu başlığı darbeleyemezsiniz.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Üzgünüz, fakat sadece cevap gelmeyen mesajları silebilirsiniz.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Bu mesaj kilitlendi. Bu yüzden düzenleyemezsiniz.',

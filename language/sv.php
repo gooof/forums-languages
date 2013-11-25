@@ -667,7 +667,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Avancerad sökning',
 	'SEARCH_ADV_EXPLAIN'		=> 'Visa avancerade sökalternativ',
 	'SEARCH_KEYWORDS'			=> 'Sök efter nyckelord',
-	'SEARCH_PREFIX'				=> 'Sök efter nyckelord',
+	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Söker på forumet',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Visa aktiva trådar',
 	'SEARCH_FOR'				=> 'Sök efter',
@@ -2749,6 +2749,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_U_HELP'				=> 'Understruken text: [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'Infoga länk: [url]http://url[/url] eller [url=http://url]Länktext[/url]',
 	'BUMP_ERROR'				=> 'Du kan inte knuffa upp denna tråd ännu.',
+	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
 	'CANNOT_DELETE_REPLIED'		=> 'Du kan endast ta bort inlägg som inte har besvarats.',
 	'CANNOT_EDIT_POST_LOCKED'	=> 'Detta inlägg har låsts. Du kan inte längre redigera det.',
