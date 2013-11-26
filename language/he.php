@@ -343,7 +343,6 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'הפורומים סומנו כנקראו.',
 	'FORUM_CAT'				=> 'קטגוריות הפורום',
 	'FORUM_INDEX'			=> 'עמוד ראשי',
-	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'פורום קישור',
 	'FORUM_LOCATION'		=> 'מיקום בפורום',
 	'FORUM_LOCKED'			=> 'פורום נעול',

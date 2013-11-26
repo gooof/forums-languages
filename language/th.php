@@ -343,7 +343,6 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'ทุก บอร์ด ท่านได้เลือก ทำเป็นว่าได้อ่านหมดทุกหัวข้อเรียบร้อยแล้ว.',
 	'FORUM_CAT'				=> 'หมวดหมู่',
 	'FORUM_INDEX'			=> 'หน้าเว็บบอร์ด',
-	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'ลิงค์บอร์ด',
 	'FORUM_LOCATION'		=> 'ตำแหน่งบอร์ด',
 	'FORUM_LOCKED'			=> 'ปิดบอร์ด',

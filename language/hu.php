@@ -343,7 +343,6 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'A kiválasztott fórumok megjelölésre kerültek olvasottként.',
 	'FORUM_CAT'				=> 'Fórum kategória',
 	'FORUM_INDEX'			=> 'Fórum kezdőlap',
-	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'Fórum link',
 	'FORUM_LOCATION'		=> 'Tevékenység',
 	'FORUM_LOCKED'			=> 'Lezárt fórum',

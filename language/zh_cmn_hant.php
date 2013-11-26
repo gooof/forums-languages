@@ -343,7 +343,6 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> '版面已經被標示為已閱讀。',
 	'FORUM_CAT'				=> '版面類別',
 	'FORUM_INDEX'			=> '討論區首頁',
-	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> '版面連結',
 	'FORUM_LOCATION'		=> '版面位置',
 	'FORUM_LOCKED'			=> '版面鎖定',

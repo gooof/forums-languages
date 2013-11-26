@@ -343,7 +343,6 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'Fóra boli označené ako prečítané',
 	'FORUM_CAT'				=> 'Kategória fóra',
 	'FORUM_INDEX'			=> 'Obsah fóra',
-	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'Odkaz na fórum',
 	'FORUM_LOCATION'		=> 'Umiestnenie fóra',
 	'FORUM_LOCKED'			=> 'Fórum je zamknuté',

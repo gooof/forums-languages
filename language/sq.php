@@ -343,7 +343,6 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'Të gjithë forumet janë shënuar si të lexuar.',
 	'FORUM_CAT'				=> 'Kategoria Forumit',
 	'FORUM_INDEX'			=> 'Forumi',
-	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'Linku Forumit',
 	'FORUM_LOCATION'		=> 'Vendodhja e Forumit',
 	'FORUM_LOCKED'			=> 'Forum i mbyllur',

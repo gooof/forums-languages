@@ -343,7 +343,6 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'Forumlar okunmuş sayıldı.',
 	'FORUM_CAT'				=> 'Forum kategorisi',
 	'FORUM_INDEX'			=> 'Forum ana sayfa',
-	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'Forum bağlantısı',
 	'FORUM_LOCATION'		=> 'Forum yeri',
 	'FORUM_LOCKED'			=> 'Forum kilitlendi',

@@ -343,7 +343,6 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'مەکۆ دیاریکراوەکان وەکو خوێندراوە نیشانکران.',
 	'FORUM_CAT'				=> 'هاوپۆلی مەکۆ',
 	'FORUM_INDEX'			=> 'دەستپێکی مەکۆ',
-	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'بەستەری مەکۆ',
 	'FORUM_LOCATION'		=> 'شوێنی مەکۆ',
 	'FORUM_LOCKED'			=> 'مەکۆ داخراوە',

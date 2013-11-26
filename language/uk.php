@@ -343,7 +343,6 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'Форуми позначено прочитаними.',
 	'FORUM_CAT'				=> 'Категорія',
 	'FORUM_INDEX'			=> 'Список форумів',
-	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'Посилання на форум',
 	'FORUM_LOCATION'		=> 'Місцезнаходження на форумі',
 	'FORUM_LOCKED'			=> 'Форум закритий',

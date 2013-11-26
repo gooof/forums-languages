@@ -343,7 +343,6 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'Tất cả chuyên mục đã được đánh dấu là xem rồi.',
 	'FORUM_CAT'				=> 'Diễn đàn',
 	'FORUM_INDEX'			=> 'Trang chủ',
-	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'Chuyên mục liên kết',
 	'FORUM_LOCATION'		=> 'Vị trí chuyên mục',
 	'FORUM_LOCKED'			=> 'Chuyên mục đã khoá',

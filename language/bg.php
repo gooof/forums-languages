@@ -343,7 +343,6 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'Форумите са маркирани като прочетени.',
 	'FORUM_CAT'				=> 'Форум категория',
 	'FORUM_INDEX'			=> 'Начало форум',
-	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'Форум връзка',
 	'FORUM_LOCATION'		=> 'Форум място',
 	'FORUM_LOCKED'			=> 'Заключен форум',

@@ -343,7 +343,6 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'सभी मंच को पढा हुआ चिह्नित करें।',
 	'FORUM_CAT'				=> 'मंच का वर्ग ',
 	'FORUM_INDEX'			=> 'पट्ट अनुक्रमणिका ',
-	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'मंच की कड़ी',
 	'FORUM_LOCATION'		=> 'मंच का स्थान',
 	'FORUM_LOCKED'			=> 'मंच लॉक',

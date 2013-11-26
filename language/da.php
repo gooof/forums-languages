@@ -343,7 +343,6 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'Fora blev markeret læste.',
 	'FORUM_CAT'				=> 'Forumkategori',
 	'FORUM_INDEX'			=> 'Boardindeks',
-	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'Forumlink',
 	'FORUM_LOCATION'		=> 'Forumplacering',
 	'FORUM_LOCKED'			=> 'Forum låst',

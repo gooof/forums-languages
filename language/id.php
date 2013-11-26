@@ -343,7 +343,6 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'Forum yang dipilih telah ditandai dibaca.',
 	'FORUM_CAT'				=> 'Kategori forum',
 	'FORUM_INDEX'			=> 'Halaman Indeks',
-	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'Link Forum',
 	'FORUM_LOCATION'		=> 'Lokasi Forum',
 	'FORUM_LOCKED'			=> 'Forum Dikunci',

@@ -343,7 +343,6 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'ຫມວດຕ່າງ ໆ ໃນເວັບບອດຖືກຫມາຍວ່າໄດ້ອ່ານຫມົດແລ້ວ.',
 	'FORUM_CAT'				=> 'ຫມວດຫມູ່',
 	'FORUM_INDEX'			=> 'ຫນ້າທຳອິດ',
-	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'ລິ້ງເວັບບອດ',
 	'FORUM_LOCATION'		=> 'ທີ່ຢູ່ເວັບບອດ',
 	'FORUM_LOCKED'			=> 'ຫມວດທີ່ຖືກລັອກໄວ້',

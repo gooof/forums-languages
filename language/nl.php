@@ -343,7 +343,6 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'De forums zijn als ’gelezen’ gemarkeerd.',
 	'FORUM_CAT'				=> 'Forumcategorie',
 	'FORUM_INDEX'			=> 'Forumoverzicht',
-	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'Forumlink',
 	'FORUM_LOCATION'		=> 'Forumlocatie',
 	'FORUM_LOCKED'			=> 'Forum gesloten',

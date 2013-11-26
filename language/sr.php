@@ -343,7 +343,6 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'Svi forumi su obeleženi kao pročitani',
 	'FORUM_CAT'				=> 'Kategorija foruma',
 	'FORUM_INDEX'			=> 'Index boarda',
-	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'Link foruma',
 	'FORUM_LOCATION'		=> 'Lokacija foruma',
 	'FORUM_LOCKED'			=> 'Zaključan forum',

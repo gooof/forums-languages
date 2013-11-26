@@ -343,7 +343,6 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'تمام فورم بطور "خواندہ" نشان زد ہو گئے',
 	'FORUM_CAT'				=> 'فورم کیٹگری',
 	'FORUM_INDEX'			=> 'مرکزی صفحہ',
-	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'فورم کا ربط',
 	'FORUM_LOCATION'		=> 'فورم کی مکانیت ',
 	'FORUM_LOCKED'			=> 'مقفل فورم',
