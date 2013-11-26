@@ -343,6 +343,7 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'Kategorierna märktes som lästa.',
 	'FORUM_CAT'				=> 'Huvudkategori',
 	'FORUM_INDEX'			=> 'Forumindex',
+	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'Kategorilänk',
 	'FORUM_LOCATION'		=> 'Forumplats',
 	'FORUM_LOCKED'			=> 'Låst kategori',

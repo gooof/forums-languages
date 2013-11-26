@@ -343,6 +343,7 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'Alueet ovat merkitty luetuksi',
 	'FORUM_CAT'				=> 'Kategoria',
 	'FORUM_INDEX'			=> 'Etusivu',
+	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'Linkitetty alue',
 	'FORUM_LOCATION'		=> 'Mitä tekemässä?',
 	'FORUM_LOCKED'			=> 'Alue on lukittu',

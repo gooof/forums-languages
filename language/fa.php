@@ -343,6 +343,7 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'انجمن های علامت زده خوانده شده اند.',
 	'FORUM_CAT'				=> 'شاخه انجمن',
 	'FORUM_INDEX'			=> 'صفحه اول',
+	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'لينك انجمن',
 	'FORUM_LOCATION'		=> 'انجمن ساکن',
 	'FORUM_LOCKED'			=> 'انجمن بسته است',

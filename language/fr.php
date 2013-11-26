@@ -343,6 +343,7 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'Les forums ont été marqués comme lus.',
 	'FORUM_CAT'				=> 'Catégorie du forum',
 	'FORUM_INDEX'			=> 'Index du forum',
+	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'Forum-lien ',
 	'FORUM_LOCATION'		=> 'Emplacement du forum',
 	'FORUM_LOCKED'			=> 'Forum verrouillé',

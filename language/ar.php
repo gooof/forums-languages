@@ -343,6 +343,7 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'عدّت المنتديات مقروءة.',
 	'FORUM_CAT'				=> 'تصنيف منتدى',
 	'FORUM_INDEX'			=> 'قائمة المنتديات',
+	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'رابط المنتدى',
 	'FORUM_LOCATION'		=> 'مكان المنتدى',
 	'FORUM_LOCKED'			=> 'منتدى مغلق',

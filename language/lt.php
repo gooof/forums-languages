@@ -343,6 +343,7 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'Forumai pažymėti kaip perskaityti.',
 	'FORUM_CAT'				=> 'Forumo kategorija',
 	'FORUM_INDEX'			=> 'Pagrindinis diskusijų puslapis',
+	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'Forumo nuoroda',
 	'FORUM_LOCATION'		=> 'Forume',
 	'FORUM_LOCKED'			=> 'Forumas užrakintas',

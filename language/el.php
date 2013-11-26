@@ -343,6 +343,7 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'Οι επιλεγμένες Δ. Συζητήσεις έχουν σημειωθεί αναγνωσμένες.',
 	'FORUM_CAT'				=> 'Κατηγορίες Δ. Συζήτησης',
 	'FORUM_INDEX'			=> 'Ευρετήριο Δ. Συζήτησης',
+	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'Σύνδεσμος Δ. Συζήτησης',
 	'FORUM_LOCATION'		=> 'Τοποθεσία Δ. Συζήτησης',
 	'FORUM_LOCKED'			=> 'Κλειδωμένη Δ. Συζήτηση',

@@ -343,6 +343,7 @@ $lang = array_merge($lang, array(
 	'FORUMS_MARKED'			=> 'Kõik foorumid on märgitud loetuks',
 	'FORUM_CAT'				=> 'Foorumi kategooria',
 	'FORUM_INDEX'			=> 'Foorumi pealeht',
+	'FORUM_OVERVIEW'		=> 'Board index',
 	'FORUM_LINK'			=> 'Foorumi link',
 	'FORUM_LOCATION'		=> 'Foorumi asukoht',
 	'FORUM_LOCKED'			=> 'Foorum on lukus',
