@@ -2366,12 +2366,13 @@ $lang = array_merge($lang, array(
 	'MOVE_TOPIC_NOTIFY'		=> 'Notify the topic starter about moving this topic',
 	'MOVE_REASON'			=> 'Reason for moving this topic',
 	'MOVE_EXPLAIN_NOTIFY'	=> 'Fill in the reason for moving this topic. The reason will be shown in the PM. This will only work if you have checked the checkbox above.',
-	'NTS_TOPIC_MOVED'		=> 'Hi,<br /><br />A topic called <strong><a href="%2$s">%1$s</a></strong> which has been started by you, has been moved to <strong><a href="%4$s">%5$s</a></strong> by a moderator or administrator.<br /><br /><strong>Reason for moving your topic:</strong> <em>%3$s</em><br /><br />Click on the following link to go to your topic:<br /><a href="%2$s">%1$s</a>',
+	'NTS_TOPIC_MOVED'		=> 'Hi,<br /><br />A topic called <strong><a href="%2$s">%1$s</a></strong> which has been started by you, has been moved to <strong><a href="%4$s">%5$s</a></strong> by a moderator.<br /><br /><strong>Reason for moving your topic:</strong> <em>%3$s</em><br /><br />Click on the following link to go to your topic:<br /><a href="%2$s">%1$s</a>',
 	'NTS_TOPIC_MOVED_SUBJECT'	=> 'Your topic has been moved',
-	'NTS_TOPIC_DELETED'		=> 'Hi,<br /><br />One of your topics called <strong>%1$s</strong> has been deleted by a moderator or administrator.<br /><br /><strong>Reason for deleting your topic:</strong> <em>%2$s</em><br /><br />Please reply this message if you\'ve got any further questions.',
+	'NTS_TOPIC_DELETED'		=> 'Hi,<br /><br />One of your topics called <strong>%1$s</strong> has been deleted by a moderator.<br /><br /><strong>Reason for deleting your topic:</strong> <em>%2$s</em><br /><br />Please reply this message if you\'ve got any further questions.',
 	'NTS_TOPIC_DELETE_SUBJECT'	=> 'Your topic has been deleted',
-	'NTS_TOPIC_LOCKED'		=> 'Hi,<br /><br />One of your topics called <a href="%3$s"><strong>%1$s</strong></a> has been locked by a moderator or administrator. This means you cannot reply or edit your topic anymore.<br /><br /><strong>Reason for locking your topic:</strong> <em>%2$s</em>.<br /><br />Click on the following link to go to your topic:<br /><a href="%3$s"><strong>%1$s</strong></a>',
+	'NTS_TOPIC_LOCKED'		=> 'Hi,<br /><br />One of your topics called <a href="%3$s"><strong>%1$s</strong></a> has been locked by a moderator. This means you cannot reply or edit your topic anymore.<br /><br /><strong>Reason for locking your topic:</strong> <em>%2$s</em>.<br /><br />Click on the following link to go to your topic:<br /><a href="%3$s"><strong>%1$s</strong></a>',
 	'NTS_TOPIC_LOCK_SUBJECT'	=> 'Your topic has been locked',
+	'NO_REASON_GIVEN'			=> 'The moderator has no special reason specified',
 
 ));
 
@@ -6660,9 +6661,7 @@ $lang = array_merge($lang, array(
 	'MENU_ID5'							=> 'Community link 5',
 	'MENU_ID6'							=> 'Community link 6',
 	'MENU_NO_LINK'						=> 'No community link deposits',
-));
 
-$lang = array_merge($lang, array(
 	'LOG_FOOTBALL_FEATURES'				=> '<strong>Prediction league features changed</strong>',
 	'LOG_FOOTBALL_GOOGLE'				=> '<strong>Gadget football_google.xml extinguish</strong>',
 	'LOG_FOOTBALL_MENU'					=> '<strong>Prediction league menu changed</strong>',
@@ -7194,9 +7193,7 @@ $lang = array_merge($lang, array(
 
 	'WIN_NAME'							=> 'Win',
 	'WIN_NAME_EXPLAIN'					=> 'The name or currency you want to disaply for the wins in the prediction league',
-));
 
-$lang = array_merge($lang, array(
 
 	'DELETE_GOOGLE_ACCESS'				=> 'Extinguish Google Gadget football_google.xml. ',
 
@@ -7233,34 +7230,12 @@ $lang = array_merge($lang, array(
 
 	'WIN_HITS02'						=> 'Winnings direct hit evaluation with away points',
 	'WIN_HITS02_EXPLAIN'				=> 'Should winnings of the direct hit evaluation with away points be indicated? If no, must be made sure that in addition no winnings were deposited in the existing leagues. ',
-));
 
-$lang = array_merge($lang, array(
-
-	'MENU_DESC1'						=> 'Text Link 1',
-	'MENU_DESC2'						=> 'Text Link 2',
-	'MENU_DESC3'						=> 'Text Link 3',
-	'MENU_DESC4'						=> 'Text Link 4',
-	'MENU_DESC5'						=> 'Text Link 5',
-	'MENU_DESC6'						=> 'Text Link 6',
-	'MENU_ID1'							=> 'Community link 1',
-	'MENU_ID2'							=> 'Community link 2',
-	'MENU_ID3'							=> 'Community link 3',
-	'MENU_ID4'							=> 'Community link 4',
-	'MENU_ID5'							=> 'Community link 5',
-	'MENU_ID6'							=> 'Community link 6',
-	'MENU_NO_LINK'						=> 'No community link deposits',
-));
-
-$lang = array_merge($lang, array(
 	'LOG_FOOTBALL_FEATURES'				=> '<strong>Prediction league features changed</strong>',
 	'LOG_FOOTBALL_GOOGLE'				=> '<strong>Gadget football_google.xml extinguish</strong>',
 	'LOG_FOOTBALL_MENU'					=> '<strong>Prediction league menu changed</strong>',
 	'LOG_FOOTBALL_SETTINGS'				=> '<strong>Prediction league settings changed</strong>',
-));
 
-
-$lang = array_merge($lang, array(
 	'ACP_FOOTBALL_UPDATE'					=> 'Update fixture lists',
 	'ACP_FOOTBALL_UPDATE_MANAGE'			=> 'Update fixture lists',
 	'ACP_FOOTBALL_UPDATE_MANAGE_EXPLAIN'	=> 'Here you can update fixture lists with data from the demo page or another Football Mod site. First, choose a league of the source site that sent the update. After selecting the destination league you get differences between this league and the update displayed and can choose the changes you want to be updated. If you want to create a new league, all data is transferred. ',

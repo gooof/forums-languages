@@ -2377,6 +2377,7 @@ $lang = array_merge($lang, array(
 	'NTS_TOPIC_DELETE_SUBJECT'	=> 'Dein Thema wurde gelöscht',
 	'NTS_TOPIC_LOCKED'		=> 'Hi,<br /><br />dein Thema <a href="%3$s"><strong>%1$s</strong></a> wurde von einem Moderator gesperrt. Das bedeutet das du es nicht mehr antworten kannst.<br /><br /><strong>Der Grund für die Sperrung:</strong> <em>%2$s</em>.<br /><br />Klicke auf den folgenden Link um zum Thema zu gelangen:<br /><a href="%3$s"><strong>%1$s</strong></a>',
 	'NTS_TOPIC_LOCK_SUBJECT'	=> 'Dein Thema wurde gesperrt',
+	'NO_REASON_GIVEN'			=> 'Der Moderator hat keinen speziellen Grund angegeben',
 
 ));
 
@@ -6705,9 +6706,7 @@ $lang = array_merge($lang, array(
 	'MENU_ID5'							=> 'Foren-Link 5',
 	'MENU_ID6'							=> 'Foren-Link 6',
 	'MENU_NO_LINK'						=> 'Kein Foren-Link hinterlegt',
-));
 
-$lang = array_merge($lang, array(
 	'LOG_FOOTBALL_FEATURES'				=> '<strong>Tipprunden-Funktionalitäten geändert</strong>',
 	'LOG_FOOTBALL_GOOGLE'				=> '<strong>Gadget football_google.xml gelöscht</strong>',
 	'LOG_FOOTBALL_MENU'					=> '<strong>Tipprunden-Menu geändert</strong>',
@@ -7239,9 +7238,7 @@ $lang = array_merge($lang, array(
 
 	'WIN_NAME'							=> 'Gewinn Name (oder Währung)',
 	'WIN_NAME_EXPLAIN'					=> 'Der Name, der für die Gewinne in der Tipprunde angezeigt werden soll',
-));
 
-$lang = array_merge($lang, array(
 
 	'DELETE_GOOGLE_ACCESS'				=> 'Google Gadget football_google.xml löschen. ',
 
@@ -7278,34 +7275,12 @@ $lang = array_merge($lang, array(
 
 	'WIN_HITS02'						=> 'Gewinn Volltreffer-Wertung mit Auswärtspunkten',
 	'WIN_HITS02_EXPLAIN'				=> 'Sollen Gewinne der Volltreffer-Wertung mit Auswärtspunkten angezeigt werden? Wenn Nein, muss sichergestellt werden, dass dazu keine Gewinne in den bestehenden Ligen hinterlegt wurden. ',
-));
 
-$lang = array_merge($lang, array(
-
-	'MENU_DESC1'						=> 'Text Link 1',
-	'MENU_DESC2'						=> 'Text Link 2',
-	'MENU_DESC3'						=> 'Text Link 3',
-	'MENU_DESC4'						=> 'Text Link 4',
-	'MENU_DESC5'						=> 'Text Link 5',
-	'MENU_DESC6'						=> 'Text Link 6',
-	'MENU_ID1'							=> 'Foren-Link 1',
-	'MENU_ID2'							=> 'Foren-Link 2',
-	'MENU_ID3'							=> 'Foren-Link 3',
-	'MENU_ID4'							=> 'Foren-Link 4',
-	'MENU_ID5'							=> 'Foren-Link 5',
-	'MENU_ID6'							=> 'Foren-Link 6',
-	'MENU_NO_LINK'						=> 'Kein Foren-Link hinterlegt',
-));
-
-$lang = array_merge($lang, array(
 	'LOG_FOOTBALL_FEATURES'				=> '<strong>Tipprunden-Funktionalitäten geändert</strong>',
 	'LOG_FOOTBALL_GOOGLE'				=> '<strong>Gadget football_google.xml gelöscht</strong>',
 	'LOG_FOOTBALL_MENU'					=> '<strong>Tipprunden-Menu geändert</strong>',
 	'LOG_FOOTBALL_SETTINGS'				=> '<strong>Tipprunde-Einstellungen geändert</strong>',
-));
 
-
-$lang = array_merge($lang, array(
 	'ACP_FOOTBALL_UPDATE'					=> 'Spielplan aktualisieren',
 	'ACP_FOOTBALL_UPDATE_MANAGE'			=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Spielplan aktualisieren',
 	'ACP_FOOTBALL_UPDATE_MANAGE_EXPLAIN'	=> 'Hier kannst du deine Spielpläne, mit Daten von der Demoseite oder einer anderen Tipprunden-Seite aktualisieren oder neu erstellen. Wähle zuerst eine Tipprunden-Seite und Liga aus, von der das Update stammt. Nach Auswahl der Ziel-Liga bekommst du Abweichungen zwischen dieser Liga und dem Update angezeigt und kannst wählen welche Änderungen du übernehmen möchtest. Falls du eine neue Liga erstellen möchtest, werden alle Daten übernommen. ',
