@@ -12789,11 +12789,11 @@ $lang = array_merge($lang, array(
 	'TAW_INTERVAL'					=> 'Thema zu alt Warnung',
 	'TAW_INTERVAL_EXPLAIN'			=> 'Anzahl der Tage, Monate oder Jahre nach denen ein Benutzer eine Warnung sieht, wenn ein Thema schon zu alt ist. <strong>Wenn 0 eingetragen ist, ist diese Funktion deaktiviert.</strong>',
 	'TAW_LOCK'						=> 'Altes Thema sperren',
-	'TAW_LOCK_EXPLAIN'				=> 'If <code>Yes</code>, topics to which a user attempts to reply after the set interval will be automatically locked.',
-	'TAW_AUTHOR_EXEMPT'				=> 'Exempt author from Topic Age Warning',
-	'TAW_AUTHOR_EXEMPT_EXPLAIN'		=> 'If <code>Yes</code>, the author of the topic will be able to reply to their own topics, even after the set interval is passed.',
+	'TAW_LOCK_EXPLAIN'				=> 'Bei <code>Ja</code>, werden Themen bei denen ein Benutzer versucht zu antworten, nach festgelegtem Intervall automatisch gesperrt.',
+	'TAW_AUTHOR_EXEMPT'				=> 'Themenstarter von der Thema zu alt Warnung befreien',
+	'TAW_AUTHOR_EXEMPT_EXPLAIN'		=> 'Bei <code>Ja</code>, kann der Themenstarter (trotz der Warnung) weiterhin Antworten in sein eigenes Thema schreiben.',
 	'TAW_LAST_POST'					=> 'Benutze die Zeit der letzten Antwort',
-	'TAW_LAST_POST_EXPLAIN'			=> 'If <code>Yes</code>, the old topics will be determined using the time of the last reply to the topic. If <code>No</code>, old topics will be determined using the time of the topic\'s creation.',
+	'TAW_LAST_POST_EXPLAIN'			=> 'Bei <code>Ja</code>, wird die Zeit der letzten Antwort benutzt. Bei <code>Nein</code>, zählt die Zeit des ersten Beitrags im Thema.',
 
 ));
 
