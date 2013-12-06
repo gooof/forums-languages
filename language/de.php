@@ -959,6 +959,7 @@ $lang = array_merge($lang, array(
 	'PHOOGLE_LINK_TEXT'		=> 'Karte',
 	'PHOOGLE_SHOW_USER_TEXT'=> 'Zeige Mitglied auf der Phoogle Map',
 	'FORUM_BLOG'			=> 'Blog',
+	'PAGE_NOT_FOUND'		=> 'Die gewählte Seite existiert nicht oder du hast keine Berechtigung diese Seite aufzurufen.',
 
 	'START_DATE'			=> 'Startdatum',
 	'POSTS_PER_DAY_OTHER'	=> 'Beiträge pro Tag <strong>%.2f</strong>',
@@ -1282,6 +1283,7 @@ $lang = array_merge($lang, array(
 	'DONATION_NOTIFICATION'         => 'Spenden Benachrichtigung',
 	'TOPIC_AGE_WARNING'			=> 'You are attempting to reply to a topic that is %s old. Instead, please begin a new topic, or search for another related topic that may be more suitable.',
 	'TOPIC_AGE_WARNING_LOCK'	=> 'Dieses Thema ist %s alt. Der Administrator hat für alte Themen eingestellt, das diese gesperrt werden, wenn jemand eine Antwort schreiben will. Bitte beginne ein neues Thema oder verwenden Sie die Suchfunktion, um ein ähnliches neueres Thema zu finden.',
+	'INSTALLER_INTRO'			=> 'Intro',
 
 	// FOLLOWER
 	'COMMENT_ADD'			=> 'Neuen Kommentar',
@@ -11521,7 +11523,6 @@ $lang = array_merge($lang, array(
 	'IN_CAT'				=> 'Smilie ist in einer Kategorie',
 
 	'PAGE_ID_INVALID'			=> 'Die gewählte Seite ist ungültig.',
-	'PAGE_NOT_FOUND'			=> 'Die gewählte Seite existiert nicht oder du hast keine Berechtigung diese Seite aufzurufen.',
 
 	'ACP_MANAGE_PAGES'	=> 'Eigene Seiten (Homepage)',
 	'ACP_PAGES'	=> 'Eigene statische Seiten',
@@ -11803,7 +11804,6 @@ $lang = array_merge($lang, array(
 	'ALTT_UPDATED'				=> 'Herzlichen Glückwunsch, du hast so eben NV advanced topic titles von v%1s zu v%2s aktualisiert.',
 	'ALTT_UPDATED_NOT'			=> 'NV advanced topic titles konnte nicht von v%1s nach v%2s aktualisiert werden.',
 
-	'INSTALLER_INTRO'					=> 'Intro',
 	'INSTALLER_INTRO_WELCOME'			=> 'Willkommen zur MOD-Installation',
 	'INSTALLER_INTRO_WELCOME_NOTE'		=> 'Bitte wähle aus, was du tun möchtest.',
 

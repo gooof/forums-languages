@@ -959,6 +959,7 @@ $lang = array_merge($lang, array(
 	'PHOOGLE_LINK_TEXT'		=> 'Maps',
 	'PHOOGLE_SHOW_USER_TEXT'=> 'Show User on the Map',
 	'FORUM_BLOG'			=> 'Blog',
+	'PAGE_NOT_FOUND'		=> 'The selected page was not found or you have no permissions.',
 
 	'START_DATE'			=> 'Start Date',
 	'POSTS_PER_DAY_OTHER'	=> 'Posts per day <strong>%.2f</strong>',
@@ -1282,6 +1283,7 @@ $lang = array_merge($lang, array(
 	'DONATION_NOTIFICATION'         => 'Donation Notification',
 	'TOPIC_AGE_WARNING'			=> 'You are attempting to reply to a topic that is %s old. Instead, please begin a new topic, or search for another related topic that may be more suitable.',
 	'TOPIC_AGE_WARNING_LOCK'	=> 'This topic is %s old. The forum administrator has chosen for old topics to be locked when a reply is attempted. Please begin a new topic or use the search feature to find a similar but newer topic.',
+	'INSTALLER_INTRO'			=> 'Intro',
 
 	// FOLLOWER
 	'COMMENT_ADD'			=> 'New comment',
@@ -11477,7 +11479,6 @@ $lang = array_merge($lang, array(
 	'IN_CAT'				=> 'Smilie categorized',
 
 	'PAGE_ID_INVALID'			=> 'The selected page does not exist.',
-	'PAGE_NOT_FOUND'			=> 'The selected page was not found.',
 
 	'ACP_MANAGE_PAGES'	=> 'Manage Pages',
 	'ACP_PAGES'	=> 'Pages',
@@ -11759,7 +11760,6 @@ $lang = array_merge($lang, array(
 	'ALTT_UPDATED'				=> 'Congratulations, you just updated NV advanced topic titles from v%1s to v%2s.',
 	'ALTT_UPDATED_NOT'			=> 'Could not update NV advanced topic titles from v%1s to v%2s.',
 
-	'INSTALLER_INTRO'					=> 'Intro',
 	'INSTALLER_INTRO_WELCOME'			=> 'Welcome to the MOD Installation',
 	'INSTALLER_INTRO_WELCOME_NOTE'		=> 'Please choose what you want to do.',
 
