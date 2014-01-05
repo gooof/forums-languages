@@ -9472,7 +9472,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> 'Ενεργοποίηση θερινής ώρας/<abbr title="Daylight Saving Time">DST</abbr>',
+	'SYSTEM_DST'				=> 'Ενεργοποίηση θερινής ώρας/<abbr title="Daylight Saving Time">DST</abbr>',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Εδώ μπορείτε να καθορίσετε τις βασικές λειτουργίες της Δ. Συζήτησης, να της δώσετε το κατάλληλο όνομα και την ανάλογη περιγραφή και μεταξύ όλων αυτών να ρυθμίστε τις προκαθορισμένες αξίες για την ζώνη ώρας και τη γλώσσα.',
 	'CUSTOM_DATEFORMAT'				=> 'Προσαρμοσμένο…',
@@ -9600,6 +9623,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> 'Ο ελάχιστος αριθμός  χαρακτήρων  που πρέπει τα μέλη  να εισαγάγουν στην δημοσίευση /προσωπικό μήνυμα. Το ελάχιστο για αυτή την ρύθμιση είναι 1',
 	'POSTING'						=> 'Δημοσίευση',
 	'POSTS_PER_PAGE'				=> 'Δημοσιεύσεις ανά σελίδα',
+	'POSTS_PER_PAGE_CONFIG'			=> 'Δημοσιεύσεις ανά σελίδα',
 	'QUOTE_DEPTH_LIMIT'				=> 'Μέγιστος αριθμός παραθέσεων',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> 'Μέγιστος αριθμός παραθέσεων που επιτρέπετε σε μια δημοσίευση. Θέστε αυτό 0 για χωρίς όριο.',
 	'SMILIES_LIMIT'					=> 'Μέγιστος αριθμός εικονιδίων ',
@@ -9699,9 +9723,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> 'Εμφανίζει επιπλέον στατιστικά κάτω από τα αντικείμενα των τροφοδοσιών<br />(π.χ. δημοσιεύτηκε από, ημερομηνία και ώρα, απαντήσεις, προβολές)',
 	'ACP_FEED_EXCLUDE_ID'				=> 'Εξαίρεση αυτών των Δ.Συζητήσεων',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Περιεχόμενα από εδώ <strong>ΔΕΝ περιλαμβάνονται</strong>στις τροφοδοσίες. Επιλέξτε καμία Δ.Συζήτηση για να τραβάτε τροφοδοσίες από όλες τις Δ.Συζητήσεις.<br />Επιλογή πολλαπλών Δ.Συζητήσεων κρατώντας πατημένο το <samp>CTRL</samp> και κλικ.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Εδώ μπορείτε να επιλέξετε και να ρυθμίσετε τα πρόσθετά σας, που είναι σχεδιασμένα να αποτρέπεουν αυτοματοποιημένες συμπληρώσεις φορμών από spambots. Αυτά τα πρόσθετα λειτουργούν προκαλώντας τον χρήστη με <em>CAPTCHA</em>, μία δοκιμασία που είναι σχεδιασμένη να είναι δύσκολη στη λύση από υπολογιστές.',
 	'AVAILABLE_CAPTCHAS'					=> 'Διαθέσιμα πρόσθετα',
 	'CAPTCHA_UNAVAILABLE'					=> 'The plugin cannot be selected as its requirements are not met.',
@@ -9740,9 +9762,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> 'Απαιτείται από τους νέους χρήστες να περάσουν την anti-spambot δοκιμασία για να προληφθούν οι αυτοματοποιημένες εγγραφές.',
 	'VISUAL_CONFIRM_REFRESH'				=> 'Επιτρέπετε στους χρήστες να ανανεώσουν την δοκιμασία anti-spambot',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> 'Επιτρέπει στους χρήστες να αιτηθούν μια νέα anti-spambot δοκιμασία αν δεν είναι σε θέση να λύσουν την συγκεκριμένη κατα την εγγραφή τους. Μερικά πρόσθετα ίσως να μην υποστηρίζουν αυτή την επιλογή.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'Εδώ διευκρινίζετε τις ρυθμίσεις, που χρησιμοποιούνται, προκειμένου να στείλετε τα Cookies στον πλοηγό των μελών σας. Στις περισσότερες περιπτώσεις η ρυθμίσεις προεπιλογής αρκούν. Εάν πρέπει να αλλάξετε οτιδήποτε αυτό πρέπει να γίνει με προσοχή, οι λάθος ρυθμίσεις μπορούν να δημιουργήσουν προβλήματα στην σύνδεση των μελών.',
 
 	'COOKIE_DOMAIN'				=> 'Cookie ιστοσελίδα',
@@ -9754,9 +9774,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> 'Αριθμός σε λεπτά, που μετά μη ενεργά μέλη δεν θα εμφανίζονται στην “Μέλη σε απευθείας σύνδεση” λίστα. Όσο μεγαλύτερη είναι αυτή η τιμή τόσο περισσότερος είναι ο χρόνος που απαιτείται για να γίνει η επεξεργασία ανανέωσης της λίστας.',
 	'SESSION_LENGTH'			=> 'Σύνοδος μέγεθος',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Χρονικό διάστημα σε δευτερόλεπτα που μετά η σύνοδος θα είναι άκυρη.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Εδώ μπορείτε να ενεργοποιήσετε και να απενεργοποιήσετε μερικές λειτουργίες της Δ. Συζήτησης, προκειμένου να μειωθεί η τονισμένη αριθμητική απόδοση. Στους περισσότερους κεντρικούς υπολογιστές δεν χρειάζεται να απενεργοποιήσετε καμία λειτουργία. Από άλλη πλευρά μπορεί αυτό σε ορισμένα συστήματα ή κεντρικούς υπολογιστές που κάποιος μοιράζεται να έχει πλεονεκτήματα όταν κάποιες λειτουργίες είναι απενεργοποιημένες, τις οποίες δεν χρειάζεται. Μπορείτε επίσης εδώ να καθορίσετε τα όρια για την φόρτωση συστημάτων και τις ενεργές συνόδους, τα οποία εάν η Δ. Συζήτηση υπερβεί πηγαίνει σε (offline)χωρίς σύνδεση.',
 
 	'CUSTOM_PROFILE_FIELDS'			=> 'Προσαρμοσμένα προφίλ πεδία',
@@ -11464,7 +11482,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',

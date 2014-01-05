@@ -9470,7 +9470,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> 'Zapnout letní čas',
+	'SYSTEM_DST'				=> 'Zapnout letní čas',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Zde můžete definovat základní nastavení, jako je název a&nbsp;popis fóra, popř. určit výchozí jazyk a&nbsp;časové pásmo.',
 	'CUSTOM_DATEFORMAT'				=> 'Vlastní…',
@@ -9598,6 +9621,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> 'Uživatelé nesmí zadat méně než tento počet znaků ve zprávě, aby byla odeslána. Toto nastavení je vhodné k&nbsp;omezení spamových a&nbsp;jednoslovných zpráv. Minimální hodnota nastavení je 1 znak.',
 	'POSTING'						=> 'Přispívání',
 	'POSTS_PER_PAGE'				=> 'Příspěvků na stranu',
+	'POSTS_PER_PAGE_CONFIG'			=> 'Příspěvků na stranu',
 	'QUOTE_DEPTH_LIMIT'				=> 'Maximum vnořených citací',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> 'Maximální počet citací, které mohou být vnořeny do sebe. 0 znamená neomezenou hloubku.',
 	'SMILIES_LIMIT'					=> 'Maximální počet smajlíků na příspěvek',
@@ -9697,9 +9721,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> 'Zobrazí jednotlivé statistiky každé položky<br />(autor, čas odeslání, počet odpovědí a&nbsp;zobrazení)',
 	'ACP_FEED_EXCLUDE_ID'				=> 'Vyloučit tato fóra',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Obsah z těchto fór <strong>nebude zahrnut v&nbsp;exportech</strong>. Nevyberte žádné fórum pro použití všech.<br />Vyberte více fór podržením tlačítka <samp>CTRL</samp> a&nbsp;vybráním jednotlivých položek.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Zde si můžete vybrat a&nbsp;nastavit jednotlivé plug-iny, které různým způsobem implementují nástroje pro potlačení nechtěných příspěvků a&nbsp;registrací - spamu.',
 	'AVAILABLE_CAPTCHAS'					=> 'Dostupné plug-iny',
 	'CAPTCHA_UNAVAILABLE'					=> 'Plug-in nebyl nastaven, protože nebyly splněny jeho požadavky.',
@@ -9738,9 +9760,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> 'Vyžaduje, aby noví uživatelé při registraci vložili náhodně vygenerovaný kód nebo splnili jiný úkol pro obranu proti hromadným registracím.',
 	'VISUAL_CONFIRM_REFRESH'				=> 'Povolit uživatelům obnovit obrázek CAPTCHA nebo získat nový úkol',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> 'Povolí uživatelům vyžádat si nový obrázek nebo jiný úkol v&nbsp;případě, že jej nemůže vyluštit během registrace. Některé plug-iny toto nemusí podporovat.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'Zde lze definovat obsah dat obsažený v&nbsp;cookies odesílaných prohlížečům návštěvníků. Ve většině případů by výchozí hodnoty měly bez potíží vyhovovat. Pokud je však třeba některé upravit, buďte opatrní; jejich špatné nastavení může zabránit uživatelům v&nbsp;přihlášení.',
 
 	'COOKIE_DOMAIN'				=> 'Doména cookie',
@@ -9752,9 +9772,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> 'Počet minut, po jejichž uplynutí budou neaktivní uživatelé vyřazeni ze seznamu uživatelů online. Čím je hodnota vyšší, tím náročnější je zpracování tohoto seznamu.',
 	'SESSION_LENGTH'			=> 'Délka session',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Session vyprší po stanoveném počtu sekund.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Zde můžete povolit nebo zakázat určité funkce fóra, které mohou ovlivnit jeho vytížení. Na většině serverů není nutné jakékoliv funkce omezovat. Přesto na některých systémech nebo ve sdílených prostředích, jako jsou freehostingy, může být omezení nepotřebných funkcí užitečné. Lze také stanovit limity vytížení serveru a&nbsp;aktivních sessions, při kterých se fórum samo vypne.',
 
 	'CUSTOM_PROFILE_FIELDS'			=> 'Vlastní pole profilu',
@@ -11462,7 +11480,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',

@@ -1004,7 +1004,7 @@ $lang = array_merge($lang, array(
 	'LEXICON'				=> 'Lexikon',
 	'ADAPT_HIDE_GUEST'		=> '<i>Versteckter Inhalt. Anmeldung erforderlich.</i>',
 	'ADAPT_HIDE_GUEST_POSTS'	=> '<i>Versteckter Inhalt. Anmeldung und ein Minimum von %d Beiträgen sind erforderlich.</i>',
-	'ADAPT_HIDE_POSTS'		=> '<i>Versteckter Inhalt. Ein Minimum von %d Beiträgen sind erforderlich.</i>',
+	'ADAPT_HIDE_POSTS'		=> '<i>Versteckter Inhalt. Ein Minimum von %d Beiträgen ist erforderlich.</i>',
 	'ADAPT_HIDE_GROUPS'		=> '<i>Versteckter Inhalt. Keine der Gruppen bei denen Du Mitglied bist, hat Zugriff.</i>',
 	'ADAPT_HIDE_THANKS'		=> '<i>Versteckter Inhalt. Gebe ein Danke um den Inhalt sehen zu können.</i>',
 	'BBCODE_DISPLAY_INTOPICS'	=> '<i>Dieser BBCode kann nur in der Themenansicht angezeigt werden.</i>',
@@ -9508,7 +9508,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> 'Automatische Zeitumstellung',
+	'SYSTEM_DST'				=> 'Automatische Zeitumstellung',
+	'JS_HOSTER_VALID'			=> 'Der Hoster wurde erfolgreich hinzugefügt.\n Vergesse nicht den Absenden Button zu drücken.',
+	'JS_HOSTER_INVALID'			=> 'Ungültige URL!\n Wir konnten diese daher nicht in die Liste einfügen.',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'z.B. in Themen angezeigte Beiträge, Suchergebnisse für Beiträge',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'z.B. in der Foren Ansicht, Suchergebnisse, Mitglieder in der Mitgliederliste',
+	'EXPAND_INDEX_STATS'		=> 'Statistik im Index erweitern?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Ja = Professional, Nein = einfache Version',
+	'SUBFORUM_DISPLAY'			=> 'Darstellung der Unterforen',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Unterforen werden in der Foren-Übersicht bzw. Foren-Ansichten angezeigt und normal mit einem Komma getrennt.',
+	'NO_CANCELLATION'			=> 'kein Widerruf ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Aktivieren und Haken automatisch setzen',
+	'ACP_NEWSBOX_YES2'			=> 'Ja, im Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Ja, Box fast überall sichtbar',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'News für registrierte Benutzer aktivieren',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'News für Gäste aktivieren',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News-Text für registrierte Benutzer',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News-Text für Gäste',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML erlaubt, JavaScript nicht zulässig.',
+	'QUOTE_BACKLINK'			=> 'Einstellung des Zitieren Buttons',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'Die Option wird benutzt wenn ein User über den Zitieren Button in z.B. Beiträgen antwortet. Bei der Backlink Variante können einzelne Passagen weiterhin direkt unterhalb des Editors zitiert werden.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Ganzen Beitrag zitieren (Standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink anstelle des Zitats anzeigen',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Backlink und Zitat Text zulassen',
+	'ADD_OWN_URL'				=> 'Eigene URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Hier kannst du einige grundlegende Einstellungen deines Boards vornehmen, ihm einen passenden Namen und eine Beschreibung geben und, neben anderen Werten, die Standard-Einstellungen für Zeitzone und Sprache anpassen.',
 	'CUSTOM_DATEFORMAT'				=> 'Eigenes …',
@@ -9636,6 +9659,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> 'Die minimale Anzahl von Zeichen, die ein Benutzer in einem Beitrag/einer Nachricht mindestens eingeben muss.',
 	'POSTING'						=> 'Beiträge schreiben',
 	'POSTS_PER_PAGE'				=> 'Beiträge pro Seite',
+	'POSTS_PER_PAGE_CONFIG'			=> 'Beiträge je Seite',
 	'QUOTE_DEPTH_LIMIT'				=> 'Maximale Tiefe verschachtelter Zitate',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> 'Die maximale Tiefe für verschachtelte Zitate. Um keine Begrenzung festzulegen, stelle als Wert 0 ein.',
 	'SMILIES_LIMIT'					=> 'Maximale Smilies pro Beitrag',
@@ -9735,9 +9759,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> 'Zeigt individuelle Statistiken unterhalb der Feed-Elemente an<br />(Ersteller, Datum und Uhrzeit, Antworten, Zugriffe)',
 	'ACP_FEED_EXCLUDE_ID'				=> 'Foren ausschließen',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Inhalte dieser Foren werden <strong>nicht in den Feeds berücksichtigt</strong>. Wähle keine Foren aus, um die Daten aller Foren auszugeben.<br />Wähle mehrere Foren aus/ab, indem du beim Klicken die <samp>Strg</samp>-Taste drückst.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Hier kannst du Plugins auswählen und konfigurieren, die das automatisierte Versenden von Formularen durch Spam-Bots unterbinden sollen. Diese Plugins zeigen dem Benutzer normalerweise einen <em>CAPTCHA</em>-Test an, der für einen Computer nur schwer zu lösen ist.',
 	'AVAILABLE_CAPTCHAS'					=> 'Verfügbare Plugins',
 	'CAPTCHA_UNAVAILABLE'					=> 'Das Plugin kann nicht ausgewählt werden, da seine Voraussetzungen nicht erfüllt werden.',
@@ -9776,9 +9798,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> 'Neue Benutzer müssen eine Anti-Spam-Bot-Aufgabe bei der Registrierung lösen. Dadurch sollen Massenregistrierungen unterbunden werden.',
 	'VISUAL_CONFIRM_REFRESH'				=> 'Benutzer Austausch der Anti-Spam-Bot-Aufgabe erlauben',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> 'Erlaubt den Benutzern, eine neue Anti-Spam-Bot-Aufgabe anzufordern, wenn sie sie bei der Registrierung nicht lösen können. Nicht alle Plugins unterstützen diese Option.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'Hier legst du die Einstellungen fest, die verwendet werden, um Cookies an die Browser deiner Benutzer zu senden. In den meisten Fällen sollten die Standardwerte ausreichend sein. Führe Änderungen mit Bedacht durch, falsche Einstellungen könnten deine Benutzer daran hindern, sich anzumelden.',
 
 	'COOKIE_DOMAIN'				=> 'Cookie-Domain',
@@ -9790,9 +9810,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> 'Die Zeit in Minuten, nach der inaktive Benutzer nicht mehr in der „Wer ist online“-Anzeige erscheinen. Je größer dieser Wert ist, desto größer ist die Rechenleistung, die zur Erstellung dieser Liste benötigt wird.',
 	'SESSION_LENGTH'			=> 'Sitzungslänge',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Die Zeit in Sekunden, nach der Sitzungen ungültig werden.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Hier kannst du einige Board-Funktionen aktivieren und deaktivieren, um die beanspruchte Rechenleistung zu verringern. Auf den meisten Servern ist es allerdings nicht nötig, irgendeine Funktion zu deaktivieren. Andererseits kann es auf einigen Systemen oder auf Servern, die man sich mit anderen teilt, durchaus Vorteile bringen, wenn Funktionen abgeschaltet werden, die nicht wirklich benötigt werden. Du kannst hier auch Limits für die Systemauslastung und für die aktiven Sitzungen festlegen, bei deren Überschreitung das Board offline geht.',
 
 	'CUSTOM_PROFILE_FIELDS'			=> 'Zusätzliche Profil-Felder',
@@ -11175,7 +11193,7 @@ $lang = array_merge($lang, array(
 
 	'ACP_FORMS_ADD_GOOD'			=> 'Dein neues Formular wurde erfolgreich hinzugefügt.',
 	'ACP_FORMS_ANON'				=> 'Anonym',
-	'ACP_FORMS_ANON_EXPLAIN'		=> 'Das Formular wird anonym gesendet werden, auch wenn es von einem angemeldeten Benutzer übermittelt wird. Dies ist nützlich für wirklich anonyme Umfragen, da keine identifizierenden Informationen gespeichert werden. PNs werden nicht gesendet für ein anonymisiertes Formular, unabhängig von den Optionen, die in diesem Abschnitt definiert werden können.<br /><br />Warnung: Es wird empfohlen, dass das Forum, in das anonyme Formular gepostet werden können, nur für Moderatoren oder Admins sichtbar sind, da diese beleidigende Sprache enthalten kann.',
+	'ACP_FORMS_ANON_EXPLAIN'		=> 'Das Formular wird anonym gesendet, auch wenn es von einem angemeldeten Benutzer übermittelt wird. Dies ist nützlich für wirklich anonyme Umfragen, da keine identifizierenden Informationen gespeichert werden. PNs werden nicht gesendet für ein anonymisiertes Formular, unabhängig von den Optionen, die in diesem Abschnitt definiert werden können.<br /><br />Warnung: Es wird empfohlen, dass das Forum, in das anonyme Formular gepostet werden können, nur für Moderatoren oder Admins sichtbar sind, da diese beleidigende Sprache enthalten kann.',
 	'ACP_FORMS_BUILDER_CAT_EXPLAIN'	=> 'Hier werden alle anpassbaren Formulare angezeigt und es können neue erstellt, bearbeitet und wieder gelöscht werden.<br />Die Formulare können neue Themen und Beiträge erstellen oder auch PNs an mehrere Gruppen oder Benutzer senden.',
 	'ACP_FORMS_BUILDER_CAT_TITLE'	=> 'Formular-Generator',
 	'ACP_FORMS_BUILDER_EDITCAT_EXPLAIN'	=> 'Fülle bitte die Formular Kategorie aus.',
@@ -11500,7 +11518,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum Beiträge zum betreten',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'Wieviele Beiträge muss ein User haben um Zugang zum diesem Forum zu haben, setze eine 0 wenn Du kein minimum Limit willst.',
 	'STARTPAGE'				=> 'Forum Startseite',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Wähle weniger als %s Zeilen. Wenn alle markiert werden sollen, wähle hier nur die erste aus.',
+	'SMILIE_CAT_DELETE'			=> 'Bist Du sicher, dass Du diese Kategorie löschen möchtest?<br /><br />Alle Smilies in der Kategorie werden dadurch gelöscht, auch wenn sich diese noch in anderen Kategorien befinden!',
+	'SIGNS'				=> 'Zeichen',
 
 	'IMG_ICON_POST_THANKS'		=> 'Danke',
 	'THANKS_ENABLE'			=> 'Bedanken in diesem Forum erlauben?',

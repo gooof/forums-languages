@@ -9471,7 +9471,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> 'Uda ordutegia gaitu (DST-Daylight Saving Time)',
+	'SYSTEM_DST'				=> 'Uda ordutegia gaitu (DST-Daylight Saving Time)',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Hemendik zure foroko oinarrizko eragiketak zehaztu ditzakezu, adibidez bere izena eta deskribapena jarri, hizkuntza eta ordu-zona lehenetsi...',
 	'CUSTOM_DATEFORMAT'				=> 'Neurrira jarri…',
@@ -9599,6 +9622,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> 'Erabiltzaileak behar duen gutxieneko karaktere kopurua mezu/mezu pribatu berri bakoitzeko. Ezarpen honen gutxieneko balorea 1 da.',
 	'POSTING'						=> 'Bidali',
 	'POSTS_PER_PAGE'				=> 'Orriko mezu',
+	'POSTS_PER_PAGE_CONFIG'			=> 'Orriko mezu',
 	'QUOTE_DEPTH_LIMIT'				=> 'Gehienezko aipamen-sakonera mezuko',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> 'Mezu baten baimendutako gehienezko aipamen-sakonera. Balorea 0an jarri aipamen-sakonera mugagabea ezartzeko.',
 	'SMILIES_LIMIT'					=> 'Gehienezko irrifartxo mezuko',
@@ -9698,9 +9722,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> 'Jarioaren artikulu (item) bakoitzeko estatistikak bistaratzen ditu <br />(adbez. nork bidalia, ordua eta data, erantzunak, bistaratzeak)',
 	'ACP_FEED_EXCLUDE_ID'				=> 'Foro hauek baztertu',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Foro hauetako edukia <strong>ez da jarioetan sindikatuko</strong>. Fororik aukeratu ezean, foro guztietako edukia sindikatu daiteke.<br /><samp>CTRL</samp> sakatuta mantenduz klikatu foroak aukeratu/desaukeratzeko.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Hemendik spama ekiditzeko pluginak aukeratu eta moldatu ditzakezu. Plugin hauek robotek erantzun ezin duten <em>CAPTCHA</em> frogatan oinarritzen dira orokorrean.',
 	'AVAILABLE_CAPTCHAS'					=> 'Plugin erabilgarriak',
 	'CAPTCHA_UNAVAILABLE'					=> 'Ezin duzu plugina aukeratu ez bait dira bete behar dituen baldintzak aurkitu.',
@@ -9739,9 +9761,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> 'Izen-emate masiboak ekiditzeko, erabiltzaile berriek baieztatze kode bat sar dezatela eskatzen du.',
 	'VISUAL_CONFIRM_REFRESH'				=> 'Anti-spambot froga berriztatzea baimendu erabiltzaileei',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> 'Izena ematerakoan, anti-spambot froga erantzutea ezinezkoa gertatuko balitzaie, erabiltzaileei froga berri bat eskatzeko aukera ematen die. Plugin batzuek ez dute aukera hau ematen.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'Hemendik, zure erabiltzaileen nabigatzaileetara bidaliko diren cookien xehetasunak zehaztu zenitzake. Gehienetan, lehenetsitako cookien konfigurazioa nahikoa izan beharko luke, aukeraren bat aldatu nahiko bazenu, kontu handiz ibili, konfigurazio desegoki batek erabiltzaileek saioa has dezaten ekidi liezaieke eta.',
 
 	'COOKIE_DOMAIN'				=> 'Cookiearen domeinua',
@@ -9753,9 +9773,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> 'Jarduerarik gabeko erabiltzaileek eman behar duten minutu kopurua "Nor dago konektaturik" zerrendan ez daitezen agertu. Gero eta balore altuago jarri, zerrenda sortzeak prozesatse gehiago eskatuko du.',
 	'SESSION_LENGTH'			=> 'Saioaren iraupena',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Denbora hau igarota, saioak bukatu egingo dira. Segundutan emana.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Hemendik, prozesatze kopurua arintzera lagunduko duten foroko zenbait funtzio gaitu edo ezgaitu zenitzake. Zerbitzari gehienetan ez da funtziorik ezgaitzeko beharrik, halaere, sistema batzuetan edo zerbitzari partekatu batzuetan, benetan beharko ez dituzun funtzioak ezgaitzea onuragarria litzateke. Sistemaren kargan edo saio aktiboetan ere mugak zehaztu ditzakezu.',
 
 	'CUSTOM_PROFILE_FIELDS'			=> 'Pertsonalizatutako profil eremuak',
@@ -11463,7 +11481,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',

@@ -9509,7 +9509,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> 'Ativar Horário de Verão',
+	'SYSTEM_DST'				=> 'Ativar Horário de Verão',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Aqui pode definir configurações básicas do phpBB e configurações gerais do Fórum.',
 	'CUSTOM_DATEFORMAT'				=> 'Personalizar',
@@ -9637,6 +9660,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> 'O número mínimo de caracteres que o Utilizador tem de usar numa Mensagem. 1 é o valor mínimo admitido nesta configuração.',
 	'POSTING'						=> 'Publicação de mensagens',
 	'POSTS_PER_PAGE'				=> 'Mensagens por Página',
+	'POSTS_PER_PAGE_CONFIG'			=> 'Mensagens por Página',
 	'QUOTE_DEPTH_LIMIT'				=> 'Tamanho máximo das citações',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> 'Número máximo de citações por mensagem. <strong>0 = Ilimitadas</strong>.',
 	'SMILIES_LIMIT'					=> 'Máximo de Emoções por Mensagem',
@@ -9736,9 +9760,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> 'Exibe estatísticas individuais por baixo dos itens de feed<br />(Postado por, data e hora, respostas, visualizações)',
 	'ACP_FEED_EXCLUDE_ID'				=> 'Excluir Fóruns',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'O conteúdo destes <strong>não será incluído nos feeds</strong>. Não selecione nenhum Fórum, para puxar os dados de todos os Fóruns.<br />Selecione/Desmarque múltiplos Fóruns clicando <samp>CTRL</samp> e clicando.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Aqui pode selecionar e configurar plugins desenhados para bloquear registos automáticos de spambots. Estes plugins fazem um teste ao utilizador <em>(CAPTCHA)</em> de dificil resolução pelos computadores.',
 	'AVAILABLE_CAPTCHAS'					=> 'Plugins disponíveis',
 	'CAPTCHA_UNAVAILABLE'					=> 'O plugin não pode ser selecionado enquanto não preencher os requisitos necessários.',
@@ -9777,9 +9799,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> 'Exige aos novos utilizadores uma tarefa anti-spambot para evitar registos automaticos.',
 	'VISUAL_CONFIRM_REFRESH'				=> 'Permitir aos utilizadores atualizem a tarefa anti-spambot',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> 'Permite que os utilizadores solicitem uma nova tarefa anti-spambot se forem incapazes de resolver a tarefa corrente durante o registo. Alguns plugins podem não suportar esta opção.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'Estas configurações definem os dados usados nos cookies enviados aos navegadores do Utilizadores. Na generalidade dos casos os valores abaixo são suficientes. Se os mudar faça-o com cuidado. Qualquer incorreção impede os Utilizadores de aceder ao Fórum.',
 
 	'COOKIE_DOMAIN'				=> 'Domínio do Cookie',
@@ -9791,9 +9811,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> 'Tempo em minutos após o qual o Utilizador inativo não aparecerá na lista de Utilizadores online. Quanto menor, menos processamento exige.',
 	'SESSION_LENGTH'			=> 'Tempo da Sessão [ segundos ]',
 	'SESSION_LENGTH_EXPLAIN'	=> 'A Sessão será encerrada após este tempo, em segundos.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Aqui pode ativar e desativar certas funções do Fórum que podem reduzir o total de processamento pedido. Para a maioria dos Servidores não é necessário desativar nenhuma função. No entanto, em certos sistemas ou em ambientes de hospedagem compartilhada pode ser benéfico se desativar alguns recursos que não sejam realmente necessário. Pode também especificar limites para a carga do sistema e ativar sessões, além das quais o Fórum sairá do ar.',
 
 	'CUSTOM_PROFILE_FIELDS'			=> 'Campos do Perfil Personalizados',
@@ -11501,7 +11519,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',

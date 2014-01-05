@@ -9472,7 +9472,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> 'Habilita l’horari d’estiu/<abbr title="Daylight Saving Time">DST</abbr>',
+	'SYSTEM_DST'				=> 'Habilita l’horari d’estiu/<abbr title="Daylight Saving Time">DST</abbr>',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Aquí podeu determinar l’operació bàsica del vostre fòrum, donar-li un nom i una descripció adequats i, entre altres configuracions, ajustar els valors per defecte per al fus horari i l’idioma.',
 	'CUSTOM_DATEFORMAT'				=> 'Personalitzada…',
@@ -9600,6 +9623,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> 'El nombre mínim de caràcters que cal que un usuari introdueixi al text d’una entrada o missatge privat. El valor mínim per aquesta configuració es 1.',
 	'POSTING'						=> 'Publicació',
 	'POSTS_PER_PAGE'				=> 'Entrades per pàgina',
+	'POSTS_PER_PAGE_CONFIG'			=> 'Entrades per pàgina',
 	'QUOTE_DEPTH_LIMIT'				=> 'Profunditat màxima d’incrustació per citacions',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> 'Profunditat màxima de citacions incrustades en una entrada. Introduïu un 0 per a una profunditat il·limitada.',
 	'SMILIES_LIMIT'					=> 'Nombre màxim d’emoticones per entrada',
@@ -9699,9 +9723,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> 'Mostra estadístiques individuals a sota dels elements del canal<br />(p.ex. autor, data i hora, respostes, visualitzacions)',
 	'ACP_FEED_EXCLUDE_ID'				=> 'Exclou aquests fòrums',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'El contingut d’aquests fòrums <strong>no s’inclourà als canals d’informació</strong>. Si no seleccioneu cap fòrum, s’obtindran dades de tots els fòrums.<br />Podeu seleccionar o desseleccionar diversos fòrums si manteniu premut <samp>CTRL</samp> mentre feu clic.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Aquí podeu seleccionar i configurar connectors que estan dissenyats per bloquejar la tramesa automàtica de formularis per part dels robots de brossa (spambots en anglès). Aquests connectors típicament funcionen plantejant a l’usuari un <em>CAPTCHA</em>, una prova que està dissenyada per que sigui dificil que un ordinador la resolgui.',
 	'AVAILABLE_CAPTCHAS'					=> 'Connectors disponibles',
 	'CAPTCHA_UNAVAILABLE'					=> 'No podeu seleccionar aquest connector ja que no es compleixen els seus requeriments.',
@@ -9740,9 +9762,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> 'Requereix als usuaris nous que resolguin una tasca contra els robots de brossa per tal de prevenir el registre automatitzat d’usuaris.',
 	'VISUAL_CONFIRM_REFRESH'				=> 'Permet als usuaris refrescar la tasca contra robots de brossa',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> 'Permet als usuaris demanar una nova tasca contra robots de brossa si no poden resoldre la tasca actual durant el registre. És possible que alguns connectors no permetin aquesta opció.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'Aquests detalls defineixen les dades que s’utilitzen per enviar galetes als navegadors dels usuaris. En la majoria de casos, els valors per defecte seran suficients. Si cal que en canvieu algun, feu-ho amb compte, una configuració incorrecta pot evitar que els usuaris iniciïn la sessio.',
 
 	'COOKIE_DOMAIN'				=> 'Domini de la galeta',
@@ -9754,9 +9774,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> 'Nombre de minuts després dels quals els usuaris inactius no apareixeran a la llista “Qui està connectat”. Com més alt és aquest valor, més gran és el processament necessari per generar la llista.',
 	'SESSION_LENGTH'			=> 'Durada de la sessió',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Les sessións venceran després d’aquest temps en segons.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Aquí podeu habilitar i inhabilitar determinades funcions del fòrum per reduir la quantitat necessària de processament. En la majoria de servidors no cal inhabilitar cap funció. Això no obstant, en determinats sistemes o en entorns d’allotjament compartit pot ser beneficiós inhabilitar capacitats que no necessiteu realment. També podeu especificar límits per a la càrrega del sistema i sessions actives més enllà de les quals el fòrum es quedarà fora de línia.',
 
 	'CUSTOM_PROFILE_FIELDS'			=> 'Camps personalitzats del perfil',
@@ -11464,7 +11482,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',

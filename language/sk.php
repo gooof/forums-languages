@@ -9472,7 +9472,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> 'Používať letný čas',
+	'SYSTEM_DST'				=> 'Používať letný čas',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Tu môžete určovať základné nastavenia vášho fóra, počínajúc názvom fóra a jeho popisom, až po základné hodnoty časovej zóny a jazyka.',
 	'CUSTOM_DATEFORMAT'				=> 'Voliteľné…',
@@ -9600,6 +9623,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> 'Užívatelia nemôžu zadať menej ako tento počet znakov v správe, aby bola odoslaná. Toto nastavenie je vhodné k obmedzeniu spamových a jednoslovných správ. Minimum pre toto nastavenie je 1.',
 	'POSTING'						=> 'Odosielanie',
 	'POSTS_PER_PAGE'				=> 'Príspevkov na stranu',
+	'POSTS_PER_PAGE_CONFIG'			=> 'Príspevkov na stranu',
 	'QUOTE_DEPTH_LIMIT'				=> 'Maximálny počet vnorených citácií',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> 'Maximálna hĺbka vnorenia citácie v príspevku. Zadajte 0 pre nastavenie neobmedzeného počtu vnorených citácií.',
 	'SMILIES_LIMIT'					=> 'Maximálny počet smajlíkov v príspevku',
@@ -9699,9 +9723,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> 'Zobrazí individuálne štatistiky pod položkami v exporte<br />(napríklad: autora, dátum a čas, počet odpovedí, prezretí)',
 	'ACP_FEED_EXCLUDE_ID'				=> 'Vylúčiť tieto fóra',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Obsah z týchto fór <strong>nebude zahrnutý v exporte</strong>. Nevyberte žiadne fórum pre použitie všetkých.<br />Vyberte viaceré fóra podržaním tlačidla <samp>CTRL</samp> a vybraním jednotlivých položiek.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Tu si môžete vybrať a konfigurovať pluginy, ktoré sú navrhnuté tak, aby zablokovali automatické registrácie spambotmi. Tieto pluginy vytvoria náročné riešenie s <em>CAPTCHA</em> testom, ktorý je navrhnutý tak, aby bolo ťažké pre počítače ho vyriešiť.',
 	'AVAILABLE_CAPTCHAS'					=> 'Dostupné pluginy',
 	'CAPTCHA_UNAVAILABLE'					=> 'Plugin nemôže byť vybratý ak jeho požiadavky nie sú splnené.',
@@ -9740,9 +9762,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> 'Požaduje od nového užívateľa vložiť kód proti spambotom pre zabránenie automatických registrácií.',
 	'VISUAL_CONFIRM_REFRESH'				=> 'Povoliť používateľom aktualizovať obrázok proti spambotom',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> 'Umožňuje užívateľom požiadať o nový anti-spambot obrázok, ak ho nie sú schopní prečítať počas registrácie. Niektoré pluginy nemusia túto možnosť podporovať.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'Tu môžete definovať obsah dát obsiahnutých v cookies odosielaných do prehliadačov návštevníkov. Vo väčšine prípadov by mali prednastavené hodnoty bez problémov vyhovovať. Pokiaľ je však potrebné niektoré upraviť, buďte opatrní; ich zlé nastavenie môže zabrániť užívateľom v prihlásení.',
 
 	'COOKIE_DOMAIN'				=> 'Doména cookie',
@@ -9754,9 +9774,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> 'Doba v minútach, po ktorej sa neaktívny užívatelia nebudú objavovať v zoznamoch online užívateľov - čím je hodnota vyššia, tým je náročnejšie vytváranie tohto zoznamu.',
 	'SESSION_LENGTH'			=> 'Dĺžka platnosti session',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Session stratí platnosť po uplynutí tohto času (v sekundách).',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Tu je možné zapnúť a vypnúť niektoré funkcie fóra, pre zníženie nárokov na server. Na väčšine serverov nie je potrebné vypínať akékoľvek funkcie. Každopádne, na niektorých systémoch či zdieľaných hostingoch môže byť užitočné vypnúť funkcie, ktoré pre svoje použitie skutočne nepotrebujete. Môžete taktiež stanoviť limity zaťaženia systému a aktívnych sessions, po ktorých prekročení sa fórum odpojí.',
 
 	'CUSTOM_PROFILE_FIELDS'			=> 'Voliteľné polia profilu',
@@ -11464,7 +11482,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',

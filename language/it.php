@@ -9469,7 +9469,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> 'Abilita ora legale',
+	'SYSTEM_DST'				=> 'Abilita ora legale',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Qui puoi impostare le funzioni base della tua Board, dargli un nome appropriato ed una descrizione adeguata. Fra le altre opzioni puoi regolare i valori predefiniti per il fuso orario e per la lingua.',
 	'CUSTOM_DATEFORMAT'				=> 'Personalizzato…',
@@ -9597,6 +9620,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> 'Il numero minimo di caratteri che un utente deve inserire in un messaggio o in un messaggio privato. Il minimo per questa voce è 1.',
 	'POSTING'						=> 'Invio messaggi',
 	'POSTS_PER_PAGE'				=> 'Messaggi per pagina',
+	'POSTS_PER_PAGE_CONFIG'			=> 'Messaggi per pagina',
 	'QUOTE_DEPTH_LIMIT'				=> 'Limite massimo di citazioni annidate per messaggio',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> 'Numero massimo di citazioni concatenate per messaggio. 0 = illimitata.',
 	'SMILIES_LIMIT'					=> 'Limite massimo di emoticon per messaggio',
@@ -9696,9 +9720,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> 'Visualizza le statistiche individuali sotto le voci Feed<br />(Inviato da, Data e ora, Risposte, Visite).',
 	'ACP_FEED_EXCLUDE_ID'				=> 'Escludi questi forum',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Il contenuto di questi forum <strong>non sarà incluso nei Feed</strong>. Non selezionare nessun forum per estrarre i dati da tutti i forum.<br />Per selezionare/deselezionare più forum, usa <samp>CTRL</samp> cliccando col mouse.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Qui puoi selezionare e configurare i plugin che sono progettati per bloccare gli spambot. Questi plugin impongono all’utente un <em>CAPTCHA</em>, test che è stato progettato per essere difficile da risolvere per un Computer.',
 	'AVAILABLE_CAPTCHAS'					=> 'Plugin disponibili',
 	'CAPTCHA_UNAVAILABLE'					=> 'Il plugin non può essere selezionato se i suoi requisiti non sono rispettati.',
@@ -9737,9 +9759,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> 'Richiede ai nuovi utenti di inserire un codice casuale raffigurato da un’immagine al fine di prevenire registrazioni di massa.',
 	'VISUAL_CONFIRM_REFRESH'				=> 'Permette agli utenti di ricaricare l’immagine di conferma',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> 'Permette agli utenti di richiedere nuovi codici di conferma se non sono in grado di effettuare la conferma visuale durante la registrazione. Alcuni plugin potrebbero non supportare questa opzione.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'Questi dettagli definiscono i dati utilizzati per inviare i cookie ai browser dei tuoi utenti. In molti casi l’impostazione predefinita è sufficiente. Se devi cambiare queste impostazioni fallo con attenzione: impostazioni errate potrebbero impedire agli utenti di effettuare l’accesso.',
 
 	'COOKIE_DOMAIN'				=> 'Dominio cookie',
@@ -9751,9 +9771,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> 'Numero di minuti dopo i quali gli utenti inattivi non appariranno più nella lista “Chi c’è in linea”. Più alto è questo valore e più grande sarà il processo richiesto per generare la lista.',
 	'SESSION_LENGTH'			=> 'Lunghezza sessione',
 	'SESSION_LENGTH_EXPLAIN'	=> 'La sessione scadrà dopo questo lasso di tempo, in secondi.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Qui puoi abilitare o disabilitare alcune funzioni della Board per ridurre l’ammontare dei processi richiesti. Sulla maggior parte dei server non c’è bisogno di disabilitare alcuna funzione. Tuttavia in alcuni sistemi o ambienti condivisi può essere consigliato disabilitare ciò di cui non hai bisogno. Puoi anche stabilire dei limiti al caricamento del sistema ed alle sessioni attive oltre i quali la Board andrà OffLine.',
 
 	'CUSTOM_PROFILE_FIELDS'			=> 'Campi profilo personalizzati',
@@ -11461,7 +11479,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',

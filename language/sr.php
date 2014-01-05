@@ -9451,7 +9451,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> 'Omogući Daylight Savings',
+	'SYSTEM_DST'				=> 'Omogući Daylight Savings',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Ovde podešavate osnovne operacije vašeg boarda, od imena sajta do registracije korisnika i privatnih poruka.',
 	'CUSTOM_DATEFORMAT'				=> 'Proizvoljan…',
@@ -9579,6 +9602,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> 'Minimalni broj karaktera koji korisnik treba da unese u postu/poruci.',
 	'POSTING'						=> 'Postovi',
 	'POSTS_PER_PAGE'				=> 'Postova po stranici',
+	'POSTS_PER_PAGE_CONFIG'			=> 'Postova po stranici',
 	'QUOTE_DEPTH_LIMIT'				=> 'Maksimalno ugnježdenih citata po postu',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> 'Postavite na 0 za neograničenu dubinu.',
 	'SMILIES_LIMIT'					=> 'Maksimalno smajlija po postu',
@@ -9678,9 +9702,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> 'Prikazuje individualnu statistiku ispod stavki feed-ova<br />(Poslato od, datum i vreme, Odgovori, Pogledi)',
 	'ACP_FEED_EXCLUDE_ID'				=> 'Preskače ovo forume',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Sadržaj ovih <strong>neće biti ubačen u feed-ove</strong>. Nemojte izabrati ni jedan forum da bi vukli podatke sa svih foruma.<br />Možete izabrati više foruma tako što držite <samp>CTRL</samp> i kliknete.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Ovde definišete podrazumevane vrednosti vizuelnih potvrda i captcha podešavanja.',
 	'AVAILABLE_CAPTCHAS'					=> 'Raspoloživi dodaci',
 	'CAPTCHA_UNAVAILABLE'					=> 'CAPTCHA-u ne možete izabrati jer ne ispunjavate uslove koje zahteva.',
@@ -9719,9 +9741,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> 'Zahteva od anonimnih korisnika da unesu nasumično izabran kod koji se mora poklopiti sa slikom da bi se sprečilo masovno registrovanje.',
 	'VISUAL_CONFIRM_REFRESH'				=> 'Omogući korisnicima da mogu da regenerišu novi kod za potvrdu',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> 'Omogući korisnicima da mogu da regenerišu nove kodove za potvrdu, ako nisu u mogućnosti da pročitaju kod tokom registracije.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'Ovde definišete detalje koji će biti korišćeni za slanje kolačića korisnicima. U većini slučajeva podrazumevane vrednosti za kolačiće će biti dovoljne. Ako imate potrebu da menjate ove vrednosti, budite pažljivi jer pogrešne vrednosti mogu sprečiti korisnike da se prijave.',
 
 	'COOKIE_DOMAIN'				=> 'Domen kolačića',
@@ -9733,9 +9753,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> 'Vreme u minutima posle kojeg neaktivni korisnici neće biti prikazivani na Ko je OnLine listi, niža vrednost znači manje procesiranja.',
 	'SESSION_LENGTH'			=> 'Dužina sesije',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Sesija će isteći posle ovoliko vremena, u sekundama.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Ovde možete uključiti i isključiti neke od funkcija boarda da bi smanjili količinu obaveznog procesiranja. Na većini servera nema potrebe da isključujete bilo koju od funkcija. Ipak, na nekim sistemima ili u okruženju deljenog hostinga može biti korisno da isključite opcije koje vam stvarno nisu potrebne. Možete takođe definisati vrednosti za opterećenje sistema i aktivne sesije posle kojih će board biti nedostupan.',
 
 	'CUSTOM_PROFILE_FIELDS'			=> 'Proizvoljna polja profila',
@@ -11443,7 +11461,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',

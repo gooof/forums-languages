@@ -9619,7 +9619,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> 'فعال کردن زمان تابستاني/<abbr title="Daylight Saving Time">DST</abbr>',
+	'SYSTEM_DST'				=> 'فعال کردن زمان تابستاني/<abbr title="Daylight Saving Time">DST</abbr>',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'در این قسمت شما می توانید ساختار بنیانی انجمن خود را تعیین نمایید, توجه نمایید که نام و توضیح مناسبی برای انجمن خود برگزینید, و همچنین به تنظیمات دیگر از جمله موقعیت زمانی و موقعیت زمانی نیز توجه فرمایید.',
 	'CUSTOM_DATEFORMAT'				=> 'سفارشی ...',
@@ -9750,6 +9773,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> 'حداقل تعداد کاراکترهای لازم برای ارسال یک پست/پسام خصوصی. حداقل این مقدار 1 است.',
 	'POSTING'						=> 'ارسال پست',
 	'POSTS_PER_PAGE'				=> 'پست در هر صفحه',
+	'POSTS_PER_PAGE_CONFIG'			=> 'پست در هر صفحه',
 	'QUOTE_DEPTH_LIMIT'				=> 'حداکثر تعداد نقل قول هاي تو در تو در هر پست',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> 'بيشترين تعداد مجاز براي ايجاد نقل قول هاي تو در تو در پست ها.<br />
  با تعريف عدد 0 اين خصيصه نامحدود مي شود.',
@@ -9858,9 +9882,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> 'نمایش اطلاعات آماری در زیر موضوعات خوراک (Feed) مانند تعداد بازدید و ...',
 	'ACP_FEED_EXCLUDE_ID'				=> 'اغماض کردن این انجمن ها',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'محتوای این انجمن ها .<strong>در خوراک نمایش داده نخواهند شد</strong> برای قراردادن اطلاعات تمامی انجمن ها،انجمنی را انتخاب نکنید.<br />با نگه داشتن <samp>CTRL</samp> و کلیک بر روی نام های انجمن ها می توانید به سادگی چند مورد را همزمان انتخاب و یا لغو انتخاب کنید.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'در این بخش می توانید افزونه هایی را پیکربندی کنید که از ارسال هرزنامه های خودکار جلوگیری می کنند. این افزونه ها با به چالش کشاندن کاربران از طریق<em>CAPTCHA</em> کار می کنند، آمایشی که حل کردن آن برای کامپیوتر ها دشوار می باشد.',
 	'AVAILABLE_CAPTCHAS'					=> 'افزونه های در دسترس',
 	'CAPTCHA_UNAVAILABLE'					=> 'انتخاب افزونه مقدور نمی باشد زیرا موارد خواسته شده توسط آن فرآهم نشده است.',
@@ -9899,9 +9921,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> 'کاربران در حین ثبت نام باید کد تایید را برای جلوگیری از ورود روبات های هرزنامه وارد کنند..',
 	'VISUAL_CONFIRM_REFRESH'				=> 'بارگزاری مجدد کد تایید',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> 'با فعال سازی این گزینه اگر کاربران نتوانند کد تایید موجود را به درستی بخوانند، بتوانند کد تایید جدیدی درخواست و دوباره تلاش کنند. ممکن است بعضی از مدلها از این گزینه پشتیبانی نکنند.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'این جزییات برای تعریف داده های قابل بکارگیری برای ارسال کوکی ها به مرورگرهای کاربران است. قطعا قالب اولیه تنظیمات کوکی مناسب است. چنانچه شما نیاز به اعمال تغییرات در آن دارید، اطلاعات غلط باعث می شود که از ورود کاربران جلوگیری شود.',
 
 	'COOKIE_DOMAIN'				=> 'دامنه کوکي',
@@ -9913,9 +9933,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> 'تعداد دقایقی که اگر یک کاربر غیرفعال ( عدم رفرش صفحه و یا پست زدن و موارد اینچنینی ) باشد،در لیست "چه کسی حاضر است" نمایش داده نمیشود. هر چقدر این مقدار بیشتر باشد، عملکرد قسمت افراد آنلاین بهتر خواهد بود.',
 	'SESSION_LENGTH'			=> 'امتداد Session',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Session پس از گذشت اين زمان برحسب ثانيه ، به انقضا مي رسند.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'در این بخش می توانید با تنظیم کردن این ایتم ها مقدار درخواست از سرورتان را کاهش دهید.که معمولا در اکثر سرور ها نیازی به چنین کاری نیست. به هر حال در بعضی از سیستم ها و هاستنگ های شیرینگ غیر فعال کردن بعضی از ایتم هایی که مورد نیازتان نیست می تواند مفید واقع شود. همچنین یه سری محدودیت هایی را برای انجمن خود اعمال کنید که اگر  سرور بیشتر از حد تایین شده بارگذاری شود، انجمن موقتا غیر فعال شود.',
 
 	'CUSTOM_PROFILE_FIELDS'			=> 'فیلد های سفارشی مشخصات',
@@ -11667,7 +11685,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',

@@ -9472,7 +9472,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> '启用夏令时',
+	'SYSTEM_DST'				=> '启用夏令时',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> '这里您可以进行论坛的基本操作.',
 	'CUSTOM_DATEFORMAT'				=> '自定义……',
@@ -9600,6 +9623,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> '用户在发帖或发私信时内容的最小字符数。最小值是1。',
 	'POSTING'						=> '发帖',
 	'POSTS_PER_PAGE'				=> '每页文章数',
+	'POSTS_PER_PAGE_CONFIG'			=> '每页文章数',
 	'QUOTE_DEPTH_LIMIT'				=> '引用的最大深度',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> '设置为0则不作限制.',
 	'SMILIES_LIMIT'					=> '每个帖子中的最大表情数量',
@@ -9699,9 +9723,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> '显示各<br />(作者, 日期和时间, 回复数, 查看数)',
 	'ACP_FEED_EXCLUDE_ID'				=> '排除下列版面',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> '来自这些版面的内容将<strong>不会被输出</strong>. 无指定版面则输出所有版面内容.<br />要选定或反选多个版面, 请按住<samp>CTRL</samp>键用鼠标左键点选.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> '这里您可以对论坛的验证机制进行设置, 有多种方式应对Spam机器人的注册尝试.',
 	'AVAILABLE_CAPTCHAS'					=> '可用插件',
 	'CAPTCHA_UNAVAILABLE'					=> '无法使用验证图片因为服务器环境不支持.',
@@ -9740,9 +9762,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> '在新会员注册时会被要求输入一组随机字符以防止机器人注册.',
 	'VISUAL_CONFIRM_REFRESH'				=> '允许用户刷新验证图片',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> '当用户无法辨认当前验证图片时允许其刷新。一些插件可能不支持这个选项。',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> '以下设定了送往用户浏览器的数据. 在大多数情况下使用默认设置就已足够. 如果您自行调整, 不正确的设置将会使用户无法登录论坛.',
 
 	'COOKIE_DOMAIN'				=> 'Cookie作用域',
@@ -9754,9 +9774,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> '非活动的用户在多少分钟后不再显示于在线用户列表. 值越高将需要越多的资源生成列表.',
 	'SESSION_LENGTH'			=> '会话长度',
 	'SESSION_LENGTH_EXPLAIN'	=> '会话多少秒后超时.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> '这里您可以启用或禁用部分论坛功能以减轻服务器负载. 对于大多数服务器并不需要禁用任何功能. 不过有些系统和合租环境下禁用某些不需要的功能能提高性能. 您也可以指定系统的负载限制, 超出限制的浏览将被拒绝.',
 
 	'CUSTOM_PROFILE_FIELDS'			=> '自定义用户资料',
@@ -11464,7 +11482,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',

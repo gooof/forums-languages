@@ -9472,7 +9472,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> 'Omogući ljetno vrijeme/<abbr title="Daylight Saving Time">DST</abbr>',
+	'SYSTEM_DST'				=> 'Omogući ljetno vrijeme/<abbr title="Daylight Saving Time">DST</abbr>',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Ovdje možeš pobliže odrediti/uređivati osnovne postavke foruma poput određivanja imena i opisa, postavljanja zadanih vrijednosti datuma, vremena, jezika, stila... itd.',
 	'CUSTOM_DATEFORMAT'				=> 'Prilagođeno...',
@@ -9600,6 +9623,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> 'Minimalan broj znakova koje korisnik/ca mora upisati kako bi mogao/la poslati post/privatnu poruku.',
 	'POSTING'						=> 'Postanje',
 	'POSTS_PER_PAGE'				=> 'Postova po stranici',
+	'POSTS_PER_PAGE_CONFIG'			=> 'Postova po stranici',
 	'QUOTE_DEPTH_LIMIT'				=> 'Maksimalno ugniježđenih citata po postu',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> 'Maksimalan dopušten broj ugniježđenih citata [citat u citatu] u postovima korisnika/ca [0=neograničeno].',
 	'SMILIES_LIMIT'					=> 'Maksimalno smajlića po postu',
@@ -9699,9 +9723,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> 'Prikazuje pojedinačne statistike ispod stavki<br />(npr. postao, datum i vrijeme, odgovori, pregledavanja)',
 	'ACP_FEED_EXCLUDE_ID'				=> 'Isključi ove forume',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Sadržaj ovih foruma <strong>neće biti uključen u Feed</strong>. Ne odabiri forum kako bi prikazao/la podatke svih foruma.<br />Odaberi/ukloni odabir više foruma držeći <samp>CTRL</samp> i klikajući.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Ovdje možeš odabrati i promijeniti postavke CAPTCHA pluginova, koji omogućuju različite načine onemogućavanja registracije tkzv. spam botova.',
 	'AVAILABLE_CAPTCHAS'					=> 'Dostupni pluginovi',
 	'CAPTCHA_UNAVAILABLE'					=> 'CAPTCHA ne može biti odabrana zato što nisu omogućeni svi uvjeti za njezin odabir.',
@@ -9740,9 +9762,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> 'Zahtjeva od korisnika/ca upisivanje slučajno odabranog koda sa slike kako bi se spriječile masovne registracije.',
 	'VISUAL_CONFIRM_REFRESH'				=> 'Omogućava korisnicima/ama osvježavanje potvrdne slike',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> 'Omogućava korisnicima/ama da zatraže novi potvrdni kod, ukoliko ne mogu pročitati ponuđeni kod. Određeni pluginovi ne podržavaju ovu opciju.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'Ovdje možeš postaviti vrijednosti kolačića.<br />U većini slučajeva, zadane vrijednosti bi trebale biti dostatne.<br />Ukoliko, ipak, nešto moraš promijeniti/urediti, učini to (vrlo) pažljivo kako se ne bi dogodilo da se korisnici/ce ne mogu loginirati i sl.',
 
 	'COOKIE_DOMAIN'				=> 'Domena kolačića',
@@ -9754,9 +9774,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> 'Broj minuta neaktivnosti korisnika/ce nakon kojeg će biti izbrisan/a s liste online korisnika/ca.<br />Što je veća vrijednost, to će duže trajati obrada podataka za generiranje liste.',
 	'SESSION_LENGTH'			=> 'Vremensko trajanje sesija',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Sesija će isteći nakon, u sekundama, određenog vremena.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Ovdje možeš omogućiti/onemogućiti određene karakteristike/mogućnosti/funkcije.<br />Na većini servera nema potrebe za onemogućavanjem neke od funkcija, no, na nekim sustavima odnosno serverima koje dijeli velik broj korisnika/ca, ne bi bilo zgorega onemogućiti nepotrebne funkcije. Također je neloše odrediti ograničenja nakon dosegnuća kojih bi forum trebao “otići” offline.',
 
 	'CUSTOM_PROFILE_FIELDS'			=> 'Prilagođena korisnička polja',
@@ -11464,7 +11482,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',

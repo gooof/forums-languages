@@ -9462,7 +9462,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> 'أدخل التوقيت الصيفي/<abbr title="فرق التوقيت الصيفي">DST</abbr>',
+	'SYSTEM_DST'				=> 'أدخل التوقيت الصيفي/<abbr title="فرق التوقيت الصيفي">DST</abbr>',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'هنا تحدد العمليات الأساسية في منتداك ، أعط منتداك اسماً وشرحاً مناسباً ومن ضمن إعددات أخرى حدد الاختيار الافتراضي للتوقيت واللغة',
 	'CUSTOM_DATEFORMAT'				=> 'مخصص',
@@ -9590,6 +9613,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> 'العدد الأدنى من الحروف كي يتمكن العضو من إرسال الرسالة أو المشاركة. أقل عدد يمكن وضعه هو 1.',
 	'POSTING'						=> 'مشاركة',
 	'POSTS_PER_PAGE'				=> 'مشاركات لكل صفحة',
+	'POSTS_PER_PAGE_CONFIG'			=> 'مشاركات لكل صفحة',
 	'QUOTE_DEPTH_LIMIT'				=> 'أقصى عدد للاقتباسات في المشاركة',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> 'يمكن للمستخدم اقتباس تشعبي حدد عدد تشعب الاقتباس الواحد. ضع القيمة صفر لجعل الاقتباس لا نهائي',
 	'SMILIES_LIMIT'					=> 'أقصى عدد للابتسامات في المشاركة',
@@ -9689,9 +9713,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> 'إظهر الإحصائيات المُحددة أسفل عناصر التغذية <br />( بواسطة , وقت وتاريخ , الردود , المشاهدات )',
 	'ACP_FEED_EXCLUDE_ID'				=> 'استبعاد هذه المنتديات',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'المُحتوى من هذه <strong> لن تظهر في التغذية</strong>. اختار " لا منتديات " لاستدعاء البيانات من المنتديات جميعها. <br /> لتحديد/عدم تحديد أكثر من منتدى , إضغط باستمرار مُفتاح <samp>CTRL</samp> والنقر على المنتديات المطلوبة.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'عند تسجيل المستخدم يقوم نظام الكابتشا بعرض صورة فيها نصوص يصعب على الحاسب قراءتها ولكن يسهل للبشر قراءتها . هذه العملية مقدمة للتأكد من أن المسجل هو إنسان وليس برنامج إزعاج يقوم بعمليات تسجيل كثيرة',
 	'AVAILABLE_CAPTCHAS'					=> 'إضافات مُتوفرة',
 	'CAPTCHA_UNAVAILABLE'					=> 'لا يمكن اختيار الكابتشا , فمتطلباته لا تتوافق.',
@@ -9730,9 +9752,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> 'يطلب من المسجلين الجدد كتابة الرمز الأمني من CAPTCHA لتجنب التسجيل الآلي المتكرر',
 	'VISUAL_CONFIRM_REFRESH'				=> 'السماح للمستخدمين بتحديث صورة التأكيد البصري',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> 'السماح للمستخدمين بطلب صورة تأكيد بصرية جديده ، ذلك عند عدم قدرتهم على حل أو قراءة الحروف/الرموز داخل الصورة',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'التفاصيل هنا تعرف المعلومات التي تستعمل لإرسال الكوكيز إلى متصفح المستخدم. في معظم الأوقات الإعدادت الحالية تفي بالغرض. لكن إذا أردت أن تقوم بتعديلات اعملها بحذر. الإعدادت الخاطئة قد تمنع المستخدمين من تسجيل الدخول',
 
 	'COOKIE_DOMAIN'				=> 'نطاق الملفات المؤقته',
@@ -9744,9 +9764,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> 'عدد الدقائق التي تمسح الأعضاء من قائمة "من على الخط" بعد انعدام فعاليته بالمنتدى.  إذا كان الرقم أكبر سيكثر عدد الموجودين في قائمة المنتدى',
 	'SESSION_LENGTH'			=> 'طول الجلسة',
 	'SESSION_LENGTH_EXPLAIN'	=> 'بعد أن يسجل المستخدم تسجيل الدخول وتبدأ الجلسة ستنتهي الجلسة بعد هذا الوقت المحدد',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'هنا تستطيع تعطيل أو تفعيل بعض أعمال المنتدى لتقليل الحمل على قاعدة البيانات. في أكثر خوادم المواقع لا تحتاج إلى تعطيل أي خاصية. لكن في الاستضافة المشتركة أو خوادم الشبكة الضعيفة قد يؤدي تعطيل بعض الخصائص إلى تخفيف الحمل على المنتدى. تستطيع أيضا تحديد قدرة الحمل على المنتدى وجلسات الاتصال الفعالة بحيث يتعطل المنتدى عند وصول الحمل إلى مستوى معين',
 
 	'CUSTOM_PROFILE_FIELDS'			=> 'حقل الملف الشخصي المخصص',
@@ -11454,7 +11472,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',

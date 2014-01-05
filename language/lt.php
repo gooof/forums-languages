@@ -9465,7 +9465,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> 'Įjungti vasaros laiką/<abbr title="Daylight Saving Time">DST</abbr>',
+	'SYSTEM_DST'				=> 'Įjungti vasaros laiką/<abbr title="Daylight Saving Time">DST</abbr>',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Čia galite nustatyti pagrindinius diskusijų lentos nustatymus, nurodyti jos pavadinimą ir trumpą aprašymą, bei nustatyti standartinę laiko juostą bei kalbą.',
 	'CUSTOM_DATEFORMAT'				=> 'Individualus…',
@@ -9593,6 +9616,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> 'Mažiausias simbolių skaičius, kurį vartotojas turi įrašyti į pranešimą/žinutę (ne mažiau nei 1).',
 	'POSTING'						=> 'Rašymas',
 	'POSTS_PER_PAGE'				=> 'Pranešimų per puslapį',
+	'POSTS_PER_PAGE_CONFIG'			=> 'Pranešimų per puslapį',
 	'QUOTE_DEPTH_LIMIT'				=> 'Maksimalus citatų gylis',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> 'Maksimalus citatų gylis pranešime. Jeigu nenorite riboti citavimo gylio, įrašykite 0.',
 	'SMILIES_LIMIT'					=> 'Maksimalus pranešimo šypsenėlių skaičius',
@@ -9692,9 +9716,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> 'Po kiekvienu srauto elementu rodo individualią statistiką<br />(pvz. pranešimo autorių, datą ir laiką, atsakymų skaičių, peržiūrų skaičių)',
 	'ACP_FEED_EXCLUDE_ID'				=> 'Neįtraukti šių forumų',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Turinys iš šių forumų <strong>nebus įtraukiamas į srautus</strong>. Norėdami imti duomenis iš visų forumų nepasirinkite nei vieno.<br />Laikydami <samp>CTRL</samp> ir paspaudę kairįjį pelės mygtuką galite pasirinkti daugiau nei vieną forumą.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Čia galite pasirinkti ir nustatyti priedus, kurie yra sukurti blokuoti automatizuotus formas užpildančius internetinių šiukšlių (spam) robotus. Dažniausiai šie priedai veikia pateikdami dalyviams <em>CAPTCHA</em>, užduotis, kurias sudėtinga atlikti kompiuteriui.',
 	'AVAILABLE_CAPTCHAS'					=> 'Galimi priedai',
 	'CAPTCHA_UNAVAILABLE'					=> 'Jūs negalite pasirinkti šio priedo, nes serveris neturi visų būtinų komponentų.',
@@ -9733,9 +9755,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> 'Reikalauja, kad vartotojai registracijos metu atliktų užduotį skirtą apsaugai nuo internetinių šiukšlių robotų. Tai gelbsti nuo automatizuotų registracijų.',
 	'VISUAL_CONFIRM_REFRESH'				=> 'Leisti vartotojams pasirinkti kitą užduotį',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> 'Leidžia vartotojams paprašyti naujos užduoties, skirtos apsaugai nuo internetinių šiukšlių robotų, jeigu jie negali jos įvykdyti registracijos metu. Kai kurie priedai gali nepalaikyti šio nustatymo.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'Šie parametrai aprašo sausainėlių siunčiamų vartotojų naršyklėms duomenis. Daugumoje atvejų tinka standartiniai nustatymai. Tačiau jeigu jums reikia juos pakeisti, darykite tai atsargiai. Neteisingi nustatymai neleis vartotojams prisijungti.',
 
 	'COOKIE_DOMAIN'				=> 'Sausainėlio domenas',
@@ -9747,9 +9767,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> 'Minučių skaičius, po kurio neaktyvūs vartotojai nebus rodomi “Dabar prisijungusių” sąraše. Kuo ši reikšmė didesnė, tuo daugiau sistemos resursų reikia minėto sąrašo generavimui.',
 	'SESSION_LENGTH'			=> 'Sesijos trukmė',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Po tiek sekundžių pasibaigs sesija.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Čia galite įjungti arba išjungti tam tikras diskusijų lentos galimybes, kad sumažintumėte sistemos apkrovimą. Daugumoje serverių šių funkcijų išjungti nereikia. Tačiau kai kuriose sistemose ar internetinio turinio talpinimo serveriuose galimybių, kurių nereikia, išjungimas gali išeiti į naudą. Taip pat čia galite nurodyti sistemos apkrovimo ir aktyvių sesijų ribas, po kurių diskusijų lenta bus automatiškai išjungta.',
 
 	'CUSTOM_PROFILE_FIELDS'			=> 'Papildomi aprašymo laukai',
@@ -11457,7 +11475,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',

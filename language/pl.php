@@ -9476,7 +9476,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> 'Czas letni (<abbr title="Daylight Saving Time">DST</abbr>)',
+	'SYSTEM_DST'				=> 'Czas letni (<abbr title="Daylight Saving Time">DST</abbr>)',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Here you can determine the basic operation of your board, give it a fitting name and description, and among other settings adjust the default values for timezone and language.',
 	'CUSTOM_DATEFORMAT'				=> 'Inny…',
@@ -9604,6 +9627,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> 'Minimalna liczba znaków, jaką użytkownik musi umieścić w poście lub prywatnej wiadomości. Minimalna wartość tego ustawienia to 1.',
 	'POSTING'						=> 'Posty',
 	'POSTS_PER_PAGE'				=> 'Liczba postów na stronie',
+	'POSTS_PER_PAGE_CONFIG'			=> 'Liczba postów na stronie',
 	'QUOTE_DEPTH_LIMIT'				=> 'Maksymalna głębokość zagnieżdżania cytatów',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> 'Ustaw na 0 dla braku limitu.',
 	'SMILIES_LIMIT'					=> 'Maksymalna liczba uśmieszków',
@@ -9703,9 +9727,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> 'Wyświetlaj statystyki konkretnych wpisów pod nimi<br />(np. napisane przez, czas i data, odpowiedzi, wyświetlenia)',
 	'ACP_FEED_EXCLUDE_ID'				=> 'Wyłącz poniższe działy',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Zawartość poniższych działów <strong>nie będzie umieszczana w kanałach</strong>. Nie zaznaczenie żadnego działu spowoduje umieszczenie danych ze wszystkich działów.<br />Zaznacz/odznacz wiele działów poprzez przytrzymanie klawisza <samp>CTRL</samp> i klikanie.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Zabezpieczenia te służą do blokowania automatycznego wysyłania formularzy przez boty spamujące. W phpBB są one zrealizowane za pomocą wtyczek. Wtyczki te zazwyczaj działają poprzez wymaganie od użytkownika podania rozwiązania testu, który ma być trudny dla komputerów, a prosty dla ludzi.',
 	'AVAILABLE_CAPTCHAS'					=> 'Dostępne wtyczki',
 	'CAPTCHA_UNAVAILABLE'					=> 'Wtyczka nie może zostać wybrana, ponieważ jej wymagania nie są spełnione.',
@@ -9744,9 +9766,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> 'Wymaga od nowych użytkowników przejścia zadania przeciwbotowego w celu zapobiegania automatycznym rejestracjom.',
 	'VISUAL_CONFIRM_REFRESH'				=> 'Pozwól użytkownikom odświeżać zadanie przeciwbotowe',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> 'Pozwala użytkownikom zażądać nowego zadania przeciwbotowego w przypadku gdy nie są w stanie rozwiązać obecnego zadania. Niektóre wtyczki mogą nie wspierać tej opcji.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'Ciasteczka to dane umieszczane w przeglądarce w celu przechowania sesji użytkownika. W większości przypadków domyślne ustawienia powinny być odpowiednie. Jeśli musisz coś zmienić, rób to uważnie, ponieważ nieprawidłowe ustawienia mogą uniemożliwić logowanie użytkownikom. <strong style="color:red;">Domena ciasteczka powinna mieć formę <code>.adres-forum.pl</code>, bez przedrostka <code>www</code>!</strong>',
 
 	'COOKIE_DOMAIN'				=> 'Domena ciasteczka',
@@ -9758,9 +9778,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> 'Liczba minut, po jakiej nieaktywni użytkownicy nie będą wyświetlani na liście „Kto przegląda forum”. Im wyższa wartość, tym więcej pracy serwer musi wykonać, aby wyświetlić listę.',
 	'SESSION_LENGTH'			=> 'Długość sesji',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Sesje wygasną po upływie tego czasu, w sekundach.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Tutaj możesz włączyć i wyłączyć różne funkcje serwera, aby zmniejszyć ilość pracy, jaką musi wykonać. Na większości serwerów nie ma potrzeby blokowania żadnych funkcji. Jednak na niektórych systemach albo na hostingach współdzielonych zablokowanie funkcji, które nie są niezbędne, może być przydatne. Możesz też określić limity obciążenia serwera i aktywnych sesji, po przekroczeniu których forum zostanie wyłączone.',
 
 	'CUSTOM_PROFILE_FIELDS'			=> 'Własne pola profilu',
@@ -11468,7 +11486,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',

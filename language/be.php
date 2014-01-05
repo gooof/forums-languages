@@ -9472,7 +9472,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> 'Зараз дзейнічае летні час (<abbr title="Летні час">DST</abbr>)',
+	'SYSTEM_DST'				=> 'Зараз дзейнічае летні час (<abbr title="Летні час">DST</abbr>)',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Тут вы можаце ўсталяваць агульныя параметры канферэнцыі, даць ёй імя і апісанне, а таксама паказаць гадзінны пояс і мова, якія будуць выкарыстоўвацца па змаўчанні.',
 	'CUSTOM_DATEFORMAT'				=> 'Іншы…',
@@ -9600,6 +9623,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> 'Мінімальнае колькасць сімвалаў, неабходная для публікацыі паведамленняў і асабістых паведамленняў.',
 	'POSTING'						=> 'Размяшчэнне паведамленняў',
 	'POSTS_PER_PAGE'				=> 'Паведамленняў на старонку',
+	'POSTS_PER_PAGE_CONFIG'			=> 'Паведамленняў на старонку',
 	'QUOTE_DEPTH_LIMIT'				=> 'Максімальная колькасць узроўняў укладання цытат у паведамленні',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> 'Максімальная колькасць узроўняў укладання цытат. Увядзіце 0 для здымання абмежаванняў.',
 	'SMILIES_LIMIT'					=> 'Максімальная колькасць смайлікаў у паведамленні',
@@ -9699,9 +9723,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> 'Адлюстраванне індывідуальнай статыстыкі пад элементамі канала (аўтар паведамлення, дата і час публікацыі, колькасць адказаў і праглядаў).',
 	'ACP_FEED_EXCLUDE_ID'				=> 'Выключыць гэтыя форумы',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Паведамленні з наступных форумаў не будуць уключацца ў каналы навін. Не выбірайце форумаў, калі жадаеце атрымліваць дадзеныя з усіх форумаў. Абярыце некалькі форумаў, утрымліваючы клавішу <samp>Ctrl</samp> і клікая мышшу па патрэбных форумах.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Тут вы можаце выбраць і настроіць анты-спам модулі, якія рэалізуюць розныя спосабы прадухілення аўтаматызаваных рэгістрацый. Гэтыя сродкі звычайна выкарыстоўваюць праверку карыстальніка з дапамогай <em>CAPTCHA</em> - спецыяльнага тэсту, які складзены для аўтаматычнага распазнавання.',
 	'AVAILABLE_CAPTCHAS'					=> 'Даступныя модулі',
 	'CAPTCHA_UNAVAILABLE'					=> 'Дадзены модуль не можа быць выбраны, паколькі патрабаванні для яго выкарыстання не выкананыя.',
@@ -9740,9 +9762,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> 'Для прадухілення аўтаматычных рэгістрацый новыя карыстальнікі пры рэгістрацыі павінны будуць прайсці анты-спам тэст.',
 	'VISUAL_CONFIRM_REFRESH'				=> 'Дазволіць карыстальнікам абнаўляць анты-спам тэст',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> 'Дазваляе карыстальнікам запытваць новы анты-спам тэст, калі яны не змаглі яго прачытаць пры рэгістрацыі.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'Тут вы можаце змяніць налады cookies, якія адпраўляюцца ў браўзэры карыстальнікаў. У большасці выпадкаў досыць наладаў па змаўчанні. Калі вам усё жа трэба змяніць налады, то рабіце гэта асцярожна — няслушныя значэнні могуць прывесці да немагчымасці ўваходу карыстальнікаў на канферэнцыю.',
 
 	'COOKIE_DOMAIN'				=> 'Дамен cookie',
@@ -9754,9 +9774,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> 'Колькасць хвілін, па сканчэнні якіх неактыўныя карыстальнікі перастануць быць бачнымі ў спісе «Хто зараз на канферэнцыі». Павелічэнне гэтага значэння падвышае выдатак рэсурсаў сервера на стварэнне спісу.',
 	'SESSION_LENGTH'			=> 'Працягласць сесіі',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Сесія будзе завершаная па сканчэнні паказанага часу ў секундах.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Тут вы можаце ўключаць і адключаць некаторыя функцыі канферэнцыі для паніжэння нагрузкі на сервер. Для большасці сервераў няма неабходнасці адключаць якія-небудзь функцыі. Тым не менш, на некаторых сістэмах або калектыўных хостынгах можа быць карысным адключэнне магчымасцяў, якія вам не патрабуюцца. Вы можаце таксама задаць абмежаванні для нагрузкі на сервер і актыўных сесій, пры перавышэнні якіх канферэнцыя будзе адключаная.',
 
 	'CUSTOM_PROFILE_FIELDS'			=> 'Дадатковыя палі ў профілях',
@@ -11464,7 +11482,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',

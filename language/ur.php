@@ -9470,7 +9470,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> 'Enable Summer Time/<abbr title="Daylight Saving Time">DST</abbr>',
+	'SYSTEM_DST'				=> 'Enable Summer Time/<abbr title="Daylight Saving Time">DST</abbr>',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'یہاں آپ اپنے بورڈ کے بنیادی آپریشن کا تعین ، اس کے ایک فٹنگ کا نام اور تفصیلات کے درمیان اور دوسری تراتیب میں ٹائم زون اور زبان کے لئے پہلے سے طے شدہ اقدار کو ایڈجسٹ کر سکتے ہیں.',
 	'CUSTOM_DATEFORMAT'				=> 'اپنی مرضی کے...',
@@ -9598,6 +9621,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> 'مراسلات / پیغامات میں‌الفاظ کی کم سے کم تعداد جو ایک صارف کے لیے لکھنی ضروری ہے.',
 	'POSTING'						=> 'پوسٹنگ',
 	'POSTS_PER_PAGE'				=> 'ہر صفحے پر پوسٹس کی تعداد',
+	'POSTS_PER_PAGE_CONFIG'			=> 'ہر صفحے پر پوسٹس کی تعداد',
 	'QUOTE_DEPTH_LIMIT'				=> 'مراسلات میں اندر در اندر اقتباسات کی زیادہ سے زیادہ تعداد',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> 'مراسلات میں اندر در اندر اقتباسات کی زیادہ سے زیادہ تعداد. لامحدود کے لیے 0 لکھیں',
 	'SMILIES_LIMIT'					=> 'مراسلات میں مسکراہٹون کی زیادہ سے زیداہ تعداد ',
@@ -9697,9 +9721,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> 'فیڈ اشیاء کے نیچے انفرادی اعداد و شمار ظاہر کرتا ہے. <br /> جیسا کہ ارسال برائے، وقت اور تاریخ، جوابات وغیرہ',
 	'ACP_FEED_EXCLUDE_ID'				=> 'ان فورمز کو نکالیں',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'ان فومرز میں‌سے مواد <strong>فیڈ میں‌شامل</strong> نہیں‌ہونگے. سب فورمز میں‌سے مواد حاصل کرنے کے لیے کوئی فورم منتخب نہ کریں. ',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'یہاں آپ خود کار سپیم صارفین کی طرف سے خود کار فارمز کی ارسالی روکنے کے لیے پلگ-اِن ترتیب دے سکتے ہیں.',
 	'AVAILABLE_CAPTCHAS'					=> 'دستیاب پلگ-اِن',
 	'CAPTCHA_UNAVAILABLE'					=> 'یہ پلگ-اِن منتخب نہیں کیا جا سکتا کیونکہ اسکی ضروریات پوری نہیں ہوئی ہیں',
@@ -9738,9 +9760,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> 'خود کار رجسٹریشن کو روکنے کے لیے نئے صارفین کے لیے اسکا استعمال ضروری ہے',
 	'VISUAL_CONFIRM_REFRESH'				=> 'صارفین کو antispam bot کا کام ریفیرش کرنے کی اجازت دیتا ہے',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> 'صارفین کو antispam bot کا کام دوبارہ درخواست کرنے کی اجازت دیتا ہے اگر وہ موجودہ کام کو حل نہ کر پا رہے ہوں‌تو.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'یہ معلومات اس مواد کو واضح‌کرتی ہیں جو صارف برائوزر کو کوکیز بھیجتا ہے. یہ طے شدہ طور پر کافی ہونی چاہیے. اگر آپ اسے بدلنا چاہتے ہیں‌تو دیکھ بھال کی ضرورت ہے کیونکہ غلط انداراجات سے صارفین کا لاگن ہونا بند ہو سکتاہے.',
 
 	'COOKIE_DOMAIN'				=> 'کوکی ڈومین',
@@ -9752,9 +9772,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> 'وقت کی مدت جس کے بعد غیر فعال اراکین آن لائن فہرست میں‌ظاہر نہیں‌ہونگے. ',
 	'SESSION_LENGTH'			=> 'سیشن کی لمبائی',
 	'SESSION_LENGTH_EXPLAIN'	=> 'سیشن اس مدت کے بعد زائل ہو جائیں گے، سیکنڈز میں مدت',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'یہاں‌آپ بورڈ‌کے افعال پر کاروائی کی مدت میں‌کمی کرنے کے لیے کچھ مخصوص افعال کو فعال یا غیر فعال کر سکتے ہیں. کئی سرورز پر ان ترتیبات کو تبدیل کرنے کی ضرورت نہیں‌ہوتی.',
 
 	'CUSTOM_PROFILE_FIELDS'			=> 'آپنی مرضی کی پروفائل فیلڈز',
@@ -11464,7 +11482,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',

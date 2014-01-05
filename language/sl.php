@@ -9473,7 +9473,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> 'Omogoči poletni čas (DST)',
+	'SYSTEM_DST'				=> 'Omogoči poletni čas (DST)',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Tu lahko nastavljaš osnovne parametre svojega foruma, mu nastaviš ime, opis, časovni pas, jezik in druge možnosti.',
 	'CUSTOM_DATEFORMAT'				=> 'Po meri ...',
@@ -9601,6 +9624,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> 'Minimalno število znakov, katere mora uporabnik vnesti v objavo/zasebno sporočilo. Najmanjše možno število je 1.',
 	'POSTING'						=> 'Pošiljanje',
 	'POSTS_PER_PAGE'				=> 'Prispevkov na stran',
+	'POSTS_PER_PAGE_CONFIG'			=> 'Prispevkov na stran',
 	'QUOTE_DEPTH_LIMIT'				=> 'Največja globina vgnezdenih citatov',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> 'Največja globina vgnezdenih citatov v sporočilu. Nastavi na 0 za neomejeno globino.',
 	'SMILIES_LIMIT'					=> 'Največje število smeškov',
@@ -9700,9 +9724,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> 'Prikaži individualno statistiko pod viri <br />(npr. napisal/a, čas in datum, odgovori, ogledi)',
 	'ACP_FEED_EXCLUDE_ID'				=> 'Izključi naslednje forume',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Vsebina, ki je tukaj označena <strong>bo izključena v virih</strong>. Odznači vse forumo za pridobivanje vseh virov.<br />Označi/Odznači več forumov s pritiskom na <samp>CTRL</samp> in klikanjem',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Tu lahko definiraš privzete nastavitve vizualnih (CAPTCHA) potrditev.',
 	'AVAILABLE_CAPTCHAS'					=> 'Vtičniki na razpolago',
 	'CAPTCHA_UNAVAILABLE'					=> 'Vtičnik ne more biti izbran, ker nso izpolnjene minimalne zahteve.',
@@ -9741,9 +9763,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> 'Od uporabnikov, ki se želijo registrirati zahtevaj, naj v vnosno polje prepišejo kodo, ki se naključno generira. S tem preprečiš masovno registriranje.',
 	'VISUAL_CONFIRM_REFRESH'				=> 'Omogoči uporabnikom osvežitev anti-spambot slike',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> 'Omogoči uporabnikom zahtevek za novo anti-spambot sliko, če je ne morejo razrešiti med registracijo. Nekateri vtičniki tega ne podpirajo.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'Tukaj so detajli določenih podatkov, ki pošiljajo piškotke v brskalnike uporabnikov. V večini primerov so privzete nastavitve za piškotke povsem dovolj. Če že moraš kaj spremeniti, spreminjaj pazljivo, saj napačne nastavitve lahko preprečijo nadaljnje prijavljanje uporabnikov.',
 
 	'COOKIE_DOMAIN'				=> 'Domena piškotka',
@@ -9755,9 +9775,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> 'Število minut po katerih se neaktiven uporabnik ne bo več pojavil na seznamu "KDO JE NA STRANI". Višja kot je ta vrdnost, daljše je zahtevano procesiranje za generiranje seznama.',
 	'SESSION_LENGTH'			=> 'Dolžina seje',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Seja se bo zaključila po tem času (v sekundah).',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Tukaj lahko omogočiš ali onemogočiš določene funkcije foruma, s tem pa zmanjšuješ število procesov, ki jih sistem ustvarja. Na večini strežnikov onemogočanje funkcij ni potrebno. Onemogočanje določenih možnosti foruma, ki jih res ne potrebuješ, se splača samo v nekaterih sistemih in gostovalnih okoljih. Možno je tudi izbiranje omejitev za nalaganje sistema in aktivnosti sej. V primeru, da bodo omejitve presežene, se bo forum izključil',
 
 	'CUSTOM_PROFILE_FIELDS'			=> 'Posebna polja uporabniškega profila',
@@ -11465,7 +11483,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',

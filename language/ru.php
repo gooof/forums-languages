@@ -9472,7 +9472,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> 'Сейчас действует летнее время (<abbr title="Летнее время">DST</abbr>)',
+	'SYSTEM_DST'				=> 'Сейчас действует летнее время (<abbr title="Летнее время">DST</abbr>)',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Здесь вы можете установить общие параметры конференции, дать ей имя и описание, а также указать часовой пояс и язык, которые будут использоваться по умолчанию.',
 	'CUSTOM_DATEFORMAT'				=> 'Другой…',
@@ -9600,6 +9623,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> 'Минимальное количество символов, необходимое для публикации сообщений и личных сообщений. Наименьшее возможное значение равно 1.',
 	'POSTING'						=> 'Размещение сообщений',
 	'POSTS_PER_PAGE'				=> 'Сообщений на странице',
+	'POSTS_PER_PAGE_CONFIG'			=> 'Сообщений на странице',
 	'QUOTE_DEPTH_LIMIT'				=> 'Максимальная глубина вложенности цитат',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> 'Максимальная глубина вложенности для цитат в сообщениях. Введите 0 для снятия ограничений.',
 	'SMILIES_LIMIT'					=> 'Максимальное количество смайликов в сообщении',
@@ -9699,9 +9723,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> 'Отображение индивидуальной статистики под элементами канала (такой как автор сообщения, дата и время публикации, количество ответов и просмотров).',
 	'ACP_FEED_EXCLUDE_ID'				=> 'Исключить данные форумы',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Содержимое следующих форумов не будет включено в каналы новостей. Не выбирайте ничего, если хотите получать данные со всех форумов. Чтобы выбрать несколько форумов, пользуйтесь мышью, удерживая кнопку <samp>CTRL</samp>.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Здесь вы можете выбрать и настроить модули, предназначенные для борьбы со спам-ботами. Эти средства обычно используют проверку пользователя с помощью <em>CAPTCHA</em> - специального теста, который сложен для автоматического распознавания.',
 	'AVAILABLE_CAPTCHAS'					=> 'Доступные модули',
 	'CAPTCHA_UNAVAILABLE'					=> 'Данный модуль не может быть выбран, поскольку требования для его использования не выполнены.',
@@ -9740,9 +9762,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> 'Новым пользователям понадобится пройти проверку средством против спам-ботов для предотвращения автоматических регистраций.',
 	'VISUAL_CONFIRM_REFRESH'				=> 'Разрешить пользователям обновлять задание теста против спам-ботов',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> 'Опция позволяет пользователям запрашивать новое задание теста против спам-ботов, если они не смогли справиться с текущим заданием. Некоторые модули могут не поддерживать эту функцию.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'Здесь вы можете изменить настройки cookies, отправляемые в браузеры посетителей. В большинстве случаев достаточно настроек по умолчанию. Если вам всё же нужно изменить настройки, то делайте это осторожно — неверные значения могут привести к невозможности входа пользователей на конференцию.',
 
 	'COOKIE_DOMAIN'				=> 'Домен cookie',
@@ -9754,9 +9774,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> 'Количество минут, по прошествии которых неактивные пользователи перестанут быть видимыми в списке «Кто сейчас на конференции». Увеличение этого значения повышает расход ресурсов сервера на создание списка.',
 	'SESSION_LENGTH'			=> 'Длительность сессии',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Сессия будет завершена по прошествии указанного времени в секундах.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Здесь вы можете включать и отключать некоторые функции конференции для снижения нагрузки на сервер. Для большинства серверов нет необходимости отключать какие-либо функции. Тем не менее на некоторых системах или коллективных хостингах может быть полезным отключение возможностей, которые вам не требуются. Вы можете также задать ограничения для нагрузки на сервер и активных сессий, при превышении которых конференция будет отключена.',
 
 	'CUSTOM_PROFILE_FIELDS'			=> 'Дополнительные поля в профилях',
@@ -11464,7 +11482,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',

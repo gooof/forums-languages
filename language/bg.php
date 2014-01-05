@@ -9460,7 +9460,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> 'Включи DST',
+	'SYSTEM_DST'				=> 'Включи DST',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Тук можете да установите главните операции във форума, от името на сайта до личните съобщения.',
 	'CUSTOM_DATEFORMAT'				=> 'По ваш избор…',
@@ -9588,6 +9611,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> 'Задава минимален брой знаци за мнение, ако има по-малко от въпросната настройка, потребителя не може да изпрати съобщението. Минимума е 1.',
 	'POSTING'						=> 'Писане',
 	'POSTS_PER_PAGE'				=> 'Мнения на страница',
+	'POSTS_PER_PAGE_CONFIG'			=> 'Мнения на страница',
 	'QUOTE_DEPTH_LIMIT'				=> 'Максимална дълбочина при цитиране',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> 'Задай 0 за неограничена дълбочина.',
 	'SMILIES_LIMIT'					=> 'Максимум усмивки в мнение',
@@ -9687,9 +9711,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> 'Показва индивидуална статистика за всеки фийд<br />(Публикуван от, дата и час, Отговори, Преглеждания)',
 	'ACP_FEED_EXCLUDE_ID'				=> 'Изключи форумите',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Съдържанието от избраните форуми <strong>няма да бъде включено във фийдовете</strong>. Не избирайте нито един форум, ако искате съдържанието от всички форуми да се показва.<br />Задръжте <samp>CTRL</samp> и кликнете, ако искате да изберете повече от един форум.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Тук се менажират разширенията (plugins) създадени да блокират автоматичните регистрации във форума ви. В повечето случай за тази цел се използва така наречената <em>CAPTCHA</em>.',
 	'AVAILABLE_CAPTCHAS'					=> 'Налични разширения (plugins)',
 	'CAPTCHA_UNAVAILABLE'					=> 'Разширението не може да бъде избрано, защото не покрива изискванията.',
@@ -9728,9 +9750,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> 'Тази опция ще включи CAPTCHA за регистрирани.',
 	'VISUAL_CONFIRM_REFRESH'				=> 'Презареждане на CAPTCHA',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> 'Позволява на потребителите да изискват нова CAPTCHA, ако не разбират появилата им се първия път. Някои разширения може да не поддържат тази функция.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'Настройки на бисквитки. В повечето случай настройките по подразбиране трябва да бъдат достатъчни. Внимавайте когато променяте настройки тук.',
 
 	'COOKIE_DOMAIN'				=> 'Бисквитка домейн',
@@ -9742,9 +9762,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> 'Времето след което статистиката (кой е он-лайн) се обновява',
 	'SESSION_LENGTH'			=> 'Дължина на сесия',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Сесията ще изтече след това време, в секунди.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Тук можете да изключвате и включвате различни функции на форума за да намалите използването на процесора. В повечето случай няма нужна да променяте нищо.',
 
 	'CUSTOM_PROFILE_FIELDS'			=> 'Допълнителни полета',
@@ -11452,7 +11470,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',

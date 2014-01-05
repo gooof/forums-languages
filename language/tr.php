@@ -9472,7 +9472,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> 'Yaz Saati/<abbr title="Gün Işığından Tasarruf Zamanı">GITZ</abbr> uygulamasını aç',
+	'SYSTEM_DST'				=> 'Yaz Saati/<abbr title="Gün Işığından Tasarruf Zamanı">GITZ</abbr> uygulamasını aç',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Buradan mesaj panonuzun ana işleyişini belirleyebilirsiniz, uygun bir isim ve açıklama verin, ve diğer ayarlar arasında zaman dilimi ile dil için varsayılan değerleri ayarlayın.',
 	'CUSTOM_DATEFORMAT'				=> 'Özel…',
@@ -9600,6 +9623,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> 'Kullanıcının bir mesaj/özel mesajda girmesi gereken en düşük karakter sayısı. Bu ayar için girilebilecek en küçük değer 1’dir.',
 	'POSTING'						=> 'Mesajlaşma',
 	'POSTS_PER_PAGE'				=> 'Her sayfadaki mesaj sayısı',
+	'POSTS_PER_PAGE_CONFIG'			=> 'Her sayfadaki mesaj sayısı',
 	'QUOTE_DEPTH_LIMIT'				=> 'Alıntılar için en fazla iç içe geçmiş derinlik sayısı',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> 'Bir mesajdaki en fazla iç içe geçmiş alıntı derinliği sayısı. Sınırsız derinlik için 0 olarak ayarlayın.',
 	'SMILIES_LIMIT'					=> 'Her mesajdaki en fazla ifade sayısı',
@@ -9699,9 +9723,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> 'Besleme ögelerinin altında özel istatistikler gösterilir<br />(ör. mesajı gönderen, tarih ve saat, cevaplar, görüntülemeler)',
 	'ACP_FEED_EXCLUDE_ID'				=> 'Bu forumları hariç tut',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Bunların içerikleri <strong>özet akışlarında gösterilmeyecektir</strong>. Tüm forumlardan veri çekmek için hiç forum seçmeyiniz.<br />Birden çok forumu Seçmek/Seçimi Kaldırmak için <samp>CTRL</samp> tuşuna basılı tutun ve tıklayın.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Buradan spambotlar tarafından tasarlanan otomatik olarak form gönderimlerini engellemek için eklentileri seçebilir ve ayarlayabilirsiniz. Bu eklentiler genellikle bir <em>CAPTCHA</em> ile kullanıcıya sorulmak amacıyla çalışır ve bilgisayarlar için çözmesi zor olarak tasarlanan bir testtir.',
 	'AVAILABLE_CAPTCHAS'					=> 'Mevcut eklentiler',
 	'CAPTCHA_UNAVAILABLE'					=> 'Gereksinimleri yerine getirilmediği için bu eklenti seçilemez.',
@@ -9740,9 +9762,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> 'Otomatik kayıtları önlemek amacıyla anti-spambot görevini geçmek için yeni kullanıcılardan yardım istenir.',
 	'VISUAL_CONFIRM_REFRESH'				=> 'Anti-spambot görevini yenilemek için kullanıcılara izin ver',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> 'Eğer kullanıcılar kayıt işlemi sırasında geçerli görevi çözemezlerse yeni bir anti-spambot görevi istemelerine izin verilir. Bazı eklentiler bu özelliği desteklemeyebilir.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'Buradaki detaylar, kullanıcılarınızın tarayıcılarına gönderilen çerez verilerini tanımlar. Bir çok durumda çerez verileri için burada belirtilmiş varsayılan değerler yeterli olacaktır. Buradaki değerleri dikkatli bir şekilde değiştirmezseniz, yanlış değerler kullanıcılarınızın girişini engelleyebilir.',
 
 	'COOKIE_DOMAIN'				=> 'Çerez domain adresi',
@@ -9754,9 +9774,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> 'Bu dakikadan sonra aktif olmayan kullanıcılar “Kimler Çevrimiçi” listesinde gözükmeyecektir. Bu değerin yüksekliği, listenin oluşturulması için çok sayıda işlem yapılmasını gerektirecektir.',
 	'SESSION_LENGTH'			=> 'Oturum uzunluğu',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Bu zamandan sonra oturumlar sona erecektir, saniye cinsinden belirtilmelidir.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Buradan mesaj panosunun belirli fonksiyonlarını açıp kapatabilirsiniz, bu sayede işlem miktarını azaltabilirsiniz. Bir çok sunucuda herhangi bir fonksiyonu kapamanız gerekmez. Aslında, belirli sistemlerde ya da paylaşılmış hosting ekipmanlarında gerekli olmadığına inandığınız fonksiyonların kapatılması bazı kazançlar sağlayabilir. Ayrıca burada sistem yüklemesi ve aktif oturum durumundan çıkıldığında, -ki bu durumda mesaj panosu çevrimdışı olur, bunlar için bazı sınırlamalar belirleyebilirsiniz.',
 
 	'CUSTOM_PROFILE_FIELDS'			=> 'Özel profil alanları',
@@ -11464,7 +11482,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',

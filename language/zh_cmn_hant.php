@@ -9472,7 +9472,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> '開啟日光節約時間/<abbr title="Daylight Saving Time">DST (Daylight Saving Time)</abbr>',
+	'SYSTEM_DST'				=> '開啟日光節約時間/<abbr title="Daylight Saving Time">DST (Daylight Saving Time)</abbr>',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> '在這裡，您可以決定討論區的基本組態，設定適當的名稱以及描述，以及調整合適的時區與語系預設值。',
 	'CUSTOM_DATEFORMAT'				=> '自訂...',
@@ -9600,6 +9623,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> '每篇文章/私訊所允許發表的字元下限。最小值為 1。',
 	'POSTING'						=> '發表中',
 	'POSTS_PER_PAGE'				=> '每頁顯示文章數',
+	'POSTS_PER_PAGE_CONFIG'			=> '每頁顯示文章數',
 	'QUOTE_DEPTH_LIMIT'				=> '引言的最多層數',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> '在一篇文章中允許之引言的最多層數。設定為 0，表示沒有限制。',
 	'SMILIES_LIMIT'					=> '每篇文章中的最多表情符號',
@@ -9699,9 +9723,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> '下面的消息來源顯示個別的項目統計<br />(例如：發表者、日期與時間、回覆數、觀看數)',
 	'ACP_FEED_EXCLUDE_ID'				=> '排除這些版面',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> '來自這些版面的內容將 <strong>不包含在消息來源中</strong>。沒有選擇版面將自所有的版面拉出資料。<br />以按住 <samp>CTRL</samp> 以及點選來選擇/刪除多個版面。',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> '在這裡，您可以選擇以及設定 CAPTCHA 外掛，其目的是為了阻止灌水惡意程式之自動表單提交。這些外掛的一般性工作為使用 <em>CAPTCHA</em> 來挑戰使用者，目的是提供電腦難以解決的測試。',
 	'AVAILABLE_CAPTCHAS'					=> '有用的外掛',
 	'CAPTCHA_UNAVAILABLE'					=> '這 CAPTCHA 不能選擇，因為它沒有所需的要件。',
@@ -9740,9 +9762,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> '當新的使用者註冊時，需要通過反廣告機器人的確認代碼，以協助防止自動註冊。',
 	'VISUAL_CONFIRM_REFRESH'				=> '允許使用者重新整理反廣告機器人的確認代碼',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> '如果在註冊時無法判定確認代碼，那麼允許使用者去重新讀取新的反廣告機器人之確認代碼。某些外掛也許不支援這個選項。',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> '這些細節定義發送 cookies 到會員瀏覽器的資料。在大部分情況下設定 cookie 預設值應該是足夠的。如果您需要做任何改變，那麼得謹慎，不正確的設定將使會員無法登入討論區。',
 
 	'COOKIE_DOMAIN'				=> 'Cookie 網域',
@@ -9754,9 +9774,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> '已離線的使用者在多少分鐘後將不出現在「誰在線上」列表。此值越高則產生列表需要越大的處理過程。',
 	'SESSION_LENGTH'			=> 'Session 長度',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Session 多少時間後將終止，單位：秒。',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> '在這裡，您可以啟用以及停用某些討論區功能以減少需要處理的資料量。對於大多數伺服器並不需要停用任何功能。不過，在系統或共用主機的環境下，停用您真正不需要的功能是有利的。您也可以指定系統負荷以及有效 sessions 的限制，超過限制討論區將關閉。',
 
 	'CUSTOM_PROFILE_FIELDS'			=> '自訂個人資料欄位',
@@ -11464,7 +11482,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',

@@ -9488,7 +9488,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> 'サマータイム/<abbr title="Daylight Saving Time">DST(Daylight Saving Time)</abbr> を有効にする',
+	'SYSTEM_DST'				=> 'サマータイム/<abbr title="Daylight Saving Time">DST(Daylight Saving Time)</abbr> を有効にする',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'ここでは掲示板の基本動作を設定できます。目的に沿ったサイト名とサイト説明を入力してください。また、タイムゾーンとデフォルト言語をこの掲示板を運用している地域に合わせてください。',
 	'CUSTOM_DATEFORMAT'				=> 'カスタム…',
@@ -9616,6 +9639,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> '記事/PM に最低限書き込む必要のある文字数です。0 に設定することはできません。',
 	'POSTING'						=> '投稿',
 	'POSTS_PER_PAGE'				=> 'ページあたりの記事数',
+	'POSTS_PER_PAGE_CONFIG'			=> 'ページあたりの記事数',
 	'QUOTE_DEPTH_LIMIT'				=> '引用入れ子の深さ制限',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> '引用の中に引用を繰り返し含める事ができる深さ（回数）の制限です。0 に設定すると上限はありません。',
 	'SMILIES_LIMIT'					=> 'スマイリーの最大数',
@@ -9715,9 +9739,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> '有効にした場合、統計データ（投稿者、投稿日時、返信数、閲覧数）を表示します',
 	'ACP_FEED_EXCLUDE_ID'				=> 'フィードの無効化',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'ここで選択されたフォーラムは<strong>フィードされません</strong>。フォーラム内のトピックと記事も同様です。<br />複数選択するにはマウスとキーボードをうまく活用してください（<samp>SHIFT</samp>キー または <samp>CTRL</samp>キー を押しながらクリック）',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'ここでは CAPTCHA の設定を行うことができます。CAPTCHA はスパムボットによる投稿やユーザー登録から掲示板を守ってくれます。',
 	'AVAILABLE_CAPTCHAS'					=> 'プラグイン',
 	'CAPTCHA_UNAVAILABLE'					=> 'コンフィグ設定が不十分なため、その CAPTCHA を利用することはできません',
@@ -9756,9 +9778,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> '大量登録によるサイト攻撃を防ぐため、新規ユーザーに対して CAPTCHA 認証コードの入力を強制します',
 	'VISUAL_CONFIRM_REFRESH'				=> 'CAPTCHA 画像のリフレッシュ',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> '表示された CAPTCHA 画像をユーザーがリフレッシュできるようになります。CAPTCHA 画像が複雑すぎて 文字/数字 を判読できない時がある場合は有効にすると良いでしょう。CAPTCHA プラグインによってはこの機能を利用できないものもあります。',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'ここでは cookie の設定を行うことができます。多くの場合、デフォルト設定のままで十分です。デフォルト設定を変更する場合は十分注意して行ってください。間違った設定をしてしまうと登録ユーザーがログインできなくなります。',
 
 	'COOKIE_DOMAIN'				=> 'cookie ドメイン',
@@ -9770,9 +9790,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> 'ユーザーがサイトを閉じても “オンラインデータ” リストにそのユーザーを表示しておく時間の長さです。この時間が長ければ長い程サーバに負担がかかります。',
 	'SESSION_LENGTH'			=> 'セッションの有効期間',
 	'SESSION_LENGTH_EXPLAIN'	=> 'セッションが発生してからこの時間が経過すると、サーバはそのセッションを破棄します',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'ここではサーバの処理量を減らすため、掲示板の機能をいくつか無効にできます。ほとんどのサーバではどの機能も無効にする必要はないでしょう。しかしシェアされたホスティング環境などでは必要のない機能を無効化すると有益かもしれません。また、読み込み制限をかけたり、有効なセッション数を制限する事によって無効なセッションを割り当てられたユーザーに対して掲示板を自動的にオフラインに移行させたりする事もできます。',
 
 	'CUSTOM_PROFILE_FIELDS'			=> 'カスタムプロフィールフィールド',
@@ -11480,7 +11498,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',

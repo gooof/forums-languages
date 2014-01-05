@@ -9472,7 +9472,30 @@ $lang = array_merge($lang, array(
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'					=> 'Vælg sommertid/<abbr title="Daylight Saving Time">DST</abbr>',
+	'SYSTEM_DST'				=> 'Vælg sommertid/<abbr title="Daylight Saving Time">DST</abbr>',
+	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
+	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
+	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
+	'TOPICS_PER_PAGE_EXPLAIN'	=> 'e.g. topics per forum page, search results, members in the memberlist...',
+	'EXPAND_INDEX_STATS'		=> 'Expand the index statistics?',
+	'EXPAND_INDEX_STATS_EXPLAIN'=> 'Yes = professional, no = simple version',
+	'SUBFORUM_DISPLAY'			=> 'Representation of Subforums',
+	'SUBFORUM_DISPLAY_EXPLAIN'	=> 'Subforums are displayed in the index page or in forum view and normally separated by a comma.',
+	'NO_CANCELLATION'			=> 'no cancellation ',
+	'MCP_ACTIVATE_AS_STANDARD'	=> 'Enable and set the hook automatically',
+	'ACP_NEWSBOX_YES2'			=> 'Yes, at Index &amp; Portal',
+	'ACP_NEWSBOX_YES3'			=> 'Yes, display newsbox almost anywhere',
+	'ACP_NEWSBOX_ENABLE_REG'	=> 'Activate News for registered users',
+	'ACP_NEWSBOX_ENABLE_GUEST'	=> 'Activate News for guests',
+	'ACP_NEWSBOX_TEXT_REG'		=> 'News text for registered users',
+	'ACP_NEWSBOX_TEXT_GUEST'	=> 'News text for guests',
+	'ACP_HTML_ENABLE_JS_DISABLE'=> 'HTML allowed, JavaScript disallowed.',
+	'QUOTE_BACKLINK'			=> 'Adjustment of Quote Button',
+	'QUOTE_BACKLINK_EXPLAIN'	=> 'The option is used when a user click on the Quote button in topics. If Backlink variant is selected, individual passages can still be quote directly below the editor.',
+	'QUOTE_BACKLINK_STANDARD'	=> 'Quote full post (standard)',
+	'QUOTE_BACKLINK_LINK'		=> 'Backlink to original post instead of quote text',
+	'QUOTE_BACKLINK_LINKTEXT'	=> 'Show backlink and quote text together',
+	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Her kan du bestemme en række vigtige standardindstillinger. Dit boards navn og beskrivelsen af det, og også indstillingerne for tidszone, sprog m.v.',
 	'CUSTOM_DATEFORMAT'				=> 'Valgfri...',
@@ -9600,6 +9623,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> 'Indlæg og private beskeder skal indeholde minimum dette antal tegn. 1 er den mindste værdi i denne indstilling.',
 	'POSTING'						=> 'Indlæg',
 	'POSTS_PER_PAGE'				=> 'Indlæg pr. side',
+	'POSTS_PER_PAGE_CONFIG'			=> 'Indlæg pr. side',
 	'QUOTE_DEPTH_LIMIT'				=> 'Maksimal dybde for citeringer',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> 'Bestemmer hvor mange tidligere citeringer et citat kan indeholde. Sæt til 0 for ubegrænset dybde.',
 	'SMILIES_LIMIT'					=> 'Maksimalt antal smilies pr. indlæg',
@@ -9699,9 +9723,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_ITEM_STATISTICS_EXPLAIN'	=> 'Viser individuelle statistikker under feed-elementer<br />(f. eks. indsendt af, svar, visninger, dato og tid)',
 	'ACP_FEED_EXCLUDE_ID'				=> 'Ekskluder disse fora',
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Indholdet i disse bliver <strong>ikke medtaget i feeds</strong>. Vælges ingen fora, medtages data fra samtlige fora.<br />Vælg flere fora ved at holde <samp>CTRL</samp> nede og klikke.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Her kan du vælge, samt konfigurere moduler, som er designet til beskytte mod automatiserede tilmeldinger og indlæg fra spambotter. Modulerne vil typisk udfordre bruger med en <em>CAPTCHA</em>, en test som er vanskelig at løse for computere.',
 	'AVAILABLE_CAPTCHAS'					=> 'Tilgængelige udvidelsesmoduler',
 	'CAPTCHA_UNAVAILABLE'					=> 'Dette modul kan ikke vælges, dets krav er ikke opfyldt.',
@@ -9740,9 +9762,7 @@ $lang = array_merge($lang, array(
 	'VISUAL_CONFIRM_REG_EXPLAIN'			=> 'For at hindre automatiserede tilmeldinger, udfordres nye brugere med en CAPTCHA-opgave.',
 	'VISUAL_CONFIRM_REFRESH'				=> 'Brugere kan bede om ny opgave',
 	'VISUAL_CONFIRM_REFRESH_EXPLAIN'		=> 'Tillader at brugere kan bede om ny opgave, hvis den første ikke kan løses under tilmelding. Ikke alle moduler understøtter ikke denne mulighed.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'En cookie er en lille mængde data, der sendes til brugernes browser. Den omfatter bl.a. et anonymt, men entydigt id, som eksempelvis anvendes til at logge dine brugere automatisk ind. Indstillingerne her bestemmer de parametre boardets cookies afsendes med. I de fleste tilfælde er de valgte standardværdier tilstrækkelige. Ændrer du indstillingerne på et board i drift, så gør det med forsigtighed. I værste fald kan dine brugere ikke mere logge ind automatisk.',
 
 	'COOKIE_DOMAIN'				=> 'Cookiedomæne',
@@ -9754,9 +9774,7 @@ $lang = array_merge($lang, array(
 	'ONLINE_LENGTH_EXPLAIN'		=> 'Inaktive brugere fjernes fra "Hvem er online" listen efter den angivne periode. Jo større tidsrum, desto længere behandlingstid for at generere listen.',
 	'SESSION_LENGTH'			=> 'Sessionslængde',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Sessioner udløber automatisk efter dette tidsrum.',
-));
 
-$lang = array_merge($lang, array(
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Her kan du slå visse boardfunktioner fra, for at reducere boardets belastning af serveren. På de fleste servere skulle der ikke være brug for at slå nogen funktioner fra. Men på visse systemer eller i delte værtsmiljøer kan det være en fordel at slå unødvendige funktioner fra. Desuden kan du definere tærskler for systembelastning og antal aktive sessioner, overskrides disse vil boardet gå offline.',
 
 	'CUSTOM_PROFILE_FIELDS'			=> 'Tilpassede profilfelter',
@@ -11465,7 +11483,9 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS'			=> 'Minimum posts to enter the forum',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'How many posts must a user to have access to this forum to have put a 0 if you want no minimum limit.',
 	'STARTPAGE'				=> 'Forum Startpage',
-
+	'TOO_MANY_ROWS_SELECTED'	=> 'Choose less than %s rows. If you want all, select only the first one.',
+	'SMILIE_CAT_DELETE'			=> 'Are you sure you want to delete this category?<br /><br />All smilies in this category will be deleted, even if they are in other categories!',
+	'SIGNS'				=> 'signs',
 
 	'IMG_ICON_POST_THANKS'		=> 'Thank You',
 	'THANKS_ENABLE'			=> 'You allow thanks in this forum?',
