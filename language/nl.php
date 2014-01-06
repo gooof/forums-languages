@@ -12788,7 +12788,7 @@ $lang = array_merge($lang, array(
 	'FORUM_BG'	=> 'Forum background image',
 	'FORUM_BG_EXPLAIN'	=> 'Adds a background image to the forum. If you want a transparent background, the checkbox must be marked or enter &quot;transparent&quot;. <br />E.g. http://img.userboard.org/images/forum_bg/002.gif',
 
-	'TAW_INTERVAL'					=> 'Topic te oud waarschuwingsinterval',
+	'TAW_INTERVAL'					=> 'Topic Age Warning',
 	'TAW_INTERVAL_EXPLAIN'			=> 'Aantal dagen, maanden of jaren waarna een gebruiker een waarschuwing ontvangt dat zijn topic te oud is.<strong>Als je 0 invult dan is deze functie uitgeschakeld.</strong>',
 	'TAW_LOCK'						=> 'Sluit oud topic',
 	'TAW_LOCK_EXPLAIN'				=> 'Als <code>Ja</code> wordt een topic automatisch gesloten als een gebruiker probeert te antwoorden nadat de ingestelde tijd is bereikt.',

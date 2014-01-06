@@ -12770,7 +12770,7 @@ $lang = array_merge($lang, array(
 	'FORUM_BG'	=> 'Forum background image',
 	'FORUM_BG_EXPLAIN'	=> 'Adds a background image to the forum. If you want a transparent background, the checkbox must be marked or enter &quot;transparent&quot;. <br />E.g. http://img.userboard.org/images/forum_bg/002.gif',
 
-	'TAW_INTERVAL'					=> 'Topic Age Warning interval',
+	'TAW_INTERVAL'					=> 'Topic Age Warning',
 	'TAW_INTERVAL_EXPLAIN'			=> 'Number of days, months or years after which a user will recieve the topic age warning. <strong>If set to 0, function will be disabled.</strong>',
 	'TAW_LOCK'						=> 'Lukko vanha aihe',
 	'TAW_LOCK_EXPLAIN'				=> 'If <code>Yes</code>, topics to which a user attempts to reply after the set interval will be automatically locked.',

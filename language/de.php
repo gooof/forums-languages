@@ -1281,8 +1281,8 @@ $lang = array_merge($lang, array(
 	'NO_NON_MEMBERS_DONATIONS'  => 'Du musst ein registrierter Benutzer sein um spenden zu können',
 	'ADMIN_NOTIFICATION_PM_SUBJECT' => 'Du hast eine Echtgeld Spende erhalten',
 	'DONATION_NOTIFICATION'         => 'Spenden Benachrichtigung',
-	'TOPIC_AGE_WARNING'			=> 'Du versuchst, auf ein Thema zu antworten, dass %s alt ist. Bitte beginne stattdessen ein neues Thema oder suche ein Thema das neuer oder besser geeignet ist.',
-	'TOPIC_AGE_WARNING_LOCK'	=> 'Dieses Thema ist %s alt. Der Administrator hat für alte Themen eingestellt, das diese gesperrt werden, wenn jemand eine Antwort schreiben will. Bitte beginne ein neues Thema oder verwenden Sie die Suchfunktion, um ein ähnliches neueres Thema zu finden.',
+	'TOPIC_AGE_WARNING'			=> 'Du versuchst, auf ein Thema zu antworten, das %s alt ist. Bitte beginne stattdessen ein neues Thema oder suche ein Thema das neuer oder besser geeignet ist.',
+	'TOPIC_AGE_WARNING_LOCK'	=> 'Dieses Thema ist %s alt. Der Administrator hat für alte Themen eingestellt, das diese gesperrt werden, wenn jemand eine Antwort schreiben will. Bitte beginne ein neues Thema oder verwende die Suchfunktion, um ein ähnliches neueres Thema zu finden.',
 	'INSTALLER_INTRO'			=> 'Intro',
 
 	// FOLLOWER
@@ -9659,7 +9659,7 @@ $lang = array_merge($lang, array(
 	'MIN_CHAR_LIMIT_EXPLAIN'		=> 'Die minimale Anzahl von Zeichen, die ein Benutzer in einem Beitrag/einer Nachricht mindestens eingeben muss.',
 	'POSTING'						=> 'Beiträge schreiben',
 	'POSTS_PER_PAGE'				=> 'Beiträge pro Seite',
-	'POSTS_PER_PAGE_CONFIG'			=> 'Beiträge je Seite',
+	'POSTS_PER_PAGE_CONFIG'			=> 'Beiträge pro Seite',
 	'QUOTE_DEPTH_LIMIT'				=> 'Maximale Tiefe verschachtelter Zitate',
 	'QUOTE_DEPTH_LIMIT_EXPLAIN'		=> 'Die maximale Tiefe für verschachtelte Zitate. Um keine Begrenzung festzulegen, stelle als Wert 0 ein.',
 	'SMILIES_LIMIT'					=> 'Maximale Smilies pro Beitrag',
@@ -12811,7 +12811,7 @@ $lang = array_merge($lang, array(
 	'TAW_LOCK'						=> 'Altes Thema sperren',
 	'TAW_LOCK_EXPLAIN'				=> 'Bei <code>Ja</code>, werden Themen bei denen ein Benutzer versucht zu antworten, nach festgelegtem Intervall automatisch gesperrt.',
 	'TAW_AUTHOR_EXEMPT'				=> 'Themenstarter von der Thema zu alt Warnung befreien',
-	'TAW_AUTHOR_EXEMPT_EXPLAIN'		=> 'Bei <code>Ja</code>, kann der Themenstarter (trotz der Warnung) weiterhin Antworten in sein eigenes Thema schreiben.',
+	'TAW_AUTHOR_EXEMPT_EXPLAIN'		=> 'Bei <code>Ja</code>, kann der Themenstarter (trotz Warnung) weiterhin Antworten in sein eigenes Thema schreiben.',
 	'TAW_LAST_POST'					=> 'Benutze die Zeit der letzten Antwort',
 	'TAW_LAST_POST_EXPLAIN'			=> 'Bei <code>Ja</code>, wird die Zeit der letzten Antwort benutzt. Bei <code>Nein</code>, zählt die Zeit des ersten Beitrags im Thema.',
 
