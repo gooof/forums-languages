@@ -3494,7 +3494,7 @@ $lang = array_merge($lang, array(
 	'NO_MEMBER'		=> 'Немає учасників групи',
 	'NO_PENDING'	=> 'Немає очікувачів на вступ до групи',
 	'NO_NONMEMBER'	=> 'Немає порожніх груп',
-
+	'TEMPORARY_SELECTABLE'	=> 'temporary selectable on the %s',
 
 	'TO_DAY'			=> 'Дата: %s',
 	'LEFT'				=> 'Left',

@@ -3641,7 +3641,7 @@ $lang = array_merge($lang, array(
 	'NO_MEMBER'		=> 'هيچ گروه کاربري موجود نيست',
 	'NO_PENDING'	=> 'هیچ عضوی در انتظار تایید نیست',
 	'NO_NONMEMBER'	=> 'No non-member groups',
-
+	'TEMPORARY_SELECTABLE'	=> 'temporary selectable on the %s',
 
 	'TO_DAY'			=> 'تاريخ: %s',
 	'LEFT'				=> 'Left',

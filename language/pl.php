@@ -3499,7 +3499,7 @@ $lang = array_merge($lang, array(
 	'NO_MEMBER'		=> 'Nie należysz do żadnej grupy.',
 	'NO_PENDING'	=> 'Nie oczekujesz na przyjęcie do żadnej grupy.',
 	'NO_NONMEMBER'	=> 'Nie istnieje żadna grupa, do której nie należysz.',
-
+	'TEMPORARY_SELECTABLE'	=> 'temporary selectable on the %s',
 
 	'TO_DAY'			=> 'Data: %s',
 	'LEFT'				=> 'Left',

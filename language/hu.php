@@ -3492,7 +3492,7 @@ $lang = array_merge($lang, array(
 	'NO_MEMBER'		=> 'Nem vagy egy csoportnak se a tagja.',
 	'NO_PENDING'	=> 'Nincs függő csoporttagság.',
 	'NO_NONMEMBER'	=> 'Nincs olyan csoport, melynek nem vagy tagja.',
-
+	'TEMPORARY_SELECTABLE'	=> 'temporary selectable on the %s',
 
 	'TO_DAY'			=> 'Dátum: %s',
 	'LEFT'				=> 'Left',

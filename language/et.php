@@ -3434,7 +3434,7 @@ $lang = array_merge($lang, array(
 	'NO_MEMBER'		=> 'Pole gruppe, kus sa oled liige',
 	'NO_PENDING'	=> 'Pole gruppe, kus sa oled ootav liige',
 	'NO_NONMEMBER'	=> 'Pole gruppe, kus sa pole liige',
-
+	'TEMPORARY_SELECTABLE'	=> 'temporary selectable on the %s',
 
 	'TO_DAY'			=> 'Kuupäev: %s',
 	'LEFT'				=> 'Left',

@@ -3495,7 +3495,7 @@ $lang = array_merge($lang, array(
 	'NO_MEMBER'		=> 'No esteu afiliats a cap grup',
 	'NO_PENDING'	=> 'No teniu cap afiliació pendent',
 	'NO_NONMEMBER'	=> 'No hi ha cap grup al qual no estigueu afiliat',
-
+	'TEMPORARY_SELECTABLE'	=> 'temporary selectable on the %s',
 
 	'TO_DAY'			=> 'Data: %s',
 	'LEFT'				=> 'Left',

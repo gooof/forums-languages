@@ -3495,7 +3495,7 @@ $lang = array_merge($lang, array(
 	'NO_MEMBER'		=> 'Ei ryhmän jäsenyyksiä',
 	'NO_PENDING'	=> 'Ei odottavia jäsenyyksiä',
 	'NO_NONMEMBER'	=> 'Et ole jäsenenä',
-
+	'TEMPORARY_SELECTABLE'	=> 'temporary selectable on the %s',
 
 	'TO_DAY'			=> 'PVM: %s',
 	'LEFT'				=> 'Left',

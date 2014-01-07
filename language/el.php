@@ -3494,7 +3494,7 @@ $lang = array_merge($lang, array(
 	'NO_MEMBER'		=> 'Δεν υπάρχουν μέλη',
 	'NO_PENDING'	=> 'Δεν υπάρχουν εκκρεμείς συμμετοχές',
 	'NO_NONMEMBER'	=> 'Καμία ομάδα μη μελών ',
-
+	'TEMPORARY_SELECTABLE'	=> 'temporary selectable on the %s',
 
 	'TO_DAY'			=> 'Ημερομηνία: %s',
 	'LEFT'				=> 'Left',

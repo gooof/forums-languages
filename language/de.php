@@ -3533,7 +3533,7 @@ $lang = array_merge($lang, array(
 	'NO_MEMBER'		=> 'Du bist in keiner Gruppe Mitglied',
 	'NO_PENDING'	=> 'Du hast keine laufenden Beitrittsanfragen',
 	'NO_NONMEMBER'	=> 'Es gibt keine Gruppe, in der du nicht Mitglied bist',
-
+	'TEMPORARY_SELECTABLE'	=> 'temporär im %s auswählbar',
 
 	'TO_DAY'			=> 'Datum: %s',
 	'LEFT'				=> 'Links',

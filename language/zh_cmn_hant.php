@@ -3495,7 +3495,7 @@ $lang = array_merge($lang, array(
 	'NO_MEMBER'		=> '沒有群組組員',
 	'NO_PENDING'	=> '沒有等待審核的組員',
 	'NO_NONMEMBER'	=> '沒有非組員群組',
-
+	'TEMPORARY_SELECTABLE'	=> 'temporary selectable on the %s',
 
 	'TO_DAY'			=> '日期：%s',
 	'LEFT'				=> 'Left',

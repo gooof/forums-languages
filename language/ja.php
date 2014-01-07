@@ -3511,7 +3511,7 @@ $lang = array_merge($lang, array(
 	'NO_MEMBER'		=> 'グループなし [ メンバー ]',
 	'NO_PENDING'	=> 'グループなし [ 承認待ち ]',
 	'NO_NONMEMBER'	=> 'グループなし [ 非メンバー ]',
-
+	'TEMPORARY_SELECTABLE'	=> 'temporary selectable on the %s',
 
 	'TO_DAY'			=> '日付: %s',
 	'LEFT'				=> 'Left',

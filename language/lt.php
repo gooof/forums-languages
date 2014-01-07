@@ -3488,7 +3488,7 @@ $lang = array_merge($lang, array(
 	'NO_MEMBER'		=> 'Jūs nesate jokios grupės narys',
 	'NO_PENDING'	=> 'Grupių, kuriose jūsų narystė dar nepatvirtinta, nėra',
 	'NO_NONMEMBER'	=> 'Grupių, kuriose nesate narys, nėra',
-
+	'TEMPORARY_SELECTABLE'	=> 'temporary selectable on the %s',
 
 	'TO_DAY'			=> 'Data: %s',
 	'LEFT'				=> 'Left',

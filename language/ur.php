@@ -3493,7 +3493,7 @@ $lang = array_merge($lang, array(
 	'NO_MEMBER'		=> 'کوئی گروہ رکنیت نہیں',
 	'NO_PENDING'	=> 'کوئی زیر غور رکنیت نہیں',
 	'NO_NONMEMBER'	=> 'کوئی غیر صارف گروہ نہیں',
-
+	'TEMPORARY_SELECTABLE'	=> 'temporary selectable on the %s',
 
 	'TO_DAY'			=> 'تاریخ: %s',
 	'LEFT'				=> 'Left',

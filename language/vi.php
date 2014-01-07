@@ -3495,7 +3495,7 @@ $lang = array_merge($lang, array(
 	'NO_MEMBER'		=> 'Không phải là thành viên của nhóm',
 	'NO_PENDING'	=> 'Không phải là thành viên đang chờ quyết định của nhóm',
 	'NO_NONMEMBER'	=> 'Không phải là thành viên của bất cứ nhóm nào',
-
+	'TEMPORARY_SELECTABLE'	=> 'temporary selectable on the %s',
 
 	'TO_DAY'			=> 'Ngày gửi: %s',
 	'LEFT'				=> 'Left',
