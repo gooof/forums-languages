@@ -1046,7 +1046,7 @@ Bewaar deze e-mail goed ter informatie. Je accountinformatie is als volgt:
 
 ----------------------------
 Gebruikersnaam: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Forum URL: {U_BOARD}
 ----------------------------
 
@@ -1068,7 +1068,7 @@ Bewaar deze e-mail goed ter informatie. Je accountinformatie is als volgt:
 
 ----------------------------
 Gebruikersnaam: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Forum URL: {U_BOARD}
 ----------------------------
 

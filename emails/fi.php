@@ -1039,6 +1039,7 @@ Pidä tämä viesti tallessa. Käyttäjätunnuksesi on:
 
 ----------------------------
 Käyttäjätunnus: {USERNAME}
+{PASSWORD_EXTRA_LINE}
 ----------------------------
 
 Älä unohda salasanaasi, sillä se on salakirjoitettu tietokantaamme emmekä voi hakea sitä sieltä sinulle. Mikäli kuitenkin unohdat salasanasi, voit pyytää uuden käyttämällä sähköpostiosoitettasi.
@@ -1059,6 +1060,7 @@ Pidä tämä viesti tallessa. Käyttäjätunnuksesi on:
 
 ----------------------------
 Käyttäjätunnus: {USERNAME}
+{PASSWORD_EXTRA_LINE}
 ----------------------------
 
 Käyttäjätunnuksesi on tällä hetkellä suljettu. Et voi käyttää sitä ennen kuin aktivoit sen vierailemalla alapuolella olevassa linkissä:

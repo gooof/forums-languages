@@ -1047,7 +1047,7 @@ Veuillez conserver ce courriel dans vos archives. Les informations concernant vo
 
 ----------------------------
 Nom d’utilisateur : {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Lien du forum : {U_BOARD}
 ----------------------------
 
@@ -1069,7 +1069,7 @@ Veuillez conserver ce courriel dans vos archives. Les informations concernant vo
 
 ----------------------------
 Nom d’utilisateur : {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Lien du forum : {U_BOARD}
 ----------------------------
 

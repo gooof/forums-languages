@@ -1066,8 +1066,7 @@ $email = array_merge($email, array(
 
 ----------------------------
 ناوی بەکارهێنەر: {USERNAME}
-
-
+{PASSWORD_EXTRA_LINE}
 بەستەری مەکۆکان: {U_BOARD}
 ----------------------------
 
@@ -1091,8 +1090,7 @@ $email = array_merge($email, array(
 
 ----------------------------
 ناوی بەکارهێنەر: {USERNAME}
-
-
+{PASSWORD_EXTRA_LINE}
 بەستەری مەکۆ: {U_BOARD}
 ----------------------------
 

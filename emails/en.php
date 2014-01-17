@@ -1055,7 +1055,7 @@ Please keep this e-mail for your records. Your account information is as follows
 
 ----------------------------
 Username: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Board URL: {U_BOARD}
 ----------------------------
 
@@ -1077,7 +1077,7 @@ Please keep this e-mail for your records. Your account information is as follows
 
 ----------------------------
 Username: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Board URL: {U_BOARD}
 ----------------------------
 

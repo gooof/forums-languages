@@ -1158,19 +1158,15 @@ Please keep this e-mail for your records. Your account information is as follows
 
 ----------------------------
 Username: {USERNAME}
-Password: {PASSWORD}
-
+{PASSWORD_EXTRA_LINE}
 Board URL: {U_BOARD}
 ----------------------------
 
-Please do not forget your password as it has been encrypted in our database and we cannot retrieve it for you. However, should you forget your password you can request a new one which will be activated in the same way as this account.
+Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
 
 Thank you for registering.
 
-{EMAIL_SIG}
-
-Powered by : www.Maghsad.com phpBB3 Farsi
-For getting or making your own FREE forum,visit www.phpBB.Maghsad.com !',
+{EMAIL_SIG}',
 ));
 
 
@@ -1184,24 +1180,19 @@ Please keep this e-mail for your records. Your account information is as follows
 
 ----------------------------
 Username: {USERNAME}
-Password: {PASSWORD}
-
+{PASSWORD_EXTRA_LINE}
 Board URL: {U_BOARD}
 ----------------------------
 
-Your account is currently inactive. You cannot use it until you visit the following link:
+Please visit the following link in order to activate your account:
 
 {U_ACTIVATE}
 
-Please do not forget your password as it has been encrypted in our database and we cannot retrieve it for you. However, should you forget your password you can request a new one which will be activated in the same way as this account.
+Your password has been securely stored in our database and cannot be retrieved. In the event that it is forgotten, you will be able to reset it using the email address associated with your account.
 
 Thank you for registering.
 
-{EMAIL_SIG}
-
-Powered by : www.Maghsad.com phpBB3 Farsi
-
-For getting or making your own FREE forum,visit www.phpBB.Maghsad.com !',
+{EMAIL_SIG}',
 ));
 
 

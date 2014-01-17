@@ -1087,7 +1087,7 @@ Por favor guarda este email para futuras referencias. La información de tu cuen
 
 ----------------------------
 Nombre de usuario: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 URL del Sitio: {U_BOARD}
 ----------------------------
 
@@ -1109,7 +1109,7 @@ Por favor guarda este email para futuras referencias. La información de tu cuen
 
 ----------------------------
 Nombre de usuario: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 URL del Sitio: {U_BOARD}
 ----------------------------
 

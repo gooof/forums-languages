@@ -1086,7 +1086,7 @@ Por favor guardá este email para futuras referencias. La información de tu cue
 
 ----------------------------
 Nombre de usuario: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 URL del Sitio: {U_BOARD}
 ----------------------------
 
@@ -1108,7 +1108,7 @@ Por favor guardá este email para futuras referencias. La información de tu cue
 
 ----------------------------
 Nombre de usuario: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 URL del Sitio: {U_BOARD}
 ----------------------------
 

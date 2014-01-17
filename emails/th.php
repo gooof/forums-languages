@@ -1049,6 +1049,7 @@ $email = array_merge($email, array(
 
 ----------------------------
 Username: {USERNAME}
+{PASSWORD_EXTRA_LINE}
 Board URL: {U_BOARD}
 ----------------------------
 
@@ -1071,7 +1072,7 @@ $email = array_merge($email, array(
 
 ----------------------------
 Username: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Board URL: {U_BOARD}
 ----------------------------
 

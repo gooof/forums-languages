@@ -1017,6 +1017,7 @@ Hãy giữ Email này cẩn thận. Thông tin về tài khoản thành viên c�
 
 ----------------------------------
 Tên thành viên: {USERNAME}
+{PASSWORD_EXTRA_LINE}
 Mật khẩu: {PASSWORD}
 ----------------------------------
 
@@ -1038,7 +1039,7 @@ Hãy giữ Email này cẩn thận. Thông tin về tài khoản thành viên c�
 
 ----------------------------------
 Tên thành viên: {USERNAME}
-Mật khẩu: {PASSWORD}
+{PASSWORD_EXTRA_LINE}
 ----------------------------------
 
 Tài khoản của bạn hiện tại chưa được kích hoạt. Bạn không thể sử dụng tài khoản này để đăng nhập vào hệ thống cho đến khi bạn kích hoạt nó bằng cách bấm vào liên kết dưới đây:

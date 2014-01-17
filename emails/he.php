@@ -1053,7 +1053,7 @@ $email = array_merge($email, array(
 
 ----------------------------
 שם משתמש: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 כתובת הפורום: {U_BOARD}
 ----------------------------
 
@@ -1075,7 +1075,7 @@ $email = array_merge($email, array(
 
 ----------------------------
 שם משתמש: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 כתובת הפורום: {U_BOARD}
 ----------------------------
 

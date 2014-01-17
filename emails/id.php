@@ -1056,8 +1056,7 @@ Silahkan simpan e-mail ini sebagai catatan. Berikut ini adalah informasi account
 
 ----------------------------
 Nama Pengguna: {USERNAME}
-Kata Sandi: {PASSWORD}
-
+{PASSWORD_EXTRA_LINE}
 URL: {U_BOARD}
 ----------------------------
 
@@ -1079,8 +1078,7 @@ Silahkan simpan e-mail ini sebagai catatan. Berikut ini adalah informasi account
 
 ----------------------------
 Nama Pengguna: {USERNAME}
-Kata Sandi: {PASSWORD}
-
+{PASSWORD_EXTRA_LINE}
 URL: {U_BOARD}
 ----------------------------
 

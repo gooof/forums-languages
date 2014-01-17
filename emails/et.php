@@ -1046,8 +1046,7 @@ Palume hoida seda e-kirja alles. Sinu kasutaja andmed on järgnevad:
 
 ----------------------------
 Kasutajanimi: {USERNAME}
-
-
+{PASSWORD_EXTRA_LINE}
 Foorumi URL: {U_BOARD}
 ----------------------------
 
@@ -1070,7 +1069,7 @@ Palume seda e-kirja alles hoida. Sinu kasutaja andmed on järgnevad:
 
 ----------------------------
 Kasutajanimi: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Foorumi URL: {U_BOARD}
 ----------------------------
 Oma konto aktiveerimiseks vajuta allolevale lingile:

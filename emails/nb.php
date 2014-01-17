@@ -1029,7 +1029,7 @@ Under følger informasjon om din brukerkonto:
 
 ----------------------------
 Brukernavn: {USERNAME}
-Passord: {PASSWORD}
+{PASSWORD_EXTRA_LINE}
 ----------------------------
 
 Ditt passord har blitt kryptert i vår database. Skulle du miste det har du mulighet til å be om å få et nytt tilsendt, som da må aktiveres på samme måtte som dette passordet ble aktivert.
@@ -1050,7 +1050,7 @@ Under følger informasjon om din brukerkonto:
 
 ----------------------------
 Brukernavn: {USERNAME}
-Passord: {PASSWORD}
+{PASSWORD_EXTRA_LINE}
 ----------------------------
 
 Din brukerkonto er fortsatt inaktiv. Du kan aktivere den ved å klikke på følgende link:

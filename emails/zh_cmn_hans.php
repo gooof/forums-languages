@@ -1058,7 +1058,7 @@ $email = array_merge($email, array(
 
 ----------------------------
 用户名：{USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 论坛链接: {U_BOARD}
 ----------------------------
 
@@ -1080,7 +1080,7 @@ $email = array_merge($email, array(
 
 ----------------------------
 用户名：{USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 论坛链接: {U_BOARD}
 ----------------------------
 

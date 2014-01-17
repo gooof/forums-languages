@@ -1038,6 +1038,7 @@ Spara detta e-postmeddelande för framtida bruk. Dina kontouppgifter:
 
 ----------------------------
 Användarnamn: {USERNAME}
+{PASSWORD_EXTRA_LINE}
 Forumadress: {U_BOARD}
 ----------------------------
 
@@ -1059,6 +1060,7 @@ Spara detta e-postmeddelande för framtida bruk. Dina kontouppgifter:
 
 ----------------------------
 Användarnamn: {USERNAME}
+{PASSWORD_EXTRA_LINE}
 Forumadress: {U_BOARD}
 ----------------------------
 

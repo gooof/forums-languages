@@ -1038,7 +1038,7 @@ Prosím, uschovejte si tento e-mail pro případné zapomenutí údajů, násled
 
 ----------------------------
 Uživatelské jméno: {USERNAME}
- 
+ {PASSWORD_EXTRA_LINE}
 URL fóra:          {U_BOARD}
 ----------------------------
 
@@ -1060,7 +1060,7 @@ Prosím, uschovejte si tento e-mail pro případné zapomenutí údajů, násled
 
 ----------------------------
 Uživatelské jméno: {USERNAME}
- 
+{PASSWORD_EXTRA_LINE}
 URL fóra:          {U_BOARD}
 ----------------------------
 

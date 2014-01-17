@@ -1060,8 +1060,7 @@ Mesedez, gorde ezazu e-mail hau gerorako zure kontuari buruzko informazio garran
 
 ----------------------------
 Erabiltzaile izena: {USERNAME}
-
-
+{PASSWORD_EXTRA_LINE}
 Foroko URLa:  {U_BOARD} 
 ----------------------------
 
@@ -1083,8 +1082,7 @@ Mesedez, gorde ezazu e-mail hau gerorako zure kontuari buruzko informazio garran
 
 ----------------------------
 Erabiltzaile izena: {USERNAME}
-
-
+{PASSWORD_EXTRA_LINE}
 Foroko URLa:  {U_BOARD} 
 ----------------------------
 

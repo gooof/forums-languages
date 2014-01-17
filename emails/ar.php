@@ -1060,7 +1060,7 @@ $email = array_merge($email, array(
 
 ----------------------------
 اسم المستخدم: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 عنوان المنتدى: {U_BOARD}
 ----------------------------
 
@@ -1082,7 +1082,7 @@ $email = array_merge($email, array(
 
 ----------------------------
 اسم المستخدم: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 عنوان المنتدى: {U_BOARD}
 ----------------------------
 

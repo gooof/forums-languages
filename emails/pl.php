@@ -1010,6 +1010,7 @@ Witaj {USERNAME},
 
 Twoje konto zostało utworzone.
 
+{PASSWORD_EXTRA_LINE}
 Adres forum: {U_BOARD}
 
 Twoje hasło zostało bezpiecznie zaszyfrowane w bazie danych i jego odzyskanie jest niewykonalne. Jeśli je zapomnisz, będziesz mógł/mogła poprosić o nowe, używając adresu e-mail powiązanego z kontem.
@@ -1028,6 +1029,7 @@ Witaj {USERNAME},
 
 Twoje konto zostało utworzone, ale jest obecnie nieaktywne.
 
+{PASSWORD_EXTRA_LINE}
 Adres forum: {U_BOARD}
 
 Zanim będziesz mógł/mogła się zalogować, musisz je aktywować, klikając na poniższy link:

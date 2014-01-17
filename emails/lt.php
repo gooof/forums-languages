@@ -1042,7 +1042,7 @@ Išsaugokite šį laišką. Jūsų prisijungimo informacija:
 
 ----------------------------
 Vartotojo vardas: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Diskusijų adresas: {U_BOARD}
 ----------------------------
 
@@ -1064,7 +1064,7 @@ Išsaugokite šį laišką. Jūsų prisijungimo informacija:
 
 ----------------------------
 Vartotojo vardas: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Diskusijų adresas: {U_BOARD}
 ----------------------------
 

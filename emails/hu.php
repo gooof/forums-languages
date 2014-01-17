@@ -1046,7 +1046,7 @@ Kérünk, tartsd meg ezt az üzenetet. Az azonosítód adatai a következőek:
 
 ----------------------------
 Felhasználónév: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Fórum URL: {U_BOARD}
 ----------------------------
 
@@ -1068,7 +1068,7 @@ Kérünk, tartsd meg ezt az üzenetet. Az azonosítód adatai a következőek:
 
 ----------------------------
 Felhasználónév: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Fórum URL: {U_BOARD}
 ----------------------------
 

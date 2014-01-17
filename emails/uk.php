@@ -1059,7 +1059,7 @@ $email = array_merge($email, array(
 
 ----------------------------
 Ім\'я: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Адреса форуму: {U_BOARD}
 ----------------------------
 
@@ -1081,7 +1081,7 @@ $email = array_merge($email, array(
 
 ----------------------------
 Ім\'я: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Адреса форуму: {U_BOARD}
 ----------------------------
 

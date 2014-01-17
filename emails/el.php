@@ -1077,8 +1077,7 @@ $email = array_merge($email, array(
 
 ----------------------------
 Όνομα μέλους: {USERNAME}
-
-
+{PASSWORD_EXTRA_LINE}
 Ιστοσελίδας σύνδεσμος: {U_BOARD}
 ----------------------------
 
@@ -1101,7 +1100,7 @@ $email = array_merge($email, array(
 
 ----------------------------
 Όνομα μέλους: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Σύνδεσμος ιστοσελίδας: {U_BOARD}
 ----------------------------
 

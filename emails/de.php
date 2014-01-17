@@ -1062,7 +1062,7 @@ Bitte bewahre diese E-Mail in deinen Unterlagen auf. Die Daten deines Benutzerko
 
 ----------------------------
 Benutzername: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Board-URL:    {U_BOARD}
 ----------------------------
 
@@ -1084,7 +1084,7 @@ Bitte bewahre diese E-Mail in deinen Unterlagen auf. Die Daten deines Benutzerko
 
 ----------------------------
 Benutzername: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Board-URL:    {U_BOARD}
 ----------------------------
 

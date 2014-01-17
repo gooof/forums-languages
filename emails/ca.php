@@ -1056,7 +1056,7 @@ Si us plau, guardeu aquest correu electrònic per a la vostra informació. Les d
 
 ----------------------------
 Nom d\'usuari: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 URL del fòrum: {U_BOARD}
 ----------------------------
 
@@ -1078,7 +1078,7 @@ Si us plau, guardeu aquest correu electrònic per a la vostra informació. Les d
 
 ----------------------------
 Nom d\'usuari: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 URL del fòrum: {U_BOARD}
 ----------------------------
 

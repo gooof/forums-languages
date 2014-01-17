@@ -1055,7 +1055,7 @@ Vă rugăm să păstraţi acest e-mail. Informaţia pentru contul dumneavoastră
 
 -----------------------------
 Nume utilizator  : {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Adresa forumului : {U_BOARD}
 -----------------------------
 
@@ -1077,7 +1077,7 @@ Vă rugăm să păstraţi acest e-mail. Informaţia pentru contul dumneavoastră
 
 -----------------------------
 Nume utilizator  : {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Adresa forumului : {U_BOARD}
 -----------------------------
 

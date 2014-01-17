@@ -1025,6 +1025,7 @@ postavke tvojeg korisničkog računa su sljedeće:
 
 ----------------------------
 Korisničko ime: {USERNAME}
+{PASSWORD_EXTRA_LINE}
 URL foruma: {U_BOARD}
 ----------------------------
 
@@ -1046,6 +1047,7 @@ postavke tvojeg korisničkog računa su sljedeće:
 
 ----------------------------
 Korisničko ime: {USERNAME}
+{PASSWORD_EXTRA_LINE}
 URL foruma: {U_BOARD}
 ----------------------------
 

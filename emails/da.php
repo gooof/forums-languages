@@ -991,7 +991,7 @@ Gem denne email til fremtidig brug. Din kontoinformation er følgende:
 
 ----------------------------
 Brugernavn: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Boardets URL: {U_BOARD}
 ----------------------------
 
@@ -1013,7 +1013,7 @@ Gem denne email til fremtidig brug. Din kontoinformation er følgende:
 
 ----------------------------
 Brugernavn: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Boardets URL: {U_BOARD}
 ----------------------------
 

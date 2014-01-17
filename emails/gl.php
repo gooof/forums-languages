@@ -1063,7 +1063,7 @@ Por favor conserva este correo electrónico para a túa lembranza. Os datos da t
 
 ----------------------------
 Nome de usuario/a: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Enderezo URL do taboleiro: {U_BOARD}
 ----------------------------
 
@@ -1085,7 +1085,7 @@ Por favor conserva este correo electrónico para a túa lembranza. Os datos da t
 
 ----------------------------
 Nome de usuario/a: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Enderezo URL do taboleiro: {U_BOARD}
 ----------------------------
 

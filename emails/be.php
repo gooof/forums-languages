@@ -1059,7 +1059,7 @@ $email = array_merge($email, array(
 
 ----------------------------
 Імя карыстальніка: {USERNAME}
- 
+ {PASSWORD_EXTRA_LINE}
 Адрас канферэнцыі: {U_BOARD}
 ----------------------------
 
@@ -1081,7 +1081,7 @@ $email = array_merge($email, array(
 
 ----------------------------
 Імя карыстальніка: {USERNAME}
- 
+{PASSWORD_EXTRA_LINE}
 Адрас канферэнцыі: {U_BOARD}
 ----------------------------
 

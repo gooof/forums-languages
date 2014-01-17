@@ -1050,6 +1050,7 @@ Lütfen bu e-postayı saklayınız. Kullanıcı bilgileriniz altta bulunmaktadı
 
 ----------------------------
 Kullanıcı adı: {USERNAME}
+{PASSWORD_EXTRA_LINE}
 Mesaj panosu URL adresi: {U_BOARD}
 ----------------------------
 
@@ -1071,6 +1072,7 @@ Lütfen bu e-postayı saklayın. Kullanıcı bilgileriniz altta bulunmaktadır:
 
 ----------------------------
 Kullanıcı adı: {USERNAME}
+{PASSWORD_EXTRA_LINE}
 Mesaj panosu URL adresi: {U_BOARD}
 ----------------------------
 

@@ -1047,8 +1047,7 @@ Ju lutemi ruajeni këtë e-mail në arkivin tuaj, pasi janë të dhënat e ident
 
 ----------------------------
 Pseudonimi: {USERNAME}
-Fjalëkalimi: {PASSWORD}
-
+{PASSWORD_EXTRA_LINE}
 Adresa e portalit: {U_BOARD}
 ----------------------------
 
@@ -1077,8 +1076,7 @@ Këto janë informacionet për tu identifikuar në forum pasi llogaria të jetë
 
 ----------------------------
 Pseudonimi: {USERNAME}
-Fjalëkalimi: {PASSWORD}
-
+{PASSWORD_EXTRA_LINE}
 Adresa e forumit: {U_BOARD}
 ----------------------------
 

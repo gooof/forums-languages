@@ -1047,7 +1047,7 @@ $email = array_merge($email, array(
 
 ----------------------------
 帳號：{USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 討論區網址：{U_BOARD}
 ----------------------------
 
@@ -1069,7 +1069,7 @@ $email = array_merge($email, array(
 
 ----------------------------
 帳號：{USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 討論區網址：{U_BOARD}
 ----------------------------
 

@@ -1083,7 +1083,7 @@ Prosím Vás, ponechajte si tento email pre budúcu potrebu. Údaje o Vašom ú�
 
 ----------------------------
 Užívateľ: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Adresa fóra: {U_BOARD}
 ----------------------------
 
@@ -1106,7 +1106,7 @@ Prosím Vás, ponechajte si tento email pre budúcu potrebu. Údaje o Vašom ú�
 
 ----------------------------
 Užívateľ: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Adresa fóra: {U_BOARD}
 ----------------------------
 

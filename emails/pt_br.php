@@ -1055,7 +1055,7 @@ Por favor, salve este e-mail para consultas posteriores. As informações de seu
 
 ----------------------------
 Usuário: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Endereço: {U_BOARD}
 ----------------------------
 
@@ -1077,7 +1077,7 @@ Por favor, salve este e-mail para consultas posteriores. As informações de seu
 
 ----------------------------
 Usuário: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Endereço: {U_BOARD}
 ----------------------------
 

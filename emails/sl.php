@@ -1056,7 +1056,7 @@ Vaše uporabniške informacije so sledeče:
 
 ----------------------------
 Uporabniško ime: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Spletni naslov: {U_BOARD}
 ----------------------------
 
@@ -1078,7 +1078,7 @@ Vaše uporabniške informacije so sledeče:
 
 ----------------------------
 Uporabniško ime: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Spletni naslov: {U_BOARD}
 ----------------------------
 

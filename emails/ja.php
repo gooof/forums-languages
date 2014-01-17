@@ -1185,7 +1185,7 @@ $email = array_merge($email, array(
 
 ----------------------------
 ユーザー名： {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 フォーラムURL： {U_BOARD}
 ----------------------------
 
@@ -1212,6 +1212,7 @@ $email = array_merge($email, array(
 
 ----------------------------
 ユーザー名： {USERNAME}
+{PASSWORD_EXTRA_LINE}
 ----------------------------
 
 こちらをクリックしてアカウントを有効化してください：

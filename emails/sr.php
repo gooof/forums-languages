@@ -1046,7 +1046,7 @@ Molimo vas da sačuvate ovaj email. Sledi informacija o vašem nalogu:
 
 ----------------------------
 Korisničko ime: {USERNAME}
-Šifra: {PASSWORD}
+{PASSWORD_EXTRA_LINE}
 ----------------------------
 
 Nemojte zaboraviti vašu šifru jer je ona kodirana u našoj bazi i ne možemo vam je poslati nazad. Međutim, ukoliko zaboravite vašu šifru možete zatražiti novu koja će biti aktivirana na isti način kao i nalog.
@@ -1067,7 +1067,7 @@ Molimo vas da sačuvate ovaj email. Sledi informacija o vašem nalogu:
 
 ----------------------------
 Korisničko ime: {USERNAME}
-Šifra: {PASSWORD}
+{PASSWORD_EXTRA_LINE}
 ----------------------------
 
 Vaš nalog je trenutno neaktivan. Ne možete ga koristiti dok ne kliknete na sledeći link:

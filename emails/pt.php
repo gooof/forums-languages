@@ -1187,7 +1187,7 @@ LEIA ATENTAMENTE este email e guarde-o para consultas posteriores.
 A informação da sua conta é a seguinte:
 ==============================================
 Utilizador: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Endereço do Fórum: {U_BOARD}
 ==============================================
 
@@ -1213,7 +1213,7 @@ LEIA ATENTAMENTE este email e guarde-o para consultas posteriores.
 A informação da sua conta é a seguinte:
 ==============================================
 Utilizador: {USERNAME}
-
+{PASSWORD_EXTRA_LINE}
 Endereço do Fórum: {U_BOARD}
 ==============================================
 

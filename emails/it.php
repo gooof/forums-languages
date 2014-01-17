@@ -1053,8 +1053,8 @@ $email = array_merge($email, array(
 
 Per favore conserva questa e-mail con le informazioni del tuo account:
 Nome utente: {USERNAME}
+{PASSWORD_EXTRA_LINE}
 URL Board: {U_BOARD}
-
 
 Non scordare la tua password, non sara\' possibile recuperarla dal nostro database in quanto viene criptata. In caso di smarrimento della stessa, sara\' comunque possibile richiederne una nuova dalla pagina di login, utilizzando l\'indirizzo email associato al tuo account. Grazie per esserti iscritto.
 
@@ -1072,6 +1072,7 @@ $email = array_merge($email, array(
 
 Per favore conserva questa e-mail con le informazioni del tuo account:
 Nome utente: {USERNAME}
+{PASSWORD_EXTRA_LINE}
 URL Board: {U_BOARD}
 
 
