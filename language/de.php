@@ -14021,6 +14021,8 @@ $lang = array_merge($lang, array(
 	'USED_IN_REPORTS'		=> 'In Meldungen benutzt',
 
 
+	'ACP_BBCODE_TEST'			=> 'BBCode Test',
+	'ACP_BBCODE_TEST_EXPLAIN'	=> 'Teste in diesem Textfeld deine BBCodes. Der BBCode wird genau so analysiert, als ob ein Beitrag geschrieben wird. So kannst du sehen, wie er aussieht oder ob der Code ordnungsgemäß funktioniert.',
 	'ABBCODES_ADD_BREAK'		=> 'fügt eine neue Zeile ein, die beliebig verschoben werden kann',
 	'ABBCODES_ADD_DIVISION'	=> 'fügt eine neue Abtrenn-Line ein',
 ));

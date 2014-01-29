@@ -14222,6 +14222,8 @@ $lang = array_merge($lang, array(
 	'USED_IN_REPORTS'		=> 'دفعات بکار رفته براي گزارش ها',
 
 
+	'ACP_BBCODE_TEST'			=> 'Test your BBCode',
+	'ACP_BBCODE_TEST_EXPLAIN'	=> 'You can test BBCodes by entering text in this textbox. The BBCode will be parsed as though you were making a post, so you can see how it would look or if your code is working correctly.',
 	'ABBCODES_ADD_BREAK'		=> 'Add new Line break',
 	'ABBCODES_ADD_DIVISION'	=> 'Add new Division',
 ));
