@@ -2402,7 +2402,8 @@ $lang = array_merge($lang, array(
 	'NTS_TOPIC_DELETE_SUBJECT'	=> 'Your topic has been deleted',
 	'NTS_TOPIC_LOCKED'		=> 'Hi,<br /><br />One of your topics called <a href="%3$s"><strong>%1$s</strong></a> has been locked by a moderator. This means you cannot reply or edit your topic anymore.<br /><br /><strong>Reason for locking your topic:</strong> <em>%2$s</em>.<br /><br />Click on the following link to go to your topic:<br /><a href="%3$s"><strong>%1$s</strong></a>',
 	'NTS_TOPIC_LOCK_SUBJECT'	=> 'Your topic has been locked',
-	'NO_REASON_GIVEN'			=> 'The moderator has no special reason specified',
+	'NO_REASON_GIVEN'		=> 'The moderator has no special reason specified',
+	'PUT_IN_OUTBOX'			=> 'Add to my Outbox',
 
 ));
 

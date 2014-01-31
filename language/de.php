@@ -2409,7 +2409,8 @@ $lang = array_merge($lang, array(
 	'NTS_TOPIC_DELETE_SUBJECT'	=> 'Dein Thema wurde gelöscht',
 	'NTS_TOPIC_LOCKED'		=> 'Hi,<br /><br />dein Thema <a href="%3$s"><strong>%1$s</strong></a> wurde von einem Moderator gesperrt. Das bedeutet, dass du es nicht mehr bearbeiten oder neue antworten erstellen kannst.<br /><br /><strong>Der Grund für die Sperrung:</strong> <em>%2$s</em><br /><br />Klicke auf den folgenden Link um zum Thema zu gelangen:<br /><a href="%3$s"><strong>%1$s</strong></a>',
 	'NTS_TOPIC_LOCK_SUBJECT'	=> 'Dein Thema wurde gesperrt',
-	'NO_REASON_GIVEN'			=> 'Der Moderator hat keinen speziellen Grund angegeben',
+	'NO_REASON_GIVEN'		=> 'Der Moderator hat keinen speziellen Grund angegeben',
+	'PUT_IN_OUTBOX'			=> 'Zu meinem Postausgang hinzufügen',
 
 ));
 

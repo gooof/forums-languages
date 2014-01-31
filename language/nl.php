@@ -2410,7 +2410,8 @@ $lang = array_merge($lang, array(
 	'NTS_TOPIC_DELETE_SUBJECT'	=> 'Je topic is verwijderd',
 	'NTS_TOPIC_LOCKED'		=> 'Hallo,<br /><br />Een van je topics <a href="%3$s"><strong>%1$s</strong></a> is gesloten door een moderator. Dit betekent dat je niet meer kunt reageren in je topic.<br /><br /><strong>Reden voor sluiting:</strong> <em>%2$s</em>.<br /><br />Klik op de volgende link om naar je topic te gaan:<br /><a href="%3$s"><strong>%1$s</strong></a>',
 	'NTS_TOPIC_LOCK_SUBJECT'	=> 'Je topic werd gesloten',
-	'NO_REASON_GIVEN'			=> 'De moderator heeft geen specifieke reden opgegeven',
+	'NO_REASON_GIVEN'		=> 'De moderator heeft geen specifieke reden opgegeven',
+	'PUT_IN_OUTBOX'			=> 'Add to my Outbox',
 
 ));
 
