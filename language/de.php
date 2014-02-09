@@ -13190,8 +13190,8 @@ $lang = array_merge($lang, array(
 		
 	'NUMBER_OF_NEWS_ITEMS_TO_DISPLAY'	=> 'News Artikel',
 	'NUMBER_OF_NEWS_ITEMS_TO_DISPLAY_EXPLAIN'	=> 'Die Anzahl der News, die auf der Portalseite angezeigt werden sollen.',
-	'MAX_NEWS_ITEM_LENGTH'	=> 'Länge jeder News',
-	'MAX_NEWS_ITEM_LENGTH_EXPLAIN'	=> 'Maximale Länge eines jeder Nachricht.<br />Tipp: 2500',
+	'MAX_NEWS_ITEM_LENGTH'	=> 'Maximale Höhe einer News',
+	'MAX_NEWS_ITEM_LENGTH_EXPLAIN'	=> 'Der Inhalt wird mit einem Effekt abgeschnitten, wenn es zu hoch ist.',
 	'ALLOW_NEWS'	=> 'News aktivieren',
 	'ALLOW_NEWS_EXPLAIN'	=> 'Diese Funktion macht den Block Nachrichten auf der Portal Seite sichtbar.',
 	
@@ -13201,8 +13201,8 @@ $lang = array_merge($lang, array(
 	'ANNOUNCE_FORUM_ID_EXPLAIN'	=> 'Wähle Foren aus denen die Beiträge für den Block kommen sollen, wählst du mehr als 15 Foren, werden alle Foren ausgewählt.',	
 	'NUMBER_OF_ANNOUNCE_ITEMS_TO_DISPLAY'	=> 'Anzahl der Ankündigungen, die du anzeigen lassen willst',
 	'NUMBER_OF_ANNOUNCE_ITEMS_TO_DISPLAY_EXPLAIN'	=> 'Die Anzahl der Ankündigungen, die du auf der Portal Seite anzeigen lassen willst.',
-	'MAX_ANNOUNCE_ITEM_LENGTH'	=> 'Länge der Ankündigungen',
-	'MAX_ANNOUNCE_ITEM_LENGTH_EXPLAIN'	=> 'Maximale Länge einer jeden Ankündigung.<br />Tipp: <strong>5000</strong>',
+	'MAX_ANNOUNCE_ITEM_LENGTH'	=> 'Maximale Höhe einer Ankündigung',
+	'MAX_ANNOUNCE_ITEM_LENGTH_EXPLAIN'	=> 'Der Inhalt wird mit einem Effekt abgeschnitten, wenn es zu hoch ist.',
 	'ALLOW_ANNOUNCE'	=> 'Ankündigungen anzeigen?',
 	'ALLOW_ANNOUNCE_EXPLAIN'	=> 'Aktiviert die Ankündigungen auf der Portal Seite.',	
 

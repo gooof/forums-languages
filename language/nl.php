@@ -13172,8 +13172,8 @@ $lang = array_merge($lang, array(
 		
 	'NUMBER_OF_NEWS_ITEMS_TO_DISPLAY'	=> 'Number of news item to display',
 	'NUMBER_OF_NEWS_ITEMS_TO_DISPLAY_EXPLAIN'	=> 'The number of news items shown on portal page.',
-	'MAX_NEWS_ITEM_LENGTH'	=> 'Length news item',
-	'MAX_NEWS_ITEM_LENGTH_EXPLAIN'	=> 'Maximum length of each news item (trimmed).',
+	'MAX_NEWS_ITEM_LENGTH'	=> 'Maximum height of a news',
+	'MAX_NEWS_ITEM_LENGTH_EXPLAIN'	=> 'The content is clipped with an effect, if it too high.',
 	'ALLOW_NEWS'	=> 'Allow news to be displayed',
 	'ALLOW_NEWS_EXPLAIN'	=> 'Allow News to be displayed in portal page.',
 	
@@ -13183,8 +13183,8 @@ $lang = array_merge($lang, array(
 	'ANNOUNCE_FORUM_ID_EXPLAIN'	=> 'The ID of the announcement forum.',	
 	'NUMBER_OF_ANNOUNCE_ITEMS_TO_DISPLAY'	=> 'Number of announcements to display',
 	'NUMBER_OF_ANNOUNCE_ITEMS_TO_DISPLAY_EXPLAIN'	=> 'The number of announcements to shown on portal page.',
-	'MAX_ANNOUNCE_ITEM_LENGTH'	=> 'Length of announcements',
-	'MAX_ANNOUNCE_ITEM_LENGTH_EXPLAIN'	=> 'Maximum length of each announcement (trimmed).',
+	'MAX_ANNOUNCE_ITEM_LENGTH'	=> 'Maximum height of a announcement',
+	'MAX_ANNOUNCE_ITEM_LENGTH_EXPLAIN'	=> 'The content is clipped with an effect, if it too high.',
 	'ALLOW_ANNOUNCE'	=> 'Allow Announcements',
 	'ALLOW_ANNOUNCE_EXPLAIN'	=> 'Allow announcements to be displayed on portal.',	
 
