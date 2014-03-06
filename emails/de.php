@@ -1100,3 +1100,21 @@ Vielen Dank für deine Registrierung.
 ));
 
 
+
+$email = array_merge($email, array(
+	'email/cron_formel1.txt' 		=> '{EMAILSUBJECT:} Formel 1 Tippspiel Erinnerung
+
+Hallo {USERNAME},
+
+vergiss bitte nicht Deinen Formel 1 Tipp auf {SITENAME} abzugeben.
+
+Das nächste Rennen findet an diesem Wochende statt!
+
+Deadline für das Rennen in {RACENAME} ist am
+Datum:  {DEADLINEDATE}
+Uhrzeit: {DEADLINETIME}
+
+Hier geht es zum Tippspiel: {U_BOARD}/formel1.php
+
+{EMAIL_SIG}',
+));

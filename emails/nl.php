@@ -1084,3 +1084,21 @@ Bedankt voor je registratie!
 ));
 
 
+
+$email = array_merge($email, array(
+	'email/cron_formel1.txt' 		=> '{EMAILSUBJECT:} Formula 1 prediction game reminder
+
+Hello {USERNAME},
+
+please don\'t forget your Formula 1 prediction game on {SITENAME}.
+
+The next race will start this weekend !!!
+
+Deadline for the race in {RACENAME} is on
+Date: {DEADLINEDATE}
+Time: {DEADLINETIME}
+
+Click here to get to the WebTipp: {U_BOARD}/formel1.php
+
+{EMAIL_SIG}',
+));
