@@ -1108,7 +1108,7 @@ Hallo {USERNAME},
 
 vergiss bitte nicht Deinen Formel 1 Tipp auf {SITENAME} abzugeben.
 
-Das nächste Rennen findet an diesem Wochende statt!
+Das nächste Rennen findet an diesem Wochenende statt!
 
 Deadline für das Rennen in {RACENAME} ist am
 Datum:  {DEADLINEDATE}
