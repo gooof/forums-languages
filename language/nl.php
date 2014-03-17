@@ -9786,6 +9786,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'Beperk de tekens die in een gebruikersnaam gebruikt mogen worden tot: spaties, -, +, _, [ en ].',
 	'USERNAME_LENGTH'			=> 'Gebruikersnaam lengte',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Minimum- en maximaal aantal tekens bij gebruikersnamen.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

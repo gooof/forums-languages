@@ -9784,6 +9784,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'ユーザー名として使用可能な文字を制限してください。スペーサーとは半角スペースと記号 -+_[] の事です。',
 	'USERNAME_LENGTH'			=> 'ユーザー名の長さ',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'ユーザー名の 最小・最大 字数です',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

@@ -9768,6 +9768,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'Символы, которые могут быть использованы в именах пользователей. Разделителями считаются символы пробела, -, +, _, [ и ]',
 	'USERNAME_LENGTH'			=> 'Длина имени пользователя',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Минимальное и максимальное количество символов в именах пользователей.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

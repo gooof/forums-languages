@@ -9768,6 +9768,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> '限制用于用户名的字符类型, 包括; 空格, -, +, _, [ 和 ]',
 	'USERNAME_LENGTH'			=> '用户名长度',
 	'USERNAME_LENGTH_EXPLAIN'	=> '用户名字符的最大和最小长度.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

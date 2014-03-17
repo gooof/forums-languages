@@ -9761,6 +9761,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'Vartotojo varde leisti naudoti tik tam tikrus simbolius. Specialieji simboliai yra: tarpas, -, +, _, [ ir ].',
 	'USERNAME_LENGTH'			=> 'Vartotojo vardo ilgis',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Minimalus ir maksimalus vartotojo vardo simbolių skaičius.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

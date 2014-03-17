@@ -9758,6 +9758,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'حدد الحروف الممنوعة من الاستخدام اكتب space لمنع المسافة أو الأحرف الآتية أو أي أحرف تريد المسافات هي: space, -, +, _, [،]',
 	'USERNAME_LENGTH'			=> 'طول اسم المستخدم',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'الحد الأقصى والأدنى للحروف المستخدمة في اسم المستخدم',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

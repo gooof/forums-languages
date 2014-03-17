@@ -9766,6 +9766,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'رکنی نام میں استعمال ہونے والے الفاظ کا استعمال محدود کریں. سپیسرز یہ ہیں: خالی جگہ، -, +, _, [and].',
 	'USERNAME_LENGTH'			=> 'رکنی نام کی لمبائی',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'رکنیتی نام میں‌زیادہ سے زیادہ اور کم سے کم حروف کی تعداد',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

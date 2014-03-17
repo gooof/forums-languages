@@ -9927,6 +9927,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'منحصر کردن حالت کاراکتر هاي قابل استفاده در نام هاي کاربري, فاصله انداز ها شامل, -, +, _, [ and ] هستند.',
 	'USERNAME_LENGTH'			=> 'طول نام کاربری',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'حد اقل و حداکثر تعداد کاراکتر هاي قابل استفاده براي نام هاي کاربري.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

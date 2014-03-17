@@ -9760,6 +9760,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'هێشتنەوەی ئەو جۆرانەی تیپەکان کە لەوانەیە بەکارببرێن لە تێپەڕەوشەکان: space, -, +, _, [ لەگەڵ ].',
 	'USERNAME_LENGTH'			=> 'درێژی ناوی بەکارهێنەر',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'زۆرترین و کەمترین ژمارەی نووسەکان لە ناوی بەکارهێنەردا.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

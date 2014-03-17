@@ -9766,6 +9766,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'Omezit znaky, které lze použít v&nbsp;uživatelském jménu. Oddělovače: mezera, -, +, _, [ a&nbsp;]',
 	'USERNAME_LENGTH'			=> 'Délka uživatelského jména',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Minimální a&nbsp;maximální počet znaků v&nbsp;uživatelském jméně.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

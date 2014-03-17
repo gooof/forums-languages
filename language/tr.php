@@ -9768,6 +9768,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'Karakter kısıtlama tipini seçin. Ayrıca, bütün kullanıcı adlarında boşluk tuşlarıyla beraber şu karakterler de kullanılabilir: boşluk, -, +, _, [ ve ].',
 	'USERNAME_LENGTH'			=> 'Kullanıcı adı uzunluğu',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Kullanıcı adlarındaki en düşük ve en yüksek karakter sayısı.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

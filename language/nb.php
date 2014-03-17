@@ -9734,6 +9734,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'Begrens typen tegn som kan brukes i brukernavnet. Mellomromstegn er: mellomrom, -, +, _, [ og ].',
 	'USERNAME_LENGTH'			=> 'Brukernavnlengde',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Minimalt og maksimalt antall tegn i brukernavnet.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

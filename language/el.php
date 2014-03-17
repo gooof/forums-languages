@@ -9768,6 +9768,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'Διευκρινίζει ποιοι χαρακτήρες μπορούν να χρησιμοποιηθούν στα ονόματα των μελών, τα κενά είναι: κενό, -, +, _, [ και ].',
 	'USERNAME_LENGTH'			=> 'Όνομα μέλους μήκος',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Μέγιστος και ελάχιστος αριθμός χαρακτήρων στο όνομα μέλους.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

@@ -9772,6 +9772,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'Ogranicz typy znaków możliwych do użycia w nazwach użytkowników. Odstępy to: spacja, „_”, „+”, „-”, „[” i „]”.',
 	'USERNAME_LENGTH'			=> 'Długość nazwy użytkownika',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Minimalna i maksymalna liczba znaków w nazwie użytkownika.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

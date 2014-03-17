@@ -9768,6 +9768,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'Limite le type de caractères pouvant être utilisé dans les noms d’utilisateurs. Les séparateurs comprennent les espaces, les tirets bas, les crochets et les signes plus et moins.',
 	'USERNAME_LENGTH'			=> 'Longueur des noms d’utilisateurs',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Le nombre de caractères minimums et maximums obligatoires dans les noms d’utilisateurs.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

@@ -9768,6 +9768,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'מגביל את סוג התווים הניתן לשימוש בשמות המשתמשים, הסימנים המיוחדים הם: רווח, -, +, _, [ ו ].',
 	'USERNAME_LENGTH'			=> 'אורך שם משתמש',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'מספר מינימלי ומקסימלי של תווים בשמות המשתמשים.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

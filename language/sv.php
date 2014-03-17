@@ -9757,6 +9757,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'Begränsa vilka tecken som får användas i användarnamn, till mellanrum räknas: mellanslag, -, +, _, [ och ].',
 	'USERNAME_LENGTH'			=> 'Användarnamnslängd',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Minsta och maximala antalet tecken i användarnamn.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

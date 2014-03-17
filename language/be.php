@@ -9768,6 +9768,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'Знакі, якія могуць быць скарыстаныя ў імёнах карыстальнікаў. Падзельнікамі лічацца знакі прабелу, -, +, _, [ і ]',
 	'USERNAME_LENGTH'			=> 'Даўжыня імя карыстальніка',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Мінімальная і максімальная колькасць знакаў у імёнах карыстальнікаў.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

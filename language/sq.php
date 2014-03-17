@@ -9759,6 +9759,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'Kufizon llojin e karaktereve që mund të përdoret në pseudonime, mundësitë janë: hapsirë, -, +, _, [ dhe ].',
 	'USERNAME_LENGTH'			=> 'Gjatësia e pseudonimit',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Numri minimal dhe maksimal i karaktereve në pseudonim.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

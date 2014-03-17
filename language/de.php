@@ -9804,6 +9804,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'Legt fest, welche Zeichen in Benutzernamen genutzt werden können. Füllzeichen sind: Leerzeichen, -, +, _, [ und ].',
 	'USERNAME_LENGTH'			=> 'Länge des Benutzernamens',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Die minimale und maximale Anzahl an Zeichen in Benutzernamen.',
+	'CONTACT_EMAIL_NAME'		=> 'Kontakt Name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'Dieser Name wird in allen Emails vom Forum angezeigt. Lasse das Feld leer um nur die Kontakt-E-Mail-Adresse anzuzeigen.',
 ));
 
 $lang = array_merge($lang, array(

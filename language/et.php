@@ -9707,6 +9707,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'Määra sümbolid, mida võib kasutada kasutajanimes, tühikud on: tühik, -, +, _, [ ja ].',
 	'USERNAME_LENGTH'			=> 'Kasutajanime pikkus',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Minimaalne ja maksimaalne arv sümboleid kasutajanimes',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

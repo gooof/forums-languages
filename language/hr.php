@@ -9768,6 +9768,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'Ograničava vrstu znakova koji mogu biti korišteni u korisničkim imenima.<br />Razmaknice su: razmak, -, +, _, [ i ].',
 	'USERNAME_LENGTH'			=> 'Dužina korisničkog imena',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Minimalan i maksimalan broj znakova u korisničkim imenima.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

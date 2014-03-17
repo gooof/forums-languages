@@ -9767,6 +9767,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'Erabiltzaile izen baten erabili daitezken karaktere motak mugatzen ditu. Hutsuneak hutsune batekin, -, +, _, [ eta ] zeinuekin adierazi daitezke.',
 	'USERNAME_LENGTH'			=> 'Erabiltzaile izenaren luzera',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Erabiltzaile izenetan erabil daiteken gutxienezko eta gehienezko karakatere kopurua.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

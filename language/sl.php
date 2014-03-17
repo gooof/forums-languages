@@ -9769,6 +9769,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'Omeji vnos znakov, ki so lahko uporabljena v uporabniških imenih. Pod presledke spadajo: presledek, -, +, _, [ in ].',
 	'USERNAME_LENGTH'			=> 'Dolžina uporabniškega imena',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Minimalna in maksimalna dolžina uporabniškega imena.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

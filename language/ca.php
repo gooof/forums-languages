@@ -9768,6 +9768,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'Restringeix el tipus de caràcters que poden ser utilitzats als noms d’usuari, els caràcters d’espaiat són: l’espai, -, +, _, [ i ].',
 	'USERNAME_LENGTH'			=> 'Longitud del nom d’usuari',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Nombre mínim i màxim de caràcters per als noms d’usuari.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

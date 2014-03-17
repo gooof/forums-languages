@@ -9768,6 +9768,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'Pembatasan tipe karakter yang boleh digunakan pada nama pengguna, pembatasnya: spasi, -, +, _, [ dan ].',
 	'USERNAME_LENGTH'			=> 'Panjang nama pengguna',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Jumlah maksimum dan minimum karakter pada nama pengguna.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

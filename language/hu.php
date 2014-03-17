@@ -9765,6 +9765,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'A felhasználónévben használható karakterek típusának korlátozása; a térköz karakterek a következők: szóköz, -, +, _, [ és ].',
 	'USERNAME_LENGTH'			=> 'Felhasználónév hossza',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Minimum illetve maximum mennyi karakterből állhat a felhasználónév.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

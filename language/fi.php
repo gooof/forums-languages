@@ -9768,6 +9768,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'Rajoita millaisia merkkejä käyttäjä voi sisällyttää käyttäjätunnuksiinsa. Välimerkkejä ovat; välilyönti, -, +, _, [ ja ]',
 	'USERNAME_LENGTH'			=> 'Käyttäjätunnuksen pituus',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Käyttäjätunnuksessa olevien merkkien minimi ja maksimi määrät.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

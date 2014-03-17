@@ -9768,6 +9768,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'Restringe el tipo de caracteres que pueden ser usados en nombres de usuario, espaciadores son; espacio, -, +, _, [ y ]',
 	'USERNAME_LENGTH'			=> 'Longitud de nombre de usuario',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Número de caracteres mínimo y máximo en nombres de usuario.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

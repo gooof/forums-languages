@@ -9787,6 +9787,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'การกำหนดตัวอักษรที่ให้ใช้ได้ในชื่อผู้ใช้',
 	'USERNAME_LENGTH'			=> 'ความยาวชื่อผู้ใช้',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'จำนวนต่ำสุดและสูงสุดของตัวอักษรในชื่อผู้ใช้',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(

@@ -9768,6 +9768,8 @@ $lang = array_merge($lang, array(
 	'USERNAME_CHARS_EXPLAIN'	=> 'Ограничава тип знака који може бити коришћен у корисничким именима, раздвајачи су: размак, -, +, _, [ и ].',
 	'USERNAME_LENGTH'			=> 'Дужина корисничког имена',
 	'USERNAME_LENGTH_EXPLAIN'	=> 'Најмањи и највећи број знакова у корисничким именима.',
+	'CONTACT_EMAIL_NAME'		=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 ));
 
 $lang = array_merge($lang, array(
