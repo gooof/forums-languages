@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> '詳細検索',
 	'SEARCH_ADV_EXPLAIN'		=> '詳細検索ページへ移動します',
 	'SEARCH_KEYWORDS'			=> 'キーワード検索',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> '記事を検索中',
 	'SEARCH_ACTIVE_TOPICS'		=> '最近のトピック',
 	'SEARCH_FOR'				=> '検索',
@@ -3172,8 +3171,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> '記事の件名',
 	'SORT_TIME'					=> '投稿日時',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> '投稿者名は %d 字以上である必要があります',
 ));
 

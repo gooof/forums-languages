@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'การค้นหาขั้นสูง',
 	'SEARCH_ADV_EXPLAIN'		=> 'แสดงตัวเลือกการค้นหาโดยละเอียด',
 	'SEARCH_KEYWORDS'			=> 'คีย์เวิร์ดสำหรับค้นหา',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'กำลังค้นหาบอร์ด',
 	'SEARCH_ACTIVE_TOPICS'		=> 'แสดงกระทู้ที่เปิดดูแล้ว',
 	'SEARCH_FOR'				=> 'ค้นหาสำหรับ',
@@ -3164,8 +3163,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'หัวข้อโพสต์',
 	'SORT_TIME'					=> 'เวลาโพสต์',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'คุณต้องระบุอย่างน้อย %d ตัวอักษรสำหรับชื่อเจ้าของกระทู้',
 ));
 

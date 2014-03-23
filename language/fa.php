@@ -669,7 +669,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'جستجوي پيشرفته',
 	'SEARCH_ADV_EXPLAIN'		=> 'مشاهده تنظيمات جستجوي پيشرفته',
 	'SEARCH_KEYWORDS'			=> 'جستجو براي کلمات کليدي',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Searching forums',
 	'SEARCH_ACTIVE_TOPICS'		=> 'نمايش مبحث هاي فعال',
 	'SEARCH_FOR'				=> 'جستجو براي',
@@ -3255,8 +3254,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'عنوان پست',
 	'SORT_TIME'					=> 'زمان پست',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'شما باید حداقل %d کارکتر از نام نویسنده را مشخص کنید',
 ));
 

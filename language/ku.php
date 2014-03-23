@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'گەڕانی پەرەسەندوو',
 	'SEARCH_ADV_EXPLAIN'		=> 'هەڵبژاردنە پەرەسەندووەکانی گەڕان ببینە',
 	'SEARCH_KEYWORDS'			=> 'بگەڕێ بۆ وشەکلیل',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'گەڕان لە مەکۆکان',
 	'SEARCH_ACTIVE_TOPICS'		=> 'بابەتە چالاکەکان ببینە',
 	'SEARCH_FOR'				=> 'بگەڕێ بۆ',
@@ -3150,8 +3149,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'سەردێڕی پەیام',
 	'SORT_TIME'					=> 'کاتی ناردن',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'پێویستە لانی کەم %d نووسە دیاری بکەیت لە ناوی نووسەر.',
 ));
 

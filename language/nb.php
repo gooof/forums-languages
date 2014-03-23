@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Avansert søk',
 	'SEARCH_ADV_EXPLAIN'		=> 'Se de avanserte søkevalgene',
 	'SEARCH_KEYWORDS'			=> 'Søk etter nøkkelord',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Søker i forumene',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Se aktive emner',
 	'SEARCH_FOR'				=> 'Søk etter',
@@ -3122,8 +3121,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Emne',
 	'SORT_TIME'					=> 'Tidspunkt',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Du må ha med minst %d tegn fra forfatterens navn.',
 ));
 

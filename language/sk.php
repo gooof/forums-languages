@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Pokročilé hľadanie',
 	'SEARCH_ADV_EXPLAIN'		=> 'Zobraziť možnosti pokročilého hľadania',
 	'SEARCH_KEYWORDS'			=> 'Hľadať kľúčové slová',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Prehľadáva fórum',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Zobraziť aktívne témy',
 	'SEARCH_FOR'				=> 'Hľadať',
@@ -3158,8 +3157,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Predmet príspevku',
 	'SORT_TIME'					=> 'Čas odoslania',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Musíte zadať najmenej %d znakov z mena autora.',
 ));
 

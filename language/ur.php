@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'مفصل تلاش',
 	'SEARCH_ADV_EXPLAIN'		=> 'مفصل تلاش کے اختیارات کی نمائش',
 	'SEARCH_KEYWORDS'			=> 'اصطلاحات کی تلاش',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'فورم میں تلاشی',
 	'SEARCH_ACTIVE_TOPICS'		=> 'فعال (ایکٹو) موضوعات دیکھیے',
 	'SEARCH_FOR'				=> 'تلاش برائے ــــ',
@@ -3158,8 +3157,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'مراسلہ کا عنوان',
 	'SORT_TIME'					=> 'مراسلہ کا وقت',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'مصنف کے نام کو تلاش کرنے کے لیے %d الفاظ کا ہونا ضروری ہے',
 ));
 

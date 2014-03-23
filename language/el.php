@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Ειδική αναζήτηση',
 	'SEARCH_ADV_EXPLAIN'		=> 'Δείτε την ειδική αναζήτηση',
 	'SEARCH_KEYWORDS'			=> 'Αναζήτηση για λέξεις-κλειδιά',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Αναζήτηση στις Δ. Συζητήσεις',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Προβολή ενεργών θεμάτων',
 	'SEARCH_FOR'				=> 'Αναζήτηση για',
@@ -3158,8 +3157,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Θέμα δημοσίευσης',
 	'SORT_TIME'					=> 'Ώρα δημοσίευσης',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Πρέπει να διευκρινίσετε τουλάχιστον τους τελευταίους %d χαρακτήρες του ονόματος του συγγραφέα.',
 ));
 

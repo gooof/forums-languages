@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Részletes keresés',
 	'SEARCH_ADV_EXPLAIN'		=> 'Részletes keresés beállításainak megtekintése',
 	'SEARCH_KEYWORDS'			=> 'Kulcsszavak',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Fórumok keresése',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Aktív témák',
 	'SEARCH_FOR'				=> 'Keresés',
@@ -3157,8 +3156,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Hozzászólás témája',
 	'SORT_TIME'					=> 'Elküldés időpontja',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'A szerző nevéből legalább %d karaktert meg kell adnod.',
 ));
 

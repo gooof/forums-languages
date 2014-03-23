@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'חיפוש מתקדם',
 	'SEARCH_ADV_EXPLAIN'		=> 'צפה באפשרויות החיפוש המתקדם',
 	'SEARCH_KEYWORDS'			=> 'חיפוש מילות מפתח',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'מחפש בפורומים',
 	'SEARCH_ACTIVE_TOPICS'		=> 'הצג נושאים פעילים',
 	'SEARCH_FOR'				=> 'חפש',
@@ -3158,8 +3157,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'נושא ההודעה',
 	'SORT_TIME'					=> 'תאריך ושעת הכתיבה',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'אתה חייב לציין לפחות %d תווים מהשם של המחבר.',
 ));
 

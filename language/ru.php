@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Расширенный поиск',
 	'SEARCH_ADV_EXPLAIN'		=> 'Параметры расширенного поиска',
 	'SEARCH_KEYWORDS'			=> 'Ключевые слова',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Поиск в форумах',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Активные темы',
 	'SEARCH_FOR'				=> 'Найти',
@@ -3158,8 +3157,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Заголовок сообщения',
 	'SORT_TIME'					=> 'Время размещения',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Вы должны ввести не менее %d символов имени автора.',
 ));
 

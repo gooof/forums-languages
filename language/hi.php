@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'उन्नत खोज',
 	'SEARCH_ADV_EXPLAIN'		=> 'उन्नत खोज के विकल्प देखें',
 	'SEARCH_KEYWORDS'			=> 'कीवर्ड के लिए खोजें',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'मंचो में खोज जारी हैं',
 	'SEARCH_ACTIVE_TOPICS'		=> 'सक्रिय विषयों को देखें ',
 	'SEARCH_FOR'				=> 'के लिए खोजें',
@@ -3156,8 +3155,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'स्तम्भ प्रसंग',
 	'SORT_TIME'					=> 'स्तम्भ समय',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'You must specify at least %d characters of the authors name.',
 ));
 

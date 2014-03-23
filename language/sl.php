@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Napredno iskanje',
 	'SEARCH_ADV_EXPLAIN'		=> 'Možnosti naprednega iskanja',
 	'SEARCH_KEYWORDS'			=> 'Iskanje po ključnih besedah',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Iščem po forumu',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Poglej aktivne teme',
 	'SEARCH_FOR'				=> 'Išči za',
@@ -3159,8 +3158,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Zadeva prispevka',
 	'SORT_TIME'					=> 'Čas prispevka',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Navesti morate vsaj %d znakov avtorjevega imena.',
 ));
 

@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> '進階搜尋',
 	'SEARCH_ADV_EXPLAIN'		=> '檢視進階搜尋選項',
 	'SEARCH_KEYWORDS'			=> '搜尋關鍵字',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> '搜尋版面',
 	'SEARCH_ACTIVE_TOPICS'		=> '檢視最近討論的主題',
 	'SEARCH_FOR'				=> '搜尋',
@@ -3158,8 +3157,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> '文章主題',
 	'SORT_TIME'					=> '發表時間',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> '您必須最少輸入 %d 個字元的發表人。',
 ));
 

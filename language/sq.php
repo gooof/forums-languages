@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Kërkim i avancuar',
 	'SEARCH_ADV_EXPLAIN'		=> 'Shiko opsionet e kërkimit të avancuar',
 	'SEARCH_KEYWORDS'			=> 'Kërko për fjalë kyçe',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Duke kërkuar forumet',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Temat më aktive',
 	'SEARCH_FOR'				=> 'Kërko për',
@@ -3149,8 +3148,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Subjekti i postimit',
 	'SORT_TIME'					=> 'Koha e postimit',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Ju duhet të cilësoni të paktën %d karaktere të emrit të autorit.',
 ));
 

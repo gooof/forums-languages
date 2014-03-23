@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Разширено търсене',
 	'SEARCH_ADV_EXPLAIN'		=> 'Виж разширено търсене',
 	'SEARCH_KEYWORDS'			=> 'Търсене за ключови думи',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Търсене форуми',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Виж активните теми',
 	'SEARCH_FOR'				=> 'Търсене',
@@ -3147,8 +3146,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Заглавие',
 	'SORT_TIME'					=> 'Време',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Вие трябва да въведете поне %d за име на автора.',
 ));
 

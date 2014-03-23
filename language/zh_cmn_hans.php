@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> '高级搜索',
 	'SEARCH_ADV_EXPLAIN'		=> '查看高级搜索选项',
 	'SEARCH_KEYWORDS'			=> '按关键词搜索',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> '查找版面',
 	'SEARCH_ACTIVE_TOPICS'		=> '查看活跃的主题',
 	'SEARCH_FOR'				=> '查找',
@@ -3158,8 +3157,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> '文章标题',
 	'SORT_TIME'					=> '发表时间',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> '您必须提供至少 %d 个字符来匹配作者名字。',
 ));
 

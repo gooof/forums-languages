@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Pencarian lanjutan',
 	'SEARCH_ADV_EXPLAIN'		=> 'Lihat pilihan pencarian lanjutan',
 	'SEARCH_KEYWORDS'			=> 'Cari untuk kata kunci',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Pencarian forum',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Lihat topik yang aktif',
 	'SEARCH_FOR'				=> 'Cari',
@@ -3158,8 +3157,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Subjek post',
 	'SORT_TIME'					=> 'Waktu post',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Anda harus menentukan paling sedikitnya %d karakter dai nama pengarang.',
 ));
 

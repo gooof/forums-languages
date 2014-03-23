@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Avanceret søgning',
 	'SEARCH_ADV_EXPLAIN'		=> 'Vis avancerede søgemuligheder',
 	'SEARCH_KEYWORDS'			=> 'Søg efter nøgleord',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Søger fora',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Vis aktive emner',
 	'SEARCH_FOR'				=> 'Søg efter',
@@ -3158,8 +3157,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Indlæggets overskrift',
 	'SORT_TIME'					=> 'Indlæggets dato',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Du skal angive mindst %d tegn af forfatterens navn',
 ));
 

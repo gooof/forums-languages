@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Gelişmiş arama',
 	'SEARCH_ADV_EXPLAIN'		=> 'Gelişmiş arama seçeneklerini görüntüle',
 	'SEARCH_KEYWORDS'			=> 'Anahtar kelimeleri ara',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Forumlar aranıyor',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Aktif başlıklar',
 	'SEARCH_FOR'				=> 'Aranacak',
@@ -3158,8 +3157,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Mesaj başlığı',
 	'SORT_TIME'					=> 'Mesaj zamanı',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Yazar adını en az %d karakter olarak belirlemelisiniz.',
 ));
 

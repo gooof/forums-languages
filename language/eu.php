@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Bilaketa aurreratua',
 	'SEARCH_ADV_EXPLAIN'		=> '>Bilaketa aurreratuaren aukerak ikusi',
 	'SEARCH_KEYWORDS'			=> 'Hitz klabeak bilatu',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Foroak bilatzen',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Gai aktiboak ikusi',
 	'SEARCH_FOR'				=> 'Bilatu',
@@ -3158,8 +3157,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Mezuko izenburua',
 	'SORT_TIME'					=> 'Data',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Gutxienez egilearen izenaren %d karaktere zehaztu behar dituzu.',
 ));
 

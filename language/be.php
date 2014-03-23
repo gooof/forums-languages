@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Пашыраны пошук',
 	'SEARCH_ADV_EXPLAIN'		=> 'Параметры пашыранага пошуку',
 	'SEARCH_KEYWORDS'			=> 'Ключавыя словы',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Пошук у форумах',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Актыўныя тэмы',
 	'SEARCH_FOR'				=> 'Знайсці',
@@ -3158,8 +3157,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Загаловак паведамлення',
 	'SORT_TIME'					=> 'Час размяшчэння',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Вы павінны ўвесці не меней %d знакаў імя аўтара.',
 ));
 

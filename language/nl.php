@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Uitgebreid zoeken',
 	'SEARCH_ADV_EXPLAIN'		=> 'Toon de geavanceerde zoekopties',
 	'SEARCH_KEYWORDS'			=> 'Zoek naar trefwoorden',
-	'SEARCH_PREFIX'				=> 'Zoek naar voorvoegsel',
 	'SEARCHING_FORUMS'			=> 'Zoeken in forums',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Toon actieve onderwerpen',
 	'SEARCH_FOR'				=> 'Zoek naar',
@@ -3158,8 +3157,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Onderwerp bericht',
 	'SORT_TIME'					=> 'Tijdstip bericht',
 
-	'SEARCH_PREFIX'			=> 'Zoek naar voorvoegsel',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Je moet minimaal %d tekens van de naam van de auteur opgeven.',
 ));
 

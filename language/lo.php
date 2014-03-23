@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'ຊອກຫາແບບລະອຽດ',
 	'SEARCH_ADV_EXPLAIN'		=> 'ເບິ່ງຕົວເລືອກການຊອກຫາແບບລະອຽດ',
 	'SEARCH_KEYWORDS'			=> 'ຊອກຫາຄຳນີ້',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'ກຳລັງດຳເນີນການຊອກຫາ...',
 	'SEARCH_ACTIVE_TOPICS'		=> 'ເບິ່ງກະທູ້ທີ່ມີການໂຕ້ຕອບ',
 	'SEARCH_FOR'				=> 'ຊອກຫາ',
@@ -3149,8 +3148,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'ຊື່ຂໍ້ຄວາມ',
 	'SORT_TIME'					=> 'ເວລາທີ່ຂຽນຂໍ້ຄວາມ',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'ທ່ານຕ້ອງລະບຸຊື່ເຈົ້າຂອງກະທູ້ຢ່າງໜ້ອຍ %d ໂຕ',
 ));
 

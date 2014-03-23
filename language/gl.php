@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Procura avanzada',
 	'SEARCH_ADV_EXPLAIN'		=> 'Ver as opcións avanzadas de procura',
 	'SEARCH_KEYWORDS'			=> 'Procurar por palabras clave',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Procurando foros',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Ver temas activos',
 	'SEARCH_FOR'				=> 'Procurar',
@@ -3156,8 +3155,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Asunto da mensaxe',
 	'SORT_TIME'					=> 'Data de publicación',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Debes especificar polo menos %d caracteres do nome do autor ou autores.',
 ));
 

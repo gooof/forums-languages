@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Tarkennettu haku',
 	'SEARCH_ADV_EXPLAIN'		=> 'Näytä tarkan haun vaihtoehdot',
 	'SEARCH_KEYWORDS'			=> 'Etsi avainsanoja',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Etsimässä',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Näytä aktiiviset viestiketjut',
 	'SEARCH_FOR'				=> 'Etsi tätä',
@@ -3158,8 +3157,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Viestin aihe',
 	'SORT_TIME'					=> 'Viestin aika',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Anna ainakin %d merkkiä kirjoittajan nimestä.',
 ));
 

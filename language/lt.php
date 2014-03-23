@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Išplėstinė paieška',
 	'SEARCH_ADV_EXPLAIN'		=> 'Rodyti išplėstinės paieškos nustatymus',
 	'SEARCH_KEYWORDS'			=> 'Žodžio paieška',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Ieško forumuose',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Peržiūrėti aktyvias temas',
 	'SEARCH_FOR'				=> 'Ieškoti',
@@ -3151,8 +3150,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Pranešimo pavadinimą',
 	'SORT_TIME'					=> 'Pranešimo laiką',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Jūs turite įrašyti bent %d autoriaus vardo simbolius.',
 ));
 

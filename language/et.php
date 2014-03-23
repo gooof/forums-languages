@@ -667,7 +667,6 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV'				=> 'Täiendatud otsing',
 	'SEARCH_ADV_EXPLAIN'		=> 'Vaata täiendatud otsingu valikuid',
 	'SEARCH_KEYWORDS'			=> 'Otsi märksõnu',
-	'SEARCH_PREFIX'				=> 'Search for prefix',
 	'SEARCHING_FORUMS'			=> 'Otsib foorumitest',
 	'SEARCH_ACTIVE_TOPICS'		=> 'Vaata aktiivseid teemasid',
 	'SEARCH_FOR'				=> 'Otsi...',
@@ -3106,8 +3105,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Postituse teema',
 	'SORT_TIME'					=> 'Postituse aeg',
 
-	'SEARCH_PREFIX'			=> 'Search for prefix',
-	'SELECT_A_PREFIX'		=> 'Select a prefix',
+	'SEARCH_PREFIX'			=> 'Thread Prefixes',
+	'SELECT_ALL_TAGS'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Sa pead sisestama vähemalt %d sümbolit autori nimeks.',
 ));
 
