@@ -3151,6 +3151,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Pranešimo pavadinimą',
 	'SORT_TIME'					=> 'Pranešimo laiką',
 
+	'SEARCH_PREFIX'			=> 'Search for prefix',
+	'SELECT_A_PREFIX'		=> 'Select a prefix',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Jūs turite įrašyti bent %d autoriaus vardo simbolius.',
 ));
 
@@ -3798,7 +3800,9 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> 'Jūsų balsas įskaičiuotas.',
 	'VOTE_CONVERTED'		=> 'Konvertuotose apklausose keisti balsų negalima.',
 
-
+	'FILTERS'			=> 'Filters',
+	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
+	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'Similar topics',
 ));
 

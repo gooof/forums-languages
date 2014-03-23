@@ -3158,6 +3158,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> '文章标题',
 	'SORT_TIME'					=> '发表时间',
 
+	'SEARCH_PREFIX'			=> 'Search for prefix',
+	'SELECT_A_PREFIX'		=> 'Select a prefix',
 	'TOO_FEW_AUTHOR_CHARS'	=> '您必须提供至少 %d 个字符来匹配作者名字。',
 ));
 
@@ -3805,7 +3807,9 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> '您的票已经投出',
 	'VOTE_CONVERTED'		=> '转换的投票不能被修改.',
 
-
+	'FILTERS'			=> 'Filters',
+	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
+	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'Similar topics',
 ));
 

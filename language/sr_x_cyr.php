@@ -3158,6 +3158,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Наслов поруке',
 	'SORT_TIME'					=> 'Време поруке',
 
+	'SEARCH_PREFIX'			=> 'Search for prefix',
+	'SELECT_A_PREFIX'		=> 'Select a prefix',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Морате унети најмање %d знакова од имена аутора.',
 ));
 
@@ -3805,7 +3807,9 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> 'Ваш глас је прихваћен.',
 	'VOTE_CONVERTED'		=> 'Мењање гласова није подржано за пребачена гласања.',
 
-
+	'FILTERS'			=> 'Filters',
+	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
+	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'Similar topics',
 ));
 

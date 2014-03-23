@@ -3147,6 +3147,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Inläggämne',
 	'SORT_TIME'					=> 'Datum',
 
+	'SEARCH_PREFIX'			=> 'Search for prefix',
+	'SELECT_A_PREFIX'		=> 'Select a prefix',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Du måste ange minst %d tecken av författarens namn.',
 ));
 
@@ -3794,7 +3796,9 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> 'Din röst räknades.',
 	'VOTE_CONVERTED'		=> 'Ändrng av röst stöds inte för konverterade omröstningar.',
 
-
+	'FILTERS'			=> 'Filters',
+	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
+	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'Similar topics',
 ));
 

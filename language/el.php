@@ -3158,6 +3158,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Θέμα δημοσίευσης',
 	'SORT_TIME'					=> 'Ώρα δημοσίευσης',
 
+	'SEARCH_PREFIX'			=> 'Search for prefix',
+	'SELECT_A_PREFIX'		=> 'Select a prefix',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Πρέπει να διευκρινίσετε τουλάχιστον τους τελευταίους %d χαρακτήρες του ονόματος του συγγραφέα.',
 ));
 
@@ -3804,7 +3806,9 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> 'Η ψήφος σας έχει υποβληθεί',
 	'VOTE_CONVERTED'		=> 'Η αλλαγή των ψηφοφοριών δεν υποστηρίζεται για ψηφοφορίες που έχουν μετατραπεί.',
 
-
+	'FILTERS'			=> 'Filters',
+	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
+	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'Similar topics',
 ));
 

@@ -3150,6 +3150,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'سەردێڕی پەیام',
 	'SORT_TIME'					=> 'کاتی ناردن',
 
+	'SEARCH_PREFIX'			=> 'Search for prefix',
+	'SELECT_A_PREFIX'		=> 'Select a prefix',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'پێویستە لانی کەم %d نووسە دیاری بکەیت لە ناوی نووسەر.',
 ));
 
@@ -3797,7 +3799,9 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> 'دەنگەکەت درا',
 	'VOTE_CONVERTED'		=> 'گۆڕینی دەنگەکان پاڵپشتی نەکراوە بۆ ڕاپرسییەکی گۆڕدراو.',
 
-
+	'FILTERS'			=> 'Filters',
+	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
+	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'Similar topics',
 ));
 

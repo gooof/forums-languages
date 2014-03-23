@@ -3158,6 +3158,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Assumpte de l’entrada',
 	'SORT_TIME'					=> 'Data de l’entrada',
 
+	'SEARCH_PREFIX'			=> 'Search for prefix',
+	'SELECT_A_PREFIX'		=> 'Select a prefix',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Heu d’especificar com a mínim %d caràcters del nom de l’autor.',
 ));
 
@@ -3805,7 +3807,9 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> 'S’ha emès el vostre vot.',
 	'VOTE_CONVERTED'		=> 'No es permet el canvi de vot en enquestes convertides des d’un altre tipus de fòrum.',
 
-
+	'FILTERS'			=> 'Filters',
+	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
+	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'Similar topics',
 ));
 

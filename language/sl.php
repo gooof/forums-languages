@@ -3159,6 +3159,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Zadeva prispevka',
 	'SORT_TIME'					=> 'Čas prispevka',
 
+	'SEARCH_PREFIX'			=> 'Search for prefix',
+	'SELECT_A_PREFIX'		=> 'Select a prefix',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Navesti morate vsaj %d znakov avtorjevega imena.',
 ));
 
@@ -3806,7 +3808,9 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> 'Vaš glas je bil sprejet.',
 	'VOTE_CONVERTED'		=> 'Pri pretvorjenih anketah sprememba glasov ni mogoča.',
 
-
+	'FILTERS'			=> 'Filters',
+	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
+	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'Similar topics',
 ));
 

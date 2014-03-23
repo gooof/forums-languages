@@ -3158,6 +3158,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Onderwerp bericht',
 	'SORT_TIME'					=> 'Tijdstip bericht',
 
+	'SEARCH_PREFIX'			=> 'Zoek naar voorvoegsel',
+	'SELECT_A_PREFIX'		=> 'Select a prefix',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Je moet minimaal %d tekens van de naam van de auteur opgeven.',
 ));
 
@@ -3805,7 +3807,9 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> 'Je stem is verwerkt',
 	'VOTE_CONVERTED'		=> 'Je stem wijzigen is niet mogelijk voor geconverteerde polls',
 
-
+	'FILTERS'			=> 'Filters',
+	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
+	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'Similar topics',
 ));
 

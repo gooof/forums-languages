@@ -3158,6 +3158,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Mezuko izenburua',
 	'SORT_TIME'					=> 'Data',
 
+	'SEARCH_PREFIX'			=> 'Search for prefix',
+	'SELECT_A_PREFIX'		=> 'Select a prefix',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Gutxienez egilearen izenaren %d karaktere zehaztu behar dituzu.',
 ));
 
@@ -3804,7 +3806,9 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> 'Zure bozka bidali egin da.',
 	'VOTE_CONVERTED'		=> 'Ezin da bozkarik aldatu eraldatutako inkestetan.',
 
-
+	'FILTERS'			=> 'Filters',
+	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
+	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'Similar topics',
 ));
 

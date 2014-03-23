@@ -3158,6 +3158,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Assunto da mensagem',
 	'SORT_TIME'					=> 'Submetido em',
 
+	'SEARCH_PREFIX'			=> 'Search for prefix',
+	'SELECT_A_PREFIX'		=> 'Select a prefix',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Deve indicar pelo menos %d caracteres do nome do autor.',
 ));
 
@@ -3842,7 +3844,9 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> 'O seu voto foi registado.',
 	'VOTE_CONVERTED'		=> 'Não é possível alterar votos .',
 
-
+	'FILTERS'			=> 'Filters',
+	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
+	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'Similar topics',
 ));
 

@@ -3158,6 +3158,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'مراسلہ کا عنوان',
 	'SORT_TIME'					=> 'مراسلہ کا وقت',
 
+	'SEARCH_PREFIX'			=> 'Search for prefix',
+	'SELECT_A_PREFIX'		=> 'Select a prefix',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'مصنف کے نام کو تلاش کرنے کے لیے %d الفاظ کا ہونا ضروری ہے',
 ));
 
@@ -3803,7 +3805,9 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> 'آپ کا ووٹ شامل ہو گیا ہے۔',
 	'VOTE_CONVERTED'		=> 'تبدیل ہوئے سروے پر ووٹنگ قابلِ عمل نہیں ہے',
 
-
+	'FILTERS'			=> 'Filters',
+	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
+	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'ملتے جلتے موضوعات',
 ));
 

@@ -3156,6 +3156,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'स्तम्भ प्रसंग',
 	'SORT_TIME'					=> 'स्तम्भ समय',
 
+	'SEARCH_PREFIX'			=> 'Search for prefix',
+	'SELECT_A_PREFIX'		=> 'Select a prefix',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'You must specify at least %d characters of the authors name.',
 ));
 
@@ -3803,7 +3805,9 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> 'आपका मत सम्मिलित कर लिया गया है',
 	'VOTE_CONVERTED'		=> 'Changing votes is not supported for converted polls.',
 
-
+	'FILTERS'			=> 'Filters',
+	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
+	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'Similar topics',
 ));
 

@@ -3149,6 +3149,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Subjekti i postimit',
 	'SORT_TIME'					=> 'Koha e postimit',
 
+	'SEARCH_PREFIX'			=> 'Search for prefix',
+	'SELECT_A_PREFIX'		=> 'Select a prefix',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Ju duhet të cilësoni të paktën %d karaktere të emrit të autorit.',
 ));
 
@@ -3796,7 +3798,9 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> 'Vota juaj është rregjistruar.',
 	'VOTE_CONVERTED'		=> 'Ndërrimi i votës nuk është i mundur për sondazhet e konvertuara.',
 
-
+	'FILTERS'			=> 'Filters',
+	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
+	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'Similar topics',
 ));
 

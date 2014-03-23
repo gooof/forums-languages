@@ -3255,6 +3255,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'عنوان پست',
 	'SORT_TIME'					=> 'زمان پست',
 
+	'SEARCH_PREFIX'			=> 'Search for prefix',
+	'SELECT_A_PREFIX'		=> 'Select a prefix',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'شما باید حداقل %d کارکتر از نام نویسنده را مشخص کنید',
 ));
 
@@ -3952,7 +3954,9 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> 'راي شما محسوب شد.',
 	'VOTE_CONVERTED'		=> 'تغییر رای اعمال نمی شود',
 
-
+	'FILTERS'			=> 'Filters',
+	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
+	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'Similar topics',
 ));
 

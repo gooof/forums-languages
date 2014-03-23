@@ -3172,6 +3172,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> '記事の件名',
 	'SORT_TIME'					=> '投稿日時',
 
+	'SEARCH_PREFIX'			=> 'Search for prefix',
+	'SELECT_A_PREFIX'		=> 'Select a prefix',
 	'TOO_FEW_AUTHOR_CHARS'	=> '投稿者名は %d 字以上である必要があります',
 ));
 
@@ -3821,7 +3823,9 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> '投票しました',
 	'VOTE_CONVERTED'		=> 'データコンバートされた投票トピックの投票オプションを変更することはできません。残念ながら現在はサポート外です。',
 
-
+	'FILTERS'			=> 'Filters',
+	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
+	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'Similar topics',
 ));
 

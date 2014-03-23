@@ -3157,6 +3157,8 @@ $lang = array_merge($lang, array(
 	'SORT_POST_SUBJECT'			=> 'Betreff des Beitrags',
 	'SORT_TIME'					=> 'Erstellungsdatum des Beitrags',
 
+	'SEARCH_PREFIX'			=> 'Suche nach Präfix',
+	'SELECT_A_PREFIX'		=> 'Präfix Auswahl',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Du musst mindestens %d Zeichen des Benutzernamens angeben.',
 ));
 
@@ -3843,7 +3845,9 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> 'Deine Abstimmung wurde erfasst.',
 	'VOTE_CONVERTED'		=> 'Das Ändern der Abstimmung ist bei Umfragen nicht möglich, die konvertiert wurden.',
 
-
+	'FILTERS'			=> 'Filter',
+	'REMOVE_ALL_FILTER'		=> 'Alle Filter entfernen',
+	'REMOVE_FILTER'			=> 'Filter entfernen',
 	'SIMILAR_TOPICS'		=> 'Ähnliche Themen',
 ));
 
@@ -15048,7 +15052,7 @@ $lang = array_merge($lang, array(
 	'ACP_YMSM_SYNC_TOPICMAPS'				=> 'Topic map marker counters',
 	'ACP_YMSM_SYNC_TOPICMAPS_EXPLAIN'		=> 'Re-sync topic map marker counters. Run this sync after mass post move or delete or attached photos import. ',
 	'ACP_YMSM_SYNC_TOPICMAPS_DONE'			=> 'Topic map marker counters synchronization completed.',
-	'ACP_YMSM_SYNC_TOPICMAPS_PROGRESS'		=> 'Synchronized %s of %s topics.',
+	'ACP_YMSM_SYNC_TOPICMAPS_PROGRESS'		=> '%s von %s Themen synchronisiert.',
 	'ACP_YMSM_SYNC_USERMAPS'				=> 'User map marker counters',
 	'ACP_YMSM_SYNC_USERMAPS_EXPLAIN'		=> 'Re-sync users private map counters.',
 	'ACP_YMSM_SYNC_USERMAPS_DONE'			=> 'User map marker counters synchronization completed.',
@@ -15059,8 +15063,8 @@ $lang = array_merge($lang, array(
 	'ACP_YMSM_SYNC_AIMGMAP_PROGRESS'		=> 'Synchronized %s of %s thumbnails.',
 	'ACP_YMSM_SYNC_AIMGMAPIMP'				=> 'Angehängte Bilder importieren',
 	'ACP_YMSM_SYNC_AIMGMAPIMP_EXPLAIN'		=> 'Creates map markers for exisiting JPEG attachments containing EXIF GPS data. Requires extra run of "topic map marker counters" synchronization to complete the process.',
-	'ACP_YMSM_SYNC_AIMGMAPIMP_DONE'			=> 'Attached photos import completed.',
-	'ACP_YMSM_SYNC_AIMGMAPIMP_PROGRESS'		=> 'Imported %s of %s attachments.',
+	'ACP_YMSM_SYNC_AIMGMAPIMP_DONE'			=> 'Angehängte Bilder Importierung abgeschlossen.',
+	'ACP_YMSM_SYNC_AIMGMAPIMP_PROGRESS'		=> '%s von %s Dateianhängen importiert.',
 	'ACP_YMSM_SYNC_TAGGEDMAPS'				=> 'Tagged map marker counters',
 	'ACP_YMSM_SYNC_TAGGEDMAPS_EXPLAIN'		=> 'Re-sync tagged map marker counters.',
 	'ACP_YMSM_SYNC_TAGGEDMAPS_DONE'			=> 'Tagged maps marker counters synchronization completed.',
