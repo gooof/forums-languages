@@ -11030,6 +11030,7 @@ $lang = array_merge($lang, array(
 	'LOG_YMSM_TAG_ADD'			=> 'Maps tag added %s',
 	'LOG_YMSM_TAG_DELETE'		=> 'Maps tag deleted %s',
 
+	'CHARACTERS_LEFT'	=> '<b>%s</b> characters left.',
 	'ACP_CAT_PHPBB_SEO'	=> 'phpBB SEO',
 	'ACP_MOD_REWRITE'	=> 'URL Rewriting settings',
 	'ACP_PHPBB_SEO_CLASS'	=> 'phpBB SEO Class settings',
