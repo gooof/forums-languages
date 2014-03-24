@@ -1514,7 +1514,8 @@ $lang = array_merge($lang, array(
 	'PRIME_NOTIFY_PM_CONTENT_EXPLAIN'	=> 'Include the private message in the notification email?',
 	'PRIME_NOTIFY_FORUM_VISIT_MSG'		=> 'No more notifications will be sent until you visit the forum.',
 	'PRIME_NOTIFY_TOPIC_VISIT_MSG'		=> 'No more notifications will be sent until you visit the topic.',
-
+	'FILTERS'				=> 'Filters',
+	'SEARCH_SELECT_ANY'		=> '(Any)',
 ));
 
 #######language/en/groups.php#######
@@ -3156,7 +3157,6 @@ $lang = array_merge($lang, array(
 	'SORT_TIME'					=> 'स्तम्भ समय',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
-	'SEARCH_SELECT_ANY'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'You must specify at least %d characters of the authors name.',
 ));
 
@@ -3723,6 +3723,9 @@ $lang = array_merge($lang, array(
 	'VIEW_FORUM'			=> 'मंच देखें',
 	'VIEW_FORUM_TOPIC'		=> '1 विषय',
 	'VIEW_FORUM_TOPICS'		=> '%d विषय',
+
+	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
+	'REMOVE_FILTER'		=> 'Remove filter',
 ));
 
 #######language/en/viewtopic.php#######
@@ -3804,9 +3807,6 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> 'आपका मत सम्मिलित कर लिया गया है',
 	'VOTE_CONVERTED'		=> 'Changing votes is not supported for converted polls.',
 
-	'FILTERS'			=> 'Filters',
-	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
-	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'Similar topics',
 ));
 

@@ -1514,7 +1514,8 @@ $lang = array_merge($lang, array(
 	'PRIME_NOTIFY_PM_CONTENT_EXPLAIN'	=> 'Include the private message in the notification email?',
 	'PRIME_NOTIFY_FORUM_VISIT_MSG'		=> 'No more notifications will be sent until you visit the forum.',
 	'PRIME_NOTIFY_TOPIC_VISIT_MSG'		=> 'No more notifications will be sent until you visit the topic.',
-
+	'FILTERS'				=> 'Filters',
+	'SEARCH_SELECT_ANY'		=> '(Any)',
 ));
 
 #######language/en/groups.php#######
@@ -3157,7 +3158,6 @@ $lang = array_merge($lang, array(
 	'SORT_TIME'					=> 'Elküldés időpontja',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
-	'SEARCH_SELECT_ANY'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'A szerző nevéből legalább %d karaktert meg kell adnod.',
 ));
 
@@ -3722,6 +3722,9 @@ $lang = array_merge($lang, array(
 	'VIEW_FORUM'			=> 'Fórum megtekintése',
 	'VIEW_FORUM_TOPIC'		=> '1 téma',
 	'VIEW_FORUM_TOPICS'		=> '%d téma',
+
+	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
+	'REMOVE_FILTER'		=> 'Remove filter',
 ));
 
 #######language/en/viewtopic.php#######
@@ -3803,9 +3806,6 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> 'A szavazatod sikeresen eltárolásra került.',
 	'VOTE_CONVERTED'		=> 'A szavazatváltoztatás konvertált szavazásoknál nem támogatott.',
 
-	'FILTERS'			=> 'Filters',
-	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
-	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'Similar topics',
 ));
 

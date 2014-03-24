@@ -1514,7 +1514,8 @@ $lang = array_merge($lang, array(
 	'PRIME_NOTIFY_PM_CONTENT_EXPLAIN'	=> 'Include the private message in the notification email?',
 	'PRIME_NOTIFY_FORUM_VISIT_MSG'		=> 'No more notifications will be sent until you visit the forum.',
 	'PRIME_NOTIFY_TOPIC_VISIT_MSG'		=> 'No more notifications will be sent until you visit the topic.',
-
+	'FILTERS'				=> 'Filters',
+	'SEARCH_SELECT_ANY'		=> '(Any)',
 ));
 
 #######language/en/groups.php#######
@@ -3158,7 +3159,6 @@ $lang = array_merge($lang, array(
 	'SORT_TIME'					=> 'Heure du message',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
-	'SEARCH_SELECT_ANY'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Vous devez spécifier au moins %d caractère(s) du nom des auteurs.',
 ));
 
@@ -3725,6 +3725,9 @@ $lang = array_merge($lang, array(
 	'VIEW_FORUM'			=> 'Consulter le forum',
 	'VIEW_FORUM_TOPIC'		=> '1 sujet',
 	'VIEW_FORUM_TOPICS'		=> '%d sujet(s)',
+
+	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
+	'REMOVE_FILTER'		=> 'Remove filter',
 ));
 
 #######language/en/viewtopic.php#######
@@ -3806,9 +3809,6 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> 'Votre vote a bien été comptabilisé.',
 	'VOTE_CONVERTED'		=> 'Il est impossible de modifier les votes d’un sondage qui a été converti.',
 
-	'FILTERS'			=> 'Filters',
-	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
-	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'Similar topics',
 ));
 

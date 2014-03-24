@@ -1514,7 +1514,8 @@ $lang = array_merge($lang, array(
 	'PRIME_NOTIFY_PM_CONTENT_EXPLAIN'	=> 'Include the private message in the notification email?',
 	'PRIME_NOTIFY_FORUM_VISIT_MSG'		=> 'Er worden geen meldingen meer verstuurt totdat je het forum weer bezoekt.',
 	'PRIME_NOTIFY_TOPIC_VISIT_MSG'		=> 'Er worden geen meldingen meer verstuurt totdat je het topic weer bezoekt.',
-
+	'FILTERS'				=> 'Filters',
+	'SEARCH_SELECT_ANY'		=> '(Any)',
 ));
 
 #######language/en/groups.php#######
@@ -3158,7 +3159,6 @@ $lang = array_merge($lang, array(
 	'SORT_TIME'					=> 'Tijdstip bericht',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
-	'SEARCH_SELECT_ANY'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Je moet minimaal %d tekens van de naam van de auteur opgeven.',
 ));
 
@@ -3725,6 +3725,9 @@ $lang = array_merge($lang, array(
 	'VIEW_FORUM'			=> 'Toon forum',
 	'VIEW_FORUM_TOPIC'		=> '1 onderwerp',
 	'VIEW_FORUM_TOPICS'		=> '%d onderwerpen',
+
+	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
+	'REMOVE_FILTER'		=> 'Remove filter',
 ));
 
 #######language/en/viewtopic.php#######
@@ -3806,9 +3809,6 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> 'Je stem is verwerkt',
 	'VOTE_CONVERTED'		=> 'Je stem wijzigen is niet mogelijk voor geconverteerde polls',
 
-	'FILTERS'			=> 'Filters',
-	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
-	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'Similar topics',
 ));
 

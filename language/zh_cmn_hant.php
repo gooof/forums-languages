@@ -1514,7 +1514,8 @@ $lang = array_merge($lang, array(
 	'PRIME_NOTIFY_PM_CONTENT_EXPLAIN'	=> 'Include the private message in the notification email?',
 	'PRIME_NOTIFY_FORUM_VISIT_MSG'		=> 'No more notifications will be sent until you visit the forum.',
 	'PRIME_NOTIFY_TOPIC_VISIT_MSG'		=> 'No more notifications will be sent until you visit the topic.',
-
+	'FILTERS'				=> 'Filters',
+	'SEARCH_SELECT_ANY'		=> '(Any)',
 ));
 
 #######language/en/groups.php#######
@@ -3158,7 +3159,6 @@ $lang = array_merge($lang, array(
 	'SORT_TIME'					=> '發表時間',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
-	'SEARCH_SELECT_ANY'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> '您必須最少輸入 %d 個字元的發表人。',
 ));
 
@@ -3725,6 +3725,9 @@ $lang = array_merge($lang, array(
 	'VIEW_FORUM'			=> '檢視版面',
 	'VIEW_FORUM_TOPIC'		=> '1 個主題',
 	'VIEW_FORUM_TOPICS'		=> '%d 個主題',
+
+	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
+	'REMOVE_FILTER'		=> 'Remove filter',
 ));
 
 #######language/en/viewtopic.php#######
@@ -3806,9 +3809,6 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> '您的投票已經送出。',
 	'VOTE_CONVERTED'		=> '為了轉變票選結果而改變投票選項是不被支持的。',
 
-	'FILTERS'			=> 'Filters',
-	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
-	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'Similar topics',
 ));
 

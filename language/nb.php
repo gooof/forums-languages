@@ -1514,7 +1514,8 @@ $lang = array_merge($lang, array(
 	'PRIME_NOTIFY_PM_CONTENT_EXPLAIN'	=> 'Include the private message in the notification email?',
 	'PRIME_NOTIFY_FORUM_VISIT_MSG'		=> 'No more notifications will be sent until you visit the forum.',
 	'PRIME_NOTIFY_TOPIC_VISIT_MSG'		=> 'No more notifications will be sent until you visit the topic.',
-
+	'FILTERS'				=> 'Filters',
+	'SEARCH_SELECT_ANY'		=> '(Any)',
 ));
 
 #######language/en/groups.php#######
@@ -3122,7 +3123,6 @@ $lang = array_merge($lang, array(
 	'SORT_TIME'					=> 'Tidspunkt',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
-	'SEARCH_SELECT_ANY'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Du må ha med minst %d tegn fra forfatterens navn.',
 ));
 
@@ -3691,6 +3691,9 @@ $lang = array_merge($lang, array(
 	'VIEW_FORUM'			=> 'Vis forum',
 	'VIEW_FORUM_TOPIC'		=> '1 emne',
 	'VIEW_FORUM_TOPICS'		=> '%d emner',
+
+	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
+	'REMOVE_FILTER'		=> 'Remove filter',
 ));
 
 #######language/en/viewtopic.php#######
@@ -3772,9 +3775,6 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> 'Din stemme er blitt registrert',
 	'VOTE_CONVERTED'		=> 'Du kan ikke forandre din stemme på avstemninger som ble laget før phpBB ble oppgradert til versjon 3.0.',
 
-	'FILTERS'			=> 'Filters',
-	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
-	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'Similar topics',
 ));
 

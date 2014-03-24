@@ -1514,7 +1514,8 @@ $lang = array_merge($lang, array(
 	'PRIME_NOTIFY_PM_CONTENT_EXPLAIN'	=> 'Include the private message in the notification email?',
 	'PRIME_NOTIFY_FORUM_VISIT_MSG'		=> 'No more notifications will be sent until you visit the forum.',
 	'PRIME_NOTIFY_TOPIC_VISIT_MSG'		=> 'No more notifications will be sent until you visit the topic.',
-
+	'FILTERS'				=> 'Filters',
+	'SEARCH_SELECT_ANY'		=> '(Any)',
 ));
 
 #######language/en/groups.php#######
@@ -3147,7 +3148,6 @@ $lang = array_merge($lang, array(
 	'SORT_TIME'					=> 'Datum',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
-	'SEARCH_SELECT_ANY'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Du måste ange minst %d tecken av författarens namn.',
 ));
 
@@ -3714,6 +3714,9 @@ $lang = array_merge($lang, array(
 	'VIEW_FORUM'			=> 'Visa kategori',
 	'VIEW_FORUM_TOPIC'		=> '1 tråd',
 	'VIEW_FORUM_TOPICS'		=> '%d trådar',
+
+	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
+	'REMOVE_FILTER'		=> 'Remove filter',
 ));
 
 #######language/en/viewtopic.php#######
@@ -3795,9 +3798,6 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> 'Din röst räknades.',
 	'VOTE_CONVERTED'		=> 'Ändrng av röst stöds inte för konverterade omröstningar.',
 
-	'FILTERS'			=> 'Filters',
-	'REMOVE_ALL_FILTER'		=> 'Remove all Filters',
-	'REMOVE_FILTER'			=> 'Remove filter',
 	'SIMILAR_TOPICS'		=> 'Similar topics',
 ));
 

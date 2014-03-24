@@ -1514,7 +1514,8 @@ $lang = array_merge($lang, array(
 	'PRIME_NOTIFY_PM_CONTENT_EXPLAIN'	=> 'Den PM-Inhalt in der Benachrichtigungs-eMail mitsenden?',
 	'PRIME_NOTIFY_FORUM_VISIT_MSG'		=> 'Bis zum erneuten Besuch des Forums werden keine weiteren Benachrichtigungen gesendet.',
 	'PRIME_NOTIFY_TOPIC_VISIT_MSG'		=> 'Bis zum erneuten Besuch des Topics werden keine weiteren Benachrichtigungen gesendet.',
-
+	'FILTERS'				=> 'Filter',
+	'SEARCH_SELECT_ANY'		=> '(Jedes)',
 ));
 
 #######language/en/groups.php#######
@@ -3157,7 +3158,6 @@ $lang = array_merge($lang, array(
 	'SORT_TIME'					=> 'Erstellungsdatum des Beitrags',
 
 	'SEARCH_PREFIX'			=> 'Themen Präfixe',
-	'SEARCH_SELECT_ANY'		=> '(Jedes)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Du musst mindestens %d Zeichen des Benutzernamens angeben.',
 ));
 
@@ -3763,6 +3763,9 @@ $lang = array_merge($lang, array(
 	'VIEW_FORUM'			=> 'Forum anzeigen',
 	'VIEW_FORUM_TOPIC'		=> '1 Thema',
 	'VIEW_FORUM_TOPICS'		=> '%d Themen',
+
+	'REMOVE_ALL_FILTER'	=> 'Alle Filter entfernen',
+	'REMOVE_FILTER'		=> 'Filter entfernen',
 ));
 
 #######language/en/viewtopic.php#######
@@ -3844,9 +3847,6 @@ $lang = array_merge($lang, array(
 	'VOTE_SUBMITTED'		=> 'Deine Abstimmung wurde erfasst.',
 	'VOTE_CONVERTED'		=> 'Das Ändern der Abstimmung ist bei Umfragen nicht möglich, die konvertiert wurden.',
 
-	'FILTERS'			=> 'Filter',
-	'REMOVE_ALL_FILTER'		=> 'Alle Filter entfernen',
-	'REMOVE_FILTER'			=> 'Filter entfernen',
 	'SIMILAR_TOPICS'		=> 'Ähnliche Themen',
 ));
 
