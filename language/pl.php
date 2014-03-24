@@ -1344,7 +1344,7 @@ $lang = array_merge($lang, array(
 	'YMSM_SEARCH'					=> 'Szukaj',
 	'YMSM_SETANDCLOSE'				=> 'Set to form',
 	'YMSM_POI_OPEN_POPUP'			=> 'Open map',
-	'YMSM_WRONG_LL_FORMAT' 			=> 'Point position has wrong format, Must be specified as [45.0,179.0] lattitude,longitude',
+	'YMSM_WRONG_LL_FORMAT' 			=> 'Point position has wrong format, Must be specified as [45.0,179.0] latitude, longitude',
 	'YMSM_DISABLED' 				=> 'Maps are disabled by an administrator.',
 	'YMSM_HEADING'					=> 'Board Map',
 	'YMSM_TAG_LIST'					=> 'Tags',
@@ -3162,7 +3162,7 @@ $lang = array_merge($lang, array(
 	'SORT_TIME'					=> 'Data',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
-	'SELECT_ALL_TAGS'		=> '(Any)',
+	'SEARCH_SELECT_ANY'		=> '(Any)',
 	'TOO_FEW_AUTHOR_CHARS'	=> 'Musisz podać przynajmniej %d znaków nazwy autora.',
 ));
 
@@ -14933,7 +14933,7 @@ $lang = array_merge($lang, array(
 	'YMSM_APPEARANCE'						=> 'Appearance',
 	'YMSM_APPEARANCE_EXPLAIN'				=> 'Here you can set the apperance settings for the phpBB geo topics mod.',
 	'YMSM_DEFAULTS'							=> 'Defaults',
-	'YMSM_DEFAULT_MAP_LAT'					=> 'Lattitude',
+	'YMSM_DEFAULT_MAP_LAT'					=> 'Latitude',
 	'YMSM_DEFAULT_MAP_LAT_EXPLAIN' 			=> 'Default map center latitude.',
 	'YMSM_DEFAULT_MAP_LON'					=> 'Longitude',
 	'YMSM_DEFAULT_MAP_LON_EXPLAIN' 			=> 'Default map center longitude.',
