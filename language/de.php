@@ -11949,8 +11949,7 @@ $lang = array_merge($lang, array(
 	'GROUP_MAX_WARNINGS'	=> 'Maximale Anzahl an Verwarnungen',
 	'GROUP_MAX_WARNINGS_EXPLAIN'	=> 'Maximum an Verwarnungen, die ein User haben muss.',
 	'DEFAULT_AUTO_GROUP'	=> 'Hauptgruppe automatisch auf diese ändern',
-	'DEFAULT_AUTO_GROUP_EXPLAIN'	=> 'Sofern mindestens ein Kriterium erfüllt ist und der User zu der Gruppe hinzugefügt wurde, wird die Hauptgruppe automatisch auf diese Gruppe geändert.<br /> Wird der Haken nicht markiert, wird der User nur zur Gruppe hinzugefügt, behält aber seine alte Hauptgruppe.
-',
+	'DEFAULT_AUTO_GROUP_EXPLAIN'	=> 'Sofern mindestens ein Kriterium erfüllt ist und der User zu der Gruppe hinzugefügt wurde, wird die Hauptgruppe automatisch auf diese Gruppe geändert.<br /> Wird der Haken nicht markiert, wird der User nur zur Gruppe hinzugefügt, behält aber seine alte Hauptgruppe.',
 
 	'ALTT_ACTIVE'				=> 'Beitrags Titel in der Forenansicht anzeigen, Titel werden an die Befugnisse des Users angepasst ob dieser den Titel sehen darf oder nicht.',
 	'ALTT_CHAR_LIMIT'			=> 'Anzahl der Zeichen die angezeigt werden sollen',
