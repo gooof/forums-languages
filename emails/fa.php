@@ -352,9 +352,7 @@ A message from {FROM_USERNAME} may also be included below. Please note that this
 
 {MESSAGE}
 
-Powered by : www.Maghsad.com phpBB3 Farsi
-
-For getting or making your own FREE forum,visit www.phpBB.Maghsad.com !',
+{EMAIL_SIG}',
 ));
 
 
@@ -774,8 +772,7 @@ Message sent to you follows
 
 {MESSAGE}
 
-
-Powered by : www.Maghsad.com phpBB3 Farsi',
+{EMAIL_SIG}',
 ));
 
 
@@ -795,8 +792,7 @@ Message sent to you follows
 
 {MESSAGE}
 
-
-Powered by : www.Maghsad.com phpBB3 Farsi',
+{EMAIL_SIG}',
 ));
 
 

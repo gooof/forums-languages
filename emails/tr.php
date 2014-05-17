@@ -306,23 +306,25 @@ Mesaj panosu yöneticisi üstteki formu faks ya da normal posta yoluyla aldıkta
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - Bir arkadaş e-postası
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
 
-Merhaba {TO_USERNAME},
+Hello {TO_USERNAME},
 
-Bu e-posta size "{SITENAME}" mesaj panosunda kayıtlı olan {FROM_USERNAME} kullanıcısı tarafından gönderildi, alttaki başlığın ilginizi çekebileceğini düşünüyor:
+This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
 
 {TOPIC_NAME}
 
-Buradan inceleyebilirsiniz:
+You can find it at:
 
 {U_TOPIC}
 
-{FROM_USERNAME} kullanıcısı tarafından aşağıdaki bölüme bir mesaj eklenmiş olabilir. Not: Bu mesaj yöneticiler tarafından görüntülenemez veya onaylanamaz. Eğer bu mesajın içeriğinden rahatsız olduysanız lütfen {BOARD_CONTACT} adresinden mesaj panosu yöneticileri ile iletişime geçin. Bu adresle iletişime geçeceğiniz zaman lütfen bu mesajı alıntı yapın.
+A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
 
 ----------
 
-{MESSAGE}',
+{MESSAGE}
+
+{EMAIL_SIG}',
 ));
 
 
@@ -706,38 +708,40 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Merhaba {TO_USERNAME},
+Hello {TO_USERNAME},
 
-Bu e-posta size {FROM_USERNAME} tarafından "{SITENAME}" mesaj panosunda bulunan hesabınız aracılığı ile gönderildi. Eğer bu e-postanın spam olduğunu düşünüyorsanız veya içeriğinden rahatsız olduysanız lütfen alttaki e-posta adresiyle iletişime geçin.
+The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
 {BOARD_CONTACT}
 
-Bu e-posta size {FROM_USERNAME} tarafından gönderildi.
+Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
 
-Alttaki mesaj size gönderildi:
-~~~~~~~~~~~~~~~~~~~~
+Message sent to you follows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-',
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Merhaba {TO_USERNAME},
+Hello {TO_USERNAME},
 
-Bu e-posta size {FROM_USERNAME} tarafından "{SITENAME}" mesaj panosunda bulunan hesabınız aracılığı ile gönderildi. Eğer bu e-postanın spam olduğunu düşünüyorsanız veya içeriğinden rahatsız olduysanız lütfen alttaki e-posta adresiyle iletişime geçin.
+The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
 {BOARD_CONTACT}
 
-Not: Gönderici adresi mesaj panosunda bulunan IM hesabına (yahoo, icq, msn v.b.) göre ayarlandı.
+Include this full message. Please note that the sender address has been set to the boards IM account.
 
-Alttaki mesaj size gönderildi
+Message sent to you follows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-',
+
+{EMAIL_SIG}',
 ));
 
 

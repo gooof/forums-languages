@@ -304,23 +304,25 @@ Tack för att du registrerade dig.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" — Tipsa en vän
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
 
-Hej {TO_USERNAME},
+Hello {TO_USERNAME},
 
-Detta e-postmeddelande skickades från "{SITENAME}" av {FROM_USERNAME} som tror att du skulle vara intresserad av följande tråd:
+This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
 
 {TOPIC_NAME}
 
-Du kan hitta den här:
+You can find it at:
 
 {U_TOPIC}
 
-Ett meddelande från {FROM_USERNAME} kan också finnas nedan. Notera att detta meddelande inte har setts eller godkänts av administratörerna. Om du vill klaga på nedanstående meddelande, kontakta administratören på {BOARD_CONTACT}. Inkludera hela detta meddelande (framförallt överdelen) när du kontaktar denna adress.
+A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
 
 ----------
 
-{MESSAGE}',
+{MESSAGE}
+
+{EMAIL_SIG}',
 ));
 
 
@@ -695,38 +697,40 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hej {TO_USERNAME},
+Hello {TO_USERNAME},
 
-Följande är ett e-postmeddelande som har skickats till dig från {FROM_USERNAME} via ditt konto på "{SITENAME}". Om detta meddelande är skräppost eller innehåller stötande/kränkande material/kommentarer, kontakta diskussionsforumets administratör på följande adress:
+The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
 {BOARD_CONTACT}
 
-Inkludera hela detta meddelande (framförallt överdelen) när du kontaktar denna adress. Notera att svarsadressen för detta e-postmeddelande tillhör {FROM_USERNAME}.
+Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
 
-Meddelandet som skickades till dig följer nedan
+Message sent to you follows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-',
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hej {TO_USERNAME},
+Hello {TO_USERNAME},
 
-Följande är ett meddelande som har skickats till dig från {FROM_USERNAME} via ditt konto på "{SITENAME}". Om detta meddelande är skräppost eller innehåller stötande/kränkande material/kommentarer, kontakta diskussionsforumets administratör på följande adress:
+The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
 {BOARD_CONTACT}
 
-Inkludera hela detta meddelande när du kontaktar denna adress. Notera att svarsadressen för detta e-postmeddelande är satt till diskussionsforumets snabbmeddelandekonto.
+Include this full message. Please note that the sender address has been set to the boards IM account.
 
-Meddelandet som skickades till dig följer nedan
+Message sent to you follows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-',
+
+{EMAIL_SIG}',
 ));
 
 

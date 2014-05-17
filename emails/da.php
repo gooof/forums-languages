@@ -296,19 +296,25 @@ Tak fordi du tilmeldte dig hos os.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - Email en ven
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
 
-Hej {TO_USERNAME}
+Hello {TO_USERNAME},
 
-Denne email er blevet sendt fra "{SITENAME}" af {FROM_USERNAME}, som tænkte du kunne være interesseret i emnet: {TOPIC_NAME}
+This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
 
-Emnet findes via dette link: {U_TOPIC}
+{TOPIC_NAME}
 
-En meddelelse fra {FROM_USERNAME} kan også være medtaget nedenfor. Bemærk venligst at denne meddelelse ikke er blevet set eller godkendt af boardets administratorer. Ønsker du at klage over denne email, bedes du kontakte boardets administratorer på {BOARD_EMAIL}. Citer venligst meddelelsens overskrift i forbindelse med indsendelse af klagen.
+You can find it at:
+
+{U_TOPIC}
+
+A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
 
 ----------
 
-{MESSAGE}',
+{MESSAGE}
+
+{EMAIL_SIG}',
 ));
 
 
@@ -672,30 +678,40 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hej {TO_USERNAME}
+Hello {TO_USERNAME},
 
-Denne email er sendt til dig fra {FROM_USERNAME} via din konto på "{SITENAME}". Finder du indholdet af emailen anstødende eller på anden måde upassende, kan boardets administratorer kontaktes på denne adresse:
+The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
 {BOARD_CONTACT}
 
-Inkluder hele emailen (specielt overskrifterne). Bemærk venligst, at afsenderadressen på denne email tilhører {FROM_USERNAME}.
+Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
 
-Indholdet af emailen er som følger:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Message sent to you follows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{MESSAGE}',
+{MESSAGE}
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hej {TO_USERNAME}
+Hello {TO_USERNAME},
 
-Beskeden er afsendt via din konto på "{SITENAME}". Afsender er boardets jabberkonto, og kan derfor ikke besvares. Finder du beskeden generende eller upassende, kan du rapportere den til boardets administratorer på denne emailadresse: {BOARD_CONTACT}. Kopier den fulde besked ind i emailen.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
-{MESSAGE}',
+{BOARD_CONTACT}
+
+Include this full message. Please note that the sender address has been set to the boards IM account.
+
+Message sent to you follows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+{MESSAGE}
+
+{EMAIL_SIG}',
 ));
 
 

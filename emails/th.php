@@ -308,23 +308,23 @@ Thank you for registering.
 $email = array_merge($email, array(
 	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
 
-ถึงคุณ {TO_USERNAME}
+Hello {TO_USERNAME},
 
-ข้อความต่อไปนี้ถูกส่งถึงคุณโดย {FROM_USERNAME} จากเว็บ "{SITENAME}"
-ซึ่งเขาคิดว่าคุณอาจสนใจในหัวข้อนี้:
+This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+
 {TOPIC_NAME}
 
-คุณสามารถอ่านได้ที่ลิงค์นี้:
+You can find it at:
+
 {U_TOPIC}
 
-อาจมีข้อความจาก {FROM_USERNAME} แนบต่อท้ายมาด้วย ซึ่งข้อความนี้ไม่ได้ถูกตรวจสอบโดยผู้ดูแลบอร์ด
-
-ถ้าคุณต้องการร้องเรียนเกี่ยวกับ e-mail นี้ กรุณาติดต่อผู้ดูแลบอร์ด ที่ {BOARD_CONTACT}
-โดยให้แนบข้อความทั้งหมดนี้มาด้วย
+A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
 
 ----------
 
-{MESSAGE}',
+{MESSAGE}
+
+{EMAIL_SIG}',
 ));
 
 
@@ -700,39 +700,40 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-ถึงคุณ {TO_USERNAME}
+Hello {TO_USERNAME},
 
-ข้อความต่อไปนี้ ได้ส่งถึงคุณโดย {FROM_USERNAME} ผ่านทางชื่อบัญชีของคุณบนเว็บ {SITENAME}
-ถ้าข้อความนี้ก่อความรำคาญให้คุณ กรุณาติดต่อ webmaster ของบอร์ดที่ email นี้:
+The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+
 {BOARD_CONTACT}
-โดยให้คุณแนบข้อความทั้งหมดมาด้วย (โดยเฉพาะข้อความทางเทคนิคด้านบนนี้)
 
-หมายเหตุ: ข้อความที่คุณตอบกลับ (Reply) จะถูกส่งไปให้ {FROM_USERNAME}
+Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
 
-ต่อไปนี้คือข้อความที่ส่งถึงคุณ
+Message sent to you follows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-',
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-ถึงคุณ {TO_USERNAME}
+Hello {TO_USERNAME},
 
-ข้อความต่อไปนี้ ได้ส่งถึงคุณโดย {FROM_USERNAME} ผ่านทางชื่อบัญชีของคุณบนเว็บ {SITENAME}
-ถ้าข้อความนี้ก่อความรำคาญให้คุณ กรุณาติดต่อ webmaster ของบอร์ดที่ email นี้:
+The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+
 {BOARD_CONTACT}
 
-หมายเหตุ: ที่อยู่ของผู้ส่งข้อความ เป็นชื่อบัญชี IM ของบอร์ด
+Include this full message. Please note that the sender address has been set to the boards IM account.
 
-ต่อไปนี้คือข้อความที่ส่งถึงคุณ
+Message sent to you follows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-',
+
+{EMAIL_SIG}',
 ));
 
 

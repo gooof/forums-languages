@@ -312,23 +312,25 @@ Date: _______________
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} «{SITENAME}» — Ліст сябра
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
 
-Добры дзень, {TO_USERNAME}!
+Hello {TO_USERNAME},
 
-Дадзены ліст быў адпраўлены з канферэнцыі «{SITENAME}» карыстальнікам {FROM_USERNAME}, які лічыць, што вам можа быць цікавая дадзеная тэма:
+This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
 
 {TOPIC_NAME}
 
-Вы можаце знайсці яе па гэтым адрасе:
+You can find it at:
 
 {U_TOPIC}
 
-Зыходнае паведамленне ад {FROM_USERNAME} варта ніжэй. Улічыце, што дадзенае паведамленне не было прагледжана або ўхвалена адміністрацыяй форума. Калі вы жадаеце паскардзіцца на гэты ліст, то можаце звязацца з адміністратарам па адрасе {BOARD_EMAIL}. Пры адпраўцы паведамлення на гэты адрас, калі ласка, працытуйце загалоўкі атрыманага ліста.
+A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
 
 ----------
 
-{MESSAGE}',
+{MESSAGE}
+
+{EMAIL_SIG}',
 ));
 
 
@@ -714,38 +716,40 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Добры дзень, {TO_USERNAME}!
+Hello {TO_USERNAME},
 
-Ніжэй ёсць ліст, адпраўлены вам карыстальнікам {FROM_USERNAME} праз ваш уліковы запіс на канферэнцыі «{SITENAME}». Калі гэтае паведамленне з\'яўляецца спамам, утрымоўвае абразы або іншыя прыкрыя вам выказвання, калі ласка звяжыцеся з адміністратарам канферэнцыі па адрасе:
+The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
-{BOARD_EMAIL}
+{BOARD_CONTACT}
 
-Уключыце дадзенае паведамленне цалкам (асабліва загалоўкі). Калі ласка ўлічыце, што зваротны адрас гэтага ліста прыналежыць карыстальніку {FROM_USERNAME}.
+Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
 
-Пасланае вам паведамленне:
-~~~~~~~~~~~~~~~~~~~~~~~~
+Message sent to you follows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-',
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Добры дзень, {TO_USERNAME}!
+Hello {TO_USERNAME},
 
-Ніжэй ёсць ліст, адпраўлены вам карыстальнікам {FROM_USERNAME} праз ваш уліковы запіс на канферэнцыі «{SITENAME}». Калі гэтае паведамленне з\'яўляецца спамам, утрымоўвае абразы або іншыя прыкрыя вам выказвання, калі ласка звяжыцеся з адміністратарам канферэнцыі па адрасе:
+The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
-{BOARD_EMAIL}
+{BOARD_CONTACT}
 
-Уключыце дадзенае паведамленне цалкам. Калі ласка ўлічыце, што адрас адпраўніка з\'яўляецца адрасам уліковага запісу канферэнцыі для імгненных паведамленняў.
+Include this full message. Please note that the sender address has been set to the boards IM account.
 
-Пасланае вам паведамленне:
-~~~~~~~~~~~~~~~~~~~~~~~~
+Message sent to you follows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-',
+
+{EMAIL_SIG}',
 ));
 
 

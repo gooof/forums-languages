@@ -339,7 +339,9 @@ Du kannst das Thema mit folgendem Link erreichen:
 
 ----------
 
-{MESSAGE}',
+{MESSAGE}
+
+{EMAIL_SIG}',
 ));
 
 
@@ -730,7 +732,9 @@ Füge deiner Nachricht bitte die vollständige E-Mail (insbesondere die Nachrich
 Es folgt die an dich gesendete Nachricht
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{MESSAGE}',
+{MESSAGE}
+
+{EMAIL_SIG}',
 ));
 
 
@@ -748,7 +752,9 @@ Füge deiner Nachricht bitte diese vollständige Nachricht bei. Bitte beachte, d
 Es folgt die an dich gesendete Nachricht
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{MESSAGE}',
+{MESSAGE}
+
+{EMAIL_SIG}',
 ));
 
 

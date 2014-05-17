@@ -311,23 +311,25 @@ Terima kasih atas pendaftarannya.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail teman
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
 
-Hallo {TO_USERNAME},
+Hello {TO_USERNAME},
 
-E-mail ini dikirim dari "{SITENAME}" oleh {FROM_USERNAME} yang menganggap anda tertarik dengan topik berikut ini:
+This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
 
 {TOPIC_NAME}
 
-Anda dapat menemukannya pada:
+You can find it at:
 
 {U_TOPIC}
 
-Pesan dari {FROM_USERNAME} juga dapat dimasukkan dibawah ini. Mohon dicatat, bahwa pesan ini belum dilihat ataupun disetujui oleh administrator. Jika anda ingin mengadukan keluhan telah menerima e-mail ini, silahkan menghubungi administrator di {BOARD_CONTACT}. Mohon mengikutkan judul pesan ketika menghubungi alamat-alamat ini.
+A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
 
 ----------
 
-{MESSAGE}',
+{MESSAGE}
+
+{EMAIL_SIG}',
 ));
 
 
@@ -712,38 +714,40 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hallo {TO_USERNAME},
+Hello {TO_USERNAME},
 
-Berikut ini adalah e-mail yang dikirimkan kepada anda oleh {FROM_USERNAME} melalui account anda di "{SITENAME}". Jika pesan ini dianggap sebagai spam, mengandung penghinaan ataupun komentar lain yang anda temukan sebagai penyerangan, silahkan hubungi webmaster dengan alamat berikut ini:
+The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
 {BOARD_CONTACT}
 
-Mengikutsertakan keseluruhan e-mail (terutama sekali judulnya). Harap dicatat bahwa alamat balasan telah diatur sedemikian rupa dari {FROM_USERNAME}.
+Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
 
-Pesan dikirim kepada anda sebagai berikut:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Message sent to you follows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-',
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hallo {TO_USERNAME},
+Hello {TO_USERNAME},
 
-Berikut ini adalah e-mail yang dikirimkan kepada anda oleh {FROM_USERNAME} melalui account anda di "{SITENAME}". Jika pesan ini dianggap sebagai spam, mengandung penghinaan ataupun komentar lain yang anda temukan sebagai penyerangan, silahkan hubungi webmaster dengan alamat berikut ini:
+The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
 {BOARD_CONTACT}
 
-Mengikutsertakan keseluruhan e-mail. Mohon dicatat bahwa alamat pengirim telah diatur ke IM account halaman.
+Include this full message. Please note that the sender address has been set to the boards IM account.
 
-Pesan dikirim kepada anda sebagai berikut:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Message sent to you follows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-',
+
+{EMAIL_SIG}',
 ));
 
 

@@ -315,24 +315,25 @@ $email = array_merge($email, array(
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} „{SITENAME}“ —  E-mail σε φίλο
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
 
-Γεια σου {TO_USERNAME},
+Hello {TO_USERNAME},
 
-Αυτό το μήνυμα αλληλογραφίας έχει σταλεί από το "{SITENAME}" από τον {FROM_USERNAME} ο οποίος πιστεύει ότι θα σας ενδιαφέρει το ακόλουθο θέμα:
+This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
 
 {TOPIC_NAME}
 
-Μπορείτε να το βρείτε εδώ:
+You can find it at:
 
 {U_TOPIC}
 
-Ένα μήνυμα από τον {FROM_USERNAME} επισυνάπτετε παρακάτω. Σημειώστε ότι αυτό το μήνυμα δεν έχει σταλεί ή αποδεχτεί από τους διαχειριστές της κοινότητας. Αν θέλετε να μην λαμβάνετε άλλο μηνύματα αλληλογραφίας παρακαλώ επικοινωνήστε με τον διαχειριστή της κοινότητας στο {BOARD_CONTACT}. Παρακαλούμε επισυνάψτε τα στοιχεία του μηνύματος όταν επικοινωνήσετε με αυτήν την διεύθυνση.
+A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
 
 ----------
 
 {MESSAGE}
-',
+
+{EMAIL_SIG}',
 ));
 
 
@@ -721,38 +722,40 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Γεια σας {TO_USERNAME},
+Hello {TO_USERNAME},
 
-Το ακόλουθο είναι ένα email από τον {FROM_USERNAME} μέσο του λογαριασμού σας στο "{SITENAME}". Εάν το μήνυμα αυτό αποτελεί ενόχληση με προσβλητικό ή ανόητο περιεχόμενο παρακαλώ επικοινωνήστε με τον διαχειριστή της κοινότητας στην ακόλουθη διεύθυνση:
+The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
 {BOARD_CONTACT}
 
-Να συμπεριλάβετε ολόκληρο το μήνυμα ιδίως τις κεφαλίδες. Έχετε υπόψη ότι ως διεύθυνση απάντησης έχει ορισθεί η διεύθυνση του {FROM_USERNAME}.
+Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
 
-Ακολουθεί το μήνυμα που σας απεστάλη
+Message sent to you follows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-',
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Γεια σας {TO_USERNAME},
+Hello {TO_USERNAME},
 
-το ακόλουθο είναι ένα email από τον {FROM_USERNAME} μέσο του λογαριασμού σας στο "{SITENAME}". Εάν το μήνυμα αυτό αποτελεί ενόχληση με προσβλητικό ή ανόητο περιεχόμενο παρακαλώ επικοινωνήστε με τον διαχειριστή της κοινότητας στην ακόλουθη διεύθυνση:
+The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
 {BOARD_CONTACT}
 
-Να συμπεριλάβετε ολόκληρο το μήνυμα. Έχετε υπόψη ότι ως  διεύθυνση απάντησης έχει ορισθεί o λογαριασμός του IM.
+Include this full message. Please note that the sender address has been set to the boards IM account.
 
-Ακολουθεί το μήνυμα που σας απεστάλη
+Message sent to you follows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-',
+
+{EMAIL_SIG}',
 ));
 
 

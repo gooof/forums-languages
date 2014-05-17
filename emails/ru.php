@@ -309,23 +309,25 @@ Date: _______________
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} «{SITENAME}» — Сообщение от друга
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
 
-Здравствуйте, {TO_USERNAME}!
+Hello {TO_USERNAME},
 
-Это сообщение отправлено с конференции «{SITENAME}» пользователем {FROM_USERNAME}, который считает, что вам может быть интересна данная тема:
+This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
 
 {TOPIC_NAME}
 
-Вы можете найти её по этому адресу:
+You can find it at:
 
 {U_TOPIC}
 
-Исходное сообщение от {FROM_USERNAME} следует ниже. Учтите, что данное сообщение не было просмотрено или одобрено администрацией конференции. Если вы хотите пожаловаться на это сообщение, то можете связаться с администратором по адресу {BOARD_CONTACT}. При отправке сообщения на этот адрес, пожалуйста, процитируйте заголовки полученного письма.
+A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
 
 ----------
 
-{MESSAGE}',
+{MESSAGE}
+
+{EMAIL_SIG}',
 ));
 
 
@@ -709,38 +711,40 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Здравствуйте, {TO_USERNAME}!
+Hello {TO_USERNAME},
 
-Ниже следует письмо, отправленное вам пользователем {FROM_USERNAME} через вашу учётную запись на конференции «{SITENAME}». Если это сообщение является спамом, содержит оскорбления или другие неприятные вам высказывания, пожалуйста, свяжитесь с администратором конференции по адресу:
+The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
 {BOARD_CONTACT}
 
-Включите данное сообщение целиком (особенно заголовки). Пожалуйста, учтите, что обратный адрес этого письма принадлежит пользователю {FROM_USERNAME}.
+Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
 
-Посланное вам сообщение:
-~~~~~~~~~~~~~~~~~~~~~~~~
+Message sent to you follows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-',
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Здравствуйте, {TO_USERNAME}!
+Hello {TO_USERNAME},
 
-Ниже следует письмо, отправленное вам пользователем {FROM_USERNAME} через вашу учётную запись на конференции «{SITENAME}». Если это сообщение является спамом, содержит оскорбления или другие неприятные вам высказывания, пожалуйста, свяжитесь с администратором конференции по адресу:
+The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
 {BOARD_CONTACT}
 
-Включите данное сообщение целиком. Пожалуйста, учтите, что адрес отправителя является адресом учётной записи конференции для мгновенных сообщений.
+Include this full message. Please note that the sender address has been set to the boards IM account.
 
-Посланное вам сообщение:
-~~~~~~~~~~~~~~~~~~~~~~~~
+Message sent to you follows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-',
+
+{EMAIL_SIG}',
 ));
 
 

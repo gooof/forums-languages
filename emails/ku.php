@@ -320,23 +320,25 @@ Date: _______________
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - پەیام ناردن بۆ هاوڕێ
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
 
-سڵاو{TO_USERNAME},
+Hello {TO_USERNAME},
 
-ئەم نامەیە نێردراوە لە "{SITENAME}"ـەوە لەلایەن {FROM_USERNAME} وا بیری کردۆتەوە کە ئەم جۆرە بابەتانە بەلاتەوە گرنگ بێت:
+This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
 
 {TOPIC_NAME}
 
-دەتوانیت بیدۆزیتەوە لە:
+You can find it at:
 
 {U_TOPIC}
 
-لەوانەیە پەیامێک لەلایەن {FROM_USERNAME} ـەوە نووسرابێت. تکایە سەرنجی ئەوە بدە کە ئەم پەیامە لەلایەن بەڕێوەبەرانی مەکۆوە نەبینراوە و پەسەند کرابێت. ئەگەر بەو پەیامە ڕازی نیت و ئارەزووی ناکەیت تکایە پەیوەندی بە بەڕێوەبەرانەوە بکە لە {BOARD_CONTACT}  تکایە ئاماژە بە سەرپەڕەی پەیام بکە کاتێک پەیوەندی بەم ناونیشانەوە دەکەیت.
+A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
 
 ----------
 
-{MESSAGE}',
+{MESSAGE}
+
+{EMAIL_SIG}',
 ));
 
 
@@ -720,39 +722,41 @@ To read the comment , click the link below.
 
 
 $email = array_merge($email, array(
-	'email/profile_send_email.txt' 		=> 'سڵاو {TO_USERNAME}،
+	'email/profile_send_email.txt' 		=> '
+Hello {TO_USERNAME},
 
-ئەم پەیامەت بۆ نێردراوە لەلایەن {FROM_USERNAME} بە هۆی هەژمارەکەتەوە لە "{SITENAME}". گەر ئەم پەیامە سپامە، یان لێدوانی توند و نابەجێی تیادایە تکایە پەیوەندی بکە بەڕێوەبەرایەتی مەکۆکانەوە لە:
+The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
 {BOARD_CONTACT}
 
-ئەم ئیمەیلەی بە تەواوی تێ هەڵبکێشە (بە سەرپەڕەشەوە)، وریای ئەوە بە ناونیشانی وڵامدانەوە (reply) دەنێردرێت  بۆ {FROM_USERNAME}.
+Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
 
-ئەمە ناواخنی پەیامەکەیە:
+Message sent to you follows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-',
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/profile_send_im.txt' 		=> 'سڵاو {TO_USERNAME}،
+	'email/profile_send_im.txt' 		=> '
+Hello {TO_USERNAME},
 
-ئەمەی خوارەوە پەیامێکە بۆت نێردراوە لەلایەن {FROM_USERNAME} بە هۆی هەژمارەکەتەوە لە "{SITENAME}". گەر ئەم پەیامە سپامە یان لێدوانی توند و نابەجێی تیادایە، پەیوەندی بکە بەڕێوەبەرایەتی مەکۆکانەوە لە:
+The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
 {BOARD_CONTACT}
 
-ئەم پەیامەی بە تەواوی تێ هەڵبکێشە، تکایە وریای ئەوە بە کە ناونیشانی نێرەر ڕێکخراوە بۆ هەژماری IM ـی مەکۆ.
+Include this full message. Please note that the sender address has been set to the boards IM account.
 
-ئەمە ناواخنی پەیامەکەیە:
+Message sent to you follows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
-
-',
+{EMAIL_SIG}',
 ));
 
 

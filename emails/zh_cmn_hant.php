@@ -308,23 +308,25 @@ E-mail：{EMAIL_ADDRESS}
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> 'Subject:「{SITENAME}」 - E-mail 好友
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
 
-親愛的 {TO_USERNAME} 您好：
+Hello {TO_USERNAME},
 
-這個電子郵件由 {FROM_USERNAME} 發送自「{SITENAME}」，他覺得您也許會對下面的主題感到興趣：
+This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
 
 {TOPIC_NAME}
 
-您可以點選下面的連結去檢視這個主題：
+You can find it at:
 
 {U_TOPIC}
 
-由 {FROM_USERNAME} 發送的訊息也包含在下面。請注意！這些訊息並沒有經過討論區管理員的審查或核准。如果您想要抱怨收到這個電子郵件，請聯絡討論區管理員 {BOARD_CONTACT}。當您聯絡討論區管理員時，請引用這個開頭訊息。
+A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
 
 ----------
 
-{MESSAGE}',
+{MESSAGE}
+
+{EMAIL_SIG}',
 ));
 
 
@@ -705,36 +707,40 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-親愛的 {TO_USERNAME} 您好：
+Hello {TO_USERNAME},
 
-下面是您在「{SITENAME}」 的帳號收到了來自 {FROM_USERNAME} 發送給您的電子郵件。如果這訊息是廣告的，包含濫用的或其他令您厭惡的內容，那麼請透過下面的位址聯絡討論區的管理員：
+The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
 {BOARD_CONTACT}
 
-反映中請包含完整的電子郵件內容 (特別是郵件開頭)。請注意！這個電子郵件的回覆位址已經設定為 {FROM_USERNAME}。
+Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
 
-以下是發送給您的訊息：
+Message sent to you follows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{MESSAGE}',
+{MESSAGE}
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-親愛的 {TO_USERNAME} 您好：
+Hello {TO_USERNAME},
 
-下面是您在「{SITENAME}」 的帳號收到了來自 {FROM_USERNAME} 發送給您的私人訊息。如果這訊息是廣告的，包含濫用的或其他令您厭惡的內容，那麼請透過下面的位址聯絡討論區的管理員：
+The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
 {BOARD_CONTACT}
 
-反映中請包含完整的訊息。請注意！發送者的位址已經設定為討論區 IM 帳號。
+Include this full message. Please note that the sender address has been set to the boards IM account.
 
-以下是發送給您的訊息：
+Message sent to you follows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{MESSAGE}',
+{MESSAGE}
+
+{EMAIL_SIG}',
 ));
 
 

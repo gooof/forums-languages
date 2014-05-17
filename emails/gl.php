@@ -311,24 +311,25 @@ Grazas por te rexistrares.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - Correo-e a un amigo
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
 
-Ola {TO_USERNAME},
+Hello {TO_USERNAME},
 
-Este correo-e foi enviado desde "{SITENAME}" por {FROM_USERNAME} pensando que podías ter interés no seguinte tema:
+This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
 
 {TOPIC_NAME}
 
-Podes atopalo en:
+You can find it at:
 
 {U_TOPIC}
 
-Unha mensaxe desde {FROM_USERNAME} pode que sexa tamén incluída debaixo. Por favor ten en conta que esta mensaxe non foi enviada ou aprobada polos administradores do taboleiro. Se desexas presentar unha queixa por recibires este correo-e contacta co administrador en {BOARD_CONTACT}. Por favor cita as cabeceiras da mensaxe cando contactes con este enderezo.
+A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
 
 ----------
 
 {MESSAGE}
-',
+
+{EMAIL_SIG}',
 ));
 
 
@@ -716,37 +717,40 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Ola {TO_USERNAME},
+Hello {TO_USERNAME},
 
-O seguinte correo-e foiche enviado por {FROM_USERNAME} a través da túa conta en "{SITENAME}". Se esta mensaxe é spam, contén insultos ou outros comentarios ofensivos, por favor, contacta co xestor do sitio do taboleiro no seguinte enderezo:
+The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
 {BOARD_CONTACT}
 
-Inclúe este correo-e completo (especialmente as cabeceiras). Ten en conta que  o enderezo de resposta a este correo-e é o de {FROM_USERNAME}.
+Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
 
-A mensaxe que che foi enviada é a seguinte:
+Message sent to you follows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-',
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Ola {TO_USERNAME},
+Hello {TO_USERNAME},
 
-A seguinte mensaxe foiche enviada por {FROM_USERNAME} a través da túa conta en "{SITENAME}". Se esta mensaxe é spam, contén insultos ou outros comentarios que consideres ofensivos, por favor, contacta co xestor do sitio do taboleiro no seguinte enderezo:
+The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
 {BOARD_CONTACT}
 
-Inclúe esta mensaxe completa. Ten en conta que o enderezo do remitente foi establecido para a conta IM do taboleiro.
+Include this full message. Please note that the sender address has been set to the boards IM account.
 
-A mensaxe que che enviaron é a seguinte
+Message sent to you follows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-{MESSAGE}',
+{MESSAGE}
+
+{EMAIL_SIG}',
 ));
 
 

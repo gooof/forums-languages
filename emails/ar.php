@@ -315,23 +315,25 @@ $email = array_merge($email, array(
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - رسالة من صديق
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
 
-مرحباً {TO_USERNAME},
+Hello {TO_USERNAME},
 
-أرسٍلَت هذا البريد من خلال الموقع "{SITENAME}" بواسطة العضو {FROM_USERNAME} الذي اعتقدَ بأن هذا الموضوع قد يهمك:
+This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
 
 {TOPIC_NAME}
 
-للوصول إلى الموضوع اضغط على الوصلة التالية:
+You can find it at:
 
 {U_TOPIC}
 
-قد يكون العضو {FROM_USERNAME} أرسل لك تعليقاً أو رسالة . وهذه الرسالة وافق عليها مسؤول الموقع قبل الإرسال . إذا كانت هذه الرسالة إعلانات أو تحتوي على لغة بذيئة أو أي كلام غير ملائم الرجاء مراسلة مسؤول الموقع على العنوان التالي: {BOARD_CONTACT}. أرفق الرسالة التي تم أرسِلت بالكامل.
+A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
 
 ----------
 
-{MESSAGE}',
+{MESSAGE}
+
+{EMAIL_SIG}',
 ));
 
 
@@ -715,38 +717,40 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-مرحباً {TO_USERNAME},
+Hello {TO_USERNAME},
 
-هذه الرسالة قد أرسلها {FROM_USERNAME} لحسابك في "{SITENAME}" . إذا كانت هذه الرسالة إعلانات أو تحتوي على لغة بذيئة أو أي كلام غير ملائم الرجاء مراسلة مسؤول الموقع على العنوان التالي:
+The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
 {BOARD_CONTACT}
 
-أرفق الرسالة التي أرسِلَت بالكامل وخصوصاً رأس الرسالة . لاحظ أن الرد لهذه الرسالة سيكون إلى {FROM_USERNAME}.
+Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
 
-هذه هي الرسالة المرسلة إليك
+Message sent to you follows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-',
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-مرحباً {TO_USERNAME},
+Hello {TO_USERNAME},
 
-هذه الرسالة قد أرسلها {FROM_USERNAME} لحسابك في "{SITENAME}" . إذا كانت هذه الرسالة إعلانات أو تحتوي على لغة بذيئة أو أي كلام غير ملائم الرجاء مراسلة مسؤول الموقع على العنوان التالي:
+The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
 {BOARD_CONTACT}
 
-أرفق الرسالة التي أرسِلَت بالكامل 
+Include this full message. Please note that the sender address has been set to the boards IM account.
 
-الرسالة تحتوي:
+Message sent to you follows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-',
+
+{EMAIL_SIG}',
 ));
 
 

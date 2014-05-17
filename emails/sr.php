@@ -310,23 +310,25 @@ Hvala vam što ste se registrovali.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} “{SITENAME}” — Email za prijatelja
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
 
-Zdravo {TO_USERNAME},
+Hello {TO_USERNAME},
 
-Ovaj email je poslat sa foruma “{SITENAME}” od {FROM_USERNAME} jer je pomislio(la) da ćete biti zaiteresovani za temu:
+This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
 
 {TOPIC_NAME}
 
-Temu mođete pogledati klikom na sledeći link:
+You can find it at:
 
 {U_TOPIC}
 
-Poruka od {FROM_USERNAME} je prikazana ispod. Znajte da ovu poruku nije pregledao ili odobrio administrator. Ukoliko želite da se žalite zbog prijema ove poruke molimo vas da kontaktirate administratora na {BOARD_EMAIL}. Priključite i ovu poruku uz vaš email a naročito zaglavlje mail-a kada ukoliko priložite žalbu administratoru.
+A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
 
 ----------
 
-{MESSAGE}',
+{MESSAGE}
+
+{EMAIL_SIG}',
 ));
 
 
@@ -705,38 +707,40 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Zdravo {TO_USERNAME},
+Hello {TO_USERNAME},
 
-Sledi email koji vam je poslao {FROM_USERNAME} putem vašeg naloga na forumu “{SITENAME}”. Ako je ova poruka spak, sadrži uvredljive ili neke druge komentare molimo vas da kontaktirate webmastera na sledecoj adresi:
+The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
-{BOARD_EMAIL}
+{BOARD_CONTACT}
 
-Priložite i kompletan email (naročito zaglavlje). Znajte da je adresa za odgovor na ovaj email podešena na korisnika {FROM_USERNAME}.
+Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
 
-Sledi vaša poruka
+Message sent to you follows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-',
+
+{EMAIL_SIG}',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Zdravo {TO_USERNAME},
+Hello {TO_USERNAME},
 
-Ovo je poruka koju vam je poslao {FROM_USERNAME} preko vašeg naloga na forumu “{SITENAME}”. Ako je ova poruka spam, sadrži uvredljive ili neke druge komentare molimo vas da kontaktirate webmastera na sledećoj adresi:
+The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
 
-{BOARD_EMAIL}
+{BOARD_CONTACT}
 
-Pošaljite i kompletnu poruku. Znajte da je adresa pošaljioca podešena na forumov IM nalog.
+Include this full message. Please note that the sender address has been set to the boards IM account.
 
-Sledi poruka koja vam je poslata
+Message sent to you follows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
-',
+
+{EMAIL_SIG}',
 ));
 
 
