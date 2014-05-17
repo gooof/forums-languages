@@ -302,19 +302,19 @@ Dėkojame, kad užsiregistravote.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} laiškas nuo "{SITENAME}" diskusijų dalyvio
 
-Hello {TO_USERNAME},
+Sveiki {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Šis laiškas jums siunčiamas nuo "{SITENAME}" diskusijų dalyvio {FROM_USERNAME}, kuris mano jog jus sudomins ši tema:
 
 {TOPIC_NAME}
 
-You can find it at:
+Ją galite perskaityti paspaudę ant nuorodos žemiau:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Taip pat dar žemiau galite perskaityti vartotojo {FROM_USERNAME} žinutę skirtą jums. Atsiminkite, kad šis laiškas nebuvo patikrintas diskusijų administratoriaus. Jeigu norite pasiskųsti apie tai, kad gavote šį laišką, susisiekite su juo adresu {BOARD_CONTACT}. Į savo laišką įtraukite ir šio laiško antraštes.
 
 ----------
 
@@ -701,16 +701,15 @@ To read the comment , click the link below.
 
 
 $email = array_merge($email, array(
-	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_email.txt' 		=> 'Sveiki {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Šis laiškas jums siunčiamas nuo "{SITENAME}" diskusijų dalyvio {FROM_USERNAME}. Jeigu laiškas yra internetinė šiukšlė (spam), arba įžeidžiančio ar kitokio nemalonaus turinio, prašome susisiekti su diskusijų administratoriumi šiuo adresu:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Į savo laišką įtraukite ir šį laišką (įskaitant visas antraštes). Taip pat atminkite, kad atsakydami į šį laišką, nusiųsite pranešimą vartotojui {FROM_USERNAME}, todėl jeigu norite susisiekti su administratoriumi, turėsite sukurti naują laišką.
 
-Message sent to you follows
+Jums siunčiamo laiško tekstas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -721,21 +720,21 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_im.txt' 		=> 'Sveiki {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Ši žinutė jums siunčiama nuo "{SITENAME}" diskusijų dalyvio {FROM_USERNAME}. Jeigu žinutė yra internetinė šiukšlė (spam), arba įžeidžiančio ar kitokio nemalonaus turinio, prašome susisiekti su diskusijų administratoriumi šiuo adresu:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Į laišką įtraukite ir šią žinutę. Taip pat atminkite, kad šios žinutės siuntėjo adresas yra diskusijų lentos IM adresas.
 
-Message sent to you follows
+Jums siunčiamos žinutės tekstas
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 

@@ -311,19 +311,19 @@ Gràcies per registrar-vos.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - Enviat per correu electrònic a un amic
 
-Hello {TO_USERNAME},
+Hola {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+{FROM_USERNAME} us ha enviat aquest correu electrònic des de "{SITENAME}" perquè creu que podeu estar interessat en el tema següent:
 
 {TOPIC_NAME}
 
-You can find it at:
+Podeu trobar-lo a:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+És possible que a continuació aparegui un missatge de {FROM_USERNAME}. Tingueu en compte que aquest missatge no ha estat vist ni aprovat pels administradors del fòrum. Si voleu queixar-vos per haver rebut aquest correu electrònic poseu-vos en contacte amb l\'administrador del fòrum a {BOARD_CONTACT} incloent-hi les capcaleres del missatge.
 
 ----------
 
@@ -714,16 +714,16 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+Hola {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+{FROM_USERNAME} us ha enviat el correu electrònic següent a través del vostre compte a "{SITENAME}". Si es tracta de correu brossa, conté insults o comentaris ofensius poseu-vos en contacte amb l\'administrador del fòrum a l\'adreça electrònica següent:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Incloeu aquest correu electrònic complet (especialment les capçaleres). Tingueu en compte que l\'adreça de resposta utilitzada per aquest correu electrònic és la de {FROM_USERNAME}.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+El missatge enviat es mostra a continuació
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
@@ -734,16 +734,16 @@ Message sent to you follows
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+Hola {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+{FROM_USERNAME} us ha enviat el missatge següent a través del vostre compte a "{SITENAME}". Si es tracta de correu brossa, conté insults o comentaris ofensius poseu-vos en contacte amb l\'administrador del fòrum a l\'adreça electrònica següent:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Incloeu aquest missatge complet. Tingueu en compte que l\'adreça d\'enviament utilitzada és la del compte del fòrum per a missatgeria instantània.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+El missatge enviat es mostra a continuació
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 

@@ -310,19 +310,19 @@ Date: _______________
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - 给朋友发送email
 
 Hello {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+这个email由 {FROM_USERNAME} 发送自 "{SITENAME}",  他/她觉得您可能会对这些内容感兴趣:
 
 {TOPIC_NAME}
 
-You can find it at:
+您可以在如下链接中浏览:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+ {FROM_USERNAME} 发送的邮件内容也在下面包含, 请注意这些内容并没有经过论坛管理员批准或审查. 如果您对这类邮件表示不满, 请联系论坛管理员 {BOARD_CONTACT}. 请在邮件中包含这个邮件的邮件头内容.
 
 ----------
 
@@ -718,13 +718,13 @@ $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
 Hello {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+您在 "{SITENAME}" 上的帐号收到了来自 {FROM_USERNAME} 的新email, 下面是email的内容. 如果是垃圾邮件或其他对您产生冒犯的内容请联系论坛的管理员, 通过如下的地址:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+在反馈中请包含完整的email内容 (特别是邮件头). 请注意这个email的回复地址已经被设置为帐号 {FROM_USERNAME}.
 
-Message sent to you follows
+以下是发送给您的内容
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -738,13 +738,13 @@ $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
 Hello {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+您在 "{SITENAME}" 上的帐号收到了来自 {FROM_USERNAME} 的新消息, 下面是消息的内容. 如果是垃圾消息或其他对您产生冒犯的内容请联系论坛的管理员, 通过如下的地址:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+反馈中请包含这个完整的信息. 请注意发送者的地址已经被设置到论坛 IM 帐号.
 
-Message sent to you follows
+以下是发送给您的内容
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}

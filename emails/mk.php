@@ -311,19 +311,19 @@ $email = array_merge($email, array(
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '﻿{EMAILSUBJECT:} "{SITENAME}" - Мејл до пријател
 
-Hello {TO_USERNAME},
+Здраво {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Овој мејл е пратен од "{SITENAME}" од {FROM_USERNAME} кој мисли дека вие може да бидете заинтересирани за следната темаc:
 
 {TOPIC_NAME}
 
-You can find it at:
+Може да ја најдете на:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Порака од {FROM_USERNAME} е вклучена подолу. Ве молиме запамтете дека ова порака не е одобрена од администраторите на форумот. Ако сакате да се пожалите во врска со примањето на оваа порака контактирајте ги администраторите на форумот {BOARD_CONTACT}. Ве молиме цитирајте ја пораката која сте ја добиле кога ќе ги контактирате администраторите.
 
 ----------
 
@@ -712,36 +712,37 @@ To read the comment , click the link below.
 
 
 $email = array_merge($email, array(
-	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_email.txt' 		=> '﻿
+Здраво {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Следната порака е мејл пратен до вас од {FROM_USERNAME} со акаунт на "{SITENAME}". Доколку оваа порака е спам, содржи навредливи коментари или слично ве молиме контактирајте ги администраторите на форумот на следната мејл адреса:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Доколку ги контактирате администраторите вклучете ја и оваа порака целосно. Ве молиме запомнете дека адресата преку која е испратена е наместена на членскиот мејл од {FROM_USERNAME}.
 
-Message sent to you follows
+Пораката која е испратена до вас е:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_im.txt' 		=> '﻿
+Здраво {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Оваа порака ви е испратена од {FROM_USERNAME} со акаунт на "{SITENAME}". Доколку оваа порака е спам, содржи навредливи коментари или слично ве молиме контактирајте ги администраторите на форумот на следната мејл адреса:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Доколку ги контактирате администраторите вклучете ја и оваа порака целосно. Ве молиме запомнете дека адресата преку која е испратена е наместена на форумската мејл адреса.
 
-Message sent to you follows
+Пораката која е испратена до вас е:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}

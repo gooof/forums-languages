@@ -305,19 +305,19 @@ Kiitos rekisteröitymisestä.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} {SITENAME} - Lähetä viesti kaverille
 
-Hello {TO_USERNAME},
+Terve {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Tämä viesti on lähetetty "{SITENAME}" sivustolta käyttäjän {FROM_USERNAME} toimesta. Hän arveli sinun olevan kiinnostunut seuraavasta viestiketjusta:
 
 {TOPIC_NAME}
 
-You can find it at:
+Viestiketjun osoite
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Alempana voi olla myös viesti käyttäjältä {FROM_USERNAME}. Huomaa, että tätä viestiä ei ole tarkistettu tai hyväksytty ylläpidon toimesta. Mikäli haluat valittaa tämän viestin vastaanottamisesta, voit ottaa yhteyttä ylläpitäjiin osoitteessa {BOARD_EMAIL}. Muista liittää mukaan kopio viestistä ja myöskin header tiedot.
 
 ----------
 
@@ -701,40 +701,42 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+Terve {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Seuraavan viestin on lähettänyt {FROM_USERNAME}, {SITENAME} sivustolta. Mikäli tämä viesti on roskapostia, tai sisältää loukkaavaa materiaalia. Ota yhteys sivuston ylläpitäjään lähettämällä sähköpostia osoitteeseen:
 
-{BOARD_CONTACT}
+{BOARD_EMAIL}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Liitä mukaan koko tämä viesti (myös header tiedot). Huomaa, että vastausosoitteeksi on laitettu lähettäjän {FROM_USERNAME} osoite.
 
-Message sent to you follows
+Sinulle lähetetty viesti
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+Terve {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Seuraavan viestin on lähettänyt {FROM_USERNAME}, {SITENAME} sivustolta. Mikäli tämä viesti on roskapostia, tai sisältää loukkaavaa materiaalia. Ota yhteys sivuston ylläpitäjään lähettämällä sähköpostia osoitteeseen:
 
-{BOARD_CONTACT}
+{BOARD_EMAIL}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Liitä mukaan koko tämä viesti (myös header tiedot). Huomaa, että vastausosoitteeksi on laitettu lähettäjän {FROM_USERNAME} osoite.
 
-Message sent to you follows
+Sinulle lähetetty viesti
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 

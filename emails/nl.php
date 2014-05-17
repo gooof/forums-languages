@@ -309,19 +309,19 @@ Bedankt voor je registratie.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - Email een vriend
 
-Hello {TO_USERNAME},
+Hallo {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Deze e-mail is gestuurd via "{SITENAME}" door {FROM_USERNAME} die dacht dat je wel geïnteresseerd zou zijn in het volgende onderwerp:
 
 {TOPIC_NAME}
 
-You can find it at:
+Je kunt het hier vinden:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Hieronder zou een bericht van {FROM_USERNAME} kunnen staan. Dit bericht is niet gezien of goedgekeurd door een beheerder. Indien je een klacht hebt betreffende dit bericht, neem dan contact op met de beheerder via {BOARD_CONTACT}. Sluit de volledige e-mail (inclusief header) bij als je contact opneemt via dit e-mailadres.
 
 ----------
 
@@ -704,17 +704,18 @@ To read the comment , click the link below.
 
 
 $email = array_merge($email, array(
-	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_email.txt' 		=> 'Hallo {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Dit bericht bevat een e-mail die de gebruiker "{FROM_USERNAME}" naar jou gestuurd heeft via {SITENAME}. In geval van misbruik, neem contact op met de verzender van de e-mail of de beheerder van de site. De beheerder is te bereiken via het volgende e-mailadres:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Neem in dat geval de volledige tekst van deze e-mail in je bericht op, inclusief de headers van het bericht.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Let op! Het antwoordadres voor deze mail is het e-mailadres van "{FROM_USERNAME}".
+
+Het volgende bericht is naar je verzonden:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
@@ -724,16 +725,16 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_im.txt' 		=> 'Hallo {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Dit bericht bevat een e-mail die de gebruiker "{FROM_USERNAME}" naar jou gestuurd heeft via {SITENAME}. In geval van misbruik, neem contact op met de verzender van de e-mail of de beheerder van de site. De beheerder is te bereiken via het volgende e-mailadres:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Neem in dat geval de volledige tekst van deze e-mail in je bericht op.
+Let op, het adres van de afzender is ingesteld als "Instant Messenger" account van het forum.
 
-Message sent to you follows
+Het bericht dat naar jou is verzonden:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}

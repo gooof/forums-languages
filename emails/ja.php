@@ -339,25 +339,30 @@ $email = array_merge($email, array(
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} フォーラムサイト "{SITENAME}" より - ユーザーからのお知らせ
 
-Hello {TO_USERNAME},
+{TO_USERNAME} さん
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+このメールは フォーラムサイト「{SITENAME}」 の ユーザー「{FROM_USERNAME}」 さんが送信しました。
+「{FROM_USERNAME}」さんはあなたが下記トピックに興味があると判断してこのお知らせメールを送信しています：
 
 {TOPIC_NAME}
 
-You can find it at:
+こちらをクリックすればトピックを閲覧できます：
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+以下のメッセージはフォーラムサイト管理人がチェックしているわけではない点にご注意ください。
+もしこのメールの受け取りについて苦情を述べたい場合、フォーラムサイト管理人の連絡先メールアドレス {BOARD_CONTACT} にメールしてください。
+その際、このメールの全内容を引用文として含めてください。
 
 ----------
+「{FROM_USERNAME}」さんからあなたへのメッセージ
 
 {MESSAGE}
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
@@ -783,40 +788,46 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+{TO_USERNAME} さん
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+フォーラムサイト「{SITENAME}」 経由で フォーラムのユーザー「{FROM_USERNAME}」 からあなたへメールが送信されました。
+メッセージがスパムや誹謗中傷などを含むものであれば下記アドレスからフォーラムサイト管理人にご連絡ください：
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+上記アドレスにメールを送る場合、メールの全内容を（ヘッダー情報を含めて）送信してください。
+このメールをそのまま返信すると フォーラムのユーザー「{FROM_USERNAME}」 にメールが送信されますのでご注意ください。
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+以下があなたへのメッセージです
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+{TO_USERNAME} さん
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+フォーラムサイト「{SITENAME}」 経由で フォーラムのユーザー「{FROM_USERNAME}」 からあなたへインスタントメッセージが送信されました。
+メッセージがスパムや誹謗中傷などを含むものであれば下記アドレスからフォーラムサイト管理人にご連絡ください：
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+上記アドレスにメールを送る場合、メールの全内容を（ヘッダー情報を含めて）送信してください。
+このメールをそのまま返信すると フォーラムのユーザー「{FROM_USERNAME}」 にメールが送信されますのでご注意ください。
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+以下があなたへのメッセージです
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 

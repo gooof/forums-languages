@@ -313,19 +313,19 @@ Thank you for registering.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-maila lagun bati
 
-Hello {TO_USERNAME},
+Kaixo {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Mezu hau "{SITENAME}"(e)tik bidalia izan da {FROM_USERNAME}(e)gaitik hurrengo gaia interesatuko litzaizukelakoan:
 
 {TOPIC_NAME}
 
-You can find it at:
+Hemen ikusi zenezake:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Behekaldean {FROM_USERNAME}(r)en mezua ere egon daiteke. Mesedez, izan kontuan mezu hau ez dutela foroko administrariek onartu ezta irakurri ere. Mezu hau jasotzeari buruzko kexarik baldin baduzu, jar zaitez, mesedez, foroko administrariekin kontaktuan helbide honetan {BOARD_CONTACT}. Azpimarra itzazu mezu honen goiburuak (headerrak) helbide honetara joz gero.
 
 ----------
 
@@ -718,40 +718,42 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+Kaixo {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Hurrengo hau {FROM_USERNAME}(e)k bere "{SITENAME}"(e)ko kontu bitartetik bidaltzen dizun mezua duzu. Mezua spama dela baderitxozu edo gehiegizko edo/eta iraingarriak iruditzen zaizkizun iruzkinak dituela baditu, mesedez jar zaitez foroko administrariekin kontaktuan helbide honetan:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Erantsi iezaiozu mezuari e-mail hau osoan (batez ere goiburuak (headerrak)). Kontuan izan erantzun helbidea {FROM_USERNAME}(r)ena dela.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Bidalitako mezua honako hau duzu:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+Kaixo {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Hurrengo hau {FROM_USERNAME}(e)k bere "{SITENAME}"(e)ko kontu bitartetik bidaltzen dizun mezua duzu.Mezua spama dela baderitxozu edo gehiegizko edo/eta iraingarriak iruditzen zaizkizun iruzkinak dituela baditu, mesedez jar zaitez foroko administrariekin kontaktuan helbide honetan:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Erantsi iezaiozu mezuari e-mail hau osoan (batez ere goiburuak (headerrak)). Kontuan izan bidaltzailearen helbidea foroko IM kontutik datorrela.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Bidalitako mezua honako hau duzu:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 

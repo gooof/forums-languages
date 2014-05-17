@@ -307,19 +307,19 @@ Täname, et registreerisid.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-kiri sõbralt
 
-Hello {TO_USERNAME},
+Tere {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Selle e-kirja saatis "{SITENAME}" foorumilt kasutaja {FROM_USERNAME}, kes arvas, et sa võid olla huvitatud järgnevast teemast:
 
 {TOPIC_NAME}
 
-You can find it at:
+Leiad selle:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Sõnum kasutajalt {FROM_USERNAME} on ka kaasa pandud all. Seda kirja pole näinud foorumi administraatorid. Kui sa ei soovi seda e-kirja saada, võta ühendust administraatoriga: {BOARD_CONTACT}. Palun kopeeri selle kirja päis administraatoriga kontakteerumisel.
 
 ----------
 
@@ -705,41 +705,43 @@ To read the comment , click the link below.
 
 
 $email = array_merge($email, array(
-	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_email.txt' 		=> 'Tere {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Järgnev on e-kiri, mille saatis {FROM_USERNAME} sinule "{SITENAME}"foorumites. Kui see kiri on spämm, sisaldab sõimu või muud solvavat kommentaari,
+palun võta ühendust foorumi administraatoriga järgneval aadressil:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Kaasa ka see e-kiri (eriti päis). Vastamise aadressiks on seotud kasutaja {FROM_USERNAME} aadress.
 
-Message sent to you follows
+Sulle saadetud sõnuv on järgnev
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_im.txt' 		=> 'Hello {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Järgnev on sõnum, mille saatis {FROM_USERNAME} sinule "{SITENAME}" foorumites. Kui see kiri on spämm, sisaldab sõimu või muud solvavat kommentaari,
+palun võta ühendust foorumi administraatoriga järgneval aadressil:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Kaasa ka see e-kiri (eriti päis). Vastamise aadressiks on seotud kasutaja {FROM_USERNAME} IM aadress.
 
-Message sent to you follows
+Sulle saadetud sõnuv on järgnev
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 

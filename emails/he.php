@@ -311,19 +311,19 @@ $email = array_merge($email, array(
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - שלח דואר אלקטרוני לחבר
 
-Hello {TO_USERNAME},
+שלום {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+דואר אלקטרוני זה נשלח אליך מ "{SITENAME}" על-ידי {FROM_USERNAME} אשר חושב כי הנושא הבא עשוי לעניין אותך:
 
 {TOPIC_NAME}
 
-You can find it at:
+תוכל למצוא אותו כאן:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+הודעה מ {FROM_USERNAME} יכולה בנוסף להכלל כאן. שים לב שהודעה זו לא נראתה או אושרה על-ידי המנלים הראשיים של המערכת. אם תרצה להתלונן על קבלת דואר אלקטרוני זה, צור קשר עם המנהל הראשי של המערכת ב {BOARD_CONTACT}. אנא צטט גם את כותרת ההודעה כולל הכתובת.
 
 ----------
 
@@ -711,15 +711,15 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+שלום {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+ההודעה הבאה נשלחה אליך על-ידי {FROM_USERNAME} דרך חשבונך ב "{SITENAME}". אם הודעה זו הינה דואר-זבל, מכילה חומר פוגע או הערות אחרות השנויות במחלוקת, צור קשר עם המנהל הראשי של המערכת בכתובת הבאה:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+כלול את הודעת הדוא"ל המלאה (כולל הכותרת). שים לב שהכתובת למענה להודעה זו נקבעה לזו של {FROM_USERNAME}.
 
-Message sent to you follows
+ההודעה שנשלחה אליך היא
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -731,15 +731,15 @@ Message sent to you follows
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+שלום {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+ההודעה הבאה נשלחה אליך על-ידי {FROM_USERNAME} דרך חשבונך ב "{SITENAME}". אם הודעה זו הינה דואר-זבל, מכילה חומר פוגע או הערות אחרות השנויות במחלוקת, צור קשר עם המנהל הראשי של המערכת בכתובת הבאה:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+כלול את ההודעה המלאה. שים לב שכתובת השולח נקבעה לחשבון ההודעות המיידיות של המערכות.
 
-Message sent to you follows
+ההודעה שנשלחה אליך היא
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}

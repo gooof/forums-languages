@@ -309,19 +309,19 @@ $email = array_merge($email, array(
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - Изпрати на приятел
 
-Hello {TO_USERNAME},
+Здравейте {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Това съобщение е изпратено от "{SITENAME}" от {FROM_USERNAME}, който си мисли че ще бъдете заинтересован от темата долу:
 
 {TOPIC_NAME}
 
-You can find it at:
+Можете да я намерите на:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Съобщение от {FROM_USERNAME} може да бъде показано долу. Тези съобщение не се преглеждат и одобряват от администратор. За въпроси се свържете с администратора {BOARD_CONTACT}.
 
 ----------
 
@@ -701,41 +701,37 @@ To read the comment , click the link below.
 
 
 $email = array_merge($email, array(
-	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_email.txt' 		=> 'Здравейте {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Това съобщение е изпратено от {FROM_USERNAME} през форума "{SITENAME}". Ако в това съобщение се съдържа SPAM или нежелан текст свържете се с собственика на форума:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
-
-Message sent to you follows
+Съобщението
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 
 
 $email = array_merge($email, array(
-	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_im.txt' 		=> 'Здравейте {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Това съобщение е изпратено от {FROM_USERNAME} до Вас от сайта "{SITENAME}". Ако това съобщение съдържа нежелан текст, свържете се с администратора на форума:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
-
-Message sent to you follows
+Съобщението
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
-{EMAIL_SIG}',
+{EMAIL_SIG}
+',
 ));
 
 

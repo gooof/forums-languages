@@ -312,19 +312,19 @@ Vă mulţumim pentru înregistrare.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" — E-mail către un prieten
 
-Hello {TO_USERNAME},
+Salut {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Acest email a fost transmis de pe "{SITENAME}" de către {FROM_USERNAME} care crede că sunteţi interesat de următorul topic:
 
 {TOPIC_NAME}
 
-You can find it at:
+Îl găsiţi la:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Un mesaj de la {FROM_USERNAME} poate fi inclus mai jos. Vă rugăm să reţineţi că acest mesaj nu a fost văzut sau acceptat de către administratorul forumului. Dacă vreţi să reclamaţi ceva în legătură cu acest e-mail, vă rugăm să contactaţi administratorul forumului la {BOARD_CONTACT}. Vă rugăm să includeţi header-ul masajului când contactaţi administratorul.
 
 ----------
 
@@ -714,16 +714,16 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+Salut {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Urmează un e-mail trimis de către {FROM_USERNAME} prin intermediul contului dumneavoastră de la "{SITENAME}". Dacă acest mesaj este spam, conţine comentarii abuzive sau are vreun conţinut ofensator, vă rugăm să contactaţi webmaster-ul forumului la următoarea adresă:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Vă rugăm să includeţi acest e-mail (mai ales header-ele). Adresa de răspuns pentru acest e-mail a fost setată către {FROM_USERNAME}.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Urmează mesajul care vă este adresat
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
@@ -734,16 +734,16 @@ Message sent to you follows
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+Salut {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Urmează un mesaj trimis de către {FROM_USERNAME} prin intermediul contului dumneavoastră pe "{SITENAME}". Dacă acest mesaj este spam, conţine comentarii abuzive sau are vreun conţinut ofensator, vă rugăm să contactaţi webmaster-ul forumului la următoarea adresă:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Vă rugăm să includeţi tot mesajul. Adresa de expeditor a fost setată la contul de IM precizat în forum.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Urmează mesajul care vă este adresat
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 

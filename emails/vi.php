@@ -295,23 +295,27 @@ Cám ơn bạn đã đăng ký làm thành viên của chúng tôi!
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - Gửi Email giới thiệu chủ đề
 
-Hello {TO_USERNAME},
+Chào bạn, "{TO_USERNAME}"
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
-
+Email này được gửi đến bạn từ website "{SITENAME}" bởi thành viên "{FROM_USERNAME}" muốn giới thiệu với bạn về chủ đề dưới đây:
 {TOPIC_NAME}
 
-You can find it at:
-
+Bạn có thể xem chủ đề này tại đây:
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Nội dung Email mà "{FROM_USERNAME}" gửi đến bạn được đính kèm bên dưới. Cần lưu ý rằng việc gửi những Email giới thiệu như thế này không cần được xem xét hay chấp nhận bởi quản trị viên của website. Vì thế, nếu bạn cảm thấy bị làm phiền bởi những Email như thế này từ website chúng tôi, hãy liên hệ ngay với người quản trị theo địa chỉ Email dưới đây:
 
-----------
+{BOARD_CONTACT}
 
+Hãy nhớ đính kèm bản sao của Email này, đặc biệt là phần tiêu đề Email khi bạn liên hệ với người quản trị qua địa chỉ Email trên.
+
+Nội dung Email gửi cho bạn như sau:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 {MESSAGE}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {EMAIL_SIG}',
 ));
@@ -684,18 +688,18 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+Chào bạn, "{TO_USERNAME}"
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
-
+Dưới đây là Email được gửi đến cho bạn từ thành viên "{FROM_USERNAME}" thông qua tài khoản của bạn trong website "{SITENAME}". Nếu đây là thư rác, lừa đảo hay có nội dung không đúng đắn, bạn có thể liên hệ về điều này với người chủ của website theo địa chỉ Email dưới đây:
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Hãy nhớ đính kèm bản sao của Email này, đặc biệt là phần tiêu đề Email. Lưu ý rằng địa chỉ trả lời của Email này đã được thiết lập lại thành địa chỉ Email của thành viên "{FROM_USERNAME}".
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Nội dung Email gửi cho bạn như sau:
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 {MESSAGE}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {EMAIL_SIG}',
 ));
@@ -704,18 +708,18 @@ Message sent to you follows
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+Chào bạn, "{TO_USERNAME}"
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
-
+Đây là tin nhắn được gửi đến cho bạn từ thành viên "{FROM_USERNAME}" thông qua tài khoản của bạn trong website "{SITENAME}". Nếu đây là thư rác, lừa đảo hay có nội dung không đúng đắn, bạn có thể liên hệ về điều này với người chủ của website theo địa chỉ Email dưới đây:
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Hãy nhớ đính kèm đầy đủ nội dung tin nhắn này. Lưu ý rằng địa chỉ của người gửi tin nhắn đã được thiết lập thành tài khoản tin nhắn nhanh trong website.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Nội dung tin nhắn gửi cho bạn như sau:
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 {MESSAGE}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {EMAIL_SIG}',
 ));

@@ -314,19 +314,19 @@ Date: _______________
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - Лист від друга
 
-Hello {TO_USERNAME},
+Привіт, {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Це повідомлення вам було відправлено користувачем {FROM_USERNAME} сайту "{SITENAME}", який вважає, що можливо вам буде цікава наступна тема:
 
 {TOPIC_NAME}
 
-You can find it at:
+Ви можете знайти її за цією адресою:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Повідомлення від {FROM_USERNAME} включене в цей лист внизу. Будь-ласка, зауважте, що це повідомлення не переглядалось адміністраторами форуму. Якщо ви хочете поскаржитись на отримання цього листа, будь-ласка, зв\'яжіться з адміністратором форуму {BOARD_CONTACT}. При відправці повідомлення на цю адресу, будь-ласка, процитуйте заголовки отриманого вами листа.
 
 ----------
 
@@ -717,15 +717,15 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+Привіт, {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Вам надійшло нижчевказане e-mail повідомлення від {FROM_USERNAME} через ваш обліковий запис на "{SITENAME}". Якщо це повідомлення є спамом, містить образи чи інші неприємні вам вислови, будь-ласка, зв\'яжіться з адміністратором сайту за наступною адресою:
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Включіть це e-mail повідомлення повністю (особливо заголовки). Будь-ласка, майте на увазі що це повідомлення вам надійшло від {FROM_USERNAME}.
 
-Message sent to you follows
+Відправлене вам повідомлення
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -737,15 +737,15 @@ Message sent to you follows
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+Привіт, {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Вам надійшло нижчевказане повідомлення від {FROM_USERNAME} через ваш обліковий запис на "{SITENAME}". Якщо це повідомлення є спамом, містить образи чи інші неприємні вам вислови, будь-ласка, зв\'яжіться з адміністратором форуму за наступною адресою:
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Будь-ласка, включіть це повідомлення повністю. Зауважте, що адреса відправника є обліковим записом форуму для IM.
 
-Message sent to you follows
+Відправлене вам повідомлення
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}

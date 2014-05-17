@@ -301,19 +301,17 @@ Takk for at du registrerte deg.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> 'Hei {TO_USERNAME},
 
-Hello {TO_USERNAME},
-
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+Denne e-posten er sendt fra "{SITENAME}" av {FROM_USERNAME}, som tror du kan være interresert i følgende emne:
 
 {TOPIC_NAME}
 
-You can find it at:
+Adressen er:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+En melding fra {FROM_USERNAME} kan også være inkludert under. Denne meldingen har ikke blitt sett eller godkjent av administratorer. Hvis innholdet i meldingen ikke er i tråd med brukerbetingelsene, kontakt administrator: {BOARD_CONTACT}. Siter meldingshodene til denne e-posten dersom du kontakter denne adressen.
 
 ----------
 
@@ -694,16 +692,15 @@ To read the comment , click the link below.
 
 
 $email = array_merge($email, array(
-	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_email.txt' 		=> 'Hei {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Denne e-posten ble sendt til deg av brukeren {FROM_USERNAME} via din profil på siden {SITENAME}. Husk at denne meldingen er sendt direkte fra brukeren til deg, og den har derfor ikke blitt sjekket av forumadministrasjonen. Hvis du mener at denne meldingen er spam eller på annen måte upassende kan du kontakte forumets kontaktperson på følgende e-postadresse:
 
-{BOARD_CONTACT}
+{BOARD_EMAIL}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Inkluder i så fall hele meldingen, også emnefeltet. Merk deg at svaradressen på denne e-posten har blitt satt til e-postadressen til brukeren {FROM_USERNAME}.
 
-Message sent to you follows
+Meldingen som ble sendt til deg følger under:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -714,16 +711,15 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_im.txt' 		=> 'Hei {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+Denne meldingen ble sendt til deg av brukeren {FROM_USERNAME} via din profil på siden {SITENAME}. Husk at denne meldingen er sendt direkte fra brukeren til deg, og den har derfor ikke blitt sjekket av forumadministrasjonen. Hvis du mener at denne meldingen er spam eller på annen måte upassende kan du kontakte forumets kontaktperson på følgende e-postadresse:
 
-{BOARD_CONTACT}
+{BOARD_EMAIL}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Inkluder i så fall hele meldingen. Vennligst merk deg at svaradressen på denne e-posten har blitt satt til forumets IM-adresse.
 
-Message sent to you follows
+Meldingen som ble sendt til deg følger under:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}

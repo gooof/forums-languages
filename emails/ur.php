@@ -306,21 +306,20 @@ COPPA کے عمل میں آپکا اکائونٹ فی الحال غیر فعال
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - دوست کو ای-میل کریں
 
-Hello {TO_USERNAME},
+اسلام علیکم {TO_USERNAME}
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+یہ ای-میل "{SITENAME}" سے {FROM_USERNAME} کی طرف سے بھیجی گئی ہے جو سمجھتے ہیں کہ آپ شاید درج ذیل موضوع میں دلچسپی رکھ سکتے ہیں.
 
 {TOPIC_NAME}
 
-You can find it at:
+آپ اسکو یہاں تلاش کر سکتے ہیں
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
-
-----------
+{FROM_USERNAME} کی طرف سے پیغام شامل بھی ہو سکتا ہے. براہ کرم نوٹ فرمائیں کہ یہ پیغام منظور شدہ نہیں ہے اگر آپ اس بارے میں شکا یت کرنا چاہتے ہیں تو بورڈ منتظم کو {BOARD_CONTACT} پر رابطہ کریں.
+-------------------------
 
 {MESSAGE}
 
@@ -704,16 +703,16 @@ To read the comment , click the link below.
 
 
 $email = array_merge($email, array(
-	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_email.txt' 		=> 'مکرمی {TO_USERNAME}
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+السلام علیکم!
+
+ذیل میں ایک برقی خط ہے جو کہ آپ کو {FROM_USERNAME} کی جانب سے "{SITENAME}" پر موجود آپ کے کھاتہ کے ذریعہ ارسال کیا گیا ہے، اگر یہ پیغام غیر اخلاقی مواد یا نا زیبا کلمات پر مشتمل ہے تو آپ بورڈ کی انتظامیہ کو ذیل کے ربط کے ذریعہ مطلع کر سکتے ہیں ـ
+براہ کرم انتظامیہ کو مطلع کرتے وقت مکمل برقی مراسلہ کو  ہیڈر سمیت ااپنے پیغام میں بصورت اقتباس شامل کریں
 
 {BOARD_CONTACT}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
-
-Message sent to you follows
+آپ کو بھیجا گیا برقی مراسلہ یہ ہے:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -724,17 +723,16 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+	'email/profile_send_im.txt' 		=> 'اسلام علیکم {USERNAME}،
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+ذیل کا پیغام آپکو {FROM_USERNAME} کی طرف سے بھیجا گیا ہے. اگر اس پیغام میں‌ناذیبا الفاظ موجود ہیں تو یہاں‌رابطہ کریں.
 
 {BOARD_CONTACT}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+یہ پورا پیغام شامل کریں. براہ مہربانی نوٹ فرمائیں کہ بھیجنے والا پتہ بورڈ کے فوری پیغام رسانی کے اکائونٹ پر سیٹ ہے. 
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+آپکو بھیجا گیا پیغام یہ ہے
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 

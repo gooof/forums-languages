@@ -303,19 +303,19 @@ Děkujeme za vaši registraci.
 
 
 $email = array_merge($email, array(
-	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} "{SITENAME}" - E-mail a friend
+	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} {SITENAME} - e-mail kamarádovi o tématu
 
-Hello {TO_USERNAME},
+Dobrý den {TO_USERNAME},
 
-This e-mail was sent from "{SITENAME}" by {FROM_USERNAME} who thought you may be interested in the following topic:
+tento e-mail byl odeslán z "{SITENAME}" uživatelem {FROM_USERNAME}, který se domnívá, že by vás mohlo zajímat následující téma:
 
 {TOPIC_NAME}
 
-You can find it at:
+Které najdete zde:
 
 {U_TOPIC}
 
-A message from {FROM_USERNAME} may also be included below. Please note that this message has not been seen or approved by the board administrators. If you wish to complain about having received this e-mail please contact the board administrator at {BOARD_CONTACT}. Please quote the message headers when contacting this address.
+Zpráva od uživatele {FROM_USERNAME} může být uvedena níže. Berte na vědomí, že tato zpráva nebyla kontrolována administrátory fóra. Pokud si chcete stěžovat ohledně obdržení tohoto e-mailu, kontaktujte administrátora na adrese {BOARD_EMAIL}. Ocitujte prosím hlavičky tohoto e-mailu do stížnosti.
 
 ----------
 
@@ -702,16 +702,16 @@ To read the comment , click the link below.
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hello {TO_USERNAME},
+Dobrý den {TO_USERNAME},
 
-The following is an e-mail sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+byl vám zaslán e-mail od {FROM_USERNAME} z {SITENAME}. Pokud tento e-mail obsahuje spam, hanlivé výrazy nebo jiné komentáře, které pokládáte za útočné, kontaktujte administrátora na následující adrese:
 
-{BOARD_CONTACT}
+{BOARD_EMAIL}
 
-Include this full e-mail (particularly the headers). Please note that the reply address to this e-mail has been set to that of {FROM_USERNAME}.
+Následuje celá zpráva (podrobnosti jsou v hlavičce). Pamatujte, že když kliknete na odpovědět, odpovíte tomuto uživateli: {FROM_USERNAME}.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Celá zpráva
+~~~~~~~~~~~
 
 {MESSAGE}
 
@@ -722,16 +722,16 @@ Message sent to you follows
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hello {TO_USERNAME},
+Dobrý den {TO_USERNAME},
 
-The following is a message sent to you by {FROM_USERNAME} via your account on "{SITENAME}". If this message is spam, contains abusive or other comments you find offensive please contact the webmaster of the board at the following address:
+obdrželi jste zprávu od uživatele {FROM_USERNAME} z {SITENAME}. Pokud je tato zpráva spam, kontaktujte administrátora fóra na následující adrese:
 
-{BOARD_CONTACT}
+{BOARD_EMAIL}
 
-Include this full message. Please note that the sender address has been set to the boards IM account.
+Následuje celá zpráva. Pamatujte, že adresa odesílatele byla nastavena na IM účet fóra.
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Celá zpráva
+~~~~~~~~~~~
 
 {MESSAGE}
 
