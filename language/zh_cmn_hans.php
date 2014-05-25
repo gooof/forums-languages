@@ -15035,7 +15035,6 @@ $lang = array_merge($lang, array(
 	'ACP_YMSM_SYNC_RESYNC'					=> 'Synchronization',
 	'ACP_YMSM_SYNC_IMPORT'					=> '导入',
 	'ACP_YMSM_SYNC_BOARDMEMBERS'			=> 'Board members map markers',
-	'ACP_YMSM_SYNC_BOARDMEMBERS_EXPLAIN'	=> 'Creates board memebers map markers using GeoLite IP database integration.',
 	'ACP_YMSM_SYNC_BOARDMEMBERS_DONE'		=> 'Board member map markers synchronization completed.',
 	'ACP_YMSM_SYNC_BOARDMEMBERS_PROGRESS'	=> 'Synchronized %s of %s markers.',
 	'ACP_YMSM_SYNC_TOPICMAPS'				=> 'Topic map marker counters',
