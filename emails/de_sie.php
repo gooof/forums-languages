@@ -92,7 +92,7 @@ es gibt da bei uns im Forum ein Gerücht:
  
 Sie haben heute Geburtstag?
  
-Wir wünschen Ihnen von ganzem Herzen alles erdenklich Gute für Ihr neues Lebensjahr. Lassen Sie es Ihnen heute mal so richtig gut gehen und Dich verwöhnen.
+Wir wünschen Ihnen von ganzem Herzen alles erdenklich Gute für Ihr neues Lebensjahr. Lassen Sie es Ihnen heute mal so richtig gut gehen und Sie verwöhnen.
 Es braucht gar nicht viel, um diesen Tag zu einem richtigen Glückstag zu machen.
 
 Als kleine Überraschung wartet hier ein nettes Geburtstags-Ständchen auf Dich. Wir hoffen, Ihnen damit ein Lächeln schenken zu können.
@@ -941,7 +941,7 @@ Wir haben festgestellt, dass Sie dich seit einiger Zeit nicht auf {SITENAME} ein
 
 Schau doch bitte mal wieder auf {U_BOARD} vorbei um einen Blick auf unsere aktuellen Themen im Forum zu werfen. 
 
-Wir freuen uns dich bald wieder bei uns zu sehen.
+Wir freuen uns Sie bald wieder bei uns zu sehen.
 
 {EMAIL_SIG}',
 ));
@@ -955,7 +955,7 @@ Guten Tag {USERNAME},
 
 Wir haben Ihnen kürzlich eine Mail bezüglich Ihrer Teilnahme/Aktivität auf {SITENAME} geschrieben.
 
-Leider hat es seit dieser Mail keine Veränderung von Ihrer Seite bezüglich der Aktivität gegeben. Wir möchten dich darauf aufmerksam machen, dass wir es in Betracht ziehen, Ihr Benutzerkonto zu löschen, da Sie anscheinend nicht mehr an der Community von {SITENAME} interessiert sind.
+Leider hat es seit dieser Mail keine Veränderung von Ihrer Seite bezüglich der Aktivität gegeben. Wir möchten Sie darauf aufmerksam machen, dass wir es in Betracht ziehen, Ihr Benutzerkonto zu löschen, da Sie anscheinend nicht mehr an der Community von {SITENAME} interessiert sind.
 
 Falls Sie nur Ihre Login-Daten vergessen haben, finden Sie sie hier:
 ----------------------------
@@ -965,7 +965,7 @@ Password: *
 Board URL: {U_BOARD}
 ----------------------------
 
-* Bitte beachten Sie, dass Ihr Passwort verschlüsselt in der Datenbank gespeichert wurde und wir es für dich nicht wiederherstellen können. Falls Sie Ihr Passwort vergessen haben sollten, können Sie ein neues anfordern, das dann auf die gleiche Weise wie Ihr Benutzerkonto aktiviert wird.
+* Bitte beachten Sie, dass Ihr Passwort verschlüsselt in der Datenbank gespeichert wurde und wir es für Sie nicht wiederherstellen können. Falls Sie Ihr Passwort vergessen haben sollten, können Sie ein neues anfordern, das dann auf die gleiche Weise wie Ihr Benutzerkonto aktiviert wird.
 
 Wir würden uns über Ihre baldige Beteiligung auf {SITENAME} sehr freuen.
 
@@ -991,9 +991,9 @@ Password: *
 Board URL: {U_BOARD}
 ----------------------------
 
-* Bitte beachten Sie, dass Ihr Passwort verschlüsselt in der Datenbank gespeichert wurde und wir es für dich nicht wiederherstellen können. Falls Sie Ihr Passwort vergessen haben sollten, können Sie ein neues anfordern, das dann auf die gleiche Weise wie Ihr Benutzerkonto aktiviert wird.
+* Bitte beachten Sie, dass Ihr Passwort verschlüsselt in der Datenbank gespeichert wurde und wir es für Sie nicht wiederherstellen können. Falls Sie Ihr Passwort vergessen haben sollten, können Sie ein neues anfordern, das dann auf die gleiche Weise wie Ihr Benutzerkonto aktiviert wird.
 
-Wir freuen uns, dich bald auf {SITENAME} zu sehen.
+Wir freuen uns, Sie bald auf {SITENAME} zu sehen.
 
 {EMAIL_SIG}',
 ));
@@ -1005,7 +1005,7 @@ $email = array_merge($email, array(
 
 Guten Tag {USERNAME},
 
-Sie haben dich vor einiger Zeit auf {SITENAME} registriert. 
+Sie haben sich vor einiger Zeit auf {SITENAME} registriert. 
 
 Wir haben festgestellt, dass Sie dich noch nicht aktiv an der Community beteiligt und noch keinen Beitrag geschrieben haben.
 
