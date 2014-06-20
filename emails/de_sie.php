@@ -5,14 +5,14 @@
 $email = array_merge($email, array(
 	'email/admin_activate.txt' 		=> '{EMAILSUBJECT:} Benutzerkonto aktivieren
 
-Hallo,
+Guten Tag,
 
-das Benutzerkonto von „{USERNAME}“ wurde deaktiviert oder neu erstellt. Du solltest ggf. die Angaben des Benutzers prüfen und das Konto entsprechend behandeln:
+das Benutzerkonto von „{USERNAME}“ wurde deaktiviert oder neu erstellt. Sie sollten ggf. die Angaben des Benutzers prüfen und das Konto entsprechend behandeln:
 
-Verwende diesen Link, um das Profil des Benutzers zu betrachten:
+Verwenden Sie diesen Link, um das Profil des Benutzers zu betrachten:
 {U_USER_DETAILS}
 
-Verwende diesen Link, um das Benutzerkonto zu aktivieren:
+Verwenden Sie diesen Link, um das Benutzerkonto zu aktivieren:
 {U_ACTIVATE}
 
 
@@ -31,12 +31,12 @@ $email = array_merge($email, array(
 {EMAIL_SIG}
 
 
-Besuche das Forum: http://{SITE_URL}
+Besuchen Sie das Forum: http://{SITE_URL}
 
 --------- 
-Die folgende Nachricht wurde dir von einem Administrator von „{SITENAME}“ gesendet. Wenn diese Nachricht Werbung, Beleidigungen oder anderen anstößigen Inhalt enthält, kannst du die Board-Administration unter folgender Adresse erreichen:
+Die folgende Nachricht wurde Ihnen von einem Administrator von „{SITENAME}“ gesendet. Wenn diese Nachricht Werbung, Beleidigungen oder anderen anstößigen Inhalt enthält, können Sie die Board-Administration unter folgender Adresse erreichen:
 {CONTACT_EMAIL}
-Füge deiner Nachricht bitte die vollständige E-Mail (insbesondere die Nachrichtenkopfzeilen) bei. 
+Fügen Sie Ihrer Nachricht bitte die vollständige E-Mail (insbesondere die Nachrichtenkopfzeilen) bei. 
 
 -- 
 Service powered by www.phpBB8.de
@@ -48,11 +48,11 @@ Service powered by www.phpBB8.de
 $email = array_merge($email, array(
 	'email/admin_welcome_activated.txt' 		=> '{EMAILSUBJECT:} Benutzerkonto aktiviert
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-dein Benutzerkonto auf „{SITENAME}“ wurde von einem Administrator aktiviert. Du kannst dich nun anmelden.
+Ihr Benutzerkonto auf „{SITENAME}“ wurde von einem Administrator aktiviert. Sie können sich nun anmelden.
 
-Dein Passwort wurde sicher in unserer Datenbank gespeichert und kann nicht wiederhergestellt werden. Falls es vergessen werden sollte, kannst du es über die E-Mail-Adresse, die deinem Account zugeordnet ist, zurücksetzen lassen.
+Ihr Passwort wurde sicher in unserer Datenbank gespeichert und kann nicht wiederhergestellt werden. Falls es vergessen werden sollte, können Sie es über die E-Mail-Adresse, die Ihrem Account zugeordnet ist, zurücksetzen lassen.
 
 {EMAIL_SIG}',
 ));
@@ -64,7 +64,7 @@ $email = array_merge($email, array(
 
 {WELCOME_MSG}
 
-Bitte bewahre diese E-Mail in deinen Unterlagen auf. Die Daten deines Benutzerkontos lauten:
+Bitte bewahren Sie diese E-Mail in Ihren Unterlagen auf. Die Daten Ihres Benutzerkontos lauten:
 
 ----------------------------
 Benutzername: {USERNAME}
@@ -72,11 +72,11 @@ Benutzername: {USERNAME}
 Board-URL:    {U_BOARD}
 ----------------------------
 
-Dein Account ist derzeit inaktiv und muss erst durch einen Administrator des Boards aktiviert werden, bevor du ihn verwenden kannst. Es wird eine weitere E-Mail versandt, sobald dies geschehen ist.
+Ihr Account ist derzeit inaktiv und muss erst durch einen Administrator des Boards aktiviert werden, bevor Sie ihn verwenden können. Es wird eine weitere E-Mail versandt, sobald dies geschehen ist.
 
-Dein Passwort wurde sicher in unserer Datenbank gespeichert und kann nicht wiederhergestellt werden. Falls es vergessen werden sollte, kannst du es über die E-Mail-Adresse, die deinem Account zugeordnet ist, zurücksetzen lassen.
+Ihr Passwort wurde sicher in unserer Datenbank gespeichert und kann nicht wiederhergestellt werden. Falls es vergessen werden sollte, können Sie es über die E-Mail-Adresse, die Ihrem Account zugeordnet ist, zurücksetzen lassen.
 
-Vielen Dank für deine Registrierung.
+Vielen Dank für Ihre Registrierung.
 
 {EMAIL_SIG}',
 ));
@@ -90,12 +90,12 @@ Liebes Mitglied {USERNAME},
  
 es gibt da bei uns im Forum ein Gerücht: 
  
-Du hast heute Geburtstag?
+Sie haben heute Geburtstag?
  
-Wir wünschen Dir von ganzem Herzen alles erdenklich Gute für Dein neues Lebensjahr. Lass es Dir heute mal so richtig gut gehen und Dich verwöhnen.
+Wir wünschen Ihnen von ganzem Herzen alles erdenklich Gute für Ihr neues Lebensjahr. Lassen Sie es Ihnen heute mal so richtig gut gehen und Dich verwöhnen.
 Es braucht gar nicht viel, um diesen Tag zu einem richtigen Glückstag zu machen.
 
-Als kleine Überraschung wartet hier ein nettes Geburtstags-Ständchen auf Dich. Wir hoffen, Dir damit ein Lächeln schenken zu können.
+Als kleine Überraschung wartet hier ein nettes Geburtstags-Ständchen auf Dich. Wir hoffen, Ihnen damit ein Lächeln schenken zu können.
 {U_BOARD}/forum.php?happy=card
 
 Herzliche Grüße
@@ -108,17 +108,17 @@ Herzliche Grüße
 $email = array_merge($email, array(
 	'email/calendar_new_event.txt' 		=> '{EMAILSUBJECT:} Ein neuer Termin wurde in den Kalender eingetragen
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
 Der Termin "{EVENT_SUBJECT}" wurde im Kalender eingetragen.
 
-Verwende diesen Link, um den Kalender zu betrachten:
+Verwenden Sie diesen Link, um den Kalender zu betrachten:
 {U_CALENDAR}
 
-Verwende diesen Link, um den Termin zu betrachten:
+Verwenden Sie diesen Link, um den Termin zu betrachten:
 {U_EVENT}
 
-Verwende diesen Link, wenn du keine weiteren emails über neue Kalender-Termine erhalten möchtest:
+Verwenden Sie diesen Link, wenn Sie keine weiteren emails über neue Kalender-Termine erhalten möchten:
 {U_UNWATCH_CALENDAR}
 
 {EMAIL_SIG}
@@ -130,14 +130,14 @@ Verwende diesen Link, wenn du keine weiteren emails über neue Kalender-Termine 
 $email = array_merge($email, array(
 	'email/calendar_updated_event.txt' 		=> '{EMAILSUBJECT:} Ein Termin im Kalender wurde geändert
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
 Der Termin "{EVENT_SUBJECT}" wurde im Kalender geändert.
 
-Verwende diesen Link, um den Termin zu betrachten:
+Verwenden Sie diesen Link, um den Termin zu betrachten:
 {U_EVENT}
 
-Verwende diesen Link, wenn du keine weiteren emails über diesen Kalender-Termin erhalten möchtest:
+Verwenden Sie diesen Link, wenn Sie keine weiteren emails über diesen Kalender-Termin erhalten möchten:
 {U_UNWATCH_EVENT}
 
 {EMAIL_SIG}
@@ -149,14 +149,14 @@ Verwende diesen Link, wenn du keine weiteren emails über diesen Kalender-Termin
 $email = array_merge($email, array(
 	'email/calendar_updated_reply.txt' 		=> '{EMAILSUBJECT:} Es gibt einen neuen oder geänderten Kalender-Kommentar
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
 Es gibt einen neuen oder geänderten Kommentar zum Kalender-Termin "{EVENT_SUBJECT}"
 
-Verwende diesen Link, um den Termin zu betrachten:
+Verwenden Sie diesen Link, um den Termin zu betrachten:
 {U_EVENT}
 
-Verwende diesen Link, wenn du keine weiteren emails über diesen Kalender-Termin erhalten möchtest:
+Verwenden Sie diesen Link, wenn Sie keine weiteren emails über diesen Kalender-Termin erhalten möchten:
 {U_UNWATCH_EVENT}
 
 
@@ -171,7 +171,7 @@ $email = array_merge($email, array(
 
 Guten Tag {ADM_USERNAME},
 
-es wurde eine Nachricht im Kontaktformular deines Forums eingeben.
+es wurde eine Nachricht im Kontaktformular Ihres Forums eingeben.
 
 
 Datum: {DATE}
@@ -202,7 +202,7 @@ $email = array_merge($email, array(
 
 Guten Tag {ADM_USERNAME},
 
-es wurde eine Nachricht im Kontaktformular deines Forums eingeben.
+es wurde eine Nachricht im Kontaktformular Ihres Forums eingeben.
 
 
 Datum: {DATE}
@@ -233,13 +233,13 @@ $email = array_merge($email, array(
 
 {WELCOME_MSG}
 
-Gemäß den Regelungen des COPPA ist dein Benutzerkonto derzeit inaktiv.
+Gemäß den Regelungen des COPPA ist Ihr Benutzerkonto derzeit inaktiv.
 
-Bitte drucke diese Nachricht aus und lass sie von einem Elternteil oder einem Erziehungsberechtigten unterzeichnen und datieren. Sende sie anschließend per Fax an:
+Bitte drucken Sie diese Nachricht aus und lassen Sie sie von einem Elternteil oder einem Erziehungsberechtigten unterzeichnen und datieren. Senden Sie sie anschließend per Fax an:
 
 {FAX_INFO}
 
-oder sende sie per Post an:
+oder senden Sie sie per Post an:
 
 {MAIL_INFO}
 
@@ -264,11 +264,11 @@ Datum: _______________
 -------------------------- HIER AUSSCHNEIDEN -------------------------
 
 
-Sobald der Administrator dieses Formular per Fax oder Post erhalten hat, wird er deinen Account aktivieren.
+Sobald der Administrator dieses Formular per Fax oder Post erhalten hat, wird er Ihren Account aktivieren.
 
-Dein Passwort wurde sicher in unserer Datenbank gespeichert und kann nicht wiederhergestellt werden. Falls es vergessen werden sollte, kannst du es über die E-Mail-Adresse, die deinem Account zugeordnet ist, zurücksetzen lassen.
+Ihr Passwort wurde sicher in unserer Datenbank gespeichert und kann nicht wiederhergestellt werden. Falls es vergessen werden sollte, können Sie es über die E-Mail-Adresse, die Ihrem Account zugeordnet ist, zurücksetzen lassen.
 
-Vielen Dank für deine Registrierung.
+Vielen Dank für Ihre Registrierung.
 
 {EMAIL_SIG}',
 ));
@@ -280,13 +280,13 @@ $email = array_merge($email, array(
 
 {WELCOME_MSG}
 
-Gemäß den Regelungen des COPPA ist dein Benutzerkonto derzeit inaktiv.
+Gemäß den Regelungen des COPPA ist Ihr Benutzerkonto derzeit inaktiv.
 
-Bitte drucke diese Nachricht aus und lass sie von einem Elternteil oder einem Erziehungsberechtigten unterzeichnen und datieren. Sende sie anschließend per Fax an:
+Bitte drucken Sie diese Nachricht aus und lassen Sie sie von einem Elternteil oder einem Erziehungsberechtigten unterzeichnen und datieren. Senden Sie sie anschließend per Fax an:
 
 {FAX_INFO}
 
-oder sende sie per Post an:
+oder senden Sie sie per Post an:
 
 {MAIL_INFO}
 
@@ -311,11 +311,11 @@ Datum: _______________
 -------------------------- HIER AUSSCHNEIDEN -------------------------
 
 
-Sobald der Administrator dieses Formular per Fax oder Post erhalten hat, wird er deinen Account aktivieren.
+Sobald der Administrator dieses Formular per Fax oder Post erhalten hat, wird er Ihren Account aktivieren.
 
-Dein Passwort wurde sicher in unserer Datenbank gespeichert und kann nicht wiederhergestellt werden. Falls es vergessen werden sollte, kannst du es über die E-Mail-Adresse, die deinem Account zugeordnet ist, zurücksetzen lassen.
+Ihr Passwort wurde sicher in unserer Datenbank gespeichert und kann nicht wiederhergestellt werden. Falls es vergessen werden sollte, können Sie es über die E-Mail-Adresse, die Ihrem Account zugeordnet ist, zurücksetzen lassen.
 
-Vielen Dank für deine Registrierung.
+Vielen Dank für Ihre Registrierung.
 
 {EMAIL_SIG}',
 ));
@@ -325,17 +325,17 @@ Vielen Dank für deine Registrierung.
 $email = array_merge($email, array(
 	'email/email_notify.txt' 		=> '{EMAILSUBJECT:} „{SITENAME}“ — Information über ein Thema
 
-Hallo {TO_USERNAME},
+Guten Tag {TO_USERNAME},
 
-diese Nachricht wurde dir von „{SITENAME}“ geschickt, weil {FROM_USERNAME} glaubt, dass du an folgendem Thema interessiert sein könntest:
+diese Nachricht wurde Ihnen von „{SITENAME}“ geschickt, weil {FROM_USERNAME} glaubt, dass Sie an folgendem Thema interessiert sein könnten:
 
 {TOPIC_NAME}
 
-Du kannst das Thema mit folgendem Link erreichen:
+Sie können das Thema mit folgendem Link erreichen:
 
 {U_TOPIC}
 
-{FROM_USERNAME} kann dir auch eine Nachricht geschickt haben, die du unten finden kannst. Bitte beachte, dass diese Nachricht nicht durch einen Administrator des Boards geprüft wurde. Wenn du dich über den Erhalt dieser E-Mail beschweren möchtest, wende dich bitte an die Board-Administration unter {BOARD_CONTACT}. Bitte füge die kompletten Nachrichtenkopfzeilen bei, wenn du dich an diese Adresse wendest.
+{FROM_USERNAME} kann Ihnen auch eine Nachricht geschickt haben, die Sie unten finden können. Bitte beachten Sie, dass diese Nachricht nicht durch einen Administrator des Boards geprüft wurde. Wenn Sie dich über den Erhalt dieser E-Mail beschweren möchten, wenden Sie sich bitte an die Board-Administration unter {BOARD_CONTACT}. Bitte fügen Sie die kompletten Nachrichtenkopfzeilen bei, wenn Sie sich an diese Adresse wenden.
 
 ----------
 
@@ -348,7 +348,7 @@ Du kannst das Thema mit folgendem Link erreichen:
 
 $email = array_merge($email, array(
 	'email/footb_board_remember.txt' 		=> '
-Hallo {SITENAME},
+Guten Tag {SITENAME},
 Folgende Tipper haben eine Erinnerungs-Mail erhalten:
 
 {REMEMBER_LIST}
@@ -364,9 +364,9 @@ Hier geht es zur {SITENAME}: {U_BOARD}.
 
 $email = array_merge($email, array(
 	'email/footb_send_remember.txt' 		=> '
-Hallo Tipper {USERNAME},
+Guten Tag Tipper {USERNAME},
 
-du hast bislang noch nicht den {MATCHDAY}. Spieltag getippt.
+Sie haben bislang noch nicht den {MATCHDAY}. Spieltag getippt.
 Bitte tipp bis zum {LEAGUE} Abgabetermin {DELIVERY} Uhr.
 
  
@@ -381,7 +381,7 @@ Hier geht es zur {SITENAME}: {U_BOARD}.
 
 $email = array_merge($email, array(
 	'email/footb_send_remember_all.txt' 		=> '
-Hallo Tipper {USERNAME},
+Guten Tag Tipper {USERNAME},
 
 bitte vergiss nicht den {MATCHDAY}. Spieltag zu tippen.
 Bitte tipp bis zum {LEAGUE} Abgabetermin {DELIVERY} Uhr.
@@ -398,19 +398,19 @@ Hier geht es zur {SITENAME}: {U_BOARD}.
 $email = array_merge($email, array(
 	'email/forum_notify.txt' 		=> '{EMAILSUBJECT:} Benachrichtigung über neue Antwort — „{FORUM_NAME}“
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-du erhältst diese Benachrichtigung, weil du das Forum „{FORUM_NAME}“ auf „{SITENAME}“ beobachtest. Seit deinem letzten Besuch wurde in diesem Forum eine neue Antwort auf das Thema „{TOPIC_TITLE}“ erstellt. Du kannst den folgenden Link benutzen, um den ersten ungelesenen Beitrag anzusehen. Du erhältst keine weitere Benachrichtigung, bis du das Thema besucht hast.
+Sie erhalten diese Benachrichtigung, weil Sie das Forum „{FORUM_NAME}“ auf „{SITENAME}“ beobachten. Seit Ihrem letzten Besuch wurde in diesem Forum eine neue Antwort auf das Thema „{TOPIC_TITLE}“ erstellt. Sie können den folgenden Link benutzt, um den ersten ungelesenen Beitrag anzusehen. Sie erhalten keine weitere Benachrichtigung, bis Sie das Thema besucht haben.
 
 {U_NEWEST_POST}
 
-Wenn du das Thema ansehen möchtest, verwende folgenden Link:
+Wenn Sie das Thema ansehen möchten, verwenden Sie folgenden Link:
 {U_TOPIC}
 
-Wenn du das Forum ansehen möchtest, verwende folgenden Link:
+Wenn Sie das Forum ansehen möchten, verwenden Sie folgenden Link:
 {U_FORUM}
 
-Wenn du das Forum nicht länger abonnieren möchtest, verwende entweder den Link „Forum nicht mehr abonnieren“ in dem entsprechenden Forum oder besuche folgenden Link:
+Wenn Sie das Forum nicht länger abonnieren möchten, verwenden Sie entweder den Link „Forum nicht mehr abonnieren“ in dem entsprechenden Forum oder besuchen Sie folgenden Link:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -420,14 +420,14 @@ Wenn du das Forum nicht länger abonnieren möchtest, verwende entweder den Link
 
 
 $email = array_merge($email, array(
-	'email/group_added.txt' 		=> '{EMAILSUBJECT:} Du wurdest in eine Benutzergruppe aufgenommen
+	'email/group_added.txt' 		=> '{EMAILSUBJECT:} Sie wurden in eine Benutzergruppe aufgenommen
 
 Herzlichen Glückwunsch,
 
-du wurdest in die Benutzergruppe „{GROUP_NAME}“ auf „{SITENAME}“ aufgenommen.
-Dieser Vorgang wurde von einem Gruppenleiter oder einem Administrator durchgeführt. Kontaktiere ihn, wenn du weitere Informationen erhalten möchtest.
+Sie wurden in die Benutzergruppe „{GROUP_NAME}“ auf „{SITENAME}“ aufgenommen.
+Dieser Vorgang wurde von einem Gruppenleiter oder einem Administrator durchgeführt. Kontaktieren Sie ihn, wenn Sie weitere Informationen erhalten möchten.
 
-Du kannst deine Gruppendaten hier anzeigen:
+Sie können Ihre Gruppendaten hier anzeigen:
 {U_GROUP}
 
 {EMAIL_SIG}',
@@ -436,12 +436,12 @@ Du kannst deine Gruppendaten hier anzeigen:
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Dein Mitgliedsantrag wurde bestätigt
+	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Ihr Mitgliedsantrag wurde bestätigt
 
 Herzlichen Glückwunsch,
 
-dein Antrag auf Mitgliedschaft in der Benutzergruppe „{GROUP_NAME}“ auf „{SITENAME}“ wurde bestätigt.
-Besuche folgenden Link, um deine Mitgliedschaft anzuzeigen:
+Ihr Antrag auf Mitgliedschaft in der Benutzergruppe „{GROUP_NAME}“ auf „{SITENAME}“ wurde bestätigt.
+Besuchen Sie folgenden Link, um Ihre Mitgliedschaft anzuzeigen:
 
 {U_GROUP}
 
@@ -453,10 +453,10 @@ Besuche folgenden Link, um deine Mitgliedschaft anzuzeigen:
 $email = array_merge($email, array(
 	'email/group_request.txt' 		=> '{EMAILSUBJECT:} Eine Anfrage auf Gruppenmitgliedschaft wurde gestellt
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-der Benutzer „{REQUEST_USERNAME}“ auf „{SITENAME}“ hat einen Antrag auf Mitgliedschaft in der Gruppe „{GROUP_NAME}“ gestellt, die du verwaltest.
-Um diese Anfrage zu bestätigen oder abzulehnen, besuche den folgenden Link:
+der Benutzer „{REQUEST_USERNAME}“ auf „{SITENAME}“ hat einen Antrag auf Mitgliedschaft in der Gruppe „{GROUP_NAME}“ gestellt, die Sie verwalten.
+Um diese Anfrage zu bestätigen oder abzulehnen, besuchen Sie den folgenden Link:
 
 {U_PENDING}
 
@@ -470,9 +470,9 @@ $email = array_merge($email, array(
 
 Herzlichen Glückwunsch!
 
-Du hast phpBB erfolgreich auf deinem Server installiert.
+Sie haben phpBB erfolgreich auf Ihrem Server installiert.
 
-Diese E-Mail enthält wichtige Informationen über deine Installation, die du gut aufbewahren solltest. Dein Passwort wurde sicher in unserer Datenbank gespeichert und kann nicht wiederhergestellt werden. Falls es vergessen werden sollte, kannst du es über die E-Mail-Adresse, die deinem Account zugeordnet ist, zurücksetzen lassen.
+Diese E-Mail enthält wichtige Informationen über Ihre Installation, die Sie gut aufbewahren sollten. Ihr Passwort wurde sicher in unserer Datenbank gespeichert und kann nicht wiederhergestellt werden. Falls es vergessen werden sollte, können Sie es über die E-Mail-Adresse, die Ihrem Account zugeordnet ist, zurücksetzen lassen.
 
 ----------------------------
 Benutzername: {USERNAME}
@@ -480,9 +480,9 @@ Benutzername: {USERNAME}
 URL des Boards: {U_BOARD}
 ----------------------------
 
-Hilfreiche Informationen über die phpBB-Software können im docs-Ordner deiner Installation und auf der Website der phpBB Group — http://www.phpbb.com/support/ — gefunden werden. Eine deutschsprachige Anlaufstelle findest du unter http://www.phpbb.de/.
+Hilfreiche Informationen über die phpBB-Software können im docs-Ordner Ihrer Installation und auf der Website der phpBB Group — http://www.phpbb.com/support/ — gefunden werden. Eine deutschsprachige Anlaufstelle finden Sie unter http://www.phpbb.de/.
 
-Um die Sicherheit deines Boards zu gewährleisten, empfehlen wir dir dringend, es immer auf der aktuellen Version zu halten. Damit du entsprechende Informationen zeitnah erhältst, kann auf den oben genannten Seite ein Newsletter abonniert werden.
+Um die Sicherheit Ihres Boards zu gewährleisten, empfehlen wir Ihnen dringend, es immer auf der aktuellen Version zu halten. Damit Sie entsprechende Informationen zeitnah erhalten, kann auf den oben genannten Seite ein Newsletter abonniert werden.
 
 {EMAIL_SIG}',
 ));
@@ -492,13 +492,13 @@ Um die Sicherheit deines Boards zu gewährleisten, empfehlen wir dir dringend, e
 $email = array_merge($email, array(
 	'email/newcomment_notify.txt' 		=> '{EMAILSUBJECT:} Benachrichtigung über neuen Kommentar — „{IMAGE_NAME}“
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-du erhältst diese Benachrichtigung, weil du das Bild „{IMAGE_NAME}“ auf „{SITENAME}“ beobachtest. Seit deinem letzten Besuch wurde zu diesem Bild ein neuer Kommentar abgegeben. Du kannst den folgenden Link benutzen, um den Kommentar zu lesen.
+Sie erhalten diese Benachrichtigung, weil Sie das Bild „{IMAGE_NAME}“ auf „{SITENAME}“ beobachten. Seit Ihrem letzten Besuch wurde zu diesem Bild ein neuer Kommentar abgegeben. Sie können den folgenden Link benutzt, um den Kommentar zu lesen.
 
 {U_IMAGE}
 
-Wenn du das Bild nicht länger beobachten möchtest, verwende den Link „Bild nicht mehr beobachten“ im obigen Link.
+Wenn Sie das Bild nicht länger beobachten möchten, verwenden Sie den Link „Bild nicht mehr beobachten“ im obigen Link.
 
 {EMAIL_SIG}',
 ));
@@ -508,13 +508,13 @@ Wenn du das Bild nicht länger beobachten möchtest, verwende den Link „Bild n
 $email = array_merge($email, array(
 	'email/newimage_notify.txt' 		=> '{EMAILSUBJECT:} Benachrichtigung über neues Bild — „{ALBUM_NAME}“
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-du erhältst diese Benachrichtigung, weil du das Album „{ALBUM_NAME}“ auf „{SITENAME}“ beobachtest. Seit deinem letzten Besuch wurde in diesem Album ein neues Bild hochgeladen: „{IMAGE_NAME}“. Du kannst den folgenden Link benutzen, um das Album anzusehen.
+Sie erhalten diese Benachrichtigung, weil Sie das Album „{ALBUM_NAME}“ auf „{SITENAME}“ beobachten. Seit Ihrem letzten Besuch wurde in diesem Album ein neues Bild hochgeladen: „{IMAGE_NAME}“. Sie können den folgenden Link benutzt, um das Album anzusehen.
 
 {U_ALBUM}
 
-Wenn du das Album nicht länger beobachten möchtest, verwende den Link „Album nicht mehr beobachten“ im obigen Link.
+Wenn Sie das Album nicht länger beobachten möchten, verwenden Sie den Link „Album nicht mehr beobachten“ im obigen Link.
 
 {EMAIL_SIG}',
 ));
@@ -524,13 +524,13 @@ Wenn du das Album nicht länger beobachten möchtest, verwende den Link „Album
 $email = array_merge($email, array(
 	'email/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} Benachrichtigung über neues Thema — „{FORUM_NAME}“
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-du erhältst diese Benachrichtigung, weil du das Forum „{FORUM_NAME}“ auf „{SITENAME}“ beobachtest. Seit deinem letzten Besuch wurde in diesem Forum ein neues Thema erstellt: „{TOPIC_TITLE}“. Du kannst den folgenden Link benutzen, um das Forum anzusehen. Du erhältst keine weitere Benachrichtigung, bis du das Forum besucht hast.
+Sie erhalten diese Benachrichtigung, weil Sie das Forum „{FORUM_NAME}“ auf „{SITENAME}“ beobachten. Seit Ihrem letzten Besuch wurde in diesem Forum ein neues Thema erstellt: „{TOPIC_TITLE}“. Sie können den folgenden Link benutzt, um das Forum anzusehen. Sie erhalten keine weitere Benachrichtigung, bis Sie das Forum besucht haben.
 
 {U_FORUM}
 
-Wenn du das Forum nicht länger abonnieren möchtest, verwende entweder den Link „Forum nicht mehr abonnieren“ in dem entsprechenden Forum oder besuche folgenden Link:
+Wenn Sie das Forum nicht länger abonnieren möchten, verwenden Sie entweder den Link „Forum nicht mehr abonnieren“ in dem entsprechenden Forum oder besuchen Sie folgenden Link:
 
 {U_STOP_WATCHING_FORUM}
 
@@ -542,9 +542,9 @@ Wenn du das Forum nicht länger abonnieren möchtest, verwende entweder den Link
 $email = array_merge($email, array(
 	'email/pm_report_closed.txt' 		=> '{EMAILSUBJECT:} Meldung geschlossen — „{PM_SUBJECT}“
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-du erhältst diese Nachricht, weil deine Meldung zur Privaten Nachricht „{PM_SUBJECT}“ auf „{SITENAME}“ von einem Moderator oder Administrator bearbeitet wurde. Die Meldung wurde anschließend geschlossen. Wenn du weitere Fragen dazu hast, kannst du {CLOSER_NAME} mit einer Privaten Nachricht kontaktieren.
+Sie erhalten diese Nachricht, weil Ihre Meldung zur Privaten Nachricht „{PM_SUBJECT}“ auf „{SITENAME}“ von einem Moderator oder Administrator bearbeitet wurde. Die Meldung wurde anschließend geschlossen. Wenn Sie weitere Fragen dazu haben, können Sie {CLOSER_NAME} mit einer Privaten Nachricht kontaktieren.
 
 
 {EMAIL_SIG}',
@@ -555,9 +555,9 @@ du erhältst diese Nachricht, weil deine Meldung zur Privaten Nachricht „{PM_S
 $email = array_merge($email, array(
 	'email/pm_report_deleted.txt' 		=> '{EMAILSUBJECT:} Meldung gelöscht — „{PM_SUBJECT}“
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-du erhältst diese Nachricht, weil deine Meldung zur Privaten Nachricht „{PM_SUBJECT}“ auf „{SITENAME}“ von einem Moderator oder Administrator gelöscht wurde.
+Sie erhalten diese Nachricht, weil Ihre Meldung zur Privaten Nachricht „{PM_SUBJECT}“ auf „{SITENAME}“ von einem Moderator oder Administrator gelöscht wurde.
 
 
 {EMAIL_SIG}',
@@ -568,14 +568,14 @@ du erhältst diese Nachricht, weil deine Meldung zur Privaten Nachricht „{PM_S
 $email = array_merge($email, array(
 	'email/post_approved.txt' 		=> '{EMAILSUBJECT:} Beitrag freigegeben — „{POST_SUBJECT}“
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-du erhältst diese Nachricht, weil dein Beitrag „{POST_SUBJECT}“ auf „{SITENAME}“ durch einen Moderator oder Administrator freigegeben wurde.
+Sie erhalten diese Nachricht, weil Ihr Beitrag „{POST_SUBJECT}“ auf „{SITENAME}“ durch einen Moderator oder Administrator freigegeben wurde.
 
-Wenn du den Beitrag ansehen möchtest, verwende folgenden Link:
+Wenn Sie den Beitrag ansehen möchten, verwenden Sie folgenden Link:
 {U_VIEW_POST}
 
-Wenn du das Thema ansehen möchtest, verwende folgenden Link:
+Wenn Sie das Thema ansehen möchten, verwenden Sie folgenden Link:
 {U_VIEW_TOPIC}
 
 
@@ -587,9 +587,9 @@ Wenn du das Thema ansehen möchtest, verwende folgenden Link:
 $email = array_merge($email, array(
 	'email/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Beitragsfreigabe verweigert — „{POST_SUBJECT}“
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-du erhältst diese Nachricht, weil deinem Beitrag „{POST_SUBJECT}“ auf „{SITENAME}“ von einem Moderator oder Administrator die Freigabe verweigert wurde.
+Sie erhalten diese Nachricht, weil Ihrem Beitrag „{POST_SUBJECT}“ auf „{SITENAME}“ von einem Moderator oder Administrator die Freigabe verweigert wurde.
 
 Der folgende Grund wurde dafür angegeben:
 
@@ -604,9 +604,9 @@ Der folgende Grund wurde dafür angegeben:
 $email = array_merge($email, array(
 	'email/prime_notify_forum.txt' 		=> '{EMAILSUBJECT:} Forum Benachrichtigung - {FORUM_NAME}
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-{AUTHOR} hat im Forum "{FORUM_NAME}" eine neue Antwort seit deinem letzten Besuch erstellt. Du kannst das ganze Forum durch einen Klick auf den folgenden Link besuchen: {U_FORUM}
+{AUTHOR} hat im Forum "{FORUM_NAME}" eine neue Antwort seit Ihrem letzten Besuch erstellt. Sie können das ganze Forum durch einen Klick auf den folgenden Link besuchen: {U_FORUM}
 
 ***************
 Thema: {TOPIC_TITLE}
@@ -614,7 +614,7 @@ Nachricht:
 {MESSAGE}
 ***************
 
-{VISIT_MSG}Wenn du das Forum nicht mehr abonnieren willst, dann klicke den "nicht mehr abonnieren" Link im obigen Forum, oder klicke folgenden Link:
+{VISIT_MSG}Wenn Sie das Forum nicht mehr abonnieren wollen, dann klicken Sie den "nicht mehr abonnieren" Link im obigen Forum, oder klicken Sie folgenden Link:
 {U_STOP_WATCHING_FORUM}
 {EMAIL_SIG}',
 ));
@@ -624,9 +624,9 @@ Nachricht:
 $email = array_merge($email, array(
 	'email/prime_notify_newtopic.txt' 		=> '{EMAILSUBJECT:} Neues Thema Benachrichtigung - {FORUM_NAME}
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-{AUTHOR} hat im Forum "{FORUM_NAME}" ein neues Thema seit deinem letzten Besuch erstellt. Du kannst das Forum durch einen Klick auf den folgenden Link besuchen: {U_FORUM}
+{AUTHOR} hat im Forum "{FORUM_NAME}" ein neues Thema seit Ihrem letzten Besuch erstellt. Sie können das Forum durch einen Klick auf den folgenden Link besuchen: {U_FORUM}
 
 ***************
 Thema: {TOPIC_TITLE}
@@ -634,7 +634,7 @@ Nachricht:
 {MESSAGE}
 ***************
 
-{VISIT_MSG}Wenn du das Forum nicht mehr abonnieren willst, dann klicke den "nicht mehr abonnieren" Link im obigen Forum, oder klicke folgenden Link:
+{VISIT_MSG}Wenn Sie das Forum nicht mehr abonnieren wollen, dann klicken Sie den "nicht mehr abonnieren" Link im obigen Forum, oder klicken Sie folgenden Link:
 {U_STOP_WATCHING_FORUM}
 {EMAIL_SIG}',
 ));
@@ -644,9 +644,9 @@ Nachricht:
 $email = array_merge($email, array(
 	'email/prime_notify_privmsg.txt' 		=> 'Subject: Neue private Nachricht: {SUBJECT}
 
-Hallo {USERNAME}, 
+Guten Tag {USERNAME}, 
 
-du hast unter deinem Konto auf "{SITENAME}" eine neue private Nachricht erhalten. Du kannst die Nachricht durch einen Klick auf den folgenden Link lesen und beantworten: {U_INBOX}
+Sie haben unter Ihrem Konto auf "{SITENAME}" eine neue private Nachricht erhalten. Sie können die Nachricht durch einen Klick auf den folgenden Link lesen und beantworten: {U_INBOX}
 _____________________________________________________________________
 
 Von: {AUTHOR_NAME}
@@ -655,7 +655,7 @@ Nachricht:
 {MESSAGE}
 _____________________________________________________________________
 
-Du hast darum gebeten, dass du über neue Persönliche Mitteilungen benachrichtigt werden willst. Bitte beachte, dass du Benachrichtigungen in deinem Profil an- und abbestellen kannst.
+Sie haben darum gebeten, dass Sie über neue Persönliche Mitteilungen benachrichtigt werden wollen. Bitte beachten Sie, dass Sie Benachrichtigungen in Ihrem Profil an- und abbestellen können.
 {EMAIL_SIG}',
 ));
 
@@ -664,9 +664,9 @@ Du hast darum gebeten, dass du über neue Persönliche Mitteilungen benachrichti
 $email = array_merge($email, array(
 	'email/prime_notify_topic.txt' 		=> '{EMAILSUBJECT:} Antwort zum Thema - "{TOPIC_TITLE}"
 
-Hallo {USERNAME}, 
+Guten Tag {USERNAME}, 
 
-{AUTHOR} hat zum Thema "{TOPIC_TITLE}" eine neue Antwort seit deinem letzten Besuch erstellt. Du kannst den Beitrag durch einen Klick auf den folgenden Link besuchen und eine Antwort schreiben: {U_NEWEST_POST}
+{AUTHOR} hat zum Thema "{TOPIC_TITLE}" eine neue Antwort seit Ihrem letzten Besuch erstellt. Sie können den Beitrag durch einen Klick auf den folgenden Link besuchen und eine Antwort schreiben: {U_NEWEST_POST}
 
 ***************
 Thema: {TOPIC_TITLE}
@@ -674,10 +674,10 @@ Nachricht:
 {MESSAGE}
 ***************
 
-Wenn du das ganze Thema ansehen willst, dann klicke auf folgenden Link:
+Wenn Sie das ganze Thema ansehen wollen, dann klicken Sie auf folgenden Link:
 {U_TOPIC}
 
-{VISIT_MSG}Wenn du das Thema nicht länger abonnieren möchtest, verwende entweder den Link „Thema nicht mehr abonnieren“ in dem entsprechenden Thema oder besuche folgenden Link:
+{VISIT_MSG}Wenn Sie das Thema nicht länger abonnieren möchten, verwenden Sie entweder den Link „Thema nicht mehr abonnieren“ in dem entsprechenden Thema oder besuchen Sie folgenden Link:
 
 {U_STOP_WATCHING_TOPIC}
 {EMAIL_SIG}',
@@ -688,17 +688,17 @@ Wenn du das ganze Thema ansehen willst, dann klicke auf folgenden Link:
 $email = array_merge($email, array(
 	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} Neue Private Nachricht erhalten
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-du hast auf „{SITENAME}“ eine neue Private Nachricht von „{AUTHOR_NAME}“ mit folgendem Betreff erhalten:
+Sie haben auf „{SITENAME}“ eine neue Private Nachricht von „{AUTHOR_NAME}“ mit folgendem Betreff erhalten:
 
 {SUBJECT}
 
-Du kannst deine neue Nachricht ansehen, indem du den folgenden Link besuchst:
+Sie können Ihre neue Nachricht ansehen, indem Sie den folgenden Link besuchen:
 
 {U_VIEW_MESSAGE}
 
-Du hast ausgewählt, dass du bei neuen Privaten Nachrichten informiert werden möchtest. Du kannst diese Benachrichtigungen jederzeit in deinem persönlichen Bereich abstellen.
+Sie haben ausgewählt, dass Sie bei neuen Privaten Nachrichten informiert werden möchten. Sie können diese Benachrichtigungen jederzeit in Ihrem persönlichen Bereich abstellen.
 
 {EMAIL_SIG}',
 ));
@@ -709,9 +709,9 @@ $email = array_merge($email, array(
 	'email/profile_comment_email.txt' 		=> '
 Guten Tag,
 
-{USER_NAME} hat dir ein Kommentar in dein Profil auf {SITENAME} gesendet.
+{USER_NAME} hat Ihnen ein Kommentar in Ihr Profil auf {SITENAME} gesendet.
 
-Bitte klicke auf den nachfolgenden Link um den Kommentar zu lesen:
+Bitte klicken Sie auf den nachfolgenden Link um den Kommentar zu lesen:
 {LINK_PROFILE}
 
 {EMAIL_SIG}',
@@ -721,15 +721,15 @@ Bitte klicke auf den nachfolgenden Link um den Kommentar zu lesen:
 
 $email = array_merge($email, array(
 	'email/profile_send_email.txt' 		=> '
-Hallo {TO_USERNAME},
+Guten Tag {TO_USERNAME},
 
-die folgende Nachricht wurde dir von {FROM_USERNAME} über dein Benutzerkonto auf „{SITENAME}“ geschickt. Wenn diese Nachricht Werbung, Beleidigungen oder anderen anstößigen Inhalt enthält, kannst du die Board-Administration unter folgender Adresse erreichen:
+die folgende Nachricht wurde Ihnen von {FROM_USERNAME} über Ihr Benutzerkonto auf „{SITENAME}“ geschickt. Wenn diese Nachricht Werbung, Beleidigungen oder anderen anstößigen Inhalt enthält, können Sie die Board-Administration unter folgender Adresse erreichen:
 
 {BOARD_CONTACT}
 
-Füge deiner Nachricht bitte die vollständige E-Mail (insbesondere die Nachrichtenkopfzeilen) bei. Bitte beachte, dass als Antwortadresse dieser E-Mail die E-Mail-Adresse von {FROM_USERNAME} hinterlegt ist.
+Fügen Sie Ihrer Nachricht bitte die vollständige E-Mail (insbesondere die Nachrichtenkopfzeilen) bei. Bitte beachten Sie, dass als Antwortadresse dieser E-Mail die E-Mail-Adresse von {FROM_USERNAME} hinterlegt ist.
 
-Es folgt die an dich gesendete Nachricht
+Es folgt die an Sie gesendete Nachricht
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -741,15 +741,15 @@ Es folgt die an dich gesendete Nachricht
 
 $email = array_merge($email, array(
 	'email/profile_send_im.txt' 		=> '
-Hallo {TO_USERNAME},
+Guten Tag {TO_USERNAME},
 
-die folgende Nachricht wurde dir von {FROM_USERNAME} über dein Benutzerkonto auf „{SITENAME}“ geschickt. Wenn diese Nachricht Werbung, Beleidigungen oder anderen anstößigen Inhalt enthält, kannst du die Board-Administration unter folgender Adresse erreichen:
+die folgende Nachricht wurde Ihnen von {FROM_USERNAME} über Ihr Benutzerkonto auf „{SITENAME}“ geschickt. Wenn diese Nachricht Werbung, Beleidigungen oder anderen anstößigen Inhalt enthält, können Sie die Board-Administration unter folgender Adresse erreichen:
 
 {BOARD_CONTACT}
 
-Füge deiner Nachricht bitte diese vollständige Nachricht bei. Bitte beachte, dass als Antwortadresse das Instant Messaging-Konto des Boards angegeben wurde.
+Fügen Sie Ihrer Nachricht bitte diese vollständige Nachricht bei. Bitte beachten Sie, dass als Antwortadresse das Instant Messaging-Konto des Boards angegeben wurde.
 
-Es folgt die an dich gesendete Nachricht
+Es folgt die an Sie gesendete Nachricht
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
@@ -762,9 +762,9 @@ Es folgt die an dich gesendete Nachricht
 $email = array_merge($email, array(
 	'email/report_closed.txt' 		=> '{EMAILSUBJECT:} Meldung geschlossen — „{POST_SUBJECT}“
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-du erhältst diese Nachricht, weil deine Meldung zum Beitrag „{POST_SUBJECT}“ in „{TOPIC_TITLE}“ auf „{SITENAME}“ von einem Moderator oder Administrator bearbeitet wurde. Die Meldung wurde anschließend geschlossen. Wenn du weitere Fragen dazu hast, kannst du {CLOSER_NAME} mit einer Privaten Nachricht kontaktieren.
+Sie erhalten diese Nachricht, weil Ihre Meldung zum Beitrag „{POST_SUBJECT}“ in „{TOPIC_TITLE}“ auf „{SITENAME}“ von einem Moderator oder Administrator bearbeitet wurde. Die Meldung wurde anschließend geschlossen. Wenn Sie weitere Fragen dazu haben, können Sie {CLOSER_NAME} mit einer Privaten Nachricht kontaktieren.
 
 
 {EMAIL_SIG}',
@@ -775,9 +775,9 @@ du erhältst diese Nachricht, weil deine Meldung zum Beitrag „{POST_SUBJECT}�
 $email = array_merge($email, array(
 	'email/report_deleted.txt' 		=> '{EMAILSUBJECT:} Meldung gelöscht — „{POST_SUBJECT}“
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-du erhältst diese Nachricht, weil deine Meldung zum Beitrag „{POST_SUBJECT}“ in „{TOPIC_TITLE}“ auf „{SITENAME}“ von einem Moderator oder Administrator gelöscht wurde.
+Sie erhalten diese Nachricht, weil Ihre Meldung zum Beitrag „{POST_SUBJECT}“ in „{TOPIC_TITLE}“ auf „{SITENAME}“ von einem Moderator oder Administrator gelöscht wurde.
 
 
 {EMAIL_SIG}',
@@ -788,11 +788,11 @@ du erhältst diese Nachricht, weil deine Meldung zum Beitrag „{POST_SUBJECT}�
 $email = array_merge($email, array(
 	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Thema freigegeben — „{TOPIC_TITLE}“
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-du erhältst diese Benachrichtigung, weil dein Thema „{TOPIC_TITLE}“ auf „{SITENAME}“ durch einen Moderator oder Administrator freigegeben wurde.
+Sie erhalten diese Benachrichtigung, weil Ihr Thema „{TOPIC_TITLE}“ auf „{SITENAME}“ durch einen Moderator oder Administrator freigegeben wurde.
 
-Wenn du das Thema ansehen möchtest, verwende folgenden Link:
+Wenn Sie das Thema ansehen möchten, verwenden Sie folgenden Link:
 {U_VIEW_TOPIC}
 
 
@@ -804,9 +804,9 @@ Wenn du das Thema ansehen möchtest, verwende folgenden Link:
 $email = array_merge($email, array(
 	'email/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Themenfreigabe verweigert — „{TOPIC_TITLE}“
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-du erhältst diese Benachrichtigung, weil deinem Thema „{TOPIC_TITLE}“ auf „{SITENAME}“ von einem Moderator oder Administrator die Freigabe verweigert wurde.
+Sie erhalten diese Benachrichtigung, weil Ihrem Thema „{TOPIC_TITLE}“ auf „{SITENAME}“ von einem Moderator oder Administrator die Freigabe verweigert wurde.
 
 Der folgende Grund wurde dafür angegeben:
 
@@ -821,20 +821,20 @@ Der folgende Grund wurde dafür angegeben:
 $email = array_merge($email, array(
 	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Benachrichtigung über neue Antwort — „{TOPIC_TITLE}“
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-du erhältst diese Benachrichtigung, weil du das Thema „{TOPIC_TITLE}“ auf „{SITENAME}“ beobachtest. Seit deinem letzten Besuch wurde zu diesem Thema eine neue Antwort erstellt. Du kannst den folgenden Link benutzen, um die neuen Antworten anzusehen. Du erhältst keine weitere Benachrichtigung, bis du das Thema besucht hast.
+Sie erhalten diese Benachrichtigung, weil Sie das Thema „{TOPIC_TITLE}“ auf „{SITENAME}“ beobachten. Seit Ihrem letzten Besuch wurde zu diesem Thema eine neue Antwort erstellt. Sie können den folgenden Link benutzt, um die neuen Antworten anzusehen. Sie erhalten keine weitere Benachrichtigung, bis Sie das Thema besucht haben.
 
-Wenn du die neuesten Antworten seit deinem letzten Besuch ansehen möchtest, verwende folgenden Link:
+Wenn Sie die neuesten Antworten seit Ihrem letzten Besuch ansehen möchten, verwenden Sie folgenden Link:
 {U_NEWEST_POST}
 
-Wenn du das Thema ansehen möchtest, verwende folgenden Link:
+Wenn Sie das Thema ansehen möchten, verwenden Sie folgenden Link:
 {U_TOPIC}
 
-Wenn du das Forum ansehen möchtest, verwende folgenden Link:
+Wenn Sie das Forum ansehen möchten, verwenden Sie folgenden Link:
 {U_FORUM}
 
-Wenn du das Thema nicht länger abonnieren möchtest, verwende entweder den Link „Thema nicht mehr abonnieren“ in dem entsprechenden Thema oder besuche folgenden Link:
+Wenn Sie das Thema nicht länger abonnieren möchten, verwenden Sie entweder den Link „Thema nicht mehr abonnieren“ in dem entsprechenden Thema oder besuchen Sie folgenden Link:
 
 {U_STOP_WATCHING_TOPIC}
 
@@ -844,11 +844,11 @@ Wenn du das Thema nicht länger abonnieren möchtest, verwende entweder den Link
 
 
 $email = array_merge($email, array(
-	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reaktiviere dein Benutzerkonto
+	'email/user_activate.txt' 		=> '{EMAILSUBJECT:} Reaktivieren Sie Ihr Benutzerkonto
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-dein Benutzerkonto auf „{SITENAME}“ wurde deaktiviert; vermutlich, weil du Änderungen an deinem Profil vorgenommen hast. Um dein Benutzerkonto wieder zu aktivieren, musst du den folgenden Link besuchen:
+Ihr Benutzerkonto auf „{SITENAME}“ wurde deaktiviert; vermutlich, weil Sie Änderungen an Ihrem Profil vorgenommen haben. Um Ihr Benutzerkonto wieder zu aktivieren, müssen Sie den folgenden Link besuchen:
 
 {U_ACTIVATE}
 
@@ -858,11 +858,11 @@ dein Benutzerkonto auf „{SITENAME}“ wurde deaktiviert; vermutlich, weil du �
 
 
 $email = array_merge($email, array(
-	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Dein Benutzerkonto wurde deaktiviert
+	'email/user_activate_inactive.txt' 		=> '{EMAILSUBJECT:} Ihr Benutzerkonto wurde deaktiviert
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-dein Benutzerkonto auf „{SITENAME}“ wurde deaktiviert, vermutlich, weil du Änderungen an deinem Profil vorgenommen hast. Ein Administrator des Boards muss dein Konto erst wieder aktivieren, bevor du es verwenden kannst. Du erhältst eine weitere Benachrichtigung, sobald dies geschehen ist.
+Ihr Benutzerkonto auf „{SITENAME}“ wurde deaktiviert, vermutlich, weil Sie Änderungen an Ihrem Profil vorgenommen haben. Ein Administrator des Boards muss Ihr Konto erst wieder aktivieren, bevor Sie es verwenden können. Sie erhalten eine weitere Benachrichtigung, sobald dies geschehen ist.
 
 {EMAIL_SIG}',
 ));
@@ -872,19 +872,19 @@ dein Benutzerkonto auf „{SITENAME}“ wurde deaktiviert, vermutlich, weil du �
 $email = array_merge($email, array(
 	'email/user_activate_passwd.txt' 		=> '{EMAILSUBJECT:} Aktivierung eines neuen Passworts
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-du erhältst diese Benachrichtigung, weil du (oder jemand, der angegeben hat, du zu sein) ein neues Passwort für dein Benutzerkonto auf „{SITENAME}“ angefordert hat. Wenn du diese Benachrichtigung nicht angefordert hast, kannst du sie ignorieren. Falls du sie regelmäßig erhältst, kontaktiere bitte die Board-Administration.
+Sie erhalten diese Benachrichtigung, weil Sie (oder jemand, der angegeben hat, Sie zu sein) ein neues Passwort für Ihr Benutzerkonto auf „{SITENAME}“ angefordert hat. Wenn Sie diese Benachrichtigung nicht angefordert haben, können Sie sie ignorieren. Falls Sie sie regelmäßig erhalten, kontaktieren Sie bitte die Board-Administration.
 
-Um das neue Passwort zu verwenden, musst du es aktivieren. Verwende dazu den folgenden Link:
+Um das neue Passwort zu verwenden, müssen Sie es aktivieren. Verwenden Sie dazu den folgenden Link:
 
 {U_ACTIVATE}
 
-Nach erfolgreicher Aktivierung kannst du dich mit folgendem Passwort anmelden:
+Nach erfolgreicher Aktivierung können Sie dich mit folgendem Passwort anmelden:
 
 Passwort: {PASSWORD}
 
-Du kannst dieses Passwort selbstverständlich in deinem persönlichen Bereich ändern. Wenn du auf Schwierigkeiten stößt, kontaktiere bitte die Board-Administration.
+Sie können dieses Passwort selbstverständlich in Ihrem persönlichen Bereich ändern. Wenn Sie auf Schwierigkeiten stoßen, kontaktieren Sie bitte die Board-Administration.
 
 {EMAIL_SIG}',
 ));
@@ -892,20 +892,20 @@ Du kannst dieses Passwort selbstverständlich in deinem persönlichen Bereich ä
 
 
 $email = array_merge($email, array(
-	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reaktiviere dein Benutzerkonto „{SITENAME}“
+	'email/user_reactivate_account.txt' 		=> '{EMAILSUBJECT:} Reaktivieren Sie Ihr Benutzerkonto „{SITENAME}“
 
-Ein Board-Administrator hat eine erneute Aktivierung deines Benutzerkontos erzwungen. Dein Benutzerkonto ist derzeit inaktiv.
-Bitte folge den Anweisungen, um dein Konto wieder zu aktivieren.
+Ein Board-Administrator hat eine erneute Aktivierung Ihres Benutzerkontos erzwungen. Ihr Benutzerkonto ist derzeit inaktiv.
+Bitte folgen Sie den Anweisungen, um Ihr Konto wieder zu aktivieren.
 
-Bitte bewahre diese E-Mail in deinen Unterlagen auf. Die Daten deines Benutzerkontos lauten:
+Bitte bewahren Sie diese E-Mail in Ihren Unterlagen auf. Die Daten Ihres Benutzerkontos lauten:
 
 ----------------------------
 Benutzername: {USERNAME}
 ----------------------------
 
-Dein Passwort wurde sicher in unserer Datenbank gespeichert und kann nicht wiederhergestellt werden. Falls es vergessen werden sollte, kannst du es über die E-Mail-Adresse, die deinem Account zugeordnet ist, zurücksetzen lassen.
+Ihr Passwort wurde sicher in unserer Datenbank gespeichert und kann nicht wiederhergestellt werden. Falls es vergessen werden sollte, können Sie es über die E-Mail-Adresse, die Ihrem Account zugeordnet ist, zurücksetzen lassen.
 
-Bitte besuche folgenden Link, um dein Benutzerkonto zu reaktivieren:
+Bitte besuchen Sie folgenden Link, um Ihr Benutzerkonto zu reaktivieren:
 
 {U_ACTIVATE}
 
@@ -916,15 +916,15 @@ Bitte besuche folgenden Link, um dein Benutzerkonto zu reaktivieren:
 
 
 $email = array_merge($email, array(
-	'email/user_reminder_delete_notify.txt' 		=> '{EMAILSUBJECT:} Löschung Deines Benutzerkontos auf "{SITENAME}"! 
+	'email/user_reminder_delete_notify.txt' 		=> '{EMAILSUBJECT:} Löschung Ihres Benutzerkontos auf "{SITENAME}"! 
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-In letzter Zeit hast Du mindestens 2 Erinnerungen von uns bekommen. 
+In letzter Zeit haben Sie mindestens 2 Erinnerungen von uns bekommen. 
 
-Da Du jedoch kein Interesse zeigst, dich an Aktivitäten auf {SITENAME} zu beteiligen, wurde beschlossen Dein Benutzerkonto zu löschen.
+Da Sie jedoch kein Interesse zeigst, sich an Aktivitäten auf {SITENAME} zu beteiligen, wurde beschlossen Ihr Benutzerkonto zu löschen.
 
-Die Löschung Deines Kontos kann nicht mehr rückgängig gemacht werden. Solltest Du Dich doch irgendwann entschließen Dich wieder bei uns zu beteiligen, müsstest Du Dich erneut registrieren.
+Die Löschung Ihres Kontos kann nicht mehr rückgängig gemacht werden. Solltest Sie Dich doch irgendwann entschließen Dich wieder bei uns zu beteiligen, müsstest Sie Dich erneut registrieren.
 
 {EMAIL_SIG}',
 ));
@@ -934,9 +934,9 @@ Die Löschung Deines Kontos kann nicht mehr rückgängig gemacht werden. Solltes
 $email = array_merge($email, array(
 	'email/user_reminder_inactive.txt' 		=> '{EMAILSUBJECT:} Erinnerung von "{SITENAME}"! 
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-Wir haben festgestellt, dass du dich seit einiger Zeit nicht auf {SITENAME} eingeloggt hast.
+Wir haben festgestellt, dass Sie dich seit einiger Zeit nicht auf {SITENAME} eingeloggt haben.
 
 Schau doch bitte mal wieder auf {U_BOARD} vorbei um einen Blick auf unsere aktuellen Themen im Forum zu werfen. 
 
@@ -950,13 +950,13 @@ Wir freuen uns dich bald wieder bei uns zu sehen.
 $email = array_merge($email, array(
 	'email/user_reminder_inactive_still.txt' 		=> '{EMAILSUBJECT:} Zweite Erinnerung von "{SITENAME}"! 
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-Wir haben dir kürzlich eine Mail bezüglich deiner Teilnahme/Aktivität auf {SITENAME} geschrieben.
+Wir haben Ihnen kürzlich eine Mail bezüglich Ihrer Teilnahme/Aktivität auf {SITENAME} geschrieben.
 
-Leider hat es seit dieser Mail keine Veränderung von deiner Seite bezüglich der Aktivität gegeben. Wir möchten dich darauf aufmerksam machen, dass wir es in Betracht ziehen, dein Benutzerkonto zu löschen, da du anscheinend nicht mehr an der Community von {SITENAME} interessiert bist.
+Leider hat es seit dieser Mail keine Veränderung von Ihrer Seite bezüglich der Aktivität gegeben. Wir möchten dich darauf aufmerksam machen, dass wir es in Betracht ziehen, Ihr Benutzerkonto zu löschen, da Sie anscheinend nicht mehr an der Community von {SITENAME} interessiert sind.
 
-Falls du nur deine Login-Daten vergessen hast, findest du sie hier:
+Falls Sie nur Ihre Login-Daten vergessen haben, finden Sie sie hier:
 ----------------------------
 Username: {USERNAME}
 Password: *
@@ -964,9 +964,9 @@ Password: *
 Board URL: {U_BOARD}
 ----------------------------
 
-* Bitte beachte, dass dein Passwort verschlüsselt in der Datenbank gespeichert wurde und wir es für dich nicht wiederherstellen können. Falls du dein Passwort vergessen haben solltest, kannst du ein neues anfordern, das dann auf die gleiche Weise wie dein Benutzerkonto aktiviert wird.
+* Bitte beachten Sie, dass Ihr Passwort verschlüsselt in der Datenbank gespeichert wurde und wir es für dich nicht wiederherstellen können. Falls Sie Ihr Passwort vergessen haben sollten, können Sie ein neues anfordern, das dann auf die gleiche Weise wie Ihr Benutzerkonto aktiviert wird.
 
-Wir würden uns über deine baldige Beteiligung auf {SITENAME} sehr freuen.
+Wir würden uns über Ihre baldige Beteiligung auf {SITENAME} sehr freuen.
 
 {EMAIL_SIG}',
 ));
@@ -976,13 +976,13 @@ Wir würden uns über deine baldige Beteiligung auf {SITENAME} sehr freuen.
 $email = array_merge($email, array(
 	'email/user_reminder_not_logged_in.txt' 		=> '{EMAILSUBJECT:} Erinnerung von "{SITENAME}"! 
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-Wir haben festgestellt, dass du vor einiger Zeit ein Benutzerkonto auf {SITENAME} registriert hast.
+Wir haben festgestellt, dass Sie vor einiger Zeit ein Benutzerkonto auf {SITENAME} registriert haben.
 
-Obwohl dein Benutzerkonto aktiviert ist, hast du dich noch nicht im Forum eingeloggt. 
+Obwohl Ihr Benutzerkonto aktiviert ist, haben Sie dich noch nicht im Forum eingeloggt. 
 
-Hier findest du nochmal deine Benutzerdaten und die Board-URL.
+Hier finden Sie nochmal Ihre Benutzerdaten und die Board-URL.
 ----------------------------
 Username: {USERNAME}
 Password: *
@@ -990,7 +990,7 @@ Password: *
 Board URL: {U_BOARD}
 ----------------------------
 
-* Bitte beachte, dass dein Passwort verschlüsselt in der Datenbank gespeichert wurde und wir es für dich nicht wiederherstellen können. Falls du dein Passwort vergessen haben solltest, kannst du ein neues anfordern, das dann auf die gleiche Weise wie dein Benutzerkonto aktiviert wird.
+* Bitte beachten Sie, dass Ihr Passwort verschlüsselt in der Datenbank gespeichert wurde und wir es für dich nicht wiederherstellen können. Falls Sie Ihr Passwort vergessen haben sollten, können Sie ein neues anfordern, das dann auf die gleiche Weise wie Ihr Benutzerkonto aktiviert wird.
 
 Wir freuen uns, dich bald auf {SITENAME} zu sehen.
 
@@ -1002,15 +1002,15 @@ Wir freuen uns, dich bald auf {SITENAME} zu sehen.
 $email = array_merge($email, array(
 	'email/user_reminder_zero_poster.txt' 		=> '{EMAILSUBJECT:} Erinnerung von "{SITENAME}"! 
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-Du hast dich vor einiger Zeit auf {SITENAME} registriert. 
+Sie haben dich vor einiger Zeit auf {SITENAME} registriert. 
 
-Wir haben festgestellt, dass du dich noch nicht aktiv an der Community beteiligt und noch keinen Beitrag geschrieben hast.
+Wir haben festgestellt, dass Sie dich noch nicht aktiv an der Community beteiligt und noch keinen Beitrag geschrieben haben.
 
-Nimm dir doch bitte kurz Zeit, um einen Blick auf unsere aktuellen Themen im Forum unter {U_BOARD} zu werfen. Vielleicht findest du ja ein Thema interessant und wirst darin mit einbezogen.
+Nimm Ihnen doch bitte kurz Zeit, um einen Blick auf unsere aktuellen Themen im Forum unter {U_BOARD} zu werfen. Vielleicht finden Sie ja ein Thema interessant und werden darin mit einbezogen.
 
-Anderenfalls zögere nicht, dein eigenes Thema zu erstellen, selbst wenn es auch zur Vorstellung an den Rest der Community dient. Dies bricht gewöhnlich das Eis.
+Anderenfalls zögere nicht, Ihr eigenes Thema zu erstellen, selbst wenn es auch zur Vorstellung an den Rest der Community dient. Dies bricht gewöhnlich das Eis.
 
 {EMAIL_SIG}',
 ));
@@ -1020,13 +1020,13 @@ Anderenfalls zögere nicht, dein eigenes Thema zu erstellen, selbst wenn es auch
 $email = array_merge($email, array(
 	'email/user_remind_inactive.txt' 		=> '{EMAILSUBJECT:} Erinnerung an inaktives Benutzerkonto
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-diese Nachricht ist eine Erinnerung, dass dein Benutzerkonto auf „{SITENAME}“, erstellt am {REGISTER_DATE}, weiter inaktiv ist. Wenn du dieses Konto aktivieren möchtest, besuche bitte den folgenden Link:
+diese Nachricht ist eine Erinnerung, dass Ihr Benutzerkonto auf „{SITENAME}“, erstellt am {REGISTER_DATE}, weiter inaktiv ist. Wenn Sie dieses Konto aktivieren möchten, besuchen Sie bitte den folgenden Link:
  
 {U_ACTIVATE}
 
-Vielen Dank für deine Registrierung auf „{SITENAME}“, wir freuen uns über deinen Besuch.
+Vielen Dank für Ihre Registrierung auf „{SITENAME}“, wir freuen uns über Ihren Besuch.
 
 {EMAIL_SIG}',
 ));
@@ -1038,21 +1038,21 @@ $email = array_merge($email, array(
 
 {WELCOME_MSG}
 
-Bitte bewahre diese E-Mail in deinen Unterlagen auf. Die Daten deines Benutzerkontos lauten:
+Bitte bewahren Sie diese E-Mail in Ihren Unterlagen auf. Die Daten Ihres Benutzerkontos lauten:
 
 ----------------------------
 Benutzername: {USERNAME}
 ----------------------------
 
-Dein Passwort wurde sicher in unserer Datenbank gespeichert und kann nicht wiederhergestellt werden. Falls es vergessen werden sollte, kannst du es über die E-Mail-Adresse, die deinem Account zugeordnet ist, zurücksetzen lassen.
+Ihr Passwort wurde sicher in unserer Datenbank gespeichert und kann nicht wiederhergestellt werden. Falls es vergessen werden sollte, können Sie es über die E-Mail-Adresse, die Ihrem Account zugeordnet ist, zurücksetzen lassen.
 
-Bitte besuche folgenden Link, um den Account zu aktivieren:
+Bitte besuchen Sie folgenden Link, um den Account zu aktivieren:
 
 {U_ACTIVATE}
 
 
 
-Vielen Dank für deine Registrierung.
+Vielen Dank für Ihre Registrierung.
 
 {EMAIL_SIG}',
 ));
@@ -1064,7 +1064,7 @@ $email = array_merge($email, array(
 
 {WELCOME_MSG}
 
-Bitte bewahre diese E-Mail in deinen Unterlagen auf. Die Daten deines Benutzerkontos lauten:
+Bitte bewahren Sie diese E-Mail in Ihren Unterlagen auf. Die Daten Ihres Benutzerkontos lauten:
 
 ----------------------------
 Benutzername: {USERNAME}
@@ -1072,9 +1072,9 @@ Benutzername: {USERNAME}
 Board-URL:    {U_BOARD}
 ----------------------------
 
-Dein Passwort wurde sicher in unserer Datenbank gespeichert und kann nicht wiederhergestellt werden. Falls es vergessen werden sollte, kannst du es über die E-Mail-Adresse, die deinem Account zugeordnet ist, zurücksetzen lassen.
+Ihr Passwort wurde sicher in unserer Datenbank gespeichert und kann nicht wiederhergestellt werden. Falls es vergessen werden sollte, können Sie es über die E-Mail-Adresse, die Ihrem Account zugeordnet ist, zurücksetzen lassen.
 
-Vielen Dank für deine Registrierung.
+Vielen Dank für Ihre Registrierung.
 
 {EMAIL_SIG}',
 ));
@@ -1086,7 +1086,7 @@ $email = array_merge($email, array(
 
 {WELCOME_MSG}
 
-Bitte bewahre diese E-Mail in deinen Unterlagen auf. Die Daten deines Benutzerkontos lauten:
+Bitte bewahren Sie diese E-Mail in Ihren Unterlagen auf. Die Daten Ihres Benutzerkontos lauten:
 
 ----------------------------
 Benutzername: {USERNAME}
@@ -1094,13 +1094,13 @@ Benutzername: {USERNAME}
 Board-URL:    {U_BOARD}
 ----------------------------
 
-Bitte besuche folgenden Link, um dein Benutzerkonto zu aktivieren:
+Bitte besuchen Sie folgenden Link, um Ihr Benutzerkonto zu aktivieren:
 
 {U_ACTIVATE}
 
-Dein Passwort wurde sicher in unserer Datenbank gespeichert und kann nicht wiederhergestellt werden. Falls es vergessen werden sollte, kannst du es über die E-Mail-Adresse, die deinem Account zugeordnet ist, zurücksetzen lassen.
+Ihr Passwort wurde sicher in unserer Datenbank gespeichert und kann nicht wiederhergestellt werden. Falls es vergessen werden sollte, können Sie es über die E-Mail-Adresse, die Ihrem Account zugeordnet ist, zurücksetzen lassen.
 
-Vielen Dank für deine Registrierung.
+Vielen Dank für Ihre Registrierung.
 
 {EMAIL_SIG}',
 ));
@@ -1110,9 +1110,9 @@ Vielen Dank für deine Registrierung.
 $email = array_merge($email, array(
 	'email/cron_formel1.txt' 		=> '{EMAILSUBJECT:} Formel 1 Tippspiel Erinnerung
 
-Hallo {USERNAME},
+Guten Tag {USERNAME},
 
-vergiss bitte nicht Deinen Formel 1 Tipp auf {SITENAME} abzugeben.
+vergiss bitte nicht Ihren Formel 1 Tipp auf {SITENAME} abzugeben.
 
 Das nächste Rennen findet an diesem Wochenende statt!
 
