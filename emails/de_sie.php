@@ -401,7 +401,7 @@ $email = array_merge($email, array(
 
 Guten Tag {USERNAME},
 
-Sie erhalten diese Benachrichtigung, weil Sie das Forum „{FORUM_NAME}“ auf „{SITENAME}“ beobachten. Seit Ihrem letzten Besuch wurde in diesem Forum eine neue Antwort auf das Thema „{TOPIC_TITLE}“ erstellt. Sie können den folgenden Link benutzt, um den ersten ungelesenen Beitrag anzusehen. Sie erhalten keine weitere Benachrichtigung, bis Sie das Thema besucht haben.
+Sie erhalten diese Benachrichtigung, weil Sie das Forum „{FORUM_NAME}“ auf „{SITENAME}“ beobachten. Seit Ihrem letzten Besuch wurde in diesem Forum eine neue Antwort auf das Thema „{TOPIC_TITLE}“ erstellt. Sie können den folgenden Link benutzen, um den ersten ungelesenen Beitrag anzusehen. Sie erhalten keine weitere Benachrichtigung, bis Sie das Thema besucht haben.
 
 {U_NEWEST_POST}
 
@@ -495,7 +495,7 @@ $email = array_merge($email, array(
 
 Guten Tag {USERNAME},
 
-Sie erhalten diese Benachrichtigung, weil Sie das Bild „{IMAGE_NAME}“ auf „{SITENAME}“ beobachten. Seit Ihrem letzten Besuch wurde zu diesem Bild ein neuer Kommentar abgegeben. Sie können den folgenden Link benutzt, um den Kommentar zu lesen.
+Sie erhalten diese Benachrichtigung, weil Sie das Bild „{IMAGE_NAME}“ auf „{SITENAME}“ beobachten. Seit Ihrem letzten Besuch wurde zu diesem Bild ein neuer Kommentar abgegeben. Sie können den folgenden Link benutzen, um den Kommentar zu lesen.
 
 {U_IMAGE}
 
@@ -511,7 +511,7 @@ $email = array_merge($email, array(
 
 Guten Tag {USERNAME},
 
-Sie erhalten diese Benachrichtigung, weil Sie das Album „{ALBUM_NAME}“ auf „{SITENAME}“ beobachten. Seit Ihrem letzten Besuch wurde in diesem Album ein neues Bild hochgeladen: „{IMAGE_NAME}“. Sie können den folgenden Link benutzt, um das Album anzusehen.
+Sie erhalten diese Benachrichtigung, weil Sie das Album „{ALBUM_NAME}“ auf „{SITENAME}“ beobachten. Seit Ihrem letzten Besuch wurde in diesem Album ein neues Bild hochgeladen: „{IMAGE_NAME}“. Sie können den folgenden Link benutzen, um das Album anzusehen.
 
 {U_ALBUM}
 
@@ -527,7 +527,7 @@ $email = array_merge($email, array(
 
 Guten Tag {USERNAME},
 
-Sie erhalten diese Benachrichtigung, weil Sie das Forum „{FORUM_NAME}“ auf „{SITENAME}“ beobachten. Seit Ihrem letzten Besuch wurde in diesem Forum ein neues Thema erstellt: „{TOPIC_TITLE}“. Sie können den folgenden Link benutzt, um das Forum anzusehen. Sie erhalten keine weitere Benachrichtigung, bis Sie das Forum besucht haben.
+Sie erhalten diese Benachrichtigung, weil Sie das Forum „{FORUM_NAME}“ auf „{SITENAME}“ beobachten. Seit Ihrem letzten Besuch wurde in diesem Forum ein neues Thema erstellt: „{TOPIC_TITLE}“. Sie können den folgenden Link benutzen, um das Forum anzusehen. Sie erhalten keine weitere Benachrichtigung, bis Sie das Forum besucht haben.
 
 {U_FORUM}
 
@@ -824,7 +824,7 @@ $email = array_merge($email, array(
 
 Guten Tag {USERNAME},
 
-Sie erhalten diese Benachrichtigung, weil Sie das Thema „{TOPIC_TITLE}“ auf „{SITENAME}“ beobachten. Seit Ihrem letzten Besuch wurde zu diesem Thema eine neue Antwort erstellt. Sie können den folgenden Link benutzt, um die neuen Antworten anzusehen. Sie erhalten keine weitere Benachrichtigung, bis Sie das Thema besucht haben.
+Sie erhalten diese Benachrichtigung, weil Sie das Thema „{TOPIC_TITLE}“ auf „{SITENAME}“ beobachten. Seit Ihrem letzten Besuch wurde zu diesem Thema eine neue Antwort erstellt. Sie können den folgenden Link benutzen, um die neuen Antworten anzusehen. Sie erhalten keine weitere Benachrichtigung, bis Sie das Thema besucht haben.
 
 Wenn Sie die neuesten Antworten seit Ihrem letzten Besuch ansehen möchten, verwenden Sie folgenden Link:
 {U_NEWEST_POST}
@@ -923,9 +923,9 @@ Guten Tag {USERNAME},
 
 In letzter Zeit haben Sie mindestens 2 Erinnerungen von uns bekommen. 
 
-Da Sie jedoch kein Interesse zeigst, sich an Aktivitäten auf {SITENAME} zu beteiligen, wurde beschlossen Ihr Benutzerkonto zu löschen.
+Da Sie jedoch kein Interesse zeigen, sich an Aktivitäten auf {SITENAME} zu beteiligen, wurde beschlossen Ihr Benutzerkonto zu löschen.
 
-Die Löschung Ihres Kontos kann nicht mehr rückgängig gemacht werden. Solltest Sie sich doch irgendwann entschließen sich wieder bei uns zu beteiligen, müsstest Sie sich erneut registrieren.
+Die Löschung Ihres Kontos kann nicht mehr rückgängig gemacht werden. Sollten Sie sich doch irgendwann entschließen sich wieder bei uns zu beteiligen, müsstest Sie sich erneut registrieren.
 
 {EMAIL_SIG}',
 ));
