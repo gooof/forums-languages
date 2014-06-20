@@ -11922,7 +11922,7 @@ $lang = array_merge($lang, array(
 
 	'ADD_USER'					=> 'User hinzufügen',
 	'ADD_USER_EXPLAIN'			=> 'Neuen User erstellen. Wenn Ihre Aktivierungs-Einstellungen allein den Admin berechtigen, haben Sie die Option, den User sofort zu aktivieren.',
-	'ADD_USER_MOD_INSTALLED'	=> 'User hinzufügen MOD Version %s installiert<br />Bitte versichere dich, Administrative Berechtigungen dieses Mods, nur für User zu gesatten, denen Sie es ermöglichen wollen, auf dieses Modul zuzugreifen.',
+	'ADD_USER_MOD_INSTALLED'	=> 'User hinzufügen MOD Version %s installiert<br />Bitte versichern Sie sich, Administrative Berechtigungen dieses Mods, nur für User zu gesatten, denen Sie es ermöglichen wollen, auf dieses Modul zuzugreifen.',
 	'ADD_USER_MOD_UPDATED'		=> 'User hinzufügen MOD upgedated zu Version %s',
 	'ADMIN_ACTIVATE'			=> 'Account aktivieren',
 
