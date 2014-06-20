@@ -335,7 +335,7 @@ Sie können das Thema mit folgendem Link erreichen:
 
 {U_TOPIC}
 
-{FROM_USERNAME} kann Ihnen auch eine Nachricht geschickt haben, die Sie unten finden können. Bitte beachten Sie, dass diese Nachricht nicht durch einen Administrator des Boards geprüft wurde. Wenn Sie dich über den Erhalt dieser E-Mail beschweren möchten, wenden Sie sich bitte an die Board-Administration unter {BOARD_CONTACT}. Bitte fügen Sie die kompletten Nachrichtenkopfzeilen bei, wenn Sie sich an diese Adresse wenden.
+{FROM_USERNAME} kann Ihnen auch eine Nachricht geschickt haben, die Sie unten finden können. Bitte beachten Sie, dass diese Nachricht nicht durch einen Administrator des Boards geprüft wurde. Wenn Sie sich über den Erhalt dieser E-Mail beschweren möchten, wenden Sie sich bitte an die Board-Administration unter {BOARD_CONTACT}. Bitte fügen Sie die kompletten Nachrichtenkopfzeilen bei, wenn Sie sich an diese Adresse wenden.
 
 ----------
 
@@ -881,7 +881,7 @@ Um das neue Passwort zu verwenden, müssen Sie es aktivieren. Verwenden Sie dazu
 
 {U_ACTIVATE}
 
-Nach erfolgreicher Aktivierung können Sie dich mit folgendem Passwort anmelden:
+Nach erfolgreicher Aktivierung können Sie sich mit folgendem Passwort anmelden:
 
 Passwort: {PASSWORD}
 
@@ -925,7 +925,7 @@ In letzter Zeit haben Sie mindestens 2 Erinnerungen von uns bekommen.
 
 Da Sie jedoch kein Interesse zeigst, sich an Aktivitäten auf {SITENAME} zu beteiligen, wurde beschlossen Ihr Benutzerkonto zu löschen.
 
-Die Löschung Ihres Kontos kann nicht mehr rückgängig gemacht werden. Solltest Sie Dich doch irgendwann entschließen Dich wieder bei uns zu beteiligen, müsstest Sie Dich erneut registrieren.
+Die Löschung Ihres Kontos kann nicht mehr rückgängig gemacht werden. Solltest Sie sich doch irgendwann entschließen sich wieder bei uns zu beteiligen, müsstest Sie sich erneut registrieren.
 
 {EMAIL_SIG}',
 ));
@@ -937,7 +937,7 @@ $email = array_merge($email, array(
 
 Guten Tag {USERNAME},
 
-Wir haben festgestellt, dass Sie dich seit einiger Zeit nicht auf {SITENAME} eingeloggt haben.
+Wir haben festgestellt, dass Sie sich seit einiger Zeit nicht auf {SITENAME} eingeloggt haben.
 
 Schau doch bitte mal wieder auf {U_BOARD} vorbei um einen Blick auf unsere aktuellen Themen im Forum zu werfen. 
 
@@ -981,7 +981,7 @@ Guten Tag {USERNAME},
 
 Wir haben festgestellt, dass Sie vor einiger Zeit ein Benutzerkonto auf {SITENAME} registriert haben.
 
-Obwohl Ihr Benutzerkonto aktiviert ist, haben Sie dich noch nicht im Forum eingeloggt. 
+Obwohl Ihr Benutzerkonto aktiviert ist, haben Sie sich noch nicht im Forum eingeloggt. 
 
 Hier finden Sie nochmal Ihre Benutzerdaten und die Board-URL.
 ----------------------------
@@ -1007,7 +1007,7 @@ Guten Tag {USERNAME},
 
 Sie haben sich vor einiger Zeit auf {SITENAME} registriert. 
 
-Wir haben festgestellt, dass Sie dich noch nicht aktiv an der Community beteiligt und noch keinen Beitrag geschrieben haben.
+Wir haben festgestellt, dass Sie sich noch nicht aktiv an der Community beteiligt und noch keinen Beitrag geschrieben haben.
 
 Nimm Ihnen doch bitte kurz Zeit, um einen Blick auf unsere aktuellen Themen im Forum unter {U_BOARD} zu werfen. Vielleicht finden Sie ja ein Thema interessant und werden darin mit einbezogen.
 

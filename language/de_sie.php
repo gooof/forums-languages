@@ -10,7 +10,7 @@ $lang = array_merge($lang, array(
 	'CALENDAR_TITLE'		=> 'Kalender',
 	'CALENDAR_NUMBER_ATTEND'	=> 'Die Anzahl von Leuten, die Sie zu diesem Termin einlädst',
 	'CALENDAR_NUMBER_ATTEND_EXPLAIN'	=> '(gebe für sich selbst eine 1 ein)',
-	'CALENDAR_RESPOND'		=> 'Bitte registriere dich hier für den Termin',
+	'CALENDAR_RESPOND'		=> 'Bitte registrieren Sie sich hier für den Termin',
 	'CALENDAR_WILL_ATTEND'	=> 'Wirst Sie an diesem Termin teilnehmen?',
 	'COL_HEADCOUNT'			=> 'Anzahl',
 	'COL_WILL_ATTEND'		=> 'wird teilnehmen?',
@@ -462,7 +462,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_ERROR_PASSWORD_CONVERT'		=> 'Als dieses Board aktualisiert wurde, konnte Ihr Passwort nicht konvertiert werden. Bitte %sfordern Sie ein neues Passwort an%s. Wenn Sie weiterhin Probleme beim Zugriff auf dieses Board haben, wenden Sie sich bitte an die %sBoard-Administration%s.',
 	'LOGIN_ERROR_USERNAME'				=> 'Sie haben einen fehlerhaften Benutzernamen angegeben. Bitte prüfen Sie Ihren Benutzernamen und versuchen Sie es erneut. Wenn Sie weiterhin auf Probleme stoßen, wenden Sie sich bitte an die %sBoard-Administration%s.',
 	'LOGIN_FORUM'						=> 'Um in diesem Forum einen Beitrag anzusehen oder zu erstellen, müssen Sie das Foren-Passwort eingeben.',
-	'LOGIN_INFO'						=> 'Sie müssen in diesem Forum registriert sein, um sich anmelden zu können. Die Registrierung ist in wenigen Augenblicken erledigt und ermöglicht es Ihnen, auf weitere Funktionen zuzugreifen. Die Board-Administration kann registrierten Benutzern auch zusätzliche Berechtigungen zuweisen. Beachten Sie bitte unsere Nutzungsbedingungen und die verwandten Regelungen, bevor Sie dich registrierst. Bitte beachte auch die jeweiligen Forenregeln, wenn Sie dich in diesem Board bewegen.',
+	'LOGIN_INFO'						=> 'Sie müssen in diesem Forum registriert sein, um sich anmelden zu können. Die Registrierung ist in wenigen Augenblicken erledigt und ermöglicht es Ihnen, auf weitere Funktionen zuzugreifen. Die Board-Administration kann registrierten Benutzern auch zusätzliche Berechtigungen zuweisen. Beachten Sie bitte unsere Nutzungsbedingungen und die verwandten Regelungen, bevor Sie sich registrierst. Bitte beachte auch die jeweiligen Forenregeln, wenn Sie sich in diesem Board bewegen.',
 	'LOGIN_VIEWFORUM'					=> 'Um Beiträge in diesem Forum anzusehen, müssen Sie auf diesem Board registriert und angemeldet sein.',
 	'LOGIN_EXPLAIN_EDIT'				=> 'Um Beiträge in diesem Forum zu ändern, müssen Sie registriert und angemeldet sein.',
 	'LOGIN_EXPLAIN_VIEWONLINE'			=> 'Um die Wer-ist-online-Liste anzusehen, müssen Sie auf diesem Board registriert und angemeldet sein.',
@@ -930,7 +930,7 @@ $lang = array_merge($lang, array(
 	'NEWSBOX_REG'			=> 'Jetzt kostenlos <a href="ucp.php?mode=register">registrieren</a> und alle Funktionen nutzen.',
 	'NEWSBOX_WELCOME'		=> 'Willkommen im Forum',
 	'NEWSBOX_TITLE'		=> 'Willkommen im Forum',
-	'NEWSBOX_TEXT'		=> 'Sie betrachtest das Forum derzeit als Gast und haben damit nur eingeschränkten Zugriff auf die Diskussionen und Funktionen im Forum. Wenn Sie dich kostenlos registrierst, können Sie neue Themen unter Ihrem Namen verfassen und mit anderen Mitgliedern private Nachrichten austauschen, an Umfragen teilnehmen und weitere spezielle Funktionen nutzen. Die Registrierung ist einfach, unkompliziert, schnell und vor allem kostenlos, also registriere dich jetzt !',
+	'NEWSBOX_TEXT'		=> 'Sie betrachtest das Forum derzeit als Gast und haben damit nur eingeschränkten Zugriff auf die Diskussionen und Funktionen im Forum. Wenn Sie sich kostenlos registrierst, können Sie neue Themen unter Ihrem Namen verfassen und mit anderen Mitgliedern private Nachrichten austauschen, an Umfragen teilnehmen und weitere spezielle Funktionen nutzen. Die Registrierung ist einfach, unkompliziert, schnell und vor allem kostenlos, also registrieren Sie sich jetzt !',
 	'AUTOMATIC'			=> 'Automatisch',
 	'GALLERY'			=> 'Galerie',
 	'GALLERY_EXPLAIN'	=> 'Bilder Galerie',
@@ -1027,7 +1027,7 @@ $lang = array_merge($lang, array(
 	'FILES_PER_USER_ZERO'	=> 'Anhänge pro Mitglied <strong>keine</strong>',
 	'START_COUNTER'			=> ' und hatten seit dem schon <strong>%s</strong> Besucher',
 	'PRIVATE'				=> 'Privat',
-	'OAUTH'					=> '<span onclick="return false;" onmouseout="UnTip()" onmouseover="Tip(\'Das Social Login von userboard.org bietet Ihnen die möglichkeit, dich über Seiten wie Google oder Facebook in dieses Forum einzuloggen bzw. zu registrieren.&lt;br&gt; &lt;a target=\\\'_blank\\\' href=\\\'http://www.userboard.org/sociallogin.phpbb3\\\'&gt;&#187; Mehr zum Social Login&lt;\/a&gt;&lt;br&gt; &lt;a target=\\\'_blank\\\' href=\\\'http://www.userboard.org/privacy_oauth.phpbb3\\\'&gt;&#187; Datenschutzrichtlinien&lt;\/a&gt;\', STICKY, true, WIDTH, 240, CLICKCLOSE, true, PADDING, 6, ABOVE, true);">Verbinden mit Social Login &#187;</span>',
+	'OAUTH'					=> '<span onclick="return false;" onmouseout="UnTip()" onmouseover="Tip(\'Das Social Login von userboard.org bietet Ihnen die möglichkeit, sich über Seiten wie Google oder Facebook in dieses Forum einzuloggen bzw. zu registrieren.&lt;br&gt; &lt;a target=\\\'_blank\\\' href=\\\'http://www.userboard.org/sociallogin.phpbb3\\\'&gt;&#187; Mehr zum Social Login&lt;\/a&gt;&lt;br&gt; &lt;a target=\\\'_blank\\\' href=\\\'http://www.userboard.org/privacy_oauth.phpbb3\\\'&gt;&#187; Datenschutzrichtlinien&lt;\/a&gt;\', STICKY, true, WIDTH, 240, CLICKCLOSE, true, PADDING, 6, ABOVE, true);">Verbinden mit Social Login &#187;</span>',
 	'PREFIX'				=> 'Präfix',
 	'UCP_OPENID_LOGIN'		=> 'Social Login',
 	'ARCADE_EXPLAIN'		=> 'Spiele hier Ihre Lieblingsspiele und sichere Ihnen die Highscores. Onlinespiele bis der Arzt kommt!',
@@ -1155,7 +1155,7 @@ $lang = array_merge($lang, array(
 	'THANKS_REMOVE'			=> 'Mein <i>Danke</i> widerrufen',
 	'THANKS_CANT_ADD'		=> 'Sie haben sich bereits für diesen Beitrag bedankt.',
 	'THANKS_CANT_REMOVE'	=> 'Sie haben sich nicht bedankt in diesem Beitrag, daher kann auch keine Bedankung gelöscht werden.',
-	'THANKS_DISALLOW'		=> 'Es ist nicht erlaubt dich in diesem Beitrag zu zu bedanken.',	
+	'THANKS_DISALLOW'		=> 'Es ist nicht erlaubt sich in diesem Beitrag zu zu bedanken.',	
 	'THANKS_POST'			=> ' Post',
 	'THANKS_POSTS'			=> ' Posts',
 	'THANKS_TIME'			=> 'x',
@@ -1496,8 +1496,8 @@ $lang = array_merge($lang, array(
 	'EMPTY_OTHER_WALL'		=> '%s hat noch nichts geteilt.',
 
 	'NOTIFY'					=> 'Benachrichtigung',
-	'NOTIFY_MENTION_POST'		=> '%1$s hat dich in dem folgenden Beitrag erwähnt:<br />» <a class="fwsmall-text" href="%2$s">%3$s</a>',
-	'NOTIFY_MENTION_COMMENT'	=> '%1$s hat dich in einem Kommentar erwähnt.',
+	'NOTIFY_MENTION_POST'		=> '%1$s hat sich in dem folgenden Beitrag erwähnt:<br />» <a class="fwsmall-text" href="%2$s">%3$s</a>',
+	'NOTIFY_MENTION_COMMENT'	=> '%1$s hat sich in einem Kommentar erwähnt.',
 	'NOTIFY_NEW_COMMENT'		=> '%1$s hat einen neuen Kommentar geschrieben.',
 	'NOTIFY_NEW_TOPIC'			=> '%1$s hat ein neues Thema erstellt.<br /> » <a class="fwsmall-text" href="%2$s">%3$s</a>',
 	'NOTIFY_NEW_POST'			=> '%1$s hat einen neuen Beitrag erstellt.<br /> » <a class="fwsmall-text" href="%2$s">%3$s</a>',
@@ -1828,7 +1828,7 @@ $lang = array_merge($lang, array(
 	'NO_LOCATION'				=> 'Kann den Pfad nicht ermitteln. Wenn Sie wissen, dass Imagemagick installiert ist, können Sie den Pfad auch später noch im Administrations-Bereich angeben.',
 	'NO_TABLES_FOUND'			=> 'Keine Tabellen gefunden.',
 
-	'OVERVIEW_BODY'				=> 'Willkommen bei phpBB3!<br /><br />phpBB ist die am weitesten verbreitete Open-Source-Forensoftware. phpBB3 ist die jüngste Fortsetzung einer im Jahr 2000 begonnenen Entwicklungsgeschichte. Wie seine Vorversionen ist phpBB3 funktionsreich, benutzerfreundlich und vollständig vom phpBB-Team unterstützt. phpBB3 verbessert deutlich, was phpBB2 beliebt gemacht hat und bringt neue Funktionen, die häufig gefragt und nicht in den Vorversionen enthalten waren. Wir hoffen, dass es Ihre Erwartungen übertrifft.<br /><br />Dieses Installations-System wird dich durch die Installation von phpBB3, das Update von einer älteren auf die aktuelle Version von phpBB3 als auch die Konvertierung von einem anderen Software-Paket (inklusive phpBB2) führen. Für weitere Informationen empfehlen wir es Ihnen, <a href="../docs/INSTALL.html">die Installationsanweisungen</a> zu lesen.<br /><br />Um die Lizenz von phpBB3 zu lesen oder Informationen über den Erhalt von Support und unsere Einstellung dazu zu erhalten, wählen Sie bitte die entsprechende Option aus dem seitlichen Menü aus.</p><h2>Info zum deutschen Komplettpaket</h2><p>Um es für deutsche Anwender so einfach wie möglich zu machen, sind in diesem Komplettpaket bereits folgende Funktionen eingebaut:</p><ul><li>Die Kurzanleitung <a href="../docs/Schnelleinstieg.pdf">phpBB 3.0 - Schnelleinstieg</a></li><li>Die deutschen Sprachdateien (Du- und Sie-Version)</li></ul>.<p>Um mit der Installation fortzufahren, wählen Sie bitte oben das entsprechende Register aus.',
+	'OVERVIEW_BODY'				=> 'Willkommen bei phpBB3!<br /><br />phpBB ist die am weitesten verbreitete Open-Source-Forensoftware. phpBB3 ist die jüngste Fortsetzung einer im Jahr 2000 begonnenen Entwicklungsgeschichte. Wie seine Vorversionen ist phpBB3 funktionsreich, benutzerfreundlich und vollständig vom phpBB-Team unterstützt. phpBB3 verbessert deutlich, was phpBB2 beliebt gemacht hat und bringt neue Funktionen, die häufig gefragt und nicht in den Vorversionen enthalten waren. Wir hoffen, dass es Ihre Erwartungen übertrifft.<br /><br />Dieses Installations-System wird sich durch die Installation von phpBB3, das Update von einer älteren auf die aktuelle Version von phpBB3 als auch die Konvertierung von einem anderen Software-Paket (inklusive phpBB2) führen. Für weitere Informationen empfehlen wir es Ihnen, <a href="../docs/INSTALL.html">die Installationsanweisungen</a> zu lesen.<br /><br />Um die Lizenz von phpBB3 zu lesen oder Informationen über den Erhalt von Support und unsere Einstellung dazu zu erhalten, wählen Sie bitte die entsprechende Option aus dem seitlichen Menü aus.</p><h2>Info zum deutschen Komplettpaket</h2><p>Um es für deutsche Anwender so einfach wie möglich zu machen, sind in diesem Komplettpaket bereits folgende Funktionen eingebaut:</p><ul><li>Die Kurzanleitung <a href="../docs/Schnelleinstieg.pdf">phpBB 3.0 - Schnelleinstieg</a></li><li>Die deutschen Sprachdateien (Du- und Sie-Version)</li></ul>.<p>Um mit der Installation fortzufahren, wählen Sie bitte oben das entsprechende Register aus.',
 
 	'PCRE_UTF_SUPPORT'				=> 'PCRE UTF-8-Unterstützung',
 	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB wird <strong>nicht</strong> funktionieren, wenn Ihre PHP-Installation ohne UTF-8-Unterstützung in der PCRE-Erweiterung kompiliert wurde.',
@@ -1885,7 +1885,7 @@ $lang = array_merge($lang, array(
 	'SUB_LICENSE'				=> 'Lizenz',
 	'SUB_SUPPORT'				=> 'Support',
 	'SUCCESSFUL_CONNECT'		=> 'Verbindung erfolgreich',
-	'SUPPORT_BODY'				=> 'Für die aktuelle, stabile Version von phpBB3 wird kostenloser Support gewährt. Dies umfasst:</p><ul><li>Installation</li><li>Konfiguration</li><li>Technische Fragen</li><li>Probleme durch eventuelle Fehler in der Software</li><li>Aktualisierung von Release Candidates (RC) oder stabilen Versionen zur aktuellen stabilen Version</li><li>Konvertierungen von phpBB 2.0.x zu phpBB3</li><li>Konvertierung von anderen Forensoftwaren zu phpBB3 (Bitte beachte das <a href="http://www.phpbb.com/community/viewforum.php?f=65">Konvertierungs-Forum (englisch)</a> (<a href="http://www.phpbb.de/go/3/konvertierung">Konvertierungs-Support auf phpBB.de</a>))</li></ul><p>Wir ermutigen Benutzer, die noch eine Beta-Version von phpBB3 verwenden, ihre Installation mit einer aktuellen Ausgabe von phpBB3 zu ersetzen.</p><h2>Modifikationen / Styles</h2><p>Fragen bezüglich von Modifikationen stellen Sie bitte im <a href="http://www.phpbb.com/community/viewforum.php?f=81">englischsprachigen Modifikationen-Forum</a> (<a href="http://www.phpbb.de/go/3/mods">Modifikationen auf phpBB.de</a>).<br />Fragen bezüglich Styles, Templates und Grafiksammlungen stellen Sie bitte im <a href="http://www.phpbb.com/community/viewforum.php?f=80">englischsprachigen Styles-Forum</a> (<a href="http://www.phpbb.de/go/3/styles">Styles auf phpBB.de</a>).<br /><br />Wenn sich Ihre Frage direkt auf ein bestimmtes Paket bezieht, stellen Sie Ihre Frage bitte direkt in dem Thema, das für das Paket vorgesehen ist.</p><h2>Support erhalten</h2><p><a href="http://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">Das phpBB Willkommenspaket (englisch)</a><br /><a href="http://www.phpbb.com/support/">Supportbereich (englisch)</a><br /><a href="http://www.phpbb.com/support/documentation/3.0/quickstart/">Schnellstartanleitung (englisch)</a><br /><a href="http://www.phpbb.de/go/3/ersteschritte">Erste Schritte mit phpBB</a><br /><a href="http://www.phpbb.de/go/3/support">deutschsprachiger Support auf phpBB.de</a><br /><a href="http://www.phpbb.de/go/3/schnellstart">Schnellstartanleitung</a><br /><br />Um immer die neuesten Informationen zu Updates und Veröffentlichungen zu erhalten, sollten Sie dich für den <a href="http://www.phpbb.com/support/">phpBB Newsletter (englisch)</a> anmelden (<a href="http://www.phpbb.de/go/newsletter">deutschsprachiger phpBB.de-Newsletter</a>).<br /><br />',
+	'SUPPORT_BODY'				=> 'Für die aktuelle, stabile Version von phpBB3 wird kostenloser Support gewährt. Dies umfasst:</p><ul><li>Installation</li><li>Konfiguration</li><li>Technische Fragen</li><li>Probleme durch eventuelle Fehler in der Software</li><li>Aktualisierung von Release Candidates (RC) oder stabilen Versionen zur aktuellen stabilen Version</li><li>Konvertierungen von phpBB 2.0.x zu phpBB3</li><li>Konvertierung von anderen Forensoftwaren zu phpBB3 (Bitte beachte das <a href="http://www.phpbb.com/community/viewforum.php?f=65">Konvertierungs-Forum (englisch)</a> (<a href="http://www.phpbb.de/go/3/konvertierung">Konvertierungs-Support auf phpBB.de</a>))</li></ul><p>Wir ermutigen Benutzer, die noch eine Beta-Version von phpBB3 verwenden, ihre Installation mit einer aktuellen Ausgabe von phpBB3 zu ersetzen.</p><h2>Modifikationen / Styles</h2><p>Fragen bezüglich von Modifikationen stellen Sie bitte im <a href="http://www.phpbb.com/community/viewforum.php?f=81">englischsprachigen Modifikationen-Forum</a> (<a href="http://www.phpbb.de/go/3/mods">Modifikationen auf phpBB.de</a>).<br />Fragen bezüglich Styles, Templates und Grafiksammlungen stellen Sie bitte im <a href="http://www.phpbb.com/community/viewforum.php?f=80">englischsprachigen Styles-Forum</a> (<a href="http://www.phpbb.de/go/3/styles">Styles auf phpBB.de</a>).<br /><br />Wenn sich Ihre Frage direkt auf ein bestimmtes Paket bezieht, stellen Sie Ihre Frage bitte direkt in dem Thema, das für das Paket vorgesehen ist.</p><h2>Support erhalten</h2><p><a href="http://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">Das phpBB Willkommenspaket (englisch)</a><br /><a href="http://www.phpbb.com/support/">Supportbereich (englisch)</a><br /><a href="http://www.phpbb.com/support/documentation/3.0/quickstart/">Schnellstartanleitung (englisch)</a><br /><a href="http://www.phpbb.de/go/3/ersteschritte">Erste Schritte mit phpBB</a><br /><a href="http://www.phpbb.de/go/3/support">deutschsprachiger Support auf phpBB.de</a><br /><a href="http://www.phpbb.de/go/3/schnellstart">Schnellstartanleitung</a><br /><br />Um immer die neuesten Informationen zu Updates und Veröffentlichungen zu erhalten, sollten Sie sich für den <a href="http://www.phpbb.com/support/">phpBB Newsletter (englisch)</a> anmelden (<a href="http://www.phpbb.de/go/newsletter">deutschsprachiger phpBB.de-Newsletter</a>).<br /><br />',
 	'SYNC_FORUMS'				=> 'Beginne, die Foren zu synchronisieren',
 	'SYNC_POST_COUNT'			=> 'Synchronisiere post_counts',
 	'SYNC_POST_COUNT_ID'		=> 'Synchronisiere post_counts von <var>Eintrag</var> %1$s bis %2$s.',
@@ -1911,7 +1911,7 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ALL_FILES_UP_TO_DATE'		=> 'Alle Dateien sind auf dem Stand der neuesten phpBB-Version. Sie sollten dich nun <a href="../ucp.php?mode=login">auf Ihrem Board anmelden</a> und prüfen, ob alles einwandfrei funktioniert. Vergess nicht, das Installations-Verzeichnis „install“ zu löschen, umzubenennen oder zu verschieben! Bitte senden Sie uns aktualisierte Informationen über Ihren Server und Ihre Board-Konfiguration über das <a href="../ucp.php?mode=login&amp;redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">Statistik-Übermittlungs</a>-Modul in Ihrem Administrations-Bereich.',
+	'ALL_FILES_UP_TO_DATE'		=> 'Alle Dateien sind auf dem Stand der neuesten phpBB-Version. Sie sollten sich nun <a href="../ucp.php?mode=login">auf Ihrem Board anmelden</a> und prüfen, ob alles einwandfrei funktioniert. Vergess nicht, das Installations-Verzeichnis „install“ zu löschen, umzubenennen oder zu verschieben! Bitte senden Sie uns aktualisierte Informationen über Ihren Server und Ihre Board-Konfiguration über das <a href="../ucp.php?mode=login&amp;redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">Statistik-Übermittlungs</a>-Modul in Ihrem Administrations-Bereich.',
 	'ARCHIVE_FILE'				=> 'Quelldatei im Archiv',
 
 	'BACK'				=> 'Zurück',
@@ -1927,7 +1927,7 @@ $lang = array_merge($lang, array(
 	'COLLECTED_INFORMATION'			=> 'Datei-Informationen',
 	'COLLECTED_INFORMATION_EXPLAIN'	=> 'Die folgende Liste zeigt Ihnen die Dateien, die eine Aktualisierung benötigen. Bitte lesen Sie die Informationen vor jedem Abschnitt durch, um zu verstehen was passiert und was Sie möglicherweise tun müssen, um ein erfolgreiches Update durchzuführen.',
 	'COLLECTING_FILE_DIFFS'			=> 'Ermittle Datei-Unterschiede',
-	'COMPLETE_LOGIN_TO_BOARD'		=> 'Sie sollten dich jetzt <a href="../ucp.php?mode=login">in Ihrem Forum anmelden</a> und prüfen, ob alles funktioniert. Vergiss nicht, das Installations-Verzeichnis „install“ zu löschen, umzubenennen, oder zu verschieben!',
+	'COMPLETE_LOGIN_TO_BOARD'		=> 'Sie sollten sich jetzt <a href="../ucp.php?mode=login">in Ihrem Forum anmelden</a> und prüfen, ob alles funktioniert. Vergiss nicht, das Installations-Verzeichnis „install“ zu löschen, umzubenennen, oder zu verschieben!',
 	'CONTINUE_UPDATE_NOW'			=> 'Den Update-Prozess jetzt fortsetzen',		// Shown within the database update script at the end if called from the updater
 	'CONTINUE_UPDATE'				=> 'Update jetzt fortsetzen',					// Shown after file upload to indicate the update process is not yet finished
 	'CURRENT_FILE'					=> 'Anfang des Konflikts — Inhalt der originalen Datei vor Aktualisierung',
@@ -2123,7 +2123,7 @@ $lang = array_merge($lang, array(
 	'CONFIG_SITE_DESC'				=> 'Ein kurzer Text, der Ihr Forum beschreibt',
 	'CONFIG_SITENAME'				=> 'deinedomain.tld',
 
-	'DEFAULT_INSTALL_POST'			=> 'Dies ist ein Beispielbeitrag Ihrer phpBB3-Installation. Alles scheint zu funktionieren. Wenn Sie wollen, können Sie diesen Beitrag löschen und mit der Einrichtung Ihres Boards fortfahren. Während des Installationsvorgangs wurden Ihrer ersten Kategorie und Ihrem ersten Forum passende Berechtigungen für die Benutzergruppen Administratoren, Bots, globale Moderatoren, Gäste, Registrierte Benutzer und Registrierte COPPA-Benutzer zugewiesen. Wenn Sie dich entscheiden, auch Ihre erste Kategorie und Ihr erstes Forum zu löschen, dürfen Sie nicht vergessen, den genannten Gruppen entsprechende Rechte für alle neuen Kategorien und Foren, die Sie erstellen, zuzuweisen. Es wird jedoch empfohlen, Ihre erste Kategorie und Ihr erstes Forum umzubenennen und deren Rechte zu übernehmen, wenn neue Kategorien und Foren erstellt werden. Viel Spaß mit phpBB!',
+	'DEFAULT_INSTALL_POST'			=> 'Dies ist ein Beispielbeitrag Ihrer phpBB3-Installation. Alles scheint zu funktionieren. Wenn Sie wollen, können Sie diesen Beitrag löschen und mit der Einrichtung Ihres Boards fortfahren. Während des Installationsvorgangs wurden Ihrer ersten Kategorie und Ihrem ersten Forum passende Berechtigungen für die Benutzergruppen Administratoren, Bots, globale Moderatoren, Gäste, Registrierte Benutzer und Registrierte COPPA-Benutzer zugewiesen. Wenn Sie sich entscheiden, auch Ihre erste Kategorie und Ihr erstes Forum zu löschen, dürfen Sie nicht vergessen, den genannten Gruppen entsprechende Rechte für alle neuen Kategorien und Foren, die Sie erstellen, zuzuweisen. Es wird jedoch empfohlen, Ihre erste Kategorie und Ihr erstes Forum umzubenennen und deren Rechte zu übernehmen, wenn neue Kategorien und Foren erstellt werden. Viel Spaß mit phpBB!',
 
 	'FORUMS_FIRST_CATEGORY'			=> 'Ihre erste Kategorie',
 	'FORUMS_TEST_FORUM_DESC'		=> 'Beschreibung Ihres ersten Forums.',
@@ -3166,7 +3166,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'TERMS_OF_USE_CONTENT'	=> 'Mit dem Zugriff auf „%1$s“ wird zwischen Ihnen und dem Betreiber ein Vertrag mit folgenden Regelungen geschlossen:</p>
 		<h3>1. Nutzungsvertrag</h3>
-		<ol style="list-style-type: lower-alpha"><li>Mit dem Zugriff auf „%1$s“ (im Folgenden „das Board“) schließt Sie einen Nutzungsvertrag mit dem Betreiber des Boards ab (im Folgenden „Betreiber“) und erklären dich mit den nachfolgenden Regelungen einverstanden.</li>
+		<ol style="list-style-type: lower-alpha"><li>Mit dem Zugriff auf „%1$s“ (im Folgenden „das Board“) schließt Sie einen Nutzungsvertrag mit dem Betreiber des Boards ab (im Folgenden „Betreiber“) und erklären sich mit den nachfolgenden Regelungen einverstanden.</li>
 		<li>Wenn Sie mit diesen Regelungen nicht einverstanden sind, so dürfen Sie das Board nicht weiter nutzen. Für die Nutzung des Boards gelten jeweils die an dieser Stelle veröffentlichten Regelungen.</li>
 		<li>Der Nutzungsvertrag wird auf unbestimmte Zeit geschlossen und kann von beiden Seiten ohne Einhaltung einer Frist jederzeit gekündigt werden.</li></ol>
 
@@ -3176,7 +3176,7 @@ $lang = array_merge($lang, array(
 
 		<h3>3. Pflichten des Nutzers</h3>
 		<ol style="list-style-type: lower-alpha"><li>Sie erklären mit der Erstellung eines Beitrags, dass er keine Inhalte enthält, die gegen geltendes Recht oder die guten Sitten verstoßen. Sie erklären insbesondere, dass Sie das Recht besitzt, die in Ihren Beiträgen verwendeten Links und Bilder zu setzen bzw. zu verwenden.</li>
-		<li>Der Betreiber des Boards übt das Hausrecht aus. Bei Verstößen gegen diese Nutzungsbedingungen oder anderer im Board veröffentlichten Regeln kann der Betreiber dich nach Abmahnung zeitweise oder dauerhaft von der Nutzung dieses Boards ausschließen und Ihnen ein Hausverbot erteilen.</li>
+		<li>Der Betreiber des Boards übt das Hausrecht aus. Bei Verstößen gegen diese Nutzungsbedingungen oder anderer im Board veröffentlichten Regeln kann der Betreiber sich nach Abmahnung zeitweise oder dauerhaft von der Nutzung dieses Boards ausschließen und Ihnen ein Hausverbot erteilen.</li>
 		<li>Sie nehmen zur Kenntnis, dass der Betreiber keine Verantwortung für die Inhalte von Beiträgen übernimmt, die er nicht selbst erstellt hat oder die er nicht zur Kenntnis genommen hat. Sie gestatten dem Betreiber, Ihr Benutzerkonto, Beiträge und Funktionen jederzeit zu löschen oder zu sperren.</li>
 		<li>Sie gestatten dem Betreiber darüber hinaus, Ihre Beiträge abzuändern, sofern sie gegen o.&nbsp;g. Regeln verstoßen oder geeignet sind, dem Betreiber oder einem Dritten Schaden zuzufügen.</li></ol>
 
@@ -3202,7 +3202,7 @@ $lang = array_merge($lang, array(
 		<p>Ihre Daten werden auf zwei verschiedene Arten gesammelt:</p>
 		<ol style="list-style-type: decimal;"><li>phpBB erstellt bei Ihrem Besuch des Boards mehrere Cookies. Cookies sind kleine Textdateien, die Ihr Browser als temporäre Dateien ablegt. Zwei dieser Cookies enthalten eine eindeutige Benutzer-Nummer (Benutzer-ID) sowie eine anonyme Sitzungs-Nummer (Session-ID), die Ihnen von phpBB automatisch zugewiesen wird. Ein drittes Cookie wird erstellt, sobald Sie Themen besucht haben und wird dazu verwendet, Informationen über die von Ihnen gelesenen Beiträge zu speichern, um die ungelesenen Beiträge markieren zu können.</li>
 		<li>Weitere Daten werden gesammelt, wenn Informationen an den Betreiber übermittelt werden. Dies betrifft — ohne Anspruch auf Vollständigkeit — zum Beispiel Beiträge, die als Gast erstellt werden, Daten, die im Rahmen der Registrierung erfasst werden und die von Ihnen nach Ihrer Registrierung erstellten Nachrichten. Ihr Benutzerkonto besteht mindestens aus einem eindeutigen Benutzernamen, einem Passwort zur Anmeldung mit diesem Konto und einer persönlichen und gültigen E-Mail-Adresse.</li></ol>
-		<p>Ihr Passwort wird mit einer Einwege-Verschlüsselung (Hash) gespeichert, so dass es sicher ist. Jedoch wird Ihnen empfohlen, dieses Passwort nicht auf einer Vielzahl von Webseiten zu verwenden. Das Passwort ist Ihr Schlüssel zu Ihrem Benutzerkonto für das Board,  also gehen Sie mit ihm sorgsam um. Insbesondere wird dich kein Vertreter des Betreibers, der phpBB Group oder ein Dritter berechtigterweise nach Ihrem Passwort fragen. Solltest Sie Ihr Passwort vergessen haben, so können Sie die Funktion „Ich habe mein Passwort vergessen“ benutzt. Die phpBB-Software fragt dich dann nach Ihrem Benutzernamen und Ihrer E-Mail-Adresse und sendet anschließend ein neu generiertes Passwort an diese Adresse, mit dem Sie dann auf das Board zugreifen können.</p>
+		<p>Ihr Passwort wird mit einer Einwege-Verschlüsselung (Hash) gespeichert, so dass es sicher ist. Jedoch wird Ihnen empfohlen, dieses Passwort nicht auf einer Vielzahl von Webseiten zu verwenden. Das Passwort ist Ihr Schlüssel zu Ihrem Benutzerkonto für das Board,  also gehen Sie mit ihm sorgsam um. Insbesondere wird sich kein Vertreter des Betreibers, der phpBB Group oder ein Dritter berechtigterweise nach Ihrem Passwort fragen. Solltest Sie Ihr Passwort vergessen haben, so können Sie die Funktion „Ich habe mein Passwort vergessen“ benutzt. Die phpBB-Software fragt sich dann nach Ihrem Benutzernamen und Ihrer E-Mail-Adresse und sendet anschließend ein neu generiertes Passwort an diese Adresse, mit dem Sie dann auf das Board zugreifen können.</p>
 
 		<h3>Gestattung der Datenspeicherung</h3>
 		<p>Sie gestatten dem Betreiber, die von Ihnen im Rahmen der Registrierung eingegebenen Daten sowie laufende Zugriffsdaten (Datum und Uhrzeit der Nutzung, IP-Adresse und weitere von Ihrem Browser übermittelte Daten) zu speichern und für den Betrieb des Boards zu verwenden.</p>
@@ -3212,10 +3212,10 @@ $lang = array_merge($lang, array(
 		<p>Sie nehmen zur Kenntnis, dass die von Ihnen in Ihrem Profil angegebenen Daten und Ihre Beiträge je nach Konfiguration im Internet verfügbar und von jedermann abrufbar sein können.</p>
 
 		<h3>Gestattung der Kontaktaufnahme</h3>
-		<p>Sie gestatten dem Betreiber darüber hinaus, dich unter den von Ihnen angegebenen Kontaktdaten zu kontaktieren, sofern dies zur Übermittlung zentraler Informationen über das Board erforderlich ist. Darüber hinaus dürfen er und andere Benutzer dich kontaktieren, sofern Sie dies an entsprechender Stelle erlaubt haben.</p>
+		<p>Sie gestatten dem Betreiber darüber hinaus, sich unter den von Ihnen angegebenen Kontaktdaten zu kontaktieren, sofern dies zur Übermittlung zentraler Informationen über das Board erforderlich ist. Darüber hinaus dürfen er und andere Benutzer sich kontaktieren, sofern Sie dies an entsprechender Stelle erlaubt haben.</p>
 
 		<h3>Geltungsbereich dieser Richtlinie</h3>
-		<p>Diese Richtlinie umfasst nur den Bereich der Seiten, die die phpBB-Software umfassen. Sofern der Betreiber in anderen Bereichen seiner Software weitere personenbezogene Daten verarbeitet, wird er dich darüber gesondert informieren.</p>
+		<p>Diese Richtlinie umfasst nur den Bereich der Seiten, die die phpBB-Software umfassen. Sofern der Betreiber in anderen Bereichen seiner Software weitere personenbezogene Daten verarbeitet, wird er sich darüber gesondert informieren.</p>
 
 		<h3>Auskunftsrecht</h3>
 		<p>Der Betreiber erteilt Ihnen auf Anfrage Auskunft, welche Daten über Sie gespeichert sind.</p>
@@ -4364,7 +4364,7 @@ $lang = array_merge($lang, array(
 	'ACP_F1_SETTINGS_EXPLAIN'						=> 'Hier können Sie die Formel1 Tippspiel Einstellungen bearbeiten.',
 	'ACP_F1_SETTINGS_CONFIG'						=> 'Formel1 Einstellungen',
 	'ACP_F1_SETTINGS_MODERATOR'						=> 'Tippspiel Moderator',
-	'ACP_F1_SETTINGS_MODERATOR_EXPLAIN'				=> 'Dieses Mitglied muss in einer Moderatoren-Gruppe sein, wollen Sie keinen Moderator wählen Sie einfach dich selbst.<br />(Administratoren sind automatisch Moderator)',
+	'ACP_F1_SETTINGS_MODERATOR_EXPLAIN'				=> 'Dieses Mitglied muss in einer Moderatoren-Gruppe sein, wollen Sie keinen Moderator wählen Sie einfach sich selbst.<br />(Administratoren sind automatisch Moderator)',
 	'ACP_F1_SETTINGS_DEACTIVATED'					=> '--- deaktiviert ---',
 	'ACP_F1_SETTINGS_UPDATED'						=> 'Formel1 Einstellungen erfolgreich aktualisiert',
 	'ACP_F1_SETTINGS_ACCESS_GROUP'					=> 'Tippspiel Gruppe',
@@ -4941,8 +4941,8 @@ $lang = array_merge($lang, array(
 	'ARCADE_FULL_DONE' 					=> 'Vielen Dank für das Spielen von %s.<br /><br />%sKlicken Sie hier um das Spiel %s nochmal zu spielen%s<br /><br />%sKlicken Sie hier um zurück zu gehen %s%s<br /><br />%sZurück zum Spiele Index%s',
 	'ARCADE_TYPE_ERROR' 				=> 'Das Ergebnis wurde mit der falschen Methode abgeschickt und passt nicht zum Spiel Typ. Bitte benachrichtige den zuständigen Administrator oder schreiben Sie dies in das Forum.',
 	'ARCADE_SESSIONS_ERROR' 			=> 'Es gibt leider ein Problem mit der Session, es wurde keine zu diesem Spiel gefunden. Versuchen Sie es erneut oder teste ein anderes, wenn diese Fehler wiederholt auftritt gibt es vermutlich ein Problem mit dem Spiel.',
-	'ARCADE_REGISTER_MESSAGE_SCORE' 	=> 'Da Sie kein registriertes Mitglied oder nicht eingeloggt sind, werden Sie als Gast nicht gespeichert. <br /> <br /> Diese Website hat derzeit <b>%s</b> Spiele installiert und täglich werden mehr hinzugefügt.<br /> Wenn Sie alle Spiele spielen möchten, dann registriere dich bitte oder logge dich ein.<br /><br />Die Registrierung ist kostenlos und kann durch Anklicken %shier%s.',
-	'ARCADE_REGISTER_MESSAGE_PLAY' 		=> 'Da Sie kein registriertes Mitglied oder nicht angemeldet sind, können Sie nicht alle Spiele spielen.<br /><br />Diese Website hat derzeit <b>%s</b> Spiele installiert und täglich kommen neue dazu.<br />Wenn Sie alle Spiele spielen möchten, registriere dich bitte in diesem Forum oder logge dich ein.<br /><br />Die Registrierung ist kostenlos und geht %shier%s los.<br /><br />Wenn Sie dich angemeldet haben, klicken Sie weiter auf das Spiel, was Sie ausgewählt haben %shier%s.',
+	'ARCADE_REGISTER_MESSAGE_SCORE' 	=> 'Da Sie kein registriertes Mitglied oder nicht eingeloggt sind, werden Sie als Gast nicht gespeichert. <br /> <br /> Diese Website hat derzeit <b>%s</b> Spiele installiert und täglich werden mehr hinzugefügt.<br /> Wenn Sie alle Spiele spielen möchten, dann registrieren Sie sich bitte oder logge sich ein.<br /><br />Die Registrierung ist kostenlos und kann durch Anklicken %shier%s.',
+	'ARCADE_REGISTER_MESSAGE_PLAY' 		=> 'Da Sie kein registriertes Mitglied oder nicht angemeldet sind, können Sie nicht alle Spiele spielen.<br /><br />Diese Website hat derzeit <b>%s</b> Spiele installiert und täglich kommen neue dazu.<br />Wenn Sie alle Spiele spielen möchten, registrieren Sie sich bitte in diesem Forum oder logge sich ein.<br /><br />Die Registrierung ist kostenlos und geht %shier%s los.<br /><br />Wenn Sie sich angemeldet haben, klicken Sie weiter auf das Spiel, was Sie ausgewählt haben %shier%s.',
 	'ARCADE_ZERO_SCORE'					=> 'Ihre Punktzahl für das Spiel war Null = 0 oder es war ein Fehler des Spieles. Wenn der Fehler mehr als einmal bei einem Spiel erscheint, ist dies vermutlich ein Fehler des Spieles.<br /><br />Wenn Sie %s erneut spielen möchten klicken Sie bitte %shier%s.',
 	'ARCADE_GAME_OVER' 					=> 'Game Over!',
 	'ARCADE_SCORE_COMMENT' 				=> 'Kommentar hinterlassen',
@@ -5094,7 +5094,7 @@ Wir gratulieren den Gewinnern herzlich und danken für die Teilnahme!',
 	'TOUR_NOT_ACTIVE_1'			=> 'Sie sind nicht in der für dieses Turnier erforderlichen Benutzergruppe.',
 	'TOUR_NOT_ACTIVE'			=> 'Das Turnier ist nicht im Status \'laufend\', daher können Sie hier keine Spiele mehr in diesem Turnier spielen',
 	'TOUR_INFO'					=> 'Allgemeine Informationen zum Arcade-Turnier',
-	'TOUR_INFO_1'				=> 'Ein Turnier ist ein zeitlich befristeter Wettbewerb, in dem bestimmte Spiele von bestimmten Benutzergruppen gespielt werden können.<br />Innerhalb dieser Zeit werden die erreichten Rekorde gespeichert (zusätzlich zu der normalen Score-Speicherung), um nach Ablauf des Turnieres feststellen zu können, wer am meisten Rekorde erreicht hat.<br />Jedes Spiel, in dem ein Spieler am Ende des Turnieres den ersten Platz erreicht hat, zählt. So entsteht nach Ablauf des Turnieres eine Liste, wer wieviele Rekorde in dem jeweiligen Turnier geschafft hat.<br /><br />Beachten Sie, dass Sie in manchen Turnieren die Anzahl der Spielversuche begrenzt ist. Weiters wird (sofern zum Zeitpunkt der Speicherung des Rekordes ein Spiel in zwei laufenden Turnieren gespielt werden kann) eine erreichte Punktezahl in mehreren Turnieren gespeichert.<br /><br />In der Turnier-Übersicht sehen Sie alle Turniere mit Links zu den jeweiligen Turnierdetails (Turnierstatus, Startzeit, Endzeit, Anzahl Spielversuche, etc.).<br />In den Turnierdetails sehen Sie alle wichtigen Informationen zum jeweiligen Turnier sowie Ihre bis dato erreichten Rekorde und noch mehr Informationen.<br />Die Turnier-Siegerliste ist eine Liste aus der Summe der Turniergewinner und zeigt somit, wer gesamt (in allen Turnieren zusammen) ab besten ist. <br /><br />Falls Sie einen Turniervorschlag haben, dann können Sie Dich gerne an einen Administrator wenden, welcher diesen ggf. gerne berücksichtigt.',
+	'TOUR_INFO_1'				=> 'Ein Turnier ist ein zeitlich befristeter Wettbewerb, in dem bestimmte Spiele von bestimmten Benutzergruppen gespielt werden können.<br />Innerhalb dieser Zeit werden die erreichten Rekorde gespeichert (zusätzlich zu der normalen Score-Speicherung), um nach Ablauf des Turnieres feststellen zu können, wer am meisten Rekorde erreicht hat.<br />Jedes Spiel, in dem ein Spieler am Ende des Turnieres den ersten Platz erreicht hat, zählt. So entsteht nach Ablauf des Turnieres eine Liste, wer wieviele Rekorde in dem jeweiligen Turnier geschafft hat.<br /><br />Beachten Sie, dass Sie in manchen Turnieren die Anzahl der Spielversuche begrenzt ist. Weiters wird (sofern zum Zeitpunkt der Speicherung des Rekordes ein Spiel in zwei laufenden Turnieren gespielt werden kann) eine erreichte Punktezahl in mehreren Turnieren gespeichert.<br /><br />In der Turnier-Übersicht sehen Sie alle Turniere mit Links zu den jeweiligen Turnierdetails (Turnierstatus, Startzeit, Endzeit, Anzahl Spielversuche, etc.).<br />In den Turnierdetails sehen Sie alle wichtigen Informationen zum jeweiligen Turnier sowie Ihre bis dato erreichten Rekorde und noch mehr Informationen.<br />Die Turnier-Siegerliste ist eine Liste aus der Summe der Turniergewinner und zeigt somit, wer gesamt (in allen Turnieren zusammen) ab besten ist. <br /><br />Falls Sie einen Turniervorschlag haben, dann können Sie sich gerne an einen Administrator wenden, welcher diesen ggf. gerne berücksichtigt.',
 	'TOUR_GAME_RANK'			=> 'Ihr Rang',
 	'TOUR_NEWS_TOUR_ENDED'		=> 'Turnier %s ist abgelaufen.',
 	'TOUR_NEWS_TOUR_STARTED'	=> 'Turnier %s ist gestartet.',
@@ -5578,7 +5578,7 @@ $lang = array_merge($lang, array(
 $lang = array_merge($lang, array(
 	'ADD_UPLOAD_FIELD'				=> 'Weitere Felder zum Hochladen hinzufügen',
 	'ALBUM'							=> 'Album',
-	'ALBUM_IS_CATEGORY'				=> 'Das Album, in welches Sie dich gemogelt haben, ist eine Kategorie.<br />In Kategorien können keine Bilder hochgeladen werden.',
+	'ALBUM_IS_CATEGORY'				=> 'Das Album, in welches Sie sich gemogelt haben, ist eine Kategorie.<br />In Kategorien können keine Bilder hochgeladen werden.',
 	'ALBUM_LOCKED'					=> 'Gesperrt',
 	'ALBUM_NAME'					=> 'Name des Albums',
 	'ALBUM_NOT_EXIST'				=> 'Dieses Album existiert nicht',
@@ -5946,7 +5946,7 @@ $lang = array_merge($lang, array(
 	'COPY_PERMISSIONS_ALBUM_FROM_EXPLAIN'	=> 'Das Album, von dem die Berechtigungen kopiert werden sollen.',
 	'COPY_PERMISSIONS_ALBUM_TO_EXPLAIN'		=> 'Die Zielalben, denen die Berechtigungen zugeordnet werden sollen.',
 	'COPY_PERMISSIONS_CONFIRM'		=> 'Sind Sie sich sicher, dass Sie diesen Vorgang durchführen möchten? Dieser Vorgang wird alle bestehenden Berechtigungen der ausgewählten Foren überschreiben.',
-	'ALBUM_COPY_PERMISSIONS_EDIT_EXPLAIN'	=> 'Wenn Sie dich entscheiden, Berechtigungen zu kopieren, wird das Album dieselben Berechtigungen haben wie das von Ihnen hier ausgewählte. Dadurch werden alle Berechtigungen, die Sie vorher für dieses Album gesetzt haben, durch die des ausgewählten Albums ersetzt. Wenn kein Album gewählt wird, werden die derzeitigen Berechtigungen beibehalten.',
+	'ALBUM_COPY_PERMISSIONS_EDIT_EXPLAIN'	=> 'Wenn Sie sich entscheiden, Berechtigungen zu kopieren, wird das Album dieselben Berechtigungen haben wie das von Ihnen hier ausgewählte. Dadurch werden alle Berechtigungen, die Sie vorher für dieses Album gesetzt haben, durch die des ausgewählten Albums ersetzt. Wenn kein Album gewählt wird, werden die derzeitigen Berechtigungen beibehalten.',
 	'COPY_PERMISSIONS_FROM'			=> 'Kopiere Berechtigungen von',
 	'COPY_PERMISSIONS_SUCCESSFUL'	=> 'Die Berechtigungen wurden erfolgreich kopiert.',
 	'COPY_PERMISSIONS_TO'			=> 'Berechtigungen kopieren nach',
@@ -8745,7 +8745,7 @@ $lang = array_merge($lang, array(
 	'BANK_COST'							=> 'Kontoführungsgebühren pro Periode',
 	'BANK_DEPOSIT_SMALL_AMOUNT'			=> 'Der kleinste Betrag zum Einzahlen lautet %1$s %2$s.',
 	'BANK_DEPOSIT_WITHDRAW'				=> 'Einzahlung & Abhebung',
-	'BANK_DESCRIPTION'					=> 'Sie befindest dich hier in unserer Hausbank. Bei uns gibt es nur geringe Kontoführungsgebühren, dafür erhalten Sie aber hier auch ein paar Zinsen für Ihre schwer verdienten %s.<br /><br /> Eine Geldanlage auf der Bank könnte sich - neben den Guthabenzinsen - durchaus für Sie lohnen, denn auf der Bank ist Ihr Geld sicher und es kann Ihnen nicht gestohlen werden.<br /><br />',
+	'BANK_DESCRIPTION'					=> 'Sie befindest sich hier in unserer Hausbank. Bei uns gibt es nur geringe Kontoführungsgebühren, dafür erhalten Sie aber hier auch ein paar Zinsen für Ihre schwer verdienten %s.<br /><br /> Eine Geldanlage auf der Bank könnte sich - neben den Guthabenzinsen - durchaus für Sie lohnen, denn auf der Bank ist Ihr Geld sicher und es kann Ihnen nicht gestohlen werden.<br /><br />',
 	'BANK_DISABLED'						=> 'Die Bank ist deaktiviert',
 	'BANK_ERROR_DEPOSIT'				=> 'Sie haben einen ungültigen oder falschen Betrag zum Einzahlen eingegeben',
 	'BANK_ERROR_NOT_ENOUGH_DEPOSIT'		=> 'Sie besitzt nicht genügend %1$s, um soviel einzuzahlen',
@@ -8910,12 +8910,12 @@ $lang = array_merge($lang, array(
 	'ROBBERY_MAX_ROB'					=> 'Höhe des Diebstahls',
 	'ROBBERY_NO_ID_SPECIFIED'			=> 'Sie haben keinen Benutzernamen eingegeben!',
 	'ROBBERY_PM'						=> 'PNs vom Diebstahlmodul',
-	'ROBBERY_PM_EXPLAIN'				=> 'Hier können Sie einstellen, ob Sie vom Diebstahlmodul per PN informiert werden möchten, wenn ein Benutzer versucht hat dich auszurauben oder wenn er auch erfolgreich war.',
+	'ROBBERY_PM_EXPLAIN'				=> 'Hier können Sie einstellen, ob Sie vom Diebstahlmodul per PN informiert werden möchten, wenn ein Benutzer versucht hat sich auszurauben oder wenn er auch erfolgreich war.',
 	'ROBBERY_PM_BAD_BODY'				=> ' %1$s hat versucht %2$s %3$s von Ihnen zu stehlen!',
 	'ROBBERY_PM_BAD_BODY_1'				=> ' %1$s hat versucht %2$s %3$s von Ihnen zu stehlen! Die Strafe für den fehlgeschlagenen Diebstahl (%4$s %3$s) wurde Ihrem Konto gutgeschrieben.',
-	'ROBBERY_PM_BAD_SUBJECT'			=> 'Jemand hat versucht dich auszurauben',
+	'ROBBERY_PM_BAD_SUBJECT'			=> 'Jemand hat versucht sich auszurauben',
 	'ROBBERY_PM_CHANGE'					=> 'Die Einstellung für den Erhalt von PNs vom Diebstahlmodul wurde erfolgreich geändert.',
-	'ROBBERY_PM_SUCCESFUL_BODY'			=> 'Sie haben %2$s %3$s verloren ... </br> %1$s hat dich ausgeraubt! Tut mir leid für Sie :(',
+	'ROBBERY_PM_SUCCESFUL_BODY'			=> 'Sie haben %2$s %3$s verloren ... </br> %1$s hat sich ausgeraubt! Tut mir leid für Sie :(',
 	'ROBBERY_PM_SENDER'					=> 'Diebstahlinfo',
 	'ROBBERY_PM_SUCCESFUL_SUBJECT'		=> 'Sie haben ein paar %1$s verloren!',
 	'ROBBERY_SELF'						=> 'Sie können sich nicht selbst beklauen ....',
@@ -10433,7 +10433,7 @@ $lang = array_merge($lang, array(
 
 	'WARNING'				=> 'Warnung',
 
-	'ACP_PHP_INFO_EXPLAIN'	=> 'Auf dieser Seite finden Sie Informationen zu der auf Ihrem Server installierten PHP-Version. Sie enthält Details zu den geladenen Modulen, den verfügbaren Variablen und Einstellungen. Diese Informationen können bei der Problemsuche hilfreich sein. Bitte beachten Sie, dass manche Internet-Provider die hier angezeigten Informationen aus Sicherheitsgründen einschränken. Sie sollten keine Informationen von dieser Seite veröffentlichen, sofern dich nicht ein offizielles Team-Mitglied des Support-Forums dazu auffordert.',
+	'ACP_PHP_INFO_EXPLAIN'	=> 'Auf dieser Seite finden Sie Informationen zu der auf Ihrem Server installierten PHP-Version. Sie enthält Details zu den geladenen Modulen, den verfügbaren Variablen und Einstellungen. Diese Informationen können bei der Problemsuche hilfreich sein. Bitte beachten Sie, dass manche Internet-Provider die hier angezeigten Informationen aus Sicherheitsgründen einschränken. Sie sollten keine Informationen von dieser Seite veröffentlichen, sofern sich nicht ein offizielles Team-Mitglied des Support-Forums dazu auffordert.',
 	'NO_PHPINFO_AVAILABLE'	=> 'Es konnten keine Informationen über Ihre PHP-Installation ermittelt werden. phpinfo() wurde vermutlich aus Sicherheitsgründen deaktiviert.',
 
 	'ACP_ADMIN_LOGS_EXPLAIN'	=> 'Diese Liste zeigt alle Vorgänge, die von Board-Administratoren durchgeführt wurden. Sie können nach Benutzername, Datum, IP-Adresse oder Vorgang sortieren.',
@@ -11531,7 +11531,7 @@ $lang = array_merge($lang, array(
 	'IPN_LIBERTYRESERVE_STORE_NAME'			=> 'Liberty Reserve IPN Shopname',
 	'IPN_LIBERTYRESERVE_STORE_NAME_EXPLAIN'	=> 'Gebe hier den Shop Namen Ihres Liberty Reserve Kontos ein.',
 	'IPN_PAYPAL_INSTRUCTIONS'				=> 'PayPal IPN-Anweisungen',
-	'IPN_PAYPAL_INSTRUCTIONS_EXPLAIN'		=> 'PayPal IPN ist automatisch aktiv. Um Spenden zu kontrollieren, logge dich in Ihren PayPal Account ein und navigiere dann zu "Kontoauszug" > "IPN-Verlauf".',
+	'IPN_PAYPAL_INSTRUCTIONS_EXPLAIN'		=> 'PayPal IPN ist automatisch aktiv. Um Spenden zu kontrollieren, logge sich in Ihren PayPal Account ein und navigiere dann zu "Kontoauszug" > "IPN-Verlauf".',
 	'IPN_PAYPAL_URL'						=> 'Ihre PayPal IPN URL',
 	'IPN_WEBMONEY_INSTRUCTIONS'				=> 'WebMoney IPN-Anweisungen',
 	'IPN_WEBMONEY_INSTRUCTIONS_EXPLAIN'		=> 'Derzeit gibt es keine speziellen WebMoney-IPN-Einstellungen.',
@@ -12248,7 +12248,7 @@ $lang = array_merge($lang, array(
 	'ACP_ARCADE_UTILITIES_CREATE_INSTALL_EXPLAIN'	=> 'Hier können Sie eine neue Spielinstallationsdatei erstellen oder eine für ein bestehendes Spiel herunterladen, basierend auf den Informationen in der Datenbank. Dies wird benutzt um bei der Erstellung einer neuen Installationsdatei zu helfen, oder falls Sie irgendwelche Spieldetails nach der Installation direkt über die Datenbank (nicht mittels des ACP) geändert haben und eine neue Installationsdatei benötigen.',
 	'ACP_ARCADE_UTILITIES_CONVERT_INSTALL_EXPLAIN'	=> 'Dies erlaubt es es Ihnen, eine bestehende Installationsdatei aus dem IPB zum Betrachten und Herunterladen zu erstellen. Dies wird benutzt, wenn Sie ein IPB-Spiel verwenden und die Datei nicht manuell erstellen möchten. Ausserdem gibt es die Option, dass die Spielhalle versucht, die korrekte Verzeichnisstruktur für das Spiel zu erstellen und die Installationsdatei auf den Server zu schreiben.',
 	'ACP_ARCADE_UTILITIES_ERRORS_EXPLAIN'			=> 'Dies ist eine Liste von Punktefehlern, die von der Spielhalle übermittelt wurden.',
-	'ACP_ARCADE_UTILITIES_DOWNLOADS_EXPLAIN'		=> 'Dies ist eine Liste von Spielen, die von der angegebenen Seite heruntergeladen werden sollen. Beachten Sie, dass es dennoch nötig sein kann, dass Sie dich bei der Seite anmelden oder einer besonderen Benutzergruppe angehären müssen, um Spiele herunterzuladen.',
+	'ACP_ARCADE_UTILITIES_DOWNLOADS_EXPLAIN'		=> 'Dies ist eine Liste von Spielen, die von der angegebenen Seite heruntergeladen werden sollen. Beachten Sie, dass es dennoch nötig sein kann, dass Sie sich bei der Seite anmelden oder einer besonderen Benutzergruppe angehären müssen, um Spiele herunterzuladen.',
 	'ACP_ARCADE_UTILITIES_DOWNLOADS_EXPLAIN_LEGEND'	=> '<span style="color: green;">Hinweis: Grün gekennzeichnete Spiele befinden sich bereits auf Ihrem Server.</span>',
 	'ACP_ARCADE_UTILITIES_DOWNLOAD_STATS_EXPLAIN'	=> 'Dies ist eine Liste aller Benutzer, die Spiele heruntergeladen haben sowie die Summe der Downloads.',
 	'ACP_ARCADE_UTILITIES_USER_GUIDE_EXPLAIN'		=> 'Dies ist die Benutzerhilfe für die Spielhalle.  Bei Fragen oder Problemen bitte zuerst hier lesen.',
@@ -12821,7 +12821,7 @@ $lang = array_merge($lang, array(
 	'CONTINUE'						=> 'Fortsetzen',
 	'COPY_PERMISSIONS_EXPLAIN'		=> 'Um die Konfiguration Ihres neuen Forums zu erleichtern, können Sie die Berechtigungen eines bestehenden Forums kopieren.',
 	'COPY_PERMISSIONS_ADD_EXPLAIN'	=> 'Sobald das Forum erstellt ist, wird es dieselben Berechtigungen haben wie das hier ausgewählte Forum. Wenn hier kein Forum gewählt wird, wird das neue Forum unsichtbar bleiben, bis entsprechende Berechtigungen gesetzt wurden.',
-	'COPY_PERMISSIONS_EDIT_EXPLAIN'	=> 'Wenn Sie dich entscheiden, Berechtigungen zu kopieren, wird das Forum dieselben Berechtigungen haben wie das von Ihnen hier ausgewählte. Dadurch werden alle Berechtigungen, die Sie vorher für dieses Forum gesetzt haben, durch die des ausgewählten Forums ersetzt. Wenn kein Forum gewählt wird, werden die derzeitigen Berechtigungen beibehalten.',
+	'COPY_PERMISSIONS_EDIT_EXPLAIN'	=> 'Wenn Sie sich entscheiden, Berechtigungen zu kopieren, wird das Forum dieselben Berechtigungen haben wie das von Ihnen hier ausgewählte. Dadurch werden alle Berechtigungen, die Sie vorher für dieses Forum gesetzt haben, durch die des ausgewählten Forums ersetzt. Wenn kein Forum gewählt wird, werden die derzeitigen Berechtigungen beibehalten.',
 	'COPY_TO_ACL'					=> 'Alternativ können Sie auch %sneue Berechtigungen%s für dieses Forum einrichten.',
 	'CREATE_FORUM'					=> 'Neues Forum erstellen',
 
@@ -13965,7 +13965,7 @@ $lang = array_merge($lang, array(
 	'ACP_BBCODES_EXPLAIN'		=> 'BBCode ist eine spezielle HTML-Implementierung, die eine größere Kontrolle über das, was angezeigt wird, bietet. Hier können Sie benutzerdefinierte BBCodes hinzufügen, ändern oder entfernen.',
 	'ADD_BBCODE'				=> 'einen BBCode hinzufügen',
 
-	'BBCODE_DANGER'				=> 'Der BBCode, den Sie anlegen möchten, scheint ein {TEXT}-Token innerhalb eines HTML-Attributs zu nutzen. Dies ist ein möglicher Angriffspunkt für Cross-Site Scripting (XSS). Verwenden Sie stattdessen, wenn möglich, die restriktiveren {SIMPLETEXT}- oder {INTTEXT}-Typen. Fahre nur fort, wenn Sie dich dem Risiko bewusst sind und die Verwendung von {TEXT} unvermeidbar ist.',
+	'BBCODE_DANGER'				=> 'Der BBCode, den Sie anlegen möchten, scheint ein {TEXT}-Token innerhalb eines HTML-Attributs zu nutzen. Dies ist ein möglicher Angriffspunkt für Cross-Site Scripting (XSS). Verwenden Sie stattdessen, wenn möglich, die restriktiveren {SIMPLETEXT}- oder {INTTEXT}-Typen. Fahre nur fort, wenn Sie sich dem Risiko bewusst sind und die Verwendung von {TEXT} unvermeidbar ist.',
 	'BBCODE_DANGER_PROCEED'		=> 'Fortfahren', //'I understand the risk',
 
 	'ACP_REPARSE_BBCODES'		=> 'Reparse BBCodes',
