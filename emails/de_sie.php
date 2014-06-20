@@ -383,7 +383,7 @@ $email = array_merge($email, array(
 	'email/footb_send_remember_all.txt' 		=> '
 Guten Tag Tipper {USERNAME},
 
-bitte vergiss nicht den {MATCHDAY}. Spieltag zu tippen.
+bitte vergessen Sie nicht den {MATCHDAY}. Spieltag zu tippen.
 Bitte tipp bis zum {LEAGUE} Abgabetermin {DELIVERY} Uhr.
 
 Hier geht es zur {SITENAME}: {U_BOARD}.
@@ -1112,7 +1112,7 @@ $email = array_merge($email, array(
 
 Guten Tag {USERNAME},
 
-vergiss bitte nicht Ihren Formel 1 Tipp auf {SITENAME} abzugeben.
+vergessen Sie bitte nicht Ihren Formel 1 Tipp auf {SITENAME} abzugeben.
 
 Das nächste Rennen findet an diesem Wochenende statt!
 
