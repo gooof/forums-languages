@@ -349,12 +349,13 @@ Sie können das Thema mit folgendem Link erreichen:
 $email = array_merge($email, array(
 	'email/footb_board_remember.txt' 		=> '
 Guten Tag {SITENAME},
-Folgende Tipper haben eine Erinnerungs-Mail erhalten:
+
+folgende Tipper haben eine Erinnerungs-Mail erhalten:
 
 {REMEMBER_LIST}
 
 
-Hier geht es zur {SITENAME}: {U_BOARD}.
+Hier geht es zu {SITENAME}: {U_BOARD}.
 
 {EMAIL_SIG}
 ',
@@ -367,10 +368,10 @@ $email = array_merge($email, array(
 Guten Tag Tipper {USERNAME},
 
 Sie haben bislang noch nicht den {MATCHDAY}. Spieltag getippt.
-Bitte tipp bis zum {LEAGUE} Abgabetermin {DELIVERY} Uhr.
+Bitte tippen Sie bis zum {LEAGUE} Abgabetermin {DELIVERY} Uhr.
 
  
-Hier geht es zur {SITENAME}: {U_BOARD}.
+Hier geht es zu {SITENAME}: {U_BOARD}.
 
 
 {EMAIL_SIG}
@@ -384,9 +385,9 @@ $email = array_merge($email, array(
 Guten Tag Tipper {USERNAME},
 
 bitte vergessen Sie nicht den {MATCHDAY}. Spieltag zu tippen.
-Bitte tipp bis zum {LEAGUE} Abgabetermin {DELIVERY} Uhr.
+Bitte tippen Sie bis zum {LEAGUE} Abgabetermin {DELIVERY} Uhr.
 
-Hier geht es zur {SITENAME}: {U_BOARD}.
+Hier geht es zu {SITENAME}: {U_BOARD}.
 
 
 {EMAIL_SIG}
@@ -655,7 +656,7 @@ Nachricht:
 {MESSAGE}
 _____________________________________________________________________
 
-Sie haben darum gebeten, dass Sie über neue Persönliche Mitteilungen benachrichtigt werden wollen. Bitte beachten Sie, dass Sie Benachrichtigungen in Ihrem Profil an- und abbestellen können.
+Sie haben darum gebeten, dass Sie über neue Persönliche Mitteilungen benachrichtigt werden wollen. Bitte beachten Sie, dass Sie Benachrichtigungen in Ihrem Profil an- und abstellen können.
 {EMAIL_SIG}',
 ));
 
@@ -1112,7 +1113,7 @@ $email = array_merge($email, array(
 
 Guten Tag {USERNAME},
 
-vergessen Sie bitte nicht Ihren Formel 1 Tipp auf {SITENAME} abzugeben.
+bitte vergessen Sie nicht Ihren Formel 1 Tipp auf {SITENAME} abzugeben.
 
 Das nächste Rennen findet an diesem Wochenende statt!
 
