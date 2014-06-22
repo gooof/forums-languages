@@ -4566,7 +4566,7 @@ $lang = array_merge($lang, array(
 	'USER_REMINDER_PROTECTED_USERS'					=> 'Geschützte Mitglieder',
 	'USER_REMINDER_PROTECTED_USERS_EXPLAIN'			=> 'Eine Liste der User ID’s welche geschützt sind und keine Erinnerungen erhalten sollen. Sie können den Erinnerungsschutz auch im Geschützte Mitglieder Bereich entfernen.<br /><br />WICHTIG! Beim Hinzufügen von User ID’s beachten Sie, dass diese mit einem Komma getrennt werden. ',
 	'USER_REMINDER_PROTECTED_GROUPS'				=> 'Geschützte Gruppen',
-	'USER_REMINDER_PROTECTED_GROUPS_EXPLAIN'		=> 'Selektiere hier die Gruppen welche geschützt sind und keine Erinnerungen erhalten.<br /><br />WICHTIG! Sie können den Erinnerungsschutz der Benutzer in diesen Gruppen <b>nicht</b> im Geschützte Mitglieder Bereich entfernen. Dies kann nur hier durch deselektieren der Gruppe erfolgen.<br /><br />Um alle Gruppen zu deselektieren, einfach auf <em>Keine Gruppen selektiert</em> gehen.',
+	'USER_REMINDER_PROTECTED_GROUPS_EXPLAIN'		=> 'Selektieren Sie hier die Gruppen welche geschützt sind und keine Erinnerungen erhalten.<br /><br />WICHTIG! Sie können den Erinnerungsschutz der Benutzer in diesen Gruppen <b>nicht</b> im Geschützte Mitglieder Bereich entfernen. Dies kann nur hier durch deselektieren der Gruppe erfolgen.<br /><br />Um alle Gruppen zu deselektieren, einfach auf <em>Keine Gruppen selektiert</em> gehen.',
 	'USER_REMINDER_DELETE_CHOICE'					=> 'Auswahl, wenn Mitglieder gelöscht werden sollen',
 	'USER_REMINDER_DELETE_CHOICE_EXPLAIN'			=> 'Wenn Sie Mitglieder löschen möchten, wählen Sie hier wie sie gelöscht werden sollen',
 	'USER_REMINDER_ZERO_POSTER_ENABLE'				=> 'Erinnere Nullposter',
@@ -4583,7 +4583,7 @@ $lang = array_merge($lang, array(
 	'USER_REMINDER_USERS_PER_PAGE'					=> 'Benutzer pro Seite',
 	'USER_REMINDER_USERS_PER_PAGE_EXPLAIN'			=> 'Anzahl der Benutzer die pro Seite angezeigt werden. Beim Wert 0 wird der Bordwert der Themen pro Seite genommen, i.e. %d.',
 	'USER_REMINDER_LOGGING_OPTIONS'					=> 'Logging der folgenden Möglichkeiten',
-	'USER_REMINDER_LOGGING_OPTIONS_EXPLAIN'			=> 'Selektiere welche der folgenden Aktionen geloggt werden.',
+	'USER_REMINDER_LOGGING_OPTIONS_EXPLAIN'			=> 'Selektieren Sie welche der folgenden Aktionen geloggt werden.',
 	'USER_REMINDER_LOG_OPT_SCRIPT'					=> 'Ausführung des automatischen Reminder script',
 	'USER_REMINDER_LOG_OPT_USERS_REACT'				=> 'Benutzer die auf Erinnerungen reagieren, d.h. dessen Erinnerungen löschen',
 	'USER_REMINDER_LOG_OPT_AUTO_EMAILS'				=> 'Logging der automatischen emails an Benutzer',
@@ -6513,7 +6513,7 @@ $lang = array_merge($lang, array(
 	'CREATE_YES'					=> 'Erstellen',
 	'CREATE_NO'						=> 'Abbruch',
 	'CREATE_RULES_HEADER'			=> 'Regeln zum Erstellen eines Hangmans',
-	'CREATE_RULES_TEXT'				=> '* Vergebe einen vernünftigen Titel (z.B. Geographie, Pop Star)<br />* Geben Sie ein Wort ein, dass auch geläufig ist<br />* Achte auf die Rechtschreibung<br />* Geben Sie eine kleine Hilfe ein (z.B. Hauptstadt in Europa)<br /><br />',
+	'CREATE_RULES_TEXT'				=> '* Vergeben Sie einen vernünftigen Titel (z.B. Geographie, Pop Star)<br />* Geben Sie ein Wort ein, dass auch geläufig ist<br />* Achte auf die Rechtschreibung<br />* Geben Sie eine kleine Hilfe ein (z.B. Hauptstadt in Europa)<br /><br />',
 
 	'HANGMAN_NO_PLAY_PERMISSION'	=> 'Sorry, Sie haben keine Berechtigung um Hangman zu spielen',
 	'HANGMAN_QUESS'					=> 'Hangman raten',
@@ -6566,11 +6566,11 @@ $lang = array_merge($lang, array(
 	'ADD_POINTS_PAGE'				=> 'Zusatzpunkte',
 	'HELP_ADD_POINTS'				=> 'Zusätzlich können Sie Punkte erhalten, wenn Sie Hangmans erstellen. Denn jedes Mal, wenn ein Mitglied Ihr erstelltes Hangman nicht erraten hat, erhälst Sie %1$s Punkte zusätzlich.',
 	'HELP_TITLE'					=> 'Hilfe zum Hangman Spiel',	
-	'HELP_OVERVIEW'					=> 'Hier werden die Hangmans angezeigt die erstellt wurden, Sortierung nach Erstelldatum (ganz neue vorn). Über einen *Klick* auf den <strong>Titel</strong> des Hangman, gelangst Sie in das Spiel. Sollte die Zeit abgelaufen sein, können Sie das Hangman nicht mehr spielen! Hat es jemand anders erraten, geht das natürlich auch nicht.<br />
+	'HELP_OVERVIEW'					=> 'Hier werden die Hangmans angezeigt die erstellt wurden, Sortierung nach Erstelldatum (ganz neue vorn). Über einen *Klick* auf den <strong>Titel</strong> des Hangman, gelangen Sie in das Spiel. Sollte die Zeit abgelaufen sein, können Sie das Hangman nicht mehr spielen! Hat es jemand anders erraten, geht das natürlich auch nicht.<br />
 		Über nächste Seite oder Vorherige Seite können Sie zu anderen Hangmans wechseln (pro Seite werden 25 Hangmans angezeigt).<br />',				
 	'HELP_CREATION'					=> 'Wenn Sie ein neues Hangman erstellen möchten, klicken Sie auf neues Hangman. Beachten Sie dabei bitte, dass beim Erstellen alle Eingabefelder <strong>Pflicht</strong> sind! Der Titel wird letztendlich der Link zu dem Hangman und sollte wenn möglich schon eine Hilfe zum Hangman geben. Über den Hilfetext können Sie zusätzliche Hilfestellungen einbauen, bbcode und smilies sind dabei aktiviert.<br />',		
-	'HELP_HIGHSCORE'				=> 'Über Highscore gelangst Sie zur aktuellen Highscore, welche Sie natürlich nach belieben sortieren können (siehe Sortierungslinks unten links in der Highscore.)<br />',				
-	'HELP_POINTS'					=> 'Eure Admins haben eingestellt, dass Sie <strong>%5$s</strong> von Ihrem %5$s Konto verlieren/bekommen können:<br />
+	'HELP_HIGHSCORE'				=> 'Über Highscore gelangen Sie zur aktuellen Highscore, welche Sie natürlich nach belieben sortieren können (siehe Sortierungslinks unten links in der Highscore.)<br />',				
+	'HELP_POINTS'					=> 'Ihre Admins haben eingestellt, dass Sie <strong>%5$s</strong> von Ihrem %5$s Konto verlieren/bekommen können:<br />
 		<strong>Verlieren</strong> -> Sie verlierst <strong>[ %1$s ]</strong> %5$s<br />
 		<strong>Gewinnen</strong> -> Sie bekommst <strong>[ %2$s]</strong> %5$s<br />
 		<strong>Buchstabe erraten</strong> -> Sie bekommst <strong>[ %3$s ]</strong> %5$s<br />
