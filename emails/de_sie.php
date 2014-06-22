@@ -925,7 +925,7 @@ In letzter Zeit haben Sie mindestens 2 Erinnerungen von uns bekommen.
 
 Da Sie jedoch kein Interesse zeigen, sich an Aktivitäten auf {SITENAME} zu beteiligen, wurde beschlossen Ihr Benutzerkonto zu löschen.
 
-Die Löschung Ihres Kontos kann nicht mehr rückgängig gemacht werden. Sollten Sie sich doch irgendwann entschließen sich wieder bei uns zu beteiligen, müsstest Sie sich erneut registrieren.
+Die Löschung Ihres Kontos kann nicht mehr rückgängig gemacht werden. Sollten Sie sich doch irgendwann entschließen sich wieder bei uns zu beteiligen, müssten Sie sich erneut registrieren.
 
 {EMAIL_SIG}',
 ));
