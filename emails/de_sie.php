@@ -875,7 +875,7 @@ $email = array_merge($email, array(
 
 Guten Tag {USERNAME},
 
-Sie erhalten diese Benachrichtigung, weil Sie (oder jemand, der angegeben hat, Sie zu sein) ein neues Passwort für Ihr Benutzerkonto auf „{SITENAME}“ angefordert hat. Wenn Sie diese Benachrichtigung nicht angefordert haben, können Sie sie ignorieren. Falls Sie sie regelmäßig erhalten, kontaktieren Sie bitte die Board-Administration.
+Sie erhalten diese Benachrichtigung, weil Sie (oder jemand, der angegeben hat, Sie zu sein) ein neues Passwort für Ihr Benutzerkonto auf „{SITENAME}“ angefordert hat. Wenn Sie diese Benachrichtigung nicht angefordert haben, können Sie sie ignorieren. Falls Sie sie regelmäßig erhalten, kontaktieren Siebitte die Board-Administration.
 
 Um das neue Passwort zu verwenden, müssen Sie es aktivieren. Verwenden Sie dazu den folgenden Link:
 
@@ -885,7 +885,7 @@ Nach erfolgreicher Aktivierung können Sie sich mit folgendem Passwort anmelden:
 
 Passwort: {PASSWORD}
 
-Sie können dieses Passwort selbstverständlich in Ihrem persönlichen Bereich ändern. Wenn Sie auf Schwierigkeiten stoßen, kontaktieren Sie bitte die Board-Administration.
+Sie können dieses Passwort selbstverständlich in Ihrem persönlichen Bereich ändern. Wenn Sie auf Schwierigkeiten stoßen, kontaktieren Siebitte die Board-Administration.
 
 {EMAIL_SIG}',
 ));
