@@ -1311,7 +1311,7 @@ $lang = array_merge($lang, array(
 	'NO_NON_MEMBERS_DONATIONS'	=> 'Sie müssen ein registrierter Benutzer sein um spenden zu können',
 	'ADMIN_NOTIFICATION_PM_SUBJECT'	=> 'Sie haben eine Echtgeld Spende erhalten',
 	'DONATION_NOTIFICATION'	=> 'Spenden Benachrichtigung',
-	'TOPIC_AGE_WARNING'		=> 'Sie versuchen, auf ein Thema zu antworten, das %s alt ist. Bitte beginnen Sie stattdessen ein neues Thema oder suchen Sie 	ein Thema das neuer oder besser geeignet ist.',
+	'TOPIC_AGE_WARNING'		=> 'Sie versuchen, auf ein Thema zu antworten, das %s alt ist. Bitte beginnen Sie stattdessen ein neues Thema oder suchen Sie ein Thema das neuer oder besser geeignet ist.',
 	'TOPIC_AGE_WARNING_LOCK'	=> 'Dieses Thema ist %s alt. Der Administrator hat für alte Themen eingestellt, das diese gesperrt werden, wenn jemand eine Antwort schreiben will. Bitte beginnen Sie ein neues Thema oder verwenden Sie die Suchfunktion, um ein ähnliches neueres Thema zu finden.',
 	'INSTALLER_INTRO'		=> 'Intro',
 
@@ -14459,7 +14459,7 @@ $lang = array_merge($lang, array(
 	'CACHE_FILESIZE'				=> 'Dateigröße',
 	'CACHE_MODIFIED'				=> 'Modifiziert',
 	'CONFIRM_IMAGESET_REFRESH'		=> 'Sind Sie sicher, dass Sie alle Grafiksammlungs-Daten aktualisieren möchten? Die Einstellungen der Konfigurationsdatei werden alle Änderungen überschreiben, die mit dem Grafiksammlungs-Editor durchgeführt wurden.',
-	'CONFIRM_TEMPLATE_CLEAR_CACHE'	=> 'Sie löschst hier nur den Cache, das geht einfacher über den Link <b>Cache</b>!',
+	'CONFIRM_TEMPLATE_CLEAR_CACHE'	=> 'Sie löschen hier nur den Cache, das geht einfacher über den Link <b>Cache</b>!',
 	'CONFIRM_TEMPLATE_REFRESH'		=> 'Sind Sie sicher, dass Sie die Template-Daten in der Datenbank mit den Daten des Templates im Dateisystem überschreiben möchten? Dies wird alle Änderungen überschreiben, die mit dem Template-Editor durchgeführt wurden, während das Template in der Datenbank gespeichert war.<br /><b>Die Templates die Sie bearbeitet hattest gehen hierbei auch verloren, sichern Sie sich die geänderten vorher in einem Text/HTML Editor.</b> Sie müssen Ihre Änderungen dann nach dem normalisieren wieder umsetzten, da Sie dann das phpBB8 Dateisystem nutzt, ohne eigene Änderungen.<br /><br /><b>Sprich: Sie löscht/überschreiben hiermit Ihre Änderungen in den Templates</b><br />',
 	'CONFIRM_THEME_REFRESH'			=> 'Sind Sie sicher, dass Sie die Themen-Daten in der Datenbank mit den Daten des Themes im Dateisystem aktualisieren möchten? Dies wird alle Änderungen überschreiben, die mit dem Theme-Editor durchgeführt wurden, während das Theme in der Datenbank gespeichert war.',
 	'COPYRIGHT'						=> 'Copyright',
