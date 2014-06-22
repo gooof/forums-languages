@@ -2037,7 +2037,7 @@ $lang = array_merge($lang, array(
 	'SHOW_DIFF_NOT_MODIFIED'	=> 'Unterschiede zeigen',
 	'SOME_QUERIES_FAILED'		=> 'Einige Abfragen sind gescheitert. Die Abfragen und die zugehörigen Fehler sind weiter unten aufgeführt.',
 	'SQL'						=> 'SQL',
-	'SQL_FAILURE_EXPLAIN'		=> 'Dies ist in der Regel nicht kritisch, die Aktualisierung wird fortgeführt. Sollte deren Fertigstellung scheitern, müssen Sie möglicherweise Hilfe in unserem Supportforum in Anspruch nehmen. Details, wie und wo Sie Hilfe bekommst, können Sie der <a href="../docs/README.html">README-Datei</a> entnehmen.',
+	'SQL_FAILURE_EXPLAIN'		=> 'Dies ist in der Regel nicht kritisch, die Aktualisierung wird fortgeführt. Sollte deren Fertigstellung scheitern, müssen Sie möglicherweise Hilfe in unserem Supportforum in Anspruch nehmen. Details, wie und wo Sie Hilfe bekommen, können Sie der <a href="../docs/README.html">README-Datei</a> entnehmen.',
 	'STAGE_FILE_CHECK'			=> 'Dateien überprüfen',
 	'STAGE_UPDATE_DB'			=> 'Datenbank aktualisieren',
 	'STAGE_UPDATE_FILES'		=> 'Dateien aktualisieren',
@@ -4727,7 +4727,7 @@ $lang = array_merge($lang, array(
 	'ARCADE_GAMES_SORT_DIR'				=> 'Richtung beim Sortieren',
 	'ARCADE_GAMES_PER_PAGE'				=> 'Spiele pro Seite',
 	'ARCADE_SEND_PM'					=> 'Private Nachricht senden bei einem Highscore-Verlust',
-	'ARCADE_SEND_PM_UCP_EXPLAIN'		=> 'Wenn Sie eine Highscore verlierst wird Ihnen eine private Nachricht mit den Spiel Infos gesendet.',
+	'ARCADE_SEND_PM_UCP_EXPLAIN'		=> 'Wenn Sie eine Highscore verlieren wird Ihnen eine private Nachricht mit den Spiel Infos gesendet.',
 
 	'ARCADE_SUBCAT'						=> 'Unterkategorie',
 	'ARCADE_SUBCATS'					=> 'Unterkategorien',
@@ -4936,7 +4936,7 @@ $lang = array_merge($lang, array(
 	'ARCADE_POP_NO_HIGHSCORE' 			=> 'Keine Highscore für %s',
 
 	'ARCADE_COOKIE_ERROR'				=> 'Es wurde ein Fehler beim Lesen der Session-Daten gefunden.<br />Bitte stellen Sie sicher, dass Sie Cookies in Ihrem Web-Browser aktiviert haben. Sollte es trotzdem Probleme mit diesem Fehler geben versuchen Sie es bitte in einem anderen Web-Browser.',
-	'ARCADE_IBPROV3_ERROR'				=> 'Die vorgelegten Daten zu diesem Punkt wurde beschädigt.<br />Spiele das Spiel erneut. Wenn Sie die Nachricht mehr als einmal bekommst, wenden Sie sich bitte an den Administrator. Meist ist dies ein Fehler des Spieles.',
+	'ARCADE_IBPROV3_ERROR'				=> 'Die vorgelegten Daten zu diesem Punkt wurde beschädigt.<br />Spiele das Spiel erneut. Wenn Sie die Nachricht mehr als einmal bekommen, wenden Sie sich bitte an den Administrator. Meist ist dies ein Fehler des Spieles.',
 	'ARCADE_POPUP_DONE' 				=> 'Vielen Dank für das Spielen von %s.<br /><br />%sKlicken Sie hier um das Spiel %s nochmal zu spielen%s<br /><br />%sFenster schliessen%s',
 	'ARCADE_FULL_DONE' 					=> 'Vielen Dank für das Spielen von %s.<br /><br />%sKlicken Sie hier um das Spiel %s nochmal zu spielen%s<br /><br />%sKlicken Sie hier um zurück zu gehen %s%s<br /><br />%sZurück zum Spiele Index%s',
 	'ARCADE_TYPE_ERROR' 				=> 'Das Ergebnis wurde mit der falschen Methode abgeschickt und passt nicht zum Spiel Typ. Bitte benachrichtige den zuständigen Administrator oder schreiben Sie dies in das Forum.',
@@ -5549,9 +5549,9 @@ $lang = array_merge($lang, array(
 	'FORMEL_RULES_SCORE_EXP'		=> 'Getippt wird auf die ersten 10 Plätze, die schnellste Runde, die Anzahl der Ausfälle, sowie die Anzahl der Safety Car Einsätze.',
 	'FORMEL_RULES_MENTIONED'		=> 'Hast Sie in Ihrem Tipp einen Fahrer erwähnt, der als einer der ersten 10 Fahrer ins Ziel kam, erhälst Sie dafür <strong>%s</strong>.',
 	'FORMEL_RULES_PLACED'			=> 'Wenn Sie diesen Fahrer auch noch auf den richtigen Platz gesetzt haben, erhälst Sie dafür noch einmal <strong>%s</strong>.',
-	'FORMEL_RULES_FASTEST'			=> 'Hast Sie den schnellsten Fahrer richtig genannt, bekommst Sie dafür <strong>%s</strong>.',
-	'FORMEL_RULES_TIRED'			=> 'Für die richtige Anzahl der Ausfälle bekommst Sie <strong>%s</strong>.',
-	'FORMEL_RULES_SAFETYCAR'		=> 'Für die richtige Anzahl der Safety Car Einsätze bekommst Sie <strong>%s</strong>.',
+	'FORMEL_RULES_FASTEST'			=> 'Hast Sie den schnellsten Fahrer richtig genannt, bekommen Sie dafür <strong>%s</strong>.',
+	'FORMEL_RULES_TIRED'			=> 'Für die richtige Anzahl der Ausfälle bekommen Sie <strong>%s</strong>.',
+	'FORMEL_RULES_SAFETYCAR'		=> 'Für die richtige Anzahl der Safety Car Einsätze bekommen Sie <strong>%s</strong>.',
 	'FORMEL_RULES_TOTAL'			=> 'Insgesamt können Sie also mit jedem Tipp (rein theoretisch) <strong>%s</strong> erspielen.',
 	'FORMEL_RULES_POINT'			=> 'Punkt',
 	'FORMEL_RULES_POINTS'			=> 'Punkte',
@@ -6571,15 +6571,15 @@ $lang = array_merge($lang, array(
 	'HELP_CREATION'					=> 'Wenn Sie ein neues Hangman erstellen möchten, klicken Sie auf neues Hangman. Beachten Sie dabei bitte, dass beim Erstellen alle Eingabefelder <strong>Pflicht</strong> sind! Der Titel wird letztendlich der Link zu dem Hangman und sollte wenn möglich schon eine Hilfe zum Hangman geben. Über den Hilfetext können Sie zusätzliche Hilfestellungen einbauen, bbcode und smilies sind dabei aktiviert.<br />',		
 	'HELP_HIGHSCORE'				=> 'Über Highscore gelangen Sie zur aktuellen Highscore, welche Sie natürlich nach belieben sortieren können (siehe Sortierungslinks unten links in der Highscore.)<br />',				
 	'HELP_POINTS'					=> 'Ihre Admins haben eingestellt, dass Sie <strong>%5$s</strong> von Ihrem %5$s Konto verlieren/bekommen können:<br />
-		<strong>Verlieren</strong> -> Sie verlierst <strong>[ %1$s ]</strong> %5$s<br />
-		<strong>Gewinnen</strong> -> Sie bekommst <strong>[ %2$s]</strong> %5$s<br />
-		<strong>Buchstabe erraten</strong> -> Sie bekommst <strong>[ %3$s ]</strong> %5$s<br />
-		<strong>Erstellen</strong> -> Sie bekommst <strong>[ %4$s ]</strong> %5$s.<br />',				 
+		<strong>Verlieren</strong> -> Sie verlieren <strong>[ %1$s ]</strong> %5$s<br />
+		<strong>Gewinnen</strong> -> Sie bekommen <strong>[ %2$s]</strong> %5$s<br />
+		<strong>Buchstabe erraten</strong> -> Sie bekommen <strong>[ %3$s ]</strong> %5$s<br />
+		<strong>Erstellen</strong> -> Sie bekommen <strong>[ %4$s ]</strong> %5$s.<br />',				 
 	'HELP_HIGHSCORE_SYSTEM'			=> 'Das Punktesystem des Hangmans ist eingestellt auf:<br />
-		<strong>Verlieren</strong> -> Sie verlierst <strong>[ %4$s ]</strong> Punkte<br />
-		<strong>Gewinnen</strong> -> Sie bekommst <strong>[ %2$s ]</strong> Punkte<br />
-		<strong>Buchstabe erraten</strong> -> Sie bekommst <strong>[ %3$s ]</strong> Punkte<br />
-		<strong>Erstellen</strong> -> Sie bekommst <strong>[ %1$s ]</strong> Punkte<br /><br />',
+		<strong>Verlieren</strong> -> Sie verlieren <strong>[ %4$s ]</strong> Punkte<br />
+		<strong>Gewinnen</strong> -> Sie bekommen <strong>[ %2$s ]</strong> Punkte<br />
+		<strong>Buchstabe erraten</strong> -> Sie bekommen <strong>[ %3$s ]</strong> Punkte<br />
+		<strong>Erstellen</strong> -> Sie bekommen <strong>[ %1$s ]</strong> Punkte<br /><br />',
 	'UPS_HIGHSCORE_PAGE'			=> 'Ultimate Points System',
 
 	'ERROR_UPDATE_SCORE'			=> 'Fehler beim Scoreupdate!',
@@ -7455,7 +7455,7 @@ $lang = array_merge($lang, array(
 
 	'ACP_FOOTBALL_UPDATE'					=> 'Spielplan aktualisieren',
 	'ACP_FOOTBALL_UPDATE_MANAGE'			=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Spielplan aktualisieren',
-	'ACP_FOOTBALL_UPDATE_MANAGE_EXPLAIN'	=> 'Hier können Sie Ihre Spielpläne, mit Daten von der Demoseite oder einer anderen Tipprunden-Seite aktualisieren oder neu erstellen. Wählen Sie zuerst eine Tipprunden-Seite und Liga aus, von der das Update stammt. Nach Auswahl der Ziel-Liga bekommst Sie Abweichungen zwischen dieser Liga und dem Update angezeigt und können wählen welche Änderungen Sie übernehmen möchten. Falls Sie eine neue Liga erstellen möchten, werden alle Daten übernommen. ',
+	'ACP_FOOTBALL_UPDATE_MANAGE_EXPLAIN'	=> 'Hier können Sie Ihre Spielpläne, mit Daten von der Demoseite oder einer anderen Tipprunden-Seite aktualisieren oder neu erstellen. Wählen Sie zuerst eine Tipprunden-Seite und Liga aus, von der das Update stammt. Nach Auswahl der Ziel-Liga bekommen Sie Abweichungen zwischen dieser Liga und dem Update angezeigt und können wählen welche Änderungen Sie übernehmen möchten. Falls Sie eine neue Liga erstellen möchten, werden alle Daten übernommen. ',
 	'ACP_FOOTBALL_UPDATE_MANAGEMENT'		=> 'Spielplan aktualisieren',
 
 	'ALLOW_URL_FOPEN'					=> 'Die PHP-Einstellung <var>allow_url_fopen</var> erlaubt keinen Zugriff auf andere Seiten. <br />Sie müssen die Updateidatei(en) downloaden und im Verzeichnis root/store speichern. ',
@@ -8580,7 +8580,7 @@ $lang = array_merge($lang, array(
 	'PHOOGLE_ALL_MEMBERS' 			=> 'Alle Mitglieder',
 	'PHOOGLE_API' 					=> 'Google Maps API',
 	'PHOOGLE_API_KEY' 				=> 'Google Maps API Schlüssel',
-	'PHOOGLE_API_LINK' 				=> 'Deinen Google Maps API Schlüssel bekommst Sie <a href="http://www.google.com/apis/maps/signup.html" target="_blank">hier</a>. Für mehr Infos gucke bitte weiter unten in der grünen Hilfe-Box!',
+	'PHOOGLE_API_LINK' 				=> 'Deinen Google Maps API Schlüssel bekommen Sie <a href="http://www.google.com/apis/maps/signup.html" target="_blank">hier</a>. Für mehr Infos gucke bitte weiter unten in der grünen Hilfe-Box!',
 	'PHOOGLE_AUTO_FIT'				=> 'Karte automatisch auf Marker anpassen',
 	'PHOOGLE_AUTO_FIT_EXPLAIN'		=> 'Die Karte zentriert und zoomt automatisch auf die Marker (Mitglieder und Ereignisse). <strong>Überschreibt</strong> Ihre anfänglichen Zoom- und Zentrierungseinstellungen<br />Beeinflusst die Karte nicht auf dieser Page',
 	'PHOOGLE_CENTER' 				=> 'Zentrum Ihrer Karte (Benutzen Sie die Map um einzutreten)',
@@ -8796,7 +8796,7 @@ $lang = array_merge($lang, array(
 	'INFO_ATTACH'						=> 'Punkte für Dateianhänge in neuen Beiträgen',
 	'INFO_ADD_ATTACH'					=> 'Zusätzliche Punkte für jede neu angehängte Datei',
 	'INFO_NO_COST'						=> 'Derzeit müssen Sie keine %1$s dafür ausgeben',
-	'INFO_NO_POINTS'					=> 'Derzeit bekommst Sie keine %1$s dafür',
+	'INFO_NO_POINTS'					=> 'Derzeit bekommen Sie keine %1$s dafür',
 	'INFO_POLL'							=> 'Punkte für neue Umfragen',
 	'INFO_POLL_OPTION'					=> 'Punkte für jede Auswahl in neuen Umfragen',
 	'INFO_TOPIC_WORD'					=> 'Punkte pro Wort in neuen Themen',
@@ -12059,7 +12059,7 @@ $lang = array_merge($lang, array(
 	'ACP_ARCADE_GROUPS_CATEGORY_PERMISSIONS'			=> 'Spiele-Gruppen Berechtigungen',
  	'ACP_ARCADE_GROUPS_CATEGORY_PERMISSIONS_EXPLAIN'	=> 'Hier können Sie Spiele-Berechtigungen für einzelne Gruppen (Gäste, Mitglieder, Mods) festlegen.',
 	'ACP_VIEW_ARCADE_CATEGORY_PERMISSIONS'				=> 'Berechtigungen Überblick',
-	'ACP_VIEW_ARCADE_CATEGORY_PERMISSIONS_EXPLAIN'		=> 'Sie bekommst hier einen Überblick über Gruppen und einzel Rechte der einzelnen Spiele Kategorien.',
+	'ACP_VIEW_ARCADE_CATEGORY_PERMISSIONS_EXPLAIN'		=> 'Sie bekommen hier einen Überblick über Gruppen und einzel Rechte der einzelnen Spiele Kategorien.',
 	'ACP_ARCADE_PERMISSION_TRACE'						=> 'Berechtigungen Spur',
 
 	'ACL_TYPE_C_'					=> 'Kategorie Berechtigungen',
