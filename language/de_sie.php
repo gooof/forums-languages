@@ -4824,7 +4824,7 @@ $lang = array_merge($lang, array(
 	'ARCADE_TOTAL_DOWNLOAD'				=> 'There has been <b>%s</b> game download from the arcade.',
 	'ARCADE_TOTAL_DOWNLOADS'			=> 'There has been <b>%s</b> game downloads from the arcade.',
 
-	'ARCADE_LOGIN_CAT'					=> 'Zum Anzeigen oder Spielen in dieser Kategorie brauchst Sie ein Passwort.',
+	'ARCADE_LOGIN_CAT'					=> 'Zum Anzeigen oder Spielen in dieser Kategorie brauchen Sie ein Passwort.',
 	'ARCADE_LOGIN_EXPLAIN'				=> 'Sie müssen angemeldet sein, um diese Onlinespiele Funktion nutzen zu können.',
 
 	'ARCADE_DAY' 						=> 'Tag',
@@ -4845,8 +4845,8 @@ $lang = array_merge($lang, array(
 	'ARCADE_CHAMPION_PLAYED' 			=> 'Gesamt gespielt',
 	'ARCADE_CHAMPION_SPENT' 			=> 'Gesamt Spielzeit',
 	'ARCADE_TOP_SCORES' 				=> 'Top Spiel-Ergebnisse',
-	'ARCADE_LIMIT_PLAY_TYPE_POSTS'		=> 'Sie brauchst insgesamt <strong>%s</strong> Beiträg(e) um in dieser Kategorie spielen zu können. Sie brauchst noch <strong>%s</strong> Beiträg(e) mehr um hier spielen zu können.',
-	'ARCADE_LIMIT_PLAY_TYPE_DAYS'		=> 'Sie brauchst insgesamt <strong>%s</strong> Beiträg(e) in den letzten <strong>%s</strong> Tagen um in dieser Kategorie spielen zu können. Sie brauchst noch <strong>%s</strong> Beiträg(e) mehr um hier spielen zu können in den letzten <strong>%s</strong> Tagen.',
+	'ARCADE_LIMIT_PLAY_TYPE_POSTS'		=> 'Sie brauchen insgesamt <strong>%s</strong> Beiträg(e) um in dieser Kategorie spielen zu können. Sie brauchen noch <strong>%s</strong> Beiträg(e) mehr um hier spielen zu können.',
+	'ARCADE_LIMIT_PLAY_TYPE_DAYS'		=> 'Sie brauchen insgesamt <strong>%s</strong> Beiträg(e) in den letzten <strong>%s</strong> Tagen um in dieser Kategorie spielen zu können. Sie brauchen noch <strong>%s</strong> Beiträg(e) mehr um hier spielen zu können in den letzten <strong>%s</strong> Tagen.',
 
 	'ARCADE_SEARCH_NO_MATCHES'			=> 'Keine Spiele in der Suche mit dem passenden Begriff gefunden. Bitte versuchen Sie es erneut.',
 	'ARCADE_SEARCH_DESCRIPTION'			=> 'Geben Sie hier das Wort ein, nach dem Sie suchen.',
@@ -5547,8 +5547,8 @@ $lang = array_merge($lang, array(
 	'FORMEL_RULES_GENERAL_EXP'		=> 'Der Formel1 WebTipp ist ein Saison begleitendes Tippspiel. Hier können Sie den anderen Communitymitgliedern zeigen, wer wirklich Ahnung von der Formel 1 hat!<br /><br />Sie können zu jedem Formel 1 Rennen einen Tipp abgeben und Punkte sammeln. Sollten Sie einmal längere Zeit nicht anwesend sein, können Sie auch jetzt schon Ihren Tipp für die kommenden Rennen abgeben. Diese können Sie auch jederzeit wieder ändern. Die aktuellen Punktestände von Ihnen und den anderen Tippern können Sie auf der Statistikseite einsehen. Sie können Ihnen auch die Tipps der anderen User ansehen, indem Sie auf der WebTipp Übersichtsseite bei den abgegebenen Tipps auf einen Usernamen klicken. ( Tipps werden allerdings erst nach Erreichen der Deadline angezeigt )',
 	'FORMEL_RULES_SCORE'			=> 'Punktevergabe',
 	'FORMEL_RULES_SCORE_EXP'		=> 'Getippt wird auf die ersten 10 Plätze, die schnellste Runde, die Anzahl der Ausfälle, sowie die Anzahl der Safety Car Einsätze.',
-	'FORMEL_RULES_MENTIONED'		=> 'Haben Sie in Ihrem Tipp einen Fahrer erwähnt, der als einer der ersten 10 Fahrer ins Ziel kam, erhälst Sie dafür <strong>%s</strong>.',
-	'FORMEL_RULES_PLACED'			=> 'Wenn Sie diesen Fahrer auch noch auf den richtigen Platz gesetzt haben, erhälst Sie dafür noch einmal <strong>%s</strong>.',
+	'FORMEL_RULES_MENTIONED'		=> 'Haben Sie in Ihrem Tipp einen Fahrer erwähnt, der als einer der ersten 10 Fahrer ins Ziel kam, erhalten Sie dafür <strong>%s</strong>.',
+	'FORMEL_RULES_PLACED'			=> 'Wenn Sie diesen Fahrer auch noch auf den richtigen Platz gesetzt haben, erhalten Sie dafür noch einmal <strong>%s</strong>.',
 	'FORMEL_RULES_FASTEST'			=> 'Haben Sie den schnellsten Fahrer richtig genannt, bekommen Sie dafür <strong>%s</strong>.',
 	'FORMEL_RULES_TIRED'			=> 'Für die richtige Anzahl der Ausfälle bekommen Sie <strong>%s</strong>.',
 	'FORMEL_RULES_SAFETYCAR'		=> 'Für die richtige Anzahl der Safety Car Einsätze bekommen Sie <strong>%s</strong>.',
@@ -6564,7 +6564,7 @@ $lang = array_merge($lang, array(
 	'ORDER_BY_W_LETTERS'			=> 'Nach f.Buchstaben',
 
 	'ADD_POINTS_PAGE'				=> 'Zusatzpunkte',
-	'HELP_ADD_POINTS'				=> 'Zusätzlich können Sie Punkte erhalten, wenn Sie Hangmans erstellen. Denn jedes Mal, wenn ein Mitglied Ihr erstelltes Hangman nicht erraten hat, erhälst Sie %1$s Punkte zusätzlich.',
+	'HELP_ADD_POINTS'				=> 'Zusätzlich können Sie Punkte erhalten, wenn Sie Hangmans erstellen. Denn jedes Mal, wenn ein Mitglied Ihr erstelltes Hangman nicht erraten hat, erhalten Sie %1$s Punkte zusätzlich.',
 	'HELP_TITLE'					=> 'Hilfe zum Hangman Spiel',	
 	'HELP_OVERVIEW'					=> 'Hier werden die Hangmans angezeigt die erstellt wurden, Sortierung nach Erstelldatum (ganz neue vorn). Über einen *Klick* auf den <strong>Titel</strong> des Hangman, gelangen Sie in das Spiel. Sollte die Zeit abgelaufen sein, können Sie das Hangman nicht mehr spielen! Hat es jemand anders erraten, geht das natürlich auch nicht.<br />
 		Über nächste Seite oder Vorherige Seite können Sie zu anderen Hangmans wechseln (pro Seite werden 25 Hangmans angezeigt).<br />',				
@@ -9412,7 +9412,7 @@ $lang = array_merge($lang, array(
 	'ACP_ATTACHMENT_SETTINGS_EXPLAIN'	=> 'Hier können Sie die Einstellungen für Dateianhänge und verknüpfte Spezialkategorien vornehmen.',
 	'ACP_EXTENSION_GROUPS_EXPLAIN'		=> 'Hier können Sie Dateityp-Gruppen hinzufügen, ändern, entfernen, deaktivieren. Sie können ihnen auch eine Spezialkategorie zuweisen, den Download-Modus ändern oder auch ein Symbol festlegen, welches dann vor jedem zur Gruppe gehörenden Dateianhang angezeigt wird.',
 	'ACP_MANAGE_EXTENSIONS_EXPLAIN'		=> 'Hier können Sie die erlaubten Dateitypen einstellen. Die Erweiterungen können bei den Dateityp-Gruppen-Einstellungen aktiviert werden. Es wird dringend empfohlen, Script-Dateierweiterungen (wie <code>php</code>, <code>php3</code>, <code>php4</code>, <code>phtml</code>, <code>pl</code>, <code>cgi</code>, <code>py</code>, <code>rb</code>, <code>asp</code>, <code>aspx</code> usw.) nicht zuzulassen!',
-	'ACP_ORPHAN_ATTACHMENTS_EXPLAIN'	=> 'Hier sehen Sie verwaiste Dateien. Dies passiert meist dann, wenn Benutzer Dateianhänge erstellen, aber den Beitrag nicht absenden. Sie können die Dateien löschen oder sie einem bestehenden Beitrag anhängen. Zum Anhängen brauchst Sie eine gültige ID eines Beitrags; diese müssen Sie selbst ermitteln. Dadurch wird der Dateianhang dem von Ihnen angegebenen Beitrag zugeordnet.',
+	'ACP_ORPHAN_ATTACHMENTS_EXPLAIN'	=> 'Hier sehen Sie verwaiste Dateien. Dies passiert meist dann, wenn Benutzer Dateianhänge erstellen, aber den Beitrag nicht absenden. Sie können die Dateien löschen oder sie einem bestehenden Beitrag anhängen. Zum Anhängen brauchen Sie eine gültige ID eines Beitrags; diese müssen Sie selbst ermitteln. Dadurch wird der Dateianhang dem von Ihnen angegebenen Beitrag zugeordnet.',
 	'ADD_EXTENSION'						=> 'Dateierweiterung hinzufügen',
 	'ADD_EXTENSION_GROUP'				=> 'Dateityp-Gruppe hinzufügen',
 	'ADMIN_UPLOAD_ERROR'				=> 'Fehler beim Anhängen der Datei: „%s“.',
@@ -11520,7 +11520,7 @@ $lang = array_merge($lang, array(
 	'NOTE_2'				=> 'Wenn Sie den Usernamen eines Mitglieds anzeigen lassen möchten, schreiben Sie an die Stelle wo er erscheinen soll <code>USERNAME</code>, dies wird mit dem richtigen Usernamen ersetzt. ',
 
 	'IPN_ENABLE'							=> 'IPN aktivieren',
-	'IPN_ENABLE_EXPLAIN'					=> 'IPN (Instant Payment Notification) ist eine Funktion mit der das Spenden Mod automatisch Bestätigungen von z.B. PayPal erhalten kann. Der Spender kann so direkt nach der Spende eine PN erhalten und in die gewünschte Gruppe verschoben werden. Außerdem erhälst Sie als Admin eine Benachrichtigung.',
+	'IPN_ENABLE_EXPLAIN'					=> 'IPN (Instant Payment Notification) ist eine Funktion mit der das Spenden Mod automatisch Bestätigungen von z.B. PayPal erhalten kann. Der Spender kann so direkt nach der Spende eine PN erhalten und in die gewünschte Gruppe verschoben werden. Außerdem erhalten Sie als Admin eine Benachrichtigung.',
 
 	'IPN_PAYZA_SECURITY_CODE'				=> 'Payza IPN Sicherheitscode',
 	'IPN_PAYZA_SECURITY_CODE_EXPLAIN'		=> 'Geben Sie den IPN-Sicherheitscode ein, der von Ihrem Payza Konto generiert wurde.',
@@ -13344,7 +13344,7 @@ $lang = array_merge($lang, array(
 	'VIER_TEXT'				=> '[eigener Block] block_4.html',
 
 	'NEWS_FORUM_ID'	=> 'News Foren',
-	'NEWS_FORUM_ID_EXPLAIN'	=> 'Wählen Sie Foren aus denen die Beiträge für den Block kommen sollen, wählst Sie mehr als 15 Foren, werden alle Foren ausgewählt.',
+	'NEWS_FORUM_ID_EXPLAIN'	=> 'Wählen Sie Foren aus denen die Beiträge für den Block kommen sollen, wählen Sie mehr als 15 Foren, werden alle Foren ausgewählt.',
 		
 	'NUMBER_OF_NEWS_ITEMS_TO_DISPLAY'	=> 'News Artikel',
 	'NUMBER_OF_NEWS_ITEMS_TO_DISPLAY_EXPLAIN'	=> 'Die Anzahl der News, die auf der Portalseite angezeigt werden sollen.',
@@ -13356,7 +13356,7 @@ $lang = array_merge($lang, array(
 	'ANNOUNCE_SETTINGS'		=> '[Block] Ankündigungen',
 	
 	'ANNOUNCE_FORUM_ID'	=> 'Foren für die Ankündigungen',	
-	'ANNOUNCE_FORUM_ID_EXPLAIN'	=> 'Wählen Sie Foren aus denen die Beiträge für den Block kommen sollen, wählst Sie mehr als 15 Foren, werden alle Foren ausgewählt.',	
+	'ANNOUNCE_FORUM_ID_EXPLAIN'	=> 'Wählen Sie Foren aus denen die Beiträge für den Block kommen sollen, wählen Sie mehr als 15 Foren, werden alle Foren ausgewählt.',	
 	'NUMBER_OF_ANNOUNCE_ITEMS_TO_DISPLAY'	=> 'Anzahl der Ankündigungen, die Sie anzeigen lassen wollen',
 	'NUMBER_OF_ANNOUNCE_ITEMS_TO_DISPLAY_EXPLAIN'	=> 'Die Anzahl der Ankündigungen, die Sie auf der Portal Seite anzeigen lassen wollen.',
 	'MAX_ANNOUNCE_ITEM_LENGTH'	=> 'Maximale Höhe einer Ankündigung',
