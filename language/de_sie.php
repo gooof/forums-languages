@@ -4782,7 +4782,7 @@ $lang = array_merge($lang, array(
 	'ARCADE_NO_TOTAL_TYPE_ERROR'			=> 'Die gesamte Art, der ausgewählt wurde, wird nicht unterstützt.',
 	'ARCADE_NO_ORDER_TYPE_ERROR'			=> 'Diese Sortierungsoption wird nicht unterstützt.',
 	'ARCADE_CAT_LOCKED_ERROR'				=> 'Diese Kategorie ist gesperrt. Sie können keine Spiele spielen.',
-	'ARCADE_BACK_BUTTON_ERROR'				=> 'Es wurden keine Sitzungsdaten für dieses Spiel gefunden.<br /><br />Vermutlich haben Sie im Browser den "Zurück" Button benutzt oder wärend dem spielen etwas anderes in dem Forum gemacht.<br />Die maximale Spielzeit an einem Spiel liegt bei etwa 8 Stunden.<br />Falls dieser Fehler trotzdem immer wieder kommt, teste bitte einmal einen anderen Browser.',
+	'ARCADE_BACK_BUTTON_ERROR'				=> 'Es wurden keine Sitzungsdaten für dieses Spiel gefunden.<br /><br />Vermutlich haben Sie im Browser den "Zurück" Button benutzt oder wärend dem spielen etwas anderes in dem Forum gemacht.<br />Die maximale Spielzeit an einem Spiel liegt bei etwa 8 Stunden.<br />Falls dieser Fehler trotzdem immer wieder kommt, testen Sie bitte einmal einen anderen Browser.',
 	'NO_GAME_ID'							=> 'Es wurde kein richtiges Spiel ausgewählt.',
 	'NO_CAT_ID'								=> 'Diese Kategorie ist nicht mehr verfügbar.',
 	'LOGIN_VIEWARCADE'						=> 'Der Vorstand verlangt von Ihnen eingeloggt zu sein, um diese Kategorie anzugucken.',
@@ -4940,7 +4940,7 @@ $lang = array_merge($lang, array(
 	'ARCADE_POPUP_DONE' 				=> 'Vielen Dank für das Spielen von %s.<br /><br />%sKlicken Sie hier um das Spiel %s nochmal zu spielen%s<br /><br />%sFenster schliessen%s',
 	'ARCADE_FULL_DONE' 					=> 'Vielen Dank für das Spielen von %s.<br /><br />%sKlicken Sie hier um das Spiel %s nochmal zu spielen%s<br /><br />%sKlicken Sie hier um zurück zu gehen %s%s<br /><br />%sZurück zum Spiele Index%s',
 	'ARCADE_TYPE_ERROR' 				=> 'Das Ergebnis wurde mit der falschen Methode abgeschickt und passt nicht zum Spiel Typ. Bitte benachrichtige den zuständigen Administrator oder schreiben Sie dies in das Forum.',
-	'ARCADE_SESSIONS_ERROR' 			=> 'Es gibt leider ein Problem mit der Session, es wurde keine zu diesem Spiel gefunden. Versuchen Sie es erneut oder teste ein anderes, wenn diese Fehler wiederholt auftritt gibt es vermutlich ein Problem mit dem Spiel.',
+	'ARCADE_SESSIONS_ERROR' 			=> 'Es gibt leider ein Problem mit der Session, es wurde keine zu diesem Spiel gefunden. Versuchen Sie es erneut oder testen Sie ein anderes, wenn diese Fehler wiederholt auftritt gibt es vermutlich ein Problem mit dem Spiel.',
 	'ARCADE_REGISTER_MESSAGE_SCORE' 	=> 'Da Sie kein registriertes Mitglied oder nicht eingeloggt sind, werden Sie als Gast nicht gespeichert. <br /> <br /> Diese Website hat derzeit <b>%s</b> Spiele installiert und täglich werden mehr hinzugefügt.<br /> Wenn Sie alle Spiele spielen möchten, dann registrieren Sie sich bitte oder loggen Sie sich ein.<br /><br />Die Registrierung ist kostenlos und kann durch Anklicken %shier%s.',
 	'ARCADE_REGISTER_MESSAGE_PLAY' 		=> 'Da Sie kein registriertes Mitglied oder nicht angemeldet sind, können Sie nicht alle Spiele spielen.<br /><br />Diese Website hat derzeit <b>%s</b> Spiele installiert und täglich kommen neue dazu.<br />Wenn Sie alle Spiele spielen möchten, registrieren Sie sich bitte in diesem Forum oder loggen Sie sich ein.<br /><br />Die Registrierung ist kostenlos und geht %shier%s los.<br /><br />Wenn Sie sich angemeldet haben, klicken Sie weiter auf das Spiel, was Sie ausgewählt haben %shier%s.',
 	'ARCADE_ZERO_SCORE'					=> 'Ihre Punktzahl für das Spiel war Null = 0 oder es war ein Fehler des Spieles. Wenn der Fehler mehr als einmal bei einem Spiel erscheint, ist dies vermutlich ein Fehler des Spieles.<br /><br />Wenn Sie %s erneut spielen möchten klicken Sie bitte %shier%s.',
@@ -7521,7 +7521,7 @@ $lang = array_merge($lang, array(
 	'NO_DIFFERENCES'					=> 'Keine Unterschiede gefunden. Die Spielpläne sind identisch. ',
 	'NO_XML_LEAGUE'						=> 'Im Verzeichnis root/store konnte keine Update-Dateien gefunden werden. ',
 	'NO_XML_SEASON'						=> 'Es wurde keine Quell-Daten zum aktualisieren gefunden. ',
-	'NO_XML_ARRAY'						=> 'Fehler! Daten nicht mehr vorhanden. Bitte wiederhole die Aktion von vorne. ',
+	'NO_XML_ARRAY'						=> 'Fehler! Daten nicht mehr vorhanden. Bitte wiederhohlen Sie die Aktion von vorne. ',
 
 	'OTHER_FIELDS'						=> 'Andere Felder',
 
