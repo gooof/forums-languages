@@ -7521,7 +7521,7 @@ $lang = array_merge($lang, array(
 	'NO_DIFFERENCES'					=> 'Keine Unterschiede gefunden. Die Spielpläne sind identisch. ',
 	'NO_XML_LEAGUE'						=> 'Im Verzeichnis root/store konnte keine Update-Dateien gefunden werden. ',
 	'NO_XML_SEASON'						=> 'Es wurde keine Quell-Daten zum aktualisieren gefunden. ',
-	'NO_XML_ARRAY'						=> 'Fehler! Daten nicht mehr vorhanden. Bitte wiederhohlen Sie die Aktion von vorne. ',
+	'NO_XML_ARRAY'						=> 'Fehler! Daten nicht mehr vorhanden. Bitte wiederholen Sie die Aktion von vorne. ',
 
 	'OTHER_FIELDS'						=> 'Andere Felder',
 
