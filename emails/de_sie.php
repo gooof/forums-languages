@@ -92,7 +92,7 @@ es gibt da bei uns im Forum ein Gerücht:
  
 Sie haben heute Geburtstag?
  
-Wir wünschen Ihnen von ganzem Herzen alles erdenklich Gute für Ihr neues Lebensjahr. Lassen Sie es Ihnen heute mal so richtig gut gehen und Sie verwöhnen.
+Wir wünschen Ihnen von ganzem Herzen alles erdenklich Gute für Ihr neues Lebensjahr. Lassen Sie es sich heute mal so richtig gut gehen und sich verw�hnen.
 Es braucht gar nicht viel, um diesen Tag zu einem richtigen Glückstag zu machen.
 
 Als kleine Überraschung wartet hier ein nettes Geburtstags-Ständchen auf Dich. Wir hoffen, Ihnen damit ein Lächeln schenken zu können.
