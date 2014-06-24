@@ -413,7 +413,7 @@ $lang = array_merge($lang, array(
 	'HIDDEN_USER_TOTAL'				=> '%d unsichtbarer',
 	'HIDDEN_USER_TOTAL_AND'			=> '%d unsichtbarer und ',
 	'HIDE_GUESTS'					=> 'Gäste ausblenden',
-	'HIDE_ME'						=> 'Meinen Online-Status während dieser Sitzung verbergen',
+	'HIDE_ME'						=> 'Ihren Online-Status während dieser Sitzung verbergen',
 	'HOURS'							=> 'Stunden',
 	'HOME'							=> 'Heim',
 
@@ -3388,7 +3388,7 @@ $lang = array_merge($lang, array(
 
 	'GLOBAL_ANNOUNCEMENT'		=> 'Globale Bekanntmachung',
 
-	'HIDE_ONLINE'				=> 'Verberge meinen Online-Status',
+	'HIDE_ONLINE'				=> 'Verberge Ihren Online-Status',
 	'HIDE_ONLINE_EXPLAIN'		=> 'Wenn Sie diese Einstellung ändern, wird Sie erst bei Ihrem nächsten Besuch des Boards aktiv.',
 	'HOLD_NEW_MESSAGES'			=> 'Akzeptieren Sie keine neuen Nachrichten (Neue Nachrichten werden zurückgehalten, bis ausreichend Speicherplatz vorhanden ist)',
 	'HOLD_NEW_MESSAGES_SHORT'	=> 'Neue Nachrichten werden zurückgehalten',
