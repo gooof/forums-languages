@@ -2535,7 +2535,7 @@ $lang = array_merge($lang, array(
 	'NTS_TOPIC_LOCKED'		=> 'Hi,<br /><br />dein Thema <a href="%3$s"><strong>%1$s</strong></a> wurde von einem Moderator gesperrt. Das bedeutet, dass Sie es nicht mehr bearbeiten oder neue antworten erstellen können.<br /><br /><strong>Der Grund für die Sperrung:</strong> <em>%2$s</em><br /><br />Klicken Sie auf den folgenden Link um zum Thema zu gelangen:<br /><a href="%3$s"><strong>%1$s</strong></a>',
 	'NTS_TOPIC_LOCK_SUBJECT'	=> 'Ihr Thema wurde gesperrt',
 	'NO_REASON_GIVEN'		=> 'Der Moderator hat keinen speziellen Grund angegeben',
-	'PUT_IN_OUTBOX'			=> 'Zu meinem Postausgang hinzufügen',
+	'PUT_IN_OUTBOX'			=> 'Zu Ihrem Postausgang hinzufügen',
 
 ));
 
@@ -3722,7 +3722,7 @@ $lang = array_merge($lang, array(
 	'UCP_YMSM_USERMARK'			=> 'Mitglieder Karte',
 	'YMSM_UCP_SETTINGS'			=> 'Karten Einstellungen',
 	'YMSM_UCP_SETTINGS_SAVED'	=> 'Erfolgreich aktualisiert.',
-	'YMSM_UCP_SETTINGS_EXPLAIN'	=> 'Einstellungen meiner persönlichen Karte verwalten.',
+	'YMSM_UCP_SETTINGS_EXPLAIN'	=> 'Einstellungen Ihrer persönlichen Karte verwalten.',
 	'YMSM_UCP_USERPREF_EXPLAIN'	=> 'Richte Ihre persönlichen Einstellungen ein.',
 	'YMSM_UCP_USERMARK_EXPLAIN'	=> 'Manage your personal marker at the <a href="%s">board wide user map</a>. You can swith your marker off, change marker position and compose some intro text, which is shown inside balloon of your marker at the board user map.',
 	'UCP_YMSM'					=> 'Karte',
