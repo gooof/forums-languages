@@ -335,7 +335,7 @@ $lang = array_merge($lang, array(
 	'FILE_NOT_FOUND'		=> 'Die angegebene Datei konnte nicht gefunden werden.',
 	'FIND_USERNAME'			=> 'Nach einem Mitglied suchen',
 	'FOLDER'				=> 'Ordner',
-	'FORGOT_PASS'			=> 'Sie haben Ihr Passwort vergessen',
+	'FORGOT_PASS'			=> 'Sie haben Sie Ihr Passwort vergessen',
 	'FORM_INVALID'			=> 'Das übermittelte Formular war ungültig. Versuchen Sie erneut, das Formular abzusenden.',
 	'FORMLIST'				=> 'Formulare',
 	'FORUM'					=> 'Forum',
@@ -1155,7 +1155,7 @@ $lang = array_merge($lang, array(
 	'THANKS_REMOVE'			=> 'Ihr <i>Danke</i> widerrufen',
 	'THANKS_CANT_ADD'		=> 'Sie haben sich bereits für diesen Beitrag bedankt.',
 	'THANKS_CANT_REMOVE'	=> 'Sie haben sich nicht bedankt in diesem Beitrag, daher kann auch keine Bedankung gelöscht werden.',
-	'THANKS_DISALLOW'		=> 'Es ist Ihnen nicht erlaubt, sich für diesem Beitrag zu bedanken.',	
+	'THANKS_DISALLOW'		=> 'Es ist Ihnen nicht erlaubt, sich für diesen Beitrag zu bedanken.',	
 	'THANKS_POST'			=> ' Post',
 	'THANKS_POSTS'			=> ' Posts',
 	'THANKS_TIME'			=> 'x',
@@ -3202,7 +3202,7 @@ $lang = array_merge($lang, array(
 		<p>Ihre Daten werden auf zwei verschiedene Arten gesammelt:</p>
 		<ol style="list-style-type: decimal;"><li>phpBB erstellt bei Ihrem Besuch des Boards mehrere Cookies. Cookies sind kleine Textdateien, die Ihr Browser als temporäre Dateien ablegt. Zwei dieser Cookies enthalten eine eindeutige Benutzer-Nummer (Benutzer-ID) sowie eine anonyme Sitzungs-Nummer (Session-ID), die Ihnen von phpBB automatisch zugewiesen wird. Ein drittes Cookie wird erstellt, sobald Sie Themen besucht haben und wird dazu verwendet, Informationen über die von Ihnen gelesenen Beiträge zu speichern, um die ungelesenen Beiträge markieren zu können.</li>
 		<li>Weitere Daten werden gesammelt, wenn Informationen an den Betreiber übermittelt werden. Dies betrifft — ohne Anspruch auf Vollständigkeit — zum Beispiel Beiträge, die als Gast erstellt werden, Daten, die im Rahmen der Registrierung erfasst werden und die von Ihnen nach Ihrer Registrierung erstellten Nachrichten. Ihr Benutzerkonto besteht mindestens aus einem eindeutigen Benutzernamen, einem Passwort zur Anmeldung mit diesem Konto und einer persönlichen und gültigen E-Mail-Adresse.</li></ol>
-		<p>Ihr Passwort wird mit einer Einwege-Verschlüsselung (Hash) gespeichert, so dass es sicher ist. Jedoch wird Ihnen empfohlen, dieses Passwort nicht auf einer Vielzahl von Webseiten zu verwenden. Das Passwort ist Ihr Schlüssel zu Ihrem Benutzerkonto für das Board,  also gehen Sie mit ihm sorgsam um. Insbesondere wird sich kein Vertreter des Betreibers, der phpBB Group oder ein Dritter berechtigterweise nach Ihrem Passwort fragen. Sollten Sie Ihr Passwort vergessen haben, so können Sie die Funktion „Sie haben Ihr Passwort vergessen“ benutzt. Die phpBB-Software fragt sich dann nach Ihrem Benutzernamen und Ihrer E-Mail-Adresse und sendet anschließend ein neu generiertes Passwort an diese Adresse, mit dem Sie dann auf das Board zugreifen können.</p>
+		<p>Ihr Passwort wird mit einer Einwege-Verschlüsselung (Hash) gespeichert, so dass es sicher ist. Jedoch wird Ihnen empfohlen, dieses Passwort nicht auf einer Vielzahl von Webseiten zu verwenden. Das Passwort ist Ihr Schlüssel zu Ihrem Benutzerkonto für das Board,  also gehen Sie mit ihm sorgsam um. Insbesondere wird sich kein Vertreter des Betreibers, der phpBB Group oder ein Dritter berechtigterweise nach Ihrem Passwort fragen. Sollten Sie Ihr Passwort vergessen haben, so können Sie die Funktion „Sie haben Sie Ihr Passwort vergessen“ benutzt. Die phpBB-Software fragt sich dann nach Ihrem Benutzernamen und Ihrer E-Mail-Adresse und sendet anschließend ein neu generiertes Passwort an diese Adresse, mit dem Sie dann auf das Board zugreifen können.</p>
 
 		<h3>Gestattung der Datenspeicherung</h3>
 		<p>Sie gestatten dem Betreiber, die von Ihnen im Rahmen der Registrierung eingegebenen Daten sowie laufende Zugriffsdaten (Datum und Uhrzeit der Nutzung, IP-Adresse und weitere von Ihrem Browser übermittelte Daten) zu speichern und für den Betrieb des Boards zu verwenden.</p>
@@ -4345,7 +4345,7 @@ $lang = array_merge($lang, array(
 	'ABBCODES_DIVISION_MOVER'			=> '<strong><i>Division</i></strong>',
 	'ABBCODES_ADD_DIVISION'				=> 'fügt eine neue Abtrenn-Line ein',
 	'ABBCODES_ADD_BREAK'				=> 'fügt eine neue Zeile ein, die beliebig verschoben werden kann',
-	'ABBCODES_SYNC'						=> 'Synchronise Ihre Sortierung',
+	'ABBCODES_SYNC'						=> 'Synchronisieren Sie Ihre Sortierung',
 	'ABBCODES_RESYNC_SUCCESS'			=> 'The bbcode order have been resynchronised.',
 
 	'ABBCODES_MOD_DISABLE'				=> '<strong>BBCode Box</strong> ist ausgeschaltet, daher gibt es auch keine zusätzlichen BBCode Box Komponenten.<br/>',
@@ -12779,7 +12779,7 @@ $lang = array_merge($lang, array(
 #######language/en/acp/email.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_MASS_EMAIL_EXPLAIN'		=> 'Hier können Sie eine Nachricht per E-Mail an alle Mitglieder des Boards oder einer spezifischen Gruppe senden, <strong>sofern diese den Erhalt von Informationen per E-Mail zugelassen haben</strong>. Dazu wird eine E-Mail an die festgelegte administrative E-Mail-Adresse verschickt und alle Empfänger als Blindkopie (BCC) hinzugefügt. Standardmäßig wird pro 50 Empfänger eine solche E-Mail versandt; bei mehreren Empfängern werden mehrere E-Mails versandt. Bitte haben nach dem Absenden Geduld, wenn Sie eine Nachricht an eine große Gruppe schicken und brechen Sie den Vorgang nicht ab. Bei einer Massen-E-Mail ist es normal, dass ihr Versand länger dauert. Sie werden benachrichtigt, sobald der Vorgang abgeschlossen wurde.',
+	'ACP_MASS_EMAIL_EXPLAIN'		=> 'Hier können Sie eine Nachricht per E-Mail an alle Mitglieder des Boards oder einer spezifischen Gruppe senden, <strong>sofern diese den Erhalt von Informationen per E-Mail zugelassen haben</strong>. Dazu wird eine E-Mail an die festgelegte administrative E-Mail-Adresse verschickt und alle Empfänger als Blindkopie (BCC) hinzugefügt. Standardmäßig wird pro 50 Empfänger eine solche E-Mail versandt; bei mehreren Empfängern werden mehrere E-Mails versandt. Bitte haben Sie nach dem Absenden Geduld, wenn Sie eine Nachricht an eine große Gruppe schicken und brechen Sie den Vorgang nicht ab. Bei einer Massen-E-Mail ist es normal, dass ihr Versand länger dauert. Sie werden benachrichtigt, sobald der Vorgang abgeschlossen wurde.',
 	'ALL_USERS'						=> 'Alle Mitglieder',
 
 	'COMPOSE'				=> 'Entwerfen',

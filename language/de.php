@@ -1155,7 +1155,7 @@ $lang = array_merge($lang, array(
 	'THANKS_REMOVE'			=> 'Mein <i>Danke</i> widerrufen',
 	'THANKS_CANT_ADD'		=> 'Du hast dich bereits für diesen Beitrag bedankt.',
 	'THANKS_CANT_REMOVE'	=> 'Du hast dich nicht bedankt in diesem Beitrag, daher kann auch keine Bedankung gelöscht werden.',
-	'THANKS_DISALLOW'		=> 'Es ist dir nicht erlaubt, dich für diesem Beitrag zu bedanken.',	
+	'THANKS_DISALLOW'		=> 'Es ist dir nicht erlaubt, dich für diesen Beitrag zu bedanken.',	
 	'THANKS_POST'			=> ' Post',
 	'THANKS_POSTS'			=> ' Posts',
 	'THANKS_TIME'			=> 'x',
@@ -4345,7 +4345,7 @@ $lang = array_merge($lang, array(
 	'ABBCODES_DIVISION_MOVER'			=> '<strong><i>Division</i></strong>',
 	'ABBCODES_ADD_DIVISION'				=> 'fügt eine neue Abtrenn-Line ein',
 	'ABBCODES_ADD_BREAK'				=> 'fügt eine neue Zeile ein, die beliebig verschoben werden kann',
-	'ABBCODES_SYNC'						=> 'Synchronise meine Sortierung',
+	'ABBCODES_SYNC'						=> 'Synchronisiere meine Sortierung',
 	'ABBCODES_RESYNC_SUCCESS'			=> 'The bbcode order have been resynchronised.',
 
 	'ABBCODES_MOD_DISABLE'				=> '<strong>BBCode Box</strong> ist ausgeschaltet, daher gibt es auch keine zusätzlichen BBCode Box Komponenten.<br/>',
