@@ -335,7 +335,7 @@ $lang = array_merge($lang, array(
 	'FILE_NOT_FOUND'		=> 'Die angegebene Datei konnte nicht gefunden werden.',
 	'FIND_USERNAME'			=> 'Nach einem Mitglied suchen',
 	'FOLDER'				=> 'Ordner',
-	'FORGOT_PASS'			=> 'Sie habe mein Passwort vergessen',
+	'FORGOT_PASS'			=> 'Sie haben Ihr Passwort vergessen',
 	'FORM_INVALID'			=> 'Das übermittelte Formular war ungültig. Versuchen Sie erneut, das Formular abzusenden.',
 	'FORMLIST'				=> 'Formulare',
 	'FORUM'					=> 'Forum',
@@ -3202,7 +3202,7 @@ $lang = array_merge($lang, array(
 		<p>Ihre Daten werden auf zwei verschiedene Arten gesammelt:</p>
 		<ol style="list-style-type: decimal;"><li>phpBB erstellt bei Ihrem Besuch des Boards mehrere Cookies. Cookies sind kleine Textdateien, die Ihr Browser als temporäre Dateien ablegt. Zwei dieser Cookies enthalten eine eindeutige Benutzer-Nummer (Benutzer-ID) sowie eine anonyme Sitzungs-Nummer (Session-ID), die Ihnen von phpBB automatisch zugewiesen wird. Ein drittes Cookie wird erstellt, sobald Sie Themen besucht haben und wird dazu verwendet, Informationen über die von Ihnen gelesenen Beiträge zu speichern, um die ungelesenen Beiträge markieren zu können.</li>
 		<li>Weitere Daten werden gesammelt, wenn Informationen an den Betreiber übermittelt werden. Dies betrifft — ohne Anspruch auf Vollständigkeit — zum Beispiel Beiträge, die als Gast erstellt werden, Daten, die im Rahmen der Registrierung erfasst werden und die von Ihnen nach Ihrer Registrierung erstellten Nachrichten. Ihr Benutzerkonto besteht mindestens aus einem eindeutigen Benutzernamen, einem Passwort zur Anmeldung mit diesem Konto und einer persönlichen und gültigen E-Mail-Adresse.</li></ol>
-		<p>Ihr Passwort wird mit einer Einwege-Verschlüsselung (Hash) gespeichert, so dass es sicher ist. Jedoch wird Ihnen empfohlen, dieses Passwort nicht auf einer Vielzahl von Webseiten zu verwenden. Das Passwort ist Ihr Schlüssel zu Ihrem Benutzerkonto für das Board,  also gehen Sie mit ihm sorgsam um. Insbesondere wird sich kein Vertreter des Betreibers, der phpBB Group oder ein Dritter berechtigterweise nach Ihrem Passwort fragen. Sollten Sie Ihr Passwort vergessen haben, so können Sie die Funktion „Sie habe mein Passwort vergessen“ benutzt. Die phpBB-Software fragt sich dann nach Ihrem Benutzernamen und Ihrer E-Mail-Adresse und sendet anschließend ein neu generiertes Passwort an diese Adresse, mit dem Sie dann auf das Board zugreifen können.</p>
+		<p>Ihr Passwort wird mit einer Einwege-Verschlüsselung (Hash) gespeichert, so dass es sicher ist. Jedoch wird Ihnen empfohlen, dieses Passwort nicht auf einer Vielzahl von Webseiten zu verwenden. Das Passwort ist Ihr Schlüssel zu Ihrem Benutzerkonto für das Board,  also gehen Sie mit ihm sorgsam um. Insbesondere wird sich kein Vertreter des Betreibers, der phpBB Group oder ein Dritter berechtigterweise nach Ihrem Passwort fragen. Sollten Sie Ihr Passwort vergessen haben, so können Sie die Funktion „Sie haben Ihr Passwort vergessen“ benutzt. Die phpBB-Software fragt sich dann nach Ihrem Benutzernamen und Ihrer E-Mail-Adresse und sendet anschließend ein neu generiertes Passwort an diese Adresse, mit dem Sie dann auf das Board zugreifen können.</p>
 
 		<h3>Gestattung der Datenspeicherung</h3>
 		<p>Sie gestatten dem Betreiber, die von Ihnen im Rahmen der Registrierung eingegebenen Daten sowie laufende Zugriffsdaten (Datum und Uhrzeit der Nutzung, IP-Adresse und weitere von Ihrem Browser übermittelte Daten) zu speichern und für den Betrieb des Boards zu verwenden.</p>
@@ -3246,7 +3246,7 @@ $lang = array_merge($lang, array(
 	'ADD_TO'						=> '[ An ]',
 	'ADD_USERS_UCP_EXPLAIN'			=> 'Hier können Sie neue Benutzer der Gruppe hinzufügen. Sie können festlegen, ob die Gruppe zur Standardgruppe der angegebenen Benutzer wird. Bitte geben Sie jeden Benutzernamen in einer neuen Zeile ein.',
 	'ADMIN_EMAIL'					=> 'Administratoren dürfen Ihnen Informationen per E-Mail schicken',
-	'AGREE'							=> 'Sie bin mit diesen Bedingungen einverstanden',
+	'AGREE'							=> 'Sie sind mit diesen Bedingungen einverstanden',
 	'ALLOW_PM'						=> 'Andere Mitglieder dürfen Ihnen Private Nachrichten schicken',
 	'ALLOW_PM_EXPLAIN'				=> 'Administratoren und Moderatoren dürfen Ihnen immer Private Nachrichten schicken.',
 	'ALREADY_ACTIVATED'				=> 'Sie haben Ihr Benutzerkonto bereits aktiviert.',
@@ -3453,7 +3453,7 @@ $lang = array_merge($lang, array(
 	'NOT_ADDED_FOES_BOTS'			=> 'Sie können Bots nicht zu Ihren ignorierten Mitgliedern hinzufügen.',
 	'NOT_ADDED_FOES_FRIENDS'		=> 'Sie können kein Mitglied zu Ihren ignorierten Mitgliedern hinzufügen, das sich in der Liste Ihrer Freunde befindet.',
 	'NOT_ADDED_FOES_SELF'			=> 'Sie können sich nicht selbst zu Ihren ignorierten Mitgliedern hinzufügen.',
-	'NOT_AGREE'						=> 'Sie bin mit diesen Bedingungen nicht einverstanden',
+	'NOT_AGREE'						=> 'Sie sind mit diesen Bedingungen nicht einverstanden',
 	'NOT_ENOUGH_SPACE_FOLDER'		=> 'Der Ziel-Ordner „%s“ scheint voll zu sein. Die gewählte Aktion wurde nicht durchgeführt.',
 	'NOT_MOVED_MESSAGE'				=> 'Sie haben 1 zurückgehaltene Private Nachricht, weil der Ordner voll ist.',
 	'NOT_MOVED_MESSAGES'			=> 'Sie haben %d zurückgehaltene Private Nachrichten, weil der Ordner voll ist.',
@@ -12779,7 +12779,7 @@ $lang = array_merge($lang, array(
 #######language/en/acp/email.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_MASS_EMAIL_EXPLAIN'		=> 'Hier können Sie eine Nachricht per E-Mail an alle Mitglieder des Boards oder einer spezifischen Gruppe senden, <strong>sofern diese den Erhalt von Informationen per E-Mail zugelassen haben</strong>. Dazu wird eine E-Mail an die festgelegte administrative E-Mail-Adresse verschickt und alle Empfänger als Blindkopie (BCC) hinzugefügt. Standardmäßig wird pro 50 Empfänger eine solche E-Mail versandt; bei mehreren Empfängern werden mehrere E-Mails versandt. Bitte habe nach dem Absenden Geduld, wenn Sie eine Nachricht an eine große Gruppe schicken und brechen Sie den Vorgang nicht ab. Bei einer Massen-E-Mail ist es normal, dass ihr Versand länger dauert. Sie werden benachrichtigt, sobald der Vorgang abgeschlossen wurde.',
+	'ACP_MASS_EMAIL_EXPLAIN'		=> 'Hier können Sie eine Nachricht per E-Mail an alle Mitglieder des Boards oder einer spezifischen Gruppe senden, <strong>sofern diese den Erhalt von Informationen per E-Mail zugelassen haben</strong>. Dazu wird eine E-Mail an die festgelegte administrative E-Mail-Adresse verschickt und alle Empfänger als Blindkopie (BCC) hinzugefügt. Standardmäßig wird pro 50 Empfänger eine solche E-Mail versandt; bei mehreren Empfängern werden mehrere E-Mails versandt. Bitte haben nach dem Absenden Geduld, wenn Sie eine Nachricht an eine große Gruppe schicken und brechen Sie den Vorgang nicht ab. Bei einer Massen-E-Mail ist es normal, dass ihr Versand länger dauert. Sie werden benachrichtigt, sobald der Vorgang abgeschlossen wurde.',
 	'ALL_USERS'						=> 'Alle Mitglieder',
 
 	'COMPOSE'				=> 'Entwerfen',
