@@ -3902,7 +3902,7 @@ $lang = array_merge($lang, array(
 	'ABBC3_NO_EXAMPLE'			=> 'Kein Beispiel vorhanden',
 
 	'ABBC3_ID'					=> 'Bezeichnung eingeben:',
-	'ABBC3_NOID'				=> 'Du hast keinen Identifier eingegeben',
+	'ABBC3_NOID'				=> 'Du hast keine Bezeichnung eingegeben',
 	'ABBC3_LINK'				=> 'Gib einen Link ein für ',
 	'ABBC3_DESC'				=> 'Gib eine Beschreibung ein für ',
 	'ABBC3_NAME'				=> 'Beschreibung',
