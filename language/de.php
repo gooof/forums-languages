@@ -3732,6 +3732,9 @@ $lang = array_merge($lang, array(
 	'NO_PENDING'	=> 'Du hast keine laufenden Beitrittsanfragen',
 	'NO_NONMEMBER'	=> 'Es gibt keine Gruppe, in der du nicht Mitglied bist',
 	'TEMPORARY_SELECTABLE'	=> 'temporär im %s auswählbar',
+	'RESET_EMAIL'			=> 'Die übermittelte Email-Adresse konnte nicht gefunden werden.',
+	'RESET_USERNAME'		=> 'Der übermittelte Benutzername konnte nicht gefunden werden.',
+	'RESET_USERNAMES_FOUND'	=> 'Es wurde mehr als ein Benutzer für diese Email Adresse gefunden.<br> Bitte wähle nun den Usernamen, für den du ein neues Passwort benötigst.',
 
 	'TO_DAY'			=> 'Datum: %s',
 	'LEFT'				=> 'Links',

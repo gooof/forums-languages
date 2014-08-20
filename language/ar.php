@@ -3684,6 +3684,9 @@ $lang = array_merge($lang, array(
 	'NO_PENDING'	=> 'لا يوجد مجموعات تنتظر الموافقة على انضمامك إليها',
 	'NO_NONMEMBER'	=> 'لا يوجد مجموعات لست مشتركاً بها',
 	'TEMPORARY_SELECTABLE'	=> 'temporary selectable on the %s',
+	'RESET_EMAIL'			=> 'The submitted e-mail could not be found.',
+	'RESET_USERNAME'		=> 'The submitted username could not be found.',
+	'RESET_USERNAMES_FOUND'	=> 'We found more than one username for this email address.<br> Please pick the username for which a new password is required.',
 
 	'TO_DAY'			=> 'التاريخ: %s',
 	'LEFT'				=> 'Left',

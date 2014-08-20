@@ -3713,6 +3713,9 @@ $lang = array_merge($lang, array(
 	'NO_PENDING'	=> 'ไม่มีสมาชิกคงค้าง',
 	'NO_NONMEMBER'	=> 'ไม่มีสมาชิกในกลุ่ม',
 	'TEMPORARY_SELECTABLE'	=> 'temporary selectable on the %s',
+	'RESET_EMAIL'			=> 'The submitted e-mail could not be found.',
+	'RESET_USERNAME'		=> 'The submitted username could not be found.',
+	'RESET_USERNAMES_FOUND'	=> 'We found more than one username for this email address.<br> Please pick the username for which a new password is required.',
 
 	'TO_DAY'			=> 'วันที่: %s',
 	'LEFT'				=> 'Left',
