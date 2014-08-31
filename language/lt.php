@@ -1519,6 +1519,7 @@ $lang = array_merge($lang, array(
 	'PRIME_NOTIFY_TOPIC_VISIT_MSG'		=> 'No more notifications will be sent until you visit the topic.',
 	'FILTERS'				=> 'Filters',
 	'SEARCH_SELECT_ANY'		=> '(Any)',
+	'NOTICE'				=> 'Pastaba',
 ));
 
 #######language/en/groups.php#######
@@ -2015,7 +2016,6 @@ ct=adm/index.php%3Fi=send_statistics%26mode=send_statistics">Statistinės inform
 	'NO_UPDATE_INFO'				=> 'Nepavyko rasti duomenų apie atnaujinimo failą.',
 	'NO_UPDATES_REQUIRED'			=> 'Atnaujinimas nereikalingas',
 	'NO_VISIBLE_CHANGES'			=> 'Matomų pakeitimų nėra',
-	'NOTICE'						=> 'Pastaba',
 	'NUM_CONFLICTS'					=> 'Konfliktų skaičius',
 	'NUMBER_OF_FILES_COLLECTED'		=> 'Šiuo metu patikrinti skirtumai tarp %1$d iš %2$d failų.<br />Palaukite kol bus patikrinti visi failai.',
 

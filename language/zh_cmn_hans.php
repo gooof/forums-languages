@@ -1519,6 +1519,7 @@ $lang = array_merge($lang, array(
 	'PRIME_NOTIFY_TOPIC_VISIT_MSG'		=> 'No more notifications will be sent until you visit the topic.',
 	'FILTERS'				=> 'Filters',
 	'SEARCH_SELECT_ANY'		=> '(Any)',
+	'NOTICE'				=> '注意',
 ));
 
 #######language/en/groups.php#######
@@ -2015,7 +2016,6 @@ $lang = array_merge($lang, array(
 	'NO_UPDATE_INFO'				=> '无法找到升级文件信息.',
 	'NO_UPDATES_REQUIRED'			=> '不需要升级',
 	'NO_VISIBLE_CHANGES'			=> '没有可见的更改',
-	'NOTICE'						=> '注意',
 	'NUM_CONFLICTS'					=> '冲突的数量',
 	'NUMBER_OF_FILES_COLLECTED'		=> '正在检查 %2$d 个文件中 %1$d 个文件的差异.<br />请等待直到文件检查完成.',
 

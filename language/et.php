@@ -1519,6 +1519,7 @@ $lang = array_merge($lang, array(
 	'PRIME_NOTIFY_TOPIC_VISIT_MSG'		=> 'No more notifications will be sent until you visit the topic.',
 	'FILTERS'				=> 'Filters',
 	'SEARCH_SELECT_ANY'		=> '(Any)',
+	'NOTICE'				=> 'Teade',
 ));
 
 #######language/en/groups.php#######
@@ -1991,7 +1992,6 @@ $lang = array_merge($lang, array(
 	'NO_UPDATE_INFO'				=> 'Uuendamise faili infot ei leitud.',
 	'NO_UPDATES_REQUIRED'			=> 'Uuendust pole vaja',
 	'NO_VISIBLE_CHANGES'			=> 'Pole nähtavaid muutusi',
-	'NOTICE'						=> 'Teade',
 	'NUM_CONFLICTS'					=> 'Vastuolude arv',
 	'NUMBER_OF_FILES_COLLECTED'		=> 'Hetkel on erinevusi %1$d\'l %2$d\'st kogutud failist.<br />Palun oota, kuni kogumine on lõpetatud.',
 

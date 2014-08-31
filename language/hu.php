@@ -1519,6 +1519,7 @@ $lang = array_merge($lang, array(
 	'PRIME_NOTIFY_TOPIC_VISIT_MSG'		=> 'No more notifications will be sent until you visit the topic.',
 	'FILTERS'				=> 'Filters',
 	'SEARCH_SELECT_ANY'		=> '(Any)',
+	'NOTICE'				=> 'Észrevétel',
 ));
 
 #######language/en/groups.php#######
@@ -2014,7 +2015,6 @@ $lang = array_merge($lang, array(
 	'NO_UPDATE_INFO'				=> 'Nem található az információ a frissítő állományról.',
 	'NO_UPDATES_REQUIRED'			=> 'Nincs szükség frissítésre.',
 	'NO_VISIBLE_CHANGES'			=> 'Nincs látható változás.',
-	'NOTICE'						=> 'Észrevétel',
 	'NUM_CONFLICTS'					=> 'Ütközések száma',
 	'NUMBER_OF_FILES_COLLECTED'		=> 'Eddig %1$d állomány került ellenőrzésre a %2$d-ből.<br />Kérünk, várj míg az összes állomány ellenőrzése befejeződik.',
 

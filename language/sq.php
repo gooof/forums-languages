@@ -1519,6 +1519,7 @@ $lang = array_merge($lang, array(
 	'PRIME_NOTIFY_TOPIC_VISIT_MSG'		=> 'No more notifications will be sent until you visit the topic.',
 	'FILTERS'				=> 'Filters',
 	'SEARCH_SELECT_ANY'		=> '(Any)',
+	'NOTICE'				=> 'Vini re',
 ));
 
 #######language/en/groups.php#######
@@ -2013,7 +2014,6 @@ $lang = array_merge($lang, array(
 	'NO_UPDATE_INFO'				=> 'Informacioni i skedarit të azhornimit nuk mund të gjëndet.',
 	'NO_UPDATES_REQUIRED'			=> 'Nuk nevojitet azhornimi',
 	'NO_VISIBLE_CHANGES'			=> 'Asnjë ndryshim i dukshëm',
-	'NOTICE'						=> 'Vini re',
 	'NUM_CONFLICTS'					=> 'Numri i konflikteve',
 	'NUMBER_OF_FILES_COLLECTED'		=> 'Momentalisht janë kontrolluar ndryshimet e %1$d nga %2$d skedarë.<br />Ju lutemi të prisni deri sa të mbarojë kontrolli i të gjithë skedarëve.',
 

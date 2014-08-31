@@ -1519,6 +1519,7 @@ $lang = array_merge($lang, array(
 	'PRIME_NOTIFY_TOPIC_VISIT_MSG'		=> 'No more notifications will be sent until you visit the topic.',
 	'FILTERS'				=> 'Filters',
 	'SEARCH_SELECT_ANY'		=> '(Any)',
+	'NOTICE'				=> '通知',
 ));
 
 #######language/en/groups.php#######
@@ -2028,7 +2029,6 @@ $lang = array_merge($lang, array(
 	'NO_UPDATE_INFO'				=> 'ファイルのアップデート情報が見つかりません',
 	'NO_UPDATES_REQUIRED'			=> '必要なアップデート処理はありません',
 	'NO_VISIBLE_CHANGES'			=> '変更はありません',
-	'NOTICE'						=> '通知',
 	'NUM_CONFLICTS'					=> '衝突ブロック数',
 	'NUMBER_OF_FILES_COLLECTED'		=> '現在、%2$d ファイルの内、%1$d ファイルまでチェックを終了しました。<br />ファイルチェックが全て終了するまでお待ちください。',
 
