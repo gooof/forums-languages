@@ -1051,6 +1051,7 @@ $lang = array_merge($lang, array(
 	'SHOP_PROFILE_LINK'		=> '%sprofil of the user%s',
 	'POINTS_SEPARATOR_DECIMAL'		=> '.',
 	'POINTS_SEPARATOR_THOUSANDS'	=> ',',
+	'LOTTERY_PM_COMMISION'				=> 'The Lottery Management',
 
 	'SEPARATOR_DECIMAL'			=> '.',
 	'SEPARATOR_THOUSANDS'		=> ',',
@@ -8871,7 +8872,6 @@ $lang = array_merge($lang, array(
 	'LOTTERY_PLAYERS'					=> 'Number of players up to now',
 	'LOTTERY_PM_BODY'					=> 'Congratulations! You have won %1$s in our Lottery! %2$s',
 	'LOTTERY_PM_CASH_ENABLED'			=> 'Your winnings have been deposited into your account, enjoy it!<br /><br /><i>The Lottery Management</i>',
-	'LOTTERY_PM_COMMISION'				=> 'The Lottery Management',
 	'LOTTERY_PM_SUBJECT'				=> 'You won the lottery!',
 	'LOTTERY_PURCHASE_TICKET'			=> 'Buy Ticket',
 	'LOTTERY_PURCHASE_TICKETS'			=> 'Buy Tickets',
