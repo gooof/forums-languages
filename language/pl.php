@@ -1127,6 +1127,7 @@ $lang = array_merge($lang, array(
 	'RSS_VALID'	=> 'RSS 2.0 Valid feed',
 	'RSS_1XREDIR'	=> 'This RSS feed was moved',
 	'RSS_1XREDIR_MSG'	=> 'This RSS feed was moved, you will now find it using this URL',
+	'NEWS_ARCHIVE_OF' => 'Archive %s',
 
 	'MISSING_DIV' 		=> 'The shoutbox div cann’t be found.',
 	'LOADING' 			=> 'Loading',
@@ -1316,6 +1317,8 @@ $lang = array_merge($lang, array(
 	'TOPIC_AGE_WARNING'		=> 'You are attempting to reply to a topic that is %s old. Instead, please begin a new topic, or search for another related topic that may be more suitable.',
 	'TOPIC_AGE_WARNING_LOCK'	=> 'This topic is %s old. The forum administrator has chosen for old topics to be locked when a reply is attempted. Please begin a new topic or use the search feature to find a similar but newer topic.',
 	'INSTALLER_INTRO'		=> 'Intro',
+	'POINTS'						=> 'Points',
+	'POINTS_ATTACHMENT_COSTS'		=> 'The attachment <strong>%1$s</strong> is a charge of (%2$s %3$s), you do not have enough %3$s!',
 
 	// Maps
 	'YMSM_LANGUAGE'					=> 'en-US',
@@ -8877,8 +8880,6 @@ $lang = array_merge($lang, array(
 	'MAIN_ON_HAND'						=> 'You currently have %1$s %2$s on hand.',
 	'MAIN_USERNAME_LOCKED'				=> 'This user is locked and cannot use the points system.',
 
-	'POINTS'							=> 'Points',
-	'POINTS_ATTACHMENT_COSTS'			=> 'The attachment <strong>%1$s</strong> is a charge of (%2$s %3$s), you do not have enough %3$s!',
 	'POINTS_ATTACHMENT_MINI_POSTS'		=> 'You need more %1$s in order to download this attachment!',
 	'POINTS_BANK'						=> 'Bank',
 	'POINTS_BPOINTS_TOTAL'				=> 'Totals in Bank: %1$s %2$s',

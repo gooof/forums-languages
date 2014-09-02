@@ -1127,6 +1127,7 @@ $lang = array_merge($lang, array(
 	'RSS_VALID'	=> 'RSS 2.0 ValidFeed',
 	'RSS_1XREDIR'	=> 'This RSS feed was moved',
 	'RSS_1XREDIR_MSG'	=> 'This RSS feed was moved, you will now find it using this URL',
+	'NEWS_ARCHIVE_OF' => 'Archive %s',
 
 	'MISSING_DIV' 		=> 'Shoutbox Div kannn nicht gefunden werden.',
 	'LOADING' 			=> 'laden...',
@@ -1316,6 +1317,8 @@ $lang = array_merge($lang, array(
 	'TOPIC_AGE_WARNING'		=> 'Sie versuchen, auf ein Thema zu antworten, das %s alt ist. Bitte beginnen Sie stattdessen ein neues Thema oder suchen Sie ein Thema das neuer oder besser geeignet ist.',
 	'TOPIC_AGE_WARNING_LOCK'	=> 'Dieses Thema ist %s alt. Der Administrator hat für alte Themen eingestellt, dass diese gesperrt werden, wenn jemand eine Antwort schreiben will. Bitte beginnen Sie ein neues Thema oder verwenden Sie die Suchfunktion, um ein ähnliches neueres Thema zu finden.',
 	'INSTALLER_INTRO'		=> 'Intro',
+	'POINTS'						=> 'Punkte',
+	'POINTS_ATTACHMENT_COSTS'		=> 'Die Erweiterung <strong>%1$s</strong> ist kostenpflichtig (%2$s %3$s), Sie haben aber nicht genügend %3$s!',
 
 	// Maps
 	'YMSM_LANGUAGE'					=> 'en-US',
@@ -8909,8 +8912,6 @@ $lang = array_merge($lang, array(
 	'MAIN_ON_HAND'						=> 'Sie haben zur Zeit ein Barvermögen von %1$s %2$s.',
 	'MAIN_USERNAME_LOCKED'				=> 'Dieser Benutzer ist gesperrt und kann daher Ultimate Points nicht verwenden.',
 
-	'POINTS'							=> 'Punkte',
-	'POINTS_ATTACHMENT_COSTS'			=> 'Die Erweiterung <strong>%1$s</strong> ist kostenpflichtig (%2$s %3$s), Sie haben aber nicht genügend %3$s!',
 	'POINTS_ATTACHMENT_MINI_POSTS'		=> 'Sie benötigen mehr %1$s, um diesen Anhang downloaden zu können!',
 	'POINTS_BANK'						=> 'Bank',
 	'POINTS_BPOINTS_TOTAL'				=> 'Einlagen in der %3$s: %1$s %2$s',
