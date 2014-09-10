@@ -348,7 +348,6 @@ $lang = array_merge($lang, array(
 	'FORUM_LOCKED'			=> 'Forum gesloten',
 	'FORUM_RULES'			=> 'Forumregels',
 	'FORUM_RULES_LINK'		=> 'Link naar de forumregels',
-	'FROM'					=> 'van',
 	'FSOCK_DISABLED'		=> 'De actie kon niet worden uitgevoerd omdat de fsock-functies uitgeschakeld zijn, of omdat de betreffende server niet werd gevonden.',
 	'FSOCK_TIMEOUT'			=> 'Er is een time-out opgetreden tijdens het lezen van de netwerk stream.',
 
@@ -1077,12 +1076,15 @@ $lang = array_merge($lang, array(
 	'SHOP_PCS'				=> 'pcs.',
 	'SHOP_MORE_DETAIL'		=> 'Find more details and items in the ',
 
+	'FROM'			=> 'van',
 	'XMODS'				=> 'ENGLISH',
 	'SMILIES_CATS'		=> 'Smiley Categories',
 	'ARCADE_GAMETIME'	=> 'Play Time',
 
 	'FORUM_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this forum.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this topic.',
+	'TOO_FEW_CHARS_LIMIT'	=> 'Je bericht bevat %1$d tekens. Een bericht moet minimaal %2$d tekens bevatten.',
+	'REPLY_TO_MESSAGE'		=> 'Antwoord op bericht',
 
 	'RSS_CHAN_LIST_TITLE'	=> 'Forums',
 	'RSS_CHAN_LIST_DESC'	=> 'This channel list is listing the available RSS feeds.',
@@ -3055,7 +3057,6 @@ $lang = array_merge($lang, array(
 	'STYLES_TIP'				=> 'Tip: opmaak kun je snel toepassen op de geselecteerde tekst.',
 
 	'TOO_FEW_CHARS'				=> 'Je bericht bevat te weinig tekens.',
-	'TOO_FEW_CHARS_LIMIT'		=> 'Je bericht bevat %1$d tekens. Een bericht moet minimaal %2$d tekens bevatten.',
 	'TOO_FEW_POLL_OPTIONS'		=> 'Je moet minimaal twee poll-opties hebben ingevoerd.',
 	'TOO_MANY_ATTACHMENTS'		=> 'Kan geen bijlage meer toevoegen, %d is het maximale aantal.',
 	'TOO_MANY_CHARS'			=> 'Je bericht bevat teveel tekens.',
@@ -3092,7 +3093,6 @@ $lang = array_merge($lang, array(
 	'BBCODE_F_TYPE_HELP'		=> 'Lettertype',
 	'BBCODE_TAB_HELP'		=> 'Toevoegen van een Tabblad (De tekst moet ook tussen de [tab] ... [/ tab] ingevoegd worden)',
 	'BBCODE_E_HELP'		=> 'List: Add list element',
-	'REPLY_TO_MESSAGE'	=> 'Antwoord op bericht',
 	'NO_LINKS_FOR_GUESTS'	=> 'Gasten hebben geen rechten om externe links of e-mailadressen te posten en ze kunnen geen BBCode [url] of [url=] gebruiken. Als je afbeeldingen plaatst, stuur je ook een link mee. Om afbeeldingen in te voegen gebruik je de knop in de editor of bestandsbijlagen. Je kunt je altijd registreren om externe links te gebruiken.',
 
 ));
@@ -8247,7 +8247,6 @@ $lang = array_merge($lang, array(
 	'FORECAST_PTS'					=> 'Predicted points',
 	'FORM'							=> 'Form',
 	'FORMULA'						=> 'Formula',
-	'FROM'							=> 'van',
 	'FROM_DAY_SEASON'				=> 'From %1$d. Matchday season of %2$d',
 
 	'GAME_NOT_PLAYED'				=> '%d Match was not played yet! ',

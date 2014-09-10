@@ -348,7 +348,6 @@ $lang = array_merge($lang, array(
 	'FORUM_LOCKED'			=> 'Forum gesperrt',
 	'FORUM_RULES'			=> 'Forumsregeln',
 	'FORUM_RULES_LINK'		=> 'Die Forumsregeln lesen',
-	'FROM'					=> 'von',
 	'FSOCK_DISABLED'		=> 'Dieser Vorgang kann nicht abgeschlossen werden, da die <var>fsockopen</var>-Funktion deaktiviert wurde oder weil der angegebene Server nicht gefunden werden konnte.',
 	'FSOCK_TIMEOUT'			=> 'Beim Lesen des Datenstroms ist eine Zeitüberschreitung aufgetreten.',
 
@@ -1077,12 +1076,15 @@ $lang = array_merge($lang, array(
 	'SHOP_PCS'				=> 'St.',
 	'SHOP_MORE_DETAIL'		=> 'Finde weitere Details und Artikel im ',
 
+	'FROM'			=> 'von',
 	'XMODS'				=> 'DEUTSCH',
 	'SMILIES_CATS'		=> 'Smilies Kategorien',
 	'ARCADE_GAMETIME'	=> 'Spielzeit',
 
 	'FORUM_LOW_POSTCOUNT'	=> 'Sie haben nicht genügend Beiträge um dieses Forum zu betreten.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'Sie haben nicht genügend Beiträge um dieses Thema lesen zu können.',
+	'TOO_FEW_CHARS_LIMIT'	=> 'Ihre Nachricht enthält %1$d Zeichen. Es müssen jedoch mindestens %2$d Zeichen verwendet werden.',
+	'REPLY_TO_MESSAGE'		=> 'Antwort auf Beitrag',
 
 	'RSS_CHAN_LIST_TITLE'	=> 'Foren',
 	'RSS_CHAN_LIST_DESC'	=> 'Dieser Channel gibt einen Überblick über unsere RSS Feeds.',
@@ -1127,7 +1129,7 @@ $lang = array_merge($lang, array(
 	'RSS_VALID'	=> 'RSS 2.0 ValidFeed',
 	'RSS_1XREDIR'	=> 'This RSS feed was moved',
 	'RSS_1XREDIR_MSG'	=> 'This RSS feed was moved, you will now find it using this URL',
-	'NEWS_ARCHIVE_OF' => 'Archive %s',
+	'NEWS_ARCHIVE_OF' => 'Archiv %s',
 
 	'MISSING_DIV' 		=> 'Shoutbox Div kannn nicht gefunden werden.',
 	'LOADING' 			=> 'laden...',
@@ -3054,7 +3056,6 @@ $lang = array_merge($lang, array(
 	'STYLES_TIP'				=> 'Tipp: Formatierungen können schnell auf den markierten Text angewandt werden.',
 
 	'TOO_FEW_CHARS'				=> 'Die eingegebene Nachricht ist zu kurz.',
-	'TOO_FEW_CHARS_LIMIT'		=> 'Ihre Nachricht enthält %1$d Zeichen. Es müssen jedoch mindestens %2$d Zeichen verwendet werden.',
 	'TOO_FEW_POLL_OPTIONS'		=> 'Sie müssen mindestens zwei Antwortmöglichkeiten für die Umfrage eingeben.',
 	'TOO_MANY_ATTACHMENTS'		=> 'Sie können keinen weiteren Dateianhang hinzufügen. Die maximale Anzahl liegt bei %d.',
 	'TOO_MANY_CHARS'			=> 'Ihr Beitrag enthält zu viele Zeichen.',
@@ -3091,7 +3092,6 @@ $lang = array_merge($lang, array(
 	'BBCODE_F_TYPE_HELP'		=> 'Schriftart',
 	'BBCODE_TAB_HELP'		=> 'Fügen Sie einen Tab ein (Der Text muss auch in [tab] ... [/tab] eingefügt sein)',
 	'BBCODE_E_HELP'		=> 'Aufzählung: Listenelement hinzufügen',
-	'REPLY_TO_MESSAGE'	=> 'Antwort auf Beitrag',
 	'NO_LINKS_FOR_GUESTS'	=> 'Sie dürfen als Gast keine Links oder den BBCode [url] oder [url=] im Beitrag benutzt. Sollten Sie Bilder verlinkt haben, haben Sie vermutlich unwissend einen Link mitgeschickt. Benutzen Sie zum Einfügen von Bildern bitten den Button in diesem Editor oder die Dateienanhänge. Sie können sich aber auch jederzeit kostenlos registrieren um wieder Links benutzt zu können.',
 
 ));
@@ -8264,7 +8264,6 @@ $lang = array_merge($lang, array(
 	'FORECAST_PTS'					=> 'Vorhersagepunkte',
 	'FORM'							=> 'Form',
 	'FORMULA'						=> 'Formel',
-	'FROM'							=> 'von',
 	'FROM_DAY_SEASON'				=> 'vom %1$d. Spieltag Saison %2$d',
 
 	'GAME_NOT_PLAYED'				=> '%d Spiel wurde noch nicht gespielt. ',

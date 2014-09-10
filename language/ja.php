@@ -348,7 +348,6 @@ $lang = array_merge($lang, array(
 	'FORUM_LOCKED'			=> '閉鎖中フォーラム',
 	'FORUM_RULES'			=> 'フォーラムルール',
 	'FORUM_RULES_LINK'		=> 'フォーラムルールを確認するにはこちらをクリックしてください',
-	'FROM'					=> 'from',
 	'FSOCK_DISABLED'		=> 'PHP関数 <var>fsockopen</var> が無効に設定されているかサーバからの応答がないため、クライアント/サーバ 間のソケット接続に失敗しました',
 	'FSOCK_TIMEOUT'			=> 'ネットワークストリーミングの最中にタイムアウトが発生しました',
 
@@ -1077,12 +1076,15 @@ $lang = array_merge($lang, array(
 	'SHOP_PCS'				=> 'pcs.',
 	'SHOP_MORE_DETAIL'		=> 'Find more details and items in the ',
 
+	'FROM'			=> 'from',
 	'XMODS'				=> 'ENGLISH',
 	'SMILIES_CATS'		=> 'Smiley Categories',
 	'ARCADE_GAMETIME'	=> 'Play Time',
 
 	'FORUM_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this forum.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this topic.',
+	'TOO_FEW_CHARS_LIMIT'	=> '現在のメッセージは %1$d 字です。 %2$d 字以上にする必要があります。',
+	'REPLY_TO_MESSAGE'		=> 'Reply to message',
 
 	'RSS_CHAN_LIST_TITLE'	=> 'フォーラム',
 	'RSS_CHAN_LIST_DESC'	=> 'This channel list is listing the available RSS feeds.',
@@ -3069,7 +3071,6 @@ $lang = array_merge($lang, array(
 	'STYLES_TIP'				=> 'Tip: テキストを選択した状態で BBCode ボタンをクリックすると選択部分がタグで囲まれます',
 
 	'TOO_FEW_CHARS'				=> 'メッセージが短すぎます',
-	'TOO_FEW_CHARS_LIMIT'		=> '現在のメッセージは %1$d 字です。 %2$d 字以上にする必要があります。',
 	'TOO_FEW_POLL_OPTIONS'		=> '投票オプションを少なくとも２つ作成してください',
 	'TOO_MANY_ATTACHMENTS'		=> 'これ以上ファイルを添付することはできません。添付可能なファイルの最大数は %d です。',
 	'TOO_MANY_CHARS'			=> 'メッセージが長すぎます',
@@ -3106,7 +3107,6 @@ $lang = array_merge($lang, array(
 	'BBCODE_F_TYPE_HELP'		=> 'Typeface',
 	'BBCODE_TAB_HELP'		=> 'Add a Tab one (The text must also be in the [tab] ... [/ tab] to be inserted)',
 	'BBCODE_E_HELP'		=> 'List: Add list element',
-	'REPLY_TO_MESSAGE'	=> 'Reply to message',
 	'NO_LINKS_FOR_GUESTS'	=> 'Guests do not have permissions to post external links or email addresses and can not use BBCode [url] or [url=]. If you are posting images, you probably sent a link within. To insert images use the button in this editor or the file attachments. You are free to register any time to be able to use external links.',
 
 ));
@@ -8245,7 +8245,6 @@ $lang = array_merge($lang, array(
 	'FORECAST_PTS'					=> 'Predicted points',
 	'FORM'							=> 'Form',
 	'FORMULA'						=> 'Formula',
-	'FROM'							=> 'from',
 	'FROM_DAY_SEASON'				=> 'From %1$d. Matchday season of %2$d',
 
 	'GAME_NOT_PLAYED'				=> '%d Match was not played yet! ',

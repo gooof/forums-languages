@@ -348,7 +348,6 @@ $lang = array_merge($lang, array(
 	'FORUM_LOCKED'			=> 'Foro cerrado',
 	'FORUM_RULES'			=> 'Reglas del Foro',
 	'FORUM_RULES_LINK'		=> 'Por favor, haz clic para ver las reglas del Foro',
-	'FROM'					=> 'De',
 	'FSOCK_DISABLED'		=> 'No se puede completar la operación porque las funciones fsock han sido deshabilitadas o el servidor no está disponible.',
 	'FSOCK_TIMEOUT'			=> 'Se agotó el tiempo de lectura de la corriente de red.',
 
@@ -1077,12 +1076,15 @@ $lang = array_merge($lang, array(
 	'SHOP_PCS'				=> 'pcs.',
 	'SHOP_MORE_DETAIL'		=> 'Find more details and items in the ',
 
+	'FROM'			=> 'De',
 	'XMODS'				=> 'ENGLISH',
 	'SMILIES_CATS'		=> 'Smiley Categories',
 	'ARCADE_GAMETIME'	=> 'Play Time',
 
 	'FORUM_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this forum.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this topic.',
+	'TOO_FEW_CHARS_LIMIT'	=> 'Tu mensaje contiene %1$d caracteres. El número mínimo de caracteres que necesitas introducir es %2$d.',
+	'REPLY_TO_MESSAGE'		=> 'Reply to message',
 
 	'RSS_CHAN_LIST_TITLE'	=> 'Foros',
 	'RSS_CHAN_LIST_DESC'	=> 'This channel list is listing the available RSS feeds.',
@@ -3055,7 +3057,6 @@ $lang = array_merge($lang, array(
 	'STYLES_TIP'				=> 'Consejo: Pueden aplicarse estilos rápidamente al texto seleccionado',
 
 	'TOO_FEW_CHARS'				=> 'Tu mensaje contiene muy pocos caracteres.',
-	'TOO_FEW_CHARS_LIMIT'		=> 'Tu mensaje contiene %1$d caracteres. El número mínimo de caracteres que necesitas introducir es %2$d.',
 	'TOO_FEW_POLL_OPTIONS'		=> 'Tienes que introducir al menos dos opciones para la encuesta',
 	'TOO_MANY_ATTACHMENTS'		=> 'No puedes añadir otro adjunto, %d es el máximo.',
 	'TOO_MANY_CHARS'			=> 'Tu mensaje contiene demasiados caracteres.',
@@ -3092,7 +3093,6 @@ $lang = array_merge($lang, array(
 	'BBCODE_F_TYPE_HELP'		=> 'Typeface',
 	'BBCODE_TAB_HELP'		=> 'Add a Tab one (The text must also be in the [tab] ... [/ tab] to be inserted)',
 	'BBCODE_E_HELP'		=> 'List: Add list element',
-	'REPLY_TO_MESSAGE'	=> 'Reply to message',
 	'NO_LINKS_FOR_GUESTS'	=> 'Guests do not have permissions to post external links or email addresses and can not use BBCode [url] or [url=]. If you are posting images, you probably sent a link within. To insert images use the button in this editor or the file attachments. You are free to register any time to be able to use external links.',
 
 ));
@@ -8229,7 +8229,6 @@ $lang = array_merge($lang, array(
 	'FORECAST_PTS'					=> 'Predicted points',
 	'FORM'							=> 'Form',
 	'FORMULA'						=> 'Formula',
-	'FROM'							=> 'De',
 	'FROM_DAY_SEASON'				=> 'From %1$d. Matchday season of %2$d',
 
 	'GAME_NOT_PLAYED'				=> '%d Match was not played yet! ',

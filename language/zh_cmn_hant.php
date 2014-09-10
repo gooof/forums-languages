@@ -348,7 +348,6 @@ $lang = array_merge($lang, array(
 	'FORUM_LOCKED'			=> '版面鎖定',
 	'FORUM_RULES'			=> '版面規則',
 	'FORUM_RULES_LINK'		=> '請點選這裡檢視版面規則',
-	'FROM'					=> '從',
 	'FSOCK_DISABLED'		=> '操作無法完成，因為 <var>fsockopen</var> 函數被停用或是伺服器沒有回應。',
 	'FSOCK_TIMEOUT'			=> '當從網路串流讀取時，發生逾時。',
 
@@ -1077,12 +1076,15 @@ $lang = array_merge($lang, array(
 	'SHOP_PCS'				=> 'pcs.',
 	'SHOP_MORE_DETAIL'		=> 'Find more details and items in the ',
 
+	'FROM'			=> '從',
 	'XMODS'				=> 'ENGLISH',
 	'SMILIES_CATS'		=> 'Smiley Categories',
 	'ARCADE_GAMETIME'	=> 'Play Time',
 
 	'FORUM_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this forum.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this topic.',
+	'TOO_FEW_CHARS_LIMIT'	=> '您的內容包含 %1$d 個字元。您需要輸入最少的字元數是 %2$d。',
+	'REPLY_TO_MESSAGE'		=> 'Reply to message',
 
 	'RSS_CHAN_LIST_TITLE'	=> '版面',
 	'RSS_CHAN_LIST_DESC'	=> 'This channel list is listing the available RSS feeds.',
@@ -3055,7 +3057,6 @@ $lang = array_merge($lang, array(
 	'STYLES_TIP'				=> '提示：可以將風格快速地顯示在反白的文字上。',
 
 	'TOO_FEW_CHARS'				=> '您的內容包含太少個字元。',
-	'TOO_FEW_CHARS_LIMIT'		=> '您的內容包含 %1$d 個字元。您需要輸入最少的字元數是 %2$d。',
 	'TOO_FEW_POLL_OPTIONS'		=> '您至少需要輸入兩個票選的項目。',
 	'TOO_MANY_ATTACHMENTS'		=> '不能再增加更多的附加檔案了，允許的數量是 %d 個。',
 	'TOO_MANY_CHARS'			=> '您的內容包含太多個字元。',
@@ -3092,7 +3093,6 @@ $lang = array_merge($lang, array(
 	'BBCODE_F_TYPE_HELP'		=> 'Typeface',
 	'BBCODE_TAB_HELP'		=> 'Add a Tab one (The text must also be in the [tab] ... [/ tab] to be inserted)',
 	'BBCODE_E_HELP'		=> 'List: Add list element',
-	'REPLY_TO_MESSAGE'	=> 'Reply to message',
 	'NO_LINKS_FOR_GUESTS'	=> 'Guests do not have permissions to post external links or email addresses and can not use BBCode [url] or [url=]. If you are posting images, you probably sent a link within. To insert images use the button in this editor or the file attachments. You are free to register any time to be able to use external links.',
 
 ));
@@ -8229,7 +8229,6 @@ $lang = array_merge($lang, array(
 	'FORECAST_PTS'					=> 'Predicted points',
 	'FORM'							=> 'Form',
 	'FORMULA'						=> 'Formula',
-	'FROM'							=> '從',
 	'FROM_DAY_SEASON'				=> 'From %1$d. Matchday season of %2$d',
 
 	'GAME_NOT_PLAYED'				=> '%d Match was not played yet! ',

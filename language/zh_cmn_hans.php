@@ -348,7 +348,6 @@ $lang = array_merge($lang, array(
 	'FORUM_LOCKED'			=> '版面锁定',
 	'FORUM_RULES'			=> '版面规则',
 	'FORUM_RULES_LINK'		=> '请点击阅读论坛规则',
-	'FROM'					=> '自',
 	'FSOCK_DISABLED'		=> '操作无法完成，因为fsock函数被禁用或者无法找到目标服务器。',
 	'FSOCK_TIMEOUT'			=> '读取网络流时发生超时。',
 
@@ -1077,12 +1076,15 @@ $lang = array_merge($lang, array(
 	'SHOP_PCS'				=> 'pcs.',
 	'SHOP_MORE_DETAIL'		=> 'Find more details and items in the ',
 
+	'FROM'			=> '自',
 	'XMODS'				=> 'ENGLISH',
 	'SMILIES_CATS'		=> 'Smiley Categories',
 	'ARCADE_GAMETIME'	=> 'Play Time',
 
 	'FORUM_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this forum.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this topic.',
+	'TOO_FEW_CHARS_LIMIT'	=> '您的正文长度为 %1$d 字符. 您的输入不能少于 %2$d 个字符.',
+	'REPLY_TO_MESSAGE'		=> '回复短信',
 
 	'RSS_CHAN_LIST_TITLE'	=> '版面',
 	'RSS_CHAN_LIST_DESC'	=> 'This channel list is listing the available RSS feeds.',
@@ -3055,7 +3057,6 @@ $lang = array_merge($lang, array(
 	'STYLES_TIP'				=> '提示：点击格式选项可以将格式直接应用到选中的文字上',
 
 	'TOO_FEW_CHARS'				=> '您输入的正文过短',
-	'TOO_FEW_CHARS_LIMIT'		=> '您的正文长度为 %1$d 字符. 您的输入不能少于 %2$d 个字符.',
 	'TOO_FEW_POLL_OPTIONS'		=> '您必须输入至少两个投票选项',
 	'TOO_MANY_ATTACHMENTS'		=> '不能再添加更多的附件了，允许的数量是 %d 个。',
 	'TOO_MANY_CHARS'			=> '您输入的正文过长',
@@ -3092,7 +3093,6 @@ $lang = array_merge($lang, array(
 	'BBCODE_F_TYPE_HELP'		=> 'Typeface',
 	'BBCODE_TAB_HELP'		=> 'Add a Tab one (The text must also be in the [tab] ... [/ tab] to be inserted)',
 	'BBCODE_E_HELP'		=> 'List: Add list element',
-	'REPLY_TO_MESSAGE'	=> '回复短信',
 	'NO_LINKS_FOR_GUESTS'	=> 'Guests do not have permissions to post external links or email addresses and can not use BBCode [url] or [url=]. If you are posting images, you probably sent a link within. To insert images use the button in this editor or the file attachments. You are free to register any time to be able to use external links.',
 
 ));
@@ -8229,7 +8229,6 @@ $lang = array_merge($lang, array(
 	'FORECAST_PTS'					=> 'Predicted points',
 	'FORM'							=> 'Form',
 	'FORMULA'						=> 'Formula',
-	'FROM'							=> '自',
 	'FROM_DAY_SEASON'				=> 'From %1$d. Matchday season of %2$d',
 
 	'GAME_NOT_PLAYED'				=> '%d Match was not played yet! ',

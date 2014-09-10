@@ -348,7 +348,6 @@ $lang = array_merge($lang, array(
 	'FORUM_LOCKED'			=> 'ปิดบอร์ด',
 	'FORUM_RULES'			=> 'กฎการใช้บอร์ด',
 	'FORUM_RULES_LINK'		=> 'กรุณาอ่านกฏการใช้งานบอร์ด',
-	'FROM'					=> 'จาก',
 	'FSOCK_DISABLED'		=> 'การทำงานนี้ไม่ถูกต้องเพราะ <var>fsockopen</var> ฟังก์ชันไม่สามารถทำงานได้หรือเซิร์ฟเวอร์ค้นหาไม่พบ',
 	'FSOCK_TIMEOUT'			=> 'หมดเวลาการอ่านข้อมูลจากเครือข่าย.',
 
@@ -1077,12 +1076,15 @@ $lang = array_merge($lang, array(
 	'SHOP_PCS'				=> 'pcs.',
 	'SHOP_MORE_DETAIL'		=> 'Find more details and items in the ',
 
+	'FROM'			=> 'จาก',
 	'XMODS'				=> 'ENGLISH',
 	'SMILIES_CATS'		=> 'Smiley Categories',
 	'ARCADE_GAMETIME'	=> 'Play Time',
 
 	'FORUM_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this forum.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this topic.',
+	'TOO_FEW_CHARS_LIMIT'	=> 'ข้อความของคุณมี %1$d ตัวอักษร. ต้องกรอกตัวอักษรอย่างน้อย %2$d. ตัว',
+	'REPLY_TO_MESSAGE'		=> 'Reply to message',
 
 	'RSS_CHAN_LIST_TITLE'	=> 'บอร์ด',
 	'RSS_CHAN_LIST_DESC'	=> 'This channel list is listing the available RSS feeds.',
@@ -3061,7 +3063,6 @@ $lang = array_merge($lang, array(
 	'STYLES_TIP'				=> 'รูปแบบสามารถใส่ได้ด้วยการเลือกข้อความ.',
 
 	'TOO_FEW_CHARS'				=> 'คุณพิมพ์ข้อความสั้นเกินไป',
-	'TOO_FEW_CHARS_LIMIT'		=> 'ข้อความของคุณมี %1$d ตัวอักษร. ต้องกรอกตัวอักษรอย่างน้อย %2$d. ตัว',
 	'TOO_FEW_POLL_OPTIONS'		=> 'คุณต้องกรอกข้อในแบบสำรวจอย่างน้อย 2 ข้อ',
 	'TOO_MANY_ATTACHMENTS'		=> 'ไม่สามารถแนบไฟล์ได้, %d คือค่าสูงสุดแล้ว',
 	'TOO_MANY_CHARS'			=> 'ข้อความของคุณยาวเกินไป',
@@ -3098,7 +3099,6 @@ $lang = array_merge($lang, array(
 	'BBCODE_F_TYPE_HELP'		=> 'Typeface',
 	'BBCODE_TAB_HELP'		=> 'Add a Tab one (The text must also be in the [tab] ... [/ tab] to be inserted)',
 	'BBCODE_E_HELP'		=> 'List: Add list element',
-	'REPLY_TO_MESSAGE'	=> 'Reply to message',
 	'NO_LINKS_FOR_GUESTS'	=> 'Guests do not have permissions to post external links or email addresses and can not use BBCode [url] or [url=]. If you are posting images, you probably sent a link within. To insert images use the button in this editor or the file attachments. You are free to register any time to be able to use external links.',
 
 ));
@@ -8248,7 +8248,6 @@ $lang = array_merge($lang, array(
 	'FORECAST_PTS'					=> 'Predicted points',
 	'FORM'							=> 'Form',
 	'FORMULA'						=> 'Formula',
-	'FROM'							=> 'จาก',
 	'FROM_DAY_SEASON'				=> 'From %1$d. Matchday season of %2$d',
 
 	'GAME_NOT_PLAYED'				=> '%d Match was not played yet! ',
