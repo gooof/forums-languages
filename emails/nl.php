@@ -421,20 +421,6 @@ Je kunt de groepsinformatie hier bekijken:
 
 
 $email = array_merge($email, array(
-	'email/group_approved.txt' 		=> '{EMAILSUBJECT:} Je verzoek is geaccepteerd
-
-Gefeliciteerd,
-
-Je verzoek om tot de gebruikersgroep "{GROUP_NAME}" op "{SITENAME}" toe te treden is geaccepteerd. Klik op de volgende link om je lidmaatschap van de groep te bekijken.
-
-{U_GROUP}
-
-{EMAIL_SIG}',
-));
-
-
-
-$email = array_merge($email, array(
 	'email/group_request.txt' 		=> '{EMAILSUBJECT:} Een verzoek ingediend om tot jouw groep toe te treden
 
 Beste {USERNAME},
@@ -804,23 +790,22 @@ De volgende reden is gegeven voor de afkeuring:
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Melding van het plaatsen van een reactie - {TOPIC_TITLE}
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
 
-Hallo {USERNAME},
+Hello {USERNAME},
 
-Je hebt deze e-mail ontvangen omdat je geabonneerd bent op het onderwerp: "{TOPIC_TITLE}" op {SITENAME}. Er is een reactie gekomen op dit onderwerp na je laatste bezoek. Je kunt de volgende link gebruiken om deze reactie(s) te bekijken. Je ontvangt geen e-mails meer over dit onderwerp totdat je het bezocht hebt.
+You are receiving this notification because you are watching the topic "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply<!-- IF AUTHOR_NAME !== '' --> by {AUTHOR_NAME}<!-- ENDIF --> since your last visit. No more notifications will be sent until you visit the topic.
 
-Als je de laatste berichten sinds je laatste bezoek wilt zien, klik dan op de volgende link:
+If you want to view the newest post made since your last visit, click the following link:
 {U_NEWEST_POST}
 
-Als je naar het onderwerp wilt gaan, klik dan op de volgende link:
+If you want to view the topic, click the following link:
 {U_TOPIC}
 
-Als je naar het forum wilt gaan, klik dan op de volgende link:
+If you want to view the forum, click the following link:
 {U_FORUM}
 
-Als je geen e-mails wilt ontvangen, kun je op "Geen abonnement meer op dit onderwerp" klikken onderaan het onderwerp. Of klik op de volgende link:
-
+If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
 {U_STOP_WATCHING_TOPIC}
 
 {EMAIL_SIG}',
@@ -1105,6 +1090,402 @@ Date: {DEADLINEDATE}
 Time: {DEADLINETIME}
 
 Click here to get to the WebTipp: {U_BOARD}/formel1.php
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/bookmark.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+
+Hello {USERNAME},
+
+You are receiving this notification because a topic you bookmarked, "{TOPIC_TITLE}" at "{SITENAME}", has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+
+If you want to view the newest post made since your last visit, click the following link:
+{U_NEWEST_POST}
+
+If you want to view the topic, click the following link:
+{U_TOPIC}
+
+If you want to view the forum, click the following link:
+{U_FORUM}
+
+If you no longer wish to receive updates about replies to bookmarks, please update your notification settings here:
+
+{U_NOTIFICATION_SETTINGS}
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/contact_admin.txt' 		=> '
+Hello {TO_USERNAME},
+
+The following is an e-mail sent to you through the administration contact page on "{SITENAME}".
+
+<!-- IF S_IS_REGISTERED -->
+The message has been sent from an account on the site.
+Username: {FROM_USERNAME}
+E-mail address: {FROM_EMAIL_ADDRESS}
+IP Address: {FROM_IP_ADDRESS}
+Profile: {U_FROM_PROFILE}
+<!-- ELSE -->
+The message was sent from a guest who specified the following contact information:
+Name: {FROM_USERNAME}
+E-mail address: {FROM_EMAIL_ADDRESS}
+IP Address: {FROM_IP_ADDRESS}
+<!-- ENDIF -->
+
+
+Message sent to you follows
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+{MESSAGE}
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/post_in_queue.txt' 		=> '{EMAILSUBJECT:} Post moderation notification - "{TOPIC_TITLE}"
+
+Hello {USERNAME},
+
+You are receiving this notification because the post "{POST_SUBJECT}" at "{SITENAME}" needs approval.
+
+If you want to view the post, click the following link:
+{U_VIEW_POST}
+
+If you want to view the topic, click the following link:
+{U_TOPIC}
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/quote.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+
+Hello {USERNAME},
+
+You are receiving this notification because "{AUTHOR_NAME}" quoted you in the topic "{TOPIC_TITLE}" at "{SITENAME}". You can use the following link to view the reply made.
+
+If you want to view the quoted post, click the following link:
+{U_VIEW_POST}
+
+If you want to view the topic, click the following link:
+{U_TOPIC}
+
+If you want to view the forum, click the following link:
+{U_FORUM}
+
+If you no longer wish to receive updates about replies quoting you, please update your notification settings here:
+
+{U_NOTIFICATION_SETTINGS}
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/report_pm.txt' 		=> '{EMAILSUBJECT:} Private Message report - "{TOPIC_TITLE}"
+
+Hello {USERNAME},
+
+You are receiving this notification because a Private Message titled "{SUBJECT}" by "{AUTHOR_NAME}" at "{SITENAME}" was reported.
+
+If you want to view the report, click the following link:
+{U_VIEW_REPORT}
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/report_post.txt' 		=> '{EMAILSUBJECT:} Post report - "{TOPIC_TITLE}"
+
+Hello {USERNAME},
+
+You are receiving this notification because the post "{POST_SUBJECT}" at "{SITENAME}" was reported.
+
+If you want to view the report, click the following link:
+{U_VIEW_REPORT}
+
+If you want to view the post, click the following link:
+{U_VIEW_POST}
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/topic_in_queue.txt' 		=> '{EMAILSUBJECT:} Topic moderation notification - "{TOPIC_TITLE}"
+
+Hello {USERNAME},
+
+You are receiving this notification because the topic "{TOPIC_TITLE}" at "{SITENAME}" needs approval.
+
+If you want to view the topic, click the following link:
+{U_VIEW_TOPIC}
+
+If you want to view the forum, click the following link:
+{U_FORUM}
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/short/bookmark.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+
+Hello {USERNAME},
+
+You are receiving this notification because a topic you bookmarked, "{TOPIC_TITLE}" at "{SITENAME}", has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+
+If you want to view the newest post made since your last visit, click the following link:
+{U_NEWEST_POST}
+
+If you want to view the topic, click the following link:
+{U_TOPIC}
+
+If you want to view the forum, click the following link:
+{U_FORUM}
+
+If you no longer wish to receive updates about replies to bookmarks, please update your notification settings here:
+
+{U_NOTIFICATION_SETTINGS}
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/short/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+
+Hello {USERNAME},
+
+You are receiving this notification because you are watching the forum "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic<!-- IF AUTHOR_NAME --> by {AUTHOR_NAME}<!-- ENDIF --> since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+
+{U_FORUM}
+
+If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
+
+{U_STOP_WATCHING_FORUM}
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/short/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+
+Hello {USERNAME},
+
+You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+
+If you want to view the post, click the following link:
+{U_VIEW_POST}
+
+If you want to view the topic, click the following link:
+{U_VIEW_TOPIC}
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/short/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+
+Hello {USERNAME},
+
+You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+
+The following reason was given for the disapproval:
+
+{REASON}
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/short/post_in_queue.txt' 		=> '{EMAILSUBJECT:} Post moderation notification - "{TOPIC_TITLE}"
+
+Hello {USERNAME},
+
+You are receiving this notification because the post "{POST_SUBJECT}" at "{SITENAME}" needs approval.
+
+If you want to view the post, click the following link:
+{U_VIEW_POST}
+
+If you want to view the topic, click the following link:
+{U_TOPIC}
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/short/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+
+Hello {USERNAME},
+
+You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+
+{SUBJECT}
+
+You can view your new message by clicking on the following link:
+
+{U_VIEW_MESSAGE}
+
+You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/short/quote.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+
+Hello {USERNAME},
+
+You are receiving this notification because "{AUTHOR_NAME}" quoted you in the topic "{TOPIC_TITLE}" at "{SITENAME}". You can use the following link to view the reply made.
+
+If you want to view the quoted post, click the following link:
+{U_VIEW_POST}
+
+If you want to view the topic, click the following link:
+{U_TOPIC}
+
+If you want to view the forum, click the following link:
+{U_FORUM}
+
+If you no longer wish to receive updates about replies quoting you, please update your notification settings here:
+
+{U_NOTIFICATION_SETTINGS}
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/short/report_pm.txt' 		=> '{EMAILSUBJECT:} Private Message report - "{TOPIC_TITLE}"
+
+Hello {USERNAME},
+
+You are receiving this notification because a Private Message titled "{SUBJECT}" by "{AUTHOR_NAME}" at "{SITENAME}" was reported.
+
+If you want to view the report, click the following link:
+{U_VIEW_REPORT}
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/short/report_post.txt' 		=> '{EMAILSUBJECT:} Post report - "{TOPIC_TITLE}"
+
+Hello {USERNAME},
+
+You are receiving this notification because the post "{POST_SUBJECT}" at "{SITENAME}" was reported.
+
+If you want to view the report, click the following link:
+{U_VIEW_REPORT}
+
+If you want to view the post, click the following link:
+{U_VIEW_POST}
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/short/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+
+Hello {USERNAME},
+
+You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+
+If you want to view the topic, click the following link:
+{U_VIEW_TOPIC}
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/short/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+
+Hello {USERNAME},
+
+You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+
+The following reason was given for the disapproval:
+
+{REASON}
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/short/topic_in_queue.txt' 		=> '{EMAILSUBJECT:} Topic moderation notification - "{TOPIC_TITLE}"
+
+Hello {USERNAME},
+
+You are receiving this notification because the topic "{TOPIC_TITLE}" at "{SITENAME}" needs approval.
+
+If you want to view the topic, click the following link:
+{U_VIEW_TOPIC}
+
+If you want to view the forum, click the following link:
+{U_FORUM}
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
+	'email/short/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+
+Hello {USERNAME},
+
+You are receiving this notification because you are watching the topic "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply<!-- IF AUTHOR_NAME --> by {AUTHOR_NAME}<!-- ENDIF --> since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+
+If you want to view the newest post made since your last visit, click the following link:
+{U_NEWEST_POST}
+
+If you want to view the topic, click the following link:
+{U_TOPIC}
+
+If you want to view the forum, click the following link:
+{U_FORUM}
+
+If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+
+{U_STOP_WATCHING_TOPIC}
 
 {EMAIL_SIG}',
 ));
