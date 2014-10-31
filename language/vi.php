@@ -1,5 +1,14 @@
 ﻿<?php
 
+#######language/en/app.php#######
+
+$lang = array_merge($lang, array(
+	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
+	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
+	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+));
+
 #######language/en/calendar.php#######
 
 $lang = array_merge($lang, array(
@@ -182,6 +191,55 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Mã reCaptcha bí mật của bạn. Mã này có thể đăng ký tại trang web <a href="http://recaptcha.net">reCaptcha.net</a>.',
 
 	'RECAPTCHA_EXPLAIN'				=> 'Để chắc rằng bạn không phải là các máy đăng ký tự động, cảm phiền bạn nhập vào hai chữ nhìn thấy vào trong ô bên duới.',
+	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
+));
+
+#######language/en/cli.php#######
+
+$lang = array_merge($lang, array(
+	'CLI_CONFIG_CANNOT_CACHED'			=> 'Set this option if the configuration option changes too frequently to be efficiently cached.',
+	'CLI_CONFIG_CURRENT'				=> 'Current configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_DELETE_SUCCESS'			=> 'Successfully deleted config %s.',
+	'CLI_CONFIG_NEW'					=> 'New configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_NOT_EXISTS'				=> 'Config %s does not exist',
+	'CLI_CONFIG_OPTION_NAME'			=> 'The configuration option’s name',
+	'CLI_CONFIG_PRINT_WITHOUT_NEWLINE'	=> 'Set this option if the value should be printed without a new line at the end.',
+	'CLI_CONFIG_INCREMENT_BY'			=> 'Amount to increment by',
+	'CLI_CONFIG_INCREMENT_SUCCESS'		=> 'Successfully incremented config %s',
+	'CLI_CONFIG_SET_FAILURE'			=> 'Could not set config %s',
+	'CLI_CONFIG_SET_SUCCESS'			=> 'Successfully set config %s',
+
+	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
+	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
+	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
+	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
+	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
+	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
+	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
+	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
+	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
+	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
+	'CLI_EXTENSION_ENABLE_FAILURE'		=> 'Could not enable extension %s',
+	'CLI_EXTENSION_ENABLE_SUCCESS'		=> 'Successfully enabled extension %s',
+	'CLI_EXTENSION_NAME'				=> 'Name of the extension',
+	'CLI_EXTENSION_PURGE_FAILURE'		=> 'Could not purge extension %s',
+	'CLI_EXTENSION_PURGE_SUCCESS'		=> 'Successfully purged extension %s',
+	'CLI_EXTENSION_NOT_FOUND'			=> 'No extensions were found.',
+	'CLI_EXTENSIONS_AVAILABLE'			=> 'Available',
+	'CLI_EXTENSIONS_DISABLED'			=> 'Disabled',
+	'CLI_EXTENSIONS_ENABLED'			=> 'Enabled',
+
+	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
 ));
 
 #######language/en/common.php#######
@@ -190,7 +248,11 @@ $lang = array_merge($lang, array(
 	'TRANSLATION_INFO'	=> 'tiếng Việt',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
+	'DATETIME_FORMAT'	=> '|d M Y, H:i|',	// 01 Jan 2007, 13:37 (with Relative days enabled)
 	'USER_LANG'			=> 'vi',
+
+	// See http://wiki.phpbb.com/Plural_Rules for more information
+	'PLURAL_RULE'		=> '1',
 
 	'1_DAY'			=> '1 ngày',
 	'1_MONTH'		=> '1 tháng',
@@ -204,18 +266,24 @@ $lang = array_merge($lang, array(
 	'ACCOUNT_DEACTIVATED'			=> 'Tài khoản của bạn đã bị ngưng kích hoạt và chỉ có thể được kích hoạt trở lại bởi một quản trị viên.',
 	'ACCOUNT_NOT_ACTIVATED'			=> 'Tài khoản của bạn chưa được kích hoạt.',
 	'ACP'							=> 'Bảng điều khiển của quản trị viên',
+	'ACP_SHORT'						=> 'ACP',
 	'ACTIVE'						=> 'có hiệu lực',
 	'ACTIVE_ERROR'					=> 'Tên thành viên đã chọn hiện tại chưa được kích hoạt. Nếu bạn gặp rắc rối trong việc kích hoạt tài khoản của mình, hãy liên hệ với người quản trị.',
 	'ADMINISTRATOR'					=> 'Quản trị viên',
 	'ADMINISTRATORS'				=> 'Các quản trị viên',
 	'AGE'							=> 'Tuổi',
 	'AIM'							=> 'Tài khoản AIM',
+	'AJAX_ERROR_TITLE'				=> 'AJAX error',
+	'AJAX_ERROR_TEXT'				=> 'Something went wrong when processing your request.',
+	'AJAX_ERROR_TEXT_ABORT'			=> 'User aborted request.',
+	'AJAX_ERROR_TEXT_TIMEOUT'		=> 'Your request timed out; please try again.',
+	'AJAX_ERROR_TEXT_PARSERERROR'	=> 'Something went wrong with the request and the server returned an invalid reply.',
 	'ALLOWED'						=> 'Đã cho phép',
 	'ALL_FILES'						=> 'Tất cả tập tin',
 	'ALL_FORUMS'					=> 'Tất cả chuyên mục',
 	'ALL_MESSAGES'					=> 'Tất cả tin nhắn',
 	'ALL_POSTS'						=> 'Tất cả bài viết',
-	'ALL_TIMES'						=> 'Thời gian được tính theo giờ %1$s %2$s',
+	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'Tất cả chủ đề',
 	'AND'							=> 'Và',
 	'ARE_WATCHING_FORUM'			=> 'Bạn đã đồng ý nhận thông báo về các bài viết mới trong chuyên mục này.',
@@ -225,6 +293,14 @@ $lang = array_merge($lang, array(
 	'ATTACHED_IMAGE_NOT_IMAGE'		=> 'Tập tin hình ảnh mà bạn đã cố gắng đính kèm không hợp lệ.',
 	'AUTHOR'						=> 'Người gửi',
 	'AUTH_NO_PROFILE_CREATED'		=> 'Quá trình tạo một thông tin cá nhân đã không thành công.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_ENTRY'				=> 'Invalid database entry.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_SERVICE_TYPE'		=> 'Invalid service type provided to OAuth service handler.',
+	'AUTH_PROVIDER_OAUTH_ERROR_SERVICE_NOT_CREATED'			=> 'OAuth service not created',
+	'AUTH_PROVIDER_OAUTH_SERVICE_BITLY'						=> 'Bitly',
+	'AUTH_PROVIDER_OAUTH_SERVICE_FACEBOOK'					=> 'Facebook',
+	'AUTH_PROVIDER_OAUTH_SERVICE_GOOGLE'					=> 'Google',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_NOT_STORED'			=> 'OAuth token not stored.',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_INCORRECTLY_STORED'	=> 'OAuth token incorrectly stored.',
 	'AVATAR_DISALLOWED_CONTENT'		=> 'Tập tin này không thể hiển thị được bởi vì nó chứa thông tin được cho là có thể gây hại.',
 	'AVATAR_DISALLOWED_EXTENSION'	=> 'Tập tin này không thể hiển thị vì nó thuộc loại tập tin <strong>%s</strong> không được hỗ trợ.',
 	'AVATAR_EMPTY_REMOTE_DATA'		=> 'Hình đại diện đã chọn không thể tải lên được bởi vì tập tin từ địa chỉ URL mà bạn đã xác định không hợp lệ hoặc đã bị hỏng.',
@@ -235,10 +311,11 @@ $lang = array_merge($lang, array(
 	'AVATAR_PARTIAL_UPLOAD'			=> 'Hình đại diện đã chọn chỉ được tải lên một phần và chưa hoàn chỉnh.',
 	'AVATAR_PHP_SIZE_NA'			=> 'Dung lượng tập tin của hình đại diện quá lớn.<br />Dung lượng tối đa cho phép được xác lập bởi tập tin <samp>php.ini</samp> không thể xác định được.',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'Dung lượng tập tin của hình đại diện quá lớn. Dung lượng tập tin tối đa được phép tải lên là <strong>%d</strong> MB.<br />Bạn cần lưu ý rằng dung lượng tối đa này được xác lập bởi tập tin <samp>php.ini</samp> và không thể thay thế được.',
+	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
 	'AVATAR_URL_INVALID'			=> 'Đường dẫn URL bạn vừa nhập không hợp lệ.',
 	'AVATAR_URL_NOT_FOUND'			=> 'Tập tin bạn vừa nhập không thể tìm thấy.',
-	'AVATAR_WRONG_FILESIZE'			=> 'Dung lượng tập tin hình đại diện phải từ <strong>0</strong> đến <strong>%1d</strong> %2s.',
-	'AVATAR_WRONG_SIZE'				=> 'Kích thước hình đại diện bạn vừa chọn là <strong>%5$d</strong> Pixel về chiều rộng và <strong>%6$d</strong> Pixel về chiều cao. Kích thước hình đại diện không được phép nhỏ hơn <strong>%1$d</strong> Pixel về chiều rộng và <strong>%2$d</strong> Pixel về chiều cao cũng như không được phép lớn hơn <strong>%3$d</strong> Pixel về chiều rộng và <strong>%4$d</strong> Pixel về chiều cao.',
+	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
+	'AVATAR_WRONG_SIZE'				=> 'The submitted avatar is %5$s wide and %6$s high. Avatars must be at least %1$s wide and %2$s high, but no larger than %3$s wide and %4$s high.',
 
 	'BACK_TO_TOP'			=> 'Đầu trang',
 	'BACK_TO_PREV'			=> 'Quay về trang trước',
@@ -255,28 +332,42 @@ $lang = array_merge($lang, array(
 	'BOARD_DISABLED'		=> 'Hệ thống hiện tại ngưng hoạt động.',
 	'BOARD_UNAVAILABLE'		=> 'Xin lỗi, hệ thống tạm thời không thể hoạt động được. Bạn hãy vui lòng quay lại sau vài phút nữa.',
 	'BROWSING_FORUM'		=> 'Đang xem chuyên mục này: %1$s',
-	'BROWSING_FORUM_GUEST'	=> 'Đang xem chuyên mục này: <strong>%1$s</strong> và <strong>%2$d</strong> khách',
-	'BROWSING_FORUM_GUESTS'	=> 'Đang xem chuyên mục này: <strong>%1$s</strong> và <strong>%2$d</strong> khách',
+	'BUTTON_EDIT'			=> 'Edit',
+	'BUTTON_FORUM_LOCKED'	=> 'Locked',
+	'BUTTON_NEW_TOPIC'		=> 'New Topic',
+	'BUTTON_PM'				=> 'PM',
+	'BUTTON_PM_FORWARD'		=> 'Forward',
+	'BUTTON_PM_NEW'			=> 'New PM',
+	'BUTTON_PM_REPLY'		=> 'Send Reply',
+	'BUTTON_PM_REPLY_ALL'	=> 'Reply All',
+	'BUTTON_POST_REPLY'		=> 'Post Reply',
+	'BUTTON_QUOTE'			=> 'Quote',
+	'BUTTON_TOPIC_LOCKED'	=> 'Locked',
 	'BYTES'					=> 'Byte',
+	'BYTES_SHORT'			=> 'B',
 
 	'CANCEL'				=> 'Huỷ bỏ',
 	'CHANGE'				=> 'Thay đổi',
 	'CHANGE_FONT_SIZE'		=> 'Thay đổi kích thước phông chữ',
 	'CHANGING_PREFERENCES'	=> 'Đang thay đổi thiết lập hệ thống',
 	'CHANGING_PROFILE'		=> 'Đang thay đổi thiết lập cá nhân',
-	'CLICK_VIEW_PRIVMSG'	=> '%sChuyển đến hộp tin nhận của bạn%s',
 	'COLLAPSE_VIEW'			=> 'Xem thu gọn',
 	'CLOSE_WINDOW'			=> 'Đóng cửa sổ',
 	'COLOUR_SWATCH'			=> 'Bảng mã màu',
-	'COMMA_SEPARATOR'		=> ', ',	// Used in pagination of ACP & prosilver, use localised comma if appropriate, eg: Ideographic or Arabic
+	'COLON'					=> ':',
+	'COMMA_SEPARATOR'		=> ', ',	// Comma used to join lists into a single string, use localised comma if appropriate, eg: Ideographic or Arabic
 	'CONFIRM'				=> 'Xác nhận',
 	'CONFIRM_CODE'			=> 'Mã xác nhận',
 	'CONFIRM_CODE_EXPLAIN'	=> 'Nhập vào đoạn mã xác nhận mà bạn thực sự nhìn thấy trong hình. Tất cả chữ cái đều được phân biệt với chữ số và không có số <strong>O</strong>.',
 	'CONFIRM_CODE_WRONG'	=> 'Mã xác nhận bạn vừa nhập không chính xác.',
 	'CONFIRM_OPERATION'		=> 'Bạn có chắc chắn muốn thực hiện yêu cầu này?',
+	'CONFIRM_AVATAR_DELETE' => 'Are you sure you wish to delete this avatar?',
 	'CONGRATULATIONS'		=> 'Chúc mừng sinh nhật',
 	'CONNECTION_FAILED'		=> 'Kết nối thất bại.',
 	'CONNECTION_SUCCESS'	=> 'Kết nối thành công!',
+	'CONTACT'				=> 'Liên hệ',
+	'CONTACT_USER'			=> 'Contact %s',
+	'CONTACT_US'			=> 'Contact us',
 	'COOKIES_DELETED'		=> 'Tất cả cookie đã được xoá thành công.',
 	'CURRENT_TIME'			=> 'Hôm nay, %s',
 
@@ -297,18 +388,13 @@ $lang = array_merge($lang, array(
 	'DISPLAY_TOPICS'		=> 'Hiển thị những chủ đề cách đây',
 	'DOWNLOADED'			=> 'Số lượt tải về',
 	'DOWNLOADING_FILE'		=> 'Đang tải về tập tin',
-	'DOWNLOAD_COUNT'		=> 'Đã tải về <strong>%d</strong> lần',
-	'DOWNLOAD_COUNTS'		=> 'Đã tải về <strong>%d</strong> lần',
-	'DOWNLOAD_COUNT_NONE'	=> 'Chưa tải về lần nào',
-	'VIEWED_COUNT'			=> 'Đã xem <strong>%d</strong> lần',
-	'VIEWED_COUNTS'			=> 'Đã xem <strong>%d</strong> lần',
-	'VIEWED_COUNT_NONE'		=> 'Chưa xem lần nào.',
 
 	'EDIT_POST'							=> 'Sửa bài viết',
-	'EMAIL'								=> 'Gửi Email', // Short form for EMAIL_ADDRESS
-	'EMAIL_ADDRESS'						=> 'Địa chỉ Email',
-	'EMAIL_INVALID_EMAIL'				=> 'Địa chỉ Email bạn vừa nhập không hợp lệ.',
-	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Có rắc rối xảy ra trong quá trình gửi Email tại <strong>Dòng %1$s</strong>. Nguyên nhân: %2$s.',
+	'ELLIPSIS'							=>	'…',
+	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
+	'EMAIL_ADDRESS'						=> 'Email address',
+	'EMAIL_INVALID_EMAIL'				=> 'The email address you entered is invalid.',
+	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ran into problems sending email at <strong>Line %1$s</strong>. Response: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Bạn phải nhập tiêu đề cho chủ đề mới.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Bạn phải nhập tiêu đề cho tin nhắn mà mình muốn gửi.',
 	'ENABLED'							=> 'Bật',
@@ -322,17 +408,23 @@ $lang = array_merge($lang, array(
 	'ERR_UNWATCHING'					=> 'Có lỗi xảy ra khi hủy đăng ký.',
 	'ERR_WATCHING'						=> 'Có lỗi xảy ra khi đăng ký.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'Đường dẫn đến hệ thống phpBB vừa nhập dường như không hợp lệ.',
+	'ERROR'									=> 'Lỗi',
 	'EXPAND_VIEW'						=> 'Xem toàn bộ',
 	'EXTENSION'							=> 'Đuôi tập tin đính kèm',
+	'EXTENSION_DISABLED'				=> 'The extension <strong>%s</strong> is not enabled.',
 	'EXTENSION_DISABLED_AFTER_POSTING'	=> 'Đuôi tập tin đính kèm <strong>%s</strong> không còn được phép sử dụng và vì thế sẽ không hiển thị.',
+	'EXTENSION_DOES_NOT_EXIST'			=> 'The extension <strong>%s</strong> does not exist.',
 
+	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> 'Trợ giúp',
 	'FAQ_EXPLAIN'			=> 'Những câu hỏi thường gặp',
 	'FILENAME'				=> 'Tên tập tin',
 	'FILESIZE'				=> 'Dung lượng tập tin',
 	'FILEDATE'				=> 'Ngày cập nhật tập tin',
 	'FILE_COMMENT'			=> 'Chú thích tập tin',
-	'FILE_NOT_FOUND'		=> 'Không thể tìm thấy tập tin bạn yêu cầu.',
+	'FILE_CONTENT_ERR'		=> 'Could not read the contents of file: %s',
+	'FILE_JSON_DECODE_ERR'	=> 'Failed to decode json file: %s',
+	'FILE_NOT_FOUND'		=> 'The requested file could not be found: %s',
 	'FIND_USERNAME'			=> 'Tìm một thành viên',
 	'FOLDER'				=> 'Thư mục',
 	'FORGOT_PASS'			=> 'Quên mật khẩu',
@@ -381,6 +473,9 @@ $lang = array_merge($lang, array(
 	'GB'						=> 'GB',
 	'GIB'						=> 'GiB',
 	'GO'						=> 'Chuyển',
+	'GOOGLEPLUS'				=> 'Google+',
+	'GOTO_FIRST_POST'			=> 'Go to first post',
+	'GOTO_LAST_POST'			=> 'Go to last post',
 	'GOTO_PAGE'					=> 'Chuyển đến trang',
 	'GROUP'						=> 'Nhóm',
 	'GROUPS'					=> 'Nhóm',
@@ -388,12 +483,6 @@ $lang = array_merge($lang, array(
 	'GROUP_ERR_USERNAME'		=> 'Không có tên nhóm nào được xác định.',
 	'GROUP_ERR_USER_LONG'		=> 'Tên của nhóm không được vượt quá <strong>60</strong> ký tự. Tên nhóm bạn vừa nhập quá dài.',
 	'GUEST'						=> 'Khách',
-	'GUEST_USERS_ONLINE'		=> 'Có <strong>%d</strong> khách đang trực tuyến',
-	'GUEST_USERS_TOTAL'			=> '<strong>%d</strong> khách',
-	'GUEST_USERS_ZERO_ONLINE'	=> '<strong>0</strong> khách đang trực tuyến',
-	'GUEST_USERS_ZERO_TOTAL'	=> '<strong>0</strong> khách',
-	'GUEST_USER_ONLINE'			=> '<strong>%d</strong> khách đang trực tuyến',
-	'GUEST_USER_TOTAL'			=> '<strong>%d</strong> khách',
 	'G_ADMINISTRATORS'			=> 'Quản trị viên',
 	'G_BOTS'					=> 'Máy tìm kiếm',
 	'G_GUESTS'					=> 'Khách',
@@ -402,22 +491,12 @@ $lang = array_merge($lang, array(
 	'G_GLOBAL_MODERATORS'		=> 'Điều hành viên chính',
 	'G_NEWLY_REGISTERED'		=> 'Thành viên mới đăng ký',
 
-	'HIDDEN_USERS_ONLINE'			=> '<strong>%d</strong> thành viên ẩn đang trực tuyến',
-	'HIDDEN_USERS_TOTAL'			=> '<strong>%d</strong> thành viên ẩn và ',
-	'HIDDEN_USERS_TOTAL_AND'		=> '%d ẩn và  ',
-	'HIDDEN_USERS_ZERO_ONLINE'		=> '<strong>0</strong> thành viên ẩn đang trực tuyến',
-	'HIDDEN_USERS_ZERO_TOTAL'		=> '<strong>0</strong> thành viên ẩn và ',
-	'HIDDEN_USERS_ZERO_TOTAL_AND'	=> '0 ẩn và ',
-	'HIDDEN_USER_ONLINE'			=> '<strong>%d</strong> thành viên ẩn đang trực tuyến',
-	'HIDDEN_USER_TOTAL'				=> '<strong>%d</strong> thành viên ẩn và ',
-	'HIDDEN_USER_TOTAL_AND'			=> '%d ẩn và ',
 	'HIDE_GUESTS'					=> 'Không hiển thị khách',
 	'HIDE_ME'						=> 'Ẩn trạng thái trực tuyến của tôi',
 	'HOURS'							=> 'Giờ',
 	'HOME'							=> 'Trang chủ',
 
 	'ICQ'						=> 'Tài khoản ICQ',
-	'ICQ_STATUS'				=> 'Trạng thái ICQ',
 	'IF'						=> 'Nếu',
 	'IMAGE'						=> 'Hình ảnh',
 	'IMAGE_FILETYPE_INVALID'	=> 'Loại tập tin hình ảnh “%d” trong nhóm tập tin “%s” không được hỗ trợ.',
@@ -425,9 +504,11 @@ $lang = array_merge($lang, array(
 	'IN'						=> 'trong',
 	'INDEX'						=> 'Trang chủ', //Index page
 	'INFORMATION'				=> 'Thông tin',
+	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
 	'INTERESTS'					=> 'Sở thích',
 	'INVALID_DIGEST_CHALLENGE'	=> 'Giao thức yêu cầu ký số không hợp lệ.',
-	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> có lẽ là một địa chỉ Email không hợp lệ?',
+	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> possibly an invalid email address?',
+	'INVALID_PLURAL_RULE'		=> 'The chosen plural rule is invalid. Valid values are integers between 0 and 15.',
 	'IP'						=> 'Địa chỉ IP',
 	'IP_BLACKLISTED'			=> 'Địa chỉ IP của bạn %1$s đã bị chặn bởi vì nó có trong danh sách ngăn cấm. Để biết thêm chi tiết, hãy vui lòng xem tại đây <a href="%2$s">%2$s</a>.',
 
@@ -435,7 +516,8 @@ $lang = array_merge($lang, array(
 	'JOINED'				=> 'Ngày tham gia',
 	'JUMP_PAGE'				=> 'Nhập vào số trang bạn muốn chuyển đến.',
 	'JUMP_TO'				=> 'Chuyển đến',
-	'JUMP_TO_PAGE'			=> 'Bấm vào đây để chuyển đến trang…',
+	'JUMP_TO_PAGE'			=> 'Jump to page',
+	'JUMP_TO_PAGE_CLICK'	=> 'Click to jump to page…',
 
 	'KB'					=> 'KB',
 	'KIB'					=> 'KiB',
@@ -447,6 +529,8 @@ $lang = array_merge($lang, array(
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Không thể kết nối đến máy chủ LDAP.',
 	'LDAP_SEARCH_FAILED'				=> 'Có lỗi xảy ra khi tìm kiếm thư mục LDAP.',
 	'LEGEND'							=> 'Chú thích',
+	'LIVE_SEARCHES_NOT_ALLOWED'			=> 'Live searches are not allowed.',
+	'LOADING'							=> 'Loading',
 	'LOCATION'							=> 'Đến từ',
 	'LOCK_POST'							=> 'Khoá bài viết',
 	'LOCK_POST_EXPLAIN'					=> 'Không cho phép sửa bài viết',
@@ -457,6 +541,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_CONFIRM_EXPLAIN'				=> 'Để bảo vệ các tài khoản thành viên trong hệ thống, hệ thống yêu cầu bạn phải nhập vào một đoạn mã xác nhận nếu bạn đăng nhập không thành công vào hệ thống vượt quá số lần cho phép. Đoạn mã được hiển thị trong hình mà bạn nhìn thấy bên dưới. Nếu thị lực của bạn kém hoặc bạn không thể nhìn thấy đoạn mã này vì một lý do nào đó, hãy vui lòng liên hệ với %sngười quản trị%s.', // unused
 	'LOGIN_ERROR_ATTEMPTS'				=> 'Bạn đã đăng nhập không thành công vào hệ thống và vượt quá số lần cho phép. Để thực hiện đăng nhập thành công, bây giờ, ngoài tên thành viên và mật khẩu của mình, bạn còn phải nhập vào đoạn mã xác nhận trong hình bên dưới mà bạn nhìn thấy.',
 	'LOGIN_ERROR_EXTERNAL_AUTH_APACHE'	=> 'Bạn không được xác thực bởi <strong>Apache</strong>.',
+	'LOGIN_ERROR_OAUTH_SERVICE_DOES_NOT_EXIST'	=> 'A non-existant OAuth service has been requested.',
 	'LOGIN_ERROR_PASSWORD'				=> 'Bạn đã nhập mật khẩu không chính xác. Hãy vui lòng kiểm tra lại mật khẩu của bạn. Nếu bạn vẫn còn gặp rắc rối này, hãy liên hệ với %sngười quản trị%s.',
 	'LOGIN_ERROR_PASSWORD_CONVERT'		=> 'Hệ thống mới không thể chuyển đổi mật khẩu của bạn trong khi cập nhật từ hệ thống cũ. Bạn hãy vui lòng %syêu cầu một mật khẩu mới%s. Nếu bạn vẫn còn gặp rắc rối này, hãy liên hệ với %sngười quản trị%s.',
 	'LOGIN_ERROR_USERNAME'				=> 'Bạn đã nhập tên thành viên không chính xác. Hãy vui lòng kiểm tra lại tên thành viên của bạn. Nếu bạn vẫn còn gặp rắc rối này, hãy liên hệ với %sngười quản trị%s.',
@@ -465,17 +550,22 @@ $lang = array_merge($lang, array(
 	'LOGIN_VIEWFORUM'					=> 'Hệ thống yêu cầu bạn phải đăng nhập để xem chuyên mục này.',
 	'LOGIN_EXPLAIN_EDIT'				=> 'Để sửa các bài viết trong chuyên mục này, bạn phải là thành viên đã đăng ký và đã đăng nhập vào hệ thống.',
 	'LOGIN_EXPLAIN_VIEWONLINE'			=> 'Để xem danh sách thành viên đang trực tuyến, bạn phải là thành viên đã đăng ký và đã đăng nhập vào hệ thống.',
+	'LOGIN_REQUIRED'					=> 'You need to login to perform this action.',
 	'LOGOUT'							=> 'Thoát',
 	'LOGOUT_USER'						=> 'Thoát [ %s ]',
-	'LOG_ME_IN'							=> 'Đăng nhập tự động',
+	'LOG_ME_IN'							=> 'Remember me',
 
+	'MAIN'					=> 'Main',
 	'MARK'					=> 'Đánh dấu',
 	'MARK_ALL'				=> 'Đánh dấu tất cả',
+	'MARK_ALL_READ'			=> 'Mark all read',
 	'MARK_FORUMS_READ'		=> 'Đánh dấu đã xem tất cả chuyên mục',
+	'MARK_READ'				=> 'Mark read',
 	'MARK_SUBFORUMS_READ'	=> 'Đánh dấu đã xem tất cả chuyên mục con',
 	'MB'					=> 'MB',
 	'MIB'					=> 'MiB',
 	'MCP'					=> 'Bảng điều khiển của điều hành viên',
+	'MCP_SHORT'				=> 'MCP',
 	'MEMBERLIST'			=> 'Thành viên',
 	'MEMBERLIST_EXPLAIN'	=> 'Xem danh sách toàn bộ thành viên',
 	'MERGE'					=> 'Nhập chung',
@@ -488,26 +578,47 @@ $lang = array_merge($lang, array(
 	'MODERATE'				=> 'Quản lý',
 	'MODERATOR'				=> 'Điều hành viên',
 	'MODERATORS'			=> 'Các điều hành viên',
+	'MODULE_NOT_ACCESS'		=> 'Module not accessible',
+	'MODULE_NOT_FIND'		=> 'Cannot find module %s',
+	'MODULE_FILE_INCORRECT_CLASS'	=> 'Module file %s does not contain correct class [%s]',
 	'MONTH'					=> 'Tháng',
 	'MOVE'					=> 'Di chuyển',
-	'MSNM'					=> 'Tài khoản MSNM/WLM',
 
 	'NA'						=> 'N/A',
 	'NEWEST_USER'				=> 'Chào mừng thành viên mới nhất: <strong>%s</strong>',
 	'NEW_MESSAGE'				=> 'Tin nhắn mới',
 	'NEW_MESSAGES'				=> 'Tin nhắn mới',
-	'NEW_PM'					=> '<strong>%d</strong> tin nhắn mới',
-	'NEW_PMS'					=> '<strong>%d</strong> tin nhắn mới',
 	'NEW_POST'					=> 'Bài viết mới',	// Not used anymore
 	'NEW_POSTS'					=> 'Bài viết mới',	// Not used anymore
 	'NEXT'						=> 'Trang kế tiếp',		// Used in pagination
 	'NEXT_STEP'					=> 'Bước kế tiếp',
 	'NEVER'						=> 'Không bao giờ',
 	'NO'						=> 'Không đồng ý',
+	'NO_NOTIFICATIONS'			=> 'You have no notifications',
 	'NOT_ALLOWED_MANAGE_GROUP'	=> 'Bạn không được phép quản lý nhóm này.',
 	'NOT_AUTHORISED'			=> 'Bạn không được phép truy cập khu vực này.',
 	'NOT_WATCHING_FORUM'		=> 'Bạn đã chọn không nhận thông báo về các bài viết mới trong chuyên mục này nữa.',
 	'NOT_WATCHING_TOPIC'		=> 'Bạn đã chọn không nhận thông báo về các bài viết mới trong chủ đề này nữa.',
+	'NOTIFICATIONS'				=> 'Notifications',
+	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
+	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
+	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
+	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
+	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
+	'NOTIFICATION_POST_IN_QUEUE'		=> '<strong>Post approval</strong> request by %1$s:',
+	'NOTIFICATION_REFERENCE'			=> '"%1$s"',
+	'NOTIFICATION_REASON'				=> '<em>Reason:</em> %1$s.',
+	'NOTIFICATION_REPORT_PM'			=> '<strong>Private Message reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_POST'			=> '<strong>Post reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_CLOSED'		=> '<strong>Report closed</strong> by %1$s for:',
+	'NOTIFICATION_TOPIC'				=> '<strong>New topic</strong> by %1$s:',
+	'NOTIFICATION_TOPIC_APPROVED'		=> '<strong>Topic approved</strong>:',
+	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
+	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
+	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> 'Bạn hãy vui lòng thông báo cho quản trị viên hoặc người chủ của website này.',
 	'NOTIFY_ADMIN_EMAIL'		=> 'Bạn hãy vui lòng thông báo cho quản trị viên hoặc người chủ của website này: <a href="mailto:%1$s">%1$s</a>',
 	'NO_ACCESS_ATTACHMENT'		=> 'Bạn không được phép truy cập tập tin này.',
@@ -516,6 +627,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_ADMIN'				=> 'Bạn không được phép truy cập vào bảng điều khiển của quản trị viên bởi vì bạn không có quyền hạn của người quản trị.',
 	'NO_AUTH_ADMIN_USER_DIFFER'	=> 'Bạn không thể xác nhận lại như là một thành viên khác.',
 	'NO_AUTH_OPERATION'			=> 'Bạn không được cấp phép đầy đủ để hoàn tất quá trình này.',
+	'NO_AVATARS'				=> 'No avatars currently available',
 	'NO_CONNECT_TO_SMTP_HOST'	=> 'Không thể kết nối đến địa chỉ SMTP: %1$s : %2$s',
 	'NO_BIRTHDAYS'				=> 'Không có sinh nhật của thành viên nào hôm nay',
 	'NO_EMAIL_MESSAGE'			=> 'Bạn chưa nhập nội dung của Email.',
@@ -531,7 +643,6 @@ $lang = array_merge($lang, array(
 	'NO_MODE'					=> 'Chế độ không xác định!',
 	'NO_MODERATORS'				=> 'Không có điều hành viên nào được chỉ định trong hệ thống.',
 	'NO_NEW_MESSAGES'			=> 'Không có tin nhắn mới',
-	'NO_NEW_PM'					=> '<strong>0</strong> tin nhắn mới',
 	'NO_NEW_POSTS'				=> 'Không có bài viết mới',	// Not used anymore
 	'NO_ONLINE_USERS'			=> 'Không có thành viên nào đang trực tuyến',
 	'NO_POSTS'					=> 'Không có bài viết nào',
@@ -546,7 +657,6 @@ $lang = array_merge($lang, array(
 	'NO_TOPIC_FORUM'			=> 'Chủ đề hoặc chuyên mục không tồn tại.',
 	'NO_TOPICS'					=> 'Không có chủ đề hoặc bài viết nào trong chuyên mục này.',
 	'NO_TOPICS_TIME_FRAME'		=> 'Chuyên mục này không có chủ đề nào trong khoảng thời gian bạn vừa chọn.',
-	'NO_UNREAD_PM'				=> 'Không có tin nhắn nào chưa xem',
 	'NO_UNREAD_POSTS'			=> 'Không có bài viết chưa xem',
 	'NO_UPLOAD_FORM_FOUND'		=> 'Quá trình tải lên đã bắt đầu nhưng không có tập tin tải lên nào được tìm thấy.',
 	'NO_USER'					=> 'Thành viên bạn vừa yêu cầu không tồn tại.',
@@ -557,15 +667,14 @@ $lang = array_merge($lang, array(
 	'OFFLINE'					=> 'Ngoại tuyến',
 	'ONLINE'					=> 'Trực tuyến',
 	'ONLINE_BUDDIES'			=> 'Bạn thân đang trực tuyến',
-	'ONLINE_USERS_TOTAL'		=> 'Có <strong>%d</strong> người đang trực tuyến: ',
-	'ONLINE_USERS_ZERO_TOTAL'	=> 'Có <strong>0</strong> người đang trực tuyến: ',
-	'ONLINE_USER_TOTAL'			=> 'Có <strong>%d</strong> người đang trực tuyến: ',
 	'OPTIONS'					=> 'Tuỳ chọn',
 
 	'PAGE_OF'				=> 'Bạn đang xem trang <strong>%1$d</strong> / <strong>%2$d</strong> trang',
+	'PAGE_TITLE_NUMBER'		=> 'Page %s',
 	'PASSWORD'				=> 'Mật khẩu',
 	'PIXEL'					=> 'px',
 	'PLAY_QUICKTIME_FILE'	=> 'Chạy tập tin Quicktime',
+	'PLEASE_WAIT'			=> 'Please wait.',
 	'PM'					=> 'Tin nhắn',
 	'PM_REPORTED'			=> 'Nhấn để xem báo cáo',
 	'POSTING_MESSAGE'		=> 'Đang gửi bài viết trong chuyên mục %s',
@@ -578,9 +687,15 @@ $lang = array_merge($lang, array(
 	'POSTED_ON_DATE'		=> 'vào ngày',
 	'POSTS'					=> 'Bài viết',
 	'POSTS_UNAPPROVED'		=> 'Có ít nhất một bài viết trong chủ đề này không được chấp nhận.',
+	'POSTS_UNAPPROVED_FORUM'=> 'At least one post in this forum has not been approved.',
 	'POST_BY_AUTHOR'		=> 'gửi bởi',
-	'POST_BY_FOE'			=> 'Bài viết này được gửi bởi <strong>%1$s</strong> người hiện tại đang có tên trong danh sách cấm của bạn. %2$sHiển thị bài viết này%3$s.',
+	'POST_BY_FOE'			=> '<strong>%1$s</strong>, who is currently on your ignore list, made this post.',
+	'POST_DISPLAY'			=> '%1$sDisplay this post%2$s.',
 	'POST_DAY'				=> '%.2f bài viết/ngày',
+	'POST_DELETED_ACTION'	=> 'Deleted post:',
+	'POST_DELETED'			=> 'This post has been deleted.',
+	'POST_DELETED_BY'		=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s.',
+	'POST_DELETED_BY_REASON'=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s for the following reason: %4$s',
 	'POST_DETAILS'			=> 'Thông tin chi tiết về bài viết',
 	'POST_NEW_TOPIC'		=> 'Tạo chủ đề mới',
 	'POST_PCT'				=> '%.2f%% trong tổng số bài viết',
@@ -591,7 +706,8 @@ $lang = array_merge($lang, array(
 	'POST_SUBJECT'			=> 'Tiêu đề bài viết',
 	'POST_TIME'				=> 'Ngày gửi',
 	'POST_TOPIC'			=> 'Tạo chủ đề mới',
-	'POST_UNAPPROVED'		=> 'Bài viết này đang chờ được chấp nhận',
+	'POST_UNAPPROVED_ACTION'	=> 'Post awaiting approval:',
+	'POST_UNAPPROVED'		=> 'This post has not been approved.',
 	'POWERED_BY'			=> 'Đã tích hợp %s',
 	'PREVIEW'				=> 'Xem trước',
 	'PREVIOUS'				=> 'Trang trước',		// Used in pagination
@@ -601,6 +717,8 @@ $lang = array_merge($lang, array(
 	'PRIVATE_MESSAGES'		=> 'Tin nhắn',
 	'PRIVATE_MESSAGING'		=> 'Đang gửi tin nhắn',
 	'PROFILE'				=> 'Thiết lập cá nhân',
+
+	'QUICK_LINKS'			=> 'Quick links',
 
 	'RANK'						=> 'Hạng',
 	'READING_FORUM'				=> 'Đang xem các chủ đề trong chuyên mục %s',
@@ -614,15 +732,6 @@ $lang = array_merge($lang, array(
 	'REDIRECTS'					=> 'Tổng số lượt ghé thăm',
 	'REGISTER'					=> 'Đăng ký',
 	'REGISTERED_USERS'			=> 'Thành viên đang trực tuyến:',
-	'REG_USERS_ONLINE'			=> 'Có <strong>%d</strong> thành viên và ',
-	'REG_USERS_TOTAL'			=> '<strong>%d</strong> thành viên, ',
-	'REG_USERS_TOTAL_AND'		=> '%d thành viên và ',
-	'REG_USERS_ZERO_ONLINE'		=> '<strong>0</strong> thành viên và ',
-	'REG_USERS_ZERO_TOTAL'		=> '<strong>0</strong> thành viên, ',
-	'REG_USERS_ZERO_TOTAL_AND'	=> '0 thành viên và ',
-	'REG_USER_ONLINE'			=> '<strong>%d</strong> thành viên và ',
-	'REG_USER_TOTAL'			=> '<strong>%d</strong> thành viên, ',
-	'REG_USER_TOTAL_AND'		=> '%d thành viên và ',
 	'REMOVE'					=> 'Gỡ bỏ',
 	'REMOVE_INSTALL'			=> 'Hãy vui lòng xoá, di chuyển hoặc đổi tên thư mục <samp>install/</samp> trước khi bạn bắt đầu sử dụng hệ thống. Nếu thư mục này vẫn còn hiện diện, bạn sẽ chỉ có thể truy cập vào được bảng điều khiển của quản trị viên.',
 	'REPLIES'					=> 'Trả lời',
@@ -639,7 +748,8 @@ $lang = array_merge($lang, array(
 	'RETURN_FORUM'				=> '%sQuay về chuyên mục vừa xem%s',
 	'RETURN_PAGE'				=> '%sQuay về trang trước%s',
 	'RETURN_TOPIC'				=> '%sQuay về chủ đề vừa xem%s',
-	'RETURN_TO'					=> 'Quay về',
+	'RETURN_TO'					=> 'Return to “%s”',
+	'RETURN_TO_INDEX'			=> 'Return to Board Index',
 	'FEED'						=> 'Cấp liệu',
 	'FEED_NEWS'					=> 'Tin tức',
 	'FEED_TOPICS_ACTIVE'		=> 'Chủ đề hoạt động',
@@ -667,28 +777,30 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV_EXPLAIN'		=> 'Xem những lựa chọn tìm kiếm nâng cao',
 	'SEARCH_KEYWORDS'			=> 'Tìm kiếm với từ khoá',
 	'SEARCHING_FORUMS'			=> 'Đang tìm kiếm những chuyên mục',
-	'SEARCH_ACTIVE_TOPICS'		=> 'Xem chủ đề đang hoạt động',
+	'SEARCH_ACTIVE_TOPICS'		=> 'Active topics',
 	'SEARCH_FOR'				=> 'Tìm kiếm với từ khoá',
 	'SEARCH_FORUM'				=> 'Tìm kiếm trong chuyên mục này…',
-	'SEARCH_NEW'				=> 'Xem bài viết mới',
+	'SEARCH_NEW'				=> 'New posts',
 	'SEARCH_POSTS_BY'			=> 'Tìm kiếm những bài viết được gửi bởi',
-	'SEARCH_SELF'				=> 'Xem bài viết của bạn',
+	'SEARCH_SELF'				=> 'Your posts',
 	'SEARCH_MINE'				=> 'View your topics',
 	'SEARCH_TOPIC'				=> 'Tìm kiếm trong chủ đề này…',
-	'SEARCH_UNANSWERED'			=> 'Xem bài viết chưa trả lời',
-	'SEARCH_UNREAD'				=> 'Xem bài viết chưa xem',
+	'SEARCH_UNANSWERED'			=> 'Unanswered posts',
+	'SEARCH_UNREAD'				=> 'Unread posts',
 	'SEARCH_USER_POSTS'			=> 'Tìm kiếm bài viết của thành viên',
 	'SECONDS'					=> 'giây',
+	'SEE_ALL'					=> 'See All',
 	'SELECT'					=> 'Chọn',
 	'SELECT_ALL_CODE'			=> 'Chọn tất cả',
 	'SELECT_DESTINATION_FORUM'	=> 'Hãy chọn một chuyên mục để tiếp tục',
 	'SELECT_FORUM'				=> 'Chọn một chuyên mục',
-	'SEND_EMAIL'				=> 'Gửi Email',				// Used for submit buttons
-	'SEND_EMAIL_USER'			=> 'Gửi Email cho',				// Used as: {L_SEND_EMAIL_USER} {USERNAME} -> E-mail UserX
+	'SEND_EMAIL'				=> 'Send email',				// Used for submit buttons
+	'SEND_EMAIL_USER'			=> 'Send email to %s',
 	'SEND_PRIVATE_MESSAGE'		=> 'Gửi tin nhắn',
 	'SETTINGS'					=> 'Thiết lập',
 	'SIGNATURE'					=> 'Chữ ký cá nhân',
 	'SKIP'						=> 'Bỏ qua nội dung',
+	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'Máy chủ SMTP không hỗ trợ giao thức xác thực.',
 	'SORRY_AUTH_READ'			=> 'Bạn không được cấp phép để xem chuyên mục này.',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'Bạn không được cấp phép để tải về tập tin đính kèm này.',
@@ -706,6 +818,8 @@ $lang = array_merge($lang, array(
 	'START_WATCHING_TOPIC'		=> 'Theo dõi chủ đề',
 	'STOP_WATCHING_FORUM'		=> 'Ngừng theo dõi chuyên mục',
 	'STOP_WATCHING_TOPIC'		=> 'Ngừng theo dõi chủ đề',
+	'STRING_LIST_MULTI'			=> '%1$s, and %2$s',
+	'STRING_LIST_SIMPLE'		=> '%1$s and %2$s',
 	'SUBFORUM'					=> 'Chuyên mục con',
 	'SUBFORUMS'					=> 'Chuyên mục con',
 	'SUBJECT'					=> 'Tiêu đề',
@@ -717,51 +831,35 @@ $lang = array_merge($lang, array(
 	'THE_TEAM'			=> 'Ban điều hành',
 	'TIB'				=> 'TiB',
 	'TIME'				=> 'Thời gian',
-	
+	'TIMEOUT_PROCESSING_REQ'			=> 'Request timed out.',
+
 	'TOO_LARGE'						=> 'Giá trị bạn nhập vào quá lớn.',
 	'TOO_LARGE_MAX_RECIPIENTS'		=> 'Giá trị thiết lập cho <strong>Lượng người nhận tối đa cho tin nhắn riêng</strong> quá lớn.',
 
 	'TOO_LONG'						=> 'Giá trị bạn nhập vào quá dài.',
 
-	'TOO_LONG_AIM'					=> 'Tên tài khoản AIM bạn vừa nhập quá dài.',
 	'TOO_LONG_CONFIRM_CODE'			=> 'Mã xác nhận bạn vừa nhập quá dài.',
 	'TOO_LONG_DATEFORMAT'			=> 'Định dạng ngày tháng bạn vừa nhập quá dài.',
-	'TOO_LONG_ICQ'					=> 'Số tài khoản ICQ bạn vừa nhập quá dài.',
-	'TOO_LONG_INTERESTS'			=> 'Nội dung trong phần sở thích bạn vừa nhập quá dài.',
 	'TOO_LONG_JABBER'				=> 'Tên tài khoản Jabber bạn vừa nhập quá dài.',
-	'TOO_LONG_LOCATION'				=> 'Nội dung trong phần nơi đến bạn vừa nhập quá dài.',
-	'TOO_LONG_MSN'					=> 'Tên tài khoản MSNM/WLM bạn vừa nhập quá dài.',
 	'TOO_LONG_NEW_PASSWORD'			=> 'Mật khẩu mới bạn vừa nhập quá dài.',
-	'TOO_LONG_OCCUPATION'			=> 'Nội dung trong phần nghề nghiệp bạn vừa nhập quá dài.',
 	'TOO_LONG_PASSWORD_CONFIRM'		=> 'Mật khẩu xác nhận bạn vừa nhập quá dài.',
 	'TOO_LONG_USER_PASSWORD'		=> 'Mật khẩu bạn vừa nhập quá dài.',
 	'TOO_LONG_USERNAME'				=> 'Tên thành viên bạn vừa nhập quá dài.',
-	'TOO_LONG_EMAIL'				=> 'Địa chỉ Email bạn vừa nhập quá dài.',
-	'TOO_LONG_EMAIL_CONFIRM'		=> 'Địa chỉ Email xác nhận bạn vừa nhập quá dài.',
-	'TOO_LONG_WEBSITE'				=> 'Địa chỉ website bạn vừa nhập quá dài.',
-	'TOO_LONG_YIM'					=> 'Tên tài khoản Yahoo bạn vừa nhập quá dài.',
+	'TOO_LONG_EMAIL'				=> 'The email address you entered is too long.',
 
 	'TOO_MANY_VOTE_OPTIONS'			=> 'Bạn không thể bình chọn cho nhiều đối tượng.',
 
 	'TOO_SHORT'						=> 'Giá trị bạn nhập vào quá ngắn.',
 
-	'TOO_SHORT_AIM'					=> 'Tên tài khoản AIM bạn vừa nhập quá ngắn.',
 	'TOO_SHORT_CONFIRM_CODE'		=> 'Mã xác nhận bạn vừa nhập quá ngắn.',
 	'TOO_SHORT_DATEFORMAT'			=> 'Định dạng ngày tháng bạn vừa nhập quá ngắn.',
-	'TOO_SHORT_ICQ'					=> 'Số tài khoản ICQ bạn vừa nhập quá ngắn.',
-	'TOO_SHORT_INTERESTS'			=> 'Nội dung trong phần sở thích bạn vừa nhập quá ngắn.',
 	'TOO_SHORT_JABBER'				=> 'Tên tài khoản Jabber bạn vừa nhập quá ngắn.',
-	'TOO_SHORT_LOCATION'			=> 'Nội dung trong phần nơi đến bạn vừa nhập quá ngắn.',
-	'TOO_SHORT_MSN'					=> 'Tên tài khoản MSNM/WLM bạn vừa nhập quá ngắn.',
 	'TOO_SHORT_NEW_PASSWORD'		=> 'Mật khẩu mới bạn vừa nhập quá ngắn.',
-	'TOO_SHORT_OCCUPATION'			=> 'Nội dung trong phần nghề nghiệp bạn vừa nhập quá ngắn.',
 	'TOO_SHORT_PASSWORD_CONFIRM'	=> 'Mật khẩu bạn vừa nhập quá ngắn.',
 	'TOO_SHORT_USER_PASSWORD'		=> 'Mật khẩu bạn vừa nhập quá ngắn.',
 	'TOO_SHORT_USERNAME'			=> 'Tên thành viên bạn vừa nhập quá ngắn.',
-	'TOO_SHORT_EMAIL'				=> 'Địa chỉ Email bạn vừa nhập quá ngắn.',
-	'TOO_SHORT_EMAIL_CONFIRM'		=> 'Địa chỉ Email xác nhận bạn vừa nhập quá ngắn.',
-	'TOO_SHORT_WEBSITE'				=> 'Địa chỉ website bạn vừa nhập quá ngắn.',
-	'TOO_SHORT_YIM'					=> 'Tên tài khoản Yahoo bạn vừa nhập quá ngắn.',
+	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
+	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
 	
 	'TOO_SMALL'						=> 'Giá trị bạn nhập vào quá nhỏ.',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> 'Giá trị thiết lập cho <strong>Lượng người nhận tối đa cho tin nhắn riêng</strong> quá nhỏ.',
@@ -775,30 +873,20 @@ $lang = array_merge($lang, array(
 	'TOPIC_MOVED'		=> 'Chủ đề đã di chuyển',
 	'TOPIC_REVIEW'		=> 'Xem lại chủ đề',
 	'TOPIC_TITLE'		=> 'Tiêu đề',
-	'TOPIC_UNAPPROVED'	=> 'Chủ đề này chưa được chấp nhận',
+	'TOPIC_UNAPPROVED'	=> 'This topic has not been approved.',
+	'TOPIC_DELETED'		=> 'This topic has been deleted.',
 	'TOTAL_ATTACHMENTS'	=> 'Tập tin đính kèm',
-	'TOTAL_LOG'			=> '<strong>1</strong> ghi nhận',
-	'TOTAL_LOGS'		=> '<strong>%d</strong> ghi nhận',
-	'TOTAL_NO_PM'		=> '<strong>0</strong> tin nhắn trong tổng số',
-	'TOTAL_PM'			=> '<strong>1</strong> tin nhắn trong tổng số',
-	'TOTAL_PMS'			=> '<strong>%d</strong> tin nhắn trong tổng số',
+	'TOPIC_POLL'		=> 'This topic has a poll.',
 	'TOTAL_POSTS'		=> 'Tổng số bài viết',
-	'TOTAL_POSTS_OTHER'	=> 'Tổng số bài viết: <strong>%s</strong>',
-	'TOTAL_POSTS_ZERO'	=> 'Tổng số bài viết: <strong>0</strong>',
 	'TOPIC_REPORTED'	=> 'Chủ đề này đã được báo cáo',
-	'TOTAL_TOPICS_OTHER'=> 'Tổng số chủ đề: <strong>%s</strong>',
-	'TOTAL_TOPICS_ZERO'	=> 'Tổng số chủ đề: <strong>0</strong>',
-	'TOTAL_USERS_OTHER'	=> 'Tổng số thành viên: <strong>%s</strong>',
-	'TOTAL_USERS_ZERO'	=> 'Tổng số thành viên: <strong>0</strong>',
 	'TRACKED_PHP_ERROR'	=> 'Các lỗi PHP đã được phát hiện: %s',
+	'TWITTER'			=> 'Twitter',
 
-	'UNABLE_GET_IMAGE_SIZE'	=> 'Không thể xác định kích thước của tập tin hình ảnh.',
+	'UNABLE_GET_IMAGE_SIZE'	=> 'It was not possible to determine the dimensions of the image. Please verify that the URL you entered is correct.',
 	'UNABLE_TO_DELIVER_FILE'=> 'Không thể thực thi tập tin.',
 	'UNKNOWN_BROWSER'		=> 'Trình duyệt không xác định',
 	'UNMARK_ALL'			=> 'Bỏ đánh dấu',
 	'UNREAD_MESSAGES'		=> 'Tin nhắn chưa xem',
-	'UNREAD_PM'				=> '<strong>%d</strong> tin nhắn chưa xem',
-	'UNREAD_PMS'			=> '<strong>%d</strong> tin nhắn chưa xem',
 	'UNREAD_POST'			=> 'Bài viết chưa xem',
 	'UNREAD_POSTS'			=> 'Bài viết chưa xem',
 	'UNWATCH_FORUM_CONFIRM'		=> 'Bạn có chắc muốn không theo dỏi chuyên mục này?',
@@ -816,8 +904,6 @@ $lang = array_merge($lang, array(
 	'USERNAMES'				=> 'Tên thành viên',
 	'USER_AVATAR'			=> 'Hình đại diện của thành viên',
 	'USER_CANNOT_READ'		=> 'Bạn không thể xem những bài viết trong chuyên mục này.',
-	'USER_POST'				=> '%d bài viết',
-	'USER_POSTS'			=> '%d bài viết',
 	'USERS'					=> 'Người',
 	'USE_PERMISSIONS'		=> 'Kiểm tra thiết lập cấp phép của thành viên',
 
@@ -825,6 +911,8 @@ $lang = array_merge($lang, array(
 
 	'VARIANT_DATE_SEPARATOR'	=> ' / ',	// Used in date format dropdown, eg: "Today, 13:37 / 01 Jan 2007, 13:37" ... to join a relative date with calendar date
 	'VIEWED'					=> 'Đã xem',
+
+	'VIEWING_CONTACT_ADMIN'		=> 'Viewing contact page',
 	'VIEWING_FAQ'				=> 'Đang xem trợ giúp',
 	'VIEWING_MEMBERS'			=> 'Đang xem thông tin cá nhân của thành viên',
 	'VIEWING_ONLINE'			=> 'Đang xem các thành viên trực tuyến',
@@ -839,8 +927,6 @@ $lang = array_merge($lang, array(
 	'VIEW_LATEST_POST'			=> 'Xem bài viết mới nhất vừa gửi',
 	'VIEW_NEWEST_POST'			=> 'Xem bài viết chưa xem đầu tiên',
 	'VIEW_NOTES'				=> 'Xem phản hồi về thành viên',
-	'VIEW_ONLINE_TIME'			=> 'Thông tin cập nhật mỗi <strong>%d</strong> phút',
-	'VIEW_ONLINE_TIMES'			=> 'Thông tin cập nhật mỗi <strong>%d</strong> phút',
 	'VIEW_TOPIC'				=> 'Xem chủ đề',
 	'VIEW_TOPIC_ANNOUNCEMENT'	=> 'Thông báo: ',
 	'VIEW_TOPIC_GLOBAL'			=> 'Thông báo chung: ',
@@ -861,23 +947,24 @@ $lang = array_merge($lang, array(
 	'WEBSITE'			=> 'Website',
 	'WHOIS'				=> 'Tra cứu địa chỉ IP',
 	'WHO_IS_ONLINE'		=> 'Ai đang trực tuyến?',
+	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'Bạn vừa nhập mật khẩu không chính xác.',
 	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
-	'WRONG_DATA_ICQ'			=> 'Số tài khoản ICQ bạn vừa nhập không hợp lệ.',
 	'WRONG_DATA_JABBER'			=> 'Tên tài khoản Jabber bạn vừa nhập không hợp lệ.',
 	'WRONG_DATA_LANG'			=> 'Ngôn ngữ bạn vừa nhập không hợp lệ.',
-	'WRONG_DATA_WEBSITE'		=> 'Địa chỉ website bạn vừa nhập không phải là một địa chỉ URL hợp lệ và phải đính kèm cả giao thức. Ví dụ: <code>http://www.example.com/</code>.',
+	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
+	'WRONG_DATA_POST_SK'		=> 'The post sort option you specified is not valid.',
+	'WRONG_DATA_TOPIC_SD'		=> 'The topic sort direction you specified is not valid.',
+	'WRONG_DATA_TOPIC_SK'		=> 'The topic sort option you specified is not valid.',
 	'WROTE'						=> 'đã viết',
 
+	'YAHOO'				=> 'Yahoo Messenger',
+	'YOUTUBE'			=> 'YouTube',
 	'YEAR'				=> 'Năm',
 	'YEAR_MONTH_DAY'	=> '(YYYY-MM-DD)',
 	'YES'				=> 'Đồng ý',
-	'YIM'				=> 'Tài khoản Yahoo',
 	'YOU_LAST_VISIT'	=> 'Lần ghé thăm trước: %s',
-	'YOU_NEW_PM'		=> 'Bạn có một tin nhắn mới trong hộp tin nhận của mình.',
-	'YOU_NEW_PMS'		=> 'Bạn có nhiều tin nhắn mới trong hộp tin nhận của mình.',
-	'YOU_NO_NEW_PM'		=> 'Bạn không có tin nhắn mới nào trong hộp tin nhận của mình.',
 
 	'default_dateformat'	=> 'D d/m/y G:i', // Mon Jan 01, 2007 1:37 pm
 
@@ -1083,7 +1170,6 @@ $lang = array_merge($lang, array(
 
 	'FORUM_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this forum.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this topic.',
-	'TOO_FEW_CHARS_LIMIT'	=> 'Bài viết của bạn chứa %1$d ký tự. Số lượng ký tự tối thiểu bạn cần nhập vào là %2$d.',
 	'REPLY_TO_MESSAGE'		=> 'Reply to message',
 
 	'RSS_CHAN_LIST_TITLE'	=> 'Chuyên mục',
@@ -1695,7 +1781,6 @@ $lang = array_merge($lang, array(
 	'DEV_NO_TEST_FILE'			=> 'Không có giá trị nào được xác định cho biến <strong>test_file</strong> của gói thành phần chức năng chuyển đổi. Nếu bạn là người sử dụng gói thành phần chức năng chuyển đổi này, bạn không nên xem lỗi này, hãy báo cáo lỗi này cho tác giả của gói thành phần chức năng chuyển đổi. Còn nếu bạn là tác giả của gói thành phần chức năng chuyển đổi này, bạn phải xác định tên của một tập tin tồn tại trong thư mục nguồn của hệ thống để kiểm tra chính xác đường dẫn hệ thống.',
 	'DIRECTORIES_AND_FILES'		=> 'Thư mục và tập tin cài đặt',
 	'DISABLE_KEYS'				=> 'Loại vô hiệu',
-	'DLL_FIREBIRD'				=> 'Firebird',
 	'DLL_FTP'					=> 'Hỗ trợ FTP [ Cài đặt ]',
 	'DLL_GD'					=> 'Hỗ trợ thư viện đồ hoạ GD [ Mã xác nhận ]',
 	'DLL_MBSTRING'				=> 'Hỗ trợ loại ký tự Multi-byte',
@@ -1706,11 +1791,12 @@ $lang = array_merge($lang, array(
 	'DLL_MYSQLI'				=> 'MySQL với phần mở rộng MySQLi',
 	'DLL_ORACLE'				=> 'Oracle',
 	'DLL_POSTGRES'				=> 'PostgreSQL 7.x/8.x',
-	'DLL_SQLITE'				=> 'SQLite',
+	'DLL_SQLITE'				=> 'SQLite 2',
+	'DLL_SQLITE3'				=> 'SQLite 3',
 	'DLL_XML'					=> 'Hỗ trợ XML [ Jabber ]',
 	'DLL_ZLIB'					=> 'Hỗ trợ chế độ nén zlib [ gz, .tar.gz, .zip ]',
 	'DL_CONFIG'					=> 'Tải về tập tin cấu hình',
-	'DL_CONFIG_EXPLAIN'			=> 'Bạn có thể tải về toàn bộ tập tin cấu hình <code>config.php</code> về máy tính của mình. Sau đó bạn cần phải tự mình tải lên tập tin này lên hệ thống thay thế cho tập tin <code>config.php</code> hiện có trong thư mục chính của hệ thống. Hãy nhớ tải lên tập tin này trong định dạng ASCII. Xem tài liệu hướng dẫn của ứng dụng FTP mà bạn đang sử dụng nếu bạn không biết về loại định dạng này. Sau khi bạn đã tải lên xong tập tin <code>config.php</code>, hãy bấm vào nút “Hoàn tất” để chuyển đến bước kế tiếp.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'Tải về',
 	'DONE'						=> 'Hoàn tất',
 
@@ -1722,8 +1808,6 @@ $lang = array_merge($lang, array(
 	'FILES_REQUIRED_EXPLAIN'	=> '<strong>Yêu cầu bắt buộc</strong> - Để có thể sử dụng các chức năng đã được xây dựng, hệ thống phpBB cần phải được phép truy nhập hoặc ghi tập tin đến các thư mục và tập tin của hệ thống. Nếu bạn nhìn thấy thông báo “Không tìm thấy”, bạn cần phải tạo hay tải lên lại những thư mục và tập tin tương ứng. Nếu bạn nhìn thấy thông báo “Không thể ghi”, bạn cần phải thay đổi lại thiết lập cấp phép trên máy chủ cho các thư mục hay tập tin tương ứng.',
 	'FILLING_TABLE'				=> 'Điền vào bảng dữ liệu <strong>%s</strong>',
 	'FILLING_TABLES'			=> 'Bảng dữ liệu điền vào',
-
-	'FIREBIRD_DBMS_UPDATE_REQUIRED'		=> 'phpBB không còn hỗ trợ Firebird/Interbase cũ hơn phiên bản 2.1. Hãy nâng cấp phiên bản Firebird lên ít nhất là phiên bản 2.1.0 trước khi thực hiện tiếp việc cập nhật.',
 
 	'FINAL_STEP'				=> 'Thực thi bước cuối cùng',
 	'FORUM_ADDRESS'				=> 'Địa chỉ hệ thống',
@@ -1750,30 +1834,30 @@ $lang = array_merge($lang, array(
 		<p>Bấm vào nút bên dưới, bạn sẽ được chuyển đến bảng điều khiển dành cho quản trị viên của mình. Đa số mỗi tùy chọn trong bảng điều khiển này đều có hướng dẫn giải thích cho bạn công dụng của chúng. Hãy nhớ rằng bạn luôn được hỗ trợ trực tuyến từ <a href="http://www.phpbb.com/support/documentation/3.0/">tài liệu hướng dẫn sử dụng</a> và <a href="http://www.phpbb.com/community/viewforum.php?f=46">diễn đàn hỗ trợ</a>, xem tập tin <a href="%3$s">README</a> để biết thêm thông tin.</p><p><strong>Ngay bây giờ, bạn hãy vui lòng xoá, di chuyển hoặc đổi tên thư mục <samp>install</samp> trước khi bạn bắt đầu sử dụng hệ thống này. Nếu thư mục này vẫn còn hiện hữu, bạn sẽ chỉ có thể truy cập được vào bảng điều khiển dành cho quản trị viên.</strong></p>',
 	'INSTALL_INTRO'				=> 'Chào mừng bạn đã đến với công cụ cài đặt',
 
-	'INSTALL_INTRO_BODY'		=> 'Với công cụ này, bạn sẽ bắt đầu quá trình cài đặt hệ thống phpBB trên máy chủ của mình.</p><p>Để bắt đầu cài đặt, bạn sẽ phải cung cấp cho công cụ cài đặt những thông tin về cơ sở dữ liệu của bạn. Nếu bạn không biết thông tin về cơ sở dữ liệu của mình, hãy vui lòng liên hệ với nhà cung cấp dịch vụ lưu trữ Web của bạn và yêu cầu họ cung cấp cho bạn. Bạn sẽ không thể tiếp tục cài đặt mà không có những thông tin này. Bạn cần biết:</p>
+	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
 
 	<ul>
-		<li>Loại cơ sở dữ liệu - hệ quản trị cơ sở dữ liệu mà bạn sẽ sử dụng cho hệ thống.</li>
-		<li>Tên miền hoặc địa chỉ DSN của máy chủ cơ sở dữ liệu - địa chỉ của máy chủ cơ sở dữ liệu.</li>
-		<li>Cổng máy chủ cơ sở dữ liệu - cổng của máy chủ cơ sở dữ liệu đang chạy. Đa số khi cài đặt thì mục này không cần thiết.</li>
-		<li>Tên cơ sở dữ liệu - tên của gói cơ sở dữ liệu mà bạn đang dùng để cài đặt trên máy chủ.</li>
-		<li>Tên đăng nhập và mật khẩu kết nối đến cơ sở dữ liệu - thông tin đăng nhập để truy cập vào cơ sở dữ liệu.</li>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
 	</ul>
 
-	<p><strong>Lưu ý:</strong> Nếu bạn cài đặt hệ thống với SQLite, bạn nên nhập vào đường dẫn đầy đủ đến tập tin cơ sở dữ liệu của bạn trong phần thông tin về địa chỉ DSN và để trống phần tên đăng nhập và mật khẩu kết nối đến cơ sở dữ liệu. Vì lý do bảo mật, bạn phải chắc chắn rằng tập tin cơ sở dữ liệu lưu trữ trong thư mục trên máy chủ đó không thể truy cập được từ trình duyệt.</p>
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
 
-	<p>Hệ thống phpBB hỗ trợ các hệ quản trị cơ sở dữ liệu dưới đây:</p>
+	<p>phpBB3 supports the following databases:</p>
 	<ul>
-		<li>MySQL 3.23 trở lên (hỗ trợ MySQLi)</li>
-		<li>PostgreSQL 7.3+</li>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
 		<li>SQLite 2.8.2+</li>
-		<li>Firebird 2.0+</li>
-		<li>MSSQL Server 2000 trở lên (trực tiếp hoặc thông qua ODBC)</li>
-		<li>MS SQL Server 2005 trở lên (native)</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
 		<li>Oracle</li>
 	</ul>
-	
-	<p>Trong những hệ quản trị cơ sở dữ liệu được hỗ trợ bên trên, chỉ những loại nào có sẵn trên máy chủ của bạn mới được hiển thị trong tùy chọn khi cài đặt.',
+
+	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'Để bắt đầu việc cài đặt, bạn hãy bấm vào nút chấp nhận bên dưới.',
 	'INSTALL_LOGIN'				=> 'Đăng nhập',
 	'INSTALL_NEXT'				=> 'Bước kế tiếp',
@@ -1789,9 +1873,8 @@ $lang = array_merge($lang, array(
 	'INST_ERR_DB_NO_ERROR'		=> 'Không có thông báo lỗi nào được đưa ra.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'Phiên bản MySQL được cài đặt trên máy chủ không tương thích với tuỳ chọn “MySQL với phần mở rộng MySQLi” mà bạn vừa chọn. Hãy thử thay thế bằng tuỳ chọn “MySQL” để tiếp tục.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'Phiên bản phần mở rộng SQLite được cài đặt trên máy chủ đã quá cũ. Nó phải được nâng cấp ít nhất đến phiên bản 2.8.2 để sử dụng với hệ thống này.',
+	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'Phiên bản Oracle được cài đặt trên máy chủ yêu cầu bạn phải thiết lập thông số <var>NLS_CHARACTERSET</var> thành <var>UTF-8</var>. Bạn hãy vui lòng nâng cấp hệ thống lên phiên bản 9.2+ hoặc chỉ cần thay đổi lại thông số trên.',
-	'INST_ERR_DB_NO_FIREBIRD'	=> 'Phiên bản Firebird được cài đặt trên máy chủ cũ hơn phiên bản 2.0, bạn hãy vui lòng nâng cấp hệ thống lên phiên bản mới hơn.',
-	'INST_ERR_DB_NO_FIREBIRD_PS'=> 'Cơ sở dữ liệu bạn vừa chọn để sử dụng cho Firebird có một trang kích thước nhỏ hơn 8192, hệ thống yêu cầu ít nhất phải là 8192.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'Cơ sở dữ liệu bạn vừa chọn không được tạo ra trong chế độ mã hóa <var>UNICODE</var> hoặc <var>UTF-8</var>. Bạn hãy vui lòng cài đặt lại với một cơ sở dữ liệu được mã hóa theo <var>UNICODE</var> hoặc <var>UTF-8</var>.',
 	'INST_ERR_DB_NO_NAME'		=> 'Bạn chưa nhập tên cơ sở dữ liệu.',
 	'INST_ERR_EMAIL_INVALID'	=> 'Địa chỉ Email bạn vừa nhập không hợp lệ.',
@@ -1845,6 +1928,8 @@ $lang = array_merge($lang, array(
 	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'Hệ thống phpBB sẽ <strong>không hoạt động</strong> được nếu bản cài đặt PHP trên máy chủ của bạn không được biên dịch với phần mở rộng PCRE có hỗ trợ UTF-8.',
 	'PHP_GETIMAGESIZE_SUPPORT'			=> 'Hàm PHP <code>getimagesize()</code> có thể sử dụng',
 	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Yêu cầu bắt buộc</strong> - Để các chức năng của hệ thống phpBB hoạt động chính xác, hàm PHP <code>getimagesize()</code> cần phải được phép sử dụng trên máy chủ.',
+	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'Gói thành phần chức năng tuỳ chọn',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>Tuỳ chọn</strong> - Những gói thành phần chức năng hay ứng dụng này đều hoàn toàn tuỳ chọn. Tuy nhiên, nếu chúng được cài đặt đầy đủ trên máy chủ, bạn sẽ sử dụng được đầy đủ tất cả các chức năng của hệ thống.',
 	'PHP_SUPPORTED_DB'				=> 'Loại cơ sở dữ liệu được hỗ trợ',
@@ -1853,10 +1938,10 @@ $lang = array_merge($lang, array(
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'Hê thống sẽ vẫn hoạt động nếu thiết lập này được bật, nhưng nếu có thể, chúng tôi khuyên bạn nên tắt thiết lập PHP <var>register_globals</var> vì một số nguyên nhân bảo mật.',
 	'PHP_SAFE_MODE'					=> 'Chế độ an toàn',
 	'PHP_SETTINGS'					=> 'Phiên bản PHP và thiết lập',
-	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Yêu cầu bắt buộc</strong> - Bạn phải cài đặt phiên bản PHP ít nhất là <strong>4.3.3</strong> trở lên để sử dụng được hệ thống phpBB. Nếu <var>safe mode</var> được hiển thị bên dưới thì cũng có nghĩa PHP trên máy chủ của bạn đang chạy trong chế độ này. Điều này sẽ hạn chế việc quản trị hệ thống từ xa và những chức năng tương tự.',
+	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'Thiết lập PHP <var>allow_url_fopen</var> đã được bật',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>Tùy chọn</strong> - Thiết lập PHP này là tùy chọn, tuy nhiên chắc chắn rằng các chức năng trong hệ thống phpBB như liên kết hình đại diện từ website khác sẽ không thể hoạt động được nếu thiết lập này bị vô hiệu.',
-	'PHP_VERSION_REQD'				=> 'Phiên bản PHP >= 4.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
 	'POST_ID'						=> 'Số ID bài viết',
 	'PREFIX_FOUND'					=> 'Tiền tố đầu mỗi tên bảng dữ liệu <strong>%s</strong> mà bạn vừa chọn đã được sử dụng trong gói cơ sở dữ liệu này.',
 	'PREPROCESS_STEP'				=> 'Đang thực thi quá trình kiểm tra trước các <var>function/query</var>',
@@ -1876,6 +1961,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> 'Cấu hình máy chủ',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Chỉ mục tìm kiếm không được chuyển đổi',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Những chỉ mục tìm kiếm trong hệ thống cũ của bạn không được chuyển đổi. Chức năng tìm kiếm sẽ vô dụng nếu như không có chỉ mục tìm kiếm được lập. Để tạo lại chỉ mục tìm kiếm mới, bạn hãy chuyển đến bảng điều khiển của quản trị viên, chọn “Bảo trì” trong menu chính bên trên và sau đó chọn vào “Chỉ mục tìm kiếm” từ menu con bên trái.',
+	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> 'Phần mềm hệ thống',
 	'SPECIFY_OPTIONS'			=> 'Xác định tuỳ chọn chuyển đổi',
 	'STAGE_ADMINISTRATOR'		=> 'Thông tin về quản trị viên',
@@ -1883,7 +1969,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> 'Những thiết lập trong trang này chỉ thực sự cần thiết nếu bạn muốn thay đổi những thiết lập mặc định trong hệ thống. Nếu bạn không chắc chắn, bạn có thể chuyển sang bước kế tiếp vì những thiết lập này có thể thay đổi lại trong bảng điều khiển của quản trị viên.',
 	'STAGE_CONFIG_FILE'			=> 'Tập tin cấu hình',
 	'STAGE_CREATE_TABLE'		=> 'Tạo bảng dữ liệu cho cơ sở dữ liệu',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'Những bảng dữ liệu trong cơ sở dữ liệu được sử dụng bởi hệ thống phpBB đã được tạo thành công và đã được nhập vào những thiết lập mặc định ban đầu. Hãy chuyển sang bước kế tiếp để hoàn tất việc cài đặt hệ thống phpBB.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'Thiết lập cơ sở dữ liệu',
 	'STAGE_FINAL'				=> 'Bước cuối cùng',
 	'STAGE_INTRO'				=> 'Giới thiệu',
@@ -1896,7 +1982,7 @@ $lang = array_merge($lang, array(
 	'SUB_LICENSE'				=> 'Bản quyền',
 	'SUB_SUPPORT'				=> 'Hỗ trợ',
 	'SUCCESSFUL_CONNECT'		=> 'Kết nối thành công',
-	'SUPPORT_BODY'				=> 'Trong suốt quá trình sử dụng phiên bản RC (Release Candidate) này của phpBB 3.0.0, bạn có thể được hỗ trợ đầy đủ tại <a href="http://www.phpbb.com/community/viewforum.php?f=46">diễn đàn hỗ trợ phpBB 3.0.x</a>. Chúng tôi sẽ giải đáp các thắc mắc và vấn đề thường gặp trong việc cài đặt, các rắc rối trong việc cấu hình hệ thống và chuyển đổi hệ thống cũng như hỗ trợ giải quyết các rắc rối thường gặp liên quan đến các lỗi bug. Chúng tôi cũng cho phép bạn thảo luận về các gói MOD, mã tùy biến và giao diện bổ sung.</p><p>Để tìm kiếm thêm sự giúp đỡ, bạn hãy tham khảo <a href="http://www.phpbb.com/support/documentation/3.0/quickstart/">tài liệu cài đặt và cấu hình nhanh</a> cũng như <a href="http://www.phpbb.com/support/documentation/3.0/">tài liệu trực tuyến</a> của chúng tôi.</p><p>Để chắc chắn bạn luôn sử dụng phiên bản mới nhất và cập nhật những thông tin mới nhất, tại sao bạn không tham gia vào <a href="http://www.phpbb.com/support/">danh sách tin tức qua Email</a> của chúng tôi',
+	'SUPPORT_BODY'				=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/documentation/3.1/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
 	'SYNC_FORUMS'				=> 'Bắt đầu đồng bộ hóa các chuyên mục',
 	'SYNC_POST_COUNT'			=> 'Đang đồng bộ <var>post_counts</var>',
 	'SYNC_POST_COUNT_ID'		=> 'Đang đồng bộ <var>post_counts</var> từ <var>mục</var> %1$s đến %2$s.',
@@ -1922,7 +2008,7 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ALL_FILES_UP_TO_DATE'		=> 'Tất cả các tập tin đã được cập nhật lên phiên bản mới nhất của phpBB. Ngay bây giờ bạn nên <a href="../ucp.php?mode=login">đăng nhập vào hệ thống</a> và kiểm tra lại để đảm bảo mọi thứ đều hoạt động tốt. Bạn cũng đừng quên xóa, đổi tên hay di chuyển thư mục cài đặt của hệ thống!',
+	'ALL_FILES_UP_TO_DATE'		=> 'All files are up to date with the latest phpBB version.',
 	'ARCHIVE_FILE'				=> 'Tập tin gốc được lưu trữ',
 
 	'BACK'				=> 'Quay lại',
@@ -1945,7 +2031,10 @@ $lang = array_merge($lang, array(
 	'CURRENT_VERSION'				=> 'Phiên bản hiện tại',
 
 	'DATABASE_TYPE'						=> 'Loại cơ sở dữ liệu',
+	'DATABASE_UPDATE_COMPLETE'			=> 'Database updater has completed!',
+	'DATABASE_UPDATE_CONTINUE'			=> 'Continue database update',
 	'DATABASE_UPDATE_INFO_OLD'			=> 'Tập tin cập nhật cơ sở dữ liệu trong thư mục cài đặt là tập tin của phiên bản cũ. Hãy chắc chắn rằng bạn đã tải lên phiên bản chính xác của tập tin này.',
+	'DATABASE_UPDATE_NOT_COMPLETED'		=> 'The database update has not yet completed.',
 	'DELETE_USER_REMOVE'				=> 'Xóa thành viên và gỡ bỏ những bài viết',
 	'DELETE_USER_RETAIN'				=> 'Xóa thành viên nhưng giữ các bài viết lại',
 	'DESTINATION'						=> 'Tập tin đến',
@@ -1964,14 +2053,17 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_UPDATE_METHOD'			=> 'Tải về các tập tin đã chỉnh sửa được lưu trữ',
 	'DOWNLOAD_UPDATE_METHOD_EXPLAIN'	=> 'Sau khi đã tải về, bạn nên giải nén tập tin được lưu trữ ra. Bạn sẽ tìm thấy những tập tin đã được chỉnh sửa và đây là những tập tin bạn cần phải tự mình tải lên. Hãy tải chúng lên thư mục định vị tương ứng trong thư mục cài đặt hệ thống phpBB. Sau khi hoàn tất quá trình tải các tập tin lên, hãy sử dụng các nút bấm bên dưới để tiến hành kiểm tra sự hợp lệ của các tập tin mà bạn vừa tải.',
 
-	'ERROR'			=> 'Lỗi',
 	'EDIT_USERNAME'	=> 'Sửa tên thành viên',
+	'ERROR'			=> 'Lỗi',
+	'EVERYTHING_UP_TO_DATE'		=> 'Everything is up to date with the latest phpBB version. You should now <a href="%1$s">login to your board</a> and check if everything is working fine. Do not forget to delete, rename or move your install directory! Please send us updated information about your server and board configurations from the <a href="%2$s">Send statistics</a> module in your ACP.',
 
 	'FILE_ALREADY_UP_TO_DATE'		=> 'Tập tin đã được cập nhật mới nhất.',
 	'FILE_DIFF_NOT_ALLOWED'			=> 'Tập tin không được phép so sánh mã nguồn.',
 	'FILE_USED'						=> 'Thông tin được sử dụng từ',			// Single file
 	'FILES_CONFLICT'				=> 'Những tập tin xung đột',
 	'FILES_CONFLICT_EXPLAIN'		=> 'Những tập tin bên dưới đã được chỉnh sửa và không còn là những tập tin gốc của hệ thống phpBB phiên bản cũ. Hệ thống phpBB đã xác định rằng những tập tin này sẽ tạo ra xung đột nếu bạn cố gắng nhập chung chúng lại với nhau. Bạn hãy vui lòng kiểm tra lại các xung đột xuất hiện và cố gắng tự mình giải quyết các xung đột đó hoặc tiếp tục việc cập nhật bằng cách lựa chọn phương pháp nhập chung như trên. Nếu bạn tự mình giải quyết các xung đột, hãy kiểm tra lại các tập tin sau khi bạn đã chỉnh sửa chúng. Bạn cũng có thể lựa chọn phương pháp nhập chung mà mình thích sử dụng cho riêng mỗi tập tin. Phương pháp đầu tiên sẽ cho kết quả một tập tin mà trong đó những dòng mã nguồn gây xung đột trong các tập tin cũ của bạn sẽ bị loại bỏ, phương pháp còn lại sẽ cho kết quả một tập tin đã loại bỏ những thay đổi từ tập tin mới.',
+	'FILES_DELETED'					=> 'Deleted files',
+	'FILES_DELETED_EXPLAIN'			=> 'The following files do not exist in the new version. These files have to be deleted from your installation.',
 	'FILES_MODIFIED'				=> 'Những tập tin đã chỉnh sửa',
 	'FILES_MODIFIED_EXPLAIN'		=> 'Những tập tin bên dưới đã được chỉnh sửa và không còn là những tập tin gốc của hệ thống phpBB phiên bản cũ. Tập tin đã cập nhật là tập tin được nhập chung giữa những chỉnh sửa mã nguồn của bạn với tập tin mới.',
 	'FILES_NEW'						=> 'Những tập tin mới',
@@ -2033,6 +2125,7 @@ $lang = array_merge($lang, array(
 	'PREVIOUS_VERSION'					=> 'Phiên bản trước',
 	'PROGRESS'							=> 'Tiến hành',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Announcement',
 	'RESULT'					=> 'Kết quả',
 	'RUN_DATABASE_SCRIPT'		=> 'Cập nhật ngay cơ sở dữ liệu',
 
@@ -2040,6 +2133,7 @@ $lang = array_merge($lang, array(
 	'SELECT_DOWNLOAD_FORMAT'	=> 'Chọn định dạng tập tin tải về',
 	'SELECT_FTP_SETTINGS'		=> 'Chọn thiết lập FTP',
 	'SHOW_DIFF_CONFLICT'		=> 'Hiện những chỗ khác nhau trong mã nguồn/mã nguồn xung đột',
+	'SHOW_DIFF_DELETED'			=> 'Show file contents',
 	'SHOW_DIFF_FINAL'			=> 'Hiện tập tin kết quả',
 	'SHOW_DIFF_MODIFIED'		=> 'Hiện những chỗ khác nhau trong mã nguồn đã chỉnh sửa',
 	'SHOW_DIFF_NEW'				=> 'Hiện mã nguồn tập tin',
@@ -2053,6 +2147,7 @@ $lang = array_merge($lang, array(
 	'STAGE_UPDATE_FILES'		=> 'Cập nhật tập tin',
 	'STAGE_VERSION_CHECK'		=> 'Kiểm tra phiên bản',
 	'STATUS_CONFLICT'			=> 'Tập tin đã chỉnh sửa gây ra xung đột',
+	'STATUS_DELETED'			=> 'Deleted file',
 	'STATUS_MODIFIED'			=> 'Tập tin đã chỉnh sửa',
 	'STATUS_NEW'				=> 'Tập tin mới',
 	'STATUS_NEW_CONFLICT'		=> 'Tập tin mới xung đột',
@@ -2073,33 +2168,27 @@ $lang = array_merge($lang, array(
 	'UPDATE_INSTALLATION_EXPLAIN'	=> 'Với tuỳ chọn này, bạn có thể cập nhật cho bản cài đặt phpBB của mình lên phiên bản mới nhất của phpBB.<br />Trong suốt quá trình thực thi, tất cả các tập tin của bạn sẽ được kiểm tra để đảm bảo tính toàn bộ chưa được chỉnh sửa mã nguồn. Bạn cũng có thể xem trước tất cả thay đổi mã nguồn và tập tin trước khi bắt đầu cập nhật.<br /><br />Tập tin được cập nhật hoàn tất có thể bằng hai cách.</p><h2>Tự mình cập nhật</h2><p>Với phương pháp cập nhật này, bạn chỉ việc tải về những tập tin mà bạn đã chỉnh sửa cá nhân so với tập tin gốc của hệ thống. Điều này giúp bạn không bị mất đi các tập tin mà mình đã chỉnh sửa. Sau khi đã tải về máy thành công, bạn cần phải tự mình tải lên lại những tập tin này đến thư mục định vị chính xác của chúng trong thư mục cài đặt hệ thống phpBB. Khi đã tải lên xong, bạn có thể tiến hành kiểm tra lại các tập tin này để chắc chắn rằng mình đã tải chúng lên đúng thư mục định vị trong hệ thống.</p><h2>Cập nhật tự động với FTP</h2><p>Phương pháp này tương tự như phương pháp đầu tiên nhưng bạn không cần phải tải về những tập tin đã chỉnh sửa rồi phải tải chúng lên trở lại thư mục định vị trong hệ thống. Quá trình này sẽ được thực hiện tự động cho bạn. Ngoài ra, để sử dụng được phương pháp cập nhật này, bạn phải cung cấp thông tin chính xác về tài khoản FTP của mình khi được hệ thống yêu cầu. Sau khi hoàn tất, bạn sẽ được chuyển đến công cụ kiểm tra tập tin để chắc chắn rằng mọi thứ đã được cập nhật chính xác. Cuối cùng, bạn sẽ được chuyển đến công cụ cập nhật cơ sở dữ liệu để hoàn tất toàn bộ quá trình cập nhật cho hệ thống.',
 	'UPDATE_INSTRUCTIONS'			=> '
 
-		<h1>Thông báo phát hành</h1>
+		<h1>Release announcement</h1>
 
-		<p>Bạn hãy vui lòng xem qua <a href="%1$s" title="%1$s"><strong>thông báo phát hành của phiên bản phpBB mới nhất</strong></a> trước khi bạn tiếp tục tiến hành việc cập nhật của mình bởi vì nó có nhiều thông tin hữu ích dành cho bạn. Thông báo này cũng đính kèm liên kết tải về phiên bản phpBB mới nhất cũng như những thay đổi kể từ phiên bản trước.</p>
+		<p>Please read the release announcement for the latest version before you continue your update process, it may contain useful information. It also contains full download links as well as the change log.</p>
 
 		<br />
 
-		<h1>Làm thế nào để cập nhật bản cài đặt phpBB3 của bạn với gói cập nhật tự động?</h1>
+		<h1>How to update your installation with the Automatic Update Package</h1>
 
-		<p>Khuyến cáo bạn rằng đây là cách cập nhật bản cài đặt phpBB3 chỉ hợp lệ với gói cập nhật tự động. Bạn cũng có thể cập nhật bản cài đặt phpBB3 của mình bằng những phương pháp khác đã được liệt kê trong tài liệu <samp>INSTALL.html</samp>. Những bước tiến hành cập nhật tự động hệ thống như sau:</p>
+		<p>The recommended way of updating your installation listed here is only valid for the automatic update package. You are also able to update your installation using the methods listed within the INSTALL.html document. The steps for updating phpBB3 automatically are:</p>
 
 		<ul style="margin-left: 20px; font-size: 1.1em;">
-			<li>Chuyển đến trang <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com downloads page</a> và tải về “Gói cập nhật tự động” chính xác.<br /><br /></li>
-			<li>Giải nén gói tập tin vừa tải về.<br /><br /></li>
-			<li>Tải toàn bộ thư mục chính cài đặt hệ thống phpBB sau khi giải nén lên máy chủ của bạn (chung thư mục với tập tin <code>config.php</code>).<br /><br /></li>
+			<li>Go to the <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com downloads page</a> and download the "Automatic Update Package" archive.<br /><br /></li>
+			<li>Unpack the archive.<br /><br /></li>
+			<li>Upload the complete uncompressed install folder to your phpBB root directory (where your config.php file is).<br /><br /></li>
 		</ul>
 
-		<p>Sau khi đã tải lên xong, hệ thống của bạn sẽ tạm ngưng hoạt động đối với các thành viên bình thường trong suốt thời gian thư mục cài đặt hệ thống mà bạn đã tải lên còn hiện diện.<br /><br />
-		<strong><a href="%2$s" title="%2$s">Bây giờ, bạn hãy bắt đầu tiến hành cập nhật bằng cách duyệt thư mục cài đặt hệ thống từ trình duyệt của mình</a>.</strong><br />
+		<p>Once uploaded your board will be offline for normal users due to the install directory you uploaded now present.<br /><br />
+		<strong><a href="%1$s" title="%1$s">Now start the update process by pointing your browser to the install folder</a>.</strong><br />
 		<br />
-		Sau đó, bạn sẽ được hướng dẫn từng bước để tiến hành cập nhật. Bạn sẽ chỉ được thông báo một lần duy nhất khi việc cập nhật hoàn tất.
+		You will then be guided through the update process. You will be notified once the update is complete.
 		</p>
-	',
-	'UPDATE_INSTRUCTIONS_INCOMPLETE'	=> '
-
-		<h1>Bạn vẫn chưa hoàn tất việc cập nhật</h1>
-
-		<p>Hệ thống phpBB đã phát hiện một gói cập nhật tự động chưa hoàn tất. Hãy chắc chắn rằng bạn đã tiến hành thực hiện từng bước với công cụ cập nhật tự động. Bạn sẽ tìm thấy lại liên kết đến công cụ này bên dưới hoặc bạn có thể chuyển đến thư mục cài đặt hệ thống trực tiếp để chạy nó.</p>
 	',
 	'UPDATE_METHOD'					=> 'Phương pháp cập nhật',
 	'UPDATE_METHOD_EXPLAIN'			=> 'Bạn có thể lựa chọn phương pháp cập nhật mà mình thích. Nếu bạn chọn sử dụng phương pháp tải lên bằng FTP, bạn sẽ được yêu cầu cung cấp thông tin chi tiết về tài khoản FTP của mình. Với phương pháp này, các tập tin sẽ được tự động di chuyển đến thư mục định vị mới và bản sao của các tập tin cũ sẽ được giữ lại bằng cách thêm vào phần mở rộng đuôi tập tin là <samp>.bak</samp> trong phần tên tập tin. Nếu bạn chọn tải về các tập tin đã chỉnh sửa, bạn có thể tự mình giải nén chúng ra rồi tải lên trở lại thư mục định vị chính xác sau này.',
@@ -2110,10 +2199,10 @@ $lang = array_merge($lang, array(
 	'UPDATING_DATA'					=> 'Đang cập nhật dữ liệu',
 	'UPDATING_TO_LATEST_STABLE'		=> 'Đang cập nhật cơ sở dữ liệu đến bản phát hành tiêu chuẩn mới nhất',
 	'UPDATED_VERSION'				=> 'Phiên bản đã cập nhật',
-	'UPGRADE_INSTRUCTIONS'			=> 'Phiên bản mới <strong>%1$s</strong> đã tồn tại. Hãy xem <a href="%2$s" title="%2$s"><strong>thông báo phiên bản mới</strong></a> để tìm hiểu thêm về tính năng mới, và cách thức để nâng cấp phiên bản hiện tại.',
 	'UPLOAD_METHOD'					=> 'Phương pháp tải lên',
 
 	'UPDATE_DB_SUCCESS'				=> 'Cơ sở dữ liệu của hệ thống đã được cập nhật thành công.',
+	'UPDATE_FILE_SUCCESS'			=> 'File update was successful.',
 	'USER_ACTIVE'					=> 'Thành viên đang hoạt động',
 	'USER_INACTIVE'					=> 'Thành viên ngưng hoạt động',
 
@@ -2173,6 +2262,33 @@ $lang = array_merge($lang, array(
 	'TOPICS_TOPIC_TITLE'			=> 'Chào mừng bạn đã đến với phpBB',
 ));
 
+#######language/en/migrator.php#######
+
+$lang = array_merge($lang, array(
+	'CONFIG_NOT_EXIST'					=> 'The config setting "%s" unexpectedly does not exist.',
+
+	'GROUP_NOT_EXIST'					=> 'The group "%s" unexpectedly does not exist.',
+
+	'MIGRATION_APPLY_DEPENDENCIES'		=> 'Apply dependencies of %s.',
+	'MIGRATION_DATA_DONE'				=> 'Installed Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_IN_PROGRESS'		=> 'Installing Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_RUNNING'			=> 'Installing Data: %s.',
+	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
+	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
+	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
+	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
+	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
+	'MODULE_NOT_EXIST'					=> 'A required module does not exist: %s',
+
+	'PERMISSION_NOT_EXIST'				=> 'The permission setting "%s" unexpectedly does not exist.',
+
+	'ROLE_NOT_EXIST'					=> 'The permission role "%s" unexpectedly does not exist.',
+));
+
 #######language/en/mcp.php#######
 
 $lang = array_merge($lang, array(
@@ -2193,6 +2309,10 @@ $lang = array_merge($lang, array(
 	'APPROVE_POST_CONFIRM'	=> 'Bạn có chắc chắn muốn chấp nhận bài viết này?',
 	'APPROVE_POSTS'			=> 'Chấp nhận bài viết',
 	'APPROVE_POSTS_CONFIRM'	=> 'Bạn có chắc chắn muốn chấp nhận những bài viết đã chọn?',
+	'APPROVE_TOPIC'			=> 'Approve topic',
+	'APPROVE_TOPIC_CONFIRM'	=> 'Are you sure you want to approve this topic?',
+	'APPROVE_TOPICS'		=> 'Approve topics',
+	'APPROVE_TOPICS_CONFIRM'=> 'Are you sure you want to approve the selected topics?',
 
 	'CANNOT_MOVE_SAME_FORUM'=> 'Bạn không thể di chuyển một chủ đề đến chuyên mục đang chứa chủ đề đó.',
 	'CANNOT_WARN_ANONYMOUS'	=> 'Bạn không thể cảnh cáo khách chưa đăng ký thành viên.',
@@ -2213,16 +2333,12 @@ $lang = array_merge($lang, array(
 	'DELETE_PM_REPORTS'			=> 'Xóa tất cả các báo cáo Tin nhắn riêng',
 	'DELETE_PM_REPORTS_CONFIRM'	=> 'Bạn có chắc muốn xóa tất cả các báo cáo Tin nhắn riêng?',
 	'DELETE_POSTS'				=> 'Xoá bài viết',
-	'DELETE_POSTS_CONFIRM'		=> 'Bạn có chắc chắn muốn xoá những bài viết này?',
-	'DELETE_POST_CONFIRM'		=> 'Bạn có chắc chắn muốn xoá bài viết này?',
 	'DELETE_REPORT'				=> 'Xoá báo cáo này',
 	'DELETE_REPORT_CONFIRM'		=> 'Bạn có chắc chắn muốn xoá báo cáo đã chọn?',
 	'DELETE_REPORTS'			=> 'Xoá những báo cáo này',
 	'DELETE_REPORTS_CONFIRM'	=> 'Bạn có chắc chắn muốn xoá những báo cáo đã chọn?',
 	'DELETE_SHADOW_TOPIC'		=> 'Xóa liên kết đến chủ đề trong chuyên mục cũ',
 	'DELETE_TOPICS'				=> 'Xoá những chủ đề đã chọn',
-	'DELETE_TOPICS_CONFIRM'		=> 'Bạn có chắc chắn muốn xoá những chủ đề này?',
-	'DELETE_TOPIC_CONFIRM'		=> 'Bạn có chắc chắn muốn xoá chủ đề này?',
 	'DISAPPROVE'				=> 'Từ chối',
 	'DISAPPROVE_REASON'			=> 'Lý do từ chối',
 	'DISAPPROVE_POST'			=> 'Từ chối bài viết này',
@@ -2260,8 +2376,6 @@ $lang = array_merge($lang, array(
 	'LATEST_WARNING_TIME'		=> 'Cảnh cáo mới nhất được đưa ra',
 	'LATEST_WARNINGS'			=> '5 cảnh cáo mới nhất',
 	'LEAVE_SHADOW'				=> 'Để lại liên kết đến chủ đề trong chuyên mục cũ',
-	'LIST_REPORT'				=> 'Chỉ có <strong>1</strong> báo cáo',
-	'LIST_REPORTS'				=> 'Có <strong>%d</strong> báo cáo',
 	'LOCK'						=> 'Khoá',
 	'LOCK_POST_POST'			=> 'Khoá bài viết',
 	'LOCK_POST_POST_CONFIRM'	=> 'Bạn có chắc chắn muốn khoá bài viết này?',
@@ -2340,6 +2454,10 @@ $lang = array_merge($lang, array(
 	'MCP_QUEUE_UNAPPROVED_POSTS_EXPLAIN'	=> 'Đây là danh sách của tất cả các bài viết đòi hỏi phải được chấp nhận trước khi hiển thị cho mọi người xem.',
 	'MCP_QUEUE_UNAPPROVED_TOPICS'			=> 'Những chủ đề đang chờ được chấp nhận',
 	'MCP_QUEUE_UNAPPROVED_TOPICS_EXPLAIN'	=> 'Đây là danh sách của tất cả các chủ đề đòi hỏi phải được chấp nhận trước khi hiển thị cho mọi người xem.',
+	'MCP_QUEUE_DELETED_POSTS'				=> 'Deleted posts',
+	'MCP_QUEUE_DELETED_POSTS_EXPLAIN'		=> 'This is a list of all soft deleted posts. You can restore or permanently delete the posts from this screen.',
+	'MCP_QUEUE_DELETED_TOPICS'				=> 'Deleted topics',
+	'MCP_QUEUE_DELETED_TOPICS_EXPLAIN'		=> 'This is a list of all soft deleted topics. You can restore or permanently delete the topics from this screen.',
 
 	'MCP_VIEW_USER'			=> 'Xem cảnh cáo đối với một thành viên xác định',
 
@@ -2378,25 +2496,27 @@ $lang = array_merge($lang, array(
 	'NO_POST'						=> 'Bạn phải chọn một bài viết để cảnh cáo thành viên về bài viết đó.',
 	'NO_POST_REPORT'				=> 'Bài viết này đã không được báo cáo',
 	'NO_POST_SELECTED'				=> 'Bạn phải chọn ít nhất một bài viết để thực hiện yêu cầu này.',
+	'NO_POSTS_DELETED'				=> 'There are no deleted posts.',
+	'NO_POSTS_QUEUE'				=> 'There are no posts waiting for approval.',
 	'NO_REASON_DISAPPROVAL'			=> 'Hãy đưa ra một nguyên nhân thích hợp về việc từ chối.',
 	'NO_REPORT'						=> 'Không có báo cáo nào được tìm thấy.',
 	'NO_REPORTS'					=> 'Không có báo cáo nào được tìm thấy.',
 	'NO_REPORT_SELECTED'			=> 'Bạn phải chọn ít nhất một báo cáo để thực hiện yêu cầu này.',
 	'NO_TOPIC_ICON'					=> 'Không dùng biểu tượng',
 	'NO_TOPIC_SELECTED'				=> 'Bạn phải chọn ít nhất một chủ đề để thực hiện yêu cầu này.',
+	'NO_TOPICS_DELETED'				=> 'There are no deleted topics.',
 	'NO_TOPICS_QUEUE'				=> 'Không có chủ đề nào chờ được chấp nhận.',
 
 	'ONLY_TOPIC'			=> 'Chỉ trong chủ đề “%s”',
 	'OTHER_USERS'			=> 'Những thành viên khác gửi bài từ địa chỉ IP này',
 
+	'QUICKMOD_ACTION_NOT_ALLOWED' => "%s not allowed as quickmod",
+
 	'PM_REPORT_CLOSED_SUCCESS'	=> 'Báo cáo tin nhắn riêng được đóng lại thành công.',
 	'PM_REPORT_DELETED_SUCCESS'	=> 'Báo cáo tin nhắn riêng vừa được xóa thành công.',
 	'PM_REPORTED_SUCCESS'		=> 'Tin nhắn riêng này vừa được gửi báo cáo thành công.',
-	'PM_REPORT_TOTAL'			=> 'Có <strong>1</strong> báo cáo tin nhắn riêng cần xem xét.',
 	'PM_REPORTS_CLOSED_SUCCESS'	=> 'Các báo cáo tin nhắn riêng vừa được đóng lại thành công.',
 	'PM_REPORTS_DELETED_SUCCESS'=> 'Các báo cáo tin nhắn riêng vừa được xóa thành công.',
-	'PM_REPORTS_TOTAL'			=> 'Có <strong>%d</strong> báo cáo tin nhắn riêng cần xem xét.',
-	'PM_REPORTS_ZERO_TOTAL'		=> 'Không có báo cáo tin nhắn riêng nào cần xem xét.',
 	'PM_REPORT_DETAILS'			=> 'Chi tiết báo cáo tin nhắn riêng',
 	'POSTER'					=> 'Người gửi',
 	'POSTS_APPROVED_SUCCESS'	=> 'Những bài viết vừa chọn đã được chấp nhận thành công.',
@@ -2404,15 +2524,17 @@ $lang = array_merge($lang, array(
 	'POSTS_DISAPPROVED_SUCCESS'	=> 'Những bài viết vừa chọn đã được từ chối thành công.',
 	'POSTS_LOCKED_SUCCESS'		=> 'Những bài viết vừa chọn đã được khoá thành công.',
 	'POSTS_MERGED_SUCCESS'		=> 'Những bài viết vừa chọn đã được nhập chung thành công.',
-	'POSTS_UNLOCKED_SUCCESS'	=> 'Những bài viết vừa chọn đã được mở khoá thành công.',
 	'POSTS_PER_PAGE'			=> 'Bài viết mỗi trang',
 	'POSTS_PER_PAGE_EXPLAIN'	=> '(Nhập vào số <strong>0</strong> để xem tất cả báo cáo)',
+	'POSTS_RESTORED_SUCCESS'	=> 'The selected posts have been restored successfully.',
+	'POSTS_UNLOCKED_SUCCESS'	=> 'Những bài viết vừa chọn đã được mở khoá thành công.',
 	'POST_APPROVED_SUCCESS'		=> 'Bài viết vừa chọn đã được chấp nhận thành công.',
 	'POST_DELETED_SUCCESS'		=> 'Bài viết vừa chọn đã được xoá thành công.',
 	'POST_DISAPPROVED_SUCCESS'	=> 'Bài viết bạn vừa chọn đã được từ chối thành công.',
 	'POST_LOCKED_SUCCESS'		=> 'Bài viết đã được khoá thành công.',
 	'POST_NOT_EXIST'			=> 'Bài viết bạn vừa yêu cầu không tồn tại.',
 	'POST_REPORTED_SUCCESS'		=> 'Bài viết đã được báo cáo thành công.',
+	'POST_RESTORED_SUCCESS'		=> 'This post has been restored successfully.',
 	'POST_UNLOCKED_SUCCESS'		=> 'Bài viết đã được mở khoá thành công.',
 
 	'READ_USERNOTES'			=> 'Ghi chú thành viên',
@@ -2423,8 +2545,6 @@ $lang = array_merge($lang, array(
 	'REPORTED_ON_DATE'			=> 'vào ngày',
 	'REPORTS_CLOSED_SUCCESS'	=> 'Những báo cáo bạn vừa chọn đã được kết thúc thành công.',
 	'REPORTS_DELETED_SUCCESS'	=> 'Những báo cáo bạn vừa chọn đã được xoá thành công.',
-	'REPORTS_TOTAL'				=> 'Có tất cả <strong>%d</strong> báo cáo để xem lại.',
-	'REPORTS_ZERO_TOTAL'		=> 'Không có báo cáo nào để xem lại.',
 	'REPORT_CLOSED'				=> 'Báo cáo này đã được kết thúc.',
 	'REPORT_CLOSED_SUCCESS'		=> 'Báo cáo bạn vừa chọn đã được kết thúc thành công.',
 	'REPORT_DELETED_SUCCESS'	=> 'Báo cáo bạn vừa chọn đã được xoá thành công.',
@@ -2436,7 +2556,15 @@ $lang = array_merge($lang, array(
 	'REPORT_POST_EXPLAIN'		=> 'Sử dụng bảng điều khiển này để báo cáo bài viết đã chọn đến các điều hành viên của chuyên mục này và quản trị viên. Bạn chỉ nên tiến hành báo cáo nếu bài viết thực sự vi phạm nội quy chuyên mục.',
 	'REPORT_REASON'				=> 'Lý do báo cáo',
 	'REPORT_TIME'				=> 'Ngày báo cáo',
-	'REPORT_TOTAL'				=> 'Chỉ có <strong>1</strong> báo cáo để xem lại.',
+	'RESTORE'					=> 'Restore',
+	'RESTORE_POST'				=> 'Restore post',
+	'RESTORE_POST_CONFIRM'		=> 'Are you sure you want to restore this post?',
+	'RESTORE_POSTS'				=> 'Restore posts',
+	'RESTORE_POSTS_CONFIRM'		=> 'Are you sure you want to restore the selected posts?',
+	'RESTORE_TOPIC'				=> 'Restore topic',
+	'RESTORE_TOPIC_CONFIRM'		=> 'Are you sure you want to restore this topic?',
+	'RESTORE_TOPICS'			=> 'Restore topics',
+	'RESTORE_TOPICS_CONFIRM'	=> 'Are you sure you want to restore the selected topics?',
 	'RESYNC'					=> 'Đồng bộ',
 	'RETURN_MESSAGE'			=> '%sQuay về nội dung vừa xem%s',
 	'RETURN_NEW_FORUM'			=> '%sQuay về chuyên mục mới vừa xem%s',
@@ -2477,6 +2605,7 @@ $lang = array_merge($lang, array(
 	'TOPICS_FORKED_SUCCESS'		=> 'Những chủ đề bạn vừa chọn đã được sao chép thành công.',
 	'TOPICS_LOCKED_SUCCESS'		=> 'Những chủ đề bạn vừa chọn đã được khoá thành công.',
 	'TOPICS_MOVED_SUCCESS'		=> 'Những chủ đề bạn vừa chọn đã được di chuyển thành công.',
+	'TOPICS_RESTORED_SUCCESS'	=> 'The selected topics have been restored successfully.',
 	'TOPICS_RESYNC_SUCCESS'		=> 'Những chủ đề bạn vừa chọn đã được đồng bộ thành công.',
 	'TOPICS_TYPE_CHANGED'		=> 'Những loại chủ đề đã được thay đổi thành công.',
 	'TOPICS_UNLOCKED_SUCCESS'	=> 'Những chủ đề bạn vừa chọn đã được mở khoá thành công.',
@@ -2487,6 +2616,7 @@ $lang = array_merge($lang, array(
 	'TOPIC_LOCKED_SUCCESS'		=> 'Chủ đề bạn vừa chọn đã được khoá thành công.',
 	'TOPIC_MOVED_SUCCESS'		=> 'Chủ đề bạn vừa chọn đã được di chuyển thành công.',
 	'TOPIC_NOT_EXIST'			=> 'Chủ đề bạn vừa chọn không tồn tại.',
+	'TOPIC_RESTORED_SUCCESS'	=> 'The selected topic has been restored successfully.',
 	'TOPIC_RESYNC_SUCCESS'		=> 'Chủ đề bạn vừa chọn đã được đồng bộ thành công.',
 	'TOPIC_SPLIT_SUCCESS'		=> 'Chủ đề bạn vừa chọn đã được chia nhỏ thành công.',
 	'TOPIC_TIME'				=> 'Ngày tạo chủ đề',
@@ -2494,9 +2624,6 @@ $lang = array_merge($lang, array(
 	'TOPIC_UNLOCKED_SUCCESS'	=> 'Chủ đề bạn vừa chọn đã được mở khoá thành công.',
 	'TOTAL_WARNINGS'			=> 'Tổng số lần cảnh cáo',
 
-	'UNAPPROVED_POSTS_TOTAL'		=> 'Có tất cả <strong>%d</strong> bài viết đang chờ đợi được chấp nhận.',
-	'UNAPPROVED_POSTS_ZERO_TOTAL'	=> 'Không có bài viết nào đang chờ đợi được chấp nhận.',
-	'UNAPPROVED_POST_TOTAL'			=> 'Chỉ có <strong>1</strong> bài viết đang chờ đợi được chấp nhận.',
 	'UNLOCK'						=> 'Mở khoá',
 	'UNLOCK_POST'					=> 'Mở khoá bài viết',
 	'UNLOCK_POST_EXPLAIN'			=> 'Cho phép sửa bài viết',
@@ -2522,7 +2649,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'Dưới đây là cảnh cáo dành cho bạn bởi các điều hành viên hay quản trị viên của website. [quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'Cảnh cáo từ ban điều hành diễn đàn',
 	'WARNING_POST_DEFAULT'	=> 'Đây là cảnh cáo về việc gửi bài của bạn: “%s”.',
-	'WARNINGS_ZERO_TOTAL'	=> 'Không có cảnh cáo nào.',
+	'NO_WARNINGS'	=> 'No warnings exist.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Bạn đã chọn chủ đề số <strong>%d</strong>: “%s”.',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -2562,10 +2689,12 @@ $lang = array_merge($lang, array(
 	'ALL'					=> 'Tất cả',
 	'BEFORE'				=> 'Trước',
 	'CC_EMAIL'				=> 'Gửi bản sao của Email này cho tôi.',
-	'CONTACT_USER'			=> 'Liên hệ',
+	'CONTACT_ADMIN'			=> 'Contact a Board Administrator',
 
 	'DEST_LANG'				=> 'Ngôn ngữ',
 	'DEST_LANG_EXPLAIN'		=> 'Chọn một ngôn ngữ thích hợp cho người nhận tin nhắn này.',
+
+	'EDIT_PROFILE'			=> 'Edit Profile',
 
 	'EMAIL_BODY_EXPLAIN'	=> 'Email này sẽ được gửi dưới dạng văn bản thuần tuý, vì thế bạn đừng sử dụng bất cứ thẻ lệnh HTML hay BBCode nào trong nội dung Email này. Địa chỉ hồi âm của Email này sẽ được thiết lập là địa chỉ Email của bạn.',
 	'EMAIL_DISABLED'		=> 'Xin lỗi, tất cả chức năng liên quan đến Email trong hệ thống đã bị vô hiệu.',
@@ -2575,7 +2704,9 @@ $lang = array_merge($lang, array(
 	'EMPTY_MESSAGE_EMAIL'	=> 'Bạn phải nhập nội dung cho Email.',
 	'EMPTY_MESSAGE_IM'		=> 'Bạn phải nhập nội dung cho tin nhắn.',
 	'EMPTY_NAME_EMAIL'		=> 'Bạn phải nhập tên của người nhận.',
-	'EMPTY_SUBJECT_EMAIL'	=> 'Bạn phải nhập tiêu đề cho Email.',
+	'EMPTY_SENDER_EMAIL'	=> 'You must provide a valid email address.',
+	'EMPTY_SENDER_NAME'		=> 'You must provide a name.',
+	'EMPTY_SUBJECT_EMAIL'	=> 'You must specify a subject for the email.',
 	'EQUAL_TO'				=> 'Ngang bằng',
 
 	'FIND_USERNAME_EXPLAIN'	=> 'Công cụ này sẽ giúp bạn tìm kiếm những thành viên xác định trong hệ thống. Bạn không cần phải điền đầy đủ thông tin trong tất cả các mục bên dưới. Sử dụng dấu đại diện <strong>*</strong> để tìm kiếm những thông tin giống nhau theo một số ký tự. Khi nhập thông tin về ngày tháng bạn cần sử dụng định dạng <kbd>YYYY-MM-DD</kbd>. Ví dụ: <samp>2004-02-29</samp>. Đánh dấu chọn trong phần đánh dấu để chọn một hay nhiều tên thành viên. Những tên thành viên khác nhau có thể được chọn tuỳ thuộc vào bảng được liệt kê. Bấm vào nút <strong>Chọn đánh dấu</strong> để quay về bảng điều khiển trước.',
@@ -2585,16 +2716,10 @@ $lang = array_merge($lang, array(
 	'HIDE_MEMBER_SEARCH'	=> 'Ẩn công cụ tìm kiếm thành viên',
 
 	'IM_ADD_CONTACT'		=> 'Thêm thành viên',
-	'IM_AIM'				=> 'Lưu ý bạn cần phải cài đặt chương trình <strong>AOL Instant Messenger</strong> trên máy tính của mình để có thể sử dụng được chức năng này.',
-	'IM_AIM_EXPRESS'		=> 'Chương trình <strong>AIM Express</strong>',
 	'IM_DOWNLOAD_APP'		=> 'Tải về ứng dụng',
-	'IM_ICQ'				=> 'Lưu ý rằng các thành viên có thể chọn không nhận những tin nhắn nhanh mà họ không mong muốn.',
 	'IM_JABBER'				=> 'Lưu ý rằng các thành viên có thể chọn không nhận những tin nhắn nhanh mà họ không mong muốn.',
 	'IM_JABBER_SUBJECT'		=> 'Đây là tin nhắn thông báo tự động, xin đừng trả lời! Tin nhắn từ thành viên <strong>%1$s</strong> trong %2$s.',
 	'IM_MESSAGE'			=> 'Nội dung tin nhắn của bạn',
-	'IM_MSNM'				=> 'Lưu ý bạn cần phải cài đặt chương trình <strong>Windows Messenger</strong> trên máy tính của mình để có thể sử dụng được chức năng này.',
-	'IM_MSNM_BROWSER'		=> 'Trình duyệt của bạn không hỗ trợ chương trình này.',
-	'IM_MSNM_CONNECT'		=> 'Tài khoản MSN của bạn chưa được kết nối.\nBạn phải kết nối đến dịch vụ của MSN để tiếp tục gửi tin nhắn.',
 	'IM_NAME'				=> 'Tên của bạn',
 	'IM_NO_DATA'			=> 'Không có thông tin liên hệ phù hợp nào về thành viên này.',
 	'IM_NO_JABBER'			=> 'Xin lỗi, chức năng gửi tin nhắn trực tiếp đến các thành viên sử dụng Jabber không được hỗ trợ trên máy chủ này. Bạn sẽ cần phải cài đặt ứng dụng <strong>Jabber</strong> trên máy tính của mình để liên hệ với người nhận trên.',
@@ -2606,15 +2731,15 @@ $lang = array_merge($lang, array(
 
 	'LAST_ACTIVE'				=> 'Lần hoạt động trước',
 	'LESS_THAN'					=> 'Ít hơn',
-	'LIST_USER'					=> '1 thành viên',
-	'LIST_USERS'				=> '%d thành viên',
-	'LOGIN_EXPLAIN_LEADERS'		=> 'Hệ thống yêu cầu bạn phải đăng ký làm thành viên và đăng nhập vào hệ thống để xem danh sách ban điều hành.',
+	'LOGIN_EXPLAIN_TEAM'		=> 'The board requires you to be registered and logged in to view the team listing.',
 	'LOGIN_EXPLAIN_MEMBERLIST'	=> 'Hệ thống yêu cầu bạn phải đăng ký làm thành viên và đăng nhập vào hệ thống để xem danh sách thành viên.',
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'Hệ thống yêu cầu bạn phải đăng ký làm thành viên và đăng nhập vào hệ thống để thực hiện tìm kiếm thành viên.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'Hệ thống yêu cầu bạn phải đăng ký làm thành viên và đăng nhập vào hệ thống để xem thông tin cá nhân của thành viên.',
 
 	'MORE_THAN'				=> 'Nhiều hơn',
 
+	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
+	'NO_CONTACT_PAGE'		=> 'The board administrator contact page has been disabled.',
 	'NO_EMAIL'				=> 'Bạn không được phép gửi Email đến thành viên này.',
 	'NO_VIEW_USERS'			=> 'Bạn không được phép xem danh sách thành viên hay thông tin cá nhân của thành viên.',
 
@@ -2631,12 +2756,12 @@ $lang = array_merge($lang, array(
 
 	'SELECT_MARKED'			=> 'Chọn đánh dấu',
 	'SELECT_SORT_METHOD'	=> 'Chọn cách sắp xếp',
-	'SEND_AIM_MESSAGE'		=> 'Gửi tin nhắn AIM',
+	'SENDER_EMAIL_ADDRESS'	=> 'Your email address',
+	'SENDER_NAME'			=> 'Your name',
 	'SEND_ICQ_MESSAGE'		=> 'Gửi tin nhắn ICQ',
 	'SEND_IM'				=> 'Nhắn tin nhanh',
 	'SEND_JABBER_MESSAGE'	=> 'Gửi tin nhắn Jabber',
 	'SEND_MESSAGE'			=> 'Tin nhắn',
-	'SEND_MSNM_MESSAGE'		=> 'Gửi tin nhắn MSNM/WLM',
 	'SEND_YIM_MESSAGE'		=> 'Gửi tin nhắn YIM',
 	'SORT_EMAIL'			=> 'Địa chỉ Email',
 	'SORT_LAST_ACTIVE'		=> 'Lần hoạt động trước',
@@ -2644,12 +2769,18 @@ $lang = array_merge($lang, array(
 
 	'USERNAME_BEGINS_WITH'	=> 'Tên thành viên bắt đầu bằng',
 	'USER_ADMIN'			=> 'Quản trị viên',
-	'USER_BAN'				=> 'Cấm thành viên',
+	'USER_BAN'				=> 'Ban one or more users by username',
 	'USER_FORUM'			=> 'Thống kê thành viên',
 	'USER_ONLINE'			=> 'Đang trực tuyến',
 	'USER_PRESENCE'			=> 'Hiện diện',
+	'USERS_PER_PAGE'		=> 'Users per page',
 
 	'VIEWING_PROFILE'		=> 'Đang xem thông tin cá nhân của %s',
+	'VIEW_FACEBOOK_PROFILE'	=> 'View Facebook Profile',
+	'VIEW_SKYPE_PROFILE'	=> 'View Skype Profile',
+	'VIEW_TWITTER_PROFILE'	=> 'View Twitter Profile',
+	'VIEW_YOUTUBE_CHANNEL'	=> 'View YouTube Channel',
+	'VIEW_GOOGLEPLUS_PROFILE' => 'View Google+ Profile',
 	'VISITED'				=> 'Lần ghé thăm trước',
 
 	'WWW'					=> 'Website',
@@ -2674,6 +2805,47 @@ $lang = array_merge($lang, array(
 	'USER_COMM_RANK'	=> 'Overall reviews:',
 	'USER_COMM_PERCENT'	=> 'Overall assessment of the user:',
 
+));
+
+#######language/en/plupload.php#######
+
+$lang = array_merge($lang, array(
+	'PLUPLOAD_ADD_FILES'		=> 'Add files',
+	'PLUPLOAD_ADD_FILES_TO_QUEUE'	=> 'Add files to the upload queue and click the start button.',
+	'PLUPLOAD_ALREADY_QUEUED'	=> '%s already present in the queue.',
+	'PLUPLOAD_CLOSE'			=> 'Close',
+	'PLUPLOAD_DRAG'				=> 'Drag files here.',
+	'PLUPLOAD_DUPLICATE_ERROR'	=> 'Duplicate file error.',
+	'PLUPLOAD_DRAG_TEXTAREA'	=> 'You may also attach files by dragging and dropping them in the message box.',
+	'PLUPLOAD_ERR_INPUT'		=> 'Failed to open input stream.',
+	'PLUPLOAD_ERR_MOVE_UPLOADED'	=> 'Failed to move uploaded file.',
+	'PLUPLOAD_ERR_OUTPUT'		=> 'Failed to open output stream.',
+	'PLUPLOAD_ERR_FILE_TOO_LARGE'	=> 'File too large:',
+	'PLUPLOAD_ERR_FILE_COUNT'	=> 'File count error.',
+	'PLUPLOAD_ERR_FILE_INVALID_EXT'	=> 'Invalid file extension:',
+	'PLUPLOAD_ERR_RUNTIME_MEMORY'	=> 'Runtime ran out of available memory.',
+	'PLUPLOAD_ERR_UPLOAD_URL'	=> 'Upload URL might be wrong or does not exist.',
+	'PLUPLOAD_EXTENSION_ERROR'	=> 'File extension error.',
+	'PLUPLOAD_FILE'				=> 'File: %s',
+	'PLUPLOAD_FILE_DETAILS'		=> 'File: %s, size: %d, max file size: %d',
+	'PLUPLOAD_FILENAME'			=> 'Filename',
+	'PLUPLOAD_FILES_QUEUED'		=> '%d files queued',
+	'PLUPLOAD_GENERIC_ERROR'	=> 'Generic error.',
+	'PLUPLOAD_HTTP_ERROR'		=> 'HTTP error.',
+	'PLUPLOAD_IMAGE_FORMAT'		=> 'Image format either wrong or not supported.',
+	'PLUPLOAD_INIT_ERROR'		=> 'Init error.',
+	'PLUPLOAD_IO_ERROR'			=> 'IO error.',
+	'PLUPLOAD_NOT_APPLICABLE'	=> 'N/A',
+	'PLUPLOAD_SECURITY_ERROR'	=> 'Security error.',
+	'PLUPLOAD_SELECT_FILES'		=> 'Select files',
+	'PLUPLOAD_SIZE'				=> 'Size',
+	'PLUPLOAD_SIZE_ERROR'		=> 'File size error.',
+	'PLUPLOAD_STATUS'			=> 'Status',
+	'PLUPLOAD_START_UPLOAD'		=> 'Start upload',
+	'PLUPLOAD_START_CURRENT_UPLOAD'	=> 'Start uploading queue',
+	'PLUPLOAD_STOP_UPLOAD'		=> 'Stop upload',
+	'PLUPLOAD_STOP_CURRENT_UPLOAD'	=> 'Stop current upload',
+	'PLUPLOAD_UPLOADED'			=> 'Uploaded %d/%d files',
 ));
 
 #######language/en/portal.php#######
@@ -2919,12 +3091,12 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s đang <em>TẮT</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s đang <em>BẬT</em>',
 	'BBCODE_I_HELP'				=> 'Văn bản in nghiêng: [i]văn bản muốn in nghiêng[/i]',
-	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]',
 	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
 	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Chèn hình: [img]http://địa chỉ URL tập tin hình ảnh[/img]',
 	'BBCODE_Q_HELP'				=> 'Trích dẫn văn bản: [quote]văn bản muốn trích dẫn[/quote]',
-	'BBCODE_S_HELP'				=> 'Màu chữ: [color=red]văn bản muốn tô màu[/color] Lưu ý: Bạn cũng có thể sử dụng dạng color=#FF0000',
+	'BBCODE_S_HELP'				=> 'Font colour: [color=red]text[/color] or [color=#FF0000]text[/color]',
 	'BBCODE_U_HELP'				=> 'Văn bản gạch chân: [u]văn bản muốn gạch chân[/u]',
 	'BBCODE_W_HELP'				=> 'Chèn địa chỉ URL: [url]http://địa chỉ URL[/url] hoặc [url=http://địa chỉ URL]Tên liên kết URL[/url] (Phím tắt: Alt + W)',
 	'BUMP_ERROR'				=> 'Bạn không thể đẩy chủ đề này liên tục cùng lúc được.',
@@ -2943,8 +3115,20 @@ $lang = array_merge($lang, array(
 	'DELETE_MESSAGE'			=> 'Xoá bài viết',
 	'DELETE_MESSAGE_CONFIRM'	=> 'Bạn có chắc chắn muốn xoá bài viết này?',
 	'DELETE_OWN_POSTS'			=> 'Xin lỗi, bạn chỉ có thể xoá những bài viết của chính mình.',
+	'DELETE_PERMANENTLY'		=> 'Delete permanently',
 	'DELETE_POST_CONFIRM'		=> 'Bạn có chắc chắn muốn xoá bài viết này?',
-	'DELETE_POST_WARN'			=> 'Bài viết đã xoá sẽ không thể khôi phục lại được',
+	'DELETE_POST_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this post?',
+	'DELETE_POST_PERMANENTLY'	=> 'Permanently delete this post so it can not be recovered',
+	'DELETE_POSTS_CONFIRM'		=> 'Bạn có chắc chắn muốn xoá những bài viết này?',
+	'DELETE_POSTS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these posts?',
+	'DELETE_REASON'				=> 'Reason for deleting this topic',
+	'DELETE_REASON_EXPLAIN'		=> 'The specified reason for deletion will be visible to moderators.',
+	'DELETE_POST_WARN'			=> 'Delete this post',
+	'DELETE_TOPIC_CONFIRM'		=> 'Bạn có chắc chắn muốn xoá chủ đề này?',
+	'DELETE_TOPIC_PERMANENTLY'	=> 'Permanently delete this topic so it can not be recovered',
+	'DELETE_TOPIC_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this topic?',
+	'DELETE_TOPICS_CONFIRM'		=> 'Bạn có chắc chắn muốn xoá những chủ đề này?',
+	'DELETE_TOPICS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these topics?',
 	'DISABLE_BBCODE'			=> 'Tắt các thẻ <strong>BBCode</strong>',
 	'DISABLE_MAGIC_URL'			=> 'Đừng tự động phân tách các địa chỉ URL',
 	'DISABLE_SMILIES'			=> 'Tắt <strong>Biểu tượng vui</strong>',
@@ -2987,13 +3171,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_QUOTE'		=> 'Bạn cần phải đăng nhập để trích dẫn các bài viết trong chuyên mục này.',
 	'LOGIN_EXPLAIN_REPLY'		=> 'Bạn cần phải đăng nhập để trả lời các chủ đề trong chuyên mục này.',
 
-	'MAX_FONT_SIZE_EXCEEDED'	=> 'Bạn chỉ có thể chọn kích thước văn bản tối đa là <strong>%1$d</strong>.',
-	'MAX_FLASH_HEIGHT_EXCEEDED'	=> 'Chiều cao của những tập tin Flash mà bạn sử dụng chỉ có thể tối đa là <strong>%1$d</strong> Pixel.',
-	'MAX_FLASH_WIDTH_EXCEEDED'	=> 'Chiều rộng của những tập tin Flash mà bạn sử dụng chỉ có thể tối đa là <strong>%1$d</strong> Pixel.',
-	'MAX_IMG_HEIGHT_EXCEEDED'	=> 'Chiều cao của những hình ảnh mà bạn sử dụng chỉ có thể tối đa là <strong>%1$d</strong> Pixel.',
-	'MAX_IMG_WIDTH_EXCEEDED'	=> 'Chiều rộng của những hình ảnh mà bạn sử dụng chỉ có thể tối đa là <strong>%1$d</strong> Pixel.',
-
-	'MESSAGE_BODY_EXPLAIN'		=> 'Nhập nội dung bài viết của bạn tại đây nhưng không được quá <strong>%d</strong> ký tự.',
+	'MAX_FONT_SIZE_EXCEEDED'	=> 'You may only use fonts up to size %d.',
 	'MESSAGE_DELETED'			=> 'Bài viết này đã được xoá thành công.',
 	'MORE_SMILIES'				=> 'Xem tất cả biểu tượng vui',
 
@@ -3016,8 +3194,6 @@ $lang = array_merge($lang, array(
 	'POLL_MAX_OPTIONS'			=> 'Lựa chọn tối đa của mỗi thành viên',
 	'POLL_MAX_OPTIONS_EXPLAIN'	=> 'Đây là số lựa chọn tối đa mà mỗi thành viên tham gia bình chọn có thể thực hiện.',
 	'POLL_OPTIONS'				=> 'Đối tượng bình chọn',
-	'POLL_OPTIONS_EXPLAIN'		=> 'Đặt mỗi đối tượng bình chọn trong một dòng mới. Bạn có thể tạo đến <strong>%d</strong> đối tượng bình chọn.',
-	'POLL_OPTIONS_EDIT_EXPLAIN'	=> 'Đặt mỗi đối tượng bình chọn trong một dòng mới. Bạn có thể tạo đến <strong>%d</strong> đối tượng bình chọn. Nếu bạn gỡ gỏ hay thêm vào những đối tượng bình chọn thì tất cả kết quả bình chọn trước đây sẽ được tạo lại từ đầu.',
 	'POLL_QUESTION'				=> 'Câu hỏi bình chọn',
 	'POLL_TITLE_TOO_LONG'		=> 'Tiêu đề bình chọn không được vượt quá <strong>100</strong> ký tự.',
 	'POLL_TITLE_COMP_TOO_LONG'	=> 'Kích thước đã phân tách trong tiêu đề bình chọn của bạn quá lớn, hãy vui lòng gỡ bỏ các thẻ lệnh BBCode hoặc biểu tượng vui.',
@@ -3027,9 +3203,9 @@ $lang = array_merge($lang, array(
 	'POST_APPROVAL_NOTIFY'		=> 'Bạn sẽ được thông báo khi bài viết của mình được chấp nhận.',
 	'POST_CONFIRMATION'			=> 'Xác nhận bài viết',
 	'POST_CONFIRM_EXPLAIN'		=> 'Để ngăn chặn những bài viết được tự động gửi vào hàng loạt, hệ thống yêu cầu bạn phải nhập vào một đoạn mã xác nhận. Mã xác nhận được hiển thị trong hình bên dưới mà bạn nhìn thấy. Nếu bạn gặp vấn đề về thị lực hoặc không thể nhìn thấy đoạn mã này vì một lý do nào đó, hãy liên hệ với %sngười quản trị%s.',
-	'POST_DELETED'				=> 'Bài viết này đã được xoá thành công.',
-	'POST_EDITED'				=> 'Bài viết này đã được sửa thành công.',
-	'POST_EDITED_MOD'			=> 'Bài viết này đã được sửa thành công nhưng vẫn cần phải được chấp nhận bởi một điều hành viên trước khi mọi người có thể xem được.',
+	'POST_DELETED'				=> 'This post has been deleted.',
+	'POST_EDITED'				=> 'This post has been edited successfully.',
+	'POST_EDITED_MOD'			=> 'This post has been edited successfully, but it will need to be approved by a moderator before it is publicly viewable.',
 	'POST_GLOBAL'				=> 'Thông báo chung',
 	'POST_ICON'					=> 'Biểu tượng bài viết',
 	'POST_NORMAL'				=> 'Bài viết bình thường',
@@ -3042,8 +3218,9 @@ $lang = array_merge($lang, array(
 	'POST_TOPIC_AS'				=> 'Tạo chủ đề dưới dạng',
 	'PROGRESS_BAR'				=> 'Thanh tiến trình',
 
-	'QUOTE_DEPTH_EXCEEDED'		=> 'Bạn chỉ có thể sử dụng <strong>%1$d</strong> trích dẫn trong mỗi bài viết.',
+	'QUOTE_NO_NESTING'			=> 'You may not embed quotes within each other.',
 
+	'REMOTE_UPLOAD_TIMEOUT'		=> 'The specified file could not be uploaded because the request timed out.',
 	'SAVE'						=> 'Lưu',
 	'SAVE_DATE'					=> 'Đã lưu vào ngày',
 	'SAVE_DRAFT'				=> 'Lưu bản nháp',
@@ -3060,8 +3237,6 @@ $lang = array_merge($lang, array(
 	'TOO_FEW_POLL_OPTIONS'		=> 'Bạn phải tạo ít nhất hai đối tượng bình chọn.',
 	'TOO_MANY_ATTACHMENTS'		=> 'Không thể gửi thêm tập tin đính kèm nào khác, số lượng tập tin tối đa cho phép đính kèm là <strong>%d</strong> tập tin.',
 	'TOO_MANY_CHARS'			=> 'Nội dung bài viết của bạn quá dài.',
-	'TOO_MANY_CHARS_POST'		=> 'Nội dung bài viết của bạn có đến <strong>%1$d</strong> ký tự. Số ký tự tối đa bạn được phép sử dụng là <strong>%2$d</strong>.',
-	'TOO_MANY_CHARS_SIG'		=> 'Nội dung chữ ký của bạn có đến <strong>%1$d<strong ký tự. Số ký tự tối đa bạn được phép sử dụng là <strong>%2$d</strong>.',
 	'TOO_MANY_POLL_OPTIONS'		=> 'Bạn đã tạo quá nhiều đối tượng bình chọn được cho phép.',
 	'TOO_MANY_SMILIES'			=> 'Bài viết của bạn sử dụng quá nhiều hình biểu tượng vui. Số lượng hình biểu tượng vui tối đa cho phép sử dụng trong mỗi bài viết là <strong>%d</strong> hình.',
 	'TOO_MANY_URLS'				=> 'Bài viết của bạn có quá nhiều địa chỉ URL. Số lượng địa chỉ URL tối đa được phép sử dụng trong mỗi bài viết là <strong>%d</strong> địa chỉ.',
@@ -3070,6 +3245,8 @@ $lang = array_merge($lang, array(
 
 	'UNAUTHORISED_BBCODE'		=> 'Bạn không thể sử dụng những thẻ lệnh BBCode sau: “%s”.',
 	'UNGLOBALISE_EXPLAIN'		=> 'Để chuyển đổi chủ đề này từ loại thông báo quan trọng thành chủ đề bình thường, bạn cần phải chọn chuyên mục chứa chủ đề này.',
+	'UNSUPPORTED_CHARACTERS_MESSAGE'	=> 'Your message contains the following unsupported characters:<br />%s',
+	'UNSUPPORTED_CHARACTERS_SUBJECT'	=> 'Your subject contains the following unsupported characters:<br />%s',
 	'UPDATE_COMMENT'			=> 'Cập nhật chú thích',
 	'URL_INVALID'				=> 'Địa chỉ URL bạn vừa nhập không chính xác.',
 	'URL_NOT_FOUND'				=> 'Không thể tìm thấy tập tin bạn vừa chọn.',
@@ -3084,8 +3261,8 @@ $lang = array_merge($lang, array(
 	'VIEW_MESSAGE'				=> '%sXem bài viết vừa gửi của bạn%s',
 	'VIEW_PRIVATE_MESSAGE'		=> '%sXem tin nhắn riêng bạn vừa gửi%s',
 
-	'WRONG_FILESIZE'			=> 'Dung lượng tập tin đính kèm quá lớn, dung lượng tối đa cho phép là <strong>%1d %2s</strong>.',
-	'WRONG_SIZE'				=> 'Kích thước hình ảnh bạn vừa chọn là <strong>%5$d</strong> Pixel về chiều rộng và <strong>%6$d</strong> Pixel về chiều cao. Kích thước hình ảnh không được phép nhỏ hơn <strong>%1$d</strong> Pixel về chiều rộng và <strong>%2$d</strong> Pixel về chiều cao cũng như không được phép lớn hơn <strong>%3$d</strong> Pixel về chiều rộng và <strong>%4$d</strong> Pixel về chiều cao.',
+	'WRONG_FILESIZE'			=> 'The file is too big, maximum allowed size is %1$d %2$s.',
+	'WRONG_SIZE'				=> 'The image must be at least %1$s wide, %2$s high and at most %3$s wide and %4$s high. The submitted image is %5$s wide and %6$s high.',
 
 	'FONT_TYPE'			=> 'Typeface',
 	'FONT_COLOR'			=> 'Màu chữ',
@@ -3105,10 +3282,6 @@ $lang = array_merge($lang, array(
 
 	'DISPLAY_RESULTS'		=> 'Xem kết quả tìm kiếm dưới dạng',
 
-	'FOUND_SEARCH_MATCH'		=> 'Chỉ tìm thấy <strong>%d</strong> kết quả',
-	'FOUND_SEARCH_MATCHES'		=> 'Đã tìm thấy <strong>%d</strong> kết quả',
-	'FOUND_MORE_SEARCH_MATCHES'	=> 'Đã tìm thấy nhiều hơn <strong>%d</strong> kết quả',
-
 	'GLOBAL'				=> 'Thông báo chung',
 
 	'IGNORED_TERMS'			=> 'không được phép sử dụng',
@@ -3120,24 +3293,23 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_UNREADSEARCH'=> 'Hệ thống yêu cầu bạn phải đăng ký làm thành viên và đăng nhập vào hệ thống để xem các bài viết chưa xem.',
 	'LOGIN_EXPLAIN_NEWPOSTS'	=> 'Hệ thống yêu cầu bạn phải đăng ký làm thành viên và đăng nhập vào hệ thống để xem các bài viết chưa xem kể từ lần ghé thăm trước.',
 
-	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> 'Bạn yêu cầu quá nhiều ký tự để tìm. Xin đừng nhập trên %1$d từ.',
-
-	'NO_KEYWORDS'			=> 'Bạn phải xác định ít nhất một từ khoá để thực hiện tìm kiếm. Mỗi từ khoá phải có ít nhất là <strong>%d</strong> ký tự và không được nhiều quá <strong>%d</strong> ký tự loại trừ dấu đại diện.',
+	'NO_KEYWORDS'			=> 'You must specify at least one word to search for. Each word must consist of at least %s and must not contain more than %s excluding wildcards.',
 	'NO_RECENT_SEARCHES'	=> 'Không có tìm kiếm nào được thực hiện gần đây.',
 	'NO_SEARCH'				=> 'Xin lỗi, bạn không được phép sử dụng công cụ tìm kiếm trong hệ thống.',
 	'NO_SEARCH_RESULTS'		=> 'Không tìm thấy kết quả nào.',
-	'NO_SEARCH_TIME'		=> 'Xin lỗi, bạn không thể tiếp tục sử dụng công cụ tìm kiếm ngay lúc này. Hãy thử lại sau vài phút nữa.',
 	'NO_SEARCH_UNREADS'		=> 'Xin lỗi, chức năng tìm kiếm bài viết chưa xem đã bị vô hiệu.',
 	'WORD_IN_NO_POST'		=> 'Không tìm thấy kết quả bởi vì từ khoá <strong>%s</strong> không có trong bất cứ bài viết nào.',
 	'WORDS_IN_NO_POST'		=> 'Không tìm thấy kết quả bởi vì những từ khoá <strong>%s</strong> không có trong bất cứ bài viết nào.',
 
 	'POST_CHARACTERS'		=> 'ký tự của bài viết',
+	'PHRASE_SEARCH_DISABLED'	=> 'Searching by exact phrase is not supported on this board.',
 
 	'RECENT_SEARCHES'		=> 'Những tìm kiếm gần đây',
 	'RESULT_DAYS'			=> 'Giới hạn kết quả tìm kiếm cách đây',
 	'RESULT_SORT'			=> 'Sắp xếp kết quả tìm kiếm theo',
 	'RETURN_FIRST'			=> 'Xem trước nội dung trong khoảng',
 	'RETURN_TO_SEARCH_ADV'	=> 'Quay về tìm kiếm nâng cao',
+	'GO_TO_SEARCH_ADV'	=> 'Go to advanced search',
 
 	'SEARCHED_FOR'				=> 'Điều kiện tìm kiếm đã sử dụng',
 	'SEARCHED_TOPIC'			=> 'Chủ đề đã tìm kiếm',
@@ -3164,10 +3336,11 @@ $lang = array_merge($lang, array(
 	'SORT_FORUM'				=> 'Chuyên mục',
 	'SORT_POST_SUBJECT'			=> 'Tiêu đề bài viết',
 	'SORT_TIME'					=> 'Ngày gửi bài',
+	'SPHINX_SEARCH_FAILED'		=> 'Search failed: %s',
+	'SPHINX_SEARCH_FAILED_LOG'	=> 'Sorry, search could not be performed. More information about this failure has been logged in the error log.',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
 	'SELECT_ALL_TAGS'		=> 'No selection',
-	'TOO_FEW_AUTHOR_CHARS'	=> 'Bạn phải xác định ít nhất là <strong>%d</strong> ký tự trong phần tên tác giả.',
 ));
 
 #######language/en/ucp.php#######
@@ -3223,6 +3396,7 @@ $lang = array_merge($lang, array(
 	'ATTACHMENTS_EXPLAIN'			=> 'Đây là danh sách tất cả các tập tin đính kèm mà bạn đã gửi trong diễn đàn.',
 	'ATTACHMENTS_DELETED'			=> 'Những tập tin đính kèm bạn vừa chọn đã được xoá thành công.',
 	'ATTACHMENT_DELETED'			=> 'Tập tin đính kèm bạn vừa chọn đã được xoá thành công.',
+	'AUTOLOGIN_SESSION_KEYS_DELETED'=> 'The selected "Remember Me" login keys were successfully deleted.',
 	'AVATAR_CATEGORY'				=> 'Chủ đề hình đại diện',
 	'AVATAR_DRIVER_GRAVATAR_TITLE'	=> 'Gravatar',
 	'AVATAR_DRIVER_GRAVATAR_EXPLAIN'=> 'Gravatar is a service that allows you to maintain the same avatar across multiple websites. Visit <a href="http://www.gravatar.com/">Gravatar</a> for more information.',
@@ -3232,12 +3406,14 @@ $lang = array_merge($lang, array(
 	'AVATAR_DRIVER_REMOTE_EXPLAIN'	=> 'Link to avatar images from another website.',
 	'AVATAR_DRIVER_UPLOAD_TITLE'	=> 'Upload avatar',
 	'AVATAR_DRIVER_UPLOAD_EXPLAIN'	=> 'Upload your own custom avatar.',
-	'AVATAR_EXPLAIN'				=> 'Kích thước tối đa cho phép: <strong>%1$d</strong> Pixel chiều rộng và <strong>%2$d</strong> Pixel chiều cao với dung lượng tập tin tối đa là <strong>%3$d</strong> KB.',
+	'AVATAR_EXPLAIN'				=> 'Maximum dimensions; width: %1$s, height: %2$s, file size: %3$.2f KiB.',
 	'AVATAR_FEATURES_DISABLED'		=> 'Chức năng sử dụng hình đại diện hiện tại đã bị vô hiệu.',
 	'AVATAR_GALLERY'				=> 'Thư viện hình đại diện',
 	'AVATAR_GENERAL_UPLOAD_ERROR'	=> 'Không thể tải lên hình đại diện đến “%s”.',
 	'AVATAR_NOT_ALLOWED'			=> 'Ảnh đại diện của bạn không được hiển thị vì chức năng này đang bị khóa.',
 	'AVATAR_PAGE'					=> 'Page',
+	'AVATAR_SELECT'					=> 'Select your avatar',
+	'AVATAR_TYPE'					=> 'Avatar type',
 	'AVATAR_TYPE_NOT_ALLOWED'		=> 'Ảnh đại diện của bạn không được hiển thị vì loại ảnh bạn dùng đang bị khóa.',
 
 	'BACK_TO_DRAFTS'			=> 'Quay lại bản nháp đã lưu',
@@ -3246,7 +3422,6 @@ $lang = array_merge($lang, array(
 	'BIRTHDAY_EXPLAIN'			=> 'Thiết lập ngày, tháng, năm cho sinh nhật của bạn.',
 	'BOARD_DATE_FORMAT'			=> 'Định dạng ngày tháng của bạn',
 	'BOARD_DATE_FORMAT_EXPLAIN'	=> 'Sử dụng cú pháp giống như hàm <a href="http://www.php.net/date">date()</a> trong <strong>PHP</strong>.',
-	'BOARD_DST'					=> 'Bật chế độ giờ mùa hè/DST (Daylight Saving Time)',
 	'BOARD_LANGUAGE'			=> 'Ngôn ngữ',
 	'BOARD_STYLE'				=> 'Giao diện',
 	'BOARD_TIMEZONE'			=> 'Múi giờ',
@@ -3265,8 +3440,6 @@ $lang = array_merge($lang, array(
 	'CLICK_RETURN_FOLDER'		=> '%1$sQuay về thư mục “%3$s” của bạn%2$s',
 	'CONFIRMATION'				=> 'Xác nhận đăng ký',
 	'CONFIRM_CHANGES'			=> 'Xác nhận thay đổi',
-	'CONFIRM_EMAIL'				=> 'Xác nhận địa chỉ Email',
-	'CONFIRM_EMAIL_EXPLAIN'		=> 'Bạn chỉ cần xác nhận lại địa chỉ Email nếu như bạn muốn thay đổi địa chỉ Email hiện tại của mình ở trên.',
 	'CONFIRM_EXPLAIN'			=> 'Để ngăn chặn việc lợi dụng đăng ký tự động hàng loạt, hệ thống yêu cầu bạn phải nhập vào một đoạn mã xác nhận khi đăng ký. Mã xác nhận được hiển thị trong hình ảnh mà bạn nhìn thấy bên dưới. Nếu thị lực của bạn kém hoặc bạn không thể nhìn thấy đoạn mã này vì một lý do nào đó, hãy vui lòng liên hệ với %sngười quản trị%s.',
 	'VC_REFRESH'				=> 'Tạo lại mã xác nhận',
 	'VC_REFRESH_EXPLAIN'		=> 'Nếu bạn không đọc được đoạn mã này thì hãy nhấn vào nút sau để tạo một mã khác.',
@@ -3275,7 +3448,7 @@ $lang = array_merge($lang, array(
 	'CONFIRM_PASSWORD_EXPLAIN'	=> 'Bạn chỉ cần xác nhận lại mật khẩu nếu như bạn muốn thay đổi mật khẩu hiện tại của mình ở trên.',
 	'COPPA_BIRTHDAY'			=> 'Để tiếp tục thủ tục đăng ký thành viên, bạn hãy vui lòng cho chúng tôi biết năm sinh của mình.',
 	'COPPA_COMPLIANCE'			=> 'Thoả thuận COPPA',
-	'COPPA_EXPLAIN'				=> 'Lưu ý rằng bằng việc chấp nhận thoả thuận COPPA, tài khoản của bạn sẽ được tạo. Tuy nhiên, tài khoản này sẽ không được kích hoạt cho đến khi cha mẹ hay người bảo hộ của bạn đồng ý cho bạn tham gia vào website. Bạn sẽ nhận được Email thông báo về điều này với nhiều thông tin chi tiết và hướng dẫn thủ tục đăng ký COPPA.',
+	'COPPA_EXPLAIN'				=> 'Please note that clicking submit will create your account. However it cannot be activated until a parent or guardian approves your registration. You will be e-mailed a copy of the necessary form with details of where to send it.',
 	'CREATE_FOLDER'				=> 'Thêm thư mục…',
 	'CURRENT_IMAGE'				=> 'Hình đại diện hiện tại',
 	'CURRENT_PASSWORD'			=> 'Mật khẩu hiện tại',
@@ -3330,27 +3503,34 @@ $lang = array_merge($lang, array(
 	'EXPORT_FOLDER'				=> 'Xuất mục đang xem',
 
 	'FIELD_REQUIRED'					=> 'Mục thông tin “%s” không được để trống.',
-	'FIELD_TOO_SHORT'					=> 'Mục thông tin “%1$s” có nội dung quá ngắn, tối thiểu phải có ít nhất là <strong>%2$d</strong> ký tự.',
-	'FIELD_TOO_LONG'					=> 'Mục thông tin “%1$s” có nội dung quá dài, tối đa chỉ có <strong>%2$d</strong> ký tự được phép sử dụng.',
-	'FIELD_TOO_SMALL'					=> 'Giá trị “%1$s” quá nhỏ, giá trị tối thiểu bắt buộc sử dụng là <strong>%2$d</strong>.',
-	'FIELD_TOO_LARGE'					=> 'Giá trị “%1$s” quá lớn, giá trị tối đa được phép sử dụng là <strong>%2$d</strong>.',
+
+	'FIELD_TOO_SMALL'					=> 'The value of “%2$s” is too small, a minimum value of %1$d is required.',
+	'FIELD_TOO_LARGE'					=> 'The value of “%2$s” is too large, a maximum value of %1$d is allowed.',
+	'FIELD_INVALID_CHARS_INVALID'		=> 'The field “%s” has invalid characters.',
 	'FIELD_INVALID_CHARS_NUMBERS_ONLY'	=> 'Mục thông tin “%s” có nội dung chứa những ký tự không hợp lệ, bạn chỉ được phép nhập vào chữ số.',
+	'FIELD_INVALID_CHARS_ALPHA_DOTS'	=> 'The field “%s” has invalid characters, only alphanumeric or . characters are allowed.',
 	'FIELD_INVALID_CHARS_ALPHA_ONLY'	=> 'Mục thông tin “%s” có nội dung chứa những ký tự không hợp lệ, bạn chỉ được phép nhập vào chữ cái và chữ số.',
-	'FIELD_INVALID_CHARS_SPACERS_ONLY'	=> 'Mục thông tin “%s” có nội dung chứa những ký tự không hợp lệ, bạn chỉ được phép nhập vào chữ cái và chữ số, khoảng trắng hay những ký tự <strong>-+_[]</strong>.',
+	'FIELD_INVALID_CHARS_ALPHA_PUNCTUATION'	=> 'The field “%s” has invalid characters, only alphanumeric or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_ALPHA_SPACERS'	=> 'The field “%s” has invalid characters, only alphanumeric, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_ALPHA_UNDERSCORE'	=> 'The field “%s” has invalid characters, only alphanumeric or _ characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_DOTS'	=> 'The field “%s” has invalid characters, only letter, number or . characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_ONLY'	=> 'The field “%s” has invalid characters, only letter and number characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_PUNCTUATION'	=> 'The field “%s” has invalid characters, only letter, number or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_SPACERS'		=> 'The field “%s” has invalid characters, only letter, number, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_UNDERSCORE'		=> 'The field “%s” has invalid characters, only letter, number or _ characters are allowed.',
 	'FIELD_INVALID_DATE'				=> 'Mục thông tin “%s” có nội dung chứa ngày tháng không hợp lệ.',
+	'FIELD_INVALID_URL'					=> 'The field “%s” has an invalid url.',
 	'FIELD_INVALID_VALUE'				=> 'Mục thông tin “%s” có giá trị tối không hợp lệ.',
 
 	'FOE_MESSAGE'				=> 'Tin nhắn từ kẻ thù',
 	'FOES_EXPLAIN'				=> 'Kẻ thù là những thành viên đã được bạn thiết lập mặc định không quan hệ. Các bài viết được gửi bởi những thành viên này sẽ không được hiển thị khi bạn xem. Các tin nhắn từ kẻ thù vẫn được phép gửi đến bạn. Lưu ý rằng bạn không thể chọn kẻ thù của mình là các điều hành viên hay quản trị viên trong website.',
 	'FOES_UPDATED'				=> 'Danh sách những kẻ thù của bạn đã được cập nhật thành công.',
 	'FOLDER_ADDED'				=> 'Thư mục đã được tạo thành công.',
-	'FOLDER_MESSAGE_STATUS'		=> '%1$d trong tổng số %2$d tin nhắn được lưu trữ',
 	'FOLDER_NAME_EMPTY'			=> 'Bạn phải nhập tên cho thư mục.',
 	'FOLDER_NAME_EXIST'			=> 'Thư mục mang tên “%s” đã có rồi.',
 	'FOLDER_OPTIONS'			=> 'Tuỳ chọn thư mục',
 	'FOLDER_RENAMED'			=> 'Thư mục đã được đổi tên thành công.',
 	'FOLDER_REMOVED'			=> 'Thư mục đã được gỡ bỏ thành công.',
-	'FOLDER_STATUS_MSG'			=> 'Dung lượng thư mục: <strong>%1$d%%</strong> (%2$d trong tổng số %3$d tin nhắn được lưu trữ)',
 	'FORWARD_PM'				=> 'Chuyển tiếp tin nhắn',
 	'FORCE_PASSWORD_EXPLAIN'	=> 'Trước khi bạn có thể tiếp tục truy cập website, bạn được yêu cầu phải thay đổi mật khẩu hiện tại của mình.',
 	'FRIEND_MESSAGE'			=> 'Tin nhắn từ bạn thân',
@@ -3419,16 +3599,35 @@ $lang = array_merge($lang, array(
 	'MOVE_DELETED_MESSAGES_TO'		=> 'Di chuyển những tin nhắn từ thư mục đã gỡ bỏ đến',
 	'MOVE_DOWN'						=> 'Di chuyển xuống',
 	'MOVE_MARKED_TO_FOLDER'			=> 'Di chuyển tin nhắn đã đánh dấu đến “%s”',
-	'MOVE_PM_ERROR'					=> 'Có một lỗi xảy ra trong khi di chuyển những tin nhắn đến thư mục mới, chỉ có <strong>%1d</strong> từ <strong>%2d</strong> tin nhắn đã được di chuyển.',
 	'MOVE_TO_FOLDER'				=> 'Di chuyển đến thư mục',
 	'MOVE_UP'						=> 'Di chuyển lên',
 
-	'NEW_EMAIL_CONFIRM_EMPTY'		=> 'Bạn chưa nhập Email xác nhận.',
-	'NEW_EMAIL_ERROR'				=> 'Địa chỉ Email bạn vừa nhập không phù hợp.',
 	'NEW_FOLDER_NAME'				=> 'Tên thư mục mới',
 	'NEW_PASSWORD'					=> 'Mật khẩu mới',
 	'NEW_PASSWORD_CONFIRM_EMPTY'	=> 'Bạn chưa nhập mật khẩu xác nhận.',
 	'NEW_PASSWORD_ERROR'			=> 'Mật khẩu bạn vừa nhập không phù hợp.',
+
+	'NOTIFICATIONS_MARK_ALL_READ'						=> 'Mark all notifications read',
+	'NOTIFICATIONS_MARK_ALL_READ_CONFIRM'				=> 'Are you sure you want to mark all notifications read?',
+	'NOTIFICATIONS_MARK_ALL_READ_SUCCESS'				=> 'All notifications have been marked read.',
+	'NOTIFICATION_GROUP_MISCELLANEOUS'					=> 'Miscellaneous Notifications',
+	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
+	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
+	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'E-mail',
+	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
+	'NOTIFICATION_TYPE'									=> 'Notification type',
+	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
+	'NOTIFICATION_TYPE_GROUP_REQUEST'					=> 'Someone requests to join a group you lead',
+	'NOTIFICATION_TYPE_IN_MODERATION_QUEUE'				=> 'A post or topic needs approval',
+	'NOTIFICATION_TYPE_MODERATION_QUEUE'				=> 'Your topics/posts are approved or disapproved by a moderator',
+	'NOTIFICATION_TYPE_PM'								=> 'Someone sends you a private message',
+	'NOTIFICATION_TYPE_POST'							=> 'Someone replies to a topic to which you are subscribed',
+	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
+	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
+	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+
 	'NOTIFY_METHOD'					=> 'Phương pháp thông báo',
 	'NOTIFY_METHOD_BOTH'			=> 'Cả hai',
 	'NOTIFY_METHOD_EMAIL'			=> 'Chỉ gửi Email',
@@ -3446,10 +3645,9 @@ $lang = array_merge($lang, array(
 	'NOT_ADDED_FOES_SELF'			=> 'Bạn không thể thêm chính mình vào danh sách kẻ thù.',
 	'NOT_AGREE'						=> 'Tôi không đồng ý với những điều khoản trên',
 	'NOT_ENOUGH_SPACE_FOLDER'		=> 'Dung lượng thư mục bạn chọn <strong>%s</strong> dường như đã bị đầy. Yêu cầu vừa rồi bị từ chối.',
-	'NOT_MOVED_MESSAGE'				=> 'Bạn chỉ có <strong>1</strong> tin nhắn hiện tại được giữ lại bởi vì dung lượng thư mục đã bị đầy.',
-	'NOT_MOVED_MESSAGES'			=> 'Bạn có <strong>%d</strong> tin nhắn hiện tại được giữ lại bởi vì dung lượng thư mục đã bị đầy.',
 	'NO_ACTION_MODE'				=> 'Không có yêu cầu tin nhắn nào được xác định',
 	'NO_AUTHOR'						=> 'Không xác định được người gửi tin nhắn này',
+	'NO_AVATAR'						=> 'No avatar selected',
 	'NO_AVATAR_CATEGORY'			=> 'Không có hình đại diện nào',
 
 	'NO_AUTH_DELETE_MESSAGE'		=> 'Bạn không được phép xoá tin nhắn.',
@@ -3457,6 +3655,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_FORWARD_MESSAGE'		=> 'Bạn không được phép chuyển tiếp tin nhắn.',
 	'NO_AUTH_GROUP_MESSAGE'			=> 'Bạn không được phép gửi tin nhắn đến nhóm thành viên.',
 	'NO_AUTH_PASSWORD_REMINDER'		=> 'Bạn không được phép yêu cầu mật khẩu mới.',
+	'NO_AUTH_PROFILEINFO'			=> 'You are not authorised to change your profile information.',
 	'NO_AUTH_READ_HOLD_MESSAGE'		=> 'Bạn không được phép đọc tin nhắn riêng đang bị giữ lại.',
 	'NO_AUTH_READ_MESSAGE'			=> 'Bạn không được phép xem tin nhắn.',
 	'NO_AUTH_READ_REMOVED_MESSAGE'	=> 'Bạn không thể xem được tin nhắn này bởi vì nó đã được gỡ bỏ bởi chính thành viên đã gửi.',
@@ -3487,10 +3686,10 @@ $lang = array_merge($lang, array(
 	'NO_WATCHED_SELECTED'		=> 'Bạn chưa chọn bất kỳ chủ đề đang theo dõi hay chuyên mục.',
 	'NO_WATCHED_TOPICS'			=> 'Bạn không chọn theo dõi bất cứ chủ đề nào.',
 
-	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Mật khẩu của bạn phải nhiều hơn <strong>%1$d</strong> ký tự, không được vượt quá <strong>%2$d</strong> ký tự, không có trường hợp nhạy cảm giữa chữ với số và phải có các số.',
-	'PASS_TYPE_ANY_EXPLAIN'		=> 'Mật khẩu của bạn phải nhiều hơn <strong>%1$d</strong> ký tự và không được vượt quá <strong>%2$d</strong> ký tự.',
-	'PASS_TYPE_CASE_EXPLAIN'	=> 'Mật khẩu của bạn phải nhiều hơn <strong>%1$d</strong> ký tự, không được vượt quá <strong>%2$d</strong> ký tự và phải sử dụng hỗn hợp các ký tự.',
-	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Mật khẩu của bạn phải nhiều hơn <strong>%1$d</strong> ký tự, không được vượt quá <strong>%2$d</strong> ký tự, không có trường hợp nhạy cảm giữa chữ với số, phải có các số và phải có các ký hiệu.',
+	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case and must contain numbers.',
+	'PASS_TYPE_ANY_EXPLAIN'		=> 'Must be between %1$s and %2$s.',
+	'PASS_TYPE_CASE_EXPLAIN'	=> 'Password must be between %1$s and %2$s long and must contain letters in mixed case.',
+	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case, must contain numbers and must contain symbols.',
 	'PASSWORD'					=> 'Mật khẩu',
 	'PASSWORD_ACTIVATED'		=> 'Mật khẩu mới của bạn đã được kích hoạt.',
 	'PASSWORD_UPDATED'			=> 'Mật khẩu mới của bạn đã được gửi đến địa chỉ Email hiện tại của bạn.',
@@ -3501,13 +3700,16 @@ $lang = array_merge($lang, array(
 	'PM_FROM_REMOVED_AUTHOR'	=> 'Tin nhắn này được gửi bởi một thành viên đã bị xóa khỏi hệ thống.',
 	'PM_ICON'					=> 'Biểu tượng tin nhắn',
 	'PM_INBOX'					=> 'Hộp tin nhận',
+	'PM_MARK_ALL_READ'			=> 'Mark all messages read',
+	'PM_MARK_ALL_READ_SUCCESS'	=> 'All private messages in this folder have been marked read',
 	'PM_NO_USERS'				=> 'Thành viên bạn vừa yêu cầu thêm vào không tồn tại.',
 	'PM_OUTBOX'					=> 'Hộp tin chuyển đi',
 	'PM_SENTBOX'				=> 'Hộp tin đã gửi',
 	'PM_SUBJECT'				=> 'Tiêu đề tin nhắn',
 	'PM_TO'						=> 'Người nhận',
+	'PM_TOOLS'					=> 'Message tools',
+	'PM_USERS_REMOVED_NO_PERMISSION'	=> 'Some users couldn’t be added as they do not have permission to read private messages.',
 	'PM_USERS_REMOVED_NO_PM'	=> 'Bạn không thể thêm vào một vài thành viên bởi vì họ đã vô hiệu chức năng nhận tin nhắn của mình.',
-	'POPUP_ON_PM'				=> 'Mở cửa sổ thông báo khi có tin nhắn mới',
 	'POST_EDIT_PM'				=> 'Sửa tin nhắn',
 	'POST_FORWARD_PM'			=> 'Chuyển tiếp tin nhắn',
 	'POST_NEW_PM'				=> 'Soạn tin nhắn',
@@ -3519,6 +3721,8 @@ $lang = array_merge($lang, array(
 	'PREFERENCES_UPDATED'		=> 'Sở thích cá nhân của bạn đã được cập nhật thành công.',
 	'PROFILE_INFO_NOTICE'		=> 'Lưu ý rằng những thông tin này mọi thành viên khác đều có thể xem được. Hãy cẩn thận khi bạn cung cấp những thông tin cá nhân trên đây. Những mục thông tin có đánh dấu * bắt buộc phải khai báo.',
 	'PROFILE_UPDATED'			=> 'Thông tin cá nhân của bạn đã được cập nhật.',
+	'PROFILE_AUTOLOGIN_KEYS'	=> 'The "Remember Me" login keys automatically log you in when you visit the board. If you logout, the remember me login key is deleted only on the computer you are using to logout. Here you can see remember login keys created on other computers you used to access this site.',
+	'PROFILE_NO_AUTOLOGIN_KEYS'	=> 'There are no saved "Remember Me" login keys.',
 
 	'RECIPIENT'							=> 'Người nhận',
 	'RECIPIENTS'						=> 'Những người nhận',
@@ -3543,8 +3747,6 @@ $lang = array_merge($lang, array(
 	'RULE_DELETED'						=> 'Quy định đã được gỡ bỏ thành công.',
 	'RULE_LIMIT_REACHED'				=> 'Bạn không thể thêm quy định cho tin nhắn riêng nữa. Bạn đã dùng hết số lượng quy định cho phép.',
 	'RULE_NOT_DEFINED'					=> 'Quy định cá nhân không được xác định chính xác.',
-	'RULE_REMOVED_MESSAGE'				=> 'Một tin nhắn đã bị gỡ bỏ căn cứ theo bộ lọc tin nhắn.',
-	'RULE_REMOVED_MESSAGES'				=> '%d tin nhắn đã bị gỡ bỏ căn cứ theo bộ lọc tin nhắn.',
 
 	'SAME_PASSWORD_ERROR'		=> 'Mật khẩu mới bạn vừa nhập trùng với mật khẩu hiện tại của bạn.',
 	'SEARCH_YOUR_POSTS'			=> 'Xem những bài viết của bạn',
@@ -3556,6 +3758,8 @@ $lang = array_merge($lang, array(
 	'SIGNATURE_TOO_LONG'		=> 'Chữ ký cá nhân của bạn quá dài.',
 	'SELECT_CURRENT_TIME'		=> 'Select current time',
 	'SELECT_TIMEZONE'			=> 'Select timezone',
+	'SELECT_CURRENT_TIME'		=> 'Select current time',
+	'SELECT_TIMEZONE'			=> 'Select timezone',
 	'SORT'						=> 'Sắp xếp',
 	'SORT_COMMENT'				=> 'Chú thích tập tin',
 	'SORT_DOWNLOADS'			=> 'Số lần tải về',
@@ -3565,15 +3769,28 @@ $lang = array_merge($lang, array(
 	'SORT_SIZE'					=> 'Dung lượng tập tin',
 
 	'TIMEZONE'					=> 'Múi giờ',
-	'TO'						=> 'Người nhận',
+	'TIMEZONE_DATE_SUGGESTION'	=> 'Suggestion: %s',
+	'TIMEZONE_INVALID'			=> 'The timezone you selected is invalid.',
+	'TO'						=> 'Recipient',
+	'TO_MASS'					=> 'Recipients',
+	'TO_ADD'					=> 'Add recipient',
+	'TO_ADD_MASS'				=> 'Add recipients',
+	'TO_ADD_GROUPS'				=> 'Add groups',
 	'TOO_MANY_RECIPIENTS'		=> 'Có quá nhiều người nhận.',
 	'TOO_MANY_REGISTERS'		=> 'Bạn đã vượt quá số lượng đăng ký thành viên cho phép trong phiên kết nối này. Hãy thử lại vào lúc khác!',
 
 	'UCP'						=> 'Thiết lập cá nhân',
 	'UCP_ACTIVATE'				=> 'Kích hoạt tài khoản',
 	'UCP_ADMIN_ACTIVATE'		=> 'Lưu ý rằng bạn cần phải nhập vào một địa chỉ Email hợp lệ trước khi tài khoản của bạn được kích hoạt. Người quản trị sẽ xem qua tài khoản của bạn và nếu được chấp nhận bạn sẽ nhận được một Email thông báo đến địa chỉ Email mà bạn đã nhập.',
-	'UCP_AIM'					=> 'Tài khoản AIM',
 	'UCP_ATTACHMENTS'			=> 'Tập tin đính kèm của bạn',
+	'UCP_AUTH_LINK'				=> 'External accounts',
+	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
+	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
+	'UCP_AUTH_LINK_LINK'		=> 'Liên kết',
+	'UCP_AUTH_LINK_MANAGE'		=> 'Manage external account associations',
+	'UCP_AUTH_LINK_NOT_SUPPORTED'	=> 'Linking board accounts to external services is not supported by this board’s current authentication method.',
+	'UCP_AUTH_LINK_TITLE'		=> 'Manage your external account associations',
+	'UCP_AUTH_LINK_UNLINK'		=> 'Unlink',
 	'UCP_AUTH_LINK'				=> 'External accounts',
 	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
 	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
@@ -3585,8 +3802,8 @@ $lang = array_merge($lang, array(
 	'UCP_COPPA_BEFORE'			=> 'Trước %s',
 	'UCP_COPPA_ON_AFTER'		=> 'Hoặc sau %s',
 	'UCP_EMAIL_ACTIVATE'		=> 'Lưu ý rằng bạn cần phải nhập vào một địa chỉ Email hợp lệ trước khi tài khoản của bạn được kích hoạt. Bạn sẽ nhận được một Email thông báo đến địa chỉ Email mà bạn đã nhập với khoá kích hoạt được đính kèm bên trong Email.',
-	'UCP_ICQ'					=> 'Số tài khoản ICQ',
 	'UCP_JABBER'				=> 'Tài khoản Jabber',
+	'UCP_LOGIN_LINK'			=> 'Set up an external account association',
 
 	'UCP_MAIN'					=> 'Tổng quan',
 	'UCP_MAIN_ATTACHMENTS'		=> 'Tập tin đính kèm',
@@ -3595,7 +3812,6 @@ $lang = array_merge($lang, array(
 	'UCP_MAIN_FRONT'			=> 'Trang trước',
 	'UCP_MAIN_SUBSCRIBED'		=> 'Bảng theo dõi',
 
-	'UCP_MSNM'					=> 'Tài khoản MSN',
 	'UCP_NO_ATTACHMENTS'		=> 'Bạn chưa tải lên bất kỳ tập tin nào.',
 
 	'UCP_NOTIFICATION_LIST'				=> 'Manage notifications',
@@ -3612,8 +3828,6 @@ $lang = array_merge($lang, array(
 	'UCP_PM_COMPOSE'			=> 'Soạn tin nhắn',
 	'UCP_PM_DRAFTS'				=> 'Tin nhắn nháp',
 	'UCP_PM_OPTIONS'			=> 'Quy định cá nhân và tùy chọn thư mục',
-	'UCP_PM_POPUP'				=> 'Tin nhắn',
-	'UCP_PM_POPUP_TITLE'		=> 'Thông báo tin nhắn mới',
 	'UCP_PM_UNREAD'				=> 'Tin nhắn chưa xem',
 	'UCP_PM_VIEW'				=> 'Xem tin nhắn',
 
@@ -3628,11 +3842,11 @@ $lang = array_merge($lang, array(
 	'UCP_USERGROUPS_MEMBER'		=> 'Sửa tư cách thành viên',
 	'UCP_USERGROUPS_MANAGE'		=> 'Quản lý nhóm',
 
+	'UCP_PASSWORD_RESET_DISABLED'	=> 'The password reset functionality has been disabled. If you need help accessing your account, please contact the %sBoard Administrator%s',
 	'UCP_REGISTER_DISABLE'			=> 'Hiện tại website không cho đăng ký thành viên mới.',
 	'UCP_REMIND'					=> 'Gửi mật khẩu',
 	'UCP_RESEND'					=> 'Gửi Email kích hoạt tài khoản',
 	'UCP_WELCOME'					=> 'Chào mừng bạn đã đến với bảng điều khiển của thành viên. Với bảng điều khiển này, bạn có thể quản lý, xem và cập nhật thông tin cá nhân, thiết lập những sở thích cá nhân, theo dõi các chuyên mục và chủ đề mà mình quan tâm. Nếu được cấp phép, bạn cũng có thể gửi tin nhắn đến các thành viên khác. Hãy chắc chắn rằng bạn đã đọc qua các thông báo quan trọng nếu có trước khi tiếp tục.',
-	'UCP_YIM'						=> 'Tài khoản Yahoo',
 	'UCP_ZEBRA'						=> 'Bạn thân &amp; kẻ thù',
 	'UCP_ZEBRA_FOES'				=> 'Quản lý kẻ thù',
 	'UCP_ZEBRA_FRIENDS'				=> 'Quản lý bạn thân',
@@ -3642,12 +3856,12 @@ $lang = array_merge($lang, array(
 	'UPLOAD_AVATAR_FILE'			=> 'Tải hình đại diện từ máy tính của bạn',
 	'UPLOAD_AVATAR_URL'				=> 'Tải hình đại diện từ địa chỉ URL',
 	'UPLOAD_AVATAR_URL_EXPLAIN'		=> 'Nhập vào địa chỉ URL của hình đại diện. Hình đại diện sẽ được sao chép vào website này.',
-	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Tên thành viên không được phép ít hơn <strong>%1$d</strong> và vượt quá <strong>%2$d</strong> ký tự. Bạn cũng chỉ được phép sử dụng vừa chữ số vừa chữ cái.',
-	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Tên thành viên không được phép ít hơn <strong>%1$d</strong> và vượt quá <strong>%2$d</strong> ký tự. Bạn cũng chỉ được phép sử dụng vừa chữ số vừa chữ cái, khoảng trắng hoặc các ký tự <strong>-+_[]</strong>.',
-	'USERNAME_ASCII_EXPLAIN'		=> 'Tên thành viên không được phép ít hơn <strong>%1$d</strong> và vượt quá <strong>%2$d</strong> ký tự. Bạn cũng chỉ được phép sử dụng những ký tự ASCII và không có các ký tự đặc biệt.',
-	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Tên thành viên không được phép ít hơn <strong>%1$d</strong> và vượt quá <strong>%2$d</strong> ký tự. Bạn cũng chỉ được phép sử dụng chữ số hoặc chữ cái.',
-	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Tên thành viên không được phép ít hơn <strong>%1$d</strong> và vượt quá <strong>%2$d</strong> ký tự. Bạn cũng chỉ được phép sử dụng chữ số, chữ cái, khoảng trắng hoặc các ký tự <strong>-+_[]</strong>.',
-	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Tên thành viên không được phép ít hơn <strong>%1$d</strong> và vượt quá <strong>%2$d</strong> ký tự.',
+	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only alphanumeric characters.',
+	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use alphanumeric, space or -+_[] characters.',
+	'USERNAME_ASCII_EXPLAIN'		=> 'Username must be between %1$s and %2$s long and use only ASCII characters, so no special symbols.',
+	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only letter or number characters.',
+	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use letter, number, space or -+_[] characters.',
+	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Length must be between %1$s and %2$s.',
 	'USERNAME_TAKEN_USERNAME'		=> 'Tên thành viên bạn vừa nhập đã được người khác sử dụng, hãy chọn một tên khác.',
 	'USERNAME_DISALLOWED_USERNAME'	=> 'Tên thành viên bạn vừa nhập bị cấm sử dụng hoặc có chứa một từ kiểm duyệt không được phép sử dụng. Hãy vui lòng chọn một tên khác.',
 	'USER_NOT_FOUND_OR_INACTIVE'	=> 'Những tên thành viên bạn vừa xác định không thể tìm thấy hoặc là những tên thành viên chưa được kích hoạt.',
@@ -3660,10 +3874,9 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_PM'				=> 'Tin nhắn kế tiếp',
 	'VIEW_PM'					=> 'Xem tin nhắn riêng',
 	'VIEW_PM_INFO'				=> 'Thông tin chi tiết về tin nhắn',
-	'VIEW_PM_MESSAGE'			=> 'Chỉ có <strong>1</strong> tin nhắn',
-	'VIEW_PM_MESSAGES'			=> 'Có <strong>%d</strong> tin nhắn',
 	'VIEW_PREVIOUS_HISTORY'		=> 'Tin nhắn trước trong quá trình gửi tin',
 	'VIEW_PREVIOUS_PM'			=> 'Tin nhắn trước',
+	'VIEW_PROFILE'				=> 'View profile',
 	'VIEW_SIGS'					=> 'Hiển thị chữ ký cá nhân',
 	'VIEW_SMILIES'				=> 'Hiển thị những biểu tượng vui',
 	'VIEW_TOPICS_DAYS'			=> 'Hiển thị những chủ đề cách đây',
@@ -3771,8 +3984,6 @@ $lang = array_merge($lang, array(
 	'UNREAD_POSTS_LOCKED'	=> 'Bài viết chưa xem [ Đã khóa ]',
 
 	'VIEW_FORUM'			=> 'Xem chuyên mục',
-	'VIEW_FORUM_TOPIC'		=> '1 chủ đề',
-	'VIEW_FORUM_TOPICS'		=> '%d chủ đề',
 
 	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
 	'REMOVE_FILTER'		=> 'Remove filter',
@@ -3781,6 +3992,7 @@ $lang = array_merge($lang, array(
 #######language/en/viewtopic.php#######
 
 $lang = array_merge($lang, array(
+	'APPROVE'								=> 'Chấp nhận',
 	'ATTACHMENT'						=> 'Tập tin đính kèm',
 	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'Chức năng gửi tập tin đính kèm đã bị vô hiệu.',
 
@@ -3793,14 +4005,13 @@ $lang = array_merge($lang, array(
 	'BUMP_TOPIC'			=> 'Đẩy chủ đề lên',
 
 	'CODE'					=> 'Mã',
-	'COLLAPSE_QR'			=> 'Ẩn Gửi trả lời nhanh',
-
+	
 	'DELETE_TOPIC'			=> 'Xoá chủ đề',
+	'DELETED_INFORMATION'	=> 'Deleted by %1$s on %2$s',
+	'DISAPPROVE'					=> 'Từ chối',
 	'DOWNLOAD_NOTICE'		=> 'Bạn không được cấp phép để xem tập tin đính kèm trong bài viết này.',
 
-	'EDITED_TIMES_TOTAL'	=> 'Sửa lần cuối bởi <strong>%1$s</strong> vào ngày %2$s với %3$d lần sửa trong tổng số.',
-	'EDITED_TIME_TOTAL'		=> 'Sửa lần cuối bởi <strong>%1$s</strong> vào ngày %2$s với %3$d lần sửa trong tổng số.',
-	'EMAIL_TOPIC'			=> 'Gửi Email giới thiệu',
+	'EMAIL_TOPIC'			=> 'E-mail topic',
 	'ERROR_NO_ATTACHMENT'	=> 'Tập tin đính kèm bạn vừa chọn không tồn tại.',
 
 	'FILE_NOT_FOUND_404'	=> 'Tập tin <strong>%s</strong> không tồn tại.',
@@ -3815,8 +4026,6 @@ $lang = array_merge($lang, array(
 	'MAKE_GLOBAL'				=> 'Thay đổi thành “Thông báo chung”',
 	'MAKE_NORMAL'				=> 'Thay đổi thành “Bài viết bình thường”',
 	'MAKE_STICKY'				=> 'Thay đổi thành “Chú ý”',
-	'MAX_OPTIONS_SELECT'		=> 'Bạn có thể chọn đến <strong>%d</strong> đối tượng bình chọn',
-	'MAX_OPTION_SELECT'			=> 'Bạn chỉ có thể chọn <strong>1</strong> đối tượng bình chọn',
 	'MISSING_INLINE_ATTACHMENT'	=> 'Tập tin đính kèm <strong>%s</strong> hiện tại không còn trên máy chủ',
 	'MOVE_TOPIC'				=> 'Di chuyển chủ đề',
 
@@ -3830,6 +4039,7 @@ $lang = array_merge($lang, array(
 	'POLL_ENDED_AT'			=> 'Bình chọn này sẽ kết thúc vào ngày %s',
 	'POLL_RUN_TILL'			=> 'Bình chọn cho đến ngày %s',
 	'POLL_VOTED_OPTION'		=> 'Bạn đã bình chọn cho đối tượng này',
+	'POST_DELETED_RESTORE'	=> 'This post has been deleted. It can be restored.',
 	'PRINT_TOPIC'			=> 'Xem bản in',
 
 	'QUICK_MOD'				=> 'Công cụ',
@@ -3837,11 +4047,14 @@ $lang = array_merge($lang, array(
 	'QUOTE'					=> 'Trích dẫn',
 
 	'REPLY_TO_TOPIC'		=> 'Gửi bài trả lời',
+	'RESTORE'				=> 'Restore',
+	'RESTORE_TOPIC'			=> 'Restore topic',
 	'RETURN_POST'			=> '%sQuay về bài viết vừa xem%s',
 
 	'SHOW_QR'				=> 'Trả lời nhanh',
 	'SUBMIT_VOTE'			=> 'Chấp nhận bình chọn',
 
+	'TOPIC_TOOLS'			=> 'Topic tools',
 	'TOTAL_VOTES'			=> 'Tổng số bình chọn',
 
 	'UNLOCK_TOPIC'			=> 'Mở khoá chủ đề này',
@@ -3850,10 +4063,7 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_TOPIC'		=> 'Chủ đề kế tiếp',
 	'VIEW_PREVIOUS_TOPIC'	=> 'Chủ đề trước',
 	'VIEW_RESULTS'			=> 'Xem kết quả bình chọn',
-	'VIEW_TOPIC_POST'		=> '1 bài viết',
-	'VIEW_TOPIC_POSTS'		=> '%d bài viết',
 	'VIEW_UNREAD_POST'		=> 'Bài viết chưa xem đầu tiên',
-	'VISIT_WEBSITE'			=> 'Ghé thăm website',
 	'VOTE_SUBMITTED'		=> 'Bạn đã tham gia bình chọn xong.',
 	'VOTE_CONVERTED'		=> 'Thay đổi bình chọn không được hỗ trợ cho các bình chọn được chuyển đổi.',
 
@@ -9443,6 +9653,7 @@ $lang = array_merge($lang, array(
 	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'	=> 'Dung lượng đính kèm tập tin tối đa cho phép sử dụng cấp cho mỗi thành viên trong tin nhắn. Nhập vào số <strong>0</strong> để không hạn chế dung lượng tập tin.',
 	'ATTACH_ORPHAN_URL'					=> 'Tập tin đính kèm không được sử dụng',
 	'ATTACH_POST_ID'					=> 'Số ID bài viết',
+	'ATTACH_POST_TYPE'					=> 'Post type',
 	'ATTACH_QUOTA'						=> 'Tổng dung lượng đính kèm tập tin',
 	'ATTACH_QUOTA_EXPLAIN'				=> 'Tổng dung lượng tối đa cho phép của tất cả các tập tin đính kèm trong diễn đàn. Nhập vào số <strong>0</strong> để không hạn chế dung lượng tập tin.',
 	'ATTACH_TO_POST'					=> 'Đính kèm tập tin vào bài viết',
@@ -9488,6 +9699,9 @@ $lang = array_merge($lang, array(
 	'EXT_GROUP_REAL_MEDIA'			=> 'Tập tin Real Media',
 	'EXT_GROUP_WINDOWS_MEDIA'		=> 'Tập tin Windows Media',
 
+	'FILES_GONE'			=> 'Some of the attachments you selected for deletion do not exist. They may have been already deleted. Attachments that did exist were deleted.',
+	'FILES_STATS_WRONG'		=> 'Your file statistics are likely inaccurate and need to be resynchronised. Actual values: number of attachments = %1$d, total size of attachments = %2$s.<br />Click %3$shere%4$s to resynchronise them.',
+
 	'GO_TO_EXTENSIONS'		=> 'Chuyển đến phần quản lý loại tập tin',
 	'GROUP_NAME'			=> 'Tên nhóm',
 
@@ -9511,6 +9725,7 @@ $lang = array_merge($lang, array(
 	'NOT_ALLOWED_IN_PM'			=> 'Chỉ cho phép trong bài viết',
 	'NOT_ALLOWED_IN_PM_POST'	=> 'Không cho phép',
 	'NOT_ASSIGNED'				=> 'Không chỉ định',
+	'NO_ATTACHMENTS'			=> 'No attachments found for this period.',
 	'NO_EXT_GROUP'				=> 'Không có nhóm tập tin nào',
 	'NO_EXT_GROUP_NAME'			=> 'Bạn chưa nhập tên nhóm tập tin',
 	'NO_EXT_GROUP_SPECIFIED'	=> 'Không có nhóm tập tin nào được xác định.',
@@ -9523,6 +9738,10 @@ $lang = array_merge($lang, array(
 	'ONLY_ALLOWED_IN_PM'	=> 'Chỉ đồng ý trong tin nhắn',
 	'ORDER_ALLOW_DENY'		=> 'Đồng ý',
 	'ORDER_DENY_ALLOW'		=> 'Từ chối',
+
+	'REMOVE_ALLOWED_IPS'			=> 'Gỡ bỏ hoặc ngưng loại trừ những địa chỉ IP/tên miền <em>đã cho phép</em>',
+	'REMOVE_DISALLOWED_IPS'			=> 'Gỡ bỏ hoặc ngưng loại trừ những địa chỉ IP/tên miền <em>đã bị cấm</em>',
+	'RESYNC_FILES_STATS_CONFIRM'	=> 'Are you sure you wish to resynchronise file statistics?',
 
 	'REMOVE_ALLOWED_IPS'		=> 'Gỡ bỏ hoặc ngưng loại trừ những địa chỉ IP/tên miền <em>đã cho phép</em>',
 	'REMOVE_DISALLOWED_IPS'		=> 'Gỡ bỏ hoặc ngưng loại trừ những địa chỉ IP/tên miền <em>đã bị cấm</em>',
@@ -9592,18 +9811,17 @@ $lang = array_merge($lang, array(
 	'PERMANENT'		=> 'Vĩnh viễn',
 
 	'UNTIL'						=> 'Cho đến ngày',
-	'USER_BAN'					=> 'Cấm thành viên',
+	'USER_BAN'					=> 'Ban one or more users by username',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> 'Bật tuỳ chọn này để ngăn chặn thành viên sử dụng các tên thành viên đã bị cấm.',
 	'USER_BAN_EXPLAIN'			=> 'Để xác định nhiều thành viên cùng lúc, bạn hãy nhập mỗi tên thành viên trong một dòng. Sử dụng chức năng <span style="text-decoration: underline;">Tìm một thành viên</span> để tra cứu và thêm vào một hay nhiều thành viên tự động.',
 	'USER_NO_BANNED'			=> 'Không có thành viên nào bị cấm',
-	'USER_UNBAN'				=> 'Ngưng cấm hoặc ngưng loại trừ thành viên',
+	'USER_UNBAN'				=> 'Un-ban or un-exclude users by username',
 	'USER_UNBAN_EXPLAIN'		=> 'Bạn có thể ngưng cấm hoặc ngưng loại trừ nhiều thành viên cùng lúc trong một thao tác bằng cách kết hợp hiệu quả chuột và bàn phím từ máy tính và trình duyệt. Những thành viên bị loại trừ được đánh dấu nổi bật.',
 ));
 
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'				=> 'Bật chế độ giờ mùa hè/DST (Daylight Saving Time)',
 	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
 	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
 	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
@@ -9629,16 +9847,28 @@ $lang = array_merge($lang, array(
 	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Với công cụ này, bạn có thể xác định một vài cơ chế hoạt động đơn giản của hệ thống, từ tên và giới thiệu thích hợp về website cho đến thay đổi những thiết lập khác trong hệ thống như điều chỉnh giá trị mặc định về múi giờ và ngôn ngữ.',
+	'BOARD_INDEX_TEXT'				=> 'Board index text',
+	'BOARD_INDEX_TEXT_EXPLAIN'		=> 'This text is displayed as the board index in the board’s breadcrumbs. If not specified, it will default to “Board index”.',
+	'BOARD_STYLE'					=> 'Giao diện',
 	'CUSTOM_DATEFORMAT'				=> 'Tuỳ chọn…',
 	'DEFAULT_DATE_FORMAT'			=> 'Định dạng ngày tháng',
 	'DEFAULT_DATE_FORMAT_EXPLAIN'	=> 'Sử dụng cú pháp giống như hàm <code>date()</code> trong PHP.',
 	'DEFAULT_LANGUAGE'				=> 'Ngôn ngữ mặc định',
 	'DEFAULT_STYLE'					=> 'Giao diện mặc định',
+	'DEFAULT_STYLE_EXPLAIN'			=> 'The default style is <strong>%1$s (%2$s)</strong> which is the overriden style for all users (including bots).',
 	'DISABLE_BOARD'					=> 'Ngưng hoạt động hệ thống',
-	'DISABLE_BOARD_EXPLAIN'			=> 'Tuỳ chọn này sẽ ngưng hoạt động của hệ thống đối với các thành viên. Bạn cũng có nhập vào một tin nhắn giới hạn trong <strong>255</strong> ký tự hiển thị như thông báo ngưng hoạt động của hệ thống nếu muốn.',
+	'DISABLE_BOARD_EXPLAIN'			=> 'This will make the board unavailable to users who are neither administrators nor moderators. You can also enter a short (255 character) message to display if you wish.',
+	'DISPLAY_LAST_SUBJECT'			=> 'Display subject of last added post on forum list',
+	'DISPLAY_LAST_SUBJECT_EXPLAIN'	=> 'The subject of the last added post will be displayed in the forum list with a hyperlink to the post. Subjects from password protected forums and forums in which user doesn’t have read access are not shown.',
+	'GUEST_STYLE'					=> 'Guest style',
+	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Thay thế cho giao diện lựa chọn của thành viên',
 	'OVERRIDE_STYLE_EXPLAIN'		=> 'Tuỳ chọn thay thế toàn bộ những giao diện đã được các thành viên lựa chọn bằng giao diện mặc định duy nhất của hệ thống.',
 	'SITE_DESC'						=> 'Giới thiệu về website',
+	'SITE_HOME_TEXT'				=> 'Main website text',
+	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
+	'SITE_HOME_URL'					=> 'Main website URL',
+	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Tên website',
 	'SYSTEM_TIMEZONE'				=> 'Múi giờ hệ thống',
 	'WARNINGS_EXPIRE'				=> 'Cảnh cáo trong vòng',
@@ -9678,6 +9908,7 @@ $lang = array_merge($lang, array(
 
 	'ALLOW_AVATARS'					=> 'Cho phép sử dụng ảnh đại diện',
 	'ALLOW_AVATARS_EXPLAIN'			=> 'Cho phép sử dụng ;<br />Nếu không cho phép dùng ảnh đại diện trên toàn hệ thống hay ảnh đại diện đối với một số chế độ nào đó, các ảnh đại diện sẽ không được hiển thị, tuy nhiên thành viên vẫn có thể tải về ảnh các đại diện trong Trang quản trị của thành viên đó.',
+	'ALLOW_GRAVATAR'				=> 'Enable gravatar avatars',
 	'ALLOW_LOCAL'					=> 'Cho phép sử dụng thư viện hình đại diện',
 	'ALLOW_REMOTE'					=> 'Cho phép liên kết hình đại diện',
 	'ALLOW_REMOTE_EXPLAIN'			=> 'Tuỳ chọn cho phép thành viên sử dụng hình đại diện được liên kết từ những website khác.',
@@ -9858,6 +10089,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Content from these will be <strong>not included in feeds</strong>. Select no forum to pull data from all forums.<br />Select/Deselect multiple forums by holding <samp>CTRL</samp> and clicking.',
 
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Với công cụ này, bạn có thể thay đổi những thiết lập mặc định đối với mã xác nhận và cơ chế đồ họa của mã xác nhận CAPTCHA này trong hệ thống.',
+	'ACP_VC_EXT_GET_MORE'					=> 'For additional (and possibly better) anti-spam plugins, visit the <a href="https://www.phpbb.com/go/anti-spam-ext"><strong>phpBB.com Extensions Database</strong></a>. For more information on preventing spam on your board, visit the <a href="https://www.phpbb.com/go/anti-spam"><strong>phpBB.com Knowledge Base</strong></a>.',
 	'AVAILABLE_CAPTCHAS'					=> 'Các plugin có thể dùng',
 	'CAPTCHA_UNAVAILABLE'					=> 'CAPTCHA này không chọn được vì hệ thống chưa đáp ứng được các yêu cầu của nó.',
 	'CAPTCHA_GD'							=> 'Mã xác nhận GD CAPTCHA',
@@ -9908,18 +10140,36 @@ $lang = array_merge($lang, array(
 	'SESSION_LENGTH'			=> 'Thời gian phiên đăng nhập có hiệu lực',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Số giây mà phiên đăng nhập có hiệu lực kể từ khi được tạo mới.',
 
+	// Contact Settings
+	'ACP_CONTACT_SETTINGS_EXPLAIN'		=> 'Here you can enable and disable the contact page and also add a text that is displayed on the page.',
+
+	'CONTACT_US_ENABLE'				=> 'Enable contact page',
+	'CONTACT_US_ENABLE_EXPLAIN'		=> 'This page allows users to send emails to board administrators',
+
+	'CONTACT_US_INFO'				=> 'Contact information',
+	'CONTACT_US_INFO_EXPLAIN'		=> 'The message is displayed on the contact page',
+	'CONTACT_US_INFO_PREVIEW'		=> 'Contact page information - Preview',
+	'CONTACT_US_INFO_UPDATED'		=> 'Contact page information has been updated.',
+
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Với công cụ này, bạn có thể bật hay tắt những chức năng nhất định của hệ thống để giảm bớt số lượng xử lý được yêu cầu gửi đến máy chủ. Trên hều hết các máy chủ, bạn không cần thiết phải tắt bất kỳ chức năng nào của hệ thống tại đây. Tuy nhiên, trên một vài máy chủ nhất định hoặc các hệ thống sử dụng dịch vụ lưu trữ Web dùng chung với nhiều người khác trên cùng một máy chủ, việc tắt một vài chức năng không cần đến là rất hết sức cần thiết để giảm bớt khối lượng công việc xử lý cho máy chủ. Bạn cũng nên xác định giới hạn thời gian nạp hệ thống và số lượng phiên đăng nhập vượt quá để hệ thống tự động chuyển sang chế độ ngưng hoạt động kịp thời.',
 
+	'ALLOW_CDN'						=> 'Allow usage of third party content delivery networks',
+	'ALLOW_CDN_EXPLAIN'				=> 'If this setting is enabled, some files will be served from external third party servers instead of your server. This reduces the network bandwidth required by your server, but may present a privacy issue for some board administrators. In a default phpBB installation, this includes loading “jQuery” and the font “Open Sans” from Google’s content delivery network.',
+	'ALLOW_LIVE_SEARCHES'			=> 'Allow live searches',
+	'ALLOW_LIVE_SEARCHES_EXPLAIN'	=> 'If this setting is enabled, users are provided with keyword suggestions as they type in certain fields throughout the board.',
 	'CUSTOM_PROFILE_FIELDS'			=> 'Mục thông tin cá nhân tuỳ biến',
 	'LIMIT_LOAD'					=> 'Giới hạn thời gian nạp hệ thống',
 	'LIMIT_LOAD_EXPLAIN'			=> 'Nếu trong vòng một phút hệ thống nạp trung bình vượt quá giá trị được thiết lập này thì hệ thống sẽ tự động chuyển sang chế độ ngưng hoạt động. Giá trị 1.0 gần bằng ~100% tài nguyên được sử dụng của một bộ xử lý máy chủ. Chức năng này chỉ có tác dụng trên các máy chủ UNIX và chỉ trên những máy chủ này, thời gian giới hạn được thiết lập mới có thể sử dụng được. Giá trị này sẽ xác lập lại chính nó thành <strong>0</strong> nếu hệ thống phpBB không thể nhận được giới hạn nạp.',
 	'LIMIT_SESSIONS'				=> 'Giới hạn số phiên đăng nhập',
 	'LIMIT_SESSIONS_EXPLAIN'		=> 'Nếu số lượng phiên đăng nhập vượt quá giá trị được thiết lập này trong quãng thời gian một phút thì hệ thống sẽ tự động chuyển sang chế độ ngưng hoạt động. Nhập vào số <strong>0</strong> để không hạn chế số phiên đăng nhập.',
 	'LOAD_CPF_MEMBERLIST'			=> 'Hiển thị các mục thông tin cá nhân tuỳ biến trong danh sách thành viên',
+	'LOAD_CPF_PM'					=> 'Display custom profile fields in private messages',
 	'LOAD_CPF_VIEWPROFILE'			=> 'Hiển thị các mục thông tin cá nhân tuỳ biến trong trang thông tin cá nhân',
 	'LOAD_CPF_VIEWTOPIC'			=> 'Hiển thị các mục thông tin cá nhân tuỳ biến trong trang xem chủ đề',
 	'LOAD_USER_ACTIVITY'			=> 'Hiển thị những hoạt động của thành viên',
 	'LOAD_USER_ACTIVITY_EXPLAIN'	=> 'Hiển thị những chuyên mục/chủ đề không bị khoá trong phần thông tin cá nhân của thành viên và trong bảng điều khiển của thành viên. Chúng tôi khuyên bạn nên tắt tuỳ chọn này trên các diễn đàn có từ một triệu bài viết trở lên.',
+	'READ_NOTIFICATION_EXPIRE_DAYS'	=> 'Read Notification Expiration',
+	'READ_NOTIFICATION_EXPIRE_DAYS_EXPLAIN' => 'Number of days that will elapse before a read notification will automatically be deleted. Set this value to 0 to make notifications permanent.',
 	'RECOMPILE_STYLES'				=> 'Biên dịch lại các thành phần giao diện đã cũ',
 	'RECOMPILE_STYLES_EXPLAIN'		=> 'Kiểm tra những thành phần giao diện đã được cập nhật trong hệ thống tập tin giao diện và biên dịch lại.',
 	'YES_ANON_READ_MARKING'			=> 'Bật đánh dấu chủ đề cho khách',
@@ -9940,18 +10190,25 @@ $lang = array_merge($lang, array(
 	'YES_READ_MARKING_EXPLAIN'		=> 'Lưu trữ thông tin xem/chưa xem bài viết của thành viên trong cơ sở dữ liệu thay vì sử dụng cookie.',
 	'YES_UNREAD_SEARCH'				=> 'Cho phép tìm kiếm bài viết chưa xem',
 
-	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'Hệ thống phpBB hỗ trợ sử dụng các gói bổ sung chức năng hoặc gói thành phần chức năng xác thực. Điều này giúp bạn lựa chọn phương pháp xác thực các thành viên khi họ đăng nhập vào hệ thống. Mặc định, có ba plugin được cung cấp kèm theo hệ thống phpBB: DB, LDAP và Apache. Không phải tất cả các phương pháp đều yêu cầu bạn phải khai báo thêm thông tin với hệ thống. Bạn chỉ cần cung cấp thêm thông tin cho hệ thống biết liên quan đến phương pháp xác thực mà mình đã chọn.',
+	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB supports authentication plug-ins, or modules. These allow you determine how users are authenticated when they log into the board. By default four plug-ins are provided: DB, LDAP, Apache, and OAuth. Not all methods require additional information so only fill out fields if they are relevant to the selected method.',
 
 	'AUTH_METHOD'				=> 'Chọn phương pháp xác thực',
 
+	'AUTH_PROVIDER_OAUTH_ERROR_ELEMENT_MISSING'	=> 'Both the key and secret of each enabled OAuth service provider must be provided. Only one was provided for an OAuth service provider.',
+	'AUTH_PROVIDER_OAUTH_EXPLAIN'				=> 'Each OAuth provider requires a unique secret and key in order to authenticate with the external server. These should be supplied by the OAuth service when you register your website with them and should be entered exactly as provided to you.<br />Any service that does not have both a key and a secret entered here will not be available for use by the forum users. Also note, that user can still register and login using the DB authentication plug-in.',
+	'AUTH_PROVIDER_OAUTH_KEY'					=> 'Key',
+	'AUTH_PROVIDER_OAUTH_TITLE'					=> 'OAuth',
+	'AUTH_PROVIDER_OAUTH_SECRET'				=> 'Secret',
+
 	'APACHE_SETUP_BEFORE_USE'	=> 'Bạn phải cài đặt bộ xác thực cho Apache trước khi bạn chuyển đổi hệ thống đến phương pháp xác thực này. Cần lưu ý rằng tên tài khoản bạn sử dụng cho phương pháp xác thực này của Apache phải giống với tài khoản thành viên của bạn trong hệ thống. Việc xác thực bằng Apache chỉ có thể sử dụng được nếu <samp>mod_php</samp> (không phải phiên bản CGI) và <samp>safe_mode</samp> đã được vô hiệu trên máy chủ.',
 
+	'LDAP'							=> 'LDAP',
 	'LDAP_DN'						=> 'Tên LDAP <var>dn</var>',
 	'LDAP_DN_EXPLAIN'				=> 'Đây là tên định danh LDAP, xác định thông tin về thành viên, ví dụ như <samp>o=My Company,c=US</samp>.',
-	'LDAP_EMAIL'					=> 'Thuộc tính địa chỉ Email LDAP',
-	'LDAP_EMAIL_EXPLAIN'			=> 'Thiết lập tên thuộc tính cho địa chỉ Email của các thành viên nếu bạn đã có sẵn để thiết lập tự động địa chỉ Email cho các thành viên mới. Để trống phần này cũng sẽ bỏ trống kết quả trong địa chỉ Email cho các thành viên đã đăng nhập lần đầu vào hệ thống.',
+	'LDAP_EMAIL'					=> 'LDAP email attribute',
+	'LDAP_EMAIL_EXPLAIN'			=> 'Set this to the name of your user entry email attribute (if one exists) in order to automatically set the email address for new users. Leaving this empty results in empty email address for users who log in for the first time.',
 	'LDAP_INCORRECT_USER_PASSWORD'	=> 'Việc liên kết đến máy chủ LDAP đã thất bại với tên thành viên/mật khẩu mà bạn đã xác định.',
-	'LDAP_NO_EMAIL'					=> 'Thuộc tính của địa chỉ Email bạn vừa xác định không tồn tại.',
+	'LDAP_NO_EMAIL'					=> 'The specified email attribute does not exist.',
 	'LDAP_NO_IDENTITY'				=> 'Không thể tìm khoá định danh đăng nhập cho <strong>%s</strong>.',
 	'LDAP_PASSWORD'					=> 'Mật khẩu LDAP',
 	'LDAP_PASSWORD_EXPLAIN'			=> 'Để trống phần này để sử dụng liên kết ẩn danh. Nếu máy chủ dịch vụ không cho phép truy cập ẩn danh, bạn hãy điền vào mật khẩu cho tài khoản LDAP tương ứng ở trên. Mục này được yêu cầu cho các thư mục máy chủ đang hoạt động. <strong>CẢNH BÁO:</strong> Mật khẩu này sẽ được lưu trữ dưới dạng văn bản thuần trong cơ sở dữ liệu, vì thế nó có thể bị xem bởi bất kỳ ai có quyền truy cập vào cơ sở dữ liệu của bạn hoặc được phép xem trang cấu hình này.',
@@ -9966,13 +10223,17 @@ $lang = array_merge($lang, array(
 	'LDAP_USER_FILTER'				=> 'Bộ lọc tên tài khoản LDAP',
 	'LDAP_USER_FILTER_EXPLAIN'		=> 'Tùy chọn này cho phép bạn có thể giới hạn thêm những đối tượng được tìm kiếm với các bộ lọc bổ sung. Ví dụ như <samp>objectClass=posixGroup</samp> sẽ cho ra kết quả sử dụng là <samp>(&(uid=$username)(objectClass=posixGroup))</samp>',
 
-	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Với công cụ này, bạn có thể thay đổi các thiết lập về máy chủ và tên miền trong hệ thống. Hãy chắc chắn về những thông tin mà bạn nhập vào trong phần này, những lỗi xảy ra sẽ dẫn đến việc gửi thông tin qua Email không còn chính xác. Khi nhập vào tên miền, bạn phải nhớ đính kèm cả giao thức <samp>http://</samp> hoặc các giao thức khác. Chỉ thay đổi số cổng máy chủ nếu bạn chắc chắn máy chủ của mình đang chạy trên cổng khác, cổng <strong>80</strong> luôn chính xác và được sử dụng trong hầu hết mọi trường hợp.',
+	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Here you define server and domain dependent settings. Please ensure the data you enter is accurate, errors will result in emails containing incorrect information. When entering the domain name remember it does include http:// or other protocol term. Only alter the port number if you know your server uses a different value, port 80 is correct in most cases.',
 	'ENABLE_GZIP'				=> 'Bật chế độ nén GZip',
 	'ENABLE_GZIP_EXPLAIN'		=> 'Những trang nội dung tạo ra sẽ được nén lại trước khi gửi đến cho người truy cập. Tùy chọn này có thể giảm bớt băng thông cho website của bạn nhưng đồng thời lại tăng thêm hiệu suất hoạt động của cả bộ xử lý máy chủ lẫn trên máy tính cá nhân người truy cập.',
 	'FORCE_SERVER_VARS'			=> 'Yêu cầu thiết lập máy chủ',
 	'FORCE_SERVER_VARS_EXPLAIN'	=> 'Nếu bật tuỳ chọn này, những thiết lập máy chủ đã được xác định trong phần này sẽ được sử dụng như những giá trị đã được thiết lập tự động.',
 	'ICONS_PATH'				=> 'Thư mục biểu tượng bài viết',
 	'ICONS_PATH_EXPLAIN'		=> 'Đường dẫn đến thư mục chứa biểu tượng bài viết trong hệ thống, ví dụ như <samp>images/icons</samp>.',
+	'MOD_REWRITE_ENABLE'		=> 'Enable URL Rewriting',
+	'MOD_REWRITE_ENABLE_EXPLAIN' => 'When enabled, URLs containing ’app.php’ will be rewritten to remove the filename (i.e. app.php/foo will become /foo). <strong>Apache server’s mod_rewrite module is required for this functionality to work; if this option is enabled without mod_rewrite support, URLs on your board may be broken.</strong>',
+	'MOD_REWRITE_DISABLED'		=> 'The <strong>mod_rewrite</strong> module on your Apache web server is disabled. Enable the module or contact your web hosting provider if you wish to enable this feature.',
+	'MOD_REWRITE_INFORMATION_UNAVAILABLE' => 'We are unable to determine whether or not this server supports URL rewriting. This setting may be enabled but if URL rewriting is not available, paths generated by this board (such as for use in links) may be broken. Contact your web hosting provider if you are unsure whether or not you can safely enable this feature.',
 	'PATH_SETTINGS'				=> 'Thiết lập đường dẫn đến thư mục',
 	'RANKS_PATH'				=> 'Thư mục hình xếp hạng',
 	'RANKS_PATH_EXPLAIN'		=> 'Đường dẫn đến thư mục chứa hình xếp hạng trong hệ thống, ví dụ như <samp>images/ranks</samp>.',
@@ -9989,13 +10250,21 @@ $lang = array_merge($lang, array(
 	'SMILIES_PATH_EXPLAIN'		=> 'Đường dẫn đến thư mục chứa biểu tượng vui trong hệ thống, ví dụ như <samp>images/smilies</samp>.',
 	'UPLOAD_ICONS_PATH'			=> 'Thư mục biểu tượng tập tin',
 	'UPLOAD_ICONS_PATH_EXPLAIN'	=> 'Đường dẫn đến thư mục chứa biểu tượng tập tin trong hệ thống, ví dụ như <samp>images/upload_icons</samp>.',
+	'USE_SYSTEM_CRON'		=> 'Run periodic tasks from system cron',
+	'USE_SYSTEM_CRON_EXPLAIN'		=> 'When off, phpBB will arrange for periodic tasks to be run automatically. When on, phpBB will not schedule any periodic tasks by itself; a system administrator must arrange for <code>bin/phpbbcli.php cron:run</code> to be run by the system cron facility at regular intervals (e.g. every 5 minutes).',
 
 	'ACP_SECURITY_SETTINGS_EXPLAIN'		=> 'Với công cụ này, bạn có thể thay đổi những thiết lập liên quan đến phiên đăng nhập và việc đăng nhập trong hệ thống.',
 	'ALL'							=> 'Tất cả',
-	'ALLOW_AUTOLOGIN'				=> 'Cho phép đăng nhập tự động',
-	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Tuỳ chọn cho phép thành viên có thể đăng nhập tự động vào hệ thống khi họ ghé thăm website.',
-	'AUTOLOGIN_LENGTH'				=> 'Số ngày hết hạn khoá đăng nhập tự động',
-	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Số ngày kể từ lần ghé thăm trước của thành viên, khoá đăng nhập tự động sẽ hết hạn. Nhập vào số <strong>0</strong> để vô hiệu chức năng này.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'ALLOW_PASSWORD_RESET'			=> 'Allow password reset ("Forgot Password")',
+	'ALLOW_PASSWORD_RESET_EXPLAIN'	=> 'Determines whether or not users are able to use the "I forgot my password" link on the login page to recover their account. If you use an external authentication mechanism you may wish to disable this feature.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
 	'BROWSER_VALID'					=> 'Kiểm tra trình duyệt',
 	'BROWSER_VALID_EXPLAIN'			=> 'Bật chế độ kiểm tra trình duyệt cho mỗi phiên đăng nhập để tăng cường khả năng bảo mật.',
 	'CHECK_DNSBL'					=> 'Kiểm tra lại địa chỉ IP với danh sách các địa chỉ đen DNS',
@@ -10032,8 +10301,12 @@ $lang = array_merge($lang, array(
 	'PASS_TYPE_SYMBOL'				=> 'Phải sử dụng ký hiệu',
 	'REF_HOST'						=> 'Chỉ xác minh host',
 	'REF_PATH'						=> 'Xác minh cả đường dẫn',
-	'REFERER_VALID'					=> 'Xác minh Referer',
+	'REFERRER_VALID'				=> 'Validate Referrer',
+	'REFERRER_VALID_EXPLAIN'		=> 'If enabled, the referrer of POST requests will be checked against the host/script path settings. This may cause issues with boards using several domains and or external logins.',
+
+	'REFERER_VALID'					=> 'Xác minh Referer',	//3.0.12
 	'REFERER_VALID_EXPLAIN'			=> 'Nếu hiệu lực, referer của những lần POST thông tin sẽ bị kiểm tra xác minh host/script path. Điều này có thể gây ra trở ngại đối với các hệ thống dùng nhiều tên miền hay dùng hệ thống đăng nhập ngoài.',
+
 	'TPL_ALLOW_PHP'					=> 'Cho phép sử dụng mã PHP trong các tập tin khuôn mẫu',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Nếu tuỳ chọn này được bật, các lệnh <code>PHP</code> và <code>INCLUDEPHP</code> sẽ có thể được sử dụng và biên dịch trong các tập tin khuôn mẫu.',
 
@@ -10046,6 +10319,8 @@ $lang = array_merge($lang, array(
 	'BOARD_HIDE_EMAILS_EXPLAIN'		=> 'Tuỳ chọn ẩn toàn bộ địa chỉ Email cá nhân trong website.',
 	'CONTACT_EMAIL'					=> 'Địa chỉ Email liên hệ',
 	'CONTACT_EMAIL_EXPLAIN'			=> 'Địa chỉ Email này được sử dụng khi có việc cần liên hệ, ví dụ như vấn đề thư rác, có lỗi xảy ra… Nó sẽ luôn luôn được sử dụng trong phần thông tin <samp>Gửi từ</samp> và <samp>Trả lời đến địa chỉ</samp> của các Email.',
+	'CONTACT_EMAIL_NAME'			=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 	'EMAIL_FUNCTION_NAME'			=> 'Tên hàm dùng để gửi Email',
 	'EMAIL_FUNCTION_NAME_EXPLAIN'	=> 'Hàm chức năng PHP bạn muốn sử dụng để gửi Email.',
 	'EMAIL_PACKAGE_SIZE'			=> 'Số lượng Email trong mỗi gói Email',
@@ -10236,7 +10511,7 @@ $lang = array_merge($lang, array(
 	'ACP_BAN'					=> 'Danh sách cấm',
 	'ACP_BAN_EMAILS'			=> 'Cấm theo địa chỉ Email',
 	'ACP_BAN_IPS'				=> 'Cấm theo địa chỉ IP',
-	'ACP_BAN_USERNAMES'			=> 'Cấm theo tên thành viên',
+	'ACP_BAN_USERNAMES'			=> 'Ban users',
 	'ACP_BBCODES'				=> 'Tùy biến thẻ BBCode',
 	'ACP_BOARD_CONFIGURATION'	=> 'Cấu hình hệ thống',
 	'ACP_BOARD_FEATURES'		=> 'Thiết lập chức năng hệ thống',
@@ -10245,8 +10520,10 @@ $lang = array_merge($lang, array(
 	'ACP_BOTS'					=> 'Quản lý máy tìm kiếm',
 
 	'ACP_CAPTCHA'				=> 'Thiết lập cơ chế đồ hoạ mã xác nhận',
+	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'Cơ sở dữ liệu',
+	'ACP_CAT_DOT_MODS'			=> 'MOD',
 	'ACP_CAT_DOT_MODS'			=> 'MOD',
 	'ACP_CAT_FORUMS'			=> 'Chuyên mục',
 	'ACP_CAT_GENERAL'			=> 'Tổng quát',
@@ -10259,6 +10536,8 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_USERS'				=> 'Thành viên',
 	'ACP_CLIENT_COMMUNICATION'	=> 'Ứng dụng truyền thông',
 	'ACP_COOKIE_SETTINGS'		=> 'Thiết lập cookie',
+	'ACP_CONTACT'				=> 'Contact page',
+	'ACP_CONTACT_SETTINGS'		=> 'Contact page settings',
 	'ACP_CRITICAL_LOGS'			=> 'Ghi nhận lỗi',
 	'ACP_CUSTOM_PROFILE_FIELDS'	=> 'Tuỳ biến mục thông tin cá nhân',
 
@@ -10266,8 +10545,11 @@ $lang = array_merge($lang, array(
 	'ACP_DISALLOW'				=> 'Cấm sử dụng',
 	'ACP_DISALLOW_USERNAMES'	=> 'Tên thành viên bị cấm sử dụng',
 
-	'ACP_EMAIL_SETTINGS'		=> 'Thiết lập Email',
-	'ACP_EXTENSION_GROUPS'		=> 'Quản lý nhóm tập tin đính kèm',
+	'ACP_EMAIL_SETTINGS'		=> 'Email settings',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
+	'ACP_EXTENSION_MANAGEMENT'	=> 'Extension management',
+	'ACP_EXTENSIONS'			=> 'Manage extensions',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
 	'ACP_FORMS'					=> 'Customizable Forms',
 	'ACP_FORMS_BUILDER'			=> 'Form Builder',
 
@@ -10288,10 +10570,10 @@ $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE'				=> 'Quản lý nhóm',
 	'ACP_GROUPS_MANAGEMENT'			=> 'Quản lý nhóm',
 	'ACP_GROUPS_PERMISSIONS'		=> 'Cấp phép nhóm',
+	'ACP_GROUPS_POSITION'			=> 'Manage group positions',
 
 	'ACP_ICONS'					=> 'Biểu tượng bài viết',
 	'ACP_ICONS_SMILIES'			=> 'Biểu tượng bài viết/biểu tượng vui',
-	'ACP_IMAGESETS'				=> 'Gói hình ảnh giao diện',
 	'ACP_INACTIVE_USERS'		=> 'Thành viên chưa kích hoạt',
 	'ACP_INDEX'					=> 'Bảng điều khiển của quản trị viên',
 
@@ -10303,11 +10585,15 @@ $lang = array_merge($lang, array(
 	'ACP_LOGGING'				=> 'Ghi nhận',
 
 	'ACP_MAIN'					=> 'Bảng điều khiển của quản trị viên',
-	'ACP_MANAGE_EXTENSIONS'		=> 'Quản lý tập tin đính kèm',
+
+	'ACP_MANAGE_ATTACHMENTS'			=> 'Tập tin đính kèm',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
+
+	'ACP_MANAGE_EXTENSIONS'		=> 'Manage attachment extensions',
 	'ACP_MANAGE_RANKS'			=> 'Quản lý xếp hạng',
 	'ACP_MANAGE_REASONS'		=> 'Quản lý báo cáo/nguyên nhân từ chối',
 	'ACP_MANAGE_USERS'			=> 'Quản lý thành viên',
-	'ACP_MASS_EMAIL'			=> 'Gửi Email thành viên',
+	'ACP_MASS_EMAIL'			=> 'Mass email',
 	'ACP_MESSAGES'				=> 'Bài viết',
 	'ACP_MESSAGE_SETTINGS'		=> 'Thiết lập tin nhắn',
 	'ACP_MODULE_MANAGEMENT'		=> 'Quản lý gói thành phần chức năng',
@@ -10352,6 +10638,8 @@ $lang = array_merge($lang, array(
 	'ACP_STYLE_COMPONENTS'		=> 'Thành phần giao diện',
 	'ACP_STYLE_MANAGEMENT'		=> 'Quản lý giao diện',
 	'ACP_STYLES'				=> 'Giao diện',
+	'ACP_STYLES_CACHE'			=> 'Purge Cache',
+	'ACP_STYLES_INSTALL'		=> 'Install Styles',
 
 	'ACP_SUBMIT_CHANGES'		=> 'Thực hiện các thay đổi',
 
@@ -10403,6 +10691,10 @@ $lang = array_merge($lang, array(
 
 	'COLOUR_SWATCH'			=> 'Bảng mã màu',
 	'CONFIG_UPDATED'		=> 'Cấu hình hệ thống đã được cập nhật thành công.',
+	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
+	'CRON_NO_SUCH_TASK'		=> 'Could not find cron task â€œ%sâ€.',
+	'CRON_NO_TASK'			=> 'No cron tasks need to be run right now.',
+	'CRON_NO_TASKS'			=> 'No cron tasks could be found.',
 
 	'DEACTIVATE'				=> 'Ngưng kích hoạt',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'Đường dẫn bạn vừa nhập “%s” không tồn tại.',
@@ -10413,6 +10705,7 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_AS'				=> 'Tải về dưới dạng',
 	'DOWNLOAD_STORE'			=> 'Tải về hoặc lưu trữ tập tin',
 	'DOWNLOAD_STORE_EXPLAIN'	=> 'Bạn có thể tải về trực tiếp tập tin hoặc lưu trữ lại trong thư mục <samp>store/</samp> của hệ thống.',
+	'DOWNLOADS'					=> 'Số lần tải về',
 
 	'EDIT'					=> 'Sửa',
 	'ENABLE'				=> 'Bật',
@@ -10427,6 +10720,8 @@ $lang = array_merge($lang, array(
 	'IP'					=> 'Địa chỉ IP',
 	'IP_HOSTNAME'			=> 'Địa chỉ IP hoặc tên miền',
 
+	'LOAD_NOTIFICATIONS'			=> 'Display Notifications',
+	'LOAD_NOTIFICATIONS_EXPLAIN'	=> 'Display the notifications list on every page (typically in the header).',
 	'LOGGED_IN_AS'			=> 'Bạn đã đăng nhập với tên thành viên:',
 	'LOGIN_ADMIN'			=> 'Bạn phải được cấp phép trong hệ thống để chuyển đến bảng điều khiển của quản trị viên.',
 	'LOGIN_ADMIN_CONFIRM'	=> 'Để chuyển đến bảng điều khiển của quản trị viên, bạn cần phải xác thực lại tài khoản của mình trong hệ thống.',
@@ -10443,7 +10738,8 @@ $lang = array_merge($lang, array(
 
 	'NOTIFY'				=> 'Thông báo',
 	'NO_ADMIN'				=> 'Bạn không được cấp phép để quản lý hệ thống.',
-	'NO_EMAILS_DEFINED'		=> 'Không có địa chỉ Email hợp lệ nào được tìm thấy.',
+	'NO_EMAILS_DEFINED'		=> 'No valid email addresses found.',
+	'NO_FILES_TO_DELETE'	=> 'Attachments you selected for deletion do not exist.',
 	'NO_PASSWORD_SUPPLIED'	=> 'Bạn không thể đăng nhập mà không có một mật khẩu.',
 
 	'OFF'					=> 'Tắt',
@@ -10459,8 +10755,8 @@ $lang = array_merge($lang, array(
 
 	'REMIND'							=> 'Nhắc nhở',
 	'RESYNC'							=> 'Đồng bộ',
-	'RETURN_TO'							=> 'Quay về',
 
+	'RUNNING_TASK'			=> 'Running task: %s.',
 	'SELECT_ANONYMOUS'		=> 'Chọn thành viên ẩn',
 	'SELECT_OPTION'			=> 'Chọn các mục tuỳ chọn',
 
@@ -10470,6 +10766,10 @@ $lang = array_merge($lang, array(
 	'SETTING_TOO_SHORT'		=> 'Giá trị cho thiết lập “%1$s” quá ngắn. Chiều dài thấp nhất chấp nhận được là is %2$d.',
 
 	'SHOW_ALL_OPERATIONS'	=> 'Hiển thị tất cả câu hỏi',
+
+	'TASKS_NOT_READY'			=> 'Not ready tasks:',
+	'TASKS_READY'			=> 'Ready tasks:',
+	'TOTAL_SIZE'			=> 'Total size',
 
 	'UCP'					=> 'Thiết lập cá nhân',
 	'USERNAMES_EXPLAIN'		=> 'Xác định mỗi tên thành viên trên một hàng nhất định.',
@@ -10481,7 +10781,7 @@ $lang = array_merge($lang, array(
 	'NO_PHPINFO_AVAILABLE'	=> 'Thông tin cấu hình PHP trên máy chủ của bạn không thể thu thập được. Hàm <code>phpinfo()</code> đã bị vô hiệu vì nguyên nhân bảo mật.',
 
 	'ACP_ADMIN_LOGS_EXPLAIN'	=> 'Danh sách này liệt kê tất cả những thao tác được thực hiện bởi các quản trị viên. Bạn có thể sắp xếp theo tên thành viên, ngày tháng, địa chỉ IP hay thao tác. Nếu bạn được cấp phép, bạn có thể xoá từng bản ghi nhận thao tác cá nhân hay toàn bộ ghi nhận trong đây.',
-	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'Danh sách này liệt kê tất cả những thao tác được thực hiện bởi chính hệ thống. Việc ghi nhận này sẽ cung cấp cho bạn thông tin nếu như bạn đang giải quyết các rắc rối gặp phải với hệ thống, ví dụ như việc gửi Email từ hệ thống. Bạn có thể sắp xếp theo tên thành viên, ngày tháng, địa chỉ IP hay thao tác. Nếu bạn được cấp phép, bạn có thể xoá từng bản ghi nhận thao tác cá nhân hay toàn bộ ghi nhận trong đây.',
+	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'This lists the actions carried out by the board itself. This log provides you with information you are able to use for solving specific problems, for example non-delivery of emails. You can sort by username, date, IP or action. If you have appropriate permissions you can also clear individual operations or the log as a whole.',
 	'ACP_MOD_LOGS_EXPLAIN'		=> 'Danh sách này liệt kê tất cả những thao tác được thực hiện trong chuyên mục, chủ đề và bài viết đối với thành viên bởi các điều hành viên, bao gồm cả lệnh cấm. Bạn có thể sắp xếp theo tên thành viên, ngày tháng, địa chỉ IP hay thao tác. Nếu bạn được cấp phép, bạn cũng có thể xoá từng bản ghi nhận thao tác cá nhân hay toàn bộ ghi nhận trong đây.',
 	'ACP_USERS_LOGS_EXPLAIN'	=> 'Đây là danh sách ghi nhận các thao tác của những thành viên trong hệ thống (báo cáo, cảnh báo và ghi chú về thành viên).',
 	'ALL_ENTRIES'				=> 'Tất cả các mục',
@@ -10507,6 +10807,7 @@ $lang = array_merge($lang, array(
 
 	'GZIP_COMPRESSION'	=> 'Chế độ nén Gzip',
 
+	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'Không có sẵn',
 	'NUMBER_FILES'		=> 'Tổng số tập tin đính kèm',
 	'NUMBER_POSTS'		=> 'Tổng số bài viết',
@@ -10519,29 +10820,38 @@ $lang = array_merge($lang, array(
 	'PURGE_CACHE'			=> 'Dọn sạch bộ nhớ đệm',
 	'PURGE_CACHE_CONFIRM'	=> 'Bạn có chắc chắn muốn dọn sạch bộ nhớ đệm?',
 	'PURGE_CACHE_EXPLAIN'	=> 'Dọn sạch tất cả các thành phần có liên quan đến bộ nhớ đệm, bao gồm tất cả các tập tin khuôn mẫu và lệnh truy xuất SQL đã được tạo bộ nhớ đệm.',
+	'PURGE_CACHE_SUCCESS'	=> 'Cache successfully purged.',
 
 	'PURGE_SESSIONS'			=> 'Xóa toàn bộ Session',
 	'PURGE_SESSIONS_CONFIRM'	=> 'Bạn có chắc muốn xóa toàn bộ Session? Điều này sẽ làm tất cả thành viên bị đăng xuất.',
 	'PURGE_SESSIONS_EXPLAIN'	=> 'Xóa toàn bộ Session bằng làm trống session table.',
+	'PURGE_SESSIONS_SUCCESS'	=> 'Sessions successfully purged.',
 
 	'RESET_DATE'					=> 'Tạo lại ngày hệ thống bắt đầu hoạt động mới',
 	'RESET_DATE_CONFIRM'			=> 'Bạn có chắc chắn muốn tạo lại ngày hệ thống bắt đầu hoạt động mới?',
+	'RESET_DATE_SUCCESS'				=> 'Boardâ€™s start date reset',
 	'RESET_ONLINE'					=> 'Tạo lại thông tin số lượng thành viên trực tuyến đông nhất',
 	'RESET_ONLINE_CONFIRM'			=> 'Bạn có chắc chắn muốn tạo lại thông tin số lượng thành viên trực tuyến đông nhất?',
+	'RESET_ONLINE_SUCCESS'				=> 'Most users ever online reset',
 	'RESYNC_POSTCOUNTS'				=> 'Đồng bộ hóa bộ đếm số bài viết',
 	'RESYNC_POSTCOUNTS_EXPLAIN'		=> 'Chỉ những bài viết còn hiệu hữu trong diễn đàn mới được tính vào bộ đếm. Những bài viết đã được dọn dẹp sẽ không được tính.',
 	'RESYNC_POSTCOUNTS_CONFIRM'		=> 'Bạn có chắc chắn muốn đồng bộ hóa lại bộ đếm số bài viết?',
+	'RESYNC_POSTCOUNTS_SUCCESS'			=> 'Resynchronised post counts',
 	'RESYNC_POST_MARKING'			=> 'Đồng bộ hóa những chủ đề đã đánh dấu',
 	'RESYNC_POST_MARKING_CONFIRM'	=> 'Bạn có chắc chắn muốn đồng bộ hóa lại những chủ đề đã đánh dấu?',
 	'RESYNC_POST_MARKING_EXPLAIN'	=> 'Đầu tiên là tất cả các chủ đề không được đánh dấu và sau đó đánh dấu chính xác những chủ đề không còn bất cứ bài viết nào được gửi trong suốt 6 tháng qua.',
+	'RESYNC_POST_MARKING_SUCCESS'	=> 'Resynchronised dotted topics',
 	'RESYNC_STATS'					=> 'Đồng bộ hóa thông tin thống kê',
 	'RESYNC_STATS_CONFIRM'			=> 'Bạn có chắc chắn muốn đồng bộ hóa thông tin thống kê?',
 	'RESYNC_STATS_EXPLAIN'			=> 'Đếm lại tổng số chủ đề, bài viết, thành viên và tập tin đính kèm trong hệ thống.',
+	'RESYNC_STATS_SUCCESS'			=> 'Resynchronised statistics',
 	'RUN'							=> 'Chạy',
 
 	'STATISTIC'					=> 'Thống kê',
 	'STATISTIC_RESYNC_OPTIONS'	=> 'Đồng bộ hóa hoặc tạo mới lại thông tin thống kê',
 
+	'TIMEZONE_INVALID'	=> 'The timezone you selected is invalid.',
+	'TIMEZONE_SELECTED'	=> '(currently selected)',
 	'TOPICS_PER_DAY'	=> 'Số chủ đề/ngày',
 
 	'UPLOAD_DIR_SIZE'	=> 'Dung lượng thư mục chứa các tập tin đính kèm',
@@ -10722,9 +11032,9 @@ $lang = array_merge($lang, array(
 
 	'LOG_APPROVE_TOPIC'			=> '<strong>Đã chấp nhận chủ đề</strong><br />» %s',
 	'LOG_BUMP_TOPIC'			=> '<strong>Thành viên đã đẩy chủ đề lên</strong><br />» %s',
-	'LOG_DELETE_POST'			=> '<strong>Đã xoá bài viết</strong><br />» %s',
-	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Đã xóa bài viết ảnh</strong><br />» %s',
-	'LOG_DELETE_TOPIC'			=> '<strong>Đã xoá chủ đề</strong><br />» %s',
+	'LOG_DELETE_POST'			=> '<strong>Deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Deleted shadow topic</strong><br />Â» %s',
+	'LOG_DELETE_TOPIC'			=> '<strong>Deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_FORK'					=> '<strong>Đã sao chép chủ đề</strong><br />» từ %s',
 	'LOG_LOCK'					=> '<strong>Đã khoá chủ đề</strong><br />» %s',
 	'LOG_LOCK_POST'				=> '<strong>Đã khoá bài viết</strong><br />» %s',
@@ -10733,15 +11043,20 @@ $lang = array_merge($lang, array(
 	'LOG_PM_REPORT_CLOSED'		=> '<strong>Đã đóng báo cáo tin nhắn</strong><br />» %s',
 	'LOG_PM_REPORT_DELETED'		=> '<strong>Đã xóa báo cáo tin nhắn</strong><br />» %s',
 	'LOG_POST_APPROVED'			=> '<strong>Đã chấp nhận bài viết</strong><br />» %s',
-	'LOG_POST_DISAPPROVED'		=> '<strong>Đã từ chối bài viết “%1$s” với nguyên nhân sau</strong><br />» %2$s',
-	'LOG_POST_EDITED'			=> '<strong>Đã sửa bài viết “%1$s” được gửi bởi</strong><br />» %2$s',
+	'LOG_POST_DISAPPROVED'		=> '<strong>Disapproved post â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
+	'LOG_POST_EDITED'			=> '<strong>Edited post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_POST_RESTORED'			=> '<strong>Restored post</strong><br />Â» %s',
 	'LOG_REPORT_CLOSED'			=> '<strong>Đã kết thúc báo cáo</strong><br />» %s',
 	'LOG_REPORT_DELETED'		=> '<strong>Đã xóa báo cáo</strong><br />» %s',
+	'LOG_RESTORE_TOPIC'			=> '<strong>Restored topic â€œ%1$sâ€ written by</strong><br />Â» %2$s',
+	'LOG_SOFTDELETE_POST'		=> '<strong>Soft deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_SOFTDELETE_TOPIC'		=> '<strong>Soft deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_SPLIT_DESTINATION'		=> '<strong>Đã di chuyển các bài viết được chia nhỏ</strong><br />» đến %s',
 	'LOG_SPLIT_SOURCE'			=> '<strong>Các bài viết được chia nhỏ</strong><br />» từ %s',
 
 	'LOG_TOPIC_APPROVED'		=> '<strong>Đã chấp nhận chủ đề</strong><br />» %s',
-	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Đã từ chối chủ đề “%1$s” với nguyên nhân sau</strong><br />%2$s',
+	'LOG_TOPIC_RESTORED'		=> '<strong>Restored topic</strong><br />Â» %s',
+	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Disapproved topic â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
 	'LOG_TOPIC_RESYNC'			=> '<strong>Đã đồng bộ lại bộ đếm số chủ đề</strong><br />» %s',
 	'LOG_TOPIC_TYPE_CHANGED'	=> '<strong>Đã thay đổi loại chủ đề</strong><br />» %s',
 	'LOG_UNLOCK'				=> '<strong>Đã mở khoá chủ đề</strong><br />» %s',
@@ -10793,16 +11108,6 @@ $lang = array_merge($lang, array(
 
 	'LOG_IMAGE_GENERATION_ERROR'	=> '<strong>Lỗi khi tạo tập tin hình ảnh</strong><br />» Lỗi tại %1$s ngay dòng %2$s: %3$s',
 
-	'LOG_IMAGESET_ADD_DB'			=> '<strong>Đã thêm vào gói hình ảnh giao diện mới trong cơ sở dữ liệu</strong><br />» %s',
-	'LOG_IMAGESET_ADD_FS'			=> '<strong>Đã thêm vào gói hình ảnh giao diện mới trong hệ thống tập tin giao diện</strong><br />» %s',
-	'LOG_IMAGESET_DELETE'			=> '<strong>Đã xoá gói hình ảnh giao diện</strong><br />» %s',
-	'LOG_IMAGESET_EDIT_DETAILS'		=> '<strong>Đã chỉnh sửa thông tin gói hình ảnh giao diện</strong><br />» %s',
-	'LOG_IMAGESET_EDIT'				=> '<strong>Đã chỉnh sửa gói hình ảnh giao diện</strong><br />» %s',
-	'LOG_IMAGESET_EXPORT'			=> '<strong>Đã xuất gói hình ảnh giao diện</strong><br />» %s',
-	'LOG_IMAGESET_LANG_MISSING'		=> '<strong>Gói hình ảnh giao diện đã bỏ sót phần phiên dịch “%2$s”</strong><br />» %1$s',
-	'LOG_IMAGESET_LANG_REFRESHED'	=> '<strong>Đã nạp lại bản phiên dịch “%2$s” của gói hình ảnh giao diện</strong><br />» %1$s',
-	'LOG_IMAGESET_REFRESHED'		=> '<strong>Đã nạp lại gói hình ảnh giao diện</strong><br />» %s',
-
 	'LOG_INACTIVE_ACTIVATE'	=> '<strong>Đã kích hoạt những thành viên chưa kích hoạt</strong><br />» %s',
 	'LOG_INACTIVE_DELETE'	=> '<strong>Đã xoá những thành viên chưa kích hoạt</strong><br />» %s',
 	'LOG_INACTIVE_REMIND'	=> '<strong>Đã gửi Email nhắc nhở đến những thành viên chưa kích hoạt</strong><br />» %s',
@@ -10847,6 +11152,7 @@ $lang = array_merge($lang, array(
 	'LOG_U_ROLE_EDIT'		=> '<strong>Nhiệm vụ thành viên đã được chỉnh sửa</strong><br />» %s',
 	'LOG_U_ROLE_REMOVED'	=> '<strong>Nhiệm vụ thành viên đã được gỡ bỏ</strong><br />» %s',
 
+	'LOG_PLUPLOAD_TIDY_FAILED'		=> '<strong>Unable to open %1$s for tidying, check permissions.</strong><br />Exception: %2$s<br />Trace: %3$s',
 	'LOG_PROFILE_FIELD_ACTIVATE'	=> '<strong>Mục thông tin cá nhân đã được kích hoạt</strong><br />» %s',
 	'LOG_PROFILE_FIELD_CREATE'		=> '<strong>Mục thông tin cá nhân đã được thêm vào</strong><br />» %s',
 	'LOG_PROFILE_FIELD_DEACTIVATE'	=> '<strong>Mục thông tin cá nhân đã được ngưng kích hoạt</strong><br />» %s',
@@ -10855,13 +11161,13 @@ $lang = array_merge($lang, array(
 
 	'LOG_PRUNE'					=> '<strong>Đã dọn dẹp chuyên mục</strong><br />» %s',
 	'LOG_AUTO_PRUNE'			=> '<strong>Đã dọn dẹp tự động chuyên mục</strong><br />» %s',
+	'LOG_PRUNE_SHADOW'		=> '<strong>Auto-pruned shadow topics</strong><br />Â» %s',
 	'LOG_PRUNE_USER_DEAC'		=> '<strong>Thành viên đã được ngưng kích hoạt</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_DEL'	=> '<strong>Thành viên đã được dọn dẹp và toàn bộ bài viết đã được xoá</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_ANON'	=> '<strong>Thành viên đã được dọn dẹp và toàn bộ bài viết đã được giữ lại</strong><br />» %s',
 
 	'LOG_PURGE_CACHE'			=> '<strong>Đã dọn sạch bộ nhớ đệm</strong>',
 	'LOG_PURGE_SESSIONS'		=> '<strong>Đã dọn sách các phiên làm việc</strong>',
-
 
 	'LOG_RANK_ADDED'		=> '<strong>Đã thêm vào xếp hạng mới</strong><br />» %s',
 	'LOG_RANK_REMOVED'		=> '<strong>Đã gỡ bỏ xếp hạng</strong><br />» %s',
@@ -10871,15 +11177,17 @@ $lang = array_merge($lang, array(
 	'LOG_REASON_REMOVED'	=> '<strong>Đã gỡ bỏ báo cáo/nguyên nhân từ chối</strong><br />» %s',
 	'LOG_REASON_UPDATED'	=> '<strong>Đã cập nhật báo cáo/nguyên nhân từ chối</strong><br />» %s',
 
-	'LOG_REFERER_INVALID'		=> '<strong>Xác minh Referer thất bại</strong><br />»Referer tên là “<em>%1$s</em>”. Yêu cầu bị từ chối và phiên làm việc bị hủy.',
+	'LOG_REFERER_INVALID'		=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 	'LOG_RESET_DATE'			=> '<strong>Ngày website bắt đầu hoạt động đã được tạo lại</strong>',
 	'LOG_RESET_ONLINE'			=> '<strong>Thông tin thành viên trực tuyến đã được tạo lại</strong>',
+	'LOG_RESYNC_FILES_STATS'	=> '<strong>File statistics resynchronised</strong>',
 	'LOG_RESYNC_POSTCOUNTS'		=> '<strong>Bộ đếm số bài viết thành viên đã được đồng bộ lại</strong>',
 	'LOG_RESYNC_POST_MARKING'	=> '<strong>Những chủ đề được đánh dấu đã được đồng bộ lại</strong>',
 	'LOG_RESYNC_STATS'			=> '<strong>Trạng thái chủ đề, bài viết và thành viên đã được đồng bộ lại</strong>',
 
 	'LOG_SEARCH_INDEX_CREATED'	=> '<strong>Đã tạo chỉ mục tìm kiếm cho</strong><br />» %s',
 	'LOG_SEARCH_INDEX_REMOVED'	=> '<strong>Đã gỡ bỏ chỉ mục tìm kiếm của</strong><br />» %s',
+	'LOG_SPHINX_ERROR'			=> '<strong>Sphinx Error</strong><br />Â» %s',
 	'LOG_STYLE_ADD'				=> '<strong>Đã thêm vào giao diện mới</strong><br />» %s',
 	'LOG_STYLE_DELETE'			=> '<strong>Đã xoá giao diện</strong><br />» %s',
 	'LOG_STYLE_EDIT_DETAILS'	=> '<strong>Đã chỉnh sửa giao diện</strong><br />» %s',
@@ -10946,15 +11254,18 @@ $lang = array_merge($lang, array(
 	'LOG_USER_GROUP_RESIGN'			=> '<strong>Thành viên đã từ bỏ tư cách thành viên trong nhóm</strong><br />» %s',
 
 	'LOG_WARNING_DELETED'		=> '<strong>Đã xóa cảnh báo thành viên</strong><br />» %s',
-	'LOG_WARNINGS_DELETED'		=> '<strong>Đã xóa %2$s cảnh báo thành viên</strong><br />» %1$s',
 	'LOG_WARNINGS_DELETED_ALL'	=> '<strong>Đã xóa tất cả cảnh báo thành viên</strong><br />» %s',
 
 	'LOG_WORD_ADD'			=> '<strong>Đã thêm từ kiểm duyệt</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>Đã xoá từ kiểm duyệt</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Đã sửa từ kiểm duyệt</strong><br />» %s',
+
+	'LOG_EXT_ENABLE'	=> '<strong>Extension enabled</strong><br />Â» %s',
+	'LOG_EXT_DISABLE'	=> '<strong>Extension disabled</strong><br />Â» %s',
+	'LOG_EXT_PURGE'		=> '<strong>Extensionâ€™s data deleted</strong><br />Â» %s',
+
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
-
 ));
 
 $lang = array_merge($lang, array(
@@ -11255,7 +11566,7 @@ $lang = array_merge($lang, array(
 	'ACP_PORTAL_WELCOME_EXPLAIN'=> '',
 	'ADM_LOGOUT'			=> 'Thoát&nbsp;ACP',
 	'ADM_LOGGED_OUT'		=> 'Đăng xuất thành công khỏi Bảng điều khiển của quản trị viên',
-	'LOG_REFERER_INVALID'	=> '<strong>Xác minh Referer thất bại</strong><br />»Referer tên là “<em>%1$s</em>”. Yêu cầu bị từ chối và phiên làm việc bị hủy.',
+	'LOG_REFERER_INVALID'	=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 
 	'ACP_ABBCODES'			=> 'BBcode Box',
 	'LOG_CONFIG_ABBCODES'	=> '<strong>Altered BBCode Box settings</strong>',
@@ -11661,7 +11972,7 @@ $lang = array_merge($lang, array(
 	'SELECT_A_PREFIX'				=> 'Select a prefix',
 	'ACP_SEOQUERYS'					=> 'SEO Queries',
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Tập tin đính kèm',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can list and delete files attached to posts and private messages.',
 	'LOG_ATTACH_DEL'				=> '<strong>Attachments deleted</strong><br />» %s',
 	'LOG_ATTACH_REASSIGNED'			=> '<strong>Attachment reassigned to Post</strong><br />» ID %1$d - %2$s',
 	'TOTAL_SIZE'					=> 'Total size',
@@ -11680,11 +11991,11 @@ $lang = array_merge($lang, array(
 	'ACP_INTRO'				=> 'Intro',
 
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Tập tin đính kèm',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
 	'TOTAL_SIZE'				=> 'Total size',
 	'DOWNLOADS'				=> 'Số lần tải về',
 
-	'NO_AVATAR'				=> 'URL of the avatar for all the have no separate',
+	'NO_AVATAR'				=> 'No avatar selected',
 	'NO_AVATAR_EXPLAIN'			=> 'The optimal size of the avatar is 120x120px, this box is left blank, no picture at all. <br /> Demo URL: http://www.userboard.org/images/no_avatar_1.gif',
 	'GROUP_ICON'				=> 'Group Icon',
 	'GROUP_ICON_EXPLAIN'			=> 'Upload your Group Icons into Upload &#187; Topic/Group Icons',
@@ -12847,6 +13158,97 @@ $lang = array_merge($lang, array(
 	'NO_EMAIL_SUBJECT'		=> 'Bạn chưa nhập tiêu đề cho Email.',
 ));
 
+#######language/en/acp/extensions.php#######
+
+$lang = array_merge($lang, array(
+	'EXTENSION'					=> 'Đuôi tập tin đính kèm',
+	'EXTENSIONS'				=> 'Extensions',
+	'EXTENSIONS_ADMIN'			=> 'Extensions Manager',
+	'EXTENSIONS_EXPLAIN'		=> 'The Extensions Manager is a tool in your phpBB Board which allows you to manage all of your extensions statuses and view information about them.',
+	'EXTENSION_INVALID_LIST'	=> 'The “%s” extension is not valid.<br />%s<br /><br />',
+	'EXTENSION_NOT_AVAILABLE'	=> 'The selected extension is not available for this board, please verify your phpBB and PHP versions are allowed (see the details page).',
+	'EXTENSION_DIR_INVALID'		=> 'The selected extension has an invalid directory structure and cannot be enabled.',
+	'EXTENSION_NOT_ENABLEABLE'	=> 'The selected extension cannot be enabled, please verify the extension’s requirements.',
+
+	'DETAILS'				=> 'Thông tin chi tiết',
+
+	'EXTENSIONS_DISABLED'	=> 'Disabled Extensions',
+	'EXTENSIONS_ENABLED'	=> 'Enabled Extensions',
+
+	'EXTENSION_DELETE_DATA'	=> 'Delete data',
+	'EXTENSION_DISABLE'		=> 'Disable',
+	'EXTENSION_ENABLE'		=> 'Enable',
+
+	'EXTENSION_DELETE_DATA_EXPLAIN'	=> 'Deleting an extension’s data removes all of its data and settings. The extension files are retained so it can be enabled again.',
+	'EXTENSION_DISABLE_EXPLAIN'		=> 'Disabling an extension retains its files, data and settings but removes any functionality added by the extension.',
+	'EXTENSION_ENABLE_EXPLAIN'		=> 'Enabling an extension allows you to use it on your board.',
+
+	'EXTENSION_DELETE_DATA_IN_PROGRESS'	=> 'The extension’s data is currently being deleted. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_DISABLE_IN_PROGRESS'	=> 'The extension is currently being disabled. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_ENABLE_IN_PROGRESS'	=> 'The extension is currently being enabled. Please do not leave or refresh this page until it is completed.',
+
+	'EXTENSION_DELETE_DATA_SUCCESS'	=> 'The extension’s data was deleted successfully',
+	'EXTENSION_DISABLE_SUCCESS'		=> 'The extension was disabled successfully',
+	'EXTENSION_ENABLE_SUCCESS'		=> 'The extension was enabled successfully',
+
+	'EXTENSION_NAME'			=> 'Extension Name',
+	'EXTENSION_ACTIONS'			=> 'Actions',
+	'EXTENSION_OPTIONS'			=> 'Options',
+	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
+	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s files from the filesystem</li>
+			<li>Upload the new files</li>
+			<li>Enable the extension</li>
+		</ol>',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s data</li>
+			<li>Delete the extension’s files from the filesystem</li>
+		</ol>',
+
+	'EXTENSION_DELETE_DATA_CONFIRM'	=> 'Are you sure that you wish to delete the data associated with “%s”?<br /><br />This removes all of its data and settings and cannot be undone!',
+	'EXTENSION_DISABLE_CONFIRM'		=> 'Are you sure that you wish to disable the “%s” extension?',
+	'EXTENSION_ENABLE_CONFIRM'		=> 'Are you sure that you wish to enable the “%s” extension?',
+	'EXTENSION_FORCE_UNSTABLE_CONFIRM'	=> 'Are you sure that you wish to force the use of unstable version?',
+
+	'RETURN_TO_EXTENSION_LIST'	=> 'Return to the extension list',
+
+	'EXT_DETAILS'			=> 'Extension Details',
+	'DISPLAY_NAME'			=> 'Disply Name (may be NULL)',
+	'CLEAN_NAME'			=> 'Clean Name',
+	'TYPE'					=> 'Type',
+	'DESCRIPTION'			=> 'Giới thiệu chuyên mục',
+	'VERSION'				=> 'Phiên bản',
+	'HOMEPAGE'				=> 'Homepage',
+	'PATH'					=> 'File Path',
+	'TIME'					=> 'Thời gian',
+	'LICENSE'				=> 'Licence',
+
+	'REQUIREMENTS'			=> 'Requirements',
+	'PHPBB_VERSION'			=> 'phpBB Version',
+	'PHP_VERSION'			=> 'PHP Version',
+	'AUTHOR_INFORMATION'	=> 'Author Information',
+	'AUTHOR_NAME'			=> 'Name',
+	'AUTHOR_EMAIL'			=> 'Email',
+	'AUTHOR_HOMEPAGE'		=> 'Homepage',
+	'AUTHOR_ROLE'			=> 'Role',
+
+	'NOT_UP_TO_DATE'		=> '%s is not up to date',
+	'UP_TO_DATE'			=> '%s is up to date',
+	'ANNOUNCEMENT_TOPIC'	=> 'Release Announcement',
+	'DOWNLOAD_LATEST'		=> 'Download Version',
+	'NO_VERSIONCHECK'		=> 'No version check information given.',
+
+	'VERSIONCHECK_FORCE_UPDATE_ALL'		=> 'Re-Check all versions',
+	'FORCE_UNSTABLE'					=> 'Always check for unstable versions',
+	'EXTENSIONS_VERSION_CHECK_SETTINGS'	=> 'Version check settings',
+
+	'META_FIELD_NOT_SET'	=> 'Required meta field %s has not been set.',
+	'META_FIELD_INVALID'	=> 'Meta field %s is invalid.',
+));
+
 #######language/en/acp/forums.php#######
 
 $lang = array_merge($lang, array(
@@ -12856,6 +13258,10 @@ $lang = array_merge($lang, array(
 	'AUTO_PRUNE_FREQ_EXPLAIN'	=> 'Số ngày giữa hai lần thực hiện việc dọn dẹp tự động.',
 	'AUTO_PRUNE_VIEWED'			=> 'Số ngày tự động dọn dẹp bài viết sau khi xem',
 	'AUTO_PRUNE_VIEWED_EXPLAIN'	=> 'Nếu chủ đề không có ai xem sau số ngày được thiết lập này thì chủ đề sẽ được tự động gỡ bỏ.',
+	'AUTO_PRUNE_SHADOW_FREQ'	=> 'Auto-prune shadow topics frequency',
+	'AUTO_PRUNE_SHADOW_DAYS'	=> 'Auto-prune shadow topics age',
+	'AUTO_PRUNE_SHADOW_DAYS_EXPLAIN'	=> 'Number of days after which shadow topic is removed.',
+	'AUTO_PRUNE_SHADOW_FREQ_EXPLAIN'	=> 'Time in days between pruning events.',
 
 	'CONTINUE'						=> 'Tiếp tục',
 	'COPY_PERMISSIONS_EXPLAIN'		=> 'Để thuận tiện hơn trong việc thiết lập các chuyên mục, bạn có thể chép cấp phép cho chuyên mục từ một chuyên mục khác.',
@@ -12914,6 +13320,8 @@ $lang = array_merge($lang, array(
 	'FORUM_PASSWORD_OLD'				=> 'Mật khẩu của chuyên mục dùng cơ chế quá cũ và cần được thay đổi.',
 	'FORUM_PASSWORD_MISMATCH'			=> 'Mật khẩu của chuyên mục bạn vừa nhập không phù hợp.',
 	'FORUM_PRUNE_SETTINGS'				=> 'Thiết lập dọn dẹp chuyên mục',
+	'FORUM_PRUNE_SHADOW'				=> 'Enable auto-pruning of shadow topics',
+	'FORUM_PRUNE_SHADOW_EXPLAIN'			=> 'Prunes the forum of shadow topics, set the frequency/age parameters below.',
 	'FORUM_RESYNCED'					=> 'Chuyên mục <strong>%s</strong> đã được đồng bộ thành công.',
 	'FORUM_RULES_EXPLAIN'				=> 'Nội quy chuyên mục được hiển thị trong bất cứ trang nào của chuyên mục đó.',
 	'FORUM_RULES_LINK'					=> 'Bấm vào đây để xem nội quy của chuyên mục này',
@@ -13005,6 +13413,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE_EXPLAIN'		=> 'Với công cụ này, bạn có thể quản lý tất cả nhóm trong hệ thống. Bạn có thể xoá, tạo mới hay chỉnh sửa những nhóm hiện có. Ngoài ra, bạn cũng có thể chọn ra người lãnh đạo nhóm, thay đổi loại nhóm tự do/ẩn/cố định cũng như cập nhật tên nhóm và giới thiệu về nhóm.',
+	'ADD_GROUP_CATEGORY'			=> 'Add category',
 	'GROUP_ADD_USERS'				=> 'Thêm thành viên',
 	'ADD_USERS_EXPLAIN'				=> 'Với công cụ này, bạn có thể thêm những thành viên mới cho nhóm. Bạn cũng có thể thay đổi nhóm mặc định cho các thành viên được chọn. Ngoài ra, bạn cũng có thể xác định thành viên trở thành người lãnh đạo của nhóm. Hãy nhập mỗi tên thành viên trên một dòng xác định.',
 
@@ -13018,11 +13427,10 @@ $lang = array_merge($lang, array(
 	'GROUP_APPROVED'				=> 'Thành viên được chấp nhận',
 	'GROUP_AVATAR'					=> 'Hình đại diện của nhóm',
 	'GROUP_AVATAR_EXPLAIN'			=> 'Hình ảnh được hiển thị trong bảng quản lý của nhóm.',
+	'GROUP_CATEGORY_NAME'			=> 'Category name',
 	'GROUP_CLOSED'					=> 'Nhóm đã cố định',
 	'GROUP_COLOR'					=> 'Màu nhóm',
 	'GROUP_COLOR_EXPLAIN'			=> 'Xác định màu phân biệt cho tên thành viên của các thành viên trong nhóm, để trống để sử dụng màu mặc định dành cho thành viên.',
-	'GROUP_CONFIRM_ADD_USER'		=> 'Bạn có chắc chắn muốn thêm thành viên “%1$s” vào nhóm này?',
-	'GROUP_CONFIRM_ADD_USERS'		=> 'Bạn có chắc chắn muốn thêm những thành viên “%1$s” vào nhóm này?',
 	'GROUP_CREATED'					=> 'Nhóm đã được tạo thành công.',
 	'GROUP_DEFAULT'					=> 'Chọn làm nhóm mặc định của thành viên',
 	'GROUP_DEFS_UPDATED'			=> 'Nhóm mặc định thiết lập cho tất cả thành viên đã chọn.',
@@ -13064,6 +13472,8 @@ $lang = array_merge($lang, array(
 	'GROUP_SETTINGS_SAVE'			=> 'Thiết lập của nhóm',
 	'GROUP_SKIP_AUTH'				=> 'Miễn xét đối với trưởng nhóm',
 	'GROUP_SKIP_AUTH_EXPLAIN'		=> 'Nếu chọn thì trưởng nhóm không kế thừa các xét quyền trên nhóm.',
+	'GROUP_SPECIAL'					=> 'Pre-defined',
+	'GROUP_TEAMPAGE'				=> 'Display group on teampage',
 	'GROUP_TYPE'					=> 'Loại nhóm',
 	'GROUP_TYPE_EXPLAIN'			=> 'Chọn loại nhóm cho phép các thành viên tham gia vào nhóm hay xem thông tin về nhóm.',
 	'GROUP_UPDATED'					=> 'Thiết lập của nhóm đã được cập nhật thành công.',
@@ -13072,19 +13482,37 @@ $lang = array_merge($lang, array(
 	'GROUP_USERS_EXIST'				=> 'Thành viên bạn vừa chọn đã là thành viên của nhóm.',
 	'GROUP_USERS_REMOVE'			=> 'Thành viên đã được gỡ bỏ khỏi nhóm và những thiết lập mặc định đã được chọn thành công.',
 
+	'LEGEND_EXPLAIN'				=> 'These are the groups which are displayed in the group legend:',
+	'LEGEND_SETTINGS'				=> 'Legend settings',
+	'LEGEND_SORT_GROUPNAME'			=> 'Sort legend by group name',
+	'LEGEND_SORT_GROUPNAME_EXPLAIN'	=> 'The order below is ignored when this option is enabled.',
+
+	'MANAGE_LEGEND'			=> 'Manage group legend',
+	'MANAGE_TEAMPAGE'		=> 'Manage teampage',
 	'MAKE_DEFAULT_FOR_ALL'		=> 'Chọn làm nhóm mặc định cho tất cả thành viên',
 	'MEMBERS'					=> 'Thành viên',
 
 	'NO_GROUP'					=> 'Nhóm bạn vừa yêu cầu không tồn tại.',
+	'NO_GROUPS_ADDED'			=> 'No groups added yet.',
 	'NO_GROUPS_CREATED'			=> 'Chưa có nhóm nào được tạo.',
 	'NO_PERMISSIONS'			=> 'Đừng sao chép cấp phép',
 	'NO_USERS'					=> 'Những thành viên bạn vừa yêu cầu không tồn tại.',
 	'NO_USERS_ADDED'			=> 'Không có thành viên nào được thêm vào nhóm.',
 	'NO_VALID_USERS'			=> 'Bạn chưa nhập vào thành viên hợp lệ nào cho hành động này.',
 
+	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> 'Nhóm đặc biệt',
 	'SPECIAL_GROUPS_EXPLAIN'	=> 'Có một vài loại nhóm đặc biệt khác hẳn với các nhóm còn lại, những nhóm này không thể xoá cũng như chỉnh sửa trực tiếp được. Tuy nhiên, bạn vẫn có thể thêm thành viên mới vào những nhóm này và thay đổi những thiết lập đơn giản.',
 
+	'TEAMPAGE'					=> 'Teampage',
+	'TEAMPAGE_DISP_ALL'			=> 'All memberships',
+	'TEAMPAGE_DISP_DEFAULT'		=> 'User’s default group only',
+	'TEAMPAGE_DISP_FIRST'		=> 'First membership only',
+	'TEAMPAGE_EXPLAIN'			=> 'These are the groups which are displayed on the teampage:',
+	'TEAMPAGE_FORUMS'			=> 'Display moderated forums',
+	'TEAMPAGE_FORUMS_EXPLAIN'	=> 'If set to yes, moderators will have a list with all of the forums where they have moderator permissions displayed in their row. This can be very database intensive for big boards.',
+	'TEAMPAGE_MEMBERSHIPS'		=> 'Display user memberships',
+	'TEAMPAGE_SETTINGS'			=> 'Teampage settings',
 	'TOTAL_MEMBERS'				=> 'Tổng số thành viên',
 
 	'USERS_APPROVED'				=> 'Thành viên đã được chấp nhận thành công.',
@@ -13470,26 +13898,14 @@ $lang = array_merge($lang, array(
 	'ACP_FILES'						=> 'Tập tin ngôn ngữ dùng trong bảng điều khiển của quản trị viên',
 	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> 'Bảng điều khiển này sẽ giúp bạn cài đặt hoặc gỡ bỏ các gói ngôn ngữ trong hệ thống.',
 
-	'EMAIL_FILES'			=> 'Tập tin ngôn ngữ dùng trong Email',
-
-	'FILE_CONTENTS'				=> 'Nội dung tập tin',
-	'FILE_FROM_STORAGE'			=> 'Tập tin từ thư mục lưu trữ',
-
-	'HELP_FILES'				=> 'Tập tin ngôn ngữ dùng trong trợ giúp',
-
-	'INSTALLED_LANGUAGE_PACKS'	=> 'Những gói ngôn ngữ đã cài đặt',
-	'INVALID_LANGUAGE_PACK'		=> 'Gói ngôn ngữ bạn vừa chọn dường như không hợp lệ. Hãy kiểm tra lại gói ngôn ngữ này và tải lên lại lần nữa nếu cần thiết.',
-	'INVALID_UPLOAD_METHOD'		=> 'Phương pháp tải lên bạn vừa chọn không hợp lệ. Hãy vui lòng chọn phương pháp tải lên khác.',
+	'DELETE_LANGUAGE_CONFIRM'		=> 'Are you sure you wish to delete “%s”?',
+	'INSTALLED_LANGUAGE_PACKS'		=> 'Những gói ngôn ngữ đã cài đặt',
 
 	'LANGUAGE_DETAILS_UPDATED'			=> 'Thông tin chi tiết về gói ngôn ngữ đã được cập nhật thành công.',
-	'LANGUAGE_ENTRIES'					=> 'Mục từ ngôn ngữ',
-	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Công cụ này sẽ giúp bạn thay đổi nội dung các mục từ hiện có trong gói ngôn ngữ hoặc những mục từ chưa được phiên dịch hoàn chỉnh.<br /><strong>Lưu ý:</strong> Khi bạn thay đổi các tập tin ngôn ngữ, những thay đổi sẽ được lưu trữ trong một thư mục xác định của hệ thống để bạn tải về. Những thành viên khác trong hệ thống sẽ không nhận ra những thay đổi trong gói ngôn ngữ cho đến khi bạn thay thế những tập tin ngôn ngữ gốc bằng các tập tin này trên máy chủ bằng cách tự tải chúng lên.',
-	'LANGUAGE_FILES'					=> 'Tập tin ngôn ngữ',
-	'LANGUAGE_KEY'						=> 'Khóa ngôn ngữ',
 	'LANGUAGE_PACK_ALREADY_INSTALLED'	=> 'Gói ngôn ngữ này đã được cài đặt.',
-	'LANGUAGE_PACK_DELETED'				=> 'Gói ngôn ngữ <strong>%s</strong> đã được gỡ bỏ thành công. Tất cả thành viên đang sử dụng gói ngôn ngữ này sẽ được tự động thay bằng gói ngôn ngữ mặc định của hệ thống.',
+	'LANGUAGE_PACK_DELETED'				=> 'The language pack “%s” has been removed successfully. All users using this language have been reset to the board’s default language.',
 	'LANGUAGE_PACK_DETAILS'				=> 'Thông tin chi tiết về gói ngôn ngữ',
-	'LANGUAGE_PACK_INSTALLED'			=> 'Gói ngôn ngữ <strong>%s</strong> đã được cài đặt thành công.',
+	'LANGUAGE_PACK_INSTALLED'			=> 'The language pack “%s” has been successfully installed.',
 	'LANGUAGE_PACK_CPF_UPDATE'			=> 'Chuỗi ngôn ngữ của các trường tùy biến đã được xao chép từ gói ngôn ngữ mặc định. Hãy thay đổi chúng nếu cần.',
 	'LANGUAGE_PACK_ISO'					=> 'Mã ISO của gói ngôn ngữ',
 	'LANGUAGE_PACK_LOCALNAME'			=> 'Tên hệ thống',
@@ -13502,33 +13918,44 @@ $lang = array_merge($lang, array(
 	'LANG_ISO_CODE'						=> 'Mã ISO',
 	'LANG_LOCAL_NAME'					=> 'Tên hệ thống',
 
-	'MISSING_LANGUAGE_FILE'		=> 'Tập tin ngôn ngữ bị thiếu: <strong style="color:red">%s</strong>',
+	'MISSING_LANG_FILES'		=> 'Missing language files',
 	'MISSING_LANG_VARIABLES'	=> 'Những biến ngôn ngữ bị thiếu',
-	'MODS_FILES'				=> 'Tập tin ngôn ngữ dùng trong các gói MOD',
 
 	'NO_FILE_SELECTED'				=> 'Bạn chưa xác định một tập tin ngôn ngữ.',
 	'NO_LANG_ID'					=> 'Bạn chưa xác định gói ngôn ngữ.',
-	'NO_REMOVE_DEFAULT_LANG'		=> 'Bạn không thể gõ bỏ gói ngôn ngữ mặc định.<br />Nếu bạn muốn gõ bỏ gói ngôn ngữ này, trước hết hãy thay đổi ngôn ngữ mặc định của hệ thống.',
+	'NO_REMOVE_DEFAULT_LANG'		=> 'You are not able to remove the default language pack.<br />If you want to remove this language pack, change your board’s default language first.',
 	'NO_UNINSTALLED_LANGUAGE_PACKS'	=> 'Không có gói ngôn ngữ nào được gỡ bỏ',
 
-	'REMOVE_FROM_STORAGE_FOLDER'		=> 'Gỡ bỏ từ thư mục lưu trữ',
-
-	'SELECT_DOWNLOAD_FORMAT'	=> 'Chọn định dạng tập tin tải về',
-	'SUBMIT_AND_DOWNLOAD'		=> 'Chấp nhận và tải về tập tin',
-	'SUBMIT_AND_UPLOAD'			=> 'Chấp nhận và tải lên tập tin',
-
-	'THOSE_MISSING_LANG_FILES'			=> 'Những tập tin ngôn ngữ dưới đây bị thiếu trong gói ngôn ngữ <strong>%s</strong>',
-	'THOSE_MISSING_LANG_VARIABLES'		=> 'Những biến ngôn ngữ dưới đây bị thiếu trong gói ngôn ngữ <strong>%s</strong>',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 
 	'UNINSTALLED_LANGUAGE_PACKS'	=> 'Những gói ngôn ngữ đã gỡ bỏ',
 
+	// 3.0.12
+	'EMAIL_FILES'			=> 'Tập tin ngôn ngữ dùng trong Email',
+	'FILE_CONTENTS'				=> 'Nội dung tập tin',
+	'FILE_FROM_STORAGE'			=> 'Tập tin từ thư mục lưu trữ',
+	'HELP_FILES'				=> 'Tập tin ngôn ngữ dùng trong trợ giúp',
+	'INSTALLED_LANGUAGE_PACKS'	=> 'Những gói ngôn ngữ đã cài đặt',
+	'INVALID_LANGUAGE_PACK'		=> 'Gói ngôn ngữ bạn vừa chọn dường như không hợp lệ. Hãy kiểm tra lại gói ngôn ngữ này và tải lên lại lần nữa nếu cần thiết.',
+	'INVALID_UPLOAD_METHOD'		=> 'Phương pháp tải lên bạn vừa chọn không hợp lệ. Hãy vui lòng chọn phương pháp tải lên khác.',
+	'LANGUAGE_ENTRIES'					=> 'Mục từ ngôn ngữ',
+	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Công cụ này sẽ giúp bạn thay đổi nội dung các mục từ hiện có trong gói ngôn ngữ hoặc những mục từ chưa được phiên dịch hoàn chỉnh.<br /><strong>Lưu ý:</strong> Khi bạn thay đổi các tập tin ngôn ngữ, những thay đổi sẽ được lưu trữ trong một thư mục xác định của hệ thống để bạn tải về. Những thành viên khác trong hệ thống sẽ không nhận ra những thay đổi trong gói ngôn ngữ cho đến khi bạn thay thế những tập tin ngôn ngữ gốc bằng các tập tin này trên máy chủ bằng cách tự tải chúng lên.',
+	'LANGUAGE_FILES'					=> 'Tập tin ngôn ngữ',
+	'LANGUAGE_KEY'						=> 'Khóa ngôn ngữ',
+	'MISSING_LANGUAGE_FILE'		=> 'Tập tin ngôn ngữ bị thiếu: <strong style="color:red">%s</strong>',
+	'SELECT_DOWNLOAD_FORMAT'	=> 'Chọn định dạng tập tin tải về',
+	'SUBMIT_AND_DOWNLOAD'		=> 'Chấp nhận và tải về tập tin',
+	'SUBMIT_AND_UPLOAD'			=> 'Chấp nhận và tải lên tập tin',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 	'UNABLE_TO_WRITE_FILE'		=> 'Tập tin không thể ghi đến %s.',
 	'UPLOAD_COMPLETED'			=> 'Quá trình tải lên đã hoàn tất.',
 	'UPLOAD_FAILED'				=> 'Quá trình tải lên đã thất bại mà không rõ nguyên nhân. Bạn có thể cần phải tự mình thay thế tập tin ngôn ngữ có liên quan.',
 	'UPLOAD_METHOD'				=> 'Phương pháp tải lên',
 	'UPLOAD_SETTINGS'			=> 'Thiết lập tải lên',
-
 	'WRONG_LANGUAGE_FILE'		=> 'Tập tin ngôn ngữ bạn vừa chọn không hợp lệ.',
+	// 3.0.12
 ));
 
 #######language/en/acp/lexicon.php#######
@@ -13861,6 +14288,171 @@ $lang = array_merge($lang, array(
 	'ROLE_DESCRIPTION_ADMIN_FOOTBALL'	=> 'Can edit final match results.',
 ));
 
+#######language/en/acp/permissions_phpbb.php#######
+
+$lang = array_merge($lang, array(
+	'ACL_CAT_ACTIONS'		=> 'Actions',
+	'ACL_CAT_CONTENT'		=> 'Content',
+	'ACL_CAT_FORUMS'		=> 'Forums',
+	'ACL_CAT_MISC'			=> 'Misc',
+	'ACL_CAT_PERMISSIONS'	=> 'Permissions',
+	'ACL_CAT_PM'			=> 'Private messages',
+	'ACL_CAT_POLLS'			=> 'Polls',
+	'ACL_CAT_POST'			=> 'Post',
+	'ACL_CAT_POST_ACTIONS'	=> 'Post actions',
+	'ACL_CAT_POSTING'		=> 'Posting',
+	'ACL_CAT_PROFILE'		=> 'Profile',
+	'ACL_CAT_SETTINGS'		=> 'Settings',
+	'ACL_CAT_TOPIC_ACTIONS'	=> 'Topic actions',
+	'ACL_CAT_USER_GROUP'	=> 'Users &amp; Groups',
+));
+
+// User Permissions
+$lang = array_merge($lang, array(
+	'ACL_U_VIEWPROFILE'	=> 'Can view profiles, memberlist and online list',
+	'ACL_U_CHGNAME'		=> 'Can change username',
+	'ACL_U_CHGPASSWD'	=> 'Can change password',
+	'ACL_U_CHGEMAIL'	=> 'Can change email address',
+	'ACL_U_CHGAVATAR'	=> 'Can change avatar',
+	'ACL_U_CHGGRP'		=> 'Can change default usergroup',
+	'ACL_U_CHGPROFILEINFO'	=> 'Can change profile field information',
+
+	'ACL_U_ATTACH'		=> 'Can attach files',
+	'ACL_U_DOWNLOAD'	=> 'Can download files',
+	'ACL_U_SAVEDRAFTS'	=> 'Can save drafts',
+	'ACL_U_CHGCENSORS'	=> 'Can disable word censors',
+	'ACL_U_SIG'			=> 'Can use signature',
+
+	'ACL_U_SENDPM'		=> 'Can send private messages',
+	'ACL_U_MASSPM'		=> 'Can send messages to multiple users',
+	'ACL_U_MASSPM_GROUP'=> 'Can send messages to groups',
+	'ACL_U_READPM'		=> 'Can read private messages',
+	'ACL_U_PM_EDIT'		=> 'Can edit own private messages',
+	'ACL_U_PM_DELETE'	=> 'Can remove private messages from own folder',
+	'ACL_U_PM_FORWARD'	=> 'Can forward private messages',
+	'ACL_U_PM_EMAILPM'	=> 'Can email private messages',
+	'ACL_U_PM_PRINTPM'	=> 'Can print private messages',
+	'ACL_U_PM_ATTACH'	=> 'Can attach files in private messages',
+	'ACL_U_PM_DOWNLOAD'	=> 'Can download files in private messages',
+	'ACL_U_PM_BBCODE'	=> 'Can use BBCode in private messages',
+	'ACL_U_PM_SMILIES'	=> 'Can use smilies in private messages',
+	'ACL_U_PM_IMG'		=> 'Can use [img] BBCode tag in private messages',
+	'ACL_U_PM_FLASH'	=> 'Can use [flash] BBCode tag in private messages',
+
+	'ACL_U_SENDEMAIL'	=> 'Can send emails',
+	'ACL_U_SENDIM'		=> 'Can send instant messages',
+	'ACL_U_IGNOREFLOOD'	=> 'Can ignore flood limit',
+	'ACL_U_HIDEONLINE'	=> 'Can hide online status',
+	'ACL_U_VIEWONLINE'	=> 'Can view hidden online users',
+	'ACL_U_SEARCH'		=> 'Can search board',
+));
+
+// Forum Permissions
+$lang = array_merge($lang, array(
+	'ACL_F_LIST'		=> 'Can see forum',
+	'ACL_F_READ'		=> 'Can read forum',
+	'ACL_F_SEARCH'		=> 'Can search the forum',
+	'ACL_F_SUBSCRIBE'	=> 'Can subscribe forum',
+	'ACL_F_PRINT'		=> 'Can print topics',
+	'ACL_F_EMAIL'		=> 'Can email topics',
+	'ACL_F_BUMP'		=> 'Can bump topics',
+	'ACL_F_USER_LOCK'	=> 'Can lock own topics',
+	'ACL_F_DOWNLOAD'	=> 'Can download files',
+	'ACL_F_REPORT'		=> 'Can report posts',
+
+	'ACL_F_POST'		=> 'Can start new topics',
+	'ACL_F_STICKY'		=> 'Can post stickies',
+	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_REPLY'		=> 'Can reply to topics',
+	'ACL_F_EDIT'		=> 'Can edit own posts',
+	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
+	'ACL_F_SOFTDELETE'	=> 'Can soft delete own posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_F_IGNOREFLOOD' => 'Can ignore flood limit',
+	'ACL_F_POSTCOUNT'	=> 'Increment post counter<br /><em>Please note that this setting only affects new posts.</em>',
+	'ACL_F_NOAPPROVE'	=> 'Can post without approval',
+
+	'ACL_F_ATTACH'		=> 'Can attach files',
+	'ACL_F_ICONS'		=> 'Can use topic/post icons',
+	'ACL_F_BBCODE'		=> 'Can use BBCode',
+	'ACL_F_FLASH'		=> 'Can use [flash] BBCode tag',
+	'ACL_F_IMG'			=> 'Can use [img] BBCode tag',
+	'ACL_F_SIGS'		=> 'Can use signatures',
+	'ACL_F_SMILIES'		=> 'Can use smilies',
+
+	'ACL_F_POLL'		=> 'Can create polls',
+	'ACL_F_VOTE'		=> 'Can vote in polls',
+	'ACL_F_VOTECHG'		=> 'Can change existing vote',
+));
+
+// Moderator Permissions
+$lang = array_merge($lang, array(
+	'ACL_M_EDIT'		=> 'Can edit posts',
+	'ACL_M_DELETE'		=> 'Can permanently delete posts',
+	'ACL_M_SOFTDELETE'	=> 'Can soft delete posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_M_APPROVE'		=> 'Can approve and restore posts',
+	'ACL_M_REPORT'		=> 'Can close and delete reports',
+	'ACL_M_CHGPOSTER'	=> 'Can change post author',
+
+	'ACL_M_MOVE'	=> 'Can move topics',
+	'ACL_M_LOCK'	=> 'Can lock topics',
+	'ACL_M_SPLIT'	=> 'Can split topics',
+	'ACL_M_MERGE'	=> 'Can merge topics',
+
+	'ACL_M_INFO'	=> 'Can view post details',
+	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+));
+
+// Admin Permissions
+$lang = array_merge($lang, array(
+	'ACL_A_BOARD'		=> 'Can alter board settings/check for updates',
+	'ACL_A_SERVER'		=> 'Can alter server/communication settings',
+	'ACL_A_JABBER'		=> 'Can alter Jabber settings',
+	'ACL_A_PHPINFO'		=> 'Can view php settings',
+
+	'ACL_A_FORUM'		=> 'Can manage forums',
+	'ACL_A_FORUMADD'	=> 'Can add new forums',
+	'ACL_A_FORUMDEL'	=> 'Can delete forums',
+	'ACL_A_PRUNE'		=> 'Can prune forums',
+
+	'ACL_A_ICONS'		=> 'Can alter topic/post icons and smilies',
+	'ACL_A_WORDS'		=> 'Can alter word censors',
+	'ACL_A_BBCODE'		=> 'Can define BBCode tags',
+	'ACL_A_ATTACH'		=> 'Can alter attachment related settings',
+
+	'ACL_A_USER'		=> 'Can manage users<br /><em>This also includes seeing the users browser agent within the viewonline list.</em>',
+	'ACL_A_USERDEL'		=> 'Can delete/prune users',
+	'ACL_A_GROUP'		=> 'Can manage groups',
+	'ACL_A_GROUPADD'	=> 'Can add new groups',
+	'ACL_A_GROUPDEL'	=> 'Can delete groups',
+	'ACL_A_RANKS'		=> 'Can manage ranks',
+	'ACL_A_PROFILE'		=> 'Can manage custom profile fields',
+	'ACL_A_NAMES'		=> 'Can manage disallowed names',
+	'ACL_A_BAN'			=> 'Can manage bans',
+
+	'ACL_A_VIEWAUTH'	=> 'Can view permission masks',
+	'ACL_A_AUTHGROUPS'	=> 'Can alter permissions for individual groups',
+	'ACL_A_AUTHUSERS'	=> 'Can alter permissions for individual users',
+	'ACL_A_FAUTH'		=> 'Can alter forum permission class',
+	'ACL_A_MAUTH'		=> 'Can alter moderator permission class',
+	'ACL_A_AAUTH'		=> 'Can alter admin permission class',
+	'ACL_A_UAUTH'		=> 'Can alter user permission class',
+	'ACL_A_ROLES'		=> 'Can manage roles',
+	'ACL_A_SWITCHPERM'	=> 'Can use others permissions',
+
+	'ACL_A_STYLES'		=> 'Can manage styles',
+	'ACL_A_EXTENSIONS'	=> 'Can manage extensions',
+	'ACL_A_VIEWLOGS'	=> 'Can view logs',
+	'ACL_A_CLEARLOGS'	=> 'Can clear logs',
+	'ACL_A_MODULES'		=> 'Can manage modules',
+	'ACL_A_LANGUAGE'	=> 'Can manage language packs',
+	'ACL_A_EMAIL'		=> 'Can send mass email',
+	'ACL_A_BOTS'		=> 'Can manage bots',
+	'ACL_A_REASONS'		=> 'Can manage report/denial reasons',
+	'ACL_A_BACKUP'		=> 'Can backup/restore database',
+	'ACL_A_SEARCH'		=> 'Can manage search backends and settings',
+));
+
 #######language/en/acp/phpbb_seo.php#######
 
 $lang = array_merge($lang, array(
@@ -14032,6 +14624,7 @@ $lang = array_merge($lang, array(
 
 	'BBCODE_ADDED'				=> 'Thẻ BBCode đã được tạo thành công.',
 	'BBCODE_EDITED'				=> 'Thẻ BBCode đã được chỉnh sửa thành công.',
+	'BBCODE_DELETED'			=> 'The BBCode has been removed successfully.',
 	'BBCODE_NOT_EXIST'			=> 'Thẻ BBCode bạn vừa chọn không tồn tại.',
 	'BBCODE_HELPLINE'			=> 'Hướng dẫn sử dụng thẻ BBCode',
 	'BBCODE_HELPLINE_EXPLAIN'	=> 'Mục thông tin hướng dẫn sử dụng này sẽ được hiển thị khi rê chuột lên thẻ BBCode tương ứng trong phần soạn bài viết.',
@@ -14087,17 +14680,10 @@ $lang = array_merge($lang, array(
 	'EXPORT_SMILIES'			=> 'Xuất và tải về <samp>smilies.pak</samp>',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sBằng cách bấm vào liên kết này, các giá trị cấu hình cho những biểu tượng vui đã cài đặt của bạn sẽ được đóng gói lại thành tập tin <samp>smilies.pak</samp> để bạn sau khi tải về có thể sử dụng để tạo ra tập tin nén <samp>.zip</samp> hay <samp>.tgz</samp> chứa tất cả các biểu tượng vui của bạn có trong tập tin cấu hình <samp>smilies.pak</samp>%s.',
 
-
 	'ICONS_ADD'				=> 'Thêm biểu tượng bài viết mới',
-	'ICONS_NONE_ADDED'		=> 'Không có biểu tượng bài viết nào được thêm vào.',
-	'ICONS_ONE_ADDED'		=> 'Biểu tượng bài viết đã được thêm vào thành công.',
-	'ICONS_ADDED'			=> 'Những biểu tượng bài viết đã được thêm vào thành công.',
 	'ICONS_CONFIG'			=> 'Cấu hình biểu tượng bài viết',
 	'ICONS_DELETED'			=> 'Biểu tượng bài viết đã được gỡ bỏ thành công.',
 	'ICONS_EDIT'			=> 'Sửa biểu tượng bài viết',
-	'ICONS_ONE_EDITED'		=> 'Biểu tượng bài viết đã được cập nhật thành công.',
-	'ICONS_NONE_EDITED'		=> 'Không có biểu tượng bài viết nào được cập nhật.',
-	'ICONS_EDITED'			=> 'Những biểu tượng bài viết đã được cập nhật thành công.',
 	'ICONS_HEIGHT'			=> 'Chiều cao',
 	'ICONS_IMAGE'			=> 'Hình dùng làm biểu tượng bài viết',
 	'ICONS_IMPORTED'		=> 'Gói biểu tượng bài viết đã được cài đặt thành công.',
@@ -14127,9 +14713,6 @@ $lang = array_merge($lang, array(
 
 	'SELECT_PACKAGE'			=> 'Chọn một gói biểu tượng',
 	'SMILIES_ADD'				=> 'Thêm biểu tượng vui mới',
-	'SMILIES_NONE_ADDED'		=> 'Không có biểu tượng vui nào được thêm vào.',
-	'SMILIES_ONE_ADDED'			=> 'Biểu tượng vui đã được thêm vào thành công.',
-	'SMILIES_ADDED'				=> 'Những biểu tượng vui đã được thêm vào thành công.',
 	'SMILIES_CODE'				=> 'Mã nhập',
 	'SMILIES_CONFIG'			=> 'Cấu hình biểu tượng vui',
 	'SMILIES_DELETED'			=> 'Biểu tượng vui đã được gỡ bỏ thành công.',
@@ -14137,9 +14720,6 @@ $lang = array_merge($lang, array(
 	'SMILIE_NO_CODE'			=> 'Biểu tượng cảm “%s” đã bị bỏ qua, vì không có mã được nhập vào.',
 	'SMILIE_NO_EMOTION'			=> 'Biểu tượng cảm “%s” đã bị bỏ qua, vì không có thiếu dữ liệu nhập vào.',
 	'SMILIE_NO_FILE'			=> 'Biểu tượng cảm “%s” đã bị bỏ qua, vì tập tin tương ứng không tìm thấy.',
-	'SMILIES_NONE_EDITED'		=> 'Không có biểu tượng vui nào được cập nhật.',
-	'SMILIES_ONE_EDITED'		=> 'Biểu tượng vui đã được cập nhật thành công.',
-	'SMILIES_EDITED'			=> 'Những biểu tượng vui đã được cập nhật thành công.',
 	'SMILIES_EMOTION'			=> 'Cảm xúc',
 	'SMILIES_HEIGHT'			=> 'Chiều cao',
 	'SMILIES_IMAGE'				=> 'Hình dùng làm biểu tượng vui',
@@ -14151,7 +14731,6 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'Hình biểu tượng vui',
 	'SMILIES_WIDTH'				=> 'Chiều rộng',
 
-	'TOO_MANY_SMILIES'		=> 'Bài viết của bạn sử dụng quá nhiều hình biểu tượng vui. Số lượng hình biểu tượng vui tối đa cho phép sử dụng trong mỗi bài viết là <strong>%d</strong> hình.',
 	'WRONG_PAK_TYPE'		=> 'Gói biểu tượng bạn vừa chọn không chứa dữ liệu thích hợp.',
 ));
 
@@ -14249,8 +14828,11 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ADDED_PROFILE_FIELD'	=> 'Mục thông tin cá nhân mới đã được thêm vào thành công.',
+	'ALPHA_DOTS'			=> 'Alphanumeric and dots (periods)',
 	'ALPHA_ONLY'			=> 'Chỉ sử dụng chữ số và chữ cái',
 	'ALPHA_SPACERS'			=> 'Chỉ sử dụng chữ số, chữ cái và khoảng trắng',
+	'ALPHA_UNDERSCORE'		=> 'Alphanumeric and underscores',
+	'ALPHA_PUNCTUATION'		=> 'Alphanumeric with comma, dots, underscore and dashes beginning with a letter',
 	'ALWAYS_TODAY'			=> 'Sử dụng ngày tháng hiện tại',
 
 	'BOOL_ENTRIES_EXPLAIN'	=> 'Nhập vào tuỳ chọn của bạn',
@@ -14277,6 +14859,10 @@ $lang = array_merge($lang, array(
 	'DISPLAY_AT_PROFILE_EXPLAIN'	=> 'Cho phép thành viên có thể thay đổi mục thông tin cá nhân này trong bảng điều khiển của mình.',
 	'DISPLAY_AT_REGISTER'			=> 'Hiển thị trong phần đăng ký thành viên mới',
 	'DISPLAY_AT_REGISTER_EXPLAIN'	=> 'Nếu tuỳ chọn này được bật, mục thông tin cá nhân sẽ được thêm vào trong phần đăng ký thành viên và có thể thay đổi sau này trong bảng điều khiển của thành viên.',
+	'DISPLAY_ON_MEMBERLIST'			=> 'Display on memberlist screen',
+	'DISPLAY_ON_MEMBERLIST_EXPLAIN'	=> 'If this option is enabled, the field will be displayed in the user rows on the memberlist screen.',
+	'DISPLAY_ON_PM'					=> 'Display on view private message screen',
+	'DISPLAY_ON_PM_EXPLAIN'			=> 'If this option is enabled, the field will be displayed in the mini-profile on the private message screen.',
 	'DISPLAY_ON_VT'					=> 'Hiển thị lên giao diện xem chủ đề',
 	'DISPLAY_ON_VT_EXPLAIN'			=> 'Nếu chọn thiết đặt này, trường dữ liệu sẽ được đưa hiển thị lên mini-profile trong giao diện xem chủ đề.',
 	'DISPLAY_PROFILE_FIELD'			=> 'Hiển thị mục thông tin cá nhân',
@@ -14290,20 +14876,26 @@ $lang = array_merge($lang, array(
 	'EVERYTHING_OK'					=> 'Mọi thứ đều bình thường',
 
 	'FIELD_BOOL'				=> 'Toán tử chỉ hai lựa chọn (có/không)',
+	'FIELD_CONTACT_DESC'		=> 'Contact description',
+	'FIELD_CONTACT_URL'			=> 'Contact link',
 	'FIELD_DATE'				=> 'Ngày tháng',
 	'FIELD_DESCRIPTION'			=> 'Giới thiệu mục thông tin cá nhân',
 	'FIELD_DESCRIPTION_EXPLAIN'	=> 'Giới thiệu về mục thông tin cá nhân này hiển thị cho thành viên.',
 	'FIELD_DROPDOWN'			=> 'Danh sách chọn thả xuống',
+	'FIELD_GOOGLEPLUS'			=> 'Google+',
 	'FIELD_IDENT'				=> 'Tên mục thông tin cá nhân',
 	'FIELD_IDENT_ALREADY_EXIST'	=> 'Tên mục thông tin cá nhân bạn vừa chọn đã có sẵn. Hãy vui lòng chọn một tên khác.',
 	'FIELD_IDENT_EXPLAIN'		=> 'Tên mục thông tin cá nhân là tên xác định mục thông tin cá nhân trong cơ sở dữ liệu và trong các tập tin khuôn mẫu.',
 	'FIELD_INT'					=> 'Chữ số',
+	'FIELD_IS_CONTACT'			=> 'Display field as a contact field',
+	'FIELD_IS_CONTACT_EXPLAIN'	=> 'Contact fields are displayed within the contact section of the user profile and are displayed differently in the mini profile next to posts and private messages. You can use <samp>%s</samp> as a placeholder variable which will be replaced by a value provided by the user.',
 	'FIELD_LENGTH'				=> 'Độ dài khung nhập',
 	'FIELD_NOT_FOUND'			=> 'Không tìm thấy mục thông tin cá nhân.',
 	'FIELD_STRING'				=> 'Trường văn bản đơn',
 	'FIELD_TEXT'				=> 'Khung nhập văn bản',
 	'FIELD_TYPE'				=> 'Loại mục thông tin cá nhân',
 	'FIELD_TYPE_EXPLAIN'		=> 'Bạn không thể thay đổi loại mục thông tin cá nhân sau này.',
+	'FIELD_URL'					=> 'URL (Link)',
 	'FIELD_VALIDATION'			=> 'Kiểm tra mục thông tin cá nhân',
 	'FIRST_OPTION'				=> 'Tuỳ chọn đầu tiên',
 
@@ -14315,6 +14907,12 @@ $lang = array_merge($lang, array(
 	'ISO_LANGUAGE'				=> 'Ngôn ngữ [%s]',
 
 	'LANG_SPECIFIC_OPTIONS'		=> 'Tuỳ chọn xác định ngôn ngữ [<b>%s</b>]',
+
+	'LETTER_NUM_DOTS'			=> 'Any letters, numbers and dots (periods)',
+	'LETTER_NUM_ONLY'			=> 'Any letters and numbers',
+	'LETTER_NUM_PUNCTUATION'	=> 'Any letters, numbers, comma, dots, underscores and dashes beginning with any letter',
+	'LETTER_NUM_SPACERS'		=> 'Any letters, numbers and spacers',
+	'LETTER_NUM_UNDERSCORE'		=> 'Any letters, numbers and underscores',
 
 	'MAX_FIELD_CHARS'		=> 'Số lượng ký tự tối đa cho phép sử dụng',
 	'MAX_FIELD_NUMBER'		=> 'Số tối đa cho phép sử dụng',
@@ -14369,7 +14967,9 @@ $lang = array_merge($lang, array(
 #######language/en/acp/prune.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_PRUNE_USERS_EXPLAIN'	=> 'Sử dụng công cụ này, bạn có thể xoá hoặc ngưng kích hoạt tài khoản của các thành viên trong hệ thống. Bạn có thể thực hiện việc này theo nhiều cách khác nhau: theo số bài viết, lần ghé thăm trước… Mỗi cách dọn dẹp có thể kết hợp với nhau, ví dụ như bạn muốn dọn dẹp những thành viên có lần ghé thăm cuối cùng trước ngày 2002/01/01 và có ít hơn 10 bài viết. Bạn có thể nhập vào trực tiếp danh sách của các thành viên vào khung bên dưới, bất kỳ điều kiện nào nhập vào khung này đều vô hiệu. Hãy cẩn thận với công cụ này! Khi một thành viên đã bị xoá bạn không thể phục hồi lại được.',
+	'ACP_PRUNE_USERS_EXPLAIN'	=> 'This section allows you to delete or deactivate users on your board. Accounts can be filtered in a variety of ways; by post count, most recent activity, etc. Criteria may be combined to narrow down which accounts are affected. For example, you can prune users with fewer than 10 posts, who were also inactive after 2002-01-01. Use * as a wildcard for text fields. Alternatively, you may skip the criteria selection completely by entering a list of users (each on a separate line) into the text field. Take care with this facility! Once a user is deleted, there is no way to reverse the action.',
+
+	'CRITERIA'				=> 'Criteria',
 
 	'DEACTIVATE_DELETE'			=> 'Ngưng kích hoạt hoặc xoá',
 	'DEACTIVATE_DELETE_EXPLAIN'	=> 'Chọn ngưng kích hoạt thành viên hay xoá tài khoản của họ hoàn toàn, lưu ý rằng thao tác này không thể phục hồi lại!',
@@ -14377,15 +14977,18 @@ $lang = array_merge($lang, array(
 	'DELETE_USER_POSTS'			=> 'Xoá bài viết của những thành viên đã dọn dẹp',
 	'DELETE_USER_POSTS_EXPLAIN'	=> 'Gỡ bỏ những bài viết được gửi bởi các thành viên đã bị xoá, sẽ không có tác dụng nếu thành viên chưa được kích hoạt.',
 
-	'JOINED_EXPLAIN'			=> 'Nhập vào ngày tham gia theo định dạng ngày tháng <kbd>YYYY-MM-DD</kbd>.',
+	'JOINED_EXPLAIN'			=> 'Enter a date in <kbd>YYYY-MM-DD</kbd> format. You may use both fields to specify an interval, or leave one blank for an open date range.',
 
 	'LAST_ACTIVE_EXPLAIN'		=> 'Nhập vào ngày ghé thăm trước theo định dạng ngày tháng <kbd>YYYY-MM-DD</kbd>.',
 
+	'POSTS_ON_QUEUE'			=> 'Posts Awaiting Approval',
+	'PRUNE_USERS_GROUP_EXPLAIN'	=> 'Limit to users within the selected group.',
+	'PRUNE_USERS_GROUP_NONE'	=> 'All groups',
 	'PRUNE_USERS_LIST'				=> 'Những thành viên được dọn dẹp',
-	'PRUNE_USERS_LIST_DELETE'		=> 'Với những điều kiện đã chọn cho thao tác dọn dẹp thành viên, các tài khoản sau đây sẽ bị gỡ bỏ.',
-	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'Với những điều kiện đã chọn cho thao tác dọn dẹp thành viên, các tài khoản sau đây sẽ bị ngưng kích hoạt.',
+	'PRUNE_USERS_LIST_DELETE'		=> 'With the selected critera for pruning users the following accounts will be removed. You can remove individual users from the deletion list by unchecking the box next to their username.',
+	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'With the selected critera for pruning users the following accounts will be deactivated. You can remove individual users from the deactivation list by unchecking the box next to their username.',
 
-	'SELECT_USERS_EXPLAIN'		=> 'Nhập vào những tên thành viên xác định tại đây, những tên thành viên này được sử dụng để thiết lập trong các tuỳ chọn bên dưới.',
+	'SELECT_USERS_EXPLAIN'		=> 'Enter specific usernames here. They will be used in preference to the criteria above. Founders cannot be pruned.',
 
 	'USER_DEACTIVATE_SUCCESS'	=> 'Những thành viên bạn vừa chọn đã được ngưng kích hoạt thành công.',
 	'USER_DELETE_SUCCESS'		=> 'Những thành viên bạn vừa chọn đã được xoá thành công.',
@@ -14432,15 +15035,38 @@ $lang = array_merge($lang, array(
 	'DELETING_INDEX_IN_PROGRESS'			=> 'Đang tiến hành xoá chỉ mục',
 	'DELETING_INDEX_IN_PROGRESS_EXPLAIN'	=> 'Phương pháp tìm kiếm hiện tại đang dọn dẹp chỉ mục tìm kiếm của nó. Quá trình này có thế mất một vài phút.',
 
-	'FULLTEXT_MYSQL_INCOMPATIBLE_VERSION'	=> 'Phương pháp tìm kiếm FULLTEXT với MySQL chỉ có thể sử dụng được với phiên bản MySQL4 trở lên.',
+	'FULLTEXT_MYSQL_INCOMPATIBLE_DATABASE'	=> 'The MySQL fulltext backend can only be used with MySQL4 and above.',
 	'FULLTEXT_MYSQL_NOT_MYISAM'				=> 'Những chỉ mục FULLTEXT của MySQL chỉ có thể được sử dụng với các table MyISAM.',
 	'FULLTEXT_MYSQL_TOTAL_POSTS'			=> 'Tổng số bài viết đã được lập chỉ mục',
-	'FULLTEXT_MYSQL_MBSTRING'				=> 'Hỗ trợ những ký tự UTF-8 không thuộc bảng chữ cái Latinh sử dụng <samp>mbstring</samp>:',
-	'FULLTEXT_MYSQL_PCRE'					=> 'Hỗ trợ những ký tự UTF-8 không thuộc bảng chữ cái Latinh sử dụng <samp>PCRE</samp>:',
-	'FULLTEXT_MYSQL_MBSTRING_EXPLAIN'		=> 'Nếu <samp>PCRE</samp> không có thuộc tính hỗ trợ các ký tự Unicode, phương pháp tìm kiếm sẽ cố gắng sử dụng công cụ biểu thức bình thường của <samp>mbstring</samp>.',
-	'FULLTEXT_MYSQL_PCRE_EXPLAIN'			=> 'Phương pháp tìm kiếm nàu yêu cầu thuộc tính hỗ trợ các ký tự Unicode của <samp>PCRE</samp>, chỉ có sẵn trong phiên bản PHP 4.4, 5.1 trở lên, nếu như bạn muốn tìm kiếm những ký tự không thuộc bảng chữ cái Latinh.',
 	'FULLTEXT_MYSQL_MIN_SEARCH_CHARS_EXPLAIN'	=> 'Số lượng từ tối thiểu cho việc tạo chỉ mục cho tìm kiếm. Chỉ có người quản lý máy chủ chỉ có thể they đổi thiết lập này trong cấu hình của mysql.',
 	'FULLTEXT_MYSQL_MAX_SEARCH_CHARS_EXPLAIN'	=> 'Số lượng từ tối đa cho việc tạo chỉ mục cho tìm kiếm. Chỉ có người quản lý máy chủ chỉ có thể they đổi thiết lập này trong cấu hình của mysql.',
+
+	'FULLTEXT_POSTGRES_INCOMPATIBLE_DATABASE'	=> 'The PostgreSQL fulltext backend can only be used with PostgreSQL.',
+	'FULLTEXT_POSTGRES_TOTAL_POSTS'			=> 'Total number of indexed posts',
+	'FULLTEXT_POSTGRES_VERSION_CHECK'		=> 'PostgreSQL version',
+	'FULLTEXT_POSTGRES_TS_NAME'				=> 'Text search Configuration Profile:',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN'			=> 'Minimum word length for keywords',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN'			=> 'Maximum word length for keywords',
+	'FULLTEXT_POSTGRES_VERSION_CHECK_EXPLAIN'		=> 'This search backend requires PostgreSQL version 8.3 and above.',
+	'FULLTEXT_POSTGRES_TS_NAME_EXPLAIN'				=> 'The Text search configuration profile used to determine the parser and dictionary.',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN_EXPLAIN'			=> 'Words with at least this many characters will be included in the query to the database.',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN_EXPLAIN'			=> 'Words with no more than this many characters will be included in the query to the database.',
+
+	'FULLTEXT_SPHINX_CONFIGURE'				=> 'Configure the following settings to generate sphinx config file',
+	'FULLTEXT_SPHINX_DATA_PATH'				=> 'Path to data directory',
+	'FULLTEXT_SPHINX_DATA_PATH_EXPLAIN'		=> 'It will be used to store the indexes and log files. You should create this directory outside the web accessible directories. (should have a trailing slash)',
+	'FULLTEXT_SPHINX_DELTA_POSTS'			=> 'Number of posts in frequently updated delta index',
+	'FULLTEXT_SPHINX_HOST'					=> 'Sphinx search daemon host',
+	'FULLTEXT_SPHINX_HOST_EXPLAIN'			=> 'Host on which the sphinx search daemon (searchd) listens. Leave empty to use the default localhost',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT'		=> 'Indexer memory limit',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT_EXPLAIN'	=> 'This number should at all times be lower than the RAM available on your machine. If you experience periodic performance problems this might be due to the indexer consuming too many resources. It might help to lower the amount of memory available to the indexer.',
+	'FULLTEXT_SPHINX_MAIN_POSTS'			=> 'Number of posts in main index',
+	'FULLTEXT_SPHINX_PORT'					=> 'Sphinx search daemon port',
+	'FULLTEXT_SPHINX_PORT_EXPLAIN'			=> 'Port on which the sphinx search daemon (searchd) listens. Leave empty to use the default Sphinx API port 9312',
+	'FULLTEXT_SPHINX_WRONG_DATABASE'		=> 'The sphinx search for phpBB supports MySQL and PostgreSQL only.',
+	'FULLTEXT_SPHINX_CONFIG_FILE'			=> 'Sphinx config file',
+	'FULLTEXT_SPHINX_CONFIG_FILE_EXPLAIN'	=> 'The generated content of the sphinx config file. This data needs to be pasted into the sphinx.conf which is used by sphinx search daemon. Replace the [dbuser] and [dbpassword] placeholders with your database credentials.',
+	'FULLTEXT_SPHINX_NO_CONFIG_DATA'		=> 'The sphinx data and config directory paths are not defined. Please define them to generate the config file.',
 
 	'GENERAL_SEARCH_SETTINGS'				=> 'Thiết lập tìm kiếm tổng quát',
 	'GO_TO_SEARCH_INDEX'					=> 'Chuyển đến trang tìm kiếm',
@@ -14465,8 +15091,6 @@ $lang = array_merge($lang, array(
 
 	'SEARCH_GUEST_INTERVAL'					=> 'Thời gian chờ giữa hai lần tìm kiếm dành cho khách',
 	'SEARCH_GUEST_INTERVAL_EXPLAIN'			=> 'Số giây mà khách phải chờ giữa hai lần thực hiện việc tìm kiếm trong hệ thống. Nếu có một ai đó đang thực hiện việc tìm kiếm thì tất cả những người khác phải chờ đợi cho đến khi hết thời gian chờ đợi được thiết lập này.',
-	'SEARCH_INDEX_CREATE_REDIRECT'			=> 'Tất cả bài viết có số ID trên <strong>%1$d</strong> vẫn đang được tạo chỉ mục tìm kiếm với <strong>%2$d</strong> bài viết đã lập chỉ mục xong trong bước này. Tốc độ tạo chỉ mục tìm kiếm hiện tại là khoảng <strong>%3$.1f</strong> bài viết mỗi giây.<br />Việc tạo chỉ mục vẫn đang được tiến hành…',
-	'SEARCH_INDEX_DELETE_REDIRECT'			=> 'Tất cả bài viết có số ID trên <strong>%1$d</strong> đã được gỡ bỏ chỉ mục tìm kiếm xong.<br />Việc gỡ bỏ chỉ mục vẫn đang được tiến hành…',
 	'SEARCH_INDEX_CREATED'					=> 'Đã lập chỉ mục thành công cho tất cả bài viết trong cơ sở dữ liệu.',
 	'SEARCH_INDEX_REMOVED'					=> 'Đã xoá thành công chỉ mục tìm kiếm cho phương pháp tìm kiếm này.',
 	'SEARCH_INTERVAL'						=> 'Thời gian chờ giữa hai lần tìm kiếm dành cho thành viên',
@@ -14489,8 +15113,55 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
+	// 3.1.0
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
+
+	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
+	'CONFIRM_UNINSTALL_STYLES'		=> 'Are you sure you wish to uninstall selected styles?',
+	'COPYRIGHT'						=> 'Bản quyền',
+
+	'DEACTIVATE_DEFAULT'		=> 'Bạn không thể ngưng kích hoạt giao diện mặc định.',
+	'DELETE_FROM_FS'			=> 'Xoá từ hệ thống tập tin giao diện',
+	'DELETE_STYLE_FILES_FAILED'	=> 'Error deleting files for style "%s".',
+	'DELETE_STYLE_FILES_SUCCESS'	=> 'Files for style "%s" have been deleted.',
+	'DETAILS'					=> 'Thông tin chi tiết',
+
+	'INHERITING_FROM'			=> 'Kế thừa từ',
+	'INSTALL_STYLE'				=> 'Cài đặt giao diện',
+	'INSTALL_STYLES'			=> 'Install styles',
+	'INSTALL_STYLES_EXPLAIN'	=> 'Here you can install new styles.<br />If you cannot find a specific style in list below, check to make sure style is already installed. If it is not installed, check if it was uploaded correctly.',
+	'INVALID_STYLE_ID'			=> 'Invalid style ID.',
+
+	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
+	'NO_UNINSTALLED_STYLE'		=> 'Không có giao diện nào được gỡ bỏ.',
+
+	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
+
+	'STYLE_ACTIVATE'			=> 'Kích hoạt',
+	'STYLE_ACTIVE'				=> 'Đang sử dụng',
+	'STYLE_DEACTIVATE'			=> 'Ngưng kích hoạt',
+	'STYLE_DEFAULT'				=> 'Chọn làm giao diện mặc định',
+	'STYLE_DEFAULT_CHANGE_INACTIVE'	=> 'You must activate style before making it default style.',
+	'STYLE_ERR_INVALID_PARENT'	=> 'Invalid parent style.',
+	'STYLE_ERR_NAME_EXIST'		=> 'Tên giao diện này đã được sử dụng.',
+	'STYLE_ERR_STYLE_NAME'		=> 'Bạn phải nhập tên cho giao diện này.',
+	'STYLE_INSTALLED'			=> 'Style "%s" has been installed.',
+	'STYLE_INSTALLED_RETURN_INSTALLED_STYLES'	=> 'Return to installed styles list',
+	'STYLE_INSTALLED_RETURN_UNINSTALLED_STYLES'	=> 'Install more styles',
+	'STYLE_NAME'				=> 'Tên giao diện',
+	'STYLE_NOT_INSTALLED'		=> 'Style "%s" was not installed.',
+	'STYLE_PATH'				=> 'Style path',
+	'STYLE_UNINSTALL'			=> 'Uninstall',
+	'STYLE_UNINSTALL_DEPENDENT'	=> 'Style "%s" cannot be uninstalled because it has one or more child styles.',
+	'STYLE_UNINSTALLED'			=> 'Style "%s" uninstalled successfully.',
+	'STYLE_USED_BY'				=> 'Số người sử dụng (Bao gồm máy tìm kiếm)',
+
+	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+
+	// 3.0.12
 	'ACP_IMAGESETS_EXPLAIN'	=> 'Một gói hình ảnh giao diện bao gồm tất cả các hình nút bấm, biểu tượng, thư mục… và những hình ảnh khác không phải của giao diện được sử dụng bởi hệ thống. Với công cụ này, bạn có thể chỉnh sửa, xuất hay xoá những gói hình ảnh giao diện hiện tại và nhập hoặc kích hoạt những gói hình ảnh giao diện mới.',
-	'ACP_STYLES_EXPLAIN'	=> 'Với công cụ này, bạn có thể quản lý tất cả các giao diện có sẵn trong hệ thống. Một gói giao diện gồm có một khuôn mẫu, kiểu dáng và gói hình ảnh giao diện được đính kèm bên trong. Bạn có thể thay đổi những giao diện hiện có, xoá, ngưng kích hoạt, kích hoạt lại, tạo và nhập vào những gói giao diện mới. Bạn cũng có thể sử dụng chức năng xem trước để xem giao diện được hiển thị như thế nào trong hệ thống. Giao diện mặc định hiện tại của hệ thống được đánh dấu * để phân biệt. Công cụ này cũng liệt kê có bao nhiêu thành viên sử dụng mỗi giao diện, lưu ý thiết lập thay thế toàn bộ giao diện của thành viên không phải nằm trong phần này.',
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 	'ACP_TEMPLATES_EXPLAIN'	=> 'Một khuôn mẫu bao gồm tất cả các thẻ đánh dấu nằm trong các tập tin khuôn mẫu được sử dụng để thiết kế và bố trí giao diện cho hệ thống. Với công cụ này, bạn có thể chỉnh sửa những khuôn mẫu hiện có, xoá, xuất, nhập và xem trước các khuôn mẫu này. Bạn cũng có thể chỉnh sửa một phần mã HTML của khuôn mẫu dùng để sử dụng cho các thẻ BBCode.',
 	'ACP_THEMES_EXPLAIN'	=> 'Với công cụ này, bạn có thể tạo, cài đặt, cỉnh sửa, xoá và xuất các kiểu dáng. Một kiểu dáng là sự kết hợp của các thông số màu sắc và hình ảnh được xác định trong khuôn mẫu của bạn để tạo ra giao diện hoàn chỉnh cho hệ thống. Việc bạn có thể thay đổi các thông số cấu hình này là tuỳ thuộc vào cấu hình máy chủ của bạn và quá trình cài đặt hệ thống phpBB. Hãy xem qua tài liệu sử dụng của hệ thống để biết thêm thông tin. Lưu ý rằng việc tạo ra các kiểu dáng mới dựa trên các kiểu dáng hiện có có thể tuỳ biến hoàn toàn.',
 	'ADD_IMAGESET'			=> 'Tạo gói hình ảnh giao diện',
@@ -14527,7 +15198,6 @@ $lang = array_merge($lang, array(
 	'CURRENT_IMAGE'					=> 'Hình đại diện hiện tại',
 
 	'DEACTIVATE_DEFAULT'		=> 'Bạn không thể ngưng kích hoạt giao diện mặc định.',
-	'DELETE_FROM_FS'			=> 'Xoá từ hệ thống tập tin giao diện',
 	'DELETE_IMAGESET'			=> 'Xoá gói hình ảnh giao diện',
 	'DELETE_IMAGESET_EXPLAIN'	=> 'Bạn có thể gỡ bỏ gói hình ảnh giao diện đã chọn khỏi cơ sở dữ liệu tại đây. Ngoài ra, nếu được cấp phép, bạn có thể chọn gỡ bỏ gói hình ảnh giao diện ra khỏi hệ thống tập tin giao diện. Lưu ý rằng việc gỡ bỏ này không thể phục hồi lại được một khi gói hình ảnh giao diện đã bị xoá hoàn toàn khỏi hệ thống tập tin giao diện. Chúng tôi khuyên bạn nên xuất gói hình ảnh giao diện của mình ra trước khi gỡ bỏ để có thể sử dụng lại được.',
 	'DELETE_STYLE'				=> 'Xoá giao diện',
@@ -14724,7 +15394,6 @@ $lang = array_merge($lang, array(
 	'INCLUDE_IMAGESET'			=> 'Đính kèm gói ngôn ngữ hình ảnh',
 	'INCLUDE_TEMPLATE'			=> 'Đính kèm khuôn mẫu',
 	'INCLUDE_THEME'				=> 'Đính kèm kiểu dáng',
-	'INHERITING_FROM'			=> 'Kế thừa từ',
 	'INSTALL_IMAGESET'			=> 'Cài đặt gói hình ảnh giao diện',
 	'INSTALL_IMAGESET_EXPLAIN'	=> 'Bạn có thể cài đặt những gói hình ảnh giao diện đã chọn tại đây. Bạn có thể chỉnh sửa thông tin về các gói hình ảnh giao diện này nếu muốn hoặc sử dụng thiết lập cài đặt mặc định.',
 	'INSTALL_STYLE'				=> 'Cài đặt giao diện',
@@ -14754,7 +15423,6 @@ $lang = array_merge($lang, array(
 	'NO_TEMPLATE'				=> 'Không thể tìm thấy khuôn mẫu trong hệ thống tập tin giao diện.',
 	'NO_THEME'					=> 'Không thể tìm thấy kiểu dáng trong hệ thống tập tin giao diện.',
 	'NO_UNINSTALLED_IMAGESET'	=> 'Không có gói hình ảnh giao diện nào được gỡ bỏ.',
-	'NO_UNINSTALLED_STYLE'		=> 'Không có giao diện nào được gỡ bỏ.',
 	'NO_UNINSTALLED_TEMPLATE'	=> 'Không có khuôn mẫu nào được gỡ bỏ.',
 	'NO_UNINSTALLED_THEME'		=> 'Không có kiểu dáng nào được gỡ bỏ.',
 	'NO_UNIT'					=> 'Không có',
@@ -14794,30 +15462,22 @@ $lang = array_merge($lang, array(
 	'SELECTED_THEME_FILE'		=> 'Tập tin kiểu dáng đã chọn',
 	'STORE_DATABASE'			=> 'Cơ sở dữ liệu',
 	'STORE_FILESYSTEM'			=> 'Hệ thống tập tin giao diện',
-	'STYLE_ACTIVATE'			=> 'Kích hoạt',
-	'STYLE_ACTIVE'				=> 'Đang sử dụng',
 	'STYLE_ADDED'				=> 'Giao diện đã được thêm vào thành công.',
-	'STYLE_DEACTIVATE'			=> 'Ngưng kích hoạt',
-	'STYLE_DEFAULT'				=> 'Chọn làm giao diện mặc định',
 	'STYLE_DELETED'				=> 'Giao diện đã được xoá thành công.',
 	'STYLE_DETAILS_UPDATED'		=> 'Giao diện đã được chỉnh sửa thành công.',
 	'STYLE_ERR_ARCHIVE'			=> 'Bạn hãy chọn một phương pháp lưu trữ giao diện.',
 	'STYLE_ERR_COPY_LONG'		=> 'Nội dung bản quyền giao diện không được phép vượt quá <strong>60</strong> ký tự.',
 	'STYLE_ERR_MORE_ELEMENTS'	=> 'Bạn phải chọn ít nhất một thành phần giao diện.',
 	'STYLE_ERR_NAME_CHARS'		=> 'Tên giao diện chỉ được phép sử dụng chữ số, chữ cái, các ký tự -, +, _ và khoảng trắng.',
-	'STYLE_ERR_NAME_EXIST'		=> 'Tên giao diện này đã được sử dụng.',
 	'STYLE_ERR_NAME_LONG'		=> 'Tên giao diện không được phép vượt quá <strong>30</strong> ký tự.',
 	'STYLE_ERR_NO_IDS'			=> 'Bạn phải chọn một khuôn mẫu, kiểu dáng và gói hình ảnh giao diện cho giao diện này.',
 	'STYLE_ERR_NOT_STYLE'		=> 'Giao diện bạn vừa nhập hay tải lên không hợp lệ.',
-	'STYLE_ERR_STYLE_NAME'		=> 'Bạn phải nhập tên cho giao diện này.',
 	'STYLE_EXPORT'				=> 'Xuất giao diện',
 	'STYLE_EXPORT_EXPLAIN'		=> 'Với công cụ này, bạn có thể xuất một giao diện để lưu trữ. Giao diện xuất không nhất thiết phải đính kèm toàn bộ thành phần giao diện đi kèm nhưng phải chứa ít nhất một thành phần. Ví dụ, nếu bạn đã tạo một kiểu dáng mới và gói hình ảnh giao diện cho một khuôn mẫu được sử dụng nhiều bởi các kiểu dáng khác, bạn chỉ cần đơn giản là xuất kiểu dáng và gói hình ảnh giao diện đó mà thôi và bỏ qua khuôn mẫu. Bạn có thể chọn tải về tập tin này trực tiếp hoặc giữ lại trong thư mục lưu trữ của hệ thống để tải về sau.',
 	'STYLE_EXPORTED'			=> 'Giao diện đã được xuất thành công và được lưu trữ trong %s.',
 	'STYLE_IMAGESET'			=> 'Gói hình ảnh giao diện',
-	'STYLE_NAME'				=> 'Tên giao diện',
 	'STYLE_TEMPLATE'			=> 'Khuôn mẫu',
 	'STYLE_THEME'				=> 'Kiểu dáng',
-	'STYLE_USED_BY'				=> 'Số người sử dụng (Bao gồm máy tìm kiếm)',
 
 	'TEMPLATE_ADDED'			=> 'Khuôn mẫu đã được thêm vào thành công và được lưu trữ trong hệ thống tập tin giao diện.',
 	'TEMPLATE_ADDED_DB'			=> 'Khuôn mẫu đã được thêm vào thành công và được lưu trữ trong cơ sở dữ liệu.',
@@ -14915,6 +15575,7 @@ $lang = array_merge($lang, array(
 	'CANNOT_FORCE_REACT_FOUNDER'	=> 'Bạn không thể yêu cầu kích hoạt lại tài khoản của người sáng lập.',
 	'CANNOT_FORCE_REACT_YOURSELF'	=> 'Bạn không thể yêu cầu kích hoạt lại tài khoản của chính mình.',
 	'CANNOT_REMOVE_ANONYMOUS'		=> 'Bạn không thể gỡ bỏ tài khoản của khách.',
+	'CANNOT_REMOVE_FOUNDER'			=> 'You are not allowed to remove founder accounts.',
 	'CANNOT_REMOVE_YOURSELF'		=> 'Bạn không thể gỡ bỏ tài khoản thành viên của chính mình.',
 	'CANNOT_SET_FOUNDER_IGNORED'	=> 'Bạn không thể tăng cấp những thành viên bị cấm trở thành người sáng lập.',
 	'CANNOT_SET_FOUNDER_INACTIVE'	=> 'Bạn cần phải kích hoạt tài khoản của thành viên trước khi bạn tăng cấp cho thành viên này trở thành người sáng lập và chỉ có những thành viên đã kích hoạt mới có thể tăng cấp được.',
@@ -14941,7 +15602,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'Hãy chọn chuyên mục mà bạn muốn di chuyển tất cả các bài viết của thành viên này đến.',
 
 	'NO_SPECIAL_RANK'		=> 'Không có xếp hạng đặc biệt nào được chỉ định',
-	'NO_WARNINGS'			=> 'Không có cảnh báo.',
+	'NO_WARNINGS'			=> 'No warnings exist.',
 	'NOT_MANAGE_FOUNDER'	=> 'Bạn đang cố gắng quản lý một thành viên là người sáng lập. Chỉ có những người sáng lập mới được phép quản lý lẫn nhau.',
 
 	'QUICK_TOOLS'			=> 'Công cụ nhanh',

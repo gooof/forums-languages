@@ -1,5 +1,14 @@
 ﻿<?php
 
+#######language/en/app.php#######
+
+$lang = array_merge($lang, array(
+	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
+	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
+	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+));
+
 #######language/en/calendar.php#######
 
 $lang = array_merge($lang, array(
@@ -182,6 +191,55 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_PRIVATE_EXPLAIN'		=> '<a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a> کلیلەکان دەتوانرێن دەستبکەون لە، reCaptcha کلیلی تایبەتیت',
 
 	'RECAPTCHA_EXPLAIN'				=> 'بۆ بەربەستکردنی ئامێرەکانی سپام، تکایە نوسەکان وەکو خۆی لەنێو خانەکەدا بنوسەوە. <br /> لەکاتی ناڕوونیدا، کرتە لەدووگمەی نوێکردنەوەی نوسەکان بکە یان بەدەنگ گوێی لێبگرە! ',
+	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
+));
+
+#######language/en/cli.php#######
+
+$lang = array_merge($lang, array(
+	'CLI_CONFIG_CANNOT_CACHED'			=> 'Set this option if the configuration option changes too frequently to be efficiently cached.',
+	'CLI_CONFIG_CURRENT'				=> 'Current configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_DELETE_SUCCESS'			=> 'Successfully deleted config %s.',
+	'CLI_CONFIG_NEW'					=> 'New configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_NOT_EXISTS'				=> 'Config %s does not exist',
+	'CLI_CONFIG_OPTION_NAME'			=> 'The configuration option’s name',
+	'CLI_CONFIG_PRINT_WITHOUT_NEWLINE'	=> 'Set this option if the value should be printed without a new line at the end.',
+	'CLI_CONFIG_INCREMENT_BY'			=> 'Amount to increment by',
+	'CLI_CONFIG_INCREMENT_SUCCESS'		=> 'Successfully incremented config %s',
+	'CLI_CONFIG_SET_FAILURE'			=> 'Could not set config %s',
+	'CLI_CONFIG_SET_SUCCESS'			=> 'Successfully set config %s',
+
+	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
+	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
+	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
+	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
+	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
+	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
+	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
+	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
+	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
+	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
+	'CLI_EXTENSION_ENABLE_FAILURE'		=> 'Could not enable extension %s',
+	'CLI_EXTENSION_ENABLE_SUCCESS'		=> 'Successfully enabled extension %s',
+	'CLI_EXTENSION_NAME'				=> 'Name of the extension',
+	'CLI_EXTENSION_PURGE_FAILURE'		=> 'Could not purge extension %s',
+	'CLI_EXTENSION_PURGE_SUCCESS'		=> 'Successfully purged extension %s',
+	'CLI_EXTENSION_NOT_FOUND'			=> 'No extensions were found.',
+	'CLI_EXTENSIONS_AVAILABLE'			=> 'Available',
+	'CLI_EXTENSIONS_DISABLED'			=> 'Disabled',
+	'CLI_EXTENSIONS_ENABLED'			=> 'Enabled',
+
+	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
 ));
 
 #######language/en/common.php#######
@@ -190,7 +248,11 @@ $lang = array_merge($lang, array(
 	'TRANSLATION_INFO'	=> 'phpBB3 free Forum by <a href="http://www.userboard.org/">UserBoard.org</a> | All Rights Reserved.',
 	'DIRECTION'			=> 'rtl',
 	'DATE_FORMAT'		=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
+	'DATETIME_FORMAT'	=> '|d M Y, H:i|',	// 01 Jan 2007, 13:37 (with Relative days enabled)
 	'USER_LANG'			=> 'ku',
+
+	// See http://wiki.phpbb.com/Plural_Rules for more information
+	'PLURAL_RULE'		=> '1',
 
 	'1_DAY'			=> '1 ڕۆژ',
 	'1_MONTH'		=> '1 مانگ',
@@ -204,18 +266,24 @@ $lang = array_merge($lang, array(
 	'ACCOUNT_DEACTIVATED'			=> 'هەژمارەکەت دەستکارانە چالاک کرا و تەنها بەڕێوەبەر ئەتوانێت چالاکی بکاتەوە.',
 	'ACCOUNT_NOT_ACTIVATED'			=> 'هەژامارەکەت تا ئێستا چالاک نەکراوە.',
 	'ACP'							=> 'کۆنترۆڵ پانێڵی بەڕێوەبەرایەتی',
+	'ACP_SHORT'						=> 'ACP',
 	'ACTIVE'						=> 'چالاک',
 	'ACTIVE_ERROR'					=> 'هەژماری دیاریکراو هەنووکە ناچالاکە. گەر کێشەت هەیە لەگەڵ چالاککردنی، تکایە پەیوەندی بە بەڕێوەبەرێکی مەکۆوە بکە.',
 	'ADMINISTRATOR'					=> 'بەڕێوەبەر',
 	'ADMINISTRATORS'				=> 'بەڕێوەبەران',
 	'AGE'							=> 'تەمەن',
 	'AIM'							=> 'AIM',
+	'AJAX_ERROR_TITLE'				=> 'AJAX error',
+	'AJAX_ERROR_TEXT'				=> 'Something went wrong when processing your request.',
+	'AJAX_ERROR_TEXT_ABORT'			=> 'User aborted request.',
+	'AJAX_ERROR_TEXT_TIMEOUT'		=> 'Your request timed out; please try again.',
+	'AJAX_ERROR_TEXT_PARSERERROR'	=> 'Something went wrong with the request and the server returned an invalid reply.',
 	'ALLOWED'						=> 'ڕێ پێدراو',
 	'ALL_FILES'						=> 'هەموو پەڕگەکان',
 	'ALL_FORUMS'					=> 'هەموو مەکۆکان',
 	'ALL_MESSAGES'					=> 'هەموو پەیامەکان',
 	'ALL_POSTS'						=> 'هەموو پەیامەکان',
-	'ALL_TIMES'						=> 'هەموو کاتەکان %1$s %2$s ـن',
+	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'هەموو بابەتەکان',
 	'AND'							=> 'و',
 	'ARE_WATCHING_FORUM'			=> 'بەژداریت کردووە کە ئاگادار بکرێیتەوە لە بوونی پەیامی نوێ لەم مەکۆیە.',
@@ -225,6 +293,14 @@ $lang = array_merge($lang, array(
 	'ATTACHED_IMAGE_NOT_IMAGE'		=> 'ئەو پەڕگەی وێنەیەی ویستت هاوپێچی بکەیت ناتەواوە.',
 	'AUTHOR'						=> 'نووسەر',
 	'AUTH_NO_PROFILE_CREATED'		=> 'دروستکردنی پڕۆفایلی بەکارهێنەر سەرکەوتوو نەبوو.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_ENTRY'				=> 'Invalid database entry.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_SERVICE_TYPE'		=> 'Invalid service type provided to OAuth service handler.',
+	'AUTH_PROVIDER_OAUTH_ERROR_SERVICE_NOT_CREATED'			=> 'OAuth service not created',
+	'AUTH_PROVIDER_OAUTH_SERVICE_BITLY'						=> 'Bitly',
+	'AUTH_PROVIDER_OAUTH_SERVICE_FACEBOOK'					=> 'Facebook',
+	'AUTH_PROVIDER_OAUTH_SERVICE_GOOGLE'					=> 'Google',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_NOT_STORED'			=> 'OAuth token not stored.',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_INCORRECTLY_STORED'	=> 'OAuth token incorrectly stored.',
 	'AVATAR_DISALLOWED_CONTENT'		=> 'بارکردن ڕەفز کرایەوە لەبەر ئەوەی پەڕگەی بارکراو وەک پەڕگەیەکی هێرشکەر ناسرا.',
 	'AVATAR_DISALLOWED_EXTENSION'	=> 'نەتوانرا پەڕگە پیشانبدرێت لەبەر ئەوەی درێژکراوی <strong>%s</strong> ڕێ پێ نەدراوە.',
 	'AVATAR_EMPTY_REMOTE_DATA'		=> 'نەتوانرا وێنۆچکەی دیاریکراو بار بکرێت لەبەر ئەوەی وا دەردەکەوێت دراوەی دوور ناتەواو بێت یان تێکچووبێت.',
@@ -235,10 +311,11 @@ $lang = array_merge($lang, array(
 	'AVATAR_PARTIAL_UPLOAD'			=> 'پەڕگەی دیاریکراو بەش بەش بارکرا.',
 	'AVATAR_PHP_SIZE_NA'			=> 'قەبارەی پەڕگەی وێنۆچکە زۆر گەورەیە.<br /> نەتوانرا گەورەترین قەبارەی ڕێپێدراو لە php.ini دیاریی بکرێت.',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'قەبارەی پەڕگەی وێنۆچکە زۆر گەورەیە.<br /> گەورەترین قەبارەی ڕێپێدراوی بارکردن %1$d %2$s ـە.<br />تکایە سەرنجی ئەوە بدە ئەمە لە php.ini ڕێکخراوە و ناتوانرێت بگۆڕدرێت.',
+	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
 	'AVATAR_URL_INVALID'			=> 'ئەو URL ـەی دیاریت کردووە نەگونجاوە.',
 	'AVATAR_URL_NOT_FOUND'			=> 'نەتوانرا پەڕگەی دیاریکراو بدۆزرێتەوە',
-	'AVATAR_WRONG_FILESIZE'			=> 'پێویستە قەبارەی وێنۆچکە لە نێوان 0 تا %1d %2s ـدا بێت.',
-	'AVATAR_WRONG_SIZE'				=> 'وێنۆچکەی نێردراو %5$d خاڵ پانە و %6$d خاڵ بەرزە. پێویستە وێنۆچکە لانی کەم %1$d خاڵ پان بێت و %2$d خاڵ بەرز بێت، بەڵام زیاتر نەبێت لە %3$d خاڵ پانی و %4$d خاڵ بەرزی.',
+	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
+	'AVATAR_WRONG_SIZE'				=> 'The submitted avatar is %5$s wide and %6$s high. Avatars must be at least %1$s wide and %2$s high, but no larger than %3$s wide and %4$s high.',
 
 	'BACK_TO_TOP'			=> 'لوتکە',
 	'BACK_TO_PREV'			=> 'بگەڕێوە بۆ پەڕەی پێشوو',
@@ -255,28 +332,42 @@ $lang = array_merge($lang, array(
 	'BOARD_DISABLED'		=> 'ئەم مەکۆیە هەنووکە ناچالاککراوە.',
 	'BOARD_UNAVAILABLE'		=> 'ببورە، مەکۆ بە شێوەیەکی کاتی نائامادەیە، تکایە چەند خولەکێکی تر هەوڵ بدەوە.',
 	'BROWSING_FORUM'		=> 'ئەو بەکارهێنەرانەی لەم مەکۆیەدان: %1$s',
-	'BROWSING_FORUM_GUEST'	=> 'ئەو بەکارهێنەرانەی لە مەکۆیەدان: %1$s و %2$d میوان',
-	'BROWSING_FORUM_GUESTS'	=> 'ئەو بەکارهێنەرانەی لە مەکۆیەدان: %1$s و %2$d میوان',
+	'BUTTON_EDIT'			=> 'Edit',
+	'BUTTON_FORUM_LOCKED'	=> 'Locked',
+	'BUTTON_NEW_TOPIC'		=> 'New Topic',
+	'BUTTON_PM'				=> 'PM',
+	'BUTTON_PM_FORWARD'		=> 'Forward',
+	'BUTTON_PM_NEW'			=> 'New PM',
+	'BUTTON_PM_REPLY'		=> 'Send Reply',
+	'BUTTON_PM_REPLY_ALL'	=> 'Reply All',
+	'BUTTON_POST_REPLY'		=> 'Post Reply',
+	'BUTTON_QUOTE'			=> 'Quote',
+	'BUTTON_TOPIC_LOCKED'	=> 'Locked',
 	'BYTES'					=> 'بایت',
+	'BYTES_SHORT'			=> 'B',
 
 	'CANCEL'				=> 'پاشگەزبوونەوە',
 	'CHANGE'				=> 'بیگۆڕە',
 	'CHANGE_FONT_SIZE'		=> 'قەبارەی فۆنت بگۆڕە',
 	'CHANGING_PREFERENCES'	=> 'گۆڕینی ویستراوەکانی مەکۆ',
 	'CHANGING_PROFILE'		=> 'گۆڕینی ڕێکخستنەکانی پڕۆفایل',
-	'CLICK_VIEW_PRIVMSG'	=> '%sبڕۆ بۆ سندوقی هاتووەکان%s',
 	'COLLAPSE_VIEW'			=> 'پێچانەوەی بینین',
 	'CLOSE_WINDOW'			=> 'داخستنی پەنجەرە',
 	'COLOUR_SWATCH'			=> 'پارچەی ڕەنگ',
-	'COMMA_SEPARATOR'		=> '،',	// Used in pagination of ACP & prosilver, use localised comma if appropriate, eg: Ideographic or Arabic
+	'COLON'					=> ':',
+	'COMMA_SEPARATOR'		=> '،',	// Comma used to join lists into a single string, use localised comma if appropriate, eg: Ideographic or Arabic
 	'CONFIRM'				=> 'دڵنیابوون',
 	'CONFIRM_CODE'			=> 'کۆدی دڵنیابوون',
 	'CONFIRM_CODE_EXPLAIN'	=> 'کۆدەکە وەک خۆی بنووسەوە. پیتەکان هەستیار نین بەرانبەر گەورە و بچوکیی،.',
 	'CONFIRM_CODE_WRONG'	=> 'ئەو کۆدە دڵنیابوونەی لێتدا نادروستە.',
 	'CONFIRM_OPERATION'		=> 'دڵنیایت لە بە ئەنجام گەیاندنی ئەم کردەیە؟',
+	'CONFIRM_AVATAR_DELETE' => 'Are you sure you wish to delete this avatar?',
 	'CONGRATULATIONS'		=> 'پیرۆزبایی بۆ',
 	'CONNECTION_FAILED'		=> 'پەیوەندیکردن شکستی هێنا',
 	'CONNECTION_SUCCESS'	=> 'پەیوەندیکردن سەرکەوتوو بوو',
+	'CONTACT'				=> 'پەیوەندی',
+	'CONTACT_USER'			=> 'Contact %s',
+	'CONTACT_US'			=> 'Contact us',
 	'COOKIES_DELETED'		=> 'هەموو کووکییەکانی مەکۆ بە سەرکەوتوویی سڕدرانەوە.',
 	'CURRENT_TIME'			=> 'هەنووکە کات %s ـە',
 
@@ -297,18 +388,13 @@ $lang = array_merge($lang, array(
 	'DISPLAY_TOPICS'		=> 'بابەتەکان لە پێشووەوە پیشان بدە',
 	'DOWNLOADED'			=> 'داگیراو',
 	'DOWNLOADING_FILE'		=> 'داگرتنی پەڕگە',
-	'DOWNLOAD_COUNT'		=> '%d جار داگیراوە',
-	'DOWNLOAD_COUNTS'		=> '%d جار داگیراوە',
-	'DOWNLOAD_COUNT_NONE'	=> 'تا ئێستا دانەگیراوە',
-	'VIEWED_COUNT'			=> '%d جار بینراوە',
-	'VIEWED_COUNTS'			=> '%d جار بینراوە',
-	'VIEWED_COUNT_NONE'		=> 'تا ئێستا نەبینراوە',
 
 	'EDIT_POST'							=> 'دەستکاری پەیام بکە',
-	'EMAIL'								=> 'ئیمەیل', // Short form for EMAIL_ADDRESS
-	'EMAIL_ADDRESS'						=> 'ناونیشانی ئیمەیل',
-	'EMAIL_INVALID_EMAIL'				=> 'ئەو پۆستی ئەلیکترۆنیەی نووسیوتە نادروستە.',
-	'EMAIL_SMTP_ERROR_RESPONSE'			=> '%2$s :وەڵام  <strong>%1$s هێڵی</strong> خرایەوە نێو کێشەکان ،ناردنی ئیمەیڵ لە',
+	'ELLIPSIS'							=>	'…',
+	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
+	'EMAIL_ADDRESS'						=> 'Email address',
+	'EMAIL_INVALID_EMAIL'				=> 'The email address you entered is invalid.',
+	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ran into problems sending email at <strong>Line %1$s</strong>. Response: %2$s.',
 	'EMPTY_SUBJECT'						=> 'پێویستە سەردێڕێک دیاری بکەیت کاتێک بابەتێکی نوێ دەنێریت.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'پێویستە سەردێڕێک دیاری بکەیت لە کاتی نووسینی پەیامێکی نوێدا.',
 	'ENABLED'							=> 'چالاککراو',
@@ -322,17 +408,23 @@ $lang = array_merge($lang, array(
 	'ERR_UNWATCHING'					=> 'هەڵەیەک ڕوویدا لە کاتی هەوڵدان بۆ بەشداری نەکردن.',
 	'ERR_WATCHING'						=> 'هەڵەیەک ڕوویدا لە کاتی هەوڵدان بۆ بەشداریکردن.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'وا دەردەکەوێت ڕێڕەوی دیاریکراوی phpBB نەگونجاو بێت.',
+	'ERROR'									=> 'هەڵە',
 	'EXPAND_VIEW'						=> 'فراوانکردنی بینین',
 	'EXTENSION'							=> 'درێژکراوە',
+	'EXTENSION_DISABLED'				=> 'The extension <strong>%s</strong> is not enabled.',
 	'EXTENSION_DISABLED_AFTER_POSTING'	=> 'درێژکراوەی <strong>%s</strong> ناچالاککراوە و چیتر ناتوانرێت پیشان بدرێت.',
+	'EXTENSION_DOES_NOT_EXIST'			=> 'The extension <strong>%s</strong> does not exist.',
 
+	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> 'پ هـ د',
 	'FAQ_EXPLAIN'			=> 'پرسیارە هەمیشە دووبارەکان',
 	'FILENAME'				=> 'ناوی پەڕگە',
 	'FILESIZE'				=> 'قەبارەی پەڕگە',
 	'FILEDATE'				=> 'ڕێکەوتی پەڕگە',
 	'FILE_COMMENT'			=> 'دەربارەی پەڕگە',
-	'FILE_NOT_FOUND'		=> 'نەتوانرا پەڕگەی داواکراو بدۆزرێتەوە.',
+	'FILE_CONTENT_ERR'		=> 'Could not read the contents of file: %s',
+	'FILE_JSON_DECODE_ERR'	=> 'Failed to decode json file: %s',
+	'FILE_NOT_FOUND'		=> 'The requested file could not be found: %s',
 	'FIND_USERNAME'			=> 'ئەندامێک بدۆزەرەوە',
 	'FOLDER'				=> 'بوخچە',
 	'FORGOT_PASS'			=> 'تێپەڕەوشەم لەبیر چووە',
@@ -381,6 +473,9 @@ $lang = array_merge($lang, array(
 	'GB'						=> 'GB',
 	'GIB'						=> 'GiB',
 	'GO'						=> 'بڕۆ',
+	'GOOGLEPLUS'				=> 'Google+',
+	'GOTO_FIRST_POST'			=> 'Go to first post',
+	'GOTO_LAST_POST'			=> 'Go to last post',
 	'GOTO_PAGE'					=> 'بڕۆ بۆ پەڕەی',
 	'GROUP'						=> 'گرووپ',
 	'GROUPS'					=> 'گرووپەکان',
@@ -388,12 +483,6 @@ $lang = array_merge($lang, array(
 	'GROUP_ERR_USERNAME'		=> 'ناوی هیچ گرووپێک دیاریی نەکراوە.',
 	'GROUP_ERR_USER_LONG'		=> 'نابێت ناوی گرووپەکان لە 60 نووسە زیاتر بێت. ناوی گرووپی دیاریکراو زۆر درێژە.',
 	'GUEST'						=> 'میوان',
-	'GUEST_USERS_ONLINE'		=> '%d بەکارهێنەری میوان لەسەر هێڵن',
-	'GUEST_USERS_TOTAL'			=> '%d میوان',
-	'GUEST_USERS_ZERO_ONLINE'	=> '0 بەکارهێنەری میوان لەسەر هێڵن',
-	'GUEST_USERS_ZERO_TOTAL'	=> '0 میوان',
-	'GUEST_USER_ONLINE'			=> '% بەکارهێنەری میوان لەسەر هێڵنd',
-	'GUEST_USER_TOTAL'			=> '%d میوان',
 	'G_ADMINISTRATORS'			=> 'بەڕێوەبەران',
 	'G_BOTS'					=> 'بۆتەکان',
 	'G_GUESTS'					=> 'میوانان',
@@ -402,22 +491,12 @@ $lang = array_merge($lang, array(
 	'G_GLOBAL_MODERATORS'		=> 'چاودێرە گشتییەکان',
 	'G_NEWLY_REGISTERED'		=> 'بەکارهێنەرە خۆتۆمارکردووە نوێیەکان',
 
-	'HIDDEN_USERS_ONLINE'			=> '%d بەکارهێنەری شارەوە لەسەر هێڵن',
-	'HIDDEN_USERS_TOTAL'			=> '%d شاراوە',
-	'HIDDEN_USERS_TOTAL_AND'		=> '%d شارەوە و ',
-	'HIDDEN_USERS_ZERO_ONLINE'		=> '0 بەکارهێنەری شاراوە لەسەر هێڵە',
-	'HIDDEN_USERS_ZERO_TOTAL'		=> '0 شاراوە',
-	'HIDDEN_USERS_ZERO_TOTAL_AND'	=> '0 شاراوە و ',
-	'HIDDEN_USER_ONLINE'			=> '%d بەکارهێنەری شاراوە لەسەر هێڵن',
-	'HIDDEN_USER_TOTAL'				=> '%d شاراوە',
-	'HIDDEN_USER_TOTAL_AND'			=> '%d شاراوە و ',
 	'HIDE_GUESTS'					=> 'میوانان بشارەوە',
 	'HIDE_ME'						=> 'دۆخی سەرهێڵیم بشارەوە ئەم دانیشتنە.',
 	'HOURS'							=> 'کاژێر',
 	'HOME'							=> 'ماڵەوە',
 
 	'ICQ'						=> 'ICQ',
-	'ICQ_STATUS'				=> 'دۆخی ICQ',
 	'IF'						=> 'ئەگەر',
 	'IMAGE'						=> 'وێنە',
 	'IMAGE_FILETYPE_INVALID'	=> 'پاڵپشت نەکراوە %s بۆ مایمجۆر %d پەڕگەی وێنە جۆری',
@@ -425,9 +504,11 @@ $lang = array_merge($lang, array(
 	'IN'						=> 'لە',
 	'INDEX'						=> 'دەستپێک', //Index page
 	'INFORMATION'				=> 'زانیاریی',
+	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
 	'INTERESTS'					=> 'ئارەزووەکان',
 	'INVALID_DIGEST_CHALLENGE'	=> 'بەرەنگاری هەرسکردنی نادروست',
-	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> ئەشێت ناونیشانی ئیمەیلێکی نادروست بێت؟',
+	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> possibly an invalid email address?',
+	'INVALID_PLURAL_RULE'		=> 'The chosen plural rule is invalid. Valid values are integers between 0 and 15.',
 	'IP'						=> 'IP',
 	'IP_BLACKLISTED'			=> 'IP ـیەکەت %1$s قەدەغەکراوە لەبەر ئەوەی کراوەتە لیستی ڕەشەوە. بۆ وردەکاریی زیاتر تکایە <a href="%2$s">%2$s</a> ببینە.',
 
@@ -435,7 +516,8 @@ $lang = array_merge($lang, array(
 	'JOINED'				=> 'بەشدارە لە',
 	'JUMP_PAGE'				=> 'ژمارەی ئەو پەڕەیە لێ بدە کە ئەتەوێت بڕۆی بۆی.',
 	'JUMP_TO'				=> 'بازدان بۆ',
-	'JUMP_TO_PAGE'			=> 'کرتە بکە بۆ بازدان بۆ پەڕە...',
+	'JUMP_TO_PAGE'			=> 'Jump to page',
+	'JUMP_TO_PAGE_CLICK'	=> 'Click to jump to page…',
 
 	'KB'					=> 'ک ب',
 	'KIB'					=> 'ک ب',
@@ -447,6 +529,8 @@ $lang = array_merge($lang, array(
 	'LDAP_NO_SERVER_CONNECTION'			=> 'نەتوانرا پەیوەندی بکرێت بە ڕاژەکاری LDAP ـیەوە.',
 	'LDAP_SEARCH_FAILED'				=> 'LDAP هەڵەیەک ڕوویدا لەکاتی گەڕان بۆ شوێنی',
 	'LEGEND'							=> 'پلەداران',
+	'LIVE_SEARCHES_NOT_ALLOWED'			=> 'Live searches are not allowed.',
+	'LOADING'							=> 'Loading',
 	'LOCATION'							=> 'شوێن',
 	'LOCK_POST'							=> 'داخستنی پەیام',
 	'LOCK_POST_EXPLAIN'					=> 'قەدەغەکردنی دەستکاریکردن',
@@ -457,6 +541,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_CONFIRM_EXPLAIN'				=> 'بۆ بەدوورگرتنی هێرشی سەر هەژمارەکەت ،تەختاییەکە داوات کۆدی زانیاریت لێ دەکات لەدوای ژمارەیەکی زۆر لە سەرنەوکەوتن لە هاتنە ژوورەوە ،کۆدی دڵنیایی لە خوارەوە دەبێت', // unused
 	'LOGIN_ERROR_ATTEMPTS'				=> 'تۆ زۆرترین ژمارەت تێپەڕاند لە هەوڵدان بۆ هاتنە ژوورەوە ،وا داوادەکرێ کۆدی دڵنیایی بەکاربەریت بۆ بەردەوامبوون',
 	'LOGIN_ERROR_EXTERNAL_AUTH_APACHE'	=> 'نەسەلمێندراویت لەلایەن Apache ـیەوە.',
+	'LOGIN_ERROR_OAUTH_SERVICE_DOES_NOT_EXIST'	=> 'A non-existant OAuth service has been requested.',
 	'LOGIN_ERROR_PASSWORD'				=> 'تێپەڕەوشەیەکی نادروستت نووسی. تکایە لە تێپەڕەوشەکە دڵنیابە و هەوڵ بدەوە. گەر هەر بەردەوامبوویت لە هەبوونی کێشە تکایە پەیوەندی بکە بە %sبەڕێوەبەری مەکۆ%s.',
 	'LOGIN_ERROR_PASSWORD_CONVERT'		=> 'لە توانادا نەبوو کە تێپەڕەوشەکەت بگۆڕدرێت لە کاتی نوێکردنەوەی وەشانی مەکۆدا. تکایە %sداوای تێپەڕەوشەیەکی نوێ بکە%s. گەر هەر بەردەوامبوویت لە هەبوونی کێشە تکایە پەیوەندی بکە بە %sبەڕێوەبەری مەکۆ%s.',
 	'LOGIN_ERROR_USERNAME'				=> 'ناوی بەکارهێنەرێکی نادروستت نووسی. تکایە لە ناوی بەکارهێنەرییت دڵنیابە و هەوڵ بدەوە. گەر هەر بەردەوامبوویت لە هەبوونی کێشە تکایە پەیوەندی بکە بە %sبەڕێوەبەری مەکۆ%s.',
@@ -465,17 +550,22 @@ $lang = array_merge($lang, array(
 	'LOGIN_VIEWFORUM'					=> 'مەکۆ پێویستی بەوەیە کە خۆت تۆمار کردبێت و لە ژوورەوە بیت تۆ بتوانی بیبینیت.',
 	'LOGIN_EXPLAIN_EDIT'				=> 'بۆ ئەوەی دەستکاری پەیامەکانی ئەم مەکۆیە بکەیت  پێویستە خۆت تۆمار کردبێت و لە ژوورەوە بیت.',
 	'LOGIN_EXPLAIN_VIEWONLINE'			=> 'بۆ ئەوەی لیستی ئەوانە ببینیت کە لەسەر هێڵن پێویستە خۆت تۆمار کردبێت و لە ژوورەوە بیت.',
+	'LOGIN_REQUIRED'					=> 'You need to login to perform this action.',
 	'LOGOUT'							=> 'دەرچوون',
 	'LOGOUT_USER'						=> 'دەرچوون [ %s ]',
-	'LOG_ME_IN'							=> 'خۆکارانە بمهێنە ژوورەوە بۆ هەر سەردانێک',
+	'LOG_ME_IN'							=> 'Remember me',
 
+	'MAIN'					=> 'Main',
 	'MARK'					=> 'نیشانەکردن',
 	'MARK_ALL'				=> 'نیشانەکردنی هەموو',
+	'MARK_ALL_READ'			=> 'Mark all read',
 	'MARK_FORUMS_READ'		=> 'مەکۆکان وەک خوێندراوە لێبکە',
+	'MARK_READ'				=> 'Mark read',
 	'MARK_SUBFORUMS_READ'	=> 'ژێرمەکۆ وەک خوێندراوە لێبکە',
 	'MB'					=> 'م ب',
 	'MIB'					=> 'م ب',
 	'MCP'					=> 'کۆنتڕۆڵ پانێڵی چاودێر',
+	'MCP_SHORT'				=> 'MCP',
 	'MEMBERLIST'			=> 'ئەندامان',
 	'MEMBERLIST_EXPLAIN'	=> 'لیستی تەواوەتی ئەندامان ببینە',
 	'MERGE'					=> 'لکاندن',
@@ -488,26 +578,47 @@ $lang = array_merge($lang, array(
 	'MODERATE'				=> 'چاودێریی',
 	'MODERATOR'				=> 'چاودێر',
 	'MODERATORS'			=> 'چاودێران',
+	'MODULE_NOT_ACCESS'		=> 'Module not accessible',
+	'MODULE_NOT_FIND'		=> 'Cannot find module %s',
+	'MODULE_FILE_INCORRECT_CLASS'	=> 'Module file %s does not contain correct class [%s]',
 	'MONTH'					=> 'مانگ',
 	'MOVE'					=> 'گواستنەوە',
-	'MSNM'					=> 'MSNM/WLM',
 
 	'NA'						=> 'N/A',
 	'NEWEST_USER'				=> 'نوێترین ئەنداممان <strong>%s</strong>',
 	'NEW_MESSAGE'				=> 'پەیامی نوێ',
 	'NEW_MESSAGES'				=> 'پەیامی نوێ',
-	'NEW_PM'					=> '<strong>%d</strong> پەیامی نوێ هەیە',
-	'NEW_PMS'					=> '<strong>%d</strong> پەیامی نوێ هەیە',
 	'NEW_POST'					=> 'پەیامی نوێ',	// Not used anymore
 	'NEW_POSTS'					=> 'پەیامە نوێیەکان',	// Not used anymore
 	'NEXT'						=> 'داهاتوو',		// Used in pagination
 	'NEXT_STEP'					=> 'داهاتوو',
 	'NEVER'						=> 'هەرگیز',
 	'NO'						=> 'نەخێر',
+	'NO_NOTIFICATIONS'			=> 'You have no notifications',
 	'NOT_ALLOWED_MANAGE_GROUP'	=> 'ڕێت پێ نەدراوە بە بەڕێوەبردنی ئەم مەکۆیە.',
 	'NOT_AUTHORISED'			=> 'ڕێت پێ نەدراوە بە بینینی ئەم ناوچەیە.',
 	'NOT_WATCHING_FORUM'		=> 'چیتر بەژدار نیت لە نوێکارییەکانی ئەم مەکۆیە.',
 	'NOT_WATCHING_TOPIC'		=> 'چیتر بەژدار نیت لە نوێکارییەکانی ئەم بابەتە.',
+	'NOTIFICATIONS'				=> 'Notifications',
+	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
+	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
+	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
+	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
+	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
+	'NOTIFICATION_POST_IN_QUEUE'		=> '<strong>Post approval</strong> request by %1$s:',
+	'NOTIFICATION_REFERENCE'			=> '"%1$s"',
+	'NOTIFICATION_REASON'				=> '<em>Reason:</em> %1$s.',
+	'NOTIFICATION_REPORT_PM'			=> '<strong>Private Message reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_POST'			=> '<strong>Post reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_CLOSED'		=> '<strong>Report closed</strong> by %1$s for:',
+	'NOTIFICATION_TOPIC'				=> '<strong>New topic</strong> by %1$s:',
+	'NOTIFICATION_TOPIC_APPROVED'		=> '<strong>Topic approved</strong>:',
+	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
+	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
+	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> 'تکایە بەڕێوەبەری مەکۆ یان وێب ماستەر ئاگادار بکەوە.',
 	'NOTIFY_ADMIN_EMAIL'		=> 'تکایە بەڕێوەبەری مەکۆ یان وێب ماستەر ئاگادار بکەوە: <a href="mailto:%1$s">%1$s</a>',
 	'NO_ACCESS_ATTACHMENT'		=> 'ڕێت پێ نەدراوە بە بینینی ئەم پەڕگەیە.',
@@ -516,6 +627,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_ADMIN'				=> 'چوونە ناو کۆنترۆڵ پانێڵ ڕێ پێ نەدراوە لەبەر ئەوەی دەسەڵاتەکانی بەڕێوەبەریت نییە.',
 	'NO_AUTH_ADMIN_USER_DIFFER'	=> 'ناتوانیت خۆت بسەلمێنیتەوە وەک بەکارهێنەرێکی جیاواز.',
 	'NO_AUTH_OPERATION'			=> 'دەسەڵاتی پێویستت نییە بۆ بە ئەنجام گەیاندنی ئەم کردەیە.',
+	'NO_AVATARS'				=> 'No avatars currently available',
 	'NO_CONNECT_TO_SMTP_HOST'	=> 'نەتوانرا پەیوەندی بکات بە خانەخوێی smtp ـیەوە : %1$s : %2$s',
 	'NO_BIRTHDAYS'				=> 'هیچ ڕۆژێکی لە دایبوون نییە ئەمڕۆ.',
 	'NO_EMAIL_MESSAGE'			=> 'پەیامی ئیمەیل بەتاڵ بوو.',
@@ -531,7 +643,6 @@ $lang = array_merge($lang, array(
 	'NO_MODE'					=> 'هیچ جۆرێک دیاریی نەکراوە',
 	'NO_MODERATORS'				=> 'هیچ چاودێرێک نییە',
 	'NO_NEW_MESSAGES'			=> 'پەیامی نوێ نییە',
-	'NO_NEW_PM'					=> '<strong>0</strong> پەیامی نوێ هەیە',
 	'NO_NEW_POSTS'				=> 'پەیامی نوێ نییە',	// Not used anymore
 	'NO_ONLINE_USERS'			=> 'هیچ بەکارهێنەرێکی خۆ تۆمارکردوو نییە.',
 	'NO_POSTS'					=> 'پەیام نییە',
@@ -546,7 +657,6 @@ $lang = array_merge($lang, array(
 	'NO_TOPIC_FORUM'			=> 'بابەت یان مەکۆ چیتر بوونی نییە.',
 	'NO_TOPICS'					=> 'هیچ بابەت یان پەیامێک لەم مەکۆیەدا نییە.',
 	'NO_TOPICS_TIME_FRAME'		=> 'هیچ بابەتێک بوونی نییە لەم مەکۆیە لە نێوان ماوەی دیاریکراود.',
-	'NO_UNREAD_PM'				=> '<strong>0</strong> پەیامی نەخوێندراوە',
 	'NO_UNREAD_POSTS'			=> 'هیچ پەیامێکی نەخوێندراوە نییە',
 	'NO_UPLOAD_FORM_FOUND'		=> 'بارکردن تەواوە بەڵام هیچ فۆڕمێکی بارکردنی گونجاو نەدۆزرایەوە.',
 	'NO_USER'					=> 'بەکارهێنەری داواکراو بوونی نییە.',
@@ -557,15 +667,14 @@ $lang = array_merge($lang, array(
 	'OFFLINE'					=> 'دەرهێڵ',
 	'ONLINE'					=> 'سەرهێڵ',
 	'ONLINE_BUDDIES'			=> 'هاوڕێ سەرهێڵەکان',
-	'ONLINE_USERS_TOTAL'		=> ':: کۆی گشتی <strong>%d</strong> بەکارهێنەر لەسەر هێڵن ',
-	'ONLINE_USERS_ZERO_TOTAL'	=> ':: کۆی گشتی <strong>0</strong> بەکارهێنەر لەسەر هێڵن ',
-	'ONLINE_USER_TOTAL'			=> ':: کۆی گشتی <strong>%d</strong> بەکارهێنەر لەسەر هێڵن ',
 	'OPTIONS'					=> 'هەڵبژاردنەکان',
 
 	'PAGE_OF'				=> 'پەڕەی <strong>%1$d</strong> لە <strong>%2$d</strong>',
+	'PAGE_TITLE_NUMBER'		=> 'Page %s',
 	'PASSWORD'				=> 'تێپەڕەوشە',
 	'PIXEL'					=> 'px',
 	'PLAY_QUICKTIME_FILE'	=> 'پەڕگەی Quicktime لێبدە',
+	'PLEASE_WAIT'			=> 'Please wait.',
 	'PM'					=> 'PM',
 	'PM_REPORTED'			=> 'کرتە بۆ بۆ بینینی ڕاپۆرت',
 	'POSTING_MESSAGE'		=> 'ناردنی پەیام لە %s',
@@ -578,9 +687,15 @@ $lang = array_merge($lang, array(
 	'POSTED_ON_DATE'		=> 'لە ڕێکەوتی',
 	'POSTS'					=> 'پەیامەکان',
 	'POSTS_UNAPPROVED'		=> 'لانی کەم پەیامێک لەم بابەتەدا پەسەند نەکراوە.',
+	'POSTS_UNAPPROVED_FORUM'=> 'At least one post in this forum has not been approved.',
 	'POST_BY_AUTHOR'		=> 'لە لایەن',
-	'POST_BY_FOE'			=> 'ئەم پەیامە لەلایەن <strong>%1$s</strong> ـەوە نووسراوە کە هەنووکە لە لیستەی فەرامۆشکراوەکانتدایە. %2$ئەم پەیامە پیشان بدە%3$s',
+	'POST_BY_FOE'			=> '<strong>%1$s</strong>, who is currently on your ignore list, made this post.',
+	'POST_DISPLAY'			=> '%1$sDisplay this post%2$s.',
 	'POST_DAY'				=> '%.2f پەیام لە ڕۆژێکدا',
+	'POST_DELETED_ACTION'	=> 'Deleted post:',
+	'POST_DELETED'			=> 'This post has been deleted.',
+	'POST_DELETED_BY'		=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s.',
+	'POST_DELETED_BY_REASON'=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s for the following reason: %4$s',
 	'POST_DETAILS'			=> 'وردەکارییەکانی پەیام',
 	'POST_NEW_TOPIC'		=> 'بابەتی نوێ بنێرە',
 	'POST_PCT'				=> '%.2f%% لە هەموو پەیامەکاندا',
@@ -591,7 +706,8 @@ $lang = array_merge($lang, array(
 	'POST_SUBJECT'			=> 'سەردێڕ بنێرە',
 	'POST_TIME'				=> 'کاتی ناردن',
 	'POST_TOPIC'			=> 'بابەتێکی نوێ بنێرە',
-	'POST_UNAPPROVED'		=> 'ئەم پەیامە چاوەڕێی پەسەندکردنە.',
+	'POST_UNAPPROVED_ACTION'	=> 'Post awaiting approval:',
+	'POST_UNAPPROVED'		=> 'This post has not been approved.',
 	'POWERED_BY'			=> 'بەهێزە بە %s',
 	'PREVIEW'				=> 'پێشبینین',
 	'PREVIOUS'				=> 'پێشوو',		// Used in pagination
@@ -601,6 +717,8 @@ $lang = array_merge($lang, array(
 	'PRIVATE_MESSAGES'		=> 'پەیامە تایبەتەکان',
 	'PRIVATE_MESSAGING'		=> 'پەیام ناردنی تایبەت',
 	'PROFILE'				=> 'کۆنترۆڵ پانێڵی بەکارهێنەر',
+
+	'QUICK_LINKS'			=> 'Quick links',
 
 	'RANK'						=> 'پلە',
 	'READING_FORUM'				=> 'بینینی بابەتەکانی %s',
@@ -614,15 +732,6 @@ $lang = array_merge($lang, array(
 	'REDIRECTS'					=> 'سەرجەم ئاڕاستەکردنەکان',
 	'REGISTER'					=> 'خۆتۆمارکردن',
 	'REGISTERED_USERS'			=> 'بەکارهێنەرە خۆتۆمارکردووەکانی سەرهێڵ',
-	'REG_USERS_ONLINE'			=> '%d بەکارهێنەری خۆتۆمارکردوو و',
-	'REG_USERS_TOTAL'			=> '%d خۆتۆمارکردوو، ',
-	'REG_USERS_TOTAL_AND'		=> '%d خۆتۆمارکردوو و ',
-	'REG_USERS_ZERO_ONLINE'		=> '0 بەکارهێنەری خۆتۆمارکردوو و',
-	'REG_USERS_ZERO_TOTAL'		=> '0 خۆتۆمارکردوو، ',
-	'REG_USERS_ZERO_TOTAL_AND'	=> '0 خۆتۆمارکردوو و ',
-	'REG_USER_ONLINE'			=> '%d بەکارهێنەری خۆتۆمارکردوو و ',
-	'REG_USER_TOTAL'			=> '%d خۆتۆمارکردوو، ',
-	'REG_USER_TOTAL_AND'		=> '%d خۆتۆمارکردوو و ',
 	'REMOVE'					=> 'لابردن',
 	'REMOVE_INSTALL'			=> 'تکایە پێش بەکارهێنانی مەکۆ بوخچەی install بسڕەوە، بگوازەوە یان ناوی بگۆڕە. گەر بوخچەکە هەر هەیە، تەنها دەتوانیت کۆنترۆڵ پانێڵی بەڕێوەبەر ببینیت.',
 	'REPLIES'					=> 'وەڵامەکان',
@@ -639,7 +748,8 @@ $lang = array_merge($lang, array(
 	'RETURN_FORUM'				=> '%sبگەڕێوە بۆ مەکۆی بابەت%s',
 	'RETURN_PAGE'				=> '%sبگەڕێوە بۆ پەڕەی پێشوو%s',
 	'RETURN_TOPIC'				=> '%sبگەڕێوە بۆ دوا بابەتی سەردانکراو%s',
-	'RETURN_TO'					=> 'گەڕانەوە بۆ',
+	'RETURN_TO'					=> 'Return to “%s”',
+	'RETURN_TO_INDEX'			=> 'Return to Board Index',
 	'FEED'						=> 'Feed',
 	'FEED_NEWS'					=> 'هەواڵ',
 	'FEED_TOPICS_ACTIVE'		=> 'بابەتە چالاکەکان',
@@ -667,28 +777,30 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV_EXPLAIN'		=> 'هەڵبژاردنە پەرەسەندووەکانی گەڕان ببینە',
 	'SEARCH_KEYWORDS'			=> 'بگەڕێ بۆ وشەکلیل',
 	'SEARCHING_FORUMS'			=> 'گەڕان لە مەکۆکان',
-	'SEARCH_ACTIVE_TOPICS'		=> 'بابەتە چالاکەکان ببینە',
+	'SEARCH_ACTIVE_TOPICS'		=> 'Active topics',
 	'SEARCH_FOR'				=> 'بگەڕێ بۆ',
 	'SEARCH_FORUM'				=> 'لەم مەکۆیە بگەڕێ...',
-	'SEARCH_NEW'				=> 'پەیامە نوێیەکان ببینە',
+	'SEARCH_NEW'				=> 'New posts',
 	'SEARCH_POSTS_BY'			=> 'بگەڕێ لە پەیامەکانی نووسەر',
-	'SEARCH_SELF'				=> 'پەیامەکانی خۆت ببینە',
+	'SEARCH_SELF'				=> 'Your posts',
 	'SEARCH_MINE'				=> 'View your topics',
 	'SEARCH_TOPIC'				=> 'لەم بابەتەدا بگەڕێ...',
-	'SEARCH_UNANSWERED'			=> 'پەیامە بێ وەڵامەکان ببینە',
-	'SEARCH_UNREAD'				=> 'پەیامە نەخوێندراوەکان ببینە',
+	'SEARCH_UNANSWERED'			=> 'Unanswered posts',
+	'SEARCH_UNREAD'				=> 'Unread posts',
 	'SEARCH_USER_POSTS'			=> 'پەیامەکانی بەکارهێنەر بگەڕێ',
 	'SECONDS'					=> 'چرکە',
+	'SEE_ALL'					=> 'See All',
 	'SELECT'					=> 'دیاریکردن',
 	'SELECT_ALL_CODE'			=> 'دیاریکردنی هەموو',
 	'SELECT_DESTINATION_FORUM'	=> 'تکایە مەکۆیەکی مەبەست دیاری بکە',
 	'SELECT_FORUM'				=> 'مەکۆیەک دیاری بکە',
-	'SEND_EMAIL'				=> 'ئیمەیڵ',				// Used for submit buttons
-	'SEND_EMAIL_USER'			=> 'ئیمەیل بنێرە بۆ',				// Used as: {L_SEND_EMAIL_USER} {USERNAME} -> E-mail UserX
+	'SEND_EMAIL'				=> 'Send email',				// Used for submit buttons
+	'SEND_EMAIL_USER'			=> 'Send email to %s',
 	'SEND_PRIVATE_MESSAGE'		=> 'پەیامی تایبەتی بنێرە',
 	'SETTINGS'					=> 'ڕێکخستنەکان',
 	'SIGNATURE'					=> 'واژۆ',
 	'SKIP'						=> 'بیپەڕێنە بۆ ناوەڕۆک',
+	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> ' ڕاژەکار پاڵپشتی سەلماندن ناکات',
 	'SORRY_AUTH_READ'			=> 'ڕێت پێ نەدراوە ئەم مەکۆیە ببینیت.',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'ڕێت پێ نەدراوە بە داگرتنی ئەم هاوپێچە',
@@ -706,6 +818,8 @@ $lang = array_merge($lang, array(
 	'START_WATCHING_TOPIC'		=> 'بەشداربوون لە بابەت',
 	'STOP_WATCHING_FORUM'		=> 'بەشدار نەبوون لە مەکۆ',
 	'STOP_WATCHING_TOPIC'		=> 'بەشدار نەبوون لە بابەت',
+	'STRING_LIST_MULTI'			=> '%1$s, and %2$s',
+	'STRING_LIST_SIMPLE'		=> '%1$s and %2$s',
 	'SUBFORUM'					=> 'ژێرمەکۆ',
 	'SUBFORUMS'					=> 'ژێرمەکۆکان',
 	'SUBJECT'					=> 'سەردێڕ',
@@ -717,51 +831,35 @@ $lang = array_merge($lang, array(
 	'THE_TEAM'			=> 'پلەداران',
 	'TIB'				=> 'TiB',
 	'TIME'				=> 'کات',
-	
+	'TIMEOUT_PROCESSING_REQ'			=> 'Request timed out.',
+
 	'TOO_LARGE'						=> 'بەهای نووسراو زۆر گەورەیە',
 	'TOO_LARGE_MAX_RECIPIENTS'		=> 'ڕێکخستنی نووسراو زۆر گەورەیە <strong>زۆرترین ژمارە لە وەرگری ڕێپێدراو لەهەر پەیامێکی تایبەت</strong> بەهای',
 
 	'TOO_LONG'						=> 'ئەو نرخەی لێتداوە زۆر درێژە.',
 
-	'TOO_LONG_AIM'					=> 'ئەو ناوی پیشاندانەی لێتداوە زۆر درێژە.',
 	'TOO_LONG_CONFIRM_CODE'			=> 'ئەو کۆدی دڵنیابوونەی نووسیوتە زۆر درێژە.',
 	'TOO_LONG_DATEFORMAT'			=> 'ئەو شێوازی کاتەی نووسیوتە زۆر درێژە.',
-	'TOO_LONG_ICQ'					=> 'ئەو ژمارەی ICQ ـەی لێتداوە زۆر درێژە.',
-	'TOO_LONG_INTERESTS'			=> 'ئەو ئارەزووانەی نووسیوتن زۆر درێژن.',
 	'TOO_LONG_JABBER'				=> 'ئەو ناوی هەژماری جابەرەی نووسیوتە زۆر درێژە.',
-	'TOO_LONG_LOCATION'				=> 'ئەو شوێنەی لێتداوە زۆر درێژە.',
-	'TOO_LONG_MSN'					=> 'ئەو ناوی MSNM/WLM ـەی نووسیوتە زۆر درێژە',
 	'TOO_LONG_NEW_PASSWORD'			=> 'ئەو تێپەڕەوشەیەی نووسیوتە زۆر درێژە.',
-	'TOO_LONG_OCCUPATION'			=> 'ئەو پیشەیەی نووسیوتە زۆر درێژە.',
 	'TOO_LONG_PASSWORD_CONFIRM'		=> 'ئەو تێپەڕەوشە دڵنیابوونەی لێتداوە زۆر درێژە.',
 	'TOO_LONG_USER_PASSWORD'		=> 'ئەو تێپەڕەوشەیەی نووسیوتە زۆر درێژە.',
 	'TOO_LONG_USERNAME'				=> 'ئەو ناوی بەکارهێنەرەی نووسیوتە زۆر درێژە.',
-	'TOO_LONG_EMAIL'				=> 'ئەو ناونیشانی ئیمەیلەی نووسیوتە زۆر درێژە.',
-	'TOO_LONG_EMAIL_CONFIRM'		=> 'ئەو ناونیشانی ئیمەیلی دڵنیابونەی لێتداوە زۆر درێژە.',
-	'TOO_LONG_WEBSITE'				=> 'ئەو ناونیشانی وێبگەیەی نووسیوتە زۆر درێژە.',
-	'TOO_LONG_YIM'					=> 'ئەو ناوەی پەیامبەری یاهوو کە نووسیوتە زۆر درێژە.',
+	'TOO_LONG_EMAIL'				=> 'The email address you entered is too long.',
 
 	'TOO_MANY_VOTE_OPTIONS'			=> 'هەوڵت دا دەنگ بە زیاتر لە یەک هەڵبژاردن بدەیت.',
 
 	'TOO_SHORT'						=> 'ئەو نرخەی دیاریت کردووە زۆر کورتە.',
 
-	'TOO_SHORT_AIM'					=> 'ئەو ناوی پیشاندانەی لێتداوە زۆر کورتە.',
 	'TOO_SHORT_CONFIRM_CODE'		=> 'ئەو کۆدی دڵنیابوونەی لێتداوە زۆر کورتە.',
 	'TOO_SHORT_DATEFORMAT'			=> 'ئەو شێوازی ڕێکەوتەی لێتداوە زۆر کورتە.',
-	'TOO_SHORT_ICQ'					=> 'ئەو ژمارەی ICQ ـەی لێتداوە زۆر کورتە.',
-	'TOO_SHORT_INTERESTS'			=> 'ئەو ئارەزووانەی نووسیوتن زۆر درێژن.',
 	'TOO_SHORT_JABBER'				=> 'ئەو هەژماری جابەرەی نووسیوتە زۆر کورتە.',
-	'TOO_SHORT_LOCATION'			=> 'ئەو شوێنەی نووسیوتە زۆر کورتە.',
-	'TOO_SHORT_MSN'					=> 'ئەو ناوی MSNM/WLM ـەی نووسیوتە زۆر کورتە.',
 	'TOO_SHORT_NEW_PASSWORD'		=> 'ئەو تێپەڕەوشەیەی نووسیوتە زۆر کورتە.',
-	'TOO_SHORT_OCCUPATION'			=> 'ئەو پیشەیەی نووسیوتە زۆر کورتە.',
 	'TOO_SHORT_PASSWORD_CONFIRM'	=> 'ئەو تێپەڕەوشەی دڵنیابوونەی لێتداوە زۆر کورتە.',
 	'TOO_SHORT_USER_PASSWORD'		=> 'ئەو تێپەڕەوشەیەی نووسیوتە زۆر کورتە.',
 	'TOO_SHORT_USERNAME'			=> 'ئەو ناوی بەکارهێنەرەی نووسیوتە زۆر کورتە.',
-	'TOO_SHORT_EMAIL'				=> 'ئەو ناونیشانی ئیمەیلەی نووسیوتە زۆر کورتە.',
-	'TOO_SHORT_EMAIL_CONFIRM'		=> 'ئەو ناونیشانی ئیمەیلی دڵنیابوونەی نووسیوتە زۆر کورتە.',
-	'TOO_SHORT_WEBSITE'				=> 'ئەو ناونیشانی وێبگەیەی نووسیوتە زۆر کورتە.',
-	'TOO_SHORT_YIM'					=> 'ئەو پەیامبەری یاهووەی نووسیوتە زۆر کورتە.',
+	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
+	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
 	
 	'TOO_SMALL'						=> 'بەهای نووسراو زۆر بچووکە',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> 'ڕێکخستنی نووسراو زۆر بچووکە<strong>زۆرترین ژمارە لە وەرگری ڕێپێدراو لەهەر پەیامێکی تایبەت</strong> بەهای',
@@ -775,30 +873,20 @@ $lang = array_merge($lang, array(
 	'TOPIC_MOVED'		=> 'بابەت گواستراوەتەوە',
 	'TOPIC_REVIEW'		=> 'پیاچوونەوەی بابەت',
 	'TOPIC_TITLE'		=> 'سەردێڕی بابەت',
-	'TOPIC_UNAPPROVED'	=> 'ئەم بابەتە پەسەند نەکراوە',
+	'TOPIC_UNAPPROVED'	=> 'This topic has not been approved.',
+	'TOPIC_DELETED'		=> 'This topic has been deleted.',
 	'TOTAL_ATTACHMENTS'	=> 'هاوپێچ(ەکان)',
-	'TOTAL_LOG'			=> '1 لۆگ',
-	'TOTAL_LOGS'		=> '%d لۆگ',
-	'TOTAL_NO_PM'		=> '0 پەیامی تایبەت لە کۆی گشتی',
-	'TOTAL_PM'			=> '1 پەیامی تایبەت لە کۆی گشتی',
-	'TOTAL_PMS'			=> '%d پەیامی تایبەت لە کۆی گشتی',
+	'TOPIC_POLL'		=> 'This topic has a poll.',
 	'TOTAL_POSTS'		=> 'سەرجەم پەیامەکان',
-	'TOTAL_POSTS_OTHER'	=> 'سەرجەم پەیامەکان <strong>%s</strong>',
-	'TOTAL_POSTS_ZERO'	=> 'سەرجەم پەیامەکان <strong>0</strong>',
 	'TOPIC_REPORTED'	=> 'ئەم بابەتە ڕاپۆرتکراوە',
-	'TOTAL_TOPICS_OTHER'=> 'سەرجەم بابەتەکان <strong>%s</strong>',
-	'TOTAL_TOPICS_ZERO'	=> 'سەرجەم بابەتەکان <strong>0</strong>',
-	'TOTAL_USERS_OTHER'	=> 'سەرجەم ئەندامان <strong>%s</strong>',
-	'TOTAL_USERS_ZERO'	=> 'سەرجەم ئەندامان <strong>0</strong>',
 	'TRACKED_PHP_ERROR'	=> '%s :تۆماری هەڵەی پهپ',
+	'TWITTER'			=> 'Twitter',
 
-	'UNABLE_GET_IMAGE_SIZE'	=> 'نەتوانرا دوورییەکانی وێنە بپێورێت.',
+	'UNABLE_GET_IMAGE_SIZE'	=> 'It was not possible to determine the dimensions of the image. Please verify that the URL you entered is correct.',
 	'UNABLE_TO_DELIVER_FILE'=> 'نەتوانرا پەڕگە بەدەست بگەیەنرێت.',
 	'UNKNOWN_BROWSER'		=> 'وێبگەڕێکی نەزانراو',
 	'UNMARK_ALL'			=> 'لابردنی نیشانەی هەمووی',
 	'UNREAD_MESSAGES'		=> 'پەیامی نەخوێندراوە',
-	'UNREAD_PM'				=> '<strong>%d</strong> پەیامی نەخوێندراوە',
-	'UNREAD_PMS'			=> '<strong>%d</strong> پەیامی نەخوێندراوە',
 	'UNREAD_POST'			=> 'پەیامی نەخوێندراو',
 	'UNREAD_POSTS'			=> 'پەیامە نەخوێندراوەکان',
 	'UNWATCH_FORUM_CONFIRM'		=> 'دڵنیایت کە دەتەوێ بەشداریپێکردنت لەو مەکۆیە لادەیت؟',
@@ -816,8 +904,6 @@ $lang = array_merge($lang, array(
 	'USERNAMES'				=> 'ناوی بەکارهێنەران',
 	'USER_AVATAR'			=> 'وێنۆچکەی بەکارهێنەر',
 	'USER_CANNOT_READ'		=> 'ناتوانیت پەیامەکانی ئەم مەکۆیە بخوێنیتەوە',
-	'USER_POST'				=> '%d پەیام',
-	'USER_POSTS'			=> '%d پەیام',
 	'USERS'					=> 'بەکارهێنەران',
 	'USE_PERMISSIONS'		=> 'دەسەڵاتەکانی بەکارهێنەر تاقی بکەوە',
 
@@ -825,6 +911,8 @@ $lang = array_merge($lang, array(
 
 	'VARIANT_DATE_SEPARATOR'	=> ' / ',	// Used in date format dropdown, eg: "Today, 13:37 / 01 Jan 2007, 13:37" ... to join a relative date with calendar date
 	'VIEWED'					=> 'بینرا',
+
+	'VIEWING_CONTACT_ADMIN'		=> 'Viewing contact page',
 	'VIEWING_FAQ'				=> 'بینینی پ هـ د',
 	'VIEWING_MEMBERS'			=> 'بینینی وردەکارییەکانی ئەندام',
 	'VIEWING_ONLINE'			=> 'بینینی ئەوانەی لەسەر هێڵن',
@@ -839,8 +927,6 @@ $lang = array_merge($lang, array(
 	'VIEW_LATEST_POST'			=> 'دواترین پەیام ببینە',
 	'VIEW_NEWEST_POST'			=> 'یەکەم پەیامی نەخوێندراوە ببینە',
 	'VIEW_NOTES'				=> 'سەرنجەکانی بەکارهێنەر ببینە',
-	'VIEW_ONLINE_TIME'			=> 'لەسەر بنەمای ئەو بەکارهێنەرانی چالاک بوون لە %s خولەکی پێشوو',
-	'VIEW_ONLINE_TIMES'			=> 'لەسەر بنەمای ئەو بەکارهێنەرانی چالاک بوون لە %s خولەکی پێشوو',
 	'VIEW_TOPIC'				=> 'بینینی بابەت',
 	'VIEW_TOPIC_ANNOUNCEMENT'	=> 'ئاگاداریی',
 	'VIEW_TOPIC_GLOBAL'			=> 'ئاگاداریی گشتی:',
@@ -861,23 +947,24 @@ $lang = array_merge($lang, array(
 	'WEBSITE'			=> 'وێبگە',
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> 'ئەوانەی لەسەر هێڵن',
+	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'تێپەڕەوشەیەکی هەڵەت لێدا.',
 	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
-	'WRONG_DATA_ICQ'			=> 'ئەو ژمارەیەی لێتداوە ژمارەیەکی دروستی ICQ نییە.',
 	'WRONG_DATA_JABBER'			=> 'ئەو ناوەی لێتداوەناوی هەژمارێکی دروستی جابەر نییە.',
 	'WRONG_DATA_LANG'			=> 'ئەو زمانەی دیاریت کردووە گونجاو نییە',
-	'WRONG_DATA_WEBSITE'		=> 'پێویستە ناونیشانی وێبگەکە URL ـێکی تەواو بێت، پرۆتۆکۆلەکەشی تیادا بێت. بۆ نموونە http://www.chawg.org/.',
+	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
+	'WRONG_DATA_POST_SK'		=> 'The post sort option you specified is not valid.',
+	'WRONG_DATA_TOPIC_SD'		=> 'The topic sort direction you specified is not valid.',
+	'WRONG_DATA_TOPIC_SK'		=> 'The topic sort option you specified is not valid.',
 	'WROTE'						=> 'نووسی',
 
+	'YAHOO'				=> 'Yahoo Messenger',
+	'YOUTUBE'			=> 'YouTube',
 	'YEAR'				=> 'ساڵ',
 	'YEAR_MONTH_DAY'	=> '(YYYY-MM-DD)',
 	'YES'				=> 'بەڵێ',
-	'YIM'				=> 'YIM',
 	'YOU_LAST_VISIT'	=> 'دوا سەردان: %s',
-	'YOU_NEW_PM'		=> 'پەیامێکی تایبەتی نوێ چاوەڕێتە لە سندووقی هاتووەکان.',
-	'YOU_NEW_PMS'		=> 'پەیامی تایبەتی نوێ چاوەڕێتن لە سندووقی هاتووەکان.',
-	'YOU_NO_NEW_PM'		=> 'هیچ پەیامێکی تایبەتی نوێ چاوەڕێی نییە.',
 
 	'default_dateformat'	=> 'D M d, Y g:i a', // Mon Jan 01, 2007 1:37 pm
 
@@ -1083,7 +1170,6 @@ $lang = array_merge($lang, array(
 
 	'FORUM_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this forum.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this topic.',
-	'TOO_FEW_CHARS_LIMIT'	=> 'پەیامەکەت نووسەی تیادایە. کەمترین ژمارەی نووسە کە پێویستە بینووسیت %2$d نووسەیە.',
 	'REPLY_TO_MESSAGE'		=> 'Reply to message',
 
 	'RSS_CHAN_LIST_TITLE'	=> 'مەکۆکان',
@@ -1695,7 +1781,6 @@ $lang = array_merge($lang, array(
 	'DEV_NO_TEST_FILE'			=> 'هیچ نرخێک دیارینەکراوە بۆ ئەو بەهایە test_file لە گۆڕەرەکە ،ئەگەر تۆ بەکارهێنەرێکی لەو گۆڕەرە ،پێویستە ئەم هەڵەیە نەبینیت ،تکایە ئەم پەیامە بۆ نووسەری گۆڕەرەکە ڕاپۆرت بکە .ئەگەر تۆ خۆت نووسەری گۆڕەرەکەیت ،دەبێت ناوی پەڕگەکە بەردەستە دیاریبکەیت لە سەرچاوەی مەکۆکە بۆ ڕێگادان بە ڕێچکەکە بۆ ناسینەوەی و دڵنیابوونەوە.',
 	'DIRECTORIES_AND_FILES'		=> 'پێڕست و پەڕگەی دامەزراندن',
 	'DISABLE_KEYS'				=> 'ناچالاککردنی کلیلەکان',
-	'DLL_FIREBIRD'				=> 'فایربێرد',
 	'DLL_FTP'					=> 'گرتنی پاڵپشتی FTP [دامەزراندن]',
 	'DLL_GD'					=> 'پاڵپشتی گرافیکی GD [پەسەندکردنی دەرەکی]',
 	'DLL_MBSTRING'				=> 'پاڵپشتی فرە-بایتی تیپ',
@@ -1706,11 +1791,12 @@ $lang = array_merge($lang, array(
 	'DLL_MYSQLI'				=> 'MySQL لەگەڵ MySQLi پێوەندکراو',
 	'DLL_ORACLE'				=> 'Oracle',
 	'DLL_POSTGRES'				=> 'PostgreSQL 7.x/8.x',
-	'DLL_SQLITE'				=> 'SQLite',
+	'DLL_SQLITE'				=> 'SQLite 2',
+	'DLL_SQLITE3'				=> 'SQLite 3',
 	'DLL_XML'					=> 'پاڵپشتی XML [جابەر]',
 	'DLL_ZLIB'					=> 'پاڵپشتی پەستاندنی zlib [ gz. ,tar.gz ,zip. ]',
 	'DL_CONFIG'					=> 'config دابگرە',
-	'DL_CONFIG_EXPLAIN'			=> 'دەتوانی تەواوی config.php دابگریت بۆ کۆمپیوتەرەکەت ،پاشان دەبێت پەڕگەکە خۆت باری بکەیتەوە و لەجێگای هەر config.php ــێكی هەبوودا دابنێەوە لە پێڕستی بنچینەی phpBB 3.0 ,تکایە لەیادت بێت پەڕگەکە لەجۆرە فۆرماتی ASCII باربکەیت (نەرمەکاڵای FTPــی خۆت ببینە) ،بەڵگەنامە ئەگەر دڵنیانیت چۆن ئەرشیفی بکەیت .لەکاتێکدا تۆ config.php بارکرد تکایە کرتەبکە لەسەر "تەواو" بۆ ڕۆیشتن بۆ قۆناغی دواتر.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'داگرتن',
 	'DONE'						=> 'تەواو',
 
@@ -1722,8 +1808,6 @@ $lang = array_merge($lang, array(
 	'FILES_REQUIRED_EXPLAIN'	=> '<strong>داواکراوە</strong> - داوادەکرێ بەدروستی هاوکێشەبکڕین phpBB پێویستە چالاکبکرێت بۆ گەیشتن یان نووسین بۆ بڕێک پەڕگە یان پێڕست ،ئەگەر تۆ "نەدۆزرایەوە" دەبینی وا پێویستە پەڕگەی هاوشێوە یان پێڕستی هاوشێوە دروستبکەیت .ئەگەر "نەنووسێنراو" دەبینیت پێویستە ڕەسەنێتی لەسەر پەڕگە یان پێڕست گۆڕەری بۆ ڕێگاپێدانی phpBB بۆ نووسین.',
 	'FILLING_TABLE'				=> 'پڕکردنەوەی خشتەی <strong>%s</strong>.',
 	'FILLING_TABLES'			=> 'پڕکردنەوەی خشتەکان',
-
-	'FIREBIRD_DBMS_UPDATE_REQUIRED'		=> 'phpBB هیچی تر پاڵپشتی Firebird/بنکەناوەکی لەوەشانییەوە بۆ وەشانی 2.1 تکایە دامەزراندنی Firebird نوێبکەوە بەلایەنی کەم بۆ 2.1.0 پێش کردنی لەگەڵ نوێکردنەوەکە.',
 
 	'FINAL_STEP'				=> 'جێبەجێکردنی هەنگاوی کۆتایی',
 	'FORUM_ADDRESS'				=> 'ناونیشانی مەکۆ',
@@ -1749,31 +1833,30 @@ $lang = array_merge($lang, array(
 	<p>کرتەکردنی دوگمەی خوارەوە دەتبات بۆ فۆرمێک بۆ ناردنی داتای دۆخەکان بۆ phpBB لە کۆنترۆڵ پانێڵی بەڕێوەبەرایەتی ،ئێمە خوازیاردەبین کە تۆ بتوانیت یارمەتیمان بدەیت بە ناردنی ئەو زانیاریانە ،لەدوای ئەوە هەندێ کات بۆخۆت وەربگرە بۆ تاقیکردنەوەی ئەو هەڵبژاردنانەی کە بەردەستن بۆت ،لەیادت بێت کە یارمەتی سەرهێڵ بەردەستە لەڕێگای <a href="http://www.phpbb.com/support/documentation/3.0/">بەڵگەنامەیی</a>, <a href="%3$s">بمخوێنەوە</a> لەگەڵ <a href="http://www.phpbb.com/community/viewforum.php?f=46">مەکۆکانی پاڵپشتی</a>.</p><p><strong> تکایە شوێنگەی دامەزراندن بسڕەوە/بگوازەوە/ناولێبنێەوە لەپێش بەکاربردنی مەکۆکەت .چونکە لەکاتی بوونی ئەو شوێنگەیەدا تەنها دەتوانرێت دەستت بگات بە کۆنترۆڵ پانێڵێ بەڕێوەبەر</strong>.',
 	'INSTALL_INTRO'				=> 'بەخێربێیت بۆ دامەزراندن',
 
-	'INSTALL_INTRO_BODY'		=> 'لەم هەڵبژاردنەدا ئەتوانیت phpBB3 دامەزرێنیت لەسەر ڕاژەکارەکەت.</p><p>بۆ جێبەجێکردن پێویستت بە ڕێکخستنەکانی بنکەدراوەکەتە. گەر ڕێکخستنەکانی بنکەدراوەکەت نازانیت، تکایە پەیوەندی بە ڕاژەکەتەوە بکە و داوای زانیارییەکان بکە. ناتوانیت بەردەوام بیت بەبێ ڕێکخستنەکان. پێویستت بەمانەیە:</p>
+	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
 
 	<ul>
-		<li>جۆری بنکەدراوە - ئەو بنکەدراوەیەی بەکاری ئەهێنیت.</li>
-		<li>ناوی خانەخوێی ڕاژەی بنکەدراوەکە یان DNS - ناونیشانی ڕاژەی بنکەدراوەکە.</li>
-		<li>دەروازەی ڕاژەی بنکەدراوەکە - ئەو دەروازەی ڕاژەی بنکەدراوەکە (زۆربەی کات ئەوە ویستراو نییە).</li>
-		<li>ناوی بنکەدراوەکە - ئەو ناوی بنکەدراوەی لەسەر ڕاژەکەیە.</li>
-		<li>ناوی بەکارهێنەر و تێپەڕەوشەی بنکەدراوەکە - داتای چوونەژوورەوە بۆ گەیشتن بە بنکەدراوەکە.</li>
-	
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
 	</ul>
-	<p><strong>تێبینی:</strong> ئەگەر دادەمەزرێنی بە بەکاربردنی SQLite ،پێویستە ڕێچکەی تەواو بنووسیت بۆ پەڕگەی بنکەدراوەکەت لە خانەی DNS و خانەکانی ناوی بەکارهێنەر و تێپەڕەوشە بە بەتاڵی بەجێ بهێڵیت .بۆ هۆکارەکانی پاراستن ،پێویستە دڵنیاببیتەوە لەوەی کە پەڕگەی بنکەدراوەکە لە جێگایەی بەردەست پاشەکەوت نەکراوە لە وێبگەکە.</p>
 
-	
-	<p>phpBB3 پاڵپشتی لەو بنکەدراوانە دەکات:</p>
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
+
+	<p>phpBB3 supports the following databases:</p>
 	<ul>
-		<li>MySQL 3.23 یان بەرزتر (MySQLi پاڵپشتکراوە)</li>
-		<li>PostgreSQL 7.3+</li>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
 		<li>SQLite 2.8.2+</li>
-		<li>Firebird 2.1+</li>
-		<li>MS SQL ڕاژەی 2000 یان بەرزتر (ڕاستەوخۆ یان لەڕێگای ODBC)</li>
-		<li>MS SQL ڕاژەی 2005 یان بەرزتر (خۆماڵی)</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
 		<li>Oracle</li>
 	</ul>
 
-	<p>تەنها بنکەدراوە پاڵپشتکراوەکانی ڕاژەکەت نیشاندەدرێن.',
+	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'بۆ دەستپێکردنی دامەزراندنەکە ،دوگمەی خوارەوە دابگرە.',
 	'INSTALL_LOGIN'				=> 'چوونە ژوورەوە',
 	'INSTALL_NEXT'				=> 'قۆناغی داهاتوو',
@@ -1789,9 +1872,8 @@ $lang = array_merge($lang, array(
 	'INST_ERR_DB_NO_ERROR'		=> 'هیچ پەیامێکی هەڵە نەدراوە',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'وەشانی MySQL ــی دەمەزراو لەسەر ئەو ماکینەیە نەگونجاوە لەگەڵ هەڵبژاردنی "MySQL و گەیاندنی MySQLi" ــی کە تۆ هەڵتبژاردووە .تکایە هەڵبژاردنی "MySQL" لەباتی هەڵبژێرە.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'ئەو وەشانەی SQLite کە تۆ داتمەزراندووە زۆر کۆنە ،دەبێت نوێبکرێتەوە بۆ بەلایەنی کەم 2.8.2 .',
+	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'وەشانی Oracle ــی دامەزراو لەسەر ئەو ماکینەیە داوادەکات بۆ بینینی <var>NLS_CHARACTERSET</var> پارمێترەر بۆ <var>UTF8</var> ،هەروەها دامەزراندنەکەت نوێبکەوە بۆ +9.2 یان پارمێترەر بگۆڕە.',
-	'INST_ERR_DB_NO_FIREBIRD'	=> 'وەشانی Firebird ــی دامەزراو لەسەر ئەو ماکینەیە کۆنترە لە 2.1 ،تکایە نوێبکەوە بۆ وشانێکی نوێتر.',
-	'INST_ERR_DB_NO_FIREBIRD_PS'=> 'بنکەدراوەی هەڵبژێراو بۆ Firebird پەڕەیەکی هەیە قەبارەکەی کەمترە لە 8192 ،دەبێت بەلایەنی کەم 8192 بێت.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'ئەو بنکەدراوەی هەڵتبژاردووە دروستنەکرا لە <var>UNICODE</var> یان <var>UTF8</var> ،هەوڵبدە دایبمەزرێنی لەگەڵ بنکەدراوەیەک لە <var>UNICODE</var> یان <var>UTF8</var> .',
 	'INST_ERR_DB_NO_NAME'		=> 'ناوی بنکەدراوە دیارینەکراوە.',
 	'INST_ERR_EMAIL_INVALID'	=> 'ئەو پۆستی ئەلیکترۆنیەی نووسیوتە نادروستە.',
@@ -1845,6 +1927,8 @@ $lang = array_merge($lang, array(
 	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'ئەگەر دامەزراندنی PHP لەگەڵ پاڵپشتی UTF-8 نەگونجێ phpBB <strong>کارناکات</strong>.',
 	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP function getimagesize() is available',
 	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>داواکراوە</strong> - وا داوادەکرێ بۆ phpBB بۆ نەخشەی دروست ،پێویستە نەخشەی getimagesize بەردەست بێت.',
+	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'گۆڕاوەکانی هەڵبژاردنانە',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>هەڵبژاردنانە</strong> - ئەو گۆڕاوانە یان نەرمەواڵانە هەڵبژاردانەن .هەرچۆنێکە ئەگەر ئەوان بەردەستبن زۆرترین تایبەتمەندی چالاکدەکەن.',
 	'PHP_SUPPORTED_DB'				=> 'بنکەدراوە پاڵپشکراوەکان',
@@ -1853,10 +1937,10 @@ $lang = array_merge($lang, array(
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'ئەگەر ئەو ڕێکخستنە چالاککرابێت phpBB هێشتا هەر کاردەکات ،بەڵام ئەگەرهاتوو ،وا ئامۆژگاریدەکرێ کە register_globals ناچالاککرابێ لەسەر دامەزراندنی PHP فۆر هۆکارەکانی پاراستن.',
 	'PHP_SAFE_MODE'					=> 'safe mode',
 	'PHP_SETTINGS'					=> 'وەشان و ڕێکخستنەکانی PHP',
-	'PHP_SETTINGS_EXPLAIN'			=> '<strong>داواکراوە</strong> -  پێویستە بەکاربیت بەلایەنی کەم لەسەر وەشانی 4.3.3 ــی PHP وا داوادەکرێ بۆ دامەزراندنی phpBB ،ئەگەر <var>safe mode</var> لە خوارەوە نیشاندراوە دامەزراندنی PHP ــەكەت دەڕوات لەو بارەدا .',
+	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'ڕێکخستنی <var>allow_url_fopen</var> لە PHP چالاککراوە',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>ئارەزوومەندانە</strong> - ئەو ڕێکخستنە ئارەزوومەندانەیە ،هەرچۆنێکە فرە نەخشەیی phpBB وەکو بێ-وێبگە وێنۆچکەکان بەتەواوی کارناکەن بەبێ ئەوە.',
-	'PHP_VERSION_REQD'				=> 'PHP وەشانی >= 4.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
 	'POST_ID'						=> 'ناردنی ناونیشان',
 	'PREFIX_FOUND'					=> 'پشکنینێکی خشتەکانت دامەزراندنێکی نیشاندا بەکاربردنی <strong>%s</strong> وەکو پاشگری خشتە.',
 	'PREPROCESS_STEP'				=> 'جێبەجێکاری خۆ-کردارکردنی نەخشەکان/پرسەکان',
@@ -1876,6 +1960,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> 'سازدانی ڕاژەکار',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'پێرستی گەڕان نەگۆڕدرا',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'پێڕستە کۆنەکەی گەڕانت نەگۆڕدرا ،گەڕان هەمیشە ئەنجامێکی بەتاڵ دەدات. بۆ دروستکردنی پێڕستێکی نوێی گەڕان بڕۆ بۆ کۆنترۆڵ پانێڵی بەڕێوەبەرایەتی ،چاککاری هەڵبژێرە و پاشان پێڕستی گەڕان لە ژێرمێنودا.',
+	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> 'نەرمەکاڵای مەکۆ',
 	'SPECIFY_OPTIONS'			=> 'دیاریکردنی هەڵبژاردنەکانی گۆڕین',
 	'STAGE_ADMINISTRATOR'		=> 'وردەکارییەکانی بەڕێوەبەر',
@@ -1883,7 +1968,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> 'ڕێکخستنەکان لەسەر ئەو پەڕەیە تەنها گرنگە بۆ دانان ئەگەر دەزانی کە شتێکی جیاوازترە وەک لەوەی بنچینە ،ئەگەر تۆ دڵنیای ،تەنها بەردەوامبە بۆ پەڕەی دواتر. وەکو ئەو ڕێکخستنانە دەتوانن دواتر پێشبخرین لە کۆنترۆڵ پانێڵی بەڕێوەبەر.',
 	'STAGE_CONFIG_FILE'			=> 'پەڕگەی شێوەپێدان',
 	'STAGE_CREATE_TABLE'		=> 'خشتەی بنکەدراوە دروستبکە',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'خشتەکانی بنکەدراوە بەکارهێنراون لەلایەن phpBB 3.0 دروستکراوە و کۆکراوەتەوە لەگەڵ هەندێ داتای پێکهێنراو ،بەردەوامبە بۆ پەردەی دواتر بۆ کۆتایی هێنانی دامەزراندنی phpBB.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'ڕێکخستنەکانی بنکەدراوە',
 	'STAGE_FINAL'				=> 'قۆناغی کۆتایی',
 	'STAGE_INTRO'				=> 'ناساندن',
@@ -1896,7 +1981,7 @@ $lang = array_merge($lang, array(
 	'SUB_LICENSE'				=> 'مۆڵەت',
 	'SUB_SUPPORT'				=> 'پاڵپشتی',
 	'SUCCESSFUL_CONNECT'		=> 'پەیوەندی سەرکەوتوو',
-	'SUPPORT_BODY'				=> 'هاوکاری تەواوەتیت دەکرێت بۆ ئەم وەشانە جێگیرەی phpBB3، بە خۆرا. لەوانە:</p><ul><li>دامەزراندن</li><li>سازدان</li><li>پرسیارە تەکنیکییەکان</li><li>کێشە پەیوەندیدارەکان بە هەڵەی نەرمەکاڵاوە</li><li>نوێکردنەوە لە وەشانی پاڵێوراوی بڵاوکردنەوە بۆ نوێترین وەشانی جێگیر</li><li>گۆڕین لە phpBB 2.0.x ـەوە بۆ phpBB3</li><li>گۆڕین لە نەرمەکاڵای تری مەکۆوە بۆ phpBB3 (تکایە <a href="http://www.phpbb.com/community/viewforum.php?f=65">مەکۆی گۆڕەرەکان</a> بخوێنەوە)</li></ul><p>هانی ئەو بەکارهێنەرانە ئەدەین کە هێشتا وەشانی بێتای phpBB3 بەکار ئەهێنن، بیگۆڕن بۆ نوێترین وەشانی خاوێنی جێگیر.</p><h2>پێوەکراوەکان / ڕووخسارەکان</h2><p>بۆ کێشەی پەیوەست بە پێوەکراوەکانەوە، تکایە لە <a href="http://www.phpbb.com/community/viewforum.php?f=81">مەکۆی پێوەکراوەکان</a> داوای هاوکاری بکە.<br />بۆ کێشەی پەیوەست بە ڕووخسارەکان، قاڵبەکان، و گورزە وێنەکان، تکایە لە<a href="http://www.phpbb.com/community/viewforum.php?f=80">مەکۆی ڕووخسارەکان</a> داوای هاوکاری بکە.<br /><br />گەر پرسیارەکەت پەیوەستە بە گورزەیەکی دیاریکراوەوە، تکایە لە بابەتی تایبەت بە گورزەکە پەیام بنووسە.</p><h2>بەدەستهێنانی هاوکاری</h2><p><a href="http://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">گورزەی پێشوازیکردنی phpBB</a><br /><a href="http://www.phpbb.com/support/">بەشی هاوکاری</a><br /><a href="http://www.phpbb.com/support/documentation/3.0/quickstart/">ڕێبەریی خێرا</a><br /><br />بۆ دڵنیابوون لەوەی ئاگات لە دواترین هەواڵ و وەشانە بۆچی <a href="http://www.phpbb.com/support/">بەشدار نابیت لە لیستی مەیلەکەمان</a>؟<br /><br /><h2>هاوکاری بە زمانی کوردی</h2><p><a href="http://www.chawg.org">چاوگ</a> وەک بەکوردیکەری نەرمەکاڵای phpBB بە ئەرکی سەر شانی ئەزانێت کە هاوکاری هاونیشتمانیانی بکات لە <a href="http://www.chawg.org/meko/viewforum.php?f=14">مەکۆی phpBB3</a>.</p>',
+	'SUPPORT_BODY'				=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/documentation/3.1/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
 	'SYNC_FORUMS'				=> 'دەستپێکردن بە هاوکاتکردنی مەکۆکان',
 	'SYNC_POST_COUNT'			=> 'ڕاگواستنی post_counts',
 	'SYNC_POST_COUNT_ID'		=> 'ڕاگواستنی post_counts from <var>entry</var> %1$s to %2$s.',
@@ -1922,7 +2007,7 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ALL_FILES_UP_TO_DATE'		=> 'هەموو پەڕگەکان لەسەر نوێترینن لەگەڵ دواین وەشانی phpBB ،پێویستە ئێستا <a href="../ucp.php?mode=login">بچیتەژوورەوە بۆ مەکۆکەت</a> و دڵنیاببەوە کە هەمووشتێک بەدروستی کاردەکات ،لەیادی نەکەیت بۆ سڕینەوە ،ناولێنانەوە یان گواستنەوەی شوێنگەی دامەزراندنەکەت ! تکایە زانیارییە نوێکراوەکانمان بۆ بنێرە دەربارەی ڕاژەکەت لەگەڵ فۆرمی دیمەنی مەکۆکەت و گۆڕاوی <a href="../ucp.php?mode=login&amp;redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">ئەژمارزانییەکە بنێرە</a> لە کۆنترۆڵ پانێڵی بەڕێوەبەرایەتی.',
+	'ALL_FILES_UP_TO_DATE'		=> 'All files are up to date with the latest phpBB version.',
 	'ARCHIVE_FILE'				=> 'پەڕگەی سەرچاوە لەناو ئەرشیفە',
 
 	'BACK'				=> 'دواوە',
@@ -1945,7 +2030,10 @@ $lang = array_merge($lang, array(
 	'CURRENT_VERSION'				=> 'وەشانی هەنووکە',
 
 	'DATABASE_TYPE'						=> 'جۆری بنکەدراوە',
+	'DATABASE_UPDATE_COMPLETE'			=> 'Database updater has completed!',
+	'DATABASE_UPDATE_CONTINUE'			=> 'Continue database update',
 	'DATABASE_UPDATE_INFO_OLD'			=> 'پەڕگەی نوێکردنەوەی بنکەدراوەکە لەناو شوێنگەی دامەزراندنەکە لەسەر نوێ نییە ،تکایە دڵنیاببەوە کە تۆ وەشانە ڕاستەکەی پەڕگەت بارکردووە.',
+	'DATABASE_UPDATE_NOT_COMPLETED'		=> 'The database update has not yet completed.',
 	'DELETE_USER_REMOVE'				=> 'بەکارهێنەر و پەیامەکان بسڕەوە',
 	'DELETE_USER_RETAIN'				=> 'بەکارهێنەر بسڕەوە بەڵام پەیامەکان بهێڵيوە',
 	'DESTINATION'						=> 'پەڕگەی مەبەست',
@@ -1964,14 +2052,17 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_UPDATE_METHOD'			=> 'ئەرشیفی پەڕگە دوپاتکراوەکان دابگرە',
 	'DOWNLOAD_UPDATE_METHOD_EXPLAIN'	=> 'هەرکە داگیرا پێویستە لە ئەرشیفە دەریبێنیت. پەڕگە دوپاتکراوەکان دەدۆزیتەوە پێویستە باربکەیت بۆ شوێنگەی دەستپێکی phpBB ــەکەت لەناویدا. تکایە پەڕگەکان باربکە بۆ جێگا دروستەکانیان دواتر. لەدوای ئەوەی هەموو پەڕگەکانت بارکرد، تکایە دووبارە پەڕگەکان بپشکنە لەگەڵ دوگمەی تری خوارەوە.',
 
-	'ERROR'			=> 'هەڵە',
 	'EDIT_USERNAME'	=> 'دەستکاریکردنی ناوی بەکارهێنەر',
+	'ERROR'			=> 'هەڵە',
+	'EVERYTHING_UP_TO_DATE'		=> 'Everything is up to date with the latest phpBB version. You should now <a href="%1$s">login to your board</a> and check if everything is working fine. Do not forget to delete, rename or move your install directory! Please send us updated information about your server and board configurations from the <a href="%2$s">Send statistics</a> module in your ACP.',
 
 	'FILE_ALREADY_UP_TO_DATE'		=> 'پەڕگە لەسەر نوێترین نوێبوونەوەیە.',
 	'FILE_DIFF_NOT_ALLOWED'			=> 'پەڕگەکان ڕێگانەدراون بۆ بردن',
 	'FILE_USED'						=> 'زانیاری بەکارهێنرا لە',			// Single file
 	'FILES_CONFLICT'				=> 'پەڕگە پێکدادانەکان',
 	'FILES_CONFLICT_EXPLAIN'		=> 'ئەو پەڕگانەی خوارەوە دوپاتکراونەوە و پەڕگە بنەڕەتەکان پێشکەش مەکە لە وەشانە کۆنەکە. phpBB دەریخستووە کە ئەو پەڕگانە پێکدادان دروستدەکەن ئەگەر هەوڵدرا بخەمڵێنرێن. تکایە پێکدادانەکان بکۆڵەرەوە و بەدەستیی هەوڵبدە شیکاریان بکەیت یان نوێکردنەوەکە بەردەوامبێت هەڵبژاردنی ڕێگا سەرچاوە بۆ کراوەکە. ئەگەر تۆ پێکدادانەکان بەدەستیی شیکار دەکەیت دووبارە پەڕگەکان بپشکنە لەدوای دووپاتکردنەوەیان. هەروەها دەتوانیت لەنێوان ڕێگا باشترکراوەکان هەڵبژێریت بۆ هەر پەڕگەیەک. یەکەم دانە ئەنجام دەبێت لە پەڕگەیەک کە هێڵەکانی پێکدادان لە پەڕگە کۆنەکەت لەدەست دەچێت، ئەوەی تر ئەنجامی دەبێت لەدەستدانی گۆڕانکارییەکان لە پەڕگە نوێترەکە.',
+	'FILES_DELETED'					=> 'Deleted files',
+	'FILES_DELETED_EXPLAIN'			=> 'The following files do not exist in the new version. These files have to be deleted from your installation.',
 	'FILES_MODIFIED'				=> 'پەڕگە دەستکارییکراوەکان',
 	'FILES_MODIFIED_EXPLAIN'		=> 'پەڕگەکانی خوارەوە دوپاتکراونەوە و پەڕگە بنەڕەتەکان پێشکەش مەکە لە وەشانە کۆنەکە. پەڕگە نوێکراوەکە لەنێوان دوپاتکراویی و پەڕگە نوێیەکە پێکدەخرێت.',
 	'FILES_NEW'						=> 'پەڕگە نوێیەکان',
@@ -2033,6 +2124,7 @@ $lang = array_merge($lang, array(
 	'PREVIOUS_VERSION'					=> 'وەشانی پێشوو',
 	'PROGRESS'							=> 'ڕەوت',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Announcement',
 	'RESULT'					=> 'ئەنجام',
 	'RUN_DATABASE_SCRIPT'		=> 'بنکەدراوەکەم نوێبکەوە',
 
@@ -2040,6 +2132,7 @@ $lang = array_merge($lang, array(
 	'SELECT_DOWNLOAD_FORMAT'	=> 'جۆری ئەرشیفی داگرتن هەڵبژێرە',
 	'SELECT_FTP_SETTINGS'		=> 'ڕێکخستنەکانی FTP دیاری بکە',
 	'SHOW_DIFF_CONFLICT'		=> 'بینی جیاوازییەکان/پێکدادانەکان',
+	'SHOW_DIFF_DELETED'			=> 'Show file contents',
 	'SHOW_DIFF_FINAL'			=> 'پەڕگەی ئەنجام پیشان بدە',
 	'SHOW_DIFF_MODIFIED'		=> 'جیاوازییە لکێندراوەکان ببینە',
 	'SHOW_DIFF_NEW'				=> 'ناوەڕۆکی پەڕگە پیشان بدە',
@@ -2053,6 +2146,7 @@ $lang = array_merge($lang, array(
 	'STAGE_UPDATE_FILES'		=> 'نوێکردنەوەی پەڕگەکان',
 	'STAGE_VERSION_CHECK'		=> 'وەشان پشکنین',
 	'STATUS_CONFLICT'			=> 'پەڕگەی دوپاتکراو پێکدادان بەرهەم دەهێنێت',
+	'STATUS_DELETED'			=> 'Deleted file',
 	'STATUS_MODIFIED'			=> 'پەڕگەی پەسەندکراو',
 	'STATUS_NEW'				=> 'پەڕگەی نوێ',
 	'STATUS_NEW_CONFLICT'		=> 'پەڕگەی نوێی جویراو',
@@ -2071,28 +2165,30 @@ $lang = array_merge($lang, array(
 	'UPDATE_FILES_NOTICE'			=> 'تکایە دڵنیاببەوە کە پەڕگەکانی مەکۆکەشت نوێکردۆتەوە .ئەو پەڕگەیە تەنها بنکەدراوەکەت نوێدەکاتەوە.',
 	'UPDATE_INSTALLATION'			=> 'نوێکردنەوەی دامەزراندنی phpBB',
 	'UPDATE_INSTALLATION_EXPLAIN'	=> 'لەگەڵ ئەو هەڵبژاردنە، دەتوانیت دامەزراندنی phpBB ــەکەت نوێبکەیتەوە بۆ دوایین وەشان <br /> لەکاتی کردارەکە هەموو پەڕگەکانت دەپشکنرێن بۆ تەواویان ،تۆ دەتوانیت هەموو جیاوازییەکان و پەڕگەکان پێش نوێکردنەوە پێدابچیتەوە. <br /><br /> پەڕگە نوێکردنەوەکە خۆی دەتوانێ بکرێت لە دوو ڕێگای جیاواز </p><h2>نوێکردنەوەی دەستی</h2><p> لەگەڵ ئەو نوێکردنەوەیە تەنها دەتوانی دانراوی کەسیی خۆت دابگریت لە پەڕگە گۆڕاوەکان بۆ دڵنیابوون گۆڕینی پەڕگەکانت لەدەست مەدە لەوانەیە تەواوبیت لەدوای گورزەی داگیراو پێویستە تۆ بارکردنی دەستی پەڕگەکان باربکەیت بۆ جێگا ڕاستەکانیان.</p><h2>نوێکردنەوەی خۆکاری بە هەژماری FTP</h2><p> ئەو ڕێگایە چوونیەکە بۆ ڕێگای یەکەم بەڵام بەبێ پێویستی بۆ داگرتنی پەڕگە گۆڕاوەکان و بارکردنیان لەسەر خۆت ،ئەمە دەکرێت بۆ تۆ .وا داوادەکرێت ئەو ڕێگایە بەکارببرێت پێویستە تۆ زانیارییەکانی چوونەژوورەوەی هەژماری FTP ــی خۆت بزانیت لەو کاتەی داوات لێدەکرێت. هەرکە تەواوبوو تۆ دەگەڕێندرێیتەوە بۆ پەڕگە پشکنینەکە دووبارە بۆ دڵنیابوون کە هەموو شتێک بەدروستی نوێبۆتەوە.<br /><br />',
-	'UPDATE_INSTRUCTIONS'			=> '		<h1>جاڕدانی بەرەڵاکردن</h1>
-		<p>تکایە <a href="%1$s" title="%1$s"><strong>جاڕدانی بەرەڵاکردن بۆ دوایین وەشان</strong></a> بخوێنەوە پێش ئەوەی لە کرداری نوێکردنەوە بەردەوامبیت، لەوانەیە زانیاری بەسوود لەخۆی بگرێت. وە هەروەها بەستەری داگرتنی تەواوەتی لەخۆی دەگرێت وەکو باشی وەکو لۆگی گۆڕین.</p>
+	'UPDATE_INSTRUCTIONS'			=> '
+
+		<h1>Release announcement</h1>
+
+		<p>Please read the release announcement for the latest version before you continue your update process, it may contain useful information. It also contains full download links as well as the change log.</p>
 
 		<br />
 
-		<h1>چۆن دامەزراندنەکەت نوێبکەیەوە لەگەڵ گورزەی نوێکردنەوەی خۆکاری</h1>
+		<h1>How to update your installation with the Automatic Update Package</h1>
 
-		<p>ڕێگا ئامۆژگاریکراوەکە بۆ نوێکردنەوەی دامەزراندنەکەت لێرە لیستکراوە تەنها بەردەستە بۆ گورزەی نوێکردنەوەی خۆکاری. هەروەها تۆ دەتوانی دامەزراندنەکەت نوێبکەیەوە بە بەکاربردنی ڕێگاکان لیستکراوە لەناو بەڵگەنامەی INSTALL.html. هەنگاوەکان بۆ نوێکردنەوەی خۆکاری phpBB3 بریتیین:</p>
+		<p>The recommended way of updating your installation listed here is only valid for the automatic update package. You are also able to update your installation using the methods listed within the INSTALL.html document. The steps for updating phpBB3 automatically are:</p>
 
 		<ul style="margin-left: 20px; font-size: 1.1em;">
-			<li>بڕۆ بۆ <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">پەڕەی داگرتنی phpbb.com</a> و ئەرشیفی "گورزەی نوێکردنەوەی خۆکاری" دابگرە<br /><br /></li>
-			<li>ئەرشفیەکە دەربهینە/بیکەوە.<br /><br /></li>
-			<li>تەواوی بوخچە دەرهاتووەکانی دەمەزراندن باربکە بۆ شوێنگەی دەستپێکی phpBB ــەکەت (کە پەڕگە بریتییە config.php).<br /><br /></li>
+			<li>Go to the <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com downloads page</a> and download the "Automatic Update Package" archive.<br /><br /></li>
+			<li>Unpack the archive.<br /><br /></li>
+			<li>Upload the complete uncompressed install folder to your phpBB root directory (where your config.php file is).<br /><br /></li>
 		</ul>
 
-		<p>هەرکە بارکرا مەکۆکەت بۆ بەکارهێنەری ئاسایی دەرهێڵ دەبێت تا ئەو کاتەی شوێنگەی دامەزراندەی بارتکردووە پێشکەش دەکرێت.<br /><br />
-		<strong><a href="%2$s" title="%2$s">ئێستا دەستبکە بە کرداری نوێکردنەوەکە بە ئاماژەدانی وێبگەڕەکەت بۆ بوخچەی دامەزراندنەکە</a>.</strong><br />
+		<p>Once uploaded your board will be offline for normal users due to the install directory you uploaded now present.<br /><br />
+		<strong><a href="%1$s" title="%1$s">Now start the update process by pointing your browser to the install folder</a>.</strong><br />
 		<br />
-		دواتر تۆ ڕێنمایی دەکرێیت بەناو کرداری نوێکردنەوەکە. ئاگادار دەکرێیتەوە هەرکە نوێکردنەوەکە تەواوبوو.
+		You will then be guided through the update process. You will be notified once the update is complete.
 		</p>
 	',
-	'UPDATE_INSTRUCTIONS_INCOMPLETE'	=> '<h1>نوێکردنەوەی ناتەواو هەیە</h1>  <p> phpBB نوێکردنەوەیەکی خۆکاری ناتەواوی دۆزییەوە .تکایە دڵنیاببەوە لەوەی بەدروستی هەموو هەنگاوەکان بەدواداچوویت و جێبەجێت کردووە لەناو ئامرازی نوێکردنەوەی خۆکاریی .لەخوارەوە دووبارە بەستەرێک دەدۆزیەوە .یان ڕاستەوخۆ بڕۆ بۆ شوێنگەی دامەزراندن.</p>',
 	'UPDATE_METHOD'					=> 'ڕێگای نوێکردنەوە',
 	'UPDATE_METHOD_EXPLAIN'			=> 'ئێستا تۆ دەتوانی ڕێگەی سەرچاوەکراوی نوێکردنەوەکەت هەڵبژێریت ، بەکاربردنی بارکردنی FTP پێشکەشتی دەکات لەگەڵ فۆرمێک کە پێویسە زانیاری هەژماری FTP ــی خۆتی تێدا بنووسیت .لەگەڵ ئەو ڕێگەیە پەڕگەکان خۆکارانە دەگوازرێنەوە بۆ جێگایەکی نوێ و پەڕگە کۆنەکان هەڵدەگیرێن کە دروستدەکرێت بە پاشگری .bak بۆ ناوی پەڕگەکە . ئەگەر تۆ پەڕگەی دڵنیاکراوە هەڵبژێریت ڕێگادەدرێیت بە دەرهێنانی لە هەڵگیراوەکە و دواتر بارکردنیان بۆ جێگا ڕاستەکەیان بەشێوەی دەستکاری.',
 	'UPDATE_REQUIRES_FILE'			=> 'نوێکەرەوەکە ئەو پەڕگە ئامادانە داوادەکات : %s',
@@ -2102,10 +2198,10 @@ $lang = array_merge($lang, array(
 	'UPDATING_DATA'					=> 'نوێکردنەوەی داتا',
 	'UPDATING_TO_LATEST_STABLE'		=> 'نوێکردنەوەی بنکەدراوە بۆ دوا وەشانی جێگیر',
 	'UPDATED_VERSION'				=> 'وەشان نوێ بکەوە',
-	'UPGRADE_INSTRUCTIONS'			=> 'تایبەتمەندییەکی نوێ <strong>%1$s</strong> بەردەستە ،تکایە <a href="%2$s" title="%2$s"><strong>the جاڕنامەی بەرەڵاکردن</strong></a> بخوێنەوە بۆ فێربوونی ئەوەی چی هەیە بۆ پێشکەشکردن ،وە چۆنیەتی نوێکردنەوەی.',
 	'UPLOAD_METHOD'					=> 'ڕێگای بارکردن',
 
 	'UPDATE_DB_SUCCESS'				=> 'نوێکردنەوەی بنکەدراوە بەسەرکەوتوویی نوێکرایەوە.',
+	'UPDATE_FILE_SUCCESS'			=> 'File update was successful.',
 	'USER_ACTIVE'					=> 'بەکارهێنەری چالاک',
 	'USER_INACTIVE'					=> 'بەکارهێنەری ناچالاک',
 
@@ -2165,6 +2261,33 @@ $lang = array_merge($lang, array(
 	'TOPICS_TOPIC_TITLE'			=> 'بەخێربێیت بۆ phpBB3',
 ));
 
+#######language/en/migrator.php#######
+
+$lang = array_merge($lang, array(
+	'CONFIG_NOT_EXIST'					=> 'The config setting "%s" unexpectedly does not exist.',
+
+	'GROUP_NOT_EXIST'					=> 'The group "%s" unexpectedly does not exist.',
+
+	'MIGRATION_APPLY_DEPENDENCIES'		=> 'Apply dependencies of %s.',
+	'MIGRATION_DATA_DONE'				=> 'Installed Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_IN_PROGRESS'		=> 'Installing Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_RUNNING'			=> 'Installing Data: %s.',
+	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
+	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
+	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
+	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
+	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
+	'MODULE_NOT_EXIST'					=> 'A required module does not exist: %s',
+
+	'PERMISSION_NOT_EXIST'				=> 'The permission setting "%s" unexpectedly does not exist.',
+
+	'ROLE_NOT_EXIST'					=> 'The permission role "%s" unexpectedly does not exist.',
+));
+
 #######language/en/mcp.php#######
 
 $lang = array_merge($lang, array(
@@ -2185,6 +2308,10 @@ $lang = array_merge($lang, array(
 	'APPROVE_POST_CONFIRM'	=> 'دڵنیایت لە پەسەند کردنی ئەم پەیامە؟',
 	'APPROVE_POSTS'			=> 'پەیامەکان پەسەند بکە',
 	'APPROVE_POSTS_CONFIRM'	=> 'دڵنیایت لە پەسەند کردنی پەیامە دیاریکراوەکان؟',
+	'APPROVE_TOPIC'			=> 'Approve topic',
+	'APPROVE_TOPIC_CONFIRM'	=> 'Are you sure you want to approve this topic?',
+	'APPROVE_TOPICS'		=> 'Approve topics',
+	'APPROVE_TOPICS_CONFIRM'=> 'Are you sure you want to approve the selected topics?',
 
 	'CANNOT_MOVE_SAME_FORUM'=> 'ناتوانیت بابەتێک بگوازییتەوە بۆ مەکۆیەک کە خۆی لەوێدایە.',
 	'CANNOT_WARN_ANONYMOUS'	=> 'ناتوانیت بەکارهێنەرە میوانە خۆ تۆمار نەکردووەکان ئاگادار بکەیتەوە.',
@@ -2205,16 +2332,12 @@ $lang = array_merge($lang, array(
 	'DELETE_PM_REPORTS'			=> 'ڕاپۆرتەکانی پەیامی تایبەت بسڕەوە',
 	'DELETE_PM_REPORTS_CONFIRM'	=> 'دڵنیایت لە سڕینەوەی ڕاپۆرتی پەیامە تایبەتییە دیاریکراوەکان؟',
 	'DELETE_POSTS'				=> 'پەیامەکان بسڕەوە',
-	'DELETE_POSTS_CONFIRM'		=> 'دڵنیایت لە سڕینەوەی ئەم پەیامانە؟',
-	'DELETE_POST_CONFIRM'		=> 'دڵنیایت لە سڕینەوەی ئەم پەیامە؟',
 	'DELETE_REPORT'				=> 'ڕاپۆرت بسڕەوە',
 	'DELETE_REPORT_CONFIRM'		=> 'دڵنیایت لە سڕینەوەی ڕاپۆرتی دیاریکراو؟',
 	'DELETE_REPORTS'			=> 'ڕاپۆرتەکان بسڕەوە',
 	'DELETE_REPORTS_CONFIRM'	=> 'دڵنیایت لە سڕینەوەی ڕاپۆرتە دیاریکراوەکان؟',
 	'DELETE_SHADOW_TOPIC'		=> 'بابەتی سێبر بسڕەوە',
 	'DELETE_TOPICS'				=> 'بابەتە دیاریکراوەکان بسڕەوە',
-	'DELETE_TOPICS_CONFIRM'		=> 'دڵنیایت لە سڕینەوەی ئەم بابەتانە؟',
-	'DELETE_TOPIC_CONFIRM'		=> 'دڵنیایت لە سڕینەوەی ئەم بابەتە؟',
 	'DISAPPROVE'				=> 'ناپەسەندکردن',
 	'DISAPPROVE_REASON'			=> 'هۆکاری ناپەسەندکردن',
 	'DISAPPROVE_POST'			=> 'پەیام ناپەسەند بکە',
@@ -2252,8 +2375,6 @@ $lang = array_merge($lang, array(
 	'LATEST_WARNING_TIME'		=> 'دوا ئاگادارییەکان',
 	'LATEST_WARNINGS'			=> 'دوا ٥ ئاگادارییەکان',
 	'LEAVE_SHADOW'				=> 'بابەتی سێبەراوی لە جێی خۆیدا بهێڵەوە',
-	'LIST_REPORT'				=> '1 ڕاپۆرت',
-	'LIST_REPORTS'				=> '%d ڕاپۆرت',
 	'LOCK'						=> 'داخستن',
 	'LOCK_POST_POST'			=> 'داخستنی پەیام',
 	'LOCK_POST_POST_CONFIRM'	=> 'دڵنیایت لە قەدەغەکردنی ئەم پەیامە لە دەستکاریکردن؟',
@@ -2332,6 +2453,10 @@ $lang = array_merge($lang, array(
 	'MCP_QUEUE_UNAPPROVED_POSTS_EXPLAIN'	=> 'ئەمە لیستێکی هەموو ئەو پەیامانەن کە پێویستە پەسەند بکرێن پێش ئەوەی پیشان بدرێن بۆ ئەندامان.',
 	'MCP_QUEUE_UNAPPROVED_TOPICS'			=> 'ئەو بابەتانەی چاوەڕێی پەسەندکردنن',
 	'MCP_QUEUE_UNAPPROVED_TOPICS_EXPLAIN'	=> 'ئەمە لیستێکی هەموو ئەو بابەتانەن کە پێویستە پەسەند بکرێن پێش ئەوەی پیشان بدرێن بۆ ئەندامان.',
+	'MCP_QUEUE_DELETED_POSTS'				=> 'Deleted posts',
+	'MCP_QUEUE_DELETED_POSTS_EXPLAIN'		=> 'This is a list of all soft deleted posts. You can restore or permanently delete the posts from this screen.',
+	'MCP_QUEUE_DELETED_TOPICS'				=> 'Deleted topics',
+	'MCP_QUEUE_DELETED_TOPICS_EXPLAIN'		=> 'This is a list of all soft deleted topics. You can restore or permanently delete the topics from this screen.',
 
 	'MCP_VIEW_USER'			=> 'ئامارەکانی بەکارهێنەرێکی دیاریکراو ببینە',
 
@@ -2370,25 +2495,27 @@ $lang = array_merge($lang, array(
 	'NO_POST'						=> 'پێویستە پەیامێک دیاری بکەیت بۆ ئاگادار کردنەوەی بەکارهێنەر لەو پەیامە.',
 	'NO_POST_REPORT'				=> 'ئەم پەیامە ڕاپۆرتی لەسەر نەنووسراوە.',
 	'NO_POST_SELECTED'				=> 'پێویستە لانی کەم پەیامێک دیاری بکەیت بۆ ئەنجامدانی ئەم کارە.',
+	'NO_POSTS_DELETED'				=> 'There are no deleted posts.',
+	'NO_POSTS_QUEUE'				=> 'There are no posts waiting for approval.',
 	'NO_REASON_DISAPPROVAL'			=> 'تکایە هۆکارێکی گونجاو بنووسە بۆ پەسەند نەکردن.',
 	'NO_REPORT'						=> 'هیچ ڕاپۆرتێک نەدۆزرایەوە',
 	'NO_REPORTS'					=> 'هیچ ڕاپۆرتێک نەدۆزرایەوە',
 	'NO_REPORT_SELECTED'			=> 'پێویستە لانی کەم ڕاپۆرتێک دیاری بکەیت بۆ ئەنجامدانی ئەم کارە.',
 	'NO_TOPIC_ICON'					=> 'هیچ',
 	'NO_TOPIC_SELECTED'				=> 'پێویستە لانی کەم بابەتێکێک دیاری بکەیت بۆ ئەنجامدانی ئەم کارە.',
+	'NO_TOPICS_DELETED'				=> 'There are no deleted topics.',
 	'NO_TOPICS_QUEUE'				=> 'هیچ بابەتێک چاوەڕوانی پەسەندکردن نییە',
 
 	'ONLY_TOPIC'			=> 'تەنها بابەتی "%s"',
 	'OTHER_USERS'			=> 'بەکارهێنەرانی تر کە لەم IP ـیەوە پەیامیان نووسیوە',
 
+	'QUICKMOD_ACTION_NOT_ALLOWED' => "%s not allowed as quickmod",
+
 	'PM_REPORT_CLOSED_SUCCESS'	=> 'پەیامە تایبەتە ڕاپۆرتکراوە دیاریکراوەکان بە سەرکەوتوویی داخران.',
 	'PM_REPORT_DELETED_SUCCESS'	=> 'پەیامە تایبەتە ڕاپۆرتکراوە دیاریکراوەکان بە سەرکەوتوویی سڕدرانەوە.',
 	'PM_REPORTED_SUCCESS'		=> 'ئەم پەیامە تایبەتە بە سەرکەوتوویی ڕاپۆرت کرا.',
-	'PM_REPORT_TOTAL'			=> 'کۆی گشتی <strong>١</strong> پەیامی تایبەت ڕاپۆرتکراوە بۆ پیاداچوونەوە.',
 	'PM_REPORTS_CLOSED_SUCCESS'	=> 'ڕاپۆرتەکانی پەیامی تایبەتی دەستنیشانکراو بە سەرکەوتووی داخرا',
 	'PM_REPORTS_DELETED_SUCCESS'=> 'ڕاپۆرتەکانی پەیامی تایبەتی دەستنیشانکراو بە سەرکەوتووی سڕایەوە',
-	'PM_REPORTS_TOTAL'			=> 'کۆی گشتی <strong>%d</strong> پەیامی تایبەت ڕاپۆرتکراون بۆ پیاداچوونەوە.',
-	'PM_REPORTS_ZERO_TOTAL'		=> 'هیچ پەیامێکی تایبەت ڕاپۆرت نەکراوە بۆ پیاداچوونەوە.',
 	'PM_REPORT_DETAILS'			=> 'وردەکارییەکانی ڕاپۆرتی پەیامی تایبەت',
 	'POSTER'					=> 'نووسەر',
 	'POSTS_APPROVED_SUCCESS'	=> 'پەیامە دیاریکراوەکان پەسەندکران.',
@@ -2396,15 +2523,17 @@ $lang = array_merge($lang, array(
 	'POSTS_DISAPPROVED_SUCCESS'	=> 'پەیامە دیاریکراوەکان پەسەند نەکران.',
 	'POSTS_LOCKED_SUCCESS'		=> 'پەیامە دیاریکراوەکان بە سەرکەوتوویی داخران.',
 	'POSTS_MERGED_SUCCESS'		=> 'پەیامە دیاریکراوەکان پێکەوە لکێندران.',
-	'POSTS_UNLOCKED_SUCCESS'	=> 'پەیامە دیاریکراوەکان بە سەرکەوتوویی کرانەوە.',
 	'POSTS_PER_PAGE'			=> 'پەیامەکان بۆ هەر پەڕەیەک',
 	'POSTS_PER_PAGE_EXPLAIN'	=> '(0 بنووسە بۆ بینینی هەموو پەیامەکان.)',
+	'POSTS_RESTORED_SUCCESS'	=> 'The selected posts have been restored successfully.',
+	'POSTS_UNLOCKED_SUCCESS'	=> 'پەیامە دیاریکراوەکان بە سەرکەوتوویی کرانەوە.',
 	'POST_APPROVED_SUCCESS'		=> 'پەیامی دیاریکراو پەسەند کرا.',
 	'POST_DELETED_SUCCESS'		=> 'پەیامی دیاریکراو بە سەرکەوتوویی لە بنکەدراوە سڕدرایەوە.',
 	'POST_DISAPPROVED_SUCCESS'	=> 'پەیامی دیاریکراو پەسەند نەکرا.',
 	'POST_LOCKED_SUCCESS'		=> 'پەیام بە سەرکەوتوویی داخرا.',
 	'POST_NOT_EXIST'			=> 'ئەو پەیامەی داوات کردووە بوونی نییە.',
 	'POST_REPORTED_SUCCESS'		=> 'ئەم پەیامە بە سەرکەوتوویی ڕاپۆرت کرا.',
+	'POST_RESTORED_SUCCESS'		=> 'This post has been restored successfully.',
 	'POST_UNLOCKED_SUCCESS'		=> 'پەیام بە سەرکەوتوویی کرایەوە.',
 
 	'READ_USERNOTES'			=> 'سەرنجەکانی بەکارهێنەر',
@@ -2415,8 +2544,6 @@ $lang = array_merge($lang, array(
 	'REPORTED_ON_DATE'			=> 'لە',
 	'REPORTS_CLOSED_SUCCESS'	=> 'ڕاپۆرتە دیاریکراوەکان بە سەرکەوتوویی داخران.',
 	'REPORTS_DELETED_SUCCESS'	=> 'ڕاپۆرتە دیاریکراوەکان بە سەرکەوتوویی سڕدرانەوە.',
-	'REPORTS_TOTAL'				=> 'کۆی گشتی <strong>%d</strong> ڕاپۆرت هەیە بۆ پیاچوونەوە.',
-	'REPORTS_ZERO_TOTAL'		=> 'هیچ ڕاپۆرتێک نییە بۆ پیاچوونەوە.',
 	'REPORT_CLOSED'				=> 'ئەم ڕاپۆرتە پێشتر داخراوە.',
 	'REPORT_CLOSED_SUCCESS'		=> 'ڕاپۆرتی دیاریکراو بە سەرکەوتوویی داخرا.',
 	'REPORT_DELETED_SUCCESS'	=> 'ڕاپۆرتی دیاریکراو بە سەرکەوتوویی سڕدرایەوە.',
@@ -2428,7 +2555,15 @@ $lang = array_merge($lang, array(
 	'REPORT_POST_EXPLAIN'		=> 'ئەم فۆڕمە بەکار ببە بۆ ڕاپۆرتکردنی پەیامی دیاریکراو بۆ چاودێران و بەڕێوەبەرانی مەکۆ. ڕاپۆرتکردن تەنها لە کاتێکدا پێویستە کە پەیامەکە یاساکانی مەکۆی شکاندبێت. ',
 	'REPORT_REASON'				=> 'هۆکاری ڕاپۆرت',
 	'REPORT_TIME'				=> 'کاتی ڕاپۆرت',
-	'REPORT_TOTAL'				=> 'کۆی گشتی <strong>1</strong> ڕاپۆرت هەیە بۆ پیاچوونەوە.',
+	'RESTORE'					=> 'Restore',
+	'RESTORE_POST'				=> 'Restore post',
+	'RESTORE_POST_CONFIRM'		=> 'Are you sure you want to restore this post?',
+	'RESTORE_POSTS'				=> 'Restore posts',
+	'RESTORE_POSTS_CONFIRM'		=> 'Are you sure you want to restore the selected posts?',
+	'RESTORE_TOPIC'				=> 'Restore topic',
+	'RESTORE_TOPIC_CONFIRM'		=> 'Are you sure you want to restore this topic?',
+	'RESTORE_TOPICS'			=> 'Restore topics',
+	'RESTORE_TOPICS_CONFIRM'	=> 'Are you sure you want to restore the selected topics?',
 	'RESYNC'					=> 'Resync',
 	'RETURN_MESSAGE'			=> '%sبگەڕێوە بۆ پەیامەکە%s',
 	'RETURN_NEW_FORUM'			=> '%sبڕۆ بۆ مەکۆکە%s',
@@ -2469,6 +2604,7 @@ $lang = array_merge($lang, array(
 	'TOPICS_FORKED_SUCCESS'		=> 'بابەتە دیاریکراوەکان بە سەرکەوتوویی ڕوونووسکران.',
 	'TOPICS_LOCKED_SUCCESS'		=> 'بابەتە دیاریکراوەکان داخران.',
 	'TOPICS_MOVED_SUCCESS'		=> 'بابەتە دیاریکراوەکان بە سەرکەوتوویی گواسترانەوە.',
+	'TOPICS_RESTORED_SUCCESS'	=> 'The selected topics have been restored successfully.',
 	'TOPICS_RESYNC_SUCCESS'		=> 'بابەتە دەستنیشانکراوەکان زامنکرانەوە',
 	'TOPICS_TYPE_CHANGED'		=> 'جۆرەکانی بابەت بە سەرکەوتوویی گۆڕدرا.',
 	'TOPICS_UNLOCKED_SUCCESS'	=> 'بابەتە دیاریکراوەکان کرانەوە.',
@@ -2479,6 +2615,7 @@ $lang = array_merge($lang, array(
 	'TOPIC_LOCKED_SUCCESS'		=> 'بابەتی دیاریکراو داخرا.',
 	'TOPIC_MOVED_SUCCESS'		=> 'بابەتی دیاریکراو بە سەرکەوتوویی گواسترایەوە.',
 	'TOPIC_NOT_EXIST'			=> 'ئەو بابەتەی دیاریت کردووە بوونی نییە.',
+	'TOPIC_RESTORED_SUCCESS'	=> 'The selected topic has been restored successfully.',
 	'TOPIC_RESYNC_SUCCESS'		=> 'بابەتە دەسنیشانکراوەکان زامنکرانەوە',
 	'TOPIC_SPLIT_SUCCESS'		=> 'بابەتی دیاریکرا بە سەرکەوتوویی بەشکرا.',
 	'TOPIC_TIME'				=> 'کاتی بابەت',
@@ -2486,9 +2623,6 @@ $lang = array_merge($lang, array(
 	'TOPIC_UNLOCKED_SUCCESS'	=> 'بابەتی دیاریکراو کرایەوە.',
 	'TOTAL_WARNINGS'			=> 'سەرجەم ئاگادارییەکان',
 
-	'UNAPPROVED_POSTS_TOTAL'		=> 'کۆی گشتی <strong>%d</strong> پەیام چاوەڕوانی پەسەندکردنن.',
-	'UNAPPROVED_POSTS_ZERO_TOTAL'	=> 'هیچ پەیامێک چاوەڕوانی پەسەندکردن نییە',
-	'UNAPPROVED_POST_TOTAL'			=> 'کۆی گشتی <strong>1</strong> پەیام چاوەڕوانی پەسەندکردنن.',
 	'UNLOCK'						=> 'کردنەوە',
 	'UNLOCK_POST'					=> 'کردنەوەی پەیام',
 	'UNLOCK_POST_EXPLAIN'			=> 'ڕێدان بە دەستکاریکردن',
@@ -2514,7 +2648,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'ئەمەی خوارەوە ئاگادارییەکە کە بۆت هاتووە لەلایەن بەڕێوەبەر یان چاودێرێکەوە لە ماڵپەڕ.quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'ئاگاداری مەکۆ هات',
 	'WARNING_POST_DEFAULT'	=> 'ئەمە ئاگادارییەکە پەیوەست بەم پەیامەی خوارەوە کە تۆ نووسیوتە: %s.',
-	'WARNINGS_ZERO_TOTAL'	=> 'هیچ ئاگادارییەک بوونی نییە.',
+	'NO_WARNINGS'	=> 'No warnings exist.',
 
 	'YOU_SELECTED_TOPIC'	=> 'تۆ دیاریت کرد بابەتی ژمارە %d: %s',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -2554,10 +2688,12 @@ $lang = array_merge($lang, array(
 	'ALL'					=> 'هەموو',
 	'BEFORE'				=> 'پێش',
 	'CC_EMAIL'				=> 'ڕوونووسێک لەم ئیمەیلە بنێرە بۆ خۆت',
-	'CONTACT_USER'			=> 'پەیوەندی',
+	'CONTACT_ADMIN'			=> 'Contact a Board Administrator',
 
 	'DEST_LANG'				=> 'زمان',
 	'DEST_LANG_EXPLAIN'		=> 'زمانێکی گونجاو دیاری بکە (ئەگەر هەیە) بۆ وەرگر لەم مەکۆیە.',
+
+	'EDIT_PROFILE'			=> 'Edit Profile',
 
 	'EMAIL_BODY_EXPLAIN'	=> 'ئەم پەیامە وەک دەقێکی تەخت ئەنێردرێت، هیچ تاگێکی HTML یان BBCode مەنووسە. ناونیشانی گەڕاوە بۆ ئەم پەیامە بۆ ناونیشانی ئیمەیلەکەت ڕێک دەخرێت.',
 	'EMAIL_DISABLED'		=> 'ببورە بەڵام هەموو فرمانەکانی پەیوەندیدار بە ئیمەیلەوە ناچالاک کراون.',
@@ -2567,7 +2703,9 @@ $lang = array_merge($lang, array(
 	'EMPTY_MESSAGE_EMAIL'	=> 'پێوسیتە پەیامێک بنووسیت تا بە ئیمەیل بنێردرێت',
 	'EMPTY_MESSAGE_IM'		=> 'پێویستە پەیامێک بنووسیت تا بنێردرێت.',
 	'EMPTY_NAME_EMAIL'		=> 'پێوسیتە ناوی ڕاستی وەرگر بنووسیت.',
-	'EMPTY_SUBJECT_EMAIL'	=> 'پێویستە سەردێڕێک بۆ ئیمەیلەکە بنووسیت.',
+	'EMPTY_SENDER_EMAIL'	=> 'You must provide a valid email address.',
+	'EMPTY_SENDER_NAME'		=> 'You must provide a name.',
+	'EMPTY_SUBJECT_EMAIL'	=> 'You must specify a subject for the email.',
 	'EQUAL_TO'				=> 'یەکسانە بە',
 
 	'FIND_USERNAME_EXPLAIN'	=> 'ئەم فۆڕمە بەکار ببە بۆ گەڕان بە دوای ئەندامی دیاریکراو. پێویست ناکات هەموو خانەکان پڕ بکەیتەوە. بۆ دۆزینەوەی دراوەی بەشیی * بەکار ببە. لە کاتی نووسینی ڕێکەوتدا ئەم شێوازە بەکار ببە <kbd>YYYY-MM-DD</kbd>، نمونە <samp>2004-02-29</samp>. Checkbox ـەکان نیشانە بکە بۆ دیاریکردنی بەکارهێنەرێک یان زیاتر (لەوانەیە چەند بەکارهێنەرێک پەسەند بکرێن دەکەوێتە سەر فۆڕمەکە) و کرتە لە دوگمەی دیاریکردن بکە بۆ گەڕانەوە بۆ فۆڕمی پێشوو.',
@@ -2577,16 +2715,10 @@ $lang = array_merge($lang, array(
 	'HIDE_MEMBER_SEARCH'	=> 'گەڕانی ئەندام بشارەوە',
 
 	'IM_ADD_CONTACT'		=> 'پەیوەندی زیاد بکە',
-	'IM_AIM'				=> 'تکایە سەرنجی ئەوە بدە کە پێویستە پەیامبەری خێرای AOL ـت دامەزراندبێ بۆ بەکارهێنانی.',
-	'IM_AIM_EXPRESS'		=> 'AIM پەیامبەری خێرای',
 	'IM_DOWNLOAD_APP'		=> 'داوانامە دابگرە',
-	'IM_ICQ'				=> 'تکایە سەرنجی ئەوە بدە کە لەوانەیە بەکارهێنەران وایان دیاریی کردبێت کە پەیامی خێرای نەویستراویان پێ نەگات.',
 	'IM_JABBER'				=> 'تکایە سەرنجی ئەوە بدە کە لەوانەیە بەکارهێنەران وایان دیاریی کردبێت کە پەیامی خێرای نەویستراویان پێ نەگات.',
 	'IM_JABBER_SUBJECT'		=> 'ئەمە پەیامێکی خۆکارە تکایە وەڵام مەدەرەوە! پەیام لە بەکارهێنەر %1$s لە %2$s.',
 	'IM_MESSAGE'			=> 'پەیامەکەت',
-	'IM_MSNM'				=> 'تکایە سەرنجی ئەوە بدە کە پێویستە پەیامبەری ویندۆز دامەرابێت بۆ بەکارهێنانی ئەمە.',
-	'IM_MSNM_BROWSER'		=> 'وێبگەڕەکەت پاڵپشتی ئەمە ناکات',
-	'IM_MSNM_CONNECT'		=> 'MSNM پەیوەند نەکراوە.\\nپێویستە پەیوەند بیت بە MSNM ـەوە بۆ بەردەوام بوون.',
 	'IM_NAME'				=> 'ناوت',
 	'IM_NO_DATA'			=> 'ئەمە زانیارییەکی پەیوەندی تەواوە بۆ ئەم بەکارهێنەەر.',
 	'IM_NO_JABBER'			=> 'ببورە، پەیام ناردنی ڕاستەوخۆ بۆ بەکارهێنەرانی جابەر پاڵپشتی نەکراوە لەم مەکۆیە. پێویستت بە ڕاژەخوازێکی جابەرە کە دامەزرابێت لەسەر سیستەمەکەت بۆ پەیوەندی کردن بە وەرگری سەرەوە.',
@@ -2598,15 +2730,15 @@ $lang = array_merge($lang, array(
 
 	'LAST_ACTIVE'				=> 'دوا چالاک',
 	'LESS_THAN'					=> 'کەمتر لە',
-	'LIST_USER'					=> '1 بەکارهێنەر',
-	'LIST_USERS'				=> '%d بەکارهێنەر',
-	'LOGIN_EXPLAIN_LEADERS'		=> 'مەکۆ پێویستی بەوەیە کە خۆت تۆمارکردبێت و لە ژوورەوە بیت بۆ بینینی لیستی تیم.',
+	'LOGIN_EXPLAIN_TEAM'		=> 'The board requires you to be registered and logged in to view the team listing.',
 	'LOGIN_EXPLAIN_MEMBERLIST'	=> 'مەکۆ پێویستی بەوەیە کە خۆت تۆمارکردبێت و لە ژوورەوە بیت بۆ بینینی لیستی ئەندامان',
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'مەکۆ پێویستی بەوەیە کە خۆت تۆمارکردبێت و لە ژوورەوە بیت بۆگەڕئن لە بەکارهێنەران.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'مەکۆ پێویستی بەوەیە کە خۆت تۆمارکردبێت و لە ژوورەوە بیت بۆ بینینی پڕۆفایلەکان',
 
 	'MORE_THAN'				=> 'زیاتر لە',
 
+	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
+	'NO_CONTACT_PAGE'		=> 'The board administrator contact page has been disabled.',
 	'NO_EMAIL'				=> 'ڕێت پێ نەدراوە بە ناردنی ئیمەیل بۆ ئەم بەکارهێنەرە.',
 	'NO_VIEW_USERS'			=> 'ڕێت پێ نەدراوە بە بینینی لیستی ئەندام یان پڕۆفایلەکان',
 
@@ -2623,12 +2755,12 @@ $lang = array_merge($lang, array(
 
 	'SELECT_MARKED'			=> 'نیشانەکراوەکان دیاری بکە',
 	'SELECT_SORT_METHOD'	=> 'ڕێبازی ڕیزکردن دیاری بکە',
-	'SEND_AIM_MESSAGE'		=> 'پەیامی AIM بنێرە',
+	'SENDER_EMAIL_ADDRESS'	=> 'Your email address',
+	'SENDER_NAME'			=> 'Your name',
 	'SEND_ICQ_MESSAGE'		=> 'پەیامی ICQ بنێرە',
 	'SEND_IM'				=> 'پەیام ناردنی خێرا',
 	'SEND_JABBER_MESSAGE'	=> 'پەیامی جابەر بنێرە',
 	'SEND_MESSAGE'			=> 'پەیام بنێرە',
-	'SEND_MSNM_MESSAGE'		=> 'پەیامی MSNM/WLM بنێرە',
 	'SEND_YIM_MESSAGE'		=> 'پەیامی YIM بنێرە',
 	'SORT_EMAIL'			=> 'ئیمەیل',
 	'SORT_LAST_ACTIVE'		=> 'دوا چالاک',
@@ -2636,12 +2768,18 @@ $lang = array_merge($lang, array(
 
 	'USERNAME_BEGINS_WITH'	=> 'ناوی بەکارهێنەر دەستپێبکات بە',
 	'USER_ADMIN'			=> 'بەکارهێنەر بەڕێوە ببە',
-	'USER_BAN'				=> 'ڕاگرتن',
+	'USER_BAN'				=> 'Ban one or more users by username',
 	'USER_FORUM'			=> 'ئامارەکانی بەکارهێنەر',
 	'USER_ONLINE'			=> 'سەرهێڵ',
 	'USER_PRESENCE'			=> 'دەرکەوتنی مەکۆ',
+	'USERS_PER_PAGE'		=> 'Users per page',
 
 	'VIEWING_PROFILE'		=> 'بینینی پڕۆفایل - %s',
+	'VIEW_FACEBOOK_PROFILE'	=> 'View Facebook Profile',
+	'VIEW_SKYPE_PROFILE'	=> 'View Skype Profile',
+	'VIEW_TWITTER_PROFILE'	=> 'View Twitter Profile',
+	'VIEW_YOUTUBE_CHANNEL'	=> 'View YouTube Channel',
+	'VIEW_GOOGLEPLUS_PROFILE' => 'View Google+ Profile',
 	'VISITED'				=> 'دوا سەردان',
 
 	'WWW'					=> 'وێبگە',
@@ -2666,6 +2804,47 @@ $lang = array_merge($lang, array(
 	'USER_COMM_RANK'	=> 'Overall reviews:',
 	'USER_COMM_PERCENT'	=> 'Overall assessment of the user:',
 
+));
+
+#######language/en/plupload.php#######
+
+$lang = array_merge($lang, array(
+	'PLUPLOAD_ADD_FILES'		=> 'Add files',
+	'PLUPLOAD_ADD_FILES_TO_QUEUE'	=> 'Add files to the upload queue and click the start button.',
+	'PLUPLOAD_ALREADY_QUEUED'	=> '%s already present in the queue.',
+	'PLUPLOAD_CLOSE'			=> 'Close',
+	'PLUPLOAD_DRAG'				=> 'Drag files here.',
+	'PLUPLOAD_DUPLICATE_ERROR'	=> 'Duplicate file error.',
+	'PLUPLOAD_DRAG_TEXTAREA'	=> 'You may also attach files by dragging and dropping them in the message box.',
+	'PLUPLOAD_ERR_INPUT'		=> 'Failed to open input stream.',
+	'PLUPLOAD_ERR_MOVE_UPLOADED'	=> 'Failed to move uploaded file.',
+	'PLUPLOAD_ERR_OUTPUT'		=> 'Failed to open output stream.',
+	'PLUPLOAD_ERR_FILE_TOO_LARGE'	=> 'File too large:',
+	'PLUPLOAD_ERR_FILE_COUNT'	=> 'File count error.',
+	'PLUPLOAD_ERR_FILE_INVALID_EXT'	=> 'Invalid file extension:',
+	'PLUPLOAD_ERR_RUNTIME_MEMORY'	=> 'Runtime ran out of available memory.',
+	'PLUPLOAD_ERR_UPLOAD_URL'	=> 'Upload URL might be wrong or does not exist.',
+	'PLUPLOAD_EXTENSION_ERROR'	=> 'File extension error.',
+	'PLUPLOAD_FILE'				=> 'File: %s',
+	'PLUPLOAD_FILE_DETAILS'		=> 'File: %s, size: %d, max file size: %d',
+	'PLUPLOAD_FILENAME'			=> 'Filename',
+	'PLUPLOAD_FILES_QUEUED'		=> '%d files queued',
+	'PLUPLOAD_GENERIC_ERROR'	=> 'Generic error.',
+	'PLUPLOAD_HTTP_ERROR'		=> 'HTTP error.',
+	'PLUPLOAD_IMAGE_FORMAT'		=> 'Image format either wrong or not supported.',
+	'PLUPLOAD_INIT_ERROR'		=> 'Init error.',
+	'PLUPLOAD_IO_ERROR'			=> 'IO error.',
+	'PLUPLOAD_NOT_APPLICABLE'	=> 'N/A',
+	'PLUPLOAD_SECURITY_ERROR'	=> 'Security error.',
+	'PLUPLOAD_SELECT_FILES'		=> 'Select files',
+	'PLUPLOAD_SIZE'				=> 'Size',
+	'PLUPLOAD_SIZE_ERROR'		=> 'File size error.',
+	'PLUPLOAD_STATUS'			=> 'Status',
+	'PLUPLOAD_START_UPLOAD'		=> 'Start upload',
+	'PLUPLOAD_START_CURRENT_UPLOAD'	=> 'Start uploading queue',
+	'PLUPLOAD_STOP_UPLOAD'		=> 'Stop upload',
+	'PLUPLOAD_STOP_CURRENT_UPLOAD'	=> 'Stop current upload',
+	'PLUPLOAD_UPLOADED'			=> 'Uploaded %d/%d files',
 ));
 
 #######language/en/portal.php#######
@@ -2911,12 +3090,12 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s <strong>ناکارا</strong> ـیە',
 	'BBCODE_IS_ON'				=> '%sBBCode%s <strong>کارا</strong> ـیە',
 	'BBCODE_I_HELP'				=> 'دەقی لار: [i]دەق[/i]',
-	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]',
 	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
 	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'تێکردنی وێنە: [img]http://image_url[/img]',
 	'BBCODE_Q_HELP'				=> 'دەقی ئاماژە: [quote]دەق[/quote]',
-	'BBCODE_S_HELP'				=> 'ڕەنگی فۆنت: [color=red]دەق[/color]  سەرنج: هەروەها ئەتوانیت color=#FF0000 بەکارببەیت.',
+	'BBCODE_S_HELP'				=> 'Font colour: [color=red]text[/color] or [color=#FF0000]text[/color]',
 	'BBCODE_U_HELP'				=> 'دەقی هەڵ بە ژێردا هاتوو: [u]دەق[/u]',
 	'BBCODE_W_HELP'				=> 'تێکردنی URL: [url]http://url[/url] یان [url=http://url]دەقی URL[/url]',
 	'BUMP_ERROR'				=> 'ناتوانی ئەوەندە زوو لەم پەیامە بدەیت لە دوای پەیامی پێشوو.',
@@ -2935,8 +3114,20 @@ $lang = array_merge($lang, array(
 	'DELETE_MESSAGE'			=> 'پەیام بسڕەوە',
 	'DELETE_MESSAGE_CONFIRM'	=> 'دڵنیایت لە سڕینەوەی ئەم پەیامە؟',
 	'DELETE_OWN_POSTS'			=> 'ببورە بەڵام ناتوانیت پەیامەکانی خۆت بسڕیتەوە.',
+	'DELETE_PERMANENTLY'		=> 'Delete permanently',
 	'DELETE_POST_CONFIRM'		=> 'دڵنیایت لە سڕینەوەی ئەم پەیامە؟',
-	'DELETE_POST_WARN'			=> 'هەر کە پەیامەکە سڕدرایەوە ناتوانرێت بگێڕدرێتەوە',
+	'DELETE_POST_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this post?',
+	'DELETE_POST_PERMANENTLY'	=> 'Permanently delete this post so it can not be recovered',
+	'DELETE_POSTS_CONFIRM'		=> 'دڵنیایت لە سڕینەوەی ئەم پەیامانە؟',
+	'DELETE_POSTS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these posts?',
+	'DELETE_REASON'				=> 'Reason for deleting this topic',
+	'DELETE_REASON_EXPLAIN'		=> 'The specified reason for deletion will be visible to moderators.',
+	'DELETE_POST_WARN'			=> 'Delete this post',
+	'DELETE_TOPIC_CONFIRM'		=> 'دڵنیایت لە سڕینەوەی ئەم بابەتە؟',
+	'DELETE_TOPIC_PERMANENTLY'	=> 'Permanently delete this topic so it can not be recovered',
+	'DELETE_TOPIC_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this topic?',
+	'DELETE_TOPICS_CONFIRM'		=> 'دڵنیایت لە سڕینەوەی ئەم بابەتانە؟',
+	'DELETE_TOPICS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these topics?',
 	'DISABLE_BBCODE'			=> 'BBCode ناچالاک بکە',
 	'DISABLE_MAGIC_URL'			=> 'خۆکارانە URL ـەکان مەکە بە بەستەر',
 	'DISABLE_SMILIES'			=> 'خەندەکان ناچالاک بکە',
@@ -2979,13 +3170,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_QUOTE'		=> 'پێویستە بچیتە ژوورەوە بۆ ئەوەی ئاماژە بە پەیام بدەیت لەم مەکۆیە.',
 	'LOGIN_EXPLAIN_REPLY'		=> 'پێویستە بچیتە ژوورەوە بۆ ئەوەی وەڵامی بابەتەکانی ئەم مەکۆیە بدەیتەوە.',
 
-	'MAX_FONT_SIZE_EXCEEDED'	=> 'ئەتوانی تەنها تا قەبارەی %1$d فۆنتەکان بەکار ببەیت.',
-	'MAX_FLASH_HEIGHT_EXCEEDED'	=> 'پێویستە بەرزی پەڕگە فلاشییەکانت تا %1$d پیکسڵ بێت.',
-	'MAX_FLASH_WIDTH_EXCEEDED'	=> 'پێویستە پانی پەڕگە فلاشییەکانت تا %1$d پیکسڵ بێت.',
-	'MAX_IMG_HEIGHT_EXCEEDED'	=> 'پێویستە بەرزی وێنەکانت تا %1$d پیکسڵ بێت.',
-	'MAX_IMG_WIDTH_EXCEEDED'	=> 'پێویستە پانی وێنەکانت تا %1$d پیکسڵ بێت.',
-
-	'MESSAGE_BODY_EXPLAIN'		=> 'پەیامەکەت لێرە بنووسە، نابێت لە <strong>%d</strong> نووسە زۆرتری تیادا بێت.',
+	'MAX_FONT_SIZE_EXCEEDED'	=> 'You may only use fonts up to size %d.',
 	'MESSAGE_DELETED'			=> 'ئەم پەیامە بە سەرکەوتوویی سڕدرایەوە.',
 	'MORE_SMILIES'				=> 'خەندەی زیاتر ببینە',
 
@@ -3008,8 +3193,6 @@ $lang = array_merge($lang, array(
 	'POLL_MAX_OPTIONS'			=> 'هەڵبژاردنەکان بۆ هەر بەکارهێنەرێک',
 	'POLL_MAX_OPTIONS_EXPLAIN'	=> 'ئەمە ژمارەی ئەو هەڵبژاردنانەیە کە پێویستە هەر بەکارهێنەرێک دیاری بکات لە کاتی دەنگدان.',
 	'POLL_OPTIONS'				=> 'هەڵبژاردنەکانی ڕاپرسی',
-	'POLL_OPTIONS_EXPLAIN'		=> 'هەر هەڵبژاردنێک لە هێڵێکی نوێ دابنێ. پێویستە تا <strong>%d</strong> هەڵبژاردن لێبدەیت.',
-	'POLL_OPTIONS_EDIT_EXPLAIN'	=> 'هەر هەڵبژاردنێک لە هێڵێکی نوێدا دابنێ. ئەتوانیت تا <strong>%d</strong> هەڵبژاردن دیاری بکەیت. گەر هەرڵبژاردنت لابردووە یان زیاد کردووە هەرموو دەنگەکانی پێشوو دەسڕدرێتەوە.',
 	'POLL_QUESTION'				=> 'پرسیاری ڕاپرسی',
 	'POLL_TITLE_TOO_LONG'		=> 'ناونیشانی ڕاپرسی پێویستە کەمتر لە 100 نووسەی تیادا بێت.',
 	'POLL_TITLE_COMP_TOO_LONG'	=> 'قەبارەی ناونیشانی ڕاپرسی زۆر درێژە. هەوڵ بدە BBCode ـەکان یان خەندەکان لاببە.',
@@ -3019,9 +3202,9 @@ $lang = array_merge($lang, array(
 	'POST_APPROVAL_NOTIFY'		=> 'ئاگادار دەکرێیتەوە کاتێک پەیامەکەت پەسەند کرا.',
 	'POST_CONFIRMATION'			=> 'دڵنیابوونەوە لە پەیام',
 	'POST_CONFIRM_EXPLAIN'		=> 'بۆ قەدەغەکردنی پەیامی خۆکار مەکۆ پێوسیتی بەوەیە کە کۆدێکی دڵنیایی لێبدەیت. کۆد لەو وێنەیە پیشان ئەدرێت کە پێویستە لە خوارەوە ببیبینیت. گەر ئاستی بینینی لاوازە یان ناتوانیت کۆدەکە بخوێنیتەوە تکایە پەیوەندی بە %sبەڕێوەبەری مەکۆ%sوە بکە.',
-	'POST_DELETED'				=> 'پەیامەکە بە سەرکەوتوویی سڕدرایەوە.',
-	'POST_EDITED'				=> 'ئەم پەیامە بە سەرکەوتوویی دەستکاری کرا.',
-	'POST_EDITED_MOD'			=> 'ئەم پەیامە بە سەرکەوتوویی دەستکاری کرا، بەڵام پێویستی بەوەیە کە پەسەند بکرێت لەلایەن چاودێرێک پێش ئەوەی بە ئاشکرا ببینرێت.',
+	'POST_DELETED'				=> 'This post has been deleted.',
+	'POST_EDITED'				=> 'This post has been edited successfully.',
+	'POST_EDITED_MOD'			=> 'This post has been edited successfully, but it will need to be approved by a moderator before it is publicly viewable.',
 	'POST_GLOBAL'				=> 'گشتیی',
 	'POST_ICON'					=> 'ئایکۆنی پەیام',
 	'POST_NORMAL'				=> 'ئاسایی',
@@ -3034,8 +3217,9 @@ $lang = array_merge($lang, array(
 	'POST_TOPIC_AS'				=> 'بابەت بنێرە وەک',
 	'PROGRESS_BAR'				=> 'جێی بەڕێوەچوون',
 
-	'QUOTE_DEPTH_EXCEEDED'		=> 'پێویستە تەنها %1$d ئاماژە تێ بکەیت لە ناو هەر یەکێکدا.',
+	'QUOTE_NO_NESTING'			=> 'You may not embed quotes within each other.',
 
+	'REMOTE_UPLOAD_TIMEOUT'		=> 'The specified file could not be uploaded because the request timed out.',
 	'SAVE'						=> 'پاشەکەوتکردن',
 	'SAVE_DATE'					=> 'پاشەکەوتکرا لە',
 	'SAVE_DRAFT'				=> 'ڕەشنووس پاشەکەوت بکە',
@@ -3052,8 +3236,6 @@ $lang = array_merge($lang, array(
 	'TOO_FEW_POLL_OPTIONS'		=> 'پێویستە لانی کەم دوو هەڵبژاردنی ڕاپرسی دیاری بکەیت.',
 	'TOO_MANY_ATTACHMENTS'		=> 'ناتوانرێت هاوپێچێکی تر زیاد بکرێت، زۆرترین %d دانەیە.',
 	'TOO_MANY_CHARS'			=> 'پەیامەکەت نووسەی زۆری تیادایە.',
-	'TOO_MANY_CHARS_POST'		=> 'پەیامەکەت %1$d نووسەی تیادایە. زۆرترین ژمارەی ڕێپێدراوی نووسە %2$d ـیە.',
-	'TOO_MANY_CHARS_SIG'		=> 'واژۆکەت %1$d نووسەی تیادایە. زۆرترین ژمارەی ڕێپێدراوی نووسە %2$d ـیە.',
 	'TOO_MANY_POLL_OPTIONS'		=> 'هەوڵی دیاریکردنی چەند هەڵبژاردنێکی زۆری ڕاپرسیت کرد.',
 	'TOO_MANY_SMILIES'			=> 'پەیامەکەت خەندەی زۆری تیادایە. زۆرتین ژمارەی ڕێ پێدراوی خەندە %d ـە.',
 	'TOO_MANY_URLS'				=> 'پەیامەکەت URL ـی زۆری تیادایە. زۆرتین ژمارەی ڕێ پێدراوی URL %d ـە.',
@@ -3062,6 +3244,8 @@ $lang = array_merge($lang, array(
 
 	'UNAUTHORISED_BBCODE'		=> 'ناتوانیت BBCode ـی تایبەتی بەکار ببەیت: %s.',
 	'UNGLOBALISE_EXPLAIN'		=> 'بۆ گێڕاندنەوەی ئەم بابەتە لە بابەتی گشتییەوە بۆ ئاسایی، پێویستە ئەو مەکۆیە دیاری بکەیت کە ئەتەوێت ئەم بابەتەی لێ پیشان بدرێت.',
+	'UNSUPPORTED_CHARACTERS_MESSAGE'	=> 'Your message contains the following unsupported characters:<br />%s',
+	'UNSUPPORTED_CHARACTERS_SUBJECT'	=> 'Your subject contains the following unsupported characters:<br />%s',
 	'UPDATE_COMMENT'			=> 'لێدوان نوێ بکەوە',
 	'URL_INVALID'				=> 'ئەو URL ـەی نووسیوتە نەگونجاوە.',
 	'URL_NOT_FOUND'				=> 'نەتوانرا پەڕگەی دیاریکراو بدۆزرێتەوە',
@@ -3076,8 +3260,8 @@ $lang = array_merge($lang, array(
 	'VIEW_MESSAGE'				=> '%sپەیامە نێردراوەکەت ببینە%s',
 	'VIEW_PRIVATE_MESSAGE'		=> '%sپەیامە تایبەتە نێردراوەکەت ببینە%s',
 
-	'WRONG_FILESIZE'			=> 'پەڕگەکە زۆر گەورەیە، زۆرترین قەبارەی ڕێ پێدراو %1d %2s ـە.',
-	'WRONG_SIZE'				=> 'پێویستە وێنە لانی کەم %1$d خاڵ پان بێت، %2$d خاڵ بەرز بێت لانی زۆر %3$d خاڵ پان و %4$d خاڵ بەرز بێت. وێنەی نێردراو %5$d خاڵ پانە و %6$d خاڵ بەرزە.',
+	'WRONG_FILESIZE'			=> 'The file is too big, maximum allowed size is %1$d %2$s.',
+	'WRONG_SIZE'				=> 'The image must be at least %1$s wide, %2$s high and at most %3$s wide and %4$s high. The submitted image is %5$s wide and %6$s high.',
 
 	'FONT_TYPE'			=> 'Typeface',
 	'FONT_COLOR'			=> 'ڕەنگی فۆنت',
@@ -3097,10 +3281,6 @@ $lang = array_merge($lang, array(
 
 	'DISPLAY_RESULTS'		=> 'ئەنجامەکان پیشان بدە وەک',
 
-	'FOUND_SEARCH_MATCH'		=> 'گەڕان %d ئەنجامی دۆزییەوە',
-	'FOUND_SEARCH_MATCHES'		=> 'گەڕان %d ئەنجامی دۆزییەوە',
-	'FOUND_MORE_SEARCH_MATCHES'	=> 'گەڕان زیاتر لە %d ئەنجامی دۆزییەوە',
-
 	'GLOBAL'				=> 'ئاگاداری گشتی',
 
 	'IGNORED_TERMS'			=> 'فەرامۆشکراو',
@@ -3112,24 +3292,23 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_UNREADSEARCH'=> 'پێویستە خۆت تۆمارکردبێت و لەژوورەوە بیت بۆ بینینی پەیامە نەخوێندراوەکانت.',
 	'LOGIN_EXPLAIN_NEWPOSTS'	=> 'ئەو مەکۆیە داوات لێدەکات کە تۆماربووبیت و لەژوورەوە بیت بۆ بینینی پەیامە نوێیەکان لەدوایین سەردانتەوە.',
 
-	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> 'زۆر وشەت نووسیوە بۆ گەڕان. تکایە لە %1$d وشە زیاتر مەنووسە.',
-
-	'NO_KEYWORDS'			=> 'پێویستە لانی کەم وشەیەک بنووسیت بۆ گەڕان بۆی. هەر وشەیەک لانی کەم پێویستە لە %d نووسە پێک هاتبێت و زیاتر لە %d نووسەی تیادا نەبێت.',
+	'NO_KEYWORDS'			=> 'You must specify at least one word to search for. Each word must consist of at least %s and must not contain more than %s excluding wildcards.',
 	'NO_RECENT_SEARCHES'	=> 'هیچ گەڕانێک جێبەجێ نەکراوە بەم دوواییانە.',
 	'NO_SEARCH'				=> 'ببورە بەڵام ڕێت پێ نەدراوە سیستەمی گەڕان بەکار ببەیت.',
 	'NO_SEARCH_RESULTS'		=> 'هیچ ئەنجامێکی گوونجاو نەدۆزرایەوە.',
-	'NO_SEARCH_TIME'		=> 'ببورە بەڵام ناتوانیت لە ئێستادا گەڕان بەکار ببەیت',
 	'NO_SEARCH_UNREADS'		=> 'ببورە ،بەڵام گەڕان بۆ پەیامە نەخوێندراوەکان ناچالاککراوە',
 	'WORD_IN_NO_POST'		=> 'هیچ پەیامێک نەدۆزرایەوە لەبەر ئەوەی وشەی <strong>%s</strong> لە هیچ پەیامێکدا نەنووسراوە.',
 	'WORDS_IN_NO_POST'		=> 'هیچ پەیامێک نەدۆزرایەوە لەبەر ئەوەی وشەکانی <strong>%s</strong> لە هیچ پەیامێکدا نەنووسراون.',
 
 	'POST_CHARACTERS'		=> 'نووسەکانی پەیامەکان',
+	'PHRASE_SEARCH_DISABLED'	=> 'Searching by exact phrase is not supported on this board.',
 
 	'RECENT_SEARCHES'		=> 'دوا گەڕانەکان',
 	'RESULT_DAYS'			=> 'ئەنجامەکان سنووردار بکە بۆ پێشوو',
 	'RESULT_SORT'			=> 'ئەنجامەکان ڕیز بکە بە پێی',
 	'RETURN_FIRST'			=> 'یەکەم بگەڕێوە',
 	'RETURN_TO_SEARCH_ADV'	=> 'بگەڕێوە بۆ گەڕانی پەرەسەندوو',
+	'GO_TO_SEARCH_ADV'	=> 'Go to advanced search',
 
 	'SEARCHED_FOR'				=> 'زاراوەی گەڕان بەکاربرا',
 	'SEARCHED_TOPIC'			=> 'بابەتە گەڕاوەکان',
@@ -3156,10 +3335,11 @@ $lang = array_merge($lang, array(
 	'SORT_FORUM'				=> 'مەکۆ',
 	'SORT_POST_SUBJECT'			=> 'سەردێڕی پەیام',
 	'SORT_TIME'					=> 'کاتی ناردن',
+	'SPHINX_SEARCH_FAILED'		=> 'Search failed: %s',
+	'SPHINX_SEARCH_FAILED_LOG'	=> 'Sorry, search could not be performed. More information about this failure has been logged in the error log.',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
 	'SELECT_ALL_TAGS'		=> 'No selection',
-	'TOO_FEW_AUTHOR_CHARS'	=> 'پێویستە لانی کەم %d نووسە دیاری بکەیت لە ناوی نووسەر.',
 ));
 
 #######language/en/ucp.php#######
@@ -3215,6 +3395,7 @@ $lang = array_merge($lang, array(
 	'ATTACHMENTS_EXPLAIN'			=> 'This is a list of attachments you have made in posts to this board.',
 	'ATTACHMENTS_DELETED'			=> 'Attachments successfully deleted.',
 	'ATTACHMENT_DELETED'			=> 'Attachment successfully deleted.',
+	'AUTOLOGIN_SESSION_KEYS_DELETED'=> 'The selected "Remember Me" login keys were successfully deleted.',
 	'AVATAR_CATEGORY'				=> 'هاوپۆل',
 	'AVATAR_DRIVER_GRAVATAR_TITLE'	=> 'Gravatar',
 	'AVATAR_DRIVER_GRAVATAR_EXPLAIN'=> 'Gravatar is a service that allows you to maintain the same avatar across multiple websites. Visit <a href="http://www.gravatar.com/">Gravatar</a> for more information.',
@@ -3224,12 +3405,14 @@ $lang = array_merge($lang, array(
 	'AVATAR_DRIVER_REMOTE_EXPLAIN'	=> 'Link to avatar images from another website.',
 	'AVATAR_DRIVER_UPLOAD_TITLE'	=> 'Upload avatar',
 	'AVATAR_DRIVER_UPLOAD_EXPLAIN'	=> 'Upload your own custom avatar.',
-	'AVATAR_EXPLAIN'				=> 'Maximum dimensions; width: %1$d pixels, height: %2$d pixels, file size: %3$.2f KiB.',
+	'AVATAR_EXPLAIN'				=> 'Maximum dimensions; width: %1$s, height: %2$s, file size: %3$.2f KiB.',
 	'AVATAR_FEATURES_DISABLED'		=> 'The avatar functionality is currently disabled.',
 	'AVATAR_GALLERY'				=> 'Local gallery',
 	'AVATAR_GENERAL_UPLOAD_ERROR'	=> 'Could not upload avatar to %s.',
 	'AVATAR_NOT_ALLOWED'			=> 'Your avatar cannot be displayed because avatars have been disallowed.',
 	'AVATAR_PAGE'					=> 'Page',
+	'AVATAR_SELECT'					=> 'Select your avatar',
+	'AVATAR_TYPE'					=> 'Avatar type',
 	'AVATAR_TYPE_NOT_ALLOWED'		=> 'Your current avatar cannot be displayed because its type has been disallowed.',
 
 	'BACK_TO_DRAFTS'			=> 'Back to saved drafts',
@@ -3238,7 +3421,6 @@ $lang = array_merge($lang, array(
 	'BIRTHDAY_EXPLAIN'			=> 'Setting a year will list your age when it is your birthday.',
 	'BOARD_DATE_FORMAT'			=> 'My date format',
 	'BOARD_DATE_FORMAT_EXPLAIN'	=> 'The syntax used is identical to the PHP <a href="http://www.php.net/date">date()</a> function.',
-	'BOARD_DST'					=> 'Summer Time/<abbr title="Daylight Saving Time">DST</abbr> is in effect',
 	'BOARD_LANGUAGE'			=> 'My language',
 	'BOARD_STYLE'				=> 'Forums Style',
 	'BOARD_TIMEZONE'			=> 'My timezone',
@@ -3257,8 +3439,6 @@ $lang = array_merge($lang, array(
 	'CLICK_RETURN_FOLDER'		=> '%1$sReturn to your “%3$s” folder%2$s',
 	'CONFIRMATION'				=> 'Confirmation of registration',
 	'CONFIRM_CHANGES'			=> 'Confirm changes',
-	'CONFIRM_EMAIL'				=> 'Confirm e-mail address',
-	'CONFIRM_EMAIL_EXPLAIN'		=> 'تۆ تەنها پێویستە ئەوە دیاریبکەی ئەگەر ناونیشانی ئیمەیڵی بەکارهێنەران دەگۆڕی.',
 	'CONFIRM_EXPLAIN'			=> 'To prevent automated registrations the board requires you to enter a confirmation code. The code is displayed in the image you should see below. If you are visually impaired or cannot otherwise read this code please contact the %sBoard Administrator%s.',
 	'VC_REFRESH'				=> 'reload image',
 	'VC_REFRESH_EXPLAIN'		=> 'If you can not read the code, then call a new image with the following Button.',
@@ -3267,7 +3447,7 @@ $lang = array_merge($lang, array(
 	'CONFIRM_PASSWORD_EXPLAIN'	=> 'You only need to confirm your password if you changed it above.',
 	'COPPA_BIRTHDAY'			=> 'To continue with the registration procedure please tell us when you were born.',
 	'COPPA_COMPLIANCE'			=> 'COPPA compliance',
-	'COPPA_EXPLAIN'				=> 'Please note that clicking submit will create your account. However it cannot be activated until a parent or guardian approves your registration. You will be emailed a copy of the necessary form with details of where to send it.',
+	'COPPA_EXPLAIN'				=> 'Please note that clicking submit will create your account. However it cannot be activated until a parent or guardian approves your registration. You will be e-mailed a copy of the necessary form with details of where to send it.',
 	'CREATE_FOLDER'				=> 'Add folder…',
 	'CURRENT_IMAGE'				=> 'وێنەی ئێستا',
 	'CURRENT_PASSWORD'			=> 'Current password',
@@ -3322,27 +3502,34 @@ $lang = array_merge($lang, array(
 	'EXPORT_FOLDER'				=> 'Export this view',
 
 	'FIELD_REQUIRED'					=> 'The field “%s” must be completed.',
-	'FIELD_TOO_SHORT'					=> 'The field “%1$s” is too short, a minimum of %2$d characters is required.',
-	'FIELD_TOO_LONG'					=> 'The field “%1$s” is too long, a maximum of %2$d characters is allowed.',
-	'FIELD_TOO_SMALL'					=> 'The value of “%1$s” is too small, a minimum value of %2$d is required.',
-	'FIELD_TOO_LARGE'					=> 'The value of “%1$s” is too large, a maximum value of %2$d is allowed.',
+
+	'FIELD_TOO_SMALL'					=> 'The value of “%2$s” is too small, a minimum value of %1$d is required.',
+	'FIELD_TOO_LARGE'					=> 'The value of “%2$s” is too large, a maximum value of %1$d is allowed.',
+	'FIELD_INVALID_CHARS_INVALID'		=> 'The field “%s” has invalid characters.',
 	'FIELD_INVALID_CHARS_NUMBERS_ONLY'	=> 'The field “%s” has invalid characters, only numbers are allowed.',
+	'FIELD_INVALID_CHARS_ALPHA_DOTS'	=> 'The field “%s” has invalid characters, only alphanumeric or . characters are allowed.',
 	'FIELD_INVALID_CHARS_ALPHA_ONLY'	=> 'The field “%s” has invalid characters, only alphanumeric characters are allowed.',
-	'FIELD_INVALID_CHARS_SPACERS_ONLY'	=> 'The field “%s” has invalid characters, only alphanumeric, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_ALPHA_PUNCTUATION'	=> 'The field “%s” has invalid characters, only alphanumeric or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_ALPHA_SPACERS'	=> 'The field “%s” has invalid characters, only alphanumeric, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_ALPHA_UNDERSCORE'	=> 'The field “%s” has invalid characters, only alphanumeric or _ characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_DOTS'	=> 'The field “%s” has invalid characters, only letter, number or . characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_ONLY'	=> 'The field “%s” has invalid characters, only letter and number characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_PUNCTUATION'	=> 'The field “%s” has invalid characters, only letter, number or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_SPACERS'		=> 'The field “%s” has invalid characters, only letter, number, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_UNDERSCORE'		=> 'The field “%s” has invalid characters, only letter, number or _ characters are allowed.',
 	'FIELD_INVALID_DATE'				=> 'The field “%s” has an invalid date.',
+	'FIELD_INVALID_URL'					=> 'The field “%s” has an invalid url.',
 	'FIELD_INVALID_VALUE'				=> 'The field “%s” has an invalid value.',
 
 	'FOE_MESSAGE'				=> 'Message from foe',
 	'FOES_EXPLAIN'				=> 'Foes are users which will be ignored by default. Posts by these users will not be fully visible. Personal messages from foes are still permitted. Please note that you cannot ignore moderators or administrators.',
 	'FOES_UPDATED'				=> 'Your foes list has been updated successfully.',
 	'FOLDER_ADDED'				=> 'Folder successfully added.',
-	'FOLDER_MESSAGE_STATUS'		=> '%1$d from %2$d messages stored',
 	'FOLDER_NAME_EMPTY'			=> 'You must enter a name for this folder.',
 	'FOLDER_NAME_EXIST'			=> 'Folder <strong>%s</strong> already exists.',
 	'FOLDER_OPTIONS'			=> 'Folder options',
 	'FOLDER_RENAMED'			=> 'Folder successfully renamed.',
 	'FOLDER_REMOVED'			=> 'Folder successfully removed.',
-	'FOLDER_STATUS_MSG'			=> 'Folder is %1$d%% full (%2$d from %3$d messages stored)',
 	'FORWARD_PM'				=> 'Forward PM',
 	'FORCE_PASSWORD_EXPLAIN'	=> 'Before you may continue browsing the board you are required to change your password.',
 	'FRIEND_MESSAGE'			=> 'Message from friend',
@@ -3411,16 +3598,35 @@ $lang = array_merge($lang, array(
 	'MOVE_DELETED_MESSAGES_TO'		=> 'Move messages from removed folder to',
 	'MOVE_DOWN'						=> 'جوڵان بۆ سەرەوە',
 	'MOVE_MARKED_TO_FOLDER'			=> 'Move marked to %s',
-	'MOVE_PM_ERROR'					=> 'An error occurred while moving the messages to the new folder, only %1d from %2d messages were moved.',
 	'MOVE_TO_FOLDER'				=> 'Move to folder',
 	'MOVE_UP'						=> 'جوڵان بۆ خوارەوە',
 
-	'NEW_EMAIL_CONFIRM_EMPTY'		=> 'You did not enter a confirm e-mail address.',
-	'NEW_EMAIL_ERROR'				=> 'The e-mail addresses you entered do not match.',
 	'NEW_FOLDER_NAME'				=> 'New folder name',
 	'NEW_PASSWORD'					=> 'New password',
 	'NEW_PASSWORD_CONFIRM_EMPTY'	=> 'You did not enter a confirm password.',
 	'NEW_PASSWORD_ERROR'			=> 'The passwords you entered do not match.',
+
+	'NOTIFICATIONS_MARK_ALL_READ'						=> 'Mark all notifications read',
+	'NOTIFICATIONS_MARK_ALL_READ_CONFIRM'				=> 'Are you sure you want to mark all notifications read?',
+	'NOTIFICATIONS_MARK_ALL_READ_SUCCESS'				=> 'All notifications have been marked read.',
+	'NOTIFICATION_GROUP_MISCELLANEOUS'					=> 'Miscellaneous Notifications',
+	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
+	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
+	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'E-mail',
+	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
+	'NOTIFICATION_TYPE'									=> 'Notification type',
+	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
+	'NOTIFICATION_TYPE_GROUP_REQUEST'					=> 'Someone requests to join a group you lead',
+	'NOTIFICATION_TYPE_IN_MODERATION_QUEUE'				=> 'A post or topic needs approval',
+	'NOTIFICATION_TYPE_MODERATION_QUEUE'				=> 'Your topics/posts are approved or disapproved by a moderator',
+	'NOTIFICATION_TYPE_PM'								=> 'Someone sends you a private message',
+	'NOTIFICATION_TYPE_POST'							=> 'Someone replies to a topic to which you are subscribed',
+	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
+	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
+	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+
 	'NOTIFY_METHOD'					=> 'Notification method',
 	'NOTIFY_METHOD_BOTH'			=> 'Both',
 	'NOTIFY_METHOD_EMAIL'			=> 'E-mail only',
@@ -3438,10 +3644,9 @@ $lang = array_merge($lang, array(
 	'NOT_ADDED_FOES_SELF'			=> 'You cannot add yourself to the foes list.',
 	'NOT_AGREE'						=> 'I do not agree to these terms',
 	'NOT_ENOUGH_SPACE_FOLDER'		=> 'The destination folder “%s” seems to be full. The requested action has not been taken.',
-	'NOT_MOVED_MESSAGE'				=> 'You have 1 private message currently on hold because of full folder.',
-	'NOT_MOVED_MESSAGES'			=> 'You have %d private messages currently on hold because of full folder.',
 	'NO_ACTION_MODE'				=> 'No message action specified.',
 	'NO_AUTHOR'						=> 'No author defined for this message',
+	'NO_AVATAR'						=> 'No avatar selected',
 	'NO_AVATAR_CATEGORY'			=> 'هیچ',
 
 	'NO_AUTH_DELETE_MESSAGE'		=> 'You are not authorised to delete private messages.',
@@ -3449,6 +3654,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_FORWARD_MESSAGE'		=> 'You are not authorised to forward private messages.',
 	'NO_AUTH_GROUP_MESSAGE'			=> 'You are not authorised to send private messages to groups.',
 	'NO_AUTH_PASSWORD_REMINDER'		=> 'You are not authorised to request a new password.',
+	'NO_AUTH_PROFILEINFO'			=> 'You are not authorised to change your profile information.',
 	'NO_AUTH_READ_HOLD_MESSAGE'		=> 'You are not authorised to read private messages that are on hold.',
 	'NO_AUTH_READ_MESSAGE'			=> 'You are not authorised to read private messages.',
 	'NO_AUTH_READ_REMOVED_MESSAGE'	=> 'You are not able to read this message because it was removed by the author.',
@@ -3479,10 +3685,10 @@ $lang = array_merge($lang, array(
 	'NO_WATCHED_SELECTED'		=> 'You have not selected any subscribed topics or forums.',
 	'NO_WATCHED_TOPICS'			=> 'You are not subscribed to any topics.',
 
-	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Password must be between %1$d and %2$d characters long, must contain letters in mixed case and must contain numbers.',
-	'PASS_TYPE_ANY_EXPLAIN'		=> 'Must be between %1$d and %2$d characters.',
-	'PASS_TYPE_CASE_EXPLAIN'	=> 'Password must be between %1$d and %2$d characters long and must contain letters in mixed case.',
-	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Password must be between %1$d and %2$d characters long, must contain letters in mixed case, must contain numbers and must contain symbols.',
+	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case and must contain numbers.',
+	'PASS_TYPE_ANY_EXPLAIN'		=> 'Must be between %1$s and %2$s.',
+	'PASS_TYPE_CASE_EXPLAIN'	=> 'Password must be between %1$s and %2$s long and must contain letters in mixed case.',
+	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case, must contain numbers and must contain symbols.',
 	'PASSWORD'					=> 'تێپەڕەوشە',
 	'PASSWORD_ACTIVATED'		=> 'Your new password has been activated.',
 	'PASSWORD_UPDATED'			=> 'A new password was sent to your registered e-mail address.',
@@ -3493,13 +3699,16 @@ $lang = array_merge($lang, array(
 	'PM_FROM_REMOVED_AUTHOR'	=> 'This message was sent by a user no longer registered.',
 	'PM_ICON'					=> 'PM icon',
 	'PM_INBOX'					=> 'Inbox',
+	'PM_MARK_ALL_READ'			=> 'Mark all messages read',
+	'PM_MARK_ALL_READ_SUCCESS'	=> 'All private messages in this folder have been marked read',
 	'PM_NO_USERS'				=> 'The requested users to be added do not exist.',
 	'PM_OUTBOX'					=> 'Outbox',
 	'PM_SENTBOX'				=> 'Sent messages',
 	'PM_SUBJECT'				=> 'Message subject',
 	'PM_TO'						=> 'Send to',
+	'PM_TOOLS'					=> 'Message tools',
+	'PM_USERS_REMOVED_NO_PERMISSION'	=> 'Some users couldn’t be added as they do not have permission to read private messages.',
 	'PM_USERS_REMOVED_NO_PM'	=> 'Some users couldn’t be added as they have disabled private message receipt.',
-	'POPUP_ON_PM'				=> 'Pop up window on new private message',
 	'POST_EDIT_PM'				=> 'Edit message',
 	'POST_FORWARD_PM'			=> 'Forward message',
 	'POST_NEW_PM'				=> 'Compose message',
@@ -3511,6 +3720,8 @@ $lang = array_merge($lang, array(
 	'PREFERENCES_UPDATED'		=> 'Your preferences have been updated.',
 	'PROFILE_INFO_NOTICE'		=> 'Please note that this information may be viewable to other members. Be careful when including any personal details. Any fields marked with a * must be completed.',
 	'PROFILE_UPDATED'			=> 'Your profile has been updated.',
+	'PROFILE_AUTOLOGIN_KEYS'	=> 'The "Remember Me" login keys automatically log you in when you visit the board. If you logout, the remember me login key is deleted only on the computer you are using to logout. Here you can see remember login keys created on other computers you used to access this site.',
+	'PROFILE_NO_AUTOLOGIN_KEYS'	=> 'There are no saved "Remember Me" login keys.',
 
 	'RECIPIENT'							=> 'وەرگر',
 	'RECIPIENTS'						=> 'Recipients',
@@ -3535,8 +3746,6 @@ $lang = array_merge($lang, array(
 	'RULE_DELETED'						=> 'Rule successfully removed.',
 	'RULE_LIMIT_REACHED'				=> 'You cannot add more PM rules. You have reached the maximum number of rules.',
 	'RULE_NOT_DEFINED'					=> 'Rule not correctly specified.',
-	'RULE_REMOVED_MESSAGE'				=> 'One private message had been removed due to private message filters.',
-	'RULE_REMOVED_MESSAGES'				=> '%d private messages were removed due to private message filters.',
 
 	'SAME_PASSWORD_ERROR'		=> 'The new password you entered is the same as your current password.',
 	'SEARCH_YOUR_POSTS'			=> 'Show your posts',
@@ -3548,6 +3757,8 @@ $lang = array_merge($lang, array(
 	'SIGNATURE_TOO_LONG'		=> 'Your signature is too long.',
 	'SELECT_CURRENT_TIME'		=> 'Select current time',
 	'SELECT_TIMEZONE'			=> 'Select timezone',
+	'SELECT_CURRENT_TIME'		=> 'Select current time',
+	'SELECT_TIMEZONE'			=> 'Select timezone',
 	'SORT'						=> 'Sort',
 	'SORT_COMMENT'				=> 'دەربارەی پەڕگە',
 	'SORT_DOWNLOADS'			=> 'Downloads',
@@ -3557,15 +3768,28 @@ $lang = array_merge($lang, array(
 	'SORT_SIZE'					=> 'قەبارەی پەڕگە',
 
 	'TIMEZONE'					=> 'Timezone',
-	'TO'						=> 'To',
+	'TIMEZONE_DATE_SUGGESTION'	=> 'Suggestion: %s',
+	'TIMEZONE_INVALID'			=> 'The timezone you selected is invalid.',
+	'TO'						=> 'Recipient',
+	'TO_MASS'					=> 'Recipients',
+	'TO_ADD'					=> 'Add recipient',
+	'TO_ADD_MASS'				=> 'Add recipients',
+	'TO_ADD_GROUPS'				=> 'Add groups',
 	'TOO_MANY_RECIPIENTS'		=> 'You tried to send a private message to too many recipients.',
 	'TOO_MANY_REGISTERS'		=> 'You have exceeded the maximum number of registration attempts for this session. Please try again later.',
 
 	'UCP'						=> 'کۆنترۆڵ پانێڵی بەکارهێنەر',
 	'UCP_ACTIVATE'				=> 'هەژمار چالاک بکە',
 	'UCP_ADMIN_ACTIVATE'		=> 'Please note that you will need to enter a valid e-mail address before your account is activated. The administrator will review your account and if approved you will receive an e-mail at the address you specified.',
-	'UCP_AIM'					=> 'AOL Instant Messenger',
 	'UCP_ATTACHMENTS'			=> 'هاوپێچەکان',
+	'UCP_AUTH_LINK'				=> 'External accounts',
+	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
+	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
+	'UCP_AUTH_LINK_LINK'		=> 'بەستەر',
+	'UCP_AUTH_LINK_MANAGE'		=> 'Manage external account associations',
+	'UCP_AUTH_LINK_NOT_SUPPORTED'	=> 'Linking board accounts to external services is not supported by this board’s current authentication method.',
+	'UCP_AUTH_LINK_TITLE'		=> 'Manage your external account associations',
+	'UCP_AUTH_LINK_UNLINK'		=> 'Unlink',
 	'UCP_AUTH_LINK'				=> 'External accounts',
 	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
 	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
@@ -3577,8 +3801,8 @@ $lang = array_merge($lang, array(
 	'UCP_COPPA_BEFORE'			=> 'Before %s',
 	'UCP_COPPA_ON_AFTER'		=> 'On or after %s',
 	'UCP_EMAIL_ACTIVATE'		=> 'Please note that you will need to enter a valid e-mail address before your account is activated. You will receive an e-mail at the address you provide that contains an account activation link.',
-	'UCP_ICQ'					=> 'ICQ number',
 	'UCP_JABBER'				=> 'Jabber address',
+	'UCP_LOGIN_LINK'			=> 'Set up an external account association',
 
 	'UCP_MAIN'					=> 'ڕووکەش',
 	'UCP_MAIN_ATTACHMENTS'		=> 'Manage attachments',
@@ -3587,7 +3811,6 @@ $lang = array_merge($lang, array(
 	'UCP_MAIN_FRONT'			=> 'پەڕەی سەرەتا',
 	'UCP_MAIN_SUBSCRIBED'		=> 'Manage subscriptions',
 
-	'UCP_MSNM'					=> 'WL/MSN Messenger',
 	'UCP_NO_ATTACHMENTS'		=> 'You have posted no files.',
 
 	'UCP_NOTIFICATION_LIST'				=> 'Manage notifications',
@@ -3604,8 +3827,6 @@ $lang = array_merge($lang, array(
 	'UCP_PM_COMPOSE'			=> 'Compose message',
 	'UCP_PM_DRAFTS'				=> 'Manage PM drafts',
 	'UCP_PM_OPTIONS'			=> 'Rules, folders &amp; settings',
-	'UCP_PM_POPUP'				=> 'پەیامە تایبەتەکان',
-	'UCP_PM_POPUP_TITLE'		=> 'Private message popup',
 	'UCP_PM_UNREAD'				=> 'پەیامی نەخوێندراوە',
 	'UCP_PM_VIEW'				=> 'View messages',
 
@@ -3620,11 +3841,11 @@ $lang = array_merge($lang, array(
 	'UCP_USERGROUPS_MEMBER'		=> 'Edit memberships',
 	'UCP_USERGROUPS_MANAGE'		=> 'گروپەکان بەڕێوەببە',
 
+	'UCP_PASSWORD_RESET_DISABLED'	=> 'The password reset functionality has been disabled. If you need help accessing your account, please contact the %sBoard Administrator%s',
 	'UCP_REGISTER_DISABLE'			=> 'Creating a new account is currently not possible.',
 	'UCP_REMIND'					=> 'Send password',
 	'UCP_RESEND'					=> 'Send activation e-mail',
 	'UCP_WELCOME'					=> 'Welcome to the User Control Panel. From here you can monitor, view and update your profile, preferences, subscribed forums and topics. You can also send messages to other users (if permitted). Please ensure you read any announcements before continuing.',
-	'UCP_YIM'						=> 'Yahoo Messenger',
 	'UCP_ZEBRA'						=> 'Friends &amp; Foes',
 	'UCP_ZEBRA_FOES'				=> 'Manage foes',
 	'UCP_ZEBRA_FRIENDS'				=> 'Manage friends',
@@ -3634,12 +3855,12 @@ $lang = array_merge($lang, array(
 	'UPLOAD_AVATAR_FILE'			=> 'Upload from your machine',
 	'UPLOAD_AVATAR_URL'				=> 'Upload from a URL',
 	'UPLOAD_AVATAR_URL_EXPLAIN'		=> 'Enter the URL of the location containing the image. The image will be copied to this site.',
-	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Username must be between %1$d and %2$d chars long and use only alphanumeric characters.',
-	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Username must be between %1$d and %2$d chars long and use alphanumeric, space or -+_[] characters.',
-	'USERNAME_ASCII_EXPLAIN'		=> 'Username must be between %1$d and %2$d chars long and use only ASCII characters, so no special symbols.',
-	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Username must be between %1$d and %2$d chars long and use only letter or number characters.',
-	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Username must be between %1$d and %2$d chars long and use letter, number, space or -+_[] characters.',
-	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Length must be between %1$d and %2$d characters.',
+	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only alphanumeric characters.',
+	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use alphanumeric, space or -+_[] characters.',
+	'USERNAME_ASCII_EXPLAIN'		=> 'Username must be between %1$s and %2$s long and use only ASCII characters, so no special symbols.',
+	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only letter or number characters.',
+	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use letter, number, space or -+_[] characters.',
+	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Length must be between %1$s and %2$s.',
 	'USERNAME_TAKEN_USERNAME'		=> 'The username you entered is already in use, please select an alternative.',
 	'USERNAME_DISALLOWED_USERNAME'	=> 'The username you entered has been disallowed or contains a disallowed word. Please choose a different name.',
 	'USER_NOT_FOUND_OR_INACTIVE'	=> 'The usernames you specified could either not be found or are not activated users.',
@@ -3652,10 +3873,9 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_PM'				=> 'Next PM',
 	'VIEW_PM'					=> 'پەیامی تایبەت ببینە',
 	'VIEW_PM_INFO'				=> 'Message details',
-	'VIEW_PM_MESSAGE'			=> '1 message',
-	'VIEW_PM_MESSAGES'			=> '%d messages',
 	'VIEW_PREVIOUS_HISTORY'		=> 'Previous PM in history',
 	'VIEW_PREVIOUS_PM'			=> 'Previous PM',
+	'VIEW_PROFILE'				=> 'View profile',
 	'VIEW_SIGS'					=> 'Display signatures',
 	'VIEW_SMILIES'				=> 'Display smilies as images',
 	'VIEW_TOPICS_DAYS'			=> 'Display topics from previous days',
@@ -3763,8 +3983,6 @@ $lang = array_merge($lang, array(
 	'UNREAD_POSTS_LOCKED'	=> '[ داخراو ] پەیامە نەخوێندراوەکان',
 
 	'VIEW_FORUM'			=> 'بینینی مەکۆ',
-	'VIEW_FORUM_TOPIC'		=> '1 بابەت',
-	'VIEW_FORUM_TOPICS'		=> '%d بابەت',
 
 	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
 	'REMOVE_FILTER'		=> 'Remove filter',
@@ -3773,6 +3991,7 @@ $lang = array_merge($lang, array(
 #######language/en/viewtopic.php#######
 
 $lang = array_merge($lang, array(
+	'APPROVE'								=> 'پەسەندکردن',
 	'ATTACHMENT'						=> 'هاوپێچ',
 	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'تایبەتمەندییەکانی هاوپێچ ناچالاککراوە.',
 
@@ -3785,14 +4004,13 @@ $lang = array_merge($lang, array(
 	'BUMP_TOPIC'			=> 'لێدانی بابەت',
 
 	'CODE'					=> 'کۆد',
-	'COLLAPSE_QR'			=> 'پەیامی خێرا بشارەوە',
-
+	
 	'DELETE_TOPIC'			=> 'بابەت بسڕەوە',
+	'DELETED_INFORMATION'	=> 'Deleted by %1$s on %2$s',
+	'DISAPPROVE'					=> 'ناپەسەندکردن',
 	'DOWNLOAD_NOTICE'		=> 'دەسەڵاتی پێویستت نییە بۆ بینینی پاڕگە هاوپێچکراوەکانی ئەم پەیامە.',
 
-	'EDITED_TIMES_TOTAL'	=> 'دوا دەستکاریی لەلایەن %1$s لە %2$s،  کۆی گشتی %3$d جار دەستکاریی کراوە.',
-	'EDITED_TIME_TOTAL'		=> 'دوا دەستکاریی لەلایەن %1$s لە %2$s،  کۆی گشتی %3$d جار دەستکاریی کراوە.',
-	'EMAIL_TOPIC'			=> 'ئیمەیل بنێرە بۆ هاوڕێ',
+	'EMAIL_TOPIC'			=> 'E-mail topic',
 	'ERROR_NO_ATTACHMENT'	=> 'هاوپێچی دیاریکراو چیتر بوونی نییە.',
 
 	'FILE_NOT_FOUND_404'	=> 'پەڕگەی <strong>%s</strong> بوونی نییە.',
@@ -3807,8 +4025,6 @@ $lang = array_merge($lang, array(
 	'MAKE_GLOBAL'				=> 'بیگۆڕە بە "گشتیی"',
 	'MAKE_NORMAL'				=> 'بیگۆڕە بە "بابەتی ئاسایی"',
 	'MAKE_STICKY'				=> 'بیگۆڕە بە "جێگیر"',
-	'MAX_OPTIONS_SELECT'		=> 'پێویستە <strong>%d</strong> هەڵبژاردن یان زیاتر دیاریی بکەیت',
-	'MAX_OPTION_SELECT'			=> 'پێویستە <strong>1</strong> هەڵبژاردن دیاریی بکەیت',
 	'MISSING_INLINE_ATTACHMENT'	=> 'هاوپێچی <strong>%s</strong> چیتر بوونی نییە',
 	'MOVE_TOPIC'				=> 'بابەت بگوازەوە',
 
@@ -3822,6 +4038,7 @@ $lang = array_merge($lang, array(
 	'POLL_ENDED_AT'			=> 'ڕاپرسیی کۆتایی هات لە %s',
 	'POLL_RUN_TILL'			=> 'ڕاپرسیی کۆتایی دێت لە %s',
 	'POLL_VOTED_OPTION'		=> 'دەنگت بەم هەڵبژاردنە دا',
+	'POST_DELETED_RESTORE'	=> 'This post has been deleted. It can be restored.',
 	'PRINT_TOPIC'			=> 'بینین بە شێوەی چاپ',
 
 	'QUICK_MOD'				=> 'ئامڕازەکانی جۆری-خێرا',
@@ -3829,11 +4046,14 @@ $lang = array_merge($lang, array(
 	'QUOTE'					=> 'ئاماژە',
 
 	'REPLY_TO_TOPIC'		=> 'وەڵامدانەوە بۆ بابەت',
+	'RESTORE'				=> 'Restore',
+	'RESTORE_TOPIC'			=> 'Restore topic',
 	'RETURN_POST'			=> '%sبگەڕێوە بۆ پەیامەکە%s',
 
 	'SHOW_QR'				=> 'پەیامی خێرا',
 	'SUBMIT_VOTE'			=> 'دەنگ بدە',
 
+	'TOPIC_TOOLS'			=> 'Topic tools',
 	'TOTAL_VOTES'			=> 'سەرجەم دەنگەکان',
 
 	'UNLOCK_TOPIC'			=> 'بابەت بکەرەوە',
@@ -3842,10 +4062,7 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_TOPIC'		=> 'بابەتی داهاتوو',
 	'VIEW_PREVIOUS_TOPIC'	=> 'بابەتی پێشوو',
 	'VIEW_RESULTS'			=> 'بینینی ئەنجامەکان',
-	'VIEW_TOPIC_POST'		=> '1 پەیام',
-	'VIEW_TOPIC_POSTS'		=> '%d پەیام',
 	'VIEW_UNREAD_POST'		=> 'یەکەم پەیامی نەخوێندراوە',
-	'VISIT_WEBSITE'			=> 'سەردانی وێبگە بکە',
 	'VOTE_SUBMITTED'		=> 'دەنگەکەت درا',
 	'VOTE_CONVERTED'		=> 'گۆڕینی دەنگەکان پاڵپشتی نەکراوە بۆ ڕاپرسییەکی گۆڕدراو.',
 
@@ -9435,6 +9652,7 @@ $lang = array_merge($lang, array(
 	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'	=> 'Maximum size of each file, with 0 being unlimited, attached to a private message.',
 	'ATTACH_ORPHAN_URL'					=> 'هاوپێچە هەتیوەکان',
 	'ATTACH_POST_ID'					=> 'ناردنی ناونیشان',
+	'ATTACH_POST_TYPE'					=> 'Post type',
 	'ATTACH_QUOTA'						=> 'Total attachment quota',
 	'ATTACH_QUOTA_EXPLAIN'				=> 'Maximum drive space available for attachments for the whole board, with 0 being unlimited.',
 	'ATTACH_TO_POST'					=> 'Attach file to post',
@@ -9480,6 +9698,9 @@ $lang = array_merge($lang, array(
 	'EXT_GROUP_REAL_MEDIA'			=> 'Real Media',
 	'EXT_GROUP_WINDOWS_MEDIA'		=> 'Windows Media',
 
+	'FILES_GONE'			=> 'Some of the attachments you selected for deletion do not exist. They may have been already deleted. Attachments that did exist were deleted.',
+	'FILES_STATS_WRONG'		=> 'Your file statistics are likely inaccurate and need to be resynchronised. Actual values: number of attachments = %1$d, total size of attachments = %2$s.<br />Click %3$shere%4$s to resynchronise them.',
+
 	'GO_TO_EXTENSIONS'		=> 'Go to extension management screen',
 	'GROUP_NAME'			=> 'ناوی گرووپ',
 
@@ -9503,6 +9724,7 @@ $lang = array_merge($lang, array(
 	'NOT_ALLOWED_IN_PM'			=> 'Only allowed in posts',
 	'NOT_ALLOWED_IN_PM_POST'	=> 'Not allowed',
 	'NOT_ASSIGNED'				=> 'Not assigned',
+	'NO_ATTACHMENTS'			=> 'No attachments found for this period.',
 	'NO_EXT_GROUP'				=> 'هیچ',
 	'NO_EXT_GROUP_NAME'			=> 'No group name entered',
 	'NO_EXT_GROUP_SPECIFIED'	=> 'No extension group specified.',
@@ -9515,6 +9737,10 @@ $lang = array_merge($lang, array(
 	'ONLY_ALLOWED_IN_PM'	=> 'Only allowed in private messages',
 	'ORDER_ALLOW_DENY'		=> 'Allow',
 	'ORDER_DENY_ALLOW'		=> 'Deny',
+
+	'REMOVE_ALLOWED_IPS'			=> 'Remove or un-exclude <em>allowed</em> IPs/hostnames',
+	'REMOVE_DISALLOWED_IPS'			=> 'Remove or un-exclude <em>disallowed</em> IPs/hostnames',
+	'RESYNC_FILES_STATS_CONFIRM'	=> 'Are you sure you wish to resynchronise file statistics?',
 
 	'REMOVE_ALLOWED_IPS'		=> 'Remove or un-exclude <em>allowed</em> IPs/hostnames',
 	'REMOVE_DISALLOWED_IPS'		=> 'Remove or un-exclude <em>disallowed</em> IPs/hostnames',
@@ -9584,18 +9810,17 @@ $lang = array_merge($lang, array(
 	'PERMANENT'		=> 'هەمیشەیی',
 
 	'UNTIL'						=> 'هەتا',
-	'USER_BAN'					=> 'ڕاگرتن',
+	'USER_BAN'					=> 'Ban one or more users by username',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> 'ڕێ بەمە بدە کە بەکارهێنەرە نووسراوەکان جیا بکاتەوە لە هەموو ڕاگرتنە هەنووکەییەکان.',
 	'USER_BAN_EXPLAIN'			=> 'ئەتوانیت چەند بەکارهێنەرێک ڕابگریت بە یەک جار بە نووسینی ناوی هەر ناوێک لە هێڵێکی نوێدا. <span style="text-decoration: underline;">ئەندامێک بدۆزەرەوە</span> بەکار ببە بۆ گەڕان و زیادکردنی بەکارهێنەری زیاتر.',
 	'USER_NO_BANNED'			=> 'هیچ بەکارهێنەرێک ڕانەگیراوە',
-	'USER_UNBAN'				=> 'گێڕاندنەوەی بەکارهێنەرە ڕاگیراوەکان',
+	'USER_UNBAN'				=> 'Un-ban or un-exclude users by username',
 	'USER_UNBAN_EXPLAIN'		=> 'ئەتوانیت چەند بەکارهێنەرێکی ڕاگیراو بگێڕیتەوە بە یەک جار بە بەکارهێنانی چەند کلیلێکی تەختەکلیل و مشک لە یەک کاتدا بۆ کۆمپیوتەرەکەت و وێبگەڕەکەت.',
 ));
 
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'				=> 'چالاککردنی کاتی هاوینە/<abbr title="Daylight Saving Time">DST</abbr>',
 	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
 	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
 	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
@@ -9621,16 +9846,28 @@ $lang = array_merge($lang, array(
 	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'لێرە دەتوانی کرداری بنچینەی مەکۆکەت دیاریبکەی ،ناوێکی گونجاو بدە لەگەڵ باسکردن ، وە هەندێ ڕێکخستنی تری نرخە بنەڕەتەکان بۆ کاتی ناوچەیی لەگەڵ زمان.',
+	'BOARD_INDEX_TEXT'				=> 'Board index text',
+	'BOARD_INDEX_TEXT_EXPLAIN'		=> 'This text is displayed as the board index in the board’s breadcrumbs. If not specified, it will default to “Board index”.',
+	'BOARD_STYLE'					=> 'Forums Style',
 	'CUSTOM_DATEFORMAT'				=> 'دەستکرد...',
 	'DEFAULT_DATE_FORMAT'			=> 'شێوازی ڕێکەوت',
 	'DEFAULT_DATE_FORMAT_EXPLAIN'	=> 'جۆری بەروار هەمانە جۆرە وەکو لە نەخشەی PHP <code>date</code>.',
 	'DEFAULT_LANGUAGE'				=> 'زمانی بنەڕەت',
 	'DEFAULT_STYLE'					=> 'ڕووخساری بنەڕەت',
+	'DEFAULT_STYLE_EXPLAIN'			=> 'The default style is <strong>%1$s (%2$s)</strong> which is the overriden style for all users (including bots).',
 	'DISABLE_BOARD'					=> 'ناچالاککردنی مەکۆ',
-	'DISABLE_BOARD_EXPLAIN'			=> 'ئەوە مەکۆکە بێ-بەردەست دەکات بۆ بەکارهێنەران. هەروەها دەتوانی پەیامێکی کورت بنووسی بۆ نیشاندان ئەگەر ویستت.',
+	'DISABLE_BOARD_EXPLAIN'			=> 'This will make the board unavailable to users who are neither administrators nor moderators. You can also enter a short (255 character) message to display if you wish.',
+	'DISPLAY_LAST_SUBJECT'			=> 'Display subject of last added post on forum list',
+	'DISPLAY_LAST_SUBJECT_EXPLAIN'	=> 'The subject of the last added post will be displayed in the forum list with a hyperlink to the post. Subjects from password protected forums and forums in which user doesn’t have read access are not shown.',
+	'GUEST_STYLE'					=> 'Guest style',
+	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'هەڵوەشاندنەوەی شێوازی بەکارهێنەر',
 	'OVERRIDE_STYLE_EXPLAIN'		=> 'شێوازی بەکارهێەر لەگەڵ بنەڕەت دابنێوە',
 	'SITE_DESC'						=> 'پەسنی ماڵپەڕ',
+	'SITE_HOME_TEXT'				=> 'Main website text',
+	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
+	'SITE_HOME_URL'					=> 'Main website URL',
+	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'ناوی ماڵپەڕ',
 	'SYSTEM_TIMEZONE'				=> 'کاتی ناوچەیی میوان',
 	'WARNINGS_EXPIRE'				=> 'ماوەی ئاگاداری',
@@ -9670,6 +9907,7 @@ $lang = array_merge($lang, array(
 
 	'ALLOW_AVATARS'					=> 'چالاککردنی وێنۆچکە',
 	'ALLOW_AVATARS_EXPLAIN'			=> 'ڕێگابدە بە بەکاربردنی گشتی وێنۆچکە؛<br />ئەگەر وێنۆچکەکان ناچالاک بکەیت لە گشتیدا یان وێنۆچکەکان لە بارێکدا، وێنۆچکە ناچالاک کراوەکان هیچی تر بەدیارناکەون لەسەر مەکۆکە، بەڵام بەکارهێنەران هێشتا دەتوانن وێنۆچکەکانی خۆیان دابگرن لە کۆنترۆڵ پانێڵی بەکارهێنەر.',
+	'ALLOW_GRAVATAR'				=> 'Enable gravatar avatars',
 	'ALLOW_LOCAL'					=> 'گەلەریی وێنۆچکەکان چالاک بکە',
 	'ALLOW_REMOTE'					=> 'وێنۆچکە دەست بەسەرەکان چالاکبکە.',
 	'ALLOW_REMOTE_EXPLAIN'			=> 'وێنۆچکەکان بەستەرکراون لە وێبگەیەکی تر.',
@@ -9850,6 +10088,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'ناوەڕۆک لەوانە <strong>ناخرێتە ناو feed ــەكان</strong>. هیچ مەکۆیەک هەڵبژێرە بۆ پاڵنانی داتا لە هەموو مەکۆکان.<br />فرە مەکۆکان هەڵبژێرە/هەڵمەبژێرە بە داگرتنی <samp>CTRL</samp> لەگەڵ کرتەکردن.',
 
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'لێرە دەتوانیت پێوەکراوەکان دەستنیشان و دیمەن بکەیت، کە دیزاینکراون بۆ خۆکارکراون لە ژێرئامانجەکان لەلایەن spambots ،ئەو پێوەکراوانە بەرکاری کاردەکەن بەهۆی پێشبڕکێی بەکارهێنەرەکە لەگەڵ <em>CAPTCHA</em>. تاقیکردنەوەیەک کە دیزاینکراوە بۆ دژوارکردن بۆ کۆمپیوتەرەکان بۆ شیکار.',
+	'ACP_VC_EXT_GET_MORE'					=> 'For additional (and possibly better) anti-spam plugins, visit the <a href="https://www.phpbb.com/go/anti-spam-ext"><strong>phpBB.com Extensions Database</strong></a>. For more information on preventing spam on your board, visit the <a href="https://www.phpbb.com/go/anti-spam"><strong>phpBB.com Knowledge Base</strong></a>.',
 	'AVAILABLE_CAPTCHAS'					=> 'پێوەکراوە بەردەستەکان',
 	'CAPTCHA_UNAVAILABLE'					=> 'پێوەکراوەکە ناتوانرێ دەستنیشان بکرێت وەکو ئەوەی داواکراوە لەگەڵی نایەنەوە.',
 	'CAPTCHA_GD'							=> 'وێنەی GD',
@@ -9900,18 +10139,36 @@ $lang = array_merge($lang, array(
 	'SESSION_LENGTH'			=> 'درێژی وەرز',
 	'SESSION_LENGTH_EXPLAIN'	=> 'دانیشتنەکان بەسەردەچن لەدوای ئەو کاتە، لە چرکەکان.',
 
+	// Contact Settings
+	'ACP_CONTACT_SETTINGS_EXPLAIN'		=> 'Here you can enable and disable the contact page and also add a text that is displayed on the page.',
+
+	'CONTACT_US_ENABLE'				=> 'Enable contact page',
+	'CONTACT_US_ENABLE_EXPLAIN'		=> 'This page allows users to send emails to board administrators',
+
+	'CONTACT_US_INFO'				=> 'Contact information',
+	'CONTACT_US_INFO_EXPLAIN'		=> 'The message is displayed on the contact page',
+	'CONTACT_US_INFO_PREVIEW'		=> 'Contact page information - Preview',
+	'CONTACT_US_INFO_UPDATED'		=> 'Contact page information has been updated.',
+
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'لێرە دەتوانیت کۆمەڵێک نەخشەی مەکۆ چالاک و ناچالاک بکەیت بۆ گەڕاندنەوەی مەودای کردارکردنی داواکراو. لەسەر زۆربەی ڕاژەکان هیچ پێویست ناکات بۆ ناچالاککردنی نەخشەکان. هەرچۆنێکە لەسەر کۆمەڵێ سیستەمەکان یان بەرهەمهێنانی خانەخوێی بەشدارکراو لەوانەیە ناچالاکردنی گونجاندنی زیاتر بدات بە تۆ. هەروەها دەتوانی سنوورەکان دیاریبکەی بۆ بارکردنی سیستەم و چالاککردنی دانیشتنەکان لەدوای ئەوەی کە مەکۆکە دەڕواتە دەرهێڵ.',
 
+	'ALLOW_CDN'						=> 'Allow usage of third party content delivery networks',
+	'ALLOW_CDN_EXPLAIN'				=> 'If this setting is enabled, some files will be served from external third party servers instead of your server. This reduces the network bandwidth required by your server, but may present a privacy issue for some board administrators. In a default phpBB installation, this includes loading “jQuery” and the font “Open Sans” from Google’s content delivery network.',
+	'ALLOW_LIVE_SEARCHES'			=> 'Allow live searches',
+	'ALLOW_LIVE_SEARCHES_EXPLAIN'	=> 'If this setting is enabled, users are provided with keyword suggestions as they type in certain fields throughout the board.',
 	'CUSTOM_PROFILE_FIELDS'			=> 'خانە هەڵبژاردانەکانی پرۆفایل',
 	'LIMIT_LOAD'					=> 'بارکردنی سیستەم سنوورداربکە',
 	'LIMIT_LOAD_EXPLAIN'			=> 'ئەگەر 1-خولەکی سیستەمەکە باردەبێ لەسەروو ئەو نرخە مەکۆکە خۆکارانە دەچێتە دەرهێڵ. نرخێکی 1.0 یەکسانە بە ~100% لەسەر یەک وەگەڕخەر. ئەو نەخشە تەنهایە لەسەر ڕاژەکانی بنچینەکراوی UNIX و کە ئەو زانیارییە بەردەستە. نرخەکە لێرە خۆی بۆ 0 ئەگەر phpBB نەیتوانی سنووری بارکردنی بهێنێت.',
 	'LIMIT_SESSIONS'				=> 'سنووردارکردنی دانیشتنەکان',
 	'LIMIT_SESSIONS_EXPLAIN'		=> 'ئەگەر ژمارەی دانیشتنەکان لەسەروو ئەو نرخەیە لەناو یەک خولەکدا ،مەکۆکە دەچێتە دەرهێڵ. 0 دابنێ بۆ دانیشتنە بێ-سنوورەکان.',
 	'LOAD_CPF_MEMBERLIST'			=> 'ڕێگابدە بە شێوازەکان بۆ نیشاندانی پرۆفایلی ئارەزوومەندانە لە لیستی ئەندامان',
+	'LOAD_CPF_PM'					=> 'Display custom profile fields in private messages',
 	'LOAD_CPF_VIEWPROFILE'			=> 'نیشاندانی خانەکانی پرۆفایلی ئارەزوومەندانە لە پرۆفایلی بەکارهێنەران',
 	'LOAD_CPF_VIEWTOPIC'			=> 'نیشاندانی خانەکانی پرۆفایلی ئارەزوومەندانە لەسەر پەڕەی بابەتەکان',
 	'LOAD_USER_ACTIVITY'			=> 'چالاکییەکانی بەکارهێنەر نیشانبدە',
 	'LOAD_USER_ACTIVITY_EXPLAIN'	=> 'نیشاندانی مەکۆ/بابەتی چالاک لە پرۆفایلی بەکارهێنەر و کۆنترۆڵ پانێڵی بەکارهێنەر. ئامۆژگاریکراوە بۆ ناچالاککردنی ئەوە لەسەر مەکۆکان لەگەڵ زیاتر لە یەک ملیۆن پەیام.',
+	'READ_NOTIFICATION_EXPIRE_DAYS'	=> 'Read Notification Expiration',
+	'READ_NOTIFICATION_EXPIRE_DAYS_EXPLAIN' => 'Number of days that will elapse before a read notification will automatically be deleted. Set this value to 0 to make notifications permanent.',
 	'RECOMPILE_STYLES'				=> 'گونجاندنەوەی ئاوێتەکانی شێواز',
 	'RECOMPILE_STYLES_EXPLAIN'		=> 'بۆ ئاوێتەکانی شێوازی نوێکراوە بپشکنە لەسەر پەڕگەسیستە، و گوانجاندنەوە.',
 	'YES_ANON_READ_MARKING'			=> 'دەستنیشانکردنی بابەت بۆ میوانان چالاکبکە',
@@ -9932,18 +10189,25 @@ $lang = array_merge($lang, array(
 	'YES_READ_MARKING_EXPLAIN'		=> 'کۆگاکردنی زانیاری باری خوێندنەوە/نەخوێندنەوە لە بنکەدراوەکە لەباتی شەکرۆکەیەک.',
 	'YES_UNREAD_SEARCH'				=> 'گەڕان بۆ پەیامە نەخوێندراوەکان چالاکبکە',
 
-	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB پاڵپشتی دەکات لە پێوە-کراوە پەسەندکراوەکان. یان یەکەکان. ئەمانە ڕێگات دەدەن بۆ دیاریکردنی چەند بەکارهێنەر زانیاری زێدەکراون کەواتە تەنها خانەکان پڕبکەوە ئەگەر ئەوان پەیوەندیداربوون بە ڕێگای دەست نیشانکراو.',
+	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB supports authentication plug-ins, or modules. These allow you determine how users are authenticated when they log into the board. By default four plug-ins are provided: DB, LDAP, Apache, and OAuth. Not all methods require additional information so only fill out fields if they are relevant to the selected method.',
 
 	'AUTH_METHOD'				=> 'ڕێگایەکی پەسەندکراو هەڵبژێرە',
 
+	'AUTH_PROVIDER_OAUTH_ERROR_ELEMENT_MISSING'	=> 'Both the key and secret of each enabled OAuth service provider must be provided. Only one was provided for an OAuth service provider.',
+	'AUTH_PROVIDER_OAUTH_EXPLAIN'				=> 'Each OAuth provider requires a unique secret and key in order to authenticate with the external server. These should be supplied by the OAuth service when you register your website with them and should be entered exactly as provided to you.<br />Any service that does not have both a key and a secret entered here will not be available for use by the forum users. Also note, that user can still register and login using the DB authentication plug-in.',
+	'AUTH_PROVIDER_OAUTH_KEY'					=> 'Key',
+	'AUTH_PROVIDER_OAUTH_TITLE'					=> 'OAuth',
+	'AUTH_PROVIDER_OAUTH_SECRET'				=> 'Secret',
+
 	'APACHE_SETUP_BEFORE_USE'	=> 'پێویستە تۆ پەسەندکردنی ئەپاچی دابمەزرێنی پێش ئەوەی phpBB بکەیتە ئەو ڕێگا پەسەندکراوە. لەیادت بێت ناوی بەکارهێنەرەکە کە بەکاری دەبەی بۆ پەسەندکردنی ئەپاچی دەبێ هەمان ڕێگا بێت وەکو ناوی بەکارهێنەری phpBB ــەکەت. پەسەندکردنی ئەپاچی تەنها دەتوانرێ بەکارببرێت لەگەڵ mod_php لەگەڵ safe_mode چالاکرابێت.',
 
+	'LDAP'							=> 'LDAP',
 	'LDAP_DN'						=> 'LDAP بنکەی <var>dn</var>',
 	'LDAP_DN_EXPLAIN'				=> 'ئەوە ناوی بێ-هەژمارە، شوێنکردنی زانیاری بەکارهێنەر ،نموونە <samp>o=Kompanyay min,c=US</samp>.',
-	'LDAP_EMAIL'					=> 'ئیمەیڵی ڕەسەنێتی LDAP',
-	'LDAP_EMAIL_EXPLAIN'			=> 'ئەوە دابنێ بۆ ناوی بەکارهێنەرەکەت ئیمەیڵی ڕەسەنێتی (ئەگەر هەیە) داوادەکرێ کە خۆکارانە ناونیشانی ئیمەیڵ دابنرێ بۆ بەکارهێنەرە نوێیەکان. جێ-هێشتنی ئەمە بە بەتاڵی ئەنجامی دەبێت بۆ ناونیشانی ئیمەیڵ بۆ بەکارهێنەران کە چوونە ژوورەوە بۆ یەکەم جار.',
+	'LDAP_EMAIL'					=> 'LDAP email attribute',
+	'LDAP_EMAIL_EXPLAIN'			=> 'Set this to the name of your user entry email attribute (if one exists) in order to automatically set the email address for new users. Leaving this empty results in empty email address for users who log in for the first time.',
 	'LDAP_INCORRECT_USER_PASSWORD'	=> 'بەرگکردن بۆ ڕاژەی LDAP سەرنەکەوت لەگەڵ بەکارهێنەر/تێپەڕەوشەی دیاریکراو.',
-	'LDAP_NO_EMAIL'					=> 'ئیمەیڵی دیاریکراو بوونی نییە.',
+	'LDAP_NO_EMAIL'					=> 'The specified email attribute does not exist.',
 	'LDAP_NO_IDENTITY'				=> 'نەتوانرا پێناسی چوونەژوورەوە بدۆزرێتەوە بۆ %s .',
 	'LDAP_PASSWORD'					=> 'تێپەڕەوشەی LDAP',
 	'LDAP_PASSWORD_EXPLAIN'			=> 'بە بەتاڵی جێی بهێڵە بۆ بەکاربردنی بەرگکردنی نەناسراو. یانیش لە تێپەڕەوشەکە پڕبکەوە بۆ بەکارهێنەری سەروو. داواکراوە بۆ ڕاژەکانی شوێنگە/پێڕستی چالاک.<br /><em><strong>ئاگاداری:</strong> ،ئەو تێپەڕەوشەیە کۆگادەکرێت وەکو دەقی نەخشە لە بنکەدراوەکە ،بۆ هەمووان دەردەکەوێ ئەوەی کە دەتوانێ بگات بە بنکەدراوەکەت یان ئەوەی کە دەتوانێ پەڕەی دیمەنکردن ببینێ.</em>',
@@ -9958,13 +10222,17 @@ $lang = array_merge($lang, array(
 	'LDAP_USER_FILTER'				=> 'فلتەری بەکارهێنەری LDAP',
 	'LDAP_USER_FILTER_EXPLAIN'		=> 'هەڵبژاردانە دەتوانی شتە گەڕاوەکان سنووردار بکەی لەگەڵ فلتەرە زۆرکراوەکان. بۆ نموونە <samp>objectClass=posixGroup</samp> ئەنجامی دەبێت لە بەکاربردنەکەی <samp>(&amp;(uid=$username)(objectClass=posixGroup))</samp>',
 
-	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'لێرە دەتوانیت ڕاژە و ناوە دۆمێین پێناسە بکەیت بەپێی ڕێکخستنەکان. تکایە دڵنیاببە داتای نووسراو تۆمارکراوە ،هەڵەکان ئەنجامی دەبێت لە ئیمەیڵی لەخۆگرتوو بۆ زانیاری نادروست. لەکاتی نووسینی ناوە دۆمێین لەیادت بێت http:// لەخۆ دەگرێت یان مەرجەکانی تری پرۆتۆکۆل. تەنها گۆڕاوی ژمارەی دەرگاکە ئەگەر تۆ دەزانی ڕاژەکەت نرخێکی جیاواز بەکاردەبات ،دەرگای 80 دروستە لە زۆربەی بارەکان.',
+	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Here you define server and domain dependent settings. Please ensure the data you enter is accurate, errors will result in emails containing incorrect information. When entering the domain name remember it does include http:// or other protocol term. Only alter the port number if you know your server uses a different value, port 80 is correct in most cases.',
 	'ENABLE_GZIP'				=> 'پەستاندنی GZip چالاکبکە',
 	'ENABLE_GZIP_EXPLAIN'		=> 'ناوەڕۆکی بەرهەمهاتوو دەپەستێورێ بۆ ناردنی بۆ بەکارهێنەرەکە. ئەمە دەتوانێ ترافیکی ڕایەڵە بگەڕێنێتەوە بەڵام بەکاربردنی CPU سەختر دەکات لەسەر هەردوو ڕاژەکە لەگەڵ تەنیشتە بێ-دەنگ. zlip PHP داوادەکرێ بۆ ئەوەی باربکرێت.',
 	'FORCE_SERVER_VARS'			=> 'ڕێکخستنەکانی URL ــی ڕاژە بەهێزبکە',
 	'FORCE_SERVER_VARS_EXPLAIN'	=> 'ئەگەر بۆ بەڵێ دانرا ڕێکخستنەکانی ڕاژەی لێرە پێناسکراو بەکاردەبڕی لە  فرەیی خۆکارانەی نرخە دیاریکراوەکان.',
 	'ICONS_PATH'				=> 'ڕێچکەی کۆگای ئاکۆنەکانی پەیام',
 	'ICONS_PATH_EXPLAIN'		=> 'ڕێچکە لەژێر پێڕستی سەرەتای phpBB ــەکەتە ،نموونە <samp>images/icons</samp>.',
+	'MOD_REWRITE_ENABLE'		=> 'Enable URL Rewriting',
+	'MOD_REWRITE_ENABLE_EXPLAIN' => 'When enabled, URLs containing ’app.php’ will be rewritten to remove the filename (i.e. app.php/foo will become /foo). <strong>Apache server’s mod_rewrite module is required for this functionality to work; if this option is enabled without mod_rewrite support, URLs on your board may be broken.</strong>',
+	'MOD_REWRITE_DISABLED'		=> 'The <strong>mod_rewrite</strong> module on your Apache web server is disabled. Enable the module or contact your web hosting provider if you wish to enable this feature.',
+	'MOD_REWRITE_INFORMATION_UNAVAILABLE' => 'We are unable to determine whether or not this server supports URL rewriting. This setting may be enabled but if URL rewriting is not available, paths generated by this board (such as for use in links) may be broken. Contact your web hosting provider if you are unsure whether or not you can safely enable this feature.',
 	'PATH_SETTINGS'				=> 'ڕێکخستنەکانی ڕێچکە',
 	'RANKS_PATH'				=> 'ڕێچکەی کۆگای پلەی وێنە',
 	'RANKS_PATH_EXPLAIN'		=> 'ڕێچکە لەژێر پێڕستی سەرەتای phpBB ــەکەتە ،نموونە <samp>images/ranks</samp>.',
@@ -9981,13 +10249,21 @@ $lang = array_merge($lang, array(
 	'SMILIES_PATH_EXPLAIN'		=> 'ڕێچکە لەژێر پێڕستی سەرەتای phpBB ــەکەتە ،نموونە <samp>images/smilies</samp>.',
 	'UPLOAD_ICONS_PATH'			=> 'ڕێچکەی کۆگای ئایکۆنی گرووپە زیادەکان',
 	'UPLOAD_ICONS_PATH_EXPLAIN'	=> 'ڕێچکە لەژێر پێڕستی سەرەتای phpBB ــەکەتە ،نموونە <samp>images/upload_icons</samp>.',
+	'USE_SYSTEM_CRON'		=> 'Run periodic tasks from system cron',
+	'USE_SYSTEM_CRON_EXPLAIN'		=> 'When off, phpBB will arrange for periodic tasks to be run automatically. When on, phpBB will not schedule any periodic tasks by itself; a system administrator must arrange for <code>bin/phpbbcli.php cron:run</code> to be run by the system cron facility at regular intervals (e.g. every 5 minutes).',
 
 	'ACP_SECURITY_SETTINGS_EXPLAIN'		=> 'لێرە دەتوانیت دانیشتن پێناسبکەیت لەگەڵ ڕێکخستنە پەیوەندیدارەکانی چوونەژوورەوە.',
 	'ALL'							=> 'هەموو',
-	'ALLOW_AUTOLOGIN'				=> 'ڕێگابدە بە چوونەژوورەوە بەردەوامەکان',
-	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'دیاریکردنی ئەگەرنا بەکارهێنەران دەتوانن خۆکار بچنەژوورەوە کاتێ ئەوان سەردانی مەکۆکە دەکەن.',
-	'AUTOLOGIN_LENGTH'				=> 'درێژی بەسەرچوونی چوونەژوورەوە بەردەوامەکان (لە ڕۆژدا)',
-	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'ژمارەی ڕۆژەکان لەدوای ئەوەی کلیلەکانی چوونەژوورەوەی بەردەوام گواسترانەوە یان 0 بۆ ناچالاککردن.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'ALLOW_PASSWORD_RESET'			=> 'Allow password reset ("Forgot Password")',
+	'ALLOW_PASSWORD_RESET_EXPLAIN'	=> 'Determines whether or not users are able to use the "I forgot my password" link on the login page to recover their account. If you use an external authentication mechanism you may wish to disable this feature.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
 	'BROWSER_VALID'					=> 'وێبگەڕی جێگیر',
 	'BROWSER_VALID_EXPLAIN'			=> 'بەردەستبوونی وێبگەڕ چالاکبکە بۆ هەر دانیشتنێکی گەشەپێدانی پاراستن.',
 	'CHECK_DNSBL'					=> 'لستی ڕەشی IP دژی DNS بپشکنە',
@@ -10024,8 +10300,12 @@ $lang = array_merge($lang, array(
 	'PASS_TYPE_SYMBOL'				=> 'دەبێ هێماکان لەخۆی بگرێت',
 	'REF_HOST'						=> 'تەنها خانەخوێێ بەردەست',
 	'REF_PATH'						=> 'هەروەها ڕێچکەی بەردەستیش',
-	'REFERER_VALID'					=> 'ئاماژەکەری بەردەست',
+	'REFERRER_VALID'				=> 'Validate Referrer',
+	'REFERRER_VALID_EXPLAIN'		=> 'If enabled, the referrer of POST requests will be checked against the host/script path settings. This may cause issues with boards using several domains and or external logins.',
+
+	'REFERER_VALID'					=> 'ئاماژەکەری بەردەست',	//3.0.12
 	'REFERER_VALID_EXPLAIN'			=> 'ئەگەر چالاککرا ،داواکانی ئاماژەکەری پەیامەکە دەپشکنرێ دژی ڕێکخستنەکانی ڕێچکەی پرۆگرامۆکە/خانەخوێ. ئەمە لەوانەیە ببێتە هۆی کێشەکان لەگەڵ مەکۆکان بەکاربردنی فرە دۆمێینی لەگەڵ چوونەژوورەوە زۆرزیادەکان.',
+
 	'TPL_ALLOW_PHP'					=> 'ڕێگابدە بە php لە داڕێژەکان',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'ئەگەر ئەو هەڵبژاردنە چالاککرا <code>PHP</code> لەگەڵ <code>INCLUDEPHP</code> رێکدەخرێن و دەبرێن بۆ داڕێژەکان.',
 
@@ -10038,6 +10318,8 @@ $lang = array_merge($lang, array(
 	'BOARD_HIDE_EMAILS_EXPLAIN'		=> 'ئەو نەخشەیە ناونیشانی ئیمەیڵەکان تەواو بە نهێنی دەهێڵێتەوە.',
 	'CONTACT_EMAIL'					=> 'ناونیشانی ئیمەیڵی پەیوەندی',
 	'CONTACT_EMAIL_EXPLAIN'			=> 'ئەو ناونیشانە بەکاردەبرێت لەهەر کوێیەک هەژمارێکی دیاریکراو پێویست بوو ،نموونە سپام ،هەڵەی بەرهەمهاتوو ..هتد هەمیشە بەکاردەبرێت وەکو <samp>From</samp> لەگەڵ ناونیشانانی <samp>Reply-To</samp> لە ئیمەیڵەکان.',
+	'CONTACT_EMAIL_NAME'			=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 	'EMAIL_FUNCTION_NAME'			=> 'ناوی نەخشەی ئیمەیڵ',
 	'EMAIL_FUNCTION_NAME_EXPLAIN'	=> 'نەخشەی ئیمەیڵەکە بەکارهاتووە بۆ ناردنی ئیمەیڵەکان بەناو PHP.',
 	'EMAIL_PACKAGE_SIZE'			=> 'قەبارەی گورزەی ئیمەیل',
@@ -10228,7 +10510,7 @@ $lang = array_merge($lang, array(
 	'ACP_BAN'					=> 'ڕاگرتن',
 	'ACP_BAN_EMAILS'			=> 'قەدەغەکردنی ئیمەیل',
 	'ACP_BAN_IPS'				=> 'قەدەغەکردنی IP',
-	'ACP_BAN_USERNAMES'			=> 'ڕاگرتنی ناو بەکارهێنەران',
+	'ACP_BAN_USERNAMES'			=> 'Ban users',
 	'ACP_BBCODES'				=> 'BBCode ـەکان',
 	'ACP_BOARD_CONFIGURATION'	=> 'سازدانی مەکۆ',
 	'ACP_BOARD_FEATURES'		=> 'تایبەتمەندییەکانی مەکۆ',
@@ -10237,8 +10519,10 @@ $lang = array_merge($lang, array(
 	'ACP_BOTS'					=> 'جاڵجاڵۆکەکان/ڕۆبۆتەکان',
 
 	'ACP_CAPTCHA'				=> 'CAPTCHA',
+	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'بنکەدراوە',
+	'ACP_CAT_DOT_MODS'			=> '.MODs',
 	'ACP_CAT_DOT_MODS'			=> '.MODs',
 	'ACP_CAT_FORUMS'			=> 'مەکۆکان',
 	'ACP_CAT_GENERAL'			=> 'گشتیی',
@@ -10251,6 +10535,8 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_USERS'				=> 'بەکارهێنەران',
 	'ACP_CLIENT_COMMUNICATION'	=> 'پەیوەندییەکانی ڕاژەخواز',
 	'ACP_COOKIE_SETTINGS'		=> 'ڕێکخستنەکانی کووکی',
+	'ACP_CONTACT'				=> 'Contact page',
+	'ACP_CONTACT_SETTINGS'		=> 'Contact page settings',
 	'ACP_CRITICAL_LOGS'			=> 'لۆگی هەڵە',
 	'ACP_CUSTOM_PROFILE_FIELDS'	=> 'خانە دەستکردەکانی پڕۆفایل',
 
@@ -10258,8 +10544,11 @@ $lang = array_merge($lang, array(
 	'ACP_DISALLOW'				=> 'ڕێگرتن',
 	'ACP_DISALLOW_USERNAMES'	=> 'ڕێگرتن لە ناوی بەکارهێنەر',
 
-	'ACP_EMAIL_SETTINGS'		=> 'ڕێکخستنەکانی ئیمەیل',
-	'ACP_EXTENSION_GROUPS'		=> 'گرووپە گەیەنەرەکان بەڕێوەببە',
+	'ACP_EMAIL_SETTINGS'		=> 'Email settings',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
+	'ACP_EXTENSION_MANAGEMENT'	=> 'Extension management',
+	'ACP_EXTENSIONS'			=> 'Manage extensions',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
 	'ACP_FORMS'					=> 'Customizable Forms',
 	'ACP_FORMS_BUILDER'			=> 'Form Builder',
 
@@ -10280,10 +10569,10 @@ $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE'				=> 'گروپەکان بەڕێوەببە',
 	'ACP_GROUPS_MANAGEMENT'			=> 'بەڕێوەبردنی گروپەکان',
 	'ACP_GROUPS_PERMISSIONS'		=> 'دەسەڵاتی گروپەکان',
+	'ACP_GROUPS_POSITION'			=> 'Manage group positions',
 
 	'ACP_ICONS'					=> 'ئایکۆنەکانی بابەت',
 	'ACP_ICONS_SMILIES'			=> 'هێما/خەندەکانی بابەت',
-	'ACP_IMAGESETS'				=> 'Imagesets',
 	'ACP_INACTIVE_USERS'		=> 'بەکارهێنەرە ناچالاکەکان',
 	'ACP_INDEX'					=> 'دەستپێکی ACP',
 
@@ -10295,11 +10584,15 @@ $lang = array_merge($lang, array(
 	'ACP_LOGGING'				=> 'چوونە ژوورەوە',
 
 	'ACP_MAIN'					=> 'دەستپێکی ACP',
-	'ACP_MANAGE_EXTENSIONS'		=> 'بەڕێوەبردنی درێژکراوەکان',
+
+	'ACP_MANAGE_ATTACHMENTS'			=> 'Manage attachments',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
+
+	'ACP_MANAGE_EXTENSIONS'		=> 'Manage attachment extensions',
 	'ACP_MANAGE_RANKS'			=> 'بەڕێوەبردنی پلەکان',
 	'ACP_MANAGE_REASONS'		=> 'هۆکارەکانی ریپۆرت/ڕەتکردن بەڕێوەببە',
 	'ACP_MANAGE_USERS'			=> 'بەڕێوەبردنی بەکارهێنەران',
-	'ACP_MASS_EMAIL'			=> 'ئیمەیڵی گشتی',
+	'ACP_MASS_EMAIL'			=> 'Mass email',
 	'ACP_MESSAGES'				=> 'پەیامەکان',
 	'ACP_MESSAGE_SETTINGS'		=> 'ڕێکخستنەکانی پەیامی تایبەت',
 	'ACP_MODULE_MANAGEMENT'		=> 'بەڕێوەبردنی یەکەکان',
@@ -10344,6 +10637,8 @@ $lang = array_merge($lang, array(
 	'ACP_STYLE_COMPONENTS'		=> 'پێکهاتەکانی ڕووخسار',
 	'ACP_STYLE_MANAGEMENT'		=> 'بەڕێوەبردنی ڕووخسار',
 	'ACP_STYLES'				=> 'ڕووخسارەکان',
+	'ACP_STYLES_CACHE'			=> 'Purge Cache',
+	'ACP_STYLES_INSTALL'		=> 'Install Styles',
 
 	'ACP_SUBMIT_CHANGES'		=> 'گۆڕانکارییەکان بنێرە',
 
@@ -10395,6 +10690,10 @@ $lang = array_merge($lang, array(
 
 	'COLOUR_SWATCH'			=> 'پارچەی ڕەنگ',
 	'CONFIG_UPDATED'		=> 'دیمەنکردن بەسەرکەوتوویی نوێکرایەوە.',
+	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
+	'CRON_NO_SUCH_TASK'		=> 'Could not find cron task â€œ%sâ€.',
+	'CRON_NO_TASK'			=> 'No cron tasks need to be run right now.',
+	'CRON_NO_TASKS'			=> 'No cron tasks could be found.',
 
 	'DEACTIVATE'				=> 'ناچالاککردن',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'ڕێڕەوی لێدراو “%s”بوونی نییە.',
@@ -10405,6 +10704,7 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_AS'				=> 'داگرتن وەک',
 	'DOWNLOAD_STORE'			=> 'داگرتن یان پاشەکەوتکردنی پەڕگە',
 	'DOWNLOAD_STORE_EXPLAIN'	=> 'پێویستە ڕاستەوخۆ پەڕگەکە دابگریت یان پاشەکەوتی بکەیت بۆ بوخچەی <samp>store/</samp>.',
+	'DOWNLOADS'					=> 'Downloads',
 
 	'EDIT'					=> 'دەستکاری',
 	'ENABLE'				=> 'چالاککردن',
@@ -10419,6 +10719,8 @@ $lang = array_merge($lang, array(
 	'IP'					=> 'IP',
 	'IP_HOSTNAME'			=> 'ناونیشانی IPیان ناوی ڕاژە',
 
+	'LOAD_NOTIFICATIONS'			=> 'Display Notifications',
+	'LOAD_NOTIFICATIONS_EXPLAIN'	=> 'Display the notifications list on every page (typically in the header).',
 	'LOGGED_IN_AS'			=> 'لە ژوورەوەیت وەک:',
 	'LOGIN_ADMIN'			=> 'بۆ بەڕێوەبردنی مەکۆکەت پێویستە تۆ بەکارهێنەرێکی دڵنیاکراو بیت.',
 	'LOGIN_ADMIN_CONFIRM'	=> 'بۆ بەڕێوەبردنی مەکۆکەت پێویستە دووبارە خۆت دڵنیابکەیتەوە',
@@ -10435,7 +10737,8 @@ $lang = array_merge($lang, array(
 
 	'NOTIFY'				=> 'ئاگادارکردنەوە',
 	'NO_ADMIN'				=> 'تۆ ڕێگات پێ نەدراوە بۆ بەڕێوەبردنی ئەو مەکۆیە',
-	'NO_EMAILS_DEFINED'		=> 'هیچ ناونیشانێکی ئیمەیڵی دروست نەدۆزرایەوە.',
+	'NO_EMAILS_DEFINED'		=> 'No valid email addresses found.',
+	'NO_FILES_TO_DELETE'	=> 'Attachments you selected for deletion do not exist.',
 	'NO_PASSWORD_SUPPLIED'	=> 'پێویستە تێپەڕەوشەکەت بنووسی بۆ گەیشتن بە کۆنترۆڵ پانێڵی بەڕێوەبەرایەتی.',
 
 	'OFF'					=> 'ناکارا',
@@ -10451,8 +10754,8 @@ $lang = array_merge($lang, array(
 
 	'REMIND'							=> 'بیرهێنان',
 	'RESYNC'							=> 'Resync',
-	'RETURN_TO'							=> 'گەڕانەوە بۆ',
 
+	'RUNNING_TASK'			=> 'Running task: %s.',
 	'SELECT_ANONYMOUS'		=> 'بەکارهێنەرێکی نەناسراو دیاری بکە',
 	'SELECT_OPTION'			=> 'هەڵبژاردنێک دیاری بکە',
 
@@ -10462,6 +10765,10 @@ $lang = array_merge($lang, array(
 	'SETTING_TOO_SHORT'		=> 'نرخی دراو بۆ ئەو ڕێکخستنە “%1$s” زۆر کورتە. کەمترین درێژی وەرگیراو بریتییە لە %2$d.',
 
 	'SHOW_ALL_OPERATIONS'	=> 'هەموو کردارەکان نیشانبدە',
+
+	'TASKS_NOT_READY'			=> 'Not ready tasks:',
+	'TASKS_READY'			=> 'Ready tasks:',
+	'TOTAL_SIZE'			=> 'Total size',
 
 	'UCP'					=> 'کۆنترۆڵ پانێڵی بەکارهێنەر',
 	'USERNAMES_EXPLAIN'		=> 'ناوی هەر بەکارهێنەرێک لە هێڵێکی جیا دابنێ.',
@@ -10473,7 +10780,7 @@ $lang = array_merge($lang, array(
 	'NO_PHPINFO_AVAILABLE'	=> 'زانیاری دەربارەی دیمەنکردنی PHP ــەکەت ناتوانێت دیاریبکرێت. Phpinfo() ناچالاککراوە بۆ هۆکارەکانی پاراستن.',
 
 	'ACP_ADMIN_LOGS_EXPLAIN'	=> 'ئەوە هەموو کردارە هەڵگیراوەکان لیست دەکات لەلایەن بەڕێوەبەرانی مەکۆ. دەتوانی ڕیزبەندی بکەی بەهۆی ناوی بەکارهێنەر ،بەروار ،IP یان کردار. ئەگەر دەسەڵاتی بەرامبەرکێت هەیە دەتوانی کردارەکە تەواو نادروستەکان لابەریت یان تۆمارکەرەکە وەکو چاڵێک.',
-	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'ئەمە کردارەکە هەڵگیراوەکان لیست دەکات لەلایەن خودی مەکۆکە. ئەو لۆگە زانیاری دەسەڵاتی بەرامبەرکێ پێدەدات دەتوانی کردارە ماوەکان لابەریت یان لۆگە وەکو چاڵێک.',
+	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'This lists the actions carried out by the board itself. This log provides you with information you are able to use for solving specific problems, for example non-delivery of emails. You can sort by username, date, IP or action. If you have appropriate permissions you can also clear individual operations or the log as a whole.',
 	'ACP_MOD_LOGS_EXPLAIN'		=> 'ئەمە هەموو کردارە کراوەکان لیست دەکات لەسەر مەکۆکان ،بابەتەکان و پەیامەکان وەکو باسی وەکو کردارە هەڵگیراوەکان لەسەر بەکارهێنەران لەلایەن چاودێران. لەناویاندا ڕاگرتن. دەتوانی ڕیزبەندی بکەیت بەهۆی ناوی بەکارهێنەر ،داتا ،IP یان کردار. ئەگەر تۆ دەسەڵاتی بەرامبەرکێت هەیە دەشتوانی کردارە ماوەکان لابەریت یان تۆمارهەرییەکە وەکو چاڵێک.',
 	'ACP_USERS_LOGS_EXPLAIN'	=> 'ئەمە هەموو کردارە هەڵگیراوەکان لیست دەکات لەلایەن بەکارهێنەران یان لەسەر بەکارهێنەران.',
 	'ALL_ENTRIES'				=> 'هەموو دانەکان',
@@ -10499,6 +10806,7 @@ $lang = array_merge($lang, array(
 
 	'GZIP_COMPRESSION'	=> 'پەستاندنی GZip',
 
+	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'ئامادە نییە',
 	'NUMBER_FILES'		=> 'ژمارەی هاوپێچەکان',
 	'NUMBER_POSTS'		=> 'ژمارەی پەیامەکان',
@@ -10511,29 +10819,38 @@ $lang = array_merge($lang, array(
 	'PURGE_CACHE'			=> 'پاککردنەوەی ئەرشیفەکە',
 	'PURGE_CACHE_CONFIRM'	=> 'دڵنیایت لە بەردەوامبوون بۆ پاککردنەوەی ئەرشیفەکە؟',
 	'PURGE_CACHE_EXPLAIN'	=> 'هەموو شتە پەیوەندیدارەکانی ئەرشیف پاکبکەوە ،ئەمە هەر پەڕگە یان پرسگەکانی داڕێژەیەکی ئەرشیف لەخۆ دەگرێت.',
+	'PURGE_CACHE_SUCCESS'	=> 'Cache successfully purged.',
 
 	'PURGE_SESSIONS'			=> 'هەموو دانیشتنەکان پاکبکەوە',
 	'PURGE_SESSIONS_CONFIRM'	=> 'دڵیایت لە بەردەوامبوون بۆ پاککردنەوەی هەموو دانیشتنەکان؟ ئەمە هەموو بەکارهێنەران دەخاتە دەرەوە.',
 	'PURGE_SESSIONS_EXPLAIN'	=> 'هەموو دانیشتنەکان پاکبکەوە. ئەمە هەموو بەکارهێنەران دەخاتە دەرەوە بە هەڵگرتنی خشتەی دانیشتن.',
+	'PURGE_SESSIONS_SUCCESS'	=> 'Sessions successfully purged.',
 
 	'RESET_DATE'					=> 'بەرواری سەرەتای مەکۆ دابنێوە',
 	'RESET_DATE_CONFIRM'			=> 'دڵنیایت لە بەردەوامبوون بۆ دانانەوەی بەرواری سەرەتای مەکۆکە؟',
+	'RESET_DATE_SUCCESS'				=> 'Boardâ€™s start date reset',
 	'RESET_ONLINE'					=> 'زۆرترین بەکارهێنەری سەرهێڵ دابنێوە',
 	'RESET_ONLINE_CONFIRM'			=> 'دڵنیایت لە بەردەوامبوون بۆ دانانەوەی ژمێریاری زۆرترین بەکارهێنەری سەرهێڵ؟',
+	'RESET_ONLINE_SUCCESS'				=> 'Most users ever online reset',
 	'RESYNC_POSTCOUNTS'				=> 'لەگەڵهاتنەوەی ژمارەی پەیام',
 	'RESYNC_POSTCOUNTS_EXPLAIN'		=> 'تەنها پەیامە چالاکەکان دەبرێن بۆناو گرنگیدان. پەیامە وشکەکان هەژمار ناکرێن.',
 	'RESYNC_POSTCOUNTS_CONFIRM'		=> 'دڵنیایت لە بەردەوامبوون بۆ لەگەڵهێنانەوەی ژمارەی پەیامەکان؟',
+	'RESYNC_POSTCOUNTS_SUCCESS'			=> 'Resynchronised post counts',
 	'RESYNC_POST_MARKING'			=> 'لەگەڵهێنانەوەی بابەتە خاڵکراوەکان',
 	'RESYNC_POST_MARKING_CONFIRM'	=> 'دڵنیایت لە بەردەوامبوون بۆ لەگەڵهێنانەوەی بابەتە خاڵکراوەکان؟',
 	'RESYNC_POST_MARKING_EXPLAIN'	=> 'یەکەم هەموو بابەتەکان دەستنیشان مەکە و دواتر بابەتی دەستنیشان کراوی دروست کە هیچ چالاکییەکیان بینیوە لەکاتی شەش مانگی ڕۆیشتوودا.',
+	'RESYNC_POST_MARKING_SUCCESS'	=> 'Resynchronised dotted topics',
 	'RESYNC_STATS'					=> 'لەگەڵهێنانەوەی ئامارەکان',
 	'RESYNC_STATS_CONFIRM'			=> 'دڵنیایت کە بەردەوامبوون بۆ لەگەڵهێنانەوەی ئامارەکان؟',
 	'RESYNC_STATS_EXPLAIN'			=> 'ژماردنەوەی کۆی ژمارەی پەیامەکان ،بابەتەکان بەکارهێنەران لەگەڵ پەڕگەکان.',
+	'RESYNC_STATS_SUCCESS'			=> 'Resynchronised statistics',
 	'RUN'							=> 'ئێستا کاری پێبکە',
 
 	'STATISTIC'					=> 'ئامارەکان',
 	'STATISTIC_RESYNC_OPTIONS'	=> 'لەگەڵهێنانەوەی یان دانانەوەی ئامارەکان',
 
+	'TIMEZONE_INVALID'	=> 'The timezone you selected is invalid.',
+	'TIMEZONE_SELECTED'	=> '(currently selected)',
 	'TOPICS_PER_DAY'	=> 'بابەتەکان بۆ هەر ڕۆژێک',
 
 	'UPLOAD_DIR_SIZE'	=> 'قەبارەی هاوپێچە نێردراوەکان',
@@ -10714,9 +11031,9 @@ $lang = array_merge($lang, array(
 
 	'LOG_APPROVE_TOPIC'			=> '<strong>بابەتی پەسەندکراو</strong><br />» %s',
 	'LOG_BUMP_TOPIC'			=> '<strong>بابەتی پێکدادراوی بەکارهێنەر</strong><br />» %s',
-	'LOG_DELETE_POST'			=> '<strong>پەیامی سڕاوە</strong><br />» %s',
-	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>سێبەری سڕاوەی بابەت</strong><br />» %s',
-	'LOG_DELETE_TOPIC'			=> '<strong>بابەتی سڕاوە</strong><br />» %s',
+	'LOG_DELETE_POST'			=> '<strong>Deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Deleted shadow topic</strong><br />Â» %s',
+	'LOG_DELETE_TOPIC'			=> '<strong>Deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_FORK'					=> '<strong>بابەتی لەبەرگیراوە</strong><br />» لە %s',
 	'LOG_LOCK'					=> '<strong>بابەتی داخراو</strong><br />» %s',
 	'LOG_LOCK_POST'				=> '<strong>پەیامی داخراو</strong><br />» %s',
@@ -10725,15 +11042,20 @@ $lang = array_merge($lang, array(
 	'LOG_PM_REPORT_CLOSED'		=> '<strong>ڕاپۆرتی داخراوی پەیامی تایبەت</strong><br />» %s',
 	'LOG_PM_REPORT_DELETED'		=> '<strong>ڕاپۆرتی سڕاوەی پەیامی تایبەت</strong><br />» %s',
 	'LOG_POST_APPROVED'			=> '<strong>پەیامی پەسەندکراو</strong><br />» %s',
-	'LOG_POST_DISAPPROVED'		=> '<strong>پەیامی پەسەندنەکراو “%1$s” لەگەڵ ئەم هۆکارانە</strong><br />» %2$s',
-	'LOG_POST_EDITED'			=> '<strong>پەیامی دەستکاریکراو “%1$s” نووسراو لەلایەن</strong><br />» %2$s',
+	'LOG_POST_DISAPPROVED'		=> '<strong>Disapproved post â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
+	'LOG_POST_EDITED'			=> '<strong>Edited post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_POST_RESTORED'			=> '<strong>Restored post</strong><br />Â» %s',
 	'LOG_REPORT_CLOSED'			=> '<strong>ڕاپۆرتی داخراو</strong><br />» %s',
 	'LOG_REPORT_DELETED'		=> '<strong>ڕاپۆرتی سڕاوە</strong><br />» %s',
+	'LOG_RESTORE_TOPIC'			=> '<strong>Restored topic â€œ%1$sâ€ written by</strong><br />Â» %2$s',
+	'LOG_SOFTDELETE_POST'		=> '<strong>Soft deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_SOFTDELETE_TOPIC'		=> '<strong>Soft deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_SPLIT_DESTINATION'		=> '<strong>پەیامی جیای گواستراوە</strong><br />» بۆ %s',
 	'LOG_SPLIT_SOURCE'			=> '<strong>پەیامە جیاکراوەکان</strong><br />» لە %s',
 
 	'LOG_TOPIC_APPROVED'		=> '<strong>بابەتی پەسەندکراو</strong><br />» %s',
-	'LOG_TOPIC_DISAPPROVED'		=> '<strong>بابەتی پەسەندنەکراو “%1$s” لەگەڵ ئەم هۆکارانە</strong><br />%2$s',
+	'LOG_TOPIC_RESTORED'		=> '<strong>Restored topic</strong><br />Â» %s',
+	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Disapproved topic â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
 	'LOG_TOPIC_RESYNC'			=> '<strong>لەگەڵهاتنەوەی ژمێریاری بابەت</strong><br />» %s',
 	'LOG_TOPIC_TYPE_CHANGED'	=> '<strong>جۆری گۆڕاوی بابەت</strong><br />» %s',
 	'LOG_UNLOCK'				=> '<strong>بابەتی دانەخراو</strong><br />» %s',
@@ -10785,16 +11107,6 @@ $lang = array_merge($lang, array(
 
 	'LOG_IMAGE_GENERATION_ERROR'	=> '<strong>هەڵە لەکاتی دروستکردنی وێنە</strong><br />» هەڵە لە %1$s لە هێڵی %2$s: %3$s',
 
-	'LOG_IMAGESET_ADD_DB'			=> '<strong> زیادکراوی نوێی imageset بۆ بنکەدراوە</strong><br />» %s',
-	'LOG_IMAGESET_ADD_FS'			=> '<strong>زیادکراوی نوێی imageset لە پەڕگەسیستەم</strong><br />» %s',
-	'LOG_IMAGESET_DELETE'			=> '<strong>imagesetــی سڕاوە</strong><br />» %s',
-	'LOG_IMAGESET_EDIT_DETAILS'		=> '<strong>وردەکاری imageset دەستکاریکراو</strong><br />» %s',
-	'LOG_IMAGESET_EDIT'				=> '<strong>دەستکاریکراو imageset</strong><br />» %s',
-	'LOG_IMAGESET_EXPORT'			=> '<strong>imagesetــی هێنراو</strong><br />» %s',
-	'LOG_IMAGESET_LANG_MISSING'		=> '<strong>Imageset ونکردوە “%2$s” </strong><br />» %1$s',
-	'LOG_IMAGESET_LANG_REFRESHED'	=> '<strong>نوێکراوەی “%2$s” بۆ imageset</strong><br />» %1$s',
-	'LOG_IMAGESET_REFRESHED'		=> '<strong>imageset تازەکراوە</strong><br />» %s',
-
 	'LOG_INACTIVE_ACTIVATE'	=> '<strong>بەکارهێنەری چالاککراوی ناچالاک</strong><br />» %s',
 	'LOG_INACTIVE_DELETE'	=> '<strong>بەکارهێنەری ناچالاکی سڕاوە</strong><br />» %s',
 	'LOG_INACTIVE_REMIND'	=> '<strong>ئیمەیڵی بیرهێنانەوە بنێرە بۆ بەکارهێنەرە ناچالاکەکا</strong><br />» %s',
@@ -10839,6 +11151,7 @@ $lang = array_merge($lang, array(
 	'LOG_U_ROLE_EDIT'		=> '<strong>یاسای بەکارهێنەر دەستکاریکرا</strong><br />» %s',
 	'LOG_U_ROLE_REMOVED'	=> '<strong>یاسای بەکارهێنەر سڕایەوە</strong><br />» %s',
 
+	'LOG_PLUPLOAD_TIDY_FAILED'		=> '<strong>Unable to open %1$s for tidying, check permissions.</strong><br />Exception: %2$s<br />Trace: %3$s',
 	'LOG_PROFILE_FIELD_ACTIVATE'	=> '<strong>خانەی پرۆفایل چالاککرا</strong><br />» %s',
 	'LOG_PROFILE_FIELD_CREATE'		=> '<strong>خانەی پرۆفایل زیادکرا</strong><br />» %s',
 	'LOG_PROFILE_FIELD_DEACTIVATE'	=> '<strong>خانەی پرۆفایل ناچالاککرا</strong><br />» %s',
@@ -10847,13 +11160,13 @@ $lang = array_merge($lang, array(
 
 	'LOG_PRUNE'					=> '<strong>مەکۆ وشککراوەکان</strong><br />» %s',
 	'LOG_AUTO_PRUNE'			=> '<strong>مەکۆ خۆکار-وشککراوان</strong><br />» %s',
+	'LOG_PRUNE_SHADOW'		=> '<strong>Auto-pruned shadow topics</strong><br />Â» %s',
 	'LOG_PRUNE_USER_DEAC'		=> '<strong>بەکارهێنەران ناچالاککران</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_DEL'	=> '<strong>بەکارهێنەران وشککران و پەیامەکان سڕانەوە</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_ANON'	=> '<strong>بەکارهێنەران وشککران و پەیامەکان نەناسراوکران</strong><br />» %s',
 
 	'LOG_PURGE_CACHE'			=> '<strong>ئەرشیفی پاککراو</strong>',
 	'LOG_PURGE_SESSIONS'		=> '<strong>دانیشتنە پاککراوەکان</strong>',
-
 
 	'LOG_RANK_ADDED'		=> '<strong>پلەی زیادکراوی نوێ</strong><br />» %s',
 	'LOG_RANK_REMOVED'		=> '<strong>پلەی سڕاوە</strong><br />» %s',
@@ -10863,15 +11176,17 @@ $lang = array_merge($lang, array(
 	'LOG_REASON_REMOVED'	=> '<strong>هۆکاری سڕاوەی ڕاپۆرت/ڕەتکردن</strong><br />» %s',
 	'LOG_REASON_UPDATED'	=> '<strong>هۆکاری نوێکراوەی ڕاپۆرت/ڕەتکردن</strong><br />» %s',
 
-	'LOG_REFERER_INVALID'		=> '<strong>بەردەستیی ئاماژەدان سەرنەکەوتن</strong><br />»ئاماژەکار بریتیی بوو “<em>%1$s</em>”. داواکە ڕەتکرایەوە و دانیشتنەکەش کوژرا.',
+	'LOG_REFERER_INVALID'		=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 	'LOG_RESET_DATE'			=> '<strong>بەرواری دەستپێکردنی مەکۆ دانرایەوە</strong>',
 	'LOG_RESET_ONLINE'			=> '<strong>زۆرترین بەکارهێنەری سەرهێڵ دانرایەوە</strong>',
+	'LOG_RESYNC_FILES_STATS'	=> '<strong>File statistics resynchronised</strong>',
 	'LOG_RESYNC_POSTCOUNTS'		=> '<strong>ژمارەی پەیامی بەکارهێنەران کۆنووسکرایەوە</strong>',
 	'LOG_RESYNC_POST_MARKING'	=> '<strong>بابەتە خاڵکراوەکان کۆنووسکرانەوە</strong>',
 	'LOG_RESYNC_STATS'			=> '<strong>بابەت ،پەیام لەگەڵ ئامارەکانی بەکارهێنەر کۆنووسکرانەوە</strong>',
 
 	'LOG_SEARCH_INDEX_CREATED'	=> '<strong>پێڕستی گەڕانی دروستکراو بۆ</strong><br />» %s',
 	'LOG_SEARCH_INDEX_REMOVED'	=> '<strong>پێڕستی گەڕانی سڕاوە بۆ</strong><br />» %s',
+	'LOG_SPHINX_ERROR'			=> '<strong>Sphinx Error</strong><br />Â» %s',
 	'LOG_STYLE_ADD'				=> '<strong>شێوازی زیادکراوی نوێ</strong><br />» %s',
 	'LOG_STYLE_DELETE'			=> '<strong>شێوازی سڕاوە</strong><br />» %s',
 	'LOG_STYLE_EDIT_DETAILS'	=> '<strong>شێوازی دەستکاریکراو</strong><br />» %s',
@@ -10938,15 +11253,18 @@ $lang = array_merge($lang, array(
 	'LOG_USER_GROUP_RESIGN'			=> '<strong>بەکارهێنەر ئەندامییەتی خستەوە بۆ گرووپی بەکارهێنەر</strong><br />» %s',
 
 	'LOG_WARNING_DELETED'		=> '<strong>ئاگاداری سڕاوەی بەکارهێنەر</strong><br />» %s',
-	'LOG_WARNINGS_DELETED'		=> '<strong>ئاگاداری %2$s سڕاوەی بەکارهێنەر</strong><br />» %1$s',
 	'LOG_WARNINGS_DELETED_ALL'	=> '<strong>هەموو ئاگادارییە سڕاوەکانی بەکارهێنەر</strong><br />» %s',
 
 	'LOG_WORD_ADD'			=> '<strong>سانسۆری زیادکراوی وشە</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>سانسۆری سڕاوەی وشە</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>سانسۆری دەستکاریکراوی وشە</strong><br />» %s',
+
+	'LOG_EXT_ENABLE'	=> '<strong>Extension enabled</strong><br />Â» %s',
+	'LOG_EXT_DISABLE'	=> '<strong>Extension disabled</strong><br />Â» %s',
+	'LOG_EXT_PURGE'		=> '<strong>Extensionâ€™s data deleted</strong><br />Â» %s',
+
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
-
 ));
 
 $lang = array_merge($lang, array(
@@ -11247,7 +11565,7 @@ $lang = array_merge($lang, array(
 	'ACP_PORTAL_WELCOME_EXPLAIN'=> '',
 	'ADM_LOGOUT'			=> 'دەرچوون لە&nbsp;ACP',
 	'ADM_LOGGED_OUT'		=> 'بەسەرکەوتوویی چوویتە دەرەوە لە کۆنترۆڵ پانێڵی بەڕێوەبەرایەتی',
-	'LOG_REFERER_INVALID'	=> '<strong>بەردەستیی ئاماژەدان سەرنەکەوتن</strong><br />»ئاماژەکار بریتیی بوو “<em>%1$s</em>”. داواکە ڕەتکرایەوە و دانیشتنەکەش کوژرا.',
+	'LOG_REFERER_INVALID'	=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 
 	'ACP_ABBCODES'			=> 'BBcode Box',
 	'LOG_CONFIG_ABBCODES'	=> '<strong>Altered BBCode Box settings</strong>',
@@ -11653,7 +11971,7 @@ $lang = array_merge($lang, array(
 	'SELECT_A_PREFIX'				=> 'Select a prefix',
 	'ACP_SEOQUERYS'					=> 'SEO Queries',
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Manage attachments',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can list and delete files attached to posts and private messages.',
 	'LOG_ATTACH_DEL'				=> '<strong>Attachments deleted</strong><br />» %s',
 	'LOG_ATTACH_REASSIGNED'			=> '<strong>Attachment reassigned to Post</strong><br />» ID %1$d - %2$s',
 	'TOTAL_SIZE'					=> 'Total size',
@@ -11672,11 +11990,11 @@ $lang = array_merge($lang, array(
 	'ACP_INTRO'				=> 'Intro',
 
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Manage attachments',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
 	'TOTAL_SIZE'				=> 'Total size',
 	'DOWNLOADS'				=> 'Downloads',
 
-	'NO_AVATAR'				=> 'URL of the avatar for all the have no separate',
+	'NO_AVATAR'				=> 'No avatar selected',
 	'NO_AVATAR_EXPLAIN'			=> 'The optimal size of the avatar is 120x120px, this box is left blank, no picture at all. <br /> Demo URL: http://www.userboard.org/images/no_avatar_1.gif',
 	'GROUP_ICON'				=> 'Group Icon',
 	'GROUP_ICON_EXPLAIN'			=> 'Upload your Group Icons into Upload &#187; Topic/Group Icons',
@@ -12839,6 +13157,97 @@ $lang = array_merge($lang, array(
 	'NO_EMAIL_SUBJECT'		=> 'سەردێڕی ئیمەیل نەنووسراوە.',
 ));
 
+#######language/en/acp/extensions.php#######
+
+$lang = array_merge($lang, array(
+	'EXTENSION'					=> 'درێژکراوە',
+	'EXTENSIONS'				=> 'Extensions',
+	'EXTENSIONS_ADMIN'			=> 'Extensions Manager',
+	'EXTENSIONS_EXPLAIN'		=> 'The Extensions Manager is a tool in your phpBB Board which allows you to manage all of your extensions statuses and view information about them.',
+	'EXTENSION_INVALID_LIST'	=> 'The “%s” extension is not valid.<br />%s<br /><br />',
+	'EXTENSION_NOT_AVAILABLE'	=> 'The selected extension is not available for this board, please verify your phpBB and PHP versions are allowed (see the details page).',
+	'EXTENSION_DIR_INVALID'		=> 'The selected extension has an invalid directory structure and cannot be enabled.',
+	'EXTENSION_NOT_ENABLEABLE'	=> 'The selected extension cannot be enabled, please verify the extension’s requirements.',
+
+	'DETAILS'				=> 'وردەکارییەکان',
+
+	'EXTENSIONS_DISABLED'	=> 'Disabled Extensions',
+	'EXTENSIONS_ENABLED'	=> 'Enabled Extensions',
+
+	'EXTENSION_DELETE_DATA'	=> 'Delete data',
+	'EXTENSION_DISABLE'		=> 'Disable',
+	'EXTENSION_ENABLE'		=> 'Enable',
+
+	'EXTENSION_DELETE_DATA_EXPLAIN'	=> 'Deleting an extension’s data removes all of its data and settings. The extension files are retained so it can be enabled again.',
+	'EXTENSION_DISABLE_EXPLAIN'		=> 'Disabling an extension retains its files, data and settings but removes any functionality added by the extension.',
+	'EXTENSION_ENABLE_EXPLAIN'		=> 'Enabling an extension allows you to use it on your board.',
+
+	'EXTENSION_DELETE_DATA_IN_PROGRESS'	=> 'The extension’s data is currently being deleted. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_DISABLE_IN_PROGRESS'	=> 'The extension is currently being disabled. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_ENABLE_IN_PROGRESS'	=> 'The extension is currently being enabled. Please do not leave or refresh this page until it is completed.',
+
+	'EXTENSION_DELETE_DATA_SUCCESS'	=> 'The extension’s data was deleted successfully',
+	'EXTENSION_DISABLE_SUCCESS'		=> 'The extension was disabled successfully',
+	'EXTENSION_ENABLE_SUCCESS'		=> 'The extension was enabled successfully',
+
+	'EXTENSION_NAME'			=> 'Extension Name',
+	'EXTENSION_ACTIONS'			=> 'Actions',
+	'EXTENSION_OPTIONS'			=> 'Options',
+	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
+	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s files from the filesystem</li>
+			<li>Upload the new files</li>
+			<li>Enable the extension</li>
+		</ol>',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s data</li>
+			<li>Delete the extension’s files from the filesystem</li>
+		</ol>',
+
+	'EXTENSION_DELETE_DATA_CONFIRM'	=> 'Are you sure that you wish to delete the data associated with “%s”?<br /><br />This removes all of its data and settings and cannot be undone!',
+	'EXTENSION_DISABLE_CONFIRM'		=> 'Are you sure that you wish to disable the “%s” extension?',
+	'EXTENSION_ENABLE_CONFIRM'		=> 'Are you sure that you wish to enable the “%s” extension?',
+	'EXTENSION_FORCE_UNSTABLE_CONFIRM'	=> 'Are you sure that you wish to force the use of unstable version?',
+
+	'RETURN_TO_EXTENSION_LIST'	=> 'Return to the extension list',
+
+	'EXT_DETAILS'			=> 'Extension Details',
+	'DISPLAY_NAME'			=> 'Disply Name (may be NULL)',
+	'CLEAN_NAME'			=> 'Clean Name',
+	'TYPE'					=> 'Type',
+	'DESCRIPTION'			=> 'پەسن',
+	'VERSION'				=> 'وەشان',
+	'HOMEPAGE'				=> 'Homepage',
+	'PATH'					=> 'File Path',
+	'TIME'					=> 'کات',
+	'LICENSE'				=> 'Licence',
+
+	'REQUIREMENTS'			=> 'Requirements',
+	'PHPBB_VERSION'			=> 'phpBB Version',
+	'PHP_VERSION'			=> 'PHP Version',
+	'AUTHOR_INFORMATION'	=> 'Author Information',
+	'AUTHOR_NAME'			=> 'Name',
+	'AUTHOR_EMAIL'			=> 'Email',
+	'AUTHOR_HOMEPAGE'		=> 'Homepage',
+	'AUTHOR_ROLE'			=> 'Role',
+
+	'NOT_UP_TO_DATE'		=> '%s is not up to date',
+	'UP_TO_DATE'			=> '%s is up to date',
+	'ANNOUNCEMENT_TOPIC'	=> 'Release Announcement',
+	'DOWNLOAD_LATEST'		=> 'Download Version',
+	'NO_VERSIONCHECK'		=> 'No version check information given.',
+
+	'VERSIONCHECK_FORCE_UPDATE_ALL'		=> 'Re-Check all versions',
+	'FORCE_UNSTABLE'					=> 'Always check for unstable versions',
+	'EXTENSIONS_VERSION_CHECK_SETTINGS'	=> 'Version check settings',
+
+	'META_FIELD_NOT_SET'	=> 'Required meta field %s has not been set.',
+	'META_FIELD_INVALID'	=> 'Meta field %s is invalid.',
+));
+
 #######language/en/acp/forums.php#######
 
 $lang = array_merge($lang, array(
@@ -12848,6 +13257,10 @@ $lang = array_merge($lang, array(
 	'AUTO_PRUNE_FREQ_EXPLAIN'	=> 'کات لە ڕۆژەکان لەنێوان ژوانی پاککردنەوەکان',
 	'AUTO_PRUNE_VIEWED'			=> 'خۆکار-پاککردنی تەمەنی پەیامی بینراو',
 	'AUTO_PRUNE_VIEWED_EXPLAIN'	=> 'ژمارەی ڕۆژەکان لەو کاتەوەی بابەت بینراوە لەدوای ئەوەی کام بابەت سڕاوەتەوە.',
+	'AUTO_PRUNE_SHADOW_FREQ'	=> 'Auto-prune shadow topics frequency',
+	'AUTO_PRUNE_SHADOW_DAYS'	=> 'Auto-prune shadow topics age',
+	'AUTO_PRUNE_SHADOW_DAYS_EXPLAIN'	=> 'Number of days after which shadow topic is removed.',
+	'AUTO_PRUNE_SHADOW_FREQ_EXPLAIN'	=> 'Time in days between pruning events.',
 
 	'CONTINUE'						=> 'بەردەوام بە',
 	'COPY_PERMISSIONS_EXPLAIN'		=> 'بۆ ئاسانکردنی دامەزراندنی دەسەڵاتەکە بۆ مەکۆ نوێیەکەت ،دەتوانی دەسەڵاتەکانی مەکۆیەکی چالاک لەبەربگریتەوە.',
@@ -12906,6 +13319,8 @@ $lang = array_merge($lang, array(
 	'FORUM_PASSWORD_OLD'				=> 'تێپەڕەوشەی مەکۆکە ڕێگایەکی هاشکردنی کۆن بەکاردەبات و پێویستە بگۆڕدرێت.',
 	'FORUM_PASSWORD_MISMATCH'			=> 'ئەو تێپەڕەوشانەی نووسیتە ناگونجێن و وەکویەک نین.',
 	'FORUM_PRUNE_SETTINGS'				=> 'ڕێکخستنەکانی وشکی مەکۆ',
+	'FORUM_PRUNE_SHADOW'				=> 'Enable auto-pruning of shadow topics',
+	'FORUM_PRUNE_SHADOW_EXPLAIN'			=> 'Prunes the forum of shadow topics, set the frequency/age parameters below.',
 	'FORUM_RESYNCED'					=> 'مەکۆی “%s” بەسەرکەوتوویی لەگەڵهێناریەوە.',
 	'FORUM_RULES_EXPLAIN'				=> 'یاساکانی مەکۆ لە هەر پەڕەیەکی ناو مەکۆکە نیشاندران.',
 	'FORUM_RULES_LINK'					=> 'تکایە کرتە لێرە بکە بۆ بینینی یاساکانی مەکۆ',
@@ -12997,6 +13412,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE_EXPLAIN'		=> 'From this panel you can administer all your usergroups. You can delete, create and edit existing groups. Furthermore, you may choose group leaders, toggle open/hidden/closed group status and set the group name and description.',
+	'ADD_GROUP_CATEGORY'			=> 'Add category',
 	'GROUP_ADD_USERS'				=> 'زیادکردنی بەکارهێنەران',
 	'ADD_USERS_EXPLAIN'				=> 'Here you can add new User to the prediction league. Please, give user names per line. ',
 
@@ -13010,11 +13426,10 @@ $lang = array_merge($lang, array(
 	'GROUP_APPROVED'				=> 'Approved members',
 	'GROUP_AVATAR'					=> 'وێنۆچکەی گرووپ',
 	'GROUP_AVATAR_EXPLAIN'			=> 'This image will be displayed in the Group Control Panel.',
+	'GROUP_CATEGORY_NAME'			=> 'Category name',
 	'GROUP_CLOSED'					=> 'داخراو',
 	'GROUP_COLOR'					=> 'Group colour',
 	'GROUP_COLOR_EXPLAIN'			=> 'Defines the colour members’ usernames will appear in, leave blank for user default.',
-	'GROUP_CONFIRM_ADD_USER'		=> 'Are you sure that you want to add the user %1$s to the group?',
-	'GROUP_CONFIRM_ADD_USERS'		=> 'Are you sure that you want to add the users %1$s to the group?',
 	'GROUP_CREATED'					=> 'Group has been created successfully.',
 	'GROUP_DEFAULT'					=> 'گرووپ بکە بە بنەڕەت بۆ ئەندام',
 	'GROUP_DEFS_UPDATED'			=> 'Default group set for all selected members.',
@@ -13056,6 +13471,8 @@ $lang = array_merge($lang, array(
 	'GROUP_SETTINGS_SAVE'			=> 'Group wide settings',
 	'GROUP_SKIP_AUTH'				=> 'Exempt group leader from permissions',
 	'GROUP_SKIP_AUTH_EXPLAIN'		=> 'If enabled group leader no longer inherit permissions from the group.',
+	'GROUP_SPECIAL'					=> 'Pre-defined',
+	'GROUP_TEAMPAGE'				=> 'Display group on teampage',
 	'GROUP_TYPE'					=> 'جۆری گرووپ',
 	'GROUP_TYPE_EXPLAIN'			=> 'This determines which users can join or view this group.',
 	'GROUP_UPDATED'					=> 'Group preferences updated successfully.',
@@ -13064,19 +13481,37 @@ $lang = array_merge($lang, array(
 	'GROUP_USERS_EXIST'				=> 'The selected users are already members.',
 	'GROUP_USERS_REMOVE'			=> 'Users removed from group and new defaults set successfully.',
 
+	'LEGEND_EXPLAIN'				=> 'These are the groups which are displayed in the group legend:',
+	'LEGEND_SETTINGS'				=> 'Legend settings',
+	'LEGEND_SORT_GROUPNAME'			=> 'Sort legend by group name',
+	'LEGEND_SORT_GROUPNAME_EXPLAIN'	=> 'The order below is ignored when this option is enabled.',
+
+	'MANAGE_LEGEND'			=> 'Manage group legend',
+	'MANAGE_TEAMPAGE'		=> 'Manage teampage',
 	'MAKE_DEFAULT_FOR_ALL'		=> 'Make default group for every member',
 	'MEMBERS'					=> 'ئەندامان',
 
 	'NO_GROUP'					=> 'گرووپی بەکارهێنەری داواکراو بوونی نییە.',
+	'NO_GROUPS_ADDED'			=> 'No groups added yet.',
 	'NO_GROUPS_CREATED'			=> 'No groups created yet.',
 	'NO_PERMISSIONS'			=> 'دەسەڵاتەکان ڕوونووس مەکە',
 	'NO_USERS'					=> 'بەکارهێنەرانی داواکراو بوونیان نییە.',
 	'NO_USERS_ADDED'			=> 'No users were added to the group.',
 	'NO_VALID_USERS'			=> 'You haven’t entered any users eligible for that action.',
 
+	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> 'Pre-defined groups',
 	'SPECIAL_GROUPS_EXPLAIN'	=> 'Pre-defined groups are special groups, they cannot be deleted or directly modified. However you can still add users and alter basic settings.',
 
+	'TEAMPAGE'					=> 'Teampage',
+	'TEAMPAGE_DISP_ALL'			=> 'All memberships',
+	'TEAMPAGE_DISP_DEFAULT'		=> 'User’s default group only',
+	'TEAMPAGE_DISP_FIRST'		=> 'First membership only',
+	'TEAMPAGE_EXPLAIN'			=> 'These are the groups which are displayed on the teampage:',
+	'TEAMPAGE_FORUMS'			=> 'Display moderated forums',
+	'TEAMPAGE_FORUMS_EXPLAIN'	=> 'If set to yes, moderators will have a list with all of the forums where they have moderator permissions displayed in their row. This can be very database intensive for big boards.',
+	'TEAMPAGE_MEMBERSHIPS'		=> 'Display user memberships',
+	'TEAMPAGE_SETTINGS'			=> 'Teampage settings',
 	'TOTAL_MEMBERS'				=> 'Total members',
 
 	'USERS_APPROVED'				=> 'Users approved successfully.',
@@ -13462,26 +13897,14 @@ $lang = array_merge($lang, array(
 	'ACP_FILES'						=> 'پەڕگەکانی زمانی بەڕێوەبەرایەتی',
 	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> 'لێرە ئەتوانیت پەڕگەکانی زمان دابمەزرێنیت/بسڕیتەوە. پەڕگەی زمانی بنەڕەت بە ئەستێرەیەک هێما کراوە (*).',
 
-	'EMAIL_FILES'			=> 'قاڵبەکانی ئیمەیل',
-
-	'FILE_CONTENTS'				=> 'ناوەڕۆکەکانی پەڕگە',
-	'FILE_FROM_STORAGE'			=> 'پەڕگە لە بوخچەی پاشەکەوتەوە',
-
-	'HELP_FILES'				=> 'پەڕگەکانی یارمەتی',
-
-	'INSTALLED_LANGUAGE_PACKS'	=> 'گورزەی زمانە دامەزراوەکان',
-	'INVALID_LANGUAGE_PACK'		=> 'وا دیارە گورزەی زمانی دیارکراو ناتەواوە. تکایە لە گورزەی زمانەکە دڵنیابەوە و جارێکی تر باری بکە، گەر پێویستی کرد.',
-	'INVALID_UPLOAD_METHOD'		=> 'ڕێبازی بارکردنی دیاریکراو گونجاو نییە، تکایە ڕێبازێکی تر هەڵبژێرە.',
+	'DELETE_LANGUAGE_CONFIRM'		=> 'Are you sure you wish to delete “%s”?',
+	'INSTALLED_LANGUAGE_PACKS'		=> 'گورزەی زمانە دامەزراوەکان',
 
 	'LANGUAGE_DETAILS_UPDATED'			=> 'وردەکارییەکانی زمان بە سەرکەوتوویی نوێکرانەوە.',
-	'LANGUAGE_ENTRIES'					=> 'دانەکانی زمان',
-	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'لێرە ئەتوانیت گورزەی زمانەکان و ئەوانەش کە هێشتا تەواو وەرنەگێڕدراون، بگۆڕیت.<br /><strong>تێبینی:</strong>هەر کە پەڕگەی زمانێکت گۆڕی، گۆڕانکارییەکان لە بوخچەیەکی تر پاشەکەوت دەکرێن بۆت تا بتوانیت دایان بگریت. گۆڕانکارییەکان لەلایەن بەکارهێنەرانەوە نابیبنرێن هەتا ئەیانکەیتە جێی پەڕگە ڕەسەنەکانی زمان لە وێبگەکەت. (بە بارکردنیان).',
-	'LANGUAGE_FILES'					=> 'پەڕگەکانی زمان',
-	'LANGUAGE_KEY'						=> 'کلیلی زمان',
 	'LANGUAGE_PACK_ALREADY_INSTALLED'	=> 'ئەم گورزەی زمانە پێشتر دامەزراوە',
-	'LANGUAGE_PACK_DELETED'				=> 'گورزەی زمانی <strong>%s</strong> بە سەرکەوتوویی لابرا. هەموو ئەو بەکارهێنەرانەی ئەم زمانە بەکار دبەن بۆیان گۆڕدرا بە زمانی بنەڕەتی.',
+	'LANGUAGE_PACK_DELETED'				=> 'The language pack “%s” has been removed successfully. All users using this language have been reset to the board’s default language.',
 	'LANGUAGE_PACK_DETAILS'				=> 'وردەکارییەکانی گورزەی زمان',
-	'LANGUAGE_PACK_INSTALLED'			=> 'گورزەی زمانی <strong>%s</strong> بە سەرکەوتوویی دامەزرا.',
+	'LANGUAGE_PACK_INSTALLED'			=> 'The language pack “%s” has been successfully installed.',
 	'LANGUAGE_PACK_CPF_UPDATE'			=> 'ڕستەکانی زمان لە خانە خۆکردەکانی پرۆفایل کۆنووسکران لە زمانی بنەڕەتەوە. تکایە بیانگۆڕە ئەگەر پێویست بوو.',
 	'LANGUAGE_PACK_ISO'					=> 'ISO',
 	'LANGUAGE_PACK_LOCALNAME'			=> 'ناوی ناوچەیی',
@@ -13494,33 +13917,44 @@ $lang = array_merge($lang, array(
 	'LANG_ISO_CODE'						=> 'کۆدی ISO',
 	'LANG_LOCAL_NAME'					=> 'ناوی ناوچەیی',
 
-	'MISSING_LANGUAGE_FILE'		=> 'پەڕگەی زمانی لەناوچوو: <strong style="color:red">%s</strong>',
+	'MISSING_LANG_FILES'		=> 'Missing language files',
 	'MISSING_LANG_VARIABLES'	=> 'گۆڕاوە لەناوچووەکانی زمان',
-	'MODS_FILES'				=> 'پەڕگەکانی زمانی پێوەکراوەکان.',
 
 	'NO_FILE_SELECTED'				=> 'هیچ پەڕگەی زمانێکت دیاری نەکردووە.',
 	'NO_LANG_ID'					=> 'هیچ گورزەی زمانێکت دیاری نەکردووە.',
-	'NO_REMOVE_DEFAULT_LANG'		=> 'ناتوانیت گورزەی زمانی بنەڕەتی بسڕیتەوە.<br />گەر ئەتەوێت ئەم گورزەی زمانە بسڕیتەوە، پێویستە گورزەی زمانی بنەڕەتی مەکۆکەت بگۆڕیت.',
+	'NO_REMOVE_DEFAULT_LANG'		=> 'You are not able to remove the default language pack.<br />If you want to remove this language pack, change your board’s default language first.',
 	'NO_UNINSTALLED_LANGUAGE_PACKS'	=> 'هیچ بوخچەیەکی زمانی لابراو نییە.',
 
-	'REMOVE_FROM_STORAGE_FOLDER'		=> 'لای ببە لە بوخچەی پاشەکەوت',
-
-	'SELECT_DOWNLOAD_FORMAT'	=> 'جۆری ئەرشیفی داگرتن هەڵبژێرە',
-	'SUBMIT_AND_DOWNLOAD'		=> 'ناردن و داگرتنی پەڕگە',
-	'SUBMIT_AND_UPLOAD'			=> 'ناردن و بارکردنی پەڕگە',
-
-	'THOSE_MISSING_LANG_FILES'			=> 'ئەم پەڕگەی زمانانەی خوارەوە لەناوچوون لە نێو بوخچەی زمانی %s.',
-	'THOSE_MISSING_LANG_VARIABLES'		=> 'ئەم گۆڕاوانەی خوارەوەی زمان لەناوچوون لە گورزەی زمانی <strong>%s</strong>.',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 
 	'UNINSTALLED_LANGUAGE_PACKS'	=> 'گورزەی زمانە لابراوەکان.',
 
+	// 3.0.12
+	'EMAIL_FILES'			=> 'قاڵبەکانی ئیمەیل',
+	'FILE_CONTENTS'				=> 'ناوەڕۆکەکانی پەڕگە',
+	'FILE_FROM_STORAGE'			=> 'پەڕگە لە بوخچەی پاشەکەوتەوە',
+	'HELP_FILES'				=> 'پەڕگەکانی یارمەتی',
+	'INSTALLED_LANGUAGE_PACKS'	=> 'گورزەی زمانە دامەزراوەکان',
+	'INVALID_LANGUAGE_PACK'		=> 'وا دیارە گورزەی زمانی دیارکراو ناتەواوە. تکایە لە گورزەی زمانەکە دڵنیابەوە و جارێکی تر باری بکە، گەر پێویستی کرد.',
+	'INVALID_UPLOAD_METHOD'		=> 'ڕێبازی بارکردنی دیاریکراو گونجاو نییە، تکایە ڕێبازێکی تر هەڵبژێرە.',
+	'LANGUAGE_ENTRIES'					=> 'دانەکانی زمان',
+	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'لێرە ئەتوانیت گورزەی زمانەکان و ئەوانەش کە هێشتا تەواو وەرنەگێڕدراون، بگۆڕیت.<br /><strong>تێبینی:</strong>هەر کە پەڕگەی زمانێکت گۆڕی، گۆڕانکارییەکان لە بوخچەیەکی تر پاشەکەوت دەکرێن بۆت تا بتوانیت دایان بگریت. گۆڕانکارییەکان لەلایەن بەکارهێنەرانەوە نابیبنرێن هەتا ئەیانکەیتە جێی پەڕگە ڕەسەنەکانی زمان لە وێبگەکەت. (بە بارکردنیان).',
+	'LANGUAGE_FILES'					=> 'پەڕگەکانی زمان',
+	'LANGUAGE_KEY'						=> 'کلیلی زمان',
+	'MISSING_LANGUAGE_FILE'		=> 'پەڕگەی زمانی لەناوچوو: <strong style="color:red">%s</strong>',
+	'SELECT_DOWNLOAD_FORMAT'	=> 'جۆری ئەرشیفی داگرتن هەڵبژێرە',
+	'SUBMIT_AND_DOWNLOAD'		=> 'ناردن و داگرتنی پەڕگە',
+	'SUBMIT_AND_UPLOAD'			=> 'ناردن و بارکردنی پەڕگە',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 	'UNABLE_TO_WRITE_FILE'		=> 'نەتوانرا پەڕگە بنووسرێت بۆ %s',
 	'UPLOAD_COMPLETED'			=> 'بارکردنەکە بە سەرکەوتوویی کۆتایی هات.',
 	'UPLOAD_FAILED'				=> 'بارکردنەکە شکستی هێنا لەبەر هۆکارێکی نەزانراو. لەوانەیە پێوسیت بێت دەستکارانە پەڕگەکە بار بکەیت.',
 	'UPLOAD_METHOD'				=> 'ڕێگای بارکردن',
 	'UPLOAD_SETTINGS'			=> 'ڕێکخستنەکانی بارکردن',
-
 	'WRONG_LANGUAGE_FILE'		=> 'پەڕگەی زمانی دیاریکراو ناتەواوە.',
+	// 3.0.12
 ));
 
 #######language/en/acp/lexicon.php#######
@@ -13851,6 +14285,171 @@ $lang = array_merge($lang, array(
 	'ROLE_DESCRIPTION_ADMIN_FOOTBALL'	=> 'Can edit final match results.',
 ));
 
+#######language/en/acp/permissions_phpbb.php#######
+
+$lang = array_merge($lang, array(
+	'ACL_CAT_ACTIONS'		=> 'Actions',
+	'ACL_CAT_CONTENT'		=> 'Content',
+	'ACL_CAT_FORUMS'		=> 'Forums',
+	'ACL_CAT_MISC'			=> 'Misc',
+	'ACL_CAT_PERMISSIONS'	=> 'Permissions',
+	'ACL_CAT_PM'			=> 'Private messages',
+	'ACL_CAT_POLLS'			=> 'Polls',
+	'ACL_CAT_POST'			=> 'Post',
+	'ACL_CAT_POST_ACTIONS'	=> 'Post actions',
+	'ACL_CAT_POSTING'		=> 'Posting',
+	'ACL_CAT_PROFILE'		=> 'Profile',
+	'ACL_CAT_SETTINGS'		=> 'Settings',
+	'ACL_CAT_TOPIC_ACTIONS'	=> 'Topic actions',
+	'ACL_CAT_USER_GROUP'	=> 'Users &amp; Groups',
+));
+
+// User Permissions
+$lang = array_merge($lang, array(
+	'ACL_U_VIEWPROFILE'	=> 'Can view profiles, memberlist and online list',
+	'ACL_U_CHGNAME'		=> 'Can change username',
+	'ACL_U_CHGPASSWD'	=> 'Can change password',
+	'ACL_U_CHGEMAIL'	=> 'Can change email address',
+	'ACL_U_CHGAVATAR'	=> 'Can change avatar',
+	'ACL_U_CHGGRP'		=> 'Can change default usergroup',
+	'ACL_U_CHGPROFILEINFO'	=> 'Can change profile field information',
+
+	'ACL_U_ATTACH'		=> 'Can attach files',
+	'ACL_U_DOWNLOAD'	=> 'Can download files',
+	'ACL_U_SAVEDRAFTS'	=> 'Can save drafts',
+	'ACL_U_CHGCENSORS'	=> 'Can disable word censors',
+	'ACL_U_SIG'			=> 'Can use signature',
+
+	'ACL_U_SENDPM'		=> 'Can send private messages',
+	'ACL_U_MASSPM'		=> 'Can send messages to multiple users',
+	'ACL_U_MASSPM_GROUP'=> 'Can send messages to groups',
+	'ACL_U_READPM'		=> 'Can read private messages',
+	'ACL_U_PM_EDIT'		=> 'Can edit own private messages',
+	'ACL_U_PM_DELETE'	=> 'Can remove private messages from own folder',
+	'ACL_U_PM_FORWARD'	=> 'Can forward private messages',
+	'ACL_U_PM_EMAILPM'	=> 'Can email private messages',
+	'ACL_U_PM_PRINTPM'	=> 'Can print private messages',
+	'ACL_U_PM_ATTACH'	=> 'Can attach files in private messages',
+	'ACL_U_PM_DOWNLOAD'	=> 'Can download files in private messages',
+	'ACL_U_PM_BBCODE'	=> 'Can use BBCode in private messages',
+	'ACL_U_PM_SMILIES'	=> 'Can use smilies in private messages',
+	'ACL_U_PM_IMG'		=> 'Can use [img] BBCode tag in private messages',
+	'ACL_U_PM_FLASH'	=> 'Can use [flash] BBCode tag in private messages',
+
+	'ACL_U_SENDEMAIL'	=> 'Can send emails',
+	'ACL_U_SENDIM'		=> 'Can send instant messages',
+	'ACL_U_IGNOREFLOOD'	=> 'Can ignore flood limit',
+	'ACL_U_HIDEONLINE'	=> 'Can hide online status',
+	'ACL_U_VIEWONLINE'	=> 'Can view hidden online users',
+	'ACL_U_SEARCH'		=> 'Can search board',
+));
+
+// Forum Permissions
+$lang = array_merge($lang, array(
+	'ACL_F_LIST'		=> 'Can see forum',
+	'ACL_F_READ'		=> 'Can read forum',
+	'ACL_F_SEARCH'		=> 'Can search the forum',
+	'ACL_F_SUBSCRIBE'	=> 'Can subscribe forum',
+	'ACL_F_PRINT'		=> 'Can print topics',
+	'ACL_F_EMAIL'		=> 'Can email topics',
+	'ACL_F_BUMP'		=> 'Can bump topics',
+	'ACL_F_USER_LOCK'	=> 'Can lock own topics',
+	'ACL_F_DOWNLOAD'	=> 'Can download files',
+	'ACL_F_REPORT'		=> 'Can report posts',
+
+	'ACL_F_POST'		=> 'Can start new topics',
+	'ACL_F_STICKY'		=> 'Can post stickies',
+	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_REPLY'		=> 'Can reply to topics',
+	'ACL_F_EDIT'		=> 'Can edit own posts',
+	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
+	'ACL_F_SOFTDELETE'	=> 'Can soft delete own posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_F_IGNOREFLOOD' => 'Can ignore flood limit',
+	'ACL_F_POSTCOUNT'	=> 'Increment post counter<br /><em>Please note that this setting only affects new posts.</em>',
+	'ACL_F_NOAPPROVE'	=> 'Can post without approval',
+
+	'ACL_F_ATTACH'		=> 'Can attach files',
+	'ACL_F_ICONS'		=> 'Can use topic/post icons',
+	'ACL_F_BBCODE'		=> 'Can use BBCode',
+	'ACL_F_FLASH'		=> 'Can use [flash] BBCode tag',
+	'ACL_F_IMG'			=> 'Can use [img] BBCode tag',
+	'ACL_F_SIGS'		=> 'Can use signatures',
+	'ACL_F_SMILIES'		=> 'Can use smilies',
+
+	'ACL_F_POLL'		=> 'Can create polls',
+	'ACL_F_VOTE'		=> 'Can vote in polls',
+	'ACL_F_VOTECHG'		=> 'Can change existing vote',
+));
+
+// Moderator Permissions
+$lang = array_merge($lang, array(
+	'ACL_M_EDIT'		=> 'Can edit posts',
+	'ACL_M_DELETE'		=> 'Can permanently delete posts',
+	'ACL_M_SOFTDELETE'	=> 'Can soft delete posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_M_APPROVE'		=> 'Can approve and restore posts',
+	'ACL_M_REPORT'		=> 'Can close and delete reports',
+	'ACL_M_CHGPOSTER'	=> 'Can change post author',
+
+	'ACL_M_MOVE'	=> 'Can move topics',
+	'ACL_M_LOCK'	=> 'Can lock topics',
+	'ACL_M_SPLIT'	=> 'Can split topics',
+	'ACL_M_MERGE'	=> 'Can merge topics',
+
+	'ACL_M_INFO'	=> 'Can view post details',
+	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+));
+
+// Admin Permissions
+$lang = array_merge($lang, array(
+	'ACL_A_BOARD'		=> 'Can alter board settings/check for updates',
+	'ACL_A_SERVER'		=> 'Can alter server/communication settings',
+	'ACL_A_JABBER'		=> 'Can alter Jabber settings',
+	'ACL_A_PHPINFO'		=> 'Can view php settings',
+
+	'ACL_A_FORUM'		=> 'Can manage forums',
+	'ACL_A_FORUMADD'	=> 'Can add new forums',
+	'ACL_A_FORUMDEL'	=> 'Can delete forums',
+	'ACL_A_PRUNE'		=> 'Can prune forums',
+
+	'ACL_A_ICONS'		=> 'Can alter topic/post icons and smilies',
+	'ACL_A_WORDS'		=> 'Can alter word censors',
+	'ACL_A_BBCODE'		=> 'Can define BBCode tags',
+	'ACL_A_ATTACH'		=> 'Can alter attachment related settings',
+
+	'ACL_A_USER'		=> 'Can manage users<br /><em>This also includes seeing the users browser agent within the viewonline list.</em>',
+	'ACL_A_USERDEL'		=> 'Can delete/prune users',
+	'ACL_A_GROUP'		=> 'Can manage groups',
+	'ACL_A_GROUPADD'	=> 'Can add new groups',
+	'ACL_A_GROUPDEL'	=> 'Can delete groups',
+	'ACL_A_RANKS'		=> 'Can manage ranks',
+	'ACL_A_PROFILE'		=> 'Can manage custom profile fields',
+	'ACL_A_NAMES'		=> 'Can manage disallowed names',
+	'ACL_A_BAN'			=> 'Can manage bans',
+
+	'ACL_A_VIEWAUTH'	=> 'Can view permission masks',
+	'ACL_A_AUTHGROUPS'	=> 'Can alter permissions for individual groups',
+	'ACL_A_AUTHUSERS'	=> 'Can alter permissions for individual users',
+	'ACL_A_FAUTH'		=> 'Can alter forum permission class',
+	'ACL_A_MAUTH'		=> 'Can alter moderator permission class',
+	'ACL_A_AAUTH'		=> 'Can alter admin permission class',
+	'ACL_A_UAUTH'		=> 'Can alter user permission class',
+	'ACL_A_ROLES'		=> 'Can manage roles',
+	'ACL_A_SWITCHPERM'	=> 'Can use others permissions',
+
+	'ACL_A_STYLES'		=> 'Can manage styles',
+	'ACL_A_EXTENSIONS'	=> 'Can manage extensions',
+	'ACL_A_VIEWLOGS'	=> 'Can view logs',
+	'ACL_A_CLEARLOGS'	=> 'Can clear logs',
+	'ACL_A_MODULES'		=> 'Can manage modules',
+	'ACL_A_LANGUAGE'	=> 'Can manage language packs',
+	'ACL_A_EMAIL'		=> 'Can send mass email',
+	'ACL_A_BOTS'		=> 'Can manage bots',
+	'ACL_A_REASONS'		=> 'Can manage report/denial reasons',
+	'ACL_A_BACKUP'		=> 'Can backup/restore database',
+	'ACL_A_SEARCH'		=> 'Can manage search backends and settings',
+));
+
 #######language/en/acp/phpbb_seo.php#######
 
 $lang = array_merge($lang, array(
@@ -14022,6 +14621,7 @@ $lang = array_merge($lang, array(
 
 	'BBCODE_ADDED'				=> 'BBCode بەسەرکەوتوویی دانرا.',
 	'BBCODE_EDITED'				=> 'BBCode بەسەرکەوتوویی دەستکاری کرا.',
+	'BBCODE_DELETED'			=> 'The BBCode has been removed successfully.',
 	'BBCODE_NOT_EXIST'			=> 'ئەو BBCode ــەی هەڵتبژاردووە بوونی نییە.',
 	'BBCODE_HELPLINE'			=> 'دێڕی یارمەتی',
 	'BBCODE_HELPLINE_EXPLAIN'	=> 'ئەم خانەیە مشکەکە بەسەر دەقی BBCode لەخۆدەگرێت.',
@@ -14077,17 +14677,10 @@ $lang = array_merge($lang, array(
 	'EXPORT_SMILIES'			=> 'هاوردە بکە و دایبگرە smilies.pak',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sلەسەر کرتەکردنی ئەم بەستەرە ،ئەو دیمەنکردنەی بۆ خەندە دەمەزراوەکانت گورزەدەکرێ بۆناو <samp>smilies.pak</samp> هەرکە داگیرا دەتوانرێ بەکارببرێت بۆ دروستکردنی پەڕگەی <samp>.zip</samp>ــێک یان <samp>.tgz</samp> هەموو هێماکان لەخۆدەگرێت لەگەڵ ئەو پەڕگەی دیمەنکردنەی <samp>smilies.pak</samp> %s.',
 
-
 	'ICONS_ADD'				=> 'هێمایەکی نوێ زیادبکە',
-	'ICONS_NONE_ADDED'		=> 'هیچ هێمایەک زیادنەکراوە.',
-	'ICONS_ONE_ADDED'		=> 'هێماکە بەسەرکەوتوویی زیادکرا.',
-	'ICONS_ADDED'			=> 'هێماکان بەسەرکەوتوویی زیادکران.',
 	'ICONS_CONFIG'			=> 'دیمەنکردنی هێما',
 	'ICONS_DELETED'			=> 'هێماکە بەسەرکەوتوویی سڕایەوە.',
 	'ICONS_EDIT'			=> 'هێما دەستکاریبکە',
-	'ICONS_ONE_EDITED'		=> 'هێماکە بەسەرکەوتوویی نوێکرایەوە.',
-	'ICONS_NONE_EDITED'		=> 'هیچ هێمایەک نوێنەکراوەتەوە.',
-	'ICONS_EDITED'			=> 'هێماکان بەسەرکەوتوویی نوێکرانەوە.',
 	'ICONS_HEIGHT'			=> 'بەرزی هێما',
 	'ICONS_IMAGE'			=> 'وێنەی هێما',
 	'ICONS_IMPORTED'		=> 'ئەو گورزەی هێمایە بەسەرکەوتوویی هێنرا.',
@@ -14117,9 +14710,6 @@ $lang = array_merge($lang, array(
 
 	'SELECT_PACKAGE'			=> 'پەڕگەیەکی گورزە هەڵبژێرە',
 	'SMILIES_ADD'				=> 'خەندەیەکی نوێ زیادبکە',
-	'SMILIES_NONE_ADDED'		=> 'هیچ خەندەیەک زیادنەکرا.',
-	'SMILIES_ONE_ADDED'			=> 'خەندەکە بەسەرکەوتوویی زیادکرا.',
-	'SMILIES_ADDED'				=> 'خەندەکان بەسەرکەوتوویی زیادکران.',
 	'SMILIES_CODE'				=> 'کۆدی خەندە',
 	'SMILIES_CONFIG'			=> 'دیمەنکردنی خەندە',
 	'SMILIES_DELETED'			=> 'خەندەکە بەسەرکەوتوویی سڕایەوە.',
@@ -14127,9 +14717,6 @@ $lang = array_merge($lang, array(
 	'SMILIE_NO_CODE'			=> 'ئەو خەندەیە “%s” پشتگوێخرا ،هەروەکو هیچ کۆدێک نەنووسرابوو.',
 	'SMILIE_NO_EMOTION'			=> 'ئەو خەندەیە “%s” پشتگوێخرا ،هەروەکو هیچ کۆدێک نەنووسرابوو.',
 	'SMILIE_NO_FILE'			=> 'ئەو خەندەیە “%s” پشتگوێخرا ،هەروەکو پەڕگەکە بزرە.',
-	'SMILIES_NONE_EDITED'		=> 'هیچ خەندەیەک نوێنەکرایەوە.',
-	'SMILIES_ONE_EDITED'		=> 'خەندەکە بەسەرکەوتوویی نوێکرایەوە.',
-	'SMILIES_EDITED'			=> 'خەندەکان بەسەرکەوتوویی نوێکرانەوە.',
 	'SMILIES_EMOTION'			=> 'دەربڕین',
 	'SMILIES_HEIGHT'			=> 'بەرزی خەندە',
 	'SMILIES_IMAGE'				=> 'وێنەی خەندە',
@@ -14141,7 +14728,6 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'پەڕگەی وێنەی خەندە',
 	'SMILIES_WIDTH'				=> 'پانی خەندە',
 
-	'TOO_MANY_SMILIES'		=> 'پەیامەکەت خەندەی زۆری تیادایە. زۆرتین ژمارەی ڕێ پێدراوی خەندە %d ـە.',
 	'WRONG_PAK_TYPE'		=> 'گورزەی دیاریکراو داتای ویستراو لەخۆ ناگرێت.',
 ));
 
@@ -14239,8 +14825,11 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ADDED_PROFILE_FIELD'	=> 'Successfully added custom profile field.',
+	'ALPHA_DOTS'			=> 'Alphanumeric and dots (periods)',
 	'ALPHA_ONLY'			=> 'تەنها نووسە و ژمارە',
 	'ALPHA_SPACERS'			=> 'پیت، ژمارە و بۆشایی',
+	'ALPHA_UNDERSCORE'		=> 'Alphanumeric and underscores',
+	'ALPHA_PUNCTUATION'		=> 'Alphanumeric with comma, dots, underscore and dashes beginning with a letter',
 	'ALWAYS_TODAY'			=> 'Always the current date',
 
 	'BOOL_ENTRIES_EXPLAIN'	=> 'Enter your options now',
@@ -14267,6 +14856,10 @@ $lang = array_merge($lang, array(
 	'DISPLAY_AT_PROFILE_EXPLAIN'	=> 'The user is able to change this profile field within the user control panel.',
 	'DISPLAY_AT_REGISTER'			=> 'Display on registration screen',
 	'DISPLAY_AT_REGISTER_EXPLAIN'	=> 'If this option is enabled, the field will be displayed on registration.',
+	'DISPLAY_ON_MEMBERLIST'			=> 'Display on memberlist screen',
+	'DISPLAY_ON_MEMBERLIST_EXPLAIN'	=> 'If this option is enabled, the field will be displayed in the user rows on the memberlist screen.',
+	'DISPLAY_ON_PM'					=> 'Display on view private message screen',
+	'DISPLAY_ON_PM_EXPLAIN'			=> 'If this option is enabled, the field will be displayed in the mini-profile on the private message screen.',
 	'DISPLAY_ON_VT'					=> 'Display on viewtopic screen',
 	'DISPLAY_ON_VT_EXPLAIN'			=> 'If this option is enabled, the field will be displayed in the mini-profile on the topic screen.',
 	'DISPLAY_PROFILE_FIELD'			=> 'Publicly display profile field',
@@ -14280,20 +14873,26 @@ $lang = array_merge($lang, array(
 	'EVERYTHING_OK'					=> 'Everything OK',
 
 	'FIELD_BOOL'				=> 'Boolean (Yes/No)',
+	'FIELD_CONTACT_DESC'		=> 'Contact description',
+	'FIELD_CONTACT_URL'			=> 'Contact link',
 	'FIELD_DATE'				=> 'ڕێکەوت',
 	'FIELD_DESCRIPTION'			=> 'Field description',
 	'FIELD_DESCRIPTION_EXPLAIN'	=> 'The explanation for this field presented to the user.',
 	'FIELD_DROPDOWN'			=> 'Dropdown box',
+	'FIELD_GOOGLEPLUS'			=> 'Google+',
 	'FIELD_IDENT'				=> 'Field identification',
 	'FIELD_IDENT_ALREADY_EXIST'	=> 'The chosen field identification already exist. Please choose another name.',
 	'FIELD_IDENT_EXPLAIN'		=> 'The field identification is a name to identify the profile field within the database and the templates.',
 	'FIELD_INT'					=> 'Numbers',
+	'FIELD_IS_CONTACT'			=> 'Display field as a contact field',
+	'FIELD_IS_CONTACT_EXPLAIN'	=> 'Contact fields are displayed within the contact section of the user profile and are displayed differently in the mini profile next to posts and private messages. You can use <samp>%s</samp> as a placeholder variable which will be replaced by a value provided by the user.',
 	'FIELD_LENGTH'				=> 'Length of input box',
 	'FIELD_NOT_FOUND'			=> 'Profile field not found.',
 	'FIELD_STRING'				=> 'Single text field',
 	'FIELD_TEXT'				=> 'Textarea',
 	'FIELD_TYPE'				=> 'Field type',
 	'FIELD_TYPE_EXPLAIN'		=> 'You are not able to change the field type later.',
+	'FIELD_URL'					=> 'URL (Link)',
 	'FIELD_VALIDATION'			=> 'Field validation',
 	'FIRST_OPTION'				=> 'First option',
 
@@ -14305,6 +14904,12 @@ $lang = array_merge($lang, array(
 	'ISO_LANGUAGE'				=> 'Language [%s]',
 
 	'LANG_SPECIFIC_OPTIONS'		=> 'Language specific options [<strong>%s</strong>]',
+
+	'LETTER_NUM_DOTS'			=> 'Any letters, numbers and dots (periods)',
+	'LETTER_NUM_ONLY'			=> 'Any letters and numbers',
+	'LETTER_NUM_PUNCTUATION'	=> 'Any letters, numbers, comma, dots, underscores and dashes beginning with any letter',
+	'LETTER_NUM_SPACERS'		=> 'Any letters, numbers and spacers',
+	'LETTER_NUM_UNDERSCORE'		=> 'Any letters, numbers and underscores',
 
 	'MAX_FIELD_CHARS'		=> 'Maximum number of characters',
 	'MAX_FIELD_NUMBER'		=> 'Highest allowed number',
@@ -14359,7 +14964,9 @@ $lang = array_merge($lang, array(
 #######language/en/acp/prune.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_PRUNE_USERS_EXPLAIN'	=> 'ئەو بەشە ڕێگات دەدات بۆ سڕینەوە و ناچالاککردنی بەکارهێنەران لە مەکۆکەت. هەژمارەکان دەتوانرێن فلتەر بکرێن لە زۆرجۆر ڕێگا؛ بە ژمارەی پەیام ،زۆرترین چالاکی ،هتد. پێوەر لەوانەیە بۆ کاریگەری بەکارهێنەران بەرتەسکی نەهێڵێت. بۆ نموونە ،دەتوانی بەکارهێنەران وشکبکەی کە لە 10 پەیام کەمتریان هەیە ،یان ئەوەی ناچالاکە لەدوای 2008-01-01 .جێگرەوانە ،دەتوانی پێوەرە دەستنیشانراوەکە تێبەپڕێنی بەتەواوی بە نووسینی لیستێک لە بەکارهێنەران (هەر دانەیەک لە دێڕێکی جودا) بۆناو دەقی خانەکە. وریابە لەگەڵ ئەو کردارە! هەرکە بەکارهێنەرێک سڕایەوە ،هیچ ڕێگایەک نییە بۆ گەڕاندنەوەی.',
+	'ACP_PRUNE_USERS_EXPLAIN'	=> 'This section allows you to delete or deactivate users on your board. Accounts can be filtered in a variety of ways; by post count, most recent activity, etc. Criteria may be combined to narrow down which accounts are affected. For example, you can prune users with fewer than 10 posts, who were also inactive after 2002-01-01. Use * as a wildcard for text fields. Alternatively, you may skip the criteria selection completely by entering a list of users (each on a separate line) into the text field. Take care with this facility! Once a user is deleted, there is no way to reverse the action.',
+
+	'CRITERIA'				=> 'Criteria',
 
 	'DEACTIVATE_DELETE'			=> 'بسڕەوە یان ناچالاکبکە',
 	'DEACTIVATE_DELETE_EXPLAIN'	=> 'هەرکوێیەک هەڵبژێرە بۆ ناچالاککردنی بەکارهێنەران یان سرینەوەیان بەتەواوی. تکایە سەرنجبدە کە بەکارهێنەرە سڕاوەکان ناتوانرێن بهێندرێنەوە.',
@@ -14367,15 +14974,18 @@ $lang = array_merge($lang, array(
 	'DELETE_USER_POSTS'			=> 'پەیامە وشککراوەکانی بەکارهێنەر بسڕەوە',
 	'DELETE_USER_POSTS_EXPLAIN'	=> 'پەیامەکان دەسڕێتەوە کە لەلایەن بەکارهێنەری سڕاوە نووسراون ،هیچ کاریگەری نییە ئەگەر بەکارهێنەران ناچالاکبن.',
 
-	'JOINED_EXPLAIN'			=> 'بەروارێک بنووسە لە جۆری <kbd>YYYY-MM-DD</kbd>.',
+	'JOINED_EXPLAIN'			=> 'Enter a date in <kbd>YYYY-MM-DD</kbd> format. You may use both fields to specify an interval, or leave one blank for an open date range.',
 
 	'LAST_ACTIVE_EXPLAIN'		=> 'بەروارێک بنووسە لە جۆری <kbd>YYYY-MM-DD</kbd> ،بۆ وشککردنی ئەو بەکارهێنەرانی کە هەرگیز نەهاتوونە ژوورەوە <kbd>0000-00-00</kbd> بنووسە ، مەرجەکان <em>لەپێش</em> لەگەڵ <em>لەدوا</em> پشتگوێدەخرێن.',
 
+	'POSTS_ON_QUEUE'			=> 'Posts Awaiting Approval',
+	'PRUNE_USERS_GROUP_EXPLAIN'	=> 'Limit to users within the selected group.',
+	'PRUNE_USERS_GROUP_NONE'	=> 'All groups',
 	'PRUNE_USERS_LIST'				=> 'بەکارهێنەران بۆ وشککردن',
-	'PRUNE_USERS_LIST_DELETE'		=> 'لەگەڵ پێوەری هەڵبژێردراو بۆ وشککردنی بەکارهێنەران ئەو هەژمارانە دەسڕدرێنەوە.',
-	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'لەگەڵ پێوەری هەڵبژێردراو بۆ وشککردنی بەکارهێنەران ئەو هەژمارانە ناچالاک دەکرێن.',
+	'PRUNE_USERS_LIST_DELETE'		=> 'With the selected critera for pruning users the following accounts will be removed. You can remove individual users from the deletion list by unchecking the box next to their username.',
+	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'With the selected critera for pruning users the following accounts will be deactivated. You can remove individual users from the deactivation list by unchecking the box next to their username.',
 
-	'SELECT_USERS_EXPLAIN'		=> 'ناوی بەکارهێنەری دیاریکراو بنووسە لێرە ،بەکاردەبرێن لە پەسەندی بۆ پێوەری سەرەوە. دۆزەرەوەکان ناتوانرێن وشکبکرێن.',
+	'SELECT_USERS_EXPLAIN'		=> 'Enter specific usernames here. They will be used in preference to the criteria above. Founders cannot be pruned.',
 
 	'USER_DEACTIVATE_SUCCESS'	=> 'بەکارهێنەرە هەڵبژێردراوەکان بەسەرکەوتوویی ناچالاککران.',
 	'USER_DELETE_SUCCESS'		=> 'بەکارهێنەرە هەڵبژێردراوەکان بەسەرکەوتوویی سڕانەوە.',
@@ -14422,15 +15032,38 @@ $lang = array_merge($lang, array(
 	'DELETING_INDEX_IN_PROGRESS'			=> 'سڕینەوەی پێڕستەکە لە پێشکەوتندایە',
 	'DELETING_INDEX_IN_PROGRESS_EXPLAIN'	=> 'دواپشتی گەڕانەکە پێشتر پێڕستەکەی خاوێندەکاتەوە. ئەمە دەتوانێ ماوەیەک بخایەنێت.',
 
-	'FULLTEXT_MYSQL_INCOMPATIBLE_VERSION'	=> 'دواپشتی دەقی تەواوی MySQL تەنها دەتوانێ بەکارببرێ لەگەڵ MySQL و بەرزتر.',
+	'FULLTEXT_MYSQL_INCOMPATIBLE_DATABASE'	=> 'The MySQL fulltext backend can only be used with MySQL4 and above.',
 	'FULLTEXT_MYSQL_NOT_MYISAM'				=> 'پێڕستەکانی دەقی تەواوی MySQL تەنها دەتوانێ بەکارببرێ لەگەڵ خشتەکانی MyISAM.',
 	'FULLTEXT_MYSQL_TOTAL_POSTS'			=> 'کۆی ژمارەی پەیامە پێڕستکراوەکان',
-	'FULLTEXT_MYSQL_MBSTRING'				=> 'پاڵپشتی بۆ تیپەکانی UTF-8 بێ-لاتین ،mbstring بەکاردەبات:',
-	'FULLTEXT_MYSQL_PCRE'					=> 'پاڵپشتی بۆ بێ-لاتین تیپەکانی UTF-8 بە بەکاربردنی PCRE.',
-	'FULLTEXT_MYSQL_MBSTRING_EXPLAIN'		=> 'ئەگەر PCRE تایبەتمەندی تیپی یونیکۆدی نییە ،دواپشتی گەڕانەکە هەوڵدەدات بزوێنەری تاکی mbstring بەکارببات.',
-	'FULLTEXT_MYSQL_PCRE_EXPLAIN'			=> 'ئەو دواپشتی گەڕانە داوای تایبەتمەندی تیپی یونیکۆدی PCRE دەکات ،تەنها بەردەستە لە PHP 4.4 .5/1 و بەرزتر ،ئەگەر دەتەوێ بۆ تیپەکانی بێ-لاتین بگەڕێیت.',
 	'FULLTEXT_MYSQL_MIN_SEARCH_CHARS_EXPLAIN'	=> 'وشەکانی لەگەڵ زۆر تیپ بەلایەنی کەم پێڕست دەکرێن بۆ گەڕان. تۆ یان خانەخوێیەکەت دەتوانێ ئەو ڕێکخستنە بگۆڕێت بەهۆی گۆڕینی دیمەنکردنی mysql.',
 	'FULLTEXT_MYSQL_MAX_SEARCH_CHARS_EXPLAIN'	=> 'وشەکان لەگەڵ هیچی تری زۆر وشەکان پێڕست دەکرێت بۆ گەڕان .تۆ یان خانەخوێیەکەت تەنها دەتوانێ ئەم ڕێکخستنە بگۆڕێ بەهۆی گۆڕینی دیمەنکردنی mysql.',
+
+	'FULLTEXT_POSTGRES_INCOMPATIBLE_DATABASE'	=> 'The PostgreSQL fulltext backend can only be used with PostgreSQL.',
+	'FULLTEXT_POSTGRES_TOTAL_POSTS'			=> 'Total number of indexed posts',
+	'FULLTEXT_POSTGRES_VERSION_CHECK'		=> 'PostgreSQL version',
+	'FULLTEXT_POSTGRES_TS_NAME'				=> 'Text search Configuration Profile:',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN'			=> 'Minimum word length for keywords',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN'			=> 'Maximum word length for keywords',
+	'FULLTEXT_POSTGRES_VERSION_CHECK_EXPLAIN'		=> 'This search backend requires PostgreSQL version 8.3 and above.',
+	'FULLTEXT_POSTGRES_TS_NAME_EXPLAIN'				=> 'The Text search configuration profile used to determine the parser and dictionary.',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN_EXPLAIN'			=> 'Words with at least this many characters will be included in the query to the database.',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN_EXPLAIN'			=> 'Words with no more than this many characters will be included in the query to the database.',
+
+	'FULLTEXT_SPHINX_CONFIGURE'				=> 'Configure the following settings to generate sphinx config file',
+	'FULLTEXT_SPHINX_DATA_PATH'				=> 'Path to data directory',
+	'FULLTEXT_SPHINX_DATA_PATH_EXPLAIN'		=> 'It will be used to store the indexes and log files. You should create this directory outside the web accessible directories. (should have a trailing slash)',
+	'FULLTEXT_SPHINX_DELTA_POSTS'			=> 'Number of posts in frequently updated delta index',
+	'FULLTEXT_SPHINX_HOST'					=> 'Sphinx search daemon host',
+	'FULLTEXT_SPHINX_HOST_EXPLAIN'			=> 'Host on which the sphinx search daemon (searchd) listens. Leave empty to use the default localhost',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT'		=> 'Indexer memory limit',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT_EXPLAIN'	=> 'This number should at all times be lower than the RAM available on your machine. If you experience periodic performance problems this might be due to the indexer consuming too many resources. It might help to lower the amount of memory available to the indexer.',
+	'FULLTEXT_SPHINX_MAIN_POSTS'			=> 'Number of posts in main index',
+	'FULLTEXT_SPHINX_PORT'					=> 'Sphinx search daemon port',
+	'FULLTEXT_SPHINX_PORT_EXPLAIN'			=> 'Port on which the sphinx search daemon (searchd) listens. Leave empty to use the default Sphinx API port 9312',
+	'FULLTEXT_SPHINX_WRONG_DATABASE'		=> 'The sphinx search for phpBB supports MySQL and PostgreSQL only.',
+	'FULLTEXT_SPHINX_CONFIG_FILE'			=> 'Sphinx config file',
+	'FULLTEXT_SPHINX_CONFIG_FILE_EXPLAIN'	=> 'The generated content of the sphinx config file. This data needs to be pasted into the sphinx.conf which is used by sphinx search daemon. Replace the [dbuser] and [dbpassword] placeholders with your database credentials.',
+	'FULLTEXT_SPHINX_NO_CONFIG_DATA'		=> 'The sphinx data and config directory paths are not defined. Please define them to generate the config file.',
 
 	'GENERAL_SEARCH_SETTINGS'				=> 'ڕێکخستنە گشتییەکانی گەڕان',
 	'GO_TO_SEARCH_INDEX'					=> 'بڕۆ بۆ پەڕەی پێڕستی گەڕان',
@@ -14455,8 +15088,6 @@ $lang = array_merge($lang, array(
 
 	'SEARCH_GUEST_INTERVAL'					=> 'پارێزی فلووی گەڕانی میوان',
 	'SEARCH_GUEST_INTERVAL_EXPLAIN'			=> 'ژمارەی ئەو چرکانەی کە میوان دەبێت چاوەڕێ بکات لەنێوان گەڕانەکان. ئەگەر یەک میوان بگەڕێ ئەوانی تر دەبێ چاوەڕێبکەن تاوەکو کاتی پارێزراو تێدەپەڕێت.',
-	'SEARCH_INDEX_CREATE_REDIRECT'			=> 'هەموو پەیامەکان بەپێی ناونیشانی پەیام  %1$d ئێستا پێڕستکران ،لەوەی  %2$d پەیامەکان لەناو ئەو هەنگاوە بوون.<br />هەڵسەنگاندنی ئێستای پێڕستکردن بەنزیکەیی %3$.1. پەیامەکان بۆ هەر چرکەیەک.<br />پێڕستکردن لە پێشەوتندایە...',
-	'SEARCH_INDEX_DELETE_REDIRECT'			=> 'هەموو پەیامەکان بەپێی ناونیشانی پەیام %1$d سڕانەوە لە پێڕستی گەڕانەکە.<br /> سڕینەوە لە پێشکەوتندایە...',
 	'SEARCH_INDEX_CREATED'					=> 'بەسەرکەوتوویی هەموو پەیامەکان پێڕستکراون بۆ بنکەدراوەی مەکۆ.',
 	'SEARCH_INDEX_REMOVED'					=> 'بەسەرکەوتوویی دواپشتی گەڕان سڕایەوە بۆ ئەو پێڕستە',
 	'SEARCH_INTERVAL'						=> 'پارێزی فلووی گەڕانی بەکارهێنەر',
@@ -14479,8 +15110,55 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
+	// 3.1.0
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
+
+	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
+	'CONFIRM_UNINSTALL_STYLES'		=> 'Are you sure you wish to uninstall selected styles?',
+	'COPYRIGHT'						=> 'مافی لەبەرگرتنەوە',
+
+	'DEACTIVATE_DEFAULT'		=> 'تۆ ناتوانیت شێوازی بنەڕەت ناچالاکبکەیت.',
+	'DELETE_FROM_FS'			=> 'لە پەڕگەسیستەم بسڕەوە',
+	'DELETE_STYLE_FILES_FAILED'	=> 'Error deleting files for style "%s".',
+	'DELETE_STYLE_FILES_SUCCESS'	=> 'Files for style "%s" have been deleted.',
+	'DETAILS'					=> 'وردەکارییەکان',
+
+	'INHERITING_FROM'			=> 'فۆرمی سپیلە',
+	'INSTALL_STYLE'				=> 'شێواز دابمەزرێنە',
+	'INSTALL_STYLES'			=> 'Install styles',
+	'INSTALL_STYLES_EXPLAIN'	=> 'Here you can install new styles.<br />If you cannot find a specific style in list below, check to make sure style is already installed. If it is not installed, check if it was uploaded correctly.',
+	'INVALID_STYLE_ID'			=> 'Invalid style ID.',
+
+	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
+	'NO_UNINSTALLED_STYLE'		=> 'هیچ شێوازێکی دانەمەزرێندراو نەدۆزرایەوە.',
+
+	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
+
+	'STYLE_ACTIVATE'			=> 'چالاک بکە',
+	'STYLE_ACTIVE'				=> 'چالاک',
+	'STYLE_DEACTIVATE'			=> 'ناچالاککردن',
+	'STYLE_DEFAULT'				=> 'بیکە بە ڕووکاری بنەڕەتی',
+	'STYLE_DEFAULT_CHANGE_INACTIVE'	=> 'You must activate style before making it default style.',
+	'STYLE_ERR_INVALID_PARENT'	=> 'Invalid parent style.',
+	'STYLE_ERR_NAME_EXIST'		=> 'شێوازێک لەگەڵ ئەو ناوە پێشتر هەیە.',
+	'STYLE_ERR_STYLE_NAME'		=> 'پێویستە ناوێک بسەپێنی بۆ ئەو شێوازە.',
+	'STYLE_INSTALLED'			=> 'Style "%s" has been installed.',
+	'STYLE_INSTALLED_RETURN_INSTALLED_STYLES'	=> 'Return to installed styles list',
+	'STYLE_INSTALLED_RETURN_UNINSTALLED_STYLES'	=> 'Install more styles',
+	'STYLE_NAME'				=> 'ناوی ڕووخسار',
+	'STYLE_NOT_INSTALLED'		=> 'Style "%s" was not installed.',
+	'STYLE_PATH'				=> 'Style path',
+	'STYLE_UNINSTALL'			=> 'Uninstall',
+	'STYLE_UNINSTALL_DEPENDENT'	=> 'Style "%s" cannot be uninstalled because it has one or more child styles.',
+	'STYLE_UNINSTALLED'			=> 'Style "%s" uninstalled successfully.',
+	'STYLE_USED_BY'				=> 'بەکارهاتووە لەلایەن',
+
+	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+
+	// 3.0.12
 	'ACP_IMAGESETS_EXPLAIN'	=> 'Imagesets هەموو دوگمە ،مەکۆ ،هتد دەگونجێنێ و بێ-شێوازە دیاریکراوەکانی تری وێنەکان بەکارهاتوو لەلایەن مەکۆکە. لێرە دەتوانیت imageset ــە چالاکەکان دەستکاری بکەی یان بیانسڕیتەوە و دانراوی نوێ بهێنیت یان چالاک بکەیت.',
-	'ACP_STYLES_EXPLAIN'	=> 'لێرە دەتوانی شێوازە بەردەستەکان بەڕێوەببەیت لەسەر مەکۆکەت. شێوازێک پێکدێت لە داڕێژە ،ڕووکار  لەگەڵ imageset. دەتوانی شێوازە چالاکەکان بگۆڕیت ،بسڕیتەوە ،ناچالاکبکەی ،چالاک بکەیتەوە ،دروستبکەی یان دانەی نوێ بهێنیت. دەشتوانی ببینی شێوازێک چۆن دیارە وەکو بەکاربردنی نەخشەی پێشبینین. شێوازی ئێستای بنەڕەت سەرنجکراوە لەلایەن (*). هەروەها لیستکراوە کۆی ژمارەی بەکارهێنەر بۆ هەر شێوازێک ،سەرنجی ئەوە بدە کە لەسەرڕۆشتنی شێوازی بەکارهێنەران لێرە تێکەڵ ناکرێت.',
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 	'ACP_TEMPLATES_EXPLAIN'	=> 'داڕێژەیەک دانرا بۆ هەموو کۆکردنە بەکارهاتووەکان بۆ بەرهەمهێنانی گەڵاڵەیەک بۆ مەکۆکەت. لێرە دەتوانی داڕێژەیەکی چالاک دەستکاری بکەی ،بسڕیەوە ،بهێنیت ،هاوردە بکەیت ،لەگەڵ دانراوەکانی پێشبینین. دەشتوانی کۆدی داڕێژکردنەکە دڵنیابکەیتەوە کە بەکارهاتووە بۆ بەرهەمهێنانی BBCode.',
 	'ACP_THEMES_EXPLAIN'	=> 'لێرە دەتوانی ڕووکارەکان دروستبکەی ،دابمەزرێنی ،دەستکاریبکەی ،بسڕیەوە و هەناردە بکەیت. ڕووکارێک پێکهاتووی ڕەنگەکان و وێنەکانە کە سەپێنراون بۆ داڕێژەکانت بۆ دیاریکردنی بینینی بنچینەیی مەکۆکەت. ڕیزبەندی هەڵبژاردنەکان ‍پشتبەستنی دیمەنکردنی ڕاژەکەت و دامەزراندنی phpBB  بۆ دەکاتەوە ،ڕێبەرەکە ببینە بۆ وردەکاری قوڵتر. تکایە سەرنجی ئەوە بدە کە کاتێک ڕووکارێکی نوێ دروستدەکەی سوودی ڕووکارێکی چالاک وەکو بنچینە هەڵبژاردانایە.',
 	'ADD_IMAGESET'			=> 'imageset دروستبکە',
@@ -14517,7 +15195,6 @@ $lang = array_merge($lang, array(
 	'CURRENT_IMAGE'					=> 'وێنەی ئێستا',
 
 	'DEACTIVATE_DEFAULT'		=> 'تۆ ناتوانیت شێوازی بنەڕەت ناچالاکبکەیت.',
-	'DELETE_FROM_FS'			=> 'لە پەڕگەسیستەم بسڕەوە',
 	'DELETE_IMAGESET'			=> 'imageset بسڕەوە',
 	'DELETE_IMAGESET_EXPLAIN'	=> 'لێرە دەتوانیت imageset ــە دەستنیشان کراوەکان بسڕیتەوە لە بنکەدراوەکە. تکایە سەرنجی ئەوە بدە کە هیچ گەڕانەوەیەک نییە. ئامۆژگاریکراوە کە تۆ سەرەتا دانراوەکەت هاوردە بکەیت بۆ هەر ڕوودانێکی داهاتوو.',
 	'DELETE_STYLE'				=> 'شێواز بسڕەوە',
@@ -14714,7 +15391,6 @@ $lang = array_merge($lang, array(
 	'INCLUDE_IMAGESET'			=> 'لەخۆگرتنی imageset',
 	'INCLUDE_TEMPLATE'			=> 'لەخۆگرتنی داڕێژە',
 	'INCLUDE_THEME'				=> 'لەخۆگرتنی ڕووکار',
-	'INHERITING_FROM'			=> 'فۆرمی سپیلە',
 	'INSTALL_IMAGESET'			=> 'imageset دابمەزرێنە',
 	'INSTALL_IMAGESET_EXPLAIN'	=> 'لێرە دەتوانی imageset دەستنیشان کراوەکان دابمەزرێنی. دەتوانی فرە وردەکارییەکان دەستکاری بکەی ئەگەر دەخوازیت یان دامەزراندنی بنەڕەت بەکارببە.',
 	'INSTALL_STYLE'				=> 'شێواز دابمەزرێنە',
@@ -14744,7 +15420,6 @@ $lang = array_merge($lang, array(
 	'NO_TEMPLATE'				=> 'ناتوانرێ داڕێژە بدۆزرێتەوە لەسەر پەڕگەسیستەم.',
 	'NO_THEME'					=> 'ناتوانرێ ڕووکار بدۆزرێتەوە لەسەر پەڕگەسیستەم',
 	'NO_UNINSTALLED_IMAGESET'	=> 'هیچ imageset ــێکی دانەمەزرێندراو نەدۆزرایەوە.',
-	'NO_UNINSTALLED_STYLE'		=> 'هیچ شێوازێکی دانەمەزرێندراو نەدۆزرایەوە.',
 	'NO_UNINSTALLED_TEMPLATE'	=> 'هیچ داڕێژەیەکی دانەمەزرێندراو نەدۆزرایەوە.',
 	'NO_UNINSTALLED_THEME'		=> 'هیچ ڕووکارێکی دانەمەزرێندراو نەدۆزرایەوە.',
 	'NO_UNIT'					=> 'هیچ',
@@ -14784,30 +15459,22 @@ $lang = array_merge($lang, array(
 	'SELECTED_THEME_FILE'		=> 'پەڕگەی دیاریکراوی ڕووکار',
 	'STORE_DATABASE'			=> 'بنکەدراوە',
 	'STORE_FILESYSTEM'			=> 'سیستەمی پەڕگە',
-	'STYLE_ACTIVATE'			=> 'چالاک بکە',
-	'STYLE_ACTIVE'				=> 'چالاک',
 	'STYLE_ADDED'				=> 'ڕووخسار بە سەرکەوتوویی زیاد کرا.',
-	'STYLE_DEACTIVATE'			=> 'ناچالاککردن',
-	'STYLE_DEFAULT'				=> 'بیکە بە ڕووکاری بنەڕەتی',
 	'STYLE_DELETED'				=> 'ڕووکار بە سەرکەوتوویی سڕدرایەوە.',
 	'STYLE_DETAILS_UPDATED'		=> 'ڕووکار بە سەرکەوتوویی دەستکاری کرا.',
 	'STYLE_ERR_ARCHIVE'			=> 'تکایە ڕێگایەکی ئەرشیف هەڵبژێرە.',
 	'STYLE_ERR_COPY_LONG'		=> 'مافی لەبەرگرتنەوە دەتوانێ درێژتر نەبێ لە 60 تیپ.',
 	'STYLE_ERR_MORE_ELEMENTS'	=> 'پێویستە بەلایەنی کەم توخمێکی شێوازەکە هەڵبژێری.',
 	'STYLE_ERR_NAME_CHARS'		=> 'ئەو ناوی شێوازە دەتوانرێ تەنها تیپی ئەلفوماتیکی لەخۆبگرێت -،+،ـ لەگەڵ ماوە.',
-	'STYLE_ERR_NAME_EXIST'		=> 'شێوازێک لەگەڵ ئەو ناوە پێشتر هەیە.',
 	'STYLE_ERR_NAME_LONG'		=> 'ناوی ئەو شێوازە دەتوانرێ درێژتر نەبێ لە 30 تیپ.',
 	'STYLE_ERR_NO_IDS'			=> 'پێویستە داڕێژەیەک هەڵبژێری ،ڕووکار و imageset بۆ ئەم شێوازە.',
 	'STYLE_ERR_NOT_STYLE'		=> 'پەڕگەی بارکراو یان هێنراو ئەرشیفی شێوازێکی دروست لەخۆناگرێت.',
-	'STYLE_ERR_STYLE_NAME'		=> 'پێویستە ناوێک بسەپێنی بۆ ئەو شێوازە.',
 	'STYLE_EXPORT'				=> 'ڕووخسار هەنارد بکە',
 	'STYLE_EXPORT_EXPLAIN'		=> 'لێرە دەتوانی imageset ــێک هاوردەبکەیت لەو فۆرمەی ئەرشیفێک. ئەو ئەرشیفە هەوو داتا پێویستەکان لەخۆدەگرێت بۆ دامەزراندنی دانراوی وێنەکان لەسەر مەکۆیەکی تر. دەتوانی دەستنیشانی بکەیت کەئەگەر بۆ داگرتنی پەڕگەکە ڕاستەوخۆ یان خستنەنێوی بوخچەی کۆگاکەت بۆ داگرتنی دواتر یان لەڕێگای FTP.',
 	'STYLE_EXPORTED'			=> 'شێواز بەسەرکەوتوویی هەناردە و کۆگاکرا لە %s.',
 	'STYLE_IMAGESET'			=> 'Imageset',
-	'STYLE_NAME'				=> 'ناوی ڕووخسار',
 	'STYLE_TEMPLATE'			=> 'قاڵب',
 	'STYLE_THEME'				=> 'ڕووکار',
-	'STYLE_USED_BY'				=> 'بەکارهاتووە لەلایەن',
 
 	'TEMPLATE_ADDED'			=> 'دانراوی داڕێژە زیادکرا و کۆگرا لەسەر پەڕگەسیستەم.',
 	'TEMPLATE_ADDED_DB'			=> 'دانراوی داڕێژەکە زیادکرا و کۆگاکرا لە بنکەدراوە.',
@@ -14905,6 +15572,7 @@ $lang = array_merge($lang, array(
 	'CANNOT_FORCE_REACT_FOUNDER'	=> 'تۆ ناتوانیت چالاککردنەوە ناچاربکەی لەسەر هەژمارەکانی دۆزەرەوە.',
 	'CANNOT_FORCE_REACT_YOURSELF'	=> 'تۆ ناتوانیت چالاککردنەوە ناچاربکەی بۆ هەژماری خۆت.',
 	'CANNOT_REMOVE_ANONYMOUS'		=> 'تۆ ناتوانیت هەژماری بەکارهێنەری میوان بسڕیتەوە.',
+	'CANNOT_REMOVE_FOUNDER'			=> 'You are not allowed to remove founder accounts.',
 	'CANNOT_REMOVE_YOURSELF'		=> 'تۆ ناتوانیت هەژماری بەکارهێنەری خۆت بسڕیتەوە.',
 	'CANNOT_SET_FOUNDER_IGNORED'	=> 'تۆ ناتوانیت بەکارهێنەری پشتگوێخراو بەرزبکەیەوە بۆ ئەوەی ببن بە دۆزەرەوە.',
 	'CANNOT_SET_FOUNDER_INACTIVE'	=> 'پێویستە تۆ بەکارهێنەران چالاک بکەی پێش ئەوەی بەرزیان بکەیەوە بۆ دۆزەرەوە ،تەنها بەکارهێنەری چالاککراو دەتوانرێ بەرزبکرێتەوە.',
@@ -14931,7 +15599,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'تکایە مەکۆکە هەڵبژێرە بۆ ئەوەی دەخوازیت بۆ گواستنەوەی هەموو پەیامەکان کە ئەو بەکارهێنەرە نووسیویەتی.',
 
 	'NO_SPECIAL_RANK'		=> 'هیچ پلەی تایبەت پێکنەهینراوە',
-	'NO_WARNINGS'			=> 'بێ ئاگاداری',
+	'NO_WARNINGS'			=> 'No warnings exist.',
 	'NOT_MANAGE_FOUNDER'	=> 'تۆ هەوڵتدا بۆ بەڕێوەبردنی بەکارهێنەرێک لەگەڵ دۆخی دۆزەرەوە .تەنها دۆزەرەوەکان ڕێگادراون بۆ بەڕێوەبردنی دۆزەرەوەکانی تر.',
 
 	'QUICK_TOOLS'			=> 'ئامڕازە خێراکان',

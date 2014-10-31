@@ -1,5 +1,14 @@
 ﻿<?php
 
+#######language/en/app.php#######
+
+$lang = array_merge($lang, array(
+	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
+	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
+	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+));
+
 #######language/en/calendar.php#######
 
 $lang = array_merge($lang, array(
@@ -182,6 +191,55 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Din privata reCaptcha nyckel. Nycklar kan erhållas på <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>',
 
 	'RECAPTCHA_EXPLAIN'				=> 'För att förhindra automatiska registreringar så kräver forumet att du skriver in en verifieringskod. Koden visas i bilden nedan.',
+	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
+));
+
+#######language/en/cli.php#######
+
+$lang = array_merge($lang, array(
+	'CLI_CONFIG_CANNOT_CACHED'			=> 'Set this option if the configuration option changes too frequently to be efficiently cached.',
+	'CLI_CONFIG_CURRENT'				=> 'Current configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_DELETE_SUCCESS'			=> 'Successfully deleted config %s.',
+	'CLI_CONFIG_NEW'					=> 'New configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_NOT_EXISTS'				=> 'Config %s does not exist',
+	'CLI_CONFIG_OPTION_NAME'			=> 'The configuration option’s name',
+	'CLI_CONFIG_PRINT_WITHOUT_NEWLINE'	=> 'Set this option if the value should be printed without a new line at the end.',
+	'CLI_CONFIG_INCREMENT_BY'			=> 'Amount to increment by',
+	'CLI_CONFIG_INCREMENT_SUCCESS'		=> 'Successfully incremented config %s',
+	'CLI_CONFIG_SET_FAILURE'			=> 'Could not set config %s',
+	'CLI_CONFIG_SET_SUCCESS'			=> 'Successfully set config %s',
+
+	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
+	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
+	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
+	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
+	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
+	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
+	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
+	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
+	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
+	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
+	'CLI_EXTENSION_ENABLE_FAILURE'		=> 'Could not enable extension %s',
+	'CLI_EXTENSION_ENABLE_SUCCESS'		=> 'Successfully enabled extension %s',
+	'CLI_EXTENSION_NAME'				=> 'Name of the extension',
+	'CLI_EXTENSION_PURGE_FAILURE'		=> 'Could not purge extension %s',
+	'CLI_EXTENSION_PURGE_SUCCESS'		=> 'Successfully purged extension %s',
+	'CLI_EXTENSION_NOT_FOUND'			=> 'No extensions were found.',
+	'CLI_EXTENSIONS_AVAILABLE'			=> 'Available',
+	'CLI_EXTENSIONS_DISABLED'			=> 'Disabled',
+	'CLI_EXTENSIONS_ENABLED'			=> 'Enabled',
+
+	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
 ));
 
 #######language/en/common.php#######
@@ -190,7 +248,11 @@ $lang = array_merge($lang, array(
 	'TRANSLATION_INFO'	=> 'Swedish translation: <a href="http://www.phpbb-se.com/forum/viewtopic.php?t=6096">phpBB Sweden</a>',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
+	'DATETIME_FORMAT'	=> '|d M Y, H:i|',	// 01 Jan 2007, 13:37 (with Relative days enabled)
 	'USER_LANG'			=> 'sv',
+
+	// See http://wiki.phpbb.com/Plural_Rules for more information
+	'PLURAL_RULE'		=> '1',
 
 	'1_DAY'			=> '1 dag',
 	'1_MONTH'		=> '1 månad',
@@ -204,18 +266,24 @@ $lang = array_merge($lang, array(
 	'ACCOUNT_DEACTIVATED'			=> 'Ditt konto har inaktiverats manuellt och kan endast återaktiveras av en administratör.',
 	'ACCOUNT_NOT_ACTIVATED'			=> 'Ditt konto har inte aktiverats än.',
 	'ACP'							=> 'Administrationspanel',
+	'ACP_SHORT'						=> 'ACP',
 	'ACTIVE'						=> 'aktiv',
 	'ACTIVE_ERROR'					=> 'Det angivna användarnamnet är för närvarande inaktiverat. Om du har problem med att aktivera ditt konto, kontakta en administratör.',
 	'ADMINISTRATOR'					=> 'Administratör',
 	'ADMINISTRATORS'				=> 'Administratörer',
 	'AGE'							=> 'Ålder',
 	'AIM'							=> 'AIM',
+	'AJAX_ERROR_TITLE'				=> 'AJAX error',
+	'AJAX_ERROR_TEXT'				=> 'Something went wrong when processing your request.',
+	'AJAX_ERROR_TEXT_ABORT'			=> 'User aborted request.',
+	'AJAX_ERROR_TEXT_TIMEOUT'		=> 'Your request timed out; please try again.',
+	'AJAX_ERROR_TEXT_PARSERERROR'	=> 'Something went wrong with the request and the server returned an invalid reply.',
 	'ALLOWED'						=> 'Tillåtet',
 	'ALL_FILES'						=> 'Alla filer',
 	'ALL_FORUMS'					=> 'Alla kategorier',
 	'ALL_MESSAGES'					=> 'Visa alla meddelanden',
 	'ALL_POSTS'						=> 'Visa alla inlägg',
-	'ALL_TIMES'						=> 'Alla tidsangivelser är %1$s %2$s',
+	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'Visa alla trådar',
 	'AND'							=> 'Och',
 	'ARE_WATCHING_FORUM'			=> 'Du bevakar nu denna kategori och kommer att underrättas vid nya inlägg.',
@@ -225,6 +293,14 @@ $lang = array_merge($lang, array(
 	'ATTACHED_IMAGE_NOT_IMAGE'		=> 'Bildfilen du försökte bifoga är ogiltig.',
 	'AUTHOR'						=> 'Författare',
 	'AUTH_NO_PROFILE_CREATED'		=> 'Det gick inte att skapa en användarprofil.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_ENTRY'				=> 'Invalid database entry.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_SERVICE_TYPE'		=> 'Invalid service type provided to OAuth service handler.',
+	'AUTH_PROVIDER_OAUTH_ERROR_SERVICE_NOT_CREATED'			=> 'OAuth service not created',
+	'AUTH_PROVIDER_OAUTH_SERVICE_BITLY'						=> 'Bitly',
+	'AUTH_PROVIDER_OAUTH_SERVICE_FACEBOOK'					=> 'Facebook',
+	'AUTH_PROVIDER_OAUTH_SERVICE_GOOGLE'					=> 'Google',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_NOT_STORED'			=> 'OAuth token not stored.',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_INCORRECTLY_STORED'	=> 'OAuth token incorrectly stored.',
 	'AVATAR_DISALLOWED_CONTENT'		=> 'Uppladdningen nekades eftersom den uppladdade filen identifieras som en möjlig smittspridare.',
 	'AVATAR_DISALLOWED_EXTENSION'	=> 'Denna fil kan inte visas eftersom filtypen %s inte är tillåten.',
 	'AVATAR_EMPTY_REMOTE_DATA'		=> 'Den valda visningsbilden kunde inte laddas upp eftersom datan verkar vara felaktig eller korrupt.',
@@ -235,10 +311,11 @@ $lang = array_merge($lang, array(
 	'AVATAR_PARTIAL_UPLOAD'			=> 'Den valda filen laddades endast upp delvis.',
 	'AVATAR_PHP_SIZE_NA'			=> 'Visningsbildens filstorlek är för stor.<br />Kunde inte hitta maximalstorleken definierad av PHP i php.ini.',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'Visningsbildens filstorlek är för stor, den största tillåtna storleken för uppladdade filer är %1$d %2$s.<br />Detta har definierats i php.ini och kan inte överskridas.',
+	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
 	'AVATAR_URL_INVALID'			=> 'URL:en du angav är felaktig.',
 	'AVATAR_URL_NOT_FOUND'			=> 'Filen kunde inte hittas.',
-	'AVATAR_WRONG_FILESIZE'			=> 'Visningsbildens filstorlek måste vara mellan 0 och %1d %2s.',
-	'AVATAR_WRONG_SIZE'				=> 'Den valda visningsbilden är %5$d pixlar bred och %6$d pixlar hög. Visningsbilder måste vara minst %1$d pixlar breda och %2$d pixlar höga, men får inte vara bredare än %3$d pixlar eller högre än %4$d pixlar.',
+	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
+	'AVATAR_WRONG_SIZE'				=> 'The submitted avatar is %5$s wide and %6$s high. Avatars must be at least %1$s wide and %2$s high, but no larger than %3$s wide and %4$s high.',
 
 	'BACK_TO_TOP'			=> 'Upp',
 	'BACK_TO_PREV'			=> 'Tillbaka till föregående sida',
@@ -255,28 +332,42 @@ $lang = array_merge($lang, array(
 	'BOARD_DISABLED'		=> 'Forumet är för närvarande inaktiverat.',
 	'BOARD_UNAVAILABLE'		=> 'Forumet är för närvarande inte tillgängligt, försök igen om några minuter.',
 	'BROWSING_FORUM'		=> 'Användare som besöker denna kategori: %1$s',
-	'BROWSING_FORUM_GUEST'	=> 'Användare som besöker denna kategori: %1$s och %2$d gäst',
-	'BROWSING_FORUM_GUESTS'	=> 'Användare som besöker denna kategori: %1$s och %2$d gäster',
+	'BUTTON_EDIT'			=> 'Edit',
+	'BUTTON_FORUM_LOCKED'	=> 'Locked',
+	'BUTTON_NEW_TOPIC'		=> 'New Topic',
+	'BUTTON_PM'				=> 'PM',
+	'BUTTON_PM_FORWARD'		=> 'Forward',
+	'BUTTON_PM_NEW'			=> 'New PM',
+	'BUTTON_PM_REPLY'		=> 'Send Reply',
+	'BUTTON_PM_REPLY_ALL'	=> 'Reply All',
+	'BUTTON_POST_REPLY'		=> 'Post Reply',
+	'BUTTON_QUOTE'			=> 'Quote',
+	'BUTTON_TOPIC_LOCKED'	=> 'Locked',
 	'BYTES'					=> 'Bytes',
+	'BYTES_SHORT'			=> 'B',
 
 	'CANCEL'				=> 'Avbryt',
 	'CHANGE'				=> 'Ändra',
 	'CHANGE_FONT_SIZE'		=> 'Ändra textstorlek',
 	'CHANGING_PREFERENCES'	=> 'Ändrar foruminställningar',
 	'CHANGING_PROFILE'		=> 'Ändrar profilinställningar',
-	'CLICK_VIEW_PRIVMSG'	=> '%sGå till din inkorg%s',
 	'COLLAPSE_VIEW'			=> 'Minimera',
 	'CLOSE_WINDOW'			=> 'Stäng fönster',
 	'COLOUR_SWATCH'			=> 'Färgväljare',
-	'COMMA_SEPARATOR'		=> ', ',	// Used in pagination of ACP & prosilver, use localised comma if appropriate, eg: Ideographic or Arabic
+	'COLON'					=> ':',
+	'COMMA_SEPARATOR'		=> ', ',	// Comma used to join lists into a single string, use localised comma if appropriate, eg: Ideographic or Arabic
 	'CONFIRM'				=> 'Bekräfta',
 	'CONFIRM_CODE'			=> 'Verifieringskod',
 	'CONFIRM_CODE_EXPLAIN'	=> 'Ange koden exakt som den visas. Bokstäverna är inte skiftlägeskänsliga.',
 	'CONFIRM_CODE_WRONG'	=> 'Verifieringskoden du angav var felaktig.',
 	'CONFIRM_OPERATION'		=> 'Är du säker på att du vill utföra denna åtgärd?',
+	'CONFIRM_AVATAR_DELETE' => 'Are you sure you wish to delete this avatar?',
 	'CONGRATULATIONS'		=> 'Vi gratulerar',
 	'CONNECTION_FAILED'		=> 'Anslutning misslyckades.',
 	'CONNECTION_SUCCESS'	=> 'Anslutning lyckades!',
+	'CONTACT'				=> 'Kontaktinformation',
+	'CONTACT_USER'			=> 'Contact %s',
+	'CONTACT_US'			=> 'Contact us',
 	'COOKIES_DELETED'		=> 'Alla cookies skapade av detta forum togs bort.',
 	'CURRENT_TIME'			=> 'Aktuellt datum och tid: %s',
 
@@ -297,18 +388,13 @@ $lang = array_merge($lang, array(
 	'DISPLAY_TOPICS'		=> 'Visa trådar nyare än',
 	'DOWNLOADED'			=> 'Nerladdad',
 	'DOWNLOADING_FILE'		=> 'Laddar ner fil',
-	'DOWNLOAD_COUNT'		=> 'Nerladdad %d gång',
-	'DOWNLOAD_COUNTS'		=> 'Nerladdad %d gånger',
-	'DOWNLOAD_COUNT_NONE'	=> 'Inte nerladdad än',
-	'VIEWED_COUNT'			=> 'Visad %d gång',
-	'VIEWED_COUNTS'			=> 'Visad %d gånger',
-	'VIEWED_COUNT_NONE'		=> 'Inte visad än',
 
 	'EDIT_POST'							=> 'Redigera inlägg',
-	'EMAIL'								=> 'E-post', // Short form for EMAIL_ADDRESS
-	'EMAIL_ADDRESS'						=> 'E-postadress',
-	'EMAIL_INVALID_EMAIL'				=> 'E-postadressen du angav är ogiltig.',
-	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Fel uppstod vid skickning av e-post vid <strong>rad %1$s</strong>. Svar: %2$s.',
+	'ELLIPSIS'							=>	'…',
+	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
+	'EMAIL_ADDRESS'						=> 'Email address',
+	'EMAIL_INVALID_EMAIL'				=> 'The email address you entered is invalid.',
+	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ran into problems sending email at <strong>Line %1$s</strong>. Response: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Du måste ange ett ämne för att skapa en ny tråd.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Du måste ange ett ämne för ditt meddelande.',
 	'ENABLED'							=> 'Aktiverat',
@@ -322,17 +408,23 @@ $lang = array_merge($lang, array(
 	'ERR_UNWATCHING'					=> 'Kunde inte avsluta bevakningen av denna tråd.',
 	'ERR_WATCHING'						=> 'Kunde inte bevaka denna tråd.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'Den angivna sökvägen till phpBB verkar vara felaktig.',
+	'ERROR'									=> 'Fel',
 	'EXPAND_VIEW'						=> 'Expandera',
 	'EXTENSION'							=> 'Filtyp',
+	'EXTENSION_DISABLED'				=> 'The extension <strong>%s</strong> is not enabled.',
 	'EXTENSION_DISABLED_AFTER_POSTING'	=> 'Filtypen <strong>%s</strong> har inaktiverats och kan inte längre visas.',
+	'EXTENSION_DOES_NOT_EXIST'			=> 'The extension <strong>%s</strong> does not exist.',
 
+	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> 'FAQ',
 	'FAQ_EXPLAIN'			=> 'Vanliga frågor',
 	'FILENAME'				=> 'Filnamn',
 	'FILESIZE'				=> 'Filstorlek',
 	'FILEDATE'				=> 'Fildatum',
 	'FILE_COMMENT'			=> 'Filkommentar',
-	'FILE_NOT_FOUND'		=> 'Filen kunde inte hittas.',
+	'FILE_CONTENT_ERR'		=> 'Could not read the contents of file: %s',
+	'FILE_JSON_DECODE_ERR'	=> 'Failed to decode json file: %s',
+	'FILE_NOT_FOUND'		=> 'The requested file could not be found: %s',
 	'FIND_USERNAME'			=> 'Hitta en medlem',
 	'FOLDER'				=> 'Mapp',
 	'FORGOT_PASS'			=> 'Jag har glömt mitt lösenord.',
@@ -381,6 +473,9 @@ $lang = array_merge($lang, array(
 	'GB'						=> 'GB',
 	'GIB'						=> 'GiB',
 	'GO'						=> 'OK',
+	'GOOGLEPLUS'				=> 'Google+',
+	'GOTO_FIRST_POST'			=> 'Go to first post',
+	'GOTO_LAST_POST'			=> 'Go to last post',
 	'GOTO_PAGE'					=> 'Gå till sida',
 	'GROUP'						=> 'Grupp',
 	'GROUPS'					=> 'Grupper',
@@ -388,12 +483,6 @@ $lang = array_merge($lang, array(
 	'GROUP_ERR_USERNAME'		=> 'Inget gruppnamn angavs.',
 	'GROUP_ERR_USER_LONG'		=> 'Gruppnamn kan inte vara längre än 60 tecken. Det angivna gruppnamnet är för långt.',
 	'GUEST'						=> 'Gäst',
-	'GUEST_USERS_ONLINE'		=> 'Det är %d gäster online',
-	'GUEST_USERS_TOTAL'			=> '%d gäster',
-	'GUEST_USERS_ZERO_ONLINE'	=> 'Det är inga gäster online',
-	'GUEST_USERS_ZERO_TOTAL'	=> '0 gäster',
-	'GUEST_USER_ONLINE'			=> 'Det är %d gäst online',
-	'GUEST_USER_TOTAL'			=> '%d gäst',
 	'G_ADMINISTRATORS'			=> 'Administratörer',
 	'G_BOTS'					=> 'Robotar',
 	'G_GUESTS'					=> 'Gäster',
@@ -402,22 +491,12 @@ $lang = array_merge($lang, array(
 	'G_GLOBAL_MODERATORS'		=> 'Globala moderatorer',
 	'G_NEWLY_REGISTERED'		=> 'Nya medlemmar',
 
-	'HIDDEN_USERS_ONLINE'			=> '%d dolda användare online',
-	'HIDDEN_USERS_TOTAL'			=> '%d dolda',
-	'HIDDEN_USERS_TOTAL_AND'		=> '%d dolda och ',
-	'HIDDEN_USERS_ZERO_ONLINE'		=> 'inga dolda användare online',
-	'HIDDEN_USERS_ZERO_TOTAL'		=> 'inga dolda',
-	'HIDDEN_USERS_ZERO_TOTAL_AND'	=> 'inga dolda och ',
-	'HIDDEN_USER_ONLINE'			=> '%d dold användare online',
-	'HIDDEN_USER_TOTAL'				=> '%d dold',
-	'HIDDEN_USER_TOTAL_AND'			=> '%d dold och ',
 	'HIDE_GUESTS'					=> 'Dölj gäster',
 	'HIDE_ME'						=> 'Dölj att jag är online denna session.',
 	'HOURS'							=> 'Timmar',
 	'HOME'							=> 'Hem',
 
 	'ICQ'						=> 'ICQ',
-	'ICQ_STATUS'				=> 'ICQ-status',
 	'IF'						=> 'Om',
 	'IMAGE'						=> 'Bild',
 	'IMAGE_FILETYPE_INVALID'	=> 'Bildtyp %d för MIME-typ %s stöds inte.',
@@ -425,9 +504,11 @@ $lang = array_merge($lang, array(
 	'IN'						=> 'i',
 	'INDEX'						=> 'Index', //Index page
 	'INFORMATION'				=> 'Information',
+	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
 	'INTERESTS'					=> 'Intressen',
 	'INVALID_DIGEST_CHALLENGE'	=> 'Felaktig "digest challenge".',
-	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> möjligen felaktig e-postadress?',
+	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> possibly an invalid email address?',
+	'INVALID_PLURAL_RULE'		=> 'The chosen plural rule is invalid. Valid values are integers between 0 and 15.',
 	'IP'						=> 'IP',
 	'IP_BLACKLISTED'			=> 'Din IP-adress %1$s har blockerats på grund av att den är svartlistad. För detaljerad information, besök <a href="%2$s">%2$s</a>.',
 
@@ -435,7 +516,8 @@ $lang = array_merge($lang, array(
 	'JOINED'				=> 'Blev medlem',
 	'JUMP_PAGE'				=> 'Ange det sidnummer som du vill gå till',
 	'JUMP_TO'				=> 'Hoppa till',
-	'JUMP_TO_PAGE'			=> 'Klicka för att hoppa till sida…',
+	'JUMP_TO_PAGE'			=> 'Jump to page',
+	'JUMP_TO_PAGE_CLICK'	=> 'Click to jump to page…',
 
 	'KB'					=> 'KB',
 	'KIB'					=> 'KiB',
@@ -447,6 +529,8 @@ $lang = array_merge($lang, array(
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Kunde inte ansluta till LDAP-server.',
 	'LDAP_SEARCH_FAILED'				=> 'Ett fel inträffade i samband med sökningen i LDAP-registret.',
 	'LEGEND'							=> 'Förklaring',
+	'LIVE_SEARCHES_NOT_ALLOWED'			=> 'Live searches are not allowed.',
+	'LOADING'							=> 'Loading',
 	'LOCATION'							=> 'Ort',
 	'LOCK_POST'							=> 'Lås inlägg',
 	'LOCK_POST_EXPLAIN'					=> 'Förhindra redigering',
@@ -457,6 +541,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_CONFIRM_EXPLAIN'				=> 'För att förhindra att konton forceras automatiskt så kräver forumet att du skriver in en verifieringskod efter att ha misslyckats med inloggningen ett visst antal gånger. Koden visas i bilden nedan. Om du ser dåligt eller av annat skäl inte kan läsa denna kod, kontakta %sforumadministratören%s.', // unused
 	'LOGIN_ERROR_ATTEMPTS'				=> 'Du har överskridit antalet tillåtna inloggningsförsök. För att försäkra oss om att du är människa bör du ange användarnamn, lösenord och dessutom  svara på CAPTCHA-frågan.',
 	'LOGIN_ERROR_EXTERNAL_AUTH_APACHE'	=> 'Du har inte godkänts av Apache.',
+	'LOGIN_ERROR_OAUTH_SERVICE_DOES_NOT_EXIST'	=> 'A non-existant OAuth service has been requested.',
 	'LOGIN_ERROR_PASSWORD'				=> 'Du angav ett felaktigt lösenord. Kontrollera ditt lösenord och försök igen. Kontakta %sforumadministratören%s om problemet kvarstår.',
 	'LOGIN_ERROR_PASSWORD_CONVERT'		=> 'Det gick inte att konvertera ditt lösenord när forumets programvara uppdaterades. %sBegär ett nytt lösenord%s. Kontakta %sforumadministratören%s om problemet kvarstår.',
 	'LOGIN_ERROR_USERNAME'				=> 'Du angav ett felaktigt användarnamn. Kontrollera ditt användarnamn och försök igen. Kontakta %sforumadministratören%s om problemet kvarstår.',
@@ -465,17 +550,22 @@ $lang = array_merge($lang, array(
 	'LOGIN_VIEWFORUM'					=> 'Forumet kräver att du registrerar dig och loggar in för att läsa i denna kategori.',
 	'LOGIN_EXPLAIN_EDIT'				=> 'För att redigera inlägg i denna kategori så måste du vara registrerad och inloggad.',
 	'LOGIN_EXPLAIN_VIEWONLINE'			=> 'För att visa onlinelistan så måste du vara registrerad och inloggad.',
+	'LOGIN_REQUIRED'					=> 'You need to login to perform this action.',
 	'LOGOUT'							=> 'Logga ut',
 	'LOGOUT_USER'						=> 'Logga ut [ %s ]',
-	'LOG_ME_IN'							=> 'Logga in mig automatiskt vid varje besök.',
+	'LOG_ME_IN'							=> 'Remember me',
 
+	'MAIN'					=> 'Main',
 	'MARK'					=> 'Markera',
 	'MARK_ALL'				=> 'Markera alla',
+	'MARK_ALL_READ'			=> 'Mark all read',
 	'MARK_FORUMS_READ'		=> 'Markera alla kategorier som lästa',
+	'MARK_READ'				=> 'Mark read',
 	'MARK_SUBFORUMS_READ'	=> 'Markera alla underkategorier som lästa',
 	'MB'					=> 'MB',
 	'MIB'					=> 'MiB',
 	'MCP'					=> 'Moderationspanel',
+	'MCP_SHORT'				=> 'MCP',
 	'MEMBERLIST'			=> 'Medlemmar',
 	'MEMBERLIST_EXPLAIN'	=> 'Visa en fullständig lista över alla medlemmar',
 	'MERGE'					=> 'Sammanfoga',
@@ -488,26 +578,47 @@ $lang = array_merge($lang, array(
 	'MODERATE'				=> 'Moderera',
 	'MODERATOR'				=> 'Moderator',
 	'MODERATORS'			=> 'Moderatorer',
+	'MODULE_NOT_ACCESS'		=> 'Module not accessible',
+	'MODULE_NOT_FIND'		=> 'Cannot find module %s',
+	'MODULE_FILE_INCORRECT_CLASS'	=> 'Module file %s does not contain correct class [%s]',
 	'MONTH'					=> 'Månad',
 	'MOVE'					=> 'Flytta',
-	'MSNM'					=> 'MSNM/WLM',
 
 	'NA'						=> 'Ej tillgängligt',
 	'NEWEST_USER'				=> 'Vår senaste medlem <strong>%s</strong>',
 	'NEW_MESSAGE'				=> 'Nytt meddelande',
 	'NEW_MESSAGES'				=> 'Nya meddelanden',
-	'NEW_PM'					=> '<strong>%d</strong> nytt meddelande',
-	'NEW_PMS'					=> '<strong>%d</strong> nya meddelanden',
 	'NEW_POST'					=> 'Nytt inlägg',	// Not used anymore
 	'NEW_POSTS'					=> 'Nya inlägg',	// Not used anymore
 	'NEXT'						=> 'Nästa',		// Used in pagination
 	'NEXT_STEP'					=> 'Nästa',
 	'NEVER'						=> 'Aldrig',
 	'NO'						=> 'Nej',
+	'NO_NOTIFICATIONS'			=> 'You have no notifications',
 	'NOT_ALLOWED_MANAGE_GROUP'	=> 'Du har inte tillåtelse att hantera denna grupp.',
 	'NOT_AUTHORISED'			=> 'Du har inte tillgång till denna avdelning.',
 	'NOT_WATCHING_FORUM'		=> 'Du bevakar nu inte längre denna kategori.',
 	'NOT_WATCHING_TOPIC'		=> 'Du bevakar nu inte längre denna tråd.',
+	'NOTIFICATIONS'				=> 'Notifications',
+	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
+	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
+	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
+	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
+	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
+	'NOTIFICATION_POST_IN_QUEUE'		=> '<strong>Post approval</strong> request by %1$s:',
+	'NOTIFICATION_REFERENCE'			=> '"%1$s"',
+	'NOTIFICATION_REASON'				=> '<em>Reason:</em> %1$s.',
+	'NOTIFICATION_REPORT_PM'			=> '<strong>Private Message reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_POST'			=> '<strong>Post reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_CLOSED'		=> '<strong>Report closed</strong> by %1$s for:',
+	'NOTIFICATION_TOPIC'				=> '<strong>New topic</strong> by %1$s:',
+	'NOTIFICATION_TOPIC_APPROVED'		=> '<strong>Topic approved</strong>:',
+	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
+	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
+	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> 'Underrätta forumadministratören eller webbansvarig.',
 	'NOTIFY_ADMIN_EMAIL'		=> 'Underrätta forumadministratören eller webbansvarig: <a href="mailto:%1$s">%1$s</a>',
 	'NO_ACCESS_ATTACHMENT'		=> 'Du har inte tillgång till denna fil.',
@@ -516,6 +627,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_ADMIN'				=> 'Du har inte administrationsbehörighet och kan därför inte visa administrationspanelen.',
 	'NO_AUTH_ADMIN_USER_DIFFER'	=> 'Du måste logga in med samma användare i administrationspanelen, som du är inloggad på forumet med.',
 	'NO_AUTH_OPERATION'			=> 'Du har inte behörighet att utföra denna åtgärd.',
+	'NO_AVATARS'				=> 'No avatars currently available',
 	'NO_CONNECT_TO_SMTP_HOST'	=> 'Kunde inte ansluta till smtp-värd : %1$s : %2$s',
 	'NO_BIRTHDAYS'				=> 'Inga födelsedagar idag.',
 	'NO_EMAIL_MESSAGE'			=> 'E-postmeddelandet var tomt.',
@@ -531,7 +643,6 @@ $lang = array_merge($lang, array(
 	'NO_MODE'					=> 'Inget sätt angavs.',
 	'NO_MODERATORS'				=> 'Det finns inga moderatorer.',
 	'NO_NEW_MESSAGES'			=> 'Inga nya meddelanden',
-	'NO_NEW_PM'					=> 'Inga nya meddelanden',
 	'NO_NEW_POSTS'				=> 'Inga nya inlägg',	// Not used anymore
 	'NO_ONLINE_USERS'			=> 'Inga registrerade användare',
 	'NO_POSTS'					=> 'Inga inlägg',
@@ -546,7 +657,6 @@ $lang = array_merge($lang, array(
 	'NO_TOPIC_FORUM'			=> 'Tråden eller kategorin finns inte längre.',
 	'NO_TOPICS'					=> 'Det finns inga trådar eller inlägg i denna kategori.',
 	'NO_TOPICS_TIME_FRAME'		=> 'Det finns inga trådar i denna kategori inom den valda tidsramen.',
-	'NO_UNREAD_PM'				=> 'Inga olästa meddelanden',
 	'NO_UNREAD_POSTS'			=> 'Inga olästa inlägg',
 	'NO_UPLOAD_FORM_FOUND'		=> 'Uppladdningen startades men inga giltiga filuppladdningsformer hittades.',
 	'NO_USER'					=> 'Den valda användaren finns inte.',
@@ -557,15 +667,14 @@ $lang = array_merge($lang, array(
 	'OFFLINE'					=> 'Offline',
 	'ONLINE'					=> 'Online',
 	'ONLINE_BUDDIES'			=> 'Vänner online',
-	'ONLINE_USERS_TOTAL'		=> 'Totalt <strong>%d</strong> användare online: ',
-	'ONLINE_USERS_ZERO_TOTAL'	=> 'Inga användare online: ',
-	'ONLINE_USER_TOTAL'			=> 'Totalt <strong>%d</strong> användare online: ',
 	'OPTIONS'					=> 'Alternativ',
 
 	'PAGE_OF'				=> 'Sida <strong>%1$d</strong> av <strong>%2$d</strong>',
+	'PAGE_TITLE_NUMBER'		=> 'Page %s',
 	'PASSWORD'				=> 'Lösenord',
 	'PIXEL'					=> 'px',
 	'PLAY_QUICKTIME_FILE'	=> 'Spela upp Quicktime-fil',
+	'PLEASE_WAIT'			=> 'Please wait.',
 	'PM'					=> 'PM',
 	'PM_REPORTED'			=> 'Klicka för att se rapporten',
 	'POSTING_MESSAGE'		=> 'Skriver meddelande i %s',
@@ -578,9 +687,15 @@ $lang = array_merge($lang, array(
 	'POSTED_ON_DATE'		=> 'on',
 	'POSTS'					=> 'Inlägg',
 	'POSTS_UNAPPROVED'		=> 'Minst ett inlägg i denna tråd har inte godkänts.',
+	'POSTS_UNAPPROVED_FORUM'=> 'At least one post in this forum has not been approved.',
 	'POST_BY_AUTHOR'		=> 'av',
-	'POST_BY_FOE'			=> 'Detta inlägg har gjorts av <strong>%1$s</strong> som är på din lista över ignorerade användare. %2$sVisa detta inlägg%3$s.',
+	'POST_BY_FOE'			=> '<strong>%1$s</strong>, who is currently on your ignore list, made this post.',
+	'POST_DISPLAY'			=> '%1$sDisplay this post%2$s.',
 	'POST_DAY'				=> '%.2f inlägg per dag',
+	'POST_DELETED_ACTION'	=> 'Deleted post:',
+	'POST_DELETED'			=> 'This post has been deleted.',
+	'POST_DELETED_BY'		=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s.',
+	'POST_DELETED_BY_REASON'=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s for the following reason: %4$s',
 	'POST_DETAILS'			=> 'Inläggsuppgifter',
 	'POST_NEW_TOPIC'		=> 'Ny tråd',
 	'POST_PCT'				=> '%.2f%% av alla inlägg',
@@ -591,7 +706,8 @@ $lang = array_merge($lang, array(
 	'POST_SUBJECT'			=> 'Inläggsrubrik',
 	'POST_TIME'				=> 'Inläggstid',
 	'POST_TOPIC'			=> 'Skapa en ny tråd',
-	'POST_UNAPPROVED'		=> 'Detta inlägg väntar på godkännande.',
+	'POST_UNAPPROVED_ACTION'	=> 'Post awaiting approval:',
+	'POST_UNAPPROVED'		=> 'This post has not been approved.',
 	'POWERED_BY'			=> 'Powered by %s',
 	'PREVIEW'				=> 'Förhandsgranska',
 	'PREVIOUS'				=> 'Föregående',		// Used in pagination
@@ -601,6 +717,8 @@ $lang = array_merge($lang, array(
 	'PRIVATE_MESSAGES'		=> 'Personliga meddelanden',
 	'PRIVATE_MESSAGING'		=> 'Personliga meddelanden',
 	'PROFILE'				=> 'Kontrollpanel',
+
+	'QUICK_LINKS'			=> 'Quick links',
 
 	'RANK'						=> 'Titel',
 	'READING_FORUM'				=> 'Visar trådar i %s',
@@ -614,15 +732,6 @@ $lang = array_merge($lang, array(
 	'REDIRECTS'					=> 'Antal vidarebefordringar',
 	'REGISTER'					=> 'Bli medlem',
 	'REGISTERED_USERS'			=> 'Medlemmar online:',
-	'REG_USERS_ONLINE'			=> 'Det är %d medlemmar och ',
-	'REG_USERS_TOTAL'			=> '%d medlemmar, ',
-	'REG_USERS_TOTAL_AND'		=> '%d medlemmar och ',
-	'REG_USERS_ZERO_ONLINE'		=> 'Det är inga medlemmar och ',
-	'REG_USERS_ZERO_TOTAL'		=> 'Inga medlemmar, ',
-	'REG_USERS_ZERO_TOTAL_AND'	=> 'inga medlemmar och ',
-	'REG_USER_ONLINE'			=> 'Det är %d medlemmar och ',
-	'REG_USER_TOTAL'			=> '%d medlem, ',
-	'REG_USER_TOTAL_AND'		=> '%d medlem och ',
 	'REMOVE'					=> 'Ta bort',
 	'REMOVE_INSTALL'			=> 'Ta bort, flytta eller byt namn på install-katalogen innan du använder ditt forum. Om denna katalog finns kvar så kan ingenting förutom administrationspanelen visas.',
 	'REPLIES'					=> 'Svar',
@@ -639,7 +748,8 @@ $lang = array_merge($lang, array(
 	'RETURN_FORUM'				=> '%sÅtergå till kategorin du senast besökte%s',
 	'RETURN_PAGE'				=> '%sÅtergå till föregående sida%s',
 	'RETURN_TOPIC'				=> '%sÅtergå till tråden du senast besökte%s',
-	'RETURN_TO'					=> 'Återgå till',
+	'RETURN_TO'					=> 'Return to “%s”',
+	'RETURN_TO_INDEX'			=> 'Return to Board Index',
 	'FEED'						=> 'Flöde',
 	'FEED_NEWS'					=> 'Nyheter',
 	'FEED_TOPICS_ACTIVE'		=> 'Aktiva trådar',
@@ -667,28 +777,30 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV_EXPLAIN'		=> 'Visa avancerade sökalternativ',
 	'SEARCH_KEYWORDS'			=> 'Sök efter nyckelord',
 	'SEARCHING_FORUMS'			=> 'Söker på forumet',
-	'SEARCH_ACTIVE_TOPICS'		=> 'Visa aktiva trådar',
+	'SEARCH_ACTIVE_TOPICS'		=> 'Active topics',
 	'SEARCH_FOR'				=> 'Sök efter',
 	'SEARCH_FORUM'				=> 'Sök i kategori…',
-	'SEARCH_NEW'				=> 'Visa nya inlägg',
+	'SEARCH_NEW'				=> 'New posts',
 	'SEARCH_POSTS_BY'			=> 'Sök efter inlägg av',
-	'SEARCH_SELF'				=> 'Visa dina inlägg',
+	'SEARCH_SELF'				=> 'Your posts',
 	'SEARCH_MINE'				=> 'View your topics',
 	'SEARCH_TOPIC'				=> 'Sök i denna tråd…',
-	'SEARCH_UNANSWERED'			=> 'Visa obesvarade inlägg',
-	'SEARCH_UNREAD'				=> 'Visa olästa inlägg',
+	'SEARCH_UNANSWERED'			=> 'Unanswered posts',
+	'SEARCH_UNREAD'				=> 'Unread posts',
 	'SEARCH_USER_POSTS'			=> 'Visa användarens inlägg',
 	'SECONDS'					=> 'sekunder',
+	'SEE_ALL'					=> 'See All',
 	'SELECT'					=> 'Välj',
 	'SELECT_ALL_CODE'			=> 'Markera allt',
 	'SELECT_DESTINATION_FORUM'	=> 'Välj en destinationskategori',
 	'SELECT_FORUM'				=> 'Välj en kategori',
-	'SEND_EMAIL'				=> 'Skicka e-post',				// Used for submit buttons
-	'SEND_EMAIL_USER'			=> 'Skicka e-post till',				// Used as: {L_SEND_EMAIL_USER} {USERNAME} -> E-mail UserX
+	'SEND_EMAIL'				=> 'Send email',				// Used for submit buttons
+	'SEND_EMAIL_USER'			=> 'Send email to %s',
 	'SEND_PRIVATE_MESSAGE'		=> 'Skicka personligt meddelande',
 	'SETTINGS'					=> 'Inställningar',
 	'SIGNATURE'					=> 'Signatur',
 	'SKIP'						=> 'Gå direkt till innehåll',
+	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'SMTP-servern stödjer inte autentisering.',
 	'SORRY_AUTH_READ'			=> 'Du har inte behörighet att visa denna kategori.',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'Du har inte behörighet att ladda ner denna bilaga.',
@@ -706,6 +818,8 @@ $lang = array_merge($lang, array(
 	'START_WATCHING_TOPIC'		=> 'Bevaka denna tråd',
 	'STOP_WATCHING_FORUM'		=> 'Sluta bevaka denna kategori',
 	'STOP_WATCHING_TOPIC'		=> 'Sluta bevaka denna tråd',
+	'STRING_LIST_MULTI'			=> '%1$s, and %2$s',
+	'STRING_LIST_SIMPLE'		=> '%1$s and %2$s',
 	'SUBFORUM'					=> 'Underkategori',
 	'SUBFORUMS'					=> 'Underkategorier',
 	'SUBJECT'					=> 'Ämne',
@@ -717,51 +831,35 @@ $lang = array_merge($lang, array(
 	'THE_TEAM'			=> 'Teamet',
 	'TIB'				=> 'TiB',
 	'TIME'				=> 'Tid',
-	
+	'TIMEOUT_PROCESSING_REQ'			=> 'Request timed out.',
+
 	'TOO_LARGE'						=> 'Värdet du angav är för stort.',
 	'TOO_LARGE_MAX_RECIPIENTS'		=> 'Värdet för <strong>maximalt antal tillåtna mottagare per privat meddelande</strong> överskrider det tillåtna.',
 
 	'TOO_LONG'						=> 'Värdet du angav är för långt.',
 
-	'TOO_LONG_AIM'					=> 'Skärmnamnet du angav är för långt.',
 	'TOO_LONG_CONFIRM_CODE'			=> 'Verifieringskoden du angav är för lång.',
 	'TOO_LONG_DATEFORMAT'			=> 'Datumformatet du angav är för långt.',
-	'TOO_LONG_ICQ'					=> 'ICQ-nummret du angav är för långt.',
-	'TOO_LONG_INTERESTS'			=> 'Intressefältet innehåller för många tecken.',
 	'TOO_LONG_JABBER'				=> 'Jabber-kontonamnet du angav är för långt.',
-	'TOO_LONG_LOCATION'				=> 'Ortnamnet du angav är för långt.',
-	'TOO_LONG_MSN'					=> 'MSNM/WLM-namnet du angav är för långt.',
 	'TOO_LONG_NEW_PASSWORD'			=> 'Lösenordet du angav är för långt.',
-	'TOO_LONG_OCCUPATION'			=> 'Sysselsättningsfältet innehåller för många tecken.',
 	'TOO_LONG_PASSWORD_CONFIRM'		=> 'Lösenordsbekräftelsen du angav är för lång.',
 	'TOO_LONG_USER_PASSWORD'		=> 'Lösenordet du angav är för långt.',
 	'TOO_LONG_USERNAME'				=> 'Användarnamnet du angav är för långt.',
-	'TOO_LONG_EMAIL'				=> 'E-postadressen du angav är för lång.',
-	'TOO_LONG_EMAIL_CONFIRM'		=> 'E-postadressbekräftelsen du angav är för lång.',
-	'TOO_LONG_WEBSITE'				=> 'Webbplatsadressen du angav är för lång.',
-	'TOO_LONG_YIM'					=> 'Yahoo! Messenger-namnet du angav är för långt.',
+	'TOO_LONG_EMAIL'				=> 'The email address you entered is too long.',
 
 	'TOO_MANY_VOTE_OPTIONS'			=> 'Du försökte att rösta på för många alternativ.',
 
 	'TOO_SHORT'						=> 'Värdet du angav är för kort.',
 
-	'TOO_SHORT_AIM'					=> 'Skärmnamnet du angav är för kort.',
 	'TOO_SHORT_CONFIRM_CODE'		=> 'Verifieringskoden du angav är för kort.',
 	'TOO_SHORT_DATEFORMAT'			=> 'Datumformatet du angav är för kort.',
-	'TOO_SHORT_ICQ'					=> 'ICQ-nummret du angav är för kort.',
-	'TOO_SHORT_INTERESTS'			=> 'Intressefältet innehåller för få tecken.',
 	'TOO_SHORT_JABBER'				=> 'Jabber-kontonamnet du angav är för kort.',
-	'TOO_SHORT_LOCATION'			=> 'Orten du angav är för kort.',
-	'TOO_SHORT_MSN'					=> 'MSNM/WLM-namnet du angav är för kort.',
 	'TOO_SHORT_NEW_PASSWORD'		=> 'Lösenordet du angav är för kort.',
-	'TOO_SHORT_OCCUPATION'			=> 'Sysselsättningsfältet innehåller för få tecken.',
 	'TOO_SHORT_PASSWORD_CONFIRM'	=> 'Lösenordsbekräftelsen du angav är för kort.',
 	'TOO_SHORT_USER_PASSWORD'		=> 'Lösenordet du angav är för kort.',
 	'TOO_SHORT_USERNAME'			=> 'Användarnamnet du angav är för kort.',
-	'TOO_SHORT_EMAIL'				=> 'E-postadressen du angav är för kort.',
-	'TOO_SHORT_EMAIL_CONFIRM'		=> 'E-postadressbekräftelsen du angav är för kort.',
-	'TOO_SHORT_WEBSITE'				=> 'Webbplatsadressen du angav är för kort.',
-	'TOO_SHORT_YIM'					=> 'Yahoo! Messenger-namnet du angav är för kort.',
+	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
+	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
 	
 	'TOO_SMALL'						=> 'Värdet du angav är för litet.',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> 'Värdet för <strong>maximalt antal tillåtna mottagare per privat meddelande</strong> underskrider det tillåtna.',
@@ -775,30 +873,20 @@ $lang = array_merge($lang, array(
 	'TOPIC_MOVED'		=> 'Flyttad tråd',
 	'TOPIC_REVIEW'		=> 'Trådhistorik',
 	'TOPIC_TITLE'		=> 'Trådrubrik',
-	'TOPIC_UNAPPROVED'	=> 'Denna tråd har inte godkänts',
+	'TOPIC_UNAPPROVED'	=> 'This topic has not been approved.',
+	'TOPIC_DELETED'		=> 'This topic has been deleted.',
 	'TOTAL_ATTACHMENTS'	=> 'Bilagor',
-	'TOTAL_LOG'			=> '1 logg',
-	'TOTAL_LOGS'		=> '%d loggposter',
-	'TOTAL_NO_PM'		=> 'Inga personliga meddelanden',
-	'TOTAL_PM'			=> 'Totalt 1 personligt meddelande',
-	'TOTAL_PMS'			=> 'Totalt %d personliga meddelanden',
+	'TOPIC_POLL'		=> 'This topic has a poll.',
 	'TOTAL_POSTS'		=> 'Totalt antal inlägg',
-	'TOTAL_POSTS_OTHER'	=> 'Totalt antal inlägg <strong>%s</strong>',
-	'TOTAL_POSTS_ZERO'	=> 'Inga inlägg',
 	'TOPIC_REPORTED'	=> 'Denna tråd har rapporterats',
-	'TOTAL_TOPICS_OTHER'=> 'Totalt antal trådar <strong>%s</strong>',
-	'TOTAL_TOPICS_ZERO'	=> 'Inga trådar',
-	'TOTAL_USERS_OTHER'	=> 'Totalt antal medlemmar <strong>%s</strong>',
-	'TOTAL_USERS_ZERO'	=> 'Inga medlemmar',
 	'TRACKED_PHP_ERROR'	=> 'Spårade PHP-fel: %s',
+	'TWITTER'			=> 'Twitter',
 
-	'UNABLE_GET_IMAGE_SIZE'	=> 'Det gick inte att fastställa bildens storlek.',
+	'UNABLE_GET_IMAGE_SIZE'	=> 'It was not possible to determine the dimensions of the image. Please verify that the URL you entered is correct.',
 	'UNABLE_TO_DELIVER_FILE'=> 'Kunde inte leverera filen.',
 	'UNKNOWN_BROWSER'		=> 'Okänd webbläsare',
 	'UNMARK_ALL'			=> 'Avmarkera alla',
 	'UNREAD_MESSAGES'		=> 'Olästa meddelanden',
-	'UNREAD_PM'				=> '<strong>%d</strong> oläst meddelande',
-	'UNREAD_PMS'			=> '<strong>%d</strong> olästa meddelanden',
 	'UNREAD_POST'			=> 'Oläst inlägg',
 	'UNREAD_POSTS'			=> 'Olästa inlägg',
 	'UNWATCH_FORUM_CONFIRM'		=> 'Är du säker på att du vill ta bort bevakningen av denna kategori?',
@@ -816,8 +904,6 @@ $lang = array_merge($lang, array(
 	'USERNAMES'				=> 'Användarnamn',
 	'USER_AVATAR'			=> 'Användarvisningsbild',
 	'USER_CANNOT_READ'		=> 'Du kan inte läsa inlägg i denna kategori.',
-	'USER_POST'				=> '%d inlägg',
-	'USER_POSTS'			=> '%d inlägg',
 	'USERS'					=> 'Användare',
 	'USE_PERMISSIONS'		=> 'Testa användarens behörigheter',
 
@@ -825,6 +911,8 @@ $lang = array_merge($lang, array(
 
 	'VARIANT_DATE_SEPARATOR'	=> ' / ',	// Used in date format dropdown, eg: "Today, 13:37 / 01 Jan 2007, 13:37" ... to join a relative date with calendar date
 	'VIEWED'					=> 'Visad',
+
+	'VIEWING_CONTACT_ADMIN'		=> 'Viewing contact page',
 	'VIEWING_FAQ'				=> 'Läser FAQ',
 	'VIEWING_MEMBERS'			=> 'Visar medlemslistan',
 	'VIEWING_ONLINE'			=> 'Visar vilka som är online',
@@ -839,8 +927,6 @@ $lang = array_merge($lang, array(
 	'VIEW_LATEST_POST'			=> 'Gå till det senaste inlägget',
 	'VIEW_NEWEST_POST'			=> 'Gå till det första olästa inlägget',
 	'VIEW_NOTES'				=> 'Visa användaranteckningar',
-	'VIEW_ONLINE_TIME'			=> 'baserat på aktiva användare under den senaste %d minuten',
-	'VIEW_ONLINE_TIMES'			=> 'baserat på aktiva användare under de senaste %d minuterna',
 	'VIEW_TOPIC'				=> 'Visa tråd',
 	'VIEW_TOPIC_ANNOUNCEMENT'	=> 'Anslag: ',
 	'VIEW_TOPIC_GLOBAL'			=> 'Globalt anslag: ',
@@ -861,23 +947,24 @@ $lang = array_merge($lang, array(
 	'WEBSITE'			=> 'Webbplats',
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> 'Vilka är online',
+	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'Du angav ett felaktigt lösenord.',
 	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
-	'WRONG_DATA_ICQ'			=> 'Numret du angav är inte ett giltigt ICQ-nummer.',
 	'WRONG_DATA_JABBER'			=> 'Namnet du angav är inte ett giltigt Jabber-kontonamn.',
 	'WRONG_DATA_LANG'			=> 'Språket som du valde var felaktigt.',
-	'WRONG_DATA_WEBSITE'		=> 'Webbplatsadressen måste vara en giltig URL, inklusive protokoll. Till exempel http://www.example.com/.',
+	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
+	'WRONG_DATA_POST_SK'		=> 'The post sort option you specified is not valid.',
+	'WRONG_DATA_TOPIC_SD'		=> 'The topic sort direction you specified is not valid.',
+	'WRONG_DATA_TOPIC_SK'		=> 'The topic sort option you specified is not valid.',
 	'WROTE'						=> 'skrev',
 
+	'YAHOO'				=> 'Yahoo Messenger',
+	'YOUTUBE'			=> 'YouTube',
 	'YEAR'				=> 'År',
 	'YEAR_MONTH_DAY'	=> '(ÅÅÅÅ-MM-DD)',
 	'YES'				=> 'Ja',
-	'YIM'				=> 'YIM',
 	'YOU_LAST_VISIT'	=> 'Senaste besöket: %s',
-	'YOU_NEW_PM'		=> 'Ett nytt personligt meddelande väntar i inkorgen.',
-	'YOU_NEW_PMS'		=> 'Nya personliga meddelanden väntar i inkorgen.',
-	'YOU_NO_NEW_PM'		=> 'Inga nya personliga meddelanden väntar i inkorgen.',
 
 	'default_dateformat'	=> '|D d M Y|, H:i', // Mon Jan 01, 2007 1:37 pm
 
@@ -1083,7 +1170,6 @@ $lang = array_merge($lang, array(
 
 	'FORUM_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this forum.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this topic.',
-	'TOO_FEW_CHARS_LIMIT'	=> 'Ditt meddelande innehåller %1$d tecken. Det minsta antal tecken ett meddelande bör innehålla är %2$d.',
 	'REPLY_TO_MESSAGE'		=> 'Reply to message',
 
 	'RSS_CHAN_LIST_TITLE'	=> 'Kategorier',
@@ -1695,7 +1781,6 @@ $lang = array_merge($lang, array(
 	'DEV_NO_TEST_FILE'			=> 'Inga värden angavs för test_file-variabeln i konverteraren. Om du är användaren av denna konverterare så ska du inte se detta fel, rapportera detta meddelande till författaren av konverteraren. Om du är författaren av konverteraren så måste du ange namnet för filen som finns i källforumet så att sökvägen kan bekräftas.',
 	'DIRECTORIES_AND_FILES'		=> 'Katalog- och filinställning',
 	'DISABLE_KEYS'				=> 'Inaktiverar nycklar',
-	'DLL_FIREBIRD'				=> 'Firebird',
 	'DLL_FTP'					=> 'Stöd för fjärr-FTP [ Installation ]',
 	'DLL_GD'					=> 'Stöd för GD-grafik [ Visuell bekräftelse ]',
 	'DLL_MBSTRING'				=> 'Teckenstöd för Multi-byte',
@@ -1706,11 +1791,12 @@ $lang = array_merge($lang, array(
 	'DLL_MYSQLI'				=> 'MySQL with MySQLi Extension',
 	'DLL_ORACLE'				=> 'Oracle',
 	'DLL_POSTGRES'				=> 'PostgreSQL',
-	'DLL_SQLITE'				=> 'SQLite',
+	'DLL_SQLITE'				=> 'SQLite 2',
+	'DLL_SQLITE3'				=> 'SQLite 3',
 	'DLL_XML'					=> 'XML-stöd [ Jabber ]',
 	'DLL_ZLIB'					=> 'zlib komprimeringsstöd [ gz, .tar.gz, .zip ]',
 	'DL_CONFIG'					=> 'Ladda ner config.php',
-	'DL_CONFIG_EXPLAIN'			=> 'Du kan ladda ner den fullständiga config.php till din egen PC. Du kan sedan ladda upp filen manuellt och ersätta eventuell redan existerande config.php i ditt phpBB 3.0 rot-katalog. Kom ihåg att ladda upp filen i ASCII-format (se dokumentationen till ditt FTP-program om du är osäker på hur man gör detta). När du har laddat upp config.php klicka på “Klar” för att gå till nästa sida.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'Ladda ner',
 	'DONE'						=> 'Klart',
 
@@ -1722,8 +1808,6 @@ $lang = array_merge($lang, array(
 	'FILES_REQUIRED_EXPLAIN'	=> '<strong>Obligatoriskt</strong> - För att phpBB ska fungera korrekt så måste phpBB kunna komma åt eller skriva till vissa filer och kataloger. Om du ser “Hittas inte” nedan så måste du skapa den relevanta filen eller katalogen. Om du ser “Ej skrivbar” nedan så måste du ändra behörigheterna på filen eller katalogen så att phpBB kan skriva till den.',
 	'FILLING_TABLE'				=> 'Fyller tabell <strong>%s</strong>',
 	'FILLING_TABLES'			=> 'Fyller tabeller',
-
-	'FIREBIRD_DBMS_UPDATE_REQUIRED'		=> 'phpBB stöder inte längre tidigare versioner av Firebird/Interbase än 2.1. Var god uppdatera din Firebird till version 2.1.0. före du fortsätter din uppdatering av phpBB3',
 
 	'FINAL_STEP'				=> 'Utför sista steget',
 	'FORUM_ADDRESS'				=> 'Forumadress',
@@ -1750,28 +1834,30 @@ $lang = array_merge($lang, array(
 		<p>Klicka på knappen nedan. Du kommer då att tas till ett formulär i administrationspanelen för ditt nya forum, formuläret tillåter dig att skicka statistik till phpBB. Vi uppskattar den hjälp du ger genom att fylla i dessa uppgifter. Ta dig sedan tid att utforska alla tillgängliga alternativ och inställningar. Kom ihåg att hjälp finns att få online i <a href="http://www.phpbb.com/support/documentation/3.0/">dokumentationen</a>, på det <a href="http://www.phpbb.com/community/viewforum.php?f=46">engelska supportforumet</a> och på det <a href="http://www.phpbb-se.com/forum/index.php">svenska supportforumet</a> Se även <a href="%3$s">README</a> för mer information.</p><p><strong>Ta nu bort, byt namn på eller flytta install-katalogen innan du använder ditt forum. Om denna katalog finns kvar kommer endast administrationspanelen att vara tillgänglig.</strong></p>',
 	'INSTALL_INTRO'				=> 'Välkommen till installationen',
 
-	'INSTALL_INTRO_BODY'		=> 'Med detta alternativ så kan du installera phpBB3 på sin server.</p><p>För att fortsätta så måste du ha dina databasinställningar till hands. Om du inte känner till dina databasinställningar, kontakta ditt webbhotell och fråga efter dem. Du kan inte fortsätta utan de. Du behöver:</p>
-	<ul>
-		<li>Databastypen - databasen som du kommer att använda.</li>
-		<li>Databasens servervärdnamn eller DSN - adressen till databasservern.</li>
-		<li>Databasens serverport - porten för databasservern (i de flesta fall behövs inte detta).</li>
-		<li>Databasnamnet - namnet på databasen på servern.</li>
-		<li>Databasens användarnamn och lösenord - inloggningsinformationen för att komma åt databasen.</li>
-	</ul>
-	<p><strong>Observera:</strong> om du installerar med SQLite ska du ange den fullständiga sökvägen till din databasfil i DSN-fältet och lämna användarnamn och lösenordsfälten tomma. Av säkerhetsskäl bör du se till att databasfilen inte är lagrad på en plats som kan nås från webben.</p>
+	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
 
-	<p>phpBB3 stödjer följande databaser:</p>
 	<ul>
-		<li>MySQL 3.23 eller nyare (MySQLi stöds)</li>
-		<li>PostgreSQL 7.3+</li>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
+	</ul>
+
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
+
+	<p>phpBB3 supports the following databases:</p>
+	<ul>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
 		<li>SQLite 2.8.2+</li>
-		<li>Firebird 2.1+</li>
-		<li>MS SQL Server 2000 eller nyare (direkt eller via ODBC)</li>
-		<li>MS SQL Server 2005 eller nyare (native)</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
 		<li>Oracle</li>
 	</ul>
 
-	<p>Endast de databaser som din server stödjer kommer att visas.',
+	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'För att starta installationen, tryck på knappen nedan.',
 	'INSTALL_LOGIN'				=> 'Logga in',
 	'INSTALL_NEXT'				=> 'Nästa steg',
@@ -1787,9 +1873,8 @@ $lang = array_merge($lang, array(
 	'INST_ERR_DB_NO_ERROR'		=> 'Inget felmeddelande gavs.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'Versionen av MySQL som är installerad på denna maskin är inte kompatibel med “MySQL with MySQLi Extension”-alternativet som du har valt. Försök med “MySQL”-alternativet istället.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'Versionen av SQLite som du har installerad är för gammal, den måste uppgraderas till minst 2.8.2.',
+	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'Versionen av Oracle som är installerad på denna maskin kräver att du ställer in <var>NLS_CHARACTERSET</var>-parametern till <var>UTF8</var>. Uppgradera din installation till 9.2eller ändra parametern.',
-	'INST_ERR_DB_NO_FIREBIRD'	=> 'Versionen av Firebird som är installerad på denna maskin är äldre än 2.1, uppgradera till en nyare version.',
-	'INST_ERR_DB_NO_FIREBIRD_PS'=> 'Databasen du har valt för Firebird har en “page size” som är mindre än 8192, den måste vara minst 8192.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'Databasen du har valt skapades inte med <var>UNICODE</var> eller <var>UTF8</var> kodning. Försök installera med en databas med <var>UNICODE</var> eller <var>UTF8</var> kodning.',
 	'INST_ERR_DB_NO_NAME'		=> 'Inget databasnamn angavs.',
 	'INST_ERR_EMAIL_INVALID'	=> 'E-postadressen du angav är ogiltig.',
@@ -1843,6 +1928,8 @@ $lang = array_merge($lang, array(
 	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB kommer <strong>inte</strong> att fungera om din PHP-installation inte kompilerats med UTF-8 stöd i PCRE-extension.',
 	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP-funktionen getimagesize() finns tillgänglig',
 	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Obligatoriskt</strong> - För att phpBB ska fungera som det ska så måste getimagesize-funktionen finnas.',
+	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'Frivilliga moduler',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>Frivilligt</strong> - Dessa moduler eller applikationer är frivilliga. Dock kommer de om de finns tillgängliga att aktivera extra funktioner.',
 	'PHP_SUPPORTED_DB'				=> 'Databaser som stöds',
@@ -1851,10 +1938,10 @@ $lang = array_merge($lang, array(
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'phpBB kommer att fungera om denna inställning är aktiverad, men om det är möjligt så är det rekommenderat att register_globals inaktiveras i din PHP-installation av säkerhetsskäl.',
 	'PHP_SAFE_MODE'					=> 'Safe mode',
 	'PHP_SETTINGS'					=> 'PHP-version och inställningar',
-	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Obligatoriskt</strong> - Du måste köra minst version 4.3.3 av PHP för att installera phpBB. Om <var>safe mode</var> visas nedan så körs din PHP-installation med denna inställning. Detta kommer att resultera i begränsningar på fjärradministration och liknande funktioner.',
+	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'PHP-inställningen <var>allow_url_fopen</var> är aktiverad',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>Frivilligt</strong> - Denna inställning är frivillig, men vissa phpBB-funktioner, såsom fjärrvisningsbilder, kommer inte att fungera korrekt utan den.',
-	'PHP_VERSION_REQD'				=> 'PHP-version >= 4.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
 	'POST_ID'						=> 'Inläggs-ID',
 	'PREFIX_FOUND'					=> 'En analys av dina tabeller visar att du har en giltig installation som använder <strong>%s</strong> som tabellprefix.',
 	'PREPROCESS_STEP'				=> 'Kör för-processfunktioner/frågor',
@@ -1874,6 +1961,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> 'Serverkonfiguration',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Sökindexet konverterades inte',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Ditt gamla sökindex konverterades inte. Sökningar kommer alltid att resultera i ett tomt resultat. För att skapa ett nytt sökindex, gå till administrationspanelen, klicka på Underhåll och välj sedan Sökindex från undermenyn.',
+	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> 'Forummjukvara',
 	'SPECIFY_OPTIONS'			=> 'Ange konverteringsalternativ',
 	'STAGE_ADMINISTRATOR'		=> 'Administratörskonfiguration',
@@ -1881,7 +1969,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> 'Inställningarna på denna sida behövs endast om du vet att du behöver ställa in någonting annorlunda än i normala inställningar. Om du är osäker, fortsätt till nästa sida. Dessa inställningar kan ändras senare i administrationspanelen.',
 	'STAGE_CONFIG_FILE'			=> 'Konfigurationsfil',
 	'STAGE_CREATE_TABLE'		=> 'Skapar databastabeller',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'Databastabellerna som används av phpBB3 har skapats och fyllts med lite inledande data. Fortsätt till nästa sida för att slutföra installationen av phpBB.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'Databasinställningar',
 	'STAGE_FINAL'				=> 'Slutskede',
 	'STAGE_INTRO'				=> 'Introduktion',
@@ -1894,7 +1982,7 @@ $lang = array_merge($lang, array(
 	'SUB_LICENSE'				=> 'Licens',
 	'SUB_SUPPORT'				=> 'Support',
 	'SUCCESSFUL_CONNECT'		=> 'Lyckad anslutning',
-	'SUPPORT_BODY'				=> 'Fullständig support ges för den aktuella stabila versionen av phpBB3, utan kostnad. Detta inkluderar:</p><ul><li>installation</li><li>konfiguration</li><li>tekniska frågor</li><li>problem relaterade till potentiella buggar i mjukvaran</li><li>uppdatering från releasekandidater (RC) till den senaste stabila versionen</li><li>konvertering från phpBB 2.0.x till phpBB3</li><li>konvertering från andra diskussionsforummjukvaror till phpBB3 (besök <a href="http://www.phpbb.com/community/viewforum.php?f=65">konverteringsforumet</a>)</li></ul><p>Vi rekommenderar användare som fortfarande använder betaversioner av phpBB3 att ersätta sina installationer med en fräsch kopia av den senaste versionen.</p><h2>MODdar / Stilar</h2><p>För problem relaterade till MODdar, posta i lämpligt <a href="http://www.phpbb.com/community/viewforum.php?f=81">modifikationsforum</a>.<br />För problem relaterade till stilar, mallar och bildpaket, posta i lämpligt <a href="http://www.phpbb.com/community/viewforum.php?f=80">stilforum</a>.<br /><br />Om din fråga är relaterad till ett specifikt paket, posta direkt i tråden dedikerad till paketet.</p><h2>Att få support</h2><p><a href="http://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">Välkomstpaketet för phpBB</a><br /><a href="http://www.phpbb.com/support/">Supportsektionen</a><br /><a href="http://www.phpbb.com/support/documentation/3.0/quickstart/">Snabbstartsguide</a><br /><br />För att försäkra dig själv om att du håller dig uppdaterad med de senaste nyheterna och versionerna, varför inte <a href="http://www.phpbb.com/support/">prenumerera på vårt nyhetsbrev</a>?<br /><br />',
+	'SUPPORT_BODY'				=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/documentation/3.1/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
 	'SYNC_FORUMS'				=> 'Startar synkroniseringen av kategorier',
 	'SYNC_POST_COUNT'			=> 'Synkroniserar inläggsräknaren',
 	'SYNC_POST_COUNT_ID'		=> 'Synkroniserar inläggsräknaren från <var>inlägg</var> %1$s till %2$s.',
@@ -1920,7 +2008,7 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ALL_FILES_UP_TO_DATE'		=> 'Alla filer är av den senaste phpBB versionen. Du bör nu <a href="../ucp.php?mode=login">logga in på ditt forum</a> och kontrollera att allt fungerar som det ska. Glöm inte att ta bort, byta namn på eller flytta katalogen install! Var god och sänd oss uppdaterad information om din server och forumkonfigurationer via modulen <a href="../ucp.php?mode=login&amp;redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">Sänd statistik</a> i administrationspanelen.',
+	'ALL_FILES_UP_TO_DATE'		=> 'All files are up to date with the latest phpBB version.',
 	'ARCHIVE_FILE'				=> 'Källfil inom arkiv',
 
 	'BACK'				=> 'Tillbaka',
@@ -1943,7 +2031,10 @@ $lang = array_merge($lang, array(
 	'CURRENT_VERSION'				=> 'Aktuell version',
 
 	'DATABASE_TYPE'						=> 'Databastyp',
+	'DATABASE_UPDATE_COMPLETE'			=> 'Database updater has completed!',
+	'DATABASE_UPDATE_CONTINUE'			=> 'Continue database update',
 	'DATABASE_UPDATE_INFO_OLD'			=> 'Databasuppdateringsfilen i install-katalogen är gammal. Försäkra dig om att du laddat upp rätt version av filen.',
+	'DATABASE_UPDATE_NOT_COMPLETED'		=> 'The database update has not yet completed.',
 	'DELETE_USER_REMOVE'				=> 'Ta bort användare och ta bort inlägg',
 	'DELETE_USER_RETAIN'				=> 'Ta bort användare men behåll inlägg',
 	'DESTINATION'						=> 'Destionationsfil',
@@ -1962,14 +2053,17 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_UPDATE_METHOD'			=> 'Ladda ner modifierat filarkiv',
 	'DOWNLOAD_UPDATE_METHOD_EXPLAIN'	=> 'När du laddat ner klart så packar du upp arkivet. Du kommer i den att hitta de ändrade filerna som du måste ladda upp till din phpBB-rotkatalog. Ladda upp filerna till deras respektive plats. När du laddat upp alla filerna, kontrollera filerna igen med knappen nedan.',
 
-	'ERROR'			=> 'Fel',
 	'EDIT_USERNAME'	=> 'Redigera användarnamn',
+	'ERROR'			=> 'Fel',
+	'EVERYTHING_UP_TO_DATE'		=> 'Everything is up to date with the latest phpBB version. You should now <a href="%1$s">login to your board</a> and check if everything is working fine. Do not forget to delete, rename or move your install directory! Please send us updated information about your server and board configurations from the <a href="%2$s">Send statistics</a> module in your ACP.',
 
 	'FILE_ALREADY_UP_TO_DATE'		=> 'Filerna är redan uppdaterade.',
 	'FILE_DIFF_NOT_ALLOWED'			=> 'Filerna får inte diffas.',
 	'FILE_USED'						=> 'Information används från',			// Single file
 	'FILES_CONFLICT'				=> 'Filer som resulterar i konflikt',
 	'FILES_CONFLICT_EXPLAIN'		=> 'Följande filer har ändrats och representerar inte originalfilerna från den gamla versionen. phpBB har upptäckt att dessa kommer att skapa konflikter om de sammanfogas. Undersök dessa konflikter och försök att lösa det manuellt eller fortsätt med uppdateringsprocessen genom att använda föredragen sammanfogningsmetod. Om du löser konflikterna manuellt måste du kontrollera filerna igen efter att ha ändrat dem. Du kan också välja föredragen sammanfogningsmetod enskilt för varje fil. Den första kommer resultera i en fil där de rader som hamnat i konflikt från din gamla fil kommer att försvinna, den andra kommer resultera i att rader från den nyare filen försvinner.',
+	'FILES_DELETED'					=> 'Deleted files',
+	'FILES_DELETED_EXPLAIN'			=> 'The following files do not exist in the new version. These files have to be deleted from your installation.',
 	'FILES_MODIFIED'				=> 'Ändrade filer',
 	'FILES_MODIFIED_EXPLAIN'		=> 'Följande filer har ändrats och representerar inte originalfilerna från den gamla versionen. Den uppdaterade filen kommer att vara en sammanfogning av dina förändringar och den nya filen.',
 	'FILES_NEW'						=> 'Nya filer',
@@ -2031,6 +2125,7 @@ $lang = array_merge($lang, array(
 	'PREVIOUS_VERSION'					=> 'Föregående version',
 	'PROGRESS'							=> 'Process',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Announcement',
 	'RESULT'					=> 'Resultat',
 	'RUN_DATABASE_SCRIPT'		=> 'Uppdatera min databas nu',
 
@@ -2038,6 +2133,7 @@ $lang = array_merge($lang, array(
 	'SELECT_DOWNLOAD_FORMAT'	=> 'Välj arkivformat',
 	'SELECT_FTP_SETTINGS'		=> 'Välj FTP-inställningar',
 	'SHOW_DIFF_CONFLICT'		=> 'Visa skillnader/konflikter',
+	'SHOW_DIFF_DELETED'			=> 'Show file contents',
 	'SHOW_DIFF_FINAL'			=> 'Visa resulterande fil',
 	'SHOW_DIFF_MODIFIED'		=> 'Visa sammanfogade skillnader',
 	'SHOW_DIFF_NEW'				=> 'Visa filinnehåll',
@@ -2051,6 +2147,7 @@ $lang = array_merge($lang, array(
 	'STAGE_UPDATE_FILES'		=> 'Uppdatera filer',
 	'STAGE_VERSION_CHECK'		=> 'Versionskontroll',
 	'STATUS_CONFLICT'			=> 'Ändrad fil resulterade konflikter',
+	'STATUS_DELETED'			=> 'Deleted file',
 	'STATUS_MODIFIED'			=> 'Ändrad fil',
 	'STATUS_NEW'				=> 'Ny fil',
 	'STATUS_NEW_CONFLICT'		=> 'Konflikt för ny fil',
@@ -2070,25 +2167,28 @@ $lang = array_merge($lang, array(
 	'UPDATE_INSTALLATION'			=> 'Uppdatera phpBB-installation',
 	'UPDATE_INSTALLATION_EXPLAIN'	=> 'Med detta alternativ kan du uppdatera din phpBB-installation till den senaste versionen.<br />Under processen kommer alla dina filer integritetskontrolleras. Du kan granska alla skillnader och filer innan uppdateringen sker.<br /><br />Filuppdateringen kan göras på två olika sätt.</p><h2>Manuell uppdatering</h2><p>Med denna uppdatering så laddar du endast ner ditt personliga set av ändrade filer så att du kan försäkra dig om att du inte förlorar några förändringar du gjort i filerna. När du laddat ner detta paket så måste du ladda upp dessa filer manuellt till sina rätta platser under din phpBB-rotkatalog. När du är klar så kan du göra filkontrollen igen för att se om du flyttat filerna till sin rätta platser.</p><h2>Automatisk uppdatering via FTP</h2><p>Denna metod liknar den första men kräver inte att du laddar ner de ändrade filerna och laddar upp dem på egen hand. Detta kommer att göras åt dig. För att använda detnna metod måste du känna till dina inloggningsdetaljer för FTP. När du är klar kommer du omdirigeras till filkontrollen igen för att kolla att allt uppdaterades korrekt.<br /><br />',
 	'UPDATE_INSTRUCTIONS'			=> '
-		<h1>Utgivingskungörelse</h1>
-		<p>Läs <a href="%1$s" title="%1$s"><strong>utgivingskungörelsen för den senaste versionen</strong></a> innan du fortsätter uppdateringsprocessen, den kan innehålla användbar information. Den innehåller också länkar till nerladdningar och en logg över ändringar i den nya versionen.</p>
+
+		<h1>Release announcement</h1>
+
+		<p>Please read the release announcement for the latest version before you continue your update process, it may contain useful information. It also contains full download links as well as the change log.</p>
+
 		<br />
-		<h1>Hur du uppdaterar din installation med det automatiska uppdateringspaketet</h1>
-		<p>Det rekommenderade sättet att uppdatera din installation som visas här är endast giltigt för det automatiska uppdateringspaketet. Du kan också uppdatera din installation genom sätten som visas i INSTALL.html-dokumentet. Stegen för att uppdatera phpBB3 automatiskt är:</p>
+
+		<h1>How to update your installation with the Automatic Update Package</h1>
+
+		<p>The recommended way of updating your installation listed here is only valid for the automatic update package. You are also able to update your installation using the methods listed within the INSTALL.html document. The steps for updating phpBB3 automatically are:</p>
+
 		<ul style="margin-left: 20px; font-size: 1.1em;">
-			<li>Gå till <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com nerladdningssida</a> och ladda ner det rätta "Automatic Update Package" arkivet.<br /><br /></li>
-			<li>Packa upp arkivet.<br /><br /></li>
-			<li>Ladda upp hela den okomprimerade install-mappen till din phpBB-rotkatalog (där din config.php-fil ligger).<br /><br /></li>
+			<li>Go to the <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com downloads page</a> and download the "Automatic Update Package" archive.<br /><br /></li>
+			<li>Unpack the archive.<br /><br /></li>
+			<li>Upload the complete uncompressed install folder to your phpBB root directory (where your config.php file is).<br /><br /></li>
 		</ul>
-		<p>När du laddat upp denna så kommer ditt forum att vara offline för vanliga användare eftersom install-katalogen du laddade upp nu finns där.<br /><br />
-		<strong><a href="%2$s" title="%2$s">Börja nu uppdateringsprocessen genom att gå till install-katalogen i din webbläsare</a>.</strong><br />
+
+		<p>Once uploaded your board will be offline for normal users due to the install directory you uploaded now present.<br /><br />
+		<strong><a href="%1$s" title="%1$s">Now start the update process by pointing your browser to the install folder</a>.</strong><br />
 		<br />
-		Du kommer sedan att guidas genom uppdateringsprocessen. Du kommer meddelas när uppdateringen är slutförd.
+		You will then be guided through the update process. You will be notified once the update is complete.
 		</p>
-	',
-	'UPDATE_INSTRUCTIONS_INCOMPLETE'	=> '
-		<h1>Ej slutförd uppdatering upptäcktes</h1>
-		<p>phpBB upptäckte en ej slutförd automatiskt uppdatering. Försäkra dig om att du följde varje steg i det automatiska uppdateringsverktyget. Nedan hittar du länken igen, eller så går du direkt till install-katalogen.</p>
 	',
 	'UPDATE_METHOD'					=> 'Uppdateringsmetod',
 	'UPDATE_METHOD_EXPLAIN'			=> 'Du kan nu välja den uppdateringsmetod du föredrar. Om du använder FTP-uppladdning kommer du få fylla i dina FTP-kontodetaljer i ett formulär. Med denna metod kommer filerna automatiskt att flyttas till sin nya plats och säkerhetskopior av de gamla filerna kommer att skapas genom att lägga till .bak till filnamnen. Om du väljer att ladda ner de ändrade filerna kommer du att kunna packa upp och ladda upp dem till sin rätta plats senare.',
@@ -2099,10 +2199,10 @@ $lang = array_merge($lang, array(
 	'UPDATING_DATA'					=> 'Uppdaterar data',
 	'UPDATING_TO_LATEST_STABLE'		=> 'Uppdaterar databasen till senaste versionen',
 	'UPDATED_VERSION'				=> 'Uppdaterad version',
-	'UPGRADE_INSTRUCTIONS'			=> 'En version <strong>%1$s</strong med nya funktioner är tillgänglig. Läs <a href="%2$s" title="%2$s"><strong>Anslaget om utgåvan</strong></a> för att lära dig mera om de nya funktionerna och hur du ska uppdatera ditt forum.',
 	'UPLOAD_METHOD'					=> 'Uppladdningsmetod',
 
 	'UPDATE_DB_SUCCESS'				=> 'Databasen har uppdaterats.',
+	'UPDATE_FILE_SUCCESS'			=> 'File update was successful.',
 	'USER_ACTIVE'					=> 'Aktiv användare',
 	'USER_INACTIVE'					=> 'Inaktiverad användare',
 
@@ -2162,6 +2262,33 @@ $lang = array_merge($lang, array(
 	'TOPICS_TOPIC_TITLE'			=> 'Välkommen till phpBB3',
 ));
 
+#######language/en/migrator.php#######
+
+$lang = array_merge($lang, array(
+	'CONFIG_NOT_EXIST'					=> 'The config setting "%s" unexpectedly does not exist.',
+
+	'GROUP_NOT_EXIST'					=> 'The group "%s" unexpectedly does not exist.',
+
+	'MIGRATION_APPLY_DEPENDENCIES'		=> 'Apply dependencies of %s.',
+	'MIGRATION_DATA_DONE'				=> 'Installed Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_IN_PROGRESS'		=> 'Installing Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_RUNNING'			=> 'Installing Data: %s.',
+	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
+	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
+	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
+	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
+	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
+	'MODULE_NOT_EXIST'					=> 'A required module does not exist: %s',
+
+	'PERMISSION_NOT_EXIST'				=> 'The permission setting "%s" unexpectedly does not exist.',
+
+	'ROLE_NOT_EXIST'					=> 'The permission role "%s" unexpectedly does not exist.',
+));
+
 #######language/en/mcp.php#######
 
 $lang = array_merge($lang, array(
@@ -2182,6 +2309,10 @@ $lang = array_merge($lang, array(
 	'APPROVE_POST_CONFIRM'	=> 'Är du säker på att du vill godkänna detta inlägg?',
 	'APPROVE_POSTS'			=> 'Godkänn inlägg',
 	'APPROVE_POSTS_CONFIRM'	=> 'Är du säker på att du vill godkänna de valda inläggen?',
+	'APPROVE_TOPIC'			=> 'Approve topic',
+	'APPROVE_TOPIC_CONFIRM'	=> 'Are you sure you want to approve this topic?',
+	'APPROVE_TOPICS'		=> 'Approve topics',
+	'APPROVE_TOPICS_CONFIRM'=> 'Are you sure you want to approve the selected topics?',
 
 	'CANNOT_MOVE_SAME_FORUM'=> 'Du kan inte flytta en tråd till den kategori som den redan är i.',
 	'CANNOT_WARN_ANONYMOUS'	=> 'Du kan inte varna oregistrerade gäster.',
@@ -2202,16 +2333,12 @@ $lang = array_merge($lang, array(
 	'DELETE_PM_REPORTS'			=> 'Delete PM reports',
 	'DELETE_PM_REPORTS_CONFIRM'	=> 'Är du säker på att du vill ta bort de valda PM-rapporterna?',
 	'DELETE_POSTS'				=> 'Ta bort inlägg',
-	'DELETE_POSTS_CONFIRM'		=> 'Är du säker på att du vill ta bort dessa inlägg?',
-	'DELETE_POST_CONFIRM'		=> 'Är du säker på att du vill ta bort detta inlägg?',
 	'DELETE_REPORT'				=> 'Ta bort rapport',
 	'DELETE_REPORT_CONFIRM'		=> 'Är du säker på att du vill ta bort den valda rapporten?',
 	'DELETE_REPORTS'			=> 'Ta bort rapporter',
 	'DELETE_REPORTS_CONFIRM'	=> 'Är du säker på att du vill ta bort de valda rapporterna?',
 	'DELETE_SHADOW_TOPIC'		=> 'Ta bort skuggtråd',
 	'DELETE_TOPICS'				=> 'Ta bort valda trådar',
-	'DELETE_TOPICS_CONFIRM'		=> 'Är du säker på att du vill ta bort dessa trådar?',
-	'DELETE_TOPIC_CONFIRM'		=> 'Är du säker på att du vill ta bort denna tråd?',
 	'DISAPPROVE'				=> 'Avslå',
 	'DISAPPROVE_REASON'			=> 'Skäl för avslag',
 	'DISAPPROVE_POST'			=> 'Avslå inlägg',
@@ -2249,8 +2376,6 @@ $lang = array_merge($lang, array(
 	'LATEST_WARNING_TIME'		=> 'Senast utfärdade varningen',
 	'LATEST_WARNINGS'			=> 'De senaste fem varningarna',
 	'LEAVE_SHADOW'				=> 'Lämna kvar skuggtråd i den gamla kategorin.',
-	'LIST_REPORT'				=> '1 rapport',
-	'LIST_REPORTS'				=> '%d rapporter',
 	'LOCK'						=> 'Lås',
 	'LOCK_POST_POST'			=> 'Lås inlägg',
 	'LOCK_POST_POST_CONFIRM'	=> 'Är du säker på att du vill förhindra redigering av detta inlägg?',
@@ -2329,6 +2454,10 @@ $lang = array_merge($lang, array(
 	'MCP_QUEUE_UNAPPROVED_POSTS_EXPLAIN'	=> 'Detta är en lista över alla inlägg som kräver godkännande innan de visas för andra medlemmar.',
 	'MCP_QUEUE_UNAPPROVED_TOPICS'			=> 'Trådar som väntar på godkännande',
 	'MCP_QUEUE_UNAPPROVED_TOPICS_EXPLAIN'	=> 'Detta är en lista över alla trådar som kräver godkännande innan de visas för andra medlemmar.',
+	'MCP_QUEUE_DELETED_POSTS'				=> 'Deleted posts',
+	'MCP_QUEUE_DELETED_POSTS_EXPLAIN'		=> 'This is a list of all soft deleted posts. You can restore or permanently delete the posts from this screen.',
+	'MCP_QUEUE_DELETED_TOPICS'				=> 'Deleted topics',
+	'MCP_QUEUE_DELETED_TOPICS_EXPLAIN'		=> 'This is a list of all soft deleted topics. You can restore or permanently delete the topics from this screen.',
 
 	'MCP_VIEW_USER'			=> 'Visa varningar för en specifik användare',
 
@@ -2367,25 +2496,27 @@ $lang = array_merge($lang, array(
 	'NO_POST'						=> 'Du måste välja ett inlägg för att varna användaren för ett inlägg.',
 	'NO_POST_REPORT'				=> 'Detta inlägg rapporterades inte.',
 	'NO_POST_SELECTED'				=> 'Du måste välja minst ett inlägg för att utföra denna åtgärd.',
+	'NO_POSTS_DELETED'				=> 'There are no deleted posts.',
+	'NO_POSTS_QUEUE'				=> 'There are no posts waiting for approval.',
 	'NO_REASON_DISAPPROVAL'			=> 'Ange en passande anledning för avslag.',
 	'NO_REPORT'						=> 'Ingen rapport hittades',
 	'NO_REPORTS'					=> 'Inga rapporter hittades',
 	'NO_REPORT_SELECTED'			=> 'Du måste välja minst en rapport för att utföra denna åtgärd.',
 	'NO_TOPIC_ICON'					=> 'Ingen',
 	'NO_TOPIC_SELECTED'				=> 'Du måste välja minst en tråd för att utföra denna åtgärd.',
+	'NO_TOPICS_DELETED'				=> 'There are no deleted topics.',
 	'NO_TOPICS_QUEUE'				=> 'Det finns inga trådar som väntar på godkännande.',
 
 	'ONLY_TOPIC'			=> 'Endast tråd “%s”',
 	'OTHER_USERS'			=> 'Andra användare som postar från detta IP',
 
+	'QUICKMOD_ACTION_NOT_ALLOWED' => "%s not allowed as quickmod",
+
 	'PM_REPORT_CLOSED_SUCCESS'	=> 'Den valda PM-rapporten stängdes.',
 	'PM_REPORT_DELETED_SUCCESS'	=> 'Den valda PM-rapporten togs bort.',
 	'PM_REPORTED_SUCCESS'		=> 'Detta privata meddelande har nu rapporterats.',
-	'PM_REPORT_TOTAL'			=> 'Det finns totalt <strong>1</strong> PM-rapport att granska.',
 	'PM_REPORTS_CLOSED_SUCCESS'	=> 'De valda PM-rapporterna har stängts.',
 	'PM_REPORTS_DELETED_SUCCESS'=> 'De valda PM-rapporterna har raderats.',
-	'PM_REPORTS_TOTAL'			=> 'Det finns totalt <strong>%d</strong> PM-rapporter att granska..',
-	'PM_REPORTS_ZERO_TOTAL'		=> 'Det finns inga PM-rapporter att granska.',
 	'PM_REPORT_DETAILS'			=> 'Rapportdetaljer för PM',
 	'POSTER'					=> 'Postare',
 	'POSTS_APPROVED_SUCCESS'	=> 'De valda inläggen godkändes.',
@@ -2393,15 +2524,17 @@ $lang = array_merge($lang, array(
 	'POSTS_DISAPPROVED_SUCCESS'	=> 'De valda inläggen avslogs.',
 	'POSTS_LOCKED_SUCCESS'		=> 'De valda inläggen låstes.',
 	'POSTS_MERGED_SUCCESS'		=> 'De valda inläggen sammanfogades.',
-	'POSTS_UNLOCKED_SUCCESS'	=> 'De valda inläggen låstes upp.',
 	'POSTS_PER_PAGE'			=> 'Inlägg per sida',
 	'POSTS_PER_PAGE_EXPLAIN'	=> '(Sätt till 0 för att visa alla inlägg.)',
+	'POSTS_RESTORED_SUCCESS'	=> 'The selected posts have been restored successfully.',
+	'POSTS_UNLOCKED_SUCCESS'	=> 'De valda inläggen låstes upp.',
 	'POST_APPROVED_SUCCESS'		=> 'Det valda inlägget godkändes.',
 	'POST_DELETED_SUCCESS'		=> 'Det valda inlägget togs bort från databasen.',
 	'POST_DISAPPROVED_SUCCESS'	=> 'Det valda inlägget avslogs.',
 	'POST_LOCKED_SUCCESS'		=> 'Inlägget låstes.',
 	'POST_NOT_EXIST'			=> 'Inlägget du efterfrågade finns inte.',
 	'POST_REPORTED_SUCCESS'		=> 'Inlägget rapporterades.',
+	'POST_RESTORED_SUCCESS'		=> 'This post has been restored successfully.',
 	'POST_UNLOCKED_SUCCESS'		=> 'Inlägget låstes upp.',
 
 	'READ_USERNOTES'			=> 'Användaranteckningar',
@@ -2412,8 +2545,6 @@ $lang = array_merge($lang, array(
 	'REPORTED_ON_DATE'			=> 'on',
 	'REPORTS_CLOSED_SUCCESS'	=> 'De valda rapporterna stängdes.',
 	'REPORTS_DELETED_SUCCESS'	=> 'De valda rapporterna togs bort.',
-	'REPORTS_TOTAL'				=> 'Det finns totalt <strong>%d</strong> rapporter att granska.',
-	'REPORTS_ZERO_TOTAL'		=> 'Det finns inga rapporter att granska.',
 	'REPORT_CLOSED'				=> 'Denna rapport har redan stängts.',
 	'REPORT_CLOSED_SUCCESS'		=> 'Den valda rapporten stängdes.',
 	'REPORT_DELETED_SUCCESS'	=> 'Den valda rapporten togs bort.',
@@ -2425,7 +2556,15 @@ $lang = array_merge($lang, array(
 	'REPORT_POST_EXPLAIN'		=> 'Använd detta formulär för att rapportera det valda inlägget till kategorins moderatorer och till forumadministratörerna. Du bör endast rapportera meddelandet  om det bryter mot forumets regler.',
 	'REPORT_REASON'				=> 'Rapportanledning',
 	'REPORT_TIME'				=> 'Rapporttid',
-	'REPORT_TOTAL'				=> 'Det finns totalt <strong>1</strong> rapport att granska.',
+	'RESTORE'					=> 'Restore',
+	'RESTORE_POST'				=> 'Restore post',
+	'RESTORE_POST_CONFIRM'		=> 'Are you sure you want to restore this post?',
+	'RESTORE_POSTS'				=> 'Restore posts',
+	'RESTORE_POSTS_CONFIRM'		=> 'Are you sure you want to restore the selected posts?',
+	'RESTORE_TOPIC'				=> 'Restore topic',
+	'RESTORE_TOPIC_CONFIRM'		=> 'Are you sure you want to restore this topic?',
+	'RESTORE_TOPICS'			=> 'Restore topics',
+	'RESTORE_TOPICS_CONFIRM'	=> 'Are you sure you want to restore the selected topics?',
 	'RESYNC'					=> 'Synkronisera',
 	'RETURN_MESSAGE'			=> '%sÅtergå till meddelandet%s',
 	'RETURN_NEW_FORUM'			=> '%sGå till den nya kategorin%s',
@@ -2466,6 +2605,7 @@ $lang = array_merge($lang, array(
 	'TOPICS_FORKED_SUCCESS'		=> 'De valda trådarna kopierades.',
 	'TOPICS_LOCKED_SUCCESS'		=> 'De valda trådarna låstes.',
 	'TOPICS_MOVED_SUCCESS'		=> 'De valda trådarna flyttades.',
+	'TOPICS_RESTORED_SUCCESS'	=> 'The selected topics have been restored successfully.',
 	'TOPICS_RESYNC_SUCCESS'		=> 'De valda trådarna synkroniserades.',
 	'TOPICS_TYPE_CHANGED'		=> 'Trådtyperna byttes.',
 	'TOPICS_UNLOCKED_SUCCESS'	=> 'De valda trådarna låstes upp.',
@@ -2476,6 +2616,7 @@ $lang = array_merge($lang, array(
 	'TOPIC_LOCKED_SUCCESS'		=> 'Den valda tråden låstes.',
 	'TOPIC_MOVED_SUCCESS'		=> 'Den valda tråden flyttades.',
 	'TOPIC_NOT_EXIST'			=> 'Den valda tråden finns inte.',
+	'TOPIC_RESTORED_SUCCESS'	=> 'The selected topic has been restored successfully.',
 	'TOPIC_RESYNC_SUCCESS'		=> 'Den valda tråden synkroniserades.',
 	'TOPIC_SPLIT_SUCCESS'		=> 'Den valda tråden delades.',
 	'TOPIC_TIME'				=> 'Trådtid',
@@ -2483,9 +2624,6 @@ $lang = array_merge($lang, array(
 	'TOPIC_UNLOCKED_SUCCESS'	=> 'Den valda tråden låstes upp.',
 	'TOTAL_WARNINGS'			=> 'Totalt antal varningar',
 
-	'UNAPPROVED_POSTS_TOTAL'		=> 'Det finns totalt <strong>%d</strong> inlägg som väntar på godkännande.',
-	'UNAPPROVED_POSTS_ZERO_TOTAL'	=> 'Det finns inga inlägg som väntar på godkännande.',
-	'UNAPPROVED_POST_TOTAL'			=> 'Det finns totalt <strong>1</strong> inlägg som väntar på godkännande.',
 	'UNLOCK'						=> 'Lås upp',
 	'UNLOCK_POST'					=> 'Lås upp inlägg',
 	'UNLOCK_POST_EXPLAIN'			=> 'Tillåt redigering',
@@ -2511,7 +2649,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'Följande är en varning som har utfärdats mot dig av en administratör eller moderator på detta forum.[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'Varning utfärdad',
 	'WARNING_POST_DEFAULT'	=> 'Detta är en varning för följande inlägg: %s.',
-	'WARNINGS_ZERO_TOTAL'	=> 'Inga varningar finns.',
+	'NO_WARNINGS'	=> 'No warnings exist.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Du valde tråd nummer %d: %s.',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -2551,10 +2689,12 @@ $lang = array_merge($lang, array(
 	'ALL'					=> 'Alla',
 	'BEFORE'				=> 'Före',
 	'CC_EMAIL'				=> 'Skicka en kopia av detta e-postmeddelande till mig själv.',
-	'CONTACT_USER'			=> 'Kontaktinformation',
+	'CONTACT_ADMIN'			=> 'Contact a Board Administrator',
 
 	'DEST_LANG'				=> 'Språk',
 	'DEST_LANG_EXPLAIN'		=> 'Välj ett språk om passar för mottagaren (om det finns tillgängligt) av detta meddelande.',
+
+	'EDIT_PROFILE'			=> 'Edit Profile',
 
 	'EMAIL_BODY_EXPLAIN'	=> 'Detta meddelande kommer att skickas som oformaterad text, använd inte HTML eller BBCode. Svarsadressen för detta e-postmeddelande kommer att vara din e-postadress.',
 	'EMAIL_DISABLED'		=> 'Alla e-postrelaterade funktioner har inaktiverats.',
@@ -2564,7 +2704,9 @@ $lang = array_merge($lang, array(
 	'EMPTY_MESSAGE_EMAIL'	=> 'Du måste skriva ett meddelande.',
 	'EMPTY_MESSAGE_IM'		=> 'Du måste skriva ett meddelande att skicka.',
 	'EMPTY_NAME_EMAIL'		=> 'Du måste ange mottagarens riktiga namn.',
-	'EMPTY_SUBJECT_EMAIL'	=> 'Du måste ange ett ämne för e-postmeddelandet.',
+	'EMPTY_SENDER_EMAIL'	=> 'You must provide a valid email address.',
+	'EMPTY_SENDER_NAME'		=> 'You must provide a name.',
+	'EMPTY_SUBJECT_EMAIL'	=> 'You must specify a subject for the email.',
 	'EQUAL_TO'				=> 'Lika med',
 
 	'FIND_USERNAME_EXPLAIN'	=> 'Använd detta formulär för att söka efter specifika medlemmar. Du måste inte fylla i alla fält. För att hitta partiella data använd * som jokertecken. För datum, använd formatet <kbd>ÅÅÅÅ-MM-DD</kbd>, t.ex. <samp>2004-02-29</samp>. Använd kryssboxarna för att välja en eller flera användarnamn (fler användarnamn än ett kan väljas i vissa fall) och klicka på “Välj markerade” för att återgå till föregående formulär.',
@@ -2574,16 +2716,10 @@ $lang = array_merge($lang, array(
 	'HIDE_MEMBER_SEARCH'	=> 'Dölj medlemssök',
 
 	'IM_ADD_CONTACT'		=> 'Lägg till kontakt',
-	'IM_AIM'				=> 'Du måste ha AOL Instant Messenger installerat för att använda detta.',
-	'IM_AIM_EXPRESS'		=> 'AIM Express',
 	'IM_DOWNLOAD_APP'		=> 'Ladda ner program',
-	'IM_ICQ'				=> 'Kom ihåg att användaren kan ha valt att inte ta emot oombedda snabbmeddelanden.',
 	'IM_JABBER'				=> 'Kom ihåg att användaren kan ha valt att inte ta emot oombedda snabbmeddelanden.',
 	'IM_JABBER_SUBJECT'		=> 'Detta är ett automatiskt meddelande - svara inte! Meddelande from användare %1$s på %2$s.',
 	'IM_MESSAGE'			=> 'Ditt meddelande',
-	'IM_MSNM'				=> 'Du måste ha Windows Live Messenger installerat för att använda detta.',
-	'IM_MSNM_BROWSER'		=> 'Din webbläsare stödjer inte detta.',
-	'IM_MSNM_CONNECT'		=> 'MSNM/WLM är inte ansluten.\nDu måste ansluta MSNM/WLM för att fortsätta.',
 	'IM_NAME'				=> 'Ditt namn',
 	'IM_NO_DATA'			=> 'Det finns ingen passande kontaktinformation för denna användare.',
 	'IM_NO_JABBER'			=> 'Det går inte att skicka meddelande till Jabberanvändare på detta forum. Du måste ha en Jabberklient installerad på din dator för att kontakta mottagaren ovan.',
@@ -2595,15 +2731,15 @@ $lang = array_merge($lang, array(
 
 	'LAST_ACTIVE'				=> 'Senast aktiv',
 	'LESS_THAN'					=> 'Mindre än',
-	'LIST_USER'					=> '1 användare',
-	'LIST_USERS'				=> '%d användare',
-	'LOGIN_EXPLAIN_LEADERS'		=> 'Forumet kräver att du registrerar dig och loggar in för att visa teamlistan.',
+	'LOGIN_EXPLAIN_TEAM'		=> 'The board requires you to be registered and logged in to view the team listing.',
 	'LOGIN_EXPLAIN_MEMBERLIST'	=> 'Forumet kräver att du registrerar dig och loggar in för att visa medlemslistan.',
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'Forumet kräver att du registrerar dig och loggar in för att söka efter medlemmar.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'Forumet kräver att du registrerar dig och loggar in för att visa profiler.',
 
 	'MORE_THAN'				=> 'Mer än',
 
+	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
+	'NO_CONTACT_PAGE'		=> 'The board administrator contact page has been disabled.',
 	'NO_EMAIL'				=> 'Du har inte tillåtelse att skicka e-post till denna användare.',
 	'NO_VIEW_USERS'			=> 'Du har inte tillåtelse att visa medlemslistan eller profiler.',
 
@@ -2620,12 +2756,12 @@ $lang = array_merge($lang, array(
 
 	'SELECT_MARKED'			=> 'Välj markerade',
 	'SELECT_SORT_METHOD'	=> 'Välj sorteringsmetod',
-	'SEND_AIM_MESSAGE'		=> 'Skicka AIM-meddelande',
+	'SENDER_EMAIL_ADDRESS'	=> 'Your email address',
+	'SENDER_NAME'			=> 'Your name',
 	'SEND_ICQ_MESSAGE'		=> 'Skicka ICQ-meddelande',
 	'SEND_IM'				=> 'Snabbmeddelanden',
 	'SEND_JABBER_MESSAGE'	=> 'Skicka Jabber-meddelande',
 	'SEND_MESSAGE'			=> 'Meddelande',
-	'SEND_MSNM_MESSAGE'		=> 'Skicka MSNM/WLM-meddelande',
 	'SEND_YIM_MESSAGE'		=> 'Skicka YIM-meddelande',
 	'SORT_EMAIL'			=> 'E-post',
 	'SORT_LAST_ACTIVE'		=> 'Senast aktiv',
@@ -2633,12 +2769,18 @@ $lang = array_merge($lang, array(
 
 	'USERNAME_BEGINS_WITH'	=> 'Användarnamn som börjar med',
 	'USER_ADMIN'			=> 'Administrera användare',
-	'USER_BAN'				=> 'Bannlys',
+	'USER_BAN'				=> 'Ban one or more users by username',
 	'USER_FORUM'			=> 'Användarstatistik',
 	'USER_ONLINE'			=> 'Online',
 	'USER_PRESENCE'			=> 'Allmänt',
+	'USERS_PER_PAGE'		=> 'Users per page',
 
 	'VIEWING_PROFILE'		=> 'Visar profil - %s',
+	'VIEW_FACEBOOK_PROFILE'	=> 'View Facebook Profile',
+	'VIEW_SKYPE_PROFILE'	=> 'View Skype Profile',
+	'VIEW_TWITTER_PROFILE'	=> 'View Twitter Profile',
+	'VIEW_YOUTUBE_CHANNEL'	=> 'View YouTube Channel',
+	'VIEW_GOOGLEPLUS_PROFILE' => 'View Google+ Profile',
 	'VISITED'				=> 'Senaste besöket',
 
 	'WWW'					=> 'Webbplats',
@@ -2663,6 +2805,47 @@ $lang = array_merge($lang, array(
 	'USER_COMM_RANK'	=> 'Overall reviews:',
 	'USER_COMM_PERCENT'	=> 'Overall assessment of the user:',
 
+));
+
+#######language/en/plupload.php#######
+
+$lang = array_merge($lang, array(
+	'PLUPLOAD_ADD_FILES'		=> 'Add files',
+	'PLUPLOAD_ADD_FILES_TO_QUEUE'	=> 'Add files to the upload queue and click the start button.',
+	'PLUPLOAD_ALREADY_QUEUED'	=> '%s already present in the queue.',
+	'PLUPLOAD_CLOSE'			=> 'Close',
+	'PLUPLOAD_DRAG'				=> 'Drag files here.',
+	'PLUPLOAD_DUPLICATE_ERROR'	=> 'Duplicate file error.',
+	'PLUPLOAD_DRAG_TEXTAREA'	=> 'You may also attach files by dragging and dropping them in the message box.',
+	'PLUPLOAD_ERR_INPUT'		=> 'Failed to open input stream.',
+	'PLUPLOAD_ERR_MOVE_UPLOADED'	=> 'Failed to move uploaded file.',
+	'PLUPLOAD_ERR_OUTPUT'		=> 'Failed to open output stream.',
+	'PLUPLOAD_ERR_FILE_TOO_LARGE'	=> 'File too large:',
+	'PLUPLOAD_ERR_FILE_COUNT'	=> 'File count error.',
+	'PLUPLOAD_ERR_FILE_INVALID_EXT'	=> 'Invalid file extension:',
+	'PLUPLOAD_ERR_RUNTIME_MEMORY'	=> 'Runtime ran out of available memory.',
+	'PLUPLOAD_ERR_UPLOAD_URL'	=> 'Upload URL might be wrong or does not exist.',
+	'PLUPLOAD_EXTENSION_ERROR'	=> 'File extension error.',
+	'PLUPLOAD_FILE'				=> 'File: %s',
+	'PLUPLOAD_FILE_DETAILS'		=> 'File: %s, size: %d, max file size: %d',
+	'PLUPLOAD_FILENAME'			=> 'Filename',
+	'PLUPLOAD_FILES_QUEUED'		=> '%d files queued',
+	'PLUPLOAD_GENERIC_ERROR'	=> 'Generic error.',
+	'PLUPLOAD_HTTP_ERROR'		=> 'HTTP error.',
+	'PLUPLOAD_IMAGE_FORMAT'		=> 'Image format either wrong or not supported.',
+	'PLUPLOAD_INIT_ERROR'		=> 'Init error.',
+	'PLUPLOAD_IO_ERROR'			=> 'IO error.',
+	'PLUPLOAD_NOT_APPLICABLE'	=> 'N/A',
+	'PLUPLOAD_SECURITY_ERROR'	=> 'Security error.',
+	'PLUPLOAD_SELECT_FILES'		=> 'Select files',
+	'PLUPLOAD_SIZE'				=> 'Size',
+	'PLUPLOAD_SIZE_ERROR'		=> 'File size error.',
+	'PLUPLOAD_STATUS'			=> 'Status',
+	'PLUPLOAD_START_UPLOAD'		=> 'Start upload',
+	'PLUPLOAD_START_CURRENT_UPLOAD'	=> 'Start uploading queue',
+	'PLUPLOAD_STOP_UPLOAD'		=> 'Stop upload',
+	'PLUPLOAD_STOP_CURRENT_UPLOAD'	=> 'Stop current upload',
+	'PLUPLOAD_UPLOADED'			=> 'Uploaded %d/%d files',
 ));
 
 #######language/en/portal.php#######
@@ -2908,12 +3091,12 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s är <em>AV</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s är <em>PÅ</em>',
 	'BBCODE_I_HELP'				=> 'Kursiv text: [i]text[/i]',
-	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]',
 	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
 	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Infoga bild: [img]http://bild_url[/img]',
 	'BBCODE_Q_HELP'				=> 'Citera text: [quote]text[/quote]',
-	'BBCODE_S_HELP'				=> 'Textfärg: [color=red]text[/color]  Tips: du kan också använda color=#FF0000',
+	'BBCODE_S_HELP'				=> 'Font colour: [color=red]text[/color] or [color=#FF0000]text[/color]',
 	'BBCODE_U_HELP'				=> 'Understruken text: [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'Infoga länk: [url]http://url[/url] eller [url=http://url]Länktext[/url]',
 	'BUMP_ERROR'				=> 'Du kan inte knuffa upp denna tråd ännu.',
@@ -2932,8 +3115,20 @@ $lang = array_merge($lang, array(
 	'DELETE_MESSAGE'			=> 'Ta bort meddelande',
 	'DELETE_MESSAGE_CONFIRM'	=> 'Är du säker på att du vill ta bort detta meddelande?',
 	'DELETE_OWN_POSTS'			=> 'Du kan bara ta bort dina egna inlägg.',
+	'DELETE_PERMANENTLY'		=> 'Delete permanently',
 	'DELETE_POST_CONFIRM'		=> 'Är du säker på att du vill ta bort detta inlägg?',
-	'DELETE_POST_WARN'			=> 'När inlägget väl tagits bort kan det inte återställas',
+	'DELETE_POST_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this post?',
+	'DELETE_POST_PERMANENTLY'	=> 'Permanently delete this post so it can not be recovered',
+	'DELETE_POSTS_CONFIRM'		=> 'Är du säker på att du vill ta bort dessa inlägg?',
+	'DELETE_POSTS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these posts?',
+	'DELETE_REASON'				=> 'Reason for deleting this topic',
+	'DELETE_REASON_EXPLAIN'		=> 'The specified reason for deletion will be visible to moderators.',
+	'DELETE_POST_WARN'			=> 'Delete this post',
+	'DELETE_TOPIC_CONFIRM'		=> 'Är du säker på att du vill ta bort denna tråd?',
+	'DELETE_TOPIC_PERMANENTLY'	=> 'Permanently delete this topic so it can not be recovered',
+	'DELETE_TOPIC_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this topic?',
+	'DELETE_TOPICS_CONFIRM'		=> 'Är du säker på att du vill ta bort dessa trådar?',
+	'DELETE_TOPICS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these topics?',
 	'DISABLE_BBCODE'			=> 'Inaktivera BBCode',
 	'DISABLE_MAGIC_URL'			=> 'Inaktivera automatisk länkning av URL:er',
 	'DISABLE_SMILIES'			=> 'Inaktivera smilies',
@@ -2976,13 +3171,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_QUOTE'		=> 'Du måste logga in för att citera inlägg i denna kategori.',
 	'LOGIN_EXPLAIN_REPLY'		=> 'Du måste logga in för att svara på trådar i denna kategori.',
 
-	'MAX_FONT_SIZE_EXCEEDED'	=> 'Du får endast använda textstorlekar upp till storlek %1$d.',
-	'MAX_FLASH_HEIGHT_EXCEEDED'	=> 'Dina Flashfiler får inte vara högre än %1$d pixlar.',
-	'MAX_FLASH_WIDTH_EXCEEDED'	=> 'Dina Flashfiler får inte vara bredare än %1$d pixlar.',
-	'MAX_IMG_HEIGHT_EXCEEDED'	=> 'Dina bilder får inte vara högre än %1$d pixlar.',
-	'MAX_IMG_WIDTH_EXCEEDED'	=> 'Dina bilder får inte vara bredare än %1$d pixlar.',
-
-	'MESSAGE_BODY_EXPLAIN'		=> 'Skriv ditt meddelande här, det får inte bestå av fler än <strong>%d</strong> tecken.',
+	'MAX_FONT_SIZE_EXCEEDED'	=> 'You may only use fonts up to size %d.',
 	'MESSAGE_DELETED'			=> 'Meddelandet togs bort.',
 	'MORE_SMILIES'				=> 'Visa fler smilies',
 
@@ -3005,8 +3194,6 @@ $lang = array_merge($lang, array(
 	'POLL_MAX_OPTIONS'			=> 'Alternativ per användare',
 	'POLL_MAX_OPTIONS_EXPLAIN'	=> 'Detta är det antal alternativ varje användare kan välja när de röstar.',
 	'POLL_OPTIONS'				=> 'Omröstningsalternativ',
-	'POLL_OPTIONS_EXPLAIN'		=> 'Placera varje alternativ på en ny rad. Du kan ange upp till <strong>%d</strong> alternativ.',
-	'POLL_OPTIONS_EDIT_EXPLAIN'	=> 'Placera varje alternativ på en ny rad. Du kan ange upp till <strong>%d</strong> alternativ. Om du tar bort eller lägger till alternativ så kommer alla nuvarande röster återställas.',
 	'POLL_QUESTION'				=> 'Omröstningsfråga',
 	'POLL_TITLE_TOO_LONG'		=> 'Omröstningsfrågan får inte innehålla fler än 100 tecken',
 	'POLL_TITLE_COMP_TOO_LONG'	=> 'Den omtolkade storleken på din omröstningsfråga är för stor, försök ta bort BBCode eller smilies.',
@@ -3016,9 +3203,9 @@ $lang = array_merge($lang, array(
 	'POST_APPROVAL_NOTIFY'		=> 'Du kommer att underrättas när ditt inlägg har godkänts.',
 	'POST_CONFIRMATION'			=> 'Verifiera inlägg',
 	'POST_CONFIRM_EXPLAIN'		=> 'För att förhindra automatiska inlägg så kräver forumet att du här anger en verifieringskod. Koden visas i bilden nedan. Om du ser dåligt eller av annan anledning inte kan läsa koden nedan, kontakta %sforumadministratörerna%s.',
-	'POST_DELETED'				=> 'Meddelandet togs bort.',
-	'POST_EDITED'				=> 'Meddelandet ändrades.',
-	'POST_EDITED_MOD'			=> 'Meddelandet ändrades, men måste godkännas av en moderator innan det visas offentligt.',
+	'POST_DELETED'				=> 'This post has been deleted.',
+	'POST_EDITED'				=> 'This post has been edited successfully.',
+	'POST_EDITED_MOD'			=> 'This post has been edited successfully, but it will need to be approved by a moderator before it is publicly viewable.',
 	'POST_GLOBAL'				=> 'Global',
 	'POST_ICON'					=> 'Inläggsikon',
 	'POST_NORMAL'				=> 'Normal',
@@ -3031,8 +3218,9 @@ $lang = array_merge($lang, array(
 	'POST_TOPIC_AS'				=> 'Skapa tråd som',
 	'PROGRESS_BAR'				=> 'Uppladdningsprocess',
 
-	'QUOTE_DEPTH_EXCEEDED'		=> 'Du kan endast ha upp till %1$d citat inom varandra.',
+	'QUOTE_NO_NESTING'			=> 'You may not embed quotes within each other.',
 
+	'REMOTE_UPLOAD_TIMEOUT'		=> 'The specified file could not be uploaded because the request timed out.',
 	'SAVE'						=> 'Spara',
 	'SAVE_DATE'					=> 'Sparat',
 	'SAVE_DRAFT'				=> 'Spara utkast',
@@ -3049,8 +3237,6 @@ $lang = array_merge($lang, array(
 	'TOO_FEW_POLL_OPTIONS'		=> 'Du måste ange minst två omröstningsalternativ.',
 	'TOO_MANY_ATTACHMENTS'		=> 'Kan inte lägga till en till bilaga, %d är det maximala antalet bilagor per meddelande.',
 	'TOO_MANY_CHARS'			=> 'Ditt meddelande innehåller för många tecken.',
-	'TOO_MANY_CHARS_POST'		=> 'Ditt meddelande innehåller %1$d tecken. Det maximala antalet tillåtna tecken är %2$d.',
-	'TOO_MANY_CHARS_SIG'		=> 'Din signatur innehåller %1$d tecken. Det maximala antalet tillåtna tecken är %2$d.',
 	'TOO_MANY_POLL_OPTIONS'		=> 'Du angav för många omröstningsalternativ.',
 	'TOO_MANY_SMILIES'			=> 'Ditt meddelande innehåller för många smilies. Det maximala antalet tillåtna smilies är %d.',
 	'TOO_MANY_URLS'				=> 'Ditt meddelande innehåller för många länkar. Det maximala antalet tillåtna länkar är %d.',
@@ -3059,6 +3245,8 @@ $lang = array_merge($lang, array(
 
 	'UNAUTHORISED_BBCODE'		=> 'Du kan inte använda vissa BBCodes: %s.',
 	'UNGLOBALISE_EXPLAIN'		=> 'För att ändra tillbaka denna tråd från global till normal så måste du välja i vilken kategori som den ska visas.',
+	'UNSUPPORTED_CHARACTERS_MESSAGE'	=> 'Your message contains the following unsupported characters:<br />%s',
+	'UNSUPPORTED_CHARACTERS_SUBJECT'	=> 'Your subject contains the following unsupported characters:<br />%s',
 	'UPDATE_COMMENT'			=> 'Uppdatera kommentar',
 	'URL_INVALID'				=> 'URL:en du angav är felaktig.',
 	'URL_NOT_FOUND'				=> 'Filen hittades inte.',
@@ -3073,8 +3261,8 @@ $lang = array_merge($lang, array(
 	'VIEW_MESSAGE'				=> '%sVisa ditt meddelande%s',
 	'VIEW_PRIVATE_MESSAGE'		=> '%sVisa ditt skickade personliga meddelande%s',
 
-	'WRONG_FILESIZE'			=> 'Filen är för stor, den maximala filstorleken är %1d %2s.',
-	'WRONG_SIZE'				=> 'Bilden måste vara minst %1$d pixlar bred, %2$d pixlar hög och får inte vara större än %3$d pixlar bred och %4$d pixlar hög. Den valda bilden är %5$d pixlar bred och %6$d pixlar hög.',
+	'WRONG_FILESIZE'			=> 'The file is too big, maximum allowed size is %1$d %2$s.',
+	'WRONG_SIZE'				=> 'The image must be at least %1$s wide, %2$s high and at most %3$s wide and %4$s high. The submitted image is %5$s wide and %6$s high.',
 
 	'FONT_TYPE'			=> 'Typeface',
 	'FONT_COLOR'			=> 'Textfärg',
@@ -3094,10 +3282,6 @@ $lang = array_merge($lang, array(
 
 	'DISPLAY_RESULTS'		=> 'Visa resultat som',
 
-	'FOUND_SEARCH_MATCH'		=> '%d träff',
-	'FOUND_SEARCH_MATCHES'		=> '%d träffar',
-	'FOUND_MORE_SEARCH_MATCHES'	=> 'Fler än %d träffar',
-
 	'GLOBAL'				=> 'Globalt anslag',
 
 	'IGNORED_TERMS'			=> 'ignorerat',
@@ -3109,24 +3293,23 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_UNREADSEARCH'=> 'Forumet kräver att du är registrerad och inloggad för att visa dina olästa inlägg.',
 	'LOGIN_EXPLAIN_NEWPOSTS'	=> 'Forumet kräver att du är registrerad och inloggad for att visa nya inlägg sedan ditt senaste besök.',
 
-	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> 'Du har angett för många olika nyckelord. Var god försök på nytt med maximalt %1$d ord.',
-
-	'NO_KEYWORDS'			=> 'Du måste ange minst ett ord att söka efter. Varje ord måste bestå av minst %d tecken och inte mer än %d tecken, exklusive jokertecken.',
+	'NO_KEYWORDS'			=> 'You must specify at least one word to search for. Each word must consist of at least %s and must not contain more than %s excluding wildcards.',
 	'NO_RECENT_SEARCHES'	=> 'Inga sökningar har gjorts nyligen.',
 	'NO_SEARCH'				=> 'Du har inte tillåtelse att använda söksystemet.',
 	'NO_SEARCH_RESULTS'		=> 'Inga träffar hittades.',
-	'NO_SEARCH_TIME'		=> 'Du kan inte söka just nu. Försök igen om några minuter.',
 	'NO_SEARCH_UNREADS'		=> 'Sökning efter olästa trådar är avslaget på detta forum',
 	'WORD_IN_NO_POST'		=> 'Inga inlägg hittades eftersom ordet <strong>%s</strong> inte finns i något inlägg.',
 	'WORDS_IN_NO_POST'		=> 'Inga inlägg hittades eftersom orden <strong>%s</strong> inte finns i något inlägg.',
 
 	'POST_CHARACTERS'		=> 'tecknen av inlägget',
+	'PHRASE_SEARCH_DISABLED'	=> 'Searching by exact phrase is not supported on this board.',
 
 	'RECENT_SEARCHES'		=> 'Senaste sökningarna',
 	'RESULT_DAYS'			=> 'Begränsa resultaten till inlägg nyare än',
 	'RESULT_SORT'			=> 'Sortera resultat efter',
 	'RETURN_FIRST'			=> 'Skriv ut första',
 	'RETURN_TO_SEARCH_ADV'	=> 'Återgå till avancerad sökning',
+	'GO_TO_SEARCH_ADV'	=> 'Go to advanced search',
 
 	'SEARCHED_FOR'				=> 'Sökterm använd',
 	'SEARCHED_TOPIC'			=> 'Sökte inom tråd',
@@ -3153,10 +3336,11 @@ $lang = array_merge($lang, array(
 	'SORT_FORUM'				=> 'Kategori',
 	'SORT_POST_SUBJECT'			=> 'Inläggämne',
 	'SORT_TIME'					=> 'Datum',
+	'SPHINX_SEARCH_FAILED'		=> 'Search failed: %s',
+	'SPHINX_SEARCH_FAILED_LOG'	=> 'Sorry, search could not be performed. More information about this failure has been logged in the error log.',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
 	'SELECT_ALL_TAGS'		=> 'No selection',
-	'TOO_FEW_AUTHOR_CHARS'	=> 'Du måste ange minst %d tecken av författarens namn.',
 ));
 
 #######language/en/ucp.php#######
@@ -3212,6 +3396,7 @@ $lang = array_merge($lang, array(
 	'ATTACHMENTS_EXPLAIN'			=> 'Detta är en lista över filer du har bifogat till inlägg på detta forum.',
 	'ATTACHMENTS_DELETED'			=> 'Bilagorna togs bort.',
 	'ATTACHMENT_DELETED'			=> 'Bilagan togs bort.',
+	'AUTOLOGIN_SESSION_KEYS_DELETED'=> 'The selected "Remember Me" login keys were successfully deleted.',
 	'AVATAR_CATEGORY'				=> 'Kategori',
 	'AVATAR_DRIVER_GRAVATAR_TITLE'	=> 'Gravatar',
 	'AVATAR_DRIVER_GRAVATAR_EXPLAIN'=> 'Gravatar is a service that allows you to maintain the same avatar across multiple websites. Visit <a href="http://www.gravatar.com/">Gravatar</a> for more information.',
@@ -3221,12 +3406,14 @@ $lang = array_merge($lang, array(
 	'AVATAR_DRIVER_REMOTE_EXPLAIN'	=> 'Link to avatar images from another website.',
 	'AVATAR_DRIVER_UPLOAD_TITLE'	=> 'Upload avatar',
 	'AVATAR_DRIVER_UPLOAD_EXPLAIN'	=> 'Upload your own custom avatar.',
-	'AVATAR_EXPLAIN'				=> 'Maximalstorlek; bredd: %1$d pixlar, höjd: %2$d pixlar, filstorlek: %3$.2f KiB.',
+	'AVATAR_EXPLAIN'				=> 'Maximum dimensions; width: %1$s, height: %2$s, file size: %3$.2f KiB.',
 	'AVATAR_FEATURES_DISABLED'		=> 'Stödet för visningsbilder är för närvarande inaktiverat.',
 	'AVATAR_GALLERY'				=> 'Lokalt galleri',
 	'AVATAR_GENERAL_UPLOAD_ERROR'	=> 'Kunde inte ladda upp visningsbild till %s.',
 	'AVATAR_NOT_ALLOWED'			=> 'Din visningsbild kan inte visas, eftersom funktionen för visning av visningsbilder har inaktiverats.',
 	'AVATAR_PAGE'					=> 'Sida',
+	'AVATAR_SELECT'					=> 'Select your avatar',
+	'AVATAR_TYPE'					=> 'Avatar type',
 	'AVATAR_TYPE_NOT_ALLOWED'		=> 'Din nuvarande visningsbild kan inte visas, eftersom denna typ av visningsbilder har förbjudits.',
 
 	'BACK_TO_DRAFTS'			=> 'Tillbaka till sparade utkast',
@@ -3235,7 +3422,6 @@ $lang = array_merge($lang, array(
 	'BIRTHDAY_EXPLAIN'			=> 'Genom att ange ett år så kommer din ålder att visas när det är din födelsedag.',
 	'BOARD_DATE_FORMAT'			=> 'Mitt datumformat',
 	'BOARD_DATE_FORMAT_EXPLAIN'	=> 'Använd samma syntax som för PHPs <a href="http://www.php.net/date">date()</a>-funktion för inställning av detta fält.',
-	'BOARD_DST'					=> 'Sommartid/<abbr title="Daylight Saving Time">DST</abbr> är aktiverat',
 	'BOARD_LANGUAGE'			=> 'Mitt språk',
 	'BOARD_STYLE'				=> 'Min stil',
 	'BOARD_TIMEZONE'			=> 'Min tidszon',
@@ -3254,8 +3440,6 @@ $lang = array_merge($lang, array(
 	'CLICK_RETURN_FOLDER'		=> '%1$sÅtergå till din “%3$s”-mapp%2$s',
 	'CONFIRMATION'				=> 'Verifiering av registrering',
 	'CONFIRM_CHANGES'			=> 'Bekräfta ändringar',
-	'CONFIRM_EMAIL'				=> 'Bekräfta e-postadress',
-	'CONFIRM_EMAIL_EXPLAIN'		=> 'Du måste endast ange detta om du vill byta e-postadress.',
 	'CONFIRM_EXPLAIN'			=> 'För att förhindra automatiska registreringar så kräver forumet att du här skriver in en verifieringskod. Koden visas i bilden nedan. Om du ser dåligt eller av annan anledning inte kan se koden, kontakta %sforumadministratörerna%s.',
 	'VC_REFRESH'				=> 'Uppdatera verifieringskod',
 	'VC_REFRESH_EXPLAIN'		=> 'Om du inte ser koden  på bilden, så kan du be om en ny genom att klicka på knappen under.',
@@ -3264,7 +3448,7 @@ $lang = array_merge($lang, array(
 	'CONFIRM_PASSWORD_EXPLAIN'	=> 'Du måste endast bekräfta ditt lösenord om du ändrade det ovan.',
 	'COPPA_BIRTHDAY'			=> 'För att fortsätta med registreringen, berätta när du föddes.',
 	'COPPA_COMPLIANCE'			=> 'COPPA',
-	'COPPA_EXPLAIN'				=> 'Genom att klicka på <em>Skicka</em> så kommer ditt konto skapats. Dock kan det inte aktiveras förrän en förälder eller förmyndare godkänt din registrering. Du kommer få ett e-postmeddelande med formuläret du måste fylla i och med detaljer var det ska skickas.',
+	'COPPA_EXPLAIN'				=> 'Please note that clicking submit will create your account. However it cannot be activated until a parent or guardian approves your registration. You will be e-mailed a copy of the necessary form with details of where to send it.',
 	'CREATE_FOLDER'				=> 'Lägg till  mapp…',
 	'CURRENT_IMAGE'				=> 'Nuvarande bild',
 	'CURRENT_PASSWORD'			=> 'Nuvarande lösenord',
@@ -3319,27 +3503,34 @@ $lang = array_merge($lang, array(
 	'EXPORT_FOLDER'				=> 'Exportera denna vy',
 
 	'FIELD_REQUIRED'					=> 'Fältet “%s” måste fyllas i.',
-	'FIELD_TOO_SHORT'					=> 'Fältet “%1$s” är för kort, minst %2$d tecken krävs.',
-	'FIELD_TOO_LONG'					=> 'Fältet “%1$s” är för långt, maximalt %2$d tecken är tillåtna.',
-	'FIELD_TOO_SMALL'					=> 'Värdet av “%1$s” är för lågt, det måsta vara lika med eller högre än %2$d.',
-	'FIELD_TOO_LARGE'					=> 'Värdet av “%1$s” är för högt, det största värdet som är tillåtet är %2$d.',
+
+	'FIELD_TOO_SMALL'					=> 'The value of “%2$s” is too small, a minimum value of %1$d is required.',
+	'FIELD_TOO_LARGE'					=> 'The value of “%2$s” is too large, a maximum value of %1$d is allowed.',
+	'FIELD_INVALID_CHARS_INVALID'		=> 'The field “%s” has invalid characters.',
 	'FIELD_INVALID_CHARS_NUMBERS_ONLY'	=> 'Fältet “%s” innehåller felaktiga tecken, endast siffror är tillåtna.',
+	'FIELD_INVALID_CHARS_ALPHA_DOTS'	=> 'The field “%s” has invalid characters, only alphanumeric or . characters are allowed.',
 	'FIELD_INVALID_CHARS_ALPHA_ONLY'	=> 'Fältet “%s” innehåller felaktiga tecken, endast alfanumeriska tecken är tillåtna.',
-	'FIELD_INVALID_CHARS_SPACERS_ONLY'	=> 'Fältet “%s” innehåller felaktiga tecken, endast alfanumeriska tecken, mellanslag och -+_[] är tillåtna.',
+	'FIELD_INVALID_CHARS_ALPHA_PUNCTUATION'	=> 'The field “%s” has invalid characters, only alphanumeric or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_ALPHA_SPACERS'	=> 'The field “%s” has invalid characters, only alphanumeric, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_ALPHA_UNDERSCORE'	=> 'The field “%s” has invalid characters, only alphanumeric or _ characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_DOTS'	=> 'The field “%s” has invalid characters, only letter, number or . characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_ONLY'	=> 'The field “%s” has invalid characters, only letter and number characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_PUNCTUATION'	=> 'The field “%s” has invalid characters, only letter, number or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_SPACERS'		=> 'The field “%s” has invalid characters, only letter, number, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_UNDERSCORE'		=> 'The field “%s” has invalid characters, only letter, number or _ characters are allowed.',
 	'FIELD_INVALID_DATE'				=> 'Fältet “%s” innehåller ett felaktigt datum.',
+	'FIELD_INVALID_URL'					=> 'The field “%s” has an invalid url.',
 	'FIELD_INVALID_VALUE'				=> 'Fältet “%s” har ett felaktigt värde.',
 
 	'FOE_MESSAGE'				=> 'Meddelande från en ignorerad användare',
 	'FOES_EXPLAIN'				=> 'Ovänner är användare som kommer att ignoreras automatiskt. Inlägg av dessa användare kommer inte att visas helt. Personliga meddelanden från ignorerade  användare tillåts fortfarande. Observera att du inte kan ignorera moderatorer eller administratörer.',
 	'FOES_UPDATED'				=> 'Din lista över ignorerade  användare uppdaterades.',
 	'FOLDER_ADDED'				=> 'Mappen lades till.',
-	'FOLDER_MESSAGE_STATUS'		=> '%1$d av %2$d meddelanden lagrade',
 	'FOLDER_NAME_EMPTY'			=> 'Du måste ange ett namn för denna mapp.',
 	'FOLDER_NAME_EXIST'			=> 'Mappen <strong>%s</strong> finns redan.',
 	'FOLDER_OPTIONS'			=> 'Mappalternativ',
 	'FOLDER_RENAMED'			=> 'Bytte namn på mappen.',
 	'FOLDER_REMOVED'			=> 'Mappen togs bort.',
-	'FOLDER_STATUS_MSG'			=> 'Mappen är %1$d%% full (%2$d av %3$d meddelanden lagrade)',
 	'FORWARD_PM'				=> 'Vidarebefordra PM',
 	'FORCE_PASSWORD_EXPLAIN'	=> 'Innan du kan fortsätta så måste du byta ditt lösenord.',
 	'FRIEND_MESSAGE'			=> 'Meddelande från vän',
@@ -3408,16 +3599,35 @@ $lang = array_merge($lang, array(
 	'MOVE_DELETED_MESSAGES_TO'		=> 'Flytta meddelandena till',
 	'MOVE_DOWN'						=> 'Flytta ner',
 	'MOVE_MARKED_TO_FOLDER'			=> 'Flytta markerade till %s',
-	'MOVE_PM_ERROR'					=> 'Ett fel uppstod när meddelandena flyttades till den nya mappen, endast %1d av %2d meddelanden flyttades.',
 	'MOVE_TO_FOLDER'				=> 'Flytta till mapp',
 	'MOVE_UP'						=> 'Flytta upp',
 
-	'NEW_EMAIL_CONFIRM_EMPTY'		=> 'Du angav inte en giltig adress för e-post.',
-	'NEW_EMAIL_ERROR'				=> 'E-postadresserna du angav stämmer inte överens.',
 	'NEW_FOLDER_NAME'				=> 'Nytt mappnamn',
 	'NEW_PASSWORD'					=> 'Nytt lösenord',
 	'NEW_PASSWORD_CONFIRM_EMPTY'	=> 'Du angav inte ett giltigt lösenord.',
 	'NEW_PASSWORD_ERROR'			=> 'Lösenorden du angav stämmer inte överens.',
+
+	'NOTIFICATIONS_MARK_ALL_READ'						=> 'Mark all notifications read',
+	'NOTIFICATIONS_MARK_ALL_READ_CONFIRM'				=> 'Are you sure you want to mark all notifications read?',
+	'NOTIFICATIONS_MARK_ALL_READ_SUCCESS'				=> 'All notifications have been marked read.',
+	'NOTIFICATION_GROUP_MISCELLANEOUS'					=> 'Miscellaneous Notifications',
+	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
+	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
+	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'E-mail',
+	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
+	'NOTIFICATION_TYPE'									=> 'Notification type',
+	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
+	'NOTIFICATION_TYPE_GROUP_REQUEST'					=> 'Someone requests to join a group you lead',
+	'NOTIFICATION_TYPE_IN_MODERATION_QUEUE'				=> 'A post or topic needs approval',
+	'NOTIFICATION_TYPE_MODERATION_QUEUE'				=> 'Your topics/posts are approved or disapproved by a moderator',
+	'NOTIFICATION_TYPE_PM'								=> 'Someone sends you a private message',
+	'NOTIFICATION_TYPE_POST'							=> 'Someone replies to a topic to which you are subscribed',
+	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
+	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
+	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+
 	'NOTIFY_METHOD'					=> 'Meddelningsmetod',
 	'NOTIFY_METHOD_BOTH'			=> 'Båda',
 	'NOTIFY_METHOD_EMAIL'			=> 'Endast via e-post',
@@ -3435,10 +3645,9 @@ $lang = array_merge($lang, array(
 	'NOT_ADDED_FOES_SELF'			=> 'Du kan inte lägga till dig själv till din lista över ignorerade  användare.',
 	'NOT_AGREE'						=> 'Jag godkänner inte detta avtal',
 	'NOT_ENOUGH_SPACE_FOLDER'		=> 'Destinationsmappen “%s” verkar vara full. Den valda åtgärden har inte utförts.',
-	'NOT_MOVED_MESSAGE'				=> 'Du har 1 personligt meddelande som hålls tillbaka på grund av full mapp.',
-	'NOT_MOVED_MESSAGES'			=> 'Du har %d personliga meddelanden som hålls tillbaka på grund av full mapp.',
 	'NO_ACTION_MODE'				=> 'Ingen meddelandeåtgärd specificerad.',
 	'NO_AUTHOR'						=> 'Ingen författare definierad för detta meddelande',
+	'NO_AVATAR'						=> 'No avatar selected',
 	'NO_AVATAR_CATEGORY'			=> 'Ingen',
 
 	'NO_AUTH_DELETE_MESSAGE'		=> 'Du har inte behörighet att ta bort personliga meddelanden.',
@@ -3446,6 +3655,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_FORWARD_MESSAGE'		=> 'Du har inte behörighet att vidarebefordra personliga meddelanden.',
 	'NO_AUTH_GROUP_MESSAGE'			=> 'Du har inte behörighet att skicka personliga meddelanden till grupper.',
 	'NO_AUTH_PASSWORD_REMINDER'		=> 'Du har inte behörighet att be om ett nytt lösenord.',
+	'NO_AUTH_PROFILEINFO'			=> 'You are not authorised to change your profile information.',
 	'NO_AUTH_READ_HOLD_MESSAGE'		=> 'Du har inte behörighet att läsa privata meddelanden som hålls tillbaka.',
 	'NO_AUTH_READ_MESSAGE'			=> 'Du har inte behörighet att läsa personliga meddelanden.',
 	'NO_AUTH_READ_REMOVED_MESSAGE'	=> 'Du kan inte läsa detta meddelande eftersom det togs bort av dess författare.',
@@ -3476,10 +3686,10 @@ $lang = array_merge($lang, array(
 	'NO_WATCHED_SELECTED'		=> 'Du har inte valt någon bevakad tråd eller kategori.',
 	'NO_WATCHED_TOPICS'			=> 'Du bevakar inga trådar.',
 
-	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Lösenordet måste vara mellan %1$d och %2$d tecken långt och måste innehålla både stora och små bokstäver samt siffror.',
-	'PASS_TYPE_ANY_EXPLAIN'		=> 'Måste vara mellan %1$d och %2$d tecken.',
-	'PASS_TYPE_CASE_EXPLAIN'	=> 'Lösenordet måste vara mellan %1$d och %2$d tecken långt och måste innehålla både stora och små bokstäver.',
-	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Lösenordet måste vara mellan %1$d och %2$d tecken långt och måste innehålla både stora och små bokstäver, symboler samt siffror.',
+	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case and must contain numbers.',
+	'PASS_TYPE_ANY_EXPLAIN'		=> 'Must be between %1$s and %2$s.',
+	'PASS_TYPE_CASE_EXPLAIN'	=> 'Password must be between %1$s and %2$s long and must contain letters in mixed case.',
+	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case, must contain numbers and must contain symbols.',
 	'PASSWORD'					=> 'Lösenord',
 	'PASSWORD_ACTIVATED'		=> 'Ditt nya lösenord aktiverades.',
 	'PASSWORD_UPDATED'			=> 'Instruktioner om ditt nya lösenord skickades till den e-postadress, som är förknipad med ditt forumkonto.',
@@ -3490,13 +3700,16 @@ $lang = array_merge($lang, array(
 	'PM_FROM_REMOVED_AUTHOR'	=> 'Detta meddelande skickades från en användare som inte längre är registrerad.',
 	'PM_ICON'					=> 'PM-ikon',
 	'PM_INBOX'					=> 'Inkorg',
+	'PM_MARK_ALL_READ'			=> 'Mark all messages read',
+	'PM_MARK_ALL_READ_SUCCESS'	=> 'All private messages in this folder have been marked read',
 	'PM_NO_USERS'				=> 'De valda användarna finns inte.',
 	'PM_OUTBOX'					=> 'Utkorg',
 	'PM_SENTBOX'				=> 'Skickat',
 	'PM_SUBJECT'				=> 'Meddelandeämne',
 	'PM_TO'						=> 'Skickat till',
+	'PM_TOOLS'					=> 'Message tools',
+	'PM_USERS_REMOVED_NO_PERMISSION'	=> 'Some users couldn’t be added as they do not have permission to read private messages.',
 	'PM_USERS_REMOVED_NO_PM'	=> 'Vissa av användarna kunde inte läggas till eftersom de har inaktiverat mottagande av personliga meddelanden.',
-	'POPUP_ON_PM'				=> 'Öppna ett popup-fönster vid nytt personligt meddelande',
 	'POST_EDIT_PM'				=> 'Redigera meddelande',
 	'POST_FORWARD_PM'			=> 'Vidarebefordra meddelande',
 	'POST_NEW_PM'				=> 'Skriv meddelande',
@@ -3508,6 +3721,8 @@ $lang = array_merge($lang, array(
 	'PREFERENCES_UPDATED'		=> 'Dina inställningar sparades.',
 	'PROFILE_INFO_NOTICE'		=> 'Denna information kan komma att visas för andra medlemmar. Var försiktig med personlig information. Fält märkta med * måste fyllas i.',
 	'PROFILE_UPDATED'			=> 'Din profil uppdaterades.',
+	'PROFILE_AUTOLOGIN_KEYS'	=> 'The "Remember Me" login keys automatically log you in when you visit the board. If you logout, the remember me login key is deleted only on the computer you are using to logout. Here you can see remember login keys created on other computers you used to access this site.',
+	'PROFILE_NO_AUTOLOGIN_KEYS'	=> 'There are no saved "Remember Me" login keys.',
 
 	'RECIPIENT'							=> 'Mottagare',
 	'RECIPIENTS'						=> 'Mottagare',
@@ -3532,8 +3747,6 @@ $lang = array_merge($lang, array(
 	'RULE_DELETED'						=> 'Tog bort regel.',
 	'RULE_LIMIT_REACHED'				=> 'Du kan inte lägga till fler PM-regler. Du har nått det maximala antalet regler.',
 	'RULE_NOT_DEFINED'					=> 'Regeln är felaktig.',
-	'RULE_REMOVED_MESSAGE'				=> 'Ett personligt meddelande togs bort enligt angiven regel.',
-	'RULE_REMOVED_MESSAGES'				=> '%d personliga meddelanden togs bort enligt angiven regel.',
 
 	'SAME_PASSWORD_ERROR'		=> 'Det nya lösenordet du angav är samma som ditt nuvarande lösenord.',
 	'SEARCH_YOUR_POSTS'			=> 'Visa dina inlägg',
@@ -3545,6 +3758,8 @@ $lang = array_merge($lang, array(
 	'SIGNATURE_TOO_LONG'		=> 'Din signatur är för lång.',
 	'SELECT_CURRENT_TIME'		=> 'Select current time',
 	'SELECT_TIMEZONE'			=> 'Select timezone',
+	'SELECT_CURRENT_TIME'		=> 'Select current time',
+	'SELECT_TIMEZONE'			=> 'Select timezone',
 	'SORT'						=> 'Sortera',
 	'SORT_COMMENT'				=> 'Filkommentar',
 	'SORT_DOWNLOADS'			=> 'Nerladdningar',
@@ -3554,15 +3769,28 @@ $lang = array_merge($lang, array(
 	'SORT_SIZE'					=> 'Filstorlek',
 
 	'TIMEZONE'					=> 'Tidszon',
-	'TO'						=> 'Till',
+	'TIMEZONE_DATE_SUGGESTION'	=> 'Suggestion: %s',
+	'TIMEZONE_INVALID'			=> 'The timezone you selected is invalid.',
+	'TO'						=> 'Recipient',
+	'TO_MASS'					=> 'Recipients',
+	'TO_ADD'					=> 'Add recipient',
+	'TO_ADD_MASS'				=> 'Add recipients',
+	'TO_ADD_GROUPS'				=> 'Add groups',
 	'TOO_MANY_RECIPIENTS'		=> 'Du försökte sända ett privat meddelande till för många mottagare.',
 	'TOO_MANY_REGISTERS'		=> 'Du har överskridit det maximala antalet tillåtna registreringsförsök för denna session. Försök igen senare.',
 
 	'UCP'						=> 'Kontrollpanel',
 	'UCP_ACTIVATE'				=> 'Aktivera konto',
 	'UCP_ADMIN_ACTIVATE'		=> 'Observera att du måste ange en giltig e-postadress för att ditt konto ska kunna aktiveras. Forumadministratörerna kommer att granska ditt konto och om det godkänns så kommer du då att få ett e-postmeddelande till e-postadressen du anger.',
-	'UCP_AIM'					=> 'AOL Instant Messenger',
 	'UCP_ATTACHMENTS'			=> 'Bilagor',
+	'UCP_AUTH_LINK'				=> 'External accounts',
+	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
+	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
+	'UCP_AUTH_LINK_LINK'		=> 'Länk',
+	'UCP_AUTH_LINK_MANAGE'		=> 'Manage external account associations',
+	'UCP_AUTH_LINK_NOT_SUPPORTED'	=> 'Linking board accounts to external services is not supported by this board’s current authentication method.',
+	'UCP_AUTH_LINK_TITLE'		=> 'Manage your external account associations',
+	'UCP_AUTH_LINK_UNLINK'		=> 'Unlink',
 	'UCP_AUTH_LINK'				=> 'External accounts',
 	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
 	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
@@ -3574,8 +3802,8 @@ $lang = array_merge($lang, array(
 	'UCP_COPPA_BEFORE'			=> 'Före %s',
 	'UCP_COPPA_ON_AFTER'		=> 'På eller efter %s',
 	'UCP_EMAIL_ACTIVATE'		=> 'Observera att du måste ange en giltig e-postadress för att ditt konto ska kunna aktiveras. Du kommer att få ett e-postmeddelande till e-postadressen du anger med en kontoaktiveringslänk.',
-	'UCP_ICQ'					=> 'ICQ-nummer',
 	'UCP_JABBER'				=> 'Jabber-adress',
+	'UCP_LOGIN_LINK'			=> 'Set up an external account association',
 
 	'UCP_MAIN'					=> 'Översikt',
 	'UCP_MAIN_ATTACHMENTS'		=> 'Hantera bilagor',
@@ -3584,7 +3812,6 @@ $lang = array_merge($lang, array(
 	'UCP_MAIN_FRONT'			=> 'Förstasidan',
 	'UCP_MAIN_SUBSCRIBED'		=> 'Hantera bevakningar',
 
-	'UCP_MSNM'					=> 'Windows Live Messenger',
 	'UCP_NO_ATTACHMENTS'		=> 'Du har inte bifogat några filer.',
 
 	'UCP_NOTIFICATION_LIST'				=> 'Manage notifications',
@@ -3601,8 +3828,6 @@ $lang = array_merge($lang, array(
 	'UCP_PM_COMPOSE'			=> 'Skriv meddelande',
 	'UCP_PM_DRAFTS'				=> 'Hantera PM-utkast',
 	'UCP_PM_OPTIONS'			=> 'Regler, mappar &amp; inställningar',
-	'UCP_PM_POPUP'				=> 'Personliga meddelanden',
-	'UCP_PM_POPUP_TITLE'		=> 'Popup för personliga meddelande',
 	'UCP_PM_UNREAD'				=> 'Olästa meddelanden',
 	'UCP_PM_VIEW'				=> 'Visa meddelanden',
 
@@ -3617,11 +3842,11 @@ $lang = array_merge($lang, array(
 	'UCP_USERGROUPS_MEMBER'		=> 'Ändra medlemskap',
 	'UCP_USERGROUPS_MANAGE'		=> 'Hantera grupper',
 
+	'UCP_PASSWORD_RESET_DISABLED'	=> 'The password reset functionality has been disabled. If you need help accessing your account, please contact the %sBoard Administrator%s',
 	'UCP_REGISTER_DISABLE'			=> 'Det går inte att skapa nya konton just nu.',
 	'UCP_REMIND'					=> 'Skicka lösenord.',
 	'UCP_RESEND'					=> 'Skicka e-postmeddelande om aktivering.',
 	'UCP_WELCOME'					=> 'Välkommen till kontrollpanelen. Härifrån kan du övervaka, visa, och uppdatera din profil, dina inställningar och dina alternativ och bevakade kategorier/trådar. Du kan också skicka meddelanden till andra användare. Försäkra dig om att du har läst eventuella meddelanden nedan innan du fortsätter.',
-	'UCP_YIM'						=> 'Yahoo Messenger',
 	'UCP_ZEBRA'						=> 'Vänner &amp; ignorerade  användare',
 	'UCP_ZEBRA_FOES'				=> 'Hantera ignorerade  användare',
 	'UCP_ZEBRA_FRIENDS'				=> 'Hantera vänner',
@@ -3631,12 +3856,12 @@ $lang = array_merge($lang, array(
 	'UPLOAD_AVATAR_FILE'			=> 'Ladda upp från din dator',
 	'UPLOAD_AVATAR_URL'				=> 'Ladda upp från URL',
 	'UPLOAD_AVATAR_URL_EXPLAIN'		=> 'Ange URL:en till platsen som innehåller bilden. Bilden kommer att kopieras till denna webbplats.',
-	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Användarnamnet måste vara mellan %1$d och %2$d tecken långt och får endast innehålla alfanumeriska tecken.',
-	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Användarnamnet måste vara mellan %1$d och %2$d tecken långt och får endast innehålla alfanumeriska tecken, mellanslag eller -+_[].',
-	'USERNAME_ASCII_EXPLAIN'		=> 'Användarnamnet måste vara mellan %1$d och %2$d tecken långt och får endast innehålla ASCII-tecken, så inga speciella symboler.',
-	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Användarnamnet måste vara mellan %1$d och %2$d tecken långt och får endast innehålla bokstäver och siffror.',
-	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Användarnamnet måste vara mellan %1$d och %2$d tecken långt och får endast innehålla bokstäver, siffror, mellanslag och -+_[].',
-	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Måste vara mellan %1$d och %2$d tecken.',
+	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only alphanumeric characters.',
+	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use alphanumeric, space or -+_[] characters.',
+	'USERNAME_ASCII_EXPLAIN'		=> 'Username must be between %1$s and %2$s long and use only ASCII characters, so no special symbols.',
+	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only letter or number characters.',
+	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use letter, number, space or -+_[] characters.',
+	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Length must be between %1$s and %2$s.',
 	'USERNAME_TAKEN_USERNAME'		=> 'Användarnamnet som du valde används redan, välj ett annat alternativ.',
 	'USERNAME_DISALLOWED_USERNAME'	=> 'Användarnamnet som du valde är inte tillåtet eller innehåller ett otillåtet ord. Välj ett annat användarnamn.',
 	'USER_NOT_FOUND_OR_INACTIVE'	=> 'Användarnamnen som du angav finns antingen inte eller så är de inte aktiverade.',
@@ -3649,10 +3874,9 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_PM'				=> 'Nästa PM',
 	'VIEW_PM'					=> 'Visa PM',
 	'VIEW_PM_INFO'				=> 'Meddelandedetaljer',
-	'VIEW_PM_MESSAGE'			=> '1 meddelande',
-	'VIEW_PM_MESSAGES'			=> '%d meddelanden',
 	'VIEW_PREVIOUS_HISTORY'		=> 'Föregående PM i historiken',
 	'VIEW_PREVIOUS_PM'			=> 'Föregående PM',
+	'VIEW_PROFILE'				=> 'View profile',
 	'VIEW_SIGS'					=> 'Visa signaturer',
 	'VIEW_SMILIES'				=> 'Visa smilies som bilder',
 	'VIEW_TOPICS_DAYS'			=> 'Visa endast trådar nyare än',
@@ -3760,8 +3984,6 @@ $lang = array_merge($lang, array(
 	'UNREAD_POSTS_LOCKED'	=> 'Olästa inlägg [ Låst ]',
 
 	'VIEW_FORUM'			=> 'Visa kategori',
-	'VIEW_FORUM_TOPIC'		=> '1 tråd',
-	'VIEW_FORUM_TOPICS'		=> '%d trådar',
 
 	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
 	'REMOVE_FILTER'		=> 'Remove filter',
@@ -3770,6 +3992,7 @@ $lang = array_merge($lang, array(
 #######language/en/viewtopic.php#######
 
 $lang = array_merge($lang, array(
+	'APPROVE'								=> 'Godkänn',
 	'ATTACHMENT'						=> 'Bilaga',
 	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'Bilagefunktionen har inaktiverats.',
 
@@ -3782,14 +4005,13 @@ $lang = array_merge($lang, array(
 	'BUMP_TOPIC'			=> 'Knuffa upp tråden',
 
 	'CODE'					=> 'Kod',
-	'COLLAPSE_QR'			=> 'Göm Snabbsvar',
-
+	
 	'DELETE_TOPIC'			=> 'Ta bort tråden',
+	'DELETED_INFORMATION'	=> 'Deleted by %1$s on %2$s',
+	'DISAPPROVE'					=> 'Avslå',
 	'DOWNLOAD_NOTICE'		=> 'Du har inte behörighet att öppna de filer som bifogats till detta inlägg.',
 
-	'EDITED_TIMES_TOTAL'	=> 'Senast redigerad av %1$s %2$s, redigerad totalt %3$d gånger.',
-	'EDITED_TIME_TOTAL'		=> 'Senast redigerad av %1$s %2$s, redigerad totalt %3$d gång.',
-	'EMAIL_TOPIC'			=> 'Skicka som e-post till en vän',
+	'EMAIL_TOPIC'			=> 'E-mail topic',
 	'ERROR_NO_ATTACHMENT'	=> 'Den valda bilagan finns inte längre.',
 
 	'FILE_NOT_FOUND_404'	=> 'Filen <strong>%s</strong> finns inte.',
@@ -3804,8 +4026,6 @@ $lang = array_merge($lang, array(
 	'MAKE_GLOBAL'				=> 'Gör till “globalt anslag”',
 	'MAKE_NORMAL'				=> 'Gör till “normal tråd”',
 	'MAKE_STICKY'				=> 'Gör till “notis”',
-	'MAX_OPTIONS_SELECT'		=> 'Du kan välja upp till <strong>%d</strong> alternativ',
-	'MAX_OPTION_SELECT'			=> 'Du kan välja <strong>1</strong> alternativ',
 	'MISSING_INLINE_ATTACHMENT'	=> 'Bilagan <strong>%s</strong> finns inte längre',
 	'MOVE_TOPIC'				=> 'Flytta tråd',
 
@@ -3819,6 +4039,7 @@ $lang = array_merge($lang, array(
 	'POLL_ENDED_AT'			=> 'Omröstningen slutade %s',
 	'POLL_RUN_TILL'			=> 'Omröstningen varar till %s',
 	'POLL_VOTED_OPTION'		=> 'Du röstade för detta alternativ',
+	'POST_DELETED_RESTORE'	=> 'This post has been deleted. It can be restored.',
 	'PRINT_TOPIC'			=> 'Utskriftsvänlig version',
 
 	'QUICK_MOD'				=> 'Snabb-moderationsverktyg',
@@ -3826,11 +4047,14 @@ $lang = array_merge($lang, array(
 	'QUOTE'					=> 'Citat',
 
 	'REPLY_TO_TOPIC'		=> 'Svara på tråd',
+	'RESTORE'				=> 'Restore',
+	'RESTORE_TOPIC'			=> 'Restore topic',
 	'RETURN_POST'			=> '%sÅtergå till inlägget%s',
 
 	'SHOW_QR'				=> 'Visa snabbsvar',
 	'SUBMIT_VOTE'			=> 'Rösta',
 
+	'TOPIC_TOOLS'			=> 'Topic tools',
 	'TOTAL_VOTES'			=> 'Antal röster',
 
 	'UNLOCK_TOPIC'			=> 'Lås upp tråd',
@@ -3839,10 +4063,7 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_TOPIC'		=> 'Nästa tråd',
 	'VIEW_PREVIOUS_TOPIC'	=> 'Föregående tråd',
 	'VIEW_RESULTS'			=> 'Visa resultat',
-	'VIEW_TOPIC_POST'		=> '1 inlägg',
-	'VIEW_TOPIC_POSTS'		=> '%d inlägg',
 	'VIEW_UNREAD_POST'		=> 'Första olästa inlägg',
-	'VISIT_WEBSITE'			=> 'Besök webbplats',
 	'VOTE_SUBMITTED'		=> 'Din röst räknades.',
 	'VOTE_CONVERTED'		=> 'Ändrng av röst stöds inte för konverterade omröstningar.',
 
@@ -9432,6 +9653,7 @@ $lang = array_merge($lang, array(
 	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'	=> 'Maximal storlek för en fil i personliga meddelanden. Om detta värde är 0, begränsas storleken på filen som ska laddas upp endast av din PHP-konfiguration.',
 	'ATTACH_ORPHAN_URL'					=> 'Föräldralösa bilagor',
 	'ATTACH_POST_ID'					=> 'Inläggs-ID',
+	'ATTACH_POST_TYPE'					=> 'Post type',
 	'ATTACH_QUOTA'						=> 'Total bilagekvot',
 	'ATTACH_QUOTA_EXPLAIN'				=> 'Maximalt hårddiskutrymme tillgängligt för alla bilagor på hela forumet, 0 är obegränsat.',
 	'ATTACH_TO_POST'					=> 'Bifoga fil till inlägg',
@@ -9477,6 +9699,9 @@ $lang = array_merge($lang, array(
 	'EXT_GROUP_REAL_MEDIA'			=> 'Real Media',
 	'EXT_GROUP_WINDOWS_MEDIA'		=> 'Windows Media',
 
+	'FILES_GONE'			=> 'Some of the attachments you selected for deletion do not exist. They may have been already deleted. Attachments that did exist were deleted.',
+	'FILES_STATS_WRONG'		=> 'Your file statistics are likely inaccurate and need to be resynchronised. Actual values: number of attachments = %1$d, total size of attachments = %2$s.<br />Click %3$shere%4$s to resynchronise them.',
+
 	'GO_TO_EXTENSIONS'		=> 'Gå till filtypshanteringen',
 	'GROUP_NAME'			=> 'Gruppnamn',
 
@@ -9500,6 +9725,7 @@ $lang = array_merge($lang, array(
 	'NOT_ALLOWED_IN_PM'			=> 'Endast tillåten i inlägg',
 	'NOT_ALLOWED_IN_PM_POST'	=> 'Inte tillåten',
 	'NOT_ASSIGNED'				=> 'Inte tilldelad',
+	'NO_ATTACHMENTS'			=> 'No attachments found for this period.',
 	'NO_EXT_GROUP'				=> 'Ingen',
 	'NO_EXT_GROUP_NAME'			=> 'Inget gruppnamn angivet',
 	'NO_EXT_GROUP_SPECIFIED'	=> 'Ingen filtypsgrupp angiven.',
@@ -9512,6 +9738,10 @@ $lang = array_merge($lang, array(
 	'ONLY_ALLOWED_IN_PM'	=> 'Endast tillåten i personliga meddelanden',
 	'ORDER_ALLOW_DENY'		=> 'Tillåt',
 	'ORDER_DENY_ALLOW'		=> 'Neka',
+
+	'REMOVE_ALLOWED_IPS'			=> 'Ta bort eller häv undantag för <em>tillåtna</em> IP-adresser/värdnamn',
+	'REMOVE_DISALLOWED_IPS'			=> 'Ta bort eller häv undantag för <em>otillåtna</em> IP-adresser/värdnamn',
+	'RESYNC_FILES_STATS_CONFIRM'	=> 'Are you sure you wish to resynchronise file statistics?',
 
 	'REMOVE_ALLOWED_IPS'		=> 'Ta bort eller häv undantag för <em>tillåtna</em> IP-adresser/värdnamn',
 	'REMOVE_DISALLOWED_IPS'		=> 'Ta bort eller häv undantag för <em>otillåtna</em> IP-adresser/värdnamn',
@@ -9581,18 +9811,17 @@ $lang = array_merge($lang, array(
 	'PERMANENT'		=> 'Permanent',
 
 	'UNTIL'						=> 'Tills',
-	'USER_BAN'					=> 'Bannlys',
+	'USER_BAN'					=> 'Ban one or more users by username',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> 'Aktivera detta för att undanta den angivna användaren från alla nuvarande bannlysningar.',
 	'USER_BAN_EXPLAIN'			=> 'Du kan bannlysa flera användare på samma gång genom att skriva in varje namn på en ny rad. Använd <span style="text-decoration: underline;">Hitta en medlem</span>-funktionen för att söka efter och lägga till en eller flera användare automatiskt.',
 	'USER_NO_BANNED'			=> 'Inga bannlysta användare',
-	'USER_UNBAN'				=> 'Häv bannlysta eller undantagna användare',
+	'USER_UNBAN'				=> 'Un-ban or un-exclude users by username',
 	'USER_UNBAN_EXPLAIN'		=> 'Du kan häva flera bannlysta (eller undantagna) användare på samma gång genom att använda den rätta kombinationen av mus och tangentbord för din dator och webbläsare. Undantagna användare är betonade.',
 ));
 
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'				=> 'Aktivera sommartid/<abbr title="Daylight Saving Time">DST</abbr>',
 	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
 	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
 	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
@@ -9618,16 +9847,28 @@ $lang = array_merge($lang, array(
 	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Här kan du bestämma grundläggande inställningar för ditt forum, ge det ett passande namn och beskrivning, och bland många andra inställningar justera standardvärden för tidszon och språk.',
+	'BOARD_INDEX_TEXT'				=> 'Board index text',
+	'BOARD_INDEX_TEXT_EXPLAIN'		=> 'This text is displayed as the board index in the board’s breadcrumbs. If not specified, it will default to “Board index”.',
+	'BOARD_STYLE'					=> 'Min stil',
 	'CUSTOM_DATEFORMAT'				=> 'Eget…',
 	'DEFAULT_DATE_FORMAT'			=> 'Datumformat',
 	'DEFAULT_DATE_FORMAT_EXPLAIN'	=> 'Datumformatet är samma som PHPs <code>date</code>-funktion.',
 	'DEFAULT_LANGUAGE'				=> 'Standardspråk',
 	'DEFAULT_STYLE'					=> 'Standardstil',
+	'DEFAULT_STYLE_EXPLAIN'			=> 'The default style is <strong>%1$s (%2$s)</strong> which is the overriden style for all users (including bots).',
 	'DISABLE_BOARD'					=> 'Inaktivera forumet',
-	'DISABLE_BOARD_EXPLAIN'			=> 'Detta kommer att göra forumet otillgängligt för användarna. Du kan också ange ett kort meddelande (255 tecken) som ska visas om du vill.',
+	'DISABLE_BOARD_EXPLAIN'			=> 'This will make the board unavailable to users who are neither administrators nor moderators. You can also enter a short (255 character) message to display if you wish.',
+	'DISPLAY_LAST_SUBJECT'			=> 'Display subject of last added post on forum list',
+	'DISPLAY_LAST_SUBJECT_EXPLAIN'	=> 'The subject of the last added post will be displayed in the forum list with a hyperlink to the post. Subjects from password protected forums and forums in which user doesn’t have read access are not shown.',
+	'GUEST_STYLE'					=> 'Guest style',
+	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Åsidosätt användarstil',
 	'OVERRIDE_STYLE_EXPLAIN'		=> 'Ersätter användarens stil med standardstilen.',
 	'SITE_DESC'						=> 'Webbplatsbeskrivning',
+	'SITE_HOME_TEXT'				=> 'Main website text',
+	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
+	'SITE_HOME_URL'					=> 'Main website URL',
+	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Webbplatsnamn',
 	'SYSTEM_TIMEZONE'				=> 'Tidszon för gäster',
 	'WARNINGS_EXPIRE'				=> 'Varningslängd',
@@ -9667,6 +9908,7 @@ $lang = array_merge($lang, array(
 
 	'ALLOW_AVATARS'					=> 'Aktivera visningsbilder',
 	'ALLOW_AVATARS_EXPLAIN'			=> 'Tillåt allmän användning av visningsbilder. <br />Om du inaktiverar visningsbilder överlag eller av specifik typ, så kommer inaktiverade visningsbilder inte längre att visas i forumet. Användarna har ännu möjlighet att ladda ner sina egna visningsbilder i kontrollpanelen.',
+	'ALLOW_GRAVATAR'				=> 'Enable gravatar avatars',
 	'ALLOW_LOCAL'					=> 'Aktivera gallerivisningsbilder',
 	'ALLOW_REMOTE'					=> 'Aktivera fjärrvisningsbilder',
 	'ALLOW_REMOTE_EXPLAIN'			=> 'Visningsbilder som länkas till på en annan webbplats.',
@@ -9847,6 +10089,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Innehållfrån dessa kategorier  <strong>inkluderas inte i flöden</strong>. Välj inga kategorier för att avaktivera nyhetsflödet.<br />Använd t.ex. kombinationen <samp>CTRL</samp> + musklick för att markera och välja (avvälja) fler än en kategori.',
 
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Här kan du göra inställningar för tillägg som är designade att blockera spambots-registreringar på forumet. Tilläggen ger den blivande medlemmen en uppgift, som datorer i bästa fall inte kan lösa, t.ex <abbr title="Completely Automated Public Turing-test to tell Computers and Humans Apart">CAPTCHA</abbr>-uppgifter.',
+	'ACP_VC_EXT_GET_MORE'					=> 'For additional (and possibly better) anti-spam plugins, visit the <a href="https://www.phpbb.com/go/anti-spam-ext"><strong>phpBB.com Extensions Database</strong></a>. For more information on preventing spam on your board, visit the <a href="https://www.phpbb.com/go/anti-spam"><strong>phpBB.com Knowledge Base</strong></a>.',
 	'AVAILABLE_CAPTCHAS'					=> 'Tillgängliga tillägg',
 	'CAPTCHA_UNAVAILABLE'					=> 'CAPTCHAn kan inte väljas, då dess krav inte uppfylls.',
 	'CAPTCHA_GD'							=> 'GD bild',
@@ -9897,18 +10140,36 @@ $lang = array_merge($lang, array(
 	'SESSION_LENGTH'			=> 'Sessionslängd',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Sessioner kommer att förfalla efter denna tid, i sekunder.',
 
+	// Contact Settings
+	'ACP_CONTACT_SETTINGS_EXPLAIN'		=> 'Here you can enable and disable the contact page and also add a text that is displayed on the page.',
+
+	'CONTACT_US_ENABLE'				=> 'Enable contact page',
+	'CONTACT_US_ENABLE_EXPLAIN'		=> 'This page allows users to send emails to board administrators',
+
+	'CONTACT_US_INFO'				=> 'Contact information',
+	'CONTACT_US_INFO_EXPLAIN'		=> 'The message is displayed on the contact page',
+	'CONTACT_US_INFO_PREVIEW'		=> 'Contact page information - Preview',
+	'CONTACT_US_INFO_UPDATED'		=> 'Contact page information has been updated.',
+
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Här kan du aktivera och inaktivera vissa forumfunktioner för att minska mängden databehandling som krävs. På de flesta servrar så är det inte nödvändigt att inaktivera någon av dessa funktioner. På vissa system eller i delade webbhotellsmiljöer kan det vara bra att inaktivera funktioner som du inte behöver. Du kan också ange gränser för systembelastning och aktiva sessioner som när de överträds så kommer forumet att gå offline.',
 
+	'ALLOW_CDN'						=> 'Allow usage of third party content delivery networks',
+	'ALLOW_CDN_EXPLAIN'				=> 'If this setting is enabled, some files will be served from external third party servers instead of your server. This reduces the network bandwidth required by your server, but may present a privacy issue for some board administrators. In a default phpBB installation, this includes loading “jQuery” and the font “Open Sans” from Google’s content delivery network.',
+	'ALLOW_LIVE_SEARCHES'			=> 'Allow live searches',
+	'ALLOW_LIVE_SEARCHES_EXPLAIN'	=> 'If this setting is enabled, users are provided with keyword suggestions as they type in certain fields throughout the board.',
 	'CUSTOM_PROFILE_FIELDS'			=> 'Egna profilfält',
 	'LIMIT_LOAD'					=> 'Gräns för systembelastning',
 	'LIMIT_LOAD_EXPLAIN'			=> 'Om systemets 1-minutsbelastning överskrider detta värde så kommer forumet automatiskt att gå offline. Ett värde av 1.0 är lika med ~100% användning av en processor. Detta fungerar endast på UNIX-baserade servrar där informationen finns tillgänglig. Värdet kommer här att återställa sig själv till 0 om phpBB inte kunde hitta serverbelastningen.',
 	'LIMIT_SESSIONS'				=> 'Gräns för antal sessioner',
 	'LIMIT_SESSIONS_EXPLAIN'		=> 'Om antalet sessioner överskrider detta värde under en minut så kommer forumet att gå offline. Sätt till 0 för obegränsat antal sessioner.',
 	'LOAD_CPF_MEMBERLIST'			=> 'Tillåt att stilar visar egna profilfält i medlemslistan',
+	'LOAD_CPF_PM'					=> 'Display custom profile fields in private messages',
 	'LOAD_CPF_VIEWPROFILE'			=> 'Visa egna profilfält i användarprofiler',
 	'LOAD_CPF_VIEWTOPIC'			=> 'Visa egna profilfält i trådar',
 	'LOAD_USER_ACTIVITY'			=> 'Visa användares aktivitet',
 	'LOAD_USER_ACTIVITY_EXPLAIN'	=> 'Visar aktiv tråd/kategori i användarprofiler och i kontrollpanelen. Det är rekommenderat att detta inaktiveras på forum med mer än en miljon inlägg.',
+	'READ_NOTIFICATION_EXPIRE_DAYS'	=> 'Read Notification Expiration',
+	'READ_NOTIFICATION_EXPIRE_DAYS_EXPLAIN' => 'Number of days that will elapse before a read notification will automatically be deleted. Set this value to 0 to make notifications permanent.',
 	'RECOMPILE_STYLES'				=> 'Omkompilera gamla stilkomponenter',
 	'RECOMPILE_STYLES_EXPLAIN'		=> 'Kolla efter uppdaterade stilkomponenter på filsystemet och omkompilera.',
 	'YES_ANON_READ_MARKING'			=> 'Aktivera trådmärkning för gäster',
@@ -9929,18 +10190,25 @@ $lang = array_merge($lang, array(
 	'YES_READ_MARKING_EXPLAIN'		=> 'Lagrar läst/oläststatus i databasen istället för i en cookie.',
 	'YES_UNREAD_SEARCH'				=> 'Aktivera sökning av olästa inlägg',
 
-	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB stödjer autentiseringsinsticksprogram, eller moduler. Detta låter dig bestämma hur användarna autentiseras när de loggar in på forumet. Som standard finns tre insticksprogram tillgängliga; DB, LDAP och Apache. Inte alla metoder kräver ytterligare information så fyll endast i fält som är relevanta för den valda metoden.',
+	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB supports authentication plug-ins, or modules. These allow you determine how users are authenticated when they log into the board. By default four plug-ins are provided: DB, LDAP, Apache, and OAuth. Not all methods require additional information so only fill out fields if they are relevant to the selected method.',
 
 	'AUTH_METHOD'				=> 'Välj en autentiseringsmetod',
 
+	'AUTH_PROVIDER_OAUTH_ERROR_ELEMENT_MISSING'	=> 'Both the key and secret of each enabled OAuth service provider must be provided. Only one was provided for an OAuth service provider.',
+	'AUTH_PROVIDER_OAUTH_EXPLAIN'				=> 'Each OAuth provider requires a unique secret and key in order to authenticate with the external server. These should be supplied by the OAuth service when you register your website with them and should be entered exactly as provided to you.<br />Any service that does not have both a key and a secret entered here will not be available for use by the forum users. Also note, that user can still register and login using the DB authentication plug-in.',
+	'AUTH_PROVIDER_OAUTH_KEY'					=> 'Key',
+	'AUTH_PROVIDER_OAUTH_TITLE'					=> 'OAuth',
+	'AUTH_PROVIDER_OAUTH_SECRET'				=> 'Secret',
+
 	'APACHE_SETUP_BEFORE_USE'	=> 'Du måste ställa in apache autentisering innan du kan ändra phpBB till denna autentiseringsmetod. Kom ihåg att användarnamnet som du använder för apacheautentiseringen måste vara samma som ditt phpBB-användarnamn. Apacheautentisering kan endast användas med mod_php (inte med CGI versionen) och med safe_mode inaktiverat.',
 
+	'LDAP'							=> 'LDAP',
 	'LDAP_DN'						=> 'LDAP bas <var>dn</var>',
 	'LDAP_DN_EXPLAIN'				=> 'Detta är “Distinguished Name”, används för att lokalisera användarinformationen, t.ex. <samp>o=My Company,c=US</samp>.',
-	'LDAP_EMAIL'					=> 'LDAP e-postattribut',
-	'LDAP_EMAIL_EXPLAIN'			=> 'Sätt detta till namnet of din användare-postattributpost (om en sådant finns) för att automatiskt ställa in e-postadress för nya användare. Om du lämnar detta tomt så kommer resultera i tomma e-postadresser för användare som loggar in första gången.',
+	'LDAP_EMAIL'					=> 'LDAP email attribute',
+	'LDAP_EMAIL_EXPLAIN'			=> 'Set this to the name of your user entry email attribute (if one exists) in order to automatically set the email address for new users. Leaving this empty results in empty email address for users who log in for the first time.',
 	'LDAP_INCORRECT_USER_PASSWORD'	=> 'Bindning till LDAP-servern misslyckades med det angivna användarnamnet/lösenordet.',
-	'LDAP_NO_EMAIL'					=> 'Det angivna e-postattributet finns inte.',
+	'LDAP_NO_EMAIL'					=> 'The specified email attribute does not exist.',
 	'LDAP_NO_IDENTITY'				=> 'Kunde inte hitta inloggningsidentitet för %s.',
 	'LDAP_PASSWORD'					=> 'LDAP-lösenord',
 	'LDAP_PASSWORD_EXPLAIN'			=> 'Lämna tomt för att använda anonym åtkomst. Fyll annars i lösenordet för ovanstående användare. Krävs för Active Directory-servrar. <br /><em><strong>VARNING:</strong> Detta lösenord kommer att sparas som vanlig text i databasen, synligt för alla som kan komma åt din databas eller som kan visa denna konfigurationssida.</em>',
@@ -9955,13 +10223,17 @@ $lang = array_merge($lang, array(
 	'LDAP_USER_FILTER'				=> 'LDAP-användarfilter',
 	'LDAP_USER_FILTER_EXPLAIN'		=> 'Om du vill kan du vidare begränsa antalet sökta objekt med ytterligare filter. Till exempel <samp>objectClass=posixGroup</samp> kommer att resultera i användningen av <samp>(&amp;(uid=$username)(objectClass=posixGroup))</samp>',
 
-	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Här kan du ställa in server- och domäninställningar. Försäkra dig om att informationen du anger är korrekt, fel kommer att resultera i e-postmeddelanden med felaktig information. När du anger domännamnet kom ihåg att det ska inkludera http:// eller annat protokoll. Ändra endast portnumret om du vet att din server använder ett annat värde, port 80 är korrekt i de flesta fall.',
+	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Here you define server and domain dependent settings. Please ensure the data you enter is accurate, errors will result in emails containing incorrect information. When entering the domain name remember it does include http:// or other protocol term. Only alter the port number if you know your server uses a different value, port 80 is correct in most cases.',
 	'ENABLE_GZIP'				=> 'Aktivera GZip-komprimering',
 	'ENABLE_GZIP_EXPLAIN'		=> 'Genererat innehåll kommer att komprimeras innan det skickas till användaren om dennes webbläsare stödjer det. Detta kan minska nätverkstrafik men kommer också öka CPU-användning både på server- och klientsidan. Kräver att zlib med phptillägg är aktiverad på servern för att laddas.',
 	'FORCE_SERVER_VARS'			=> 'Påtvinga URL-inställningar',
 	'FORCE_SERVER_VARS_EXPLAIN'	=> 'Om satt till ja så kommer serverinställningarna som anges här att användas istället för de automatiskt fastställda värdena.',
 	'ICONS_PATH'				=> 'Sökväg till postikoner',
 	'ICONS_PATH_EXPLAIN'		=> 'Sökväg under din phpBB-rotkatalog, t.ex. <samp>images/icons</samp>.',
+	'MOD_REWRITE_ENABLE'		=> 'Enable URL Rewriting',
+	'MOD_REWRITE_ENABLE_EXPLAIN' => 'When enabled, URLs containing ’app.php’ will be rewritten to remove the filename (i.e. app.php/foo will become /foo). <strong>Apache server’s mod_rewrite module is required for this functionality to work; if this option is enabled without mod_rewrite support, URLs on your board may be broken.</strong>',
+	'MOD_REWRITE_DISABLED'		=> 'The <strong>mod_rewrite</strong> module on your Apache web server is disabled. Enable the module or contact your web hosting provider if you wish to enable this feature.',
+	'MOD_REWRITE_INFORMATION_UNAVAILABLE' => 'We are unable to determine whether or not this server supports URL rewriting. This setting may be enabled but if URL rewriting is not available, paths generated by this board (such as for use in links) may be broken. Contact your web hosting provider if you are unsure whether or not you can safely enable this feature.',
 	'PATH_SETTINGS'				=> 'Sökvägsinställningar',
 	'RANKS_PATH'				=> 'Sökväg till titelbilder',
 	'RANKS_PATH_EXPLAIN'		=> 'Sökväg under din phpBB-rotkatalog, t.ex. <samp>images/ranks</samp>.',
@@ -9978,13 +10250,21 @@ $lang = array_merge($lang, array(
 	'SMILIES_PATH_EXPLAIN'		=> 'Sökväg under din phpBB-rotkatalog, t.ex. <samp>images/smilies</samp>.',
 	'UPLOAD_ICONS_PATH'			=> 'Sökväg till filtypsgruppikoner',
 	'UPLOAD_ICONS_PATH_EXPLAIN'	=> 'Sökväg under din phpBB-rotkatalog, t.ex. <samp>images/upload_icons</samp>.',
+	'USE_SYSTEM_CRON'		=> 'Run periodic tasks from system cron',
+	'USE_SYSTEM_CRON_EXPLAIN'		=> 'When off, phpBB will arrange for periodic tasks to be run automatically. When on, phpBB will not schedule any periodic tasks by itself; a system administrator must arrange for <code>bin/phpbbcli.php cron:run</code> to be run by the system cron facility at regular intervals (e.g. every 5 minutes).',
 
 	'ACP_SECURITY_SETTINGS_EXPLAIN'		=> 'Här kan du ställa in sessions- och inloggningsrelaterade inställningar.',
 	'ALL'							=> 'Alla',
-	'ALLOW_AUTOLOGIN'				=> 'Tillåt bestående inloggningar',
-	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Avgör om användare kan loggas in automatiskt när de besöker forumet eller inte.',
-	'AUTOLOGIN_LENGTH'				=> 'Förfallotid för bestående inloggningsnycklar (i dagar)',
-	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Antal dagar som ska gå innan bestående inloggningsnycklar tas bort. Sätt till 0 för att inaktivera.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'ALLOW_PASSWORD_RESET'			=> 'Allow password reset ("Forgot Password")',
+	'ALLOW_PASSWORD_RESET_EXPLAIN'	=> 'Determines whether or not users are able to use the "I forgot my password" link on the login page to recover their account. If you use an external authentication mechanism you may wish to disable this feature.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
 	'BROWSER_VALID'					=> 'Kontrollera webbläsare',
 	'BROWSER_VALID_EXPLAIN'			=> 'Aktiverar webbläsekontroll för varje session. Förbättrar säkerheten.',
 	'CHECK_DNSBL'					=> 'Kontrollera IP mot “DNS Blackhole”-lista',
@@ -10021,8 +10301,12 @@ $lang = array_merge($lang, array(
 	'PASS_TYPE_SYMBOL'				=> 'Måste innehålla symboler',
 	'REF_HOST'						=> 'Kontrollera endast värd',
 	'REF_PATH'						=> 'Kontrollera även sökväg',
-	'REFERER_VALID'					=> 'Kontrollera hänvisare',
+	'REFERRER_VALID'				=> 'Validate Referrer',
+	'REFERRER_VALID_EXPLAIN'		=> 'If enabled, the referrer of POST requests will be checked against the host/script path settings. This may cause issues with boards using several domains and or external logins.',
+
+	'REFERER_VALID'					=> 'Kontrollera hänvisare',	//3.0.12
 	'REFERER_VALID_EXPLAIN'			=> 'Om detta är aktiverat så kommer hänvisaren för POST-förfrågningar att kontrolleras mot värd/skriptsökvägsinställningarna. Detta kan skapa problem för forum som använder flera domäner och/eller externa inloggningar.',
+
 	'TPL_ALLOW_PHP'					=> 'Tillåt php i mallar',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Om detta alternativ är aktiverat så kommer <code>PHP</code> och <code>INCLUDEPHP</code> att tolkas i mallar.',
 
@@ -10035,6 +10319,8 @@ $lang = array_merge($lang, array(
 	'BOARD_HIDE_EMAILS_EXPLAIN'		=> 'Denna funktion håller alla e-postadresser fullständigt privata.',
 	'CONTACT_EMAIL'					=> 'E-postadress för att kontakta forumet',
 	'CONTACT_EMAIL_EXPLAIN'			=> 'Denna adress kommer användas när en specifik kontaktpunkt behövs, t.ex. spam, felmeddelanden, osv. Den kommer alltid att användas som <samp>From</samp> och <samp>Reply-To</samp> adress i e-postmeddelanden.',
+	'CONTACT_EMAIL_NAME'			=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 	'EMAIL_FUNCTION_NAME'			=> 'E-postfunktionsnamn',
 	'EMAIL_FUNCTION_NAME_EXPLAIN'	=> 'E-postfunktionen som ska användas för att skicka e-post genom PHP.',
 	'EMAIL_PACKAGE_SIZE'			=> 'Paketstorlek för e-post',
@@ -10225,7 +10511,7 @@ $lang = array_merge($lang, array(
 	'ACP_BAN'					=> 'Bannlys',
 	'ACP_BAN_EMAILS'			=> 'Bannlys e-postadress',
 	'ACP_BAN_IPS'				=> 'Bannlys IP-adresser',
-	'ACP_BAN_USERNAMES'			=> 'Bannlys användarnamn',
+	'ACP_BAN_USERNAMES'			=> 'Ban users',
 	'ACP_BBCODES'				=> 'BBCodes',
 	'ACP_BOARD_CONFIGURATION'	=> 'Forumkonfiguration',
 	'ACP_BOARD_FEATURES'		=> 'Forumfunktioner',
@@ -10234,8 +10520,10 @@ $lang = array_merge($lang, array(
 	'ACP_BOTS'					=> 'Spindlar/Robotar',
 
 	'ACP_CAPTCHA'				=> 'CAPTCHA',
+	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'Databas',
+	'ACP_CAT_DOT_MODS'			=> '.MODs',
 	'ACP_CAT_DOT_MODS'			=> '.MODs',
 	'ACP_CAT_FORUMS'			=> 'Kategorier',
 	'ACP_CAT_GENERAL'			=> 'Allmänt',
@@ -10248,6 +10536,8 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_USERS'				=> 'Användare',
 	'ACP_CLIENT_COMMUNICATION'	=> 'Klientkommunikation',
 	'ACP_COOKIE_SETTINGS'		=> 'Cookieinställningar',
+	'ACP_CONTACT'				=> 'Contact page',
+	'ACP_CONTACT_SETTINGS'		=> 'Contact page settings',
 	'ACP_CRITICAL_LOGS'			=> 'Fellogg',
 	'ACP_CUSTOM_PROFILE_FIELDS'	=> 'Egna profilfält',
 
@@ -10255,8 +10545,11 @@ $lang = array_merge($lang, array(
 	'ACP_DISALLOW'				=> 'Förbjud',
 	'ACP_DISALLOW_USERNAMES'	=> 'Förbjud användarnamn',
 
-	'ACP_EMAIL_SETTINGS'		=> 'E-postinställningar',
-	'ACP_EXTENSION_GROUPS'		=> 'Hantera filtypsgrupper',
+	'ACP_EMAIL_SETTINGS'		=> 'Email settings',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
+	'ACP_EXTENSION_MANAGEMENT'	=> 'Extension management',
+	'ACP_EXTENSIONS'			=> 'Manage extensions',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
 	'ACP_FORMS'					=> 'Customizable Forms',
 	'ACP_FORMS_BUILDER'			=> 'Form Builder',
 
@@ -10277,10 +10570,10 @@ $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE'				=> 'Hantera grupper',
 	'ACP_GROUPS_MANAGEMENT'			=> 'Grupphantering',
 	'ACP_GROUPS_PERMISSIONS'		=> 'Gruppbehörigheter',
+	'ACP_GROUPS_POSITION'			=> 'Manage group positions',
 
 	'ACP_ICONS'					=> 'Trådikoner',
 	'ACP_ICONS_SMILIES'			=> 'Trådikoner/smilies',
-	'ACP_IMAGESETS'				=> 'Bildpaket',
 	'ACP_INACTIVE_USERS'		=> 'Inaktiva användare',
 	'ACP_INDEX'					=> 'Administrationsindex',
 
@@ -10292,11 +10585,15 @@ $lang = array_merge($lang, array(
 	'ACP_LOGGING'				=> 'Loggning',
 
 	'ACP_MAIN'					=> 'Administrationsindex',
-	'ACP_MANAGE_EXTENSIONS'		=> 'Hantera filtyper',
+
+	'ACP_MANAGE_ATTACHMENTS'			=> 'Hantera bilagor',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
+
+	'ACP_MANAGE_EXTENSIONS'		=> 'Manage attachment extensions',
 	'ACP_MANAGE_RANKS'			=> 'Hantera titlar',
 	'ACP_MANAGE_REASONS'		=> 'Hantera rapport/avslagsanledningar',
 	'ACP_MANAGE_USERS'			=> 'Hantera användare',
-	'ACP_MASS_EMAIL'			=> 'Massutskick',
+	'ACP_MASS_EMAIL'			=> 'Mass email',
 	'ACP_MESSAGES'				=> 'Meddelanden',
 	'ACP_MESSAGE_SETTINGS'		=> 'Inställningar för personliga meddelanden',
 	'ACP_MODULE_MANAGEMENT'		=> 'Modulhantering',
@@ -10341,6 +10638,8 @@ $lang = array_merge($lang, array(
 	'ACP_STYLE_COMPONENTS'		=> 'Stilkomponenter',
 	'ACP_STYLE_MANAGEMENT'		=> 'Stilhantering',
 	'ACP_STYLES'				=> 'Stilar',
+	'ACP_STYLES_CACHE'			=> 'Purge Cache',
+	'ACP_STYLES_INSTALL'		=> 'Install Styles',
 
 	'ACP_SUBMIT_CHANGES'		=> 'Sänd ändringar',
 
@@ -10392,6 +10691,10 @@ $lang = array_merge($lang, array(
 
 	'COLOUR_SWATCH'			=> 'Färgväljare',
 	'CONFIG_UPDATED'		=> 'Konfigurationen uppdaterades.',
+	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
+	'CRON_NO_SUCH_TASK'		=> 'Could not find cron task â€œ%sâ€.',
+	'CRON_NO_TASK'			=> 'No cron tasks need to be run right now.',
+	'CRON_NO_TASKS'			=> 'No cron tasks could be found.',
 
 	'DEACTIVATE'				=> 'Inaktivera',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'Den angivna sökvägen “%s” finns inte.',
@@ -10402,6 +10705,7 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_AS'				=> 'Ladda ner som',
 	'DOWNLOAD_STORE'			=> 'Ladda ner eller lagra fil',
 	'DOWNLOAD_STORE_EXPLAIN'	=> 'Du kan ladda ner filen direkt eller spara den i din <samp>store/</samp>-mapp.',
+	'DOWNLOADS'					=> 'Nerladdningar',
 
 	'EDIT'					=> 'Redigera',
 	'ENABLE'				=> 'Aktivera',
@@ -10416,6 +10720,8 @@ $lang = array_merge($lang, array(
 	'IP'					=> 'IP',
 	'IP_HOSTNAME'			=> 'IP-adresser eller värdnamn',
 
+	'LOAD_NOTIFICATIONS'			=> 'Display Notifications',
+	'LOAD_NOTIFICATIONS_EXPLAIN'	=> 'Display the notifications list on every page (typically in the header).',
 	'LOGGED_IN_AS'			=> 'Du är inloggad som:',
 	'LOGIN_ADMIN'			=> 'För att administrera forumet så måste du vara en behörig användare.',
 	'LOGIN_ADMIN_CONFIRM'	=> 'För att administrera forumet så måste du verifiera dig själv igen.',
@@ -10432,7 +10738,8 @@ $lang = array_merge($lang, array(
 
 	'NOTIFY'				=> 'Meddelande',
 	'NO_ADMIN'				=> 'Du har inte behörighet att administrera detta forum.',
-	'NO_EMAILS_DEFINED'		=> 'Inga giltiga e-postadresser hittades.',
+	'NO_EMAILS_DEFINED'		=> 'No valid email addresses found.',
+	'NO_FILES_TO_DELETE'	=> 'Attachments you selected for deletion do not exist.',
 	'NO_PASSWORD_SUPPLIED'	=> 'Du kan inte logga in utan ett lösenord.',
 
 	'OFF'					=> 'Av',
@@ -10448,8 +10755,8 @@ $lang = array_merge($lang, array(
 
 	'REMIND'							=> 'Påminn',
 	'RESYNC'							=> 'Synkronisera',
-	'RETURN_TO'							=> 'Återgå till',
 
+	'RUNNING_TASK'			=> 'Running task: %s.',
 	'SELECT_ANONYMOUS'		=> 'Välj den anonyma användaren (gäst)',
 	'SELECT_OPTION'			=> 'Välj alternativ',
 
@@ -10459,6 +10766,10 @@ $lang = array_merge($lang, array(
 	'SETTING_TOO_SHORT'		=> 'Det angivna värdet för inställningen “%1$s” är för kort. Den kortast tillåtna längden är %2$d.',
 
 	'SHOW_ALL_OPERATIONS'	=> 'Visa alla händelser',
+
+	'TASKS_NOT_READY'			=> 'Not ready tasks:',
+	'TASKS_READY'			=> 'Ready tasks:',
+	'TOTAL_SIZE'			=> 'Total size',
 
 	'UCP'					=> 'Kontrollpanel',
 	'USERNAMES_EXPLAIN'		=> 'Placera varje användarnamn på en ny rad.',
@@ -10470,7 +10781,7 @@ $lang = array_merge($lang, array(
 	'NO_PHPINFO_AVAILABLE'	=> 'Information om din PHP-konfiguration kunde inte hittas. Phpinfo() har inaktiverats av säkerhetsskäl.',
 
 	'ACP_ADMIN_LOGS_EXPLAIN'	=> 'Detta listar alla handlingar som utförts av forumadministratörer. Du kan sortera efter användarnamn, datum, IP eller handling. Om du har behörighet så kan du också rensa ut individuella handlingar eller hela loggen.',
-	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'Detta listar handlingar som forumet själv har utfört. Denna logg ger dig information som du kan använda för att lösa specifika problem, till exempel att e-post inte levereras. Du kan sortera efter användarnamn, datum, IP eller handling. Om du har behörighet så kan du också rensa ut individuella handlingar eller hela loggen.',
+	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'This lists the actions carried out by the board itself. This log provides you with information you are able to use for solving specific problems, for example non-delivery of emails. You can sort by username, date, IP or action. If you have appropriate permissions you can also clear individual operations or the log as a whole.',
 	'ACP_MOD_LOGS_EXPLAIN'		=> 'Detta listar alla handlingar som utförts i kategorier, trådar och inlägg samt handlingar som utförts mot användare av moderatorer, inklusive bannlysningar. Du kan sortera efter användarnamn, datum, IP eller handling. Om du har behörighet så kan du också rensa ut individuella handlingar eller hela loggen.',
 	'ACP_USERS_LOGS_EXPLAIN'	=> 'Detta listar alla handlingar som utförts av användare eller mot användare (rapporter, varningar och användaranteckningar).',
 	'ALL_ENTRIES'				=> 'Visa alla poster',
@@ -10496,6 +10807,7 @@ $lang = array_merge($lang, array(
 
 	'GZIP_COMPRESSION'	=> 'GZip-komprimering',
 
+	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'Ej tillgängligt',
 	'NUMBER_FILES'		=> 'Antal bilagor',
 	'NUMBER_POSTS'		=> 'Antal inlägg',
@@ -10508,29 +10820,38 @@ $lang = array_merge($lang, array(
 	'PURGE_CACHE'			=> 'Rensa cachen',
 	'PURGE_CACHE_CONFIRM'	=> 'Är du säker på att du vill rensa cachen?',
 	'PURGE_CACHE_EXPLAIN'	=> 'Rensar allt cacherelaterat, detta inkluderar alla cachade mallfiler och frågor.',
+	'PURGE_CACHE_SUCCESS'	=> 'Cache successfully purged.',
 
 	'PURGE_SESSIONS'			=> 'Rensa sessioner',
 	'PURGE_SESSIONS_CONFIRM'	=> 'Är du säker på att du vill rensa alla sessioner?',
 	'PURGE_SESSIONS_EXPLAIN'	=> 'Rensar alla sessioner. Detta loggar ut alla användare genom att tömma sessionstabellen.',
+	'PURGE_SESSIONS_SUCCESS'	=> 'Sessions successfully purged.',
 
 	'RESET_DATE'					=> 'Ändra forumets startdatum till dagens datum.',
 	'RESET_DATE_CONFIRM'			=> 'Är du säker på att du vill återställa forumets startdatum till idag?',
+	'RESET_DATE_SUCCESS'				=> 'Boardâ€™s start date reset',
 	'RESET_ONLINE'					=> 'Återställ flest användare online samtidigt',
 	'RESET_ONLINE_CONFIRM'			=> 'Är du säker på att du vill återställa räknaren för flest användare online samtidigt?',
+	'RESET_ONLINE_SUCCESS'				=> 'Most users ever online reset',
 	'RESYNC_POSTCOUNTS'				=> 'Synkronisera inläggsräknare',
 	'RESYNC_POSTCOUNTS_EXPLAIN'		=> 'Endast existerande inlägg kommer att tas med i beräkningen. Rensade inlägg kommer inte räknas.',
 	'RESYNC_POSTCOUNTS_CONFIRM'		=> 'Är du säker på att du vill synkronisera inläggsräknare?',
+	'RESYNC_POSTCOUNTS_SUCCESS'			=> 'Resynchronised post counts',
 	'RESYNC_POST_MARKING'			=> 'Synkronisera prickade trådar',
 	'RESYNC_POST_MARKING_CONFIRM'	=> 'Är du säker på att du vill synkronisera prickade trådar?',
 	'RESYNC_POST_MARKING_EXPLAIN'	=> 'Avmarkerar först alla trådar och markerar sedan om alla trådar som varit aktiva under de senaste sex månaderna.',
+	'RESYNC_POST_MARKING_SUCCESS'	=> 'Resynchronised dotted topics',
 	'RESYNC_STATS'					=> 'Synkronisera statistiken',
 	'RESYNC_STATS_CONFIRM'			=> 'Är du säker på att du vill synkronisera statistiken?',
 	'RESYNC_STATS_EXPLAIN'			=> 'Räknar om det totala antalet inlägg, trådar, användare och filer.',
+	'RESYNC_STATS_SUCCESS'			=> 'Resynchronised statistics',
 	'RUN'							=> 'Kör nu',
 
 	'STATISTIC'					=> 'Statistik',
 	'STATISTIC_RESYNC_OPTIONS'	=> 'Synkronisera eller återställ statistik',
 
+	'TIMEZONE_INVALID'	=> 'The timezone you selected is invalid.',
+	'TIMEZONE_SELECTED'	=> '(currently selected)',
 	'TOPICS_PER_DAY'	=> 'Trådar per dag',
 
 	'UPLOAD_DIR_SIZE'	=> 'Storlek på bifogade filer',
@@ -10711,9 +11032,9 @@ $lang = array_merge($lang, array(
 
 	'LOG_APPROVE_TOPIC'			=> '<strong>Godkände tråd</strong><br />» %s',
 	'LOG_BUMP_TOPIC'			=> '<strong>Användare knuffade upp tråd</strong><br />» %s',
-	'LOG_DELETE_POST'			=> '<strong>Tog bort inlägg</strong><br />» %s',
-	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Tog bort skuggtråd</strong><br />» %s',
-	'LOG_DELETE_TOPIC'			=> '<strong>Tog bort tråd “%1$s” skriven av</strong><br />» %2$s',
+	'LOG_DELETE_POST'			=> '<strong>Deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Deleted shadow topic</strong><br />Â» %s',
+	'LOG_DELETE_TOPIC'			=> '<strong>Deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_FORK'					=> '<strong>Kopierade tråd</strong><br />» från %s',
 	'LOG_LOCK'					=> '<strong>Låste tråd</strong><br />» %s',
 	'LOG_LOCK_POST'				=> '<strong>Låste inlägg</strong><br />» %s',
@@ -10722,15 +11043,20 @@ $lang = array_merge($lang, array(
 	'LOG_PM_REPORT_CLOSED'		=> '<strong>Stängde rapport av pm</strong><br />» %s',
 	'LOG_PM_REPORT_DELETED'		=> '<strong>Raderade rapport av pm</strong><br />» %s',
 	'LOG_POST_APPROVED'			=> '<strong>Godkände inlägg</strong><br />» %s',
-	'LOG_POST_DISAPPROVED'		=> '<strong>Avslog inlägg “%1$s” med följande anledning</strong><br />» %2$s',
-	'LOG_POST_EDITED'			=> '<strong>Redigerade inlägg “%1$s” skrivet av</strong><br />» %2$s',
+	'LOG_POST_DISAPPROVED'		=> '<strong>Disapproved post â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
+	'LOG_POST_EDITED'			=> '<strong>Edited post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_POST_RESTORED'			=> '<strong>Restored post</strong><br />Â» %s',
 	'LOG_REPORT_CLOSED'			=> '<strong>Stängde rapport</strong><br />» %s',
 	'LOG_REPORT_DELETED'		=> '<strong>Tog bort rapport</strong><br />» %s',
+	'LOG_RESTORE_TOPIC'			=> '<strong>Restored topic â€œ%1$sâ€ written by</strong><br />Â» %2$s',
+	'LOG_SOFTDELETE_POST'		=> '<strong>Soft deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_SOFTDELETE_TOPIC'		=> '<strong>Soft deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_SPLIT_DESTINATION'		=> '<strong>Flyttade delade inlägg</strong><br />» till %s',
 	'LOG_SPLIT_SOURCE'			=> '<strong>Delade inlägg</strong><br />» från %s',
 
 	'LOG_TOPIC_APPROVED'		=> '<strong>Godkände tråd</strong><br />» %s',
-	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Avslog tråd “%1$s” med följande anledning</strong><br />%2$s',
+	'LOG_TOPIC_RESTORED'		=> '<strong>Restored topic</strong><br />Â» %s',
+	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Disapproved topic â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
 	'LOG_TOPIC_RESYNC'			=> '<strong>Synkroniserade trådräknare</strong><br />» %s',
 	'LOG_TOPIC_TYPE_CHANGED'	=> '<strong>Ändrade trådtyp</strong><br />» %s',
 	'LOG_UNLOCK'				=> '<strong>Låste upp tråd</strong><br />» %s',
@@ -10782,16 +11108,6 @@ $lang = array_merge($lang, array(
 
 	'LOG_IMAGE_GENERATION_ERROR'	=> '<strong>Ett fel uppstod då en bild skulle skapas</strong><br />» Fel i %1$s på rad %2$s: %3$s',
 
-	'LOG_IMAGESET_ADD_DB'			=> '<strong>Lade till nytt bildpaket till databasen</strong><br />» %s',
-	'LOG_IMAGESET_ADD_FS'			=> '<strong>Lade till nytt bildpaket till filsystemet</strong><br />» %s',
-	'LOG_IMAGESET_DELETE'			=> '<strong>Tog bort bildpaket</strong><br />» %s',
-	'LOG_IMAGESET_EDIT_DETAILS'		=> '<strong>Ändrade bildpaketsdetaljer</strong><br />» %s',
-	'LOG_IMAGESET_EDIT'				=> '<strong>Ändrade bildpaket</strong><br />» %s',
-	'LOG_IMAGESET_EXPORT'			=> '<strong>Exporterade bildpaket</strong><br />» %s',
-	'LOG_IMAGESET_LANG_MISSING'		=> '<strong>Bildpaket saknar “%2$s” översättning</strong><br />» %1$s',
-	'LOG_IMAGESET_LANG_REFRESHED'	=> '<strong>Uppdaterade översättningen “%2$s” av bildpaketet</strong><br />» %1$s',
-	'LOG_IMAGESET_REFRESHED'		=> '<strong>Uppdaterade bildpaket</strong><br />» %s',
-
 	'LOG_INACTIVE_ACTIVATE'	=> '<strong>Aktiverade inaktiverade användare</strong><br />» %s',
 	'LOG_INACTIVE_DELETE'	=> '<strong>Tog bort inaktiverade användare</strong><br />» %s',
 	'LOG_INACTIVE_REMIND'	=> '<strong>Skickade påminnelse via e-post till alla inaktiverade användare</strong><br />» %s',
@@ -10836,6 +11152,7 @@ $lang = array_merge($lang, array(
 	'LOG_U_ROLE_EDIT'		=> '<strong>Användarroll ändrad</strong><br />» %s',
 	'LOG_U_ROLE_REMOVED'	=> '<strong>Användarroll borttagen</strong><br />» %s',
 
+	'LOG_PLUPLOAD_TIDY_FAILED'		=> '<strong>Unable to open %1$s for tidying, check permissions.</strong><br />Exception: %2$s<br />Trace: %3$s',
 	'LOG_PROFILE_FIELD_ACTIVATE'	=> '<strong>Profilfält aktiverat</strong><br />» %s',
 	'LOG_PROFILE_FIELD_CREATE'		=> '<strong>Profilfält tillagt</strong><br />» %s',
 	'LOG_PROFILE_FIELD_DEACTIVATE'	=> '<strong>Profilfält inaktiverat</strong><br />» %s',
@@ -10844,13 +11161,13 @@ $lang = array_merge($lang, array(
 
 	'LOG_PRUNE'					=> '<strong>Rensade kategorier</strong><br />» %s',
 	'LOG_AUTO_PRUNE'			=> '<strong>Auto-rensade kategorier</strong><br />» %s',
+	'LOG_PRUNE_SHADOW'		=> '<strong>Auto-pruned shadow topics</strong><br />Â» %s',
 	'LOG_PRUNE_USER_DEAC'		=> '<strong>Användare inaktiverade</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_DEL'	=> '<strong>Användare rensade och inlägg borttagna</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_ANON'	=> '<strong>Användare rensade och inlägg behållna</strong><br />» %s',
 
 	'LOG_PURGE_CACHE'			=> '<strong>Rensade cachen</strong>',
 	'LOG_PURGE_SESSIONS'		=> '<strong>Rensade sessioner</strong>',
-
 
 	'LOG_RANK_ADDED'		=> '<strong>Lade till ny titel</strong><br />» %s',
 	'LOG_RANK_REMOVED'		=> '<strong>Tog bort titel</strong><br />» %s',
@@ -10860,15 +11177,17 @@ $lang = array_merge($lang, array(
 	'LOG_REASON_REMOVED'	=> '<strong>Tog bort rapport/avslagsanledning</strong><br />» %s',
 	'LOG_REASON_UPDATED'	=> '<strong>Uppdaterade rapport/avslagsanledning</strong><br />» %s',
 
-	'LOG_REFERER_INVALID'		=> '<strong>Hänvisningarkontroll misslyckades</strong><br />Â»Hänvisare var â€œ<em>%1$s</em>â€. Förfrågningen nekades och sessionen dödades.',
+	'LOG_REFERER_INVALID'		=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 	'LOG_RESET_DATE'			=> '<strong>Forumets startdatum återställt</strong>',
 	'LOG_RESET_ONLINE'			=> '<strong>Räknaren för flest användare online samtidigt återställd</strong>',
+	'LOG_RESYNC_FILES_STATS'	=> '<strong>File statistics resynchronised</strong>',
 	'LOG_RESYNC_POSTCOUNTS'		=> '<strong>Användares inläggsräknare synkroniserade</strong>',
 	'LOG_RESYNC_POST_MARKING'	=> '<strong>Prickade trådar synkroniserades</strong>',
 	'LOG_RESYNC_STATS'			=> '<strong>Inläggs-, tråd- och användarstatistik synkroniserades</strong>',
 
 	'LOG_SEARCH_INDEX_CREATED'	=> '<strong>Skapade sökindex för</strong><br />» %s',
 	'LOG_SEARCH_INDEX_REMOVED'	=> '<strong>Tog bort sökindex för</strong><br />» %s',
+	'LOG_SPHINX_ERROR'			=> '<strong>Sphinx Error</strong><br />Â» %s',
 	'LOG_STYLE_ADD'				=> '<strong>Lade till ny stil</strong><br />» %s',
 	'LOG_STYLE_DELETE'			=> '<strong>Tog bort stil</strong><br />» %s',
 	'LOG_STYLE_EDIT_DETAILS'	=> '<strong>Ändrade stil</strong><br />» %s',
@@ -10935,15 +11254,18 @@ $lang = array_merge($lang, array(
 	'LOG_USER_GROUP_RESIGN'			=> '<strong>Användare lämnade gruppen</strong><br />» %s',
 
 	'LOG_WARNING_DELETED'		=> '<strong>Tog bort användarvarning</strong><br />» %s',
-	'LOG_WARNINGS_DELETED'		=> '<strong>Tog bort %2$s varning(ar)</strong><br />» %1$s',
 	'LOG_WARNINGS_DELETED_ALL'	=> '<strong>Tog bort alla användarvarningar</strong><br />» %s',
 
 	'LOG_WORD_ADD'			=> '<strong>Lade till ordcensurering</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>Tog bort ordcensurering</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Ändrade ordcensurering</strong><br />» %s',
+
+	'LOG_EXT_ENABLE'	=> '<strong>Extension enabled</strong><br />Â» %s',
+	'LOG_EXT_DISABLE'	=> '<strong>Extension disabled</strong><br />Â» %s',
+	'LOG_EXT_PURGE'		=> '<strong>Extensionâ€™s data deleted</strong><br />Â» %s',
+
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
-
 ));
 
 $lang = array_merge($lang, array(
@@ -11244,7 +11566,7 @@ $lang = array_merge($lang, array(
 	'ACP_PORTAL_WELCOME_EXPLAIN'=> '',
 	'ADM_LOGOUT'			=> 'Logga ut från administrationspanelen',
 	'ADM_LOGGED_OUT'		=> 'Loggade ut från administrationspanelen',
-	'LOG_REFERER_INVALID'	=> '<strong>Hänvisningarkontroll misslyckades</strong><br />Â»Hänvisare var â€œ<em>%1$s</em>â€. Förfrågningen nekades och sessionen dödades.',
+	'LOG_REFERER_INVALID'	=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 
 	'ACP_ABBCODES'			=> 'BBcode Box',
 	'LOG_CONFIG_ABBCODES'	=> '<strong>Altered BBCode Box settings</strong>',
@@ -11650,7 +11972,7 @@ $lang = array_merge($lang, array(
 	'SELECT_A_PREFIX'				=> 'Select a prefix',
 	'ACP_SEOQUERYS'					=> 'SEO Queries',
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Hantera bilagor',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can list and delete files attached to posts and private messages.',
 	'LOG_ATTACH_DEL'				=> '<strong>Attachments deleted</strong><br />» %s',
 	'LOG_ATTACH_REASSIGNED'			=> '<strong>Attachment reassigned to Post</strong><br />» ID %1$d - %2$s',
 	'TOTAL_SIZE'					=> 'Total size',
@@ -11669,11 +11991,11 @@ $lang = array_merge($lang, array(
 	'ACP_INTRO'				=> 'Intro',
 
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Hantera bilagor',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
 	'TOTAL_SIZE'				=> 'Total size',
 	'DOWNLOADS'				=> 'Nerladdningar',
 
-	'NO_AVATAR'				=> 'URL of the avatar for all the have no separate',
+	'NO_AVATAR'				=> 'No avatar selected',
 	'NO_AVATAR_EXPLAIN'			=> 'The optimal size of the avatar is 120x120px, this box is left blank, no picture at all. <br /> Demo URL: http://www.userboard.org/images/no_avatar_1.gif',
 	'GROUP_ICON'				=> 'Group Icon',
 	'GROUP_ICON_EXPLAIN'			=> 'Upload your Group Icons into Upload &#187; Topic/Group Icons',
@@ -12836,6 +13158,97 @@ $lang = array_merge($lang, array(
 	'NO_EMAIL_SUBJECT'		=> 'Inget e-postämne angavs.',
 ));
 
+#######language/en/acp/extensions.php#######
+
+$lang = array_merge($lang, array(
+	'EXTENSION'					=> 'Filtyp',
+	'EXTENSIONS'				=> 'Extensions',
+	'EXTENSIONS_ADMIN'			=> 'Extensions Manager',
+	'EXTENSIONS_EXPLAIN'		=> 'The Extensions Manager is a tool in your phpBB Board which allows you to manage all of your extensions statuses and view information about them.',
+	'EXTENSION_INVALID_LIST'	=> 'The “%s” extension is not valid.<br />%s<br /><br />',
+	'EXTENSION_NOT_AVAILABLE'	=> 'The selected extension is not available for this board, please verify your phpBB and PHP versions are allowed (see the details page).',
+	'EXTENSION_DIR_INVALID'		=> 'The selected extension has an invalid directory structure and cannot be enabled.',
+	'EXTENSION_NOT_ENABLEABLE'	=> 'The selected extension cannot be enabled, please verify the extension’s requirements.',
+
+	'DETAILS'				=> 'Detaljer',
+
+	'EXTENSIONS_DISABLED'	=> 'Disabled Extensions',
+	'EXTENSIONS_ENABLED'	=> 'Enabled Extensions',
+
+	'EXTENSION_DELETE_DATA'	=> 'Delete data',
+	'EXTENSION_DISABLE'		=> 'Disable',
+	'EXTENSION_ENABLE'		=> 'Enable',
+
+	'EXTENSION_DELETE_DATA_EXPLAIN'	=> 'Deleting an extension’s data removes all of its data and settings. The extension files are retained so it can be enabled again.',
+	'EXTENSION_DISABLE_EXPLAIN'		=> 'Disabling an extension retains its files, data and settings but removes any functionality added by the extension.',
+	'EXTENSION_ENABLE_EXPLAIN'		=> 'Enabling an extension allows you to use it on your board.',
+
+	'EXTENSION_DELETE_DATA_IN_PROGRESS'	=> 'The extension’s data is currently being deleted. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_DISABLE_IN_PROGRESS'	=> 'The extension is currently being disabled. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_ENABLE_IN_PROGRESS'	=> 'The extension is currently being enabled. Please do not leave or refresh this page until it is completed.',
+
+	'EXTENSION_DELETE_DATA_SUCCESS'	=> 'The extension’s data was deleted successfully',
+	'EXTENSION_DISABLE_SUCCESS'		=> 'The extension was disabled successfully',
+	'EXTENSION_ENABLE_SUCCESS'		=> 'The extension was enabled successfully',
+
+	'EXTENSION_NAME'			=> 'Extension Name',
+	'EXTENSION_ACTIONS'			=> 'Actions',
+	'EXTENSION_OPTIONS'			=> 'Options',
+	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
+	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s files from the filesystem</li>
+			<li>Upload the new files</li>
+			<li>Enable the extension</li>
+		</ol>',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s data</li>
+			<li>Delete the extension’s files from the filesystem</li>
+		</ol>',
+
+	'EXTENSION_DELETE_DATA_CONFIRM'	=> 'Are you sure that you wish to delete the data associated with “%s”?<br /><br />This removes all of its data and settings and cannot be undone!',
+	'EXTENSION_DISABLE_CONFIRM'		=> 'Are you sure that you wish to disable the “%s” extension?',
+	'EXTENSION_ENABLE_CONFIRM'		=> 'Are you sure that you wish to enable the “%s” extension?',
+	'EXTENSION_FORCE_UNSTABLE_CONFIRM'	=> 'Are you sure that you wish to force the use of unstable version?',
+
+	'RETURN_TO_EXTENSION_LIST'	=> 'Return to the extension list',
+
+	'EXT_DETAILS'			=> 'Extension Details',
+	'DISPLAY_NAME'			=> 'Disply Name (may be NULL)',
+	'CLEAN_NAME'			=> 'Clean Name',
+	'TYPE'					=> 'Type',
+	'DESCRIPTION'			=> 'Beskrivning',
+	'VERSION'				=> 'Version',
+	'HOMEPAGE'				=> 'Homepage',
+	'PATH'					=> 'File Path',
+	'TIME'					=> 'Tid',
+	'LICENSE'				=> 'Licence',
+
+	'REQUIREMENTS'			=> 'Requirements',
+	'PHPBB_VERSION'			=> 'phpBB Version',
+	'PHP_VERSION'			=> 'PHP Version',
+	'AUTHOR_INFORMATION'	=> 'Author Information',
+	'AUTHOR_NAME'			=> 'Name',
+	'AUTHOR_EMAIL'			=> 'Email',
+	'AUTHOR_HOMEPAGE'		=> 'Homepage',
+	'AUTHOR_ROLE'			=> 'Role',
+
+	'NOT_UP_TO_DATE'		=> '%s is not up to date',
+	'UP_TO_DATE'			=> '%s is up to date',
+	'ANNOUNCEMENT_TOPIC'	=> 'Release Announcement',
+	'DOWNLOAD_LATEST'		=> 'Download Version',
+	'NO_VERSIONCHECK'		=> 'No version check information given.',
+
+	'VERSIONCHECK_FORCE_UPDATE_ALL'		=> 'Re-Check all versions',
+	'FORCE_UNSTABLE'					=> 'Always check for unstable versions',
+	'EXTENSIONS_VERSION_CHECK_SETTINGS'	=> 'Version check settings',
+
+	'META_FIELD_NOT_SET'	=> 'Required meta field %s has not been set.',
+	'META_FIELD_INVALID'	=> 'Meta field %s is invalid.',
+));
+
 #######language/en/acp/forums.php#######
 
 $lang = array_merge($lang, array(
@@ -12845,6 +13258,10 @@ $lang = array_merge($lang, array(
 	'AUTO_PRUNE_FREQ_EXPLAIN'	=> 'Tid i dagar mellan rensningar.',
 	'AUTO_PRUNE_VIEWED'			=> 'Inläggsvisningsålder för auto-rensning',
 	'AUTO_PRUNE_VIEWED_EXPLAIN'	=> 'Antal dagar sen en tråd senast visades som tråden ska tas bort efter.',
+	'AUTO_PRUNE_SHADOW_FREQ'	=> 'Auto-prune shadow topics frequency',
+	'AUTO_PRUNE_SHADOW_DAYS'	=> 'Auto-prune shadow topics age',
+	'AUTO_PRUNE_SHADOW_DAYS_EXPLAIN'	=> 'Number of days after which shadow topic is removed.',
+	'AUTO_PRUNE_SHADOW_FREQ_EXPLAIN'	=> 'Time in days between pruning events.',
 
 	'CONTINUE'						=> 'Fortsätt',
 	'COPY_PERMISSIONS_EXPLAIN'		=> 'För att göra det enklare att hantera behörigheterna, så kan du kopiera dem från en redan existerande kategori.',
@@ -12903,6 +13320,8 @@ $lang = array_merge($lang, array(
 	'FORUM_PASSWORD_OLD'				=> 'The forum password is using an old hashing method and should be changed.',
 	'FORUM_PASSWORD_MISMATCH'			=> 'Lösenorden du angav stämde inte överens.',
 	'FORUM_PRUNE_SETTINGS'				=> 'Kategorirensningsinställningar',
+	'FORUM_PRUNE_SHADOW'				=> 'Enable auto-pruning of shadow topics',
+	'FORUM_PRUNE_SHADOW_EXPLAIN'			=> 'Prunes the forum of shadow topics, set the frequency/age parameters below.',
 	'FORUM_RESYNCED'					=> 'Kategorin “%s”  synkroniserades',
 	'FORUM_RULES_EXPLAIN'				=> 'Kategoriregler visas på alla sidor inom given kategori.',
 	'FORUM_RULES_LINK'					=> 'Klicka här för att visa kategorireglerna',
@@ -12994,6 +13413,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE_EXPLAIN'		=> 'Från denna panel kan du administrera alla dina användargrupper. Du kan ta bort, skapa och redigera existerande grupper. Vidare kan du välja gruppledare, ändra gruppstatus (öppnen/gömd/stängd) samt ställa in gruppnamn och beskrivning.',
+	'ADD_GROUP_CATEGORY'			=> 'Add category',
 	'GROUP_ADD_USERS'				=> 'Lägg till användare',
 	'ADD_USERS_EXPLAIN'				=> 'Här kan du lägga till nya medlemmar till gruppen. Du kan göra gruppen till standardgrupp för de valda användarna. Du kan också göra dem till gruppledare. Ange varje användarnamn på en ny rad.',
 
@@ -13007,11 +13427,10 @@ $lang = array_merge($lang, array(
 	'GROUP_APPROVED'				=> 'Godkända medlemmar',
 	'GROUP_AVATAR'					=> 'Gruppvisningsbild',
 	'GROUP_AVATAR_EXPLAIN'			=> 'Denna bild kommer att visas i gruppens kontrollpanelen.',
+	'GROUP_CATEGORY_NAME'			=> 'Category name',
 	'GROUP_CLOSED'					=> 'Stängd',
 	'GROUP_COLOR'					=> 'Gruppfärg',
 	'GROUP_COLOR_EXPLAIN'			=> 'Definierar den färg som medlemmars användarnamn ska visas i, lämna blankt för att använda användarens normalfärg.',
-	'GROUP_CONFIRM_ADD_USER'		=> 'Är du säker på att du vill lägga till användaren %1$s till gruppen?',
-	'GROUP_CONFIRM_ADD_USERS'		=> 'Är du säker på att du vill lägga till användarna %1$s till gruppen?',
 	'GROUP_CREATED'					=> 'Gruppen skapades.',
 	'GROUP_DEFAULT'					=> 'Gör till standardgrupp för medlem',
 	'GROUP_DEFS_UPDATED'			=> 'Standardgrupp inställd för alla valda medlemmar.',
@@ -13053,6 +13472,8 @@ $lang = array_merge($lang, array(
 	'GROUP_SETTINGS_SAVE'			=> 'Gruppomfattande inställningar',
 	'GROUP_SKIP_AUTH'				=> 'Undanta gruppledarna från behörigheterna',
 	'GROUP_SKIP_AUTH_EXPLAIN'		=> 'Om man har denna inställning påslagen, så har gruppledarna inte längre automatiskt samma behörigheter som gruppen.',
+	'GROUP_SPECIAL'					=> 'Pre-defined',
+	'GROUP_TEAMPAGE'				=> 'Display group on teampage',
 	'GROUP_TYPE'					=> 'Grupptyp',
 	'GROUP_TYPE_EXPLAIN'			=> 'Detta avgör vilka användare som kan gå med i eller visa denna grupp.',
 	'GROUP_UPDATED'					=> 'Gruppinställningarna uppdaterades.',
@@ -13061,19 +13482,37 @@ $lang = array_merge($lang, array(
 	'GROUP_USERS_EXIST'				=> 'De valda användarna är redan medlemmar.',
 	'GROUP_USERS_REMOVE'			=> 'Användarna togs bort från gruppen och nya standarder ställdes in.',
 
+	'LEGEND_EXPLAIN'				=> 'These are the groups which are displayed in the group legend:',
+	'LEGEND_SETTINGS'				=> 'Legend settings',
+	'LEGEND_SORT_GROUPNAME'			=> 'Sort legend by group name',
+	'LEGEND_SORT_GROUPNAME_EXPLAIN'	=> 'The order below is ignored when this option is enabled.',
+
+	'MANAGE_LEGEND'			=> 'Manage group legend',
+	'MANAGE_TEAMPAGE'		=> 'Manage teampage',
 	'MAKE_DEFAULT_FOR_ALL'		=> 'Gör till standardgrupp för alla medlemmar',
 	'MEMBERS'					=> 'Medlemmar',
 
 	'NO_GROUP'					=> 'Den valda användargruppen finns inte.',
+	'NO_GROUPS_ADDED'			=> 'No groups added yet.',
 	'NO_GROUPS_CREATED'			=> 'Inga grupper har skapats.',
 	'NO_PERMISSIONS'			=> 'Kopiera inte behörigheter',
 	'NO_USERS'					=> 'De valda användarna finns inte.',
 	'NO_USERS_ADDED'			=> 'Inga användare lades till gruppen.',
 	'NO_VALID_USERS'			=> 'Du har inte angett några användare som det går att utföra den handlingen på.',
 
+	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> 'Fördefinierade grupper',
 	'SPECIAL_GROUPS_EXPLAIN'	=> 'Fördefinierade grupper är speciella grupper, de kan inte tas bort eller ändras direkt. Du kan dock fortfarande lägga till användare och ändra grundläggande inställningar.',
 
+	'TEAMPAGE'					=> 'Teampage',
+	'TEAMPAGE_DISP_ALL'			=> 'All memberships',
+	'TEAMPAGE_DISP_DEFAULT'		=> 'User’s default group only',
+	'TEAMPAGE_DISP_FIRST'		=> 'First membership only',
+	'TEAMPAGE_EXPLAIN'			=> 'These are the groups which are displayed on the teampage:',
+	'TEAMPAGE_FORUMS'			=> 'Display moderated forums',
+	'TEAMPAGE_FORUMS_EXPLAIN'	=> 'If set to yes, moderators will have a list with all of the forums where they have moderator permissions displayed in their row. This can be very database intensive for big boards.',
+	'TEAMPAGE_MEMBERSHIPS'		=> 'Display user memberships',
+	'TEAMPAGE_SETTINGS'			=> 'Teampage settings',
 	'TOTAL_MEMBERS'				=> 'Medlemmar',
 
 	'USERS_APPROVED'				=> 'Användarna godkändes.',
@@ -13459,26 +13898,14 @@ $lang = array_merge($lang, array(
 	'ACP_FILES'						=> 'Administrationsspråkfiler',
 	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> 'Här kan du installera/ta bort språkpaket. Standardspråket är stjärnmärkt.',
 
-	'EMAIL_FILES'			=> 'Mallar för e-post',
-
-	'FILE_CONTENTS'				=> 'Filinnehåll',
-	'FILE_FROM_STORAGE'			=> 'Filen är lagrad i katalogen store.',
-
-	'HELP_FILES'				=> 'Hjälpfiler',
-
-	'INSTALLED_LANGUAGE_PACKS'	=> 'Installerade språkpaket',
-	'INVALID_LANGUAGE_PACK'		=> 'Det valda språkpaketet verkar inte vara giltigt. Kontrollera språkpaketet och ladda upp det igen om det behövs.',
-	'INVALID_UPLOAD_METHOD'		=> 'Den valda uppladdningsmetoden är inte giltig, välj en annan metod.',
+	'DELETE_LANGUAGE_CONFIRM'		=> 'Are you sure you wish to delete “%s”?',
+	'INSTALLED_LANGUAGE_PACKS'		=> 'Installerade språkpaket',
 
 	'LANGUAGE_DETAILS_UPDATED'			=> 'Språkdetaljer uppdaterades.',
-	'LANGUAGE_ENTRIES'					=> 'Språkposter',
-	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Här kan du ändra existerande språkpaketsposter eller lägga till poster som inte översatts än.<br /><strong>Observera:</strong> När du ändrat en språkfil så kommer ändringarna att sparas i en separat mapp där du kan ladda ner de nya filerna ifrån. Ändringarna kommer inte att ses av användarna förrän du ersätter originalfilen i ditt webbutrymme (genom att ladda upp den).',
-	'LANGUAGE_FILES'					=> 'Språkfiler',
-	'LANGUAGE_KEY'						=> 'Språknyckel',
 	'LANGUAGE_PACK_ALREADY_INSTALLED'	=> 'Detta språkpaket är redan installerat.',
-	'LANGUAGE_PACK_DELETED'				=> 'Språkpaketet <strong>%s</strong> togs bort. Alla användare som använde detta språk har återställts till forumets standardspråk.',
+	'LANGUAGE_PACK_DELETED'				=> 'The language pack “%s” has been removed successfully. All users using this language have been reset to the board’s default language.',
 	'LANGUAGE_PACK_DETAILS'				=> 'Språkpaketsdetaljer',
-	'LANGUAGE_PACK_INSTALLED'			=> 'Språkpaketet <strong>%s</strong> installerades.',
+	'LANGUAGE_PACK_INSTALLED'			=> 'The language pack “%s” has been successfully installed.',
 	'LANGUAGE_PACK_CPF_UPDATE'			=> 'Det egna profilfältets språksträngar kopierades från standardspråket. Var god ändra dessa strängar efter behov.',
 	'LANGUAGE_PACK_ISO'					=> 'ISO',
 	'LANGUAGE_PACK_LOCALNAME'			=> 'Lokalt namn',
@@ -13491,33 +13918,44 @@ $lang = array_merge($lang, array(
 	'LANG_ISO_CODE'						=> 'ISO-kod',
 	'LANG_LOCAL_NAME'					=> 'Lokalt namn',
 
-	'MISSING_LANGUAGE_FILE'		=> 'Saknad språkfil: <strong style="color:red">%s</strong>',
+	'MISSING_LANG_FILES'		=> 'Missing language files',
 	'MISSING_LANG_VARIABLES'	=> 'Saknade språkvariablar',
-	'MODS_FILES'				=> 'Språkfiler för MODs',
 
 	'NO_FILE_SELECTED'				=> 'Du angav ingen språkfil.',
 	'NO_LANG_ID'					=> 'Du angav inget språkpaket.',
-	'NO_REMOVE_DEFAULT_LANG'		=> 'Du kan inte ta bort standardspråkpaketet.<br />Om du vill ta bort detta språkpaket, byt forumets standardspråk först.',
+	'NO_REMOVE_DEFAULT_LANG'		=> 'You are not able to remove the default language pack.<br />If you want to remove this language pack, change your board’s default language first.',
 	'NO_UNINSTALLED_LANGUAGE_PACKS'	=> 'Inga oinstallerade språkpaket.',
 
-	'REMOVE_FROM_STORAGE_FOLDER'		=> 'Ta bort från katalogen store.',
-
-	'SELECT_DOWNLOAD_FORMAT'	=> 'Välj arkivformat',
-	'SUBMIT_AND_DOWNLOAD'		=> 'Skicka och ladda ner fil',
-	'SUBMIT_AND_UPLOAD'			=> 'Skicka och ladda upp fil',
-
-	'THOSE_MISSING_LANG_FILES'			=> 'Följande språkfiler saknas i språket %s mapp.',
-	'THOSE_MISSING_LANG_VARIABLES'		=> 'Följande språkvariabler saknas i språkpaketet <strong>%s</strong>.',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 
 	'UNINSTALLED_LANGUAGE_PACKS'	=> 'Ej installerade språkpaket',
 
+	// 3.0.12
+	'EMAIL_FILES'			=> 'Mallar för e-post',
+	'FILE_CONTENTS'				=> 'Filinnehåll',
+	'FILE_FROM_STORAGE'			=> 'Filen är lagrad i katalogen store.',
+	'HELP_FILES'				=> 'Hjälpfiler',
+	'INSTALLED_LANGUAGE_PACKS'	=> 'Installerade språkpaket',
+	'INVALID_LANGUAGE_PACK'		=> 'Det valda språkpaketet verkar inte vara giltigt. Kontrollera språkpaketet och ladda upp det igen om det behövs.',
+	'INVALID_UPLOAD_METHOD'		=> 'Den valda uppladdningsmetoden är inte giltig, välj en annan metod.',
+	'LANGUAGE_ENTRIES'					=> 'Språkposter',
+	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Här kan du ändra existerande språkpaketsposter eller lägga till poster som inte översatts än.<br /><strong>Observera:</strong> När du ändrat en språkfil så kommer ändringarna att sparas i en separat mapp där du kan ladda ner de nya filerna ifrån. Ändringarna kommer inte att ses av användarna förrän du ersätter originalfilen i ditt webbutrymme (genom att ladda upp den).',
+	'LANGUAGE_FILES'					=> 'Språkfiler',
+	'LANGUAGE_KEY'						=> 'Språknyckel',
+	'MISSING_LANGUAGE_FILE'		=> 'Saknad språkfil: <strong style="color:red">%s</strong>',
+	'SELECT_DOWNLOAD_FORMAT'	=> 'Välj arkivformat',
+	'SUBMIT_AND_DOWNLOAD'		=> 'Skicka och ladda ner fil',
+	'SUBMIT_AND_UPLOAD'			=> 'Skicka och ladda upp fil',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 	'UNABLE_TO_WRITE_FILE'		=> 'Filen kunde inte skrivas till %s.',
 	'UPLOAD_COMPLETED'			=> 'Uppladdningen slutfördes.',
 	'UPLOAD_FAILED'				=> 'Uppladdningen misslyckades av okänd anledning. Du måste kanske ersätta den relevanta filen manuellt.',
 	'UPLOAD_METHOD'				=> 'Uppladdningsmetod',
 	'UPLOAD_SETTINGS'			=> 'Uppladdningsinställningar',
-
 	'WRONG_LANGUAGE_FILE'		=> 'Vald språkfil är ogiltig.',
+	// 3.0.12
 ));
 
 #######language/en/acp/lexicon.php#######
@@ -13849,6 +14287,171 @@ $lang = array_merge($lang, array(
 	'ROLE_DESCRIPTION_ADMIN_FOOTBALL'	=> 'Can edit final match results.',
 ));
 
+#######language/en/acp/permissions_phpbb.php#######
+
+$lang = array_merge($lang, array(
+	'ACL_CAT_ACTIONS'		=> 'Actions',
+	'ACL_CAT_CONTENT'		=> 'Content',
+	'ACL_CAT_FORUMS'		=> 'Forums',
+	'ACL_CAT_MISC'			=> 'Misc',
+	'ACL_CAT_PERMISSIONS'	=> 'Permissions',
+	'ACL_CAT_PM'			=> 'Private messages',
+	'ACL_CAT_POLLS'			=> 'Polls',
+	'ACL_CAT_POST'			=> 'Post',
+	'ACL_CAT_POST_ACTIONS'	=> 'Post actions',
+	'ACL_CAT_POSTING'		=> 'Posting',
+	'ACL_CAT_PROFILE'		=> 'Profile',
+	'ACL_CAT_SETTINGS'		=> 'Settings',
+	'ACL_CAT_TOPIC_ACTIONS'	=> 'Topic actions',
+	'ACL_CAT_USER_GROUP'	=> 'Users &amp; Groups',
+));
+
+// User Permissions
+$lang = array_merge($lang, array(
+	'ACL_U_VIEWPROFILE'	=> 'Can view profiles, memberlist and online list',
+	'ACL_U_CHGNAME'		=> 'Can change username',
+	'ACL_U_CHGPASSWD'	=> 'Can change password',
+	'ACL_U_CHGEMAIL'	=> 'Can change email address',
+	'ACL_U_CHGAVATAR'	=> 'Can change avatar',
+	'ACL_U_CHGGRP'		=> 'Can change default usergroup',
+	'ACL_U_CHGPROFILEINFO'	=> 'Can change profile field information',
+
+	'ACL_U_ATTACH'		=> 'Can attach files',
+	'ACL_U_DOWNLOAD'	=> 'Can download files',
+	'ACL_U_SAVEDRAFTS'	=> 'Can save drafts',
+	'ACL_U_CHGCENSORS'	=> 'Can disable word censors',
+	'ACL_U_SIG'			=> 'Can use signature',
+
+	'ACL_U_SENDPM'		=> 'Can send private messages',
+	'ACL_U_MASSPM'		=> 'Can send messages to multiple users',
+	'ACL_U_MASSPM_GROUP'=> 'Can send messages to groups',
+	'ACL_U_READPM'		=> 'Can read private messages',
+	'ACL_U_PM_EDIT'		=> 'Can edit own private messages',
+	'ACL_U_PM_DELETE'	=> 'Can remove private messages from own folder',
+	'ACL_U_PM_FORWARD'	=> 'Can forward private messages',
+	'ACL_U_PM_EMAILPM'	=> 'Can email private messages',
+	'ACL_U_PM_PRINTPM'	=> 'Can print private messages',
+	'ACL_U_PM_ATTACH'	=> 'Can attach files in private messages',
+	'ACL_U_PM_DOWNLOAD'	=> 'Can download files in private messages',
+	'ACL_U_PM_BBCODE'	=> 'Can use BBCode in private messages',
+	'ACL_U_PM_SMILIES'	=> 'Can use smilies in private messages',
+	'ACL_U_PM_IMG'		=> 'Can use [img] BBCode tag in private messages',
+	'ACL_U_PM_FLASH'	=> 'Can use [flash] BBCode tag in private messages',
+
+	'ACL_U_SENDEMAIL'	=> 'Can send emails',
+	'ACL_U_SENDIM'		=> 'Can send instant messages',
+	'ACL_U_IGNOREFLOOD'	=> 'Can ignore flood limit',
+	'ACL_U_HIDEONLINE'	=> 'Can hide online status',
+	'ACL_U_VIEWONLINE'	=> 'Can view hidden online users',
+	'ACL_U_SEARCH'		=> 'Can search board',
+));
+
+// Forum Permissions
+$lang = array_merge($lang, array(
+	'ACL_F_LIST'		=> 'Can see forum',
+	'ACL_F_READ'		=> 'Can read forum',
+	'ACL_F_SEARCH'		=> 'Can search the forum',
+	'ACL_F_SUBSCRIBE'	=> 'Can subscribe forum',
+	'ACL_F_PRINT'		=> 'Can print topics',
+	'ACL_F_EMAIL'		=> 'Can email topics',
+	'ACL_F_BUMP'		=> 'Can bump topics',
+	'ACL_F_USER_LOCK'	=> 'Can lock own topics',
+	'ACL_F_DOWNLOAD'	=> 'Can download files',
+	'ACL_F_REPORT'		=> 'Can report posts',
+
+	'ACL_F_POST'		=> 'Can start new topics',
+	'ACL_F_STICKY'		=> 'Can post stickies',
+	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_REPLY'		=> 'Can reply to topics',
+	'ACL_F_EDIT'		=> 'Can edit own posts',
+	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
+	'ACL_F_SOFTDELETE'	=> 'Can soft delete own posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_F_IGNOREFLOOD' => 'Can ignore flood limit',
+	'ACL_F_POSTCOUNT'	=> 'Increment post counter<br /><em>Please note that this setting only affects new posts.</em>',
+	'ACL_F_NOAPPROVE'	=> 'Can post without approval',
+
+	'ACL_F_ATTACH'		=> 'Can attach files',
+	'ACL_F_ICONS'		=> 'Can use topic/post icons',
+	'ACL_F_BBCODE'		=> 'Can use BBCode',
+	'ACL_F_FLASH'		=> 'Can use [flash] BBCode tag',
+	'ACL_F_IMG'			=> 'Can use [img] BBCode tag',
+	'ACL_F_SIGS'		=> 'Can use signatures',
+	'ACL_F_SMILIES'		=> 'Can use smilies',
+
+	'ACL_F_POLL'		=> 'Can create polls',
+	'ACL_F_VOTE'		=> 'Can vote in polls',
+	'ACL_F_VOTECHG'		=> 'Can change existing vote',
+));
+
+// Moderator Permissions
+$lang = array_merge($lang, array(
+	'ACL_M_EDIT'		=> 'Can edit posts',
+	'ACL_M_DELETE'		=> 'Can permanently delete posts',
+	'ACL_M_SOFTDELETE'	=> 'Can soft delete posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_M_APPROVE'		=> 'Can approve and restore posts',
+	'ACL_M_REPORT'		=> 'Can close and delete reports',
+	'ACL_M_CHGPOSTER'	=> 'Can change post author',
+
+	'ACL_M_MOVE'	=> 'Can move topics',
+	'ACL_M_LOCK'	=> 'Can lock topics',
+	'ACL_M_SPLIT'	=> 'Can split topics',
+	'ACL_M_MERGE'	=> 'Can merge topics',
+
+	'ACL_M_INFO'	=> 'Can view post details',
+	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+));
+
+// Admin Permissions
+$lang = array_merge($lang, array(
+	'ACL_A_BOARD'		=> 'Can alter board settings/check for updates',
+	'ACL_A_SERVER'		=> 'Can alter server/communication settings',
+	'ACL_A_JABBER'		=> 'Can alter Jabber settings',
+	'ACL_A_PHPINFO'		=> 'Can view php settings',
+
+	'ACL_A_FORUM'		=> 'Can manage forums',
+	'ACL_A_FORUMADD'	=> 'Can add new forums',
+	'ACL_A_FORUMDEL'	=> 'Can delete forums',
+	'ACL_A_PRUNE'		=> 'Can prune forums',
+
+	'ACL_A_ICONS'		=> 'Can alter topic/post icons and smilies',
+	'ACL_A_WORDS'		=> 'Can alter word censors',
+	'ACL_A_BBCODE'		=> 'Can define BBCode tags',
+	'ACL_A_ATTACH'		=> 'Can alter attachment related settings',
+
+	'ACL_A_USER'		=> 'Can manage users<br /><em>This also includes seeing the users browser agent within the viewonline list.</em>',
+	'ACL_A_USERDEL'		=> 'Can delete/prune users',
+	'ACL_A_GROUP'		=> 'Can manage groups',
+	'ACL_A_GROUPADD'	=> 'Can add new groups',
+	'ACL_A_GROUPDEL'	=> 'Can delete groups',
+	'ACL_A_RANKS'		=> 'Can manage ranks',
+	'ACL_A_PROFILE'		=> 'Can manage custom profile fields',
+	'ACL_A_NAMES'		=> 'Can manage disallowed names',
+	'ACL_A_BAN'			=> 'Can manage bans',
+
+	'ACL_A_VIEWAUTH'	=> 'Can view permission masks',
+	'ACL_A_AUTHGROUPS'	=> 'Can alter permissions for individual groups',
+	'ACL_A_AUTHUSERS'	=> 'Can alter permissions for individual users',
+	'ACL_A_FAUTH'		=> 'Can alter forum permission class',
+	'ACL_A_MAUTH'		=> 'Can alter moderator permission class',
+	'ACL_A_AAUTH'		=> 'Can alter admin permission class',
+	'ACL_A_UAUTH'		=> 'Can alter user permission class',
+	'ACL_A_ROLES'		=> 'Can manage roles',
+	'ACL_A_SWITCHPERM'	=> 'Can use others permissions',
+
+	'ACL_A_STYLES'		=> 'Can manage styles',
+	'ACL_A_EXTENSIONS'	=> 'Can manage extensions',
+	'ACL_A_VIEWLOGS'	=> 'Can view logs',
+	'ACL_A_CLEARLOGS'	=> 'Can clear logs',
+	'ACL_A_MODULES'		=> 'Can manage modules',
+	'ACL_A_LANGUAGE'	=> 'Can manage language packs',
+	'ACL_A_EMAIL'		=> 'Can send mass email',
+	'ACL_A_BOTS'		=> 'Can manage bots',
+	'ACL_A_REASONS'		=> 'Can manage report/denial reasons',
+	'ACL_A_BACKUP'		=> 'Can backup/restore database',
+	'ACL_A_SEARCH'		=> 'Can manage search backends and settings',
+));
+
 #######language/en/acp/phpbb_seo.php#######
 
 $lang = array_merge($lang, array(
@@ -14020,6 +14623,7 @@ $lang = array_merge($lang, array(
 
 	'BBCODE_ADDED'				=> 'BBCode lades till.',
 	'BBCODE_EDITED'				=> 'BBCode ändrades.',
+	'BBCODE_DELETED'			=> 'The BBCode has been removed successfully.',
 	'BBCODE_NOT_EXIST'			=> 'BBCoden som du valde finns inte.',
 	'BBCODE_HELPLINE'			=> 'Hjälptext',
 	'BBCODE_HELPLINE_EXPLAIN'	=> 'Detta fält innehåller texten som visas när man för musen över denna BBCode.',
@@ -14075,17 +14679,10 @@ $lang = array_merge($lang, array(
 	'EXPORT_SMILIES'			=> 'Exportera och ladda ner smilies.pak',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sNär du klickar på denna länk så kommer konfigurationen för dina installerade smilies att packas ihop i <samp>smilies.pak</samp> som när väl nerladdad kan användas för att skapa en <samp>.zip</samp> eller <samp>.tgz</samp>-fil med alla dina smilies plus denna <samp>smilies.pak</samp>-konfigurationsfil%s.',
 
-
 	'ICONS_ADD'				=> 'Lägg till en ny ikon',
-	'ICONS_NONE_ADDED'		=> 'Inga ikoner lades till.',
-	'ICONS_ONE_ADDED'		=> 'Ikonen lades till.',
-	'ICONS_ADDED'			=> 'Ikonerna lades till.',
 	'ICONS_CONFIG'			=> 'Ikonkonfiguration',
 	'ICONS_DELETED'			=> 'Ikonen togs bort.',
 	'ICONS_EDIT'			=> 'Redigera ikon',
-	'ICONS_ONE_EDITED'		=> 'Ikonen uppdaterades.',
-	'ICONS_NONE_EDITED'		=> 'Inga ikoner uppdaterades.',
-	'ICONS_EDITED'			=> 'Ikonerna uppdaterades.',
 	'ICONS_HEIGHT'			=> 'Ikonhöjd',
 	'ICONS_IMAGE'			=> 'Ikonbild',
 	'ICONS_IMPORTED'		=> 'Ikonpaketet installerades.',
@@ -14115,9 +14712,6 @@ $lang = array_merge($lang, array(
 
 	'SELECT_PACKAGE'			=> 'Välj en paketfil',
 	'SMILIES_ADD'				=> 'Lägg till en ny smilie',
-	'SMILIES_NONE_ADDED'		=> 'Inga smilies lades till.',
-	'SMILIES_ONE_ADDED'			=> 'Smilie lades till.',
-	'SMILIES_ADDED'				=> 'Smilies lades till.',
 	'SMILIES_CODE'				=> 'Kod för smilie',
 	'SMILIES_CONFIG'			=> 'Smiliekonfiguration',
 	'SMILIES_DELETED'			=> 'Smilie togs bort.',
@@ -14125,9 +14719,6 @@ $lang = array_merge($lang, array(
 	'SMILIE_NO_CODE'			=> 'Smilien “%s” ignorerades, eftersom ingen kod angavs.',
 	'SMILIE_NO_EMOTION'			=> 'Smilien “%s” ignorerades, eftersom inget humör angavs.',
 	'SMILIE_NO_FILE'			=> 'Smilien “%s” ignorerades, eftersom filen inte finns.',
-	'SMILIES_NONE_EDITED'		=> 'Inga smilies uppdaterades.',
-	'SMILIES_ONE_EDITED'		=> 'Smilie uppdaterades.',
-	'SMILIES_EDITED'			=> 'Smilies uppdaterades.',
 	'SMILIES_EMOTION'			=> 'Humör',
 	'SMILIES_HEIGHT'			=> 'Smiliehöjd',
 	'SMILIES_IMAGE'				=> 'Smiliebild',
@@ -14139,7 +14730,6 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'Smiliesbildfil',
 	'SMILIES_WIDTH'				=> 'Smiliesbredd',
 
-	'TOO_MANY_SMILIES'		=> 'Ditt meddelande innehåller för många smilies. Det maximala antalet tillåtna smilies är %d.',
 	'WRONG_PAK_TYPE'		=> 'Det angivna paketet innehåller inte lämplig data.',
 ));
 
@@ -14237,8 +14827,11 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ADDED_PROFILE_FIELD'	=> 'Lade till nytt eget profilfält.',
+	'ALPHA_DOTS'			=> 'Alphanumeric and dots (periods)',
 	'ALPHA_ONLY'			=> 'Endast alfanumeriska',
 	'ALPHA_SPACERS'			=> 'Alfanumeriska och mellanslag',
+	'ALPHA_UNDERSCORE'		=> 'Alphanumeric and underscores',
+	'ALPHA_PUNCTUATION'		=> 'Alphanumeric with comma, dots, underscore and dashes beginning with a letter',
 	'ALWAYS_TODAY'			=> 'Alltid det aktuella datumet',
 
 	'BOOL_ENTRIES_EXPLAIN'	=> 'Ange dina alternativ nu.',
@@ -14265,6 +14858,10 @@ $lang = array_merge($lang, array(
 	'DISPLAY_AT_PROFILE_EXPLAIN'	=> 'Användaren kan ändra detta profilfält via kontrollpanelen.',
 	'DISPLAY_AT_REGISTER'			=> 'Visa under registreringen',
 	'DISPLAY_AT_REGISTER_EXPLAIN'	=> 'Om detta alternativ aktiveras kommer fältet att visas under registreringen.',
+	'DISPLAY_ON_MEMBERLIST'			=> 'Display on memberlist screen',
+	'DISPLAY_ON_MEMBERLIST_EXPLAIN'	=> 'If this option is enabled, the field will be displayed in the user rows on the memberlist screen.',
+	'DISPLAY_ON_PM'					=> 'Display on view private message screen',
+	'DISPLAY_ON_PM_EXPLAIN'			=> 'If this option is enabled, the field will be displayed in the mini-profile on the private message screen.',
 	'DISPLAY_ON_VT'					=> 'Visa i trådar',
 	'DISPLAY_ON_VT_EXPLAIN'			=> 'Om denna inställning är aktiverad, så kommer fältet att visas i trådarna bredvid inläggen.',
 	'DISPLAY_PROFILE_FIELD'			=> 'Visa profilfält åt alla',
@@ -14278,20 +14875,26 @@ $lang = array_merge($lang, array(
 	'EVERYTHING_OK'					=> 'Allting OK',
 
 	'FIELD_BOOL'				=> 'Boolesk (Ja/Nej)',
+	'FIELD_CONTACT_DESC'		=> 'Contact description',
+	'FIELD_CONTACT_URL'			=> 'Contact link',
 	'FIELD_DATE'				=> 'Datum',
 	'FIELD_DESCRIPTION'			=> 'Fältbeskrivning',
 	'FIELD_DESCRIPTION_EXPLAIN'	=> 'Beskrivningen för detta fält som visas för användaren.',
 	'FIELD_DROPDOWN'			=> 'Listruta',
+	'FIELD_GOOGLEPLUS'			=> 'Google+',
 	'FIELD_IDENT'				=> 'Fältidentifikation',
 	'FIELD_IDENT_ALREADY_EXIST'	=> 'Den valda fältidentifikationen finns redan. Välj ett annat namn.',
 	'FIELD_IDENT_EXPLAIN'		=> 'Fältidentifikationen är ett namn för att identifiera profilfältet inom databasen och i mallarna.',
 	'FIELD_INT'					=> 'Nummer',
+	'FIELD_IS_CONTACT'			=> 'Display field as a contact field',
+	'FIELD_IS_CONTACT_EXPLAIN'	=> 'Contact fields are displayed within the contact section of the user profile and are displayed differently in the mini profile next to posts and private messages. You can use <samp>%s</samp> as a placeholder variable which will be replaced by a value provided by the user.',
 	'FIELD_LENGTH'				=> 'Längd på inmatningsruta',
 	'FIELD_NOT_FOUND'			=> 'Profilfältet hittades inte.',
 	'FIELD_STRING'				=> 'Enkelt textfält',
 	'FIELD_TEXT'				=> 'Textyta',
 	'FIELD_TYPE'				=> 'Fälttyp',
 	'FIELD_TYPE_EXPLAIN'		=> 'Du kan inte byta fälttyp senare.',
+	'FIELD_URL'					=> 'URL (Link)',
 	'FIELD_VALIDATION'			=> 'Fältbekräftning',
 	'FIRST_OPTION'				=> 'Första alternativet',
 
@@ -14303,6 +14906,12 @@ $lang = array_merge($lang, array(
 	'ISO_LANGUAGE'				=> 'Språk [%s]',
 
 	'LANG_SPECIFIC_OPTIONS'		=> 'Språkspecifika inställningar [<strong>%s</strong>]',
+
+	'LETTER_NUM_DOTS'			=> 'Any letters, numbers and dots (periods)',
+	'LETTER_NUM_ONLY'			=> 'Any letters and numbers',
+	'LETTER_NUM_PUNCTUATION'	=> 'Any letters, numbers, comma, dots, underscores and dashes beginning with any letter',
+	'LETTER_NUM_SPACERS'		=> 'Any letters, numbers and spacers',
+	'LETTER_NUM_UNDERSCORE'		=> 'Any letters, numbers and underscores',
 
 	'MAX_FIELD_CHARS'		=> 'Maximalt antal tecken',
 	'MAX_FIELD_NUMBER'		=> 'Högsta tillåtna nummer',
@@ -14357,7 +14966,9 @@ $lang = array_merge($lang, array(
 #######language/en/acp/prune.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_PRUNE_USERS_EXPLAIN'	=> 'Här kan du ta bort eller inaktivera användare i ditt forum. Konton kan filtreras på flera sätt: Enligt inläggsantal, senaste besöket, osv. Alla dessa kriterier kan kombineras, du kan tex rensa bort användare som inte vart aktiva sen 2002-01-01 och med färre inlägg än 10. Alternativt kan du skriva in en lista över användare direkt i rutan, eventuella kriterier som skrivits in kommer att ignoreras. Var försiktig! När en användare väl är borttagen finns det ingen väg tillbaka.',
+	'ACP_PRUNE_USERS_EXPLAIN'	=> 'This section allows you to delete or deactivate users on your board. Accounts can be filtered in a variety of ways; by post count, most recent activity, etc. Criteria may be combined to narrow down which accounts are affected. For example, you can prune users with fewer than 10 posts, who were also inactive after 2002-01-01. Use * as a wildcard for text fields. Alternatively, you may skip the criteria selection completely by entering a list of users (each on a separate line) into the text field. Take care with this facility! Once a user is deleted, there is no way to reverse the action.',
+
+	'CRITERIA'				=> 'Criteria',
 
 	'DEACTIVATE_DELETE'			=> 'Inaktivera eller ta bort',
 	'DEACTIVATE_DELETE_EXPLAIN'	=> 'Välj om användarna ska inaktiveras eller tas bort helt, observera att det inte går att ångra!',
@@ -14365,15 +14976,18 @@ $lang = array_merge($lang, array(
 	'DELETE_USER_POSTS'			=> 'Ta bort utrensade användares inlägg',
 	'DELETE_USER_POSTS_EXPLAIN'	=> 'Tar bort inlägg som gjorts av borttagna användare, har ingen effekt om användarna inaktiveras.',
 
-	'JOINED_EXPLAIN'			=> 'Ange ett datum i formatet <kbd>ÅÅÅÅ-MM-DD</kbd>.',
+	'JOINED_EXPLAIN'			=> 'Enter a date in <kbd>YYYY-MM-DD</kbd> format. You may use both fields to specify an interval, or leave one blank for an open date range.',
 
 	'LAST_ACTIVE_EXPLAIN'		=> 'Ange ett datum i formatet <kbd>ÅÅÅÅ-MM-DD</kbd>. Mata in <kbd>0000-00-00</kbd> för att ta bort användare, som aldrig loggat in, <em>Före</em> and <em>Efter</em> kriterier ignoreras.',
 
+	'POSTS_ON_QUEUE'			=> 'Posts Awaiting Approval',
+	'PRUNE_USERS_GROUP_EXPLAIN'	=> 'Limit to users within the selected group.',
+	'PRUNE_USERS_GROUP_NONE'	=> 'All groups',
 	'PRUNE_USERS_LIST'				=> 'Användare som kommer att rensas',
-	'PRUNE_USERS_LIST_DELETE'		=> 'Med de valda kriterierna för utrensning av användare kommer följande användare att tas bort.',
-	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'Med de valda kriterierna för utrensning av användare kommer följande användarkonton inaktiveras.',
+	'PRUNE_USERS_LIST_DELETE'		=> 'With the selected critera for pruning users the following accounts will be removed. You can remove individual users from the deletion list by unchecking the box next to their username.',
+	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'With the selected critera for pruning users the following accounts will be deactivated. You can remove individual users from the deactivation list by unchecking the box next to their username.',
 
-	'SELECT_USERS_EXPLAIN'		=> 'Skriv in specifika användarnamn här, de kommer att användas istället för kriterierna ovan. Användare med grundarstatus kan inte rensas.',
+	'SELECT_USERS_EXPLAIN'		=> 'Enter specific usernames here. They will be used in preference to the criteria above. Founders cannot be pruned.',
 
 	'USER_DEACTIVATE_SUCCESS'	=> 'De valda användarna inaktiverades.',
 	'USER_DELETE_SUCCESS'		=> 'De valda användarna togs bort.',
@@ -14420,15 +15034,38 @@ $lang = array_merge($lang, array(
 	'DELETING_INDEX_IN_PROGRESS'			=> 'Indexborttagning pågår',
 	'DELETING_INDEX_IN_PROGRESS_EXPLAIN'	=> 'Söksystemet rensar för närvarande indexet. Detta kan ta några minuter.',
 
-	'FULLTEXT_MYSQL_INCOMPATIBLE_VERSION'	=> 'MySQL fulltextsystemet kan endast användas med MySQL4 och senare.',
+	'FULLTEXT_MYSQL_INCOMPATIBLE_DATABASE'	=> 'The MySQL fulltext backend can only be used with MySQL4 and above.',
 	'FULLTEXT_MYSQL_NOT_MYISAM'				=> 'MySQL fulltextindex kan endast användas med MyISAM tabeller.',
 	'FULLTEXT_MYSQL_TOTAL_POSTS'			=> 'Totalt antal indexerade inlägg',
-	'FULLTEXT_MYSQL_MBSTRING'				=> 'Stöd för icke-latinska UTF-8 tecken genom mbstring:',
-	'FULLTEXT_MYSQL_PCRE'					=> 'Stöd för icke-latinska UTF-8 tecken genom PCRE:',
-	'FULLTEXT_MYSQL_MBSTRING_EXPLAIN'		=> 'Om PCRE inte har unicode teckenegenskaper så kommer söksystemet att försöka använda mbstrings regular expression motor.',
-	'FULLTEXT_MYSQL_PCRE_EXPLAIN'			=> 'Detta söksystem kräver PCRE unicode teckenegenskaper, som endast finns tillgängligt i PHP 4.4, 5.1 och senare, om du vill söka efter icke-latinska tecken.',
 	'FULLTEXT_MYSQL_MIN_SEARCH_CHARS_EXPLAIN'	=> 'Ord med minst så här många tecken kommer att indexeras som sökbara. Du eller din värd kan ändra detta enbart genom att ändra på MySQL-konfigurationen.',
 	'FULLTEXT_MYSQL_MAX_SEARCH_CHARS_EXPLAIN'	=> 'Maximalt antal tecken i ord som indexeras som sökbara. Du eller din värd kan ändra detta enbart genom att ändra på MySQL-konfigurationen.',
+
+	'FULLTEXT_POSTGRES_INCOMPATIBLE_DATABASE'	=> 'The PostgreSQL fulltext backend can only be used with PostgreSQL.',
+	'FULLTEXT_POSTGRES_TOTAL_POSTS'			=> 'Total number of indexed posts',
+	'FULLTEXT_POSTGRES_VERSION_CHECK'		=> 'PostgreSQL version',
+	'FULLTEXT_POSTGRES_TS_NAME'				=> 'Text search Configuration Profile:',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN'			=> 'Minimum word length for keywords',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN'			=> 'Maximum word length for keywords',
+	'FULLTEXT_POSTGRES_VERSION_CHECK_EXPLAIN'		=> 'This search backend requires PostgreSQL version 8.3 and above.',
+	'FULLTEXT_POSTGRES_TS_NAME_EXPLAIN'				=> 'The Text search configuration profile used to determine the parser and dictionary.',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN_EXPLAIN'			=> 'Words with at least this many characters will be included in the query to the database.',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN_EXPLAIN'			=> 'Words with no more than this many characters will be included in the query to the database.',
+
+	'FULLTEXT_SPHINX_CONFIGURE'				=> 'Configure the following settings to generate sphinx config file',
+	'FULLTEXT_SPHINX_DATA_PATH'				=> 'Path to data directory',
+	'FULLTEXT_SPHINX_DATA_PATH_EXPLAIN'		=> 'It will be used to store the indexes and log files. You should create this directory outside the web accessible directories. (should have a trailing slash)',
+	'FULLTEXT_SPHINX_DELTA_POSTS'			=> 'Number of posts in frequently updated delta index',
+	'FULLTEXT_SPHINX_HOST'					=> 'Sphinx search daemon host',
+	'FULLTEXT_SPHINX_HOST_EXPLAIN'			=> 'Host on which the sphinx search daemon (searchd) listens. Leave empty to use the default localhost',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT'		=> 'Indexer memory limit',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT_EXPLAIN'	=> 'This number should at all times be lower than the RAM available on your machine. If you experience periodic performance problems this might be due to the indexer consuming too many resources. It might help to lower the amount of memory available to the indexer.',
+	'FULLTEXT_SPHINX_MAIN_POSTS'			=> 'Number of posts in main index',
+	'FULLTEXT_SPHINX_PORT'					=> 'Sphinx search daemon port',
+	'FULLTEXT_SPHINX_PORT_EXPLAIN'			=> 'Port on which the sphinx search daemon (searchd) listens. Leave empty to use the default Sphinx API port 9312',
+	'FULLTEXT_SPHINX_WRONG_DATABASE'		=> 'The sphinx search for phpBB supports MySQL and PostgreSQL only.',
+	'FULLTEXT_SPHINX_CONFIG_FILE'			=> 'Sphinx config file',
+	'FULLTEXT_SPHINX_CONFIG_FILE_EXPLAIN'	=> 'The generated content of the sphinx config file. This data needs to be pasted into the sphinx.conf which is used by sphinx search daemon. Replace the [dbuser] and [dbpassword] placeholders with your database credentials.',
+	'FULLTEXT_SPHINX_NO_CONFIG_DATA'		=> 'The sphinx data and config directory paths are not defined. Please define them to generate the config file.',
 
 	'GENERAL_SEARCH_SETTINGS'				=> 'Allmänna sökinställningar',
 	'GO_TO_SEARCH_INDEX'					=> 'Gå till sökindexsidan',
@@ -14453,8 +15090,6 @@ $lang = array_merge($lang, array(
 
 	'SEARCH_GUEST_INTERVAL'					=> 'Tid mellan gästsökningar',
 	'SEARCH_GUEST_INTERVAL_EXPLAIN'			=> 'Antal sekunder gäster måste vänta mellan sökningar. Om en gäst söker så måste alla andra vänta tills tidsintervallen passerats.',
-	'SEARCH_INDEX_CREATE_REDIRECT'			=> 'Alla inlägg fram till inlägg ID %1$d indexerades, av vilka %2$d inlägg var inom detta steg.<br />Den nuvarande hastigheten på indexeringen är ungefär %3$.1f inlägg per sekund.<br />Indexering pågår…',
-	'SEARCH_INDEX_DELETE_REDIRECT'			=> 'Alla inlägg fram till inlägg ID %1$d togs bort från sökindexet.<br />Borttagning pågår…',
 	'SEARCH_INDEX_CREATED'					=> 'Indexerade alla inlägg i forumets databas.',
 	'SEARCH_INDEX_REMOVED'					=> 'Tog bort sökindexet för detta system.',
 	'SEARCH_INTERVAL'						=> 'Tid mellan användarsökningar',
@@ -14477,8 +15112,55 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
+	// 3.1.0
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
+
+	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
+	'CONFIRM_UNINSTALL_STYLES'		=> 'Are you sure you wish to uninstall selected styles?',
+	'COPYRIGHT'						=> 'Copyright',
+
+	'DEACTIVATE_DEFAULT'		=> 'Du kan inte inaktivera standardstilen.',
+	'DELETE_FROM_FS'			=> 'Ta bort från filsystemet',
+	'DELETE_STYLE_FILES_FAILED'	=> 'Error deleting files for style "%s".',
+	'DELETE_STYLE_FILES_SUCCESS'	=> 'Files for style "%s" have been deleted.',
+	'DETAILS'					=> 'Detaljer',
+
+	'INHERITING_FROM'			=> 'Ärver malluppsättnig av',
+	'INSTALL_STYLE'				=> 'Installera stil',
+	'INSTALL_STYLES'			=> 'Install styles',
+	'INSTALL_STYLES_EXPLAIN'	=> 'Here you can install new styles.<br />If you cannot find a specific style in list below, check to make sure style is already installed. If it is not installed, check if it was uploaded correctly.',
+	'INVALID_STYLE_ID'			=> 'Invalid style ID.',
+
+	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
+	'NO_UNINSTALLED_STYLE'		=> 'Inga oinstallerade stilar hittades.',
+
+	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
+
+	'STYLE_ACTIVATE'			=> 'Aktivera',
+	'STYLE_ACTIVE'				=> 'Aktiv',
+	'STYLE_DEACTIVATE'			=> 'Inaktivera',
+	'STYLE_DEFAULT'				=> 'Gör till standardstil',
+	'STYLE_DEFAULT_CHANGE_INACTIVE'	=> 'You must activate style before making it default style.',
+	'STYLE_ERR_INVALID_PARENT'	=> 'Invalid parent style.',
+	'STYLE_ERR_NAME_EXIST'		=> 'En stil med det namnet finns redan.',
+	'STYLE_ERR_STYLE_NAME'		=> 'Du måste ange ett namn för denna stil.',
+	'STYLE_INSTALLED'			=> 'Style "%s" has been installed.',
+	'STYLE_INSTALLED_RETURN_INSTALLED_STYLES'	=> 'Return to installed styles list',
+	'STYLE_INSTALLED_RETURN_UNINSTALLED_STYLES'	=> 'Install more styles',
+	'STYLE_NAME'				=> 'Stilnamn',
+	'STYLE_NOT_INSTALLED'		=> 'Style "%s" was not installed.',
+	'STYLE_PATH'				=> 'Style path',
+	'STYLE_UNINSTALL'			=> 'Uninstall',
+	'STYLE_UNINSTALL_DEPENDENT'	=> 'Style "%s" cannot be uninstalled because it has one or more child styles.',
+	'STYLE_UNINSTALLED'			=> 'Style "%s" uninstalled successfully.',
+	'STYLE_USED_BY'				=> 'Används av (inklusive robotar)',
+
+	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+
+	// 3.0.12
 	'ACP_IMAGESETS_EXPLAIN'	=> 'Bildpaket innehåller alla knappar, kategori, mappar, osv. och andra ej stil specifika bilder som används på forumet. Här kan du redigera, exportera eller ta bort existerande bildpaket och importera eller aktivera nya paket.',
-	'ACP_STYLES_EXPLAIN'	=> 'Här kan du hantera alla tillgängliga stilar för ditt forum. En stil består av en mall, ett tema och ett bildpaket. Du kan ändra existerande stilar, ta bort, inaktivera, aktivera, skapa eller importera nya. Du kan också se hur en stil kommer att se ut genom att använda förhandsgranskningen. Den nuvarande standardstilen markeras med en stjärna (*). Här visas också det totala antal av användarna som använder varje stil, observera att åsidosättning av användarstilar inte reflekteras här.',
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 	'ACP_TEMPLATES_EXPLAIN'	=> 'En malluppsättning innehåller all HTML som används för att generera utseendet på ditt forum. Här kan du redigera existerande malluppsättningar, ta bort, exportera, importera och förhandsgranska uppsättningar. Du kan också ändra mallkoden som används för att generera BBCode.',
 	'ACP_THEMES_EXPLAIN'	=> 'Härifrån kan du skapa, installera, redigera, ta bort och exportera teman. Ett tema är kombinationen av färger och bilder som läggs på dina mallar för att definiera det grundläggande utseendet på ditt forum. Antalet alternativ här beror på din serverkonfiguration och phpBB installation, se manualen för mer information. Observera att när du skapar nya teman så är det frivilligt att använda ett redan existerande tema som bas.',
 	'ADD_IMAGESET'			=> 'Skapa bildpaket',
@@ -14515,7 +15197,6 @@ $lang = array_merge($lang, array(
 	'CURRENT_IMAGE'					=> 'Nuvarande bild',
 
 	'DEACTIVATE_DEFAULT'		=> 'Du kan inte inaktivera standardstilen.',
-	'DELETE_FROM_FS'			=> 'Ta bort från filsystemet',
 	'DELETE_IMAGESET'			=> 'Ta bort bildpaket',
 	'DELETE_IMAGESET_EXPLAIN'	=> 'Här kan du ta bort det valda bildpaketet från databasen. Kom ihåg att det inte går att ångra. När bildpaketet har raderats är det borta för alltid. Det är rekommenderat att du först exporterar ditt bildpaket för möjlig framtida användning.',
 	'DELETE_STYLE'				=> 'Ta bort stil',
@@ -14712,7 +15393,6 @@ $lang = array_merge($lang, array(
 	'INCLUDE_IMAGESET'			=> 'Inkludera bildpaket',
 	'INCLUDE_TEMPLATE'			=> 'Inkludera mall',
 	'INCLUDE_THEME'				=> 'Inkludera tema',
-	'INHERITING_FROM'			=> 'Ärver malluppsättnig av',
 	'INSTALL_IMAGESET'			=> 'Installera bildpaket',
 	'INSTALL_IMAGESET_EXPLAIN'	=> 'Här kan du installera ditt valda bildpaket. Du kan ändra vissa detaljer om du vill eller använda standardvärdena.',
 	'INSTALL_STYLE'				=> 'Installera stil',
@@ -14742,7 +15422,6 @@ $lang = array_merge($lang, array(
 	'NO_TEMPLATE'				=> 'Kunde inte hitta mall på filsystemet.',
 	'NO_THEME'					=> 'Kunde inte hitta tema på filsystemet.',
 	'NO_UNINSTALLED_IMAGESET'	=> 'Inga oinstallerade bildpaket hittades.',
-	'NO_UNINSTALLED_STYLE'		=> 'Inga oinstallerade stilar hittades.',
 	'NO_UNINSTALLED_TEMPLATE'	=> 'Inga oinstallerade mallar hittades.',
 	'NO_UNINSTALLED_THEME'		=> 'Inga oinstallerade teman hittades.',
 	'NO_UNIT'					=> 'Ingen',
@@ -14782,30 +15461,22 @@ $lang = array_merge($lang, array(
 	'SELECTED_THEME_FILE'		=> 'Vald temafil',
 	'STORE_DATABASE'			=> 'Databas',
 	'STORE_FILESYSTEM'			=> 'Filsystem',
-	'STYLE_ACTIVATE'			=> 'Aktivera',
-	'STYLE_ACTIVE'				=> 'Aktiv',
 	'STYLE_ADDED'				=> 'Stilen lades till.',
-	'STYLE_DEACTIVATE'			=> 'Inaktivera',
-	'STYLE_DEFAULT'				=> 'Gör till standardstil',
 	'STYLE_DELETED'				=> 'Stilen togs bort.',
 	'STYLE_DETAILS_UPDATED'		=> 'Stilen redigerades.',
 	'STYLE_ERR_ARCHIVE'			=> 'Välj en arkiveringsmetod.',
 	'STYLE_ERR_COPY_LONG'		=> 'Copyrighttexten kan inte vara längre än 60 tecken.',
 	'STYLE_ERR_MORE_ELEMENTS'	=> 'Du måste välja minst ett stilelement.',
 	'STYLE_ERR_NAME_CHARS'		=> 'Stilnamnet kan endast innehålla alfanumeriska tecken, -, +, _ och mellanslag.',
-	'STYLE_ERR_NAME_EXIST'		=> 'En stil med det namnet finns redan.',
 	'STYLE_ERR_NAME_LONG'		=> 'Stilnamnet kan inte vara längre än 30 tecken.',
 	'STYLE_ERR_NO_IDS'			=> 'Du måste välja en mall, ett tema och ett bildpaket för denna stil.',
 	'STYLE_ERR_NOT_STYLE'		=> 'Den importerade eller uppladdade filen innehöll inget giltigt stilarkiv.',
-	'STYLE_ERR_STYLE_NAME'		=> 'Du måste ange ett namn för denna stil.',
 	'STYLE_EXPORT'				=> 'Exportera stil',
 	'STYLE_EXPORT_EXPLAIN'		=> 'Här kan du exportera en stil i form av ett arkiv. En stil måste inte innehålla alla element men måste innehålla minst ett. Till exempel om du har skapat ett nytt tema och bildpaket för en vanligen använd mall kan du exportera temat och bildpaketet och utelämna mallen. Du kan välja att ladda ner filen direkt eller placera den i din store-mapp för senare nerladdning eller via FTP.',
 	'STYLE_EXPORTED'			=> 'Stil exporterad och lagrad i %s.',
 	'STYLE_IMAGESET'			=> 'Bildpaket',
-	'STYLE_NAME'				=> 'Stilnamn',
 	'STYLE_TEMPLATE'			=> 'Mall',
 	'STYLE_THEME'				=> 'Tema',
-	'STYLE_USED_BY'				=> 'Används av (inklusive robotar)',
 
 	'TEMPLATE_ADDED'			=> 'Malluppsättning lades till och sparades på filsystemet.',
 	'TEMPLATE_ADDED_DB'			=> 'Malluppsättning lades till och sparades i databasen.',
@@ -14903,6 +15574,7 @@ $lang = array_merge($lang, array(
 	'CANNOT_FORCE_REACT_FOUNDER'	=> 'Du kan inte påtvinga återaktivering på grundare.',
 	'CANNOT_FORCE_REACT_YOURSELF'	=> 'Du kan inte påtvinga återaktivering på ditt eget konto.',
 	'CANNOT_REMOVE_ANONYMOUS'		=> 'Du kan inte ta bort gästkontot.',
+	'CANNOT_REMOVE_FOUNDER'			=> 'You are not allowed to remove founder accounts.',
 	'CANNOT_REMOVE_YOURSELF'		=> 'Du kan inte ta bort ditt eget konto.',
 	'CANNOT_SET_FOUNDER_IGNORED'	=> 'Du kan inte göra ignorerade användare till grundare.',
 	'CANNOT_SET_FOUNDER_INACTIVE'	=> 'Du måste aktivera användarna innan du kan göra de till grundare, endast aktiverade användare kan befordras.',
@@ -14929,7 +15601,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'Välj det forum som du vill att alla användarens inlägg ska flyttas till.',
 
 	'NO_SPECIAL_RANK'		=> 'Ingen speciell titel tilldelad',
-	'NO_WARNINGS'			=> 'Inga varningar.',
+	'NO_WARNINGS'			=> 'No warnings exist.',
 	'NOT_MANAGE_FOUNDER'	=> 'Du försökte hantera en användare med grundarstatus. Endast grundare får hantera andra grundare.',
 
 	'QUICK_TOOLS'			=> 'Snabbverktyg',

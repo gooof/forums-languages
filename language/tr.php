@@ -1,5 +1,14 @@
 ﻿<?php
 
+#######language/en/app.php#######
+
+$lang = array_merge($lang, array(
+	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
+	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
+	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+));
+
 #######language/en/calendar.php#######
 
 $lang = array_merge($lang, array(
@@ -182,6 +191,55 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Özel reCaptcha anahtarınız. Anahtarlar <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a> sitesinden elde edilebilir.',
 
 	'RECAPTCHA_EXPLAIN'				=> 'Otomatik gönderimleri önlemek amacıyla, görüntülenen kelimeleride altındaki metin alanına girmemiz gerekir.',
+	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
+));
+
+#######language/en/cli.php#######
+
+$lang = array_merge($lang, array(
+	'CLI_CONFIG_CANNOT_CACHED'			=> 'Set this option if the configuration option changes too frequently to be efficiently cached.',
+	'CLI_CONFIG_CURRENT'				=> 'Current configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_DELETE_SUCCESS'			=> 'Successfully deleted config %s.',
+	'CLI_CONFIG_NEW'					=> 'New configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_NOT_EXISTS'				=> 'Config %s does not exist',
+	'CLI_CONFIG_OPTION_NAME'			=> 'The configuration option’s name',
+	'CLI_CONFIG_PRINT_WITHOUT_NEWLINE'	=> 'Set this option if the value should be printed without a new line at the end.',
+	'CLI_CONFIG_INCREMENT_BY'			=> 'Amount to increment by',
+	'CLI_CONFIG_INCREMENT_SUCCESS'		=> 'Successfully incremented config %s',
+	'CLI_CONFIG_SET_FAILURE'			=> 'Could not set config %s',
+	'CLI_CONFIG_SET_SUCCESS'			=> 'Successfully set config %s',
+
+	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
+	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
+	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
+	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
+	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
+	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
+	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
+	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
+	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
+	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
+	'CLI_EXTENSION_ENABLE_FAILURE'		=> 'Could not enable extension %s',
+	'CLI_EXTENSION_ENABLE_SUCCESS'		=> 'Successfully enabled extension %s',
+	'CLI_EXTENSION_NAME'				=> 'Name of the extension',
+	'CLI_EXTENSION_PURGE_FAILURE'		=> 'Could not purge extension %s',
+	'CLI_EXTENSION_PURGE_SUCCESS'		=> 'Successfully purged extension %s',
+	'CLI_EXTENSION_NOT_FOUND'			=> 'No extensions were found.',
+	'CLI_EXTENSIONS_AVAILABLE'			=> 'Available',
+	'CLI_EXTENSIONS_DISABLED'			=> 'Disabled',
+	'CLI_EXTENSIONS_ENABLED'			=> 'Enabled',
+
+	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
 ));
 
 #######language/en/common.php#######
@@ -190,7 +248,11 @@ $lang = array_merge($lang, array(
 	'TRANSLATION_INFO'	=> 'Türkçe çeviri: <a href="http://www.phpbbturkey.com/">phpBB Türkiye</a>',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
+	'DATETIME_FORMAT'	=> '|d M Y, H:i|',	// 01 Jan 2007, 13:37 (with Relative days enabled)
 	'USER_LANG'			=> 'tr',
+
+	// See http://wiki.phpbb.com/Plural_Rules for more information
+	'PLURAL_RULE'		=> '1',
 
 	'1_DAY'			=> '1 Gün',
 	'1_MONTH'		=> '1 Ay',
@@ -204,18 +266,24 @@ $lang = array_merge($lang, array(
 	'ACCOUNT_DEACTIVATED'			=> 'Hesabınız elle deaktif edildi ve sadece bir yönetici tarafından yeniden aktif edilebilir.',
 	'ACCOUNT_NOT_ACTIVATED'			=> 'Hesabınız şu an aktif değil.',
 	'ACP'							=> 'Yönetim Kontrol Paneli',
+	'ACP_SHORT'						=> 'ACP',
 	'ACTIVE'						=> 'aktif',
 	'ACTIVE_ERROR'					=> 'Belirtilen kullanıcı adı şu anda aktif değil. Eğer hesabınızı aktifleştirmeyle ilgili probleminiz varsa, lütfen bir mesaj panosu yöneticisi ile iletişime geçin.',
 	'ADMINISTRATOR'					=> 'Yönetici',
 	'ADMINISTRATORS'				=> 'Yöneticiler',
 	'AGE'							=> 'Yaş',
 	'AIM'							=> 'AIM',
+	'AJAX_ERROR_TITLE'				=> 'AJAX error',
+	'AJAX_ERROR_TEXT'				=> 'Something went wrong when processing your request.',
+	'AJAX_ERROR_TEXT_ABORT'			=> 'User aborted request.',
+	'AJAX_ERROR_TEXT_TIMEOUT'		=> 'Your request timed out; please try again.',
+	'AJAX_ERROR_TEXT_PARSERERROR'	=> 'Something went wrong with the request and the server returned an invalid reply.',
 	'ALLOWED'						=> 'İzinli',
 	'ALL_FILES'						=> 'Tüm dosyalar',
 	'ALL_FORUMS'					=> 'Tüm forumlar',
 	'ALL_MESSAGES'					=> 'Tüm mesajlar',
 	'ALL_POSTS'						=> 'Tüm mesajlar',
-	'ALL_TIMES'						=> 'Tüm zamanlar %1$s %2$s',
+	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'Tüm Başlıklar',
 	'AND'							=> 'Ve',
 	'ARE_WATCHING_FORUM'			=> 'Bu foruma yeni mesajlardan haberdar edilmek için abone oldunuz.',
@@ -225,6 +293,14 @@ $lang = array_merge($lang, array(
 	'ATTACHED_IMAGE_NOT_IMAGE'		=> 'Eklemeye çalıştığınız resim dosyası geçersiz.',
 	'AUTHOR'						=> 'Yazar',
 	'AUTH_NO_PROFILE_CREATED'		=> 'Bir kullanıcının profili oluşturulurken başarısız olundu.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_ENTRY'				=> 'Invalid database entry.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_SERVICE_TYPE'		=> 'Invalid service type provided to OAuth service handler.',
+	'AUTH_PROVIDER_OAUTH_ERROR_SERVICE_NOT_CREATED'			=> 'OAuth service not created',
+	'AUTH_PROVIDER_OAUTH_SERVICE_BITLY'						=> 'Bitly',
+	'AUTH_PROVIDER_OAUTH_SERVICE_FACEBOOK'					=> 'Facebook',
+	'AUTH_PROVIDER_OAUTH_SERVICE_GOOGLE'					=> 'Google',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_NOT_STORED'			=> 'OAuth token not stored.',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_INCORRECTLY_STORED'	=> 'OAuth token incorrectly stored.',
 	'AVATAR_DISALLOWED_CONTENT'		=> 'Yükleme kabul edilmedi. Çünkü yüklenen dosya olası bir saldırı taşıyıcısı olarak belirlendi.',
 	'AVATAR_DISALLOWED_EXTENSION'	=> 'Bu dosya görüntülenemeyecektir, çünkü %s isimli uzantıya izin verilmiyor.',
 	'AVATAR_EMPTY_REMOTE_DATA'		=> 'Belirtilen avatar yüklenemedi, çünkü gösterilen uzak veri geçersiz ya da bozuk.',
@@ -235,10 +311,11 @@ $lang = array_merge($lang, array(
 	'AVATAR_PARTIAL_UPLOAD'			=> 'Belirtilen dosyanın sadece bir kısmı yüklendi.',
 	'AVATAR_PHP_SIZE_NA'			=> 'Avatar dosya boyutu çok büyük.<br />php.ini dosyasında ayarlanmış izin verilen en yüksek dosya boyutu belirlenemiyor.',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'Avatar dosya boyutu çok büyük. İzin verilen en yüksek yükleme boyutu %1$d %2$s.<br />Not: Bu ayar php.ini dosyasında belirlenmiştir ve üzerine yazılamaz.',
+	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
 	'AVATAR_URL_INVALID'			=> 'Belirtilen URL hatalı.',
 	'AVATAR_URL_NOT_FOUND'			=> 'Belirtilen dosya bulunamıyor.',
-	'AVATAR_WRONG_FILESIZE'			=> 'Avatarın dosya boyutu 0 ve %1d %2s arasında olmalıdır.',
-	'AVATAR_WRONG_SIZE'				=> 'Eklenen avatar %5$d piksel genişliğinde ve %6$d piksel yüksekliğinde. Avatarlar en az %1$d piksel genişliğinde ve %2$d piksel yüksekliğinde olmalıdır, fakat %3$d piksel genişliğinden ve %4$d piksel yüksekliğinden fazla olamaz.',
+	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
+	'AVATAR_WRONG_SIZE'				=> 'The submitted avatar is %5$s wide and %6$s high. Avatars must be at least %1$s wide and %2$s high, but no larger than %3$s wide and %4$s high.',
 
 	'BACK_TO_TOP'			=> 'Başa Dön',
 	'BACK_TO_PREV'			=> 'Önceki sayfaya dön',
@@ -255,28 +332,42 @@ $lang = array_merge($lang, array(
 	'BOARD_DISABLED'		=> 'Bu mesaj panosu şu an kapalı durumda.',
 	'BOARD_UNAVAILABLE'		=> 'Üzgünüz fakat bu mesaj panosu geçici olarak kullanılamıyor, lütfen bir kaç dakika sonra tekrar deneyin.',
 	'BROWSING_FORUM'		=> 'Bu forumu gezen kullanıcılar: %1$s',
-	'BROWSING_FORUM_GUEST'	=> 'Bu forumu gezen kullanıcılar: %1$s ve %2$d misafir',
-	'BROWSING_FORUM_GUESTS'	=> 'Bu forumu gezen kullanıcılar: %1$s ve %2$d misafir',
+	'BUTTON_EDIT'			=> 'Edit',
+	'BUTTON_FORUM_LOCKED'	=> 'Locked',
+	'BUTTON_NEW_TOPIC'		=> 'New Topic',
+	'BUTTON_PM'				=> 'PM',
+	'BUTTON_PM_FORWARD'		=> 'Forward',
+	'BUTTON_PM_NEW'			=> 'New PM',
+	'BUTTON_PM_REPLY'		=> 'Send Reply',
+	'BUTTON_PM_REPLY_ALL'	=> 'Reply All',
+	'BUTTON_POST_REPLY'		=> 'Post Reply',
+	'BUTTON_QUOTE'			=> 'Quote',
+	'BUTTON_TOPIC_LOCKED'	=> 'Locked',
 	'BYTES'					=> 'Byte',
+	'BYTES_SHORT'			=> 'B',
 
 	'CANCEL'				=> 'İptal',
 	'CHANGE'				=> 'Değiştir',
 	'CHANGE_FONT_SIZE'		=> 'Font boyutunu değiştir',
 	'CHANGING_PREFERENCES'	=> 'Mesaj panosu tercihleri değiştiriliyor',
 	'CHANGING_PROFILE'		=> 'Profil ayarları değiştiriliyor',
-	'CLICK_VIEW_PRIVMSG'	=> '%sGelen kutusuna git%s',
 	'COLLAPSE_VIEW'			=> 'Açılır kapanır görüntüleme',
 	'CLOSE_WINDOW'			=> 'Pencereyi kapat',
 	'COLOUR_SWATCH'			=> 'Renk kuşağı',
-	'COMMA_SEPARATOR'		=> ', ',	// Used in pagination of ACP & prosilver, use localised comma if appropriate, eg: Ideographic or Arabic
+	'COLON'					=> ':',
+	'COMMA_SEPARATOR'		=> ', ',	// Comma used to join lists into a single string, use localised comma if appropriate, eg: Ideographic or Arabic
 	'CONFIRM'				=> 'Onay',
 	'CONFIRM_CODE'			=> 'Onay kodu',
 	'CONFIRM_CODE_EXPLAIN'	=> 'Görünen kodu tam olarak girin. Tüm harfleri büyük ya da küçük olarak yazabilirsiniz.',
 	'CONFIRM_CODE_WRONG'	=> 'Girdiğiniz onay kodu hatalı.',
 	'CONFIRM_OPERATION'		=> 'Bu işlemi gerçekleştirmek istediğinize emin misiniz?',
+	'CONFIRM_AVATAR_DELETE' => 'Are you sure you wish to delete this avatar?',
 	'CONGRATULATIONS'		=> 'Tebrikler',
 	'CONNECTION_FAILED'		=> 'Bağlantı hatası.',
 	'CONNECTION_SUCCESS'	=> 'Başarıyla bağlanıldı!',
+	'CONTACT'				=> 'İletişim',
+	'CONTACT_USER'			=> 'Contact %s',
+	'CONTACT_US'			=> 'Contact us',
 	'COOKIES_DELETED'		=> 'Tüm mesaj panosu çerezleri başarıyla silindi.',
 	'CURRENT_TIME'			=> 'Zaman: %s',
 
@@ -297,18 +388,13 @@ $lang = array_merge($lang, array(
 	'DISPLAY_TOPICS'		=> 'Eskiden itibaren başlıkları göster',
 	'DOWNLOADED'			=> 'İndirilme',
 	'DOWNLOADING_FILE'		=> 'Dosya indiriliyor',
-	'DOWNLOAD_COUNT'		=> '%d kere indirildi',
-	'DOWNLOAD_COUNTS'		=> '%d kere indirildi',
-	'DOWNLOAD_COUNT_NONE'	=> 'Hiç indirilmedi',
-	'VIEWED_COUNT'			=> '%d kere görüntülendi',
-	'VIEWED_COUNTS'			=> '%d kere görüntülendi',
-	'VIEWED_COUNT_NONE'		=> 'Hiç görüntülenmedi',
 
 	'EDIT_POST'							=> 'Mesajı düzenle',
-	'EMAIL'								=> 'E-posta', // Short form for EMAIL_ADDRESS
-	'EMAIL_ADDRESS'						=> 'E-posta adresi',
-	'EMAIL_INVALID_EMAIL'				=> 'Girdiğiniz e-posta adresi hatalı.',
-	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'E-posta gönderilirken iç sunucu problemi oluştu <strong>Satır %1$s</strong>. Yanıt: %2$s.',
+	'ELLIPSIS'							=>	'…',
+	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
+	'EMAIL_ADDRESS'						=> 'Email address',
+	'EMAIL_INVALID_EMAIL'				=> 'The email address you entered is invalid.',
+	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ran into problems sending email at <strong>Line %1$s</strong>. Response: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Yeni bir başlık göndereceğiniz zaman bir konu belirlemelisiniz.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Yeni bir mesaj oluşturacağınız zaman bir konu belirlemelisiniz.',
 	'ENABLED'							=> 'Açık',
@@ -322,17 +408,23 @@ $lang = array_merge($lang, array(
 	'ERR_UNWATCHING'					=> 'Abonelik iptal edilmeye çalışılırken bir hata oluştu.',
 	'ERR_WATCHING'						=> 'Abone olmaya çalışılırken bir hata oluştu.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'Belirtilen phpBB dosya yolu geçersiz görünüyor.',
+	'ERROR'									=> 'Hata',
 	'EXPAND_VIEW'						=> 'Geniş görünüm',
 	'EXTENSION'							=> 'Uzantı',
+	'EXTENSION_DISABLED'				=> 'The extension <strong>%s</strong> is not enabled.',
 	'EXTENSION_DISABLED_AFTER_POSTING'	=> '<strong>%s</strong> uzantısı deaktif edildi ve görüntülenemiyor.',
+	'EXTENSION_DOES_NOT_EXIST'			=> 'The extension <strong>%s</strong> does not exist.',
 
+	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> 'SSS',
 	'FAQ_EXPLAIN'			=> 'Sıkça Sorulan Sorular',
 	'FILENAME'				=> 'Dosya adı',
 	'FILESIZE'				=> 'Dosya boyutu',
 	'FILEDATE'				=> 'Dosya tarihi',
 	'FILE_COMMENT'			=> 'Dosya yorumu',
-	'FILE_NOT_FOUND'		=> 'İstenilen dosya bulunamadı.',
+	'FILE_CONTENT_ERR'		=> 'Could not read the contents of file: %s',
+	'FILE_JSON_DECODE_ERR'	=> 'Failed to decode json file: %s',
+	'FILE_NOT_FOUND'		=> 'The requested file could not be found: %s',
 	'FIND_USERNAME'			=> 'Bir üye bul',
 	'FOLDER'				=> 'Klasör',
 	'FORGOT_PASS'			=> 'Şifremi unuttum',
@@ -381,6 +473,9 @@ $lang = array_merge($lang, array(
 	'GB'						=> 'GB',
 	'GIB'						=> 'GiB',
 	'GO'						=> 'Git',
+	'GOOGLEPLUS'				=> 'Google+',
+	'GOTO_FIRST_POST'			=> 'Go to first post',
+	'GOTO_LAST_POST'			=> 'Go to last post',
 	'GOTO_PAGE'					=> 'Sayfaya git',
 	'GROUP'						=> 'Grup',
 	'GROUPS'					=> 'Gruplar',
@@ -388,12 +483,6 @@ $lang = array_merge($lang, array(
 	'GROUP_ERR_USERNAME'		=> 'Hiç bir grup adı belirtilmedi.',
 	'GROUP_ERR_USER_LONG'		=> 'Grup adı 60 karakteri geçemez. Belirtilen grup adı çok uzun.',
 	'GUEST'						=> 'Misafir',
-	'GUEST_USERS_ONLINE'		=> '%d misafir kullanıcı çevrimiçi',
-	'GUEST_USERS_TOTAL'			=> '%d misafir',
-	'GUEST_USERS_ZERO_ONLINE'	=> '0 misafir kullanıcı çevrimiçi',
-	'GUEST_USERS_ZERO_TOTAL'	=> '0 misafir',
-	'GUEST_USER_ONLINE'			=> '%d misafir kullanıcı çevrimiçi',
-	'GUEST_USER_TOTAL'			=> '%d misafir',
 	'G_ADMINISTRATORS'			=> 'Yöneticiler',
 	'G_BOTS'					=> 'Botlar',
 	'G_GUESTS'					=> 'Misafirler',
@@ -402,22 +491,12 @@ $lang = array_merge($lang, array(
 	'G_GLOBAL_MODERATORS'		=> 'Global moderatörler',
 	'G_NEWLY_REGISTERED'		=> 'Yeni kayıtlı kullanıcılar',
 
-	'HIDDEN_USERS_ONLINE'			=> '%d gizli kullanıcı çevrimiçi',
-	'HIDDEN_USERS_TOTAL'			=> '%d gizli',
-	'HIDDEN_USERS_TOTAL_AND'		=> '%d gizli ve ',
-	'HIDDEN_USERS_ZERO_ONLINE'		=> '0 gizli kullanıcı çevrimiçi',
-	'HIDDEN_USERS_ZERO_TOTAL'		=> '0 gizli',
-	'HIDDEN_USERS_ZERO_TOTAL_AND'	=> '0 gizli ve ',
-	'HIDDEN_USER_ONLINE'			=> '%d gizli kullanıcı çevrimiçi',
-	'HIDDEN_USER_TOTAL'				=> '%d gizli',
-	'HIDDEN_USER_TOTAL_AND'			=> '%d gizli ve ',
 	'HIDE_GUESTS'					=> 'Misafirleri gizle',
 	'HIDE_ME'						=> 'Bu oturumda çevrimiçi olduğumu gizle',
 	'HOURS'							=> 'Saat',
 	'HOME'							=> 'Ana sayfa',
 
 	'ICQ'						=> 'ICQ',
-	'ICQ_STATUS'				=> 'ICQ durumu',
 	'IF'						=> 'Eğer',
 	'IMAGE'						=> 'Resim',
 	'IMAGE_FILETYPE_INVALID'	=> 'Mimetype %s için %d resim dosya tipi desteklenmiyor.',
@@ -425,9 +504,11 @@ $lang = array_merge($lang, array(
 	'IN'						=> 'forum',
 	'INDEX'						=> 'Ana sayfa', //Index page
 	'INFORMATION'				=> 'Bilgi',
+	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
 	'INTERESTS'					=> 'İlgi alanları',
 	'INVALID_DIGEST_CHALLENGE'	=> 'Geçersiz derleme sorgusu.',
-	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> hatalı bir e-posta adresi olabilir?',
+	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> possibly an invalid email address?',
+	'INVALID_PLURAL_RULE'		=> 'The chosen plural rule is invalid. Valid values are integers between 0 and 15.',
 	'IP'						=> 'IP',
 	'IP_BLACKLISTED'			=> 'IP adresiniz %1$s engellendi çünkü kara listede. Detaylar için lütfen bakınız: <a href="%2$s">%2$s</a>.',
 
@@ -435,7 +516,8 @@ $lang = array_merge($lang, array(
 	'JOINED'				=> 'Kayıt',
 	'JUMP_PAGE'				=> 'Geçiş yapmak istediğiniz sayfa numarasını girin',
 	'JUMP_TO'				=> 'Geçiş yap',
-	'JUMP_TO_PAGE'			=> 'Sayfaya geçiş yapmak için tıklayın…',
+	'JUMP_TO_PAGE'			=> 'Jump to page',
+	'JUMP_TO_PAGE_CLICK'	=> 'Click to jump to page…',
 
 	'KB'					=> 'KB',
 	'KIB'					=> 'KiB',
@@ -447,6 +529,8 @@ $lang = array_merge($lang, array(
 	'LDAP_NO_SERVER_CONNECTION'			=> 'LDAP sunucusuna bağlanılamıyor.',
 	'LDAP_SEARCH_FAILED'				=> 'LDAP dizini aranırken bir hata oluştu.',
 	'LEGEND'							=> 'Yetkiler',
+	'LIVE_SEARCHES_NOT_ALLOWED'			=> 'Live searches are not allowed.',
+	'LOADING'							=> 'Loading',
 	'LOCATION'							=> 'Konum',
 	'LOCK_POST'							=> 'Mesajı kilitle',
 	'LOCK_POST_EXPLAIN'					=> 'Düzenleme engellenecektir',
@@ -457,6 +541,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_CONFIRM_EXPLAIN'				=> 'Bu mesaj panosu, hesaplara yapılan girişimleri engellemek için en fazla yapılabilecek hatalı giriş sayısı aşıldığında onay kodu girmenizi gerekli tutuyor. Kodu alttaki resmin içerisinde görebilirsiniz. Eğer kodu göremiyor veya okuyamıyorsanız lütfen %sMesaj Panosu Yöneticisi%s ile iletişime geçin.', // unused
 	'LOGIN_ERROR_ATTEMPTS'				=> 'En fazla izin verilen giriş deneme sayısını aştınız. Kullanıcı adı ve şifrenizle beraber ayrıca alttaki CAPTCHA’yı da çözmelisiniz.',
 	'LOGIN_ERROR_EXTERNAL_AUTH_APACHE'	=> 'Apache tarafından doğruluğunuz kanıtlanmadı.',
+	'LOGIN_ERROR_OAUTH_SERVICE_DOES_NOT_EXIST'	=> 'A non-existant OAuth service has been requested.',
 	'LOGIN_ERROR_PASSWORD'				=> 'Hatalı şifre belirttiniz. Lütfen şifrenizi kontrol edip tekrar deneyin. Eğer problem devam ederse lütfen mesaj panosu yöneticisi ile iletişime geçin.',
 	'LOGIN_ERROR_PASSWORD_CONVERT'		=> 'Bu mesaj panosunun yazılımı güncellendiği zaman şifrenizi dönüştürmek mümkün olmadı. Lütfen kendinize %syeni bir şifre isteyin%s. Eğer problemlerle karşılaşmaya devam ederseniz lütfen %sMesaj Panosu Yöneticisi%s ile iletişime geçin.',
 	'LOGIN_ERROR_USERNAME'				=> 'Hatalı kullanıcı adı belirttiniz. Lütfen kullanıcı adınızı kontrol edip tekrar deneyin. Eğer problem devam ederse lütfen mesaj panosu yöneticisi ile iletişime geçin.',
@@ -465,17 +550,22 @@ $lang = array_merge($lang, array(
 	'LOGIN_VIEWFORUM'					=> 'Mesaj panosu, bu forumu görüntülemek için kayıt olmanızı ve giriş yapmanızı gerekli tutuyor.',
 	'LOGIN_EXPLAIN_EDIT'				=> 'Bu forumdaki mesajları değiştirmek için kayıtlı olmalı ve giriş yapmalısınız.',
 	'LOGIN_EXPLAIN_VIEWONLINE'			=> 'Çevrimiçi listesini görüntülemek için kayıtlı olmalı ve giriş yapmalısınız.',
+	'LOGIN_REQUIRED'					=> 'You need to login to perform this action.',
 	'LOGOUT'							=> 'Çıkış',
 	'LOGOUT_USER'						=> 'Çıkış [ %s ]',
-	'LOG_ME_IN'							=> 'Her ziyaretimde otomatik giriş yap',
+	'LOG_ME_IN'							=> 'Remember me',
 
+	'MAIN'					=> 'Main',
 	'MARK'					=> 'İşaretle',
 	'MARK_ALL'				=> 'Tümünü işaretle',
+	'MARK_ALL_READ'			=> 'Mark all read',
 	'MARK_FORUMS_READ'		=> 'Forumları okunmuş say',
+	'MARK_READ'				=> 'Mark read',
 	'MARK_SUBFORUMS_READ'	=> 'Alt forumları okunmuş say',
 	'MB'					=> 'MB',
 	'MIB'					=> 'MiB',
 	'MCP'					=> 'Moderatör Kontrol Paneli',
+	'MCP_SHORT'				=> 'MCP',
 	'MEMBERLIST'			=> 'Üyeler',
 	'MEMBERLIST_EXPLAIN'	=> 'Üyelerin tam listesini görüntüle',
 	'MERGE'					=> 'Birleştir',
@@ -488,26 +578,47 @@ $lang = array_merge($lang, array(
 	'MODERATE'				=> 'Yönet',
 	'MODERATOR'				=> 'Moderatör',
 	'MODERATORS'			=> 'Moderatörler',
+	'MODULE_NOT_ACCESS'		=> 'Module not accessible',
+	'MODULE_NOT_FIND'		=> 'Cannot find module %s',
+	'MODULE_FILE_INCORRECT_CLASS'	=> 'Module file %s does not contain correct class [%s]',
 	'MONTH'					=> 'Ay',
 	'MOVE'					=> 'Taşı',
-	'MSNM'					=> 'MSNM/WLM',
 
 	'NA'						=> 'YOK',
 	'NEWEST_USER'				=> 'Yeni üyemiz <strong>%s</strong>',
 	'NEW_MESSAGE'				=> 'Yeni mesaj',
 	'NEW_MESSAGES'				=> 'Yeni mesajlar',
-	'NEW_PM'					=> '<strong>%d</strong> yeni mesaj',
-	'NEW_PMS'					=> '<strong>%d</strong> yeni mesaj',
 	'NEW_POST'					=> 'Yeni mesaj',	// Not used anymore
 	'NEW_POSTS'					=> 'Yeni mesaj var',	// Not used anymore
 	'NEXT'						=> 'Sonraki',		// Used in pagination
 	'NEXT_STEP'					=> 'Sonraki',
 	'NEVER'						=> 'Hiç',
 	'NO'						=> 'Hayır',
+	'NO_NOTIFICATIONS'			=> 'You have no notifications',
 	'NOT_ALLOWED_MANAGE_GROUP'	=> 'Bu grubu yönetme izniniz yok.',
 	'NOT_AUTHORISED'			=> 'Bu alana erişim yetkiniz yok.',
 	'NOT_WATCHING_FORUM'		=> 'Bu forumdaki güncellemelere abone değilsiniz.',
 	'NOT_WATCHING_TOPIC'		=> 'Bu başlıktaki güncellemelere abone değilsiniz.',
+	'NOTIFICATIONS'				=> 'Notifications',
+	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
+	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
+	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
+	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
+	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
+	'NOTIFICATION_POST_IN_QUEUE'		=> '<strong>Post approval</strong> request by %1$s:',
+	'NOTIFICATION_REFERENCE'			=> '"%1$s"',
+	'NOTIFICATION_REASON'				=> '<em>Reason:</em> %1$s.',
+	'NOTIFICATION_REPORT_PM'			=> '<strong>Private Message reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_POST'			=> '<strong>Post reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_CLOSED'		=> '<strong>Report closed</strong> by %1$s for:',
+	'NOTIFICATION_TOPIC'				=> '<strong>New topic</strong> by %1$s:',
+	'NOTIFICATION_TOPIC_APPROVED'		=> '<strong>Topic approved</strong>:',
+	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
+	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
+	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> 'Lütfen mesaj panosu yöneticisine ya da webmaster’a bildirin.',
 	'NOTIFY_ADMIN_EMAIL'		=> 'Lütfen mesaj panosu yöneticisine ya da webmaster’a bildirin: <a href="mailto:%1$s">%1$s</a>',
 	'NO_ACCESS_ATTACHMENT'		=> 'Bu dosyaya erişim izniniz yok.',
@@ -516,6 +627,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_ADMIN'				=> 'Yönetici izinlerine sahip olmadığınız için Yönetim Kontrol Paneline erişiminize izin verilmiyor.',
 	'NO_AUTH_ADMIN_USER_DIFFER'	=> 'Bir başka kullanıcıyı yeniden doğrulama yetkiniz yok.',
 	'NO_AUTH_OPERATION'			=> 'Bu işlemi tamamlamak için gerekli izinlere sahip değilsiniz.',
+	'NO_AVATARS'				=> 'No avatars currently available',
 	'NO_CONNECT_TO_SMTP_HOST'	=> 'Smtp sunucusuna bağlanılamıyor : %1$s : %2$s',
 	'NO_BIRTHDAYS'				=> 'Bugün doğum günü olan kimse yok',
 	'NO_EMAIL_MESSAGE'			=> 'E-posta mesajı boş.',
@@ -531,7 +643,6 @@ $lang = array_merge($lang, array(
 	'NO_MODE'					=> 'Hiç bir mod seçilmedi.',
 	'NO_MODERATORS'				=> 'Hiç moderatör yok.',
 	'NO_NEW_MESSAGES'			=> 'Yeni mesaj yok',
-	'NO_NEW_PM'					=> '<strong>0</strong> yeni mesaj',
 	'NO_NEW_POSTS'				=> 'Yeni mesaj yok',	// Not used anymore
 	'NO_ONLINE_USERS'			=> 'Hiç bir kayıtlı kullanıcı yok',
 	'NO_POSTS'					=> 'Mesaj yok',
@@ -546,7 +657,6 @@ $lang = array_merge($lang, array(
 	'NO_TOPIC_FORUM'			=> 'Başlık veya forum mevcut değil.',
 	'NO_TOPICS'					=> 'Bu forumda başlık veya mesaj yok.',
 	'NO_TOPICS_TIME_FRAME'		=> 'Seçilen zaman çerçevesi için bu forumda hiç bir başlık yok.',
-	'NO_UNREAD_PM'				=> '<strong>0</strong> okunmamış mesaj',
 	'NO_UNREAD_POSTS'			=> 'Okunmamış mesaj yok',
 	'NO_UPLOAD_FORM_FOUND'		=> 'Yükleme başladı fakat geçerli bir dosya yükleme formu bulunmuyor.',
 	'NO_USER'					=> 'İstenilen kullanıcı bulunmuyor.',
@@ -557,15 +667,14 @@ $lang = array_merge($lang, array(
 	'OFFLINE'					=> 'Çevrimdışı',
 	'ONLINE'					=> 'Çevrimiçi',
 	'ONLINE_BUDDIES'			=> 'Çevrimiçi arkadaşlar',
-	'ONLINE_USERS_TOTAL'		=> 'Toplam <strong>%d</strong> kullanıcı çevrimiçi :: ',
-	'ONLINE_USERS_ZERO_TOTAL'	=> 'Toplam <strong>0</strong> kullanıcı çevrimiçi :: ',
-	'ONLINE_USER_TOTAL'			=> 'Toplam <strong>%d</strong> kullanıcı çevrimiçi :: ',
 	'OPTIONS'					=> 'Seçenekler',
 
 	'PAGE_OF'				=> '<strong>%1$d</strong>. sayfa (Toplam <strong>%2$d</strong> sayfa)',
+	'PAGE_TITLE_NUMBER'		=> 'Page %s',
 	'PASSWORD'				=> 'Şifre',
 	'PIXEL'					=> 'piksel',
 	'PLAY_QUICKTIME_FILE'	=> 'Quicktime dosyasını oynat',
+	'PLEASE_WAIT'			=> 'Please wait.',
 	'PM'					=> 'ÖM',
 	'PM_REPORTED'			=> 'Bildiriyi görüntülemek için tıklayın',
 	'POSTING_MESSAGE'		=> 'Mesajın gönderildiği yer %s',
@@ -578,9 +687,15 @@ $lang = array_merge($lang, array(
 	'POSTED_ON_DATE'		=> 'tarih',
 	'POSTS'					=> 'Mesajlar',
 	'POSTS_UNAPPROVED'		=> 'Bu başlıktaki en az bir mesaj onaylanmadı.',
+	'POSTS_UNAPPROVED_FORUM'=> 'At least one post in this forum has not been approved.',
 	'POST_BY_AUTHOR'		=> 'gönderen',
-	'POST_BY_FOE'			=> 'Bu mesaj <strong>%1$s</strong> tarafından gönderildi ve bu kullanıcı şu an sizin engellenenler listenizde. Mesajı görüntülemek için %2$sBURAYA%3$s tıklayın.',
+	'POST_BY_FOE'			=> '<strong>%1$s</strong>, who is currently on your ignore list, made this post.',
+	'POST_DISPLAY'			=> '%1$sDisplay this post%2$s.',
 	'POST_DAY'				=> 'Ortalama her gün %.2f mesaj',
+	'POST_DELETED_ACTION'	=> 'Deleted post:',
+	'POST_DELETED'			=> 'This post has been deleted.',
+	'POST_DELETED_BY'		=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s.',
+	'POST_DELETED_BY_REASON'=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s for the following reason: %4$s',
 	'POST_DETAILS'			=> 'Mesaj detayları',
 	'POST_NEW_TOPIC'		=> 'Yeni başlık gönder',
 	'POST_PCT'				=> 'Tüm mesajların %.2f%%',
@@ -591,7 +706,8 @@ $lang = array_merge($lang, array(
 	'POST_SUBJECT'			=> 'Mesaj Başlığı',
 	'POST_TIME'				=> 'Mesaj tarihi',
 	'POST_TOPIC'			=> 'Yeni bir başlık gönder',
-	'POST_UNAPPROVED'		=> 'Bu mesaj onay için bekliyor',
+	'POST_UNAPPROVED_ACTION'	=> 'Post awaiting approval:',
+	'POST_UNAPPROVED'		=> 'This post has not been approved.',
 	'POWERED_BY'			=> 'Powered by %s',
 	'PREVIEW'				=> 'Önizleme',
 	'PREVIOUS'				=> 'Önceki',		// Used in pagination
@@ -601,6 +717,8 @@ $lang = array_merge($lang, array(
 	'PRIVATE_MESSAGES'		=> 'Özel mesajlar',
 	'PRIVATE_MESSAGING'		=> 'Özel mesajlaşma',
 	'PROFILE'				=> 'Kullanıcı Kontrol Paneli',
+
+	'QUICK_LINKS'			=> 'Quick links',
 
 	'RANK'						=> 'Rütbe',
 	'READING_FORUM'				=> '%s içerisindeki başlıklar görüntüleniyor',
@@ -614,15 +732,6 @@ $lang = array_merge($lang, array(
 	'REDIRECTS'					=> 'Toplam yönlendirme',
 	'REGISTER'					=> 'Kayıt',
 	'REGISTERED_USERS'			=> 'Kayıtlı kullanıcılar:',
-	'REG_USERS_ONLINE'			=> '%d kayıtlı kullanıcı ve ',
-	'REG_USERS_TOTAL'			=> '%d kayıtlı, ',
-	'REG_USERS_TOTAL_AND'		=> '%d kayıtlı ve ',
-	'REG_USERS_ZERO_ONLINE'		=> '0 kayıtlı kullanıcı ve ',
-	'REG_USERS_ZERO_TOTAL'		=> '0 kayıtlı, ',
-	'REG_USERS_ZERO_TOTAL_AND'	=> '0 kayıtlı ve ',
-	'REG_USER_ONLINE'			=> '%d kayıtlı kullanıcı ve ',
-	'REG_USER_TOTAL'			=> '%d kayıtlı, ',
-	'REG_USER_TOTAL_AND'		=> '%d kayıtlı ve ',
 	'REMOVE'					=> 'Sil',
 	'REMOVE_INSTALL'			=> 'Lütfen mesaj panonuzu kullanmadan önce install klasörünü silin, taşıyın veya yeniden adlandırın. Eğer bu klasör mevcutsa, sadece Yönetim Kontrol Paneline (YKP) erişilebilinecektir.',
 	'REPLIES'					=> 'Cevaplar',
@@ -639,7 +748,8 @@ $lang = array_merge($lang, array(
 	'RETURN_FORUM'				=> '%sSon ziyaret edilen foruma dön%s',
 	'RETURN_PAGE'				=> '%sÖnceki sayfaya dön%s',
 	'RETURN_TOPIC'				=> '%sSon ziyaret edilen başlığa dön%s',
-	'RETURN_TO'					=> 'Dön',
+	'RETURN_TO'					=> 'Return to “%s”',
+	'RETURN_TO_INDEX'			=> 'Return to Board Index',
 	'FEED'						=> 'Besleme',
 	'FEED_NEWS'					=> 'Haberler',
 	'FEED_TOPICS_ACTIVE'		=> 'Aktif Başlıklar',
@@ -667,28 +777,30 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV_EXPLAIN'		=> 'Gelişmiş arama seçeneklerini görüntüle',
 	'SEARCH_KEYWORDS'			=> 'Anahtar kelimeleri ara',
 	'SEARCHING_FORUMS'			=> 'Forumlar aranıyor',
-	'SEARCH_ACTIVE_TOPICS'		=> 'Aktif başlıklar',
+	'SEARCH_ACTIVE_TOPICS'		=> 'Active topics',
 	'SEARCH_FOR'				=> 'Aranacak',
 	'SEARCH_FORUM'				=> 'Bu forumda ara…',
-	'SEARCH_NEW'				=> 'Yeni mesajlar',
+	'SEARCH_NEW'				=> 'New posts',
 	'SEARCH_POSTS_BY'			=> 'Şu kullanıcının mesajlarını ara',
-	'SEARCH_SELF'				=> 'Kendi mesajlarınız',
+	'SEARCH_SELF'				=> 'Your posts',
 	'SEARCH_MINE'				=> 'View your topics',
 	'SEARCH_TOPIC'				=> 'Bu başlıkta ara…',
-	'SEARCH_UNANSWERED'			=> 'Cevaplanmamış mesajlar',
-	'SEARCH_UNREAD'				=> 'Okunmamış mesajlar',
+	'SEARCH_UNANSWERED'			=> 'Unanswered posts',
+	'SEARCH_UNREAD'				=> 'Unread posts',
 	'SEARCH_USER_POSTS'			=> 'Kullanıcı’nın mesajlarını ara',
 	'SECONDS'					=> 'Saniye',
+	'SEE_ALL'					=> 'See All',
 	'SELECT'					=> 'Seç',
 	'SELECT_ALL_CODE'			=> 'Tümünü seç',
 	'SELECT_DESTINATION_FORUM'	=> 'Lütfen gidilecek bir forum seçin',
 	'SELECT_FORUM'				=> 'Bir forum seçin',
-	'SEND_EMAIL'				=> 'E-posta',				// Used for submit buttons
-	'SEND_EMAIL_USER'			=> 'E-posta',				// Used as: {L_SEND_EMAIL_USER} {USERNAME} -> E-mail UserX
+	'SEND_EMAIL'				=> 'Send email',				// Used for submit buttons
+	'SEND_EMAIL_USER'			=> 'Send email to %s',
 	'SEND_PRIVATE_MESSAGE'		=> 'Özel mesaj gönder',
 	'SETTINGS'					=> 'Ayarlar',
 	'SIGNATURE'					=> 'İmza',
 	'SKIP'						=> 'İçeriğe geç',
+	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'SMTP sunucusu yetkisi desteklenmiyor.',
 	'SORRY_AUTH_READ'			=> 'Bu forumu okuma yetkiniz yok.',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'Bu eklentiyi indirme yetkiniz yok.',
@@ -706,6 +818,8 @@ $lang = array_merge($lang, array(
 	'START_WATCHING_TOPIC'		=> 'Başlığa abone ol',
 	'STOP_WATCHING_FORUM'		=> 'Foruma abone olmayı bırak',
 	'STOP_WATCHING_TOPIC'		=> 'Başlığa abone olmayı bırak',
+	'STRING_LIST_MULTI'			=> '%1$s, and %2$s',
+	'STRING_LIST_SIMPLE'		=> '%1$s and %2$s',
 	'SUBFORUM'					=> 'Alt forum',
 	'SUBFORUMS'					=> 'Alt forumlar',
 	'SUBJECT'					=> 'Konu',
@@ -717,51 +831,35 @@ $lang = array_merge($lang, array(
 	'THE_TEAM'			=> 'Takım',
 	'TIB'				=> 'TiB',
 	'TIME'				=> 'Zaman',
-	
+	'TIMEOUT_PROCESSING_REQ'			=> 'Request timed out.',
+
 	'TOO_LARGE'						=> 'Girdiğiniz değer çok büyük.',
 	'TOO_LARGE_MAX_RECIPIENTS'		=> 'Girdiğiniz değer <strong>Her mesajda izin verilen en fazla alıcı sayısı</strong> ayarına göre çok büyük.',
 
 	'TOO_LONG'						=> 'Girdiğiniz değer çok uzun.',
 
-	'TOO_LONG_AIM'					=> 'Girdiğiniz görünen ad çok uzun.',
 	'TOO_LONG_CONFIRM_CODE'			=> 'Girdiğiniz onay kodu çok uzun.',
 	'TOO_LONG_DATEFORMAT'			=> 'Girdiğiniz tarih formatı çok uzun.',
-	'TOO_LONG_ICQ'					=> 'Girdiğiniz ICQ numarası çok uzun.',
-	'TOO_LONG_INTERESTS'			=> 'Girdiğiniz ilgi alanları çok uzun.',
 	'TOO_LONG_JABBER'				=> 'Girdiğiniz Jabber hesap adı çok uzun.',
-	'TOO_LONG_LOCATION'				=> 'Girdiğiniz şehir çok uzun.',
-	'TOO_LONG_MSN'					=> 'Girdiğiniz MSNM/WLM adı çok uzun.',
 	'TOO_LONG_NEW_PASSWORD'			=> 'Girdiğiniz şifre çok uzun.',
-	'TOO_LONG_OCCUPATION'			=> 'Girdiğiniz meslek çok uzun.',
 	'TOO_LONG_PASSWORD_CONFIRM'		=> 'Girdiğiniz şifre doğrulaması çok uzun.',
 	'TOO_LONG_USER_PASSWORD'		=> 'Girdiğiniz şifre çok uzun.',
 	'TOO_LONG_USERNAME'				=> 'Girdiğiniz kullanıcı adı çok uzun.',
-	'TOO_LONG_EMAIL'				=> 'Girdiğiniz e-posta adresi çok uzun.',
-	'TOO_LONG_EMAIL_CONFIRM'		=> 'Girdiğiniz e-posta adresi doğrulaması çok uzun.',
-	'TOO_LONG_WEBSITE'				=> 'Girdiğiniz web sitesi adresi çok uzun.',
-	'TOO_LONG_YIM'					=> 'Girdiğiniz Yahoo! Messenger adı çok uzun.',
+	'TOO_LONG_EMAIL'				=> 'The email address you entered is too long.',
 
 	'TOO_MANY_VOTE_OPTIONS'			=> 'Çok fazla seçenek için oy vermeyi denediniz.',
 
 	'TOO_SHORT'						=> 'Girdiğiniz değer çok kısa.',
 
-	'TOO_SHORT_AIM'					=> 'Girdiğiniz görünen ad çok kısa.',
 	'TOO_SHORT_CONFIRM_CODE'		=> 'Girdiğiniz onay kodu çok kısa.',
 	'TOO_SHORT_DATEFORMAT'			=> 'Girdiğiniz tarih formatı çok kısa.',
-	'TOO_SHORT_ICQ'					=> 'Girdiğiniz ICQ numarası çok kısa.',
-	'TOO_SHORT_INTERESTS'			=> 'Girdiğiniz ilgi alanları çok kısa.',
 	'TOO_SHORT_JABBER'				=> 'Girdiğiniz Jabber hesap adı çok kısa.',
-	'TOO_SHORT_LOCATION'			=> 'Girdiğiniz şehir çok kısa.',
-	'TOO_SHORT_MSN'					=> 'Girdiğiniz MSNM/WLM adı çok kısa.',
 	'TOO_SHORT_NEW_PASSWORD'		=> 'Girdiğiniz şifre çok kısa.',
-	'TOO_SHORT_OCCUPATION'			=> 'Girdiğiniz meslek çok kısa.',
 	'TOO_SHORT_PASSWORD_CONFIRM'	=> 'Girdiğiniz şifre doğrulaması çok kısa.',
 	'TOO_SHORT_USER_PASSWORD'		=> 'Girdiğiniz şifre çok kısa.',
 	'TOO_SHORT_USERNAME'			=> 'Girdiğiniz kullanıcı adı çok kısa.',
-	'TOO_SHORT_EMAIL'				=> 'Girdiğiniz e-posta adresi çok kısa.',
-	'TOO_SHORT_EMAIL_CONFIRM'		=> 'Girdiğiniz e-posta adresi doğrulaması çok kısa.',
-	'TOO_SHORT_WEBSITE'				=> 'Girdiğiniz web sitesi adresi çok kısa.',
-	'TOO_SHORT_YIM'					=> 'Girdiğiniz Yahoo! Messenger adı çok kısa.',
+	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
+	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
 	
 	'TOO_SMALL'						=> 'Girdiğiniz değer çok küçük.',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> 'Girdiğiniz değer <strong>Her mesajda izin verilen en fazla alıcı sayısı</strong> ayarına göre çok küçük.',
@@ -775,30 +873,20 @@ $lang = array_merge($lang, array(
 	'TOPIC_MOVED'		=> 'Taşınan başlık',
 	'TOPIC_REVIEW'		=> 'Başlık incelemesi',
 	'TOPIC_TITLE'		=> 'Konu Başlığı',
-	'TOPIC_UNAPPROVED'	=> 'Bu başlık onaylanmadı',
+	'TOPIC_UNAPPROVED'	=> 'This topic has not been approved.',
+	'TOPIC_DELETED'		=> 'This topic has been deleted.',
 	'TOTAL_ATTACHMENTS'	=> 'Eklenti(ler)',
-	'TOTAL_LOG'			=> '1 eylem kaydı',
-	'TOTAL_LOGS'		=> '%d eylem kaydı',
-	'TOTAL_NO_PM'		=> 'Toplam 0 özel mesaj',
-	'TOTAL_PM'			=> 'Toplam 1 özel mesaj',
-	'TOTAL_PMS'			=> 'Toplam %d özel mesaj',
+	'TOPIC_POLL'		=> 'This topic has a poll.',
 	'TOTAL_POSTS'		=> 'Toplam mesajlar',
-	'TOTAL_POSTS_OTHER'	=> 'Toplam <strong>%s</strong> mesaj',
-	'TOTAL_POSTS_ZERO'	=> 'Toplam <strong>0</strong> mesaj',
 	'TOPIC_REPORTED'	=> 'Bu başlık bildirildi',
-	'TOTAL_TOPICS_OTHER'=> 'Toplam <strong>%s</strong> başlık',
-	'TOTAL_TOPICS_ZERO'	=> 'Toplam <strong>0</strong> başlık',
-	'TOTAL_USERS_OTHER'	=> 'Toplam <strong>%s</strong> üye',
-	'TOTAL_USERS_ZERO'	=> 'Toplam <strong>0</strong> üye',
 	'TRACKED_PHP_ERROR'	=> 'İzlenen PHP hataları: %s',
+	'TWITTER'			=> 'Twitter',
 
-	'UNABLE_GET_IMAGE_SIZE'	=> 'Resmin boyutlarının belirlenmesi mümkün değil.',
+	'UNABLE_GET_IMAGE_SIZE'	=> 'It was not possible to determine the dimensions of the image. Please verify that the URL you entered is correct.',
 	'UNABLE_TO_DELIVER_FILE'=> 'Dosya teslim edilemiyor.',
 	'UNKNOWN_BROWSER'		=> 'Bilinmeyen Tarayıcı',
 	'UNMARK_ALL'			=> 'Tüm işaretleri kaldır',
 	'UNREAD_MESSAGES'		=> 'Okunmayan Mesajlar',
-	'UNREAD_PM'				=> '<strong>%d</strong> okunmayan mesaj',
-	'UNREAD_PMS'			=> '<strong>%d</strong> okunmayan mesaj',
 	'UNREAD_POST'			=> 'Okunmamış mesaj',
 	'UNREAD_POSTS'			=> 'Okunmamış mesaj var',
 	'UNWATCH_FORUM_CONFIRM'		=> 'Bu forumdan aboneliğinizi kaldırmak istediğinize emin misiniz?',
@@ -816,8 +904,6 @@ $lang = array_merge($lang, array(
 	'USERNAMES'				=> 'Kullanıcı adları',
 	'USER_AVATAR'			=> 'Kullanıcı avatarı',
 	'USER_CANNOT_READ'		=> 'Bu forumdaki mesajları okuyamazsınız.',
-	'USER_POST'				=> '%d Mesaj',
-	'USER_POSTS'			=> '%d Mesaj',
 	'USERS'					=> 'Kullanıcılar',
 	'USE_PERMISSIONS'		=> 'Kullanıcı’nın yetkilerini sına',
 
@@ -825,6 +911,8 @@ $lang = array_merge($lang, array(
 
 	'VARIANT_DATE_SEPARATOR'	=> ' / ',	// Used in date format dropdown, eg: "Today, 13:37 / 01 Jan 2007, 13:37" ... to join a relative date with calendar date
 	'VIEWED'					=> 'Görüntüleme',
+
+	'VIEWING_CONTACT_ADMIN'		=> 'Viewing contact page',
 	'VIEWING_FAQ'				=> 'SSS görüntüleniyor',
 	'VIEWING_MEMBERS'			=> 'Üye detayları görüntüleniyor',
 	'VIEWING_ONLINE'			=> 'Kimler’in çevrimiçi olduğu görüntüleniyor',
@@ -839,8 +927,6 @@ $lang = array_merge($lang, array(
 	'VIEW_LATEST_POST'			=> 'Son mesajı görüntüle',
 	'VIEW_NEWEST_POST'			=> 'İlk okunmamış mesajı görüntüle',
 	'VIEW_NOTES'				=> 'Kullanıcı notlarını görüntüle',
-	'VIEW_ONLINE_TIME'			=> 'son %d dakika öncesinden itibaren aktif olan kullanıcılar temel alınır',
-	'VIEW_ONLINE_TIMES'			=> 'son %d dakika öncesinden itibaren aktif olan kullanıcılar temel alınır',
 	'VIEW_TOPIC'				=> 'Başlığı görüntüle',
 	'VIEW_TOPIC_ANNOUNCEMENT'	=> 'Duyuru: ',
 	'VIEW_TOPIC_GLOBAL'			=> 'Global Duyuru: ',
@@ -861,23 +947,24 @@ $lang = array_merge($lang, array(
 	'WEBSITE'			=> 'Web sitesi',
 	'WHOIS'				=> 'Kimdir',
 	'WHO_IS_ONLINE'		=> 'Kimler çevrimiçi',
+	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'Hatalı bir şifre girdiniz.',
 	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
-	'WRONG_DATA_ICQ'			=> 'Girdiğiniz numara, geçersiz bir ICQ numarası.',
 	'WRONG_DATA_JABBER'			=> 'Girilen ad, geçersiz bir Jabber hesap adı.',
 	'WRONG_DATA_LANG'			=> 'Belirlediğiniz dil geçerli değil.',
-	'WRONG_DATA_WEBSITE'		=> 'Web sitesi adresi, protokol dahilinde geçerli bir URL olmalıdır. Örneğin, http://www.ornek.com/.',
+	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
+	'WRONG_DATA_POST_SK'		=> 'The post sort option you specified is not valid.',
+	'WRONG_DATA_TOPIC_SD'		=> 'The topic sort direction you specified is not valid.',
+	'WRONG_DATA_TOPIC_SK'		=> 'The topic sort option you specified is not valid.',
 	'WROTE'						=> 'yazdı',
 
+	'YAHOO'				=> 'Yahoo Messenger',
+	'YOUTUBE'			=> 'YouTube',
 	'YEAR'				=> 'Yıl',
 	'YEAR_MONTH_DAY'	=> '(YYYY-AA-GG)',
 	'YES'				=> 'Evet',
-	'YIM'				=> 'YIM',
 	'YOU_LAST_VISIT'	=> 'Son ziyaretiniz: %s',
-	'YOU_NEW_PM'		=> 'Gelen kutunuzda bir yeni özel mesaj sizi bekliyor.',
-	'YOU_NEW_PMS'		=> 'Gelen kutunuzda yeni özel mesajlar sizi bekliyor.',
-	'YOU_NO_NEW_PM'		=> 'Sizi bekleyen yeni özel mesaj yok.',
 
 	'default_dateformat'	=> 'D M d, Y g:i a', // Mon Jan 01, 2007 1:37 pm
 
@@ -1083,7 +1170,6 @@ $lang = array_merge($lang, array(
 
 	'FORUM_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this forum.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this topic.',
-	'TOO_FEW_CHARS_LIMIT'	=> 'Mesajınız %1$d karakter içeriyor. En az %2$d karakter girmelisiniz.',
 	'REPLY_TO_MESSAGE'		=> 'Cevapla',
 
 	'RSS_CHAN_LIST_TITLE'	=> 'Forumlar',
@@ -1695,7 +1781,6 @@ $lang = array_merge($lang, array(
 	'DEV_NO_TEST_FILE'			=> 'Dönüştürücü içerisindeki test_file değişkeni için hiç bir değer belirtilmedi. Eğer siz bu dönüştürücünün bir kullanıcıysanız, bu hatayı göremezsiniz, lütfen dönüştürücü yapımcısına bu mesajı bildirin. Eğer siz bir dönüştürücü yapımcısıysanız, doğrulamaya izin verilen yol hangi kaynak mesaj panosu içerisinde bulunuyorsa bir dosyanın adını belirlemelisiniz.',
 	'DIRECTORIES_AND_FILES'		=> 'Dizin ve dosya ayarı',
 	'DISABLE_KEYS'				=> 'Anahtarlar kapatılıyor',
-	'DLL_FIREBIRD'				=> 'Firebird',
 	'DLL_FTP'					=> 'Uzak FTP desteği [ Kurulum ]',
 	'DLL_GD'					=> 'GD grafik desteği [ Görsel Doğrulama ]',
 	'DLL_MBSTRING'				=> 'Multi-byte karakter desteği',
@@ -1706,11 +1791,12 @@ $lang = array_merge($lang, array(
 	'DLL_MYSQLI'				=> 'MySQL ile MySQLi Uzantısı',
 	'DLL_ORACLE'				=> 'Oracle',
 	'DLL_POSTGRES'				=> 'PostgreSQL',
-	'DLL_SQLITE'				=> 'SQLite',
+	'DLL_SQLITE'				=> 'SQLite 2',
+	'DLL_SQLITE3'				=> 'SQLite 3',
 	'DLL_XML'					=> 'XML desteği [ Jabber ]',
 	'DLL_ZLIB'					=> 'zlib sıkıştırma desteği [ gz, .tar.gz, .zip ]',
 	'DL_CONFIG'					=> 'İndirme ayarları',
-	'DL_CONFIG_EXPLAIN'			=> 'config.php dosyasının tamamını kendi bilgisayarınıza indirebilirsiniz. O zaman dosyayı elle yüklemeniz ve phpBB 3.0 ana dizininizde mevcut olan config.php dosyası ile değiştirmeniz gerekecektir. Lütfen dosyayı ASCII formatında yüklemeyi unutmayın (eğer bunu nasıl yapacağınıza emin değilseniz FTP uygulama dokümantasyonunuza bakın). config.php dosyasını yüklediğiniz zaman lütfen sonraki adıma geçmek için “Bitti” bağlantısına tıklayın.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'İndir',
 	'DONE'						=> 'Bitti',
 
@@ -1722,8 +1808,6 @@ $lang = array_merge($lang, array(
 	'FILES_REQUIRED_EXPLAIN'	=> '<strong>Gerekli</strong> - phpBB\'nin düzgün bir şekilde işlemesi için bazı dosya ve klasörlere yazılabilmesi veya erişilebilmesi gerekmektedir. Eğer "Bulunamadı" ifadesini görüyorsanız konu ile ilgili dosya veya klasörü oluşturmanız gerekmektedir. Eğer "Yazılabilir değil" ifadesini görüyorsanız dosya veya klasördeki izinleri değiştirip yazılması için phpBB\'ye izin vermeniz gerekmektedir.',
 	'FILLING_TABLE'				=> 'Doldurulan tablo <strong>%s</strong>',
 	'FILLING_TABLES'			=> 'Tablolar dolduruluyor',
-
-	'FIREBIRD_DBMS_UPDATE_REQUIRED'		=> 'phpBB, Firebird/Interbase uygulamasının 2.1’den önceki sürümlerini desteklememektedir. Lütfen güncelleme işlemine devam etmeden önce Firebird uygulamasının 2.1.0 veya daha yukarı sürümünü kurun.',
 
 	'FINAL_STEP'				=> 'Final adımı işlemi',
 	'FORUM_ADDRESS'				=> 'Mesaj panosu adresi',
@@ -1750,30 +1834,30 @@ $lang = array_merge($lang, array(
 		<p>Alttaki butona tıkladıktan sonra Yönetim Kontrol Paneli (YKP)\'nizdeki bazı istatistiksel verileri phpBB\'ye ulaştıracağınız bir form ile karşılaşacaksınız. Eğer o bilgileri göndererek bizlere yardımcı olursanız, sizlere minnettar kalacağız. Daha sonra biraz zamanınızı ayırarak size sunulan mevcut seçenekleri inceleyebilirsiniz. <a href="http://www.phpbb.com/support/documentation/3.0/">Dokümantasyon</a>, <a href="%3$s">BENİ OKU</a> ve <a href="http://www.phpbb.com/community/viewforum.php?f=46">Destek Forumları</a> yoluyla çevrimiçi yardım alabileceğinizi unutmayın.</p><p><strong>Lütfen mesaj panonuzu kullanmadan önce install klasörünü silin, taşıyın ya da yeniden adlandırın. Eğer bu klasör mevcutsa, sadece Yönetim Kontrol Paneline (YKP) erişilebilinecektir.</strong>',
 	'INSTALL_INTRO'				=> 'Kuruluma Hoşgeldiniz',
 
-	'INSTALL_INTRO_BODY'		=> 'Bu seçenek ile, sunucunuza phpBB3 kurmak mümkün olacaktır.</p><p>Devam etmek için, veritabanı ayarlarınıza ihtiyacınız vardır. Eğer veritabanı ayarlarınızı bilmiyorsanız, lütfen hosting firmanız ile iletişime geçin ve onlara sorun. Bu ayarlar olmadan devam edemezsiniz. Size gerekenler:</p>
-	
-  <ul> 
-     <li>Veritabanı Tipi - kullanacağınız veritabanı.</li> 
-     <li>Veritabanı sunucu adı ya da DSN - veritabanı sunucusunun adresi.</li> 
-     <li>Veritabanı sunucu portu - veritabanı sunucusunun portu (genellikle bu gerekli değildir).</li> 
-     <li>Veritabanı adı - sunucudaki veritabanının adı.</li> 
-     <li>Veritabanı kullanıcı adı ve Veritabanı şifresi - veritabanına erişim için giriş bilgileri.</li> 
-  </ul> 
-     
-  <p><strong>Not:</strong> eğer kurulum yaparken SQLite kullanacaksanız, DSN alanına veritabanı dosyanıza ulaşan tam yolu girmelisiniz ve kullanıcı adı ile şifre alanlarını boş bırakmalısınız. Güvenlik sebeplerinden dolayı, veritabanı dosyasının web üzerinden erişilebilir bir konumda bulunmadığına emin olun.</p> 
-     
-  <p>phpBB3 alttaki veritabanlarını destekler:</p> 
+	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
+
 	<ul>
-     <li>MySQL 3.23 veya üzeri (MySQLi destekli)</li> 
-     <li>PostgreSQL 7.3+</li> 
-     <li>SQLite 2.8.2+</li> 
-     <li>Firebird 2.1+</li> 
-     <li>MS SQL Server 2000 veya üzeri (direkt olarak veya ODBC yoluyla)</li> 
-	 <li>MS SQL Server 2005 veya üzeri (native)</li>
-     <li>Oracle</li> 
-     </ul> 
-        
-  <p>Sunucunuzda sadece bu desteklenen veritabanları görüntülenecektir.',
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
+	</ul>
+
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
+
+	<p>phpBB3 supports the following databases:</p>
+	<ul>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
+		<li>SQLite 2.8.2+</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
+		<li>Oracle</li>
+	</ul>
+
+	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'Kurulumu başlatmak için, lütfen alttaki butona tıklayın.',
 	'INSTALL_LOGIN'				=> 'Giriş',
 	'INSTALL_NEXT'				=> 'Sonraki Adım',
@@ -1789,9 +1873,8 @@ $lang = array_merge($lang, array(
 	'INST_ERR_DB_NO_ERROR'		=> 'Hiç bir hata mesajı belirlenmedi.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'Bu makinede kurulu olan MySQL sürümü seçtiğiniz “MySQL ile MySQLi Uzantısı” seçeneği ile uyuşmuyor. Lütfen bunun yerine “MySQL” seçeneğini seçerek tekrar deneyin.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'Kurulu olan SQLite uzantısı\'nın sürümü çok eski, en düşük 2.8.2 sürümüne güncellenmelidir.',
+	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'Bu makinede kurulu olan Oracle\'nin sürümünde <var>NLS_CHARACTERSET</var> parametresini <var>UTF8</var>\'e göre ayarlamanız gerekiyor. Kurulumunuzu 9.2+ sürümüne güncelleyin veya parametreyi değiştirin.',
-	'INST_ERR_DB_NO_FIREBIRD'	=> 'Bu makinede kurulu olan Firebird sürümü 2.1\'den eski, lütfen yeni bir sürüme güncelleyin.',
-	'INST_ERR_DB_NO_FIREBIRD_PS'=> 'Firebird için seçtiğiniz veritabanı 8192\'den daha az bir sayfa boyutuna sahip, en düşük 8192 olmalıdır.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'Seçtiğiniz veritabanı <var>UNICODE</var> veya <var>UTF8</var> kodlaması içerisinde oluşturulamadı. <var>UNICODE</var> veya <var>UTF8</var> kodlaması ile oluşturulmuş bir veritabanı ile kurmayı deneyin.',
 	'INST_ERR_DB_NO_NAME'		=> 'Hiç bir veritabanı adı belirtilmedi.',
 	'INST_ERR_EMAIL_INVALID'	=> 'Girdiğiniz e-posta adresi hatalı.',
@@ -1845,6 +1928,8 @@ $lang = array_merge($lang, array(
 	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'Eğer PHP kurulumunuz PCRE uzantısı içinde UTF-8 desteği ile derlenmediyse phpBB <strong>çalışmayacaktır</strong>.',
 	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() fonksiyonu mevcut',
 	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Gerekli</strong> - phpBB doğru şekilde özellikte olması için, getimagesize fonksiyonu mevcut olmalıdır.',
+	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'İsteğe bağlı modüller',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>İsteğe Bağlı</strong> - Bu modüller veya uygulamalar isteğe bağlıdır. Fakat, eğer bunlar mevcutsa ekstra özellikler aktif olacaktır.',
 	'PHP_SUPPORTED_DB'				=> 'Desteklenen veritabanları',
@@ -1853,10 +1938,10 @@ $lang = array_merge($lang, array(
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'Eğer bu ayar aktifse phpBB çalışacaktır, fakat eğer mümkünse, güvenlik sebepleri için PHP kurulumunuzdan bu register_globals ayarını deaktif etmenizi öneriyoruz.',
 	'PHP_SAFE_MODE'					=> 'Güvenli mod',
 	'PHP_SETTINGS'					=> 'PHP sürümü ve ayarları',
-	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Gerekli</strong> - phpBB kurulumu için en düşük PHP sürümünüz 4.3.3 olmalıdır. Eğer altta "güvenli mod" görünüyorsa PHP kurulumunuz bu modda çalışmaktadır. Bu, uzaktan yönetim ve benzer özelliklerde sınırlama getirecektir.',
+	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'PHP <var>allow_url_fopen</var> ayarı açık',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>İsteğe Bağlı</strong> - Bu ayar isteğe bağlıdır, fakat site dışı avatarlar gibi bazı phpBB özellikleri bu olmadan düzgün bir şekilde çalışmayacaktır.',
-	'PHP_VERSION_REQD'				=> 'PHP sürümü >= 4.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
 	'POST_ID'						=> 'Mesaj ID numarası',
 	'PREFIX_FOUND'					=> 'Tablolarınızda yapılan tarama sırasında, geçerli bir kurulum için <strong>%s</strong> adında bir tablo öneki kullanıldığı görüldü.',
 	'PREPROCESS_STEP'				=> 'Özelliklerin/sorguların ön-işlemi yapılıyor',
@@ -1876,6 +1961,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> 'Sunucu ayarları',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Arama indeksi dönüştürülemedi',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Eski arama indeksiniz dönüştürülemedi. Aramalar daima boş bir sonuç verecektir. Yeni bir arama indeksi oluşturmak için Yönetim Kontrol Paneline gidin, Bakım bölümünü seçin ve oradaki alt menüdende Arama indeksini seçin.',
+	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> 'Mesaj panosu yazılımı',
 	'SPECIFY_OPTIONS'			=> 'Dönüştürme seçeneklerini belirle',
 	'STAGE_ADMINISTRATOR'		=> 'Yönetici bilgileri',
@@ -1883,7 +1969,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> 'Eğer varsayılandan farklı şeylerin kesinlikle ayarlanması gerektiğini biliyorsanız bu sayfadaki ayarları yapın. Eğer şüpheliyseniz, sadece sonraki sayfaya ilerleyin, bu ayarlar daha sonra Yönetici Kontrol Panelinden değiştirilebilir.',
 	'STAGE_CONFIG_FILE'			=> 'Ayar dosyası',
 	'STAGE_CREATE_TABLE'		=> 'Veritabanı tabloları oluştur',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'phpBB 3.0 tarafından kullanılan veritabanı tabloları oluşturuldu ve bir kısım önceki veriyle beraber yerleştirildi. phpBB kurulumunu bitirmek için sonraki ekrana ilerleyin.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'Veritabanı ayarları',
 	'STAGE_FINAL'				=> 'Final aşaması',
 	'STAGE_INTRO'				=> 'Giriş',
@@ -1896,7 +1982,7 @@ $lang = array_merge($lang, array(
 	'SUB_LICENSE'				=> 'Lisans',
 	'SUB_SUPPORT'				=> 'Destek',
 	'SUCCESSFUL_CONNECT'		=> 'Bağlantı başarılı',
-	'SUPPORT_BODY'				=> 'phpBB3’ün şu anki sabit sürümü için ücretsiz, tam destek sağlanacaktır. Bu konuları kapsar:</p><ul><li>kurulum</li><li>ayarlar</li><li>teknik sorular</li><li>yazılımdaki olası hatalara bağlı problemler</li><li>Release Candidate (RC) sürümlerinden son sabit sürüme güncelleme</li><li>phpBB 2.0.x sürümlerinden phpBB3 sürümüne dönüşüm</li><li>diğer mesaj panosu yazılımlarından phpBB3\'e dönüşüm (lütfen <a href="http://www.phpbb.com/community/viewforum.php?f=65">Dönüştürücüler Forumuna</a> bakın)</li></ul><p>Hala phpBB3’ün beta sürümlerini kullanan kullanıcıların kurulumlarını, son sürümün yeni kopyası ile değiştirmeye teşvik ediyoruz.</p><h2>MODlar / Stiller</h2><p>MODlar ile ilgili sorunlar için, lütfen uygun olan <a href="http://www.phpbb.com/community/viewforum.php?f=81">Modifikasyon Forumuna</a> mesaj gönderin.<br />Stiller, temalar ve görüntü kümeleri ile ilgili sorunlar için, lütfen uygun olan <a href="http://www.phpbb.com/community/viewforum.php?f=80">Stiller Forumuna</a> mesaj gönderin.<br /><br />Eğer belirli bir pakete bağlı sorunuz varsa, lütfen direkt olarak paket için belirlenmiş başlığa mesaj gönderin.</p><h2>Bulunabilir Destek</h2><p><a href="http://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">phpBB Hoşgeldiniz Paketi</a><br /><a href="http://www.phpbb.com/support/">Destek Alanı</a><br /><a href="http://www.phpbb.com/support/documentation/3.0/quickstart/">Kolay Başlangıç Rehberi</a><br /><br />Son haberler ve yayınlanan sürümler ile güncel kaldığınıza emin olmak için, neden <a href="http://www.phpbb.com/support/">e-posta listemize abone olmuyorsunuz</a>?<br /><br />',
+	'SUPPORT_BODY'				=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/documentation/3.1/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
 	'SYNC_FORUMS'				=> 'Forumların eşleştirilmesine başlanıyor',
 	'SYNC_POST_COUNT'			=> 'post_counts senkronize ediliyor',
 	'SYNC_POST_COUNT_ID'		=> 'post_counts %1$s <var>girdisinden</var> %2$s <var>girdisine</var> senkronize ediliyor.',
@@ -1922,7 +2008,7 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ALL_FILES_UP_TO_DATE'		=> 'Tüm dosyalar son phpBB sürümü ile güncel. Şimdi <a href="../ucp.php?mode=login">mesaj panonuza giriş yapmalısınız</a> ve herşeyin iyi çalıştığını kontrol etmelisiniz. install klasörünüzü silmeyi, yeniden adlandırmayı veya taşımayı unutmayın! Lütfen sunucunuz hakkındaki güncel bilgileri ve mesaj panosu ayarlarınızı YKP\'nizdeki <a href="../ucp.php?mode=login&amp;redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">İstatistikleri gönder</a> modülünü kullanarak gönderin.',
+	'ALL_FILES_UP_TO_DATE'		=> 'All files are up to date with the latest phpBB version.',
 	'ARCHIVE_FILE'				=> 'Arşiv içinde kaynak dosya',
 
 	'BACK'				=> 'Geri',
@@ -1945,7 +2031,10 @@ $lang = array_merge($lang, array(
 	'CURRENT_VERSION'				=> 'Şu anki sürüm',
 
 	'DATABASE_TYPE'						=> 'Veritabanı tipi',
+	'DATABASE_UPDATE_COMPLETE'			=> 'Database updater has completed!',
+	'DATABASE_UPDATE_CONTINUE'			=> 'Continue database update',
 	'DATABASE_UPDATE_INFO_OLD'			=> 'install dizini içerisindeki veritabanı güncelleme dosyası eski. Lütfen dosyanın geçerli sürümünü yüklediğinize emin olun.',
+	'DATABASE_UPDATE_NOT_COMPLETED'		=> 'The database update has not yet completed.',
 	'DELETE_USER_REMOVE'				=> 'Kullanıcıyı sil ve mesajları kaldır',
 	'DELETE_USER_RETAIN'				=> 'Kullanıcıyı sil fakat mesajları tut',
 	'DESTINATION'						=> 'Gidilecek dosya',
@@ -1964,14 +2053,17 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_UPDATE_METHOD'			=> 'Düzenlenen dosyalar arşivini indir',
 	'DOWNLOAD_UPDATE_METHOD_EXPLAIN'	=> 'İndirme işlemini tamamladıktan sonra arşivi açın. Arşivin içerisinde phpBB ana dizininize yüklemeniz gereken değiştirilmiş dosyaları bulacaksınız. Lütfen dosyaları ait olan yerlerine yükleyin. Tüm dosyaları yükledikten sonra, lütfen aşağıdaki ilgili diğer butonu kullanarak dosyaları tekrar kontrol edin.',
 
-	'ERROR'			=> 'Hata',
 	'EDIT_USERNAME'	=> 'Kullanıcı adını düzenle',
+	'ERROR'			=> 'Hata',
+	'EVERYTHING_UP_TO_DATE'		=> 'Everything is up to date with the latest phpBB version. You should now <a href="%1$s">login to your board</a> and check if everything is working fine. Do not forget to delete, rename or move your install directory! Please send us updated information about your server and board configurations from the <a href="%2$s">Send statistics</a> module in your ACP.',
 
 	'FILE_ALREADY_UP_TO_DATE'		=> 'Dosya zaten güncel.',
 	'FILE_DIFF_NOT_ALLOWED'			=> 'Dosya, karşılaştırma yapmaya izinli değil.',
 	'FILE_USED'						=> 'Şuradan bilgi kullanıldı',			// Single file
 	'FILES_CONFLICT'				=> 'Uyuşmayan dosyalar',
 	'FILES_CONFLICT_EXPLAIN'		=> 'Aşağıdaki dosyalarda siz ya da başka bir yönetici tarafından daha önce değişiklik yapılmıştır ve eski phpBB sürümünün orijinal dosyaları ile aynı değildir (Bu durum genelde MOD/Eklenti kurulumlarında ortaya çıkar). phpBB, bu dosyalar eğer birleşmeyi denerlerse uyuşmazlıkların meydana geleceğini belirledi. Lütfen uyuşmazlıkları inceleyin ve elle onları düzeltmeyi deneyin ya da size sunulan bir birleştirme metotu seçerek güncellemeye devam edin. Eğer uyuşmazlıkları elle çözdüyseniz, dosyalarda değişiklik yaptıktan sonra tekrar dosya kontrolü yapın. Ayrıca her dosya için sunulan birleştirme metotları arasında seçim yapabilirsiniz. Bu metotlardan birincisini seçerseniz eski dosyanızdaki uyuşmaz satırlar silinerek yeni bir dosya oluşturulacaktır, diğerini seçtiğinizde ise yeni dosya için yapılacak değişiklikler uygulanmayacaktır.',
+	'FILES_DELETED'					=> 'Deleted files',
+	'FILES_DELETED_EXPLAIN'			=> 'The following files do not exist in the new version. These files have to be deleted from your installation.',
 	'FILES_MODIFIED'				=> 'Düzenlenmiş dosyalar',
 	'FILES_MODIFIED_EXPLAIN'		=> 'Aşağıdaki dosyalarda siz ya da başka bir yönetici tarafından daha önce değişiklik yapılmıştır ve eski phpBB sürümünün orijinal dosyaları ile aynı değildir (Bu durum genelde MOD/Eklenti kurulumlarında ortaya çıkar). Yaptığınız bu değişiklikler ile yeni dosya için yapılacak değişiklikler birleştirilerek güncel bir dosya oluşturulacaktır.',
 	'FILES_NEW'						=> 'Yeni dosyalar',
@@ -2033,6 +2125,7 @@ $lang = array_merge($lang, array(
 	'PREVIOUS_VERSION'					=> 'Önceki sürüm',
 	'PROGRESS'							=> 'İlerleme',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Announcement',
 	'RESULT'					=> 'Sonuç',
 	'RUN_DATABASE_SCRIPT'		=> 'Veritabanımı şimdi güncelle',
 
@@ -2040,6 +2133,7 @@ $lang = array_merge($lang, array(
 	'SELECT_DOWNLOAD_FORMAT'	=> 'Arşiv indirme formatı seç',
 	'SELECT_FTP_SETTINGS'		=> 'FTP ayarlarını seç',
 	'SHOW_DIFF_CONFLICT'		=> 'Farklılıkları/uyuşmazlıkları göster',
+	'SHOW_DIFF_DELETED'			=> 'Show file contents',
 	'SHOW_DIFF_FINAL'			=> 'Dosya sonucunu göster',
 	'SHOW_DIFF_MODIFIED'		=> 'Birleştirilen farklılıkları göster',
 	'SHOW_DIFF_NEW'				=> 'Dosya içeriklerini göster',
@@ -2053,6 +2147,7 @@ $lang = array_merge($lang, array(
 	'STAGE_UPDATE_FILES'		=> 'Dosya güncellemesi',
 	'STAGE_VERSION_CHECK'		=> 'Sürüm kontrolü',
 	'STATUS_CONFLICT'			=> 'Uyuşmazlıklar doğuran değiştirilmiş dosya',
+	'STATUS_DELETED'			=> 'Deleted file',
 	'STATUS_MODIFIED'			=> 'Değiştirilmiş dosya',
 	'STATUS_NEW'				=> 'Yeni Dosya',
 	'STATUS_NEW_CONFLICT'		=> 'Yeni dosya uyuşmazlığı',
@@ -2073,34 +2168,28 @@ $lang = array_merge($lang, array(
 	'UPDATE_INSTALLATION_EXPLAIN'	=> 'Bu seçenek ile, phpBB kurulumunuzu son sürüme güncellemek mümkündür.<br />İşlem sırasında doğruluk için tüm dosyalarınız kontrol edilecektir. Güncellemeden önce tüm farklılıkları ve dosyaları inceleyebilirsiniz.<br /><br />Dosya güncellemesi iki farklı yolla yapılabilir.</p><h2>Elle Güncelleme</h2><p>Bu seçenek ile dosya değişikliklerinizi kaybetmediğinize emin olmak için sadece değişecek dosyaları indirerek kişisel olarak ayarlayıp yapabilirsiniz. Bu paketi indirdikten sonra phpBB ana dizininizin altındaki doğru pozisyonlara elle yükleme yapmalısınız. İşlem tamamlanmadan önce, eğer dosyaları doğru yerlerine taşıdıysanız tekrar dosya kontrol bölümünden yapılanları görebileceksiniz.</p><h2>FTP ile Otomatik Güncelleme</h2><p>Bu metot ilkine benzer fakat değişecek dosyaları indirmenize ve onları kendinizin güncellemesine gerek yoktur. Bu sizin için yapılacaktır. Bu metotu kullanmak için size sorulacağından FTP giriş bilgilerini bilmeniz gerekmektedir. İşlem bitmeden önce herşeyin doğru olarak güncellendiğine emin olmak için tekrar dosya kontrolüne yönlendirileceksiniz.',
 	'UPDATE_INSTRUCTIONS'			=> '
 
-		<h1>Sürüm duyurusu</h1>
+		<h1>Release announcement</h1>
 
-		<p>Güncelleme işleminize başlamadan önce lütfen <a href="%1$s" title="%1$s"><strong>son sürüm için sürüm duyurusunu</strong></a> okuyun. Bu, yararlı bilgiler içerebilir. Ayrıca tüm indirme bağlantılarını ve değişiklik kayıtlarını içermektedir.</p>
+		<p>Please read the release announcement for the latest version before you continue your update process, it may contain useful information. It also contains full download links as well as the change log.</p>
 
 		<br />
 
-		<h1>Otomatik Güncelleme Paketi ile kurulumunuz nasıl güncelleştirilir?</h1>
+		<h1>How to update your installation with the Automatic Update Package</h1>
 
-		<p>Burada listelenen önerilen kurulum güncelleştirmesi sadece otomatik güncelleme paketi için geçerlidir. Ayrıca kurulumunuzu INSTALL.html belgesi içerisinde belirtilen metotları kullanarakta güncelleyebilirsiniz. Otomatik phpBB3 güncellemesi için takip edilecek adımlar:</p>
+		<p>The recommended way of updating your installation listed here is only valid for the automatic update package. You are also able to update your installation using the methods listed within the INSTALL.html document. The steps for updating phpBB3 automatically are:</p>
 
 		<ul style="margin-left: 20px; font-size: 1.1em;">
-			<li><a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com indirme sayfasına</a> gidin ve "Otomatik Güncelleme Paketi" arşivini indirin.<br /><br /></li>
-			<li>Arşivi açın.<br /><br /></li>
-			<li>phpBB ana dizininize (config.php dosyanızın bulunduğu dizin) sıkıştırılmamış install klasörünün tamamını yükleyin.<br /><br /></li>
+			<li>Go to the <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com downloads page</a> and download the "Automatic Update Package" archive.<br /><br /></li>
+			<li>Unpack the archive.<br /><br /></li>
+			<li>Upload the complete uncompressed install folder to your phpBB root directory (where your config.php file is).<br /><br /></li>
 		</ul>
 
-		<p>Mesaj panonuz, şu anda yüklediğiniz mevcut install klasörünün yükleme işlemi sırasında ve işlem bittikten sonra normal kullanıcılar için çevrimdışı olacaktır.<br /><br />
-		<strong><a href="%2$s" title="%2$s">Şimdi install klasörüne tarayıcınız ile giderek güncelleme işlemine başlayın</a>.</strong><br />
+		<p>Once uploaded your board will be offline for normal users due to the install directory you uploaded now present.<br /><br />
+		<strong><a href="%1$s" title="%1$s">Now start the update process by pointing your browser to the install folder</a>.</strong><br />
 		<br />
-		Güncelleme işlemi sırasında size rehberlik edilecektir. Güncelleme tamamlandığında ise bildiri alacaksınız.
+		You will then be guided through the update process. You will be notified once the update is complete.
 		</p>
 	',
-	'UPDATE_INSTRUCTIONS_INCOMPLETE'	=> '
- 
-    <h1>Tam olmayan güncelleme tespit edildi</h1>
- 
-    <p>phpBB tam olmayan bir otomatik güncelleme tespit etti. Lütfen otomatik güncelleme aracı içerisindeki her bir adımı izlediğinize emin olun. Altta tekrar bir bağlantı bulacaksınız, ya da direk olarak install dizininize gidin.</p>
-  ',
 	'UPDATE_METHOD'					=> 'Güncelleme metodu',
 	'UPDATE_METHOD_EXPLAIN'			=> 'Şimdi güncelleme metodu tercihinizi seçebilirsiniz. FTP yüklemesi kullanıldığında size bir form gösterilecektir, buraya FTP hesap bilgilerinizi girmeniz gerekmektedir. Bu metot ile dosyalar yeni yerlerine otomatik olarak taşınacaktır ve dosya adlarına .bak uzantısı ilave edilerek eski dosyalarınızın yedekleri oluşturulacaktır. Eğer düzenlenmiş dosyaları indirmeyi seçtiyseniz dosyaları açıp daha sonra doğru yerlerine elle yükleyebilirsiniz.',
 	'UPDATE_REQUIRES_FILE'			=> 'Güncelleyici şu dosyayı istiyor: %s',
@@ -2110,10 +2199,10 @@ $lang = array_merge($lang, array(
 	'UPDATING_DATA'					=> 'Veri güncelleniyor',
 	'UPDATING_TO_LATEST_STABLE'		=> 'Veritabanı en son sabit sürüme güncelleniyor',
 	'UPDATED_VERSION'				=> 'Güncellenen sürüm',
-	'UPGRADE_INSTRUCTIONS'			=> '<strong>%1$s</strong> için yayınlanan yeni bir özellik mevcut. Lütfen bu özelliğin ne sunduğunu, ve nasıl güncelleyeceğinizi öğrenmek için <a href="%2$s" title="%2$s"><strong>yayın duyurusunu</strong></a> okuyun.',
 	'UPLOAD_METHOD'					=> 'Yükleme metodu',
 
 	'UPDATE_DB_SUCCESS'				=> 'Veritabanı güncellemesi başarıyla yapıldı.',
+	'UPDATE_FILE_SUCCESS'			=> 'File update was successful.',
 	'USER_ACTIVE'					=> 'Aktif kullanıcı',
 	'USER_INACTIVE'					=> 'Aktif olmayan kullanıcı',
 
@@ -2173,6 +2262,33 @@ $lang = array_merge($lang, array(
 	'TOPICS_TOPIC_TITLE'			=> 'phpBB3\'e hoşgeldiniz',
 ));
 
+#######language/en/migrator.php#######
+
+$lang = array_merge($lang, array(
+	'CONFIG_NOT_EXIST'					=> 'The config setting "%s" unexpectedly does not exist.',
+
+	'GROUP_NOT_EXIST'					=> 'The group "%s" unexpectedly does not exist.',
+
+	'MIGRATION_APPLY_DEPENDENCIES'		=> 'Apply dependencies of %s.',
+	'MIGRATION_DATA_DONE'				=> 'Installed Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_IN_PROGRESS'		=> 'Installing Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_RUNNING'			=> 'Installing Data: %s.',
+	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
+	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
+	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
+	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
+	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
+	'MODULE_NOT_EXIST'					=> 'A required module does not exist: %s',
+
+	'PERMISSION_NOT_EXIST'				=> 'The permission setting "%s" unexpectedly does not exist.',
+
+	'ROLE_NOT_EXIST'					=> 'The permission role "%s" unexpectedly does not exist.',
+));
+
 #######language/en/mcp.php#######
 
 $lang = array_merge($lang, array(
@@ -2193,6 +2309,10 @@ $lang = array_merge($lang, array(
 	'APPROVE_POST_CONFIRM'	=> 'Bu mesajı onaylamak istediğinize emin misiniz?',
 	'APPROVE_POSTS'			=> 'Mesajları onayla',
 	'APPROVE_POSTS_CONFIRM'	=> 'Seçilen mesajları onaylamak istediğinize emin misiniz?',
+	'APPROVE_TOPIC'			=> 'Approve topic',
+	'APPROVE_TOPIC_CONFIRM'	=> 'Are you sure you want to approve this topic?',
+	'APPROVE_TOPICS'		=> 'Approve topics',
+	'APPROVE_TOPICS_CONFIRM'=> 'Are you sure you want to approve the selected topics?',
 
 	'CANNOT_MOVE_SAME_FORUM'=> 'Aynı forum içerisinde zaten bulunan bir başlığı taşıyamazsınız.',
 	'CANNOT_WARN_ANONYMOUS'	=> 'Bir misafir kullanıcıya uyarı veremezsiniz.',
@@ -2213,16 +2333,12 @@ $lang = array_merge($lang, array(
 	'DELETE_PM_REPORTS'			=> 'ÖM bildirilerini sil',
 	'DELETE_PM_REPORTS_CONFIRM'	=> 'Seçilen ÖM bildirilerini silmek istediğinize emin misiniz?',
 	'DELETE_POSTS'				=> 'Mesajları sil',
-	'DELETE_POSTS_CONFIRM'		=> 'Bu mesajları silmek istediğinize emin misiniz?',
-	'DELETE_POST_CONFIRM'		=> 'Bu mesajı silmek istediğinize emin misiniz?',
 	'DELETE_REPORT'				=> 'Bildiriyi sil',
 	'DELETE_REPORT_CONFIRM'		=> 'Seçilen bildiriyi silmek istediğinize emin misiniz?',
 	'DELETE_REPORTS'			=> 'Bildirileri sil',
 	'DELETE_REPORTS_CONFIRM'	=> 'Seçilen bildirileri silmek istediğinize emin misiniz?',
 	'DELETE_SHADOW_TOPIC'		=> 'Gölgeli başlığı sil',
 	'DELETE_TOPICS'				=> 'Seçilen başlıkları sil',
-	'DELETE_TOPICS_CONFIRM'		=> 'Bu başlıkları silmek istediğinize emin misiniz?',
-	'DELETE_TOPIC_CONFIRM'		=> 'Bu başlığı silmek istediğinize emin misiniz?',
 	'DISAPPROVE'				=> 'Onaylama',
 	'DISAPPROVE_REASON'			=> 'Onaylamama sebebi',
 	'DISAPPROVE_POST'			=> 'Mesajı onaylama',
@@ -2260,8 +2376,6 @@ $lang = array_merge($lang, array(
 	'LATEST_WARNING_TIME'		=> 'Son alınan uyarılar',
 	'LATEST_WARNINGS'			=> 'Son 5 uyarı',
 	'LEAVE_SHADOW'				=> 'Burada bulunan gölgeli başlığı boş bırak',
-	'LIST_REPORT'				=> '1 bildiri',
-	'LIST_REPORTS'				=> '%d bildiri',
 	'LOCK'						=> 'Kilitle',
 	'LOCK_POST_POST'			=> 'Mesajı kilitle',
 	'LOCK_POST_POST_CONFIRM'	=> 'Bu mesajın düzenlenmesini engellemek istediğinize emin misiniz?',
@@ -2340,6 +2454,10 @@ $lang = array_merge($lang, array(
 	'MCP_QUEUE_UNAPPROVED_POSTS_EXPLAIN'	=> 'Bu, kullanıcılara görüntülenmeden önce onay isteyen tüm mesajların bir listesidir.',
 	'MCP_QUEUE_UNAPPROVED_TOPICS'			=> 'Onay bekleyen başlıklar',
 	'MCP_QUEUE_UNAPPROVED_TOPICS_EXPLAIN'	=> 'Bu, kullanıcılara görüntülenmeden önce onay isteyen tüm başlıkların bir listesidir.',
+	'MCP_QUEUE_DELETED_POSTS'				=> 'Deleted posts',
+	'MCP_QUEUE_DELETED_POSTS_EXPLAIN'		=> 'This is a list of all soft deleted posts. You can restore or permanently delete the posts from this screen.',
+	'MCP_QUEUE_DELETED_TOPICS'				=> 'Deleted topics',
+	'MCP_QUEUE_DELETED_TOPICS_EXPLAIN'		=> 'This is a list of all soft deleted topics. You can restore or permanently delete the topics from this screen.',
 
 	'MCP_VIEW_USER'			=> 'Belirli bir kullanıcı için uyarıları görüntüle',
 
@@ -2378,25 +2496,27 @@ $lang = array_merge($lang, array(
 	'NO_POST'						=> 'Bu mesaj yüzünden kullanıcıya verilecek uyarı için bir mesaj seçmelisiniz.',
 	'NO_POST_REPORT'				=> 'Bu mesaj bildiri almadı.',
 	'NO_POST_SELECTED'				=> 'Bu eylemi uygulamak için en az bir tane mesaj seçmelisiniz.',
+	'NO_POSTS_DELETED'				=> 'There are no deleted posts.',
+	'NO_POSTS_QUEUE'				=> 'There are no posts waiting for approval.',
 	'NO_REASON_DISAPPROVAL'			=> 'Lütfen onaylamama için uygun bir sebep girin.',
 	'NO_REPORT'						=> 'Hiç bir bildiri bulunamadı',
 	'NO_REPORTS'					=> 'Hiç bir bildiri bulunamadı',
 	'NO_REPORT_SELECTED'			=> 'Bu eylemi uygulamak için en az bir tane bildiri seçmelisiniz.',
 	'NO_TOPIC_ICON'					=> 'Yok',
 	'NO_TOPIC_SELECTED'				=> 'Bu eylemi uygulamak için en az bir tane başlık seçmelisiniz.',
+	'NO_TOPICS_DELETED'				=> 'There are no deleted topics.',
 	'NO_TOPICS_QUEUE'				=> 'Onay için bekleyen hiç bir başlık yok.',
 
 	'ONLY_TOPIC'			=> 'Sadece “%s” başlığı',
 	'OTHER_USERS'			=> 'Bu IP adresinden mesaj gönderen diğer kullanıcılar',
 
+	'QUICKMOD_ACTION_NOT_ALLOWED' => "%s not allowed as quickmod",
+
 	'PM_REPORT_CLOSED_SUCCESS'	=> 'Seçilen ÖM bildirisi başarıyla kapatıldı.',
 	'PM_REPORT_DELETED_SUCCESS'	=> 'Seçilen ÖM bildirisi başarıyla silindi.',
 	'PM_REPORTED_SUCCESS'		=> 'Bu özel mesaj başarıyla bildirildi.',
-	'PM_REPORT_TOTAL'			=> 'İncelemek için toplam <strong>1</strong> ÖM bildirisi var.',
 	'PM_REPORTS_CLOSED_SUCCESS'	=> 'Seçilen ÖM bildirileri başarıyla kapatıldı.',
 	'PM_REPORTS_DELETED_SUCCESS'=> 'Seçilen ÖM bildirileri başarıyla silindi.',
-	'PM_REPORTS_TOTAL'			=> 'İncelemek için toplam <strong>%d</strong> ÖM bildirisi var.',
-	'PM_REPORTS_ZERO_TOTAL'		=> 'İncelemek için herhangi bir ÖM bildirisi yok.',
 	'PM_REPORT_DETAILS'			=> 'Özel mesaj bildiri detayları',
 	'POSTER'					=> 'Yazar',
 	'POSTS_APPROVED_SUCCESS'	=> 'Seçilen mesajlar onaylandı.',
@@ -2404,15 +2524,17 @@ $lang = array_merge($lang, array(
 	'POSTS_DISAPPROVED_SUCCESS'	=> 'Seçilen mesajlar onaylanmadı.',
 	'POSTS_LOCKED_SUCCESS'		=> 'Seçilen mesajlar başarıyla kilitlendi.',
 	'POSTS_MERGED_SUCCESS'		=> 'Seçilen mesajlar birleştirildi.',
-	'POSTS_UNLOCKED_SUCCESS'	=> 'Seçilen mesajların kilidi başarıyla açıldı.',
 	'POSTS_PER_PAGE'			=> 'Her sayfadaki mesaj sayısı',
 	'POSTS_PER_PAGE_EXPLAIN'	=> '(Tüm mesajları görmek için 0 yazın.)',
+	'POSTS_RESTORED_SUCCESS'	=> 'The selected posts have been restored successfully.',
+	'POSTS_UNLOCKED_SUCCESS'	=> 'Seçilen mesajların kilidi başarıyla açıldı.',
 	'POST_APPROVED_SUCCESS'		=> 'Seçilen mesaj onaylandı.',
 	'POST_DELETED_SUCCESS'		=> 'Seçilen mesaj veritabanından başarıyla silindi.',
 	'POST_DISAPPROVED_SUCCESS'	=> 'Seçilen mesaj onaylanmadı.',
 	'POST_LOCKED_SUCCESS'		=> 'Mesaj başarıyla kilitlendi.',
 	'POST_NOT_EXIST'			=> 'İstediğiniz mesaj bulunamıyor.',
 	'POST_REPORTED_SUCCESS'		=> 'Bu mesaj başarıyla bildirildi.',
+	'POST_RESTORED_SUCCESS'		=> 'This post has been restored successfully.',
 	'POST_UNLOCKED_SUCCESS'		=> 'Mesajın kilidi başarıyla açıldı.',
 
 	'READ_USERNOTES'			=> 'Kullanıcı notları',
@@ -2423,8 +2545,6 @@ $lang = array_merge($lang, array(
 	'REPORTED_ON_DATE'			=> 'tarih',
 	'REPORTS_CLOSED_SUCCESS'	=> 'Seçilen bildiriler başarıyla kapatıldı.',
 	'REPORTS_DELETED_SUCCESS'	=> 'Seçilen bildiriler başarıyla silindi.',
-	'REPORTS_TOTAL'				=> 'İncelemek için toplam <strong>%d</strong> bildiri var.',
-	'REPORTS_ZERO_TOTAL'		=> 'İncelemek için hiç bir bildiri yok.',
 	'REPORT_CLOSED'				=> 'Bu bildiri daha önce kapatıldı.',
 	'REPORT_CLOSED_SUCCESS'		=> 'Seçilen bildiri başarıyla kapatıldı.',
 	'REPORT_DELETED_SUCCESS'	=> 'Seçilen bildiri başarıyla silindi.',
@@ -2436,7 +2556,15 @@ $lang = array_merge($lang, array(
 	'REPORT_POST_EXPLAIN'		=> 'Seçilen mesajı forum moderatörlerine ve mesaj panosu yöneticilerine bildirmek için bu formu kullanın. Bildiri genel olarak sadece forum kurallarını çiğneyen mesaj için kullanılmalıdır.',
 	'REPORT_REASON'				=> 'Bildiri sebebi',
 	'REPORT_TIME'				=> 'Bildiri zamanı',
-	'REPORT_TOTAL'				=> 'İnceleme için toplam <strong>1</strong> bildiri var.',
+	'RESTORE'					=> 'Restore',
+	'RESTORE_POST'				=> 'Restore post',
+	'RESTORE_POST_CONFIRM'		=> 'Are you sure you want to restore this post?',
+	'RESTORE_POSTS'				=> 'Restore posts',
+	'RESTORE_POSTS_CONFIRM'		=> 'Are you sure you want to restore the selected posts?',
+	'RESTORE_TOPIC'				=> 'Restore topic',
+	'RESTORE_TOPIC_CONFIRM'		=> 'Are you sure you want to restore this topic?',
+	'RESTORE_TOPICS'			=> 'Restore topics',
+	'RESTORE_TOPICS_CONFIRM'	=> 'Are you sure you want to restore the selected topics?',
 	'RESYNC'					=> 'Yeniden senkronize et',
 	'RETURN_MESSAGE'			=> '%sMesaja dön%s',
 	'RETURN_NEW_FORUM'			=> '%sYeni foruma git%s',
@@ -2477,6 +2605,7 @@ $lang = array_merge($lang, array(
 	'TOPICS_FORKED_SUCCESS'		=> 'Seçilen başlıklar başarıyla kopyalandı.',
 	'TOPICS_LOCKED_SUCCESS'		=> 'Seçilen başlıklar kilitlendi.',
 	'TOPICS_MOVED_SUCCESS'		=> 'Seçilen başlıklar başarıyla taşındı.',
+	'TOPICS_RESTORED_SUCCESS'	=> 'The selected topics have been restored successfully.',
 	'TOPICS_RESYNC_SUCCESS'		=> 'Seçilen başlıklar başarıyla yeniden senkronize edildi.',
 	'TOPICS_TYPE_CHANGED'		=> 'Başlık türleri başarıyla değiştirildi.',
 	'TOPICS_UNLOCKED_SUCCESS'	=> 'Seçilen başlıkların kilidi açıldı.',
@@ -2487,6 +2616,7 @@ $lang = array_merge($lang, array(
 	'TOPIC_LOCKED_SUCCESS'		=> 'Seçilen başlık kilitlendi.',
 	'TOPIC_MOVED_SUCCESS'		=> 'Seçilen başlık başarıyla taşındı.',
 	'TOPIC_NOT_EXIST'			=> 'Seçilen başlık bulunmuyor.',
+	'TOPIC_RESTORED_SUCCESS'	=> 'The selected topic has been restored successfully.',
 	'TOPIC_RESYNC_SUCCESS'		=> 'Seçilen başlık yeniden senkronize edildi.',
 	'TOPIC_SPLIT_SUCCESS'		=> 'Seçilen başlık başarıyla ayrıldı.',
 	'TOPIC_TIME'				=> 'Başlık zamanı',
@@ -2494,9 +2624,6 @@ $lang = array_merge($lang, array(
 	'TOPIC_UNLOCKED_SUCCESS'	=> 'Seçilen başlığın kilidi açıldı.',
 	'TOTAL_WARNINGS'			=> 'Toplam Uyarılar',
 
-	'UNAPPROVED_POSTS_TOTAL'		=> 'Onay için bekleyen toplam <strong>%d</strong> mesaj var.',
-	'UNAPPROVED_POSTS_ZERO_TOTAL'	=> 'Onay için bekleyen hiç bir mesaj yok.',
-	'UNAPPROVED_POST_TOTAL'			=> 'Onay için bekleyen toplam <strong>1</strong> mesaj var.',
 	'UNLOCK'						=> 'Kilidi aç',
 	'UNLOCK_POST'					=> 'Mesajın kilidini aç',
 	'UNLOCK_POST_EXPLAIN'			=> 'Düzenlemeye izin ver',
@@ -2522,7 +2649,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'Altta bu mesaj panosunun yöneticisi veya moderatörü tarafından size hangi sebepten dolayı bir uyarı verildiği bulunmaktadır.[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'Mesaj panosu uyarı bildirisi',
 	'WARNING_POST_DEFAULT'	=> 'Tarafınızdan gönderilen bu mesaj bir uyarı sebebidir: %s .',
-	'WARNINGS_ZERO_TOTAL'	=> 'Hiç bir uyarı mevcut değil.',
+	'NO_WARNINGS'	=> 'No warnings exist.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Seçtiğiniz başlık numarası %d: %s.',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -2562,10 +2689,12 @@ $lang = array_merge($lang, array(
 	'ALL'					=> 'Tümü',
 	'BEFORE'				=> 'Önce',
 	'CC_EMAIL'				=> 'Bu e-posta\'nın bir kopyasını kendinize gönderin.',
-	'CONTACT_USER'			=> 'İletişim',
+	'CONTACT_ADMIN'			=> 'Contact a Board Administrator',
 
 	'DEST_LANG'				=> 'Dil',
 	'DEST_LANG_EXPLAIN'		=> 'Bu mesajın alıcısı için (eğer mevcutsa) uygun bir dil seçin.',
+
+	'EDIT_PROFILE'			=> 'Edit Profile',
 
 	'EMAIL_BODY_EXPLAIN'	=> 'Bu mesaj düz metin olarak gönderilecektir, içeriğinde herhangi bir HTML kodu veya BBcode kullanmayın. Bu mesaj için dönüş adresi ayarlamış olduğunuz e-posta adresiniz olacaktır.',
 	'EMAIL_DISABLED'		=> 'Üzgünüz fakat tüm e-postalara ilişkin özellikler kapatıldı.',
@@ -2575,7 +2704,9 @@ $lang = array_merge($lang, array(
 	'EMPTY_MESSAGE_EMAIL'	=> 'E-posta olarak gönderilecek bir mesaj girmelisiniz.',
 	'EMPTY_MESSAGE_IM'		=> 'Gönderilecek bir mesaj girmelisiniz.',
 	'EMPTY_NAME_EMAIL'		=> 'Alıcının gerçek adını girmelisiniz.',
-	'EMPTY_SUBJECT_EMAIL'	=> 'E-posta için bir konu belirtmelisiniz.',
+	'EMPTY_SENDER_EMAIL'	=> 'You must provide a valid email address.',
+	'EMPTY_SENDER_NAME'		=> 'You must provide a name.',
+	'EMPTY_SUBJECT_EMAIL'	=> 'You must specify a subject for the email.',
 	'EQUAL_TO'				=> 'Eşit',
 
 	'FIND_USERNAME_EXPLAIN'	=> 'Bu formu kullanarak belirli üyeler için arama yapabilirsiniz. Tüm alanları doldurmanıza gerek yoktur. Kısmen uyan sonuçlar için * işaretini joker olarak kullanabilirsiniz. Tarih gireceğiniz zaman yyyy-mm-dd formatını kullanın, ör. 2002-01-01. Bir veya daha fazla kullanıcıyı seçmek için kutucukları işaretleyin (formda ihtiyaç duyulan olası farklı kullanıcı adları da kabul edilmiştir). Alternatif olarak istenilen kullanıcıları işaretleyebilir ve İşaretlileri Ekle butonuna tıklayabilirsiniz.',
@@ -2585,16 +2716,10 @@ $lang = array_merge($lang, array(
 	'HIDE_MEMBER_SEARCH'	=> 'Üye aramasını gizle',
 
 	'IM_ADD_CONTACT'		=> 'İletişime ekle',
-	'IM_AIM'				=> 'Not: Bunu kullanmak için AOL Instant Messenger programının yüklenmiş olması gerekmektedir.',
-	'IM_AIM_EXPRESS'		=> 'AIM Express',
 	'IM_DOWNLOAD_APP'		=> 'İndirme uygulaması',
-	'IM_ICQ'				=> 'Not: Bu kullanıcılar istenilmeyen anlık mesajları almamayı seçmiş olabilirler.',
 	'IM_JABBER'				=> 'Not: Bu kullanıcılar istenilmeyen anlık mesajları almamayı seçmiş olabilirler.',
 	'IM_JABBER_SUBJECT'		=> 'Bu bir otomatik mesajdır lütfen cevap vermeyin! %2$s kısmında %1$s kullanıcısından mesaj.',
 	'IM_MESSAGE'			=> 'Mesajınız',
-	'IM_MSNM'				=> 'Not: Bunu kullanmak için Windows Messenger programının yüklenmiş olması gerekmektedir.',
-	'IM_MSNM_BROWSER'		=> 'Tarayıcınız bunu desteklemiyor.',
-	'IM_MSNM_CONNECT'		=> 'MSNM bağlı değil.\nDevam etmek için MSNM\'e bağlanın.',
 	'IM_NAME'				=> 'Adınız',
 	'IM_NO_DATA'			=> 'Bu kullanıcı için uygun iletişim bilgisi yok.',
 	'IM_NO_JABBER'			=> 'Üzgünüz, bu forumdan Jabber kullanıcılarının direkt mesajlaşmaları desteklenmiyor. Yukarıdaki alıcı ile iletişim kurmak için sisteminize Jabber bağlantı programının yüklenmiş olması gerekmektedir.',
@@ -2606,15 +2731,15 @@ $lang = array_merge($lang, array(
 
 	'LAST_ACTIVE'				=> 'Son aktiflik',
 	'LESS_THAN'					=> 'Daha az',
-	'LIST_USER'					=> '1 kullanıcı',
-	'LIST_USERS'				=> '%d kullanıcı',
-	'LOGIN_EXPLAIN_LEADERS'		=> 'Mesaj panosu, takım listesini görüntülemek için kayıt olmanızı ve giriş yapmanızı gerekli tutuyor.',
+	'LOGIN_EXPLAIN_TEAM'		=> 'The board requires you to be registered and logged in to view the team listing.',
 	'LOGIN_EXPLAIN_MEMBERLIST'	=> 'Mesaj panosu, üye listesine erişim için kayıt olmanızı ve giriş yapmanızı gerekli tutuyor.',
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'Mesaj panosu, kullanıcıları aramak için kayıt olmanızı ve giriş yapmanızı gerekli tutuyor.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'Mesaj panosu, profilleri görüntülemek için kayıt olmanızı ve giriş yapmanızı gerekli tutuyor.',
 
 	'MORE_THAN'				=> 'Daha çok',
 
+	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
+	'NO_CONTACT_PAGE'		=> 'The board administrator contact page has been disabled.',
 	'NO_EMAIL'				=> 'Bu kullanıcıya e-posta gönderme izniniz yok.',
 	'NO_VIEW_USERS'			=> 'Profilleri veya üye listesini görüntüleme yetkiniz yok.',
 
@@ -2631,12 +2756,12 @@ $lang = array_merge($lang, array(
 
 	'SELECT_MARKED'			=> 'İşaretlileri seç',
 	'SELECT_SORT_METHOD'	=> 'Sıralama tipini seçin',
-	'SEND_AIM_MESSAGE'		=> 'AIM mesajı gönder',
+	'SENDER_EMAIL_ADDRESS'	=> 'Your email address',
+	'SENDER_NAME'			=> 'Your name',
 	'SEND_ICQ_MESSAGE'		=> 'ICQ mesajı gönder',
 	'SEND_IM'				=> 'Anlık mesajlaşma',
 	'SEND_JABBER_MESSAGE'	=> 'Jabber mesajı gönder',
 	'SEND_MESSAGE'			=> 'Mesaj',
-	'SEND_MSNM_MESSAGE'		=> 'MSNM/WLM mesajı gönder',
 	'SEND_YIM_MESSAGE'		=> 'YIM mesajı gönder',
 	'SORT_EMAIL'			=> 'E-posta',
 	'SORT_LAST_ACTIVE'		=> 'Son aktiflik',
@@ -2644,12 +2769,18 @@ $lang = array_merge($lang, array(
 
 	'USERNAME_BEGINS_WITH'	=> 'Şu harf ile başlayan kullanıcı adları',
 	'USER_ADMIN'			=> 'Kullanıcı yönetimi',
-	'USER_BAN'				=> 'Yasaklama',
+	'USER_BAN'				=> 'Ban one or more users by username',
 	'USER_FORUM'			=> 'Kullanıcı istatistikleri',
 	'USER_ONLINE'			=> 'Çevrimiçi',
 	'USER_PRESENCE'			=> 'Mesaj panosundaki görünüşü',
+	'USERS_PER_PAGE'		=> 'Users per page',
 
 	'VIEWING_PROFILE'		=> 'Profil görüntüleniyor - %s',
+	'VIEW_FACEBOOK_PROFILE'	=> 'View Facebook Profile',
+	'VIEW_SKYPE_PROFILE'	=> 'View Skype Profile',
+	'VIEW_TWITTER_PROFILE'	=> 'View Twitter Profile',
+	'VIEW_YOUTUBE_CHANNEL'	=> 'View YouTube Channel',
+	'VIEW_GOOGLEPLUS_PROFILE' => 'View Google+ Profile',
 	'VISITED'				=> 'Son ziyaret',
 
 	'WWW'					=> 'Web adresi',
@@ -2674,6 +2805,47 @@ $lang = array_merge($lang, array(
 	'USER_COMM_RANK'	=> 'Overall reviews:',
 	'USER_COMM_PERCENT'	=> 'Overall assessment of the user:',
 
+));
+
+#######language/en/plupload.php#######
+
+$lang = array_merge($lang, array(
+	'PLUPLOAD_ADD_FILES'		=> 'Add files',
+	'PLUPLOAD_ADD_FILES_TO_QUEUE'	=> 'Add files to the upload queue and click the start button.',
+	'PLUPLOAD_ALREADY_QUEUED'	=> '%s already present in the queue.',
+	'PLUPLOAD_CLOSE'			=> 'Close',
+	'PLUPLOAD_DRAG'				=> 'Drag files here.',
+	'PLUPLOAD_DUPLICATE_ERROR'	=> 'Duplicate file error.',
+	'PLUPLOAD_DRAG_TEXTAREA'	=> 'You may also attach files by dragging and dropping them in the message box.',
+	'PLUPLOAD_ERR_INPUT'		=> 'Failed to open input stream.',
+	'PLUPLOAD_ERR_MOVE_UPLOADED'	=> 'Failed to move uploaded file.',
+	'PLUPLOAD_ERR_OUTPUT'		=> 'Failed to open output stream.',
+	'PLUPLOAD_ERR_FILE_TOO_LARGE'	=> 'File too large:',
+	'PLUPLOAD_ERR_FILE_COUNT'	=> 'File count error.',
+	'PLUPLOAD_ERR_FILE_INVALID_EXT'	=> 'Invalid file extension:',
+	'PLUPLOAD_ERR_RUNTIME_MEMORY'	=> 'Runtime ran out of available memory.',
+	'PLUPLOAD_ERR_UPLOAD_URL'	=> 'Upload URL might be wrong or does not exist.',
+	'PLUPLOAD_EXTENSION_ERROR'	=> 'File extension error.',
+	'PLUPLOAD_FILE'				=> 'File: %s',
+	'PLUPLOAD_FILE_DETAILS'		=> 'File: %s, size: %d, max file size: %d',
+	'PLUPLOAD_FILENAME'			=> 'Filename',
+	'PLUPLOAD_FILES_QUEUED'		=> '%d files queued',
+	'PLUPLOAD_GENERIC_ERROR'	=> 'Generic error.',
+	'PLUPLOAD_HTTP_ERROR'		=> 'HTTP error.',
+	'PLUPLOAD_IMAGE_FORMAT'		=> 'Image format either wrong or not supported.',
+	'PLUPLOAD_INIT_ERROR'		=> 'Init error.',
+	'PLUPLOAD_IO_ERROR'			=> 'IO error.',
+	'PLUPLOAD_NOT_APPLICABLE'	=> 'N/A',
+	'PLUPLOAD_SECURITY_ERROR'	=> 'Security error.',
+	'PLUPLOAD_SELECT_FILES'		=> 'Select files',
+	'PLUPLOAD_SIZE'				=> 'Size',
+	'PLUPLOAD_SIZE_ERROR'		=> 'File size error.',
+	'PLUPLOAD_STATUS'			=> 'Status',
+	'PLUPLOAD_START_UPLOAD'		=> 'Start upload',
+	'PLUPLOAD_START_CURRENT_UPLOAD'	=> 'Start uploading queue',
+	'PLUPLOAD_STOP_UPLOAD'		=> 'Stop upload',
+	'PLUPLOAD_STOP_CURRENT_UPLOAD'	=> 'Stop current upload',
+	'PLUPLOAD_UPLOADED'			=> 'Uploaded %d/%d files',
 ));
 
 #######language/en/portal.php#######
@@ -2919,12 +3091,12 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s <em>KAPALI</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s <em>AÇIK</em>',
 	'BBCODE_I_HELP'				=> 'İtalik yazı: [i]metin[/i]',
-	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]',
 	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
 	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Resim ekle: [img]http://resim_url[/img]',
 	'BBCODE_Q_HELP'				=> 'Alıntı yazısı: [quote]metin[/quote]',
-	'BBCODE_S_HELP'				=> 'Font rengi: [color=red]metin[/color] İpucu: ayrıca, color=#FF0000 şeklinde de kullanabilirsiniz',
+	'BBCODE_S_HELP'				=> 'Font colour: [color=red]text[/color] or [color=#FF0000]text[/color]',
 	'BBCODE_U_HELP'				=> 'Altı çizgili yazı: [u]metin[/u]',
 	'BBCODE_W_HELP'				=> 'URL Ekle: [url]http://url[/url] veya [url=http://url]URL metni[/url]',
 	'BUMP_ERROR'				=> 'Son mesajınızdan bu kadar kısa bir süre içinde bu başlığı darbeleyemezsiniz.',
@@ -2943,8 +3115,20 @@ $lang = array_merge($lang, array(
 	'DELETE_MESSAGE'			=> 'Mesajı sil',
 	'DELETE_MESSAGE_CONFIRM'	=> 'Bu mesajı silmek istediğinize emin misiniz?',
 	'DELETE_OWN_POSTS'			=> 'Üzgünüz fakat sadece kendi mesajlarınızı silebilirsiniz.',
+	'DELETE_PERMANENTLY'		=> 'Delete permanently',
 	'DELETE_POST_CONFIRM'		=> 'Bu mesajı silmek istediğinize emin misiniz?',
-	'DELETE_POST_WARN'			=> 'Bir kere silinen mesaj tekrar geri getirilemez',
+	'DELETE_POST_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this post?',
+	'DELETE_POST_PERMANENTLY'	=> 'Permanently delete this post so it can not be recovered',
+	'DELETE_POSTS_CONFIRM'		=> 'Bu mesajları silmek istediğinize emin misiniz?',
+	'DELETE_POSTS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these posts?',
+	'DELETE_REASON'				=> 'Reason for deleting this topic',
+	'DELETE_REASON_EXPLAIN'		=> 'The specified reason for deletion will be visible to moderators.',
+	'DELETE_POST_WARN'			=> 'Delete this post',
+	'DELETE_TOPIC_CONFIRM'		=> 'Bu başlığı silmek istediğinize emin misiniz?',
+	'DELETE_TOPIC_PERMANENTLY'	=> 'Permanently delete this topic so it can not be recovered',
+	'DELETE_TOPIC_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this topic?',
+	'DELETE_TOPICS_CONFIRM'		=> 'Bu başlıkları silmek istediğinize emin misiniz?',
+	'DELETE_TOPICS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these topics?',
 	'DISABLE_BBCODE'			=> 'BBCode kullanma',
 	'DISABLE_MAGIC_URL'			=> 'Otomatik olarak belirlenen URL bağlantılarını kapat',
 	'DISABLE_SMILIES'			=> 'İfadeleri kullanma',
@@ -2987,13 +3171,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_QUOTE'		=> 'Bu forumdaki mesajları alıntı yapmak için giriş yapmalısınız.',
 	'LOGIN_EXPLAIN_REPLY'		=> 'Bu forumdaki başlıklara cevap vermek için giriş yapmalısınız.',
 
-	'MAX_FONT_SIZE_EXCEEDED'	=> 'En yüksek font boyutunu %1$d olarak kullanabilirsiniz.',
-	'MAX_FLASH_HEIGHT_EXCEEDED'	=> 'Flash dosyalarınız en fazla %1$d piksel yüksekliğinde olabilir.',
-	'MAX_FLASH_WIDTH_EXCEEDED'	=> 'Flash dosyalarınız en fazla %1$d piksel genişliğinde olabilir.',
-	'MAX_IMG_HEIGHT_EXCEEDED'	=> 'Resimleriniz en fazla %1$d piksel yüksekliğinde olabilir.',
-	'MAX_IMG_WIDTH_EXCEEDED'	=> 'Resimleriniz en fazla %1$d piksel genişliğinde olabilir.',
-
-	'MESSAGE_BODY_EXPLAIN'		=> 'Buraya mesajınızı girin, <strong>%d</strong> karakterden fazlasını içermemelidir.',
+	'MAX_FONT_SIZE_EXCEEDED'	=> 'You may only use fonts up to size %d.',
 	'MESSAGE_DELETED'			=> 'Bu mesaj başarıyla silindi.',
 	'MORE_SMILIES'				=> 'Daha fazla ifade görüntüle',
 
@@ -3016,8 +3194,6 @@ $lang = array_merge($lang, array(
 	'POLL_MAX_OPTIONS'			=> 'Her bir kullanıcı için seçenek',
 	'POLL_MAX_OPTIONS_EXPLAIN'	=> 'Bu her bir kullanıcının oy verirken seçebileceği seçenek sayısıdır.',
 	'POLL_OPTIONS'				=> 'Anket seçenekleri',
-	'POLL_OPTIONS_EXPLAIN'		=> 'Her bir satıra bir seçenek yerleştirin. En fazla <strong>%d</strong> seçenek girebilirsiniz.',
-	'POLL_OPTIONS_EDIT_EXPLAIN'	=> 'Her seçeneği yeni bir satıra yerleştirin. <strong>%d</strong> seçeneğe kadar girebilirsiniz. Eğer seçenekler eklerseniz ya da kaldırırsanız önceki tüm oylar sıfırlanacaktır.',
 	'POLL_QUESTION'				=> 'Anket sorusu',
 	'POLL_TITLE_TOO_LONG'		=> 'Anket başlığı 100 karakterden daha az karakter içermelidir.',
 	'POLL_TITLE_COMP_TOO_LONG'	=> 'Anket başlığınızın dilbilgisel olarak boyutu çok geniş, BBCode ya da ifadeleri kaldırmayı dikkate alın.',
@@ -3027,9 +3203,9 @@ $lang = array_merge($lang, array(
 	'POST_APPROVAL_NOTIFY'		=> 'Mesajınız onaylandığı zaman bildiri alacaksınız.',
 	'POST_CONFIRMATION'			=> 'Mesajı onayla',
 	'POST_CONFIRM_EXPLAIN'		=> 'Otomatik mesajları engelleyebilmek için bu mesaj panosu bir onay kodu girmenizi istiyor. Alttaki resmin içerisinde gösterilen kodu görmelisiniz. Eğer kodu bozuk görüyor veya okuyamıyorsanız lütfen %sMesaj Panosu Yöneticisi%s ile iletişime geçin.',
-	'POST_DELETED'				=> 'Bu mesaj başarıyla silindi.',
-	'POST_EDITED'				=> 'Bu mesaj başarıyla düzenlendi.',
-	'POST_EDITED_MOD'			=> 'Bu mesaj başarıyla düzenlendi, fakat görüntülenebilmesi için önce bir moderatör tarafından onaylanması gerekiyor.',
+	'POST_DELETED'				=> 'This post has been deleted.',
+	'POST_EDITED'				=> 'This post has been edited successfully.',
+	'POST_EDITED_MOD'			=> 'This post has been edited successfully, but it will need to be approved by a moderator before it is publicly viewable.',
 	'POST_GLOBAL'				=> 'Global',
 	'POST_ICON'					=> 'Mesaj ikonu',
 	'POST_NORMAL'				=> 'Normal',
@@ -3042,8 +3218,9 @@ $lang = array_merge($lang, array(
 	'POST_TOPIC_AS'				=> 'Farklı başlık gönder',
 	'PROGRESS_BAR'				=> 'İlerleme çubuğu',
 
-	'QUOTE_DEPTH_EXCEEDED'		=> 'Birbirleri içerisinde sadece %1$d alıntı yapabilirsiniz.',
+	'QUOTE_NO_NESTING'			=> 'You may not embed quotes within each other.',
 
+	'REMOTE_UPLOAD_TIMEOUT'		=> 'The specified file could not be uploaded because the request timed out.',
 	'SAVE'						=> 'Kaydet',
 	'SAVE_DATE'					=> 'Kaydedilen tarih',
 	'SAVE_DRAFT'				=> 'Taslağı kaydet',
@@ -3060,8 +3237,6 @@ $lang = array_merge($lang, array(
 	'TOO_FEW_POLL_OPTIONS'		=> 'En az iki anket seçeneği girmelisiniz.',
 	'TOO_MANY_ATTACHMENTS'		=> 'Başka eklenti ekleyemezsiniz, en fazla %d tane eklenebilir.',
 	'TOO_MANY_CHARS'			=> 'Mesajınız çok fazla karakter içeriyor.',
-	'TOO_MANY_CHARS_POST'		=> 'Mesajınız %1$d karakter içeriyor. En fazla izin verilen karakter sayısı %2$d.',
-	'TOO_MANY_CHARS_SIG'		=> 'İmzanız %1$d karakter içeriyor. En fazla izin verilen karakter sayısı %2$d.',
 	'TOO_MANY_POLL_OPTIONS'		=> 'Çok fazla anket seçeneği girmeyi denediniz.',
 	'TOO_MANY_SMILIES'			=> 'Mesajınız çok fazla ifade içeriyor. İzin verilen en fazla ifade sayısı %d.',
 	'TOO_MANY_URLS'				=> 'Mesajınız çok fazla url içeriyor. İzin verilen en fazla URL sayısı %d.',
@@ -3070,6 +3245,8 @@ $lang = array_merge($lang, array(
 
 	'UNAUTHORISED_BBCODE'		=> 'Bazı BBCode\'ları kullanamazsınız: %s.',
 	'UNGLOBALISE_EXPLAIN'		=> 'Bu başlığı globalden tekrar normal başlığa çevirmek için, bu başlığın görüntülenmesini istediğiniz forumu seçmelisiniz',
+	'UNSUPPORTED_CHARACTERS_MESSAGE'	=> 'Your message contains the following unsupported characters:<br />%s',
+	'UNSUPPORTED_CHARACTERS_SUBJECT'	=> 'Your subject contains the following unsupported characters:<br />%s',
 	'UPDATE_COMMENT'			=> 'Yorumu güncelle',
 	'URL_INVALID'				=> 'Belirttiğiniz URL hatalı.',
 	'URL_NOT_FOUND'				=> 'Belirtilen dosya bulunmuyor.',
@@ -3084,8 +3261,8 @@ $lang = array_merge($lang, array(
 	'VIEW_MESSAGE'				=> '%sGönderdiğiniz mesajınızı görüntüleyin%s',
 	'VIEW_PRIVATE_MESSAGE'		=> '%sGönderdiğiniz özel mesajınızı görüntüleyin%s',
 
-	'WRONG_FILESIZE'			=> 'Dosya çok büyük, en fazla izin verilen boyutlar %1d %2s.',
-	'WRONG_SIZE'				=> 'Resim en düşük %1$d piksel genişliğinde, %2$d piksel yüksekliğinde ve en yüksek %3$d piksel genişliğinde ve %4$d piksel yüksekliğinde olmalıdır. Eklenen resim %5$d piksel genişliğinde ve %6$d piksel yüksekliğinde.',
+	'WRONG_FILESIZE'			=> 'The file is too big, maximum allowed size is %1$d %2$s.',
+	'WRONG_SIZE'				=> 'The image must be at least %1$s wide, %2$s high and at most %3$s wide and %4$s high. The submitted image is %5$s wide and %6$s high.',
 
 	'FONT_TYPE'			=> 'Typeface',
 	'FONT_COLOR'			=> 'Font rengi',
@@ -3105,10 +3282,6 @@ $lang = array_merge($lang, array(
 
 	'DISPLAY_RESULTS'		=> 'Görüntülenecek sonuçlar',
 
-	'FOUND_SEARCH_MATCH'		=> '%d uygun sonuç bulundu',
-	'FOUND_SEARCH_MATCHES'		=> '%d uygun sonuç bulundu',
-	'FOUND_MORE_SEARCH_MATCHES'	=> '%d uygun sonuçtan fazlası bulundu',
-
 	'GLOBAL'				=> 'Global başlık',
 
 	'IGNORED_TERMS'			=> 'yoksayıldı',
@@ -3120,24 +3293,23 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_UNREADSEARCH'=> 'Bu mesaj panosu okunmamış mesajlarınızı görüntülemek için kayıtlı olmanızı ve giriş yapmanızı gerekli tutuyor.',
 	'LOGIN_EXPLAIN_NEWPOSTS'	=> 'Bu mesaj panosu son ziyaretinizden beri gönderilen yeni mesajları görüntülemek için kayıtlı olmanızı ve giriş yapmanızı gerekli tutuyor.',
 
-	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> 'Aramak için çok fazla kelime belirlediniz. Lütfen %1$d taneden fazla kelime girmeyin.',
-
-	'NO_KEYWORDS'			=> 'Arama için çok düşük bir kelime belirlediniz. Jokerler hariç her kelime %d karakterden yüksek ve %d karakterden düşük olmalıdır.',
+	'NO_KEYWORDS'			=> 'You must specify at least one word to search for. Each word must consist of at least %s and must not contain more than %s excluding wildcards.',
 	'NO_RECENT_SEARCHES'	=> 'En son herhangi bir arama yapılmadı.',
 	'NO_SEARCH'				=> 'Üzgünüz fakat arama sistemini kullanma izniniz yok.',
 	'NO_SEARCH_RESULTS'		=> 'Uygun sonuç bulunamadı.',
-	'NO_SEARCH_TIME'		=> 'Üzgünüz fakat şimdilik arama yapamazsınız. Lütfen bir kaç dakika içerisinde tekrar deneyin.',
 	'NO_SEARCH_UNREADS'		=> 'Üzgünüz fakat bu mesaj panosunda okunmamış mesajlar için arama yapma özelliği kapatıldı.',
 	'WORD_IN_NO_POST'		=> 'Hiç bir mesaj bulunamadı çünkü <strong>%s</strong> kelimesini içeren herhangi bir mesaj yok.',
 	'WORDS_IN_NO_POST'		=> 'Hiç bir mesaj bulunamadı çünkü <strong>%s</strong> kelimelerini içeren herhangi bir mesaj yok.',
 
 	'POST_CHARACTERS'		=> 'karakterini göster',
+	'PHRASE_SEARCH_DISABLED'	=> 'Searching by exact phrase is not supported on this board.',
 
 	'RECENT_SEARCHES'		=> 'Son arananlar',
 	'RESULT_DAYS'			=> 'Sonuçlar için gün limiti',
 	'RESULT_SORT'			=> 'Sonuçları sırala',
 	'RETURN_FIRST'			=> 'Mesajın ilk',
 	'RETURN_TO_SEARCH_ADV'	=> 'Gelişmiş aramaya tekrar dön',
+	'GO_TO_SEARCH_ADV'	=> 'Go to advanced search',
 
 	'SEARCHED_FOR'				=> 'Aranan terim',
 	'SEARCHED_TOPIC'			=> 'Başlık arandı',
@@ -3164,10 +3336,11 @@ $lang = array_merge($lang, array(
 	'SORT_FORUM'				=> 'Forum',
 	'SORT_POST_SUBJECT'			=> 'Mesaj başlığı',
 	'SORT_TIME'					=> 'Mesaj zamanı',
+	'SPHINX_SEARCH_FAILED'		=> 'Search failed: %s',
+	'SPHINX_SEARCH_FAILED_LOG'	=> 'Sorry, search could not be performed. More information about this failure has been logged in the error log.',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
 	'SELECT_ALL_TAGS'		=> 'No selection',
-	'TOO_FEW_AUTHOR_CHARS'	=> 'Yazar adını en az %d karakter olarak belirlemelisiniz.',
 ));
 
 #######language/en/ucp.php#######
@@ -3223,6 +3396,7 @@ $lang = array_merge($lang, array(
 	'ATTACHMENTS_EXPLAIN'			=> 'Bu mesaj panosundaki mesajlara eklediğiniz eklentilerin bir listesidir.',
 	'ATTACHMENTS_DELETED'			=> 'Eklentiler başarıyla silindi',
 	'ATTACHMENT_DELETED'			=> 'Eklenti başarıyla silindi',
+	'AUTOLOGIN_SESSION_KEYS_DELETED'=> 'The selected "Remember Me" login keys were successfully deleted.',
 	'AVATAR_CATEGORY'				=> 'Kategori',
 	'AVATAR_DRIVER_GRAVATAR_TITLE'	=> 'Gravatar',
 	'AVATAR_DRIVER_GRAVATAR_EXPLAIN'=> 'Gravatar is a service that allows you to maintain the same avatar across multiple websites. Visit <a href="http://www.gravatar.com/">Gravatar</a> for more information.',
@@ -3232,12 +3406,14 @@ $lang = array_merge($lang, array(
 	'AVATAR_DRIVER_REMOTE_EXPLAIN'	=> 'Link to avatar images from another website.',
 	'AVATAR_DRIVER_UPLOAD_TITLE'	=> 'Upload avatar',
 	'AVATAR_DRIVER_UPLOAD_EXPLAIN'	=> 'Upload your own custom avatar.',
-	'AVATAR_EXPLAIN'				=> 'En yüksek boyutlar; genişlik: %1$d piksel, yükseklik: %2$d piksel, dosya boyutu: %3$.2f KiB.',
+	'AVATAR_EXPLAIN'				=> 'Maximum dimensions; width: %1$s, height: %2$s, file size: %3$.2f KiB.',
 	'AVATAR_FEATURES_DISABLED'		=> 'Avatar işlevselliği şimdilik kapatıldı.',
 	'AVATAR_GALLERY'				=> 'Yerel galeri',
 	'AVATAR_GENERAL_UPLOAD_ERROR'	=> 'Avatar şuraya yüklenemiyor: %s.',
 	'AVATAR_NOT_ALLOWED'			=> 'Avatarınız görüntülenemiyor çünkü avatarlara izin verilmiyor.',
 	'AVATAR_PAGE'					=> 'Sayfa',
+	'AVATAR_SELECT'					=> 'Select your avatar',
+	'AVATAR_TYPE'					=> 'Avatar type',
 	'AVATAR_TYPE_NOT_ALLOWED'		=> 'Şu anki avatarınız görüntülenemiyor çünkü avatarınızın türüne izin verilmiyor.',
 
 	'BACK_TO_DRAFTS'			=> 'Kaydedilen taslaklara dön',
@@ -3246,7 +3422,6 @@ $lang = array_merge($lang, array(
 	'BIRTHDAY_EXPLAIN'			=> 'Doğum gününüzün olduğu yılı ayarladığınız zaman yaşınız listelenecektir.',
 	'BOARD_DATE_FORMAT'			=> 'Zaman formatı',
 	'BOARD_DATE_FORMAT_EXPLAIN'	=> 'PHP <a href="http://www.php.net/date" onclick="this.target=\'_blank\';" title="Yeni bir pencerede açılır">date()</a> fonksiyonu ile aynı sözdizimi kullanılır.',
-	'BOARD_DST'					=> 'Yaz Saati/<abbr title="Gün Işığından Tasarruf Zamanı">GITZ</abbr> uygulamasını kullan',
 	'BOARD_LANGUAGE'			=> 'Dil',
 	'BOARD_STYLE'				=> 'Mesaj panosu stili',
 	'BOARD_TIMEZONE'			=> 'Zaman dilimi',
@@ -3265,8 +3440,6 @@ $lang = array_merge($lang, array(
 	'CLICK_RETURN_FOLDER'		=> '%1$s“%3$s” adlı klasörünüze dönün%2$s',
 	'CONFIRMATION'				=> 'Kayıt doğrulaması',
 	'CONFIRM_CHANGES'			=> 'Değişiklikleri doğrula',
-	'CONFIRM_EMAIL'				=> 'E-posta adresini doğrula',
-	'CONFIRM_EMAIL_EXPLAIN'		=> 'Sadece e-posta adresinizi değiştireceğiniz zaman bunu belirtmelisiniz.',
 	'CONFIRM_EXPLAIN'			=> 'Otomatik kayıtları önlemek için mesaj panosu yöneticisi bir onay kodu girmenizi istiyor. Alttaki resmin içerisinde gösterilen kodu görmelisiniz. Eğer kodu bozuk görüyor veya okuyamıyorsanız lütfen %sMesaj Panosu Yöneticisi%s ile iletişime geçin.',
 	'VC_REFRESH'				=> 'Onay kodunu yenile',
 	'VC_REFRESH_EXPLAIN'		=> 'Eğer kodu okuyamıyorsanız butona tıklayarak yeni bir tane isteyebilirsiniz.',
@@ -3275,7 +3448,7 @@ $lang = array_merge($lang, array(
 	'CONFIRM_PASSWORD_EXPLAIN'	=> 'Sadece üstteki şifrenizi değiştirdiğiniz zaman şifrenizi doğrulamanız gerekmektedir.',
 	'COPPA_BIRTHDAY'			=> 'Kayıt işlemine devam edebilmek için lütfen ne zaman doğduğunuzu belirtin.',
 	'COPPA_COMPLIANCE'			=> 'COPPA anlaşması',
-	'COPPA_EXPLAIN'				=> 'Not: Gönder bağlantısına tıkladığınız zaman hesabınız oluşturulacaktır. Fakat kaydınız anne, baba veya velinize onaylatana kadar aktif olmayacaktır. Gerekli detayların kopyasını nereye göndereceğiniz konusunda bir e-posta alacaksınız.',
+	'COPPA_EXPLAIN'				=> 'Please note that clicking submit will create your account. However it cannot be activated until a parent or guardian approves your registration. You will be e-mailed a copy of the necessary form with details of where to send it.',
 	'CREATE_FOLDER'				=> 'Klasör ekle…',
 	'CURRENT_IMAGE'				=> 'Şu anki resim',
 	'CURRENT_PASSWORD'			=> 'Şu anki şifre',
@@ -3330,27 +3503,34 @@ $lang = array_merge($lang, array(
 	'EXPORT_FOLDER'				=> 'Bu görüntüleneni dışarı çıkar',
 
 	'FIELD_REQUIRED'					=> '“%s” alanı tamamlanmış olmalıdır.',
-	'FIELD_TOO_SHORT'					=> '“%1$s” alanı çok kısa, en az %2$d karakter isteniyor.',
-	'FIELD_TOO_LONG'					=> '“%1$s” çok uzun, en fazla %2$d karaktere izin veriliyor.',
-	'FIELD_TOO_SMALL'					=> '“%1$s” değeri çok küçük, en az %2$d değeri isteniyor.',
-	'FIELD_TOO_LARGE'					=> '“%1$s” değeri çok büyük, en fazla %2$d değerine izin veriliyor.',
+
+	'FIELD_TOO_SMALL'					=> 'The value of “%2$s” is too small, a minimum value of %1$d is required.',
+	'FIELD_TOO_LARGE'					=> 'The value of “%2$s” is too large, a maximum value of %1$d is allowed.',
+	'FIELD_INVALID_CHARS_INVALID'		=> 'The field “%s” has invalid characters.',
 	'FIELD_INVALID_CHARS_NUMBERS_ONLY'	=> '“%s” alanındaki karakterler geçersiz, sadece sayılara izin veriliyor.',
+	'FIELD_INVALID_CHARS_ALPHA_DOTS'	=> 'The field “%s” has invalid characters, only alphanumeric or . characters are allowed.',
 	'FIELD_INVALID_CHARS_ALPHA_ONLY'	=> '“%s” alanındaki karakterler geçersiz, sadece alfanümerik karakterlere izin veriliyor.',
-	'FIELD_INVALID_CHARS_SPACERS_ONLY'	=> '“%s” alanındaki karakterler geçersiz, sadece alfanümerik, boşluk veya -+_[] karakterlerine izin veriliyor.',
+	'FIELD_INVALID_CHARS_ALPHA_PUNCTUATION'	=> 'The field “%s” has invalid characters, only alphanumeric or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_ALPHA_SPACERS'	=> 'The field “%s” has invalid characters, only alphanumeric, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_ALPHA_UNDERSCORE'	=> 'The field “%s” has invalid characters, only alphanumeric or _ characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_DOTS'	=> 'The field “%s” has invalid characters, only letter, number or . characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_ONLY'	=> 'The field “%s” has invalid characters, only letter and number characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_PUNCTUATION'	=> 'The field “%s” has invalid characters, only letter, number or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_SPACERS'		=> 'The field “%s” has invalid characters, only letter, number, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_UNDERSCORE'		=> 'The field “%s” has invalid characters, only letter, number or _ characters are allowed.',
 	'FIELD_INVALID_DATE'				=> '“%s” alanındaki tarih geçersiz.',
+	'FIELD_INVALID_URL'					=> 'The field “%s” has an invalid url.',
 	'FIELD_INVALID_VALUE'				=> '“%s” alanındaki değer geçersiz.',
 
 	'FOE_MESSAGE'				=> 'Engellenenden mesaj',
 	'FOES_EXPLAIN'				=> 'Engellenen kullanıcılar varsayılan olarak yoksayılacaktır. Bu kullanıcılar tarafından gönderilen mesajlar tam olarak görüntülenmeyecektir. Engellenenlerden gelen özel mesajlara izin verilmeyecektir. Not: Moderatör veya yöneticileri yoksayamazsınız.',
 	'FOES_UPDATED'				=> 'Engellenenler listeniz başarıyla güncellendi.',
 	'FOLDER_ADDED'				=> 'Klasör başarıyla eklendi.',
-	'FOLDER_MESSAGE_STATUS'		=> '%2$d mesajdan %1$d tanesi saklandı',
 	'FOLDER_NAME_EMPTY'			=> 'Bu klasör için bir isim girmelisiniz.',
 	'FOLDER_NAME_EXIST'			=> '<strong>%s</strong> isimli klasör zaten var.',
 	'FOLDER_OPTIONS'			=> 'Klasör seçenekleri',
 	'FOLDER_RENAMED'			=> 'Klasör başarıyla yeniden adlandırıldı.',
 	'FOLDER_REMOVED'			=> 'Klasör başarıyla silindi.',
-	'FOLDER_STATUS_MSG'			=> 'Klasör %1$d%% dolu (%3$d mesajdan %2$d tanesi saklandı)',
 	'FORWARD_PM'				=> 'ÖM İlet',
 	'FORCE_PASSWORD_EXPLAIN'	=> 'Mesaj panosunu dolaşmaya devam etmeden önce şifrenizi değiştirmeniz gerekmektedir.',
 	'FRIEND_MESSAGE'			=> 'Arkadaştan mesaj',
@@ -3419,16 +3599,35 @@ $lang = array_merge($lang, array(
 	'MOVE_DELETED_MESSAGES_TO'		=> 'Silinen klasördeki mesajları şuraya taşı',
 	'MOVE_DOWN'						=> 'Aşağı taşı',
 	'MOVE_MARKED_TO_FOLDER'			=> 'İşaretlileri %s klasörüne taşı',
-	'MOVE_PM_ERROR'					=> 'Mesajlar yeni klasöre taşınırken bir hata oluştu, sadece %2d mesajdan %1d tanesi taşındı.',
 	'MOVE_TO_FOLDER'				=> 'Klasöre taşı',
 	'MOVE_UP'						=> 'Yukarı taşı',
 
-	'NEW_EMAIL_CONFIRM_EMPTY'		=> 'Doğrulamak için bir e-posta adresi girmediniz.',
-	'NEW_EMAIL_ERROR'				=> 'Girdiğiniz e-posta adresi diğeriyle uyuşmuyor.',
 	'NEW_FOLDER_NAME'				=> 'Yeni klasör adı',
 	'NEW_PASSWORD'					=> 'Yeni şifre',
 	'NEW_PASSWORD_CONFIRM_EMPTY'	=> 'Doğrulamak için bir şifre girmediniz.',
 	'NEW_PASSWORD_ERROR'			=> 'Girdiğiniz şifre diğeriyle uyuşmuyor.',
+
+	'NOTIFICATIONS_MARK_ALL_READ'						=> 'Mark all notifications read',
+	'NOTIFICATIONS_MARK_ALL_READ_CONFIRM'				=> 'Are you sure you want to mark all notifications read?',
+	'NOTIFICATIONS_MARK_ALL_READ_SUCCESS'				=> 'All notifications have been marked read.',
+	'NOTIFICATION_GROUP_MISCELLANEOUS'					=> 'Miscellaneous Notifications',
+	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
+	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
+	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'E-mail',
+	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
+	'NOTIFICATION_TYPE'									=> 'Notification type',
+	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
+	'NOTIFICATION_TYPE_GROUP_REQUEST'					=> 'Someone requests to join a group you lead',
+	'NOTIFICATION_TYPE_IN_MODERATION_QUEUE'				=> 'A post or topic needs approval',
+	'NOTIFICATION_TYPE_MODERATION_QUEUE'				=> 'Your topics/posts are approved or disapproved by a moderator',
+	'NOTIFICATION_TYPE_PM'								=> 'Someone sends you a private message',
+	'NOTIFICATION_TYPE_POST'							=> 'Someone replies to a topic to which you are subscribed',
+	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
+	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
+	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+
 	'NOTIFY_METHOD'					=> 'Bildiri metodu',
 	'NOTIFY_METHOD_BOTH'			=> 'Her ikisi',
 	'NOTIFY_METHOD_EMAIL'			=> 'Sadece e-posta',
@@ -3446,10 +3645,9 @@ $lang = array_merge($lang, array(
 	'NOT_ADDED_FOES_SELF'			=> 'Kendinizi engellenenler listesine ekleyemezsiniz.',
 	'NOT_AGREE'						=> 'Bu koşulları kabul etmiyorum',
 	'NOT_ENOUGH_SPACE_FOLDER'		=> '“%s” adındaki gidecek klasör dolu görünüyor. İstenilen eylem gerçekleştirilemiyor.',
-	'NOT_MOVED_MESSAGE'				=> 'Şu anda 1 yeni özel mesajınız tutuluyor, çünkü klasör dolu.',
-	'NOT_MOVED_MESSAGES'			=> 'Şu anda %d yeni özel mesajınız tutuluyor, çünkü klasör dolu.',
 	'NO_ACTION_MODE'				=> 'Hiç bir mesaj eylemi belirtilmedi',
 	'NO_AUTHOR'						=> 'Bu mesaj için hiç bir yazar belirtilmedi',
+	'NO_AVATAR'						=> 'No avatar selected',
 	'NO_AVATAR_CATEGORY'			=> 'Yok',
 
 	'NO_AUTH_DELETE_MESSAGE'		=> 'Özel mesajları silme yetkiniz yok.',
@@ -3457,6 +3655,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_FORWARD_MESSAGE'		=> 'Özel mesajları iletme yetkiniz yok.',
 	'NO_AUTH_GROUP_MESSAGE'			=> 'Gruplara özel mesaj gönderme yetkiniz yok.',
 	'NO_AUTH_PASSWORD_REMINDER'		=> 'Yeni bir şifre istemek için yetkiniz yok.',
+	'NO_AUTH_PROFILEINFO'			=> 'You are not authorised to change your profile information.',
 	'NO_AUTH_READ_HOLD_MESSAGE'		=> 'Tutulan özel mesajları okumak için yetkiniz yok.',
 	'NO_AUTH_READ_MESSAGE'			=> 'Özel mesajları okumak için yetkiniz yok.',
 	'NO_AUTH_READ_REMOVED_MESSAGE'	=> 'Bu mesajı okuyamazsınız çünkü mesaj, yazarı tarafından silindi.',
@@ -3487,10 +3686,10 @@ $lang = array_merge($lang, array(
 	'NO_WATCHED_SELECTED'		=> 'Abone olunan herhangi bir başlık ya da forum seçmediniz.',
 	'NO_WATCHED_TOPICS'			=> 'Herhangi bir başlığa abone olmadınız.',
 
-	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Şifre %1$d ve %2$d karakter arası uzunlukta olmalı, karışık durumda harfler ve sayılar içermelidir.',
-	'PASS_TYPE_ANY_EXPLAIN'		=> 'Şifre %1$d ve %2$d karakter arasında olmalıdır.',
-	'PASS_TYPE_CASE_EXPLAIN'	=> 'Şifre %1$d ve %2$d karakter arası uzunlukta olmalı ve karışık durumda harfler içermelidir.',
-	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Şifre %1$d ve %2$d karakter arası uzunlukta olmalı, karışık durumda harfler, sayılar ve simgeler içermelidir.',
+	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case and must contain numbers.',
+	'PASS_TYPE_ANY_EXPLAIN'		=> 'Must be between %1$s and %2$s.',
+	'PASS_TYPE_CASE_EXPLAIN'	=> 'Password must be between %1$s and %2$s long and must contain letters in mixed case.',
+	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case, must contain numbers and must contain symbols.',
 	'PASSWORD'					=> 'Şifre',
 	'PASSWORD_ACTIVATED'		=> 'Yeni şifreniz aktif edildi.',
 	'PASSWORD_UPDATED'			=> 'Yeni şifreniz kayıtlı e-posta adresinize gönderildi.',
@@ -3501,13 +3700,16 @@ $lang = array_merge($lang, array(
 	'PM_FROM_REMOVED_AUTHOR'	=> 'Bu mesaj kayıtlı olmayan bir kullanıcı tarafından gönderildi.',
 	'PM_ICON'					=> 'ÖM ikonu',
 	'PM_INBOX'					=> 'Gelen kutusu',
+	'PM_MARK_ALL_READ'			=> 'Mark all messages read',
+	'PM_MARK_ALL_READ_SUCCESS'	=> 'All private messages in this folder have been marked read',
 	'PM_NO_USERS'				=> 'Eklenmesi için talep edilen kullanıcılar mevcut değil.',
 	'PM_OUTBOX'					=> 'Giden kutusu',
 	'PM_SENTBOX'				=> 'Gönderilen mesajlar',
 	'PM_SUBJECT'				=> 'Mesaj başlığı',
 	'PM_TO'						=> 'Kime',
+	'PM_TOOLS'					=> 'Message tools',
+	'PM_USERS_REMOVED_NO_PERMISSION'	=> 'Some users couldn’t be added as they do not have permission to read private messages.',
 	'PM_USERS_REMOVED_NO_PM'	=> 'Bazı kullanıcılar özel mesaj alımını kapattıkları için eklenemedi.',
-	'POPUP_ON_PM'				=> 'Yeni özel mesaj geldiğinde küçük pencere aç',
 	'POST_EDIT_PM'				=> 'Mesajı düzenle',
 	'POST_FORWARD_PM'			=> 'Mesajı ilet',
 	'POST_NEW_PM'				=> 'Mesaj oluştur',
@@ -3519,6 +3721,8 @@ $lang = array_merge($lang, array(
 	'PREFERENCES_UPDATED'		=> 'Tercihleriniz güncellendi.',
 	'PROFILE_INFO_NOTICE'		=> 'Not: Bu bilgiler diğer üyeler tarafından görüntülenebilir. Bazı kişisel bilgilerinizi eklerken dikkatli olun. Doldurulması zorunlu bazı alanlar * ile işaretlenmiştir.',
 	'PROFILE_UPDATED'			=> 'Profiliniz güncellendi.',
+	'PROFILE_AUTOLOGIN_KEYS'	=> 'The "Remember Me" login keys automatically log you in when you visit the board. If you logout, the remember me login key is deleted only on the computer you are using to logout. Here you can see remember login keys created on other computers you used to access this site.',
+	'PROFILE_NO_AUTOLOGIN_KEYS'	=> 'There are no saved "Remember Me" login keys.',
 
 	'RECIPIENT'							=> 'Alıcı',
 	'RECIPIENTS'						=> 'Alıcılar',
@@ -3543,8 +3747,6 @@ $lang = array_merge($lang, array(
 	'RULE_DELETED'						=> 'Kural başarıyla silindi.',
 	'RULE_LIMIT_REACHED'				=> 'Daha fazla ÖM kuralı ekleyemezsiniz. Kuralların en yüksek sayısına ulaştınız.',
 	'RULE_NOT_DEFINED'					=> 'Kural doğru şekilde belirlenmedi.',
-	'RULE_REMOVED_MESSAGE'				=> 'Özel mesaj süzgecine göre zamanı gelen bir özel mesaj silindi.',
-	'RULE_REMOVED_MESSAGES'				=> 'Özel mesaj süzgecine göre zamanı gelen %d özel mesaj silindi.',
 
 	'SAME_PASSWORD_ERROR'		=> 'Girdiğiniz yeni şifre şu anki şifreniz ile aynı.',
 	'SEARCH_YOUR_POSTS'			=> 'Kendi mesajlarınız',
@@ -3556,6 +3758,8 @@ $lang = array_merge($lang, array(
 	'SIGNATURE_TOO_LONG'		=> 'İmzanız çok uzun.',
 	'SELECT_CURRENT_TIME'		=> 'Select current time',
 	'SELECT_TIMEZONE'			=> 'Select timezone',
+	'SELECT_CURRENT_TIME'		=> 'Select current time',
+	'SELECT_TIMEZONE'			=> 'Select timezone',
 	'SORT'						=> 'Sırala',
 	'SORT_COMMENT'				=> 'Dosya yorumu',
 	'SORT_DOWNLOADS'			=> 'İndirmeler',
@@ -3565,15 +3769,28 @@ $lang = array_merge($lang, array(
 	'SORT_SIZE'					=> 'Dosya boyutu',
 
 	'TIMEZONE'					=> 'Zaman dilimi',
-	'TO'						=> 'Kime',
+	'TIMEZONE_DATE_SUGGESTION'	=> 'Suggestion: %s',
+	'TIMEZONE_INVALID'			=> 'The timezone you selected is invalid.',
+	'TO'						=> 'Recipient',
+	'TO_MASS'					=> 'Recipients',
+	'TO_ADD'					=> 'Add recipient',
+	'TO_ADD_MASS'				=> 'Add recipients',
+	'TO_ADD_GROUPS'				=> 'Add groups',
 	'TOO_MANY_RECIPIENTS'		=> 'Çok fazla alıcıya bir özel mesaj göndermeyi denediniz.',
 	'TOO_MANY_REGISTERS'		=> 'Bu oturum için en fazla kayıt girişimi sayısını aştınız. Lütfen daha sonra tekrar deneyin.',
 
 	'UCP'						=> 'Kullanıcı Kontrol Paneli',
 	'UCP_ACTIVATE'				=> 'Hesabı aktifleştir',
 	'UCP_ADMIN_ACTIVATE'		=> 'Not: Hesabınız aktif edebilmek için doğru bir e-posta adresi girmelisiniz. Yöneticiler hesabınızı inceleyecekler ve eğer onaylarlarsa belirttiğiniz adrese bir e-posta alacaksınız.',
-	'UCP_AIM'					=> 'AOL Instant Messenger',
 	'UCP_ATTACHMENTS'			=> 'Eklentiler',
+	'UCP_AUTH_LINK'				=> 'External accounts',
+	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
+	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
+	'UCP_AUTH_LINK_LINK'		=> 'Bağlantı',
+	'UCP_AUTH_LINK_MANAGE'		=> 'Manage external account associations',
+	'UCP_AUTH_LINK_NOT_SUPPORTED'	=> 'Linking board accounts to external services is not supported by this board’s current authentication method.',
+	'UCP_AUTH_LINK_TITLE'		=> 'Manage your external account associations',
+	'UCP_AUTH_LINK_UNLINK'		=> 'Unlink',
 	'UCP_AUTH_LINK'				=> 'External accounts',
 	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
 	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
@@ -3585,8 +3802,8 @@ $lang = array_merge($lang, array(
 	'UCP_COPPA_BEFORE'			=> '%s tarihinden önce',
 	'UCP_COPPA_ON_AFTER'		=> '%s tarihinde veya daha sonra',
 	'UCP_EMAIL_ACTIVATE'		=> 'Not: Hesabınızı aktif edebilmek için doğru bir e-posta adresi girmelisiniz. Belirttiğiniz adrese bir e-posta alacaksınız ve içeriğinde bir aktivasyon bağlantısı bulunacaktır.',
-	'UCP_ICQ'					=> 'ICQ numarası',
 	'UCP_JABBER'				=> 'Jabber adresi',
+	'UCP_LOGIN_LINK'			=> 'Set up an external account association',
 
 	'UCP_MAIN'					=> 'Genel',
 	'UCP_MAIN_ATTACHMENTS'		=> 'Eklentileri yönet',
@@ -3595,7 +3812,6 @@ $lang = array_merge($lang, array(
 	'UCP_MAIN_FRONT'			=> 'Ön sayfa',
 	'UCP_MAIN_SUBSCRIBED'		=> 'Abonelikleri yönet',
 
-	'UCP_MSNM'					=> 'WL/MSN Messenger',
 	'UCP_NO_ATTACHMENTS'		=> 'Hiç dosya göndermediniz.',
 
 	'UCP_NOTIFICATION_LIST'				=> 'Manage notifications',
@@ -3612,8 +3828,6 @@ $lang = array_merge($lang, array(
 	'UCP_PM_COMPOSE'			=> 'Mesaj oluştur',
 	'UCP_PM_DRAFTS'				=> 'ÖM taslakları\'nı yönet',
 	'UCP_PM_OPTIONS'			=> 'Kurallar, klasörler &amp; ayarlar',
-	'UCP_PM_POPUP'				=> 'Özel mesajlar',
-	'UCP_PM_POPUP_TITLE'		=> 'Özel mesaj açılır penceresi',
 	'UCP_PM_UNREAD'				=> 'Okunmayan mesajlar',
 	'UCP_PM_VIEW'				=> 'Mesajları görüntüle',
 
@@ -3628,11 +3842,11 @@ $lang = array_merge($lang, array(
 	'UCP_USERGROUPS_MEMBER'		=> 'Üyelikler',
 	'UCP_USERGROUPS_MANAGE'		=> 'Grupları yönet',
 
+	'UCP_PASSWORD_RESET_DISABLED'	=> 'The password reset functionality has been disabled. If you need help accessing your account, please contact the %sBoard Administrator%s',
 	'UCP_REGISTER_DISABLE'			=> 'Yeni bir hesap oluşturmak şu anda mümkün değil.',
 	'UCP_REMIND'					=> 'Şifre gönder',
 	'UCP_RESEND'					=> 'Aktivasyon e-postası gönder',
 	'UCP_WELCOME'					=> 'Kullanıcı Kontrol Paneline hoşgeldiniz. Bu ekrandan profilinizi görüntüleme ve güncelleme yapabilir, tercihlerinizi düzenleyebilir, başlıklar ve forumlara abonelikleri görüntüleyebilirsiniz ya da düzenleyebilirsiniz. Ayrıca diğer kullanıcılara (eğer izin veriliyorsa) mesaj gönderebilirsiniz. Lütfen devam etmeden önce herhangi bir duyuru olup olmadığını kontrol edin.',
-	'UCP_YIM'						=> 'Yahoo Messenger',
 	'UCP_ZEBRA'						=> 'Arkadaşlar &amp; Engellenenler',
 	'UCP_ZEBRA_FOES'				=> 'Engellenenleri yönet',
 	'UCP_ZEBRA_FRIENDS'				=> 'Arkadaşları yönet',
@@ -3642,12 +3856,12 @@ $lang = array_merge($lang, array(
 	'UPLOAD_AVATAR_FILE'			=> 'Bilgisayarından yükle',
 	'UPLOAD_AVATAR_URL'				=> 'Bir URL adresinden yükle',
 	'UPLOAD_AVATAR_URL_EXPLAIN'		=> 'Resmin olduğu sitenin URL adresini girin. Resim bu mesaj panosuna kopyalanacaktır.',
-	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Kullanıcı adı %1$d ve %2$d karakter arasındaki uzunlukta olmalıdır ve sadece alfanümerik karakterler kullanılmalıdır.',
-	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Kullanıcı adı %1$d ve %2$d karakter arasındaki uzunlukta olmalıdır ve alfanümerik, boşluk veya -+_[] karakterleri kullanılmalıdır.',
-	'USERNAME_ASCII_EXPLAIN'		=> 'Kullanıcı adı %1$d ve %2$d karakter arasındaki uzunlukta olmalıdır ve ayrıca özel semboller olmadan sadece ASCII karakterler kullanılmalıdır.',
-	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Kullanıcı adı %1$d ve %2$d karakter arasındaki uzunlukta olmalıdır ve sadece harf ya da sayı karakterleri kullanılmalıdır.',
-	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Kullanıcı adı %1$d ve %2$d karakter arasındaki uzunlukta olmalıdır ve harf, sayı, boşluk veya -+_[] karakterleri kullanılmalıdır.',
-	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Uzunluk %1$d ve %2$d karakter arasında olmalıdır.',
+	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only alphanumeric characters.',
+	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use alphanumeric, space or -+_[] characters.',
+	'USERNAME_ASCII_EXPLAIN'		=> 'Username must be between %1$s and %2$s long and use only ASCII characters, so no special symbols.',
+	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only letter or number characters.',
+	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use letter, number, space or -+_[] characters.',
+	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Length must be between %1$s and %2$s.',
 	'USERNAME_TAKEN_USERNAME'		=> 'Girdiğiniz kullanıcı adı zaten kullanılıyor, lütfen alternatif bir tane seçin.',
 	'USERNAME_DISALLOWED_USERNAME'	=> 'Girdiğiniz kullanıcı adı izinli değil ya da izin verilmeyen bir kelime içeriyor. Lütfen farklı bir ad seçin.',
 	'USER_NOT_FOUND_OR_INACTIVE'	=> 'Belirttiğiniz kullanıcı adları bulunamadı veya bu kullanıcılar aktif değil.',
@@ -3660,10 +3874,9 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_PM'				=> 'Sonraki ÖM',
 	'VIEW_PM'					=> 'Özel mesajı görüntüle',
 	'VIEW_PM_INFO'				=> 'Mesaj detayları',
-	'VIEW_PM_MESSAGE'			=> '1 mesaj',
-	'VIEW_PM_MESSAGES'			=> '%d mesaj',
 	'VIEW_PREVIOUS_HISTORY'		=> 'Bu tarihten önceki ÖM',
 	'VIEW_PREVIOUS_PM'			=> 'Önceki ÖM',
+	'VIEW_PROFILE'				=> 'View profile',
 	'VIEW_SIGS'					=> 'İmzayı göster',
 	'VIEW_SMILIES'				=> 'İfadeleri resimli olarak göster',
 	'VIEW_TOPICS_DAYS'			=> 'Önceki günlerden başlayarak başlıkları göster',
@@ -3771,8 +3984,6 @@ $lang = array_merge($lang, array(
 	'UNREAD_POSTS_LOCKED'	=> 'Okunmamış mesajlar [ Kilitli ]',
 
 	'VIEW_FORUM'			=> 'Forum görüntüleniyor',
-	'VIEW_FORUM_TOPIC'		=> '1 başlık',
-	'VIEW_FORUM_TOPICS'		=> '%d başlık',
 
 	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
 	'REMOVE_FILTER'		=> 'Remove filter',
@@ -3781,6 +3992,7 @@ $lang = array_merge($lang, array(
 #######language/en/viewtopic.php#######
 
 $lang = array_merge($lang, array(
+	'APPROVE'								=> 'Onay',
 	'ATTACHMENT'						=> 'Eklenti',
 	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'Eklenti özelliği kapatıldı.',
 
@@ -3793,14 +4005,13 @@ $lang = array_merge($lang, array(
 	'BUMP_TOPIC'			=> 'Başlığı darbele',
 
 	'CODE'					=> 'Kod',
-	'COLLAPSE_QR'			=> 'Hızlı cevabı gizle',
-
+	
 	'DELETE_TOPIC'			=> 'Başlığı sil',
+	'DELETED_INFORMATION'	=> 'Deleted by %1$s on %2$s',
+	'DISAPPROVE'					=> 'Onaylama',
 	'DOWNLOAD_NOTICE'		=> 'Bu mesaja eklenen dosyaları görüntülemek için gerekli yetkilere sahip değilsiniz.',
 
-	'EDITED_TIMES_TOTAL'	=> 'En son %1$s tarafından %2$s tarihinde düzenlendi, toplamda %3$d kere düzenlendi.',
-	'EDITED_TIME_TOTAL'		=> 'En son %1$s tarafından %2$s tarihinde düzenlendi, toplamda %3$d kere düzenlendi.',
-	'EMAIL_TOPIC'			=> 'Arkadaşına gönder',
+	'EMAIL_TOPIC'			=> 'E-mail topic',
 	'ERROR_NO_ATTACHMENT'	=> 'Seçilen eklenti artık mevcut değil.',
 
 	'FILE_NOT_FOUND_404'	=> '<strong>%s</strong> dosyası bulunamıyor.',
@@ -3815,8 +4026,6 @@ $lang = array_merge($lang, array(
 	'MAKE_GLOBAL'				=> '“Global” olarak değiştir',
 	'MAKE_NORMAL'				=> '“Normal” olarak değiştir',
 	'MAKE_STICKY'				=> '“Sabit” olarak değiştir',
-	'MAX_OPTIONS_SELECT'		=> 'En fazla <strong>%d</strong> seçenek seçebilirsiniz',
-	'MAX_OPTION_SELECT'			=> '<strong>1</strong> seçenek seçebilirsiniz',
 	'MISSING_INLINE_ATTACHMENT'	=> '<strong>%s</strong> Eklentisi bulunamıyor',
 	'MOVE_TOPIC'				=> 'Başlığı taşı',
 
@@ -3830,6 +4039,7 @@ $lang = array_merge($lang, array(
 	'POLL_ENDED_AT'			=> 'Anket %s tarihinde bitecek',
 	'POLL_RUN_TILL'			=> 'Anket %s tarihine kadar sürecek',
 	'POLL_VOTED_OPTION'		=> 'Bu seçenek için oy verdiniz',
+	'POST_DELETED_RESTORE'	=> 'This post has been deleted. It can be restored.',
 	'PRINT_TOPIC'			=> 'Yazıcı görüntüsü',
 
 	'QUICK_MOD'				=> 'Hızlı-yönetim araçları',
@@ -3837,11 +4047,14 @@ $lang = array_merge($lang, array(
 	'QUOTE'					=> 'Alıntı',
 
 	'REPLY_TO_TOPIC'		=> 'Başlığa cevap ver',
+	'RESTORE'				=> 'Restore',
+	'RESTORE_TOPIC'			=> 'Restore topic',
 	'RETURN_POST'			=> '%sMesaja dön%s',
 
 	'SHOW_QR'				=> 'Hızlı Cevap',
 	'SUBMIT_VOTE'			=> 'Oy ver',
 
+	'TOPIC_TOOLS'			=> 'Topic tools',
 	'TOTAL_VOTES'			=> 'Toplam oy',
 
 	'UNLOCK_TOPIC'			=> 'Başlığın kilidini aç',
@@ -3850,10 +4063,7 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_TOPIC'		=> 'Sonraki başlık',
 	'VIEW_PREVIOUS_TOPIC'	=> 'Önceki başlık',
 	'VIEW_RESULTS'			=> 'Sonuçları Görüntüle',
-	'VIEW_TOPIC_POST'		=> '1 mesaj',
-	'VIEW_TOPIC_POSTS'		=> '%d mesaj',
 	'VIEW_UNREAD_POST'		=> 'Önce okunmamış mesaj',
-	'VISIT_WEBSITE'			=> 'Web sitesini ziyaret et',
 	'VOTE_SUBMITTED'		=> 'Oyunuz ankete eklendi.',
 	'VOTE_CONVERTED'		=> 'Dönüştürülen anketler için oy değişiklikleri desteklenmiyor.',
 
@@ -9443,6 +9653,7 @@ $lang = array_merge($lang, array(
 	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'	=> 'Bir özel mesaj eklentisinde her bir dosyanın en yüksek boyutu, 0 ile sınırsız olur.',
 	'ATTACH_ORPHAN_URL'					=> 'Boşta kalan eklentiler',
 	'ATTACH_POST_ID'					=> 'Mesaj ID',
+	'ATTACH_POST_TYPE'					=> 'Post type',
 	'ATTACH_QUOTA'						=> 'Toplam eklenti kotası',
 	'ATTACH_QUOTA_EXPLAIN'				=> 'Mesaj panosunun tümü için eklentilere ayrılan en fazla sürücü alanı, sınırsız olması için 0 yazın.',
 	'ATTACH_TO_POST'					=> 'Mesaja dosya ekle',
@@ -9488,6 +9699,9 @@ $lang = array_merge($lang, array(
 	'EXT_GROUP_REAL_MEDIA'			=> 'Real Media Ortam Dosyaları',
 	'EXT_GROUP_WINDOWS_MEDIA'		=> 'Windows Media Ortam Dosyaları',
 
+	'FILES_GONE'			=> 'Some of the attachments you selected for deletion do not exist. They may have been already deleted. Attachments that did exist were deleted.',
+	'FILES_STATS_WRONG'		=> 'Your file statistics are likely inaccurate and need to be resynchronised. Actual values: number of attachments = %1$d, total size of attachments = %2$s.<br />Click %3$shere%4$s to resynchronise them.',
+
 	'GO_TO_EXTENSIONS'		=> 'Uzantı Yönetim Paneline Git',
 	'GROUP_NAME'			=> 'Grup adı',
 
@@ -9511,6 +9725,7 @@ $lang = array_merge($lang, array(
 	'NOT_ALLOWED_IN_PM'			=> 'Sadece mesajlarda izinli',
 	'NOT_ALLOWED_IN_PM_POST'	=> 'İzinli değil',
 	'NOT_ASSIGNED'				=> 'Tanımlanmadı',
+	'NO_ATTACHMENTS'			=> 'No attachments found for this period.',
 	'NO_EXT_GROUP'				=> 'Yok',
 	'NO_EXT_GROUP_NAME'			=> 'Grup ismi girilmedi',
 	'NO_EXT_GROUP_SPECIFIED'	=> 'Belirli bir uzantı grubu yok',
@@ -9523,6 +9738,10 @@ $lang = array_merge($lang, array(
 	'ONLY_ALLOWED_IN_PM'	=> 'Sadece özel mesajlarda izinli',
 	'ORDER_ALLOW_DENY'		=> 'İzin ver',
 	'ORDER_DENY_ALLOW'		=> 'Reddet',
+
+	'REMOVE_ALLOWED_IPS'			=> '<em>İzin verilen</em> IP/Sunucu isimlerini kaldır ya da kabul et',
+	'REMOVE_DISALLOWED_IPS'			=> '<em>İzin verilmeyen</em> IP/Sunucu isimlerini kaldır ya da kabul et',
+	'RESYNC_FILES_STATS_CONFIRM'	=> 'Are you sure you wish to resynchronise file statistics?',
 
 	'REMOVE_ALLOWED_IPS'		=> '<em>İzin verilen</em> IP/Sunucu isimlerini kaldır ya da kabul et',
 	'REMOVE_DISALLOWED_IPS'		=> '<em>İzin verilmeyen</em> IP/Sunucu isimlerini kaldır ya da kabul et',
@@ -9592,18 +9811,17 @@ $lang = array_merge($lang, array(
 	'PERMANENT'		=> 'Sürekli',
 
 	'UNTIL'						=> 'Zaman aralığı',
-	'USER_BAN'					=> 'Yasaklama',
+	'USER_BAN'					=> 'Ban one or more users by username',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> 'Bu kısım aktif olduğunda, belirttiğiniz kullanıcılar var olan tüm yasaklamaların dışında tutulur.',
 	'USER_BAN_EXPLAIN'			=> 'Her satıra bir ad girerek çoklu kullanıcı yasaklayabilirsiniz. <span style="text-decoration: underline;">Bir üye bul</span> seçeneğini kullanarak bir ya da birden fazla kullanıcıya bakabilir ve bunları otomatik olarak ekleyebilirsiniz.',
 	'USER_NO_BANNED'			=> 'Yasaklı kullanıcı yok',
-	'USER_UNBAN'				=> 'Kullanıcı adlarındaki yasağı veya engeli kaldır',
+	'USER_UNBAN'				=> 'Un-ban or un-exclude users by username',
 	'USER_UNBAN_EXPLAIN'		=> 'Fare ve klavye kombinasyonu kullanarak tarayıcınız ve bilgisayarınız yardımıyla birden çok kullanıcı üzerindeki yasaklamayı kaldırabilirsiniz. Dışarda tutulan kullanıcılar vurgulanmıştır.',
 ));
 
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'				=> 'Yaz Saati/<abbr title="Gün Işığından Tasarruf Zamanı">GITZ</abbr> uygulamasını aç',
 	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
 	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
 	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
@@ -9629,16 +9847,28 @@ $lang = array_merge($lang, array(
 	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Buradan mesaj panonuzun ana işleyişini belirleyebilirsiniz, uygun bir isim ve açıklama verin, ve diğer ayarlar arasında zaman dilimi ile dil için varsayılan değerleri ayarlayın.',
+	'BOARD_INDEX_TEXT'				=> 'Board index text',
+	'BOARD_INDEX_TEXT_EXPLAIN'		=> 'This text is displayed as the board index in the board’s breadcrumbs. If not specified, it will default to “Board index”.',
+	'BOARD_STYLE'					=> 'Mesaj panosu stili',
 	'CUSTOM_DATEFORMAT'				=> 'Özel…',
 	'DEFAULT_DATE_FORMAT'			=> 'Tarih formatı',
 	'DEFAULT_DATE_FORMAT_EXPLAIN'	=> 'Tarih formatı PHP <code>tarih</code> özelliği ile aynıdır.',
 	'DEFAULT_LANGUAGE'				=> 'Varsayılan dil',
 	'DEFAULT_STYLE'					=> 'Varsayılan stil',
+	'DEFAULT_STYLE_EXPLAIN'			=> 'The default style is <strong>%1$s (%2$s)</strong> which is the overriden style for all users (including bots).',
 	'DISABLE_BOARD'					=> 'Mesaj panosunu kullanıcılara kapat',
-	'DISABLE_BOARD_EXPLAIN'			=> 'Bu işlem, mesaj panosunu kullanıcılara kapatacaktır. İsterseniz, kapama nedeni olarak kullanıcıların görebileceği kısa bir mesaj (255 karakter) yazabilirsiniz.',
+	'DISABLE_BOARD_EXPLAIN'			=> 'This will make the board unavailable to users who are neither administrators nor moderators. You can also enter a short (255 character) message to display if you wish.',
+	'DISPLAY_LAST_SUBJECT'			=> 'Display subject of last added post on forum list',
+	'DISPLAY_LAST_SUBJECT_EXPLAIN'	=> 'The subject of the last added post will be displayed in the forum list with a hyperlink to the post. Subjects from password protected forums and forums in which user doesn’t have read access are not shown.',
+	'GUEST_STYLE'					=> 'Guest style',
+	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Kullanıcı stilini gözardı et',
 	'OVERRIDE_STYLE_EXPLAIN'		=> 'Kullanıcıların stillerini varsayılan ile değiştirir.',
 	'SITE_DESC'						=> 'Mesaj panosu açıklaması',
+	'SITE_HOME_TEXT'				=> 'Main website text',
+	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
+	'SITE_HOME_URL'					=> 'Main website URL',
+	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Mesaj panosu ismi',
 	'SYSTEM_TIMEZONE'				=> 'Misafir zaman dilimi',
 	'WARNINGS_EXPIRE'				=> 'Uyarı süresi',
@@ -9678,6 +9908,7 @@ $lang = array_merge($lang, array(
 
 	'ALLOW_AVATARS'					=> 'Avatarları aç',
 	'ALLOW_AVATARS_EXPLAIN'			=> 'Avatarların genel kullanımına izin verir;<br />Eğer genel olarak avatarları kapattıysanız ya da kesin bir şekilde avatar kullanımına izin vermiyorsanız, bu ayarı kapalı yaptığınız takdirde avatarlar mesaj panosunda artık görüntülenmeyecektir, fakat kullanıcılara hala kendi avatarlarını Kullanıcı Kontrol Panelinden indirebilirler.',
+	'ALLOW_GRAVATAR'				=> 'Enable gravatar avatars',
 	'ALLOW_LOCAL'					=> 'Galeri avatarlarını aç',
 	'ALLOW_REMOTE'					=> 'Uzak avatarı aç',
 	'ALLOW_REMOTE_EXPLAIN'			=> 'Avatarlar diğer web sitelerinden bağlantı alır.',
@@ -9858,6 +10089,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Bunların içerikleri <strong>özet akışlarında gösterilmeyecektir</strong>. Tüm forumlardan veri çekmek için hiç forum seçmeyiniz.<br />Birden çok forumu Seçmek/Seçimi Kaldırmak için <samp>CTRL</samp> tuşuna basılı tutun ve tıklayın.',
 
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Buradan spambotlar tarafından tasarlanan otomatik olarak form gönderimlerini engellemek için eklentileri seçebilir ve ayarlayabilirsiniz. Bu eklentiler genellikle bir <em>CAPTCHA</em> ile kullanıcıya sorulmak amacıyla çalışır ve bilgisayarlar için çözmesi zor olarak tasarlanan bir testtir.',
+	'ACP_VC_EXT_GET_MORE'					=> 'For additional (and possibly better) anti-spam plugins, visit the <a href="https://www.phpbb.com/go/anti-spam-ext"><strong>phpBB.com Extensions Database</strong></a>. For more information on preventing spam on your board, visit the <a href="https://www.phpbb.com/go/anti-spam"><strong>phpBB.com Knowledge Base</strong></a>.',
 	'AVAILABLE_CAPTCHAS'					=> 'Mevcut eklentiler',
 	'CAPTCHA_UNAVAILABLE'					=> 'Gereksinimleri yerine getirilmediği için bu eklenti seçilemez.',
 	'CAPTCHA_GD'							=> 'GD resmi',
@@ -9908,18 +10140,36 @@ $lang = array_merge($lang, array(
 	'SESSION_LENGTH'			=> 'Oturum uzunluğu',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Bu zamandan sonra oturumlar sona erecektir, saniye cinsinden belirtilmelidir.',
 
+	// Contact Settings
+	'ACP_CONTACT_SETTINGS_EXPLAIN'		=> 'Here you can enable and disable the contact page and also add a text that is displayed on the page.',
+
+	'CONTACT_US_ENABLE'				=> 'Enable contact page',
+	'CONTACT_US_ENABLE_EXPLAIN'		=> 'This page allows users to send emails to board administrators',
+
+	'CONTACT_US_INFO'				=> 'Contact information',
+	'CONTACT_US_INFO_EXPLAIN'		=> 'The message is displayed on the contact page',
+	'CONTACT_US_INFO_PREVIEW'		=> 'Contact page information - Preview',
+	'CONTACT_US_INFO_UPDATED'		=> 'Contact page information has been updated.',
+
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Buradan mesaj panosunun belirli fonksiyonlarını açıp kapatabilirsiniz, bu sayede işlem miktarını azaltabilirsiniz. Bir çok sunucuda herhangi bir fonksiyonu kapamanız gerekmez. Aslında, belirli sistemlerde ya da paylaşılmış hosting ekipmanlarında gerekli olmadığına inandığınız fonksiyonların kapatılması bazı kazançlar sağlayabilir. Ayrıca burada sistem yüklemesi ve aktif oturum durumundan çıkıldığında, -ki bu durumda mesaj panosu çevrimdışı olur, bunlar için bazı sınırlamalar belirleyebilirsiniz.',
 
+	'ALLOW_CDN'						=> 'Allow usage of third party content delivery networks',
+	'ALLOW_CDN_EXPLAIN'				=> 'If this setting is enabled, some files will be served from external third party servers instead of your server. This reduces the network bandwidth required by your server, but may present a privacy issue for some board administrators. In a default phpBB installation, this includes loading “jQuery” and the font “Open Sans” from Google’s content delivery network.',
+	'ALLOW_LIVE_SEARCHES'			=> 'Allow live searches',
+	'ALLOW_LIVE_SEARCHES_EXPLAIN'	=> 'If this setting is enabled, users are provided with keyword suggestions as they type in certain fields throughout the board.',
 	'CUSTOM_PROFILE_FIELDS'			=> 'Özel profil alanları',
 	'LIMIT_LOAD'					=> 'Sistem yükleme sınırı',
 	'LIMIT_LOAD_EXPLAIN'			=> 'Eğer sistem, 1-dakika içerisindeki yükleme ortalamasında burada belirtilen değeri geçerse mesaj panosu otomatik olarak çevrimdışı olacaktır, 1.0 değeri bir işlemcinin ~100% kullanımına eşittir. Bu özellik sadece UNIX tabanlı sunucularda ve bu bilgiye erişebilen yerlerde geçerlidir. Eğer phpBB, sistemin yükleme sınırını tespit edemezse buradaki değer kendini 0 değerine sıfırlar.',
 	'LIMIT_SESSIONS'				=> 'Oturum sınırı',
 	'LIMIT_SESSIONS_EXPLAIN'		=> 'Eğer oturumların sayısı birer dakika periyotlar içerisinde burada belirtilen değeri geçerse mesaj panosu çevrimdışı olacaktır. Sınırsız oturum için 0 olarak ayarlayın.',
 	'LOAD_CPF_MEMBERLIST'			=> 'Üye listesinde özel profil alanları göstermek için stillere izin ver',
+	'LOAD_CPF_PM'					=> 'Display custom profile fields in private messages',
 	'LOAD_CPF_VIEWPROFILE'			=> 'Kullanıcı profillerinde özel profil alanları göster',
 	'LOAD_CPF_VIEWTOPIC'			=> 'Başlık sayfalarında özel profil alanları göster',
 	'LOAD_USER_ACTIVITY'			=> 'Kullanıcıların faaliyetlerini göster',
 	'LOAD_USER_ACTIVITY_EXPLAIN'	=> 'Kullanıcı profillerinde ve kullanıcı kontrol panelinde aktif olunan başlık/forum bilgilerini göster. Bir milyon mesajdan fazla olan mesaj panolarında bu özelliği kapatmanız önerilir.',
+	'READ_NOTIFICATION_EXPIRE_DAYS'	=> 'Read Notification Expiration',
+	'READ_NOTIFICATION_EXPIRE_DAYS_EXPLAIN' => 'Number of days that will elapse before a read notification will automatically be deleted. Set this value to 0 to make notifications permanent.',
 	'RECOMPILE_STYLES'				=> 'Bozulmuş stil bileşenlerini yeniden derle',
 	'RECOMPILE_STYLES_EXPLAIN'		=> 'Dosya sisteminde bulunan stil bileşenlerinin güncelliğini kontrol eder ve duruma göre yeniden derler',
 	'YES_ANON_READ_MARKING'			=> 'Misafirler için başlık işaretlenmesini aç',
@@ -9940,18 +10190,25 @@ $lang = array_merge($lang, array(
 	'YES_READ_MARKING_EXPLAIN'		=> 'Okunmuş/Okunmamış durum bilgilerinin çerez yerine sunucuda depolanmasını sağlayan özelliktir.',
 	'YES_UNREAD_SEARCH'				=> 'Okunmamış mesajlar için arama özelliğini aç',
 
-	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB yapısı eklenti veya modüllerin doğrulanmasını destekler. Kullanıcılar mesaj panosuna girdiklerinde onların nasıl doğrulanacağının belirlenmesine izin verir. Varsayılan olarak üç tane uyumlu eklenti bu ihtiyacı karşılar; DB, LDAP ve Apache. Hiçbir metot ekstra bir bilgi gerektirmez yani konu ile ilgili seçilmiş bir metot varsa bu bilgi alanını doldurunuz.',
+	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB supports authentication plug-ins, or modules. These allow you determine how users are authenticated when they log into the board. By default four plug-ins are provided: DB, LDAP, Apache, and OAuth. Not all methods require additional information so only fill out fields if they are relevant to the selected method.',
 
 	'AUTH_METHOD'				=> 'Bir doğrulama yöntemi seçiniz',
 
+	'AUTH_PROVIDER_OAUTH_ERROR_ELEMENT_MISSING'	=> 'Both the key and secret of each enabled OAuth service provider must be provided. Only one was provided for an OAuth service provider.',
+	'AUTH_PROVIDER_OAUTH_EXPLAIN'				=> 'Each OAuth provider requires a unique secret and key in order to authenticate with the external server. These should be supplied by the OAuth service when you register your website with them and should be entered exactly as provided to you.<br />Any service that does not have both a key and a secret entered here will not be available for use by the forum users. Also note, that user can still register and login using the DB authentication plug-in.',
+	'AUTH_PROVIDER_OAUTH_KEY'					=> 'Key',
+	'AUTH_PROVIDER_OAUTH_TITLE'					=> 'OAuth',
+	'AUTH_PROVIDER_OAUTH_SECRET'				=> 'Secret',
+
 	'APACHE_SETUP_BEFORE_USE'	=> 'Bu doğrulama metotuna phpBB\'yi ilave etmeden önce apache doğrulama ayarını yapın. Apache doğrulaması için kullanılacak akılda tutulması gereken kullanıcı adı phpBB kullanıcı adınız ile aynı olmalıdır. Apache doğrulaması sadece mod_php ile kullanılabilir (bir CGI sürümü ile değil) ve safe_mode kapalı olmalıdır.',
 
+	'LDAP'							=> 'LDAP',
 	'LDAP_DN'						=> 'LDAP tabanı <var>dn</var>',
 	'LDAP_DN_EXPLAIN'				=> 'Bu ayrılmış isim, kullanıcı bilgisi konumudur, örnek: <samp>o=My Company,c=US</samp>.',
-	'LDAP_EMAIL'					=> 'LDAP e-posta niteliği',
-	'LDAP_EMAIL_EXPLAIN'			=> 'Buradan yeni kullanıcılar için otomatik ayarlanacak olan kullanıcınızın e-posta girdisi niteliğinin (eğer bir tane varsa) adını ayarlayabilirsiniz. İlk defa giriş yapan kullanıcılara boş e-posta adresi dahil etmek için burayı boş bırakın.',
+	'LDAP_EMAIL'					=> 'LDAP email attribute',
+	'LDAP_EMAIL_EXPLAIN'			=> 'Set this to the name of your user entry email attribute (if one exists) in order to automatically set the email address for new users. Leaving this empty results in empty email address for users who log in for the first time.',
 	'LDAP_INCORRECT_USER_PASSWORD'	=> 'Belirtilen kullanıcı/şifre ile LDAP sunucusuna bağlanma başarısız oldu.',
-	'LDAP_NO_EMAIL'					=> 'Belirtilen e-posta niteliği bulunmuyor.',
+	'LDAP_NO_EMAIL'					=> 'The specified email attribute does not exist.',
 	'LDAP_NO_IDENTITY'				=> '%s için bir giriş kimliği bulunamadı.',
 	'LDAP_PASSWORD'					=> 'LDAP şifresi',
 	'LDAP_PASSWORD_EXPLAIN'			=> 'Anonim bağlayıcı kullanılıyorsa boş bırakın, aksi takdirde yukarıdaki kullanıcı için şifre belirtin. Aktif Dizin Sunucuları için gereklidir. <strong>DİKKAT:</strong> Bu şifre düz metin halinde veritabanına kaydedileceği için veritabanınıza erişebilen ya da bu ayar sayfasını görüntüleyebilen herkese görünecektir.',
@@ -9966,13 +10223,17 @@ $lang = array_merge($lang, array(
 	'LDAP_USER_FILTER'				=> 'LDAP kullanıcı filtresi',
 	'LDAP_USER_FILTER_EXPLAIN'		=> 'İsteğe bağlı olarak aranan objeler için ilave filtreler ile daha fazla limit belirleyebilirsiniz. Örneğin, <samp>objectClass=posixGroup</samp> şeklinde istenilen sonuçta <samp>(&amp;(uid=$username)(objectClass=posixGroup))</samp> kullanılır.',
 
-	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Buradan alan adı ile ilgili ayarları ve sunucu ayarlarını tanımlayabilirsiniz. Girdiğiniz verilerin doğrulundan kesin olarak emin olun. Hatalı olması durumunda e-postaların hatalı bilgiler içermesine sebep olunacaktır. Alan adını girdiğinizde şunu hatırlayın: mutlaka http:// veya diğer protokol terimlerini içermelidir. Sunucunuzun farklı bir değer kullandığını biliyorsanız ancak bu durumda port numaralarını değiştirin, port\'un 80 olması bir çok durumda doğrudur.',
+	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Here you define server and domain dependent settings. Please ensure the data you enter is accurate, errors will result in emails containing incorrect information. When entering the domain name remember it does include http:// or other protocol term. Only alter the port number if you know your server uses a different value, port 80 is correct in most cases.',
 	'ENABLE_GZIP'				=> 'GZip sıkıştırmasını aç',
 	'ENABLE_GZIP_EXPLAIN'		=> 'Oluşturulan içerik kullanıcıya göndermek için öncelikle sıkıştırılacaktır. Bu, ağ trafiğini azaltabilir fakat ayrıca sunucu ve bağlantı tarafının her ikisinde CPU kullanımı artacaktır. Zlib PHP uzantısının yüklenmiş olması gereklidir.',
 	'FORCE_SERVER_VARS'			=> 'Sunucu URL ayarlarını zorla',
 	'FORCE_SERVER_VARS_EXPLAIN'	=> 'Evet olarak seçilmesi durumunda sunucu ayarları buradaki otomatik olarak belirlenmiş değerlere tabi olacak ve kullanılacaktır.',
 	'ICONS_PATH'				=> 'Mesaj ikonlarının bulunduğu yol',
 	'ICONS_PATH_EXPLAIN'		=> 'phpBB ana klasörünüzün alt yolu, örnek: <samp>images/icons</samp>.',
+	'MOD_REWRITE_ENABLE'		=> 'Enable URL Rewriting',
+	'MOD_REWRITE_ENABLE_EXPLAIN' => 'When enabled, URLs containing ’app.php’ will be rewritten to remove the filename (i.e. app.php/foo will become /foo). <strong>Apache server’s mod_rewrite module is required for this functionality to work; if this option is enabled without mod_rewrite support, URLs on your board may be broken.</strong>',
+	'MOD_REWRITE_DISABLED'		=> 'The <strong>mod_rewrite</strong> module on your Apache web server is disabled. Enable the module or contact your web hosting provider if you wish to enable this feature.',
+	'MOD_REWRITE_INFORMATION_UNAVAILABLE' => 'We are unable to determine whether or not this server supports URL rewriting. This setting may be enabled but if URL rewriting is not available, paths generated by this board (such as for use in links) may be broken. Contact your web hosting provider if you are unsure whether or not you can safely enable this feature.',
 	'PATH_SETTINGS'				=> 'Yol ayarları',
 	'RANKS_PATH'				=> 'Rütbe resimlerinin saklandığı yol',
 	'RANKS_PATH_EXPLAIN'		=> 'phpBB ana klasörünüzün alt yolu, örnek: <samp>images/ranks</samp>.',
@@ -9989,13 +10250,21 @@ $lang = array_merge($lang, array(
 	'SMILIES_PATH_EXPLAIN'		=> 'phpBB ana klasörünüzün alt yolu, ör: <samp>images/smilies</samp>.',
 	'UPLOAD_ICONS_PATH'			=> 'Uzantı grup ikonlarının saklandığı klasör',
 	'UPLOAD_ICONS_PATH_EXPLAIN'	=> 'phpBB ana klasörünüzün alt yolu, ör: <samp>images/upload_icons</samp>.',
+	'USE_SYSTEM_CRON'		=> 'Run periodic tasks from system cron',
+	'USE_SYSTEM_CRON_EXPLAIN'		=> 'When off, phpBB will arrange for periodic tasks to be run automatically. When on, phpBB will not schedule any periodic tasks by itself; a system administrator must arrange for <code>bin/phpbbcli.php cron:run</code> to be run by the system cron facility at regular intervals (e.g. every 5 minutes).',
 
 	'ACP_SECURITY_SETTINGS_EXPLAIN'		=> 'Buradan oturum ve giriş ile ilgili ayarları belirleyebilirsiniz.',
 	'ALL'							=> 'Tümü',
-	'ALLOW_AUTOLOGIN'				=> 'Sürekli girişlere izin ver',
-	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Kullanıcıların mesaj panosunu ziyaret ettiklerinde otomatik olarak giriş yapıp yapamayacaklarını belirler.',
-	'AUTOLOGIN_LENGTH'				=> 'Sürekli giriş anahtarının sona erme uzunluğu (gün cinsinden)',
-	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Sürekli giriş anahtarları burada belirlenen gün sayısından sonra kaldırılır. Bu özelliği kapatmak için rakamla 0 (sıfır) sayısını kullanın.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'ALLOW_PASSWORD_RESET'			=> 'Allow password reset ("Forgot Password")',
+	'ALLOW_PASSWORD_RESET_EXPLAIN'	=> 'Determines whether or not users are able to use the "I forgot my password" link on the login page to recover their account. If you use an external authentication mechanism you may wish to disable this feature.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
 	'BROWSER_VALID'					=> 'Tarayıcı doğrulama',
 	'BROWSER_VALID_EXPLAIN'			=> 'Her oturumdaki güvenliğini artırmak için, web tarayıcısı doğrulamayı açık hale getirir.',
 	'CHECK_DNSBL'					=> 'DNS Kara Listesine karşı IP kontrolü',
@@ -10032,8 +10301,12 @@ $lang = array_merge($lang, array(
 	'PASS_TYPE_SYMBOL'				=> 'Semboller içermelidir',
 	'REF_HOST'						=> 'Sadece host\'u doğrula',
 	'REF_PATH'						=> 'Ayrıca yolu da doğrula',
-	'REFERER_VALID'					=> 'Referer Doğrulaması',
+	'REFERRER_VALID'				=> 'Validate Referrer',
+	'REFERRER_VALID_EXPLAIN'		=> 'If enabled, the referrer of POST requests will be checked against the host/script path settings. This may cause issues with boards using several domains and or external logins.',
+
+	'REFERER_VALID'					=> 'Referer Doğrulaması',	//3.0.12
 	'REFERER_VALID_EXPLAIN'			=> 'Eğer bu ayar etkinleştirilirse, POST isteklerinin yapıldığı referer (diğer web sitelerinden gelen istekler) host/script yolu (path) ayarlarına karşı kontrol edilecektir. Bu işlem farklı alan adları ve / veya harici girişler kullanan mesaj panoları için sorunlara neden olabilir.',
+
 	'TPL_ALLOW_PHP'					=> 'Şablonlarda php\'ye izin ver',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Eğer bu özellik açılırsa, <code>PHP</code> ve <code>INCLUDEPHP</code> ifadeleri tanınacak ve tema şablonlarının içerisine işlenecektir.',
 
@@ -10046,6 +10319,8 @@ $lang = array_merge($lang, array(
 	'BOARD_HIDE_EMAILS_EXPLAIN'		=> 'Bu fonksiyonla e-posta adresleri tamamen özel olarak gizlenir.',
 	'CONTACT_EMAIL'					=> 'İletişim e-posta adresi',
 	'CONTACT_EMAIL_EXPLAIN'			=> 'Bu adres, özel bir iletişim noktası gerektiği zaman kullanılacaktır, örnek: spam, hatalı çıktı, vb. Bu, e-postalarda her zaman <samp>Kimden</samp> ve <samp>Kime</samp> adresi olarak kullanılacaktır.',
+	'CONTACT_EMAIL_NAME'			=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 	'EMAIL_FUNCTION_NAME'			=> 'E-posta fonksiyon ismi',
 	'EMAIL_FUNCTION_NAME_EXPLAIN'	=> 'PHP aracılığıyla posta gönderiminde kullanılacak e-posta fonksiyonu.',
 	'EMAIL_PACKAGE_SIZE'			=> 'E-posta paket boyutu',
@@ -10236,7 +10511,7 @@ $lang = array_merge($lang, array(
 	'ACP_BAN'					=> 'Yasaklama',
 	'ACP_BAN_EMAILS'			=> 'E-postaları yasakla',
 	'ACP_BAN_IPS'				=> 'IP\'leri yasakla',
-	'ACP_BAN_USERNAMES'			=> 'Kullanıcı adlarını yasakla',
+	'ACP_BAN_USERNAMES'			=> 'Ban users',
 	'ACP_BBCODES'				=> 'BBCode\'lar',
 	'ACP_BOARD_CONFIGURATION'	=> 'Mesaj panosu konfigürasyonu',
 	'ACP_BOARD_FEATURES'		=> 'Mesaj panosu özellikleri',
@@ -10245,8 +10520,10 @@ $lang = array_merge($lang, array(
 	'ACP_BOTS'					=> 'Örümcekler/Robotlar',
 
 	'ACP_CAPTCHA'				=> 'CAPTCHA',
+	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'Veritabanı',
+	'ACP_CAT_DOT_MODS'			=> '.MODlar',
 	'ACP_CAT_DOT_MODS'			=> '.MODlar',
 	'ACP_CAT_FORUMS'			=> 'Forumlar',
 	'ACP_CAT_GENERAL'			=> 'Genel',
@@ -10259,6 +10536,8 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_USERS'				=> 'Kullanıcılar',
 	'ACP_CLIENT_COMMUNICATION'	=> 'İletişim bağlantıları',
 	'ACP_COOKIE_SETTINGS'		=> 'Çerez ayarları',
+	'ACP_CONTACT'				=> 'Contact page',
+	'ACP_CONTACT_SETTINGS'		=> 'Contact page settings',
 	'ACP_CRITICAL_LOGS'			=> 'Hata kaydı',
 	'ACP_CUSTOM_PROFILE_FIELDS'	=> 'Özel profil alanları',
 
@@ -10266,8 +10545,11 @@ $lang = array_merge($lang, array(
 	'ACP_DISALLOW'				=> 'Yasaklama',
 	'ACP_DISALLOW_USERNAMES'	=> 'Yasaklı kullanıcı isimleri',
 
-	'ACP_EMAIL_SETTINGS'		=> 'E-posta ayarları',
-	'ACP_EXTENSION_GROUPS'		=> 'Eklenti gruplarını yönet',
+	'ACP_EMAIL_SETTINGS'		=> 'Email settings',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
+	'ACP_EXTENSION_MANAGEMENT'	=> 'Extension management',
+	'ACP_EXTENSIONS'			=> 'Manage extensions',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
 	'ACP_FORMS'					=> 'Customizable Forms',
 	'ACP_FORMS_BUILDER'			=> 'Form Builder',
 
@@ -10288,10 +10570,10 @@ $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE'				=> 'Grupları yönet',
 	'ACP_GROUPS_MANAGEMENT'			=> 'Grup yönetimi',
 	'ACP_GROUPS_PERMISSIONS'		=> 'Grup izinleri',
+	'ACP_GROUPS_POSITION'			=> 'Manage group positions',
 
 	'ACP_ICONS'					=> 'Başlık ikonları',
 	'ACP_ICONS_SMILIES'			=> 'Başlık ikonları/ifadeler',
-	'ACP_IMAGESETS'				=> 'Görüntü kümeleri',
 	'ACP_INACTIVE_USERS'		=> 'Aktif olmayan kullanıcılar',
 	'ACP_INDEX'					=> 'YKP ana sayfa',
 
@@ -10303,11 +10585,15 @@ $lang = array_merge($lang, array(
 	'ACP_LOGGING'				=> 'Girişler',
 
 	'ACP_MAIN'					=> 'YKP ana sayfa',
-	'ACP_MANAGE_EXTENSIONS'		=> 'Eklentileri yönet',
+
+	'ACP_MANAGE_ATTACHMENTS'			=> 'Eklentileri yönet',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
+
+	'ACP_MANAGE_EXTENSIONS'		=> 'Manage attachment extensions',
 	'ACP_MANAGE_RANKS'			=> 'Rütbeleri yönet',
 	'ACP_MANAGE_REASONS'		=> 'Bildiri/Yasaklama sebeplerini yönet',
 	'ACP_MANAGE_USERS'			=> 'Kullanıcıları yönet',
-	'ACP_MASS_EMAIL'			=> 'Toplu e-posta',
+	'ACP_MASS_EMAIL'			=> 'Mass email',
 	'ACP_MESSAGES'				=> 'Mesajlar',
 	'ACP_MESSAGE_SETTINGS'		=> 'Özel mesaj ayarları',
 	'ACP_MODULE_MANAGEMENT'		=> 'Modül yönetimi',
@@ -10352,6 +10638,8 @@ $lang = array_merge($lang, array(
 	'ACP_STYLE_COMPONENTS'		=> 'Stil bileşenleri',
 	'ACP_STYLE_MANAGEMENT'		=> 'Stil yönetimi',
 	'ACP_STYLES'				=> 'Stiller',
+	'ACP_STYLES_CACHE'			=> 'Purge Cache',
+	'ACP_STYLES_INSTALL'		=> 'Install Styles',
 
 	'ACP_SUBMIT_CHANGES'		=> 'Değişiklikleri uygula',
 
@@ -10403,6 +10691,10 @@ $lang = array_merge($lang, array(
 
 	'COLOUR_SWATCH'			=> 'Renk kuşağı',
 	'CONFIG_UPDATED'		=> 'Ayarlar başarıyla güncellendi.',
+	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
+	'CRON_NO_SUCH_TASK'		=> 'Could not find cron task â€œ%sâ€.',
+	'CRON_NO_TASK'			=> 'No cron tasks need to be run right now.',
+	'CRON_NO_TASKS'			=> 'No cron tasks could be found.',
 
 	'DEACTIVATE'				=> 'Deaktifleştir',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'Girilen “%s” yolu mevcut değil.',
@@ -10413,6 +10705,7 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_AS'				=> 'Farklı indir',
 	'DOWNLOAD_STORE'			=> 'İndir ya da dosyayı depola',
 	'DOWNLOAD_STORE_EXPLAIN'	=> 'Dosyayı direkt olarak indirebilir ya da <samp>store/</samp> dizininize kaydedebilirsiniz.',
+	'DOWNLOADS'					=> 'İndirmeler',
 
 	'EDIT'					=> 'Düzenle',
 	'ENABLE'				=> 'Aç',
@@ -10427,6 +10720,8 @@ $lang = array_merge($lang, array(
 	'IP'					=> 'IP',
 	'IP_HOSTNAME'			=> 'IP adresleri ya da sunucu isimleri',
 
+	'LOAD_NOTIFICATIONS'			=> 'Display Notifications',
+	'LOAD_NOTIFICATIONS_EXPLAIN'	=> 'Display the notifications list on every page (typically in the header).',
 	'LOGGED_IN_AS'			=> 'Şu şekilde giriş yaptınız:',
 	'LOGIN_ADMIN'			=> 'Mesaj panosunu yönetmek için yetkilendirilmiş bir kullanıcı olmalısınız.',
 	'LOGIN_ADMIN_CONFIRM'	=> 'Mesaj panosunu yönetmek için hesabınızı yeniden doğrulamalısınız.',
@@ -10443,7 +10738,8 @@ $lang = array_merge($lang, array(
 
 	'NOTIFY'				=> 'Bildiri',
 	'NO_ADMIN'				=> 'Bu mesaj panosunu yönetmek için yetkiniz yok.',
-	'NO_EMAILS_DEFINED'		=> 'Geçerli bir e-posta adresi bulunamadı.',
+	'NO_EMAILS_DEFINED'		=> 'No valid email addresses found.',
+	'NO_FILES_TO_DELETE'	=> 'Attachments you selected for deletion do not exist.',
 	'NO_PASSWORD_SUPPLIED'	=> 'Bir şifre olmadan giriş yapamazsınız.',
 
 	'OFF'					=> 'Kapalı',
@@ -10459,8 +10755,8 @@ $lang = array_merge($lang, array(
 
 	'REMIND'							=> 'Hatırlat',
 	'RESYNC'							=> 'Yeniden senkronize et',
-	'RETURN_TO'							=> 'Dön',
 
+	'RUNNING_TASK'			=> 'Running task: %s.',
 	'SELECT_ANONYMOUS'		=> 'Misafir kullanıcı seç',
 	'SELECT_OPTION'			=> 'Tercih seç',
 
@@ -10470,6 +10766,10 @@ $lang = array_merge($lang, array(
 	'SETTING_TOO_SHORT'		=> '“%1$s” ayarı için girilen değer yeterli uzunlukta değil. En düşük izin verilen uzunluk %2$d.',
 
 	'SHOW_ALL_OPERATIONS'	=> 'Tüm işlemleri göster',
+
+	'TASKS_NOT_READY'			=> 'Not ready tasks:',
+	'TASKS_READY'			=> 'Ready tasks:',
+	'TOTAL_SIZE'			=> 'Total size',
 
 	'UCP'					=> 'Kullanıcı Kontrol Paneli',
 	'USERNAMES_EXPLAIN'		=> 'Her kullanıcı adını ayrı bir satıra yerleştirin.',
@@ -10481,7 +10781,7 @@ $lang = array_merge($lang, array(
 	'NO_PHPINFO_AVAILABLE'	=> 'PHP ayarlarınız hakkındaki bilgiler belirlenemiyor. Güvenlik sebepleri yüzünden phpinfo() komutu kapatıldı.',
 
 	'ACP_ADMIN_LOGS_EXPLAIN'	=> 'Buradaki listede mesaj panosu yöneticilerinin gerçekleştirdiği hareketleri görebilirsiniz. Sıralamayı isme, güne, IP adresine ya da yapılan kayıt hareketine göre yapabilirsiniz. Şayet gerekli yetkiye sahipseniz buradaki bireysel kayıtları ya da tüm kayıt bilgilerini temizleyebilirsiniz.',
-	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'Buradaki listede mesaj panosunun kendi kendine gerçekleştirdiği hareketleri görebilirsiniz. Bu kayıt bilgileri özel mesaj panosu sorunlarını çözmek için imkan sağlar. Örnek verecek olursak, e-posta gönderimi işleminin kullanıcılara ulaşamaması gibi. Sıralamayı isme, güne, IP adresine ya da yapılan kayıt hareketine göre yapabilirsiniz. Şayet gerekli yetkiye sahipseniz buradaki bireysel kayıtları ya da tüm kayıt bilgilerini temizleyebilirsiniz.',
+	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'This lists the actions carried out by the board itself. This log provides you with information you are able to use for solving specific problems, for example non-delivery of emails. You can sort by username, date, IP or action. If you have appropriate permissions you can also clear individual operations or the log as a whole.',
 	'ACP_MOD_LOGS_EXPLAIN'		=> 'Buradaki listelerde moderatörler tarafından başlıklar ve mesajlar gibi forumlarda yapılan ve kullanıcılar üzerinde, yasaklamalar dahil yapılan tüm eylemleri görebilirsiniz. Sıralamayı kullanıcı adına, güne, IP adresine ya da eyleme göre yapabilirsiniz. Ayrıca eğer gerekli izinlere sahipseniz buradaki bireysel kayıtları ya da tüm kayıt bilgilerini temizleyebilirsiniz.',
 	'ACP_USERS_LOGS_EXPLAIN'	=> 'Buradaki listelerde tüm kullanıcılar tarafından ya da kullanıcılar üzerinde yapılan tüm eylemleri (bildiriler, uyarılar ve kullanıcı notları) görebilirsiniz.',
 	'ALL_ENTRIES'				=> 'Tüm girdiler',
@@ -10507,6 +10807,7 @@ $lang = array_merge($lang, array(
 
 	'GZIP_COMPRESSION'	=> 'Gzip sıkıştırma',
 
+	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'Mevcut değil',
 	'NUMBER_FILES'		=> 'Eklentilerin sayısı',
 	'NUMBER_POSTS'		=> 'Mesajların sayısı',
@@ -10519,29 +10820,38 @@ $lang = array_merge($lang, array(
 	'PURGE_CACHE'			=> 'Önbellek temizliği',
 	'PURGE_CACHE_CONFIRM'	=> 'Önbelleği temizlemek istediğinize emin misiniz?',
 	'PURGE_CACHE_EXPLAIN'	=> 'Tüm önbellek ile ilgili ögeleri temizler; bu, önbelleklenen herhangi şablon dosyalarını ya da sorgularını kapsar.',
+	'PURGE_CACHE_SUCCESS'	=> 'Cache successfully purged.',
 
 	'PURGE_SESSIONS'			=> 'Tüm oturumları temizle',
 	'PURGE_SESSIONS_CONFIRM'	=> 'Tüm oturumları temizlemek istediğinizden emin misiniz? Bu işlem tüm kullanıcıların oturumlarını sonlandıracaktır.',
 	'PURGE_SESSIONS_EXPLAIN'	=> 'Tüm oturumları temizler. Bu işlem oturum tablosunun boşaltılmasıyla tüm kullanıcıların oturumlarını sonlandırır.',
+	'PURGE_SESSIONS_SUCCESS'	=> 'Sessions successfully purged.',
 
 	'RESET_DATE'					=> 'Mesaj panosunun açılış tarihini sıfırla',
 	'RESET_DATE_CONFIRM'			=> 'Mesaj panosunun açılış tarihini sıfırlamak istediğinize emin misiniz?',
+	'RESET_DATE_SUCCESS'				=> 'Boardâ€™s start date reset',
 	'RESET_ONLINE'					=> 'Şimdiye kadar en çok çevrimiçi olanları sıfırla',
 	'RESET_ONLINE_CONFIRM'			=> 'Şimdiye kadar en çok çevrimiçi olanlar sayacını sıfırlamak istediğinize emin misiniz?',
+	'RESET_ONLINE_SUCCESS'				=> 'Most users ever online reset',
 	'RESYNC_POSTCOUNTS'				=> 'Mesaj sayaçlarını yeniden senkronize et',
 	'RESYNC_POSTCOUNTS_EXPLAIN'		=> 'Sadece varolan mesajlar gözönüne alınacaktır. Budanan mesajlar hesaba katılmayacaktır.',
 	'RESYNC_POSTCOUNTS_CONFIRM'		=> 'Mesaj sayaçlarını yeniden senkronize etmek istediğinize emin misiniz?',
+	'RESYNC_POSTCOUNTS_SUCCESS'			=> 'Resynchronised post counts',
 	'RESYNC_POST_MARKING'			=> 'Noktalanan başlıkları yeniden senkronize et',
 	'RESYNC_POST_MARKING_CONFIRM'	=> 'Noktalanan başlıkları yeniden senkronize etmek istediğinize emin misiniz?',
 	'RESYNC_POST_MARKING_EXPLAIN'	=> 'İlk önce tüm başlıkların işaretleri kaldırılır ve o zaman geçmişteki altı ay içinde herhangi bir aktivite görülen işaretli başlıklar doğru şekilde görüntülenir.',
+	'RESYNC_POST_MARKING_SUCCESS'	=> 'Resynchronised dotted topics',
 	'RESYNC_STATS'					=> 'İstatistikleri yeniden senkronize et',
 	'RESYNC_STATS_CONFIRM'			=> 'İstatistikleri yeniden senkronize etmek istediğinize emin misiniz?',
 	'RESYNC_STATS_EXPLAIN'			=> 'Mesajların, başlıkların, kullanıcıların ve dosyaların toplam sayısını yeniden hesaplar.',
+	'RESYNC_STATS_SUCCESS'			=> 'Resynchronised statistics',
 	'RUN'							=> 'Şimdi çalıştır',
 
 	'STATISTIC'					=> 'İstatistik',
 	'STATISTIC_RESYNC_OPTIONS'	=> 'İstatistikleri sıfırla veya yeniden senkronize et',
 
+	'TIMEZONE_INVALID'	=> 'The timezone you selected is invalid.',
+	'TIMEZONE_SELECTED'	=> '(currently selected)',
 	'TOPICS_PER_DAY'	=> 'Günlük ortalama başlık',
 
 	'UPLOAD_DIR_SIZE'	=> 'Gönderilen eklentilerin boyutu',
@@ -10722,9 +11032,9 @@ $lang = array_merge($lang, array(
 
 	'LOG_APPROVE_TOPIC'			=> '<strong>Başlık onaylandı</strong><br />» %s',
 	'LOG_BUMP_TOPIC'			=> '<strong>Kullanıcı başlığı darbeledi</strong><br />» %s',
-	'LOG_DELETE_POST'			=> '<strong>Mesaj silindi</strong><br />» %s',
-	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Gölgeli başlık silindi</strong><br />» %s',
-	'LOG_DELETE_TOPIC'			=> '<strong>Başlık silindi</strong><br />» %s',
+	'LOG_DELETE_POST'			=> '<strong>Deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Deleted shadow topic</strong><br />Â» %s',
+	'LOG_DELETE_TOPIC'			=> '<strong>Deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_FORK'					=> '<strong>Başlık kopyalandı</strong><br />» Başlık %s forumundan kopyalandı',
 	'LOG_LOCK'					=> '<strong>Başlık kilitlendi</strong><br />» %s',
 	'LOG_LOCK_POST'				=> '<strong>Mesaj kilitlendi</strong><br />» %s',
@@ -10733,15 +11043,20 @@ $lang = array_merge($lang, array(
 	'LOG_PM_REPORT_CLOSED'		=> '<strong>ÖM bildirisi kapatıldı</strong><br />» %s',
 	'LOG_PM_REPORT_DELETED'		=> '<strong>ÖM bildirisi silindi</strong><br />» %s',
 	'LOG_POST_APPROVED'			=> '<strong>Mesaj onaylandı</strong><br />» %s',
-	'LOG_POST_DISAPPROVED'		=> '<strong>“%1$s” konulu mesaj onaylanmadı</strong><br />» Onaylanmama sebebi: %2$s',
-	'LOG_POST_EDITED'			=> '<strong>“%1$s” konulu mesaj düzenlendi</strong><br />» Mesajın yazarı: %2$s',
+	'LOG_POST_DISAPPROVED'		=> '<strong>Disapproved post â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
+	'LOG_POST_EDITED'			=> '<strong>Edited post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_POST_RESTORED'			=> '<strong>Restored post</strong><br />Â» %s',
 	'LOG_REPORT_CLOSED'			=> '<strong>Bildiri kapatıldı</strong><br />» %s',
 	'LOG_REPORT_DELETED'		=> '<strong>Bildiri silindi</strong><br />» %s',
+	'LOG_RESTORE_TOPIC'			=> '<strong>Restored topic â€œ%1$sâ€ written by</strong><br />Â» %2$s',
+	'LOG_SOFTDELETE_POST'		=> '<strong>Soft deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_SOFTDELETE_TOPIC'		=> '<strong>Soft deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_SPLIT_DESTINATION'		=> '<strong>Bölünen mesajlar taşındı</strong><br />» Bölünen mesajlar %s başlığına taşındı',
 	'LOG_SPLIT_SOURCE'			=> '<strong>Mesajlar bölündü</strong><br />» Mesajlar %s başlığından bölündü',
 
 	'LOG_TOPIC_APPROVED'		=> '<strong>Başlık onaylandı</strong><br />» %s',
-	'LOG_TOPIC_DISAPPROVED'		=> '<strong>“%1$s” konulu başlık onaylanmadı</strong><br />Onaylanmama sebebi: %2$s',
+	'LOG_TOPIC_RESTORED'		=> '<strong>Restored topic</strong><br />Â» %s',
+	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Disapproved topic â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
 	'LOG_TOPIC_RESYNC'			=> '<strong>Başlık sayaçları yeniden senkronize edildi</strong><br />» %s',
 	'LOG_TOPIC_TYPE_CHANGED'	=> '<strong>Başlık tipi değiştirildi</strong><br />» %s',
 	'LOG_UNLOCK'				=> '<strong>Başlığın kilidi açıldı</strong><br />» %s',
@@ -10793,16 +11108,6 @@ $lang = array_merge($lang, array(
 
 	'LOG_IMAGE_GENERATION_ERROR'	=> '<strong>Resim oluşturulurken hata meydana geldi</strong><br />» Hata, %1$s içinde ve %2$s satırında: %3$s',
 
-	'LOG_IMAGESET_ADD_DB'			=> '<strong>Veritabanına yeni görüntü kümesi eklendi</strong><br />» %s',
-	'LOG_IMAGESET_ADD_FS'			=> '<strong>Dosya sistemine yeni görüntü kümesi eklendi</strong><br />» %s',
-	'LOG_IMAGESET_DELETE'			=> '<strong>Görüntü kümesi silindi</strong><br />» %s',
-	'LOG_IMAGESET_EDIT_DETAILS'		=> '<strong>Görüntü kümesi bilgileri düzenlendi</strong><br />» %s',
-	'LOG_IMAGESET_EDIT'				=> '<strong>Görüntü kümesi düzenlendi</strong><br />» %s',
-	'LOG_IMAGESET_EXPORT'			=> '<strong>Görüntü kümesi dışarı aktarıldı</strong><br />» %s',
-	'LOG_IMAGESET_LANG_MISSING'		=> '<strong>“%2$s” kısmındaki görüntü kümesi kayboldu</strong><br />» %1$s',
-	'LOG_IMAGESET_LANG_REFRESHED'	=> '<strong>Görüntü kümesinin “%2$s” kısmı yenilendi</strong><br />» %1$s',
-	'LOG_IMAGESET_REFRESHED'		=> '<strong>Görüntü kümesi yenilendi</strong><br />» %s',
-
 	'LOG_INACTIVE_ACTIVATE'	=> '<strong>Aktif olmayan kullanıcılar aktif edildi</strong><br />» %s',
 	'LOG_INACTIVE_DELETE'	=> '<strong>Aktif olmayan kullanıcılar silindi</strong><br />» %s',
 	'LOG_INACTIVE_REMIND'	=> '<strong>Aktif olmayan kullanıcılara hatırlatma e-postası gönderildi</strong><br />» %s',
@@ -10847,6 +11152,7 @@ $lang = array_merge($lang, array(
 	'LOG_U_ROLE_EDIT'		=> '<strong>Kullanıcı Rolü düzenlendi</strong><br />» %s',
 	'LOG_U_ROLE_REMOVED'	=> '<strong>Kullanıcı Rolü silindi</strong><br />» %s',
 
+	'LOG_PLUPLOAD_TIDY_FAILED'		=> '<strong>Unable to open %1$s for tidying, check permissions.</strong><br />Exception: %2$s<br />Trace: %3$s',
 	'LOG_PROFILE_FIELD_ACTIVATE'	=> '<strong>Profil alanı aktif edildi</strong><br />» %s',
 	'LOG_PROFILE_FIELD_CREATE'		=> '<strong>Profil alanı eklendi</strong><br />» %s',
 	'LOG_PROFILE_FIELD_DEACTIVATE'	=> '<strong>Profil alanı pasif edildi</strong><br />» %s',
@@ -10855,13 +11161,13 @@ $lang = array_merge($lang, array(
 
 	'LOG_PRUNE'					=> '<strong>Forumlar budandı</strong><br />» %s',
 	'LOG_AUTO_PRUNE'			=> '<strong>Forumlar otomatik olarak budandı</strong><br />» %s',
+	'LOG_PRUNE_SHADOW'		=> '<strong>Auto-pruned shadow topics</strong><br />Â» %s',
 	'LOG_PRUNE_USER_DEAC'		=> '<strong>Kullanıcılar deaktif edildi</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_DEL'	=> '<strong>Kullanıcılar budandı ve mesajlar silindi</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_ANON'	=> '<strong>Kullanıcılar budandı ve mesajlar tutuldu</strong><br />» %s',
 
 	'LOG_PURGE_CACHE'			=> '<strong>Önbellek temizlendi</strong>',
 	'LOG_PURGE_SESSIONS'		=> '<strong>Oturumlar temizlendi</strong>',
-
 
 	'LOG_RANK_ADDED'		=> '<strong>Yeni rütbe eklendi</strong><br />» %s',
 	'LOG_RANK_REMOVED'		=> '<strong>Rütbe silindi</strong><br />» %s',
@@ -10871,15 +11177,17 @@ $lang = array_merge($lang, array(
 	'LOG_REASON_REMOVED'	=> '<strong>Bildiri/yasaklama sebebi silindi</strong><br />» %s',
 	'LOG_REASON_UPDATED'	=> '<strong>Bildiri/yasaklama sebebi güncellendi</strong><br />» %s',
 
-	'LOG_REFERER_INVALID'		=> '<strong>Referer doğrulaması başarısız oldu</strong><br />»Referer, “<em>%1$s</em>” olarak görüldü. İstek kabul edilmedi ve oturum sonlandırıldı.',
+	'LOG_REFERER_INVALID'		=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 	'LOG_RESET_DATE'			=> '<strong>Mesaj panosu açılış tarihi değeri sıfırlandı</strong>',
 	'LOG_RESET_ONLINE'			=> '<strong>En çok çevrimiçi olan kullanıcılar değeri sıfırlandı</strong>',
+	'LOG_RESYNC_FILES_STATS'	=> '<strong>File statistics resynchronised</strong>',
 	'LOG_RESYNC_POSTCOUNTS'		=> '<strong>Kullanıcı mesaj sayacı yeniden senkronize edildi</strong>',
 	'LOG_RESYNC_POST_MARKING'	=> '<strong>İşaretli başlıklar yeniden senkronize edildi</strong>',
 	'LOG_RESYNC_STATS'			=> '<strong>Mesaj, başlık ve kullanıcı istatistikleri yeniden senkronize edildi</strong>',
 
 	'LOG_SEARCH_INDEX_CREATED'	=> '<strong>Arama indeksi oluşturuldu</strong><br />» %s',
 	'LOG_SEARCH_INDEX_REMOVED'	=> '<strong>Arama indeksi kaldırıldı</strong><br />» %s',
+	'LOG_SPHINX_ERROR'			=> '<strong>Sphinx Error</strong><br />Â» %s',
 	'LOG_STYLE_ADD'				=> '<strong>Yeni stil eklendi</strong><br />» %s',
 	'LOG_STYLE_DELETE'			=> '<strong>Stil silindi</strong><br />» %s',
 	'LOG_STYLE_EDIT_DETAILS'	=> '<strong>Stil düzenlendi</strong><br />» %s',
@@ -10946,15 +11254,18 @@ $lang = array_merge($lang, array(
 	'LOG_USER_GROUP_RESIGN'			=> '<strong>Kullanıcı grup üyeliğinden ayrıldı</strong><br />» %s',
 
 	'LOG_WARNING_DELETED'		=> '<strong>Kullanıcı uyarısı silindi</strong><br />» %s',
-	'LOG_WARNINGS_DELETED'		=> '<strong>%2$s kullanıcı uyarısı silindi</strong><br />» %1$s',
 	'LOG_WARNINGS_DELETED_ALL'	=> '<strong>Tüm kullanıcı uyarıları silindi</strong><br />» %s',
 
 	'LOG_WORD_ADD'			=> '<strong>Kelime sansürü eklendi</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>Kelime sansürü silindi</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Kelime sansürü düzenlendi</strong><br />» %s',
+
+	'LOG_EXT_ENABLE'	=> '<strong>Extension enabled</strong><br />Â» %s',
+	'LOG_EXT_DISABLE'	=> '<strong>Extension disabled</strong><br />Â» %s',
+	'LOG_EXT_PURGE'		=> '<strong>Extensionâ€™s data deleted</strong><br />Â» %s',
+
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
-
 ));
 
 $lang = array_merge($lang, array(
@@ -11255,7 +11566,7 @@ $lang = array_merge($lang, array(
 	'ACP_PORTAL_WELCOME_EXPLAIN'=> '',
 	'ADM_LOGOUT'			=> 'YKP&nbsp;Çıkış',
 	'ADM_LOGGED_OUT'		=> 'Yönetici Kontrol Panelinden başarıyla çıkış yaptınız',
-	'LOG_REFERER_INVALID'	=> '<strong>Referer doğrulaması başarısız oldu</strong><br />»Referer, “<em>%1$s</em>” olarak görüldü. İstek kabul edilmedi ve oturum sonlandırıldı.',
+	'LOG_REFERER_INVALID'	=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 
 	'ACP_ABBCODES'			=> 'BBcode Box',
 	'LOG_CONFIG_ABBCODES'	=> '<strong>Altered BBCode Box settings</strong>',
@@ -11661,7 +11972,7 @@ $lang = array_merge($lang, array(
 	'SELECT_A_PREFIX'				=> 'Select a prefix',
 	'ACP_SEOQUERYS'					=> 'SEO Queries',
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Eklentileri yönet',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can list and delete files attached to posts and private messages.',
 	'LOG_ATTACH_DEL'				=> '<strong>Attachments deleted</strong><br />» %s',
 	'LOG_ATTACH_REASSIGNED'			=> '<strong>Attachment reassigned to Post</strong><br />» ID %1$d - %2$s',
 	'TOTAL_SIZE'					=> 'Total size',
@@ -11680,11 +11991,11 @@ $lang = array_merge($lang, array(
 	'ACP_INTRO'				=> 'Intro',
 
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Eklentileri yönet',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
 	'TOTAL_SIZE'				=> 'Total size',
 	'DOWNLOADS'				=> 'İndirmeler',
 
-	'NO_AVATAR'				=> 'URL of the avatar for all the have no separate',
+	'NO_AVATAR'				=> 'No avatar selected',
 	'NO_AVATAR_EXPLAIN'			=> 'The optimal size of the avatar is 120x120px, this box is left blank, no picture at all. <br /> Demo URL: http://www.userboard.org/images/no_avatar_1.gif',
 	'GROUP_ICON'				=> 'Group Icon',
 	'GROUP_ICON_EXPLAIN'			=> 'Upload your Group Icons into Upload &#187; Topic/Group Icons',
@@ -12847,6 +13158,97 @@ $lang = array_merge($lang, array(
 	'NO_EMAIL_SUBJECT'		=> 'E-posta konusu belirtilmedi.',
 ));
 
+#######language/en/acp/extensions.php#######
+
+$lang = array_merge($lang, array(
+	'EXTENSION'					=> 'Uzantı',
+	'EXTENSIONS'				=> 'Extensions',
+	'EXTENSIONS_ADMIN'			=> 'Extensions Manager',
+	'EXTENSIONS_EXPLAIN'		=> 'The Extensions Manager is a tool in your phpBB Board which allows you to manage all of your extensions statuses and view information about them.',
+	'EXTENSION_INVALID_LIST'	=> 'The “%s” extension is not valid.<br />%s<br /><br />',
+	'EXTENSION_NOT_AVAILABLE'	=> 'The selected extension is not available for this board, please verify your phpBB and PHP versions are allowed (see the details page).',
+	'EXTENSION_DIR_INVALID'		=> 'The selected extension has an invalid directory structure and cannot be enabled.',
+	'EXTENSION_NOT_ENABLEABLE'	=> 'The selected extension cannot be enabled, please verify the extension’s requirements.',
+
+	'DETAILS'				=> 'Detaylar',
+
+	'EXTENSIONS_DISABLED'	=> 'Disabled Extensions',
+	'EXTENSIONS_ENABLED'	=> 'Enabled Extensions',
+
+	'EXTENSION_DELETE_DATA'	=> 'Delete data',
+	'EXTENSION_DISABLE'		=> 'Disable',
+	'EXTENSION_ENABLE'		=> 'Enable',
+
+	'EXTENSION_DELETE_DATA_EXPLAIN'	=> 'Deleting an extension’s data removes all of its data and settings. The extension files are retained so it can be enabled again.',
+	'EXTENSION_DISABLE_EXPLAIN'		=> 'Disabling an extension retains its files, data and settings but removes any functionality added by the extension.',
+	'EXTENSION_ENABLE_EXPLAIN'		=> 'Enabling an extension allows you to use it on your board.',
+
+	'EXTENSION_DELETE_DATA_IN_PROGRESS'	=> 'The extension’s data is currently being deleted. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_DISABLE_IN_PROGRESS'	=> 'The extension is currently being disabled. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_ENABLE_IN_PROGRESS'	=> 'The extension is currently being enabled. Please do not leave or refresh this page until it is completed.',
+
+	'EXTENSION_DELETE_DATA_SUCCESS'	=> 'The extension’s data was deleted successfully',
+	'EXTENSION_DISABLE_SUCCESS'		=> 'The extension was disabled successfully',
+	'EXTENSION_ENABLE_SUCCESS'		=> 'The extension was enabled successfully',
+
+	'EXTENSION_NAME'			=> 'Extension Name',
+	'EXTENSION_ACTIONS'			=> 'Actions',
+	'EXTENSION_OPTIONS'			=> 'Options',
+	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
+	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s files from the filesystem</li>
+			<li>Upload the new files</li>
+			<li>Enable the extension</li>
+		</ol>',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s data</li>
+			<li>Delete the extension’s files from the filesystem</li>
+		</ol>',
+
+	'EXTENSION_DELETE_DATA_CONFIRM'	=> 'Are you sure that you wish to delete the data associated with “%s”?<br /><br />This removes all of its data and settings and cannot be undone!',
+	'EXTENSION_DISABLE_CONFIRM'		=> 'Are you sure that you wish to disable the “%s” extension?',
+	'EXTENSION_ENABLE_CONFIRM'		=> 'Are you sure that you wish to enable the “%s” extension?',
+	'EXTENSION_FORCE_UNSTABLE_CONFIRM'	=> 'Are you sure that you wish to force the use of unstable version?',
+
+	'RETURN_TO_EXTENSION_LIST'	=> 'Return to the extension list',
+
+	'EXT_DETAILS'			=> 'Extension Details',
+	'DISPLAY_NAME'			=> 'Disply Name (may be NULL)',
+	'CLEAN_NAME'			=> 'Clean Name',
+	'TYPE'					=> 'Type',
+	'DESCRIPTION'			=> 'Açıklama',
+	'VERSION'				=> 'Sürüm',
+	'HOMEPAGE'				=> 'Homepage',
+	'PATH'					=> 'File Path',
+	'TIME'					=> 'Zaman',
+	'LICENSE'				=> 'Licence',
+
+	'REQUIREMENTS'			=> 'Requirements',
+	'PHPBB_VERSION'			=> 'phpBB Version',
+	'PHP_VERSION'			=> 'PHP Version',
+	'AUTHOR_INFORMATION'	=> 'Author Information',
+	'AUTHOR_NAME'			=> 'Name',
+	'AUTHOR_EMAIL'			=> 'Email',
+	'AUTHOR_HOMEPAGE'		=> 'Homepage',
+	'AUTHOR_ROLE'			=> 'Role',
+
+	'NOT_UP_TO_DATE'		=> '%s is not up to date',
+	'UP_TO_DATE'			=> '%s is up to date',
+	'ANNOUNCEMENT_TOPIC'	=> 'Release Announcement',
+	'DOWNLOAD_LATEST'		=> 'Download Version',
+	'NO_VERSIONCHECK'		=> 'No version check information given.',
+
+	'VERSIONCHECK_FORCE_UPDATE_ALL'		=> 'Re-Check all versions',
+	'FORCE_UNSTABLE'					=> 'Always check for unstable versions',
+	'EXTENSIONS_VERSION_CHECK_SETTINGS'	=> 'Version check settings',
+
+	'META_FIELD_NOT_SET'	=> 'Required meta field %s has not been set.',
+	'META_FIELD_INVALID'	=> 'Meta field %s is invalid.',
+));
+
 #######language/en/acp/forums.php#######
 
 $lang = array_merge($lang, array(
@@ -12856,6 +13258,10 @@ $lang = array_merge($lang, array(
 	'AUTO_PRUNE_FREQ_EXPLAIN'	=> 'Budama olayları arasında geçecek, gün cinsinden zaman aralığı.',
 	'AUTO_PRUNE_VIEWED'			=> 'Otomatik-budama mesaj görüntüleme yaşı',
 	'AUTO_PRUNE_VIEWED_EXPLAIN'	=> 'Başlığın silinmesi için son mesajın görüntülenmesinden sonra geçecek gün sayısı.',
+	'AUTO_PRUNE_SHADOW_FREQ'	=> 'Auto-prune shadow topics frequency',
+	'AUTO_PRUNE_SHADOW_DAYS'	=> 'Auto-prune shadow topics age',
+	'AUTO_PRUNE_SHADOW_DAYS_EXPLAIN'	=> 'Number of days after which shadow topic is removed.',
+	'AUTO_PRUNE_SHADOW_FREQ_EXPLAIN'	=> 'Time in days between pruning events.',
 
 	'CONTINUE'						=> 'Devam',
 	'COPY_PERMISSIONS_EXPLAIN'		=> 'Yeni forumunuz için izin ayarlama işlemini kolaylaştırır, varolan bir forumun izinlerini kopyalayabilirsiniz.',
@@ -12914,6 +13320,8 @@ $lang = array_merge($lang, array(
 	'FORUM_PASSWORD_OLD'				=> 'Forum şifresi, eski bir karmaşık şifreleme metodunu kullanıyor ve değiştirilmesi gerekiyor.',
 	'FORUM_PASSWORD_MISMATCH'			=> 'Girmiş olduğunuz şifreler birbibirini tutmuyor.',
 	'FORUM_PRUNE_SETTINGS'				=> 'Forum budama ayarları',
+	'FORUM_PRUNE_SHADOW'				=> 'Enable auto-pruning of shadow topics',
+	'FORUM_PRUNE_SHADOW_EXPLAIN'			=> 'Prunes the forum of shadow topics, set the frequency/age parameters below.',
 	'FORUM_RESYNCED'					=> '“%s” isimli forum başarıyla yeniden senkronize edildi',
 	'FORUM_RULES_EXPLAIN'				=> 'Forum kuralları, forumda belirtilmiş herhangi bir sayfa içinde görüntülenecektir.',
 	'FORUM_RULES_LINK'					=> 'Forum kurallarını görüntülemek için lütfen buraya tıklayın',
@@ -13005,6 +13413,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE_EXPLAIN'		=> 'Bu panelden tüm kullanıcı gruplarınızı yönetebilirsiniz. Kullanıcı gruplarını silebilir, oluşturabilir ve var olan grupları düzenleyebilirsiniz. Ayrıca, grup liderlerini seçebilir, grup durumunu açık-kapalı olarak değiştirebilirsiniz ve grubun ismini belirleyebilir ve tanımlamasını yapabilirsiniz.',
+	'ADD_GROUP_CATEGORY'			=> 'Add category',
 	'GROUP_ADD_USERS'				=> 'Kullanıcı ekle',
 	'ADD_USERS_EXPLAIN'				=> 'Burada gruplara yeni kullanıcılar ekleyebilirsiniz. Seçilmiş kullanıcılar için bu grup varsayılan olarak olsa bile seçim yapabilirsiniz. Ayrıca grup liderlerini tanımlayabilirsiniz. Lütfen her kullanıcı için ayrı satır kullanınız.',
 
@@ -13018,11 +13427,10 @@ $lang = array_merge($lang, array(
 	'GROUP_APPROVED'				=> 'Onaylanmış Üyeler',
 	'GROUP_AVATAR'					=> 'Grup avatarı',
 	'GROUP_AVATAR_EXPLAIN'			=> 'Bu resim Grup Kontrol Panelinde gösterilecektir.',
+	'GROUP_CATEGORY_NAME'			=> 'Category name',
 	'GROUP_CLOSED'					=> 'Kapalı',
 	'GROUP_COLOR'					=> 'Grup rengi',
 	'GROUP_COLOR_EXPLAIN'			=> 'Bu gruba dahil üyelerin kullanıcı adlarının rengini tanımlar, boş bırakılırsa kullanıcı varsayılan rengi kullanır.',
-	'GROUP_CONFIRM_ADD_USER'		=> '%1$s kullanıcısını gruba eklemek istediğinize emin misiniz?',
-	'GROUP_CONFIRM_ADD_USERS'		=> '%1$s kullanıcılarını gruba eklemek istediğinize emin misiniz?',
 	'GROUP_CREATED'					=> 'Grup başarıyla oluşturuldu',
 	'GROUP_DEFAULT'					=> 'Üye için varsayılan grup yap',
 	'GROUP_DEFS_UPDATED'			=> 'Varsayılan grup tüm üyeler için ayarlanır.',
@@ -13064,6 +13472,8 @@ $lang = array_merge($lang, array(
 	'GROUP_SETTINGS_SAVE'			=> 'Grup özel ayarları',
 	'GROUP_SKIP_AUTH'				=> 'Grup liderini izinlerden muaf tut',
 	'GROUP_SKIP_AUTH_EXPLAIN'		=> 'Eğer aktif edilirse grup lideri grup izinlerden muaf tutulacaktır.',
+	'GROUP_SPECIAL'					=> 'Pre-defined',
+	'GROUP_TEAMPAGE'				=> 'Display group on teampage',
 	'GROUP_TYPE'					=> 'Grup tipi',
 	'GROUP_TYPE_EXPLAIN'			=> 'Bu, gruba hangi kullanıcıların katılabileceğini ya da hangi kullanıcıların grubu görebileceğini tanımlar.',
 	'GROUP_UPDATED'					=> 'Grup ayarları başarıyla güncellendi.',
@@ -13072,19 +13482,37 @@ $lang = array_merge($lang, array(
 	'GROUP_USERS_EXIST'				=> 'Seçilmiş kullanıcılar zaten grup üyesidir.',
 	'GROUP_USERS_REMOVE'			=> 'Kullanıcılar gruptan silinmiştir ve yeni varsayılan ayarlar başarıyla ayarlanmıştır',
 
+	'LEGEND_EXPLAIN'				=> 'These are the groups which are displayed in the group legend:',
+	'LEGEND_SETTINGS'				=> 'Legend settings',
+	'LEGEND_SORT_GROUPNAME'			=> 'Sort legend by group name',
+	'LEGEND_SORT_GROUPNAME_EXPLAIN'	=> 'The order below is ignored when this option is enabled.',
+
+	'MANAGE_LEGEND'			=> 'Manage group legend',
+	'MANAGE_TEAMPAGE'		=> 'Manage teampage',
 	'MAKE_DEFAULT_FOR_ALL'		=> 'Her üye için varsayılan grup yap',
 	'MEMBERS'					=> 'Üyeler',
 
 	'NO_GROUP'					=> 'İstenilen kullanıcı grubu bulunmuyor.',
+	'NO_GROUPS_ADDED'			=> 'No groups added yet.',
 	'NO_GROUPS_CREATED'			=> 'Daha hiç bir grup oluşturulmadı.',
 	'NO_PERMISSIONS'			=> 'İzinleri kopyalama',
 	'NO_USERS'					=> 'İstenilen kullanıcılar bulunmuyor',
 	'NO_USERS_ADDED'			=> 'Gruba hiç bir kullanıcı eklenmedi.',
 	'NO_VALID_USERS'			=> 'Bu eylem için uygun nitelikte herhangi bir kullanıcı girmediniz.',
 
+	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> 'Önceden tanımlı gruplar',
 	'SPECIAL_GROUPS_EXPLAIN'	=> 'Önceden tanımlı gruplar özel gruplardır. Bunlar silinemez ya da doğrudan değiştirilemez. Yine de kullanıcı ekleyebilir ve temel ayarlarını değiştirebilirsiniz.',
 
+	'TEAMPAGE'					=> 'Teampage',
+	'TEAMPAGE_DISP_ALL'			=> 'All memberships',
+	'TEAMPAGE_DISP_DEFAULT'		=> 'User’s default group only',
+	'TEAMPAGE_DISP_FIRST'		=> 'First membership only',
+	'TEAMPAGE_EXPLAIN'			=> 'These are the groups which are displayed on the teampage:',
+	'TEAMPAGE_FORUMS'			=> 'Display moderated forums',
+	'TEAMPAGE_FORUMS_EXPLAIN'	=> 'If set to yes, moderators will have a list with all of the forums where they have moderator permissions displayed in their row. This can be very database intensive for big boards.',
+	'TEAMPAGE_MEMBERSHIPS'		=> 'Display user memberships',
+	'TEAMPAGE_SETTINGS'			=> 'Teampage settings',
 	'TOTAL_MEMBERS'				=> 'Üyeler',
 
 	'USERS_APPROVED'				=> 'Kullanıcılar başarıyla onaylandı.',
@@ -13470,26 +13898,14 @@ $lang = array_merge($lang, array(
 	'ACP_FILES'						=> 'Yönetici dil dosyaları',
 	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> 'Buradan dil paketlerini yükleme/kaldırma işlemlerini yapabilirsiniz. Varsayılan dil paketi yıldız işareti (*) ile belirtilmiştir.',
 
-	'EMAIL_FILES'			=> 'E-posta şablonları',
-
-	'FILE_CONTENTS'				=> 'Dosya içerikleri',
-	'FILE_FROM_STORAGE'			=> 'Depolama dizininden dosya',
-
-	'HELP_FILES'				=> 'Yardım dosyaları',
-
-	'INSTALLED_LANGUAGE_PACKS'	=> 'Yüklenmiş dil paketleri',
-	'INVALID_LANGUAGE_PACK'		=> 'Seçilen dil paketi geçerli değil. Lütfen dil paketini kontrol edin, gerekirse tekrar yükleyin.',
-	'INVALID_UPLOAD_METHOD'		=> 'Seçili yükleme yöntemi geçerli değil, lütfen farklı bir yöntem seçin.',
+	'DELETE_LANGUAGE_CONFIRM'		=> 'Are you sure you wish to delete “%s”?',
+	'INSTALLED_LANGUAGE_PACKS'		=> 'Yüklenmiş dil paketleri',
 
 	'LANGUAGE_DETAILS_UPDATED'			=> 'Dil detayları başarıyla güncellendi',
-	'LANGUAGE_ENTRIES'					=> 'Dil girdileri',
-	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Bu bölümde var olan dil paketi girdilerini ya da henüz çevrilmemiş olanları değiştirebilirsiniz.<br /><strong>Not:</strong> Dil dosyalarını değiştirmeden önce; değişiklikler, dosyayı indirmeniz için ayrı bir klasörde saklanacaktır. Orijinal dil dosyaları ile kendi dil dosyalarınızı değiştirene kadar, kullanıcılar bu değişimleri göremeyecekler. Bu değişim için sunucunuza dil dosyalarını yüklemelisiniz.',
-	'LANGUAGE_FILES'					=> 'Dil paketleri',
-	'LANGUAGE_KEY'						=> 'Dil anahtarı',
 	'LANGUAGE_PACK_ALREADY_INSTALLED'	=> 'Bu dil paketi zaten yüklü.',
-	'LANGUAGE_PACK_DELETED'				=> '<strong>%s</strong> dil paketi başarıyla kaldırıldı. Bu dili kullanan tüm kullanıcıların dil seçenekleri, mesaj panosunun varsayılan dili olarak ayarlandı.',
+	'LANGUAGE_PACK_DELETED'				=> 'The language pack “%s” has been removed successfully. All users using this language have been reset to the board’s default language.',
 	'LANGUAGE_PACK_DETAILS'				=> 'Dil paketi detayları',
-	'LANGUAGE_PACK_INSTALLED'			=> '<strong>%s</strong> dil paketi başarıyla kuruldu.',
+	'LANGUAGE_PACK_INSTALLED'			=> 'The language pack “%s” has been successfully installed.',
 	'LANGUAGE_PACK_CPF_UPDATE'			=> 'Özel profil alanlarının dil dizeleri varsayılan dilden kopyalandı. Eğer gerekliyse lütfen onları değiştirin.',
 	'LANGUAGE_PACK_ISO'					=> 'ISO',
 	'LANGUAGE_PACK_LOCALNAME'			=> 'Yerel adı',
@@ -13502,33 +13918,44 @@ $lang = array_merge($lang, array(
 	'LANG_ISO_CODE'						=> 'ISO kodu',
 	'LANG_LOCAL_NAME'					=> 'Yerel adı',
 
-	'MISSING_LANGUAGE_FILE'		=> 'Kayıp dil dosyası: <strong style="color:red">%s</strong>',
+	'MISSING_LANG_FILES'		=> 'Missing language files',
 	'MISSING_LANG_VARIABLES'	=> 'Kayıp dil değişkenleri',
-	'MODS_FILES'				=> 'Modların dil dosyaları',
 
 	'NO_FILE_SELECTED'				=> 'Belirlenmiş bir dil dosyasına sahip değilsiniz.',
 	'NO_LANG_ID'					=> 'Belirlenmiş bir dil paketiniz yok',
-	'NO_REMOVE_DEFAULT_LANG'		=> 'Varsayılan dil paketini kaldıramazsınız.<br />Bu dil paketini kaldırmak istiyorsanız, ilk önce mesaj panonuzun varsayılan dilini değiştirin.',
+	'NO_REMOVE_DEFAULT_LANG'		=> 'You are not able to remove the default language pack.<br />If you want to remove this language pack, change your board’s default language first.',
 	'NO_UNINSTALLED_LANGUAGE_PACKS'	=> 'Kaldırılmış dil paketleri yok',
 
-	'REMOVE_FROM_STORAGE_FOLDER'		=> 'Depolama dizininden kaldır',
-
-	'SELECT_DOWNLOAD_FORMAT'	=> 'Arşiv indirme formatı seç',
-	'SUBMIT_AND_DOWNLOAD'		=> 'Onayla ve dosyayı indir',
-	'SUBMIT_AND_UPLOAD'			=> 'Onayla ve dosyayı yükle',
-
-	'THOSE_MISSING_LANG_FILES'			=> 'Burada sözü edilen dil dosyaları kayıp %s dil klasörü',
-	'THOSE_MISSING_LANG_VARIABLES'		=> 'Burada sözü edilen dil değişkenleri kayıp <strong>%s</strong> dil paketi',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 
 	'UNINSTALLED_LANGUAGE_PACKS'	=> 'Kaldırılmış dil paketleri',
 
+	// 3.0.12
+	'EMAIL_FILES'			=> 'E-posta şablonları',
+	'FILE_CONTENTS'				=> 'Dosya içerikleri',
+	'FILE_FROM_STORAGE'			=> 'Depolama dizininden dosya',
+	'HELP_FILES'				=> 'Yardım dosyaları',
+	'INSTALLED_LANGUAGE_PACKS'	=> 'Yüklenmiş dil paketleri',
+	'INVALID_LANGUAGE_PACK'		=> 'Seçilen dil paketi geçerli değil. Lütfen dil paketini kontrol edin, gerekirse tekrar yükleyin.',
+	'INVALID_UPLOAD_METHOD'		=> 'Seçili yükleme yöntemi geçerli değil, lütfen farklı bir yöntem seçin.',
+	'LANGUAGE_ENTRIES'					=> 'Dil girdileri',
+	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Bu bölümde var olan dil paketi girdilerini ya da henüz çevrilmemiş olanları değiştirebilirsiniz.<br /><strong>Not:</strong> Dil dosyalarını değiştirmeden önce; değişiklikler, dosyayı indirmeniz için ayrı bir klasörde saklanacaktır. Orijinal dil dosyaları ile kendi dil dosyalarınızı değiştirene kadar, kullanıcılar bu değişimleri göremeyecekler. Bu değişim için sunucunuza dil dosyalarını yüklemelisiniz.',
+	'LANGUAGE_FILES'					=> 'Dil paketleri',
+	'LANGUAGE_KEY'						=> 'Dil anahtarı',
+	'MISSING_LANGUAGE_FILE'		=> 'Kayıp dil dosyası: <strong style="color:red">%s</strong>',
+	'SELECT_DOWNLOAD_FORMAT'	=> 'Arşiv indirme formatı seç',
+	'SUBMIT_AND_DOWNLOAD'		=> 'Onayla ve dosyayı indir',
+	'SUBMIT_AND_UPLOAD'			=> 'Onayla ve dosyayı yükle',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 	'UNABLE_TO_WRITE_FILE'		=> 'Dosya şuraya yazılamıyor - %s.',
 	'UPLOAD_COMPLETED'			=> 'Yükleme tamamlandı',
 	'UPLOAD_FAILED'				=> 'Bilinmeyen sebepler yüzünden yükleme başarısız oldu. İlgili dosyayı elle değiştirmeniz gerekebilir.',
 	'UPLOAD_METHOD'				=> 'Yükleme metodu',
 	'UPLOAD_SETTINGS'			=> 'Yükleme ayarları',
-
 	'WRONG_LANGUAGE_FILE'		=> 'Seçilmiş dil paketi geçerli değil',
+	// 3.0.12
 ));
 
 #######language/en/acp/lexicon.php#######
@@ -13861,6 +14288,171 @@ $lang = array_merge($lang, array(
 	'ROLE_DESCRIPTION_ADMIN_FOOTBALL'	=> 'Can edit final match results.',
 ));
 
+#######language/en/acp/permissions_phpbb.php#######
+
+$lang = array_merge($lang, array(
+	'ACL_CAT_ACTIONS'		=> 'Actions',
+	'ACL_CAT_CONTENT'		=> 'Content',
+	'ACL_CAT_FORUMS'		=> 'Forums',
+	'ACL_CAT_MISC'			=> 'Misc',
+	'ACL_CAT_PERMISSIONS'	=> 'Permissions',
+	'ACL_CAT_PM'			=> 'Private messages',
+	'ACL_CAT_POLLS'			=> 'Polls',
+	'ACL_CAT_POST'			=> 'Post',
+	'ACL_CAT_POST_ACTIONS'	=> 'Post actions',
+	'ACL_CAT_POSTING'		=> 'Posting',
+	'ACL_CAT_PROFILE'		=> 'Profile',
+	'ACL_CAT_SETTINGS'		=> 'Settings',
+	'ACL_CAT_TOPIC_ACTIONS'	=> 'Topic actions',
+	'ACL_CAT_USER_GROUP'	=> 'Users &amp; Groups',
+));
+
+// User Permissions
+$lang = array_merge($lang, array(
+	'ACL_U_VIEWPROFILE'	=> 'Can view profiles, memberlist and online list',
+	'ACL_U_CHGNAME'		=> 'Can change username',
+	'ACL_U_CHGPASSWD'	=> 'Can change password',
+	'ACL_U_CHGEMAIL'	=> 'Can change email address',
+	'ACL_U_CHGAVATAR'	=> 'Can change avatar',
+	'ACL_U_CHGGRP'		=> 'Can change default usergroup',
+	'ACL_U_CHGPROFILEINFO'	=> 'Can change profile field information',
+
+	'ACL_U_ATTACH'		=> 'Can attach files',
+	'ACL_U_DOWNLOAD'	=> 'Can download files',
+	'ACL_U_SAVEDRAFTS'	=> 'Can save drafts',
+	'ACL_U_CHGCENSORS'	=> 'Can disable word censors',
+	'ACL_U_SIG'			=> 'Can use signature',
+
+	'ACL_U_SENDPM'		=> 'Can send private messages',
+	'ACL_U_MASSPM'		=> 'Can send messages to multiple users',
+	'ACL_U_MASSPM_GROUP'=> 'Can send messages to groups',
+	'ACL_U_READPM'		=> 'Can read private messages',
+	'ACL_U_PM_EDIT'		=> 'Can edit own private messages',
+	'ACL_U_PM_DELETE'	=> 'Can remove private messages from own folder',
+	'ACL_U_PM_FORWARD'	=> 'Can forward private messages',
+	'ACL_U_PM_EMAILPM'	=> 'Can email private messages',
+	'ACL_U_PM_PRINTPM'	=> 'Can print private messages',
+	'ACL_U_PM_ATTACH'	=> 'Can attach files in private messages',
+	'ACL_U_PM_DOWNLOAD'	=> 'Can download files in private messages',
+	'ACL_U_PM_BBCODE'	=> 'Can use BBCode in private messages',
+	'ACL_U_PM_SMILIES'	=> 'Can use smilies in private messages',
+	'ACL_U_PM_IMG'		=> 'Can use [img] BBCode tag in private messages',
+	'ACL_U_PM_FLASH'	=> 'Can use [flash] BBCode tag in private messages',
+
+	'ACL_U_SENDEMAIL'	=> 'Can send emails',
+	'ACL_U_SENDIM'		=> 'Can send instant messages',
+	'ACL_U_IGNOREFLOOD'	=> 'Can ignore flood limit',
+	'ACL_U_HIDEONLINE'	=> 'Can hide online status',
+	'ACL_U_VIEWONLINE'	=> 'Can view hidden online users',
+	'ACL_U_SEARCH'		=> 'Can search board',
+));
+
+// Forum Permissions
+$lang = array_merge($lang, array(
+	'ACL_F_LIST'		=> 'Can see forum',
+	'ACL_F_READ'		=> 'Can read forum',
+	'ACL_F_SEARCH'		=> 'Can search the forum',
+	'ACL_F_SUBSCRIBE'	=> 'Can subscribe forum',
+	'ACL_F_PRINT'		=> 'Can print topics',
+	'ACL_F_EMAIL'		=> 'Can email topics',
+	'ACL_F_BUMP'		=> 'Can bump topics',
+	'ACL_F_USER_LOCK'	=> 'Can lock own topics',
+	'ACL_F_DOWNLOAD'	=> 'Can download files',
+	'ACL_F_REPORT'		=> 'Can report posts',
+
+	'ACL_F_POST'		=> 'Can start new topics',
+	'ACL_F_STICKY'		=> 'Can post stickies',
+	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_REPLY'		=> 'Can reply to topics',
+	'ACL_F_EDIT'		=> 'Can edit own posts',
+	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
+	'ACL_F_SOFTDELETE'	=> 'Can soft delete own posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_F_IGNOREFLOOD' => 'Can ignore flood limit',
+	'ACL_F_POSTCOUNT'	=> 'Increment post counter<br /><em>Please note that this setting only affects new posts.</em>',
+	'ACL_F_NOAPPROVE'	=> 'Can post without approval',
+
+	'ACL_F_ATTACH'		=> 'Can attach files',
+	'ACL_F_ICONS'		=> 'Can use topic/post icons',
+	'ACL_F_BBCODE'		=> 'Can use BBCode',
+	'ACL_F_FLASH'		=> 'Can use [flash] BBCode tag',
+	'ACL_F_IMG'			=> 'Can use [img] BBCode tag',
+	'ACL_F_SIGS'		=> 'Can use signatures',
+	'ACL_F_SMILIES'		=> 'Can use smilies',
+
+	'ACL_F_POLL'		=> 'Can create polls',
+	'ACL_F_VOTE'		=> 'Can vote in polls',
+	'ACL_F_VOTECHG'		=> 'Can change existing vote',
+));
+
+// Moderator Permissions
+$lang = array_merge($lang, array(
+	'ACL_M_EDIT'		=> 'Can edit posts',
+	'ACL_M_DELETE'		=> 'Can permanently delete posts',
+	'ACL_M_SOFTDELETE'	=> 'Can soft delete posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_M_APPROVE'		=> 'Can approve and restore posts',
+	'ACL_M_REPORT'		=> 'Can close and delete reports',
+	'ACL_M_CHGPOSTER'	=> 'Can change post author',
+
+	'ACL_M_MOVE'	=> 'Can move topics',
+	'ACL_M_LOCK'	=> 'Can lock topics',
+	'ACL_M_SPLIT'	=> 'Can split topics',
+	'ACL_M_MERGE'	=> 'Can merge topics',
+
+	'ACL_M_INFO'	=> 'Can view post details',
+	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+));
+
+// Admin Permissions
+$lang = array_merge($lang, array(
+	'ACL_A_BOARD'		=> 'Can alter board settings/check for updates',
+	'ACL_A_SERVER'		=> 'Can alter server/communication settings',
+	'ACL_A_JABBER'		=> 'Can alter Jabber settings',
+	'ACL_A_PHPINFO'		=> 'Can view php settings',
+
+	'ACL_A_FORUM'		=> 'Can manage forums',
+	'ACL_A_FORUMADD'	=> 'Can add new forums',
+	'ACL_A_FORUMDEL'	=> 'Can delete forums',
+	'ACL_A_PRUNE'		=> 'Can prune forums',
+
+	'ACL_A_ICONS'		=> 'Can alter topic/post icons and smilies',
+	'ACL_A_WORDS'		=> 'Can alter word censors',
+	'ACL_A_BBCODE'		=> 'Can define BBCode tags',
+	'ACL_A_ATTACH'		=> 'Can alter attachment related settings',
+
+	'ACL_A_USER'		=> 'Can manage users<br /><em>This also includes seeing the users browser agent within the viewonline list.</em>',
+	'ACL_A_USERDEL'		=> 'Can delete/prune users',
+	'ACL_A_GROUP'		=> 'Can manage groups',
+	'ACL_A_GROUPADD'	=> 'Can add new groups',
+	'ACL_A_GROUPDEL'	=> 'Can delete groups',
+	'ACL_A_RANKS'		=> 'Can manage ranks',
+	'ACL_A_PROFILE'		=> 'Can manage custom profile fields',
+	'ACL_A_NAMES'		=> 'Can manage disallowed names',
+	'ACL_A_BAN'			=> 'Can manage bans',
+
+	'ACL_A_VIEWAUTH'	=> 'Can view permission masks',
+	'ACL_A_AUTHGROUPS'	=> 'Can alter permissions for individual groups',
+	'ACL_A_AUTHUSERS'	=> 'Can alter permissions for individual users',
+	'ACL_A_FAUTH'		=> 'Can alter forum permission class',
+	'ACL_A_MAUTH'		=> 'Can alter moderator permission class',
+	'ACL_A_AAUTH'		=> 'Can alter admin permission class',
+	'ACL_A_UAUTH'		=> 'Can alter user permission class',
+	'ACL_A_ROLES'		=> 'Can manage roles',
+	'ACL_A_SWITCHPERM'	=> 'Can use others permissions',
+
+	'ACL_A_STYLES'		=> 'Can manage styles',
+	'ACL_A_EXTENSIONS'	=> 'Can manage extensions',
+	'ACL_A_VIEWLOGS'	=> 'Can view logs',
+	'ACL_A_CLEARLOGS'	=> 'Can clear logs',
+	'ACL_A_MODULES'		=> 'Can manage modules',
+	'ACL_A_LANGUAGE'	=> 'Can manage language packs',
+	'ACL_A_EMAIL'		=> 'Can send mass email',
+	'ACL_A_BOTS'		=> 'Can manage bots',
+	'ACL_A_REASONS'		=> 'Can manage report/denial reasons',
+	'ACL_A_BACKUP'		=> 'Can backup/restore database',
+	'ACL_A_SEARCH'		=> 'Can manage search backends and settings',
+));
+
 #######language/en/acp/phpbb_seo.php#######
 
 $lang = array_merge($lang, array(
@@ -14032,6 +14624,7 @@ $lang = array_merge($lang, array(
 
 	'BBCODE_ADDED'				=> 'BBCode başarıyla eklendi',
 	'BBCODE_EDITED'				=> 'BBCode başarıyla düzenlendi',
+	'BBCODE_DELETED'			=> 'The BBCode has been removed successfully.',
 	'BBCODE_NOT_EXIST'			=> 'Seçmiş olduğunuz BBCode mevcut değil',
 	'BBCODE_HELPLINE'			=> 'Yardım satırı',
 	'BBCODE_HELPLINE_EXPLAIN'	=> 'Bu alan BBcode üzerine fare ile gelindiğinde metin içerir.',
@@ -14087,17 +14680,10 @@ $lang = array_merge($lang, array(
 	'EXPORT_SMILIES'			=> 'smilies.pak dosyası çıkar ve indir',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sBu bağlantıya tıkladığınızda, yüklediğiniz ifadeler için ayarlar <samp>smilies.pak</samp> dosyası içerisinde paketlenecektir. Bu <samp>smilies.pak</samp> ayar dosyası, ayrıca tüm ifadelerinizin bir <samp>.zip</samp> ya da <samp>.tgz</samp> dosyası kapsamında oluşturularak indirileceği zaman kullanılabilir%s.',
 
-
 	'ICONS_ADD'				=> 'Yeni bir ikon ekle',
-	'ICONS_NONE_ADDED'		=> 'Hiç bir ikon eklenmedi.',
-	'ICONS_ONE_ADDED'		=> 'İkon başarıyla eklendi.',
-	'ICONS_ADDED'			=> 'İkonlar başarıyla eklendi.',
 	'ICONS_CONFIG'			=> 'İkon ayarları',
 	'ICONS_DELETED'			=> 'İkon başarıyla kaldırıldı.',
 	'ICONS_EDIT'			=> 'İkonu düzenle',
-	'ICONS_ONE_EDITED'		=> 'İkon başarıyla güncellendi.',
-	'ICONS_NONE_EDITED'		=> 'Hiç bir ikon güncellenmedi.',
-	'ICONS_EDITED'			=> 'İkonlar başarıyla güncellendi.',
 	'ICONS_HEIGHT'			=> 'İkon yüksekliği',
 	'ICONS_IMAGE'			=> 'İkon resmi',
 	'ICONS_IMPORTED'		=> 'İkon paketi başarıyla yüklendi.',
@@ -14127,9 +14713,6 @@ $lang = array_merge($lang, array(
 
 	'SELECT_PACKAGE'			=> 'Bir paket dosyası seçin',
 	'SMILIES_ADD'				=> 'Yeni bir ifade ekle',
-	'SMILIES_NONE_ADDED'		=> 'Hiç bir ifade eklenmedi.',
-	'SMILIES_ONE_ADDED'			=> 'İfade başarıyla eklendi.',
-	'SMILIES_ADDED'				=> 'İfadeler başarıyla eklendi.',
 	'SMILIES_CODE'				=> 'İfade Kodu',
 	'SMILIES_CONFIG'			=> 'İfade ayarları',
 	'SMILIES_DELETED'			=> 'İfade başarıyla kaldırıldı.',
@@ -14137,9 +14720,6 @@ $lang = array_merge($lang, array(
 	'SMILIE_NO_CODE'			=> '“%s” ifadesi, hiç bir ifade kodu girilmediği için yoksayıldı.',
 	'SMILIE_NO_EMOTION'			=> '“%s” ifadesi, hiç bir ifade resmi girilmediği için yoksayıldı.',
 	'SMILIE_NO_FILE'			=> '“%s” ifadesi, ifade dosyası kayıp olduğu için yoksayıldı.',
-	'SMILIES_NONE_EDITED'		=> 'Hiç bir ifade güncellenmedi.',
-	'SMILIES_ONE_EDITED'		=> 'İfade başarıyla güncellendi.',
-	'SMILIES_EDITED'			=> 'İfadeler başarıyla güncellendi.',
 	'SMILIES_EMOTION'			=> 'Duygu',
 	'SMILIES_HEIGHT'			=> 'İfade yüksekliği',
 	'SMILIES_IMAGE'				=> 'İfade resmi',
@@ -14151,7 +14731,6 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'İfade resim dosyası',
 	'SMILIES_WIDTH'				=> 'İfade genişliği',
 
-	'TOO_MANY_SMILIES'		=> 'Mesajınız çok fazla ifade içeriyor. İzin verilen en fazla ifade sayısı %d.',
 	'WRONG_PAK_TYPE'		=> 'Belirtilen paket uygun veriye sahip değil.',
 ));
 
@@ -14249,8 +14828,11 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ADDED_PROFILE_FIELD'	=> 'Özel profil alanı başarıyla eklendi',
+	'ALPHA_DOTS'			=> 'Alphanumeric and dots (periods)',
 	'ALPHA_ONLY'			=> 'Sadece alfanümerik',
 	'ALPHA_SPACERS'			=> 'Alfanümerik ve boşluk',
+	'ALPHA_UNDERSCORE'		=> 'Alphanumeric and underscores',
+	'ALPHA_PUNCTUATION'		=> 'Alphanumeric with comma, dots, underscore and dashes beginning with a letter',
 	'ALWAYS_TODAY'			=> 'Her zaman geçerli tarih',
 
 	'BOOL_ENTRIES_EXPLAIN'	=> 'Ayarlarınızı şimdi girin',
@@ -14277,6 +14859,10 @@ $lang = array_merge($lang, array(
 	'DISPLAY_AT_PROFILE_EXPLAIN'	=> 'Kullanıcı, kullanıcı kontrol panelinden bu profil alanını değiştirebilir.',
 	'DISPLAY_AT_REGISTER'			=> 'Kayıt ekranında göster',
 	'DISPLAY_AT_REGISTER_EXPLAIN'	=> 'Eğer bu özellik açık olursa, alan kayıt ekranında gösterilecektir.',
+	'DISPLAY_ON_MEMBERLIST'			=> 'Display on memberlist screen',
+	'DISPLAY_ON_MEMBERLIST_EXPLAIN'	=> 'If this option is enabled, the field will be displayed in the user rows on the memberlist screen.',
+	'DISPLAY_ON_PM'					=> 'Display on view private message screen',
+	'DISPLAY_ON_PM_EXPLAIN'			=> 'If this option is enabled, the field will be displayed in the mini-profile on the private message screen.',
 	'DISPLAY_ON_VT'					=> 'Başlık görüntüleme ekranında göster',
 	'DISPLAY_ON_VT_EXPLAIN'			=> 'Eğer bu seçenek aktif edilirse, alan başlık ekranında mini-profil içerisinde gösterilecektir.',
 	'DISPLAY_PROFILE_FIELD'			=> 'Profil alanını herkese göster',
@@ -14290,20 +14876,26 @@ $lang = array_merge($lang, array(
 	'EVERYTHING_OK'					=> 'Her şey TAMAM',
 
 	'FIELD_BOOL'				=> 'Boole (Evet/Hayır)',
+	'FIELD_CONTACT_DESC'		=> 'Contact description',
+	'FIELD_CONTACT_URL'			=> 'Contact link',
 	'FIELD_DATE'				=> 'Tarih',
 	'FIELD_DESCRIPTION'			=> 'Alan Açıklaması',
 	'FIELD_DESCRIPTION_EXPLAIN'	=> 'Kullanıcıya sunulacak bu alan için açıklama.',
 	'FIELD_DROPDOWN'			=> 'Açılır liste kutusu',
+	'FIELD_GOOGLEPLUS'			=> 'Google+',
 	'FIELD_IDENT'				=> 'Alan adı',
 	'FIELD_IDENT_ALREADY_EXIST'	=> 'Seçilen alan tanımlaması zaten var. Lütfen başka bir isim seçin.',
 	'FIELD_IDENT_EXPLAIN'		=> 'Tanımlayacağınız profil alanı için bir alan adı, bu kullanıcıya gösterilmeyecektir.',
 	'FIELD_INT'					=> 'Numaralar',
+	'FIELD_IS_CONTACT'			=> 'Display field as a contact field',
+	'FIELD_IS_CONTACT_EXPLAIN'	=> 'Contact fields are displayed within the contact section of the user profile and are displayed differently in the mini profile next to posts and private messages. You can use <samp>%s</samp> as a placeholder variable which will be replaced by a value provided by the user.',
 	'FIELD_LENGTH'				=> 'Girdi kutusunun uzunluğu',
 	'FIELD_NOT_FOUND'			=> 'Profil alanı bulunamadı',
 	'FIELD_STRING'				=> 'Tek yazı alanı',
 	'FIELD_TEXT'				=> 'Yazı alanı',
 	'FIELD_TYPE'				=> 'Alan tipi',
 	'FIELD_TYPE_EXPLAIN'		=> 'Alan tipini daha sonra değiştiremezsiniz.',
+	'FIELD_URL'					=> 'URL (Link)',
 	'FIELD_VALIDATION'			=> 'Alan doğrulaması',
 	'FIRST_OPTION'				=> 'İlk seçenek',
 
@@ -14315,6 +14907,12 @@ $lang = array_merge($lang, array(
 	'ISO_LANGUAGE'				=> 'Dil [%s]',
 
 	'LANG_SPECIFIC_OPTIONS'		=> 'Dil özel seçenekleri [<b>%s</b>]',
+
+	'LETTER_NUM_DOTS'			=> 'Any letters, numbers and dots (periods)',
+	'LETTER_NUM_ONLY'			=> 'Any letters and numbers',
+	'LETTER_NUM_PUNCTUATION'	=> 'Any letters, numbers, comma, dots, underscores and dashes beginning with any letter',
+	'LETTER_NUM_SPACERS'		=> 'Any letters, numbers and spacers',
+	'LETTER_NUM_UNDERSCORE'		=> 'Any letters, numbers and underscores',
 
 	'MAX_FIELD_CHARS'		=> 'En yüksek karakter sayısı',
 	'MAX_FIELD_NUMBER'		=> 'En yüksek izin verilen sayı',
@@ -14369,7 +14967,9 @@ $lang = array_merge($lang, array(
 #######language/en/acp/prune.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_PRUNE_USERS_EXPLAIN'	=> 'Bu bölüm mesaj panonuzdaki kullanıcıları deaktif etmenize ya da silmenize izin verir. Hesaplar değişik yollarla filtre edilebilir; mesaj sayısına göre, en çok aktifliğe göre, v.b. gibi. Etkilenen kullanıcı sayısının daha da daraltılması için kriterler birleştirilebilir. Örneğin, 2002-01-01 tarihinden sonra hiç aktif olmamış, 10 mesajdan az göndermiş kullanıcıları budayabilirsiniz. Alternatif olarak, kullanıcıların listesini metin alanına girmek suretiyle (her kullanıcı adını ayrı bir satıra yerleştirerek) kriter seçimlerinin tamamen uygulanmasına engel olabilirsiniz. Bunu yaparken dikkat etmelisiniz! Bir kullanıcı silindiğinde, işlemin geri alınmasının hiçbir yolu yoktur.',
+	'ACP_PRUNE_USERS_EXPLAIN'	=> 'This section allows you to delete or deactivate users on your board. Accounts can be filtered in a variety of ways; by post count, most recent activity, etc. Criteria may be combined to narrow down which accounts are affected. For example, you can prune users with fewer than 10 posts, who were also inactive after 2002-01-01. Use * as a wildcard for text fields. Alternatively, you may skip the criteria selection completely by entering a list of users (each on a separate line) into the text field. Take care with this facility! Once a user is deleted, there is no way to reverse the action.',
+
+	'CRITERIA'				=> 'Criteria',
 
 	'DEACTIVATE_DELETE'			=> 'Deaktif et ya da sil',
 	'DEACTIVATE_DELETE_EXPLAIN'	=> 'Deaktif edilecek veya tamamen silinecek kullanıcıları seçiniz. Not: Silinen kullanıcılar geri getirilemez.',
@@ -14377,15 +14977,18 @@ $lang = array_merge($lang, array(
 	'DELETE_USER_POSTS'			=> 'Budanan kullanıcı mesajlarını sil',
 	'DELETE_USER_POSTS_EXPLAIN'	=> 'Silinen kullanıcılar tarafından oluşturulan mesajları siler, eğer kullanıcılar aktif değilse bir etkisi olmaz.',
 
-	'JOINED_EXPLAIN'			=> '<kbd>YYYY-AA-GG</kbd> formatında bir tarih girin.',
+	'JOINED_EXPLAIN'			=> 'Enter a date in <kbd>YYYY-MM-DD</kbd> format. You may use both fields to specify an interval, or leave one blank for an open date range.',
 
 	'LAST_ACTIVE_EXPLAIN'		=> '<kbd>YYYY-AA-GG</kbd> formatında bir tarih girin. Hiç giriş yapmamış kullanıcıları budamak için <kbd>0000-00-00</kbd> girin, <em>Önce</em> ve <em>Sonra</em> koşulları yoksayılacaktır.',
 
+	'POSTS_ON_QUEUE'			=> 'Posts Awaiting Approval',
+	'PRUNE_USERS_GROUP_EXPLAIN'	=> 'Limit to users within the selected group.',
+	'PRUNE_USERS_GROUP_NONE'	=> 'All groups',
 	'PRUNE_USERS_LIST'				=> 'Budanan kullanıcılar',
-	'PRUNE_USERS_LIST_DELETE'		=> 'Budanacak kullanıcılar için seçilen kritere göre alttaki hesaplar silinecekti.',
-	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'Budanacak kullanıcılar için seçilen kritere göre alttaki hesaplar deaktif edilecekti.',
+	'PRUNE_USERS_LIST_DELETE'		=> 'With the selected critera for pruning users the following accounts will be removed. You can remove individual users from the deletion list by unchecking the box next to their username.',
+	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'With the selected critera for pruning users the following accounts will be deactivated. You can remove individual users from the deactivation list by unchecking the box next to their username.',
 
-	'SELECT_USERS_EXPLAIN'		=> 'Belirlenen kullanıcı adlarını buraya girin, bunlar altta tercih edilen kriterleri kullanacaklardır. Kurucular budanamaz.',
+	'SELECT_USERS_EXPLAIN'		=> 'Enter specific usernames here. They will be used in preference to the criteria above. Founders cannot be pruned.',
 
 	'USER_DEACTIVATE_SUCCESS'	=> 'Seçilen kullanıcılar başarıyla deaktif edildi',
 	'USER_DELETE_SUCCESS'		=> 'Seçilen kullanıcılar başarıyla silindi',
@@ -14432,15 +15035,38 @@ $lang = array_merge($lang, array(
 	'DELETING_INDEX_IN_PROGRESS'			=> 'İndeks silinmesi işlemde',
 	'DELETING_INDEX_IN_PROGRESS_EXPLAIN'	=> 'Arama uygulaması şu anda indeksleri siliyor. Bu işlem bir kaç dakika sürebilir.',
 
-	'FULLTEXT_MYSQL_INCOMPATIBLE_VERSION'	=> 'MySQL tam metin uygulaması sadece MySQL4 ve üzeri sürümlerde kullanılabilir.',
+	'FULLTEXT_MYSQL_INCOMPATIBLE_DATABASE'	=> 'The MySQL fulltext backend can only be used with MySQL4 and above.',
 	'FULLTEXT_MYSQL_NOT_MYISAM'				=> 'MySQL tam metin uygulaması sadece MyISAM tablolarında kullanılabilir.',
 	'FULLTEXT_MYSQL_TOTAL_POSTS'			=> 'İndekslenen mesajların toplam sayısı',
-	'FULLTEXT_MYSQL_MBSTRING'				=> 'mbstring kullanılarak latin olmayan UTF-8 karakterleri desteği:',
-	'FULLTEXT_MYSQL_PCRE'					=> 'PCRE kullanılarak latin olmayan UTF-8 karakterleri desteği:',
-	'FULLTEXT_MYSQL_MBSTRING_EXPLAIN'		=> 'Eğer PCRE, unicode karakter özelliklerine sahip değilse, arama uygulaması mbstring’in düzenli ifade motorunu kullanmayı deneyecektir.',
-	'FULLTEXT_MYSQL_PCRE_EXPLAIN'			=> 'Bu arama uygulaması PCRE unicode karakter özelliklerini gerektiriyor, eğer latin olmayan karakterler için arama yapmak istiyorsanız, bu özellikler sadece PHP 4.4, 5.1 ve üzeri sürümlerde mevcuttur.',
 	'FULLTEXT_MYSQL_MIN_SEARCH_CHARS_EXPLAIN'	=> 'Arama yapmak için kelimeler en az bu kadar karakter ile indekslenecektir. Siz veya hosting firmanız bu ayarı sadece mysql ayarlarından değiştirebilir.',
 	'FULLTEXT_MYSQL_MAX_SEARCH_CHARS_EXPLAIN'	=> 'Arama yapmak için kelimeler bu kadar karakterden fazlasıyla indekslenmeyecektir. Siz veya hosting firmanız bu ayarı sadece mysql ayarlarından değiştirebilir.',
+
+	'FULLTEXT_POSTGRES_INCOMPATIBLE_DATABASE'	=> 'The PostgreSQL fulltext backend can only be used with PostgreSQL.',
+	'FULLTEXT_POSTGRES_TOTAL_POSTS'			=> 'Total number of indexed posts',
+	'FULLTEXT_POSTGRES_VERSION_CHECK'		=> 'PostgreSQL version',
+	'FULLTEXT_POSTGRES_TS_NAME'				=> 'Text search Configuration Profile:',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN'			=> 'Minimum word length for keywords',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN'			=> 'Maximum word length for keywords',
+	'FULLTEXT_POSTGRES_VERSION_CHECK_EXPLAIN'		=> 'This search backend requires PostgreSQL version 8.3 and above.',
+	'FULLTEXT_POSTGRES_TS_NAME_EXPLAIN'				=> 'The Text search configuration profile used to determine the parser and dictionary.',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN_EXPLAIN'			=> 'Words with at least this many characters will be included in the query to the database.',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN_EXPLAIN'			=> 'Words with no more than this many characters will be included in the query to the database.',
+
+	'FULLTEXT_SPHINX_CONFIGURE'				=> 'Configure the following settings to generate sphinx config file',
+	'FULLTEXT_SPHINX_DATA_PATH'				=> 'Path to data directory',
+	'FULLTEXT_SPHINX_DATA_PATH_EXPLAIN'		=> 'It will be used to store the indexes and log files. You should create this directory outside the web accessible directories. (should have a trailing slash)',
+	'FULLTEXT_SPHINX_DELTA_POSTS'			=> 'Number of posts in frequently updated delta index',
+	'FULLTEXT_SPHINX_HOST'					=> 'Sphinx search daemon host',
+	'FULLTEXT_SPHINX_HOST_EXPLAIN'			=> 'Host on which the sphinx search daemon (searchd) listens. Leave empty to use the default localhost',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT'		=> 'Indexer memory limit',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT_EXPLAIN'	=> 'This number should at all times be lower than the RAM available on your machine. If you experience periodic performance problems this might be due to the indexer consuming too many resources. It might help to lower the amount of memory available to the indexer.',
+	'FULLTEXT_SPHINX_MAIN_POSTS'			=> 'Number of posts in main index',
+	'FULLTEXT_SPHINX_PORT'					=> 'Sphinx search daemon port',
+	'FULLTEXT_SPHINX_PORT_EXPLAIN'			=> 'Port on which the sphinx search daemon (searchd) listens. Leave empty to use the default Sphinx API port 9312',
+	'FULLTEXT_SPHINX_WRONG_DATABASE'		=> 'The sphinx search for phpBB supports MySQL and PostgreSQL only.',
+	'FULLTEXT_SPHINX_CONFIG_FILE'			=> 'Sphinx config file',
+	'FULLTEXT_SPHINX_CONFIG_FILE_EXPLAIN'	=> 'The generated content of the sphinx config file. This data needs to be pasted into the sphinx.conf which is used by sphinx search daemon. Replace the [dbuser] and [dbpassword] placeholders with your database credentials.',
+	'FULLTEXT_SPHINX_NO_CONFIG_DATA'		=> 'The sphinx data and config directory paths are not defined. Please define them to generate the config file.',
 
 	'GENERAL_SEARCH_SETTINGS'				=> 'Genel Arama Ayarları',
 	'GO_TO_SEARCH_INDEX'					=> 'Arama indeks sayfasına git',
@@ -14465,8 +15091,6 @@ $lang = array_merge($lang, array(
 
 	'SEARCH_GUEST_INTERVAL'					=> 'Misafir arama flood aralığı',
 	'SEARCH_GUEST_INTERVAL_EXPLAIN'			=> 'Misafirlerin aramaları arasında beklemesi gereken saniye sayısı. Eğer bir misafir arama yaparsa diğer tüm misafirler zaman aralığı dolana kadar bekleyecektir.',
-	'SEARCH_INDEX_CREATE_REDIRECT'			=> 'Tüm mesajlar şimdi %1$d mesaj id numarasına kadar indekslendi, bu adımda %2$d mesaj indekslendi.<br />Şu anki indekslemenin tahmini değeri her saniyede %3$.1f mesaj.<br />İndeksleme işlemi devam ediyor…',
-	'SEARCH_INDEX_DELETE_REDIRECT'			=> 'Tüm mesajlar %1$d mesaj id numarasına kadar arama indeksinden kaldırıldı.<br />Silme işlemi devam ediyor…',
 	'SEARCH_INDEX_CREATED'					=> 'Pano veritabanındaki tüm mesajlar başarıyla indekslendi',
 	'SEARCH_INDEX_REMOVED'					=> 'Bu uygulama için arama indeksi başarıyla silindi',
 	'SEARCH_INTERVAL'						=> 'Kullanıcı arama flood aralığı',
@@ -14489,8 +15113,55 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
+	// 3.1.0
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
+
+	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
+	'CONFIRM_UNINSTALL_STYLES'		=> 'Are you sure you wish to uninstall selected styles?',
+	'COPYRIGHT'						=> 'Telif Hakkı',
+
+	'DEACTIVATE_DEFAULT'		=> 'Varsayılan stili pasif yapamazsınız.',
+	'DELETE_FROM_FS'			=> 'Dosya sisteminden sil',
+	'DELETE_STYLE_FILES_FAILED'	=> 'Error deleting files for style "%s".',
+	'DELETE_STYLE_FILES_SUCCESS'	=> 'Files for style "%s" have been deleted.',
+	'DETAILS'					=> 'Detaylar',
+
+	'INHERITING_FROM'			=> 'Şuradan kalıt al',
+	'INSTALL_STYLE'				=> 'Stil yükle',
+	'INSTALL_STYLES'			=> 'Install styles',
+	'INSTALL_STYLES_EXPLAIN'	=> 'Here you can install new styles.<br />If you cannot find a specific style in list below, check to make sure style is already installed. If it is not installed, check if it was uploaded correctly.',
+	'INVALID_STYLE_ID'			=> 'Invalid style ID.',
+
+	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
+	'NO_UNINSTALLED_STYLE'		=> 'Hiç bir kaldırılmış stil tespit edilmedi.',
+
+	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
+
+	'STYLE_ACTIVATE'			=> 'Aktif et',
+	'STYLE_ACTIVE'				=> 'Aktif',
+	'STYLE_DEACTIVATE'			=> 'Pasif et',
+	'STYLE_DEFAULT'				=> 'Varsayılan stil yap',
+	'STYLE_DEFAULT_CHANGE_INACTIVE'	=> 'You must activate style before making it default style.',
+	'STYLE_ERR_INVALID_PARENT'	=> 'Invalid parent style.',
+	'STYLE_ERR_NAME_EXIST'		=> 'Seçtiğiniz stil ismi şu anda başka bir stilin ismidir',
+	'STYLE_ERR_STYLE_NAME'		=> 'Bu stil için bir ad belirlemelisiniz',
+	'STYLE_INSTALLED'			=> 'Style "%s" has been installed.',
+	'STYLE_INSTALLED_RETURN_INSTALLED_STYLES'	=> 'Return to installed styles list',
+	'STYLE_INSTALLED_RETURN_UNINSTALLED_STYLES'	=> 'Install more styles',
+	'STYLE_NAME'				=> 'Stil ismi',
+	'STYLE_NOT_INSTALLED'		=> 'Style "%s" was not installed.',
+	'STYLE_PATH'				=> 'Style path',
+	'STYLE_UNINSTALL'			=> 'Uninstall',
+	'STYLE_UNINSTALL_DEPENDENT'	=> 'Style "%s" cannot be uninstalled because it has one or more child styles.',
+	'STYLE_UNINSTALLED'			=> 'Style "%s" uninstalled successfully.',
+	'STYLE_USED_BY'				=> 'Kullananlar (robotlar dahil)',
+
+	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+
+	// 3.0.12
 	'ACP_IMAGESETS_EXPLAIN'	=> 'Görüntü setleri, mesaj panosundaki tüm butonların klasörünü içerir ve mesaj panosu tarafından kullanılan stil olmayan diğer özel görüntülerden oluşur. Burada var olan görüntü setlerini düzenleyebilir, dışarı aktarabilir ya da silebilirsiniz. Ayrıca görüntüleri içeri alabilir ya da yeni setleri aktif edebilirsiniz.',
-	'ACP_STYLES_EXPLAIN'	=> 'Buradan mesaj panonuzda mevcut olan stilleri yönetebilirsiniz. Bir stil şablonu tema ve görüntü setinden oluşur. İsterseniz var olan stilleri değiştirebilir, silebilir, pasif edebilir, tekrar aktif edebilir, oluşturabilir ya da yeni stiller ekleyebilirsiniz. Önizleme özelliğiyle bir stilin nasıl göründüğünü görebilirsiniz. Geçerli varsayılan stil (*) yıldız işaretiyle gösterilir. Her bir stili kullanan kullanıcıların sayısı listelenir, kullanıcı stili gözardı edilerek kullanılan stiller burada gösterilmez.',
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 	'ACP_TEMPLATES_EXPLAIN'	=> 'Bir şablon seti tüm biçimlendirmelerden oluşur ve mesaj panosu görünümünün oluşturulması için kullanılır. Burada var olan şablon setlerini düzenleyebilir, silebilir, dışarı aktarabilir, içeri alabilir ve setleri görüntüleyebilirsiniz. BBcode oluşturmak için kullanılan şablon kodlarını modifiye edebilirsiniz.',
 	'ACP_THEMES_EXPLAIN'	=> 'Buradan tema oluşturabilir, kurabilir, düzenleyebilir, silebilir ve dışarı aktarabilirsiniz. Bir tema, renklerin ve görüntülerin kombinasyonundan oluşur. Temalar, mesaj panonuzun temel görünümünü tanımlamak için şablonlara uygulanır. Seçeneklerin sırası phpBB yüklemenize ve sunucunuzun ayarlarına bağlı olarak açılacaktır, daha fazla bilgi için kılavuza bakın. Not: Yeni temalar oluşturulacağı zaman var olan bir temanın temeli isteğe bağlı olarak kullanılır.',
 	'ADD_IMAGESET'			=> 'Görüntü seti oluştur',
@@ -14527,7 +15198,6 @@ $lang = array_merge($lang, array(
 	'CURRENT_IMAGE'					=> 'Şu anki resim',
 
 	'DEACTIVATE_DEFAULT'		=> 'Varsayılan stili pasif yapamazsınız.',
-	'DELETE_FROM_FS'			=> 'Dosya sisteminden sil',
 	'DELETE_IMAGESET'			=> 'Görüntü setini sil',
 	'DELETE_IMAGESET_EXPLAIN'	=> 'Buradan seçilen görüntü setlerini veritabanından kaldırabilirsiniz. Not: Bu geri dönüşü olmayan bir işlemdir. Gelecekte de kullanılabilmesi için ilk önce setinizi dışarı aktarmanız önerilir.',
 	'DELETE_STYLE'				=> 'Stili sil',
@@ -14724,7 +15394,6 @@ $lang = array_merge($lang, array(
 	'INCLUDE_IMAGESET'			=> 'Görüntü setini dahil et',
 	'INCLUDE_TEMPLATE'			=> 'Şablonu dahil et',
 	'INCLUDE_THEME'				=> 'Temayı dahil et',
-	'INHERITING_FROM'			=> 'Şuradan kalıt al',
 	'INSTALL_IMAGESET'			=> 'Görüntü seti yükle',
 	'INSTALL_IMAGESET_EXPLAIN'	=> 'Burada seçili görüntü setini kurabilirsiniz. Belirli detayları düzenleyebilir ve isterseniz kurulum varsayılan değerlerini kullanabilirsiniz.',
 	'INSTALL_STYLE'				=> 'Stil yükle',
@@ -14754,7 +15423,6 @@ $lang = array_merge($lang, array(
 	'NO_TEMPLATE'				=> 'Dosya sistemi üzerinde şablon bulunamadı.',
 	'NO_THEME'					=> 'Dosya sistemi üzerinde tema bulunamadı.',
 	'NO_UNINSTALLED_IMAGESET'	=> 'Hiç bir kaldırılmış görüntü şablonu tespit edilmedi.',
-	'NO_UNINSTALLED_STYLE'		=> 'Hiç bir kaldırılmış stil tespit edilmedi.',
 	'NO_UNINSTALLED_TEMPLATE'	=> 'Hiç bir kaldırılmış şablon tespit edilmedi.',
 	'NO_UNINSTALLED_THEME'		=> 'Hiç bir kaldırılmış tema tespit edilmedi.',
 	'NO_UNIT'					=> 'Hiçbiri',
@@ -14794,30 +15462,22 @@ $lang = array_merge($lang, array(
 	'SELECTED_THEME_FILE'		=> 'Seçilen tema dosyası',
 	'STORE_DATABASE'			=> 'Veritabanı',
 	'STORE_FILESYSTEM'			=> 'Dosya Sistemi',
-	'STYLE_ACTIVATE'			=> 'Aktif et',
-	'STYLE_ACTIVE'				=> 'Aktif',
 	'STYLE_ADDED'				=> 'Stil başarıyla eklendi',
-	'STYLE_DEACTIVATE'			=> 'Pasif et',
-	'STYLE_DEFAULT'				=> 'Varsayılan stil yap',
 	'STYLE_DELETED'				=> 'Stil başarıyla silindi',
 	'STYLE_DETAILS_UPDATED'		=> 'Stil başarıyla düzenlendi',
 	'STYLE_ERR_ARCHIVE'			=> 'Lütfen bir arşiv methodu seçin',
 	'STYLE_ERR_COPY_LONG'		=> 'Telif Hakkı 60 karakterden fazla olmamalıdır',
 	'STYLE_ERR_MORE_ELEMENTS'	=> 'En azından bir stil elemanı seçmelisiniz.',
 	'STYLE_ERR_NAME_CHARS'		=> 'Stil ismi sadece alphanumeric karakterler, -, +, _ ve boşluk işaretlerini içermelidir',
-	'STYLE_ERR_NAME_EXIST'		=> 'Seçtiğiniz stil ismi şu anda başka bir stilin ismidir',
 	'STYLE_ERR_NAME_LONG'		=> 'Stil ismi 30 karakterden fazla olmamalıdır',
 	'STYLE_ERR_NO_IDS'			=> 'Bu stil için, bir şablon, tema ve görüntü seti seçmek zorundasınız.',
 	'STYLE_ERR_NOT_STYLE'		=> 'Yüklenen ya da alınmış dosya geçerli bir arşiv stili içermemektedir.',
-	'STYLE_ERR_STYLE_NAME'		=> 'Bu stil için bir ad belirlemelisiniz',
 	'STYLE_EXPORT'				=> 'Stili dışarı aktar',
 	'STYLE_EXPORT_EXPLAIN'		=> 'Bu kısımda form içindeki bir stil arşivinin dışarı aktarılmasını gerçekleştirebilirsiniz. Bir stil, tüm elemanlarını içermeyebilir ama en az bir elemanı olmalıdır. Örnek verecek olursak, şayet yeni bir tema oluşturduğumuzu düşünürsek ve görüntü seti, kullandığınız bir şablonsa; temayı kolayca dışarı aktarabilirsiniz. İsterseniz bu dosyayı direkt olarak indirebilirsiniz ya da daha sonra indirmek için, FTP adresine göndermek için kendi saklama klasörünüze bu dosyayı yerleştirebilirsiniz.',
 	'STYLE_EXPORTED'			=> 'Stil başarıyla dışarı aktarıldı ve %s içine saklandı',
 	'STYLE_IMAGESET'			=> 'Görüntü Seti',
-	'STYLE_NAME'				=> 'Stil ismi',
 	'STYLE_TEMPLATE'			=> 'Şablon',
 	'STYLE_THEME'				=> 'Tema',
-	'STYLE_USED_BY'				=> 'Kullananlar (robotlar dahil)',
 
 	'TEMPLATE_ADDED'			=> 'Şablon seti eklendi ve dosya sisteminde depolandı',
 	'TEMPLATE_ADDED_DB'			=> 'Şablon seti eklendi ve veritabanında depolandı',
@@ -14915,6 +15575,7 @@ $lang = array_merge($lang, array(
 	'CANNOT_FORCE_REACT_FOUNDER'	=> 'Kurucu hesaplarında zorunlu yeniden aktivasyon yaptırma izniniz yok.',
 	'CANNOT_FORCE_REACT_YOURSELF'	=> 'Kendi hesabınızı tekrar aktif etme zorunluluğunuz yok.',
 	'CANNOT_REMOVE_ANONYMOUS'		=> 'Misafir kullanıcı hesabını silemezsiniz.',
+	'CANNOT_REMOVE_FOUNDER'			=> 'You are not allowed to remove founder accounts.',
 	'CANNOT_REMOVE_YOURSELF'		=> 'Kendi kullanıcı hesabınızı silme yetkiniz yok.',
 	'CANNOT_SET_FOUNDER_IGNORED'	=> 'Yoksayılan kullanıcıların rütbesini kurucu olarak yükseltemezsiniz.',
 	'CANNOT_SET_FOUNDER_INACTIVE'	=> 'Kullanıcıları kurucu olarak terfi ettirmeden önce kullanıcıları aktif etmeniz gerekmektedir, sadece aktif edilmiş kullanıcılar terfi edebilir.',
@@ -14941,7 +15602,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'Lütfen bu kullanıcının oluşturduğu tüm mesajların taşınacağı forumu seçin.',
 
 	'NO_SPECIAL_RANK'		=> 'Özel rütbe atanmadı',
-	'NO_WARNINGS'			=> 'Uyarı yok.',
+	'NO_WARNINGS'			=> 'No warnings exist.',
 	'NOT_MANAGE_FOUNDER'	=> 'Kurucu durumunda olan bir kullanıcıyı düzenlemeyi denediniz.Sadece kurucuların diğer kurucuları düzenleme izni vardır.',
 
 	'QUICK_TOOLS'			=> 'Hızlı araçlar',

@@ -1,5 +1,14 @@
 ﻿<?php
 
+#######language/en/app.php#######
+
+$lang = array_merge($lang, array(
+	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
+	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
+	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+));
+
 #######language/en/calendar.php#######
 
 $lang = array_merge($lang, array(
@@ -182,6 +191,55 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Váš soukromý klíč k&nbsp;službě reCaptcha, získáte jej na <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 
 	'RECAPTCHA_EXPLAIN'				=> 'Snažíme se omezit automatizované registrace na našem serveru, z&nbsp;toho důvodu je nutné, abyste napsali následující dvě slova do rámečku pod nimi.',
+	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
+));
+
+#######language/en/cli.php#######
+
+$lang = array_merge($lang, array(
+	'CLI_CONFIG_CANNOT_CACHED'			=> 'Set this option if the configuration option changes too frequently to be efficiently cached.',
+	'CLI_CONFIG_CURRENT'				=> 'Current configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_DELETE_SUCCESS'			=> 'Successfully deleted config %s.',
+	'CLI_CONFIG_NEW'					=> 'New configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_NOT_EXISTS'				=> 'Config %s does not exist',
+	'CLI_CONFIG_OPTION_NAME'			=> 'The configuration option’s name',
+	'CLI_CONFIG_PRINT_WITHOUT_NEWLINE'	=> 'Set this option if the value should be printed without a new line at the end.',
+	'CLI_CONFIG_INCREMENT_BY'			=> 'Amount to increment by',
+	'CLI_CONFIG_INCREMENT_SUCCESS'		=> 'Successfully incremented config %s',
+	'CLI_CONFIG_SET_FAILURE'			=> 'Could not set config %s',
+	'CLI_CONFIG_SET_SUCCESS'			=> 'Successfully set config %s',
+
+	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
+	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
+	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
+	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
+	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
+	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
+	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
+	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
+	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
+	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
+	'CLI_EXTENSION_ENABLE_FAILURE'		=> 'Could not enable extension %s',
+	'CLI_EXTENSION_ENABLE_SUCCESS'		=> 'Successfully enabled extension %s',
+	'CLI_EXTENSION_NAME'				=> 'Name of the extension',
+	'CLI_EXTENSION_PURGE_FAILURE'		=> 'Could not purge extension %s',
+	'CLI_EXTENSION_PURGE_SUCCESS'		=> 'Successfully purged extension %s',
+	'CLI_EXTENSION_NOT_FOUND'			=> 'No extensions were found.',
+	'CLI_EXTENSIONS_AVAILABLE'			=> 'Available',
+	'CLI_EXTENSIONS_DISABLED'			=> 'Disabled',
+	'CLI_EXTENSIONS_ENABLED'			=> 'Enabled',
+
+	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
 ));
 
 #######language/en/common.php#######
@@ -190,7 +248,11 @@ $lang = array_merge($lang, array(
 	'TRANSLATION_INFO'	=> 'phpBB3 free Forum by <a href="http://www.userboard.org/">UserBoard.org</a> | All Rights Reserved.',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
+	'DATETIME_FORMAT'	=> '|d M Y, H:i|',	// 01 Jan 2007, 13:37 (with Relative days enabled)
 	'USER_LANG'			=> 'en-gb',
+
+	// See http://wiki.phpbb.com/Plural_Rules for more information
+	'PLURAL_RULE'		=> '1',
 
 	'1_DAY'			=> '1 day',
 	'1_MONTH'		=> '1 month',
@@ -204,18 +266,24 @@ $lang = array_merge($lang, array(
 	'ACCOUNT_DEACTIVATED'			=> 'Your account has been manually deactivated and is only able to be reactivated by an administrator.',
 	'ACCOUNT_NOT_ACTIVATED'			=> 'Your account has not been activated yet.',
 	'ACP'							=> 'Administrace fóra',
+	'ACP_SHORT'						=> 'ACP',
 	'ACTIVE'						=> 'active',
 	'ACTIVE_ERROR'					=> 'The specified username is currently inactive. If you have problems activating your account, please contact a board administrator.',
 	'ADMINISTRATOR'					=> 'Administrator',
 	'ADMINISTRATORS'				=> 'Administrátoři',
 	'AGE'							=> 'Age',
 	'AIM'							=> 'AIM',
+	'AJAX_ERROR_TITLE'				=> 'AJAX error',
+	'AJAX_ERROR_TEXT'				=> 'Something went wrong when processing your request.',
+	'AJAX_ERROR_TEXT_ABORT'			=> 'User aborted request.',
+	'AJAX_ERROR_TEXT_TIMEOUT'		=> 'Your request timed out; please try again.',
+	'AJAX_ERROR_TEXT_PARSERERROR'	=> 'Something went wrong with the request and the server returned an invalid reply.',
 	'ALLOWED'						=> 'Povoleno',
 	'ALL_FILES'						=> 'All files',
 	'ALL_FORUMS'					=> 'All forums',
 	'ALL_MESSAGES'					=> 'All messages',
 	'ALL_POSTS'						=> 'All posts',
-	'ALL_TIMES'						=> 'All times are %1$s %2$s',
+	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'All Topics',
 	'AND'							=> 'And',
 	'ARE_WATCHING_FORUM'			=> 'You have subscribed to be notified of new posts in this forum.',
@@ -225,6 +293,14 @@ $lang = array_merge($lang, array(
 	'ATTACHED_IMAGE_NOT_IMAGE'		=> 'The image file you tried to attach is invalid.',
 	'AUTHOR'						=> 'Autor',
 	'AUTH_NO_PROFILE_CREATED'		=> 'The creation of a user profile was unsuccessful.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_ENTRY'				=> 'Invalid database entry.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_SERVICE_TYPE'		=> 'Invalid service type provided to OAuth service handler.',
+	'AUTH_PROVIDER_OAUTH_ERROR_SERVICE_NOT_CREATED'			=> 'OAuth service not created',
+	'AUTH_PROVIDER_OAUTH_SERVICE_BITLY'						=> 'Bitly',
+	'AUTH_PROVIDER_OAUTH_SERVICE_FACEBOOK'					=> 'Facebook',
+	'AUTH_PROVIDER_OAUTH_SERVICE_GOOGLE'					=> 'Google',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_NOT_STORED'			=> 'OAuth token not stored.',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_INCORRECTLY_STORED'	=> 'OAuth token incorrectly stored.',
 	'AVATAR_DISALLOWED_CONTENT'		=> 'Nahraný soubor byl odmítnut, protože byl identifikován jako možný útok.',
 	'AVATAR_DISALLOWED_EXTENSION'	=> 'This file cannot be displayed because the extension <strong>%s</strong> is not allowed.',
 	'AVATAR_EMPTY_REMOTE_DATA'		=> 'The specified avatar could not be uploaded because the remote data appears to be invalid or corrupted.',
@@ -235,10 +311,11 @@ $lang = array_merge($lang, array(
 	'AVATAR_PARTIAL_UPLOAD'			=> 'The specified file was only partially uploaded.',
 	'AVATAR_PHP_SIZE_NA'			=> 'The avatar’s filesize is too large.<br />The maximum allowed filesize set in php.ini could not be determined.',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'The avatar’s filesize is too large. The maximum allowed upload size is %1$d %2$s.<br />Please note this is set in php.ini and cannot be overridden.',
+	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
 	'AVATAR_URL_INVALID'			=> 'URL není platnou adresou.',
 	'AVATAR_URL_NOT_FOUND'			=> 'Soubor nemohl být nalezen.',
-	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1d %2s.',
-	'AVATAR_WRONG_SIZE'				=> 'The submitted avatar is %5$d pixels wide and %6$d pixels high. Avatars must be at least %1$d pixels wide and %2$d pixels high, but no larger than %3$d pixels wide and %4$d pixels high.',
+	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
+	'AVATAR_WRONG_SIZE'				=> 'The submitted avatar is %5$s wide and %6$s high. Avatars must be at least %1$s wide and %2$s high, but no larger than %3$s wide and %4$s high.',
 
 	'BACK_TO_TOP'			=> 'Nahoru',
 	'BACK_TO_PREV'			=> 'Back to previous page',
@@ -255,28 +332,42 @@ $lang = array_merge($lang, array(
 	'BOARD_DISABLED'		=> 'This board is currently disabled.',
 	'BOARD_UNAVAILABLE'		=> 'Sorry but the board is temporarily unavailable, please try again in a few minutes.',
 	'BROWSING_FORUM'		=> 'Users browsing this forum: %1$s',
-	'BROWSING_FORUM_GUEST'	=> 'Users browsing this forum: %1$s and %2$d guest',
-	'BROWSING_FORUM_GUESTS'	=> 'Users browsing this forum: %1$s and %2$d guests',
+	'BUTTON_EDIT'			=> 'Edit',
+	'BUTTON_FORUM_LOCKED'	=> 'Locked',
+	'BUTTON_NEW_TOPIC'		=> 'New Topic',
+	'BUTTON_PM'				=> 'PM',
+	'BUTTON_PM_FORWARD'		=> 'Forward',
+	'BUTTON_PM_NEW'			=> 'New PM',
+	'BUTTON_PM_REPLY'		=> 'Send Reply',
+	'BUTTON_PM_REPLY_ALL'	=> 'Reply All',
+	'BUTTON_POST_REPLY'		=> 'Post Reply',
+	'BUTTON_QUOTE'			=> 'Quote',
+	'BUTTON_TOPIC_LOCKED'	=> 'Locked',
 	'BYTES'					=> 'Bytes',
+	'BYTES_SHORT'			=> 'B',
 
 	'CANCEL'				=> 'Cancel',
 	'CHANGE'				=> 'Změnit',
 	'CHANGE_FONT_SIZE'		=> 'Change font size',
 	'CHANGING_PREFERENCES'	=> 'Changing board preferences',
 	'CHANGING_PROFILE'		=> 'Changing profile settings',
-	'CLICK_VIEW_PRIVMSG'	=> '%sGo to your inbox%s',
 	'COLLAPSE_VIEW'			=> 'Collapse view',
 	'CLOSE_WINDOW'			=> 'Close window',
 	'COLOUR_SWATCH'			=> 'Vzorník bezpečných barev',
-	'COMMA_SEPARATOR'		=> ', ',	// Used in pagination of ACP & prosilver, use localised comma if appropriate, eg: Ideographic or Arabic
+	'COLON'					=> ':',
+	'COMMA_SEPARATOR'		=> ', ',	// Comma used to join lists into a single string, use localised comma if appropriate, eg: Ideographic or Arabic
 	'CONFIRM'				=> 'Confirm',
 	'CONFIRM_CODE'			=> 'Confirmation code',
 	'CONFIRM_CODE_EXPLAIN'	=> 'Enter the code exactly as it appears. All letters are case insensitive.',
 	'CONFIRM_CODE_WRONG'	=> 'The confirmation code you entered was incorrect.',
 	'CONFIRM_OPERATION'		=> 'Are you sure you wish to carry out this operation?',
+	'CONFIRM_AVATAR_DELETE' => 'Are you sure you wish to delete this avatar?',
 	'CONGRATULATIONS'		=> 'Congratulations to',
 	'CONNECTION_FAILED'		=> 'Connection failed.',
 	'CONNECTION_SUCCESS'	=> 'Connection was successful!',
+	'CONTACT'				=> 'Kontakt',
+	'CONTACT_USER'			=> 'Contact %s',
+	'CONTACT_US'			=> 'Contact us',
 	'COOKIES_DELETED'		=> 'All board cookies successfully deleted.',
 	'CURRENT_TIME'			=> 'It is currently %s',
 
@@ -297,18 +388,13 @@ $lang = array_merge($lang, array(
 	'DISPLAY_TOPICS'		=> 'Display topics from previous',
 	'DOWNLOADED'			=> 'Downloaded',
 	'DOWNLOADING_FILE'		=> 'Downloading file',
-	'DOWNLOAD_COUNT'		=> 'Downloaded %d time',
-	'DOWNLOAD_COUNTS'		=> 'Downloaded %d times',
-	'DOWNLOAD_COUNT_NONE'	=> 'Not downloaded yet',
-	'VIEWED_COUNT'			=> 'Viewed %d time',
-	'VIEWED_COUNTS'			=> 'Viewed %d times',
-	'VIEWED_COUNT_NONE'		=> 'Not viewed yet',
 
 	'EDIT_POST'							=> 'Upravit příspěvek',
-	'EMAIL'								=> 'E-mail', // Short form for EMAIL_ADDRESS
-	'EMAIL_ADDRESS'						=> 'E-mail address',
-	'EMAIL_INVALID_EMAIL'				=> 'Vámi zadaná e-mailová adresa není platná.',
-	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ran into problems sending e-mail at <strong>Line %1$s</strong>. Response: %2$s.',
+	'ELLIPSIS'							=>	'…',
+	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
+	'EMAIL_ADDRESS'						=> 'Email address',
+	'EMAIL_INVALID_EMAIL'				=> 'The email address you entered is invalid.',
+	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ran into problems sending email at <strong>Line %1$s</strong>. Response: %2$s.',
 	'EMPTY_SUBJECT'						=> 'You must specify a subject when posting a new topic.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'You must specify a subject when composing a new message.',
 	'ENABLED'							=> 'Enabled',
@@ -322,17 +408,23 @@ $lang = array_merge($lang, array(
 	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
 	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'The phpBB path specified appears to be invalid.',
+	'ERROR'									=> 'Chyba',
 	'EXPAND_VIEW'						=> 'Expand view',
 	'EXTENSION'							=> 'Přípony',
+	'EXTENSION_DISABLED'				=> 'The extension <strong>%s</strong> is not enabled.',
 	'EXTENSION_DISABLED_AFTER_POSTING'	=> 'The extension <strong>%s</strong> has been deactivated and can no longer be displayed.',
+	'EXTENSION_DOES_NOT_EXIST'			=> 'The extension <strong>%s</strong> does not exist.',
 
+	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> 'FAQ',
 	'FAQ_EXPLAIN'			=> 'Frequently Asked Questions',
 	'FILENAME'				=> 'Názvu souboru',
 	'FILESIZE'				=> 'Velikosti',
 	'FILEDATE'				=> 'File date',
 	'FILE_COMMENT'			=> 'Komentáře',
-	'FILE_NOT_FOUND'		=> 'The requested file could not be found.',
+	'FILE_CONTENT_ERR'		=> 'Could not read the contents of file: %s',
+	'FILE_JSON_DECODE_ERR'	=> 'Failed to decode json file: %s',
+	'FILE_NOT_FOUND'		=> 'The requested file could not be found: %s',
 	'FIND_USERNAME'			=> 'Find a member',
 	'FOLDER'				=> 'Folder',
 	'FORGOT_PASS'			=> 'I forgot my password',
@@ -381,6 +473,9 @@ $lang = array_merge($lang, array(
 	'GB'						=> 'GB',
 	'GIB'						=> 'GiB',
 	'GO'						=> 'Go',
+	'GOOGLEPLUS'				=> 'Google+',
+	'GOTO_FIRST_POST'			=> 'Go to first post',
+	'GOTO_LAST_POST'			=> 'Go to last post',
 	'GOTO_PAGE'					=> 'Go to page',
 	'GROUP'						=> 'Group',
 	'GROUPS'					=> 'Skupiny',
@@ -388,12 +483,6 @@ $lang = array_merge($lang, array(
 	'GROUP_ERR_USERNAME'		=> 'No group name specified.',
 	'GROUP_ERR_USER_LONG'		=> 'Group names cannot exceed 60 characters. The specified group name is too long.',
 	'GUEST'						=> 'Guest',
-	'GUEST_USERS_ONLINE'		=> 'There are %d guest users online',
-	'GUEST_USERS_TOTAL'			=> '%d guests',
-	'GUEST_USERS_ZERO_ONLINE'	=> 'There are 0 guest users online',
-	'GUEST_USERS_ZERO_TOTAL'	=> '0 guests',
-	'GUEST_USER_ONLINE'			=> 'There is %d guest user online',
-	'GUEST_USER_TOTAL'			=> '%d guest',
 	'G_ADMINISTRATORS'			=> 'Administrátoři',
 	'G_BOTS'					=> 'Bots',
 	'G_GUESTS'					=> 'Guests',
@@ -402,22 +491,12 @@ $lang = array_merge($lang, array(
 	'G_GLOBAL_MODERATORS'		=> 'Globální moderátoři',
 	'G_NEWLY_REGISTERED'		=> 'Newly registered users',
 
-	'HIDDEN_USERS_ONLINE'			=> '%d hidden users online',
-	'HIDDEN_USERS_TOTAL'			=> '%d hidden',
-	'HIDDEN_USERS_TOTAL_AND'		=> '%d hidden and ',
-	'HIDDEN_USERS_ZERO_ONLINE'		=> '0 hidden users online',
-	'HIDDEN_USERS_ZERO_TOTAL'		=> '0 hidden',
-	'HIDDEN_USERS_ZERO_TOTAL_AND'	=> '0 hidden and ',
-	'HIDDEN_USER_ONLINE'			=> '%d hidden user online',
-	'HIDDEN_USER_TOTAL'				=> '%d hidden',
-	'HIDDEN_USER_TOTAL_AND'			=> '%d hidden and ',
 	'HIDE_GUESTS'					=> 'Hide guests',
 	'HIDE_ME'						=> 'Hide my online status this session',
 	'HOURS'							=> 'Hours',
 	'HOME'							=> 'Home',
 
 	'ICQ'						=> 'ICQ',
-	'ICQ_STATUS'				=> 'ICQ status',
 	'IF'						=> 'If',
 	'IMAGE'						=> 'Obrázek',
 	'IMAGE_FILETYPE_INVALID'	=> 'Image file type %d for mimetype %s not supported.',
@@ -425,9 +504,11 @@ $lang = array_merge($lang, array(
 	'IN'						=> 'in',
 	'INDEX'						=> 'Fórum', //Index page
 	'INFORMATION'				=> 'Information',
+	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
 	'INTERESTS'					=> 'Interests',
 	'INVALID_DIGEST_CHALLENGE'	=> 'Invalid digest challenge.',
-	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> possibly an invalid e-mail address?',
+	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> possibly an invalid email address?',
+	'INVALID_PLURAL_RULE'		=> 'The chosen plural rule is invalid. Valid values are integers between 0 and 15.',
 	'IP'						=> 'IP adresa',
 	'IP_BLACKLISTED'			=> 'Your IP %1$s has been blocked because it is blacklisted. For details please see <a href="%2$s">%2$s</a>.',
 
@@ -435,7 +516,8 @@ $lang = array_merge($lang, array(
 	'JOINED'				=> 'Joined',
 	'JUMP_PAGE'				=> 'Enter the page number you wish to go to',
 	'JUMP_TO'				=> 'Jump to',
-	'JUMP_TO_PAGE'			=> 'Click to jump to page…',
+	'JUMP_TO_PAGE'			=> 'Jump to page',
+	'JUMP_TO_PAGE_CLICK'	=> 'Click to jump to page…',
 
 	'KB'					=> 'KB',
 	'KIB'					=> 'KiB',
@@ -447,6 +529,8 @@ $lang = array_merge($lang, array(
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Could not connect to LDAP server.',
 	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
 	'LEGEND'							=> 'Legend',
+	'LIVE_SEARCHES_NOT_ALLOWED'			=> 'Live searches are not allowed.',
+	'LOADING'							=> 'Loading',
 	'LOCATION'							=> 'Location',
 	'LOCK_POST'							=> 'Zamknout příspěvek',
 	'LOCK_POST_EXPLAIN'					=> 'Prevent editing',
@@ -457,6 +541,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_CONFIRM_EXPLAIN'				=> 'To prevent brute forcing accounts the board requires you to enter a confirmation code after a maximum amount of failed logins. The code is displayed in the image you should see below. If you are visually impaired or cannot otherwise read this code please contact the %sBoard Administrator%s.', // unused
 	'LOGIN_ERROR_ATTEMPTS'				=> 'You exceeded the maximum allowed number of login attempts. In addition to your username and password you now also have to solve the CAPTCHA below.',
 	'LOGIN_ERROR_EXTERNAL_AUTH_APACHE'	=> 'You have not been authenticated by Apache.',
+	'LOGIN_ERROR_OAUTH_SERVICE_DOES_NOT_EXIST'	=> 'A non-existant OAuth service has been requested.',
 	'LOGIN_ERROR_PASSWORD'				=> 'You have specified an incorrect password. Please check your password and try again. If you continue to have problems please contact the %sBoard Administrator%s.',
 	'LOGIN_ERROR_PASSWORD_CONVERT'		=> 'It was not possible to convert your password when updating this bulletin board’s software. Please %srequest a new password%s. If you continue to have problems please contact the %sBoard Administrator%s.',
 	'LOGIN_ERROR_USERNAME'				=> 'You have specified an incorrect username. Please check your username and try again. If you continue to have problems please contact the %sBoard Administrator%s.',
@@ -465,17 +550,22 @@ $lang = array_merge($lang, array(
 	'LOGIN_VIEWFORUM'					=> 'The board requires you to be registered and logged in to view this forum.',
 	'LOGIN_EXPLAIN_EDIT'				=> 'In order to edit posts in this forum you have to be registered and logged in.',
 	'LOGIN_EXPLAIN_VIEWONLINE'			=> 'In order to view the online list you have to be registered and logged in.',
+	'LOGIN_REQUIRED'					=> 'You need to login to perform this action.',
 	'LOGOUT'							=> 'Logout',
 	'LOGOUT_USER'						=> 'Logout [ %s ]',
-	'LOG_ME_IN'							=> 'Log me on automatically each visit',
+	'LOG_ME_IN'							=> 'Remember me',
 
+	'MAIN'					=> 'Main',
 	'MARK'					=> 'Mark',
 	'MARK_ALL'				=> 'Mark all',
+	'MARK_ALL_READ'			=> 'Mark all read',
 	'MARK_FORUMS_READ'		=> 'Mark forums read',
+	'MARK_READ'				=> 'Mark read',
 	'MARK_SUBFORUMS_READ'	=> 'Mark subforums read',
 	'MB'					=> 'MB',
 	'MIB'					=> 'MiB',
 	'MCP'					=> 'Moderator Control Panel',
+	'MCP_SHORT'				=> 'MCP',
 	'MEMBERLIST'			=> 'Členové',
 	'MEMBERLIST_EXPLAIN'	=> 'View complete list of members',
 	'MERGE'					=> 'Merge',
@@ -488,26 +578,47 @@ $lang = array_merge($lang, array(
 	'MODERATE'				=> 'Moderate',
 	'MODERATOR'				=> 'Moderator',
 	'MODERATORS'			=> 'Moderators',
+	'MODULE_NOT_ACCESS'		=> 'Module not accessible',
+	'MODULE_NOT_FIND'		=> 'Cannot find module %s',
+	'MODULE_FILE_INCORRECT_CLASS'	=> 'Module file %s does not contain correct class [%s]',
 	'MONTH'					=> 'Month',
 	'MOVE'					=> 'Move',
-	'MSNM'					=> 'MSNM/WLM',
 
 	'NA'						=> 'N/A',
 	'NEWEST_USER'				=> 'Our newest member <strong>%s</strong>',
 	'NEW_MESSAGE'				=> 'New message',
 	'NEW_MESSAGES'				=> 'New messages',
-	'NEW_PM'					=> '<strong>%d</strong> new message',
-	'NEW_PMS'					=> '<strong>%d</strong> new messages',
 	'NEW_POST'					=> 'New post',	// Not used anymore
 	'NEW_POSTS'					=> 'New posts',	// Not used anymore
 	'NEXT'						=> 'Pokračovat na další krok',		// Used in pagination
 	'NEXT_STEP'					=> 'Pokračovat na další krok',
 	'NEVER'						=> 'Nikdy',
 	'NO'						=> 'Ne',
+	'NO_NOTIFICATIONS'			=> 'You have no notifications',
 	'NOT_ALLOWED_MANAGE_GROUP'	=> 'You are not allowed to manage this group.',
 	'NOT_AUTHORISED'			=> 'You are not authorised to access this area.',
 	'NOT_WATCHING_FORUM'		=> 'You are no longer subscribed to updates on this forum.',
 	'NOT_WATCHING_TOPIC'		=> 'You are no longer subscribed to this topic.',
+	'NOTIFICATIONS'				=> 'Notifications',
+	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
+	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
+	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
+	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
+	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
+	'NOTIFICATION_POST_IN_QUEUE'		=> '<strong>Post approval</strong> request by %1$s:',
+	'NOTIFICATION_REFERENCE'			=> '"%1$s"',
+	'NOTIFICATION_REASON'				=> '<em>Reason:</em> %1$s.',
+	'NOTIFICATION_REPORT_PM'			=> '<strong>Private Message reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_POST'			=> '<strong>Post reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_CLOSED'		=> '<strong>Report closed</strong> by %1$s for:',
+	'NOTIFICATION_TOPIC'				=> '<strong>New topic</strong> by %1$s:',
+	'NOTIFICATION_TOPIC_APPROVED'		=> '<strong>Topic approved</strong>:',
+	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
+	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
+	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> 'Please notify the board administrator or webmaster.',
 	'NOTIFY_ADMIN_EMAIL'		=> 'Please notify the board administrator or webmaster: <a href="mailto:%1$s">%1$s</a>',
 	'NO_ACCESS_ATTACHMENT'		=> 'You are not allowed to access this file.',
@@ -516,6 +627,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_ADMIN'				=> 'Access to the Administration Control Panel is not allowed as you do not have administrative permissions.',
 	'NO_AUTH_ADMIN_USER_DIFFER'	=> 'You are not able to re-authenticate as a different user.',
 	'NO_AUTH_OPERATION'			=> 'You do not have the necessary permissions to complete this operation.',
+	'NO_AVATARS'				=> 'No avatars currently available',
 	'NO_CONNECT_TO_SMTP_HOST'	=> 'Could not connect to smtp host : %1$s : %2$s',
 	'NO_BIRTHDAYS'				=> 'No birthdays today',
 	'NO_EMAIL_MESSAGE'			=> 'Musíte vložit zprávu.',
@@ -531,7 +643,6 @@ $lang = array_merge($lang, array(
 	'NO_MODE'					=> 'No mode specified.',
 	'NO_MODERATORS'				=> 'There are no moderators.',
 	'NO_NEW_MESSAGES'			=> 'No new messages',
-	'NO_NEW_PM'					=> '<strong>0</strong> new messages',
 	'NO_NEW_POSTS'				=> 'No new posts',	// Not used anymore
 	'NO_ONLINE_USERS'			=> 'No registered users',
 	'NO_POSTS'					=> 'No posts',
@@ -546,7 +657,6 @@ $lang = array_merge($lang, array(
 	'NO_TOPIC_FORUM'			=> 'The topic or forum no longer exists.',
 	'NO_TOPICS'					=> 'There are no topics or posts in this forum.',
 	'NO_TOPICS_TIME_FRAME'		=> 'No topics exist inside this forum for the selected time frame.',
-	'NO_UNREAD_PM'				=> '<strong>0</strong> unread messages',
 	'NO_UNREAD_POSTS'			=> 'V&nbsp;tomto fóru nejsou další nepřečtená témata.',
 	'NO_UPLOAD_FORM_FOUND'		=> 'Upload initiated but no valid file upload form found.',
 	'NO_USER'					=> 'The requested user does not exist.',
@@ -557,15 +667,14 @@ $lang = array_merge($lang, array(
 	'OFFLINE'					=> 'Nepřipojen',
 	'ONLINE'					=> 'Online',
 	'ONLINE_BUDDIES'			=> 'Online friends',
-	'ONLINE_USERS_TOTAL'		=> 'In total there are <strong>%d</strong> users online :: ',
-	'ONLINE_USERS_ZERO_TOTAL'	=> 'In total there are <strong>0</strong> users online :: ',
-	'ONLINE_USER_TOTAL'			=> 'In total there is <strong>%d</strong> user online :: ',
 	'OPTIONS'					=> 'Možnosti',
 
 	'PAGE_OF'				=> 'Page <strong>%1$d</strong> of <strong>%2$d</strong>',
+	'PAGE_TITLE_NUMBER'		=> 'Page %s',
 	'PASSWORD'				=> 'Heslo',
 	'PIXEL'					=> 'px',
 	'PLAY_QUICKTIME_FILE'	=> 'Play Quicktime file',
+	'PLEASE_WAIT'			=> 'Please wait.',
 	'PM'					=> 'PM',
 	'PM_REPORTED'			=> 'Click to view report',
 	'POSTING_MESSAGE'		=> 'Posting message in %s',
@@ -578,9 +687,15 @@ $lang = array_merge($lang, array(
 	'POSTED_ON_DATE'		=> '-',
 	'POSTS'					=> 'Posts',
 	'POSTS_UNAPPROVED'		=> 'At least one post in this topic has not been approved.',
+	'POSTS_UNAPPROVED_FORUM'=> 'At least one post in this forum has not been approved.',
 	'POST_BY_AUTHOR'		=> 'od',
-	'POST_BY_FOE'			=> 'This post was made by <strong>%1$s</strong> who is currently on your ignore list. %2$sDisplay this post%3$s.',
+	'POST_BY_FOE'			=> '<strong>%1$s</strong>, who is currently on your ignore list, made this post.',
+	'POST_DISPLAY'			=> '%1$sDisplay this post%2$s.',
 	'POST_DAY'				=> '%.2f posts per day',
+	'POST_DELETED_ACTION'	=> 'Deleted post:',
+	'POST_DELETED'			=> 'This post has been deleted.',
+	'POST_DELETED_BY'		=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s.',
+	'POST_DELETED_BY_REASON'=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s for the following reason: %4$s',
 	'POST_DETAILS'			=> 'Detaily příspěvku',
 	'POST_NEW_TOPIC'		=> 'Post new topic',
 	'POST_PCT'				=> '%.2f%% of all posts',
@@ -591,7 +706,8 @@ $lang = array_merge($lang, array(
 	'POST_SUBJECT'			=> 'Předmět příspěvku',
 	'POST_TIME'				=> 'Čas odeslání',
 	'POST_TOPIC'			=> 'Post a new topic',
-	'POST_UNAPPROVED'		=> 'This post is waiting for approval',
+	'POST_UNAPPROVED_ACTION'	=> 'Post awaiting approval:',
+	'POST_UNAPPROVED'		=> 'This post has not been approved.',
 	'POWERED_BY'			=> 'Powered by %s',
 	'PREVIEW'				=> 'Preview',
 	'PREVIOUS'				=> 'Previous',		// Used in pagination
@@ -601,6 +717,8 @@ $lang = array_merge($lang, array(
 	'PRIVATE_MESSAGES'		=> 'Soukromé zprávy',
 	'PRIVATE_MESSAGING'		=> 'Soukromé zprávy',
 	'PROFILE'				=> 'Uživatelský ovládací panel',
+
+	'QUICK_LINKS'			=> 'Quick links',
 
 	'RANK'						=> 'Hodnost',
 	'READING_FORUM'				=> 'Viewing topics in %s',
@@ -614,15 +732,6 @@ $lang = array_merge($lang, array(
 	'REDIRECTS'					=> 'Total redirects',
 	'REGISTER'					=> 'Register',
 	'REGISTERED_USERS'			=> 'Registered users:',
-	'REG_USERS_ONLINE'			=> 'There are %d registered users and ',
-	'REG_USERS_TOTAL'			=> '%d registered, ',
-	'REG_USERS_TOTAL_AND'		=> '%d registered and ',
-	'REG_USERS_ZERO_ONLINE'		=> 'There are 0 registered users and ',
-	'REG_USERS_ZERO_TOTAL'		=> '0 registered, ',
-	'REG_USERS_ZERO_TOTAL_AND'	=> '0 registered and ',
-	'REG_USER_ONLINE'			=> 'There is %d registered user and ',
-	'REG_USER_TOTAL'			=> '%d registered, ',
-	'REG_USER_TOTAL_AND'		=> '%d registered and ',
 	'REMOVE'					=> 'Remove',
 	'REMOVE_INSTALL'			=> 'Please delete, move or rename the install directory before you use your board. If this directory is still present, only the Administration Control Panel (ACP) will be accessible.',
 	'REPLIES'					=> 'Replies',
@@ -639,7 +748,8 @@ $lang = array_merge($lang, array(
 	'RETURN_FORUM'				=> '%sReturn to the forum last visited%s',
 	'RETURN_PAGE'				=> '%sReturn to the previous page%s',
 	'RETURN_TOPIC'				=> '%sReturn to the topic last visited%s',
-	'RETURN_TO'					=> 'Vrátit se na…',
+	'RETURN_TO'					=> 'Return to “%s”',
+	'RETURN_TO_INDEX'			=> 'Return to Board Index',
 	'FEED'						=> 'Feed',
 	'FEED_NEWS'					=> 'News',
 	'FEED_TOPICS_ACTIVE'		=> 'Active Topics',
@@ -667,28 +777,30 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV_EXPLAIN'		=> 'View the advanced search options',
 	'SEARCH_KEYWORDS'			=> 'Search for keywords',
 	'SEARCHING_FORUMS'			=> 'Searching forums',
-	'SEARCH_ACTIVE_TOPICS'		=> 'View active topics',
+	'SEARCH_ACTIVE_TOPICS'		=> 'Active topics',
 	'SEARCH_FOR'				=> 'Search for',
 	'SEARCH_FORUM'				=> 'Search this forum…',
-	'SEARCH_NEW'				=> 'View new posts',
+	'SEARCH_NEW'				=> 'New posts',
 	'SEARCH_POSTS_BY'			=> 'Hledání podle autora',
-	'SEARCH_SELF'				=> 'View your posts',
+	'SEARCH_SELF'				=> 'Your posts',
 	'SEARCH_MINE'				=> 'View your topics',
 	'SEARCH_TOPIC'				=> 'Search this topic…',
-	'SEARCH_UNANSWERED'			=> 'View unanswered posts',
-	'SEARCH_UNREAD'				=> 'View unread posts',
+	'SEARCH_UNANSWERED'			=> 'Unanswered posts',
+	'SEARCH_UNREAD'				=> 'Unread posts',
 	'SEARCH_USER_POSTS'			=> 'Search user’s posts',
 	'SECONDS'					=> 'Seconds',
+	'SEE_ALL'					=> 'See All',
 	'SELECT'					=> 'Select',
 	'SELECT_ALL_CODE'			=> 'Označit vše',
 	'SELECT_DESTINATION_FORUM'	=> 'Please select a destination forum',
 	'SELECT_FORUM'				=> 'Zvolte fórum',
-	'SEND_EMAIL'				=> 'E-mail',				// Used for submit buttons
-	'SEND_EMAIL_USER'			=> 'E-mail',				// Used as: {L_SEND_EMAIL_USER} {USERNAME} -> E-mail UserX
+	'SEND_EMAIL'				=> 'Send email',				// Used for submit buttons
+	'SEND_EMAIL_USER'			=> 'Send email to %s',
 	'SEND_PRIVATE_MESSAGE'		=> 'Send private message',
 	'SETTINGS'					=> 'Nastavení',
 	'SIGNATURE'					=> 'Podpis',
 	'SKIP'						=> 'Skip to content',
+	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'SMTP server does not support authentication.',
 	'SORRY_AUTH_READ'			=> 'You are not authorised to read this forum.',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'You are not authorised to download this attachment.',
@@ -706,6 +818,8 @@ $lang = array_merge($lang, array(
 	'START_WATCHING_TOPIC'		=> 'Subscribe topic',
 	'STOP_WATCHING_FORUM'		=> 'Unsubscribe forum',
 	'STOP_WATCHING_TOPIC'		=> 'Unsubscribe topic',
+	'STRING_LIST_MULTI'			=> '%1$s, and %2$s',
+	'STRING_LIST_SIMPLE'		=> '%1$s and %2$s',
 	'SUBFORUM'					=> 'Subfórum',
 	'SUBFORUMS'					=> 'Subforums',
 	'SUBJECT'					=> 'Subject',
@@ -717,51 +831,35 @@ $lang = array_merge($lang, array(
 	'THE_TEAM'			=> 'The team',
 	'TIB'				=> 'TiB',
 	'TIME'				=> 'Time',
-	
+	'TIMEOUT_PROCESSING_REQ'			=> 'Request timed out.',
+
 	'TOO_LARGE'						=> 'The value you entered is too large.',
 	'TOO_LARGE_MAX_RECIPIENTS'		=> 'The value of <strong>Maximum number of allowed recipients per private message</strong> setting you entered is too large.',
 
 	'TOO_LONG'						=> 'The value you entered is too long.',
 
-	'TOO_LONG_AIM'					=> 'The screenname you entered is too long.',
 	'TOO_LONG_CONFIRM_CODE'			=> 'The confirm code you entered is too long.',
 	'TOO_LONG_DATEFORMAT'			=> 'The date format you entered is too long.',
-	'TOO_LONG_ICQ'					=> 'The ICQ number you entered is too long.',
-	'TOO_LONG_INTERESTS'			=> 'The interests you entered is too long.',
 	'TOO_LONG_JABBER'				=> 'The Jabber account name you entered is too long.',
-	'TOO_LONG_LOCATION'				=> 'The location you entered is too long.',
-	'TOO_LONG_MSN'					=> 'The MSNM/WLM name you entered is too long.',
 	'TOO_LONG_NEW_PASSWORD'			=> 'The password you entered is too long.',
-	'TOO_LONG_OCCUPATION'			=> 'The occupation you entered is too long.',
 	'TOO_LONG_PASSWORD_CONFIRM'		=> 'The password confirmation you entered is too long.',
 	'TOO_LONG_USER_PASSWORD'		=> 'The password you entered is too long.',
 	'TOO_LONG_USERNAME'				=> 'The username you entered is too long.',
-	'TOO_LONG_EMAIL'				=> 'The e-mail address you entered is too long.',
-	'TOO_LONG_EMAIL_CONFIRM'		=> 'The e-mail address confirmation you entered is too long.',
-	'TOO_LONG_WEBSITE'				=> 'The website address you entered is too long.',
-	'TOO_LONG_YIM'					=> 'The Yahoo! Messenger name you entered is too long.',
+	'TOO_LONG_EMAIL'				=> 'The email address you entered is too long.',
 
 	'TOO_MANY_VOTE_OPTIONS'			=> 'You have tried to vote for too many options.',
 
 	'TOO_SHORT'						=> 'The value you entered is too short.',
 
-	'TOO_SHORT_AIM'					=> 'The screenname you entered is too short.',
 	'TOO_SHORT_CONFIRM_CODE'		=> 'The confirm code you entered is too short.',
 	'TOO_SHORT_DATEFORMAT'			=> 'The date format you entered is too short.',
-	'TOO_SHORT_ICQ'					=> 'The ICQ number you entered is too short.',
-	'TOO_SHORT_INTERESTS'			=> 'The interests you entered is too short.',
 	'TOO_SHORT_JABBER'				=> 'The Jabber account name you entered is too short.',
-	'TOO_SHORT_LOCATION'			=> 'The location you entered is too short.',
-	'TOO_SHORT_MSN'					=> 'The MSNM/WLM name you entered is too short.',
 	'TOO_SHORT_NEW_PASSWORD'		=> 'The password you entered is too short.',
-	'TOO_SHORT_OCCUPATION'			=> 'The occupation you entered is too short.',
 	'TOO_SHORT_PASSWORD_CONFIRM'	=> 'The password confirmation you entered is too short.',
 	'TOO_SHORT_USER_PASSWORD'		=> 'The password you entered is too short.',
 	'TOO_SHORT_USERNAME'			=> 'The username you entered is too short.',
-	'TOO_SHORT_EMAIL'				=> 'The e-mail address you entered is too short.',
-	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The e-mail address confirmation you entered is too short.',
-	'TOO_SHORT_WEBSITE'				=> 'The website address you entered is too short.',
-	'TOO_SHORT_YIM'					=> 'The Yahoo! Messenger name you entered is too short.',
+	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
+	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
 	
 	'TOO_SMALL'						=> 'The value you entered is too small.',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> 'The value of <strong>Maximum number of allowed recipients per private message</strong> setting you entered is too small.',
@@ -775,30 +873,20 @@ $lang = array_merge($lang, array(
 	'TOPIC_MOVED'		=> 'Moved topic',
 	'TOPIC_REVIEW'		=> 'Topic review',
 	'TOPIC_TITLE'		=> 'Topic title',
-	'TOPIC_UNAPPROVED'	=> 'This topic has not been approved',
+	'TOPIC_UNAPPROVED'	=> 'This topic has not been approved.',
+	'TOPIC_DELETED'		=> 'This topic has been deleted.',
 	'TOTAL_ATTACHMENTS'	=> 'Attachment(s)',
-	'TOTAL_LOG'			=> '1 log',
-	'TOTAL_LOGS'		=> '%d logs',
-	'TOTAL_NO_PM'		=> '0 private messages in total',
-	'TOTAL_PM'			=> '1 private message in total',
-	'TOTAL_PMS'			=> '%d private messages in total',
+	'TOPIC_POLL'		=> 'This topic has a poll.',
 	'TOTAL_POSTS'		=> 'Total posts',
-	'TOTAL_POSTS_OTHER'	=> 'Celkové příspěvky <strong>%s</strong>',
-	'TOTAL_POSTS_ZERO'	=> 'Total posts <strong>0</strong>',
 	'TOPIC_REPORTED'	=> 'This topic has been reported',
-	'TOTAL_TOPICS_OTHER'=> 'Celkem témat <strong>%s</strong>',
-	'TOTAL_TOPICS_ZERO'	=> 'Total topics <strong>0</strong>',
-	'TOTAL_USERS_OTHER'	=> 'Celkem členů <strong>%s</strong>',
-	'TOTAL_USERS_ZERO'	=> 'Total members <strong>0</strong>',
 	'TRACKED_PHP_ERROR'	=> 'Tracked PHP errors: %s',
+	'TWITTER'			=> 'Twitter',
 
-	'UNABLE_GET_IMAGE_SIZE'	=> 'It was not possible to determine the dimensions of the image.',
+	'UNABLE_GET_IMAGE_SIZE'	=> 'It was not possible to determine the dimensions of the image. Please verify that the URL you entered is correct.',
 	'UNABLE_TO_DELIVER_FILE'=> 'Unable to deliver file.',
 	'UNKNOWN_BROWSER'		=> 'Unknown browser',
 	'UNMARK_ALL'			=> 'Unmark all',
 	'UNREAD_MESSAGES'		=> 'Nepřečtené zprávy',
-	'UNREAD_PM'				=> '<strong>%d</strong> unread message',
-	'UNREAD_PMS'			=> '<strong>%d</strong> unread messages',
 	'UNREAD_POST'			=> 'Unread post',
 	'UNREAD_POSTS'			=> 'Unread posts',
 	'UNWATCH_FORUM_CONFIRM'		=> 'Are you sure you wish to unsubscribe from this forum?',
@@ -816,8 +904,6 @@ $lang = array_merge($lang, array(
 	'USERNAMES'				=> 'Usernames',
 	'USER_AVATAR'			=> 'User avatar',
 	'USER_CANNOT_READ'		=> 'You cannot read posts in this forum.',
-	'USER_POST'				=> '%d Post',
-	'USER_POSTS'			=> '%d Posts',
 	'USERS'					=> 'Uživatelé',
 	'USE_PERMISSIONS'		=> 'Test out user’s permissions',
 
@@ -825,6 +911,8 @@ $lang = array_merge($lang, array(
 
 	'VARIANT_DATE_SEPARATOR'	=> ' / ',	// Used in date format dropdown, eg: "Today, 13:37 / 01 Jan 2007, 13:37" ... to join a relative date with calendar date
 	'VIEWED'					=> 'Viewed',
+
+	'VIEWING_CONTACT_ADMIN'		=> 'Viewing contact page',
 	'VIEWING_FAQ'				=> 'Viewing FAQ',
 	'VIEWING_MEMBERS'			=> 'Viewing member details',
 	'VIEWING_ONLINE'			=> 'Viewing who is online',
@@ -839,8 +927,6 @@ $lang = array_merge($lang, array(
 	'VIEW_LATEST_POST'			=> 'View the latest post',
 	'VIEW_NEWEST_POST'			=> 'View first unread post',
 	'VIEW_NOTES'				=> 'View user notes',
-	'VIEW_ONLINE_TIME'			=> 'based on users active over the past %d minute',
-	'VIEW_ONLINE_TIMES'			=> 'based on users active over the past %d minutes',
 	'VIEW_TOPIC'				=> 'Zobrazit téma',
 	'VIEW_TOPIC_ANNOUNCEMENT'	=> 'Announcement: ',
 	'VIEW_TOPIC_GLOBAL'			=> 'Global Announcement: ',
@@ -861,23 +947,24 @@ $lang = array_merge($lang, array(
 	'WEBSITE'			=> 'WWW',
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> 'Who is online',
+	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'You entered an incorrect password.',
 	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
-	'WRONG_DATA_ICQ'			=> 'The number you entered is not a valid ICQ number.',
 	'WRONG_DATA_JABBER'			=> 'The name you entered is not a valid Jabber account name.',
 	'WRONG_DATA_LANG'			=> 'The language you specified is not valid.',
-	'WRONG_DATA_WEBSITE'		=> 'The website address has to be a valid URL, including the protocol. For example http://www.example.com/.',
+	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
+	'WRONG_DATA_POST_SK'		=> 'The post sort option you specified is not valid.',
+	'WRONG_DATA_TOPIC_SD'		=> 'The topic sort direction you specified is not valid.',
+	'WRONG_DATA_TOPIC_SK'		=> 'The topic sort option you specified is not valid.',
 	'WROTE'						=> 'wrote',
 
+	'YAHOO'				=> 'Yahoo Messenger',
+	'YOUTUBE'			=> 'YouTube',
 	'YEAR'				=> 'Year',
 	'YEAR_MONTH_DAY'	=> '(YYYY-MM-DD)',
 	'YES'				=> 'Ano',
-	'YIM'				=> 'YIM',
 	'YOU_LAST_VISIT'	=> 'Last visit was: %s',
-	'YOU_NEW_PM'		=> 'A new private message is waiting for you in your Inbox.',
-	'YOU_NEW_PMS'		=> 'New private messages are waiting for you in your Inbox.',
-	'YOU_NO_NEW_PM'		=> 'No new private messages are waiting for you.',
 
 	'default_dateformat'	=> 'D M d, Y g:i a', // Mon Jan 01, 2007 1:37 pm
 
@@ -1083,7 +1170,6 @@ $lang = array_merge($lang, array(
 
 	'FORUM_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this forum.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this topic.',
-	'TOO_FEW_CHARS_LIMIT'	=> 'Vaše zpráva obsahuje %1$d znaků, nastavené minimum je ale %2$d.',
 	'REPLY_TO_MESSAGE'		=> 'Reply to message',
 
 	'RSS_CHAN_LIST_TITLE'	=> 'Fóra',
@@ -1695,7 +1781,6 @@ $lang = array_merge($lang, array(
 	'DEV_NO_TEST_FILE'			=> 'Nebyla zadaná žádná hodnota pro proměnnou test_file v&nbsp;konvertoru. Pokud jste uživateli tohoto konvertoru, měli byste toto nahlásit autorovi tohoto modulu. Pokud jste autor tohoto modulu, musíte specifikovat soubor, který existuje v&nbsp;zdrojovém fóru, pro ověření cesty k&nbsp;němu.',
 	'DIRECTORIES_AND_FILES'		=> 'Nastavení adresářů a&nbsp;souborů',
 	'DISABLE_KEYS'				=> 'Vypnutí kláves',
-	'DLL_FIREBIRD'				=> 'Firebird',
 	'DLL_FTP'					=> 'Podpora vzdáleného FTP [ Instalace ]',
 	'DLL_GD'					=> 'Podpora GD grafiky [ Vizuální ověřování ]',
 	'DLL_MBSTRING'				=> 'Podpora multi-byte znaků',
@@ -1706,11 +1791,12 @@ $lang = array_merge($lang, array(
 	'DLL_MYSQLI'				=> 'MySQL s&nbsp;MySQLi rozšířením',
 	'DLL_ORACLE'				=> 'Oracle',
 	'DLL_POSTGRES'				=> 'PostgreSQL',
-	'DLL_SQLITE'				=> 'SQLite',
+	'DLL_SQLITE'				=> 'SQLite 2',
+	'DLL_SQLITE3'				=> 'SQLite 3',
 	'DLL_XML'					=> 'Podpora XML [ Jabber ]',
 	'DLL_ZLIB'					=> 'Podpora zlib komprese [ .gz, .tar.gz, .zip ]',
 	'DL_CONFIG'					=> 'Stáhnout konfigurační soubor',
-	'DL_CONFIG_EXPLAIN'			=> 'Můžete stáhnout celý konfigurační soubor na váš počítač. Budete pak muset nahrát soubor ručně na server a&nbsp;přepsat již existující prázdný konfigurační soubor v&nbsp;základním adresáři phpBB 3.0. Mějte na paměti, že je potřeba soubor nahrát ASCII přenosem (viz dokumentace vašeho FTP klienta, pokud si nejste jisti tím, co děláte). Jakmile nahrajete soubor config.php, klikněte na „Hotovo“ pro přesun na další krok.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'Stáhnout',
 	'DONE'						=> 'Hotovo',
 
@@ -1722,8 +1808,6 @@ $lang = array_merge($lang, array(
 	'FILES_REQUIRED_EXPLAIN'	=> '<strong>Povinné</strong> – Pro bezproblémový běh phpBB je potřeba, aby mohlo přistupovat nebo zapisovat do určitých souborů a&nbsp;složek. Pokud vidíte „Nebylo nalezeno“, musíte vytvořit odpovídající soubor nebo složku. Pokud vidíte „Nezapisovatelné“, musíte upravit oprávnění k&nbsp;této složce nebo souboru, tak aby phpBB mělo práva k&nbsp;zápisu.',
 	'FILLING_TABLE'				=> 'Naplňuji tabulku <strong>%s</strong>',
 	'FILLING_TABLES'			=> 'Naplňování tabulek',
-
-	'FIREBIRD_DBMS_UPDATE_REQUIRED'		=> 'phpBB dále nepodporuje databáze Firebird/Interbase starší verze 2.1. Aktualizujte vaší instalaci Firebird na minimálně 2.1.0 před pokračováním v&nbsp;aktualizaci fóra.',
 
 	'FINAL_STEP'				=> 'Zpracovat poslední krok',
 	'FORUM_ADDRESS'				=> 'Adresa fóra',
@@ -1750,30 +1834,30 @@ $lang = array_merge($lang, array(
 		<p>Následující tlačítko vás přenese na stránku, odkud budete moci odeslat statistická data na servery phpBB. Velmi oceníme, pokud nám tato anonymní data poskytnete a&nbsp;pomůžete tak vývoji phpBB. Poté se dostanete do administrace, udělejte si chvíli čas a&nbsp;porozhlédněte se, co vám phpBB3 nabízí za možnosti. Podpora online je dostupná přes <a href="http://www.phpbb.com/support/documentation/3.0/">Dokumentaci</a> a&nbsp;<a href="http://www.phpbb.com/phpBB/viewforum.php?f=46">phpBB.com fórum(ENG)</a> nebo <a href="http://www.phpbb.cz/viewforum.php?f=29">phpBB.cz fórum(CZ)</a>, nahlédněte do <a href="%3$s">README</a> pro další informace.</p><p><strong>Nyní prosím smažte, přesuňte nebo přejmenujte složku install/. Dokud tato složka bude tam, kde je nyní, bude funkční jen administrace fóra (ACP).</strong>',
 	'INSTALL_INTRO'				=> 'Vítejte v&nbsp;instalaci',
 
-	'INSTALL_INTRO_BODY'		=> 'Tento postup vám pomůže s&nbsp;instalací phpBB3 na váš server.</p><p>Abyste mohli pokračovat, budete potřebovat znát následující informace:</p>
+	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
 
 	<ul>
-		<li>Druh databáze – databáze, kterou budete používat.</li>
-		<li>Databázový server nebo DSN – adresa databázového serveru.</li>
-		<li>Port databázového serveru – port k&nbsp;připojení na databázi (ve většině případu stačí ponechat nevyplněné).</li>
-		<li>Název databáze – název databáze uložené na serveru.</li>
-		<li>Uživatelské jméno a&nbsp;heslo databáze – přístupové údaje k&nbsp;databázi.</li>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
 	</ul>
-	
-	<p><strong>Poznámka:</strong> Pokud instalujete a&nbsp;používáte SQLite, měli byste zadat úplnou cestu k&nbsp;databázi do DSN pole a&nbsp;nechat pole pro jméno a&nbsp;heslo prázdné. Z bezpečnostních důvodů byste měli zajistit, že soubor databáze bude uložen na místě, které není přístupné z webu.</p>
 
-	<p>phpBB3 lze spustit na těchto databázích:</p>
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
+
+	<p>phpBB3 supports the following databases:</p>
 	<ul>
-		<li>MySQL 3.23 nebo vyšší (MySQLi je podporováno)</li>
-		<li>PostgreSQL 7.3+</li>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
 		<li>SQLite 2.8.2+</li>
-		<li>Firebird 2.1+</li>
-		<li>MS SQL Server 2000 nebo vyšší (přímo nebo přes ODBC)</li>
-		 <li>MS SQL Server 2005 nebo vyšší (nativní)</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
 		<li>Oracle</li>
 	</ul>
-	
-	<p>Pouze databáze podporované na vašem serveru budou zobrazeny.',
+
+	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'Pro zahájení instalace klikněte na tlačítko níže.',
 	'INSTALL_LOGIN'				=> 'Přihlásit se',
 	'INSTALL_NEXT'				=> 'Další krok',
@@ -1789,9 +1873,8 @@ $lang = array_merge($lang, array(
 	'INST_ERR_DB_NO_ERROR'		=> 'Žádná chybová zpráva',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'Verze databáze MySQL instalované na tomto stroji je nekompatibilní s&nbsp;možností „MySQL s&nbsp;rozšířením MySQLi“, kterou jste vybrali. Zkuste zvolit možnost „MySQL“.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'Verze rozšíření SQLite, kterou máte nainstalovanou, je zastaralá a&nbsp;je potřeba ji aktualizovat nejméně na verzi&nbsp;2.8.2.',
+	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'Verze databáze Oracle instalované na tomto stroji vyžaduje nastavení parametru <var>NLS_CHARACTERSET</var> na <var>UTF8</var>. Buďto aktualizujte vaši instalaci na verzi 9.2+ anebo změňte tento parametr.',
-	'INST_ERR_DB_NO_FIREBIRD'	=> 'Verze databáze Firebird instalované na tomto stroji je starší než 2.1. Aktualizujte na novější verzi.',
-	'INST_ERR_DB_NO_FIREBIRD_PS'=> 'Databáze, kterou jste zvolili pro Firebird, má velikost stránky menší než 8192. Musíte zvolit databázi, která má stránku větší, než je tato hodnota.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'Databáze, kterou jste zvolili, nebyla vytvořena v&nbsp;kódování <var>UNICODE</var> nebo <var>UTF8</var>. Zkuste instalovat do databáze, která má kódování <var>UNICODE</var> nebo <var>UTF8</var>.',
 	'INST_ERR_DB_NO_NAME'		=> 'Nebyl zvolen název databáze',
 	'INST_ERR_EMAIL_INVALID'	=> 'Zadali jste neplatný e-mail',
@@ -1845,6 +1928,8 @@ $lang = array_merge($lang, array(
 	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB <strong>nebude</strong> běžet, pokud vaše instalace PHP není kompilovaná s&nbsp;podporou UTF-8 v&nbsp;rozšíření PCRE.',
 	'PHP_GETIMAGESIZE_SUPPORT'			=> 'Dostupnost PHP funkce getimagesize()',
 	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Povinné</strong> – Pro správný běh phpBB je nutné, aby byla dostupná funkce getimagesize.',
+	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'Volitelné moduly',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>Volitelné</strong> – Tyto moduly a&nbsp;aplikace jsou volitelné, nejsou potřeba k&nbsp;chodu phpBB 3.0. Přesto pokud je máte, poskytnou mnoho nových užitečných funkcí.',
 	'PHP_SUPPORTED_DB'				=> 'Podporované databáze',
@@ -1853,10 +1938,10 @@ $lang = array_merge($lang, array(
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'phpBB poběží i přesto, pokud je toto nastavení zapnuto, ale pokud je to možné, je doporučeno toto nastavení vypnout z bezpečnostních důvodů.',
 	'PHP_SAFE_MODE'					=> 'Safe Mode',
 	'PHP_SETTINGS'					=> 'Verze a&nbsp;nastavení PHP',
-	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Povinné</strong> – Musíte mít přinejmenším verzi PHP 4.3.3 pro instalaci phpBB. Pokud je <var>safe mode</var> zobrazen níže, vaše instalace PHP má tento režim zapnutý. Toto může přinést určitá omezení při vzdálené administraci a&nbsp;podobných funkcí.',
+	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'PHP nastavení <var>allow_url_fopen</var>',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>Volitelné</strong> - Toto nastavení je volitelné, ale pokud je vypnuté, některé funkce, jako například vzdálené avatary, nebudou fungovat.',
-	'PHP_VERSION_REQD'				=> 'Verze PHP >= 4.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
 	'POST_ID'						=> 'ID příspěvku',
 	'PREFIX_FOUND'					=> 'Sken tabulek ukázal, že je již na serveru platná instalace s&nbsp;předponami tabulek <strong>%s</strong>.',
 	'PREPROCESS_STEP'				=> 'Spouštím přípravné funkce a&nbsp;dotazy',
@@ -1876,6 +1961,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> 'Nastavení serveru',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Vyhledávací index nebyl převeden',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Váš starý index pro vyhledávání nebyl převeden. Vyhledávání bude vždy vykazovat prázdné výsledky. Pro jeho obnovení přejděte do Administrace fóra, zvolte záložku Údržba, poté možnost Vyhledávač a&nbsp;zvolte možnost Vytvořit nový index.',
+	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> 'Systém fóra',
 	'SPECIFY_OPTIONS'			=> 'Zvolit možnosti přesunu',
 	'STAGE_ADMINISTRATOR'		=> 'Detaily administrátora',
@@ -1883,7 +1969,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> 'Měnit tato nastavení je nutné jen pokud víte, že potřebujete mít nastavené jiné pro chod fóra. Pokud si nejste jisti, pokračujte; všechny údaje lze změnit později v&nbsp;Administraci fóra.',
 	'STAGE_CONFIG_FILE'			=> 'Konfigurační soubor',
 	'STAGE_CREATE_TABLE'		=> 'Vytvoření tabulek v&nbsp;databázi',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'Databázové tabulky pro phpBB 3.0 byly vytvořeny a&nbsp;naplněny základními daty. Pokračujte na další krok pro dokončení instalace phpBB.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'Nastavení databáze',
 	'STAGE_FINAL'				=> 'Poslední krok',
 	'STAGE_INTRO'				=> 'Úvod',
@@ -1896,7 +1982,7 @@ $lang = array_merge($lang, array(
 	'SUB_LICENSE'				=> 'Licence',
 	'SUB_SUPPORT'				=> 'Podpora',
 	'SUCCESSFUL_CONNECT'		=> 'Úspěšně připojeno',
-	'SUPPORT_BODY'				=> '</p><p>Plná podpora je poskytována na <a href="http://www.phpbb.com/community/viewforum.php?f=46">phpBB 3.0.x Support Fóru na phpBB.com</a> nebo na <a href="http://www.phpbb.cz/viewforum.php?f=51">českém fóru podpory phpBB.cz</a>.<br />Rádi vám pomůžeme s:<ul><li>instalací</li><li>nastavením</li><li>technickými dotazy</li><li>potížemi souvisejícími s&nbsp;možnými chybami v&nbsp;softwaru</li><li>aktualizacemi z&nbsp;předchozích RC verzí na poslední stabilní verzi</li><li>převodem z&nbsp;phpBB 2.0.x na phpBB3</li><li>převodem z&nbsp;jiných systémů pro fóra(navštivte <a href="http://www.phpbb.com/community/viewforum.php?f=65">Convertors Forum/ Fórum konvertorů na phpBB.com</a>)</li></ul>S&nbsp;problémy, které se tykají MODů, se obraťte na autora v&nbsp;odpovídajícím tématu na <a href="http://www.phpbb.com/community/viewforum.php?f=81">Fóru modifikací</a>.<br />S&nbsp;problémy, které se týkají stylů, obrázků nebo šablon, navštivte <a href="http://www.phpbb.com/community/viewforum.php?f=80">Fórum stylů</a>.</p><p>Pro další podporu se podívejte na <a href="http://www.phpbb.com/support/documentation/3.0/quickstart/">Uživatelskou příručku</a> a&nbsp;<a href="http://www.phpbb.com/support/documentation/3.0/">online dokumentaci</a> (obojí v&nbsp;angličtině).</p><p>Abyste se ujistili, že máte poslední verzi fóra a&nbsp;neujdou vám žádné novinky ze světa phpBB, můžete se přihlásit k&nbsp;<a href="http://www.phpbb.com/support/">odebírání novinek přes e-mail</a>.',
+	'SUPPORT_BODY'				=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/documentation/3.1/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
 	'SYNC_FORUMS'				=> 'Začíná synchronizace fór',
 	'SYNC_POST_COUNT'			=> 'Synchronizuji počty příspěvků',
 	'SYNC_POST_COUNT_ID'		=> 'Synchronizuji počty příspěvků od <var>záznamu</var> %1$s do %2$s.',
@@ -1922,7 +2008,7 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ALL_FILES_UP_TO_DATE'		=> 'Všechny soubory jsou shodné s&nbsp;nejnovější verzí phpBB. Nyní se <a href="../ucp.php?mode=login">přihlaste</a> a&nbsp;zkontrolujte, jestli všechno funguje jak má. Nezapomeňte smazat nebo přejmenovat složku install/! Budeme rádi, když nám <a href="../ucp.php?mode=login&amp;redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">zašlete anonymní statistická data</a> o&nbsp;vašem serveru a&nbsp;nastavení vaší instalace, která použijeme ke zlepšení budoucích verzí phpBB.',
+	'ALL_FILES_UP_TO_DATE'		=> 'All files are up to date with the latest phpBB version.',
 	'ARCHIVE_FILE'				=> 'Zdrojový soubor uvnitř archivu',
 
 	'BACK'				=> 'Zpět',
@@ -1945,7 +2031,10 @@ $lang = array_merge($lang, array(
 	'CURRENT_VERSION'				=> 'Současná verze',
 
 	'DATABASE_TYPE'						=> 'Druh databáze',
+	'DATABASE_UPDATE_COMPLETE'			=> 'Database updater has completed!',
+	'DATABASE_UPDATE_CONTINUE'			=> 'Continue database update',
 	'DATABASE_UPDATE_INFO_OLD'			=> 'Aktualizační soubor databáze v&nbsp;instalační složce je starý. Ujistěte se, že jste nahráli nejnovější verzi tohoto souboru.',
+	'DATABASE_UPDATE_NOT_COMPLETED'		=> 'The database update has not yet completed.',
 	'DELETE_USER_REMOVE'				=> 'Smazat uživatele i příspěvky',
 	'DELETE_USER_RETAIN'				=> 'Smazat uživatele, ale nechat příspěvky',
 	'DESTINATION'						=> 'Cílový soubor',
@@ -1964,14 +2053,17 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_UPDATE_METHOD'			=> 'Stáhnout archiv upravených souborů',
 	'DOWNLOAD_UPDATE_METHOD_EXPLAIN'	=> 'Po stažení tento archiv rozbalte. Naleznete upravené soubory, které musíte nahrát do základní složky phpBB. Buďte opatrní, abyste je nahráli na správná místa. Po nahrání souborů je znovu zkontrolujte následujícím tlačítkem.',
 
-	'ERROR'			=> 'Chyba',
 	'EDIT_USERNAME'	=> 'Upravit uživatelské jméno',
+	'ERROR'			=> 'Chyba',
+	'EVERYTHING_UP_TO_DATE'		=> 'Everything is up to date with the latest phpBB version. You should now <a href="%1$s">login to your board</a> and check if everything is working fine. Do not forget to delete, rename or move your install directory! Please send us updated information about your server and board configurations from the <a href="%2$s">Send statistics</a> module in your ACP.',
 
 	'FILE_ALREADY_UP_TO_DATE'		=> 'Soubor je již v&nbsp;nejnovější verzi',
 	'FILE_DIFF_NOT_ALLOWED'			=> 'Soubor nesmí být upraven',
 	'FILE_USED'						=> 'Informace použity z',			// Single file
 	'FILES_CONFLICT'				=> 'Kolidující soubory',
 	'FILES_CONFLICT_EXPLAIN'		=> 'Následující soubory byly upraveny od poslední aktualizace nebo instalace a&nbsp;nejsou stejné jako soubory v&nbsp;předchozí verzi. phpBB zjistilo, že tyto soubory vytvářejí kolize, pokud se pokusí o&nbsp;jejich sloučení. Prozkoumejte tyto kolize a&nbsp;zkuste je manuálně vyřešit, nebo pokračujte v&nbsp;převodu vybráním metody pro sloučení souborů. Pokud zpracujete kolize ručně, po úpravách zkontrolujte soubory znovu. Můžete také zvolit preferovanou metodu sloučení pro každý soubor zvlášť. První sloučí oba soubory do jednoho, kde kolidující řádky budou nahrazeny těmi z&nbsp;nového souboru, a&nbsp;druhá naopak použije řádky z původního.',
+	'FILES_DELETED'					=> 'Deleted files',
+	'FILES_DELETED_EXPLAIN'			=> 'The following files do not exist in the new version. These files have to be deleted from your installation.',
 	'FILES_MODIFIED'				=> 'Upravené soubory',
 	'FILES_MODIFIED_EXPLAIN'		=> 'Následující soubory byly upraveny od poslední aktualizace nebo instalace a&nbsp;nejsou stejné jako soubory v&nbsp;předchozí verzi. Aktualizovaný soubor bude výsledek sloučení vašich úprav a&nbsp;souboru z&nbsp;nové verze phpBB.',
 	'FILES_NEW'						=> 'Nové soubory',
@@ -2033,6 +2125,7 @@ $lang = array_merge($lang, array(
 	'PREVIOUS_VERSION'					=> 'Předchozí verze',
 	'PROGRESS'							=> 'Průběh',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Announcement',
 	'RESULT'					=> 'Výsledek',
 	'RUN_DATABASE_SCRIPT'		=> 'Aktualizovat moji databázi nyní',
 
@@ -2040,6 +2133,7 @@ $lang = array_merge($lang, array(
 	'SELECT_DOWNLOAD_FORMAT'	=> 'Vybrat formát archivu k&nbsp;stáhnutí',
 	'SELECT_FTP_SETTINGS'		=> 'Vybrat nastavení FTP',
 	'SHOW_DIFF_CONFLICT'		=> 'Zobrazit rozdíly/konflikty',
+	'SHOW_DIFF_DELETED'			=> 'Show file contents',
 	'SHOW_DIFF_FINAL'			=> 'Zobrazit výsledný soubor',
 	'SHOW_DIFF_MODIFIED'		=> 'Zobrazit sloučené rozdíly',
 	'SHOW_DIFF_NEW'				=> 'Zobrazit obsah souboru',
@@ -2053,6 +2147,7 @@ $lang = array_merge($lang, array(
 	'STAGE_UPDATE_FILES'		=> 'Aktualizovat soubory',
 	'STAGE_VERSION_CHECK'		=> 'Zkontrolovat verzi',
 	'STATUS_CONFLICT'			=> 'Upravený soubor, který způsobuje kolizi',
+	'STATUS_DELETED'			=> 'Deleted file',
 	'STATUS_MODIFIED'			=> 'Upravený soubor',
 	'STATUS_NEW'				=> 'Nový soubor',
 	'STATUS_NEW_CONFLICT'		=> 'Nový kolidující soubor',
@@ -2073,33 +2168,27 @@ $lang = array_merge($lang, array(
 	'UPDATE_INSTALLATION_EXPLAIN'	=> 'Tímto nástrojem lze aktualizovat vaši instalaci phpBB na nejnovější verzi.<br />Během procesu bude zkontrolována integrita všech souborů. Budete mít možnost si prohlédnou všechny rozdíly a&nbsp;soubory před aktualizací.<br /><br />Samotné úpravy souborů mohou být provedeny dvěma způsoby.</p><h2>Ruční aktualizace</h2><p>Pokud zvolíte tento způsob, stáhnete jen upravené soubory pro fórum, abyste se mohli ujistit, že neztratíte změny provedené na fóru. Po stáhnutí tohoto balíku budete muset ručně nahrát všechny soubory na server a&nbsp;umístit je do odpovídajících složek. Po skončení nahrávání budete moci znovu zkontrolovat integritu souborů, abyste si ověřili, že jste soubory nahráli správně. Pokud byly všechny soubory správně nahrány, budete přesměrováni na aktualizační skript databáze.</p><h2>Automatická aktualizace s&nbsp;FTP</h2><p>Tento způsob je podobný tomu prvnímu, ale nebudete muset stáhnout upravené soubory a&nbsp;ručně je nahrát. Toto systém provede sám automaticky. Abyste mohli využít tento způsob, budete muset znát přístupové údaje k&nbsp;FTP. Po nahrání bude znovu provedena kontrola integrity. Pokud jsou všechny soubory v&nbsp;pořádku, budete přesměrováni na aktualizační skript databáze.',
 	'UPDATE_INSTRUCTIONS'			=> '
 
-		<h1>Oznámení o&nbsp;vydání</h1>
+		<h1>Release announcement</h1>
 
-		<p>Prosím, přečtěte si <a href="%1$s" title="%1$s">oznámení o&nbsp;vydání nejnovější verze</a> před pokračováním v&nbsp;aktualizaci, oznámení může obsahovat mnoho užitečných informací. Také obsahuje odkazy na stažení a&nbsp;changelog.</p>
+		<p>Please read the release announcement for the latest version before you continue your update process, it may contain useful information. It also contains full download links as well as the change log.</p>
 
 		<br />
 
-		<h1>Jak aktualizovat vaši instalaci</h1>
+		<h1>How to update your installation with the Automatic Update Package</h1>
 
-		<p>Doporučený způsob aktualizace se skládá z&nbsp;následujících kroků:</p>
+		<p>The recommended way of updating your installation listed here is only valid for the automatic update package. You are also able to update your installation using the methods listed within the INSTALL.html document. The steps for updating phpBB3 automatically are:</p>
 
 		<ul style="margin-left: 20px; font-size: 1.1em;">
-			<li>Přejděte na <a href="http://www.phpbb.com/downloads" title="http://www.phpbb.com/downloads">phpBB.com – soubory k&nbsp;stáhnutí</a> a&nbsp;stáhněte odpovídající archiv. Pokud si nejste jisti, můžete <a href="%2$s" title="%2$s">stáhnout správný soubor přímo</a> jako zip soubor.<br /><br /></li>
-			<li>Rozbalte archiv<br /><br /></li>
-			<li>Nahrajte celou rozbalenou složku install do základní složky phpBB (ta, kde se nachází soubor config.php).<br /><br /></li>
+			<li>Go to the <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com downloads page</a> and download the "Automatic Update Package" archive.<br /><br /></li>
+			<li>Unpack the archive.<br /><br /></li>
+			<li>Upload the complete uncompressed install folder to your phpBB root directory (where your config.php file is).<br /><br /></li>
 		</ul>
 
-		<p>Jakmile budou soubory nahrané, phpBB se vypne pro běžné uživatele.<br /><br />
-		<strong><a href="%2$s" title="%2$s">Nyní začněte s&nbsp;instalací zadáním cesty ke složce install/ do prohlížeče</a>.</strong><br />
+		<p>Once uploaded your board will be offline for normal users due to the install directory you uploaded now present.<br /><br />
+		<strong><a href="%1$s" title="%1$s">Now start the update process by pointing your browser to the install folder</a>.</strong><br />
 		<br />
-		Budete provedeni aktualizačním procesem. Aktualizace bude hotová po úspěšném vykonání aktualizace databáze – toto je poslední krok v&nbsp;aktualizaci fóra.
+		You will then be guided through the update process. You will be notified once the update is complete.
 		</p>
-	',
-	'UPDATE_INSTRUCTIONS_INCOMPLETE'	=> '
-
-		<h1>Byla detekována neúplná aktualizace</h1>
-
-		<p>phpBB detekovalo neúplnou automatickou aktualizaci. Prosím ujistěte se, že jste následoval všechny kroky aktualizačního nástroje. Níže najdete přímý odkaz pro pokračování instalace nebo přejděte přímo do instalačního adresáře.</p>
 	',
 	'UPDATE_METHOD'					=> 'Způsob aktualizace',
 	'UPDATE_METHOD_EXPLAIN'			=> 'Nyní máte možnost zvolit preferovaný způsob nahrávání souborů. Pokud použijete nahrávání přes FTP, budete muset zadat údaje k&nbsp;FTP na vašem serveru. Tímto způsobem budou soubory automaticky přesunuty na svá umístění a&nbsp;zálohy budou vytvořeny přidáním .bak na konec názvu souboru. Pokud zvolíte stáhnout upravené soubory, budete je muset rozbalit a&nbsp;nahrát ručně později.',
@@ -2110,10 +2199,10 @@ $lang = array_merge($lang, array(
 	'UPDATING_DATA'					=> 'Aktualizuji data',
 	'UPDATING_TO_LATEST_STABLE'		=> 'Aktualizuji databázi na poslední stabilní verzi',
 	'UPDATED_VERSION'				=> 'Novější verze',
-	'UPGRADE_INSTRUCTIONS'			=> 'Nová verze <strong>%1$s</strong> je dostupná. Pro více informací si přečtěte <a href="%2$s" title="%2$s"><strong>oznámení o&nbsp;vydání</strong></a>. Najdete v&nbsp;něm seznam změn a&nbsp;postup k&nbsp;aktualizaci.',
 	'UPLOAD_METHOD'					=> 'Metoda uploadu',
 
 	'UPDATE_DB_SUCCESS'				=> 'Aktualizace databáze proběhla úspěšně',
+	'UPDATE_FILE_SUCCESS'			=> 'File update was successful.',
 	'USER_ACTIVE'					=> 'Aktivní uživatel',
 	'USER_INACTIVE'					=> 'Neaktivní uživatel',
 
@@ -2173,6 +2262,33 @@ $lang = array_merge($lang, array(
 	'TOPICS_TOPIC_TITLE'			=> 'Vítejte v&nbsp;phpBB3',
 ));
 
+#######language/en/migrator.php#######
+
+$lang = array_merge($lang, array(
+	'CONFIG_NOT_EXIST'					=> 'The config setting "%s" unexpectedly does not exist.',
+
+	'GROUP_NOT_EXIST'					=> 'The group "%s" unexpectedly does not exist.',
+
+	'MIGRATION_APPLY_DEPENDENCIES'		=> 'Apply dependencies of %s.',
+	'MIGRATION_DATA_DONE'				=> 'Installed Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_IN_PROGRESS'		=> 'Installing Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_RUNNING'			=> 'Installing Data: %s.',
+	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
+	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
+	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
+	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
+	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
+	'MODULE_NOT_EXIST'					=> 'A required module does not exist: %s',
+
+	'PERMISSION_NOT_EXIST'				=> 'The permission setting "%s" unexpectedly does not exist.',
+
+	'ROLE_NOT_EXIST'					=> 'The permission role "%s" unexpectedly does not exist.',
+));
+
 #######language/en/mcp.php#######
 
 $lang = array_merge($lang, array(
@@ -2193,6 +2309,10 @@ $lang = array_merge($lang, array(
 	'APPROVE_POST_CONFIRM'	=> 'Opravdu chcete schválit tento příspěvek?',
 	'APPROVE_POSTS'			=> 'Schválit příspěvky',
 	'APPROVE_POSTS_CONFIRM'	=> 'Opravdu chcete schválit vybrané příspěvky?',
+	'APPROVE_TOPIC'			=> 'Approve topic',
+	'APPROVE_TOPIC_CONFIRM'	=> 'Are you sure you want to approve this topic?',
+	'APPROVE_TOPICS'		=> 'Approve topics',
+	'APPROVE_TOPICS_CONFIRM'=> 'Are you sure you want to approve the selected topics?',
 
 	'CANNOT_MOVE_SAME_FORUM'=> 'Nemůžete přesunout téma do stejného fóra',
 	'CANNOT_WARN_ANONYMOUS'	=> 'Nemůžete varovat anonymního uživatele',
@@ -2213,16 +2333,12 @@ $lang = array_merge($lang, array(
 	'DELETE_PM_REPORTS'			=> 'Odstranit hlášení o&nbsp;soukromých zprávách',
 	'DELETE_PM_REPORTS_CONFIRM'	=> 'Opravdu chcete odstranit vybraná hlášení?',
 	'DELETE_POSTS'				=> 'Smazat příspěvky',
-	'DELETE_POSTS_CONFIRM'		=> 'Opravdu chcete smazat tyto příspěvky?',
-	'DELETE_POST_CONFIRM'		=> 'Opravdu chcete smazat tento příspěvek?',
 	'DELETE_REPORT'				=> 'Smazat nahlášení',
 	'DELETE_REPORT_CONFIRM'		=> 'Opravdu chcete smazat vybrané nahlášení?',
 	'DELETE_REPORTS'			=> 'Smazat nahlášení',
 	'DELETE_REPORTS_CONFIRM'	=> 'Opravdu chcete smazat vybraná nahlášení?',
 	'DELETE_SHADOW_TOPIC'		=> 'Smazat stínová témata',
 	'DELETE_TOPICS'				=> 'Smazat vybraná témata',
-	'DELETE_TOPICS_CONFIRM'		=> 'Opravdu chcete smazat tato témata?',
-	'DELETE_TOPIC_CONFIRM'		=> 'Opravdu chcete smazat toto téma?',
 	'DISAPPROVE'				=> 'Zamítnout',
 	'DISAPPROVE_REASON'			=> 'Důvod pro zamítnutí',
 	'DISAPPROVE_POST'			=> 'Zamítnout příspěvek',
@@ -2260,8 +2376,6 @@ $lang = array_merge($lang, array(
 	'LATEST_WARNING_TIME'		=> 'Poslední udělené varování',
 	'LATEST_WARNINGS'			=> 'Posledních 5 varování',
 	'LEAVE_SHADOW'				=> 'Ponechat stínové téma ve starém fóru',
-	'LIST_REPORT'				=> '1 nahlášení',
-	'LIST_REPORTS'				=> '%d nahlášení',
 	'LOCK'						=> 'Zamknout',
 	'LOCK_POST_POST'			=> 'Zamknout příspěvek',
 	'LOCK_POST_POST_CONFIRM'	=> 'Opravdu chcete předejít editování tohoto příspěvku?',
@@ -2340,6 +2454,10 @@ $lang = array_merge($lang, array(
 	'MCP_QUEUE_UNAPPROVED_POSTS_EXPLAIN'	=> 'Toto je seznam všech příspěvků, které vyžadují schválení předtím, než budou viditelné pro uživatele.',
 	'MCP_QUEUE_UNAPPROVED_TOPICS'			=> 'Témata čekající na schválení',
 	'MCP_QUEUE_UNAPPROVED_TOPICS_EXPLAIN'	=> 'Toto je seznam všech témat, která vyžadují schválení předtím, než budou viditelná pro uživatele.',
+	'MCP_QUEUE_DELETED_POSTS'				=> 'Deleted posts',
+	'MCP_QUEUE_DELETED_POSTS_EXPLAIN'		=> 'This is a list of all soft deleted posts. You can restore or permanently delete the posts from this screen.',
+	'MCP_QUEUE_DELETED_TOPICS'				=> 'Deleted topics',
+	'MCP_QUEUE_DELETED_TOPICS_EXPLAIN'		=> 'This is a list of all soft deleted topics. You can restore or permanently delete the topics from this screen.',
 
 	'MCP_VIEW_USER'			=> 'Zobrazit varování určitého uživatele',
 
@@ -2378,25 +2496,27 @@ $lang = array_merge($lang, array(
 	'NO_POST'						=> 'Musíte vybrat příspěvek, aby mohl být uživatel varován za příspěvek',
 	'NO_POST_REPORT'				=> 'Toto téma nebylo nahlášeno',
 	'NO_POST_SELECTED'				=> 'Musíte vybrat nejméně jeden příspěvek k&nbsp;vykonání této činnosti',
+	'NO_POSTS_DELETED'				=> 'There are no deleted posts.',
+	'NO_POSTS_QUEUE'				=> 'There are no posts waiting for approval.',
 	'NO_REASON_DISAPPROVAL'			=> 'Prosím udejte důvod pro neschválení',
 	'NO_REPORT'						=> 'Nebylo nalezeno žádné hlášení',
 	'NO_REPORTS'					=> 'Nebyla nalezena žádná hlášení',
 	'NO_REPORT_SELECTED'			=> 'Musíte vybrat alespoň jedno hlášení pro provedení této akce',
 	'NO_TOPIC_ICON'					=> 'Žádné',
 	'NO_TOPIC_SELECTED'				=> 'Musíte vybrat nejméně jedno téma k&nbsp;vykonání této činnosti',
+	'NO_TOPICS_DELETED'				=> 'There are no deleted topics.',
 	'NO_TOPICS_QUEUE'				=> 'Nejsou žádná témata ke schválení',
 
 	'ONLY_TOPIC'			=> 'Jen témata „%s“',
 	'OTHER_USERS'			=> 'Uživatelé přispívající z této IP',
 
+	'QUICKMOD_ACTION_NOT_ALLOWED' => "%s not allowed as quickmod",
+
 	'PM_REPORT_CLOSED_SUCCESS'	=> 'Hlášení o&nbsp;soukromé zprávě bylo uzavřeno.',
 	'PM_REPORT_DELETED_SUCCESS'	=> 'Hlášení o&nbsp;soukromé zprávě bylo odstraněno.',
 	'PM_REPORTED_SUCCESS'		=> 'Soukromá zpráva byla nahlášena a&nbsp;poslána moderátorům k&nbsp;vyřízení.',
-	'PM_REPORT_TOTAL'			=> 'Celkem je nahlášena <strong>1</strong> soukromá zpráva.',
 	'PM_REPORTS_CLOSED_SUCCESS'	=> 'Vybraná nahlášení soukromých zpráv byla uzavřena.',
 	'PM_REPORTS_DELETED_SUCCESS'=> 'Vybraná nahlášení soukromých zpráv byla odstraněna.',
-	'PM_REPORTS_TOTAL'			=> 'Celkem je nahlášeno <strong>%d</strong> soukromých zpráv.',
-	'PM_REPORTS_ZERO_TOTAL'		=> 'V této chvíli není nahlášena žádná soukromá zpráva.',
 	'PM_REPORT_DETAILS'			=> 'Podrobnosti hlášení',
 	'POSTER'					=> 'Autor',
 	'POSTS_APPROVED_SUCCESS'	=> 'Vybrané příspěvky byly schváleny.',
@@ -2404,15 +2524,17 @@ $lang = array_merge($lang, array(
 	'POSTS_DISAPPROVED_SUCCESS'	=> 'Vybrané příspěvky nebyly schváleny.',
 	'POSTS_LOCKED_SUCCESS'		=> 'Vybrané příspěvky byly zamknuty.',
 	'POSTS_MERGED_SUCCESS'		=> 'Vybrané příspěvky byly sloučeny.',
-	'POSTS_UNLOCKED_SUCCESS'	=> 'Vybrané příspěvky byly odemknuty.',
 	'POSTS_PER_PAGE'			=> 'Příspěvků na stranu',
 	'POSTS_PER_PAGE_EXPLAIN'	=> '(Pro zobrazení všech příspěvků nastavte 0)',
+	'POSTS_RESTORED_SUCCESS'	=> 'The selected posts have been restored successfully.',
+	'POSTS_UNLOCKED_SUCCESS'	=> 'Vybrané příspěvky byly odemknuty.',
 	'POST_APPROVED_SUCCESS'		=> 'Vybrané příspěvky byly schváleny.',
 	'POST_DELETED_SUCCESS'		=> 'Vybraný příspěvek byl odstraněn z databáze.',
 	'POST_DISAPPROVED_SUCCESS'	=> 'Vybrané téma nebylo schváleno.',
 	'POST_LOCKED_SUCCESS'		=> 'Příspěvek byl zamknut.',
 	'POST_NOT_EXIST'			=> 'Příspěvek, který požadujete, neexistuje.',
 	'POST_REPORTED_SUCCESS'		=> 'Tento příspěvek byl nahlášen.',
+	'POST_RESTORED_SUCCESS'		=> 'This post has been restored successfully.',
 	'POST_UNLOCKED_SUCCESS'		=> 'Příspěvek byl odemknut.',
 
 	'READ_USERNOTES'			=> 'Záznamy uživatele',
@@ -2423,8 +2545,6 @@ $lang = array_merge($lang, array(
 	'REPORTED_ON_DATE'			=> '-',
 	'REPORTS_CLOSED_SUCCESS'	=> 'Vybraná nahlášení byla uzavřena.',
 	'REPORTS_DELETED_SUCCESS'	=> 'Vybraná nahlášení byla smazána.',
-	'REPORTS_TOTAL'				=> 'Celkem je zde <strong>%d</strong> nahlášení ke zhlédnutí',
-	'REPORTS_ZERO_TOTAL'		=> 'Nejsou zde žádná nahlášení ke zhlédnutí',
 	'REPORT_CLOSED'				=> 'Toto nahlášení bylo již dříve uzavřeno.',
 	'REPORT_CLOSED_SUCCESS'		=> 'Vybrané nahlášení bylo uzavřeno.',
 	'REPORT_DELETED_SUCCESS'	=> 'Vybrané nahlášení bylo smazáno.',
@@ -2436,7 +2556,15 @@ $lang = array_merge($lang, array(
 	'REPORT_POST_EXPLAIN'		=> 'Použijte tento formulář pro nahlášení vybraného příspěvku administrátorovi fóra. Nahlášení by mělo být použito hlavně, když příspěvek porušuje pravidla fóra.',
 	'REPORT_REASON'				=> 'Důvod nahlášení',
 	'REPORT_TIME'				=> 'Čas nahlášení',
-	'REPORT_TOTAL'				=> 'Celkem je zde <strong>1</strong> nahlášení ke shlédnutí',
+	'RESTORE'					=> 'Restore',
+	'RESTORE_POST'				=> 'Restore post',
+	'RESTORE_POST_CONFIRM'		=> 'Are you sure you want to restore this post?',
+	'RESTORE_POSTS'				=> 'Restore posts',
+	'RESTORE_POSTS_CONFIRM'		=> 'Are you sure you want to restore the selected posts?',
+	'RESTORE_TOPIC'				=> 'Restore topic',
+	'RESTORE_TOPIC_CONFIRM'		=> 'Are you sure you want to restore this topic?',
+	'RESTORE_TOPICS'			=> 'Restore topics',
+	'RESTORE_TOPICS_CONFIRM'	=> 'Are you sure you want to restore the selected topics?',
 	'RESYNC'					=> 'Resynchronizace',
 	'RETURN_MESSAGE'			=> '%sZpět na zprávu%s',
 	'RETURN_NEW_FORUM'			=> '%sPřejít na nové fórum%s',
@@ -2477,6 +2605,7 @@ $lang = array_merge($lang, array(
 	'TOPICS_FORKED_SUCCESS'		=> 'Vybraná témata byla zkopírována.',
 	'TOPICS_LOCKED_SUCCESS'		=> 'Vybraná témata byla zamknuta.',
 	'TOPICS_MOVED_SUCCESS'		=> 'Vybraná témata byla přesunuta.',
+	'TOPICS_RESTORED_SUCCESS'	=> 'The selected topics have been restored successfully.',
 	'TOPICS_RESYNC_SUCCESS'		=> 'Vybraná témata byla resynchronizována.',
 	'TOPICS_TYPE_CHANGED'		=> 'Druh témat byl změněn.',
 	'TOPICS_UNLOCKED_SUCCESS'	=> 'Vybraná témata byla odemknuta.',
@@ -2487,6 +2616,7 @@ $lang = array_merge($lang, array(
 	'TOPIC_LOCKED_SUCCESS'		=> 'Vybrané téma bylo zamknuto.',
 	'TOPIC_MOVED_SUCCESS'		=> 'Vybrané téma bylo přesunuto.',
 	'TOPIC_NOT_EXIST'			=> 'Vybrané téma neexistuje.',
+	'TOPIC_RESTORED_SUCCESS'	=> 'The selected topic has been restored successfully.',
 	'TOPIC_RESYNC_SUCCESS'		=> 'Vybrané téma bylo resynchronizováno.',
 	'TOPIC_SPLIT_SUCCESS'		=> 'Vybrané téma bylo rozděleno.',
 	'TOPIC_TIME'				=> 'Čas tématu',
@@ -2494,9 +2624,6 @@ $lang = array_merge($lang, array(
 	'TOPIC_UNLOCKED_SUCCESS'	=> 'Vybrané téma bylo odemknuto.',
 	'TOTAL_WARNINGS'			=> 'Celkový počet varování',
 
-	'UNAPPROVED_POSTS_TOTAL'		=> 'Celkem je zde <strong>%d</strong> příspěvků čekajících na schválení',
-	'UNAPPROVED_POSTS_ZERO_TOTAL'	=> 'Nejsou zde žádné příspěvky čekající na schválení',
-	'UNAPPROVED_POST_TOTAL'			=> 'Celkem je zde <strong>1</strong> příspěvek čekající na schválení',
 	'UNLOCK'						=> 'Odemknout',
 	'UNLOCK_POST'					=> 'Odemknout příspěvek',
 	'UNLOCK_POST_EXPLAIN'			=> 'Povolit editování',
@@ -2522,7 +2649,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'Z důvodu porušení pravidel vám bylo uděleno varování od administrátora nebo moderátora tohoto fóra.[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'Udělení varování na fóru',
 	'WARNING_POST_DEFAULT'	=> 'Toto varování se týká příspěvků, který jste odeslali: %s.',
-	'WARNINGS_ZERO_TOTAL'	=> 'Neexistují žádná varování',
+	'NO_WARNINGS'	=> 'No warnings exist.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Vybrané téma číslo %d: %s',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -2562,10 +2689,12 @@ $lang = array_merge($lang, array(
 	'ALL'					=> 'Vše',
 	'BEFORE'				=> 'Před',
 	'CC_EMAIL'				=> 'Poslat kopii e-mailu sám sobě',
-	'CONTACT_USER'			=> 'Kontakt',
+	'CONTACT_ADMIN'			=> 'Contact a Board Administrator',
 
 	'DEST_LANG'				=> 'Jazyk',
 	'DEST_LANG_EXPLAIN'		=> 'Vyberte odpovídající jazyk (je-li dostupný) pro příjemce zprávy.',
+
+	'EDIT_PROFILE'			=> 'Edit Profile',
 
 	'EMAIL_BODY_EXPLAIN'	=> 'Tento e-mail bude odeslán jako prostý text, nevkládejte žádné HTML nebo BBCode. Adresa pro odpověď na tento e-mail bude nastavena na vaši.',
 	'EMAIL_DISABLED'		=> 'Omlouváme se, ale všechny e-mailové služby na tomto fóru byly vypnuty.',
@@ -2575,7 +2704,9 @@ $lang = array_merge($lang, array(
 	'EMPTY_MESSAGE_EMAIL'	=> 'Musíte vložit zprávu.',
 	'EMPTY_MESSAGE_IM'		=> 'Musíte vložit zprávu, která má být odeslána.',
 	'EMPTY_NAME_EMAIL'		=> 'Musíte vložit vlastní jméno příjemce.',
-	'EMPTY_SUBJECT_EMAIL'	=> 'Musíte zvolit předmět pro tuto zprávu.',
+	'EMPTY_SENDER_EMAIL'	=> 'You must provide a valid email address.',
+	'EMPTY_SENDER_NAME'		=> 'You must provide a name.',
+	'EMPTY_SUBJECT_EMAIL'	=> 'You must specify a subject for the email.',
 	'EQUAL_TO'				=> 'Se rovná',
 
 	'FIND_USERNAME_EXPLAIN'	=> 'Použijte tento formulář pro vyhledání konkrétních uživatelů. Nemusíte vyplňovat všechna pole. Jako zástupný znak použijte *. Pro data použijte formát rrrr-mm-dd, např. 2002-01-01. Použijte zaškrtávací políčka pro vybrání jednoho nebo více uživatelů.',
@@ -2585,16 +2716,10 @@ $lang = array_merge($lang, array(
 	'HIDE_MEMBER_SEARCH'	=> 'Skrýt hledání členů',
 
 	'IM_ADD_CONTACT'		=> 'Přidat kontakt',
-	'IM_AIM'				=> 'Pro použití této funkce je potřeba mít nainstalovaný AOL Instant Messenger.',
-	'IM_AIM_EXPRESS'		=> 'AIM Express',
 	'IM_DOWNLOAD_APP'		=> 'Stáhnout aplikaci',
-	'IM_ICQ'				=> 'Berte na vědomí, že uživatelé mohou mít zvoleno nepřijímat nevyžádané instatní zprávy.',
 	'IM_JABBER'				=> 'Berte na vědomí, že uživatelé mohou mít zvoleno nepřijímat nevyžádané instatní zprávy.',
 	'IM_JABBER_SUBJECT'		=> 'Toto je automatizovaná zpráva, Neodpovídejte na ni! Zpráva od uživatele %1$s z %2$s',
 	'IM_MESSAGE'			=> 'Vaše zpráva',
-	'IM_MSNM'				=> 'Pro použití této funkce je potřeba mít nainstalovaný Windows Messenger.',
-	'IM_MSNM_BROWSER'		=> 'Tato funkce není podporována vaším prohlížečem.',
-	'IM_MSNM_CONNECT'		=> 'MSNM není připojený.\nMusíte mít MSNM pro pokračování.',
 	'IM_NAME'				=> 'Vaše jméno',
 	'IM_NO_DATA'			=> 'Neexistují žádné vyhovující kontakty na tohoto uživatele.',
 	'IM_NO_JABBER'			=> 'Omlouváme se, přímé zprávy pro uživatele Jabberu nejsou na tomto fóru podporovány. Budete si muset stáhnout Jabber klienta pro zkontaktování uživatele na Jabber účtu uvedeném výše.',
@@ -2606,15 +2731,15 @@ $lang = array_merge($lang, array(
 
 	'LAST_ACTIVE'				=> 'Naposledy aktivní',
 	'LESS_THAN'					=> 'Méně než',
-	'LIST_USER'					=> '1 uživatel',
-	'LIST_USERS'				=> '%d uživatelů',
-	'LOGIN_EXPLAIN_LEADERS'		=> 'Administrátor vyžaduje, abyste byli registrováni a&nbsp;přihlášeni pro zobrazení týmu.',
+	'LOGIN_EXPLAIN_TEAM'		=> 'The board requires you to be registered and logged in to view the team listing.',
 	'LOGIN_EXPLAIN_MEMBERLIST'	=> 'Administrátor vyžaduje, abyste byli registrováni a&nbsp;přihlášeni pro přístup k&nbsp;seznamu uživatelů.',
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'Administrátor vyžaduje, abyste byli registrováni a&nbsp;přihlášeni pro hledání uživatelů.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'Administrátor vyžaduje, abyste byli registrováni a&nbsp;přihlášeni pro zobrazení profilů.',
 
 	'MORE_THAN'				=> 'Více než',
 
+	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
+	'NO_CONTACT_PAGE'		=> 'The board administrator contact page has been disabled.',
 	'NO_EMAIL'				=> 'Nejste oprávněni posílat e-maily tomuto uživateli.',
 	'NO_VIEW_USERS'			=> 'Nejste oprávněni vidět seznam členů nebo profily.',
 
@@ -2631,12 +2756,12 @@ $lang = array_merge($lang, array(
 
 	'SELECT_MARKED'			=> 'Vybrat označené',
 	'SELECT_SORT_METHOD'	=> 'Vyberte způsob řazení',
-	'SEND_AIM_MESSAGE'		=> 'Poslat AIM zprávu',
+	'SENDER_EMAIL_ADDRESS'	=> 'Your email address',
+	'SENDER_NAME'			=> 'Your name',
 	'SEND_ICQ_MESSAGE'		=> 'Poslat ICQ zprávu',
 	'SEND_IM'				=> 'Instant Messaging',
 	'SEND_JABBER_MESSAGE'	=> 'Poslat Jabber zprávu',
 	'SEND_MESSAGE'			=> 'Zpráva',
-	'SEND_MSNM_MESSAGE'		=> 'Poslat MSNM/WLM zprávu',
 	'SEND_YIM_MESSAGE'		=> 'Poslat YIM zprávu',
 	'SORT_EMAIL'			=> 'E-mail',
 	'SORT_LAST_ACTIVE'		=> 'Naposledy aktivní',
@@ -2644,12 +2769,18 @@ $lang = array_merge($lang, array(
 
 	'USERNAME_BEGINS_WITH'	=> 'Uživatelské jméno začíná na',
 	'USER_ADMIN'			=> 'Spravovat uživatele',
-	'USER_BAN'				=> 'Banování',
+	'USER_BAN'				=> 'Ban one or more users by username',
 	'USER_FORUM'			=> 'Uživatelské statistiky',
 	'USER_ONLINE'			=> 'Online',
 	'USER_PRESENCE'			=> 'Přítomnost na fóru',
+	'USERS_PER_PAGE'		=> 'Users per page',
 
 	'VIEWING_PROFILE'		=> 'Prohlížení profilu – %s',
+	'VIEW_FACEBOOK_PROFILE'	=> 'View Facebook Profile',
+	'VIEW_SKYPE_PROFILE'	=> 'View Skype Profile',
+	'VIEW_TWITTER_PROFILE'	=> 'View Twitter Profile',
+	'VIEW_YOUTUBE_CHANNEL'	=> 'View YouTube Channel',
+	'VIEW_GOOGLEPLUS_PROFILE' => 'View Google+ Profile',
 	'VISITED'				=> 'Poslední návštěva',
 
 	'WWW'					=> 'WWW',
@@ -2674,6 +2805,47 @@ $lang = array_merge($lang, array(
 	'USER_COMM_RANK'	=> 'Overall reviews:',
 	'USER_COMM_PERCENT'	=> 'Overall assessment of the user:',
 
+));
+
+#######language/en/plupload.php#######
+
+$lang = array_merge($lang, array(
+	'PLUPLOAD_ADD_FILES'		=> 'Add files',
+	'PLUPLOAD_ADD_FILES_TO_QUEUE'	=> 'Add files to the upload queue and click the start button.',
+	'PLUPLOAD_ALREADY_QUEUED'	=> '%s already present in the queue.',
+	'PLUPLOAD_CLOSE'			=> 'Close',
+	'PLUPLOAD_DRAG'				=> 'Drag files here.',
+	'PLUPLOAD_DUPLICATE_ERROR'	=> 'Duplicate file error.',
+	'PLUPLOAD_DRAG_TEXTAREA'	=> 'You may also attach files by dragging and dropping them in the message box.',
+	'PLUPLOAD_ERR_INPUT'		=> 'Failed to open input stream.',
+	'PLUPLOAD_ERR_MOVE_UPLOADED'	=> 'Failed to move uploaded file.',
+	'PLUPLOAD_ERR_OUTPUT'		=> 'Failed to open output stream.',
+	'PLUPLOAD_ERR_FILE_TOO_LARGE'	=> 'File too large:',
+	'PLUPLOAD_ERR_FILE_COUNT'	=> 'File count error.',
+	'PLUPLOAD_ERR_FILE_INVALID_EXT'	=> 'Invalid file extension:',
+	'PLUPLOAD_ERR_RUNTIME_MEMORY'	=> 'Runtime ran out of available memory.',
+	'PLUPLOAD_ERR_UPLOAD_URL'	=> 'Upload URL might be wrong or does not exist.',
+	'PLUPLOAD_EXTENSION_ERROR'	=> 'File extension error.',
+	'PLUPLOAD_FILE'				=> 'File: %s',
+	'PLUPLOAD_FILE_DETAILS'		=> 'File: %s, size: %d, max file size: %d',
+	'PLUPLOAD_FILENAME'			=> 'Filename',
+	'PLUPLOAD_FILES_QUEUED'		=> '%d files queued',
+	'PLUPLOAD_GENERIC_ERROR'	=> 'Generic error.',
+	'PLUPLOAD_HTTP_ERROR'		=> 'HTTP error.',
+	'PLUPLOAD_IMAGE_FORMAT'		=> 'Image format either wrong or not supported.',
+	'PLUPLOAD_INIT_ERROR'		=> 'Init error.',
+	'PLUPLOAD_IO_ERROR'			=> 'IO error.',
+	'PLUPLOAD_NOT_APPLICABLE'	=> 'N/A',
+	'PLUPLOAD_SECURITY_ERROR'	=> 'Security error.',
+	'PLUPLOAD_SELECT_FILES'		=> 'Select files',
+	'PLUPLOAD_SIZE'				=> 'Size',
+	'PLUPLOAD_SIZE_ERROR'		=> 'File size error.',
+	'PLUPLOAD_STATUS'			=> 'Status',
+	'PLUPLOAD_START_UPLOAD'		=> 'Start upload',
+	'PLUPLOAD_START_CURRENT_UPLOAD'	=> 'Start uploading queue',
+	'PLUPLOAD_STOP_UPLOAD'		=> 'Stop upload',
+	'PLUPLOAD_STOP_CURRENT_UPLOAD'	=> 'Stop current upload',
+	'PLUPLOAD_UPLOADED'			=> 'Uploaded %d/%d files',
 ));
 
 #######language/en/portal.php#######
@@ -2919,12 +3091,12 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s je <em>vypnutý</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s je <em>zapnutý</em>',
 	'BBCODE_I_HELP'				=> 'Kurzíva: [i]text[/i]  (Alt + I)',
-	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]',
 	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
 	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Vložit obrázek: [img]http://image_url[/img]  (Alt + P)',
 	'BBCODE_Q_HELP'				=> 'Citace: [quote]text[/quote]  (Alt + Q)',
-	'BBCODE_S_HELP'				=> 'Barva písma: [color=red]text[/color]  Tip: lze také použít formát #FF0000',
+	'BBCODE_S_HELP'				=> 'Font colour: [color=red]text[/color] or [color=#FF0000]text[/color]',
 	'BBCODE_U_HELP'				=> 'Podtržené: [u]text[/u]  (Alt + U)',
 	'BBCODE_W_HELP'				=> 'Vložit URL: [url]http://url[/url] nebo [url=http://url]text URL[/url]  (Alt + W)',
 	'BUMP_ERROR'				=> 'Nemůžete oživit téma tak brzy po odeslání předchozího příspěvku.',
@@ -2943,8 +3115,20 @@ $lang = array_merge($lang, array(
 	'DELETE_MESSAGE'			=> 'Smazat zprávu',
 	'DELETE_MESSAGE_CONFIRM'	=> 'Opravdu chcete smazat tuto zprávu?',
 	'DELETE_OWN_POSTS'			=> 'Omlouváme se, ale můžete mazat jen vaše příspěvky.',
+	'DELETE_PERMANENTLY'		=> 'Delete permanently',
 	'DELETE_POST_CONFIRM'		=> 'Opravdu chcete smazat tento příspěvek?',
-	'DELETE_POST_WARN'			=> 'Pokud smažete příspěvek, nebudete jej již moci obnovit',
+	'DELETE_POST_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this post?',
+	'DELETE_POST_PERMANENTLY'	=> 'Permanently delete this post so it can not be recovered',
+	'DELETE_POSTS_CONFIRM'		=> 'Opravdu chcete smazat tyto příspěvky?',
+	'DELETE_POSTS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these posts?',
+	'DELETE_REASON'				=> 'Reason for deleting this topic',
+	'DELETE_REASON_EXPLAIN'		=> 'The specified reason for deletion will be visible to moderators.',
+	'DELETE_POST_WARN'			=> 'Delete this post',
+	'DELETE_TOPIC_CONFIRM'		=> 'Opravdu chcete smazat toto téma?',
+	'DELETE_TOPIC_PERMANENTLY'	=> 'Permanently delete this topic so it can not be recovered',
+	'DELETE_TOPIC_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this topic?',
+	'DELETE_TOPICS_CONFIRM'		=> 'Opravdu chcete smazat tato témata?',
+	'DELETE_TOPICS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these topics?',
 	'DISABLE_BBCODE'			=> 'Zakázat BBCode',
 	'DISABLE_MAGIC_URL'			=> 'Zakázat URL adresy v&nbsp;tomto příspěvku',
 	'DISABLE_SMILIES'			=> 'Zakázat smajlíky',
@@ -2987,13 +3171,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_QUOTE'		=> 'Musíte se přihlásit, pokud chcete citovat příspěvky v&nbsp;tomto fóru.',
 	'LOGIN_EXPLAIN_REPLY'		=> 'Musíte se přihlásit, pokud chcete odpovědět na toto téma.',
 
-	'MAX_FONT_SIZE_EXCEEDED'	=> 'Můžete použít písma s&nbsp;maximální velikostí %1$d.',
-	'MAX_FLASH_HEIGHT_EXCEEDED'	=> 'Vaše flashové soubory mohou mít maximální výšku %1$d pixelů.',
-	'MAX_FLASH_WIDTH_EXCEEDED'	=> 'Vaše flashové soubory mohou mít maximální šířku %1$d pixelů.',
-	'MAX_IMG_HEIGHT_EXCEEDED'	=> 'Vaše obrázky mohou mít maximální výšku %1$d pixelů.',
-	'MAX_IMG_WIDTH_EXCEEDED'	=> 'Vaše obrázky mohou mít maximální šířku %1$d pixelů.',
-
-	'MESSAGE_BODY_EXPLAIN'		=> 'Vložte sem vaši zprávu, může obsahovat maximálně <strong>%d</strong> znaků.',
+	'MAX_FONT_SIZE_EXCEEDED'	=> 'You may only use fonts up to size %d.',
 	'MESSAGE_DELETED'			=> 'Vaše zpráva byla odstraněna.',
 	'MORE_SMILIES'				=> 'Zobrazit další smajlíky',
 
@@ -3016,8 +3194,6 @@ $lang = array_merge($lang, array(
 	'POLL_MAX_OPTIONS'			=> 'Maximum možností na uživatele',
 	'POLL_MAX_OPTIONS_EXPLAIN'	=> 'Číslo označuje počet možností v&nbsp;hlasování.',
 	'POLL_OPTIONS'				=> 'Nastavení hlasování',
-	'POLL_OPTIONS_EXPLAIN'		=> 'Každou možnost vložte na nový řádek. Můžete vložit maximálně <strong>%d</strong> možností.',
-	'POLL_OPTIONS_EDIT_EXPLAIN'	=> 'Každou možnost vložte na nový řádek. Můžete vložit maximálně <strong>%d</strong> možností. Pokud přidáte nebo upravíte možnosti, všechny hlasy budou vynulovány.',
 	'POLL_QUESTION'				=> 'Anketní otázka',
 	'POLL_TITLE_TOO_LONG'		=> 'Název hlasování musí být kratší než 100 znaků.',
 	'POLL_TITLE_COMP_TOO_LONG'	=> 'Zpracovaný název hlasování je příliš dlouhý, zkuste odstranit HTML nebo BBCode.',
@@ -3027,9 +3203,9 @@ $lang = array_merge($lang, array(
 	'POST_APPROVAL_NOTIFY'		=> 'Budete informováni, jakmile váš příspěvek bude schválen.',
 	'POST_CONFIRMATION'			=> 'Potvrzení příspěvku',
 	'POST_CONFIRM_EXPLAIN'		=> 'Pro ochranu před spamem administrátor vyžaduje potvrzení odpovědi. Kód je zobrazen v&nbsp;obrázku pod touto zprávou. Pokud obrázek nevidíte, kontaktuje %s Administrátora%s.',
-	'POST_DELETED'				=> 'Vaše zpráva byla odstraněna.',
-	'POST_EDITED'				=> 'Vaše zpráva byla upravena.',
-	'POST_EDITED_MOD'			=> 'Vaše zpráva byla upravena, ale vyžaduje schválení.',
+	'POST_DELETED'				=> 'This post has been deleted.',
+	'POST_EDITED'				=> 'This post has been edited successfully.',
+	'POST_EDITED_MOD'			=> 'This post has been edited successfully, but it will need to be approved by a moderator before it is publicly viewable.',
 	'POST_GLOBAL'				=> 'Globální',
 	'POST_ICON'					=> 'Ikonka',
 	'POST_NORMAL'				=> 'Výchozí',
@@ -3042,8 +3218,9 @@ $lang = array_merge($lang, array(
 	'POST_TOPIC_AS'				=> 'Přidat téma jako',
 	'PROGRESS_BAR'				=> 'Průběhová lišta',
 
-	'QUOTE_DEPTH_EXCEEDED'		=> 'Do příspěvku lze maximálně vložit pouze %1$d vnořených citací.',
+	'QUOTE_NO_NESTING'			=> 'You may not embed quotes within each other.',
 
+	'REMOTE_UPLOAD_TIMEOUT'		=> 'The specified file could not be uploaded because the request timed out.',
 	'SAVE'						=> 'Uložit',
 	'SAVE_DATE'					=> 'Uložit jako',
 	'SAVE_DRAFT'				=> 'Uložit koncept',
@@ -3060,8 +3237,6 @@ $lang = array_merge($lang, array(
 	'TOO_FEW_POLL_OPTIONS'		=> 'Musíte vložit nejméně dvě hlasovací možnosti',
 	'TOO_MANY_ATTACHMENTS'		=> 'Nemůže vložit další soubor, %d je maximum.',
 	'TOO_MANY_CHARS'			=> 'Vaše zpráva obsahuje příliš mnoho znaků.',
-	'TOO_MANY_CHARS_POST'		=> 'Vaše zpráva obsahuje %1$d znaků. Maximální povolený počet znaků je %2$d.',
-	'TOO_MANY_CHARS_SIG'		=> 'Váš podpis obsahuje %1$d znaků. Maximální povolený počet znaků je %2$d.',
 	'TOO_MANY_POLL_OPTIONS'		=> 'Snažíte se vložit příliš mnoho hlasovacích možností',
 	'TOO_MANY_SMILIES'			=> 'Vaše zpráva obsahuje příliš mnoho smajlíků. Je povoleno maximálně %d smajlíků.',
 	'TOO_MANY_URLS'				=> 'Vaše zpráva obsahuje příliš mnoho URL adres. Je povoleno maximálně %d URL adres.',
@@ -3070,6 +3245,8 @@ $lang = array_merge($lang, array(
 
 	'UNAUTHORISED_BBCODE'		=> 'Nemůžete použít určité BBCody: %s.',
 	'UNGLOBALISE_EXPLAIN'		=> 'Abyste změnili toto téma zpět z globálního na výchozí, musíte zvolit fórum, v&nbsp;kterém bude zobrazeno.',
+	'UNSUPPORTED_CHARACTERS_MESSAGE'	=> 'Your message contains the following unsupported characters:<br />%s',
+	'UNSUPPORTED_CHARACTERS_SUBJECT'	=> 'Your subject contains the following unsupported characters:<br />%s',
 	'UPDATE_COMMENT'			=> 'Aktualizovat komentář',
 	'URL_INVALID'				=> 'URL není platnou adresou.',
 	'URL_NOT_FOUND'				=> 'Soubor nemohl být nalezen.',
@@ -3084,8 +3261,8 @@ $lang = array_merge($lang, array(
 	'VIEW_MESSAGE'				=> '%sZobrazit vaši odeslanou zprávu%s',
 	'VIEW_PRIVATE_MESSAGE'		=> '%sZobrazit vaši odeslanou soukromou zprávu%s',
 
-	'WRONG_FILESIZE'			=> 'Soubor je příliš velký. Maximální velikost je %1d %2s',
-	'WRONG_SIZE'				=> 'Obrázek musí mít šířku alespoň %1$d pixelů, výšku %2$d pixelů a&nbsp;šířku nejvíce %3$d pixelů a&nbsp;výšku %4$d pixelů. Váš obrázek má šířku %5$d pixelů a&nbsp;výšku %6$d pixelů.',
+	'WRONG_FILESIZE'			=> 'The file is too big, maximum allowed size is %1$d %2$s.',
+	'WRONG_SIZE'				=> 'The image must be at least %1$s wide, %2$s high and at most %3$s wide and %4$s high. The submitted image is %5$s wide and %6$s high.',
 
 	'FONT_TYPE'			=> 'Typeface',
 	'FONT_COLOR'			=> 'Barva písma',
@@ -3105,10 +3282,6 @@ $lang = array_merge($lang, array(
 
 	'DISPLAY_RESULTS'		=> 'Zobrazit výsledek jako',
 
-	'FOUND_SEARCH_MATCH'		=> 'Vyhledáváním byl nalezen %d výsledek',
-	'FOUND_SEARCH_MATCHES'		=> 'Vyhledáváním bylo nalezeno %d výsledků',
-	'FOUND_MORE_SEARCH_MATCHES'	=> 'Vyhledáváním bylo nalezeno více než %d výsledků',
-
 	'GLOBAL'				=> 'Hlavní téma',
 
 	'IGNORED_TERMS'			=> 'vynecháno',
@@ -3120,24 +3293,23 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_UNREADSEARCH'=> 'Pro zobrazení seznamu nepřečtených příspěvků se musíte přihlásit.',
 	'LOGIN_EXPLAIN_NEWPOSTS'	=> 'Pro zobrazení nových příspěvků od své poslední návštěvy se musíte přihlásit.',
 
-	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> 'Zadali jste příliš mnoho klíčových slov, zkuste zadat nejvíce %1$d slov.',
-
-	'NO_KEYWORDS'			=> 'Musíte zadat minimálně jedno slovo, které chcete vyhledat. Každé slovo musí obsahovat nejméně %d a&nbsp;maximálně %d znaků (kromě *).',
+	'NO_KEYWORDS'			=> 'You must specify at least one word to search for. Each word must consist of at least %s and must not contain more than %s excluding wildcards.',
 	'NO_RECENT_SEARCHES'	=> 'Nebyla nalezena žádná předchozí vyhledávání',
 	'NO_SEARCH'				=> 'Je nám líto, ale nemáte oprávnění vyhledávat na tomto fóru.',
 	'NO_SEARCH_RESULTS'		=> 'Nebyly nalezeny žádné vhodné výsledky.',
-	'NO_SEARCH_TIME'		=> 'Omlouváme se, ale nyní nemůžete vyhledávat. Zkuste to za několik minut.',
 	'NO_SEARCH_UNREADS'		=> 'Vyhledávání nepřečtených příspěvků je na tomto fóru vypnuto.',
 	'WORD_IN_NO_POST'		=> 'Nebyl nalezen žádný příspěvek, protože slovo %s není obsaženo v&nbsp;žádném z příspěvků.',
 	'WORDS_IN_NO_POST'		=> 'Nebyl nalezen žádný příspěvek, protože slova %s nejsou obsažena v&nbsp;žádném z příspěvků.',
 
 	'POST_CHARACTERS'		=> 'znaků příspěvku',
+	'PHRASE_SEARCH_DISABLED'	=> 'Searching by exact phrase is not supported on this board.',
 
 	'RECENT_SEARCHES'		=> 'Poslední vyhledávání',
 	'RESULT_DAYS'			=> 'Omezit výsledky na předchozí',
 	'RESULT_SORT'			=> 'Seřadit výsledky podle',
 	'RETURN_FIRST'			=> 'Zobrazit prvních',
 	'RETURN_TO_SEARCH_ADV'	=> 'Zpět na pokročilé hledání',
+	'GO_TO_SEARCH_ADV'	=> 'Go to advanced search',
 
 	'SEARCHED_FOR'				=> 'Text vyhledávání',
 	'SEARCHED_TOPIC'			=> 'Prohledávané téma',
@@ -3164,10 +3336,11 @@ $lang = array_merge($lang, array(
 	'SORT_FORUM'				=> 'Fórum',
 	'SORT_POST_SUBJECT'			=> 'Předmět příspěvku',
 	'SORT_TIME'					=> 'Čas odeslání',
+	'SPHINX_SEARCH_FAILED'		=> 'Search failed: %s',
+	'SPHINX_SEARCH_FAILED_LOG'	=> 'Sorry, search could not be performed. More information about this failure has been logged in the error log.',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
 	'SELECT_ALL_TAGS'		=> 'No selection',
-	'TOO_FEW_AUTHOR_CHARS'	=> 'Musíte zadat nejméně %d znaků z autorova jména.',
 ));
 
 #######language/en/ucp.php#######
@@ -3221,6 +3394,7 @@ $lang = array_merge($lang, array(
 	'ATTACHMENTS_EXPLAIN'			=> 'Toto je seznam příloh, které jste odeslali.',
 	'ATTACHMENTS_DELETED'			=> 'Příloha byla odstraněna.',
 	'ATTACHMENT_DELETED'			=> 'Přílohy byly odstraněny.',
+	'AUTOLOGIN_SESSION_KEYS_DELETED'=> 'The selected "Remember Me" login keys were successfully deleted.',
 	'AVATAR_CATEGORY'				=> 'Kategorie',
 	'AVATAR_DRIVER_GRAVATAR_TITLE'	=> 'Gravatar',
 	'AVATAR_DRIVER_GRAVATAR_EXPLAIN'=> 'Gravatar is a service that allows you to maintain the same avatar across multiple websites. Visit <a href="http://www.gravatar.com/">Gravatar</a> for more information.',
@@ -3230,12 +3404,14 @@ $lang = array_merge($lang, array(
 	'AVATAR_DRIVER_REMOTE_EXPLAIN'	=> 'Link to avatar images from another website.',
 	'AVATAR_DRIVER_UPLOAD_TITLE'	=> 'Upload avatar',
 	'AVATAR_DRIVER_UPLOAD_EXPLAIN'	=> 'Upload your own custom avatar.',
-	'AVATAR_EXPLAIN'				=> 'Maximální rozměry; šířka: %1$d pixelů, výška: %2$d pixelů, velikost: %3$.2f KiB.',
+	'AVATAR_EXPLAIN'				=> 'Maximum dimensions; width: %1$s, height: %2$s, file size: %3$.2f KiB.',
 	'AVATAR_FEATURES_DISABLED'		=> 'Avatary jsou v&nbsp;tuto chvíli na fóru vypnuté.',
 	'AVATAR_GALLERY'				=> 'Místní galerie',
 	'AVATAR_GENERAL_UPLOAD_ERROR'	=> 'Nelze nahrát obrázek do %s',
 	'AVATAR_NOT_ALLOWED'			=> 'Váš avatar nebude zobrazen, protože jsou avatary celkově vypnuty.',
 	'AVATAR_PAGE'					=> 'Stránka',
+	'AVATAR_SELECT'					=> 'Select your avatar',
+	'AVATAR_TYPE'					=> 'Avatar type',
 	'AVATAR_TYPE_NOT_ALLOWED'		=> 'Váš současný avatar nebude zobrazen, protože tento typ avatarů byl zakázán.',
 
 	'BACK_TO_DRAFTS'			=> 'Zpět na koncepty',
@@ -3244,7 +3420,6 @@ $lang = array_merge($lang, array(
 	'BIRTHDAY_EXPLAIN'			=> 'Nastavte datum vašeho narození.',
 	'BOARD_DATE_FORMAT'			=> 'Formát data',
 	'BOARD_DATE_FORMAT_EXPLAIN'	=> 'Syntaxe je shodná s&nbsp;PHP funkcí <a href="http://www.php.net/date" onclick="this.target=\'_blank\';" title="Otevřít v&nbsp;novém okně">date()</a>.',
-	'BOARD_DST'					=> 'Platí letní čas',
 	'BOARD_LANGUAGE'			=> 'Jazyk fóra',
 	'BOARD_STYLE'				=> 'Vzhled fóra',
 	'BOARD_TIMEZONE'			=> 'Časové pásmo',
@@ -3263,8 +3438,6 @@ $lang = array_merge($lang, array(
 	'CLICK_RETURN_FOLDER'		=> '%1$s Vrátit se do adresáře „%3$s“ %2$s',
 	'CONFIRMATION'				=> 'Potvrzení registrace',
 	'CONFIRM_CHANGES'			=> 'Potvrdit změny',
-	'CONFIRM_EMAIL'				=> 'Potvrzení e-mailové adresy',
-	'CONFIRM_EMAIL_EXPLAIN'		=> 'Potvrďte vaši novou e-mailovou adresu.',
 	'CONFIRM_EXPLAIN'			=> 'Jako obranu proti spam-botům vyžaduje administrátor používání ověřovacího kódu. Kód je zobrazen v&nbsp;obrázku níže. Pokud je kód nečitelný nebo zde není, kontaktujte %s Administrátora%s.',
 	'VC_REFRESH'				=> 'Obnovit ověřovací kód',
 	'VC_REFRESH_EXPLAIN'		=> 'Pokud nelze přečíst ověřovací kód, vygenerujte si nový kliknutím na tlačítko.',
@@ -3273,7 +3446,7 @@ $lang = array_merge($lang, array(
 	'CONFIRM_PASSWORD_EXPLAIN'	=> 'Potvrďte nové heslo.',
 	'COPPA_BIRTHDAY'			=> 'Pro pokračovaní vyplňte prosím datum vašeho narození.',
 	'COPPA_COMPLIANCE'			=> 'COPPA pravidla',
-	'COPPA_EXPLAIN'				=> 'Vaše registrace vyžaduje potvrzení od starší osoby (rodičů). Pošlete e-mail s&nbsp;informacemi dané osobě.',
+	'COPPA_EXPLAIN'				=> 'Please note that clicking submit will create your account. However it cannot be activated until a parent or guardian approves your registration. You will be e-mailed a copy of the necessary form with details of where to send it.',
 	'CREATE_FOLDER'				=> 'Přidat adresář…',
 	'CURRENT_IMAGE'				=> 'Nynější obrázek',
 	'CURRENT_PASSWORD'			=> 'Nynější heslo',
@@ -3328,27 +3501,34 @@ $lang = array_merge($lang, array(
 	'EXPORT_FOLDER'				=> 'Exportovat tuto složku',
 
 	'FIELD_REQUIRED'					=> 'Políčko „%s“ musí být vyplněno.',
-	'FIELD_TOO_SHORT'					=> 'Políčko „%1$s“ je příliš krátké, minimum je %2$d znaků.',
-	'FIELD_TOO_LONG'					=> 'Políčko „%1$s“ je příliš dlouhé, maximum je %2$d znaků.',
-	'FIELD_TOO_SMALL'					=> 'Hodnota „%1$s“ je příliš krátká, minimum je %2$d znaků.',
-	'FIELD_TOO_LARGE'					=> 'Hodnota „%1$s“ je příliš dlouhá, maximum je %2$d znaků.',
+
+	'FIELD_TOO_SMALL'					=> 'The value of “%2$s” is too small, a minimum value of %1$d is required.',
+	'FIELD_TOO_LARGE'					=> 'The value of “%2$s” is too large, a maximum value of %1$d is allowed.',
+	'FIELD_INVALID_CHARS_INVALID'		=> 'The field “%s” has invalid characters.',
 	'FIELD_INVALID_CHARS_NUMBERS_ONLY'	=> 'Pole „%s“ obsahuje neplatné znaky, povoleny jsou jen čísla.',
+	'FIELD_INVALID_CHARS_ALPHA_DOTS'	=> 'The field “%s” has invalid characters, only alphanumeric or . characters are allowed.',
 	'FIELD_INVALID_CHARS_ALPHA_ONLY'	=> 'Pole „%s“ obsahuje neplatné znaky, povoleny jsou jen alfanumerické znaky.',
-	'FIELD_INVALID_CHARS_SPACERS_ONLY'	=> 'Pole „%s“ obsahuje neplatné znaky, povoleny jsou jen alfanumerické znaky, mezery nebo znaky -+_[].',
+	'FIELD_INVALID_CHARS_ALPHA_PUNCTUATION'	=> 'The field “%s” has invalid characters, only alphanumeric or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_ALPHA_SPACERS'	=> 'The field “%s” has invalid characters, only alphanumeric, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_ALPHA_UNDERSCORE'	=> 'The field “%s” has invalid characters, only alphanumeric or _ characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_DOTS'	=> 'The field “%s” has invalid characters, only letter, number or . characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_ONLY'	=> 'The field “%s” has invalid characters, only letter and number characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_PUNCTUATION'	=> 'The field “%s” has invalid characters, only letter, number or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_SPACERS'		=> 'The field “%s” has invalid characters, only letter, number, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_UNDERSCORE'		=> 'The field “%s” has invalid characters, only letter, number or _ characters are allowed.',
 	'FIELD_INVALID_DATE'				=> 'Pole „%s“ obsahuje neplatné datum.',
+	'FIELD_INVALID_URL'					=> 'The field “%s” has an invalid url.',
 	'FIELD_INVALID_VALUE'				=> 'Pole „%s“ obsahuje neplatnou hodnotu.',
 
 	'FOE_MESSAGE'				=> 'Zpráva od nepřítele',
 	'FOES_EXPLAIN'				=> 'Nepřátelé jsou standardně ignorováni. Zprávy od těchto uživatelů nejsou plně viditelné a&nbsp;soukromé zprávy nejsou povoleny.',
 	'FOES_UPDATED'				=> 'Seznam nepřátel byl aktualizován.',
 	'FOLDER_ADDED'				=> 'Nový adresář byl přidán.',
-	'FOLDER_MESSAGE_STATUS'		=> '%1$d z %2$d zpráv zaplněno',
 	'FOLDER_NAME_EMPTY'			=> 'Musíte zadat název adresáře.',
 	'FOLDER_NAME_EXIST'			=> 'Adresář <strong>%s</strong> již existuje',
 	'FOLDER_OPTIONS'			=> 'Nastavení adresáře',
 	'FOLDER_RENAMED'			=> 'Adresář byl přejmenován.',
 	'FOLDER_REMOVED'			=> 'Adresář byl odstraněn.',
-	'FOLDER_STATUS_MSG'			=> 'Adresář je z %1$d%% plný (Uloženo %2$d zpráv z %3$d možných).',
 	'FORWARD_PM'				=> 'Přeposlat SZ',
 	'FORCE_PASSWORD_EXPLAIN'	=> 'Než budete dále procházet toto fórum, prosím změňte si heslo.',
 	'FRIEND_MESSAGE'			=> 'Zpráva od přítele',
@@ -3417,16 +3597,35 @@ $lang = array_merge($lang, array(
 	'MOVE_DELETED_MESSAGES_TO'		=> 'Přesunout zprávy do adresáře',
 	'MOVE_DOWN'						=> 'Přesunout dolů',
 	'MOVE_MARKED_TO_FOLDER'			=> 'Přesunout označené do adresáře %s',
-	'MOVE_PM_ERROR'					=> 'Nastal problém při přesouvání zpráv do nové složky, bylo přesunuto pouze %1d z %2d zpráv.',
 	'MOVE_TO_FOLDER'				=> 'Přesunout do adresáře',
 	'MOVE_UP'						=> 'Přesunout nahoru',
 
-	'NEW_EMAIL_CONFIRM_EMPTY'		=> 'Nezadali jste podruhé vaší e-mailovou adresu pro její potvrzení.',
-	'NEW_EMAIL_ERROR'				=> 'E-mailová adresa nesouhlasí.',
 	'NEW_FOLDER_NAME'				=> 'Název nového adresáře',
 	'NEW_PASSWORD'					=> 'Heslo',
 	'NEW_PASSWORD_CONFIRM_EMPTY'	=> 'Nezadali jste podruhé vaše heslo pro jeho potvrzení.',
 	'NEW_PASSWORD_ERROR'			=> 'Heslo musí odpovídat.',
+
+	'NOTIFICATIONS_MARK_ALL_READ'						=> 'Mark all notifications read',
+	'NOTIFICATIONS_MARK_ALL_READ_CONFIRM'				=> 'Are you sure you want to mark all notifications read?',
+	'NOTIFICATIONS_MARK_ALL_READ_SUCCESS'				=> 'All notifications have been marked read.',
+	'NOTIFICATION_GROUP_MISCELLANEOUS'					=> 'Miscellaneous Notifications',
+	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
+	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
+	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'E-mail',
+	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
+	'NOTIFICATION_TYPE'									=> 'Notification type',
+	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
+	'NOTIFICATION_TYPE_GROUP_REQUEST'					=> 'Someone requests to join a group you lead',
+	'NOTIFICATION_TYPE_IN_MODERATION_QUEUE'				=> 'A post or topic needs approval',
+	'NOTIFICATION_TYPE_MODERATION_QUEUE'				=> 'Your topics/posts are approved or disapproved by a moderator',
+	'NOTIFICATION_TYPE_PM'								=> 'Someone sends you a private message',
+	'NOTIFICATION_TYPE_POST'							=> 'Someone replies to a topic to which you are subscribed',
+	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
+	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
+	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+
 	'NOTIFY_METHOD'					=> 'Způsob oznámení',
 	'NOTIFY_METHOD_BOTH'			=> 'Oba způsoby',
 	'NOTIFY_METHOD_EMAIL'			=> 'Pouze e-mail',
@@ -3444,10 +3643,9 @@ $lang = array_merge($lang, array(
 	'NOT_ADDED_FOES_SELF'			=> 'Nemůžete se přidat k&nbsp;sobě do seznamu nepřátel.',
 	'NOT_AGREE'						=> 'Nesouhlasím s&nbsp;těmito podmínkami',
 	'NOT_ENOUGH_SPACE_FOLDER'		=> 'Adresář „%s“ je plný. Požadavek nebude dokončen.',
-	'NOT_MOVED_MESSAGE'				=> 'Máte 1 blokovanou právu, protože adresář je plný.',
-	'NOT_MOVED_MESSAGES'			=> 'Máte %d blokovaných zpráv, protože adresář je plný.',
 	'NO_ACTION_MODE'				=> 'Akce nebyla specifikována',
 	'NO_AUTHOR'						=> 'Nebyl definován autor pro tuto zprávu',
+	'NO_AVATAR'						=> 'No avatar selected',
 	'NO_AVATAR_CATEGORY'			=> 'Nic',
 
 	'NO_AUTH_DELETE_MESSAGE'		=> 'Nemáte povolení mazat soukromé zprávy.',
@@ -3455,6 +3653,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_FORWARD_MESSAGE'		=> 'Nemáte povolení přeposílat soukromé zprávy.',
 	'NO_AUTH_GROUP_MESSAGE'			=> 'Nemáte povolení posílat soukromé zprávy skupinám.',
 	'NO_AUTH_PASSWORD_REMINDER'		=> 'Nemáte povolení zažádání o&nbsp;nové heslo.',
+	'NO_AUTH_PROFILEINFO'			=> 'You are not authorised to change your profile information.',
 	'NO_AUTH_READ_HOLD_MESSAGE'		=> 'Nemáte oprávnění vidět zprávy, které čekají ve frontě k&nbsp;doručení.',
 	'NO_AUTH_READ_MESSAGE'			=> 'Nemáte povolení číst soukromé zprávy.',
 	'NO_AUTH_READ_REMOVED_MESSAGE'	=> 'Nemůžete číst tuto zprávu, protože byla odstraněna autorem.',
@@ -3485,10 +3684,10 @@ $lang = array_merge($lang, array(
 	'NO_WATCHED_SELECTED'		=> 'Nevybrali jste si žádné sledované téma nebo fórum.',
 	'NO_WATCHED_TOPICS'			=> 'Nesledujete žádná témata.',
 
-	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Heslo musí mít %1$d až %2$d znaků a&nbsp;musí obsahovat kombinaci malých a&nbsp;velkých písmen a&nbsp;musí obsahovat čísla.',
-	'PASS_TYPE_ANY_EXPLAIN'		=> 'Musí mít %1$d až %2$d znaků.',
-	'PASS_TYPE_CASE_EXPLAIN'	=> 'Heslo musí být %1$d až %2$d znaků dlouhé a&nbsp;musí být namixované.',
-	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Heslo musí být %1$d až %2$d znaků dlouhé a&nbsp;musí obsahovat symboly',
+	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case and must contain numbers.',
+	'PASS_TYPE_ANY_EXPLAIN'		=> 'Must be between %1$s and %2$s.',
+	'PASS_TYPE_CASE_EXPLAIN'	=> 'Password must be between %1$s and %2$s long and must contain letters in mixed case.',
+	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case, must contain numbers and must contain symbols.',
 	'PASSWORD'					=> 'Heslo',
 	'PASSWORD_ACTIVATED'		=> 'Vaše nové heslo bylo aktivováno',
 	'PASSWORD_UPDATED'			=> 'Na váš e-mail bylo posláno nově vygenerované heslo.',
@@ -3499,13 +3698,16 @@ $lang = array_merge($lang, array(
 	'PM_FROM_REMOVED_AUTHOR'	=> 'Tato zpráva byla zaslána uživatelem, který již není registrován.',
 	'PM_ICON'					=> 'Ikona zprávy',
 	'PM_INBOX'					=> 'Příchozí',
+	'PM_MARK_ALL_READ'			=> 'Mark all messages read',
+	'PM_MARK_ALL_READ_SUCCESS'	=> 'All private messages in this folder have been marked read',
 	'PM_NO_USERS'				=> 'Zadaní uživatelé neexistují.',
 	'PM_OUTBOX'					=> 'Odeslané (nepřečtené)',
 	'PM_SENTBOX'				=> 'Odeslané',
 	'PM_SUBJECT'				=> 'Předmět zprávy',
 	'PM_TO'						=> 'Příjemci:',
+	'PM_TOOLS'					=> 'Message tools',
+	'PM_USERS_REMOVED_NO_PERMISSION'	=> 'Some users couldn’t be added as they do not have permission to read private messages.',
 	'PM_USERS_REMOVED_NO_PM'	=> 'Někteří uživatele nemohli být přidáni, protože mají zakázané přijímaní Soukromých zpráv.',
-	'POPUP_ON_PM'				=> 'Zobrazit popup okno při nové soukromé zprávě',
 	'POST_EDIT_PM'				=> 'Upravit zprávu',
 	'POST_FORWARD_PM'			=> 'Přeposlat zprávu',
 	'POST_NEW_PM'				=> 'Odeslat zprávu',
@@ -3517,6 +3719,8 @@ $lang = array_merge($lang, array(
 	'PREFERENCES_UPDATED'		=> 'Vaše nastavení bylo aktualizováno.',
 	'PROFILE_INFO_NOTICE'		=> 'Prosím vyplňte informace dostupné ostatním uživatelům. Políčka s&nbsp;* musí být vyplněna.',
 	'PROFILE_UPDATED'			=> 'Váš profil byl aktualizován.',
+	'PROFILE_AUTOLOGIN_KEYS'	=> 'The "Remember Me" login keys automatically log you in when you visit the board. If you logout, the remember me login key is deleted only on the computer you are using to logout. Here you can see remember login keys created on other computers you used to access this site.',
+	'PROFILE_NO_AUTOLOGIN_KEYS'	=> 'There are no saved "Remember Me" login keys.',
 
 	'RECIPIENT'							=> 'Příjemce',
 	'RECIPIENTS'						=> 'Příjemci',
@@ -3541,8 +3745,6 @@ $lang = array_merge($lang, array(
 	'RULE_DELETED'						=> 'Pravidlo bylo vymazáno.',
 	'RULE_LIMIT_REACHED'				=> 'Nemůžete přidat více pravidel pro soukromé zprávy, protože bylo dosaženo maximálního počtu pravidel.',
 	'RULE_NOT_DEFINED'					=> 'Pravidlo není správně definováno.',
-	'RULE_REMOVED_MESSAGE'				=> 'Jedna soukromá zpráva byla odstraněna filtrem soukromých zpráv.',
-	'RULE_REMOVED_MESSAGES'				=> '%d soukromých zpráv bylo odstraněno filtrem soukromých zpráv.',
 
 	'SAME_PASSWORD_ERROR'		=> 'Nové heslo je stejné jako staré',
 	'SEARCH_YOUR_POSTS'			=> 'Zobrazit vaše příspěvky',
@@ -3554,6 +3756,8 @@ $lang = array_merge($lang, array(
 	'SIGNATURE_TOO_LONG'		=> 'Váš podpis je příliš dlouhý.',
 	'SELECT_CURRENT_TIME'		=> 'Select current time',
 	'SELECT_TIMEZONE'			=> 'Select timezone',
+	'SELECT_CURRENT_TIME'		=> 'Select current time',
+	'SELECT_TIMEZONE'			=> 'Select timezone',
 	'SORT'						=> 'Seřadit',
 	'SORT_COMMENT'				=> 'Komentáře',
 	'SORT_DOWNLOADS'			=> 'Počtu stažení',
@@ -3563,15 +3767,28 @@ $lang = array_merge($lang, array(
 	'SORT_SIZE'					=> 'Velikosti',
 
 	'TIMEZONE'					=> 'Časová zóna',
-	'TO'						=> 'Komu',
+	'TIMEZONE_DATE_SUGGESTION'	=> 'Suggestion: %s',
+	'TIMEZONE_INVALID'			=> 'The timezone you selected is invalid.',
+	'TO'						=> 'Recipient',
+	'TO_MASS'					=> 'Recipients',
+	'TO_ADD'					=> 'Add recipient',
+	'TO_ADD_MASS'				=> 'Add recipients',
+	'TO_ADD_GROUPS'				=> 'Add groups',
 	'TOO_MANY_RECIPIENTS'		=> 'Pokusili jste se odeslat zprávu příliš mnoha příjemcům.',
 	'TOO_MANY_REGISTERS'		=> 'Překročil jste limit pokusů o&nbsp;registraci. Prosím, zkuste to později.',
 
 	'UCP'						=> 'Uživatelský ovládací panel',
 	'UCP_ACTIVATE'				=> 'Účet byl aktivován',
 	'UCP_ADMIN_ACTIVATE'		=> 'Musíte počkat na aktivaci účtu administrátorem.',
-	'UCP_AIM'					=> 'AOL Instant Messenger',
 	'UCP_ATTACHMENTS'			=> 'Přílohy',
+	'UCP_AUTH_LINK'				=> 'External accounts',
+	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
+	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
+	'UCP_AUTH_LINK_LINK'		=> 'Odkaz',
+	'UCP_AUTH_LINK_MANAGE'		=> 'Manage external account associations',
+	'UCP_AUTH_LINK_NOT_SUPPORTED'	=> 'Linking board accounts to external services is not supported by this board’s current authentication method.',
+	'UCP_AUTH_LINK_TITLE'		=> 'Manage your external account associations',
+	'UCP_AUTH_LINK_UNLINK'		=> 'Unlink',
 	'UCP_AUTH_LINK'				=> 'External accounts',
 	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
 	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
@@ -3583,8 +3800,8 @@ $lang = array_merge($lang, array(
 	'UCP_COPPA_BEFORE'			=> 'Před %s',
 	'UCP_COPPA_ON_AFTER'		=> 'Po %s',
 	'UCP_EMAIL_ACTIVATE'		=> 'Zadejte správný e-mail, neboť vám na něj v&nbsp;brzké době přijde aktivační odkaz.',
-	'UCP_ICQ'					=> 'ICQ číslo',
 	'UCP_JABBER'				=> 'Jabber adresa',
+	'UCP_LOGIN_LINK'			=> 'Set up an external account association',
 
 	'UCP_MAIN'					=> 'Přehled',
 	'UCP_MAIN_ATTACHMENTS'		=> 'Přílohy',
@@ -3593,7 +3810,6 @@ $lang = array_merge($lang, array(
 	'UCP_MAIN_FRONT'			=> 'Přehled',
 	'UCP_MAIN_SUBSCRIBED'		=> 'Sledování',
 
-	'UCP_MSNM'					=> 'Windows Live Messenger',
 	'UCP_NO_ATTACHMENTS'		=> 'Neodeslal jste žádnou přílohu',
 
 	'UCP_NOTIFICATION_LIST'				=> 'Manage notifications',
@@ -3610,8 +3826,6 @@ $lang = array_merge($lang, array(
 	'UCP_PM_COMPOSE'			=> 'Napsat zprávu',
 	'UCP_PM_DRAFTS'				=> 'Koncepty',
 	'UCP_PM_OPTIONS'			=> 'Nastavení uložených zpráv a&nbsp;pravidel',
-	'UCP_PM_POPUP'				=> 'Soukromé zprávy',
-	'UCP_PM_POPUP_TITLE'		=> 'Popup okno u&nbsp;soukromých zpráv',
 	'UCP_PM_UNREAD'				=> 'Nepřečtené zprávy',
 	'UCP_PM_VIEW'				=> 'Zobrazit zprávy',
 
@@ -3626,11 +3840,11 @@ $lang = array_merge($lang, array(
 	'UCP_USERGROUPS_MEMBER'		=> 'Členství',
 	'UCP_USERGROUPS_MANAGE'		=> 'Správce skupin',
 
+	'UCP_PASSWORD_RESET_DISABLED'	=> 'The password reset functionality has been disabled. If you need help accessing your account, please contact the %sBoard Administrator%s',
 	'UCP_REGISTER_DISABLE'			=> 'Nemůžete vytvořit další účet.',
 	'UCP_REMIND'					=> 'Poslat heslo',
 	'UCP_RESEND'					=> 'Poslat aktivační e-mail',
 	'UCP_WELCOME'					=> 'Vítejte v&nbsp;Uživatelském panelu. Můžete zde prohlížet a&nbsp;upravovat svůj profil, nastavení, sledování fór a&nbsp;témat. Můžete také posílat soukromé zprávy (pokud je povoleno).<br /> Prosím přečtěte si některá oznámení, než budete pokračovat.',
-	'UCP_YIM'						=> 'Yahoo Messenger',
 	'UCP_ZEBRA'						=> 'Přátelé a&nbsp;nepřátelé',
 	'UCP_ZEBRA_FOES'				=> 'Nepřátelé',
 	'UCP_ZEBRA_FRIENDS'				=> 'Přátelé',
@@ -3640,12 +3854,12 @@ $lang = array_merge($lang, array(
 	'UPLOAD_AVATAR_FILE'			=> 'Nahrát z vašeho počítače',
 	'UPLOAD_AVATAR_URL'				=> 'Nahrát z odkazu',
 	'UPLOAD_AVATAR_URL_EXPLAIN'		=> 'Zde napište odkaz na obrázek.',
-	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Uživatelské jméno musí mít %1$d až %2$d znaků a&nbsp;můžete použít pouze alfanumerické znaky.',
-	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Uživatelské jméno musí mít %1$d až %2$d znaků a&nbsp;můžete použít alfanumerické znaky, mezery nebo znaky -+_[].',
-	'USERNAME_ASCII_EXPLAIN'		=> 'Uživatelské jméno musí mít %1$d až %2$d znaků a&nbsp;může se skládat jen z ASCII znaků',
-	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Uživatelské jméno musí mít %1$d až %2$d znaků a&nbsp;může se skládat jen z písmen a&nbsp;čísel',
-	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Uživatelské jméno musí mít %1$d až %2$d znaků a&nbsp;můžete použít písmena, čísla, mezery nebo znaky -+_[].',
-	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Uživatelské jméno musí mít %1$d až %2$d znaků.',
+	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only alphanumeric characters.',
+	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use alphanumeric, space or -+_[] characters.',
+	'USERNAME_ASCII_EXPLAIN'		=> 'Username must be between %1$s and %2$s long and use only ASCII characters, so no special symbols.',
+	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only letter or number characters.',
+	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use letter, number, space or -+_[] characters.',
+	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Length must be between %1$s and %2$s.',
 	'USERNAME_TAKEN_USERNAME'		=> 'Vámi zadané uživ. jméno je již použito, prosím vyberte si jiné.',
 	'USERNAME_DISALLOWED_USERNAME'	=> 'Uživatelské jméno, které jste zadal, je zabanováno.',
 	'USER_NOT_FOUND_OR_INACTIVE'	=> 'Zadaná uživatelská jména nebyla nalezena nebo to nejsou aktivní uživatelé.',
@@ -3658,10 +3872,9 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_PM'				=> 'Další SZ',
 	'VIEW_PM'					=> 'Zobrazit soukromou zprávu',
 	'VIEW_PM_INFO'				=> 'Detaily zprávy',
-	'VIEW_PM_MESSAGE'			=> '1 zpráva',
-	'VIEW_PM_MESSAGES'			=> '%d zpráv',
 	'VIEW_PREVIOUS_HISTORY'		=> 'Předchozí SZ v&nbsp;historii',
 	'VIEW_PREVIOUS_PM'			=> 'Předchozí SZ',
+	'VIEW_PROFILE'				=> 'View profile',
 	'VIEW_SIGS'					=> 'Zobrazovat podpisy',
 	'VIEW_SMILIES'				=> 'Zobrazovat smajlíky',
 	'VIEW_TOPICS_DAYS'			=> 'Zobrazit témata za předchozí',
@@ -3769,8 +3982,6 @@ $lang = array_merge($lang, array(
 	'UNREAD_POSTS_LOCKED'	=> 'Nové příspěvky [ Zamknuté ]',
 
 	'VIEW_FORUM'			=> 'Zobrazit fórum',
-	'VIEW_FORUM_TOPIC'		=> '1 téma',
-	'VIEW_FORUM_TOPICS'		=> '%d témat',
 
 	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
 	'REMOVE_FILTER'		=> 'Remove filter',
@@ -3779,6 +3990,7 @@ $lang = array_merge($lang, array(
 #######language/en/viewtopic.php#######
 
 $lang = array_merge($lang, array(
+	'APPROVE'								=> 'Schválit',
 	'ATTACHMENT'						=> 'Příloha',
 	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'Přílohy jsou vypnuty.',
 
@@ -3791,14 +4003,13 @@ $lang = array_merge($lang, array(
 	'BUMP_TOPIC'			=> 'Oživit téma',
 
 	'CODE'					=> 'Kód',
-	'COLLAPSE_QR'			=> 'Skrýt formulář',
-
+	
 	'DELETE_TOPIC'			=> 'Odstranit téma',
+	'DELETED_INFORMATION'	=> 'Deleted by %1$s on %2$s',
+	'DISAPPROVE'					=> 'Zamítnout',
 	'DOWNLOAD_NOTICE'		=> 'Nemáte oprávnění prohlížet přiložené soubory.',
 
-	'EDITED_TIMES_TOTAL'	=> 'Naposledy upravil %1$s dne %2$s, celkově upraveno %3$d',
-	'EDITED_TIME_TOTAL'		=> 'Naposledy upravil %1$s dne %2$s, celkově upraveno %3$d',
-	'EMAIL_TOPIC'			=> 'Napsat e-mail',
+	'EMAIL_TOPIC'			=> 'E-mail topic',
 	'ERROR_NO_ATTACHMENT'	=> 'Vybraná příloha již neexistuje',
 
 	'FILE_NOT_FOUND_404'	=> 'Soubor <strong>%s</strong> nebyl nalezen nebo je porušen.',
@@ -3813,8 +4024,6 @@ $lang = array_merge($lang, array(
 	'MAKE_GLOBAL'				=> 'Změnit na globální',
 	'MAKE_NORMAL'				=> 'Změnit na normální',
 	'MAKE_STICKY'				=> 'Změnit na důležité',
-	'MAX_OPTIONS_SELECT'		=> 'Můžete označit <strong>%d</strong> možnosti',
-	'MAX_OPTION_SELECT'			=> 'Můžete označit <strong>1</strong> možnost',
 	'MISSING_INLINE_ATTACHMENT'	=> 'Příloha <strong>%s</strong> je dlouhodobě nedostupná.',
 	'MOVE_TOPIC'				=> 'Přesunout téma',
 
@@ -3828,6 +4037,7 @@ $lang = array_merge($lang, array(
 	'POLL_ENDED_AT'			=> 'Anketa končí za %s',
 	'POLL_RUN_TILL'			=> 'Anketa do %s',
 	'POLL_VOTED_OPTION'		=> 'Hlasovali jste pro tuto možnost',
+	'POST_DELETED_RESTORE'	=> 'This post has been deleted. It can be restored.',
 	'PRINT_TOPIC'			=> 'Verze pro tisk',
 
 	'QUICK_MOD'				=> 'Rychlé úpravy',
@@ -3835,11 +4045,14 @@ $lang = array_merge($lang, array(
 	'QUOTE'					=> 'Citace',
 
 	'REPLY_TO_TOPIC'		=> 'Odpovědět na téma',
+	'RESTORE'				=> 'Restore',
+	'RESTORE_TOPIC'			=> 'Restore topic',
 	'RETURN_POST'			=> '%sZpět na příspěvek%s',
 
 	'SHOW_QR'				=> 'Rychlá odpověď',
 	'SUBMIT_VOTE'			=> 'Potvrdit volbu',
 
+	'TOPIC_TOOLS'			=> 'Topic tools',
 	'TOTAL_VOTES'			=> 'Celkem hlasů',
 
 	'UNLOCK_TOPIC'			=> 'Odemknout téma',
@@ -3848,10 +4061,7 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_TOPIC'		=> 'Následující téma',
 	'VIEW_PREVIOUS_TOPIC'	=> 'Předchozí téma',
 	'VIEW_RESULTS'			=> 'Zobrazit výsledky',
-	'VIEW_TOPIC_POST'		=> 'Příspěvek: 1',
-	'VIEW_TOPIC_POSTS'		=> 'Příspěvků: %d',
 	'VIEW_UNREAD_POST'		=> 'Přejít na nepřečtené příspěvky',
-	'VISIT_WEBSITE'			=> 'Zobrazit autorovy stránky',
 	'VOTE_SUBMITTED'		=> 'Váš hlas byl přijat.',
 	'VOTE_CONVERTED'		=> 'Nelze změnit hlas u&nbsp;převedených hlasování.',
 
@@ -9441,6 +9651,7 @@ $lang = array_merge($lang, array(
 	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'	=> 'Maximální velikost přílohy připojené k&nbsp;soukromé zprávě, 0 znamená neomezenou velikost.',
 	'ATTACH_ORPHAN_URL'					=> 'Nepřiřazené přílohy',
 	'ATTACH_POST_ID'					=> 'ID příspěvku',
+	'ATTACH_POST_TYPE'					=> 'Post type',
 	'ATTACH_QUOTA'						=> 'Celkový prostor pro přílohy',
 	'ATTACH_QUOTA_EXPLAIN'				=> 'Maximální dostupný prostor pro přílohy na celém fóru, 0 znamená neomezenou velikost.',
 	'ATTACH_TO_POST'					=> 'Připojit přílohu k&nbsp;příspěvku',
@@ -9486,6 +9697,9 @@ $lang = array_merge($lang, array(
 	'EXT_GROUP_REAL_MEDIA'			=> 'Real Media',
 	'EXT_GROUP_WINDOWS_MEDIA'		=> 'Windows Media',
 
+	'FILES_GONE'			=> 'Some of the attachments you selected for deletion do not exist. They may have been already deleted. Attachments that did exist were deleted.',
+	'FILES_STATS_WRONG'		=> 'Your file statistics are likely inaccurate and need to be resynchronised. Actual values: number of attachments = %1$d, total size of attachments = %2$s.<br />Click %3$shere%4$s to resynchronise them.',
+
 	'GO_TO_EXTENSIONS'		=> 'Přejít na rozhraní pro správu skupin přípon',
 	'GROUP_NAME'			=> 'Název skupiny',
 
@@ -9509,6 +9723,7 @@ $lang = array_merge($lang, array(
 	'NOT_ALLOWED_IN_PM'			=> 'Povoleno pouze u&nbsp;příspěvků',
 	'NOT_ALLOWED_IN_PM_POST'	=> 'Není povoleno',
 	'NOT_ASSIGNED'				=> 'Nepřiřazeno',
+	'NO_ATTACHMENTS'			=> 'No attachments found for this period.',
 	'NO_EXT_GROUP'				=> 'Žádná',
 	'NO_EXT_GROUP_NAME'			=> 'Nebyl zadán název skupiny',
 	'NO_EXT_GROUP_SPECIFIED'	=> 'Nebyla určena žádná skupina.',
@@ -9521,6 +9736,10 @@ $lang = array_merge($lang, array(
 	'ONLY_ALLOWED_IN_PM'	=> 'Povoleno jen v&nbsp;soukromých zprávách',
 	'ORDER_ALLOW_DENY'		=> 'Povolit',
 	'ORDER_DENY_ALLOW'		=> 'Zakázat',
+
+	'REMOVE_ALLOWED_IPS'			=> 'Odstranit nebo vyřadit vyjmuté <em>povolené</em> IP/hostitele',
+	'REMOVE_DISALLOWED_IPS'			=> 'Odstranit nebo vyřadit vyjmuté <em>zakázané</em> IP/hostitele',
+	'RESYNC_FILES_STATS_CONFIRM'	=> 'Are you sure you wish to resynchronise file statistics?',
 
 	'REMOVE_ALLOWED_IPS'		=> 'Odstranit nebo vyřadit vyjmuté <em>povolené</em> IP/hostitele',
 	'REMOVE_DISALLOWED_IPS'		=> 'Odstranit nebo vyřadit vyjmuté <em>zakázané</em> IP/hostitele',
@@ -9590,18 +9809,17 @@ $lang = array_merge($lang, array(
 	'PERMANENT'		=> 'Trvalý',
 
 	'UNTIL'						=> 'Datum vypršení',
-	'USER_BAN'					=> 'Banování',
+	'USER_BAN'					=> 'Ban one or more users by username',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> 'Povolte možnost pro vyřazení zadaných uživatelů z aktivních banů.',
 	'USER_BAN_EXPLAIN'			=> 'V případě většího množství uživatelských jmen vložte každé jednotlivě na nový řádek. Použijte funkci <u>Najít člena</u> pro vyhledání a&nbsp;automatické přidání jednoho nebo více uživatelů.',
 	'USER_NO_BANNED'			=> 'Žádná zabanovaná uživatelská jména',
-	'USER_UNBAN'				=> 'Zrušit ban či vyřazení uživatelských jmen',
+	'USER_UNBAN'				=> 'Un-ban or un-exclude users by username',
 	'USER_UNBAN_EXPLAIN'		=> 'Odebrat více uživatelských jmen najednou lze kombinací myši a&nbsp;klávesnice odpovídající vašemu počítači a&nbsp;prohlížeči. Vyřazená uživatelská jména budou zvýrazněna.',
 ));
 
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'				=> 'Zapnout letní čas',
 	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
 	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
 	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
@@ -9627,16 +9845,28 @@ $lang = array_merge($lang, array(
 	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Zde můžete definovat základní nastavení, jako je název a&nbsp;popis fóra, popř. určit výchozí jazyk a&nbsp;časové pásmo.',
+	'BOARD_INDEX_TEXT'				=> 'Board index text',
+	'BOARD_INDEX_TEXT_EXPLAIN'		=> 'This text is displayed as the board index in the board’s breadcrumbs. If not specified, it will default to “Board index”.',
+	'BOARD_STYLE'					=> 'Vzhled fóra',
 	'CUSTOM_DATEFORMAT'				=> 'Vlastní…',
 	'DEFAULT_DATE_FORMAT'			=> 'Formát data',
 	'DEFAULT_DATE_FORMAT_EXPLAIN'	=> 'Formát data je stejný jako PHP funkce <code>date</code>.',
 	'DEFAULT_LANGUAGE'				=> 'Výchozí jazyk',
 	'DEFAULT_STYLE'					=> 'Výchozí styl',
+	'DEFAULT_STYLE_EXPLAIN'			=> 'The default style is <strong>%1$s (%2$s)</strong> which is the overriden style for all users (including bots).',
 	'DISABLE_BOARD'					=> 'Vypnout fórum',
-	'DISABLE_BOARD_EXPLAIN'			=> 'Znepřístupnění fóra pro uživatele. Dle libosti můžete též přidat krátkou (255 znaků) zprávu, která se uživatelům zobrazí.',
+	'DISABLE_BOARD_EXPLAIN'			=> 'This will make the board unavailable to users who are neither administrators nor moderators. You can also enter a short (255 character) message to display if you wish.',
+	'DISPLAY_LAST_SUBJECT'			=> 'Display subject of last added post on forum list',
+	'DISPLAY_LAST_SUBJECT_EXPLAIN'	=> 'The subject of the last added post will be displayed in the forum list with a hyperlink to the post. Subjects from password protected forums and forums in which user doesn’t have read access are not shown.',
+	'GUEST_STYLE'					=> 'Guest style',
+	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Vždy použít výchozí styl',
 	'OVERRIDE_STYLE_EXPLAIN'		=> 'Ignoruje uživatelské nastavení vzhledu.',
 	'SITE_DESC'						=> 'Popis fóra',
+	'SITE_HOME_TEXT'				=> 'Main website text',
+	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
+	'SITE_HOME_URL'					=> 'Main website URL',
+	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Název fóra',
 	'SYSTEM_TIMEZONE'				=> 'Časové pásmo návštěvníků',
 	'WARNINGS_EXPIRE'				=> 'Doba platnosti varování',
@@ -9676,6 +9906,7 @@ $lang = array_merge($lang, array(
 
 	'ALLOW_AVATARS'					=> 'Povolit avatary',
 	'ALLOW_AVATARS_EXPLAIN'			=> 'Umožnit obecné používání avatarů;<br />Pokud vypnete používání avatarů obecně nebo vypnete některý z druhů avatarů, nebudou už zobrazeny na fóru, ale uživatelé si je budou moci stáhnout v&nbsp;uživatelském panelu, aby o&nbsp;ně nepřišli.',
+	'ALLOW_GRAVATAR'				=> 'Enable gravatar avatars',
 	'ALLOW_LOCAL'					=> 'Povolit avatary z galerie',
 	'ALLOW_REMOTE'					=> 'Povolit vzdálené avatary',
 	'ALLOW_REMOTE_EXPLAIN'			=> 'Avatary umístěné na jiných serverech.',
@@ -9856,6 +10087,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Obsah z těchto fór <strong>nebude zahrnut v&nbsp;exportech</strong>. Nevyberte žádné fórum pro použití všech.<br />Vyberte více fór podržením tlačítka <samp>CTRL</samp> a&nbsp;vybráním jednotlivých položek.',
 
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Zde si můžete vybrat a&nbsp;nastavit jednotlivé plug-iny, které různým způsobem implementují nástroje pro potlačení nechtěných příspěvků a&nbsp;registrací - spamu.',
+	'ACP_VC_EXT_GET_MORE'					=> 'For additional (and possibly better) anti-spam plugins, visit the <a href="https://www.phpbb.com/go/anti-spam-ext"><strong>phpBB.com Extensions Database</strong></a>. For more information on preventing spam on your board, visit the <a href="https://www.phpbb.com/go/anti-spam"><strong>phpBB.com Knowledge Base</strong></a>.',
 	'AVAILABLE_CAPTCHAS'					=> 'Dostupné plug-iny',
 	'CAPTCHA_UNAVAILABLE'					=> 'Plug-in nebyl nastaven, protože nebyly splněny jeho požadavky.',
 	'CAPTCHA_GD'							=> 'GD CAPTCHA',
@@ -9906,18 +10138,36 @@ $lang = array_merge($lang, array(
 	'SESSION_LENGTH'			=> 'Délka session',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Session vyprší po stanoveném počtu sekund.',
 
+	// Contact Settings
+	'ACP_CONTACT_SETTINGS_EXPLAIN'		=> 'Here you can enable and disable the contact page and also add a text that is displayed on the page.',
+
+	'CONTACT_US_ENABLE'				=> 'Enable contact page',
+	'CONTACT_US_ENABLE_EXPLAIN'		=> 'This page allows users to send emails to board administrators',
+
+	'CONTACT_US_INFO'				=> 'Contact information',
+	'CONTACT_US_INFO_EXPLAIN'		=> 'The message is displayed on the contact page',
+	'CONTACT_US_INFO_PREVIEW'		=> 'Contact page information - Preview',
+	'CONTACT_US_INFO_UPDATED'		=> 'Contact page information has been updated.',
+
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Zde můžete povolit nebo zakázat určité funkce fóra, které mohou ovlivnit jeho vytížení. Na většině serverů není nutné jakékoliv funkce omezovat. Přesto na některých systémech nebo ve sdílených prostředích, jako jsou freehostingy, může být omezení nepotřebných funkcí užitečné. Lze také stanovit limity vytížení serveru a&nbsp;aktivních sessions, při kterých se fórum samo vypne.',
 
+	'ALLOW_CDN'						=> 'Allow usage of third party content delivery networks',
+	'ALLOW_CDN_EXPLAIN'				=> 'If this setting is enabled, some files will be served from external third party servers instead of your server. This reduces the network bandwidth required by your server, but may present a privacy issue for some board administrators. In a default phpBB installation, this includes loading “jQuery” and the font “Open Sans” from Google’s content delivery network.',
+	'ALLOW_LIVE_SEARCHES'			=> 'Allow live searches',
+	'ALLOW_LIVE_SEARCHES_EXPLAIN'	=> 'If this setting is enabled, users are provided with keyword suggestions as they type in certain fields throughout the board.',
 	'CUSTOM_PROFILE_FIELDS'			=> 'Vlastní pole profilu',
 	'LIMIT_LOAD'					=> 'Omezit zatížení serveru',
 	'LIMIT_LOAD_EXPLAIN'			=> 'Pokud průměr vytížení serveru za 1 minutu přesáhne tuto hodnotu, fórum se samo vypne. Hodnota 1.0 se rovná ~100% vytížení serveru, což funguje pouze na UNIXových serverech.',
 	'LIMIT_SESSIONS'				=> 'Omezit sessions',
 	'LIMIT_SESSIONS_EXPLAIN'		=> 'Pokud počet sessions za jednu minutu přesáhne tuto hodnotu, fórum se samo vypne. Nastavte na 0 pro neomezený počet sessions.',
 	'LOAD_CPF_MEMBERLIST'			=> 'Zobrazit vlastní pole profilu v&nbsp;seznamu uživatelů',
+	'LOAD_CPF_PM'					=> 'Display custom profile fields in private messages',
 	'LOAD_CPF_VIEWPROFILE'			=> 'Zobrazit vlastní pole profilu v&nbsp;jeho zobrazení',
 	'LOAD_CPF_VIEWTOPIC'			=> 'Zobrazit vlastní pole profilu v&nbsp;přehledu témat',
 	'LOAD_USER_ACTIVITY'			=> 'Zobrazit uživatelovu aktivitu',
 	'LOAD_USER_ACTIVITY_EXPLAIN'	=> 'Zobrazí nejaktivnější téma/fórum v&nbsp;uživatelově profilu a&nbsp;v&nbsp;uživatelském panelu. Tuto vlastnost se doporučuje vypnout u&nbsp;fór s&nbsp;více jak miliónem příspěvků.',
+	'READ_NOTIFICATION_EXPIRE_DAYS'	=> 'Read Notification Expiration',
+	'READ_NOTIFICATION_EXPIRE_DAYS_EXPLAIN' => 'Number of days that will elapse before a read notification will automatically be deleted. Set this value to 0 to make notifications permanent.',
 	'RECOMPILE_STYLES'				=> 'Rekompilovat zastaralé součásti stylů',
 	'RECOMPILE_STYLES_EXPLAIN'		=> 'Ověří, zda se na serveru nachází nové soubory součástí stylů a&nbsp;rekompiluje staré.',
 	'YES_ANON_READ_MARKING'			=> 'Povolit označovaní témat pro návštěvníky',
@@ -9938,18 +10188,25 @@ $lang = array_merge($lang, array(
 	'YES_READ_MARKING_EXPLAIN'		=> 'Ukládá stav fóra nebo tématu na serveru namísto v&nbsp;cookies uživatele.',
 	'YES_UNREAD_SEARCH'				=> 'Povolit hledání nepřečtených příspěvků',
 
-	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB podporuje autentifikační plug-iny a&nbsp;moduly, které vám umožňují určit způsob ověření identity uživatelů při přihlášení. Ve výchozí instalaci jsou k&nbsp;dispozici tři plug-iny: DB, LDAP a&nbsp;Apache. Ne všechny metody vyžadují doplňující informace, vyplňte tedy jen ty, které se týkají daného plug-inu.',
+	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB supports authentication plug-ins, or modules. These allow you determine how users are authenticated when they log into the board. By default four plug-ins are provided: DB, LDAP, Apache, and OAuth. Not all methods require additional information so only fill out fields if they are relevant to the selected method.',
 
 	'AUTH_METHOD'				=> 'Zvolit způsob autentifikace',
 
+	'AUTH_PROVIDER_OAUTH_ERROR_ELEMENT_MISSING'	=> 'Both the key and secret of each enabled OAuth service provider must be provided. Only one was provided for an OAuth service provider.',
+	'AUTH_PROVIDER_OAUTH_EXPLAIN'				=> 'Each OAuth provider requires a unique secret and key in order to authenticate with the external server. These should be supplied by the OAuth service when you register your website with them and should be entered exactly as provided to you.<br />Any service that does not have both a key and a secret entered here will not be available for use by the forum users. Also note, that user can still register and login using the DB authentication plug-in.',
+	'AUTH_PROVIDER_OAUTH_KEY'					=> 'Key',
+	'AUTH_PROVIDER_OAUTH_TITLE'					=> 'OAuth',
+	'AUTH_PROVIDER_OAUTH_SECRET'				=> 'Secret',
+
 	'APACHE_SETUP_BEFORE_USE'	=> 'Je třeba nastavit autentifikaci apache před zapnutím této možnosti v&nbsp;phpBB. Nezapomínejte, že uživatelské jméno v&nbsp;apache musí být stejné, jako používáte v&nbsp;phpBB.',
 
+	'LDAP'							=> 'LDAP',
 	'LDAP_DN'						=> 'Základní LDAP <var>dn</var>',
 	'LDAP_DN_EXPLAIN'				=> 'Distinguished Name (DN) obsahuje všechny údaje o&nbsp;uživatelích, např. <samp>o=Moje firma,c=CZ</samp>.',
-	'LDAP_EMAIL'					=> 'Položka e-mailu LDAP',
-	'LDAP_EMAIL_EXPLAIN'			=> 'Toto nastavte na název položky e-mailu (pokud existuje) pro automatické přiřazení e-mailové adresy novým uživatelům. Zůstane-li položka prázdná, budou mít uživatelé po prvním přihlášení prázdné pole e-mailu.',
+	'LDAP_EMAIL'					=> 'LDAP email attribute',
+	'LDAP_EMAIL_EXPLAIN'			=> 'Set this to the name of your user entry email attribute (if one exists) in order to automatically set the email address for new users. Leaving this empty results in empty email address for users who log in for the first time.',
 	'LDAP_INCORRECT_USER_PASSWORD'	=> 'Připojení k&nbsp;LDAP serveru se zadanými údaji se nezdařilo.',
-	'LDAP_NO_EMAIL'					=> 'Uvedený e-mail neexistuje.',
+	'LDAP_NO_EMAIL'					=> 'The specified email attribute does not exist.',
 	'LDAP_NO_IDENTITY'				=> 'Nelze najít přihlašovací identitu pro %s',
 	'LDAP_PASSWORD'					=> 'LDAP heslo',
 	'LDAP_PASSWORD_EXPLAIN'			=> 'Nechte prázdné pro anonymní přístup. V&nbsp;ostatních případech vyplňte heslo pro zvoleného uživatele. <strong>VAROVÁNÍ:</strong> Heslo bude v&nbsp;databázi uloženo jako prostý text, tudíž dostupné všem, kdo do ní má přístup.',
@@ -9964,13 +10221,17 @@ $lang = array_merge($lang, array(
 	'LDAP_USER_FILTER'				=> 'Filtr uživatelů LDAP',
 	'LDAP_USER_FILTER_EXPLAIN'		=> 'Dle libosti můžete dále omezovat vyhledávané objekty pomocí přídavných filtrů. Např. <samp>objectClass=posixGroup</samp> povede k&nbsp;užití <samp>(&amp;(uid=$username)(objectClass=posixGroup))</samp>.',
 
-	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Zde můžete změnit nastavení serveru a&nbsp;domény. Ujistěte se, že zadaná data jsou správná, chyby se projeví v&nbsp;odesílaní nesprávných e-mailů a&nbsp;znemožnění přístupu k&nbsp;některým částem fóra. Pamatujte, že název domény neobsahuje http://, ani jiný název protokolu. Číslo portu upravujte pouze tehdy, pokud jste si jisti, že váš server používá jiný port, jinak ponechte hodnotu 80, která je platná pro většinu serverů.',
+	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Here you define server and domain dependent settings. Please ensure the data you enter is accurate, errors will result in emails containing incorrect information. When entering the domain name remember it does include http:// or other protocol term. Only alter the port number if you know your server uses a different value, port 80 is correct in most cases.',
 	'ENABLE_GZIP'				=> 'Povolit GZip kompresi',
 	'ENABLE_GZIP_EXPLAIN'		=> 'Generovaný obsah bude před odesláním uživateli zkomprimován. To může snížit objem přenesených dat, ale zvýší zatížení CPU na straně serveru i uživatele. Vyžaduje přítomnost povoleného rozšíření PHP zlib.',
 	'FORCE_SERVER_VARS'			=> 'Vynutit nastavení URL serveru',
 	'FORCE_SERVER_VARS_EXPLAIN'	=> 'Je-li zapnuto, zde zvolená nastavení budou upřednostněna před automaticky nalezenými hodnotami.',
 	'ICONS_PATH'				=> 'Cesta k&nbsp;ikonám témat',
 	'ICONS_PATH_EXPLAIN'		=> 'Cesta pod kořenovým adresářem phpBB, např. <samp>images/icons</samp>',
+	'MOD_REWRITE_ENABLE'		=> 'Enable URL Rewriting',
+	'MOD_REWRITE_ENABLE_EXPLAIN' => 'When enabled, URLs containing ’app.php’ will be rewritten to remove the filename (i.e. app.php/foo will become /foo). <strong>Apache server’s mod_rewrite module is required for this functionality to work; if this option is enabled without mod_rewrite support, URLs on your board may be broken.</strong>',
+	'MOD_REWRITE_DISABLED'		=> 'The <strong>mod_rewrite</strong> module on your Apache web server is disabled. Enable the module or contact your web hosting provider if you wish to enable this feature.',
+	'MOD_REWRITE_INFORMATION_UNAVAILABLE' => 'We are unable to determine whether or not this server supports URL rewriting. This setting may be enabled but if URL rewriting is not available, paths generated by this board (such as for use in links) may be broken. Contact your web hosting provider if you are unsure whether or not you can safely enable this feature.',
 	'PATH_SETTINGS'				=> 'Nastavení cest k&nbsp;souborům',
 	'RANKS_PATH'				=> 'Cesta k&nbsp;hodnostem',
 	'RANKS_PATH_EXPLAIN'		=> 'Cesta pod základní složkou phpBB, např. <samp>images/ranks</samp>',
@@ -9987,13 +10248,21 @@ $lang = array_merge($lang, array(
 	'SMILIES_PATH_EXPLAIN'		=> 'Cesta pod kořenovým adresářem phpBB, např. <samp>images/smilies</samp>',
 	'UPLOAD_ICONS_PATH'			=> 'Cesta k&nbsp;ukládání ikon pro skupiny příloh',
 	'UPLOAD_ICONS_PATH_EXPLAIN'	=> 'Cesta pod kořenovým adresářem phpBB, např. <samp>images/upload_icons</samp>',
+	'USE_SYSTEM_CRON'		=> 'Run periodic tasks from system cron',
+	'USE_SYSTEM_CRON_EXPLAIN'		=> 'When off, phpBB will arrange for periodic tasks to be run automatically. When on, phpBB will not schedule any periodic tasks by itself; a system administrator must arrange for <code>bin/phpbbcli.php cron:run</code> to be run by the system cron facility at regular intervals (e.g. every 5 minutes).',
 
 	'ACP_SECURITY_SETTINGS_EXPLAIN'		=> 'Zde můžete změnit nastavení týkající se sessions a&nbsp;přihlašování.',
 	'ALL'							=> 'Vše',
-	'ALLOW_AUTOLOGIN'				=> 'Povolit trvalá přihlášení',
-	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Určuje, zda si uživatelé mohou zapnout automatické přihlašování při opakovaných návštěvách.',
-	'AUTOLOGIN_LENGTH'				=> 'Doba platnosti trvalého přihlášení (ve dnech)',
-	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Počet dní, po kterých jsou klíče trvalého přihlášení odstraněny, pokud je nastaveno na 0, nebudou mazány nikdy.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'ALLOW_PASSWORD_RESET'			=> 'Allow password reset ("Forgot Password")',
+	'ALLOW_PASSWORD_RESET_EXPLAIN'	=> 'Determines whether or not users are able to use the "I forgot my password" link on the login page to recover their account. If you use an external authentication mechanism you may wish to disable this feature.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
 	'BROWSER_VALID'					=> 'Ověřit prohlížeč',
 	'BROWSER_VALID_EXPLAIN'			=> 'Povoluje ověřování prohlížeče pro větší zabezpečení session.',
 	'CHECK_DNSBL'					=> 'Zkontrolovat IP v&nbsp;databázi DNS Blackhole',
@@ -10030,8 +10299,12 @@ $lang = array_merge($lang, array(
 	'PASS_TYPE_SYMBOL'				=> 'Musí obsahovat zvláštní znaky',
 	'REF_HOST'						=> 'Ověřit pouze hostitele',
 	'REF_PATH'						=> 'Ověřit i cestu',
-	'REFERER_VALID'					=> 'Ověřit referer',
+	'REFERRER_VALID'				=> 'Validate Referrer',
+	'REFERRER_VALID_EXPLAIN'		=> 'If enabled, the referrer of POST requests will be checked against the host/script path settings. This may cause issues with boards using several domains and or external logins.',
+
+	'REFERER_VALID'					=> 'Ověřit referer',	//3.0.12
 	'REFERER_VALID_EXPLAIN'			=> 'Pokud je toto nastavení povoleno, bude porovnán referer u&nbsp;POST dotazů s&nbsp;hodnotami domény/cesty v&nbsp;nastavení. Toto může způsobit potíže na fórech, které používají více domén nebo externí přihlašování..',
+
 	'TPL_ALLOW_PHP'					=> 'Povolit PHP v&nbsp;šablonách',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Je-li tato možnost povolena, příkazy <code>PHP</code> a&nbsp;<code>INCLUDEPHP</code> budou rozeznávány a&nbsp;zpracovány v&nbsp;šablonách.',
 
@@ -10044,6 +10317,8 @@ $lang = array_merge($lang, array(
 	'BOARD_HIDE_EMAILS_EXPLAIN'		=> 'Je-li povoleno, všechny e-mailové adresy na fóru budou skryty.',
 	'CONTACT_EMAIL'					=> 'Kontaktní e-mailová adresa',
 	'CONTACT_EMAIL_EXPLAIN'			=> 'Tato adresa bude použita vždy, když je potřeba uvést kontakt na fórum, např. spam, výstupy chyb atd. Bude vždy použita jako adresa pro hlavičky <samp>From</samp> a&nbsp;<samp>Reply-To</samp>.',
+	'CONTACT_EMAIL_NAME'			=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 	'EMAIL_FUNCTION_NAME'			=> 'Název funkce e-mail',
 	'EMAIL_FUNCTION_NAME_EXPLAIN'	=> 'Název PHP funkce použité pro odeslání e-mailů.',
 	'EMAIL_PACKAGE_SIZE'			=> 'Velikost balíku e-mailů',
@@ -10234,7 +10509,7 @@ $lang = array_merge($lang, array(
 	'ACP_BAN'					=> 'Banování',
 	'ACP_BAN_EMAILS'			=> 'Ban e-mailových adres',
 	'ACP_BAN_IPS'				=> 'Ban IP adres',
-	'ACP_BAN_USERNAMES'			=> 'Ban uživatelských jmen',
+	'ACP_BAN_USERNAMES'			=> 'Ban users',
 	'ACP_BBCODES'				=> 'Tagy BBCode',
 	'ACP_BOARD_CONFIGURATION'	=> 'Konfigurace fóra',
 	'ACP_BOARD_FEATURES'		=> 'Funkce fóra',
@@ -10243,8 +10518,10 @@ $lang = array_merge($lang, array(
 	'ACP_BOTS'					=> 'Boti/vyhledávače',
 
 	'ACP_CAPTCHA'				=> 'CAPTCHA',
+	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'Databáze',
+	'ACP_CAT_DOT_MODS'			=> '.Mody',
 	'ACP_CAT_DOT_MODS'			=> '.Mody',
 	'ACP_CAT_FORUMS'			=> 'Fóra',
 	'ACP_CAT_GENERAL'			=> 'Obecné',
@@ -10257,6 +10534,8 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_USERS'				=> 'Uživatelé',
 	'ACP_CLIENT_COMMUNICATION'	=> 'Komunikace mezi klienty',
 	'ACP_COOKIE_SETTINGS'		=> 'Cookies',
+	'ACP_CONTACT'				=> 'Contact page',
+	'ACP_CONTACT_SETTINGS'		=> 'Contact page settings',
 	'ACP_CRITICAL_LOGS'			=> 'Log chyb',
 	'ACP_CUSTOM_PROFILE_FIELDS'	=> 'Vlastní pole v&nbsp;profilu',
 
@@ -10264,8 +10543,11 @@ $lang = array_merge($lang, array(
 	'ACP_DISALLOW'				=> 'Zakázat',
 	'ACP_DISALLOW_USERNAMES'	=> 'Zakázat uživatelská jména',
 
-	'ACP_EMAIL_SETTINGS'		=> 'E-maily',
-	'ACP_EXTENSION_GROUPS'		=> 'Nastavení příloh podle druhu',
+	'ACP_EMAIL_SETTINGS'		=> 'Email settings',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
+	'ACP_EXTENSION_MANAGEMENT'	=> 'Extension management',
+	'ACP_EXTENSIONS'			=> 'Manage extensions',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
 	'ACP_FORMS'					=> 'Customizable Forms',
 	'ACP_FORMS_BUILDER'			=> 'Form Builder',
 
@@ -10286,10 +10568,10 @@ $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE'				=> 'Správa uživ. skupin',
 	'ACP_GROUPS_MANAGEMENT'			=> 'Správa skupiny',
 	'ACP_GROUPS_PERMISSIONS'		=> 'Oprávnění skupiny',
+	'ACP_GROUPS_POSITION'			=> 'Manage group positions',
 
 	'ACP_ICONS'					=> 'Ikony témat',
 	'ACP_ICONS_SMILIES'			=> 'Ikony témat / smajlíci',
-	'ACP_IMAGESETS'				=> 'Sady obrázků',
 	'ACP_INACTIVE_USERS'		=> 'Neaktivní uživatelé',
 	'ACP_INDEX'					=> 'Obsah administrace',
 
@@ -10301,11 +10583,15 @@ $lang = array_merge($lang, array(
 	'ACP_LOGGING'				=> 'Zaznamenávám',
 
 	'ACP_MAIN'					=> 'Obsah administrace',
-	'ACP_MANAGE_EXTENSIONS'		=> 'Druhy souborů',
+
+	'ACP_MANAGE_ATTACHMENTS'			=> 'Přílohy',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
+
+	'ACP_MANAGE_EXTENSIONS'		=> 'Manage attachment extensions',
 	'ACP_MANAGE_RANKS'			=> 'Hodnosti',
 	'ACP_MANAGE_REASONS'		=> 'Správa důvodů hlášení/zamítnutí',
 	'ACP_MANAGE_USERS'			=> 'Správa uživatelů',
-	'ACP_MASS_EMAIL'			=> 'Hromadný e-mail',
+	'ACP_MASS_EMAIL'			=> 'Mass email',
 	'ACP_MESSAGES'				=> 'Zprávy',
 	'ACP_MESSAGE_SETTINGS'		=> 'Soukromé zprávy',
 	'ACP_MODULE_MANAGEMENT'		=> 'Moduly',
@@ -10350,6 +10636,8 @@ $lang = array_merge($lang, array(
 	'ACP_STYLE_COMPONENTS'		=> 'Komponenty stylů',
 	'ACP_STYLE_MANAGEMENT'		=> 'Správa stylů',
 	'ACP_STYLES'				=> 'Styly',
+	'ACP_STYLES_CACHE'			=> 'Purge Cache',
+	'ACP_STYLES_INSTALL'		=> 'Install Styles',
 
 	'ACP_SUBMIT_CHANGES'		=> 'Odeslat změny',
 
@@ -10401,6 +10689,10 @@ $lang = array_merge($lang, array(
 
 	'COLOUR_SWATCH'			=> 'Vzorník bezpečných barev',
 	'CONFIG_UPDATED'		=> 'Nastavení bylo aktualizováno.',
+	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
+	'CRON_NO_SUCH_TASK'		=> 'Could not find cron task â€œ%sâ€.',
+	'CRON_NO_TASK'			=> 'No cron tasks need to be run right now.',
+	'CRON_NO_TASKS'			=> 'No cron tasks could be found.',
 
 	'DEACTIVATE'				=> 'Deaktivovat',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'Zadaná cesta „%s“ neexistuje.',
@@ -10411,6 +10703,7 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_AS'				=> 'Stáhnout jako',
 	'DOWNLOAD_STORE'			=> 'Stáhnout nebo uložit soubor',
 	'DOWNLOAD_STORE_EXPLAIN'	=> 'Soubor můžete přímo stáhnout, nebo ho uložit ve svém adresáři <samp>store/</samp>.',
+	'DOWNLOADS'					=> 'Stažené soubory',
 
 	'EDIT'					=> 'Upravit',
 	'ENABLE'				=> 'Povolit',
@@ -10425,6 +10718,8 @@ $lang = array_merge($lang, array(
 	'IP'					=> 'IP adresa',
 	'IP_HOSTNAME'			=> 'IP adresy nebo názvy hostitelů',
 
+	'LOAD_NOTIFICATIONS'			=> 'Display Notifications',
+	'LOAD_NOTIFICATIONS_EXPLAIN'	=> 'Display the notifications list on every page (typically in the header).',
 	'LOGGED_IN_AS'			=> 'Jste přihlášen jako:',
 	'LOGIN_ADMIN'			=> 'Pro správu fóra musíte mít příslušná uživatelská oprávnění.',
 	'LOGIN_ADMIN_CONFIRM'	=> 'Pro administraci fóra se musíte znovu přihlásit.',
@@ -10441,7 +10736,8 @@ $lang = array_merge($lang, array(
 
 	'NOTIFY'				=> 'Upozornění',
 	'NO_ADMIN'				=> 'Nemáte oprávnění spravovat toto fórum.',
-	'NO_EMAILS_DEFINED'		=> 'Nebyla nalezena žádná platná e-mailová adresa',
+	'NO_EMAILS_DEFINED'		=> 'No valid email addresses found.',
+	'NO_FILES_TO_DELETE'	=> 'Attachments you selected for deletion do not exist.',
 	'NO_PASSWORD_SUPPLIED'	=> 'Nelze se přihlásit bez hesla.',
 
 	'OFF'					=> 'Vypnuto',
@@ -10457,8 +10753,8 @@ $lang = array_merge($lang, array(
 
 	'REMIND'							=> 'Připomenout',
 	'RESYNC'							=> 'Resynchronizace',
-	'RETURN_TO'							=> 'Vrátit se na…',
 
+	'RUNNING_TASK'			=> 'Running task: %s.',
 	'SELECT_ANONYMOUS'		=> 'Vybrat anonymního uživatele',
 	'SELECT_OPTION'			=> 'Vybrat možnost',
 
@@ -10468,6 +10764,10 @@ $lang = array_merge($lang, array(
 	'SETTING_TOO_SHORT'		=> 'Zadaná hodnota pro nastavení „%1$s“ jnení dost dlouhá. Nejmenší povolená délka je %2$d.',
 
 	'SHOW_ALL_OPERATIONS'	=> 'Ukazát všechny operace',
+
+	'TASKS_NOT_READY'			=> 'Not ready tasks:',
+	'TASKS_READY'			=> 'Ready tasks:',
+	'TOTAL_SIZE'			=> 'Total size',
 
 	'UCP'					=> 'Uživatelský ovládací panel',
 	'USERNAMES_EXPLAIN'		=> 'Uživatelská jména vkládejte odděleně na jednotlivé řádky.',
@@ -10479,7 +10779,7 @@ $lang = array_merge($lang, array(
 	'NO_PHPINFO_AVAILABLE'	=> 'Informace o&nbsp;vaší konfiguraci PHP nelze určit. Funkce phpinfo() byla z bezpečnostních důvodů vypnuta.',
 
 	'ACP_ADMIN_LOGS_EXPLAIN'	=> 'Tento log vypisuje všechny činnosti administrátorů. Můžete je seřadit podle jména, data, IP adresy nebo akce. Pokud máte příslušná oprávnění, můžete smazat jednotlivé záznamy nebo celý log.',
-	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'Zde jsou zobrazeny všechny činnosti, které provedlo fórum samo. Tento log vám poskytuje informace, které můžete použít pro řešení specifických potíží, např. nedoručování e-mailů. Můžete je seřadit podle jména, data, IP adresy nebo akce. Pokud máte příslušná oprávnění, můžete smazat jednotlivé záznamy nebo celý log.',
+	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'This lists the actions carried out by the board itself. This log provides you with information you are able to use for solving specific problems, for example non-delivery of emails. You can sort by username, date, IP or action. If you have appropriate permissions you can also clear individual operations or the log as a whole.',
 	'ACP_MOD_LOGS_EXPLAIN'		=> 'Tento log vypisuje všechny činnosti moderátorů. Zvolte konkrétní fórum z rozbalovacího menu. Můžete je seřadit podle jména, data, IP adresy nebo akce. Pokud máte příslušná oprávnění, můžete smazat jednotlivé záznamy nebo celý log.',
 	'ACP_USERS_LOGS_EXPLAIN'	=> 'Toto vypisuje všechny činnosti provedené uživateli nebo na uživatelích (upozornění, varování, uživatelské záznamy).',
 	'ALL_ENTRIES'				=> 'Všechny příspěvky',
@@ -10505,6 +10805,7 @@ $lang = array_merge($lang, array(
 
 	'GZIP_COMPRESSION'	=> 'GZip komprese',
 
+	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'Nedostupné',
 	'NUMBER_FILES'		=> 'Počet příloh',
 	'NUMBER_POSTS'		=> 'Počet příspěvků',
@@ -10517,29 +10818,38 @@ $lang = array_merge($lang, array(
 	'PURGE_CACHE'			=> 'Pročistit cache',
 	'PURGE_CACHE_CONFIRM'	=> 'Opravdu chcete zcela pročistit cache?',
 	'PURGE_CACHE_EXPLAIN'	=> 'Pročistí všechny cachované soubory šablon a&nbsp;SQL dotazy.',
+	'PURGE_CACHE_SUCCESS'	=> 'Cache successfully purged.',
 
 	'PURGE_SESSIONS'			=> 'Pročistit všechny sessions',
 	'PURGE_SESSIONS_CONFIRM'	=> 'Opravdu chcete smazat všechny sessions? Smazáním odhlásíte všechny uživatele.',
 	'PURGE_SESSIONS_EXPLAIN'	=> 'Odstraní veškeré sessions a&nbsp;odhlásí všechny uživatele pročištěním jejich databázové tabulky. Toto se hodí při nekontrolovaném nárůstu počtu sessions.',
+	'PURGE_SESSIONS_SUCCESS'	=> 'Sessions successfully purged.',
 
 	'RESET_DATE'					=> 'Vynulovat datum spuštění',
 	'RESET_DATE_CONFIRM'			=> 'Opravdu chcete vynulovat datum založení fóra?',
+	'RESET_DATE_SUCCESS'				=> 'Boardâ€™s start date reset',
 	'RESET_ONLINE'					=> 'Vynulovat rekord uživatelů online',
 	'RESET_ONLINE_CONFIRM'			=> 'Opravdu chcete vynulovat rekord přítomých uživatelů?',
+	'RESET_ONLINE_SUCCESS'				=> 'Most users ever online reset',
 	'RESYNC_POSTCOUNTS'				=> 'Resynchronizovat počítadla příspěvků',
 	'RESYNC_POSTCOUNTS_EXPLAIN'		=> 'Brány v&nbsp;úvahu budou pouze existující příspěvky. Pročištěné příspěvky nebudou počítány.',
 	'RESYNC_POSTCOUNTS_CONFIRM'		=> 'Opravdu chcete synchronizovat počítadla příspěvků?',
+	'RESYNC_POSTCOUNTS_SUCCESS'			=> 'Resynchronised post counts',
 	'RESYNC_POST_MARKING'			=> 'Resynchronizovat označená témata',
 	'RESYNC_POST_MARKING_CONFIRM'	=> 'Opravdu chcete resynchronizovat označená témata?',
 	'RESYNC_POST_MARKING_EXPLAIN'	=> 'Nejprve odznačí všechna témata a&nbsp;poté správně označí ta, v&nbsp;nichž uživatel vykázal aktivitu v&nbsp;posledních šesti měsících.',
+	'RESYNC_POST_MARKING_SUCCESS'	=> 'Resynchronised dotted topics',
 	'RESYNC_STATS'					=> 'Resynchronizovat statistiky',
 	'RESYNC_STATS_CONFIRM'			=> 'Opravdu chcete resynchronizovat statistiky?',
 	'RESYNC_STATS_EXPLAIN'			=> 'Přepočítá celkový počet uživatelů, příspěvků, témat a&nbsp;příloh.',
+	'RESYNC_STATS_SUCCESS'			=> 'Resynchronised statistics',
 	'RUN'							=> 'Spustit nyní',
 
 	'STATISTIC'					=> 'Statistika',
 	'STATISTIC_RESYNC_OPTIONS'	=> 'Resynchronizovat nebo vynulovat statistiky',
 
+	'TIMEZONE_INVALID'	=> 'The timezone you selected is invalid.',
+	'TIMEZONE_SELECTED'	=> '(currently selected)',
 	'TOPICS_PER_DAY'	=> 'Témat za den',
 
 	'UPLOAD_DIR_SIZE'	=> 'Velikost všech příloh',
@@ -10720,9 +11030,9 @@ $lang = array_merge($lang, array(
 
 	'LOG_APPROVE_TOPIC'			=> '<strong>Schválení tématu</strong><br />» %s',
 	'LOG_BUMP_TOPIC'			=> '<strong>Oživení tématu uživatelem</strong><br />» %s',
-	'LOG_DELETE_POST'			=> '<strong>Odstranění příspěvku</strong><br />» %s',
-	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Odstranění stínového tématu</strong><br />» %s',
-	'LOG_DELETE_TOPIC'			=> '<strong>Odstranění tématu</strong><br />» %s',
+	'LOG_DELETE_POST'			=> '<strong>Deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Deleted shadow topic</strong><br />Â» %s',
+	'LOG_DELETE_TOPIC'			=> '<strong>Deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_FORK'					=> '<strong>Zkopírování tématu</strong><br />» z %s',
 	'LOG_LOCK'					=> '<strong>Zamknutí tématu</strong><br />» %s',
 	'LOG_LOCK_POST'				=> '<strong>Zamknutí příspěvku</strong><br />» %s',
@@ -10731,15 +11041,20 @@ $lang = array_merge($lang, array(
 	'LOG_PM_REPORT_CLOSED'		=> '<strong>Uzavřeno nahlášení SZ</strong><br />» %s',
 	'LOG_PM_REPORT_DELETED'		=> '<strong>Odstranění nahlášení SZ</strong><br />» %s',
 	'LOG_POST_APPROVED'			=> '<strong>Schválení příspěvku</strong><br />» %s',
-	'LOG_POST_DISAPPROVED'		=> '<strong>Odmítnutí příspěvku „%1$s“ z následujícího důvodu</strong><br />» %2$s',
-	'LOG_POST_EDITED'			=> '<strong>Úprava příspěvku „%1$s“ od</strong><br />» %2$s',
+	'LOG_POST_DISAPPROVED'		=> '<strong>Disapproved post â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
+	'LOG_POST_EDITED'			=> '<strong>Edited post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_POST_RESTORED'			=> '<strong>Restored post</strong><br />Â» %s',
 	'LOG_REPORT_CLOSED'			=> '<strong>Uzavření hlášení</strong><br />» %s',
 	'LOG_REPORT_DELETED'		=> '<strong>Odstranění hlášení</strong><br />» %s',
+	'LOG_RESTORE_TOPIC'			=> '<strong>Restored topic â€œ%1$sâ€ written by</strong><br />Â» %2$s',
+	'LOG_SOFTDELETE_POST'		=> '<strong>Soft deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_SOFTDELETE_TOPIC'		=> '<strong>Soft deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_SPLIT_DESTINATION'		=> '<strong>Přesun rozdělených příspěvků</strong><br />» do %s',
 	'LOG_SPLIT_SOURCE'			=> '<strong>Rozdělení příspěvků</strong><br />» z %s',
 
 	'LOG_TOPIC_APPROVED'		=> '<strong>Schválení tématu</strong><br />» %s',
-	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Odmítnutí tématu „%1$s“ z následujícího důvodu</strong><br />%2$s',
+	'LOG_TOPIC_RESTORED'		=> '<strong>Restored topic</strong><br />Â» %s',
+	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Disapproved topic â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
 	'LOG_TOPIC_RESYNC'			=> '<strong>Resynchronizace počítadel témat</strong><br />» %s',
 	'LOG_TOPIC_TYPE_CHANGED'	=> '<strong>Změna druhu tématu</strong><br />» %s',
 	'LOG_UNLOCK'				=> '<strong>Odemknutí tématu</strong><br />» %s',
@@ -10791,16 +11106,6 @@ $lang = array_merge($lang, array(
 
 	'LOG_IMAGE_GENERATION_ERROR'	=> '<strong>Chyba při generování obrázku</strong><br />» Chyba v&nbsp;%1$s na řádku %2$s: %3$s',
 
-	'LOG_IMAGESET_ADD_DB'			=> '<strong>Přidána nová sada obrázků do databáze</strong><br />» %s',
-	'LOG_IMAGESET_ADD_FS'			=> '<strong>Přidána nová sada obrázků v&nbsp;souborovém systému</strong><br />» %s',
-	'LOG_IMAGESET_DELETE'			=> '<strong>Odstranění sady obrázků</strong><br />» %s',
-	'LOG_IMAGESET_EDIT_DETAILS'		=> '<strong>Upraveny detaily sady obrázků</strong><br />» %s',
-	'LOG_IMAGESET_EDIT'				=> '<strong>Upravena sada obrázků</strong><br />» %s',
-	'LOG_IMAGESET_EXPORT'			=> '<strong>Export sady obrázků</strong><br />» %s',
-	'LOG_IMAGESET_LANG_MISSING'		=> '<strong>V sadě obrázků chybí „%2$s“ umístění</strong><br />» %1$s',
-	'LOG_IMAGESET_LANG_REFRESHED'	=> '<strong>Obnoveno umístění „%2$s“ sady obrázků</strong><br />» %1$s',
-	'LOG_IMAGESET_REFRESHED'		=> '<strong>Obnovení sady obrázků</strong><br />» %s',
-
 	'LOG_INACTIVE_ACTIVATE'	=> '<strong>Aktivace neaktivních uživatelů</strong><br />» %s',
 	'LOG_INACTIVE_DELETE'	=> '<strong>Odstranění neaktivních uživatelů</strong><br />» %s',
 	'LOG_INACTIVE_REMIND'	=> '<strong>Odeslána připomenutí pro neaktivní uživatele</strong><br />» %s',
@@ -10845,6 +11150,7 @@ $lang = array_merge($lang, array(
 	'LOG_U_ROLE_EDIT'		=> '<strong>Uživatelská role upravena</strong><br />» %s',
 	'LOG_U_ROLE_REMOVED'	=> '<strong>Uživatelská role odstraněna</strong><br />» %s',
 
+	'LOG_PLUPLOAD_TIDY_FAILED'		=> '<strong>Unable to open %1$s for tidying, check permissions.</strong><br />Exception: %2$s<br />Trace: %3$s',
 	'LOG_PROFILE_FIELD_ACTIVATE'	=> '<strong>Aktivováno pole v&nbsp;profilu</strong><br />» %s',
 	'LOG_PROFILE_FIELD_CREATE'		=> '<strong>Přidáno pole v&nbsp;profilu</strong><br />» %s',
 	'LOG_PROFILE_FIELD_DEACTIVATE'	=> '<strong>Deaktivováno pole v&nbsp;profilu</strong><br />» %s',
@@ -10853,13 +11159,13 @@ $lang = array_merge($lang, array(
 
 	'LOG_PRUNE'					=> '<strong>Pročištění fór</strong><br />» %s',
 	'LOG_AUTO_PRUNE'			=> '<strong>Automatické pročištění fór</strong><br />» %s',
+	'LOG_PRUNE_SHADOW'		=> '<strong>Auto-pruned shadow topics</strong><br />Â» %s',
 	'LOG_PRUNE_USER_DEAC'		=> '<strong>Uživatelé deaktivováni</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_DEL'	=> '<strong>Uživatelé a&nbsp;příspěvky pročištěny</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_ANON'	=> '<strong>Uživatelé pročištěni, příspěvky zachovány</strong><br />» %s',
 
 	'LOG_PURGE_CACHE'			=> '<strong>Pročištěna cache</strong>',
 	'LOG_PURGE_SESSIONS'		=> '<strong>Pročištěny sessions</strong>',
-
 
 	'LOG_RANK_ADDED'		=> '<strong>Přidaná nová hodnost</strong><br />» %s',
 	'LOG_RANK_REMOVED'		=> '<strong>Odstraněna hodnost</strong><br />» %s',
@@ -10869,15 +11175,17 @@ $lang = array_merge($lang, array(
 	'LOG_REASON_REMOVED'	=> '<strong>Odstraněn důvod hlášení/zamítnutí</strong><br />» %s',
 	'LOG_REASON_UPDATED'	=> '<strong>Aktualizace důvodu hlášení/zamítnutí</strong><br />» %s',
 
-	'LOG_REFERER_INVALID'		=> '<strong>Selhalo ověření refereru</strong><br />»Referer byl „<em>%1$s</em>“. Požadavek byl odmítnut a&nbsp;session zrušena.',
+	'LOG_REFERER_INVALID'		=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 	'LOG_RESET_DATE'			=> '<strong>Vynulován čas spuštění fóra</strong>',
 	'LOG_RESET_ONLINE'			=> '<strong>Vynulován rekord online uživatelů</strong>',
+	'LOG_RESYNC_FILES_STATS'	=> '<strong>File statistics resynchronised</strong>',
 	'LOG_RESYNC_POSTCOUNTS'		=> '<strong>Resynchonizace počtu příspěvků</strong>',
 	'LOG_RESYNC_POST_MARKING'	=> '<strong>Označená témata synchronizována</strong>',
 	'LOG_RESYNC_STATS'			=> '<strong>Příspěvky, témata a&nbsp;statistiky resynchronizovány</strong>',
 
 	'LOG_SEARCH_INDEX_CREATED'	=> '<strong>Vytvořen vyhledávací index pro</strong><br />» %s',
 	'LOG_SEARCH_INDEX_REMOVED'	=> '<strong>Odstraněn vyhledávací index pro</strong><br />» %s',
+	'LOG_SPHINX_ERROR'			=> '<strong>Sphinx Error</strong><br />Â» %s',
 	'LOG_STYLE_ADD'				=> '<strong>Přidán nový styl</strong><br />» %s',
 	'LOG_STYLE_DELETE'			=> '<strong>Odstraněn styl</strong><br />» %s',
 	'LOG_STYLE_EDIT_DETAILS'	=> '<strong>Upraven styl</strong><br />» %s',
@@ -10944,15 +11252,18 @@ $lang = array_merge($lang, array(
 	'LOG_USER_GROUP_RESIGN'			=> '<strong>Uživatel vystoupil ze skupiny</strong><br />» %s',
 
 	'LOG_WARNING_DELETED'		=> '<strong>Odstraněno varování uživatele</strong><br />» %s',
-	'LOG_WARNINGS_DELETED'		=> '<strong>Odstraněno %2$s varovaní uživatele</strong><br />» %1$s',
 	'LOG_WARNINGS_DELETED_ALL'	=> '<strong>Odstraněna všechna varování uživatele</strong><br />» %s',
 
 	'LOG_WORD_ADD'			=> '<strong>Přidáno cenzurované slovo</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>Odstraněno cenzurované slovo</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Upraveno cenzurované slovo</strong><br />» %s',
+
+	'LOG_EXT_ENABLE'	=> '<strong>Extension enabled</strong><br />Â» %s',
+	'LOG_EXT_DISABLE'	=> '<strong>Extension disabled</strong><br />Â» %s',
+	'LOG_EXT_PURGE'		=> '<strong>Extensionâ€™s data deleted</strong><br />Â» %s',
+
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
-
 ));
 
 $lang = array_merge($lang, array(
@@ -11253,7 +11564,7 @@ $lang = array_merge($lang, array(
 	'ACP_PORTAL_WELCOME_EXPLAIN'=> '',
 	'ADM_LOGOUT'			=> 'Odhlásit&nbsp;z&nbsp;ACP',
 	'ADM_LOGGED_OUT'		=> 'Byli jste úspěšně odhlášeni z administrace fóra.',
-	'LOG_REFERER_INVALID'	=> '<strong>Selhalo ověření refereru</strong><br />»Referer byl „<em>%1$s</em>“. Požadavek byl odmítnut a&nbsp;session zrušena.',
+	'LOG_REFERER_INVALID'	=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 
 	'ACP_ABBCODES'			=> 'BBcode Box',
 	'LOG_CONFIG_ABBCODES'	=> '<strong>Altered BBCode Box settings</strong>',
@@ -11659,7 +11970,7 @@ $lang = array_merge($lang, array(
 	'SELECT_A_PREFIX'				=> 'Select a prefix',
 	'ACP_SEOQUERYS'					=> 'SEO Queries',
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Přílohy',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can list and delete files attached to posts and private messages.',
 	'LOG_ATTACH_DEL'				=> '<strong>Attachments deleted</strong><br />» %s',
 	'LOG_ATTACH_REASSIGNED'			=> '<strong>Attachment reassigned to Post</strong><br />» ID %1$d - %2$s',
 	'TOTAL_SIZE'					=> 'Total size',
@@ -11678,11 +11989,11 @@ $lang = array_merge($lang, array(
 	'ACP_INTRO'				=> 'Intro',
 
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Přílohy',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
 	'TOTAL_SIZE'				=> 'Total size',
 	'DOWNLOADS'				=> 'Stažené soubory',
 
-	'NO_AVATAR'				=> 'URL of the avatar for all the have no separate',
+	'NO_AVATAR'				=> 'No avatar selected',
 	'NO_AVATAR_EXPLAIN'			=> 'The optimal size of the avatar is 120x120px, this box is left blank, no picture at all. <br /> Demo URL: http://www.userboard.org/images/no_avatar_1.gif',
 	'GROUP_ICON'				=> 'Group Icon',
 	'GROUP_ICON_EXPLAIN'			=> 'Upload your Group Icons into Upload &#187; Topic/Group Icons',
@@ -12845,6 +13156,97 @@ $lang = array_merge($lang, array(
 	'NO_EMAIL_SUBJECT'		=> 'Musíte zvolit předmět zprávy.',
 ));
 
+#######language/en/acp/extensions.php#######
+
+$lang = array_merge($lang, array(
+	'EXTENSION'					=> 'Přípony',
+	'EXTENSIONS'				=> 'Extensions',
+	'EXTENSIONS_ADMIN'			=> 'Extensions Manager',
+	'EXTENSIONS_EXPLAIN'		=> 'The Extensions Manager is a tool in your phpBB Board which allows you to manage all of your extensions statuses and view information about them.',
+	'EXTENSION_INVALID_LIST'	=> 'The “%s” extension is not valid.<br />%s<br /><br />',
+	'EXTENSION_NOT_AVAILABLE'	=> 'The selected extension is not available for this board, please verify your phpBB and PHP versions are allowed (see the details page).',
+	'EXTENSION_DIR_INVALID'		=> 'The selected extension has an invalid directory structure and cannot be enabled.',
+	'EXTENSION_NOT_ENABLEABLE'	=> 'The selected extension cannot be enabled, please verify the extension’s requirements.',
+
+	'DETAILS'				=> 'Detaily',
+
+	'EXTENSIONS_DISABLED'	=> 'Disabled Extensions',
+	'EXTENSIONS_ENABLED'	=> 'Enabled Extensions',
+
+	'EXTENSION_DELETE_DATA'	=> 'Delete data',
+	'EXTENSION_DISABLE'		=> 'Disable',
+	'EXTENSION_ENABLE'		=> 'Enable',
+
+	'EXTENSION_DELETE_DATA_EXPLAIN'	=> 'Deleting an extension’s data removes all of its data and settings. The extension files are retained so it can be enabled again.',
+	'EXTENSION_DISABLE_EXPLAIN'		=> 'Disabling an extension retains its files, data and settings but removes any functionality added by the extension.',
+	'EXTENSION_ENABLE_EXPLAIN'		=> 'Enabling an extension allows you to use it on your board.',
+
+	'EXTENSION_DELETE_DATA_IN_PROGRESS'	=> 'The extension’s data is currently being deleted. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_DISABLE_IN_PROGRESS'	=> 'The extension is currently being disabled. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_ENABLE_IN_PROGRESS'	=> 'The extension is currently being enabled. Please do not leave or refresh this page until it is completed.',
+
+	'EXTENSION_DELETE_DATA_SUCCESS'	=> 'The extension’s data was deleted successfully',
+	'EXTENSION_DISABLE_SUCCESS'		=> 'The extension was disabled successfully',
+	'EXTENSION_ENABLE_SUCCESS'		=> 'The extension was enabled successfully',
+
+	'EXTENSION_NAME'			=> 'Extension Name',
+	'EXTENSION_ACTIONS'			=> 'Actions',
+	'EXTENSION_OPTIONS'			=> 'Options',
+	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
+	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s files from the filesystem</li>
+			<li>Upload the new files</li>
+			<li>Enable the extension</li>
+		</ol>',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s data</li>
+			<li>Delete the extension’s files from the filesystem</li>
+		</ol>',
+
+	'EXTENSION_DELETE_DATA_CONFIRM'	=> 'Are you sure that you wish to delete the data associated with “%s”?<br /><br />This removes all of its data and settings and cannot be undone!',
+	'EXTENSION_DISABLE_CONFIRM'		=> 'Are you sure that you wish to disable the “%s” extension?',
+	'EXTENSION_ENABLE_CONFIRM'		=> 'Are you sure that you wish to enable the “%s” extension?',
+	'EXTENSION_FORCE_UNSTABLE_CONFIRM'	=> 'Are you sure that you wish to force the use of unstable version?',
+
+	'RETURN_TO_EXTENSION_LIST'	=> 'Return to the extension list',
+
+	'EXT_DETAILS'			=> 'Extension Details',
+	'DISPLAY_NAME'			=> 'Disply Name (may be NULL)',
+	'CLEAN_NAME'			=> 'Clean Name',
+	'TYPE'					=> 'Type',
+	'DESCRIPTION'			=> 'Popis',
+	'VERSION'				=> 'Verze',
+	'HOMEPAGE'				=> 'Homepage',
+	'PATH'					=> 'File Path',
+	'TIME'					=> 'Time',
+	'LICENSE'				=> 'Licence',
+
+	'REQUIREMENTS'			=> 'Requirements',
+	'PHPBB_VERSION'			=> 'phpBB Version',
+	'PHP_VERSION'			=> 'PHP Version',
+	'AUTHOR_INFORMATION'	=> 'Author Information',
+	'AUTHOR_NAME'			=> 'Name',
+	'AUTHOR_EMAIL'			=> 'Email',
+	'AUTHOR_HOMEPAGE'		=> 'Homepage',
+	'AUTHOR_ROLE'			=> 'Role',
+
+	'NOT_UP_TO_DATE'		=> '%s is not up to date',
+	'UP_TO_DATE'			=> '%s is up to date',
+	'ANNOUNCEMENT_TOPIC'	=> 'Release Announcement',
+	'DOWNLOAD_LATEST'		=> 'Download Version',
+	'NO_VERSIONCHECK'		=> 'No version check information given.',
+
+	'VERSIONCHECK_FORCE_UPDATE_ALL'		=> 'Re-Check all versions',
+	'FORCE_UNSTABLE'					=> 'Always check for unstable versions',
+	'EXTENSIONS_VERSION_CHECK_SETTINGS'	=> 'Version check settings',
+
+	'META_FIELD_NOT_SET'	=> 'Required meta field %s has not been set.',
+	'META_FIELD_INVALID'	=> 'Meta field %s is invalid.',
+));
+
 #######language/en/acp/forums.php#######
 
 $lang = array_merge($lang, array(
@@ -12854,6 +13256,10 @@ $lang = array_merge($lang, array(
 	'AUTO_PRUNE_FREQ_EXPLAIN'	=> 'Čas (ve dnech) mezi jednotlivými pročištěními',
 	'AUTO_PRUNE_VIEWED'			=> 'Poslední zobrazení pro pročištění',
 	'AUTO_PRUNE_VIEWED_EXPLAIN'	=> 'Počet dní od posledního zobrazení tématu nutných pro smazaní automatickým pročištěním.',
+	'AUTO_PRUNE_SHADOW_FREQ'	=> 'Auto-prune shadow topics frequency',
+	'AUTO_PRUNE_SHADOW_DAYS'	=> 'Auto-prune shadow topics age',
+	'AUTO_PRUNE_SHADOW_DAYS_EXPLAIN'	=> 'Number of days after which shadow topic is removed.',
+	'AUTO_PRUNE_SHADOW_FREQ_EXPLAIN'	=> 'Time in days between pruning events.',
 
 	'CONTINUE'						=> 'Pokračovat',
 	'COPY_PERMISSIONS_EXPLAIN'		=> 'Pro usnadnění nastavení oprávnění nového fóra, můžete zkopírovat sadu oprávnění z jiného.',
@@ -12912,6 +13318,8 @@ $lang = array_merge($lang, array(
 	'FORUM_PASSWORD_OLD'				=> 'Heslo fóra používá zastaralou hashovací metodu a&nbsp;mělo by být změněno.',
 	'FORUM_PASSWORD_MISMATCH'			=> 'Zadaná hesla se neshodují.',
 	'FORUM_PRUNE_SETTINGS'				=> 'Nastavení pročištění fóra',
+	'FORUM_PRUNE_SHADOW'				=> 'Enable auto-pruning of shadow topics',
+	'FORUM_PRUNE_SHADOW_EXPLAIN'			=> 'Prunes the forum of shadow topics, set the frequency/age parameters below.',
 	'FORUM_RESYNCED'					=> 'Fórum „%s“ bylo úspěšně resynchronizováno.',
 	'FORUM_RULES_EXPLAIN'				=> 'Pravidla fóra budou zobrazena na všech stránkách daného fóra.',
 	'FORUM_RULES_LINK'					=> 'Odkaz na pravidla fóra',
@@ -13003,6 +13411,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE_EXPLAIN'		=> 'Z tohoto panelu můžete spravovat všechny vaše skupiny, můžete je upravovat, mazat nebo přidávat nové. Můžete zvolit vedoucí skupiny, nastavit otevřenou/uzavřenou skupinu, název skupiny nebo třeba barvu uživatelů skupiny.',
+	'ADD_GROUP_CATEGORY'			=> 'Add category',
 	'GROUP_ADD_USERS'				=> 'Přidat uživatele',
 	'ADD_USERS_EXPLAIN'				=> 'Zde můžete přidávat nové členy do skupiny. Můžete vybrat, jestli se skupina stane pro uživatele výchozí, případně je můžete nastavit na vedoucí skupiny. Každé jméno napište na nový řádek.',
 
@@ -13016,11 +13425,10 @@ $lang = array_merge($lang, array(
 	'GROUP_APPROVED'				=> 'Přijatí členové',
 	'GROUP_AVATAR'					=> 'Avatar skupiny',
 	'GROUP_AVATAR_EXPLAIN'			=> 'Tento obrázek bude zobrazen u&nbsp;skupiny v&nbsp;Panelu Skupin.',
+	'GROUP_CATEGORY_NAME'			=> 'Category name',
 	'GROUP_CLOSED'					=> 'Zavřená',
 	'GROUP_COLOR'					=> 'Barva skupiny',
 	'GROUP_COLOR_EXPLAIN'			=> 'Definuje barvu, ve které budou uživatelská jména členů, nechte prázdné pro výchozí barvu uživatelů.',
-	'GROUP_CONFIRM_ADD_USER'		=> 'Opravdu chcete přidat uživatele %1$s do skupiny?',
-	'GROUP_CONFIRM_ADD_USERS'		=> 'Opravdu chcete přidat uživatele %1$s do skupiny?',
 	'GROUP_CREATED'					=> 'Skupina je vytvořena.',
 	'GROUP_DEFAULT'					=> 'Skupina je pro člena výchozí',
 	'GROUP_DEFS_UPDATED'			=> 'Vybraným uživatelům byla změněna výchozí skupina',
@@ -13062,6 +13470,8 @@ $lang = array_merge($lang, array(
 	'GROUP_SETTINGS_SAVE'			=> 'Nastavení pro celou skupinu',
 	'GROUP_SKIP_AUTH'				=> 'Vyjmout vedoucího skupiny z oprávnění',
 	'GROUP_SKIP_AUTH_EXPLAIN'		=> 'Povolením nebude vedoucí skupiny zahrnut do oprávnění nastavena touto skupinou. Toto se hodí například pro trestné skupiny s&nbsp;omezenými právy, kde vedoucím skupiny je moderátor.',
+	'GROUP_SPECIAL'					=> 'Pre-defined',
+	'GROUP_TEAMPAGE'				=> 'Display group on teampage',
 	'GROUP_TYPE'					=> 'Druh skupiny',
 	'GROUP_TYPE_EXPLAIN'			=> 'Toto určuje, jestli lze vstoupit do skupiny nebo ji jen zobrazovat.',
 	'GROUP_UPDATED'					=> 'Nastavení skupiny byla upravena.',
@@ -13070,19 +13480,37 @@ $lang = array_merge($lang, array(
 	'GROUP_USERS_EXIST'				=> 'Vybraní členové již jsou členy této skupiny.',
 	'GROUP_USERS_REMOVE'			=> 'Uživatelé byli odebráni ze skupiny a&nbsp;bylo určeno nové výchozí nastavení.',
 
+	'LEGEND_EXPLAIN'				=> 'These are the groups which are displayed in the group legend:',
+	'LEGEND_SETTINGS'				=> 'Legend settings',
+	'LEGEND_SORT_GROUPNAME'			=> 'Sort legend by group name',
+	'LEGEND_SORT_GROUPNAME_EXPLAIN'	=> 'The order below is ignored when this option is enabled.',
+
+	'MANAGE_LEGEND'			=> 'Manage group legend',
+	'MANAGE_TEAMPAGE'		=> 'Manage teampage',
 	'MAKE_DEFAULT_FOR_ALL'		=> 'Nastavit skupinu jako výchozí pro všechny členy',
 	'MEMBERS'					=> 'Členové',
 
 	'NO_GROUP'					=> 'Nebyla zvolena skupina.',
+	'NO_GROUPS_ADDED'			=> 'No groups added yet.',
 	'NO_GROUPS_CREATED'			=> 'Nebyly zatím vytvořeny žádné skupiny.',
 	'NO_PERMISSIONS'			=> 'Nekopírovat oprávnění',
 	'NO_USERS'					=> 'Nezvolili jste žádného uživatele.',
 	'NO_USERS_ADDED'			=> 'Nebyli přidáni žádní noví uživatelé do této skupiny.',
 	'NO_VALID_USERS'			=> 'Nezadali jste žádné uživatele, kteří by mohli vykonat tuto činnost.',
 
+	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> 'Předdefinované skupiny',
 	'SPECIAL_GROUPS_EXPLAIN'	=> 'Předdefinované skupiny jsou předem vytvořené skupiny, které nelze přímo upravit ani odstranit. Přesto můžete upravovat základní nastavení, přidávat a&nbsp;odebírat členy. Kliknutím na „Výchozí“ můžete nastavit danou skupinu jako výchozí pro všechny členy.',
 
+	'TEAMPAGE'					=> 'Teampage',
+	'TEAMPAGE_DISP_ALL'			=> 'All memberships',
+	'TEAMPAGE_DISP_DEFAULT'		=> 'User’s default group only',
+	'TEAMPAGE_DISP_FIRST'		=> 'First membership only',
+	'TEAMPAGE_EXPLAIN'			=> 'These are the groups which are displayed on the teampage:',
+	'TEAMPAGE_FORUMS'			=> 'Display moderated forums',
+	'TEAMPAGE_FORUMS_EXPLAIN'	=> 'If set to yes, moderators will have a list with all of the forums where they have moderator permissions displayed in their row. This can be very database intensive for big boards.',
+	'TEAMPAGE_MEMBERSHIPS'		=> 'Display user memberships',
+	'TEAMPAGE_SETTINGS'			=> 'Teampage settings',
 	'TOTAL_MEMBERS'				=> 'Počet členů',
 
 	'USERS_APPROVED'				=> 'Uživatelé byli přijati.',
@@ -13468,26 +13896,14 @@ $lang = array_merge($lang, array(
 	'ACP_FILES'						=> 'Jazykové soubory administrace',
 	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> 'Zde můžete instalovat/odinstalovat jazykové balíky k&nbsp;fóru. Jazyk nastavený jako výchozí je označen hvězdičkou.',
 
-	'EMAIL_FILES'			=> 'Šablony e-mailů',
-
-	'FILE_CONTENTS'				=> 'Obsah souboru',
-	'FILE_FROM_STORAGE'			=> 'Soubor z ukládacího adresáře',
-
-	'HELP_FILES'				=> 'Soubory nápovědy',
-
-	'INSTALLED_LANGUAGE_PACKS'	=> 'Instalované jazykové balíky',
-	'INVALID_LANGUAGE_PACK'		=> 'Vybraný jazykový balík není v&nbsp;pořádku, ověřte jej a&nbsp;v&nbsp;případě potřeby nahrajte znovu.',
-	'INVALID_UPLOAD_METHOD'		=> 'Vybraný způsob uploadu není možný, zvolte jiný.',
+	'DELETE_LANGUAGE_CONFIRM'		=> 'Are you sure you wish to delete “%s”?',
+	'INSTALLED_LANGUAGE_PACKS'		=> 'Instalované jazykové balíky',
 
 	'LANGUAGE_DETAILS_UPDATED'			=> 'Informace o&nbsp;jazyku byly aktualizovány',
-	'LANGUAGE_ENTRIES'					=> 'Jazykové klíče',
-	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Zde můžete měnit existující záznamy v&nbsp;jazyku, nebo přeložit zatím nepřeložené.<br /><strong>Poznámka:</strong> Jakmile změníte jazykový soubor, bude nahrán do zvláštní složky, abyste jej mohli stáhnout. Změny nebudou ihned vidět na fóru, teprve až nahrajete soubor do odpovídající složky.',
-	'LANGUAGE_FILES'					=> 'Jazykové soubory',
-	'LANGUAGE_KEY'						=> 'Jazykový klíč',
 	'LANGUAGE_PACK_ALREADY_INSTALLED'	=> 'Tento balík je již nainstalován.',
-	'LANGUAGE_PACK_DELETED'				=> 'Jazykový balík <strong>%s</strong> byl odstraněn. Uživatele používající tento jazyk mají nyní nastavený výchozí jazyk fóra.',
+	'LANGUAGE_PACK_DELETED'				=> 'The language pack “%s” has been removed successfully. All users using this language have been reset to the board’s default language.',
 	'LANGUAGE_PACK_DETAILS'				=> 'Podrobnosti jazykového balíku',
-	'LANGUAGE_PACK_INSTALLED'			=> 'Jazykový balík <strong>%s</strong> byl úspěšně nainstalován',
+	'LANGUAGE_PACK_INSTALLED'			=> 'The language pack “%s” has been successfully installed.',
 	'LANGUAGE_PACK_CPF_UPDATE'			=> 'Jazykové řetězce, vlastního pole v&nbsp;profilu, byla zkopírována ze základního jazyka. V&nbsp;případě potřeby proveďte jejich úpravu.',
 	'LANGUAGE_PACK_ISO'					=> 'ISO',
 	'LANGUAGE_PACK_LOCALNAME'			=> 'Místní název',
@@ -13500,33 +13916,44 @@ $lang = array_merge($lang, array(
 	'LANG_ISO_CODE'						=> 'Kód ISO',
 	'LANG_LOCAL_NAME'					=> 'Místní název',
 
-	'MISSING_LANGUAGE_FILE'		=> 'Chybějící jazykový soubor: <strong style="color:red">%s</strong>',
+	'MISSING_LANG_FILES'		=> 'Missing language files',
 	'MISSING_LANG_VARIABLES'	=> 'Chybějící jazykové proměnné',
-	'MODS_FILES'				=> 'Jazykové soubory MODů',
 
 	'NO_FILE_SELECTED'				=> 'Nezvolili jste jazykový soubor.',
 	'NO_LANG_ID'					=> 'Nezvolili jste jazykový balík.',
-	'NO_REMOVE_DEFAULT_LANG'		=> 'Nelze odstranit výchozí jazyk.<br />Pokud chcete tento jazyk odstranit, musíte nejdříve změnit výchozí jazyk fóra.',
+	'NO_REMOVE_DEFAULT_LANG'		=> 'You are not able to remove the default language pack.<br />If you want to remove this language pack, change your board’s default language first.',
 	'NO_UNINSTALLED_LANGUAGE_PACKS'	=> 'Žádné odinstalované balíky',
 
-	'REMOVE_FROM_STORAGE_FOLDER'		=> 'Odstranit z ukládací složky',
-
-	'SELECT_DOWNLOAD_FORMAT'	=> 'Vybrat formát archivu k&nbsp;stáhnutí',
-	'SUBMIT_AND_DOWNLOAD'		=> 'Odeslat a&nbsp;stáhnout soubor',
-	'SUBMIT_AND_UPLOAD'			=> 'Odeslat a&nbsp;nahrát soubor',
-
-	'THOSE_MISSING_LANG_FILES'			=> 'Následující soubory chybí v&nbsp;adresáři jazyku %s.',
-	'THOSE_MISSING_LANG_VARIABLES'		=> 'Následující proměnné chybějí v&nbsp;jazykovém balíku <strong>%s</strong>.',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 
 	'UNINSTALLED_LANGUAGE_PACKS'	=> 'Nenainstalované jazykové balíky',
 
+	// 3.0.12
+	'EMAIL_FILES'			=> 'Šablony e-mailů',
+	'FILE_CONTENTS'				=> 'Obsah souboru',
+	'FILE_FROM_STORAGE'			=> 'Soubor z ukládacího adresáře',
+	'HELP_FILES'				=> 'Soubory nápovědy',
+	'INSTALLED_LANGUAGE_PACKS'	=> 'Instalované jazykové balíky',
+	'INVALID_LANGUAGE_PACK'		=> 'Vybraný jazykový balík není v&nbsp;pořádku, ověřte jej a&nbsp;v&nbsp;případě potřeby nahrajte znovu.',
+	'INVALID_UPLOAD_METHOD'		=> 'Vybraný způsob uploadu není možný, zvolte jiný.',
+	'LANGUAGE_ENTRIES'					=> 'Jazykové klíče',
+	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Zde můžete měnit existující záznamy v&nbsp;jazyku, nebo přeložit zatím nepřeložené.<br /><strong>Poznámka:</strong> Jakmile změníte jazykový soubor, bude nahrán do zvláštní složky, abyste jej mohli stáhnout. Změny nebudou ihned vidět na fóru, teprve až nahrajete soubor do odpovídající složky.',
+	'LANGUAGE_FILES'					=> 'Jazykové soubory',
+	'LANGUAGE_KEY'						=> 'Jazykový klíč',
+	'MISSING_LANGUAGE_FILE'		=> 'Chybějící jazykový soubor: <strong style="color:red">%s</strong>',
+	'SELECT_DOWNLOAD_FORMAT'	=> 'Vybrat formát archivu k&nbsp;stáhnutí',
+	'SUBMIT_AND_DOWNLOAD'		=> 'Odeslat a&nbsp;stáhnout soubor',
+	'SUBMIT_AND_UPLOAD'			=> 'Odeslat a&nbsp;nahrát soubor',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 	'UNABLE_TO_WRITE_FILE'		=> 'Soubor nemohl být zapsán do %s.',
 	'UPLOAD_COMPLETED'			=> 'Nahrávaní bylo úspěšné',
 	'UPLOAD_FAILED'				=> 'Nahrávání bylo přerušeno z neznámého důvodu. Je možné, že budete muset nahradit poškozený soubor ručně.',
 	'UPLOAD_METHOD'				=> 'Metoda uploadu',
 	'UPLOAD_SETTINGS'			=> 'Nastavení nahrávání',
-
 	'WRONG_LANGUAGE_FILE'		=> 'Vybraný soubor je neplatný',
+	// 3.0.12
 ));
 
 #######language/en/acp/lexicon.php#######
@@ -13859,6 +14286,171 @@ $lang = array_merge($lang, array(
 	'ROLE_DESCRIPTION_ADMIN_FOOTBALL'	=> 'Can edit final match results.',
 ));
 
+#######language/en/acp/permissions_phpbb.php#######
+
+$lang = array_merge($lang, array(
+	'ACL_CAT_ACTIONS'		=> 'Actions',
+	'ACL_CAT_CONTENT'		=> 'Content',
+	'ACL_CAT_FORUMS'		=> 'Forums',
+	'ACL_CAT_MISC'			=> 'Misc',
+	'ACL_CAT_PERMISSIONS'	=> 'Permissions',
+	'ACL_CAT_PM'			=> 'Private messages',
+	'ACL_CAT_POLLS'			=> 'Polls',
+	'ACL_CAT_POST'			=> 'Post',
+	'ACL_CAT_POST_ACTIONS'	=> 'Post actions',
+	'ACL_CAT_POSTING'		=> 'Posting',
+	'ACL_CAT_PROFILE'		=> 'Profile',
+	'ACL_CAT_SETTINGS'		=> 'Settings',
+	'ACL_CAT_TOPIC_ACTIONS'	=> 'Topic actions',
+	'ACL_CAT_USER_GROUP'	=> 'Users &amp; Groups',
+));
+
+// User Permissions
+$lang = array_merge($lang, array(
+	'ACL_U_VIEWPROFILE'	=> 'Can view profiles, memberlist and online list',
+	'ACL_U_CHGNAME'		=> 'Can change username',
+	'ACL_U_CHGPASSWD'	=> 'Can change password',
+	'ACL_U_CHGEMAIL'	=> 'Can change email address',
+	'ACL_U_CHGAVATAR'	=> 'Can change avatar',
+	'ACL_U_CHGGRP'		=> 'Can change default usergroup',
+	'ACL_U_CHGPROFILEINFO'	=> 'Can change profile field information',
+
+	'ACL_U_ATTACH'		=> 'Can attach files',
+	'ACL_U_DOWNLOAD'	=> 'Can download files',
+	'ACL_U_SAVEDRAFTS'	=> 'Can save drafts',
+	'ACL_U_CHGCENSORS'	=> 'Can disable word censors',
+	'ACL_U_SIG'			=> 'Can use signature',
+
+	'ACL_U_SENDPM'		=> 'Can send private messages',
+	'ACL_U_MASSPM'		=> 'Can send messages to multiple users',
+	'ACL_U_MASSPM_GROUP'=> 'Can send messages to groups',
+	'ACL_U_READPM'		=> 'Can read private messages',
+	'ACL_U_PM_EDIT'		=> 'Can edit own private messages',
+	'ACL_U_PM_DELETE'	=> 'Can remove private messages from own folder',
+	'ACL_U_PM_FORWARD'	=> 'Can forward private messages',
+	'ACL_U_PM_EMAILPM'	=> 'Can email private messages',
+	'ACL_U_PM_PRINTPM'	=> 'Can print private messages',
+	'ACL_U_PM_ATTACH'	=> 'Can attach files in private messages',
+	'ACL_U_PM_DOWNLOAD'	=> 'Can download files in private messages',
+	'ACL_U_PM_BBCODE'	=> 'Can use BBCode in private messages',
+	'ACL_U_PM_SMILIES'	=> 'Can use smilies in private messages',
+	'ACL_U_PM_IMG'		=> 'Can use [img] BBCode tag in private messages',
+	'ACL_U_PM_FLASH'	=> 'Can use [flash] BBCode tag in private messages',
+
+	'ACL_U_SENDEMAIL'	=> 'Can send emails',
+	'ACL_U_SENDIM'		=> 'Can send instant messages',
+	'ACL_U_IGNOREFLOOD'	=> 'Can ignore flood limit',
+	'ACL_U_HIDEONLINE'	=> 'Can hide online status',
+	'ACL_U_VIEWONLINE'	=> 'Can view hidden online users',
+	'ACL_U_SEARCH'		=> 'Can search board',
+));
+
+// Forum Permissions
+$lang = array_merge($lang, array(
+	'ACL_F_LIST'		=> 'Can see forum',
+	'ACL_F_READ'		=> 'Can read forum',
+	'ACL_F_SEARCH'		=> 'Can search the forum',
+	'ACL_F_SUBSCRIBE'	=> 'Can subscribe forum',
+	'ACL_F_PRINT'		=> 'Can print topics',
+	'ACL_F_EMAIL'		=> 'Can email topics',
+	'ACL_F_BUMP'		=> 'Can bump topics',
+	'ACL_F_USER_LOCK'	=> 'Can lock own topics',
+	'ACL_F_DOWNLOAD'	=> 'Can download files',
+	'ACL_F_REPORT'		=> 'Can report posts',
+
+	'ACL_F_POST'		=> 'Can start new topics',
+	'ACL_F_STICKY'		=> 'Can post stickies',
+	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_REPLY'		=> 'Can reply to topics',
+	'ACL_F_EDIT'		=> 'Can edit own posts',
+	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
+	'ACL_F_SOFTDELETE'	=> 'Can soft delete own posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_F_IGNOREFLOOD' => 'Can ignore flood limit',
+	'ACL_F_POSTCOUNT'	=> 'Increment post counter<br /><em>Please note that this setting only affects new posts.</em>',
+	'ACL_F_NOAPPROVE'	=> 'Can post without approval',
+
+	'ACL_F_ATTACH'		=> 'Can attach files',
+	'ACL_F_ICONS'		=> 'Can use topic/post icons',
+	'ACL_F_BBCODE'		=> 'Can use BBCode',
+	'ACL_F_FLASH'		=> 'Can use [flash] BBCode tag',
+	'ACL_F_IMG'			=> 'Can use [img] BBCode tag',
+	'ACL_F_SIGS'		=> 'Can use signatures',
+	'ACL_F_SMILIES'		=> 'Can use smilies',
+
+	'ACL_F_POLL'		=> 'Can create polls',
+	'ACL_F_VOTE'		=> 'Can vote in polls',
+	'ACL_F_VOTECHG'		=> 'Can change existing vote',
+));
+
+// Moderator Permissions
+$lang = array_merge($lang, array(
+	'ACL_M_EDIT'		=> 'Can edit posts',
+	'ACL_M_DELETE'		=> 'Can permanently delete posts',
+	'ACL_M_SOFTDELETE'	=> 'Can soft delete posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_M_APPROVE'		=> 'Can approve and restore posts',
+	'ACL_M_REPORT'		=> 'Can close and delete reports',
+	'ACL_M_CHGPOSTER'	=> 'Can change post author',
+
+	'ACL_M_MOVE'	=> 'Can move topics',
+	'ACL_M_LOCK'	=> 'Can lock topics',
+	'ACL_M_SPLIT'	=> 'Can split topics',
+	'ACL_M_MERGE'	=> 'Can merge topics',
+
+	'ACL_M_INFO'	=> 'Can view post details',
+	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+));
+
+// Admin Permissions
+$lang = array_merge($lang, array(
+	'ACL_A_BOARD'		=> 'Can alter board settings/check for updates',
+	'ACL_A_SERVER'		=> 'Can alter server/communication settings',
+	'ACL_A_JABBER'		=> 'Can alter Jabber settings',
+	'ACL_A_PHPINFO'		=> 'Can view php settings',
+
+	'ACL_A_FORUM'		=> 'Can manage forums',
+	'ACL_A_FORUMADD'	=> 'Can add new forums',
+	'ACL_A_FORUMDEL'	=> 'Can delete forums',
+	'ACL_A_PRUNE'		=> 'Can prune forums',
+
+	'ACL_A_ICONS'		=> 'Can alter topic/post icons and smilies',
+	'ACL_A_WORDS'		=> 'Can alter word censors',
+	'ACL_A_BBCODE'		=> 'Can define BBCode tags',
+	'ACL_A_ATTACH'		=> 'Can alter attachment related settings',
+
+	'ACL_A_USER'		=> 'Can manage users<br /><em>This also includes seeing the users browser agent within the viewonline list.</em>',
+	'ACL_A_USERDEL'		=> 'Can delete/prune users',
+	'ACL_A_GROUP'		=> 'Can manage groups',
+	'ACL_A_GROUPADD'	=> 'Can add new groups',
+	'ACL_A_GROUPDEL'	=> 'Can delete groups',
+	'ACL_A_RANKS'		=> 'Can manage ranks',
+	'ACL_A_PROFILE'		=> 'Can manage custom profile fields',
+	'ACL_A_NAMES'		=> 'Can manage disallowed names',
+	'ACL_A_BAN'			=> 'Can manage bans',
+
+	'ACL_A_VIEWAUTH'	=> 'Can view permission masks',
+	'ACL_A_AUTHGROUPS'	=> 'Can alter permissions for individual groups',
+	'ACL_A_AUTHUSERS'	=> 'Can alter permissions for individual users',
+	'ACL_A_FAUTH'		=> 'Can alter forum permission class',
+	'ACL_A_MAUTH'		=> 'Can alter moderator permission class',
+	'ACL_A_AAUTH'		=> 'Can alter admin permission class',
+	'ACL_A_UAUTH'		=> 'Can alter user permission class',
+	'ACL_A_ROLES'		=> 'Can manage roles',
+	'ACL_A_SWITCHPERM'	=> 'Can use others permissions',
+
+	'ACL_A_STYLES'		=> 'Can manage styles',
+	'ACL_A_EXTENSIONS'	=> 'Can manage extensions',
+	'ACL_A_VIEWLOGS'	=> 'Can view logs',
+	'ACL_A_CLEARLOGS'	=> 'Can clear logs',
+	'ACL_A_MODULES'		=> 'Can manage modules',
+	'ACL_A_LANGUAGE'	=> 'Can manage language packs',
+	'ACL_A_EMAIL'		=> 'Can send mass email',
+	'ACL_A_BOTS'		=> 'Can manage bots',
+	'ACL_A_REASONS'		=> 'Can manage report/denial reasons',
+	'ACL_A_BACKUP'		=> 'Can backup/restore database',
+	'ACL_A_SEARCH'		=> 'Can manage search backends and settings',
+));
+
 #######language/en/acp/phpbb_seo.php#######
 
 $lang = array_merge($lang, array(
@@ -14030,6 +14622,7 @@ $lang = array_merge($lang, array(
 
 	'BBCODE_ADDED'				=> 'Nový BBCode byl přidán.',
 	'BBCODE_EDITED'				=> 'BBCode byl upraven.',
+	'BBCODE_DELETED'			=> 'The BBCode has been removed successfully.',
 	'BBCODE_NOT_EXIST'			=> 'Vybraný BBCode neexistuje.',
 	'BBCODE_HELPLINE'			=> 'Nápověda',
 	'BBCODE_HELPLINE_EXPLAIN'	=> 'Text, který se zobrazí při přejetí tlačítka BBCode myší.',
@@ -14085,17 +14678,10 @@ $lang = array_merge($lang, array(
 	'EXPORT_SMILIES'			=> 'Exportovat a&nbsp;stáhnout smilies.pak',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sKliknutím na tento odkaz bude konfigurační soubor pro instalované smajlíky zabalen do souboru <samp>smilies.pak</samp>, který lze po stažení použít pro vytvoření <samp>.zip</samp> nebo <samp>.tgz</samp> archivu, obsahujícího všechny vaše smajlíky a&nbsp;tento <samp>smilies.pak</samp> konfigurační soubor%s.',
 
-
 	'ICONS_ADD'				=> 'Přidat novou ikonu',
-	'ICONS_NONE_ADDED'		=> 'Nebyly přidány žádné nové ikony.',
-	'ICONS_ONE_ADDED'		=> 'Nová ikona byla přidána.',
-	'ICONS_ADDED'			=> 'Nové ikony byly přidány.',
 	'ICONS_CONFIG'			=> 'Nastavení ikon',
 	'ICONS_DELETED'			=> 'Ikona byla odstraněna.',
 	'ICONS_EDIT'			=> 'Upravit ikonu',
-	'ICONS_ONE_EDITED'		=> 'Ikona byla upravena.',
-	'ICONS_NONE_EDITED'		=> 'Žádné ikony nebyly aktualizovány.',
-	'ICONS_EDITED'			=> 'Ikony byly upraveny.',
 	'ICONS_HEIGHT'			=> 'Výška ikony',
 	'ICONS_IMAGE'			=> 'Obrázek ikony',
 	'ICONS_IMPORTED'		=> 'Sada ikon byla nainstalována.',
@@ -14125,9 +14711,6 @@ $lang = array_merge($lang, array(
 
 	'SELECT_PACKAGE'			=> 'Vybrat sadu',
 	'SMILIES_ADD'				=> 'Přidat nový smajlík',
-	'SMILIES_NONE_ADDED'		=> 'Nebyli přidáni žádní noví smajlící.',
-	'SMILIES_ONE_ADDED'			=> 'Smajlík byl aktualizován.',
-	'SMILIES_ADDED'				=> 'Noví smajlíci byli přidáni.',
 	'SMILIES_CODE'				=> 'Kód smajlíku',
 	'SMILIES_CONFIG'			=> 'Nastavení smajlíků',
 	'SMILIES_DELETED'			=> 'Smajlík byl odstraněn.',
@@ -14135,9 +14718,6 @@ $lang = array_merge($lang, array(
 	'SMILIE_NO_CODE'			=> 'Smajlík „%s“ byl ignorován, protože nebyl zadán žádný kód.',
 	'SMILIE_NO_EMOTION'			=> 'Smajlík „%s“ byl ignorován, protože nebyl zadána žádná emoce.',
 	'SMILIE_NO_FILE'			=> 'Smajlík „%s“ byl ignorován, protože nebyl nalezen soubor.',
-	'SMILIES_NONE_EDITED'		=> 'Žádní smajlíci nebyli aktualizováni.',
-	'SMILIES_ONE_EDITED'		=> 'Smajlík byl aktualizován.',
-	'SMILIES_EDITED'			=> 'Smajlíci byli aktualizováni.',
 	'SMILIES_EMOTION'			=> 'Emoce',
 	'SMILIES_HEIGHT'			=> 'Výška smajlíku',
 	'SMILIES_IMAGE'				=> 'Obrázek smajlíku',
@@ -14149,7 +14729,6 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'Obrázek smajlíku',
 	'SMILIES_WIDTH'				=> 'Šířka smajlíku',
 
-	'TOO_MANY_SMILIES'		=> 'Vaše zpráva obsahuje příliš mnoho smajlíků. Je povoleno maximálně %d smajlíků.',
 	'WRONG_PAK_TYPE'		=> 'Zvolený balík neobsahuje potřebná data.',
 ));
 
@@ -14247,8 +14826,11 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ADDED_PROFILE_FIELD'	=> 'Vlastní položka v&nbsp;profilu byla přidána.',
+	'ALPHA_DOTS'			=> 'Alphanumeric and dots (periods)',
 	'ALPHA_ONLY'			=> 'Pouze alfanumerické znaky',
 	'ALPHA_SPACERS'			=> 'Alfanumerické znaky a&nbsp;mezery',
+	'ALPHA_UNDERSCORE'		=> 'Alphanumeric and underscores',
+	'ALPHA_PUNCTUATION'		=> 'Alphanumeric with comma, dots, underscore and dashes beginning with a letter',
 	'ALWAYS_TODAY'			=> 'Vždy aktuální datum',
 
 	'BOOL_ENTRIES_EXPLAIN'	=> 'Vložte svá nastavení zde',
@@ -14275,6 +14857,10 @@ $lang = array_merge($lang, array(
 	'DISPLAY_AT_PROFILE_EXPLAIN'	=> 'Uživatel si může změnit toto pole ve svém uživatelském panelu.',
 	'DISPLAY_AT_REGISTER'			=> 'Zobrazit při registraci',
 	'DISPLAY_AT_REGISTER_EXPLAIN'	=> 'Zobrazí položku již při registraci. Uživatel ji bude moct později změnit v&nbsp;uživatelském panelu.',
+	'DISPLAY_ON_MEMBERLIST'			=> 'Display on memberlist screen',
+	'DISPLAY_ON_MEMBERLIST_EXPLAIN'	=> 'If this option is enabled, the field will be displayed in the user rows on the memberlist screen.',
+	'DISPLAY_ON_PM'					=> 'Display on view private message screen',
+	'DISPLAY_ON_PM_EXPLAIN'			=> 'If this option is enabled, the field will be displayed in the mini-profile on the private message screen.',
 	'DISPLAY_ON_VT'					=> 'Zobrazit v&nbsp;tématech',
 	'DISPLAY_ON_VT_EXPLAIN'			=> 'Zobrazí položku v&nbsp;mini-profilu u&nbsp;příspěvku na stránce tématu.',
 	'DISPLAY_PROFILE_FIELD'			=> 'Zobrazit položku profilu veřejně',
@@ -14288,20 +14874,26 @@ $lang = array_merge($lang, array(
 	'EVERYTHING_OK'					=> 'Všechno v&nbsp;pořádku',
 
 	'FIELD_BOOL'				=> 'Booleovský (Ano/Ne)',
+	'FIELD_CONTACT_DESC'		=> 'Contact description',
+	'FIELD_CONTACT_URL'			=> 'Contact link',
 	'FIELD_DATE'				=> 'Datum',
 	'FIELD_DESCRIPTION'			=> 'Popis pole',
 	'FIELD_DESCRIPTION_EXPLAIN'	=> 'Vysvětlení pole, které bude zobrazeno uživatelům.',
 	'FIELD_DROPDOWN'			=> 'Rolovací menu',
+	'FIELD_GOOGLEPLUS'			=> 'Google+',
 	'FIELD_IDENT'				=> 'Označení pole',
 	'FIELD_IDENT_ALREADY_EXIST'	=> 'Vybrané označení pole již existuje, vyberte prosím jiné.',
 	'FIELD_IDENT_EXPLAIN'		=> 'Označení pole je název, pod kterým bude pole uloženo v&nbsp;databázi a&nbsp;šablonách.',
 	'FIELD_INT'					=> 'Číselné hodnoty',
+	'FIELD_IS_CONTACT'			=> 'Display field as a contact field',
+	'FIELD_IS_CONTACT_EXPLAIN'	=> 'Contact fields are displayed within the contact section of the user profile and are displayed differently in the mini profile next to posts and private messages. You can use <samp>%s</samp> as a placeholder variable which will be replaced by a value provided by the user.',
 	'FIELD_LENGTH'				=> 'Délka vstupního pole',
 	'FIELD_NOT_FOUND'			=> 'Pole profilu nebylo nalezeno',
 	'FIELD_STRING'				=> 'Jedno textové pole',
 	'FIELD_TEXT'				=> 'Rozsáhlé vstupní pole (textarea)',
 	'FIELD_TYPE'				=> 'Druh pole',
 	'FIELD_TYPE_EXPLAIN'		=> 'Druh pole již není změnitelný.',
+	'FIELD_URL'					=> 'URL (Link)',
 	'FIELD_VALIDATION'			=> 'Povolené znaky',
 	'FIRST_OPTION'				=> 'První možnost',
 
@@ -14313,6 +14905,12 @@ $lang = array_merge($lang, array(
 	'ISO_LANGUAGE'				=> 'Jazyk [%s]',
 
 	'LANG_SPECIFIC_OPTIONS'		=> 'Specifická nastavení jazyka [<strong>%s</strong>]',
+
+	'LETTER_NUM_DOTS'			=> 'Any letters, numbers and dots (periods)',
+	'LETTER_NUM_ONLY'			=> 'Any letters and numbers',
+	'LETTER_NUM_PUNCTUATION'	=> 'Any letters, numbers, comma, dots, underscores and dashes beginning with any letter',
+	'LETTER_NUM_SPACERS'		=> 'Any letters, numbers and spacers',
+	'LETTER_NUM_UNDERSCORE'		=> 'Any letters, numbers and underscores',
 
 	'MAX_FIELD_CHARS'		=> 'Maximální počet znaků',
 	'MAX_FIELD_NUMBER'		=> 'Nejvyšší povolené číslo',
@@ -14367,7 +14965,9 @@ $lang = array_merge($lang, array(
 #######language/en/acp/prune.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_PRUNE_USERS_EXPLAIN'	=> 'Zde můžete smazat (nebo deaktivovat) uživatele z vaší skupiny. To můžete provést různými způsoby; podle odeslaných příspěvků, poslední aktivity atd., většinu kritérií lze kombinovat. Například uživatelé s&nbsp;poslední aktivitou 2002-01-01 a&nbsp;s&nbsp;počtem příspěvků nižším než 10. Můžete také zadat jen seznam uživatelů do textového pole a&nbsp;ostatní kritéria budou ignorována. Buďte opatrní při pročištění uživatelů, smazané uživatele nelze vrátit zpět.',
+	'ACP_PRUNE_USERS_EXPLAIN'	=> 'This section allows you to delete or deactivate users on your board. Accounts can be filtered in a variety of ways; by post count, most recent activity, etc. Criteria may be combined to narrow down which accounts are affected. For example, you can prune users with fewer than 10 posts, who were also inactive after 2002-01-01. Use * as a wildcard for text fields. Alternatively, you may skip the criteria selection completely by entering a list of users (each on a separate line) into the text field. Take care with this facility! Once a user is deleted, there is no way to reverse the action.',
+
+	'CRITERIA'				=> 'Criteria',
 
 	'DEACTIVATE_DELETE'			=> 'Deaktivovat nebo smazat',
 	'DEACTIVATE_DELETE_EXPLAIN'	=> 'Vyberte uživatele které chcete trvale deaktivovat, nebo smazat. Pozor, nelze napravit!',
@@ -14375,15 +14975,18 @@ $lang = array_merge($lang, array(
 	'DELETE_USER_POSTS'			=> 'Odstranit příspěvky pročištěných uživatelů',
 	'DELETE_USER_POSTS_EXPLAIN'	=> 'Odstranit příspěvky smazaných uživatelů při pročišťování (nemá účinek na deaktivované uživatele)',
 
-	'JOINED_EXPLAIN'			=> 'Zadejte datum ve formátu <kbd>RRRR-MM-DD</kbd> ',
+	'JOINED_EXPLAIN'			=> 'Enter a date in <kbd>YYYY-MM-DD</kbd> format. You may use both fields to specify an interval, or leave one blank for an open date range.',
 
 	'LAST_ACTIVE_EXPLAIN'		=> 'Zadejte datum ve formátu <kbd>RRRR-MM-DD</kbd>. Zadejte <kbd>0000-00-00</kbd> pro vybrání uživatelů, kteří se nikdy nepřihlásili, v&nbsp;tomto případě budou ignorovány podmínky <em>Před</em> a&nbsp;<em>Po</em>.',
 
+	'POSTS_ON_QUEUE'			=> 'Posts Awaiting Approval',
+	'PRUNE_USERS_GROUP_EXPLAIN'	=> 'Limit to users within the selected group.',
+	'PRUNE_USERS_GROUP_NONE'	=> 'All groups',
 	'PRUNE_USERS_LIST'				=> 'Uživatele k&nbsp;pročištění',
-	'PRUNE_USERS_LIST_DELETE'		=> 'S vybranými kritérii budou odstraněny následující uživatelské účty.',
-	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'S vybranými kritérii budou deaktivovány následující uživatelské účty.',
+	'PRUNE_USERS_LIST_DELETE'		=> 'With the selected critera for pruning users the following accounts will be removed. You can remove individual users from the deletion list by unchecking the box next to their username.',
+	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'With the selected critera for pruning users the following accounts will be deactivated. You can remove individual users from the deactivation list by unchecking the box next to their username.',
 
-	'SELECT_USERS_EXPLAIN'		=> 'Zde můžete zadat určitá uživatelská jména, pro které mají být použita nastavená kritéria. Zakladatelé fóra nikdy nebudou označeni do výběru.',
+	'SELECT_USERS_EXPLAIN'		=> 'Enter specific usernames here. They will be used in preference to the criteria above. Founders cannot be pruned.',
 
 	'USER_DEACTIVATE_SUCCESS'	=> 'Vybraní uživatelé byli deaktivováni.',
 	'USER_DELETE_SUCCESS'		=> 'Vybraní uživatelé byli smazáni.',
@@ -14430,15 +15033,38 @@ $lang = array_merge($lang, array(
 	'DELETING_INDEX_IN_PROGRESS'			=> 'Mazání indexu v&nbsp;průběhu',
 	'DELETING_INDEX_IN_PROGRESS_EXPLAIN'	=> 'Vyhledávací backend právě pročišťuje svůj index, toto může trvat několik minut.',
 
-	'FULLTEXT_MYSQL_INCOMPATIBLE_VERSION'	=> 'MySQL fulltext může být použit pouze od MySQL4 a&nbsp;vyšší.',
+	'FULLTEXT_MYSQL_INCOMPATIBLE_DATABASE'	=> 'The MySQL fulltext backend can only be used with MySQL4 and above.',
 	'FULLTEXT_MYSQL_NOT_MYISAM'				=> 'MySQL fulltext index lze vytvořit jen v&nbsp;MyISAM tabulkách.',
 	'FULLTEXT_MYSQL_TOTAL_POSTS'			=> 'Celkový počet indexovaných příspěvků',
-	'FULLTEXT_MYSQL_MBSTRING'				=> 'Podpora UTF-8 znaků mimo znakové sady latin použitím mbstring:',
-	'FULLTEXT_MYSQL_PCRE'					=> 'Podpora UTF-8 znaků mimo znakové sady latin použitím PCRE:',
-	'FULLTEXT_MYSQL_MBSTRING_EXPLAIN'		=> 'Pokud PCRE neobsahuje vlastnosti unicode znaků, vyhledávání se pokusí využít engine pro regulérní výrazy z mbstring.',
-	'FULLTEXT_MYSQL_PCRE_EXPLAIN'			=> 'Tento vyhledávácí backend vyžaduje vlastnosti unicode znaku z PCRE, které jsou dostupné pouze v&nbsp;PHP 4.4, 5.1 a&nbsp;vyšších, pokud chcete vyhledávat znaky, které nejsou v&nbsp;běžných znakových sadách.',
 	'FULLTEXT_MYSQL_MIN_SEARCH_CHARS_EXPLAIN'	=> 'Pouze slova s&nbsp;touto minimální délkou budou brány v&nbsp;úvahu při hledání. Pokud byste chtěli změnit toto nastavení, je nutné tak učinit přímo v&nbsp;nastavení MySQL, pravděpodobně to bude muset udělat poskytovatel vašeho hostingu.',
 	'FULLTEXT_MYSQL_MAX_SEARCH_CHARS_EXPLAIN'	=> 'Pouze slova kratší než toto číslo budou brány v&nbsp;úvahu při hledání. Pokud byste chtěli změnit toto nastavení, je nutné tak učinit přímo v&nbsp;nastavení MySQL, pravděpodobně to bude muset udělat poskytovatel vašeho hostingu.',
+
+	'FULLTEXT_POSTGRES_INCOMPATIBLE_DATABASE'	=> 'The PostgreSQL fulltext backend can only be used with PostgreSQL.',
+	'FULLTEXT_POSTGRES_TOTAL_POSTS'			=> 'Total number of indexed posts',
+	'FULLTEXT_POSTGRES_VERSION_CHECK'		=> 'PostgreSQL version',
+	'FULLTEXT_POSTGRES_TS_NAME'				=> 'Text search Configuration Profile:',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN'			=> 'Minimum word length for keywords',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN'			=> 'Maximum word length for keywords',
+	'FULLTEXT_POSTGRES_VERSION_CHECK_EXPLAIN'		=> 'This search backend requires PostgreSQL version 8.3 and above.',
+	'FULLTEXT_POSTGRES_TS_NAME_EXPLAIN'				=> 'The Text search configuration profile used to determine the parser and dictionary.',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN_EXPLAIN'			=> 'Words with at least this many characters will be included in the query to the database.',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN_EXPLAIN'			=> 'Words with no more than this many characters will be included in the query to the database.',
+
+	'FULLTEXT_SPHINX_CONFIGURE'				=> 'Configure the following settings to generate sphinx config file',
+	'FULLTEXT_SPHINX_DATA_PATH'				=> 'Path to data directory',
+	'FULLTEXT_SPHINX_DATA_PATH_EXPLAIN'		=> 'It will be used to store the indexes and log files. You should create this directory outside the web accessible directories. (should have a trailing slash)',
+	'FULLTEXT_SPHINX_DELTA_POSTS'			=> 'Number of posts in frequently updated delta index',
+	'FULLTEXT_SPHINX_HOST'					=> 'Sphinx search daemon host',
+	'FULLTEXT_SPHINX_HOST_EXPLAIN'			=> 'Host on which the sphinx search daemon (searchd) listens. Leave empty to use the default localhost',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT'		=> 'Indexer memory limit',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT_EXPLAIN'	=> 'This number should at all times be lower than the RAM available on your machine. If you experience periodic performance problems this might be due to the indexer consuming too many resources. It might help to lower the amount of memory available to the indexer.',
+	'FULLTEXT_SPHINX_MAIN_POSTS'			=> 'Number of posts in main index',
+	'FULLTEXT_SPHINX_PORT'					=> 'Sphinx search daemon port',
+	'FULLTEXT_SPHINX_PORT_EXPLAIN'			=> 'Port on which the sphinx search daemon (searchd) listens. Leave empty to use the default Sphinx API port 9312',
+	'FULLTEXT_SPHINX_WRONG_DATABASE'		=> 'The sphinx search for phpBB supports MySQL and PostgreSQL only.',
+	'FULLTEXT_SPHINX_CONFIG_FILE'			=> 'Sphinx config file',
+	'FULLTEXT_SPHINX_CONFIG_FILE_EXPLAIN'	=> 'The generated content of the sphinx config file. This data needs to be pasted into the sphinx.conf which is used by sphinx search daemon. Replace the [dbuser] and [dbpassword] placeholders with your database credentials.',
+	'FULLTEXT_SPHINX_NO_CONFIG_DATA'		=> 'The sphinx data and config directory paths are not defined. Please define them to generate the config file.',
 
 	'GENERAL_SEARCH_SETTINGS'				=> 'Obecné nastavení hledání',
 	'GO_TO_SEARCH_INDEX'					=> 'Přejít na stránku vyhledávání',
@@ -14463,8 +15089,6 @@ $lang = array_merge($lang, array(
 
 	'SEARCH_GUEST_INTERVAL'					=> 'Ochranný interval pro anonymní',
 	'SEARCH_GUEST_INTERVAL_EXPLAIN'			=> 'Počet sekund, který musí anonymní návštěvník vyčkat mezi jednotlivými hledáními. Pokud jeden návštěvník vyhledává, ostatní musejí vyčkat uplynutí této lhůty.',
-	'SEARCH_INDEX_CREATE_REDIRECT'			=> 'Příspěvky až k&nbsp;ID %1$d byly dosud zaindexovány, z toho %2$d příspěvků v&nbsp;minulém kroku.<br />Současný průměr indexace je přibližně %3$.1f příspěvků za sekundu.<br />Indexace právě probíhá…',
-	'SEARCH_INDEX_DELETE_REDIRECT'			=> 'Příspěvky až k&nbsp;ID %1$d byly dosud odstraněny z indexu vyhledávání.<br />Odstraňování právě probíhá…',
 	'SEARCH_INDEX_CREATED'					=> 'Všechny příspěvky v&nbsp;databázi fóra byly úspěšně zaindexovány.',
 	'SEARCH_INDEX_REMOVED'					=> 'Vyhledávácí index byl odstraněn z databáze.',
 	'SEARCH_INTERVAL'						=> 'Ochranný interval pro uživatele',
@@ -14487,8 +15111,55 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
+	// 3.1.0
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
+
+	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
+	'CONFIRM_UNINSTALL_STYLES'		=> 'Are you sure you wish to uninstall selected styles?',
+	'COPYRIGHT'						=> 'Copyright',
+
+	'DEACTIVATE_DEFAULT'		=> 'Nemůžete deaktivovat výchozí styl.',
+	'DELETE_FROM_FS'			=> 'Odstranit ze souborového systému',
+	'DELETE_STYLE_FILES_FAILED'	=> 'Error deleting files for style "%s".',
+	'DELETE_STYLE_FILES_SUCCESS'	=> 'Files for style "%s" have been deleted.',
+	'DETAILS'					=> 'Detaily',
+
+	'INHERITING_FROM'			=> 'Dědí vlastnosti od',
+	'INSTALL_STYLE'				=> 'Instalovat styl',
+	'INSTALL_STYLES'			=> 'Install styles',
+	'INSTALL_STYLES_EXPLAIN'	=> 'Here you can install new styles.<br />If you cannot find a specific style in list below, check to make sure style is already installed. If it is not installed, check if it was uploaded correctly.',
+	'INVALID_STYLE_ID'			=> 'Invalid style ID.',
+
+	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
+	'NO_UNINSTALLED_STYLE'		=> 'Žádné odinstalované styly',
+
+	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
+
+	'STYLE_ACTIVATE'			=> 'Aktivovat',
+	'STYLE_ACTIVE'				=> 'Aktivní',
+	'STYLE_DEACTIVATE'			=> 'Deaktivovat',
+	'STYLE_DEFAULT'				=> 'Vybrat za výchozí styl',
+	'STYLE_DEFAULT_CHANGE_INACTIVE'	=> 'You must activate style before making it default style.',
+	'STYLE_ERR_INVALID_PARENT'	=> 'Invalid parent style.',
+	'STYLE_ERR_NAME_EXIST'		=> 'Styl s&nbsp;tímto názvem již existuje.',
+	'STYLE_ERR_STYLE_NAME'		=> 'Musíte zvolit jméno pro tento styl.',
+	'STYLE_INSTALLED'			=> 'Style "%s" has been installed.',
+	'STYLE_INSTALLED_RETURN_INSTALLED_STYLES'	=> 'Return to installed styles list',
+	'STYLE_INSTALLED_RETURN_UNINSTALLED_STYLES'	=> 'Install more styles',
+	'STYLE_NAME'				=> 'Název stylu',
+	'STYLE_NOT_INSTALLED'		=> 'Style "%s" was not installed.',
+	'STYLE_PATH'				=> 'Style path',
+	'STYLE_UNINSTALL'			=> 'Uninstall',
+	'STYLE_UNINSTALL_DEPENDENT'	=> 'Style "%s" cannot be uninstalled because it has one or more child styles.',
+	'STYLE_UNINSTALLED'			=> 'Style "%s" uninstalled successfully.',
+	'STYLE_USED_BY'				=> 'Používá (včetně botů)',
+
+	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+
+	// 3.0.12
 	'ACP_IMAGESETS_EXPLAIN'	=> 'Sada obrázků obsahuje všechny obrázky pro tlačítka, fóra, složky a&nbsp;mnoho dalších věcí na celém fóru. Zde můžete upravovat, exportovat nebo odstraňovat existující sady obrázků nebo přidat a&nbsp;importovat nové sady.',
-	'ACP_STYLES_EXPLAIN'	=> 'Zde můžete spravovat dostupné styly pro vaše fórum. Styl se skládá ze šablon, skinu, a&nbsp;sady obrázků. Můžete upravovat existující styly, odstraňovat je, deaktivovat, reaktivovat, vytvářet, importovat a&nbsp;mnoho dalšího. Můžete se podívat, jak daný styl vypadá použitím funkce náhled. Zvolený výchozí styl je označen hvězdičkou (*). Zde je také uvedeno, kolik uživatelů používá tento styl.',
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 	'ACP_TEMPLATES_EXPLAIN'	=> 'Šablona zahrnuje veškerý HTML kód, který tvoří strukturu stránky. Zde můžete upravovat existující šablony, exportovat je, importovat nebo se podívat jak daný styl vypadá použitím funkce náhled. Můžete také upravit šablonu, která překládá BBCode značky.',
 	'ACP_THEMES_EXPLAIN'	=> 'Zde můžete vytvářet, instalovat, upravovat, odstraňovat nebo exportovat skiny. Skin je kombinace barev a&nbsp;obrázků, které jsou aplikovány na šablony pro utvoření finálního vzhledu vašeho fóra. Možnosti nastavení jsou závislé na konfiguraci vašeho serveru a&nbsp;phpBB, viz manuál pro podrobnosti. Při vytváření nového skinu také můžete použít stávající jako základ.',
 	'ADD_IMAGESET'			=> 'Vytvořit sadu obrázků',
@@ -14525,7 +15196,6 @@ $lang = array_merge($lang, array(
 	'CURRENT_IMAGE'					=> 'Nynější obrázek',
 
 	'DEACTIVATE_DEFAULT'		=> 'Nemůžete deaktivovat výchozí styl.',
-	'DELETE_FROM_FS'			=> 'Odstranit ze souborového systému',
 	'DELETE_IMAGESET'			=> 'Odstranit sadu obrázků',
 	'DELETE_IMAGESET_EXPLAIN'	=> 'Zde můžete odstranit vybranou sadu obrázku z databáze. Jakmile je sada odstraněna, je to na dobro. Doporučujeme nejdříve udělat export do archivu pro pozdější použití.',
 	'DELETE_STYLE'				=> 'Odstranit styl',
@@ -14722,7 +15392,6 @@ $lang = array_merge($lang, array(
 	'INCLUDE_IMAGESET'			=> 'Zahrnout sadu obrázků',
 	'INCLUDE_TEMPLATE'			=> 'Zahrnout šablony',
 	'INCLUDE_THEME'				=> 'Zahrnout skin',
-	'INHERITING_FROM'			=> 'Dědí vlastnosti od',
 	'INSTALL_IMAGESET'			=> 'Instalovat sadu obrázků',
 	'INSTALL_IMAGESET_EXPLAIN'	=> 'Zde lze instalovat sadu obrázků, kterou jste vybrali. Můžete upřesnit vaše nastavení nebo použít výchozí z instalace.',
 	'INSTALL_STYLE'				=> 'Instalovat styl',
@@ -14752,7 +15421,6 @@ $lang = array_merge($lang, array(
 	'NO_TEMPLATE'				=> 'Nelze najít šablony v&nbsp;souborech.',
 	'NO_THEME'					=> 'Nelze najít skin v&nbsp;souborech.',
 	'NO_UNINSTALLED_IMAGESET'	=> 'Žádné odinstalované sady obrázků',
-	'NO_UNINSTALLED_STYLE'		=> 'Žádné odinstalované styly',
 	'NO_UNINSTALLED_TEMPLATE'	=> 'Žádné odinstalované šablony',
 	'NO_UNINSTALLED_THEME'		=> 'Žádná odinstalované skiny',
 	'NO_UNIT'					=> 'Žádné',
@@ -14792,30 +15460,22 @@ $lang = array_merge($lang, array(
 	'SELECTED_THEME_FILE'		=> 'Vybraný soubor skinu',
 	'STORE_DATABASE'			=> 'Databáze',
 	'STORE_FILESYSTEM'			=> 'Soubory',
-	'STYLE_ACTIVATE'			=> 'Aktivovat',
-	'STYLE_ACTIVE'				=> 'Aktivní',
 	'STYLE_ADDED'				=> 'Nový styl byl přidán.',
-	'STYLE_DEACTIVATE'			=> 'Deaktivovat',
-	'STYLE_DEFAULT'				=> 'Vybrat za výchozí styl',
 	'STYLE_DELETED'				=> 'Styl byl odstraněn.',
 	'STYLE_DETAILS_UPDATED'		=> 'Styl byl aktualizován.',
 	'STYLE_ERR_ARCHIVE'			=> 'Prosím, vyberte archivační metodu',
 	'STYLE_ERR_COPY_LONG'		=> 'Copyright nemůže být delší než 60 znaků.',
 	'STYLE_ERR_MORE_ELEMENTS'	=> 'Musíte vybrat alespoň jednu součást stylu.',
 	'STYLE_ERR_NAME_CHARS'		=> 'Název stylu může obsahovat jen alfanumerické znaky, -, +, _ a&nbsp;mezery.',
-	'STYLE_ERR_NAME_EXIST'		=> 'Styl s&nbsp;tímto názvem již existuje.',
 	'STYLE_ERR_NAME_LONG'		=> 'Název stylů nesmí být delší než 30 znaků.',
 	'STYLE_ERR_NO_IDS'			=> 'Musíte pro tento styl vybrat skin, šablony a&nbsp;sadu obrázků.',
 	'STYLE_ERR_NOT_STYLE'		=> 'Importovaný nebo nahraný archiv neobsahoval platný styl.',
-	'STYLE_ERR_STYLE_NAME'		=> 'Musíte zvolit jméno pro tento styl.',
 	'STYLE_EXPORT'				=> 'Exportovat styl',
 	'STYLE_EXPORT_EXPLAIN'		=> 'Zde můžete exportovat styl do archivu. Styl nemusí obsahovat všechny prvky, ale musí obsahovat alespoň jeden. Například pokud jste vytvořili nový skin a&nbsp;sadu obrázku pro často používanou šablonu, můžete exportovat pouze skin a&nbsp;sadu obrázků a&nbsp;šablonu vynechat. Můžete si vybrat, jestli chcete soubor stáhnout přímo, nebo jej uložit na serveru pro pozdější stažení nebo přes FTP.',
 	'STYLE_EXPORTED'			=> 'Styl byl exportován a&nbsp;uložen v&nbsp;%s.',
 	'STYLE_IMAGESET'			=> 'Sada obrázků',
-	'STYLE_NAME'				=> 'Název stylu',
 	'STYLE_TEMPLATE'			=> 'Šablona',
 	'STYLE_THEME'				=> 'Skin',
-	'STYLE_USED_BY'				=> 'Používá (včetně botů)',
 
 	'TEMPLATE_ADDED'			=> 'Sada šablon byla přidána a&nbsp;uložena v&nbsp;souborovém systému.',
 	'TEMPLATE_ADDED_DB'			=> 'Sada šablon byla přidána a&nbsp;uložena v&nbsp;databázi.',
@@ -14913,6 +15573,7 @@ $lang = array_merge($lang, array(
 	'CANNOT_FORCE_REACT_FOUNDER'	=> 'Nelze uvalit nucenou reaktivaci na účet zakladatele.',
 	'CANNOT_FORCE_REACT_YOURSELF'	=> 'Nelze uvalit nucenou reaktivaci na váš vlastní účet.',
 	'CANNOT_REMOVE_ANONYMOUS'		=> 'Nelze odstranit anonymní účet.',
+	'CANNOT_REMOVE_FOUNDER'			=> 'You are not allowed to remove founder accounts.',
 	'CANNOT_REMOVE_YOURSELF'		=> 'Nelze odstranit váš vlastní účet.',
 	'CANNOT_SET_FOUNDER_IGNORED'	=> 'Nelze povýšit uživatele, kteří jsou v&nbsp;nepřátelích, na zakladatele.',
 	'CANNOT_SET_FOUNDER_INACTIVE'	=> 'Musíte aktivovat uživatele předtím, než jej povýšíte, pouze aktivovaní uživatelé mohou být povýšeni.',
@@ -14939,7 +15600,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'Vyberte fórum, kam budou přesunuty všechny příspěvky uživatele.',
 
 	'NO_SPECIAL_RANK'		=> 'Nebyla udělena žádná zvláštní hodnost',
-	'NO_WARNINGS'			=> 'Nemá varování.',
+	'NO_WARNINGS'			=> 'No warnings exist.',
 	'NOT_MANAGE_FOUNDER'	=> 'Pokoušeli jste se upravit uživatele se statusem zakladatel. To mohou provést jen další uživatelé se stejným statusem.',
 
 	'QUICK_TOOLS'			=> 'Rychlé nástroje',

@@ -1,5 +1,14 @@
 ﻿<?php
 
+#######language/en/app.php#######
+
+$lang = array_merge($lang, array(
+	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
+	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
+	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+));
+
 #######language/en/calendar.php#######
 
 $lang = array_merge($lang, array(
@@ -182,6 +191,55 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Zure reCaptcha giltz pribatua. Giltzak <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>-n lortu.',
 
 	'RECAPTCHA_EXPLAIN'				=> 'Sarrera automatikoak ekiditzearren, behekaldeko testu-eremuan agertzen diren hitz biak idatz itzazula eskatzen dizugu.',
+	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
+));
+
+#######language/en/cli.php#######
+
+$lang = array_merge($lang, array(
+	'CLI_CONFIG_CANNOT_CACHED'			=> 'Set this option if the configuration option changes too frequently to be efficiently cached.',
+	'CLI_CONFIG_CURRENT'				=> 'Current configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_DELETE_SUCCESS'			=> 'Successfully deleted config %s.',
+	'CLI_CONFIG_NEW'					=> 'New configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_NOT_EXISTS'				=> 'Config %s does not exist',
+	'CLI_CONFIG_OPTION_NAME'			=> 'The configuration option’s name',
+	'CLI_CONFIG_PRINT_WITHOUT_NEWLINE'	=> 'Set this option if the value should be printed without a new line at the end.',
+	'CLI_CONFIG_INCREMENT_BY'			=> 'Amount to increment by',
+	'CLI_CONFIG_INCREMENT_SUCCESS'		=> 'Successfully incremented config %s',
+	'CLI_CONFIG_SET_FAILURE'			=> 'Could not set config %s',
+	'CLI_CONFIG_SET_SUCCESS'			=> 'Successfully set config %s',
+
+	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
+	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
+	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
+	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
+	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
+	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
+	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
+	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
+	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
+	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
+	'CLI_EXTENSION_ENABLE_FAILURE'		=> 'Could not enable extension %s',
+	'CLI_EXTENSION_ENABLE_SUCCESS'		=> 'Successfully enabled extension %s',
+	'CLI_EXTENSION_NAME'				=> 'Name of the extension',
+	'CLI_EXTENSION_PURGE_FAILURE'		=> 'Could not purge extension %s',
+	'CLI_EXTENSION_PURGE_SUCCESS'		=> 'Successfully purged extension %s',
+	'CLI_EXTENSION_NOT_FOUND'			=> 'No extensions were found.',
+	'CLI_EXTENSIONS_AVAILABLE'			=> 'Available',
+	'CLI_EXTENSIONS_DISABLED'			=> 'Disabled',
+	'CLI_EXTENSIONS_ENABLED'			=> 'Enabled',
+
+	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
 ));
 
 #######language/en/common.php#######
@@ -190,7 +248,11 @@ $lang = array_merge($lang, array(
 	'TRANSLATION_INFO'	=> 'phpBB3 free Forum by <a href="http://www.userboard.org/">UserBoard.org</a> | All Rights Reserved.',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|Y M d|',	// 01 Jan 2007 (with Relative days enabled)
+	'DATETIME_FORMAT'	=> '|d M Y, H:i|',	// 01 Jan 2007, 13:37 (with Relative days enabled)
 	'USER_LANG'			=> 'eu',
+
+	// See http://wiki.phpbb.com/Plural_Rules for more information
+	'PLURAL_RULE'		=> '1',
 
 	'1_DAY'			=> 'egun 1',
 	'1_MONTH'		=> 'hilabete 1',
@@ -204,18 +266,24 @@ $lang = array_merge($lang, array(
 	'ACCOUNT_DEACTIVATED'			=> 'Zure kontua eskuz desgaitatua izan da eta administratzaile batek baino ezin du berriro aktibatu.',
 	'ACCOUNT_NOT_ACTIVATED'			=> 'Zure kontua oraindik ez da aktibatu.',
 	'ACP'							=> 'Administrazio kontrol panelera joan.',
+	'ACP_SHORT'						=> 'ACP',
 	'ACTIVE'						=> 'Aktibo',
 	'ACTIVE_ERROR'					=> 'Desgaitutako erabiltzaile bat zehaztu duzu. Kontua aktibatzeko arazorik bazenu, jar zaitez foroko administrariekin harremanetan, mesedez.',
 	'ADMINISTRATOR'					=> 'Administradorea',
 	'ADMINISTRATORS'				=> 'Administradoreak',
 	'AGE'							=> 'Edadea',
 	'AIM'							=> 'AIM',
+	'AJAX_ERROR_TITLE'				=> 'AJAX error',
+	'AJAX_ERROR_TEXT'				=> 'Something went wrong when processing your request.',
+	'AJAX_ERROR_TEXT_ABORT'			=> 'User aborted request.',
+	'AJAX_ERROR_TEXT_TIMEOUT'		=> 'Your request timed out; please try again.',
+	'AJAX_ERROR_TEXT_PARSERERROR'	=> 'Something went wrong with the request and the server returned an invalid reply.',
 	'ALLOWED'						=> 'Baimendua',
 	'ALL_FILES'						=> 'Fitxategi guztiak',
 	'ALL_FORUMS'					=> 'Foro guztiak',
 	'ALL_MESSAGES'					=> 'Mezu guztiak',
 	'ALL_POSTS'						=> 'Mezu guztiak',
-	'ALL_TIMES'						=> 'Ordu guztien zona: %1$s %2$s',
+	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'Gai guztiak',
 	'AND'							=> 'eta',
 	'ARE_WATCHING_FORUM'			=> 'Foro honetako berriak jasotzeko harpidetu zara.',
@@ -225,6 +293,14 @@ $lang = array_merge($lang, array(
 	'ATTACHED_IMAGE_NOT_IMAGE'		=> 'Eransten saiatu zaren irudi fitxategiak ez du balio.',
 	'AUTHOR'						=> 'Egilea',
 	'AUTH_NO_PROFILE_CREATED'		=> 'Ezin izan da erabiltzailearen profila sortu.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_ENTRY'				=> 'Invalid database entry.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_SERVICE_TYPE'		=> 'Invalid service type provided to OAuth service handler.',
+	'AUTH_PROVIDER_OAUTH_ERROR_SERVICE_NOT_CREATED'			=> 'OAuth service not created',
+	'AUTH_PROVIDER_OAUTH_SERVICE_BITLY'						=> 'Bitly',
+	'AUTH_PROVIDER_OAUTH_SERVICE_FACEBOOK'					=> 'Facebook',
+	'AUTH_PROVIDER_OAUTH_SERVICE_GOOGLE'					=> 'Google',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_NOT_STORED'			=> 'OAuth token not stored.',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_INCORRECTLY_STORED'	=> 'OAuth token incorrectly stored.',
 	'AVATAR_DISALLOWED_CONTENT'		=> 'Ezin izan da burutu, igondako fitxategia balizko eraso bektore moduan identifikatua izan dalako.',
 	'AVATAR_DISALLOWED_EXTENSION'	=> 'Fitxategia ezin izan da erakutsi %s luzapena ez dagoelako baimenduta',
 	'AVATAR_EMPTY_REMOTE_DATA'		=> 'Ezin izan da irudia gehitu urruneko fitxategia baliogabea edo kaltetua dirudilako.',
@@ -235,10 +311,11 @@ $lang = array_merge($lang, array(
 	'AVATAR_PARTIAL_UPLOAD'			=> 'Fitxategiko zati bat baino ezin izan da gehitu.',
 	'AVATAR_PHP_SIZE_NA'			=> 'Irudiaren tamaina handiegia da.<br />Ezin izan da PHPk php.inin adierazitako gehieneko tamaina zehaztu.',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'Irudiaren tamaina handiegia da. Gehienezko tamaina %1$d %2$s da.<br />Mesedez, konturatu zaitez datu hau php.inin zehaztuta dagoela eta ezin daitekela aldatu.',
+	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
 	'AVATAR_URL_INVALID'			=> 'Adierazitako URL-a baligoabea da.',
 	'AVATAR_URL_NOT_FOUND'			=> 'Ezin daiteke zehaztutako fitxategia aurkitu.',
-	'AVATAR_WRONG_FILESIZE'			=> 'Irudiaren tamaina 0 eta %1d %2s balioen artean egon behar du.',
-	'AVATAR_WRONG_SIZE'				=> 'Gehitutako irudiak %5$d pixel zabaleran eta %6$d pixel altueran ditu. Irudiek %1$d pixel zabaleran eta %2$d pixel altueran euki behar dute gutxienez eta %3$d pixel zabaleran eta %4$d pixel altueran gehienez.',
+	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
+	'AVATAR_WRONG_SIZE'				=> 'The submitted avatar is %5$s wide and %6$s high. Avatars must be at least %1$s wide and %2$s high, but no larger than %3$s wide and %4$s high.',
 
 	'BACK_TO_TOP'			=> 'Gora',
 	'BACK_TO_PREV'			=> 'Aurreko orrialdera itzuli',
@@ -255,28 +332,42 @@ $lang = array_merge($lang, array(
 	'BOARD_DISABLED'		=> 'Foro hau desgaituta dago.',
 	'BOARD_UNAVAILABLE'		=> 'Barkatu baina foro hau ez dago momentuz erabilgarri. Saiatu zaitez berriro beranduago, mesedez.',
 	'BROWSING_FORUM'		=> '%1$s Erabiltzaile nabigatzen foro honetan.',
-	'BROWSING_FORUM_GUEST'	=> '%1$s Erabiltzaile nabigaten foro honetan eta bisitari %2$d',
-	'BROWSING_FORUM_GUESTS'	=> '%1$s Erabiltzaile nabigaten foro honetan eta %2$d bisitari',
+	'BUTTON_EDIT'			=> 'Edit',
+	'BUTTON_FORUM_LOCKED'	=> 'Locked',
+	'BUTTON_NEW_TOPIC'		=> 'New Topic',
+	'BUTTON_PM'				=> 'PM',
+	'BUTTON_PM_FORWARD'		=> 'Forward',
+	'BUTTON_PM_NEW'			=> 'New PM',
+	'BUTTON_PM_REPLY'		=> 'Send Reply',
+	'BUTTON_PM_REPLY_ALL'	=> 'Reply All',
+	'BUTTON_POST_REPLY'		=> 'Post Reply',
+	'BUTTON_QUOTE'			=> 'Quote',
+	'BUTTON_TOPIC_LOCKED'	=> 'Locked',
 	'BYTES'					=> 'Byteak',
+	'BYTES_SHORT'			=> 'B',
 
 	'CANCEL'				=> 'Ezeztatu',
 	'CHANGE'				=> 'Aldatu',
 	'CHANGE_FONT_SIZE'		=> 'Letra-tamaina aldatu',
 	'CHANGING_PREFERENCES'	=> 'Foro hobespenak aldatzen',
 	'CHANGING_PROFILE'		=> 'Profil hobespenak aldatzen',
-	'CLICK_VIEW_PRIVMSG'	=> '%sSarrera ontzira joan%s',
 	'COLLAPSE_VIEW'			=> 'Txikitu bista',
 	'CLOSE_WINDOW'			=> 'Itxi leihoa',
 	'COLOUR_SWATCH'			=> 'Kolore paleta',
-	'COMMA_SEPARATOR'		=> ', ',	// Used in pagination of ACP & prosilver, use localised comma if appropriate, eg: Ideographic or Arabic
+	'COLON'					=> ':',
+	'COMMA_SEPARATOR'		=> ', ',	// Comma used to join lists into a single string, use localised comma if appropriate, eg: Ideographic or Arabic
 	'CONFIRM'				=> 'Baieztatu',
 	'CONFIRM_CODE'			=> 'Baieztatze kodea',
 	'CONFIRM_CODE_EXPLAIN'	=> 'Sartu ezazu kodea irudian ikusten den era berean. Letra larriak (maiuskulak) ez dira kontutan hartzen. Ez dago zerorik (0).',
 	'CONFIRM_CODE_WRONG'	=> 'Sartutako baieztatze kodea ez da zuzena.',
 	'CONFIRM_OPERATION'		=> 'Ziur al zaude eragiketarekin jarraitu nahi duzula?',
+	'CONFIRM_AVATAR_DELETE' => 'Are you sure you wish to delete this avatar?',
 	'CONGRATULATIONS'		=> 'Zorionak',
 	'CONNECTION_FAILED'		=> 'Konexioak huts egin du.',
 	'CONNECTION_SUCCESS'	=> 'Arrakasta konexioan!',
+	'CONTACT'				=> 'Kontaktua',
+	'CONTACT_USER'			=> 'Contact %s',
+	'CONTACT_US'			=> 'Contact us',
 	'COOKIES_DELETED'		=> 'Foroko cookies guztiak egoki ezabatu dira.',
 	'CURRENT_TIME'			=> 'Eguneko data %s',
 
@@ -297,18 +388,13 @@ $lang = array_merge($lang, array(
 	'DISPLAY_TOPICS'		=> 'Aurreko gaiak erakutsi',
 	'DOWNLOADED'			=> 'Deskargaturik',
 	'DOWNLOADING_FILE'		=> 'Fitxategia deskargatzen',
-	'DOWNLOAD_COUNT'		=> '%d -en deskargaturik',
-	'DOWNLOAD_COUNTS'		=> '%d bider deskargaturik',
-	'DOWNLOAD_COUNT_NONE'	=> 'Oraindik deskargatu gabe',
-	'VIEWED_COUNT'			=> '%d -en ikusita',
-	'VIEWED_COUNTS'			=> '%d bider ikusita',
-	'VIEWED_COUNT_NONE'		=> 'Oraindik ikusi gabe',
 
 	'EDIT_POST'							=> 'Mezua aldatu',
-	'EMAIL'								=> 'Posta elektronikoa', // Short form for EMAIL_ADDRESS
-	'EMAIL_ADDRESS'						=> 'Posta elektroniko helbidea',
-	'EMAIL_INVALID_EMAIL'				=> 'Sartutako posta elektroniko helbidea ez da baliogarria.',
-	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Arazoak posta elektronikoa bidaltzerakoan  <strong>%1$s lineara </strong>. Erantzuna: %2$s',
+	'ELLIPSIS'							=>	'…',
+	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
+	'EMAIL_ADDRESS'						=> 'Email address',
+	'EMAIL_INVALID_EMAIL'				=> 'The email address you entered is invalid.',
+	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ran into problems sending email at <strong>Line %1$s</strong>. Response: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Izenburua zehaztu behar duzu gai berri bat bidaltzerakoan.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Izenburua zehaztu behar duzu mezu berri bat idazterakoan.',
 	'ENABLED'							=> 'Gaituta',
@@ -322,17 +408,23 @@ $lang = array_merge($lang, array(
 	'ERR_UNWATCHING'					=> 'Errorea gertatu da harpidetza ezeztatzerakoan.',
 	'ERR_WATCHING'						=> 'Errorea gertatu da harpidetutzerakoan.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'Sartutako phpBB bidea ez omen da baliozkoa.',
+	'ERROR'									=> 'Errorea',
 	'EXPAND_VIEW'						=> 'Bista zabaldu',
 	'EXTENSION'							=> 'Luzapena',
+	'EXTENSION_DISABLED'				=> 'The extension <strong>%s</strong> is not enabled.',
 	'EXTENSION_DISABLED_AFTER_POSTING'	=> '<strong>%s</strong> luzapena desaktibatua izan da eta ez da aurrerantzean gehiago erakutsiko.',
+	'EXTENSION_DOES_NOT_EXIST'			=> 'The extension <strong>%s</strong> does not exist.',
 
+	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> 'FAQ',
 	'FAQ_EXPLAIN'			=> 'Sarrizko galderak (laguntza)',
 	'FILENAME'				=> 'Izena',
 	'FILESIZE'				=> 'Tamaina',
 	'FILEDATE'				=> 'Data',
 	'FILE_COMMENT'			=> 'Iruzkina',
-	'FILE_NOT_FOUND'		=> 'Ezin daiteke eskatutako fitxategia aurkitu.',
+	'FILE_CONTENT_ERR'		=> 'Could not read the contents of file: %s',
+	'FILE_JSON_DECODE_ERR'	=> 'Failed to decode json file: %s',
+	'FILE_NOT_FOUND'		=> 'The requested file could not be found: %s',
 	'FIND_USERNAME'			=> 'Erabiltzaile bat bilatu',
 	'FOLDER'				=> 'Karpeta',
 	'FORGOT_PASS'			=> 'Pasahitza ahaztu dut',
@@ -381,6 +473,9 @@ $lang = array_merge($lang, array(
 	'GB'						=> 'GB',
 	'GIB'						=> 'GiB',
 	'GO'						=> 'Joan',
+	'GOOGLEPLUS'				=> 'Google+',
+	'GOTO_FIRST_POST'			=> 'Go to first post',
+	'GOTO_LAST_POST'			=> 'Go to last post',
 	'GOTO_PAGE'					=> 'Orri honetara joan',
 	'GROUP'						=> 'Taldea',
 	'GROUPS'					=> 'Taldeak',
@@ -388,12 +483,6 @@ $lang = array_merge($lang, array(
 	'GROUP_ERR_USERNAME'		=> 'Ez da talde izenik zehaztu.',
 	'GROUP_ERR_USER_LONG'		=> 'Taldearen izena luzeegia da.',
 	'GUEST'						=> 'Bisitari',
-	'GUEST_USERS_ONLINE'		=> '%d bisitari daude konektatuta',
-	'GUEST_USERS_TOTAL'			=> '%d bisitari',
-	'GUEST_USERS_ZERO_ONLINE'	=> '0 bisitari konektatuta',
-	'GUEST_USERS_ZERO_TOTAL'	=> '0 bisitari',
-	'GUEST_USER_ONLINE'			=> 'Bisitari konektatu %d dago',
-	'GUEST_USER_TOTAL'			=> 'Bisitari %d',
 	'G_ADMINISTRATORS'			=> 'Administratzaileak',
 	'G_BOTS'					=> 'Botak',
 	'G_GUESTS'					=> 'Gonbidatuak',
@@ -402,22 +491,12 @@ $lang = array_merge($lang, array(
 	'G_GLOBAL_MODERATORS'		=> 'Moderadore orokorrak',
 	'G_NEWLY_REGISTERED'		=> 'Berriki izena emandako erabiltzaileak',
 
-	'HIDDEN_USERS_ONLINE'			=> '%d erabiltzaile ezkutu konektatuak',
-	'HIDDEN_USERS_TOTAL'			=> '%d erabiltzaile ezkutu',
-	'HIDDEN_USERS_TOTAL_AND'		=> '%d erabiltzaile ezkutu eta ',
-	'HIDDEN_USERS_ZERO_ONLINE'		=> '0 erabiltzaile ezkutu konektatuta',
-	'HIDDEN_USERS_ZERO_TOTAL'		=> '0 erabiltzaile ezkutu',
-	'HIDDEN_USERS_ZERO_TOTAL_AND'	=> '0 erabiltzaile ezkutu eta ',
-	'HIDDEN_USER_ONLINE'			=> 'Erabiltzaile ezkut %d konektatuta',
-	'HIDDEN_USER_TOTAL'				=> 'Erabiltzaile ezkutu %d',
-	'HIDDEN_USER_TOTAL_AND'			=> 'Erabiltzaile ezkutu %d eta ',
 	'HIDE_GUESTS'					=> 'Bisitariak ezkutatu',
 	'HIDE_ME'						=> 'Nire konexio-egoera ezkutatu sesio honetarako',
 	'HOURS'							=> 'Orduak',
 	'HOME'							=> 'Hasiera',
 
 	'ICQ'						=> 'ICQ zenbakia',
-	'ICQ_STATUS'				=> 'ICQ egoera',
 	'IF'						=> 'balitz',
 	'IMAGE'						=> 'Irudia',
 	'IMAGE_FILETYPE_INVALID'	=> 'Ezin da %s mime motako %d irudi fitxategi mota eutsi.',
@@ -425,9 +504,11 @@ $lang = array_merge($lang, array(
 	'IN'						=> 'non',
 	'INDEX'						=> 'Aurkibide orria', //Index page
 	'INFORMATION'				=> 'Informazioa',
+	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
 	'INTERESTS'					=> 'Interesak',
 	'INVALID_DIGEST_CHALLENGE'	=> 'Baliogabeko Digest challenge',
-	'INVALID_EMAIL_LOG'			=> 'Ba al liteke <strong>%s</strong> baliogabeko posta elektroniko helbide izatea?',
+	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> possibly an invalid email address?',
+	'INVALID_PLURAL_RULE'		=> 'The chosen plural rule is invalid. Valid values are integers between 0 and 15.',
 	'IP'						=> 'IP',
 	'IP_BLACKLISTED'			=> 'Zure %1$s IPa blokeatuta dago zerrenda beltzan egoteagatik. Xehetasun gehiago: <a href="%2$s">%2$s</a>.',
 
@@ -435,7 +516,8 @@ $lang = array_merge($lang, array(
 	'JOINED'				=> 'Izena emanda',
 	'JUMP_PAGE'				=> 'Salto egin nahi duzun orri zenbakia sartu',
 	'JUMP_TO'				=> 'Hona salto egin',
-	'JUMP_TO_PAGE'			=> 'Klikatu salto egiteko orri…',
+	'JUMP_TO_PAGE'			=> 'Jump to page',
+	'JUMP_TO_PAGE_CLICK'	=> 'Click to jump to page…',
 
 	'KB'					=> 'KB',
 	'KIB'					=> 'KiB',
@@ -447,6 +529,8 @@ $lang = array_merge($lang, array(
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Ezin da LDAP zerbitzarira konektatu',
 	'LDAP_SEARCH_FAILED'				=> 'Erroreren bat gertatu da LDAP direktorioan bilatzerakoan.',
 	'LEGEND'							=> 'Erreferentzia',
+	'LIVE_SEARCHES_NOT_ALLOWED'			=> 'Live searches are not allowed.',
+	'LOADING'							=> 'Loading',
 	'LOCATION'							=> 'Kokapena',
 	'LOCK_POST'							=> 'Mezu itxia',
 	'LOCK_POST_EXPLAIN'					=> 'Aldaketak saihestu',
@@ -457,6 +541,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_CONFIRM_EXPLAIN'				=> 'Kontuak indarrez zabaldu ez daitezan, Foro admnistrariek, okerreko izen emate saiakera kopuru jakin baten ostean berrespen kode bat sar dezazula eskatzen dute. Kodea, behean agertzen zaizun irudian agertu beharko litzaizuke. Bista arazorik izanez gero, edo beste arrazoirengatik ez baldin baduzu kodea ikusten, mesedez jar zaitez kontaktuan %sForoko Administrariekin%s.', // unused
 	'LOGIN_ERROR_ATTEMPTS'				=> 'Gehienezko izen emate saiakera kopurua gainditu duzu. Erabiltzaile izena eta pasahitzaz gain, beheko irudian agertzen zaizun berrespen kodea ere sartu beharko duzu.',
 	'LOGIN_ERROR_EXTERNAL_AUTH_APACHE'	=> 'Apatxek ez zaitu egiaztatu.',
+	'LOGIN_ERROR_OAUTH_SERVICE_DOES_NOT_EXIST'	=> 'A non-existant OAuth service has been requested.',
 	'LOGIN_ERROR_PASSWORD'				=> 'Okerreko pasahitza zehaztu duzu. Mesedez, baieztatu pasahitza eta berriro saiatu. Arazoak badarrai, mesedez, jar zaitez kontaktuan %sForoko Administrariekin%s.',
 	'LOGIN_ERROR_PASSWORD_CONVERT'		=> 'Ezin izan da zure pasahitza aldatu Foroko softwarea berritzerakoan. Mesedez, %seskatu pasahitz berria%s. Arazoak badarrai, mesedez jar zaitez kontaktuan %sForoko Administrariekin%s.',
 	'LOGIN_ERROR_USERNAME'				=> 'Erabiltzaile izen okerra sartu duzu. Mesedez, baieztatu erabiltzaile izena eta berriro saiatu. Arazoak badarrai, mesedez, jar zaitez kontaktuan %sForoko Administrariekin%s.',
@@ -465,17 +550,22 @@ $lang = array_merge($lang, array(
 	'LOGIN_VIEWFORUM'					=> 'Foro hau ikusteko izena eman eta saioa hasi behar duzu.',
 	'LOGIN_EXPLAIN_EDIT'				=> 'Foro honetako mezuak aldatzeko izena eman eta saioa hasi behar duzu.',
 	'LOGIN_EXPLAIN_VIEWONLINE'			=> 'Saioa hasi dutenen zerrenda ikusteko izena eman eta saioa hasi behar duzu.',
+	'LOGIN_REQUIRED'					=> 'You need to login to perform this action.',
 	'LOGOUT'							=> 'Saioa bukatu',
 	'LOGOUT_USER'						=> '[ %s ] (e)k saioa bukatu',
-	'LOG_ME_IN'							=> 'Bisita bakoitzean saioa automatikoki hasi',
+	'LOG_ME_IN'							=> 'Remember me',
 
+	'MAIN'					=> 'Main',
 	'MARK'					=> 'Markatu',
 	'MARK_ALL'				=> 'Markatu guztiak',
+	'MARK_ALL_READ'			=> 'Mark all read',
 	'MARK_FORUMS_READ'		=> 'Foroak irakurrita gisa markatu',
+	'MARK_READ'				=> 'Mark read',
 	'MARK_SUBFORUMS_READ'	=> 'Azpiforoak irakurrita gisa markatu',
 	'MB'					=> 'MB',
 	'MIB'					=> 'MiB',
 	'MCP'					=> 'Moderadorearen Kontrol Panela',
+	'MCP_SHORT'				=> 'MCP',
 	'MEMBERLIST'			=> 'Erabiltzaileak',
 	'MEMBERLIST_EXPLAIN'	=> 'Erabiltzaileen zerrenda osoa ikusi',
 	'MERGE'					=> 'Bateratu',
@@ -488,26 +578,47 @@ $lang = array_merge($lang, array(
 	'MODERATE'				=> 'Moderatu',
 	'MODERATOR'				=> 'Moderadorea',
 	'MODERATORS'			=> 'Moderadoreak',
+	'MODULE_NOT_ACCESS'		=> 'Module not accessible',
+	'MODULE_NOT_FIND'		=> 'Cannot find module %s',
+	'MODULE_FILE_INCORRECT_CLASS'	=> 'Module file %s does not contain correct class [%s]',
 	'MONTH'					=> 'Hilabete',
 	'MOVE'					=> 'Mugitu',
-	'MSNM'					=> 'MSNM/WLM',
 
 	'NA'						=> 'Zehaztu gabea',
 	'NEWEST_USER'				=> '<strong>%s</strong> da erabiltzailerik berriena',
 	'NEW_MESSAGE'				=> 'Mezu berria',
 	'NEW_MESSAGES'				=> 'Mezu berriak',
-	'NEW_PM'					=> 'Mezu pribatu berri <strong>%d</strong>',
-	'NEW_PMS'					=> '<strong>%d</strong> mezu pribatu berri',
 	'NEW_POST'					=> 'Mezu berria',	// Not used anymore
 	'NEW_POSTS'					=> 'Mezu berriak',	// Not used anymore
 	'NEXT'						=> 'Hurrengoa',		// Used in pagination
 	'NEXT_STEP'					=> 'Hurrengoa',
 	'NEVER'						=> 'Inoiz ez',
 	'NO'						=> 'Ez',
+	'NO_NOTIFICATIONS'			=> 'You have no notifications',
 	'NOT_ALLOWED_MANAGE_GROUP'	=> 'Ez duzu talde hau administratzerik.',
 	'NOT_AUTHORISED'			=> 'Ez duzu baimenik alde honetan sartzeko.',
 	'NOT_WATCHING_FORUM'		=> 'Ez duzu dagoeneko Foro honetako berririk jarraituko.',
 	'NOT_WATCHING_TOPIC'		=> 'Ez duzu dagoeneko gai hau jarraituko.',
+	'NOTIFICATIONS'				=> 'Notifications',
+	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
+	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
+	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
+	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
+	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
+	'NOTIFICATION_POST_IN_QUEUE'		=> '<strong>Post approval</strong> request by %1$s:',
+	'NOTIFICATION_REFERENCE'			=> '"%1$s"',
+	'NOTIFICATION_REASON'				=> '<em>Reason:</em> %1$s.',
+	'NOTIFICATION_REPORT_PM'			=> '<strong>Private Message reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_POST'			=> '<strong>Post reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_CLOSED'		=> '<strong>Report closed</strong> by %1$s for:',
+	'NOTIFICATION_TOPIC'				=> '<strong>New topic</strong> by %1$s:',
+	'NOTIFICATION_TOPIC_APPROVED'		=> '<strong>Topic approved</strong>:',
+	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
+	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
+	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> 'Mesedez, abisatu Foroko Administrariei edo webmasterrari',
 	'NOTIFY_ADMIN_EMAIL'		=> 'Mesedez, abisatu Foroko Administrariei edo webmasterrari: <a href="mailto:%1$s">%1$s</a>',
 	'NO_ACCESS_ATTACHMENT'		=> 'Ez duzu fitxategi honetara sartzeko baimenik.',
@@ -516,6 +627,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_ADMIN'				=> 'Ez duzu baimenik Administrazio Panelera (ACP) sartzeko.',
 	'NO_AUTH_ADMIN_USER_DIFFER'	=> 'Ezin duzu beste erabiltzaile izen batekin saioa berriro hasi.',
 	'NO_AUTH_OPERATION'			=> 'Ez duzu eragiketa burutzeko beharrezko baimenak.',
+	'NO_AVATARS'				=> 'No avatars currently available',
 	'NO_CONNECT_TO_SMTP_HOST'	=> 'Ezin daiteke smtp zerbitzarira konektatu: %s : %s',
 	'NO_BIRTHDAYS'				=> 'Gaur ez dago urtebetetzerik',
 	'NO_EMAIL_MESSAGE'			=> 'Posta elektroniko mezua hutsik zegoen.',
@@ -531,7 +643,6 @@ $lang = array_merge($lang, array(
 	'NO_MODE'					=> 'Ez da modurik zehaztu.',
 	'NO_MODERATORS'				=> 'Ez dago moderadorerik.',
 	'NO_NEW_MESSAGES'			=> 'Ez dago mezu berririk',
-	'NO_NEW_PM'					=> '<strong>0</strong> mezu pribatu',
 	'NO_NEW_POSTS'				=> 'Ez da mezu berririk',	// Not used anymore
 	'NO_ONLINE_USERS'			=> 'Ez dago izen emandako erabiltzailerik Foroan.',
 	'NO_POSTS'					=> 'Ez da mezurik',
@@ -546,7 +657,6 @@ $lang = array_merge($lang, array(
 	'NO_TOPIC_FORUM'			=> 'Dagoeneko ez dago horrelako gai edo fororik.',
 	'NO_TOPICS'					=> 'Ez dago gai edo mezurik foro honetan.',
 	'NO_TOPICS_TIME_FRAME'		=> 'Ez dago horrelako gairik foro honetan aukeratutako denbora tartean.',
-	'NO_UNREAD_PM'				=> '<strong>0</strong> irakurri gabeko mezu pribatu',
 	'NO_UNREAD_POSTS'			=> 'Ez dago irakurri gabeko mezurik',
 	'NO_UPLOAD_FORM_FOUND'		=> 'Hasi da gehiketa baina ezin izan da fitxategiak gehitzeko formulario egokirik aurkitu.',
 	'NO_USER'					=> 'Eskatutako erabiltzailea ez da existitzen.',
@@ -557,15 +667,14 @@ $lang = array_merge($lang, array(
 	'OFFLINE'					=> 'Deskonetaturik',
 	'ONLINE'					=> 'Konektaturik',
 	'ONLINE_BUDDIES'			=> 'Konektaturiko lagunak',
-	'ONLINE_USERS_TOTAL'		=> '<strong>%d</strong> Izen emandako erabiltzaile daude konektaturik :: ',
-	'ONLINE_USERS_ZERO_TOTAL'	=> '<strong>0</strong> Izen emandako erabiltzaile dago konektaturik :: ',
-	'ONLINE_USER_TOTAL'			=> 'Izen emandako erabiltzaile <strong>%d</strong> dago :: ',
 	'OPTIONS'					=> 'Aukerak',
 
 	'PAGE_OF'				=> '<strong>%2$d</strong> (e)tik <strong>%1$d</strong>. orria',
+	'PAGE_TITLE_NUMBER'		=> 'Page %s',
 	'PASSWORD'				=> 'Pasahitza',
 	'PIXEL'					=> 'px',
 	'PLAY_QUICKTIME_FILE'	=> 'Quicktime fitxategia bistaratu',
+	'PLEASE_WAIT'			=> 'Please wait.',
 	'PM'					=> 'MP',
 	'PM_REPORTED'			=> 'Klikatu ohartarazpena ikusteko',
 	'POSTING_MESSAGE'		=> '%s tan mezua bidaltzen',
@@ -578,9 +687,15 @@ $lang = array_merge($lang, array(
 	'POSTED_ON_DATE'		=> 'noiz',
 	'POSTS'					=> 'Mezuak',
 	'POSTS_UNAPPROVED'		=> 'Gai honetako mezu bat gutxienez ez da onartua izan.',
+	'POSTS_UNAPPROVED_FORUM'=> 'At least one post in this forum has not been approved.',
 	'POST_BY_AUTHOR'		=> 'Nork',
-	'POST_BY_FOE'			=> 'Mezu hau, zure baztertutakoen zerrendan dagoen <strong>%1$s</strong> (e)k bidali du. %2$sMezua erakutsi%3$s.',
+	'POST_BY_FOE'			=> '<strong>%1$s</strong>, who is currently on your ignore list, made this post.',
+	'POST_DISPLAY'			=> '%1$sDisplay this post%2$s.',
 	'POST_DAY'				=> '%.2f mezu eguneko',
+	'POST_DELETED_ACTION'	=> 'Deleted post:',
+	'POST_DELETED'			=> 'This post has been deleted.',
+	'POST_DELETED_BY'		=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s.',
+	'POST_DELETED_BY_REASON'=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s for the following reason: %4$s',
 	'POST_DETAILS'			=> 'Mezu xehetasunak',
 	'POST_NEW_TOPIC'		=> 'Gai berria',
 	'POST_PCT'				=> '%.2f%% mezu guztietatik',
@@ -591,7 +706,8 @@ $lang = array_merge($lang, array(
 	'POST_SUBJECT'			=> 'Izenburua',
 	'POST_TIME'				=> 'Bidaltze data',
 	'POST_TOPIC'			=> 'Gai berria bidali',
-	'POST_UNAPPROVED'		=> 'Mezu hau onarpena itxaroten dago',
+	'POST_UNAPPROVED_ACTION'	=> 'Post awaiting approval:',
+	'POST_UNAPPROVED'		=> 'This post has not been approved.',
 	'POWERED_BY'			=> '%s(e)k ahalduta',
 	'PREVIEW'				=> 'Aurreko bista',
 	'PREVIOUS'				=> 'Aurrekoa',		// Used in pagination
@@ -601,6 +717,8 @@ $lang = array_merge($lang, array(
 	'PRIVATE_MESSAGES'		=> 'Mezu pribatuak',
 	'PRIVATE_MESSAGING'		=> 'Mezularitza pribatua',
 	'PROFILE'				=> 'Erabiltzailearen Kontrol Panela',
+
+	'QUICK_LINKS'			=> 'Quick links',
 
 	'RANK'						=> 'Maila',
 	'READING_FORUM'				=> '%s (e)tan gaiak ikusten',
@@ -614,15 +732,6 @@ $lang = array_merge($lang, array(
 	'REDIRECTS'					=> 'Berbiderapen guztiak',
 	'REGISTER'					=> 'Izena eman',
 	'REGISTERED_USERS'			=> 'Izen emandako erabiltzaileak:',
-	'REG_USERS_ONLINE'			=> '%d izen emandako erabiltzaile daude eta ',
-	'REG_USERS_TOTAL'			=> '%d izen emandako erabiltzaile, ',
-	'REG_USERS_TOTAL_AND'		=> '%d izen emandako erabiltzaile eta ',
-	'REG_USERS_ZERO_ONLINE'		=> '0 izen emandako erabiltzaile eta ',
-	'REG_USERS_ZERO_TOTAL'		=> '0 izen emandako erabiltzaile, ',
-	'REG_USERS_ZERO_TOTAL_AND'	=> '0 izen emandako erabiltzaile eta ',
-	'REG_USER_ONLINE'			=> 'Izen emandako erabiltzaile %d dago eta ',
-	'REG_USER_TOTAL'			=> 'Izen emandako erabiltzaile %d , ',
-	'REG_USER_TOTAL_AND'		=> 'Izen emandako erabiltzaile %d eta ',
 	'REMOVE'					=> 'Ezabatu',
 	'REMOVE_INSTALL'			=> 'Mesedez, <strong>install</strong> karpeta ezabatu, mugitu edo berrizendatu ezazu. Direktorio hori mantentzen baldin bada Administrazio Kontrol Panelera (ACP) baino ezingo duzu sartu(ACP).',
 	'REPLIES'					=> 'Erantzunak',
@@ -639,7 +748,8 @@ $lang = array_merge($lang, array(
 	'RETURN_FORUM'				=> '%sBisitaturiko azkeneko forora itzuli%s',
 	'RETURN_PAGE'				=> '%sAurreko orrira itzuli%s',
 	'RETURN_TOPIC'				=> '%sBisitaturiko azkenengo gaira itzuli%s',
-	'RETURN_TO'					=> 'Itzuli',
+	'RETURN_TO'					=> 'Return to “%s”',
+	'RETURN_TO_INDEX'			=> 'Return to Board Index',
 	'FEED'						=> 'Jarioa',
 	'FEED_NEWS'					=> 'Berriak',
 	'FEED_TOPICS_ACTIVE'		=> 'Gai aktiboak',
@@ -667,28 +777,30 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV_EXPLAIN'		=> '>Bilaketa aurreratuaren aukerak ikusi',
 	'SEARCH_KEYWORDS'			=> 'Hitz klabeak bilatu',
 	'SEARCHING_FORUMS'			=> 'Foroak bilatzen',
-	'SEARCH_ACTIVE_TOPICS'		=> 'Gai aktiboak ikusi',
+	'SEARCH_ACTIVE_TOPICS'		=> 'Active topics',
 	'SEARCH_FOR'				=> 'Bilatu',
 	'SEARCH_FORUM'				=> 'Foro honetan bilatu…',
-	'SEARCH_NEW'				=> 'Mezu berriak ikusi',
+	'SEARCH_NEW'				=> 'New posts',
 	'SEARCH_POSTS_BY'			=> 'Autoreagatik bilatu mezuak',
-	'SEARCH_SELF'				=> 'Zure mezuak ikusi',
+	'SEARCH_SELF'				=> 'Your posts',
 	'SEARCH_MINE'				=> 'View your topics',
 	'SEARCH_TOPIC'				=> 'Gai honetan bilatu…',
-	'SEARCH_UNANSWERED'			=> 'Erantzun gabeko mezuak ikusi',
-	'SEARCH_UNREAD'				=> 'Irakurri gabeko mezuak ikusi',
+	'SEARCH_UNANSWERED'			=> 'Unanswered posts',
+	'SEARCH_UNREAD'				=> 'Unread posts',
 	'SEARCH_USER_POSTS'			=> 'Erabiltzailearen mezuak ikusi',
 	'SECONDS'					=> 'Segundu',
+	'SEE_ALL'					=> 'See All',
 	'SELECT'					=> 'Aukeratu',
 	'SELECT_ALL_CODE'			=> 'Dena aukeratu',
 	'SELECT_DESTINATION_FORUM'	=> 'Mesedez, aukeratu norako Foroa',
 	'SELECT_FORUM'				=> 'Foro bat aukeratu',
-	'SEND_EMAIL'				=> 'Posta elektronikoa',				// Used for submit buttons
-	'SEND_EMAIL_USER'			=> 'Posta elektronikoa',				// Used as: {L_SEND_EMAIL_USER} {USERNAME} -> E-mail UserX
+	'SEND_EMAIL'				=> 'Send email',				// Used for submit buttons
+	'SEND_EMAIL_USER'			=> 'Send email to %s',
 	'SEND_PRIVATE_MESSAGE'		=> 'Mezu pribatua bidali',
 	'SETTINGS'					=> 'Hobespenak',
 	'SIGNATURE'					=> 'Sinadura',
 	'SKIP'						=> 'Salto egin',
+	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'SMTP zerbitzariak ez du egiaztatzerik eusten.',
 	'SORRY_AUTH_READ'			=> 'Barkatu, baina ez duzu foro hau irakurtzeko baimenik.',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'Barkatu, baina ez duzu fitxategi erantsi hau deskargatzeko baimenik.',
@@ -706,6 +818,8 @@ $lang = array_merge($lang, array(
 	'START_WATCHING_TOPIC'		=> 'Gaia jarraitu',
 	'STOP_WATCHING_FORUM'		=> 'Foro hau jarraitzeari utzi',
 	'STOP_WATCHING_TOPIC'		=> 'Gai hau jarraitzeari utzi',
+	'STRING_LIST_MULTI'			=> '%1$s, and %2$s',
+	'STRING_LIST_SIMPLE'		=> '%1$s and %2$s',
 	'SUBFORUM'					=> 'Subforoa',
 	'SUBFORUMS'					=> 'Subforoak',
 	'SUBJECT'					=> 'Izenburua',
@@ -717,51 +831,35 @@ $lang = array_merge($lang, array(
 	'THE_TEAM'			=> 'Taldea',
 	'TIB'				=> 'TiB',
 	'TIME'				=> 'Ordua',
-	
+	'TIMEOUT_PROCESSING_REQ'			=> 'Request timed out.',
+
 	'TOO_LARGE'						=> 'Sartutako balorea handiegia da.',
 	'TOO_LARGE_MAX_RECIPIENTS'		=> '<strong>Mezu pribatu bakoitzeko baimendutako gehienezko hartzaile</strong> balorea gehiegizkoa da.',
 
 	'TOO_LONG'						=> 'Idatzitako balioa luzeegia da.',
 
-	'TOO_LONG_AIM'					=> 'Idatzitako AIM ezizena luzeegia da.',
 	'TOO_LONG_CONFIRM_CODE'			=> 'Idatzitako baieztatze kodea luzeegia da.',
 	'TOO_LONG_DATEFORMAT'			=> 'Idatzitako data formatua luzeegia da.',
-	'TOO_LONG_ICQ'					=> 'Idatzitako ICQ zenbakia luzeegia da.',
-	'TOO_LONG_INTERESTS'			=> 'Idatzitako interesen zerrenda luzeegia da.',
 	'TOO_LONG_JABBER'				=> 'Idatzitako Jabber kontua luzeegia da.',
-	'TOO_LONG_LOCATION'				=> 'Idatzitako kokapena luzeegia da.',
-	'TOO_LONG_MSN'					=> 'Idatzitako MSNM/WLM izena luzeegia da.',
 	'TOO_LONG_NEW_PASSWORD'			=> 'Idatzitako pasahitza luzeegia da.',
-	'TOO_LONG_OCCUPATION'			=> 'Idatzitako lanbidea luzeegia da.',
 	'TOO_LONG_PASSWORD_CONFIRM'		=> 'Idatzitako pasahitz baieztatzea luzeegia da.',
 	'TOO_LONG_USER_PASSWORD'		=> 'Idatzitako pasahitza luzeegia da.',
 	'TOO_LONG_USERNAME'				=> 'Idatzitako erabiltzaile izena luzeegia da.',
-	'TOO_LONG_EMAIL'				=> 'Idatzitako posta elektroniko helbidea luzeegia da.',
-	'TOO_LONG_EMAIL_CONFIRM'		=> 'Idatzitako posta elektroniko baieztatzea luzeegia da.',
-	'TOO_LONG_WEBSITE'				=> 'Idatzitako webguneko helbidea luzeegia da.',
-	'TOO_LONG_YIM'					=> 'Idatzitako Yahoo! Messenger izena luzeegia da.',
+	'TOO_LONG_EMAIL'				=> 'The email address you entered is too long.',
 
 	'TOO_MANY_VOTE_OPTIONS'			=> 'Aukera gehiegi bozkatzen saiatu zara.',
 
 	'TOO_SHORT'						=> 'Idatzitako balioa laburregia da.',
 
-	'TOO_SHORT_AIM'					=> 'Idatzitako AIM ezizena balioa laburregia da.',
 	'TOO_SHORT_CONFIRM_CODE'		=> 'Idatzitako baieztatze kodea laburregia da.',
 	'TOO_SHORT_DATEFORMAT'			=> 'Idatzitako data formatua laburregia da.',
-	'TOO_SHORT_ICQ'					=> 'Idatzitako ICQ zenbakia laburregia da.',
-	'TOO_SHORT_INTERESTS'			=> 'Idatzitako interesen zerrenda laburregia da.',
 	'TOO_SHORT_JABBER'				=> 'Idatzitako Jabber kontua laburregia da.',
-	'TOO_SHORT_LOCATION'			=> 'Idatzitako kokapena laburregia da.',
-	'TOO_SHORT_MSN'					=> 'Idatzitako MSNM/WLM izena laburregia da.',
 	'TOO_SHORT_NEW_PASSWORD'		=> 'Idatzitako pasahitza laburregia da.',
-	'TOO_SHORT_OCCUPATION'			=> 'Idatzitako lanbidea laburregia da.',
 	'TOO_SHORT_PASSWORD_CONFIRM'	=> 'Idatzitako pasahitz baieztatzea laburregia da.',
 	'TOO_SHORT_USER_PASSWORD'		=> 'Idatzitako pasahitza laburregia da.',
 	'TOO_SHORT_USERNAME'			=> 'Idatzitako erabiltzaile izena laburregia da.',
-	'TOO_SHORT_EMAIL'				=> 'Idatzitako posta elektroniko helbidea laburregia da.',
-	'TOO_SHORT_EMAIL_CONFIRM'		=> 'Idatzitako posta elektroniko baieztatzea laburregia da.',
-	'TOO_SHORT_WEBSITE'				=> 'Idatzitako webguneko helbidea laburregia da.',
-	'TOO_SHORT_YIM'					=> 'Idatzitako Yahoo! Messenger izena laburregia da.',
+	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
+	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
 	
 	'TOO_SMALL'						=> 'Sartutako balorea txikiegia da.',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> '<strong>Mezu pribatu bakoitzeko baimendutako gehienezko hartzaile</strong> balorea gutxiegizkoa da.',
@@ -775,30 +873,20 @@ $lang = array_merge($lang, array(
 	'TOPIC_MOVED'		=> 'Mugidutako gaia',
 	'TOPIC_REVIEW'		=> 'Gaiaren berrikusketa',
 	'TOPIC_TITLE'		=> 'Gaiaren izenburua',
-	'TOPIC_UNAPPROVED'	=> 'Ez da gai hau onartu',
+	'TOPIC_UNAPPROVED'	=> 'This topic has not been approved.',
+	'TOPIC_DELETED'		=> 'This topic has been deleted.',
 	'TOTAL_ATTACHMENTS'	=> 'Erantsi (ak)',
-	'TOTAL_LOG'			=> 'Hasitako saio 1',
-	'TOTAL_LOGS'		=> '%d hasitako saio',
-	'TOTAL_NO_PM'		=> '0 mezu pribatu guztira',
-	'TOTAL_PM'			=> 'Mezu pribatu 1 guztira',
-	'TOTAL_PMS'			=> '$d mezu pribatu guztira',
+	'TOPIC_POLL'		=> 'This topic has a poll.',
 	'TOTAL_POSTS'		=> 'Mezuak guztira',
-	'TOTAL_POSTS_OTHER'	=> '<strong>%s</strong> mezu guztira',
-	'TOTAL_POSTS_ZERO'	=> '<strong>0</strong> mezu guztira',
 	'TOPIC_REPORTED'	=> 'Gai honen berri eman da',
-	'TOTAL_TOPICS_OTHER'=> '<strong>%s</strong> gai guztira',
-	'TOTAL_TOPICS_ZERO'	=> '<strong>0</strong> gai guztira',
-	'TOTAL_USERS_OTHER'	=> '<strong>%s</strong> erabiltzaile guztira',
-	'TOTAL_USERS_ZERO'	=> '<strong>0</strong> erabiltzaile guztira',
 	'TRACKED_PHP_ERROR'	=> 'Jarraitutako PHP erroreak: %s',
+	'TWITTER'			=> 'Twitter',
 
-	'UNABLE_GET_IMAGE_SIZE'	=> 'Ezin izan da irudiaren neurririk zehaztu.',
+	'UNABLE_GET_IMAGE_SIZE'	=> 'It was not possible to determine the dimensions of the image. Please verify that the URL you entered is correct.',
 	'UNABLE_TO_DELIVER_FILE'=> 'Ezinezkoa fitxategia bidaltzea.',
 	'UNKNOWN_BROWSER'		=> 'Nabigatzaile ezezaguna',
 	'UNMARK_ALL'			=> 'Guztiak desmarkatu',
 	'UNREAD_MESSAGES'		=> 'Irakurri gabeko mezuak',
-	'UNREAD_PM'				=> 'Irakurri gabeko mezu <strong>%d</strong>',
-	'UNREAD_PMS'			=> 'Irakurri gabeko <strong>%d</strong> mezu',
 	'UNREAD_POST'			=> 'Irakurri gabeko mezua',
 	'UNREAD_POSTS'			=> 'Irakurri gabeko mezuak',
 	'UNWATCH_FORUM_CONFIRM'		=> 'Ziur al zaude ez duzula foro hau gehiago jarraitu nahi?',
@@ -816,8 +904,6 @@ $lang = array_merge($lang, array(
 	'USERNAMES'				=> 'Erabiltzaile izenak',
 	'USER_AVATAR'			=> 'Erabiltzailearen irudia',
 	'USER_CANNOT_READ'		=> 'Ezin duzu mezurik irakurri foro honetan.',
-	'USER_POST'				=> 'Mezu %d',
-	'USER_POSTS'			=> '%d mezu',
 	'USERS'					=> 'Erabiltzaileak',
 	'USE_PERMISSIONS'		=> 'Test out erabiltzailearen baimenak',
 
@@ -825,6 +911,8 @@ $lang = array_merge($lang, array(
 
 	'VARIANT_DATE_SEPARATOR'	=> ' / ',	// Used in date format dropdown, eg: "Today, 13:37 / 01 Jan 2007, 13:37" ... to join a relative date with calendar date
 	'VIEWED'					=> 'Ikusita',
+
+	'VIEWING_CONTACT_ADMIN'		=> 'Viewing contact page',
 	'VIEWING_FAQ'				=> 'FAQ (laguntza) ikusten',
 	'VIEWING_MEMBERS'			=> 'Erabiltzaileen xehetasunak ikusten',
 	'VIEWING_ONLINE'			=> 'Konektatuta nor dagoen ikusten',
@@ -839,8 +927,6 @@ $lang = array_merge($lang, array(
 	'VIEW_LATEST_POST'			=> 'Azkenengo mezua ikusi',
 	'VIEW_NEWEST_POST'			=> 'Irakurri gabeko azkenengo mezua ikusi',
 	'VIEW_NOTES'				=> 'Erabiltzailearen oharrak ikusi',
-	'VIEW_ONLINE_TIME'			=> 'Azkenengo minutu %d an egondako erabiltzaile aktiboetan oinarrituta',
-	'VIEW_ONLINE_TIMES'			=> 'Azkenengo %d minututan egondako erabiltzaile aktiboetan oinarrituta',
 	'VIEW_TOPIC'				=> 'Gaia ikusi',
 	'VIEW_TOPIC_ANNOUNCEMENT'	=> 'Iragarkia: ',
 	'VIEW_TOPIC_GLOBAL'			=> 'Iragarki orokorra: ',
@@ -861,23 +947,24 @@ $lang = array_merge($lang, array(
 	'WEBSITE'			=> 'Webgune',
 	'WHOIS'				=> 'Nor da?',
 	'WHO_IS_ONLINE'		=> 'Nor dago konektaturik?',
+	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'Pasahitz okerra sartu duzu.',
 	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
-	'WRONG_DATA_ICQ'			=> 'Sartutako zenbakia ez da ICQ zenbaki baliozkoa.',
 	'WRONG_DATA_JABBER'			=> 'Sartutako izena ez da Jabber kontu izen baliozkoa.',
 	'WRONG_DATA_LANG'			=> 'Zehaztutako hizkuntza ez da baliozkoa.',
-	'WRONG_DATA_WEBSITE'		=> 'Webguneko helbideak hasierako httpa ere eraman behar du. Adibidez http://www.adibidea.com/.',
+	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
+	'WRONG_DATA_POST_SK'		=> 'The post sort option you specified is not valid.',
+	'WRONG_DATA_TOPIC_SD'		=> 'The topic sort direction you specified is not valid.',
+	'WRONG_DATA_TOPIC_SK'		=> 'The topic sort option you specified is not valid.',
 	'WROTE'						=> 'Idatzita',
 
+	'YAHOO'				=> 'Yahoo Messenger',
+	'YOUTUBE'			=> 'YouTube',
 	'YEAR'				=> 'Urtea',
 	'YEAR_MONTH_DAY'	=> '(YYYY-MM-DD)',
 	'YES'				=> 'Bai',
-	'YIM'				=> 'YIM',
 	'YOU_LAST_VISIT'	=> 'Azkeneko bisita: %s',
-	'YOU_NEW_PM'		=> 'Mezu pribatu berria duzu sarrera ontzian.',
-	'YOU_NEW_PMS'		=> 'Mezu pribatu berriak dituzu sarrera ontzian.',
-	'YOU_NO_NEW_PM'		=> 'Ez duzu mezu pribatu berririk.',
 
 	'default_dateformat'	=> 'D M d, Y g:i a', // Mon Jan 01, 2007 1:37 pm
 
@@ -1083,7 +1170,6 @@ $lang = array_merge($lang, array(
 
 	'FORUM_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this forum.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this topic.',
-	'TOO_FEW_CHARS_LIMIT'	=> 'Zure mezuak %1$d karaktere ditu. Gutxienez %2$d karaktere sartu behar dituzu.',
 	'REPLY_TO_MESSAGE'		=> 'Reply to message',
 
 	'RSS_CHAN_LIST_TITLE'	=> 'Foroak',
@@ -1695,7 +1781,6 @@ $lang = array_merge($lang, array(
 	'DEV_NO_TEST_FILE'			=> 'No value has been specified for the test_file variable in the convertor. If you are a user of this convertor, you should not be seeing this error, please report this message to the convertor author. If you are a convertor author, you must specify the name of a file which exists in the source board to allow the path to it to be verified.',
 	'DIRECTORIES_AND_FILES'		=> 'Directory and file setup',
 	'DISABLE_KEYS'				=> 'Disabling keys',
-	'DLL_FIREBIRD'				=> 'Firebird',
 	'DLL_FTP'					=> 'Remote FTP support [ Installation ]',
 	'DLL_GD'					=> 'GD graphics support [ Visual Confirmation ]',
 	'DLL_MBSTRING'				=> 'Multi-byte character support',
@@ -1706,11 +1791,12 @@ $lang = array_merge($lang, array(
 	'DLL_MYSQLI'				=> 'MySQL with MySQLi Extension',
 	'DLL_ORACLE'				=> 'Oracle',
 	'DLL_POSTGRES'				=> 'PostgreSQL',
-	'DLL_SQLITE'				=> 'SQLite',
+	'DLL_SQLITE'				=> 'SQLite 2',
+	'DLL_SQLITE3'				=> 'SQLite 3',
 	'DLL_XML'					=> 'XML support [ Jabber ]',
 	'DLL_ZLIB'					=> 'zlib compression support [ gz, .tar.gz, .zip ]',
 	'DL_CONFIG'					=> 'Download config',
-	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.0 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'Deskargatu',
 	'DONE'						=> 'Egina',
 
@@ -1722,8 +1808,6 @@ $lang = array_merge($lang, array(
 	'FILES_REQUIRED_EXPLAIN'	=> '<strong>Required</strong> - In order to function correctly phpBB needs to be able to access or write to certain files or directories. If you see “Not Found” you need to create the relevant file or directory. If you see “Unwritable” you need to change the permissions on the file or directory to allow phpBB to write to it.',
 	'FILLING_TABLE'				=> 'Filling table <strong>%s</strong>',
 	'FILLING_TABLES'			=> 'Filling tables',
-
-	'FIREBIRD_DBMS_UPDATE_REQUIRED'		=> 'phpBB no longer supports Firebird/Interbase prior to Version 2.1. Please update your Firebird installation to at least 2.1.0 before proceeding with the update.',
 
 	'FINAL_STEP'				=> 'Process final step',
 	'FORUM_ADDRESS'				=> 'Board address',
@@ -1765,9 +1849,9 @@ $lang = array_merge($lang, array(
 	<p>phpBB3 supports the following databases:</p>
 	<ul>
 		<li>MySQL 3.23 or above (MySQLi supported)</li>
-		<li>PostgreSQL 7.3+</li>
+		<li>PostgreSQL 8.3+</li>
 		<li>SQLite 2.8.2+</li>
-		<li>Firebird 2.1+</li>
+		<li>SQLite 3.6.15+</li>
 		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
 		<li>MS SQL Server 2005 or above (native)</li>
 		<li>Oracle</li>
@@ -1789,9 +1873,8 @@ $lang = array_merge($lang, array(
 	'INST_ERR_DB_NO_ERROR'		=> 'No error message given.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'The version of MySQL installed on this machine is incompatible with the “MySQL with MySQLi Extension” option you have selected. Please try the “MySQL” option instead.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 2.8.2.',
+	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'The version of Oracle installed on this machine requires you to set the <var>NLS_CHARACTERSET</var> parameter to <var>UTF8</var>. Either upgrade your installation to 9.2+ or change the parameter.',
-	'INST_ERR_DB_NO_FIREBIRD'	=> 'The version of Firebird installed on this machine is older than 2.1, please upgrade to a newer version.',
-	'INST_ERR_DB_NO_FIREBIRD_PS'=> 'The database you selected for Firebird has a page size less than 8192, it must be at least 8192.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'The database you have selected was not created in <var>UNICODE</var> or <var>UTF8</var> encoding. Try installing with a database in <var>UNICODE</var> or <var>UTF8</var> encoding.',
 	'INST_ERR_DB_NO_NAME'		=> 'No database name specified.',
 	'INST_ERR_EMAIL_INVALID'	=> 'Sartutako posta elektroniko helbidea ez da baliogarria.',
@@ -1845,6 +1928,8 @@ $lang = array_merge($lang, array(
 	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB will <strong>not</strong> run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
 	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP function getimagesize() is available',
 	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Required</strong> - In order for phpBB to function correctly, the getimagesize function needs to be available.',
+	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'Optional modules',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>Optional</strong> - These modules or applications are optional. However, if they are available they will enable extra features.',
 	'PHP_SUPPORTED_DB'				=> 'Supported databases',
@@ -1853,10 +1938,10 @@ $lang = array_merge($lang, array(
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'phpBB will still run if this setting is enabled, but if possible, it is recommended that register_globals is disabled on your PHP install for security reasons.',
 	'PHP_SAFE_MODE'					=> 'Safe mode',
 	'PHP_SETTINGS'					=> 'PHP version and settings',
-	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 4.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
+	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'PHP setting <var>allow_url_fopen</var> is enabled',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>Optional</strong> - This setting is optional, however certain phpBB functions like off-site avatars will not work properly without it.',
-	'PHP_VERSION_REQD'				=> 'PHP version >= 4.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
 	'POST_ID'						=> 'Post ID',
 	'PREFIX_FOUND'					=> 'A scan of your tables has shown a valid installation using <strong>%s</strong> as table prefix.',
 	'PREPROCESS_STEP'				=> 'Executing pre-processing functions/queries',
@@ -1876,6 +1961,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> 'Zerbitzariaren konfigurazioa',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Search index was not converted',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Your old search index was not converted. Searching will always yield an empty result. To create a new search index go to the Administration Control Panel, select Maintenance and then choose Search index from the submenu.',
+	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> 'Board software',
 	'SPECIFY_OPTIONS'			=> 'Specify conversion options',
 	'STAGE_ADMINISTRATOR'		=> 'Administrator details',
@@ -1883,7 +1969,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> 'The settings on this page are only necessary to set if you know that you require something different from the default. If you are unsure, just proceed to the next page, as these settings can be altered from the Administration Control Panel later.',
 	'STAGE_CONFIG_FILE'			=> 'Configuration file',
 	'STAGE_CREATE_TABLE'		=> 'Create database tables',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.0 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'Database settings',
 	'STAGE_FINAL'				=> 'Final stage',
 	'STAGE_INTRO'				=> 'Introduction',
@@ -1896,7 +1982,7 @@ $lang = array_merge($lang, array(
 	'SUB_LICENSE'				=> 'License',
 	'SUB_SUPPORT'				=> 'Support',
 	'SUCCESSFUL_CONNECT'		=> 'Successful connection',
-	'SUPPORT_BODY'				=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="http://www.phpbb.com/community/viewforum.php?f=65">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>MODs / Styles</h2><p>For issues relating to MODs, please post in the appropriate <a href="http://www.phpbb.com/community/viewforum.php?f=81">Modifications Forum</a>.<br />For issues relating to styles, templates and imagesets, please post in the appropriate <a href="http://www.phpbb.com/community/viewforum.php?f=80">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="http://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="http://www.phpbb.com/support/">Support Section</a><br /><a href="http://www.phpbb.com/support/documentation/3.0/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="http://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
+	'SUPPORT_BODY'				=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/documentation/3.1/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
 	'SYNC_FORUMS'				=> 'Starting to synchronise forums',
 	'SYNC_POST_COUNT'			=> 'Synchronising post_counts',
 	'SYNC_POST_COUNT_ID'		=> 'Synchronising post_counts from <var>entry</var> %1$s to %2$s.',
@@ -1922,7 +2008,7 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ALL_FILES_UP_TO_DATE'		=> 'Fitxategi guztiak phpBBren azken bertsiora eguneratu dira. <a href="../ucp.php?mode=login&amp;redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">Foroan saioa has zenezake eta estatistikak bidali</a> dena ondo doan ziurtatzeko. Ez ahaztu install karpeta ezabatu, berrizendu edo lekuz aldatzeaz! Zerbitzariari eta foroaren ezarpenei buruzko informazio eguneratua bidaltzea eskertuko genizuke. Jo ezazu <a href="../ucp.php?mode=login&amp;redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">Esatistikak bidali</a> aukerara horretarako.',
+	'ALL_FILES_UP_TO_DATE'		=> 'All files are up to date with the latest phpBB version.',
 	'ARCHIVE_FILE'				=> 'Jatorrizko fitxategia',
 
 	'BACK'				=> 'Itzuli',
@@ -1945,7 +2031,10 @@ $lang = array_merge($lang, array(
 	'CURRENT_VERSION'				=> 'Oraingo bertsioa',
 
 	'DATABASE_TYPE'						=> 'Datubase mota',
+	'DATABASE_UPDATE_COMPLETE'			=> 'Database updater has completed!',
+	'DATABASE_UPDATE_CONTINUE'			=> 'Continue database update',
 	'DATABASE_UPDATE_INFO_OLD'			=> 'Instalazio karpetan dagoen datubaseko eguneratze fitxategia zaharkituta dago. Fitxategiko bertsio zuzena gehitu duzun ziurtatu.',
+	'DATABASE_UPDATE_NOT_COMPLETED'		=> 'The database update has not yet completed.',
 	'DELETE_USER_REMOVE'				=> 'Erabiltzailea eta bere mezuak ezabatu',
 	'DELETE_USER_RETAIN'				=> 'Erabiltzailea ezabatu baina bere mezuak mantendu',
 	'DESTINATION'						=> 'Xedezko fitxategia',
@@ -1964,14 +2053,17 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_UPDATE_METHOD'			=> 'Aldatutako fitxategiak deskargatu',
 	'DOWNLOAD_UPDATE_METHOD_EXPLAIN'	=> 'Behin deskargaturik, artxiboa zabaldu egin beharko zenuke. Bertan, zure phpBBko root karpetara igon beharko dituzun fitxategiak aurkituko dituzu. Dagokien karpetetan kokatu eta behekaldean agertzen den beste botoiarekin fitxategiak egiazta itzazu berriro.',
 
-	'ERROR'			=> 'Errorea',
 	'EDIT_USERNAME'	=> 'Erabiltzaile izena aldatu',
+	'ERROR'			=> 'Errorea',
+	'EVERYTHING_UP_TO_DATE'		=> 'Everything is up to date with the latest phpBB version. You should now <a href="%1$s">login to your board</a> and check if everything is working fine. Do not forget to delete, rename or move your install directory! Please send us updated information about your server and board configurations from the <a href="%2$s">Send statistics</a> module in your ACP.',
 
 	'FILE_ALREADY_UP_TO_DATE'		=> 'Fitxategi gaurkotua dagoeneko.',
 	'FILE_DIFF_NOT_ALLOWED'			=> 'Ezin zaio diffik jarri fitxategi honi.',
 	'FILE_USED'						=> 'Informazioa fitxategi honetatik erabilita',			// Single file
 	'FILES_CONFLICT'				=> 'Arazodun fitxategiak',
 	'FILES_CONFLICT_EXPLAIN'		=> 'Hurrengo fitxategiak aldatu egin dira eta ez dute lehengo bertsiokoekin bat egiten. phpBBk fitxategi hauek gehitzen saiatu nahi izanez gero,  arazoak sortuko dituztela erabaki du. Mesedez, arazoak ikertu itzazu eta eskuz konpontzen saiatu zaitez edota eguneratzea jarraitu hobetsitako batze sistema erabiliz. Arazoak eskuz konpontzea erabaki baldin baduzu, fitxategiak berriro egiazta itzazu behin aldatu eta gero. Fitxategiak batzeko sistemaren bat jarraitzea erabaki baldin baduzu, aukera bi dituzu: batetik, lehengo fitxategiko gatazka aurkezten duten lerroak ezabatzea eta bestetik, fitxategi berrian eginiko aldaketak ezabatzea.',
+	'FILES_DELETED'					=> 'Deleted files',
+	'FILES_DELETED_EXPLAIN'			=> 'The following files do not exist in the new version. These files have to be deleted from your installation.',
 	'FILES_MODIFIED'				=> 'Aldatutako fitxategiak',
 	'FILES_MODIFIED_EXPLAIN'		=> 'Hurrengo fitxategiak aldatu egin dira eta ez dute lehengo bertsiokoekin bat egiten. Eguneratutako fitxategia, aldaketa hauen eta fitxategi berriaren arteko bateratze bat izango da.',
 	'FILES_NEW'						=> 'Fitxategi berriak',
@@ -2033,6 +2125,7 @@ $lang = array_merge($lang, array(
 	'PREVIOUS_VERSION'					=> 'Aurreko bertsioa',
 	'PROGRESS'							=> 'Prozesua',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Announcement',
 	'RESULT'					=> 'Emaitza',
 	'RUN_DATABASE_SCRIPT'		=> 'Nire datubasea orain gaurkotu',
 
@@ -2040,6 +2133,7 @@ $lang = array_merge($lang, array(
 	'SELECT_DOWNLOAD_FORMAT'	=> 'Deskarga fitxategiaren formatua aukeratu',
 	'SELECT_FTP_SETTINGS'		=> 'FTP konfigurazioa aukeratu',
 	'SHOW_DIFF_CONFLICT'		=> 'Ezberdintasunak/Arazoak erakutsi',
+	'SHOW_DIFF_DELETED'			=> 'Show file contents',
 	'SHOW_DIFF_FINAL'			=> 'Ateratako fitxategia erakutsi',
 	'SHOW_DIFF_MODIFIED'		=> 'Aldatutako ezberdintasunak erakutsi',
 	'SHOW_DIFF_NEW'				=> 'Fitxategien edukia erakutsi',
@@ -2053,6 +2147,7 @@ $lang = array_merge($lang, array(
 	'STAGE_UPDATE_FILES'		=> 'Fitxategiak eguneratu',
 	'STAGE_VERSION_CHECK'		=> 'Bertsioa egiaztatu',
 	'STATUS_CONFLICT'			=> 'Arazodun aldatutako fitxategia',
+	'STATUS_DELETED'			=> 'Deleted file',
 	'STATUS_MODIFIED'			=> 'Aldatutako fitxategia',
 	'STATUS_NEW'				=> 'Fitxategi berria',
 	'STATUS_NEW_CONFLICT'		=> 'Arazodun fitxategi berria',
@@ -2071,35 +2166,29 @@ $lang = array_merge($lang, array(
 	'UPDATE_FILES_NOTICE'			=> 'Mesedez, foroko fitxategiak ere eguneratu dituzun ziurtatu, fitxategi honek zure datubasea baino ez bait du eguneratzen.',
 	'UPDATE_INSTALLATION'			=> 'phpBB instalazioa eguneratu da',
 	'UPDATE_INSTALLATION_EXPLAIN'	=> 'Aukera honekin, zure phpBB instalazioa azkeneko bertsiora eguneratu zenezake.<br /> Prozesuak irauten duen bitartean, fitxategi guztiak egiaztatuko dira osorik dauden ziurtatzeko. Lehenagoko fitxategi guztiak eta egingo zaizkien aldaketak ikusteko ahalmena izango duzu baita.<br /><br /><p>Fitxategien eguneratzea burutzeko aukera bi dituzu:</p><h2>Eskuz eguneratzea</h2> <p>Eguneratze mota honekin zuk zeuk aldatu dituzun fitxategien paketea baino ez duzu deskargatzen. Horrela, lehengo bertsioan egin zenitzaken fitxategien aldaketak (MODak) ez dituzula galduko ziurta zenezake. Behin paketea deskargaturik, fitxategiak eskuz gehitu beharko dituzu bakoitzari dagokion lekura zure phpBBko root karpeta barruan. Pausu hau burutu eta gero fitxategiak kokapen egokira igon dituzula ziurta ezazu.</p><h2>Automatikoki eguneratzea FTP bidez</h2><p>Lehenengo aukeraren antzekoa da baina aldatutako fitxategiak deskargatu eta berriro gehitzea ekiditzen duzu aukera honekin. Eguneratze automatikoa erabiltzeko zure FTP saioaren xehetasunak ezagutu beharko dituzu eskatu egingo zaizkizulako. Behin amaitu eta gero fitxategien kokapena egiaztatu beharko duzu berriro eguneratzea zuzen burutu dela ziurtatzeko.',
-	'UPDATE_INSTRUCTIONS'			=> '		
+	'UPDATE_INSTRUCTIONS'			=> '
 
-		<h1>Plazaratze iragarkia</h1>
+		<h1>Release announcement</h1>
 
-		<p>Mesedez, eguneratze prozesuarekin jarraitu baino lehen, irakur ezazu<a href="%1$s" title="%1$s"><strong> azkeneko bertsioaren plazaratze iragarkia</strong></a>, erabilgarria liteken informazioa eta deskarga osora bideratzen dituen loturak eta aldaketen erregistroa ditu eta.</p>
+		<p>Please read the release announcement for the latest version before you continue your update process, it may contain useful information. It also contains full download links as well as the change log.</p>
 
 		<br />
 
-		<h1>Zure instalazioa nola eguneratu Eguneratze Automatiko Paketea erabiliz</h1>
+		<h1>How to update your installation with the Automatic Update Package</h1>
 
-		<p>Instalazioa eguneratzeko pausu hauek baino ez dituzu jarraitu behar: (hemen azaltzen diren pausuak Eguneratze Automatiko Paketea erabiltzen baduzu baino ez dira baliagarriak. INSTALL.html dokumentuan eguneratze prozesua burutzeko erabil zenezaken beste hainbat metodoren zerrenda aurkituko duzu)</p>
+		<p>The recommended way of updating your installation listed here is only valid for the automatic update package. You are also able to update your installation using the methods listed within the INSTALL.html document. The steps for updating phpBB3 automatically are:</p>
 
 		<ul style="margin-left: 20px; font-size: 1.1em;">
-			<li><a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com webguneko deskarga atalera</a> jo ezazu eta "phpBB Eguneratze Automatiko Paketea" deskargatu.<br /><br /></li>
-			<li>Paketea zabaldu.<br /><br /></li>
-			<li>Deskonprimatutako instalazio karpeta zure phpBBko root karpetara gehitu (config.php fitxategia dagoen lekura, hain zuzen).<br /><br /></li>
+			<li>Go to the <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com downloads page</a> and download the "Automatic Update Package" archive.<br /><br /></li>
+			<li>Unpack the archive.<br /><br /></li>
+			<li>Upload the complete uncompressed install folder to your phpBB root directory (where your config.php file is).<br /><br /></li>
 		</ul>
 
-		<p>Behin fitxategia zure forora gehitu eta gero, foroa lineaz kanpo egongo da erabiltzaileentzako instalazio karpeta egotearen erruz.<br /><br />
-		<strong><a href="%2$s" title="%2$s">Orain eguneratze prozesua hasi nabigatzailea install karpetan jarriz. </a>.</strong><br />
+		<p>Once uploaded your board will be offline for normal users due to the install directory you uploaded now present.<br /><br />
+		<strong><a href="%1$s" title="%1$s">Now start the update process by pointing your browser to the install folder</a>.</strong><br />
 		<br />
-		Eguneratze prozesuan jarritako pausuak jarraitzea baino ez duzu orain. Eguneratzea burutzerakoan ohartu egingo zaizu.
+		You will then be guided through the update process. You will be notified once the update is complete.
 		</p>
-	',
-	'UPDATE_INSTRUCTIONS_INCOMPLETE'	=> '
-
-		<h1>Osatu gabeko eguneratzea aurkitu da </h1>
-
-		<p>phpBBk osatu gabeko eguneratze automatiko bat aurkitu du. Eguneratze automatiko tresnak adierazitako pausu guztiak zuzen jarraitu duzun ziurtatu. Berriro eguneratzeko lotura agertuko zaizu behekaldean edo jo ezazu zuzenean install karpetara.</p>
 	',
 	'UPDATE_METHOD'					=> 'Eguneratze metodoa',
 	'UPDATE_METHOD_EXPLAIN'			=> 'Erabili nahi duzun eguneratze metodoa aukeratu dezakezu orain. Fitxategiak FTP bidez gehitzea aukeratzen baldin baduzu, zure FTP kontuko xehetasunakin bete beharko duzun formulario bat agertuko zaizu. Metodo hau erabiliz fitxategiak automatikoki gehituko dira kokapen berrira eta lehengo fitxategien segurtasun kopia sortuko da beraien izenei .bak gehituz. Aldatutako fitxategiak deskargatzea aukeratzen baldin baduzu, paketeak zabaldu eta foroko karpetetan eskuz kokatu beharko dituzu.',
@@ -2110,10 +2199,10 @@ $lang = array_merge($lang, array(
 	'UPDATING_DATA'					=> 'Datuak eguneratzen',
 	'UPDATING_TO_LATEST_STABLE'		=> 'Datubasea azkeneko bertsio egonkorrera eguneratzen',
 	'UPDATED_VERSION'				=> 'Bertsio eguneratua',
-	'UPGRADE_INSTRUCTIONS'			=> '<strong>%1$s</strong> eguneraketa beria eskuragarri dago. Irakur ezazu, mesedez, <a href="%2$s" title="%2$s"><strong>kaleratzearen berria</strong></a> zer eskaintzen duen eta nola eguneratu jakiteko.',
 	'UPLOAD_METHOD'					=> 'Gehitze metodoa',
 
 	'UPDATE_DB_SUCCESS'				=> 'Datubasea zuzen  eguneratu da.',
+	'UPDATE_FILE_SUCCESS'			=> 'File update was successful.',
 	'USER_ACTIVE'					=> 'Gaitutako erabiltzailea',
 	'USER_INACTIVE'					=> 'Desgaitutako erabiltzailea',
 
@@ -2173,6 +2262,33 @@ $lang = array_merge($lang, array(
 	'TOPICS_TOPIC_TITLE'			=> 'Ongietorri phpBB3ra',
 ));
 
+#######language/en/migrator.php#######
+
+$lang = array_merge($lang, array(
+	'CONFIG_NOT_EXIST'					=> 'The config setting "%s" unexpectedly does not exist.',
+
+	'GROUP_NOT_EXIST'					=> 'The group "%s" unexpectedly does not exist.',
+
+	'MIGRATION_APPLY_DEPENDENCIES'		=> 'Apply dependencies of %s.',
+	'MIGRATION_DATA_DONE'				=> 'Installed Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_IN_PROGRESS'		=> 'Installing Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_RUNNING'			=> 'Installing Data: %s.',
+	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
+	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
+	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
+	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
+	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
+	'MODULE_NOT_EXIST'					=> 'A required module does not exist: %s',
+
+	'PERMISSION_NOT_EXIST'				=> 'The permission setting "%s" unexpectedly does not exist.',
+
+	'ROLE_NOT_EXIST'					=> 'The permission role "%s" unexpectedly does not exist.',
+));
+
 #######language/en/mcp.php#######
 
 $lang = array_merge($lang, array(
@@ -2193,6 +2309,10 @@ $lang = array_merge($lang, array(
 	'APPROVE_POST_CONFIRM'	=> 'Ziur mezu hau onartu nahi duzula?',
 	'APPROVE_POSTS'			=> 'Mezuak onartu',
 	'APPROVE_POSTS_CONFIRM'	=> 'Ziur mezu hauek onartu nahi dituzula?',
+	'APPROVE_TOPIC'			=> 'Approve topic',
+	'APPROVE_TOPIC_CONFIRM'	=> 'Are you sure you want to approve this topic?',
+	'APPROVE_TOPICS'		=> 'Approve topics',
+	'APPROVE_TOPICS_CONFIRM'=> 'Are you sure you want to approve the selected topics?',
 
 	'CANNOT_MOVE_SAME_FORUM'=> 'Dagoeneko badagoen forora ezin duzu gairik mugitu.',
 	'CANNOT_WARN_ANONYMOUS'	=> 'Ezin duzu saiorik hasi ez duen erabiltzailerik ohartarazi.',
@@ -2213,16 +2333,12 @@ $lang = array_merge($lang, array(
 	'DELETE_PM_REPORTS'			=> 'MPen berri-emateak ezabatu',
 	'DELETE_PM_REPORTS_CONFIRM'	=> 'Ziur aukeratutako MPen berri-emateak ezabatu nahi dituzula?',
 	'DELETE_POSTS'				=> 'Mezuak ezabatu',
-	'DELETE_POSTS_CONFIRM'		=> 'Ziur mezu hauek ezabatu nahi dituzula?',
-	'DELETE_POST_CONFIRM'		=> 'Ziur mezu hau ezabatu nahi duzula?',
 	'DELETE_REPORT'				=> 'Berri-ematea ezabatu',
 	'DELETE_REPORT_CONFIRM'		=> 'Ziur aukeratutako berri-ematea ezabatu nahi duzula?',
 	'DELETE_REPORTS'			=> 'Berri-emateak ezabatu',
 	'DELETE_REPORTS_CONFIRM'	=> '¿Ziur aukeratutako berri-emateak ezabatu nahi dituzula?',
 	'DELETE_SHADOW_TOPIC'		=> 'Gai ilundua ezabatu',
 	'DELETE_TOPICS'				=> 'Gaiak ezabatu',
-	'DELETE_TOPICS_CONFIRM'		=> 'Ziur gai hauek ezabatu nahi dituzula?',
-	'DELETE_TOPIC_CONFIRM'		=> 'Ziur gai hau ezabatu nahi duzula?',
 	'DISAPPROVE'				=> 'Ez onartu',
 	'DISAPPROVE_REASON'			=> 'Ez onartzearen arrazoia',
 	'DISAPPROVE_POST'			=> 'Ez onartu mezua',
@@ -2260,8 +2376,6 @@ $lang = array_merge($lang, array(
 	'LATEST_WARNING_TIME'		=> 'Bidalitako azken ohartarazpena',
 	'LATEST_WARNINGS'			=> 'Azkeneko 5 ohartarazpenak',
 	'LEAVE_SHADOW'				=> 'Gai ilundua hemen utzi',
-	'LIST_REPORT'				=> 'Berri-emate 1',
-	'LIST_REPORTS'				=> '%d berri-emate',
 	'LOCK'						=> 'Itxi',
 	'LOCK_POST_POST'			=> 'Mezua itxi',
 	'LOCK_POST_POST_CONFIRM'	=> 'Ziur mezu hau aldatu daiten ekidi nahi duzula?',
@@ -2340,6 +2454,10 @@ $lang = array_merge($lang, array(
 	'MCP_QUEUE_UNAPPROVED_POSTS_EXPLAIN'	=> 'Erabiltzaileentzako ikusgarri bilakatu daitezen onarpenaren zain dauden mezuen zerrenda duzu hau.',
 	'MCP_QUEUE_UNAPPROVED_TOPICS'			=> 'Gaiak onarpenaren zain',
 	'MCP_QUEUE_UNAPPROVED_TOPICS_EXPLAIN'	=> 'Erabiltzaileentzako ikusgarri bilakatu daitezen onarpenaren zain dauden gaien zerrenda duzu hau.',
+	'MCP_QUEUE_DELETED_POSTS'				=> 'Deleted posts',
+	'MCP_QUEUE_DELETED_POSTS_EXPLAIN'		=> 'This is a list of all soft deleted posts. You can restore or permanently delete the posts from this screen.',
+	'MCP_QUEUE_DELETED_TOPICS'				=> 'Deleted topics',
+	'MCP_QUEUE_DELETED_TOPICS_EXPLAIN'		=> 'This is a list of all soft deleted topics. You can restore or permanently delete the topics from this screen.',
 
 	'MCP_VIEW_USER'			=> 'Erabitzaile jakin baten ohartarazpenak ikusi',
 
@@ -2378,25 +2496,27 @@ $lang = array_merge($lang, array(
 	'NO_POST'						=> 'Erabiltzailea ohartarazi nahi baduzu, mezu bat aukeratu behar duzu.',
 	'NO_POST_REPORT'				=> 'Ez da mezu honi buruz berririk eman.',
 	'NO_POST_SELECTED'				=> 'Mezuren bat aukeratu behar duzu gutxienez eragiketa burutzeko.',
+	'NO_POSTS_DELETED'				=> 'There are no deleted posts.',
+	'NO_POSTS_QUEUE'				=> 'There are no posts waiting for approval.',
 	'NO_REASON_DISAPPROVAL'			=> 'Mesedez, ez onartzea azalduko luken arrazoi egoki bat eman.',
 	'NO_REPORT'						=> 'Ez da berri-ematerik aurkitu',
 	'NO_REPORTS'					=> 'Ez da berri-ematerik aurkitu',
 	'NO_REPORT_SELECTED'			=> 'Berri-emateren bat aukeratu behar duzu gutxienez eragiketa burutzeko.',
 	'NO_TOPIC_ICON'					=> 'Bat ere ez',
 	'NO_TOPIC_SELECTED'				=> 'Gairen bat aukeratu behar duzu eragiketa burutzeko.',
+	'NO_TOPICS_DELETED'				=> 'There are no deleted topics.',
 	'NO_TOPICS_QUEUE'				=> 'Ez da gairik onapenaren zain.',
 
 	'ONLY_TOPIC'			=> '"%s" gaia baino ez',
 	'OTHER_USERS'			=> 'IP honetatik mezuak bidaltzen dituzten beste erabiltzaileak',
 
+	'QUICKMOD_ACTION_NOT_ALLOWED' => "%s not allowed as quickmod",
+
 	'PM_REPORT_CLOSED_SUCCESS'	=> 'Aukeratutako MParen berri-ematea zuzen itxi da.',
 	'PM_REPORT_DELETED_SUCCESS'	=> 'Aukeratutako MParen berri-ematea zuzen ezabatu da.',
 	'PM_REPORTED_SUCCESS'		=> 'Mezu pribatu honen berri-ematea zuzen egin da.',
-	'PM_REPORT_TOTAL'			=> 'MP berri-emate <strong>1</strong> dago gainbegiratzeko.',
 	'PM_REPORTS_CLOSED_SUCCESS'	=> 'Aukeratutako MPen berri-emateak zuzen itxi dira.',
 	'PM_REPORTS_DELETED_SUCCESS'=> 'Aukeratutako MPen berri-emateak zuzen ezabatu dira.',
-	'PM_REPORTS_TOTAL'			=> '<strong>%d</strong> MPen berri-emate daude gainbegiratzeko.',
-	'PM_REPORTS_ZERO_TOTAL'		=> 'Ez dago gainbegiratzeko MPen berri-ematerik.',
 	'PM_REPORT_DETAILS'			=> 'Mezu pribatuaren berri-ematearen xehetasunak',
 	'POSTER'					=> 'Bidaltzailea',
 	'POSTS_APPROVED_SUCCESS'	=> 'Aukeratutako mezuak onartu egin dira.',
@@ -2404,15 +2524,17 @@ $lang = array_merge($lang, array(
 	'POSTS_DISAPPROVED_SUCCESS'	=> 'Aukeratutako mezuak ez dira onartu.',
 	'POSTS_LOCKED_SUCCESS'		=> 'Aukeratutako mezuak zuzen itxi egin dira.',
 	'POSTS_MERGED_SUCCESS'		=> 'Aukeratutako mezuak bateratu egin dira.',
-	'POSTS_UNLOCKED_SUCCESS'	=> 'Aukeratutako mezuak zuzen zabaldu dira.',
 	'POSTS_PER_PAGE'			=> 'Orriko mezu',
 	'POSTS_PER_PAGE_EXPLAIN'	=> '(0 jar ezazu mezu guztiak ikusteko)',
+	'POSTS_RESTORED_SUCCESS'	=> 'The selected posts have been restored successfully.',
+	'POSTS_UNLOCKED_SUCCESS'	=> 'Aukeratutako mezuak zuzen zabaldu dira.',
 	'POST_APPROVED_SUCCESS'		=> 'Aukeratutako mezua onartu egin da.',
 	'POST_DELETED_SUCCESS'		=> 'Aukeratutako mezua zuzen ezabatu da datubasetik.',
 	'POST_DISAPPROVED_SUCCESS'	=> 'Aukeratutako mezua ez da onartu.',
 	'POST_LOCKED_SUCCESS'		=> 'Aukeratutako mezua zuzen itxi da.',
 	'POST_NOT_EXIST'			=> 'Eskatutako mezua ez da existitzen.',
 	'POST_REPORTED_SUCCESS'		=> 'Zuzen eman da mezu honen berri',
+	'POST_RESTORED_SUCCESS'		=> 'This post has been restored successfully.',
 	'POST_UNLOCKED_SUCCESS'		=> 'Mezua zuzen zabaldu da.',
 
 	'READ_USERNOTES'			=> 'Erabiltzailearen oharrak irakurri',
@@ -2423,8 +2545,6 @@ $lang = array_merge($lang, array(
 	'REPORTED_ON_DATE'			=> 'eguna',
 	'REPORTS_CLOSED_SUCCESS'	=> 'Aukeratutako berri-emateak zuzen itxi dira.',
 	'REPORTS_DELETED_SUCCESS'	=> 'Aukeratutako berri-emateak zuzen ezabatu dira.',
-	'REPORTS_TOTAL'				=> 'Guztira, <strong>%d</strong> berri-emate daude aztertzeke.',
-	'REPORTS_ZERO_TOTAL'		=> 'Ez da berri-ematerik aztertzeke.',
 	'REPORT_CLOSED'				=> 'Berri-emate hau dagoeneko itxi egin da.',
 	'REPORT_CLOSED_SUCCESS'		=> 'Aukeratutako berri-ematea zuzen itxi da.',
 	'REPORT_DELETED_SUCCESS'	=> 'Aukeratutako berri-ematea zuzen ezabatu da.',
@@ -2436,7 +2556,15 @@ $lang = array_merge($lang, array(
 	'REPORT_POST_EXPLAIN'		=> 'Formulario hau bete ezazu aukeratutako mezuaren berri emateko moderadoreai eta Foroko Administrariei. Mezuak foroko arauak hautsiko balitu baino ez litzateke erabili behar berri-ematearen aukera.',
 	'REPORT_REASON'				=> 'Berri-ematearen arrazoia',
 	'REPORT_TIME'				=> 'Berri-ematearen ordua',
-	'REPORT_TOTAL'				=> 'Guztira, berri-emate <strong>1</strong> dago aztertzeke',
+	'RESTORE'					=> 'Restore',
+	'RESTORE_POST'				=> 'Restore post',
+	'RESTORE_POST_CONFIRM'		=> 'Are you sure you want to restore this post?',
+	'RESTORE_POSTS'				=> 'Restore posts',
+	'RESTORE_POSTS_CONFIRM'		=> 'Are you sure you want to restore the selected posts?',
+	'RESTORE_TOPIC'				=> 'Restore topic',
+	'RESTORE_TOPIC_CONFIRM'		=> 'Are you sure you want to restore this topic?',
+	'RESTORE_TOPICS'			=> 'Restore topics',
+	'RESTORE_TOPICS_CONFIRM'	=> 'Are you sure you want to restore the selected topics?',
 	'RESYNC'					=> 'Bersinkronizatu',
 	'RETURN_MESSAGE'			=> '%sMezura itzuli%s',
 	'RETURN_NEW_FORUM'			=> '%sForo berria itzuli%s',
@@ -2477,6 +2605,7 @@ $lang = array_merge($lang, array(
 	'TOPICS_FORKED_SUCCESS'		=> 'Aukeratutako gaiak zuzen banatu dira.',
 	'TOPICS_LOCKED_SUCCESS'		=> 'Aukeratutako gaiak itxi egin dira.',
 	'TOPICS_MOVED_SUCCESS'		=> 'Aukeratutako gaiak zuzen mugitu dira.',
+	'TOPICS_RESTORED_SUCCESS'	=> 'The selected topics have been restored successfully.',
 	'TOPICS_RESYNC_SUCCESS'		=> 'Aukeratutako gaiak bersinkronizatu egin dira.',
 	'TOPICS_TYPE_CHANGED'		=> 'Gaien mota zuzen aldatu egin da.',
 	'TOPICS_UNLOCKED_SUCCESS'	=> 'Aukeratutako gaiak zabaldu egin dira.',
@@ -2487,6 +2616,7 @@ $lang = array_merge($lang, array(
 	'TOPIC_LOCKED_SUCCESS'		=> 'Aukeratutako gaia itxi egin da.',
 	'TOPIC_MOVED_SUCCESS'		=> 'Aukeratutako gaia zuzen mugitu da.',
 	'TOPIC_NOT_EXIST'			=> 'Aukeratutako gaia ez da existitzen.',
+	'TOPIC_RESTORED_SUCCESS'	=> 'The selected topic has been restored successfully.',
 	'TOPIC_RESYNC_SUCCESS'		=> 'Aukeratutako gaia bersinkronizatu egin da.',
 	'TOPIC_SPLIT_SUCCESS'		=> 'Aukeratutako gaia zuzen banandu da.',
 	'TOPIC_TIME'				=> 'Gaiaren ordua',
@@ -2494,9 +2624,6 @@ $lang = array_merge($lang, array(
 	'TOPIC_UNLOCKED_SUCCESS'	=> 'Aukeratutako gaia zabaldu egin da.',
 	'TOTAL_WARNINGS'			=> 'Ohartarazpen guztira',
 
-	'UNAPPROVED_POSTS_TOTAL'		=> 'Guztira, <strong>%d</strong> mezu daude onarpenaren zain.',
-	'UNAPPROVED_POSTS_ZERO_TOTAL'	=> 'Ez da mezurik onarpenaren zain.',
-	'UNAPPROVED_POST_TOTAL'			=> 'Guztira, mezu <strong>1</strong> dago onarpenaren zain.',
 	'UNLOCK'						=> 'Zabaldu',
 	'UNLOCK_POST'					=> 'Mezua zabaldu',
 	'UNLOCK_POST_EXPLAIN'			=> 'Aldaketak baimendu',
@@ -2522,7 +2649,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'Foro honetako moderadore edo adiministratzaileren batek jarritako ohartarazpena duzu hau.[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'Ohartarazpena jarrita',
 	'WARNING_POST_DEFAULT'	=> 'Ohartarazpen hau zuk bidalitako hurrengo mezuari atxikitzen zaio: %s',
-	'WARNINGS_ZERO_TOTAL'	=> 'Ez da ohartarazpenik.',
+	'NO_WARNINGS'	=> 'No warnings exist.',
 
 	'YOU_SELECTED_TOPIC'	=> '%d: %s zenbakidun gaia aukeratu duzu.',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -2562,10 +2689,12 @@ $lang = array_merge($lang, array(
 	'ALL'					=> 'Guztiak',
 	'BEFORE'				=> 'Lehenagokoa',
 	'CC_EMAIL'				=> 'Posta elektroniko honen kopia norberari bialdu',
-	'CONTACT_USER'			=> 'Kontaktua',
+	'CONTACT_ADMIN'			=> 'Contact a Board Administrator',
 
 	'DEST_LANG'				=> 'Hizkuntza',
 	'DEST_LANG_EXPLAIN'		=> 'Mezu honen hartzaileari dagokion hizkuntza (balego) aukeratu.',
+
+	'EDIT_PROFILE'			=> 'Edit Profile',
 
 	'EMAIL_BODY_EXPLAIN'	=> 'Mezu hau testu lau modura bidaliko da, ez ezazu HTMLrik edo BBCoderik erabili. Bidaltzailearen helbidea zure posta elektronikoaren helbidea izango da.',
 	'EMAIL_DISABLED'		=> 'Barkatu, baina posta elektronikoari dagozkion eragiketa guztiak ezgaitu egin dira.',
@@ -2575,7 +2704,9 @@ $lang = array_merge($lang, array(
 	'EMPTY_MESSAGE_EMAIL'	=> 'Testua gehitu behar diozu mezuari.',
 	'EMPTY_MESSAGE_IM'		=> 'Testua gehitu behar diozu mezuari.',
 	'EMPTY_NAME_EMAIL'		=> 'Hartzailearen benetako izena gehitu behar duzu.',
-	'EMPTY_SUBJECT_EMAIL'	=> 'Mezuaren izenburua zehaztu behar duzu.',
+	'EMPTY_SENDER_EMAIL'	=> 'You must provide a valid email address.',
+	'EMPTY_SENDER_NAME'		=> 'You must provide a name.',
+	'EMPTY_SUBJECT_EMAIL'	=> 'You must specify a subject for the email.',
 	'EQUAL_TO'				=> '(r)en beridina',
 
 	'FIND_USERNAME_EXPLAIN'	=> 'Erabiltzaile jakinak bilatzeko, erabil ezazu formulario hau. Ez duzu zertan eremu guztiak betetu behar. Ez badituzu datuak osoan ezagutzen * zeinua erabil zenezake komodin gisa. Datak sartzerakoan <kbd>YYYY-MM-DD</kbd> formatua erabili, adibidez <samp>2004-02-29</samp>. Baieztatze laukitxoak (checkboxes) erabil itzazu erabiltzaile bat(zuk) aukeratzeko (formulariaren arabera erabiltzaile bat baino gehiago onartu daitezke) eta klikatu "Markatutakoak aukeratu" botoian lehengo formuariora itzultzeko.',
@@ -2585,16 +2716,10 @@ $lang = array_merge($lang, array(
 	'HIDE_MEMBER_SEARCH'	=> 'Erabiltzaile ezkutuak bilatu',
 
 	'IM_ADD_CONTACT'		=> 'Kontaktua gehitu',
-	'IM_AIM'				=> 'Mesedez, kontuan izan AOL Instant Messenger instalaturik izan behar duzula aukera hori erabiltzeko.',
-	'IM_AIM_EXPRESS'		=> 'AIM Express',
 	'IM_DOWNLOAD_APP'		=> 'Aplikazioa deskargatu',
-	'IM_ICQ'				=> 'Mesedez, kontuan izan erabiltzaileek eskatu gabeko berehalako mezurik ez jasotzea aukeratu izan dezaketela.',
 	'IM_JABBER'				=> 'Mesedez, kontuan izan erabiltzaileek eskatu gabeko berehalako mezurik ez jasotzea aukeratu izan dezaketela.',
 	'IM_JABBER_SUBJECT'		=> 'Automatikoki bidalitako mezua duzu hau. Ez ezazu erantzun! %1$s erabiltzailearen mezuan %2$s(a)n',
 	'IM_MESSAGE'			=> 'Zure mezua',
-	'IM_MSNM'				=> 'Mesedez, kontuan izan Windows Messenger instalaturik izan behar duzula aukera hori erabiltzeko.',
-	'IM_MSNM_BROWSER'		=> 'Zure nabigatzaileak ez du aukera hori eusten.',
-	'IM_MSNM_CONNECT'		=> 'MSNM konektatu gabe.\\nMSNMra konektatu behar duzu jarraitzeko.',
 	'IM_NAME'				=> 'Zure izena',
 	'IM_NO_DATA'			=> 'Ez da baliogarria liteken kontaktu informaziorik erabiltzaile honentzako.',
 	'IM_NO_JABBER'			=> 'Barkatu, baina foro honetan ezin daiteke Jabber erabiltzaileen mezu zuzenik bidali. Jabber bezeroren bat izan behar duzu sisteman instalaturik hartzailearekin kontaktuan jartzeko.',
@@ -2606,15 +2731,15 @@ $lang = array_merge($lang, array(
 
 	'LAST_ACTIVE'				=> 'Aktibo egondako azkeneko aldia',
 	'LESS_THAN'					=> 'Hurrengoa baino gutxiago',
-	'LIST_USER'					=> 'Erabiltzaile 1',
-	'LIST_USERS'				=> '%d erabiltzaile',
-	'LOGIN_EXPLAIN_LEADERS'		=> 'Foroko taldearen zerrenda ikusteko izena eman eta saioa hasi behar duzu.',
+	'LOGIN_EXPLAIN_TEAM'		=> 'The board requires you to be registered and logged in to view the team listing.',
 	'LOGIN_EXPLAIN_MEMBERLIST'	=> 'Foroko erabiltzaileen zerrenda ikusteko izena eman eta saioa hasi behar duzu.',
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'Foroko erabiltzaileak bilatzeko izena eman eta saioa hasi behar duzu.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'Foroko erabiltzaileen profilak ikusteko izena eman eta saioa hasi behar duzu.',
 
 	'MORE_THAN'				=> 'Hurrengoa baino gehiago',
 
+	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
+	'NO_CONTACT_PAGE'		=> 'The board administrator contact page has been disabled.',
 	'NO_EMAIL'				=> 'Ez duzu erabiltzaile honi mezu elektronikoak bidaltzeko baimenik.',
 	'NO_VIEW_USERS'			=> 'Ez duz erabiltzaileen zerrenda edo profilako ikusteko baimenik.',
 
@@ -2631,12 +2756,12 @@ $lang = array_merge($lang, array(
 
 	'SELECT_MARKED'			=> 'Markatutakoak aukeratu',
 	'SELECT_SORT_METHOD'	=> 'Orden metodoa aukeratu',
-	'SEND_AIM_MESSAGE'		=> 'AIM mezua bidali',
+	'SENDER_EMAIL_ADDRESS'	=> 'Your email address',
+	'SENDER_NAME'			=> 'Your name',
 	'SEND_ICQ_MESSAGE'		=> 'ICQ mezua bidali',
 	'SEND_IM'				=> 'Berehalako mezua bidali',
 	'SEND_JABBER_MESSAGE'	=> 'Jabber mezua bidali',
 	'SEND_MESSAGE'			=> 'Mezua bidali',
-	'SEND_MSNM_MESSAGE'		=> 'MSNM/WLM mezua bidali',
 	'SEND_YIM_MESSAGE'		=> 'YIM mezua bidali',
 	'SORT_EMAIL'			=> 'Posta elektronikoa',
 	'SORT_LAST_ACTIVE'		=> 'Azkeneko eragiketa',
@@ -2644,12 +2769,18 @@ $lang = array_merge($lang, array(
 
 	'USERNAME_BEGINS_WITH'	=> 'Honekin hasten diren erabiltzaile izenak',
 	'USER_ADMIN'			=> 'Erabiltzailea kudeatu',
-	'USER_BAN'				=> 'Debekatu',
+	'USER_BAN'				=> 'Ban one or more users by username',
 	'USER_FORUM'			=> 'Erabiltzailearen estatistikak',
 	'USER_ONLINE'			=> 'Konektatuta',
 	'USER_PRESENCE'			=> 'Foroan une honetan ',
+	'USERS_PER_PAGE'		=> 'Users per page',
 
 	'VIEWING_PROFILE'		=> '%s (r)en profila ikusten',
+	'VIEW_FACEBOOK_PROFILE'	=> 'View Facebook Profile',
+	'VIEW_SKYPE_PROFILE'	=> 'View Skype Profile',
+	'VIEW_TWITTER_PROFILE'	=> 'View Twitter Profile',
+	'VIEW_YOUTUBE_CHANNEL'	=> 'View YouTube Channel',
+	'VIEW_GOOGLEPLUS_PROFILE' => 'View Google+ Profile',
 	'VISITED'				=> 'Azkeneko bisita',
 
 	'WWW'					=> 'Webgunea',
@@ -2674,6 +2805,47 @@ $lang = array_merge($lang, array(
 	'USER_COMM_RANK'	=> 'Overall reviews:',
 	'USER_COMM_PERCENT'	=> 'Overall assessment of the user:',
 
+));
+
+#######language/en/plupload.php#######
+
+$lang = array_merge($lang, array(
+	'PLUPLOAD_ADD_FILES'		=> 'Add files',
+	'PLUPLOAD_ADD_FILES_TO_QUEUE'	=> 'Add files to the upload queue and click the start button.',
+	'PLUPLOAD_ALREADY_QUEUED'	=> '%s already present in the queue.',
+	'PLUPLOAD_CLOSE'			=> 'Close',
+	'PLUPLOAD_DRAG'				=> 'Drag files here.',
+	'PLUPLOAD_DUPLICATE_ERROR'	=> 'Duplicate file error.',
+	'PLUPLOAD_DRAG_TEXTAREA'	=> 'You may also attach files by dragging and dropping them in the message box.',
+	'PLUPLOAD_ERR_INPUT'		=> 'Failed to open input stream.',
+	'PLUPLOAD_ERR_MOVE_UPLOADED'	=> 'Failed to move uploaded file.',
+	'PLUPLOAD_ERR_OUTPUT'		=> 'Failed to open output stream.',
+	'PLUPLOAD_ERR_FILE_TOO_LARGE'	=> 'File too large:',
+	'PLUPLOAD_ERR_FILE_COUNT'	=> 'File count error.',
+	'PLUPLOAD_ERR_FILE_INVALID_EXT'	=> 'Invalid file extension:',
+	'PLUPLOAD_ERR_RUNTIME_MEMORY'	=> 'Runtime ran out of available memory.',
+	'PLUPLOAD_ERR_UPLOAD_URL'	=> 'Upload URL might be wrong or does not exist.',
+	'PLUPLOAD_EXTENSION_ERROR'	=> 'File extension error.',
+	'PLUPLOAD_FILE'				=> 'File: %s',
+	'PLUPLOAD_FILE_DETAILS'		=> 'File: %s, size: %d, max file size: %d',
+	'PLUPLOAD_FILENAME'			=> 'Filename',
+	'PLUPLOAD_FILES_QUEUED'		=> '%d files queued',
+	'PLUPLOAD_GENERIC_ERROR'	=> 'Generic error.',
+	'PLUPLOAD_HTTP_ERROR'		=> 'HTTP error.',
+	'PLUPLOAD_IMAGE_FORMAT'		=> 'Image format either wrong or not supported.',
+	'PLUPLOAD_INIT_ERROR'		=> 'Init error.',
+	'PLUPLOAD_IO_ERROR'			=> 'IO error.',
+	'PLUPLOAD_NOT_APPLICABLE'	=> 'N/A',
+	'PLUPLOAD_SECURITY_ERROR'	=> 'Security error.',
+	'PLUPLOAD_SELECT_FILES'		=> 'Select files',
+	'PLUPLOAD_SIZE'				=> 'Size',
+	'PLUPLOAD_SIZE_ERROR'		=> 'File size error.',
+	'PLUPLOAD_STATUS'			=> 'Status',
+	'PLUPLOAD_START_UPLOAD'		=> 'Start upload',
+	'PLUPLOAD_START_CURRENT_UPLOAD'	=> 'Start uploading queue',
+	'PLUPLOAD_STOP_UPLOAD'		=> 'Stop upload',
+	'PLUPLOAD_STOP_CURRENT_UPLOAD'	=> 'Stop current upload',
+	'PLUPLOAD_UPLOADED'			=> 'Uploaded %d/%d files',
 ));
 
 #######language/en/portal.php#######
@@ -2919,12 +3091,12 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s <em>desgaituta</em>dago',
 	'BBCODE_IS_ON'				=> '%sBBCode%s <em>gaituta</em>dago',
 	'BBCODE_I_HELP'				=> 'Letra etzana: [i]testua[/i]  (alt+i)',
-	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]',
 	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
 	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Irudia txertatu: [img]http://irudia_url[/img]  (alt+p)',
 	'BBCODE_Q_HELP'				=> 'Testua aipatu: [quote]testua[/quote]  (alt+q)',
-	'BBCODE_S_HELP'				=> 'Letra kolorea: [color=red]testua[/color]  Tip: kolore kodeak ere erabili daitezke=#FF0000',
+	'BBCODE_S_HELP'				=> 'Font colour: [color=red]text[/color] or [color=#FF0000]text[/color]',
 	'BBCODE_U_HELP'				=> 'Testua azpimarratu: [u]testua[/u]  (alt+u)',
 	'BBCODE_W_HELP'				=> 'URLa txertatu: [url]http://url[/url] edo [url=http://url]URL testua[/url]  (alt+w)',
 	'BUMP_ERROR'				=> 'Oraindik ez da zure azken mezutik hona denbora tarte nahikorik igaro gai hau sustatzeko.',
@@ -2943,8 +3115,20 @@ $lang = array_merge($lang, array(
 	'DELETE_MESSAGE'			=> 'Mezua ezabatu',
 	'DELETE_MESSAGE_CONFIRM'	=> 'Ziur mezu hau ezabatu nahi duzula?',
 	'DELETE_OWN_POSTS'			=> 'Barkatu, baina zuk bidalitako mezuak baino ezin ditzakezu ezabatu.',
+	'DELETE_PERMANENTLY'		=> 'Delete permanently',
 	'DELETE_POST_CONFIRM'		=> 'Ziur mezu hau ezabatu nahi duzula?',
-	'DELETE_POST_WARN'			=> 'Behin ezabatu eta gero mezuen haria ezin daiteke berreskuratu.',
+	'DELETE_POST_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this post?',
+	'DELETE_POST_PERMANENTLY'	=> 'Permanently delete this post so it can not be recovered',
+	'DELETE_POSTS_CONFIRM'		=> 'Ziur mezu hauek ezabatu nahi dituzula?',
+	'DELETE_POSTS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these posts?',
+	'DELETE_REASON'				=> 'Reason for deleting this topic',
+	'DELETE_REASON_EXPLAIN'		=> 'The specified reason for deletion will be visible to moderators.',
+	'DELETE_POST_WARN'			=> 'Delete this post',
+	'DELETE_TOPIC_CONFIRM'		=> 'Ziur gai hau ezabatu nahi duzula?',
+	'DELETE_TOPIC_PERMANENTLY'	=> 'Permanently delete this topic so it can not be recovered',
+	'DELETE_TOPIC_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this topic?',
+	'DELETE_TOPICS_CONFIRM'		=> 'Ziur gai hauek ezabatu nahi dituzula?',
+	'DELETE_TOPICS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these topics?',
 	'DISABLE_BBCODE'			=> 'BBCode desgaitu',
 	'DISABLE_MAGIC_URL'			=> 'URLak automatikoki bihurtzea desgaitu',
 	'DISABLE_SMILIES'			=> 'Irrifartxoak (emotikonoak) desgaitu',
@@ -2987,13 +3171,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_QUOTE'		=> 'Saioa hasi behar duzu foro honetan mezuak aipatzeko (zitatzeko).',
 	'LOGIN_EXPLAIN_REPLY'		=> 'Saioa hasi behar duzu foro honetako mezuak erantzuteko.',
 
-	'MAX_FONT_SIZE_EXCEEDED'	=> '%1$d da letren gehienezko tamaina.',
-	'MAX_FLASH_HEIGHT_EXCEEDED'	=> 'Zure flash fitxategiek ezin dute %1$d pixeleko baino altuera gehiago izan.',
-	'MAX_FLASH_WIDTH_EXCEEDED'	=> 'Zure flash fitxategiek ezin dute %1$d pixeleko baino zabalera gehiago izan.',
-	'MAX_IMG_HEIGHT_EXCEEDED'	=> 'Zure irudiek ezin dute %1$d pixeleko baino altuera gehiago izan.',
-	'MAX_IMG_WIDTH_EXCEEDED'	=> 'Zure irudiek ezin dute %1$d pixeleko baino zabalera gehiago izan.',
-
-	'MESSAGE_BODY_EXPLAIN'		=> 'Sartu hemen zure mezua, ezin du <strong>%d</strong> karaktere baino gehiago izan.',
+	'MAX_FONT_SIZE_EXCEEDED'	=> 'You may only use fonts up to size %d.',
 	'MESSAGE_DELETED'			=> 'Mezua zuzen ezabatu da',
 	'MORE_SMILIES'				=> 'Irrifartxo (emotikono) gehiago ikusi',
 
@@ -3016,8 +3194,6 @@ $lang = array_merge($lang, array(
 	'POLL_MAX_OPTIONS'			=> 'Aukerak erabiltzailekiko',
 	'POLL_MAX_OPTIONS_EXPLAIN'	=> 'Erabiltzaile bakoitzak hautatu ditzaken gehienezko aukerak bozkatzerakoan.',
 	'POLL_OPTIONS'				=> 'Inkestako aukerak',
-	'POLL_OPTIONS_EXPLAIN'		=> 'Aukera bakoitza lerro berrian jar ezazu. <strong>%d</strong> da sar zenezaken gehienezko aukera kopurua.',
-	'POLL_OPTIONS_EDIT_EXPLAIN'	=> 'Aukera bakoitza lerro berrian jar ezazu. <strong>%d</strong> da sar zenezaken gehienezko aukera kopurua. Aukerak gehitu edo aldatu egiten badituzu, aurreko bozka guztiak garbitu egingo dira.',
 	'POLL_QUESTION'				=> 'Inkestako galdera',
 	'POLL_TITLE_TOO_LONG'		=> '100 karaktere baino gutxiago izan behar ditu inkestako izenburuak.',
 	'POLL_TITLE_COMP_TOO_LONG'	=> 'Inkestako izenburua luzeegia da. BBCode edo irrifartxoak kendu zenitzake.',
@@ -3027,9 +3203,9 @@ $lang = array_merge($lang, array(
 	'POST_APPROVAL_NOTIFY'		=> 'Zure mezua onartzen denean jakinarazi egingo zaizu.',
 	'POST_CONFIRMATION'			=> 'Mezua bidaltzeko baieztatzea',
 	'POST_CONFIRM_EXPLAIN'		=> 'Mezu-bidaltze automatikoak ekiditzeko asmoz, behekaldeko irudian agertzen den kodea sar dezazula eskatzen dizugu. Kodea ikusteko arazorik baldin bazenu, jar zaitez %sForoko Administrariekin%s kontaktuan, mesedez.',
-	'POST_DELETED'				=> 'Mezu hau zuzen ezabatu da.',
-	'POST_EDITED'				=> 'Mezu hau zuzen aldatu da.',
-	'POST_EDITED_MOD'			=> 'Mezu hau zuzen aldatu da, baina moderadorearen onarpena behar du jendaurrean ikusgarri izateko.',
+	'POST_DELETED'				=> 'This post has been deleted.',
+	'POST_EDITED'				=> 'This post has been edited successfully.',
+	'POST_EDITED_MOD'			=> 'This post has been edited successfully, but it will need to be approved by a moderator before it is publicly viewable.',
 	'POST_GLOBAL'				=> 'Orokorra',
 	'POST_ICON'					=> 'Mezuaren ikonoa',
 	'POST_NORMAL'				=> 'Normala',
@@ -3042,8 +3218,9 @@ $lang = array_merge($lang, array(
 	'POST_TOPIC_AS'				=> 'Gaia honela bidali',
 	'PROGRESS_BAR'				=> 'Aurrerapen barra',
 
-	'QUOTE_DEPTH_EXCEEDED'		=> '%1$d aipamen (zita) baino ezin duzu bata bestearen barruan sartu',
+	'QUOTE_NO_NESTING'			=> 'You may not embed quotes within each other.',
 
+	'REMOTE_UPLOAD_TIMEOUT'		=> 'The specified file could not be uploaded because the request timed out.',
 	'SAVE'						=> 'Gorde',
 	'SAVE_DATE'					=> 'Noiz gordeta',
 	'SAVE_DRAFT'				=> 'Zirriborroa gorde',
@@ -3060,8 +3237,6 @@ $lang = array_merge($lang, array(
 	'TOO_FEW_POLL_OPTIONS'		=> 'Gutxienez aukera bi jarri behar dituzu inkestan.',
 	'TOO_MANY_ATTACHMENTS'		=> 'Ezin duzu fitxategi erantsi gehiagorik gehitu, %d da baimendutako gehienezkoa.',
 	'TOO_MANY_CHARS'			=> 'Zure mezuak karaktere gehiegi ditu.',
-	'TOO_MANY_CHARS_POST'		=> 'Zure mezuak %1$d karaktere ditu. Baimendutako gehienezkoa %2$d(e)koa da.',
-	'TOO_MANY_CHARS_SIG'		=> 'Zure sinadurak %1$d karaktere ditu. Baimendutako gehienezkoa %2$d(e)koa da.',
 	'TOO_MANY_POLL_OPTIONS'		=> 'Inkestarako aukera gehiegi sartu dituzu.',
 	'TOO_MANY_SMILIES'			=> 'Zure mezuak irrifartxo gehiegi ditu. Baimendutako gehienezkoa %d(e)koa da.',
 	'TOO_MANY_URLS'				=> 'Zure mezuak URL gehiegi ditu. Baimendutako gehienezkoa %d(e)koa da.',
@@ -3070,6 +3245,8 @@ $lang = array_merge($lang, array(
 
 	'UNAUTHORISED_BBCODE'		=> 'Ezin duzu BBCode zehatz batzuk erabili: %s',
 	'UNGLOBALISE_EXPLAIN'		=> 'Gai hau orokor izatetik normalera bihurtzeko, erakutsiko den foroa aukeratu behar duzu.',
+	'UNSUPPORTED_CHARACTERS_MESSAGE'	=> 'Your message contains the following unsupported characters:<br />%s',
+	'UNSUPPORTED_CHARACTERS_SUBJECT'	=> 'Your subject contains the following unsupported characters:<br />%s',
 	'UPDATE_COMMENT'			=> 'Iruzkina eguneratu',
 	'URL_INVALID'				=> 'Adierazitako URLa ez da baliozkoa.',
 	'URL_NOT_FOUND'				=> 'Ezin daiteke zehaztutako fitxategia aurkitu.',
@@ -3084,8 +3261,8 @@ $lang = array_merge($lang, array(
 	'VIEW_MESSAGE'				=> '%1$sBidalitako mezua ikusi%2$s',
 	'VIEW_PRIVATE_MESSAGE'		=> '%sBidalitako mezu pribatua ikusi%s',
 
-	'WRONG_FILESIZE'			=> 'Fitxategia handiegia da. Baimentdutako gehienezkoa %1d %2s(e)koa da.',
-	'WRONG_SIZE'				=> 'Irudiak zabaleran %1$d pixel, altueran %2$d pixel izan behar ditu gitxienez eta zabaleran %3$d pixel, altueran %4$d pixel gehienez. Bidali duzun irudak zabaleran %5$d pixel eta altueran %6$d pixel ditu.',
+	'WRONG_FILESIZE'			=> 'The file is too big, maximum allowed size is %1$d %2$s.',
+	'WRONG_SIZE'				=> 'The image must be at least %1$s wide, %2$s high and at most %3$s wide and %4$s high. The submitted image is %5$s wide and %6$s high.',
 
 	'FONT_TYPE'			=> 'Typeface',
 	'FONT_COLOR'			=> 'Letra kolorea',
@@ -3105,10 +3282,6 @@ $lang = array_merge($lang, array(
 
 	'DISPLAY_RESULTS'		=> 'Emaitzak honela bistaratu',
 
-	'FOUND_SEARCH_MATCH'		=> 'Bilaketak agerraldi %d aurkitu du',
-	'FOUND_SEARCH_MATCHES'		=> 'Bilaketak  %d agerraldi aurkitu ditu',
-	'FOUND_MORE_SEARCH_MATCHES'	=> '%d agerraldi baino gehiago aurkitu dira',
-
 	'GLOBAL'				=> 'Iragarki orokorra',
 
 	'IGNORED_TERMS'			=> 'Baztertuta',
@@ -3120,24 +3293,23 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_UNREADSEARCH'=> 'Irakurri gabe dituzun mezuak ikusteko izena eman eta saioa hasi behar duzu.',
 	'LOGIN_EXPLAIN_NEWPOSTS'	=> 'Izena eman eta logeatu egin behar duzu, azkenengoz sartu zinenetik bidalitako mezu berriak ikusi nahi badituzu.',
 
-	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> 'Hitz gehiegi zehaztu duzu bilaketarako. Mesedez, ez ezazu %1$d hitz baino gehiago sartu.',
-
-	'NO_KEYWORDS'			=> 'Gutxienez terminoren bat zehaztu behar duzu bilaketa egiteko. Hitz bakoitzak %d karaktere izan behar ditu gutxienez eta %d karaktere gehienez (komodinak aparte).',
+	'NO_KEYWORDS'			=> 'You must specify at least one word to search for. Each word must consist of at least %s and must not contain more than %s excluding wildcards.',
 	'NO_RECENT_SEARCHES'	=> 'Ez da bilaketarik egin azken aldian.',
 	'NO_SEARCH'				=> 'Barkatu, baina ez du bilaketa sistema erabiltzeko baimenik.',
 	'NO_SEARCH_RESULTS'		=> 'Ez da emaitzik aurkitu.',
-	'NO_SEARCH_TIME'		=> 'Barkatu, baina ezin daiteke bilatze sistema momentu honetan erabili. Saiatu berriro minutu batzu barru.',
 	'NO_SEARCH_UNREADS'		=> 'Barkatu baina irakurrigabeko mezuen bilaketa ezgaitu egin da foro honetan.',
 	'WORD_IN_NO_POST'		=> 'Ez da <strong>%s</strong> hitza duen mezurik aurkitu.',
 	'WORDS_IN_NO_POST'		=> 'Ez da <strong>%s</strong> hitzak duten mezurik aurkitu.',
 
 	'POST_CHARACTERS'		=> 'Mezuetako karaktereak',
+	'PHRASE_SEARCH_DISABLED'	=> 'Searching by exact phrase is not supported on this board.',
 
 	'RECENT_SEARCHES'		=> 'Duela gutxiko bilaketak',
 	'RESULT_DAYS'			=> 'Emaitzak lehenagorako mugatu',
 	'RESULT_SORT'			=> 'Emaitzak ordenatu',
 	'RETURN_FIRST'			=> 'Lehenengoak bistaratu',
 	'RETURN_TO_SEARCH_ADV'	=> 'Bilaketa aurreratura itzuli',
+	'GO_TO_SEARCH_ADV'	=> 'Go to advanced search',
 
 	'SEARCHED_FOR'				=> 'Bilatutako terminoa',
 	'SEARCHED_TOPIC'			=> 'Bilatutako mezua',
@@ -3164,10 +3336,11 @@ $lang = array_merge($lang, array(
 	'SORT_FORUM'				=> 'Foroa',
 	'SORT_POST_SUBJECT'			=> 'Mezuko izenburua',
 	'SORT_TIME'					=> 'Data',
+	'SPHINX_SEARCH_FAILED'		=> 'Search failed: %s',
+	'SPHINX_SEARCH_FAILED_LOG'	=> 'Sorry, search could not be performed. More information about this failure has been logged in the error log.',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
 	'SELECT_ALL_TAGS'		=> 'No selection',
-	'TOO_FEW_AUTHOR_CHARS'	=> 'Gutxienez egilearen izenaren %d karaktere zehaztu behar dituzu.',
 ));
 
 #######language/en/ucp.php#######
@@ -3222,6 +3395,7 @@ $lang = array_merge($lang, array(
 	'ATTACHMENTS_EXPLAIN'			=> 'Foro honetan erantsitako fitxategien zerrenda duzu hau.',
 	'ATTACHMENTS_DELETED'			=> 'Fitxategi erantsiak zuzen ezabatu dira.',
 	'ATTACHMENT_DELETED'			=> 'Fitxategi erantsia zuzen ezabatu da.',
+	'AUTOLOGIN_SESSION_KEYS_DELETED'=> 'The selected "Remember Me" login keys were successfully deleted.',
 	'AVATAR_CATEGORY'				=> 'Kategoria',
 	'AVATAR_DRIVER_GRAVATAR_TITLE'	=> 'Gravatar',
 	'AVATAR_DRIVER_GRAVATAR_EXPLAIN'=> 'Gravatar is a service that allows you to maintain the same avatar across multiple websites. Visit <a href="http://www.gravatar.com/">Gravatar</a> for more information.',
@@ -3231,12 +3405,14 @@ $lang = array_merge($lang, array(
 	'AVATAR_DRIVER_REMOTE_EXPLAIN'	=> 'Link to avatar images from another website.',
 	'AVATAR_DRIVER_UPLOAD_TITLE'	=> 'Upload avatar',
 	'AVATAR_DRIVER_UPLOAD_EXPLAIN'	=> 'Upload your own custom avatar.',
-	'AVATAR_EXPLAIN'				=> 'Gehinezko neurriak; %1$d pixel zabaleran, %2$d pixel altueran, %3$.2f KB.tako tamaina',
+	'AVATAR_EXPLAIN'				=> 'Maximum dimensions; width: %1$s, height: %2$s, file size: %3$.2f KiB.',
 	'AVATAR_FEATURES_DISABLED'		=> 'Irudiak erabiltzeko aukera desgaituta dago une honetan.',
 	'AVATAR_GALLERY'				=> 'Irudi galeria',
 	'AVATAR_GENERAL_UPLOAD_ERROR'	=> 'Ezin daiteke irudirik gehitu %s(e)ra',
 	'AVATAR_NOT_ALLOWED'			=> 'Ezin da zure irudia erakutsi irudiak ezgaitu egin direlako.',
 	'AVATAR_PAGE'					=> 'Orria',
+	'AVATAR_SELECT'					=> 'Select your avatar',
+	'AVATAR_TYPE'					=> 'Avatar type',
 	'AVATAR_TYPE_NOT_ALLOWED'		=> 'Erabiltzen zauden irudia ezin da bistaratu mota horretako irudiak ezgaitu egin direlako.',
 
 	'BACK_TO_DRAFTS'			=> 'Gordetako zirriborroetara itzuli',
@@ -3245,7 +3421,6 @@ $lang = array_merge($lang, array(
 	'BIRTHDAY_EXPLAIN'			=> 'Jaiotze urtea sartuz gero, zure adina agertuko da urteak betetzen dituzunean.',
 	'BOARD_DATE_FORMAT'			=> 'Nire data formatua',
 	'BOARD_DATE_FORMAT_EXPLAIN'	=> 'Erabilitako sintaxia PHPko <a href="http://www.php.net/date">date()</a> funtzioaren berdina da.',
-	'BOARD_DST'					=> 'Energia aurrezteko udako orduarena (Daylight Saving Time, DST) gaituta dago',
 	'BOARD_LANGUAGE'			=> 'Nire hizkuntza',
 	'BOARD_STYLE'				=> 'Nire foroko estiloa',
 	'BOARD_TIMEZONE'			=> 'Nire ordu zona (ordutegia)',
@@ -3264,8 +3439,6 @@ $lang = array_merge($lang, array(
 	'CLICK_RETURN_FOLDER'		=> '%1$s itzuli zure "%3$s" karpetara %2$s',
 	'CONFIRMATION'				=> 'Izen-emate baieztatu',
 	'CONFIRM_CHANGES'			=> 'Aldaketak baieztatu',
-	'CONFIRM_EMAIL'				=> 'Posta elektroniko helbidea baieztatu',
-	'CONFIRM_EMAIL_EXPLAIN'		=> 'Zure posta elektroniko helbidea aldatu baduzu baino ez da baieztatzea beharrezkoa.',
 	'CONFIRM_EXPLAIN'			=> 'Erregistro automatikoak ekiditzeko asmoz, foro honek baieztatze kodea sar dezazun eskatzen dizu. Kodea behekaldeko irudian agertu beharko litzaizuke. Ezin baduzu kodea ikusi edo bista arazoak baldin badituzu, mesedez jar zaitez %sForoko Administrariekin%s kontaktuan.',
 	'VC_REFRESH'				=> 'Baieztatze-kode berria',
 	'VC_REFRESH_EXPLAIN'		=> 'Ezin baduzu kodea irakurri edo ulertu, berria eskatu dezakezu botoi klikatuz.',
@@ -3274,7 +3447,7 @@ $lang = array_merge($lang, array(
 	'CONFIRM_PASSWORD_EXPLAIN'	=> 'Goian aldatu baduzu baino ez da pasahitza baieztatzea beharrezkoa.',
 	'COPPA_BIRTHDAY'			=> 'Izen-emate prozesuarekin jarraitzeko mesedez, sar ezazu zure jaiotze data.',
 	'COPPA_COMPLIANCE'			=> 'COPPA (haur-gazten babesa) onarpena',
-	'COPPA_EXPLAIN'				=> 'Mesedez, kontuan izan Bidalin klikatzerakoan zure kontua sortuko duzula. Hala ere, ezin izango da kontua gaitu zure guraso edo tutoreren batek zure izen ematea onartu dezan arte. Nora eta nolako informazioa bidali beharko duzun zehaztuko dizun formularioa bidali zaizu posta elektroniko helbidera.',
+	'COPPA_EXPLAIN'				=> 'Please note that clicking submit will create your account. However it cannot be activated until a parent or guardian approves your registration. You will be e-mailed a copy of the necessary form with details of where to send it.',
 	'CREATE_FOLDER'				=> 'Karpeta berria sortu',
 	'CURRENT_IMAGE'				=> 'Uneko irudia',
 	'CURRENT_PASSWORD'			=> 'Uneko pasahitza',
@@ -3329,27 +3502,34 @@ $lang = array_merge($lang, array(
 	'EXPORT_FOLDER'				=> 'Karpeta esportatu',
 
 	'FIELD_REQUIRED'					=> '"%s" eremua bete behar duzu.',
-	'FIELD_TOO_SHORT'					=> '"%1$s" eremua laburregia da, %2$d karaktere behar duzu gutxienez.',
-	'FIELD_TOO_LONG'					=> '"%1$s" eremua laburregia da, %2$d karaktere erabili zenitzake gehienez jota.',
-	'FIELD_TOO_SMALL'					=> '"%1$s"(r)en balorea txikiegia da, %2$d(e)ko balorea behar duzu gutxienez.',
-	'FIELD_TOO_LARGE'					=> '"%1$s"(r)en balorea handiegia da, %2$d(e)ko balorea erabili zenezake gehienez jota.',
+
+	'FIELD_TOO_SMALL'					=> 'The value of “%2$s” is too small, a minimum value of %1$d is required.',
+	'FIELD_TOO_LARGE'					=> 'The value of “%2$s” is too large, a maximum value of %1$d is allowed.',
+	'FIELD_INVALID_CHARS_INVALID'		=> 'The field “%s” has invalid characters.',
 	'FIELD_INVALID_CHARS_NUMBERS_ONLY'	=> '"%s" eremuak baliogarriak ez diren karaktereak ditu. Zenbakiak baino ez dira onartzen.',
+	'FIELD_INVALID_CHARS_ALPHA_DOTS'	=> 'The field “%s” has invalid characters, only alphanumeric or . characters are allowed.',
 	'FIELD_INVALID_CHARS_ALPHA_ONLY'	=> '"%s" eremuak baliogarriak ez diren karaktereak ditu. Zenbakiak eta letrak baino ez dira onartzen.',
-	'FIELD_INVALID_CHARS_SPACERS_ONLY'	=> '"%s" eremuak baliogarriak ez diren karaktereak ditu. Zenbakiak, letrak, hutsunea edo -+_[] karaktereak baino ez dira onartzen.',
+	'FIELD_INVALID_CHARS_ALPHA_PUNCTUATION'	=> 'The field “%s” has invalid characters, only alphanumeric or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_ALPHA_SPACERS'	=> 'The field “%s” has invalid characters, only alphanumeric, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_ALPHA_UNDERSCORE'	=> 'The field “%s” has invalid characters, only alphanumeric or _ characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_DOTS'	=> 'The field “%s” has invalid characters, only letter, number or . characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_ONLY'	=> 'The field “%s” has invalid characters, only letter and number characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_PUNCTUATION'	=> 'The field “%s” has invalid characters, only letter, number or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_SPACERS'		=> 'The field “%s” has invalid characters, only letter, number, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_UNDERSCORE'		=> 'The field “%s” has invalid characters, only letter, number or _ characters are allowed.',
 	'FIELD_INVALID_DATE'				=> '"%s" eremuak duen data ez da baliogarria.',
+	'FIELD_INVALID_URL'					=> 'The field “%s” has an invalid url.',
 	'FIELD_INVALID_VALUE'				=> '“%s” eremuak duen balioa ez da baliogarria.',
 
 	'FOE_MESSAGE'				=> 'Baztertutako baten mezua',
 	'FOES_EXPLAIN'				=> 'Baztertutakoak, berez baztertu (aukera lehenetsi modura) egingo diren erabiltzaileak izango dira. Baztertutakoek bidalitako mezuak ezin izango dira osoan ikusi eta ezingo dizute mezu pertsonalik zuzenean bidali. Mesedez, kontuan izan ezin dituzula moderadorea edo administratzaileak baztertu.',
 	'FOES_UPDATED'				=> 'Baztertutakoen zerrenda zuzen eguneratu egin da.',
 	'FOLDER_ADDED'				=> 'Karpeta zuzen gehitu egin da',
-	'FOLDER_MESSAGE_STATUS'		=> '%1$d %2$d(e)tik mezu gordeta',
 	'FOLDER_NAME_EMPTY'			=> 'Karpeta honentzako izen bat sartu behar duzu.',
 	'FOLDER_NAME_EXIST'			=> '<strong>%s</strong> dagoeneko badago',
 	'FOLDER_OPTIONS'			=> 'Karpeta aukerak',
 	'FOLDER_RENAMED'			=> 'Karpeta zuzen berrizendu da',
 	'FOLDER_REMOVED'			=> 'Karpeta zuzen ezabatu da',
-	'FOLDER_STATUS_MSG'			=> 'Karpeta %1$d%% betetuta dago, (%2$d %3$d(e)tik mezu gordeta)',
 	'FORWARD_PM'				=> 'MPa berbidali',
 	'FORCE_PASSWORD_EXPLAIN'	=> 'Forotik nabigatzen jarraitu baino lehenago, pasahitza alda dezazun eskatzen dizugu.',
 	'FRIEND_MESSAGE'			=> 'Lagun batengandik mezua',
@@ -3418,16 +3598,35 @@ $lang = array_merge($lang, array(
 	'MOVE_DELETED_MESSAGES_TO'		=> 'Ezabatutako karpetako mezuak mugitu hona',
 	'MOVE_DOWN'						=> 'Jeitsi',
 	'MOVE_MARKED_TO_FOLDER'			=> 'Markatutakoak %s(e)ra mugitu',
-	'MOVE_PM_ERROR'					=> 'Mezuak karpeta berrira mugitzen ziren bitartean errorea gertatu da, %1d mezu %2d(e)tik baino ez dira mugitu.',
 	'MOVE_TO_FOLDER'				=> 'Karpetara mugitu',
 	'MOVE_UP'						=> 'Igo',
 
-	'NEW_EMAIL_CONFIRM_EMPTY'		=> 'Ez duzu baieztapen helbide elektronikorik sartu.',
-	'NEW_EMAIL_ERROR'				=> 'Sartutako posta elektroniko helbideek ez dute bat egiten.',
 	'NEW_FOLDER_NAME'				=> 'Karpeta berriaren izena',
 	'NEW_PASSWORD'					=> 'Pasahitz berria',
 	'NEW_PASSWORD_CONFIRM_EMPTY'	=> 'Ez duzu baieztapen pasahitza sartu.',
 	'NEW_PASSWORD_ERROR'			=> 'Sartutako pasahitzek ez dute bat egiten.',
+
+	'NOTIFICATIONS_MARK_ALL_READ'						=> 'Mark all notifications read',
+	'NOTIFICATIONS_MARK_ALL_READ_CONFIRM'				=> 'Are you sure you want to mark all notifications read?',
+	'NOTIFICATIONS_MARK_ALL_READ_SUCCESS'				=> 'All notifications have been marked read.',
+	'NOTIFICATION_GROUP_MISCELLANEOUS'					=> 'Miscellaneous Notifications',
+	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
+	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
+	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'E-mail',
+	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
+	'NOTIFICATION_TYPE'									=> 'Notification type',
+	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
+	'NOTIFICATION_TYPE_GROUP_REQUEST'					=> 'Someone requests to join a group you lead',
+	'NOTIFICATION_TYPE_IN_MODERATION_QUEUE'				=> 'A post or topic needs approval',
+	'NOTIFICATION_TYPE_MODERATION_QUEUE'				=> 'Your topics/posts are approved or disapproved by a moderator',
+	'NOTIFICATION_TYPE_PM'								=> 'Someone sends you a private message',
+	'NOTIFICATION_TYPE_POST'							=> 'Someone replies to a topic to which you are subscribed',
+	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
+	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
+	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+
 	'NOTIFY_METHOD'					=> 'Jakinarazpen era',
 	'NOTIFY_METHOD_BOTH'			=> 'Biak',
 	'NOTIFY_METHOD_EMAIL'			=> 'Posta elektronikoa baino ez',
@@ -3445,10 +3644,9 @@ $lang = array_merge($lang, array(
 	'NOT_ADDED_FOES_SELF'			=> 'Ezin duzu zeure burua baztertutakoen zerrendara gehitu.',
 	'NOT_AGREE'						=> 'Ez nago ados',
 	'NOT_ENOUGH_SPACE_FOLDER'		=> '"%s" helburu karpeta beterik dagoela dirudi. Ezin izan da eskatutako eragiketa burutu.',
-	'NOT_MOVED_MESSAGE'				=> 'Une honetan mezu pribatu 1 duzu zain karpeta beterik delako.',
-	'NOT_MOVED_MESSAGES'			=> 'Une honetan %d mezu pribatu dituzu zain karpeta beterik delako.',
 	'NO_ACTION_MODE'				=> 'Ez duzu eragiketarik zehaztu.',
 	'NO_AUTHOR'						=> 'Ez da egilerik zehaztu mezu honetan',
+	'NO_AVATAR'						=> 'No avatar selected',
 	'NO_AVATAR_CATEGORY'			=> 'Bat ere ez',
 
 	'NO_AUTH_DELETE_MESSAGE'		=> 'Ez duz mezu pribaturik ezabatzeko baimenik.',
@@ -3456,6 +3654,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_FORWARD_MESSAGE'		=> 'Ez duzu mezu pribaturik berbidaltzeko baimenik.',
 	'NO_AUTH_GROUP_MESSAGE'			=> 'Ez duzu taldeetara mezu pribaturik bidaltzeko baimenik.',
 	'NO_AUTH_PASSWORD_REMINDER'		=> 'Ez duzu pasahitz berririk eskatzeko baimenik.',
+	'NO_AUTH_PROFILEINFO'			=> 'You are not authorised to change your profile information.',
 	'NO_AUTH_READ_HOLD_MESSAGE'		=> 'Ez duzu zain dauden mezu pribaturik irakurtzeko baimenik.',
 	'NO_AUTH_READ_MESSAGE'			=> 'Ez duzu mezu pribaturik irakurtzeko baimenik.',
 	'NO_AUTH_READ_REMOVED_MESSAGE'	=> 'Ezin duzu mezu hau irakurri bere egileak dagoeneko ezabatu egin duelako.',
@@ -3486,10 +3685,10 @@ $lang = array_merge($lang, array(
 	'NO_WATCHED_SELECTED'		=> 'Ez duzu harpidetutako gai edo foroetatik bat ere ez aukeratu.',
 	'NO_WATCHED_TOPICS'			=> 'Ez zaude inolako gaira harpidetuta.',
 
-	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Pasahitzek %1$d eta %2$d(r)en arteko karaktere-luzeera izan behar dute eta zenbakiak eta hizkiak (letra larri zein xeheak nahasturik) euki behar dituzte.',
-	'PASS_TYPE_ANY_EXPLAIN'		=> '%1$d eta %2$d(r)en arteko karaktere-luzeera izan behar du.',
-	'PASS_TYPE_CASE_EXPLAIN'	=> 'Pasahitzek %1$d eta %2$d(r)en arteko karaktere-luzeera izan behar dute eta hizkiak (letra larri zein xeheak nahasturik) euki behar dituzte.',
-	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Pasahitzek %1$d eta %2$d(r)en arteko karaktere-luzeera izan behar dute eta zeinuak, zenbakiak eta hizkiak (letra larri zein xeheak nahasturik) euki behar dituzte.',
+	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case and must contain numbers.',
+	'PASS_TYPE_ANY_EXPLAIN'		=> 'Must be between %1$s and %2$s.',
+	'PASS_TYPE_CASE_EXPLAIN'	=> 'Password must be between %1$s and %2$s long and must contain letters in mixed case.',
+	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case, must contain numbers and must contain symbols.',
 	'PASSWORD'					=> 'Pasahitza',
 	'PASSWORD_ACTIVATED'		=> 'Zure pasahitz berria gaitu egin da.',
 	'PASSWORD_UPDATED'			=> 'Pasahitz berria bidali zaizu izena-emtarekoan erabilitako posta helbidera.',
@@ -3500,13 +3699,16 @@ $lang = array_merge($lang, array(
 	'PM_FROM_REMOVED_AUTHOR'	=> 'Dagoeneko erregistraturik ez dagoen erabiltzaile batek bialdu zuen mezu hau.',
 	'PM_ICON'					=> 'Ikonoa',
 	'PM_INBOX'					=> 'Sarrera ontzia',
+	'PM_MARK_ALL_READ'			=> 'Mark all messages read',
+	'PM_MARK_ALL_READ_SUCCESS'	=> 'All private messages in this folder have been marked read',
 	'PM_NO_USERS'				=> 'Gehitzeko eskatu dituzun erabiltzaileak ez dira existitzen.',
 	'PM_OUTBOX'					=> 'Irteera ontzia',
 	'PM_SENTBOX'				=> 'Bidalitako mezuak',
 	'PM_SUBJECT'				=> 'Mezuaren izenburua',
 	'PM_TO'						=> 'Nori',
+	'PM_TOOLS'					=> 'Message tools',
+	'PM_USERS_REMOVED_NO_PERMISSION'	=> 'Some users couldn’t be added as they do not have permission to read private messages.',
 	'PM_USERS_REMOVED_NO_PM'	=> 'Ezin dira aukeratutako erabiltzaile batzuk gehitu mezu pribatuak jasotzeko aukera desgaituta dutelako.',
-	'POPUP_ON_PM'				=> 'Mezu pribatu berriak pop up leihoan bistaratu',
 	'POST_EDIT_PM'				=> 'Mezua aldatu',
 	'POST_FORWARD_PM'			=> 'Mezua berbidali',
 	'POST_NEW_PM'				=> 'Mezua bidali',
@@ -3518,6 +3720,8 @@ $lang = array_merge($lang, array(
 	'PREFERENCES_UPDATED'		=> 'Zure hobezpenak eguneratu egin dira.',
 	'PROFILE_INFO_NOTICE'		=> 'Mesedez, kontuan izan informazio hau beste erabiltzaileek ikusi dezaketela, beraz, adi ibili xehetasun pertsonalak gehitzerakoan. *arekin markaturiko eremuak derrigorrez bete behar dira.',
 	'PROFILE_UPDATED'			=> 'Zure profila eguneratu egin da.',
+	'PROFILE_AUTOLOGIN_KEYS'	=> 'The "Remember Me" login keys automatically log you in when you visit the board. If you logout, the remember me login key is deleted only on the computer you are using to logout. Here you can see remember login keys created on other computers you used to access this site.',
+	'PROFILE_NO_AUTOLOGIN_KEYS'	=> 'There are no saved "Remember Me" login keys.',
 
 	'RECIPIENT'							=> 'Hartzailea',
 	'RECIPIENTS'						=> 'Hartzaileak',
@@ -3542,8 +3746,6 @@ $lang = array_merge($lang, array(
 	'RULE_DELETED'						=> 'Araua zuzen ezabatu egin da.',
 	'RULE_LIMIT_REACHED'				=> 'Ezin duzu MPentzako arau gehiago jarri. Gehienezko arau kopurura heldu zara.',
 	'RULE_NOT_DEFINED'					=> 'Araua ez da zuzen zehaztu.',
-	'RULE_REMOVED_MESSAGE'				=> 'Mezu pribatuen iragazkiak direla eta mezu pribatu bat ezabatu egin da.',
-	'RULE_REMOVED_MESSAGES'				=> 'Mezu pribatuen iragazkiak direla eta %d mezu pribatu ezabatu egin dira.',
 
 	'SAME_PASSWORD_ERROR'		=> 'Sartu duzun pasahitza, indarrean duzunaren berdina da.',
 	'SEARCH_YOUR_POSTS'			=> 'Zuk bidalitako mezuak erakutsi',
@@ -3555,6 +3757,8 @@ $lang = array_merge($lang, array(
 	'SIGNATURE_TOO_LONG'		=> 'Zure sinadura luzeegia da.',
 	'SELECT_CURRENT_TIME'		=> 'Select current time',
 	'SELECT_TIMEZONE'			=> 'Select timezone',
+	'SELECT_CURRENT_TIME'		=> 'Select current time',
+	'SELECT_TIMEZONE'			=> 'Select timezone',
 	'SORT'						=> 'Ordenatu',
 	'SORT_COMMENT'				=> 'Oharra',
 	'SORT_DOWNLOADS'			=> 'Deskargak',
@@ -3564,15 +3768,28 @@ $lang = array_merge($lang, array(
 	'SORT_SIZE'					=> 'Tamaina',
 
 	'TIMEZONE'					=> 'Ordu zona (timezone)',
-	'TO'						=> 'Nori',
+	'TIMEZONE_DATE_SUGGESTION'	=> 'Suggestion: %s',
+	'TIMEZONE_INVALID'			=> 'The timezone you selected is invalid.',
+	'TO'						=> 'Recipient',
+	'TO_MASS'					=> 'Recipients',
+	'TO_ADD'					=> 'Add recipient',
+	'TO_ADD_MASS'				=> 'Add recipients',
+	'TO_ADD_GROUPS'				=> 'Add groups',
 	'TOO_MANY_RECIPIENTS'		=> 'Mezu pribatua hartzaile gehiegiri bidaltzen saiatu zara.',
 	'TOO_MANY_REGISTERS'		=> 'Izen-emate gehienezko kopurua gainditu duzu saio honetarako. Mesedez, saiatu zaitez beranduago.',
 
 	'UCP'						=> 'Erabiltzailearen Kontrol Panela',
 	'UCP_ACTIVATE'				=> 'Kontua gaitu',
 	'UCP_ADMIN_ACTIVATE'		=> 'Mesedez, kontuan izan posta elektroniko helbide baliagarria sartu behar duzula kontua gaitu baino lehen. Administratzaileak zure kontua aztertu eta gero onartzen baldin badu, mezu bat bidaliko zaizu helbide horretara.',
-	'UCP_AIM'					=> 'AOL Instant Messenger',
 	'UCP_ATTACHMENTS'			=> 'Fitxategi erantsiak',
+	'UCP_AUTH_LINK'				=> 'External accounts',
+	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
+	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
+	'UCP_AUTH_LINK_LINK'		=> 'Lotura',
+	'UCP_AUTH_LINK_MANAGE'		=> 'Manage external account associations',
+	'UCP_AUTH_LINK_NOT_SUPPORTED'	=> 'Linking board accounts to external services is not supported by this board’s current authentication method.',
+	'UCP_AUTH_LINK_TITLE'		=> 'Manage your external account associations',
+	'UCP_AUTH_LINK_UNLINK'		=> 'Unlink',
 	'UCP_AUTH_LINK'				=> 'External accounts',
 	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
 	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
@@ -3584,8 +3801,8 @@ $lang = array_merge($lang, array(
 	'UCP_COPPA_BEFORE'			=> '%s baino lehen',
 	'UCP_COPPA_ON_AFTER'		=> '%s baino lehen edo ostean',
 	'UCP_EMAIL_ACTIVATE'		=> 'Mesedez, kontuan izan posta elektroniko helbide baliagarria sartu behar duzula kontua gaitu baino lehen. Kontua gaitzeko balioko duen loturadun mezu bat bidaliko zaizu helbide horretara.',
-	'UCP_ICQ'					=> 'ICQ zenbakia',
 	'UCP_JABBER'				=> 'Jabber helbidea',
+	'UCP_LOGIN_LINK'			=> 'Set up an external account association',
 
 	'UCP_MAIN'					=> 'Bista orokorra',
 	'UCP_MAIN_ATTACHMENTS'		=> 'Fitxategi erantsiak antolatu',
@@ -3594,7 +3811,6 @@ $lang = array_merge($lang, array(
 	'UCP_MAIN_FRONT'			=> 'Hasiera orria',
 	'UCP_MAIN_SUBSCRIBED'		=> 'Harpidetzak antolatu',
 
-	'UCP_MSNM'					=> 'WL/MSN Messenger',
 	'UCP_NO_ATTACHMENTS'		=> 'Ez duzu fitxategirik bidali',
 
 	'UCP_NOTIFICATION_LIST'				=> 'Manage notifications',
@@ -3611,8 +3827,6 @@ $lang = array_merge($lang, array(
 	'UCP_PM_COMPOSE'			=> 'Mezua idatzi',
 	'UCP_PM_DRAFTS'				=> 'Mezu pribatuen zirriborroak antolatu',
 	'UCP_PM_OPTIONS'			=> 'Arauak, karpetak eta konfigurazioa',
-	'UCP_PM_POPUP'				=> 'Mezu pribatuak',
-	'UCP_PM_POPUP_TITLE'		=> 'Mezu pribatuen popupa',
 	'UCP_PM_UNREAD'				=> 'Irakurri gabeko mezuak',
 	'UCP_PM_VIEW'				=> 'Mezuak ikusi',
 
@@ -3627,11 +3841,11 @@ $lang = array_merge($lang, array(
 	'UCP_USERGROUPS_MEMBER'		=> 'Kideak aldatu',
 	'UCP_USERGROUPS_MANAGE'		=> 'Taldeak antolatu',
 
+	'UCP_PASSWORD_RESET_DISABLED'	=> 'The password reset functionality has been disabled. If you need help accessing your account, please contact the %sBoard Administrator%s',
 	'UCP_REGISTER_DISABLE'			=> 'Ezin daiteke une honetan kontu berririk sortu.',
 	'UCP_REMIND'					=> 'Pasahitza bidali',
 	'UCP_RESEND'					=> 'Aktibatze emaila bidali',
 	'UCP_WELCOME'					=> 'Ongietorria Erabiltzaile Kontrol Panelera. Hemen, zure profila, hobespenak, harpidetzak... ikusi eta aldatu zenitzake. Beste erabiltzaileeei ere mezuak bidali zenizkioke (baimenduta balego). Mesedez, irakur ezazu legoken edozein iragarki jarraitu baino lehen.',
-	'UCP_YIM'						=> 'Yahoo Messenger',
 	'UCP_ZEBRA'						=> 'Lagunak eta Baztertutakoak',
 	'UCP_ZEBRA_FOES'				=> 'Bazterturakoak antolatu',
 	'UCP_ZEBRA_FRIENDS'				=> 'Lagunak antolatu',
@@ -3641,12 +3855,12 @@ $lang = array_merge($lang, array(
 	'UPLOAD_AVATAR_FILE'			=> 'Zure ordenagailutik igo',
 	'UPLOAD_AVATAR_URL'				=> 'URL batetik igo',
 	'UPLOAD_AVATAR_URL_EXPLAIN'		=> 'Irudia duen webguneko URLa sartu. Irudia foroan kopiatuko da. Introduzca la URL del sitio que tiene la imagen, será copiada a este sitio.',
-	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Erabiltzaile izenak %1$d eta %2$d(r)en arteko karaktere-luzeera izan behar dute eta zenbakiak eta hizkiak (letra larri zein xeheak nahasturik) baino ezin ditu euki.',
-	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Erabiltzaile izenak %1$d eta %2$d(r)en arteko karaktere-luzeera izan behar dute eta zenbakiak eta hizkiak (letra larri zein xeheak nahasturik), hutsunea edo -+_[] zeinuak baino ezin ditu euki.',
-	'USERNAME_ASCII_EXPLAIN'		=> 'Erabiltzaile izenak %1$d eta %2$d(r)en arteko karaktere-luzeera izan behar dute eta ASCII karaktereak baino ezin ditu euki. Zeinu berezirik ez, beraz.',
-	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Erabiltzaile izenak %1$d eta %2$d(r)en arteko karaktere-luzeera izan behar dute eta zenbakiak eta hizkiak baino ezin ditu euki.',
-	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Erabiltzaile izenak %1$d eta %2$d(r)en arteko karaktere-luzeera izan behar dute eta zenbakiak eta hizkiak edo -+_[] zeinuak baino ezin ditu euki.',
-	'USERNAME_CHARS_ANY_EXPLAIN'	=> '%1$d eta %2$d(r)en arteko karaktere-luzeera izan behar du gehien jota.',
+	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only alphanumeric characters.',
+	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use alphanumeric, space or -+_[] characters.',
+	'USERNAME_ASCII_EXPLAIN'		=> 'Username must be between %1$s and %2$s long and use only ASCII characters, so no special symbols.',
+	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only letter or number characters.',
+	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use letter, number, space or -+_[] characters.',
+	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Length must be between %1$s and %2$s.',
 	'USERNAME_TAKEN_USERNAME'		=> 'Sartu duzun erabiltzaile izena bada erabilian dagoeneko. Mesedez, aukera ezazu beste izenen bat.',
 	'USERNAME_DISALLOWED_USERNAME'	=> 'Sartu duzun erabiltzaile izena ukatu egin da edo ukatu egin den hitzen bat dauka. Mesedez, aukera ezazu beste izenen bat.',
 	'USER_NOT_FOUND_OR_INACTIVE'	=> 'Ezin izan da zehaztu duzun erabiltzailerik aurkitu. Agian ez dute oraindik euren kontuak gaitu.',
@@ -3659,10 +3873,9 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_PM'				=> 'Hurrengo MPa',
 	'VIEW_PM'					=> 'Mezu pribatua ikusi',
 	'VIEW_PM_INFO'				=> 'Mezuko xehetasunak',
-	'VIEW_PM_MESSAGE'			=> 'Mezu 1',
-	'VIEW_PM_MESSAGES'			=> '%d mezu',
 	'VIEW_PREVIOUS_HISTORY'		=> 'Aurreko MPa historialan',
 	'VIEW_PREVIOUS_PM'			=> 'Aurreko MPa',
+	'VIEW_PROFILE'				=> 'View profile',
 	'VIEW_SIGS'					=> 'Sinadurak erakutsi',
 	'VIEW_SMILIES'				=> 'Irrifartxoak irudi bezala erakutsi',
 	'VIEW_TOPICS_DAYS'			=> 'Aurreko egunetako gaiak erakutsi',
@@ -3770,8 +3983,6 @@ $lang = array_merge($lang, array(
 	'UNREAD_POSTS_LOCKED'	=> 'Irakurri gabeko mezuak [ Itxita ]',
 
 	'VIEW_FORUM'			=> 'Foroa ikusi',
-	'VIEW_FORUM_TOPIC'		=> 'Gai 1',
-	'VIEW_FORUM_TOPICS'		=> '%d gai',
 
 	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
 	'REMOVE_FILTER'		=> 'Remove filter',
@@ -3780,6 +3991,7 @@ $lang = array_merge($lang, array(
 #######language/en/viewtopic.php#######
 
 $lang = array_merge($lang, array(
+	'APPROVE'								=> 'Onartu',
 	'ATTACHMENT'						=> 'Fitxategi erantsia',
 	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'Fitxategi erantsiak gehitzeko aukera desgaitu egin da',
 
@@ -3792,14 +4004,13 @@ $lang = array_merge($lang, array(
 	'BUMP_TOPIC'			=> 'Gaia sustatu',
 
 	'CODE'					=> 'Kodea',
-	'COLLAPSE_QR'			=> 'Erantzun Azkarra gorde',
-
+	
 	'DELETE_TOPIC'			=> 'Gaia ezabatu',
+	'DELETED_INFORMATION'	=> 'Deleted by %1$s on %2$s',
+	'DISAPPROVE'					=> 'Ez onartu',
 	'DOWNLOAD_NOTICE'		=> 'Ez duzu mezu honetako fitxategi erantsiak ikusteko baimenik.',
 
-	'EDITED_TIMES_TOTAL'	=> '%1$s(e)k aldatuta azkenengoz %2$s(e)an, guztira %3$d aldiz aldatuta.',
-	'EDITED_TIME_TOTAL'		=> '%1$s(e)k aldatuta azkenengoz %2$s(e)an, guztira aldi %3$dez aldatuta.',
-	'EMAIL_TOPIC'			=> 'Lagun bati bidali',
+	'EMAIL_TOPIC'			=> 'E-mail topic',
 	'ERROR_NO_ATTACHMENT'	=> 'Aukeratutako fitxategi erantsia ez da existitzen dagoeneko.',
 
 	'FILE_NOT_FOUND_404'	=> '<strong>%s</strong> fitxategia ez da existitzen.',
@@ -3814,8 +4025,6 @@ $lang = array_merge($lang, array(
 	'MAKE_GLOBAL'				=> '"Orokorra"ra aldatu',
 	'MAKE_NORMAL'				=> '"Normala"ra aldatu',
 	'MAKE_STICKY'				=> '"Itsaskorra"ra aldatu',
-	'MAX_OPTIONS_SELECT'		=> '<strong>%d</strong> aukera hauta zenitzake opciones',
-	'MAX_OPTION_SELECT'			=> 'Aukera <strong>1</strong> hauta zenezake',
 	'MISSING_INLINE_ATTACHMENT'	=> '<strong>%s</strong> fitxategi erantsia ez dago erabilgarri dagoeneko.',
 	'MOVE_TOPIC'				=> 'Gaia mugitu',
 
@@ -3829,6 +4038,7 @@ $lang = array_merge($lang, array(
 	'POLL_ENDED_AT'			=> 'Inkesta %s(e)an bukatuta',
 	'POLL_RUN_TILL'			=> 'Inkestak %s(e)raino darrai',
 	'POLL_VOTED_OPTION'		=> 'Aukera hau bozkatu duzu',
+	'POST_DELETED_RESTORE'	=> 'This post has been deleted. It can be restored.',
 	'PRINT_TOPIC'			=> 'Inprimatze bista',
 
 	'QUICK_MOD'				=> 'Quick-mod tresnak',
@@ -3836,11 +4046,14 @@ $lang = array_merge($lang, array(
 	'QUOTE'					=> 'Aipatu',
 
 	'REPLY_TO_TOPIC'		=> 'Gaia erantzun',
+	'RESTORE'				=> 'Restore',
+	'RESTORE_TOPIC'			=> 'Restore topic',
 	'RETURN_POST'			=> '%sMezu berrira itzuli%s',
 
 	'SHOW_QR'				=> 'Erantzun Azkarra',
 	'SUBMIT_VOTE'			=> 'Bozka bidali',
 
+	'TOPIC_TOOLS'			=> 'Topic tools',
 	'TOTAL_VOTES'			=> 'Bozka guztira',
 
 	'UNLOCK_TOPIC'			=> 'Gaia zabaldu',
@@ -3849,10 +4062,7 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_TOPIC'		=> 'Hurrengo gaia',
 	'VIEW_PREVIOUS_TOPIC'	=> 'Aurreko gaia',
 	'VIEW_RESULTS'			=> 'Emaitzak ikusi',
-	'VIEW_TOPIC_POST'		=> 'Mezu 1',
-	'VIEW_TOPIC_POSTS'		=> '%d mezu',
 	'VIEW_UNREAD_POST'		=> 'Irakurri gabeko lehenengo mezua',
-	'VISIT_WEBSITE'			=> 'Webgunea ikusi',
 	'VOTE_SUBMITTED'		=> 'Zure bozka bidali egin da.',
 	'VOTE_CONVERTED'		=> 'Ezin da bozkarik aldatu eraldatutako inkestetan.',
 
@@ -9442,6 +9652,7 @@ $lang = array_merge($lang, array(
 	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'	=> 'Maximum size of each file, with 0 being unlimited, attached to a private message.',
 	'ATTACH_ORPHAN_URL'					=> 'Fitxategi erantsi umezurtz',
 	'ATTACH_POST_ID'					=> 'Post ID',
+	'ATTACH_POST_TYPE'					=> 'Post type',
 	'ATTACH_QUOTA'						=> 'Total attachment quota',
 	'ATTACH_QUOTA_EXPLAIN'				=> 'Maximum drive space available for attachments for the whole board, with 0 being unlimited.',
 	'ATTACH_TO_POST'					=> 'Attach file to post',
@@ -9487,6 +9698,9 @@ $lang = array_merge($lang, array(
 	'EXT_GROUP_REAL_MEDIA'			=> 'Real Media',
 	'EXT_GROUP_WINDOWS_MEDIA'		=> 'Windows Media',
 
+	'FILES_GONE'			=> 'Some of the attachments you selected for deletion do not exist. They may have been already deleted. Attachments that did exist were deleted.',
+	'FILES_STATS_WRONG'		=> 'Your file statistics are likely inaccurate and need to be resynchronised. Actual values: number of attachments = %1$d, total size of attachments = %2$s.<br />Click %3$shere%4$s to resynchronise them.',
+
 	'GO_TO_EXTENSIONS'		=> 'Go to extension management screen',
 	'GROUP_NAME'			=> 'Taldeko izena',
 
@@ -9510,6 +9724,7 @@ $lang = array_merge($lang, array(
 	'NOT_ALLOWED_IN_PM'			=> 'Only allowed in posts',
 	'NOT_ALLOWED_IN_PM_POST'	=> 'Not allowed',
 	'NOT_ASSIGNED'				=> 'Not assigned',
+	'NO_ATTACHMENTS'			=> 'No attachments found for this period.',
 	'NO_EXT_GROUP'				=> 'Bat ere ez',
 	'NO_EXT_GROUP_NAME'			=> 'No group name entered',
 	'NO_EXT_GROUP_SPECIFIED'	=> 'No extension group specified.',
@@ -9522,6 +9737,10 @@ $lang = array_merge($lang, array(
 	'ONLY_ALLOWED_IN_PM'	=> 'Only allowed in private messages',
 	'ORDER_ALLOW_DENY'		=> 'Allow',
 	'ORDER_DENY_ALLOW'		=> 'Deny',
+
+	'REMOVE_ALLOWED_IPS'			=> 'Remove or un-exclude <em>allowed</em> IPs/hostnames',
+	'REMOVE_DISALLOWED_IPS'			=> 'Remove or un-exclude <em>disallowed</em> IPs/hostnames',
+	'RESYNC_FILES_STATS_CONFIRM'	=> 'Are you sure you wish to resynchronise file statistics?',
 
 	'REMOVE_ALLOWED_IPS'		=> 'Remove or un-exclude <em>allowed</em> IPs/hostnames',
 	'REMOVE_DISALLOWED_IPS'		=> 'Remove or un-exclude <em>disallowed</em> IPs/hostnames',
@@ -9591,18 +9810,17 @@ $lang = array_merge($lang, array(
 	'PERMANENT'		=> 'Iraunkorra',
 
 	'UNTIL'						=> 'Noiz arte',
-	'USER_BAN'					=> 'Debekatu',
+	'USER_BAN'					=> 'Ban one or more users by username',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> 'Aukera hau gaitu sartutako erabiltzaile izena indarrean dauden debeku guztietatik kentzeko.',
 	'USER_BAN_EXPLAIN'			=> 'Erabiltzaile izen bat baino gehiago zehazteko, sar ezazu bakoitza lerro berri batean. <u>Erabiltzailea bilatu</u> lotura erabil ezazu erabiltzaileak aurkitu eta zerrendara autamatikoki gehitzeko.',
 	'USER_NO_BANNED'			=> 'Ez da debekaturiko erabiltzaile izenik',
-	'USER_UNBAN'				=> 'Erabiltzaile izenen debekua kendu',
+	'USER_UNBAN'				=> 'Un-ban or un-exclude users by username',
 	'USER_UNBAN_EXPLAIN'		=> 'Erabiltzaile izen bati baino gehiago kendu diezaiokezu debekua behinean nabigatzaileko konbinazio egokia erabiliz (adibidez, Ctrl+klik). Debekatutako erabiltzaile izenak letra lodiz agertuko dira.',
 ));
 
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'				=> 'Uda ordutegia gaitu (DST-Daylight Saving Time)',
 	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
 	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
 	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
@@ -9628,16 +9846,28 @@ $lang = array_merge($lang, array(
 	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Hemendik zure foroko oinarrizko eragiketak zehaztu ditzakezu, adibidez bere izena eta deskribapena jarri, hizkuntza eta ordu-zona lehenetsi...',
+	'BOARD_INDEX_TEXT'				=> 'Board index text',
+	'BOARD_INDEX_TEXT_EXPLAIN'		=> 'This text is displayed as the board index in the board’s breadcrumbs. If not specified, it will default to “Board index”.',
+	'BOARD_STYLE'					=> 'Nire foroko estiloa',
 	'CUSTOM_DATEFORMAT'				=> 'Neurrira jarri…',
 	'DEFAULT_DATE_FORMAT'			=> 'Data formatoa',
 	'DEFAULT_DATE_FORMAT_EXPLAIN'	=> 'Data formatua PHPko <code>date</code> funtzioko bera da.',
 	'DEFAULT_LANGUAGE'				=> 'Lehenetsitako hizkuntza',
 	'DEFAULT_STYLE'					=> 'Lehenetsitako estiloa',
+	'DEFAULT_STYLE_EXPLAIN'			=> 'The default style is <strong>%1$s (%2$s)</strong> which is the overriden style for all users (including bots).',
 	'DISABLE_BOARD'					=> 'Foroa ezgaitu',
-	'DISABLE_BOARD_EXPLAIN'			=> 'Honek erabiltzaileei foroa eskuragaitz egingo die. Nahi izanez gero, erakutsiko zaien testu txiki bat (255 karaktere) ere idatz daiteke.',
+	'DISABLE_BOARD_EXPLAIN'			=> 'This will make the board unavailable to users who are neither administrators nor moderators. You can also enter a short (255 character) message to display if you wish.',
+	'DISPLAY_LAST_SUBJECT'			=> 'Display subject of last added post on forum list',
+	'DISPLAY_LAST_SUBJECT_EXPLAIN'	=> 'The subject of the last added post will be displayed in the forum list with a hyperlink to the post. Subjects from password protected forums and forums in which user doesn’t have read access are not shown.',
+	'GUEST_STYLE'					=> 'Guest style',
+	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Erabiltzailearen estiloa ordezkatu',
 	'OVERRIDE_STYLE_EXPLAIN'		=> 'Erabiltzailearen estiloa lehenetsitakoagaitik ordezkatzen du.',
 	'SITE_DESC'						=> 'Webguneko deskribapena',
+	'SITE_HOME_TEXT'				=> 'Main website text',
+	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
+	'SITE_HOME_URL'					=> 'Main website URL',
+	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Webguneko izena',
 	'SYSTEM_TIMEZONE'				=> 'Gonbidatu(ar)en ordu-zona',
 	'WARNINGS_EXPIRE'				=> 'Ohartarazpenen iraupena',
@@ -9677,6 +9907,7 @@ $lang = array_merge($lang, array(
 
 	'ALLOW_AVATARS'					=> 'Enable avatars',
 	'ALLOW_AVATARS_EXPLAIN'			=> 'Allow general usage of avatars;<br />If you disable avatars in general or avatars of a certain mode, the disabled avatars will no longer be shown on the board, but users will still be able to download their own avatars in the User Control Panel.',
+	'ALLOW_GRAVATAR'				=> 'Enable gravatar avatars',
 	'ALLOW_LOCAL'					=> 'Enable gallery avatars',
 	'ALLOW_REMOTE'					=> 'Enable remote avatars',
 	'ALLOW_REMOTE_EXPLAIN'			=> 'Avatars linked to from another website.',
@@ -9857,6 +10088,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Foro hauetako edukia <strong>ez da jarioetan sindikatuko</strong>. Fororik aukeratu ezean, foro guztietako edukia sindikatu daiteke.<br /><samp>CTRL</samp> sakatuta mantenduz klikatu foroak aukeratu/desaukeratzeko.',
 
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Hemendik spama ekiditzeko pluginak aukeratu eta moldatu ditzakezu. Plugin hauek robotek erantzun ezin duten <em>CAPTCHA</em> frogatan oinarritzen dira orokorrean.',
+	'ACP_VC_EXT_GET_MORE'					=> 'For additional (and possibly better) anti-spam plugins, visit the <a href="https://www.phpbb.com/go/anti-spam-ext"><strong>phpBB.com Extensions Database</strong></a>. For more information on preventing spam on your board, visit the <a href="https://www.phpbb.com/go/anti-spam"><strong>phpBB.com Knowledge Base</strong></a>.',
 	'AVAILABLE_CAPTCHAS'					=> 'Plugin erabilgarriak',
 	'CAPTCHA_UNAVAILABLE'					=> 'Ezin duzu plugina aukeratu ez bait dira bete behar dituen baldintzak aurkitu.',
 	'CAPTCHA_GD'							=> 'GD irudia',
@@ -9907,18 +10139,36 @@ $lang = array_merge($lang, array(
 	'SESSION_LENGTH'			=> 'Saioaren iraupena',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Denbora hau igarota, saioak bukatu egingo dira. Segundutan emana.',
 
+	// Contact Settings
+	'ACP_CONTACT_SETTINGS_EXPLAIN'		=> 'Here you can enable and disable the contact page and also add a text that is displayed on the page.',
+
+	'CONTACT_US_ENABLE'				=> 'Enable contact page',
+	'CONTACT_US_ENABLE_EXPLAIN'		=> 'This page allows users to send emails to board administrators',
+
+	'CONTACT_US_INFO'				=> 'Contact information',
+	'CONTACT_US_INFO_EXPLAIN'		=> 'The message is displayed on the contact page',
+	'CONTACT_US_INFO_PREVIEW'		=> 'Contact page information - Preview',
+	'CONTACT_US_INFO_UPDATED'		=> 'Contact page information has been updated.',
+
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Hemendik, prozesatze kopurua arintzera lagunduko duten foroko zenbait funtzio gaitu edo ezgaitu zenitzake. Zerbitzari gehienetan ez da funtziorik ezgaitzeko beharrik, halaere, sistema batzuetan edo zerbitzari partekatu batzuetan, benetan beharko ez dituzun funtzioak ezgaitzea onuragarria litzateke. Sistemaren kargan edo saio aktiboetan ere mugak zehaztu ditzakezu.',
 
+	'ALLOW_CDN'						=> 'Allow usage of third party content delivery networks',
+	'ALLOW_CDN_EXPLAIN'				=> 'If this setting is enabled, some files will be served from external third party servers instead of your server. This reduces the network bandwidth required by your server, but may present a privacy issue for some board administrators. In a default phpBB installation, this includes loading “jQuery” and the font “Open Sans” from Google’s content delivery network.',
+	'ALLOW_LIVE_SEARCHES'			=> 'Allow live searches',
+	'ALLOW_LIVE_SEARCHES_EXPLAIN'	=> 'If this setting is enabled, users are provided with keyword suggestions as they type in certain fields throughout the board.',
 	'CUSTOM_PROFILE_FIELDS'			=> 'Pertsonalizatutako profil eremuak',
 	'LIMIT_LOAD'					=> 'Sistema kargaren muga',
 	'LIMIT_LOAD_EXPLAIN'			=> 'Minutuko sistemaren karga batazbestekoa balore hau baino nagusiagoa baldin bada, foroa automatikoki offline jarriko da. 1.0ko balorea prozesadorearen ~100%ko erabileraren balio berekoa da. Honek UNIXen oinarrituta eta informazio hau eskuragarria duten zerbitzarietarako baino ez du balio. phpBBk ez balu karga muga lortuko, balorea 0an jarriko litzateke berez.',
 	'LIMIT_SESSIONS'				=> 'Saio muga',
 	'LIMIT_SESSIONS_EXPLAIN'		=> 'Minutu batez saio kopurua balore hau baino nagusiago baldin bada, foroa automatikoko offline jarriko da. Balorea 0an jarri saio kopuru mugagabea zehazteko.',
 	'LOAD_CPF_MEMBERLIST'			=> 'Estiloak baimendu erabiltzaile zerrendan profil eremu pertsonalizatuak bistaratu daitezen.',
+	'LOAD_CPF_PM'					=> 'Display custom profile fields in private messages',
 	'LOAD_CPF_VIEWPROFILE'			=> 'Profil eremu pertsonalizatuak bistaratu erabiltzaileen profiletan',
 	'LOAD_CPF_VIEWTOPIC'			=> 'Profil eremu pertsonalizatuak erakutsi gaiak ikusterakoan',
 	'LOAD_USER_ACTIVITY'			=> 'Erabiltzailearen jarduera erakutsi',
 	'LOAD_USER_ACTIVITY_EXPLAIN'	=> 'Erabiltzaileak gai/foroetan eginiko jarduera erakusten du profilan eta erabiltzaile kontrol panelean. Milloitik gorako mezudun foroetan aukera hau ezgaitzea gomendatzen da.',
+	'READ_NOTIFICATION_EXPIRE_DAYS'	=> 'Read Notification Expiration',
+	'READ_NOTIFICATION_EXPIRE_DAYS_EXPLAIN' => 'Number of days that will elapse before a read notification will automatically be deleted. Set this value to 0 to make notifications permanent.',
 	'RECOMPILE_STYLES'				=> 'Estilo osagai zaharkituak berritu',
 	'RECOMPILE_STYLES_EXPLAIN'		=> 'Eguneratu diren estilo osagaiak bilatu eta berritu egiten ditu.',
 	'YES_ANON_READ_MARKING'			=> 'Gonbidatuei gaiak markatzen utzi',
@@ -9939,18 +10189,25 @@ $lang = array_merge($lang, array(
 	'YES_READ_MARKING_EXPLAIN'		=> 'Irakurria/Ez irakurria informazioa cookie batean egin beharrean, datubase batean gordetzen du.',
 	'YES_UNREAD_SEARCH'				=> 'Irakurri gabeko mezuen bilaketa gaitzen du',
 
-	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBBk egiaztatze pluginak edo moduloak eusten ditu. Horrela, erabiltzaileak forora sartzeko nola egiaztatzen diren zehaztu zenezake. Hiru dira lehenetsirik ematen diren pluginak; DB, LDAP eta Apache. Metodo guztiek ez dute informazio bera eskatzen, beraz, aukeratutako metodoarentzako garrantzitsuak diren eremuak baino ez itzazu bete.',
+	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB supports authentication plug-ins, or modules. These allow you determine how users are authenticated when they log into the board. By default four plug-ins are provided: DB, LDAP, Apache, and OAuth. Not all methods require additional information so only fill out fields if they are relevant to the selected method.',
 
 	'AUTH_METHOD'				=> 'Egiaztatze metodo bat aukeratu',
 
+	'AUTH_PROVIDER_OAUTH_ERROR_ELEMENT_MISSING'	=> 'Both the key and secret of each enabled OAuth service provider must be provided. Only one was provided for an OAuth service provider.',
+	'AUTH_PROVIDER_OAUTH_EXPLAIN'				=> 'Each OAuth provider requires a unique secret and key in order to authenticate with the external server. These should be supplied by the OAuth service when you register your website with them and should be entered exactly as provided to you.<br />Any service that does not have both a key and a secret entered here will not be available for use by the forum users. Also note, that user can still register and login using the DB authentication plug-in.',
+	'AUTH_PROVIDER_OAUTH_KEY'					=> 'Key',
+	'AUTH_PROVIDER_OAUTH_TITLE'					=> 'OAuth',
+	'AUTH_PROVIDER_OAUTH_SECRET'				=> 'Secret',
+
 	'APACHE_SETUP_BEFORE_USE'	=> 'Metodo honetara aldatu baino lehenago Apacheren egiaztatzea ezarri. Izan kontuan Apachen egiaztatzeko erabiltzen duzun erabiltzaile izena phpBBrako erabiltzen duzun bera izan beharko duela. Apache egiaztatzea mod_phprekin (ez CGI bertsioren batekin) eta safe_mode ezgaituta delarik baino ezingo duzu erabili.',
 
+	'LDAP'							=> 'LDAP',
 	'LDAP_DN'						=> 'LDAP basea <var>dn</var>',
 	'LDAP_DN_EXPLAIN'				=> 'Hau Distinguished Namea da, erabiltzailearen informazioa kokatzeko balio duena, adbez. <samp>o=My Company,c=US</samp>',
-	'LDAP_EMAIL'					=> 'LDAPeko email ezaugarria',
-	'LDAP_EMAIL_EXPLAIN'			=> 'Ezarri hau zure erabiltzaileak sartutako email ezaugarriaren (balego) izenera. Ezarpen hau hutsik uzteak saioa lehenengoz hasten duten erabiltzaileei email helbide hutsak ematea lekarke.',
+	'LDAP_EMAIL'					=> 'LDAP email attribute',
+	'LDAP_EMAIL_EXPLAIN'			=> 'Set this to the name of your user entry email attribute (if one exists) in order to automatically set the email address for new users. Leaving this empty results in empty email address for users who log in for the first time.',
 	'LDAP_INCORRECT_USER_PASSWORD'	=> 'Zehaztutako erabiltzaile/pasahitzarekin eginiko konexioak LDAP zerbitzariarekin huts egin du.',
-	'LDAP_NO_EMAIL'					=> 'Zehaztutako email ezaugarria ez da existitzen.',
+	'LDAP_NO_EMAIL'					=> 'The specified email attribute does not exist.',
 	'LDAP_NO_IDENTITY'				=> 'Ezin daiteke nortasunik aurkitu %s(e)ntzat',
 	'LDAP_PASSWORD'					=> 'LDAP pasahitza',
 	'LDAP_PASSWORD_EXPLAIN'			=> 'Hutsik utzi konexio anonimorako. Bestela, erabiltzaile pasahitzarekin bete. Karpeta aktibodun zerbitzarietarako beharrezkoa. <strong>OHARRA:</strong> Pasahitz hau testu lauan gordeko da datubasean, bertora edo konfigurazio honen orrira sarrera baimendua duen edonoren bistara.',
@@ -9965,13 +10222,17 @@ $lang = array_merge($lang, array(
 	'LDAP_USER_FILTER'				=> 'LDAP erabiltzaile iragazkia',
 	'LDAP_USER_FILTER_EXPLAIN'		=> 'Bilaketak gehiago zehaztu zenitzake iragazki osagarriekin. Adibidez <samp>objectClass=posixGroup</samp>(e)k <samp>(&amp;(uid=$username)(objectClass=posixGroup))</samp>(e)ra eramango liguke.',
 
-	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Hemendik, domeinua eta zerbitzariari buruzko jazarpenak zehaztu zenitzake. Mesedez, egiazta itzazu sartutako datuak zuzenak diren, erroreek akasdun informazioa duten posta elektroniko mezuak sortzera eramango bait lukete. Domeinu izena sartzerakoan http:// (edo beste protokolorik, erabiltzekotan) jartzeaz gogoratu. Portu zenbakia, zure zerbitzariak besteren bat erabiltzen duela baldin badakizu baino ez ezazu aldatu. Gehienetan 80 portua ondo dago.',
+	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Here you define server and domain dependent settings. Please ensure the data you enter is accurate, errors will result in emails containing incorrect information. When entering the domain name remember it does include http:// or other protocol term. Only alter the port number if you know your server uses a different value, port 80 is correct in most cases.',
 	'ENABLE_GZIP'				=> 'Gzip konprimitzea gaitu',
 	'ENABLE_GZIP_EXPLAIN'		=> 'Sortutako edukia konprimatu egingo da erabiltzaileari bidali aurretik. Aukera honek sare-zirkulazioa arindu egingo du, baina CPU erabilera areagotu egiten du bai zerbitzarian bai hartzailearen aldean. PHPko zlib gehigarria beharrezkoa.',
 	'FORCE_SERVER_VARS'			=> 'Zerbitzariko URL ezarpenetara behartu',
 	'FORCE_SERVER_VARS_EXPLAIN'	=> 'Aukera hau  ezartzea aukeratzen baldin baduzu, hemen zehaztutako zerbitzari konfigurazioa automatikoki zehazten diren balioen ordez ezarriko da.',
 	'ICONS_PATH'				=> 'Mezu ikonoak gordetzeko bidea',
 	'ICONS_PATH_EXPLAIN'		=> 'Zure phpBBko root karpetapeko bidea, adbez. <samp>images/icons</samp>',
+	'MOD_REWRITE_ENABLE'		=> 'Enable URL Rewriting',
+	'MOD_REWRITE_ENABLE_EXPLAIN' => 'When enabled, URLs containing ’app.php’ will be rewritten to remove the filename (i.e. app.php/foo will become /foo). <strong>Apache server’s mod_rewrite module is required for this functionality to work; if this option is enabled without mod_rewrite support, URLs on your board may be broken.</strong>',
+	'MOD_REWRITE_DISABLED'		=> 'The <strong>mod_rewrite</strong> module on your Apache web server is disabled. Enable the module or contact your web hosting provider if you wish to enable this feature.',
+	'MOD_REWRITE_INFORMATION_UNAVAILABLE' => 'We are unable to determine whether or not this server supports URL rewriting. This setting may be enabled but if URL rewriting is not available, paths generated by this board (such as for use in links) may be broken. Contact your web hosting provider if you are unsure whether or not you can safely enable this feature.',
 	'PATH_SETTINGS'				=> 'Bidearen konfigurazioa',
 	'RANKS_PATH'				=> 'Maila irudiak gordetzeko bidea',
 	'RANKS_PATH_EXPLAIN'		=> 'Zure phpBBko root karpetapeko bidea, adbez. <samp>images/ranks</samp>',
@@ -9988,13 +10249,21 @@ $lang = array_merge($lang, array(
 	'SMILIES_PATH_EXPLAIN'		=> 'Zure phpBBko root karpetapeko bidea, adbez. <samp>images/smilies</samp>',
 	'UPLOAD_ICONS_PATH'			=> 'Luzapen ikonoak gordetzeko bidea',
 	'UPLOAD_ICONS_PATH_EXPLAIN'	=> 'Zure phpBBko root karpetapeko bidea, adbez. <samp>images/upload_icons</samp>',
+	'USE_SYSTEM_CRON'		=> 'Run periodic tasks from system cron',
+	'USE_SYSTEM_CRON_EXPLAIN'		=> 'When off, phpBB will arrange for periodic tasks to be run automatically. When on, phpBB will not schedule any periodic tasks by itself; a system administrator must arrange for <code>bin/phpbbcli.php cron:run</code> to be run by the system cron facility at regular intervals (e.g. every 5 minutes).',
 
 	'ACP_SECURITY_SETTINGS_EXPLAIN'		=> 'Hemendik, konexio eta saioei buruzko ezarpenak zehaztu zenitzake.',
 	'ALL'							=> 'Guztiak',
-	'ALLOW_AUTOLOGIN'				=> 'Saio iraunkorrak baimendu',
-	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Erabiltzaileak foroa bisitatzerakoan saioa automatikoki has dezaken zehazten du.',
-	'AUTOLOGIN_LENGTH'				=> 'Saio iraunkorraren bukatzea (egunetan emana)',
-	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Saio automatikoa iraungi arteko egun kopurua. Balorea 0an jarri ezgaitzeko.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'ALLOW_PASSWORD_RESET'			=> 'Allow password reset ("Forgot Password")',
+	'ALLOW_PASSWORD_RESET_EXPLAIN'	=> 'Determines whether or not users are able to use the "I forgot my password" link on the login page to recover their account. If you use an external authentication mechanism you may wish to disable this feature.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
 	'BROWSER_VALID'					=> 'Nabigatzailea balioztatu',
 	'BROWSER_VALID_EXPLAIN'			=> 'Konexio bakoitzeko nabigatzailea balioztatzen du segurtasuna hobetuz.',
 	'CHECK_DNSBL'					=> 'IPa DNSetako zerrenda beltzetan egiaztatu',
@@ -10031,8 +10300,12 @@ $lang = array_merge($lang, array(
 	'PASS_TYPE_SYMBOL'				=> 'Zeinuak euki behar ditu',
 	'REF_HOST'						=> 'Hosta baino ez egiaztatu',
 	'REF_PATH'						=> 'Bidea (path) ere egiaztatu',
-	'REFERER_VALID'					=> 'Bidaltzailea (Referer) egiaztatu',
+	'REFERRER_VALID'				=> 'Validate Referrer',
+	'REFERRER_VALID_EXPLAIN'		=> 'If enabled, the referrer of POST requests will be checked against the host/script path settings. This may cause issues with boards using several domains and or external logins.',
+
+	'REFERER_VALID'					=> 'Bidaltzailea (Referer) egiaztatu',	//3.0.12
 	'REFERER_VALID_EXPLAIN'			=> 'Gaiturik balego, POST eskaeren bidaltzailea host/script bideko ezarpenekin erkatua izango da. Honek arazoak sor litzake kanpoko egiaztatzeak edo domeinu bat baino gehiago duten foroetan.',
+
 	'TPL_ALLOW_PHP'					=> 'Txantilloietan PHP baimendu',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Aukera hau gaitzen baldin bada, <code>PHP</code> eta <code>INCLUDEPHP</code> antzeman egingo dira txantilloi modura.',
 
@@ -10045,6 +10318,8 @@ $lang = array_merge($lang, array(
 	'BOARD_HIDE_EMAILS_EXPLAIN'		=> 'Ezarpen honek email helbideak guztiz ezkutatzen ditu.',
 	'CONTACT_EMAIL'					=> 'Kontaktuko email helbidea',
 	'CONTACT_EMAIL_EXPLAIN'			=> 'Helbide hau beharrezkoa den kontaktu helbide bat behar den aldi guztietan erabiliko da, adbez. spama, errroreak, etab. Email mezuetan <samp>From</samp> (Nondik) eta <samp>Reply-To</samp> (erantzun honi) moduan erabiliko da beti.',
+	'CONTACT_EMAIL_NAME'			=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 	'EMAIL_FUNCTION_NAME'			=> 'Email ezarpenaren izena',
 	'EMAIL_FUNCTION_NAME_EXPLAIN'	=> 'PHPk erabilitako ezarpena email mezuak bidaltzeko.',
 	'EMAIL_PACKAGE_SIZE'			=> 'Email paketearen tamaina',
@@ -10235,7 +10510,7 @@ $lang = array_merge($lang, array(
 	'ACP_BAN'					=> 'Debekuak',
 	'ACP_BAN_EMAILS'			=> 'Emailak debekatu',
 	'ACP_BAN_IPS'				=> 'IPak debekatu',
-	'ACP_BAN_USERNAMES'			=> 'Erabiltzaileak debekatu',
+	'ACP_BAN_USERNAMES'			=> 'Ban users',
 	'ACP_BBCODES'				=> 'BBCodeak',
 	'ACP_BOARD_CONFIGURATION'	=> 'Foroaren konfigurazioa',
 	'ACP_BOARD_FEATURES'		=> 'Foroaren ezaugarriak',
@@ -10244,8 +10519,10 @@ $lang = array_merge($lang, array(
 	'ACP_BOTS'					=> 'Spiderrrak/Errobotak',
 
 	'ACP_CAPTCHA'				=> 'CAPTCHA',
+	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'Datubasea',
+	'ACP_CAT_DOT_MODS'			=> '.MODak',
 	'ACP_CAT_DOT_MODS'			=> '.MODak',
 	'ACP_CAT_FORUMS'			=> 'Foroak',
 	'ACP_CAT_GENERAL'			=> 'Orokorra',
@@ -10258,6 +10535,8 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_USERS'				=> 'Erabiltzaileak',
 	'ACP_CLIENT_COMMUNICATION'	=> 'Bezero komunikazioa',
 	'ACP_COOKIE_SETTINGS'		=> 'Cookien hobespenak',
+	'ACP_CONTACT'				=> 'Contact page',
+	'ACP_CONTACT_SETTINGS'		=> 'Contact page settings',
 	'ACP_CRITICAL_LOGS'			=> 'Erroreen erregistroa',
 	'ACP_CUSTOM_PROFILE_FIELDS'	=> 'Eremu pertsonalizatuak',
 
@@ -10265,8 +10544,11 @@ $lang = array_merge($lang, array(
 	'ACP_DISALLOW'				=> 'Ezgaitu',
 	'ACP_DISALLOW_USERNAMES'	=> 'Erabiltzaile izenak ezgaitu',
 
-	'ACP_EMAIL_SETTINGS'		=> 'Email hobespenak',
-	'ACP_EXTENSION_GROUPS'		=> 'Luzapen taldeak',
+	'ACP_EMAIL_SETTINGS'		=> 'Email settings',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
+	'ACP_EXTENSION_MANAGEMENT'	=> 'Extension management',
+	'ACP_EXTENSIONS'			=> 'Manage extensions',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
 	'ACP_FORMS'					=> 'Customizable Forms',
 	'ACP_FORMS_BUILDER'			=> 'Form Builder',
 
@@ -10287,10 +10569,10 @@ $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE'				=> 'Taldeak administratu',
 	'ACP_GROUPS_MANAGEMENT'			=> 'Taldeen administrazioa',
 	'ACP_GROUPS_PERMISSIONS'		=> 'Taldeen baimenak',
+	'ACP_GROUPS_POSITION'			=> 'Manage group positions',
 
 	'ACP_ICONS'					=> 'Gai ikonoak',
 	'ACP_ICONS_SMILIES'			=> 'Gai ikono/irrifartxoak',
-	'ACP_IMAGESETS'				=> 'Irudi galeria',
 	'ACP_INACTIVE_USERS'		=> 'Jarduerarik gabeko erabiltzaileak',
 	'ACP_INDEX'					=> 'Administrazio Kontrol Panelaren (ACP) Hasiera',
 
@@ -10302,11 +10584,15 @@ $lang = array_merge($lang, array(
 	'ACP_LOGGING'				=> 'Saioa hasi',
 
 	'ACP_MAIN'					=> 'Administrazio Kontrol Panelaren (ACP) Hasiera',
-	'ACP_MANAGE_EXTENSIONS'		=> 'Luzapenak kudeatu',
+
+	'ACP_MANAGE_ATTACHMENTS'			=> 'Fitxategi erantsiak antolatu',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
+
+	'ACP_MANAGE_EXTENSIONS'		=> 'Manage attachment extensions',
 	'ACP_MANAGE_RANKS'			=> 'Mailak kudeatu',
 	'ACP_MANAGE_REASONS'		=> 'Berri-emateak/arrazoiak kudeatu',
 	'ACP_MANAGE_USERS'			=> 'Erabiltzaileak kudeatu',
-	'ACP_MASS_EMAIL'			=> 'Email masiboa',
+	'ACP_MASS_EMAIL'			=> 'Mass email',
 	'ACP_MESSAGES'				=> 'Mezuak',
 	'ACP_MESSAGE_SETTINGS'		=> 'Mezu pribatuen hobespenak',
 	'ACP_MODULE_MANAGEMENT'		=> 'Moduluen kudeaketa',
@@ -10351,6 +10637,8 @@ $lang = array_merge($lang, array(
 	'ACP_STYLE_COMPONENTS'		=> 'Estiloen osagaiak',
 	'ACP_STYLE_MANAGEMENT'		=> 'Estiloen kudeaketa',
 	'ACP_STYLES'				=> 'Estiloak',
+	'ACP_STYLES_CACHE'			=> 'Purge Cache',
+	'ACP_STYLES_INSTALL'		=> 'Install Styles',
 
 	'ACP_SUBMIT_CHANGES'		=> 'Aldaketak ezarri',
 
@@ -10402,6 +10690,10 @@ $lang = array_merge($lang, array(
 
 	'COLOUR_SWATCH'			=> 'Kolore paleta',
 	'CONFIG_UPDATED'		=> 'Konfigurazioa zuzen eguneratu egin da.',
+	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
+	'CRON_NO_SUCH_TASK'		=> 'Could not find cron task â€œ%sâ€.',
+	'CRON_NO_TASK'			=> 'No cron tasks need to be run right now.',
+	'CRON_NO_TASKS'			=> 'No cron tasks could be found.',
 
 	'DEACTIVATE'				=> 'Ezgaitu',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'Zehaztutako "%s" bidea ez da existitzen.',
@@ -10412,6 +10704,7 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_AS'				=> 'Deskargatu honela',
 	'DOWNLOAD_STORE'			=> 'Fitxategia deskargatu edo gorde',
 	'DOWNLOAD_STORE_EXPLAIN'	=> 'Fitxategia zuzenean deskarga zenezake edo zure <samp>store/</samp> karpetan gorde.',
+	'DOWNLOADS'					=> 'Deskargak',
 
 	'EDIT'					=> 'Aldatu',
 	'ENABLE'				=> 'Gaitu',
@@ -10426,6 +10719,8 @@ $lang = array_merge($lang, array(
 	'IP'					=> 'IP',
 	'IP_HOSTNAME'			=> 'IP helbideak edo hostnameak',
 
+	'LOAD_NOTIFICATIONS'			=> 'Display Notifications',
+	'LOAD_NOTIFICATIONS_EXPLAIN'	=> 'Display the notifications list on every page (typically in the header).',
 	'LOGGED_IN_AS'			=> 'Saioa honela hasi duzu:',
 	'LOGIN_ADMIN'			=> 'Foroa kudeatzeko egiaztatutako erabiltzailea izan behar duzu.',
 	'LOGIN_ADMIN_CONFIRM'	=> 'Foroa kudeatzeko pasahitza sartu behar duzu berriro.',
@@ -10442,7 +10737,8 @@ $lang = array_merge($lang, array(
 
 	'NOTIFY'				=> 'Ohartarazpena',
 	'NO_ADMIN'				=> 'Ez duzu foro hau kudeatzeko baimenik.',
-	'NO_EMAILS_DEFINED'		=> 'Ez da baliozko email helbiderik aurkitu.',
+	'NO_EMAILS_DEFINED'		=> 'No valid email addresses found.',
+	'NO_FILES_TO_DELETE'	=> 'Attachments you selected for deletion do not exist.',
 	'NO_PASSWORD_SUPPLIED'	=> 'Ezin duzu saiorik hasi pasahitzik gabe.',
 
 	'OFF'					=> 'Off',
@@ -10458,8 +10754,8 @@ $lang = array_merge($lang, array(
 
 	'REMIND'							=> 'Gogoratu',
 	'RESYNC'							=> 'Bersinkronizatu',
-	'RETURN_TO'							=> 'Itzuli',
 
+	'RUNNING_TASK'			=> 'Running task: %s.',
 	'SELECT_ANONYMOUS'		=> 'Erabiltzaile anonimoa aukeratu',
 	'SELECT_OPTION'			=> 'Aukera aukeratu',
 
@@ -10469,6 +10765,10 @@ $lang = array_merge($lang, array(
 	'SETTING_TOO_SHORT'		=> '“%1$s” ezarpenerako sartutako balorea laburregia da. Baimendutako gutxienezko luzera %2$d(e)koa da',
 
 	'SHOW_ALL_OPERATIONS'	=> 'Eragiketa guztiak erakutsi',
+
+	'TASKS_NOT_READY'			=> 'Not ready tasks:',
+	'TASKS_READY'			=> 'Ready tasks:',
+	'TOTAL_SIZE'			=> 'Total size',
 
 	'UCP'					=> 'Erabiltzailearen Kontrol Panela',
 	'USERNAMES_EXPLAIN'		=> 'Erabiltzaile izen bakoitza lerro ezberdin batean jarri.',
@@ -10480,7 +10780,7 @@ $lang = array_merge($lang, array(
 	'NO_PHPINFO_AVAILABLE'	=> 'Ezin daiteke zure PHP konfigurazioa zehaztu. Phpinfo () ezgaitu egin da segurtasun arrazoiekaitik.',
 
 	'ACP_ADMIN_LOGS_EXPLAIN'	=> 'Zerrenda honek foroko administrariek buruturiko eragiketa guztiak aurkezten dizkizu. Erabiltzaile izenagaitik, datagaitik, IPagaitik edo eragiketa motagaitik antolatu zenezake. Baimen egokiak izanez, eragiketa jakinak edota zerrenda osoa ere ezabatu zenezake.',
-	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'Zerrenda honek foroak berak buruturiko eragiketak aurkezten dizkizu. Informazio hau erabilgarria gerta liteke arazo espezifikoak konpontzeko, adibidez, zuzen bialdu ez diren emailak. Erabiltzaile izenagaitik, datagaitik, IPagaitik edo eragiketa motagaitik antolatu zenezake. Baimen egokiak izanez, eragiketa jakinak edota zerrenda osoa ere ezabatu zenezake.',
+	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'This lists the actions carried out by the board itself. This log provides you with information you are able to use for solving specific problems, for example non-delivery of emails. You can sort by username, date, IP or action. If you have appropriate permissions you can also clear individual operations or the log as a whole.',
 	'ACP_MOD_LOGS_EXPLAIN'		=> 'Zerrenda honek foroko moderadoreek buruturiko eragiketa guztiak aurkezten dizkizu. Foroetan, gaietan eta mezuetan zein erabiltzaileengan eginiko eragiketak (debekuak barne). Erabiltzaile izenagaitik, datagaitik, IPagaitik edo eragiketa motagaitik antolatu zenezake. Baimen egokiak izanez, eragiketa jakinak edota zerrenda osoa ere ezabatu zenezake.',
 	'ACP_USERS_LOGS_EXPLAIN'	=> 'Erabiltzaileekaitik/-engan buruturiko eragiketen zerrenda (berri-emateak, ohartarazpenak eta oharrak).',
 	'ALL_ENTRIES'				=> 'Sarrera guztiak',
@@ -10506,6 +10806,7 @@ $lang = array_merge($lang, array(
 
 	'GZIP_COMPRESSION'	=> 'GZip konprimatzea',
 
+	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'Ez erabilgarria',
 	'NUMBER_FILES'		=> 'Fitxategi erantsi kopurua',
 	'NUMBER_POSTS'		=> 'Mezu kopurua',
@@ -10518,29 +10819,38 @@ $lang = array_merge($lang, array(
 	'PURGE_CACHE'			=> 'Katxea garbitu',
 	'PURGE_CACHE_CONFIRM'	=> 'Ziur katxea garbitu nahi duzula?',
 	'PURGE_CACHE_EXPLAIN'	=> 'Katxarekin erlazionaturiko osagai guztiak garbitu, katxean egon liteken edozein galdeketa txantilloi barne.',
+	'PURGE_CACHE_SUCCESS'	=> 'Cache successfully purged.',
 
 	'PURGE_SESSIONS'			=> 'Sesio guztiak garbitu',
 	'PURGE_SESSIONS_CONFIRM'	=> 'Ziur sesio guztiak garbitu nahi dituzula? Erabiltzaile guztien sesioak etengo dituzu honekin.',
 	'PURGE_SESSIONS_EXPLAIN'	=> 'Sesioen taula moztu eta erabiltzaile guztien konexioak etengo ditu.',
+	'PURGE_SESSIONS_SUCCESS'	=> 'Sessions successfully purged.',
 
 	'RESET_DATE'					=> 'Foro zabaltze data berrabiarazi',
 	'RESET_DATE_CONFIRM'			=> 'Ziur foroaren zabaltze data berrabiarazi nahi duzula?',
+	'RESET_DATE_SUCCESS'				=> 'Boardâ€™s start date reset',
 	'RESET_ONLINE'					=> 'Konektaturiko erabiltzaile gehienen zenbakia berrabiarazi',
 	'RESET_ONLINE_CONFIRM'			=> 'Ziur konektaturiko erabiltzaile gehienen zenbakia berrabiarazi nahi duzula?',
+	'RESET_ONLINE_SUCCESS'				=> 'Most users ever online reset',
 	'RESYNC_POSTCOUNTS'				=> 'Mezuen zenbaketak bersinkronizatu',
 	'RESYNC_POSTCOUNTS_EXPLAIN'		=> 'Existitzen diren mezuan baino ez dira zenbatuko, ez da kontutan hartuko garbitutako mezurik.',
 	'RESYNC_POSTCOUNTS_CONFIRM'		=> 'Ziur mezu zenbaketa bersinkronizatu nahi duzula?',
+	'RESYNC_POSTCOUNTS_SUCCESS'			=> 'Resynchronised post counts',
 	'RESYNC_POST_MARKING'			=> 'Markatutako gaiak bersinkronizatu',
 	'RESYNC_POST_MARKING_CONFIRM'	=> 'Ziur markatutako gai guztiak bersinkronizatu nahi dituzula?',
 	'RESYNC_POST_MARKING_EXPLAIN'	=> 'Lehengo gai guztiei kentzen die marka eta gero, azken sei hilabeteotan jarduerarik euki duten gaiak baino ez ditu markatzen.',
+	'RESYNC_POST_MARKING_SUCCESS'	=> 'Resynchronised dotted topics',
 	'RESYNC_STATS'					=> 'Estatistikak bersinkronizatu',
 	'RESYNC_STATS_CONFIRM'			=> 'Ziur estatistikak bersinkronizatu nahi dituzula?',
 	'RESYNC_STATS_EXPLAIN'			=> 'Mezu, gai, erabiltzaile eta fitxategien kontuak ateratzen ditu berriro.',
+	'RESYNC_STATS_SUCCESS'			=> 'Resynchronised statistics',
 	'RUN'							=> 'Orain egin',
 
 	'STATISTIC'					=> 'Estatistika',
 	'STATISTIC_RESYNC_OPTIONS'	=> 'Estatistikak bersinkronizatu edo berrabiarazi',
 
+	'TIMEZONE_INVALID'	=> 'The timezone you selected is invalid.',
+	'TIMEZONE_SELECTED'	=> '(currently selected)',
 	'TOPICS_PER_DAY'	=> 'Gai eguneko',
 
 	'UPLOAD_DIR_SIZE'	=> 'Fitxategi erantsien karpetaren tamaina',
@@ -10721,9 +11031,9 @@ $lang = array_merge($lang, array(
 
 	'LOG_APPROVE_TOPIC'			=> '<strong>Approved topic</strong><br />» %s',
 	'LOG_BUMP_TOPIC'			=> '<strong>User bumped topic</strong><br />» %s',
-	'LOG_DELETE_POST'			=> '<strong>Deleted post “%1$s” written by</strong><br />» %2$s',
-	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Deleted shadow topic</strong><br />» %s',
-	'LOG_DELETE_TOPIC'			=> '<strong>Deleted topic “%1$s” written by</strong><br />» %2$s',
+	'LOG_DELETE_POST'			=> '<strong>Deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Deleted shadow topic</strong><br />Â» %s',
+	'LOG_DELETE_TOPIC'			=> '<strong>Deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_FORK'					=> '<strong>Copied topic</strong><br />» from %s',
 	'LOG_LOCK'					=> '<strong>Locked topic</strong><br />» %s',
 	'LOG_LOCK_POST'				=> '<strong>Locked post</strong><br />» %s',
@@ -10732,15 +11042,20 @@ $lang = array_merge($lang, array(
 	'LOG_PM_REPORT_CLOSED'		=> '<strong>Closed PM report</strong><br />» %s',
 	'LOG_PM_REPORT_DELETED'		=> '<strong>Deleted PM report</strong><br />» %s',
 	'LOG_POST_APPROVED'			=> '<strong>Approved post</strong><br />» %s',
-	'LOG_POST_DISAPPROVED'		=> '<strong>Disapproved post “%1$s” with the following reason</strong><br />» %2$s',
-	'LOG_POST_EDITED'			=> '<strong>Edited post “%1$s” written by</strong><br />» %2$s',
+	'LOG_POST_DISAPPROVED'		=> '<strong>Disapproved post â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
+	'LOG_POST_EDITED'			=> '<strong>Edited post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_POST_RESTORED'			=> '<strong>Restored post</strong><br />Â» %s',
 	'LOG_REPORT_CLOSED'			=> '<strong>Closed report</strong><br />» %s',
 	'LOG_REPORT_DELETED'		=> '<strong>Deleted report</strong><br />» %s',
+	'LOG_RESTORE_TOPIC'			=> '<strong>Restored topic â€œ%1$sâ€ written by</strong><br />Â» %2$s',
+	'LOG_SOFTDELETE_POST'		=> '<strong>Soft deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_SOFTDELETE_TOPIC'		=> '<strong>Soft deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_SPLIT_DESTINATION'		=> '<strong>Moved split posts</strong><br />» to %s',
 	'LOG_SPLIT_SOURCE'			=> '<strong>Split posts</strong><br />» from %s',
 
 	'LOG_TOPIC_APPROVED'		=> '<strong>Approved topic</strong><br />» %s',
-	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Disapproved topic “%1$s” with the following reason</strong><br />%2$s',
+	'LOG_TOPIC_RESTORED'		=> '<strong>Restored topic</strong><br />Â» %s',
+	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Disapproved topic â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
 	'LOG_TOPIC_RESYNC'			=> '<strong>Resynchronised topic counters</strong><br />» %s',
 	'LOG_TOPIC_TYPE_CHANGED'	=> '<strong>Changed topic type</strong><br />» %s',
 	'LOG_UNLOCK'				=> '<strong>Unlocked topic</strong><br />» %s',
@@ -10792,16 +11107,6 @@ $lang = array_merge($lang, array(
 
 	'LOG_IMAGE_GENERATION_ERROR'	=> '<strong>Error while creating image</strong><br />» Error in %1$s on line %2$s: %3$s',
 
-	'LOG_IMAGESET_ADD_DB'			=> '<strong>Added new imageset to database</strong><br />» %s',
-	'LOG_IMAGESET_ADD_FS'			=> '<strong>Add new imageset on filesystem</strong><br />» %s',
-	'LOG_IMAGESET_DELETE'			=> '<strong>Deleted imageset</strong><br />» %s',
-	'LOG_IMAGESET_EDIT_DETAILS'		=> '<strong>Edited imageset details</strong><br />» %s',
-	'LOG_IMAGESET_EDIT'				=> '<strong>Edited imageset</strong><br />» %s',
-	'LOG_IMAGESET_EXPORT'			=> '<strong>Exported imageset</strong><br />» %s',
-	'LOG_IMAGESET_LANG_MISSING'		=> '<strong>Imageset misses “%2$s” localisation</strong><br />» %1$s',
-	'LOG_IMAGESET_LANG_REFRESHED'	=> '<strong>Refreshed “%2$s” localisation of imageset</strong><br />» %1$s',
-	'LOG_IMAGESET_REFRESHED'		=> '<strong>Refreshed imageset</strong><br />» %s',
-
 	'LOG_INACTIVE_ACTIVATE'	=> '<strong>Activated inactive users</strong><br />» %s',
 	'LOG_INACTIVE_DELETE'	=> '<strong>Deleted inactive users</strong><br />» %s',
 	'LOG_INACTIVE_REMIND'	=> '<strong>Sent reminder e-mails to inactive users</strong><br />» %s',
@@ -10846,6 +11151,7 @@ $lang = array_merge($lang, array(
 	'LOG_U_ROLE_EDIT'		=> '<strong>User role edited</strong><br />» %s',
 	'LOG_U_ROLE_REMOVED'	=> '<strong>User role removed</strong><br />» %s',
 
+	'LOG_PLUPLOAD_TIDY_FAILED'		=> '<strong>Unable to open %1$s for tidying, check permissions.</strong><br />Exception: %2$s<br />Trace: %3$s',
 	'LOG_PROFILE_FIELD_ACTIVATE'	=> '<strong>Profile field activated</strong><br />» %s',
 	'LOG_PROFILE_FIELD_CREATE'		=> '<strong>Profile field added</strong><br />» %s',
 	'LOG_PROFILE_FIELD_DEACTIVATE'	=> '<strong>Profile field deactivated</strong><br />» %s',
@@ -10854,13 +11160,13 @@ $lang = array_merge($lang, array(
 
 	'LOG_PRUNE'					=> '<strong>Pruned forums</strong><br />» %s',
 	'LOG_AUTO_PRUNE'			=> '<strong>Auto-pruned forums</strong><br />» %s',
+	'LOG_PRUNE_SHADOW'		=> '<strong>Auto-pruned shadow topics</strong><br />Â» %s',
 	'LOG_PRUNE_USER_DEAC'		=> '<strong>Users deactivated</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_DEL'	=> '<strong>Users pruned and posts deleted</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_ANON'	=> '<strong>Users pruned and posts retained</strong><br />» %s',
 
 	'LOG_PURGE_CACHE'			=> '<strong>Purged cache</strong>',
 	'LOG_PURGE_SESSIONS'		=> '<strong>Purged sessions</strong>',
-
 
 	'LOG_RANK_ADDED'		=> '<strong>Added new rank</strong><br />» %s',
 	'LOG_RANK_REMOVED'		=> '<strong>Removed rank</strong><br />» %s',
@@ -10870,15 +11176,17 @@ $lang = array_merge($lang, array(
 	'LOG_REASON_REMOVED'	=> '<strong>Removed report/denial reason</strong><br />» %s',
 	'LOG_REASON_UPDATED'	=> '<strong>Updated report/denial reason</strong><br />» %s',
 
-	'LOG_REFERER_INVALID'		=> '<strong>Referer validation failed</strong><br />»Referer was “<em>%1$s</em>”. The request was rejected and the session killed.',
+	'LOG_REFERER_INVALID'		=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 	'LOG_RESET_DATE'			=> '<strong>Board start date reset</strong>',
 	'LOG_RESET_ONLINE'			=> '<strong>Most users online reset</strong>',
+	'LOG_RESYNC_FILES_STATS'	=> '<strong>File statistics resynchronised</strong>',
 	'LOG_RESYNC_POSTCOUNTS'		=> '<strong>User post counts resynchronised</strong>',
 	'LOG_RESYNC_POST_MARKING'	=> '<strong>Dotted topics resynchronised</strong>',
 	'LOG_RESYNC_STATS'			=> '<strong>Post, topic and user statistics resynchronised</strong>',
 
 	'LOG_SEARCH_INDEX_CREATED'	=> '<strong>Created search index for</strong><br />» %s',
 	'LOG_SEARCH_INDEX_REMOVED'	=> '<strong>Removed search index for</strong><br />» %s',
+	'LOG_SPHINX_ERROR'			=> '<strong>Sphinx Error</strong><br />Â» %s',
 	'LOG_STYLE_ADD'				=> '<strong>Added new style</strong><br />» %s',
 	'LOG_STYLE_DELETE'			=> '<strong>Deleted style</strong><br />» %s',
 	'LOG_STYLE_EDIT_DETAILS'	=> '<strong>Edited style</strong><br />» %s',
@@ -10945,15 +11253,18 @@ $lang = array_merge($lang, array(
 	'LOG_USER_GROUP_RESIGN'			=> '<strong>User resigned membership from group</strong><br />» %s',
 
 	'LOG_WARNING_DELETED'		=> '<strong>Deleted user warning</strong><br />» %s',
-	'LOG_WARNINGS_DELETED'		=> '<strong>Deleted %2$s user warnings</strong><br />» %1$s',
 	'LOG_WARNINGS_DELETED_ALL'	=> '<strong>Deleted all user warnings</strong><br />» %s',
 
 	'LOG_WORD_ADD'			=> '<strong>Added word censor</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>Deleted word censor</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Edited word censor</strong><br />» %s',
+
+	'LOG_EXT_ENABLE'	=> '<strong>Extension enabled</strong><br />Â» %s',
+	'LOG_EXT_DISABLE'	=> '<strong>Extension disabled</strong><br />Â» %s',
+	'LOG_EXT_PURGE'		=> '<strong>Extensionâ€™s data deleted</strong><br />Â» %s',
+
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
-
 ));
 
 $lang = array_merge($lang, array(
@@ -11254,7 +11565,7 @@ $lang = array_merge($lang, array(
 	'ACP_PORTAL_WELCOME_EXPLAIN'=> '',
 	'ADM_LOGOUT'			=> 'ACP saioa bukatu',
 	'ADM_LOGGED_OUT'		=> 'Administrazio Kontrol Paneleko (ACP) saioa zuzen bukatu egin duzu.',
-	'LOG_REFERER_INVALID'	=> '<strong>Referer validation failed</strong><br />»Referer was “<em>%1$s</em>”. The request was rejected and the session killed.',
+	'LOG_REFERER_INVALID'	=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 
 	'ACP_ABBCODES'			=> 'BBcode Box',
 	'LOG_CONFIG_ABBCODES'	=> '<strong>Altered BBCode Box settings</strong>',
@@ -11660,7 +11971,7 @@ $lang = array_merge($lang, array(
 	'SELECT_A_PREFIX'				=> 'Select a prefix',
 	'ACP_SEOQUERYS'					=> 'SEO Queries',
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Fitxategi erantsiak antolatu',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can list and delete files attached to posts and private messages.',
 	'LOG_ATTACH_DEL'				=> '<strong>Attachments deleted</strong><br />» %s',
 	'LOG_ATTACH_REASSIGNED'			=> '<strong>Attachment reassigned to Post</strong><br />» ID %1$d - %2$s',
 	'TOTAL_SIZE'					=> 'Total size',
@@ -11679,11 +11990,11 @@ $lang = array_merge($lang, array(
 	'ACP_INTRO'				=> 'Intro',
 
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Fitxategi erantsiak antolatu',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
 	'TOTAL_SIZE'				=> 'Total size',
 	'DOWNLOADS'				=> 'Deskargak',
 
-	'NO_AVATAR'				=> 'URL of the avatar for all the have no separate',
+	'NO_AVATAR'				=> 'No avatar selected',
 	'NO_AVATAR_EXPLAIN'			=> 'The optimal size of the avatar is 120x120px, this box is left blank, no picture at all. <br /> Demo URL: http://www.userboard.org/images/no_avatar_1.gif',
 	'GROUP_ICON'				=> 'Group Icon',
 	'GROUP_ICON_EXPLAIN'			=> 'Upload your Group Icons into Upload &#187; Topic/Group Icons',
@@ -12846,6 +13157,97 @@ $lang = array_merge($lang, array(
 	'NO_EMAIL_SUBJECT'		=> 'Izenburu gabeko posta elektroniko mezua.',
 ));
 
+#######language/en/acp/extensions.php#######
+
+$lang = array_merge($lang, array(
+	'EXTENSION'					=> 'Luzapena',
+	'EXTENSIONS'				=> 'Extensions',
+	'EXTENSIONS_ADMIN'			=> 'Extensions Manager',
+	'EXTENSIONS_EXPLAIN'		=> 'The Extensions Manager is a tool in your phpBB Board which allows you to manage all of your extensions statuses and view information about them.',
+	'EXTENSION_INVALID_LIST'	=> 'The “%s” extension is not valid.<br />%s<br /><br />',
+	'EXTENSION_NOT_AVAILABLE'	=> 'The selected extension is not available for this board, please verify your phpBB and PHP versions are allowed (see the details page).',
+	'EXTENSION_DIR_INVALID'		=> 'The selected extension has an invalid directory structure and cannot be enabled.',
+	'EXTENSION_NOT_ENABLEABLE'	=> 'The selected extension cannot be enabled, please verify the extension’s requirements.',
+
+	'DETAILS'				=> 'Details',
+
+	'EXTENSIONS_DISABLED'	=> 'Disabled Extensions',
+	'EXTENSIONS_ENABLED'	=> 'Enabled Extensions',
+
+	'EXTENSION_DELETE_DATA'	=> 'Delete data',
+	'EXTENSION_DISABLE'		=> 'Disable',
+	'EXTENSION_ENABLE'		=> 'Enable',
+
+	'EXTENSION_DELETE_DATA_EXPLAIN'	=> 'Deleting an extension’s data removes all of its data and settings. The extension files are retained so it can be enabled again.',
+	'EXTENSION_DISABLE_EXPLAIN'		=> 'Disabling an extension retains its files, data and settings but removes any functionality added by the extension.',
+	'EXTENSION_ENABLE_EXPLAIN'		=> 'Enabling an extension allows you to use it on your board.',
+
+	'EXTENSION_DELETE_DATA_IN_PROGRESS'	=> 'The extension’s data is currently being deleted. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_DISABLE_IN_PROGRESS'	=> 'The extension is currently being disabled. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_ENABLE_IN_PROGRESS'	=> 'The extension is currently being enabled. Please do not leave or refresh this page until it is completed.',
+
+	'EXTENSION_DELETE_DATA_SUCCESS'	=> 'The extension’s data was deleted successfully',
+	'EXTENSION_DISABLE_SUCCESS'		=> 'The extension was disabled successfully',
+	'EXTENSION_ENABLE_SUCCESS'		=> 'The extension was enabled successfully',
+
+	'EXTENSION_NAME'			=> 'Extension Name',
+	'EXTENSION_ACTIONS'			=> 'Actions',
+	'EXTENSION_OPTIONS'			=> 'Options',
+	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
+	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s files from the filesystem</li>
+			<li>Upload the new files</li>
+			<li>Enable the extension</li>
+		</ol>',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s data</li>
+			<li>Delete the extension’s files from the filesystem</li>
+		</ol>',
+
+	'EXTENSION_DELETE_DATA_CONFIRM'	=> 'Are you sure that you wish to delete the data associated with “%s”?<br /><br />This removes all of its data and settings and cannot be undone!',
+	'EXTENSION_DISABLE_CONFIRM'		=> 'Are you sure that you wish to disable the “%s” extension?',
+	'EXTENSION_ENABLE_CONFIRM'		=> 'Are you sure that you wish to enable the “%s” extension?',
+	'EXTENSION_FORCE_UNSTABLE_CONFIRM'	=> 'Are you sure that you wish to force the use of unstable version?',
+
+	'RETURN_TO_EXTENSION_LIST'	=> 'Return to the extension list',
+
+	'EXT_DETAILS'			=> 'Extension Details',
+	'DISPLAY_NAME'			=> 'Disply Name (may be NULL)',
+	'CLEAN_NAME'			=> 'Clean Name',
+	'TYPE'					=> 'Type',
+	'DESCRIPTION'			=> 'Deskribapena',
+	'VERSION'				=> 'Version',
+	'HOMEPAGE'				=> 'Homepage',
+	'PATH'					=> 'File Path',
+	'TIME'					=> 'Ordua',
+	'LICENSE'				=> 'Licence',
+
+	'REQUIREMENTS'			=> 'Requirements',
+	'PHPBB_VERSION'			=> 'phpBB Version',
+	'PHP_VERSION'			=> 'PHP Version',
+	'AUTHOR_INFORMATION'	=> 'Author Information',
+	'AUTHOR_NAME'			=> 'Name',
+	'AUTHOR_EMAIL'			=> 'Email',
+	'AUTHOR_HOMEPAGE'		=> 'Homepage',
+	'AUTHOR_ROLE'			=> 'Role',
+
+	'NOT_UP_TO_DATE'		=> '%s is not up to date',
+	'UP_TO_DATE'			=> '%s is up to date',
+	'ANNOUNCEMENT_TOPIC'	=> 'Release Announcement',
+	'DOWNLOAD_LATEST'		=> 'Download Version',
+	'NO_VERSIONCHECK'		=> 'No version check information given.',
+
+	'VERSIONCHECK_FORCE_UPDATE_ALL'		=> 'Re-Check all versions',
+	'FORCE_UNSTABLE'					=> 'Always check for unstable versions',
+	'EXTENSIONS_VERSION_CHECK_SETTINGS'	=> 'Version check settings',
+
+	'META_FIELD_NOT_SET'	=> 'Required meta field %s has not been set.',
+	'META_FIELD_INVALID'	=> 'Meta field %s is invalid.',
+));
+
 #######language/en/acp/forums.php#######
 
 $lang = array_merge($lang, array(
@@ -12855,6 +13257,10 @@ $lang = array_merge($lang, array(
 	'AUTO_PRUNE_FREQ_EXPLAIN'	=> 'Auto-garbiketa batetik bestera igarotzen den egun kopurua.',
 	'AUTO_PRUNE_VIEWED'			=> 'Iraungipen',
 	'AUTO_PRUNE_VIEWED_EXPLAIN'	=> 'Gaiak bisita berririk gabe iraungo duen egun kopurua automatikoki ezabatua izan baino lehen.',
+	'AUTO_PRUNE_SHADOW_FREQ'	=> 'Auto-prune shadow topics frequency',
+	'AUTO_PRUNE_SHADOW_DAYS'	=> 'Auto-prune shadow topics age',
+	'AUTO_PRUNE_SHADOW_DAYS_EXPLAIN'	=> 'Number of days after which shadow topic is removed.',
+	'AUTO_PRUNE_SHADOW_FREQ_EXPLAIN'	=> 'Time in days between pruning events.',
 
 	'CONTINUE'						=> 'Jarraitu',
 	'COPY_PERMISSIONS_EXPLAIN'		=> 'Foro berriaren baimenen hobespenak erraztearren, dagoeneko esistitzen den beste fororen bateko baimenak kopiatu ditzakezu.',
@@ -12913,6 +13319,8 @@ $lang = array_merge($lang, array(
 	'FORUM_PASSWORD_OLD'				=> 'Foroaren pasahitzaren hash metodoa zaharkitua geratu da eta aldatzea gomendatzen da.',
 	'FORUM_PASSWORD_MISMATCH'			=> 'Sartutako pasahitzek ez dute bat egiten.',
 	'FORUM_PRUNE_SETTINGS'				=> 'Foro garbiketarako hobespenak',
+	'FORUM_PRUNE_SHADOW'				=> 'Enable auto-pruning of shadow topics',
+	'FORUM_PRUNE_SHADOW_EXPLAIN'			=> 'Prunes the forum of shadow topics, set the frequency/age parameters below.',
 	'FORUM_RESYNCED'					=> '"%1$s" foroa zuzen bersinkronizatu egin da.',
 	'FORUM_RULES_EXPLAIN'				=> 'Foroaren arauak orri guztietan erakusten dira.',
 	'FORUM_RULES_LINK'					=> 'Mesedez, klikatu hemen foroko arauak ikusteko.',
@@ -13004,6 +13412,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE_EXPLAIN'		=> 'Hemendik erabiltzaile taldeak kudeatu zenitzake. Dauden taldeak ezabatu, aldatu, berriak sortu, talde-erantzuleak (moderadoreak) aukeratu, taldeen egoera (irekia, itxita, ezkutua) zehaztu edo taldearen izena eta deskribapena ezarri zenezake.',
+	'ADD_GROUP_CATEGORY'			=> 'Add category',
 	'GROUP_ADD_USERS'				=> 'Erabiltzaileak gehitu',
 	'ADD_USERS_EXPLAIN'				=> 'Hemendik, taldeari erabiltzaile berriak gehi zeniezaioke. Aukeratutako erabiltzaileen talde lehenetsia izango den ere zehaztu zenezake. Gainera taldeko erantzuletzat ere aukeratu zenitzake. Mesedez, sar ezazu erabiltzaile bakoitza lerro berri batean.',
 
@@ -13017,11 +13426,10 @@ $lang = array_merge($lang, array(
 	'GROUP_APPROVED'				=> 'Onartutako kideak',
 	'GROUP_AVATAR'					=> 'Taldeko irudia',
 	'GROUP_AVATAR_EXPLAIN'			=> 'Iudi hau Talde Kontrol Panelan erakutsiko da.',
+	'GROUP_CATEGORY_NAME'			=> 'Category name',
 	'GROUP_CLOSED'					=> 'Itxita',
 	'GROUP_COLOR'					=> 'Talde kolorea',
 	'GROUP_COLOR_EXPLAIN'			=> 'Talde horren kideen izenak erakutsiko diren kolorea zehazten du. Hutsik utzi erabiltzaileen ezarpen lehenetsiak erabili ditzatela nahi balidn baduzu.',
-	'GROUP_CONFIRM_ADD_USER'		=> 'Ziur %1$s erabiltzailea taldera gehitu nahi duzula?',
-	'GROUP_CONFIRM_ADD_USERS'		=> 'Ziur %1$s erabiltzaileak talder gehitu nahi dituzula?',
 	'GROUP_CREATED'					=> 'Taldea zuzen sortu egin da.',
 	'GROUP_DEFAULT'					=> 'Lehenetsitako taldea',
 	'GROUP_DEFS_UPDATED'			=> 'Aukeratatuko erabiltzaileentzako ezarri den talde lehenetsia.',
@@ -13063,6 +13471,8 @@ $lang = array_merge($lang, array(
 	'GROUP_SETTINGS_SAVE'			=> 'Taldearen konfigurazio orokorra',
 	'GROUP_SKIP_AUTH'				=> 'Taldeko erantzulea baimenetatik baztertu',
 	'GROUP_SKIP_AUTH_EXPLAIN'		=> 'Aukera hau gaituta baldin badago, erantzuleak ezin izango ditu taldearen baimenak gehiagotan oinordetzan hartu.',
+	'GROUP_SPECIAL'					=> 'Pre-defined',
+	'GROUP_TEAMPAGE'				=> 'Display group on teampage',
 	'GROUP_TYPE'					=> 'Talde mota',
 	'GROUP_TYPE_EXPLAIN'			=> 'Honek taldea ikus dezaketen edo bertora kidetu daitezken erabiltzaileak zehazten ditu.',
 	'GROUP_UPDATED'					=> 'Talde hobespenak zuzen eguneratu egin dira.',
@@ -13071,19 +13481,37 @@ $lang = array_merge($lang, array(
 	'GROUP_USERS_EXIST'				=> 'Aukeratutako erabiltzaileak taldeko kideak dira dagoeneko.',
 	'GROUP_USERS_REMOVE'			=> 'Erabiltzaileak zuzen ezabatu dira taldetik eta aukera lehenetsi berriak zuzen ezarri egin dira.',
 
+	'LEGEND_EXPLAIN'				=> 'These are the groups which are displayed in the group legend:',
+	'LEGEND_SETTINGS'				=> 'Legend settings',
+	'LEGEND_SORT_GROUPNAME'			=> 'Sort legend by group name',
+	'LEGEND_SORT_GROUPNAME_EXPLAIN'	=> 'The order below is ignored when this option is enabled.',
+
+	'MANAGE_LEGEND'			=> 'Manage group legend',
+	'MANAGE_TEAMPAGE'		=> 'Manage teampage',
 	'MAKE_DEFAULT_FOR_ALL'		=> 'Lehenetsitako taldea bihurtu erabiltzaile guztientzako.',
 	'MEMBERS'					=> 'Kideak',
 
 	'NO_GROUP'					=> 'Ez dago eskatutako talderik.',
+	'NO_GROUPS_ADDED'			=> 'No groups added yet.',
 	'NO_GROUPS_CREATED'			=> 'Oraindik ez da talderik sortu.',
 	'NO_PERMISSIONS'			=> 'Ez kopiatu baimenik',
 	'NO_USERS'					=> 'Eskatutako erabiltzaileak ez dira existitzen.',
 	'NO_USERS_ADDED'			=> 'Ez da erabiltzailerik gehitu taldera.',
 	'NO_VALID_USERS'			=> 'Ez duzu eragiketa horretarako aukeragarria liteken erabiltzailerik sartu.',
 
+	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> 'Aurretik zehaztutako taldeak',
 	'SPECIAL_GROUPS_EXPLAIN'	=> 'Aurretik zehaztutako taldeak talde bereziak dira. Ezin daitezke zuzenean aldatu edo ezabatu. Hala ere, erabiltzaileak gehitu zenizkieke edota oinarrizko ezarpenen batzuk aldatu. "Talde lehenetsia" botoian sakatuz, erabiltzaile guztien talde lehenetsitzat jarri zenezake.',
 
+	'TEAMPAGE'					=> 'Teampage',
+	'TEAMPAGE_DISP_ALL'			=> 'All memberships',
+	'TEAMPAGE_DISP_DEFAULT'		=> 'User’s default group only',
+	'TEAMPAGE_DISP_FIRST'		=> 'First membership only',
+	'TEAMPAGE_EXPLAIN'			=> 'These are the groups which are displayed on the teampage:',
+	'TEAMPAGE_FORUMS'			=> 'Display moderated forums',
+	'TEAMPAGE_FORUMS_EXPLAIN'	=> 'If set to yes, moderators will have a list with all of the forums where they have moderator permissions displayed in their row. This can be very database intensive for big boards.',
+	'TEAMPAGE_MEMBERSHIPS'		=> 'Display user memberships',
+	'TEAMPAGE_SETTINGS'			=> 'Teampage settings',
 	'TOTAL_MEMBERS'				=> 'Taldekideak',
 
 	'USERS_APPROVED'				=> 'Zuzen onarturiko erabiltzaileak.',
@@ -13469,26 +13897,14 @@ $lang = array_merge($lang, array(
 	'ACP_FILES'						=> 'Admin hizkuntza fitxategiak',
 	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> 'Hemendik hizkuntza paketeak jarri/kendu zenitzake. Lehenetsitako hizkuntza paketea izartxo batekin (*) markaturik dago.',
 
-	'EMAIL_FILES'			=> 'E-mail txantilloiak',
-
-	'FILE_CONTENTS'				=> 'Fitxategien edukiak',
-	'FILE_FROM_STORAGE'			=> 'Storage karpetako fitxategia',
-
-	'HELP_FILES'				=> 'Laguntza fitxategiak',
-
-	'INSTALLED_LANGUAGE_PACKS'	=> 'Hizkuntza paketeak instalaturik',
-	'INVALID_LANGUAGE_PACK'		=> 'Aukeratutako hizkuntza paketea ez dirudi baliogarria denik. Mesedez, egiazta ezazu hizkuntza paketea eta berriro gehitu ezazu beharrezkoa izanez gero.',
-	'INVALID_UPLOAD_METHOD'		=> 'Gehitzeko aukeratutako metodoa ez da baliogarria. Mesedez, beste metodoren bat aukera ezazu.',
+	'DELETE_LANGUAGE_CONFIRM'		=> 'Are you sure you wish to delete “%s”?',
+	'INSTALLED_LANGUAGE_PACKS'		=> 'Hizkuntza paketeak instalaturik',
 
 	'LANGUAGE_DETAILS_UPDATED'			=> 'Hizkuntza xehetasunak zuzen eguneratu egin dira.',
-	'LANGUAGE_ENTRIES'					=> 'Hizkuntza sarrerak',
-	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Hemendik hizkuntza paketeko sarrerak edo oraindik itzuli gabe dauden sarrerak alda zenitzake.<br /><strong>Oharra:</strong> Hizkuntza fitxategietan eginiko aldaketak, bereiziriko karpeta batean gordeko dira karpeta hori deskarga zenezan. Erabiltzaileek ez dituzte eginiko aldaketak ikusiko jatorrizko fitxategiak karpeta horiekin ordezkatu arte (zerbitzarira gehituz).',
-	'LANGUAGE_FILES'					=> 'Hizkuntza fitxategiak',
-	'LANGUAGE_KEY'						=> 'Hizkuntza kodea',
 	'LANGUAGE_PACK_ALREADY_INSTALLED'	=> 'Hizkuntza pakete hau dagoeneko instalaturik dago.',
-	'LANGUAGE_PACK_DELETED'				=> '<strong>%1$s</strong> hizkuntza paketea zuzen ezabatu egin da. Hizkuntza honetako erabiltzaile guztiak, foroko lehenetsitako hizkuntzara esleitu egin dira.',
+	'LANGUAGE_PACK_DELETED'				=> 'The language pack “%s” has been removed successfully. All users using this language have been reset to the board’s default language.',
 	'LANGUAGE_PACK_DETAILS'				=> 'Hizkuntza paketeko xehetasunak',
-	'LANGUAGE_PACK_INSTALLED'			=> '<strong>%1$s</strong> hizkuntza paketea zuzen instalatu egin da.',
+	'LANGUAGE_PACK_INSTALLED'			=> 'The language pack “%s” has been successfully installed.',
 	'LANGUAGE_PACK_CPF_UPDATE'			=> 'Profileko eremu pertsonalizatuen hizkuntza-kateak lehenetsitako hizkuntzatik kopiaturik daude. Alda itzazu behar izan ezkero, mesedez.',
 	'LANGUAGE_PACK_ISO'					=> 'ISO',
 	'LANGUAGE_PACK_LOCALNAME'			=> 'Bertoko izena',
@@ -13501,33 +13917,44 @@ $lang = array_merge($lang, array(
 	'LANG_ISO_CODE'						=> 'ISO kodea',
 	'LANG_LOCAL_NAME'					=> 'Bertoko izena',
 
-	'MISSING_LANGUAGE_FILE'		=> 'Galdutako hizkuntza fitxategia: <strong style="color:red">%1$s</strong>',
+	'MISSING_LANG_FILES'		=> 'Missing language files',
 	'MISSING_LANG_VARIABLES'	=> 'Hizkuntza aldagaiak galdurik',
-	'MODS_FILES'				=> 'MODen hizkuntza fitxategiak',
 
 	'NO_FILE_SELECTED'				=> 'Ez duzu hizkuntza fitxategirik zehaztu.',
 	'NO_LANG_ID'					=> 'Ez duzu hizkuntza paketerik zehaztu.',
-	'NO_REMOVE_DEFAULT_LANG'		=> 'Ezin duzu lehenetsitako hizkuntza paketea ezabatu.<br />Hizkuntza pakete hau ezabatu nahi baldin baduzu, foroko lehenetsitako hizkuntza aldatu beharko duzu.',
+	'NO_REMOVE_DEFAULT_LANG'		=> 'You are not able to remove the default language pack.<br />If you want to remove this language pack, change your board’s default language first.',
 	'NO_UNINSTALLED_LANGUAGE_PACKS'	=> 'Ez dago ezabatutako hizkuntza paketerik',
 
-	'REMOVE_FROM_STORAGE_FOLDER'		=> 'Storage karpetatik ezabatu',
-
-	'SELECT_DOWNLOAD_FORMAT'	=> 'Deskarga fitxategiaren formatua aukeratu',
-	'SUBMIT_AND_DOWNLOAD'		=> 'Fitxategia bidali eta deskargatu',
-	'SUBMIT_AND_UPLOAD'			=> 'Fitxategia bidali eta gehitu',
-
-	'THOSE_MISSING_LANG_FILES'			=> 'Hurrengo hizkuntza fitxategiak ezin izan dira %1$s hizkuntza karpetan aurkitu.',
-	'THOSE_MISSING_LANG_VARIABLES'		=> 'Hurrengo hizkuntza aldagaiak ezin izan dira <strong>%1$s</strong> hizkuntza paketean aurkitu.',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 
 	'UNINSTALLED_LANGUAGE_PACKS'	=> 'Ezabatutako hizkuntza paketeak',
 
+	// 3.0.12
+	'EMAIL_FILES'			=> 'E-mail txantilloiak',
+	'FILE_CONTENTS'				=> 'Fitxategien edukiak',
+	'FILE_FROM_STORAGE'			=> 'Storage karpetako fitxategia',
+	'HELP_FILES'				=> 'Laguntza fitxategiak',
+	'INSTALLED_LANGUAGE_PACKS'	=> 'Hizkuntza paketeak instalaturik',
+	'INVALID_LANGUAGE_PACK'		=> 'Aukeratutako hizkuntza paketea ez dirudi baliogarria denik. Mesedez, egiazta ezazu hizkuntza paketea eta berriro gehitu ezazu beharrezkoa izanez gero.',
+	'INVALID_UPLOAD_METHOD'		=> 'Gehitzeko aukeratutako metodoa ez da baliogarria. Mesedez, beste metodoren bat aukera ezazu.',
+	'LANGUAGE_ENTRIES'					=> 'Hizkuntza sarrerak',
+	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Hemendik hizkuntza paketeko sarrerak edo oraindik itzuli gabe dauden sarrerak alda zenitzake.<br /><strong>Oharra:</strong> Hizkuntza fitxategietan eginiko aldaketak, bereiziriko karpeta batean gordeko dira karpeta hori deskarga zenezan. Erabiltzaileek ez dituzte eginiko aldaketak ikusiko jatorrizko fitxategiak karpeta horiekin ordezkatu arte (zerbitzarira gehituz).',
+	'LANGUAGE_FILES'					=> 'Hizkuntza fitxategiak',
+	'LANGUAGE_KEY'						=> 'Hizkuntza kodea',
+	'MISSING_LANGUAGE_FILE'		=> 'Galdutako hizkuntza fitxategia: <strong style="color:red">%1$s</strong>',
+	'SELECT_DOWNLOAD_FORMAT'	=> 'Deskarga fitxategiaren formatua aukeratu',
+	'SUBMIT_AND_DOWNLOAD'		=> 'Fitxategia bidali eta deskargatu',
+	'SUBMIT_AND_UPLOAD'			=> 'Fitxategia bidali eta gehitu',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 	'UNABLE_TO_WRITE_FILE'		=> 'Ezin izan da fitxategia %1$s(e)n idatzi.',
 	'UPLOAD_COMPLETED'			=> 'Gehitzea zuzen burutu egin da.',
 	'UPLOAD_FAILED'				=> 'Gehiketak arrazoi ezezagunengatik huts egin du. Fitxategia eskuz ordezkatu beharko duzu.',
 	'UPLOAD_METHOD'				=> 'Gehitze metodoa',
 	'UPLOAD_SETTINGS'			=> 'Gehitze ezarpenak',
-
 	'WRONG_LANGUAGE_FILE'		=> 'Aukeratutako hizkuntza fitxategia ez da baliagarria.',
+	// 3.0.12
 ));
 
 #######language/en/acp/lexicon.php#######
@@ -13860,6 +14287,171 @@ $lang = array_merge($lang, array(
 	'ROLE_DESCRIPTION_ADMIN_FOOTBALL'	=> 'Can edit final match results.',
 ));
 
+#######language/en/acp/permissions_phpbb.php#######
+
+$lang = array_merge($lang, array(
+	'ACL_CAT_ACTIONS'		=> 'Actions',
+	'ACL_CAT_CONTENT'		=> 'Content',
+	'ACL_CAT_FORUMS'		=> 'Forums',
+	'ACL_CAT_MISC'			=> 'Misc',
+	'ACL_CAT_PERMISSIONS'	=> 'Permissions',
+	'ACL_CAT_PM'			=> 'Private messages',
+	'ACL_CAT_POLLS'			=> 'Polls',
+	'ACL_CAT_POST'			=> 'Post',
+	'ACL_CAT_POST_ACTIONS'	=> 'Post actions',
+	'ACL_CAT_POSTING'		=> 'Posting',
+	'ACL_CAT_PROFILE'		=> 'Profile',
+	'ACL_CAT_SETTINGS'		=> 'Settings',
+	'ACL_CAT_TOPIC_ACTIONS'	=> 'Topic actions',
+	'ACL_CAT_USER_GROUP'	=> 'Users &amp; Groups',
+));
+
+// User Permissions
+$lang = array_merge($lang, array(
+	'ACL_U_VIEWPROFILE'	=> 'Can view profiles, memberlist and online list',
+	'ACL_U_CHGNAME'		=> 'Can change username',
+	'ACL_U_CHGPASSWD'	=> 'Can change password',
+	'ACL_U_CHGEMAIL'	=> 'Can change email address',
+	'ACL_U_CHGAVATAR'	=> 'Can change avatar',
+	'ACL_U_CHGGRP'		=> 'Can change default usergroup',
+	'ACL_U_CHGPROFILEINFO'	=> 'Can change profile field information',
+
+	'ACL_U_ATTACH'		=> 'Can attach files',
+	'ACL_U_DOWNLOAD'	=> 'Can download files',
+	'ACL_U_SAVEDRAFTS'	=> 'Can save drafts',
+	'ACL_U_CHGCENSORS'	=> 'Can disable word censors',
+	'ACL_U_SIG'			=> 'Can use signature',
+
+	'ACL_U_SENDPM'		=> 'Can send private messages',
+	'ACL_U_MASSPM'		=> 'Can send messages to multiple users',
+	'ACL_U_MASSPM_GROUP'=> 'Can send messages to groups',
+	'ACL_U_READPM'		=> 'Can read private messages',
+	'ACL_U_PM_EDIT'		=> 'Can edit own private messages',
+	'ACL_U_PM_DELETE'	=> 'Can remove private messages from own folder',
+	'ACL_U_PM_FORWARD'	=> 'Can forward private messages',
+	'ACL_U_PM_EMAILPM'	=> 'Can email private messages',
+	'ACL_U_PM_PRINTPM'	=> 'Can print private messages',
+	'ACL_U_PM_ATTACH'	=> 'Can attach files in private messages',
+	'ACL_U_PM_DOWNLOAD'	=> 'Can download files in private messages',
+	'ACL_U_PM_BBCODE'	=> 'Can use BBCode in private messages',
+	'ACL_U_PM_SMILIES'	=> 'Can use smilies in private messages',
+	'ACL_U_PM_IMG'		=> 'Can use [img] BBCode tag in private messages',
+	'ACL_U_PM_FLASH'	=> 'Can use [flash] BBCode tag in private messages',
+
+	'ACL_U_SENDEMAIL'	=> 'Can send emails',
+	'ACL_U_SENDIM'		=> 'Can send instant messages',
+	'ACL_U_IGNOREFLOOD'	=> 'Can ignore flood limit',
+	'ACL_U_HIDEONLINE'	=> 'Can hide online status',
+	'ACL_U_VIEWONLINE'	=> 'Can view hidden online users',
+	'ACL_U_SEARCH'		=> 'Can search board',
+));
+
+// Forum Permissions
+$lang = array_merge($lang, array(
+	'ACL_F_LIST'		=> 'Can see forum',
+	'ACL_F_READ'		=> 'Can read forum',
+	'ACL_F_SEARCH'		=> 'Can search the forum',
+	'ACL_F_SUBSCRIBE'	=> 'Can subscribe forum',
+	'ACL_F_PRINT'		=> 'Can print topics',
+	'ACL_F_EMAIL'		=> 'Can email topics',
+	'ACL_F_BUMP'		=> 'Can bump topics',
+	'ACL_F_USER_LOCK'	=> 'Can lock own topics',
+	'ACL_F_DOWNLOAD'	=> 'Can download files',
+	'ACL_F_REPORT'		=> 'Can report posts',
+
+	'ACL_F_POST'		=> 'Can start new topics',
+	'ACL_F_STICKY'		=> 'Can post stickies',
+	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_REPLY'		=> 'Can reply to topics',
+	'ACL_F_EDIT'		=> 'Can edit own posts',
+	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
+	'ACL_F_SOFTDELETE'	=> 'Can soft delete own posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_F_IGNOREFLOOD' => 'Can ignore flood limit',
+	'ACL_F_POSTCOUNT'	=> 'Increment post counter<br /><em>Please note that this setting only affects new posts.</em>',
+	'ACL_F_NOAPPROVE'	=> 'Can post without approval',
+
+	'ACL_F_ATTACH'		=> 'Can attach files',
+	'ACL_F_ICONS'		=> 'Can use topic/post icons',
+	'ACL_F_BBCODE'		=> 'Can use BBCode',
+	'ACL_F_FLASH'		=> 'Can use [flash] BBCode tag',
+	'ACL_F_IMG'			=> 'Can use [img] BBCode tag',
+	'ACL_F_SIGS'		=> 'Can use signatures',
+	'ACL_F_SMILIES'		=> 'Can use smilies',
+
+	'ACL_F_POLL'		=> 'Can create polls',
+	'ACL_F_VOTE'		=> 'Can vote in polls',
+	'ACL_F_VOTECHG'		=> 'Can change existing vote',
+));
+
+// Moderator Permissions
+$lang = array_merge($lang, array(
+	'ACL_M_EDIT'		=> 'Can edit posts',
+	'ACL_M_DELETE'		=> 'Can permanently delete posts',
+	'ACL_M_SOFTDELETE'	=> 'Can soft delete posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_M_APPROVE'		=> 'Can approve and restore posts',
+	'ACL_M_REPORT'		=> 'Can close and delete reports',
+	'ACL_M_CHGPOSTER'	=> 'Can change post author',
+
+	'ACL_M_MOVE'	=> 'Can move topics',
+	'ACL_M_LOCK'	=> 'Can lock topics',
+	'ACL_M_SPLIT'	=> 'Can split topics',
+	'ACL_M_MERGE'	=> 'Can merge topics',
+
+	'ACL_M_INFO'	=> 'Can view post details',
+	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+));
+
+// Admin Permissions
+$lang = array_merge($lang, array(
+	'ACL_A_BOARD'		=> 'Can alter board settings/check for updates',
+	'ACL_A_SERVER'		=> 'Can alter server/communication settings',
+	'ACL_A_JABBER'		=> 'Can alter Jabber settings',
+	'ACL_A_PHPINFO'		=> 'Can view php settings',
+
+	'ACL_A_FORUM'		=> 'Can manage forums',
+	'ACL_A_FORUMADD'	=> 'Can add new forums',
+	'ACL_A_FORUMDEL'	=> 'Can delete forums',
+	'ACL_A_PRUNE'		=> 'Can prune forums',
+
+	'ACL_A_ICONS'		=> 'Can alter topic/post icons and smilies',
+	'ACL_A_WORDS'		=> 'Can alter word censors',
+	'ACL_A_BBCODE'		=> 'Can define BBCode tags',
+	'ACL_A_ATTACH'		=> 'Can alter attachment related settings',
+
+	'ACL_A_USER'		=> 'Can manage users<br /><em>This also includes seeing the users browser agent within the viewonline list.</em>',
+	'ACL_A_USERDEL'		=> 'Can delete/prune users',
+	'ACL_A_GROUP'		=> 'Can manage groups',
+	'ACL_A_GROUPADD'	=> 'Can add new groups',
+	'ACL_A_GROUPDEL'	=> 'Can delete groups',
+	'ACL_A_RANKS'		=> 'Can manage ranks',
+	'ACL_A_PROFILE'		=> 'Can manage custom profile fields',
+	'ACL_A_NAMES'		=> 'Can manage disallowed names',
+	'ACL_A_BAN'			=> 'Can manage bans',
+
+	'ACL_A_VIEWAUTH'	=> 'Can view permission masks',
+	'ACL_A_AUTHGROUPS'	=> 'Can alter permissions for individual groups',
+	'ACL_A_AUTHUSERS'	=> 'Can alter permissions for individual users',
+	'ACL_A_FAUTH'		=> 'Can alter forum permission class',
+	'ACL_A_MAUTH'		=> 'Can alter moderator permission class',
+	'ACL_A_AAUTH'		=> 'Can alter admin permission class',
+	'ACL_A_UAUTH'		=> 'Can alter user permission class',
+	'ACL_A_ROLES'		=> 'Can manage roles',
+	'ACL_A_SWITCHPERM'	=> 'Can use others permissions',
+
+	'ACL_A_STYLES'		=> 'Can manage styles',
+	'ACL_A_EXTENSIONS'	=> 'Can manage extensions',
+	'ACL_A_VIEWLOGS'	=> 'Can view logs',
+	'ACL_A_CLEARLOGS'	=> 'Can clear logs',
+	'ACL_A_MODULES'		=> 'Can manage modules',
+	'ACL_A_LANGUAGE'	=> 'Can manage language packs',
+	'ACL_A_EMAIL'		=> 'Can send mass email',
+	'ACL_A_BOTS'		=> 'Can manage bots',
+	'ACL_A_REASONS'		=> 'Can manage report/denial reasons',
+	'ACL_A_BACKUP'		=> 'Can backup/restore database',
+	'ACL_A_SEARCH'		=> 'Can manage search backends and settings',
+));
+
 #######language/en/acp/phpbb_seo.php#######
 
 $lang = array_merge($lang, array(
@@ -14031,6 +14623,7 @@ $lang = array_merge($lang, array(
 
 	'BBCODE_ADDED'				=> 'BBCodea zuzen gehitu egin da.',
 	'BBCODE_EDITED'				=> 'BBCodea zuzen aldatu egin da.',
+	'BBCODE_DELETED'			=> 'The BBCode has been removed successfully.',
 	'BBCODE_NOT_EXIST'			=> 'Aukeratutako BBCodea ez da existitzen.',
 	'BBCODE_HELPLINE'			=> 'Laguntza',
 	'BBCODE_HELPLINE_EXPLAIN'	=> 'Eremu honetan BBCodearen gainean sagua jartzerakoan agertzen den laguntza testua jartzen da.',
@@ -14086,17 +14679,10 @@ $lang = array_merge($lang, array(
 	'EXPORT_SMILIES'			=> 'smilies.pak esportatu eta deskargatu',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sLotura honi jarraituz, instalaturiko zure irrifartxoen (emotikonoen) ezarpenak <samp>smilies.pak</samp>en paketatuko dira. Horrela, behin deskargatu eta gero, <samp>.zip</samp> edo <samp>.tgz</samp> motatako fitxategia sor daiteke non zure emotikono guztiak gehi <samp>smilies.pak</samp> konfigurazio fitxategia egongo lirateken%s.',
 
-
 	'ICONS_ADD'				=> 'Ikono berria gehitu',
-	'ICONS_NONE_ADDED'		=> 'Ez da ikonorik gehitu.',
-	'ICONS_ONE_ADDED'		=> 'Ikonoa zuzen gehitu egin da.',
-	'ICONS_ADDED'			=> 'Ikonoak zuzen gehitu egin dira.',
 	'ICONS_CONFIG'			=> 'Ikonoen konfigurazioa',
 	'ICONS_DELETED'			=> 'Ikonoa zuzen ezabatu egin da.',
 	'ICONS_EDIT'			=> 'Ikonoa aldatu',
-	'ICONS_ONE_EDITED'		=> 'Ikonoa zuzen eguneratu egin da.',
-	'ICONS_NONE_EDITED'		=> 'Ez da ikonorik eguneratu.',
-	'ICONS_EDITED'			=> 'Ikonoak zuzen eguneratu egin dira.',
 	'ICONS_HEIGHT'			=> 'Ikonoaren altuera',
 	'ICONS_IMAGE'			=> 'Ikonoaren irudia',
 	'ICONS_IMPORTED'		=> 'Ikono paketa zuzen jarri egin da.',
@@ -14126,9 +14712,6 @@ $lang = array_merge($lang, array(
 
 	'SELECT_PACKAGE'			=> 'Paketeren bat aukeratu',
 	'SMILIES_ADD'				=> 'Irrifartxo berria gehitu',
-	'SMILIES_NONE_ADDED'		=> 'Ez da irrifartxorik gehitu.',
-	'SMILIES_ONE_ADDED'			=> 'Irrifartxoa zuzen gehitu egin da.',
-	'SMILIES_ADDED'				=> 'Irrifartxoak zuzen gehitu egin dira.',
 	'SMILIES_CODE'				=> 'Irrifartxo kodea',
 	'SMILIES_CONFIG'			=> 'Irrifartxoen konfigurazioa',
 	'SMILIES_DELETED'			=> 'Irrifartxoa zuzen ezabatu egin da.',
@@ -14136,9 +14719,6 @@ $lang = array_merge($lang, array(
 	'SMILIE_NO_CODE'			=> '“%s” irrifartxoa baztertu egin da ez bait da koderik zehaztu.',
 	'SMILIE_NO_EMOTION'			=> '“%s” irrifartxoa baztertu egin da ez bait da emoziorik zehaztu.',
 	'SMILIE_NO_FILE'			=> '“%s” irrifartxoa baztertu egin da ez bait da fitxategirik aurkitu.',
-	'SMILIES_NONE_EDITED'		=> 'Ez da irrifarxorik eguneratu.',
-	'SMILIES_ONE_EDITED'		=> 'Irrifartxo zuzen eguneratu egin da.',
-	'SMILIES_EDITED'			=> 'Irrifartxoak zuzen eguneratu egin dira.',
 	'SMILIES_EMOTION'			=> 'Emozioa',
 	'SMILIES_HEIGHT'			=> 'Irrifartxoaren altuera',
 	'SMILIES_IMAGE'				=> 'Irrifartxoaren irudia',
@@ -14150,7 +14730,6 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'Irrifartxo fitxategia',
 	'SMILIES_WIDTH'				=> 'Irrifartxoaren zabalera',
 
-	'TOO_MANY_SMILIES'		=> 'Zure mezuak irrifartxo gehiegi ditu. Baimendutako gehienezkoa %d(e)koa da.',
 	'WRONG_PAK_TYPE'		=> 'Zehaztutako paketeak ez du behar den informazioa.',
 ));
 
@@ -14248,8 +14827,11 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ADDED_PROFILE_FIELD'	=> 'Profil eremu pertsonalizatua zuzen gehitu egin da.',
+	'ALPHA_DOTS'			=> 'Alphanumeric and dots (periods)',
 	'ALPHA_ONLY'			=> 'Letra-zenbakiak baino ez',
 	'ALPHA_SPACERS'			=> 'Letra-zenbakiak eta espazioak',
+	'ALPHA_UNDERSCORE'		=> 'Alphanumeric and underscores',
+	'ALPHA_PUNCTUATION'		=> 'Alphanumeric with comma, dots, underscore and dashes beginning with a letter',
 	'ALWAYS_TODAY'			=> 'Beti egungo data',
 
 	'BOOL_ENTRIES_EXPLAIN'	=> 'Sar itzazu zure aukerak orain',
@@ -14276,6 +14858,10 @@ $lang = array_merge($lang, array(
 	'DISPLAY_AT_PROFILE_EXPLAIN'	=> 'Erabiltzailea gai da profil eremu hau bere Erabiltzaile Kontrol Paneletik aldatzeko.',
 	'DISPLAY_AT_REGISTER'			=> 'Izen-emate orrian erakutsi',
 	'DISPLAY_AT_REGISTER_EXPLAIN'	=> 'Aukera hau gaituta baldin badago, eremua izen-emate formularioan bistaratuko da.',
+	'DISPLAY_ON_MEMBERLIST'			=> 'Display on memberlist screen',
+	'DISPLAY_ON_MEMBERLIST_EXPLAIN'	=> 'If this option is enabled, the field will be displayed in the user rows on the memberlist screen.',
+	'DISPLAY_ON_PM'					=> 'Display on view private message screen',
+	'DISPLAY_ON_PM_EXPLAIN'			=> 'If this option is enabled, the field will be displayed in the mini-profile on the private message screen.',
 	'DISPLAY_ON_VT'					=> 'Gaiaren orrian erakutsi',
 	'DISPLAY_ON_VT_EXPLAIN'			=> 'Aukera hau gaituta baldin badago, eremua gaiaren orrian dagoen mini-profilan erakutsiko da.',
 	'DISPLAY_PROFILE_FIELD'			=> 'Profil eremua erakutsi',
@@ -14289,20 +14875,26 @@ $lang = array_merge($lang, array(
 	'EVERYTHING_OK'					=> 'Dena ondo (OK)',
 
 	'FIELD_BOOL'				=> 'Booleanoa (Bai/Ez)',
+	'FIELD_CONTACT_DESC'		=> 'Contact description',
+	'FIELD_CONTACT_URL'			=> 'Contact link',
 	'FIELD_DATE'				=> 'Data',
 	'FIELD_DESCRIPTION'			=> 'Eremuaren deskribapena',
 	'FIELD_DESCRIPTION_EXPLAIN'	=> 'Erabiltzaileari erakutsiko zaion eremuaren deskribapena.',
 	'FIELD_DROPDOWN'			=> 'Menu hedagarria (dropdown box)',
+	'FIELD_GOOGLEPLUS'			=> 'Google+',
 	'FIELD_IDENT'				=> 'Eremu identifikazioa',
 	'FIELD_IDENT_ALREADY_EXIST'	=> 'Eremurako aukeratu duzun identifikazioa bada dagoeneko. Mesedez, aukera ezazu beste izenen bat.',
 	'FIELD_IDENT_EXPLAIN'		=> 'Profil eremua datubasean eta txantilloietan zein den jakiteko balio duen izena da Eremu identifikazioa.',
 	'FIELD_INT'					=> 'Zenbakiak',
+	'FIELD_IS_CONTACT'			=> 'Display field as a contact field',
+	'FIELD_IS_CONTACT_EXPLAIN'	=> 'Contact fields are displayed within the contact section of the user profile and are displayed differently in the mini profile next to posts and private messages. You can use <samp>%s</samp> as a placeholder variable which will be replaced by a value provided by the user.',
 	'FIELD_LENGTH'				=> 'Eremuaren luzera',
 	'FIELD_NOT_FOUND'			=> 'Ez da profil eremua aurkitu.',
 	'FIELD_STRING'				=> 'Testu hutseko eremua',
 	'FIELD_TEXT'				=> 'Testuarea',
 	'FIELD_TYPE'				=> 'Eremu mota',
 	'FIELD_TYPE_EXPLAIN'		=> 'Ostean ezin izango duzu eremu mota aldatu.',
+	'FIELD_URL'					=> 'URL (Link)',
 	'FIELD_VALIDATION'			=> 'Eremu baieztapena',
 	'FIRST_OPTION'				=> 'Lehen aukera',
 
@@ -14314,6 +14906,12 @@ $lang = array_merge($lang, array(
 	'ISO_LANGUAGE'				=> 'Hizkuntza [%s]',
 
 	'LANG_SPECIFIC_OPTIONS'		=> 'Hizkuntza aukera espezifikoak [<strong>%$s</strong>]',
+
+	'LETTER_NUM_DOTS'			=> 'Any letters, numbers and dots (periods)',
+	'LETTER_NUM_ONLY'			=> 'Any letters and numbers',
+	'LETTER_NUM_PUNCTUATION'	=> 'Any letters, numbers, comma, dots, underscores and dashes beginning with any letter',
+	'LETTER_NUM_SPACERS'		=> 'Any letters, numbers and spacers',
+	'LETTER_NUM_UNDERSCORE'		=> 'Any letters, numbers and underscores',
 
 	'MAX_FIELD_CHARS'		=> 'Gehienezko karaktere zenbakia',
 	'MAX_FIELD_NUMBER'		=> 'Baimendutako zenbakirik altuena',
@@ -14368,7 +14966,9 @@ $lang = array_merge($lang, array(
 #######language/en/acp/prune.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_PRUNE_USERS_EXPLAIN'	=> 'Hemendik zure foroko erabiltzaileaak ezabatu (edo ezgaitu) zenitzake. Hainbat eratan egin dezakezu hau: mezu kopuruagatik, azkeneko jardueragatiki, etab. Gainera, irizpide hauek bateratu egin zenitzake, adbez. azkeneko jarduera 2002-01-01 baino lehenagokoa eta 10 mezu baino gutxigo dituzten erabiltzaileak garbitu zenitzake. Aukeran, erabiltzaile zerrenda sartu zenezake testu kutxan eta horrela edozein irizpide baztertuko da. Kontuz ibili prestazio honekin! Erabiltzailea behin ezabatu eta gero ez bait dago atzera pausurik.',
+	'ACP_PRUNE_USERS_EXPLAIN'	=> 'This section allows you to delete or deactivate users on your board. Accounts can be filtered in a variety of ways; by post count, most recent activity, etc. Criteria may be combined to narrow down which accounts are affected. For example, you can prune users with fewer than 10 posts, who were also inactive after 2002-01-01. Use * as a wildcard for text fields. Alternatively, you may skip the criteria selection completely by entering a list of users (each on a separate line) into the text field. Take care with this facility! Once a user is deleted, there is no way to reverse the action.',
+
+	'CRITERIA'				=> 'Criteria',
 
 	'DEACTIVATE_DELETE'			=> 'Ezgaitu edo ezabatu',
 	'DEACTIVATE_DELETE_EXPLAIN'	=> 'Erabiltzaileak ezgaitu edo osoan ezabatzeko aukera. Kontuan izan ez dagoela atzera egiterik!',
@@ -14376,15 +14976,18 @@ $lang = array_merge($lang, array(
 	'DELETE_USER_POSTS'			=> 'Garbitutako erabiltzaileen mezuak ezabatu',
 	'DELETE_USER_POSTS_EXPLAIN'	=> 'Ezabatutako erabiltzaileek eginiko mezuak ezabatzen ditu, ez du eraginik ezgaitutako erabiltzaileen mezuetan.',
 
-	'JOINED_EXPLAIN'			=> 'Sar ezazu data <kbd>uuuu-hh-ee</kbd> formatuan.',
+	'JOINED_EXPLAIN'			=> 'Enter a date in <kbd>YYYY-MM-DD</kbd> format. You may use both fields to specify an interval, or leave one blank for an open date range.',
 
 	'LAST_ACTIVE_EXPLAIN'		=> 'Sar ezazu data <kbd>uuuu-hh-ee</kbd> formatuan. Sartu <kbd>0000-00-00</kbd> inoiz konektatu ez diren erabilzaileak garbitzeko <em>Baino lehen</em> eta <em>Baino beranduago</em> baldintzei ez zaie kasurik egingo.',
 
+	'POSTS_ON_QUEUE'			=> 'Posts Awaiting Approval',
+	'PRUNE_USERS_GROUP_EXPLAIN'	=> 'Limit to users within the selected group.',
+	'PRUNE_USERS_GROUP_NONE'	=> 'All groups',
 	'PRUNE_USERS_LIST'				=> 'Garbituko diren erabiltzaileak',
-	'PRUNE_USERS_LIST_DELETE'		=> 'Erabiltzaileak garbitzeko aukeratu d(ir)en irizpide(ar)ekin, hurrengo kontuak ezabatuko dira.',
-	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'Erabiltzaileak garbitzeko aukeratu d(ir)en irizpide(ar)ekin, hurrengo kontuak ezgaituko dira.',
+	'PRUNE_USERS_LIST_DELETE'		=> 'With the selected critera for pruning users the following accounts will be removed. You can remove individual users from the deletion list by unchecking the box next to their username.',
+	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'With the selected critera for pruning users the following accounts will be deactivated. You can remove individual users from the deactivation list by unchecking the box next to their username.',
 
-	'SELECT_USERS_EXPLAIN'		=> 'Hemen erabiltzaileen izen jakinak sar itzazu, aurretik ezarritako irizpideen gainetik lehentasuna izango dute. Sortzaileak ezin dira garbitu.',
+	'SELECT_USERS_EXPLAIN'		=> 'Enter specific usernames here. They will be used in preference to the criteria above. Founders cannot be pruned.',
 
 	'USER_DEACTIVATE_SUCCESS'	=> 'Aukeratutako erabiltzaileak zuzen ezgaitu egin dira.',
 	'USER_DELETE_SUCCESS'		=> 'Aukeratutako erabiltzaileak zuzen ezabatu egin dira.',
@@ -14431,15 +15034,38 @@ $lang = array_merge($lang, array(
 	'DELETING_INDEX_IN_PROGRESS'			=> 'Indizea ezabatzen ari da',
 	'DELETING_INDEX_IN_PROGRESS_EXPLAIN'	=> 'Bilaketa motorea indizea ezabatzen ari da. Eragiketa honek minutu batzuk iraun dezake.',
 
-	'FULLTEXT_MYSQL_INCOMPATIBLE_VERSION'	=> 'MySQL testu osoko motorea MySQL4 edota gainerako bertsiokin baino ezin da erabili.',
+	'FULLTEXT_MYSQL_INCOMPATIBLE_DATABASE'	=> 'The MySQL fulltext backend can only be used with MySQL4 and above.',
 	'FULLTEXT_MYSQL_NOT_MYISAM'				=> 'MySQL testu osoko indizeak MyISAM taulekin baino ezin da erabili.',
 	'FULLTEXT_MYSQL_TOTAL_POSTS'			=> 'Guztira indexaturiko mezu kopurua',
-	'FULLTEXT_MYSQL_MBSTRING'				=> 'UTF-8 karaktere ez-latindarrentzako euskarria mbstring erabiliz:',
-	'FULLTEXT_MYSQL_PCRE'					=> 'UTF-8 karaktere ez-latindarrentzako euskarria PCRE erabiliz:',
-	'FULLTEXT_MYSQL_MBSTRING_EXPLAIN'		=> 'PCREk ez baldin badu unicode karaktererik eusten, bilaketa motorea mbstringen ohizko esamoldeen motorea erabiltzen saiatuko da.',
-	'FULLTEXT_MYSQL_PCRE_EXPLAIN'			=> 'Bilaketa motore honek PCREk unicode karaktereak eutsi dezala behar du. Ez-latindar karaktereak bilatu nahi badituzu, aukera hau PHP 4.4, 5.1 eta gainerako bertsioetan baino ez dago erabilgarri.',
 	'FULLTEXT_MYSQL_MIN_SEARCH_CHARS_EXPLAIN'	=> 'Zehaztutako gutxienezko karakteredun hitzak baino ez dira indizatuko bilaketetarako. Ezarpen hau mysql-ren hobespenak aldatuz baino ezin daiteke aldatu.',
 	'FULLTEXT_MYSQL_MAX_SEARCH_CHARS_EXPLAIN'	=> 'Zehaztutako gehienezko karakteredun hitzak baino ez dira indizatuko bilaketetarako, Ezarpen hau mysql-ren hobespenak aldatuz baino ezin daiteke aldatu.',
+
+	'FULLTEXT_POSTGRES_INCOMPATIBLE_DATABASE'	=> 'The PostgreSQL fulltext backend can only be used with PostgreSQL.',
+	'FULLTEXT_POSTGRES_TOTAL_POSTS'			=> 'Total number of indexed posts',
+	'FULLTEXT_POSTGRES_VERSION_CHECK'		=> 'PostgreSQL version',
+	'FULLTEXT_POSTGRES_TS_NAME'				=> 'Text search Configuration Profile:',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN'			=> 'Minimum word length for keywords',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN'			=> 'Maximum word length for keywords',
+	'FULLTEXT_POSTGRES_VERSION_CHECK_EXPLAIN'		=> 'This search backend requires PostgreSQL version 8.3 and above.',
+	'FULLTEXT_POSTGRES_TS_NAME_EXPLAIN'				=> 'The Text search configuration profile used to determine the parser and dictionary.',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN_EXPLAIN'			=> 'Words with at least this many characters will be included in the query to the database.',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN_EXPLAIN'			=> 'Words with no more than this many characters will be included in the query to the database.',
+
+	'FULLTEXT_SPHINX_CONFIGURE'				=> 'Configure the following settings to generate sphinx config file',
+	'FULLTEXT_SPHINX_DATA_PATH'				=> 'Path to data directory',
+	'FULLTEXT_SPHINX_DATA_PATH_EXPLAIN'		=> 'It will be used to store the indexes and log files. You should create this directory outside the web accessible directories. (should have a trailing slash)',
+	'FULLTEXT_SPHINX_DELTA_POSTS'			=> 'Number of posts in frequently updated delta index',
+	'FULLTEXT_SPHINX_HOST'					=> 'Sphinx search daemon host',
+	'FULLTEXT_SPHINX_HOST_EXPLAIN'			=> 'Host on which the sphinx search daemon (searchd) listens. Leave empty to use the default localhost',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT'		=> 'Indexer memory limit',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT_EXPLAIN'	=> 'This number should at all times be lower than the RAM available on your machine. If you experience periodic performance problems this might be due to the indexer consuming too many resources. It might help to lower the amount of memory available to the indexer.',
+	'FULLTEXT_SPHINX_MAIN_POSTS'			=> 'Number of posts in main index',
+	'FULLTEXT_SPHINX_PORT'					=> 'Sphinx search daemon port',
+	'FULLTEXT_SPHINX_PORT_EXPLAIN'			=> 'Port on which the sphinx search daemon (searchd) listens. Leave empty to use the default Sphinx API port 9312',
+	'FULLTEXT_SPHINX_WRONG_DATABASE'		=> 'The sphinx search for phpBB supports MySQL and PostgreSQL only.',
+	'FULLTEXT_SPHINX_CONFIG_FILE'			=> 'Sphinx config file',
+	'FULLTEXT_SPHINX_CONFIG_FILE_EXPLAIN'	=> 'The generated content of the sphinx config file. This data needs to be pasted into the sphinx.conf which is used by sphinx search daemon. Replace the [dbuser] and [dbpassword] placeholders with your database credentials.',
+	'FULLTEXT_SPHINX_NO_CONFIG_DATA'		=> 'The sphinx data and config directory paths are not defined. Please define them to generate the config file.',
 
 	'GENERAL_SEARCH_SETTINGS'				=> 'Bilaketa orokorren ezarpenak',
 	'GO_TO_SEARCH_INDEX'					=> 'Bilaketa indizera jo',
@@ -14464,8 +15090,6 @@ $lang = array_merge($lang, array(
 
 	'SEARCH_GUEST_INTERVAL'					=> 'Bilaketen arteko denbora tartea gonbidatuentzako',
 	'SEARCH_GUEST_INTERVAL_EXPLAIN'			=> 'Bilaketen artean gonbidatuek itxaron beharko duten segundu kopurua. Gonbidaturen batek bilaketaren bat egin badu, beste guztiek denbora tarte hori iraungi arte itxaron egin beharko dute.',
-	'SEARCH_INDEX_CREATE_REDIRECT'			=> 'id %1$d(e)rainoko mezu guztiak indizatu egin dira, zeintzuetatik %2$d mezu pausu honetan egin dira. <br />Indarrean dagoen indizazio batezbestekoa %3$.1f mezu segundukoa da gutxigorabehera. <br />Indizatzen…',
-	'SEARCH_INDEX_DELETE_REDIRECT'			=> 'id %1$d (e)rainoko mezu guztiak ezabatu egin dira bilaketa indizetik.<br />Ezabatzen…',
 	'SEARCH_INDEX_CREATED'					=> 'Foroaren datubaseko mezu guztiak zuzen indizatu egin dira.',
 	'SEARCH_INDEX_REMOVED'					=> 'Motore honen bilaketa indizeak zuzen ezabatu egin dira.',
 	'SEARCH_INTERVAL'						=> 'Bilaketen arteko denbora tartea erabiltzaileentzako',
@@ -14488,8 +15112,55 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
+	// 3.1.0
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
+
+	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
+	'CONFIRM_UNINSTALL_STYLES'		=> 'Are you sure you wish to uninstall selected styles?',
+	'COPYRIGHT'						=> 'Copyright',
+
+	'DEACTIVATE_DEFAULT'		=> 'You cannot deactivate the default style.',
+	'DELETE_FROM_FS'			=> 'Delete from filesystem',
+	'DELETE_STYLE_FILES_FAILED'	=> 'Error deleting files for style "%s".',
+	'DELETE_STYLE_FILES_SUCCESS'	=> 'Files for style "%s" have been deleted.',
+	'DETAILS'					=> 'Details',
+
+	'INHERITING_FROM'			=> 'Inherits from',
+	'INSTALL_STYLE'				=> 'Install style',
+	'INSTALL_STYLES'			=> 'Install styles',
+	'INSTALL_STYLES_EXPLAIN'	=> 'Here you can install new styles.<br />If you cannot find a specific style in list below, check to make sure style is already installed. If it is not installed, check if it was uploaded correctly.',
+	'INVALID_STYLE_ID'			=> 'Invalid style ID.',
+
+	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
+	'NO_UNINSTALLED_STYLE'		=> 'No uninstalled styles detected.',
+
+	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
+
+	'STYLE_ACTIVATE'			=> 'Gaitu',
+	'STYLE_ACTIVE'				=> 'Active',
+	'STYLE_DEACTIVATE'			=> 'Ezgaitu',
+	'STYLE_DEFAULT'				=> 'Make default style',
+	'STYLE_DEFAULT_CHANGE_INACTIVE'	=> 'You must activate style before making it default style.',
+	'STYLE_ERR_INVALID_PARENT'	=> 'Invalid parent style.',
+	'STYLE_ERR_NAME_EXIST'		=> 'A style with that name already exists.',
+	'STYLE_ERR_STYLE_NAME'		=> 'You must supply a name for this style.',
+	'STYLE_INSTALLED'			=> 'Style "%s" has been installed.',
+	'STYLE_INSTALLED_RETURN_INSTALLED_STYLES'	=> 'Return to installed styles list',
+	'STYLE_INSTALLED_RETURN_UNINSTALLED_STYLES'	=> 'Install more styles',
+	'STYLE_NAME'				=> 'Style name',
+	'STYLE_NOT_INSTALLED'		=> 'Style "%s" was not installed.',
+	'STYLE_PATH'				=> 'Style path',
+	'STYLE_UNINSTALL'			=> 'Uninstall',
+	'STYLE_UNINSTALL_DEPENDENT'	=> 'Style "%s" cannot be uninstalled because it has one or more child styles.',
+	'STYLE_UNINSTALLED'			=> 'Style "%s" uninstalled successfully.',
+	'STYLE_USED_BY'				=> 'Honegatik erabilia (errobotak barne)',
+
+	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+
+	// 3.0.12
 	'ACP_IMAGESETS_EXPLAIN'	=> 'Imagesets comprise all the button, forum, folder, etc. and other non-style specific images used by the board. Here you can edit, export or delete existing imagesets and import or activate new sets.',
-	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. A style consists of a template, theme and imageset. You may alter existing styles, delete, deactivate, reactivate, create or import new ones. You can also see what a style will look like using the preview function. The current default style is noted by the presence of an asterisk (*). Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 	'ACP_TEMPLATES_EXPLAIN'	=> 'A template set comprises all the markup used to generate the layout of your board. Here you can edit existing template sets, delete, export, import and preview sets. You can also modify the templating code used to generate BBCode.',
 	'ACP_THEMES_EXPLAIN'	=> 'From here you can create, install, edit, delete and export themes. A theme is the combination of colours and images that are applied to your templates to define the basic look of your board. The range of options open to you depends on the configuration of your server and phpBB installation, see the manual for further details. Please note that when creating new themes the use of an existing theme as a basis is optional.',
 	'ADD_IMAGESET'			=> 'Create imageset',
@@ -14526,7 +15197,6 @@ $lang = array_merge($lang, array(
 	'CURRENT_IMAGE'					=> 'Uneko irudia',
 
 	'DEACTIVATE_DEFAULT'		=> 'You cannot deactivate the default style.',
-	'DELETE_FROM_FS'			=> 'Delete from filesystem',
 	'DELETE_IMAGESET'			=> 'Delete imageset',
 	'DELETE_IMAGESET_EXPLAIN'	=> 'Here you can remove the selected imageset from the database. Please note that there is no undo capability. It is recommended that you first export your set for possible future use.',
 	'DELETE_STYLE'				=> 'Delete style',
@@ -14723,7 +15393,6 @@ $lang = array_merge($lang, array(
 	'INCLUDE_IMAGESET'			=> 'Include imageset',
 	'INCLUDE_TEMPLATE'			=> 'Include template',
 	'INCLUDE_THEME'				=> 'Include theme',
-	'INHERITING_FROM'			=> 'Inherits from',
 	'INSTALL_IMAGESET'			=> 'Install imageset',
 	'INSTALL_IMAGESET_EXPLAIN'	=> 'Here you can install your selected imageset. You can edit certain details if you wish or use the installation defaults.',
 	'INSTALL_STYLE'				=> 'Install style',
@@ -14753,7 +15422,6 @@ $lang = array_merge($lang, array(
 	'NO_TEMPLATE'				=> 'Cannot find template on filesystem.',
 	'NO_THEME'					=> 'Cannot find theme on filesystem.',
 	'NO_UNINSTALLED_IMAGESET'	=> 'No uninstalled imagesets detected.',
-	'NO_UNINSTALLED_STYLE'		=> 'No uninstalled styles detected.',
 	'NO_UNINSTALLED_TEMPLATE'	=> 'No uninstalled templates detected.',
 	'NO_UNINSTALLED_THEME'		=> 'No uninstalled themes detected.',
 	'NO_UNIT'					=> 'Bat ere ez',
@@ -14793,30 +15461,22 @@ $lang = array_merge($lang, array(
 	'SELECTED_THEME_FILE'		=> 'Selected theme file',
 	'STORE_DATABASE'			=> 'Datubasearen erabilgarritasunak',
 	'STORE_FILESYSTEM'			=> 'Filesystem',
-	'STYLE_ACTIVATE'			=> 'Gaitu',
-	'STYLE_ACTIVE'				=> 'Active',
 	'STYLE_ADDED'				=> 'Style added successfully.',
-	'STYLE_DEACTIVATE'			=> 'Ezgaitu',
-	'STYLE_DEFAULT'				=> 'Make default style',
 	'STYLE_DELETED'				=> 'Style deleted successfully.',
 	'STYLE_DETAILS_UPDATED'		=> 'Style edited successfully.',
 	'STYLE_ERR_ARCHIVE'			=> 'Please select an archive method.',
 	'STYLE_ERR_COPY_LONG'		=> 'The copyright can be no longer than 60 characters.',
 	'STYLE_ERR_MORE_ELEMENTS'	=> 'You must select at least one style element.',
 	'STYLE_ERR_NAME_CHARS'		=> 'The style name can only contain alphanumeric characters, -, +, _ and space.',
-	'STYLE_ERR_NAME_EXIST'		=> 'A style with that name already exists.',
 	'STYLE_ERR_NAME_LONG'		=> 'The style name can be no longer than 30 characters.',
 	'STYLE_ERR_NO_IDS'			=> 'You must select a template, theme and imageset for this style.',
 	'STYLE_ERR_NOT_STYLE'		=> 'The imported or uploaded file did not contain a valid style archive.',
-	'STYLE_ERR_STYLE_NAME'		=> 'You must supply a name for this style.',
 	'STYLE_EXPORT'				=> 'Export style',
 	'STYLE_EXPORT_EXPLAIN'		=> 'Here you can export a style in the form of an archive. A style does not need to contain all elements but it must contain at least one. For example if you have created a new theme and imageset for a commonly used template you could simply export the theme and imageset and omit the template. You may select whether to download the file directly or to place it in your store folder for download later or via FTP.',
 	'STYLE_EXPORTED'			=> 'Style exported successfully and stored in %s.',
 	'STYLE_IMAGESET'			=> 'Imageset',
-	'STYLE_NAME'				=> 'Style name',
 	'STYLE_TEMPLATE'			=> 'Template',
 	'STYLE_THEME'				=> 'Theme',
-	'STYLE_USED_BY'				=> 'Honegatik erabilia (errobotak barne)',
 
 	'TEMPLATE_ADDED'			=> 'Template set added and stored on filesystem.',
 	'TEMPLATE_ADDED_DB'			=> 'Template set added and stored in database.',
@@ -14914,6 +15574,7 @@ $lang = array_merge($lang, array(
 	'CANNOT_FORCE_REACT_FOUNDER'	=> 'You are not allowed to force reactivation on founder accounts.',
 	'CANNOT_FORCE_REACT_YOURSELF'	=> 'You are not allowed to force reactivation of your own account.',
 	'CANNOT_REMOVE_ANONYMOUS'		=> 'You are not able to remove the guest user account.',
+	'CANNOT_REMOVE_FOUNDER'			=> 'You are not allowed to remove founder accounts.',
 	'CANNOT_REMOVE_YOURSELF'		=> 'You are not allowed to remove your own user account.',
 	'CANNOT_SET_FOUNDER_IGNORED'	=> 'You are not able to promote ignored users to be founders.',
 	'CANNOT_SET_FOUNDER_INACTIVE'	=> 'You need to activate users before you promote them to founders, only activated users are able to be promoted.',
@@ -14940,7 +15601,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'Please select the forum to which you wish to move all the posts this user has made.',
 
 	'NO_SPECIAL_RANK'		=> 'No special rank assigned',
-	'NO_WARNINGS'			=> 'No warnings.',
+	'NO_WARNINGS'			=> 'No warnings exist.',
 	'NOT_MANAGE_FOUNDER'	=> 'You tried to manage a user with founder status. Only founders are allowed to manage other founders.',
 
 	'QUICK_TOOLS'			=> 'Quick tools',

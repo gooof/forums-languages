@@ -1,5 +1,14 @@
 ﻿<?php
 
+#######language/en/app.php#######
+
+$lang = array_merge($lang, array(
+	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
+	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
+	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+));
+
 #######language/en/calendar.php#######
 
 $lang = array_merge($lang, array(
@@ -182,6 +191,55 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_PRIVATE_EXPLAIN'		=> '您私密的 reCaptcha 關鍵碼。此關鍵碼可以在 <a href="www.google.com/recaptcha">www.google.com/recaptcha</a> 獲得。',
 
 	'RECAPTCHA_EXPLAIN'				=> '為了防止自動提交，我們要求您在底部欄位中，輸入顯示在其上方的兩個字詞。',
+	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
+));
+
+#######language/en/cli.php#######
+
+$lang = array_merge($lang, array(
+	'CLI_CONFIG_CANNOT_CACHED'			=> 'Set this option if the configuration option changes too frequently to be efficiently cached.',
+	'CLI_CONFIG_CURRENT'				=> 'Current configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_DELETE_SUCCESS'			=> 'Successfully deleted config %s.',
+	'CLI_CONFIG_NEW'					=> 'New configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_NOT_EXISTS'				=> 'Config %s does not exist',
+	'CLI_CONFIG_OPTION_NAME'			=> 'The configuration option’s name',
+	'CLI_CONFIG_PRINT_WITHOUT_NEWLINE'	=> 'Set this option if the value should be printed without a new line at the end.',
+	'CLI_CONFIG_INCREMENT_BY'			=> 'Amount to increment by',
+	'CLI_CONFIG_INCREMENT_SUCCESS'		=> 'Successfully incremented config %s',
+	'CLI_CONFIG_SET_FAILURE'			=> 'Could not set config %s',
+	'CLI_CONFIG_SET_SUCCESS'			=> 'Successfully set config %s',
+
+	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
+	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
+	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
+	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
+	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
+	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
+	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
+	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
+	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
+	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
+	'CLI_EXTENSION_ENABLE_FAILURE'		=> 'Could not enable extension %s',
+	'CLI_EXTENSION_ENABLE_SUCCESS'		=> 'Successfully enabled extension %s',
+	'CLI_EXTENSION_NAME'				=> 'Name of the extension',
+	'CLI_EXTENSION_PURGE_FAILURE'		=> 'Could not purge extension %s',
+	'CLI_EXTENSION_PURGE_SUCCESS'		=> 'Successfully purged extension %s',
+	'CLI_EXTENSION_NOT_FOUND'			=> 'No extensions were found.',
+	'CLI_EXTENSIONS_AVAILABLE'			=> 'Available',
+	'CLI_EXTENSIONS_DISABLED'			=> 'Disabled',
+	'CLI_EXTENSIONS_ENABLED'			=> 'Enabled',
+
+	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
 ));
 
 #######language/en/common.php#######
@@ -190,7 +248,11 @@ $lang = array_merge($lang, array(
 	'TRANSLATION_INFO'	=> '正體中文語系由 <a href="http://phpbb-tw.net/" onclick="window.open(this.href);return false;"><span style="color:#ff6633"><strong>竹貓星球</strong></span></a> 維護製作',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|Y-m-d|',	// 01 Jan 2007 (with Relative days enabled)
+	'DATETIME_FORMAT'	=> '|d M Y, H:i|',	// 01 Jan 2007, 13:37 (with Relative days enabled)
 	'USER_LANG'			=> 'zh-cmn-hant',
+
+	// See http://wiki.phpbb.com/Plural_Rules for more information
+	'PLURAL_RULE'		=> '1',
 
 	'1_DAY'			=> '1天',
 	'1_MONTH'		=> '1個月',
@@ -204,18 +266,24 @@ $lang = array_merge($lang, array(
 	'ACCOUNT_DEACTIVATED'			=> '您的帳號已經被停用，並且只有管理員才能重新啟用。',
 	'ACCOUNT_NOT_ACTIVATED'			=> '您的帳號尚未被啟用',
 	'ACP'							=> '管理員控制台 (ACP)',
+	'ACP_SHORT'						=> 'ACP',
 	'ACTIVE'						=> '啟用',
 	'ACTIVE_ERROR'					=> '您指定了一個未被啟用的會員名稱。如果您有啟用帳號的問題，那麼請聯絡管理員。',
 	'ADMINISTRATOR'					=> '管理員',
 	'ADMINISTRATORS'				=> '管理員',
 	'AGE'							=> '年齡',
 	'AIM'							=> 'AIM',
+	'AJAX_ERROR_TITLE'				=> 'AJAX error',
+	'AJAX_ERROR_TEXT'				=> 'Something went wrong when processing your request.',
+	'AJAX_ERROR_TEXT_ABORT'			=> 'User aborted request.',
+	'AJAX_ERROR_TEXT_TIMEOUT'		=> 'Your request timed out; please try again.',
+	'AJAX_ERROR_TEXT_PARSERERROR'	=> 'Something went wrong with the request and the server returned an invalid reply.',
 	'ALLOWED'						=> '允許',
 	'ALL_FILES'						=> '所有檔案',
 	'ALL_FORUMS'					=> '所有版面',
 	'ALL_MESSAGES'					=> '所有訊息',
 	'ALL_POSTS'						=> '所有文章',
-	'ALL_TIMES'						=> '所有顯示的時間為 %1$s %2$s',
+	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> '所有主題',
 	'AND'							=> '和',
 	'ARE_WATCHING_FORUM'			=> '您訂閱了這個版面，版面更新時會發送通知給您。',
@@ -225,6 +293,14 @@ $lang = array_merge($lang, array(
 	'ATTACHED_IMAGE_NOT_IMAGE'		=> '您所附加的圖檔是無效的。',
 	'AUTHOR'						=> '發表人',
 	'AUTH_NO_PROFILE_CREATED'		=> '建立會員資料失敗。',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_ENTRY'				=> 'Invalid database entry.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_SERVICE_TYPE'		=> 'Invalid service type provided to OAuth service handler.',
+	'AUTH_PROVIDER_OAUTH_ERROR_SERVICE_NOT_CREATED'			=> 'OAuth service not created',
+	'AUTH_PROVIDER_OAUTH_SERVICE_BITLY'						=> 'Bitly',
+	'AUTH_PROVIDER_OAUTH_SERVICE_FACEBOOK'					=> 'Facebook',
+	'AUTH_PROVIDER_OAUTH_SERVICE_GOOGLE'					=> 'Google',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_NOT_STORED'			=> 'OAuth token not stored.',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_INCORRECTLY_STORED'	=> 'OAuth token incorrectly stored.',
 	'AVATAR_DISALLOWED_CONTENT'		=> '上傳被拒絕，因為上傳的檔案被認定具有可能的攻擊成分。',
 	'AVATAR_DISALLOWED_EXTENSION'	=> '副檔名 %s 已經被停用。',
 	'AVATAR_EMPTY_REMOTE_DATA'		=> '頭像無法上傳，遠端伺服器的資料無效或損壞。',
@@ -235,10 +311,11 @@ $lang = array_merge($lang, array(
 	'AVATAR_PARTIAL_UPLOAD'			=> '上傳的檔案只上傳了一部分。',
 	'AVATAR_PHP_SIZE_NA'			=> '頭像檔案太大。<br />無法判斷伺服器 PHP 允許的最大檔案大小限制。',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> '頭像檔案太大，伺服器允許的最大檔案大小是 %1$d %2$s。<br />請注意這個限制是根據伺服器上 php.ini 的設定，所以無法變更。',
+	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
 	'AVATAR_URL_INVALID'			=> '指定的連結無效。',
 	'AVATAR_URL_NOT_FOUND'			=> '無法找到指定的檔案。',
-	'AVATAR_WRONG_FILESIZE'			=> '頭像檔案大小必須介於 0 和 %1d %2s 之間。',
-	'AVATAR_WRONG_SIZE'				=> '頭像的寬度必須大於 %1$d 像素，高度必須大於 %2$d 像素，並且寬度不得超過 %3$d 像素，高度不得超過 %4$d 像素。您送出的頭像寬為 %5$d 像素，高為 %6$d 像素。',
+	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
+	'AVATAR_WRONG_SIZE'				=> 'The submitted avatar is %5$s wide and %6$s high. Avatars must be at least %1$s wide and %2$s high, but no larger than %3$s wide and %4$s high.',
 
 	'BACK_TO_TOP'			=> '回頂端',
 	'BACK_TO_PREV'			=> '回到前一頁',
@@ -255,28 +332,42 @@ $lang = array_merge($lang, array(
 	'BOARD_DISABLED'		=> '討論區目前關閉中。',
 	'BOARD_UNAVAILABLE'		=> '很抱歉！ 目前討論區暫時無法使用，請稍後再登入。',
 	'BROWSING_FORUM'		=> '正在瀏覽這個版面的使用者：%1$s',
-	'BROWSING_FORUM_GUEST'	=> '正在瀏覽這個版面的使用者：%1$s 和 %2$d 位訪客',
-	'BROWSING_FORUM_GUESTS'	=> '正在瀏覽這個版面的使用者：%1$s 和 %2$d 位訪客',
+	'BUTTON_EDIT'			=> 'Edit',
+	'BUTTON_FORUM_LOCKED'	=> 'Locked',
+	'BUTTON_NEW_TOPIC'		=> 'New Topic',
+	'BUTTON_PM'				=> 'PM',
+	'BUTTON_PM_FORWARD'		=> 'Forward',
+	'BUTTON_PM_NEW'			=> 'New PM',
+	'BUTTON_PM_REPLY'		=> 'Send Reply',
+	'BUTTON_PM_REPLY_ALL'	=> 'Reply All',
+	'BUTTON_POST_REPLY'		=> 'Post Reply',
+	'BUTTON_QUOTE'			=> 'Quote',
+	'BUTTON_TOPIC_LOCKED'	=> 'Locked',
 	'BYTES'					=> 'Bytes',
+	'BYTES_SHORT'			=> 'B',
 
 	'CANCEL'				=> '取消',
 	'CHANGE'				=> '變更',
 	'CHANGE_FONT_SIZE'		=> '變更字體大小',
 	'CHANGING_PREFERENCES'	=> '變更版面引用',
 	'CHANGING_PROFILE'		=> '變更版面資料設定',
-	'CLICK_VIEW_PRIVMSG'	=> '%s 前往您的收件夾 %s',
 	'COLLAPSE_VIEW'			=> '收縮瀏覽',
 	'CLOSE_WINDOW'			=> '關閉視窗',
 	'COLOUR_SWATCH'			=> '顏色取樣',
-	'COMMA_SEPARATOR'		=> '，',	// Used in pagination of ACP & prosilver, use localised comma if appropriate, eg: Ideographic or Arabic
+	'COLON'					=> ':',
+	'COMMA_SEPARATOR'		=> '，',	// Comma used to join lists into a single string, use localised comma if appropriate, eg: Ideographic or Arabic
 	'CONFIRM'				=> '確認',
 	'CONFIRM_CODE'			=> '確認代碼',
 	'CONFIRM_CODE_EXPLAIN'	=> '請正確輸入它所顯示的代碼，不必區分大小寫。',
 	'CONFIRM_CODE_WRONG'	=> '您輸入的確認代碼有誤。',
 	'CONFIRM_OPERATION'		=> '您確認要執行這個操作嗎？',
+	'CONFIRM_AVATAR_DELETE' => 'Are you sure you wish to delete this avatar?',
 	'CONGRATULATIONS'		=> '恭喜您',
 	'CONNECTION_FAILED'		=> '連線失敗。',
 	'CONNECTION_SUCCESS'	=> '連線成功！',
+	'CONTACT'				=> '連絡',
+	'CONTACT_USER'			=> 'Contact %s',
+	'CONTACT_US'			=> 'Contact us',
 	'COOKIES_DELETED'		=> '所有的 Cookies 都已經被清除。',
 	'CURRENT_TIME'			=> '現在的時間是 %s',
 
@@ -297,18 +388,13 @@ $lang = array_merge($lang, array(
 	'DISPLAY_TOPICS'		=> '顯示主題 ',
 	'DOWNLOADED'			=> '已下載',
 	'DOWNLOADING_FILE'		=> '正在下載檔案中',
-	'DOWNLOAD_COUNT'		=> '被下載 %d 次',
-	'DOWNLOAD_COUNTS'		=> '被下載 %d 次',
-	'DOWNLOAD_COUNT_NONE'	=> '尚未被下載',
-	'VIEWED_COUNT'			=> '被瀏覽 %d 次',
-	'VIEWED_COUNTS'			=> '被瀏覽 %d 次',
-	'VIEWED_COUNT_NONE'		=> '尚未被瀏覽',
 
 	'EDIT_POST'							=> '編輯文章',
-	'EMAIL'								=> 'E-mail', // Short form for EMAIL_ADDRESS
-	'EMAIL_ADDRESS'						=> 'E-mail 位址',
-	'EMAIL_INVALID_EMAIL'				=> '您輸入的 e-mail 位址是無效的。',
-	'EMAIL_SMTP_ERROR_RESPONSE'			=> '發送 e-mail 在 <strong>第 %1$s 行</strong> 遇到問題。回應訊息：%2$s。',
+	'ELLIPSIS'							=>	'…',
+	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
+	'EMAIL_ADDRESS'						=> 'Email address',
+	'EMAIL_INVALID_EMAIL'				=> 'The email address you entered is invalid.',
+	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ran into problems sending email at <strong>Line %1$s</strong>. Response: %2$s.',
 	'EMPTY_SUBJECT'						=> '您必須為新主題指定一個標題。',
 	'EMPTY_MESSAGE_SUBJECT'				=> '您沒有輸入標題。',
 	'ENABLED'							=> '啟用',
@@ -322,17 +408,23 @@ $lang = array_merge($lang, array(
 	'ERR_UNWATCHING'					=> 'An error occurred while trying to unsubscribe.',
 	'ERR_WATCHING'						=> 'An error occurred while trying to subscribe.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> '輸入的 phpBB 路徑無效。',
+	'ERROR'									=> '錯誤',
 	'EXPAND_VIEW'						=> '展開瀏覽',
 	'EXTENSION'							=> '副檔名',
+	'EXTENSION_DISABLED'				=> 'The extension <strong>%s</strong> is not enabled.',
 	'EXTENSION_DISABLED_AFTER_POSTING'	=> '副檔名 <strong>%s</strong> 已經被停用且不再顯示。',
+	'EXTENSION_DOES_NOT_EXIST'			=> 'The extension <strong>%s</strong> does not exist.',
 
+	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> '問答集',
 	'FAQ_EXPLAIN'			=> '問答集',
 	'FILENAME'				=> '檔案名稱',
 	'FILESIZE'				=> '檔案大小',
 	'FILEDATE'				=> '檔案日期',
 	'FILE_COMMENT'			=> '檔案註釋',
-	'FILE_NOT_FOUND'		=> '找不到必須的檔案。',
+	'FILE_CONTENT_ERR'		=> 'Could not read the contents of file: %s',
+	'FILE_JSON_DECODE_ERR'	=> 'Failed to decode json file: %s',
+	'FILE_NOT_FOUND'		=> 'The requested file could not be found: %s',
 	'FIND_USERNAME'			=> '搜尋會員',
 	'FOLDER'				=> '資料夾',
 	'FORGOT_PASS'			=> '我忘記了自己的密碼',
@@ -381,6 +473,9 @@ $lang = array_merge($lang, array(
 	'GB'						=> 'GB',
 	'GIB'						=> 'GiB',
 	'GO'						=> 'Go',
+	'GOOGLEPLUS'				=> 'Google+',
+	'GOTO_FIRST_POST'			=> 'Go to first post',
+	'GOTO_LAST_POST'			=> 'Go to last post',
 	'GOTO_PAGE'					=> '前往頁數',
 	'GROUP'						=> '群組',
 	'GROUPS'					=> '群組',
@@ -388,12 +483,6 @@ $lang = array_merge($lang, array(
 	'GROUP_ERR_USERNAME'		=> '沒有指定群組名稱。',
 	'GROUP_ERR_USER_LONG'		=> '群組名稱不能超過 60 個字元。指定的群組名稱太長了。',
 	'GUEST'						=> '訪客',
-	'GUEST_USERS_ONLINE'		=> '共有 %d 位訪客上線',
-	'GUEST_USERS_TOTAL'			=> '%d 位訪客',
-	'GUEST_USERS_ZERO_ONLINE'	=> '共有 0 位訪客上線',
-	'GUEST_USERS_ZERO_TOTAL'	=> '0 位訪客',
-	'GUEST_USER_ONLINE'			=> '共有 %d 位訪客上線',
-	'GUEST_USER_TOTAL'			=> '%d 位訪客',
 	'G_ADMINISTRATORS'			=> '管理員',
 	'G_BOTS'					=> '機器人',
 	'G_GUESTS'					=> '訪客',
@@ -402,22 +491,12 @@ $lang = array_merge($lang, array(
 	'G_GLOBAL_MODERATORS'		=> '全域版主',
 	'G_NEWLY_REGISTERED'		=> '新註冊會員',
 
-	'HIDDEN_USERS_ONLINE'			=> '%d 位隱形會員上線',
-	'HIDDEN_USERS_TOTAL'			=> '%d 位隱形會員',
-	'HIDDEN_USERS_TOTAL_AND'		=> '%d 位隱形會員和 ',
-	'HIDDEN_USERS_ZERO_ONLINE'		=> '0 位隱形會員上線',
-	'HIDDEN_USERS_ZERO_TOTAL'		=> '0 位隱形會員',
-	'HIDDEN_USERS_ZERO_TOTAL_AND'	=> '0 位隱形會員和 ',
-	'HIDDEN_USER_ONLINE'			=> '%d 位隱形會員上線',
-	'HIDDEN_USER_TOTAL'				=> '%d 位隱形會員',
-	'HIDDEN_USER_TOTAL_AND'			=> '%d 位隱形會員和 ',
 	'HIDE_GUESTS'					=> '隱藏訪客',
 	'HIDE_ME'						=> '此次登入請隱藏我的上線狀態',
 	'HOURS'							=> '小時',
 	'HOME'							=> '首頁',
 
 	'ICQ'						=> 'ICQ',
-	'ICQ_STATUS'				=> 'ICQ 狀態',
 	'IF'						=> '如果',
 	'IMAGE'						=> '圖檔',
 	'IMAGE_FILETYPE_INVALID'	=> '不支援的圖檔類型：%d mimetype %s 。',
@@ -425,9 +504,11 @@ $lang = array_merge($lang, array(
 	'IN'						=> '位於',
 	'INDEX'						=> '首頁', //Index page
 	'INFORMATION'				=> '系統訊息',
+	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
 	'INTERESTS'					=> '興趣',
 	'INVALID_DIGEST_CHALLENGE'	=> '無效的摘要需求。',
-	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> 可能是無效的 e-mail 位址？',
+	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> possibly an invalid email address?',
+	'INVALID_PLURAL_RULE'		=> 'The chosen plural rule is invalid. Valid values are integers between 0 and 15.',
 	'IP'						=> 'IP',
 	'IP_BLACKLISTED'			=> '您的 IP %1$s 已經被封鎖，因為它在封鎖列表中。細節請參考 <a href="%2$s">%2$s</a>。',
 
@@ -435,7 +516,8 @@ $lang = array_merge($lang, array(
 	'JOINED'				=> '註冊時間',
 	'JUMP_PAGE'				=> '輸入您想要前往的頁數',
 	'JUMP_TO'				=> '前往 ',
-	'JUMP_TO_PAGE'			=> '點選要前往的頁面...',
+	'JUMP_TO_PAGE'			=> 'Jump to page',
+	'JUMP_TO_PAGE_CLICK'	=> 'Click to jump to page…',
 
 	'KB'					=> 'KB',
 	'KIB'					=> 'KiB',
@@ -447,6 +529,8 @@ $lang = array_merge($lang, array(
 	'LDAP_NO_SERVER_CONNECTION'			=> '無法連線到 LDAP 伺服器。',
 	'LDAP_SEARCH_FAILED'				=> 'An error occurred while searching the LDAP directory.',
 	'LEGEND'							=> '顏色說明',
+	'LIVE_SEARCHES_NOT_ALLOWED'			=> 'Live searches are not allowed.',
+	'LOADING'							=> 'Loading',
 	'LOCATION'							=> '來自',
 	'LOCK_POST'							=> '鎖定文章',
 	'LOCK_POST_EXPLAIN'					=> '防止文章被編輯',
@@ -457,6 +541,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_CONFIRM_EXPLAIN'				=> '為了防止暴力破解會員帳號，論壇將會要求您在超過最大嘗試登入次數後輸入一組確認代碼，確認代碼顯示在如下所示的圖檔中。如果您有視覺相關問題因而無法瀏覽判斷時，請聯絡 %s論壇管理員%s。', // unused
 	'LOGIN_ERROR_ATTEMPTS'				=> '您的登入錯誤，超過了討論區設定的嘗試次數上限。現在除了輸入您的會員名稱和密碼外，還需要解決底下的 CAPTCHA。',
 	'LOGIN_ERROR_EXTERNAL_AUTH_APACHE'	=> '您的瀏覽未獲 Apache 伺服器授權。',
+	'LOGIN_ERROR_OAUTH_SERVICE_DOES_NOT_EXIST'	=> 'A non-existant OAuth service has been requested.',
 	'LOGIN_ERROR_PASSWORD'				=> '您輸入了一個無效的密碼。請確認後重新嘗試登入。如果問題依舊存在請聯絡 %s管理員%s。',
 	'LOGIN_ERROR_PASSWORD_CONVERT'		=> '在討論區升級中無法轉換您的密碼。請 %s申請一個新密碼%s。如果您還遇到其他的問題，請聯絡 %s管理員%s。',
 	'LOGIN_ERROR_USERNAME'				=> '您輸入了一個無效的會員名稱。請檢查後重新輸入。如果問題依舊存在請聯絡 %s管理員%s。',
@@ -465,17 +550,22 @@ $lang = array_merge($lang, array(
 	'LOGIN_VIEWFORUM'					=> '您必須註冊並且登入後才能瀏覽這個版面。',
 	'LOGIN_EXPLAIN_EDIT'				=> '您必須註冊並且登入後才能編輯版面文章。',
 	'LOGIN_EXPLAIN_VIEWONLINE'			=> '您必須註冊並且登入後才能檢視誰在線上。',
+	'LOGIN_REQUIRED'					=> 'You need to login to perform this action.',
 	'LOGOUT'							=> '登出',
 	'LOGOUT_USER'						=> '登出 [ %s ]',
-	'LOG_ME_IN'							=> '每次瀏覽時自動登入',
+	'LOG_ME_IN'							=> 'Remember me',
 
+	'MAIN'					=> 'Main',
 	'MARK'					=> '標示',
 	'MARK_ALL'				=> '選擇全部',
+	'MARK_ALL_READ'			=> 'Mark all read',
 	'MARK_FORUMS_READ'		=> '將版面標示為已閱讀',
+	'MARK_READ'				=> 'Mark read',
 	'MARK_SUBFORUMS_READ'	=> '將子版面標示為已閱讀',
 	'MB'					=> 'MB',
 	'MIB'					=> 'MiB',
 	'MCP'					=> '版主控制台 (MCP)',
+	'MCP_SHORT'				=> 'MCP',
 	'MEMBERLIST'			=> '會員列表',
 	'MEMBERLIST_EXPLAIN'	=> '檢視完整的會員列表',
 	'MERGE'					=> '合併',
@@ -488,26 +578,47 @@ $lang = array_merge($lang, array(
 	'MODERATE'				=> '管理',
 	'MODERATOR'				=> '版主',
 	'MODERATORS'			=> '版主',
+	'MODULE_NOT_ACCESS'		=> 'Module not accessible',
+	'MODULE_NOT_FIND'		=> 'Cannot find module %s',
+	'MODULE_FILE_INCORRECT_CLASS'	=> 'Module file %s does not contain correct class [%s]',
 	'MONTH'					=> '月',
 	'MOVE'					=> '移動',
-	'MSNM'					=> 'MSNM/WLM',
 
 	'NA'						=> 'N/A',
 	'NEWEST_USER'				=> '最新註冊的會員：<strong>%s</strong>',
 	'NEW_MESSAGE'				=> '新訊息',
 	'NEW_MESSAGES'				=> '新訊息',
-	'NEW_PM'					=> '<strong>%d</strong> 個新訊息',
-	'NEW_PMS'					=> '<strong>%d</strong> 個新訊息',
 	'NEW_POST'					=> '有新文章',	// Not used anymore
 	'NEW_POSTS'					=> '有新文章',	// Not used anymore
 	'NEXT'						=> '下一頁',		// Used in pagination
 	'NEXT_STEP'					=> '下一步',
 	'NEVER'						=> '從未',
 	'NO'						=> '否',
+	'NO_NOTIFICATIONS'			=> 'You have no notifications',
 	'NOT_ALLOWED_MANAGE_GROUP'	=> '您不能從管理員控制台管理這個會員群組。',
 	'NOT_AUTHORISED'			=> '您沒有權限瀏覽這塊區域。',
 	'NOT_WATCHING_FORUM'		=> '您已經取消這個版面的訂閱，版面更新訊息停止發送。',
 	'NOT_WATCHING_TOPIC'		=> '您已經取消這個主題的訂閱。',
+	'NOTIFICATIONS'				=> 'Notifications',
+	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
+	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
+	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
+	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
+	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
+	'NOTIFICATION_POST_IN_QUEUE'		=> '<strong>Post approval</strong> request by %1$s:',
+	'NOTIFICATION_REFERENCE'			=> '"%1$s"',
+	'NOTIFICATION_REASON'				=> '<em>Reason:</em> %1$s.',
+	'NOTIFICATION_REPORT_PM'			=> '<strong>Private Message reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_POST'			=> '<strong>Post reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_CLOSED'		=> '<strong>Report closed</strong> by %1$s for:',
+	'NOTIFICATION_TOPIC'				=> '<strong>New topic</strong> by %1$s:',
+	'NOTIFICATION_TOPIC_APPROVED'		=> '<strong>Topic approved</strong>:',
+	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
+	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
+	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> '請通知管理員或網站管理者。',
 	'NOTIFY_ADMIN_EMAIL'		=> '請通知管理員或網站管理者：<a href="mailto:%1$s">%1$s</a>',
 	'NO_ACCESS_ATTACHMENT'		=> '您不被允許使用這個檔案。',
@@ -516,6 +627,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_ADMIN'				=> '您沒有管理權限，因此不能使用管理員控制台。',
 	'NO_AUTH_ADMIN_USER_DIFFER'	=> '您不能被重新授權為另一個會員。',
 	'NO_AUTH_OPERATION'			=> '您沒有完成這個操作所需要的權限。',
+	'NO_AVATARS'				=> 'No avatars currently available',
 	'NO_CONNECT_TO_SMTP_HOST'	=> '無法連接 SMTP 伺服器 ：%s ：%s',
 	'NO_BIRTHDAYS'				=> '今天沒有人生日',
 	'NO_EMAIL_MESSAGE'			=> '沒有 e-mail 內容。',
@@ -531,7 +643,6 @@ $lang = array_merge($lang, array(
 	'NO_MODE'					=> '沒有指定模式。',
 	'NO_MODERATORS'				=> '沒有版主。',
 	'NO_NEW_MESSAGES'			=> '沒有新的訊息',
-	'NO_NEW_PM'					=> '<strong>0</strong> 個新訊息',
 	'NO_NEW_POSTS'				=> '無新文章',	// Not used anymore
 	'NO_ONLINE_USERS'			=> '沒有註冊會員',
 	'NO_POSTS'					=> '沒有文章',
@@ -546,7 +657,6 @@ $lang = array_merge($lang, array(
 	'NO_TOPIC_FORUM'			=> '主題或版面不再存在。',
 	'NO_TOPICS'					=> '這個版面還沒有主題或文章。',
 	'NO_TOPICS_TIME_FRAME'		=> '在選定的時段中這個版面沒有主題存在。',
-	'NO_UNREAD_PM'				=> '<strong>0</strong> 個未讀訊息',
 	'NO_UNREAD_POSTS'			=> '沒有未閱讀文章',
 	'NO_UPLOAD_FORM_FOUND'		=> '上傳已經開始，但是沒有有效的上傳檔案表單。',
 	'NO_USER'					=> '該會員不存在。',
@@ -557,15 +667,14 @@ $lang = array_merge($lang, array(
 	'OFFLINE'					=> '離線',
 	'ONLINE'					=> '線上',
 	'ONLINE_BUDDIES'			=> '線上好友',
-	'ONLINE_USERS_TOTAL'		=> '線上共有 <strong>%d</strong> 位使用者：',
-	'ONLINE_USERS_ZERO_TOTAL'	=> '線上共有 <strong>0</strong> 位使用者：',
-	'ONLINE_USER_TOTAL'			=> '線上共有 <strong>%d</strong> 位使用者：',
 	'OPTIONS'					=> '選項',
 
 	'PAGE_OF'				=> '第 <strong>%1$d</strong> 頁 (共 <strong>%2$d</strong> 頁)',
+	'PAGE_TITLE_NUMBER'		=> 'Page %s',
 	'PASSWORD'				=> '密碼',
 	'PIXEL'					=> '像素',
 	'PLAY_QUICKTIME_FILE'	=> '播放 Quicktime 檔案',
+	'PLEASE_WAIT'			=> 'Please wait.',
 	'PM'					=> 'PM',
 	'PM_REPORTED'			=> '點選以查看檢舉',
 	'POSTING_MESSAGE'		=> '發表訊息於 %s',
@@ -578,9 +687,15 @@ $lang = array_merge($lang, array(
 	'POSTED_ON_DATE'		=> '發表於',
 	'POSTS'					=> '文章',
 	'POSTS_UNAPPROVED'		=> '這個主題裡至少有一篇文章未被核准。',
+	'POSTS_UNAPPROVED_FORUM'=> 'At least one post in this forum has not been approved.',
 	'POST_BY_AUTHOR'		=> '由',
-	'POST_BY_FOE'			=> '這篇文章由 <strong>%1$s</strong> 發表，此人目前在您的黑名單中。%2$s顯示這篇文章%3$s。',
+	'POST_BY_FOE'			=> '<strong>%1$s</strong>, who is currently on your ignore list, made this post.',
+	'POST_DISPLAY'			=> '%1$sDisplay this post%2$s.',
 	'POST_DAY'				=> '平均每天 %.2f 篇文章',
+	'POST_DELETED_ACTION'	=> 'Deleted post:',
+	'POST_DELETED'			=> 'This post has been deleted.',
+	'POST_DELETED_BY'		=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s.',
+	'POST_DELETED_BY_REASON'=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s for the following reason: %4$s',
 	'POST_DETAILS'			=> '文章細節',
 	'POST_NEW_TOPIC'		=> '發表新文章',
 	'POST_PCT'				=> '所有文章的 %.2f%%',
@@ -591,7 +706,8 @@ $lang = array_merge($lang, array(
 	'POST_SUBJECT'			=> '文章主題 ',
 	'POST_TIME'				=> '發表時間 ',
 	'POST_TOPIC'			=> '發表新主題',
-	'POST_UNAPPROVED'		=> '這篇文章正在等待審核',
+	'POST_UNAPPROVED_ACTION'	=> 'Post awaiting approval:',
+	'POST_UNAPPROVED'		=> 'This post has not been approved.',
 	'POWERED_BY'			=> 'Powered by %s',
 	'PREVIEW'				=> '預覽',
 	'PREVIOUS'				=> '上一頁',		// Used in pagination
@@ -601,6 +717,8 @@ $lang = array_merge($lang, array(
 	'PRIVATE_MESSAGES'		=> '私人訊息',
 	'PRIVATE_MESSAGING'		=> '私人訊息',
 	'PROFILE'				=> '會員控制台 (UCP)',
+
+	'QUICK_LINKS'			=> 'Quick links',
 
 	'RANK'						=> '等級',
 	'READING_FORUM'				=> '正在檢視 %s 版面的主題',
@@ -614,15 +732,6 @@ $lang = array_merge($lang, array(
 	'REDIRECTS'					=> '轉向總數',
 	'REGISTER'					=> '註冊',
 	'REGISTERED_USERS'			=> '註冊會員：',
-	'REG_USERS_ONLINE'			=> '共有 %d 位註冊會員和 ',
-	'REG_USERS_TOTAL'			=> '%d 位註冊會員、',
-	'REG_USERS_TOTAL_AND'		=> '%d 位註冊會員和 ',
-	'REG_USERS_ZERO_ONLINE'		=> '共有 0 位註冊會員和 ',
-	'REG_USERS_ZERO_TOTAL'		=> '0 位註冊會員、',
-	'REG_USERS_ZERO_TOTAL_AND'	=> '0 位註冊會員和 ',
-	'REG_USER_ONLINE'			=> '共有 %d 位註冊會員和 ',
-	'REG_USER_TOTAL'			=> '%d 位註冊會員、',
-	'REG_USER_TOTAL_AND'		=> '%d 位註冊會員和 ',
 	'REMOVE'					=> '刪除',
 	'REMOVE_INSTALL'			=> '在開始使用討論區前請刪除，移除或重新命名 install 檔案夾。如果這個資料夾依然存在，那麼您只能使用管理員控制台 (ACP)。',
 	'REPLIES'					=> '回覆',
@@ -639,7 +748,8 @@ $lang = array_merge($lang, array(
 	'RETURN_FORUM'				=> '%s回到最近瀏覽的版面%s',
 	'RETURN_PAGE'				=> '%s回到先前的頁面%s',
 	'RETURN_TOPIC'				=> '%s回到最近瀏覽的主題%s',
-	'RETURN_TO'					=> '回到',
+	'RETURN_TO'					=> 'Return to “%s”',
+	'RETURN_TO_INDEX'			=> 'Return to Board Index',
 	'FEED'						=> '消息來源',
 	'FEED_NEWS'					=> '新聞',
 	'FEED_TOPICS_ACTIVE'		=> '最近討論的主題',
@@ -667,28 +777,30 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV_EXPLAIN'		=> '檢視進階搜尋選項',
 	'SEARCH_KEYWORDS'			=> '搜尋關鍵字',
 	'SEARCHING_FORUMS'			=> '搜尋版面',
-	'SEARCH_ACTIVE_TOPICS'		=> '檢視最近討論的主題',
+	'SEARCH_ACTIVE_TOPICS'		=> 'Active topics',
 	'SEARCH_FOR'				=> '搜尋',
 	'SEARCH_FORUM'				=> '搜尋這個版面...',
-	'SEARCH_NEW'				=> '檢視新的文章',
+	'SEARCH_NEW'				=> 'New posts',
 	'SEARCH_POSTS_BY'			=> '搜尋文章，依照',
-	'SEARCH_SELF'				=> '檢視您的文章',
+	'SEARCH_SELF'				=> 'Your posts',
 	'SEARCH_MINE'				=> 'View your topics',
 	'SEARCH_TOPIC'				=> '搜尋這個主題...',
-	'SEARCH_UNANSWERED'			=> '檢視沒有回覆的主題',
-	'SEARCH_UNREAD'				=> '檢視沒有閱讀的文章',
+	'SEARCH_UNANSWERED'			=> 'Unanswered posts',
+	'SEARCH_UNREAD'				=> 'Unread posts',
 	'SEARCH_USER_POSTS'			=> '搜尋會員的文章',
 	'SECONDS'					=> '秒',
+	'SEE_ALL'					=> 'See All',
 	'SELECT'					=> '選擇',
 	'SELECT_ALL_CODE'			=> '選擇全部',
 	'SELECT_DESTINATION_FORUM'	=> '請選擇一個目的版面',
 	'SELECT_FORUM'				=> '選擇一個版面',
-	'SEND_EMAIL'				=> 'E-mail',				// Used for submit buttons
-	'SEND_EMAIL_USER'			=> 'E-mail',				// Used as: {L_SEND_EMAIL_USER} {USERNAME} -> E-mail UserX
+	'SEND_EMAIL'				=> 'Send email',				// Used for submit buttons
+	'SEND_EMAIL_USER'			=> 'Send email to %s',
 	'SEND_PRIVATE_MESSAGE'		=> '發送私人訊息',
 	'SETTINGS'					=> '設定',
 	'SIGNATURE'					=> '簽名',
 	'SKIP'						=> '跳到內容',
+	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'SMTP 伺服器不支援驗證',
 	'SORRY_AUTH_READ'			=> '您沒有閱讀這個版面的權限。',
 	'SORRY_AUTH_VIEW_ATTACH'	=> '您沒有下載這個附加檔案的權限。',
@@ -706,6 +818,8 @@ $lang = array_merge($lang, array(
 	'START_WATCHING_TOPIC'		=> '訂閱主題',
 	'STOP_WATCHING_FORUM'		=> '退訂版面',
 	'STOP_WATCHING_TOPIC'		=> '退訂主題',
+	'STRING_LIST_MULTI'			=> '%1$s, and %2$s',
+	'STRING_LIST_SIMPLE'		=> '%1$s and %2$s',
 	'SUBFORUM'					=> '子版面',
 	'SUBFORUMS'					=> '子版面',
 	'SUBJECT'					=> '主題',
@@ -717,51 +831,35 @@ $lang = array_merge($lang, array(
 	'THE_TEAM'			=> '管理團隊',
 	'TIB'				=> 'TiB',
 	'TIME'				=> '時間',
-	
+	'TIMEOUT_PROCESSING_REQ'			=> 'Request timed out.',
+
 	'TOO_LARGE'						=> '您輸入的值太大。',
 	'TOO_LARGE_MAX_RECIPIENTS'		=> '這個 <strong>每個私人訊息所允許的最大收件人數</strong> 設定，您輸入的值太大。',
 
 	'TOO_LONG'						=> '您輸入的數值太長。',
 
-	'TOO_LONG_AIM'					=> '您輸入的 AIM 帳號太長了。',
 	'TOO_LONG_CONFIRM_CODE'			=> '您輸入的確認代碼太長了。',
 	'TOO_LONG_DATEFORMAT'			=> '您輸入的時間格式太長了。',
-	'TOO_LONG_ICQ'					=> '您輸入的 ICQ 號碼太長了。',
-	'TOO_LONG_INTERESTS'			=> '您輸入的興趣太長了。',
 	'TOO_LONG_JABBER'				=> '您輸入的 Jabber 帳號名稱太長了。',
-	'TOO_LONG_LOCATION'				=> '您輸入的來自太長了。',
-	'TOO_LONG_MSN'					=> '您輸入的 MSNM/WLM 名稱太長了。',
 	'TOO_LONG_NEW_PASSWORD'			=> '您輸入的密碼太長了。',
-	'TOO_LONG_OCCUPATION'			=> '您輸入的職業太長了。',
 	'TOO_LONG_PASSWORD_CONFIRM'		=> '您輸入的確認密碼太長了。',
 	'TOO_LONG_USER_PASSWORD'		=> '您輸入的密碼太長了。',
 	'TOO_LONG_USERNAME'				=> '您輸入的會員名稱太長了。',
-	'TOO_LONG_EMAIL'				=> '您輸入的 e-mail 位址太長了。',
-	'TOO_LONG_EMAIL_CONFIRM'		=> '您輸入的 e-mail 確認位址太長了。',
-	'TOO_LONG_WEBSITE'				=> '您輸入的網站位址太長了。',
-	'TOO_LONG_YIM'					=> '您輸入的 Yahoo！ Messenger 會員名稱太長了。',
+	'TOO_LONG_EMAIL'				=> 'The email address you entered is too long.',
 
 	'TOO_MANY_VOTE_OPTIONS'			=> '您在投票中選擇了過多的選項。',
 
 	'TOO_SHORT'						=> '您輸入的數值太短。',
 
-	'TOO_SHORT_AIM'					=> '您輸入的 AIM 帳號太短了。',
 	'TOO_SHORT_CONFIRM_CODE'		=> '您輸入的確認代碼太短了。',
 	'TOO_SHORT_DATEFORMAT'			=> '您輸入的時間格式太短了。',
-	'TOO_SHORT_ICQ'					=> '您輸入的 ICQ 號碼太短了。',
-	'TOO_SHORT_INTERESTS'			=> '您輸入的興趣太短了。',
 	'TOO_SHORT_JABBER'				=> '您輸入的 Jabber 帳號名稱太短了。',
-	'TOO_SHORT_LOCATION'			=> '您輸入的來自太短了。',
-	'TOO_SHORT_MSN'					=> '您輸入的 MSNM/WLM 名稱太短了。',
 	'TOO_SHORT_NEW_PASSWORD'		=> '您輸入的密碼太短了。',
-	'TOO_SHORT_OCCUPATION'			=> '您輸入的職業太短了。',
 	'TOO_SHORT_PASSWORD_CONFIRM'	=> '您輸入的確認密碼太短了。',
 	'TOO_SHORT_USER_PASSWORD'		=> '您輸入的密碼太短了。',
 	'TOO_SHORT_USERNAME'			=> '您輸入的會員名稱太短了。',
-	'TOO_SHORT_EMAIL'				=> '您輸入的 e-mail 位址太短了。',
-	'TOO_SHORT_EMAIL_CONFIRM'		=> '您輸入的確認 e-mail 位址太短了。',
-	'TOO_SHORT_WEBSITE'				=> '您輸入的網站位址太短了。',
-	'TOO_SHORT_YIM'					=> '您輸入的 Yahoo！ Messenger 會員名稱太短了。',
+	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
+	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
 	
 	'TOO_SMALL'						=> '您輸入的值太小。',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> '這個 <strong>每個私人訊息所允許的最大收件人數</strong> 設定，您輸入的值太小。',
@@ -775,30 +873,20 @@ $lang = array_merge($lang, array(
 	'TOPIC_MOVED'		=> '移動主題',
 	'TOPIC_REVIEW'		=> '主題瀏覽',
 	'TOPIC_TITLE'		=> '標題',
-	'TOPIC_UNAPPROVED'	=> '這個主題尚未被核准',
+	'TOPIC_UNAPPROVED'	=> 'This topic has not been approved.',
+	'TOPIC_DELETED'		=> 'This topic has been deleted.',
 	'TOTAL_ATTACHMENTS'	=> '附加檔案',
-	'TOTAL_LOG'			=> '1 個記錄',
-	'TOTAL_LOGS'		=> '%d 個記錄',
-	'TOTAL_NO_PM'		=> '總計 0 個私人訊息',
-	'TOTAL_PM'			=> '總計 1 個私人訊息',
-	'TOTAL_PMS'			=> '總計 %d 個私人訊息',
+	'TOPIC_POLL'		=> 'This topic has a poll.',
 	'TOTAL_POSTS'		=> '文章總數',
-	'TOTAL_POSTS_OTHER'	=> '文章總數：<strong>%s</strong>',
-	'TOTAL_POSTS_ZERO'	=> '文章總數：<strong>0</strong>',
 	'TOPIC_REPORTED'	=> '這個主題已被檢舉',
-	'TOTAL_TOPICS_OTHER'=> '主題總數：<strong>%s</strong>',
-	'TOTAL_TOPICS_ZERO'	=> '主題總數：<strong>0</strong>',
-	'TOTAL_USERS_OTHER'	=> '會員總數：<strong>%s</strong>',
-	'TOTAL_USERS_ZERO'	=> '會員總數：<strong>0</strong>',
 	'TRACKED_PHP_ERROR'	=> '已追蹤 PHP 錯誤：%s',
+	'TWITTER'			=> 'Twitter',
 
-	'UNABLE_GET_IMAGE_SIZE'	=> '無法瀏覽圖檔，或者此檔案不是一個有效的圖檔。',
+	'UNABLE_GET_IMAGE_SIZE'	=> 'It was not possible to determine the dimensions of the image. Please verify that the URL you entered is correct.',
 	'UNABLE_TO_DELIVER_FILE'=> '無法傳送檔案。',
 	'UNKNOWN_BROWSER'		=> '無法瀏覽',
 	'UNMARK_ALL'			=> '取消全選',
 	'UNREAD_MESSAGES'		=> '未讀訊息',
-	'UNREAD_PM'				=> '<strong>%d</strong> 個未讀訊息',
-	'UNREAD_PMS'			=> '<strong>%d</strong> 個未讀訊息',
 	'UNREAD_POST'			=> '未閱讀文章',
 	'UNREAD_POSTS'			=> '未閱讀文章',
 	'UNWATCH_FORUM_CONFIRM'		=> '您確定要取消訂閱這個版面嗎？',
@@ -816,8 +904,6 @@ $lang = array_merge($lang, array(
 	'USERNAMES'				=> '會員名稱',
 	'USER_AVATAR'			=> '頭像',
 	'USER_CANNOT_READ'		=> '您不能閱讀這個版面的文章。',
-	'USER_POST'				=> '%d 篇文章',
-	'USER_POSTS'			=> '%d 篇文章',
 	'USERS'					=> '會員',
 	'USE_PERMISSIONS'		=> '切換成此會員的權限 (測試用)',
 
@@ -825,6 +911,8 @@ $lang = array_merge($lang, array(
 
 	'VARIANT_DATE_SEPARATOR'	=> ' / ',	// Used in date format dropdown, eg: "Today, 13:37 / 01 Jan 2007, 13:37" ... to join a relative date with calendar date
 	'VIEWED'					=> '已觀看',
+
+	'VIEWING_CONTACT_ADMIN'		=> 'Viewing contact page',
 	'VIEWING_FAQ'				=> '檢視問答集',
 	'VIEWING_MEMBERS'			=> '檢視會員細節',
 	'VIEWING_ONLINE'			=> '檢視誰在線上',
@@ -839,8 +927,6 @@ $lang = array_merge($lang, array(
 	'VIEW_LATEST_POST'			=> '檢視最後發表',
 	'VIEW_NEWEST_POST'			=> '檢視第一篇未讀文章',
 	'VIEW_NOTES'				=> '檢視會員記錄',
-	'VIEW_ONLINE_TIME'			=> '這些資料是根據過去 %d 分鐘內使用者的活動記錄',
-	'VIEW_ONLINE_TIMES'			=> '這些資料是根據過去 %d 分鐘內使用者的活動記錄',
 	'VIEW_TOPIC'				=> '檢視主題',
 	'VIEW_TOPIC_ANNOUNCEMENT'	=> '公告：',
 	'VIEW_TOPIC_GLOBAL'			=> '全域公告：',
@@ -861,23 +947,24 @@ $lang = array_merge($lang, array(
 	'WEBSITE'			=> '網站',
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> '誰在線上',
+	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> '您輸入了錯誤的密碼。',
 	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
-	'WRONG_DATA_ICQ'			=> '您輸入的數字不是一個有效的 ICQ 號碼。',
 	'WRONG_DATA_JABBER'			=> '您輸入的名字不是一個有效的 Jabber 帳號。',
 	'WRONG_DATA_LANG'			=> '您指定了一個無效的語言。',
-	'WRONG_DATA_WEBSITE'		=> '網站的位址是無效的 URL，請包含通信協議。例如 http://www.bamboocat.com/。',
+	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
+	'WRONG_DATA_POST_SK'		=> 'The post sort option you specified is not valid.',
+	'WRONG_DATA_TOPIC_SD'		=> 'The topic sort direction you specified is not valid.',
+	'WRONG_DATA_TOPIC_SK'		=> 'The topic sort option you specified is not valid.',
 	'WROTE'						=> '寫',
 
+	'YAHOO'				=> 'Yahoo Messenger',
+	'YOUTUBE'			=> 'YouTube',
 	'YEAR'				=> '年',
 	'YEAR_MONTH_DAY'	=> '(YYYY-MM-DD)',
 	'YES'				=> '是',
-	'YIM'				=> 'YIM',
 	'YOU_LAST_VISIT'	=> '最後訪問是 %s',
-	'YOU_NEW_PM'		=> '您的收件夾中有一個新訊息。',
-	'YOU_NEW_PMS'		=> '您的收件夾中有多個新訊息。',
-	'YOU_NO_NEW_PM'		=> '您的收件夾中沒有新的訊息。',
 
 	'default_dateformat'	=> 'Y年 M j日, H:i', // Mon Jan 01, 2007 1:37 pm
 
@@ -1083,7 +1170,6 @@ $lang = array_merge($lang, array(
 
 	'FORUM_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this forum.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this topic.',
-	'TOO_FEW_CHARS_LIMIT'	=> '您的內容包含 %1$d 個字元。您需要輸入最少的字元數是 %2$d。',
 	'REPLY_TO_MESSAGE'		=> 'Reply to message',
 
 	'RSS_CHAN_LIST_TITLE'	=> '版面',
@@ -1695,7 +1781,6 @@ $lang = array_merge($lang, array(
 	'DEV_NO_TEST_FILE'			=> '在轉換器中沒有指定 test_file 變數的值。如果您是轉換器的使用者，您不應該看到這個錯誤，請聯絡轉換器的作者並報告這個錯誤。如果您是轉換器的作者，您必須指定一個原討論區中存在的檔案名稱，使得路徑校驗能正常進行。',
 	'DIRECTORIES_AND_FILES'		=> '設定資料夾與檔案',
 	'DISABLE_KEYS'				=> '停用關鍵字',
-	'DLL_FIREBIRD'				=> 'Firebird',
 	'DLL_FTP'					=> 'FTP 支援 [ 安裝 phpBB ]',
 	'DLL_GD'					=> 'GD 支援 [ 圖形確認碼 ]',
 	'DLL_MBSTRING'				=> '多位元組字元支援',
@@ -1706,11 +1791,12 @@ $lang = array_merge($lang, array(
 	'DLL_MYSQLI'				=> 'MySQL with MySQLi Extension',
 	'DLL_ORACLE'				=> 'Oracle',
 	'DLL_POSTGRES'				=> 'PostgreSQL',
-	'DLL_SQLITE'				=> 'SQLite',
+	'DLL_SQLITE'				=> 'SQLite 2',
+	'DLL_SQLITE3'				=> 'SQLite 3',
 	'DLL_XML'					=> 'XML 支援 [ Jabber ]',
 	'DLL_ZLIB'					=> 'zlib 支援 [ 壓縮檔案：.gz .tar .gz .zip ]',
 	'DL_CONFIG'					=> '下載設定',
-	'DL_CONFIG_EXPLAIN'			=> '您應該將完整的 config.php 下載到您的個人電腦中，然後手動上傳它，覆蓋 phpBB 3.0 根目錄中已經存在的檔案。請注意以 ASCII 格式上傳（如果您不確定如何辦到，請閱讀您的 FTP 軟體說明檔）。上傳完成之後，請點選「完成」以進行下一步。',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> '下載',
 	'DONE'						=> '完成',
 
@@ -1722,8 +1808,6 @@ $lang = array_merge($lang, array(
 	'FILES_REQUIRED_EXPLAIN'	=> '<strong>必須的</strong> - 為了正常運行，phpBB 需要針對特定檔案或資料夾的寫入權限。如果下面出現「不存在」，您就需要建立相關的檔案或資料夾；如果出現「不可寫入」，您就需要改變相關的檔案或資料夾的權限來允許 phpBB 對其進行寫入操作。',
 	'FILLING_TABLE'				=> '正在填充表格：<strong>%s</strong>',
 	'FILLING_TABLES'			=> '正在填充表格',
-
-	'FIREBIRD_DBMS_UPDATE_REQUIRED'		=> 'phpBB 不再支援 Firebird/Interbase 2.1 以前版本。在執行更新之前，請更新您的 Firebird 版本至少是 2.1.0 。',
 
 	'FINAL_STEP'				=> '正在執行最後一步',
 	'FORUM_ADDRESS'				=> '討論區位址',
@@ -1750,30 +1834,30 @@ $lang = array_merge($lang, array(
 		<p>點選下面的連結，將帶您到管理員控制台（ACP）中，提交統計資料到 phpBB 的表格。如果您幫助我們寄送那資訊，那麼我們將不勝感激。之後，您應該花些時間去測試一些對您有用的選項。請記得 phpBB 的線上使用說明位於 <a href="http://www.phpbb.com/support/documentation/3.0/">Documentation（使用說明文件）</a> 和 <a href="http://www.phpbb.com/community/viewforum.php?f=46">Support Forum（技術支援版面）</a>。</p><p><strong>請在使用您的討論區前刪除、移動或重新命名 /install/ 資料夾。如果這個資料夾存在，那麼只有管理員控制台（ACP）才允許使用。</strong>',
 	'INSTALL_INTRO'				=> '歡迎安裝！',
 
-	'INSTALL_INTRO_BODY'		=> '使用這個選項，應該可以在您的伺服器上安裝 phpBB。</p><p>為了繼續安裝，您需要知道您的資料庫設定。如果您不清楚這些，請聯絡您的網站空間提供者。沒有這些訊息安裝將不能繼續。您需要：</p>
+	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
 
 	<ul>
-		<li>資料庫類型 - 您將使用的資料庫。</li>
-		<li>資料庫伺服器主機名稱或 DSN - 資料庫伺服器位址。(例如：您的 MySQL 就安裝在本機上，那麼填入 <strong>localhost</strong> 即可)</li>
-		<li>資料庫伺服器連接埠 - 資料庫伺服器連接埠 (一般情況下不需要輸入)。</li>
-		<li>資料庫名稱 - 資料庫伺服器上的資料庫名稱。</li>
-		<li>管理員名稱和密碼 - 用來登入上述資料庫的管理員資料。</li>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
 	</ul>
 
-	<p><strong>注意：</strong> 如果您使用 SQLite，您應該在 DSN 框中輸入資料庫的完整路徑，並保持管理員名稱和密碼空白。為了安全的原因，您應該確保資料庫檔案不會存放在一個可以被公開訪問的資料夾底下。</p>
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
 
-	<p>phpBB3 支援如下的資料庫：</p>
+	<p>phpBB3 supports the following databases:</p>
 	<ul>
-		<li>MySQL 3.23 或更高 (支援 MySQLi)</li>
-		<li>PostgreSQL 7.3+</li>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
 		<li>SQLite 2.8.2+</li>
-		<li>Firebird 2.1+</li>
-		<li>MS SQL Server 2000 或更高（直接訪問或通過 ODBC）</li>
-		<li>MS SQL Server 2005 或更高 (native)</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
 		<li>Oracle</li>
 	</ul>
 
-	<p>只有您的伺服器支援的資料庫才會被顯示。',
+	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> '要開始安裝，點選下面的按鈕。',
 	'INSTALL_LOGIN'				=> '登入討論區',
 	'INSTALL_NEXT'				=> '下一步',
@@ -1789,9 +1873,8 @@ $lang = array_merge($lang, array(
 	'INST_ERR_DB_NO_ERROR'		=> '沒有得到相關的錯誤訊息',
 	'INST_ERR_DB_NO_MYSQLI'		=> '伺服器內安裝的 MySQL 版本與您選擇的「MySQL with MySQLi Extension」選項不相容，請嘗試「MySQL」選項。',
 	'INST_ERR_DB_NO_SQLITE'		=> '您安裝的 SQLite 版本太舊，請升級到至少 2.8.2 版。',
+	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> '伺服器內安裝的 Oracle 版本需要您將參數 <var>NLS_CHARACTERSET</var> 設定為 <var>UTF8</var>。請設定此參數，或將 Oracle 升級到至少 9.2 版。',
-	'INST_ERR_DB_NO_FIREBIRD'	=> '您安裝的 Firebird 版本太舊，請升級到至少 2.1 版。',
-	'INST_ERR_DB_NO_FIREBIRD_PS'=> '您為 Firebird 選擇的資料庫的頁面容量小於 8192，它必須至少為 8192。',
 	'INST_ERR_DB_NO_POSTGRES'	=> '您選擇的資料庫不是 <var>UNICODE</var> 或 <var>UTF8</var> 編碼，請使用 <var>UNICODE</var> 或 <var>UTF8</var> 編碼的資料庫。',
 	'INST_ERR_DB_NO_NAME'		=> '沒有指定資料庫名稱。',
 	'INST_ERR_EMAIL_INVALID'	=> '您輸入的 e-mail 位址無效。',
@@ -1845,6 +1928,8 @@ $lang = array_merge($lang, array(
 	'PCRE_UTF_SUPPORT_EXPLAIN'		=> '如果 PHP 的 PCRE 延伸功能不支援 UTF-8，phpBB 將 <strong>無法</strong> 運行。',
 	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP 的 getimagesize() 功能是可用的',
 	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>必須的</strong> - 為了讓 phpBB 正常工作，需要啟用 getimagesize 功能。',
+	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> '可選模組',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>可選的</strong> - 這些模組或程式不是必須的。但如果它們是可用的，您將可以使用額外的功能。',
 	'PHP_SUPPORTED_DB'				=> '支援的資料庫',
@@ -1853,10 +1938,10 @@ $lang = array_merge($lang, array(
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> '如果此功能被允許，phpBB 仍然會運行。但基於安全理由，如果可以，建議您將 register_globals 功能停用。',
 	'PHP_SAFE_MODE'					=> '安全模式',
 	'PHP_SETTINGS'					=> 'PHP 版本和設定',
-	'PHP_SETTINGS_EXPLAIN'			=> '<strong>必須的</strong> - 要安裝 phpBB，您必須使用至少 4.3.3 版本的 PHP。如果下面出現 <var>安全模式</var>，那麼表示您的 PHP 正在運行於安全模式，這將給遠程管理及類似功能帶來限制。',
+	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'PHP 設定 <var>allow_url_fopen</var> 為啟用狀態',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>可選的</strong> - 這個設定是可選的，不過某些 phpBB 的功能，例如外部頭像，可能會因為沒有這個功能而無法正常運作。',
-	'PHP_VERSION_REQD'				=> 'PHP 版本 >= 4.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
 	'POST_ID'						=> '文章 ID',
 	'PREFIX_FOUND'					=> '掃瞄資料表顯示使用 <strong>%s</strong> 作為字首是有效的安裝。',
 	'PREPROCESS_STEP'				=> '正在執行轉換準備操作',
@@ -1876,6 +1961,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> '伺服器設定',
 	'SEARCH_INDEX_UNCONVERTED'	=> '搜尋索引沒有被轉換',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> '您的舊搜尋索引沒有轉換。搜尋將總是得到空的結果。如果要建立一個新索引，請到管理員控制台，選擇維護，然後從子功能表中選擇搜尋索引。',
+	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> '討論區軟體',
 	'SPECIFY_OPTIONS'			=> '設定轉換選項',
 	'STAGE_ADMINISTRATOR'		=> '管理員詳細資料',
@@ -1883,7 +1969,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> '只有您知道需要一些非預設設定時，您才有必要更改此頁的內容。如果您不確定，請繼續至下一頁，因為這些設定可以隨時在管理員控制台中更改。',
 	'STAGE_CONFIG_FILE'			=> '設定檔案',
 	'STAGE_CREATE_TABLE'		=> '建立資料表',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'phpBB 3.0 所使用的資料庫表格已經建立並且填入了一些原始資料，請繼續至下一頁以完成 phpBB 安裝。',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> '資料庫設定',
 	'STAGE_FINAL'				=> '完成',
 	'STAGE_INTRO'				=> '簡介',
@@ -1896,7 +1982,7 @@ $lang = array_merge($lang, array(
 	'SUB_LICENSE'				=> '授權',
 	'SUB_SUPPORT'				=> '支援',
 	'SUCCESSFUL_CONNECT'		=> '連接成功',
-	'SUPPORT_BODY'				=> '目前所釋出的穩定版本將提供完全且免費的支援。其中包括：</p><ul><li>安裝</li><li>設定</li><li>技術的問題</li><li>在軟體中可能的 bugs 之相關問題</li><li>從候選正式版本 (RC) 到最新的穩定版本的更新</li><li>從 phpBB 2.0.x 到 phpBB3 的轉換</li><li>從其他的討論區軟體到 phpBB3 的轉換 (請參訪 <a href="http://www.phpbb.com/community/viewforum.php?f=65">Convertors Forum</a>)。</li></ul><p>我們鼓勵仍在運行 phpBB3 測試版的使用者以最新的版本來取代他們的安裝。</p><h2>外掛 / 風格</h2><p>外掛的相關問題，請您發表在 <a href="http://www.phpbb.com/community/viewforum.php?f=81">Modifications Forum</a> 合適的版面。<br />風格、樣版、圖檔組的相關問題，請您發表在 <a href="http://www.phpbb.com/community/viewforum.php?f=80">Styles Forum</a> 合適的版面。<br /><br />如果您的問題關係到某個特別的檔案，那麼請直接將它附加在發表的主題內。</p><h2>獲得支援</h2><p><a href="http://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package (phpBB 歡迎包)</a><br /><a href="http://www.phpbb.com/support/">Support Section（支援部門）</a><br /><a href="http://www.phpbb.com/support/documentation/3.0/quickstart/">Quick Start Guide（快速啟動指導）</a><br /><br />要確保您隨時可以獲取最新的發佈與新聞，為何不 <a href="http://www.phpbb.com/support/">訂閱我們的電子報</a> 呢？<br /><br />',
+	'SUPPORT_BODY'				=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/documentation/3.1/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
 	'SYNC_FORUMS'				=> '開始同步版面',
 	'SYNC_POST_COUNT'			=> '正在同步文章',
 	'SYNC_POST_COUNT_ID'		=> '正在同步<var>序號</var>為 %1$s 到 %2$s 的文章。',
@@ -1922,7 +2008,7 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ALL_FILES_UP_TO_DATE'		=> '所有的檔案都已經升級到最新版本。現在您應該 <a href="../ucp.php?mode=login&amp;redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">登入到討論區</a> 並檢查系統是否正常工作。不要忘記刪除、重新命名或移動 /install/ 資料夾！請從您的 ACP 模組中的 <a href="../ucp.php?mode=login&amp;redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">發送統計資訊</a> 發送有關您的伺服器以及論壇設定之更新資訊給我們。',
+	'ALL_FILES_UP_TO_DATE'		=> 'All files are up to date with the latest phpBB version.',
 	'ARCHIVE_FILE'				=> '原始檔案',
 
 	'BACK'				=> '後退',
@@ -1945,7 +2031,10 @@ $lang = array_merge($lang, array(
 	'CURRENT_VERSION'				=> '目前的版本',
 
 	'DATABASE_TYPE'						=> '資料庫類型',
+	'DATABASE_UPDATE_COMPLETE'			=> 'Database updater has completed!',
+	'DATABASE_UPDATE_CONTINUE'			=> 'Continue database update',
 	'DATABASE_UPDATE_INFO_OLD'			=> '在安裝資料夾中的資料庫升級檔案是過時的。請確認您上傳的是正確版本的檔案。',
+	'DATABASE_UPDATE_NOT_COMPLETED'		=> 'The database update has not yet completed.',
 	'DELETE_USER_REMOVE'				=> '刪除會員以及他所發表文章',
 	'DELETE_USER_RETAIN'				=> '刪除會員但保留其發表文章',
 	'DESTINATION'						=> '目標檔案',
@@ -1964,14 +2053,17 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_UPDATE_METHOD'			=> '下載已修改的檔案',
 	'DOWNLOAD_UPDATE_METHOD_EXPLAIN'	=> '當您下載並解壓縮檔案後，您需要上傳檔案到 phpBB 根目錄。請上傳檔案到分別的位置。當你完成所有檔案的上傳後，請再用下面的按鈕檢查檔案。',
 
-	'ERROR'			=> '錯誤',
 	'EDIT_USERNAME'	=> '編輯會員名稱',
+	'ERROR'			=> '錯誤',
+	'EVERYTHING_UP_TO_DATE'		=> 'Everything is up to date with the latest phpBB version. You should now <a href="%1$s">login to your board</a> and check if everything is working fine. Do not forget to delete, rename or move your install directory! Please send us updated information about your server and board configurations from the <a href="%2$s">Send statistics</a> module in your ACP.',
 
 	'FILE_ALREADY_UP_TO_DATE'		=> '檔案已經是最新。',
 	'FILE_DIFF_NOT_ALLOWED'			=> '檔案不允許不一樣。',
 	'FILE_USED'						=> '使用資訊從',			// Single file
 	'FILES_CONFLICT'				=> '有衝突的檔案',
 	'FILES_CONFLICT_EXPLAIN'		=> '下面的檔案已經修改過，不是舊版本的原始檔案。phpBB 認為合併這些檔案會產生衝突。請檢查衝突並嘗試手工的解決，或者選擇一種合併的方式繼續更新。如果您手工修改消除了衝突，請再次運行檔案檢查。您也可以選擇為每個檔案優先選擇合併。這將捨棄舊版本檔案的衝突代碼而遺失您於這個檔案上的修改。',
+	'FILES_DELETED'					=> 'Deleted files',
+	'FILES_DELETED_EXPLAIN'			=> 'The following files do not exist in the new version. These files have to be deleted from your installation.',
 	'FILES_MODIFIED'				=> '已修改的檔案',
 	'FILES_MODIFIED_EXPLAIN'		=> '下面的檔案已經修改過，不是舊版本的原始檔案。更新的檔案將合併您修改過和新的檔案。',
 	'FILES_NEW'						=> '新檔案',
@@ -2033,6 +2125,7 @@ $lang = array_merge($lang, array(
 	'PREVIOUS_VERSION'					=> '先前的版本',
 	'PROGRESS'							=> '進度',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Announcement',
 	'RESULT'					=> '結果',
 	'RUN_DATABASE_SCRIPT'		=> '現在升級我的資料庫',
 
@@ -2040,6 +2133,7 @@ $lang = array_merge($lang, array(
 	'SELECT_DOWNLOAD_FORMAT'	=> '選擇下載檔案格式',
 	'SELECT_FTP_SETTINGS'		=> '選擇 FTP 設定',
 	'SHOW_DIFF_CONFLICT'		=> '顯示差異/衝突',
+	'SHOW_DIFF_DELETED'			=> 'Show file contents',
 	'SHOW_DIFF_FINAL'			=> '顯示檔案比對結果',
 	'SHOW_DIFF_MODIFIED'		=> '顯示合併的差異',
 	'SHOW_DIFF_NEW'				=> '顯示檔案內容',
@@ -2053,6 +2147,7 @@ $lang = array_merge($lang, array(
 	'STAGE_UPDATE_FILES'		=> '升級檔案',
 	'STAGE_VERSION_CHECK'		=> '版本檢查',
 	'STATUS_CONFLICT'			=> '已修改的檔案產生衝突',
+	'STATUS_DELETED'			=> 'Deleted file',
 	'STATUS_MODIFIED'			=> '已修改的檔案',
 	'STATUS_NEW'				=> '新檔案',
 	'STATUS_NEW_CONFLICT'		=> '有衝突的新檔案',
@@ -2073,33 +2168,27 @@ $lang = array_merge($lang, array(
 	'UPDATE_INSTALLATION_EXPLAIN'	=> '本選項，將升級您的 phpBB 到最新版本。<br />過程中所有的檔案都將被徹底地檢查。您可以檢視檔案和更新前的差異。<br /><br />檔案自動更新有兩種不同的方式。</p><h2>手動更新</h2><p>這個選項，您只需要下載有更新的檔案以確保不會遺失您其他已修改的檔案。下載後將檔案上傳到 phpBB 根目錄底下的正確位置。之後，您可以再次進行檔案檢查，檢查是否將檔案放到了正確的位置。</p><h2>利用 FTP 自動更新</h2><p>這個方法和第一個類似，但是不需要下載有更新的檔案和手動上傳它們。系統將為您自動做這個工作。用這個方法進行升級您需要知道您的 FTP 登入的詳細資料。一旦完成，系統將重新導向到檔案檢查以確認更新完全。<br /><br />',
 	'UPDATE_INSTRUCTIONS'			=> '
 
-		<h1>發佈公告</h1>
+		<h1>Release announcement</h1>
 
-		<p>在您繼續更新過程之前，請閱讀<a href="%1$s" title="%1$s">最新版本的發佈公告</a> ，它包含很多有用的資訊。也包含完整的下載連結和改變記錄。</p>
+		<p>Please read the release announcement for the latest version before you continue your update process, it may contain useful information. It also contains full download links as well as the change log.</p>
 
 		<br />
 
-		<h1>如何使用 Automatic Update Package (自動更新包) 來更新您的安裝</h1>
+		<h1>How to update your installation with the Automatic Update Package</h1>
 
-		<p>建議的方法是使用自動更新包來更新您的安裝。您也可以使用寫在 INSTALL.html 文件的方法更新。自動更新的步驟是：</p>
+		<p>The recommended way of updating your installation listed here is only valid for the automatic update package. You are also able to update your installation using the methods listed within the INSTALL.html document. The steps for updating phpBB3 automatically are:</p>
 
 		<ul style="margin-left: 20px; font-size: 1.1em;">
-			<li>前往 <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com downloads page</a> 下載「Automatic Update Package (自動更新包)」壓縮檔。<br /><br /></li>
-			<li>解壓縮。<br /><br /></li>
-			<li>上傳解壓完成的檔案到您安裝 phpBB 的根目錄（即 config.php 檔案所在資料夾）。<br /><br /></li>
+			<li>Go to the <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com downloads page</a> and download the "Automatic Update Package" archive.<br /><br /></li>
+			<li>Unpack the archive.<br /><br /></li>
+			<li>Upload the complete uncompressed install folder to your phpBB root directory (where your config.php file is).<br /><br /></li>
 		</ul>
 
-		<p>一旦完成上傳，您的討論區將因上傳 install 資料夾後，使得一般會員暫時離開討論區。<br /><br />
-		<strong><a href="%2$s" title="%2$s">現在，開始在瀏覽器輸入您的 install 資料夾位址進行更新</a>。</strong><br />
+		<p>Once uploaded your board will be offline for normal users due to the install directory you uploaded now present.<br /><br />
+		<strong><a href="%1$s" title="%1$s">Now start the update process by pointing your browser to the install folder</a>.</strong><br />
 		<br />
-		整個更新過程您將被指導。更新完成後您將被通知。
+		You will then be guided through the update process. You will be notified once the update is complete.
 		</p>
-	',
-	'UPDATE_INSTRUCTIONS_INCOMPLETE'	=> '
-
-		<h1>發現更新不完全</h1>
-
-		<p>phpBB 發現自動更新不完全。請確認您有遵循自動更新工具的每一個步驟。底下您將再次找到此連結，或者直接重回您的 install 資料夾位址。</p>
 	',
 	'UPDATE_METHOD'					=> '升級方式',
 	'UPDATE_METHOD_EXPLAIN'			=> '你可以選擇合適的上傳方式。使用 FTP 上傳你需要於表單內填入 FTP 帳號的詳細資料。使用這種方法檔案將自動移動到新的位置並且透過在原檔案後加入 .bak 副檔名的方式備份原來的檔案。如果你選擇下載修改的檔案則你要解壓縮後手動上傳檔案到相關的資料夾。',
@@ -2110,10 +2199,10 @@ $lang = array_merge($lang, array(
 	'UPDATING_DATA'					=> '更新資料',
 	'UPDATING_TO_LATEST_STABLE'		=> '更新資料庫至最新的穩定版本',
 	'UPDATED_VERSION'				=> '已更新的版本',
-	'UPGRADE_INSTRUCTIONS'			=> '一項可用的新功能 <strong>%1$s</strong> 已發布。請仔細閱讀 <a href="%2$s" title="%2$s"><strong>發布公告</strong></a> 以瞭解其所提供者，以及如何更新。',
 	'UPLOAD_METHOD'					=> '上傳方式',
 
 	'UPDATE_DB_SUCCESS'				=> '資料庫更新完成。',
+	'UPDATE_FILE_SUCCESS'			=> 'File update was successful.',
 	'USER_ACTIVE'					=> '帳號已經啟用的會員',
 	'USER_INACTIVE'					=> '帳號尚未啟用的會員',
 
@@ -2173,6 +2262,33 @@ $lang = array_merge($lang, array(
 	'TOPICS_TOPIC_TITLE'			=> '歡迎使用 phpBB3',
 ));
 
+#######language/en/migrator.php#######
+
+$lang = array_merge($lang, array(
+	'CONFIG_NOT_EXIST'					=> 'The config setting "%s" unexpectedly does not exist.',
+
+	'GROUP_NOT_EXIST'					=> 'The group "%s" unexpectedly does not exist.',
+
+	'MIGRATION_APPLY_DEPENDENCIES'		=> 'Apply dependencies of %s.',
+	'MIGRATION_DATA_DONE'				=> 'Installed Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_IN_PROGRESS'		=> 'Installing Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_RUNNING'			=> 'Installing Data: %s.',
+	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
+	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
+	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
+	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
+	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
+	'MODULE_NOT_EXIST'					=> 'A required module does not exist: %s',
+
+	'PERMISSION_NOT_EXIST'				=> 'The permission setting "%s" unexpectedly does not exist.',
+
+	'ROLE_NOT_EXIST'					=> 'The permission role "%s" unexpectedly does not exist.',
+));
+
 #######language/en/mcp.php#######
 
 $lang = array_merge($lang, array(
@@ -2193,6 +2309,10 @@ $lang = array_merge($lang, array(
 	'APPROVE_POST_CONFIRM'	=> '您確定要核准這篇文章嗎？',
 	'APPROVE_POSTS'			=> '核准這些文章',
 	'APPROVE_POSTS_CONFIRM'	=> '您確定要核准這些文章嗎？',
+	'APPROVE_TOPIC'			=> 'Approve topic',
+	'APPROVE_TOPIC_CONFIRM'	=> 'Are you sure you want to approve this topic?',
+	'APPROVE_TOPICS'		=> 'Approve topics',
+	'APPROVE_TOPICS_CONFIRM'=> 'Are you sure you want to approve the selected topics?',
 
 	'CANNOT_MOVE_SAME_FORUM'=> '您不能將主題移動到原來的版面內。',
 	'CANNOT_WARN_ANONYMOUS'	=> '您不能警告尚未註冊的訪客。',
@@ -2213,16 +2333,12 @@ $lang = array_merge($lang, array(
 	'DELETE_PM_REPORTS'			=> '刪除 PM 檢舉',
 	'DELETE_PM_REPORTS_CONFIRM'	=> '您確定要刪除這些 PM 檢舉嗎？',
 	'DELETE_POSTS'				=> '刪除文章',
-	'DELETE_POSTS_CONFIRM'		=> '您確定要刪除這些文章嗎？',
-	'DELETE_POST_CONFIRM'		=> '您確定要刪除這篇文章嗎？',
 	'DELETE_REPORT'				=> '刪除檢舉',
 	'DELETE_REPORT_CONFIRM'		=> '您確定要刪除這個檢舉嗎？',
 	'DELETE_REPORTS'			=> '刪除檢舉',
 	'DELETE_REPORTS_CONFIRM'	=> '您確定要刪除這些檢舉嗎？',
 	'DELETE_SHADOW_TOPIC'		=> '在舊的版面上刪除已移動的主題',
 	'DELETE_TOPICS'				=> '刪除這些主題',
-	'DELETE_TOPICS_CONFIRM'		=> '您確定要刪除這些主題嗎？',
-	'DELETE_TOPIC_CONFIRM'		=> '您確定要刪除這個主題嗎？',
 	'DISAPPROVE'				=> '拒絕',
 	'DISAPPROVE_REASON'			=> '拒絕的理由',
 	'DISAPPROVE_POST'			=> '拒絕這篇文章',
@@ -2260,8 +2376,6 @@ $lang = array_merge($lang, array(
 	'LATEST_WARNING_TIME'		=> '最近發出的警告',
 	'LATEST_WARNINGS'			=> '最近的 5 個警告記錄',
 	'LEAVE_SHADOW'				=> '在舊的版面上留下已移動的主題',
-	'LIST_REPORT'				=> '1 個檢舉',
-	'LIST_REPORTS'				=> '%d 個檢舉',
 	'LOCK'						=> '鎖定',
 	'LOCK_POST_POST'			=> '鎖定這篇文章',
 	'LOCK_POST_POST_CONFIRM'	=> '您確定要禁止對這篇文章的編輯嗎？',
@@ -2340,6 +2454,10 @@ $lang = array_merge($lang, array(
 	'MCP_QUEUE_UNAPPROVED_POSTS_EXPLAIN'	=> '這個列表的所有文章，需要經過核准後，使用者才能看見。',
 	'MCP_QUEUE_UNAPPROVED_TOPICS'			=> '等待核准的主題',
 	'MCP_QUEUE_UNAPPROVED_TOPICS_EXPLAIN'	=> '這個列表的所有主題，需要經過核准後，使用者才能看見。',
+	'MCP_QUEUE_DELETED_POSTS'				=> 'Deleted posts',
+	'MCP_QUEUE_DELETED_POSTS_EXPLAIN'		=> 'This is a list of all soft deleted posts. You can restore or permanently delete the posts from this screen.',
+	'MCP_QUEUE_DELETED_TOPICS'				=> 'Deleted topics',
+	'MCP_QUEUE_DELETED_TOPICS_EXPLAIN'		=> 'This is a list of all soft deleted topics. You can restore or permanently delete the topics from this screen.',
 
 	'MCP_VIEW_USER'			=> '檢視特定會員的警告',
 
@@ -2378,25 +2496,27 @@ $lang = array_merge($lang, array(
 	'NO_POST'						=> '您必須選擇一個文章做為警告會員的依據。',
 	'NO_POST_REPORT'				=> '這個文章沒有被檢舉過。',
 	'NO_POST_SELECTED'				=> '您必須選擇至少一篇文章來完成這個動作。',
+	'NO_POSTS_DELETED'				=> 'There are no deleted posts.',
+	'NO_POSTS_QUEUE'				=> 'There are no posts waiting for approval.',
 	'NO_REASON_DISAPPROVAL'			=> '請提供一個拒絕的理由。',
 	'NO_REPORT'						=> '沒有找到檢舉',
 	'NO_REPORTS'					=> '沒有找到檢舉',
 	'NO_REPORT_SELECTED'			=> '您必須選擇至少一個檢舉來完成這個動作。',
 	'NO_TOPIC_ICON'					=> '無',
 	'NO_TOPIC_SELECTED'				=> '您必須選擇至少一個主題來完成這個動作。',
+	'NO_TOPICS_DELETED'				=> 'There are no deleted topics.',
 	'NO_TOPICS_QUEUE'				=> '沒有需要審核的主題。',
 
 	'ONLY_TOPIC'			=> '只顯示主題「%s」',
 	'OTHER_USERS'			=> '其他使用這個 IP 位址發表文章的會員',
 
+	'QUICKMOD_ACTION_NOT_ALLOWED' => "%s not allowed as quickmod",
+
 	'PM_REPORT_CLOSED_SUCCESS'	=> '選擇的 PM 檢舉已經成功結案。',
 	'PM_REPORT_DELETED_SUCCESS'	=> '選擇的 PM 檢舉已經成功刪除。',
 	'PM_REPORTED_SUCCESS'		=> '這 PM 已被成功檢舉。',
-	'PM_REPORT_TOTAL'			=> '總共有 <strong>1</strong> 個 PM 檢舉需要處理。',
 	'PM_REPORTS_CLOSED_SUCCESS'	=> '選擇的 PM 檢舉已經成功結案。',
 	'PM_REPORTS_DELETED_SUCCESS'=> '選擇的 PM 檢舉已經成功刪除。',
-	'PM_REPORTS_TOTAL'			=> '總共有 <strong>%d</strong> 個 PM 檢舉需要處理。',
-	'PM_REPORTS_ZERO_TOTAL'		=> '沒有 PM 檢舉需要處理。',
 	'PM_REPORT_DETAILS'			=> 'PM 檢舉細節',
 	'POSTER'					=> '發表人',
 	'POSTS_APPROVED_SUCCESS'	=> '這些文章已經成功核准。',
@@ -2404,15 +2524,17 @@ $lang = array_merge($lang, array(
 	'POSTS_DISAPPROVED_SUCCESS'	=> '這些文章已經成功拒絕。',
 	'POSTS_LOCKED_SUCCESS'		=> '這些文章已經成功鎖定。',
 	'POSTS_MERGED_SUCCESS'		=> '這些文章已經成功合併。',
-	'POSTS_UNLOCKED_SUCCESS'	=> '這些文章已經成功解除鎖定。',
 	'POSTS_PER_PAGE'			=> '每頁顯示文章數',
 	'POSTS_PER_PAGE_EXPLAIN'	=> '(設定 0 來檢視所有文章。)',
+	'POSTS_RESTORED_SUCCESS'	=> 'The selected posts have been restored successfully.',
+	'POSTS_UNLOCKED_SUCCESS'	=> '這些文章已經成功解除鎖定。',
 	'POST_APPROVED_SUCCESS'		=> '這篇文章已經成功核准。',
 	'POST_DELETED_SUCCESS'		=> '這篇文章已經成功刪除。',
 	'POST_DISAPPROVED_SUCCESS'	=> '這篇文章已經成功拒絕。',
 	'POST_LOCKED_SUCCESS'		=> '這篇文章已經成功鎖定。',
 	'POST_NOT_EXIST'			=> '您所尋找的文章不存在。',
 	'POST_REPORTED_SUCCESS'		=> '這篇文章已經成功檢舉。',
+	'POST_RESTORED_SUCCESS'		=> 'This post has been restored successfully.',
 	'POST_UNLOCKED_SUCCESS'		=> '這篇文章已經成功解除鎖定。',
 
 	'READ_USERNOTES'			=> '會員記錄',
@@ -2423,8 +2545,6 @@ $lang = array_merge($lang, array(
 	'REPORTED_ON_DATE'			=> '檢舉於',
 	'REPORTS_CLOSED_SUCCESS'	=> '選擇的檢舉已經成功結案。',
 	'REPORTS_DELETED_SUCCESS'	=> '選擇的檢舉已經成功刪除。',
-	'REPORTS_TOTAL'				=> '總共有 <strong>%d</strong> 個檢舉需要處理。',
-	'REPORTS_ZERO_TOTAL'		=> '沒有檢舉需要處理。',
 	'REPORT_CLOSED'				=> '這個檢舉已經結案。',
 	'REPORT_CLOSED_SUCCESS'		=> '選擇的檢舉已經成功結案。',
 	'REPORT_DELETED_SUCCESS'	=> '選擇的檢舉已經成功刪除。',
@@ -2436,7 +2556,15 @@ $lang = array_merge($lang, array(
 	'REPORT_POST_EXPLAIN'		=> '您可以使用這個表格來檢舉違反規則的文章。請勿濫用此項功能。',
 	'REPORT_REASON'				=> '檢舉理由',
 	'REPORT_TIME'				=> '檢舉時間',
-	'REPORT_TOTAL'				=> '總共有 <strong>1</strong> 個檢舉需要處理。',
+	'RESTORE'					=> 'Restore',
+	'RESTORE_POST'				=> 'Restore post',
+	'RESTORE_POST_CONFIRM'		=> 'Are you sure you want to restore this post?',
+	'RESTORE_POSTS'				=> 'Restore posts',
+	'RESTORE_POSTS_CONFIRM'		=> 'Are you sure you want to restore the selected posts?',
+	'RESTORE_TOPIC'				=> 'Restore topic',
+	'RESTORE_TOPIC_CONFIRM'		=> 'Are you sure you want to restore this topic?',
+	'RESTORE_TOPICS'			=> 'Restore topics',
+	'RESTORE_TOPICS_CONFIRM'	=> 'Are you sure you want to restore the selected topics?',
 	'RESYNC'					=> '重整對應資料',
 	'RETURN_MESSAGE'			=> '%s回到私人訊息%s',
 	'RETURN_NEW_FORUM'			=> '%s前往新的版面%s',
@@ -2477,6 +2605,7 @@ $lang = array_merge($lang, array(
 	'TOPICS_FORKED_SUCCESS'		=> '這些主題已經成功複製。',
 	'TOPICS_LOCKED_SUCCESS'		=> '這些主題已經成功鎖定。',
 	'TOPICS_MOVED_SUCCESS'		=> '這些主題已經成功移動。',
+	'TOPICS_RESTORED_SUCCESS'	=> 'The selected topics have been restored successfully.',
 	'TOPICS_RESYNC_SUCCESS'		=> '這些主題已經成功重整對應。',
 	'TOPICS_TYPE_CHANGED'		=> '這些主題已經成功改變主題類型。',
 	'TOPICS_UNLOCKED_SUCCESS'	=> '這些主題已經成功解除鎖定。',
@@ -2487,6 +2616,7 @@ $lang = array_merge($lang, array(
 	'TOPIC_LOCKED_SUCCESS'		=> '這個主題已經成功鎖定。',
 	'TOPIC_MOVED_SUCCESS'		=> '這個主題已經成功移動。',
 	'TOPIC_NOT_EXIST'			=> '您所尋找的主題不存在。',
+	'TOPIC_RESTORED_SUCCESS'	=> 'The selected topic has been restored successfully.',
 	'TOPIC_RESYNC_SUCCESS'		=> '這個主題已經成功重整對應。',
 	'TOPIC_SPLIT_SUCCESS'		=> '這個主題已經成功分割。',
 	'TOPIC_TIME'				=> '發表時間',
@@ -2494,9 +2624,6 @@ $lang = array_merge($lang, array(
 	'TOPIC_UNLOCKED_SUCCESS'	=> '這個主題已經成功解除鎖定。',
 	'TOTAL_WARNINGS'			=> '警告總數',
 
-	'UNAPPROVED_POSTS_TOTAL'		=> '目前共有 <strong>%d</strong> 篇文章等待審核。',
-	'UNAPPROVED_POSTS_ZERO_TOTAL'	=> '目前沒有等待審核的文章。',
-	'UNAPPROVED_POST_TOTAL'			=> '目前共有 <strong>1</strong> 篇文章等待審核。',
 	'UNLOCK'						=> '解除鎖定',
 	'UNLOCK_POST'					=> '解除文章鎖定',
 	'UNLOCK_POST_EXPLAIN'			=> '允許編輯',
@@ -2522,7 +2649,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> '以下是這個網站的系統管理員或是版面管理員給予您的警告。[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> '您已經被本討論版給予警告',
 	'WARNING_POST_DEFAULT'	=> '以下您發表的文章違反了討論版規則：%s。',
-	'WARNINGS_ZERO_TOTAL'	=> '沒有任何警告。',
+	'NO_WARNINGS'	=> 'No warnings exist.',
 
 	'YOU_SELECTED_TOPIC'	=> '您選擇了主題識別編號 %d：%s。',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -2562,10 +2689,12 @@ $lang = array_merge($lang, array(
 	'ALL'					=> '全部',
 	'BEFORE'				=> '之前',
 	'CC_EMAIL'				=> '將這封 e-mail 的副本寄給自己。',
-	'CONTACT_USER'			=> '連絡',
+	'CONTACT_ADMIN'			=> 'Contact a Board Administrator',
 
 	'DEST_LANG'				=> '語系設定',
 	'DEST_LANG_EXPLAIN'		=> '選擇一個適合收件人的語系',
+
+	'EDIT_PROFILE'			=> 'Edit Profile',
 
 	'EMAIL_BODY_EXPLAIN'	=> '這封電子郵件將以純文字的方式發送，請勿加入任何 HTML 或 BBCode 代碼。這封電子郵件的回信信箱將設定為您的電子郵件信箱。',
 	'EMAIL_DISABLED'		=> '很抱歉！與電子郵件相關的功能都已經被關閉了。',
@@ -2575,7 +2704,9 @@ $lang = array_merge($lang, array(
 	'EMPTY_MESSAGE_EMAIL'	=> '您必須填入電子郵件內容。',
 	'EMPTY_MESSAGE_IM'		=> '您必須填入信件內容。',
 	'EMPTY_NAME_EMAIL'		=> '您必須填入收件者的會員名稱。',
-	'EMPTY_SUBJECT_EMAIL'	=> '您必須填入電子郵件主旨。',
+	'EMPTY_SENDER_EMAIL'	=> 'You must provide a valid email address.',
+	'EMPTY_SENDER_NAME'		=> 'You must provide a name.',
+	'EMPTY_SUBJECT_EMAIL'	=> 'You must specify a subject for the email.',
 	'EQUAL_TO'				=> '等於',
 
 	'FIND_USERNAME_EXPLAIN'	=> '您可以使用下列表格來搜尋特定會員。您不需輸入表格內所有的欄位。搜尋時可以使用萬用字元 * 符號做出部分比對。如果想搜尋特定日期時，請使用這個格式：<kbd>西元年份-月-日</kbd>，例如 <samp>2007-10-15</samp>。當想要同時選擇一位或是多位會員時，您可以標記多選核取方塊進行複選的動作，然後點選「選擇已標記會員」回到之前的表格。',
@@ -2585,16 +2716,10 @@ $lang = array_merge($lang, array(
 	'HIDE_MEMBER_SEARCH'	=> '隱藏會員搜尋',
 
 	'IM_ADD_CONTACT'		=> '新增為聯絡人',
-	'IM_AIM'				=> '請注意！您必須安裝 AOL Instant Messenger 後才能使用這個功能。',
-	'IM_AIM_EXPRESS'		=> 'AIM Express',
 	'IM_DOWNLOAD_APP'		=> '下載程式',
-	'IM_ICQ'				=> '請注意！會員可能已選擇不接受未經請求的訊息。',
 	'IM_JABBER'				=> '請注意！會員可能已選擇不接受未經請求的訊息。',
 	'IM_JABBER_SUBJECT'		=> '這是一個自動發出的訊息，請勿回覆！訊息是由會員 %1$s 於 %2$s 發出。',
 	'IM_MESSAGE'			=> '您的訊息',
-	'IM_MSNM'				=> '請注意！您需要安裝 MSN Messenger 後才能使用這個功能。',
-	'IM_MSNM_BROWSER'		=> '您的瀏覽器不支援這個功能。',
-	'IM_MSNM_CONNECT'		=> 'MSNM 尚未登入。\n您需要登入 MSNM 後才能繼續。',
 	'IM_NAME'				=> '您的名字',
 	'IM_NO_DATA'			=> '這位會員並沒有合適的聯絡方式。',
 	'IM_NO_JABBER'			=> '很抱歉！這個討論區不支援對 Jabber 會員直接傳送訊息。您需要在您的系統安裝一個 Jabber 的客戶端程式來連絡以上的接收者。',
@@ -2606,15 +2731,15 @@ $lang = array_merge($lang, array(
 
 	'LAST_ACTIVE'				=> '最後訪問',
 	'LESS_THAN'					=> '少於',
-	'LIST_USER'					=> '1 位會員',
-	'LIST_USERS'				=> '%d 位會員',
-	'LOGIN_EXPLAIN_LEADERS'		=> '您必須註冊並且登入後才能檢視管理團隊列表。',
+	'LOGIN_EXPLAIN_TEAM'		=> 'The board requires you to be registered and logged in to view the team listing.',
 	'LOGIN_EXPLAIN_MEMBERLIST'	=> '您必須註冊並且登入後才能使用會員列表。',
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> '您必須註冊並且登入後才能搜尋會員。',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> '您必須註冊並且登入後才能檢視個人資料。',
 
 	'MORE_THAN'				=> '多於',
 
+	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
+	'NO_CONTACT_PAGE'		=> 'The board administrator contact page has been disabled.',
 	'NO_EMAIL'				=> '您沒有發送 e-mail 給這個會員的權限。',
 	'NO_VIEW_USERS'			=> '您沒有檢視會員列表或個人資料的權限。',
 
@@ -2631,12 +2756,12 @@ $lang = array_merge($lang, array(
 
 	'SELECT_MARKED'			=> '選擇已標記會員',
 	'SELECT_SORT_METHOD'	=> '選擇排列方式 ',
-	'SEND_AIM_MESSAGE'		=> '傳送 AIM 訊息',
+	'SENDER_EMAIL_ADDRESS'	=> 'Your email address',
+	'SENDER_NAME'			=> 'Your name',
 	'SEND_ICQ_MESSAGE'		=> '傳送 ICQ 訊息',
 	'SEND_IM'				=> '即時訊息',
 	'SEND_JABBER_MESSAGE'	=> '傳送 Jabber 訊息',
 	'SEND_MESSAGE'			=> '傳送訊息',
-	'SEND_MSNM_MESSAGE'		=> '傳送 MSNM 或 WLM 訊息',
 	'SEND_YIM_MESSAGE'		=> '傳送 YIM 訊息',
 	'SORT_EMAIL'			=> 'E-mail',
 	'SORT_LAST_ACTIVE'		=> '最後訪問',
@@ -2644,12 +2769,18 @@ $lang = array_merge($lang, array(
 
 	'USERNAME_BEGINS_WITH'	=> '帳號開始字母為 ',
 	'USER_ADMIN'			=> '管理會員',
-	'USER_BAN'				=> '封鎖中',
+	'USER_BAN'				=> 'Ban one or more users by username',
 	'USER_FORUM'			=> '會員統計',
 	'USER_ONLINE'			=> '線上',
 	'USER_PRESENCE'			=> '個人頭像',
+	'USERS_PER_PAGE'		=> 'Users per page',
 
 	'VIEWING_PROFILE'		=> '檢視個人資料 - %s',
+	'VIEW_FACEBOOK_PROFILE'	=> 'View Facebook Profile',
+	'VIEW_SKYPE_PROFILE'	=> 'View Skype Profile',
+	'VIEW_TWITTER_PROFILE'	=> 'View Twitter Profile',
+	'VIEW_YOUTUBE_CHANNEL'	=> 'View YouTube Channel',
+	'VIEW_GOOGLEPLUS_PROFILE' => 'View Google+ Profile',
 	'VISITED'				=> '最後訪問',
 
 	'WWW'					=> '網站',
@@ -2674,6 +2805,47 @@ $lang = array_merge($lang, array(
 	'USER_COMM_RANK'	=> 'Overall reviews:',
 	'USER_COMM_PERCENT'	=> 'Overall assessment of the user:',
 
+));
+
+#######language/en/plupload.php#######
+
+$lang = array_merge($lang, array(
+	'PLUPLOAD_ADD_FILES'		=> 'Add files',
+	'PLUPLOAD_ADD_FILES_TO_QUEUE'	=> 'Add files to the upload queue and click the start button.',
+	'PLUPLOAD_ALREADY_QUEUED'	=> '%s already present in the queue.',
+	'PLUPLOAD_CLOSE'			=> 'Close',
+	'PLUPLOAD_DRAG'				=> 'Drag files here.',
+	'PLUPLOAD_DUPLICATE_ERROR'	=> 'Duplicate file error.',
+	'PLUPLOAD_DRAG_TEXTAREA'	=> 'You may also attach files by dragging and dropping them in the message box.',
+	'PLUPLOAD_ERR_INPUT'		=> 'Failed to open input stream.',
+	'PLUPLOAD_ERR_MOVE_UPLOADED'	=> 'Failed to move uploaded file.',
+	'PLUPLOAD_ERR_OUTPUT'		=> 'Failed to open output stream.',
+	'PLUPLOAD_ERR_FILE_TOO_LARGE'	=> 'File too large:',
+	'PLUPLOAD_ERR_FILE_COUNT'	=> 'File count error.',
+	'PLUPLOAD_ERR_FILE_INVALID_EXT'	=> 'Invalid file extension:',
+	'PLUPLOAD_ERR_RUNTIME_MEMORY'	=> 'Runtime ran out of available memory.',
+	'PLUPLOAD_ERR_UPLOAD_URL'	=> 'Upload URL might be wrong or does not exist.',
+	'PLUPLOAD_EXTENSION_ERROR'	=> 'File extension error.',
+	'PLUPLOAD_FILE'				=> 'File: %s',
+	'PLUPLOAD_FILE_DETAILS'		=> 'File: %s, size: %d, max file size: %d',
+	'PLUPLOAD_FILENAME'			=> 'Filename',
+	'PLUPLOAD_FILES_QUEUED'		=> '%d files queued',
+	'PLUPLOAD_GENERIC_ERROR'	=> 'Generic error.',
+	'PLUPLOAD_HTTP_ERROR'		=> 'HTTP error.',
+	'PLUPLOAD_IMAGE_FORMAT'		=> 'Image format either wrong or not supported.',
+	'PLUPLOAD_INIT_ERROR'		=> 'Init error.',
+	'PLUPLOAD_IO_ERROR'			=> 'IO error.',
+	'PLUPLOAD_NOT_APPLICABLE'	=> 'N/A',
+	'PLUPLOAD_SECURITY_ERROR'	=> 'Security error.',
+	'PLUPLOAD_SELECT_FILES'		=> 'Select files',
+	'PLUPLOAD_SIZE'				=> 'Size',
+	'PLUPLOAD_SIZE_ERROR'		=> 'File size error.',
+	'PLUPLOAD_STATUS'			=> 'Status',
+	'PLUPLOAD_START_UPLOAD'		=> 'Start upload',
+	'PLUPLOAD_START_CURRENT_UPLOAD'	=> 'Start uploading queue',
+	'PLUPLOAD_STOP_UPLOAD'		=> 'Stop upload',
+	'PLUPLOAD_STOP_CURRENT_UPLOAD'	=> 'Stop current upload',
+	'PLUPLOAD_UPLOADED'			=> 'Uploaded %d/%d files',
 ));
 
 #######language/en/portal.php#######
@@ -2919,12 +3091,12 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s <em>禁止</em>使用',
 	'BBCODE_IS_ON'				=> '%sBBCode%s <em>允許</em>使用',
 	'BBCODE_I_HELP'				=> '斜體：[i]text[/i]',
-	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]',
 	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
 	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> '插入圖片：[img]http://image_url[/img]',
 	'BBCODE_Q_HELP'				=> '引用文字：[quote]text[/quote]',
-	'BBCODE_S_HELP'				=> '文字顏色：[color=red]text[/color]  提示：您也可以使用 color=#FF0000',
+	'BBCODE_S_HELP'				=> 'Font colour: [color=red]text[/color] or [color=#FF0000]text[/color]',
 	'BBCODE_U_HELP'				=> '底線：[u]text[/u]',
 	'BBCODE_W_HELP'				=> '插入連結：[url]http://url[/url] 或 [url=http://url]URL text[/url]',
 	'BUMP_ERROR'				=> '您不能在發表後馬上進行推文。',
@@ -2943,8 +3115,20 @@ $lang = array_merge($lang, array(
 	'DELETE_MESSAGE'			=> '刪除文章',
 	'DELETE_MESSAGE_CONFIRM'	=> '您確認要刪除這篇文章嗎？',
 	'DELETE_OWN_POSTS'			=> '很抱歉！您只能刪除自己的文章。',
+	'DELETE_PERMANENTLY'		=> 'Delete permanently',
 	'DELETE_POST_CONFIRM'		=> '您確定要刪除這篇文章嗎？',
-	'DELETE_POST_WARN'			=> '刪除的文章將不能還原',
+	'DELETE_POST_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this post?',
+	'DELETE_POST_PERMANENTLY'	=> 'Permanently delete this post so it can not be recovered',
+	'DELETE_POSTS_CONFIRM'		=> '您確定要刪除這些文章嗎？',
+	'DELETE_POSTS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these posts?',
+	'DELETE_REASON'				=> 'Reason for deleting this topic',
+	'DELETE_REASON_EXPLAIN'		=> 'The specified reason for deletion will be visible to moderators.',
+	'DELETE_POST_WARN'			=> 'Delete this post',
+	'DELETE_TOPIC_CONFIRM'		=> '您確定要刪除這個主題嗎？',
+	'DELETE_TOPIC_PERMANENTLY'	=> 'Permanently delete this topic so it can not be recovered',
+	'DELETE_TOPIC_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this topic?',
+	'DELETE_TOPICS_CONFIRM'		=> '您確定要刪除這些主題嗎？',
+	'DELETE_TOPICS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these topics?',
 	'DISABLE_BBCODE'			=> '關閉 BBCode 代碼功能',
 	'DISABLE_MAGIC_URL'			=> '關閉自動產生網址功能',
 	'DISABLE_SMILIES'			=> '關閉表情符號功能',
@@ -2987,13 +3171,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_QUOTE'		=> '您必須登入後才能在這個版面引用文章。',
 	'LOGIN_EXPLAIN_REPLY'		=> '您必須登入後才能在這個版面回覆文章。',
 
-	'MAX_FONT_SIZE_EXCEEDED'	=> '您可以使用的最大字體大小是 %1$d。',
-	'MAX_FLASH_HEIGHT_EXCEEDED'	=> '您的 Flash 檔案的高度不可以超過 %1$d 像素。',
-	'MAX_FLASH_WIDTH_EXCEEDED'	=> '您的 Flash 檔案的寬度不可以超過 %1$d 像素。',
-	'MAX_IMG_HEIGHT_EXCEEDED'	=> '您的圖檔的高度不可以超過 %1$d 像素。',
-	'MAX_IMG_WIDTH_EXCEEDED'	=> '您的圖檔的寬度不可以超過 %1$d 像素。',
-
-	'MESSAGE_BODY_EXPLAIN'		=> '請在這裡輸入文章內容，總字數不得超過 <strong>%d</strong> 個字元。',
+	'MAX_FONT_SIZE_EXCEEDED'	=> 'You may only use fonts up to size %d.',
 	'MESSAGE_DELETED'			=> '文章已經成功刪除。',
 	'MORE_SMILIES'				=> '顯示更多表情符號',
 
@@ -3016,8 +3194,6 @@ $lang = array_merge($lang, array(
 	'POLL_MAX_OPTIONS'			=> '會員複選設定',
 	'POLL_MAX_OPTIONS_EXPLAIN'	=> '每個會員在投票時可以選擇的最大選項數目。',
 	'POLL_OPTIONS'				=> '票選項目',
-	'POLL_OPTIONS_EXPLAIN'		=> '請分別在每行輸入一個選項，您最多可以設定 <strong>%d</strong> 個選項。',
-	'POLL_OPTIONS_EDIT_EXPLAIN'	=> '請分別在每行輸入一個選項。您最多可以設定 <strong>%d</strong> 個選項。如果您移除或增加選項，所有之前的投票都將被重新設定。',
 	'POLL_QUESTION'				=> '票選問題',
 	'POLL_TITLE_TOO_LONG'		=> '票選的標題不能大於 100 個字元。',
 	'POLL_TITLE_COMP_TOO_LONG'	=> '票選標題過長，請刪除一些 BBCode 或表情符號。',
@@ -3027,9 +3203,9 @@ $lang = array_merge($lang, array(
 	'POST_APPROVAL_NOTIFY'		=> '當您的文章在核准成功後將會通知您。',
 	'POST_CONFIRMATION'			=> '發表確認',
 	'POST_CONFIRM_EXPLAIN'		=> '為防止惡意灌水，本討論區要求您輸入一組確認代碼。確認代碼顯示在下面的圖檔中，如果您無法正常瀏覽這個圖檔，請聯絡 %s管理員 %s 尋求協助。',
-	'POST_DELETED'				=> '這篇文章已經刪除成功。',
-	'POST_EDITED'				=> '這篇文章已經修改成功。',
-	'POST_EDITED_MOD'			=> '這篇文章已經修改成功，但是在公開顯示前需要經過版主的核准。',
+	'POST_DELETED'				=> 'This post has been deleted.',
+	'POST_EDITED'				=> 'This post has been edited successfully.',
+	'POST_EDITED_MOD'			=> 'This post has been edited successfully, but it will need to be approved by a moderator before it is publicly viewable.',
 	'POST_GLOBAL'				=> '全域公告',
 	'POST_ICON'					=> '文章圖示',
 	'POST_NORMAL'				=> '普通主題',
@@ -3042,8 +3218,9 @@ $lang = array_merge($lang, array(
 	'POST_TOPIC_AS'				=> '發表主題為',
 	'PROGRESS_BAR'				=> '進度列',
 
-	'QUOTE_DEPTH_EXCEEDED'		=> '您最多允許使用 %1$d 層引用。',
+	'QUOTE_NO_NESTING'			=> 'You may not embed quotes within each other.',
 
+	'REMOTE_UPLOAD_TIMEOUT'		=> 'The specified file could not be uploaded because the request timed out.',
 	'SAVE'						=> '儲存',
 	'SAVE_DATE'					=> '儲存時間為',
 	'SAVE_DRAFT'				=> '儲存草稿',
@@ -3060,8 +3237,6 @@ $lang = array_merge($lang, array(
 	'TOO_FEW_POLL_OPTIONS'		=> '您至少需要輸入兩個票選的項目。',
 	'TOO_MANY_ATTACHMENTS'		=> '不能再增加更多的附加檔案了，允許的數量是 %d 個。',
 	'TOO_MANY_CHARS'			=> '您的內容包含太多個字元。',
-	'TOO_MANY_CHARS_POST'		=> '您的內容長度為 %1$d 個字元，而允許的最大字元數為 %2$d。',
-	'TOO_MANY_CHARS_SIG'		=> '您的簽名檔包含 %1$d 個字元，而允許的最大字元數為 %2$d。',
 	'TOO_MANY_POLL_OPTIONS'		=> '您輸入太多票選項目。',
 	'TOO_MANY_SMILIES'			=> '您的內容包含太多表情符號，允許的最大表情符號數量是 %d。',
 	'TOO_MANY_URLS'				=> '您的內容包含太多連結，允許的最大連結數量是 %d。',
@@ -3070,6 +3245,8 @@ $lang = array_merge($lang, array(
 
 	'UNAUTHORISED_BBCODE'		=> '您不能使用這些 BBCodes：%s。',
 	'UNGLOBALISE_EXPLAIN'		=> '要將這個主題從全域公告轉換為普通主題前，您需要選擇一個版面放置它。',
+	'UNSUPPORTED_CHARACTERS_MESSAGE'	=> 'Your message contains the following unsupported characters:<br />%s',
+	'UNSUPPORTED_CHARACTERS_SUBJECT'	=> 'Your subject contains the following unsupported characters:<br />%s',
 	'UPDATE_COMMENT'			=> '更新評論',
 	'URL_INVALID'				=> '您指定的連結是無效的。',
 	'URL_NOT_FOUND'				=> '指定的檔案無法找到。',
@@ -3084,8 +3261,8 @@ $lang = array_merge($lang, array(
 	'VIEW_MESSAGE'				=> '%s檢視您送出的內容%s',
 	'VIEW_PRIVATE_MESSAGE'		=> '%s檢視您送出的私人訊息%s',
 
-	'WRONG_FILESIZE'			=> '檔案太大了，最大允許的檔案大小為 %1d %2s。',
-	'WRONG_SIZE'				=> '圖檔最小限制為寬 %1$d 像素，高 %2$d 像素。最大限制為寬 %3$d 像素，高 %4$d 像素。您送出的圖檔為：寬 %5$d 像素，高 %6$d 像素。',
+	'WRONG_FILESIZE'			=> 'The file is too big, maximum allowed size is %1$d %2$s.',
+	'WRONG_SIZE'				=> 'The image must be at least %1$s wide, %2$s high and at most %3$s wide and %4$s high. The submitted image is %5$s wide and %6$s high.',
 
 	'FONT_TYPE'			=> 'Typeface',
 	'FONT_COLOR'			=> '顯示文字色盤',
@@ -3105,10 +3282,6 @@ $lang = array_merge($lang, array(
 
 	'DISPLAY_RESULTS'		=> '顯示結果',
 
-	'FOUND_SEARCH_MATCH'		=> '有 %d 筆資料符合您搜尋的條件',
-	'FOUND_SEARCH_MATCHES'		=> '有 %d 筆資料符合您搜尋的條件',
-	'FOUND_MORE_SEARCH_MATCHES'	=> '有超過 %d 筆資料符合您搜尋的條件',
-
 	'GLOBAL'				=> '全域公告',
 
 	'IGNORED_TERMS'			=> '已忽略的',
@@ -3120,24 +3293,23 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_UNREADSEARCH'=> '您必須註冊並且登入後才能檢視您尚未閱讀的文章。',
 	'LOGIN_EXPLAIN_NEWPOSTS'	=> '您必須註冊並且登入後才能檢視自從您上次訪問後之新的文章。',
 
-	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> '您所指定要搜尋的字數太多。請不要輸入超過 %1$d 字。',
-
-	'NO_KEYWORDS'			=> '您至少需要輸入一個關鍵字，每一個關鍵字最少要有 %d 個字元，最多不能超過 %d 個字元 (不含 * 萬用字元)。',
+	'NO_KEYWORDS'			=> 'You must specify at least one word to search for. Each word must consist of at least %s and must not contain more than %s excluding wildcards.',
 	'NO_RECENT_SEARCHES'	=> '最近沒有人使用過搜尋系統。',
 	'NO_SEARCH'				=> '很抱歉！您不被允許使用搜尋系統。',
 	'NO_SEARCH_RESULTS'		=> '沒有搜尋到符合的結果。',
-	'NO_SEARCH_TIME'		=> '很抱歉! 您現在無法使用搜尋系統，請稍後再試。',
 	'NO_SEARCH_UNREADS'		=> '很抱歉！這個論壇禁止搜尋未閱讀文章。',
 	'WORD_IN_NO_POST'		=> '沒有文章被搜尋到，因為這個關鍵字 <strong>%s</strong> 不被包含在任何文章中。',
 	'WORDS_IN_NO_POST'		=> '沒有文章被搜尋到，因為這些關鍵字 <strong>%s</strong> 不被包含在任何文章中。',
 
 	'POST_CHARACTERS'		=> '個字元',
+	'PHRASE_SEARCH_DISABLED'	=> 'Searching by exact phrase is not supported on this board.',
 
 	'RECENT_SEARCHES'		=> '最近的搜尋',
 	'RESULT_DAYS'			=> '時間範圍',
 	'RESULT_SORT'			=> '排列順序',
 	'RETURN_FIRST'			=> '返回第一頁',
 	'RETURN_TO_SEARCH_ADV'	=> '返回進階搜尋',
+	'GO_TO_SEARCH_ADV'	=> 'Go to advanced search',
 
 	'SEARCHED_FOR'				=> '使用過的關鍵字',
 	'SEARCHED_TOPIC'			=> '搜尋過的主題',
@@ -3164,10 +3336,11 @@ $lang = array_merge($lang, array(
 	'SORT_FORUM'				=> '版面',
 	'SORT_POST_SUBJECT'			=> '文章主題',
 	'SORT_TIME'					=> '發表時間',
+	'SPHINX_SEARCH_FAILED'		=> 'Search failed: %s',
+	'SPHINX_SEARCH_FAILED_LOG'	=> 'Sorry, search could not be performed. More information about this failure has been logged in the error log.',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
 	'SELECT_ALL_TAGS'		=> 'No selection',
-	'TOO_FEW_AUTHOR_CHARS'	=> '您必須最少輸入 %d 個字元的發表人。',
 ));
 
 #######language/en/ucp.php#######
@@ -3223,6 +3396,7 @@ $lang = array_merge($lang, array(
 	'ATTACHMENTS_EXPLAIN'			=> '以下是您上傳的附加檔案列表。',
 	'ATTACHMENTS_DELETED'			=> '附加檔案已經成功刪除。',
 	'ATTACHMENT_DELETED'			=> '附加檔案已經成功刪除。',
+	'AUTOLOGIN_SESSION_KEYS_DELETED'=> 'The selected "Remember Me" login keys were successfully deleted.',
 	'AVATAR_CATEGORY'				=> '類別',
 	'AVATAR_DRIVER_GRAVATAR_TITLE'	=> 'Gravatar',
 	'AVATAR_DRIVER_GRAVATAR_EXPLAIN'=> 'Gravatar is a service that allows you to maintain the same avatar across multiple websites. Visit <a href="http://www.gravatar.com/">Gravatar</a> for more information.',
@@ -3232,12 +3406,14 @@ $lang = array_merge($lang, array(
 	'AVATAR_DRIVER_REMOTE_EXPLAIN'	=> 'Link to avatar images from another website.',
 	'AVATAR_DRIVER_UPLOAD_TITLE'	=> 'Upload avatar',
 	'AVATAR_DRIVER_UPLOAD_EXPLAIN'	=> 'Upload your own custom avatar.',
-	'AVATAR_EXPLAIN'				=> '最大尺寸限制--寬度：%1$d 像素，高度：%2$d 像素；檔案大小：%3$.2f KiB。',
+	'AVATAR_EXPLAIN'				=> 'Maximum dimensions; width: %1$s, height: %2$s, file size: %3$.2f KiB.',
 	'AVATAR_FEATURES_DISABLED'		=> '個人頭像功能停止使用中。',
 	'AVATAR_GALLERY'				=> '系統相簿',
 	'AVATAR_GENERAL_UPLOAD_ERROR'	=> '無法上傳個人頭像到 %s。',
 	'AVATAR_NOT_ALLOWED'			=> '您的頭像無法顯示，因為它不被允許。',
 	'AVATAR_PAGE'					=> '頁',
+	'AVATAR_SELECT'					=> 'Select your avatar',
+	'AVATAR_TYPE'					=> 'Avatar type',
 	'AVATAR_TYPE_NOT_ALLOWED'		=> '您的頭像無法顯示，因為它的類型不被允許。',
 
 	'BACK_TO_DRAFTS'			=> '回到已儲存的草稿',
@@ -3246,7 +3422,6 @@ $lang = array_merge($lang, array(
 	'BIRTHDAY_EXPLAIN'			=> '當生日到的時候，系統會依照您填寫的出生年月日顯示正確年齡。',
 	'BOARD_DATE_FORMAT'			=> '我的日期格式',
 	'BOARD_DATE_FORMAT_EXPLAIN'	=> '格式語法與 PHP <a href="http://www.php.net/date">date()</a> 函數相同。',
-	'BOARD_DST'					=> '日光時間/<abbr title="日光時間">DST</abbr> 使用中',
 	'BOARD_LANGUAGE'			=> '我的語系設定',
 	'BOARD_STYLE'				=> '我的版面風格',
 	'BOARD_TIMEZONE'			=> '我的時區設定',
@@ -3265,8 +3440,6 @@ $lang = array_merge($lang, array(
 	'CLICK_RETURN_FOLDER'		=> '%1$s回到您的「%3$s」資料夾%2$s',
 	'CONFIRMATION'				=> '註冊確認',
 	'CONFIRM_CHANGES'			=> '確認修改',
-	'CONFIRM_EMAIL'				=> '再次確認 e-mail 位址',
-	'CONFIRM_EMAIL_EXPLAIN'		=> '您僅需要在更換 e-mail 位址時輸入這個欄位。',
 	'CONFIRM_EXPLAIN'			=> '為了避免機器人式的大量註冊，討論區需要您輸入一組確認代碼。您可以在下方的圖片中找到這組確認代碼。如果你有視覺的障礙或無法觀看代碼，請聯絡 %s管理員%s 尋求協助。',
 	'VC_REFRESH'				=> '重新讀取確認代碼',
 	'VC_REFRESH_EXPLAIN'		=> '如果您不能正確判讀確認代碼，那麼您需要點選此按鈕以獲得一個新的確認代碼。',
@@ -3275,7 +3448,7 @@ $lang = array_merge($lang, array(
 	'CONFIRM_PASSWORD_EXPLAIN'	=> '您僅需要在更換密碼時輸入這個欄位。',
 	'COPPA_BIRTHDAY'			=> '在繼續註冊步驟前，請先告訴我們您的出生日期。',
 	'COPPA_COMPLIANCE'			=> 'COPPA (美國兒童網路隱私保護法) 規範',
-	'COPPA_EXPLAIN'				=> '請注意，點選送出鍵後將會建立您的帳號，但是您的帳號需要父母或是監護人的同意才能啟用。您將會收到一封 e-mail 包含需要填寫的表格以及寄送方法。',
+	'COPPA_EXPLAIN'				=> 'Please note that clicking submit will create your account. However it cannot be activated until a parent or guardian approves your registration. You will be e-mailed a copy of the necessary form with details of where to send it.',
 	'CREATE_FOLDER'				=> '增加資料夾...',
 	'CURRENT_IMAGE'				=> '目前的圖片',
 	'CURRENT_PASSWORD'			=> '目前的密碼',
@@ -3330,27 +3503,34 @@ $lang = array_merge($lang, array(
 	'EXPORT_FOLDER'				=> '匯出方式',
 
 	'FIELD_REQUIRED'					=> '欄位「%s」必須確實填寫。',
-	'FIELD_TOO_SHORT'					=> '欄位「%1$s」內容太短，需要至少 %2$d 個字元。',
-	'FIELD_TOO_LONG'					=> '欄位「%1$s」內容太長，最多允許 %2$d 個字元。',
-	'FIELD_TOO_SMALL'					=> '「%1$s」的數值太小，必須大於 %2$d。',
-	'FIELD_TOO_LARGE'					=> '「%1$s」的數值太大，必須小於 %2$d。',
+
+	'FIELD_TOO_SMALL'					=> 'The value of “%2$s” is too small, a minimum value of %1$d is required.',
+	'FIELD_TOO_LARGE'					=> 'The value of “%2$s” is too large, a maximum value of %1$d is allowed.',
+	'FIELD_INVALID_CHARS_INVALID'		=> 'The field “%s” has invalid characters.',
 	'FIELD_INVALID_CHARS_NUMBERS_ONLY'	=> '欄位「%s」包含無效字元，只允許填入數字。',
+	'FIELD_INVALID_CHARS_ALPHA_DOTS'	=> 'The field “%s” has invalid characters, only alphanumeric or . characters are allowed.',
 	'FIELD_INVALID_CHARS_ALPHA_ONLY'	=> '欄位「%s」包含無效字元，只允許填入英文字母與數字。',
-	'FIELD_INVALID_CHARS_SPACERS_ONLY'	=> '欄位「%s」包含無效字元，只允許填入英文字母與數字、空格和 -+_[] 這些特殊字元。',
+	'FIELD_INVALID_CHARS_ALPHA_PUNCTUATION'	=> 'The field “%s” has invalid characters, only alphanumeric or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_ALPHA_SPACERS'	=> 'The field “%s” has invalid characters, only alphanumeric, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_ALPHA_UNDERSCORE'	=> 'The field “%s” has invalid characters, only alphanumeric or _ characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_DOTS'	=> 'The field “%s” has invalid characters, only letter, number or . characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_ONLY'	=> 'The field “%s” has invalid characters, only letter and number characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_PUNCTUATION'	=> 'The field “%s” has invalid characters, only letter, number or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_SPACERS'		=> 'The field “%s” has invalid characters, only letter, number, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_UNDERSCORE'		=> 'The field “%s” has invalid characters, only letter, number or _ characters are allowed.',
 	'FIELD_INVALID_DATE'				=> '欄位「%s」包含無效日期。',
+	'FIELD_INVALID_URL'					=> 'The field “%s” has an invalid url.',
 	'FIELD_INVALID_VALUE'				=> '欄位「%s」有一個無效的值。',
 
 	'FOE_MESSAGE'				=> '來自黑名單會員的訊息',
 	'FOES_EXPLAIN'				=> '黑名單的會員是您想要忽略會員。這些會員所發表的文章將不會被您完全的看到。您仍然可以接收來自他們的私人訊息。請注意，您不能把管理員和版面管理員加入黑名單中。',
 	'FOES_UPDATED'				=> '您的黑名單已經成功更新。',
 	'FOLDER_ADDED'				=> '資料夾已經加入。',
-	'FOLDER_MESSAGE_STATUS'		=> '%1$d / %2$d 個訊息已儲存',
 	'FOLDER_NAME_EMPTY'			=> '您必須為這個資料夾輸入一個名稱。',
 	'FOLDER_NAME_EXIST'			=> '資料夾 <strong>%s</strong> 已經存在。',
 	'FOLDER_OPTIONS'			=> '資料夾選項',
 	'FOLDER_RENAMED'			=> '資料夾已經成功重新命名。',
 	'FOLDER_REMOVED'			=> '資料夾已經成功移除。',
-	'FOLDER_STATUS_MSG'			=> '資料夾 %1$d%% 已滿 (%2$d / %3$d 個訊息已儲存)',
 	'FORWARD_PM'				=> '轉寄私人訊息',
 	'FORCE_PASSWORD_EXPLAIN'	=> '在您繼續瀏覽討論區前，您必須更新您的密碼。',
 	'FRIEND_MESSAGE'			=> '來自好友的訊息',
@@ -3419,16 +3599,35 @@ $lang = array_merge($lang, array(
 	'MOVE_DELETED_MESSAGES_TO'		=> '把已刪除的資料夾內的私人訊息移動到',
 	'MOVE_DOWN'						=> '往下移',
 	'MOVE_MARKED_TO_FOLDER'			=> '移動選擇的私人訊息到 %s',
-	'MOVE_PM_ERROR'					=> '當移動私人訊息到新的資料夾時發生錯誤，只有 %1d / %2d 個私人訊息成功移動。',
 	'MOVE_TO_FOLDER'				=> '移動到資料夾',
 	'MOVE_UP'						=> '往上移',
 
-	'NEW_EMAIL_CONFIRM_EMPTY'		=> '您沒有輸入確認 e-mail 位址。',
-	'NEW_EMAIL_ERROR'				=> '您所提供的 e-mail 位址與資料庫不符。',
 	'NEW_FOLDER_NAME'				=> '新的資料夾名稱',
 	'NEW_PASSWORD'					=> '新的密碼',
 	'NEW_PASSWORD_CONFIRM_EMPTY'	=> '您沒有輸入確認密碼。',
 	'NEW_PASSWORD_ERROR'			=> '您所提供的密碼與資料庫不符。',
+
+	'NOTIFICATIONS_MARK_ALL_READ'						=> 'Mark all notifications read',
+	'NOTIFICATIONS_MARK_ALL_READ_CONFIRM'				=> 'Are you sure you want to mark all notifications read?',
+	'NOTIFICATIONS_MARK_ALL_READ_SUCCESS'				=> 'All notifications have been marked read.',
+	'NOTIFICATION_GROUP_MISCELLANEOUS'					=> 'Miscellaneous Notifications',
+	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
+	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
+	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'E-mail',
+	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
+	'NOTIFICATION_TYPE'									=> 'Notification type',
+	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
+	'NOTIFICATION_TYPE_GROUP_REQUEST'					=> 'Someone requests to join a group you lead',
+	'NOTIFICATION_TYPE_IN_MODERATION_QUEUE'				=> 'A post or topic needs approval',
+	'NOTIFICATION_TYPE_MODERATION_QUEUE'				=> 'Your topics/posts are approved or disapproved by a moderator',
+	'NOTIFICATION_TYPE_PM'								=> 'Someone sends you a private message',
+	'NOTIFICATION_TYPE_POST'							=> 'Someone replies to a topic to which you are subscribed',
+	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
+	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
+	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+
 	'NOTIFY_METHOD'					=> '通知方式',
 	'NOTIFY_METHOD_BOTH'			=> '全部',
 	'NOTIFY_METHOD_EMAIL'			=> '只用 e-mail 通知',
@@ -3446,10 +3645,9 @@ $lang = array_merge($lang, array(
 	'NOT_ADDED_FOES_SELF'			=> '您不能把自己加入黑名單中。',
 	'NOT_AGREE'						=> '我不同意這些條款',
 	'NOT_ENOUGH_SPACE_FOLDER'		=> '資料夾 "%s" 容量已滿。動作無法完成',
-	'NOT_MOVED_MESSAGE'				=> '您有一個新的私人訊息被系統保留，因為您的收件夾容量已滿',
-	'NOT_MOVED_MESSAGES'			=> '您有 %d 個新的私人訊息被系統保留，因為您的收件夾容量已滿',
 	'NO_ACTION_MODE'				=> '沒有指定的動作',
 	'NO_AUTHOR'						=> '這個私人訊息沒有指定寄件人。',
+	'NO_AVATAR'						=> 'No avatar selected',
 	'NO_AVATAR_CATEGORY'			=> '無',
 
 	'NO_AUTH_DELETE_MESSAGE'		=> '您沒有刪除私人訊息的權限。',
@@ -3457,6 +3655,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_FORWARD_MESSAGE'		=> '您沒有轉寄私人訊息的權限。',
 	'NO_AUTH_GROUP_MESSAGE'			=> '您沒有傳送私人訊息給會員群組的權限。',
 	'NO_AUTH_PASSWORD_REMINDER'		=> '您沒有申請新的密碼之權限。',
+	'NO_AUTH_PROFILEINFO'			=> 'You are not authorised to change your profile information.',
 	'NO_AUTH_READ_HOLD_MESSAGE'		=> '您沒有閱讀被保留的私人訊息之權限。',
 	'NO_AUTH_READ_MESSAGE'			=> '您沒有閱讀私人訊息的權限。',
 	'NO_AUTH_READ_REMOVED_MESSAGE'	=> '您不能閱讀這個私人訊息，因為已被寄件人刪除。',
@@ -3487,10 +3686,10 @@ $lang = array_merge($lang, array(
 	'NO_WATCHED_SELECTED'		=> '您沒有選擇任何已經訂閱的主題或版面。',
 	'NO_WATCHED_TOPICS'			=> '您沒有訂閱任何主題。',
 
-	'PASS_TYPE_ALPHA_EXPLAIN'	=> '會員密碼長度必須介於 %1$d 和 %2$d 個字元之間，並且必須混用英文大小寫字母以及數字。',
-	'PASS_TYPE_ANY_EXPLAIN'		=> '會員密碼長度必須介於 %1$d 和 %2$d 個字元之間。',
-	'PASS_TYPE_CASE_EXPLAIN'	=> '會員密碼長度必須介於 %1$d 和 %2$d 個字元之間，並且必須混用英文大小寫字母。',
-	'PASS_TYPE_SYMBOL_EXPLAIN'	=> '會員密碼長度必須介於 %1$d 和 %2$d 個字元之間，並且必須混用英文大小寫字母、數字以及特殊符號。',
+	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case and must contain numbers.',
+	'PASS_TYPE_ANY_EXPLAIN'		=> 'Must be between %1$s and %2$s.',
+	'PASS_TYPE_CASE_EXPLAIN'	=> 'Password must be between %1$s and %2$s long and must contain letters in mixed case.',
+	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case, must contain numbers and must contain symbols.',
 	'PASSWORD'					=> '密碼',
 	'PASSWORD_ACTIVATED'		=> '您的新密碼已經啟用。',
 	'PASSWORD_UPDATED'			=> '一個新的密碼已經傳送到您註冊的 e-mail 位址。',
@@ -3501,13 +3700,16 @@ $lang = array_merge($lang, array(
 	'PM_FROM_REMOVED_AUTHOR'	=> '這個私人訊息的寄件人已經不再是本站的註冊會員了。',
 	'PM_ICON'					=> '私人訊息圖示',
 	'PM_INBOX'					=> '收件夾',
+	'PM_MARK_ALL_READ'			=> 'Mark all messages read',
+	'PM_MARK_ALL_READ_SUCCESS'	=> 'All private messages in this folder have been marked read',
 	'PM_NO_USERS'				=> '請求加入的會員不存在。',
 	'PM_OUTBOX'					=> '寄件夾',
 	'PM_SENTBOX'				=> '寄件備份',
 	'PM_SUBJECT'				=> '訊息主旨',
 	'PM_TO'						=> '傳送給',
+	'PM_TOOLS'					=> 'Message tools',
+	'PM_USERS_REMOVED_NO_PERMISSION'	=> 'Some users couldn’t be added as they do not have permission to read private messages.',
 	'PM_USERS_REMOVED_NO_PM'	=> '部分會員停用私人訊息接收的功能因此無法加入。',
-	'POPUP_ON_PM'				=> '當有新的私人訊息時跳出小視窗通知',
 	'POST_EDIT_PM'				=> '編輯私人訊息',
 	'POST_FORWARD_PM'			=> '轉寄私人訊息',
 	'POST_NEW_PM'				=> '傳送私人訊息',
@@ -3519,6 +3721,8 @@ $lang = array_merge($lang, array(
 	'PREFERENCES_UPDATED'		=> '您的偏好設定已經更新。',
 	'PROFILE_INFO_NOTICE'		=> '請注意，這些資訊將對外公開。在提供個人資料時請謹慎小心。標示有 * 的項目須確實填寫。',
 	'PROFILE_UPDATED'			=> '您的個人資料已更新。',
+	'PROFILE_AUTOLOGIN_KEYS'	=> 'The "Remember Me" login keys automatically log you in when you visit the board. If you logout, the remember me login key is deleted only on the computer you are using to logout. Here you can see remember login keys created on other computers you used to access this site.',
+	'PROFILE_NO_AUTOLOGIN_KEYS'	=> 'There are no saved "Remember Me" login keys.',
 
 	'RECIPIENT'							=> '收件者',
 	'RECIPIENTS'						=> '收件人',
@@ -3543,8 +3747,6 @@ $lang = array_merge($lang, array(
 	'RULE_DELETED'						=> '訊息規則已經成功刪除。',
 	'RULE_LIMIT_REACHED'				=> '您無法增加更多的私訊規則。您已經達到了最大數量的規則。',
 	'RULE_NOT_DEFINED'					=> '沒有正確指定訊息規則。',
-	'RULE_REMOVED_MESSAGE'				=> '一個私人訊息已被過濾移除。',
-	'RULE_REMOVED_MESSAGES'				=> '%d 個私人訊息已被過濾移除。',
 
 	'SAME_PASSWORD_ERROR'		=> '您輸入的新密碼和現在使用的密碼相同。',
 	'SEARCH_YOUR_POSTS'			=> '顯示您發表的文章',
@@ -3556,6 +3758,8 @@ $lang = array_merge($lang, array(
 	'SIGNATURE_TOO_LONG'		=> '您的簽名檔太長了。',
 	'SELECT_CURRENT_TIME'		=> 'Select current time',
 	'SELECT_TIMEZONE'			=> 'Select timezone',
+	'SELECT_CURRENT_TIME'		=> 'Select current time',
+	'SELECT_TIMEZONE'			=> 'Select timezone',
 	'SORT'						=> '排序',
 	'SORT_COMMENT'				=> '檔案註釋',
 	'SORT_DOWNLOADS'			=> '下載次數',
@@ -3565,15 +3769,28 @@ $lang = array_merge($lang, array(
 	'SORT_SIZE'					=> '檔案大小',
 
 	'TIMEZONE'					=> '時區',
-	'TO'						=> '收件人',
+	'TIMEZONE_DATE_SUGGESTION'	=> 'Suggestion: %s',
+	'TIMEZONE_INVALID'			=> 'The timezone you selected is invalid.',
+	'TO'						=> 'Recipient',
+	'TO_MASS'					=> 'Recipients',
+	'TO_ADD'					=> 'Add recipient',
+	'TO_ADD_MASS'				=> 'Add recipients',
+	'TO_ADD_GROUPS'				=> 'Add groups',
 	'TOO_MANY_RECIPIENTS'		=> '您嘗試要發送的私人訊息，設定了太多的收件人。',
 	'TOO_MANY_REGISTERS'		=> '你嘗試註冊的次數太多，請稍後再試。',
 
 	'UCP'						=> '會員控制台',
 	'UCP_ACTIVATE'				=> '啟用帳號',
 	'UCP_ADMIN_ACTIVATE'		=> '在帳號啟用前您必須輸入一個有效的 e-mail 位址，管理員將審核您的帳號，如果審核通過，您將會收到寄往您提供的 e-mail 位址的啟用通知。',
-	'UCP_AIM'					=> 'AOL 即時訊息',
 	'UCP_ATTACHMENTS'			=> '附加檔案',
+	'UCP_AUTH_LINK'				=> 'External accounts',
+	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
+	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
+	'UCP_AUTH_LINK_LINK'		=> '連結',
+	'UCP_AUTH_LINK_MANAGE'		=> 'Manage external account associations',
+	'UCP_AUTH_LINK_NOT_SUPPORTED'	=> 'Linking board accounts to external services is not supported by this board’s current authentication method.',
+	'UCP_AUTH_LINK_TITLE'		=> 'Manage your external account associations',
+	'UCP_AUTH_LINK_UNLINK'		=> 'Unlink',
 	'UCP_AUTH_LINK'				=> 'External accounts',
 	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
 	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
@@ -3585,8 +3802,8 @@ $lang = array_merge($lang, array(
 	'UCP_COPPA_BEFORE'			=> '在 %s 之前',
 	'UCP_COPPA_ON_AFTER'		=> '在 %s 之後',
 	'UCP_EMAIL_ACTIVATE'		=> '在帳號啟用前您必須輸入一個有效的 e-mail 位址。您將會收到寄往您提供的 e-mail 位址的啟用通知和啟用連結。',
-	'UCP_ICQ'					=> 'ICQ 號碼',
 	'UCP_JABBER'				=> 'Jabber 位址',
+	'UCP_LOGIN_LINK'			=> 'Set up an external account association',
 
 	'UCP_MAIN'					=> '概要',
 	'UCP_MAIN_ATTACHMENTS'		=> '管理附加檔案',
@@ -3595,7 +3812,6 @@ $lang = array_merge($lang, array(
 	'UCP_MAIN_FRONT'			=> '首頁',
 	'UCP_MAIN_SUBSCRIBED'		=> '管理訂閱',
 
-	'UCP_MSNM'					=> 'WL/MSN Messenger',
 	'UCP_NO_ATTACHMENTS'		=> '您沒有發表附加檔案。',
 
 	'UCP_NOTIFICATION_LIST'				=> 'Manage notifications',
@@ -3612,8 +3828,6 @@ $lang = array_merge($lang, array(
 	'UCP_PM_COMPOSE'			=> '傳送新的私人訊息',
 	'UCP_PM_DRAFTS'				=> '管理私人訊息草稿',
 	'UCP_PM_OPTIONS'			=> '規則、資料夾 &amp; 設定',
-	'UCP_PM_POPUP'				=> '私人訊息',
-	'UCP_PM_POPUP_TITLE'		=> '您有新的私人訊息',
 	'UCP_PM_UNREAD'				=> '未讀的私人訊息',
 	'UCP_PM_VIEW'				=> '檢視私人訊息',
 
@@ -3628,11 +3842,11 @@ $lang = array_merge($lang, array(
 	'UCP_USERGROUPS_MEMBER'		=> '編輯群組身份',
 	'UCP_USERGROUPS_MANAGE'		=> '管理會員群組',
 
+	'UCP_PASSWORD_RESET_DISABLED'	=> 'The password reset functionality has been disabled. If you need help accessing your account, please contact the %sBoard Administrator%s',
 	'UCP_REGISTER_DISABLE'			=> '暫時停止註冊新會員，請稍後再試。',
 	'UCP_REMIND'					=> '發送會員密碼',
 	'UCP_RESEND'					=> '發送帳號啟用 e-mail',
 	'UCP_WELCOME'					=> '歡迎使用會員控制台。從這裡，您可以監視、檢視和更新您的個人資料、偏好設定、以及訂閱版面和主題。您也可以在管理員允許的情況下，發送私人訊息給其他會員。最後，請您在使用本討論區前，先詳讀所有公告。',
-	'UCP_YIM'						=> 'Yahoo！奇摩即時通',
 	'UCP_ZEBRA'						=> '好友 &amp; 黑名單',
 	'UCP_ZEBRA_FOES'				=> '管理黑名單',
 	'UCP_ZEBRA_FRIENDS'				=> '管理好友',
@@ -3642,12 +3856,12 @@ $lang = array_merge($lang, array(
 	'UPLOAD_AVATAR_FILE'			=> '從您的電腦上傳頭像圖檔',
 	'UPLOAD_AVATAR_URL'				=> '從連結上傳頭像圖檔',
 	'UPLOAD_AVATAR_URL_EXPLAIN'		=> '輸入圖片連結，系統將會把圖檔複製至系統裡。',
-	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> '會員名稱長度必須介於 %1$d 和 %2$d 個字元之間，並且只能使用英文字母與數字。',
-	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> '會員名稱長度必須介於 %1$d 和 %2$d 個字元之間，並且只能使用英文字母與數字、空格和 -+_[] 這些特殊字元。',
-	'USERNAME_ASCII_EXPLAIN'		=> '會員名稱長度必須介於 %1$d 和 %2$d 個字元之間，並且只能使用 ASCII (非萬國碼) 字元，不能使用特殊字元。',
-	'USERNAME_LETTER_NUM_EXPLAIN'	=> '會員名稱長度必須介於 %1$d 和 %2$d 個字元之間，並且只能使用任何的字母和數字。',
-	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> '會員名稱長度必須介於 %1$d 和 %2$d 個字元之間，並且只能使用任何的字母和數字、空格和 -+_[] 這些特殊字元。',
-	'USERNAME_CHARS_ANY_EXPLAIN'	=> '會員名稱長度必須介於 %1$d 和 %2$d 個字元之間。',
+	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only alphanumeric characters.',
+	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use alphanumeric, space or -+_[] characters.',
+	'USERNAME_ASCII_EXPLAIN'		=> 'Username must be between %1$s and %2$s long and use only ASCII characters, so no special symbols.',
+	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only letter or number characters.',
+	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use letter, number, space or -+_[] characters.',
+	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Length must be between %1$s and %2$s.',
 	'USERNAME_TAKEN_USERNAME'		=> '您所選擇的會員名稱已經被註冊使用，請使用其他名稱。',
 	'USERNAME_DISALLOWED_USERNAME'	=> '您所選擇的會員名稱已經被禁止使用或是包含禁止使用的字串。請使用其他名稱。',
 	'USER_NOT_FOUND_OR_INACTIVE'	=> '無法找到您所選擇的會員或者該會員帳號尚未啟動。',
@@ -3660,10 +3874,9 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_PM'				=> '下一個私人訊息',
 	'VIEW_PM'					=> '檢視私訊',
 	'VIEW_PM_INFO'				=> '私人訊息細節',
-	'VIEW_PM_MESSAGE'			=> '一個訊息',
-	'VIEW_PM_MESSAGES'			=> '%d 個訊息',
 	'VIEW_PREVIOUS_HISTORY'		=> '歷史紀錄中的上一個私人訊息',
 	'VIEW_PREVIOUS_PM'			=> '上一個私人訊息',
+	'VIEW_PROFILE'				=> 'View profile',
 	'VIEW_SIGS'					=> '顯示文章中的個人簽名',
 	'VIEW_SMILIES'				=> '顯示文章中的表情符號',
 	'VIEW_TOPICS_DAYS'			=> '顯示多少天前的主題',
@@ -3771,8 +3984,6 @@ $lang = array_merge($lang, array(
 	'UNREAD_POSTS_LOCKED'	=> '有未閱讀文章【鎖定的】',
 
 	'VIEW_FORUM'			=> '檢視版面',
-	'VIEW_FORUM_TOPIC'		=> '1 個主題',
-	'VIEW_FORUM_TOPICS'		=> '%d 個主題',
 
 	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
 	'REMOVE_FILTER'		=> 'Remove filter',
@@ -3781,6 +3992,7 @@ $lang = array_merge($lang, array(
 #######language/en/viewtopic.php#######
 
 $lang = array_merge($lang, array(
+	'APPROVE'								=> '核准',
 	'ATTACHMENT'						=> '附加檔案',
 	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> '附加檔案功能已經被關閉。',
 
@@ -3793,14 +4005,13 @@ $lang = array_merge($lang, array(
 	'BUMP_TOPIC'			=> '推文',
 
 	'CODE'					=> '代碼',
-	'COLLAPSE_QR'			=> '隱藏快速回覆',
-
+	
 	'DELETE_TOPIC'			=> '刪除主題',
+	'DELETED_INFORMATION'	=> 'Deleted by %1$s on %2$s',
+	'DISAPPROVE'					=> '拒絕',
 	'DOWNLOAD_NOTICE'		=> '您沒有權限檢視這篇文章所附加的檔案。',
 
-	'EDITED_TIMES_TOTAL'	=> '最後由 %1$s 於 %2$s 編輯，總共編輯了 %3$d 次。',
-	'EDITED_TIME_TOTAL'		=> '最後由 %1$s 於 %2$s 編輯，總共編輯了 %3$d 次。',
-	'EMAIL_TOPIC'			=> '寄給朋友',
+	'EMAIL_TOPIC'			=> 'E-mail topic',
 	'ERROR_NO_ATTACHMENT'	=> '所選擇的附加檔案已經不存在。',
 
 	'FILE_NOT_FOUND_404'	=> '檔案 <strong>%s</strong> 並不存在。',
@@ -3815,8 +4026,6 @@ $lang = array_merge($lang, array(
 	'MAKE_GLOBAL'				=> '變更為「全域公告」',
 	'MAKE_NORMAL'				=> '變更為「普通主題」',
 	'MAKE_STICKY'				=> '變更為「置頂」',
-	'MAX_OPTIONS_SELECT'		=> '您最多可以選擇 <strong>%d</strong> 個選項',
-	'MAX_OPTION_SELECT'			=> '您只能選擇 <strong>1</strong> 個選項',
 	'MISSING_INLINE_ATTACHMENT'	=> '這個附加檔案 <strong>%s</strong> 已經無效',
 	'MOVE_TOPIC'				=> '移動主題',
 
@@ -3830,6 +4039,7 @@ $lang = array_merge($lang, array(
 	'POLL_ENDED_AT'			=> '投票活動將於 %s 結束',
 	'POLL_RUN_TILL'			=> '投票活動直到 %s 結束',
 	'POLL_VOTED_OPTION'		=> '您投給這個選項',
+	'POST_DELETED_RESTORE'	=> 'This post has been deleted. It can be restored.',
 	'PRINT_TOPIC'			=> '列印模式',
 
 	'QUICK_MOD'				=> '快速執行',
@@ -3837,11 +4047,14 @@ $lang = array_merge($lang, array(
 	'QUOTE'					=> '引言回覆',
 
 	'REPLY_TO_TOPIC'		=> '回覆主題',
+	'RESTORE'				=> 'Restore',
+	'RESTORE_TOPIC'			=> 'Restore topic',
 	'RETURN_POST'			=> '%s回到文章%s',
 
 	'SHOW_QR'				=> '快速回覆',
 	'SUBMIT_VOTE'			=> '投票送出',
 
+	'TOPIC_TOOLS'			=> 'Topic tools',
 	'TOTAL_VOTES'			=> '總投票數',
 
 	'UNLOCK_TOPIC'			=> '解除主題鎖定',
@@ -3850,10 +4063,7 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_TOPIC'		=> '下一個主題',
 	'VIEW_PREVIOUS_TOPIC'	=> '上一個主題',
 	'VIEW_RESULTS'			=> '檢視結果',
-	'VIEW_TOPIC_POST'		=> '1 篇文章',
-	'VIEW_TOPIC_POSTS'		=> '%d 篇文章',
 	'VIEW_UNREAD_POST'		=> '第一篇未閱讀文章',
-	'VISIT_WEBSITE'			=> '參觀網站',
 	'VOTE_SUBMITTED'		=> '您的投票已經送出。',
 	'VOTE_CONVERTED'		=> '為了轉變票選結果而改變投票選項是不被支持的。',
 
@@ -9443,6 +9653,7 @@ $lang = array_merge($lang, array(
 	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'	=> '可以使用在私人訊息中的附加檔案，其每個檔案之最大容量，設定 0 表示沒有限制。',
 	'ATTACH_ORPHAN_URL'					=> '幽靈檔案',
 	'ATTACH_POST_ID'					=> '文章 ID',
+	'ATTACH_POST_TYPE'					=> 'Post type',
 	'ATTACH_QUOTA'						=> '總計的附加檔案空間',
 	'ATTACH_QUOTA_EXPLAIN'				=> '整個討論區可用的附加檔案之最大的磁碟空間，設定 0 表示沒有限制。',
 	'ATTACH_TO_POST'					=> '新增附加檔案到文章',
@@ -9488,6 +9699,9 @@ $lang = array_merge($lang, array(
 	'EXT_GROUP_REAL_MEDIA'			=> 'Real Media 多媒體檔',
 	'EXT_GROUP_WINDOWS_MEDIA'		=> 'Windows Media 多媒體檔',
 
+	'FILES_GONE'			=> 'Some of the attachments you selected for deletion do not exist. They may have been already deleted. Attachments that did exist were deleted.',
+	'FILES_STATS_WRONG'		=> 'Your file statistics are likely inaccurate and need to be resynchronised. Actual values: number of attachments = %1$d, total size of attachments = %2$s.<br />Click %3$shere%4$s to resynchronise them.',
+
 	'GO_TO_EXTENSIONS'		=> '前往副檔名管理界面',
 	'GROUP_NAME'			=> '會員群組名稱',
 
@@ -9511,6 +9725,7 @@ $lang = array_merge($lang, array(
 	'NOT_ALLOWED_IN_PM'			=> '只允許在一般文章中使用附加檔案',
 	'NOT_ALLOWED_IN_PM_POST'	=> '不允許',
 	'NOT_ASSIGNED'				=> '未指定',
+	'NO_ATTACHMENTS'			=> 'No attachments found for this period.',
 	'NO_EXT_GROUP'				=> '沒有',
 	'NO_EXT_GROUP_NAME'			=> '沒有輸入群組名稱',
 	'NO_EXT_GROUP_SPECIFIED'	=> '沒有指定副檔名群組。',
@@ -9523,6 +9738,10 @@ $lang = array_merge($lang, array(
 	'ONLY_ALLOWED_IN_PM'	=> '只允許在私人訊息中使用附加檔案',
 	'ORDER_ALLOW_DENY'		=> '允許',
 	'ORDER_DENY_ALLOW'		=> '拒絕',
+
+	'REMOVE_ALLOWED_IPS'			=> '移除或取消排除 <em>允許的</em> IP/主機',
+	'REMOVE_DISALLOWED_IPS'			=> '移除或取消排除 <em>拒絕的</em> IP/主機',
+	'RESYNC_FILES_STATS_CONFIRM'	=> 'Are you sure you wish to resynchronise file statistics?',
 
 	'REMOVE_ALLOWED_IPS'		=> '移除或取消排除 <em>允許的</em> IP/主機',
 	'REMOVE_DISALLOWED_IPS'		=> '移除或取消排除 <em>拒絕的</em> IP/主機',
@@ -9592,18 +9811,17 @@ $lang = array_merge($lang, array(
 	'PERMANENT'		=> '永久的',
 
 	'UNTIL'						=> '直到',
-	'USER_BAN'					=> '封鎖中',
+	'USER_BAN'					=> 'Ban one or more users by username',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> '啟用這個功能由所有目前的封鎖中排除已輸入的會員名稱。',
 	'USER_BAN_EXPLAIN'			=> '要指定多個不同的會員名稱，請每一行輸入一個。使用 <span style="text-decoration: underline;">搜尋會員</span> 功能，可自動地探訪以及增加一個或更多個會員。',
 	'USER_NO_BANNED'			=> '沒有封鎖的會員名稱',
-	'USER_UNBAN'				=> '解除封鎖或解除排除的會員名稱',
+	'USER_UNBAN'				=> 'Un-ban or un-exclude users by username',
 	'USER_UNBAN_EXPLAIN'		=> '您可以使用適當的滑鼠與鍵盤的結合，一次選擇多個會員名稱，執行解除封鎖或解除排除的操作。排除的會員名稱有特別背景標示。',
 ));
 
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'				=> '開啟日光節約時間/<abbr title="Daylight Saving Time">DST (Daylight Saving Time)</abbr>',
 	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
 	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
 	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
@@ -9629,16 +9847,28 @@ $lang = array_merge($lang, array(
 	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> '在這裡，您可以決定討論區的基本組態，設定適當的名稱以及描述，以及調整合適的時區與語系預設值。',
+	'BOARD_INDEX_TEXT'				=> 'Board index text',
+	'BOARD_INDEX_TEXT_EXPLAIN'		=> 'This text is displayed as the board index in the board’s breadcrumbs. If not specified, it will default to “Board index”.',
+	'BOARD_STYLE'					=> '我的版面風格',
 	'CUSTOM_DATEFORMAT'				=> '自訂...',
 	'DEFAULT_DATE_FORMAT'			=> '時間格式',
 	'DEFAULT_DATE_FORMAT_EXPLAIN'	=> '時間格式相同於 PHP <code>date</code> 函式。',
 	'DEFAULT_LANGUAGE'				=> '預設語言',
 	'DEFAULT_STYLE'					=> '預設風格',
+	'DEFAULT_STYLE_EXPLAIN'			=> 'The default style is <strong>%1$s (%2$s)</strong> which is the overriden style for all users (including bots).',
 	'DISABLE_BOARD'					=> '關閉討論區',
-	'DISABLE_BOARD_EXPLAIN'			=> '這個動作將使會員無法連結討論區。如果您希望，那麼您也可以輸入一段簡短的 (最多 255 個字元) 訊息去顯示。',
+	'DISABLE_BOARD_EXPLAIN'			=> 'This will make the board unavailable to users who are neither administrators nor moderators. You can also enter a short (255 character) message to display if you wish.',
+	'DISPLAY_LAST_SUBJECT'			=> 'Display subject of last added post on forum list',
+	'DISPLAY_LAST_SUBJECT_EXPLAIN'	=> 'The subject of the last added post will be displayed in the forum list with a hyperlink to the post. Subjects from password protected forums and forums in which user doesn’t have read access are not shown.',
+	'GUEST_STYLE'					=> 'Guest style',
+	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> '覆蓋會員風格',
 	'OVERRIDE_STYLE_EXPLAIN'		=> '用討論區的預設風格取代會員的風格。',
 	'SITE_DESC'						=> '討論區描述',
+	'SITE_HOME_TEXT'				=> 'Main website text',
+	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
+	'SITE_HOME_URL'					=> 'Main website URL',
+	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> '討論區名稱',
 	'SYSTEM_TIMEZONE'				=> '訪客時區',
 	'WARNINGS_EXPIRE'				=> '警告持續',
@@ -9678,6 +9908,7 @@ $lang = array_merge($lang, array(
 
 	'ALLOW_AVATARS'					=> '啟用頭像',
 	'ALLOW_AVATARS_EXPLAIN'			=> '允許一般頭像的使用；<br />如果您停用一般頭像或某些模式的頭像，這被停用的頭像將不再顯示於論壇上，但是會員仍然可由 UCP 下載他們自己的頭像。',
+	'ALLOW_GRAVATAR'				=> 'Enable gravatar avatars',
 	'ALLOW_LOCAL'					=> '允許使用系統相簿頭像',
 	'ALLOW_REMOTE'					=> '允許使用外部連結頭像',
 	'ALLOW_REMOTE_EXPLAIN'			=> '頭像連結來自其他網站。',
@@ -9858,6 +10089,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> '來自這些版面的內容將 <strong>不包含在消息來源中</strong>。沒有選擇版面將自所有的版面拉出資料。<br />以按住 <samp>CTRL</samp> 以及點選來選擇/刪除多個版面。',
 
 	'ACP_VC_SETTINGS_EXPLAIN'				=> '在這裡，您可以選擇以及設定 CAPTCHA 外掛，其目的是為了阻止灌水惡意程式之自動表單提交。這些外掛的一般性工作為使用 <em>CAPTCHA</em> 來挑戰使用者，目的是提供電腦難以解決的測試。',
+	'ACP_VC_EXT_GET_MORE'					=> 'For additional (and possibly better) anti-spam plugins, visit the <a href="https://www.phpbb.com/go/anti-spam-ext"><strong>phpBB.com Extensions Database</strong></a>. For more information on preventing spam on your board, visit the <a href="https://www.phpbb.com/go/anti-spam"><strong>phpBB.com Knowledge Base</strong></a>.',
 	'AVAILABLE_CAPTCHAS'					=> '有用的外掛',
 	'CAPTCHA_UNAVAILABLE'					=> '這 CAPTCHA 不能選擇，因為它沒有所需的要件。',
 	'CAPTCHA_GD'							=> 'GD 圖片',
@@ -9908,18 +10140,36 @@ $lang = array_merge($lang, array(
 	'SESSION_LENGTH'			=> 'Session 長度',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Session 多少時間後將終止，單位：秒。',
 
+	// Contact Settings
+	'ACP_CONTACT_SETTINGS_EXPLAIN'		=> 'Here you can enable and disable the contact page and also add a text that is displayed on the page.',
+
+	'CONTACT_US_ENABLE'				=> 'Enable contact page',
+	'CONTACT_US_ENABLE_EXPLAIN'		=> 'This page allows users to send emails to board administrators',
+
+	'CONTACT_US_INFO'				=> 'Contact information',
+	'CONTACT_US_INFO_EXPLAIN'		=> 'The message is displayed on the contact page',
+	'CONTACT_US_INFO_PREVIEW'		=> 'Contact page information - Preview',
+	'CONTACT_US_INFO_UPDATED'		=> 'Contact page information has been updated.',
+
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> '在這裡，您可以啟用以及停用某些討論區功能以減少需要處理的資料量。對於大多數伺服器並不需要停用任何功能。不過，在系統或共用主機的環境下，停用您真正不需要的功能是有利的。您也可以指定系統負荷以及有效 sessions 的限制，超過限制討論區將關閉。',
 
+	'ALLOW_CDN'						=> 'Allow usage of third party content delivery networks',
+	'ALLOW_CDN_EXPLAIN'				=> 'If this setting is enabled, some files will be served from external third party servers instead of your server. This reduces the network bandwidth required by your server, but may present a privacy issue for some board administrators. In a default phpBB installation, this includes loading “jQuery” and the font “Open Sans” from Google’s content delivery network.',
+	'ALLOW_LIVE_SEARCHES'			=> 'Allow live searches',
+	'ALLOW_LIVE_SEARCHES_EXPLAIN'	=> 'If this setting is enabled, users are provided with keyword suggestions as they type in certain fields throughout the board.',
 	'CUSTOM_PROFILE_FIELDS'			=> '自訂個人資料欄位',
 	'LIMIT_LOAD'					=> '系統負荷限制',
 	'LIMIT_LOAD_EXPLAIN'			=> '如果系統的每分鐘平均負荷超過這個值，那麼討論區將無法連線。值 1.0 等於一個處理器的 100% 使用率。只有在基於 UNIX 的伺服器，才有這個功能以及可得資訊。',
 	'LIMIT_SESSIONS'				=> '限制 sessions',
 	'LIMIT_SESSIONS_EXPLAIN'		=> '如果在一分鐘內的 sessions 數量超過這個值，那麼討論區將無法連線。設定為 0，表示沒有限制。',
 	'LOAD_CPF_MEMBERLIST'			=> '允許風格在會員列表中顯示自訂個人資料欄位',
+	'LOAD_CPF_PM'					=> 'Display custom profile fields in private messages',
 	'LOAD_CPF_VIEWPROFILE'			=> '在會員個人資料中顯示自訂個人資料欄位',
 	'LOAD_CPF_VIEWTOPIC'			=> '在主題頁面中顯示自訂個人資料欄位',
 	'LOAD_USER_ACTIVITY'			=> '顯示會員的活動',
 	'LOAD_USER_ACTIVITY_EXPLAIN'	=> '在會員個人資料以及會員控制台中，顯示最常討論的主題/版面。在超過百萬篇文章的討論區，建議停用此功能。',
+	'READ_NOTIFICATION_EXPIRE_DAYS'	=> 'Read Notification Expiration',
+	'READ_NOTIFICATION_EXPIRE_DAYS_EXPLAIN' => 'Number of days that will elapse before a read notification will automatically be deleted. Set this value to 0 to make notifications permanent.',
 	'RECOMPILE_STYLES'				=> '重新編輯舊的風格組件',
 	'RECOMPILE_STYLES_EXPLAIN'		=> '檢查在檔案系統中已更新的風格組件並重新編輯。',
 	'YES_ANON_READ_MARKING'			=> '啟用訪客主題標示',
@@ -9940,18 +10190,25 @@ $lang = array_merge($lang, array(
 	'YES_READ_MARKING_EXPLAIN'		=> '在資料庫中儲存已讀/未讀資訊，而不只是一個 cookie。',
 	'YES_UNREAD_SEARCH'				=> '啟用搜尋未閱讀的文章',
 
-	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB 支援認證的外掛或模組。這些允許您決定當會員登入討論區時如何被認證。預設下，提供三個外掛；DB、LDAP、以及 Apache。並不是所有的方式都需要額外的資訊，所以您只需要填滿所選擇的方式之相關的欄位即可。',
+	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB supports authentication plug-ins, or modules. These allow you determine how users are authenticated when they log into the board. By default four plug-ins are provided: DB, LDAP, Apache, and OAuth. Not all methods require additional information so only fill out fields if they are relevant to the selected method.',
 
 	'AUTH_METHOD'				=> '請選擇一個認證的方式',
 
+	'AUTH_PROVIDER_OAUTH_ERROR_ELEMENT_MISSING'	=> 'Both the key and secret of each enabled OAuth service provider must be provided. Only one was provided for an OAuth service provider.',
+	'AUTH_PROVIDER_OAUTH_EXPLAIN'				=> 'Each OAuth provider requires a unique secret and key in order to authenticate with the external server. These should be supplied by the OAuth service when you register your website with them and should be entered exactly as provided to you.<br />Any service that does not have both a key and a secret entered here will not be available for use by the forum users. Also note, that user can still register and login using the DB authentication plug-in.',
+	'AUTH_PROVIDER_OAUTH_KEY'					=> 'Key',
+	'AUTH_PROVIDER_OAUTH_TITLE'					=> 'OAuth',
+	'AUTH_PROVIDER_OAUTH_SECRET'				=> 'Secret',
+
 	'APACHE_SETUP_BEFORE_USE'	=> '在您轉換 phpBB 到這個認證方式以前，您必須安裝 apache 認證。記住！您用於 apache 認證的會員名稱必須和 phpBB 的會員名稱相同。Apache 認證只能用於 mod_php (不含 CGI 版本) 以及停用 safe_mode。',
 
+	'LDAP'							=> 'LDAP',
 	'LDAP_DN'						=> 'LDAP 基礎 <var>dn</var>',
 	'LDAP_DN_EXPLAIN'				=> '這是個卓越的名字 (Distinguished Name)，用來指出會員資訊，例如：<samp>o=My Company,c=US</samp>。',
-	'LDAP_EMAIL'					=> 'LDAP e-mail 屬性',
-	'LDAP_EMAIL_EXPLAIN'			=> '設定它為您會員輸入的 e-mail 屬性名稱 (如果存在的話)，以便於為新會員自動設定 e-mail 位址，留空的話將導致第一次登入的會員之 e-mail 位址為空。',
+	'LDAP_EMAIL'					=> 'LDAP email attribute',
+	'LDAP_EMAIL_EXPLAIN'			=> 'Set this to the name of your user entry email attribute (if one exists) in order to automatically set the email address for new users. Leaving this empty results in empty email address for users who log in for the first time.',
 	'LDAP_INCORRECT_USER_PASSWORD'	=> '使用特定的會員名稱/密碼連結 LDAP 伺服器失敗。',
-	'LDAP_NO_EMAIL'					=> '特定的 e-mail 屬性不存在。',
+	'LDAP_NO_EMAIL'					=> 'The specified email attribute does not exist.',
 	'LDAP_NO_IDENTITY'				=> '無法為 %s 找到登入身分。',
 	'LDAP_PASSWORD'					=> 'LDAP 密碼',
 	'LDAP_PASSWORD_EXPLAIN'			=> '留白以便於使用匿名身分。否則，為上面的會員填入密碼。這需要使用 Active Directory Servers。<br /><em><strong>警告:</strong> 這個密碼將以純文字格式儲存在資料庫中，任何可以登入您的資料庫，或是瀏覽此設定面頁的人將可以看到這個密碼。</em>',
@@ -9966,13 +10223,17 @@ $lang = array_merge($lang, array(
 	'LDAP_USER_FILTER'				=> 'LDAP 會員過濾',
 	'LDAP_USER_FILTER_EXPLAIN'		=> '隨便您更進一步以額外的過濾器去限制搜尋的目標。例如：<samp>objectClass=posixGroup</samp> 將導致 <samp>(&amp;(uid=$username)(objectClass=posixGroup))</samp> 的結果。',
 
-	'ACP_SERVER_SETTINGS_EXPLAIN'	=> '在這裡，您可以定義伺服器和網域名稱相關的設定。請確認您所輸入的資料是正確的，錯誤的設定將導致 e-mail 包含不正確的資訊。當輸入網域名稱時，記住不包含 http:// 或其他通訊協議。如果您知道您的伺服器使用一個不同的連接埠時，那麼才需要更改埠號，絕大部分使用的連接埠號都是 80。',
+	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Here you define server and domain dependent settings. Please ensure the data you enter is accurate, errors will result in emails containing incorrect information. When entering the domain name remember it does include http:// or other protocol term. Only alter the port number if you know your server uses a different value, port 80 is correct in most cases.',
 	'ENABLE_GZIP'				=> '啟用 GZip 壓縮',
 	'ENABLE_GZIP_EXPLAIN'		=> '產生的內容將在發送到使用者之前被壓縮。這能減少網路流量，但是會同時增加伺服器和客戶端的 CPU 使用量。需要加載 PHP 的延伸功能。',
 	'FORCE_SERVER_VARS'			=> '強迫伺服器 URL 設定',
 	'FORCE_SERVER_VARS_EXPLAIN'	=> '如果設定為是，那麼在此定義的伺服器設定將自動地使用有利的決定值。',
 	'ICONS_PATH'				=> '主題圖示儲存路徑',
 	'ICONS_PATH_EXPLAIN'		=> '位於 phpBB 根目錄底下的路徑，例如：<samp>images/icons</samp>。',
+	'MOD_REWRITE_ENABLE'		=> 'Enable URL Rewriting',
+	'MOD_REWRITE_ENABLE_EXPLAIN' => 'When enabled, URLs containing ’app.php’ will be rewritten to remove the filename (i.e. app.php/foo will become /foo). <strong>Apache server’s mod_rewrite module is required for this functionality to work; if this option is enabled without mod_rewrite support, URLs on your board may be broken.</strong>',
+	'MOD_REWRITE_DISABLED'		=> 'The <strong>mod_rewrite</strong> module on your Apache web server is disabled. Enable the module or contact your web hosting provider if you wish to enable this feature.',
+	'MOD_REWRITE_INFORMATION_UNAVAILABLE' => 'We are unable to determine whether or not this server supports URL rewriting. This setting may be enabled but if URL rewriting is not available, paths generated by this board (such as for use in links) may be broken. Contact your web hosting provider if you are unsure whether or not you can safely enable this feature.',
 	'PATH_SETTINGS'				=> '路徑設定',
 	'RANKS_PATH'				=> '等級圖示儲存路徑',
 	'RANKS_PATH_EXPLAIN'		=> '位於 phpBB 根目錄底下的路徑，例如：<samp>images/ranks</samp>。',
@@ -9989,13 +10250,21 @@ $lang = array_merge($lang, array(
 	'SMILIES_PATH_EXPLAIN'		=> '位於 phpBB 根目錄底下的路徑，例如：<samp>images/smilies</samp>。',
 	'UPLOAD_ICONS_PATH'			=> '副檔名群組圖示儲存路徑',
 	'UPLOAD_ICONS_PATH_EXPLAIN'	=> '位於 phpBB 根目錄底下的路徑，例如：<samp>images/upload_icons</samp>。',
+	'USE_SYSTEM_CRON'		=> 'Run periodic tasks from system cron',
+	'USE_SYSTEM_CRON_EXPLAIN'		=> 'When off, phpBB will arrange for periodic tasks to be run automatically. When on, phpBB will not schedule any periodic tasks by itself; a system administrator must arrange for <code>bin/phpbbcli.php cron:run</code> to be run by the system cron facility at regular intervals (e.g. every 5 minutes).',
 
 	'ACP_SECURITY_SETTINGS_EXPLAIN'		=> '在這裡，您可以定義 session 和登入的相關設定。',
 	'ALL'							=> '全部',
-	'ALLOW_AUTOLOGIN'				=> '允許自動登入',
-	'ALLOW_AUTOLOGIN_EXPLAIN'		=> '決定當會員拜訪討論區時是否可以自動登入。',
-	'AUTOLOGIN_LENGTH'				=> '自動登入關鍵值到期長度 (天數)',
-	'AUTOLOGIN_LENGTH_EXPLAIN'		=> '在多少天後移除自動登入關鍵值，設定為 0，將沒有限制。',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'ALLOW_PASSWORD_RESET'			=> 'Allow password reset ("Forgot Password")',
+	'ALLOW_PASSWORD_RESET_EXPLAIN'	=> 'Determines whether or not users are able to use the "I forgot my password" link on the login page to recover their account. If you use an external authentication mechanism you may wish to disable this feature.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
 	'BROWSER_VALID'					=> '瀏覽器驗證',
 	'BROWSER_VALID_EXPLAIN'			=> '為了改進每個 session 的安全，啟用瀏覽器驗證。',
 	'CHECK_DNSBL'					=> '檢查 IP 以抵禦 DNS Blackhole List',
@@ -10032,8 +10301,12 @@ $lang = array_merge($lang, array(
 	'PASS_TYPE_SYMBOL'				=> '必須包含符號',
 	'REF_HOST'						=> '只有有效的主機',
 	'REF_PATH'						=> '也要有效的路徑',
-	'REFERER_VALID'					=> '有效的回傳',
+	'REFERRER_VALID'				=> 'Validate Referrer',
+	'REFERRER_VALID_EXPLAIN'		=> 'If enabled, the referrer of POST requests will be checked against the host/script path settings. This may cause issues with boards using several domains and or external logins.',
+
+	'REFERER_VALID'					=> '有效的回傳',	//3.0.12
 	'REFERER_VALID_EXPLAIN'			=> '如果啟用，那麼發文的回傳請求，將針對主機或 script 路徑的設定而被檢查。這對於使用多個網域名稱或外部登入者，也許會引起一些問題。',
+
 	'TPL_ALLOW_PHP'					=> '允許在樣板中使用 PHP',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> '如果啟用這個選項，<code>PHP</code> 和 <code>INCLUDEPHP</code> 語法將在樣板中被辨認和解析。',
 
@@ -10046,6 +10319,8 @@ $lang = array_merge($lang, array(
 	'BOARD_HIDE_EMAILS_EXPLAIN'		=> '這個功能保持 e-mail 位址完全隱密。',
 	'CONTACT_EMAIL'					=> '聯絡 e-mail 位址',
 	'CONTACT_EMAIL_EXPLAIN'			=> '這個位址將使用在任何需要指定聯絡地點的場合，例如：廣告信、錯誤輸出、...等。在 e-mail 中，它將用於 <samp>From</samp> 和 <samp>Reply-To</samp>。',
+	'CONTACT_EMAIL_NAME'			=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 	'EMAIL_FUNCTION_NAME'			=> 'E-mail 函數名稱',
 	'EMAIL_FUNCTION_NAME_EXPLAIN'	=> '透過 PHP 用於發送 e-mail 的函數。',
 	'EMAIL_PACKAGE_SIZE'			=> 'E-mail 包裹大小',
@@ -10236,7 +10511,7 @@ $lang = array_merge($lang, array(
 	'ACP_BAN'					=> '封鎖',
 	'ACP_BAN_EMAILS'			=> '封鎖的 e-mail',
 	'ACP_BAN_IPS'				=> '封鎖的 IP',
-	'ACP_BAN_USERNAMES'			=> '封鎖的會員名稱',
+	'ACP_BAN_USERNAMES'			=> 'Ban users',
 	'ACP_BBCODES'				=> 'BBCodes',
 	'ACP_BOARD_CONFIGURATION'	=> '討論區基本組態',
 	'ACP_BOARD_FEATURES'		=> '討論區特色',
@@ -10245,8 +10520,10 @@ $lang = array_merge($lang, array(
 	'ACP_BOTS'					=> '管理機器人',
 
 	'ACP_CAPTCHA'				=> 'CAPTCHA',
+	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> '資料庫',
+	'ACP_CAT_DOT_MODS'			=> '外掛',
 	'ACP_CAT_DOT_MODS'			=> '外掛',
 	'ACP_CAT_FORUMS'			=> '版面',
 	'ACP_CAT_GENERAL'			=> '一般',
@@ -10259,6 +10536,8 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_USERS'				=> '會員',
 	'ACP_CLIENT_COMMUNICATION'	=> '客戶端通訊',
 	'ACP_COOKIE_SETTINGS'		=> 'Cookie 設定',
+	'ACP_CONTACT'				=> 'Contact page',
+	'ACP_CONTACT_SETTINGS'		=> 'Contact page settings',
 	'ACP_CRITICAL_LOGS'			=> '錯誤紀錄',
 	'ACP_CUSTOM_PROFILE_FIELDS'	=> '自訂個人資料欄位',
 
@@ -10266,8 +10545,11 @@ $lang = array_merge($lang, array(
 	'ACP_DISALLOW'				=> '不允許',
 	'ACP_DISALLOW_USERNAMES'	=> '不允許的會員名稱',
 
-	'ACP_EMAIL_SETTINGS'		=> 'E-mail 設定',
-	'ACP_EXTENSION_GROUPS'		=> '管理副檔名群組',
+	'ACP_EMAIL_SETTINGS'		=> 'Email settings',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
+	'ACP_EXTENSION_MANAGEMENT'	=> 'Extension management',
+	'ACP_EXTENSIONS'			=> 'Manage extensions',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
 	'ACP_FORMS'					=> 'Customizable Forms',
 	'ACP_FORMS_BUILDER'			=> 'Form Builder',
 
@@ -10288,10 +10570,10 @@ $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE'				=> '管理群組',
 	'ACP_GROUPS_MANAGEMENT'			=> '群組管理',
 	'ACP_GROUPS_PERMISSIONS'		=> '群組的權限',
+	'ACP_GROUPS_POSITION'			=> 'Manage group positions',
 
 	'ACP_ICONS'					=> '主題圖示',
 	'ACP_ICONS_SMILIES'			=> '主題圖示/表情符號',
-	'ACP_IMAGESETS'				=> '圖檔組',
 	'ACP_INACTIVE_USERS'		=> '未啟用的會員',
 	'ACP_INDEX'					=> 'ACP 首頁',
 
@@ -10303,11 +10585,15 @@ $lang = array_merge($lang, array(
 	'ACP_LOGGING'				=> '記錄',
 
 	'ACP_MAIN'					=> 'ACP 首頁',
-	'ACP_MANAGE_EXTENSIONS'		=> '管理副檔名',
+
+	'ACP_MANAGE_ATTACHMENTS'			=> '管理附加檔案',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
+
+	'ACP_MANAGE_EXTENSIONS'		=> 'Manage attachment extensions',
 	'ACP_MANAGE_RANKS'			=> '管理等級',
 	'ACP_MANAGE_REASONS'		=> '管理檢舉/拒絕理由',
 	'ACP_MANAGE_USERS'			=> '管理會員',
-	'ACP_MASS_EMAIL'			=> '大量 e-mail',
+	'ACP_MASS_EMAIL'			=> 'Mass email',
 	'ACP_MESSAGES'				=> '訊息',
 	'ACP_MESSAGE_SETTINGS'		=> '私人訊息設定',
 	'ACP_MODULE_MANAGEMENT'		=> '模組管理',
@@ -10352,6 +10638,8 @@ $lang = array_merge($lang, array(
 	'ACP_STYLE_COMPONENTS'		=> '風格成分',
 	'ACP_STYLE_MANAGEMENT'		=> '風格管理',
 	'ACP_STYLES'				=> '風格',
+	'ACP_STYLES_CACHE'			=> 'Purge Cache',
+	'ACP_STYLES_INSTALL'		=> 'Install Styles',
 
 	'ACP_SUBMIT_CHANGES'		=> '送出改變',
 
@@ -10403,6 +10691,10 @@ $lang = array_merge($lang, array(
 
 	'COLOUR_SWATCH'			=> '顏色取樣',
 	'CONFIG_UPDATED'		=> '組態更新成功。',
+	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
+	'CRON_NO_SUCH_TASK'		=> 'Could not find cron task â€œ%sâ€.',
+	'CRON_NO_TASK'			=> 'No cron tasks need to be run right now.',
+	'CRON_NO_TASKS'			=> 'No cron tasks could be found.',
 
 	'DEACTIVATE'				=> '停用',
 	'DIRECTORY_DOES_NOT_EXIST'	=> '輸入的路徑「%s」不存在。',
@@ -10413,6 +10705,7 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_AS'				=> '下載為',
 	'DOWNLOAD_STORE'			=> '下載或儲存檔案',
 	'DOWNLOAD_STORE_EXPLAIN'	=> '您可以直接下載檔案或儲存它在 <samp>store/</samp> 資料夾。',
+	'DOWNLOADS'					=> '下載',
 
 	'EDIT'					=> '編輯',
 	'ENABLE'				=> '啟用',
@@ -10427,6 +10720,8 @@ $lang = array_merge($lang, array(
 	'IP'					=> 'IP',
 	'IP_HOSTNAME'			=> 'IP 位址或主機名稱',
 
+	'LOAD_NOTIFICATIONS'			=> 'Display Notifications',
+	'LOAD_NOTIFICATIONS_EXPLAIN'	=> 'Display the notifications list on every page (typically in the header).',
 	'LOGGED_IN_AS'			=> '您目前登入的帳號為:',
 	'LOGIN_ADMIN'			=> '要進入管理員控制台，您必須是通過認證的會員。',
 	'LOGIN_ADMIN_CONFIRM'	=> '要進入管理員控制台，您必須再輸入一次帳號與密碼。',
@@ -10443,7 +10738,8 @@ $lang = array_merge($lang, array(
 
 	'NOTIFY'				=> '通知',
 	'NO_ADMIN'				=> '您沒有權限可以管理這個論壇。',
-	'NO_EMAILS_DEFINED'		=> '沒有找到有效的 e-mail 位址。',
+	'NO_EMAILS_DEFINED'		=> 'No valid email addresses found.',
+	'NO_FILES_TO_DELETE'	=> 'Attachments you selected for deletion do not exist.',
 	'NO_PASSWORD_SUPPLIED'	=> '您必須輸入密碼來登入。',
 
 	'OFF'					=> '關',
@@ -10459,8 +10755,8 @@ $lang = array_merge($lang, array(
 
 	'REMIND'							=> '提醒',
 	'RESYNC'							=> '重整對應資料',
-	'RETURN_TO'							=> '回到',
 
+	'RUNNING_TASK'			=> 'Running task: %s.',
 	'SELECT_ANONYMOUS'		=> '選擇匿名使用者',
 	'SELECT_OPTION'			=> '選擇選項',
 
@@ -10470,6 +10766,10 @@ $lang = array_merge($lang, array(
 	'SETTING_TOO_SHORT'		=> '您所提供的值「%1$s」太短。允許最小的長度是 %2$d。',
 
 	'SHOW_ALL_OPERATIONS'	=> '顯示所有的操作',
+
+	'TASKS_NOT_READY'			=> 'Not ready tasks:',
+	'TASKS_READY'			=> 'Ready tasks:',
+	'TOTAL_SIZE'			=> 'Total size',
 
 	'UCP'					=> '會員控制台',
 	'USERNAMES_EXPLAIN'		=> '請每一行輸入一個會員名稱。',
@@ -10481,7 +10781,7 @@ $lang = array_merge($lang, array(
 	'NO_PHPINFO_AVAILABLE'	=> '關於您的 PHP 組態的資訊無法認定，Phpinfo() 因為安全理由已經被停用。',
 
 	'ACP_ADMIN_LOGS_EXPLAIN'	=> '這裡列出了討論區管理員執行的所有動作。您可以按會員名稱、日期、IP 位址或動作排序。如果您有合適的權限，那麼您也可以清除部分或全部的記錄。',
-	'ACP_CRITICAL_LOGS_EXPLAIN'	=> '這裡列出了討論區自身執行的所有動作。這些記錄提供您解決特定問題的有用資訊，例如；無法投遞的 e-mail。您可以按會員名稱、日期、IP 位址或動作排序。如果您有合適的權限，那麼您也可以清除部分或全部的記錄。',
+	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'This lists the actions carried out by the board itself. This log provides you with information you are able to use for solving specific problems, for example non-delivery of emails. You can sort by username, date, IP or action. If you have appropriate permissions you can also clear individual operations or the log as a whole.',
 	'ACP_MOD_LOGS_EXPLAIN'		=> '這裡列出了討論區版主在管理版面、主題、文章時執行的所有動作，包含封鎖。您可以按會員名稱、日期、IP 位址或動作排序。如果您有合適的權限，那麼您也可以清除部分或全部的記錄。',
 	'ACP_USERS_LOGS_EXPLAIN'	=> '這裡列出了會員執行的所有動作，以及作用於會員的所有動作 (檢舉、警告和意見/反應)。',
 	'ALL_ENTRIES'				=> '所有項目',
@@ -10507,6 +10807,7 @@ $lang = array_merge($lang, array(
 
 	'GZIP_COMPRESSION'	=> 'GZip 壓縮',
 
+	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> '沒有效',
 	'NUMBER_FILES'		=> '附加檔案的數量',
 	'NUMBER_POSTS'		=> '文章數量',
@@ -10519,29 +10820,38 @@ $lang = array_merge($lang, array(
 	'PURGE_CACHE'			=> '清除快取',
 	'PURGE_CACHE_CONFIRM'	=> '您確認要清除快取嗎？',
 	'PURGE_CACHE_EXPLAIN'	=> '清除所有相關項目的快取，包含任何快取的樣板檔案以及查詢結果。',
+	'PURGE_CACHE_SUCCESS'	=> 'Cache successfully purged.',
 
 	'PURGE_SESSIONS'			=> '清除所有的 sessions',
 	'PURGE_SESSIONS_CONFIRM'	=> '您確定要清除所有的 sessions？這將會使得所有的會員登出。',
 	'PURGE_SESSIONS_EXPLAIN'	=> '清除所有的 sessions。經由清空 session 資料表，這將會使得所有的會員登出。',
+	'PURGE_SESSIONS_SUCCESS'	=> 'Sessions successfully purged.',
 
 	'RESET_DATE'					=> '重新設定討論區啟用日期',
 	'RESET_DATE_CONFIRM'			=> '您確認要將討論區啟用日期換成目前的日期以及時間嗎？',
+	'RESET_DATE_SUCCESS'				=> 'Boardâ€™s start date reset',
 	'RESET_ONLINE'					=> '重新設定最高線上人數記錄',
 	'RESET_ONLINE_CONFIRM'			=> '您確認要將最高線上人數記錄恢復為預設值 0 嗎？',
+	'RESET_ONLINE_SUCCESS'				=> 'Most users ever online reset',
 	'RESYNC_POSTCOUNTS'				=> '重新同步文章數量',
 	'RESYNC_POSTCOUNTS_EXPLAIN'		=> '只有存在的文章才會被考慮。已經刪除掉的文章將不被計算。',
 	'RESYNC_POSTCOUNTS_CONFIRM'		=> '您確認要重新同步文章數量嗎？',
+	'RESYNC_POSTCOUNTS_SUCCESS'			=> 'Resynchronised post counts',
 	'RESYNC_POST_MARKING'			=> '重新同步加小點的主題',
 	'RESYNC_POST_MARKING_CONFIRM'	=> '您確認要重新同步參與討論的小點標示主題嗎？',
 	'RESYNC_POST_MARKING_EXPLAIN'	=> '首先取消標示所有的主題，然後正確標示在過去六個月內有任何活動的主題。',
+	'RESYNC_POST_MARKING_SUCCESS'	=> 'Resynchronised dotted topics',
 	'RESYNC_STATS'					=> '重新同步統計',
 	'RESYNC_STATS_CONFIRM'			=> '您確認要重新同步統計嗎？',
 	'RESYNC_STATS_EXPLAIN'			=> '重新同步計算文章、主題、會員、檔案的總數。',
+	'RESYNC_STATS_SUCCESS'			=> 'Resynchronised statistics',
 	'RUN'							=> '立即執行',
 
 	'STATISTIC'					=> '統計',
 	'STATISTIC_RESYNC_OPTIONS'	=> '重新同步或重新設定統計',
 
+	'TIMEZONE_INVALID'	=> 'The timezone you selected is invalid.',
+	'TIMEZONE_SELECTED'	=> '(currently selected)',
 	'TOPICS_PER_DAY'	=> '每天的發表主題',
 
 	'UPLOAD_DIR_SIZE'	=> '附加檔案的大小',
@@ -10722,9 +11032,9 @@ $lang = array_merge($lang, array(
 
 	'LOG_APPROVE_TOPIC'			=> '<strong>已核准主題</strong><br />» %s',
 	'LOG_BUMP_TOPIC'			=> '<strong>已推文主題</strong><br />» %s',
-	'LOG_DELETE_POST'			=> '<strong>已刪除文章</strong><br />» %s',
-	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>在舊的版面上刪除已移動的主題</strong><br /> %s',
-	'LOG_DELETE_TOPIC'			=> '<strong>已刪除主題</strong><br /> %s',
+	'LOG_DELETE_POST'			=> '<strong>Deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Deleted shadow topic</strong><br />Â» %s',
+	'LOG_DELETE_TOPIC'			=> '<strong>Deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_FORK'					=> '<strong>已複製主題</strong><br /> 從 %s',
 	'LOG_LOCK'					=> '<strong>已鎖定主題</strong><br /> %s',
 	'LOG_LOCK_POST'				=> '<strong>已鎖定文章</strong><br /> %s',
@@ -10733,15 +11043,20 @@ $lang = array_merge($lang, array(
 	'LOG_PM_REPORT_CLOSED'		=> '<strong>已結束 PM 檢舉</strong><br />» %s',
 	'LOG_PM_REPORT_DELETED'		=> '<strong>已刪除 PM 檢舉</strong><br />» %s',
 	'LOG_POST_APPROVED'			=> '<strong>已核准文章</strong><br />» %s',
-	'LOG_POST_DISAPPROVED'		=> '<strong>已拒絕文章 「%1$s」 理由如下</strong><br />» %2$s',
-	'LOG_POST_EDITED'			=> '<strong>已編輯文章 「%1$s」 由</strong><br />» %2$s',
+	'LOG_POST_DISAPPROVED'		=> '<strong>Disapproved post â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
+	'LOG_POST_EDITED'			=> '<strong>Edited post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_POST_RESTORED'			=> '<strong>Restored post</strong><br />Â» %s',
 	'LOG_REPORT_CLOSED'			=> '<strong>已結束檢舉</strong><br />» %s',
 	'LOG_REPORT_DELETED'		=> '<strong>已刪除檢舉</strong><br />» %s',
+	'LOG_RESTORE_TOPIC'			=> '<strong>Restored topic â€œ%1$sâ€ written by</strong><br />Â» %2$s',
+	'LOG_SOFTDELETE_POST'		=> '<strong>Soft deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_SOFTDELETE_TOPIC'		=> '<strong>Soft deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_SPLIT_DESTINATION'		=> '<strong>已移動分割文章</strong><br />» 到 %s',
 	'LOG_SPLIT_SOURCE'			=> '<strong>已分割文章</strong><br />» 從 %s',
 
 	'LOG_TOPIC_APPROVED'		=> '<strong>已核准主題</strong><br />» %s',
-	'LOG_TOPIC_DISAPPROVED'		=> '<strong>已拒絕主題 「%1$s」 理由如下</strong><br />%2$s',
+	'LOG_TOPIC_RESTORED'		=> '<strong>Restored topic</strong><br />Â» %s',
+	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Disapproved topic â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
 	'LOG_TOPIC_RESYNC'			=> '<strong>重新同步計算主題數量</strong><br />» %s',
 	'LOG_TOPIC_TYPE_CHANGED'	=> '<strong>已改變主題類型</strong><br />» %s',
 	'LOG_UNLOCK'				=> '<strong>已解除鎖定主題</strong><br />» %s',
@@ -10793,16 +11108,6 @@ $lang = array_merge($lang, array(
 
 	'LOG_IMAGE_GENERATION_ERROR'	=> '<strong>建立圖片時出錯</strong><br />» 錯誤在 %1$s 的第 %2$s 行：%3$s',
 
-	'LOG_IMAGESET_ADD_DB'			=> '<strong>已增加圖檔組到資料庫</strong><br />» %s',
-	'LOG_IMAGESET_ADD_FS'			=> '<strong>已增加圖檔組到檔案系統</strong><br />» %s',
-	'LOG_IMAGESET_DELETE'			=> '<strong>已刪除圖檔組</strong><br />» %s',
-	'LOG_IMAGESET_EDIT_DETAILS'		=> '<strong>已編輯圖檔組細節</strong><br />» %s',
-	'LOG_IMAGESET_EDIT'				=> '<strong>已編輯圖檔組</strong><br />» %s',
-	'LOG_IMAGESET_EXPORT'			=> '<strong>已匯出圖檔組</strong><br />» %s',
-	'LOG_IMAGESET_LANG_MISSING'		=> '<strong>找不到圖檔組「%2$s」在本地位置上</strong><br />» %1$s',
-	'LOG_IMAGESET_LANG_REFRESHED'	=> '<strong>已重新整理「%2$s」在本地位置上的圖檔組</strong><br />» %1$s',
-	'LOG_IMAGESET_REFRESHED'		=> '<strong>已重新整理圖檔組</strong><br />» %s',
-
 	'LOG_INACTIVE_ACTIVATE'	=> '<strong>已啟用未啟用的會員</strong><br />» %s',
 	'LOG_INACTIVE_DELETE'	=> '<strong>已刪除未啟用的會員</strong><br />» %s',
 	'LOG_INACTIVE_REMIND'	=> '<strong>已發送提醒 e-mails 給未啟用的會員</strong><br />» %s',
@@ -10847,6 +11152,7 @@ $lang = array_merge($lang, array(
 	'LOG_U_ROLE_EDIT'		=> '<strong>已編輯會員角色</strong><br />» %s',
 	'LOG_U_ROLE_REMOVED'	=> '<strong>已移除會員角色</strong><br />» %s',
 
+	'LOG_PLUPLOAD_TIDY_FAILED'		=> '<strong>Unable to open %1$s for tidying, check permissions.</strong><br />Exception: %2$s<br />Trace: %3$s',
 	'LOG_PROFILE_FIELD_ACTIVATE'	=> '<strong>已啟用個人資料欄位</strong><br />» %s',
 	'LOG_PROFILE_FIELD_CREATE'		=> '<strong>已增加個人資料欄位</strong><br />» %s',
 	'LOG_PROFILE_FIELD_DEACTIVATE'	=> '<strong>已停用個人資料欄位</strong><br />» %s',
@@ -10855,13 +11161,13 @@ $lang = array_merge($lang, array(
 
 	'LOG_PRUNE'					=> '<strong>已修剪版面</strong><br />» %s',
 	'LOG_AUTO_PRUNE'			=> '<strong>已自動修剪版面</strong><br />» %s',
+	'LOG_PRUNE_SHADOW'		=> '<strong>Auto-pruned shadow topics</strong><br />Â» %s',
 	'LOG_PRUNE_USER_DEAC'		=> '<strong>已停用會員</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_DEL'	=> '<strong>已裁減會員並且刪除文章</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_ANON'	=> '<strong>已裁減會員並且保留文章</strong><br />» %s',
 
 	'LOG_PURGE_CACHE'			=> '<strong>清除快取</strong>',
 	'LOG_PURGE_SESSIONS'		=> '<strong>清除 sessions</strong>',
-
 
 	'LOG_RANK_ADDED'		=> '<strong>已增加等級</strong><br />» %s',
 	'LOG_RANK_REMOVED'		=> '<strong>已移除等級</strong><br />» %s',
@@ -10871,15 +11177,17 @@ $lang = array_merge($lang, array(
 	'LOG_REASON_REMOVED'	=> '<strong>已移除檢舉/拒絕理由</strong><br />» %s',
 	'LOG_REASON_UPDATED'	=> '<strong>已更新檢舉/拒絕理由</strong><br />» %s',
 
-	'LOG_REFERER_INVALID'		=> '<strong>回傳確認失敗</strong><br />»回傳內容是「<em>%1$s</em>」。這請求被拒絕以及這 session 被中斷。',
+	'LOG_REFERER_INVALID'		=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 	'LOG_RESET_DATE'			=> '<strong>重新設定討論區啟始日期</strong>',
 	'LOG_RESET_ONLINE'			=> '<strong>重新設定最高線上人數記錄</strong>',
+	'LOG_RESYNC_FILES_STATS'	=> '<strong>File statistics resynchronised</strong>',
 	'LOG_RESYNC_POSTCOUNTS'		=> '<strong>重新同步會員文章數量</strong>',
 	'LOG_RESYNC_POST_MARKING'	=> '<strong>重新同步加小點的主題數量</strong>',
 	'LOG_RESYNC_STATS'			=> '<strong>重新同步文章、主題、會員之統計</strong>',
 
 	'LOG_SEARCH_INDEX_CREATED'	=> '<strong>已建立搜尋索引</strong><br />» %s',
 	'LOG_SEARCH_INDEX_REMOVED'	=> '<strong>已移除搜尋索引</strong><br />» %s',
+	'LOG_SPHINX_ERROR'			=> '<strong>Sphinx Error</strong><br />Â» %s',
 	'LOG_STYLE_ADD'				=> '<strong>已增加風格</strong><br />» %s',
 	'LOG_STYLE_DELETE'			=> '<strong>已刪除風格</strong><br />» %s',
 	'LOG_STYLE_EDIT_DETAILS'	=> '<strong>已編輯風格</strong><br />» %s',
@@ -10946,15 +11254,18 @@ $lang = array_merge($lang, array(
 	'LOG_USER_GROUP_RESIGN'			=> '<strong>此會員已退出群組</strong><br />» %s',
 
 	'LOG_WARNING_DELETED'		=> '<strong>已刪除會員警告</strong><br />» %s',
-	'LOG_WARNINGS_DELETED'		=> '<strong>已刪除 %2$s 個會員警告</strong><br />» %1$s',
 	'LOG_WARNINGS_DELETED_ALL'	=> '<strong>已刪除所有的會員警告</strong><br />» %s',
 
 	'LOG_WORD_ADD'			=> '<strong>已增加字詞過濾</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>已刪除字詞過濾</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>已編輯字詞過濾</strong><br />» %s',
+
+	'LOG_EXT_ENABLE'	=> '<strong>Extension enabled</strong><br />Â» %s',
+	'LOG_EXT_DISABLE'	=> '<strong>Extension disabled</strong><br />Â» %s',
+	'LOG_EXT_PURGE'		=> '<strong>Extensionâ€™s data deleted</strong><br />Â» %s',
+
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
-
 ));
 
 $lang = array_merge($lang, array(
@@ -11255,7 +11566,7 @@ $lang = array_merge($lang, array(
 	'ACP_PORTAL_WELCOME_EXPLAIN'=> '',
 	'ADM_LOGOUT'			=> '登出&nbsp;ACP',
 	'ADM_LOGGED_OUT'		=> '成功地從 ACP 登出',
-	'LOG_REFERER_INVALID'	=> '<strong>回傳確認失敗</strong><br />»回傳內容是「<em>%1$s</em>」。這請求被拒絕以及這 session 被中斷。',
+	'LOG_REFERER_INVALID'	=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 
 	'ACP_ABBCODES'			=> 'BBcode Box',
 	'LOG_CONFIG_ABBCODES'	=> '<strong>Altered BBCode Box settings</strong>',
@@ -11661,7 +11972,7 @@ $lang = array_merge($lang, array(
 	'SELECT_A_PREFIX'				=> 'Select a prefix',
 	'ACP_SEOQUERYS'					=> 'SEO Queries',
 	'ACP_MANAGE_ATTACHMENTS'		=> '管理附加檔案',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can list and delete files attached to posts and private messages.',
 	'LOG_ATTACH_DEL'				=> '<strong>Attachments deleted</strong><br />» %s',
 	'LOG_ATTACH_REASSIGNED'			=> '<strong>Attachment reassigned to Post</strong><br />» ID %1$d - %2$s',
 	'TOTAL_SIZE'					=> 'Total size',
@@ -11680,11 +11991,11 @@ $lang = array_merge($lang, array(
 	'ACP_INTRO'				=> 'Intro',
 
 	'ACP_MANAGE_ATTACHMENTS'		=> '管理附加檔案',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
 	'TOTAL_SIZE'				=> 'Total size',
 	'DOWNLOADS'				=> '下載',
 
-	'NO_AVATAR'				=> 'URL of the avatar for all the have no separate',
+	'NO_AVATAR'				=> 'No avatar selected',
 	'NO_AVATAR_EXPLAIN'			=> 'The optimal size of the avatar is 120x120px, this box is left blank, no picture at all. <br /> Demo URL: http://www.userboard.org/images/no_avatar_1.gif',
 	'GROUP_ICON'				=> 'Group Icon',
 	'GROUP_ICON_EXPLAIN'			=> 'Upload your Group Icons into Upload &#187; Topic/Group Icons',
@@ -12847,6 +13158,97 @@ $lang = array_merge($lang, array(
 	'NO_EMAIL_SUBJECT'		=> '沒有 e-mail 主題。',
 ));
 
+#######language/en/acp/extensions.php#######
+
+$lang = array_merge($lang, array(
+	'EXTENSION'					=> '副檔名',
+	'EXTENSIONS'				=> 'Extensions',
+	'EXTENSIONS_ADMIN'			=> 'Extensions Manager',
+	'EXTENSIONS_EXPLAIN'		=> 'The Extensions Manager is a tool in your phpBB Board which allows you to manage all of your extensions statuses and view information about them.',
+	'EXTENSION_INVALID_LIST'	=> 'The “%s” extension is not valid.<br />%s<br /><br />',
+	'EXTENSION_NOT_AVAILABLE'	=> 'The selected extension is not available for this board, please verify your phpBB and PHP versions are allowed (see the details page).',
+	'EXTENSION_DIR_INVALID'		=> 'The selected extension has an invalid directory structure and cannot be enabled.',
+	'EXTENSION_NOT_ENABLEABLE'	=> 'The selected extension cannot be enabled, please verify the extension’s requirements.',
+
+	'DETAILS'				=> '細節',
+
+	'EXTENSIONS_DISABLED'	=> 'Disabled Extensions',
+	'EXTENSIONS_ENABLED'	=> 'Enabled Extensions',
+
+	'EXTENSION_DELETE_DATA'	=> 'Delete data',
+	'EXTENSION_DISABLE'		=> 'Disable',
+	'EXTENSION_ENABLE'		=> 'Enable',
+
+	'EXTENSION_DELETE_DATA_EXPLAIN'	=> 'Deleting an extension’s data removes all of its data and settings. The extension files are retained so it can be enabled again.',
+	'EXTENSION_DISABLE_EXPLAIN'		=> 'Disabling an extension retains its files, data and settings but removes any functionality added by the extension.',
+	'EXTENSION_ENABLE_EXPLAIN'		=> 'Enabling an extension allows you to use it on your board.',
+
+	'EXTENSION_DELETE_DATA_IN_PROGRESS'	=> 'The extension’s data is currently being deleted. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_DISABLE_IN_PROGRESS'	=> 'The extension is currently being disabled. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_ENABLE_IN_PROGRESS'	=> 'The extension is currently being enabled. Please do not leave or refresh this page until it is completed.',
+
+	'EXTENSION_DELETE_DATA_SUCCESS'	=> 'The extension’s data was deleted successfully',
+	'EXTENSION_DISABLE_SUCCESS'		=> 'The extension was disabled successfully',
+	'EXTENSION_ENABLE_SUCCESS'		=> 'The extension was enabled successfully',
+
+	'EXTENSION_NAME'			=> 'Extension Name',
+	'EXTENSION_ACTIONS'			=> 'Actions',
+	'EXTENSION_OPTIONS'			=> 'Options',
+	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
+	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s files from the filesystem</li>
+			<li>Upload the new files</li>
+			<li>Enable the extension</li>
+		</ol>',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s data</li>
+			<li>Delete the extension’s files from the filesystem</li>
+		</ol>',
+
+	'EXTENSION_DELETE_DATA_CONFIRM'	=> 'Are you sure that you wish to delete the data associated with “%s”?<br /><br />This removes all of its data and settings and cannot be undone!',
+	'EXTENSION_DISABLE_CONFIRM'		=> 'Are you sure that you wish to disable the “%s” extension?',
+	'EXTENSION_ENABLE_CONFIRM'		=> 'Are you sure that you wish to enable the “%s” extension?',
+	'EXTENSION_FORCE_UNSTABLE_CONFIRM'	=> 'Are you sure that you wish to force the use of unstable version?',
+
+	'RETURN_TO_EXTENSION_LIST'	=> 'Return to the extension list',
+
+	'EXT_DETAILS'			=> 'Extension Details',
+	'DISPLAY_NAME'			=> 'Disply Name (may be NULL)',
+	'CLEAN_NAME'			=> 'Clean Name',
+	'TYPE'					=> 'Type',
+	'DESCRIPTION'			=> '版面簡介',
+	'VERSION'				=> '版本',
+	'HOMEPAGE'				=> 'Homepage',
+	'PATH'					=> 'File Path',
+	'TIME'					=> '時間',
+	'LICENSE'				=> 'Licence',
+
+	'REQUIREMENTS'			=> 'Requirements',
+	'PHPBB_VERSION'			=> 'phpBB Version',
+	'PHP_VERSION'			=> 'PHP Version',
+	'AUTHOR_INFORMATION'	=> 'Author Information',
+	'AUTHOR_NAME'			=> 'Name',
+	'AUTHOR_EMAIL'			=> 'Email',
+	'AUTHOR_HOMEPAGE'		=> 'Homepage',
+	'AUTHOR_ROLE'			=> 'Role',
+
+	'NOT_UP_TO_DATE'		=> '%s is not up to date',
+	'UP_TO_DATE'			=> '%s is up to date',
+	'ANNOUNCEMENT_TOPIC'	=> 'Release Announcement',
+	'DOWNLOAD_LATEST'		=> 'Download Version',
+	'NO_VERSIONCHECK'		=> 'No version check information given.',
+
+	'VERSIONCHECK_FORCE_UPDATE_ALL'		=> 'Re-Check all versions',
+	'FORCE_UNSTABLE'					=> 'Always check for unstable versions',
+	'EXTENSIONS_VERSION_CHECK_SETTINGS'	=> 'Version check settings',
+
+	'META_FIELD_NOT_SET'	=> 'Required meta field %s has not been set.',
+	'META_FIELD_INVALID'	=> 'Meta field %s is invalid.',
+));
+
 #######language/en/acp/forums.php#######
 
 $lang = array_merge($lang, array(
@@ -12856,6 +13258,10 @@ $lang = array_merge($lang, array(
 	'AUTO_PRUNE_FREQ_EXPLAIN'	=> '執行刪除動作的間隔天數。',
 	'AUTO_PRUNE_VIEWED'			=> '自動刪除已檢視文章的時間',
 	'AUTO_PRUNE_VIEWED_EXPLAIN'	=> '自從主題被檢視後多少天，這個主題會被刪除。',
+	'AUTO_PRUNE_SHADOW_FREQ'	=> 'Auto-prune shadow topics frequency',
+	'AUTO_PRUNE_SHADOW_DAYS'	=> 'Auto-prune shadow topics age',
+	'AUTO_PRUNE_SHADOW_DAYS_EXPLAIN'	=> 'Number of days after which shadow topic is removed.',
+	'AUTO_PRUNE_SHADOW_FREQ_EXPLAIN'	=> 'Time in days between pruning events.',
 
 	'CONTINUE'						=> '繼續',
 	'COPY_PERMISSIONS_EXPLAIN'		=> '為了便於安排您的新版面權限，您可以複製一個已存在的版面權限。',
@@ -12914,6 +13320,8 @@ $lang = array_merge($lang, array(
 	'FORUM_PASSWORD_OLD'				=> '這個版面密碼目前是使用舊的加密方式，應該進行變更。',
 	'FORUM_PASSWORD_MISMATCH'			=> '您輸入的密碼不對。',
 	'FORUM_PRUNE_SETTINGS'				=> '版面刪除設定',
+	'FORUM_PRUNE_SHADOW'				=> 'Enable auto-pruning of shadow topics',
+	'FORUM_PRUNE_SHADOW_EXPLAIN'			=> 'Prunes the forum of shadow topics, set the frequency/age parameters below.',
 	'FORUM_RESYNCED'					=> '版面「%s」已經完成同步化',
 	'FORUM_RULES_EXPLAIN'				=> '版面規則將顯示在這個版面的每個頁面。',
 	'FORUM_RULES_LINK'					=> '請點選這裡檢視版面規則',
@@ -13005,6 +13413,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE_EXPLAIN'		=> '在這裡，您可以管理所有的會員群組。您可以刪除、建立和編輯存在的會員群組。再者，您可以選擇群組組長、設定會員群組狀態為開放/隱藏/關閉、以及設定會員群組名稱與描述。',
+	'ADD_GROUP_CATEGORY'			=> 'Add category',
 	'GROUP_ADD_USERS'				=> '增加會員',
 	'ADD_USERS_EXPLAIN'				=> '在這裡，您可以增加新會員到會員群組。您可以選擇是否使用這個會員群組作為新會員的預設會員群組。此外，您可以指定會員群組組長。請在每一行輸入一個會員名稱。',
 
@@ -13018,11 +13427,10 @@ $lang = array_merge($lang, array(
 	'GROUP_APPROVED'				=> '已核准的組員',
 	'GROUP_AVATAR'					=> '群組頭像',
 	'GROUP_AVATAR_EXPLAIN'			=> '這個圖片將顯示在群組控制台。',
+	'GROUP_CATEGORY_NAME'			=> 'Category name',
 	'GROUP_CLOSED'					=> '封閉的',
 	'GROUP_COLOR'					=> '群組顏色',
 	'GROUP_COLOR_EXPLAIN'			=> '指定群組組員其會員名稱顯示的顏色，如果使用會員預設請留空白。',
-	'GROUP_CONFIRM_ADD_USER'		=> '您確定要增加會員 %1$s 為群組組員嗎？',
-	'GROUP_CONFIRM_ADD_USERS'		=> '您確定要增加會員 %1$s 為群組組員嗎？',
 	'GROUP_CREATED'					=> '會員群組已經建立成功。',
 	'GROUP_DEFAULT'					=> '設定為會員的預設群組',
 	'GROUP_DEFS_UPDATED'			=> '設定為所有選中會員的預設群組。',
@@ -13064,6 +13472,8 @@ $lang = array_merge($lang, array(
 	'GROUP_SETTINGS_SAVE'			=> '會員群組範圍',
 	'GROUP_SKIP_AUTH'				=> '免除群組組長的權限',
 	'GROUP_SKIP_AUTH_EXPLAIN'		=> '如果啟用，那麼群組組長不再繼承群組權限。',
+	'GROUP_SPECIAL'					=> 'Pre-defined',
+	'GROUP_TEAMPAGE'				=> 'Display group on teampage',
 	'GROUP_TYPE'					=> '會員群組類型',
 	'GROUP_TYPE_EXPLAIN'			=> '這個設定決定了哪些會員可以加入或檢視這個會員群組。',
 	'GROUP_UPDATED'					=> '會員群組參數更新成功。',
@@ -13072,19 +13482,37 @@ $lang = array_merge($lang, array(
 	'GROUP_USERS_EXIST'				=> '選中的會員已經是組員了。',
 	'GROUP_USERS_REMOVE'			=> '會員已經移除以及新的預設會員群組設定成功。',
 
+	'LEGEND_EXPLAIN'				=> 'These are the groups which are displayed in the group legend:',
+	'LEGEND_SETTINGS'				=> 'Legend settings',
+	'LEGEND_SORT_GROUPNAME'			=> 'Sort legend by group name',
+	'LEGEND_SORT_GROUPNAME_EXPLAIN'	=> 'The order below is ignored when this option is enabled.',
+
+	'MANAGE_LEGEND'			=> 'Manage group legend',
+	'MANAGE_TEAMPAGE'		=> 'Manage teampage',
 	'MAKE_DEFAULT_FOR_ALL'		=> '為每一個組員設定為預設的會員群組',
 	'MEMBERS'					=> '組員',
 
 	'NO_GROUP'					=> '請求的會員群組不存在。',
+	'NO_GROUPS_ADDED'			=> 'No groups added yet.',
 	'NO_GROUPS_CREATED'			=> '還沒有已建立的會員群組。',
 	'NO_PERMISSIONS'			=> '不複製權限',
 	'NO_USERS'					=> '該會員不存在。',
 	'NO_USERS_ADDED'			=> '沒有會員被加入此群組。',
 	'NO_VALID_USERS'			=> '您沒有輸入任何符合那個動作的會員。',
 
+	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> '預設的會員群組',
 	'SPECIAL_GROUPS_EXPLAIN'	=> '預設的會員群組是特殊會員群組，它們不能刪除或直接修改。但是您可以增加會員和更改基本設定。',
 
+	'TEAMPAGE'					=> 'Teampage',
+	'TEAMPAGE_DISP_ALL'			=> 'All memberships',
+	'TEAMPAGE_DISP_DEFAULT'		=> 'User’s default group only',
+	'TEAMPAGE_DISP_FIRST'		=> 'First membership only',
+	'TEAMPAGE_EXPLAIN'			=> 'These are the groups which are displayed on the teampage:',
+	'TEAMPAGE_FORUMS'			=> 'Display moderated forums',
+	'TEAMPAGE_FORUMS_EXPLAIN'	=> 'If set to yes, moderators will have a list with all of the forums where they have moderator permissions displayed in their row. This can be very database intensive for big boards.',
+	'TEAMPAGE_MEMBERSHIPS'		=> 'Display user memberships',
+	'TEAMPAGE_SETTINGS'			=> 'Teampage settings',
 	'TOTAL_MEMBERS'				=> '組員',
 
 	'USERS_APPROVED'				=> '會員已經核准。',
@@ -13470,26 +13898,14 @@ $lang = array_merge($lang, array(
 	'ACP_FILES'						=> '控制台語言檔案',
 	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> '在這裡，您可以安裝/移除語言包。預設的語言包有標記星號 (*)。',
 
-	'EMAIL_FILES'			=> 'E-mail 檔案',
-
-	'FILE_CONTENTS'				=> '檔案內容',
-	'FILE_FROM_STORAGE'			=> '檔案來自 storage 資料夾',
-
-	'HELP_FILES'				=> '說明檔案',
-
-	'INSTALLED_LANGUAGE_PACKS'	=> '已安裝的語言包',
-	'INVALID_LANGUAGE_PACK'		=> '該語言包看起來是無效的。請重新上傳語言包所有檔案。',
-	'INVALID_UPLOAD_METHOD'		=> '您選擇的上傳功能無效，請選擇其他方式。',
+	'DELETE_LANGUAGE_CONFIRM'		=> 'Are you sure you wish to delete “%s”?',
+	'INSTALLED_LANGUAGE_PACKS'		=> '已安裝的語言包',
 
 	'LANGUAGE_DETAILS_UPDATED'			=> '語言細節更新成功。',
-	'LANGUAGE_ENTRIES'					=> '語言文字',
-	'LANGUAGE_ENTRIES_EXPLAIN'			=> '在這裡，您可以變更已經存在的語言包文字或尚未翻譯的部分。<br /><strong>注意！</strong>當您變更一個語言檔案，該檔案將會儲存在特別的資料夾內供您下載。這個改變不會被您的會員看見，直到您取代了您網站空間上原有的語言檔 (經由上傳覆蓋)。',
-	'LANGUAGE_FILES'					=> '語言檔案',
-	'LANGUAGE_KEY'						=> '語言關鍵',
 	'LANGUAGE_PACK_ALREADY_INSTALLED'	=> '這份語言包已經安裝完畢。',
-	'LANGUAGE_PACK_DELETED'				=> '這份語言包 <strong>%s</strong> 已經移除完畢。所有使用此語言包的會員將會重設為系統預設語言。',
+	'LANGUAGE_PACK_DELETED'				=> 'The language pack “%s” has been removed successfully. All users using this language have been reset to the board’s default language.',
 	'LANGUAGE_PACK_DETAILS'				=> '語言包細節',
-	'LANGUAGE_PACK_INSTALLED'			=> '該語言包 <strong>%s</strong> 已經安裝完畢。',
+	'LANGUAGE_PACK_INSTALLED'			=> 'The language pack “%s” has been successfully installed.',
 	'LANGUAGE_PACK_CPF_UPDATE'			=> '自訂個人資料欄位的語言字串已經被預設的語言複製。如果需要的話，那麼請改變它們。',
 	'LANGUAGE_PACK_ISO'					=> 'ISO',
 	'LANGUAGE_PACK_LOCALNAME'			=> '當地名稱',
@@ -13502,33 +13918,44 @@ $lang = array_merge($lang, array(
 	'LANG_ISO_CODE'						=> 'ISO 代碼',
 	'LANG_LOCAL_NAME'					=> '當地名稱',
 
-	'MISSING_LANGUAGE_FILE'		=> '找不到語言檔案：<strong style="color:red">%s</strong>',
+	'MISSING_LANG_FILES'		=> 'Missing language files',
 	'MISSING_LANG_VARIABLES'	=> '找不到語言變數',
-	'MODS_FILES'				=> '外掛的語言檔案',
 
 	'NO_FILE_SELECTED'				=> '您沒有指定語言檔。',
 	'NO_LANG_ID'					=> '您沒有指定語言包。',
-	'NO_REMOVE_DEFAULT_LANG'		=> '您不可以移除預設的語言包。<br />如果您要移除這個語言包，那麼請先變更您的討論區預設的語言。',
+	'NO_REMOVE_DEFAULT_LANG'		=> 'You are not able to remove the default language pack.<br />If you want to remove this language pack, change your board’s default language first.',
 	'NO_UNINSTALLED_LANGUAGE_PACKS'	=> '沒有解除安裝的語言包',
 
-	'REMOVE_FROM_STORAGE_FOLDER'		=> '從 storage 資料夾中移除',
-
-	'SELECT_DOWNLOAD_FORMAT'	=> '選擇下載檔案格式',
-	'SUBMIT_AND_DOWNLOAD'		=> '送出以及下載檔案',
-	'SUBMIT_AND_UPLOAD'			=> '送出以及上傳檔案',
-
-	'THOSE_MISSING_LANG_FILES'			=> '從 %s 語言資料夾中找不到下面的語言檔',
-	'THOSE_MISSING_LANG_VARIABLES'		=> '從 <strong>%s</strong> 語言包中找不到下面的語言變數',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 
 	'UNINSTALLED_LANGUAGE_PACKS'	=> '解除安裝的語言包',
 
+	// 3.0.12
+	'EMAIL_FILES'			=> 'E-mail 檔案',
+	'FILE_CONTENTS'				=> '檔案內容',
+	'FILE_FROM_STORAGE'			=> '檔案來自 storage 資料夾',
+	'HELP_FILES'				=> '說明檔案',
+	'INSTALLED_LANGUAGE_PACKS'	=> '已安裝的語言包',
+	'INVALID_LANGUAGE_PACK'		=> '該語言包看起來是無效的。請重新上傳語言包所有檔案。',
+	'INVALID_UPLOAD_METHOD'		=> '您選擇的上傳功能無效，請選擇其他方式。',
+	'LANGUAGE_ENTRIES'					=> '語言文字',
+	'LANGUAGE_ENTRIES_EXPLAIN'			=> '在這裡，您可以變更已經存在的語言包文字或尚未翻譯的部分。<br /><strong>注意！</strong>當您變更一個語言檔案，該檔案將會儲存在特別的資料夾內供您下載。這個改變不會被您的會員看見，直到您取代了您網站空間上原有的語言檔 (經由上傳覆蓋)。',
+	'LANGUAGE_FILES'					=> '語言檔案',
+	'LANGUAGE_KEY'						=> '語言關鍵',
+	'MISSING_LANGUAGE_FILE'		=> '找不到語言檔案：<strong style="color:red">%s</strong>',
+	'SELECT_DOWNLOAD_FORMAT'	=> '選擇下載檔案格式',
+	'SUBMIT_AND_DOWNLOAD'		=> '送出以及下載檔案',
+	'SUBMIT_AND_UPLOAD'			=> '送出以及上傳檔案',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 	'UNABLE_TO_WRITE_FILE'		=> '檔案無法寫入 %s。',
 	'UPLOAD_COMPLETED'			=> '上傳完畢。',
 	'UPLOAD_FAILED'				=> '發生不明原因導致上傳失敗。您也許需要手動取代相關檔案。',
 	'UPLOAD_METHOD'				=> '上傳方式',
 	'UPLOAD_SETTINGS'			=> '上傳設定',
-
 	'WRONG_LANGUAGE_FILE'		=> '選擇的語言檔是無效的。',
+	// 3.0.12
 ));
 
 #######language/en/acp/lexicon.php#######
@@ -13861,6 +14288,171 @@ $lang = array_merge($lang, array(
 	'ROLE_DESCRIPTION_ADMIN_FOOTBALL'	=> 'Can edit final match results.',
 ));
 
+#######language/en/acp/permissions_phpbb.php#######
+
+$lang = array_merge($lang, array(
+	'ACL_CAT_ACTIONS'		=> 'Actions',
+	'ACL_CAT_CONTENT'		=> 'Content',
+	'ACL_CAT_FORUMS'		=> 'Forums',
+	'ACL_CAT_MISC'			=> 'Misc',
+	'ACL_CAT_PERMISSIONS'	=> 'Permissions',
+	'ACL_CAT_PM'			=> 'Private messages',
+	'ACL_CAT_POLLS'			=> 'Polls',
+	'ACL_CAT_POST'			=> 'Post',
+	'ACL_CAT_POST_ACTIONS'	=> 'Post actions',
+	'ACL_CAT_POSTING'		=> 'Posting',
+	'ACL_CAT_PROFILE'		=> 'Profile',
+	'ACL_CAT_SETTINGS'		=> 'Settings',
+	'ACL_CAT_TOPIC_ACTIONS'	=> 'Topic actions',
+	'ACL_CAT_USER_GROUP'	=> 'Users &amp; Groups',
+));
+
+// User Permissions
+$lang = array_merge($lang, array(
+	'ACL_U_VIEWPROFILE'	=> 'Can view profiles, memberlist and online list',
+	'ACL_U_CHGNAME'		=> 'Can change username',
+	'ACL_U_CHGPASSWD'	=> 'Can change password',
+	'ACL_U_CHGEMAIL'	=> 'Can change email address',
+	'ACL_U_CHGAVATAR'	=> 'Can change avatar',
+	'ACL_U_CHGGRP'		=> 'Can change default usergroup',
+	'ACL_U_CHGPROFILEINFO'	=> 'Can change profile field information',
+
+	'ACL_U_ATTACH'		=> 'Can attach files',
+	'ACL_U_DOWNLOAD'	=> 'Can download files',
+	'ACL_U_SAVEDRAFTS'	=> 'Can save drafts',
+	'ACL_U_CHGCENSORS'	=> 'Can disable word censors',
+	'ACL_U_SIG'			=> 'Can use signature',
+
+	'ACL_U_SENDPM'		=> 'Can send private messages',
+	'ACL_U_MASSPM'		=> 'Can send messages to multiple users',
+	'ACL_U_MASSPM_GROUP'=> 'Can send messages to groups',
+	'ACL_U_READPM'		=> 'Can read private messages',
+	'ACL_U_PM_EDIT'		=> 'Can edit own private messages',
+	'ACL_U_PM_DELETE'	=> 'Can remove private messages from own folder',
+	'ACL_U_PM_FORWARD'	=> 'Can forward private messages',
+	'ACL_U_PM_EMAILPM'	=> 'Can email private messages',
+	'ACL_U_PM_PRINTPM'	=> 'Can print private messages',
+	'ACL_U_PM_ATTACH'	=> 'Can attach files in private messages',
+	'ACL_U_PM_DOWNLOAD'	=> 'Can download files in private messages',
+	'ACL_U_PM_BBCODE'	=> 'Can use BBCode in private messages',
+	'ACL_U_PM_SMILIES'	=> 'Can use smilies in private messages',
+	'ACL_U_PM_IMG'		=> 'Can use [img] BBCode tag in private messages',
+	'ACL_U_PM_FLASH'	=> 'Can use [flash] BBCode tag in private messages',
+
+	'ACL_U_SENDEMAIL'	=> 'Can send emails',
+	'ACL_U_SENDIM'		=> 'Can send instant messages',
+	'ACL_U_IGNOREFLOOD'	=> 'Can ignore flood limit',
+	'ACL_U_HIDEONLINE'	=> 'Can hide online status',
+	'ACL_U_VIEWONLINE'	=> 'Can view hidden online users',
+	'ACL_U_SEARCH'		=> 'Can search board',
+));
+
+// Forum Permissions
+$lang = array_merge($lang, array(
+	'ACL_F_LIST'		=> 'Can see forum',
+	'ACL_F_READ'		=> 'Can read forum',
+	'ACL_F_SEARCH'		=> 'Can search the forum',
+	'ACL_F_SUBSCRIBE'	=> 'Can subscribe forum',
+	'ACL_F_PRINT'		=> 'Can print topics',
+	'ACL_F_EMAIL'		=> 'Can email topics',
+	'ACL_F_BUMP'		=> 'Can bump topics',
+	'ACL_F_USER_LOCK'	=> 'Can lock own topics',
+	'ACL_F_DOWNLOAD'	=> 'Can download files',
+	'ACL_F_REPORT'		=> 'Can report posts',
+
+	'ACL_F_POST'		=> 'Can start new topics',
+	'ACL_F_STICKY'		=> 'Can post stickies',
+	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_REPLY'		=> 'Can reply to topics',
+	'ACL_F_EDIT'		=> 'Can edit own posts',
+	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
+	'ACL_F_SOFTDELETE'	=> 'Can soft delete own posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_F_IGNOREFLOOD' => 'Can ignore flood limit',
+	'ACL_F_POSTCOUNT'	=> 'Increment post counter<br /><em>Please note that this setting only affects new posts.</em>',
+	'ACL_F_NOAPPROVE'	=> 'Can post without approval',
+
+	'ACL_F_ATTACH'		=> 'Can attach files',
+	'ACL_F_ICONS'		=> 'Can use topic/post icons',
+	'ACL_F_BBCODE'		=> 'Can use BBCode',
+	'ACL_F_FLASH'		=> 'Can use [flash] BBCode tag',
+	'ACL_F_IMG'			=> 'Can use [img] BBCode tag',
+	'ACL_F_SIGS'		=> 'Can use signatures',
+	'ACL_F_SMILIES'		=> 'Can use smilies',
+
+	'ACL_F_POLL'		=> 'Can create polls',
+	'ACL_F_VOTE'		=> 'Can vote in polls',
+	'ACL_F_VOTECHG'		=> 'Can change existing vote',
+));
+
+// Moderator Permissions
+$lang = array_merge($lang, array(
+	'ACL_M_EDIT'		=> 'Can edit posts',
+	'ACL_M_DELETE'		=> 'Can permanently delete posts',
+	'ACL_M_SOFTDELETE'	=> 'Can soft delete posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_M_APPROVE'		=> 'Can approve and restore posts',
+	'ACL_M_REPORT'		=> 'Can close and delete reports',
+	'ACL_M_CHGPOSTER'	=> 'Can change post author',
+
+	'ACL_M_MOVE'	=> 'Can move topics',
+	'ACL_M_LOCK'	=> 'Can lock topics',
+	'ACL_M_SPLIT'	=> 'Can split topics',
+	'ACL_M_MERGE'	=> 'Can merge topics',
+
+	'ACL_M_INFO'	=> 'Can view post details',
+	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+));
+
+// Admin Permissions
+$lang = array_merge($lang, array(
+	'ACL_A_BOARD'		=> 'Can alter board settings/check for updates',
+	'ACL_A_SERVER'		=> 'Can alter server/communication settings',
+	'ACL_A_JABBER'		=> 'Can alter Jabber settings',
+	'ACL_A_PHPINFO'		=> 'Can view php settings',
+
+	'ACL_A_FORUM'		=> 'Can manage forums',
+	'ACL_A_FORUMADD'	=> 'Can add new forums',
+	'ACL_A_FORUMDEL'	=> 'Can delete forums',
+	'ACL_A_PRUNE'		=> 'Can prune forums',
+
+	'ACL_A_ICONS'		=> 'Can alter topic/post icons and smilies',
+	'ACL_A_WORDS'		=> 'Can alter word censors',
+	'ACL_A_BBCODE'		=> 'Can define BBCode tags',
+	'ACL_A_ATTACH'		=> 'Can alter attachment related settings',
+
+	'ACL_A_USER'		=> 'Can manage users<br /><em>This also includes seeing the users browser agent within the viewonline list.</em>',
+	'ACL_A_USERDEL'		=> 'Can delete/prune users',
+	'ACL_A_GROUP'		=> 'Can manage groups',
+	'ACL_A_GROUPADD'	=> 'Can add new groups',
+	'ACL_A_GROUPDEL'	=> 'Can delete groups',
+	'ACL_A_RANKS'		=> 'Can manage ranks',
+	'ACL_A_PROFILE'		=> 'Can manage custom profile fields',
+	'ACL_A_NAMES'		=> 'Can manage disallowed names',
+	'ACL_A_BAN'			=> 'Can manage bans',
+
+	'ACL_A_VIEWAUTH'	=> 'Can view permission masks',
+	'ACL_A_AUTHGROUPS'	=> 'Can alter permissions for individual groups',
+	'ACL_A_AUTHUSERS'	=> 'Can alter permissions for individual users',
+	'ACL_A_FAUTH'		=> 'Can alter forum permission class',
+	'ACL_A_MAUTH'		=> 'Can alter moderator permission class',
+	'ACL_A_AAUTH'		=> 'Can alter admin permission class',
+	'ACL_A_UAUTH'		=> 'Can alter user permission class',
+	'ACL_A_ROLES'		=> 'Can manage roles',
+	'ACL_A_SWITCHPERM'	=> 'Can use others permissions',
+
+	'ACL_A_STYLES'		=> 'Can manage styles',
+	'ACL_A_EXTENSIONS'	=> 'Can manage extensions',
+	'ACL_A_VIEWLOGS'	=> 'Can view logs',
+	'ACL_A_CLEARLOGS'	=> 'Can clear logs',
+	'ACL_A_MODULES'		=> 'Can manage modules',
+	'ACL_A_LANGUAGE'	=> 'Can manage language packs',
+	'ACL_A_EMAIL'		=> 'Can send mass email',
+	'ACL_A_BOTS'		=> 'Can manage bots',
+	'ACL_A_REASONS'		=> 'Can manage report/denial reasons',
+	'ACL_A_BACKUP'		=> 'Can backup/restore database',
+	'ACL_A_SEARCH'		=> 'Can manage search backends and settings',
+));
+
 #######language/en/acp/phpbb_seo.php#######
 
 $lang = array_merge($lang, array(
@@ -14032,6 +14624,7 @@ $lang = array_merge($lang, array(
 
 	'BBCODE_ADDED'				=> 'BBCode 增加成功。',
 	'BBCODE_EDITED'				=> 'BBCode 編輯成功。',
+	'BBCODE_DELETED'			=> 'The BBCode has been removed successfully.',
 	'BBCODE_NOT_EXIST'			=> '您所選擇的 BBCode 不存在。',
 	'BBCODE_HELPLINE'			=> '線上說明',
 	'BBCODE_HELPLINE_EXPLAIN'	=> '這個欄位的內容會在滑鼠移過 BBCode 文字時顯示。',
@@ -14087,17 +14680,10 @@ $lang = array_merge($lang, array(
 	'EXPORT_SMILIES'			=> '匯出以及下載 smilies.pak',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%s點選這個連結，您安裝的表情符號設定，將被打包輸出為 <samp>smilies.pak</samp>；一旦要下載，可用於建立一個 <samp>.zip</samp> 或 <samp>.tgz</samp> 檔案，這個檔案包含所有您的表情符號加上這個 <samp>smilies.pak</samp> 設定檔案%s。',
 
-
 	'ICONS_ADD'				=> '增加新圖示',
-	'ICONS_NONE_ADDED'		=> '沒有圖示被增加。',
-	'ICONS_ONE_ADDED'		=> '圖示增加成功。',
-	'ICONS_ADDED'			=> '圖示增加成功。',
 	'ICONS_CONFIG'			=> '圖示設定',
 	'ICONS_DELETED'			=> '圖示刪除成功。',
 	'ICONS_EDIT'			=> '編輯圖示',
-	'ICONS_ONE_EDITED'		=> '圖示更新成功。',
-	'ICONS_NONE_EDITED'		=> '沒有圖示被更新。',
-	'ICONS_EDITED'			=> '圖示更新成功。',
 	'ICONS_HEIGHT'			=> '圖示高度',
 	'ICONS_IMAGE'			=> '圖示圖案',
 	'ICONS_IMPORTED'		=> '圖示包安裝成功。',
@@ -14127,9 +14713,6 @@ $lang = array_merge($lang, array(
 
 	'SELECT_PACKAGE'			=> '選擇一個表情符號包檔案',
 	'SMILIES_ADD'				=> '增加一個新的表情符號',
-	'SMILIES_NONE_ADDED'		=> '沒有表情符號被增加。',
-	'SMILIES_ONE_ADDED'			=> '表情符號增加成功。',
-	'SMILIES_ADDED'				=> '表情符號增加成功。',
 	'SMILIES_CODE'				=> '表情符號代碼',
 	'SMILIES_CONFIG'			=> '表情符號設定',
 	'SMILIES_DELETED'			=> '表情符號移除成功。',
@@ -14137,9 +14720,6 @@ $lang = array_merge($lang, array(
 	'SMILIE_NO_CODE'			=> '表情符號「%s」被忽略，因為沒有輸入代碼。',
 	'SMILIE_NO_EMOTION'			=> '表情符號「%s」被忽略，因為沒有輸入表情。',
 	'SMILIE_NO_FILE'			=> '表情符號「%s」被忽略，因為缺少這個檔案。',
-	'SMILIES_NONE_EDITED'		=> '沒有表情符號被更新。',
-	'SMILIES_ONE_EDITED'		=> '表情符號更新成功。',
-	'SMILIES_EDITED'			=> '表情更新成功。',
 	'SMILIES_EMOTION'			=> '表情',
 	'SMILIES_HEIGHT'			=> '表情符號高度',
 	'SMILIES_IMAGE'				=> '表情符號圖檔',
@@ -14151,7 +14731,6 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> '表情符號圖案',
 	'SMILIES_WIDTH'				=> '表情符號寬度',
 
-	'TOO_MANY_SMILIES'		=> '您的內容包含太多表情符號，允許的最大表情符號數量是 %d。',
 	'WRONG_PAK_TYPE'		=> '指定的檔案包中沒有包含合適的資料。',
 ));
 
@@ -14249,8 +14828,11 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ADDED_PROFILE_FIELD'	=> '增加自行定義個人資料欄位成功。',
+	'ALPHA_DOTS'			=> 'Alphanumeric and dots (periods)',
 	'ALPHA_ONLY'			=> '只允許數字與字母',
 	'ALPHA_SPACERS'			=> '數字、字母和空格',
+	'ALPHA_UNDERSCORE'		=> 'Alphanumeric and underscores',
+	'ALPHA_PUNCTUATION'		=> 'Alphanumeric with comma, dots, underscore and dashes beginning with a letter',
 	'ALWAYS_TODAY'			=> '總是目前日期',
 
 	'BOOL_ENTRIES_EXPLAIN'	=> '現在輸入您的選項',
@@ -14277,6 +14859,10 @@ $lang = array_merge($lang, array(
 	'DISPLAY_AT_PROFILE_EXPLAIN'	=> '會員可以在會員控制台中更改這個個人資料欄位。',
 	'DISPLAY_AT_REGISTER'			=> '顯示在註冊的頁面',
 	'DISPLAY_AT_REGISTER_EXPLAIN'	=> '如果啟用這個選項，那麼在註冊時會顯示此欄位。',
+	'DISPLAY_ON_MEMBERLIST'			=> 'Display on memberlist screen',
+	'DISPLAY_ON_MEMBERLIST_EXPLAIN'	=> 'If this option is enabled, the field will be displayed in the user rows on the memberlist screen.',
+	'DISPLAY_ON_PM'					=> 'Display on view private message screen',
+	'DISPLAY_ON_PM_EXPLAIN'			=> 'If this option is enabled, the field will be displayed in the mini-profile on the private message screen.',
 	'DISPLAY_ON_VT'					=> '顯示在文章頁面',
 	'DISPLAY_ON_VT_EXPLAIN'			=> '如果啟用這個選項，那麼此欄位將顯示在主題頁面的迷你-個人資料中。',
 	'DISPLAY_PROFILE_FIELD'			=> '公開地顯示個人資料欄位',
@@ -14290,20 +14876,26 @@ $lang = array_merge($lang, array(
 	'EVERYTHING_OK'					=> '一切正常',
 
 	'FIELD_BOOL'				=> '布耳值 (是/否)',
+	'FIELD_CONTACT_DESC'		=> 'Contact description',
+	'FIELD_CONTACT_URL'			=> 'Contact link',
 	'FIELD_DATE'				=> '日期',
 	'FIELD_DESCRIPTION'			=> '欄位描述',
 	'FIELD_DESCRIPTION_EXPLAIN'	=> '解釋這個欄位顯示出給會員。',
 	'FIELD_DROPDOWN'			=> '下拉選單',
+	'FIELD_GOOGLEPLUS'			=> 'Google+',
 	'FIELD_IDENT'				=> '欄位定義',
 	'FIELD_IDENT_ALREADY_EXIST'	=> '選擇的欄位定義已經存在，請選擇另外一個名稱。',
 	'FIELD_IDENT_EXPLAIN'		=> '欄位定義是在資料庫和風格中定義欄位的名稱。',
 	'FIELD_INT'					=> '數字',
+	'FIELD_IS_CONTACT'			=> 'Display field as a contact field',
+	'FIELD_IS_CONTACT_EXPLAIN'	=> 'Contact fields are displayed within the contact section of the user profile and are displayed differently in the mini profile next to posts and private messages. You can use <samp>%s</samp> as a placeholder variable which will be replaced by a value provided by the user.',
 	'FIELD_LENGTH'				=> '輸入框的長度',
 	'FIELD_NOT_FOUND'			=> '個人資料欄位未找到。',
 	'FIELD_STRING'				=> '單行文字欄位',
 	'FIELD_TEXT'				=> '文字編輯區',
 	'FIELD_TYPE'				=> '欄位類型',
 	'FIELD_TYPE_EXPLAIN'		=> '設定後，您不能再修改欄位類型。',
+	'FIELD_URL'					=> 'URL (Link)',
 	'FIELD_VALIDATION'			=> '欄位生效',
 	'FIRST_OPTION'				=> '第一選項',
 
@@ -14315,6 +14907,12 @@ $lang = array_merge($lang, array(
 	'ISO_LANGUAGE'				=> '語言 [%s]',
 
 	'LANG_SPECIFIC_OPTIONS'		=> '語言特定選項 [<strong>%s</strong>]',
+
+	'LETTER_NUM_DOTS'			=> 'Any letters, numbers and dots (periods)',
+	'LETTER_NUM_ONLY'			=> 'Any letters and numbers',
+	'LETTER_NUM_PUNCTUATION'	=> 'Any letters, numbers, comma, dots, underscores and dashes beginning with any letter',
+	'LETTER_NUM_SPACERS'		=> 'Any letters, numbers and spacers',
+	'LETTER_NUM_UNDERSCORE'		=> 'Any letters, numbers and underscores',
 
 	'MAX_FIELD_CHARS'		=> '最大的字元長度',
 	'MAX_FIELD_NUMBER'		=> '最大的允許數字',
@@ -14369,7 +14967,9 @@ $lang = array_merge($lang, array(
 #######language/en/acp/prune.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_PRUNE_USERS_EXPLAIN'	=> '在這裡，您可以將您討論區的會員刪除或停用。帳號可以由多種的規則加以過濾；由文章數量、最近活動情形、...等。這些規則都可以自由組合，例如：您可以選擇刪除在 2002-01-01 之前文章數量少於 10 篇的會員。另外，您可以直接將會員名稱輸入欄位 (每一個會員名稱輸入一行) 中，任何已設定的規則都將被忽略。請小心使用此功能！一旦會員被刪除後將無法再回復。',
+	'ACP_PRUNE_USERS_EXPLAIN'	=> 'This section allows you to delete or deactivate users on your board. Accounts can be filtered in a variety of ways; by post count, most recent activity, etc. Criteria may be combined to narrow down which accounts are affected. For example, you can prune users with fewer than 10 posts, who were also inactive after 2002-01-01. Use * as a wildcard for text fields. Alternatively, you may skip the criteria selection completely by entering a list of users (each on a separate line) into the text field. Take care with this facility! Once a user is deleted, there is no way to reverse the action.',
+
+	'CRITERIA'				=> 'Criteria',
 
 	'DEACTIVATE_DELETE'			=> '停用或刪除',
 	'DEACTIVATE_DELETE_EXPLAIN'	=> '請選擇是要停用會員或是整個刪除之。請注意！已刪除的會員無法回復！',
@@ -14377,15 +14977,18 @@ $lang = array_merge($lang, array(
 	'DELETE_USER_POSTS'			=> '被刪除會員所發表的文章也刪除',
 	'DELETE_USER_POSTS_EXPLAIN'	=> '移除被刪除會員發表的文章，如果會員被停用，那麼他的文章將不會被移除。',
 
-	'JOINED_EXPLAIN'			=> '輸入日期，使用 <kbd>YYYY-MM-DD</kbd> 格式。',
+	'JOINED_EXPLAIN'			=> 'Enter a date in <kbd>YYYY-MM-DD</kbd> format. You may use both fields to specify an interval, or leave one blank for an open date range.',
 
 	'LAST_ACTIVE_EXPLAIN'		=> '輸入日期，使用 <kbd>YYYY-MM-DD</kbd> 格式。輸入 <kbd>0000-00-00</kbd> 將刪除從未登入的會員，<em>之前</em> 和 <em>之後</em> 的條件將被忽略。',
 
+	'POSTS_ON_QUEUE'			=> 'Posts Awaiting Approval',
+	'PRUNE_USERS_GROUP_EXPLAIN'	=> 'Limit to users within the selected group.',
+	'PRUNE_USERS_GROUP_NONE'	=> 'All groups',
 	'PRUNE_USERS_LIST'				=> '將被裁減的會員',
-	'PRUNE_USERS_LIST_DELETE'		=> '使用所選擇的規則裁減會員，下面的會員帳號將被移除。',
-	'PRUNE_USERS_LIST_DEACTIVATE'	=> '使用所選擇的規則裁減會員，下面的會員帳號將被停用。',
+	'PRUNE_USERS_LIST_DELETE'		=> 'With the selected critera for pruning users the following accounts will be removed. You can remove individual users from the deletion list by unchecking the box next to their username.',
+	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'With the selected critera for pruning users the following accounts will be deactivated. You can remove individual users from the deactivation list by unchecking the box next to their username.',
 
-	'SELECT_USERS_EXPLAIN'		=> '在這裡輸入指定的會員名稱，裁減他們將忽略上述的規則。論壇創始人無法被刪除。',
+	'SELECT_USERS_EXPLAIN'		=> 'Enter specific usernames here. They will be used in preference to the criteria above. Founders cannot be pruned.',
 
 	'USER_DEACTIVATE_SUCCESS'	=> '被選擇的會員已經停用成功',
 	'USER_DELETE_SUCCESS'		=> '被選擇的會員已經刪除成功',
@@ -14432,15 +15035,38 @@ $lang = array_merge($lang, array(
 	'DELETING_INDEX_IN_PROGRESS'			=> '正在刪除索引中',
 	'DELETING_INDEX_IN_PROGRESS_EXPLAIN'	=> '後端搜尋正在清除索引，這需要花幾分鐘的時間。',
 
-	'FULLTEXT_MYSQL_INCOMPATIBLE_VERSION'	=> '後端 MySQL 全文索引只能在 MySQL4 或更高的版本中使用。',
+	'FULLTEXT_MYSQL_INCOMPATIBLE_DATABASE'	=> 'The MySQL fulltext backend can only be used with MySQL4 and above.',
 	'FULLTEXT_MYSQL_NOT_MYISAM'				=> 'MySQL 全文索引只能在 MyISAM (Storage Engines) 型態的資料表使用。',
 	'FULLTEXT_MYSQL_TOTAL_POSTS'			=> '索引文章總數',
-	'FULLTEXT_MYSQL_MBSTRING'				=> '使用 mbstring 支援非拉丁 UTF-8 字元:',
-	'FULLTEXT_MYSQL_PCRE'					=> '使用 PCRE 支援非拉丁 UTF-8 字元:',
-	'FULLTEXT_MYSQL_MBSTRING_EXPLAIN'		=> '如果 PCRE 沒有 unicode 字元屬性，那麼後端搜尋會嘗試使用 mbstring 的正規表達機器。',
-	'FULLTEXT_MYSQL_PCRE_EXPLAIN'			=> '如果您需要搜尋非拉丁字元，這個後端搜尋需要使用 PCRE unicode 字元屬性，這只在 PHP 4.4、5.1 或更高版本中有效。',
 	'FULLTEXT_MYSQL_MIN_SEARCH_CHARS_EXPLAIN'	=> '至少要有這麼多字元的字詞被索引，以便搜尋。您或您的主機只能由改變 MySQL 的設定來改變它。',
 	'FULLTEXT_MYSQL_MAX_SEARCH_CHARS_EXPLAIN'	=> '沒有比這更多的字元之字詞被索引，以便搜尋。您或您的主機只能由改變 MySQL 的設定來改變它。',
+
+	'FULLTEXT_POSTGRES_INCOMPATIBLE_DATABASE'	=> 'The PostgreSQL fulltext backend can only be used with PostgreSQL.',
+	'FULLTEXT_POSTGRES_TOTAL_POSTS'			=> 'Total number of indexed posts',
+	'FULLTEXT_POSTGRES_VERSION_CHECK'		=> 'PostgreSQL version',
+	'FULLTEXT_POSTGRES_TS_NAME'				=> 'Text search Configuration Profile:',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN'			=> 'Minimum word length for keywords',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN'			=> 'Maximum word length for keywords',
+	'FULLTEXT_POSTGRES_VERSION_CHECK_EXPLAIN'		=> 'This search backend requires PostgreSQL version 8.3 and above.',
+	'FULLTEXT_POSTGRES_TS_NAME_EXPLAIN'				=> 'The Text search configuration profile used to determine the parser and dictionary.',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN_EXPLAIN'			=> 'Words with at least this many characters will be included in the query to the database.',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN_EXPLAIN'			=> 'Words with no more than this many characters will be included in the query to the database.',
+
+	'FULLTEXT_SPHINX_CONFIGURE'				=> 'Configure the following settings to generate sphinx config file',
+	'FULLTEXT_SPHINX_DATA_PATH'				=> 'Path to data directory',
+	'FULLTEXT_SPHINX_DATA_PATH_EXPLAIN'		=> 'It will be used to store the indexes and log files. You should create this directory outside the web accessible directories. (should have a trailing slash)',
+	'FULLTEXT_SPHINX_DELTA_POSTS'			=> 'Number of posts in frequently updated delta index',
+	'FULLTEXT_SPHINX_HOST'					=> 'Sphinx search daemon host',
+	'FULLTEXT_SPHINX_HOST_EXPLAIN'			=> 'Host on which the sphinx search daemon (searchd) listens. Leave empty to use the default localhost',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT'		=> 'Indexer memory limit',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT_EXPLAIN'	=> 'This number should at all times be lower than the RAM available on your machine. If you experience periodic performance problems this might be due to the indexer consuming too many resources. It might help to lower the amount of memory available to the indexer.',
+	'FULLTEXT_SPHINX_MAIN_POSTS'			=> 'Number of posts in main index',
+	'FULLTEXT_SPHINX_PORT'					=> 'Sphinx search daemon port',
+	'FULLTEXT_SPHINX_PORT_EXPLAIN'			=> 'Port on which the sphinx search daemon (searchd) listens. Leave empty to use the default Sphinx API port 9312',
+	'FULLTEXT_SPHINX_WRONG_DATABASE'		=> 'The sphinx search for phpBB supports MySQL and PostgreSQL only.',
+	'FULLTEXT_SPHINX_CONFIG_FILE'			=> 'Sphinx config file',
+	'FULLTEXT_SPHINX_CONFIG_FILE_EXPLAIN'	=> 'The generated content of the sphinx config file. This data needs to be pasted into the sphinx.conf which is used by sphinx search daemon. Replace the [dbuser] and [dbpassword] placeholders with your database credentials.',
+	'FULLTEXT_SPHINX_NO_CONFIG_DATA'		=> 'The sphinx data and config directory paths are not defined. Please define them to generate the config file.',
 
 	'GENERAL_SEARCH_SETTINGS'				=> '一般搜尋設定',
 	'GO_TO_SEARCH_INDEX'					=> '前往搜尋頁面',
@@ -14465,8 +15091,6 @@ $lang = array_merge($lang, array(
 
 	'SEARCH_GUEST_INTERVAL'					=> '訪客搜尋間隔',
 	'SEARCH_GUEST_INTERVAL_EXPLAIN'			=> '在重複搜尋中訪客必須等待的間隔時間 (秒)。如果一個訪客在搜尋，那麼所有其他人必須等待直到搜尋間隔時間通過。',
-	'SEARCH_INDEX_CREATE_REDIRECT'			=> '所有 id 直到 %1$d 的文章都已經建立索引，這一階段處理了 %2$d 篇文章。<br />目前索引的比率接近每秒 %3$.1f 篇文章。<br />索引正在進行中...',
-	'SEARCH_INDEX_DELETE_REDIRECT'			=> '所有 id 直到 %1$d 的文章都已經從搜尋索引中移除。<br />刪除正在進行中。。。',
 	'SEARCH_INDEX_CREATED'					=> '在資料庫中所有文章已經建立索引成功。',
 	'SEARCH_INDEX_REMOVED'					=> '這個後端的搜尋索引資料已經清除成功。',
 	'SEARCH_INTERVAL'						=> '會員搜尋間隔',
@@ -14489,8 +15113,55 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
+	// 3.1.0
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
+
+	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
+	'CONFIRM_UNINSTALL_STYLES'		=> 'Are you sure you wish to uninstall selected styles?',
+	'COPYRIGHT'						=> '版權',
+
+	'DEACTIVATE_DEFAULT'		=> '您不能停用預設的風格。',
+	'DELETE_FROM_FS'			=> '從檔案系統中刪除',
+	'DELETE_STYLE_FILES_FAILED'	=> 'Error deleting files for style "%s".',
+	'DELETE_STYLE_FILES_SUCCESS'	=> 'Files for style "%s" have been deleted.',
+	'DETAILS'					=> '細節',
+
+	'INHERITING_FROM'			=> '繼承',
+	'INSTALL_STYLE'				=> '安裝風格',
+	'INSTALL_STYLES'			=> 'Install styles',
+	'INSTALL_STYLES_EXPLAIN'	=> 'Here you can install new styles.<br />If you cannot find a specific style in list below, check to make sure style is already installed. If it is not installed, check if it was uploaded correctly.',
+	'INVALID_STYLE_ID'			=> 'Invalid style ID.',
+
+	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
+	'NO_UNINSTALLED_STYLE'		=> '沒有檢測到未安裝的風格',
+
+	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
+
+	'STYLE_ACTIVATE'			=> '啟用',
+	'STYLE_ACTIVE'				=> '啟用',
+	'STYLE_DEACTIVATE'			=> '停用',
+	'STYLE_DEFAULT'				=> '標示為預設風格',
+	'STYLE_DEFAULT_CHANGE_INACTIVE'	=> 'You must activate style before making it default style.',
+	'STYLE_ERR_INVALID_PARENT'	=> 'Invalid parent style.',
+	'STYLE_ERR_NAME_EXIST'		=> '風格名稱已經存在。',
+	'STYLE_ERR_STYLE_NAME'		=> '您必須為這個風格提供一個名稱。',
+	'STYLE_INSTALLED'			=> 'Style "%s" has been installed.',
+	'STYLE_INSTALLED_RETURN_INSTALLED_STYLES'	=> 'Return to installed styles list',
+	'STYLE_INSTALLED_RETURN_UNINSTALLED_STYLES'	=> 'Install more styles',
+	'STYLE_NAME'				=> '風格名稱',
+	'STYLE_NOT_INSTALLED'		=> 'Style "%s" was not installed.',
+	'STYLE_PATH'				=> 'Style path',
+	'STYLE_UNINSTALL'			=> 'Uninstall',
+	'STYLE_UNINSTALL_DEPENDENT'	=> 'Style "%s" cannot be uninstalled because it has one or more child styles.',
+	'STYLE_UNINSTALLED'			=> 'Style "%s" uninstalled successfully.',
+	'STYLE_USED_BY'				=> '已使用 (包含機器人)',
+
+	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+
+	// 3.0.12
 	'ACP_IMAGESETS_EXPLAIN'	=> '圖檔組包含所有按鈕、版面、資料夾等等討論區所使用而無特定風格的圖片。在這裡，您可以編輯、匯出或者刪除圖檔組，以及匯入或啟用新的設定。',
-	'ACP_STYLES_EXPLAIN'	=> '在這裡，您可以管理在您討論區可用的風格。一個風格包含一個樣板、主題和圖檔包。您可以更改存在的風格、刪除、停用、啟用、建立或匯入新的風格。您也可以使用預覽功能看看風格像甚麼樣子。目前的預設風格使用星號 (*) 標示。這裡還列出了使用每個風格的會員總數，此數不考慮會員風格被覆蓋的情況。',
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 	'ACP_TEMPLATES_EXPLAIN'	=> '樣板組包含所有用於生成您討論區佈置的標示。在這裡，您可以編輯已經存在的樣板設定、刪除、匯入、匯出以及預覽。您也可以修改用於生成 BBCode 的樣板代碼。',
 	'ACP_THEMES_EXPLAIN'	=> '在這裡，您可以建立、安裝、編輯、刪除和匯出主題。主題是色彩和圖檔的結合，應用於樣板上而定義您討論區基本的樣貌。選項開放的範圍取決於您的伺服器和 phpBB 安裝的設定，檢視手冊以獲得更多說明。請注意！以目前存在的主題為基礎建立新主題是可行的。',
 	'ADD_IMAGESET'			=> '建立圖檔組',
@@ -14527,7 +15198,6 @@ $lang = array_merge($lang, array(
 	'CURRENT_IMAGE'					=> '目前的圖片',
 
 	'DEACTIVATE_DEFAULT'		=> '您不能停用預設的風格。',
-	'DELETE_FROM_FS'			=> '從檔案系統中刪除',
 	'DELETE_IMAGESET'			=> '刪除圖檔組',
 	'DELETE_IMAGESET_EXPLAIN'	=> '在這裡，您可以從資料庫中移除已選擇的圖檔組。請注意！此動作無法復原。建議您先匯出您的設定以備將來使用。',
 	'DELETE_STYLE'				=> '刪除風格',
@@ -14724,7 +15394,6 @@ $lang = array_merge($lang, array(
 	'INCLUDE_IMAGESET'			=> '包含圖檔組',
 	'INCLUDE_TEMPLATE'			=> '包含樣板',
 	'INCLUDE_THEME'				=> '包含主題',
-	'INHERITING_FROM'			=> '繼承',
 	'INSTALL_IMAGESET'			=> '安裝圖檔組',
 	'INSTALL_IMAGESET_EXPLAIN'	=> '在這裡，您可以安裝您所選擇的圖檔組。如果需要，那麼您可以編輯某個細節，或使用預設的方法安裝。',
 	'INSTALL_STYLE'				=> '安裝風格',
@@ -14754,7 +15423,6 @@ $lang = array_merge($lang, array(
 	'NO_TEMPLATE'				=> '在檔案系統中無法找到樣板。',
 	'NO_THEME'					=> '在檔案系統中無法找到主題。',
 	'NO_UNINSTALLED_IMAGESET'	=> '沒有檢測到未安裝的圖檔組',
-	'NO_UNINSTALLED_STYLE'		=> '沒有檢測到未安裝的風格',
 	'NO_UNINSTALLED_TEMPLATE'	=> '沒有檢測到未安裝的樣板',
 	'NO_UNINSTALLED_THEME'		=> '沒有檢測到未安裝的主題',
 	'NO_UNIT'					=> '沒有',
@@ -14794,30 +15462,22 @@ $lang = array_merge($lang, array(
 	'SELECTED_THEME_FILE'		=> '已選擇的主題檔案',
 	'STORE_DATABASE'			=> '資料庫',
 	'STORE_FILESYSTEM'			=> '檔案系統',
-	'STYLE_ACTIVATE'			=> '啟用',
-	'STYLE_ACTIVE'				=> '啟用',
 	'STYLE_ADDED'				=> '風格增加成功。',
-	'STYLE_DEACTIVATE'			=> '停用',
-	'STYLE_DEFAULT'				=> '標示為預設風格',
 	'STYLE_DELETED'				=> '風格刪除成功。',
 	'STYLE_DETAILS_UPDATED'		=> '刪除更新成功。',
 	'STYLE_ERR_ARCHIVE'			=> '請選擇一個壓縮檔案的方式。',
 	'STYLE_ERR_COPY_LONG'		=> '版權聲明不能多於 60 個字元。',
 	'STYLE_ERR_MORE_ELEMENTS'	=> '您必須至少選擇一個風格元素。',
 	'STYLE_ERR_NAME_CHARS'		=> '風格名稱只能包含英文字母、數字、-、+、_ 和空格。',
-	'STYLE_ERR_NAME_EXIST'		=> '風格名稱已經存在。',
 	'STYLE_ERR_NAME_LONG'		=> '風格名稱不能多於 30 個字元。',
 	'STYLE_ERR_NO_IDS'			=> '您必須為這個風格選擇一個樣板、主題和圖檔組。',
 	'STYLE_ERR_NOT_STYLE'		=> '匯入或上傳的檔案中沒有包含有效的風格檔。',
-	'STYLE_ERR_STYLE_NAME'		=> '您必須為這個風格提供一個名稱。',
 	'STYLE_EXPORT'				=> '匯出風格',
 	'STYLE_EXPORT_EXPLAIN'		=> '在這裡，您可以匯出風格為壓縮檔形式。風格不需要包含所有的元素，但是必須至少包含一種。例如：如果您已經為一個共用的樣板建立了新主題和圖檔組，你可以忽略樣板而只匯出這個主題和圖檔組。您可以選擇是直接下載檔案，還是儲存到 store/ 資料夾中，等待以後下載或經由 FTP 下載。',
 	'STYLE_EXPORTED'			=> '風格匯出成功並儲存在 %s。',
 	'STYLE_IMAGESET'			=> '圖檔組',
-	'STYLE_NAME'				=> '風格名稱',
 	'STYLE_TEMPLATE'			=> '樣板',
 	'STYLE_THEME'				=> '主題',
-	'STYLE_USED_BY'				=> '已使用 (包含機器人)',
 
 	'TEMPLATE_ADDED'			=> '樣板組已經增加並儲存在檔案系統。',
 	'TEMPLATE_ADDED_DB'			=> '樣板組已經增加並儲存在資料庫中。',
@@ -14915,6 +15575,7 @@ $lang = array_merge($lang, array(
 	'CANNOT_FORCE_REACT_FOUNDER'	=> '您不被允許強迫再啟用創始人帳號。',
 	'CANNOT_FORCE_REACT_YOURSELF'	=> '您不被允許強迫再啟用自己的帳號。',
 	'CANNOT_REMOVE_ANONYMOUS'		=> '您不能移除訪客的會員帳號。',
+	'CANNOT_REMOVE_FOUNDER'			=> 'You are not allowed to remove founder accounts.',
 	'CANNOT_REMOVE_YOURSELF'		=> '您不被允許移除自己的帳號。',
 	'CANNOT_SET_FOUNDER_IGNORED'	=> '您不能提升被忽略的會員為創始人。',
 	'CANNOT_SET_FOUNDER_INACTIVE'	=> '在提升會員為創始人之前您需要先啟用他們的帳號，只有已啟用的會員才能被提升。',
@@ -14941,7 +15602,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> '請選擇您想要移動這個會員發表的所有文章的版面。',
 
 	'NO_SPECIAL_RANK'		=> '沒有指派特殊等級',
-	'NO_WARNINGS'			=> '沒有警告。',
+	'NO_WARNINGS'			=> 'No warnings exist.',
 	'NOT_MANAGE_FOUNDER'	=> '您在嘗試管理具有創始人地位的會員。只有創始人被允許管理其他創始人。',
 
 	'QUICK_TOOLS'			=> '快速工具',

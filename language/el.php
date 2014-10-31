@@ -1,5 +1,14 @@
 ﻿<?php
 
+#######language/en/app.php#######
+
+$lang = array_merge($lang, array(
+	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
+	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
+	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+));
+
 #######language/en/calendar.php#######
 
 $lang = array_merge($lang, array(
@@ -182,6 +191,55 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Το προσωπικό σας  reCaptcha κλειδί. Μπορείτε να λάβετε τα κλειδιά από το <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 
 	'RECAPTCHA_EXPLAIN'				=> 'Σε μια προσπάθεια να αποτραπούν οι αυτόματες εγγραφές, θα πρέπει να εισάγετε και τις δύο λέξεις που παρουσιάζονται  στην εικόνα στο πεδίο κειμένου από κάτω.',
+	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
+));
+
+#######language/en/cli.php#######
+
+$lang = array_merge($lang, array(
+	'CLI_CONFIG_CANNOT_CACHED'			=> 'Set this option if the configuration option changes too frequently to be efficiently cached.',
+	'CLI_CONFIG_CURRENT'				=> 'Current configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_DELETE_SUCCESS'			=> 'Successfully deleted config %s.',
+	'CLI_CONFIG_NEW'					=> 'New configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_NOT_EXISTS'				=> 'Config %s does not exist',
+	'CLI_CONFIG_OPTION_NAME'			=> 'The configuration option’s name',
+	'CLI_CONFIG_PRINT_WITHOUT_NEWLINE'	=> 'Set this option if the value should be printed without a new line at the end.',
+	'CLI_CONFIG_INCREMENT_BY'			=> 'Amount to increment by',
+	'CLI_CONFIG_INCREMENT_SUCCESS'		=> 'Successfully incremented config %s',
+	'CLI_CONFIG_SET_FAILURE'			=> 'Could not set config %s',
+	'CLI_CONFIG_SET_SUCCESS'			=> 'Successfully set config %s',
+
+	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
+	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
+	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
+	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
+	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
+	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
+	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
+	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
+	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
+	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
+	'CLI_EXTENSION_ENABLE_FAILURE'		=> 'Could not enable extension %s',
+	'CLI_EXTENSION_ENABLE_SUCCESS'		=> 'Successfully enabled extension %s',
+	'CLI_EXTENSION_NAME'				=> 'Name of the extension',
+	'CLI_EXTENSION_PURGE_FAILURE'		=> 'Could not purge extension %s',
+	'CLI_EXTENSION_PURGE_SUCCESS'		=> 'Successfully purged extension %s',
+	'CLI_EXTENSION_NOT_FOUND'			=> 'No extensions were found.',
+	'CLI_EXTENSIONS_AVAILABLE'			=> 'Available',
+	'CLI_EXTENSIONS_DISABLED'			=> 'Disabled',
+	'CLI_EXTENSIONS_ENABLED'			=> 'Enabled',
+
+	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
 ));
 
 #######language/en/common.php#######
@@ -190,7 +248,11 @@ $lang = array_merge($lang, array(
 	'TRANSLATION_INFO'	=> 'Ελληνική μετάφραση <a href="http://phpbbgr.com/">phpbbgr.com</a>',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
+	'DATETIME_FORMAT'	=> '|d M Y, H:i|',	// 01 Jan 2007, 13:37 (with Relative days enabled)
 	'USER_LANG'			=> 'el',
+
+	// See http://wiki.phpbb.com/Plural_Rules for more information
+	'PLURAL_RULE'		=> '1',
 
 	'1_DAY'			=> '1 ημέρα',
 	'1_MONTH'		=> '1 μήνα',
@@ -204,18 +266,24 @@ $lang = array_merge($lang, array(
 	'ACCOUNT_DEACTIVATED'			=> 'Ο λογαριασμός σας έχει απενεργοποιηθεί και μόνο ο διαχειριστής μπορεί να τον ενεργοποιήσει πάλι.',
 	'ACCOUNT_NOT_ACTIVATED'			=> 'Ο λογαριασμός σας δεν έχει ενεργοποιηθεί ακόμη.',
 	'ACP'							=> 'Πίνακας Ελέγχου Διαχειριστή',
+	'ACP_SHORT'						=> 'ACP',
 	'ACTIVE'						=> 'Ενεργό',
 	'ACTIVE_ERROR'					=> 'Το συγκεκριμένο όνομα μέλους είναι προς το παρόν μη ενεργό. Εάν αντιμετωπίζετε προβλήματα με την ενεργοποιήσει του λογαριασμού σας, παρακαλώ ελάτε σε επικοινωνία με τον διαχειριστή της Δ. Συζήτησης.',
 	'ADMINISTRATOR'					=> 'Διαχειριστής',
 	'ADMINISTRATORS'				=> 'Διαχειριστές',
 	'AGE'							=> 'Ηλικία',
 	'AIM'							=> 'AIM',
+	'AJAX_ERROR_TITLE'				=> 'AJAX error',
+	'AJAX_ERROR_TEXT'				=> 'Something went wrong when processing your request.',
+	'AJAX_ERROR_TEXT_ABORT'			=> 'User aborted request.',
+	'AJAX_ERROR_TEXT_TIMEOUT'		=> 'Your request timed out; please try again.',
+	'AJAX_ERROR_TEXT_PARSERERROR'	=> 'Something went wrong with the request and the server returned an invalid reply.',
 	'ALLOWED'						=> 'Επιτρέπεται',
 	'ALL_FILES'						=> 'Όλα τα αρχεία',
 	'ALL_FORUMS'					=> 'Όλες τις Δ. Συζητήσεις',
 	'ALL_MESSAGES'					=> 'Όλα τα μηνύματα',
 	'ALL_POSTS'						=> 'Όλες τις δημοσιεύσεις',
-	'ALL_TIMES'						=> 'Όλοι οι χρόνοι είναι %1$s %2$s',
+	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'Όλα τα θέματα',
 	'AND'							=> 'Και',
 	'ARE_WATCHING_FORUM'			=> 'Έχετε επιλέξει να ενημερώνεστε για νέες δημοσιεύσεις σε αυτήν την Δ. Συζήτηση.',
@@ -225,6 +293,14 @@ $lang = array_merge($lang, array(
 	'ATTACHED_IMAGE_NOT_IMAGE'		=> 'Το αρχείο εικόνας που προσπαθείτε να προσθέσετε ως συνημμένο είναι άκυρο.',
 	'AUTHOR'						=> 'Συγγραφέας',
 	'AUTH_NO_PROFILE_CREATED'		=> 'Η δημιουργία του προφίλ μέλους ήταν ανεπιτυχής.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_ENTRY'				=> 'Invalid database entry.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_SERVICE_TYPE'		=> 'Invalid service type provided to OAuth service handler.',
+	'AUTH_PROVIDER_OAUTH_ERROR_SERVICE_NOT_CREATED'			=> 'OAuth service not created',
+	'AUTH_PROVIDER_OAUTH_SERVICE_BITLY'						=> 'Bitly',
+	'AUTH_PROVIDER_OAUTH_SERVICE_FACEBOOK'					=> 'Facebook',
+	'AUTH_PROVIDER_OAUTH_SERVICE_GOOGLE'					=> 'Google',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_NOT_STORED'			=> 'OAuth token not stored.',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_INCORRECTLY_STORED'	=> 'OAuth token incorrectly stored.',
 	'AVATAR_DISALLOWED_CONTENT'		=> 'Η φόρτωση απορρίφθηκε επειδή το το αρχείο προς φόρτωση  προσδιορίστηκε ως πιθανό διάνυσμα επίθεσης.',
 	'AVATAR_DISALLOWED_EXTENSION'	=> 'Αυτό το αρχείο δεν μπορεί να προστεθεί επειδή η επέκταση <strong>%s</strong> δεν επιτρέπεται.',
 	'AVATAR_EMPTY_REMOTE_DATA'		=> 'Το συγκεκριμένο άβαταρ δεν μπορεί να φορτωθεί επειδή το απομακρυσμένο στοιχείο φαίνεται να είναι άκυρο ή αλλοιωμένο.',
@@ -235,10 +311,11 @@ $lang = array_merge($lang, array(
 	'AVATAR_PARTIAL_UPLOAD'			=> 'Το συγκεκριμένο αρχείο φορτώθηκε μερικώς.',
 	'AVATAR_PHP_SIZE_NA'			=> 'Το μέγεθος αρχείου άβαταρ είναι πολύ μεγάλο.<br />Το μέγιστο επιτρεπτό μέγεθος στο php.ini δεν μπορεί να καθοριστεί.',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'Το άβαταρ είναι πάρα πολύ μεγάλο. Το μέγιστο μέγεθος αρχείου που επιτρέπετε στο php.ini έχει καθοριστεί %1$d %2$s. <br />Παρακαλώ αυτό έχει οριστεί στο php.ini και δεν μπορεί να αγνοηθεί.',
+	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
 	'AVATAR_URL_INVALID'			=> 'Ο συγκεκριμένος σύνδεσμος είναι άκυρος.',
 	'AVATAR_URL_NOT_FOUND'			=> 'Το συγκεκριμένο αρχείο δεν μπορεί να βρεθεί.',
-	'AVATAR_WRONG_FILESIZE'			=> 'Το μέγεθος αρχείου άβαταρ πρέπει να είναι μεταξύ 0 και %1d %2s.',
-	'AVATAR_WRONG_SIZE'				=> 'Το συγκεκριμένο άβαταρ είναι %5$d εικονοστοιχεία πλάτος και %6$d εικονοστοιχεία ύψος. Το άβαταρ πρέπει να είναι τουλάχιστον %1$d εικονοστοιχείο πλάτος και %2$d εικονοστοιχεία ύψος, αλλά όχι μεγαλύτερος από %3$d εικονοστοιχεία πλάτος και %4$d εικονοστοιχεία ύψος.',
+	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
+	'AVATAR_WRONG_SIZE'				=> 'The submitted avatar is %5$s wide and %6$s high. Avatars must be at least %1$s wide and %2$s high, but no larger than %3$s wide and %4$s high.',
 
 	'BACK_TO_TOP'			=> 'Κορυφή',
 	'BACK_TO_PREV'			=> 'Επιστροφή στην προηγούμενη σελίδα',
@@ -255,28 +332,42 @@ $lang = array_merge($lang, array(
 	'BOARD_DISABLED'		=> 'Η Δ. Συζήτηση είναι αυτήν την περίοδο εκτός λειτουργίας.',
 	'BOARD_UNAVAILABLE'		=> 'Συγγνώμη αλλά η Δ. Συζήτηση είναι αυτήν την περίοδο μη διαθέσιμη, παρακαλώ προσπαθήστε πάλι αργότερα.',
 	'BROWSING_FORUM'		=> 'Μέλη σε αυτή την Δ. Συζήτηση: %1$s',
-	'BROWSING_FORUM_GUEST'	=> 'Μέλη σε αυτή την Δ. Συζήτηση : %1$s και %2$d επισκέπτης',
-	'BROWSING_FORUM_GUESTS'	=> 'Μέλη σε αυτή την Δ. Συζήτηση: %1$s και %2$d επισκέπτες',
+	'BUTTON_EDIT'			=> 'Edit',
+	'BUTTON_FORUM_LOCKED'	=> 'Locked',
+	'BUTTON_NEW_TOPIC'		=> 'New Topic',
+	'BUTTON_PM'				=> 'PM',
+	'BUTTON_PM_FORWARD'		=> 'Forward',
+	'BUTTON_PM_NEW'			=> 'New PM',
+	'BUTTON_PM_REPLY'		=> 'Send Reply',
+	'BUTTON_PM_REPLY_ALL'	=> 'Reply All',
+	'BUTTON_POST_REPLY'		=> 'Post Reply',
+	'BUTTON_QUOTE'			=> 'Quote',
+	'BUTTON_TOPIC_LOCKED'	=> 'Locked',
 	'BYTES'					=> 'Ψηφιολέξεις',
+	'BYTES_SHORT'			=> 'B',
 
 	'CANCEL'				=> 'Ακύρωση',
 	'CHANGE'				=> 'Μετατροπή',
 	'CHANGE_FONT_SIZE'		=> 'Αλλαγή γραμματοσειράς',
 	'CHANGING_PREFERENCES'	=> 'Αλλαγή ρυθμίσεων Δ. Συζήτησης',
 	'CHANGING_PROFILE'		=> 'Αλλαγή ρυθμίσεων προφίλ',
-	'CLICK_VIEW_PRIVMSG'	=> '%sΜετάβαση στο γραμματοκιβώτιό σας%s',
 	'COLLAPSE_VIEW'			=> 'Προβολή σύμπτυξης',
 	'CLOSE_WINDOW'			=> 'Κλείστε Παράθυρο',
 	'COLOUR_SWATCH'			=> 'Πίνακας χρωμάτων',
-	'COMMA_SEPARATOR'		=> ', ',	// Used in pagination of ACP & prosilver, use localised comma if appropriate, eg: Ideographic or Arabic
+	'COLON'					=> ':',
+	'COMMA_SEPARATOR'		=> ', ',	// Comma used to join lists into a single string, use localised comma if appropriate, eg: Ideographic or Arabic
 	'CONFIRM'				=> 'Επιβεβαίωση',
 	'CONFIRM_CODE'			=> 'Κώδικας Επιβεβαίωσης',
 	'CONFIRM_CODE_EXPLAIN'	=> 'Πληκτρολογήστε τον κώδικα ακριβώς όπως εμφανίζεται. Δεν υπάρχει διαφορά μικρών και κεφαλαίων, το μηδέν δεν υπάρχει.',
 	'CONFIRM_CODE_WRONG'	=> 'Ο κώδικας επιβεβαίωσης που προσθέσατε είναι ανακριβής.',
 	'CONFIRM_OPERATION'		=> 'Είστε βέβαιοι ότι επιθυμείτε να διενεργήσετε αυτήν την λειτουργία;',
+	'CONFIRM_AVATAR_DELETE' => 'Are you sure you wish to delete this avatar?',
 	'CONGRATULATIONS'		=> 'Συγχαρητήρια',
 	'CONNECTION_FAILED'		=> 'Αποτυχημένη προσπάθεια σύνδεσης.',
 	'CONNECTION_SUCCESS'	=> 'Η προσπάθεια σύνδεσης έγινε με επιτυχία!',
+	'CONTACT'				=> 'ΕΠΙΚΟΙΝΩΝΙΑ ',
+	'CONTACT_USER'			=> 'Contact %s',
+	'CONTACT_US'			=> 'Contact us',
 	'COOKIES_DELETED'		=> 'Όλα τα cookies της Δ. Συζήτηση έχουν διαγραφεί επιτυχώς.',
 	'CURRENT_TIME'			=> 'Τώρα είναι %s',
 
@@ -297,18 +388,13 @@ $lang = array_merge($lang, array(
 	'DISPLAY_TOPICS'		=> 'Τελευταία θέματα',
 	'DOWNLOADED'			=> 'Μεταφόρτωση',
 	'DOWNLOADING_FILE'		=> 'Μεταφόρτωση αρχείου',
-	'DOWNLOAD_COUNT'		=> 'Έχει μεταφορτωθεί %d φορά',
-	'DOWNLOAD_COUNTS'		=> 'Έχει μεταφορτωθεί %d φορές',
-	'DOWNLOAD_COUNT_NONE'	=> 'Δεν έχει μεταφορτωθεί ακόμη',
-	'VIEWED_COUNT'			=> ' %d προβολή',
-	'VIEWED_COUNTS'			=> ' %d προβολές',
-	'VIEWED_COUNT_NONE'		=> 'Καμία προβολή ακόμη',
 
 	'EDIT_POST'							=> 'Επεξεργασία δημοσίευσης',
-	'EMAIL'								=> 'Ηλεκτρονικό ταχυδρομείο', // Short form for EMAIL_ADDRESS
-	'EMAIL_ADDRESS'						=> 'Διεύθυνση ηλεκτρονικού ταχυδρομείου',
-	'EMAIL_INVALID_EMAIL'				=> 'Μη αποδεκτή εισαγωγή διεύθυνσης ηλεκτρονικού ταχυδρομείου.',
-	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Υπάρχει πρόβλημα κατά την αποστολή ηλεκτρονικού ταχυδρομείου στην <strong>Γραμμή %1$s</strong>. Απόκριση: %2$s.',
+	'ELLIPSIS'							=>	'…',
+	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
+	'EMAIL_ADDRESS'						=> 'Email address',
+	'EMAIL_INVALID_EMAIL'				=> 'The email address you entered is invalid.',
+	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ran into problems sending email at <strong>Line %1$s</strong>. Response: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Πρέπει να διευκρινίσετε ένα θέμα κατά την δημοσίευση ενός νέου θέματος.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Πρέπει να διευκρινίσετε ένα θέμα κατά την δημιουργία  ενός νέου μηνύματος.',
 	'ENABLED'							=> 'Ενεργοποιημένο',
@@ -322,17 +408,23 @@ $lang = array_merge($lang, array(
 	'ERR_UNWATCHING'					=> ' Ένα σφάλμα παρουσιάστηκε κατά την αποχώρηση συνδρομητή .',
 	'ERR_WATCHING'						=> 'Ένα σφάλμα παρουσιάστηκε κατά την εγγραφή συνδρομητή.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'Η διαδρομή του φακέλου phpBB είναι άκυρη.',
+	'ERROR'									=> 'Σφάλμα',
 	'EXPAND_VIEW'						=> 'Προβολή ανάπτυξης',
 	'EXTENSION'							=> 'Επέκταση ',
+	'EXTENSION_DISABLED'				=> 'The extension <strong>%s</strong> is not enabled.',
 	'EXTENSION_DISABLED_AFTER_POSTING'	=> 'Η επέκταση <strong>%s</strong> έχει απενεργοποιηθεί και δεν μπορεί πλέον να προβληθεί.',
+	'EXTENSION_DOES_NOT_EXIST'			=> 'The extension <strong>%s</strong> does not exist.',
 
+	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> 'Συχνές Ερωτήσεις',
 	'FAQ_EXPLAIN'			=> 'Συχνές Ερωτήσεις',
 	'FILENAME'				=> 'Όνομα αρχείου',
 	'FILESIZE'				=> 'Μέγεθος αρχείου',
 	'FILEDATE'				=> 'Ημερομηνία αρχείου',
 	'FILE_COMMENT'			=> 'Σχόλια αρχείου',
-	'FILE_NOT_FOUND'		=> 'Το συγκεκριμένο αρχείο δεν μπορεί να βρεθεί.',
+	'FILE_CONTENT_ERR'		=> 'Could not read the contents of file: %s',
+	'FILE_JSON_DECODE_ERR'	=> 'Failed to decode json file: %s',
+	'FILE_NOT_FOUND'		=> 'The requested file could not be found: %s',
 	'FIND_USERNAME'			=> 'Εύρεση μέλους',
 	'FOLDER'				=> 'Φάκελος',
 	'FORGOT_PASS'			=> 'Ξέχασα τον κωδικό μου',
@@ -381,6 +473,9 @@ $lang = array_merge($lang, array(
 	'GB'						=> 'GB',
 	'GIB'						=> 'GiB',
 	'GO'						=> 'Μετάβαση',
+	'GOOGLEPLUS'				=> 'Google+',
+	'GOTO_FIRST_POST'			=> 'Go to first post',
+	'GOTO_LAST_POST'			=> 'Go to last post',
 	'GOTO_PAGE'					=> 'Μετάβαση στην σελίδα',
 	'GROUP'						=> 'Ομάδα',
 	'GROUPS'					=> 'Ομάδες',
@@ -388,12 +483,6 @@ $lang = array_merge($lang, array(
 	'GROUP_ERR_USERNAME'		=> 'Δεν έχει διευκρινιστεί κανένα όνομα ομάδας.',
 	'GROUP_ERR_USER_LONG'		=> 'Το όνομα ομάδας δεν πρέπει να είναι μεγαλύτερο από 60 χαρακτήρες. Το συγκεκριμένο όνομα ομάδας είναι πολύ μεγάλο.',
 	'GUEST'						=> 'Επισκέπτης',
-	'GUEST_USERS_ONLINE'		=> 'Υπάρχουν %d επισκέπτες σε σύνδεση',
-	'GUEST_USERS_TOTAL'			=> '%d επισκέπτες',
-	'GUEST_USERS_ZERO_ONLINE'	=> 'Υπάρχει 0 επισκέπτης σε σύνδεση',
-	'GUEST_USERS_ZERO_TOTAL'	=> '0 επισκέπτης',
-	'GUEST_USER_ONLINE'			=> 'Υπάρχει %d επισκέπτης σε σύνδεση',
-	'GUEST_USER_TOTAL'			=> '%d επισκέπτης',
 	'G_ADMINISTRATORS'			=> 'Διαχειριστές',
 	'G_BOTS'					=> 'Bots',
 	'G_GUESTS'					=> 'Επισκέπτες',
@@ -402,22 +491,12 @@ $lang = array_merge($lang, array(
 	'G_GLOBAL_MODERATORS'		=> 'Καθολικοί συντονιστές',
 	'G_NEWLY_REGISTERED'		=> 'Πρόσφατο εγγεγραμμένο μέλος',
 
-	'HIDDEN_USERS_ONLINE'			=> '%d με απόκρυψη μέλη σε σύνδεση',
-	'HIDDEN_USERS_TOTAL'			=> '%d με απόκρυψη ',
-	'HIDDEN_USERS_TOTAL_AND'		=> '%d με απόκρυψη και ',
-	'HIDDEN_USERS_ZERO_ONLINE'		=> 'κανένα με απόκρυψη μέλος σε σύνδεση',
-	'HIDDEN_USERS_ZERO_TOTAL'		=> 'κανένας με απόκρυψη  ',
-	'HIDDEN_USERS_ZERO_TOTAL_AND'	=> '0 με απόκρυψη και ',
-	'HIDDEN_USER_ONLINE'			=> '%d με απόκρυψη μέλη σε σύνδεση',
-	'HIDDEN_USER_TOTAL'				=> '%d με απόκρυψη μέλη και ',
-	'HIDDEN_USER_TOTAL_AND'			=> '%d  απόκρυψη και ',
 	'HIDE_GUESTS'					=> 'Απόκρυψη επισκεπτών',
 	'HIDE_ME'						=> 'Απόκρυψη των στοιχείων μου κατά την διάρκεια της σύνδεσης ',
 	'HOURS'							=> 'Ώρες',
 	'HOME'							=> 'Αρχική Σελίδα',
 
 	'ICQ'						=> 'ICQ',
-	'ICQ_STATUS'				=> 'ICQ κατάσταση',
 	'IF'						=> 'Εάν',
 	'IMAGE'						=> 'Εικόνα',
 	'IMAGE_FILETYPE_INVALID'	=> 'Ο τύπος αρχείου εικόνας %d για το MIME-Typ %s δεν υποστηρίζεται.',
@@ -425,9 +504,11 @@ $lang = array_merge($lang, array(
 	'IN'						=> 'στο',
 	'INDEX'						=> 'Ευρετήριο σελίδας', //Index page
 	'INFORMATION'				=> 'Πληροφορίες',
+	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
 	'INTERESTS'					=> 'Ενδιαφέροντα',
 	'INVALID_DIGEST_CHALLENGE'	=> 'Άκυρη πρόκληση αφομοιώσεων.',
-	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> πιθανόν μία άκυρη ηλεκτρονική διεύθυνση;',
+	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> possibly an invalid email address?',
+	'INVALID_PLURAL_RULE'		=> 'The chosen plural rule is invalid. Valid values are integers between 0 and 15.',
 	'IP'						=> 'IP',
 	'IP_BLACKLISTED'			=> 'Η IP σας %1$s έχει απαγορευθεί διότι υπάρχει στην μαύρη λίστα. Για περισσότερες λεπτομέρειες κοιτάξτε <a href="%2$s">%2$s</a>.',
 
@@ -435,7 +516,8 @@ $lang = array_merge($lang, array(
 	'JOINED'				=> 'Εγγραφή',
 	'JUMP_PAGE'				=> 'Προσθέστε τον αριθμό σελίδας που θέλετε να πάτε.',
 	'JUMP_TO'				=> 'Μετάβαση σε',
-	'JUMP_TO_PAGE'			=> 'Πατήστε για να πάτε στη σελίδα…',
+	'JUMP_TO_PAGE'			=> 'Jump to page',
+	'JUMP_TO_PAGE_CLICK'	=> 'Click to jump to page…',
 
 	'KB'					=> 'ΚΒ',
 	'KIB'					=> 'KiB',
@@ -447,6 +529,8 @@ $lang = array_merge($lang, array(
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Δεν μπορεί να συνδεθεί στον κεντρικό υπολογιστή LDAP.',
 	'LDAP_SEARCH_FAILED'				=> 'Προέκυψε σφάλμα κατά την αναζήτηση στον κατάλογο LDAP.',
 	'LEGEND'							=> 'Υπόμνημα',
+	'LIVE_SEARCHES_NOT_ALLOWED'			=> 'Live searches are not allowed.',
+	'LOADING'							=> 'Loading',
 	'LOCATION'							=> 'Τοποθεσία',
 	'LOCK_POST'							=> 'Κλειδώστε δημοσίευση',
 	'LOCK_POST_EXPLAIN'					=> 'Αποκλείστε αλλαγές',
@@ -457,6 +541,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_CONFIRM_EXPLAIN'				=> 'Για αποτροπή επιθέσεων brute forcing προς τον λογαριασμό σας το σύστημα απαιτεί να προσθέσετε έναν κώδικα επιβεβαίωσης μετά από έναν αριθμό αποτυχημένων προσπαθειών σύνδεσης. Ο κώδικας επιδεικνύεται στην εικόνα που βλέπετε ποιο κάτω. Εάν είστε με οπτική αναπηρία ή δεν μπορείτε ειδάλλως να διαβάσετε αυτόν τον κώδικα παρακαλώ ελάτε σε επαφή με τον %sΔιαχειριστή της Δ. Συζήτησης%s.', // unused
 	'LOGIN_ERROR_ATTEMPTS'				=> 'Έχετε υπερβεί το μέγιστο αριθμό προσπαθειών σύνδεσης. Εκτός από το όνομα μέλους και τον κωδικό πρόσβασης σας τώρα επίσης πρέπει να εισαγάγετε και τον κώδικα επιβεβαίωσης από την εικόνα που βλέπετε ποιο κάτω.',
 	'LOGIN_ERROR_EXTERNAL_AUTH_APACHE'	=> 'Δεν έχετε περάσει τον έλεγχο ταυτότητας του Apache.',
+	'LOGIN_ERROR_OAUTH_SERVICE_DOES_NOT_EXIST'	=> 'A non-existant OAuth service has been requested.',
 	'LOGIN_ERROR_PASSWORD'				=> 'Έχετε προσδιορίσει έναν άκυρο κωδικό πρόσβασης. Παρακαλώ ελέγξτε τον κωδικό και προσπαθήστε πάλι. Εάν συνεχίσετε να έχετε προβλήματα ελάτε σε επικοινωνία με τον %sΔιαχειριστή της Δ. Συζήτησης%s.',
 	'LOGIN_ERROR_PASSWORD_CONVERT'		=> 'Μόλις έγινε μετατροπή της Δ. Συζήτησης και είναι πιθανόν ο κωδικός σας να μην μετατράπηκε. Παρακαλώ %sζητήστε έναν νέο κωδικό%s. Εάν συνεχίσετε να έχετε προβλήματα ελάτε σε επικοινωνία με τον %sΔιαχειριστή της Δ. Συζήτησης%s.',
 	'LOGIN_ERROR_USERNAME'				=> 'Έχετε προσδιορίσει έναν άκυρο όνομα μέλους. Παρακαλώ ελέγξτε το όνομα και προσπαθήστε πάλι. Εάν συνεχίσετε να έχετε προβλήματα ελάτε σε επικοινωνία με τον %sΔιαχειριστή της Δ. Συζήτησης%s.',
@@ -465,17 +550,22 @@ $lang = array_merge($lang, array(
 	'LOGIN_VIEWFORUM'					=> 'Για να μπορέσετε να δείτε τις δημοσιεύσεις σε αυτή την Δ. Συζήτηση πρέπει να είστε εγγεγραμμένο μέλος και να έχετε συνδεθεί.',
 	'LOGIN_EXPLAIN_EDIT'				=> 'Για να μπορέσετε να κάνετε επεξεργασία των δημοσιεύσεων σε αυτή την Δ. Συζήτηση πρέπει να είστε εγγεγραμμένο μέλος και να έχετε συνδεθεί.',
 	'LOGIN_EXPLAIN_VIEWONLINE'			=> 'Για να δείτε την ποιος είναι σε σύνδεση λίστα πρέπει να εγγραφείτε και να συνδεθείτε.',
+	'LOGIN_REQUIRED'					=> 'You need to login to perform this action.',
 	'LOGOUT'							=> 'Αποσύνδεση',
 	'LOGOUT_USER'						=> 'Αποσύνδεση [ %s ]',
-	'LOG_ME_IN'							=> 'Αυτόματη σύνδεση σε κάθε επίσκεψη',
+	'LOG_ME_IN'							=> 'Remember me',
 
+	'MAIN'					=> 'Main',
 	'MARK'					=> 'Επιλέξτε',
 	'MARK_ALL'				=> 'Επιλογή όλων',
+	'MARK_ALL_READ'			=> 'Mark all read',
 	'MARK_FORUMS_READ'		=> 'Σημειώστε τις Δ. Συζητήσεις αναγνωσμένες',
+	'MARK_READ'				=> 'Mark read',
 	'MARK_SUBFORUMS_READ'	=> 'Σημειώστε τις υπό-συζητήσεις αναγνωσμένες',
 	'MB'					=> 'ΜΒ',
 	'MIB'					=> 'MiB',
 	'MCP'					=> 'Πίνακας Ελέγχου Συντονιστών',
+	'MCP_SHORT'				=> 'MCP',
 	'MEMBERLIST'			=> 'Μέλη',
 	'MEMBERLIST_EXPLAIN'	=> 'Προβολή λίστας μελών',
 	'MERGE'					=> 'Συγχώνευση',
@@ -488,26 +578,47 @@ $lang = array_merge($lang, array(
 	'MODERATE'				=> 'Συντονίζετε',
 	'MODERATOR'				=> 'Συντονιστής',
 	'MODERATORS'			=> 'Συντονιστές',
+	'MODULE_NOT_ACCESS'		=> 'Module not accessible',
+	'MODULE_NOT_FIND'		=> 'Cannot find module %s',
+	'MODULE_FILE_INCORRECT_CLASS'	=> 'Module file %s does not contain correct class [%s]',
 	'MONTH'					=> 'Μήνας',
 	'MOVE'					=> 'Μετακίνηση',
-	'MSNM'					=> 'MSNM/WLM',
 
 	'NA'						=> 'ο/δ',
 	'NEWEST_USER'				=> 'Το νεότερο μέλος <strong>%s</strong>',
 	'NEW_MESSAGE'				=> 'Νέο μήνυμα',
 	'NEW_MESSAGES'				=> 'Νέα μηνύματα',
-	'NEW_PM'					=> '<strong>%d</strong> νέο μήνυμα',
-	'NEW_PMS'					=> '<strong>%d</strong> νέα μηνύματα',
 	'NEW_POST'					=> 'Νέα δημοσίευση',	// Not used anymore
 	'NEW_POSTS'					=> 'Νέες δημοσιεύσεις',	// Not used anymore
 	'NEXT'						=> 'Επόμενο',		// Used in pagination
 	'NEXT_STEP'					=> 'Επόμενο βήμα',
 	'NEVER'						=> 'Ποτέ',
 	'NO'						=> 'Όχι',
+	'NO_NOTIFICATIONS'			=> 'You have no notifications',
 	'NOT_ALLOWED_MANAGE_GROUP'	=> 'Δεν σας επιτρέπεται να διαχειριστείτε αυτήν την ομάδα.',
 	'NOT_AUTHORISED'			=> 'Δεν έχετε δικαίωμα πρόσβασης σε αυτήν την περιοχή.',
 	'NOT_WATCHING_FORUM'		=> 'Δεν θα ενημερώνεστε άλλο για νέες δημοσιεύσεις σε αυτή την Δ. Συζήτηση.',
 	'NOT_WATCHING_TOPIC'		=> 'Δεν θα ενημερώνεστε άλλο για νέες δημοσιεύσεις σε αυτό το θέμα.',
+	'NOTIFICATIONS'				=> 'Notifications',
+	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
+	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
+	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
+	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
+	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
+	'NOTIFICATION_POST_IN_QUEUE'		=> '<strong>Post approval</strong> request by %1$s:',
+	'NOTIFICATION_REFERENCE'			=> '"%1$s"',
+	'NOTIFICATION_REASON'				=> '<em>Reason:</em> %1$s.',
+	'NOTIFICATION_REPORT_PM'			=> '<strong>Private Message reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_POST'			=> '<strong>Post reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_CLOSED'		=> '<strong>Report closed</strong> by %1$s for:',
+	'NOTIFICATION_TOPIC'				=> '<strong>New topic</strong> by %1$s:',
+	'NOTIFICATION_TOPIC_APPROVED'		=> '<strong>Topic approved</strong>:',
+	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
+	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
+	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> 'Παρακαλώ ενημερώστε τον Διαχειριστή της Δ. Συζήτησης ή τον webmaster.',
 	'NOTIFY_ADMIN_EMAIL'		=> 'Παρακαλώ ενημερώστε τον Διαχειριστή της Δ. Συζήτησης ή τον webmaster: <a href="mailto:%1$s">%1$s</a>',
 	'NO_ACCESS_ATTACHMENT'		=> 'Δεν σας επιτρέπετε η πρόσβαση σε αυτό το αρχείο.',
@@ -516,6 +627,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_ADMIN'				=> 'Η πρόσβαση στον Πίνακα Ελέγχου Διαχειριστή δεν σας επιτρέπεται διότι δεν έχετε τα δικαιώματα ενός διαχειριστή.',
 	'NO_AUTH_ADMIN_USER_DIFFER'	=> 'Δεν μπορείτε να συνδεθείτε με το όνομα ενός άλλου μέλους.',
 	'NO_AUTH_OPERATION'			=> 'Δεν έχεις τα απαραίτητα δικαιώματα για να προχωρήσεις αυτήν την ενέργεια.',
+	'NO_AVATARS'				=> 'No avatars currently available',
 	'NO_CONNECT_TO_SMTP_HOST'	=> 'Δεν μπορεί να συνδεθεί στον κεντρικό υπολογιστή smtp : %1$s : %2$s',
 	'NO_BIRTHDAYS'				=> 'Κανένα μέλος δεν έχει γενέθλια σήμερα',
 	'NO_EMAIL_MESSAGE'			=> 'Το μήνυμα ηλεκτρονικού ταχυδρομείο είναι κενό.',
@@ -531,7 +643,6 @@ $lang = array_merge($lang, array(
 	'NO_MODE'					=> 'Κανένας τρόπος δεν έχει καθοριστεί.',
 	'NO_MODERATORS'				=> 'Δεν υπάρχουν συντονιστές.',
 	'NO_NEW_MESSAGES'			=> 'Δεν υπάρχουν νέα μηνύματα',
-	'NO_NEW_PM'					=> '<strong>0</strong> νέα μηνύματα',
 	'NO_NEW_POSTS'				=> 'Δεν υπάρχουν νέες δημοσιεύσεις',	// Not used anymore
 	'NO_ONLINE_USERS'			=> 'Δεν υπάρχουν εγγεγραμμένα μέλη',
 	'NO_POSTS'					=> 'Δεν υπάρχουν δημοσιεύσεις',
@@ -546,7 +657,6 @@ $lang = array_merge($lang, array(
 	'NO_TOPIC_FORUM'			=> 'Το θέμα ή η Δ. Συζήτηση δεν υπάρχει πλέον.',
 	'NO_TOPICS'					=> 'Δεν υπάρχει καμία δημοσίευση και κανένα θέμα σε αυτή την Δ. Συζήτηση.',
 	'NO_TOPICS_TIME_FRAME'		=> 'Δεν υπάρχουν θέματα στη συγκεκριμένη Δ. Συζήτηση για το επιλεγμένο χρονικό διάστημα.',
-	'NO_UNREAD_PM'				=> '<strong>0</strong>Δεν υπάρχουν μη αναγνωσμένα μηνύματα',
 	'NO_UNREAD_POSTS'			=> 'Δεν υπάρχουν μη αναγνωσμένες δημοσιεύσεις',
 	'NO_UPLOAD_FORM_FOUND'		=> 'Η αποστολή του αρχείου ξεκίνησε αλλά δεν βρέθηκε έγκυρη φόρμα αποστολής αρχείου.',
 	'NO_USER'					=> 'Το ζητούμενο μέλος δεν υπάρχει.',
@@ -557,15 +667,14 @@ $lang = array_merge($lang, array(
 	'OFFLINE'					=> 'Χωρίς σύνδεση',
 	'ONLINE'					=> 'Σε σύνδεση',
 	'ONLINE_BUDDIES'			=> 'Σε σύνδεση φίλοι',
-	'ONLINE_USERS_TOTAL'		=> 'Συνολικά υπάρχουν <strong>%d</strong> μέλη συνδεδεμένα: ',
-	'ONLINE_USERS_ZERO_TOTAL'	=> 'Συνολικά υπάρχουν <strong>0</strong> μέλη συνδεδεμένα: ',
-	'ONLINE_USER_TOTAL'			=> 'Συνολικά υπάρχει <strong>%d</strong> μέλος συνδεδεμένο: ',
 	'OPTIONS'					=> 'Επιλογές',
 
 	'PAGE_OF'				=> 'Σελίδα <strong>%1$d</strong> από <strong>%2$d</strong>',
+	'PAGE_TITLE_NUMBER'		=> 'Page %s',
 	'PASSWORD'				=> 'Κωδικός',
 	'PIXEL'					=> 'px',
 	'PLAY_QUICKTIME_FILE'	=> 'Αναπαραγωγή Quicktime αρχείου',
+	'PLEASE_WAIT'			=> 'Please wait.',
 	'PM'					=> 'Προσωπικό μήνυμα',
 	'PM_REPORTED'			=> 'Πατήστε για προβολή αναφοράς',
 	'POSTING_MESSAGE'		=> 'Δημοσίευση μηνύματος σε %s',
@@ -578,9 +687,15 @@ $lang = array_merge($lang, array(
 	'POSTED_ON_DATE'		=> 'την',
 	'POSTS'					=> 'Δημοσιεύσεις',
 	'POSTS_UNAPPROVED'		=> 'Τουλάχιστον μία δημοσίευση σε αυτό το θέμα δεν έχει εγκριθεί.',
+	'POSTS_UNAPPROVED_FORUM'=> 'At least one post in this forum has not been approved.',
 	'POST_BY_AUTHOR'		=> 'από',
-	'POST_BY_FOE'			=> 'Η δημοσίευση δημιουργήθηκε από τον/την <strong>%1$s</strong> που βρίσκετε στην λίστα παράβλεψης. %2$sΠροβολή αυτής της δημοσίευσης%3$s.',
+	'POST_BY_FOE'			=> '<strong>%1$s</strong>, who is currently on your ignore list, made this post.',
+	'POST_DISPLAY'			=> '%1$sDisplay this post%2$s.',
 	'POST_DAY'				=> '%.2f δημοσιεύσεις ανά ημέρα',
+	'POST_DELETED_ACTION'	=> 'Deleted post:',
+	'POST_DELETED'			=> 'This post has been deleted.',
+	'POST_DELETED_BY'		=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s.',
+	'POST_DELETED_BY_REASON'=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s for the following reason: %4$s',
 	'POST_DETAILS'			=> 'Λεπτομέρειες δημοσίευσης',
 	'POST_NEW_TOPIC'		=> 'Δημιουργία νέου θέματος',
 	'POST_PCT'				=> '%.2f%% επί συνόλου ',
@@ -591,7 +706,8 @@ $lang = array_merge($lang, array(
 	'POST_SUBJECT'			=> 'Θέμα δημοσίευσης',
 	'POST_TIME'				=> 'Ώρα δημοσίευσης',
 	'POST_TOPIC'			=> 'Δημιουργία νέου θέματος',
-	'POST_UNAPPROVED'		=> 'Η δημοσίευση βρίσκεται προς έγκριση',
+	'POST_UNAPPROVED_ACTION'	=> 'Post awaiting approval:',
+	'POST_UNAPPROVED'		=> 'This post has not been approved.',
 	'POWERED_BY'			=> 'Powered by %s',
 	'PREVIEW'				=> 'Προεπισκόπηση ',
 	'PREVIOUS'				=> 'Προηγούμενη',		// Used in pagination
@@ -601,6 +717,8 @@ $lang = array_merge($lang, array(
 	'PRIVATE_MESSAGES'		=> 'Προσωπικά μηνύματα',
 	'PRIVATE_MESSAGING'		=> 'Προσωπικά μηνύματα',
 	'PROFILE'				=> 'Πίνακας Ελέγχου Μέλους',
+
+	'QUICK_LINKS'			=> 'Quick links',
 
 	'RANK'						=> 'Βαθμός',
 	'READING_FORUM'				=> 'Διαβάζοντας τα θέματα σε %s',
@@ -614,15 +732,6 @@ $lang = array_merge($lang, array(
 	'REDIRECTS'					=> 'Σύνολο ανακατευθύνσεων',
 	'REGISTER'					=> 'Εγγραφή',
 	'REGISTERED_USERS'			=> 'Εγγεγραμμένα μέλη:',
-	'REG_USERS_ONLINE'			=> 'Υπάρχουν %d εγγεγραμμένα μέλη και ',
-	'REG_USERS_TOTAL'			=> '%d εγγεγραμμένα, ',
-	'REG_USERS_TOTAL_AND'		=> '%d εγγεγραμμένα και ',
-	'REG_USERS_ZERO_ONLINE'		=> 'Υπάρχουν 0 εγγεγραμμένα μέλη και ',
-	'REG_USERS_ZERO_TOTAL'		=> '0 εγγεγραμμένο, ',
-	'REG_USERS_ZERO_TOTAL_AND'	=> '0 εγγεγραμμένα και ',
-	'REG_USER_ONLINE'			=> 'Υπάρχουν %d εγγεγραμμένο μέλη και ',
-	'REG_USER_TOTAL'			=> '%d εγγεγραμμένο, ',
-	'REG_USER_TOTAL_AND'		=> '%d εγγεγραμμένο και ',
 	'REMOVE'					=> 'Διαγραφή',
 	'REMOVE_INSTALL'			=> 'Παρακαλώ, διαγράψτε μετακινήστε ή μετονομάστε τον φάκελο εγκατάστασης πριν χρησιμοποιήσετε την Δ. Συζήτηση σας. Εάν αυτός ο φάκελος υπάρχει θα έχετε πρόσβαση μόνο στον πίνακα διαχείρισης.',
 	'REPLIES'					=> 'Απαντήσεις',
@@ -639,7 +748,8 @@ $lang = array_merge($lang, array(
 	'RETURN_FORUM'				=> '%sΕπιστροφή στην Δ. Συζήτηση, που επισκεφτήκατε τελευταία%s',
 	'RETURN_PAGE'				=> '%sΕπιστροφή στην προηγούμενη σελίδα%s',
 	'RETURN_TOPIC'				=> '%sΕπιστροφή στο θέμα που επισκεφτήκατε τελευταίο%s',
-	'RETURN_TO'					=> 'Επιστροφή στο',
+	'RETURN_TO'					=> 'Return to “%s”',
+	'RETURN_TO_INDEX'			=> 'Return to Board Index',
 	'FEED'						=> 'Τροφοδοσία',
 	'FEED_NEWS'					=> 'Νέα',
 	'FEED_TOPICS_ACTIVE'		=> 'Ενεργά Θέματα',
@@ -667,28 +777,30 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV_EXPLAIN'		=> 'Δείτε την ειδική αναζήτηση',
 	'SEARCH_KEYWORDS'			=> 'Αναζήτηση για λέξεις-κλειδιά',
 	'SEARCHING_FORUMS'			=> 'Αναζήτηση στις Δ. Συζητήσεις',
-	'SEARCH_ACTIVE_TOPICS'		=> 'Προβολή ενεργών θεμάτων',
+	'SEARCH_ACTIVE_TOPICS'		=> 'Active topics',
 	'SEARCH_FOR'				=> 'Αναζήτηση για',
 	'SEARCH_FORUM'				=> 'Αναζητήστε αυτή την Δ. Συζήτηση…',
-	'SEARCH_NEW'				=> 'Προβολή των νέων δημοσιεύσεων',
+	'SEARCH_NEW'				=> 'New posts',
 	'SEARCH_POSTS_BY'			=> 'Αναζητήστε δημοσιεύσεις από',
-	'SEARCH_SELF'				=> 'Προβολή των δημοσιεύσεων σας',
+	'SEARCH_SELF'				=> 'Your posts',
 	'SEARCH_MINE'				=> 'View your topics',
 	'SEARCH_TOPIC'				=> 'Αναζητήστε αυτό το θέμα…',
-	'SEARCH_UNANSWERED'			=> 'Προβολή αναπάντητων δημοσιεύσεων',
-	'SEARCH_UNREAD'				=> 'Αναζήτηση μη αναγνωσμένων δημοσιεύσεων',
+	'SEARCH_UNANSWERED'			=> 'Unanswered posts',
+	'SEARCH_UNREAD'				=> 'Unread posts',
 	'SEARCH_USER_POSTS'			=> 'Αναζήτηση δημοσιεύσεων μέλους',
 	'SECONDS'					=> 'Δευτερόλεπτα',
+	'SEE_ALL'					=> 'See All',
 	'SELECT'					=> 'Επιλογή',
 	'SELECT_ALL_CODE'			=> 'Επιλογή όλων',
 	'SELECT_DESTINATION_FORUM'	=> 'Παρακαλώ επιλέξτε την Δ. Συζήτηση προορισμού',
 	'SELECT_FORUM'				=> 'Επιλογή Δ. Συζήτησης',
-	'SEND_EMAIL'				=> 'Ηλεκτρονικό ταχυδρομείο',				// Used for submit buttons
-	'SEND_EMAIL_USER'			=> 'Αποστολή ηλεκτρονικού ταχυδρομείου προς τον/την',				// Used as: {L_SEND_EMAIL_USER} {USERNAME} -> E-mail UserX
+	'SEND_EMAIL'				=> 'Send email',				// Used for submit buttons
+	'SEND_EMAIL_USER'			=> 'Send email to %s',
 	'SEND_PRIVATE_MESSAGE'		=> 'Αποστολή προσωπικού μηνύματος',
 	'SETTINGS'					=> 'Ρυθμίσεις',
 	'SIGNATURE'					=> 'Υπογραφή',
 	'SKIP'						=> 'Στο περιεχόμενο',
+	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'Ο κεντρικός υπολογιστής SMTP δεν υποστηρίζει την επικύρωση.',
 	'SORRY_AUTH_READ'			=> 'Δεν έχετε το δικαίωμα να αναγνώσετε την Δ. Συζήτηση.',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'Δεν έχετε το δικαίωμα να μεταφορτώσετε αυτό το συνημμένο.',
@@ -706,6 +818,8 @@ $lang = array_merge($lang, array(
 	'START_WATCHING_TOPIC'		=> 'Παρακολούθηση θέματος',
 	'STOP_WATCHING_FORUM'		=> 'Διακοπή παρακολούθησης Δ. Συζήτησης',
 	'STOP_WATCHING_TOPIC'		=> 'Διακοπή παρακολούθησης θέματος',
+	'STRING_LIST_MULTI'			=> '%1$s, and %2$s',
+	'STRING_LIST_SIMPLE'		=> '%1$s and %2$s',
 	'SUBFORUM'					=> 'Υπό-συζήτηση',
 	'SUBFORUMS'					=> 'Υπό-συζητήσεις',
 	'SUBJECT'					=> 'Θέμα',
@@ -717,51 +831,35 @@ $lang = array_merge($lang, array(
 	'THE_TEAM'			=> 'Η ομάδα',
 	'TIB'				=> 'TiB',
 	'TIME'				=> 'Ώρα',
-	
+	'TIMEOUT_PROCESSING_REQ'			=> 'Request timed out.',
+
 	'TOO_LARGE'						=> 'Η τιμή που εισαγάγατε είναι πολύ μεγάλη.',
 	'TOO_LARGE_MAX_RECIPIENTS'		=> 'Η τιμή του <strong>Μέγιστος αριθμός παραληπτών ανά προσωπικό μήνυμα</strong> που προσθέσατε στην ρύθμιση είναι πολύ μεγάλη.',
 
 	'TOO_LONG'						=> 'Η τιμή που προσθέσατε είναι μεγάλη.',
 
-	'TOO_LONG_AIM'					=> 'Το όνομα AIM που εισάγατε είναι πολύ μεγάλο.',
 	'TOO_LONG_CONFIRM_CODE'			=> 'Ο κωδικός επιβεβαίωσης που εισάγατε είναι πολύ μεγάλος.',
 	'TOO_LONG_DATEFORMAT'			=> 'Η μορφή ημερομηνίας που εισαγάγατε είναι πολύ  μεγάλη.',
-	'TOO_LONG_ICQ'					=> 'Ο αριθμός ICQ που εισάγατε είναι πολύ μεγάλος.',
-	'TOO_LONG_INTERESTS'			=> 'Τα ενδιαφέροντα που εισάγατε είναι πολύ μεγάλα.',
 	'TOO_LONG_JABBER'				=> 'Το όνομα μέλους Jabber που εισάγατε είναι πολύ μεγάλο.',
-	'TOO_LONG_LOCATION'				=> 'Η τοποθεσία που εισάγατε είναι πολύ μεγάλη.',
-	'TOO_LONG_MSN'					=> 'Το όνομα MSNM/WLM που εισάγατε είναι πολύ μεγάλο.',
 	'TOO_LONG_NEW_PASSWORD'			=> 'Ο κωδικός που εισάγατε είναι πολύ μεγάλος.',
-	'TOO_LONG_OCCUPATION'			=> 'Η ενασχόληση που εισάγατε είναι πολύ μεγάλη.',
 	'TOO_LONG_PASSWORD_CONFIRM'		=> 'Η επιβεβαίωση του κωδικού που εισάγατε είναι πολύ μεγάλη.',
 	'TOO_LONG_USER_PASSWORD'		=> 'Ο κωδικός που εισάγατε είναι πολύ μεγάλος.',
 	'TOO_LONG_USERNAME'				=> 'Το όνομα μέλους που εισάγατε είναι πολύ μεγάλο.',
-	'TOO_LONG_EMAIL'				=> 'Η διεύθυνση email που εισάγατε είναι πολύ μεγάλη.',
-	'TOO_LONG_EMAIL_CONFIRM'		=> 'Η επιβεβαίωση της διεύθυνσης email που εισάγατε είναι πολύ μεγάλη.',
-	'TOO_LONG_WEBSITE'				=> 'Η διεύθυνση σελίδας που εισάγατε είναι πολύ μεγάλη.',
-	'TOO_LONG_YIM'					=> 'Το όνομα Yahoo! Messenger που εισάγατε είναι πολύ μεγάλο.',
+	'TOO_LONG_EMAIL'				=> 'The email address you entered is too long.',
 
 	'TOO_MANY_VOTE_OPTIONS'			=> 'Προσπαθήσατε να ψηφίσετε για πάρα πολλές επιλογές.',
 
 	'TOO_SHORT'						=> 'Η τιμή που προσθέσατε είναι μικρή.',
 
-	'TOO_SHORT_AIM'					=> 'Το όνομα AIM που εισάγατε είναι πολύ μικρό.',
 	'TOO_SHORT_CONFIRM_CODE'		=> 'Ο κωδικός επιβεβαίωσης που εισάγατε είναι πολύ μικρός.',
 	'TOO_SHORT_DATEFORMAT'			=> 'Η μορφή ημερομηνίας που εισαγάγατε είναι πολύ  μικρή.',
-	'TOO_SHORT_ICQ'					=> 'Ο αριθμός ICQ που εισάγατε είναι πολύ μικρός.',
-	'TOO_SHORT_INTERESTS'			=> 'Τα ενδιαφέροντα που εισάγατε είναι πολύ μικρά.',
 	'TOO_SHORT_JABBER'				=> 'Το όνομα μέλους Jabber που εισάγατε είναι πολύ μικρό.',
-	'TOO_SHORT_LOCATION'			=> 'Η τοποθεσία που εισάγατε είναι πολύ μικρή.',
-	'TOO_SHORT_MSN'					=> 'Το όνομα MSNM/WLM που εισάγατε είναι πολύ μικρό.',
 	'TOO_SHORT_NEW_PASSWORD'		=> 'Ο κωδικός που εισάγατε είναι πολύ μικρός.',
-	'TOO_SHORT_OCCUPATION'			=> 'Η ενασχόληση που εισάγατε είναι πολύ μικρή',
 	'TOO_SHORT_PASSWORD_CONFIRM'	=> 'Η επιβεβαίωση του κωδικού που εισάγατε είναι πολύ μικρή.',
 	'TOO_SHORT_USER_PASSWORD'		=> 'Ο κωδικός που εισάγατε είναι πολύ μικρός.',
 	'TOO_SHORT_USERNAME'			=> 'Το όνομα μέλους που εισάγατε είναι πολύ μικρό.',
-	'TOO_SHORT_EMAIL'				=> 'Η διεύθυνση ηλεκτρονικού ταχυδρομείου που εισάγατε είναι πολύ μικρή.',
-	'TOO_SHORT_EMAIL_CONFIRM'		=> 'Η επιβεβαίωση της διεύθυνσης ηλεκτρονικού ταχυδρομείου που εισάγατε είναι πολύ μικρή.',
-	'TOO_SHORT_WEBSITE'				=> 'Η διεύθυνση σελίδας που εισάγατε είναι πολύ μικρή',
-	'TOO_SHORT_YIM'					=> 'Το όνομα Yahoo! Messenger που εισάγατε είναι πολύ μικρό.',
+	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
+	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
 	
 	'TOO_SMALL'						=> 'Η τιμή που προσθέσατε είναι μικρή.',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> 'Η τιμή του <strong>Μέγιστος αριθμός παραληπτών ανά προσωπικό μήνυμα</strong> που προσθέσατε στην ρύθμιση είναι πολύ μικρή.',
@@ -775,30 +873,20 @@ $lang = array_merge($lang, array(
 	'TOPIC_MOVED'		=> 'Το Θέμα μετακινήθηκε',
 	'TOPIC_REVIEW'		=> 'Περίληψη Θέματος',
 	'TOPIC_TITLE'		=> 'Τίτλος θέματος',
-	'TOPIC_UNAPPROVED'	=> 'Αυτό το θέμα δεν εγκρίθηκε',
+	'TOPIC_UNAPPROVED'	=> 'This topic has not been approved.',
+	'TOPIC_DELETED'		=> 'This topic has been deleted.',
 	'TOTAL_ATTACHMENTS'	=> 'Συνημμένο(α)',
-	'TOTAL_LOG'			=> '1 αρχείο ιστορικού',
-	'TOTAL_LOGS'		=> '%d αρχεία ιστορικού',
-	'TOTAL_NO_PM'		=> '0 προσωπικά μηνύματα συνολικά',
-	'TOTAL_PM'			=> '1 προσωπικά μηνύματα συνολικά',
-	'TOTAL_PMS'			=> '$d προσωπικά μηνύματα συνολικά',
+	'TOPIC_POLL'		=> 'This topic has a poll.',
 	'TOTAL_POSTS'		=> 'Συνολικές δημοσιεύσεις',
-	'TOTAL_POSTS_OTHER'	=> 'Συνολικές δημοσιεύσεις <strong>%s</strong>',
-	'TOTAL_POSTS_ZERO'	=> 'Συνολικές δημοσιεύσεις <strong>0</strong>',
 	'TOPIC_REPORTED'	=> 'Το θέμα αναφέρθηκε',
-	'TOTAL_TOPICS_OTHER'=> 'Σύνολο θεμάτων <strong>%s</strong>',
-	'TOTAL_TOPICS_ZERO'	=> 'Σύνολο θεμάτων <strong>0</strong>',
-	'TOTAL_USERS_OTHER'	=> 'Σύνολο μελών <strong>%s</strong>',
-	'TOTAL_USERS_ZERO'	=> 'Σύνολο μελών <strong>0</strong>',
 	'TRACKED_PHP_ERROR'	=> 'Εντοπισμένα λάθη PHP: %s',
+	'TWITTER'			=> 'Twitter',
 
-	'UNABLE_GET_IMAGE_SIZE'	=> 'Η πρόσβαση στην εικόνα είναι αδύνατη ή το αρχείο δεν ήταν εικόνα.',
+	'UNABLE_GET_IMAGE_SIZE'	=> 'It was not possible to determine the dimensions of the image. Please verify that the URL you entered is correct.',
 	'UNABLE_TO_DELIVER_FILE'=> 'Αδυναμία παράδοσης αρχείου.',
 	'UNKNOWN_BROWSER'		=> 'Άγνωστος πλοηγός',
 	'UNMARK_ALL'			=> 'Αποεπιλογή όλων',
 	'UNREAD_MESSAGES'		=> 'Μη αναγνωσμένα μηνύματα',
-	'UNREAD_PM'				=> '<strong>%d</strong> μη αναγνωσμένο μηνύμα',
-	'UNREAD_PMS'			=> '<strong>%d</strong> μη αναγνωσμένα μηνύματα',
 	'UNREAD_POST'			=> 'Μη αναγνωσμένη δημοσίευση',
 	'UNREAD_POSTS'			=> 'Μη αναγνωσμένες δημοσιεύσεις',
 	'UNWATCH_FORUM_CONFIRM'		=> 'Είστε σίγουροι ότι δεν θέλετε να παρακολουθείτε την Δ. Συζήτηση?',
@@ -816,8 +904,6 @@ $lang = array_merge($lang, array(
 	'USERNAMES'				=> 'Ονόματα μελών',
 	'USER_AVATAR'			=> 'Άβαταρ μέλους',
 	'USER_CANNOT_READ'		=> 'Δεν μπορείτε να διαβάσετε δημοσιεύσεις σε αυτή την Δ. Συζήτηση',
-	'USER_POST'				=> '%d Δημοσίευση',
-	'USER_POSTS'			=> '%d Δημοσιεύσεις',
 	'USERS'					=> 'Μέλη',
 	'USE_PERMISSIONS'		=> 'Δοκιμάστε τα δικαιώματα του μέλους',
 
@@ -825,6 +911,8 @@ $lang = array_merge($lang, array(
 
 	'VARIANT_DATE_SEPARATOR'	=> ' / ',	// Used in date format dropdown, eg: "Today, 13:37 / 01 Jan 2007, 13:37" ... to join a relative date with calendar date
 	'VIEWED'					=> 'Προβολές',
+
+	'VIEWING_CONTACT_ADMIN'		=> 'Viewing contact page',
 	'VIEWING_FAQ'				=> 'Επισκόπηση Συχνών Ερωτήσεων',
 	'VIEWING_MEMBERS'			=> 'Επισκόπηση λεπτομερειών μέλους',
 	'VIEWING_ONLINE'			=> 'Επισκόπηση μελών υπό σύνδεση',
@@ -839,8 +927,6 @@ $lang = array_merge($lang, array(
 	'VIEW_LATEST_POST'			=> 'Προβολή τελευταίας δημοσίευσης',
 	'VIEW_NEWEST_POST'			=> 'Δείτε τις τελευταίες μη αναγνωσμένες δημοσιεύσεις',
 	'VIEW_NOTES'				=> 'Προβολή σημειώσεων μέλους',
-	'VIEW_ONLINE_TIME'			=> 'με βάση  ενεργά μέλη που έχουν συνδεθεί το τελευταίο %d λεπτό',
-	'VIEW_ONLINE_TIMES'			=> 'με βάση ενεργά μέλη που έχουν συνδεθεί τα τελευταία %d λεπτά',
 	'VIEW_TOPIC'				=> 'Προβολή θέματος',
 	'VIEW_TOPIC_ANNOUNCEMENT'	=> 'Ανακοίνωση: ',
 	'VIEW_TOPIC_GLOBAL'			=> 'Γενική ανακοίνωση: ',
@@ -861,23 +947,24 @@ $lang = array_merge($lang, array(
 	'WEBSITE'			=> 'Ιστοσελίδα',
 	'WHOIS'				=> 'Ποιος',
 	'WHO_IS_ONLINE'		=> 'Μέλη σε σύνδεση',
+	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'Ο κωδικός που εισάγατε είναι λάθος.',
 	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
-	'WRONG_DATA_ICQ'			=> 'Ο αριθμός που εισάγατε δεν είναι έγκυρος ICQ αριθμός.',
 	'WRONG_DATA_JABBER'			=> 'Το όνομα που εισάγατε δεν είναι ένας έγκυρος λογαριασμός Jabber.',
 	'WRONG_DATA_LANG'			=> 'Η γλώσσα που ορίσατε δεν είναι έγκυρη.',
-	'WRONG_DATA_WEBSITE'		=> 'Η διεύθυνση της ιστοσελίδας πρέπει να είναι ένας έγκυρος σύνδεσμος, συμπεριλαμβάνοντας και τον κωδικό του πρωτοκόλλου. Για παράδειγμα http://www.example.com/.',
+	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
+	'WRONG_DATA_POST_SK'		=> 'The post sort option you specified is not valid.',
+	'WRONG_DATA_TOPIC_SD'		=> 'The topic sort direction you specified is not valid.',
+	'WRONG_DATA_TOPIC_SK'		=> 'The topic sort option you specified is not valid.',
 	'WROTE'						=> 'έγραψε',
 
+	'YAHOO'				=> 'Yahoo Messenger',
+	'YOUTUBE'			=> 'YouTube',
 	'YEAR'				=> 'Χρόνος',
 	'YEAR_MONTH_DAY'	=> '(YYYY-MM-DD)',
 	'YES'				=> 'Ναι',
-	'YIM'				=> 'YIM',
 	'YOU_LAST_VISIT'	=> 'Τελευταία επίσκεψη: %s',
-	'YOU_NEW_PM'		=> 'Ένα νέο προσωπικό μήνυμα υπάρχει στα εισερχόμενα',
-	'YOU_NEW_PMS'		=> 'Υπάρχουν νέα προσωπικά μηνύματα στα εισερχόμενα.',
-	'YOU_NO_NEW_PM'		=> 'Δεν υπάρχουν νέα προσωπικά μηνύματα.',
 
 	'default_dateformat'	=> 'D M d, Y g:i a', // Mon Jan 01, 2007 1:37 pm
 
@@ -1083,7 +1170,6 @@ $lang = array_merge($lang, array(
 
 	'FORUM_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this forum.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this topic.',
-	'TOO_FEW_CHARS_LIMIT'	=> 'Το μήνυμά σας περιέχει %1$d χαρακτήρες. Ο ελάχιστος αριθμός χαρακτήρων που πρέπει να εισαγάγετε είναι  %2$d.',
 	'REPLY_TO_MESSAGE'		=> 'Reply to message',
 
 	'RSS_CHAN_LIST_TITLE'	=> 'Δ. Συζητήσεις',
@@ -1695,7 +1781,6 @@ $lang = array_merge($lang, array(
 	'DEV_NO_TEST_FILE'			=> 'Καμία τιμή δεν έχει καθοριστεί για την μεταβλητή test_file στον μετατροπέα. Αν είσαι χρήστης του μετατροπέα, δεν έπρεπε να υπάρχει τέτοιο πρόβλημα, παρακαλώ αναφέρετε αυτό το μήνυμα στον συγγραφέα του μετατροπέα. Αν είστε ο συγγραφέας του μετατροπέα, πρέπει να καθορίσετε το όνομα ενός αρχείου που υπάρχει στο πηγαίο σύστημα για να επιτραπεί στην διαδρομή να εξεταστεί για την εγκυρότητα.',
 	'DIRECTORIES_AND_FILES'		=> 'Ρυθμίσεις φακέλων και αρχείων',
 	'DISABLE_KEYS'				=> 'Κλειδιά απενεργοποίησης',
-	'DLL_FIREBIRD'				=> 'Firebird',
 	'DLL_FTP'					=> 'Υποστήριξη απομακρυσμένου FTP [ Εγκατάσταση ]',
 	'DLL_GD'					=> 'Υποστήριξη GD γραφικών [ Οπτική επιβεβαίωση ]',
 	'DLL_MBSTRING'				=> 'Multi-byte υποστήριξη χαρακτήρων',
@@ -1706,11 +1791,12 @@ $lang = array_merge($lang, array(
 	'DLL_MYSQLI'				=> 'MySQL με MySQLi Extension',
 	'DLL_ORACLE'				=> 'Oracle',
 	'DLL_POSTGRES'				=> 'PostgreSQL',
-	'DLL_SQLITE'				=> 'SQLite',
+	'DLL_SQLITE'				=> 'SQLite 2',
+	'DLL_SQLITE3'				=> 'SQLite 3',
 	'DLL_XML'					=> 'Υποστήριξη XML [ Jabber ]',
 	'DLL_ZLIB'					=> 'Υποστήριξη συμπίεσης zlib [ gz, .tar.gz, .zip ]',
 	'DL_CONFIG'					=> 'Ρυθμίσεις μεταφορτώσεων',
-	'DL_CONFIG_EXPLAIN'			=> 'Μπορείτε να κατεβάσετε όλο το config.php στο δικό σας PC. Μετά θα χρειαστεί να ανεβάσετε το αρχείο χειροκίνητα, αντικαθιστώντας οποιοδήποτε config.php στο φάκελο του phpBB 3.0. Παρακαλώ θυμηθείτε να ανεβάσετε το αρχείο σε κωδικοποίηση ASCII (δες τις οδηγίες της εφαρμογής FTP αν δεν είσαι σίγουρος πώς γίνετε αυτό). Όταν ανεβάσετε το config.php κάντε κλικ στο “Εντάξει” για να προχωρήσετε στο επόμενο στάδιο.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'Μεταφόρτωση',
 	'DONE'						=> 'Εντάξει',
 
@@ -1722,8 +1808,6 @@ $lang = array_merge($lang, array(
 	'FILES_REQUIRED_EXPLAIN'	=> '<strong>Απαραίτητα</strong> - Για να λειτουργήσει σωστά το phpBB χρειάζεται να έχει πρόσβαση σε συγκεκριμένα αρχεία και και φακέλους. Αν δείτε “Δεν βρέθηκε” πρέπει να δημιουργήσετε το σχετικό αρχείο ή φάκελο. Αν δείτε “Αδυναμία εγγραφής” πρέπει να αλλάξετε τις άδειες για το αρχείο ή τον φάκελο για να επιτραπεί στο phpBB να γράψει σε αυτό.',
 	'FILLING_TABLE'				=> 'Συμπλήρωση πίνακα <strong>%s</strong>',
 	'FILLING_TABLES'			=> 'Συμπλήρωση πινάκων',
-
-	'FIREBIRD_DBMS_UPDATE_REQUIRED'		=> 'Το phpBB δεν υποστηρίζει πλέον Firebird/Interbase εκδόσεις πριν την 2.1. Παρακαλώ ενημερώστε την δικιά σας έκδοση  Firebird και στην τελευταία  2.1.0 πριν συνεχίσετε την αναβάθμιση',
 
 	'FINAL_STEP'				=> 'Τελικό βήμα διαδικασίας',
 	'FORUM_ADDRESS'				=> 'Διεύθυνση συστήματος',
@@ -1750,30 +1834,30 @@ $lang = array_merge($lang, array(
 		<p>Πατήστε το παρακάτω κουμπί για να μεταφερθείτε στον Πίνακα Ελέγχου Διαχειριστή (ACP)και να στείλετε ορισμένες πληροφορίες στατιστικών στο phpBB . Θα το εκτιμούσαμε εάν στέλνατε ορισμένες πληροφορίες.  Διαφορετικά θα πρέπει να περιμένετε λίγο μέχρι αυτές η πληροφορίες να είναι διαθέσιμες . Θυμηθείτε ότι υπάρχει διαθέσιμη βοήθεια απευθείας μέσω του <a href="http://www.phpbb.com/support/documentation/3.0/">Documentation</a>, <a href="%3$s">README</a> και των <a href="http://www.phpbb.com/community/viewforum.php?f=46">Δ. Συζητήσεων υποστήριξης</a>, για περισσότερες πληροφορίες.</p><p><strong>Παρακαλώ διαγράψτε, μετακινήστε ή μετονομάστε τον φάκελο εγκατάστασης (install) Πριν συνεχίσετε. Αν υπάρχει αυτός ο φάκελος, μόνο ο Πίνακας Ελέγχου Διαχειριστή (ACP) είναι προσβάσιμος.</strong>',
 	'INSTALL_INTRO'				=> 'Καλώς ήρθατε στην εγκατάσταση',
 
-	'INSTALL_INTRO_BODY'		=> 'Με αυτή την επιλογή, είναι πιθανό να εγκαταστήσετε το phpBB3 στον κεντρικό υπολογιστή σας.</p><p>Για να συνεχίσετε, θα χρειαστείτε τις ρυθμίσεις της Βάσης Δεδομένων σας. Αν δεν ξέρετε τις ρυθμίσεις της Βάσης Δεδομένων σας, επικοινωνήστε με τον παροχέα hosting και ζητήστε τις. Δεν μπορείτε να συνεχίσετε χωρίς αυτές. Χρειάζεστε:</p>
+	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
 
 	<ul>
-		<li>Τον τύπο της Β. Δεδομένων - την Β. Δεδομένων που θα χρησιμοποιηθεί.</li>
-		<li>Όνομα κεντρικού υπολογιστή Βάσης Δεδομένων ή DSN - την διεύθυνση του κεντρικού υπολογιστή της Β. Δεδομένων.</li>
-		<li>Θύρα κεντρικού υπολογιστή Β. Δεδομένων - η θύρα του κεντρικού υπολογιστή της Β. Δεδομένων (τις περισσότερες φορές δεν χρειάζεται).</li>
-		<li>Όνομα Β. Δεδομένων - το όνομα της Β. Δεδομένων στον κεντρικό υπολογιστή.</li>
-		<li>Όνομα χρήστη και κωδικός πρόσβασης Β. Δεδομένων - τα στοιχεία σύνδεσης για πρόσβαση στην Β. Δεδομένων.</li>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
 	</ul>
 
-	<p><strong>Σημείωση:</strong> αν εγκαθιστάτε χρησιμοποιώντας SQLite, πρέπει να βάλετε ολόκληρη την διαδρομή για το αρχείο της Β. Δεδομένων στο πεδίο DSN και αφήστε το όνομα χρήστη και τον κωδικό κενά. Για λόγους ασφαλείας, πρέπει να σιγουρευτείτε ότι το αρχείο της Β. Δεδομένων δεν είναι αποθηκευμένο σε τοποθεσία προσβάσιμη από τον ιστό.</p>
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
 
-	<p>Το phpBB3 υποστηρίζει τις ακόλουθες Β. Δεδομένων:</p>
+	<p>phpBB3 supports the following databases:</p>
 	<ul>
-		<li>MySQL 4.1 ή νεότερη (MySQLi υποστήριξη)</li>
-		<li>PostgreSQL 7.3+</li>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
 		<li>SQLite 2.8.2+</li>
-		<li>Firebird 2.1+</li>
-		<li>MS SQL Server 2000 ή νεώτερο (άμεσα ή μέσω ODBC)</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
 		<li>Oracle</li>
-		<li>IBM DB2</li>
 	</ul>
-	
-	<p>Μόνο οι τύποι Β. Δεδομένων που υποστηρίζονται από τον κεντρικό υπολογιστή σας θα εμφανίζονται.',
+
+	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'Για την πραγματοποίηση της εγκατάστασης, παρακαλώ πατήστε το κουμπί κάτω.',
 	'INSTALL_LOGIN'				=> 'Σύνδεση',
 	'INSTALL_NEXT'				=> 'Επόμενο στάδιο',
@@ -1789,9 +1873,8 @@ $lang = array_merge($lang, array(
 	'INST_ERR_DB_NO_ERROR'		=> 'Κανένα μήνυμα λάθους δεν δόθηκε.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'Η έκδοση της MySQL που είναι εγκατεστημένη σε αυτό το μηχάνημα δεν είναι συμβατή με “MySQL με MySQLi Extension” που επιλέξατε. Παρακαλώ δοκιμάστε την επιλογή “MySQL”.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'Η έκδοση της επέκτασης SQLite που είναι εγκατεστημένη είναι πολύ παλιά, πρέπει να αναβαθμιστεί τουλάχιστον σε 2.8.2.',
+	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'Η έκδοση του Oracle που είναι εγκατεστημένη απαιτεί να θέσετε την παράμετρο <var>NLS_CHARACTERSET</var> σε <var>UTF8</var>. Ή να αναβαθμίσετε την εγκατάσταση σε 9.2+ ή να αλλάξετε την παράμετρο.',
-	'INST_ERR_DB_NO_FIREBIRD'	=> 'Η έκδοση του Firebird που είναι εγκατεστημένη είναι παλαιότερη από 2.1, παρακαλώ αναβαθμίστε σε νεώτερη έκδοση.',
-	'INST_ERR_DB_NO_FIREBIRD_PS'=> 'Η Β. Δεδομένων που επιλέξατε για τον Firebird έχει μέγεθος σελίδας μικρότερο από 8192, πρέπει να είναι τουλάχιστο 8192.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'Η Β. Δεδομένων που επιλέξατε δεν δημιουργήθηκε σε κωδικοποίηση <var>UNICODE</var> ή σε <var>UTF8</var>. Προσπαθήστε να εγκαταστήσετε σε κωδικοποίηση <var>UNICODE</var> ή <var>UTF8</var>.',
 	'INST_ERR_DB_NO_NAME'		=> 'Κανένα όνομα δεν έχει καθοριστεί για την Β. Δεδομένων.',
 	'INST_ERR_EMAIL_INVALID'	=> 'Η διεύθυνση ηλεκτρονικού ταχυδρομείου που εισαγάγατε δεν είναι σωστή.',
@@ -1845,6 +1928,8 @@ $lang = array_merge($lang, array(
 	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'Το phpBB <strong>δεν</strong> θα λειτουργήσει αν η μονάδα PHP δεν είναι κωδικοποιημένη σε UTF-8 με υποστήριξη σε PCRE.',
 	'PHP_GETIMAGESIZE_SUPPORT'			=> 'Η λειτουργία PHP getimagesize() είναι διαθέσιμη',
 	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Απαραίτητα</strong> - Για να λειτουργεί σωστά το phpBB, η λειτουργία getimagesize πρέπει να είναι διαθέσιμη.',
+	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'Προαιρετικές μονάδες',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>Προαιρετικά</strong> - Αυτές οι μονάδες ή εφαρμογές είναι προαιρετικές. Ωστόσο, αν είναι διαθέσιμες θα ενεργοποιήσουν περισσότερες λειτουργίες.',
 	'PHP_SUPPORTED_DB'				=> 'Υποστηριζόμενες Βάσεις Δεδομένων',
@@ -1853,10 +1938,10 @@ $lang = array_merge($lang, array(
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'Το phpBB θα συνεχίσει να λειτουργεί αν αυτό είναι ενεργοποιημένο, αλλά αν είναι δυνατόν, προτείνετε το register_globals να είναι απενεργοποιημένο στο PHP για λόγους ασφαλείας.',
 	'PHP_SAFE_MODE'					=> 'Ασφαλής λειτουργία',
 	'PHP_SETTINGS'					=> 'Έκδοση και ρυθμίσεις PHP',
-	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Απαραίτητα</strong> - Πρέπει να έχετε τουλάχιστον την έκδοση 5.1.0 για το PHP για την εγκατάσταση του phpBB. Αν το <var>safe mode</var> εμφανίζετε κάτω από το PHP η εγκατάσταση τρέχει σε ασφαλή λειτουργία.',
+	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'Η ρύθμιση PHP <var>allow_url_fopen</var> είναι ενεργοποιημένη',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>Προαιρετικά</strong> - Αυτή η ρύθμιση είναι προαιρετική, Ωστόσο συγκεκριμένες λειτουργίες του phpBB όπως άβαταρ εκτός σελίδας δεν θα λειτουργούν σωστά χωρίς αυτό. ',
-	'PHP_VERSION_REQD'				=> 'Έκδοση PHP >= 4.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
 	'POST_ID'						=> 'Ταυτότητα δημοσίευσης',
 	'PREFIX_FOUND'					=> 'Μια σάρωση στους πίνακες έδειξε ότι μπορεί να γίνει ομαλή εγκατάσταση χρησιμοποιώντας <strong>%s</strong> ως πρόθεμα πινάκων.',
 	'PREPROCESS_STEP'				=> 'Εκτελούνται προ-επεξεργασμένες λειτουργίες',
@@ -1876,6 +1961,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> 'Ρυθμίσεις κεντρικού υπολογιστή',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Το ευρετήριο αναζήτησης δεν μετατράπηκε',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Το παλιό ευρετήριο αναζήτησης δεν μετατράπηκε. Η αναζήτηση θα επιστρέφει πάντα κενό αποτέλεσμα. Για τη δημιουργία νέας αναζήτησης πηγαίνετε στον Πίνακα Ελέγχου Διαχειριστή, Επιλέξετε Συντήρηση και μετά ευρετήριο Αναζήτησης από το υπό-μενού.',
+	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> 'Λογισμικό συστήματος',
 	'SPECIFY_OPTIONS'			=> 'Καθορίστε επιλογές μετατροπής',
 	'STAGE_ADMINISTRATOR'		=> 'Λεπτομέρειες Διαχειριστή',
@@ -1883,7 +1969,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> 'Αυτές οι ρυθμίσεις είναι απαραίτητες μόνο αν γνωρίζετε οτι χρειάζεστε κάτι άλλο εκτός από τις προεπιλογές. Αν δεν είστε σίγουροι, απλά προχωρήστε στην επόμενη σελίδα, αφού αυτές οι ρυθμίσεις μπορούν να γίνουν μετά από τον Πίνακα Ελέγχου Διαχειριστή.',
 	'STAGE_CONFIG_FILE'			=> 'Αρχείο ρυθμίσεων',
 	'STAGE_CREATE_TABLE'		=> 'Δημιουργία πινάκων Β. Δεδομένων',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'Οι πίνακες που χρησιμοποιούνται από το phpBB 3.0 έχουν δημιουργηθεί και εμπλουτιστεί με δεδομένα. Προχωρήστε στην επόμενη οθόνη για την ολοκλήρωση της εγκατάστασης του phpBB.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'Ρυθμίσεις Β. Δεδομένων',
 	'STAGE_FINAL'				=> 'Τελικό βήμα',
 	'STAGE_INTRO'				=> 'Εισαγωγή',
@@ -1896,7 +1982,7 @@ $lang = array_merge($lang, array(
 	'SUB_LICENSE'				=> 'Άδεια',
 	'SUB_SUPPORT'				=> 'Υποστήριξη',
 	'SUCCESSFUL_CONNECT'		=> 'Επιτυχής σύνδεση',
-	'SUPPORT_BODY'				=> 'Η πλήρης υποστήριξη θα παρασχεθεί για την τρέχουσα σταθερή έκδοση phpBB3, δωρεάν. Αυτό περιλαμβάνει:</p><ul><li>εγκατάσταση</li><li>ρυθμίσεις</li><li>τεχνικές ερωτήσεις</li><li>προβλήματα σχετικά με τα πιθανά λάθη στο λογισμικό </li><li>ενημέρωση από Release Candidate (RC) εκδόσεις  στην τελευταία τελική έκδοση</li><li>μετατροπή από phpBB 2.0.x σε phpBB3</li><li>μετατροπή από άλλο λογισμικό πινάκων συζήτησης  σε phpBB3 (παρακαλώ δείτε <a href="http://www.phpbb.com/community/viewforum.php?f=65">Μετατροπή Φόρουμ</a>)</li></ul><p>Ενθαρρύνουμε τους χρήστες που τρέχουν ακόμα τις δοκιμαστικές εκδόσεις phpBB3  να αντικαταστήσουν την εγκατάστασή τους με ένα φρέσκο αντίγραφο της ποιο πρόσφατης έκδοση.</p><h2>MODs / Styles</h2><p>Για τα ζητήματα σχετικά με  MODs, παρακαλώ δημοσιεύστε μέσα στο <a href="http://www.phpbb.com/community/viewforum.php?f=81">Modifications Forum</a>.<br />Για τα ζητήματα σχετικά με  θέματα, πρότυπα και σύνολα εικόνων, παρακαλώ δημοσιεύστε μέσα στο <a href="http://www.phpbb.com/community/viewforum.php?f=80">Styles Forum</a>.<br /><br />Εάν η ερώτησή σας αφορά ένα συγκεκριμένο πακέτο, παρακαλώ δημοσιεύστε άμεσα στο θέμα που έχει οριστεί για το πακέτο.</p><h2>Λήψη Υποστήριξης</h2><p><a href="http://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">Το πακέτο καλώς ορίσματος  phpBB Welcome Package</a><br /><a href="http://www.phpbb.com/support/">Περιοχή Υποστήριξης</a><br /><a href="http://www.phpbb.com/support/documentation/3.0/quickstart/">Γρήγορος Οδηγός Έναρξης </a><br /><br />Για  να σιγουρευτείτε ότι έχετε τα τελευταία νέα, γιατί όχι <a href="http://www.phpbb.com/support/">εγγραφείτε στη λίστα ηλεκτρονικού   ταχυδρομείου</a>?<br /><br />',
+	'SUPPORT_BODY'				=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/documentation/3.1/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
 	'SYNC_FORUMS'				=> 'Έναρξη συγχρονισμού Δ. Συζήτησης',
 	'SYNC_POST_COUNT'			=> 'Συγχρονισμός μετρητή δημοσιεύσεων',
 	'SYNC_POST_COUNT_ID'		=> 'Συγχρονισμός μετρητή δημοσιεύσεων από <var>Καταχώρηση </var> %1$s μέχρι %2$s.',
@@ -1922,7 +2008,7 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ALL_FILES_UP_TO_DATE'		=> 'Όλα τα αρχεία είναι ενημερωμένα στην τελευταία έκδοση του phpBB. Τώρα πρέπει να <a href="../ucp.php?mode=login"> συνδεθείτε στο σύστημα</a> και να ελέγξετε αν όλα λειτουργούν καλά. Μην ξεχάσετε να διαγράψετε, μετονομάσετε ή μετακινήσετε τον φάκελο εγκατάστασης (install)!',
+	'ALL_FILES_UP_TO_DATE'		=> 'All files are up to date with the latest phpBB version.',
 	'ARCHIVE_FILE'				=> 'Αρχείο πηγής μέσα στο αρχείο',
 
 	'BACK'				=> 'Πίσω',
@@ -1945,7 +2031,10 @@ $lang = array_merge($lang, array(
 	'CURRENT_VERSION'				=> 'Συγκεκριμένη έκδοση',
 
 	'DATABASE_TYPE'						=> 'Τύπος Β. Δεδομένων',
+	'DATABASE_UPDATE_COMPLETE'			=> 'Database updater has completed!',
+	'DATABASE_UPDATE_CONTINUE'			=> 'Continue database update',
 	'DATABASE_UPDATE_INFO_OLD'			=> 'Το αρχείο αναβάθμισης της Β. Δεδομένων στο φάκελο εγκατάστασης δεν είναι νέο. Παρακαλώ σιγουρευτείτε ότι έχετε ανεβάσει τη σωστή έκδοση του αρχείου.',
+	'DATABASE_UPDATE_NOT_COMPLETED'		=> 'The database update has not yet completed.',
 	'DELETE_USER_REMOVE'				=> 'Διαγράψτε το μέλος και αφαιρέστε τις δημοσιεύσεις ',
 	'DELETE_USER_RETAIN'				=> 'Διαγράψτε το μέλος και κρατήστε τις δημοσιεύσεις',
 	'DESTINATION'						=> 'Αρχείο προορισμού',
@@ -1964,14 +2053,17 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_UPDATE_METHOD'			=> 'Μεταφόρτωση αρχείου επεξεργασμένων αρχείων',
 	'DOWNLOAD_UPDATE_METHOD_EXPLAIN'	=> 'Όταν μεταφορτώσετε πρέπει να αποσυμπιέσετε αυτό το αρχείο. Θα βρείτε τα επεξεργασμένα αρχεία που πρέπει να ανεβάσετε στο φάκελο του phpBB. Μετά μετακινήστε τα αρχεία στις κανονικές τους θέσεις. Μετά το ανέβασμα όλων των αρχείων, παρακαλώ ελέγξετε τα αρχεία ξανά με το κουμπί παρακάτω.',
 
-	'ERROR'			=> 'Σφάλμα',
 	'EDIT_USERNAME'	=> 'Επεξεργασία όνομα μέλους',
+	'ERROR'			=> 'Σφάλμα',
+	'EVERYTHING_UP_TO_DATE'		=> 'Everything is up to date with the latest phpBB version. You should now <a href="%1$s">login to your board</a> and check if everything is working fine. Do not forget to delete, rename or move your install directory! Please send us updated information about your server and board configurations from the <a href="%2$s">Send statistics</a> module in your ACP.',
 
 	'FILE_ALREADY_UP_TO_DATE'		=> 'Το αρχείο είναι αναβαθμισμένο.',
 	'FILE_DIFF_NOT_ALLOWED'			=> 'Το αρχείο δεν επιτρέπεται να διαμορφωθεί.',
 	'FILE_USED'						=> 'Πληροφορίες χρησιμοποιούνται από',			// Single file
 	'FILES_CONFLICT'				=> 'Συγκρουόμενα αρχεία',
 	'FILES_CONFLICT_EXPLAIN'		=> 'Τα επόμενα αρχεία έχουν επεξεργαστεί και δεν αντιπροσωπεύουν τα αυθεντικά αρχεία της παλιάς εγκατάστασης. Το phpBB αποφάσισε ότι θα προκαλέσουν σύγκρουση αν γίνει προσπάθεια διαχωρισμού. Παρακαλώ ελέγξτε τη σύγκρουση και προσπαθήστε χειροκίνητα να λύσετε το πρόβλημα ή συνεχίστε την αναβάθμιση επιλέγοντας την σωστή μέθοδο διαχωρισμού. Αν το κάνετε χειροκίνητα τότε σιγουρευτείτε μετά ότι είναι εντάξει. Το πρώτο θα επέλθει από ένα αρχείο που οι γραμμές σύγκρουσης θα έχουν εξαφανιστεί, το άλλο θα αντιστοιχεί στο να χαθούν οι αλλαγές από το νέο.',
+	'FILES_DELETED'					=> 'Deleted files',
+	'FILES_DELETED_EXPLAIN'			=> 'The following files do not exist in the new version. These files have to be deleted from your installation.',
 	'FILES_MODIFIED'				=> 'Επεξεργασμένα αρχεία',
 	'FILES_MODIFIED_EXPLAIN'		=> 'Τα επόμενα αρχεία έχουν επεξεργαστεί και δεν αντιπροσωπεύουν τα αυθεντικά αρχεία από την παλιά σας έκδοση. Το αναβαθμισμένο αρχείο θα είναι αποτέλεσμα της επεξεργασίας σας και του νέου αρχείου.',
 	'FILES_NEW'						=> 'Νέα αρχεία',
@@ -2033,6 +2125,7 @@ $lang = array_merge($lang, array(
 	'PREVIOUS_VERSION'					=> 'Προηγούμενη έκδοση',
 	'PROGRESS'							=> 'Πρόοδος',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Announcement',
 	'RESULT'					=> 'Αποτέλεσμα',
 	'RUN_DATABASE_SCRIPT'		=> 'Αναβάθμιση της Β. Δ. τώρα',
 
@@ -2040,6 +2133,7 @@ $lang = array_merge($lang, array(
 	'SELECT_DOWNLOAD_FORMAT'	=> 'Επιλέξτε κωδικοποίηση μεταφορτωμένου συμπιεσμένου αρχείου',
 	'SELECT_FTP_SETTINGS'		=> 'Επιλέξετε ρυθμίσεις FTP',
 	'SHOW_DIFF_CONFLICT'		=> 'Δείξε διαφορές/συγκρούσεις',
+	'SHOW_DIFF_DELETED'			=> 'Show file contents',
 	'SHOW_DIFF_FINAL'			=> 'Δείξε αρχείο αποτελεσμάτων',
 	'SHOW_DIFF_MODIFIED'		=> 'Δείξε διαφορές ενοποίησης',
 	'SHOW_DIFF_NEW'				=> 'Δείξε περιεχόμενα αρχείου',
@@ -2053,6 +2147,7 @@ $lang = array_merge($lang, array(
 	'STAGE_UPDATE_FILES'		=> 'Αναβάθμιση αρχείων',
 	'STAGE_VERSION_CHECK'		=> 'Έλεγχος έκδοσης',
 	'STATUS_CONFLICT'			=> 'Τα επεξεργασμένα αρχεία παράγουν συγκρούσεις',
+	'STATUS_DELETED'			=> 'Deleted file',
 	'STATUS_MODIFIED'			=> 'Επεξεργασμένο αρχείο',
 	'STATUS_NEW'				=> 'Νέο αρχείο',
 	'STATUS_NEW_CONFLICT'		=> 'Σύγκρουση νέου αρχείου',
@@ -2073,33 +2168,27 @@ $lang = array_merge($lang, array(
 	'UPDATE_INSTALLATION_EXPLAIN'	=> 'Με αυτή την επιλογή, είναι πιθανό να αναβαθμίσετε την εγκατάσταση phpBB στην τελευταία έκδοση.<br />Κατά την διαδικασία όλα τα αρχεία θα ελεγχθούν για την δομή τους. Είστε σε θέση να δείτε τα αρχεία και τις επεξεργασίας πριν την αναβάθμιση.<br /><br />Η αναβάθμιση μέσω αρχείου μπορεί να γίνει με δύο διαφορετικούς τρόπους.</p><h2>Χειροκίνητη αναβάθμιση</h2><p>Με αυτή την επιλογή μόνο μεταφορτώνετε τα αρχεία που έχετε επεξεργαστεί για να μη χαθούν τα modifications σας. Μετά αφού μεταφορτώσετε αυτό το πακέτο χρειάζεται να ανεβάσετε χειροκίνητα τα αρχεία στη σωστή τους θέση στο φάκελο του phpBB. Όταν γίνει, είστε σε θέση να κάνετε τον έλεγχο των αρχείων ξανά για να δείτε αν βάλατε τα αρχεία στη σωστή τους θέση.</p><h2>Αυτόματη αναβάθμιση με FTP</h2><p>Αυτή η μέθοδος είναι παρόμοια με την πρώτη αλλά χωρίς να χρειάζεται να κατεβάσετε τα αλλαγμένα αρχεία και να τα ανεβάσετε μόνοι σας. Αυτό θα γίνει για σας. Για να γίνει αυτή η μέθοδος πρέπει να ξέρετε τα στοιχεία σύνδεση του FTP γιατί θα σας ζητηθούν. Όταν τελειώσετε θα μεταφερθείτε στον έλεγχο αρχείων ξανά για να σιγουρευτείτε ότι όλα αναβαθμίστηκαν σωστά.<br /><br />',
 	'UPDATE_INSTRUCTIONS'			=> '
 
-		<h1>Ανακοίνωση</h1>
+		<h1>Release announcement</h1>
 
-		<p>Παρακαλώ διαβάστε <a href="%1$s" title="%1$s">την ανακοίνωση για την τελευταία έκδοση</a> πριν συνεχίσετε την διαδικασία αναβάθμισης, ίσως να περιέχει χρήσιμες πληροφορίες. Επίσης περιέχει χρήσιμους συνδέσμου όπως και το ιστορικό αλλαγής.</p>
+		<p>Please read the release announcement for the latest version before you continue your update process, it may contain useful information. It also contains full download links as well as the change log.</p>
 
 		<br />
 
-		<h1>Πώς να αναβαθμίσετε την εγκατάσταση με το πακέτο αυτόματης ενημέρωσης</h1>
+		<h1>How to update your installation with the Automatic Update Package</h1>
 
-		<p>Ο συνιστώμενος τρόπος για την εγκατάστασή σας που αναλύετε εδώ είναι ισχύει μόνο για το αυτόματο πακέτο ενημέρωσης. Μπορείτε επίσης να ενημερώσετε την εγκατάστασή σας χρησιμοποιώντας τις μεθόδους που αναγράφονται μέσα στο αρχείο INSTALL.html. Τα βήματα για την αυτόματα ενημέρωση του phpBB3 είναι: </p>
+		<p>The recommended way of updating your installation listed here is only valid for the automatic update package. You are also able to update your installation using the methods listed within the INSTALL.html document. The steps for updating phpBB3 automatically are:</p>
 
 		<ul style="margin-left: 20px; font-size: 1.1em;">
-			<li>Πηγαίνετε στη <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">σελίδα μεταφορτώσεων phpBB.com</a> και κατεβάστε το σωστό "Πακέτο Αναβάθμισης phpBB" συμπιεσμένο αρχείο.<br /><br /></li>
-			<li>Αποσυμπιέστε το αρχείο.<br /><br /></li>
-			<li>Ανεβάστε όλο τον φάκελο εγκατάστασης (αποσυμπιεσμένο) στον φάκελο του phpBB (εκεί που είναι το config.php).<br /><br /></li>
+			<li>Go to the <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com downloads page</a> and download the "Automatic Update Package" archive.<br /><br /></li>
+			<li>Unpack the archive.<br /><br /></li>
+			<li>Upload the complete uncompressed install folder to your phpBB root directory (where your config.php file is).<br /><br /></li>
 		</ul>
 
-		<p>Μόλις γίνει αυτό το σύστημα θα είναι εκτός για τους απλούς χρήστες αφού ο φάκελος εγκατάστασης θα υπάρχει.<br /><br />
-		<strong><a href="%2$s" title="%2$s">Τώρα ξεκινήστε την διαδικασία αναβάθμισης αφού βάλετε στον πλοηγό σας την τοποθεσία του φακέλου εγκατάστασης</a>.</strong><br />
+		<p>Once uploaded your board will be offline for normal users due to the install directory you uploaded now present.<br /><br />
+		<strong><a href="%1$s" title="%1$s">Now start the update process by pointing your browser to the install folder</a>.</strong><br />
 		<br />
-		Μετά θα καθοδηγηθείτε για την υπόλοιπη διαδικασία. Θα ενημερωθείτε όταν η αναβάθμιση τελειώσει.
+		You will then be guided through the update process. You will be notified once the update is complete.
 		</p>
-	',
-	'UPDATE_INSTRUCTIONS_INCOMPLETE'	=> '
-
-		<h1>Ανίχνευση ελλιπής ενημέρωσης</h1>
-
-		<p>Το phpBB ανίχνευσε μια ελλιπή αυτόματη ενημέρωση. Παρακαλώ σιγουρευτείτε ότι ακολουθήσατε κάθε βήμα μέσα στο αυτόματο εργαλείο ενημερώσεων. Ποιο κάτω θα βρείτε τον σύνδεσμο πάλι, ή πάτε άμεσα στον κατάλογο. </p>
 	',
 	'UPDATE_METHOD'					=> 'Μέθοδος αναβάθμισης',
 	'UPDATE_METHOD_EXPLAIN'			=> 'Τώρα είστε σε θέση να επιλέξετε την μέθοδο αναβάθμισης. Χρησιμοποιώντας ανέβασμα FTP θα σας ζητηθεί μέσω μίας φόρμας να γράψετε τα στοιχεία του λογαριασμού FTP. Με αυτή την μέθοδο τα αρχεία θα μετακινηθούν αυτόματα στην νέα τοποθεσία και τα αντίγραφα ασφαλείας θα δημιουργηθούν με κατάληξη .bak. Αν επιλέξετε την άλλη μέθοδο θα μπορείτε να τα ανεβάσετε και να τα αποσυμπιέσετε στη σωστή τους θέση αργότερα.',
@@ -2110,10 +2199,10 @@ $lang = array_merge($lang, array(
 	'UPDATING_DATA'					=> 'Αναβάθμιση δεδομένων',
 	'UPDATING_TO_LATEST_STABLE'		=> 'Αναβάθμιση βάσης δεδομένων. στην τελευταία έκδοση',
 	'UPDATED_VERSION'				=> 'Αναβαθμισμένη έκδοση',
-	'UPGRADE_INSTRUCTIONS'			=> 'Μια νέα έκδοση <strong>%1$s</strong> είναι διαθέσιμη. Παρακαλώ διαβάστε  <a href="%2$s" title="%2$s"><strong>την ανακοίνωση για την έκδοση</strong></a> για να μάθετε τι έχει να προσφέρει, και το πως να κάνετε την αναβάθμιση.',
 	'UPLOAD_METHOD'					=> 'Μέθοδος ανεβάσματος αρχείων',
 
 	'UPDATE_DB_SUCCESS'				=> 'Η αναβάθμιση της Β. Δ. ήταν επιτυχής.',
+	'UPDATE_FILE_SUCCESS'			=> 'File update was successful.',
 	'USER_ACTIVE'					=> 'Ενεργό μέλος',
 	'USER_INACTIVE'					=> 'Ανενεργό μέλος',
 
@@ -2173,6 +2262,33 @@ $lang = array_merge($lang, array(
 	'TOPICS_TOPIC_TITLE'			=> 'Καλώς ήρθατε στο phpBB3',
 ));
 
+#######language/en/migrator.php#######
+
+$lang = array_merge($lang, array(
+	'CONFIG_NOT_EXIST'					=> 'The config setting "%s" unexpectedly does not exist.',
+
+	'GROUP_NOT_EXIST'					=> 'The group "%s" unexpectedly does not exist.',
+
+	'MIGRATION_APPLY_DEPENDENCIES'		=> 'Apply dependencies of %s.',
+	'MIGRATION_DATA_DONE'				=> 'Installed Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_IN_PROGRESS'		=> 'Installing Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_RUNNING'			=> 'Installing Data: %s.',
+	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
+	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
+	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
+	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
+	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
+	'MODULE_NOT_EXIST'					=> 'A required module does not exist: %s',
+
+	'PERMISSION_NOT_EXIST'				=> 'The permission setting "%s" unexpectedly does not exist.',
+
+	'ROLE_NOT_EXIST'					=> 'The permission role "%s" unexpectedly does not exist.',
+));
+
 #######language/en/mcp.php#######
 
 $lang = array_merge($lang, array(
@@ -2193,6 +2309,10 @@ $lang = array_merge($lang, array(
 	'APPROVE_POST_CONFIRM'	=> 'Είστε σίγουρος ότι θέλετε να εγκρίνετε αυτή την δημοσίευση;',
 	'APPROVE_POSTS'			=> 'Έγκριση δημοσιεύσεων,',
 	'APPROVE_POSTS_CONFIRM'	=> 'Είστε σίγουρος ότι θέλετε να εγκρίνετε αυτές τις δημοσιεύσεις;',
+	'APPROVE_TOPIC'			=> 'Approve topic',
+	'APPROVE_TOPIC_CONFIRM'	=> 'Are you sure you want to approve this topic?',
+	'APPROVE_TOPICS'		=> 'Approve topics',
+	'APPROVE_TOPICS_CONFIRM'=> 'Are you sure you want to approve the selected topics?',
 
 	'CANNOT_MOVE_SAME_FORUM'=> 'Δεν μπορείτε να μετακινήσετε το θέμα στη Δ. Συζήτηση το οποίο αυτό βρίσκετε.',
 	'CANNOT_WARN_ANONYMOUS'	=> 'Δεν μπορείτε να προειδοποιήσετε μη εγγεγραμμένα μέλη και επισκέπτες.',
@@ -2213,16 +2333,12 @@ $lang = array_merge($lang, array(
 	'DELETE_PM_REPORTS'			=> 'Διαγραφή αναφοράς ΠΜ',
 	'DELETE_PM_REPORTS_CONFIRM'	=> 'Είστε σίγουρος ότι θέλετε να διαγράψετε τις επιλεγμένες αναφορές ΠΜ?',
 	'DELETE_POSTS'				=> 'Διαγραφή δημοσιεύσεων',
-	'DELETE_POSTS_CONFIRM'		=> 'Είστε σίγουρος ότι θέλετε να διαγράψετε αυτές τις δημοσιεύσεις;',
-	'DELETE_POST_CONFIRM'		=> 'Είστε σίγουρος ότι θέλετε να διαγράψετε αυτήν την δημοσίευση;',
 	'DELETE_REPORT'				=> 'Διαγραφή αναφοράς',
 	'DELETE_REPORT_CONFIRM'		=> 'Είστε σίγουρος ότι θέλετε να διαγράψετε την επιλεγμένη αναφορά;',
 	'DELETE_REPORTS'			=> 'Διαγραφή αναφορών',
 	'DELETE_REPORTS_CONFIRM'	=> 'Είστε σίγουρος ότι θέλετε να διαγράψετε τις επιλεγμένες αναφορές;',
 	'DELETE_SHADOW_TOPIC'		=> 'Διαγραφή συνδέσμου προς το μετακινούμενο θέμα',
 	'DELETE_TOPICS'				=> 'Διαγραφή επιλεγμένων θεμάτων',
-	'DELETE_TOPICS_CONFIRM'		=> 'Είστε σίγουρος ότι θέλετε να διαγράψετε αυτά τα θέματα;',
-	'DELETE_TOPIC_CONFIRM'		=> 'Είστε σίγουρος ότι θέλετε να διαγράψετε αυτό το θέμα;',
 	'DISAPPROVE'				=> 'Απόρριψη',
 	'DISAPPROVE_REASON'			=> 'Αιτία απόρριψης',
 	'DISAPPROVE_POST'			=> 'Απόρριψη δημοσίευσης',
@@ -2260,8 +2376,6 @@ $lang = array_merge($lang, array(
 	'LATEST_WARNING_TIME'		=> 'Οι τελευταίες 5 προειδοποιήσεις έχουν σταλεί',
 	'LATEST_WARNINGS'			=> 'Τελευταίες 5 προειδοποιήσεις',
 	'LEAVE_SHADOW'				=> 'Κρατήστε έναν σύνδεσμο στην παλιά Δ. Συζήτηση',
-	'LIST_REPORT'				=> '1 αναφορά',
-	'LIST_REPORTS'				=> '%d αναφορές',
 	'LOCK'						=> 'Κλειδωμένο',
 	'LOCK_POST_POST'			=> 'Κλειδώστε δημοσίευση',
 	'LOCK_POST_POST_CONFIRM'	=> 'Είστε βέβαιοι ότι θέλετε να αποτρέψετε την έκδοση αυτής της δημοσίευσης;',
@@ -2340,6 +2454,10 @@ $lang = array_merge($lang, array(
 	'MCP_QUEUE_UNAPPROVED_POSTS_EXPLAIN'	=> 'Αυτή είναι μια λίστα όλων των δημοσιεύσεων που πρέπει να εγκριθούν πριν γίνουν ορατές στα μέλη.',
 	'MCP_QUEUE_UNAPPROVED_TOPICS'			=> 'Θέματα που βρίσκονται προς έγκριση',
 	'MCP_QUEUE_UNAPPROVED_TOPICS_EXPLAIN'	=> 'Αυτή είναι μια λίστα όλων των θεμάτων που πρέπει να εγκριθούν πριν γίνουν ορατά στα μέλη.',
+	'MCP_QUEUE_DELETED_POSTS'				=> 'Deleted posts',
+	'MCP_QUEUE_DELETED_POSTS_EXPLAIN'		=> 'This is a list of all soft deleted posts. You can restore or permanently delete the posts from this screen.',
+	'MCP_QUEUE_DELETED_TOPICS'				=> 'Deleted topics',
+	'MCP_QUEUE_DELETED_TOPICS_EXPLAIN'		=> 'This is a list of all soft deleted topics. You can restore or permanently delete the topics from this screen.',
 
 	'MCP_VIEW_USER'			=> 'Προβολή προειδοποιήσεων ενός μέλους',
 
@@ -2378,25 +2496,27 @@ $lang = array_merge($lang, array(
 	'NO_POST'						=> 'Πρέπει να επιλέξετε μια δημοσίευση για την οποία θα προειδοποιήσετε αυτό το μέλος.',
 	'NO_POST_REPORT'				=> 'Δεν έγινε αναφορά της δημοσίευσης.',
 	'NO_POST_SELECTED'				=> 'Πρέπει να επιλέξεις μια δημοσίευση για να συνεχίσεις αυτήν την ενέργεια.',
+	'NO_POSTS_DELETED'				=> 'There are no deleted posts.',
+	'NO_POSTS_QUEUE'				=> 'There are no posts waiting for approval.',
 	'NO_REASON_DISAPPROVAL'			=> 'Παρακαλώ εξηγήστε τον λόγο σχετικά με την απόρριψη.',
 	'NO_REPORT'						=> 'Καμία αναφορά δεν βρέθηκε',
 	'NO_REPORTS'					=> 'Καμία αναφορά',
 	'NO_REPORT_SELECTED'			=> 'Πρέπει να επιλέξεις μια αναφορά για να συνεχίσεις αυτήν την ενέργεια.',
 	'NO_TOPIC_ICON'					=> 'Καμία',
 	'NO_TOPIC_SELECTED'				=> 'Πρέπει να επιλέξεις ένα θέμα για να συνεχίσεις αυτήν την ενέργεια.',
+	'NO_TOPICS_DELETED'				=> 'There are no deleted topics.',
 	'NO_TOPICS_QUEUE'				=> 'Δεν υπάρχει κανένα θέμα που περιμένει έγκριση.',
 
 	'ONLY_TOPIC'			=> 'Μόνο θέμα "%s"',
 	'OTHER_USERS'			=> 'Άλλα μέλη τα οποία έχουν δημοσιεύσει από αυτή την IP',
 
+	'QUICKMOD_ACTION_NOT_ALLOWED' => "%s not allowed as quickmod",
+
 	'PM_REPORT_CLOSED_SUCCESS'	=> 'Η επιλεγμένη ΠΜ αναφορά έχει κλείσει επιτυχώς.',
 	'PM_REPORT_DELETED_SUCCESS'	=> 'Η επιλεγμένη ΠΜ αναφορά έχει διαγραφεί επιτυχώς.',
 	'PM_REPORTED_SUCCESS'		=> 'Αυτό το προσωπικό μήνυμα έχει επιτυχώς αναφερθεί.',
-	'PM_REPORT_TOTAL'			=> 'Συνολικά υπάρχουν εδώ <strong>1</strong> αναφορές ΠΜ για αναθεώρηση.',
 	'PM_REPORTS_CLOSED_SUCCESS'	=> 'Οι επιλεγμένες ΠΜ αναφορές έχουν κλείσει επιτυχώς.',
 	'PM_REPORTS_DELETED_SUCCESS'=> 'Οι επιλεγμένες ΠΜ αναφορές έχουν διαγραφεί επιτυχώς.',
-	'PM_REPORTS_TOTAL'			=> 'Συνολικά υπάρχουν εδώ <strong>%d</strong> αναφορές ΠΜ για αναθεώρηση.',
-	'PM_REPORTS_ZERO_TOTAL'		=> 'Δεν υπάρχουν αναφορές ΠΜ για αναθεώρηση.',
 	'PM_REPORT_DETAILS'			=> 'Λεπτομέρειες αναφοράς Προσωπικού μηνύματος',
 	'POSTER'					=> 'Συγγραφέας',
 	'POSTS_APPROVED_SUCCESS'	=> 'Η επιλεγμένη δημοσίευση έχει εγκριθεί.',
@@ -2404,15 +2524,17 @@ $lang = array_merge($lang, array(
 	'POSTS_DISAPPROVED_SUCCESS'	=> 'Οι επιλεγμένες δημοσιεύσεις έχουν απορριφθεί επιτυχώς.',
 	'POSTS_LOCKED_SUCCESS'		=> 'Οι επιλεγμένες δημοσιεύσεις έχουν κλειδωθεί επιτυχώς.',
 	'POSTS_MERGED_SUCCESS'		=> 'Οι επιλεγμένες δημοσιεύσεις έχουν μετακινηθεί.',
-	'POSTS_UNLOCKED_SUCCESS'	=> 'Οι επιλεγμένες δημοσιεύσεις έχουν ξεκλειδωθεί επιτυχώς.',
 	'POSTS_PER_PAGE'			=> 'Δημοσιεύσεις ανά σελίδα',
 	'POSTS_PER_PAGE_EXPLAIN'	=> '(θέστε 0 για εμφάνιση όλων των δημοσιεύσεων.)',
+	'POSTS_RESTORED_SUCCESS'	=> 'The selected posts have been restored successfully.',
+	'POSTS_UNLOCKED_SUCCESS'	=> 'Οι επιλεγμένες δημοσιεύσεις έχουν ξεκλειδωθεί επιτυχώς.',
 	'POST_APPROVED_SUCCESS'		=> 'Η επιλεγμένη δημοσίευση έχει εγκριθεί.',
 	'POST_DELETED_SUCCESS'		=> 'Η επιλεγμένη δημοσίευση έχει απορριφθεί και διαγράφτηκε από την βάση επιτυχώς.',
 	'POST_DISAPPROVED_SUCCESS'	=> 'Η επιλεγμένη δημοσίευση έχει απορριφθεί.',
 	'POST_LOCKED_SUCCESS'		=> 'Η δημοσίευση κλειδώθηκε επιτυχώς.',
 	'POST_NOT_EXIST'			=> 'Η ζητούμενη δημοσίευση δεν υπάρχει.',
 	'POST_REPORTED_SUCCESS'		=> 'Αυτή η δημοσίευση αναφέρθηκε επιτυχώς.',
+	'POST_RESTORED_SUCCESS'		=> 'This post has been restored successfully.',
 	'POST_UNLOCKED_SUCCESS'		=> 'Η δημοσίευση ξεκλειδώθηκε επιτυχώς.',
 
 	'READ_USERNOTES'			=> 'Σημειώσεις Μέλους',
@@ -2423,8 +2545,6 @@ $lang = array_merge($lang, array(
 	'REPORTED_ON_DATE'			=> 'στις',
 	'REPORTS_CLOSED_SUCCESS'	=> 'Η επιλεγμένη αναφορά έχει κλείσει επιτυχώς.',
 	'REPORTS_DELETED_SUCCESS'	=> 'Η επιλεγμένη αναφορά διαγράφτηκε επιτυχώς.',
-	'REPORTS_TOTAL'				=> 'Συνολικά υπάρχουν εδώ <strong>%d</strong> αναφορές για αναθεώρηση.',
-	'REPORTS_ZERO_TOTAL'		=> 'Δεν υπάρχουν αναφορές για αναθεώρηση.',
 	'REPORT_CLOSED'				=> 'Η αναφορά έχει ήδη κλείσει.',
 	'REPORT_CLOSED_SUCCESS'		=> 'Η επιλεγμένη αναφορά έκλεισε επιτυχώς.',
 	'REPORT_DELETED_SUCCESS'	=> 'Η επιλεγμένη αναφορά διαγράφηκε επιτυχώς.',
@@ -2436,7 +2556,15 @@ $lang = array_merge($lang, array(
 	'REPORT_POST_EXPLAIN'		=> 'Χρησιμοποιήστε αυτήν την φόρμα για να αναφέρετε το επιλεγμένο μήνυμα στους συντονιστές και διαχειριστές της Δ. Συζήτησης. Η υποβολή αναφοράς πρέπει γενικά να χρησιμοποιηθεί μόνο εάν το μήνυμα παραβαίνει τους κανόνες της Δ. Συζήτηση.',
 	'REPORT_REASON'				=> 'Λόγος Αναφοράς',
 	'REPORT_TIME'				=> 'Χρόνος Αναφορά;',
-	'REPORT_TOTAL'				=> 'Συνολικά υπάρχουν εδώ <strong>1</strong> αναφορές για αναθεώρηση.',
+	'RESTORE'					=> 'Restore',
+	'RESTORE_POST'				=> 'Restore post',
+	'RESTORE_POST_CONFIRM'		=> 'Are you sure you want to restore this post?',
+	'RESTORE_POSTS'				=> 'Restore posts',
+	'RESTORE_POSTS_CONFIRM'		=> 'Are you sure you want to restore the selected posts?',
+	'RESTORE_TOPIC'				=> 'Restore topic',
+	'RESTORE_TOPIC_CONFIRM'		=> 'Are you sure you want to restore this topic?',
+	'RESTORE_TOPICS'			=> 'Restore topics',
+	'RESTORE_TOPICS_CONFIRM'	=> 'Are you sure you want to restore the selected topics?',
 	'RESYNC'					=> 'Συγχρονισμός ',
 	'RETURN_MESSAGE'			=> '%sΕπιστροφή στο μήνυμα%s',
 	'RETURN_NEW_FORUM'			=> '%sΠηγαίνετε στη νέα Δ. Συζήτηση%s',
@@ -2477,6 +2605,7 @@ $lang = array_merge($lang, array(
 	'TOPICS_FORKED_SUCCESS'		=> 'Το επιλεγμένο θέμα έχει αντιγραφεί επιτυχώς.',
 	'TOPICS_LOCKED_SUCCESS'		=> 'Το επιλεγμένο θέμα κλειδώθηκε επιτυχώς.',
 	'TOPICS_MOVED_SUCCESS'		=> 'Το επιλεγμένο θέμα μετακινήθηκε επιτυχώς.',
+	'TOPICS_RESTORED_SUCCESS'	=> 'The selected topics have been restored successfully.',
 	'TOPICS_RESYNC_SUCCESS'		=> 'Το επιλεγμένο θέμα συγχρονίστηκε επιτυχώς.',
 	'TOPICS_TYPE_CHANGED'		=> 'Ο τύπος του θέματος άλλαξε επιτυχώς.',
 	'TOPICS_UNLOCKED_SUCCESS'	=> 'Το επιλεγμένο θέμα έχει ξεκλειδωθεί.',
@@ -2487,6 +2616,7 @@ $lang = array_merge($lang, array(
 	'TOPIC_LOCKED_SUCCESS'		=> 'Το επιλεγμένο θέμα έχει κλειδωθεί.',
 	'TOPIC_MOVED_SUCCESS'		=> 'Το επιλεγμένο θέμα μετακινήθηκε επιτυχώς.',
 	'TOPIC_NOT_EXIST'			=> 'Το θέμα που επιλέξατε δεν υπάρχει.',
+	'TOPIC_RESTORED_SUCCESS'	=> 'The selected topic has been restored successfully.',
 	'TOPIC_RESYNC_SUCCESS'		=> 'Το επιλεγμένο θέμα συγχρονίστηκε επιτυχώς.',
 	'TOPIC_SPLIT_SUCCESS'		=> 'Το επιλεγμένο θέμα διασπάστηκε επιτυχώς.',
 	'TOPIC_TIME'				=> 'Χρόνος Δημοσίευσης',
@@ -2494,9 +2624,6 @@ $lang = array_merge($lang, array(
 	'TOPIC_UNLOCKED_SUCCESS'	=> 'Το επιλεγμένο θέμα έχει ξεκλειδωθεί.',
 	'TOTAL_WARNINGS'			=> 'Σύνολο προειδοποιήσεων',
 
-	'UNAPPROVED_POSTS_TOTAL'		=> 'Συνολικά υπάρχουν εδώ <strong>%d</strong> δημοσιεύσεις που περιμένουν για αναθεώρηση.',
-	'UNAPPROVED_POSTS_ZERO_TOTAL'	=> 'Εδώ δεν υπάρχει καμία δημοσίευση που περιμένει να εγκριθεί.',
-	'UNAPPROVED_POST_TOTAL'			=> 'Συνολικά υπάρχουν εδώ <strong>1</strong> δημοσιεύσεις που περιμένουν να εγκριθούν.',
 	'UNLOCK'						=> 'Ξεκλειδώστε',
 	'UNLOCK_POST'					=> 'Ξεκλειδώστε δημοσίευση',
 	'UNLOCK_POST_EXPLAIN'			=> 'Επιτρέπετε η επεξεργασία',
@@ -2522,7 +2649,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'Μόλις δεχτήκατε μια προειδοποίηση από κάποιον συντονιστή ή διαχειριστή αυτής της Δ. Συζήτησης.[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'Η προειδοποίηση έχει σταλεί',
 	'WARNING_POST_DEFAULT'	=> 'Αυτή είναι μια προειδοποίηση που δεχτήκατε για την δημοσίευσή σας εδώ: %s.',
-	'WARNINGS_ZERO_TOTAL'	=> 'Δεν υπάρχουν προειδοποιήσεις.',
+	'NO_WARNINGS'	=> 'No warnings exist.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Έχεις το θέμα με την ταυτότητα ID %d: επιλέξει %s.',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -2562,10 +2689,12 @@ $lang = array_merge($lang, array(
 	'ALL'					=> 'Όλα',
 	'BEFORE'				=> 'Πριν',
 	'CC_EMAIL'				=> 'Αποστολή αντίγραφου του ηλεκτρονικού ταχυδρομείου στον εαυτό σας.',
-	'CONTACT_USER'			=> 'ΕΠΙΚΟΙΝΩΝΙΑ ',
+	'CONTACT_ADMIN'			=> 'Contact a Board Administrator',
 
 	'DEST_LANG'				=> 'Γλώσσα',
 	'DEST_LANG_EXPLAIN'		=> 'Επιλέξτε μια κατάλληλη γλώσσα (εάν είναι διαθέσιμη) για τον παραλήπτη αυτού του μηνύματος.',
+
+	'EDIT_PROFILE'			=> 'Edit Profile',
 
 	'EMAIL_BODY_EXPLAIN'	=> 'Αυτό το μήνυμα θα σταλεί σαν απλό κείμενο, δεν περιλαμβάνει οποιοδήποτε HTML ή BBCode κώδικα. Η διεύθυνση επιστροφής για αυτό το μήνυμα θα τεθεί τη διεύθυνση ηλεκτρονικού ταχυδρομείου σας.',
 	'EMAIL_DISABLED'		=> 'Συγνώμη αλλά όλες σχετικές με το ηλεκτρονικό ταχυδρομείο λειτουργίες έχουν τεθεί εκτός λειτουργίας.',
@@ -2575,7 +2704,9 @@ $lang = array_merge($lang, array(
 	'EMPTY_MESSAGE_EMAIL'	=> 'Πρέπει να εισαγάγετε ένα μήνυμα που στέλνεται με το ηλεκτρονικό ταχυδρομείο.',
 	'EMPTY_MESSAGE_IM'		=> 'Πρέπει να προσθέσετε ένα μήνυμα προς αποστολή.',
 	'EMPTY_NAME_EMAIL'		=> 'Πρέπει να εισαγάγετε το πραγματικό όνομα του παραλήπτη.',
-	'EMPTY_SUBJECT_EMAIL'	=> 'Πρέπει να διευκρινίσετε ένα θέμα για το ηλεκτρονικό ταχυδρομείο.',
+	'EMPTY_SENDER_EMAIL'	=> 'You must provide a valid email address.',
+	'EMPTY_SENDER_NAME'		=> 'You must provide a name.',
+	'EMPTY_SUBJECT_EMAIL'	=> 'You must specify a subject for the email.',
 	'EQUAL_TO'				=> 'Ίσως',
 
 	'FIND_USERNAME_EXPLAIN'	=> 'Χρησιμοποιήστε αυτήν την μορφή στην αναζήτηση των συγκεκριμένων μελών. Δεν χρειάζεται να συμπληρώσετε όλα τα πεδία Για να ταιριάξει με τη μερική χρήση στοιχείων χρησιμοποιήστε * μπαλαντέρ. Κατά την εισαγωγή οι ημερομηνίες χρησιμοποιούν το σχήμα <kbd>YYYY-MM-DD</kbd>, e.g. <samp>2004-02-29</samp>. Χρησιμοποιήστε τα τετραγωνίδια σημαδιών για να επιλέξετε ένα ή περισσότερα ονόματα μελών (διάφορα ονόματα μελών μπορούν να γίνουν αποδεκτά ανάλογα με η ίδια τη μορφή) και να πατήσετε το επίλεκτο χαρακτηρισμένο κουμπί για να επιστρέψετε στην προηγούμενη μορφή.',
@@ -2585,16 +2716,10 @@ $lang = array_merge($lang, array(
 	'HIDE_MEMBER_SEARCH'	=> 'Απόκρυψη αναζήτησης μελών',
 
 	'IM_ADD_CONTACT'		=> 'Προσθέστε Επικοινωνία ',
-	'IM_AIM'				=> 'Παρακαλώ σημειώστε ότι πρέπει να εγκαταστήσετε το AOL Instant Messenger για να χρησιμοποιήσετε αυτό.',
-	'IM_AIM_EXPRESS'		=> 'AIM Express',
 	'IM_DOWNLOAD_APP'		=> 'Μεταφορτώστε την εφαρμογή',
-	'IM_ICQ'				=> 'Παρακαλώ σημειώστε ότι τα μέλη μπορεί να έχουν επιλέξει να μην λάβουν τα εκούσια στιγμιαία μηνύματα.',
 	'IM_JABBER'				=> 'Παρακαλώ σημειώστε ότι τα μέλη μπορεί να έχουν επιλέξει να μην λάβουν τα εκούσια στιγμιαία μηνύματα.',
 	'IM_JABBER_SUBJECT'		=> 'Αυτό είναι ένα αυτόματο μήνυμα παρακαλώ μην απαντήσετε! Μήνυμα από το μέλος %1$s at %2$s.',
 	'IM_MESSAGE'			=> 'Το μήνυμά σας',
-	'IM_MSNM'				=> 'Παρακαλώ σημειώστε ότι πρέπει να εγκαταστήσετε το Windows Messenger για να χρησιμοποιήσετε αυτό.',
-	'IM_MSNM_BROWSER'		=> 'Ο πλοηγός σας δεν υποστηρίζει αυτό.',
-	'IM_MSNM_CONNECT'		=> 'Δεν υπάρχει σύνδεση με το Windows Live Messenger.\n Για να προχωρήσετε πρέπει να συνδεθείτε με το Windows Live Messenger.',
 	'IM_NAME'				=> 'Το όνομά σας',
 	'IM_NO_DATA'			=> 'Δεν υπάρχει κανένα κατάλληλο στοιχείο επικοινωνίας για αυτό το μέλος.',
 	'IM_NO_JABBER'			=> 'Συγνώμη, άμεσα μηνύματα με Jabber μέλη δεν υποστηρίζονται από αυτόν τον κεντρικό υπολογιστή. Θα πρέπει να εγκαταστήσετε έναν Jabber-Client στο σύστημά σας για να έρθετε σε επαφή με τον παραλήπτη ανωτέρω.',
@@ -2606,15 +2731,15 @@ $lang = array_merge($lang, array(
 
 	'LAST_ACTIVE'				=> 'Τελευταία επίσκεψη',
 	'LESS_THAN'					=> 'Λιγότερο από',
-	'LIST_USER'					=> '1 μέλος',
-	'LIST_USERS'				=> '%d μέλη',
-	'LOGIN_EXPLAIN_LEADERS'		=> 'Πρέπει να εγγραφείτε και να συνδεθείτε για να δείτε τις ομάδες μελών.',
+	'LOGIN_EXPLAIN_TEAM'		=> 'The board requires you to be registered and logged in to view the team listing.',
 	'LOGIN_EXPLAIN_MEMBERLIST'	=> 'Πρέπει να εγγραφείτε και να συνδεθείτε για να έχετε πρόσβαση στην λίστα μελών.',
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'Πρέπει να εγγραφείτε και να συνδεθείτε για να αναζητήσετε κάποιο μέλος.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'Πρέπει να εγγραφείτε και να συνδεθείτε για να δείτε το προφίλ κάποιου μέλους.',
 
 	'MORE_THAN'				=> 'Περισσότερο από',
 
+	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
+	'NO_CONTACT_PAGE'		=> 'The board administrator contact page has been disabled.',
 	'NO_EMAIL'				=> 'Δεν έχετε δικαίωμα να στείλετε ηλεκτρονικό ταχυδρομείο σε αυτό το μέλος.',
 	'NO_VIEW_USERS'			=> 'Δεν έχετε δικαίωμα να δείτε την λίστα μελών ή το προφίλ.',
 
@@ -2631,12 +2756,12 @@ $lang = array_merge($lang, array(
 
 	'SELECT_MARKED'			=> 'Επιλογή σημειωμένων',
 	'SELECT_SORT_METHOD'	=> 'Επιλέξτε μέθοδο ταξινόμησης',
-	'SEND_AIM_MESSAGE'		=> 'AIM Αποστολή μηνύματος',
+	'SENDER_EMAIL_ADDRESS'	=> 'Your email address',
+	'SENDER_NAME'			=> 'Your name',
 	'SEND_ICQ_MESSAGE'		=> 'ICQ Αποστολή μηνύματος',
 	'SEND_IM'				=> 'Instant messaging αποστολή',
 	'SEND_JABBER_MESSAGE'	=> 'Jabber Αποστολή μηνύματος',
 	'SEND_MESSAGE'			=> 'Μήνυμα',
-	'SEND_MSNM_MESSAGE'		=> 'MSNM/WLM Αποστολή μηνύματος',
 	'SEND_YIM_MESSAGE'		=> 'Αποστολή YIM μηνύματος',
 	'SORT_EMAIL'			=> 'Ηλεκτρονικό ταχυδρομείο',
 	'SORT_LAST_ACTIVE'		=> 'Τελευταία ενέργεια',
@@ -2644,12 +2769,18 @@ $lang = array_merge($lang, array(
 
 	'USERNAME_BEGINS_WITH'	=> 'Το όνομα μέλους αρχίζει από',
 	'USER_ADMIN'			=> 'Διαχείριση μέλους',
-	'USER_BAN'				=> 'Αποκλεισμός',
+	'USER_BAN'				=> 'Ban one or more users by username',
 	'USER_FORUM'			=> 'Στατιστικά μέλους',
 	'USER_ONLINE'			=> 'Σε σύνδεση',
 	'USER_PRESENCE'			=> 'Παρουσία στην Δ. Συζήτηση',
+	'USERS_PER_PAGE'		=> 'Users per page',
 
 	'VIEWING_PROFILE'		=> 'Προβολή προφίλ - %s',
+	'VIEW_FACEBOOK_PROFILE'	=> 'View Facebook Profile',
+	'VIEW_SKYPE_PROFILE'	=> 'View Skype Profile',
+	'VIEW_TWITTER_PROFILE'	=> 'View Twitter Profile',
+	'VIEW_YOUTUBE_CHANNEL'	=> 'View YouTube Channel',
+	'VIEW_GOOGLEPLUS_PROFILE' => 'View Google+ Profile',
 	'VISITED'				=> 'Τελευταία επίσκεψη',
 
 	'WWW'					=> 'Ιστοσελίδα',
@@ -2674,6 +2805,47 @@ $lang = array_merge($lang, array(
 	'USER_COMM_RANK'	=> 'Overall reviews:',
 	'USER_COMM_PERCENT'	=> 'Overall assessment of the user:',
 
+));
+
+#######language/en/plupload.php#######
+
+$lang = array_merge($lang, array(
+	'PLUPLOAD_ADD_FILES'		=> 'Add files',
+	'PLUPLOAD_ADD_FILES_TO_QUEUE'	=> 'Add files to the upload queue and click the start button.',
+	'PLUPLOAD_ALREADY_QUEUED'	=> '%s already present in the queue.',
+	'PLUPLOAD_CLOSE'			=> 'Close',
+	'PLUPLOAD_DRAG'				=> 'Drag files here.',
+	'PLUPLOAD_DUPLICATE_ERROR'	=> 'Duplicate file error.',
+	'PLUPLOAD_DRAG_TEXTAREA'	=> 'You may also attach files by dragging and dropping them in the message box.',
+	'PLUPLOAD_ERR_INPUT'		=> 'Failed to open input stream.',
+	'PLUPLOAD_ERR_MOVE_UPLOADED'	=> 'Failed to move uploaded file.',
+	'PLUPLOAD_ERR_OUTPUT'		=> 'Failed to open output stream.',
+	'PLUPLOAD_ERR_FILE_TOO_LARGE'	=> 'File too large:',
+	'PLUPLOAD_ERR_FILE_COUNT'	=> 'File count error.',
+	'PLUPLOAD_ERR_FILE_INVALID_EXT'	=> 'Invalid file extension:',
+	'PLUPLOAD_ERR_RUNTIME_MEMORY'	=> 'Runtime ran out of available memory.',
+	'PLUPLOAD_ERR_UPLOAD_URL'	=> 'Upload URL might be wrong or does not exist.',
+	'PLUPLOAD_EXTENSION_ERROR'	=> 'File extension error.',
+	'PLUPLOAD_FILE'				=> 'File: %s',
+	'PLUPLOAD_FILE_DETAILS'		=> 'File: %s, size: %d, max file size: %d',
+	'PLUPLOAD_FILENAME'			=> 'Filename',
+	'PLUPLOAD_FILES_QUEUED'		=> '%d files queued',
+	'PLUPLOAD_GENERIC_ERROR'	=> 'Generic error.',
+	'PLUPLOAD_HTTP_ERROR'		=> 'HTTP error.',
+	'PLUPLOAD_IMAGE_FORMAT'		=> 'Image format either wrong or not supported.',
+	'PLUPLOAD_INIT_ERROR'		=> 'Init error.',
+	'PLUPLOAD_IO_ERROR'			=> 'IO error.',
+	'PLUPLOAD_NOT_APPLICABLE'	=> 'N/A',
+	'PLUPLOAD_SECURITY_ERROR'	=> 'Security error.',
+	'PLUPLOAD_SELECT_FILES'		=> 'Select files',
+	'PLUPLOAD_SIZE'				=> 'Size',
+	'PLUPLOAD_SIZE_ERROR'		=> 'File size error.',
+	'PLUPLOAD_STATUS'			=> 'Status',
+	'PLUPLOAD_START_UPLOAD'		=> 'Start upload',
+	'PLUPLOAD_START_CURRENT_UPLOAD'	=> 'Start uploading queue',
+	'PLUPLOAD_STOP_UPLOAD'		=> 'Stop upload',
+	'PLUPLOAD_STOP_CURRENT_UPLOAD'	=> 'Stop current upload',
+	'PLUPLOAD_UPLOADED'			=> 'Uploaded %d/%d files',
 ));
 
 #######language/en/portal.php#######
@@ -2919,12 +3091,12 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s είναι <em>ΚΛΕΙΣΤΟ</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s είναι <em>ΑΝΟΙΧΤΟ</em>',
 	'BBCODE_I_HELP'				=> 'Πλάγιο κείμενο: [i]κείμενο[/i]',
-	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]',
 	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
 	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Προσθήκη εικόνας: [img]http://εικόνα_σύνδεσμος[/img]',
 	'BBCODE_Q_HELP'				=> 'Παράθεσης κείμενο: [quote]κείμενο[/quote]',
-	'BBCODE_S_HELP'				=> 'Χρώμα γραμματοσειράς: [color=red]κείμενο[/color] Συμβουλή : μπορείτε επίσης να χρησιμοποιήσετε το χρώμα=#FF0000',
+	'BBCODE_S_HELP'				=> 'Font colour: [color=red]text[/color] or [color=#FF0000]text[/color]',
 	'BBCODE_U_HELP'				=> 'Υπογραμμισμένο κείμενο: [u]κείμενο[/u]',
 	'BBCODE_W_HELP'				=> 'Προσθήκη συνδέσμου: [url]http://σύνδεσμος[/url] ή [url=http://σύνδεσμος]URL κείμενο[/url]',
 	'BUMP_ERROR'				=> 'Δεν μπορείτε να σημειώσετε αυτό το θέμα τόσο γρήγορα ως νέο μετά την τελευταία δημοσίευση.',
@@ -2943,8 +3115,20 @@ $lang = array_merge($lang, array(
 	'DELETE_MESSAGE'			=> 'Διαγραφή μηνύματος',
 	'DELETE_MESSAGE_CONFIRM'	=> 'Είστε σίγουρος ότι θέλετε να διαγράψετε αυτό το μήνυμα;',
 	'DELETE_OWN_POSTS'			=> 'Συγγνώμη, μπορείτε να διαγράψετε μόνο μία δημοσίευση.',
+	'DELETE_PERMANENTLY'		=> 'Delete permanently',
 	'DELETE_POST_CONFIRM'		=> 'Είστε σίγουρος ότι θέλετε να διαγράψετε αυτήν την δημοσίευση;',
-	'DELETE_POST_WARN'			=> 'Μετά την διαγραφή δεν μπορεί να γίνει επαναφορά της δημοσίευσης',
+	'DELETE_POST_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this post?',
+	'DELETE_POST_PERMANENTLY'	=> 'Permanently delete this post so it can not be recovered',
+	'DELETE_POSTS_CONFIRM'		=> 'Είστε σίγουρος ότι θέλετε να διαγράψετε αυτές τις δημοσιεύσεις;',
+	'DELETE_POSTS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these posts?',
+	'DELETE_REASON'				=> 'Reason for deleting this topic',
+	'DELETE_REASON_EXPLAIN'		=> 'The specified reason for deletion will be visible to moderators.',
+	'DELETE_POST_WARN'			=> 'Delete this post',
+	'DELETE_TOPIC_CONFIRM'		=> 'Είστε σίγουρος ότι θέλετε να διαγράψετε αυτό το θέμα;',
+	'DELETE_TOPIC_PERMANENTLY'	=> 'Permanently delete this topic so it can not be recovered',
+	'DELETE_TOPIC_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this topic?',
+	'DELETE_TOPICS_CONFIRM'		=> 'Είστε σίγουρος ότι θέλετε να διαγράψετε αυτά τα θέματα;',
+	'DELETE_TOPICS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these topics?',
 	'DISABLE_BBCODE'			=> 'Απενεργοποίηση BBCode',
 	'DISABLE_MAGIC_URL'			=> 'Μην αναλύστε αυτόματα URLs',
 	'DISABLE_SMILIES'			=> 'Απενεργοποίηση εικονιδίων',
@@ -2987,13 +3171,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_QUOTE'		=> 'Πρέπει να συνδεθείτε, έτσι ώστε να μπορείτε θέσετε δημοσιεύσεις ως παράθεση σε αυτή την Δ. Συζήτηση.',
 	'LOGIN_EXPLAIN_REPLY'		=> 'Πρέπει να συνδεθείτε, έτσι ώστε να μπορείτε να απαντάτε στις δημοσιεύσεις σε αυτή την Δ. Συζήτηση.',
 
-	'MAX_FONT_SIZE_EXCEEDED'	=> 'Το μέγιστο μέγεθος της γραμματοσειράς που επιτρέπετε %1$d.',
-	'MAX_FLASH_HEIGHT_EXCEEDED'	=> 'Το μέγιστο μέγεθος που επιτρέπετε στα δικά σας flash αρχεία είναι %1$d εικονοστοιχεία ύψος.',
-	'MAX_FLASH_WIDTH_EXCEEDED'	=> 'Το μέγιστο μέγεθος που επιτρέπετε στα δικά σας flash αρχεία είναι %1$d εικονοστοιχεία πλάτος.',
-	'MAX_IMG_HEIGHT_EXCEEDED'	=> 'Το μέγιστο μέγεθος που επιτρέπετε στις δικές σας εικόνες είναι %1$d εικονοστοιχεία ύψος.',
-	'MAX_IMG_WIDTH_EXCEEDED'	=> 'Το μέγιστο μέγεθος που επιτρέπετε στις δικές σας εικόνες είναι %1$d εικονοστοιχεία πλάτος',
-
-	'MESSAGE_BODY_EXPLAIN'		=> 'Γράψτε το μήνυμά σας. Δεν πρέπει να ξεπερνά τους <strong>%d</strong> χαρακτήρες.',
+	'MAX_FONT_SIZE_EXCEEDED'	=> 'You may only use fonts up to size %d.',
 	'MESSAGE_DELETED'			=> 'Το μήνυμά σας διαγράφηκε επιτυχώς.',
 	'MORE_SMILIES'				=> 'Προβολή περισσοτέρων εικονιδίων',
 
@@ -3016,8 +3194,6 @@ $lang = array_merge($lang, array(
 	'POLL_MAX_OPTIONS'			=> 'Επιλογές ανά μέλος',
 	'POLL_MAX_OPTIONS_EXPLAIN'	=> 'Αυτό είναι το ανώτατο όριο επιλογών που μπορεί να επιλέξει ένα μέλος.',
 	'POLL_OPTIONS'				=> 'Απαντήσεις δημοψηφίσματος',
-	'POLL_OPTIONS_EXPLAIN'		=> 'Εισάγεται κάθε απάντηση σε μια χωριστή γραμμή. Μπορείτε να προσθέσετε μέχρι <strong>%d</strong> απαντήσεις.',
-	'POLL_OPTIONS_EDIT_EXPLAIN'	=> 'Τοποθετήστε κάθε επιλογή σε μια νέα γραμμή. Μπορείτε να εισαγάγετε μέχρι <strong>%d</strong> επιλογές. Εάν αφαιρέσετε ή προσθέσετε επιλογές όλες οι προηγούμενες ψηφοφορίες θα αναπροσαρμοστούν.',
 	'POLL_QUESTION'				=> 'Ερώτηση δημοψηφίσματος',
 	'POLL_TITLE_TOO_LONG'		=> 'Ο τίτλος του δημοψηφίσματος δεν πρέπει να ξεπερνά τους 100 χαρακτήρες.',
 	'POLL_TITLE_COMP_TOO_LONG'	=> 'Το μέγεθος τίτλου του δημοψηφίσματος είναι μεγάλο, διαγράψτε τους BBCodes ή τα εικονίδια.',
@@ -3027,9 +3203,9 @@ $lang = array_merge($lang, array(
 	'POST_APPROVAL_NOTIFY'		=> ' Θα ειδοποιηθείτε όταν εγκριθεί η δημοσίευσή σας.',
 	'POST_CONFIRMATION'			=> 'Επιβεβαίωση στην δημοσίευση',
 	'POST_CONFIRM_EXPLAIN'		=> 'Για αποτροπή αυτόματων απαντήσεων η Δ. Συζήτηση απαιτεί την προσθήκη ενός κώδικα επιβεβαίωσης. Ο κώδικας εμφανίζεται στην ποιο κάτω εικόνα. Εάν έχετε οπτικό πρόβλημα ή για κάποιον άλλο λόγο δεν βλέπετε την εικόνα ελάτε σε επικοινωνία με τον %sΔιαχειριστή της Δ. Συζήτησης%s.',
-	'POST_DELETED'				=> 'Η δημοσίευση διαγράφηκε με επιτυχία.',
-	'POST_EDITED'				=> 'Η επεξεργασία της δημοσίευσης έγινε με επιτυχία.',
-	'POST_EDITED_MOD'			=> 'Η επεξεργασία της δημοσίευσης έγινε με επιτυχία, αλλά πρέπει να εγκριθεί από τον συντονιστή πριν αυτή γίνει ορατή στα υπόλοιπα μέλη.',
+	'POST_DELETED'				=> 'This post has been deleted.',
+	'POST_EDITED'				=> 'This post has been edited successfully.',
+	'POST_EDITED_MOD'			=> 'This post has been edited successfully, but it will need to be approved by a moderator before it is publicly viewable.',
 	'POST_GLOBAL'				=> 'Γενική',
 	'POST_ICON'					=> 'Δημοσίευσης σύμβολο',
 	'POST_NORMAL'				=> 'Κανονική',
@@ -3042,8 +3218,9 @@ $lang = array_merge($lang, array(
 	'POST_TOPIC_AS'				=> 'Γράψτε θέμα ως',
 	'PROGRESS_BAR'				=> 'Προβολή κατάστασης',
 
-	'QUOTE_DEPTH_EXCEEDED'		=> 'Μπορείτε να χρησιμοποιήσετε μόνο %1$d παράθεση.',
+	'QUOTE_NO_NESTING'			=> 'You may not embed quotes within each other.',
 
+	'REMOTE_UPLOAD_TIMEOUT'		=> 'The specified file could not be uploaded because the request timed out.',
 	'SAVE'						=> 'Αποθήκευση',
 	'SAVE_DATE'					=> 'Αποθηκεύτηκε',
 	'SAVE_DRAFT'				=> 'Αποθήκευση προσχέδιο',
@@ -3060,8 +3237,6 @@ $lang = array_merge($lang, array(
 	'TOO_FEW_POLL_OPTIONS'		=> 'Πρέπει να προσθέσετε τουλάχιστον δύο επιλογές απαντήσεις για το δημοψήφισμα.',
 	'TOO_MANY_ATTACHMENTS'		=> 'Δεν μπορείτε να προσθέσετε άλλο συνημμένο, ο μέγιστος αριθμός είναι %d.',
 	'TOO_MANY_CHARS'			=> 'Το μήνυμά σας περιέχει πολλούς χαρακτήρες.',
-	'TOO_MANY_CHARS_POST'		=> 'Η δημοσίευσή σας αποτελείται από %1$d χαρακτήρες. Ο μέγιστος αριθμός που επιτρέπετε είναι %2$d.',
-	'TOO_MANY_CHARS_SIG'		=> 'Η υπογραφή σας αποτελείται από %1$d χαρακτήρες. Ο μέγιστος αριθμός που επιτρέπετε είναι %2$d.',
 	'TOO_MANY_POLL_OPTIONS'		=> 'Έχετε προσθέσει πολλές επιλογές απαντήσεων.',
 	'TOO_MANY_SMILIES'			=> 'Στο μήνυμά σας έχετε προσθέσει πολλά εικονίδια. Ο μέγιστος αριθμός εικονιδίων που επιτρέπετε είναι %d.',
 	'TOO_MANY_URLS'				=> 'Στο μήνυμά σας έχετε προσθέσει πολλούς συνδέσμους. Ο μέγιστος αριθμός συνδέσμων που επιτρέπετε είναι %d.',
@@ -3070,6 +3245,8 @@ $lang = array_merge($lang, array(
 
 	'UNAUTHORISED_BBCODE'		=> 'Δεν μπορείτε να χρησιμοποιήσετε ορισμένα BBCodes: %s.',
 	'UNGLOBALISE_EXPLAIN'		=> 'Για να επαναφέρετε αυτή την δημοσίευση από γενική ανακοίνωση σε κανονική μορφή, θα πρέπει να επιλέξετε μια Δ. Συζήτηση που θα θέλατε να εμφανιστεί.',
+	'UNSUPPORTED_CHARACTERS_MESSAGE'	=> 'Your message contains the following unsupported characters:<br />%s',
+	'UNSUPPORTED_CHARACTERS_SUBJECT'	=> 'Your subject contains the following unsupported characters:<br />%s',
 	'UPDATE_COMMENT'			=> 'Ενημέρωση σχολίων',
 	'URL_INVALID'				=> 'Ο σύνδεσμος που προσθέσατε είναι άκυρος.',
 	'URL_NOT_FOUND'				=> 'Το αρχείο που ορίσατε δεν μπορεί να βρεθεί.',
@@ -3084,8 +3261,8 @@ $lang = array_merge($lang, array(
 	'VIEW_MESSAGE'				=> '%sΠροβολή της δημοσίευσής σας%s',
 	'VIEW_PRIVATE_MESSAGE'		=> '%sΠροβολή των απεσταλμένων προσωπικών μηνυμάτων%s',
 
-	'WRONG_FILESIZE'			=> 'Το αρχείο είναι μεγάλο, το μέγιστο μέγεθος που επιτρέπετε είναι %1d %2s.',
-	'WRONG_SIZE'				=> 'Η εικόνα πρέπει να είναι μεταξύ %1$d εικονοστοιχείο πλάτος, %2$d εικονοστοιχεία ύψος όπως επίσης %3$d εικονοστοιχεία πλάτος και %4$d εικονοστοιχεία ύψος. Η υποβληθείσα εικόνα είναι %5$d εικονοστοιχεία πλάτος και %6$d εικονοστοιχεία ύψος.',
+	'WRONG_FILESIZE'			=> 'The file is too big, maximum allowed size is %1$d %2$s.',
+	'WRONG_SIZE'				=> 'The image must be at least %1$s wide, %2$s high and at most %3$s wide and %4$s high. The submitted image is %5$s wide and %6$s high.',
 
 	'FONT_TYPE'			=> 'Typeface',
 	'FONT_COLOR'			=> 'Χρώμα γραμματοσειράς',
@@ -3105,10 +3282,6 @@ $lang = array_merge($lang, array(
 
 	'DISPLAY_RESULTS'		=> 'Εμφάνιση αποτελεσμάτων ανά',
 
-	'FOUND_SEARCH_MATCH'		=> 'Η αναζήτηση βρήκε %d εγγραφή',
-	'FOUND_SEARCH_MATCHES'		=> 'Η αναζήτηση βρήκε %d εγγραφές',
-	'FOUND_MORE_SEARCH_MATCHES'	=> 'Αναζήτηση για περισσότερες %d εγγραφές',
-
 	'GLOBAL'				=> 'Γενική Ανακοίνωση',
 
 	'IGNORED_TERMS'			=> 'αγνοήστε',
@@ -3120,24 +3293,23 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_UNREADSEARCH'=> 'Η κοινότητα απαιτεί να εγγραφείτε ή να συνδεθείτε για να δείτε τις μη αναγνωσμένες δημοσιεύσεις σας.',
 	'LOGIN_EXPLAIN_NEWPOSTS'	=> 'Η κοινότητα απαιτεί να εγγραφείτε ή να συνδεθείτε για να δείτε τις μη αναγνωσμένες δημοσιεύσεις , μετά την τελευταία επίσκεψή σας..',
 
-	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> 'Διευκρινίσατε πάρα πολλές λέξεις στην αναζήτηση για αυτό. Παρακαλώ μην χρησιμοποιείται πάνω από  %1$d χαρακτήρες.',
-
-	'NO_KEYWORDS'			=> 'Πρέπει να διευκρινίσετε τουλάχιστον μια λέξη στην αναζήτηση. Κάθε λέξη πρέπει να αποτελείτε από τουλάχιστον %d χαρακτήρες και δεν πρέπει να περιέχει περισσότερο από %d χαρακτήρες αποκλείοντας τους μπαλαντέρ.',
+	'NO_KEYWORDS'			=> 'You must specify at least one word to search for. Each word must consist of at least %s and must not contain more than %s excluding wildcards.',
 	'NO_RECENT_SEARCHES'	=> 'Καμία αναζήτηση δεν έχει πραγματοποιηθεί πρόσφατα',
 	'NO_SEARCH'				=> 'Συγνώμη αλλά δεν σας επιτρέπετε να χρησιμοποιήσετε το σύστημα αναζήτησης.',
 	'NO_SEARCH_RESULTS'		=> 'Καμία κατάλληλη αντιστοιχία δεν βρέθηκε.',
-	'NO_SEARCH_TIME'		=> 'Συγνώμη αλλά δεν μπορείτε να χρησιμοποιήσετε την αναζήτηση αυτή την στιγμή. Προσπαθήστε πάλι σε λίγα λεπτά.',
 	'NO_SEARCH_UNREADS'		=> 'Συγνώμη, η αναζήτηση για μη αναγνωσμένες δημοσιεύσεις έχει απενεργοποιηθεί σε αυτή την Δ. Συζήτηση.',
 	'WORD_IN_NO_POST'		=> 'Καμία δημοσίευση δεν βρέθηκε επειδή η λέξη <strong>%s</strong> δεν περιλαμβάνεται σε οποιαδήποτε δημοσίευση.',
 	'WORDS_IN_NO_POST'		=> 'Καμία δημοσίευση δεν βρέθηκε επειδή οι λέξεις <strong>%s</strong> δεν περιλαμβάνονται σε οποιαδήποτε δημοσίευση',
 
 	'POST_CHARACTERS'		=> 'Χαρακτήρες δημοσίευσης',
+	'PHRASE_SEARCH_DISABLED'	=> 'Searching by exact phrase is not supported on this board.',
 
 	'RECENT_SEARCHES'		=> 'Πρόσφατες αναζητήσεις',
 	'RESULT_DAYS'			=> 'Αποτελέσματα ορίου σε προηγούμενο',
 	'RESULT_SORT'			=> 'Ταξινόμηση αποτελεσμάτων ανά',
 	'RETURN_FIRST'			=> 'Επιστροφή των πρώτων',
 	'RETURN_TO_SEARCH_ADV'	=> 'Επιστροφή στην Ειδική αναζήτηση',
+	'GO_TO_SEARCH_ADV'	=> 'Go to advanced search',
 
 	'SEARCHED_FOR'				=> 'Αναζήτησε χρησιμοποιούμενους όρους',
 	'SEARCHED_TOPIC'			=> 'Αναζήτησε θέμα',
@@ -3164,10 +3336,11 @@ $lang = array_merge($lang, array(
 	'SORT_FORUM'				=> 'Δ. Συζήτηση',
 	'SORT_POST_SUBJECT'			=> 'Θέμα δημοσίευσης',
 	'SORT_TIME'					=> 'Ώρα δημοσίευσης',
+	'SPHINX_SEARCH_FAILED'		=> 'Search failed: %s',
+	'SPHINX_SEARCH_FAILED_LOG'	=> 'Sorry, search could not be performed. More information about this failure has been logged in the error log.',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
 	'SELECT_ALL_TAGS'		=> 'No selection',
-	'TOO_FEW_AUTHOR_CHARS'	=> 'Πρέπει να διευκρινίσετε τουλάχιστον τους τελευταίους %d χαρακτήρες του ονόματος του συγγραφέα.',
 ));
 
 #######language/en/ucp.php#######
@@ -3222,6 +3395,7 @@ $lang = array_merge($lang, array(
 	'ATTACHMENTS_EXPLAIN'			=> 'Αυτή είναι μια λίστα των συνημμένων που έχετε δημοσιεύσει στην κοινότητα αυτή.',
 	'ATTACHMENTS_DELETED'			=> 'Επιτυχής διαγραφή συνημμένων.',
 	'ATTACHMENT_DELETED'			=> 'Επιτυχής διαγραφή συνημμένου.',
+	'AUTOLOGIN_SESSION_KEYS_DELETED'=> 'The selected "Remember Me" login keys were successfully deleted.',
 	'AVATAR_CATEGORY'				=> 'Κατηγορία',
 	'AVATAR_DRIVER_GRAVATAR_TITLE'	=> 'Gravatar',
 	'AVATAR_DRIVER_GRAVATAR_EXPLAIN'=> 'Gravatar is a service that allows you to maintain the same avatar across multiple websites. Visit <a href="http://www.gravatar.com/">Gravatar</a> for more information.',
@@ -3231,12 +3405,14 @@ $lang = array_merge($lang, array(
 	'AVATAR_DRIVER_REMOTE_EXPLAIN'	=> 'Link to avatar images from another website.',
 	'AVATAR_DRIVER_UPLOAD_TITLE'	=> 'Upload avatar',
 	'AVATAR_DRIVER_UPLOAD_EXPLAIN'	=> 'Upload your own custom avatar.',
-	'AVATAR_EXPLAIN'				=> 'Μέγιστες διαστάσεις: πλάτος: %1$d σε εικονοστοιχεία, ύψος: %2$d σε εικονοστοιχεία, μέγεθος αρχείου: %3$.2f KiB.',
+	'AVATAR_EXPLAIN'				=> 'Maximum dimensions; width: %1$s, height: %2$s, file size: %3$.2f KiB.',
 	'AVATAR_FEATURES_DISABLED'		=> 'Η χρήση άβαταρ είναι προσωρινά απενεργοποιημένη.',
 	'AVATAR_GALLERY'				=> 'Τοπική Γκαλερί',
 	'AVATAR_GENERAL_UPLOAD_ERROR'	=> 'Ανεπιτυχής φόρτωση άβαταρ στο %s.',
 	'AVATAR_NOT_ALLOWED'			=> 'Το άβαταρ σας δεν μπορεί να επιδειχθεί επειδή τα άβατα έχουν απαγορευθεί.',
 	'AVATAR_PAGE'					=> 'Σελίδα',
+	'AVATAR_SELECT'					=> 'Select your avatar',
+	'AVATAR_TYPE'					=> 'Avatar type',
 	'AVATAR_TYPE_NOT_ALLOWED'		=> 'Το τρέχον άβαταρ σας δεν μπορεί να επιδειχθεί  επειδή ο τύπος έχει απαγορευθεί.',
 
 	'BACK_TO_DRAFTS'			=> 'Επιστροφή στα αποθηκευμένα πρόχειρα',
@@ -3245,7 +3421,6 @@ $lang = array_merge($lang, array(
 	'BIRTHDAY_EXPLAIN'			=> 'Εισάγοντας το έτος γεννήσεως σας θα εμφανίζεται η ηλικία σας την ημέρα γενεθλίων σας.',
 	'BOARD_DATE_FORMAT'			=> 'Μορφή ημερομηνίας μου',
 	'BOARD_DATE_FORMAT_EXPLAIN'	=> 'Η σύνταξη είναι πανομοιότυπη με την μεταβλητή <a href="http://www.php.net/date">date()</a> της PHP.',
-	'BOARD_DST'					=> 'Θερινή ώρα/<abbr title="Daylight Saving Time">DST</abbr> σε λειτουργία',
 	'BOARD_LANGUAGE'			=> 'Γλώσσα επικοινωνίας',
 	'BOARD_STYLE'				=> 'Εμφάνιση επιφάνειας',
 	'BOARD_TIMEZONE'			=> 'Ωρολογιακή ζώνη',
@@ -3264,8 +3439,6 @@ $lang = array_merge($lang, array(
 	'CLICK_RETURN_FOLDER'		=> '%1$sΕπιστροφή στον “%3$s” φάκελο σας%2$s',
 	'CONFIRMATION'				=> 'Επιβεβαίωση εγγραφής',
 	'CONFIRM_CHANGES'			=> 'Επιβεβαίωση αποθήκευσης αλλαγών',
-	'CONFIRM_EMAIL'				=> 'Επιβεβαίωση διεύθυνσης ηλεκτρονικού ταχυδρομείου',
-	'CONFIRM_EMAIL_EXPLAIN'		=> 'Το επιλέγετε αυτό μόνο αν θέλετε να αλλάξετε την διεύθυνση ηλεκτρονικού ταχυδρομείου σας.',
 	'CONFIRM_EXPLAIN'			=> 'Για την αποφυγή αυτόματων εγγραφών η κοινότητα απαιτεί να βάλετε έναν κωδικό επιβεβαίωσης. Ο κωδικός αυτός εμφανίζεται στην κάτωθι εικόνα. Αν έχετε προβλήματα όρασης ή δεν μπορείτε για κάποιον λόγο να διαβάσετε τον κωδικό παρακαλούμε επικοινωνήστε με τον %sΔιαχειριστή αυτής της κοινότητας%s.',
 	'VC_REFRESH'				=> 'Ανανέωση εικόνας',
 	'VC_REFRESH_EXPLAIN'		=> 'Εάν δεν μπορείτε να διαβάσετε τον κώδικα, μπορείτε να ζητήσετε έναν νέο με το πάτημα  του κουμπιού.',
@@ -3274,7 +3447,7 @@ $lang = array_merge($lang, array(
 	'CONFIRM_PASSWORD_EXPLAIN'	=> 'Χρειάζεται να επιβεβαιώσετε πάλι τον κωδικό σας μόνο εάν τον αλλάξατε παραπάνω.',
 	'COPPA_BIRTHDAY'			=> 'Για να προχωρήσετε με την εγγραφή παρακαλούμε συμπληρώστε πότε γεννηθήκατε.',
 	'COPPA_COMPLIANCE'			=> 'Συγκατάθεση COPPA',
-	'COPPA_EXPLAIN'				=> 'Σημειώστε ότι επιλέγοντας να προχωρήσετε θα δημιουργηθεί ο λογαριασμός σας. Ωστόσο δεν θα ενεργοποιηθεί πρέπει ο κηδεμόνας σας να εγκρίνει την εγγραφή σας. Θα σας αποσταλεί ένα μήνυμα ηλεκτρονικού ταχυδρομείου με την απαραίτητη φόρμα και πληροφορίες για το πού να την αποστείλετε.',
+	'COPPA_EXPLAIN'				=> 'Please note that clicking submit will create your account. However it cannot be activated until a parent or guardian approves your registration. You will be e-mailed a copy of the necessary form with details of where to send it.',
 	'CREATE_FOLDER'				=> 'Προσθήκη φακέλου…',
 	'CURRENT_IMAGE'				=> 'Τρέχουσα εικόνα',
 	'CURRENT_PASSWORD'			=> 'Τρέχων κωδικός πρόσβασης',
@@ -3329,27 +3502,34 @@ $lang = array_merge($lang, array(
 	'EXPORT_FOLDER'				=> 'Εξαγωγή αυτής της προβολής',
 
 	'FIELD_REQUIRED'					=> 'Το πεδίο “%s” πρέπει να συμπληρωθεί.',
-	'FIELD_TOO_SHORT'					=> 'Το περιεχόμενο του πεδίου “%1$s” είναι πολύ μικρό, απαιτούνται τουλάχιστον %2$d χαρακτήρες.',
-	'FIELD_TOO_LONG'					=> 'Το περιεχόμενο του πεδίου “%1$s” είναι πολύ μεγάλο, απαιτούνται το πολύ %2$d χαρακτήρες.',
-	'FIELD_TOO_SMALL'					=> 'Η τιμή του πεδίου “%1$s” είναι πολύ μικρή, απαιτούνται τουλάχιστον %2$d χαρακτήρες.',
-	'FIELD_TOO_LARGE'					=> 'Η τιμή του πεδίου “%1$s” είναι πολύ μεγάλη, απαιτούνται το πολύ %2$d χαρακτήρες.',
+
+	'FIELD_TOO_SMALL'					=> 'The value of “%2$s” is too small, a minimum value of %1$d is required.',
+	'FIELD_TOO_LARGE'					=> 'The value of “%2$s” is too large, a maximum value of %1$d is allowed.',
+	'FIELD_INVALID_CHARS_INVALID'		=> 'The field “%s” has invalid characters.',
 	'FIELD_INVALID_CHARS_NUMBERS_ONLY'	=> 'Το πεδίο “%s” περιέχει μη επιτρεπτούς χαρακτήρες, επιτρέπονται μόνο αριθμοί.',
+	'FIELD_INVALID_CHARS_ALPHA_DOTS'	=> 'The field “%s” has invalid characters, only alphanumeric or . characters are allowed.',
 	'FIELD_INVALID_CHARS_ALPHA_ONLY'	=> 'Το πεδίο “%s” περιέχει μη επιτρεπτούς χαρακτήρες, επιτρέπονται μόνο αλφαριθμητικοί χαρακτήρες.',
-	'FIELD_INVALID_CHARS_SPACERS_ONLY'	=> 'Το πεδίο “%s” περιέχει μη επιτρεπτούς χαρακτήρες, επιτρέπονται μόνο αλφαριθμητικοί χαρακτήρες, διαστήματα και -+_[].',
+	'FIELD_INVALID_CHARS_ALPHA_PUNCTUATION'	=> 'The field “%s” has invalid characters, only alphanumeric or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_ALPHA_SPACERS'	=> 'The field “%s” has invalid characters, only alphanumeric, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_ALPHA_UNDERSCORE'	=> 'The field “%s” has invalid characters, only alphanumeric or _ characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_DOTS'	=> 'The field “%s” has invalid characters, only letter, number or . characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_ONLY'	=> 'The field “%s” has invalid characters, only letter and number characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_PUNCTUATION'	=> 'The field “%s” has invalid characters, only letter, number or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_SPACERS'		=> 'The field “%s” has invalid characters, only letter, number, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_UNDERSCORE'		=> 'The field “%s” has invalid characters, only letter, number or _ characters are allowed.',
 	'FIELD_INVALID_DATE'				=> 'Το πεδίο “%s” περιέχει μη επιτρεπτή ημερομηνία.',
+	'FIELD_INVALID_URL'					=> 'The field “%s” has an invalid url.',
 	'FIELD_INVALID_VALUE'				=> 'Το πεδίο “%s” περιέχει μη επιτρεπτή τιμή.',
 
 	'FOE_MESSAGE'				=> 'Μήνυμα από εχθρό',
 	'FOES_EXPLAIN'				=> 'Οι εχθροί είναι μέλη τα οποία αγνοούνται εξ ορισμού. Δημοσιεύσεις από αυτά τα μέλη δεν θα είναι εξ ολοκλήρου ορατές. Τα προσωπικά μηνύματα από εχθρούς δεν επιτρέπονται. Σημειώστε ότι δεν μπορείτε να αγνοήσετε συντονιστές ή διαχειριστές.',
 	'FOES_UPDATED'				=> 'Επιτυχής ενημέρωση της λίστας εχθρών σας.',
 	'FOLDER_ADDED'				=> 'Επιτυχής προσθήκη φακέλου.',
-	'FOLDER_MESSAGE_STATUS'		=> 'Επιτυχής αποθήκευση %1$d μηνυμάτων από τον/την %2$d',
 	'FOLDER_NAME_EMPTY'			=> 'Πρέπει να προσθέσετε ένα όνομα για αυτόν τον φάκελο.',
 	'FOLDER_NAME_EXIST'			=> 'Ο φάκελος <strong>%s</strong> υπάρχει ήδη.',
 	'FOLDER_OPTIONS'			=> 'Επιλογές φακέλων',
 	'FOLDER_RENAMED'			=> 'Επιτυχής μετονομασία φακέλου.',
 	'FOLDER_REMOVED'			=> 'Επιτυχής διαγραφή φακέλου.',
-	'FOLDER_STATUS_MSG'			=> 'Ο φάκελος είναι κατά %1$d%% πλήρης (%2$d από τα %3$d επιτρεπόμενα μηνύματα αποθηκευμένα)',
 	'FORWARD_PM'				=> 'Προώθηση ΠΜ',
 	'FORCE_PASSWORD_EXPLAIN'	=> 'Απαιτείται αλλαγή του κωδικού πρόσβασης πριν την συνέχιση της περιήγησης στην κοινότητα.',
 	'FRIEND_MESSAGE'			=> 'Μήνυμα από φίλο',
@@ -3418,16 +3598,35 @@ $lang = array_merge($lang, array(
 	'MOVE_DELETED_MESSAGES_TO'		=> 'Μετακίνηση μηνυμάτων από τον φάκελο Διαγραμμένα στον φάκελο',
 	'MOVE_DOWN'						=> 'Μετακίνηση κάτω',
 	'MOVE_MARKED_TO_FOLDER'			=> 'Μετακίνηση επιλεγμένων στο %s',
-	'MOVE_PM_ERROR'					=> 'Ένα σφάλμα σημειώθηκε κατά την μεταφορά των μηνυμάτων σε νέο φάκελο, μόνο %1d από τα %2d μηνύματα μετακινήθηκαν.',
 	'MOVE_TO_FOLDER'				=> 'Μετακίνηση στον φάκελο',
 	'MOVE_UP'						=> 'Μετακίνηση επάνω',
 
-	'NEW_EMAIL_CONFIRM_EMPTY'		=> 'Δεν έχετε επιβεβαιώσει την διεύθυνση ε-μαιλ.',
-	'NEW_EMAIL_ERROR'				=> 'Οι διευθύνσεις ηλεκτρονικού ταχυδρομείου που εισάγατε δεν ταιριάζουν.',
 	'NEW_FOLDER_NAME'				=> 'Όνομα νέου φακέλου',
 	'NEW_PASSWORD'					=> 'Νέος κωδικός πρόσβασης',
 	'NEW_PASSWORD_CONFIRM_EMPTY'	=> 'Δεν έχετε καταχωρήσει έναν κωδικό πρόσβασης για επιβεβαίωση.',
 	'NEW_PASSWORD_ERROR'			=> 'Οι κωδικοί πρόσβασης που εισάγατε δεν ταιριάζουν.',
+
+	'NOTIFICATIONS_MARK_ALL_READ'						=> 'Mark all notifications read',
+	'NOTIFICATIONS_MARK_ALL_READ_CONFIRM'				=> 'Are you sure you want to mark all notifications read?',
+	'NOTIFICATIONS_MARK_ALL_READ_SUCCESS'				=> 'All notifications have been marked read.',
+	'NOTIFICATION_GROUP_MISCELLANEOUS'					=> 'Miscellaneous Notifications',
+	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
+	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
+	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'E-mail',
+	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
+	'NOTIFICATION_TYPE'									=> 'Notification type',
+	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
+	'NOTIFICATION_TYPE_GROUP_REQUEST'					=> 'Someone requests to join a group you lead',
+	'NOTIFICATION_TYPE_IN_MODERATION_QUEUE'				=> 'A post or topic needs approval',
+	'NOTIFICATION_TYPE_MODERATION_QUEUE'				=> 'Your topics/posts are approved or disapproved by a moderator',
+	'NOTIFICATION_TYPE_PM'								=> 'Someone sends you a private message',
+	'NOTIFICATION_TYPE_POST'							=> 'Someone replies to a topic to which you are subscribed',
+	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
+	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
+	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+
 	'NOTIFY_METHOD'					=> 'Μέθοδος ειδοποίησης',
 	'NOTIFY_METHOD_BOTH'			=> 'Και τα δυο',
 	'NOTIFY_METHOD_EMAIL'			=> 'Μόνο με μήνυμα ηλεκτρονικού ταχυδρομείου',
@@ -3445,10 +3644,9 @@ $lang = array_merge($lang, array(
 	'NOT_ADDED_FOES_SELF'			=> 'Δεν μπορείτε να προσθέσετε τον εαυτό σας στην λίστα εχθρών σας.',
 	'NOT_AGREE'						=> 'Δεν συμφωνώ με τους όρους',
 	'NOT_ENOUGH_SPACE_FOLDER'		=> 'Ο φάκελος προορισμού “%s” πιθανών είναι πλήρης. Η επιθυμητή ενέργεια δεν πραγματοποιήθηκε.',
-	'NOT_MOVED_MESSAGE'				=> 'Έχετε 1 προσωπικό μήνυμα σε αναμονή λόγω πλήρους φακέλου.',
-	'NOT_MOVED_MESSAGES'			=> 'Έχετε %d προσωπικά μηνύματα σε αναμονή λόγω πλήρους φακέλου.',
 	'NO_ACTION_MODE'				=> 'Δεν ορίσθηκε ενέργεια για τα μηνύματα.',
 	'NO_AUTHOR'						=> 'Δεν ορίσθηκε αποστολέας για αυτό το μήνυμα',
+	'NO_AVATAR'						=> 'No avatar selected',
 	'NO_AVATAR_CATEGORY'			=> 'Κανένα',
 
 	'NO_AUTH_DELETE_MESSAGE'		=> 'Δεν είστε εξουσιοδοτημένος να διαγράψετε προσωπικά μηνύματα.',
@@ -3456,6 +3654,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_FORWARD_MESSAGE'		=> 'Δεν είστε εξουσιοδοτημένος να προωθήσετε προσωπικά μηνύματα..',
 	'NO_AUTH_GROUP_MESSAGE'			=> 'Δεν είστε εξουσιοδοτημένος να στέλνετε προσωπικά μηνύματα σε ομάδες μελών.',
 	'NO_AUTH_PASSWORD_REMINDER'		=> 'Δεν είστε εξουσιοδοτημένος να ζητήσετε έναν νέο κωδικό πρόσβαση.',
+	'NO_AUTH_PROFILEINFO'			=> 'You are not authorised to change your profile information.',
 	'NO_AUTH_READ_HOLD_MESSAGE'		=> 'Δεν είστε εξουσιοδοτημένος να διαβάσετε προσωπικά μηνύματα που είμαι κρατημένα.',
 	'NO_AUTH_READ_MESSAGE'			=> 'Δεν είστε εξουσιοδοτημένος να διαβάσετε προσωπικά μηνύματα.',
 	'NO_AUTH_READ_REMOVED_MESSAGE'	=> 'Δεν μπορείτε να διαβάσετε αυτό το μήνυμα γιατί διαγράφηκε από τον συγγραφέα του.',
@@ -3486,10 +3685,10 @@ $lang = array_merge($lang, array(
 	'NO_WATCHED_SELECTED'		=> 'Δεν έχετε επιλέξει κανένα θέμα κα Δ. Συζήτηση που παρακολουθείτε.',
 	'NO_WATCHED_TOPICS'			=> 'Δεν παρακολουθείτε κανένα θέμα.',
 
-	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Ο κωδικός πρόσβασης πρέπει να είναι από %1$d έως %2$d χαρακτήρες μακρύς, πρέπει να περιέχει Κεφαλαία-Μικρά γράμματα ανακατεμένα και αριθμούς.',
-	'PASS_TYPE_ANY_EXPLAIN'		=> 'Πρέπει να είναι από %1$d μέχρι %2$d χαρακτήρες μήκος.',
-	'PASS_TYPE_CASE_EXPLAIN'	=> 'Ο κωδικός πρόσβασης πρέπει να είναι μεταξύ %1$d και %2$d χαρακτήρες σε μήκος και πρέπει να περιέχει Κεφαλαία-Μικρά γράμματα ανακατεμένα.',
-	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Ο κωδικός πρόσβασης πρέπει να είναι μεταξύ %1$d και %2$d χαρακτήρες σε μήκος, να περιέχει Κεφαλαία-Μικρά γράμματα ανακατεμένα, να περιέχει νούμερα και ειδικά σύμβολα.',
+	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case and must contain numbers.',
+	'PASS_TYPE_ANY_EXPLAIN'		=> 'Must be between %1$s and %2$s.',
+	'PASS_TYPE_CASE_EXPLAIN'	=> 'Password must be between %1$s and %2$s long and must contain letters in mixed case.',
+	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case, must contain numbers and must contain symbols.',
 	'PASSWORD'					=> 'Κωδικός',
 	'PASSWORD_ACTIVATED'		=> 'Επιτυχής ενεργοποίηση του νέου σας κωδικού πρόσβασης.',
 	'PASSWORD_UPDATED'			=> 'Ένας νέος κωδικός έχει σταλεί στην διεύθυνση του ηλεκτρονικού ταχυδρομείου σας.',
@@ -3500,13 +3699,16 @@ $lang = array_merge($lang, array(
 	'PM_FROM_REMOVED_AUTHOR'	=> 'Αυτό το μήνυμα έχει σταλεί από μέλος που δεν είναι πλέον εγγεγραμμένος.',
 	'PM_ICON'					=> 'Εικονίδιο ΠΜ',
 	'PM_INBOX'					=> 'Εισερχόμενα',
+	'PM_MARK_ALL_READ'			=> 'Mark all messages read',
+	'PM_MARK_ALL_READ_SUCCESS'	=> 'All private messages in this folder have been marked read',
 	'PM_NO_USERS'				=> 'Το επιλεγμένο μέλος δεν υπάρχει.',
 	'PM_OUTBOX'					=> 'Εξερχόμενα',
 	'PM_SENTBOX'				=> 'Απεσταλμένα',
 	'PM_SUBJECT'				=> 'Θέμα μηνύματος',
 	'PM_TO'						=> 'Αποστολή στον',
+	'PM_TOOLS'					=> 'Message tools',
+	'PM_USERS_REMOVED_NO_PERMISSION'	=> 'Some users couldn’t be added as they do not have permission to read private messages.',
 	'PM_USERS_REMOVED_NO_PM'	=> 'Μερικά μέλη δεν μπορούν να προστεθούν γιατί έχουν απενεργοποιημένη την λήψη μηνυμάτων.',
-	'POPUP_ON_PM'				=> 'Αναδυόμενο παράθυρο ειδοποίησης για νέο μήνυμα',
 	'POST_EDIT_PM'				=> 'Επεξεργασία μηνύματος',
 	'POST_FORWARD_PM'			=> 'Προώθηση μηνύματος',
 	'POST_NEW_PM'				=> 'Σύνταξη μηνύματος',
@@ -3518,6 +3720,8 @@ $lang = array_merge($lang, array(
 	'PREFERENCES_UPDATED'		=> 'Επιτυχής ενημέρωση των επιλογών σας.',
 	'PROFILE_INFO_NOTICE'		=> 'Σημειώστε ότι οι πληροφορίες που εισάγετε εδώ μπορούν να αναγνωσθούν από όλα τα μέλη. Να είστε προσεκτικοί με τις προσωπικές πληροφορίες που προσθέτετε. Τα πεδία που φέρουν το χαρακτηριστικό * πρέπει να συμπληρωθούν.',
 	'PROFILE_UPDATED'			=> 'Το προφίλ σας ενημερώθηκε.',
+	'PROFILE_AUTOLOGIN_KEYS'	=> 'The "Remember Me" login keys automatically log you in when you visit the board. If you logout, the remember me login key is deleted only on the computer you are using to logout. Here you can see remember login keys created on other computers you used to access this site.',
+	'PROFILE_NO_AUTOLOGIN_KEYS'	=> 'There are no saved "Remember Me" login keys.',
 
 	'RECIPIENT'							=> 'Παραλήπτης',
 	'RECIPIENTS'						=> 'Παραλήπτες',
@@ -3542,8 +3746,6 @@ $lang = array_merge($lang, array(
 	'RULE_DELETED'						=> 'Επιτυχής διαγραφή κανόνα.',
 	'RULE_LIMIT_REACHED'				=> 'You cannot add more PM rules. You have reached the maximum number of rules.',
 	'RULE_NOT_DEFINED'					=> 'Ανεπιτυχής καθορισμός κανόνα.',
-	'RULE_REMOVED_MESSAGE'				=> 'Ένα προσωπικό μήνυμα διαγράφτηκε εξαιτίας κάποιου φίλτρου προσωπικών μηνυμάτων.',
-	'RULE_REMOVED_MESSAGES'				=> '%d προσωπικά μηνύματα διαγράφτηκαν εξαιτίας κάποιου φίλτρου προσωπικών μηνυμάτων.',
 
 	'SAME_PASSWORD_ERROR'		=> 'Ο νέος κωδικός πρόσβασης που εισάγατε είναι ίδιος με τον ήδη υπάρχων.',
 	'SEARCH_YOUR_POSTS'			=> 'Εμφάνιση των δημοσιεύσεων σας',
@@ -3555,6 +3757,8 @@ $lang = array_merge($lang, array(
 	'SIGNATURE_TOO_LONG'		=> 'Η υπογραφή σας είναι πολύ μεγάλη.',
 	'SELECT_CURRENT_TIME'		=> 'Select current time',
 	'SELECT_TIMEZONE'			=> 'Select timezone',
+	'SELECT_CURRENT_TIME'		=> 'Select current time',
+	'SELECT_TIMEZONE'			=> 'Select timezone',
 	'SORT'						=> 'Ταξινόμησης',
 	'SORT_COMMENT'				=> 'Σχόλιο αρχείου',
 	'SORT_DOWNLOADS'			=> 'Μεταφόρτωση',
@@ -3564,15 +3768,28 @@ $lang = array_merge($lang, array(
 	'SORT_SIZE'					=> 'Μέγεθος αρχείου',
 
 	'TIMEZONE'					=> 'Ωρολογιακή ζώνη',
-	'TO'						=> 'Προς',
+	'TIMEZONE_DATE_SUGGESTION'	=> 'Suggestion: %s',
+	'TIMEZONE_INVALID'			=> 'The timezone you selected is invalid.',
+	'TO'						=> 'Recipient',
+	'TO_MASS'					=> 'Recipients',
+	'TO_ADD'					=> 'Add recipient',
+	'TO_ADD_MASS'				=> 'Add recipients',
+	'TO_ADD_GROUPS'				=> 'Add groups',
 	'TOO_MANY_RECIPIENTS'		=> 'Προσπαθήσατε να στείλετε ένα προσωπικό μήνυμα σε πάρα πολλούς παραλήπτες.',
 	'TOO_MANY_REGISTERS'		=> 'Έχετε υπερβεί τον αριθμό προσπαθειών εγγραφής για αυτή την σύνοδο. Παρακαλώ δοκιμάστε πάλι αργότερα.',
 
 	'UCP'						=> 'Πίνακας Ελέγχου Μέλους',
 	'UCP_ACTIVATE'				=> 'Ενεργοποίηση λογαριασμού',
 	'UCP_ADMIN_ACTIVATE'		=> 'Σημειώστε ότι πρέπει να εισάγετε αληθή διεύθυνση ηλεκτρονικού ταχυδρομείου πριν ενεργοποιηθεί ο λογαριασμός σας. Ο διαχειριστής θα ελέγξει τον λογαριασμό σας και αν τον εγκρίνει θα σας αποσταλεί μήνυμα ηλεκτρονικού ταχυδρομείου στην διεύθυνση που δώσατε.',
-	'UCP_AIM'					=> 'AOL Instant Messenger',
 	'UCP_ATTACHMENTS'			=> 'Συνημμένα',
+	'UCP_AUTH_LINK'				=> 'External accounts',
+	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
+	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
+	'UCP_AUTH_LINK_LINK'		=> 'Δεσμός',
+	'UCP_AUTH_LINK_MANAGE'		=> 'Manage external account associations',
+	'UCP_AUTH_LINK_NOT_SUPPORTED'	=> 'Linking board accounts to external services is not supported by this board’s current authentication method.',
+	'UCP_AUTH_LINK_TITLE'		=> 'Manage your external account associations',
+	'UCP_AUTH_LINK_UNLINK'		=> 'Unlink',
 	'UCP_AUTH_LINK'				=> 'External accounts',
 	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
 	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
@@ -3584,8 +3801,8 @@ $lang = array_merge($lang, array(
 	'UCP_COPPA_BEFORE'			=> 'Πριν από %s',
 	'UCP_COPPA_ON_AFTER'		=> 'Στο ή μετά από %s',
 	'UCP_EMAIL_ACTIVATE'		=> 'Σημειώστε ότι πρέπει να εισάγετε αληθή διεύθυνση ηλεκτρονικού ταχυδρομείου πριν ενεργοποιηθεί ο λογαριασμός σας. Θα σας αποσταλεί μήνυμα ηλεκτρονικού ταχυδρομείου που θα περιέχει τον σύνδεσμο για την ενεργοποίηση του.',
-	'UCP_ICQ'					=> 'Αριθμός ICQ',
 	'UCP_JABBER'				=> 'Διεύθυνση Jabber',
+	'UCP_LOGIN_LINK'			=> 'Set up an external account association',
 
 	'UCP_MAIN'					=> 'Επισκόπηση',
 	'UCP_MAIN_ATTACHMENTS'		=> 'Διαχείριση συνημμένων',
@@ -3594,7 +3811,6 @@ $lang = array_merge($lang, array(
 	'UCP_MAIN_FRONT'			=> 'Κύρια σελίδα',
 	'UCP_MAIN_SUBSCRIBED'		=> 'Διαχείριση συνδρομών',
 
-	'UCP_MSNM'					=> 'WL/MSN Messenger',
 	'UCP_NO_ATTACHMENTS'		=> 'Δεν επισυνάψατε κανένα αρχείο.',
 
 	'UCP_NOTIFICATION_LIST'				=> 'Manage notifications',
@@ -3611,8 +3827,6 @@ $lang = array_merge($lang, array(
 	'UCP_PM_COMPOSE'			=> 'Δημιουργία μηνύματος',
 	'UCP_PM_DRAFTS'				=> 'Διαχείριση προχείρων ΠΜ',
 	'UCP_PM_OPTIONS'			=> 'Κανόνες, φάκελοι &amp; ρυθμίσεις',
-	'UCP_PM_POPUP'				=> 'Προσωπικά μηνύματα',
-	'UCP_PM_POPUP_TITLE'		=> 'Αναδυόμενο παράθυρο προσωπικού μηνύματος',
 	'UCP_PM_UNREAD'				=> 'Μη αναγνωσμένα μηνύματα',
 	'UCP_PM_VIEW'				=> 'Προβολή μηνυμάτων',
 
@@ -3627,11 +3841,11 @@ $lang = array_merge($lang, array(
 	'UCP_USERGROUPS_MEMBER'		=> 'Επεξεργασία ιδιοτήτων μέλους',
 	'UCP_USERGROUPS_MANAGE'		=> 'Επεξεργασία ομάδων',
 
+	'UCP_PASSWORD_RESET_DISABLED'	=> 'The password reset functionality has been disabled. If you need help accessing your account, please contact the %sBoard Administrator%s',
 	'UCP_REGISTER_DISABLE'			=> 'Η εγγραφές είναι προσωρινά απενεργοποιημένες.',
 	'UCP_REMIND'					=> 'Αποστολή κωδικού',
 	'UCP_RESEND'					=> 'Αποστολή μηνύματος ενεργοποίησης',
 	'UCP_WELCOME'					=> 'Καλώς ήρθατε στον Πίνακα Διαχείρισης Μέλους. Εδώ μπορείτε να παρακολουθείτε, βλέπετε και να ενημερώνετε το προφίλ σας, τις επιλογές σας και τις δ. συζητήσεις ή δημοσιεύσεις που έχετε επιλέξει να παρακολουθείτε. Μπορείτε επίσης να στέλνετε προσωπικά μηνύματα σε άλλους (αν αυτό είναι επιτρεπτό). Παρακαλούμε διαβάστε τις ανακοινώσεις πριν συνεχίσετε.',
-	'UCP_YIM'						=> 'Yahoo Messenger',
 	'UCP_ZEBRA'						=> 'Φίλοι &amp; Εχθροί',
 	'UCP_ZEBRA_FOES'				=> 'Διαχείριση εχθρών',
 	'UCP_ZEBRA_FRIENDS'				=> 'Διαχείριση φίλων',
@@ -3641,12 +3855,12 @@ $lang = array_merge($lang, array(
 	'UPLOAD_AVATAR_FILE'			=> 'Φόρτωση από το μηχάνημα σας',
 	'UPLOAD_AVATAR_URL'				=> 'Φόρτωση από δεσμό',
 	'UPLOAD_AVATAR_URL_EXPLAIN'		=> 'Δώστε τον σύνδεσμο που περιέχει την εικόνα. Η εικόνα αυτή θα φορτωθεί στην κοινότητα αυτήν.',
-	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Το όνομα μέλους πρέπει να είναι από %1$d έως %2$d χαρακτήρες μακρύ και να περιέχει μόνο αλφαριθμητικούς χαρακτήρες.',
-	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Το όνομα μέλους πρέπει να είναι από %1$d έως %2$d χαρακτήρες μακρύ και να περιέχει μόνο αλφαριθμητικούς χαρακτήρες, διαστήματα και κάποιο από τα -+_[].',
-	'USERNAME_ASCII_EXPLAIN'		=> 'Το όνομα μέλους πρέπει να είναι από %1$d έως %2$d χαρακτήρες μακρύ και να περιέχει μόνο χαρακτήρες ASCII, και καθόλου ειδικούς χαρακτήρες.',
-	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Το όνομα μέλους πρέπει να είναι από %1$d έως %2$d χαρακτήρες μακρύ και να περιέχει μόνο γράμματα ή αριθμούς.',
-	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Το όνομα μέλους πρέπει να είναι από %1$d έως %2$d χαρακτήρες μακρύ και να περιέχει μόνο γράμματα, αριθμούς ή κάποιο από τα -+_[].',
-	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Το μήκος πρέπει να είναι από %1$d μέχρι %2$d χαρακτήρες.',
+	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only alphanumeric characters.',
+	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use alphanumeric, space or -+_[] characters.',
+	'USERNAME_ASCII_EXPLAIN'		=> 'Username must be between %1$s and %2$s long and use only ASCII characters, so no special symbols.',
+	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only letter or number characters.',
+	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use letter, number, space or -+_[] characters.',
+	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Length must be between %1$s and %2$s.',
 	'USERNAME_TAKEN_USERNAME'		=> 'Το όνομα μέλους που εισάγατε χρησιμοποιείτε ήδη. Παρακαλώ επιλέξτε κάποιο άλλο.',
 	'USERNAME_DISALLOWED_USERNAME'	=> 'Το όνομα μέλους που εισάγατε δεν επιτρέπετε ή περιέχει κάποια απαγορευμένη λέξη. Παρακαλώ επιλέξτε κάποιο άλλο.',
 	'USER_NOT_FOUND_OR_INACTIVE'	=> 'Τα ονόματα μέλους που εισάγατε δεν μπόρεσαν να βρεθούν ή δεν είναι ενεργοποιημένα μέλη.',
@@ -3659,10 +3873,9 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_PM'				=> 'Επόμενο ΠΜ',
 	'VIEW_PM'					=> 'Προβολή προσωπικών μηνυμάτων',
 	'VIEW_PM_INFO'				=> 'Λεπτομέρειες μηνύματος',
-	'VIEW_PM_MESSAGE'			=> '1 μήνυμα',
-	'VIEW_PM_MESSAGES'			=> '%d μηνύματα',
 	'VIEW_PREVIOUS_HISTORY'		=> 'Προηγούμενο ΠΜ στο ιστορικό',
 	'VIEW_PREVIOUS_PM'			=> 'Προηγούμενο ΠΜ',
+	'VIEW_PROFILE'				=> 'View profile',
 	'VIEW_SIGS'					=> 'Εμφάνιση υπογραφών',
 	'VIEW_SMILIES'				=> 'Εμφάνιση smilies ως εικόνες',
 	'VIEW_TOPICS_DAYS'			=> 'Εμφάνιση θεμάτων προηγούμενων ημερών',
@@ -3770,8 +3983,6 @@ $lang = array_merge($lang, array(
 	'UNREAD_POSTS_LOCKED'	=> 'Μη  αναγνωσμένες δημοσιεύσεις [ Κλειδωμένο ]',
 
 	'VIEW_FORUM'			=> 'Προβολή Δ. Συζήτησης',
-	'VIEW_FORUM_TOPIC'		=> '1 Θ. Ενότητα',
-	'VIEW_FORUM_TOPICS'		=> '%d Θ. Ενότητες',
 
 	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
 	'REMOVE_FILTER'		=> 'Remove filter',
@@ -3780,6 +3991,7 @@ $lang = array_merge($lang, array(
 #######language/en/viewtopic.php#######
 
 $lang = array_merge($lang, array(
+	'APPROVE'								=> 'Έγκριση',
 	'ATTACHMENT'						=> 'Συνημμένο',
 	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'Η λειτουργία των συνημμένων έχει τεθεί εκτός λειτουργίας ',
 
@@ -3792,14 +4004,13 @@ $lang = array_merge($lang, array(
 	'BUMP_TOPIC'			=> 'Σημειώστε θέμα ως νέο',
 
 	'CODE'					=> 'Κώδικας',
-	'COLLAPSE_QR'			=> 'Απόκρυψη γρήγορης απάντησης',
-
+	
 	'DELETE_TOPIC'			=> 'Διαγραφή θέματος',
+	'DELETED_INFORMATION'	=> 'Deleted by %1$s on %2$s',
+	'DISAPPROVE'					=> 'Απόρριψη',
 	'DOWNLOAD_NOTICE'		=> 'Δεν έχετε τα απαραίτητα δικαιώματα για να δείτε τα συνημμένα αρχεία σε αυτή την δημοσίευση.',
 
-	'EDITED_TIMES_TOTAL'	=> 'Τελευταία επεξεργασία από %1$s και %2$s, έχει επεξεργασθεί %3$d φορά/ες συνολικά',
-	'EDITED_TIME_TOTAL'		=> 'Τελευταία επεξεργασία από %1$s και %2$s, έχει επεξεργασθεί %3$d φορά/ες συνολικά',
-	'EMAIL_TOPIC'			=> 'Ηλεκτρονικό ταχυδρομείο σε έναν φίλο',
+	'EMAIL_TOPIC'			=> 'E-mail topic',
 	'ERROR_NO_ATTACHMENT'	=> 'Το επιλεγμένο συνημμένο δεν υπάρχει πλέον',
 
 	'FILE_NOT_FOUND_404'	=> 'Το αρχείο <b>%s</b> δεν υπάρχει.',
@@ -3814,8 +4025,6 @@ $lang = array_merge($lang, array(
 	'MAKE_GLOBAL'				=> 'Κάνετε Γενική',
 	'MAKE_NORMAL'				=> 'Κάνετε κανονική',
 	'MAKE_STICKY'				=> 'Κάνετε Σημείωση',
-	'MAX_OPTIONS_SELECT'		=> 'Μπορείτε να επιλέξετε μέχρι <b>%d</b>  επιλογές',
-	'MAX_OPTION_SELECT'			=> 'Μπορείτε να επιλέξετε <b>1</b>  επιλογή',
 	'MISSING_INLINE_ATTACHMENT'	=> 'Το συνημμένο <b>%s</b> δεν είναι άλλο διαθέσιμο',
 	'MOVE_TOPIC'				=> 'Μετακίνηση Θέματος',
 
@@ -3829,6 +4038,7 @@ $lang = array_merge($lang, array(
 	'POLL_ENDED_AT'			=> 'Το δημοψήφισμα λήγει στις %s',
 	'POLL_RUN_TILL'			=> 'Το δημοψήφισμα ισχύει μέχρι %s',
 	'POLL_VOTED_OPTION'		=> 'Ψηφίσατε για αυτήν την επιλογή',
+	'POST_DELETED_RESTORE'	=> 'This post has been deleted. It can be restored.',
 	'PRINT_TOPIC'			=> 'Προβολή Εκτύπωσης',
 
 	'QUICK_MOD'				=> 'Γρήγορο εργαλείο',
@@ -3836,11 +4046,14 @@ $lang = array_merge($lang, array(
 	'QUOTE'					=> 'Παράθεση',
 
 	'REPLY_TO_TOPIC'		=> 'Απαντήστε στο θέμα',
+	'RESTORE'				=> 'Restore',
+	'RESTORE_TOPIC'			=> 'Restore topic',
 	'RETURN_POST'			=> '%sΕπιστροφή στην δημοσίευση%s',
 
 	'SHOW_QR'				=> 'Γρήγορη απάντηση',
 	'SUBMIT_VOTE'			=> 'Υποβολή ψήφου',
 
+	'TOPIC_TOOLS'			=> 'Topic tools',
 	'TOTAL_VOTES'			=> 'Σύνολο ψήφων',
 
 	'UNLOCK_TOPIC'			=> 'Ξεκλειδώστε Θέμα',
@@ -3849,10 +4062,7 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_TOPIC'		=> 'Επόμενο',
 	'VIEW_PREVIOUS_TOPIC'	=> 'Προηγούμενο',
 	'VIEW_RESULTS'			=> 'Προβολή αποτελεσμάτων',
-	'VIEW_TOPIC_POST'		=> '1 Δημοσίευση',
-	'VIEW_TOPIC_POSTS'		=> '%d Δημοσιεύσεις',
 	'VIEW_UNREAD_POST'		=> 'Πρώτη αδιάβαστη δημοσίευση',
-	'VISIT_WEBSITE'			=> 'Επίσκεψη ιστοσελίδας',
 	'VOTE_SUBMITTED'		=> 'Η ψήφος σας έχει υποβληθεί',
 	'VOTE_CONVERTED'		=> 'Η αλλαγή των ψηφοφοριών δεν υποστηρίζεται για ψηφοφορίες που έχουν μετατραπεί.',
 
@@ -9442,6 +9652,7 @@ $lang = array_merge($lang, array(
 	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'	=> 'Το μέγιστο μέγεθος των συνημμένων αρχείων στα προσωπικά μηνύματα, προσθέστε 0 για χωρίς όριο.',
 	'ATTACH_ORPHAN_URL'					=> 'Ορφανά Συνημμένα',
 	'ATTACH_POST_ID'					=> 'Ταυτότητα Δημοσίευσης',
+	'ATTACH_POST_TYPE'					=> 'Post type',
 	'ATTACH_QUOTA'						=> 'Συνολικό μέγεθος συνημμένων',
 	'ATTACH_QUOTA_EXPLAIN'				=> 'Μέγιστος αποθηκευτικός χώρος για όλες τις Δ. Συζητήσεις, βάζοντας 0 δεν έχουμε όριο.',
 	'ATTACH_TO_POST'					=> 'Επισυνάψτε Αρχείο στην Δημοσίευση',
@@ -9487,6 +9698,9 @@ $lang = array_merge($lang, array(
 	'EXT_GROUP_REAL_MEDIA'			=> 'Real πολυμέσα',
 	'EXT_GROUP_WINDOWS_MEDIA'		=> 'Windows πολυμέσα',
 
+	'FILES_GONE'			=> 'Some of the attachments you selected for deletion do not exist. They may have been already deleted. Attachments that did exist were deleted.',
+	'FILES_STATS_WRONG'		=> 'Your file statistics are likely inaccurate and need to be resynchronised. Actual values: number of attachments = %1$d, total size of attachments = %2$s.<br />Click %3$shere%4$s to resynchronise them.',
+
 	'GO_TO_EXTENSIONS'		=> 'Πηγαίνετε στην Σελίδα Ελέγχου Επεκτάσεων',
 	'GROUP_NAME'			=> 'Όνομα Ομάδας',
 
@@ -9510,6 +9724,7 @@ $lang = array_merge($lang, array(
 	'NOT_ALLOWED_IN_PM'			=> 'Επιτρεπτό μόνο σε Δημοσίευση',
 	'NOT_ALLOWED_IN_PM_POST'	=> 'Δεν επιτρέπεται',
 	'NOT_ASSIGNED'				=> 'Δεν ορίζεται',
+	'NO_ATTACHMENTS'			=> 'No attachments found for this period.',
 	'NO_EXT_GROUP'				=> 'Καμία',
 	'NO_EXT_GROUP_NAME'			=> 'Δεν εισήχθη όνομα Ομάδας',
 	'NO_EXT_GROUP_SPECIFIED'	=> 'Δεν καθορίσθηκε Ομάδα Επεκτάσεων.',
@@ -9522,6 +9737,10 @@ $lang = array_merge($lang, array(
 	'ONLY_ALLOWED_IN_PM'	=> 'Επιτρεπτό μόνο σε Προσωπικό Μήνυμα',
 	'ORDER_ALLOW_DENY'		=> 'Επιτρεπτό',
 	'ORDER_DENY_ALLOW'		=> 'Μη Επιτρεπτό',
+
+	'REMOVE_ALLOWED_IPS'			=> 'Αφαίρεση ή άρση αποκλεισμού <em>επιτρεπτών</em> IP/κεντρικούς υπολογιστές',
+	'REMOVE_DISALLOWED_IPS'			=> 'Αφαίρεση ή άρση-αποκλεισμού <em>μη επιτρεπτών</em> IPs/κεντρικούς υπολογιστές',
+	'RESYNC_FILES_STATS_CONFIRM'	=> 'Are you sure you wish to resynchronise file statistics?',
 
 	'REMOVE_ALLOWED_IPS'		=> 'Αφαίρεση ή άρση αποκλεισμού <em>επιτρεπτών</em> IP/κεντρικούς υπολογιστές',
 	'REMOVE_DISALLOWED_IPS'		=> 'Αφαίρεση ή άρση-αποκλεισμού <em>μη επιτρεπτών</em> IPs/κεντρικούς υπολογιστές',
@@ -9592,18 +9811,17 @@ $lang = array_merge($lang, array(
 	'PERMANENT'		=> 'Οριστικός',
 
 	'UNTIL'						=> 'Μέχρι',
-	'USER_BAN'					=> 'Αποκλεισμός',
+	'USER_BAN'					=> 'Ban one or more users by username',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> 'Επιλέξτε για εξαίρεση των μελών από όλους τους τρέχοντες αποκλεισμούς.',
 	'USER_BAN_EXPLAIN'			=> 'Μπορείτε να αποκλείσετε περισσότερα μέλη βάζοντας το κάθε όνομα σε διαφορετική γραμμή. Χρησιμοποιήστε το <span style="text-decoration: underline;">Αναζήτηση Μέλους</span> για να βρείτε και να προσθέσετε περισσότερα μέλη ταυτόχρονα.',
 	'USER_NO_BANNED'			=> 'Δεν υπάρχουν αποκλεισμένα ονόματα μελών',
-	'USER_UNBAN'				=> 'Άρση αποκλεισμού ή απεπιλογή ονομάτων μελών',
+	'USER_UNBAN'				=> 'Un-ban or un-exclude users by username',
 	'USER_UNBAN_EXPLAIN'		=> 'Μπορείτε να άρετε τον αποκλεισμό (ή να απεπιλέξετε) περισσότερους χρήστες χρησιμοποιώντας τον κατάλληλο συνδυασμό ποντικιού και πληκτρολογίου του υπολογιστή σας και του Πλοηγού σας. Οι εξαιρούμενα μέλη θα είναι υπογραμμισμένοι.',
 ));
 
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'				=> 'Ενεργοποίηση θερινής ώρας/<abbr title="Daylight Saving Time">DST</abbr>',
 	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
 	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
 	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
@@ -9629,16 +9847,28 @@ $lang = array_merge($lang, array(
 	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Εδώ μπορείτε να καθορίσετε τις βασικές λειτουργίες της Δ. Συζήτησης, να της δώσετε το κατάλληλο όνομα και την ανάλογη περιγραφή και μεταξύ όλων αυτών να ρυθμίστε τις προκαθορισμένες αξίες για την ζώνη ώρας και τη γλώσσα.',
+	'BOARD_INDEX_TEXT'				=> 'Board index text',
+	'BOARD_INDEX_TEXT_EXPLAIN'		=> 'This text is displayed as the board index in the board’s breadcrumbs. If not specified, it will default to “Board index”.',
+	'BOARD_STYLE'					=> 'Εμφάνιση επιφάνειας',
 	'CUSTOM_DATEFORMAT'				=> 'Προσαρμοσμένο…',
 	'DEFAULT_DATE_FORMAT'			=> 'Προεπιλογή μορφή ημερομηνίας',
 	'DEFAULT_DATE_FORMAT_EXPLAIN'	=> 'Η μορφή ημερομηνίας είναι ίδια με αυτή του PHP <code>date</code> λειτουργία.',
 	'DEFAULT_LANGUAGE'				=> 'Προεπιλογή γλώσσας',
 	'DEFAULT_STYLE'					=> 'Προεπιλογή στυλ',
+	'DEFAULT_STYLE_EXPLAIN'			=> 'The default style is <strong>%1$s (%2$s)</strong> which is the overriden style for all users (including bots).',
 	'DISABLE_BOARD'					=> 'Απενεργοποίηση Δ. Συζήτησης ',
-	'DISABLE_BOARD_EXPLAIN'			=> 'Με αυτό εδώ μπορείτε να απαγορεύσετε την είσοδο των μελών στην Δ. Συζήτηση. Μπορείτε να προσθέσετε ένα μικρό (255 χαρακτήρες) μήνυμα το οποίο θα εμφανίζεται εάν θέλετε.',
+	'DISABLE_BOARD_EXPLAIN'			=> 'This will make the board unavailable to users who are neither administrators nor moderators. You can also enter a short (255 character) message to display if you wish.',
+	'DISPLAY_LAST_SUBJECT'			=> 'Display subject of last added post on forum list',
+	'DISPLAY_LAST_SUBJECT_EXPLAIN'	=> 'The subject of the last added post will be displayed in the forum list with a hyperlink to the post. Subjects from password protected forums and forums in which user doesn’t have read access are not shown.',
+	'GUEST_STYLE'					=> 'Guest style',
+	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Παράκαμψη στυλ μέλους',
 	'OVERRIDE_STYLE_EXPLAIN'		=> 'Παράκαμψη στυλ μελών με το προεπιλεγμένο.',
 	'SITE_DESC'						=> 'Περιγραφή ιστοσελίδας',
+	'SITE_HOME_TEXT'				=> 'Main website text',
+	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
+	'SITE_HOME_URL'					=> 'Main website URL',
+	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Όνομα ιστοσελίδας',
 	'SYSTEM_TIMEZONE'				=> 'Μορφή ημερομηνίας επισκεπτών',
 	'WARNINGS_EXPIRE'				=> 'Διάρκεια προειδοποίησης',
@@ -9678,6 +9908,7 @@ $lang = array_merge($lang, array(
 
 	'ALLOW_AVATARS'					=> 'Ενεργοποίηση άβαταρ',
 	'ALLOW_AVATARS_EXPLAIN'			=> 'Επιτρέψτε τη γενική χρήση των άβαταρ;<br />Εάν απενεργοποιήσετε τα άβαταρ  και γενικά την χρήση των άβαταρ, δεν θα εμφανίζονται άλλο πια στην Δ. Συζήτηση, όμως τα μέλη θα μπορούν να μεταφορτώσουν τα δικά τους άβαταρ στον Πίνακα Ελέγχου Μέλους.',
+	'ALLOW_GRAVATAR'				=> 'Enable gravatar avatars',
 	'ALLOW_LOCAL'					=> 'Ενεργοποίηση γκαλερί άβαταρ',
 	'ALLOW_REMOTE'					=> 'Ενεργοποίηση απομακρυσμένων άβαταρ',
 	'ALLOW_REMOTE_EXPLAIN'			=> 'Σύνδεσμος άβαταρ από άλλη ιστοσελίδα',
@@ -9858,6 +10089,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Περιεχόμενα από εδώ <strong>ΔΕΝ περιλαμβάνονται</strong>στις τροφοδοσίες. Επιλέξτε καμία Δ.Συζήτηση για να τραβάτε τροφοδοσίες από όλες τις Δ.Συζητήσεις.<br />Επιλογή πολλαπλών Δ.Συζητήσεων κρατώντας πατημένο το <samp>CTRL</samp> και κλικ.',
 
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Εδώ μπορείτε να επιλέξετε και να ρυθμίσετε τα πρόσθετά σας, που είναι σχεδιασμένα να αποτρέπεουν αυτοματοποιημένες συμπληρώσεις φορμών από spambots. Αυτά τα πρόσθετα λειτουργούν προκαλώντας τον χρήστη με <em>CAPTCHA</em>, μία δοκιμασία που είναι σχεδιασμένη να είναι δύσκολη στη λύση από υπολογιστές.',
+	'ACP_VC_EXT_GET_MORE'					=> 'For additional (and possibly better) anti-spam plugins, visit the <a href="https://www.phpbb.com/go/anti-spam-ext"><strong>phpBB.com Extensions Database</strong></a>. For more information on preventing spam on your board, visit the <a href="https://www.phpbb.com/go/anti-spam"><strong>phpBB.com Knowledge Base</strong></a>.',
 	'AVAILABLE_CAPTCHAS'					=> 'Διαθέσιμα πρόσθετα',
 	'CAPTCHA_UNAVAILABLE'					=> 'The plugin cannot be selected as its requirements are not met.',
 	'CAPTCHA_GD'							=> 'Εικόνα GD',
@@ -9908,18 +10140,36 @@ $lang = array_merge($lang, array(
 	'SESSION_LENGTH'			=> 'Σύνοδος μέγεθος',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Χρονικό διάστημα σε δευτερόλεπτα που μετά η σύνοδος θα είναι άκυρη.',
 
+	// Contact Settings
+	'ACP_CONTACT_SETTINGS_EXPLAIN'		=> 'Here you can enable and disable the contact page and also add a text that is displayed on the page.',
+
+	'CONTACT_US_ENABLE'				=> 'Enable contact page',
+	'CONTACT_US_ENABLE_EXPLAIN'		=> 'This page allows users to send emails to board administrators',
+
+	'CONTACT_US_INFO'				=> 'Contact information',
+	'CONTACT_US_INFO_EXPLAIN'		=> 'The message is displayed on the contact page',
+	'CONTACT_US_INFO_PREVIEW'		=> 'Contact page information - Preview',
+	'CONTACT_US_INFO_UPDATED'		=> 'Contact page information has been updated.',
+
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Εδώ μπορείτε να ενεργοποιήσετε και να απενεργοποιήσετε μερικές λειτουργίες της Δ. Συζήτησης, προκειμένου να μειωθεί η τονισμένη αριθμητική απόδοση. Στους περισσότερους κεντρικούς υπολογιστές δεν χρειάζεται να απενεργοποιήσετε καμία λειτουργία. Από άλλη πλευρά μπορεί αυτό σε ορισμένα συστήματα ή κεντρικούς υπολογιστές που κάποιος μοιράζεται να έχει πλεονεκτήματα όταν κάποιες λειτουργίες είναι απενεργοποιημένες, τις οποίες δεν χρειάζεται. Μπορείτε επίσης εδώ να καθορίσετε τα όρια για την φόρτωση συστημάτων και τις ενεργές συνόδους, τα οποία εάν η Δ. Συζήτηση υπερβεί πηγαίνει σε (offline)χωρίς σύνδεση.',
 
+	'ALLOW_CDN'						=> 'Allow usage of third party content delivery networks',
+	'ALLOW_CDN_EXPLAIN'				=> 'If this setting is enabled, some files will be served from external third party servers instead of your server. This reduces the network bandwidth required by your server, but may present a privacy issue for some board administrators. In a default phpBB installation, this includes loading “jQuery” and the font “Open Sans” from Google’s content delivery network.',
+	'ALLOW_LIVE_SEARCHES'			=> 'Allow live searches',
+	'ALLOW_LIVE_SEARCHES_EXPLAIN'	=> 'If this setting is enabled, users are provided with keyword suggestions as they type in certain fields throughout the board.',
 	'CUSTOM_PROFILE_FIELDS'			=> 'Προσαρμοσμένα προφίλ πεδία',
 	'LIMIT_LOAD'					=> 'Περιορισμός φορτίου συστήματος',
 	'LIMIT_LOAD_EXPLAIN'			=> 'Εάν η μέση χρησιμοποίηση συστήματος των τελευταίων λεπτών (load average) υπερβαίνει αυτήν την αξία, πηγαίνει η Δ. Συζήτησης σε (offline) χωρίς σύνδεση. Μια τιμή 1.0 για το ένα περ. ~100% έκτασης της χρησιμοποίησης ενός επεξεργαστή. Αυτή η τοποθέτηση είναι διαθέσιμη μόνο στα συστήματα τα οποία είναι βασισμένα σε Unix. Η τιμή επαναφέρεται σε 0, εάν το phpBB δεν μπορεί να διαβάσει το όριο.',
 	'LIMIT_SESSIONS'				=> 'Όριο συνόδων',
 	'LIMIT_SESSIONS_EXPLAIN'		=> 'Εάν ο αριθμός των συνόδων υπερβαίνει αυτήν την αξία μέσα σε ένα λεπτό, η Δ. Συζήτησης πηγαίνει σε (offline) χωρίς σύνδεση.. Προκειμένου να μην διευκρινιστεί καμία οριοθέτηση, ρυθμίστε ως αξία 0.',
 	'LOAD_CPF_MEMBERLIST'			=> 'Επιτρέψτε στυλ και πρόσθετα πεδία προφίλ να εμφανίζονται στην λίστα μελών',
+	'LOAD_CPF_PM'					=> 'Display custom profile fields in private messages',
 	'LOAD_CPF_VIEWPROFILE'			=> 'Επιτρέψτε πρόσθετα πεδία προφίλ να εμφανίζονται στο προφίλ του μέλους',
 	'LOAD_CPF_VIEWTOPIC'			=> 'Επιτρέψτε πρόσθετα πεδία προφίλ να εμφανίζονται στην σελίδα θεμάτων',
 	'LOAD_USER_ACTIVITY'			=> 'Εμφάνιση δραστηριότητας των μελών',
 	'LOAD_USER_ACTIVITY_EXPLAIN'	=> 'Δείχνει στο προφίλ και μέσα στον πίνακα ελέγχου μέλους, σε ποια Δ. Συζήτησης και θέματα ένα μέλος είναι από τα ποιο ενεργά. Συστήνεται να απενεργοποιηθεί αυτή η λειτουργία σε Δ. Συζητήσεις που έχουν περισσότερες από ένα εκατομμύριο δημοσιεύσεις. ',
+	'READ_NOTIFICATION_EXPIRE_DAYS'	=> 'Read Notification Expiration',
+	'READ_NOTIFICATION_EXPIRE_DAYS_EXPLAIN' => 'Number of days that will elapse before a read notification will automatically be deleted. Set this value to 0 to make notifications permanent.',
 	'RECOMPILE_STYLES'				=> 'Αποσύνθεση των παλαιών τμημάτων στυλ',
 	'RECOMPILE_STYLES_EXPLAIN'		=> 'Αυτό εξετάζει για νέα τμήματα στυλ και τα αποσυνθέτει.',
 	'YES_ANON_READ_MARKING'			=> 'Ενεργοποιήστε επισκέπτες να σημειώνουν θέματα ως αναγνωσμένα',
@@ -9940,18 +10190,25 @@ $lang = array_merge($lang, array(
 	'YES_READ_MARKING_EXPLAIN'		=> 'Αποθηκεύει πληροφορίες για αναγνωσμένο ή μη αναγνωσμένο στην βάση δεδομένων και όχι σε cookie.',
 	'YES_UNREAD_SEARCH'				=> 'Ενεργοποίηση αναζήτησης για μη αναγνωσμένες δημοσιεύσεις',
 
-	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'Το phpBB υποστηρίζει  υπό-μονάδες  ή μονάδες εξουσιοδότησης σύνδεσης. Με αυτές μπορείτε να διευκρινίσετε, πώς τα μέλη είναι εξουσιοδοτημένα, εάν συνδέονται στην Δ. Συζήτηση. Σύμφωνα με τα πρότυπα υπάρχουν τρεις συνδεόμενες υπό-μονάδες: DB, LDAP και Apache. Όχι όλες οι μέθοδοι χρειάζονται τα πρόσθετα στοιχεία, επομένως συμπληρώστε μόνο τα πεδία  εάν είναι για την επιλεγμένη μέθοδο από τη σημασία.',
+	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB supports authentication plug-ins, or modules. These allow you determine how users are authenticated when they log into the board. By default four plug-ins are provided: DB, LDAP, Apache, and OAuth. Not all methods require additional information so only fill out fields if they are relevant to the selected method.',
 
 	'AUTH_METHOD'				=> 'Επιλέξτε μια μέθοδος εξουσιοδότησης',
 
+	'AUTH_PROVIDER_OAUTH_ERROR_ELEMENT_MISSING'	=> 'Both the key and secret of each enabled OAuth service provider must be provided. Only one was provided for an OAuth service provider.',
+	'AUTH_PROVIDER_OAUTH_EXPLAIN'				=> 'Each OAuth provider requires a unique secret and key in order to authenticate with the external server. These should be supplied by the OAuth service when you register your website with them and should be entered exactly as provided to you.<br />Any service that does not have both a key and a secret entered here will not be available for use by the forum users. Also note, that user can still register and login using the DB authentication plug-in.',
+	'AUTH_PROVIDER_OAUTH_KEY'					=> 'Key',
+	'AUTH_PROVIDER_OAUTH_TITLE'					=> 'OAuth',
+	'AUTH_PROVIDER_OAUTH_SECRET'				=> 'Secret',
+
 	'APACHE_SETUP_BEFORE_USE'	=> 'Πρέπει να ρυθμίσετε τις εξουσιοδοτήσεις του Apache, πριν χρησιμοποιήσετε αυτήν την μέθοδο στο phpBB. Σημειώστε ότι το εξουσιοδοτημένο όνομα χρηστών του Apache πρέπει να αντιστοιχεί με το όνομα χρηστών του phpBB σας. Η εξουσιοδότηση του Apache μπορεί να χρησιμοποιηθεί μόνο με το mod_php (όχι με την έκδοση της CGI) και απενεργοποιημένο το safe_mode.',
 
+	'LDAP'							=> 'LDAP',
 	'LDAP_DN'						=> 'LDAP βάση <var>dn</var>',
 	'LDAP_DN_EXPLAIN'				=> 'Διακεκριμένο όνομα της λίστας, στην οποία τα στοιχεία χρηστών είναι, π.χ. <samp>o=η εταιρεία μου,c=EL</samp>.',
-	'LDAP_EMAIL'					=> 'LDAP ηλεκτρονικό ταχυδρομείο ιδιότητες',
-	'LDAP_EMAIL_EXPLAIN'			=> 'Δώστε εδώ τα ονόματα των ιδιοτήτων ηλεκτρονικού ταχυδρομείου σας (εάν υπάρχει), για να τεθεί αυτόματα η διεύθυνση ηλεκτρονικού ταχυδρομείου για τα νέα μέλη. Εάν αυτός ο τομέας απελευθερωθεί, καμία διεύθυνση ηλεκτρονικού ταχυδρομείου δεν τίθεται για τα μέλη, τα οποία συνδέονται για πρώτη φορά.',
+	'LDAP_EMAIL'					=> 'LDAP email attribute',
+	'LDAP_EMAIL_EXPLAIN'			=> 'Set this to the name of your user entry email attribute (if one exists) in order to automatically set the email address for new users. Leaving this empty results in empty email address for users who log in for the first time.',
 	'LDAP_INCORRECT_USER_PASSWORD'	=> 'Η σύνδεση στον κεντρικό υπολογιστή LDAP με αυτό το όνομα χρήστη και τον κωδικό πρόσβασης απέτυχε.',
-	'LDAP_NO_EMAIL'					=> 'Η υποδεδειγμένη ιδιότητα ηλεκτρονικού ταχυδρομείου δεν υπάρχει.',
+	'LDAP_NO_EMAIL'					=> 'The specified email attribute does not exist.',
 	'LDAP_NO_IDENTITY'				=> 'Κανένας προσδιορισμός σύνδεσης για %s δεν μπορεί να βρεθεί.',
 	'LDAP_PASSWORD'					=> 'LDAP κωδικός',
 	'LDAP_PASSWORD_EXPLAIN'			=> 'Αφήστε κενό για να χρησιμοποιήσετε ανώνυμη δέσμευση, αλλιώς δείξτε τον κωδικό πρόσβασης για τον ανωτέρω χρήστη. Προαπαιτούμενο  για τους ενεργούς κεντρικούς υπολογιστές καταλόγου. <strong>ΠΡΟΣΟΧΗ:</strong> Αυτός ο κωδικός πρόσβασης αποθηκεύεται σε απλή μορφή στη βάση δεδομένων και είναι ορατός επομένως για τον καθένα, που έχει πρόσβαση στην βάση δεδομένων ή όποιος μπορεί να δει αυτήν την σελίδα διαμόρφωσης.',
@@ -9966,13 +10223,17 @@ $lang = array_merge($lang, array(
 	'LDAP_USER_FILTER'				=> 'LDAP μέλους φίλτρα',
 	'LDAP_USER_FILTER_EXPLAIN'		=> 'Προαιρετικά μπορείτε περαιτέρω να περιορίσετε τα αναζητημένα αντικείμενα με τα πρόσθετα φίλτρα. Για παράδειγμα <samp>objectClass=posixGroup</samp> θα οδηγούσε στη χρήση <samp>(&amp;(uid=$username)(objectClass=posixGroup))</samp>',
 
-	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Εδώ μπορείτε να κάνετε μερικές ρυθμίσεις σχετικά με τους κεντρικούς υπολογιστές και την τοποθεσία. Παρακαλώ σιγουρευτείτε ότι τα στοιχεία, που εισάγετε είναι ακριβής, επειδή τα ανακριβή στοιχεία μπορεί να οδηγήσουν σε σφάλματα τα οποία προκύπτουν από τις λανθασμένες πληροφορίες. Εάν εισάγετε το όνομα τοποθεσίας, θυμηθείτε ότι το http:// ή ένα άλλο πρωτόκολλο είναι ήδη προσδιορισμένο και δεν χρειάζεται. Αλλάξτε την θύρα μόνο, εάν εσείς ξέρετε ότι ο κεντρικός υπολογιστής σας χρησιμοποιεί μια άλλη θύρα Η θύρα 80 είναι η σωστή στις πολύ περισσότερες περιπτώσεις.',
+	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Here you define server and domain dependent settings. Please ensure the data you enter is accurate, errors will result in emails containing incorrect information. When entering the domain name remember it does include http:// or other protocol term. Only alter the port number if you know your server uses a different value, port 80 is correct in most cases.',
 	'ENABLE_GZIP'				=> 'Ενεργοποιήστε GZip συμπίεση',
 	'ENABLE_GZIP_EXPLAIN'		=> 'Το περιεχόμενο συμπιέζεται πριν σταλεί στο χρήστη. Αυτό μπορεί οδηγήσει στην μείωση του δικτύου, επιπλέον, σε μια αύξηση φορτίου του επεξεργαστή και στον κεντρικό υπολογιστή όπως επίσης και στην σελίδα των χρηστών. Απαιτείται zlib PHP επέκταση για να φορτωθεί.',
 	'FORCE_SERVER_VARS'			=> 'Θέστε ρυθμίσεις URL κεντρικού υπολογιστή',
 	'FORCE_SERVER_VARS_EXPLAIN'	=> 'Εάν αυτό τεθεί σε ΝΑΙ οι ρυθμίσεις κεντρικών υπολογιστών που γίνονται εδώ ισχύουν, αντί των αυτόματα καθορισμένων ρυθμίσεων.',
 	'ICONS_PATH'				=> 'Σύμβολα θεμάτων διαδρομή',
 	'ICONS_PATH_EXPLAIN'		=> 'Η διαδρομή του φακέλου στον κατάλογο του phpBB, π.χ. <samp>images/icons</samp>.',
+	'MOD_REWRITE_ENABLE'		=> 'Enable URL Rewriting',
+	'MOD_REWRITE_ENABLE_EXPLAIN' => 'When enabled, URLs containing ’app.php’ will be rewritten to remove the filename (i.e. app.php/foo will become /foo). <strong>Apache server’s mod_rewrite module is required for this functionality to work; if this option is enabled without mod_rewrite support, URLs on your board may be broken.</strong>',
+	'MOD_REWRITE_DISABLED'		=> 'The <strong>mod_rewrite</strong> module on your Apache web server is disabled. Enable the module or contact your web hosting provider if you wish to enable this feature.',
+	'MOD_REWRITE_INFORMATION_UNAVAILABLE' => 'We are unable to determine whether or not this server supports URL rewriting. This setting may be enabled but if URL rewriting is not available, paths generated by this board (such as for use in links) may be broken. Contact your web hosting provider if you are unsure whether or not you can safely enable this feature.',
 	'PATH_SETTINGS'				=> 'Διαδρομή ρυθμίσεις',
 	'RANKS_PATH'				=> 'Διαδρομή φακέλου εικόνων βαθμών',
 	'RANKS_PATH_EXPLAIN'		=> 'Η διαδρομή του φακέλου στον κατάλογο του phpBB, π.χ. <samp>images/ranks</samp>.',
@@ -9989,13 +10250,21 @@ $lang = array_merge($lang, array(
 	'SMILIES_PATH_EXPLAIN'		=> 'Η διαδρομή του φακέλου στον κατάλογο του phpBB, π.χ. <samp>images/smilies</samp>.',
 	'UPLOAD_ICONS_PATH'			=> 'Διαδρομή φακέλου των συμβόλων ομάδας',
 	'UPLOAD_ICONS_PATH_EXPLAIN'	=> 'Η διαδρομή του φακέλου στον κατάλογο του phpBB, π.χ. <samp>images/upload_icons</samp>.',
+	'USE_SYSTEM_CRON'		=> 'Run periodic tasks from system cron',
+	'USE_SYSTEM_CRON_EXPLAIN'		=> 'When off, phpBB will arrange for periodic tasks to be run automatically. When on, phpBB will not schedule any periodic tasks by itself; a system administrator must arrange for <code>bin/phpbbcli.php cron:run</code> to be run by the system cron facility at regular intervals (e.g. every 5 minutes).',
 
 	'ACP_SECURITY_SETTINGS_EXPLAIN'		=> 'Εδώ είστε σε θέση να καθορίσετε τη σύνοδο και σχετικές με την σύνδεση ρυθμίσεις.',
 	'ALL'							=> 'Όλα',
-	'ALLOW_AUTOLOGIN'				=> 'Επιτρέψτε την συνεχής σύνδεση',
-	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Διευκρινίζει εάν τα μέλη μπορούν να συνδεθούν αυτόματα με κάθε επίσκεψη στην Δ. Συζήτηση.',
-	'AUTOLOGIN_LENGTH'				=> 'Χρόνος εκκαθαρίσεων για την σύνδεση των κλειδιών (σε ημέρες)',
-	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Ο αριθμός ημερών, και μετά ένα κλειδί σύνδεσης για τις αυτόματες συνδέσεις δεν ισχύει, αφήστε μηδέν για να μην ισχύει αυτό.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'ALLOW_PASSWORD_RESET'			=> 'Allow password reset ("Forgot Password")',
+	'ALLOW_PASSWORD_RESET_EXPLAIN'	=> 'Determines whether or not users are able to use the "I forgot my password" link on the login page to recover their account. If you use an external authentication mechanism you may wish to disable this feature.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
 	'BROWSER_VALID'					=> 'Έλεγχος πλοηγού',
 	'BROWSER_VALID_EXPLAIN'			=> 'Ενεργοποιήστε τον έλεγχο πλοηγού για την αντίστοιχη συνεδρίαση, προκειμένου να αυξηθεί η ασφάλεια.',
 	'CHECK_DNSBL'					=> 'Εξετάστε την IP ενάντια στη μαύρη DNS λίστα',
@@ -10032,8 +10301,12 @@ $lang = array_merge($lang, array(
 	'PASS_TYPE_SYMBOL'				=> 'Πρέπει να περιέχει έξτρα σύμβολα',
 	'REF_HOST'						=> 'Μόνο επικυρωμένος κεντρικός υπολογιστής',
 	'REF_PATH'						=> 'Επίσης επικυρωμένη διαδρομή',
-	'REFERER_VALID'					=> 'Επικυρωμένος αναφορέας',
+	'REFERRER_VALID'				=> 'Validate Referrer',
+	'REFERRER_VALID_EXPLAIN'		=> 'If enabled, the referrer of POST requests will be checked against the host/script path settings. This may cause issues with boards using several domains and or external logins.',
+
+	'REFERER_VALID'					=> 'Επικυρωμένος αναφορέας',	//3.0.12
 	'REFERER_VALID_EXPLAIN'			=> 'Εάν επιτρέπεται, ο αναφορέας από τα ερωτήματα των δημοσιεύσεων  θα ελεγχθεί σε σχέση  με τις ρυθμίσεις διαδρομής  του κεντρικού υπολογιστή/σεναρίου. Αυτό μπορεί να προκαλέσει τα ζητήματα με το ευρετήριο  χρησιμοποιώντας διάφορους τομείς και ή εξωτερικές συνδέσεις.',
+
 	'TPL_ALLOW_PHP'					=> 'Επιτρέψτε php στα πρότυπα',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Εάν αυτή η επιλογή είναι ενεργοποιημένη, <code>PHP</code> και <code>INCLUDEPHP</code> στα πρότυπα θα αναγνωρίζονται και εφαρμόζονται.',
 
@@ -10046,6 +10319,8 @@ $lang = array_merge($lang, array(
 	'BOARD_HIDE_EMAILS_EXPLAIN'		=> 'Αυτή η λειτουργία κρατά τις διευθύνσεις ηλεκτρονικού ταχυδρομείου απολύτως ιδιωτικές.',
 	'CONTACT_EMAIL'					=> 'Διεύθυνση επικοινωνίας ηλεκτρονικού ταχυδρομείου ',
 	'CONTACT_EMAIL_EXPLAIN'			=> 'Αυτή η διεύθυνση θα χρησιμοποιηθεί όταν απαιτείται ένα συγκεκριμένο σημείο επικοινωνίας, π.χ. ενοχλητικά μηνύματα, αναφορά λαθών, κ.λ.π. Θα χρησιμοποιηθεί πάντα ως <samp>Από</samp> και <samp>Απάντηση-Προς</samp> διεύθυνση ηλεκτρονικού ταχυδρομείου.',
+	'CONTACT_EMAIL_NAME'			=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 	'EMAIL_FUNCTION_NAME'			=> 'Όνομα λειτουργίας ηλεκτρονικού ταχυδρομείου',
 	'EMAIL_FUNCTION_NAME_EXPLAIN'	=> ' Η PHP λειτουργία που θα χρησιμοποιηθεί, για την αποστολή ηλεκτρονικού ταχυδρομείου.',
 	'EMAIL_PACKAGE_SIZE'			=> 'Μέγεθος πακέτου ηλεκτρονικών ταχυδρομείων',
@@ -10236,7 +10511,7 @@ $lang = array_merge($lang, array(
 	'ACP_BAN'					=> 'Αποκλεισμοί',
 	'ACP_BAN_EMAILS'			=> 'Αποκλεισμοί ηλεκτρονικών ταχυδρομείων',
 	'ACP_BAN_IPS'				=> 'Αποκλεισμοί IPs',
-	'ACP_BAN_USERNAMES'			=> 'Αποκλεισμοί Ονομάτων Χρήστη',
+	'ACP_BAN_USERNAMES'			=> 'Ban users',
 	'ACP_BBCODES'				=> 'BBCodes',
 	'ACP_BOARD_CONFIGURATION'	=> 'Παραμετροποίηση Δ. Συζήτησης',
 	'ACP_BOARD_FEATURES'		=> 'Χαρακτηριστικά Δ. Συζήτησης',
@@ -10245,8 +10520,10 @@ $lang = array_merge($lang, array(
 	'ACP_BOTS'					=> 'Spiders/Robots',
 
 	'ACP_CAPTCHA'				=> 'Οπτική ΄Επιβεβαίωση',
+	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'Βάση',
+	'ACP_CAT_DOT_MODS'			=> '.MODs',
 	'ACP_CAT_DOT_MODS'			=> '.MODs',
 	'ACP_CAT_FORUMS'			=> 'Δημόσια Συζήτηση',
 	'ACP_CAT_GENERAL'			=> 'Γενικά',
@@ -10259,6 +10536,8 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_USERS'				=> 'Μέλη',
 	'ACP_CLIENT_COMMUNICATION'	=> 'Πελάτης επικοινωνίας',
 	'ACP_COOKIE_SETTINGS'		=> 'Ρυθμίσεις Cookie',
+	'ACP_CONTACT'				=> 'Contact page',
+	'ACP_CONTACT_SETTINGS'		=> 'Contact page settings',
 	'ACP_CRITICAL_LOGS'			=> 'Ιστορικό Σφαλμάτων',
 	'ACP_CUSTOM_PROFILE_FIELDS'	=> 'Πεδία Προφίλ',
 
@@ -10266,8 +10545,11 @@ $lang = array_merge($lang, array(
 	'ACP_DISALLOW'				=> 'Μη επιτρεπτό',
 	'ACP_DISALLOW_USERNAMES'	=> 'Μη επιτρεπτά ονόματα χρήστη',
 
-	'ACP_EMAIL_SETTINGS'		=> 'Ρυθμίσεις ηλεκτρονικού ταχυδρομείου',
-	'ACP_EXTENSION_GROUPS'		=> 'Διαχείριση ομάδων επεκτάσεων',
+	'ACP_EMAIL_SETTINGS'		=> 'Email settings',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
+	'ACP_EXTENSION_MANAGEMENT'	=> 'Extension management',
+	'ACP_EXTENSIONS'			=> 'Manage extensions',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
 	'ACP_FORMS'					=> 'Customizable Forms',
 	'ACP_FORMS_BUILDER'			=> 'Form Builder',
 
@@ -10288,10 +10570,10 @@ $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE'				=> 'Διαχείριση Ομάδας',
 	'ACP_GROUPS_MANAGEMENT'			=> 'Διαχείριση Ομάδων',
 	'ACP_GROUPS_PERMISSIONS'		=> 'Προσβάσεις Ομάδων',
+	'ACP_GROUPS_POSITION'			=> 'Manage group positions',
 
 	'ACP_ICONS'					=> 'Σύμβολα θεμάτων',
 	'ACP_ICONS_SMILIES'			=> 'Θέματος σύμβολα/εικονίδια',
-	'ACP_IMAGESETS'				=> 'Σύνολα εικόνων',
 	'ACP_INACTIVE_USERS'		=> 'Ανενεργά μέλη',
 	'ACP_INDEX'					=> 'Αρχική ACP',
 
@@ -10303,11 +10585,15 @@ $lang = array_merge($lang, array(
 	'ACP_LOGGING'				=> 'Εγγραφές ιστορικού',
 
 	'ACP_MAIN'					=> 'Αρχική ACP',
-	'ACP_MANAGE_EXTENSIONS'		=> 'Διαχείριση Επεκτάσεων',
+
+	'ACP_MANAGE_ATTACHMENTS'			=> 'Διαχείριση συνημμένων',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
+
+	'ACP_MANAGE_EXTENSIONS'		=> 'Manage attachment extensions',
 	'ACP_MANAGE_RANKS'			=> 'Διαχείριση Βαθμών',
 	'ACP_MANAGE_REASONS'		=> 'Διαχείριση λόγων αναφοράς/άρνησης',
 	'ACP_MANAGE_USERS'			=> 'Διαχείριση Μελών',
-	'ACP_MASS_EMAIL'			=> 'Μαζικό ηλεκτρονικό ταχυδρομείο',
+	'ACP_MASS_EMAIL'			=> 'Mass email',
 	'ACP_MESSAGES'				=> 'Μηνύματα',
 	'ACP_MESSAGE_SETTINGS'		=> 'Ρυθμίσεις Προσωπικών Μηνυμάτων',
 	'ACP_MODULE_MANAGEMENT'		=> 'Διαχείριση μονάδων',
@@ -10352,6 +10638,8 @@ $lang = array_merge($lang, array(
 	'ACP_STYLE_COMPONENTS'		=> 'Στοιχεία στυλ',
 	'ACP_STYLE_MANAGEMENT'		=> 'Διαχείριση Στυλ',
 	'ACP_STYLES'				=> 'Στυλ',
+	'ACP_STYLES_CACHE'			=> 'Purge Cache',
+	'ACP_STYLES_INSTALL'		=> 'Install Styles',
 
 	'ACP_SUBMIT_CHANGES'		=> 'Υποβολή αλλαγών',
 
@@ -10403,6 +10691,10 @@ $lang = array_merge($lang, array(
 
 	'COLOUR_SWATCH'			=> 'Πίνακας χρωμάτων',
 	'CONFIG_UPDATED'		=> 'Επιτυχής ενημέρωση ρυθμίσεων.',
+	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
+	'CRON_NO_SUCH_TASK'		=> 'Could not find cron task â€œ%sâ€.',
+	'CRON_NO_TASK'			=> 'No cron tasks need to be run right now.',
+	'CRON_NO_TASKS'			=> 'No cron tasks could be found.',
 
 	'DEACTIVATE'				=> 'Απενεργοποίηση',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'Η εισαχθείσα διαδρομή “%s” δεν υπάρχει.',
@@ -10413,6 +10705,7 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_AS'				=> 'Μεταφόρτωση ως',
 	'DOWNLOAD_STORE'			=> 'Μεταφόρτωση ή αποθήκευση αρχείου',
 	'DOWNLOAD_STORE_EXPLAIN'	=> 'Μπορείτε να μεταφορτώσετε το αρχείο απευθείας ή να το αποθηκεύσετε στο φάκελο <samp>store/</samp>.',
+	'DOWNLOADS'					=> 'Μεταφορτώσεις',
 
 	'EDIT'					=> 'Επεξεργασία',
 	'ENABLE'				=> 'Ενεργοποίηση',
@@ -10427,6 +10720,8 @@ $lang = array_merge($lang, array(
 	'IP'					=> 'IP',
 	'IP_HOSTNAME'			=> 'Διευθύνσεις IP ή κεντρικούς υπολογιστές',
 
+	'LOAD_NOTIFICATIONS'			=> 'Display Notifications',
+	'LOAD_NOTIFICATIONS_EXPLAIN'	=> 'Display the notifications list on every page (typically in the header).',
 	'LOGGED_IN_AS'			=> 'Συνδεθήκατε ως:',
 	'LOGIN_ADMIN'			=> 'Για να διαχειριστείτε την κοινότητα πρέπει να είστε εξουσιοδοτημένο μέλος.',
 	'LOGIN_ADMIN_CONFIRM'	=> 'Για να διαχειριστείτε την κοινότητα πρέπει να επαναπιστοποιήσετε τον εαυτό σας.',
@@ -10443,7 +10738,8 @@ $lang = array_merge($lang, array(
 
 	'NOTIFY'				=> 'Ειδοποίηση',
 	'NO_ADMIN'				=> 'Δεν είστε εξουσιοδοτημένος να διαχειριστείτε αυτήν την δημ. συζήτηση.',
-	'NO_EMAILS_DEFINED'		=> 'Δεν βρέθηκε έγκυρη διεύθυνση αλληλογραφίας.',
+	'NO_EMAILS_DEFINED'		=> 'No valid email addresses found.',
+	'NO_FILES_TO_DELETE'	=> 'Attachments you selected for deletion do not exist.',
 	'NO_PASSWORD_SUPPLIED'	=> 'Δεν μπορείτε να συνδεθείτε χωρίς κωδικό πρόσβασης.',
 
 	'OFF'					=> 'ΚΛΕΙΣΤΟ',
@@ -10459,8 +10755,8 @@ $lang = array_merge($lang, array(
 
 	'REMIND'							=> 'Υπενθύμιση',
 	'RESYNC'							=> 'Συγχρονισμός ',
-	'RETURN_TO'							=> 'Επιστροφή στο',
 
+	'RUNNING_TASK'			=> 'Running task: %s.',
 	'SELECT_ANONYMOUS'		=> 'Επιλέξτε Επισκέπτη',
 	'SELECT_OPTION'			=> 'Επιλέξτε δυνατότητα',
 
@@ -10470,6 +10766,10 @@ $lang = array_merge($lang, array(
 	'SETTING_TOO_SHORT'		=> 'Η παρεχόμενη τιμή για την ρύθμιση %1$s δεν είναι αρκετά μεγάλη. Το ελάχιστο μήκος που επιτρέπετε είναι %d.',
 
 	'SHOW_ALL_OPERATIONS'	=> 'Προβολή όλων των ενεργειών',
+
+	'TASKS_NOT_READY'			=> 'Not ready tasks:',
+	'TASKS_READY'			=> 'Ready tasks:',
+	'TOTAL_SIZE'			=> 'Total size',
 
 	'UCP'					=> 'Πίνακας Ελέγχου Μέλους',
 	'USERNAMES_EXPLAIN'		=> 'Βάλτε το κάθε όνομα μέλους σε διαφορετική γραμμή.',
@@ -10481,7 +10781,7 @@ $lang = array_merge($lang, array(
 	'NO_PHPINFO_AVAILABLE'	=> 'Οι πληροφορίες σχετικά με την έκδοση του PHP δεν ήταν δυνατόν να αποκτηθούν. Η εντολή Phpinfo() έχει απενεργοποιηθεί για λόγους ασφαλείας .',
 
 	'ACP_ADMIN_LOGS_EXPLAIN'	=> 'Εδώ εμφανίζονται όλες οι ενέργειες που έχουν πραγματοποιηθεί από τους διαχειριστές. Μπορείτε να τις ταξινομήσετε κατά όνομα μέλους, ημερομηνία, διεύθυνση IP ή ενέργεια. Αν έχετε τα κατάλληλα δικαιώματα μπορείτε να σβήσετε μεμονωμένες ενέργειες από την λίστα αυτή ή και όλη την λίστα.',
-	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'Εδώ εμφανίζονται όλες οι ενέργειες που έχει πραγματοποιήσει η Δ. Συζήτηση από μόνο. Το ιστορικό αυτό παρέχει πληροφορίες πάνω σε προβλήματα που δημιουργούνται κατά την λειτουργία, όπως για παράδειγμα την μη αποστολή ορισμένων ηλεκτρονικών ταχυδρομείων. Μπορείτε να τα ταξινομήσετε ανά όνομα μέλους, ημερομηνία, IP ή ενέργεια. Εάν εσείς έχετε τα ανάλογα δικαιώματα μπορείτε να δείτε ένα μέρος ή όλες της ενέργειες που έχουν καταγραφεί στο ιστορικό.',
+	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'This lists the actions carried out by the board itself. This log provides you with information you are able to use for solving specific problems, for example non-delivery of emails. You can sort by username, date, IP or action. If you have appropriate permissions you can also clear individual operations or the log as a whole.',
 	'ACP_MOD_LOGS_EXPLAIN'		=> 'Εδώ εμφανίζονται όλες οι ενέργειες που πραγματοποιούνται στην Δ. Συζήτηση, θέματα και δημοσιεύσεις που δημιουργούνται όπως επίσης και τους αποκλεισμούς μελών. Μπορείτε να τα ταξινομήσετε ανά όνομα μέλους, ημερομηνία, IP ή ενέργεια. Εάν εσείς έχετε τα ανάλογα δικαιώματα μπορείτε να δείτε ένα μέρος ή όλες της ενέργειες που έχουν καταγραφεί στο ιστορικό.',
 	'ACP_USERS_LOGS_EXPLAIN'	=> 'Εδώ εμφανίζονται όλες οι ενέργειες που έχουν πραγματοποιηθεί προς και από το μέλος (αναφορές, προειδοποιήσει και σημειώσεις μέλος).',
 	'ALL_ENTRIES'				=> 'Όλες οι εγγραφές',
@@ -10507,6 +10807,7 @@ $lang = array_merge($lang, array(
 
 	'GZIP_COMPRESSION'	=> 'Συμπίεση GZip',
 
+	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'Μη διαθέσιμο',
 	'NUMBER_FILES'		=> 'Αριθμός συνημμένων',
 	'NUMBER_POSTS'		=> 'Αριθμός δημοσιεύσεων',
@@ -10519,29 +10820,38 @@ $lang = array_merge($lang, array(
 	'PURGE_CACHE'			=> 'Εκκαθάριση Λανθάνουσας Μνήμης',
 	'PURGE_CACHE_CONFIRM'	=> 'Είστε σίγουρος ότι θέλετε να καθαρίσετε την λανθάνουσα μνήμη;',
 	'PURGE_CACHE_EXPLAIN'	=> 'Διαγραφή όλων των αρχείων της λανθάνουσας μνήμης, όπως όλα τα αποθηκευμένα αρχεία των στυλ και ερωτήματα.',
+	'PURGE_CACHE_SUCCESS'	=> 'Cache successfully purged.',
 
 	'PURGE_SESSIONS'			=> 'Εκκαθάριση όλων των συνόδων',
 	'PURGE_SESSIONS_CONFIRM'	=> 'Είστε σίγουρος ότι θέλετε να καθαρίσετε όλες τις συνόδους? Αυτό θα αποσυνδέσει όλα τα μέλη',
 	'PURGE_SESSIONS_EXPLAIN'	=> 'Εκκαθάριση όλων των συνόδων. Αυτό θα αποσυνδέσει όλα τα μέλη με το άδειασμα του πίνακα session.',
+	'PURGE_SESSIONS_SUCCESS'	=> 'Sessions successfully purged.',
 
 	'RESET_DATE'					=> 'Επαναφορά ημ. εκκίνησης κοινότητας',
 	'RESET_DATE_CONFIRM'			=> 'Είστε σίγουρος ότι θέλετε να επαναφέρετε την ημ. εκκίνησης της κοινότητας;',
+	'RESET_DATE_SUCCESS'				=> 'Boardâ€™s start date reset',
 	'RESET_ONLINE'					=> 'Απαλοιφή Περισσότερα Μέλη υπό σύνδεση',
 	'RESET_ONLINE_CONFIRM'			=> 'Είστε σίγουρος ότι θέλετε να απαλείψετε τον μετρητή των περισσότερων χρηστών υπό σύνδεση;',
+	'RESET_ONLINE_SUCCESS'				=> 'Most users ever online reset',
 	'RESYNC_POSTCOUNTS'				=> 'Επανασυγχρονισμός μετρητών θεμάτων',
 	'RESYNC_POSTCOUNTS_EXPLAIN'		=> 'Μόνο υπαρκτές δημοσιεύσεις θα επανασυγχρονιστούν. Δημοσιεύσεις που έχουν διαγραφεί δεν θα μετρηθούν.',
 	'RESYNC_POSTCOUNTS_CONFIRM'		=> 'Είστε σίγουρος ότι θέλετε να επανασυγχρονίσετε τον μετρητή τον δημοσιεύσεων;',
+	'RESYNC_POSTCOUNTS_SUCCESS'			=> 'Resynchronised post counts',
 	'RESYNC_POST_MARKING'			=> 'Επανασυγχρονισμός σημειωμένων θεμάτων',
 	'RESYNC_POST_MARKING_CONFIRM'	=> 'Είστε σίγουρος ότι θέλετε να επανασυγχρονίσετε τα σημειωμένα θέματα;',
 	'RESYNC_POST_MARKING_EXPLAIN'	=> 'Πρώτα απεπιλέξτε όλα τα θέματα και μετά επιλέξτε αυτά στα οποία υπήρξε κάποια δραστηριότητα τους τελευταίους έξι μήνες.',
+	'RESYNC_POST_MARKING_SUCCESS'	=> 'Resynchronised dotted topics',
 	'RESYNC_STATS'					=> 'Επανασυγχρονισμός στατιστικών',
 	'RESYNC_STATS_CONFIRM'			=> 'Είστε σίγουρος ότι θέλετε να επανασυγχρονίσετε τα στατιστικά;',
 	'RESYNC_STATS_EXPLAIN'			=> 'Επαναυπολογισμός συνολικού αριθμού δημοσιεύσεων, θεμάτων, μελών και συνημμένων.',
+	'RESYNC_STATS_SUCCESS'			=> 'Resynchronised statistics',
 	'RUN'							=> 'Εκτέλεση τώρα',
 
 	'STATISTIC'					=> 'Στατιστικά',
 	'STATISTIC_RESYNC_OPTIONS'	=> 'Επανασυγχρονισμός ή μηδενισμός στατιστικών',
 
+	'TIMEZONE_INVALID'	=> 'The timezone you selected is invalid.',
+	'TIMEZONE_SELECTED'	=> '(currently selected)',
 	'TOPICS_PER_DAY'	=> 'Θέματα ανά ημέρα',
 
 	'UPLOAD_DIR_SIZE'	=> 'Μέγεθος συνημμένων σε δημοσιεύσεις',
@@ -10722,9 +11032,9 @@ $lang = array_merge($lang, array(
 
 	'LOG_APPROVE_TOPIC'			=> '<strong>Αποδοχή θέματος</strong><br />» %s',
 	'LOG_BUMP_TOPIC'			=> '<strong>Νέα μηνύματα μέλους</strong><br />» %s',
-	'LOG_DELETE_POST'			=> '<strong>Διαγραφή δημοσίευσης “%1$s” δημοσιευμένη από</strong><br />» %2$s',
-	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Διαγραφή θέματος σκιάς</strong><br />» %s',
-	'LOG_DELETE_TOPIC'			=> '<strong>Διαγραφή θέματος “%1$s” δημοσιευμένο από</strong><br />» %2$s',
+	'LOG_DELETE_POST'			=> '<strong>Deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Deleted shadow topic</strong><br />Â» %s',
+	'LOG_DELETE_TOPIC'			=> '<strong>Deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_FORK'					=> '<strong>Αντιγραφή θέματος</strong><br />» από %s',
 	'LOG_LOCK'					=> '<strong>Κλείδωμα θέματος</strong><br />» %s',
 	'LOG_LOCK_POST'				=> '<strong>Κλείδωμα δημοσίευσης</strong><br />» %s',
@@ -10733,15 +11043,20 @@ $lang = array_merge($lang, array(
 	'LOG_PM_REPORT_CLOSED'		=> '<strong>Κλεισμένα ΠΜ ιστορικό</strong><br />» %s',
 	'LOG_PM_REPORT_DELETED'		=> '<strong>Διαγραμμένα ΠΜ ιστορικό</strong><br />» %s',
 	'LOG_POST_APPROVED'			=> '<strong>Αποδοχή δημοσίευσης</strong><br />» %s',
-	'LOG_POST_DISAPPROVED'		=> '<strong>Απόρριψη δημοσίευσης “%1$s” για τον ακόλουθο λόγο</strong><br />» %2$s',
-	'LOG_POST_EDITED'			=> '<strong>Επεξεργασία δημοσίευσης “%1$s” από τον</strong><br />» %2$s',
+	'LOG_POST_DISAPPROVED'		=> '<strong>Disapproved post â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
+	'LOG_POST_EDITED'			=> '<strong>Edited post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_POST_RESTORED'			=> '<strong>Restored post</strong><br />Â» %s',
 	'LOG_REPORT_CLOSED'			=> '<strong>Κλείδωμα αναφοράς</strong><br />» %s',
 	'LOG_REPORT_DELETED'		=> '<strong>Διαγραφή αναφοράς</strong><br />» %s',
+	'LOG_RESTORE_TOPIC'			=> '<strong>Restored topic â€œ%1$sâ€ written by</strong><br />Â» %2$s',
+	'LOG_SOFTDELETE_POST'		=> '<strong>Soft deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_SOFTDELETE_TOPIC'		=> '<strong>Soft deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_SPLIT_DESTINATION'		=> '<strong>Μετακίνηση διασπασμένων θεμάτων</strong><br />» to %s',
 	'LOG_SPLIT_SOURCE'			=> '<strong>Διάσπαση δημοσιεύσεων</strong><br />» από %s',
 
 	'LOG_TOPIC_APPROVED'		=> '<strong>Αποδοχή θέματος</strong><br />» %s',
-	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Απορρίφθηκε θέματα “%1$s” για τον ακόλουθο λόγο</strong><br />%2$s',
+	'LOG_TOPIC_RESTORED'		=> '<strong>Restored topic</strong><br />Â» %s',
+	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Disapproved topic â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
 	'LOG_TOPIC_RESYNC'			=> '<strong>Επανασυγχρονίσθηκαν μετρητές θέματος</strong><br />» %s',
 	'LOG_TOPIC_TYPE_CHANGED'	=> '<strong>Άλλαξε ο τύπος θέματος</strong><br />» %s',
 	'LOG_UNLOCK'				=> '<strong>Ξεκλειδώθηκε θέμα</strong><br />» %s',
@@ -10793,16 +11108,6 @@ $lang = array_merge($lang, array(
 
 	'LOG_IMAGE_GENERATION_ERROR'	=> '<strong>Σφάλμα κατά τη δημιουργία της εικόνας</strong><br />»Λάθος στην %1$s και γραμμή %2$s: %3$s',
 
-	'LOG_IMAGESET_ADD_DB'			=> '<strong>Προστέθηκε νέο πακέτο εικόνων στην βάση</strong><br />» %s',
-	'LOG_IMAGESET_ADD_FS'			=> '<strong>Προστέθηκε νέο πακέτο εικόνων στο σύστημα αρχείων</strong><br />» %s',
-	'LOG_IMAGESET_DELETE'			=> '<strong>Διαγράφηκε πακέτο εικόνων</strong><br />» %s',
-	'LOG_IMAGESET_EDIT_DETAILS'		=> '<strong>Επεξεργάστηκαν λεπτομέρειες πακέτου εικόνων</strong><br />» %s',
-	'LOG_IMAGESET_EDIT'				=> '<strong>Επεξεργάστηκε πακέτο εικόνων</strong><br />» %s',
-	'LOG_IMAGESET_EXPORT'			=> '<strong>Εξάχθηκε πακέτο εικόνων</strong><br />» %s',
-	'LOG_IMAGESET_LANG_MISSING'		=> '<strong>Σύνολο εικόνων που λείπει “%2$s” στην τοποθεσία </strong><br />» %1$s',
-	'LOG_IMAGESET_LANG_REFRESHED'	=> '<strong>Ο εντοπισμός της συλλογής εικόνων “%2$s” ανανεώθηκε</strong><br />» %1$s',
-	'LOG_IMAGESET_REFRESHED'		=> '<strong>Ανανέωση πακέτου εικόνων</strong><br />» %s',
-
 	'LOG_INACTIVE_ACTIVATE'	=> '<strong>Ενεργοποίηση ανενεργών μελών</strong><br />» %s',
 	'LOG_INACTIVE_DELETE'	=> '<strong>Διαγραφή ανενεργών μελών</strong><br />» %s',
 	'LOG_INACTIVE_REMIND'	=> '<strong>Αποστολή ηλεκτρονικού ταχυδρομείου υπενθύμισης στα ανενεργά μέλη</strong><br />» %s',
@@ -10847,6 +11152,7 @@ $lang = array_merge($lang, array(
 	'LOG_U_ROLE_EDIT'		=> '<strong>Επεξεργάσθηκε ρόλος μέλους</strong><br />» %s',
 	'LOG_U_ROLE_REMOVED'	=> '<strong>Αφαιρέθηκε ρόλος μέλους</strong><br />» %s',
 
+	'LOG_PLUPLOAD_TIDY_FAILED'		=> '<strong>Unable to open %1$s for tidying, check permissions.</strong><br />Exception: %2$s<br />Trace: %3$s',
 	'LOG_PROFILE_FIELD_ACTIVATE'	=> '<strong>Ενεργοποιήθηκε πεδίο προφίλ</strong><br />» %s',
 	'LOG_PROFILE_FIELD_CREATE'		=> '<strong>Προστέθηκε πεδίο προφίλ</strong><br />» %s',
 	'LOG_PROFILE_FIELD_DEACTIVATE'	=> '<strong>Απενεργοποιήθηκε πεδίο προφίλ</strong><br />» %s',
@@ -10855,13 +11161,13 @@ $lang = array_merge($lang, array(
 
 	'LOG_PRUNE'					=> '<strong>Πραγματοποιήθηκε καθαρισμός δημ. συζήτησης</strong><br />» %s',
 	'LOG_AUTO_PRUNE'			=> '<strong>Πραγματοποιήθηκε αυτόματος καθαρισμός δημ. συζήτησης</strong><br />» %s',
+	'LOG_PRUNE_SHADOW'		=> '<strong>Auto-pruned shadow topics</strong><br />Â» %s',
 	'LOG_PRUNE_USER_DEAC'		=> '<strong>Απενεργοποιήθηκαν μέλη</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_DEL'	=> '<strong>Πραγματοποιήθηκε καθαρισμός μελών και διαγραφή των δημοσιεύσεων τους</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_ANON'	=> '<strong>Πραγματοποιήθηκε καθαρισμός μελών και διατήρηση των δημοσιεύσεων τους</strong><br />» %s',
 
 	'LOG_PURGE_CACHE'			=> '<strong>Άδειασμα λανθάνουσας μνήμης</strong>',
 	'LOG_PURGE_SESSIONS'		=> '<strong>Εκκαθάριση συνόδων</strong>',
-
 
 	'LOG_RANK_ADDED'		=> '<strong>Προστέθηκε νέος βαθμός</strong><br />» %s',
 	'LOG_RANK_REMOVED'		=> '<strong>Αφαιρέθηκε βαθμός</strong><br />» %s',
@@ -10871,15 +11177,17 @@ $lang = array_merge($lang, array(
 	'LOG_REASON_REMOVED'	=> '<strong>Διαγραφή αναφοράς/απόρριψης λόγος</strong><br />» %s',
 	'LOG_REASON_UPDATED'	=> '<strong>Ενημέρωση αναφοράς/απόρριψης λόγος</strong><br />» %s',
 
-	'LOG_REFERER_INVALID'		=> '<strong>Αναφορά επικύρωσης  λείπει</strong><br />»Αναφορά ήταν “<em>%1$s</em>”. Το αίτημα απορρίφθηκε και η σύνοδος σταμάτησε.',
+	'LOG_REFERER_INVALID'		=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 	'LOG_RESET_DATE'			=> '<strong>Μηδενίσθηκε η ημερομηνία έναρξης της κοινότητας</strong>',
 	'LOG_RESET_ONLINE'			=> '<strong>Μηδενίσθηκε ο μετρητής περισσοτέρων μελών σε σύνδεση</strong>',
+	'LOG_RESYNC_FILES_STATS'	=> '<strong>File statistics resynchronised</strong>',
 	'LOG_RESYNC_POSTCOUNTS'		=> '<strong>Επανασυγχρονίσθηκε ο μετρητής δημοσιεύσεων</strong>',
 	'LOG_RESYNC_POST_MARKING'	=> '<strong>Επανασυγχρονισμός δικών σας θεμάτων</strong>',
 	'LOG_RESYNC_STATS'			=> '<strong>Επανασυγχρονίσθηκαν τα στατιστικά θεμάτων, δημοσιεύσεων και μελών</strong>',
 
 	'LOG_SEARCH_INDEX_CREATED'	=> '<strong>Δημιουργήθηκε το ευρετήριο αναζήτησης για</strong><br />» %s',
 	'LOG_SEARCH_INDEX_REMOVED'	=> '<strong>Αφαιρέθηκε το ευρετήριο αναζήτησης για</strong><br />» %s',
+	'LOG_SPHINX_ERROR'			=> '<strong>Sphinx Error</strong><br />Â» %s',
 	'LOG_STYLE_ADD'				=> '<strong>Προστέθηκε νέο στυλ</strong><br />» %s',
 	'LOG_STYLE_DELETE'			=> '<strong>Διαγράφτηκε στυλ</strong><br />» %s',
 	'LOG_STYLE_EDIT_DETAILS'	=> '<strong>Επεξεργάσθηκε στυλ</strong><br />» %s',
@@ -10946,15 +11254,18 @@ $lang = array_merge($lang, array(
 	'LOG_USER_GROUP_RESIGN'			=> '<strong>Το μέλος αποχώρησε από την ομάδα</strong><br />» %s',
 
 	'LOG_WARNING_DELETED'		=> '<strong>Διαγραφή μέλους προειδοποιήσεις</strong><br />» %s',
-	'LOG_WARNINGS_DELETED'		=> '<strong>Διαγραφή %2$s μέλους προειδοποιήσεις</strong><br />» %1$s',
 	'LOG_WARNINGS_DELETED_ALL'	=> '<strong>Διαγραφή όλες τις προειδοποιήσεις μέλους</strong><br />» %s',
 
 	'LOG_WORD_ADD'			=> '<strong>Προστέθηκε λογοκρισία λέξης</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>Αφαιρέθηκε λογοκρισία λέξης</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Επεξεργάσθηκε λογοκρισία λέξης</strong><br />» %s',
+
+	'LOG_EXT_ENABLE'	=> '<strong>Extension enabled</strong><br />Â» %s',
+	'LOG_EXT_DISABLE'	=> '<strong>Extension disabled</strong><br />Â» %s',
+	'LOG_EXT_PURGE'		=> '<strong>Extensionâ€™s data deleted</strong><br />Â» %s',
+
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
-
 ));
 
 $lang = array_merge($lang, array(
@@ -11255,7 +11566,7 @@ $lang = array_merge($lang, array(
 	'ACP_PORTAL_WELCOME_EXPLAIN'=> '',
 	'ADM_LOGOUT'			=> 'ΠΕΔ&nbsp;αποσύνδεση',
 	'ADM_LOGGED_OUT'		=> 'Έχετε αποσυνδεθεί επιτυχώς από τον Πίνακα ελέγχου διαχειριστή',
-	'LOG_REFERER_INVALID'	=> '<strong>Αναφορά επικύρωσης  λείπει</strong><br />»Αναφορά ήταν “<em>%1$s</em>”. Το αίτημα απορρίφθηκε και η σύνοδος σταμάτησε.',
+	'LOG_REFERER_INVALID'	=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 
 	'ACP_ABBCODES'			=> 'BBcode Box',
 	'LOG_CONFIG_ABBCODES'	=> '<strong>Altered BBCode Box settings</strong>',
@@ -11661,7 +11972,7 @@ $lang = array_merge($lang, array(
 	'SELECT_A_PREFIX'				=> 'Select a prefix',
 	'ACP_SEOQUERYS'					=> 'SEO Queries',
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Διαχείριση συνημμένων',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can list and delete files attached to posts and private messages.',
 	'LOG_ATTACH_DEL'				=> '<strong>Attachments deleted</strong><br />» %s',
 	'LOG_ATTACH_REASSIGNED'			=> '<strong>Attachment reassigned to Post</strong><br />» ID %1$d - %2$s',
 	'TOTAL_SIZE'					=> 'Total size',
@@ -11680,11 +11991,11 @@ $lang = array_merge($lang, array(
 	'ACP_INTRO'				=> 'Intro',
 
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Διαχείριση συνημμένων',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
 	'TOTAL_SIZE'				=> 'Total size',
 	'DOWNLOADS'				=> 'Μεταφορτώσεις',
 
-	'NO_AVATAR'				=> 'URL of the avatar for all the have no separate',
+	'NO_AVATAR'				=> 'No avatar selected',
 	'NO_AVATAR_EXPLAIN'			=> 'The optimal size of the avatar is 120x120px, this box is left blank, no picture at all. <br /> Demo URL: http://www.userboard.org/images/no_avatar_1.gif',
 	'GROUP_ICON'				=> 'Group Icon',
 	'GROUP_ICON_EXPLAIN'			=> 'Upload your Group Icons into Upload &#187; Topic/Group Icons',
@@ -12847,6 +13158,97 @@ $lang = array_merge($lang, array(
 	'NO_EMAIL_SUBJECT'		=> 'Δεν έχετε προσθέσει κανένα θέμα στο ηλεκτρονικό ταχυδρομείο.',
 ));
 
+#######language/en/acp/extensions.php#######
+
+$lang = array_merge($lang, array(
+	'EXTENSION'					=> 'Επέκταση ',
+	'EXTENSIONS'				=> 'Extensions',
+	'EXTENSIONS_ADMIN'			=> 'Extensions Manager',
+	'EXTENSIONS_EXPLAIN'		=> 'The Extensions Manager is a tool in your phpBB Board which allows you to manage all of your extensions statuses and view information about them.',
+	'EXTENSION_INVALID_LIST'	=> 'The “%s” extension is not valid.<br />%s<br /><br />',
+	'EXTENSION_NOT_AVAILABLE'	=> 'The selected extension is not available for this board, please verify your phpBB and PHP versions are allowed (see the details page).',
+	'EXTENSION_DIR_INVALID'		=> 'The selected extension has an invalid directory structure and cannot be enabled.',
+	'EXTENSION_NOT_ENABLEABLE'	=> 'The selected extension cannot be enabled, please verify the extension’s requirements.',
+
+	'DETAILS'				=> 'Λεπτομέρειες',
+
+	'EXTENSIONS_DISABLED'	=> 'Disabled Extensions',
+	'EXTENSIONS_ENABLED'	=> 'Enabled Extensions',
+
+	'EXTENSION_DELETE_DATA'	=> 'Delete data',
+	'EXTENSION_DISABLE'		=> 'Disable',
+	'EXTENSION_ENABLE'		=> 'Enable',
+
+	'EXTENSION_DELETE_DATA_EXPLAIN'	=> 'Deleting an extension’s data removes all of its data and settings. The extension files are retained so it can be enabled again.',
+	'EXTENSION_DISABLE_EXPLAIN'		=> 'Disabling an extension retains its files, data and settings but removes any functionality added by the extension.',
+	'EXTENSION_ENABLE_EXPLAIN'		=> 'Enabling an extension allows you to use it on your board.',
+
+	'EXTENSION_DELETE_DATA_IN_PROGRESS'	=> 'The extension’s data is currently being deleted. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_DISABLE_IN_PROGRESS'	=> 'The extension is currently being disabled. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_ENABLE_IN_PROGRESS'	=> 'The extension is currently being enabled. Please do not leave or refresh this page until it is completed.',
+
+	'EXTENSION_DELETE_DATA_SUCCESS'	=> 'The extension’s data was deleted successfully',
+	'EXTENSION_DISABLE_SUCCESS'		=> 'The extension was disabled successfully',
+	'EXTENSION_ENABLE_SUCCESS'		=> 'The extension was enabled successfully',
+
+	'EXTENSION_NAME'			=> 'Extension Name',
+	'EXTENSION_ACTIONS'			=> 'Actions',
+	'EXTENSION_OPTIONS'			=> 'Options',
+	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
+	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s files from the filesystem</li>
+			<li>Upload the new files</li>
+			<li>Enable the extension</li>
+		</ol>',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s data</li>
+			<li>Delete the extension’s files from the filesystem</li>
+		</ol>',
+
+	'EXTENSION_DELETE_DATA_CONFIRM'	=> 'Are you sure that you wish to delete the data associated with “%s”?<br /><br />This removes all of its data and settings and cannot be undone!',
+	'EXTENSION_DISABLE_CONFIRM'		=> 'Are you sure that you wish to disable the “%s” extension?',
+	'EXTENSION_ENABLE_CONFIRM'		=> 'Are you sure that you wish to enable the “%s” extension?',
+	'EXTENSION_FORCE_UNSTABLE_CONFIRM'	=> 'Are you sure that you wish to force the use of unstable version?',
+
+	'RETURN_TO_EXTENSION_LIST'	=> 'Return to the extension list',
+
+	'EXT_DETAILS'			=> 'Extension Details',
+	'DISPLAY_NAME'			=> 'Disply Name (may be NULL)',
+	'CLEAN_NAME'			=> 'Clean Name',
+	'TYPE'					=> 'Type',
+	'DESCRIPTION'			=> 'Περιγραφή',
+	'VERSION'				=> 'Έκδοση',
+	'HOMEPAGE'				=> 'Homepage',
+	'PATH'					=> 'File Path',
+	'TIME'					=> 'Ώρα',
+	'LICENSE'				=> 'Licence',
+
+	'REQUIREMENTS'			=> 'Requirements',
+	'PHPBB_VERSION'			=> 'phpBB Version',
+	'PHP_VERSION'			=> 'PHP Version',
+	'AUTHOR_INFORMATION'	=> 'Author Information',
+	'AUTHOR_NAME'			=> 'Name',
+	'AUTHOR_EMAIL'			=> 'Email',
+	'AUTHOR_HOMEPAGE'		=> 'Homepage',
+	'AUTHOR_ROLE'			=> 'Role',
+
+	'NOT_UP_TO_DATE'		=> '%s is not up to date',
+	'UP_TO_DATE'			=> '%s is up to date',
+	'ANNOUNCEMENT_TOPIC'	=> 'Release Announcement',
+	'DOWNLOAD_LATEST'		=> 'Download Version',
+	'NO_VERSIONCHECK'		=> 'No version check information given.',
+
+	'VERSIONCHECK_FORCE_UPDATE_ALL'		=> 'Re-Check all versions',
+	'FORCE_UNSTABLE'					=> 'Always check for unstable versions',
+	'EXTENSIONS_VERSION_CHECK_SETTINGS'	=> 'Version check settings',
+
+	'META_FIELD_NOT_SET'	=> 'Required meta field %s has not been set.',
+	'META_FIELD_INVALID'	=> 'Meta field %s is invalid.',
+));
+
 #######language/en/acp/forums.php#######
 
 $lang = array_merge($lang, array(
@@ -12856,6 +13258,10 @@ $lang = array_merge($lang, array(
 	'AUTO_PRUNE_FREQ_EXPLAIN'	=> 'Ο χρόνος σε ημέρες ενδιάμεσα σε ενέργειες καθαρισμού.',
 	'AUTO_PRUNE_VIEWED'			=> 'Χρόνος επισκόπησης δημοσίευσης πριν τον αυτόματο καθαρισμό',
 	'AUTO_PRUNE_VIEWED_EXPLAIN'	=> 'Ο χρόνος σε ημέρες από την τελευταία φορά επισκόπησης πριν διαγραφεί το θέμα.',
+	'AUTO_PRUNE_SHADOW_FREQ'	=> 'Auto-prune shadow topics frequency',
+	'AUTO_PRUNE_SHADOW_DAYS'	=> 'Auto-prune shadow topics age',
+	'AUTO_PRUNE_SHADOW_DAYS_EXPLAIN'	=> 'Number of days after which shadow topic is removed.',
+	'AUTO_PRUNE_SHADOW_FREQ_EXPLAIN'	=> 'Time in days between pruning events.',
 
 	'CONTINUE'						=> '	Συνέχιση',
 	'COPY_PERMISSIONS_EXPLAIN'		=> 'Για να γίνει πιο εύκολη η προσθήκη προσβάσεων για την νέα Δ. Συζήτηση, μπορείτε να αντιγράψετε τα δικαιώματα μιας υπάρχουσας Δ. Συζήτησης.',
@@ -12914,6 +13320,8 @@ $lang = array_merge($lang, array(
 	'FORUM_PASSWORD_OLD'				=> 'Ο κωδικός πρόσβασης της Δ. Συζήτησης χρησιμοποιεί μια παλαιά μέθοδο κατακερματισμού και πρέπει να αλλάξει.',
 	'FORUM_PASSWORD_MISMATCH'			=> 'Ο κωδικός που εισάγατε δεν ταιριάζει.',
 	'FORUM_PRUNE_SETTINGS'				=> 'Επιλογές εκκαθάρισης Δ. Συζήτησης',
+	'FORUM_PRUNE_SHADOW'				=> 'Enable auto-pruning of shadow topics',
+	'FORUM_PRUNE_SHADOW_EXPLAIN'			=> 'Prunes the forum of shadow topics, set the frequency/age parameters below.',
 	'FORUM_RESYNCED'					=> 'Επιτυχής επανασυγχρονισμός Δ. Συζήτησης "%s"',
 	'FORUM_RULES_EXPLAIN'				=> 'Οι κανόνες Δ. Συζήτησης θα εμφανίζονται σε κάθε σελίδα της επιλεγμένης Δ. Συζήτησης.',
 	'FORUM_RULES_LINK'					=> 'Παρακαλώ πατήστε εδώ για να δείτε τους κανόνες της Δ. Συζήτησης',
@@ -13006,6 +13414,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE_EXPLAIN'		=> 'Εδώ μπορείτε να διαχειριστείτε όλες τις ομάδες μελών σας, να διαγράψετε, να δημιουργήσετε και να επεξεργαστείτε ήδη υπάρχοντες ομάδες. Μπορείτε να επιλέξετε συντονιστές ομάδων, να καθορίσετε σαν ανοιχτές/κλειστές τις ομάδες και να τους αποδώσετε όνομα και περιγραφή.',
+	'ADD_GROUP_CATEGORY'			=> 'Add category',
 	'GROUP_ADD_USERS'				=> 'Προσθήκη μελών',
 	'ADD_USERS_EXPLAIN'				=> 'Εδώ μπορείτε να προσθέσετε μέλη σε μια ομάδα. Μπορείτε να ρυθμίσετε εάν αυτή η ομάδα είναι η κύρια ομάδα για τα επιλεγμένα μέλη. Εκτός αυτού μπορείτε να προσθέσετε ένα μέλος ηγέτη αυτής της ομάδας. Παρακαλώ εισάγετε κάθε όνομα μέλους σε μια χωριστή γραμμή.',
 
@@ -13019,11 +13428,10 @@ $lang = array_merge($lang, array(
 	'GROUP_APPROVED'				=> 'Εγκεκριμένα μέλη',
 	'GROUP_AVATAR'					=> 'Ομάδα άβαταρ',
 	'GROUP_AVATAR_EXPLAIN'			=> 'Αυτή η εικόνα θα εμφανίζετε στον Πίνακα Ελέγχου Ομάδας.',
+	'GROUP_CATEGORY_NAME'			=> 'Category name',
 	'GROUP_CLOSED'					=> 'Κλειστή',
 	'GROUP_COLOR'					=> 'Χρώμα ομάδας',
 	'GROUP_COLOR_EXPLAIN'			=> 'Ορίζει το χρώμα με το οποίο θα εμφανίζεται το όνομα χρήστη κάθε μέλους της ομάδας, αφήστε το κενό για τα προκαθορισμένα χρώματα.',
-	'GROUP_CONFIRM_ADD_USER'		=> 'Είστε σίγουρος ότι θέλετε να προσθέσετε το μέλος %1$s σε αυτή την ομάδα;',
-	'GROUP_CONFIRM_ADD_USERS'		=> 'Είστε σίγουρος ότι θέλετε να προσθέσετε τα μέλη %1$s σε αυτή την ομάδα;',
 	'GROUP_CREATED'					=> 'Επιτυχής δημιουργία ομάδας.',
 	'GROUP_DEFAULT'					=> 'Ορίστε την ομάδα σαν βασική για το μέλος',
 	'GROUP_DEFS_UPDATED'			=> 'Ορίστε την ομάδα σαν βασική για τα επιλεγμένα μέλη.',
@@ -13065,6 +13473,8 @@ $lang = array_merge($lang, array(
 	'GROUP_SETTINGS_SAVE'			=> 'Εκτεταμένες επιλογές ομάδας',
 	'GROUP_SKIP_AUTH'				=> 'Εξαίρεση ηγέτη αμάδας από τα δικαιώματα',
 	'GROUP_SKIP_AUTH_EXPLAIN'		=> 'Εάν αυτό είναι ενεργοποιημένο ο ηγέτης ομάδας  δεν παίρνει δικαιώματα από αυτήν την ομάδα.',
+	'GROUP_SPECIAL'					=> 'Pre-defined',
+	'GROUP_TEAMPAGE'				=> 'Display group on teampage',
 	'GROUP_TYPE'					=> 'Τύπος Ομάδας',
 	'GROUP_TYPE_EXPLAIN'			=> 'Αυτό καθορίζει ποια μέλη μπορούν να γραφτούν ή να δουν την ομάδα.',
 	'GROUP_UPDATED'					=> 'Επιτυχής ενημέρωση επιλογών ομάδας.',
@@ -13073,19 +13483,37 @@ $lang = array_merge($lang, array(
 	'GROUP_USERS_EXIST'				=> 'Τα επιλεγμένα μέλη ανήκουν ήδη στην ομάδα.',
 	'GROUP_USERS_REMOVE'			=> 'Τα μέλη αφαιρέθηκαν από την ομάδα και νέες βασικές ρυθμίσεις αποθηκεύτηκαν.',
 
+	'LEGEND_EXPLAIN'				=> 'These are the groups which are displayed in the group legend:',
+	'LEGEND_SETTINGS'				=> 'Legend settings',
+	'LEGEND_SORT_GROUPNAME'			=> 'Sort legend by group name',
+	'LEGEND_SORT_GROUPNAME_EXPLAIN'	=> 'The order below is ignored when this option is enabled.',
+
+	'MANAGE_LEGEND'			=> 'Manage group legend',
+	'MANAGE_TEAMPAGE'		=> 'Manage teampage',
 	'MAKE_DEFAULT_FOR_ALL'		=> 'Καθορίστε βασική ομάδα για κάθε μέλος',
 	'MEMBERS'					=> 'Μέλη',
 
 	'NO_GROUP'					=> 'Η ζητούμενη ομάδα μελών δεν υπάρχει.',
+	'NO_GROUPS_ADDED'			=> 'No groups added yet.',
 	'NO_GROUPS_CREATED'			=> 'Δεν έχουν δημιουργηθεί ομάδες ακόμα.',
 	'NO_PERMISSIONS'			=> 'Να μην γίνει αντιγραφή δικαιωμάτων',
 	'NO_USERS'					=> 'Τα ζητούμενα μέλη δεν υπάρχουν.',
 	'NO_USERS_ADDED'			=> 'Κανένα μέλος δεν προστέθηκε στην ομάδα.',
 	'NO_VALID_USERS'			=> 'Δεν έχετε εισάγει κανένα επιλεγμένο μέλος για αυτήν την ενέργεια.',
 
+	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> 'Προκαθορισμένες ομάδες',
 	'SPECIAL_GROUPS_EXPLAIN'	=> 'Οι προκαθορισμένες ομάδες είναι ειδικές ομάδες, δεν μπορούν να διαγραφούν, σβηστούν ή να αλλαχτούν. Μπορείτε όμως να προσθέσετε μέλη σε αυτές και να αλλάξετε βασικές ρυθμίσεις.',
 
+	'TEAMPAGE'					=> 'Teampage',
+	'TEAMPAGE_DISP_ALL'			=> 'All memberships',
+	'TEAMPAGE_DISP_DEFAULT'		=> 'User’s default group only',
+	'TEAMPAGE_DISP_FIRST'		=> 'First membership only',
+	'TEAMPAGE_EXPLAIN'			=> 'These are the groups which are displayed on the teampage:',
+	'TEAMPAGE_FORUMS'			=> 'Display moderated forums',
+	'TEAMPAGE_FORUMS_EXPLAIN'	=> 'If set to yes, moderators will have a list with all of the forums where they have moderator permissions displayed in their row. This can be very database intensive for big boards.',
+	'TEAMPAGE_MEMBERSHIPS'		=> 'Display user memberships',
+	'TEAMPAGE_SETTINGS'			=> 'Teampage settings',
 	'TOTAL_MEMBERS'				=> 'Μέλη',
 
 	'USERS_APPROVED'				=> 'Επιτυχής αποδοχή μέλους.',
@@ -13471,26 +13899,14 @@ $lang = array_merge($lang, array(
 	'ACP_FILES'						=> 'Αρχεία γλώσσας διαχειριστή',
 	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> 'Εδώ μπορείτε να εγκαταστήσετε/απεγκαταστήσετε πακέτα γλώσσας. Το γλωσσικό πακέτο προεπιλογής είναι μαρκαρισμένο με έναν αστερίσκο (*).',
 
-	'EMAIL_FILES'			=> 'Οδηγοί αλληλογραφίας',
-
-	'FILE_CONTENTS'				=> 'Περιεχόμενα αρχείου',
-	'FILE_FROM_STORAGE'			=> 'Αρχείο από φάκελο αποθήκευσης',
-
-	'HELP_FILES'				=> 'Αρχεία βοηθείας',
-
-	'INSTALLED_LANGUAGE_PACKS'	=> 'Εγκατεστημένα πακέτα γλωσσών',
-	'INVALID_LANGUAGE_PACK'		=> 'Το επιλεγμένο πακέτο γλώσσας μπορεί να μην είναι έγκυρο. Παρακαλώ επαληθεύστε το πακέτο γλώσσας και φορτώστε το ξανά αν είναι απαραίτητο.',
-	'INVALID_UPLOAD_METHOD'		=> 'Ο επιλεγμένος τρόπος φόρτωσης δεν είναι έγκυρος, παρακαλώ επιλέξτε άλλον.',
+	'DELETE_LANGUAGE_CONFIRM'		=> 'Are you sure you wish to delete “%s”?',
+	'INSTALLED_LANGUAGE_PACKS'		=> 'Εγκατεστημένα πακέτα γλωσσών',
 
 	'LANGUAGE_DETAILS_UPDATED'			=> 'Οι λεπτομέρειες της γλώσσας ενημερώθηκαν επιτυχώς.',
-	'LANGUAGE_ENTRIES'					=> 'Λήμματα γλώσσας',
-	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Εδώ μπορείτε να αλλάξετε τιμές σε υπάρχοντα πακέτα γλώσσας ή αυτά που δεν έχουν μεταφραστεί ακόμα.<br /><strong>Σημείωση:</strong> Όταν αλλάξετε κάποιο αρχείο γλώσσας, αυτό θα αποθηκευτούν σε ξεχωριστό φάκελο ώστε να τα μεταφορτώσετε. Οι αλλαγές δεν θα είναι ορατές στα μέλη μέχρι να αντικαταστήσετε τα αρχικά αρχεία γλώσσας στην σελίδα σας (ανεβάζοντάς τα).',
-	'LANGUAGE_FILES'					=> 'Αρχεία γλώσσας',
-	'LANGUAGE_KEY'						=> 'Γλωσσικό Κλειδί',
 	'LANGUAGE_PACK_ALREADY_INSTALLED'	=> 'Αυτό το πακέτο γλώσσας είναι ήδη εγκατεστημένο.',
-	'LANGUAGE_PACK_DELETED'				=> 'Το αρχείο γλώσσας <strong>%s</strong> απεγκαταστάθηκε επιτυχώς. Όλα τα μέλη που χρησιμοποιούσαν αυτήν την γλώσσας ρυθμίσθηκαν στην βασική γλώσσα της Δ. Συζήτησης.',
+	'LANGUAGE_PACK_DELETED'				=> 'The language pack “%s” has been removed successfully. All users using this language have been reset to the board’s default language.',
 	'LANGUAGE_PACK_DETAILS'				=> 'Λεπτομέρειες πακέτου γλώσσας',
-	'LANGUAGE_PACK_INSTALLED'			=> 'Το αρχείο γλώσσας <strong>%s</strong> εγκαταστάθηκε επιτυχώς.',
+	'LANGUAGE_PACK_INSTALLED'			=> 'The language pack “%s” has been successfully installed.',
 	'LANGUAGE_PACK_CPF_UPDATE'			=> 'Η ακολουθίες χαρακτήρων στα προσαρμοσμένα πεδία προφίλ’ έχουν αντιγραφή από την προεπιλεγμένη γλώσσα. Παρακαλώ αλλάξτε αυτά εάν είναι απαραίτητο.',
 	'LANGUAGE_PACK_ISO'					=> 'ISO',
 	'LANGUAGE_PACK_LOCALNAME'			=> 'Τοπικό όνομα',
@@ -13503,33 +13919,44 @@ $lang = array_merge($lang, array(
 	'LANG_ISO_CODE'						=> 'Κώδικας ISO',
 	'LANG_LOCAL_NAME'					=> 'Τοπικό όνομα',
 
-	'MISSING_LANGUAGE_FILE'		=> 'Ελλείπον αρχείο γλώσσας: <strong style="color:red">%s</strong>',
+	'MISSING_LANG_FILES'		=> 'Missing language files',
 	'MISSING_LANG_VARIABLES'	=> 'Ελλείπον μεταβλητή γλώσσας',
-	'MODS_FILES'				=> 'Αρχεία γλώσσας MODs',
 
 	'NO_FILE_SELECTED'				=> 'Δεν καθορίσατε αρχείο γλώσσας.',
 	'NO_LANG_ID'					=> 'Δεν καθορίσατε πακέτο γλώσσας.',
-	'NO_REMOVE_DEFAULT_LANG'		=> 'Δεν μπορείτε να απεγκαταστήσετε το βασικό πακέτο γλώσσας.<br />Αν θέλετε να το απεγκαταστήσετε, αλλάξτε την βασική γλώσσα της Δ. Συζήτησης πριν.',
+	'NO_REMOVE_DEFAULT_LANG'		=> 'You are not able to remove the default language pack.<br />If you want to remove this language pack, change your board’s default language first.',
 	'NO_UNINSTALLED_LANGUAGE_PACKS'	=> 'Δεν υπάρχουν απεγκατεστημένα πακέτα γλώσσας',
 
-	'REMOVE_FROM_STORAGE_FOLDER'		=> 'Αφαίρεση από φάκελο αποθήκευσης',
-
-	'SELECT_DOWNLOAD_FORMAT'	=> 'Επιλέξτε κωδικοποίηση μεταφορτωμένου συμπιεσμένου αρχείου',
-	'SUBMIT_AND_DOWNLOAD'		=> 'Υποβάλετε και μεταφορτώστε αρχείο',
-	'SUBMIT_AND_UPLOAD'			=> 'Υποβάλετε και φορτώστε αρχείο',
-
-	'THOSE_MISSING_LANG_FILES'			=> 'Τα ακόλουθα αρχεία γλώσσας λείπουν από τον φάκελο της γλώσσας %s ',
-	'THOSE_MISSING_LANG_VARIABLES'		=> 'Οι ακόλουθες μεταβλητές γλώσσας λείπουν από το <strong>%s</strong> πακέτο γλώσσας',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 
 	'UNINSTALLED_LANGUAGE_PACKS'	=> 'Απεγκατεστημένα πακέτα γλώσσας',
 
+	// 3.0.12
+	'EMAIL_FILES'			=> 'Οδηγοί αλληλογραφίας',
+	'FILE_CONTENTS'				=> 'Περιεχόμενα αρχείου',
+	'FILE_FROM_STORAGE'			=> 'Αρχείο από φάκελο αποθήκευσης',
+	'HELP_FILES'				=> 'Αρχεία βοηθείας',
+	'INSTALLED_LANGUAGE_PACKS'	=> 'Εγκατεστημένα πακέτα γλωσσών',
+	'INVALID_LANGUAGE_PACK'		=> 'Το επιλεγμένο πακέτο γλώσσας μπορεί να μην είναι έγκυρο. Παρακαλώ επαληθεύστε το πακέτο γλώσσας και φορτώστε το ξανά αν είναι απαραίτητο.',
+	'INVALID_UPLOAD_METHOD'		=> 'Ο επιλεγμένος τρόπος φόρτωσης δεν είναι έγκυρος, παρακαλώ επιλέξτε άλλον.',
+	'LANGUAGE_ENTRIES'					=> 'Λήμματα γλώσσας',
+	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Εδώ μπορείτε να αλλάξετε τιμές σε υπάρχοντα πακέτα γλώσσας ή αυτά που δεν έχουν μεταφραστεί ακόμα.<br /><strong>Σημείωση:</strong> Όταν αλλάξετε κάποιο αρχείο γλώσσας, αυτό θα αποθηκευτούν σε ξεχωριστό φάκελο ώστε να τα μεταφορτώσετε. Οι αλλαγές δεν θα είναι ορατές στα μέλη μέχρι να αντικαταστήσετε τα αρχικά αρχεία γλώσσας στην σελίδα σας (ανεβάζοντάς τα).',
+	'LANGUAGE_FILES'					=> 'Αρχεία γλώσσας',
+	'LANGUAGE_KEY'						=> 'Γλωσσικό Κλειδί',
+	'MISSING_LANGUAGE_FILE'		=> 'Ελλείπον αρχείο γλώσσας: <strong style="color:red">%s</strong>',
+	'SELECT_DOWNLOAD_FORMAT'	=> 'Επιλέξτε κωδικοποίηση μεταφορτωμένου συμπιεσμένου αρχείου',
+	'SUBMIT_AND_DOWNLOAD'		=> 'Υποβάλετε και μεταφορτώστε αρχείο',
+	'SUBMIT_AND_UPLOAD'			=> 'Υποβάλετε και φορτώστε αρχείο',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 	'UNABLE_TO_WRITE_FILE'		=> 'Το αρχείο δεν μπορεί να αποθηκευθεί στο %s.',
 	'UPLOAD_COMPLETED'			=> 'Η φόρτωση ολοκληρώθηκε επιτυχώς.',
 	'UPLOAD_FAILED'				=> 'Η φόρτωση απέτυχε για άγνωστους λόγους. ΘΑ χρειαστεί να αντικαταστήσετε το αρχείο χειροκίνητα.',
 	'UPLOAD_METHOD'				=> 'Μέθοδος ανεβάσματος αρχείων',
 	'UPLOAD_SETTINGS'			=> 'Ρυθμίσεις φόρτωσης',
-
 	'WRONG_LANGUAGE_FILE'		=> 'Το επιλεγμένο αρχείο γλώσσας δεν είναι έγκυρο.',
+	// 3.0.12
 ));
 
 #######language/en/acp/lexicon.php#######
@@ -13862,6 +14289,171 @@ $lang = array_merge($lang, array(
 	'ROLE_DESCRIPTION_ADMIN_FOOTBALL'	=> 'Can edit final match results.',
 ));
 
+#######language/en/acp/permissions_phpbb.php#######
+
+$lang = array_merge($lang, array(
+	'ACL_CAT_ACTIONS'		=> 'Actions',
+	'ACL_CAT_CONTENT'		=> 'Content',
+	'ACL_CAT_FORUMS'		=> 'Forums',
+	'ACL_CAT_MISC'			=> 'Misc',
+	'ACL_CAT_PERMISSIONS'	=> 'Permissions',
+	'ACL_CAT_PM'			=> 'Private messages',
+	'ACL_CAT_POLLS'			=> 'Polls',
+	'ACL_CAT_POST'			=> 'Post',
+	'ACL_CAT_POST_ACTIONS'	=> 'Post actions',
+	'ACL_CAT_POSTING'		=> 'Posting',
+	'ACL_CAT_PROFILE'		=> 'Profile',
+	'ACL_CAT_SETTINGS'		=> 'Settings',
+	'ACL_CAT_TOPIC_ACTIONS'	=> 'Topic actions',
+	'ACL_CAT_USER_GROUP'	=> 'Users &amp; Groups',
+));
+
+// User Permissions
+$lang = array_merge($lang, array(
+	'ACL_U_VIEWPROFILE'	=> 'Can view profiles, memberlist and online list',
+	'ACL_U_CHGNAME'		=> 'Can change username',
+	'ACL_U_CHGPASSWD'	=> 'Can change password',
+	'ACL_U_CHGEMAIL'	=> 'Can change email address',
+	'ACL_U_CHGAVATAR'	=> 'Can change avatar',
+	'ACL_U_CHGGRP'		=> 'Can change default usergroup',
+	'ACL_U_CHGPROFILEINFO'	=> 'Can change profile field information',
+
+	'ACL_U_ATTACH'		=> 'Can attach files',
+	'ACL_U_DOWNLOAD'	=> 'Can download files',
+	'ACL_U_SAVEDRAFTS'	=> 'Can save drafts',
+	'ACL_U_CHGCENSORS'	=> 'Can disable word censors',
+	'ACL_U_SIG'			=> 'Can use signature',
+
+	'ACL_U_SENDPM'		=> 'Can send private messages',
+	'ACL_U_MASSPM'		=> 'Can send messages to multiple users',
+	'ACL_U_MASSPM_GROUP'=> 'Can send messages to groups',
+	'ACL_U_READPM'		=> 'Can read private messages',
+	'ACL_U_PM_EDIT'		=> 'Can edit own private messages',
+	'ACL_U_PM_DELETE'	=> 'Can remove private messages from own folder',
+	'ACL_U_PM_FORWARD'	=> 'Can forward private messages',
+	'ACL_U_PM_EMAILPM'	=> 'Can email private messages',
+	'ACL_U_PM_PRINTPM'	=> 'Can print private messages',
+	'ACL_U_PM_ATTACH'	=> 'Can attach files in private messages',
+	'ACL_U_PM_DOWNLOAD'	=> 'Can download files in private messages',
+	'ACL_U_PM_BBCODE'	=> 'Can use BBCode in private messages',
+	'ACL_U_PM_SMILIES'	=> 'Can use smilies in private messages',
+	'ACL_U_PM_IMG'		=> 'Can use [img] BBCode tag in private messages',
+	'ACL_U_PM_FLASH'	=> 'Can use [flash] BBCode tag in private messages',
+
+	'ACL_U_SENDEMAIL'	=> 'Can send emails',
+	'ACL_U_SENDIM'		=> 'Can send instant messages',
+	'ACL_U_IGNOREFLOOD'	=> 'Can ignore flood limit',
+	'ACL_U_HIDEONLINE'	=> 'Can hide online status',
+	'ACL_U_VIEWONLINE'	=> 'Can view hidden online users',
+	'ACL_U_SEARCH'		=> 'Can search board',
+));
+
+// Forum Permissions
+$lang = array_merge($lang, array(
+	'ACL_F_LIST'		=> 'Can see forum',
+	'ACL_F_READ'		=> 'Can read forum',
+	'ACL_F_SEARCH'		=> 'Can search the forum',
+	'ACL_F_SUBSCRIBE'	=> 'Can subscribe forum',
+	'ACL_F_PRINT'		=> 'Can print topics',
+	'ACL_F_EMAIL'		=> 'Can email topics',
+	'ACL_F_BUMP'		=> 'Can bump topics',
+	'ACL_F_USER_LOCK'	=> 'Can lock own topics',
+	'ACL_F_DOWNLOAD'	=> 'Can download files',
+	'ACL_F_REPORT'		=> 'Can report posts',
+
+	'ACL_F_POST'		=> 'Can start new topics',
+	'ACL_F_STICKY'		=> 'Can post stickies',
+	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_REPLY'		=> 'Can reply to topics',
+	'ACL_F_EDIT'		=> 'Can edit own posts',
+	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
+	'ACL_F_SOFTDELETE'	=> 'Can soft delete own posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_F_IGNOREFLOOD' => 'Can ignore flood limit',
+	'ACL_F_POSTCOUNT'	=> 'Increment post counter<br /><em>Please note that this setting only affects new posts.</em>',
+	'ACL_F_NOAPPROVE'	=> 'Can post without approval',
+
+	'ACL_F_ATTACH'		=> 'Can attach files',
+	'ACL_F_ICONS'		=> 'Can use topic/post icons',
+	'ACL_F_BBCODE'		=> 'Can use BBCode',
+	'ACL_F_FLASH'		=> 'Can use [flash] BBCode tag',
+	'ACL_F_IMG'			=> 'Can use [img] BBCode tag',
+	'ACL_F_SIGS'		=> 'Can use signatures',
+	'ACL_F_SMILIES'		=> 'Can use smilies',
+
+	'ACL_F_POLL'		=> 'Can create polls',
+	'ACL_F_VOTE'		=> 'Can vote in polls',
+	'ACL_F_VOTECHG'		=> 'Can change existing vote',
+));
+
+// Moderator Permissions
+$lang = array_merge($lang, array(
+	'ACL_M_EDIT'		=> 'Can edit posts',
+	'ACL_M_DELETE'		=> 'Can permanently delete posts',
+	'ACL_M_SOFTDELETE'	=> 'Can soft delete posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_M_APPROVE'		=> 'Can approve and restore posts',
+	'ACL_M_REPORT'		=> 'Can close and delete reports',
+	'ACL_M_CHGPOSTER'	=> 'Can change post author',
+
+	'ACL_M_MOVE'	=> 'Can move topics',
+	'ACL_M_LOCK'	=> 'Can lock topics',
+	'ACL_M_SPLIT'	=> 'Can split topics',
+	'ACL_M_MERGE'	=> 'Can merge topics',
+
+	'ACL_M_INFO'	=> 'Can view post details',
+	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+));
+
+// Admin Permissions
+$lang = array_merge($lang, array(
+	'ACL_A_BOARD'		=> 'Can alter board settings/check for updates',
+	'ACL_A_SERVER'		=> 'Can alter server/communication settings',
+	'ACL_A_JABBER'		=> 'Can alter Jabber settings',
+	'ACL_A_PHPINFO'		=> 'Can view php settings',
+
+	'ACL_A_FORUM'		=> 'Can manage forums',
+	'ACL_A_FORUMADD'	=> 'Can add new forums',
+	'ACL_A_FORUMDEL'	=> 'Can delete forums',
+	'ACL_A_PRUNE'		=> 'Can prune forums',
+
+	'ACL_A_ICONS'		=> 'Can alter topic/post icons and smilies',
+	'ACL_A_WORDS'		=> 'Can alter word censors',
+	'ACL_A_BBCODE'		=> 'Can define BBCode tags',
+	'ACL_A_ATTACH'		=> 'Can alter attachment related settings',
+
+	'ACL_A_USER'		=> 'Can manage users<br /><em>This also includes seeing the users browser agent within the viewonline list.</em>',
+	'ACL_A_USERDEL'		=> 'Can delete/prune users',
+	'ACL_A_GROUP'		=> 'Can manage groups',
+	'ACL_A_GROUPADD'	=> 'Can add new groups',
+	'ACL_A_GROUPDEL'	=> 'Can delete groups',
+	'ACL_A_RANKS'		=> 'Can manage ranks',
+	'ACL_A_PROFILE'		=> 'Can manage custom profile fields',
+	'ACL_A_NAMES'		=> 'Can manage disallowed names',
+	'ACL_A_BAN'			=> 'Can manage bans',
+
+	'ACL_A_VIEWAUTH'	=> 'Can view permission masks',
+	'ACL_A_AUTHGROUPS'	=> 'Can alter permissions for individual groups',
+	'ACL_A_AUTHUSERS'	=> 'Can alter permissions for individual users',
+	'ACL_A_FAUTH'		=> 'Can alter forum permission class',
+	'ACL_A_MAUTH'		=> 'Can alter moderator permission class',
+	'ACL_A_AAUTH'		=> 'Can alter admin permission class',
+	'ACL_A_UAUTH'		=> 'Can alter user permission class',
+	'ACL_A_ROLES'		=> 'Can manage roles',
+	'ACL_A_SWITCHPERM'	=> 'Can use others permissions',
+
+	'ACL_A_STYLES'		=> 'Can manage styles',
+	'ACL_A_EXTENSIONS'	=> 'Can manage extensions',
+	'ACL_A_VIEWLOGS'	=> 'Can view logs',
+	'ACL_A_CLEARLOGS'	=> 'Can clear logs',
+	'ACL_A_MODULES'		=> 'Can manage modules',
+	'ACL_A_LANGUAGE'	=> 'Can manage language packs',
+	'ACL_A_EMAIL'		=> 'Can send mass email',
+	'ACL_A_BOTS'		=> 'Can manage bots',
+	'ACL_A_REASONS'		=> 'Can manage report/denial reasons',
+	'ACL_A_BACKUP'		=> 'Can backup/restore database',
+	'ACL_A_SEARCH'		=> 'Can manage search backends and settings',
+));
+
 #######language/en/acp/phpbb_seo.php#######
 
 $lang = array_merge($lang, array(
@@ -14033,6 +14625,7 @@ $lang = array_merge($lang, array(
 
 	'BBCODE_ADDED'				=> 'BBCode προστέθηκε επιτυχώς.',
 	'BBCODE_EDITED'				=> 'BBCode επεξεργάστηκε επιτυχώς.',
+	'BBCODE_DELETED'			=> 'The BBCode has been removed successfully.',
 	'BBCODE_NOT_EXIST'			=> 'Το BBCode που επιλέξατε δεν υπάρχει.',
 	'BBCODE_HELPLINE'			=> 'Γραμμή βοήθειας',
 	'BBCODE_HELPLINE_EXPLAIN'	=> 'Εισάγετε εδώ το κείμενο, το οποίο πρόκειται να εμφανιστεί στην γραμμή βοήθειας, εάν ο δείκτης του ποντικιού είναι πάνω στο BBCode.',
@@ -14088,17 +14681,10 @@ $lang = array_merge($lang, array(
 	'EXPORT_SMILIES'			=> 'Εξαγωγή και μεταφόρτωση πακέτου smilies.pak',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sΜε αυτόν τον σύνδεσμο μπορείτε να γράψετε τις ρυθμίσεις των εγκατεστημένων συμβόλων σε ένα αρχείο <samp>smilies.pak</samp> που μόλις μεταφορτωθεί μπορεί να χρησιμοποιηθεί για την δημιουργία ενός <samp>.zip</samp> ή <samp>.tgz</samp> αρχείου που περιέχει όλα τα σύμβολα συν το αρχείο ρυθμίσεων <samp>smilies.pak</samp>%s.',
 
-
 	'ICONS_ADD'				=> 'Προσθέστε νέο σύμβολο θέματος',
-	'ICONS_NONE_ADDED'		=> 'Κανένα σύμβολο δεν έχει προστεθεί.',
-	'ICONS_ONE_ADDED'		=> 'Το σύμβολο προστέθηκε με επιτυχία.',
-	'ICONS_ADDED'			=> 'Τα σύμβολα προστέθηκαν με επιτυχία.',
 	'ICONS_CONFIG'			=> 'Σύμβολα ρυθμίσεις',
 	'ICONS_DELETED'			=> 'Το σύμβολο διαγράφτηκε με επιτυχία.',
 	'ICONS_EDIT'			=> 'Επεξεργασία σύμβολου',
-	'ICONS_ONE_EDITED'		=> 'Το σύμβολο ενημερώθηκε με επιτυχία.',
-	'ICONS_NONE_EDITED'		=> 'Κανένα σύμβολο δεν ενημερώθηκε.',
-	'ICONS_EDITED'			=> 'Τα σύμβολα ενημερώθηκαν με επιτυχία .',
 	'ICONS_HEIGHT'			=> 'Ύψος σύμβολου',
 	'ICONS_IMAGE'			=> 'Εικόνα σύμβολου,',
 	'ICONS_IMPORTED'		=> 'Το πακέτο συμβόλων εγκαταστάθηκε με επιτυχία.',
@@ -14128,9 +14714,6 @@ $lang = array_merge($lang, array(
 
 	'SELECT_PACKAGE'			=> 'Επιλέξτε ένα αρχείο πακέτου',
 	'SMILIES_ADD'				=> 'Προσθήκη νέου smiley',
-	'SMILIES_NONE_ADDED'		=> 'Κανένα smiley δεν έχει προστεθεί',
-	'SMILIES_ONE_ADDED'			=> 'Το smiley προστέθηκε με επιτυχία.',
-	'SMILIES_ADDED'				=> 'Τα smilies προστέθηκαν με επιτυχία.',
 	'SMILIES_CODE'				=> 'Κώδικας smiley ',
 	'SMILIES_CONFIG'			=> 'Ρυθμίσεις smiley',
 	'SMILIES_DELETED'			=> 'Το smiley διαγράφτηκε με επιτυχία.',
@@ -14138,9 +14721,6 @@ $lang = array_merge($lang, array(
 	'SMILIE_NO_CODE'			=> 'Τα smiley “%s” έχουν αγνοηθεί, επειδή κανένας κώδικας δεν προστέθηκε.',
 	'SMILIE_NO_EMOTION'			=> 'Τα smiley “%s” έχουν αγνοηθεί, επειδή καμία περιγραφή δεν προστέθηκε.',
 	'SMILIE_NO_FILE'			=> 'Τα smiley “%s” έχουν αγνοηθεί, aεπειδή το αρχείο λείπει.',
-	'SMILIES_NONE_EDITED'		=> 'Κανένα smiley δεν ενημερώθηκε.',
-	'SMILIES_ONE_EDITED'		=> 'Το smiley ενημερώθηκε με επιτυχία.',
-	'SMILIES_EDITED'			=> 'Τα smilies ενημερώθηκαν με επιτυχία.',
 	'SMILIES_EMOTION'			=> 'Περιγραφή',
 	'SMILIES_HEIGHT'			=> 'Ύψος smiley',
 	'SMILIES_IMAGE'				=> 'Εικόνα smiley',
@@ -14152,7 +14732,6 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'Εικόνα προέλευσης smiley',
 	'SMILIES_WIDTH'				=> 'Πλάτος smiley',
 
-	'TOO_MANY_SMILIES'		=> 'Στο μήνυμά σας έχετε προσθέσει πολλά εικονίδια. Ο μέγιστος αριθμός εικονιδίων που επιτρέπετε είναι %d.',
 	'WRONG_PAK_TYPE'		=> 'Το υποδεδειγμένο πακέτο περιείχε άκυρα στοιχεία.',
 ));
 
@@ -14250,8 +14829,11 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ADDED_PROFILE_FIELD'	=> 'Επιτυχής προσθήκη πρόσθετου πεδίου προφίλ.',
+	'ALPHA_DOTS'			=> 'Alphanumeric and dots (periods)',
 	'ALPHA_ONLY'			=> 'Δεκτά μόνο αριθμούς και νούμερα',
 	'ALPHA_SPACERS'			=> 'Δεκτά μόνο αριθμούς, νούμερα και διαστήματα',
+	'ALPHA_UNDERSCORE'		=> 'Alphanumeric and underscores',
+	'ALPHA_PUNCTUATION'		=> 'Alphanumeric with comma, dots, underscore and dashes beginning with a letter',
 	'ALWAYS_TODAY'			=> 'Πάντα η τρέχουσα ημερομηνία',
 
 	'BOOL_ENTRIES_EXPLAIN'	=> 'Βάλτε τις επιλογές σας τώρα',
@@ -14278,6 +14860,10 @@ $lang = array_merge($lang, array(
 	'DISPLAY_AT_PROFILE_EXPLAIN'	=> 'Το μέλος θα μπορεί να αλλάξει αυτό το πεδίο προφίλ μέσω του πίνακα διαχείρισης μέλους.',
 	'DISPLAY_AT_REGISTER'			=> 'Εμφάνιση στην οθόνη εγγραφής',
 	'DISPLAY_AT_REGISTER_EXPLAIN'	=> 'Αν αυτή η επιλογή είναι ενεργοποιημένη, το πεδίο θα εμφανίζεται κατά την εγγραφή και θα είναι δυνατόν να αλλαχτεί μέσα από τον πίνακα ελέγχου μέλους.',
+	'DISPLAY_ON_MEMBERLIST'			=> 'Display on memberlist screen',
+	'DISPLAY_ON_MEMBERLIST_EXPLAIN'	=> 'If this option is enabled, the field will be displayed in the user rows on the memberlist screen.',
+	'DISPLAY_ON_PM'					=> 'Display on view private message screen',
+	'DISPLAY_ON_PM_EXPLAIN'			=> 'If this option is enabled, the field will be displayed in the mini-profile on the private message screen.',
 	'DISPLAY_ON_VT'					=> 'Προβολή στο viewtopic οθόνη',
 	'DISPLAY_ON_VT_EXPLAIN'			=> 'Εάν αυτή η λειτουργία είναι ενεργοποιημένη, το πεδίο θα εμφανίζεται στο μίνι προφίλ της οθόνης του θέματος.',
 	'DISPLAY_PROFILE_FIELD'			=> 'Δημόσια εμφάνιση πεδίου προφίλ',
@@ -14291,20 +14877,26 @@ $lang = array_merge($lang, array(
 	'EVERYTHING_OK'					=> 'Όλα εντάξει',
 
 	'FIELD_BOOL'				=> 'Λογική τιμή (Ναι/Όχι)',
+	'FIELD_CONTACT_DESC'		=> 'Contact description',
+	'FIELD_CONTACT_URL'			=> 'Contact link',
 	'FIELD_DATE'				=> 'Ημερομηνία',
 	'FIELD_DESCRIPTION'			=> 'Περιγραφή πεδίου',
 	'FIELD_DESCRIPTION_EXPLAIN'	=> 'Η περιγραφή αυτού του πεδίου που θα βλέπει το μέλος.',
 	'FIELD_DROPDOWN'			=> 'Αναδυόμενο μενού',
+	'FIELD_GOOGLEPLUS'			=> 'Google+',
 	'FIELD_IDENT'				=> 'Αναγνωριστικό πεδίου',
 	'FIELD_IDENT_ALREADY_EXIST'	=> 'Το επιλεγμένο αναγνωριστικό πεδίου υπάρχει ήδη. Παρακαλώ επιλέξτε άλλο όνομα.',
 	'FIELD_IDENT_EXPLAIN'		=> 'Το αναγνωριστικό πεδίου είναι ένα όνομα για την αναγνώριση του πεδίου προφίλ μέσα στην βάση και στους οδηγούς.',
 	'FIELD_INT'					=> 'Αριθμοί',
+	'FIELD_IS_CONTACT'			=> 'Display field as a contact field',
+	'FIELD_IS_CONTACT_EXPLAIN'	=> 'Contact fields are displayed within the contact section of the user profile and are displayed differently in the mini profile next to posts and private messages. You can use <samp>%s</samp> as a placeholder variable which will be replaced by a value provided by the user.',
 	'FIELD_LENGTH'				=> 'Μήκος πεδίου εισαγωγής',
 	'FIELD_NOT_FOUND'			=> 'Δεν βρέθηκε το πεδίο προφίλ.',
 	'FIELD_STRING'				=> 'Μονό πεδίο κειμένου',
 	'FIELD_TEXT'				=> 'Περιοχή κειμένου',
 	'FIELD_TYPE'				=> 'Τύπος πεδίου',
 	'FIELD_TYPE_EXPLAIN'		=> 'Δεν θα μπορέσετε να αλλάξετε τον τύπο του πεδίου αργότερα.',
+	'FIELD_URL'					=> 'URL (Link)',
 	'FIELD_VALIDATION'			=> 'Επικύρωση πεδίου',
 	'FIRST_OPTION'				=> 'Πρώτη επιλογή',
 
@@ -14316,6 +14908,12 @@ $lang = array_merge($lang, array(
 	'ISO_LANGUAGE'				=> 'Γλώσσα [%s]',
 
 	'LANG_SPECIFIC_OPTIONS'		=> 'Ειδικές επιλογές γλώσσας [<strong>%s</strong>]',
+
+	'LETTER_NUM_DOTS'			=> 'Any letters, numbers and dots (periods)',
+	'LETTER_NUM_ONLY'			=> 'Any letters and numbers',
+	'LETTER_NUM_PUNCTUATION'	=> 'Any letters, numbers, comma, dots, underscores and dashes beginning with any letter',
+	'LETTER_NUM_SPACERS'		=> 'Any letters, numbers and spacers',
+	'LETTER_NUM_UNDERSCORE'		=> 'Any letters, numbers and underscores',
 
 	'MAX_FIELD_CHARS'		=> 'Μέγιστος αριθμός χαρακτήρων',
 	'MAX_FIELD_NUMBER'		=> 'Υψηλότερος επιτρεπτός αριθμός',
@@ -14370,7 +14968,9 @@ $lang = array_merge($lang, array(
 #######language/en/acp/prune.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_PRUNE_USERS_EXPLAIN'	=> 'Άυτο τμήμα σας επιτρέπει να διαγράψετε (ή να απενεργοποιήσετε) τα μέλη από την Δ. Συζήτησή σας. Αυτό μπορεί να γίνει με ποικίλους τρόπους από τον αριθμό δημοσιεύσεων, την τελευταία δραστηριότητα, κ.λ.π κάθε ένα σε χωριστή γραμμή. Κάθε ένα από αυτά τα κριτήρια μπορεί να συνδυαστεί, έτσι ώστε μπορείτε να διαγράψετε μέλη με τελευταία ενέργεια πριν από το 2002-01-01 και λιγότερες από 10 δημοσιεύσεις. Εναλλακτικά μπορείτε να εισαγάγετε έναν κατάλογο μελών άμεσα στο κουτί κειμένου, τα άλλα κριτήρια θα αγνοηθούν. Να είστε προσεκτικοί με αυτή την λειτουργία! Μόλις διαγραφεί ένα μέλος δεν υπάρχει δυνατότητα επαναφοράς.',
+	'ACP_PRUNE_USERS_EXPLAIN'	=> 'This section allows you to delete or deactivate users on your board. Accounts can be filtered in a variety of ways; by post count, most recent activity, etc. Criteria may be combined to narrow down which accounts are affected. For example, you can prune users with fewer than 10 posts, who were also inactive after 2002-01-01. Use * as a wildcard for text fields. Alternatively, you may skip the criteria selection completely by entering a list of users (each on a separate line) into the text field. Take care with this facility! Once a user is deleted, there is no way to reverse the action.',
+
+	'CRITERIA'				=> 'Criteria',
 
 	'DEACTIVATE_DELETE'			=> 'Απενεργοποιήστε ή διαγράψτε',
 	'DEACTIVATE_DELETE_EXPLAIN'	=> 'Επιλέξτε είτε να απενεργοποιήσετε τα μέλη είτε να τα διαγράψετε εξ ολοκλήρου. Σημειώστε ότι δεν υπάρχει καμία λειτουργία, προκειμένου να ακυρωθεί η διαδικασία!',
@@ -14378,15 +14978,18 @@ $lang = array_merge($lang, array(
 	'DELETE_USER_POSTS'			=> 'Διαγραφή δημοσιεύσεων του μέλους',
 	'DELETE_USER_POSTS_EXPLAIN'	=> 'Αφαιρεί τις δημοσιεύσεις που γίνει από τα διαγραμμένα μέλη δεν έχει καμία επίδραση εάν τα μέλη απενεργοποιούνται.',
 
-	'JOINED_EXPLAIN'			=> 'Δώστε μια ημερομηνία με την μορφή <kbd>YYYY-MM-DD</kbd>.',
+	'JOINED_EXPLAIN'			=> 'Enter a date in <kbd>YYYY-MM-DD</kbd> format. You may use both fields to specify an interval, or leave one blank for an open date range.',
 
 	'LAST_ACTIVE_EXPLAIN'		=> 'Δώστε μια ημερομηνία με <kbd>YYYY-MM-DD</kbd> μορφή. Προσθέστε <kbd>0000-00-00</kbd> για διαγραφή των μελών που δεν έχουν συνδεθεί ποτέ, οι προυποθέσεις <em>Πριν</em> και <em>Μετά</em> θα αγνοηθούν.',
 
+	'POSTS_ON_QUEUE'			=> 'Posts Awaiting Approval',
+	'PRUNE_USERS_GROUP_EXPLAIN'	=> 'Limit to users within the selected group.',
+	'PRUNE_USERS_GROUP_NONE'	=> 'All groups',
 	'PRUNE_USERS_LIST'				=> 'Μέλη που διαγράφονται',
-	'PRUNE_USERS_LIST_DELETE'		=> 'Με τα επιλεγμένα κριτήρια θα διαγραφούν τα ακόλουθα μέλη.',
-	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'Με τα επιλεγμένα κριτήρια θα απενεργοποιηθούν τα ακόλουθα μέλη.',
+	'PRUNE_USERS_LIST_DELETE'		=> 'With the selected critera for pruning users the following accounts will be removed. You can remove individual users from the deletion list by unchecking the box next to their username.',
+	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'With the selected critera for pruning users the following accounts will be deactivated. You can remove individual users from the deactivation list by unchecking the box next to their username.',
 
-	'SELECT_USERS_EXPLAIN'		=> 'Καθορίστε τα ονόματα μελών εδώ, τα ποιο πάνω κριτήρια θα αγνοηθούν. Ιδρυτές δεν μπορούν να σβηστούν.',
+	'SELECT_USERS_EXPLAIN'		=> 'Enter specific usernames here. They will be used in preference to the criteria above. Founders cannot be pruned.',
 
 	'USER_DEACTIVATE_SUCCESS'	=> 'Τα καθορισμένα μέλη έχουν απενεργοποιηθεί επιτυχώς.',
 	'USER_DELETE_SUCCESS'		=> 'Τα καθορισμένα μέλη έχουν διαγραφεί επιτυχώς.',
@@ -14433,15 +15036,38 @@ $lang = array_merge($lang, array(
 	'DELETING_INDEX_IN_PROGRESS'			=> 'Διαγραφή καταλόγου σε εξέλιξη',
 	'DELETING_INDEX_IN_PROGRESS_EXPLAIN'	=> 'Το πρόγραμμα υποστήριξης της αναζήτησης βρίσκεται στη διαδικασία εκκαθάρισης του καταλόγου του. Αυτό μπορεί να διαρκέσει μερικά λεπτά.',
 
-	'FULLTEXT_MYSQL_INCOMPATIBLE_VERSION'	=> 'Ολόκληρο το πρόγραμμα υποστήριξης της MySQL μπορεί να χρησιμοποιηθεί μόνο με MySQL4 και πάνω.',
+	'FULLTEXT_MYSQL_INCOMPATIBLE_DATABASE'	=> 'The MySQL fulltext backend can only be used with MySQL4 and above.',
 	'FULLTEXT_MYSQL_NOT_MYISAM'				=> 'Όλο το μέρος των καταλόγων της MySQL μπορεί να χρησιμοποιηθεί μόνο με πίνακες MyISAM.',
 	'FULLTEXT_MYSQL_TOTAL_POSTS'			=> 'Συνολικός αριθμός ευρετηριοποιημένων δημοσιεύσεων',
-	'FULLTEXT_MYSQL_MBSTRING'				=> 'Υποστήριξη μη-λατινικών χαρακτήρων UTF-8 χρησιμοποιώντας το mbstring:',
-	'FULLTEXT_MYSQL_PCRE'					=> ' Υποστήριξη μη-λατινικών χαρακτήρων UTF-8 χρησιμοποιώντας το PCRE:',
-	'FULLTEXT_MYSQL_MBSTRING_EXPLAIN'		=> 'Αν το PCRE δεν υποστηρίζει unicode χαρακτήρες, η αναζήτηση θα προσπαθήσει να χρησιμοποιήσει την κανονική μηχανή mbstring.',
-	'FULLTEXT_MYSQL_PCRE_EXPLAIN'			=> 'Αυτό το τμήμα Υποστήριξη της αναζήτησης απαιτεί Υποστήριξη PCRE unicode χαρακτήρων, η όποια είναι διαθέσιμη μόνο σε PHP 4.4, 5.1 και άνω, αν θέλετε να μπορείτε να αναζητείτε για μη-λατινικούς χαρακτήρες.',
 	'FULLTEXT_MYSQL_MIN_SEARCH_CHARS_EXPLAIN'	=> 'Λέξεις με τουλάχιστον αυτούς τους  χαρακτήρες θα γίνεται  ευρετηρίαση στην  αναζήτηση. Μόνο εσείς  ή ο παροχέας σας μπορεί να αλλάξει αυτή τη ρύθμιση με την αλλαγή των ρυθμίσεων mysql.',
 	'FULLTEXT_MYSQL_MAX_SEARCH_CHARS_EXPLAIN'	=> 'Λέξεις χωρίς αυτούς τους  χαρακτήρες δεν θα γίνεται  ευρετηρίαση στην  αναζήτηση.. Μόνο εσείς  ή ο παροχέας σας μπορεί να αλλάξει αυτή τη ρύθμιση με την αλλαγή των ρυθμίσεων mysql.',
+
+	'FULLTEXT_POSTGRES_INCOMPATIBLE_DATABASE'	=> 'The PostgreSQL fulltext backend can only be used with PostgreSQL.',
+	'FULLTEXT_POSTGRES_TOTAL_POSTS'			=> 'Total number of indexed posts',
+	'FULLTEXT_POSTGRES_VERSION_CHECK'		=> 'PostgreSQL version',
+	'FULLTEXT_POSTGRES_TS_NAME'				=> 'Text search Configuration Profile:',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN'			=> 'Minimum word length for keywords',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN'			=> 'Maximum word length for keywords',
+	'FULLTEXT_POSTGRES_VERSION_CHECK_EXPLAIN'		=> 'This search backend requires PostgreSQL version 8.3 and above.',
+	'FULLTEXT_POSTGRES_TS_NAME_EXPLAIN'				=> 'The Text search configuration profile used to determine the parser and dictionary.',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN_EXPLAIN'			=> 'Words with at least this many characters will be included in the query to the database.',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN_EXPLAIN'			=> 'Words with no more than this many characters will be included in the query to the database.',
+
+	'FULLTEXT_SPHINX_CONFIGURE'				=> 'Configure the following settings to generate sphinx config file',
+	'FULLTEXT_SPHINX_DATA_PATH'				=> 'Path to data directory',
+	'FULLTEXT_SPHINX_DATA_PATH_EXPLAIN'		=> 'It will be used to store the indexes and log files. You should create this directory outside the web accessible directories. (should have a trailing slash)',
+	'FULLTEXT_SPHINX_DELTA_POSTS'			=> 'Number of posts in frequently updated delta index',
+	'FULLTEXT_SPHINX_HOST'					=> 'Sphinx search daemon host',
+	'FULLTEXT_SPHINX_HOST_EXPLAIN'			=> 'Host on which the sphinx search daemon (searchd) listens. Leave empty to use the default localhost',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT'		=> 'Indexer memory limit',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT_EXPLAIN'	=> 'This number should at all times be lower than the RAM available on your machine. If you experience periodic performance problems this might be due to the indexer consuming too many resources. It might help to lower the amount of memory available to the indexer.',
+	'FULLTEXT_SPHINX_MAIN_POSTS'			=> 'Number of posts in main index',
+	'FULLTEXT_SPHINX_PORT'					=> 'Sphinx search daemon port',
+	'FULLTEXT_SPHINX_PORT_EXPLAIN'			=> 'Port on which the sphinx search daemon (searchd) listens. Leave empty to use the default Sphinx API port 9312',
+	'FULLTEXT_SPHINX_WRONG_DATABASE'		=> 'The sphinx search for phpBB supports MySQL and PostgreSQL only.',
+	'FULLTEXT_SPHINX_CONFIG_FILE'			=> 'Sphinx config file',
+	'FULLTEXT_SPHINX_CONFIG_FILE_EXPLAIN'	=> 'The generated content of the sphinx config file. This data needs to be pasted into the sphinx.conf which is used by sphinx search daemon. Replace the [dbuser] and [dbpassword] placeholders with your database credentials.',
+	'FULLTEXT_SPHINX_NO_CONFIG_DATA'		=> 'The sphinx data and config directory paths are not defined. Please define them to generate the config file.',
 
 	'GENERAL_SEARCH_SETTINGS'				=> 'Γενικές ρυθμίσεις αναζήτησης',
 	'GO_TO_SEARCH_INDEX'					=> 'Πήγαινε στην σελίδα καταλόγου αναζήτησης',
@@ -14466,8 +15092,6 @@ $lang = array_merge($lang, array(
 
 	'SEARCH_GUEST_INTERVAL'					=> 'Εσωτερικό όριο αναζήτησης επισκεπτών',
 	'SEARCH_GUEST_INTERVAL_EXPLAIN'			=> 'Αριθμός δευτερολέπτων που πρέπει να περιμένουν οι επισκέπτες μεταξύ των αναζητήσεων. Αν ένας επισκέπτης αναζητεί όλοι οι άλλοι θα περιμένουν μέχρι το πέρας αυτού του χρόνου.',
-	'SEARCH_INDEX_CREATE_REDIRECT'			=> 'Όλες οι δημοσιεύσεις πάνω από την δημοσίευση με αριθμό %1$d έχουν ευρετηριοποιηθεί, από τις οποίες %2$d δημοσιεύσεις έγιναν με αυτό το βήμα.<br />Ο συγκεκριμένος αριθμός ευρετηριοποίησης είναι περίπου %3$.1f δημοσιεύσεις το δευτερόλεπτο.<br />Ευρετηριοποίηση σε εξέλιξη…',
-	'SEARCH_INDEX_DELETE_REDIRECT'			=> 'Όλες οι δημοσιεύσεις πάνω από την δημοσίευση με αριθμό %1$d έχουν μετακινηθεί από τον κατάλογο αναζήτησης.<br />Διαγραφή σε εξέλιξη…',
 	'SEARCH_INDEX_CREATED'					=> 'Επιτυχής ευρετηριοποίηση σε όλες τις δημοσιεύσεις στην βάση δεδομένων του συστήματος.',
 	'SEARCH_INDEX_REMOVED'					=> 'Επιτυχής διαγραφή του καταλόγου αναζήτησης για αυτό το πρόγραμμα υποστήριξης.',
 	'SEARCH_INTERVAL'						=> 'Εσωτερικό όριο αναζήτησης χρηστών',
@@ -14490,8 +15114,55 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
+	// 3.1.0
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
+
+	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
+	'CONFIRM_UNINSTALL_STYLES'		=> 'Are you sure you wish to uninstall selected styles?',
+	'COPYRIGHT'						=> 'Πνευματικά δικαιώματα',
+
+	'DEACTIVATE_DEFAULT'		=> 'Δεν μπορείτε να απενεργοποιήσετε το στυλ προεπιλογής.',
+	'DELETE_FROM_FS'			=> 'Διαγράψτε από το σύστημα αρχείων',
+	'DELETE_STYLE_FILES_FAILED'	=> 'Error deleting files for style "%s".',
+	'DELETE_STYLE_FILES_SUCCESS'	=> 'Files for style "%s" have been deleted.',
+	'DETAILS'					=> 'Λεπτομέρειες',
+
+	'INHERITING_FROM'			=> 'Κληρονομεί από',
+	'INSTALL_STYLE'				=> 'Εγκατάσταση στυλ',
+	'INSTALL_STYLES'			=> 'Install styles',
+	'INSTALL_STYLES_EXPLAIN'	=> 'Here you can install new styles.<br />If you cannot find a specific style in list below, check to make sure style is already installed. If it is not installed, check if it was uploaded correctly.',
+	'INVALID_STYLE_ID'			=> 'Invalid style ID.',
+
+	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
+	'NO_UNINSTALLED_STYLE'		=> 'Κανένα μη εγκατεστημένο στυλ εικόνων δεν βρέθηκε.',
+
+	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
+
+	'STYLE_ACTIVATE'			=> 'Ενεργοποιήστε',
+	'STYLE_ACTIVE'				=> 'Ενεργό',
+	'STYLE_DEACTIVATE'			=> 'Απενεργοποιήστε',
+	'STYLE_DEFAULT'				=> 'Δημιουργήστε στυλ προεπιλογής',
+	'STYLE_DEFAULT_CHANGE_INACTIVE'	=> 'You must activate style before making it default style.',
+	'STYLE_ERR_INVALID_PARENT'	=> 'Invalid parent style.',
+	'STYLE_ERR_NAME_EXIST'		=> 'Ένα στυλ με αυτό το όνομα υπάρχει ήδη.',
+	'STYLE_ERR_STYLE_NAME'		=> 'Πρέπει να παρέχετε ένα όνομα για αυτό το στυλ.',
+	'STYLE_INSTALLED'			=> 'Style "%s" has been installed.',
+	'STYLE_INSTALLED_RETURN_INSTALLED_STYLES'	=> 'Return to installed styles list',
+	'STYLE_INSTALLED_RETURN_UNINSTALLED_STYLES'	=> 'Install more styles',
+	'STYLE_NAME'				=> 'Όνομα στυλ',
+	'STYLE_NOT_INSTALLED'		=> 'Style "%s" was not installed.',
+	'STYLE_PATH'				=> 'Style path',
+	'STYLE_UNINSTALL'			=> 'Uninstall',
+	'STYLE_UNINSTALL_DEPENDENT'	=> 'Style "%s" cannot be uninstalled because it has one or more child styles.',
+	'STYLE_UNINSTALLED'			=> 'Style "%s" uninstalled successfully.',
+	'STYLE_USED_BY'				=> 'Χρησιμοποιείται από  (συμπεριλαμβανομένων των robots)',
+
+	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+
+	// 3.0.12
 	'ACP_IMAGESETS_EXPLAIN'	=> 'Το σύνολο εικόνων περιλαμβάνει όλα τα κουμπιά, της Δ. Συζήτησης, τους φακέλλους, κ.λ.π. και άλλες συγκεκριμένες εικόνες του στυλ που χρησιμοποιούνται στην Δ. Συζήτηση. Εδώ μπορείτε επεξεργαστείτε, να εξαγάγετε ή να διαγράψετε τα υπάρχων σύνολα εικόνων, και να εισάγετε ή να ενεργοποιήσετε τα νέα σύνολα.',
-	'ACP_STYLES_EXPLAIN'	=> 'Εδώ μπορείτε να διαχειριστείτε τα διαθέσιμα στυλ στην Δ. Συζήτηση σας. Ένα στυλ αποτελείται από ένα πρότυπο, θέμα και σύνολο εικόνων. Μπορείτε να αλλάξετε τα υπάρχων στυλ, να διαγράψετε, να απενεργοποιήσετε, να επανενεργοποιήσετε, να δημιουργήσετε ή να εισαγάγετε νέα. Μπορείτε επίσης να δείτε με την λειτουργία της προεπισκόπησης πως μοιάζει το στυλ. Το τρέχων στυλ προεπιλογής σημειώνεται από την παρουσία ενός αστερίσκου (*). Επίσης απαριθμείται η συνολική αρίθμηση μελών για κάθε στυλ, σημειώστε ότι οι εξαιρετικά σημαντικές μορφές μελών δεν θα απεικονιστούν εδώ.',
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 	'ACP_TEMPLATES_EXPLAIN'	=> 'Ένα σύνολο προτύπων περιλαμβάνει όλους τους HTML-Κώδικες που χρησιμοποιούνται για να παραγάγουν το σχεδιάγραμμα της Δ. Συζήτησης. Εδώ μπορείτε να επεξεργαστείτε τα υπάρχοντα σύνολα προτύπων, να διαγράψετε, να εξαγάγετε, να εισαγάγετε και να κάνετε προεπισκόπηση. Μπορείτε επίσης να τροποποιήσετε το κώδικα που χρησιμοποιείται για να παραγάγει BBCode.',
 	'ACP_THEMES_EXPLAIN'	=> 'Από εδώ μπορείτε να δημιουργήσετε, να εγκαταστήσετε, να επεξεργαστείτε, να διαγράψετε και να εξαγάγετε τα θέματα. Ένα θέμα είναι ο συνδυασμός χρωμάτων και εικόνων που εφαρμόζονται στα πρότυπά σας για να καθορίσουν την κύρια εμφάνιση της Δ. Συζήτησης σας. Η σειρά των ρυθμίσεων σας εξαρτάται από τη διαμόρφωση του κεντρικού υπολογιστή σας και την εγκατάσταση του phpBB, κοιτάξτε το εγχειρίδιο για περαιτέρω λεπτομέρειες. Εάν δημιουργείτε ένα νέο θέμα, μπορείτε να το αναπτύσσετε προαιρετικά σε ένα υπάρχων θέμα.',
 	'ADD_IMAGESET'			=> 'Δημιουργία σύνολου εικόνων',
@@ -14528,7 +15199,6 @@ $lang = array_merge($lang, array(
 	'CURRENT_IMAGE'					=> 'Τρέχουσα εικόνα',
 
 	'DEACTIVATE_DEFAULT'		=> 'Δεν μπορείτε να απενεργοποιήσετε το στυλ προεπιλογής.',
-	'DELETE_FROM_FS'			=> 'Διαγράψτε από το σύστημα αρχείων',
 	'DELETE_IMAGESET'			=> 'Διαγραφή σύνολο εικόνων',
 	'DELETE_IMAGESET_EXPLAIN'	=> 'Εδώ μπορείτε να διαγράψετε το επιλεγμένο σύνολο εικόνων από τη βάση δεδομένων. Επιπλέον, εάν έχετε την άδεια μπορείτε να εκλέξετε να αφαιρέσετε το σύνολο από το σύστημα αρχείων. Παρακαλώ σημειώστε ότι δεν υπάρχει λειτουργία επαναφοράς. Συνιστάται να εξάγετε αρχικά το σύνολό σας για πιθανή μελλοντική χρήση.',
 	'DELETE_STYLE'				=> 'Διαγραφή στυλ',
@@ -14725,7 +15395,6 @@ $lang = array_merge($lang, array(
 	'INCLUDE_IMAGESET'			=> 'Περιλάβετε το σύνολο εικόνων',
 	'INCLUDE_TEMPLATE'			=> 'Περιλάβετε πρότυπο',
 	'INCLUDE_THEME'				=> 'Περιλάβετε θέμα',
-	'INHERITING_FROM'			=> 'Κληρονομεί από',
 	'INSTALL_IMAGESET'			=> 'Εγκατάσταση σύνολο εικόνων',
 	'INSTALL_IMAGESET_EXPLAIN'	=> 'Εδώ μπορείτε να εγκαταστήσετε το σύνολο εικόνων που επιλέξατε. Μπορείτε να επεξεργαστείτε ορισμένες λεπτομέρειες εάν επιθυμείτε ή χρησιμοποιείστε τις προεπιλογές εγκαταστάσεων.',
 	'INSTALL_STYLE'				=> 'Εγκατάσταση στυλ',
@@ -14755,7 +15424,6 @@ $lang = array_merge($lang, array(
 	'NO_TEMPLATE'				=> 'Δεν μπόρεσε να βρεθεί το πρότυπο στο σύστημα αρχείων.',
 	'NO_THEME'					=> 'Δεν μπόρεσε να βρεθεί το θέμα στο σύστημα αρχείων.',
 	'NO_UNINSTALLED_IMAGESET'	=> 'Κανένα μη εγκατεστημένο σύνολο εικόνων δεν βρέθηκε.',
-	'NO_UNINSTALLED_STYLE'		=> 'Κανένα μη εγκατεστημένο στυλ εικόνων δεν βρέθηκε.',
 	'NO_UNINSTALLED_TEMPLATE'	=> 'Κανένα μη εγκατεστημένο πρότυπο εικόνων δεν βρέθηκε.',
 	'NO_UNINSTALLED_THEME'		=> 'Κανένα μη εγκατεστημένο θέμα εικόνων δεν βρέθηκε.',
 	'NO_UNIT'					=> 'Κανένα',
@@ -14795,30 +15463,22 @@ $lang = array_merge($lang, array(
 	'SELECTED_THEME_FILE'		=> 'Επιλεγμένο αρχείο θέματος',
 	'STORE_DATABASE'			=> 'Βάση δεδομένων',
 	'STORE_FILESYSTEM'			=> 'Σύστημα αρχείων ',
-	'STYLE_ACTIVATE'			=> 'Ενεργοποιήστε',
-	'STYLE_ACTIVE'				=> 'Ενεργό',
 	'STYLE_ADDED'				=> 'Το στυλ προστέθηκε επιτυχώς.',
-	'STYLE_DEACTIVATE'			=> 'Απενεργοποιήστε',
-	'STYLE_DEFAULT'				=> 'Δημιουργήστε στυλ προεπιλογής',
 	'STYLE_DELETED'				=> 'Το στυλ διαγράφηκε επιτυχώς.',
 	'STYLE_DETAILS_UPDATED'		=> 'Το στυλ επεξεργάστηκε επιτυχώς.',
 	'STYLE_ERR_ARCHIVE'			=> 'Παρακαλώ επιλέξτε μια μέθοδο αρχείων.',
 	'STYLE_ERR_COPY_LONG'		=> 'Τα πνευματικά δικαιώματα δεν μπορούν να έχουν περισσότερους από 60 χαρακτήρες.',
 	'STYLE_ERR_MORE_ELEMENTS'	=> 'Πρέπει να επιλέξετε τουλάχιστον ένα στοιχείο στυλ.',
 	'STYLE_ERR_NAME_CHARS'		=> 'Το όνομα στυλ μπορεί να περιέχει μόνο αλφαριθμητικούς χαρακτήρες, -, +, _ και κενά.',
-	'STYLE_ERR_NAME_EXIST'		=> 'Ένα στυλ με αυτό το όνομα υπάρχει ήδη.',
 	'STYLE_ERR_NAME_LONG'		=> 'Το όνομα του στυλ δεν πρέπει να έχει περισσότερους από 30 χαρακτήρες.',
 	'STYLE_ERR_NO_IDS'			=> 'Πρέπει να επιλέξετε ένα πρότυπο, θέμα και σύνολο εικόνων για αυτό το στυλ.',
 	'STYLE_ERR_NOT_STYLE'		=> 'Το εισαγόμενο ή φορτωμένο αρχείο δεν περιείχε ένα έγκυρο αρχείο στυλ.',
-	'STYLE_ERR_STYLE_NAME'		=> 'Πρέπει να παρέχετε ένα όνομα για αυτό το στυλ.',
 	'STYLE_EXPORT'				=> 'Εξαγωγή στυλ',
 	'STYLE_EXPORT_EXPLAIN'		=> 'Εδώ μπορείτε να εξαγάγετε ένα στυλ υπό μορφή αρχείου. Ένα στυλ πρέπει να περιλάβει όχι όλα τα στοιχεία, αλλά τουλάχιστον ένα. Παραδείγματος χάριν εάν έχετε δημιουργήσει ένα νέο θέμα και σύνολο εικόνων για ένα συνήθως χρησιμοποιημένο πρότυπο θα μπορούσατε απλά να εξαγάγετε το θέμα και το σύνολο εικόνων και να παραλείψετε το πρότυπο. Μπορείτε να επιλέξετε είτε να μεταφορτώσετε το αρχείο άμεσα είτε να το τοποθετήσετε στον φάκελλο αποθήκευσης για να το μεταφορτώσετε αργότερα, είτε μέσω του FTP. ',
 	'STYLE_EXPORTED'			=> 'Η εξαγωγή του στυλ έγινε επιτυχώς και αποθηκεύτηκε μέσα %s.',
 	'STYLE_IMAGESET'			=> 'Σύνολο εικόνων',
-	'STYLE_NAME'				=> 'Όνομα στυλ',
 	'STYLE_TEMPLATE'			=> 'Πρότυπο',
 	'STYLE_THEME'				=> 'Θέμα',
-	'STYLE_USED_BY'				=> 'Χρησιμοποιείται από  (συμπεριλαμβανομένων των robots)',
 
 	'TEMPLATE_ADDED'			=> 'Σύνολο προτύπων που προστίθεται και που αποθηκεύεται στο σύστημα αρχείων.',
 	'TEMPLATE_ADDED_DB'			=> 'Το σετ προτύπου έχει προστεθεί και αποθηκεύτηκε στην βάση δεδομένων.',
@@ -14916,6 +15576,7 @@ $lang = array_merge($lang, array(
 	'CANNOT_FORCE_REACT_FOUNDER'	=> 'Δεν σας επιτρέπετε να επιβάλετε τον ιδρυτή να κάνει επανενεργοποίηση του λογαριασμού.',
 	'CANNOT_FORCE_REACT_YOURSELF'	=> 'Δεν σας επιτρέπετε να επιβάλετε τον εαυτό σας να επανενεργοποιήσετε τον λογαριασμό.',
 	'CANNOT_REMOVE_ANONYMOUS'		=> 'Δεν μπορείτε να διαγράψετε τον λογαριασμό του επισκέπτη.',
+	'CANNOT_REMOVE_FOUNDER'			=> 'You are not allowed to remove founder accounts.',
 	'CANNOT_REMOVE_YOURSELF'		=> 'Δεν μπορείτε να διαγράψετε τον λογαριασμό σας.',
 	'CANNOT_SET_FOUNDER_IGNORED'	=> 'Δεν μπορείτε να προάγετε σε ιδρυτές, χρήστες που είναι σε αγνόηση.',
 	'CANNOT_SET_FOUNDER_INACTIVE'	=> 'Πρέπει να ενεργοποιήσετε τον λογαριασμό των μελών πριν τους μετατρέψετε σε ιδρυτές, μόνο ενεργοποιημένα μέλη μπορούν να μετατραπούν.',
@@ -14942,7 +15603,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'Παρακαλώ επιλέξτε την Δ. Συζήτηση που επιθυμείτε να μετακινήσετε τις δημοσιεύσεις του μέλους.',
 
 	'NO_SPECIAL_RANK'		=> 'Δεν έχει οριστεί ειδικός βαθμός',
-	'NO_WARNINGS'			=> 'Καμία προειδοποίηση.',
+	'NO_WARNINGS'			=> 'No warnings exist.',
 	'NOT_MANAGE_FOUNDER'	=> 'Προσπαθείτε να διαχειριστείτε την ιδιότητα ενός ιδρυτή. Μόνο ιδρυτές μπορούν να διαχειριστούν άλλους ιδρυτές.',
 
 	'QUICK_TOOLS'			=> 'Γρήγορη επιλογή',

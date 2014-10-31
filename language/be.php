@@ -1,5 +1,14 @@
 ﻿<?php
 
+#######language/en/app.php#######
+
+$lang = array_merge($lang, array(
+	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
+	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
+	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+));
+
 #######language/en/calendar.php#######
 
 $lang = array_merge($lang, array(
@@ -182,6 +191,55 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Ваш зачынены ключ reCaptcha. Ключы можна атрымаць на бачыне <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 
 	'RECAPTCHA_EXPLAIN'				=> 'У мэтах прадухілення аўтаматычных рэгістрацый увядзіце абодва адлюстраваных слова ў тэкставае поле ніжэй.',
+	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
+));
+
+#######language/en/cli.php#######
+
+$lang = array_merge($lang, array(
+	'CLI_CONFIG_CANNOT_CACHED'			=> 'Set this option if the configuration option changes too frequently to be efficiently cached.',
+	'CLI_CONFIG_CURRENT'				=> 'Current configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_DELETE_SUCCESS'			=> 'Successfully deleted config %s.',
+	'CLI_CONFIG_NEW'					=> 'New configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_NOT_EXISTS'				=> 'Config %s does not exist',
+	'CLI_CONFIG_OPTION_NAME'			=> 'The configuration option’s name',
+	'CLI_CONFIG_PRINT_WITHOUT_NEWLINE'	=> 'Set this option if the value should be printed without a new line at the end.',
+	'CLI_CONFIG_INCREMENT_BY'			=> 'Amount to increment by',
+	'CLI_CONFIG_INCREMENT_SUCCESS'		=> 'Successfully incremented config %s',
+	'CLI_CONFIG_SET_FAILURE'			=> 'Could not set config %s',
+	'CLI_CONFIG_SET_SUCCESS'			=> 'Successfully set config %s',
+
+	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
+	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
+	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
+	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
+	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
+	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
+	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
+	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
+	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
+	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
+	'CLI_EXTENSION_ENABLE_FAILURE'		=> 'Could not enable extension %s',
+	'CLI_EXTENSION_ENABLE_SUCCESS'		=> 'Successfully enabled extension %s',
+	'CLI_EXTENSION_NAME'				=> 'Name of the extension',
+	'CLI_EXTENSION_PURGE_FAILURE'		=> 'Could not purge extension %s',
+	'CLI_EXTENSION_PURGE_SUCCESS'		=> 'Successfully purged extension %s',
+	'CLI_EXTENSION_NOT_FOUND'			=> 'No extensions were found.',
+	'CLI_EXTENSIONS_AVAILABLE'			=> 'Available',
+	'CLI_EXTENSIONS_DISABLED'			=> 'Disabled',
+	'CLI_EXTENSIONS_ENABLED'			=> 'Enabled',
+
+	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
 ));
 
 #######language/en/common.php#######
@@ -190,7 +248,11 @@ $lang = array_merge($lang, array(
 	'TRANSLATION_INFO'	=> 'phpBB3 free Forum by <a href="http://www.userboard.org/">UserBoard.org</a> | All Rights Reserved.',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|d.m.Y|',	// 01 Jan 2007 (with Relative days enabled)
+	'DATETIME_FORMAT'	=> '|d M Y, H:i|',	// 01 Jan 2007, 13:37 (with Relative days enabled)
 	'USER_LANG'			=> 'be',
+
+	// See http://wiki.phpbb.com/Plural_Rules for more information
+	'PLURAL_RULE'		=> '1',
 
 	'1_DAY'			=> '1 дзень',
 	'1_MONTH'		=> '1 месяц',
@@ -204,18 +266,24 @@ $lang = array_merge($lang, array(
 	'ACCOUNT_DEACTIVATED'			=> 'Ваш уліковы запіс быў адключаны ўручную і можа быць ізноў актываваны толькі адміністратарам канферэнцыі.',
 	'ACCOUNT_NOT_ACTIVATED'			=> 'Ваш уліковы запіс яшчэ не актываваны.',
 	'ACP'							=> 'Адміністратарскі раздзел',
+	'ACP_SHORT'						=> 'ACP',
 	'ACTIVE'						=> 'актыўны',
 	'ACTIVE_ERROR'					=> 'Паказанае імя карыстальніка ў цяперашні час неактыўна. Калі вы выпрабоўваеце цяжкасці з актывацыяй свайго ўліковага запісу, то звяжыцеся з адміністратарам канферэнцыі.',
 	'ADMINISTRATOR'					=> 'Адміністратар',
 	'ADMINISTRATORS'				=> 'Адміністратары',
 	'AGE'							=> 'Узрост',
 	'AIM'							=> 'AIM',
+	'AJAX_ERROR_TITLE'				=> 'AJAX error',
+	'AJAX_ERROR_TEXT'				=> 'Something went wrong when processing your request.',
+	'AJAX_ERROR_TEXT_ABORT'			=> 'User aborted request.',
+	'AJAX_ERROR_TEXT_TIMEOUT'		=> 'Your request timed out; please try again.',
+	'AJAX_ERROR_TEXT_PARSERERROR'	=> 'Something went wrong with the request and the server returned an invalid reply.',
 	'ALLOWED'						=> 'Дазволена',
 	'ALL_FILES'						=> 'Усе файлы',
 	'ALL_FORUMS'					=> 'Усе форумы',
 	'ALL_MESSAGES'					=> 'Усё паведамленні',
 	'ALL_POSTS'						=> 'Усё паведамленні',
-	'ALL_TIMES'						=> 'Гадзінны пояс: %1$s %2$s',
+	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'Усе тэмы',
 	'AND'							=> 'і',
 	'ARE_WATCHING_FORUM'			=> 'Вы падпісаныя на апавяшчэнні аб новых паведамленнях у гэтым форуме.',
@@ -225,6 +293,14 @@ $lang = array_merge($lang, array(
 	'ATTACHED_IMAGE_NOT_IMAGE'		=> 'Вы паспрабавалі адправіць недапушчальны тып файла малюнка.',
 	'AUTHOR'						=> 'Аўтар',
 	'AUTH_NO_PROFILE_CREATED'		=> 'Не атрымалася стварыць профіль карыстальніка.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_ENTRY'				=> 'Invalid database entry.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_SERVICE_TYPE'		=> 'Invalid service type provided to OAuth service handler.',
+	'AUTH_PROVIDER_OAUTH_ERROR_SERVICE_NOT_CREATED'			=> 'OAuth service not created',
+	'AUTH_PROVIDER_OAUTH_SERVICE_BITLY'						=> 'Bitly',
+	'AUTH_PROVIDER_OAUTH_SERVICE_FACEBOOK'					=> 'Facebook',
+	'AUTH_PROVIDER_OAUTH_SERVICE_GOOGLE'					=> 'Google',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_NOT_STORED'			=> 'OAuth token not stored.',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_INCORRECTLY_STORED'	=> 'OAuth token incorrectly stored.',
 	'AVATAR_DISALLOWED_CONTENT'		=> 'Не атрымалася загрузіць аватару, магчыма, файл падобны да віруса.',
 	'AVATAR_DISALLOWED_EXTENSION'	=> 'Дадзены файл не можа быць адлюстраваны, паколькі пашырэнне <strong>%s</strong> не дазволена',
 	'AVATAR_EMPTY_REMOTE_DATA'		=> 'Не атрымалася загрузіць паказаную аватару. Магчыма, дадзеныя пашкоджаныя або недапушчальныя.',
@@ -235,10 +311,11 @@ $lang = array_merge($lang, array(
 	'AVATAR_PARTIAL_UPLOAD'			=> 'Паказаны файл загружаны толькі часткова',
 	'AVATAR_PHP_SIZE_NA'			=> 'Занадта вялікі памер файла аватары.<br />Не атрымалася вызначыць максімальны памер, усталяваны ў php.ini.',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'Занадта вялікі памер файла аватары. Максімальна дапушчальны памер — %d Мб.<br />Нататка: гэтае абмежаванне ўсталявана ў файле php.ini і не можа быць перавышана.',
+	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
 	'AVATAR_URL_INVALID'			=> 'Паказаны адрас аватары недапушчальны.',
 	'AVATAR_URL_NOT_FOUND'			=> 'Паказаны файл аватары не знойдзены.',
-	'AVATAR_WRONG_FILESIZE'			=> 'Памер файла аватары павінен нахадзіцца ў дыяпазоне ад 0 да %1d %2s.',
-	'AVATAR_WRONG_SIZE'				=> 'Памеры адпраўленай аватары — %5$d?%6$d. Памеры аватары павінны быць не меней %1$d?%2$d, але не больш %3$d?%4$d. Усе памеры паказаныя ў піксэлах.',
+	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
+	'AVATAR_WRONG_SIZE'				=> 'The submitted avatar is %5$s wide and %6$s high. Avatars must be at least %1$s wide and %2$s high, but no larger than %3$s wide and %4$s high.',
 
 	'BACK_TO_TOP'			=> 'Вярнуцца да пачатку',
 	'BACK_TO_PREV'			=> 'Вярнуцца на папярэднюю старонку',
@@ -255,28 +332,42 @@ $lang = array_merge($lang, array(
 	'BOARD_DISABLED'		=> 'Канферэнцыя ў сапраўдны момант адключаная.',
 	'BOARD_UNAVAILABLE'		=> 'Канферэнцыя часова недаступная. Паспрабуйце зайсці праз некалькі хвілін.',
 	'BROWSING_FORUM'		=> 'Зараз гэты форум праглядаюць: %1$s',
-	'BROWSING_FORUM_GUEST'	=> 'Зараз гэты форум праглядаюць: %1$s і %2$d госць',
-	'BROWSING_FORUM_GUESTS'	=> 'Зараз гэты форум праглядаюць: %1$s і %2$d гасцей',
+	'BUTTON_EDIT'			=> 'Edit',
+	'BUTTON_FORUM_LOCKED'	=> 'Locked',
+	'BUTTON_NEW_TOPIC'		=> 'New Topic',
+	'BUTTON_PM'				=> 'PM',
+	'BUTTON_PM_FORWARD'		=> 'Forward',
+	'BUTTON_PM_NEW'			=> 'New PM',
+	'BUTTON_PM_REPLY'		=> 'Send Reply',
+	'BUTTON_PM_REPLY_ALL'	=> 'Reply All',
+	'BUTTON_POST_REPLY'		=> 'Post Reply',
+	'BUTTON_QUOTE'			=> 'Quote',
+	'BUTTON_TOPIC_LOCKED'	=> 'Locked',
 	'BYTES'					=> 'байт',
+	'BYTES_SHORT'			=> 'B',
 
 	'CANCEL'				=> 'Адмена',
 	'CHANGE'				=> 'Змяніць',
 	'CHANGE_FONT_SIZE'		=> 'Змяніць памер шрыфта',
 	'CHANGING_PREFERENCES'	=> 'Змена асабістых налад',
 	'CHANGING_PROFILE'		=> 'Змена налад профіля',
-	'CLICK_VIEW_PRIVMSG'	=> '%sПерайсці у папку «Уваходныя»%s',
 	'COLLAPSE_VIEW'			=> 'Згарнуць',
 	'CLOSE_WINDOW'			=> 'Зачыніць акно',
 	'COLOUR_SWATCH'			=> 'Палітра',
-	'COMMA_SEPARATOR'		=> ', ',	// Used in pagination of ACP & prosilver, use localised comma if appropriate, eg: Ideographic or Arabic
+	'COLON'					=> ':',
+	'COMMA_SEPARATOR'		=> ', ',	// Comma used to join lists into a single string, use localised comma if appropriate, eg: Ideographic or Arabic
 	'CONFIRM'				=> 'Пацверджанне',
 	'CONFIRM_CODE'			=> 'Код пацверджання',
 	'CONFIRM_CODE_EXPLAIN'	=> 'Увядзіце код у дакладнасці так, як вы яго бачыце. Код не залежыць ад рэгістра.',
 	'CONFIRM_CODE_WRONG'	=> 'Вы ўвялі няслушны код пацверджання.',
 	'CONFIRM_OPERATION'		=> 'Вы ўпэўненыя, што жадаеце выканаць гэтую аперацыю?',
+	'CONFIRM_AVATAR_DELETE' => 'Are you sure you wish to delete this avatar?',
 	'CONGRATULATIONS'		=> 'Віншуем',
 	'CONNECTION_FAILED'		=> 'Памылка падлучэння.',
 	'CONNECTION_SUCCESS'	=> 'Падлучэнне паспяхова ўсталявана.',
+	'CONTACT'				=> 'Кантактная інфармацыя',
+	'CONTACT_USER'			=> 'Contact %s',
+	'CONTACT_US'			=> 'Contact us',
 	'COOKIES_DELETED'		=> 'Усё cookies, усталяваныя форумамі, паспяхова выдаленыя.',
 	'CURRENT_TIME'			=> 'Дзеючы час: %s',
 
@@ -297,18 +388,13 @@ $lang = array_merge($lang, array(
 	'DISPLAY_TOPICS'		=> 'Паказаць тэмы за',
 	'DOWNLOADED'			=> 'Запамповак:',
 	'DOWNLOADING_FILE'		=> 'Запампоўка файла',
-	'DOWNLOAD_COUNT'		=> 'Запамповак: %d',
-	'DOWNLOAD_COUNTS'		=> 'Запамповак: %d',
-	'DOWNLOAD_COUNT_NONE'	=> 'Запамповак: 0',
-	'VIEWED_COUNT'			=> 'Праглядаў: %d',
-	'VIEWED_COUNTS'			=> 'Праглядаў: %d',
-	'VIEWED_COUNT_NONE'		=> 'Праглядаў: 0',
 
 	'EDIT_POST'							=> 'Рэдагаваць паведамленне',
+	'ELLIPSIS'							=>	'…',
 	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
-	'EMAIL_ADDRESS'						=> 'Адрас email',
-	'EMAIL_INVALID_EMAIL'				=> 'Уведзены адрас email няслушны.',
-	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Памылка пры адпраўцы email у <strong>радку %1$s</strong>. Адказ сервера: %2$s.',
+	'EMAIL_ADDRESS'						=> 'Email address',
+	'EMAIL_INVALID_EMAIL'				=> 'The email address you entered is invalid.',
+	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ran into problems sending email at <strong>Line %1$s</strong>. Response: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Пры стварэнні новай тэмы неабходна паказаць загаловак.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Вы павінны паказаць тэму новага паведамлення.',
 	'ENABLED'							=> 'Уключана',
@@ -322,17 +408,23 @@ $lang = array_merge($lang, array(
 	'ERR_UNWATCHING'					=> 'Пры спробе адмовіцца ад падпіскі паўстала памылка.',
 	'ERR_WATCHING'						=> 'Пры спробе падпісацца паўстала памылка.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'Паказаны шлях да канферэнцыі няслушны.',
+	'ERROR'									=> 'Памылка',
 	'EXPAND_VIEW'						=> 'Разгарнуць',
 	'EXTENSION'							=> 'Пашырэнне',
+	'EXTENSION_DISABLED'				=> 'The extension <strong>%s</strong> is not enabled.',
 	'EXTENSION_DISABLED_AFTER_POSTING'	=> 'Пашырэнне <strong>%s</strong> было забароненае, укладанне больш недаступна.',
+	'EXTENSION_DOES_NOT_EXIST'			=> 'The extension <strong>%s</strong> does not exist.',
 
+	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> 'FAQ',
 	'FAQ_EXPLAIN'			=> 'Часта зададзеныя пытанні',
 	'FILENAME'				=> 'Імя файла',
 	'FILESIZE'				=> 'Памер файла',
 	'FILEDATE'				=> 'Дата стварэння файла',
 	'FILE_COMMENT'			=> 'Каментар да файла',
-	'FILE_NOT_FOUND'		=> 'Запытваемы файл не знойдзены.',
+	'FILE_CONTENT_ERR'		=> 'Could not read the contents of file: %s',
+	'FILE_JSON_DECODE_ERR'	=> 'Failed to decode json file: %s',
+	'FILE_NOT_FOUND'		=> 'The requested file could not be found: %s',
 	'FIND_USERNAME'			=> 'Знайсці карыстальніка',
 	'FOLDER'				=> 'Папка',
 	'FORGOT_PASS'			=> 'Забылі пароль?',
@@ -381,6 +473,9 @@ $lang = array_merge($lang, array(
 	'GB'						=> 'GB',
 	'GIB'						=> 'GiB',
 	'GO'						=> 'Перайсці',
+	'GOOGLEPLUS'				=> 'Google+',
+	'GOTO_FIRST_POST'			=> 'Go to first post',
+	'GOTO_LAST_POST'			=> 'Go to last post',
 	'GOTO_PAGE'					=> 'На старонку',
 	'GROUP'						=> 'Група',
 	'GROUPS'					=> 'Групы',
@@ -388,12 +483,6 @@ $lang = array_merge($lang, array(
 	'GROUP_ERR_USERNAME'		=> 'Не паказана імя групы.',
 	'GROUP_ERR_USER_LONG'		=> 'Імя групы не можа быць даўжэй 60 знакаў. Паказанае імя групы занадта доўгае.',
 	'GUEST'						=> 'Госць',
-	'GUEST_USERS_ONLINE'		=> 'Зараз на канферэнцыі %d госцяў',
-	'GUEST_USERS_TOTAL'			=> '%d госцяў',
-	'GUEST_USERS_ZERO_ONLINE'	=> 'Зараз на канферэнцыі няма госцяў',
-	'GUEST_USERS_ZERO_TOTAL'	=> '0 госцяў',
-	'GUEST_USER_ONLINE'			=> 'Зараз на канферэнцыі %d госць',
-	'GUEST_USER_TOTAL'			=> '%d госць',
 	'G_ADMINISTRATORS'			=> 'Адміністратары',
 	'G_BOTS'					=> 'Боты',
 	'G_GUESTS'					=> 'Госці',
@@ -402,22 +491,12 @@ $lang = array_merge($lang, array(
 	'G_GLOBAL_MODERATORS'		=> 'Супермадэратары',
 	'G_NEWLY_REGISTERED'		=> 'Новыя карыстальнікі',
 
-	'HIDDEN_USERS_ONLINE'			=> '%d утоеных карыстальнікаў',
-	'HIDDEN_USERS_TOTAL'			=> '%d утоеных',
-	'HIDDEN_USERS_TOTAL_AND'		=> '%d утоеных і ',
-	'HIDDEN_USERS_ZERO_ONLINE'		=> '0 утоеных карыстальнікаў',
-	'HIDDEN_USERS_ZERO_TOTAL'		=> '0 утоеных',
-	'HIDDEN_USERS_ZERO_TOTAL_AND'	=> '0 утоеных і ',
-	'HIDDEN_USER_ONLINE'			=> '%d утоены карыстальнік',
-	'HIDDEN_USER_TOTAL'				=> '%d утоены',
-	'HIDDEN_USER_TOTAL_AND'			=> '%d утоены і ',
 	'HIDE_GUESTS'					=> 'Схаваць госцяў',
 	'HIDE_ME'						=> 'Схаваць маё знаходжанне на канферэнцыі ў гэты раз',
 	'HOURS'							=> 'гадзін',
 	'HOME'							=> 'На галоўную',
 
 	'ICQ'						=> 'ICQ',
-	'ICQ_STATUS'				=> 'Статут ICQ',
 	'IF'						=> 'Калі',
 	'IMAGE'						=> 'Малюнак',
 	'IMAGE_FILETYPE_INVALID'	=> 'Тып файла малюнка %d не падтрымліваецца для MIME-тыпу %s.',
@@ -425,9 +504,11 @@ $lang = array_merge($lang, array(
 	'IN'						=> 'у форуме',
 	'INDEX'						=> 'Галоўная старонка', //Index page
 	'INFORMATION'				=> 'Інфармацыя',
+	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
 	'INTERESTS'					=> 'Інтарэсы',
 	'INVALID_DIGEST_CHALLENGE'	=> 'Няслушны запыт аўтэнтыфікацыі.',
-	'INVALID_EMAIL_LOG'			=> 'Магчыма, уведзены няслушны адрас email: <strong>%s</strong>',
+	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> possibly an invalid email address?',
+	'INVALID_PLURAL_RULE'		=> 'The chosen plural rule is invalid. Valid values are integers between 0 and 15.',
 	'IP'						=> 'IP',
 	'IP_BLACKLISTED'			=> 'Ваш IP-адрас %1$s быў занесены ў чорны спіс і заблакаваны. Для атрымання дадатковай інфармацыі перайдзіце па спасылцы <a href="%2$s">%2$s</a>.',
 
@@ -435,7 +516,8 @@ $lang = array_merge($lang, array(
 	'JOINED'				=> 'Зарэгістраваны',
 	'JUMP_PAGE'				=> 'Увядзіце нумар старонкі, на якую жадаеце перайсці',
 	'JUMP_TO'				=> 'Перайсці',
-	'JUMP_TO_PAGE'			=> 'Перайсці на старонку:',
+	'JUMP_TO_PAGE'			=> 'Jump to page',
+	'JUMP_TO_PAGE_CLICK'	=> 'Click to jump to page…',
 
 	'KB'					=> 'КБ',
 	'KIB'					=> 'KіБ',
@@ -447,6 +529,8 @@ $lang = array_merge($lang, array(
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Не атрымалася злучыцца з серверам LDAP.',
 	'LDAP_SEARCH_FAILED'				=> 'Адбылася памылка пры пошуку каталогаў LDAP.',
 	'LEGEND'							=> 'Легенда',
+	'LIVE_SEARCHES_NOT_ALLOWED'			=> 'Live searches are not allowed.',
+	'LOADING'							=> 'Loading',
 	'LOCATION'							=> 'Адкуль',
 	'LOCK_POST'							=> 'Заблакаваць паведамленне',
 	'LOCK_POST_EXPLAIN'					=> 'забарона рэдагавання',
@@ -457,6 +541,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_CONFIRM_EXPLAIN'				=> 'Для прадухілення падбору пароляў да вашага ўліковага запісу неабходна ўвесці код пацверджання пасля максімальнай колькасці няўдалых уваходаў у сістэму. Код паказаны на малюначку ніжэй. Увядзіце код у дакладнасці так, як вы яго бачыце. Калі вы не бачыце кода, то звернецеся да %sадміністратару%s.', // unused
 	'LOGIN_ERROR_ATTEMPTS'				=> 'Вы перавысілі максімальна дапушчальная колькасць спроб уваходу. Зараз, акрамя імя карыстальніка і пароля, вы павінны прайсці анты-спам тэст.',
 	'LOGIN_ERROR_EXTERNAL_AUTH_APACHE'	=> 'Apache не змог вас аўтэнтыфікаваць.',
+	'LOGIN_ERROR_OAUTH_SERVICE_DOES_NOT_EXIST'	=> 'A non-existant OAuth service has been requested.',
 	'LOGIN_ERROR_PASSWORD'				=> 'Вы ўвялі няслушны пароль. Праверце яго і паспрабуйце ўвесці яшчэ раз. Калі праблема са ўваходам застанецца, то паведаміце аб гэтым %sадміністратару%s.',
 	'LOGIN_ERROR_PASSWORD_CONVERT'		=> 'Пры абнаўленні канферэнцыі не атрымалася пераўтварыць ваш пароль. Вы можаце %sзапытаць новы пароль%s. Калі вы працягваеце выпрабоўваць цяжкасці, то звяжыцеся з %sадміністратарам канферэнцыі%s.',
 	'LOGIN_ERROR_USERNAME'				=> 'Вы ўвялі няслушнае імя карыстальніка. Праверце яго і паспрабуйце ўвесці яшчэ раз. Калі праблема са ўваходам застанецца, то паведаміце аб гэтым %sадміністратару%s.',
@@ -465,17 +550,22 @@ $lang = array_merge($lang, array(
 	'LOGIN_VIEWFORUM'					=> 'Для прагляду гэтага форума вы павінны быць аўтарызаваныя.',
 	'LOGIN_EXPLAIN_EDIT'				=> 'Для рэдагавання паведамленняў у гэтым форуме вы павінны быць аўтарызаваныя.',
 	'LOGIN_EXPLAIN_VIEWONLINE'			=> 'Для прагляду спісу карыстальнікаў, змешчаных зараз на канферэнцыі, вы павінны быць аўтарызаваныя.',
+	'LOGIN_REQUIRED'					=> 'You need to login to perform this action.',
 	'LOGOUT'							=> 'Выхад',
 	'LOGOUT_USER'						=> 'Выхад [ %s ]',
-	'LOG_ME_IN'							=> 'Аўтаматычна ўваходзіць пры кожным наведванні',
+	'LOG_ME_IN'							=> 'Remember me',
 
+	'MAIN'					=> 'Main',
 	'MARK'					=> 'Адзначыць',
 	'MARK_ALL'				=> 'Адзначыць усё',
+	'MARK_ALL_READ'			=> 'Mark all read',
 	'MARK_FORUMS_READ'		=> 'Адзначыць усе форумы як прачытаныя',
+	'MARK_READ'				=> 'Mark read',
 	'MARK_SUBFORUMS_READ'	=> 'Адзначыць падфорумы як прачытаныя',
 	'MB'					=> 'MБ',
 	'MIB'					=> 'MіБ',
 	'MCP'					=> 'Мадэратарскі раздзел',
+	'MCP_SHORT'				=> 'MCP',
 	'MEMBERLIST'			=> 'Карыстальнікі',
 	'MEMBERLIST_EXPLAIN'	=> 'Прагляд усяго спісу карыстальнікаў',
 	'MERGE'					=> 'Аб\'яднаць',
@@ -488,26 +578,47 @@ $lang = array_merge($lang, array(
 	'MODERATE'				=> 'Мадэраваць',
 	'MODERATOR'				=> 'Мадэратар',
 	'MODERATORS'			=> 'Мадэратары',
+	'MODULE_NOT_ACCESS'		=> 'Module not accessible',
+	'MODULE_NOT_FIND'		=> 'Cannot find module %s',
+	'MODULE_FILE_INCORRECT_CLASS'	=> 'Module file %s does not contain correct class [%s]',
 	'MONTH'					=> 'Месяц',
 	'MOVE'					=> 'Перамясціць',
-	'MSNM'					=> 'MSNM/WLM',
 
 	'NA'						=> 'Не',
 	'NEWEST_USER'				=> 'Новы карыстальнік: <strong>%s</strong>',
 	'NEW_MESSAGE'				=> 'Новае паведамленне',
 	'NEW_MESSAGES'				=> 'Новыя паведамленні',
-	'NEW_PM'					=> 'Новых АП: <strong>%d</strong>',
-	'NEW_PMS'					=> 'Новых АП: <strong>%d</strong>',
 	'NEW_POST'					=> 'Новае паведамленне',	// Not used anymore
 	'NEW_POSTS'					=> 'Новыя паведамленні',	// Not used anymore
 	'NEXT'						=> 'Наст.',		// Used in pagination
 	'NEXT_STEP'					=> 'Далей',
 	'NEVER'						=> 'Ніколі',
 	'NO'						=> 'Не',
+	'NO_NOTIFICATIONS'			=> 'You have no notifications',
 	'NOT_ALLOWED_MANAGE_GROUP'	=> 'Вы не можаце кіраваць гэтай групай.',
 	'NOT_AUTHORISED'			=> 'У вас няма доступу ў гэтую частку форума.',
 	'NOT_WATCHING_FORUM'		=> 'Вы больш не падпісаныя на абнаўленні ў гэтым форуме.',
 	'NOT_WATCHING_TOPIC'		=> 'Вы больш не падпісаныя на гэтую тэму.',
+	'NOTIFICATIONS'				=> 'Notifications',
+	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
+	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
+	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
+	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
+	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
+	'NOTIFICATION_POST_IN_QUEUE'		=> '<strong>Post approval</strong> request by %1$s:',
+	'NOTIFICATION_REFERENCE'			=> '"%1$s"',
+	'NOTIFICATION_REASON'				=> '<em>Reason:</em> %1$s.',
+	'NOTIFICATION_REPORT_PM'			=> '<strong>Private Message reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_POST'			=> '<strong>Post reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_CLOSED'		=> '<strong>Report closed</strong> by %1$s for:',
+	'NOTIFICATION_TOPIC'				=> '<strong>New topic</strong> by %1$s:',
+	'NOTIFICATION_TOPIC_APPROVED'		=> '<strong>Topic approved</strong>:',
+	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
+	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
+	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> 'Апавесціце адміністратара канферэнцыі або вэбмайстра.',
 	'NOTIFY_ADMIN_EMAIL'		=> 'Апавесціце адміністратара канферэнцыі або вэбмайстра: <a href="mailto:%1$s">%1$s</a>',
 	'NO_ACCESS_ATTACHMENT'		=> 'Вам забаронены доступ да гэтага файла.',
@@ -516,6 +627,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_ADMIN'				=> 'Вы не маеце праў доступу да адміністратарскага раздзелу.',
 	'NO_AUTH_ADMIN_USER_DIFFER'	=> 'Вы не можаце паўторна аўтарызавацца, як іншы карыстальнік.',
 	'NO_AUTH_OPERATION'			=> 'Вы не маеце неабходных праў доступу для завяршэння гэтай аперацыі.',
+	'NO_AVATARS'				=> 'No avatars currently available',
 	'NO_CONNECT_TO_SMTP_HOST'	=> 'Не атрымалася злучыцца з SMTP-серверам: %1$s : %2$s',
 	'NO_BIRTHDAYS'				=> 'Сёння няма дзён нараджэння.',
 	'NO_EMAIL_MESSAGE'			=> 'Адсутнічае тэкст паведамлення.',
@@ -531,7 +643,6 @@ $lang = array_merge($lang, array(
 	'NO_MODE'					=> 'Не паказаны рэжым.',
 	'NO_MODERATORS'				=> 'Мадэратары на гэтым форуме не прызначаныя.',
 	'NO_NEW_MESSAGES'			=> 'Няма новых паведамленняў',
-	'NO_NEW_PM'					=> 'Новых АП: <strong>0</strong>',
 	'NO_NEW_POSTS'				=> 'Няма новых паведамленняў',	// Not used anymore
 	'NO_ONLINE_USERS'			=> 'няма зарэгістраваных карыстальнікаў',
 	'NO_POSTS'					=> 'Няма паведамленняў',
@@ -546,7 +657,6 @@ $lang = array_merge($lang, array(
 	'NO_TOPIC_FORUM'			=> 'Дадзеная тэма або форум больш не існуе.',
 	'NO_TOPICS'					=> 'У гэтым форуме няма паведамленняў.',
 	'NO_TOPICS_TIME_FRAME'		=> 'У форуме няма тэм за вылучаны перыяд часу.',
-	'NO_UNREAD_PM'				=> 'Няма непрачытаных паведамленняў',
 	'NO_UNREAD_POSTS'			=> 'Няма непрачытаных паведамленняў',
 	'NO_UPLOAD_FORM_FOUND'		=> 'Запампоўванне файла ініцыявана, але даступны для запампоўкі файл не знойдзены.',
 	'NO_USER'					=> 'Запытваемага карыстальніка не існуе.',
@@ -557,15 +667,14 @@ $lang = array_merge($lang, array(
 	'OFFLINE'					=> 'Не ў сеткі',
 	'ONLINE'					=> 'У сеткі',
 	'ONLINE_BUDDIES'			=> 'Сябры',
-	'ONLINE_USERS_TOTAL'		=> 'Наведвальнікаў: <strong>%d</strong>, з іх ',
-	'ONLINE_USERS_ZERO_TOTAL'	=> 'Наведвальнікаў: <strong>0</strong>, з іх ',
-	'ONLINE_USER_TOTAL'			=> 'Наведвальнікаў: <strong>%d</strong>, з іх ',
 	'OPTIONS'					=> 'Налады',
 
 	'PAGE_OF'				=> 'Старонка <strong>%1$d</strong> з <strong>%2$d</strong>',
+	'PAGE_TITLE_NUMBER'		=> 'Page %s',
 	'PASSWORD'				=> 'Пароль',
 	'PIXEL'					=> 'пікс.',
 	'PLAY_QUICKTIME_FILE'	=> 'Прайграць файл QuickTime',
+	'PLEASE_WAIT'			=> 'Please wait.',
 	'PM'					=> 'Асабістае паведамленне',
 	'PM_REPORTED'			=> 'Націсніце, каб паглядзець скаргу',
 	'POSTING_MESSAGE'		=> 'Размяшчэнне паведамлення ў форуме «%s»',
@@ -578,9 +687,15 @@ $lang = array_merge($lang, array(
 	'POSTED_ON_DATE'		=> 'ад',
 	'POSTS'					=> 'Паведамленняў',
 	'POSTS_UNAPPROVED'		=> 'Прынамсі адно паведамленне ў гэтай тэме не было праверана.',
+	'POSTS_UNAPPROVED_FORUM'=> 'At least one post in this forum has not been approved.',
 	'POST_BY_AUTHOR'		=> 'by',
-	'POST_BY_FOE'			=> 'Аўтарам гэтага паведамлення з\'яўляецца <strong>%1$s</strong>, змешчаны ў вашым чорным спісе. %2$sПаказаць гэтае паведамленне%3$s.',
+	'POST_BY_FOE'			=> '<strong>%1$s</strong>, who is currently on your ignore list, made this post.',
+	'POST_DISPLAY'			=> '%1$sDisplay this post%2$s.',
 	'POST_DAY'				=> '%.2f паведамленняў у дзень',
+	'POST_DELETED_ACTION'	=> 'Deleted post:',
+	'POST_DELETED'			=> 'This post has been deleted.',
+	'POST_DELETED_BY'		=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s.',
+	'POST_DELETED_BY_REASON'=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s for the following reason: %4$s',
 	'POST_DETAILS'			=> 'Інфармацыя аб паведамленні',
 	'POST_NEW_TOPIC'		=> 'Пачаць новую тэму',
 	'POST_PCT'				=> '%.2f%% усіх паведамленняў',
@@ -591,7 +706,8 @@ $lang = array_merge($lang, array(
 	'POST_SUBJECT'			=> 'Загаловак паведамлення',
 	'POST_TIME'				=> 'Час размяшчэння',
 	'POST_TOPIC'			=> 'Новая тэма',
-	'POST_UNAPPROVED'		=> 'Гэтае паведамленне чакае праверкі',
+	'POST_UNAPPROVED_ACTION'	=> 'Post awaiting approval:',
+	'POST_UNAPPROVED'		=> 'This post has not been approved.',
 	'POWERED_BY'			=> 'Створана на аснове %s',
 	'PREVIEW'				=> 'Прадпрагляд',
 	'PREVIOUS'				=> 'Папяр.',		// Used in pagination
@@ -601,6 +717,8 @@ $lang = array_merge($lang, array(
 	'PRIVATE_MESSAGES'		=> 'Асабістыя паведамленні',
 	'PRIVATE_MESSAGING'		=> 'Асабістыя паведамленні',
 	'PROFILE'				=> 'Асабісты раздзел',
+
+	'QUICK_LINKS'			=> 'Quick links',
 
 	'RANK'						=> 'Званне',
 	'READING_FORUM'				=> 'Прагляд форума «%s»',
@@ -614,15 +732,6 @@ $lang = array_merge($lang, array(
 	'REDIRECTS'					=> 'Пераходаў па спасылцы',
 	'REGISTER'					=> 'Рэгістрацыя',
 	'REGISTERED_USERS'			=> 'Зарэгістраваныя карыстальнікі:',
-	'REG_USERS_ONLINE'			=> 'Зарэгістраваных карыстальнікаў: %d і ',
-	'REG_USERS_TOTAL'			=> '%d зарэгістраваных, ',
-	'REG_USERS_TOTAL_AND'		=> '%d зарэгістраваных  і ',
-	'REG_USERS_ZERO_ONLINE'		=> 'Зарэгістраваных карыстальнікаў: 0 і ',
-	'REG_USERS_ZERO_TOTAL'		=> '0 зарэгістраваных, ',
-	'REG_USERS_ZERO_TOTAL_AND'	=> '0 зарэгістраваных і ',
-	'REG_USER_ONLINE'			=> 'Зарэгістраваных карыстальнікаў: %d і ',
-	'REG_USER_TOTAL'			=> '%d зарэгістраваны, ',
-	'REG_USER_TOTAL_AND'		=> '%d зарэгістраваны і ',
 	'REMOVE'					=> 'Выдаліць',
 	'REMOVE_INSTALL'			=> 'Калі ласка, выдаліце, перамесціце або пераназавіце папку install перш, чым пачнеце карыстацца канферэнцыяй. У адваротным выпадку будзе даступны толькі адміністратарскі раздзел.',
 	'REPLIES'					=> 'Адказы',
@@ -639,7 +748,8 @@ $lang = array_merge($lang, array(
 	'RETURN_FORUM'				=> '%sВярнуцца ў форум%s',
 	'RETURN_PAGE'				=> '%sВярнуцца на папярэднюю старонку%s',
 	'RETURN_TOPIC'				=> '%sВярнуцца ў тэму%s',
-	'RETURN_TO'					=> 'Вярнуцца ў',
+	'RETURN_TO'					=> 'Return to “%s”',
+	'RETURN_TO_INDEX'			=> 'Return to Board Index',
 	'FEED'						=> 'Канал',
 	'FEED_NEWS'					=> 'Навіны',
 	'FEED_TOPICS_ACTIVE'		=> 'Актыўныя тэмы',
@@ -667,28 +777,30 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV_EXPLAIN'		=> 'Параметры пашыранага пошуку',
 	'SEARCH_KEYWORDS'			=> 'Ключавыя словы',
 	'SEARCHING_FORUMS'			=> 'Пошук у форумах',
-	'SEARCH_ACTIVE_TOPICS'		=> 'Актыўныя тэмы',
+	'SEARCH_ACTIVE_TOPICS'		=> 'Active topics',
 	'SEARCH_FOR'				=> 'Знайсці',
 	'SEARCH_FORUM'				=> 'Пошук у форуме…',
-	'SEARCH_NEW'				=> 'Новыя паведамленні',
+	'SEARCH_NEW'				=> 'New posts',
 	'SEARCH_POSTS_BY'			=> 'Шукаць паведамленні',
-	'SEARCH_SELF'				=> 'Вашы паведамленні',
+	'SEARCH_SELF'				=> 'Your posts',
 	'SEARCH_MINE'				=> 'View your topics',
 	'SEARCH_TOPIC'				=> 'Пошук у тэме…',
-	'SEARCH_UNANSWERED'			=> 'Паведамленні без адказаў',
-	'SEARCH_UNREAD'				=> 'Непрачытаныя паведамленні',
+	'SEARCH_UNANSWERED'			=> 'Unanswered posts',
+	'SEARCH_UNREAD'				=> 'Unread posts',
 	'SEARCH_USER_POSTS'			=> 'Знайсці паведамленні карыстальніка',
 	'SECONDS'					=> 'секунд',
+	'SEE_ALL'					=> 'See All',
 	'SELECT'					=> 'Выбар',
 	'SELECT_ALL_CODE'			=> 'Вылучыць усё',
 	'SELECT_DESTINATION_FORUM'	=> 'Вылучыце форум прызначэння',
 	'SELECT_FORUM'				=> 'Вылучыце форум',
-	'SEND_EMAIL'				=> 'Адправіць email',				// Used for submit buttons
-	'SEND_EMAIL_USER'			=> 'Адправіць ліст карыстальніку',				// Used as: {L_SEND_EMAIL_USER} {USERNAME} -> E-mail UserX
+	'SEND_EMAIL'				=> 'Send email',				// Used for submit buttons
+	'SEND_EMAIL_USER'			=> 'Send email to %s',
 	'SEND_PRIVATE_MESSAGE'		=> 'Адправіць асабістае паведамленне',
 	'SETTINGS'					=> 'Налады',
 	'SIGNATURE'					=> 'Подпіс',
 	'SKIP'						=> 'Прапусціць',
+	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'SMTP-сервер не падтрымлівае аўтэнтыфікацыю.',
 	'SORRY_AUTH_READ'			=> 'Вы не аўтарызаваныя для чытання гэтага форума.',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'Вы не аўтарызаваныя для запампоўкі гэтага ўкладання.',
@@ -706,6 +818,8 @@ $lang = array_merge($lang, array(
 	'START_WATCHING_TOPIC'		=> 'Падпісацца на тэму',
 	'STOP_WATCHING_FORUM'		=> 'Адпісацца ад форума',
 	'STOP_WATCHING_TOPIC'		=> 'Адпісацца ад тэмы',
+	'STRING_LIST_MULTI'			=> '%1$s, and %2$s',
+	'STRING_LIST_SIMPLE'		=> '%1$s and %2$s',
 	'SUBFORUM'					=> 'Падфорум',
 	'SUBFORUMS'					=> 'Падфорумы',
 	'SUBJECT'					=> 'Загаловак',
@@ -717,51 +831,35 @@ $lang = array_merge($lang, array(
 	'THE_TEAM'			=> 'Наша каманда',
 	'TIB'				=> 'TiB',
 	'TIME'				=> 'Час',
-	
+	'TIMEOUT_PROCESSING_REQ'			=> 'Request timed out.',
+
 	'TOO_LARGE'						=> 'Уведзенае значэнне занадта вялікае.',
 	'TOO_LARGE_MAX_RECIPIENTS'		=> 'Уведзенае значэнне <strong>Максімальна дапушчальная колькасць атрымальнікаў асабістага паведамлення</strong> занадта вялікае.',
 
 	'TOO_LONG'						=> 'Уведзенае значэнне занадта доўгае.',
 
-	'TOO_LONG_AIM'					=> 'Імя ў AIM занадта доўгае.',
 	'TOO_LONG_CONFIRM_CODE'			=> 'Уведзены код пацверджання занадта доўгі.',
 	'TOO_LONG_DATEFORMAT'			=> 'Уведзены фармат даты занадта доўгі.',
-	'TOO_LONG_ICQ'					=> 'Нумар ICQ занадта доўгі.',
-	'TOO_LONG_INTERESTS'			=> 'Занадта доўгі радок інтарэсаў.',
 	'TOO_LONG_JABBER'				=> 'Імя ўліковага запісу Jabber занадта доўгае.',
-	'TOO_LONG_LOCATION'				=> 'Радок «Адкуль» занадта доўгі.',
-	'TOO_LONG_MSN'					=> 'Імя ў MSN/WLM занадта доўгае.',
 	'TOO_LONG_NEW_PASSWORD'			=> 'Уведзены пароль занадта доўгі.',
-	'TOO_LONG_OCCUPATION'			=> 'Радок «Род заняткаў» занадта доўгі.',
 	'TOO_LONG_PASSWORD_CONFIRM'		=> 'Пацверджанне пароля занадта доўгае.',
 	'TOO_LONG_USER_PASSWORD'		=> 'Пароль занадта доўгі.',
 	'TOO_LONG_USERNAME'				=> 'Імя карыстальніка занадта доўгае.',
-	'TOO_LONG_EMAIL'				=> 'Адрас email занадта доўгі.',
-	'TOO_LONG_EMAIL_CONFIRM'		=> 'Пацверджанне адрасу email занадта доўгае.',
-	'TOO_LONG_WEBSITE'				=> 'Адрас бачыны занадта доўгі.',
-	'TOO_LONG_YIM'					=> 'Імя ў YIM занадта доўгае.',
+	'TOO_LONG_EMAIL'				=> 'The email address you entered is too long.',
 
 	'TOO_MANY_VOTE_OPTIONS'			=> 'Вы вылучылі занадта шмат варыянтаў адказу пры галасаванні.',
 
 	'TOO_SHORT'						=> 'Уведзенае значэнне занадта кароткае.',
 
-	'TOO_SHORT_AIM'					=> 'Імя ў AIM занадта кароткае.',
 	'TOO_SHORT_CONFIRM_CODE'		=> 'Уведзены код пацверджання занадта кароткі.',
 	'TOO_SHORT_DATEFORMAT'			=> 'Уведзены фармат даты занадта кароткі.',
-	'TOO_SHORT_ICQ'					=> 'Нумар ICQ занадта кароткі.',
-	'TOO_SHORT_INTERESTS'			=> 'Занадта кароткі радок інтарэсаў.',
 	'TOO_SHORT_JABBER'				=> 'Імя ўліковага запісу Jabber занадта кароткае.',
-	'TOO_SHORT_LOCATION'			=> 'Радок «Адкуль» занадта кароткая.',
-	'TOO_SHORT_MSN'					=> 'Імя ў MSNM/WLM занадта кароткае.',
 	'TOO_SHORT_NEW_PASSWORD'		=> 'Уведзены пароль занадта кароткі.',
-	'TOO_SHORT_OCCUPATION'			=> 'Радок «Род заняткаў» занадта кароткая.',
 	'TOO_SHORT_PASSWORD_CONFIRM'	=> 'Пацверджанне пароля занадта кароткае.',
 	'TOO_SHORT_USER_PASSWORD'		=> 'Пароль занадта кароткі.',
 	'TOO_SHORT_USERNAME'			=> 'Імя карыстальніка занадта кароткае.',
-	'TOO_SHORT_EMAIL'				=> 'Адрас email занадта кароткі.',
-	'TOO_SHORT_EMAIL_CONFIRM'		=> 'Пацверджанне адрасу email занадта кароткае.',
-	'TOO_SHORT_WEBSITE'				=> 'Адрас бачыны занадта кароткі.',
-	'TOO_SHORT_YIM'					=> 'Імя ў YIM занадта кароткае.',
+	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
+	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
 	
 	'TOO_SMALL'						=> 'Уведзенае значэнне занадта малае.',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> 'Уведзенае значэнне <strong>Максімальна дапушчальная колькасць атрымальнікаў асабістага паведамлення</strong> занадта малае.',
@@ -775,30 +873,20 @@ $lang = array_merge($lang, array(
 	'TOPIC_MOVED'		=> 'Перанесеная',
 	'TOPIC_REVIEW'		=> 'Агляд тэмы',
 	'TOPIC_TITLE'		=> 'Назва тэмы',
-	'TOPIC_UNAPPROVED'	=> 'Дадзеная тэма не была ўхваленая',
+	'TOPIC_UNAPPROVED'	=> 'This topic has not been approved.',
+	'TOPIC_DELETED'		=> 'This topic has been deleted.',
 	'TOTAL_ATTACHMENTS'	=> 'Укладанні',
-	'TOTAL_LOG'			=> '1 лог',
-	'TOTAL_LOGS'		=> 'Логаў: %d',
-	'TOTAL_NO_PM'		=> 'Усяго 0 асабістых паведамленняў',
-	'TOTAL_PM'			=> 'Усяго 1 асабістае паведамленне',
-	'TOTAL_PMS'			=> 'Усяго %d асабістых паведамленняў',
+	'TOPIC_POLL'		=> 'This topic has a poll.',
 	'TOTAL_POSTS'		=> 'Усяго паведамленняў',
-	'TOTAL_POSTS_OTHER'	=> 'Усяго паведамленняў: <strong>%s</strong>',
-	'TOTAL_POSTS_ZERO'	=> 'Усяго паведамленняў: <strong>0</strong>',
 	'TOPIC_REPORTED'	=> 'На дадзеную тэму паступілі скаргі',
-	'TOTAL_TOPICS_OTHER'=> 'Тэм: <strong>%s</strong>',
-	'TOTAL_TOPICS_ZERO'	=> 'Тэм: <strong>0</strong>',
-	'TOTAL_USERS_OTHER'	=> 'Карыстальнікаў: <strong>%s</strong>',
-	'TOTAL_USERS_ZERO'	=> 'Карыстальнікаў: <strong>0</strong>',
 	'TRACKED_PHP_ERROR'	=> 'Адсочанныя памылкі PHP: %s',
+	'TWITTER'			=> 'Twitter',
 
-	'UNABLE_GET_IMAGE_SIZE'	=> 'Не атрымалася вызначыць памеры малюнка.',
+	'UNABLE_GET_IMAGE_SIZE'	=> 'It was not possible to determine the dimensions of the image. Please verify that the URL you entered is correct.',
 	'UNABLE_TO_DELIVER_FILE'=> 'Не атрымалася даставіць файл.',
 	'UNKNOWN_BROWSER'		=> 'Невядомы браўзэр',
 	'UNMARK_ALL'			=> 'Зняць вылучэнне',
 	'UNREAD_MESSAGES'		=> 'Непрачытаныя паведамленні',
-	'UNREAD_PM'				=> 'Непрачытаных паведамленняў: <strong>%d</strong>',
-	'UNREAD_PMS'			=> 'Непрачытаных паведамленняў: <strong>%d</strong>',
 	'UNREAD_POST'			=> 'Непрачытанае паведамленне',
 	'UNREAD_POSTS'			=> 'Непрачытаныя паведамленні',
 	'UNWATCH_FORUM_CONFIRM'		=> 'Вы сапраўды жадаеце адпісацца ад дадзенага форуму?',
@@ -816,8 +904,6 @@ $lang = array_merge($lang, array(
 	'USERNAMES'				=> 'Імёны карыстальнікаў',
 	'USER_AVATAR'			=> 'Аватара карыстальніка',
 	'USER_CANNOT_READ'		=> 'Вы не можаце чытаць паведамленні ў гэтым форуме.',
-	'USER_POST'				=> '%d паведамленне',
-	'USER_POSTS'			=> '%d паведамленняў',
 	'USERS'					=> 'Карыстальнікі',
 	'USE_PERMISSIONS'		=> 'Праверыць правы карыстальніка',
 
@@ -825,6 +911,8 @@ $lang = array_merge($lang, array(
 
 	'VARIANT_DATE_SEPARATOR'	=> ' / ',	// Used in date format dropdown, eg: "Today, 13:37 / 01 Jan 2007, 13:37" ... to join a relative date with calendar date
 	'VIEWED'					=> 'Праглядаў:',
+
+	'VIEWING_CONTACT_ADMIN'		=> 'Viewing contact page',
 	'VIEWING_FAQ'				=> 'Прагляд FAQ',
 	'VIEWING_MEMBERS'			=> 'Прагляд спісу карыстальнікаў',
 	'VIEWING_ONLINE'			=> 'Прагляд старонкі «Хто зараз на канферэнцыі»',
@@ -839,8 +927,6 @@ $lang = array_merge($lang, array(
 	'VIEW_LATEST_POST'			=> 'Перайсці да апошняга паведамлення',
 	'VIEW_NEWEST_POST'			=> 'Перайсці да першага непрачытанага паведамлення',
 	'VIEW_NOTES'				=> 'Нататкі аб карыстальніку',
-	'VIEW_ONLINE_TIME'			=> 'заснавана на актыўнасці карыстальнікаў за апошнюю хвіліну',
-	'VIEW_ONLINE_TIMES'			=> 'заснавана на актыўнасці карыстальнікаў за апошнія %d хвілін',
 	'VIEW_TOPIC'				=> 'Прагляд тэмы',
 	'VIEW_TOPIC_ANNOUNCEMENT'	=> 'Аб\'ява: ',
 	'VIEW_TOPIC_GLOBAL'			=> 'Важная: ',
@@ -861,23 +947,24 @@ $lang = array_merge($lang, array(
 	'WEBSITE'			=> 'Бачына',
 	'WHOIS'				=> 'Інфармацыя аб IP-адрасе',
 	'WHO_IS_ONLINE'		=> 'Хто зараз на канферэнцыі',
+	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'Вы ўвялі няслушны пароль.',
 	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
-	'WRONG_DATA_ICQ'			=> 'Уведзены нумар не з\'яўляюцца правільным нумарам ICQ.',
 	'WRONG_DATA_JABBER'			=> 'Уведзенае імя не з\'яўляецца правільным імем Jabber.',
 	'WRONG_DATA_LANG'			=> 'Паказаны няправільная мова.',
-	'WRONG_DATA_WEBSITE'		=> 'Адрас бачыны павінен быць правільнай спасылкай, уключальнай найменне пратаколу. Напрыклад, http://www.example.com/.',
+	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
+	'WRONG_DATA_POST_SK'		=> 'The post sort option you specified is not valid.',
+	'WRONG_DATA_TOPIC_SD'		=> 'The topic sort direction you specified is not valid.',
+	'WRONG_DATA_TOPIC_SK'		=> 'The topic sort option you specified is not valid.',
 	'WROTE'						=> 'пісаў(а)',
 
+	'YAHOO'				=> 'Yahoo Messenger',
+	'YOUTUBE'			=> 'YouTube',
 	'YEAR'				=> 'Год',
 	'YEAR_MONTH_DAY'	=> '(ГГГГ-ММ-ДД)',
 	'YES'				=> 'Так',
-	'YIM'				=> 'YIM',
 	'YOU_LAST_VISIT'	=> 'Папярэдняе наведванне: %s',
-	'YOU_NEW_PM'		=> 'Вам дашло новае асабістае паведамленне.',
-	'YOU_NEW_PMS'		=> 'Вам дашлі новыя асабістыя паведамленні.',
-	'YOU_NO_NEW_PM'		=> 'У вас няма новых асабістых паведамленняў.',
 
 	'default_dateformat'	=> '|d M Y|, H:i', // Mon Jan 01, 2007 1:37 pm
 
@@ -1083,7 +1170,6 @@ $lang = array_merge($lang, array(
 
 	'FORUM_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this forum.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this topic.',
-	'TOO_FEW_CHARS_LIMIT'	=> 'Ваша паведамленне змяшчае %1$d сімвалаў. Мінімальнае колькасць сімвалаў, неабходная для публікацыі паведамлення - %2$d.',
 	'REPLY_TO_MESSAGE'		=> 'Reply to message',
 
 	'RSS_CHAN_LIST_TITLE'	=> 'Форумы',
@@ -1695,7 +1781,6 @@ $lang = array_merge($lang, array(
 	'DEV_NO_TEST_FILE'			=> 'У канвертары не паказана значэнне пераменнай test_file. Калі вы карыстальнік канвертара, калі ласка, паведаміце аб гэтай памылцы яго аўтару, так як яна не павінна ўзнікаць. Калі вы аўтар канвертара, то вы павінны задаць імя наяўнага файла канвертоўнай канферэнцыі, для таго каб праверыць правільнасць шляху да яе.',
 	'DIRECTORIES_AND_FILES'		=> 'Налада папак і файлаў',
 	'DISABLE_KEYS'				=> 'Дэактывацыя ключоў',
-	'DLL_FIREBIRD'				=> 'Firebird',
 	'DLL_FTP'					=> 'Падтрымка выдаленага FTP [ Усталёўка ]',
 	'DLL_GD'					=> 'Падтрымка графічнай бібліятэкі GD [ Візуальнае пацверджанне ]',
 	'DLL_MBSTRING'				=> 'Падтрымка шматбайтавых знакаў',
@@ -1706,11 +1791,12 @@ $lang = array_merge($lang, array(
 	'DLL_MYSQLI'				=> 'MySQL з пашырэннем MySQLi',
 	'DLL_ORACLE'				=> 'Oracle',
 	'DLL_POSTGRES'				=> 'PostgreSQL',
-	'DLL_SQLITE'				=> 'SQLite',
+	'DLL_SQLITE'				=> 'SQLite 2',
+	'DLL_SQLITE3'				=> 'SQLite 3',
 	'DLL_XML'					=> 'Падтрымка XML [ Jabber ]',
 	'DLL_ZLIB'					=> 'Падтрымка zlib-кампрэсіі [ gz, .tar.gz, .zip ]',
 	'DL_CONFIG'					=> 'Запампаваць файл канфігурацыі',
-	'DL_CONFIG_EXPLAIN'			=> 'Вы можаце цалкам запампаваць файл config.php да сабе на кампутар. Затым вам будзе трэба ўручную запампаваць гэты файл у каранёвую папку phpBB 3.0, замяніўшы зыходны config.php. Падушыце, што файл павінен быць запампаваны на сервер у фармаце ASCII (калі вы не ведаеце як гэтага дабіцца, звернецеся да дакументацыі вашага FTP-кліента). Пасля таго, як запампуеце config.php, пстрыкніце «Гатова» для пераходу да наступнага кроку.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'Запампаваць',
 	'DONE'						=> 'Гатова',
 
@@ -1722,8 +1808,6 @@ $lang = array_merge($lang, array(
 	'FILES_REQUIRED_EXPLAIN'	=> '<strong>Неабходна</strong> - для правільнай працы phpBB патрэбен доступ на чытанне або запіс вызначаных файлаў і папак. Калі вы бачыце надпіс «Не знойдзена», неабходна стварыць адпаведны файл або папку. Калі напісана «Няма мае рацыю на запіс», неабходна змяніць правы на файл або папку, каб дазволіць запіс у іх для phpBB.',
 	'FILLING_TABLE'				=> 'Запаўненне табліцы <strong>%s</strong>',
 	'FILLING_TABLES'			=> 'Запаўненне табліц',
-
-	'FIREBIRD_DBMS_UPDATE_REQUIRED'		=> 'phpBB больш не падтрымлівае Firebird/Interbase да версіі 2.1. Перад працягам працэсу абнаўлення абновіце Firebird, прынамсі, да версіі 2.1.0.',
 
 	'FINAL_STEP'				=> 'Заключны крок',
 	'FORUM_ADDRESS'				=> 'Адрас канферэнцыі',
@@ -1750,30 +1834,30 @@ $lang = array_merge($lang, array(
 		<p>Націсніце на кнопку ніжэй, каб перайсці ў адміністратарскі раздзел. Надасце некаторы час вывучэнню даступных пунктаў меню і налад. Падушыце аб даступнай у інтэрнэце <a href="http://www.phpbb.com/support/documentation/3.0/">дакументацыі</a> і <a href="http://www.phpbb.com/community/viewforum.php?f=46">форуме тэхпадтрымкі</a> (на ангельскім) а таксама <a href="http://anderson.phpbbguru.net">Рускамоўным форуме перакладу Olympus</a>, за дадатковай інфармацыяй звернецеся да <a href="%3$s">README</a>.<br /><br /><strong>Выдаліце, перамесціце або пераназавіце папку install перш чым пачнеце карыстацца канферэнцыяй. У адваротным выпадку будзе даступны толькі адміністратарскі раздзел.</strong></p>',
 	'INSTALL_INTRO'				=> 'Вас прывітае праграма ўсталёўкі phpBB',
 
-	'INSTALL_INTRO_BODY'		=> 'Тут можна ўсталяваць phpBB3 на ваш сервер.</p><p>Для гэтага запатрабуецца інфармацыя аб базе дадзеных. Калі вы не ведаеце яе налад, звяжыцеся з вашым хосцерам. Вы не зможаце працягнуць усталёўку без гэтых дадзеных. Вам трэба шляхта:</p>
+	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
 
 	<ul>
-		<li>Тып базы дадзеных (БД) - той, якую вы будзеце выкарыстаць.</li>
-		<li>Імя сервера БД або DSN - адрас сервера базы дадзеных.</li>
-		<li>Порт сервера БД - порт сервера базы дадзеных (не трэба паказваць у большасці выпадкаў).</li>
-		<li>Назоў базы дадзеных - імя базы дадзеных на серверы.</li>
-		<li>Імя карыстальніка БД і Пароль да БД - дадзеныя для доступу да базы дадзеных.</li>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
 	</ul>
 
-	<p><strong>Нататка:</strong> калі вылучыце SQLite, вам будзе трэба ўвесці поўны шлях да файла вашай базы дадзеных у поле "Імя сервера БД або DSN" і пакінуць пустымі палі імя карыстальніка і пароля. Па меркаваннях бяспекі, вам неабходна пераканацца, што гэты файл недаступны праз вэб.</p>
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
 
-	<p>phpBB3 падтрымлівае наступныя тыпы баз дадзеных:</p>
+	<p>phpBB3 supports the following databases:</p>
 	<ul>
-		<li>MySQL 3.23 і вышэй (падтрымліваецца MySQLi)</li>
-		<li>PostgreSQL 7.3+</li>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
 		<li>SQLite 2.8.2+</li>
-		<li>Firebird 2.0+</li>
-		<li>MS SQL Server 2000 і вышэй (напроста або праз ODBC)</li>
-		<li>MS SQL Server 2005 і вышэй (родны)</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
 		<li>Oracle</li>
 	</ul>
-	
-	<p>У спісе выбару тыпу базы дадзеных будуць адлюстроўвацца толькі тыя, якія падтрымлівае ваш сервер.',
+
+	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'Каб пачаць усталёўку, націсніце кнопку ніжэй.',
 	'INSTALL_LOGIN'				=> 'Увайсці',
 	'INSTALL_NEXT'				=> 'Наступны крок',
@@ -1789,9 +1873,8 @@ $lang = array_merge($lang, array(
 	'INST_ERR_DB_NO_ERROR'		=> 'Паведамленне аб памылцы адсутнічае.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'Усталяваная на серверы версія MySQL несумяшчальная з вылучаным варыянтам «MySQL з пашырэннем MySQLi». Замест яго паспрабуйце вылучыць варыянт «MySQL».',
 	'INST_ERR_DB_NO_SQLITE'		=> 'У вас усталяваная састарэлая версія пашырэння SQLite, яе неабходна абнавіць прынамсі да версіі 2.8.2.',
+	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'Для ўсталяванай на серверы версіі Oracle неабходна ўсталяваць значэнне параметру <var>NLS_CHARACTERSET</var> роўным <var>UTF8</var>. Альбо абновіце базу дадзеных да версіі 9.2 або вышэй, альбо зменіце значэнне параметру.',
-	'INST_ERR_DB_NO_FIREBIRD'	=> 'Усталяваная на серверы версія Firebird больш старая, чым 2.0, калі ласка, абновіце базу дадзеных да новай версіі.',
-	'INST_ERR_DB_NO_FIREBIRD_PS'=> 'Вылучаная база дадзеных Firebird мае памер старонкі меней 8192, памер старонкі павінен быць не меней 8192.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'Вылучаная база дадзеных была створаная не з кадыроўкай <var>UNICODE</var> або <var>UTF8</var>. Паспрабуйце ўсталяваць канферэнцыю ў базу дадзеных з кадыроўкай <var>UNICODE</var> або <var>UTF8</var>.',
 	'INST_ERR_DB_NO_NAME'		=> 'Не паказана назоў базы дадзеных.',
 	'INST_ERR_EMAIL_INVALID'	=> 'Уведзены адрас email недапушчальны.',
@@ -1845,6 +1928,8 @@ $lang = array_merge($lang, array(
 	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB <strong>не будзе</strong> працаваць, калі PHP сабраны без падтрымкі UTF-8 для пашырэння PCRE.',
 	'PHP_GETIMAGESIZE_SUPPORT'			=> 'Функцыя PHP getimagesize() даступная',
 	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Неабходна</strong> - Для правільнай працы phpBB неабходна наяўнасць функцыі getimagesize.',
+	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'Дадатковыя модулі',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> 'Гэтыя модулі і прыкладанні <strong>не з\'яўляюцца абавязковымі</strong>. Аднак, калі яны даступныя, гэта адчыніць дадатковыя функцыі.',
 	'PHP_SUPPORTED_DB'				=> 'Падтрымоўваемыя базы дадзеных',
@@ -1853,10 +1938,10 @@ $lang = array_merge($lang, array(
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'phpBB будзе працаваць і ў выпадку, калі параметр register_globals уключаны, але, калі гэта магчыма, яго рэкамендуецца адключыць у мэтах бяспекі.',
 	'PHP_SAFE_MODE'					=> 'Бяспечны рэжым (Safe mode)',
 	'PHP_SETTINGS'					=> 'Версія і налады PHP',
-	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Неабходна</strong> - Для ўсталёўкі phpBB3 патрабуецца версія PHP не малодшай 4.3.3. Калі ніжэй напісана <var>Бяспечны рэжым (Safe mode)</var>, то ваш PHP працуе ў абароненым рэжыме. Гэта накладзе абмежаванні на выдаленае адміністраванне і аналагічныя функцыі.',
+	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'Параметр PHP <var>allow_url_fopen</var> уключаны',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>Неабавязкова</strong> - Хоць гэты параметр не з\'яўляецца абавязковым, некаторыя функцыі phpBB, тыпу знешніх аватар, не будуць працаваць належнай выявай. ',
-	'PHP_VERSION_REQD'				=> 'Версія PHP >= 4.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
 	'POST_ID'						=> 'Ідэнтыфікатар паведамлення',
 	'PREFIX_FOUND'					=> 'Прагляд вашых табліц паказаў наяўнасць прыдатнай канферэнцыі з прэфіксам табліц <strong>%s</strong>.',
 	'PREPROCESS_STEP'				=> 'Выкананне папярэдніх функцый/запытаў',
@@ -1876,6 +1961,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> 'Канфігурацыя сервера',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Пошукавы індэкс не быў сканвертаваны',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Ваш стары пошукавы індэкс не быў сканвертаваны. Любы пошукавы запыт верне пусты вынік. Каб стварыць новы пошукавы індэкс, перайдзіце ў адміністратарскі раздзел, вылучыце падраздзел Абслугоўванне і ў ім пункт Пошукавы індэкс.',
+	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> 'Тып канферэнцыі',
 	'SPECIFY_OPTIONS'			=> 'Азначэнне налад канвертавання',
 	'STAGE_ADMINISTRATOR'		=> 'Звесткі аб адміністратару',
@@ -1883,7 +1969,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> 'Змяняць параметры на гэтай старонцы неабходна толькі ў выпадку, калі вы ведаеце, што вам не падыдуць налады па змаўчанні. Калі вы не ўпэўненыя, пераходзіце да наступнага кроку, гэтыя налады можна будзе змяніць пазней у адміністратарскім раздзеле.',
 	'STAGE_CONFIG_FILE'			=> 'Файл канфігурацыі',
 	'STAGE_CREATE_TABLE'		=> 'Стварэнне табліц базы дадзеных',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'Табліцы базы дадзеных phpBB 3.0 былі створаныя і запоўненыя пачатковымі дадзенымі. Пераходзіце да наступнага кроку для завяршэння ўсталёўкі phpBB.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'Налады базы дадзеных',
 	'STAGE_FINAL'				=> 'Заключны крок',
 	'STAGE_INTRO'				=> 'Уводзіны',
@@ -1896,7 +1982,7 @@ $lang = array_merge($lang, array(
 	'SUB_LICENSE'				=> 'Ліцэнзія',
 	'SUB_SUPPORT'				=> 'Падтрымка',
 	'SUCCESSFUL_CONNECT'		=> 'Паспяховае падлучэнне',
-	'SUPPORT_BODY'				=> 'Поўная падтрымка падаецца для апошняга стабільнага рэлізу phpBB3 бясплатна. Яна ўключае:</p><ul><li>усталёўку</li><li>канфігурацыю</li><li>тэхнічныя пытанні</li><li>праблемы, звязаныя з патэнцыйнымі памылкамі праграмнага забеспячэння</li><li>абнаўленне версій - кандыдатаў на рэліз (RC) да апошняй стабільнай версіі</li><li>канвертаванне phpBB 2.0.x у phpBB3</li><li>канвертаванне ў phpBB3 іншага праграмнага забеспячэння для канферэнцый (глядзіце <a href="http://www.phpbb.com/community/viewforum.php?f=65">Convertors Forum</a>)</li></ul><p>Мы прапаноўваем карыстальнікам, дагэтуль выкарыстоўвалым бэта-версіі phpBB3, зноўку ўсталяваць апошнюю версію. </p><h2>Моды / Стылі</h2><p>Пытанні, звязаныя з Модамі, абмяркоўваюцца ў адпаведным форуме <a href="http://www.phpbb.com/community/viewforum.php?f=81">Modifications Forum</a>.<br />Пытанні, звязаныя са стылямі, абмяркоўваюцца ў адпаведным форуме <a href="http://www.phpbb.com/community/viewforum.php?f=80">Styles Forum</a>.<br /><br />Калі ваша пытанне звязаны з пэўным прадуктам, задавайце яго ў тэме, прысвечанай гэтаму прадукту.</p><h2>Атрыманне падтрымкі</h2><p><a href="http://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">З чаго пачаць</a><br /><a href="http://www.phpbb.com/support/">Падтрымка</a><br /><a href="http://www.phpbb.com/support/documentation/3.0/quickstart/">Кароткае кіраўніцтва</a><br /><br />Каб быць у курсе апошніх навін і рэлізаў, вы можаце падпісацца на <a href="http://www.phpbb.com/support/">наша рассыланне</a>.<br /><br />',
+	'SUPPORT_BODY'				=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/documentation/3.1/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
 	'SYNC_FORUMS'				=> 'Сінхранізацыя форумаў',
 	'SYNC_POST_COUNT'			=> 'Сінхранізацыя колькасці паведамленняў',
 	'SYNC_POST_COUNT_ID'		=> 'Сінхранізацыя колькасці паведамленняў з <var>entry</var> ад %1$s да %2$s.',
@@ -1922,7 +2008,7 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ALL_FILES_UP_TO_DATE'		=> 'Усе файлы адпавядаюць самой апошняй версіі phpBB. Зараз <a href="../ucp.php?mode=login">увайдзіце на канферэнцыю</a> і праверце, што ўсё працуе нармалёва. Не забудзьце выдаліць, пераназваць або перамясціць папку «install»! Калі ласка, адпраўце нам абноўленую інфармацыю аб вашым серверы і канфігурацыі канферэнцыі з дапамогай старонкі <a href="../ucp.php?mode=login&amp;redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">Статыстычныя дадзеныя</a> у адміністратарскай частцы.',
+	'ALL_FILES_UP_TO_DATE'		=> 'All files are up to date with the latest phpBB version.',
 	'ARCHIVE_FILE'				=> 'Файл-крыніца ў архіве',
 
 	'BACK'				=> 'Назад',
@@ -1945,7 +2031,10 @@ $lang = array_merge($lang, array(
 	'CURRENT_VERSION'				=> 'Дзеючая версія',
 
 	'DATABASE_TYPE'						=> 'Тып базы дадзеных',
+	'DATABASE_UPDATE_COMPLETE'			=> 'Database updater has completed!',
+	'DATABASE_UPDATE_CONTINUE'			=> 'Continue database update',
 	'DATABASE_UPDATE_INFO_OLD'			=> 'Файл абнаўлення базы дадзеных у папцы install састарэлы. Упэўніцеся што запампавалі спраўную версію гэтага файла.',
+	'DATABASE_UPDATE_NOT_COMPLETED'		=> 'The database update has not yet completed.',
 	'DELETE_USER_REMOVE'				=> 'Выдаліць карыстальніка і яго паведамлення',
 	'DELETE_USER_RETAIN'				=> 'Выдаліць карыстальніка, але пакінуць яго паведамлення',
 	'DESTINATION'						=> 'Файл-атрымальнік',
@@ -1964,14 +2053,17 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_UPDATE_METHOD'			=> 'Запампаваць архіў з мадыфікаванымі файламі',
 	'DOWNLOAD_UPDATE_METHOD_EXPLAIN'	=> 'Запампаваўшы архіў, распакуйце яго. У ім вы знойдзеце змененыя файлы, якія трэба запампаваць у корань phpBB, пры гэтым кожны файл павінен апынуцца ў адпаведнай яму папцы. Пасля гэтага зноўку правядзіце параўнанне файлаў, націснуўшы якая адказвае за гэта кнопку ніжэй.',
 
-	'ERROR'			=> 'Памылка',
 	'EDIT_USERNAME'	=> 'Рэдагаваць імя карыстальніка',
+	'ERROR'			=> 'Памылка',
+	'EVERYTHING_UP_TO_DATE'		=> 'Everything is up to date with the latest phpBB version. You should now <a href="%1$s">login to your board</a> and check if everything is working fine. Do not forget to delete, rename or move your install directory! Please send us updated information about your server and board configurations from the <a href="%2$s">Send statistics</a> module in your ACP.',
 
 	'FILE_ALREADY_UP_TO_DATE'		=> 'Файл ужо адпавядае новай версіі.',
 	'FILE_DIFF_NOT_ALLOWED'			=> 'Няма мае рацыю на выкананне каманды diff для гэтага файла.',
 	'FILE_USED'						=> 'Інфармацыя з файла',			// Single file
 	'FILES_CONFLICT'				=> 'Канфліктуючыя файлы',
 	'FILES_CONFLICT_EXPLAIN'		=> 'Наступныя файлы мадыфікаваныя і не адпавядаюць арыгінальным файлам старой версіі. phpBB вызначыў, што гэтыя файлы будуць ствараць канфлікт пры аб\'яднанні з іх новымі версіямі. Вывучыце канфліктныя месцы і паспрабуйце выправіць іх уручную, альбо працягнеце абнаўленне, вылучыўшы прыдатны тып аб\'яднання файлаў. Калі вы будзеце дазваляць канфлікт уручную, зноўку правядзіце параўнанне файлаў пасля таго, як занясеце ў іх змены. Для кожнага файла ў асобнасці вы можаце вылучыць пераважны метад аб\'яднання з новай версіяй. Вынікам працы першага метаду будзе файл, у якім адкінутыя канфліктуючыя радкі з вашага старога файла, у другім метадзе будуць адкінутыя канфліктуючыя радкі з новай версіі.',
+	'FILES_DELETED'					=> 'Deleted files',
+	'FILES_DELETED_EXPLAIN'			=> 'The following files do not exist in the new version. These files have to be deleted from your installation.',
 	'FILES_MODIFIED'				=> 'Змененыя файлы',
 	'FILES_MODIFIED_EXPLAIN'		=> 'Наступныя файлы мадыфікаваныя і не адпавядаюць арыгінальным файлам старой версіі. Абноўлены файл будзе вынікам аб\'яднання вашага мадыфікаванага і новага файла.',
 	'FILES_NEW'						=> 'Новыя файлы',
@@ -2033,6 +2125,7 @@ $lang = array_merge($lang, array(
 	'PREVIOUS_VERSION'					=> 'Папярэдняя версія',
 	'PROGRESS'							=> 'Выкананне',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Announcement',
 	'RESULT'					=> 'Вынік',
 	'RUN_DATABASE_SCRIPT'		=> 'Абнавіць базу дадзеных',
 
@@ -2040,6 +2133,7 @@ $lang = array_merge($lang, array(
 	'SELECT_DOWNLOAD_FORMAT'	=> 'Вылучыце фармат архіва для запампоўкі',
 	'SELECT_FTP_SETTINGS'		=> 'Усталёўка налад FTP',
 	'SHOW_DIFF_CONFLICT'		=> 'Адрозненні/канфліктныя месцы',
+	'SHOW_DIFF_DELETED'			=> 'Show file contents',
 	'SHOW_DIFF_FINAL'			=> 'Выніковы файл',
 	'SHOW_DIFF_MODIFIED'		=> 'Адрозненні з аб\'яднаным файлам',
 	'SHOW_DIFF_NEW'				=> 'Змесціва файла',
@@ -2053,6 +2147,7 @@ $lang = array_merge($lang, array(
 	'STAGE_UPDATE_FILES'		=> 'Абнаўленне файлаў',
 	'STAGE_VERSION_CHECK'		=> 'Праверка версіі',
 	'STATUS_CONFLICT'			=> 'Зменены файл, які стварае канфліктныя месцы',
+	'STATUS_DELETED'			=> 'Deleted file',
 	'STATUS_MODIFIED'			=> 'Зменены файл',
 	'STATUS_NEW'				=> 'Новы файл',
 	'STATUS_NEW_CONFLICT'		=> 'Канфліктуючы новы файл',
@@ -2073,33 +2168,27 @@ $lang = array_merge($lang, array(
 	'UPDATE_INSTALLATION_EXPLAIN'	=> 'Тут вы можаце абнавіць вашу версію phpBB да апошняй.<br />Падчас гэтага працэсу ўсе вашы файлы будуць правераныя на цэласнасць. Вы зможаце праглядзець файлы і ўносныя ў іх змены перад абнаўленнем.<br /><br />Само абнаўленне можа быць выканана двума спосабамі.</p><h2>Абнаўленне ўручную</h2><p>Гэты спосаб складаецца ў тым, што вы запампоўваеце індывідуальны набор абноўленых файлаў, каб не страціць зробленыя вамі змены ў наяўных файлах. Запампаваўшы гэты архіў, вы павінны ўручную запампаваць файлы з яго ў адпаведныя ім месцазнаходжання адносна каранёвай папкі phpBB. Пасля гэтага вам будзе дадзеная магчымасць правесці праверку, што ўсе файлы займаюць якія належаць ім месца.</p><h2>Аўтаматычнае абнаўленне па FTP</h2><p>Гэты спосаб падобны на першы, але без неабходнасці запампоўваць абноўленыя файлы і запампоўваць іх на сервер самастойна, гэта будзе зроблена за вас. Каб скарыстацца гэтым спосабам, вам трэба шляхта запытваемыя праграмай абнаўлення дадзеныя аб вашым FTP-серверы. Па канчатку вы будзеце накіраваныя на паўторнае параўнанне файлаў з мэтай пераканацца, што абнаўленне прайшло паспяхова.<br /><br />',
 	'UPDATE_INSTRUCTIONS'			=> '
 
-		<h1>Аб\'ява аб выхадзе новай версіі</h1>
+		<h1>Release announcement</h1>
 
-		<p>Перш чым працягнуць працэс абнаўлення, прачытайце <a href="%1$s" title="%1$s"><strong>аб\'ява аб выпуску апошняй версіі</strong></a>, яно можа ўтрымоўваць карысную для вас інфармацыю. Акрамя таго, у ім прысутнічаюць спасылкі на запампоўку новай версіі, абнаўленняў, а таксама пералік змен.</p>
+		<p>Please read the release announcement for the latest version before you continue your update process, it may contain useful information. It also contains full download links as well as the change log.</p>
 
 		<br />
 
-		<h1>Як абнавіць сваю версію phpBB з дапамогай пакета аўтаматычнага абнаўлення</h1>
+		<h1>How to update your installation with the Automatic Update Package</h1>
 
-		<p>Рэкамендаваны тут спосаб абнаўлення phpBB прыдатны толькі для пакета аўтаматычнага абнаўлення. Вы таксама можаце вырабіць абнаўленне, выкарыстаючы метады, паказаныя ў дакуменце INSTALL.html. Для аўтаматычнага абнаўлення трэба выканаць наступныя крокі:</p>
+		<p>The recommended way of updating your installation listed here is only valid for the automatic update package. You are also able to update your installation using the methods listed within the INSTALL.html document. The steps for updating phpBB3 automatically are:</p>
 
 		<ul style="margin-left: 20px; font-size: 1.1em;">
-			<li>Перайсці на <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">старонку файлаў phpBB.com</a> і запампаваць архіў з пакетам аўтаматычнага абнаўлення ("Automatic Update Package").<br /><br /></li>
-			<li>Распакаваць архіў.<br /><br /></li>
-			<li>Запампаваць разархівіраваную папку install у корань phpBB (туды, дзе находзіцца файл config.php).<br /><br /></li>
+			<li>Go to the <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com downloads page</a> and download the "Automatic Update Package" archive.<br /><br /></li>
+			<li>Unpack the archive.<br /><br /></li>
+			<li>Upload the complete uncompressed install folder to your phpBB root directory (where your config.php file is).<br /><br /></li>
 		</ul>
 
-		<p>Пасля гэтага канферэнцыя стане недаступная для звычайных карыстальнікаў, з-за таго, што зараз прысутнічае закочаная вамі папка install.<br /><br />
-		<strong><a href="%2$s" title="%2$s">Зараз вы можаце пачаць працэс абнаўлення, пяройдучы ў папку install</a>.</strong><br />
+		<p>Once uploaded your board will be offline for normal users due to the install directory you uploaded now present.<br /><br />
+		<strong><a href="%1$s" title="%1$s">Now start the update process by pointing your browser to the install folder</a>.</strong><br />
 		<br />
-		Вам будуць дадзеныя ўказанні падчас працэсу абнаўлення, а па яго канчатку вам паведамяць аб гэтым.
+		You will then be guided through the update process. You will be notified once the update is complete.
 		</p>
-	',
-	'UPDATE_INSTRUCTIONS_INCOMPLETE'	=> '
-
-		<h1>Незавершанае аўтаматычнае абнаўленне</h1>
-
-		<p>Выяўлена, што папярэдняе аўтаматычнае абнаўленне не было завершанае. Упэўніцеся ў тым, што ўсе крокі аўтаматычнага абнаўлення былі выкананыя. Перайдзіце па спасылцы ніжэй, або непасрэдна ў папку ўсталёўкі.</p>
 	',
 	'UPDATE_METHOD'					=> 'Спосаб абнаўлення',
 	'UPDATE_METHOD_EXPLAIN'			=> 'Зараз вы можаце вылучыць зручны для вас спосаб запампоўкі файлаў. Калі вы ўпадабаеце запампоўку па FTP, вам будзе прапанавана запоўніць форму дадзеных аб уліковым запісе вашага FTP-сервера. Гэты спосаб забяспечвае аўтаматычнае перамяшчэнне файлаў у новыя месцазнаходжанні і стварэнне рэзервовых дзід іх старых версій з даданнем .bak да імя файла. Калі вы вылучыце запампоўку архіва з мадыфікаванымі файламі, то зможаце распакаваць яго і запампаваць файлы ў адпаведныя ім месцазнаходжання ўручную.',
@@ -2110,10 +2199,10 @@ $lang = array_merge($lang, array(
 	'UPDATING_DATA'					=> 'Абнаўленне дадзеных',
 	'UPDATING_TO_LATEST_STABLE'		=> 'Абнаўленне базы дадзеных да апошняй стабільнай версіі',
 	'UPDATED_VERSION'				=> 'Абноўленая версія',
-	'UPGRADE_INSTRUCTIONS'			=> 'Даступна новая версія <strong>%1$s</strong>. Калі ласка, прачытайце <a href="%2$s" title="%2$s"><strong>аб\'яву аб выпуску</strong></a>, каб даведацца пра тое, што яна можа прапанаваць, і як абнавіць.',
 	'UPLOAD_METHOD'					=> 'Спосаб запампоўкі',
 
 	'UPDATE_DB_SUCCESS'				=> 'База дадзеных паспяхова абноўленая.',
+	'UPDATE_FILE_SUCCESS'			=> 'File update was successful.',
 	'USER_ACTIVE'					=> 'Актываваны карыстальнік',
 	'USER_INACTIVE'					=> 'Неактываваны карыстальнік',
 
@@ -2173,6 +2262,33 @@ $lang = array_merge($lang, array(
 	'TOPICS_TOPIC_TITLE'			=> 'Сардэчна запрашаем у phpBB3',
 ));
 
+#######language/en/migrator.php#######
+
+$lang = array_merge($lang, array(
+	'CONFIG_NOT_EXIST'					=> 'The config setting "%s" unexpectedly does not exist.',
+
+	'GROUP_NOT_EXIST'					=> 'The group "%s" unexpectedly does not exist.',
+
+	'MIGRATION_APPLY_DEPENDENCIES'		=> 'Apply dependencies of %s.',
+	'MIGRATION_DATA_DONE'				=> 'Installed Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_IN_PROGRESS'		=> 'Installing Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_RUNNING'			=> 'Installing Data: %s.',
+	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
+	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
+	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
+	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
+	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
+	'MODULE_NOT_EXIST'					=> 'A required module does not exist: %s',
+
+	'PERMISSION_NOT_EXIST'				=> 'The permission setting "%s" unexpectedly does not exist.',
+
+	'ROLE_NOT_EXIST'					=> 'The permission role "%s" unexpectedly does not exist.',
+));
+
 #######language/en/mcp.php#######
 
 $lang = array_merge($lang, array(
@@ -2193,6 +2309,10 @@ $lang = array_merge($lang, array(
 	'APPROVE_POST_CONFIRM'	=> 'Вы ўпэўненыя, што жадаеце ўхваліць гэтае паведамленне?',
 	'APPROVE_POSTS'			=> 'Ухваліць паведамленні',
 	'APPROVE_POSTS_CONFIRM'	=> 'Вы ўпэўненыя, што жадаеце ўхваліць вылучаныя паведамленні?',
+	'APPROVE_TOPIC'			=> 'Approve topic',
+	'APPROVE_TOPIC_CONFIRM'	=> 'Are you sure you want to approve this topic?',
+	'APPROVE_TOPICS'		=> 'Approve topics',
+	'APPROVE_TOPICS_CONFIRM'=> 'Are you sure you want to approve the selected topics?',
 
 	'CANNOT_MOVE_SAME_FORUM'=> 'Вы не можаце перамясціць тэму ў форум, у якім яна ўжо находзіцца.',
 	'CANNOT_WARN_ANONYMOUS'	=> 'Вы не можаце папярэдзіць незарэгістраванага карыстальніка.',
@@ -2213,16 +2333,12 @@ $lang = array_merge($lang, array(
 	'DELETE_PM_REPORTS'			=> 'Выдаліць скаргі на асабістыя паведамленні',
 	'DELETE_PM_REPORTS_CONFIRM'	=> 'Вы сапраўды жадаеце выдаліць скаргі на выбраныя асабістыя паведамленні?',
 	'DELETE_POSTS'				=> 'Выдаліць паведамленні',
-	'DELETE_POSTS_CONFIRM'		=> 'Вы ўпэўненыя, што жадаеце выдаліць гэтыя паведамленні?',
-	'DELETE_POST_CONFIRM'		=> 'Вы ўпэўненыя, што жадаеце выдаліць гэтае паведамленне?',
 	'DELETE_REPORT'				=> 'Выдаліць скаргу',
 	'DELETE_REPORT_CONFIRM'		=> 'Вы ўпэўненыя, што жадаеце выдаліць вылучаную скаргу?',
 	'DELETE_REPORTS'			=> 'Выдаліць скаргі',
 	'DELETE_REPORTS_CONFIRM'	=> 'Вы ўпэўненыя, што жадаеце выдаліць вылучаныя скаргі?',
 	'DELETE_SHADOW_TOPIC'		=> 'Выдаліць спасылку ў старым форуме',
 	'DELETE_TOPICS'				=> 'Выдаліць вылучаныя тэмы',
-	'DELETE_TOPICS_CONFIRM'		=> 'Вы ўпэўненыя, што жадаеце выдаліць гэтыя тэмы?',
-	'DELETE_TOPIC_CONFIRM'		=> 'Вы ўпэўненыя, што жадаеце выдаліць гэтую тэму?',
 	'DISAPPROVE'				=> 'Адхіліць',
 	'DISAPPROVE_REASON'			=> 'Чыннік адмовы',
 	'DISAPPROVE_POST'			=> 'Адхіліць паведамленне',
@@ -2260,8 +2376,6 @@ $lang = array_merge($lang, array(
 	'LATEST_WARNING_TIME'		=> 'Апошняе папярэджанне вынесенае',
 	'LATEST_WARNINGS'			=> 'Апошнія 5 папярэджанняў',
 	'LEAVE_SHADOW'				=> 'Пакінуць спасылку ў старым форуме',
-	'LIST_REPORT'				=> 'Нататак: 1',
-	'LIST_REPORTS'				=> 'Нататак: %d',
 	'LOCK'						=> 'Зачыніць',
 	'LOCK_POST_POST'			=> 'Заблакаваць паведамленне',
 	'LOCK_POST_POST_CONFIRM'	=> 'Вы ўпэўненыя, што жадаеце забараніць рэдагаванне гэтага паведамлення?',
@@ -2340,6 +2454,10 @@ $lang = array_merge($lang, array(
 	'MCP_QUEUE_UNAPPROVED_POSTS_EXPLAIN'	=> 'Гэта спіс усіх паведамленняў, якія патрабуюць ухвалы перад тым, як яны стануць бачныя карыстальнікам.',
 	'MCP_QUEUE_UNAPPROVED_TOPICS'			=> 'Тэмы',
 	'MCP_QUEUE_UNAPPROVED_TOPICS_EXPLAIN'	=> 'Гэта спіс усіх тэм, якія патрабуюць ухвалы перад тым, як яны стануць бачныя карыстальнікам.',
+	'MCP_QUEUE_DELETED_POSTS'				=> 'Deleted posts',
+	'MCP_QUEUE_DELETED_POSTS_EXPLAIN'		=> 'This is a list of all soft deleted posts. You can restore or permanently delete the posts from this screen.',
+	'MCP_QUEUE_DELETED_TOPICS'				=> 'Deleted topics',
+	'MCP_QUEUE_DELETED_TOPICS_EXPLAIN'		=> 'This is a list of all soft deleted topics. You can restore or permanently delete the topics from this screen.',
 
 	'MCP_VIEW_USER'			=> 'Прагляд папярэджанняў пэўнага карыстальніка',
 
@@ -2378,25 +2496,27 @@ $lang = array_merge($lang, array(
 	'NO_POST'						=> 'Вы павінны вылучыць паведамленне для таго, каб вынесці за яго папярэджанне карыстальніку.',
 	'NO_POST_REPORT'				=> 'Скарга на гэтае паведамленне не накіроўвалася.',
 	'NO_POST_SELECTED'				=> 'Вы павінны вылучыць хоць бы адно паведамленне для таго, каб вырабіць гэтае дзеянне.',
+	'NO_POSTS_DELETED'				=> 'There are no deleted posts.',
+	'NO_POSTS_QUEUE'				=> 'There are no posts waiting for approval.',
 	'NO_REASON_DISAPPROVAL'			=> 'Калі ласка, пакажыце прыдатны чыннік адхілення.',
 	'NO_REPORT'						=> 'Скарга не знойдзеная',
 	'NO_REPORTS'					=> 'Скарг не знойдзена',
 	'NO_REPORT_SELECTED'			=> 'Вы павінны вылучыць хоць бы адну скаргу для выканання гэтага дзеяння.',
 	'NO_TOPIC_ICON'					=> 'Не',
 	'NO_TOPIC_SELECTED'				=> 'Вы павінны вылучыць хоць бы адну тэму для таго, каб вырабіць гэтае дзеянне.',
+	'NO_TOPICS_DELETED'				=> 'There are no deleted topics.',
 	'NO_TOPICS_QUEUE'				=> 'Няма тэм, якія жывуць у нястачы ў праверцы мадэратара.',
 
 	'ONLY_TOPIC'			=> 'Толькі тэма «%s»',
 	'OTHER_USERS'			=> 'Іншыя карыстальнікі, якія адправілі паведамленні з гэтага IP-адраса',
 
+	'QUICKMOD_ACTION_NOT_ALLOWED' => "%s not allowed as quickmod",
+
 	'PM_REPORT_CLOSED_SUCCESS'	=> 'Абраная скарга на асабістае паведамленне паспяхова зачыненая.',
 	'PM_REPORT_DELETED_SUCCESS'	=> 'Абраная скарга на асабістае паведамленне паспяхова выдаленая.',
 	'PM_REPORTED_SUCCESS'		=> 'Скарга на гэта асабістае паведамленне паспяхова адпраўленая.',
-	'PM_REPORT_TOTAL'			=> 'Усяго скаргаў на асабістыя паведамленні: <strong>1</strong>.',
 	'PM_REPORTS_CLOSED_SUCCESS'	=> 'Вылучаныя скаргі на асабістыя паведамленні паспяхова закрыты.',
 	'PM_REPORTS_DELETED_SUCCESS'=> 'Вылучаныя скаргі на асабістыя паведамленні паспяхова выдаленыя.',
-	'PM_REPORTS_TOTAL'			=> 'Усяго скаргаў на асабістыя паведамленні: <strong>%d</strong>.',
-	'PM_REPORTS_ZERO_TOTAL'		=> 'Няма скаргаў на асабістыя паведамленні.',
 	'PM_REPORT_DETAILS'			=> 'Падрабязнасці аб скарзе на асабістае паведамленне',
 	'POSTER'					=> 'Аўтар',
 	'POSTS_APPROVED_SUCCESS'	=> 'Вылучаныя паведамленні былі ўхваленыя.',
@@ -2404,15 +2524,17 @@ $lang = array_merge($lang, array(
 	'POSTS_DISAPPROVED_SUCCESS'	=> 'Вылучаныя паведамленні былі адхіленыя.',
 	'POSTS_LOCKED_SUCCESS'		=> 'Вылучаныя паведамленні былі паспяхова зачыненыя.',
 	'POSTS_MERGED_SUCCESS'		=> 'Вылучаныя паведамленні былі аб\'яднаныя.',
-	'POSTS_UNLOCKED_SUCCESS'	=> 'Вылучаныя паведамленні былі паспяхова адчыненыя.',
 	'POSTS_PER_PAGE'			=> 'Паведамленняў на старонку',
 	'POSTS_PER_PAGE_EXPLAIN'	=> '(Усталюеце 0 для прагляду ўсіх паведамленняў.)',
+	'POSTS_RESTORED_SUCCESS'	=> 'The selected posts have been restored successfully.',
+	'POSTS_UNLOCKED_SUCCESS'	=> 'Вылучаныя паведамленні былі паспяхова адчыненыя.',
 	'POST_APPROVED_SUCCESS'		=> 'Вылучанае паведамленне было ўхвалена.',
 	'POST_DELETED_SUCCESS'		=> 'Вылучанае паведамленне было паспяхова выдаленае з базы дадзеных.',
 	'POST_DISAPPROVED_SUCCESS'	=> 'Вылучанае паведамленне было паспяхова адхілена.',
 	'POST_LOCKED_SUCCESS'		=> 'Паведамленне паспяхова заблакавана.',
 	'POST_NOT_EXIST'			=> 'Запытанае вамі паведамленне не існуе.',
 	'POST_REPORTED_SUCCESS'		=> 'Скарга на гэтае паведамленне была паспяхова адпраўленая.',
+	'POST_RESTORED_SUCCESS'		=> 'This post has been restored successfully.',
 	'POST_UNLOCKED_SUCCESS'		=> 'Паведамленне паспяхова разблакавана.',
 
 	'READ_USERNOTES'			=> 'Нататкі аб карыстальніках',
@@ -2423,8 +2545,6 @@ $lang = array_merge($lang, array(
 	'REPORTED_ON_DATE'			=> 'ад',
 	'REPORTS_CLOSED_SUCCESS'	=> 'Вылучаныя скаргі былі паспяхова зачыненыя.',
 	'REPORTS_DELETED_SUCCESS'	=> 'Вылучаныя скаргі былі паспяхова выдаленыя.',
-	'REPORTS_TOTAL'				=> 'Усяго маецца скарг для прагляду: <strong>%d</strong>.',
-	'REPORTS_ZERO_TOTAL'		=> 'Адсутнічаюць скаргі для прагляду.',
 	'REPORT_CLOSED'				=> 'Гэтая скарга ўжо была зачыненая.',
 	'REPORT_CLOSED_SUCCESS'		=> 'Вылучаная скарга была паспяхова зачыненая.',
 	'REPORT_DELETED_SUCCESS'	=> 'Вылучаная скарга была паспяхова выдаленая.',
@@ -2436,7 +2556,15 @@ $lang = array_merge($lang, array(
 	'REPORT_POST_EXPLAIN'		=> 'Выкарыстайце гэтую форму для адпраўкі скаргі на вылучанае паведамленне мадэратарам і адміністратарам форума. Скаргі звычайна выкарыстоўваюцца толькі ў выпадках, калі паведамленне парушае правілы форума.',
 	'REPORT_REASON'				=> 'Чыннік напрамку скаргі',
 	'REPORT_TIME'				=> 'Час напрамку скаргі',
-	'REPORT_TOTAL'				=> 'Усяго маецца скарг для прагляду: <strong>1</strong>.',
+	'RESTORE'					=> 'Restore',
+	'RESTORE_POST'				=> 'Restore post',
+	'RESTORE_POST_CONFIRM'		=> 'Are you sure you want to restore this post?',
+	'RESTORE_POSTS'				=> 'Restore posts',
+	'RESTORE_POSTS_CONFIRM'		=> 'Are you sure you want to restore the selected posts?',
+	'RESTORE_TOPIC'				=> 'Restore topic',
+	'RESTORE_TOPIC_CONFIRM'		=> 'Are you sure you want to restore this topic?',
+	'RESTORE_TOPICS'			=> 'Restore topics',
+	'RESTORE_TOPICS_CONFIRM'	=> 'Are you sure you want to restore the selected topics?',
 	'RESYNC'					=> 'Сінхранізаваць',
 	'RETURN_MESSAGE'			=> '%sВярнуцца да паведамлення%s',
 	'RETURN_NEW_FORUM'			=> '%sВярнуцца да новага форума%s',
@@ -2477,6 +2605,7 @@ $lang = array_merge($lang, array(
 	'TOPICS_FORKED_SUCCESS'		=> 'вылучаныя тэмы былі паспяхова скапіяваныя.',
 	'TOPICS_LOCKED_SUCCESS'		=> 'Вылучаныя тэмы былі зачыненыя.',
 	'TOPICS_MOVED_SUCCESS'		=> 'Вылучаныя тэмы былі паспяхова перамешчаныя.',
+	'TOPICS_RESTORED_SUCCESS'	=> 'The selected topics have been restored successfully.',
 	'TOPICS_RESYNC_SUCCESS'		=> 'Вылучаныя тэмы былі сінхранізаваныя.',
 	'TOPICS_TYPE_CHANGED'		=> 'Тыпы тэм паспяхова змененыя.',
 	'TOPICS_UNLOCKED_SUCCESS'	=> 'Вылучаныя тэмы былі адчыненыя.',
@@ -2487,6 +2616,7 @@ $lang = array_merge($lang, array(
 	'TOPIC_LOCKED_SUCCESS'		=> 'Вылучаная тэма была зачыненая.',
 	'TOPIC_MOVED_SUCCESS'		=> 'Вылучаная тэма была паспяхова перамешчаная.',
 	'TOPIC_NOT_EXIST'			=> 'Вылучаная вамі тэма не існуе.',
+	'TOPIC_RESTORED_SUCCESS'	=> 'The selected topic has been restored successfully.',
 	'TOPIC_RESYNC_SUCCESS'		=> 'Вылучаная тэма была сінхранізаваная.',
 	'TOPIC_SPLIT_SUCCESS'		=> 'Вылучаная тэма была паспяхова падзеленая.',
 	'TOPIC_TIME'				=> 'Час стварэння тэмы',
@@ -2494,9 +2624,6 @@ $lang = array_merge($lang, array(
 	'TOPIC_UNLOCKED_SUCCESS'	=> 'Вылучаная тэма была адчыненая.',
 	'TOTAL_WARNINGS'			=> 'Усяго папярэджанняў',
 
-	'UNAPPROVED_POSTS_TOTAL'		=> 'Паведамленняў, якія чакаюць ухвалы: <strong>%d</strong>.',
-	'UNAPPROVED_POSTS_ZERO_TOTAL'	=> 'Няма паведамленняў, якія чакаюць ухвалы.',
-	'UNAPPROVED_POST_TOTAL'			=> 'Паведамленняў, якія чакаюць ухвалы: <strong>1</strong>.',
 	'UNLOCK'						=> 'Адчыніць',
 	'UNLOCK_POST'					=> 'Разблакаваць паведамленне',
 	'UNLOCK_POST_EXPLAIN'			=> 'Дазволіць рэдагаванне',
@@ -2522,7 +2649,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'Гэтае папярэджанне, вынесенае вам адміністратарам або мадэратарам гэтай бачыны.[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'Вам вынесенае папярэджанне',
 	'WARNING_POST_DEFAULT'	=> 'Гэтае папярэджанне, якое адносіцца да наступнага вашага паведамлення: %s.',
-	'WARNINGS_ZERO_TOTAL'	=> 'Няма папярэджанняў.',
+	'NO_WARNINGS'	=> 'No warnings exist.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Вы вылучылі тэму нумар %d: %s.',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -2562,10 +2689,12 @@ $lang = array_merge($lang, array(
 	'ALL'					=> 'Усе',
 	'BEFORE'				=> 'да',
 	'CC_EMAIL'				=> 'Выслаць мне копію гэтага паведамлення.',
-	'CONTACT_USER'			=> 'Кантактная інфармацыя',
+	'CONTACT_ADMIN'			=> 'Contact a Board Administrator',
 
 	'DEST_LANG'				=> 'Мова',
 	'DEST_LANG_EXPLAIN'		=> 'Вылучыце мову атрымальніка паведамлення (калі даступны).',
+
+	'EDIT_PROFILE'			=> 'Edit Profile',
 
 	'EMAIL_BODY_EXPLAIN'	=> 'Паведамленне будзе адпраўленае ў выглядзе простага тэксту, не ўключайце ў яго HTML або BBCode. У якасці зваротнага адрасу будзе паказвацца ваш адрас email.',
 	'EMAIL_DISABLED'		=> 'Выбачайце, але ўсе функцыі, звязаныя з адпраўкай email, былі адключаныя.',
@@ -2575,7 +2704,9 @@ $lang = array_merge($lang, array(
 	'EMPTY_MESSAGE_EMAIL'	=> 'Вы павінны ўвесці тэкст паведамлення для адпраўкі.',
 	'EMPTY_MESSAGE_IM'		=> 'Вы павінны ўвесці тэкст паведамлення для адпраўкі.',
 	'EMPTY_NAME_EMAIL'		=> 'Вы павінны ўвесці сучаснасць імя атрымальніка.',
-	'EMPTY_SUBJECT_EMAIL'	=> 'Вы павінны паказаць тэму паведамлення.',
+	'EMPTY_SENDER_EMAIL'	=> 'You must provide a valid email address.',
+	'EMPTY_SENDER_NAME'		=> 'You must provide a name.',
+	'EMPTY_SUBJECT_EMAIL'	=> 'You must specify a subject for the email.',
 	'EQUAL_TO'				=> 'роўна',
 
 	'FIND_USERNAME_EXPLAIN'	=> 'Тут вы можаце ажыццявіць пошук пэўных карыстальнікаў. Не абавязкова запаўняць усе палі. Для пошуку па шаблоне выкарыстайце *. Пры ўводзе дат ужывайце фармат <kbd>ГГГГ-ММ-ДД</kbd>, напрыклад, <samp>2004-02-29</samp>. Адзначце галачкай аднаго або больш карыстальнікаў (калі папярэдняя форма дапушчае множны выбар) і націсніце кнопку "Вылучыць адзначаных", каб вярнуцца назад.',
@@ -2585,16 +2716,10 @@ $lang = array_merge($lang, array(
 	'HIDE_MEMBER_SEARCH'	=> 'Схаваць пошук карыстальнікаў',
 
 	'IM_ADD_CONTACT'		=> 'Дадаць у спіс кантактаў',
-	'IM_AIM'				=> 'Улічыце, што для гэтага вам неабходная ўсталяваная праграма AOL Instant Messenger.',
-	'IM_AIM_EXPRESS'		=> 'AIM Express',
 	'IM_DOWNLOAD_APP'		=> 'Запампаваць прыкладанне',
-	'IM_ICQ'				=> 'Улічыце, што карыстальнік мог адключыць прыём імгненных паведамленняў ад невядомых кантактаў.',
 	'IM_JABBER'				=> 'Улічыце, што карыстальнік мог адключыць прыём імгненных паведамленняў ад невядомых кантактаў.',
 	'IM_JABBER_SUBJECT'		=> 'Гэта аўтаматычна згенераванае паведамленне, на яго не трэба адказваць! Паведамленне ад карыстальніка %1$s з %2$s.',
 	'IM_MESSAGE'			=> 'Ваша паведамленне',
-	'IM_MSNM'				=> 'Улічыце, што для гэтага вам неабходная ўсталяваная праграма Windows Messenger.',
-	'IM_MSNM_BROWSER'		=> 'Ваш браўзэр не падтрымлівае гэтую функцыю.',
-	'IM_MSNM_CONNECT'		=> 'Кліент MSNM не адказвае.\nДля працягу неабходна ўсталяваць сувязь з кліентам.',
 	'IM_NAME'				=> 'Ваша імя',
 	'IM_NO_DATA'			=> 'Для гэтага карыстальніка адсутнічае кантактная інфармацыя.',
 	'IM_NO_JABBER'			=> 'Выбачайце, адпраўка напроста паведамленняў карыстальнікам Jabber не падтрымліваецца серверам. Каб звязацца з гэтым карыстальнікам вам неабходны ўсталяваны кліент Jabber.',
@@ -2606,15 +2731,15 @@ $lang = array_merge($lang, array(
 
 	'LAST_ACTIVE'				=> 'Апошняе наведванне',
 	'LESS_THAN'					=> 'менш',
-	'LIST_USER'					=> 'Карыстальнікаў: 1',
-	'LIST_USERS'				=> 'Карыстальнікаў: %d',
-	'LOGIN_EXPLAIN_LEADERS'		=> 'Для прагляду спісу нашай каманды вы павінны быць аўтарызаваныя.',
+	'LOGIN_EXPLAIN_TEAM'		=> 'The board requires you to be registered and logged in to view the team listing.',
 	'LOGIN_EXPLAIN_MEMBERLIST'	=> 'Для прагляду спісу карыстальнікаў вы павінны быць аўтарызаваныя.',
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'Для пошуку карыстальнікаў вы павінны быць аўтарызаваныя.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'Для прагляду профіляў вы павінны быць аўтарызаваныя.',
 
 	'MORE_THAN'				=> 'больш',
 
+	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
+	'NO_CONTACT_PAGE'		=> 'The board administrator contact page has been disabled.',
 	'NO_EMAIL'				=> 'Вам не дазволена пасылаць email гэтаму карыстальніку.',
 	'NO_VIEW_USERS'			=> 'У вас няма доступу да спісу карыстальнікаў.',
 
@@ -2631,12 +2756,12 @@ $lang = array_merge($lang, array(
 
 	'SELECT_MARKED'			=> 'Вылучыць адзначаных',
 	'SELECT_SORT_METHOD'	=> 'Поле сартавання',
-	'SEND_AIM_MESSAGE'		=> 'Адправіць AIM-паведамленне',
+	'SENDER_EMAIL_ADDRESS'	=> 'Your email address',
+	'SENDER_NAME'			=> 'Your name',
 	'SEND_ICQ_MESSAGE'		=> 'Адправіць ICQ-паведамленне',
 	'SEND_IM'				=> 'Адправіць імгненнае паведамленне',
 	'SEND_JABBER_MESSAGE'	=> 'Адправіць Jabber-паведамленне',
 	'SEND_MESSAGE'			=> 'Адправіць',
-	'SEND_MSNM_MESSAGE'		=> 'Адправіць MSNM/WLM-паведамленне',
 	'SEND_YIM_MESSAGE'		=> 'Адправіць YIM-паведамленне',
 	'SORT_EMAIL'			=> 'email',
 	'SORT_LAST_ACTIVE'		=> 'Апошняе наведванне',
@@ -2644,12 +2769,18 @@ $lang = array_merge($lang, array(
 
 	'USERNAME_BEGINS_WITH'	=> 'Імя карыстальніка пачынаецца з',
 	'USER_ADMIN'			=> 'Адміністраваць',
-	'USER_BAN'				=> 'Забанены',
+	'USER_BAN'				=> 'Ban one or more users by username',
 	'USER_FORUM'			=> 'Статыстыка карыстальніка',
 	'USER_ONLINE'			=> 'У сеткі',
 	'USER_PRESENCE'			=> 'Прысутнасць на канферэнцыі',
+	'USERS_PER_PAGE'		=> 'Users per page',
 
 	'VIEWING_PROFILE'		=> 'Профіль карыстальніка %s',
+	'VIEW_FACEBOOK_PROFILE'	=> 'View Facebook Profile',
+	'VIEW_SKYPE_PROFILE'	=> 'View Skype Profile',
+	'VIEW_TWITTER_PROFILE'	=> 'View Twitter Profile',
+	'VIEW_YOUTUBE_CHANNEL'	=> 'View YouTube Channel',
+	'VIEW_GOOGLEPLUS_PROFILE' => 'View Google+ Profile',
 	'VISITED'				=> 'Апошняе наведванне',
 
 	'WWW'					=> 'Сайт',
@@ -2674,6 +2805,47 @@ $lang = array_merge($lang, array(
 	'USER_COMM_RANK'	=> 'Overall reviews:',
 	'USER_COMM_PERCENT'	=> 'Overall assessment of the user:',
 
+));
+
+#######language/en/plupload.php#######
+
+$lang = array_merge($lang, array(
+	'PLUPLOAD_ADD_FILES'		=> 'Add files',
+	'PLUPLOAD_ADD_FILES_TO_QUEUE'	=> 'Add files to the upload queue and click the start button.',
+	'PLUPLOAD_ALREADY_QUEUED'	=> '%s already present in the queue.',
+	'PLUPLOAD_CLOSE'			=> 'Close',
+	'PLUPLOAD_DRAG'				=> 'Drag files here.',
+	'PLUPLOAD_DUPLICATE_ERROR'	=> 'Duplicate file error.',
+	'PLUPLOAD_DRAG_TEXTAREA'	=> 'You may also attach files by dragging and dropping them in the message box.',
+	'PLUPLOAD_ERR_INPUT'		=> 'Failed to open input stream.',
+	'PLUPLOAD_ERR_MOVE_UPLOADED'	=> 'Failed to move uploaded file.',
+	'PLUPLOAD_ERR_OUTPUT'		=> 'Failed to open output stream.',
+	'PLUPLOAD_ERR_FILE_TOO_LARGE'	=> 'File too large:',
+	'PLUPLOAD_ERR_FILE_COUNT'	=> 'File count error.',
+	'PLUPLOAD_ERR_FILE_INVALID_EXT'	=> 'Invalid file extension:',
+	'PLUPLOAD_ERR_RUNTIME_MEMORY'	=> 'Runtime ran out of available memory.',
+	'PLUPLOAD_ERR_UPLOAD_URL'	=> 'Upload URL might be wrong or does not exist.',
+	'PLUPLOAD_EXTENSION_ERROR'	=> 'File extension error.',
+	'PLUPLOAD_FILE'				=> 'File: %s',
+	'PLUPLOAD_FILE_DETAILS'		=> 'File: %s, size: %d, max file size: %d',
+	'PLUPLOAD_FILENAME'			=> 'Filename',
+	'PLUPLOAD_FILES_QUEUED'		=> '%d files queued',
+	'PLUPLOAD_GENERIC_ERROR'	=> 'Generic error.',
+	'PLUPLOAD_HTTP_ERROR'		=> 'HTTP error.',
+	'PLUPLOAD_IMAGE_FORMAT'		=> 'Image format either wrong or not supported.',
+	'PLUPLOAD_INIT_ERROR'		=> 'Init error.',
+	'PLUPLOAD_IO_ERROR'			=> 'IO error.',
+	'PLUPLOAD_NOT_APPLICABLE'	=> 'N/A',
+	'PLUPLOAD_SECURITY_ERROR'	=> 'Security error.',
+	'PLUPLOAD_SELECT_FILES'		=> 'Select files',
+	'PLUPLOAD_SIZE'				=> 'Size',
+	'PLUPLOAD_SIZE_ERROR'		=> 'File size error.',
+	'PLUPLOAD_STATUS'			=> 'Status',
+	'PLUPLOAD_START_UPLOAD'		=> 'Start upload',
+	'PLUPLOAD_START_CURRENT_UPLOAD'	=> 'Start uploading queue',
+	'PLUPLOAD_STOP_UPLOAD'		=> 'Stop upload',
+	'PLUPLOAD_STOP_CURRENT_UPLOAD'	=> 'Stop current upload',
+	'PLUPLOAD_UPLOADED'			=> 'Uploaded %d/%d files',
 ));
 
 #######language/en/portal.php#######
@@ -2919,12 +3091,12 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s <em>ВЫКЛЮЧАНЫ</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s <em>УКЛЮЧАНЫ</em>',
 	'BBCODE_I_HELP'				=> 'Нахільны тэкст: [i]text[/i]',
-	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]',
 	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
 	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Уставіць малюнак: [img]http://image_url[/img]',
 	'BBCODE_Q_HELP'				=> 'Цытата: [quote]text[/quote]',
-	'BBCODE_S_HELP'				=> 'Колер шрыфта: [color=red]text[/color] Парада: Вы можаце выкарыстаць таксама канструкцыю color=#FF0000',
+	'BBCODE_S_HELP'				=> 'Font colour: [color=red]text[/color] or [color=#FF0000]text[/color]',
 	'BBCODE_U_HELP'				=> 'Падкрэслены тэкст: [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'Уставіць спасылку: [url]http://url[/url] або [url=http://url]URL text[/url]',
 	'BUMP_ERROR'				=> 'Вы не можаце паднімаць тэму адразу пасля апошняга паведамлення. Паспрабуйце ледзь пазней.',
@@ -2943,8 +3115,20 @@ $lang = array_merge($lang, array(
 	'DELETE_MESSAGE'			=> 'Выдаліць паведамленне',
 	'DELETE_MESSAGE_CONFIRM'	=> 'Вы ўпэўненыя, што жадаеце выдаліць гэтае паведамленне?',
 	'DELETE_OWN_POSTS'			=> 'Выбачайце, але вы можаце выдаляць толькі вашы ўласныя паведамленні.',
+	'DELETE_PERMANENTLY'		=> 'Delete permanently',
 	'DELETE_POST_CONFIRM'		=> 'Вы ўпэўненыя, што жадаеце выдаліць гэтае паведамленне?',
-	'DELETE_POST_WARN'			=> 'Выдаленае паведамленне аднавіць немагчыма',
+	'DELETE_POST_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this post?',
+	'DELETE_POST_PERMANENTLY'	=> 'Permanently delete this post so it can not be recovered',
+	'DELETE_POSTS_CONFIRM'		=> 'Вы ўпэўненыя, што жадаеце выдаліць гэтыя паведамленні?',
+	'DELETE_POSTS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these posts?',
+	'DELETE_REASON'				=> 'Reason for deleting this topic',
+	'DELETE_REASON_EXPLAIN'		=> 'The specified reason for deletion will be visible to moderators.',
+	'DELETE_POST_WARN'			=> 'Delete this post',
+	'DELETE_TOPIC_CONFIRM'		=> 'Вы ўпэўненыя, што жадаеце выдаліць гэтую тэму?',
+	'DELETE_TOPIC_PERMANENTLY'	=> 'Permanently delete this topic so it can not be recovered',
+	'DELETE_TOPIC_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this topic?',
+	'DELETE_TOPICS_CONFIRM'		=> 'Вы ўпэўненыя, што жадаеце выдаліць гэтыя тэмы?',
+	'DELETE_TOPICS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these topics?',
 	'DISABLE_BBCODE'			=> 'Адключыць у гэтым паведамленні BBCode',
 	'DISABLE_MAGIC_URL'			=> 'Не ператвараць адрасы URL у спасылкі',
 	'DISABLE_SMILIES'			=> 'Адключыць у гэтым паведамленні смайлікі',
@@ -2987,13 +3171,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_QUOTE'		=> 'Вам неабходна аўтарызавацца для цытавання паведамленняў у гэтым форуме.',
 	'LOGIN_EXPLAIN_REPLY'		=> 'Вам неабходна аўтарызавацца, каб адказваць у тэмах у гэтым форуме.',
 
-	'MAX_FONT_SIZE_EXCEEDED'	=> 'Вы можаце выкарыстаць шрыфты памерам не больш %1$d.',
-	'MAX_FLASH_HEIGHT_EXCEEDED'	=> 'Вашы флэш-файлы павінны быць не больш %1$d пікс. у вышыню.',
-	'MAX_FLASH_WIDTH_EXCEEDED'	=> 'Вашы флэш-файлы павінны быць не больш %1$d пікс. у шырыню.',
-	'MAX_IMG_HEIGHT_EXCEEDED'	=> 'Вашы малюнкі павінны быць не больш %1$d пікс. у вышыню.',
-	'MAX_IMG_WIDTH_EXCEEDED'	=> 'Вашы малюнкі павінны быць не больш %1$d пікс. у шырыню.',
-
-	'MESSAGE_BODY_EXPLAIN'		=> 'Увядзіце тэкст вашага паведамлення. Даўжыня паведамлення ў знаках не больш: <strong>%d</strong>.',
+	'MAX_FONT_SIZE_EXCEEDED'	=> 'You may only use fonts up to size %d.',
 	'MESSAGE_DELETED'			=> 'Паведамленне было паспяхова выдаленае.',
 	'MORE_SMILIES'				=> 'Яшчэ смайлікі…',
 
@@ -3016,8 +3194,6 @@ $lang = array_merge($lang, array(
 	'POLL_MAX_OPTIONS'			=> 'Варыянтаў адказу',
 	'POLL_MAX_OPTIONS_EXPLAIN'	=> 'Колькасць варыянтаў адказу, дазволеных пры галасаванні.',
 	'POLL_OPTIONS'				=> 'Варыянты адказу',
-	'POLL_OPTIONS_EXPLAIN'		=> 'Размесціце кожны варыянт адказу ў новым радку. Максімальная колькасць варыянтаў: <strong>%d</strong>.',
-	'POLL_OPTIONS_EDIT_EXPLAIN'	=> 'Размесціце кожны варыянт адказу ў новым радку. Максімальная колькасць варыянтаў: <strong>%d</strong>. Калі вы выдаліце або дадасце новы варыянт адказу вынікі галасавання абнуляцца.',
 	'POLL_QUESTION'				=> 'Пытанне',
 	'POLL_TITLE_TOO_LONG'		=> 'Назоў апытання павінна ўтрымоўваць менш 100 знакаў.',
 	'POLL_TITLE_COMP_TOO_LONG'	=> 'Назоў апытання занадта доўгае, паспрабуйце паменшыць колькасць BBCode або смайлікаў.',
@@ -3027,9 +3203,9 @@ $lang = array_merge($lang, array(
 	'POST_APPROVAL_NOTIFY'		=> 'Вы будзеце апавешчаныя аб ухвале вашага паведамлення.',
 	'POST_CONFIRMATION'			=> 'Пацверджанне адпраўкі',
 	'POST_CONFIRM_EXPLAIN'		=> 'Для прадухілення аўтаматычнага размяшчэння паведамленняў, на гэтай канферэнцыі неабходна ўвесці код пацверджання. Код адлюстраваны на малюначку ніжэй. Калі з-за дрэннага зроку або па іншых чынніках вы не можаце прачытаць код на малюначку, звяжыцеся з %sадміністратарам%s',
-	'POST_DELETED'				=> 'Паведамленне было паспяхова выдаленае.',
-	'POST_EDITED'				=> 'Паведамленне было паспяхова адрэдагавана.',
-	'POST_EDITED_MOD'			=> 'Паведамленне было паспяхова адрэдагавана, але павінна быць ухвалена мадэратарам да таго, як будзе адлюстравана на канферэнцыі.',
+	'POST_DELETED'				=> 'This post has been deleted.',
+	'POST_EDITED'				=> 'This post has been edited successfully.',
+	'POST_EDITED_MOD'			=> 'This post has been edited successfully, but it will need to be approved by a moderator before it is publicly viewable.',
 	'POST_GLOBAL'				=> 'Важная',
 	'POST_ICON'					=> 'Значок',
 	'POST_NORMAL'				=> 'Звычайная',
@@ -3042,8 +3218,9 @@ $lang = array_merge($lang, array(
 	'POST_TOPIC_AS'				=> 'Статут ствараемай тэмы',
 	'PROGRESS_BAR'				=> 'Індыкатар загрузкі',
 
-	'QUOTE_DEPTH_EXCEEDED'		=> 'Максімальна дапушчальная колькасць укладзеных адно ў другое цытат у паведамленні: %1$d.',
+	'QUOTE_NO_NESTING'			=> 'You may not embed quotes within each other.',
 
+	'REMOTE_UPLOAD_TIMEOUT'		=> 'The specified file could not be uploaded because the request timed out.',
 	'SAVE'						=> 'Захаваць',
 	'SAVE_DATE'					=> 'Апошняя змена',
 	'SAVE_DRAFT'				=> 'Захаваць чарнавік',
@@ -3060,8 +3237,6 @@ $lang = array_merge($lang, array(
 	'TOO_FEW_POLL_OPTIONS'		=> 'Неабходна ўвесці, прынамсі, два варыянту адказу ў апытанні.',
 	'TOO_MANY_ATTACHMENTS'		=> 'Укладанне немагчыма, бо ў паведамленні дасягнута іх максімальная колькасць: <b>%d</b>.',
 	'TOO_MANY_CHARS'			=> 'Ваша паведамленне занадта доўгае.',
-	'TOO_MANY_CHARS_POST'		=> 'Ваша паведамленне ўтрымоўвае занадта шмат сімвалаў: %1$d. Максімальная дазволеная колькасць: %2$d.',
-	'TOO_MANY_CHARS_SIG'		=> 'Ваш подпіс утрымоўвае занадта шмат сімвалаў: %1$d. Максімальная дазволеная колькасць: %2$d.',
 	'TOO_MANY_POLL_OPTIONS'		=> 'Вы вылучылі занадта шмат варыянтаў адказу ў апытанні.',
 	'TOO_MANY_SMILIES'			=> 'Ваша паведамленне ўтрымоўвае занадта шмат смайлікаў. Максімальная дазволеная колькасць: %d.',
 	'TOO_MANY_URLS'				=> 'Ваша паведамленне ўтрымоўвае занадта шмат спасылак URL. Максімальная дазволеная колькасць: %d.',
@@ -3070,6 +3245,8 @@ $lang = array_merge($lang, array(
 
 	'UNAUTHORISED_BBCODE'		=> 'Вы не можаце выкарыстаць некаторыя BBCode: %s.',
 	'UNGLOBALISE_EXPLAIN'		=> 'Для таго, каб змяніць статут тэмы з важнай на звычайную, вы павінны вылучыць форум, у якім яна будзе апублікаваная.',
+	'UNSUPPORTED_CHARACTERS_MESSAGE'	=> 'Your message contains the following unsupported characters:<br />%s',
+	'UNSUPPORTED_CHARACTERS_SUBJECT'	=> 'Your subject contains the following unsupported characters:<br />%s',
 	'UPDATE_COMMENT'			=> 'Абнавіць каментар',
 	'URL_INVALID'				=> 'Паказаны вамі адрас файла недапушчальны.',
 	'URL_NOT_FOUND'				=> 'Паказаны файл не знойдзены.',
@@ -3084,8 +3261,8 @@ $lang = array_merge($lang, array(
 	'VIEW_MESSAGE'				=> '%sПраглядзець ваша паведамленне%s',
 	'VIEW_PRIVATE_MESSAGE'		=> '%sПраглядзець адпраўленыя вамі асабістыя паведамленні%s',
 
-	'WRONG_FILESIZE'			=> 'Занадта вялікі памер укладання. <br/>Максімальны дазволены памер: %1d %2s.',
-	'WRONG_SIZE'				=> 'Памеры малюнка павінны быць не меней %1$d?%2$d і не больш %3$d?%4$d. Памер адпраўленага малюнка - %5$d?%6$d. Усе памеры паказаныя ў піксэлах.',
+	'WRONG_FILESIZE'			=> 'The file is too big, maximum allowed size is %1$d %2$s.',
+	'WRONG_SIZE'				=> 'The image must be at least %1$s wide, %2$s high and at most %3$s wide and %4$s high. The submitted image is %5$s wide and %6$s high.',
 
 	'FONT_TYPE'			=> 'Typeface',
 	'FONT_COLOR'			=> 'Колер шрыфта',
@@ -3105,10 +3282,6 @@ $lang = array_merge($lang, array(
 
 	'DISPLAY_RESULTS'		=> 'Паказваць вынікі як',
 
-	'FOUND_SEARCH_MATCH'		=> 'Вынікаў пошуку: %d',
-	'FOUND_SEARCH_MATCHES'		=> 'Вынікаў пошуку: %d',
-	'FOUND_MORE_SEARCH_MATCHES'	=> 'Вынікаў пошуку больш за %d',
-
 	'GLOBAL'				=> 'Важная',
 
 	'IGNORED_TERMS'			=> 'праігнараваныя',
@@ -3120,24 +3293,23 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_UNREADSEARCH'=> 'Вы павінны быць зарэгістраваныя і аўтарызаваныя ў сістэме для прагляду непрачытаных паведамленняў.',
 	'LOGIN_EXPLAIN_NEWPOSTS'	=> 'Вы павінны быць зарэгістраваныя ў сістэме і аўтарызаваныя для прагляду новых паведамленняў з моманту вашага апошняга наведвання.',
 
-	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> 'Вы паказалі занадта шмат слоў для пошуку. Колькасць такіх слоў не павінна перавышаць %1$d.',
-
-	'NO_KEYWORDS'			=> 'Для пошуку вы павінны ўвесці, як мінімум, адно слова. Даўжыня кожнага слова павінна быць не меней %d і не больш %d знакаў, выключаючы знак шаблону *.',
+	'NO_KEYWORDS'			=> 'You must specify at least one word to search for. Each word must consist of at least %s and must not contain more than %s excluding wildcards.',
 	'NO_RECENT_SEARCHES'	=> 'За апошні час пошукавых запытаў не было.',
 	'NO_SEARCH'				=> 'Выбачайце, але вам забароненае карыстацца пошукам.',
 	'NO_SEARCH_RESULTS'		=> 'Прыдатных тэм або паведамленняў не знойдзена.',
-	'NO_SEARCH_TIME'		=> 'Вы не можаце вырабіць пошук адразу пасля папярэдняга. Калі ласка, паспрабуйце ледзь пазней.',
 	'NO_SEARCH_UNREADS'		=> 'Выбачайце, але пошук непрачытаных паведамленняў адключаны на гэтым форуме.',
 	'WORD_IN_NO_POST'		=> 'Прыдатных паведамленняў не знойдзена, паколькі слова <strong>%s</strong> нідзе не сустракаецца.',
 	'WORDS_IN_NO_POST'		=> 'Прыдатных паведамленняў не знойдзена, паколькі словы <strong>%s</strong> нідзе не сустракаюцца.',
 
 	'POST_CHARACTERS'		=> 'знакаў паведамленняў',
+	'PHRASE_SEARCH_DISABLED'	=> 'Searching by exact phrase is not supported on this board.',
 
 	'RECENT_SEARCHES'		=> 'Апошнія пошукавыя запыты',
 	'RESULT_DAYS'			=> 'Шукаць паведамленні за',
 	'RESULT_SORT'			=> 'Поле сартавання',
 	'RETURN_FIRST'			=> 'Паказваць першыя',
 	'RETURN_TO_SEARCH_ADV'	=> 'Вярнуцца да пашыранага пошуку',
+	'GO_TO_SEARCH_ADV'	=> 'Go to advanced search',
 
 	'SEARCHED_FOR'				=> 'Пошукавы запыт',
 	'SEARCHED_TOPIC'			=> 'Пошук у тэме',
@@ -3164,10 +3336,11 @@ $lang = array_merge($lang, array(
 	'SORT_FORUM'				=> 'Форум',
 	'SORT_POST_SUBJECT'			=> 'Загаловак паведамлення',
 	'SORT_TIME'					=> 'Час размяшчэння',
+	'SPHINX_SEARCH_FAILED'		=> 'Search failed: %s',
+	'SPHINX_SEARCH_FAILED_LOG'	=> 'Sorry, search could not be performed. More information about this failure has been logged in the error log.',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
 	'SELECT_ALL_TAGS'		=> 'No selection',
-	'TOO_FEW_AUTHOR_CHARS'	=> 'Вы павінны ўвесці не меней %d знакаў імя аўтара.',
 ));
 
 #######language/en/ucp.php#######
@@ -3223,6 +3396,7 @@ $lang = array_merge($lang, array(
 	'ATTACHMENTS_EXPLAIN'			=> 'Гэта спіс укладанняў у паведамленнях, пакінутых на гэтай канферэнцыі.',
 	'ATTACHMENTS_DELETED'			=> 'Укладанні паспяхова выдаленыя.',
 	'ATTACHMENT_DELETED'			=> 'Укладанне паспяхова выдаленае.',
+	'AUTOLOGIN_SESSION_KEYS_DELETED'=> 'The selected "Remember Me" login keys were successfully deleted.',
 	'AVATAR_CATEGORY'				=> 'Катэгорыя',
 	'AVATAR_DRIVER_GRAVATAR_TITLE'	=> 'Gravatar',
 	'AVATAR_DRIVER_GRAVATAR_EXPLAIN'=> 'Gravatar is a service that allows you to maintain the same avatar across multiple websites. Visit <a href="http://www.gravatar.com/">Gravatar</a> for more information.',
@@ -3232,12 +3406,14 @@ $lang = array_merge($lang, array(
 	'AVATAR_DRIVER_REMOTE_EXPLAIN'	=> 'Link to avatar images from another website.',
 	'AVATAR_DRIVER_UPLOAD_TITLE'	=> 'Upload avatar',
 	'AVATAR_DRIVER_UPLOAD_EXPLAIN'	=> 'Upload your own custom avatar.',
-	'AVATAR_EXPLAIN'				=> 'Максімальныя памеры ў піксэлах; шырыня: %1$d, вышыня: %2$d, памер файла: %3$dКб.',
+	'AVATAR_EXPLAIN'				=> 'Maximum dimensions; width: %1$s, height: %2$s, file size: %3$.2f KiB.',
 	'AVATAR_FEATURES_DISABLED'		=> 'Аватары ў цяперашні час адключаныя.',
 	'AVATAR_GALLERY'				=> 'Галерэя аватар',
 	'AVATAR_GENERAL_UPLOAD_ERROR'	=> 'Немагчыма запампаваць аватару ў %s.',
 	'AVATAR_NOT_ALLOWED'			=> 'Ваша аватара не можа быць адлюстраваная, паколькі аватары забароненыя.',
 	'AVATAR_PAGE'					=> 'Старонка',
+	'AVATAR_SELECT'					=> 'Select your avatar',
+	'AVATAR_TYPE'					=> 'Avatar type',
 	'AVATAR_TYPE_NOT_ALLOWED'		=> 'Ваша дзеючая аватара не можа быць адлюстраваная, паколькі яе тып забаронены.',
 
 	'BACK_TO_DRAFTS'			=> 'Вярнуцца да захаваных чарнавікоў',
@@ -3246,7 +3422,6 @@ $lang = array_merge($lang, array(
 	'BIRTHDAY_EXPLAIN'			=> 'Калі вы пакажаце год нараджэння, ваш узрост будзе адлюстроўвацца на форуме.',
 	'BOARD_DATE_FORMAT'			=> 'Фармат даты',
 	'BOARD_DATE_FORMAT_EXPLAIN'	=> 'Сінтаксіс ідэнтычны функцыі <a href="http://www.php.net/date">date()</a> мовы PHP.',
-	'BOARD_DST'					=> 'Зараз дзейнічае летні час',
 	'BOARD_LANGUAGE'			=> 'Мова',
 	'BOARD_STYLE'				=> 'Стыль канферэнцыі',
 	'BOARD_TIMEZONE'			=> 'Гадзінны пояс',
@@ -3265,8 +3440,6 @@ $lang = array_merge($lang, array(
 	'CLICK_RETURN_FOLDER'		=> '%1$sВернуться ў папку «%3$s»%2$s',
 	'CONFIRMATION'				=> 'Пацверджанне рэгістрацыі',
 	'CONFIRM_CHANGES'			=> 'Пацвердзіце змены',
-	'CONFIRM_EMAIL'				=> 'Пацвердзіце email',
-	'CONFIRM_EMAIL_EXPLAIN'		=> 'Паказвайце email толькі калі вы жадаеце яго памяняць.',
 	'CONFIRM_EXPLAIN'			=> 'Для прадухілення аўтаматычных рэгістрацый на канферэнцыі патрабуецца ўвесці код пацверджання. Код паказаны на малюначку, якая находзіцца ніжэй. Калі вы не бачыце код на малюначку, то звернецеся да %sадминистратору%s.',
 	'VC_REFRESH'				=> 'Абнавіць код пацверджання',
 	'VC_REFRESH_EXPLAIN'		=> 'Калі немагчыма прачытаць дадзены код, вы можаце запытаць новы, націснуўшы на гэтую кнопку.',
@@ -3275,7 +3448,7 @@ $lang = array_merge($lang, array(
 	'CONFIRM_PASSWORD_EXPLAIN'	=> 'Паказвайце пароль толькі калі вы змянілі яго вышэй.',
 	'COPPA_BIRTHDAY'			=> 'Для працягу рэгістрацыі, калі ласка, пакажыце дату нараджэння.',
 	'COPPA_COMPLIANCE'			=> 'Згода па COPPA',
-	'COPPA_EXPLAIN'				=> 'Улічыце, што ваш уліковы запіс будзе створаны пасля адпраўкі формы. Тым не менш, ён не будзе актываваны датуль, пакуль бацька або апякун не ўхваліць вашу рэгістрацыю. Вам будзе высланая копія email з неабходнай формай і ўказаннямі, куды яе трэба адправіць.',
+	'COPPA_EXPLAIN'				=> 'Please note that clicking submit will create your account. However it cannot be activated until a parent or guardian approves your registration. You will be e-mailed a copy of the necessary form with details of where to send it.',
 	'CREATE_FOLDER'				=> 'Дадаць папку…',
 	'CURRENT_IMAGE'				=> 'Дзеючы малюнак',
 	'CURRENT_PASSWORD'			=> 'Дзеючы пароль',
@@ -3330,27 +3503,34 @@ $lang = array_merge($lang, array(
 	'EXPORT_FOLDER'				=> 'Гэты спіс',
 
 	'FIELD_REQUIRED'					=> 'Не запоўнена поле «%s».',
-	'FIELD_TOO_SHORT'					=> 'Значэнне поля «%1$s» занадта кароткае, мінімальна дапушчальная даўжыня складае %2$d знакаў.',
-	'FIELD_TOO_LONG'					=> 'Значэнне поля «%1$s» занадта доўгае, максімальна дапушчальная даўжыня складае %2$d знакаў.',
-	'FIELD_TOO_SMALL'					=> 'Значэнне поля «%1$s» занадта маленькае, мінімальна дапушчальным значэннем з\'яўляецца %2$d.',
-	'FIELD_TOO_LARGE'					=> 'Значэнне поля «%1$s» занадта вялікае, максімальна дапушчальным значэннем з\'яўляецца %2$d.',
+
+	'FIELD_TOO_SMALL'					=> 'The value of “%2$s” is too small, a minimum value of %1$d is required.',
+	'FIELD_TOO_LARGE'					=> 'The value of “%2$s” is too large, a maximum value of %1$d is allowed.',
+	'FIELD_INVALID_CHARS_INVALID'		=> 'The field “%s” has invalid characters.',
 	'FIELD_INVALID_CHARS_NUMBERS_ONLY'	=> 'Поле «%s» утрымоўвае недапушчальныя знакі, дазволеныя толькі лічбы.',
+	'FIELD_INVALID_CHARS_ALPHA_DOTS'	=> 'The field “%s” has invalid characters, only alphanumeric or . characters are allowed.',
 	'FIELD_INVALID_CHARS_ALPHA_ONLY'	=> 'Поле «%s» утрымоўвае недапушчальныя знакі, дазволеныя толькі літарна-лічбавыя знакі.',
-	'FIELD_INVALID_CHARS_SPACERS_ONLY'	=> 'Поле «%s» утрымоўвае недапушчальныя знакі, дазволеныя толькі літарна-лічбавыя знакі, прабелы, а таксама знакі -+_[].',
+	'FIELD_INVALID_CHARS_ALPHA_PUNCTUATION'	=> 'The field “%s” has invalid characters, only alphanumeric or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_ALPHA_SPACERS'	=> 'The field “%s” has invalid characters, only alphanumeric, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_ALPHA_UNDERSCORE'	=> 'The field “%s” has invalid characters, only alphanumeric or _ characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_DOTS'	=> 'The field “%s” has invalid characters, only letter, number or . characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_ONLY'	=> 'The field “%s” has invalid characters, only letter and number characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_PUNCTUATION'	=> 'The field “%s” has invalid characters, only letter, number or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_SPACERS'		=> 'The field “%s” has invalid characters, only letter, number, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_UNDERSCORE'		=> 'The field “%s” has invalid characters, only letter, number or _ characters are allowed.',
 	'FIELD_INVALID_DATE'				=> 'Поле «%s» змяшчае недапушчальную дату.',
+	'FIELD_INVALID_URL'					=> 'The field “%s” has an invalid url.',
 	'FIELD_INVALID_VALUE'				=> 'Поле «%s» змяшчае недапушчальнае значэнне.',
 
 	'FOE_MESSAGE'				=> 'Паведамленне ад злосніка',
 	'FOES_EXPLAIN'				=> 'Злоснікі - гэта карыстальнікі, якія будуць ігнаравацца па змаўчанні. Паведамленні гэтых карыстальнікаў будуць утоеныя. Аднак, асабістыя паведамленні ад злоснікаў дазволеныя. Улічыце, што вы не можаце ігнараваць мадэратараў або адміністратараў.',
 	'FOES_UPDATED'				=> 'Спіс злоснікаў быў паспяхова абноўлены.',
 	'FOLDER_ADDED'				=> 'Папка была паспяхова дададзеная.',
-	'FOLDER_MESSAGE_STATUS'		=> '%1$d з %2$d паведамленняў',
 	'FOLDER_NAME_EMPTY'			=> 'Неабходна ўвесці імя для гэтай папкі.',
 	'FOLDER_NAME_EXIST'			=> 'Папка <strong>%s</strong> ужо існуе.',
 	'FOLDER_OPTIONS'			=> 'Уласцівасці папкі',
 	'FOLDER_RENAMED'			=> 'Папка была паспяхова пераназваная.',
 	'FOLDER_REMOVED'			=> 'Папка была паспяхова выдаленая.',
-	'FOLDER_STATUS_MSG'			=> 'Папка запоўненая на %1$d%% (%2$d з %3$d паведамленняў)',
 	'FORWARD_PM'				=> 'Пераслаць АП',
 	'FORCE_PASSWORD_EXPLAIN'	=> 'Для далейшага выкарыстання канферэнцыі вам неабходна змяніць свой пароль.',
 	'FRIEND_MESSAGE'			=> 'Паведамленне ад сябра',
@@ -3419,16 +3599,35 @@ $lang = array_merge($lang, array(
 	'MOVE_DELETED_MESSAGES_TO'		=> 'Перамясціць паведамленні з выдаляемай папкі ў папку',
 	'MOVE_DOWN'						=> 'Ссунуць уніз',
 	'MOVE_MARKED_TO_FOLDER'			=> 'Перамясціць адзначаныя ў папку %s',
-	'MOVE_PM_ERROR'					=> 'Падчас перамяшчэння паведамленняў у новую папку адбылася памылка, перанесена паведамленняў: %1d з %2d.',
 	'MOVE_TO_FOLDER'				=> 'Перамясціць у папку',
 	'MOVE_UP'						=> 'Ссунуць уверх',
 
-	'NEW_EMAIL_CONFIRM_EMPTY'		=> 'Вы не ўвялі пацверджанне адрасу email.',
-	'NEW_EMAIL_ERROR'				=> 'Уведзеныя вамі адрасы email не супадаюць.',
 	'NEW_FOLDER_NAME'				=> 'Новае імя папкі',
 	'NEW_PASSWORD'					=> 'Новы пароль',
 	'NEW_PASSWORD_CONFIRM_EMPTY'	=> 'Вы не ўвялі пацверджанне пароля.',
 	'NEW_PASSWORD_ERROR'			=> 'Уведзеныя вамі паролі не супадаюць.',
+
+	'NOTIFICATIONS_MARK_ALL_READ'						=> 'Mark all notifications read',
+	'NOTIFICATIONS_MARK_ALL_READ_CONFIRM'				=> 'Are you sure you want to mark all notifications read?',
+	'NOTIFICATIONS_MARK_ALL_READ_SUCCESS'				=> 'All notifications have been marked read.',
+	'NOTIFICATION_GROUP_MISCELLANEOUS'					=> 'Miscellaneous Notifications',
+	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
+	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
+	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'E-mail',
+	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
+	'NOTIFICATION_TYPE'									=> 'Notification type',
+	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
+	'NOTIFICATION_TYPE_GROUP_REQUEST'					=> 'Someone requests to join a group you lead',
+	'NOTIFICATION_TYPE_IN_MODERATION_QUEUE'				=> 'A post or topic needs approval',
+	'NOTIFICATION_TYPE_MODERATION_QUEUE'				=> 'Your topics/posts are approved or disapproved by a moderator',
+	'NOTIFICATION_TYPE_PM'								=> 'Someone sends you a private message',
+	'NOTIFICATION_TYPE_POST'							=> 'Someone replies to a topic to which you are subscribed',
+	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
+	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
+	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+
 	'NOTIFY_METHOD'					=> 'Спосаб апавяшчэння',
 	'NOTIFY_METHOD_BOTH'			=> 'Абодва спосабу',
 	'NOTIFY_METHOD_EMAIL'			=> 'Толькі email',
@@ -3446,10 +3645,9 @@ $lang = array_merge($lang, array(
 	'NOT_ADDED_FOES_SELF'			=> 'Вы не можаце дадаць самога сябе ў спіс злоснікаў.',
 	'NOT_AGREE'						=> 'Я не згодзен з гэтымі ўмовамі',
 	'NOT_ENOUGH_SPACE_FOLDER'		=> 'Папка-атрымальнік «%s» запоўненая. Запытанае дзеянне не было выканана.',
-	'NOT_MOVED_MESSAGE'				=> 'Папка з вашымі асабістымі паведамленнямі запоўненая. Адкладзеных паведамленняў: 1.',
-	'NOT_MOVED_MESSAGES'			=> 'Папка з вашымі асабістымі паведамленнямі запоўненая. Адкладзеных паведамленняў: %d.',
 	'NO_ACTION_MODE'				=> 'Не вылучана дзеянне для паведамлення.',
 	'NO_AUTHOR'						=> 'Не паказаны аўтар паведамлення',
+	'NO_AVATAR'						=> 'No avatar selected',
 	'NO_AVATAR_CATEGORY'			=> 'Не',
 
 	'NO_AUTH_DELETE_MESSAGE'		=> 'У вас няма доступу да выдалення асабістых паведамленняў.',
@@ -3457,6 +3655,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_FORWARD_MESSAGE'		=> 'У вас няма доступу да перасылання асабістых паведамленняў.',
 	'NO_AUTH_GROUP_MESSAGE'			=> 'У вас няма доступу да адпраўкі асабістых паведамленняў у групы.',
 	'NO_AUTH_PASSWORD_REMINDER'		=> 'У вас няма доступу да атрымання новага пароля.',
+	'NO_AUTH_PROFILEINFO'			=> 'You are not authorised to change your profile information.',
 	'NO_AUTH_READ_HOLD_MESSAGE'		=> 'У вас няма доступу да чытання адкладзеных асабістых паведамленняў.',
 	'NO_AUTH_READ_MESSAGE'			=> 'У вас няма доступу да чытання асабістых паведамленняў.',
 	'NO_AUTH_READ_REMOVED_MESSAGE'	=> 'Вы не можаце прачытаць гэтае паведамленне, таму што яно было выдаленае яго аўтарам.',
@@ -3487,10 +3686,10 @@ $lang = array_merge($lang, array(
 	'NO_WATCHED_SELECTED'		=> 'Вы не вылучылі тэм або форумаў, на якія падпісаныя.',
 	'NO_WATCHED_TOPICS'			=> 'Вы не падпісаныя на якія-небудзь тэмы.',
 
-	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Пароль павінен быць даўжынёй ад %1$d да %2$d знакаў, утрымоўваць літары розных рэгістраў і лічбы.',
-	'PASS_TYPE_ANY_EXPLAIN'		=> 'Павінен быць даўжынёй ад %1$d да %2$d знакаў.',
-	'PASS_TYPE_CASE_EXPLAIN'	=> 'Пароль павінен быць даўжынёй ад %1$d да %2$d знакаў і ўтрымоўваць літары розных рэгістраў.',
-	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Пароль павінен быць даўжынёй ад %1$d да %2$d знакаў і ўтрымоўваць літары розных рэгістраў, лічбы і знакі.',
+	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case and must contain numbers.',
+	'PASS_TYPE_ANY_EXPLAIN'		=> 'Must be between %1$s and %2$s.',
+	'PASS_TYPE_CASE_EXPLAIN'	=> 'Password must be between %1$s and %2$s long and must contain letters in mixed case.',
+	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case, must contain numbers and must contain symbols.',
 	'PASSWORD'					=> 'Пароль',
 	'PASSWORD_ACTIVATED'		=> 'Ваш новы пароль актываваны.',
 	'PASSWORD_UPDATED'			=> 'Ваш новы пароль паспяхова адпраўлены на ваш адрас email.',
@@ -3501,13 +3700,16 @@ $lang = array_merge($lang, array(
 	'PM_FROM_REMOVED_AUTHOR'	=> 'Гэтае паведамленне ад ужо незарэгістраванага карыстальніка.',
 	'PM_ICON'					=> 'Значок АП',
 	'PM_INBOX'					=> 'Уваходныя',
+	'PM_MARK_ALL_READ'			=> 'Mark all messages read',
+	'PM_MARK_ALL_READ_SUCCESS'	=> 'All private messages in this folder have been marked read',
 	'PM_NO_USERS'				=> 'Запытваемыя для дадання карыстальнікі не існуюць.',
 	'PM_OUTBOX'					=> 'Выходныя',
 	'PM_SENTBOX'				=> 'Адпраўленыя',
 	'PM_SUBJECT'				=> 'Тэма паведамлення',
 	'PM_TO'						=> 'Каму',
+	'PM_TOOLS'					=> 'Message tools',
+	'PM_USERS_REMOVED_NO_PERMISSION'	=> 'Some users couldn’t be added as they do not have permission to read private messages.',
 	'PM_USERS_REMOVED_NO_PM'	=> 'Некаторыя карыстальнікі не могуць быць дададзеныя, бо яны адключылі атрыманне асабістых паведамленняў.',
-	'POPUP_ON_PM'				=> 'Усплывальнае акно пры атрыманні асабістага паведамлення',
 	'POST_EDIT_PM'				=> 'Рэдагаваць',
 	'POST_FORWARD_PM'			=> 'Пераслаць',
 	'POST_NEW_PM'				=> 'Стварыць паведамленне',
@@ -3519,6 +3721,8 @@ $lang = array_merge($lang, array(
 	'PREFERENCES_UPDATED'		=> 'Вашы налады абноўленыя.',
 	'PROFILE_INFO_NOTICE'		=> 'Калі ласка, падушыце, што гэтая інфармацыя можа быць даступная іншым карыстальнікам. Будзьце асцярожныя пры выбары паказваных персанальных дадзеных. Любыя палі, пазначаныя * павінны быць запоўненыя.',
 	'PROFILE_UPDATED'			=> 'Ваш профіль абноўлены.',
+	'PROFILE_AUTOLOGIN_KEYS'	=> 'The "Remember Me" login keys automatically log you in when you visit the board. If you logout, the remember me login key is deleted only on the computer you are using to logout. Here you can see remember login keys created on other computers you used to access this site.',
+	'PROFILE_NO_AUTOLOGIN_KEYS'	=> 'There are no saved "Remember Me" login keys.',
 
 	'RECIPIENT'							=> 'Атрымальнік',
 	'RECIPIENTS'						=> 'Атрымальнікі',
@@ -3543,8 +3747,6 @@ $lang = array_merge($lang, array(
 	'RULE_DELETED'						=> 'Правіла паспяхова выдаленае.',
 	'RULE_LIMIT_REACHED'				=> 'Немагчыма дадаць правіла, паколькі дасягнута максімальна магчымае колькасць правілаў.',
 	'RULE_NOT_DEFINED'					=> 'Правіла паказана некарэктна.',
-	'RULE_REMOVED_MESSAGE'				=> 'Фільтрамі АП было выдаленае асабістых паведамленняў: 1',
-	'RULE_REMOVED_MESSAGES'				=> 'Фільтрамі АП было выдаленае асабістых паведамленняў: %d',
 
 	'SAME_PASSWORD_ERROR'		=> 'Уведзены вамі новы пароль супадае з вашым дзеючым.',
 	'SEARCH_YOUR_POSTS'			=> 'Паказаць вашы паведамленні',
@@ -3556,6 +3758,8 @@ $lang = array_merge($lang, array(
 	'SIGNATURE_TOO_LONG'		=> 'Вы ўвялі занадта доўгі подпіс.',
 	'SELECT_CURRENT_TIME'		=> 'Select current time',
 	'SELECT_TIMEZONE'			=> 'Select timezone',
+	'SELECT_CURRENT_TIME'		=> 'Select current time',
+	'SELECT_TIMEZONE'			=> 'Select timezone',
 	'SORT'						=> 'Сартаваць',
 	'SORT_COMMENT'				=> 'Каментары',
 	'SORT_DOWNLOADS'			=> 'Запампоўкі',
@@ -3565,15 +3769,28 @@ $lang = array_merge($lang, array(
 	'SORT_SIZE'					=> 'Памер',
 
 	'TIMEZONE'					=> 'Гадзінны пояс',
-	'TO'						=> 'Каму',
+	'TIMEZONE_DATE_SUGGESTION'	=> 'Suggestion: %s',
+	'TIMEZONE_INVALID'			=> 'The timezone you selected is invalid.',
+	'TO'						=> 'Recipient',
+	'TO_MASS'					=> 'Recipients',
+	'TO_ADD'					=> 'Add recipient',
+	'TO_ADD_MASS'				=> 'Add recipients',
+	'TO_ADD_GROUPS'				=> 'Add groups',
 	'TOO_MANY_RECIPIENTS'		=> 'Вы паспрабавалі адправіць асабістае паведамленне занадта вялікай колькасці атрымальнікаў.',
 	'TOO_MANY_REGISTERS'		=> 'Вы вычарпалі лімітавую колькасць спроб рэгістрацыі для дадзенай сесіі. Паўторыце спробу пазней.',
 
 	'UCP'						=> 'Асабісты раздзел',
 	'UCP_ACTIVATE'				=> 'Актываваць уліковы запіс',
 	'UCP_ADMIN_ACTIVATE'		=> 'Звернеце ўвагу на тое, што вы павінны ўвесці правільны адрас электроннай пошты перад актывацыяй. Адміністратар праверыць ваш уліковы запіс і адправіць на паказаны адрас ліст, якb змяшчае спасылку для актывацыі ўліковага запісу.',
-	'UCP_AIM'					=> 'AIM',
 	'UCP_ATTACHMENTS'			=> 'Укладанні',
+	'UCP_AUTH_LINK'				=> 'External accounts',
+	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
+	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
+	'UCP_AUTH_LINK_LINK'		=> 'Спасылка',
+	'UCP_AUTH_LINK_MANAGE'		=> 'Manage external account associations',
+	'UCP_AUTH_LINK_NOT_SUPPORTED'	=> 'Linking board accounts to external services is not supported by this board’s current authentication method.',
+	'UCP_AUTH_LINK_TITLE'		=> 'Manage your external account associations',
+	'UCP_AUTH_LINK_UNLINK'		=> 'Unlink',
 	'UCP_AUTH_LINK'				=> 'External accounts',
 	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
 	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
@@ -3585,8 +3802,8 @@ $lang = array_merge($lang, array(
 	'UCP_COPPA_BEFORE'			=> 'Да %s',
 	'UCP_COPPA_ON_AFTER'		=> '%s і пасля',
 	'UCP_EMAIL_ACTIVATE'		=> 'Звернеце ўвагу на тое, што вы павінны ўвесці правільны адрас электроннай пошты перад актывацыяй. На паказаны вамі адрас прыйдзе ліст, які змяшчае спасылку для актывацыі ўліковага запісу.',
-	'UCP_ICQ'					=> 'ICQ',
 	'UCP_JABBER'				=> 'Jabber',
+	'UCP_LOGIN_LINK'			=> 'Set up an external account association',
 
 	'UCP_MAIN'					=> 'Агляд',
 	'UCP_MAIN_ATTACHMENTS'		=> 'Укладанні',
@@ -3595,7 +3812,6 @@ $lang = array_merge($lang, array(
 	'UCP_MAIN_FRONT'			=> 'Пачатак',
 	'UCP_MAIN_SUBSCRIBED'		=> 'Падпіскі',
 
-	'UCP_MSNM'					=> 'WL/MSN Messenger',
 	'UCP_NO_ATTACHMENTS'		=> 'Вы не стварылі не аднаго ўкладанні.',
 
 	'UCP_NOTIFICATION_LIST'				=> 'Manage notifications',
@@ -3612,8 +3828,6 @@ $lang = array_merge($lang, array(
 	'UCP_PM_COMPOSE'			=> 'Новае паведамленне',
 	'UCP_PM_DRAFTS'				=> 'Кіраванне чарнавікамі',
 	'UCP_PM_OPTIONS'			=> 'Правілы, папкі і налады',
-	'UCP_PM_POPUP'				=> 'Асабістыя паведамленні',
-	'UCP_PM_POPUP_TITLE'		=> 'Усплывальнае акно аб новым асабістым паведамленні',
 	'UCP_PM_UNREAD'				=> 'Непрачытаныя паведамленні',
 	'UCP_PM_VIEW'				=> 'Прагляд паведамленняў',
 
@@ -3628,11 +3842,11 @@ $lang = array_merge($lang, array(
 	'UCP_USERGROUPS_MEMBER'		=> 'Удзел у групах',
 	'UCP_USERGROUPS_MANAGE'		=> 'Кіраванне групамі',
 
+	'UCP_PASSWORD_RESET_DISABLED'	=> 'The password reset functionality has been disabled. If you need help accessing your account, please contact the %sBoard Administrator%s',
 	'UCP_REGISTER_DISABLE'			=> 'Стварэнне новага ўліковага запісу на дзеючы момант немагчыма.',
 	'UCP_REMIND'					=> 'Адправіць пароль',
 	'UCP_RESEND'					=> 'Паслаць ліст для актывацыі ўліковага запісу',
 	'UCP_WELCOME'					=> 'Сардэчна запрашаем у ваш асабісты раздзел. Адгэтуль вы можаце праглядаць і змяняць налады, інфармацыю аб сабе і падпіску на форумы і тэмы. Таксама, калі вам гэта дазволена, вы можаце пасылаць асабістыя паведамленні (АП) іншым карыстальнікам. Перад тым як працягнуць, упэўніцеся, што вы прачыталі ўсе аб\'явы адміністрацыі.',
-	'UCP_YIM'						=> 'Yahoo Messenger',
 	'UCP_ZEBRA'						=> 'Сябры і злоснікі',
 	'UCP_ZEBRA_FOES'				=> 'Спіс злоснікаў',
 	'UCP_ZEBRA_FRIENDS'				=> 'Спіс сяброў',
@@ -3642,12 +3856,12 @@ $lang = array_merge($lang, array(
 	'UPLOAD_AVATAR_FILE'			=> 'Загрузіць з вашага кампутара',
 	'UPLOAD_AVATAR_URL'				=> 'Загрузіць з URL',
 	'UPLOAD_AVATAR_URL_EXPLAIN'		=> 'Увядзіце URL па якім находзіцца файл з малюнкам. Яно будзе скапіявана на гэтую бачыну.',
-	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Імя карыстальніка павінна быць ад %1$d да %2$d знакаў і павінна ўтрымоўваць толькі літары.',
-	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Імя карыстальніка павінна быць ад %1$d да %2$d знакаў і павінна ўтрымоўваць толькі літары, прабел або знакі -+_[]',
-	'USERNAME_ASCII_EXPLAIN'		=> 'Імя карыстальніка павінна быць ад %1$d да %2$d знакаў і павінна ўтрымоўваць толькі знакі ASCII, без адмысловых знакаў.',
-	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Імя карыстальніка павінна быць ад %1$d да %2$d знакаў і павінна ўтрымоўваць толькі літары або лічбы.',
-	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Імя карыстальніка павінна быць ад %1$d да %2$d знакаў і павінна ўтрымоўваць толькі літары, лічбы, прабел або знакі -+_[]',
-	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Імя карыстальніка павінна быць ад %1$d і да %2$d знакаў.',
+	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only alphanumeric characters.',
+	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use alphanumeric, space or -+_[] characters.',
+	'USERNAME_ASCII_EXPLAIN'		=> 'Username must be between %1$s and %2$s long and use only ASCII characters, so no special symbols.',
+	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only letter or number characters.',
+	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use letter, number, space or -+_[] characters.',
+	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Length must be between %1$s and %2$s.',
 	'USERNAME_TAKEN_USERNAME'		=> 'Выбачайце, карыстальнік з такім імем ужо існуе',
 	'USERNAME_DISALLOWED_USERNAME'	=> 'Уведзенае вамі імя карыстальніка было забароненае або ўтрымоўвае забароненае слова. Вылучыце іншае імя.',
 	'USER_NOT_FOUND_OR_INACTIVE'	=> 'Уведзенае вамі імя карыстальніка не знойдзена, альбо дадзены карыстальнік яшчэ не прайшоў працэдуру актывацыі.',
@@ -3660,10 +3874,9 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_PM'				=> 'Наступнае АП',
 	'VIEW_PM'					=> 'Праглядзець асабістае паведамленне',
 	'VIEW_PM_INFO'				=> 'Інфармацыя',
-	'VIEW_PM_MESSAGE'			=> 'Паведамленняў: 1',
-	'VIEW_PM_MESSAGES'			=> 'Паведамленняў: %d',
 	'VIEW_PREVIOUS_HISTORY'		=> 'Папярэдняе АП у архіве',
 	'VIEW_PREVIOUS_PM'			=> 'Папярэдняе АП',
+	'VIEW_PROFILE'				=> 'View profile',
 	'VIEW_SIGS'					=> 'Паказваць подпісы',
 	'VIEW_SMILIES'				=> 'Замяняць смайлікі малюнкамі',
 	'VIEW_TOPICS_DAYS'			=> 'Паказваць тэмы за',
@@ -3771,8 +3984,6 @@ $lang = array_merge($lang, array(
 	'UNREAD_POSTS_LOCKED'	=> 'Непрачытаныя паведамленні [ Тэма зачыненая ]',
 
 	'VIEW_FORUM'			=> 'Прагляд форума',
-	'VIEW_FORUM_TOPIC'		=> '1 тэма',
-	'VIEW_FORUM_TOPICS'		=> 'Тэм: %d',
 
 	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
 	'REMOVE_FILTER'		=> 'Remove filter',
@@ -3781,6 +3992,7 @@ $lang = array_merge($lang, array(
 #######language/en/viewtopic.php#######
 
 $lang = array_merge($lang, array(
+	'APPROVE'								=> 'Ухваліць',
 	'ATTACHMENT'						=> 'Укладанне',
 	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'Функцыя ўкладанняў адключаная.',
 
@@ -3793,14 +4005,13 @@ $lang = array_merge($lang, array(
 	'BUMP_TOPIC'			=> 'Падняць тэму',
 
 	'CODE'					=> 'Код',
-	'COLLAPSE_QR'			=> 'Схаваць хуткі адказ',
-
+	
 	'DELETE_TOPIC'			=> 'Выдаліць тэму',
+	'DELETED_INFORMATION'	=> 'Deleted by %1$s on %2$s',
+	'DISAPPROVE'					=> 'Адхіліць',
 	'DOWNLOAD_NOTICE'		=> 'У вас няма неабходных правоў для прагляду ўкладанняў у гэтым паведамленьні.',
 
-	'EDITED_TIMES_TOTAL'	=> 'Апошні раз рэдагавалася %1$s %2$s, усяго рэдагавалася %3$d раз(а).',
-	'EDITED_TIME_TOTAL'		=> 'Апошні раз рэдагавалася %1$s %2$s, усяго рэдагавалася %3$d раз.',
-	'EMAIL_TOPIC'			=> 'Паведаміць сябру',
+	'EMAIL_TOPIC'			=> 'E-mail topic',
 	'ERROR_NO_ATTACHMENT'	=> 'Вылучанае ўкладанне больш не існуе.',
 
 	'FILE_NOT_FOUND_404'	=> 'Файл <strong>%s</strong> не існуе.',
@@ -3815,8 +4026,6 @@ $lang = array_merge($lang, array(
 	'MAKE_GLOBAL'				=> 'Зрабіць важнай',
 	'MAKE_NORMAL'				=> 'Зрабіць звычайнай',
 	'MAKE_STICKY'				=> 'Зрабіць прылепленай',
-	'MAX_OPTIONS_SELECT'		=> 'Можна вылучыць да <strong>%d</strong> варыянтаў адказаў.',
-	'MAX_OPTION_SELECT'			=> 'Можна вылучыць <strong>1</strong> варыянт адказу.',
 	'MISSING_INLINE_ATTACHMENT'	=> 'Укладанне <strong>%s</strong> больш недаступна.',
 	'MOVE_TOPIC'				=> 'Перамясціць тэму',
 
@@ -3830,6 +4039,7 @@ $lang = array_merge($lang, array(
 	'POLL_ENDED_AT'			=> 'Апытанне скончыўся %s',
 	'POLL_RUN_TILL'			=> 'Апытанне праводзіцца да %s',
 	'POLL_VOTED_OPTION'		=> 'Вы галасавалі за гэты варыянт',
+	'POST_DELETED_RESTORE'	=> 'This post has been deleted. It can be restored.',
 	'PRINT_TOPIC'			=> 'Версія для друку',
 
 	'QUICK_MOD'				=> 'Хуткія дзеянні',
@@ -3837,11 +4047,14 @@ $lang = array_merge($lang, array(
 	'QUOTE'					=> 'Цытата',
 
 	'REPLY_TO_TOPIC'		=> 'Адказаць на тэму',
+	'RESTORE'				=> 'Restore',
+	'RESTORE_TOPIC'			=> 'Restore topic',
 	'RETURN_POST'			=> '%sВярнуцца да паведамлення%s',
 
 	'SHOW_QR'				=> 'Хуткі адказ',
 	'SUBMIT_VOTE'			=> 'Прагаласаваць',
 
+	'TOPIC_TOOLS'			=> 'Topic tools',
 	'TOTAL_VOTES'			=> 'Усяго галасоў',
 
 	'UNLOCK_TOPIC'			=> 'Адчыніць тэму',
@@ -3850,10 +4063,7 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_TOPIC'		=> 'След. тэма',
 	'VIEW_PREVIOUS_TOPIC'	=> 'Прад. тэма',
 	'VIEW_RESULTS'			=> 'Вынікі галасавання',
-	'VIEW_TOPIC_POST'		=> '1 паведамленне',
-	'VIEW_TOPIC_POSTS'		=> 'Паведамленняў: %d',
 	'VIEW_UNREAD_POST'		=> 'Першае новае паведамленне',
-	'VISIT_WEBSITE'			=> 'Перайсці на бачыну',
 	'VOTE_SUBMITTED'		=> 'Дзякуй, ваш голас улічаны.',
 	'VOTE_CONVERTED'		=> 'Змена галасоў у сканвертаваных апытаннях не падтрымліваецца.',
 
@@ -9443,6 +9653,7 @@ $lang = array_merge($lang, array(
 	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'	=> 'Максімальны памер усіх укладанняў, якія карыстальнік можа захоўваць у папцы асабістых паведамленняў. Значэнне 0 адпавядае неабмежаванаму памеру.',
 	'ATTACH_ORPHAN_URL'					=> 'Страчаныя ўкладанні',
 	'ATTACH_POST_ID'					=> 'ID паведамленні',
+	'ATTACH_POST_TYPE'					=> 'Post type',
 	'ATTACH_QUOTA'						=> 'Агульная квота ўкладанняў',
 	'ATTACH_QUOTA_EXPLAIN'				=> 'Максімальна даступная дыскавая прастора для ўкладанняў. Значэнне 0 адпавядае неабмежаванаму памеру.',
 	'ATTACH_TO_POST'					=> 'Прымацаваць файл да паведамлення',
@@ -9488,6 +9699,9 @@ $lang = array_merge($lang, array(
 	'EXT_GROUP_REAL_MEDIA'			=> 'Real Media',
 	'EXT_GROUP_WINDOWS_MEDIA'		=> 'Windows Media',
 
+	'FILES_GONE'			=> 'Some of the attachments you selected for deletion do not exist. They may have been already deleted. Attachments that did exist were deleted.',
+	'FILES_STATS_WRONG'		=> 'Your file statistics are likely inaccurate and need to be resynchronised. Actual values: number of attachments = %1$d, total size of attachments = %2$s.<br />Click %3$shere%4$s to resynchronise them.',
+
 	'GO_TO_EXTENSIONS'		=> 'Перайсці на старонку кіравання пашырэннямі',
 	'GROUP_NAME'			=> 'Назоў групы',
 
@@ -9511,6 +9725,7 @@ $lang = array_merge($lang, array(
 	'NOT_ALLOWED_IN_PM'			=> 'Група пашырэнняў дазволеная толькі ў паведамленнях',
 	'NOT_ALLOWED_IN_PM_POST'	=> 'Група пашырэнняў забароненая',
 	'NOT_ASSIGNED'				=> 'Не прызначаная',
+	'NO_ATTACHMENTS'			=> 'No attachments found for this period.',
 	'NO_EXT_GROUP'				=> 'Не',
 	'NO_EXT_GROUP_NAME'			=> 'Не паказана імя групы',
 	'NO_EXT_GROUP_SPECIFIED'	=> 'Не паказаная група пашырэнняў.',
@@ -9523,6 +9738,10 @@ $lang = array_merge($lang, array(
 	'ONLY_ALLOWED_IN_PM'	=> 'Група пашырэнняў дазволеная толькі ў асабістых паведамленнях',
 	'ORDER_ALLOW_DENY'		=> 'Дазволіць',
 	'ORDER_DENY_ALLOW'		=> 'Забараніць',
+
+	'REMOVE_ALLOWED_IPS'			=> 'Выдаленне або выдаленне з выключаных <em>дазволеных</em> IP-адрасоў або вузлоў',
+	'REMOVE_DISALLOWED_IPS'			=> 'Выдаленне або выдаленне з выключаных <em>забароненых</em> IP-адрасоў або вузлоў',
+	'RESYNC_FILES_STATS_CONFIRM'	=> 'Are you sure you wish to resynchronise file statistics?',
 
 	'REMOVE_ALLOWED_IPS'		=> 'Выдаленне або выдаленне з выключаных <em>дазволеных</em> IP-адрасоў або вузлоў',
 	'REMOVE_DISALLOWED_IPS'		=> 'Выдаленне або выдаленне з выключаных <em>забароненых</em> IP-адрасоў або вузлоў',
@@ -9592,18 +9811,17 @@ $lang = array_merge($lang, array(
 	'PERMANENT'		=> 'Бестэрмінова',
 
 	'UNTIL'						=> 'Да даты',
-	'USER_BAN'					=> 'Забанены',
+	'USER_BAN'					=> 'Ban one or more users by username',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> 'Выключыць уведзеных карыстальнікаў з чорнага спісу.',
 	'USER_BAN_EXPLAIN'			=> 'Уводзіце кожнае імя на новым радку. Выкарыстайце спасылку <span style="text-decoration: underline;">Знайсці карыстальніка</span> для пошуку і аўтаматычнага дадання карыстальнікаў.',
 	'USER_NO_BANNED'			=> 'Чорны спіс карыстальнікаў пусты',
-	'USER_UNBAN'				=> 'Разблакаваць доступ карыстальнікам або выдаліць карыстальнікаў з белага спісу',
+	'USER_UNBAN'				=> 'Un-ban or un-exclude users by username',
 	'USER_UNBAN_EXPLAIN'		=> 'За адзін раз можна разблакаваць (або выдаліць з белага спісу) некалькі імёнаў, вылучыўшы іх з дапамогай адпаведнай камбінацыі мышы і клавіятуры вашага кампутара і браўзэра. Імёны з белага спісу вылучаныя адмысловым колерам.',
 ));
 
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'				=> 'Зараз дзейнічае летні час (<abbr title="Летні час">DST</abbr>)',
 	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
 	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
 	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
@@ -9629,16 +9847,28 @@ $lang = array_merge($lang, array(
 	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Тут вы можаце ўсталяваць агульныя параметры канферэнцыі, даць ёй імя і апісанне, а таксама паказаць гадзінны пояс і мова, якія будуць выкарыстоўвацца па змаўчанні.',
+	'BOARD_INDEX_TEXT'				=> 'Board index text',
+	'BOARD_INDEX_TEXT_EXPLAIN'		=> 'This text is displayed as the board index in the board’s breadcrumbs. If not specified, it will default to “Board index”.',
+	'BOARD_STYLE'					=> 'Стыль канферэнцыі',
 	'CUSTOM_DATEFORMAT'				=> 'Іншы…',
 	'DEFAULT_DATE_FORMAT'			=> 'Фармат даты',
 	'DEFAULT_DATE_FORMAT_EXPLAIN'	=> 'Сінтаксіс ідэнтычны функцыі <code><a href="http://www.php.net/date">date</code></a> мовы PHP.',
 	'DEFAULT_LANGUAGE'				=> 'Мова канферэнцыі па змаўчанні',
 	'DEFAULT_STYLE'					=> 'Стыль канферэнцыі па змаўчанні',
+	'DEFAULT_STYLE_EXPLAIN'			=> 'The default style is <strong>%1$s (%2$s)</strong> which is the overriden style for all users (including bots).',
 	'DISABLE_BOARD'					=> 'Адключыць канферэнцыю',
-	'DISABLE_BOARD_EXPLAIN'			=> 'Канферэнцыя стане недаступнай для карыстальнікаў. Таксама вы можаце ўвесці кароткае паведамленне (да 255 знакаў) для наведвальнікаў.',
+	'DISABLE_BOARD_EXPLAIN'			=> 'This will make the board unavailable to users who are neither administrators nor moderators. You can also enter a short (255 character) message to display if you wish.',
+	'DISPLAY_LAST_SUBJECT'			=> 'Display subject of last added post on forum list',
+	'DISPLAY_LAST_SUBJECT_EXPLAIN'	=> 'The subject of the last added post will be displayed in the forum list with a hyperlink to the post. Subjects from password protected forums and forums in which user doesn’t have read access are not shown.',
+	'GUEST_STYLE'					=> 'Guest style',
+	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Замяняць стыль карыстальніка',
 	'OVERRIDE_STYLE_EXPLAIN'		=> 'Стыль, вылучаны карыстальнікам, будзе заменены стылем па змаўчанні.',
 	'SITE_DESC'						=> 'Апісанне канферэнцыі',
+	'SITE_HOME_TEXT'				=> 'Main website text',
+	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
+	'SITE_HOME_URL'					=> 'Main website URL',
+	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Імя канферэнцыі',
 	'SYSTEM_TIMEZONE'				=> 'Гадзінны пояс па змаўчанні',
 	'WARNINGS_EXPIRE'				=> 'Працягласць папярэджання',
@@ -9678,6 +9908,7 @@ $lang = array_merge($lang, array(
 
 	'ALLOW_AVATARS'					=> 'Дазволіць аватары',
 	'ALLOW_AVATARS_EXPLAIN'			=> 'Глабальнае ўключэнне або адключэнне магчымасці выкарыстання аватар. <br /> Заўвага: калі вы адключыце аватары ў цэлым або забараніцк выкарыстанне некаторых рэжымаў аватар, то адключаныя аватары больш не будуць адлюстроўвацца на канферэнцыі, але карыстальнікі па-ранейшаму змогуць загружаць свае аватары ў карыстальніцкай панэлі кіравання.',
+	'ALLOW_GRAVATAR'				=> 'Enable gravatar avatars',
 	'ALLOW_LOCAL'					=> 'Дазволіць галерэю аватараў',
 	'ALLOW_REMOTE'					=> 'Дазволіць выдаленыя аватары',
 	'ALLOW_REMOTE_EXPLAIN'			=> 'Спасылкі на аватары з іншых бачын.',
@@ -9858,6 +10089,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Паведамленні з наступных форумаў не будуць уключацца ў каналы навін. Не выбірайце форумаў, калі жадаеце атрымліваць дадзеныя з усіх форумаў. Абярыце некалькі форумаў, утрымліваючы клавішу <samp>Ctrl</samp> і клікая мышшу па патрэбных форумах.',
 
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Тут вы можаце выбраць і настроіць анты-спам модулі, якія рэалізуюць розныя спосабы прадухілення аўтаматызаваных рэгістрацый. Гэтыя сродкі звычайна выкарыстоўваюць праверку карыстальніка з дапамогай <em>CAPTCHA</em> - спецыяльнага тэсту, які складзены для аўтаматычнага распазнавання.',
+	'ACP_VC_EXT_GET_MORE'					=> 'For additional (and possibly better) anti-spam plugins, visit the <a href="https://www.phpbb.com/go/anti-spam-ext"><strong>phpBB.com Extensions Database</strong></a>. For more information on preventing spam on your board, visit the <a href="https://www.phpbb.com/go/anti-spam"><strong>phpBB.com Knowledge Base</strong></a>.',
 	'AVAILABLE_CAPTCHAS'					=> 'Даступныя модулі',
 	'CAPTCHA_UNAVAILABLE'					=> 'Дадзены модуль не можа быць выбраны, паколькі патрабаванні для яго выкарыстання не выкананыя.',
 	'CAPTCHA_GD'							=> 'GD выява',
@@ -9908,18 +10140,36 @@ $lang = array_merge($lang, array(
 	'SESSION_LENGTH'			=> 'Працягласць сесіі',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Сесія будзе завершаная па сканчэнні паказанага часу ў секундах.',
 
+	// Contact Settings
+	'ACP_CONTACT_SETTINGS_EXPLAIN'		=> 'Here you can enable and disable the contact page and also add a text that is displayed on the page.',
+
+	'CONTACT_US_ENABLE'				=> 'Enable contact page',
+	'CONTACT_US_ENABLE_EXPLAIN'		=> 'This page allows users to send emails to board administrators',
+
+	'CONTACT_US_INFO'				=> 'Contact information',
+	'CONTACT_US_INFO_EXPLAIN'		=> 'The message is displayed on the contact page',
+	'CONTACT_US_INFO_PREVIEW'		=> 'Contact page information - Preview',
+	'CONTACT_US_INFO_UPDATED'		=> 'Contact page information has been updated.',
+
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Тут вы можаце ўключаць і адключаць некаторыя функцыі канферэнцыі для паніжэння нагрузкі на сервер. Для большасці сервераў няма неабходнасці адключаць якія-небудзь функцыі. Тым не менш, на некаторых сістэмах або калектыўных хостынгах можа быць карысным адключэнне магчымасцяў, якія вам не патрабуюцца. Вы можаце таксама задаць абмежаванні для нагрузкі на сервер і актыўных сесій, пры перавышэнні якіх канферэнцыя будзе адключаная.',
 
+	'ALLOW_CDN'						=> 'Allow usage of third party content delivery networks',
+	'ALLOW_CDN_EXPLAIN'				=> 'If this setting is enabled, some files will be served from external third party servers instead of your server. This reduces the network bandwidth required by your server, but may present a privacy issue for some board administrators. In a default phpBB installation, this includes loading “jQuery” and the font “Open Sans” from Google’s content delivery network.',
+	'ALLOW_LIVE_SEARCHES'			=> 'Allow live searches',
+	'ALLOW_LIVE_SEARCHES_EXPLAIN'	=> 'If this setting is enabled, users are provided with keyword suggestions as they type in certain fields throughout the board.',
 	'CUSTOM_PROFILE_FIELDS'			=> 'Дадатковыя палі ў профілях',
 	'LIMIT_LOAD'					=> 'Абмежаваць нагрузку на сервер',
 	'LIMIT_LOAD_EXPLAIN'			=> 'Калі сярэдняя штохвілінная нагрузка на сервер перавышае зададзенае значэнне, канферэнцыя будзе аўтаматычна адключаная. Значэнне, роўнае 1.0, азначае ~100% выкарыстанне рэсурсаў аднаго працэсара. Гэтая магчымасць дастасавальная толькі для сервераў на аснове UNIX. Значэнне будзе скінута ў 0, калі phpBB не зможа атрымаць мяжу загрузкі сістэмы.',
 	'LIMIT_SESSIONS'				=> 'Абмежаваць сесіі',
 	'LIMIT_SESSIONS_EXPLAIN'		=> 'Калі колькасць сесій перавышае зададзенае значэнне на працягу адной хвіліны, канферэнцыя будзе аўтаматычна адключаная. Увядзіце 0 для здымання абмежаванняў.',
 	'LOAD_CPF_MEMBERLIST'			=> 'Дазволіць адлюстраванне дадатковых палёў профіля ў спісе карыстальнікаў',
+	'LOAD_CPF_PM'					=> 'Display custom profile fields in private messages',
 	'LOAD_CPF_VIEWPROFILE'			=> 'Паказваць дадатковыя палі ў профілях карыстальнікаў',
 	'LOAD_CPF_VIEWTOPIC'			=> 'Паказваць дадатковыя палі на старонках тэм',
 	'LOAD_USER_ACTIVITY'			=> 'Паказаць актыўнасць карыстальніка',
 	'LOAD_USER_ACTIVITY_EXPLAIN'	=> 'Адлюстраванне тэмы/форума, у якіх карыстальнік найболей актыўны, у яго профілі і асабістым раздзеле. Рэкамендуецца адключыць гэтую функцыю на канферэнцыях з больш за адным мільёнам паведамленняў.',
+	'READ_NOTIFICATION_EXPIRE_DAYS'	=> 'Read Notification Expiration',
+	'READ_NOTIFICATION_EXPIRE_DAYS_EXPLAIN' => 'Number of days that will elapse before a read notification will automatically be deleted. Set this value to 0 to make notifications permanent.',
 	'RECOMPILE_STYLES'				=> 'Перакампіляваць старыя шаблоны',
 	'RECOMPILE_STYLES_EXPLAIN'		=> 'Праверка абноўленых кампанентаў стыляў і паўторная іх кампіляцыя ў выпадку неабходнасці.',
 	'YES_ANON_READ_MARKING'			=> 'Уключыць маркіроўку тэм для госцяў',
@@ -9940,18 +10190,25 @@ $lang = array_merge($lang, array(
 	'YES_READ_MARKING_EXPLAIN'		=> 'Захоўваць інфармацыю аб статуце «прачытана/не прачытана» у базе дадзеных, а не ў cookies.',
 	'YES_UNREAD_SEARCH'				=> 'Уключыць пошук па непрачытаных паведамленнях',
 
-	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB падтрымлівае пашырэнні аўтэнтыфікацыі, або модулі. Яны дазваляюць вам усталяваць спосаб аўтэнтыфікацыі карыстальнікаў пры іх уваходзе на канферэнцыю. Па змаўчанні даступныя тры модуля: DB, LDAP і Apache. Не ўсе метады патрабуюць дадатковай інфармацыі, таму запаўняйце толькі тыя палі, якія неабходныя для вылучанага метаду.',
+	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB supports authentication plug-ins, or modules. These allow you determine how users are authenticated when they log into the board. By default four plug-ins are provided: DB, LDAP, Apache, and OAuth. Not all methods require additional information so only fill out fields if they are relevant to the selected method.',
 
 	'AUTH_METHOD'				=> 'Вылучыць метад аўтэнтыфікацыі',
 
+	'AUTH_PROVIDER_OAUTH_ERROR_ELEMENT_MISSING'	=> 'Both the key and secret of each enabled OAuth service provider must be provided. Only one was provided for an OAuth service provider.',
+	'AUTH_PROVIDER_OAUTH_EXPLAIN'				=> 'Each OAuth provider requires a unique secret and key in order to authenticate with the external server. These should be supplied by the OAuth service when you register your website with them and should be entered exactly as provided to you.<br />Any service that does not have both a key and a secret entered here will not be available for use by the forum users. Also note, that user can still register and login using the DB authentication plug-in.',
+	'AUTH_PROVIDER_OAUTH_KEY'					=> 'Key',
+	'AUTH_PROVIDER_OAUTH_TITLE'					=> 'OAuth',
+	'AUTH_PROVIDER_OAUTH_SECRET'				=> 'Secret',
+
 	'APACHE_SETUP_BEFORE_USE'	=> 'Неабходна наладзіць ідэнтыфікацыі Apache пры пераключэньні phpBB на гэты метад ідэнтыфікацыі. Памятайце, што імя карыстальніка для ідэнтыфікацыі ў Apache павінна супадаць з вашым імем карыстальніка ў phpBB. Аўтэнтыфікацыя Apache можа выкарыстоўвацца толькі з mod_php (не з версіяй CGI) і з адключаным safe_mode.',
 
+	'LDAP'							=> 'LDAP',
 	'LDAP_DN'						=> 'Асноўнае імя LDAP [ <var>dn</var> ]',
 	'LDAP_DN_EXPLAIN'				=> 'Унікальнае імя (Distinguished Name), якое вызначае інфармацыю аб карыстальніку, напрыклад <samp>o=My Company,c=US</samp>',
-	'LDAP_EMAIL'					=> 'Email-атрыбут LDAP',
-	'LDAP_EMAIL_EXPLAIN'			=> 'Задайце імя атрыбуту email карыстальніка (калі ён існуе) для аўтаматычнага прысваення email-адрасоў новым карыстальнікам. Калі гэтае поле пакінуць пустым, то email-адрасы карыстальнікаў, якія ўпершыню ўвайшлі на канферэнцыю, таксама будуць пустымі.',
+	'LDAP_EMAIL'					=> 'LDAP email attribute',
+	'LDAP_EMAIL_EXPLAIN'			=> 'Set this to the name of your user entry email attribute (if one exists) in order to automatically set the email address for new users. Leaving this empty results in empty email address for users who log in for the first time.',
 	'LDAP_INCORRECT_USER_PASSWORD'	=> 'Спроба сувязі з серверам LDAP з паказаным імем або паролем не атрымалася.',
-	'LDAP_NO_EMAIL'					=> 'Паказаны атрыбут email не існуе.',
+	'LDAP_NO_EMAIL'					=> 'The specified email attribute does not exist.',
 	'LDAP_NO_IDENTITY'				=> 'Не атрымалася знайсці ідэнтыфікатар уваходу ў сістэму для %s.',
 	'LDAP_PASSWORD'					=> 'Пароль LDAP',
 	'LDAP_PASSWORD_EXPLAIN'			=> 'Пакіньце поле пустым для выкарыстання ананімнага злучэння. У адваротным выпадку ўвядзіце пароль для вышэйпаказанага карыстальніка. Патрабуецца для сервераў Active Directory. <strong>Увага:</strong> гэты пароль будзе захаваны ў базе дадзеных у незашыфраваным выглядзе, і будзе бачны ўсім, хто мае доступ да яе або да гэтай старонкі налад.',
@@ -9966,13 +10223,17 @@ $lang = array_merge($lang, array(
 	'LDAP_USER_FILTER'				=> 'Фільтр імя карыстальніка LDAP',
 	'LDAP_USER_FILTER_EXPLAIN'		=> 'У далейшым вы можаце абмежаваць дыяпазон шуканых аб\'ектаў з дапамогай дадатковых фільтраў. Напрыклад, вынікам <samp>objectClass=posixGroup</samp> будзе <samp>(&(uid=$username)(objectClass=posixGroup))</samp>',
 
-	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Тут задаюцца налады, звязаныя з серверам і даменам. Пераканайцеся ў дакладнасці паказаных вамі дадзеных, памылкі прывядуць да рассылання email-паведамленняў, якія змяшчаюць няслушную інфармацыю. Задаючы імя дамена, падушыце, што яно павінна ўключаць  http:// або прэфікс іншага пратаколу. Змяняйце нумар порта толькі ў выпадку, калі вам сапраўды вядома, што сервер выкарыстае іншае значэнне, порт 80 падыходзіць у большасці выпадкаў.',
+	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Here you define server and domain dependent settings. Please ensure the data you enter is accurate, errors will result in emails containing incorrect information. When entering the domain name remember it does include http:// or other protocol term. Only alter the port number if you know your server uses a different value, port 80 is correct in most cases.',
 	'ENABLE_GZIP'				=> 'Уключыць сціск GZip',
 	'ENABLE_GZIP_EXPLAIN'		=> 'Генеруемае змесціва будзе сціскацца з дапамогай GZip перад адпраўкай карыстальніку. Уключэнне гэтай опцыі дапамагае паменшыць выдатак сеткавага трафіку, але ў той жа час некалькі павялічвае выкарыстанне цэнтральнага працэсара, як на боку кліента, так і на серверы. Патрабуецца пашырэнне PHP zlib.',
 	'FORCE_SERVER_VARS'			=> 'Прымусовыя налады URL сервера',
 	'FORCE_SERVER_VARS_EXPLAIN'	=> 'Калі вылучана, то паказаныя тут налады будуць скарыстаныя замест аўтаматычна вызначаных значэнняў',
 	'ICONS_PATH'				=> 'Шлях да значкоў паведамленняў',
 	'ICONS_PATH_EXPLAIN'		=> 'Шлях адносна каранёвай папкі phpBB. Напрыклад, <samp>images/icons</samp>.',
+	'MOD_REWRITE_ENABLE'		=> 'Enable URL Rewriting',
+	'MOD_REWRITE_ENABLE_EXPLAIN' => 'When enabled, URLs containing ’app.php’ will be rewritten to remove the filename (i.e. app.php/foo will become /foo). <strong>Apache server’s mod_rewrite module is required for this functionality to work; if this option is enabled without mod_rewrite support, URLs on your board may be broken.</strong>',
+	'MOD_REWRITE_DISABLED'		=> 'The <strong>mod_rewrite</strong> module on your Apache web server is disabled. Enable the module or contact your web hosting provider if you wish to enable this feature.',
+	'MOD_REWRITE_INFORMATION_UNAVAILABLE' => 'We are unable to determine whether or not this server supports URL rewriting. This setting may be enabled but if URL rewriting is not available, paths generated by this board (such as for use in links) may be broken. Contact your web hosting provider if you are unsure whether or not you can safely enable this feature.',
 	'PATH_SETTINGS'				=> 'Параметры шляхоў',
 	'RANKS_PATH'				=> 'Шлях да малюначкаў званняў',
 	'RANKS_PATH_EXPLAIN'		=> 'Шлях адносна каранёвай папкі phpBB. Напрыклад, <samp>images/ranks</samp>.',
@@ -9989,13 +10250,21 @@ $lang = array_merge($lang, array(
 	'SMILIES_PATH_EXPLAIN'		=> 'Шлях адносна каранёвай папкі phpBB. Напрыклад, <samp>images/smilies</samp>.',
 	'UPLOAD_ICONS_PATH'			=> 'Шлях да значкоў груп пашырэнняў',
 	'UPLOAD_ICONS_PATH_EXPLAIN'	=> 'Шлях адносна каранёвай папкі phpBB. Напрыклад, <samp>images/upload_icons</samp>.',
+	'USE_SYSTEM_CRON'		=> 'Run periodic tasks from system cron',
+	'USE_SYSTEM_CRON_EXPLAIN'		=> 'When off, phpBB will arrange for periodic tasks to be run automatically. When on, phpBB will not schedule any periodic tasks by itself; a system administrator must arrange for <code>bin/phpbbcli.php cron:run</code> to be run by the system cron facility at regular intervals (e.g. every 5 minutes).',
 
 	'ACP_SECURITY_SETTINGS_EXPLAIN'		=> 'Тут вы можаце задаць усталёўкі, звязаныя з сесіяй і ўваходам карыстальнікаў на канферэнцыю.',
 	'ALL'							=> 'Усе',
-	'ALLOW_AUTOLOGIN'				=> 'Дазволіць аўтаматычны ўваход на канферэнцыю',
-	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Опцыя вызначае, ці могуць карыстальнікі аўтаматычна ўваходзіць на канферэнцыю пры ёй чарговым наведванні.',
-	'AUTOLOGIN_LENGTH'				=> 'Час дзеяння аўтаматычнага ўваходу (дзён)',
-	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Колькасць дзён, на працягу якога карыстальнік можа аўтаматычна ўваходзіць на канферэнцыю. Увядзіце 0 для здымання абмежаванняў.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'ALLOW_PASSWORD_RESET'			=> 'Allow password reset ("Forgot Password")',
+	'ALLOW_PASSWORD_RESET_EXPLAIN'	=> 'Determines whether or not users are able to use the "I forgot my password" link on the login page to recover their account. If you use an external authentication mechanism you may wish to disable this feature.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
 	'BROWSER_VALID'					=> 'Праверка браўзэра',
 	'BROWSER_VALID_EXPLAIN'			=> 'Уключае праверку браўзэра пры кожнай сесіі для падвышэння бяспекі.',
 	'CHECK_DNSBL'					=> 'Праверыць IP-адрас па чорным спісе DNS (DNS Blackhole List)',
@@ -10032,8 +10301,12 @@ $lang = array_merge($lang, array(
 	'PASS_TYPE_SYMBOL'				=> 'Павінен утрымоўваць знакі',
 	'REF_HOST'						=> 'Правераць толькі хост',
 	'REF_PATH'						=> 'Таксама правераць шлях',
-	'REFERER_VALID'					=> 'Правераць рэферэр',
+	'REFERRER_VALID'				=> 'Validate Referrer',
+	'REFERRER_VALID_EXPLAIN'		=> 'If enabled, the referrer of POST requests will be checked against the host/script path settings. This may cause issues with boards using several domains and or external logins.',
+
+	'REFERER_VALID'					=> 'Правераць рэферэр',	//3.0.12
 	'REFERER_VALID_EXPLAIN'			=> 'Калі ўключана, рэферэр POST запросаў будзе правераны на хост/шлях скрыпта. Гэта можа стварыць непремнасці на канферэнцыях, якія ўжываюць некалькі даменаў альбо знешнія лагіны.',
+
 	'TPL_ALLOW_PHP'					=> 'Дазволіць php у шаблонах',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Калі гэтая функцыя ўключаная, каманды <code>PHP</code> і <code>INCLUDEPHP</code> будуць распазнавацца і выконвацца ў шаблонах.',
 
@@ -10046,6 +10319,8 @@ $lang = array_merge($lang, array(
 	'BOARD_HIDE_EMAILS_EXPLAIN'		=> 'Гэтая функцыя поўнасцю захоўвае ў таямніцы email-адрасы.',
 	'CONTACT_EMAIL'					=> 'Кантактны email-адрас',
 	'CONTACT_EMAIL_EXPLAIN'			=> 'Гэты адрас будзе выкарыстоўвацца пры кожнай неабходнасці кантакту, напрыклад, у выпадку спаму, памылак і т.п. Ён заўсёды будзе выкарыстоўвацца ў якасці адрасоў <samp>From</samp> і <samp>Reply-To</samp> у email-паведамленнях.',
+	'CONTACT_EMAIL_NAME'			=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 	'EMAIL_FUNCTION_NAME'			=> 'Імя функцыі email',
 	'EMAIL_FUNCTION_NAME_EXPLAIN'	=> 'Функцыя email, выкарыстоўваная для адпраўкі паведамленняў праз PHP.',
 	'EMAIL_PACKAGE_SIZE'			=> 'Памер паштовага пакета',
@@ -10236,7 +10511,7 @@ $lang = array_merge($lang, array(
 	'ACP_BAN'					=> 'Блакоўка доступу',
 	'ACP_BAN_EMAILS'			=> 'Чорны спіс email',
 	'ACP_BAN_IPS'				=> 'Чорны спіс IP',
-	'ACP_BAN_USERNAMES'			=> 'Чорны спіс карыстальнікаў',
+	'ACP_BAN_USERNAMES'			=> 'Ban users',
 	'ACP_BBCODES'				=> 'BBCodes',
 	'ACP_BOARD_CONFIGURATION'	=> 'Канфігурацыя',
 	'ACP_BOARD_FEATURES'		=> 'Функцыі канферэнцыі',
@@ -10245,8 +10520,10 @@ $lang = array_merge($lang, array(
 	'ACP_BOTS'					=> 'Пошукавыя боты',
 
 	'ACP_CAPTCHA'				=> 'Візуальнае пацверджанне',
+	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'База дадзеных',
+	'ACP_CAT_DOT_MODS'			=> 'Модулі',
 	'ACP_CAT_DOT_MODS'			=> 'Модулі',
 	'ACP_CAT_FORUMS'			=> 'Форумы',
 	'ACP_CAT_GENERAL'			=> 'Агульныя',
@@ -10259,6 +10536,8 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_USERS'				=> 'Карыстальнікі',
 	'ACP_CLIENT_COMMUNICATION'	=> 'Сродкі сувязі',
 	'ACP_COOKIE_SETTINGS'		=> 'Налады cookies',
+	'ACP_CONTACT'				=> 'Contact page',
+	'ACP_CONTACT_SETTINGS'		=> 'Contact page settings',
 	'ACP_CRITICAL_LOGS'			=> 'Лог памылак',
 	'ACP_CUSTOM_PROFILE_FIELDS'	=> 'Дадатковыя палі ў профілі',
 
@@ -10266,8 +10545,11 @@ $lang = array_merge($lang, array(
 	'ACP_DISALLOW'				=> 'Забароненыя імёны',
 	'ACP_DISALLOW_USERNAMES'	=> 'Забароненыя імёны',
 
-	'ACP_EMAIL_SETTINGS'		=> 'Налады пошты',
-	'ACP_EXTENSION_GROUPS'		=> 'Групы пашырэнняў',
+	'ACP_EMAIL_SETTINGS'		=> 'Email settings',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
+	'ACP_EXTENSION_MANAGEMENT'	=> 'Extension management',
+	'ACP_EXTENSIONS'			=> 'Manage extensions',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
 	'ACP_FORMS'					=> 'Customizable Forms',
 	'ACP_FORMS_BUILDER'			=> 'Form Builder',
 
@@ -10288,10 +10570,10 @@ $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE'				=> 'Кіраванне групамі',
 	'ACP_GROUPS_MANAGEMENT'			=> 'Групы',
 	'ACP_GROUPS_PERMISSIONS'		=> 'Правы груп',
+	'ACP_GROUPS_POSITION'			=> 'Manage group positions',
 
 	'ACP_ICONS'					=> 'Значкі тэм',
 	'ACP_ICONS_SMILIES'			=> 'Значкі тэм і смайлікі',
-	'ACP_IMAGESETS'				=> 'Наборы малюнкаў',
 	'ACP_INACTIVE_USERS'		=> 'Неактыўныя карыстальнікі',
 	'ACP_INDEX'					=> 'Галоўная старонка',
 
@@ -10303,11 +10585,15 @@ $lang = array_merge($lang, array(
 	'ACP_LOGGING'				=> 'Логі',
 
 	'ACP_MAIN'					=> 'Галоўная старонка панэлі адміністравання',
-	'ACP_MANAGE_EXTENSIONS'		=> 'Пашырэнні',
+
+	'ACP_MANAGE_ATTACHMENTS'			=> 'Укладанні',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
+
+	'ACP_MANAGE_EXTENSIONS'		=> 'Manage attachment extensions',
 	'ACP_MANAGE_RANKS'			=> 'Кіраванне званнямі',
 	'ACP_MANAGE_REASONS'		=> 'Кіраванне скаргамі',
 	'ACP_MANAGE_USERS'			=> 'Кіраванне карыстальнікамі',
-	'ACP_MASS_EMAIL'			=> 'Масавае рассыланне пошты',
+	'ACP_MASS_EMAIL'			=> 'Mass email',
 	'ACP_MESSAGES'				=> 'Паведамленні',
 	'ACP_MESSAGE_SETTINGS'		=> 'Асабістыя паведамленні',
 	'ACP_MODULE_MANAGEMENT'		=> 'Кіраванне модулямі',
@@ -10352,6 +10638,8 @@ $lang = array_merge($lang, array(
 	'ACP_STYLE_COMPONENTS'		=> 'Кампаненты стыляў',
 	'ACP_STYLE_MANAGEMENT'		=> 'Кіраванне стылямі',
 	'ACP_STYLES'				=> 'Стылі',
+	'ACP_STYLES_CACHE'			=> 'Purge Cache',
+	'ACP_STYLES_INSTALL'		=> 'Install Styles',
 
 	'ACP_SUBMIT_CHANGES'		=> 'Зацвердзіць змены',
 
@@ -10403,6 +10691,10 @@ $lang = array_merge($lang, array(
 
 	'COLOUR_SWATCH'			=> 'Палітра',
 	'CONFIG_UPDATED'		=> 'Налады паспяхова абноўлены.',
+	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
+	'CRON_NO_SUCH_TASK'		=> 'Could not find cron task â€œ%sâ€.',
+	'CRON_NO_TASK'			=> 'No cron tasks need to be run right now.',
+	'CRON_NO_TASKS'			=> 'No cron tasks could be found.',
 
 	'DEACTIVATE'				=> 'Адключыць',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'Паказаны шлях «%s» не існуе.',
@@ -10413,6 +10705,7 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_AS'				=> 'Запампаваць у фармаце',
 	'DOWNLOAD_STORE'			=> 'Запампаваць або захаваць на серверы',
 	'DOWNLOAD_STORE_EXPLAIN'	=> 'Вы можаце напроста запампаваць файл або захаваць яго на серверы ў папцы <samp>store/</samp>.',
+	'DOWNLOADS'					=> 'Запампоўкі',
 
 	'EDIT'					=> 'Змяніць',
 	'ENABLE'				=> 'Уключыць',
@@ -10427,6 +10720,8 @@ $lang = array_merge($lang, array(
 	'IP'					=> 'IP',
 	'IP_HOSTNAME'			=> 'IP-адрасы або хасты',
 
+	'LOAD_NOTIFICATIONS'			=> 'Display Notifications',
+	'LOAD_NOTIFICATIONS_EXPLAIN'	=> 'Display the notifications list on every page (typically in the header).',
 	'LOGGED_IN_AS'			=> 'Вы ўвайшлі як:',
 	'LOGIN_ADMIN'			=> 'Для ўваходу ў панэль адміністравання вы павінны быць аўтарызаваныя.',
 	'LOGIN_ADMIN_CONFIRM'	=> 'Для ўваходу ў панэль адміністравання неабходна паўторна ўвесці сваё імя і пароль.',
@@ -10443,7 +10738,8 @@ $lang = array_merge($lang, array(
 
 	'NOTIFY'				=> 'Апавяшчэнне',
 	'NO_ADMIN'				=> 'У вас няма правоў для адміністравання гэтага форума.',
-	'NO_EMAILS_DEFINED'		=> 'Не знойдзена правільных адрасоў электроннай пошты.',
+	'NO_EMAILS_DEFINED'		=> 'No valid email addresses found.',
+	'NO_FILES_TO_DELETE'	=> 'Attachments you selected for deletion do not exist.',
 	'NO_PASSWORD_SUPPLIED'	=> 'Вы не можаце ўвайсці без пароля.',
 
 	'OFF'					=> 'Адключана',
@@ -10459,8 +10755,8 @@ $lang = array_merge($lang, array(
 
 	'REMIND'							=> 'Нагадаць',
 	'RESYNC'							=> 'Сінхранізаваць',
-	'RETURN_TO'							=> 'Вярнуцца ў',
 
+	'RUNNING_TASK'			=> 'Running task: %s.',
 	'SELECT_ANONYMOUS'		=> 'Вылучыць уліковы запіс госця',
 	'SELECT_OPTION'			=> 'Вылучыце дзеянне',
 
@@ -10470,6 +10766,10 @@ $lang = array_merge($lang, array(
 	'SETTING_TOO_SHORT'		=> 'Уведзенае значэнне для “%1$s” занадта кароткае. Мінімальная даўжыня - %2$d.',
 
 	'SHOW_ALL_OPERATIONS'	=> 'Паказаць усе дзеянні',
+
+	'TASKS_NOT_READY'			=> 'Not ready tasks:',
+	'TASKS_READY'			=> 'Ready tasks:',
+	'TOTAL_SIZE'			=> 'Total size',
 
 	'UCP'					=> 'Асабісты раздзел',
 	'USERNAMES_EXPLAIN'		=> 'Уводзіце кожнае імя на новым радку.',
@@ -10481,7 +10781,7 @@ $lang = array_merge($lang, array(
 	'NO_PHPINFO_AVAILABLE'	=> 'Звесткі аб PHP не вызначаныя. Функцыя phpinfo() адключаная па меркаваннях бяспекі.',
 
 	'ACP_ADMIN_LOGS_EXPLAIN'	=> 'Гэта спіс дзеянняў, выкананых адміністратарамі канферэнцыі. Вы можаце сартаваць спіс па імі карыстальніка, даце, IP-адрасу або па дзеянні. Пры наяўнасці неабходных праў вы можаце выдаліць асобныя запісы або ачысціць увесь лог цалкам.',
-	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'Гэта спіс дзеянняў, выкананых самой канферэнцыяй. Гэты часопіс падае інфармацыю, якую можна выкарыстаць для рашэння некаторых праблем. Напрыклад, з дастаўкай электронных паведамленняў. Вы можаце сартаваць спіс па імі карыстальніка, даце, IP-адрасу або па дзеянні. Пры наяўнасці неабходных праў вы можаце выдаліць асобныя запісы або ачысціць увесь лог цалкам.',
+	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'This lists the actions carried out by the board itself. This log provides you with information you are able to use for solving specific problems, for example non-delivery of emails. You can sort by username, date, IP or action. If you have appropriate permissions you can also clear individual operations or the log as a whole.',
 	'ACP_MOD_LOGS_EXPLAIN'		=> 'Гэта спіс усіх дзеянняў, выкананых мадэратарамі ў форумах, тэмах і паведамленнях. Вы можаце сартаваць спіс па імі карыстальніка, даце, IP-адрасу або па дзеянні. Пры наяўнасці неабходных праў вы можаце выдаліць асобныя запісы або ачысціць увесь лог цалкам.',
 	'ACP_USERS_LOGS_EXPLAIN'	=> 'Гэта спіс дзеянняў, выкананых карыстальнікамі або над карыстальнікамі (скаргі, папярэджанні і нататкі аб карыстальніках).',
 	'ALL_ENTRIES'				=> 'Усе запісы',
@@ -10507,6 +10807,7 @@ $lang = array_merge($lang, array(
 
 	'GZIP_COMPRESSION'	=> 'Сціск GZip',
 
+	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'Недаступна',
 	'NUMBER_FILES'		=> 'Укладанняў',
 	'NUMBER_POSTS'		=> 'Паведамленняў',
@@ -10519,29 +10820,38 @@ $lang = array_merge($lang, array(
 	'PURGE_CACHE'			=> 'Ачысціць кэш',
 	'PURGE_CACHE_CONFIRM'	=> 'Вы сапраўды жадаеце ачысціць кэш?',
 	'PURGE_CACHE_EXPLAIN'	=> 'Ачыстка ўсіх кэшыраваных элементаў, у тым ліку кэшыраваныя файлы шаблонаў і запыты.',
+	'PURGE_CACHE_SUCCESS'	=> 'Cache successfully purged.',
 
 	'PURGE_SESSIONS'			=> 'Ачысьціць усе сесіі',
 	'PURGE_SESSIONS_CONFIRM'	=> 'Вы сапраўды жадаеце ачысціць ўсе дзеючыя сесіі?',
 	'PURGE_SESSIONS_EXPLAIN'	=> 'Ачыстка табліцы сесій. Сесіі ўсіх карыстальнікаў, якія знаходзяцца ў дадзены момант на канферэнцыі, будуць завершаныя, таму пасля выканання дадзенага дзеяння ім зноў давядзецца увайсці на канферэнцыю, увёўшы імя і пароль.',
+	'PURGE_SESSIONS_SUCCESS'	=> 'Sessions successfully purged.',
 
 	'RESET_DATE'					=> 'Скід даты запуску канферэнцыі',
 	'RESET_DATE_CONFIRM'			=> 'Вы сапраўды жадаеце скінуць дату запуску канферэнцыі?',
+	'RESET_DATE_SUCCESS'				=> 'Boardâ€™s start date reset',
 	'RESET_ONLINE'					=> 'Абнуленне рэкорду наведвальнасці',
 	'RESET_ONLINE_CONFIRM'			=> 'Вы сапраўды жадаеце абнуліць рэкорд наведвальнасці канферэнцыі?',
+	'RESET_ONLINE_SUCCESS'				=> 'Most users ever online reset',
 	'RESYNC_POSTCOUNTS'				=> 'Сінхранізаваць лічыльнікі паведамленняў',
 	'RESYNC_POSTCOUNTS_EXPLAIN'		=> 'Будуць улічаныя толькі наяўныя паведамленні. Выдаленыя паведамленні не будуць падлічаныя.',
 	'RESYNC_POSTCOUNTS_CONFIRM'		=> 'Вы сапраўды жадаеце сінхранізаваць лічыльнікі паведамленняў?',
+	'RESYNC_POSTCOUNTS_SUCCESS'			=> 'Resynchronised post counts',
 	'RESYNC_POST_MARKING'			=> 'Сінхранізаваць свае тэмы',
 	'RESYNC_POST_MARKING_CONFIRM'	=> 'Вы сапраўды жадаеце сінхранізаваць свае тэмы?',
 	'RESYNC_POST_MARKING_EXPLAIN'	=> 'Здыманне пазанак са ўсіх тэм з наступнай карэктнай маркіроўкай усіх тэм, да якіх быў доступ у апошнія шэсць месяцаў.',
+	'RESYNC_POST_MARKING_SUCCESS'	=> 'Resynchronised dotted topics',
 	'RESYNC_STATS'					=> 'Сінхранізаваць статыстыку',
 	'RESYNC_STATS_CONFIRM'			=> 'Вы сапраўды жадаеце сінхранізаваць статыстыку?',
 	'RESYNC_STATS_EXPLAIN'			=> 'Пералічэнне агульнай колькасці паведамленняў, тэм, карыстальнікаў і файлаў.',
+	'RESYNC_STATS_SUCCESS'			=> 'Resynchronised statistics',
 	'RUN'							=> 'Выканаць',
 
 	'STATISTIC'					=> 'Статыстыка',
 	'STATISTIC_RESYNC_OPTIONS'	=> 'Сінхранізацыя або скід статыстыкі',
 
+	'TIMEZONE_INVALID'	=> 'The timezone you selected is invalid.',
+	'TIMEZONE_SELECTED'	=> '(currently selected)',
 	'TOPICS_PER_DAY'	=> 'Тэм у дзень',
 
 	'UPLOAD_DIR_SIZE'	=> 'Памер усіх укладанняў',
@@ -10722,9 +11032,9 @@ $lang = array_merge($lang, array(
 
 	'LOG_APPROVE_TOPIC'			=> '<strong>Ухваленая тэма</strong><br />» %s',
 	'LOG_BUMP_TOPIC'			=> '<strong>Паднятая тэма</strong><br />» %s',
-	'LOG_DELETE_POST'			=> '<strong>Выдаленае паведамленне «%1$s», апублікаванае карыстальнікам </strong> <br />» %2$s',
-	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Выдаленая спасылка на перанесеную тэму</strong><br />» %s',
-	'LOG_DELETE_TOPIC'			=> '<strong>Выдаленая тэма «%1$s», створаная карыстальнікам </strong> <br />» %2$s',
+	'LOG_DELETE_POST'			=> '<strong>Deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Deleted shadow topic</strong><br />Â» %s',
+	'LOG_DELETE_TOPIC'			=> '<strong>Deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_FORK'					=> '<strong>Скапіяваная тэма</strong><br />» з форума %s',
 	'LOG_LOCK'					=> '<strong>Зачыненая тэма</strong><br />» %s',
 	'LOG_LOCK_POST'				=> '<strong>Заблакавана паведамленне</strong><br />» %s',
@@ -10733,15 +11043,20 @@ $lang = array_merge($lang, array(
 	'LOG_PM_REPORT_CLOSED'		=> '<strong>Зачыненая скарга на асабістае паведамленне</strong><br />» %s',
 	'LOG_PM_REPORT_DELETED'		=> '<strong>Выдаленая скарга на асабістае паведамленне</strong><br />» %s',
 	'LOG_POST_APPROVED'			=> '<strong>Ухвала паведамлення</strong><br />» %s',
-	'LOG_POST_DISAPPROVED'		=> '<strong>Адхіленне паведамлення «%1$s» па наступным чынніку</strong><br />» %2$s',
-	'LOG_POST_EDITED'			=> '<strong>Рэдагаванне паведамлення ў тэме «%1$s», напісанага аўтарам</strong><br />» %2$s',
+	'LOG_POST_DISAPPROVED'		=> '<strong>Disapproved post â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
+	'LOG_POST_EDITED'			=> '<strong>Edited post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_POST_RESTORED'			=> '<strong>Restored post</strong><br />Â» %s',
 	'LOG_REPORT_CLOSED'			=> '<strong>Зачыненне скаргі</strong><br />» %s',
 	'LOG_REPORT_DELETED'		=> '<strong>Выдаленне скаргі</strong><br />» %s',
+	'LOG_RESTORE_TOPIC'			=> '<strong>Restored topic â€œ%1$sâ€ written by</strong><br />Â» %2$s',
+	'LOG_SOFTDELETE_POST'		=> '<strong>Soft deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_SOFTDELETE_TOPIC'		=> '<strong>Soft deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_SPLIT_DESTINATION'		=> '<strong>Перамешчаныя падзеленыя паведамленні</strong><br />» у %s',
 	'LOG_SPLIT_SOURCE'			=> '<strong>Падзеленыя паведамленні</strong><br />» з %s',
 
 	'LOG_TOPIC_APPROVED'		=> '<strong>Ухваленая тэма</strong><br />» %s',
-	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Адхіленне тэмы «%1$s» па наступным чынніку</strong><br />%2$s',
+	'LOG_TOPIC_RESTORED'		=> '<strong>Restored topic</strong><br />Â» %s',
+	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Disapproved topic â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
 	'LOG_TOPIC_RESYNC'			=> '<strong>Сінхранізаваныя лічыльнікі тэмы</strong><br />» %s',
 	'LOG_TOPIC_TYPE_CHANGED'	=> '<strong>Зменены тып тэмы</strong><br />» %s',
 	'LOG_UNLOCK'				=> '<strong>Адчыненая тэма</strong><br />» %s',
@@ -10793,16 +11108,6 @@ $lang = array_merge($lang, array(
 
 	'LOG_IMAGE_GENERATION_ERROR'	=> '<strong>Памылка пры стварэнні выявы</strong><br />» Памылка ў %1$s у радку %2$s: %3$s',
 
-	'LOG_IMAGESET_ADD_DB'			=> '<strong>Дададзены пакет малюнкаў у базу дадзеных</strong><br />» %s',
-	'LOG_IMAGESET_ADD_FS'			=> '<strong>Дададзены пакет малюнкаў на сервер</strong><br />» %s',
-	'LOG_IMAGESET_DELETE'			=> '<strong>Выдалены пакет малюнкаў</strong><br />» %s',
-	'LOG_IMAGESET_EDIT_DETAILS'		=> '<strong>Змененая інфармацыя аб пакеце малюнкаў</strong><br />» %s',
-	'LOG_IMAGESET_EDIT'				=> '<strong>Зменены пакет малюнкаў</strong><br />» %s',
-	'LOG_IMAGESET_EXPORT'			=> '<strong>Экспартаваны пакет малюнкаў</strong><br />» %s',
-	'LOG_IMAGESET_LANG_MISSING'		=> '<strong>Адсутнічае лакалізацыя «%2$s» для набору малюнкаў</strong><br />» «%1$s»',
-	'LOG_IMAGESET_LANG_REFRESHED'	=> '<strong>Абноўленая лакалізацыя набору малюнкаў «%2$s»</strong><br />» %1$s',
-	'LOG_IMAGESET_REFRESHED'		=> '<strong>Абноўлены набор малюнкаў</strong><br />» %s',
-
 	'LOG_INACTIVE_ACTIVATE'	=> '<strong>Актываваныя неактыўныя карыстальнікі</strong><br />» %s',
 	'LOG_INACTIVE_DELETE'	=> '<strong>Выдаленыя неактыўныя карыстальнікі</strong><br />» %s',
 	'LOG_INACTIVE_REMIND'	=> '<strong>Адпраўленыя email-напамінкі неактыўным карыстальнікам</strong><br />» %s',
@@ -10847,6 +11152,7 @@ $lang = array_merge($lang, array(
 	'LOG_U_ROLE_EDIT'		=> '<strong>Змененая карыстальніцкая роля</strong><br />» %s',
 	'LOG_U_ROLE_REMOVED'	=> '<strong>Выдаленая карыстальніцкая роля</strong><br />» %s',
 
+	'LOG_PLUPLOAD_TIDY_FAILED'		=> '<strong>Unable to open %1$s for tidying, check permissions.</strong><br />Exception: %2$s<br />Trace: %3$s',
 	'LOG_PROFILE_FIELD_ACTIVATE'	=> '<strong>Актывавана поле профіля</strong><br />» %s',
 	'LOG_PROFILE_FIELD_CREATE'		=> '<strong>Дададзена поле профіля</strong><br />» %s',
 	'LOG_PROFILE_FIELD_DEACTIVATE'	=> '<strong>Дэактываванае поле профіля</strong><br />» %s',
@@ -10855,13 +11161,13 @@ $lang = array_merge($lang, array(
 
 	'LOG_PRUNE'					=> '<strong>Вычышчаныя форумы</strong><br />» %s',
 	'LOG_AUTO_PRUNE'			=> '<strong>Вырабленая аўтаачыстка форумаў</strong><br />» %s',
+	'LOG_PRUNE_SHADOW'		=> '<strong>Auto-pruned shadow topics</strong><br />Â» %s',
 	'LOG_PRUNE_USER_DEAC'		=> '<strong>Дэактываваныя карыстальнікі</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_DEL'	=> '<strong>Выдаленыя карыстальнікі з іх паведамленнямі</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_ANON'	=> '<strong>Выдаленыя карыстальнікі, іх паведамлення пакінутыя</strong><br />» %s',
 
 	'LOG_PURGE_CACHE'			=> '<strong>Ачыстка кэша</strong>',
 	'LOG_PURGE_SESSIONS'		=> '<strong>Ачыстка сесій</strong>',
-
 
 	'LOG_RANK_ADDED'		=> '<strong>Дададзена званне</strong><br />» %s',
 	'LOG_RANK_REMOVED'		=> '<strong>Выдаленае званне</strong><br />» %s',
@@ -10871,15 +11177,17 @@ $lang = array_merge($lang, array(
 	'LOG_REASON_REMOVED'	=> '<strong>Выдаленая чыннік скаргі/адхіленні</strong><br />» %s',
 	'LOG_REASON_UPDATED'	=> '<strong>Абноўленая чыннік скаргі/адхіленні</strong><br />» %s',
 
-	'LOG_REFERER_INVALID'		=> '<strong>Памылка праверкі рэферэра</strong><br />В»Рэферэр быў "<em>%1$s</em>". Запыт быў адхілены, і сесія была знішчана.',
+	'LOG_REFERER_INVALID'		=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 	'LOG_RESET_DATE'			=> '<strong>Скінутая дата запуску канферэнцыі</strong>',
 	'LOG_RESET_ONLINE'			=> '<strong>Скінуты рэкорд наведвальнасці</strong>',
+	'LOG_RESYNC_FILES_STATS'	=> '<strong>File statistics resynchronised</strong>',
 	'LOG_RESYNC_POSTCOUNTS'		=> '<strong>Сінхранізаваныя лічыльнікі паведамленняў карыстальнікаў</strong>',
 	'LOG_RESYNC_POST_MARKING'	=> '<strong>Сінхранізаваныя свае тэмы</strong>',
 	'LOG_RESYNC_STATS'			=> '<strong>Сінхранізаваная статыстыка паведамленняў, тэм і карыстальнікаў</strong>',
 
 	'LOG_SEARCH_INDEX_CREATED'	=> '<strong>Створаныя пошукавыя індэксы для</strong><br />» %s',
 	'LOG_SEARCH_INDEX_REMOVED'	=> '<strong>Выдаленыя пошукавыя індэксы для</strong><br />» %s',
+	'LOG_SPHINX_ERROR'			=> '<strong>Sphinx Error</strong><br />Â» %s',
 	'LOG_STYLE_ADD'				=> '<strong>Дададзены стыль</strong><br />» %s',
 	'LOG_STYLE_DELETE'			=> '<strong>Выдалены стыль</strong><br />» %s',
 	'LOG_STYLE_EDIT_DETAILS'	=> '<strong>Зменены стыль</strong><br />» %s',
@@ -10946,15 +11254,18 @@ $lang = array_merge($lang, array(
 	'LOG_USER_GROUP_RESIGN'			=> '<strong>Карыстальнік адмовіўся ад чалецтва ў групе</strong><br />» %s',
 
 	'LOG_WARNING_DELETED'		=> '<strong>Выдаленае папярэджанне ў карыстальніка</strong><br />» %s',
-	'LOG_WARNINGS_DELETED'		=> '<strong>Выдаленае %2$s папярэджанняў у карыстальніка</strong><br />» %1$s',
 	'LOG_WARNINGS_DELETED_ALL'	=> '<strong>Выдаленыя ўсе папярэджання ў карыстальніка</strong><br />» %s',
 
 	'LOG_WORD_ADD'			=> '<strong>Дададзены цэнзар слоў</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>Выдалены цэнзар слоў</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Зменены цэнзар слоў</strong><br />» %s',
+
+	'LOG_EXT_ENABLE'	=> '<strong>Extension enabled</strong><br />Â» %s',
+	'LOG_EXT_DISABLE'	=> '<strong>Extension disabled</strong><br />Â» %s',
+	'LOG_EXT_PURGE'		=> '<strong>Extensionâ€™s data deleted</strong><br />Â» %s',
+
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
-
 ));
 
 $lang = array_merge($lang, array(
@@ -11255,7 +11566,7 @@ $lang = array_merge($lang, array(
 	'ACP_PORTAL_WELCOME_EXPLAIN'=> '',
 	'ADM_LOGOUT'			=> 'Выхад&nbsp;з&nbsp;ACP',
 	'ADM_LOGGED_OUT'		=> 'Вы паспяхова выйшлі з панэлі адміністравання.',
-	'LOG_REFERER_INVALID'	=> '<strong>Памылка праверкі рэферэра</strong><br />В»Рэферэр быў "<em>%1$s</em>". Запыт быў адхілены, і сесія была знішчана.',
+	'LOG_REFERER_INVALID'	=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 
 	'ACP_ABBCODES'			=> 'BBcode Box',
 	'LOG_CONFIG_ABBCODES'	=> '<strong>Altered BBCode Box settings</strong>',
@@ -11661,7 +11972,7 @@ $lang = array_merge($lang, array(
 	'SELECT_A_PREFIX'				=> 'Select a prefix',
 	'ACP_SEOQUERYS'					=> 'SEO Queries',
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Укладанні',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can list and delete files attached to posts and private messages.',
 	'LOG_ATTACH_DEL'				=> '<strong>Attachments deleted</strong><br />» %s',
 	'LOG_ATTACH_REASSIGNED'			=> '<strong>Attachment reassigned to Post</strong><br />» ID %1$d - %2$s',
 	'TOTAL_SIZE'					=> 'Total size',
@@ -11680,11 +11991,11 @@ $lang = array_merge($lang, array(
 	'ACP_INTRO'				=> 'Intro',
 
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Укладанні',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
 	'TOTAL_SIZE'				=> 'Total size',
 	'DOWNLOADS'				=> 'Запампоўкі',
 
-	'NO_AVATAR'				=> 'URL of the avatar for all the have no separate',
+	'NO_AVATAR'				=> 'No avatar selected',
 	'NO_AVATAR_EXPLAIN'			=> 'The optimal size of the avatar is 120x120px, this box is left blank, no picture at all. <br /> Demo URL: http://www.userboard.org/images/no_avatar_1.gif',
 	'GROUP_ICON'				=> 'Group Icon',
 	'GROUP_ICON_EXPLAIN'			=> 'Upload your Group Icons into Upload &#187; Topic/Group Icons',
@@ -12847,6 +13158,97 @@ $lang = array_merge($lang, array(
 	'NO_EMAIL_SUBJECT'		=> 'Не паказаная тэма паведамлення.',
 ));
 
+#######language/en/acp/extensions.php#######
+
+$lang = array_merge($lang, array(
+	'EXTENSION'					=> 'Пашырэнне',
+	'EXTENSIONS'				=> 'Extensions',
+	'EXTENSIONS_ADMIN'			=> 'Extensions Manager',
+	'EXTENSIONS_EXPLAIN'		=> 'The Extensions Manager is a tool in your phpBB Board which allows you to manage all of your extensions statuses and view information about them.',
+	'EXTENSION_INVALID_LIST'	=> 'The “%s” extension is not valid.<br />%s<br /><br />',
+	'EXTENSION_NOT_AVAILABLE'	=> 'The selected extension is not available for this board, please verify your phpBB and PHP versions are allowed (see the details page).',
+	'EXTENSION_DIR_INVALID'		=> 'The selected extension has an invalid directory structure and cannot be enabled.',
+	'EXTENSION_NOT_ENABLEABLE'	=> 'The selected extension cannot be enabled, please verify the extension’s requirements.',
+
+	'DETAILS'				=> 'Інфармацыя',
+
+	'EXTENSIONS_DISABLED'	=> 'Disabled Extensions',
+	'EXTENSIONS_ENABLED'	=> 'Enabled Extensions',
+
+	'EXTENSION_DELETE_DATA'	=> 'Delete data',
+	'EXTENSION_DISABLE'		=> 'Disable',
+	'EXTENSION_ENABLE'		=> 'Enable',
+
+	'EXTENSION_DELETE_DATA_EXPLAIN'	=> 'Deleting an extension’s data removes all of its data and settings. The extension files are retained so it can be enabled again.',
+	'EXTENSION_DISABLE_EXPLAIN'		=> 'Disabling an extension retains its files, data and settings but removes any functionality added by the extension.',
+	'EXTENSION_ENABLE_EXPLAIN'		=> 'Enabling an extension allows you to use it on your board.',
+
+	'EXTENSION_DELETE_DATA_IN_PROGRESS'	=> 'The extension’s data is currently being deleted. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_DISABLE_IN_PROGRESS'	=> 'The extension is currently being disabled. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_ENABLE_IN_PROGRESS'	=> 'The extension is currently being enabled. Please do not leave or refresh this page until it is completed.',
+
+	'EXTENSION_DELETE_DATA_SUCCESS'	=> 'The extension’s data was deleted successfully',
+	'EXTENSION_DISABLE_SUCCESS'		=> 'The extension was disabled successfully',
+	'EXTENSION_ENABLE_SUCCESS'		=> 'The extension was enabled successfully',
+
+	'EXTENSION_NAME'			=> 'Extension Name',
+	'EXTENSION_ACTIONS'			=> 'Actions',
+	'EXTENSION_OPTIONS'			=> 'Options',
+	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
+	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s files from the filesystem</li>
+			<li>Upload the new files</li>
+			<li>Enable the extension</li>
+		</ol>',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s data</li>
+			<li>Delete the extension’s files from the filesystem</li>
+		</ol>',
+
+	'EXTENSION_DELETE_DATA_CONFIRM'	=> 'Are you sure that you wish to delete the data associated with “%s”?<br /><br />This removes all of its data and settings and cannot be undone!',
+	'EXTENSION_DISABLE_CONFIRM'		=> 'Are you sure that you wish to disable the “%s” extension?',
+	'EXTENSION_ENABLE_CONFIRM'		=> 'Are you sure that you wish to enable the “%s” extension?',
+	'EXTENSION_FORCE_UNSTABLE_CONFIRM'	=> 'Are you sure that you wish to force the use of unstable version?',
+
+	'RETURN_TO_EXTENSION_LIST'	=> 'Return to the extension list',
+
+	'EXT_DETAILS'			=> 'Extension Details',
+	'DISPLAY_NAME'			=> 'Disply Name (may be NULL)',
+	'CLEAN_NAME'			=> 'Clean Name',
+	'TYPE'					=> 'Type',
+	'DESCRIPTION'			=> 'Апісанне',
+	'VERSION'				=> 'Версія',
+	'HOMEPAGE'				=> 'Homepage',
+	'PATH'					=> 'File Path',
+	'TIME'					=> 'Час',
+	'LICENSE'				=> 'Licence',
+
+	'REQUIREMENTS'			=> 'Requirements',
+	'PHPBB_VERSION'			=> 'phpBB Version',
+	'PHP_VERSION'			=> 'PHP Version',
+	'AUTHOR_INFORMATION'	=> 'Author Information',
+	'AUTHOR_NAME'			=> 'Name',
+	'AUTHOR_EMAIL'			=> 'Email',
+	'AUTHOR_HOMEPAGE'		=> 'Homepage',
+	'AUTHOR_ROLE'			=> 'Role',
+
+	'NOT_UP_TO_DATE'		=> '%s is not up to date',
+	'UP_TO_DATE'			=> '%s is up to date',
+	'ANNOUNCEMENT_TOPIC'	=> 'Release Announcement',
+	'DOWNLOAD_LATEST'		=> 'Download Version',
+	'NO_VERSIONCHECK'		=> 'No version check information given.',
+
+	'VERSIONCHECK_FORCE_UPDATE_ALL'		=> 'Re-Check all versions',
+	'FORCE_UNSTABLE'					=> 'Always check for unstable versions',
+	'EXTENSIONS_VERSION_CHECK_SETTINGS'	=> 'Version check settings',
+
+	'META_FIELD_NOT_SET'	=> 'Required meta field %s has not been set.',
+	'META_FIELD_INVALID'	=> 'Meta field %s is invalid.',
+));
+
 #######language/en/acp/forums.php#######
 
 $lang = array_merge($lang, array(
@@ -12856,6 +13258,10 @@ $lang = array_merge($lang, array(
 	'AUTO_PRUNE_FREQ_EXPLAIN'	=> 'Час у днях паміж выкананнем аўтаачысткі.',
 	'AUTO_PRUNE_VIEWED'			=> 'Аўтаачыстка па часе прагляду',
 	'AUTO_PRUNE_VIEWED_EXPLAIN'	=> 'Колькасць дзён з апошняга прагляду, па сканчэнні якіх тэма будзе выдаленая.',
+	'AUTO_PRUNE_SHADOW_FREQ'	=> 'Auto-prune shadow topics frequency',
+	'AUTO_PRUNE_SHADOW_DAYS'	=> 'Auto-prune shadow topics age',
+	'AUTO_PRUNE_SHADOW_DAYS_EXPLAIN'	=> 'Number of days after which shadow topic is removed.',
+	'AUTO_PRUNE_SHADOW_FREQ_EXPLAIN'	=> 'Time in days between pruning events.',
 
 	'CONTINUE'						=> 'Працягнуць',
 	'COPY_PERMISSIONS_EXPLAIN'		=> 'У мэтах спрашчэння наладкі правоў доступу для новага форуму вы можаце скапіяваць у яго права з іншага існуючага форуму.',
@@ -12914,6 +13320,8 @@ $lang = array_merge($lang, array(
 	'FORUM_PASSWORD_OLD'				=> 'Дадзены пароль форума выкарыстае састарэлае шыфраванне і павінен быць зменены.',
 	'FORUM_PASSWORD_MISMATCH'			=> 'Уведзеныя паролі не супадаюць.',
 	'FORUM_PRUNE_SETTINGS'				=> 'Параметры ачысткі форума',
+	'FORUM_PRUNE_SHADOW'				=> 'Enable auto-pruning of shadow topics',
+	'FORUM_PRUNE_SHADOW_EXPLAIN'			=> 'Prunes the forum of shadow topics, set the frequency/age parameters below.',
 	'FORUM_RESYNCED'					=> 'Форум «%s» паспяхова сінхранізаваны',
 	'FORUM_RULES_EXPLAIN'				=> 'Правілы форума адлюстроўваюцца на кожнай старонцы ў межах дадзенага форума.',
 	'FORUM_RULES_LINK'					=> 'Паглядзець правілы форума',
@@ -13005,6 +13413,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE_EXPLAIN'		=> 'C дапамогай гэтай панэлі вы можаце кіраваць усімі групамі карыстальнікаў. Вы можаце выдаляць іх, ствараць новыя і рэдагаваць наяўныя. Акрамя гэтага, вы можаце прызначаць лідэраў, змяняць адчынены/утоены/зачынены статут груп, а таксама задаваць назовы і апісанні груп.',
+	'ADD_GROUP_CATEGORY'			=> 'Add category',
 	'GROUP_ADD_USERS'				=> 'Даданне карыстальнікаў',
 	'ADD_USERS_EXPLAIN'				=> 'Тут вы можаце дадаваць новых карыстальнікаў у групу. Вы можаце вылучыць, ці стане гэтая група групай па змаўчанні для вылучаных карыстальнікаў. Таксама тутака ж можна прызначаць лідэраў групы. Уводзіце імя кожнага карыстальніка на новым радку.',
 
@@ -13018,11 +13427,10 @@ $lang = array_merge($lang, array(
 	'GROUP_APPROVED'				=> 'Удзельнікі групы',
 	'GROUP_AVATAR'					=> 'Аватара групы',
 	'GROUP_AVATAR_EXPLAIN'			=> 'Гэты малюнак будзе адлюстроўвацца ў панэлі кіравання групай.',
+	'GROUP_CATEGORY_NAME'			=> 'Category name',
 	'GROUP_CLOSED'					=> 'Зачыненая група',
 	'GROUP_COLOR'					=> 'Колер групы',
 	'GROUP_COLOR_EXPLAIN'			=> 'Колер імёнаў карыстальнікаў — удзельнікаў групы. Пакіньце поле пустым для выкарыстання колеру па змаўчанні.',
-	'GROUP_CONFIRM_ADD_USER'		=> 'Вы сапраўды жадаеце дадаць карыстальніка %1$s у групу?',
-	'GROUP_CONFIRM_ADD_USERS'		=> 'Вы сапраўды жадаеце дадаць карыстальнікаў %1$s у групу?',
 	'GROUP_CREATED'					=> 'Група паспяхова створаная.',
 	'GROUP_DEFAULT'					=> 'Зрабіць групай па змаўчанні',
 	'GROUP_DEFS_UPDATED'			=> 'Для ўсіх вылучаных карыстальнікаў усталяваная група па змаўчанні.',
@@ -13064,6 +13472,8 @@ $lang = array_merge($lang, array(
 	'GROUP_SETTINGS_SAVE'			=> 'Налады групы',
 	'GROUP_SKIP_AUTH'				=> 'Выключыць лідэра групы з правоў',
 	'GROUP_SKIP_AUTH_EXPLAIN'		=> 'Пры ўключэнні опцыі лідэр групы не будзе ўспадкаваць правы гэтай групы.',
+	'GROUP_SPECIAL'					=> 'Pre-defined',
+	'GROUP_TEAMPAGE'				=> 'Display group on teampage',
 	'GROUP_TYPE'					=> 'Тып групы',
 	'GROUP_TYPE_EXPLAIN'			=> 'Гэтая група налад вызначае, хто можа ўступаць або праглядаць гэтую групу.',
 	'GROUP_UPDATED'					=> 'Налады групы паспяхова абноўленыя.',
@@ -13072,19 +13482,37 @@ $lang = array_merge($lang, array(
 	'GROUP_USERS_EXIST'				=> 'Вылучаныя карыстальнікі ўжо з\'яўляюцца ўдзельнікамі групы.',
 	'GROUP_USERS_REMOVE'			=> 'Карыстальнікі выдаленыя з групы і для іх паспяхова ўсталяваныя новыя групы па змаўчанні.',
 
+	'LEGEND_EXPLAIN'				=> 'These are the groups which are displayed in the group legend:',
+	'LEGEND_SETTINGS'				=> 'Legend settings',
+	'LEGEND_SORT_GROUPNAME'			=> 'Sort legend by group name',
+	'LEGEND_SORT_GROUPNAME_EXPLAIN'	=> 'The order below is ignored when this option is enabled.',
+
+	'MANAGE_LEGEND'			=> 'Manage group legend',
+	'MANAGE_TEAMPAGE'		=> 'Manage teampage',
 	'MAKE_DEFAULT_FOR_ALL'		=> 'Зрабіць групай па змаўчанні для кожнага яе ўдзельніка',
 	'MEMBERS'					=> 'Удзельнікі',
 
 	'NO_GROUP'					=> 'Запытанай групы не існуе.',
+	'NO_GROUPS_ADDED'			=> 'No groups added yet.',
 	'NO_GROUPS_CREATED'			=> 'Групы яшчэ не створаныя.',
 	'NO_PERMISSIONS'			=> 'Не капіяваць правы доступу',
 	'NO_USERS'					=> 'Запытваемых карыстальнікаў не існуе.',
 	'NO_USERS_ADDED'			=> 'Карыстальнікі не былі дададзеныя ў групу.',
 	'NO_VALID_USERS'			=> 'Вы не задалі аніводнага карыстальніка, падыходзячага да гэтай аперацыі.',
 
+	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> 'Прадусталяваныя групы',
 	'SPECIAL_GROUPS_EXPLAIN'	=> 'Прадусталяваныя групы — гэта адмысловыя групы, якія не могуць быць выдаленыя або змененыя напроста. Тым не менш, вы можаце дадаваць карыстальнікаў у гэтыя групы і змяняць асноўныя налады гэтых груп.',
 
+	'TEAMPAGE'					=> 'Teampage',
+	'TEAMPAGE_DISP_ALL'			=> 'All memberships',
+	'TEAMPAGE_DISP_DEFAULT'		=> 'User’s default group only',
+	'TEAMPAGE_DISP_FIRST'		=> 'First membership only',
+	'TEAMPAGE_EXPLAIN'			=> 'These are the groups which are displayed on the teampage:',
+	'TEAMPAGE_FORUMS'			=> 'Display moderated forums',
+	'TEAMPAGE_FORUMS_EXPLAIN'	=> 'If set to yes, moderators will have a list with all of the forums where they have moderator permissions displayed in their row. This can be very database intensive for big boards.',
+	'TEAMPAGE_MEMBERSHIPS'		=> 'Display user memberships',
+	'TEAMPAGE_SETTINGS'			=> 'Teampage settings',
 	'TOTAL_MEMBERS'				=> 'Удзельнікі',
 
 	'USERS_APPROVED'				=> 'Карыстальнікі паспяхова ўхваленыя.',
@@ -13470,26 +13898,14 @@ $lang = array_merge($lang, array(
 	'ACP_FILES'						=> 'Адміністратарскія файлы',
 	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> 'Тут вы можаце ўсталёўваць і выдаляць моўныя пакеты. Моўны пакет, які выкарыстоўваецца на канферэнцыі па змоўчванні, пазначаны зорачкай (*).',
 
-	'EMAIL_FILES'			=> 'Шаблоны email-паведамленняў',
-
-	'FILE_CONTENTS'				=> 'Змесціва файла',
-	'FILE_FROM_STORAGE'			=> 'Файл з папкі захоўвання',
-
-	'HELP_FILES'				=> 'Даведкавыя файлы',
-
-	'INSTALLED_LANGUAGE_PACKS'	=> 'Усталяваныя моўныя пакеты',
-	'INVALID_LANGUAGE_PACK'		=> 'Вылучаны моўны пакет недапушчальны. Праверце пакет, і пры неабходнасці, паўторна загрузіце яго на сервер.',
-	'INVALID_UPLOAD_METHOD'		=> 'Вылучаны метад загрузкі недапушчальны. Вылучыце іншы метад.',
+	'DELETE_LANGUAGE_CONFIRM'		=> 'Are you sure you wish to delete “%s”?',
+	'INSTALLED_LANGUAGE_PACKS'		=> 'Усталяваныя моўныя пакеты',
 
 	'LANGUAGE_DETAILS_UPDATED'			=> 'Звесткі аб мове паспяхова абноўленыя.',
-	'LANGUAGE_ENTRIES'					=> 'Моўныя дадзеныя',
-	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Тут вы можаце змяняць наяўныя або пакуль неперакладзеныя запісы ў файлах моўнага пакета.<br /><strong>Нататка:</strong> калі вы змянілі моўны файл, змены будуць захаваныя ў асобнай папцы для наступнай запампоўкі. Змены не будуць бачныя вашым карыстальнікам датуль, пакуль вы не заменіце зыходныя моўныя файлы на серверы (загрузіўшы новыя).',
-	'LANGUAGE_FILES'					=> 'Моўныя файлы',
-	'LANGUAGE_KEY'						=> 'Ключ мовы',
 	'LANGUAGE_PACK_ALREADY_INSTALLED'	=> 'Гэты моўны пакет ужо ўсталяваны.',
-	'LANGUAGE_PACK_DELETED'				=> 'Моўны пакет <strong>%s</strong> паспяхова выдалены. Усе карыстальнікі, выкарыстоўвалыя гэтая мова, пераключаныя на мову канферэнцыі па змаўчанні.',
+	'LANGUAGE_PACK_DELETED'				=> 'The language pack “%s” has been removed successfully. All users using this language have been reset to the board’s default language.',
 	'LANGUAGE_PACK_DETAILS'				=> 'Інфармацыя аб моўным пакеце',
-	'LANGUAGE_PACK_INSTALLED'			=> 'Моўны пакет <strong>%s</strong> паспяхова ўсталяваны.',
+	'LANGUAGE_PACK_INSTALLED'			=> 'The language pack “%s” has been successfully installed.',
 	'LANGUAGE_PACK_CPF_UPDATE'			=> 'Моўныя радкі дадатковых палёў профілю былі скапіяваныя з моўнага пакета па змаўчанні. Зменіце іх, калі гэта неабходна.',
 	'LANGUAGE_PACK_ISO'					=> 'ISO',
 	'LANGUAGE_PACK_LOCALNAME'			=> 'Мясцовая назва',
@@ -13502,33 +13918,44 @@ $lang = array_merge($lang, array(
 	'LANG_ISO_CODE'						=> 'Код ISO',
 	'LANG_LOCAL_NAME'					=> 'Мясцовая назва',
 
-	'MISSING_LANGUAGE_FILE'		=> 'Адсутнічае моўны файл: <strong style="color:red">%s</strong>',
+	'MISSING_LANG_FILES'		=> 'Missing language files',
 	'MISSING_LANG_VARIABLES'	=> 'Адсутныя моўныя пераменныя',
-	'MODS_FILES'				=> 'Моўныя файлы модаў',
 
 	'NO_FILE_SELECTED'				=> 'Вы не паказалі моўны файл.',
 	'NO_LANG_ID'					=> 'Вы не паказалі моўны пакет.',
-	'NO_REMOVE_DEFAULT_LANG'		=> 'Вы не можаце выдаліць моўны пакет, выкарыстоўваны па змаўчанні.<br />Калі вы жадаеце выдаліць гэты пакет, спачатку зменіце мову канферэнцыі па змаўчанні.',
+	'NO_REMOVE_DEFAULT_LANG'		=> 'You are not able to remove the default language pack.<br />If you want to remove this language pack, change your board’s default language first.',
 	'NO_UNINSTALLED_LANGUAGE_PACKS'	=> 'Усе даступныя моўныя пакеты ўсталяваныя',
 
-	'REMOVE_FROM_STORAGE_FOLDER'		=> 'Выдаліць з папкі захоўвання',
-
-	'SELECT_DOWNLOAD_FORMAT'	=> 'Вылучыце фармат архіва для запампоўкі',
-	'SUBMIT_AND_DOWNLOAD'		=> 'Адправіць форму і запампаваць файл',
-	'SUBMIT_AND_UPLOAD'			=> 'Адправіць форму і загрузіць файл на сервер',
-
-	'THOSE_MISSING_LANG_FILES'			=> 'Наступныя моўныя файлы адсутнічаюць у моўным пакеце %s',
-	'THOSE_MISSING_LANG_VARIABLES'		=> 'Наступныя моўныя пераменныя адсутнічаюць у моўным пакеце <strong>%s</strong>',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 
 	'UNINSTALLED_LANGUAGE_PACKS'	=> 'Моўныя пакеты, даступныя для ўсталёўкі',
 
+	// 3.0.12
+	'EMAIL_FILES'			=> 'Шаблоны email-паведамленняў',
+	'FILE_CONTENTS'				=> 'Змесціва файла',
+	'FILE_FROM_STORAGE'			=> 'Файл з папкі захоўвання',
+	'HELP_FILES'				=> 'Даведкавыя файлы',
+	'INSTALLED_LANGUAGE_PACKS'	=> 'Усталяваныя моўныя пакеты',
+	'INVALID_LANGUAGE_PACK'		=> 'Вылучаны моўны пакет недапушчальны. Праверце пакет, і пры неабходнасці, паўторна загрузіце яго на сервер.',
+	'INVALID_UPLOAD_METHOD'		=> 'Вылучаны метад загрузкі недапушчальны. Вылучыце іншы метад.',
+	'LANGUAGE_ENTRIES'					=> 'Моўныя дадзеныя',
+	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Тут вы можаце змяняць наяўныя або пакуль неперакладзеныя запісы ў файлах моўнага пакета.<br /><strong>Нататка:</strong> калі вы змянілі моўны файл, змены будуць захаваныя ў асобнай папцы для наступнай запампоўкі. Змены не будуць бачныя вашым карыстальнікам датуль, пакуль вы не заменіце зыходныя моўныя файлы на серверы (загрузіўшы новыя).',
+	'LANGUAGE_FILES'					=> 'Моўныя файлы',
+	'LANGUAGE_KEY'						=> 'Ключ мовы',
+	'MISSING_LANGUAGE_FILE'		=> 'Адсутнічае моўны файл: <strong style="color:red">%s</strong>',
+	'SELECT_DOWNLOAD_FORMAT'	=> 'Вылучыце фармат архіва для запампоўкі',
+	'SUBMIT_AND_DOWNLOAD'		=> 'Адправіць форму і запампаваць файл',
+	'SUBMIT_AND_UPLOAD'			=> 'Адправіць форму і загрузіць файл на сервер',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 	'UNABLE_TO_WRITE_FILE'		=> 'Не атрымалася запісаць файл у %s.',
 	'UPLOAD_COMPLETED'			=> 'Загрузка на сервер паспяхова завершаная.',
 	'UPLOAD_FAILED'				=> 'Загрузка на сервер не атрымалася. Можа запатрабавацца замяніць адпаведны файл уручную.',
 	'UPLOAD_METHOD'				=> 'Спосаб запампоўкі',
 	'UPLOAD_SETTINGS'			=> 'Налады загрузкі на сервер',
-
 	'WRONG_LANGUAGE_FILE'		=> 'Вылучаны моўны файл недапушчальны.',
+	// 3.0.12
 ));
 
 #######language/en/acp/lexicon.php#######
@@ -13861,6 +14288,171 @@ $lang = array_merge($lang, array(
 	'ROLE_DESCRIPTION_ADMIN_FOOTBALL'	=> 'Can edit final match results.',
 ));
 
+#######language/en/acp/permissions_phpbb.php#######
+
+$lang = array_merge($lang, array(
+	'ACL_CAT_ACTIONS'		=> 'Actions',
+	'ACL_CAT_CONTENT'		=> 'Content',
+	'ACL_CAT_FORUMS'		=> 'Forums',
+	'ACL_CAT_MISC'			=> 'Misc',
+	'ACL_CAT_PERMISSIONS'	=> 'Permissions',
+	'ACL_CAT_PM'			=> 'Private messages',
+	'ACL_CAT_POLLS'			=> 'Polls',
+	'ACL_CAT_POST'			=> 'Post',
+	'ACL_CAT_POST_ACTIONS'	=> 'Post actions',
+	'ACL_CAT_POSTING'		=> 'Posting',
+	'ACL_CAT_PROFILE'		=> 'Profile',
+	'ACL_CAT_SETTINGS'		=> 'Settings',
+	'ACL_CAT_TOPIC_ACTIONS'	=> 'Topic actions',
+	'ACL_CAT_USER_GROUP'	=> 'Users &amp; Groups',
+));
+
+// User Permissions
+$lang = array_merge($lang, array(
+	'ACL_U_VIEWPROFILE'	=> 'Can view profiles, memberlist and online list',
+	'ACL_U_CHGNAME'		=> 'Can change username',
+	'ACL_U_CHGPASSWD'	=> 'Can change password',
+	'ACL_U_CHGEMAIL'	=> 'Can change email address',
+	'ACL_U_CHGAVATAR'	=> 'Can change avatar',
+	'ACL_U_CHGGRP'		=> 'Can change default usergroup',
+	'ACL_U_CHGPROFILEINFO'	=> 'Can change profile field information',
+
+	'ACL_U_ATTACH'		=> 'Can attach files',
+	'ACL_U_DOWNLOAD'	=> 'Can download files',
+	'ACL_U_SAVEDRAFTS'	=> 'Can save drafts',
+	'ACL_U_CHGCENSORS'	=> 'Can disable word censors',
+	'ACL_U_SIG'			=> 'Can use signature',
+
+	'ACL_U_SENDPM'		=> 'Can send private messages',
+	'ACL_U_MASSPM'		=> 'Can send messages to multiple users',
+	'ACL_U_MASSPM_GROUP'=> 'Can send messages to groups',
+	'ACL_U_READPM'		=> 'Can read private messages',
+	'ACL_U_PM_EDIT'		=> 'Can edit own private messages',
+	'ACL_U_PM_DELETE'	=> 'Can remove private messages from own folder',
+	'ACL_U_PM_FORWARD'	=> 'Can forward private messages',
+	'ACL_U_PM_EMAILPM'	=> 'Can email private messages',
+	'ACL_U_PM_PRINTPM'	=> 'Can print private messages',
+	'ACL_U_PM_ATTACH'	=> 'Can attach files in private messages',
+	'ACL_U_PM_DOWNLOAD'	=> 'Can download files in private messages',
+	'ACL_U_PM_BBCODE'	=> 'Can use BBCode in private messages',
+	'ACL_U_PM_SMILIES'	=> 'Can use smilies in private messages',
+	'ACL_U_PM_IMG'		=> 'Can use [img] BBCode tag in private messages',
+	'ACL_U_PM_FLASH'	=> 'Can use [flash] BBCode tag in private messages',
+
+	'ACL_U_SENDEMAIL'	=> 'Can send emails',
+	'ACL_U_SENDIM'		=> 'Can send instant messages',
+	'ACL_U_IGNOREFLOOD'	=> 'Can ignore flood limit',
+	'ACL_U_HIDEONLINE'	=> 'Can hide online status',
+	'ACL_U_VIEWONLINE'	=> 'Can view hidden online users',
+	'ACL_U_SEARCH'		=> 'Can search board',
+));
+
+// Forum Permissions
+$lang = array_merge($lang, array(
+	'ACL_F_LIST'		=> 'Can see forum',
+	'ACL_F_READ'		=> 'Can read forum',
+	'ACL_F_SEARCH'		=> 'Can search the forum',
+	'ACL_F_SUBSCRIBE'	=> 'Can subscribe forum',
+	'ACL_F_PRINT'		=> 'Can print topics',
+	'ACL_F_EMAIL'		=> 'Can email topics',
+	'ACL_F_BUMP'		=> 'Can bump topics',
+	'ACL_F_USER_LOCK'	=> 'Can lock own topics',
+	'ACL_F_DOWNLOAD'	=> 'Can download files',
+	'ACL_F_REPORT'		=> 'Can report posts',
+
+	'ACL_F_POST'		=> 'Can start new topics',
+	'ACL_F_STICKY'		=> 'Can post stickies',
+	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_REPLY'		=> 'Can reply to topics',
+	'ACL_F_EDIT'		=> 'Can edit own posts',
+	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
+	'ACL_F_SOFTDELETE'	=> 'Can soft delete own posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_F_IGNOREFLOOD' => 'Can ignore flood limit',
+	'ACL_F_POSTCOUNT'	=> 'Increment post counter<br /><em>Please note that this setting only affects new posts.</em>',
+	'ACL_F_NOAPPROVE'	=> 'Can post without approval',
+
+	'ACL_F_ATTACH'		=> 'Can attach files',
+	'ACL_F_ICONS'		=> 'Can use topic/post icons',
+	'ACL_F_BBCODE'		=> 'Can use BBCode',
+	'ACL_F_FLASH'		=> 'Can use [flash] BBCode tag',
+	'ACL_F_IMG'			=> 'Can use [img] BBCode tag',
+	'ACL_F_SIGS'		=> 'Can use signatures',
+	'ACL_F_SMILIES'		=> 'Can use smilies',
+
+	'ACL_F_POLL'		=> 'Can create polls',
+	'ACL_F_VOTE'		=> 'Can vote in polls',
+	'ACL_F_VOTECHG'		=> 'Can change existing vote',
+));
+
+// Moderator Permissions
+$lang = array_merge($lang, array(
+	'ACL_M_EDIT'		=> 'Can edit posts',
+	'ACL_M_DELETE'		=> 'Can permanently delete posts',
+	'ACL_M_SOFTDELETE'	=> 'Can soft delete posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_M_APPROVE'		=> 'Can approve and restore posts',
+	'ACL_M_REPORT'		=> 'Can close and delete reports',
+	'ACL_M_CHGPOSTER'	=> 'Can change post author',
+
+	'ACL_M_MOVE'	=> 'Can move topics',
+	'ACL_M_LOCK'	=> 'Can lock topics',
+	'ACL_M_SPLIT'	=> 'Can split topics',
+	'ACL_M_MERGE'	=> 'Can merge topics',
+
+	'ACL_M_INFO'	=> 'Can view post details',
+	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+));
+
+// Admin Permissions
+$lang = array_merge($lang, array(
+	'ACL_A_BOARD'		=> 'Can alter board settings/check for updates',
+	'ACL_A_SERVER'		=> 'Can alter server/communication settings',
+	'ACL_A_JABBER'		=> 'Can alter Jabber settings',
+	'ACL_A_PHPINFO'		=> 'Can view php settings',
+
+	'ACL_A_FORUM'		=> 'Can manage forums',
+	'ACL_A_FORUMADD'	=> 'Can add new forums',
+	'ACL_A_FORUMDEL'	=> 'Can delete forums',
+	'ACL_A_PRUNE'		=> 'Can prune forums',
+
+	'ACL_A_ICONS'		=> 'Can alter topic/post icons and smilies',
+	'ACL_A_WORDS'		=> 'Can alter word censors',
+	'ACL_A_BBCODE'		=> 'Can define BBCode tags',
+	'ACL_A_ATTACH'		=> 'Can alter attachment related settings',
+
+	'ACL_A_USER'		=> 'Can manage users<br /><em>This also includes seeing the users browser agent within the viewonline list.</em>',
+	'ACL_A_USERDEL'		=> 'Can delete/prune users',
+	'ACL_A_GROUP'		=> 'Can manage groups',
+	'ACL_A_GROUPADD'	=> 'Can add new groups',
+	'ACL_A_GROUPDEL'	=> 'Can delete groups',
+	'ACL_A_RANKS'		=> 'Can manage ranks',
+	'ACL_A_PROFILE'		=> 'Can manage custom profile fields',
+	'ACL_A_NAMES'		=> 'Can manage disallowed names',
+	'ACL_A_BAN'			=> 'Can manage bans',
+
+	'ACL_A_VIEWAUTH'	=> 'Can view permission masks',
+	'ACL_A_AUTHGROUPS'	=> 'Can alter permissions for individual groups',
+	'ACL_A_AUTHUSERS'	=> 'Can alter permissions for individual users',
+	'ACL_A_FAUTH'		=> 'Can alter forum permission class',
+	'ACL_A_MAUTH'		=> 'Can alter moderator permission class',
+	'ACL_A_AAUTH'		=> 'Can alter admin permission class',
+	'ACL_A_UAUTH'		=> 'Can alter user permission class',
+	'ACL_A_ROLES'		=> 'Can manage roles',
+	'ACL_A_SWITCHPERM'	=> 'Can use others permissions',
+
+	'ACL_A_STYLES'		=> 'Can manage styles',
+	'ACL_A_EXTENSIONS'	=> 'Can manage extensions',
+	'ACL_A_VIEWLOGS'	=> 'Can view logs',
+	'ACL_A_CLEARLOGS'	=> 'Can clear logs',
+	'ACL_A_MODULES'		=> 'Can manage modules',
+	'ACL_A_LANGUAGE'	=> 'Can manage language packs',
+	'ACL_A_EMAIL'		=> 'Can send mass email',
+	'ACL_A_BOTS'		=> 'Can manage bots',
+	'ACL_A_REASONS'		=> 'Can manage report/denial reasons',
+	'ACL_A_BACKUP'		=> 'Can backup/restore database',
+	'ACL_A_SEARCH'		=> 'Can manage search backends and settings',
+));
+
 #######language/en/acp/phpbb_seo.php#######
 
 $lang = array_merge($lang, array(
@@ -14032,6 +14624,7 @@ $lang = array_merge($lang, array(
 
 	'BBCODE_ADDED'				=> 'BBCode паспяхова дададзены.',
 	'BBCODE_EDITED'				=> 'BBCode паспяхова зменены.',
+	'BBCODE_DELETED'			=> 'The BBCode has been removed successfully.',
 	'BBCODE_NOT_EXIST'			=> 'Вылучаны BBCode не існуе.',
 	'BBCODE_HELPLINE'			=> 'Падказка',
 	'BBCODE_HELPLINE_EXPLAIN'	=> 'Дадзенае поле ўтрымоўвае тэкст, які з\'явіцца пры навядзенні паказальніка мышы на кнопку з BBCode.',
@@ -14087,17 +14680,10 @@ $lang = array_merge($lang, array(
 	'EXPORT_SMILIES'			=> 'Экспартаваць і загрузіць файл smilies.pak',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sАпасля пстрычкі па гэтай спасылцы канфігурацыя ўсталяваных смайлікаў будзе спакаваная ў файл <samp>smilies.pak</samp>, які пасля загрузкі можна выкарыстаць для стварэння архіваў <samp>.zip</samp> або <samp>.tgz</samp>, якія змяшчаюць усе вашы смайлікі разам з канфігурацыйным файлам <samp>smilies.pak</samp>.',
 
-
 	'ICONS_ADD'				=> 'Дадаць значок',
-	'ICONS_NONE_ADDED'		=> 'Значкі не былі дададзеныя.',
-	'ICONS_ONE_ADDED'		=> 'Паказаны значок паспяхова дададзены.',
-	'ICONS_ADDED'			=> 'Паказаныя значкі паспяхова дададзеныя.',
 	'ICONS_CONFIG'			=> 'Налады значкоў',
 	'ICONS_DELETED'			=> 'Значок паспяхова выдалены.',
 	'ICONS_EDIT'			=> 'Змяніць значок',
-	'ICONS_ONE_EDITED'		=> 'Паказаны значок паспяхова абноўлены.',
-	'ICONS_NONE_EDITED'		=> 'Значкі не былі абноўленыя.',
-	'ICONS_EDITED'			=> 'Паказаныя значкі паспяхова абноўленыя.',
 	'ICONS_HEIGHT'			=> 'Вышыня значка',
 	'ICONS_IMAGE'			=> 'Малюнак значка',
 	'ICONS_IMPORTED'		=> 'Пакет значкоў паспяхова ўсталяваны.',
@@ -14127,9 +14713,6 @@ $lang = array_merge($lang, array(
 
 	'SELECT_PACKAGE'			=> 'Вылучыце файл пакета',
 	'SMILIES_ADD'				=> 'Дадаць смайлік',
-	'SMILIES_NONE_ADDED'		=> 'Смайлікі не былі дададзеныя.',
-	'SMILIES_ONE_ADDED'			=> 'Паказаны смайлік паспяхова дададзены.',
-	'SMILIES_ADDED'				=> 'Паказаныя смайлікі паспяхова дададзеныя.',
 	'SMILIES_CODE'				=> 'Код смайліка',
 	'SMILIES_CONFIG'			=> 'Налады смайлікаў',
 	'SMILIES_DELETED'			=> 'Смайлік паспяхова выдалены.',
@@ -14137,9 +14720,6 @@ $lang = array_merge($lang, array(
 	'SMILIE_NO_CODE'			=> 'Смайлік «%s» не быў дададзены, так як для яго не зададзены код.',
 	'SMILIE_NO_EMOTION'			=> 'Смайлік «%s» не быў дададзены, так як для яго не зададзена эмоцыя.',
 	'SMILIE_NO_FILE'			=> 'Смайлік «%s» не быў дададзены, так як для яго адсутнічае файл.',
-	'SMILIES_NONE_EDITED'		=> 'Смайлікі не былі абноўленыя.',
-	'SMILIES_ONE_EDITED'		=> 'Паказаны смайлік паспяхова абноўлены.',
-	'SMILIES_EDITED'			=> 'Паказаныя смайлікі паспяхова абноўленыя.',
 	'SMILIES_EMOTION'			=> 'Эмоцыя',
 	'SMILIES_HEIGHT'			=> 'Вышыня смайліка',
 	'SMILIES_IMAGE'				=> 'Малюнак смайліка',
@@ -14151,7 +14731,6 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'Файл смайліка',
 	'SMILIES_WIDTH'				=> 'Шырыня смайліка',
 
-	'TOO_MANY_SMILIES'		=> 'Ваша паведамленне ўтрымоўвае занадта шмат смайлікаў. Максімальная дазволеная колькасць: %d.',
 	'WRONG_PAK_TYPE'		=> 'Паказаны пакет не ўтрымоўвае прыдатных дадзеных.',
 ));
 
@@ -14249,8 +14828,11 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ADDED_PROFILE_FIELD'	=> 'Дадатковае поле паспяхова дададзена ў профіль.',
+	'ALPHA_DOTS'			=> 'Alphanumeric and dots (periods)',
 	'ALPHA_ONLY'			=> 'Толькі літарна-лічбавыя',
 	'ALPHA_SPACERS'			=> 'Толькі літарна-лічбавыя і падзельнікі',
+	'ALPHA_UNDERSCORE'		=> 'Alphanumeric and underscores',
+	'ALPHA_PUNCTUATION'		=> 'Alphanumeric with comma, dots, underscore and dashes beginning with a letter',
 	'ALWAYS_TODAY'			=> 'Заўсёды дзеючая дата',
 
 	'BOOL_ENTRIES_EXPLAIN'	=> 'Увядзіце магчымыя варыянты',
@@ -14277,6 +14859,10 @@ $lang = array_merge($lang, array(
 	'DISPLAY_AT_PROFILE_EXPLAIN'	=> 'Карыстальнік можа змяніць значэнне поля ў асабістым раздзеле.',
 	'DISPLAY_AT_REGISTER'			=> 'У форме рэгістрацыі',
 	'DISPLAY_AT_REGISTER_EXPLAIN'	=> 'Калі ўключана, поле можна запоўніць пры рэгістрацыі і змяніць у асабістым раздзеле.',
+	'DISPLAY_ON_MEMBERLIST'			=> 'Display on memberlist screen',
+	'DISPLAY_ON_MEMBERLIST_EXPLAIN'	=> 'If this option is enabled, the field will be displayed in the user rows on the memberlist screen.',
+	'DISPLAY_ON_PM'					=> 'Display on view private message screen',
+	'DISPLAY_ON_PM_EXPLAIN'			=> 'If this option is enabled, the field will be displayed in the mini-profile on the private message screen.',
 	'DISPLAY_ON_VT'					=> 'На старонках тэм',
 	'DISPLAY_ON_VT_EXPLAIN'			=> 'Пры ўключэнні гэтай опцыі поле будзе адлюстроўвацца на старонках тэм пад аватарам карыстальнікаў.',
 	'DISPLAY_PROFILE_FIELD'			=> 'Адлюстроўваць поле',
@@ -14290,20 +14876,26 @@ $lang = array_merge($lang, array(
 	'EVERYTHING_OK'					=> 'Усё ў парадку',
 
 	'FIELD_BOOL'				=> 'Лагічнае поле (Так ці не)',
+	'FIELD_CONTACT_DESC'		=> 'Contact description',
+	'FIELD_CONTACT_URL'			=> 'Contact link',
 	'FIELD_DATE'				=> 'Дата',
 	'FIELD_DESCRIPTION'			=> 'Апісанне поля',
 	'FIELD_DESCRIPTION_EXPLAIN'	=> 'Падказка да поля, паказваемая карыстальніку',
 	'FIELD_DROPDOWN'			=> 'Які расчыняецца спіс',
+	'FIELD_GOOGLEPLUS'			=> 'Google+',
 	'FIELD_IDENT'				=> 'Ідэнтыфікатар поля',
 	'FIELD_IDENT_ALREADY_EXIST'	=> 'Поле з такім ідэнтыфікатарам ужо існуе. Увядзіце іншы ідэнтыфікатар.',
 	'FIELD_IDENT_EXPLAIN'		=> 'Назва поля для яго пазначэння ў базе дадзеных і файлах шаблонаў.',
 	'FIELD_INT'					=> 'Лік',
+	'FIELD_IS_CONTACT'			=> 'Display field as a contact field',
+	'FIELD_IS_CONTACT_EXPLAIN'	=> 'Contact fields are displayed within the contact section of the user profile and are displayed differently in the mini profile next to posts and private messages. You can use <samp>%s</samp> as a placeholder variable which will be replaced by a value provided by the user.',
 	'FIELD_LENGTH'				=> 'Памер поля ўводу',
 	'FIELD_NOT_FOUND'			=> 'Поле не знойдзена.',
 	'FIELD_STRING'				=> 'Аднарадковае тэкставае поле',
 	'FIELD_TEXT'				=> 'Шматрадковае тэкставае поле',
 	'FIELD_TYPE'				=> 'Тып поля',
 	'FIELD_TYPE_EXPLAIN'		=> 'Вы не зможаце змяняць тып поля.',
+	'FIELD_URL'					=> 'URL (Link)',
 	'FIELD_VALIDATION'			=> 'Дапушчальныя знакі',
 	'FIRST_OPTION'				=> 'Першы варыянт',
 
@@ -14315,6 +14907,12 @@ $lang = array_merge($lang, array(
 	'ISO_LANGUAGE'				=> 'Мова [%s]',
 
 	'LANG_SPECIFIC_OPTIONS'		=> 'Налады для мовы [<strong>%s</strong>]',
+
+	'LETTER_NUM_DOTS'			=> 'Any letters, numbers and dots (periods)',
+	'LETTER_NUM_ONLY'			=> 'Any letters and numbers',
+	'LETTER_NUM_PUNCTUATION'	=> 'Any letters, numbers, comma, dots, underscores and dashes beginning with any letter',
+	'LETTER_NUM_SPACERS'		=> 'Any letters, numbers and spacers',
+	'LETTER_NUM_UNDERSCORE'		=> 'Any letters, numbers and underscores',
 
 	'MAX_FIELD_CHARS'		=> 'Максімальны лік знакаў',
 	'MAX_FIELD_NUMBER'		=> 'Максімальна дапушчальны лік',
@@ -14369,7 +14967,9 @@ $lang = array_merge($lang, array(
 #######language/en/acp/prune.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_PRUNE_USERS_EXPLAIN'	=> 'Тут вы можаце выдаляць або адключаць карыстальнікаў канферэнцыі. Уліковыя запісы могуць быць адфільтраваныя рознымі спосабамі - па колькасці паведамленняў, па часе апошняга наведвання і гэтак далей. Крытэрыі могуць быць аб\'яднаныя з мэтай скарачэння ўліковых запісаў, да якіх будзе прыменена ачыстка. Напрыклад, вы можаце выдаліць карыстальнікаў, якія не наведвалі канферэнцыю пасля 01.01.2002, і якія маюць меньш за дзесяць паведамленняў. Таксама вы можаце цалкам прапусціць выбар крытэрыяў, ўручную увёўшы пажаданых карыстальнікаў (кожнага на асобным радку) у тэкставае поле. Будзьце асцярожныя з гэтым інструментам - выдаленых карыстальнікаў аднавіць немагчыма!',
+	'ACP_PRUNE_USERS_EXPLAIN'	=> 'This section allows you to delete or deactivate users on your board. Accounts can be filtered in a variety of ways; by post count, most recent activity, etc. Criteria may be combined to narrow down which accounts are affected. For example, you can prune users with fewer than 10 posts, who were also inactive after 2002-01-01. Use * as a wildcard for text fields. Alternatively, you may skip the criteria selection completely by entering a list of users (each on a separate line) into the text field. Take care with this facility! Once a user is deleted, there is no way to reverse the action.',
+
+	'CRITERIA'				=> 'Criteria',
 
 	'DEACTIVATE_DELETE'			=> 'Дэактываваць або выдаліць',
 	'DEACTIVATE_DELETE_EXPLAIN'	=> 'Абярыце дзеянне, якое будзе ўжытае да карыстальніка. Памятайце, што выдаленых карыстальнікаў аднавіць немагчыма!',
@@ -14377,15 +14977,18 @@ $lang = array_merge($lang, array(
 	'DELETE_USER_POSTS'			=> 'Выдаліць таксама іх паведамлення',
 	'DELETE_USER_POSTS_EXPLAIN'	=> 'Выдаляе карыстальнікаў разам з іх паведамленнямі. Не працуе, калі вылучаная дэактывацыя карыстальнікаў.',
 
-	'JOINED_EXPLAIN'			=> 'Увядзіце дату ў фармаце <kbd>ГГГГ-ММ-ДД</kbd>.',
+	'JOINED_EXPLAIN'			=> 'Enter a date in <kbd>YYYY-MM-DD</kbd> format. You may use both fields to specify an interval, or leave one blank for an open date range.',
 
 	'LAST_ACTIVE_EXPLAIN'		=> 'Увядзіце дату ў фармаце <kbd>ГГГГ-ММ-ДД</kbd>. Увядзіце <kbd>0000-00-00</kbd> для ачысткі карыстальнікаў, якія ніколі не ўваходзілі на канферэнцыю, <em>да</em> і <em>пасля</em> ігнаравання умоў.',
 
+	'POSTS_ON_QUEUE'			=> 'Posts Awaiting Approval',
+	'PRUNE_USERS_GROUP_EXPLAIN'	=> 'Limit to users within the selected group.',
+	'PRUNE_USERS_GROUP_NONE'	=> 'All groups',
 	'PRUNE_USERS_LIST'				=> 'Карыстальнікі для выдалення або дэактывацыі',
-	'PRUNE_USERS_LIST_DELETE'		=> 'З вылучаным крытэрыям наступныя карыстальнікі будуць выдаленыя.',
-	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'З вылучаным крытэрыям наступныя карыстальники будуць дэактываваны.',
+	'PRUNE_USERS_LIST_DELETE'		=> 'With the selected critera for pruning users the following accounts will be removed. You can remove individual users from the deletion list by unchecking the box next to their username.',
+	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'With the selected critera for pruning users the following accounts will be deactivated. You can remove individual users from the deactivation list by unchecking the box next to their username.',
 
-	'SELECT_USERS_EXPLAIN'		=> 'Увядзіце ў гэтае поле імёны канкрэтных карыстальнікаў, у гэтым выпадку зададзеныя вышэй крытэрыі не будуць выкарыстаныя. Заўвага: заснавальнікі не могуць быць выдаленыя або адключаныя.',
+	'SELECT_USERS_EXPLAIN'		=> 'Enter specific usernames here. They will be used in preference to the criteria above. Founders cannot be pruned.',
 
 	'USER_DEACTIVATE_SUCCESS'	=> 'Адабраныя карыстальнікі паспяхова дэактываваныя.',
 	'USER_DELETE_SUCCESS'		=> 'Адабраныя карыстальнікі паспяхова выдаленыя.',
@@ -14432,15 +15035,38 @@ $lang = array_merge($lang, array(
 	'DELETING_INDEX_IN_PROGRESS'			=> 'Выдаленне пошукавых індэксаў…',
 	'DELETING_INDEX_IN_PROGRESS_EXPLAIN'	=> 'Ідзе выдаленне пошукавых індэксаў. Гэты працэс можа заняць некалькі хвілін.',
 
-	'FULLTEXT_MYSQL_INCOMPATIBLE_VERSION'	=> 'Механізм паўнатэкставага пошуку MySQL можа выкарыстоўвацца толькі на MySQL4 і вышэй.',
+	'FULLTEXT_MYSQL_INCOMPATIBLE_DATABASE'	=> 'The MySQL fulltext backend can only be used with MySQL4 and above.',
 	'FULLTEXT_MYSQL_NOT_MYISAM'				=> 'Паўнатэкставыя індэксы MySQL могуць выкарыстоўвацца толькі з табліцамі MyISAM.',
 	'FULLTEXT_MYSQL_TOTAL_POSTS'			=> 'Агульная колькасць індэксаваных паведамленняў',
-	'FULLTEXT_MYSQL_MBSTRING'				=> 'Падтрымка нелацінскіх знакаў UTF-8, выкарыстоўвалых mbstring:',
-	'FULLTEXT_MYSQL_PCRE'					=> 'Падтрымка нелацінскіх знакаў UTF-8, выкарыстоўвалых PCRE:',
-	'FULLTEXT_MYSQL_MBSTRING_EXPLAIN'		=> 'Калі PCRE не мае ўласцівасцяў знакаў юнікода, то пошукавы механізм паспрабуе выкарыстаць механізм рэгулярных выразаў mbstring.',
-	'FULLTEXT_MYSQL_PCRE_EXPLAIN'			=> 'Для гэтага пошукавага механізму патрабуюцца ўласцівасці знакаў юнікод PCRE, даступныя толькі на PHP 4.4, 5.1 і вышэй, калі вы жадаеце шукаць нелацінскія знакі.',
 	'FULLTEXT_MYSQL_MIN_SEARCH_CHARS_EXPLAIN'	=> 'Словы з, па меншай меры, гэтай колькасцю сімвалаў будуць праіндэксаваныя для пошуку. Вы або ваш сервер можа змяніць гэтую наладу шляхам змены канфігурацыі MySQL.',
 	'FULLTEXT_MYSQL_MAX_SEARCH_CHARS_EXPLAIN'	=> 'Словы з не больш, чым гэта, колькасцю сімвалаў будуць праіндэксаваныя для пошуку. Вы або ваш сервер можа змяніць гэтую наладу шляхам змены канфігурацыі MySQL.',
+
+	'FULLTEXT_POSTGRES_INCOMPATIBLE_DATABASE'	=> 'The PostgreSQL fulltext backend can only be used with PostgreSQL.',
+	'FULLTEXT_POSTGRES_TOTAL_POSTS'			=> 'Total number of indexed posts',
+	'FULLTEXT_POSTGRES_VERSION_CHECK'		=> 'PostgreSQL version',
+	'FULLTEXT_POSTGRES_TS_NAME'				=> 'Text search Configuration Profile:',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN'			=> 'Minimum word length for keywords',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN'			=> 'Maximum word length for keywords',
+	'FULLTEXT_POSTGRES_VERSION_CHECK_EXPLAIN'		=> 'This search backend requires PostgreSQL version 8.3 and above.',
+	'FULLTEXT_POSTGRES_TS_NAME_EXPLAIN'				=> 'The Text search configuration profile used to determine the parser and dictionary.',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN_EXPLAIN'			=> 'Words with at least this many characters will be included in the query to the database.',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN_EXPLAIN'			=> 'Words with no more than this many characters will be included in the query to the database.',
+
+	'FULLTEXT_SPHINX_CONFIGURE'				=> 'Configure the following settings to generate sphinx config file',
+	'FULLTEXT_SPHINX_DATA_PATH'				=> 'Path to data directory',
+	'FULLTEXT_SPHINX_DATA_PATH_EXPLAIN'		=> 'It will be used to store the indexes and log files. You should create this directory outside the web accessible directories. (should have a trailing slash)',
+	'FULLTEXT_SPHINX_DELTA_POSTS'			=> 'Number of posts in frequently updated delta index',
+	'FULLTEXT_SPHINX_HOST'					=> 'Sphinx search daemon host',
+	'FULLTEXT_SPHINX_HOST_EXPLAIN'			=> 'Host on which the sphinx search daemon (searchd) listens. Leave empty to use the default localhost',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT'		=> 'Indexer memory limit',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT_EXPLAIN'	=> 'This number should at all times be lower than the RAM available on your machine. If you experience periodic performance problems this might be due to the indexer consuming too many resources. It might help to lower the amount of memory available to the indexer.',
+	'FULLTEXT_SPHINX_MAIN_POSTS'			=> 'Number of posts in main index',
+	'FULLTEXT_SPHINX_PORT'					=> 'Sphinx search daemon port',
+	'FULLTEXT_SPHINX_PORT_EXPLAIN'			=> 'Port on which the sphinx search daemon (searchd) listens. Leave empty to use the default Sphinx API port 9312',
+	'FULLTEXT_SPHINX_WRONG_DATABASE'		=> 'The sphinx search for phpBB supports MySQL and PostgreSQL only.',
+	'FULLTEXT_SPHINX_CONFIG_FILE'			=> 'Sphinx config file',
+	'FULLTEXT_SPHINX_CONFIG_FILE_EXPLAIN'	=> 'The generated content of the sphinx config file. This data needs to be pasted into the sphinx.conf which is used by sphinx search daemon. Replace the [dbuser] and [dbpassword] placeholders with your database credentials.',
+	'FULLTEXT_SPHINX_NO_CONFIG_DATA'		=> 'The sphinx data and config directory paths are not defined. Please define them to generate the config file.',
 
 	'GENERAL_SEARCH_SETTINGS'				=> 'Агульныя налады пошуку',
 	'GO_TO_SEARCH_INDEX'					=> 'Перайсці на старонку пошукавых індэксаў',
@@ -14465,8 +15091,6 @@ $lang = array_merge($lang, array(
 
 	'SEARCH_GUEST_INTERVAL'					=> 'Інтэрвал паміж запытамі для госцяў',
 	'SEARCH_GUEST_INTERVAL_EXPLAIN'			=> 'Час у секундах, якое госць павінен вычакаць перад выкананнем наступнага пошукавага запыту. Калі пошукам карыстаецца адзін госць, то ўсё астатнія ў гэты час чакаюць паказаны тут час.',
-	'SEARCH_INDEX_CREATE_REDIRECT'			=> 'Усё паведамленні да паведамлення пад нумарам %1$d паспяхова праіндэксаваныя, з якіх у дзеючым кроку індэксацыі праіндэксавана %2$d паведамленняў.<br />Дзеючая хуткасць індэксацыі — прыкладна %3$.1f паведамленняў у секунду.<br />Ідзе індэксацыя…',
-	'SEARCH_INDEX_DELETE_REDIRECT'			=> 'Усё паведамленні да паведамлення пад нумарам %1$d паспяхова выдаленыя з пошукавых індэксаў.<br />Ідзе выдаленне пошукавых індэксаў…',
 	'SEARCH_INDEX_CREATED'					=> 'Усё паведамленні ў базе дадзеных паспяхова праіндэксаваныя.',
 	'SEARCH_INDEX_REMOVED'					=> 'Пошукавыя індэксы паспяхова выдаленыя.',
 	'SEARCH_INTERVAL'						=> 'Інтэрвал паміж пошукавымі запытамі',
@@ -14489,8 +15113,55 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
+	// 3.1.0
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
+
+	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
+	'CONFIRM_UNINSTALL_STYLES'		=> 'Are you sure you wish to uninstall selected styles?',
+	'COPYRIGHT'						=> 'Капірайт',
+
+	'DEACTIVATE_DEFAULT'		=> 'Вы не можаце зрабіць неактыўным стыль па змаўчанні.',
+	'DELETE_FROM_FS'			=> 'Выдаліць з сервера',
+	'DELETE_STYLE_FILES_FAILED'	=> 'Error deleting files for style "%s".',
+	'DELETE_STYLE_FILES_SUCCESS'	=> 'Files for style "%s" have been deleted.',
+	'DETAILS'					=> 'Інфармацыя',
+
+	'INHERITING_FROM'			=> 'Атрымлівае з',
+	'INSTALL_STYLE'				=> 'Усталяваць стыль',
+	'INSTALL_STYLES'			=> 'Install styles',
+	'INSTALL_STYLES_EXPLAIN'	=> 'Here you can install new styles.<br />If you cannot find a specific style in list below, check to make sure style is already installed. If it is not installed, check if it was uploaded correctly.',
+	'INVALID_STYLE_ID'			=> 'Invalid style ID.',
+
+	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
+	'NO_UNINSTALLED_STYLE'		=> 'Усе стылі ўсталяваныя',
+
+	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
+
+	'STYLE_ACTIVATE'			=> 'Актываваць',
+	'STYLE_ACTIVE'				=> 'Актываваны',
+	'STYLE_DEACTIVATE'			=> 'Дэактываваць',
+	'STYLE_DEFAULT'				=> 'Прызначыць выкарыстоўваным па змаўчанні',
+	'STYLE_DEFAULT_CHANGE_INACTIVE'	=> 'You must activate style before making it default style.',
+	'STYLE_ERR_INVALID_PARENT'	=> 'Invalid parent style.',
+	'STYLE_ERR_NAME_EXIST'		=> 'Стыль з такім імем ужо існуе.',
+	'STYLE_ERR_STYLE_NAME'		=> 'Вы павінны задаць імя для гэтага стылю.',
+	'STYLE_INSTALLED'			=> 'Style "%s" has been installed.',
+	'STYLE_INSTALLED_RETURN_INSTALLED_STYLES'	=> 'Return to installed styles list',
+	'STYLE_INSTALLED_RETURN_UNINSTALLED_STYLES'	=> 'Install more styles',
+	'STYLE_NAME'				=> 'Імя стылю',
+	'STYLE_NOT_INSTALLED'		=> 'Style "%s" was not installed.',
+	'STYLE_PATH'				=> 'Style path',
+	'STYLE_UNINSTALL'			=> 'Uninstall',
+	'STYLE_UNINSTALL_DEPENDENT'	=> 'Style "%s" cannot be uninstalled because it has one or more child styles.',
+	'STYLE_UNINSTALLED'			=> 'Style "%s" uninstalled successfully.',
+	'STYLE_USED_BY'				=> 'Выкарыстоўваюць (з ботами)',
+
+	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+
+	// 3.0.12
 	'ACP_IMAGESETS_EXPLAIN'	=> 'Наборы малюнкаў уключаюць у сябе ўсё выкарыстоўваныя канферэнцыяй малюначка кнопак, форумаў, папак і т.п., а таксама іншыя, не якія адносяцца да пэўных стыляў малюнка. Тут вы можаце рэдагаваць, экспартаваць або выдаляць наяўныя наборы малюнкаў і імпартаваць або актываваць новыя.',
-	'ACP_STYLES_EXPLAIN'	=> 'Тут вы можаце кіраваць стылямі, даступнымі на канферэнцыі. Стыль складаецца з шаблону, тэмы і набору малюнкаў. Вы можаце змяняць наяўныя стылі, выдаляць, дэактываваць, паўторна актываваць, ствараць іх або імпартаваць новыя. Вы таксама можаце ўбачыць, як будзе выглядаць стыль, выкарыстаючы функцыю прадпрагляду. Дзеючы стыль па змаўчанні пазначаны зорачкай (*). Таксама паказана агульная колькасць карыстальнікаў для кожнага стылю. Улічыце, што прымусовая замена стыляў карыстальнікаў тут не вырабляецца.',
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 	'ACP_TEMPLATES_EXPLAIN'	=> 'Шаблон уключае ўсе элементы разметкі, выкарыстоўваныя для генеравання старонак канферэнцыі. Тут вы можаце рэдагаваць наяўныя шаблоны, выдаляць, экспартаваць, імпартаваць і папярэдне праглядаць іх. Вы можаце таксама змяняць код шаблону, выкарыстоўваны для генеравання BBCode.',
 	'ACP_THEMES_EXPLAIN'	=> 'Тут вы можаце ствараць, усталёўваць, рэдагаваць, выдаляць і экспартаваць тэмы. Тэма з\'яўляецца камбінацыяй колераў і малюнкаў, выкарыстоўваных у шаблоне і якія вызначаюць знешні выгляд канферэнцыі. Даступны вам дыяпазон налад залежыць ад канфігурацыі сервера і версіі phpBB, звернецеся да дакументацыі для атрымання дадатковай інфармацыі. Калі ласка, улічыце, што пры стварэнні новых тэм выкарыстанне наяўных тэм у якасці асновы не з\'яўляецца абавязковым.',
 	'ADD_IMAGESET'			=> 'Стварыць набор малюнкаў',
@@ -14527,7 +15198,6 @@ $lang = array_merge($lang, array(
 	'CURRENT_IMAGE'					=> 'Дзеючы малюнак',
 
 	'DEACTIVATE_DEFAULT'		=> 'Вы не можаце зрабіць неактыўным стыль па змаўчанні.',
-	'DELETE_FROM_FS'			=> 'Выдаліць з сервера',
 	'DELETE_IMAGESET'			=> 'Выдаліць набор малюнкаў',
 	'DELETE_IMAGESET_EXPLAIN'	=> 'Тут вы можаце выдаліць з базы дадзеных вылучаны набор малюнкаў. Калі ласка, улічыце, што адмяніць выдаленне немагчыма. Выдаленне набору малюнкаў адбываецца беззваротна. Рэкамендуецца спачатку экспартаваць набор малюнкаў для магчымага выкарыстання ў будучыні.',
 	'DELETE_STYLE'				=> 'Выдаліць стыль',
@@ -14724,7 +15394,6 @@ $lang = array_merge($lang, array(
 	'INCLUDE_IMAGESET'			=> 'Уключыць пакет малюнкаў',
 	'INCLUDE_TEMPLATE'			=> 'Уключыць шаблон',
 	'INCLUDE_THEME'				=> 'Уключыць тэму',
-	'INHERITING_FROM'			=> 'Атрымлівае з',
 	'INSTALL_IMAGESET'			=> 'Усталяваць пакет малюнкаў',
 	'INSTALL_IMAGESET_EXPLAIN'	=> 'Тут вы можаце ўсталяваць вылучаны пакет малюнкаў. Вы можаце па жаданні адрэдагаваць некаторыя налады, або выкарыстаць усталёўку па змаўчанні.',
 	'INSTALL_STYLE'				=> 'Усталяваць стыль',
@@ -14754,7 +15423,6 @@ $lang = array_merge($lang, array(
 	'NO_TEMPLATE'				=> 'Не атрымалася знайсці шаблон на серверы.',
 	'NO_THEME'					=> 'Не атрымалася знайсці тэму на серверы.',
 	'NO_UNINSTALLED_IMAGESET'	=> 'Усе наборы малюнкаў усталяваныя',
-	'NO_UNINSTALLED_STYLE'		=> 'Усе стылі ўсталяваныя',
 	'NO_UNINSTALLED_TEMPLATE'	=> 'Усе шаблоны ўсталяваныя',
 	'NO_UNINSTALLED_THEME'		=> 'Усе тэмы ўсталяваныя',
 	'NO_UNIT'					=> 'Не',
@@ -14794,30 +15462,22 @@ $lang = array_merge($lang, array(
 	'SELECTED_THEME_FILE'		=> 'Вылучаны файл тэмы',
 	'STORE_DATABASE'			=> 'База дадзеных',
 	'STORE_FILESYSTEM'			=> 'Сервер',
-	'STYLE_ACTIVATE'			=> 'Актываваць',
-	'STYLE_ACTIVE'				=> 'Актываваны',
 	'STYLE_ADDED'				=> 'Стыль паспяхова дададзены.',
-	'STYLE_DEACTIVATE'			=> 'Дэактываваць',
-	'STYLE_DEFAULT'				=> 'Прызначыць выкарыстоўваным па змаўчанні',
 	'STYLE_DELETED'				=> 'Стыль паспяхова выдалены.',
 	'STYLE_DETAILS_UPDATED'		=> 'Стыль паспяхова зменены.',
 	'STYLE_ERR_ARCHIVE'			=> 'Выберыце метад архівавання.',
 	'STYLE_ERR_COPY_LONG'		=> 'Даўжыня капірайту не можа быць больш 60 знакаў.',
 	'STYLE_ERR_MORE_ELEMENTS'	=> 'Неабходна выбраць хаця б адзін элемент стылю.',
 	'STYLE_ERR_NAME_CHARS'		=> 'Імя стылю можа ўтрымоўваць толькі літарна-лічбавыя знакі, -, +, _ і прабел.',
-	'STYLE_ERR_NAME_EXIST'		=> 'Стыль з такім імем ужо існуе.',
 	'STYLE_ERR_NAME_LONG'		=> 'Імя стылю не можа быць даўжэй 30 знакаў.',
 	'STYLE_ERR_NO_IDS'			=> 'Неабходна выбраць шаблон, тэму і пакет малюнкаў для гэтага стылю.',
 	'STYLE_ERR_NOT_STYLE'		=> 'Імпартаваны або загружаны файл не ўтрымоўвае архіва стылю.',
-	'STYLE_ERR_STYLE_NAME'		=> 'Вы павінны задаць імя для гэтага стылю.',
 	'STYLE_EXPORT'				=> 'Экспарт стылю',
 	'STYLE_EXPORT_EXPLAIN'		=> 'Тут вы можаце экспартаваць стыль у выглядзе архіва. Стыль можа не ўтрымоўваць усіх элементаў, але павінен утрымоўваць хоць бы адзін з іх. Напрыклад, калі вы стварылі новую тэму і набор малюнкаў для общеиспользуемого шаблону, вы можаце проста экспартаваць тэму і набор малюнкаў без шаблону. Вы можаце вылучыць, ці запампоўваць файл напроста, або захаваць яго ў папцы store, каб запампаваць яго пазней праз FTP.',
 	'STYLE_EXPORTED'			=> 'Стыль паспяхова экспартаваны і захаваны ў тэчцы %s.',
 	'STYLE_IMAGESET'			=> 'Набор малюнкаў',
-	'STYLE_NAME'				=> 'Імя стылю',
 	'STYLE_TEMPLATE'			=> 'Шаблон',
 	'STYLE_THEME'				=> 'Тэма',
-	'STYLE_USED_BY'				=> 'Выкарыстоўваюць (з ботами)',
 
 	'TEMPLATE_ADDED'			=> 'Шаблон дададзены і захаваны на серверы.',
 	'TEMPLATE_ADDED_DB'			=> 'Шаблон дададзены і захаваны ў базе дадзеных.',
@@ -14915,6 +15575,7 @@ $lang = array_merge($lang, array(
 	'CANNOT_FORCE_REACT_FOUNDER'	=> 'Вы не можаце патрабаваць паўторнай актывацыі ўліковага запісу фундатара.',
 	'CANNOT_FORCE_REACT_YOURSELF'	=> 'Вы не можаце патрабаваць паўторнай актывацыі ўласнага ўліковага запісу.',
 	'CANNOT_REMOVE_ANONYMOUS'		=> 'Вы не можаце выдаліць уліковы запіс госця.',
+	'CANNOT_REMOVE_FOUNDER'			=> 'You are not allowed to remove founder accounts.',
 	'CANNOT_REMOVE_YOURSELF'		=> 'Вы не можаце выдаліць уласны ўліковы запіс.',
 	'CANNOT_SET_FOUNDER_IGNORED'	=> 'Вы не можаце зрабіць ігнаруемых карыстальнікаў фундатарамі.',
 	'CANNOT_SET_FOUNDER_INACTIVE'	=> 'Вы павінны актываваць карыстальнікаў, каб зрабіць іх фундатарамі. Толькі актываваным карыстальнікам можна падвысіць статут.',
@@ -14941,7 +15602,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'Вылучыце форум, у які вы жадаеце перамясціць усе паведамленні дадзенага карыстальніка.',
 
 	'NO_SPECIAL_RANK'		=> 'Адмысловага звання не прысвоена',
-	'NO_WARNINGS'			=> 'Няма папярэджанняў.',
+	'NO_WARNINGS'			=> 'No warnings exist.',
 	'NOT_MANAGE_FOUNDER'	=> 'Вы паспрабавалі кіраваць уліковым запісам карыстальніка са статутам фундатара. Толькі фундатары могуць кіраваць уліковымі запісамі іншых фундатараў.',
 
 	'QUICK_TOOLS'			=> 'Хуткія дзеянні',

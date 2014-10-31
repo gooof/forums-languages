@@ -1,5 +1,14 @@
 ﻿<?php
 
+#######language/en/app.php#######
+
+$lang = array_merge($lang, array(
+	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
+	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
+	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+));
+
 #######language/en/calendar.php#######
 
 $lang = array_merge($lang, array(
@@ -182,6 +191,55 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Jouw privé reCaptcha sleutel. Sleutels kunnen worden verkregen via <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 
 	'RECAPTCHA_EXPLAIN'				=> 'In een poging om automatische registraties te voorkomen, verzoeken we je de beide woorden die worden weergegeven in het tekstveld in te vullen.',
+	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
+));
+
+#######language/en/cli.php#######
+
+$lang = array_merge($lang, array(
+	'CLI_CONFIG_CANNOT_CACHED'			=> 'Set this option if the configuration option changes too frequently to be efficiently cached.',
+	'CLI_CONFIG_CURRENT'				=> 'Current configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_DELETE_SUCCESS'			=> 'Successfully deleted config %s.',
+	'CLI_CONFIG_NEW'					=> 'New configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_NOT_EXISTS'				=> 'Config %s does not exist',
+	'CLI_CONFIG_OPTION_NAME'			=> 'The configuration option’s name',
+	'CLI_CONFIG_PRINT_WITHOUT_NEWLINE'	=> 'Set this option if the value should be printed without a new line at the end.',
+	'CLI_CONFIG_INCREMENT_BY'			=> 'Amount to increment by',
+	'CLI_CONFIG_INCREMENT_SUCCESS'		=> 'Successfully incremented config %s',
+	'CLI_CONFIG_SET_FAILURE'			=> 'Could not set config %s',
+	'CLI_CONFIG_SET_SUCCESS'			=> 'Successfully set config %s',
+
+	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
+	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
+	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
+	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
+	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
+	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
+	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
+	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
+	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
+	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
+	'CLI_EXTENSION_ENABLE_FAILURE'		=> 'Could not enable extension %s',
+	'CLI_EXTENSION_ENABLE_SUCCESS'		=> 'Successfully enabled extension %s',
+	'CLI_EXTENSION_NAME'				=> 'Name of the extension',
+	'CLI_EXTENSION_PURGE_FAILURE'		=> 'Could not purge extension %s',
+	'CLI_EXTENSION_PURGE_SUCCESS'		=> 'Successfully purged extension %s',
+	'CLI_EXTENSION_NOT_FOUND'			=> 'No extensions were found.',
+	'CLI_EXTENSIONS_AVAILABLE'			=> 'Available',
+	'CLI_EXTENSIONS_DISABLED'			=> 'Disabled',
+	'CLI_EXTENSIONS_ENABLED'			=> 'Enabled',
+
+	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
 ));
 
 #######language/en/common.php#######
@@ -190,7 +248,11 @@ $lang = array_merge($lang, array(
 	'TRANSLATION_INFO'	=> '<a href="http://www.phpbb.nl">phpBB.nl Vertaling</a>',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
+	'DATETIME_FORMAT'	=> '|d M Y, H:i|',	// 01 Jan 2007, 13:37 (with Relative days enabled)
 	'USER_LANG'			=> 'nl',
+
+	// See http://wiki.phpbb.com/Plural_Rules for more information
+	'PLURAL_RULE'		=> '1',
 
 	'1_DAY'			=> '1 dag',
 	'1_MONTH'		=> '1 maand',
@@ -204,18 +266,24 @@ $lang = array_merge($lang, array(
 	'ACCOUNT_DEACTIVATED'			=> 'Je account is handmatig gedeactiveerd en kan alleen door een beheerder opnieuw worden geactiveerd.',
 	'ACCOUNT_NOT_ACTIVATED'			=> 'Je account is nog niet geactiveerd.',
 	'ACP'							=> 'Beheerderspaneel',
+	'ACP_SHORT'						=> 'ACP',
 	'ACTIVE'						=> 'Actief',
 	'ACTIVE_ERROR'					=> 'De opgegeven gebruiker is niet geactiveerd. Activeer je account en probeer opnieuw. Als je deze melding blijft krijgen, neem dan contact op met de beheerder.',
 	'ADMINISTRATOR'					=> 'Beheerder',
 	'ADMINISTRATORS'				=> 'Beheerders',
 	'AGE'							=> 'Leeftijd',
 	'AIM'							=> 'AIM',
+	'AJAX_ERROR_TITLE'				=> 'AJAX error',
+	'AJAX_ERROR_TEXT'				=> 'Something went wrong when processing your request.',
+	'AJAX_ERROR_TEXT_ABORT'			=> 'User aborted request.',
+	'AJAX_ERROR_TEXT_TIMEOUT'		=> 'Your request timed out; please try again.',
+	'AJAX_ERROR_TEXT_PARSERERROR'	=> 'Something went wrong with the request and the server returned an invalid reply.',
 	'ALLOWED'						=> 'Toegestaan',
 	'ALL_FILES'						=> 'Alle bestanden',
 	'ALL_FORUMS'					=> 'Alle forums',
 	'ALL_MESSAGES'					=> 'Alle berichten',
 	'ALL_POSTS'						=> 'Alle berichten',
-	'ALL_TIMES'						=> 'Alle tijden zijn %1$s %2$s',
+	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'Alle onderwerpen',
 	'AND'							=> 'En',
 	'ARE_WATCHING_FORUM'			=> 'Je wordt op de hoogte gehouden van nieuwe onderwerpen in dit forum.',
@@ -225,6 +293,14 @@ $lang = array_merge($lang, array(
 	'ATTACHED_IMAGE_NOT_IMAGE'		=> 'De afbeelding die je als bijlage wilde meegeven, is ongeldig.',
 	'AUTHOR'						=> 'Auteur',
 	'AUTH_NO_PROFILE_CREATED'		=> 'Het profiel kon niet worden aangemaakt.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_ENTRY'				=> 'Invalid database entry.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_SERVICE_TYPE'		=> 'Invalid service type provided to OAuth service handler.',
+	'AUTH_PROVIDER_OAUTH_ERROR_SERVICE_NOT_CREATED'			=> 'OAuth service not created',
+	'AUTH_PROVIDER_OAUTH_SERVICE_BITLY'						=> 'Bitly',
+	'AUTH_PROVIDER_OAUTH_SERVICE_FACEBOOK'					=> 'Facebook',
+	'AUTH_PROVIDER_OAUTH_SERVICE_GOOGLE'					=> 'Google',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_NOT_STORED'			=> 'OAuth token not stored.',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_INCORRECTLY_STORED'	=> 'OAuth token incorrectly stored.',
 	'AVATAR_DISALLOWED_CONTENT'		=> 'De upload is afgewezen omdat het als onveilig is geïdentificeerd.',
 	'AVATAR_DISALLOWED_EXTENSION'	=> 'De extensie %s is niet toegestaan.',
 	'AVATAR_EMPTY_REMOTE_DATA'		=> 'De avatar kon niet worden geüpload, het bestand is ongeldig of beschadigd.',
@@ -235,10 +311,11 @@ $lang = array_merge($lang, array(
 	'AVATAR_PARTIAL_UPLOAD'			=> 'Het geüploade bestand is niet volledig geüpload.',
 	'AVATAR_PHP_SIZE_NA'			=> 'De bestandsgrootte van de avatar is overschreden.<br />De maximale grootte, bepaalt door PHP in php.ini kon niet worden bepaalt.',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'De bestandsgrootte van de avatar is overschreden. De maximaal toegestane grootte is %1$d %2$s.<br />Let erop dat dit is ingesteld in het php.ini bestand en kan niet worden overschreven.',
+	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
 	'AVATAR_URL_INVALID'			=> 'De opgegeven URL is ongeldig.',
 	'AVATAR_URL_NOT_FOUND'			=> 'Het opgegeven bestand kon niet worden gevonden.',
-	'AVATAR_WRONG_FILESIZE'			=> 'De bestandsgrootte van de avatar moet tussen 0 en %1d %2s zijn.',
-	'AVATAR_WRONG_SIZE'				=> 'De avatar moet minstens %1$d pixels breed en %2$d pixels hoog zijn. De maximale waardes zijn %3$d pixels breed en %4$d pixels hoog. De opgegeven avatar is %5$d pixels breed en %6$d pixels hoog.',
+	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
+	'AVATAR_WRONG_SIZE'				=> 'The submitted avatar is %5$s wide and %6$s high. Avatars must be at least %1$s wide and %2$s high, but no larger than %3$s wide and %4$s high.',
 
 	'BACK_TO_TOP'			=> 'Omhoog',
 	'BACK_TO_PREV'			=> 'Terug naar de vorige pagina.',
@@ -255,28 +332,42 @@ $lang = array_merge($lang, array(
 	'BOARD_DISABLED'		=> 'Dit forum is tijdelijk uitgeschakeld.',
 	'BOARD_UNAVAILABLE'		=> 'Sorry, maar het forum is tijdelijk niet beschikbaar. Probeer het straks nog eens.',
 	'BROWSING_FORUM'		=> 'Gebruikers op dit forum: %1$s',
-	'BROWSING_FORUM_GUEST'	=> 'Gebruikers op dit forum: %1$s en %2$d gast',
-	'BROWSING_FORUM_GUESTS'	=> 'Gebruikers op dit forum: %1$s en %2$d gasten',
+	'BUTTON_EDIT'			=> 'Edit',
+	'BUTTON_FORUM_LOCKED'	=> 'Locked',
+	'BUTTON_NEW_TOPIC'		=> 'New Topic',
+	'BUTTON_PM'				=> 'PM',
+	'BUTTON_PM_FORWARD'		=> 'Forward',
+	'BUTTON_PM_NEW'			=> 'New PM',
+	'BUTTON_PM_REPLY'		=> 'Send Reply',
+	'BUTTON_PM_REPLY_ALL'	=> 'Reply All',
+	'BUTTON_POST_REPLY'		=> 'Post Reply',
+	'BUTTON_QUOTE'			=> 'Quote',
+	'BUTTON_TOPIC_LOCKED'	=> 'Locked',
 	'BYTES'					=> 'Bytes',
+	'BYTES_SHORT'			=> 'B',
 
 	'CANCEL'				=> 'Annuleren',
 	'CHANGE'				=> 'Wijzigen',
 	'CHANGE_FONT_SIZE'		=> 'Verander lettergrootte',
 	'CHANGING_PREFERENCES'	=> 'Verander forumvoorkeuren',
 	'CHANGING_PROFILE'		=> 'Verander profielinstellingen',
-	'CLICK_VIEW_PRIVMSG'	=> '%sGa naar je Postvak IN%s',
 	'COLLAPSE_VIEW'			=> 'Inklappen',
 	'CLOSE_WINDOW'			=> 'Sluit het scherm',
 	'COLOUR_SWATCH'			=> 'Webveilig kleurenpalet',
-	'COMMA_SEPARATOR'		=> ', ',	// Used in pagination of ACP & prosilver, use localised comma if appropriate, eg: Ideographic or Arabic
+	'COLON'					=> ':',
+	'COMMA_SEPARATOR'		=> ', ',	// Comma used to join lists into a single string, use localised comma if appropriate, eg: Ideographic or Arabic
 	'CONFIRM'				=> 'Bevestigen',
 	'CONFIRM_CODE'			=> 'Bevestigingscode',
 	'CONFIRM_CODE_EXPLAIN'	=> 'Geef de code van de afbeelding exact op zoals weergegeven. De code is niet hoofdlettergevoelig.',
 	'CONFIRM_CODE_WRONG'	=> 'De opgegeven bevestigingscode is onjuist.',
 	'CONFIRM_OPERATION'		=> 'Weet je zeker dat je deze actie wilt uitvoeren?',
+	'CONFIRM_AVATAR_DELETE' => 'Are you sure you wish to delete this avatar?',
 	'CONGRATULATIONS'		=> 'Proficiat',
 	'CONNECTION_FAILED'		=> 'De verbinding is mislukt.',
 	'CONNECTION_SUCCESS'	=> 'De verbinding is gelukt!',
+	'CONTACT'				=> 'Contact',
+	'CONTACT_USER'			=> 'Contact %s',
+	'CONTACT_US'			=> 'Contact us',
 	'COOKIES_DELETED'		=> 'Alle forumcookies zijn verwijderd.',
 	'CURRENT_TIME'			=> 'Het is nu %s',
 
@@ -297,18 +388,13 @@ $lang = array_merge($lang, array(
 	'DISPLAY_TOPICS'		=> 'Geef de vorige onderwerpen weer',
 	'DOWNLOADED'			=> 'Gedownload',
 	'DOWNLOADING_FILE'		=> 'Bestand aan het downloaden',
-	'DOWNLOAD_COUNT'		=> '%d keer gedownload',
-	'DOWNLOAD_COUNTS'		=> '%d keer gedownload',
-	'DOWNLOAD_COUNT_NONE'	=> 'Nog niet gedownload',
-	'VIEWED_COUNT'			=> '%d keer bekeken',
-	'VIEWED_COUNTS'			=> '%d keer bekeken',
-	'VIEWED_COUNT_NONE'		=> 'Nog niet bekeken',
 
 	'EDIT_POST'							=> 'Wijzig bericht',
-	'EMAIL'								=> 'Een geldig e-mailadres', // Short form for EMAIL_ADDRESS
-	'EMAIL_ADDRESS'						=> 'E-mailadres',
-	'EMAIL_INVALID_EMAIL'				=> 'Het opgegeven e-mailadres is ongeldig.',
-	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Er ging iets fout bij het versturen van de mail op <strong>regel %1$s</strong>. Antwoord: %2$s',
+	'ELLIPSIS'							=>	'…',
+	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
+	'EMAIL_ADDRESS'						=> 'Email address',
+	'EMAIL_INVALID_EMAIL'				=> 'The email address you entered is invalid.',
+	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ran into problems sending email at <strong>Line %1$s</strong>. Response: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Je moet een onderwerp opgeven bij het plaatsen van een nieuw bericht.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Je moet een onderwerp opgeven bij het plaatsen van een nieuw bericht.',
 	'ENABLED'							=> 'Ingeschakeld',
@@ -322,17 +408,23 @@ $lang = array_merge($lang, array(
 	'ERR_UNWATCHING'					=> 'Er is een fout opgetreden tijdens het afmelden van je bladwijzer.',
 	'ERR_WATCHING'						=> 'Er is een fout opgetreden tijdens het aanmelden van je bladwijzer.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'Het ingevulde phpBB-pad is niet correct.',
+	'ERROR'									=> 'Foutmelding',
 	'EXPAND_VIEW'						=> 'Uitklappen',
 	'EXTENSION'							=> 'Extensie',
+	'EXTENSION_DISABLED'				=> 'The extension <strong>%s</strong> is not enabled.',
 	'EXTENSION_DISABLED_AFTER_POSTING'	=> 'De extensie <strong>%s</strong> is gedeactiveerd en wordt niet langer weergegeven.',
+	'EXTENSION_DOES_NOT_EXIST'			=> 'The extension <strong>%s</strong> does not exist.',
 
+	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> 'Help',
 	'FAQ_EXPLAIN'			=> 'Veel gestelde vragen',
 	'FILENAME'				=> 'Bestandsnaam',
 	'FILESIZE'				=> 'Bestandsgrootte',
 	'FILEDATE'				=> 'Bestandsdatum',
 	'FILE_COMMENT'			=> 'Opmerkingen bij bestand',
-	'FILE_NOT_FOUND'		=> 'Het opgevraagde bestand kon niet worden gevonden.',
+	'FILE_CONTENT_ERR'		=> 'Could not read the contents of file: %s',
+	'FILE_JSON_DECODE_ERR'	=> 'Failed to decode json file: %s',
+	'FILE_NOT_FOUND'		=> 'The requested file could not be found: %s',
 	'FIND_USERNAME'			=> 'Zoek een lid',
 	'FOLDER'				=> 'Map',
 	'FORGOT_PASS'			=> 'Wachtwoord vergeten?',
@@ -381,6 +473,9 @@ $lang = array_merge($lang, array(
 	'GB'						=> 'GB',
 	'GIB'						=> 'GiB',
 	'GO'						=> 'Ga',
+	'GOOGLEPLUS'				=> 'Google+',
+	'GOTO_FIRST_POST'			=> 'Go to first post',
+	'GOTO_LAST_POST'			=> 'Go to last post',
 	'GOTO_PAGE'					=> 'Ga naar pagina',
 	'GROUP'						=> 'Groep',
 	'GROUPS'					=> 'Groepen',
@@ -388,12 +483,6 @@ $lang = array_merge($lang, array(
 	'GROUP_ERR_USERNAME'		=> 'Er is geen groepsnaam opgegeven.',
 	'GROUP_ERR_USER_LONG'		=> 'De groepsnaam is te lang. Maximaal 60 karakters.',
 	'GUEST'						=> 'Gast',
-	'GUEST_USERS_ONLINE'		=> 'Er zijn %d gasten online.',
-	'GUEST_USERS_TOTAL'			=> '%d gasten',
-	'GUEST_USERS_ZERO_ONLINE'	=> 'Er zijn 0 gasten online.',
-	'GUEST_USERS_ZERO_TOTAL'	=> '0 gasten',
-	'GUEST_USER_ONLINE'			=> 'Er is %d gast online.',
-	'GUEST_USER_TOTAL'			=> '%d gast',
 	'G_ADMINISTRATORS'			=> 'Beheerders',
 	'G_BOTS'					=> 'Bots',
 	'G_GUESTS'					=> 'Gasten',
@@ -402,22 +491,12 @@ $lang = array_merge($lang, array(
 	'G_GLOBAL_MODERATORS'		=> 'Globale moderators',
 	'G_NEWLY_REGISTERED'		=> 'Nieuw geregistreerde gebruikers',
 
-	'HIDDEN_USERS_ONLINE'			=> '%d verborgen gebruikers online',
-	'HIDDEN_USERS_TOTAL'			=> '%d verborgen',
-	'HIDDEN_USERS_TOTAL_AND'		=> '%d verborgen en ',
-	'HIDDEN_USERS_ZERO_ONLINE'		=> '0 verborgen gebruikers online',
-	'HIDDEN_USERS_ZERO_TOTAL'		=> '0 verborgen',
-	'HIDDEN_USERS_ZERO_TOTAL_AND'	=> '0 verborgen en ',
-	'HIDDEN_USER_ONLINE'			=> '%d verborgen gebruiker online',
-	'HIDDEN_USER_TOTAL'				=> '%d verborgen',
-	'HIDDEN_USER_TOTAL_AND'			=> '%d verborgen en ',
 	'HIDE_GUESTS'					=> 'Verberg gasten',
 	'HIDE_ME'						=> 'Mij gedurende deze sessie als Verborgen weergeven in de lijst met online gebruikers.',
 	'HOURS'							=> 'Uren',
 	'HOME'							=> 'Home',
 
 	'ICQ'						=> 'ICQ',
-	'ICQ_STATUS'				=> 'ICQ-status',
 	'IF'						=> 'Als',
 	'IMAGE'						=> 'Afbeelding',
 	'IMAGE_FILETYPE_INVALID'	=> 'Afbeeldingbestand %d voor mimetype %s wordt niet ondersteund.',
@@ -425,9 +504,11 @@ $lang = array_merge($lang, array(
 	'IN'						=> 'in',
 	'INDEX'						=> 'Forumoverzicht', //Index page
 	'INFORMATION'				=> 'Informatie',
+	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
 	'INTERESTS'					=> 'Interesses',
 	'INVALID_DIGEST_CHALLENGE'	=> 'Ongeldige samenstelling van karakters.',
-	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> is mogelijk een vals e-mailadres.',
+	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> possibly an invalid email address?',
+	'INVALID_PLURAL_RULE'		=> 'The chosen plural rule is invalid. Valid values are integers between 0 and 15.',
 	'IP'						=> 'Gebruikers-IP',
 	'IP_BLACKLISTED'			=> 'Jouw IP %1$s is geblokkeerd omdat deze op de zwarte lijst staat. Voor meer informatie zie %2$s.',
 
@@ -435,7 +516,8 @@ $lang = array_merge($lang, array(
 	'JOINED'				=> 'Geregistreerd',
 	'JUMP_PAGE'				=> 'Geef het paginanummer op van waar je naartoe wilt gaan.',
 	'JUMP_TO'				=> 'Ga naar',
-	'JUMP_TO_PAGE'			=> 'Klik om naar de pagina te gaan…',
+	'JUMP_TO_PAGE'			=> 'Jump to page',
+	'JUMP_TO_PAGE_CLICK'	=> 'Click to jump to page…',
 
 	'KB'					=> 'KB',
 	'KIB'					=> 'KiB',
@@ -447,6 +529,8 @@ $lang = array_merge($lang, array(
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Verbinding met de LDAP-server mislukt.',
 	'LDAP_SEARCH_FAILED'				=> 'Er is een fout opgetreden tijdens het zoeken in de LDAP directory.',
 	'LEGEND'							=> 'Legenda',
+	'LIVE_SEARCHES_NOT_ALLOWED'			=> 'Live searches are not allowed.',
+	'LOADING'							=> 'Loading',
 	'LOCATION'							=> 'Woonplaats',
 	'LOCK_POST'							=> 'Bericht sluiten',
 	'LOCK_POST_EXPLAIN'					=> 'Voorkomt wijzigingen',
@@ -457,6 +541,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_CONFIRM_EXPLAIN'				=> 'Om de accounts van de leden te beschermen, moet je een bevestigingscode ingeven na het maximaal aantal mislukte loginpogingen. De code is weergegeven in onderstaande afbeelding. Indien je visueel gehandicapt bent of op een andere manier niet in staat bent deze code te lezen, neem dan contact op met de %sbeheerder%s.', // unused
 	'LOGIN_ERROR_ATTEMPTS'				=> 'Je overschreed het maximaal aantal pogingen om in te loggen. Naast je gebruikersnaam en wachtwoord, moet je nu ook de onderstaande CAPTCHA oplossen.',
 	'LOGIN_ERROR_EXTERNAL_AUTH_APACHE'	=> 'Je bent niet ingelogd door Apache.',
+	'LOGIN_ERROR_OAUTH_SERVICE_DOES_NOT_EXIST'	=> 'A non-existant OAuth service has been requested.',
 	'LOGIN_ERROR_PASSWORD'				=> 'Het opgegeven wachtwoord klopt niet, controleer je wachtwoord en probeer nogmaals. Als dit probleem zich blijft voordoen, contacteer dan de %sbeheerder%s.',
 	'LOGIN_ERROR_PASSWORD_CONVERT'		=> 'Het was niet mogelijk je wachtwoord te converteren tijdens de forumconversie. Gelieve een %snieuw wachtwoord%s aan te vragen. Als dit probleem zich blijft voordoen, contacteer dan de %sbeheerder%s.',
 	'LOGIN_ERROR_USERNAME'				=> 'De opgegeven gebruikersnaam is onjuist, controleer deze en probeer nogmaals. Als dit probleem zich blijft voordoen, contacteer dan de %sbeheerder%s.',
@@ -465,17 +550,22 @@ $lang = array_merge($lang, array(
 	'LOGIN_VIEWFORUM'					=> 'De beheerder vereist dat je geregistreerd en ingelogd bent om dit forum te openen.',
 	'LOGIN_EXPLAIN_EDIT'				=> 'Om berichten in dit forum te kunnen wijzigen, moet je geregistreerd en ingelogd zijn.',
 	'LOGIN_EXPLAIN_VIEWONLINE'			=> 'Om de lijst met online gebruikers te bekijken moet je geregistreerd en ingelogd zijn.',
+	'LOGIN_REQUIRED'					=> 'You need to login to perform this action.',
 	'LOGOUT'							=> 'Uitloggen',
 	'LOGOUT_USER'						=> 'Uitloggen [ %s ]',
-	'LOG_ME_IN'							=> 'Log mij automatisch in bij ieder bezoek.',
+	'LOG_ME_IN'							=> 'Remember me',
 
+	'MAIN'					=> 'Main',
 	'MARK'					=> 'Markeer',
 	'MARK_ALL'				=> 'Selecteer alles',
+	'MARK_ALL_READ'			=> 'Mark all read',
 	'MARK_FORUMS_READ'		=> 'Markeer forums als gelezen',
+	'MARK_READ'				=> 'Mark read',
 	'MARK_SUBFORUMS_READ'	=> 'Markeer subforums als gelezen',
 	'MB'					=> 'MB',
 	'MIB'					=> 'MiB',
 	'MCP'					=> 'Moderatorpaneel',
+	'MCP_SHORT'				=> 'MCP',
 	'MEMBERLIST'			=> 'Leden',
 	'MEMBERLIST_EXPLAIN'	=> 'Bekijk de volledige ledenlijst',
 	'MERGE'					=> 'Samenvoegen',
@@ -488,26 +578,47 @@ $lang = array_merge($lang, array(
 	'MODERATE'				=> 'Modereer',
 	'MODERATOR'				=> 'Moderator',
 	'MODERATORS'			=> 'Moderators',
+	'MODULE_NOT_ACCESS'		=> 'Module not accessible',
+	'MODULE_NOT_FIND'		=> 'Cannot find module %s',
+	'MODULE_FILE_INCORRECT_CLASS'	=> 'Module file %s does not contain correct class [%s]',
 	'MONTH'					=> 'Maand',
 	'MOVE'					=> 'Verplaats',
-	'MSNM'					=> 'WLM',
 
 	'NA'						=> 'Niet beschikbaar',
 	'NEWEST_USER'				=> 'Ons nieuwste lid is <strong>%s</strong>',
 	'NEW_MESSAGE'				=> 'Nieuw bericht',
 	'NEW_MESSAGES'				=> 'Nieuwe berichten',
-	'NEW_PM'					=> '<strong>%d</strong> nieuw bericht',
-	'NEW_PMS'					=> '<strong>%d</strong> nieuwe berichten',
 	'NEW_POST'					=> 'Nieuw bericht',	// Not used anymore
 	'NEW_POSTS'					=> 'Nieuwe berichten',	// Not used anymore
 	'NEXT'						=> 'Volgende',		// Used in pagination
 	'NEXT_STEP'					=> 'Ga door naar de volgende stap',
 	'NEVER'						=> 'Nooit',
 	'NO'						=> 'Nee',
+	'NO_NOTIFICATIONS'			=> 'You have no notifications',
 	'NOT_ALLOWED_MANAGE_GROUP'	=> 'Je hebt geen permissies om deze groep te beheren.',
 	'NOT_AUTHORISED'			=> 'Je bent niet bevoegd om deze sectie te bekijken.',
 	'NOT_WATCHING_FORUM'		=> 'Je wordt niet langer op de hoogte gehouden van wijzigingen in dit forum.',
 	'NOT_WATCHING_TOPIC'		=> 'Je wordt niet langer op de hoogte gehouden van wijzigingen in dit onderwerp.',
+	'NOTIFICATIONS'				=> 'Notifications',
+	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
+	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
+	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
+	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
+	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
+	'NOTIFICATION_POST_IN_QUEUE'		=> '<strong>Post approval</strong> request by %1$s:',
+	'NOTIFICATION_REFERENCE'			=> '"%1$s"',
+	'NOTIFICATION_REASON'				=> '<em>Reason:</em> %1$s.',
+	'NOTIFICATION_REPORT_PM'			=> '<strong>Private Message reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_POST'			=> '<strong>Post reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_CLOSED'		=> '<strong>Report closed</strong> by %1$s for:',
+	'NOTIFICATION_TOPIC'				=> '<strong>New topic</strong> by %1$s:',
+	'NOTIFICATION_TOPIC_APPROVED'		=> '<strong>Topic approved</strong>:',
+	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
+	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
+	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> 'Gelieve de beheerder of webmaster te contacteren.',
 	'NOTIFY_ADMIN_EMAIL'		=> 'Gelieve de beheerder of webmaster te contacteren: <a href="mailto:%1$s">%1$s</a>.',
 	'NO_ACCESS_ATTACHMENT'		=> 'Je beschikt niet over de nodige permissies om dit bestand te openen.',
@@ -516,6 +627,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_ADMIN'				=> 'Doordat je geen beheerder bent, beschik je niet over de juiste permissies om het beheerderspaneel te openen.',
 	'NO_AUTH_ADMIN_USER_DIFFER'	=> 'Je kunt niet opnieuw inloggen als een andere gebruiker.',
 	'NO_AUTH_OPERATION'			=> 'Je beschikt niet over de juiste permissies om deze procedure af te ronden.',
+	'NO_AVATARS'				=> 'No avatars currently available',
 	'NO_CONNECT_TO_SMTP_HOST'	=> 'Verbinding met SMTP-server mislukt : %1$s : %2$s',
 	'NO_BIRTHDAYS'				=> 'Er zijn vandaag geen jarigen.',
 	'NO_EMAIL_MESSAGE'			=> 'Het berichtveld is nog leeg.',
@@ -531,7 +643,6 @@ $lang = array_merge($lang, array(
 	'NO_MODE'					=> 'Geen modus geselecteerd.',
 	'NO_MODERATORS'				=> 'Er zijn geen moderators.',
 	'NO_NEW_MESSAGES'			=> 'Geen nieuwe berichten.',
-	'NO_NEW_PM'					=> '<strong>0</strong> nieuwe berichten',
 	'NO_NEW_POSTS'				=> 'Geen nieuwe berichten.',	// Not used anymore
 	'NO_ONLINE_USERS'			=> 'Geen geregistreerde gebruikers.',
 	'NO_POSTS'					=> 'Geen berichten',
@@ -546,7 +657,6 @@ $lang = array_merge($lang, array(
 	'NO_TOPIC_FORUM'			=> 'Het onderwerp of forum bestaat niet langer.',
 	'NO_TOPICS'					=> 'Er zijn geen onderwerpen of berichten in dit forum.',
 	'NO_TOPICS_TIME_FRAME'		=> 'Er zijn in dit forum in de gekozen periode geen berichten geplaatst.',
-	'NO_UNREAD_PM'				=> '<strong>0</strong> ongelezen berichten',
 	'NO_UNREAD_POSTS'			=> 'Er zijn geen ongelezen berichten in dit onderwerp.',
 	'NO_UPLOAD_FORM_FOUND'		=> 'Upload bevestigd, maar er werd geen geldig uploadformulier gevonden.',
 	'NO_USER'					=> 'De opgevraagde gebruiker bestaat niet.',
@@ -557,15 +667,14 @@ $lang = array_merge($lang, array(
 	'OFFLINE'					=> 'Offline',
 	'ONLINE'					=> 'Online',
 	'ONLINE_BUDDIES'			=> 'Online contactpersonen',
-	'ONLINE_USERS_TOTAL'		=> 'Er zijn in totaal <strong>%d</strong> gebruikers online :: ',
-	'ONLINE_USERS_ZERO_TOTAL'	=> 'Er zijn <strong>geen</strong> gebruikers online :: ',
-	'ONLINE_USER_TOTAL'			=> 'Er is <strong>%d</strong> gebruiker online :: ',
 	'OPTIONS'					=> 'Opties',
 
 	'PAGE_OF'				=> 'Pagina <strong>%1$d</strong> van <strong>%2$d</strong>',
+	'PAGE_TITLE_NUMBER'		=> 'Page %s',
 	'PASSWORD'				=> 'Wachtwoord',
 	'PIXEL'					=> 'px',
 	'PLAY_QUICKTIME_FILE'	=> 'Speel Quicktime-bestand',
+	'PLEASE_WAIT'			=> 'Please wait.',
 	'PM'					=> 'PB',
 	'PM_REPORTED'			=> 'Klik om de melding te openen',
 	'POSTING_MESSAGE'		=> 'Bericht plaatsen in %s',
@@ -578,9 +687,15 @@ $lang = array_merge($lang, array(
 	'POSTED_ON_DATE'		=> 'op',
 	'POSTS'					=> 'Berichten',
 	'POSTS_UNAPPROVED'		=> 'Tenminste één bericht in dit onderwerp is niet goedgekeurd',
+	'POSTS_UNAPPROVED_FORUM'=> 'At least one post in this forum has not been approved.',
 	'POST_BY_AUTHOR'		=> 'door',
-	'POST_BY_FOE'			=> 'Dit bericht is geplaatst door <strong>%1$s</strong>, deze gebruiker zit momenteel in je vijandenlijst. %2$sToon dit bericht%3$s.',
+	'POST_BY_FOE'			=> '<strong>%1$s</strong>, who is currently on your ignore list, made this post.',
+	'POST_DISPLAY'			=> '%1$sDisplay this post%2$s.',
 	'POST_DAY'				=> '%.2f berichten per dag',
+	'POST_DELETED_ACTION'	=> 'Deleted post:',
+	'POST_DELETED'			=> 'This post has been deleted.',
+	'POST_DELETED_BY'		=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s.',
+	'POST_DELETED_BY_REASON'=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s for the following reason: %4$s',
 	'POST_DETAILS'			=> 'Berichtdetails',
 	'POST_NEW_TOPIC'		=> 'Plaats een nieuw onderwerp',
 	'POST_PCT'				=> '%.2f%% van alle berichten',
@@ -591,7 +706,8 @@ $lang = array_merge($lang, array(
 	'POST_SUBJECT'			=> 'Berichttitel',
 	'POST_TIME'				=> 'Berichtdatum',
 	'POST_TOPIC'			=> 'Plaats een nieuw bericht',
-	'POST_UNAPPROVED'		=> 'Dit bericht wacht op goedkeuring',
+	'POST_UNAPPROVED_ACTION'	=> 'Post awaiting approval:',
+	'POST_UNAPPROVED'		=> 'This post has not been approved.',
 	'POWERED_BY'			=> 'Powered by %s',
 	'PREVIEW'				=> 'Voorbeeld',
 	'PREVIOUS'				=> 'Vorige',		// Used in pagination
@@ -601,6 +717,8 @@ $lang = array_merge($lang, array(
 	'PRIVATE_MESSAGES'		=> 'Privéberichten',
 	'PRIVATE_MESSAGING'		=> 'Privéberichten',
 	'PROFILE'				=> 'Gebruikerspaneel',
+
+	'QUICK_LINKS'			=> 'Quick links',
 
 	'RANK'						=> 'Rang',
 	'READING_FORUM'				=> 'Onderwerpen tonen uit %s',
@@ -614,15 +732,6 @@ $lang = array_merge($lang, array(
 	'REDIRECTS'					=> 'Totaal aantal verwijzingen',
 	'REGISTER'					=> 'Registreren',
 	'REGISTERED_USERS'			=> 'Geregistreerde gebruikers:',
-	'REG_USERS_ONLINE'			=> 'Er zijn %d geregistreerde gebruikers en ',
-	'REG_USERS_TOTAL'			=> '%d geregistreerde, ',
-	'REG_USERS_TOTAL_AND'		=> '%d geregistreerde en ',
-	'REG_USERS_ZERO_ONLINE'		=> 'Er zijn 0 geregistreerde gebruikers en ',
-	'REG_USERS_ZERO_TOTAL'		=> '0 geregistreerde, ',
-	'REG_USERS_ZERO_TOTAL_AND'	=> '0 geregistreerde en ',
-	'REG_USER_ONLINE'			=> 'Er is %d geregistreerde gebruiker en ',
-	'REG_USER_TOTAL'			=> '%d geregistreerde, ',
-	'REG_USER_TOTAL_AND'		=> '%d geregistreerde en ',
 	'REMOVE'					=> 'Verwijder',
 	'REMOVE_INSTALL'			=> 'Verwijder of hernoem de installatiemap voordat je het forum in gebruik neemt. Zolang je dit niet doet zal alleen het beheerderspaneel bereikbaar zijn.',
 	'REPLIES'					=> 'Reacties',
@@ -639,7 +748,8 @@ $lang = array_merge($lang, array(
 	'RETURN_FORUM'				=> '%sKeer terug naar het laatst geopende forum%s',
 	'RETURN_PAGE'				=> '%sKeer terug naar de vorige pagina%s',
 	'RETURN_TOPIC'				=> '%sKeer terug naar het laatst gelezen onderwerp%s',
-	'RETURN_TO'					=> 'Terugkeren naar…',
+	'RETURN_TO'					=> 'Return to “%s”',
+	'RETURN_TO_INDEX'			=> 'Return to Board Index',
 	'FEED'						=> 'Feed',
 	'FEED_NEWS'					=> 'Nieuws',
 	'FEED_TOPICS_ACTIVE'		=> 'Actieve onderwerpen',
@@ -667,28 +777,30 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV_EXPLAIN'		=> 'Toon de geavanceerde zoekopties',
 	'SEARCH_KEYWORDS'			=> 'Zoek naar trefwoorden',
 	'SEARCHING_FORUMS'			=> 'Zoeken in forums',
-	'SEARCH_ACTIVE_TOPICS'		=> 'Toon actieve onderwerpen',
+	'SEARCH_ACTIVE_TOPICS'		=> 'Active topics',
 	'SEARCH_FOR'				=> 'Zoek naar',
 	'SEARCH_FORUM'				=> 'Doorzoek forum',
-	'SEARCH_NEW'				=> 'Toon nieuwe berichten',
+	'SEARCH_NEW'				=> 'New posts',
 	'SEARCH_POSTS_BY'			=> 'Doorzoek berichten via',
-	'SEARCH_SELF'				=> 'Bekijk je eigen berichten',
+	'SEARCH_SELF'				=> 'Your posts',
 	'SEARCH_MINE'				=> 'View your topics',
 	'SEARCH_TOPIC'				=> 'Doorzoek dit onderwerp',
-	'SEARCH_UNANSWERED'			=> 'Toon onbeantwoorde berichten',
-	'SEARCH_UNREAD'				=> 'Toon ongelezen berichten',
+	'SEARCH_UNANSWERED'			=> 'Unanswered posts',
+	'SEARCH_UNREAD'				=> 'Unread posts',
 	'SEARCH_USER_POSTS'			=> 'Zoek berichten van gebruiker',
 	'SECONDS'					=> 'Seconden',
+	'SEE_ALL'					=> 'See All',
 	'SELECT'					=> 'Selecteer',
 	'SELECT_ALL_CODE'			=> 'Selecteer alles',
 	'SELECT_DESTINATION_FORUM'	=> 'Selecteer het doelforum',
 	'SELECT_FORUM'				=> 'Selecteer een forum',
-	'SEND_EMAIL'				=> 'E-mail',				// Used for submit buttons
-	'SEND_EMAIL_USER'			=> 'E-mail',				// Used as: {L_SEND_EMAIL_USER} {USERNAME} -> E-mail UserX
+	'SEND_EMAIL'				=> 'Send email',				// Used for submit buttons
+	'SEND_EMAIL_USER'			=> 'Send email to %s',
 	'SEND_PRIVATE_MESSAGE'		=> 'Stuur privébericht',
 	'SETTINGS'					=> 'Instellingen',
 	'SIGNATURE'					=> 'Onderschrift',
 	'SKIP'						=> 'Doorgaan naar inhoud',
+	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'De SMTP-server ondersteunt het inloggen niet',
 	'SORRY_AUTH_READ'			=> 'Je beschikt niet over de nodige permissies om dit forum te lezen',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'Je beschikt niet over de nodige permissies om deze bijlage te downloaden',
@@ -706,6 +818,8 @@ $lang = array_merge($lang, array(
 	'START_WATCHING_TOPIC'		=> 'Abonneer op dit onderwerp',
 	'STOP_WATCHING_FORUM'		=> 'Geen abonnement meer op dit forum',
 	'STOP_WATCHING_TOPIC'		=> 'Geen abonnement meer op dit onderwerp',
+	'STRING_LIST_MULTI'			=> '%1$s, and %2$s',
+	'STRING_LIST_SIMPLE'		=> '%1$s and %2$s',
 	'SUBFORUM'					=> 'Subforum',
 	'SUBFORUMS'					=> 'Subforums',
 	'SUBJECT'					=> 'Onderwerp',
@@ -717,51 +831,35 @@ $lang = array_merge($lang, array(
 	'THE_TEAM'			=> 'Het team',
 	'TIB'				=> 'TiB',
 	'TIME'				=> 'Tijd',
-	
+	'TIMEOUT_PROCESSING_REQ'			=> 'Request timed out.',
+
 	'TOO_LARGE'						=> 'De door jou ingevoerde waarde is te groot.',
 	'TOO_LARGE_MAX_RECIPIENTS'		=> 'De door jou ingevoerde waarde van de <strong>Maximaal aantal ontvangers per privébericht</strong> instelling is te groot.',
 
 	'TOO_LONG'						=> 'De ingevoerde waarde is te lang.',
 
-	'TOO_LONG_AIM'					=> 'De opgegeven schermnaam is te lang.',
 	'TOO_LONG_CONFIRM_CODE'			=> 'De opgegeven bevestigingscode is te lang.',
 	'TOO_LONG_DATEFORMAT'			=> 'Het opgegeven datumformaat is te lang.',
-	'TOO_LONG_ICQ'					=> 'Het opgegeven ICQ-nummer is te lang.',
-	'TOO_LONG_INTERESTS'			=> 'De opgegeven interesses zijn te lang.',
 	'TOO_LONG_JABBER'				=> 'Het opgegeven Jabber-adres is te lang.',
-	'TOO_LONG_LOCATION'				=> 'De opgegeven woonplaats is te lang.',
-	'TOO_LONG_MSN'					=> 'Het opgegeven WLM-adres is te lang.',
 	'TOO_LONG_NEW_PASSWORD'			=> 'Het opgegeven wachtwoord is te lang.',
-	'TOO_LONG_OCCUPATION'			=> 'Het opgegeven beroep is te lang.',
 	'TOO_LONG_PASSWORD_CONFIRM'		=> 'De opgegeven wachtwoordbevestiging is te lang.',
 	'TOO_LONG_USER_PASSWORD'		=> 'Het opgegeven wachtwoord is te lang.',
 	'TOO_LONG_USERNAME'				=> 'De opgegeven gebruikersnaam is te lang.',
-	'TOO_LONG_EMAIL'				=> 'Het opgegeven e-mailadres is te lang.',
-	'TOO_LONG_EMAIL_CONFIRM'		=> 'De opgegeven e-mailadresbevestiging is te lang.',
-	'TOO_LONG_WEBSITE'				=> 'De opgegeven website is te lang.',
-	'TOO_LONG_YIM'					=> 'Het opgegeven Yahoo-adres is te lang.',
+	'TOO_LONG_EMAIL'				=> 'The email address you entered is too long.',
 
 	'TOO_MANY_VOTE_OPTIONS'			=> 'Je probeerde op te veel opties te stemmen.',
 
 	'TOO_SHORT'						=> 'De ingevoerde waarde is te kort.',
 
-	'TOO_SHORT_AIM'					=> 'De opgegeven schermnaam is te kort.',
 	'TOO_SHORT_CONFIRM_CODE'		=> 'De opgegeven bevestigingscode is te kort.',
 	'TOO_SHORT_DATEFORMAT'			=> 'Het opgegeven datumformaat is te kort.',
-	'TOO_SHORT_ICQ'					=> 'Het opgegeven ICQ-nummer is te kort.',
-	'TOO_SHORT_INTERESTS'			=> 'De opgegeven interesses zijn te kort.',
 	'TOO_SHORT_JABBER'				=> 'Het opgegeven Jabber-adres is te kort.',
-	'TOO_SHORT_LOCATION'			=> 'De opgegeven woonplaats is te kort.',
-	'TOO_SHORT_MSN'					=> 'Het opgegeven WLM-adres is te kort.',
 	'TOO_SHORT_NEW_PASSWORD'		=> 'Het opgegeven wachtwoord is te kort.',
-	'TOO_SHORT_OCCUPATION'			=> 'Het opgegeven beroep is te kort.',
 	'TOO_SHORT_PASSWORD_CONFIRM'	=> 'De opgegeven wachtwoordbevestiging is te kort.',
 	'TOO_SHORT_USER_PASSWORD'		=> 'Het opgegeven wachtwoord is te kort.',
 	'TOO_SHORT_USERNAME'			=> 'De opgegeven gebruikersnaam is te kort.',
-	'TOO_SHORT_EMAIL'				=> 'Het opgegeven e-mailadres is te kort.',
-	'TOO_SHORT_EMAIL_CONFIRM'		=> 'De opgegeven e-mailadresbevestiging is te kort.',
-	'TOO_SHORT_WEBSITE'				=> 'De opgegeven website is te kort.',
-	'TOO_SHORT_YIM'					=> 'Het opgegeven Yahoo-adres is te kort.',
+	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
+	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
 	
 	'TOO_SMALL'						=> 'De door jou ingevoerde waarde is te klein.',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> 'De door jou ingevoerde waarde van de <strong>Maximaal aantal ontvangers per privébericht</strong> instelling is te klein.',
@@ -775,30 +873,20 @@ $lang = array_merge($lang, array(
 	'TOPIC_MOVED'		=> 'Verplaatst onderwerp',
 	'TOPIC_REVIEW'		=> 'Voorafgaande berichten',
 	'TOPIC_TITLE'		=> 'Titel',
-	'TOPIC_UNAPPROVED'	=> 'Dit onderwerp is niet goedgekeurd',
+	'TOPIC_UNAPPROVED'	=> 'This topic has not been approved.',
+	'TOPIC_DELETED'		=> 'This topic has been deleted.',
 	'TOTAL_ATTACHMENTS'	=> 'Bijlage(n)',
-	'TOTAL_LOG'			=> '1 log',
-	'TOTAL_LOGS'		=> '%d logs',
-	'TOTAL_NO_PM'		=> '0 privéberichten in totaal',
-	'TOTAL_PM'			=> '1 privébericht in totaal',
-	'TOTAL_PMS'			=> '$d privéberichten in totaal',
+	'TOPIC_POLL'		=> 'This topic has a poll.',
 	'TOTAL_POSTS'		=> 'Totaal aantal berichten',
-	'TOTAL_POSTS_OTHER'	=> 'Totaal aantal berichten <strong>%s</strong>',
-	'TOTAL_POSTS_ZERO'	=> 'Totaal aantal berichten <strong>0</strong>',
 	'TOPIC_REPORTED'	=> 'Dit onderwerp is gemeld',
-	'TOTAL_TOPICS_OTHER'=> 'Totaal aantal onderwerpen <strong>%s</strong>',
-	'TOTAL_TOPICS_ZERO'	=> 'Totaal aantal onderwerpen <strong>0</strong>',
-	'TOTAL_USERS_OTHER'	=> 'Totaal aantal leden <strong>%s</strong>',
-	'TOTAL_USERS_ZERO'	=> 'Totaal aantal leden <strong>0</strong>',
 	'TRACKED_PHP_ERROR'	=> 'Getraceerde PHP-fouten: %s',
+	'TWITTER'			=> 'Twitter',
 
-	'UNABLE_GET_IMAGE_SIZE'	=> 'De afbeelding kan niet worden geopend, of het is geen geldige afbeelding.',
+	'UNABLE_GET_IMAGE_SIZE'	=> 'It was not possible to determine the dimensions of the image. Please verify that the URL you entered is correct.',
 	'UNABLE_TO_DELIVER_FILE'=> 'Het bestand kan niet worden afgeleverd.',
 	'UNKNOWN_BROWSER'		=> 'Onbekende browser',
 	'UNMARK_ALL'			=> 'Deselecteer alles',
 	'UNREAD_MESSAGES'		=> 'Ongelezen berichten',
-	'UNREAD_PM'				=> '<strong>%d</strong> ongelezen bericht',
-	'UNREAD_PMS'			=> '<strong>%d</strong> ongelezen berichten',
 	'UNREAD_POST'			=> 'Ongelezen bericht',
 	'UNREAD_POSTS'			=> 'Ongelezen berichten',
 	'UNWATCH_FORUM_CONFIRM'		=> 'Weet je zeker dat je geen abonnement meer wilt op dit forum?',
@@ -816,8 +904,6 @@ $lang = array_merge($lang, array(
 	'USERNAMES'				=> 'Gebruikersnamen',
 	'USER_AVATAR'			=> 'Avatar gebruiker',
 	'USER_CANNOT_READ'		=> 'Je mag de berichten in dit forum niet lezen',
-	'USER_POST'				=> '%d bericht',
-	'USER_POSTS'			=> '%d berichten',
 	'USERS'					=> 'Gebruikers',
 	'USE_PERMISSIONS'		=> 'Test de gebruikerspermissies',
 
@@ -825,6 +911,8 @@ $lang = array_merge($lang, array(
 
 	'VARIANT_DATE_SEPARATOR'	=> '-',	// Used in date format dropdown, eg: "Today, 13:37 / 01 Jan 2007, 13:37" ... to join a relative date with calendar date
 	'VIEWED'					=> 'Bekeken',
+
+	'VIEWING_CONTACT_ADMIN'		=> 'Viewing contact page',
 	'VIEWING_FAQ'				=> 'Bekijkt help',
 	'VIEWING_MEMBERS'			=> 'Bekijkt liddetails',
 	'VIEWING_ONLINE'			=> 'Bekijkt wie er online is',
@@ -839,8 +927,6 @@ $lang = array_merge($lang, array(
 	'VIEW_LATEST_POST'			=> 'Bekijk laatste bericht',
 	'VIEW_NEWEST_POST'			=> 'Bekijk eerste ongelezen bericht',
 	'VIEW_NOTES'				=> 'Bekijk gebruikersnotities',
-	'VIEW_ONLINE_TIME'			=> 'gebaseerd op de gebruikers die de laatste minuut actief waren',
-	'VIEW_ONLINE_TIMES'			=> 'gebaseerd op de gebruikers die de laatste %d minuten actief waren',
 	'VIEW_TOPIC'				=> 'Toon onderwerp',
 	'VIEW_TOPIC_ANNOUNCEMENT'	=> 'Mededeling: ',
 	'VIEW_TOPIC_GLOBAL'			=> 'Globale mededeling: ',
@@ -861,23 +947,24 @@ $lang = array_merge($lang, array(
 	'WEBSITE'			=> 'Website',
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> 'Wie is er online',
+	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'Het opgegeven wachtwoord is onjuist.',
 	'WRONG_DATA_COLOUR'			=> 'De kleurwaarde die je hebt ingegeven in ongeldig.',
 
-	'WRONG_DATA_ICQ'			=> 'Het opgegeven ICQ-nummer is ongeldig.',
 	'WRONG_DATA_JABBER'			=> 'Het opgegeven Jabber-adres is ongeldig.',
 	'WRONG_DATA_LANG'			=> 'De opgegeven taal is ongeldig.',
-	'WRONG_DATA_WEBSITE'		=> 'Het websiteadres moet een geldige url zijn, inclusief het protocol. Bijvoorbeeld http://www.voorbeeld.be/',
+	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
+	'WRONG_DATA_POST_SK'		=> 'The post sort option you specified is not valid.',
+	'WRONG_DATA_TOPIC_SD'		=> 'The topic sort direction you specified is not valid.',
+	'WRONG_DATA_TOPIC_SK'		=> 'The topic sort option you specified is not valid.',
 	'WROTE'						=> 'schreef',
 
+	'YAHOO'				=> 'Yahoo Messenger',
+	'YOUTUBE'			=> 'YouTube',
 	'YEAR'				=> 'Jaar',
 	'YEAR_MONTH_DAY'	=> '(JJJJ-MM-DD)',
 	'YES'				=> 'Ja',
-	'YIM'				=> 'YIM',
 	'YOU_LAST_VISIT'	=> 'Je laatste bezoek was op %s',
-	'YOU_NEW_PM'		=> 'Je hebt een nieuw privébericht in je Postvak IN',
-	'YOU_NEW_PMS'		=> 'Je hebt nieuwe privéberichten in je Postvak IN',
-	'YOU_NO_NEW_PM'		=> 'Er zijn geen nieuwe privéberichten',
 
 	'default_dateformat'	=> 'D d M Y, H:i', // Mon Jan 01, 2007 1:37 pm
 
@@ -1083,7 +1170,6 @@ $lang = array_merge($lang, array(
 
 	'FORUM_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this forum.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this topic.',
-	'TOO_FEW_CHARS_LIMIT'	=> 'Je bericht bevat %1$d tekens. Een bericht moet minimaal %2$d tekens bevatten.',
 	'REPLY_TO_MESSAGE'		=> 'Antwoord op bericht',
 
 	'RSS_CHAN_LIST_TITLE'	=> 'Forums',
@@ -1695,7 +1781,6 @@ $lang = array_merge($lang, array(
 	'DEV_NO_TEST_FILE'			=> 'Er is in de converter geen waarde voor de test_file variabele opgegeven. Als je een converter gebruiker bent, zou je deze fout niet mogen zien, meld deze fout dan alstublieft aan de converter auteur. Als je de converter auteur bent, moet je de naam van een bestaand bestand van het forum opgeven zodat het pad gecontroleerd kan worden.',
 	'DIRECTORIES_AND_FILES'		=> 'Map- en bestandssetup',
 	'DISABLE_KEYS'				=> 'Blokkeer sleutels',
-	'DLL_FIREBIRD'				=> 'Firebird',
 	'DLL_FTP'					=> 'Externe FTP-ondersteuning [ installatie ]',
 	'DLL_GD'					=> 'GD afbeeldingen ondersteuning [ visuele bevestiging ]',
 	'DLL_MBSTRING'				=> 'Multibyte tekens ondersteuning',
@@ -1706,11 +1791,12 @@ $lang = array_merge($lang, array(
 	'DLL_MYSQLI'				=> 'MySQL met MySQLi extensie',
 	'DLL_ORACLE'				=> 'Oracle',
 	'DLL_POSTGRES'				=> 'PostgreSQL',
-	'DLL_SQLITE'				=> 'SQLite',
+	'DLL_SQLITE'				=> 'SQLite 2',
+	'DLL_SQLITE3'				=> 'SQLite 3',
 	'DLL_XML'					=> 'XML ondersteuning [ Jabber ]',
 	'DLL_ZLIB'					=> 'zlib compressie ondersteuning [ gz, .tar.gz, .zip ]',
 	'DL_CONFIG'					=> 'Download configuratie',
-	'DL_CONFIG_EXPLAIN'			=> 'Je kunt het config.php bestand naar je computer downloaden, waarna je het manueel uploadt (en het eventueel bestaande config.php bestand overschrijft) naar de phpBB 3.0 root map. Zorg er echter wel voor dat je het bestand in ASCII-formaat uploadt (als je niet weet hoe dit moet, raadpleeg dan de documentatie van je FTP-programma). Nadat je het config.php geüpload hebt, klik je op "klaar" om naar de volgende stap te gaan.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'Download',
 	'DONE'						=> 'Klaar',
 
@@ -1722,8 +1808,6 @@ $lang = array_merge($lang, array(
 	'FILES_REQUIRED_EXPLAIN'	=> '<strong>Vereist</strong> - Om phpBB goed te laten functioneren moeten sommige bestanden en mappen toegankelijk en beschrijfbaar zijn. Indien er "niet gevonden" staat, moet je het/de betreffende bestand(en) en/of map(pen) aanmaken. Indien er "onbeschrijfbaar" staat moet je phpBB de benodigde schrijfpermissies geven.',
 	'FILLING_TABLE'				=> 'Bezig met vullen tabel <strong>%s</strong>',
 	'FILLING_TABLES'			=> 'Bezig met vullen tabellen',
-
-	'FIREBIRD_DBMS_UPDATE_REQUIRED'		=> 'phpBB ondersteunt niet langer meer Firebird/Interbase ouder dan versie 2.1. Werk je Firebird installatie bij tot ten minste 2.1.0 voordat je verder gaat met updaten.',
 
 	'FINAL_STEP'				=> 'Verwerk laatste stap',
 	'FORUM_ADDRESS'				=> 'Forumadres',
@@ -1750,30 +1834,30 @@ $lang = array_merge($lang, array(
 		<p>Door op de onderstaande knop te klikken, ga je naar een formulier voor het verzenden van statistische data naar phpBB in het beheerderspaneel. Wij zouden het erg waarderen als je kunt helpen door die informatie aan ons te sturen. Na afloop zou u wat tijd moeten nemen om de beschikbare opties te bestuderen. Onthoud dat er online hulp is via de <a href="http://www.phpbb.nl/documentatie/3.0/">documentatie</a>, <a href="%3$s">README</a> en de <a href="http://www.phpbb.nl/forums/viewforum.php?f=51">supportforums</a>.</p><p><strong>Verwijder, verplaats of hernoem de installatiemap voordat je het forum gaat gebruiken. Zolang deze map nog bestaat, zal alleen het beheerderspaneel bereikbaar zijn.</strong>',
 	'INSTALL_INTRO'				=> 'Welkom bij de installatie',
 
-	'INSTALL_INTRO_BODY'		=> 'Met deze optie kun je phpBB3 op je server installeren.</p><p>Om verder te kunnen gaan, heb je de database instellingen nodig. Indien je deze niet weet, contacteer dan je host en vraag ernaar. Zonder kun je niet verder gaan. Dit heb je nodig:</p>
+	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
 
 	<ul>
-		<li>Het databasetype - de database die je gebruikt;</li>
-		<li>De hostnaam of DNS van de databaseserver - het adres van de databaseserver;</li>
-		<li>De databaseserverpoort - de poort van de databaseserver (meestal heb je dit niet nodig);</li>
-		<li>De databasenaam - de naam van de database op de server;</li>
-		<li>De databasegebruikersnaam en het bijhorende wachtwoord - de logingegevens van de database.</li>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
 	</ul>
 
-	<p><strong>Let op:</strong> als je installatie SQLite gaat gebruiken, moet je in het DNS-veld het volledige pad naar het databasebestand opgeven en zowel het gebruikersnaam- als wachtwoordveld leeg laten. Om veiligheidsredenen moet je ervoor zorgen dat het databasebestand op een niet via het internet bereikbare plaats staat.</p>
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
 
-	<p>phpBB3 ondersteunt de volgende databases:</p>
+	<p>phpBB3 supports the following databases:</p>
 	<ul>
-		<li>MySQL 3.23 of hoger (MySQLi is ondersteund)</li>
-		<li>PostgreSQL 7.3+</li>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
 		<li>SQLite 2.8.2+</li>
-		<li>Firebird 2.1+</li>
-		<li>MS SQL server 2000 of hoger (direct of via ODBC)</li>
-		<li>MS SQL Server 2005 of hoger (native)</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
 		<li>Oracle</li>
 	</ul>
 
-	<p>Alleen de ondersteunde en beschikbare databases worden weergegeven.',
+	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'Klik op de knop hieronder om de installatie te starten.',
 	'INSTALL_LOGIN'				=> 'Login',
 	'INSTALL_NEXT'				=> 'Volgende stap',
@@ -1789,9 +1873,8 @@ $lang = array_merge($lang, array(
 	'INST_ERR_DB_NO_ERROR'		=> 'Geen foutmelding gegeven.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'De op deze server geïnstalleerde MySQL-versie is niet compatibel met de "MySQL met MySQLi extensie" optie die je geselecteerd hebt. Probeer als alternatief de "MySQL" optie eens.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'De versie van de SQLlite extensie is te oud, deze moet minimaal tot versie 2.8.2 bijgewerkt zijn.',
+	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'De op deze server geïnstalleerde Oracle versie vereist dat je de <var>NLS_CHARACTERSET</var> parameter op <var>UTF8</var> instelt. Ofwel moet je de versie naar 9.2+ upgraden of de parameter wijzigen.',
-	'INST_ERR_DB_NO_FIREBIRD'	=> 'De versie van Firebird is lager dan 2.1, upgrade naar een nieuwere versie.',
-	'INST_ERR_DB_NO_FIREBIRD_PS'=> 'De geselecteerde Firebird database heeft een grootte kleiner dan 8192, dit moet minimaal 8192 zijn.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'De geselecteerde database is niet volgens de <var>UNICODE</var> of <var>UTF8</var> encodering gemaakt. Probeer te installeren met een database met <var>UNICODE</var> of <var>UTF8</var> encodering.',
 	'INST_ERR_DB_NO_NAME'		=> 'Geen databasenaam gespecificeerd.',
 	'INST_ERR_EMAIL_INVALID'	=> 'Het opgegeven e-mailadres is ongeldig.',
@@ -1845,6 +1928,8 @@ $lang = array_merge($lang, array(
 	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB zal <strong>niet</strong> werken als je PHP-installatie zonder UTF-8 ondersteuning, in de PCRE extensie, gecompileerd is.',
 	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP functie getimagesize() is beschikbaar',
 	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Vereist</strong> - Om phpBB correct te laten functioneren, moet de getimagesize functie beschikbaar zijn.',
+	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'Optionele modules',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>Optioneel</strong> - Deze modules of applicaties zijn optioneel, indien ze beschikbaar zijn kun je extra mogelijkheden gebruiken.',
 	'PHP_SUPPORTED_DB'				=> 'Ondersteunde databases',
@@ -1853,10 +1938,10 @@ $lang = array_merge($lang, array(
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'phpBB zal gewoon werken wanneer deze optie aan staat, maar om veiligheidsredenen raden we je aan - indien mogelijk - register_globals uit te schakelen.',
 	'PHP_SAFE_MODE'					=> 'Veilige modus',
 	'PHP_SETTINGS'					=> 'PHP-versie en -instellingen',
-	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Vereist</strong> - Je moet minstens PHP-versie 4.3.3 hebben om phpBB te kunnen installeren. Als <var>veilige modus</var> hieronder weergegeven wordt, werkt de PHP-installatie in die modus. Dit veroorzaakt enkele beperkingen bij afstandsbeheer en gelijkaardige mogelijkheden.',
+	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'PHP-optie <var>allow_url_fopen</var> is ingeschakeld',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>Optioneel</strong> - Deze optie is optioneel, maar bepaalde phpBB-functies zoals avatars op andere websites zullen zonder deze optie niet correct werken.',
-	'PHP_VERSION_REQD'				=> 'PHP versie >= 4.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
 	'POST_ID'						=> 'Bericht ID',
 	'PREFIX_FOUND'					=> 'Een tabellenscan heeft aangewezen dat er een geldige installatie is met <strong>%s</strong> als tabelvoorvoegsel.',
 	'PREPROCESS_STEP'				=> 'Bezig met uitvoeren van voorverwerkingsfuncties/queries',
@@ -1876,6 +1961,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> 'Serverconfiguratie',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Zoekindex is niet geconverteerd',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Je oude zoekindex is niet geconverteerd. Zoekopdrachten zullen altijd tot geen resultaten leiden. Om een nieuwe zoekindex te creëren ga je naar het beheerderspaneel, kies onderhoud en klik daarna op zoekindex in het submenu.',
+	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> 'Forumsoftware',
 	'SPECIFY_OPTIONS'			=> 'Specificeer conversieopties',
 	'STAGE_ADMINISTRATOR'		=> 'Beheerder details',
@@ -1883,7 +1969,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> 'De instellingen op deze pagina zijn enkel nodig als je forum niet voldoet met de standaard instellingen. Ga door naar de volgende pagina indien je hier niet zeker van bent, je hebt later de mogelijkheid om deze instellingen te wijzigen via het beheerderspaneel.',
 	'STAGE_CONFIG_FILE'			=> 'Configuratiebestand',
 	'STAGE_CREATE_TABLE'		=> 'Databasetabellen aanmaken',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'De door phpBB 3.0 gebruikte database tabellen zijn aangemaakt. Ga door naar het volgende scherm om de phpBB installatie af te ronden.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'Database instellingen',
 	'STAGE_FINAL'				=> 'Einde',
 	'STAGE_INTRO'				=> 'Introductie',
@@ -1896,7 +1982,7 @@ $lang = array_merge($lang, array(
 	'SUB_LICENSE'				=> 'Licentie',
 	'SUB_SUPPORT'				=> 'Ondersteuning',
 	'SUCCESSFUL_CONNECT'		=> 'Succesvol verbonden',
-	'SUPPORT_BODY'				=> 'Volledige ondersteuning wordt gratis gegeven voor de huidige stabiele versie van phpBB3. Dit houd in:</p><ul><li>installatie</li><li>configuratie</li><li>technische vragen</li><li>problemen die mogelijks aan software bugs te wijten zijn</li><li>updaten van de Release Candidate (RC) versies naar de stabiele versie</li><li>converteren van phpBB 2.0.x naar phpBB3</li><li>converteren van andere forum pakketten naar phpBB3 (zie zeker naar de <a href="http://www.phpbb.com/community/viewforum.php?f=65">Conversie Forums</a>)</li></ul><p>We moedigen het overschakelen van bèta versies naar de nieuwste versie zeker aan.</p><h2>MOD’s / Stijlen</h2><p>Voor alle zaken met betrekking tot MOD’s, plaats een bericht in het gepaste <a href="http://www.phpbb.nl/forums/viewforum.php?f=53">Modificaties Forum</a>.<br />Voor alle zaken met betrekking tot stijlen, templates en afbeeldingsets, plaats een bericht in het gepaste <a href="http://www.phpbb.nl/forums/viewforum.php?f=54">Stijlen Forum</a>.<br /><br />Als je vraag van toepassing is op één bepaalt pakket, plaats je bericht dan in het forum van dat pakket.</p><h2>Ondersteuning verkrijgen</h2><p><a href="http://wiki.phpbb.nl/3.x/Handleiding">phpBB3 Handleiding</a><br /><a href="http://www.phpbb.nl/forums/viewforum.php?f=40">Support forum</a><br /><br />Om er zeker van te zijn dat je op de hoogte blijft van alle nieuwigheden en nieuwe versies, kun je jezelf inschrijven op de <a href="http://www.phpbb.com/support/">mailing lijst</a>.<br /><br />',
+	'SUPPORT_BODY'				=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/documentation/3.1/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
 	'SYNC_FORUMS'				=> 'Starten van synchronisatieforums',
 	'SYNC_POST_COUNT'			=> 'Synchroniseer post_counts',
 	'SYNC_POST_COUNT_ID'		=> 'Synchroniseer post_counts van <var>entry</var> %1$s naar %2$s.',
@@ -1922,7 +2008,7 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ALL_FILES_UP_TO_DATE'		=> 'Alle bestanden zijn bijgewerkt naar de laatste phpBB-versie. Je kunt nu <a href="../ucp.php?mode=login">inloggen op je forum</a> en controleren of alles goed werkt. Vergeet niet om de install-map te verwijderen, verplaatsen of te hernoemen! Stuur ons bijgewerkte informatie over je server en forum configuraties van de <a href="../ucp.php?mode=login&amp;redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">Stuur statistieken</a> module in jouw beheerderspaneel.',
+	'ALL_FILES_UP_TO_DATE'		=> 'All files are up to date with the latest phpBB version.',
 	'ARCHIVE_FILE'				=> 'Bronbestand in archief',
 
 	'BACK'				=> 'Terug',
@@ -1945,7 +2031,10 @@ $lang = array_merge($lang, array(
 	'CURRENT_VERSION'				=> 'Huidige versie',
 
 	'DATABASE_TYPE'						=> 'Databasetype',
+	'DATABASE_UPDATE_COMPLETE'			=> 'Database updater has completed!',
+	'DATABASE_UPDATE_CONTINUE'			=> 'Continue database update',
 	'DATABASE_UPDATE_INFO_OLD'			=> 'Het database-updatebestand in de install-map is te oud, zorg dat je de correcte bestandsversie geüpload hebt.',
+	'DATABASE_UPDATE_NOT_COMPLETED'		=> 'The database update has not yet completed.',
 	'DELETE_USER_REMOVE'				=> 'Verwijder gebruiker en verwijder berichten',
 	'DELETE_USER_RETAIN'				=> 'Verwijder gebruiker maar behoud de berichten',
 	'DESTINATION'						=> 'Doelbestand',
@@ -1964,14 +2053,17 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_UPDATE_METHOD'			=> 'Download aangepast archiefbestand',
 	'DOWNLOAD_UPDATE_METHOD_EXPLAIN'	=> 'Eens gedownload zou je het archief moeten uitpakken. Je vindt hierin de bestanden die je zou moeten uploaden naar de phpBB-rootmap. Gelieve ze dan ook te uploaden naar hun respectievelijke mappen. Controleer de bestanden opnieuw, met de andere onderstaande knop, nadat het uploaden voltooid is.',
 
-	'ERROR'			=> 'Foutmelding',
 	'EDIT_USERNAME'	=> 'Wijzig gebruikersnaam',
+	'ERROR'			=> 'Foutmelding',
+	'EVERYTHING_UP_TO_DATE'		=> 'Everything is up to date with the latest phpBB version. You should now <a href="%1$s">login to your board</a> and check if everything is working fine. Do not forget to delete, rename or move your install directory! Please send us updated information about your server and board configurations from the <a href="%2$s">Send statistics</a> module in your ACP.',
 
 	'FILE_ALREADY_UP_TO_DATE'		=> 'Bestand is al bijgewerkt.',
 	'FILE_DIFF_NOT_ALLOWED'			=> 'Bestand niet toegestaan voor diff.',
 	'FILE_USED'						=> 'Informatie gebruikt van',			// Single file
 	'FILES_CONFLICT'				=> 'Probleem bestanden',
 	'FILES_CONFLICT_EXPLAIN'		=> 'De volgende bestanden zijn aangepast en vertegenwoordigen niet de originele bestanden van de oude versie. phpBB ziet dat deze bestanden problemen veroorzaken als er geprobeerd wordt om ze samen te voegen. Onderzoek de problemen en probeer ze handmatig te verhelpen of ga verder met het bijwerken door de voorkeurssamenvoegmethode te kiezen. Als je de problemen handmatig oplost, controleer de bestanden dan nog een keer nadat je ze aangepast hebt. Je kunt een keuze maken tussen de voorkeurssamenvoegmethode van elk bestand. De eerste zal resulteren in een bestand waar de lijnen, van het oude bestand, die problemen geven worden verwijderd, de andere methode zal resulteren in de verwijdering van de veranderingen in het nieuwe bestand.',
+	'FILES_DELETED'					=> 'Deleted files',
+	'FILES_DELETED_EXPLAIN'			=> 'The following files do not exist in the new version. These files have to be deleted from your installation.',
 	'FILES_MODIFIED'				=> 'Aangepaste bestanden',
 	'FILES_MODIFIED_EXPLAIN'		=> 'De volgende bestanden zijn aangepast en vertegenwoordigen niet de originele bestanden van de oude versie. Het bijgewerkte bestand zal worden samengevoegd tussen jouw modificaties en het nieuwe bestand.',
 	'FILES_NEW'						=> 'Nieuwe bestanden',
@@ -2033,6 +2125,7 @@ $lang = array_merge($lang, array(
 	'PREVIOUS_VERSION'					=> 'Vorige versie',
 	'PROGRESS'							=> 'Voortgang',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Announcement',
 	'RESULT'					=> 'Resultaat',
 	'RUN_DATABASE_SCRIPT'		=> 'Werk mijn database bij',
 
@@ -2040,6 +2133,7 @@ $lang = array_merge($lang, array(
 	'SELECT_DOWNLOAD_FORMAT'	=> 'Selecteer download-archiefformaat',
 	'SELECT_FTP_SETTINGS'		=> 'Selecteer FTP-instellingen',
 	'SHOW_DIFF_CONFLICT'		=> 'Laat verschillen/problemen zien',
+	'SHOW_DIFF_DELETED'			=> 'Show file contents',
 	'SHOW_DIFF_FINAL'			=> 'Laat resulterend bestand zien',
 	'SHOW_DIFF_MODIFIED'		=> 'Laat samengevoegde verschillen zien',
 	'SHOW_DIFF_NEW'				=> 'Laat bestandsinhoud zien',
@@ -2053,6 +2147,7 @@ $lang = array_merge($lang, array(
 	'STAGE_UPDATE_FILES'		=> 'Update bestanden',
 	'STAGE_VERSION_CHECK'		=> 'Versiecontrole',
 	'STATUS_CONFLICT'			=> 'Aangepast bestand zorgt voor problemen',
+	'STATUS_DELETED'			=> 'Deleted file',
 	'STATUS_MODIFIED'			=> 'Aangepast bestand',
 	'STATUS_NEW'				=> 'Nieuw bestand',
 	'STATUS_NEW_CONFLICT'		=> 'Probleemgevend nieuw bestand',
@@ -2073,33 +2168,27 @@ $lang = array_merge($lang, array(
 	'UPDATE_INSTALLATION_EXPLAIN'	=> 'Met deze optie is het mogelijk om je phpBB-installatie bij te werken naar de laatste versie.<br />Tijdens het proces zullen de bestanden gecontroleerd worden, je krijgt dan alle verschillen en bestanden te zien voordat je ze bijwerkt.<br /><br />De bestanden kunnen op 2 manieren bijgewerkt worden.</p><h2>Handmatig bijwerken</h2><p>Met deze mogelijkheid download je enkel de gewijzigde bestanden, zo verlies je geen modificaties. Nadat je de zip gedownload hebt, moet je deze uitpakken en de bestanden handmatig naar de juiste mappen uploaden. Als je dat gedaan hebt, kun je de bestandscontrole opnieuw uitvoeren om te zien of alle bestanden op de juiste locatie geplaatst zijn.</p><h2>Automatisch bijwerken met FTP</h2><p>Deze methode is bijna gelijk aan de eerste, maar nu hoef je de gewijzigde bestanden niet zelf te downloaden en te uploaden, dit gebeurt automatisch. Indien je voor deze methode kiest, moet je jouw FTP-gegevens weten. Zodra je klaar bent zal je opnieuw naar de bestandscontrole doorgestuurd worden om te controleren of alles klopt.<br /><br />',
 	'UPDATE_INSTRUCTIONS'			=> '
 
-		<h1>Nieuwe versie</h1>
+		<h1>Release announcement</h1>
 
-		<p>Lees <a href="%1$s" title="%1$s"><strong>de mededeling omtrent de laatste versie</strong></a> goed voor dat je verder gaat met het bijwerken, want deze bevat waarschijnlijk nuttige informatie. Deze bevat ook de downloads en een overzicht van alle wijzigingen in de nieuwe versie.</p>
+		<p>Please read the release announcement for the latest version before you continue your update process, it may contain useful information. It also contains full download links as well as the change log.</p>
 
 		<br />
 
-		<h1>Hoe werk ik mijn phpBB-forum bij?</h1>
+		<h1>How to update your installation with the Automatic Update Package</h1>
 
-		<p>De gemakkelijke manier van het bijwerken van je installatie bevat onderstaande stappen en gelden enkel voor het automatisch updatepakket. Je kunt ook kiezen voor de manieren die in het INSTALL.html document staat. De stappen om phpBB3 automatisch bij te werken zijn:</p>
+		<p>The recommended way of updating your installation listed here is only valid for the automatic update package. You are also able to update your installation using the methods listed within the INSTALL.html document. The steps for updating phpBB3 automatically are:</p>
 
 		<ul style="margin-left: 20px; font-size: 1.1em;">
-			<li>Ga naar de <a href="http://www.phpbb.nl/downloads/" title="http://www.phpbb.nl/downloads/">phpBB.nl downloads pagina</a> en download het "Automatische updaten" zip-archief;<br /><br /></li>
-			<li>Pak het zip-archief uit;<br /><br /></li>
-			<li>Upload de uitgepakte install-map volledig naar je phpBB-root (waar je config.php ook staat).<br /><br /></li>
+			<li>Go to the <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com downloads page</a> and download the "Automatic Update Package" archive.<br /><br /></li>
+			<li>Unpack the archive.<br /><br /></li>
+			<li>Upload the complete uncompressed install folder to your phpBB root directory (where your config.php file is).<br /><br /></li>
 		</ul>
 
-		<p>Eenmaal geüpload, zal je forum, door het uploaden van de install-map, voor gewone gebruikers uitgeschakeld zijn.<br /><br />
-		<strong><a href="%2$s" title="%2$s">Ga nu naar de install-map en begin met het bijwerken van je forum</a>.</strong><br />
+		<p>Once uploaded your board will be offline for normal users due to the install directory you uploaded now present.<br /><br />
+		<strong><a href="%1$s" title="%1$s">Now start the update process by pointing your browser to the install folder</a>.</strong><br />
 		<br />
-		Daar zal je geholpen worden met het bijwerken. Je wordt ook op de hoogte gebracht zodra alles bijgewerkt is.
+		You will then be guided through the update process. You will be notified once the update is complete.
 		</p>
-	',
-	'UPDATE_INSTRUCTIONS_INCOMPLETE'	=> '
-
-		<h1>Incomplete update ontdekt</h1>
-
-		<p>phpBB constateerde een incomplete automatische update. Wees er zeker van dat je elke stap van het automatische updatemiddel hebt uitgevoerd. Hieronder vind je de link opnieuw, of ga direct naar je installatiemap.</p>
 	',
 	'UPDATE_METHOD'					=> 'Updatemethode',
 	'UPDATE_METHOD_EXPLAIN'			=> 'Kies nu via welke methode je wilt updaten. Als je FTP-update kiest, krijg je een formulier waar je de nodige FTP-gegevens moet opgeven. Bij deze methode worden bestanden automatisch op de juiste locatie geplaatst en back-up’s (eindigend op .bak), met de oude bestanden, worden aangemaakt. Als je ervoor kiest om de gewijzigde bestanden te downloaden, kun je ze later uitpakken en uploaden op de juiste locatie.',
@@ -2110,10 +2199,10 @@ $lang = array_merge($lang, array(
 	'UPDATING_DATA'					=> 'Bezig met updaten gegevens',
 	'UPDATING_TO_LATEST_STABLE'		=> 'Bezig met het updaten van de database naar de laatste stabiele versie',
 	'UPDATED_VERSION'				=> 'Bijgewerkte versie',
-	'UPGRADE_INSTRUCTIONS'			=> 'Een nieuwe functies uitgave <strong>%1$s</strong> is beschikbaar. Lees <a href="%2$s" title="%2$s"><strong>de uitgave mededeling</strong></a> om meer te leren over wat het te bieden heeft en hoe bij te werken.',
 	'UPLOAD_METHOD'					=> 'Upload methode',
 
 	'UPDATE_DB_SUCCESS'				=> 'Database succesvol bijgewerkt.',
+	'UPDATE_FILE_SUCCESS'			=> 'File update was successful.',
 	'USER_ACTIVE'					=> 'Actieve gebruiker',
 	'USER_INACTIVE'					=> 'Inactieve gebruiker',
 
@@ -2173,6 +2262,33 @@ $lang = array_merge($lang, array(
 	'TOPICS_TOPIC_TITLE'			=> 'Welkom bij phpBB3',
 ));
 
+#######language/en/migrator.php#######
+
+$lang = array_merge($lang, array(
+	'CONFIG_NOT_EXIST'					=> 'The config setting "%s" unexpectedly does not exist.',
+
+	'GROUP_NOT_EXIST'					=> 'The group "%s" unexpectedly does not exist.',
+
+	'MIGRATION_APPLY_DEPENDENCIES'		=> 'Apply dependencies of %s.',
+	'MIGRATION_DATA_DONE'				=> 'Installed Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_IN_PROGRESS'		=> 'Installing Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_RUNNING'			=> 'Installing Data: %s.',
+	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
+	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
+	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
+	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
+	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
+	'MODULE_NOT_EXIST'					=> 'A required module does not exist: %s',
+
+	'PERMISSION_NOT_EXIST'				=> 'The permission setting "%s" unexpectedly does not exist.',
+
+	'ROLE_NOT_EXIST'					=> 'The permission role "%s" unexpectedly does not exist.',
+));
+
 #######language/en/mcp.php#######
 
 $lang = array_merge($lang, array(
@@ -2193,6 +2309,10 @@ $lang = array_merge($lang, array(
 	'APPROVE_POST_CONFIRM'	=> 'Weet je zeker dat je dit bericht wilt goedkeuren?',
 	'APPROVE_POSTS'			=> 'Berichten goedkeuren',
 	'APPROVE_POSTS_CONFIRM'	=> 'Weet je zeker dat je de geselecteerde berichten wilt goedkeuren?',
+	'APPROVE_TOPIC'			=> 'Approve topic',
+	'APPROVE_TOPIC_CONFIRM'	=> 'Are you sure you want to approve this topic?',
+	'APPROVE_TOPICS'		=> 'Approve topics',
+	'APPROVE_TOPICS_CONFIRM'=> 'Are you sure you want to approve the selected topics?',
 
 	'CANNOT_MOVE_SAME_FORUM'=> 'Het onderwerp staat al in dit forum. Selecteer een ander forum om naar te verplaatsen.',
 	'CANNOT_WARN_ANONYMOUS'	=> 'Je kunt een gast niet waarschuwen.',
@@ -2213,16 +2333,12 @@ $lang = array_merge($lang, array(
 	'DELETE_PM_REPORTS'			=> 'Verwijder PB meldingen',
 	'DELETE_PM_REPORTS_CONFIRM'	=> 'Weet je zeker dat je de geselecteerde PB meldingen wilt verwijderen?',
 	'DELETE_POSTS'				=> 'Berichten verwijderen',
-	'DELETE_POSTS_CONFIRM'		=> 'Weet je zeker dat je deze berichten wilt verwijderen?',
-	'DELETE_POST_CONFIRM'		=> 'Weet je zeker dat je dit bericht wilt verwijderen?',
 	'DELETE_REPORT'				=> 'Verwijder melding',
 	'DELETE_REPORT_CONFIRM'		=> 'Weet je zeker dat je de geselecteerde melding wilt verwijderen?',
 	'DELETE_REPORTS'			=> 'Verwijder meldingen',
 	'DELETE_REPORTS_CONFIRM'	=> 'Weet je zeker dat je de geselecteerde meldingen wilt verwijderen?',
 	'DELETE_SHADOW_TOPIC'		=> 'Verwijder schaduwonderwerp',
 	'DELETE_TOPICS'				=> 'Geselecteerde onderwerpen verwijderen',
-	'DELETE_TOPICS_CONFIRM'		=> 'Weet je zeker dat je deze onderwerpen wilt verwijderen?',
-	'DELETE_TOPIC_CONFIRM'		=> 'Weet je zeker dat je dit onderwerp wilt verwijderen?',
 	'DISAPPROVE'				=> 'Afkeuren',
 	'DISAPPROVE_REASON'			=> 'Reden van afkeuring',
 	'DISAPPROVE_POST'			=> 'Afgekeurd bericht',
@@ -2260,8 +2376,6 @@ $lang = array_merge($lang, array(
 	'LATEST_WARNING_TIME'		=> 'Laatst gestuurde waarschuwing',
 	'LATEST_WARNINGS'			=> '5 laatste waarschuwingen',
 	'LEAVE_SHADOW'				=> 'Plaats een link naar dit onderwerp in het oude forum',
-	'LIST_REPORT'				=> '1 melding',
-	'LIST_REPORTS'				=> '%d meldingen',
 	'LOCK'						=> 'Sluit',
 	'LOCK_POST_POST'			=> 'Bericht sluiten',
 	'LOCK_POST_POST_CONFIRM'	=> 'Weet je zeker dat je wilt voorkomen dat dit bericht wordt bewerkt?',
@@ -2340,6 +2454,10 @@ $lang = array_merge($lang, array(
 	'MCP_QUEUE_UNAPPROVED_POSTS_EXPLAIN'	=> 'Dit is een lijst van alle berichten die nog moeten worden goedgekeurd, voordat ze voor alle gebruikers zichtbaar zijn.',
 	'MCP_QUEUE_UNAPPROVED_TOPICS'			=> 'Onderwerpen wachtend op goedkeuring',
 	'MCP_QUEUE_UNAPPROVED_TOPICS_EXPLAIN'	=> 'Dit is een lijst van alle onderwerpen die nog moeten worden goedgekeurd, voordat ze voor alle gebruikers zichtbaar zijn.',
+	'MCP_QUEUE_DELETED_POSTS'				=> 'Deleted posts',
+	'MCP_QUEUE_DELETED_POSTS_EXPLAIN'		=> 'This is a list of all soft deleted posts. You can restore or permanently delete the posts from this screen.',
+	'MCP_QUEUE_DELETED_TOPICS'				=> 'Deleted topics',
+	'MCP_QUEUE_DELETED_TOPICS_EXPLAIN'		=> 'This is a list of all soft deleted topics. You can restore or permanently delete the topics from this screen.',
 
 	'MCP_VIEW_USER'			=> 'Toon waarschuwingen van een specifieke gebruiker',
 
@@ -2378,25 +2496,27 @@ $lang = array_merge($lang, array(
 	'NO_POST'						=> 'Je moet een bericht selecteren als je een gebruiker wilt waarschuwen over het bericht.',
 	'NO_POST_REPORT'				=> 'Dit bericht is niet gemeld.',
 	'NO_POST_SELECTED'				=> 'Je moet minimaal één bericht selecteren om deze actie uit te voeren.',
+	'NO_POSTS_DELETED'				=> 'There are no deleted posts.',
+	'NO_POSTS_QUEUE'				=> 'There are no posts waiting for approval.',
 	'NO_REASON_DISAPPROVAL'			=> 'Geef een duidelijke reden voor het afkeuren.',
 	'NO_REPORT'						=> 'Geen melding gevonden',
 	'NO_REPORTS'					=> 'Geen meldingen gevonden',
 	'NO_REPORT_SELECTED'			=> 'Je moet minimaal één melding selecteren om deze actie te kunnen uitvoeren.',
 	'NO_TOPIC_ICON'					=> 'Geen',
 	'NO_TOPIC_SELECTED'				=> 'Je moet minimaal één onderwerp selecteren om deze actie uit te voeren.',
+	'NO_TOPICS_DELETED'				=> 'There are no deleted topics.',
 	'NO_TOPICS_QUEUE'				=> 'Er zijn geen onderwerpen die op goedkeuring wachten.',
 
 	'ONLY_TOPIC'			=> 'Alleen onderwerp "%s"',
 	'OTHER_USERS'			=> 'Andere gebruikers (die berichten plaatsen) met dit IP',
 
+	'QUICKMOD_ACTION_NOT_ALLOWED' => "%s not allowed as quickmod",
+
 	'PM_REPORT_CLOSED_SUCCESS'	=> 'De geselecteerde privébericht-melding is succesvol gesloten.',
 	'PM_REPORT_DELETED_SUCCESS'	=> 'De geselecteerde privébericht-melding is succesvol verwijderd.',
 	'PM_REPORTED_SUCCESS'		=> 'Het privébericht is gemeld.',
-	'PM_REPORT_TOTAL'			=> 'Er is <strong>1</strong> openstaande PB melding.',
 	'PM_REPORTS_CLOSED_SUCCESS'	=> 'De geselecteerde PB meldingen zijn gesloten.',
 	'PM_REPORTS_DELETED_SUCCESS'=> 'De geselecteerde PB melding is verwijderd.',
-	'PM_REPORTS_TOTAL'			=> 'Er zijn <strong>%d</strong> openstaande PB meldingen.',
-	'PM_REPORTS_ZERO_TOTAL'		=> 'Er zijn geen openstaande PB meldingen.',
 	'PM_REPORT_DETAILS'			=> 'Privébericht-melding details',
 	'POSTER'					=> 'Auteur',
 	'POSTS_APPROVED_SUCCESS'	=> 'De geselecteerde berichten zijn goedgekeurd.',
@@ -2404,15 +2524,17 @@ $lang = array_merge($lang, array(
 	'POSTS_DISAPPROVED_SUCCESS'	=> 'De geselecteerde berichten zijn afgekeurd.',
 	'POSTS_LOCKED_SUCCESS'		=> 'De geselecteerde berichten zijn gesloten.',
 	'POSTS_MERGED_SUCCESS'		=> 'De geselecteerde berichten zijn samengevoegd.',
-	'POSTS_UNLOCKED_SUCCESS'	=> 'De geselecteerde berichten zijn heropend.',
 	'POSTS_PER_PAGE'			=> 'Berichten per pagina',
 	'POSTS_PER_PAGE_EXPLAIN'	=> '(Stel in op 0, om alle berichten te tonen.)',
+	'POSTS_RESTORED_SUCCESS'	=> 'The selected posts have been restored successfully.',
+	'POSTS_UNLOCKED_SUCCESS'	=> 'De geselecteerde berichten zijn heropend.',
 	'POST_APPROVED_SUCCESS'		=> 'Het geselecteerde bericht is goedgekeurd.',
 	'POST_DELETED_SUCCESS'		=> 'Het geselecteerde bericht is verwijderd.',
 	'POST_DISAPPROVED_SUCCESS'	=> 'Het geselecteerde bericht is afgekeurd.',
 	'POST_LOCKED_SUCCESS'		=> 'Het bericht is gesloten.',
 	'POST_NOT_EXIST'			=> 'Het opgevraagde bericht bestaat niet.',
 	'POST_REPORTED_SUCCESS'		=> 'Het bericht is gemeld.',
+	'POST_RESTORED_SUCCESS'		=> 'This post has been restored successfully.',
 	'POST_UNLOCKED_SUCCESS'		=> 'Het bericht is heropend.',
 
 	'READ_USERNOTES'			=> 'Opmerkingen over gebruiker',
@@ -2423,8 +2545,6 @@ $lang = array_merge($lang, array(
 	'REPORTED_ON_DATE'			=> 'op',
 	'REPORTS_CLOSED_SUCCESS'	=> 'De geselecteerde meldingen zijn gesloten.',
 	'REPORTS_DELETED_SUCCESS'	=> 'De geselecteerde meldingen zijn verwijderd.',
-	'REPORTS_TOTAL'				=> 'Er zijn <strong>%d</strong> openstaande meldingen.',
-	'REPORTS_ZERO_TOTAL'		=> 'Er zijn geen openstaande meldingen.',
 	'REPORT_CLOSED'				=> 'Deze melding is reeds gesloten.',
 	'REPORT_CLOSED_SUCCESS'		=> 'De geselecteerde melding is gesloten.',
 	'REPORT_DELETED_SUCCESS'	=> 'De geselecteerde melding is verwijderd.',
@@ -2436,7 +2556,15 @@ $lang = array_merge($lang, array(
 	'REPORT_POST_EXPLAIN'		=> 'Gebruik dit formulier om de geselecteerde berichten te melden bij de beheerders. Het bericht hoef je alleen te melden als het in strijd is met de forumregels.',
 	'REPORT_REASON'				=> 'Reden van melding',
 	'REPORT_TIME'				=> 'Tijdstip van melding',
-	'REPORT_TOTAL'				=> 'Er is <strong>1</strong> openstaande melding.',
+	'RESTORE'					=> 'Restore',
+	'RESTORE_POST'				=> 'Restore post',
+	'RESTORE_POST_CONFIRM'		=> 'Are you sure you want to restore this post?',
+	'RESTORE_POSTS'				=> 'Restore posts',
+	'RESTORE_POSTS_CONFIRM'		=> 'Are you sure you want to restore the selected posts?',
+	'RESTORE_TOPIC'				=> 'Restore topic',
+	'RESTORE_TOPIC_CONFIRM'		=> 'Are you sure you want to restore this topic?',
+	'RESTORE_TOPICS'			=> 'Restore topics',
+	'RESTORE_TOPICS_CONFIRM'	=> 'Are you sure you want to restore the selected topics?',
 	'RESYNC'					=> 'Synchroniseer',
 	'RETURN_MESSAGE'			=> '%sGa terug naar het bericht%s',
 	'RETURN_NEW_FORUM'			=> '%sGa naar het nieuwe forum%s',
@@ -2477,6 +2605,7 @@ $lang = array_merge($lang, array(
 	'TOPICS_FORKED_SUCCESS'		=> 'De geselecteerde onderwerpen zijn gekopieerd.',
 	'TOPICS_LOCKED_SUCCESS'		=> 'De geselecteerde onderwerpen zijn gesloten.',
 	'TOPICS_MOVED_SUCCESS'		=> 'De geselecteerde onderwerpen zijn verplaatst.',
+	'TOPICS_RESTORED_SUCCESS'	=> 'The selected topics have been restored successfully.',
 	'TOPICS_RESYNC_SUCCESS'		=> 'De geselecteerde onderwerpen zijn gesynchroniseerd.',
 	'TOPICS_TYPE_CHANGED'		=> 'Het onderwerptype is gewijzigd.',
 	'TOPICS_UNLOCKED_SUCCESS'	=> 'De geselecteerde onderwerpen zijn heropend.',
@@ -2487,6 +2616,7 @@ $lang = array_merge($lang, array(
 	'TOPIC_LOCKED_SUCCESS'		=> 'Het geselecteerde onderwerp is gesloten.',
 	'TOPIC_MOVED_SUCCESS'		=> 'Het geselecteerde onderwerp is verplaatst.',
 	'TOPIC_NOT_EXIST'			=> 'Het geselecteerde onderwerp bestaat niet (meer).',
+	'TOPIC_RESTORED_SUCCESS'	=> 'The selected topic has been restored successfully.',
 	'TOPIC_RESYNC_SUCCESS'		=> 'Het geselecteerde onderwerp is gesynchroniseerd.',
 	'TOPIC_SPLIT_SUCCESS'		=> 'Het geselecteerde onderwerp is gesplitst.',
 	'TOPIC_TIME'				=> 'Tijdstip onderwerp',
@@ -2494,9 +2624,6 @@ $lang = array_merge($lang, array(
 	'TOPIC_UNLOCKED_SUCCESS'	=> 'Het geselecteerde onderwerp is heropend.',
 	'TOTAL_WARNINGS'			=> 'Totaal aantal waarschuwingen',
 
-	'UNAPPROVED_POSTS_TOTAL'		=> 'Er staan in totaal <strong>%d</strong> berichten voor goedkeuring in de wachtrij.',
-	'UNAPPROVED_POSTS_ZERO_TOTAL'	=> 'Er staan geen berichten voor goedkeuring in de wachtrij.',
-	'UNAPPROVED_POST_TOTAL'			=> 'Er staat <strong>1</strong> bericht voor goedkeuring in de wachtrij.',
 	'UNLOCK'						=> 'Heropen',
 	'UNLOCK_POST'					=> 'Heropen bericht',
 	'UNLOCK_POST_EXPLAIN'			=> 'Sta wijzigingen toe',
@@ -2522,7 +2649,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'Er is een waarschuwing naar je verstuurd door een beheerder of een moderator van dit forum. Inhoud van deze waarschuwing: [quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'Forumwaarschuwing verstuurd',
 	'WARNING_POST_DEFAULT'	=> 'Dit is een waarschuwing omtrent het door jou geplaatste bericht: %s .',
-	'WARNINGS_ZERO_TOTAL'	=> 'Geen waarschuwingen.',
+	'NO_WARNINGS'	=> 'No warnings exist.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Het geselecteerde onderwerpnummer %d: %s.',
 	'PREFIX_MCP_CHOOSE'		=> 'Kies een nieuw voorvoegsel voor de geselecteerde topics',
@@ -2562,10 +2689,12 @@ $lang = array_merge($lang, array(
 	'ALL'					=> 'Alles',
 	'BEFORE'				=> 'Voor',
 	'CC_EMAIL'				=> 'Stuur mij een kopie per e-mail.',
-	'CONTACT_USER'			=> 'Contact',
+	'CONTACT_ADMIN'			=> 'Contact a Board Administrator',
 
 	'DEST_LANG'				=> 'Taal',
 	'DEST_LANG_EXPLAIN'		=> 'Selecteer een taal (indien beschikbaar) voor de ontvanger van dit bericht.',
+
+	'EDIT_PROFILE'			=> 'Edit Profile',
 
 	'EMAIL_BODY_EXPLAIN'	=> 'Dit bericht wordt verstuurd in plain tekst. Gebruik daarom geen HTML of BBCode. Het antwoordadres voor dit bericht is je eigen e-mailadres.',
 	'EMAIL_DISABLED'		=> 'Alle e-mail gerelateerde functies zijn op dit moment uitgeschakeld.',
@@ -2575,7 +2704,9 @@ $lang = array_merge($lang, array(
 	'EMPTY_MESSAGE_EMAIL'	=> 'Je hebt nog geen bericht ingevoerd.',
 	'EMPTY_MESSAGE_IM'		=> 'Je hebt nog geen bericht ingevoerd.',
 	'EMPTY_NAME_EMAIL'		=> 'Je moet de naam van de ontvanger nog opgeven.',
-	'EMPTY_SUBJECT_EMAIL'	=> 'Je hebt nog geen onderwerp ingevuld.',
+	'EMPTY_SENDER_EMAIL'	=> 'You must provide a valid email address.',
+	'EMPTY_SENDER_NAME'		=> 'You must provide a name.',
+	'EMPTY_SUBJECT_EMAIL'	=> 'You must specify a subject for the email.',
 	'EQUAL_TO'				=> 'Gelijk aan',
 
 	'FIND_USERNAME_EXPLAIN'	=> 'Gebruik dit formulier om naar specifieke gebruikers te zoeken. Je hoeft niet alle velden in te vullen. Gebruik de * als joker voor ontbrekende tekens of voor tekens die je niet weet. Als je een datum wilt opgeven, gebruik dan het formaat jjjj-mm-dd, bijvoorbeeld 2009-10-25. Gebruik de checkboxen om een of meerdere gebruikersnamen te selecteren (aantal gebruikers worden geaccepteerd door het formulier zelf) en klik op de selecteer gemarkeerden-button om terug te keren naar het vorige formulier.',
@@ -2585,16 +2716,10 @@ $lang = array_merge($lang, array(
 	'HIDE_MEMBER_SEARCH'	=> 'Verberg gebruiker zoeken',
 
 	'IM_ADD_CONTACT'		=> 'Voeg contact toe',
-	'IM_AIM'				=> 'Hiervoor dien je AOL Instant Messenger te hebben geïnstalleerd',
-	'IM_AIM_EXPRESS'		=> 'AIM Express',
 	'IM_DOWNLOAD_APP'		=> 'Download applicatie',
-	'IM_ICQ'				=> 'Houd rekening met gebruikers die je geselecteerd hebt, dat ze mogelijk geen ongevraagde chatberichten kunnen ontvangen.',
 	'IM_JABBER'				=> 'Houd rekening met gebruikers die je geselecteerd hebt dat ze mogelijk geen ongevraagde chatberichten kunnen ontvangen.',
 	'IM_JABBER_SUBJECT'		=> 'Dit is een automatisch gegenereerd bericht, waarop niet kan worden gereageerd. Bericht van gebruiker %1$s om %2$s',
 	'IM_MESSAGE'			=> 'Jouw bericht',
-	'IM_MSNM'				=> 'Om van deze functie gebruik te kunnen maken, moet je Windows Live Messenger op je pc hebben geïnstalleerd.',
-	'IM_MSNM_BROWSER'		=> 'Je browser ondersteunt dit niet.',
-	'IM_MSNM_CONNECT'		=> 'Je bent niet aangemeld op WLM.\nJe moet je eerst aanmelden om verder te gaan.',
 	'IM_NAME'				=> 'Jouw naam',
 	'IM_NO_DATA'			=> 'Er is geen passende contactinformatie voor deze gebruiker.',
 	'IM_NO_JABBER'			=> 'Het direct verzenden van berichten naar Jabber-gebruikers via het forum wordt niet ondersteund. Je moet een Jabber-cliënt geïnstalleerd hebben op je pc om contact te leggen met de ontvanger.',
@@ -2606,15 +2731,15 @@ $lang = array_merge($lang, array(
 
 	'LAST_ACTIVE'				=> 'Laatst actief',
 	'LESS_THAN'					=> 'Minder dan',
-	'LIST_USER'					=> '1 gebruiker',
-	'LIST_USERS'				=> '%d gebruikers',
-	'LOGIN_EXPLAIN_LEADERS'		=> 'Het forum vereist dat je geregistreerd en ingelogd bent om de teamlijst te kunnen zien.',
+	'LOGIN_EXPLAIN_TEAM'		=> 'The board requires you to be registered and logged in to view the team listing.',
 	'LOGIN_EXPLAIN_MEMBERLIST'	=> 'Het forum vereist dat je geregistreerd en ingelogd bent om toegang te krijgen tot de gebruikerslijst.',
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'Het forum vereist dat je geregistreerd en ingelogd bent om naar gebruikers te zoeken.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'Het forum vereist dat je geregistreerd en ingelogd bent om profielen te bekijken.',
 
 	'MORE_THAN'				=> 'Meer dan',
 
+	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
+	'NO_CONTACT_PAGE'		=> 'The board administrator contact page has been disabled.',
 	'NO_EMAIL'				=> 'Je bent niet bevoegd om een e-mail te versturen naar deze gebruiker.',
 	'NO_VIEW_USERS'			=> 'Je bent niet bevoegd om de gebruikerslijst of profielen te bekijken.',
 
@@ -2631,12 +2756,12 @@ $lang = array_merge($lang, array(
 
 	'SELECT_MARKED'			=> 'Selecteer gemarkeerde(n)',
 	'SELECT_SORT_METHOD'	=> 'Selecteer sorteermethode',
-	'SEND_AIM_MESSAGE'		=> 'Stuur AIM-bericht',
+	'SENDER_EMAIL_ADDRESS'	=> 'Your email address',
+	'SENDER_NAME'			=> 'Your name',
 	'SEND_ICQ_MESSAGE'		=> 'Stuur ICQ-bericht',
 	'SEND_IM'				=> 'Chatberichten',
 	'SEND_JABBER_MESSAGE'	=> 'Stuur Jabber-bericht',
 	'SEND_MESSAGE'			=> 'Stuur bericht',
-	'SEND_MSNM_MESSAGE'		=> 'Stuur WLM-bericht',
 	'SEND_YIM_MESSAGE'		=> 'Stuur YIM-bericht',
 	'SORT_EMAIL'			=> 'E-mail',
 	'SORT_LAST_ACTIVE'		=> 'Laatst actief',
@@ -2644,12 +2769,18 @@ $lang = array_merge($lang, array(
 
 	'USERNAME_BEGINS_WITH'	=> 'Gebruikersnaam begint met',
 	'USER_ADMIN'			=> 'Beheer gebruiker',
-	'USER_BAN'				=> 'Verbannen',
+	'USER_BAN'				=> 'Ban one or more users by username',
 	'USER_FORUM'			=> 'Statistieken gebruiker',
 	'USER_ONLINE'			=> 'Online',
 	'USER_PRESENCE'			=> 'Forum voorkomen',
+	'USERS_PER_PAGE'		=> 'Users per page',
 
 	'VIEWING_PROFILE'		=> 'Bekijk profiel - %s',
+	'VIEW_FACEBOOK_PROFILE'	=> 'View Facebook Profile',
+	'VIEW_SKYPE_PROFILE'	=> 'View Skype Profile',
+	'VIEW_TWITTER_PROFILE'	=> 'View Twitter Profile',
+	'VIEW_YOUTUBE_CHANNEL'	=> 'View YouTube Channel',
+	'VIEW_GOOGLEPLUS_PROFILE' => 'View Google+ Profile',
 	'VISITED'				=> 'Laatst bezocht',
 
 	'WWW'					=> 'Website',
@@ -2674,6 +2805,47 @@ $lang = array_merge($lang, array(
 	'USER_COMM_RANK'	=> 'Overall reviews:',
 	'USER_COMM_PERCENT'	=> 'Overall assessment of the user:',
 
+));
+
+#######language/en/plupload.php#######
+
+$lang = array_merge($lang, array(
+	'PLUPLOAD_ADD_FILES'		=> 'Add files',
+	'PLUPLOAD_ADD_FILES_TO_QUEUE'	=> 'Add files to the upload queue and click the start button.',
+	'PLUPLOAD_ALREADY_QUEUED'	=> '%s already present in the queue.',
+	'PLUPLOAD_CLOSE'			=> 'Close',
+	'PLUPLOAD_DRAG'				=> 'Drag files here.',
+	'PLUPLOAD_DUPLICATE_ERROR'	=> 'Duplicate file error.',
+	'PLUPLOAD_DRAG_TEXTAREA'	=> 'You may also attach files by dragging and dropping them in the message box.',
+	'PLUPLOAD_ERR_INPUT'		=> 'Failed to open input stream.',
+	'PLUPLOAD_ERR_MOVE_UPLOADED'	=> 'Failed to move uploaded file.',
+	'PLUPLOAD_ERR_OUTPUT'		=> 'Failed to open output stream.',
+	'PLUPLOAD_ERR_FILE_TOO_LARGE'	=> 'File too large:',
+	'PLUPLOAD_ERR_FILE_COUNT'	=> 'File count error.',
+	'PLUPLOAD_ERR_FILE_INVALID_EXT'	=> 'Invalid file extension:',
+	'PLUPLOAD_ERR_RUNTIME_MEMORY'	=> 'Runtime ran out of available memory.',
+	'PLUPLOAD_ERR_UPLOAD_URL'	=> 'Upload URL might be wrong or does not exist.',
+	'PLUPLOAD_EXTENSION_ERROR'	=> 'File extension error.',
+	'PLUPLOAD_FILE'				=> 'File: %s',
+	'PLUPLOAD_FILE_DETAILS'		=> 'File: %s, size: %d, max file size: %d',
+	'PLUPLOAD_FILENAME'			=> 'Filename',
+	'PLUPLOAD_FILES_QUEUED'		=> '%d files queued',
+	'PLUPLOAD_GENERIC_ERROR'	=> 'Generic error.',
+	'PLUPLOAD_HTTP_ERROR'		=> 'HTTP error.',
+	'PLUPLOAD_IMAGE_FORMAT'		=> 'Image format either wrong or not supported.',
+	'PLUPLOAD_INIT_ERROR'		=> 'Init error.',
+	'PLUPLOAD_IO_ERROR'			=> 'IO error.',
+	'PLUPLOAD_NOT_APPLICABLE'	=> 'N/A',
+	'PLUPLOAD_SECURITY_ERROR'	=> 'Security error.',
+	'PLUPLOAD_SELECT_FILES'		=> 'Select files',
+	'PLUPLOAD_SIZE'				=> 'Size',
+	'PLUPLOAD_SIZE_ERROR'		=> 'File size error.',
+	'PLUPLOAD_STATUS'			=> 'Status',
+	'PLUPLOAD_START_UPLOAD'		=> 'Start upload',
+	'PLUPLOAD_START_CURRENT_UPLOAD'	=> 'Start uploading queue',
+	'PLUPLOAD_STOP_UPLOAD'		=> 'Stop upload',
+	'PLUPLOAD_STOP_CURRENT_UPLOAD'	=> 'Stop current upload',
+	'PLUPLOAD_UPLOADED'			=> 'Uploaded %d/%d files',
 ));
 
 #######language/en/portal.php#######
@@ -2919,12 +3091,12 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s staat <em>UIT</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s staat <em>AAN</em>',
 	'BBCODE_I_HELP'				=> 'Cursieve tekst: [i]tekst[/i]',
-	'BBCODE_L_HELP'				=> 'Lijst: [list][*]tekst[/list]', 
+	'BBCODE_L_HELP'				=> 'Lijst: [list][*]tekst[/list]',
 	'BBCODE_LISTITEM_HELP'		=> 'Lijst item: [*]tekst',
 	'BBCODE_O_HELP'				=> 'Genummerde lijst: bijv. [list=1][*]Eerste punt[/list] of [list=a][*]Punt a[/list]',
 	'BBCODE_P_HELP'				=> 'Afbeelding: [img]http://www.phpbb.nl/fotos/foto.jpg[/img]',
 	'BBCODE_Q_HELP'				=> 'Citeer tekst: [quote]tekst[/quote]',
-	'BBCODE_S_HELP'				=> 'Tekstkleur: [color=red]tekst[/color] Tip: je kunt ook dit gebruiken: #FF0000',
+	'BBCODE_S_HELP'				=> 'Font colour: [color=red]text[/color] or [color=#FF0000]text[/color]',
 	'BBCODE_U_HELP'				=> 'Onderstreepte tekst: [u]tekst[/u]',
 	'BBCODE_W_HELP'				=> 'URL: [url]http://url[/url] of [url=http://url]URL tekst[/url]',
 	'BUMP_ERROR'				=> 'Je kunt dit onderwerp niet zo snel na het laatste bericht bumpen.',
@@ -2943,8 +3115,20 @@ $lang = array_merge($lang, array(
 	'DELETE_MESSAGE'			=> 'Verwijder bericht',
 	'DELETE_MESSAGE_CONFIRM'	=> 'Weet je zeker dat je dit bericht wilt verwijderen?',
 	'DELETE_OWN_POSTS'			=> 'Je kunt alleen je eigen berichten verwijderen.',
+	'DELETE_PERMANENTLY'		=> 'Delete permanently',
 	'DELETE_POST_CONFIRM'		=> 'Weet je zeker dat je dit bericht wilt verwijderen?',
-	'DELETE_POST_WARN'			=> 'Verwijderde berichten kunnen niet meer worden hersteld.',
+	'DELETE_POST_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this post?',
+	'DELETE_POST_PERMANENTLY'	=> 'Permanently delete this post so it can not be recovered',
+	'DELETE_POSTS_CONFIRM'		=> 'Weet je zeker dat je deze berichten wilt verwijderen?',
+	'DELETE_POSTS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these posts?',
+	'DELETE_REASON'				=> 'Reden om dit topic te verwijderen',
+	'DELETE_REASON_EXPLAIN'		=> 'The specified reason for deletion will be visible to moderators.',
+	'DELETE_POST_WARN'			=> 'Delete this post',
+	'DELETE_TOPIC_CONFIRM'		=> 'Weet je zeker dat je dit onderwerp wilt verwijderen?',
+	'DELETE_TOPIC_PERMANENTLY'	=> 'Permanently delete this topic so it can not be recovered',
+	'DELETE_TOPIC_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this topic?',
+	'DELETE_TOPICS_CONFIRM'		=> 'Weet je zeker dat je deze onderwerpen wilt verwijderen?',
+	'DELETE_TOPICS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these topics?',
 	'DISABLE_BBCODE'			=> 'Schakel BBCode uit',
 	'DISABLE_MAGIC_URL'			=> 'URL’s niet automatisch omzetten',
 	'DISABLE_SMILIES'			=> 'Smilies uitschakelen',
@@ -2987,13 +3171,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_QUOTE'		=> 'Je moet ingelogd zijn om te kunnen citeren.',
 	'LOGIN_EXPLAIN_REPLY'		=> 'Je moet ingelogd zijn om te kunnen antwoorden.',
 
-	'MAX_FONT_SIZE_EXCEEDED'	=> 'Je mag alleen gebruik maken van lettertypes tot grootte %1$d.',
-	'MAX_FLASH_HEIGHT_EXCEEDED'	=> 'Flashbestanden mogen maximaal %1$d pixels hoog zijn.',
-	'MAX_FLASH_WIDTH_EXCEEDED'	=> 'Flashbestanden mogen maximaal %1$d pixels breed zijn.',
-	'MAX_IMG_HEIGHT_EXCEEDED'	=> 'Afbeeldingen mogen maximaal %1$d pixels hoog zijn.',
-	'MAX_IMG_WIDTH_EXCEEDED'	=> 'Afbeeldingen mogen maximaal %1$d pixels breed zijn.',
-
-	'MESSAGE_BODY_EXPLAIN'		=> 'Schrijf hier je bericht. Het mag maximaal <strong>%d</strong> tekens bevatten.',
+	'MAX_FONT_SIZE_EXCEEDED'	=> 'You may only use fonts up to size %d.',
 	'MESSAGE_DELETED'			=> 'Je bericht is verwijderd.',
 	'MORE_SMILIES'				=> 'Toon meer smilies',
 
@@ -3016,8 +3194,6 @@ $lang = array_merge($lang, array(
 	'POLL_MAX_OPTIONS'			=> 'Opties per gebruiker',
 	'POLL_MAX_OPTIONS_EXPLAIN'	=> 'Het aantal opties dat een gebruiker mag aanvinken als hij/zij een stem uitbrengt.',
 	'POLL_OPTIONS'				=> 'Poll opties',
-	'POLL_OPTIONS_EXPLAIN'		=> 'Plaats elke optie op een nieuwe regel. Je mag <strong>%d</strong> opties invoeren.',
-	'POLL_OPTIONS_EDIT_EXPLAIN'	=> 'Plaats elke optie op een nieuwe regel. Je mag <strong>%d</strong> opties invoeren. Als je een optie toevoegt of verwijdert, worden alle vorige opties gereset.',
 	'POLL_QUESTION'				=> 'Poll vraag',
 	'POLL_TITLE_TOO_LONG'		=> 'De poll titel moet korter dan 100 tekens zijn.',
 	'POLL_TITLE_COMP_TOO_LONG'	=> 'De poll-titel is te lang. Kijk of je b.v. smilies en/of BBCodes kunt verwijderen.',
@@ -3027,9 +3203,9 @@ $lang = array_merge($lang, array(
 	'POST_APPROVAL_NOTIFY'		=> 'Je zult een bevestiging krijgen wanneer je bericht is goedgekeurd.',
 	'POST_CONFIRMATION'			=> 'Bevestigen van het bericht',
 	'POST_CONFIRM_EXPLAIN'		=> 'Om automatische berichten te voorkomen, vereist het forum een bevestigingscode. De code wordt in de afbeelding hieronder weergegeven. Als je kleurenblind bent of een andere reden hebt waardoor je deze code niet kunt lezen, neem dan contact op met de %sbeheerder%s.',
-	'POST_DELETED'				=> 'Je bericht is verwijderd.',
-	'POST_EDITED'				=> 'Je bericht is bewerkt.',
-	'POST_EDITED_MOD'			=> 'Je bericht is bewerkt, maar het zal nog moeten worden goedgekeurd voordat het publiekelijk wordt weergegeven.',
+	'POST_DELETED'				=> 'This post has been deleted.',
+	'POST_EDITED'				=> 'This post has been edited successfully.',
+	'POST_EDITED_MOD'			=> 'This post has been edited successfully, but it will need to be approved by a moderator before it is publicly viewable.',
 	'POST_GLOBAL'				=> 'Globaal',
 	'POST_ICON'					=> 'Berichticoon',
 	'POST_NORMAL'				=> 'Normaal',
@@ -3042,8 +3218,9 @@ $lang = array_merge($lang, array(
 	'POST_TOPIC_AS'				=> 'Onderwerptype',
 	'PROGRESS_BAR'				=> 'Voortgangsbalk',
 
-	'QUOTE_DEPTH_EXCEEDED'		=> 'Je mag maximaal %1$d citaten in een andere citaat hebben.',
+	'QUOTE_NO_NESTING'			=> 'You may not embed quotes within each other.',
 
+	'REMOTE_UPLOAD_TIMEOUT'		=> 'The specified file could not be uploaded because the request timed out.',
 	'SAVE'						=> 'Opslaan',
 	'SAVE_DATE'					=> 'Opgeslagen op',
 	'SAVE_DRAFT'				=> 'Concept bewaren',
@@ -3060,8 +3237,6 @@ $lang = array_merge($lang, array(
 	'TOO_FEW_POLL_OPTIONS'		=> 'Je moet minimaal twee poll-opties hebben ingevoerd.',
 	'TOO_MANY_ATTACHMENTS'		=> 'Kan geen bijlage meer toevoegen, %d is het maximale aantal.',
 	'TOO_MANY_CHARS'			=> 'Je bericht bevat teveel tekens.',
-	'TOO_MANY_CHARS_POST'		=> 'Je bericht bevat %1$d tekens. Het maximaal aantal toegestane tekens is %2$d.',
-	'TOO_MANY_CHARS_SIG'		=> 'Je onderschrift bevat %1$d tekens. Het maximaal aantal toegestane tekens is %2$d.',
 	'TOO_MANY_POLL_OPTIONS'		=> 'Je hebt teveel poll opties opgegeven.',
 	'TOO_MANY_SMILIES'			=> 'Je bericht bevat teveel smilies. Er is een maximaal aantal van %d smilies toegestaan.',
 	'TOO_MANY_URLS'				=> 'Je bericht bevat teveel URL’s. Er is een maximaal aantal van %d URL’s toegestaan.',
@@ -3070,6 +3245,8 @@ $lang = array_merge($lang, array(
 
 	'UNAUTHORISED_BBCODE'		=> 'Je kunt geen gebruik maken van de volgende BBCodes: %s.',
 	'UNGLOBALISE_EXPLAIN'		=> 'Selecteer een doelforum om het onderwerp van globale mededeling naar normaal onderwerp om te schakelen.',
+	'UNSUPPORTED_CHARACTERS_MESSAGE'	=> 'Your message contains the following unsupported characters:<br />%s',
+	'UNSUPPORTED_CHARACTERS_SUBJECT'	=> 'Your subject contains the following unsupported characters:<br />%s',
 	'UPDATE_COMMENT'			=> 'Opmerking bijwerken',
 	'URL_INVALID'				=> 'De opgegeven URL is ongeldig.',
 	'URL_NOT_FOUND'				=> 'Het opgegeven bestand is niet gevonden.',
@@ -3084,8 +3261,8 @@ $lang = array_merge($lang, array(
 	'VIEW_MESSAGE'				=> '%sToon het geplaatste bericht%s',
 	'VIEW_PRIVATE_MESSAGE'		=> '%sBekijk je verstuurde privébericht%s',
 
-	'WRONG_FILESIZE'			=> 'Het bestand is te groot. De maximaal toegestane grootte is %1d %2s.',
-	'WRONG_SIZE'				=> 'De afbeelding moet minimaal %1$d pixels breed en %2$d pixels hoog zijn en maximaal %3$d pixels breed en %4$d pixels hoog. De opgegeven afbeelding is %5$d pixels breed en %6$d pixels hoog.',
+	'WRONG_FILESIZE'			=> 'The file is too big, maximum allowed size is %1$d %2$s.',
+	'WRONG_SIZE'				=> 'The image must be at least %1$s wide, %2$s high and at most %3$s wide and %4$s high. The submitted image is %5$s wide and %6$s high.',
 
 	'FONT_TYPE'			=> 'Lettertype',
 	'FONT_COLOR'			=> 'Tekstkleur',
@@ -3105,10 +3282,6 @@ $lang = array_merge($lang, array(
 
 	'DISPLAY_RESULTS'		=> 'Toon resultaten als',
 
-	'FOUND_SEARCH_MATCH'		=> 'Er voldeed %d resultaat aan de zoekterm',
-	'FOUND_SEARCH_MATCHES'		=> 'Er voldeden %d resultaten aan de zoekterm',
-	'FOUND_MORE_SEARCH_MATCHES'	=> 'Er voldeden meer dan %d resultaten aan de zoekterm',
-
 	'GLOBAL'				=> 'Globale mededeling',
 
 	'IGNORED_TERMS'			=> 'genegeerd',
@@ -3120,24 +3293,23 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_UNREADSEARCH'=> 'Het forum vereist dat je geregistreerd en ingelogd bent om je ongelezen berichten te bekijken.',
 	'LOGIN_EXPLAIN_NEWPOSTS'	=> 'Het forum vereist dat je geregistreerd en ingelogd bent om de nieuwe berichten sinds je laatste bezoek te bekijken.',
 
-	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> 'Je gebruikt te veel zoekwoorden. Gebruik niet meer dan %1$d woorden.',
-
-	'NO_KEYWORDS'			=> 'Je moet minimaal 1 woord als zoekterm opgeven. Ieder woord moet minimaal %d tekens bevatten en maximaal %d tekens lang zijn, exclusief jokertekens.',
+	'NO_KEYWORDS'			=> 'You must specify at least one word to search for. Each word must consist of at least %s and must not contain more than %s excluding wildcards.',
 	'NO_RECENT_SEARCHES'	=> 'Er zijn geen recentelijk uitgevoerde zoekopdrachten.',
 	'NO_SEARCH'				=> 'Je beschikt niet over de juiste permissies om gebruik te mogen maken van de zoekfunctie.',
 	'NO_SEARCH_RESULTS'		=> 'Er zijn geen zoekresultaten.',
-	'NO_SEARCH_TIME'		=> 'Je kunt de zoekfunctie op dit moment niet gebruiken. Probeer het over enkele minuten nogmaals.',
 	'NO_SEARCH_UNREADS'		=> 'Sorry maar zoeken naar ongelezen berichten is uitgeschakeld op dit forum.',
 	'WORD_IN_NO_POST'		=> 'Het woord %s kon niet worden gevonden.',
 	'WORDS_IN_NO_POST'		=> 'De woorden %s zijn niet gevonden.',
 
 	'POST_CHARACTERS'		=> 'tekens van de berichten',
+	'PHRASE_SEARCH_DISABLED'	=> 'Searching by exact phrase is not supported on this board.',
 
 	'RECENT_SEARCHES'		=> 'Recente zoekopdrachten',
 	'RESULT_DAYS'			=> 'Zoek in berichten van afgelopen:',
 	'RESULT_SORT'			=> 'Sorteer resultaten volgens',
 	'RETURN_FIRST'			=> 'Toon alleen de eerste',
 	'RETURN_TO_SEARCH_ADV'	=> 'Keer terug naar uitgebreid zoeken',
+	'GO_TO_SEARCH_ADV'	=> 'Go to advanced search',
 
 	'SEARCHED_FOR'				=> 'Gebruikte zoekterm',
 	'SEARCHED_TOPIC'			=> 'Doorzocht onderwerp',
@@ -3164,10 +3336,11 @@ $lang = array_merge($lang, array(
 	'SORT_FORUM'				=> 'Forum',
 	'SORT_POST_SUBJECT'			=> 'Onderwerp bericht',
 	'SORT_TIME'					=> 'Tijdstip bericht',
+	'SPHINX_SEARCH_FAILED'		=> 'Search failed: %s',
+	'SPHINX_SEARCH_FAILED_LOG'	=> 'Sorry, search could not be performed. More information about this failure has been logged in the error log.',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
 	'SELECT_ALL_TAGS'		=> 'No selection',
-	'TOO_FEW_AUTHOR_CHARS'	=> 'Je moet minimaal %d tekens van de naam van de auteur opgeven.',
 ));
 
 #######language/en/ucp.php#######
@@ -3223,6 +3396,7 @@ $lang = array_merge($lang, array(
 	'ATTACHMENTS_EXPLAIN'			=> 'Dit is een lijst van de bijlage(n) die je in dit forum hebt geplaatst.',
 	'ATTACHMENTS_DELETED'			=> 'De bijlagen zijn verwijderd.',
 	'ATTACHMENT_DELETED'			=> 'De bijlage is verwijderd.',
+	'AUTOLOGIN_SESSION_KEYS_DELETED'=> 'The selected "Remember Me" login keys were successfully deleted.',
 	'AVATAR_CATEGORY'				=> 'Categorie',
 	'AVATAR_DRIVER_GRAVATAR_TITLE'	=> 'Gravatar',
 	'AVATAR_DRIVER_GRAVATAR_EXPLAIN'=> 'Gravatar is a service that allows you to maintain the same avatar across multiple websites. Visit <a href="http://www.gravatar.com/">Gravatar</a> for more information.',
@@ -3232,12 +3406,14 @@ $lang = array_merge($lang, array(
 	'AVATAR_DRIVER_REMOTE_EXPLAIN'	=> 'Link to avatar images from another website.',
 	'AVATAR_DRIVER_UPLOAD_TITLE'	=> 'Upload avatar',
 	'AVATAR_DRIVER_UPLOAD_EXPLAIN'	=> 'Upload your own custom avatar.',
-	'AVATAR_EXPLAIN'				=> 'Maximale afmetingen; breedte: %1$d pixels, hoogte: %2$d pixels, bestandsgrootte: %3$.2f KiB.',
+	'AVATAR_EXPLAIN'				=> 'Maximum dimensions; width: %1$s, height: %2$s, file size: %3$.2f KiB.',
 	'AVATAR_FEATURES_DISABLED'		=> 'De avatarmogelijkheid is uitgeschakeld.',
 	'AVATAR_GALLERY'				=> 'Lokale galerij',
 	'AVATAR_GENERAL_UPLOAD_ERROR'	=> 'De avatar kon niet naar %s worden geüpload',
 	'AVATAR_NOT_ALLOWED'			=> 'Je avatar kan niet worden getoond, omdat avatars momenteel niet zijn toegestaan.',
 	'AVATAR_PAGE'					=> 'Pagina',
+	'AVATAR_SELECT'					=> 'Select your avatar',
+	'AVATAR_TYPE'					=> 'Avatar type',
 	'AVATAR_TYPE_NOT_ALLOWED'		=> 'Je huidige avatar kan niet worden weergegeven, omdat het type niet is toegestaan.',
 
 	'BACK_TO_DRAFTS'			=> 'Terug naar opgeslagen concepten',
@@ -3246,7 +3422,6 @@ $lang = array_merge($lang, array(
 	'BIRTHDAY_EXPLAIN'			=> 'Door je geboortejaar op te geven, wordt je leeftijd weergegeven als je jarig bent.',
 	'BOARD_DATE_FORMAT'			=> 'Mijn datumweergave',
 	'BOARD_DATE_FORMAT_EXPLAIN'	=> 'Deze gebruikte syntax is identiek aan de PHP <a href="http://www.php.net/date">date()</a> functie',
-	'BOARD_DST'					=> 'Zomertijd is in gebruik',
 	'BOARD_LANGUAGE'			=> 'Mijn taal',
 	'BOARD_STYLE'				=> 'Mijn forumstijl',
 	'BOARD_TIMEZONE'			=> 'Mijn tijdzone',
@@ -3265,8 +3440,6 @@ $lang = array_merge($lang, array(
 	'CLICK_RETURN_FOLDER'		=> '%1$sGa terug naar jouw "%3$s" map%2$s',
 	'CONFIRMATION'				=> 'Bevestiging van registratie',
 	'CONFIRM_CHANGES'			=> 'Wijzigingen bevestigen',
-	'CONFIRM_EMAIL'				=> 'Bevestig e-mailadres',
-	'CONFIRM_EMAIL_EXPLAIN'		=> 'Alleen invullen als je je e-mailadres wilt wijzigen.',
 	'CONFIRM_EXPLAIN'			=> 'Om automatische registraties tegen te gaan, vereist de beheerder dat je de bevestigingscode invult. De code wordt hieronder in een afbeelding weergegeven. Als je visuele problemen hebt, of om een andere reden de code niet kunt lezen en/of zien, contacteer dan de %sbeheerder%s.',
 	'VC_REFRESH'				=> 'Bevestigingscode vernieuwen',
 	'VC_REFRESH_EXPLAIN'		=> 'Indien je de code niet kunt lezen, kun je een nieuwe krijgen door op de knop te klikken.',
@@ -3275,7 +3448,7 @@ $lang = array_merge($lang, array(
 	'CONFIRM_PASSWORD_EXPLAIN'	=> 'Je moet je wachtwoord alleen bevestigen indien je het gewijzigd hebt',
 	'COPPA_BIRTHDAY'			=> 'Om verder te kunnen gaan met het registratieproces dien je je geboortedatum op te geven.',
 	'COPPA_COMPLIANCE'			=> 'COPPA naleven',
-	'COPPA_EXPLAIN'				=> 'Houd rekening met het feit dat als je op verzenden klikt, je account wel wordt aangemaakt, maar deze niet geactiveerd kan worden tot een ouder of voogd je registratie goedkeurt. Je ontvangt via e-mail een kopie van het benodigde formulier en details waar je het naar moet opsturen.',
+	'COPPA_EXPLAIN'				=> 'Please note that clicking submit will create your account. However it cannot be activated until a parent or guardian approves your registration. You will be e-mailed a copy of the necessary form with details of where to send it.',
 	'CREATE_FOLDER'				=> 'Map toevoegen…',
 	'CURRENT_IMAGE'				=> 'Huidige afbeelding',
 	'CURRENT_PASSWORD'			=> 'Huidig wachtwoord',
@@ -3330,27 +3503,34 @@ $lang = array_merge($lang, array(
 	'EXPORT_FOLDER'				=> 'Exporteer deze weergave',
 
 	'FIELD_REQUIRED'					=> 'Het veld "%s" moet ingevuld zijn',
-	'FIELD_TOO_SHORT'					=> 'Het veld "%1$s" is te kort, er zijn minimaal %2$d tekens vereist.',
-	'FIELD_TOO_LONG'					=> 'Het veld "%1$s" is te lang, er zijn maximaal %2$d tekens toegestaan.',
-	'FIELD_TOO_SMALL'					=> 'De waarde van "%1$s" is te klein, een minimale waarde van %2$d is vereist.',
-	'FIELD_TOO_LARGE'					=> 'De waarde van "%1$s" is te groot, een maximale waarde van %2$d is toegestaan.',
+
+	'FIELD_TOO_SMALL'					=> 'The value of “%2$s” is too small, a minimum value of %1$d is required.',
+	'FIELD_TOO_LARGE'					=> 'The value of “%2$s” is too large, a maximum value of %1$d is allowed.',
+	'FIELD_INVALID_CHARS_INVALID'		=> 'The field “%s” has invalid characters.',
 	'FIELD_INVALID_CHARS_NUMBERS_ONLY'	=> 'Het veld "%s" bevat ongeldige tekens, alleen cijfers zijn toegestaan.',
+	'FIELD_INVALID_CHARS_ALPHA_DOTS'	=> 'The field “%s” has invalid characters, only alphanumeric or . characters are allowed.',
 	'FIELD_INVALID_CHARS_ALPHA_ONLY'	=> 'Het veld "%s" bevat ongeldige tekens, alleen letters zijn cijfers zijn toegestaan.',
-	'FIELD_INVALID_CHARS_SPACERS_ONLY'	=> 'Het veld "%s" bevat ongeldige tekens, alleen letters, cijfers, spaties en -+_[] zijn toegestaan.',
+	'FIELD_INVALID_CHARS_ALPHA_PUNCTUATION'	=> 'The field “%s” has invalid characters, only alphanumeric or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_ALPHA_SPACERS'	=> 'The field “%s” has invalid characters, only alphanumeric, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_ALPHA_UNDERSCORE'	=> 'The field “%s” has invalid characters, only alphanumeric or _ characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_DOTS'	=> 'The field “%s” has invalid characters, only letter, number or . characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_ONLY'	=> 'The field “%s” has invalid characters, only letter and number characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_PUNCTUATION'	=> 'The field “%s” has invalid characters, only letter, number or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_SPACERS'		=> 'The field “%s” has invalid characters, only letter, number, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_UNDERSCORE'		=> 'The field “%s” has invalid characters, only letter, number or _ characters are allowed.',
 	'FIELD_INVALID_DATE'				=> 'Het veld "%s" bevat een ongeldige datum.',
+	'FIELD_INVALID_URL'					=> 'The field “%s” has an invalid url.',
 	'FIELD_INVALID_VALUE'				=> 'Het veld “%s” bevat een ongeldige waarde.',
 
 	'FOE_MESSAGE'				=> 'Bericht van vijand',
 	'FOES_EXPLAIN'				=> 'Vijanden zijn gebruikers die je standaard negeert. Berichten van vijanden worden niet volledig getoond, privéberichten van vijanden komen echter wel aan. Let op: Het is niet mogelijk om moderators of beheerders te negeren.',
 	'FOES_UPDATED'				=> 'Je vijandenlijst is bijgewerkt',
 	'FOLDER_ADDED'				=> 'Map aangemaakt',
-	'FOLDER_MESSAGE_STATUS'		=> '%1$d van de %2$d berichten opgeslagen',
 	'FOLDER_NAME_EMPTY'			=> 'Je moet een naam voor deze map opgeven.',
 	'FOLDER_NAME_EXIST'			=> 'De map <strong>%s</strong> bestaat reeds',
 	'FOLDER_OPTIONS'			=> 'Mapinstellingen',
 	'FOLDER_RENAMED'			=> 'De map is hernoemt',
 	'FOLDER_REMOVED'			=> 'De map is verwijderd',
-	'FOLDER_STATUS_MSG'			=> 'Map %1$d%% vol (%2$d van de %3$d berichten opgeslagen)',
 	'FORWARD_PM'				=> 'PB doorsturen',
 	'FORCE_PASSWORD_EXPLAIN'	=> 'Voordat je verder kunt gaan op het forum, moet je je wachtwoord wijzigen',
 	'FRIEND_MESSAGE'			=> 'Bericht van vriend',
@@ -3419,16 +3599,35 @@ $lang = array_merge($lang, array(
 	'MOVE_DELETED_MESSAGES_TO'		=> 'Verplaats de berichten van de verwijderde map naar',
 	'MOVE_DOWN'						=> 'Verplaats naar onderen',
 	'MOVE_MARKED_TO_FOLDER'			=> 'Verplaats gemarkeerde(n) naar %s',
-	'MOVE_PM_ERROR'					=> 'Er is een fout opgetreden tijdens het verplaatsen van de berichten, maar %1d van de %2d berichten zijn verplaatst.',
 	'MOVE_TO_FOLDER'				=> 'Verplaats naar map',
 	'MOVE_UP'						=> 'Verplaats naar boven',
 
-	'NEW_EMAIL_CONFIRM_EMPTY'		=> 'Je hebt de bevestiging van het e-mailadres niet ingevuld.',
-	'NEW_EMAIL_ERROR'				=> 'De opgegeven e-mailadressen komen niet overeen.',
 	'NEW_FOLDER_NAME'				=> 'Nieuwe mapnaam',
 	'NEW_PASSWORD'					=> 'Wachtwoord',
 	'NEW_PASSWORD_CONFIRM_EMPTY'	=> 'Je hebt de bevestiging van het wachtwoord niet ingevuld.',
 	'NEW_PASSWORD_ERROR'			=> 'De opgegeven wachtwoorden komen niet overeen.',
+
+	'NOTIFICATIONS_MARK_ALL_READ'						=> 'Mark all notifications read',
+	'NOTIFICATIONS_MARK_ALL_READ_CONFIRM'				=> 'Are you sure you want to mark all notifications read?',
+	'NOTIFICATIONS_MARK_ALL_READ_SUCCESS'				=> 'All notifications have been marked read.',
+	'NOTIFICATION_GROUP_MISCELLANEOUS'					=> 'Miscellaneous Notifications',
+	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
+	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
+	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'E-mail',
+	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
+	'NOTIFICATION_TYPE'									=> 'Notification type',
+	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
+	'NOTIFICATION_TYPE_GROUP_REQUEST'					=> 'Someone requests to join a group you lead',
+	'NOTIFICATION_TYPE_IN_MODERATION_QUEUE'				=> 'A post or topic needs approval',
+	'NOTIFICATION_TYPE_MODERATION_QUEUE'				=> 'Your topics/posts are approved or disapproved by a moderator',
+	'NOTIFICATION_TYPE_PM'								=> 'Someone sends you a private message',
+	'NOTIFICATION_TYPE_POST'							=> 'Someone replies to a topic to which you are subscribed',
+	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
+	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
+	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+
 	'NOTIFY_METHOD'					=> 'Breng me op de hoogte via',
 	'NOTIFY_METHOD_BOTH'			=> 'Beiden',
 	'NOTIFY_METHOD_EMAIL'			=> 'Alleen e-mail',
@@ -3446,10 +3645,9 @@ $lang = array_merge($lang, array(
 	'NOT_ADDED_FOES_SELF'			=> 'Je kunt jezelf niet aan je vijandenlijst toevoegen.',
 	'NOT_AGREE'						=> 'Ik ga niet akkoord met de voorwaarden.',
 	'NOT_ENOUGH_SPACE_FOLDER'		=> 'De doelmap "%s" is vol. De gevraagde actie is daarom niet uitgevoerd.',
-	'NOT_MOVED_MESSAGE'				=> 'Er wordt 1 privébericht achtergehouden omdat de map vol is.',
-	'NOT_MOVED_MESSAGES'			=> 'Er worden %d privéberichten achtergehouden omdat de map vol is.',
 	'NO_ACTION_MODE'				=> 'Er werd geen berichtactie opgegeven.',
 	'NO_AUTHOR'						=> 'Er is geen auteur voor dit bericht opgegeven.',
+	'NO_AVATAR'						=> 'No avatar selected',
 	'NO_AVATAR_CATEGORY'			=> 'Geen',
 
 	'NO_AUTH_DELETE_MESSAGE'		=> 'Je kunt geen privéberichten verwijderen.',
@@ -3457,6 +3655,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_FORWARD_MESSAGE'		=> 'Je mag geen privéberichten doorsturen.',
 	'NO_AUTH_GROUP_MESSAGE'			=> 'Je mag geen privéberichten naar groep(en) sturen.',
 	'NO_AUTH_PASSWORD_REMINDER'		=> 'Je mag geen nieuw wachtwoord aanvragen.',
+	'NO_AUTH_PROFILEINFO'			=> 'You are not authorised to change your profile information.',
 	'NO_AUTH_READ_HOLD_MESSAGE'		=> 'Je mag geen privéberichten lezen die in de wacht staan.',
 	'NO_AUTH_READ_MESSAGE'			=> 'Je mag geen privéberichten lezen.',
 	'NO_AUTH_READ_REMOVED_MESSAGE'	=> 'Je kunt het bericht niet lezen omdat het door de auteur is verwijderd.',
@@ -3487,10 +3686,10 @@ $lang = array_merge($lang, array(
 	'NO_WATCHED_SELECTED'		=> 'Je hebt geen forum- of topicabonnementen geselecteerd.',
 	'NO_WATCHED_TOPICS'			=> 'Je hebt geen topic-abonnement(en).',
 
-	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Het wachtwoord moet tussen de %1$d en %2$d tekens lang zijn en moet zowel hoofdletters, kleine letters, als cijfers bevatten',
-	'PASS_TYPE_ANY_EXPLAIN'		=> 'Moet tussen %1$d en %2$d tekens lang zijn.',
-	'PASS_TYPE_CASE_EXPLAIN'	=> 'Het wachtwoord moet tussen %1$d en %2$d tekens lang zijn en moet zowel hoofdletters als kleine letters bevatten.',
-	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Het wachtwoord moet tussen %1$d en %2$d tekens lang zijn en moet zowel hoofdletters als kleine en symbolen bevatten.',
+	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case and must contain numbers.',
+	'PASS_TYPE_ANY_EXPLAIN'		=> 'Must be between %1$s and %2$s.',
+	'PASS_TYPE_CASE_EXPLAIN'	=> 'Password must be between %1$s and %2$s long and must contain letters in mixed case.',
+	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case, must contain numbers and must contain symbols.',
 	'PASSWORD'					=> 'Wachtwoord',
 	'PASSWORD_ACTIVATED'		=> 'Je nieuwe wachtwoord is geactiveerd.',
 	'PASSWORD_UPDATED'			=> 'Er is een nieuw wachtwoord verzonden naar het e-mailadres dat je in je profiel hebt opgegeven.',
@@ -3501,13 +3700,16 @@ $lang = array_merge($lang, array(
 	'PM_FROM_REMOVED_AUTHOR'	=> 'Dit bericht is verstuurd door een gebruiker die niet meer is geregistreerd.',
 	'PM_ICON'					=> 'PB-icoon',
 	'PM_INBOX'					=> 'Postvak IN',
+	'PM_MARK_ALL_READ'			=> 'Mark all messages read',
+	'PM_MARK_ALL_READ_SUCCESS'	=> 'All private messages in this folder have been marked read',
 	'PM_NO_USERS'				=> 'De toe te voegen gebruikers bestaan niet (meer).',
 	'PM_OUTBOX'					=> 'Postvak UIT',
 	'PM_SENTBOX'				=> 'Verzonden berichten',
 	'PM_SUBJECT'				=> 'Onderwerp',
 	'PM_TO'						=> 'Stuur naar',
+	'PM_TOOLS'					=> 'Message tools',
+	'PM_USERS_REMOVED_NO_PERMISSION'	=> 'Some users couldn’t be added as they do not have permission to read private messages.',
 	'PM_USERS_REMOVED_NO_PM'	=> 'Enkele gebruikers konden niet worden toegevoegd, omdat ze hun PB-functie hebben uitgeschakeld.',
-	'POPUP_ON_PM'				=> 'Pop-upvenster bij een nieuw privébericht',
 	'POST_EDIT_PM'				=> 'Wijzig bericht',
 	'POST_FORWARD_PM'			=> 'Bericht doorsturen',
 	'POST_NEW_PM'				=> 'Plaats bericht',
@@ -3519,6 +3721,8 @@ $lang = array_merge($lang, array(
 	'PREFERENCES_UPDATED'		=> 'Je instellingen zijn bijgewerkt.',
 	'PROFILE_INFO_NOTICE'		=> 'Vergeet niet dat deze informatie zichtbaar is voor de andere leden, dus wees voorzichtig met het invullen van je persoonlijke gegevens. Alle velden met een * moeten worden ingevuld.',
 	'PROFILE_UPDATED'			=> 'Je profiel is bijgewerkt.',
+	'PROFILE_AUTOLOGIN_KEYS'	=> 'The "Remember Me" login keys automatically log you in when you visit the board. If you logout, the remember me login key is deleted only on the computer you are using to logout. Here you can see remember login keys created on other computers you used to access this site.',
+	'PROFILE_NO_AUTOLOGIN_KEYS'	=> 'There are no saved "Remember Me" login keys.',
 
 	'RECIPIENT'							=> 'Ontvanger',
 	'RECIPIENTS'						=> 'Ontvangers',
@@ -3543,8 +3747,6 @@ $lang = array_merge($lang, array(
 	'RULE_DELETED'						=> 'Regel verwijderd',
 	'RULE_LIMIT_REACHED'				=> 'Je hebt het maximaal aantal regels voor privéberichten bereikt. Je kan niet meer regels opgeven.',
 	'RULE_NOT_DEFINED'					=> 'Regel niet goed opgegeven.',
-	'RULE_REMOVED_MESSAGE'				=> 'Een privébericht is door de privéberichten-filters verwijderd.',
-	'RULE_REMOVED_MESSAGES'				=> '%d privéberichten zijn door de privéberichten-filters verwijderd.',
 
 	'SAME_PASSWORD_ERROR'		=> 'Het nieuwe wachtwoord mag niet hetzelfde zijn als je huidige wachtwoord.',
 	'SEARCH_YOUR_POSTS'			=> 'Toon je berichten',
@@ -3556,6 +3758,8 @@ $lang = array_merge($lang, array(
 	'SIGNATURE_TOO_LONG'		=> 'Je onderschrift is te lang.',
 	'SELECT_CURRENT_TIME'		=> 'Select current time',
 	'SELECT_TIMEZONE'			=> 'Select timezone',
+	'SELECT_CURRENT_TIME'		=> 'Select current time',
+	'SELECT_TIMEZONE'			=> 'Select timezone',
 	'SORT'						=> 'Sorteer',
 	'SORT_COMMENT'				=> 'Bestandsreactie',
 	'SORT_DOWNLOADS'			=> 'Downloads',
@@ -3565,15 +3769,28 @@ $lang = array_merge($lang, array(
 	'SORT_SIZE'					=> 'Bestandsgrootte',
 
 	'TIMEZONE'					=> 'Tijdszone',
-	'TO'						=> 'Naar',
+	'TIMEZONE_DATE_SUGGESTION'	=> 'Suggestion: %s',
+	'TIMEZONE_INVALID'			=> 'The timezone you selected is invalid.',
+	'TO'						=> 'Recipient',
+	'TO_MASS'					=> 'Recipients',
+	'TO_ADD'					=> 'Add recipient',
+	'TO_ADD_MASS'				=> 'Add recipients',
+	'TO_ADD_GROUPS'				=> 'Add groups',
 	'TOO_MANY_RECIPIENTS'		=> 'Teveel ontvangers',
 	'TOO_MANY_REGISTERS'		=> 'Je hebt het maximaal aantal registratie-pogingen in deze sessie bereikt. Probeer het later nog eens.',
 
 	'UCP'						=> 'Gebruikerspaneel',
 	'UCP_ACTIVATE'				=> 'Account activeren',
 	'UCP_ADMIN_ACTIVATE'		=> 'Je dient een geldig e-mailadres op te geven om je account te kunnen activeren. Het beheer zal je registratie controleren en bij goedkeuring krijg je een e-mail op het opgegeven adres.',
-	'UCP_AIM'					=> 'AOL Instant Messenger',
 	'UCP_ATTACHMENTS'			=> 'Bijlagen',
+	'UCP_AUTH_LINK'				=> 'External accounts',
+	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
+	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
+	'UCP_AUTH_LINK_LINK'		=> 'Link',
+	'UCP_AUTH_LINK_MANAGE'		=> 'Manage external account associations',
+	'UCP_AUTH_LINK_NOT_SUPPORTED'	=> 'Linking board accounts to external services is not supported by this board’s current authentication method.',
+	'UCP_AUTH_LINK_TITLE'		=> 'Manage your external account associations',
+	'UCP_AUTH_LINK_UNLINK'		=> 'Unlink',
 	'UCP_AUTH_LINK'				=> 'External accounts',
 	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
 	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
@@ -3585,8 +3802,8 @@ $lang = array_merge($lang, array(
 	'UCP_COPPA_BEFORE'			=> 'Voor %s',
 	'UCP_COPPA_ON_AFTER'		=> 'Op of na %s',
 	'UCP_EMAIL_ACTIVATE'		=> 'Je dient een geldig e-mailadres op te geven om je account te activeren. Je ontvangt op dat adres een e-mail met daarin een activatielink.',
-	'UCP_ICQ'					=> 'ICQ-nummer',
 	'UCP_JABBER'				=> 'Jabber-adres',
+	'UCP_LOGIN_LINK'			=> 'Set up an external account association',
 
 	'UCP_MAIN'					=> 'Overzicht',
 	'UCP_MAIN_ATTACHMENTS'		=> 'Bijlagenbeheer',
@@ -3595,7 +3812,6 @@ $lang = array_merge($lang, array(
 	'UCP_MAIN_FRONT'			=> 'Hoofdpagina',
 	'UCP_MAIN_SUBSCRIBED'		=> 'Abonnementenbeheer',
 
-	'UCP_MSNM'					=> 'Windows Live Messenger',
 	'UCP_NO_ATTACHMENTS'		=> 'Je hebt geen bestanden geplaatst.',
 
 	'UCP_NOTIFICATION_LIST'				=> 'Manage notifications',
@@ -3612,8 +3828,6 @@ $lang = array_merge($lang, array(
 	'UCP_PM_COMPOSE'			=> 'Schrijf bericht',
 	'UCP_PM_DRAFTS'				=> 'Concepten',
 	'UCP_PM_OPTIONS'			=> 'Opties',
-	'UCP_PM_POPUP'				=> 'Privéberichten',
-	'UCP_PM_POPUP_TITLE'		=> 'Privéberichten pop-up',
 	'UCP_PM_UNREAD'				=> 'Ongelezen',
 	'UCP_PM_VIEW'				=> 'Toon berichten',
 
@@ -3628,11 +3842,11 @@ $lang = array_merge($lang, array(
 	'UCP_USERGROUPS_MEMBER'		=> 'Lidmaatschappen',
 	'UCP_USERGROUPS_MANAGE'		=> 'Groepenbeheer',
 
+	'UCP_PASSWORD_RESET_DISABLED'	=> 'The password reset functionality has been disabled. If you need help accessing your account, please contact the %sBoard Administrator%s',
 	'UCP_REGISTER_DISABLE'			=> 'Het is momenteel niet mogelijk om een nieuw account aan te maken.',
 	'UCP_REMIND'					=> 'Wachtwoord sturen',
 	'UCP_RESEND'					=> 'Activatie e-mail sturen',
 	'UCP_WELCOME'					=> 'Welkom in het gebruikerspaneel. Van hieruit kun je je persoonlijke instellingen en voorkeuren beheren, zoals het bekijken of wijzigen van je profiel en abonnementen op forums en onderwerpen. Je kunt ook berichten sturen naar andere gebruikers (mits toegestaan). Wees er zeker van dat je eerst alle mededelingen leest.',
-	'UCP_YIM'						=> 'Yahoo Messenger',
 	'UCP_ZEBRA'						=> 'Vrienden en vijanden',
 	'UCP_ZEBRA_FOES'				=> 'Vijanden',
 	'UCP_ZEBRA_FRIENDS'				=> 'Vrienden',
@@ -3642,12 +3856,12 @@ $lang = array_merge($lang, array(
 	'UPLOAD_AVATAR_FILE'			=> 'Upload van je computer',
 	'UPLOAD_AVATAR_URL'				=> 'Upload van een webpagina',
 	'UPLOAD_AVATAR_URL_EXPLAIN'		=> 'Geef de URL van de afbeelding op. De afbeelding zal naar je profiel worden gekopieerd.',
-	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Gebruikersnaam moet tussen %1$d en %2$d tekens lang zijn. Gebruik hierbij alleen letters en cijfers.',
-	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Gebruikersnaam moet tussen %1$d en %2$d tekens lang zijn. Gebruik hierbij alleen letters, cijfers, spaties of -+_[].',
-	'USERNAME_ASCII_EXPLAIN'		=> 'Gebruikersnaam moet tussen %1$d en %2$d tekens lang zijn. Gebruik hierbij alleen ASCII-tekens, dus geen speciale symbolen.',
-	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Gebruikersnaam moet tussen %1$d en %2$d tekens lang zijn. Gebruik hierbij alleen letters of cijfers.',
-	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Gebruikersnaam moet tussen %1$d en %2$d tekens lang zijn. Gebruik hierbij alleen letters, cijfers, spaties of -+_[].',
-	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Gebruikersnaam moet tussen de %1$d en %2$d tekens zijn.',
+	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only alphanumeric characters.',
+	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use alphanumeric, space or -+_[] characters.',
+	'USERNAME_ASCII_EXPLAIN'		=> 'Username must be between %1$s and %2$s long and use only ASCII characters, so no special symbols.',
+	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only letter or number characters.',
+	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use letter, number, space or -+_[] characters.',
+	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Length must be between %1$s and %2$s.',
 	'USERNAME_TAKEN_USERNAME'		=> 'Deze gebruikersnaam is bezet, probeer een andere.',
 	'USERNAME_DISALLOWED_USERNAME'	=> 'Deze gebruikersnaam is bezet en reeds verbannen.',
 	'USER_NOT_FOUND_OR_INACTIVE'	=> 'De gebruiker die je opgaf werd niet gevonden of is niet geactiveerd.',
@@ -3660,10 +3874,9 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_PM'				=> 'Volgende PB',
 	'VIEW_PM'					=> 'Toon privébericht',
 	'VIEW_PM_INFO'				=> 'Berichtendetails',
-	'VIEW_PM_MESSAGE'			=> '1 bericht',
-	'VIEW_PM_MESSAGES'			=> '%d berichten',
 	'VIEW_PREVIOUS_HISTORY'		=> 'Vorige opgeslagen PB',
 	'VIEW_PREVIOUS_PM'			=> 'Vorige PB',
+	'VIEW_PROFILE'				=> 'View profile',
 	'VIEW_SIGS'					=> 'Toon onderschriften',
 	'VIEW_SMILIES'				=> 'Toon smilies als afbeeldingen',
 	'VIEW_TOPICS_DAYS'			=> 'Toon onderwerpen van vorige dagen',
@@ -3771,8 +3984,6 @@ $lang = array_merge($lang, array(
 	'UNREAD_POSTS_LOCKED'	=> 'Nieuwe berichten [ gesloten ]',
 
 	'VIEW_FORUM'			=> 'Toon forum',
-	'VIEW_FORUM_TOPIC'		=> '1 onderwerp',
-	'VIEW_FORUM_TOPICS'		=> '%d onderwerpen',
 
 	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
 	'REMOVE_FILTER'		=> 'Remove filter',
@@ -3781,6 +3992,7 @@ $lang = array_merge($lang, array(
 #######language/en/viewtopic.php#######
 
 $lang = array_merge($lang, array(
+	'APPROVE'								=> 'Goedkeuren',
 	'ATTACHMENT'						=> 'Bijlage',
 	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'Bijlagen zijn uitgeschakeld',
 
@@ -3793,14 +4005,13 @@ $lang = array_merge($lang, array(
 	'BUMP_TOPIC'			=> 'Bump onderwerp',
 
 	'CODE'					=> 'Code',
-	'COLLAPSE_QR'			=> 'Verberg snel reageren',
-
+	
 	'DELETE_TOPIC'			=> 'Verwijder onderwerp',
+	'DELETED_INFORMATION'	=> 'Deleted by %1$s on %2$s',
+	'DISAPPROVE'					=> 'Afkeuren',
 	'DOWNLOAD_NOTICE'		=> 'Je hebt geen permissies om de bijlage(n)) in dit bericht te zien.',
 
-	'EDITED_TIMES_TOTAL'	=> 'Laatst bijgewerkt door %1$s op %2$s, in totaal %3$d keer bewerkt.',
-	'EDITED_TIME_TOTAL'		=> 'Laatst bijgewerkt door %1$s op %2$s, in totaal %3$d keer bewerkt.',
-	'EMAIL_TOPIC'			=> 'E-mail vriend',
+	'EMAIL_TOPIC'			=> 'E-mail topic',
 	'ERROR_NO_ATTACHMENT'	=> 'De geselecteerde bijlage bestaat niet (meer).',
 
 	'FILE_NOT_FOUND_404'	=> 'Het bestand <strong>%s</strong> bestaat niet (meer).',
@@ -3815,8 +4026,6 @@ $lang = array_merge($lang, array(
 	'MAKE_GLOBAL'				=> 'Wijzig in globale mededeling',
 	'MAKE_NORMAL'				=> 'Wijzig in normaal onderwerp',
 	'MAKE_STICKY'				=> 'Wijzig in sticky',
-	'MAX_OPTIONS_SELECT'		=> 'Je mag tot <strong>%d</strong> opties selecteren.',
-	'MAX_OPTION_SELECT'			=> 'Je mag <strong>1</strong> optie selecteren.',
 	'MISSING_INLINE_ATTACHMENT'	=> 'De bijlage <strong>%s</strong> is niet langer beschikbaar.',
 	'MOVE_TOPIC'				=> 'Verplaats onderwerp',
 
@@ -3830,6 +4039,7 @@ $lang = array_merge($lang, array(
 	'POLL_ENDED_AT'			=> 'Poll eindigt op %s',
 	'POLL_RUN_TILL'			=> 'De poll loopt tot %s',
 	'POLL_VOTED_OPTION'		=> 'Je hebt gestemd voor deze optie',
+	'POST_DELETED_RESTORE'	=> 'This post has been deleted. It can be restored.',
 	'PRINT_TOPIC'			=> 'Afdrukweergave',
 
 	'QUICK_MOD'				=> 'Mod gereedschap',
@@ -3837,11 +4047,14 @@ $lang = array_merge($lang, array(
 	'QUOTE'					=> 'Citaat',
 
 	'REPLY_TO_TOPIC'		=> 'Antwoord op onderwerp',
+	'RESTORE'				=> 'Restore',
+	'RESTORE_TOPIC'			=> 'Restore topic',
 	'RETURN_POST'			=> '%sGa terug naar het bericht%s',
 
 	'SHOW_QR'				=> 'Snel reageren',
 	'SUBMIT_VOTE'			=> 'Stem',
 
+	'TOPIC_TOOLS'			=> 'Topic tools',
 	'TOTAL_VOTES'			=> 'Totaal aantal stemmen',
 
 	'UNLOCK_TOPIC'			=> 'Heropen onderwerp',
@@ -3850,10 +4063,7 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_TOPIC'		=> 'Volgend onderwerp',
 	'VIEW_PREVIOUS_TOPIC'	=> 'Vorig onderwerp',
 	'VIEW_RESULTS'			=> 'Toon resultaten',
-	'VIEW_TOPIC_POST'		=> '1 bericht',
-	'VIEW_TOPIC_POSTS'		=> '%d berichten',
 	'VIEW_UNREAD_POST'		=> 'Eerste ongelezen',
-	'VISIT_WEBSITE'			=> 'WWW',
 	'VOTE_SUBMITTED'		=> 'Je stem is verwerkt',
 	'VOTE_CONVERTED'		=> 'Je stem wijzigen is niet mogelijk voor geconverteerde polls',
 
@@ -9461,6 +9671,7 @@ $lang = array_merge($lang, array(
 	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'	=> 'Maximale bestandsgrootte per bijlage voor privéberichten, 0 staat voor ongelimiteerd.',
 	'ATTACH_ORPHAN_URL'					=> 'Berichtloze bijlagen',
 	'ATTACH_POST_ID'					=> 'Bericht ID',
+	'ATTACH_POST_TYPE'					=> 'Post type',
 	'ATTACH_QUOTA'						=> 'Totale bijlagenlimiet',
 	'ATTACH_QUOTA_EXPLAIN'				=> 'Maximale toegekende schijfruimte voor bijlagen voor het hele forum, 0 staat voor ongelimiteerd.',
 	'ATTACH_TO_POST'					=> 'Voeg bestand aan bericht toe',
@@ -9506,6 +9717,9 @@ $lang = array_merge($lang, array(
 	'EXT_GROUP_REAL_MEDIA'			=> 'Real Media',
 	'EXT_GROUP_WINDOWS_MEDIA'		=> 'Windows media',
 
+	'FILES_GONE'			=> 'Some of the attachments you selected for deletion do not exist. They may have been already deleted. Attachments that did exist were deleted.',
+	'FILES_STATS_WRONG'		=> 'Your file statistics are likely inaccurate and need to be resynchronised. Actual values: number of attachments = %1$d, total size of attachments = %2$s.<br />Click %3$shere%4$s to resynchronise them.',
+
 	'GO_TO_EXTENSIONS'		=> 'Ga naar het extensiebeheer',
 	'GROUP_NAME'			=> 'Groepsnaam',
 
@@ -9529,6 +9743,7 @@ $lang = array_merge($lang, array(
 	'NOT_ALLOWED_IN_PM'			=> 'Alleen in forumberichten toegestaan',
 	'NOT_ALLOWED_IN_PM_POST'	=> 'Niet toegestaan',
 	'NOT_ASSIGNED'				=> 'Niet toegewezen',
+	'NO_ATTACHMENTS'			=> 'No attachments found for this period.',
 	'NO_EXT_GROUP'				=> 'Geen',
 	'NO_EXT_GROUP_NAME'			=> 'Geen groepsnaam ingevuld',
 	'NO_EXT_GROUP_SPECIFIED'	=> 'Geen extensiegroep gespecificeerd.',
@@ -9541,6 +9756,10 @@ $lang = array_merge($lang, array(
 	'ONLY_ALLOWED_IN_PM'	=> 'Alleen toegestaan in privéberichten',
 	'ORDER_ALLOW_DENY'		=> 'Toestaan',
 	'ORDER_DENY_ALLOW'		=> 'Niet toestaan',
+
+	'REMOVE_ALLOWED_IPS'			=> 'Verwijder of sluit de <em>toegestane</em> IP’s/hostnamen niet langer uit',
+	'REMOVE_DISALLOWED_IPS'			=> 'Verwijder of sluit de <em>niet-toegestane</em> IP’s/hostnamen niet langer uit',
+	'RESYNC_FILES_STATS_CONFIRM'	=> 'Are you sure you wish to resynchronise file statistics?',
 
 	'REMOVE_ALLOWED_IPS'		=> 'Verwijder of sluit de <em>toegestane</em> IP’s/hostnamen niet langer uit',
 	'REMOVE_DISALLOWED_IPS'		=> 'Verwijder of sluit de <em>niet-toegestane</em> IP’s/hostnamen niet langer uit',
@@ -9610,18 +9829,17 @@ $lang = array_merge($lang, array(
 	'PERMANENT'		=> 'Permanent',
 
 	'UNTIL'						=> 'Tot',
-	'USER_BAN'					=> 'Verbannen',
+	'USER_BAN'					=> 'Ban one or more users by username',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> 'Schakel dit in om de ingestelde gebruikersnamen uit te sluiten van lopende bans.',
 	'USER_BAN_EXPLAIN'			=> 'Je kunt meerdere gebruikers in een keer bannen door elke op een aparte regel te zetten. Gebruik de <u>zoek een lid</u> functie om te zoeken en een of meerdere gebruikers in een keer toe te voegen.',
 	'USER_NO_BANNED'			=> 'Geen verbannen gebruikersnamen',
-	'USER_UNBAN'				=> 'Verwijder ban of verwijder uitgesloten gebruikersnamen',
+	'USER_UNBAN'				=> 'Un-ban or un-exclude users by username',
 	'USER_UNBAN_EXPLAIN'		=> 'Als je van meerdere gebruikersnamen de ban wilt opheffen (of niet meer wilt uitsluiten), kun je dit doen door gebruik te maken van de combinatie muis en toetsenbord. Uitgesloten gebruikersnamen zijn benadrukt.',
 ));
 
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'				=> 'Zomertijd toepassen',
 	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
 	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
 	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
@@ -9647,16 +9865,28 @@ $lang = array_merge($lang, array(
 	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Hier kun je de basiswerking van het forum instellen, een passende naam en omschrijving kiezen, de standaard tijdzone, taal en andere zaken wijzigen.',
+	'BOARD_INDEX_TEXT'				=> 'Board index text',
+	'BOARD_INDEX_TEXT_EXPLAIN'		=> 'This text is displayed as the board index in the board’s breadcrumbs. If not specified, it will default to “Board index”.',
+	'BOARD_STYLE'					=> 'Mijn forumstijl',
 	'CUSTOM_DATEFORMAT'				=> 'Standaard…',
 	'DEFAULT_DATE_FORMAT'			=> 'Datumweergave',
 	'DEFAULT_DATE_FORMAT_EXPLAIN'	=> 'De datumweergave is gelijk aan de PHP <code>datum</code> functie.',
 	'DEFAULT_LANGUAGE'				=> 'Standaardtaal',
 	'DEFAULT_STYLE'					=> 'Standaardstijl',
+	'DEFAULT_STYLE_EXPLAIN'			=> 'The default style is <strong>%1$s (%2$s)</strong> which is the overriden style for all users (including bots).',
 	'DISABLE_BOARD'					=> 'Forum uitschakelen',
-	'DISABLE_BOARD_EXPLAIN'			=> 'Dit zal het forum onbereikbaar maken voor gebruikers. Als je wilt, kun je ook een kleine boodschap (max. 255 tekens) invoeren.',
+	'DISABLE_BOARD_EXPLAIN'			=> 'This will make the board unavailable to users who are neither administrators nor moderators. You can also enter a short (255 character) message to display if you wish.',
+	'DISPLAY_LAST_SUBJECT'			=> 'Display subject of last added post on forum list',
+	'DISPLAY_LAST_SUBJECT_EXPLAIN'	=> 'The subject of the last added post will be displayed in the forum list with a hyperlink to the post. Subjects from password protected forums and forums in which user doesn’t have read access are not shown.',
+	'GUEST_STYLE'					=> 'Guest style',
+	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Negeer gebruikersstijl',
 	'OVERRIDE_STYLE_EXPLAIN'		=> 'Negeer de gebruikersstijl door de standaard stijl.',
 	'SITE_DESC'						=> 'Omschrijving van de site',
+	'SITE_HOME_TEXT'				=> 'Main website text',
+	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
+	'SITE_HOME_URL'					=> 'Main website URL',
+	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Naam van de site',
 	'SYSTEM_TIMEZONE'				=> 'Tijdzone voor gasten',
 	'WARNINGS_EXPIRE'				=> 'Duur van de waarschuwing',
@@ -9696,6 +9926,7 @@ $lang = array_merge($lang, array(
 
 	'ALLOW_AVATARS'					=> 'Avatars inschakelen',
 	'ALLOW_AVATARS_EXPLAIN'			=> 'Algemeen gebruik van avatars toestaan;<br />Als je algemeen gebruik van avatars uitschakelt (of alleen van een bepaalt type), dan zullen de uitgeschakelde avatars niet langer op het forum worden getoond, maar gebruikers kunnen nog wel hun eigen avatars downloaden via het gebruikerspaneel.',
+	'ALLOW_GRAVATAR'				=> 'Enable gravatar avatars',
 	'ALLOW_LOCAL'					=> 'Galerij avatars toestaan',
 	'ALLOW_REMOTE'					=> 'Externe avatars toestaan',
 	'ALLOW_REMOTE_EXPLAIN'			=> 'Avatars gelinkt van andere websites.',
@@ -9876,6 +10107,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Gegevens van deze forums zullen <strong>niet worden opgenomen in feeds</strong>. Selecteer geen forum om gegevens van alle forums op te halen.<br />Selecteer/Deselecteer meerdere forums door <samp>CTRL</samp> ingedrukt te houden en forums aan te klikken.',
 
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Hier kun je plug-ins selecteren en configureren, welke zijn ontworpen om geautomatiseerde acties door spambots te voorkomen.',
+	'ACP_VC_EXT_GET_MORE'					=> 'For additional (and possibly better) anti-spam plugins, visit the <a href="https://www.phpbb.com/go/anti-spam-ext"><strong>phpBB.com Extensions Database</strong></a>. For more information on preventing spam on your board, visit the <a href="https://www.phpbb.com/go/anti-spam"><strong>phpBB.com Knowledge Base</strong></a>.',
 	'AVAILABLE_CAPTCHAS'					=> 'Beschikbare plug-ins',
 	'CAPTCHA_UNAVAILABLE'					=> 'Deze plug-in kan niet worden geselecteerd, omdat de benodigdheden op dit systeem niet beschikbaar zijn.',
 	'CAPTCHA_GD'							=> 'GD afbeelding',
@@ -9926,18 +10158,36 @@ $lang = array_merge($lang, array(
 	'SESSION_LENGTH'			=> 'Sessieduur',
 	'SESSION_LENGTH_EXPLAIN'	=> 'De sessie zal na deze tijd verstrijken.',
 
+	// Contact Settings
+	'ACP_CONTACT_SETTINGS_EXPLAIN'		=> 'Here you can enable and disable the contact page and also add a text that is displayed on the page.',
+
+	'CONTACT_US_ENABLE'				=> 'Enable contact page',
+	'CONTACT_US_ENABLE_EXPLAIN'		=> 'This page allows users to send emails to board administrators',
+
+	'CONTACT_US_INFO'				=> 'Contact information',
+	'CONTACT_US_INFO_EXPLAIN'		=> 'The message is displayed on the contact page',
+	'CONTACT_US_INFO_PREVIEW'		=> 'Contact page information - Preview',
+	'CONTACT_US_INFO_UPDATED'		=> 'Contact page information has been updated.',
+
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Hier kun je bepaalde forumfuncties aan/uit zetten om het aantal serverprocessen te verminderen. Op de meeste servers is het niet nodig om een functie uit te schakelen, hoewel op bepaalde systemen of op gedeelde hostingomgevingen het nuttig kan zijn om functies die je niet nodig hebt, uit te schakelen. Je kunt ook limieten opgeven voor de systeembelasting en het aantal actieve sessies, waarna het forum offline gaat.',
 
+	'ALLOW_CDN'						=> 'Allow usage of third party content delivery networks',
+	'ALLOW_CDN_EXPLAIN'				=> 'If this setting is enabled, some files will be served from external third party servers instead of your server. This reduces the network bandwidth required by your server, but may present a privacy issue for some board administrators. In a default phpBB installation, this includes loading “jQuery” and the font “Open Sans” from Google’s content delivery network.',
+	'ALLOW_LIVE_SEARCHES'			=> 'Allow live searches',
+	'ALLOW_LIVE_SEARCHES_EXPLAIN'	=> 'If this setting is enabled, users are provided with keyword suggestions as they type in certain fields throughout the board.',
 	'CUSTOM_PROFILE_FIELDS'			=> 'Aangepaste profielvelden',
 	'LIMIT_LOAD'					=> 'Limiteer de systeembelasting',
 	'LIMIT_LOAD_EXPLAIN'			=> 'Als de gemiddelde systeembelasting van 1 minuut deze waarde overschrijdt, wordt het forum uitgeschakeld. Dit werkt alleen op UNIX-servers waarop deze functie beschikbaar is. Deze waarde zal zichzelf terug naar 0 instellen wanneer phpBB de systeembelastingslimiet niet kon ophalen.',
 	'LIMIT_SESSIONS'				=> 'Limiteer sessies',
 	'LIMIT_SESSIONS_EXPLAIN'		=> 'Als het aantal sessies gedurende 1 minuut boven deze waarde komt, zal het forum offline gaan. Stel in op 0 voor een onbeperkt aantal sessies.',
 	'LOAD_CPF_MEMBERLIST'			=> 'Geef eigen profielvelden in de ledenlijst weer',
+	'LOAD_CPF_PM'					=> 'Display custom profile fields in private messages',
 	'LOAD_CPF_VIEWPROFILE'			=> 'Geef eigen profielvelden in de gebruikersprofielen weer',
 	'LOAD_CPF_VIEWTOPIC'			=> 'Geef eigen profielvelden op de berichtenpagina weer',
 	'LOAD_USER_ACTIVITY'			=> 'Laat gebruikersactiviteiten zien',
 	'LOAD_USER_ACTIVITY_EXPLAIN'	=> 'Laat actieve onderwerpen in gebruikersprofielen en gebruikersconfiguratiescherm zien. Het wordt aangeraden om dit uit te schakelen bij een forum met meer dan één miljoen berichten.',
+	'READ_NOTIFICATION_EXPIRE_DAYS'	=> 'Read Notification Expiration',
+	'READ_NOTIFICATION_EXPIRE_DAYS_EXPLAIN' => 'Number of days that will elapse before a read notification will automatically be deleted. Set this value to 0 to make notifications permanent.',
 	'RECOMPILE_STYLES'				=> 'Hercompileer oude stijlcomponenten',
 	'RECOMPILE_STYLES_EXPLAIN'		=> 'Controleer op gewijzigde stijlcomponenten op het systeem en hercompileer deze.',
 	'YES_ANON_READ_MARKING'			=> 'Markeer berichten bij gasten',
@@ -9958,18 +10208,25 @@ $lang = array_merge($lang, array(
 	'YES_READ_MARKING_EXPLAIN'		=> 'Gebruik de server i.p.v. cookies om aan te geven of berichten gelezen zijn.',
 	'YES_UNREAD_SEARCH'				=> 'Zoeken naar ongelezen berichten inschakelen',
 
-	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB ondersteunt verificatie plug-ins of modules. Deze maken het mogelijk om te bepalen hoe gebruikers zich verifiëren zodra ze zich aanmelden op het forum. Standaard zijn er drie plug-ins aanwezig; DB, LDAP en Apache. Niet alle methodes hebben extra informatie nodig. Vul daarom alleen de relevante velden in voor de geselecteerde methode.',
+	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB supports authentication plug-ins, or modules. These allow you determine how users are authenticated when they log into the board. By default four plug-ins are provided: DB, LDAP, Apache, and OAuth. Not all methods require additional information so only fill out fields if they are relevant to the selected method.',
 
 	'AUTH_METHOD'				=> 'Selecteer een verificatiemethode',
 
+	'AUTH_PROVIDER_OAUTH_ERROR_ELEMENT_MISSING'	=> 'Both the key and secret of each enabled OAuth service provider must be provided. Only one was provided for an OAuth service provider.',
+	'AUTH_PROVIDER_OAUTH_EXPLAIN'				=> 'Each OAuth provider requires a unique secret and key in order to authenticate with the external server. These should be supplied by the OAuth service when you register your website with them and should be entered exactly as provided to you.<br />Any service that does not have both a key and a secret entered here will not be available for use by the forum users. Also note, that user can still register and login using the DB authentication plug-in.',
+	'AUTH_PROVIDER_OAUTH_KEY'					=> 'Key',
+	'AUTH_PROVIDER_OAUTH_TITLE'					=> 'OAuth',
+	'AUTH_PROVIDER_OAUTH_SECRET'				=> 'Secret',
+
 	'APACHE_SETUP_BEFORE_USE'	=> 'Je dient de Apache-verificatie eerst te activeren alvorens je deze door phpBB laat gebruiken. Onthoud dat de gebruikersnaam die je voor de Apache-verificatie gebruikt, dezelfde moet zijn als je phpBB-gebruikersnaam. Apache-verificatie kan alleen gebruikt worden met mod_php (niet de CGI versie) en als safe_mode is uitgeschakeld.',
 
+	'LDAP'							=> 'LDAP',
 	'LDAP_DN'						=> 'LDAP-base <var>dn</var>',
 	'LDAP_DN_EXPLAIN'				=> 'Dit is de Distinguished Name, wat de gebruikersinformatie lokaliseert, vb: <samp>o=My Company,c=US</samp>.',
-	'LDAP_EMAIL'					=> 'LDAP-e-mailattribuut',
-	'LDAP_EMAIL_EXPLAIN'			=> 'Stel dit in naargelang de gebruiker zijn e-mail attribuut (mits aanwezig) om automatisch het e-mailadres in te stellen van een nieuwe gebruiker. Door deze leeg te laten, zal het resulteren in een leeg e-mailadres voor gebruikers die de eerste leer inloggen.',
+	'LDAP_EMAIL'					=> 'LDAP email attribute',
+	'LDAP_EMAIL_EXPLAIN'			=> 'Set this to the name of your user entry email attribute (if one exists) in order to automatically set the email address for new users. Leaving this empty results in empty email address for users who log in for the first time.',
 	'LDAP_INCORRECT_USER_PASSWORD'	=> 'Verbinden met de LDAP server mislukt met de opgegeven gebruikersnaam en wachtwoord.',
-	'LDAP_NO_EMAIL'					=> 'Het gespecificeerde e-mail attribuut bestaat niet.',
+	'LDAP_NO_EMAIL'					=> 'The specified email attribute does not exist.',
 	'LDAP_NO_IDENTITY'				=> 'Kon geen login identificatie vinden voor %s.',
 	'LDAP_PASSWORD'					=> 'LDAP-wachtwoord',
 	'LDAP_PASSWORD_EXPLAIN'			=> 'Laat dit leeg voor anonieme toegang, vul anders het wachtwoord voor de bovenstaande gebruiker in. Vereist voor active directory servers. <br /><em><strong>Waarschuwing:</strong> Dit wachtwoord zal als platte tekst worden opgeslagen en is zichtbaar voor iedereen die database toegang heeft of die dit configuratiebestand kan zien.</em>',
@@ -9984,13 +10241,17 @@ $lang = array_merge($lang, array(
 	'LDAP_USER_FILTER'				=> 'LDAP gebruikersfilter',
 	'LDAP_USER_FILTER_EXPLAIN'		=> 'Optioneel kun je de gevonden objecten beperken met behulp van filters. Bijvoorbeeld <samp>objectClass=posixGroup</samp> zal resulteren in het gebruik van <samp>(&amp;(uid=$username)(objectClass=posixGroup))</samp>',
 
-	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Hier bepaal je server- en domeinafhankelijke instellingen. Zorg ervoor dat je de juiste gegevens invult, anders ontstaan er fouten in e-mails met onjuiste informatie. Zorg ervoor dat je het domein invult met het voorvoegsel http:// of een ander protocol. Vul alleen het poortnummer in als je server een andere waarde heeft. Poort 80 is in de meeste gevallen correct.',
+	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Here you define server and domain dependent settings. Please ensure the data you enter is accurate, errors will result in emails containing incorrect information. When entering the domain name remember it does include http:// or other protocol term. Only alter the port number if you know your server uses a different value, port 80 is correct in most cases.',
 	'ENABLE_GZIP'				=> 'GZip compressie gebruiken',
 	'ENABLE_GZIP_EXPLAIN'		=> 'Gegenereerde inhoud zal eerst gecomprimeerd worden voordat deze verzonden wordt. Dit vermindert het dataverkeer, maar zal het CPU-gebruik van zowel de server als de cliënt verhogen. De zlib PHP extensie moet hiervoor aanwezig zijn.',
 	'FORCE_SERVER_VARS'			=> 'Forceer server URL-instellingen',
 	'FORCE_SERVER_VARS_EXPLAIN'	=> 'Indien ingeschakeld zal de server de instellingen die hier gegeven worden, bij voorkeur op de automatisch ingestelde waardes gebruiken.',
 	'ICONS_PATH'				=> 'Icoon opslagpad',
 	'ICONS_PATH_EXPLAIN'		=> 'Pad onder je phpBB-rootmap, vb: <samp>images/icons</samp>.',
+	'MOD_REWRITE_ENABLE'		=> 'Enable URL Rewriting',
+	'MOD_REWRITE_ENABLE_EXPLAIN' => 'When enabled, URLs containing ’app.php’ will be rewritten to remove the filename (i.e. app.php/foo will become /foo). <strong>Apache server’s mod_rewrite module is required for this functionality to work; if this option is enabled without mod_rewrite support, URLs on your board may be broken.</strong>',
+	'MOD_REWRITE_DISABLED'		=> 'The <strong>mod_rewrite</strong> module on your Apache web server is disabled. Enable the module or contact your web hosting provider if you wish to enable this feature.',
+	'MOD_REWRITE_INFORMATION_UNAVAILABLE' => 'We are unable to determine whether or not this server supports URL rewriting. This setting may be enabled but if URL rewriting is not available, paths generated by this board (such as for use in links) may be broken. Contact your web hosting provider if you are unsure whether or not you can safely enable this feature.',
 	'PATH_SETTINGS'				=> 'Pad instellingen',
 	'RANKS_PATH'				=> 'Rangafbeeldingenpad',
 	'RANKS_PATH_EXPLAIN'		=> 'Pad in je phpBB-root, vb: <samp>images/ranks</samp>.',
@@ -10007,13 +10268,21 @@ $lang = array_merge($lang, array(
 	'SMILIES_PATH_EXPLAIN'		=> 'Pad onder je phpBB-rootmap, vb: <samp>images/smilies</samp>.',
 	'UPLOAD_ICONS_PATH'			=> 'Opslagpad icoongroep extensies',
 	'UPLOAD_ICONS_PATH_EXPLAIN'	=> 'Pad onder je phpBB-rootmap, vb: <samp>images/upload_icons</samp>.',
+	'USE_SYSTEM_CRON'		=> 'Run periodic tasks from system cron',
+	'USE_SYSTEM_CRON_EXPLAIN'		=> 'When off, phpBB will arrange for periodic tasks to be run automatically. When on, phpBB will not schedule any periodic tasks by itself; a system administrator must arrange for <code>bin/phpbbcli.php cron:run</code> to be run by the system cron facility at regular intervals (e.g. every 5 minutes).',
 
 	'ACP_SECURITY_SETTINGS_EXPLAIN'		=> 'Hier kun je sessie- en login gerelateerde instellingen bepalen.',
 	'ALL'							=> 'Alles',
-	'ALLOW_AUTOLOGIN'				=> 'Auto-login toestaan',
-	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Bepaalt of gebruikers automatisch kunnen inloggen wanneer ze het forum bezoeken.',
-	'AUTOLOGIN_LENGTH'				=> 'Auto-login sleutel vernieuwen (in dagen)',
-	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Aantal dagen nadat auto-login sleutels verwijderd zullen worden of nul voor uitschakelen.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'ALLOW_PASSWORD_RESET'			=> 'Allow password reset ("Forgot Password")',
+	'ALLOW_PASSWORD_RESET_EXPLAIN'	=> 'Determines whether or not users are able to use the "I forgot my password" link on the login page to recover their account. If you use an external authentication mechanism you may wish to disable this feature.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
 	'BROWSER_VALID'					=> 'Valideer browser',
 	'BROWSER_VALID_EXPLAIN'			=> 'Schakelt browservalidatie voor elke sessie in om de beveiliging te verbeteren.',
 	'CHECK_DNSBL'					=> 'Controleer IP in de DNS Blackhole List',
@@ -10050,8 +10319,12 @@ $lang = array_merge($lang, array(
 	'PASS_TYPE_SYMBOL'				=> 'Dient symbolen te bevatten',
 	'REF_HOST'						=> 'Alleen geldige host',
 	'REF_PATH'						=> 'Ook geldig pad',
-	'REFERER_VALID'					=> 'Controleer verwijzing',
+	'REFERRER_VALID'				=> 'Validate Referrer',
+	'REFERRER_VALID_EXPLAIN'		=> 'If enabled, the referrer of POST requests will be checked against the host/script path settings. This may cause issues with boards using several domains and or external logins.',
+
+	'REFERER_VALID'					=> 'Controleer verwijzing',	//3.0.12
 	'REFERER_VALID_EXPLAIN'			=> 'Indien ingeschakeld zal de verwijzing of het POST-verzoek gecontroleerd worden op de host/script pad instellingen. Dit kan problemen veroorzaken bij het gebruik van meerdere domeinnamen en externe logins.',
+
 	'TPL_ALLOW_PHP'					=> 'Sta PHP toe in templates',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Indien deze optie ingeschakeld is, zullen de <code>PHP</code> en <code>INCLUDEPHP</code> blokken in templates herkend en vervangen worden.',
 
@@ -10064,6 +10337,8 @@ $lang = array_merge($lang, array(
 	'BOARD_HIDE_EMAILS_EXPLAIN'		=> 'Deze functie houdt e-mailadressen privé.',
 	'CONTACT_EMAIL'					=> 'Contact e-mailadres',
 	'CONTACT_EMAIL_EXPLAIN'			=> 'Dit adres wordt gebruikt voor contact met de beheerder',
+	'CONTACT_EMAIL_NAME'			=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 	'EMAIL_FUNCTION_NAME'			=> 'Naam e-mail functie',
 	'EMAIL_FUNCTION_NAME_EXPLAIN'	=> 'De e-mail functie die wordt gebruikt om via PHP e-mails te versturen.',
 	'EMAIL_PACKAGE_SIZE'			=> 'E-mail pakketgrootte',
@@ -10254,7 +10529,7 @@ $lang = array_merge($lang, array(
 	'ACP_BAN'					=> 'Bannen',
 	'ACP_BAN_EMAILS'			=> 'Ban e-mailadres',
 	'ACP_BAN_IPS'				=> 'Ban IP-adres',
-	'ACP_BAN_USERNAMES'			=> 'Ban gebruikersnaam',
+	'ACP_BAN_USERNAMES'			=> 'Ban users',
 	'ACP_BBCODES'				=> 'BBCodes',
 	'ACP_BOARD_CONFIGURATION'	=> 'Forumconfiguratie',
 	'ACP_BOARD_FEATURES'		=> 'Forumeigenschappen',
@@ -10263,8 +10538,10 @@ $lang = array_merge($lang, array(
 	'ACP_BOTS'					=> 'Spiders/Robots',
 
 	'ACP_CAPTCHA'				=> 'CAPTCHA',
+	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'Database',
+	'ACP_CAT_DOT_MODS'			=> 'Mods',
 	'ACP_CAT_DOT_MODS'			=> 'Mods',
 	'ACP_CAT_FORUMS'			=> 'Forums',
 	'ACP_CAT_GENERAL'			=> 'Algemeen',
@@ -10277,6 +10554,8 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_USERS'				=> 'Gebruikers',
 	'ACP_CLIENT_COMMUNICATION'	=> 'Cliënt communicatie',
 	'ACP_COOKIE_SETTINGS'		=> 'Cookie',
+	'ACP_CONTACT'				=> 'Contact page',
+	'ACP_CONTACT_SETTINGS'		=> 'Contact page settings',
 	'ACP_CRITICAL_LOGS'			=> 'Foutenlog',
 	'ACP_CUSTOM_PROFILE_FIELDS'	=> 'Aangepaste profielvelden',
 
@@ -10284,8 +10563,11 @@ $lang = array_merge($lang, array(
 	'ACP_DISALLOW'				=> 'Niet toegestaan',
 	'ACP_DISALLOW_USERNAMES'	=> 'Weiger gebruikersnamen',
 
-	'ACP_EMAIL_SETTINGS'		=> 'Instellingen e-mails',
-	'ACP_EXTENSION_GROUPS'		=> 'Beheer extensiegroepen',
+	'ACP_EMAIL_SETTINGS'		=> 'Email settings',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
+	'ACP_EXTENSION_MANAGEMENT'	=> 'Extension management',
+	'ACP_EXTENSIONS'			=> 'Manage extensions',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
 	'ACP_FORMS'					=> 'Aanpasbare formulieren',
 	'ACP_FORMS_BUILDER'			=> 'Fomulierenmaker',
 
@@ -10306,10 +10588,10 @@ $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE'				=> 'Groepsbeheer',
 	'ACP_GROUPS_MANAGEMENT'			=> 'Groepsbeheer',
 	'ACP_GROUPS_PERMISSIONS'		=> 'Permissies groepen',
+	'ACP_GROUPS_POSITION'			=> 'Manage group positions',
 
 	'ACP_ICONS'					=> 'Onderwerp iconen',
 	'ACP_ICONS_SMILIES'			=> 'Onderwerp iconen/smilies',
-	'ACP_IMAGESETS'				=> 'Afbeeldingsets',
 	'ACP_INACTIVE_USERS'		=> 'Inactieve gebruikers',
 	'ACP_INDEX'					=> 'Overzicht beheerderspaneel',
 
@@ -10321,11 +10603,15 @@ $lang = array_merge($lang, array(
 	'ACP_LOGGING'				=> 'Loggen',
 
 	'ACP_MAIN'					=> 'Overzicht beheerderspaneel',
-	'ACP_MANAGE_EXTENSIONS'		=> 'Extensiebeheer',
+
+	'ACP_MANAGE_ATTACHMENTS'			=> 'Bijlagenbeheer',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
+
+	'ACP_MANAGE_EXTENSIONS'		=> 'Manage attachment extensions',
 	'ACP_MANAGE_RANKS'			=> 'Rangenbeheer',
 	'ACP_MANAGE_REASONS'		=> 'Beheer meldingen/afkeur redenen',
 	'ACP_MANAGE_USERS'			=> 'Gebruikersbeheer',
-	'ACP_MASS_EMAIL'			=> 'Massa e-mail',
+	'ACP_MASS_EMAIL'			=> 'Mass email',
 	'ACP_MESSAGES'				=> 'Berichten',
 	'ACP_MESSAGE_SETTINGS'		=> 'Instellingen privéberichten',
 	'ACP_MODULE_MANAGEMENT'		=> 'Modulebeheer',
@@ -10370,6 +10656,8 @@ $lang = array_merge($lang, array(
 	'ACP_STYLE_COMPONENTS'		=> 'Stijl onderdelen',
 	'ACP_STYLE_MANAGEMENT'		=> 'Stijlenbeheer',
 	'ACP_STYLES'				=> 'Stijlen',
+	'ACP_STYLES_CACHE'			=> 'Purge Cache',
+	'ACP_STYLES_INSTALL'		=> 'Install Styles',
 
 	'ACP_SUBMIT_CHANGES'		=> 'Wijzigingen toepassen',
 
@@ -10421,6 +10709,10 @@ $lang = array_merge($lang, array(
 
 	'COLOUR_SWATCH'			=> 'Webveilig kleurenpalet',
 	'CONFIG_UPDATED'		=> 'Configuratie succesvol gewijzigd.',
+	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
+	'CRON_NO_SUCH_TASK'		=> 'Could not find cron task â€œ%sâ€.',
+	'CRON_NO_TASK'			=> 'No cron tasks need to be run right now.',
+	'CRON_NO_TASKS'			=> 'No cron tasks could be found.',
 
 	'DEACTIVATE'				=> 'Deactiveren',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'Het opgegeven pad "%s" bestaat niet.',
@@ -10431,6 +10723,7 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_AS'				=> 'Download als',
 	'DOWNLOAD_STORE'			=> 'Download of sla bestand op',
 	'DOWNLOAD_STORE_EXPLAIN'	=> 'Je kunt het bestand direct downloaden of opslaan in je <samp>opslagmap</samp>.',
+	'DOWNLOADS'					=> 'Downloads',
 
 	'EDIT'					=> 'Wijzig',
 	'ENABLE'				=> 'Inschakelen',
@@ -10445,6 +10738,8 @@ $lang = array_merge($lang, array(
 	'IP'					=> 'Gebruikers-IP',
 	'IP_HOSTNAME'			=> 'IP-adressen en hostnamen',
 
+	'LOAD_NOTIFICATIONS'			=> 'Display Notifications',
+	'LOAD_NOTIFICATIONS_EXPLAIN'	=> 'Display the notifications list on every page (typically in the header).',
 	'LOGGED_IN_AS'			=> 'Je bent ingelogd als:',
 	'LOGIN_ADMIN'			=> 'Om dit forum te beheren moet je ingelogd zijn.',
 	'LOGIN_ADMIN_CONFIRM'	=> 'Om dit forum te beheren dien je ter beveiliging nogmaals in te loggen.',
@@ -10461,7 +10756,8 @@ $lang = array_merge($lang, array(
 
 	'NOTIFY'				=> 'Mededeling',
 	'NO_ADMIN'				=> 'Je bent niet gemachtigd om dit forum te beheren.',
-	'NO_EMAILS_DEFINED'		=> 'Geen geldige e-mailadressen gevonden',
+	'NO_EMAILS_DEFINED'		=> 'No valid email addresses found.',
+	'NO_FILES_TO_DELETE'	=> 'Attachments you selected for deletion do not exist.',
 	'NO_PASSWORD_SUPPLIED'	=> 'Je kunt niet inloggen zonder wachtwoord.',
 
 	'OFF'					=> 'Uit',
@@ -10477,8 +10773,8 @@ $lang = array_merge($lang, array(
 
 	'REMIND'							=> 'Herinner',
 	'RESYNC'							=> 'Synchroniseer',
-	'RETURN_TO'							=> 'Terugkeren naar…',
 
+	'RUNNING_TASK'			=> 'Running task: %s.',
 	'SELECT_ANONYMOUS'		=> 'Selecteer anonieme gebruiker',
 	'SELECT_OPTION'			=> 'Selecteer optie',
 
@@ -10488,6 +10784,10 @@ $lang = array_merge($lang, array(
 	'SETTING_TOO_SHORT'		=> 'De opgegeven waarde voor deze instelling “%1$s” is te kort. De minimale acceptabele lengte is %2$d.',
 
 	'SHOW_ALL_OPERATIONS'	=> 'Toon alle werkingen',
+
+	'TASKS_NOT_READY'			=> 'Not ready tasks:',
+	'TASKS_READY'			=> 'Ready tasks:',
+	'TOTAL_SIZE'			=> 'Total size',
 
 	'UCP'					=> 'Gebruikerspaneel',
 	'USERNAMES_EXPLAIN'		=> 'Plaats elke gebruikersnaam op een nieuwe lijn',
@@ -10499,7 +10799,7 @@ $lang = array_merge($lang, array(
 	'NO_PHPINFO_AVAILABLE'	=> 'De PHP-informatie kan niet bepaalt worden. phpinfo() is om beveiligingsredenen uitgeschakeld.',
 
 	'ACP_ADMIN_LOGS_EXPLAIN'	=> 'Dit is een lijst van alle, door beheerders uitgevoerde acties. Je kunt sorteren op gebruikersnaam, datum, IP of actie. Indien je over de nodige permissies beschikt, kun je individuele acties of de hele lijst wissen.',
-	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'Dit is een lijst van alle acties die door het forum zelf uitgevoerd zijn. Deze logs bevatten de informatie die nodig is om specifieke problemen op te lossen, zoals bijvoorbeeld het niet afleveren van e-mails. Je kunt sorteren op gebruikersnaam, datum, IP of actie. Indien je over de nodige permissies beschikt, kun je individuele acties of de hele lijst wissen.',
+	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'This lists the actions carried out by the board itself. This log provides you with information you are able to use for solving specific problems, for example non-delivery of emails. You can sort by username, date, IP or action. If you have appropriate permissions you can also clear individual operations or the log as a whole.',
 	'ACP_MOD_LOGS_EXPLAIN'		=> 'Dit is een lijst van de acties die door de moderators uitgevoerd werden. Kies een forum uit de selectielijst. Je kunt sorteren op gebruikersnaam, datum, IP of actie. Indien je over de nodige permissies beschikt, kun je individuele acties of de hele lijst wissen.',
 	'ACP_USERS_LOGS_EXPLAIN'	=> 'Dit is een lijst van alle acties uitgevoerd door, of op gebruikers.',
 	'ALL_ENTRIES'				=> 'Alle toevoegingen',
@@ -10525,6 +10825,7 @@ $lang = array_merge($lang, array(
 
 	'GZIP_COMPRESSION'	=> 'GZip compressie',
 
+	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'Niet beschikbaar',
 	'NUMBER_FILES'		=> 'Aantal bijlagen',
 	'NUMBER_POSTS'		=> 'Aantal berichten',
@@ -10537,29 +10838,38 @@ $lang = array_merge($lang, array(
 	'PURGE_CACHE'			=> 'Leeg de buffer',
 	'PURGE_CACHE_CONFIRM'	=> 'Weet je zeker dat je de buffer wilt legen?',
 	'PURGE_CACHE_EXPLAIN'	=> 'Verwijdert alle bestanden uit de buffer. Dit zijn onder andere alle templatebestanden en database queries.',
+	'PURGE_CACHE_SUCCESS'	=> 'Cache successfully purged.',
 
 	'PURGE_SESSIONS'			=> 'Verwijder alle sessies',
 	'PURGE_SESSIONS_CONFIRM'	=> 'Weet je zeker dat je alle sessies wilt verwijderen? Alle gebruikers zullen worden uitgelogd.',
 	'PURGE_SESSIONS_EXPLAIN'	=> 'Hiermee wordt de sessie-tabel geleegd en zullen alle gebruikers worden uitgelogd.',
+	'PURGE_SESSIONS_SUCCESS'	=> 'Sessions successfully purged.',
 
 	'RESET_DATE'					=> 'Reset oprichtingsdatum van het forum',
 	'RESET_DATE_CONFIRM'			=> 'Weet je zeker dat je de oprichtingsdatum van het forum wilt resetten?',
+	'RESET_DATE_SUCCESS'				=> 'Boardâ€™s start date reset',
 	'RESET_ONLINE'					=> 'Reset hoogst aantal online gebruikers',
 	'RESET_ONLINE_CONFIRM'			=> 'Weet je zeker dat je de teller voor het hoogst aantal online gebruikers wilt resetten?',
+	'RESET_ONLINE_SUCCESS'				=> 'Most users ever online reset',
 	'RESYNC_POSTCOUNTS'				=> 'Synchroniseer berichtenteller',
 	'RESYNC_POSTCOUNTS_EXPLAIN'		=> 'Alleen bestaande berichten zullen worden meegerekend. Verwijderde berichten worden niet meegeteld.',
 	'RESYNC_POSTCOUNTS_CONFIRM'		=> 'Weet je zeker dat je de berichtteller wilt synchroniseren?',
+	'RESYNC_POSTCOUNTS_SUCCESS'			=> 'Resynchronised post counts',
 	'RESYNC_POST_MARKING'			=> 'Synchroniseer gestipte onderwerpen',
 	'RESYNC_POST_MARKING_CONFIRM'	=> 'Weet je zeker dat je de berichtteller voor gestipte berichten wilt synchroniseren?',
 	'RESYNC_POST_MARKING_EXPLAIN'	=> 'Verwijdert eerst de markering van alle onderwerpen en duidt daarna alle onderwerpen aan die gedurende de laatste zes maanden activiteit hebben vertoond.',
+	'RESYNC_POST_MARKING_SUCCESS'	=> 'Resynchronised dotted topics',
 	'RESYNC_STATS'					=> 'Synchroniseer statistieken',
 	'RESYNC_STATS_CONFIRM'			=> 'Weet je zeker dat je de statistieken wilt synchroniseren?',
 	'RESYNC_STATS_EXPLAIN'			=> 'Herberekent het aantal berichten, gebruikers en bestanden.',
+	'RESYNC_STATS_SUCCESS'			=> 'Resynchronised statistics',
 	'RUN'							=> 'Uitvoeren',
 
 	'STATISTIC'					=> 'Statistieken',
 	'STATISTIC_RESYNC_OPTIONS'	=> 'Synchroniseer of reset de statistieken.',
 
+	'TIMEZONE_INVALID'	=> 'The timezone you selected is invalid.',
+	'TIMEZONE_SELECTED'	=> '(currently selected)',
 	'TOPICS_PER_DAY'	=> 'Onderwerpen per dag',
 
 	'UPLOAD_DIR_SIZE'	=> 'Grootte van geplaatste bijlagen',
@@ -10740,9 +11050,9 @@ $lang = array_merge($lang, array(
 
 	'LOG_APPROVE_TOPIC'			=> '<strong>Onderwerp goedgekeurd</strong><br />» %s',
 	'LOG_BUMP_TOPIC'			=> '<strong>Gebruiker bumpte onderwerp</strong><br />» %s',
-	'LOG_DELETE_POST'			=> '<strong>Bericht verwijderd “%1$s” geschreven door</strong><br />» %2$s',
-	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Schaduwonderwerp verwijderd</strong><br />» %s',
-	'LOG_DELETE_TOPIC'			=> '<strong>Onderwerp verwijderd “%1$s” geschreven door</strong><br />» %2$s',
+	'LOG_DELETE_POST'			=> '<strong>Deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Deleted shadow topic</strong><br />Â» %s',
+	'LOG_DELETE_TOPIC'			=> '<strong>Deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_FORK'					=> '<strong>Onderwerp gekopieerd</strong><br />» van %s',
 	'LOG_LOCK'					=> '<strong>Onderwerp gesloten</strong><br />» %s',
 	'LOG_LOCK_POST'				=> '<strong>Bericht gesloten</strong><br />» %s',
@@ -10751,15 +11061,20 @@ $lang = array_merge($lang, array(
 	'LOG_PM_REPORT_CLOSED'		=> '<strong>PM melding gesloten</strong><br />» %s',
 	'LOG_PM_REPORT_DELETED'		=> '<strong>PM melding verwijderd</strong><br />» %s',
 	'LOG_POST_APPROVED'			=> '<strong>Bericht goedgekeurd</strong><br />» %s',
-	'LOG_POST_DISAPPROVED'		=> '<strong>Bericht "%1$s" afgekeurd omwille van volgende reden</strong><br />» %2$s',
-	'LOG_POST_EDITED'			=> '<strong>Bericht "%1$s" gewijzigd, geschreven door</strong><br />» %2$s',
+	'LOG_POST_DISAPPROVED'		=> '<strong>Disapproved post â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
+	'LOG_POST_EDITED'			=> '<strong>Edited post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_POST_RESTORED'			=> '<strong>Restored post</strong><br />Â» %s',
 	'LOG_REPORT_CLOSED'			=> '<strong>Melding gesloten</strong><br />» %s',
 	'LOG_REPORT_DELETED'		=> '<strong>Melding verwijderd</strong><br />» %s',
+	'LOG_RESTORE_TOPIC'			=> '<strong>Restored topic â€œ%1$sâ€ written by</strong><br />Â» %2$s',
+	'LOG_SOFTDELETE_POST'		=> '<strong>Soft deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_SOFTDELETE_TOPIC'		=> '<strong>Soft deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_SPLIT_DESTINATION'		=> '<strong>Gesplitste berichten verplaatst</strong><br />» naar %s',
 	'LOG_SPLIT_SOURCE'			=> '<strong>Berichten gesplitst</strong><br />» van %s',
 
 	'LOG_TOPIC_APPROVED'		=> '<strong>Onderwerp goedgekeurd</strong><br />» %s',
-	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Onderwerp "%1$s" afgekeurd omwille van volgende reden</strong><br />» %2$s',
+	'LOG_TOPIC_RESTORED'		=> '<strong>Restored topic</strong><br />Â» %s',
+	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Disapproved topic â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
 	'LOG_TOPIC_RESYNC'			=> '<strong>Onderwerpenteller gesynchroniseerd</strong><br />» %s',
 	'LOG_TOPIC_TYPE_CHANGED'	=> '<strong>Onderwerptype gewijzigd</strong><br />» %s',
 	'LOG_UNLOCK'				=> '<strong>Onderwerp geopend</strong><br />» %s',
@@ -10811,16 +11126,6 @@ $lang = array_merge($lang, array(
 
 	'LOG_IMAGE_GENERATION_ERROR'	=> '<strong>Fout bij het maken van een afbeelding</strong><br />» Fout in %1$s op regel %2$s: %3$s',
 
-	'LOG_IMAGESET_ADD_DB'			=> '<strong>Nieuwe afbeeldingset aan de database toegevoegd</strong><br />» %s',
-	'LOG_IMAGESET_ADD_FS'			=> '<strong>Nieuwe afbeeldingset aan het bestandssysteem toevoegen</strong><br />» %s',
-	'LOG_IMAGESET_DELETE'			=> '<strong>Afbeeldingenset verwijderd</strong><br />» %s',
-	'LOG_IMAGESET_EDIT_DETAILS'		=> '<strong>Details van de afbeeldingenset gewijzigd</strong><br />» %s',
-	'LOG_IMAGESET_EDIT'				=> '<strong>Afbeeldingenset gewijzigd</strong><br />» %s',
-	'LOG_IMAGESET_EXPORT'			=> '<strong>Afbeeldingenset geëxporteerd</strong><br />» %s',
-	'LOG_IMAGESET_LANG_MISSING'		=> '<strong>Afbeeldingenset mist "%2$s" taalvariabelen</strong><br />» %1$s',
-	'LOG_IMAGESET_LANG_REFRESHED'	=> '<strong>Vernieuwing van lokaal "%2$s" afbeeldingset</strong><br />» %1$s',
-	'LOG_IMAGESET_REFRESHED'		=> '<strong>Afbeeldingsets vernieuwd</strong><br />» %s',
-
 	'LOG_INACTIVE_ACTIVATE'	=> '<strong>Inactieve gebruiker(s) geactiveerd</strong><br />» %s',
 	'LOG_INACTIVE_DELETE'	=> '<strong>Inactieve gebruiker(s) verwijderd</strong><br />» %s',
 	'LOG_INACTIVE_REMIND'	=> '<strong>Herinnerings e-mails naar inactieve gebruiker(s) gestuurd</strong><br />» %s',
@@ -10865,6 +11170,7 @@ $lang = array_merge($lang, array(
 	'LOG_U_ROLE_EDIT'		=> '<strong>Gebruikersrol gewijzigd</strong><br />» %s',
 	'LOG_U_ROLE_REMOVED'	=> '<strong>Gebruikersrol verwijderd</strong><br />» %s',
 
+	'LOG_PLUPLOAD_TIDY_FAILED'		=> '<strong>Unable to open %1$s for tidying, check permissions.</strong><br />Exception: %2$s<br />Trace: %3$s',
 	'LOG_PROFILE_FIELD_ACTIVATE'	=> '<strong>Profielveld geactiveerd</strong><br />» %s',
 	'LOG_PROFILE_FIELD_CREATE'		=> '<strong>Profielveld toegevoegd</strong><br />» %s',
 	'LOG_PROFILE_FIELD_DEACTIVATE'	=> '<strong>Profielveld gedeactiveerd</strong><br />» %s',
@@ -10873,13 +11179,13 @@ $lang = array_merge($lang, array(
 
 	'LOG_PRUNE'					=> '<strong>Opruiming forums</strong><br />» %s',
 	'LOG_AUTO_PRUNE'			=> '<strong>Automatische opruiming van forums</strong><br />» %s',
+	'LOG_PRUNE_SHADOW'		=> '<strong>Auto-pruned shadow topics</strong><br />Â» %s',
 	'LOG_PRUNE_USER_DEAC'		=> '<strong>Gebruikers gedeactiveerd</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_DEL'	=> '<strong>Gebruikers opgeruimd en berichten verwijderd</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_ANON'	=> '<strong>Gebruikers opgeruimd en berichten bijgehouden</strong><br />» %s',
 
 	'LOG_PURGE_CACHE'			=> '<strong>Buffer geleegd</strong>',
 	'LOG_PURGE_SESSIONS'		=> '<strong>Sessies verwijderd</strong>',
-
 
 	'LOG_RANK_ADDED'		=> '<strong>Nieuwe rang toegevoegd</strong><br />» %s',
 	'LOG_RANK_REMOVED'		=> '<strong>Rang verwijderd</strong><br />» %s',
@@ -10889,15 +11195,17 @@ $lang = array_merge($lang, array(
 	'LOG_REASON_REMOVED'	=> '<strong>Melding/weiger reden verwijderd</strong><br />» %s',
 	'LOG_REASON_UPDATED'	=> '<strong>Melding/weiger reden bijgewerkt</strong><br />» %s',
 
-	'LOG_REFERER_INVALID'		=> '<strong>Verwijzingscontrole faalde</strong><br />»Verwijzing was “<em>%1$s</em>”. Het verzoek is afgewezen en de sessie is afgebroken.',
+	'LOG_REFERER_INVALID'		=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 	'LOG_RESET_DATE'			=> '<strong>Opstartdatum forum gereset</strong>',
 	'LOG_RESET_ONLINE'			=> '<strong>Meeste gebruikers online gereset</strong>',
+	'LOG_RESYNC_FILES_STATS'	=> '<strong>File statistics resynchronised</strong>',
 	'LOG_RESYNC_POSTCOUNTS'		=> '<strong>Gebruikers berichtenteller gesynchroniseerd</strong>',
 	'LOG_RESYNC_POST_MARKING'	=> '<strong>Gestipte onderwerpen gesynchroniseerd</strong>',
 	'LOG_RESYNC_STATS'			=> '<strong>Berichten-, onderwerpen- en gebruikersstatistieken gesynchroniseerd</strong>',
 
 	'LOG_SEARCH_INDEX_CREATED'	=> '<strong>Zoekindex gemaakt voor</strong><br />» %s',
 	'LOG_SEARCH_INDEX_REMOVED'	=> '<strong>Zoekindex verwijderd voor</strong><br />» %s',
+	'LOG_SPHINX_ERROR'			=> '<strong>Sphinx Error</strong><br />Â» %s',
 	'LOG_STYLE_ADD'				=> '<strong>Nieuwe stijl toegevoegd</strong><br />» %s',
 	'LOG_STYLE_DELETE'			=> '<strong>Stijl verwijderd</strong><br />» %s',
 	'LOG_STYLE_EDIT_DETAILS'	=> '<strong>Stijl gewijzigd</strong><br />» %s',
@@ -10964,15 +11272,18 @@ $lang = array_merge($lang, array(
 	'LOG_USER_GROUP_RESIGN'			=> '<strong>Gebruiker uit groep gestapt</strong><br />» %s',
 
 	'LOG_WARNING_DELETED'		=> '<strong>Gebruikers-waarschuwing verwijderd</strong><br />» %s',
-	'LOG_WARNINGS_DELETED'		=> '<strong>Verwijderde %2$s gebruikers-waarschuwing</strong><br />» %1$s',
 	'LOG_WARNINGS_DELETED_ALL'	=> '<strong>Verwijderde alle gebruikers-waarschuwingen</strong><br />» %s',
 
 	'LOG_WORD_ADD'			=> '<strong>Censuur toegevoegd</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>Censuur verwijderd</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Censuur gewijzigd</strong><br />» %s',
+
+	'LOG_EXT_ENABLE'	=> '<strong>Extension enabled</strong><br />Â» %s',
+	'LOG_EXT_DISABLE'	=> '<strong>Extension disabled</strong><br />Â» %s',
+	'LOG_EXT_PURGE'		=> '<strong>Extensionâ€™s data deleted</strong><br />Â» %s',
+
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics met afbeeldingen geresynchroniseerd</strong>',
 	'LOG_PM_COUNT_RESET'	=> '<strong>Indicatie voor nieuwe / ongelezen PBs ingesteld naar 0 voor</strong><br />» %s',
-
 ));
 
 $lang = array_merge($lang, array(
@@ -11273,7 +11584,7 @@ $lang = array_merge($lang, array(
 	'ACP_PORTAL_WELCOME_EXPLAIN'=> '',
 	'ADM_LOGOUT'			=> 'Beheerderspaneel&nbsp;uitloggen',
 	'ADM_LOGGED_OUT'		=> 'Succesvol uitgelogd uit het beheerderspaneel',
-	'LOG_REFERER_INVALID'	=> '<strong>Verwijzingscontrole faalde</strong><br />»Verwijzing was “<em>%1$s</em>”. Het verzoek is afgewezen en de sessie is afgebroken.',
+	'LOG_REFERER_INVALID'	=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 
 	'ACP_ABBCODES'			=> 'BBcode Box',
 	'LOG_CONFIG_ABBCODES'	=> '<strong>Gewijzigde BBCode Box instellingen</strong>',
@@ -11679,7 +11990,7 @@ $lang = array_merge($lang, array(
 	'SELECT_A_PREFIX'				=> 'Select a prefix',
 	'ACP_SEOQUERYS'					=> 'SEO Queries',
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Bijlagenbeheer',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can list and delete files attached to posts and private messages.',
 	'LOG_ATTACH_DEL'				=> '<strong>Attachments deleted</strong><br />» %s',
 	'LOG_ATTACH_REASSIGNED'			=> '<strong>Attachment reassigned to Post</strong><br />» ID %1$d - %2$s',
 	'TOTAL_SIZE'					=> 'Total size',
@@ -11698,11 +12009,11 @@ $lang = array_merge($lang, array(
 	'ACP_INTRO'				=> 'Intro',
 
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Bijlagenbeheer',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
 	'TOTAL_SIZE'				=> 'Total size',
 	'DOWNLOADS'				=> 'Downloads',
 
-	'NO_AVATAR'				=> 'URL of the avatar for all the have no separate',
+	'NO_AVATAR'				=> 'No avatar selected',
 	'NO_AVATAR_EXPLAIN'			=> 'The optimal size of the avatar is 120x120px, this box is left blank, no picture at all. <br /> Demo URL: http://www.userboard.org/images/no_avatar_1.gif',
 	'GROUP_ICON'				=> 'Group Icon',
 	'GROUP_ICON_EXPLAIN'			=> 'Upload your Group Icons into Upload &#187; Topic/Group Icons',
@@ -12865,6 +13176,97 @@ $lang = array_merge($lang, array(
 	'NO_EMAIL_SUBJECT'		=> 'Je hebt geen onderwerp opgegeven.',
 ));
 
+#######language/en/acp/extensions.php#######
+
+$lang = array_merge($lang, array(
+	'EXTENSION'					=> 'Extensie',
+	'EXTENSIONS'				=> 'Extensions',
+	'EXTENSIONS_ADMIN'			=> 'Extensions Manager',
+	'EXTENSIONS_EXPLAIN'		=> 'The Extensions Manager is a tool in your phpBB Board which allows you to manage all of your extensions statuses and view information about them.',
+	'EXTENSION_INVALID_LIST'	=> 'The “%s” extension is not valid.<br />%s<br /><br />',
+	'EXTENSION_NOT_AVAILABLE'	=> 'The selected extension is not available for this board, please verify your phpBB and PHP versions are allowed (see the details page).',
+	'EXTENSION_DIR_INVALID'		=> 'The selected extension has an invalid directory structure and cannot be enabled.',
+	'EXTENSION_NOT_ENABLEABLE'	=> 'The selected extension cannot be enabled, please verify the extension’s requirements.',
+
+	'DETAILS'				=> 'Details',
+
+	'EXTENSIONS_DISABLED'	=> 'Disabled Extensions',
+	'EXTENSIONS_ENABLED'	=> 'Enabled Extensions',
+
+	'EXTENSION_DELETE_DATA'	=> 'Delete data',
+	'EXTENSION_DISABLE'		=> 'Disable',
+	'EXTENSION_ENABLE'		=> 'Enable',
+
+	'EXTENSION_DELETE_DATA_EXPLAIN'	=> 'Deleting an extension’s data removes all of its data and settings. The extension files are retained so it can be enabled again.',
+	'EXTENSION_DISABLE_EXPLAIN'		=> 'Disabling an extension retains its files, data and settings but removes any functionality added by the extension.',
+	'EXTENSION_ENABLE_EXPLAIN'		=> 'Enabling an extension allows you to use it on your board.',
+
+	'EXTENSION_DELETE_DATA_IN_PROGRESS'	=> 'The extension’s data is currently being deleted. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_DISABLE_IN_PROGRESS'	=> 'The extension is currently being disabled. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_ENABLE_IN_PROGRESS'	=> 'The extension is currently being enabled. Please do not leave or refresh this page until it is completed.',
+
+	'EXTENSION_DELETE_DATA_SUCCESS'	=> 'The extension’s data was deleted successfully',
+	'EXTENSION_DISABLE_SUCCESS'		=> 'The extension was disabled successfully',
+	'EXTENSION_ENABLE_SUCCESS'		=> 'The extension was enabled successfully',
+
+	'EXTENSION_NAME'			=> 'Extension Name',
+	'EXTENSION_ACTIONS'			=> 'Actions',
+	'EXTENSION_OPTIONS'			=> 'Options',
+	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
+	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s files from the filesystem</li>
+			<li>Upload the new files</li>
+			<li>Enable the extension</li>
+		</ol>',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s data</li>
+			<li>Delete the extension’s files from the filesystem</li>
+		</ol>',
+
+	'EXTENSION_DELETE_DATA_CONFIRM'	=> 'Are you sure that you wish to delete the data associated with “%s”?<br /><br />This removes all of its data and settings and cannot be undone!',
+	'EXTENSION_DISABLE_CONFIRM'		=> 'Are you sure that you wish to disable the “%s” extension?',
+	'EXTENSION_ENABLE_CONFIRM'		=> 'Are you sure that you wish to enable the “%s” extension?',
+	'EXTENSION_FORCE_UNSTABLE_CONFIRM'	=> 'Are you sure that you wish to force the use of unstable version?',
+
+	'RETURN_TO_EXTENSION_LIST'	=> 'Return to the extension list',
+
+	'EXT_DETAILS'			=> 'Extension Details',
+	'DISPLAY_NAME'			=> 'Disply Name (may be NULL)',
+	'CLEAN_NAME'			=> 'Clean Name',
+	'TYPE'					=> 'Type',
+	'DESCRIPTION'			=> 'Beschrijving',
+	'VERSION'				=> 'Versie',
+	'HOMEPAGE'				=> 'Homepage',
+	'PATH'					=> 'File Path',
+	'TIME'					=> 'Tijd',
+	'LICENSE'				=> 'Licence',
+
+	'REQUIREMENTS'			=> 'Requirements',
+	'PHPBB_VERSION'			=> 'phpBB Version',
+	'PHP_VERSION'			=> 'PHP Version',
+	'AUTHOR_INFORMATION'	=> 'Author Information',
+	'AUTHOR_NAME'			=> 'Name',
+	'AUTHOR_EMAIL'			=> 'Email',
+	'AUTHOR_HOMEPAGE'		=> 'Homepage',
+	'AUTHOR_ROLE'			=> 'Role',
+
+	'NOT_UP_TO_DATE'		=> '%s is not up to date',
+	'UP_TO_DATE'			=> '%s is up to date',
+	'ANNOUNCEMENT_TOPIC'	=> 'Release Announcement',
+	'DOWNLOAD_LATEST'		=> 'Download Version',
+	'NO_VERSIONCHECK'		=> 'No version check information given.',
+
+	'VERSIONCHECK_FORCE_UPDATE_ALL'		=> 'Re-Check all versions',
+	'FORCE_UNSTABLE'					=> 'Always check for unstable versions',
+	'EXTENSIONS_VERSION_CHECK_SETTINGS'	=> 'Version check settings',
+
+	'META_FIELD_NOT_SET'	=> 'Required meta field %s has not been set.',
+	'META_FIELD_INVALID'	=> 'Meta field %s is invalid.',
+));
+
 #######language/en/acp/forums.php#######
 
 $lang = array_merge($lang, array(
@@ -12874,6 +13276,10 @@ $lang = array_merge($lang, array(
 	'AUTO_PRUNE_FREQ_EXPLAIN'	=> 'Tijd in dagen tussen de automatische opruiming van evenementen.',
 	'AUTO_PRUNE_VIEWED'			=> 'Leeftijd berichtweergave bij automatisch opruimen',
 	'AUTO_PRUNE_VIEWED_EXPLAIN'	=> 'Aantal dagen dat een onderwerp niet meer bezocht is, voordat het verwijderd wordt.',
+	'AUTO_PRUNE_SHADOW_FREQ'	=> 'Auto-prune shadow topics frequency',
+	'AUTO_PRUNE_SHADOW_DAYS'	=> 'Auto-prune shadow topics age',
+	'AUTO_PRUNE_SHADOW_DAYS_EXPLAIN'	=> 'Number of days after which shadow topic is removed.',
+	'AUTO_PRUNE_SHADOW_FREQ_EXPLAIN'	=> 'Time in days between pruning events.',
 
 	'CONTINUE'						=> 'Doorgaan',
 	'COPY_PERMISSIONS_EXPLAIN'		=> 'Om het instellen van permissies voor je nieuwe forum eenvoudiger te maken, kun je de permissies van een bestaand forum kopiëren.',
@@ -12932,6 +13338,8 @@ $lang = array_merge($lang, array(
 	'FORUM_PASSWORD_OLD'				=> 'Het forum wachtwoord maakt gebruik van een oude hash methode en zou gewijzigd moeten worden.',
 	'FORUM_PASSWORD_MISMATCH'			=> 'De wachtwoorden die je hebt opgegeven komen niet met elkaar overeen.',
 	'FORUM_PRUNE_SETTINGS'				=> 'Automatische forum-opruim instellingen',
+	'FORUM_PRUNE_SHADOW'				=> 'Enable auto-pruning of shadow topics',
+	'FORUM_PRUNE_SHADOW_EXPLAIN'			=> 'Prunes the forum of shadow topics, set the frequency/age parameters below.',
 	'FORUM_RESYNCED'					=> 'Forum "%s" is succesvol gesynchroniseerd',
 	'FORUM_RULES_EXPLAIN'				=> 'Forumregels worden weergegeven op elke pagina van het desbetreffende forum.',
 	'FORUM_RULES_LINK'					=> 'Link naar de forumregels',
@@ -13023,6 +13431,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE_EXPLAIN'		=> 'Via dit paneel kun je alle gebruikersgroepen beheren en je bestaande groepen wijzigen en/of verwijderen. Verder kun je groepsleiders kiezen, switchen tussen statussen (open/verborgen/gesloten) voor een groep en de groepsbeschrijving en -naam aanpassen.',
+	'ADD_GROUP_CATEGORY'			=> 'Add category',
 	'GROUP_ADD_USERS'				=> 'Add users',
 	'ADD_USERS_EXPLAIN'				=> 'Hier kun je gebruikers aan een groep toevoegen. Je kunt ook kiezen of dit de standaard groep moet worden voor de geselecteerde gebruiker(s). Bovendien kun je hen groepsleider maken. Zet elke gebruikersnaam op een nieuwe regel.',
 
@@ -13036,11 +13445,10 @@ $lang = array_merge($lang, array(
 	'GROUP_APPROVED'				=> 'Goedgekeurde leden',
 	'GROUP_AVATAR'					=> 'Groepsavatar',
 	'GROUP_AVATAR_EXPLAIN'			=> 'Deze afbeelding laten zien in het groepscontrolepaneel.',
+	'GROUP_CATEGORY_NAME'			=> 'Category name',
 	'GROUP_CLOSED'					=> 'Gesloten',
 	'GROUP_COLOR'					=> 'Groepskleur',
 	'GROUP_COLOR_EXPLAIN'			=> 'Wijzigt de kleuren waarin de gebruikersnamen worden weergegeven. Laat deze leeg voor de gebruikersstandaard.',
-	'GROUP_CONFIRM_ADD_USER'		=> 'Weet je zeker dat je de gebruiker %1$s aan deze groep wil toevoegen?',
-	'GROUP_CONFIRM_ADD_USERS'		=> 'Weet je zeker dat je de gebruikers %1$s aan deze groep wil toevoegen?',
 	'GROUP_CREATED'					=> 'Groep succesvol aangemaakt.',
 	'GROUP_DEFAULT'					=> 'Maak groep standaard voor lid',
 	'GROUP_DEFS_UPDATED'			=> 'Standaard groep gemaakt voor geselecteerde leden.',
@@ -13082,6 +13490,8 @@ $lang = array_merge($lang, array(
 	'GROUP_SETTINGS_SAVE'			=> 'Groepsinstellingen',
 	'GROUP_SKIP_AUTH'				=> 'Groepsleider vrijstellen van permissies',
 	'GROUP_SKIP_AUTH_EXPLAIN'		=> 'Indien ingeschakeld zal de groepsleider niet meer de permissies van de groep krijgen.',
+	'GROUP_SPECIAL'					=> 'Pre-defined',
+	'GROUP_TEAMPAGE'				=> 'Display group on teampage',
 	'GROUP_TYPE'					=> 'Groepssoort',
 	'GROUP_TYPE_EXPLAIN'			=> 'Dit bepaalt welke gebruikers de groep kunnen bekijken of lid van kunnen worden.',
 	'GROUP_UPDATED'					=> 'Groepsinstellingen succesvol bijgewerkt.',
@@ -13090,19 +13500,37 @@ $lang = array_merge($lang, array(
 	'GROUP_USERS_EXIST'				=> 'De geselecteerde gebruikers zijn al lid van deze groep.',
 	'GROUP_USERS_REMOVE'			=> 'Gebruikers succesvol verwijderd van de groep en nieuwe/standaard instellingen voor die gebruikers ingesteld.',
 
+	'LEGEND_EXPLAIN'				=> 'These are the groups which are displayed in the group legend:',
+	'LEGEND_SETTINGS'				=> 'Legend settings',
+	'LEGEND_SORT_GROUPNAME'			=> 'Sort legend by group name',
+	'LEGEND_SORT_GROUPNAME_EXPLAIN'	=> 'The order below is ignored when this option is enabled.',
+
+	'MANAGE_LEGEND'			=> 'Manage group legend',
+	'MANAGE_TEAMPAGE'		=> 'Manage teampage',
 	'MAKE_DEFAULT_FOR_ALL'		=> 'Maak standaard groep voor elk lid',
 	'MEMBERS'					=> 'Leden',
 
 	'NO_GROUP'					=> 'Geen groep opgegeven.',
+	'NO_GROUPS_ADDED'			=> 'No groups added yet.',
 	'NO_GROUPS_CREATED'			=> 'Nog geen groepen aangemaakt.',
 	'NO_PERMISSIONS'			=> 'Kopieer de permissies niet',
 	'NO_USERS'					=> 'Je hebt geen gebruikers ingevuld.',
 	'NO_USERS_ADDED'			=> 'Geen gebruikers toegevoegd aan groep.',
 	'NO_VALID_USERS'			=> 'Je hebt geen bestaande gebruiker ingevuld voor deze actie.',
 
+	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> 'Voorgedefinieerde groepen',
 	'SPECIAL_GROUPS_EXPLAIN'	=> 'Voorgedefinieerde groepen zijn speciale groepen. Ze kunnen niet verwijderd of rechtstreeks worden gewijzigd, maar je kunt nog wel gebruikers toevoegen en de basis-instellingen wijzigen.',
 
+	'TEAMPAGE'					=> 'Teampage',
+	'TEAMPAGE_DISP_ALL'			=> 'All memberships',
+	'TEAMPAGE_DISP_DEFAULT'		=> 'User’s default group only',
+	'TEAMPAGE_DISP_FIRST'		=> 'First membership only',
+	'TEAMPAGE_EXPLAIN'			=> 'These are the groups which are displayed on the teampage:',
+	'TEAMPAGE_FORUMS'			=> 'Display moderated forums',
+	'TEAMPAGE_FORUMS_EXPLAIN'	=> 'If set to yes, moderators will have a list with all of the forums where they have moderator permissions displayed in their row. This can be very database intensive for big boards.',
+	'TEAMPAGE_MEMBERSHIPS'		=> 'Display user memberships',
+	'TEAMPAGE_SETTINGS'			=> 'Teampage settings',
 	'TOTAL_MEMBERS'				=> 'Totaal aantal leden',
 
 	'USERS_APPROVED'				=> 'Gebruikers succesvol goedgekeurd.',
@@ -13488,26 +13916,14 @@ $lang = array_merge($lang, array(
 	'ACP_FILES'						=> 'Beheer taalbestanden',
 	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> 'Hier kun je taalpakketten installeren en verwijderen. Het standaard taalpakket is gemarkeerd met een asterisk (*).',
 
-	'EMAIL_FILES'			=> 'E-mail templates',
-
-	'FILE_CONTENTS'				=> 'Bestandsinhoud',
-	'FILE_FROM_STORAGE'			=> 'Bestand uit opslagmap',
-
-	'HELP_FILES'				=> 'Helpbestanden',
-
-	'INSTALLED_LANGUAGE_PACKS'	=> 'Geïnstalleerde talen',
-	'INVALID_LANGUAGE_PACK'		=> 'Het geselecteerde taalpakket lijkt niet in orde. Verifieer het taalpakket en upload het opnieuw a.u.b.',
-	'INVALID_UPLOAD_METHOD'		=> 'De geselecteerde uploadmethode is onjuist, kies een andere methode a.u.b.',
+	'DELETE_LANGUAGE_CONFIRM'		=> 'Are you sure you wish to delete “%s”?',
+	'INSTALLED_LANGUAGE_PACKS'		=> 'Geïnstalleerde talen',
 
 	'LANGUAGE_DETAILS_UPDATED'			=> 'Taalinfo is succesvol bijgewerkt',
-	'LANGUAGE_ENTRIES'					=> 'Taalzinnen',
-	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Hier kun je bestaande zinnen of de nog niet-vertaalde zinnen in het taalpakket bewerken.<br /><strong>Opmerking:</strong> Zodra je een taalbestand hebt gewijzigd, zullen de wijzigingen worden opgeslagen in een afzonderlijke map om te downloaden. De wijzigingen zullen niet online zichtbaar zijn totdat je de originele taalbestanden vervangt (door ze te uploaden).',
-	'LANGUAGE_FILES'					=> 'Taalbestanden',
-	'LANGUAGE_KEY'						=> 'Taalsleutel',
 	'LANGUAGE_PACK_ALREADY_INSTALLED'	=> 'Dit taalpakket is al geïnstalleerd.',
-	'LANGUAGE_PACK_DELETED'				=> 'Het taalpakket <strong>%s</strong> is succesvol verwijderd. Alle gebruikers die dit taalpakket gebruikten, gebruiken nu het standaard taalpakket van het forum.',
+	'LANGUAGE_PACK_DELETED'				=> 'The language pack “%s” has been removed successfully. All users using this language have been reset to the board’s default language.',
 	'LANGUAGE_PACK_DETAILS'				=> 'Info taalpakket',
-	'LANGUAGE_PACK_INSTALLED'			=> 'Het taalpakket <strong>%s</strong> is succesvol geïnstalleerd.',
+	'LANGUAGE_PACK_INSTALLED'			=> 'The language pack “%s” has been successfully installed.',
 	'LANGUAGE_PACK_CPF_UPDATE'			=> 'De taalvariabelen van de aangepaste profielvelden zijn overgenomen uit de standaardtaal. Pas ze aan indien nodig.',
 	'LANGUAGE_PACK_ISO'					=> 'ISO',
 	'LANGUAGE_PACK_LOCALNAME'			=> 'Lokale naam',
@@ -13520,33 +13936,44 @@ $lang = array_merge($lang, array(
 	'LANG_ISO_CODE'						=> 'ISO-code',
 	'LANG_LOCAL_NAME'					=> 'Lokale naam',
 
-	'MISSING_LANGUAGE_FILE'		=> 'Ontbrekend taalbestand: <strong style="color:red">%s</strong>',
+	'MISSING_LANG_FILES'		=> 'Missing language files',
 	'MISSING_LANG_VARIABLES'	=> 'Ontbrekende taalvariabelen',
-	'MODS_FILES'				=> 'MOD’s taalbestanden',
 
 	'NO_FILE_SELECTED'				=> 'Je hebt geen taalbestand geselecteerd.',
 	'NO_LANG_ID'					=> 'Je hebt geen taalpakket geselecteerd.',
-	'NO_REMOVE_DEFAULT_LANG'		=> 'Het is niet mogelijk om het standaard taalpakket te verwijderen.<br />Als je dit taalpakket toch wilt verwijderen, dien je eerst de standaard taal van het forum te wijzigen.',
+	'NO_REMOVE_DEFAULT_LANG'		=> 'You are not able to remove the default language pack.<br />If you want to remove this language pack, change your board’s default language first.',
 	'NO_UNINSTALLED_LANGUAGE_PACKS'	=> 'Geen taalpakketten die nog niet zijn geïnstalleerd.',
 
-	'REMOVE_FROM_STORAGE_FOLDER'		=> 'Verwijder uit de opslagmap',
-
-	'SELECT_DOWNLOAD_FORMAT'	=> 'Selecteer download-archiefformaat',
-	'SUBMIT_AND_DOWNLOAD'		=> 'Download bestand',
-	'SUBMIT_AND_UPLOAD'			=> 'Upload bestand',
-
-	'THOSE_MISSING_LANG_FILES'			=> 'De volgende taalbestanden zijn niet aanwezig in de %s taalmap',
-	'THOSE_MISSING_LANG_VARIABLES'		=> 'De volgende taalvariabelen zijn niet aanwezig in het <strong>%s</strong> taalpakket',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 
 	'UNINSTALLED_LANGUAGE_PACKS'	=> 'Niet geïnstalleerde taalpakketten',
 
+	// 3.0.12
+	'EMAIL_FILES'			=> 'E-mail templates',
+	'FILE_CONTENTS'				=> 'Bestandsinhoud',
+	'FILE_FROM_STORAGE'			=> 'Bestand uit opslagmap',
+	'HELP_FILES'				=> 'Helpbestanden',
+	'INSTALLED_LANGUAGE_PACKS'	=> 'Geïnstalleerde talen',
+	'INVALID_LANGUAGE_PACK'		=> 'Het geselecteerde taalpakket lijkt niet in orde. Verifieer het taalpakket en upload het opnieuw a.u.b.',
+	'INVALID_UPLOAD_METHOD'		=> 'De geselecteerde uploadmethode is onjuist, kies een andere methode a.u.b.',
+	'LANGUAGE_ENTRIES'					=> 'Taalzinnen',
+	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Hier kun je bestaande zinnen of de nog niet-vertaalde zinnen in het taalpakket bewerken.<br /><strong>Opmerking:</strong> Zodra je een taalbestand hebt gewijzigd, zullen de wijzigingen worden opgeslagen in een afzonderlijke map om te downloaden. De wijzigingen zullen niet online zichtbaar zijn totdat je de originele taalbestanden vervangt (door ze te uploaden).',
+	'LANGUAGE_FILES'					=> 'Taalbestanden',
+	'LANGUAGE_KEY'						=> 'Taalsleutel',
+	'MISSING_LANGUAGE_FILE'		=> 'Ontbrekend taalbestand: <strong style="color:red">%s</strong>',
+	'SELECT_DOWNLOAD_FORMAT'	=> 'Selecteer download-archiefformaat',
+	'SUBMIT_AND_DOWNLOAD'		=> 'Download bestand',
+	'SUBMIT_AND_UPLOAD'			=> 'Upload bestand',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 	'UNABLE_TO_WRITE_FILE'		=> 'Het bestand kan niet in %s geschreven worden.',
 	'UPLOAD_COMPLETED'			=> 'De upload is voltooid.',
 	'UPLOAD_FAILED'				=> 'De upload is mislukt. Je zal het bestand handmatig moeten vervangen.',
 	'UPLOAD_METHOD'				=> 'Upload methode',
 	'UPLOAD_SETTINGS'			=> 'Uploadvoorkeuren',
-
 	'WRONG_LANGUAGE_FILE'		=> 'Het geselecteerde taalbestand is ongeldig.',
+	// 3.0.12
 ));
 
 #######language/en/acp/lexicon.php#######
@@ -13879,6 +14306,171 @@ $lang = array_merge($lang, array(
 	'ROLE_DESCRIPTION_ADMIN_FOOTBALL'	=> 'Can edit final match results.',
 ));
 
+#######language/en/acp/permissions_phpbb.php#######
+
+$lang = array_merge($lang, array(
+	'ACL_CAT_ACTIONS'		=> 'Actions',
+	'ACL_CAT_CONTENT'		=> 'Content',
+	'ACL_CAT_FORUMS'		=> 'Forums',
+	'ACL_CAT_MISC'			=> 'Misc',
+	'ACL_CAT_PERMISSIONS'	=> 'Permissions',
+	'ACL_CAT_PM'			=> 'Private messages',
+	'ACL_CAT_POLLS'			=> 'Polls',
+	'ACL_CAT_POST'			=> 'Post',
+	'ACL_CAT_POST_ACTIONS'	=> 'Post actions',
+	'ACL_CAT_POSTING'		=> 'Posting',
+	'ACL_CAT_PROFILE'		=> 'Profile',
+	'ACL_CAT_SETTINGS'		=> 'Settings',
+	'ACL_CAT_TOPIC_ACTIONS'	=> 'Topic actions',
+	'ACL_CAT_USER_GROUP'	=> 'Users &amp; Groups',
+));
+
+// User Permissions
+$lang = array_merge($lang, array(
+	'ACL_U_VIEWPROFILE'	=> 'Can view profiles, memberlist and online list',
+	'ACL_U_CHGNAME'		=> 'Can change username',
+	'ACL_U_CHGPASSWD'	=> 'Can change password',
+	'ACL_U_CHGEMAIL'	=> 'Can change email address',
+	'ACL_U_CHGAVATAR'	=> 'Can change avatar',
+	'ACL_U_CHGGRP'		=> 'Can change default usergroup',
+	'ACL_U_CHGPROFILEINFO'	=> 'Can change profile field information',
+
+	'ACL_U_ATTACH'		=> 'Can attach files',
+	'ACL_U_DOWNLOAD'	=> 'Can download files',
+	'ACL_U_SAVEDRAFTS'	=> 'Can save drafts',
+	'ACL_U_CHGCENSORS'	=> 'Can disable word censors',
+	'ACL_U_SIG'			=> 'Can use signature',
+
+	'ACL_U_SENDPM'		=> 'Can send private messages',
+	'ACL_U_MASSPM'		=> 'Can send messages to multiple users',
+	'ACL_U_MASSPM_GROUP'=> 'Can send messages to groups',
+	'ACL_U_READPM'		=> 'Can read private messages',
+	'ACL_U_PM_EDIT'		=> 'Can edit own private messages',
+	'ACL_U_PM_DELETE'	=> 'Can remove private messages from own folder',
+	'ACL_U_PM_FORWARD'	=> 'Can forward private messages',
+	'ACL_U_PM_EMAILPM'	=> 'Can email private messages',
+	'ACL_U_PM_PRINTPM'	=> 'Can print private messages',
+	'ACL_U_PM_ATTACH'	=> 'Can attach files in private messages',
+	'ACL_U_PM_DOWNLOAD'	=> 'Can download files in private messages',
+	'ACL_U_PM_BBCODE'	=> 'Can use BBCode in private messages',
+	'ACL_U_PM_SMILIES'	=> 'Can use smilies in private messages',
+	'ACL_U_PM_IMG'		=> 'Can use [img] BBCode tag in private messages',
+	'ACL_U_PM_FLASH'	=> 'Can use [flash] BBCode tag in private messages',
+
+	'ACL_U_SENDEMAIL'	=> 'Can send emails',
+	'ACL_U_SENDIM'		=> 'Can send instant messages',
+	'ACL_U_IGNOREFLOOD'	=> 'Can ignore flood limit',
+	'ACL_U_HIDEONLINE'	=> 'Can hide online status',
+	'ACL_U_VIEWONLINE'	=> 'Can view hidden online users',
+	'ACL_U_SEARCH'		=> 'Can search board',
+));
+
+// Forum Permissions
+$lang = array_merge($lang, array(
+	'ACL_F_LIST'		=> 'Can see forum',
+	'ACL_F_READ'		=> 'Can read forum',
+	'ACL_F_SEARCH'		=> 'Can search the forum',
+	'ACL_F_SUBSCRIBE'	=> 'Can subscribe forum',
+	'ACL_F_PRINT'		=> 'Can print topics',
+	'ACL_F_EMAIL'		=> 'Can email topics',
+	'ACL_F_BUMP'		=> 'Can bump topics',
+	'ACL_F_USER_LOCK'	=> 'Can lock own topics',
+	'ACL_F_DOWNLOAD'	=> 'Can download files',
+	'ACL_F_REPORT'		=> 'Can report posts',
+
+	'ACL_F_POST'		=> 'Can start new topics',
+	'ACL_F_STICKY'		=> 'Can post stickies',
+	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_REPLY'		=> 'Can reply to topics',
+	'ACL_F_EDIT'		=> 'Can edit own posts',
+	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
+	'ACL_F_SOFTDELETE'	=> 'Can soft delete own posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_F_IGNOREFLOOD' => 'Can ignore flood limit',
+	'ACL_F_POSTCOUNT'	=> 'Increment post counter<br /><em>Please note that this setting only affects new posts.</em>',
+	'ACL_F_NOAPPROVE'	=> 'Can post without approval',
+
+	'ACL_F_ATTACH'		=> 'Can attach files',
+	'ACL_F_ICONS'		=> 'Can use topic/post icons',
+	'ACL_F_BBCODE'		=> 'Can use BBCode',
+	'ACL_F_FLASH'		=> 'Can use [flash] BBCode tag',
+	'ACL_F_IMG'			=> 'Can use [img] BBCode tag',
+	'ACL_F_SIGS'		=> 'Can use signatures',
+	'ACL_F_SMILIES'		=> 'Can use smilies',
+
+	'ACL_F_POLL'		=> 'Can create polls',
+	'ACL_F_VOTE'		=> 'Can vote in polls',
+	'ACL_F_VOTECHG'		=> 'Can change existing vote',
+));
+
+// Moderator Permissions
+$lang = array_merge($lang, array(
+	'ACL_M_EDIT'		=> 'Can edit posts',
+	'ACL_M_DELETE'		=> 'Can permanently delete posts',
+	'ACL_M_SOFTDELETE'	=> 'Can soft delete posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_M_APPROVE'		=> 'Can approve and restore posts',
+	'ACL_M_REPORT'		=> 'Can close and delete reports',
+	'ACL_M_CHGPOSTER'	=> 'Can change post author',
+
+	'ACL_M_MOVE'	=> 'Can move topics',
+	'ACL_M_LOCK'	=> 'Can lock topics',
+	'ACL_M_SPLIT'	=> 'Can split topics',
+	'ACL_M_MERGE'	=> 'Can merge topics',
+
+	'ACL_M_INFO'	=> 'Can view post details',
+	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+));
+
+// Admin Permissions
+$lang = array_merge($lang, array(
+	'ACL_A_BOARD'		=> 'Can alter board settings/check for updates',
+	'ACL_A_SERVER'		=> 'Can alter server/communication settings',
+	'ACL_A_JABBER'		=> 'Can alter Jabber settings',
+	'ACL_A_PHPINFO'		=> 'Can view php settings',
+
+	'ACL_A_FORUM'		=> 'Can manage forums',
+	'ACL_A_FORUMADD'	=> 'Can add new forums',
+	'ACL_A_FORUMDEL'	=> 'Can delete forums',
+	'ACL_A_PRUNE'		=> 'Can prune forums',
+
+	'ACL_A_ICONS'		=> 'Can alter topic/post icons and smilies',
+	'ACL_A_WORDS'		=> 'Can alter word censors',
+	'ACL_A_BBCODE'		=> 'Can define BBCode tags',
+	'ACL_A_ATTACH'		=> 'Can alter attachment related settings',
+
+	'ACL_A_USER'		=> 'Can manage users<br /><em>This also includes seeing the users browser agent within the viewonline list.</em>',
+	'ACL_A_USERDEL'		=> 'Can delete/prune users',
+	'ACL_A_GROUP'		=> 'Can manage groups',
+	'ACL_A_GROUPADD'	=> 'Can add new groups',
+	'ACL_A_GROUPDEL'	=> 'Can delete groups',
+	'ACL_A_RANKS'		=> 'Can manage ranks',
+	'ACL_A_PROFILE'		=> 'Can manage custom profile fields',
+	'ACL_A_NAMES'		=> 'Can manage disallowed names',
+	'ACL_A_BAN'			=> 'Can manage bans',
+
+	'ACL_A_VIEWAUTH'	=> 'Can view permission masks',
+	'ACL_A_AUTHGROUPS'	=> 'Can alter permissions for individual groups',
+	'ACL_A_AUTHUSERS'	=> 'Can alter permissions for individual users',
+	'ACL_A_FAUTH'		=> 'Can alter forum permission class',
+	'ACL_A_MAUTH'		=> 'Can alter moderator permission class',
+	'ACL_A_AAUTH'		=> 'Can alter admin permission class',
+	'ACL_A_UAUTH'		=> 'Can alter user permission class',
+	'ACL_A_ROLES'		=> 'Can manage roles',
+	'ACL_A_SWITCHPERM'	=> 'Can use others permissions',
+
+	'ACL_A_STYLES'		=> 'Can manage styles',
+	'ACL_A_EXTENSIONS'	=> 'Can manage extensions',
+	'ACL_A_VIEWLOGS'	=> 'Can view logs',
+	'ACL_A_CLEARLOGS'	=> 'Can clear logs',
+	'ACL_A_MODULES'		=> 'Can manage modules',
+	'ACL_A_LANGUAGE'	=> 'Can manage language packs',
+	'ACL_A_EMAIL'		=> 'Can send mass email',
+	'ACL_A_BOTS'		=> 'Can manage bots',
+	'ACL_A_REASONS'		=> 'Can manage report/denial reasons',
+	'ACL_A_BACKUP'		=> 'Can backup/restore database',
+	'ACL_A_SEARCH'		=> 'Can manage search backends and settings',
+));
+
 #######language/en/acp/phpbb_seo.php#######
 
 $lang = array_merge($lang, array(
@@ -14050,6 +14642,7 @@ $lang = array_merge($lang, array(
 
 	'BBCODE_ADDED'				=> 'BBCode added successfully.',
 	'BBCODE_EDITED'				=> 'BBCode edited successfully.',
+	'BBCODE_DELETED'			=> 'The BBCode has been removed successfully.',
 	'BBCODE_NOT_EXIST'			=> 'The BBCode you selected does not exist.',
 	'BBCODE_HELPLINE'			=> 'Help line',
 	'BBCODE_HELPLINE_EXPLAIN'	=> 'This field contains the mouse over text of the BBCode.',
@@ -14105,17 +14698,10 @@ $lang = array_merge($lang, array(
 	'EXPORT_SMILIES'			=> 'Exporteer en download smilies.pak',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sWanneer je deze link aanklikt, zullen de instellingen als <samp>smilies.pak</samp> worden opgeslagen.%s.',
 
-
 	'ICONS_ADD'				=> 'Nieuw icoon toevoegen',
-	'ICONS_NONE_ADDED'		=> 'Er zijn geen iconen toegevoegd.',
-	'ICONS_ONE_ADDED'		=> 'Het icoon is toegevoegd.',
-	'ICONS_ADDED'			=> 'De iconen zijn toegevoegd.',
 	'ICONS_CONFIG'			=> 'Icooninstellingen',
 	'ICONS_DELETED'			=> 'Het icoon is verwijderd.',
 	'ICONS_EDIT'			=> 'Icoon bewerken',
-	'ICONS_ONE_EDITED'		=> 'Het icoon is bijgewerkt.',
-	'ICONS_NONE_EDITED'		=> 'Er zijn geen iconen bijgewerkt.',
-	'ICONS_EDITED'			=> 'De iconen zijn bijgewerkt.',
 	'ICONS_HEIGHT'			=> 'Icoonhoogte',
 	'ICONS_IMAGE'			=> 'Icoonafbeelding',
 	'ICONS_IMPORTED'		=> 'De icoonpakketten zijn geïnstalleerd.',
@@ -14145,9 +14731,6 @@ $lang = array_merge($lang, array(
 
 	'SELECT_PACKAGE'			=> 'Selecteer een pakketbestand',
 	'SMILIES_ADD'				=> 'Nieuwe smilie toevoegen',
-	'SMILIES_NONE_ADDED'		=> 'Er zijn geen smilies toegevoegd.',
-	'SMILIES_ONE_ADDED'			=> 'De smilies zijn toegevoegd.',
-	'SMILIES_ADDED'				=> 'De smilies zijn toegevoegd.',
 	'SMILIES_CODE'				=> 'Smilie-code',
 	'SMILIES_CONFIG'			=> 'Smilie-instellingen',
 	'SMILIES_DELETED'			=> 'De smilie is verwijderd.',
@@ -14155,9 +14738,6 @@ $lang = array_merge($lang, array(
 	'SMILIE_NO_CODE'			=> 'De smilie “%s” werd genegeerd, omdat er geen code was opgegeven.',
 	'SMILIE_NO_EMOTION'			=> 'De smilie “%s” werd genegeerd, omdat er geen emotie was ingevoerd.',
 	'SMILIE_NO_FILE'			=> 'De smilie “%s” werd genegeerd, omdat het bestand ontbreekt.',
-	'SMILIES_NONE_EDITED'		=> 'Er zijn geen smilies bewerkt.',
-	'SMILIES_ONE_EDITED'		=> 'De smilie is bijgewerkt.',
-	'SMILIES_EDITED'			=> 'De smilies zijn bijgewerkt.',
 	'SMILIES_EMOTION'			=> 'Gemoedstoestand',
 	'SMILIES_HEIGHT'			=> 'Smilie-hoogte',
 	'SMILIES_IMAGE'				=> 'Smilie-afbeelding',
@@ -14169,7 +14749,6 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'Smilie-afbeeldingbestand',
 	'SMILIES_WIDTH'				=> 'Smilie-breedte',
 
-	'TOO_MANY_SMILIES'		=> 'Je bericht bevat teveel smilies. Er is een maximaal aantal van %d smilies toegestaan.',
 	'WRONG_PAK_TYPE'		=> 'Het opgegeven pakket bevat niet de vereiste data.',
 ));
 
@@ -14267,8 +14846,11 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ADDED_PROFILE_FIELD'	=> 'Profielveld succesvol toegevoegd.',
+	'ALPHA_DOTS'			=> 'Alphanumeric and dots (periods)',
 	'ALPHA_ONLY'			=> 'Alleen cijfers en letters',
 	'ALPHA_SPACERS'			=> 'Cijfers, letters en spaties',
+	'ALPHA_UNDERSCORE'		=> 'Alphanumeric and underscores',
+	'ALPHA_PUNCTUATION'		=> 'Alphanumeric with comma, dots, underscore and dashes beginning with a letter',
 	'ALWAYS_TODAY'			=> 'Altijd de huidige tijd',
 
 	'BOOL_ENTRIES_EXPLAIN'	=> 'Vul nu de keuzes in',
@@ -14295,6 +14877,10 @@ $lang = array_merge($lang, array(
 	'DISPLAY_AT_PROFILE_EXPLAIN'	=> 'De gebruiker kan het profielveld binnenin het gebruikerspaneel wijzigen.',
 	'DISPLAY_AT_REGISTER'			=> 'Weergeven op de registratiepagina',
 	'DISPLAY_AT_REGISTER_EXPLAIN'	=> 'Wanneer deze optie is ingeschakeld, zal het veld worden weergegeven tijdens het registreren.',
+	'DISPLAY_ON_MEMBERLIST'			=> 'Display on memberlist screen',
+	'DISPLAY_ON_MEMBERLIST_EXPLAIN'	=> 'If this option is enabled, the field will be displayed in the user rows on the memberlist screen.',
+	'DISPLAY_ON_PM'					=> 'Display on view private message screen',
+	'DISPLAY_ON_PM_EXPLAIN'			=> 'If this option is enabled, the field will be displayed in the mini-profile on the private message screen.',
 	'DISPLAY_ON_VT'					=> 'Bekijk in `bekijk onderwerp\' scherm',
 	'DISPLAY_ON_VT_EXPLAIN'			=> 'Als deze optie is ingeschakeld, zal het veld worden getoond in het miniprofiel bij een onderwerp.',
 	'DISPLAY_PROFILE_FIELD'			=> 'Profielveld publiek weergeven',
@@ -14308,20 +14894,26 @@ $lang = array_merge($lang, array(
 	'EVERYTHING_OK'					=> 'Alles oké',
 
 	'FIELD_BOOL'				=> 'Boolean (ja/nee)',
+	'FIELD_CONTACT_DESC'		=> 'Contact description',
+	'FIELD_CONTACT_URL'			=> 'Contact link',
 	'FIELD_DATE'				=> 'Datum',
 	'FIELD_DESCRIPTION'			=> 'Veld omschrijving',
 	'FIELD_DESCRIPTION_EXPLAIN'	=> 'De uitleg van het veld zoals getoond aan de gebruiker.',
 	'FIELD_DROPDOWN'			=> 'Dropdown box',
+	'FIELD_GOOGLEPLUS'			=> 'Google+',
 	'FIELD_IDENT'				=> 'Veld identificatie',
 	'FIELD_IDENT_ALREADY_EXIST'	=> 'De gekozen identificatie voor het veld bestaat al. Kies een andere naam a.u.b.',
 	'FIELD_IDENT_EXPLAIN'		=> 'De veldnaam wordt gebruikt om het profielveld zowel in de database als in de templates te herkennen.',
 	'FIELD_INT'					=> 'Nummers',
+	'FIELD_IS_CONTACT'			=> 'Display field as a contact field',
+	'FIELD_IS_CONTACT_EXPLAIN'	=> 'Contact fields are displayed within the contact section of the user profile and are displayed differently in the mini profile next to posts and private messages. You can use <samp>%s</samp> as a placeholder variable which will be replaced by a value provided by the user.',
 	'FIELD_LENGTH'				=> 'Lengte van het veld',
 	'FIELD_NOT_FOUND'			=> 'Profielveld werd niet gevonden.',
 	'FIELD_STRING'				=> 'Enkel tekstveld',
 	'FIELD_TEXT'				=> 'Tekstruimte',
 	'FIELD_TYPE'				=> 'Veldtype',
 	'FIELD_TYPE_EXPLAIN'		=> 'Het achteraf aanpassen van het veldtype is niet mogelijk.',
+	'FIELD_URL'					=> 'URL (Link)',
 	'FIELD_VALIDATION'			=> 'Veldvalidatie',
 	'FIRST_OPTION'				=> 'Eerste keuze',
 
@@ -14333,6 +14925,12 @@ $lang = array_merge($lang, array(
 	'ISO_LANGUAGE'				=> 'Taal [%s]',
 
 	'LANG_SPECIFIC_OPTIONS'		=> 'Specifieke taalkeuzes [<strong>%s</strong>]',
+
+	'LETTER_NUM_DOTS'			=> 'Any letters, numbers and dots (periods)',
+	'LETTER_NUM_ONLY'			=> 'Any letters and numbers',
+	'LETTER_NUM_PUNCTUATION'	=> 'Any letters, numbers, comma, dots, underscores and dashes beginning with any letter',
+	'LETTER_NUM_SPACERS'		=> 'Any letters, numbers and spacers',
+	'LETTER_NUM_UNDERSCORE'		=> 'Any letters, numbers and underscores',
 
 	'MAX_FIELD_CHARS'		=> 'Maximaal aantal karakters',
 	'MAX_FIELD_NUMBER'		=> 'Hoogst toegestane',
@@ -14387,7 +14985,9 @@ $lang = array_merge($lang, array(
 #######language/en/acp/prune.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_PRUNE_USERS_EXPLAIN'	=> 'Hiermee kun je forumgebruikers verwijderen of deactiveren op je forum. Accounts kunnen op verschillende manieren gefilterd worden; via het aantal berichten, datum laatste activiteit, enz. Anderzijds kun je ook de criteriaselectie overslaan door een lijst gebruikers op te geven (elk op een afzonderlijke regel) in het tekstveld. Pas hier mee op! Zodra een gebruiker verwijderd is, kun je deze actie niet meer terugdraaien.',
+	'ACP_PRUNE_USERS_EXPLAIN'	=> 'This section allows you to delete or deactivate users on your board. Accounts can be filtered in a variety of ways; by post count, most recent activity, etc. Criteria may be combined to narrow down which accounts are affected. For example, you can prune users with fewer than 10 posts, who were also inactive after 2002-01-01. Use * as a wildcard for text fields. Alternatively, you may skip the criteria selection completely by entering a list of users (each on a separate line) into the text field. Take care with this facility! Once a user is deleted, there is no way to reverse the action.',
+
+	'CRITERIA'				=> 'Criteria',
 
 	'DEACTIVATE_DELETE'			=> 'Deactiveren of verwijderen',
 	'DEACTIVATE_DELETE_EXPLAIN'	=> 'Kies of je de gebruiker wilt deactiveren of verwijderen. Let erop dat gebruikers niet teruggezet kunnen worden!',
@@ -14395,15 +14995,18 @@ $lang = array_merge($lang, array(
 	'DELETE_USER_POSTS'			=> 'Ruim berichten van verwijderde gebruiker op',
 	'DELETE_USER_POSTS_EXPLAIN'	=> 'Verwijdert berichten van verwijderde gebruikers, heeft geen effect bij het deactiveren van gebruikers.',
 
-	'JOINED_EXPLAIN'			=> 'Geef een datum volgens het <kbd>JJJJ-MM-DD</kbd>-formaat.',
+	'JOINED_EXPLAIN'			=> 'Enter a date in <kbd>YYYY-MM-DD</kbd> format. You may use both fields to specify an interval, or leave one blank for an open date range.',
 
 	'LAST_ACTIVE_EXPLAIN'		=> 'Geef een datum volgens het <kbd>JJJJ-MM-DD</kbd>-formaat. Vul <kbd>0000-00-00</kbd> in om gebruikers op te ruimen die nooit zijn ingelogd, <em>voor</em> en <em>na</em> condities worden genegeerd.',
 
+	'POSTS_ON_QUEUE'			=> 'Posts Awaiting Approval',
+	'PRUNE_USERS_GROUP_EXPLAIN'	=> 'Limit to users within the selected group.',
+	'PRUNE_USERS_GROUP_NONE'	=> 'All groups',
 	'PRUNE_USERS_LIST'				=> 'Gebruikers die opgeruimd worden',
-	'PRUNE_USERS_LIST_DELETE'		=> 'Aan de hand van de geselecteerde opruimcriteria voor gebruikers worden de volgende accounts verwijderd.',
-	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'Aan de hand van de geselecteerde opruimcriteria voor gebruikers worden de volgende accounts gedeactiveerd.',
+	'PRUNE_USERS_LIST_DELETE'		=> 'With the selected critera for pruning users the following accounts will be removed. You can remove individual users from the deletion list by unchecking the box next to their username.',
+	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'With the selected critera for pruning users the following accounts will be deactivated. You can remove individual users from the deactivation list by unchecking the box next to their username.',
 
-	'SELECT_USERS_EXPLAIN'		=> 'Geef hier specifieke gebruikersnamen, ze zullen in plaats van de bovenstaande criteria gebruikt worden. Eigenaren kunnen niet worden opgeruimd.',
+	'SELECT_USERS_EXPLAIN'		=> 'Enter specific usernames here. They will be used in preference to the criteria above. Founders cannot be pruned.',
 
 	'USER_DEACTIVATE_SUCCESS'	=> 'De geselecteerde gebruikers zijn gedeactiveerd.',
 	'USER_DELETE_SUCCESS'		=> 'De geselecteerde gebruikers zijn verwijderd.',
@@ -14450,15 +15053,38 @@ $lang = array_merge($lang, array(
 	'DELETING_INDEX_IN_PROGRESS'			=> 'Bezig met het verwijderen van de index',
 	'DELETING_INDEX_IN_PROGRESS_EXPLAIN'	=> 'De zoekmethode is bezig met het legen van de index. Dit kan enkele minuten duren.',
 
-	'FULLTEXT_MYSQL_INCOMPATIBLE_VERSION'	=> 'De MySQL fulltext methode kan alleen vanaf MySQL4 worden gebruikt.',
+	'FULLTEXT_MYSQL_INCOMPATIBLE_DATABASE'	=> 'The MySQL fulltext backend can only be used with MySQL4 and above.',
 	'FULLTEXT_MYSQL_NOT_MYISAM'				=> 'MySQL fulltext indexen kunnen alleen bij MyISAM-tabellen worden gebruikt.',
 	'FULLTEXT_MYSQL_TOTAL_POSTS'			=> 'Totaal aantal geïndexeerde berichten',
-	'FULLTEXT_MYSQL_MBSTRING'				=> 'Ondersteuning voor niet-Latijnse UTF-8 tekens gebruikmakend van mbstring:',
-	'FULLTEXT_MYSQL_PCRE'					=> 'Ondersteuning voor niet-Latijnse UTF-8 tekens gebruikmakend van PCRE:',
-	'FULLTEXT_MYSQL_MBSTRING_EXPLAIN'		=> 'Indien PCRE de unicode opties niet bevat, zal de zoekindex methode de reguliere expressies van mbstring proberen te gebruiken.',
-	'FULLTEXT_MYSQL_PCRE_EXPLAIN'			=> 'Deze zoekindex methode vereist de PCRE unicode opties, die alleen aanwezig zijn in PHP 4.4, 5.1 en hoger, indien je wilt zoeken naar niet-Latijnse karakters.',
 	'FULLTEXT_MYSQL_MIN_SEARCH_CHARS_EXPLAIN'	=> 'Woorden met tenminste dit aantal karakters wordt geïndexeerd voor zoeken. Jij of jouw hosting aanbieder kunnen deze instelling alleen aanpassen via de mysql configuratie.',
 	'FULLTEXT_MYSQL_MAX_SEARCH_CHARS_EXPLAIN'	=> 'Woorden met niet meer dan dit aantal karakters wordt geïndexeerd voor zoeken. Jij of jouw hosting aanbieder kunnen deze instelling alleen aanpassen via de mysql configuratie.',
+
+	'FULLTEXT_POSTGRES_INCOMPATIBLE_DATABASE'	=> 'The PostgreSQL fulltext backend can only be used with PostgreSQL.',
+	'FULLTEXT_POSTGRES_TOTAL_POSTS'			=> 'Total number of indexed posts',
+	'FULLTEXT_POSTGRES_VERSION_CHECK'		=> 'PostgreSQL version',
+	'FULLTEXT_POSTGRES_TS_NAME'				=> 'Text search Configuration Profile:',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN'			=> 'Minimum word length for keywords',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN'			=> 'Maximum word length for keywords',
+	'FULLTEXT_POSTGRES_VERSION_CHECK_EXPLAIN'		=> 'This search backend requires PostgreSQL version 8.3 and above.',
+	'FULLTEXT_POSTGRES_TS_NAME_EXPLAIN'				=> 'The Text search configuration profile used to determine the parser and dictionary.',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN_EXPLAIN'			=> 'Words with at least this many characters will be included in the query to the database.',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN_EXPLAIN'			=> 'Words with no more than this many characters will be included in the query to the database.',
+
+	'FULLTEXT_SPHINX_CONFIGURE'				=> 'Configure the following settings to generate sphinx config file',
+	'FULLTEXT_SPHINX_DATA_PATH'				=> 'Path to data directory',
+	'FULLTEXT_SPHINX_DATA_PATH_EXPLAIN'		=> 'It will be used to store the indexes and log files. You should create this directory outside the web accessible directories. (should have a trailing slash)',
+	'FULLTEXT_SPHINX_DELTA_POSTS'			=> 'Number of posts in frequently updated delta index',
+	'FULLTEXT_SPHINX_HOST'					=> 'Sphinx search daemon host',
+	'FULLTEXT_SPHINX_HOST_EXPLAIN'			=> 'Host on which the sphinx search daemon (searchd) listens. Leave empty to use the default localhost',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT'		=> 'Indexer memory limit',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT_EXPLAIN'	=> 'This number should at all times be lower than the RAM available on your machine. If you experience periodic performance problems this might be due to the indexer consuming too many resources. It might help to lower the amount of memory available to the indexer.',
+	'FULLTEXT_SPHINX_MAIN_POSTS'			=> 'Number of posts in main index',
+	'FULLTEXT_SPHINX_PORT'					=> 'Sphinx search daemon port',
+	'FULLTEXT_SPHINX_PORT_EXPLAIN'			=> 'Port on which the sphinx search daemon (searchd) listens. Leave empty to use the default Sphinx API port 9312',
+	'FULLTEXT_SPHINX_WRONG_DATABASE'		=> 'The sphinx search for phpBB supports MySQL and PostgreSQL only.',
+	'FULLTEXT_SPHINX_CONFIG_FILE'			=> 'Sphinx config file',
+	'FULLTEXT_SPHINX_CONFIG_FILE_EXPLAIN'	=> 'The generated content of the sphinx config file. This data needs to be pasted into the sphinx.conf which is used by sphinx search daemon. Replace the [dbuser] and [dbpassword] placeholders with your database credentials.',
+	'FULLTEXT_SPHINX_NO_CONFIG_DATA'		=> 'The sphinx data and config directory paths are not defined. Please define them to generate the config file.',
 
 	'GENERAL_SEARCH_SETTINGS'				=> 'Algemene zoekinstellingen',
 	'GO_TO_SEARCH_INDEX'					=> 'Ga naar de zoekindex pagina',
@@ -14483,8 +15109,6 @@ $lang = array_merge($lang, array(
 
 	'SEARCH_GUEST_INTERVAL'					=> 'Minimale interval tussen zoekopdrachten van gasten',
 	'SEARCH_GUEST_INTERVAL_EXPLAIN'			=> 'Het aantal seconden dat gasten moeten wachten, voordat ze een nieuwe zoekopdracht kunnen uitvoeren. Indien één gast een zoekopdracht heeft uitgevoerd, zullen de anderen moeten wachten tot deze tijd is verstreken.',
-	'SEARCH_INDEX_CREATE_REDIRECT'			=> 'Alle berichten tot en met bericht id %1$d zijn geïndexeerd, waarvan %2$d berichten in deze stap.<br />De huidige indexeringssnelheid is gemiddeld %3$.1f berichten per seconde.<br />Bezig met indexeren…',
-	'SEARCH_INDEX_DELETE_REDIRECT'			=> 'Alle berichten tot en met bericht id %1$d werden van de zoekindex verwijderd.<br />Bezig met verwijderen…',
 	'SEARCH_INDEX_CREATED'					=> 'Alle forumberichten uit de database zijn succesvol geïndexeerd.',
 	'SEARCH_INDEX_REMOVED'					=> 'De zoekindex van deze methode is succesvol verwijderd.',
 	'SEARCH_INTERVAL'						=> 'Minimale interval tussen zoekopdrachten van gebruikers',
@@ -14507,8 +15131,55 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
+	// 3.1.0
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
+
+	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
+	'CONFIRM_UNINSTALL_STYLES'		=> 'Are you sure you wish to uninstall selected styles?',
+	'COPYRIGHT'						=> 'Copyright',
+
+	'DEACTIVATE_DEFAULT'		=> 'Je kunt de standaardstijl niet deactiveren.',
+	'DELETE_FROM_FS'			=> 'Verwijder uit het bestandssysteem',
+	'DELETE_STYLE_FILES_FAILED'	=> 'Error deleting files for style "%s".',
+	'DELETE_STYLE_FILES_SUCCESS'	=> 'Files for style "%s" have been deleted.',
+	'DETAILS'					=> 'Details',
+
+	'INHERITING_FROM'			=> 'Overnemen van',
+	'INSTALL_STYLE'				=> 'Stijl installeren',
+	'INSTALL_STYLES'			=> 'Install styles',
+	'INSTALL_STYLES_EXPLAIN'	=> 'Here you can install new styles.<br />If you cannot find a specific style in list below, check to make sure style is already installed. If it is not installed, check if it was uploaded correctly.',
+	'INVALID_STYLE_ID'			=> 'Invalid style ID.',
+
+	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
+	'NO_UNINSTALLED_STYLE'		=> 'Geen gedeïnstalleerde stijlen gevonden.',
+
+	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
+
+	'STYLE_ACTIVATE'			=> 'Activeer',
+	'STYLE_ACTIVE'				=> 'Actief',
+	'STYLE_DEACTIVATE'			=> 'Deactiveer',
+	'STYLE_DEFAULT'				=> 'Instellen als standaardstijl',
+	'STYLE_DEFAULT_CHANGE_INACTIVE'	=> 'You must activate style before making it default style.',
+	'STYLE_ERR_INVALID_PARENT'	=> 'Invalid parent style.',
+	'STYLE_ERR_NAME_EXIST'		=> 'Er bestaat reeds een stijl met deze naam.',
+	'STYLE_ERR_STYLE_NAME'		=> 'Je moet deze stijl een naam geven.',
+	'STYLE_INSTALLED'			=> 'Style "%s" has been installed.',
+	'STYLE_INSTALLED_RETURN_INSTALLED_STYLES'	=> 'Return to installed styles list',
+	'STYLE_INSTALLED_RETURN_UNINSTALLED_STYLES'	=> 'Install more styles',
+	'STYLE_NAME'				=> 'Stijlnaam',
+	'STYLE_NOT_INSTALLED'		=> 'Style "%s" was not installed.',
+	'STYLE_PATH'				=> 'Style path',
+	'STYLE_UNINSTALL'			=> 'Uninstall',
+	'STYLE_UNINSTALL_DEPENDENT'	=> 'Style "%s" cannot be uninstalled because it has one or more child styles.',
+	'STYLE_UNINSTALLED'			=> 'Style "%s" uninstalled successfully.',
+	'STYLE_USED_BY'				=> 'Gebruikt door (inclusief robots)',
+
+	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+
+	// 3.0.12
 	'ACP_IMAGESETS_EXPLAIN'	=> 'Afbeeldingensets bevatten alle niet stijlgebonden afbeeldingen die op het forum gebruikt worden. Hier kun je bestaande sets bewerken, exporteren, verwijderen, nieuwe sets invoeren en activeren.',
-	'ACP_STYLES_EXPLAIN'	=> 'Hier kun je alle beschikbare stijlen beheren. Een stijl bestaat uit een template, een thema en een afbeeldingenset. Je kunt bestaande stijlen vervangen, verwijderen, deactiveren, opnieuw activeren, alsook nieuwe stijlen invoeren. Je kunt een stijl ook alvast bekijken om te zien hoe je forum eruit zal zien wanneer je hem gebruikt. De huidige standaardstijl staat met een (*) aangegeven. Er staat ook weergegeven hoeveel gebruikers welke stijl gebruiken. Gedwongen stijlen worden hierin niet meegeteld.',
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 	'ACP_TEMPLATES_EXPLAIN'	=> 'Een templateset bevat alle code om het uiterlijk van je forum te genereren. Hier kun je bestaande templatesets verwijderen, exporteren, nieuwe sets importeren en alvast bekijken. Je kunt ook de template-code, gebruikt voor BBCode te genereren, bewerken.',
 	'ACP_THEMES_EXPLAIN'	=> 'Hier kun je thema’s maken, installeren, bewerken, verwijderen en exporteren. Een thema is de combinatie van kleuren en afbeeldingen die worden gebruik in je templates om de basisuitstraling van je forum te bepalen. Het aantal opties dat voor jou beschikbaar is, hangt af van de serverinstellingen en het type phpBB-installatie. Voor verdere details kun je het beste de gebruikersgids raadplegen. Bij het aanmaken van nieuwe thema’s is het gebruiken van een ander thema als basis slechts optioneel.',
 	'ADD_IMAGESET'			=> 'Maak een afbeeldingenset',
@@ -14545,7 +15216,6 @@ $lang = array_merge($lang, array(
 	'CURRENT_IMAGE'					=> 'Huidige afbeelding',
 
 	'DEACTIVATE_DEFAULT'		=> 'Je kunt de standaardstijl niet deactiveren.',
-	'DELETE_FROM_FS'			=> 'Verwijder uit het bestandssysteem',
 	'DELETE_IMAGESET'			=> 'Verwijder afbeeldingenset',
 	'DELETE_IMAGESET_EXPLAIN'	=> 'Hier kun je de geselecteerde afbeeldingenset uit de database verwijderen. Het is niet mogelijk om het verwijderen ongedaan te maken. Het is dan ook ten zeerste aan te raden om eerst de set te exporteren voor eventueel later hergebruik.',
 	'DELETE_STYLE'				=> 'Verwijder stijl',
@@ -14742,7 +15412,6 @@ $lang = array_merge($lang, array(
 	'INCLUDE_IMAGESET'			=> 'Gebruik afbeeldingenset',
 	'INCLUDE_TEMPLATE'			=> 'Gebruik template',
 	'INCLUDE_THEME'				=> 'Gebruik thema',
-	'INHERITING_FROM'			=> 'Overnemen van',
 	'INSTALL_IMAGESET'			=> 'Installeer afbeeldingenset',
 	'INSTALL_IMAGESET_EXPLAIN'	=> 'Hier kun je een nieuwe afbeeldingenset installeren',
 	'INSTALL_STYLE'				=> 'Stijl installeren',
@@ -14772,7 +15441,6 @@ $lang = array_merge($lang, array(
 	'NO_TEMPLATE'				=> 'Kan de template niet vinden in het bestandssysteem.',
 	'NO_THEME'					=> 'Kan het thema niet vinden in het bestandssysteem.',
 	'NO_UNINSTALLED_IMAGESET'	=> 'Geen gedeïnstalleerde afbeeldingensets gevonden.',
-	'NO_UNINSTALLED_STYLE'		=> 'Geen gedeïnstalleerde stijlen gevonden.',
 	'NO_UNINSTALLED_TEMPLATE'	=> 'Geen gedeïnstalleerde templates gevonden.',
 	'NO_UNINSTALLED_THEME'		=> 'Geen gedeïnstalleerde thema’s gevonden.',
 	'NO_UNIT'					=> 'Geen',
@@ -14812,30 +15480,22 @@ $lang = array_merge($lang, array(
 	'SELECTED_THEME_FILE'		=> 'Geselecteerd themabestand',
 	'STORE_DATABASE'			=> 'Database',
 	'STORE_FILESYSTEM'			=> 'bestandssysteem',
-	'STYLE_ACTIVATE'			=> 'Activeer',
-	'STYLE_ACTIVE'				=> 'Actief',
 	'STYLE_ADDED'				=> 'Stijl succesvol toegevoegd.',
-	'STYLE_DEACTIVATE'			=> 'Deactiveer',
-	'STYLE_DEFAULT'				=> 'Instellen als standaardstijl',
 	'STYLE_DELETED'				=> 'Stijl succesvol verwijderd.',
 	'STYLE_DETAILS_UPDATED'		=> 'Stijl succesvol bewerkt.',
 	'STYLE_ERR_ARCHIVE'			=> 'Selecteer een archiveringsmethode.',
 	'STYLE_ERR_COPY_LONG'		=> 'Het copyright mag niet langer zijn dan 60 tekens.',
 	'STYLE_ERR_MORE_ELEMENTS'	=> 'Je dient minimaal één stijlelement te selecteren.',
 	'STYLE_ERR_NAME_CHARS'		=> 'De stijlnaam mag alleen letters, cijfers, -, +, _ en spaties bevatten.',
-	'STYLE_ERR_NAME_EXIST'		=> 'Er bestaat reeds een stijl met deze naam.',
 	'STYLE_ERR_NAME_LONG'		=> 'De stijlnaam mag niet langer zijn dan 30 tekens.',
 	'STYLE_ERR_NO_IDS'			=> 'Je moet een template, thema en afbeeldingenset voor deze stijl selecteren.',
 	'STYLE_ERR_NOT_STYLE'		=> 'Het bestand bevat geen geldig stijlarchief.',
-	'STYLE_ERR_STYLE_NAME'		=> 'Je moet deze stijl een naam geven.',
 	'STYLE_EXPORT'				=> 'Exporteer stijl',
 	'STYLE_EXPORT_EXPLAIN'		=> 'Hier kun je een stijl exporteren in de vorm van een archief. Dit archief zal alle benodigde data bevatten om de stijl op een ander forum te installeren. Om het bestand te verkrijgen kun je kiezen tussen een directe download, opslaan in je store-map voor een download op een later moment, of via FTP.',
 	'STYLE_EXPORTED'			=> 'Stijl succesvol geëxporteerd en in %s opgeslagen.',
 	'STYLE_IMAGESET'			=> 'Afbeeldingenset',
-	'STYLE_NAME'				=> 'Stijlnaam',
 	'STYLE_TEMPLATE'			=> 'Template',
 	'STYLE_THEME'				=> 'Thema',
-	'STYLE_USED_BY'				=> 'Gebruikt door (inclusief robots)',
 
 	'TEMPLATE_ADDED'			=> 'Templateset toegevoegd en in het bestandssysteem opgeslagen.',
 	'TEMPLATE_ADDED_DB'			=> 'Templateset toegevoegd en in de database opgeslagen.',
@@ -14933,6 +15593,7 @@ $lang = array_merge($lang, array(
 	'CANNOT_FORCE_REACT_FOUNDER'	=> 'Je kunt geen eigenaar-accounts verplichten om opnieuw te activeren.',
 	'CANNOT_FORCE_REACT_YOURSELF'	=> 'Je kunt jezelf niet verplichten om opnieuw te activeren.',
 	'CANNOT_REMOVE_ANONYMOUS'		=> 'Het is niet mogelijk om gast-accounts te verwijderen.',
+	'CANNOT_REMOVE_FOUNDER'			=> 'You are not allowed to remove founder accounts.',
 	'CANNOT_REMOVE_YOURSELF'		=> 'Je kunt je eigen gebruikersaccount niet verwijderen.',
 	'CANNOT_SET_FOUNDER_IGNORED'	=> 'Genegeerde gebruikers kunnen niet worden gepromoot naar eigenaar.',
 	'CANNOT_SET_FOUNDER_INACTIVE'	=> 'Je dient gebruikers eerst te activeren, voordat je ze tot eigenaar kunt promoten. Alleen geactiveerde gebruikers kunnen worden gepromoot.',
@@ -14959,7 +15620,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'Selecteer het forum waarnaar alle berichten die de gebruiker heeft gepost naar moeten worden verplaatst.',
 
 	'NO_SPECIAL_RANK'		=> 'Geen speciale rang aangegeven',
-	'NO_WARNINGS'			=> 'Geen waarschuwingen.',
+	'NO_WARNINGS'			=> 'No warnings exist.',
 	'NOT_MANAGE_FOUNDER'	=> 'Je probeert een gebruiker met eigenaar-status te bewerken. Alleen eigenaren hebben de rechten om andere eigenaren te bewerken.',
 
 	'QUICK_TOOLS'			=> 'Snel gereedschap',

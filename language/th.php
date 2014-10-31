@@ -1,5 +1,14 @@
 ﻿<?php
 
+#######language/en/app.php#######
+
+$lang = array_merge($lang, array(
+	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
+	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
+	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+));
+
 #######language/en/calendar.php#######
 
 $lang = array_merge($lang, array(
@@ -182,6 +191,55 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'คีย์ส่วนตัวของ reCaptcha. คีย์นี้สามารถรับได้ที่เว็บ <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 
 	'RECAPTCHA_EXPLAIN'				=> 'เพื่อป้องกันการส่งแบบอัตโนมัติ เราจำเป็นต้องให้คุณป้อนคำทั้งสองคำที่ปรากฏด้านล่างนี้ลง ในช่องข้อความ',
+	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
+));
+
+#######language/en/cli.php#######
+
+$lang = array_merge($lang, array(
+	'CLI_CONFIG_CANNOT_CACHED'			=> 'Set this option if the configuration option changes too frequently to be efficiently cached.',
+	'CLI_CONFIG_CURRENT'				=> 'Current configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_DELETE_SUCCESS'			=> 'Successfully deleted config %s.',
+	'CLI_CONFIG_NEW'					=> 'New configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_NOT_EXISTS'				=> 'Config %s does not exist',
+	'CLI_CONFIG_OPTION_NAME'			=> 'The configuration option’s name',
+	'CLI_CONFIG_PRINT_WITHOUT_NEWLINE'	=> 'Set this option if the value should be printed without a new line at the end.',
+	'CLI_CONFIG_INCREMENT_BY'			=> 'Amount to increment by',
+	'CLI_CONFIG_INCREMENT_SUCCESS'		=> 'Successfully incremented config %s',
+	'CLI_CONFIG_SET_FAILURE'			=> 'Could not set config %s',
+	'CLI_CONFIG_SET_SUCCESS'			=> 'Successfully set config %s',
+
+	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
+	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
+	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
+	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
+	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
+	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
+	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
+	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
+	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
+	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
+	'CLI_EXTENSION_ENABLE_FAILURE'		=> 'Could not enable extension %s',
+	'CLI_EXTENSION_ENABLE_SUCCESS'		=> 'Successfully enabled extension %s',
+	'CLI_EXTENSION_NAME'				=> 'Name of the extension',
+	'CLI_EXTENSION_PURGE_FAILURE'		=> 'Could not purge extension %s',
+	'CLI_EXTENSION_PURGE_SUCCESS'		=> 'Successfully purged extension %s',
+	'CLI_EXTENSION_NOT_FOUND'			=> 'No extensions were found.',
+	'CLI_EXTENSIONS_AVAILABLE'			=> 'Available',
+	'CLI_EXTENSIONS_DISABLED'			=> 'Disabled',
+	'CLI_EXTENSIONS_ENABLED'			=> 'Enabled',
+
+	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
 ));
 
 #######language/en/common.php#######
@@ -190,7 +248,11 @@ $lang = array_merge($lang, array(
 	'TRANSLATION_INFO'	=> 'Thai language by <a href="http://www.phpbbthailand.com">phpBBThailand.com</a>',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
+	'DATETIME_FORMAT'	=> '|d M Y, H:i|',	// 01 Jan 2007, 13:37 (with Relative days enabled)
 	'USER_LANG'			=> 'th',
+
+	// See http://wiki.phpbb.com/Plural_Rules for more information
+	'PLURAL_RULE'		=> '1',
 
 	'1_DAY'			=> '1 วัน',
 	'1_MONTH'		=> '1 เดือน',
@@ -204,18 +266,24 @@ $lang = array_merge($lang, array(
 	'ACCOUNT_DEACTIVATED'			=> 'บัญชีของท่านได้ถูกระงับชั่วคราว มีเพียงผู้ดูแลเว็บบอร์ดเท่านั้น ที่จะสามารถยืนยันบัญชีให้ท่านได้',
 	'ACCOUNT_NOT_ACTIVATED'			=> 'บัญชีของท่านยังไม่ได้รับการยืนยัน',
 	'ACP'							=> 'ส่วนจัดการของผู้ดูแลระบบ',
+	'ACP_SHORT'						=> 'ACP',
 	'ACTIVE'						=> 'active',
 	'ACTIVE_ERROR'					=> 'ชื่อผู้ใช้นี้ นี้ยังไม่ได้รับการยืนยัน กรุณาติดต่อผู้ดูแลบอร์ดหากท่านไม่สามารถยืนยันบัญชีได้ด้วยตัวเอง',
 	'ADMINISTRATOR'					=> 'ผู้ดูแลระบบ',
 	'ADMINISTRATORS'				=> 'ผู้ดูแลระบบ',
 	'AGE'							=> 'อายุ',
 	'AIM'							=> 'AIM',
+	'AJAX_ERROR_TITLE'				=> 'AJAX error',
+	'AJAX_ERROR_TEXT'				=> 'Something went wrong when processing your request.',
+	'AJAX_ERROR_TEXT_ABORT'			=> 'User aborted request.',
+	'AJAX_ERROR_TEXT_TIMEOUT'		=> 'Your request timed out; please try again.',
+	'AJAX_ERROR_TEXT_PARSERERROR'	=> 'Something went wrong with the request and the server returned an invalid reply.',
 	'ALLOWED'						=> 'อนุญาต',
 	'ALL_FILES'						=> 'ไฟล์ทั้งหมด',
 	'ALL_FORUMS'					=> 'บอร์ดทั้งหมด',
 	'ALL_MESSAGES'					=> 'ข้อความทั้งหมด',
 	'ALL_POSTS'						=> 'โพสต์ทั้งหมด',
-	'ALL_TIMES'						=> 'เขตเวลา %1$s %2$s',
+	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'กระทู้ทั้งหมด',
 	'AND'							=> 'และ',
 	'ARE_WATCHING_FORUM'			=> 'คุณจะได้รับแจ้ง เมื่อมีการโพสข้อความใหม่ในบอร์ด นี้',
@@ -225,6 +293,14 @@ $lang = array_merge($lang, array(
 	'ATTACHED_IMAGE_NOT_IMAGE'		=> 'ไม่รู้จักชนิดของไฟล์รูปภาพที่ท่านแนบมา',
 	'AUTHOR'						=> 'เจ้าของ',
 	'AUTH_NO_PROFILE_CREATED'		=> 'สร้างข้อมูลส่วนตัวไม่สำเร็จ',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_ENTRY'				=> 'Invalid database entry.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_SERVICE_TYPE'		=> 'Invalid service type provided to OAuth service handler.',
+	'AUTH_PROVIDER_OAUTH_ERROR_SERVICE_NOT_CREATED'			=> 'OAuth service not created',
+	'AUTH_PROVIDER_OAUTH_SERVICE_BITLY'						=> 'Bitly',
+	'AUTH_PROVIDER_OAUTH_SERVICE_FACEBOOK'					=> 'Facebook',
+	'AUTH_PROVIDER_OAUTH_SERVICE_GOOGLE'					=> 'Google',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_NOT_STORED'			=> 'OAuth token not stored.',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_INCORRECTLY_STORED'	=> 'OAuth token incorrectly stored.',
 	'AVATAR_DISALLOWED_CONTENT'		=> 'The upload was rejected because the uploaded file was identified as a possible attack vector.',
 	'AVATAR_DISALLOWED_EXTENSION'	=> 'ไม่อนุญาตให้แสดงรูปภาพที่มีนามสกุล <strong>%s</strong>',
 	'AVATAR_EMPTY_REMOTE_DATA'		=> 'ไม่สามารถอัพโหลดภาพประจำตัวนี้ได้ เนื่องจากไฟล์ไม่ถูกต้องหรือเกิดความเสียหาย',
@@ -235,10 +311,11 @@ $lang = array_merge($lang, array(
 	'AVATAR_PARTIAL_UPLOAD'			=> 'ไฟล์ถูกอัพโหลดได้บางส่วนเท่านั้น',
 	'AVATAR_PHP_SIZE_NA'			=> 'ภาพประจำตัวมีขนาดใหญ่เกินไป <br />ขนาดของภาพในการ Upload สามารถเซตได้ที่ php.ini',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'ภาพประจำตัวมีขนาดใหญ่เกินไป ขนาดสูงสุดที่สามารถ Upload ได้คือ %d MB.<br />กรุณาโน้ตตาม php.ini และไม่สามารถยกเลิกได้ ',
+	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
 	'AVATAR_URL_INVALID'			=> 'URL นี้ไม่ถูกต้อง',
 	'AVATAR_URL_NOT_FOUND'			=> 'ไม่พบไฟล์นี้',
-	'AVATAR_WRONG_FILESIZE'			=> 'ภาพประจำตัวควรมีขนาดตั้งแต่ 0 ถึง %1d %2s.',
-	'AVATAR_WRONG_SIZE'				=> 'ขนาดภาพประจำตัวที่คุณเลือก กว้าง %5$d pixels และสูง %6$d pixels  โดยภาพประจำตัวต้องมีขนาดอย่างน้อยกว้าง  %1$d pixels และสูง %2$d pixels แต่ต้องไม่กว้างเกิน %3$d pixels และสูงเกิน %4$d pixels ',
+	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
+	'AVATAR_WRONG_SIZE'				=> 'The submitted avatar is %5$s wide and %6$s high. Avatars must be at least %1$s wide and %2$s high, but no larger than %3$s wide and %4$s high.',
 
 	'BACK_TO_TOP'			=> 'ข้างบน',
 	'BACK_TO_PREV'			=> 'กลับหน้าที่แล้ว',
@@ -255,28 +332,42 @@ $lang = array_merge($lang, array(
 	'BOARD_DISABLED'		=> 'ขณะนี้เวบบอร์ดงดใช้งาน',
 	'BOARD_UNAVAILABLE'		=> 'ขออภัย เวบบอร์ดงดใช้งานชั่วคราวคะ, กรุณาเข้าใหม่อีกครั้งในภายหลัง',
 	'BROWSING_FORUM'		=> 'สมาชิกที่กำลังดูบอร์ดนี้: %1$s',
-	'BROWSING_FORUM_GUEST'	=> 'กำลังดูบอร์ดนี้: %1$s และ บุคคลทั่วไป %2$d ท่าน',
-	'BROWSING_FORUM_GUESTS'	=> 'กำลังดูบอร์ดนี้: %1$s และ บุคคลทั่วไป %2$d ท่าน',
+	'BUTTON_EDIT'			=> 'Edit',
+	'BUTTON_FORUM_LOCKED'	=> 'Locked',
+	'BUTTON_NEW_TOPIC'		=> 'New Topic',
+	'BUTTON_PM'				=> 'PM',
+	'BUTTON_PM_FORWARD'		=> 'Forward',
+	'BUTTON_PM_NEW'			=> 'New PM',
+	'BUTTON_PM_REPLY'		=> 'Send Reply',
+	'BUTTON_PM_REPLY_ALL'	=> 'Reply All',
+	'BUTTON_POST_REPLY'		=> 'Post Reply',
+	'BUTTON_QUOTE'			=> 'Quote',
+	'BUTTON_TOPIC_LOCKED'	=> 'Locked',
 	'BYTES'					=> 'ไบต์',
+	'BYTES_SHORT'			=> 'B',
 
 	'CANCEL'				=> 'Cancel',
 	'CHANGE'				=> 'เปลี่ยน',
 	'CHANGE_FONT_SIZE'		=> 'เปลี่ยนขนาดตัวอักษร',
 	'CHANGING_PREFERENCES'	=> 'ตั้งค่าคุณสมบัติของบอร์ด',
 	'CHANGING_PROFILE'		=> 'การตั้งค่าส่วนตัว',
-	'CLICK_VIEW_PRIVMSG'	=> '%s Inbox %s',
 	'COLLAPSE_VIEW'			=> 'มุมมองที่พับได้',
 	'CLOSE_WINDOW'			=> 'ปิดหน้าต่างนี้',
 	'COLOUR_SWATCH'			=> 'เปลี่ยนสี',
-	'COMMA_SEPARATOR'		=> ', ',	// Used in pagination of ACP & prosilver, use localised comma if appropriate, eg: Ideographic or Arabic
+	'COLON'					=> ':',
+	'COMMA_SEPARATOR'		=> ', ',	// Comma used to join lists into a single string, use localised comma if appropriate, eg: Ideographic or Arabic
 	'CONFIRM'				=> 'ยืนยัน',
 	'CONFIRM_CODE'			=> 'รหัสยืนยัน',
 	'CONFIRM_CODE_EXPLAIN'	=> 'ให้พิมพ์รหัสตามที่เห็นในรูปภาพ กรุณาพิมพ์ตัวอักษรเล็ก-ใหญ่ให้ถูกต้อง และไม่มีเลขศูนย์',
 	'CONFIRM_CODE_WRONG'	=> 'รหัสตามที่เห็นในรูปภาพไม่ถูกต้อง',
 	'CONFIRM_OPERATION'		=> 'ท่านต้องการทำคำสั่งนี้จริงๆหรือ?',
+	'CONFIRM_AVATAR_DELETE' => 'Are you sure you wish to delete this avatar?',
 	'CONGRATULATIONS'		=> 'ยินดีกับ',
 	'CONNECTION_FAILED'		=> 'ไม่สามารถเชื่อมต่อได้.',
 	'CONNECTION_SUCCESS'	=> 'เชื่อมต่อสำเร็จ',
+	'CONTACT'				=> 'ติดต่อสมาชิก',
+	'CONTACT_USER'			=> 'Contact %s',
+	'CONTACT_US'			=> 'Contact us',
 	'COOKIES_DELETED'		=> 'คุ๊กกี้ของเวบบอร์ดนี้ถูกลบเรียบร้อยแล้วคะ',
 	'CURRENT_TIME'			=> 'วันเวลาปัจจุบัน %s',
 
@@ -297,18 +388,13 @@ $lang = array_merge($lang, array(
 	'DISPLAY_TOPICS'		=> 'แสดงกระทู้จาก',
 	'DOWNLOADED'			=> 'ดาวน์โหลด',
 	'DOWNLOADING_FILE'		=> 'กำลังดาวน์โหลดไฟล์',
-	'DOWNLOAD_COUNT'		=> 'ดาวน์โหลด %d ครั้ง',
-	'DOWNLOAD_COUNTS'		=> 'ดาวน์โหลด %d ครั้ง',
-	'DOWNLOAD_COUNT_NONE'	=> 'ยังไม่มีการดาวน์โหลด',
-	'VIEWED_COUNT'			=> 'เปิดดู %d ครั้ง',
-	'VIEWED_COUNTS'			=> 'เปิดดู %d ครั้ง',
-	'VIEWED_COUNT_NONE'		=> 'ยังไม่มีการเปิดดู',
 
 	'EDIT_POST'							=> 'แก้ไขโพสต์',
-	'EMAIL'								=> 'อีเมล์', // Short form for EMAIL_ADDRESS
-	'EMAIL_ADDRESS'						=> 'ที่อยู่อีเมล์',
-	'EMAIL_INVALID_EMAIL'				=> 'คุณพิมพ์ อีเมล ไม่ถูกต้อง',
-	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'การส่งเมล์มีปัญหาใน <strong>บรรทัดที่ %1$s</strong>. Response: %2$s.',
+	'ELLIPSIS'							=>	'…',
+	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
+	'EMAIL_ADDRESS'						=> 'Email address',
+	'EMAIL_INVALID_EMAIL'				=> 'The email address you entered is invalid.',
+	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ran into problems sending email at <strong>Line %1$s</strong>. Response: %2$s.',
 	'EMPTY_SUBJECT'						=> 'กรุณากรอกหัวข้อด้วย',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'กรุณากรอกข้อความด้วย',
 	'ENABLED'							=> 'เปิดใช้งาน',
@@ -322,17 +408,23 @@ $lang = array_merge($lang, array(
 	'ERR_UNWATCHING'					=> 'เกิดข้อผิดพลาดขณะที่พยายามจะยกเลิกการติดตาม.',
 	'ERR_WATCHING'						=> 'เกิดข้อผิดพลาดขณะที่พยายามติดตาม.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'พาร์ท PhpBB นี้ไม่ถูกต้อง',
+	'ERROR'									=> 'ผิดพลาด',
 	'EXPAND_VIEW'						=> 'มุมมองที่ขยายได้',
 	'EXTENSION'							=> 'ชนิดของไฟล์',
+	'EXTENSION_DISABLED'				=> 'The extension <strong>%s</strong> is not enabled.',
 	'EXTENSION_DISABLED_AFTER_POSTING'	=> 'ชนิดของไฟล์ <strong>%s</strong> ให้ใช้งานไม่ได้ จึงไม่สามารถแสดงผลได้อีกต่อไป',
+	'EXTENSION_DOES_NOT_EXIST'			=> 'The extension <strong>%s</strong> does not exist.',
 
+	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> ' FAQ ',
 	'FAQ_EXPLAIN'			=> ' FAQ ',
 	'FILENAME'				=> 'ชื่อไฟล์',
 	'FILESIZE'				=> 'ขนาด',
 	'FILEDATE'				=> 'วันที่',
 	'FILE_COMMENT'			=> 'คำอธิบาย',
-	'FILE_NOT_FOUND'		=> 'ไม่พบไฟล์ที่ต้องการ',
+	'FILE_CONTENT_ERR'		=> 'Could not read the contents of file: %s',
+	'FILE_JSON_DECODE_ERR'	=> 'Failed to decode json file: %s',
+	'FILE_NOT_FOUND'		=> 'The requested file could not be found: %s',
 	'FIND_USERNAME'			=> 'ค้นหาสมาชิก',
 	'FOLDER'				=> 'โฟล์เดอร์',
 	'FORGOT_PASS'			=> 'ลืมรหัสผ่าน',
@@ -381,6 +473,9 @@ $lang = array_merge($lang, array(
 	'GB'						=> 'GB',
 	'GIB'						=> 'GiB',
 	'GO'						=> 'ไป',
+	'GOOGLEPLUS'				=> 'Google+',
+	'GOTO_FIRST_POST'			=> 'Go to first post',
+	'GOTO_LAST_POST'			=> 'Go to last post',
 	'GOTO_PAGE'					=> 'ไปที่หน้า',
 	'GROUP'						=> 'กลุ่ม',
 	'GROUPS'					=> 'กลุ่ม',
@@ -388,12 +483,6 @@ $lang = array_merge($lang, array(
 	'GROUP_ERR_USERNAME'		=> 'ไม่มีกลุ่มของชื่อที่ระบุ',
 	'GROUP_ERR_USER_LONG'		=> 'ชื่อกลุ่มต้องไม่เกิน 60 ตัวอักษร. ชื่อกลุ่มนี้ยาวเกินไป',
 	'GUEST'						=> 'บุคคลทั่วไป',
-	'GUEST_USERS_ONLINE'		=> 'มี บุคคลทั่วไปออนไลน์ %d ท่าน',
-	'GUEST_USERS_TOTAL'			=> 'บุคคลทั่วไป %d ท่าน',
-	'GUEST_USERS_ZERO_ONLINE'	=> 'ไม่มีบุคคลทั่วไปออนไลน์',
-	'GUEST_USERS_ZERO_TOTAL'	=> 'ไม่มีบุคคลทั่วไป',
-	'GUEST_USER_ONLINE'			=> 'มี บุคคลทั่วไปออนไลน์ %d ท่าน',
-	'GUEST_USER_TOTAL'			=> 'บุคคลทั่วไป %d ท่าน',
 	'G_ADMINISTRATORS'			=> 'ผู้ดูแลระบบ',
 	'G_BOTS'					=> 'Bots',
 	'G_GUESTS'					=> 'บุคคลทั่วไป',
@@ -402,22 +491,12 @@ $lang = array_merge($lang, array(
 	'G_GLOBAL_MODERATORS'		=> 'Moderators',
 	'G_NEWLY_REGISTERED'		=> 'สมาชิกใหม่ลงทะเบียน',
 
-	'HIDDEN_USERS_ONLINE'			=> 'ซ่อน %d ท่าน',
-	'HIDDEN_USERS_TOTAL'			=> 'ซ่อน %d ท่าน และ ',
-	'HIDDEN_USERS_TOTAL_AND'		=> '%d ซ่อนตัว และ ',
-	'HIDDEN_USERS_ZERO_ONLINE'		=> 'ไม่มีผู้ซ่อน',
-	'HIDDEN_USERS_ZERO_TOTAL'		=> 'ไม่มีผู้ซ่อน และ ',
-	'HIDDEN_USERS_ZERO_TOTAL_AND'	=> '0 ซ่อนตัว และ ',
-	'HIDDEN_USER_ONLINE'			=> 'ซ่อน %d ท่าน',
-	'HIDDEN_USER_TOTAL'				=> 'ซ่อน %d ท่าน และ ',
-	'HIDDEN_USER_TOTAL_AND'			=> '%d ซ่อนตัว และ ',
 	'HIDE_GUESTS'					=> 'ปิดผู้ใช้งานทั่วไป',
 	'HIDE_ME'						=> 'ซ่อนสถานะการออนไลน์ของฉัน',
 	'HOURS'							=> 'ชั่วโมง',
 	'HOME'							=> 'หน้าแรก',
 
 	'ICQ'						=> 'ICQ',
-	'ICQ_STATUS'				=> 'สถานะ ICQ',
 	'IF'						=> 'ถ้า',
 	'IMAGE'						=> 'รูปภาพ',
 	'IMAGE_FILETYPE_INVALID'	=> 'ประเภทของไฟล์รูป %d for mimetype %s ไม่รองรับ',
@@ -425,9 +504,11 @@ $lang = array_merge($lang, array(
 	'IN'						=> 'ใน',
 	'INDEX'						=> 'หน้าแรก', //Index page
 	'INFORMATION'				=> 'ข้อมูลทั่วไป',
+	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
 	'INTERESTS'					=> 'งานอดิเรก',
 	'INVALID_DIGEST_CHALLENGE'	=> 'Invalid digest challenge.',
-	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> e-mail ของคุณอาจจะไม่ถูกต้อง?',
+	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> possibly an invalid email address?',
+	'INVALID_PLURAL_RULE'		=> 'The chosen plural rule is invalid. Valid values are integers between 0 and 15.',
 	'IP'						=> 'IP',
 	'IP_BLACKLISTED'			=> 'IP ของคุณ %1$s ถูกกันไม่ให้ใช้งาน เพราะติดบัญชีดำ. กรุณาศึกษารายละเอียดได้ที่ <a href="%2$s">%2$s</a>.',
 
@@ -435,7 +516,8 @@ $lang = array_merge($lang, array(
 	'JOINED'				=> 'ลงทะเบียนเมื่อ',
 	'JUMP_PAGE'				=> 'ใส่หมายเลขหน้าที่ต้องการเปิดดู.',
 	'JUMP_TO'				=> 'ไปที่',
-	'JUMP_TO_PAGE'			=> 'คลิกเพื่อไปที่หน้า...',
+	'JUMP_TO_PAGE'			=> 'Jump to page',
+	'JUMP_TO_PAGE_CLICK'	=> 'Click to jump to page…',
 
 	'KB'					=> 'KB',
 	'KIB'					=> 'KiB',
@@ -447,6 +529,8 @@ $lang = array_merge($lang, array(
 	'LDAP_NO_SERVER_CONNECTION'			=> 'ไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์ของ LDAP ',
 	'LDAP_SEARCH_FAILED'				=> 'ผิดพลาด ไม่สามารถค้นหา LDAP directory.ได้ ',
 	'LEGEND'							=> 'กลุ่ม',
+	'LIVE_SEARCHES_NOT_ALLOWED'			=> 'Live searches are not allowed.',
+	'LOADING'							=> 'Loading',
 	'LOCATION'							=> 'ที่อยู่',
 	'LOCK_POST'							=> 'ล็อกโพสต์',
 	'LOCK_POST_EXPLAIN'					=> 'การแก้ไขถูกขัดขวาง',
@@ -457,6 +541,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_CONFIRM_EXPLAIN'				=> ' เพื่อป้องกันการสุ่มหาบัญชีผู้ใช้ คุณต้องระบุรหัสการยืนยันหลังจากล็อกอินล้มเหลวเกินจำนวนมากที่สุดที่ตั้งไว้ ดังรหัสแสดงเป็นภาพดังด้านล่างนี้ หากคุณไม่สามารถมองเห็นได้ด้วยเหตุใด กรุณาติดต่อ%s ผู้ดูแลบอร์ด %s', // unused
 	'LOGIN_ERROR_ATTEMPTS'				=> 'ท่านพยายามเข้าสู่ระบบไม่สำเร็จหลายครั้งแล้ว ท่านจำเป็นจะต้องพิมพ์รหัสยืนยันตามที่ท่านเห็นในรูปภาพด้านล่างนี้ด้วย',
 	'LOGIN_ERROR_EXTERNAL_AUTH_APACHE'	=> 'คุณไม่สามารถเข้าใช้งานโดยผ่าน Apache ได้ ',
+	'LOGIN_ERROR_OAUTH_SERVICE_DOES_NOT_EXIST'	=> 'A non-existant OAuth service has been requested.',
 	'LOGIN_ERROR_PASSWORD'				=> 'ท่านพิมพ์ password ไม่ถูกต้อง กรุณาลองใหม่อีกครั้ง ถ้าท่านยังไม่สามารถแก้ปัญหาได้ กรุณาติดต่อ %sผู้ดูแลบอร์ด%s',
 	'LOGIN_ERROR_PASSWORD_CONVERT'		=> 'คุณไม่สามารถแปลง	รหัสผ่านได้ เมื่อมีการ Update ซอฟต์แวร์ กรุณาระบุรหัสผ่านใหม่ ถ้าคุณยังพบปัญหาเดิมกรุณาติอต่อ  %sผู้ดูแลบอร์ด%s.',
 	'LOGIN_ERROR_USERNAME'				=> 'คุณระบุ Username ไม่ถูกต้อง กรุณาตรวจสอบและลองใหม่อีกครั้ง  ้าคุณยังพบปัญหาเดิมกรุณาติอต่อ  %sผู้ดูแลบอร์ด%s.',
@@ -465,17 +550,22 @@ $lang = array_merge($lang, array(
 	'LOGIN_VIEWFORUM'					=> 'จำเป็นต้องสมัครสมาชิกและเข้าระบบก่อนถึงจะสามารถดูบอร์ดนี้ได้.',
 	'LOGIN_EXPLAIN_EDIT'				=> 'ในการแก้ไขข้อความในบอร์ดนี้ คุณต้องลงทะเบียนการเป็นสมาชิกและเข้าใช้งานในระบบก่อน',
 	'LOGIN_EXPLAIN_VIEWONLINE'			=> 'ในการดูข้อความในบอร์ดนี้ คุณต้องลงทะเบียนการเป็นสมาชิกและเข้าใช้งานในระบบก่อน',
+	'LOGIN_REQUIRED'					=> 'You need to login to perform this action.',
 	'LOGOUT'							=> 'ออกจากระบบ',
 	'LOGOUT_USER'						=> 'สวัสดี %s [<strong>ออกจากระบบ</strong>]',
-	'LOG_ME_IN'							=> 'เข้าสู่ระบบอัตโนมัติ',
+	'LOG_ME_IN'							=> 'Remember me',
 
+	'MAIN'					=> 'Main',
 	'MARK'					=> 'เลือก',
 	'MARK_ALL'				=> 'เลือกทั้งหมด',
+	'MARK_ALL_READ'			=> 'Mark all read',
 	'MARK_FORUMS_READ'		=> 'บันทึกว่าอ่านทุกบอร์ด แล้ว',
+	'MARK_READ'				=> 'Mark read',
 	'MARK_SUBFORUMS_READ'	=> 'บันทึกว่าอ่านทุกบอร์ดย่อย แล้ว',
 	'MB'					=> 'MB',
 	'MIB'					=> 'MiB',
 	'MCP'					=> 'Moderator Control Panel',
+	'MCP_SHORT'				=> 'MCP',
 	'MEMBERLIST'			=> 'รายชื่อสมาชิก',
 	'MEMBERLIST_EXPLAIN'	=> 'ดูรายชื่อสมาชิกทั้งหมด',
 	'MERGE'					=> 'รวม',
@@ -488,26 +578,47 @@ $lang = array_merge($lang, array(
 	'MODERATE'				=> 'Moderate',
 	'MODERATOR'				=> 'Moderator',
 	'MODERATORS'			=> 'Moderator',
+	'MODULE_NOT_ACCESS'		=> 'Module not accessible',
+	'MODULE_NOT_FIND'		=> 'Cannot find module %s',
+	'MODULE_FILE_INCORRECT_CLASS'	=> 'Module file %s does not contain correct class [%s]',
 	'MONTH'					=> 'เดือน',
 	'MOVE'					=> 'ย้าย',
-	'MSNM'					=> 'MSNM/WLM',
 
 	'NA'						=> 'ไม่มี',
 	'NEWEST_USER'				=> 'สมาชิกใหม่ล่าสุด <strong>%s</strong>',
 	'NEW_MESSAGE'				=> 'ข้อความใหม่',
 	'NEW_MESSAGES'				=> 'ข้อความใหม่',
-	'NEW_PM'					=> '<strong>%d</strong> ข้อความใหม่',
-	'NEW_PMS'					=> '<strong>%d</strong> ข้อความใหม่',
 	'NEW_POST'					=> 'โพสต์ใหม่',	// Not used anymore
 	'NEW_POSTS'					=> 'โพสต์ใหม่',	// Not used anymore
 	'NEXT'						=> 'ต่อไป',		// Used in pagination
 	'NEXT_STEP'					=> 'ต่อไป',
 	'NEVER'						=> 'Never',
 	'NO'						=> 'ไม่',
+	'NO_NOTIFICATIONS'			=> 'You have no notifications',
 	'NOT_ALLOWED_MANAGE_GROUP'	=> 'คุณไม่ได้รับอนุญาตให้จัดการข้อความนี้',
 	'NOT_AUTHORISED'			=> 'คุณไม่ได้รับสิทธิ์ให้ใช้งานในพื้นที่นี้',
 	'NOT_WATCHING_FORUM'		=> 'ยกเลิกการส่ง E-mail เมื่อมีกระทู้ใหม่ในบอร์ดนี้',
 	'NOT_WATCHING_TOPIC'		=> 'ยกเลิกการส่ง E-mail เมื่อมีคนตอบใน กระทู้นี้',
+	'NOTIFICATIONS'				=> 'Notifications',
+	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
+	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
+	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
+	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
+	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
+	'NOTIFICATION_POST_IN_QUEUE'		=> '<strong>Post approval</strong> request by %1$s:',
+	'NOTIFICATION_REFERENCE'			=> '"%1$s"',
+	'NOTIFICATION_REASON'				=> '<em>Reason:</em> %1$s.',
+	'NOTIFICATION_REPORT_PM'			=> '<strong>Private Message reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_POST'			=> '<strong>Post reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_CLOSED'		=> '<strong>Report closed</strong> by %1$s for:',
+	'NOTIFICATION_TOPIC'				=> '<strong>New topic</strong> by %1$s:',
+	'NOTIFICATION_TOPIC_APPROVED'		=> '<strong>Topic approved</strong>:',
+	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
+	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
+	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> 'กรุณาแจ้ง ผู้ดูแลระบบ',
 	'NOTIFY_ADMIN_EMAIL'		=> 'กรุณาแจ้ง ผู้ดูแลระบบ: <a href="mailto:%1$s">%1$s</a>',
 	'NO_ACCESS_ATTACHMENT'		=> 'ไม่สามารถใช้ไฟล์นี้',
@@ -516,6 +627,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_ADMIN'				=> 'การเข้าใช้งานในส่วนหน้าผู้ดูแลระบบไม่สามารถเข้าถึงได้ เพราะคุณไม่มีสิทธิ์ในการเป็นผู้ดูแลระบบ',
 	'NO_AUTH_ADMIN_USER_DIFFER'	=> 'คุณไม่มีสิทธิ์เข้าใช้งานในสถานะผู้ใช้อื่น',
 	'NO_AUTH_OPERATION'			=> 'คุณไม่ได้รับอนุญาตให้กระทำการใดๆ สำเร็จ',
+	'NO_AVATARS'				=> 'No avatars currently available',
 	'NO_CONNECT_TO_SMTP_HOST'	=> 'ไม่สามารถเชื่อมต่อกับ SMTP โฮสต์ : %1$s : %2$s',
 	'NO_BIRTHDAYS'				=> 'ยังไม่ระบุวันเกิด',
 	'NO_EMAIL_MESSAGE'			=> 'ข้อความ e-mail เป็นค่าว่าง',
@@ -531,7 +643,6 @@ $lang = array_merge($lang, array(
 	'NO_MODE'					=> 'No mode specified.',
 	'NO_MODERATORS'				=> 'ยังไม่ได้กำหนด moderators ในบอร์ดนี้',
 	'NO_NEW_MESSAGES'			=> 'ไม่มีข้อความใหม่',
-	'NO_NEW_PM'					=> '0 ข้อความใหม่',
 	'NO_NEW_POSTS'				=> 'ไม่มีโพสต์ใหม่',	// Not used anymore
 	'NO_ONLINE_USERS'			=> 'ไม่มีสมาชิกใหม่',
 	'NO_POSTS'					=> 'ไม่มีโพสต์ใหม่',
@@ -546,7 +657,6 @@ $lang = array_merge($lang, array(
 	'NO_TOPIC_FORUM'			=> 'หัวข้อหรือบอร์ดไม่มีแล้ว.',
 	'NO_TOPICS'					=> 'ไม่พบกระทู้ใด ๆในบอร์ดนี้.',
 	'NO_TOPICS_TIME_FRAME'		=> 'ไม่มีข้อความในบอร์ด นี้',
-	'NO_UNREAD_PM'				=> '<strong>0</strong> มีข้อความที่ไม่ได้อ่าน',
 	'NO_UNREAD_POSTS'			=> 'ไม่มีโพสต์ที่ยังไม่ได้อ่าน',
 	'NO_UPLOAD_FORM_FOUND'		=> 'การแนบไฟล์ถูกเริ่มต้น แต่ไม่พบไฟล์ที่ต้องการแนบ',
 	'NO_USER'					=> 'ไม่มีการตอบกลับจากผู้ใช้งาน',
@@ -557,15 +667,14 @@ $lang = array_merge($lang, array(
 	'OFFLINE'					=> 'ออฟไลน์',
 	'ONLINE'					=> 'ออนไลน์',
 	'ONLINE_BUDDIES'			=> 'เพื่อนออนไลน์',
-	'ONLINE_USERS_TOTAL'		=> 'กำลังออนไลน์ทั้งหมด <strong>%d</strong> ท่าน :: ',
-	'ONLINE_USERS_ZERO_TOTAL'	=> 'กำลังออนไลน์ทั้งหมด <strong>0</strong> ท่าน :: ',
-	'ONLINE_USER_TOTAL'			=> 'กำลังออนไลน์ทั้งหมด <strong>%d</strong> ท่าน :: ',
 	'OPTIONS'					=> 'ตัวเลือก',
 
 	'PAGE_OF'				=> 'หน้า <strong>%1$d</strong> จากทั้งหมด <strong>%2$d</strong>',
+	'PAGE_TITLE_NUMBER'		=> 'Page %s',
 	'PASSWORD'				=> 'รหัสผ่าน',
 	'PIXEL'					=> 'px',
 	'PLAY_QUICKTIME_FILE'	=> 'เล่นไฟล์ Quicktime',
+	'PLEASE_WAIT'			=> 'Please wait.',
 	'PM'					=> 'PM',
 	'PM_REPORTED'			=> 'คลิกดูรายงาน',
 	'POSTING_MESSAGE'		=> 'โพสต์ข้อความใน %s',
@@ -578,9 +687,15 @@ $lang = array_merge($lang, array(
 	'POSTED_ON_DATE'		=> 'เมื่อ',
 	'POSTS'					=> 'โพสต์',
 	'POSTS_UNAPPROVED'		=> 'อย่างน้อย 1 ข้อความในกระทู้นี้ถูกอนุมัติ',
+	'POSTS_UNAPPROVED_FORUM'=> 'At least one post in this forum has not been approved.',
 	'POST_BY_AUTHOR'		=> 'โดย',
-	'POST_BY_FOE'			=> 'ข้อความนี้ถูกโพสต์โดย <strong>%1$s</strong> ซึ่งอยู่ในรายการที่คุณละเลย %2$sDisplay this post%3$s.',
+	'POST_BY_FOE'			=> '<strong>%1$s</strong>, who is currently on your ignore list, made this post.',
+	'POST_DISPLAY'			=> '%1$sDisplay this post%2$s.',
 	'POST_DAY'				=> '%.2f ข้อความต่อวัน',
+	'POST_DELETED_ACTION'	=> 'Deleted post:',
+	'POST_DELETED'			=> 'This post has been deleted.',
+	'POST_DELETED_BY'		=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s.',
+	'POST_DELETED_BY_REASON'=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s for the following reason: %4$s',
 	'POST_DETAILS'			=> 'รายละเอียดโพสต์',
 	'POST_NEW_TOPIC'		=> 'โพสต์กระทู้ใหม่',
 	'POST_PCT'				=> '%.2f%% จากโพสทั้งหมด',
@@ -591,7 +706,8 @@ $lang = array_merge($lang, array(
 	'POST_SUBJECT'			=> 'หัวข้อกระทู้',
 	'POST_TIME'				=> 'เวลา',
 	'POST_TOPIC'			=> 'ตั้งกระทู้ใหม่',
-	'POST_UNAPPROVED'		=> 'กระทู้นี้กำลังได้รับการอนุมัติ',
+	'POST_UNAPPROVED_ACTION'	=> 'Post awaiting approval:',
+	'POST_UNAPPROVED'		=> 'This post has not been approved.',
 	'POWERED_BY'			=> 'ขับเคลื่อนโดย %s',
 	'PREVIEW'				=> 'แสดงตัวอย่าง',
 	'PREVIOUS'				=> 'ย้อนกลับ',		// Used in pagination
@@ -601,6 +717,8 @@ $lang = array_merge($lang, array(
 	'PRIVATE_MESSAGES'		=> 'ข้อความส่วนตัว',
 	'PRIVATE_MESSAGING'		=> 'กำลังส่งข้อความส่วนตัว',
 	'PROFILE'				=> 'ตั้งค่าส่วนตัว',
+
+	'QUICK_LINKS'			=> 'Quick links',
 
 	'RANK'						=> 'ระดับ',
 	'READING_FORUM'				=> 'ดูข้อความ %s',
@@ -614,15 +732,6 @@ $lang = array_merge($lang, array(
 	'REDIRECTS'					=> 'redirects',
 	'REGISTER'					=> 'สมัครสมาชิก',
 	'REGISTERED_USERS'			=> 'ผู้ใช้งานขณะนี้ :',
-	'REG_USERS_ONLINE'			=> 'มี %d สมาชิก และ ',
-	'REG_USERS_TOTAL'			=> 'สมาชิก %d ท่าน ',
-	'REG_USERS_TOTAL_AND'		=> '%d ลงทะเบียนแล้ว และ ',
-	'REG_USERS_ZERO_ONLINE'		=> 'ไม่มีสมาชิกและ ',
-	'REG_USERS_ZERO_TOTAL'		=> 'ไม่มีผู้ใช้งานที่เป็นสมาชิก, ',
-	'REG_USERS_ZERO_TOTAL_AND'	=> 'ไม่มีสมาชิกที่ลงทะเบียนแล้ว และ ',
-	'REG_USER_ONLINE'			=> 'มี %d สมาชิก และ ',
-	'REG_USER_TOTAL'			=> 'สมาชิก %d ท่าน, ',
-	'REG_USER_TOTAL_AND'		=> '%d ลงทะเบียน และ ',
 	'REMOVE'					=> 'ลบทิ้ง',
 	'REMOVE_INSTALL'			=> 'กรุณาลบ, ย้าย, หรือ เปลี่ยนชื่อ ไดเร็คทอรี install ก่อนที่จะเริ่มใช้งานเว็บบอร์ด<br />ถ้ามีไดเร็คทอรี่นี้อยู่ ท่านจะสามารถใช้งานได้เพียง Administration Control Panel (ACP) เท่านั้น',
 	'REPLIES'					=> 'ตอบกลับ',
@@ -639,7 +748,8 @@ $lang = array_merge($lang, array(
 	'RETURN_FORUM'				=> '%sกลับไปหน้าบอร์ด ที่เข้าดูล่าสุด%s',
 	'RETURN_PAGE'				=> '%sย้อนกลับไปหน้าที่แล้ว%s',
 	'RETURN_TOPIC'				=> '%sกลับไปหน้ากระทู้ที่เข้าดูล่าสุด%s',
-	'RETURN_TO'					=> 'ย้อนกลับไปยัง',
+	'RETURN_TO'					=> 'Return to “%s”',
+	'RETURN_TO_INDEX'			=> 'Return to Board Index',
 	'FEED'						=> 'Feed',
 	'FEED_NEWS'					=> 'News',
 	'FEED_TOPICS_ACTIVE'		=> 'Active Topics',
@@ -667,28 +777,30 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV_EXPLAIN'		=> 'แสดงตัวเลือกการค้นหาโดยละเอียด',
 	'SEARCH_KEYWORDS'			=> 'คีย์เวิร์ดสำหรับค้นหา',
 	'SEARCHING_FORUMS'			=> 'กำลังค้นหาบอร์ด',
-	'SEARCH_ACTIVE_TOPICS'		=> 'แสดงกระทู้ที่เปิดดูแล้ว',
+	'SEARCH_ACTIVE_TOPICS'		=> 'Active topics',
 	'SEARCH_FOR'				=> 'ค้นหาสำหรับ',
 	'SEARCH_FORUM'				=> 'ค้นหาในบอร์ด นี้…',
-	'SEARCH_NEW'				=> 'แสดงกระทู้ที่ยังไม่ได้อ่าน',
+	'SEARCH_NEW'				=> 'New posts',
 	'SEARCH_POSTS_BY'			=> 'ค้นหาโพสต์จาก',
-	'SEARCH_SELF'				=> 'แสดงกระทู้ของท่าน',
+	'SEARCH_SELF'				=> 'Your posts',
 	'SEARCH_MINE'				=> 'View your topics',
 	'SEARCH_TOPIC'				=> 'ค้นหาในหัวข้อนี้…',
-	'SEARCH_UNANSWERED'			=> 'แสดงกระทู้ที่ยังไม่มีการตอบ',
-	'SEARCH_UNREAD'				=> 'ดูโพสต์ที่ยังไม่ได้อ่าน',
+	'SEARCH_UNANSWERED'			=> 'Unanswered posts',
+	'SEARCH_UNREAD'				=> 'Unread posts',
 	'SEARCH_USER_POSTS'			=> 'ค้นหาเจ้าของโพสต์',
 	'SECONDS'					=> 'วินาที',
+	'SEE_ALL'					=> 'See All',
 	'SELECT'					=> 'เลือก',
 	'SELECT_ALL_CODE'			=> 'เลือกทั้งหมด',
 	'SELECT_DESTINATION_FORUM'	=> 'กรุณาเลือกบอร์ดเป้าหมาย',
 	'SELECT_FORUM'				=> 'เลือกบอร์ด',
-	'SEND_EMAIL'				=> 'E-mail',				// Used for submit buttons
-	'SEND_EMAIL_USER'			=> 'E-mail',				// Used as: {L_SEND_EMAIL_USER} {USERNAME} -> E-mail UserX
+	'SEND_EMAIL'				=> 'Send email',				// Used for submit buttons
+	'SEND_EMAIL_USER'			=> 'Send email to %s',
 	'SEND_PRIVATE_MESSAGE'		=> 'ส่งข้อความส่วนตัว',
 	'SETTINGS'					=> 'ตั้งค่า',
 	'SIGNATURE'					=> 'ลายเซ็นต์',
 	'SKIP'						=> 'Skip ไปที่เนื้อหา',
+	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'เซิร์ฟเวอร์ SMTP ไม่รองรับการกำหนดสิทธิ์',
 	'SORRY_AUTH_READ'			=> 'คุณไม่สามารถอ่านกระทู้นี้',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'คุณไม่สามารถ ดาวโหลด ไฟล์แนบนี้',
@@ -706,6 +818,8 @@ $lang = array_merge($lang, array(
 	'START_WATCHING_TOPIC'		=> 'อีเมล์แจ้งเมื่อมีการตอบกระทู้นี้',
 	'STOP_WATCHING_FORUM'		=> 'ยกเลิกการอีเมล์แจ้งเมื่อมีกระทู้ใหม่ในบอร์ดนี้',
 	'STOP_WATCHING_TOPIC'		=> 'ยกเลิกการอีเมล์แจ้งเมื่อมีการตอบกระทู้นี้',
+	'STRING_LIST_MULTI'			=> '%1$s, and %2$s',
+	'STRING_LIST_SIMPLE'		=> '%1$s and %2$s',
 	'SUBFORUM'					=> 'บอร์ดย่อย',
 	'SUBFORUMS'					=> 'บอร์ดย่อย',
 	'SUBJECT'					=> 'หัวข้อ',
@@ -717,51 +831,35 @@ $lang = array_merge($lang, array(
 	'THE_TEAM'			=> 'ทีมงาน',
 	'TIB'				=> 'TiB',
 	'TIME'				=> 'เวลา',
-	
+	'TIMEOUT_PROCESSING_REQ'			=> 'Request timed out.',
+
 	'TOO_LARGE'						=> 'ข้อมูลที่กรอกเข้ามายาวเกินไป.',
 	'TOO_LARGE_MAX_RECIPIENTS'		=> 'ข้อมูลที่กรอกเข้ามามากเกินไป.',
 
 	'TOO_LONG'						=> 'ข้อมูลที่กรอกเข้ามามากเกินไป.',
 
-	'TOO_LONG_AIM'					=> 'ชื่อยาวเกินไป',
 	'TOO_LONG_CONFIRM_CODE'			=> 'ยืนยันโค้ดยาวเกินไป',
 	'TOO_LONG_DATEFORMAT'			=> 'รูปแบบเวลายาวเกินไป',
-	'TOO_LONG_ICQ'					=> 'หมายเลข ICQ ยาวเกินไป',
-	'TOO_LONG_INTERESTS'			=> 'สิ่งที่สนใจยาวเกินไป',
 	'TOO_LONG_JABBER'				=> 'The Jabber account ยาวเกินไป.',
-	'TOO_LONG_LOCATION'				=> 'The location ยาวเกินไป',
-	'TOO_LONG_MSN'					=> 'The MSNM/WLM name ยาวเกินไป.',
 	'TOO_LONG_NEW_PASSWORD'			=> 'รหัสผ่าน ยาวเกินไป',
-	'TOO_LONG_OCCUPATION'			=> 'อาชีพ ยาวเกินไป.',
 	'TOO_LONG_PASSWORD_CONFIRM'		=> 'ยืนยันรหัสผ่าน ยาวเกินไป.',
 	'TOO_LONG_USER_PASSWORD'		=> 'รหัสผ่าน ยาวเกินไป.',
 	'TOO_LONG_USERNAME'				=> 'ชื่อผู้ใช้ ยาวเกินไป.',
-	'TOO_LONG_EMAIL'				=> 'e-mail address ยาวเกินไป.',
-	'TOO_LONG_EMAIL_CONFIRM'		=> 'ยืนยัน e-mail address ยาวเกินไป.',
-	'TOO_LONG_WEBSITE'				=> 'ที่อยู่ website ยาวเกินไป.',
-	'TOO_LONG_YIM'					=> 'The Yahoo! Messenger name ยาวเกินไป.',
+	'TOO_LONG_EMAIL'				=> 'The email address you entered is too long.',
 
 	'TOO_MANY_VOTE_OPTIONS'			=> 'คุณพยายามที่จะโหวตสำหรับหลายตัวเลือกเกินไป.',
 
 	'TOO_SHORT'						=> 'ข้อมูลที่กรอกเข้ามาสั้นเกินไป.',
 
-	'TOO_SHORT_AIM'					=> 'ชื่อสั้นเกินไป.',
 	'TOO_SHORT_CONFIRM_CODE'		=> 'ยืนยันโค้ดสั้นเกินไป.',
 	'TOO_SHORT_DATEFORMAT'			=> 'รูปแบบวันสั้นเกินไป.',
-	'TOO_SHORT_ICQ'					=> 'หมายเลข ICQ สั้นเกินไป.',
-	'TOO_SHORT_INTERESTS'			=> 'สิ่งที่สนใจสั้นเกินไป.',
 	'TOO_SHORT_JABBER'				=> 'The Jabber account name สั้นเกินไป.',
-	'TOO_SHORT_LOCATION'			=> 'The location สั้นเกินไป.',
-	'TOO_SHORT_MSN'					=> 'The MSNM/WLM name สั้นเกินไป.',
 	'TOO_SHORT_NEW_PASSWORD'		=> 'รหัสผ่านสั้นเกินไป.',
-	'TOO_SHORT_OCCUPATION'			=> 'อาชีพ สั้นเกินไป.',
 	'TOO_SHORT_PASSWORD_CONFIRM'	=> 'ยืนยันรหัสผ่านสั้นเกินไป.',
 	'TOO_SHORT_USER_PASSWORD'		=> 'รหัสผ่านสั้นเกินไป.',
 	'TOO_SHORT_USERNAME'			=> 'ชื่อผู้ใช้สั้นเกินไป.',
-	'TOO_SHORT_EMAIL'				=> 'e-mail address สั้นเกินไป.',
-	'TOO_SHORT_EMAIL_CONFIRM'		=> 'ยืนยัน e-mail address สั้นเกินไป.',
-	'TOO_SHORT_WEBSITE'				=> 'ที่อยู่ website สั้นเกินไป.',
-	'TOO_SHORT_YIM'					=> 'The Yahoo! Messenger name สั้นเกินไป.',
+	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
+	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
 	
 	'TOO_SMALL'						=> 'ข้อมูลน้อยเกินไป.',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> 'ข้อมูลที่กรอกเข้ามาน้อยเกินไป ระบบตั้งค่าน้อยสุดไว้มากกว่าที่กรอกเข้ามา.',
@@ -775,30 +873,20 @@ $lang = array_merge($lang, array(
 	'TOPIC_MOVED'		=> 'ย้ายกระทู้',
 	'TOPIC_REVIEW'		=> 'กระทู้แนะนำ',
 	'TOPIC_TITLE'		=> 'หัวข้อกระทู้',
-	'TOPIC_UNAPPROVED'	=> 'กระทู้นี้ไม่ได้รับการอนุมัติ',
+	'TOPIC_UNAPPROVED'	=> 'This topic has not been approved.',
+	'TOPIC_DELETED'		=> 'This topic has been deleted.',
 	'TOTAL_ATTACHMENTS'	=> 'ไฟล์แนบ',
-	'TOTAL_LOG'			=> '1 log',
-	'TOTAL_LOGS'		=> '%d logs',
-	'TOTAL_NO_PM'		=> 'ข้อความส่วนตัวทั้งหมด 0 ข้อความ',
-	'TOTAL_PM'			=> 'ข้อความส่วนตัวทั้งหมด 1 ข้อความ',
-	'TOTAL_PMS'			=> 'ข้อความส่วนตัวทั้งหมด %d ข้อความ',
+	'TOPIC_POLL'		=> 'This topic has a poll.',
 	'TOTAL_POSTS'		=> 'โพสต์ทั้งหมด',
-	'TOTAL_POSTS_OTHER'	=> 'โพสต์ทั้งหมด <strong>%s</strong>',
-	'TOTAL_POSTS_ZERO'	=> 'โพสต์ทั้งหมด <strong>0</strong>',
 	'TOPIC_REPORTED'	=> 'กระทู้ถูกรายงานแล้ว',
-	'TOTAL_TOPICS_OTHER'=> 'กระทู้ทั้งหมด <strong>%s</strong>',
-	'TOTAL_TOPICS_ZERO'	=> 'กระทู้ทั้งหมด <strong>0</strong>',
-	'TOTAL_USERS_OTHER'	=> 'สมาชิกทั้งหมด <strong>%s</strong>',
-	'TOTAL_USERS_ZERO'	=> 'สมาชิกทั้งหมด <strong>0</strong>',
 	'TRACKED_PHP_ERROR'	=> 'Tracked PHP errors: %s',
+	'TWITTER'			=> 'Twitter',
 
-	'UNABLE_GET_IMAGE_SIZE'	=> 'ไม่สามารถระบุความกว้างและความสูงของรูปภาพได้.',
+	'UNABLE_GET_IMAGE_SIZE'	=> 'It was not possible to determine the dimensions of the image. Please verify that the URL you entered is correct.',
 	'UNABLE_TO_DELIVER_FILE'=> 'ไม่สามารถส่งไฟล์ได้.',
 	'UNKNOWN_BROWSER'		=> 'ไม่รู้จัก browser',
 	'UNMARK_ALL'			=> 'ยกเลิกที่เลือกทั้งหมด',
 	'UNREAD_MESSAGES'		=> 'ข้อความที่ยังไม่ได้อ่าน',
-	'UNREAD_PM'				=> '<strong>%d</strong> ข้อความยังไม่ได้อ่าน',
-	'UNREAD_PMS'			=> '<strong>%d</strong> ข้อความยังไม่ได้อ่าน',
 	'UNREAD_POST'			=> 'โพสต์ที่ยังไม่ได้อ่าน',
 	'UNREAD_POSTS'			=> 'มีหลายโพสต์ที่ยังไม่ได้อ่าน',
 	'UNWATCH_FORUM_CONFIRM'		=> 'ต้องการยกเลิกการติดตามหมวด ?',
@@ -816,8 +904,6 @@ $lang = array_merge($lang, array(
 	'USERNAMES'				=> 'ชื่อผู้ใช้',
 	'USER_AVATAR'			=> 'ภาพประจำตัวสมาชิก',
 	'USER_CANNOT_READ'		=> 'ท่านไม่สามารถอ่านกระทู้ในบอร์ด นี้ได้.',
-	'USER_POST'				=> '%d โพสต์',
-	'USER_POSTS'			=> '%d โพสต์',
 	'USERS'					=> 'สมาชิก',
 	'USE_PERMISSIONS'		=> 'ทดสอบ permissions ผู้ใช้',
 
@@ -825,6 +911,8 @@ $lang = array_merge($lang, array(
 
 	'VARIANT_DATE_SEPARATOR'	=> ' / ',	// Used in date format dropdown, eg: "Today, 13:37 / 01 Jan 2007, 13:37" ... to join a relative date with calendar date
 	'VIEWED'					=> 'วิว',
+
+	'VIEWING_CONTACT_ADMIN'		=> 'Viewing contact page',
 	'VIEWING_FAQ'				=> 'กำลังดู รายการช่วยเหลือ',
 	'VIEWING_MEMBERS'			=> 'กำลังดู รายละเอียดสมาชิก',
 	'VIEWING_ONLINE'			=> 'กำลังดู ใครกำลังออนไลน์',
@@ -839,8 +927,6 @@ $lang = array_merge($lang, array(
 	'VIEW_LATEST_POST'			=> 'ดูข้อความล่าสุด',
 	'VIEW_NEWEST_POST'			=> 'ดูโพสแรกที่ยังไม่ได้อ่าน',
 	'VIEW_NOTES'				=> 'ดูโน๊ตผู้ใช้',
-	'VIEW_ONLINE_TIME'			=> 'มีการอัปเดททุก ๆ  %d นาที',
-	'VIEW_ONLINE_TIMES'			=> 'มีการอัปเดททุก ๆ %d นาที',
 	'VIEW_TOPIC'				=> 'แสดงกระทู้',
 	'VIEW_TOPIC_ANNOUNCEMENT'	=> 'ประกาศ: ',
 	'VIEW_TOPIC_GLOBAL'			=> 'ประกาศทั่วไป: ',
@@ -861,23 +947,24 @@ $lang = array_merge($lang, array(
 	'WEBSITE'			=> 'เว็บไซต์',
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> 'ผู้ใช้งานขณะนี้',
+	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'รหัสไม่ถูกต้อง',
 	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
-	'WRONG_DATA_ICQ'			=> 'หมายเลข ICQ ไม่ถูกต้อง',
 	'WRONG_DATA_JABBER'			=> 'บัญชี Jabber ไม่ถูกต้อง',
 	'WRONG_DATA_LANG'			=> 'ภาษานี้ไม่ถูกต้อง',
-	'WRONG_DATA_WEBSITE'		=> 'ที่อยู่เวบไซต์ไม่ถูกต้อง, ต้องประกอบด้วยโปรโตคอล  ตัวอย่างเช่น http://www.example.com/.',
+	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
+	'WRONG_DATA_POST_SK'		=> 'The post sort option you specified is not valid.',
+	'WRONG_DATA_TOPIC_SD'		=> 'The topic sort direction you specified is not valid.',
+	'WRONG_DATA_TOPIC_SK'		=> 'The topic sort option you specified is not valid.',
 	'WROTE'						=> 'เขียน',
 
+	'YAHOO'				=> 'Yahoo Messenger',
+	'YOUTUBE'			=> 'YouTube',
 	'YEAR'				=> 'ปี',
 	'YEAR_MONTH_DAY'	=> '(ปี-เดือน-วัน)',
 	'YES'				=> 'ใช่',
-	'YIM'				=> 'YIM',
 	'YOU_LAST_VISIT'	=> 'ใช้งานล่าสุด: %s',
-	'YOU_NEW_PM'		=> 'มีข้อความส่วนตัวมาถึงท่าน',
-	'YOU_NEW_PMS'		=> 'มีข้อความส่วนตัวมาถึงท่าน',
-	'YOU_NO_NEW_PM'		=> 'ไม่มีข้อความส่วนตัว',
 
 	'default_dateformat'	=> 'D d M Y g:i a', // Mon Jan 01, 2007 1:37 pm
 
@@ -1083,7 +1170,6 @@ $lang = array_merge($lang, array(
 
 	'FORUM_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this forum.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this topic.',
-	'TOO_FEW_CHARS_LIMIT'	=> 'ข้อความของคุณมี %1$d ตัวอักษร. ต้องกรอกตัวอักษรอย่างน้อย %2$d. ตัว',
 	'REPLY_TO_MESSAGE'		=> 'Reply to message',
 
 	'RSS_CHAN_LIST_TITLE'	=> 'บอร์ด',
@@ -1695,7 +1781,6 @@ $lang = array_merge($lang, array(
 	'DEV_NO_TEST_FILE'			=> 'ไม่มีค่าระบุสำหรับตัวแปร test_file ในตัวแปลง ถ้าคุณใช้ตัวแปลงนี้ คุณไม่ควรเห็นความผิดพลาดนี้ โปรดรายงานข้อความนี้ให้กับผู้แต่งตัวแปลง ถ้าคุณเป็นผู้แต่งตัวแปลง คุณต้องระบุชื่อของไฟล์ที่มีอยู่ในบอร์ดต้นกำเนิดเพื่อให้ตรวจสอบความถูกต้อง',
 	'DIRECTORIES_AND_FILES'		=> 'เซตอัพไดเรกทอรี่และไฟล์',
 	'DISABLE_KEYS'				=> 'ยกเลิกการใช้คีย์',
-	'DLL_FIREBIRD'				=> 'Firebird',
 	'DLL_FTP'					=> 'รองรับการ Remote [ การติดตั้ง]',
 	'DLL_GD'					=> 'รองรับ GD Graphic [ Visual Confirmation ]',
 	'DLL_MBSTRING'				=> 'รองรับ Multi-byte character',
@@ -1706,11 +1791,12 @@ $lang = array_merge($lang, array(
 	'DLL_MYSQLI'				=> 'MySQL ด้วยส่วนเสริม MySQLi',
 	'DLL_ORACLE'				=> 'Oracle',
 	'DLL_POSTGRES'				=> 'PostgreSQL',
-	'DLL_SQLITE'				=> 'SQLite',
+	'DLL_SQLITE'				=> 'SQLite 2',
+	'DLL_SQLITE3'				=> 'SQLite 3',
 	'DLL_XML'					=> 'XML support [ Jabber ]',
 	'DLL_ZLIB'					=> 'สนับสนุนการบีบอัด zlib [ gz, .tar.gz, .zip ]',
 	'DL_CONFIG'					=> 'ดาวน์โหลดไฟล์การตั้งค่า',
-	'DL_CONFIG_EXPLAIN'			=> 'ท่านจะต้องดาวน์โหลดไฟล์ config.php ลงคอมพิวเตอร์ของท่าน จากนั้นท่านจะต้องอัพโหลดไฟล์ config.php ไปทับไฟล์เก่าในไดเรกทอรี่ของ phpBB 3.0 กรุณาจำไว้ว่าจะต้องอัพโหลดไฟล์ในรูปแบบ ASCII (กรุณาอ่านคู่มือของโปรแกรม FTP ที่ท่านใช้)<br />เมื่อท่านอัพโหลดเสร็จเรียบร้อยแล้ว ให้คลิกปุ่ม ทำ  เพื่อไปยังขั้นตอนถัดไป',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'ดาวน์โหลด',
 	'DONE'						=> 'เสร็จสิ้น',
 
@@ -1722,8 +1808,6 @@ $lang = array_merge($lang, array(
 	'FILES_REQUIRED_EXPLAIN'	=> '<strong>ความต้องการ</strong> - phpBB จะต้องสามารถอ่านและเขียนไฟล์และไดเรกทอรีได้ ถ้าท่านเห็นข้อความ \'ไม่พบ\' ท่านจะต้องทำการสร้างไฟล์หรือไดเรกทอรีนั้นเอง ถ้าท่านเห็นข้อความ \'ไม่สามารถเขียนได้\' ท่านจะต้องแก้ไขสิทธิ์ (CHMOD) ให้กับไฟล์หรือไดเรกทอรีนั้น เพื่ออนุญาตให้ phpBB สามารถเขียนได้',
 	'FILLING_TABLE'				=> 'การเติมเต็มตาราง<strong>%s</strong>',
 	'FILLING_TABLES'			=> 'คัดลอกตารางฐานข้อมูล',
-
-	'FIREBIRD_DBMS_UPDATE_REQUIRED'		=> 'phpBB ไม่รองรับ Firebird / Interbase เวอร์ชั่นต่ำกว่า 2.1. โปรดอัพเกรด Firebird ของคุณเป็นเวอร์ชั่นที่ 2.1 เป็นต้นไป  ก่อนดำเนินการอัพเกรดต่อไป.',
 
 	'FINAL_STEP'				=> 'ขั้นตอนถัดไป',
 	'FORUM_ADDRESS'				=> 'ที่อยู่บอร์ด',
@@ -1751,30 +1835,30 @@ $lang = array_merge($lang, array(
 		',
 	'INSTALL_INTRO'				=> 'ยินดีต้อนรับสู่ขั้นตอนการติดตั้ง',
 
-	'INSTALL_INTRO_BODY'		=> 'ตัวเลือกนี้ใช้สำหรับติดตั้ง phpBB ใหม่ลงในเซิร์ฟเวอร์ของท่าน</p><p>ก่อนจะเริ่มการติดตั้ง กรุณาเตรียมข้อมูลรายละเอียดของฐานข้อมูลก่อน ถ้าท่านไม่ทราบข้อมูลรายละเอียดของฐานข้อมูล กรุณาติดต่อผู้ให้บริการเซิร์ฟเวอร์ที่ท่านใช้อยู่ โดยสิ่งที่ท่านจะต้องทราบมีดังนี้:</p>
+	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
 
 	<ul>
-	<li>ชนิดฐานข้อมูล - ชนิดของฐานข้อมูลที่ต้องใช้</li>
-	<li>ชื่อ hostname หรือ DSN - ที่อยู่ของฐานข้อมูล</li>
-		<li>หมายเลขพอร์ตของฐานข้อมูล - หมายเลขพอร์ตของฐานข้อมูล (อาจไม่จำเป็นต้องใช้ก็ได้ สามารถใช้ค่าที่ระบบ กำหนดให้ได้).</li>
-		<li>ชื่อฐานข้อมูล - ชื่อฐานข้อมูลที่เก็บไว้ในเครื่อง Server </li>
-		<li>Username และ Password สำหรับฐานข้อมูล - ใช้สำหรับเข้าระบบฐานข้อมูล</li>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
 	</ul>
 
-	<p><strong>หมายเหตุ</strong>  ถ้าท่านกำลังจะติดตั้งโดยใช้ SQLite ท่านควรกรอก<u>ที่อยู่ไฟล์ฐานข้อมูลแบบเต็ม</u>ลงในช่อง Database เซิร์ฟเวอร์ hostname และปล่อยให้ช่อง username และรหัสผ่าน ว่างไว้. เพื่อความปลอดภัย ท่านควรจะตรวจสอบให้แน่ใจว่า ไฟล์ฐานข้อมูลนั้นถูกเก็บไว้ในตำแหน่งที่ไม่สามารถเรียกใช้งานได้โดยตรงจากเว็บบราวเซอร์</p>
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
 
-	<p>phpBB3 สามารถใช้งานฐานข้อมูลเหล่านี้ได้</p>
+	<p>phpBB3 supports the following databases:</p>
 	<ul>
-		<li>MySQL 3.23 หรือสูงกว่า (MySQLi supported)</li>
-		<li>PostgreSQL 7.3+</li>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
 		<li>SQLite 2.8.2+</li>
-		<li>Firebird 2.1+</li>
-		<li>MS SQL Server 2000 หรือสูงกว่า (ใช้งานโดยตรง หรือผ่าน ODBC)</li>
-		<li>MS SQL Server 2005 หรือสูงกว่า (native)</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
 		<li>Oracle</li>
 	</ul>
-	
-	<p>ซึ่งหน้าถัดไปนี้จะแสดงเฉพาะฐานข้อมูลที่จะสามารถถูกนำมาใช้งานได้เท่านั้น',
+
+	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'เพื่อเริ่มต้นการติดตั้ง โปรดกดปุ่มข้างล่าง',
 	'INSTALL_LOGIN'				=> ' Login ',
 	'INSTALL_NEXT'				=> 'ขั้นถัดไป',
@@ -1790,9 +1874,8 @@ $lang = array_merge($lang, array(
 	'INST_ERR_DB_NO_ERROR'		=> 'ไม่พบข้อความผิดพลาด',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'เวอร์ชั่นของ MySQL ที่ติดตั้งอยู่ ไม่สามารถใช้งาน MySQL และ MySQLi extension ตามที่ท่านเลือกไว้ กรุณาลองใช้เฉพาะ MySQL แทน',
 	'INST_ERR_DB_NO_SQLITE'		=> 'เวอร์ชั่นของ SQLite extension เก่าเกินไป กรุณาอัพเกรดเป็นเวอร์ชั่น 2.8.2 เป็นอย่างน้อย',
+	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'ท่านต้องแก้ไขฐานข้อมูล Oracle ตัวแปร <var>NLS_CHARACTERSET</var> ให้เป็น <var>UTF8</var> อาจแก้ไขโดยอัพเกรดเป็นเวอร์ชั่น 9.2+ หรือแก้ไขตัวแปรนั้น',
-	'INST_ERR_DB_NO_FIREBIRD'	=> 'เวอร์ชั่นของ Firebird ต่ำกว่า 2.1 กรุณาอัพเกรดเป็นเวอร์ชั่นใหม่',
-	'INST_ERR_DB_NO_FIREBIRD_PS'=> 'ฐานข้อมูล Firebird มี page size น้อยกว่า 8192 ซึ่งจำเป็นจะต้องมีอย่างน้อย 8192',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'ชื่อฐานข้อมูลที่ท่านเลือก ไม่ได้ถูกสร้างโดยใช้การเข้ารหัสแบบ <var>UNICODE</var> หรือ <var>UTF8</var> กรุณาเลือกชื่อฐานข้อมูลที่ถูกสร้างโดยใช้การเข้ารหัสแบบ <var>UNICODE</var> or <var>UTF8</var>',
 	'INST_ERR_DB_NO_NAME'		=> 'ท่านไม่ได้พิมพ์ชื่อฐานข้อมูล',
 	'INST_ERR_EMAIL_INVALID'	=> 'อีเมล ไม่ถูกต้อง',
@@ -1846,6 +1929,8 @@ $lang = array_merge($lang, array(
 	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB จะ <strong>ไม่สามารถใช้งานได้</strong> ถ้าการติดตั้ง PHP ของคุณไม่รองรับ UTF-8 ในรูปแบบ PCRE extension.',
 	'PHP_GETIMAGESIZE_SUPPORT'			=> 'function getimagesize() ของ PHP สามารถใช้งานได้ ',
 	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>ความต้องการ</strong> - ถ้าต้องการให้ phpBB ทำงานได้อย่างถูกต้อง ฟังก์ชันนี้จะต้องสามารถใช้งานได้',
+	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'โมดูลพิเศษ',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>หมายเหตุ</strong> - โมดูลหรือโปรแกรมเหล่านี้เป็นสิ่งเพิ่มเติม แต่ถ้าสามารถใช้งานได้ ก็จะช่วยเพิ่มความสามารถให้กับ phpBB มากขึ้น',
 	'PHP_SUPPORTED_DB'				=> 'ฐานข้อมูลที่ใช้งานได้',
@@ -1854,10 +1939,10 @@ $lang = array_merge($lang, array(
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'phpBB จะยังสามารถใช้งานได้แม้ตัวแปรนี้ไม่ได้ถูกยกเลิก แต่เพื่อความปลอดภัย กรุณายกเลิกการใช้งานตัวแปรนี้ในการตั้งค่าของ PHP',
 	'PHP_SAFE_MODE'					=> 'Safe mode',
 	'PHP_SETTINGS'					=> 'เวอร์ชั่นของ PHP และการตั้งค่า',
-	'PHP_SETTINGS_EXPLAIN'			=> '<strong>ความต้องการ</strong> - ท่านจะต้องใช้ PHP 4.3.3 เป็นอย่างน้อย ในการติดตั้ง phpBB ถ้ามีข้อความ <var>safe mode</var> แสดงว่า PHP ถูกติดตั้งและทำงานใน safe mode ซึ่งจะจำกัดความสามารถในการควบคุมและความสามารถอื่นๆลง',
+	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'การตั้งค่า PHP <var>allow_url_fopen</var> สามารถใช้งานได้',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>หมายเหตุ</strong> -  ตัวแปรนี้เป็นสิ่งเพิ่มเติม แต่ฟังก์ชันบางอย่างของ phpBB เช่น รูปภาพส่วนตัวจากเว็บภายนอก (off-site avatars)',
-	'PHP_VERSION_REQD'				=> 'PHP version >= 4.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
 	'POST_ID'						=> 'Post ID',
 	'PREFIX_FOUND'					=> 'การสแกนตารางของคุณได้ผลว่าคุณใช้ตารางที่มี <strong>%s</strong> เป็นคำนำหน้าตาราง',
 	'PREPROCESS_STEP'				=> 'Executing pre-processing functions/queries',
@@ -1877,6 +1962,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> 'กำหนดค่าเริ่มต้นให้ Server',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'ยังไม่ได้ทำการแปลง รายการค้นหา',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'ายการแปลงของเว็บบอร์ดตัวเก่ายังไม่ได้ถูกแปลง ซึ่งจะทำให้ไม่สามารถค้นหาข้อความในเว็บบอร์ดได้ กรุณาไปที่ Administration Control Panel เลือก บำรุงรักษา แล้วเลือกเมนูย่อย รายการค้นหา',
+	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> 'ซอร์ตแวร์เว็บบอร์ด',
 	'SPECIFY_OPTIONS'			=> 'กรอกข้อมูลของเว็บบอร์ด',
 	'STAGE_ADMINISTRATOR'		=> 'รายละเอียดสำหรับ ผู้ดูแลระบบ',
@@ -1884,7 +1970,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> 'การตั้งค่าต่างๆในหน้านี้ มีไว้สำหรับให้ท่านสามารถแก้ไขค่าต่างๆที่ไม่ใช่ค่าดั้งเดิม แต่ถ้าท่านไม่แน่ใจ กรุณาข้ามไปขั้นตอนถัดไป ซึ่งท่านสามารถแก้ไขค่าเหล่านี้ที่ Administration Control Panel ได้ในภายหลัง',
 	'STAGE_CONFIG_FILE'			=> 'สร้างไฟล์การตั้งค่า',
 	'STAGE_CREATE_TABLE'		=> 'สร้างตารางในฐานข้อมูล',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'สร้างตารางในฐานข้อมูลสำหรับ phpBB 3.0 เสร็จเรียบร้อยแล้ว คลิกปุ่ม ขั้นตอนถัดไป เพื่อจบการติดตั้ง',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'ตั้งค่าฐานข้อมูล',
 	'STAGE_FINAL'				=> 'จบกระบวนการติดตั้ง',
 	'STAGE_INTRO'				=> 'คำแนะนำ',
@@ -1897,7 +1983,7 @@ $lang = array_merge($lang, array(
 	'SUB_LICENSE'				=> 'ลิขสิทธิ์',
 	'SUB_SUPPORT'				=> 'ความช่วยเหลือ',
 	'SUCCESSFUL_CONNECT'		=> 'ติดต่อสำเร็จ',
-	'SUPPORT_BODY'				=> 'ท่านสามารถขอความช่วยเหลือ เรื่องต่อไปนี้ /p><ul><li>การติดตั้ง</li><li>การกำหนดค่า</li><li>คำถามทางเทคนิค</li><li>ปัยญาเกี่ยวข้อผิดพลาดที่เกิดจากระบบ</li><li>การแก้ไขข้อผิดพลาดเกี่ยวกับ (RC) </li><li>การโอนข้อมูลจาก  phpBB 2.0.x ไป phpBB3</li><li>การโอนข้อมูลจากเวบบอร์ดชนิดอื่น ไป phpBB3 (เพิ่มเติมได้ที่ <a href="http://www.phpbb.com/community/viewforum.php?f=65" target="_bank">การโอนข้อมูล Forum</a>)</li></ul><p>เรายังคงใช้ phpBB3 เวอร์ชั่น Beta เป็นเวอร์ชั่นล่าสุด</p><h2>MODs / Styles</h2><p>สำหรับเรื่อง  MODs, ความสามารถเพิ่มเติมได้ที่ <a href="http://www.phpbb.com/community/viewforum.php?f=81" target="_bank">การปรับแต่ง Forum </a>.<br />สำหรับเนื้อหาที่เกี่ยวข้องกับ styles, templates และ imagesets, เพิ่มเติมได้ที่  <a href="http://www.phpbb.com/community/viewforum.php?f=80" target="_bank">Styles Forum</a>.<br /><br />หากมีปัญหาเกี่ยวกับการติดตั้ง,สามารถดูเพิ่มเติมได้ที่</p><h2>เพิ่มเติม</h2><p><a href="http://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070" target="_bank">ยินดีต้อนรับสู่ phpBB3</a><br /><a href="http://www.phpbb.com/support/" target="_bank">ฝ่ายสนับสนุน</a><br /><a href="http://www.phpbb.com/support/documentation/3.0/quickstart/" target="_bank">รายละเอียดแบบคราวๆ </a><br /><br />หากต้องการได้รับข้อมูล เพิ่มเติม <a href="http://www.phpbb.com/support/" target="_bank">สมัครมาชิกได้ที่นี่</a><br /><br />',
+	'SUPPORT_BODY'				=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/documentation/3.1/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
 	'SYNC_FORUMS'				=> 'เริ่มการถ่ายโอนข้อมูลบอร์ด',
 	'SYNC_POST_COUNT'			=> 'จำนวนการถ่ายโอนข้อมูล ',
 	'SYNC_POST_COUNT_ID'		=> 'จำนวนการถ่ายโอนข้อมูล <var>entry</var> %1$s to %2$s.',
@@ -1923,10 +2009,7 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ALL_FILES_UP_TO_DATE'		=> 'ทุกไฟล์เป็นไฟล์ใหม่ล่าสุดของ phpBB แล้ว คุณสามารถ <a href="../ucp.php?mode=login">เข้าสู่ระบบ</a> และตรวจสอบทุกอย่างว่าทำงานได้ปกติ อย่าลืมลบเปลี่ยนชื่อ หรือย้ายไดเรกทอรี่ที่ติดตั้ง! 
-	
-	ไฟล์ทั้งหมดเป็นไฟล์ใหม่ล่าสุดของ phpBB แล้ว . คุณควร <a href="../ucp.php?mode=login&amp;redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">เข้าสู่ระบบ</a> และเช็คว่าทุกอย่างทำงานเป็นปกติ. อย่าลืมลบหรือเปลี่ยนชื่อ หรือ ย้ายโฟลเดอร์ install ! Please send us updated information about your server and board configurations from the <a href="../ucp.php?mode=login&amp;redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">Send statistics</a> module in your ACP.
-	',
+	'ALL_FILES_UP_TO_DATE'		=> 'All files are up to date with the latest phpBB version.',
 	'ARCHIVE_FILE'				=> 'Source file within archive',
 
 	'BACK'				=> 'ย้อนกลับ',
@@ -1949,7 +2032,10 @@ $lang = array_merge($lang, array(
 	'CURRENT_VERSION'				=> 'รุ่นที่ใช้ปัจจุบัน',
 
 	'DATABASE_TYPE'						=> 'ชนิดฐานข้อมูล',
+	'DATABASE_UPDATE_COMPLETE'			=> 'Database updater has completed!',
+	'DATABASE_UPDATE_CONTINUE'			=> 'Continue database update',
 	'DATABASE_UPDATE_INFO_OLD'			=> 'ฐานข้อมูลของไฟล์ในไดเรกทอรี่ที่ติดตั้ง ไม่อัพเดทแล้ว โปรดตรวจสอบว่าคุณได้ทำการอัพโหลดไฟล์เวอร์ชั่นที่ถูกต้อง',
+	'DATABASE_UPDATE_NOT_COMPLETED'		=> 'The database update has not yet completed.',
 	'DELETE_USER_REMOVE'				=> 'ลบผู้ใช้งานและโพสต์',
 	'DELETE_USER_RETAIN'				=> 'ลบเฉพาะผู้ใช้งานไม่ลบโพสต์',
 	'DESTINATION'						=> 'ไฟล์เป้าหมาย',
@@ -1968,14 +2054,17 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_UPDATE_METHOD'			=> 'ดาวน์โหลดไฟล์บีบอัดที่ถูกแก้้ไขแล้ว',
 	'DOWNLOAD_UPDATE_METHOD_EXPLAIN'	=> 'เมื่อคุณดาวน์โหลดแล้ว คุณต้องแตกไฟล์บีบอัด  คุณจะพบไฟล์ที่ถูกแก้ไข และคุณต้องอัพโหลดไปที่ไดเรกทอรี่รากของบอร์ด ตามตำแหน่งที่ถูกต้อง หลังจากอัพโหลดเสร็จแล้ว ให้คุณตรวจสอบไฟล์อีกครั้งด้วยปุ่มข้างล่างนี้',
 
-	'ERROR'			=> 'ผิดพลาด',
 	'EDIT_USERNAME'	=> 'แก้ไขชื่อผู้ใช้',
+	'ERROR'			=> 'ผิดพลาด',
+	'EVERYTHING_UP_TO_DATE'		=> 'Everything is up to date with the latest phpBB version. You should now <a href="%1$s">login to your board</a> and check if everything is working fine. Do not forget to delete, rename or move your install directory! Please send us updated information about your server and board configurations from the <a href="%2$s">Send statistics</a> module in your ACP.',
 
 	'FILE_ALREADY_UP_TO_DATE'		=> 'ไฟล์อัพเดทแล้ว',
 	'FILE_DIFF_NOT_ALLOWED'			=> 'ไฟล์ไม่อนุญาตให้มีความแตกต่าง',
 	'FILE_USED'						=> 'ข้อมูลจาก',			// Single file
 	'FILES_CONFLICT'				=> 'ไฟล์ไม่ตรงกัน',
 	'FILES_CONFLICT_EXPLAIN'		=> 'ในการติดตั้ง phpBB3 ต้องไม่นำไฟล์ของเวอร์ชั่นอื่นมาวางทับ หากต้องการแก้ไขต้องตรวจสอบว่าไฟล์ที่ต้องการคืออะำไร แล้วแก้ปัญหาด้วยมือหรือใช้ วิธีรวมไฟล์กับทุกไฟล์  และเมื่อได้ดำเนินการแก้ไขแล้วต้องตรวจสอบความถูกต้องด้วย ',
+	'FILES_DELETED'					=> 'Deleted files',
+	'FILES_DELETED_EXPLAIN'			=> 'The following files do not exist in the new version. These files have to be deleted from your installation.',
 	'FILES_MODIFIED'				=> 'ไฟล์ที่ถูกแก้ไข',
 	'FILES_MODIFIED_EXPLAIN'		=> 'ไฟล์ต่อไปนี้ถูกแก้ไขและไม่ได้สัมพันธ์กับไฟล์เวอร์ชันเก่า  ไฟล์ใหม่นี้จะสร้างจากการรวมไฟล์จากการแก้ไขของคุณกับไฟล์ใหม่',
 	'FILES_NEW'						=> 'ไฟล์ใหม่',
@@ -2037,6 +2126,7 @@ $lang = array_merge($lang, array(
 	'PREVIOUS_VERSION'					=> 'แพคเก็จปัจจุบันอัพเดทเป็นเวอร์ชัน',
 	'PROGRESS'							=> 'สำเร็จ',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Announcement',
 	'RESULT'					=> 'ผลลัพธ์',
 	'RUN_DATABASE_SCRIPT'		=> 'อัพเดทฐานข้อมูลเดี๋ยวนี้',
 
@@ -2044,6 +2134,7 @@ $lang = array_merge($lang, array(
 	'SELECT_DOWNLOAD_FORMAT'	=> 'เลือกรูปแบบการดาวน์โหลด archive',
 	'SELECT_FTP_SETTINGS'		=> 'เลือกการตั้งค่า FTP',
 	'SHOW_DIFF_CONFLICT'		=> 'แสดง ความแตกต่าง/ความขัดแย้ง',
+	'SHOW_DIFF_DELETED'			=> 'Show file contents',
 	'SHOW_DIFF_FINAL'			=> 'แสดงไฟล์ผลลัพธ์',
 	'SHOW_DIFF_MODIFIED'		=> 'แสดงความแตกต่างที่รวมแล้ว',
 	'SHOW_DIFF_NEW'				=> 'แสดงเนื้อหาไฟล์',
@@ -2057,6 +2148,7 @@ $lang = array_merge($lang, array(
 	'STAGE_UPDATE_FILES'		=> 'อัพเดทไฟล์',
 	'STAGE_VERSION_CHECK'		=> 'ตรวจสอบเวอร์ชั่น',
 	'STATUS_CONFLICT'			=> 'ไฟล์ที่ถูกแก้ไขทำให้เกิดความขัดแย้ง',
+	'STATUS_DELETED'			=> 'Deleted file',
 	'STATUS_MODIFIED'			=> 'ไฟล์ที่ถูกแก้ไข',
 	'STATUS_NEW'				=> 'ไฟล์ใหม่',
 	'STATUS_NEW_CONFLICT'		=> 'ไฟล์ใหม่ขัดแย้ง',
@@ -2079,33 +2171,27 @@ $lang = array_merge($lang, array(
 	<p>วิธีนี้เหมือนกันกับวิธีแรกแต่ไม่ต้องดาวน์โหลดและเปลี่ยนไฟล์ด้วยการอัพโหลดเอง คุณต้องรู้รายละเอียดการเข้าระบบด้วย FTP <br /><br />',
 	'UPDATE_INSTRUCTIONS'			=> '
 
-		<h1>ประกาศ</h1>
+		<h1>Release announcement</h1>
 
-		<p>โปรดอ่าน <a href="%1$s" title="%1$s" target="_bank"><strong>วิธีการอัพเกรดเป็นเวอร์ชั่นล่าสุด</strong></a> ก่อนที่คุณจะเริ่มกระบวนการอัพเดทต่อไป มันอาจจะเป็นข้อมูลที่มีประโยชน์แล ะ มีลิงค์สำหรับการดาวน์โหลดและรา ยละเอียดการเปลี่ยนแปลงของแต่ละเวอร์ชัน</p>
+		<p>Please read the release announcement for the latest version before you continue your update process, it may contain useful information. It also contains full download links as well as the change log.</p>
 
 		<br />
 
-		<h1>วิธีการอัพเดทการติดตั้งด้วยแพคเก็จอัพเดทอัตโนมัติ</h1>
+		<h1>How to update your installation with the Automatic Update Package</h1>
 
-		<pวิธีการที่จะบอกต่อไปนี้ ใช้สำหรับการอัพเดทด้วยแพคเก็จอัพเดทอัตโนมัติเท่านั้น คุณสามารถใช้วิธีอื่นในการอัพเดทที่อยู่ใน เอกสาร INSTALL.html ขั้นตอนในการอัพเดท phpBB3 แบบอัตโนมัติคือ:</p>
+		<p>The recommended way of updating your installation listed here is only valid for the automatic update package. You are also able to update your installation using the methods listed within the INSTALL.html document. The steps for updating phpBB3 automatically are:</p>
 
 		<ul style="margin-left: 20px; font-size: 1.1em;">
-			<li>ไปที่ <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/" target="_bank">หน้้าดาวโหลด phpBB.com </a> และดาวน์โหลด "Automatic Update Package" <br /><br /></li>
-			<li>แตกไฟล์บีบอัด<br /><br /></li>
-			<li>อัพโหลดไฟล์ที่แตกแล้วทั้งหมดไปที่ root ของเว็บบอร์ด (ตำแหน่งเดียวกับที่ไฟล์ config.php อยู่)<br /><br /></li>
+			<li>Go to the <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com downloads page</a> and download the "Automatic Update Package" archive.<br /><br /></li>
+			<li>Unpack the archive.<br /><br /></li>
+			<li>Upload the complete uncompressed install folder to your phpBB root directory (where your config.php file is).<br /><br /></li>
 		</ul>
 
-		<p>บอร์ดจะออฟไลน์ชั่วคราวสำหรับผู้ใช้ทั่วไปเพราะมีไดเรกทอรี่่ install<br /><br />
-		<strong><a href="%2$s" title="%2$s" target="_bank">คลิกเริ่มทำการอัพเกรด โดยการชี้บราวเซอร์ไปที่โฟลเดอร์ install.</a>.</strong><br />
+		<p>Once uploaded your board will be offline for normal users due to the install directory you uploaded now present.<br /><br />
+		<strong><a href="%1$s" title="%1$s">Now start the update process by pointing your browser to the install folder</a>.</strong><br />
 		<br />
-		คุณจะได้รับคำแนะนำต่างๆ ระหว่างกระบวนการอัพเกรด และจะมีข้อความแจ้งเมื่อกระบวนการอัพเกรดเสร็จสิ้น 
+		You will then be guided through the update process. You will be notified once the update is complete.
 		</p>
-	',
-	'UPDATE_INSTRUCTIONS_INCOMPLETE'	=> '
-
-		<h1>พบการอัพเกรดไม่สำเร็จ</h1>
-
-		<p>phpBB พบการอัดเกรดไม่สำเร็จ โปรดตรวจสอบว่าคุณทำตามขั้นตอนทุกอย่าง คุณจะพบลิงค์อีกครั้งด้านล่าง หรือไปที่ไดเรกทอรี่ติดตั้งโดยตรง</p>
 	',
 	'UPDATE_METHOD'					=> 'วิธีอัพเดท',
 	'UPDATE_METHOD_EXPLAIN'			=> 'คุณสามารถเลือกวิธีอัพเดทที่คุณต้องการ ใช้ FTP อัพโหลดจะมีฟอร์มให้คุณกรอกบัญชี FTP ด้วยวิธีนี้ไฟล์จะถูกย้ายอัตโนมัติไปที่ใหม่และสำรองไฟล์เก่าไว้ให้โดยต่อท้ายไฟล์ด้วย.bak ถ้าคุณเลือกที่จะดาวน์โหลดไฟล์ คุณสามารถแตกไฟล์และิอัพโหลดไฟล์ไปยังที่ที่ถูกต้องเอง',
@@ -2116,10 +2202,10 @@ $lang = array_merge($lang, array(
 	'UPDATING_DATA'					=> 'กำลังอัพเดทข้อมูล',
 	'UPDATING_TO_LATEST_STABLE'		=> 'กำลังอัพเดทฐานข้อมูลให้เป็นสถานะที่เสถียรล่าสุด',
 	'UPDATED_VERSION'				=> 'อัพเดทเวอร์ชัน',
-	'UPGRADE_INSTRUCTIONS'			=> 'คุณสมบัติใหม่ <strong>%1$s</strong> ที่สามารถใช้ได้. กรุณาอ่าน <a href="%2$s" title="%2$s"><strong>the release announcement</strong></a> เพื่อเรียนรู้เกี่ยวกับสิ่งที่มันมีให้, และวิธีการอัพเกรด.',
 	'UPLOAD_METHOD'					=> 'วิธีการอัพโหลด',
 
 	'UPDATE_DB_SUCCESS'				=> 'อัพเดทฐานข้อมูลเรียบร้อย',
+	'UPDATE_FILE_SUCCESS'			=> 'File update was successful.',
 	'USER_ACTIVE'					=> 'ผู้ใช้สามารถใช้งานได้',
 	'USER_INACTIVE'					=> 'ผู้ใช้ไม่สามารถใช้งานได้',
 
@@ -2179,6 +2265,33 @@ $lang = array_merge($lang, array(
 	'TOPICS_TOPIC_TITLE'			=> 'ยินดีต้อนรับเข้าสู่ เว็บบอร์ด ',
 ));
 
+#######language/en/migrator.php#######
+
+$lang = array_merge($lang, array(
+	'CONFIG_NOT_EXIST'					=> 'The config setting "%s" unexpectedly does not exist.',
+
+	'GROUP_NOT_EXIST'					=> 'The group "%s" unexpectedly does not exist.',
+
+	'MIGRATION_APPLY_DEPENDENCIES'		=> 'Apply dependencies of %s.',
+	'MIGRATION_DATA_DONE'				=> 'Installed Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_IN_PROGRESS'		=> 'Installing Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_RUNNING'			=> 'Installing Data: %s.',
+	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
+	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
+	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
+	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
+	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
+	'MODULE_NOT_EXIST'					=> 'A required module does not exist: %s',
+
+	'PERMISSION_NOT_EXIST'				=> 'The permission setting "%s" unexpectedly does not exist.',
+
+	'ROLE_NOT_EXIST'					=> 'The permission role "%s" unexpectedly does not exist.',
+));
+
 #######language/en/mcp.php#######
 
 $lang = array_merge($lang, array(
@@ -2199,6 +2312,10 @@ $lang = array_merge($lang, array(
 	'APPROVE_POST_CONFIRM'	=> 'คุณแน่ใจแล้วใช่ไหม ที่ต้องการให้ข้อความนี้ถูกอนุมัติ?',
 	'APPROVE_POSTS'			=> 'อนุมัติข้อความ',
 	'APPROVE_POSTS_CONFIRM'	=> 'คุณแน่ใจแล้วใช่ไหม ที่ต้องการให้ข้อความนี้ถูกอนุมัติก่อน?',
+	'APPROVE_TOPIC'			=> 'Approve topic',
+	'APPROVE_TOPIC_CONFIRM'	=> 'Are you sure you want to approve this topic?',
+	'APPROVE_TOPICS'		=> 'Approve topics',
+	'APPROVE_TOPICS_CONFIRM'=> 'Are you sure you want to approve the selected topics?',
 
 	'CANNOT_MOVE_SAME_FORUM'=> 'คุณไม่สามารถย้ายกระทู้นี้ไปหมวดอื่นได้',
 	'CANNOT_WARN_ANONYMOUS'	=> 'คุณไม่สามารถแจ้งเตือนผู้ใช้งานที่ยังไม่ได้เป็นสมาชิกได้',
@@ -2219,16 +2336,12 @@ $lang = array_merge($lang, array(
 	'DELETE_PM_REPORTS'			=> 'ลบรายงานข้อความส่วนตัว',
 	'DELETE_PM_REPORTS_CONFIRM'	=> 'ต้องการ ลบรายงานข้อความส่วนตัวทั้งหมด ?',
 	'DELETE_POSTS'				=> 'ลบข้อความ',
-	'DELETE_POSTS_CONFIRM'		=> 'ต้องการลบข้อความเหล่านี้?',
-	'DELETE_POST_CONFIRM'		=> 'ต้องการลบข้อความนี้ ?',
 	'DELETE_REPORT'				=> 'ลบรายงาน',
 	'DELETE_REPORT_CONFIRM'		=> 'ต้องการลบรายงานนี้?',
 	'DELETE_REPORTS'			=> 'ลบรายงาน',
 	'DELETE_REPORTS_CONFIRM'	=> 'ต้องการลบรายงานนี้?',
 	'DELETE_SHADOW_TOPIC'		=> 'ลบกระทู้เงา',
 	'DELETE_TOPICS'				=> 'ลบกระทู้ที่เลือก',
-	'DELETE_TOPICS_CONFIRM'		=> 'ต้องการลบกระทู้นี้?',
-	'DELETE_TOPIC_CONFIRM'		=> 'ต้องการลบกระทู้นี้?',
 	'DISAPPROVE'				=> 'ไม่อนุมัติ',
 	'DISAPPROVE_REASON'			=> 'เหตุผลที่ไม่อนุมัติ',
 	'DISAPPROVE_POST'			=> 'ไม่อนุมัติข้อความนี้',
@@ -2266,8 +2379,6 @@ $lang = array_merge($lang, array(
 	'LATEST_WARNING_TIME'		=> 'เตือนล่าสุด',
 	'LATEST_WARNINGS'			=> '5 การเตือนล่าสุด',
 	'LEAVE_SHADOW'				=> 'เก็บชื่อกระทู้ไว้ที่บอร์ดเดิม ลิงค์ข้อมูลไปที่บอร์ดใหม่',
-	'LIST_REPORT'				=> '1 รายงาน',
-	'LIST_REPORTS'				=> '%d รายงาน',
 	'LOCK'						=> 'ล๊อก',
 	'LOCK_POST_POST'			=> 'ล๊อกข้อความ',
 	'LOCK_POST_POST_CONFIRM'	=> 'ต้องการป้องกันการแก้ไขข้อความนี้?',
@@ -2346,6 +2457,10 @@ $lang = array_merge($lang, array(
 	'MCP_QUEUE_UNAPPROVED_POSTS_EXPLAIN'	=> 'นี่คือรายการข้อความทั้งหมดที่รอการอนุมัติ ก่อนที่ผู้ใช้งานจะเข้าใช้งาน',
 	'MCP_QUEUE_UNAPPROVED_TOPICS'			=> 'กระทู้ที่รอการอนุมัติ',
 	'MCP_QUEUE_UNAPPROVED_TOPICS_EXPLAIN'	=> 'นี่คือรายการกระทู้ทั้งหมดที่รอการอนุมัติ ก่อนที่ผู้ใช้งานจะเข้าใช้งาน',
+	'MCP_QUEUE_DELETED_POSTS'				=> 'Deleted posts',
+	'MCP_QUEUE_DELETED_POSTS_EXPLAIN'		=> 'This is a list of all soft deleted posts. You can restore or permanently delete the posts from this screen.',
+	'MCP_QUEUE_DELETED_TOPICS'				=> 'Deleted topics',
+	'MCP_QUEUE_DELETED_TOPICS_EXPLAIN'		=> 'This is a list of all soft deleted topics. You can restore or permanently delete the topics from this screen.',
 
 	'MCP_VIEW_USER'			=> 'เรียกดูการแจ้งเตือนสำหรับรายผู้ใช้',
 
@@ -2384,25 +2499,27 @@ $lang = array_merge($lang, array(
 	'NO_POST'						=> 'คุณต้องเลือกข้อความปลายทางจากที่ผู้ใช้งานกำหนดให้',
 	'NO_POST_REPORT'				=> 'ข้อความเหล่านี้ไม่มีรายงาน',
 	'NO_POST_SELECTED'				=> 'คุณต้องเลือกการกระทำอย่างน้อยหนึ่งรายการ.',
+	'NO_POSTS_DELETED'				=> 'There are no deleted posts.',
+	'NO_POSTS_QUEUE'				=> 'There are no posts waiting for approval.',
 	'NO_REASON_DISAPPROVAL'			=> 'กรุณาอธิบายเหตุผลของการไม่อนุมัติ',
 	'NO_REPORT'						=> 'ไม่พบรายงาน',
 	'NO_REPORTS'					=> 'ไม่พบรายงาน',
 	'NO_REPORT_SELECTED'			=> ' คุณต้องเลือกการกระทำอย่างน้อยหนึ่งรายการ',
 	'NO_TOPIC_ICON'					=> 'ไม่มี',
 	'NO_TOPIC_SELECTED'				=> 'คุณต้องเลือกการกระทำอย่างน้อยหนึ่งรายการ',
+	'NO_TOPICS_DELETED'				=> 'There are no deleted topics.',
 	'NO_TOPICS_QUEUE'				=> 'ไม่มีกระทู้ที่รออนุมัติ',
 
 	'ONLY_TOPIC'			=> 'เพียง "%s" กระทู้',
 	'OTHER_USERS'			=> 'มีผู้ใช้งานท่านอื่นใช้ไอพีนี้',
 
+	'QUICKMOD_ACTION_NOT_ALLOWED' => "%s not allowed as quickmod",
+
 	'PM_REPORT_CLOSED_SUCCESS'	=> 'รางานข้อควาส่วนตัวที่คุณเลือก ปิดเรียบร้อยแล้ว .',
 	'PM_REPORT_DELETED_SUCCESS'	=> 'รางานข้อควาส่วนตัวที่คุณเลือก ลบเรียบร้อยแล้ว.',
 	'PM_REPORTED_SUCCESS'		=> 'ข้อความส่วนตัวรายงานเรียบร้อยแล้ว.',
-	'PM_REPORT_TOTAL'			=> 'รวม<strong>1</strong> รายงานข้อความส่วนตัว.',
 	'PM_REPORTS_CLOSED_SUCCESS'	=> 'รายงาน PM ที่เลือกถูกปิดเรียบร้อยแล้ว.',
 	'PM_REPORTS_DELETED_SUCCESS'=> 'รายงาน PM ที่เลือกลบเรียบร้อยแล้ว.',
-	'PM_REPORTS_TOTAL'			=> 'รวมมี <strong>%d</strong> รายงานข้อความส่วนตัว.',
-	'PM_REPORTS_ZERO_TOTAL'		=> 'ไม่มีรายงานข้อความส่วนตัว.',
 	'PM_REPORT_DETAILS'			=> 'รายละเีอียดรายงาข้อความส่วนตัว',
 	'POSTER'					=> 'ผู้โพสต์',
 	'POSTS_APPROVED_SUCCESS'	=> 'ข้อความที่เลือก ถูกอนุมัติแล้ว.',
@@ -2410,15 +2527,17 @@ $lang = array_merge($lang, array(
 	'POSTS_DISAPPROVED_SUCCESS'	=> 'ข้อความที่เลือก ไม่ได้รับการอนุมัติ',
 	'POSTS_LOCKED_SUCCESS'		=> 'ข้อความที่เลือก ล๊อกเรียบร้อยแล้ว',
 	'POSTS_MERGED_SUCCESS'		=> 'ข้อความที่เลือก รวมกันเรียบร้อยแล้ว',
-	'POSTS_UNLOCKED_SUCCESS'	=> 'ข้อความที่เลือก ปลดล๊อกเรียบร้อยแล้ว',
 	'POSTS_PER_PAGE'			=> 'จำนวนข้อความทั้งหมด ต่อ หนึ่งหน้า',
 	'POSTS_PER_PAGE_EXPLAIN'	=> '(กำหนดเป็น 0 สำหรับดูทุกโพสต์)',
+	'POSTS_RESTORED_SUCCESS'	=> 'The selected posts have been restored successfully.',
+	'POSTS_UNLOCKED_SUCCESS'	=> 'ข้อความที่เลือก ปลดล๊อกเรียบร้อยแล้ว',
 	'POST_APPROVED_SUCCESS'		=> 'ข้อความที่เลือกถูกอนุมัติ',
 	'POST_DELETED_SUCCESS'		=> 'ข้อความที่เลือกถูกลบออกจากฐานข้อมูลเรียบร้อยแล้ว',
 	'POST_DISAPPROVED_SUCCESS'	=> 'ข้อความที่เลือกถูกไม่ได้รับการอนุมัติ',
 	'POST_LOCKED_SUCCESS'		=> 'ข้อความถูกล๊อกเรียบร้อยแล้ว',
 	'POST_NOT_EXIST'			=> 'ไม่พบข้อความที่คุณต้องการ',
 	'POST_REPORTED_SUCCESS'		=> 'ข้อความที่คุณต้องการถูกรายงานเแล้ว.',
+	'POST_RESTORED_SUCCESS'		=> 'This post has been restored successfully.',
 	'POST_UNLOCKED_SUCCESS'		=> 'ปลดล๊อกข้อความสำเร็จ',
 
 	'READ_USERNOTES'			=> 'สมาชิกบันทึก',
@@ -2429,8 +2548,6 @@ $lang = array_merge($lang, array(
 	'REPORTED_ON_DATE'			=> 'on',
 	'REPORTS_CLOSED_SUCCESS'	=> 'รายงานที่ถูกเลือกได้ปิดเรียบร้อยแล้ว',
 	'REPORTS_DELETED_SUCCESS'	=> 'รายงานที่ถูกเลือกได้ลบเรียบร้อยแล้ว',
-	'REPORTS_TOTAL'				=> 'จากทั้งหมด <strong>%d</strong> รายงาน ที่ถูกตรวจสอบ',
-	'REPORTS_ZERO_TOTAL'		=> 'ไม่มีรายงานใดถูกอ่าน.',
 	'REPORT_CLOSED'				=> 'รายงานฉบับนี้ถูกปิดแล้ว',
 	'REPORT_CLOSED_SUCCESS'		=> 'รายงานที่ถูกเลือกได้ปิดเรียบร้อยแล้ว',
 	'REPORT_DELETED_SUCCESS'	=> 'รายงานที่ถูกเลือกได้ลบเรียบร้อยแล้ว',
@@ -2442,7 +2559,15 @@ $lang = array_merge($lang, array(
 	'REPORT_POST_EXPLAIN'		=> 'ใช้ฟอร์มนี้เพื่อรายงานโพสที่เลือกไปยัง moderators และ admin. การรายงานควรจะใช้เมื่อโพสทำผิดกฎเท่านั้น.',
 	'REPORT_REASON'				=> 'รายงานเหตุผล',
 	'REPORT_TIME'				=> 'เวลารายงาน',
-	'REPORT_TOTAL'				=> 'จากทั้งหมด <strong> 1 </strong> รายงาน ที่ถูกตรวจสอบ',
+	'RESTORE'					=> 'Restore',
+	'RESTORE_POST'				=> 'Restore post',
+	'RESTORE_POST_CONFIRM'		=> 'Are you sure you want to restore this post?',
+	'RESTORE_POSTS'				=> 'Restore posts',
+	'RESTORE_POSTS_CONFIRM'		=> 'Are you sure you want to restore the selected posts?',
+	'RESTORE_TOPIC'				=> 'Restore topic',
+	'RESTORE_TOPIC_CONFIRM'		=> 'Are you sure you want to restore this topic?',
+	'RESTORE_TOPICS'			=> 'Restore topics',
+	'RESTORE_TOPICS_CONFIRM'	=> 'Are you sure you want to restore the selected topics?',
 	'RESYNC'					=> 'Resync',
 	'RETURN_MESSAGE'			=> '%sย้อนกลับไปยังข้อความเดิม%s',
 	'RETURN_NEW_FORUM'			=> '%sย้อนกลับไปยัง Forum ใหม่%s',
@@ -2483,6 +2608,7 @@ $lang = array_merge($lang, array(
 	'TOPICS_FORKED_SUCCESS'		=> 'กระทู้ที่เลือก คัดลอกเรียบร้อยแล้ว',
 	'TOPICS_LOCKED_SUCCESS'		=> 'กระทู้ที่เลือก ล๊อกเรียบร้อยแล้ว',
 	'TOPICS_MOVED_SUCCESS'		=> 'กระทู้ที่เลือก ย้ายเรียบร้อยแล้ว.',
+	'TOPICS_RESTORED_SUCCESS'	=> 'The selected topics have been restored successfully.',
 	'TOPICS_RESYNC_SUCCESS'		=> 'หัวข้อที่นับจำนวนใหม่แล้ว',
 	'TOPICS_TYPE_CHANGED'		=> 'ชนิดของกระทู้ถูกเปลี่ยนเรียบร้อยแล้ว',
 	'TOPICS_UNLOCKED_SUCCESS'	=> 'กระทู้ที่เลือก ถุกปลดล๊อกเรียบร้อยแล้ว',
@@ -2493,6 +2619,7 @@ $lang = array_merge($lang, array(
 	'TOPIC_LOCKED_SUCCESS'		=> 'กระทู้ที่เลือก ล๊อกเรียบร้อยแล้ว',
 	'TOPIC_MOVED_SUCCESS'		=> 'กระทู้ที่เลือก ย้ายเรียบร้อยแล้ว.',
 	'TOPIC_NOT_EXIST'			=> 'ไม่พบกระทู้ที่เลือก ',
+	'TOPIC_RESTORED_SUCCESS'	=> 'The selected topic has been restored successfully.',
 	'TOPIC_RESYNC_SUCCESS'		=> 'กระทู้ที่เลือกปรับให้ตรงกันแล้ว.',
 	'TOPIC_SPLIT_SUCCESS'		=> 'แยกกระทู้เรียบร้อยแล้ว.',
 	'TOPIC_TIME'				=> 'เวลากระทู้',
@@ -2500,9 +2627,6 @@ $lang = array_merge($lang, array(
 	'TOPIC_UNLOCKED_SUCCESS'	=> 'กระทู้ที่เลือก ถุกปลดล๊อกเรียบร้อยแล้ว.',
 	'TOTAL_WARNINGS'			=> 'คำเตือนทั้งหมด',
 
-	'UNAPPROVED_POSTS_TOTAL'		=> 'ทั้งหมด <strong>%d</strong> ข้อความที่รอการอนุมัติ',
-	'UNAPPROVED_POSTS_ZERO_TOTAL'	=> 'ไม่มีข้อความที่รอการอนุมัติ',
-	'UNAPPROVED_POST_TOTAL'			=> 'ทั้งหมด <strong> 1 </strong> ข้อความที่รอการอนุมัติ',
 	'UNLOCK'						=> 'ปลดล๊อก',
 	'UNLOCK_POST'					=> 'ข้อความถูกปลดล๊อก',
 	'UNLOCK_POST_EXPLAIN'			=> 'อนุญาตให้แก้ไข',
@@ -2528,7 +2652,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'นี้คือคำเตือนที่ถูกออกให้คุณโดย administrator หรือ moderator ของเว็บนี้.[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'ข้อความเตือนจะเว็บบอร์ด',
 	'WARNING_POST_DEFAULT'	=> 'ข้อความที่แสดงด้านล่างนี้ถูกส่งมาจาก : %s ของเว็บบอร์ด กรุณาให้ความใส่ใจข้อความด้านล่างนี้ด้วย.. .',
-	'WARNINGS_ZERO_TOTAL'	=> 'ไม่มีการเตือน',
+	'NO_WARNINGS'	=> 'No warnings exist.',
 
 	'YOU_SELECTED_TOPIC'	=> 'จำนวนกระทู้ที่เลือก  %d: %s.',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -2568,10 +2692,12 @@ $lang = array_merge($lang, array(
 	'ALL'					=> 'ทั้งหมด',
 	'BEFORE'				=> 'ก่อนหน้า',
 	'CC_EMAIL'				=> 'ส่ง อีเมล นี้หาตัวเองด้วย.',
-	'CONTACT_USER'			=> 'ติดต่อสมาชิก',
+	'CONTACT_ADMIN'			=> 'Contact a Board Administrator',
 
 	'DEST_LANG'				=> 'ภาษา',
 	'DEST_LANG_EXPLAIN'		=> 'เลือกภาษาที่เหมาะสมกับผู้รับข้อความ.',
+
+	'EDIT_PROFILE'			=> 'Edit Profile',
 
 	'EMAIL_BODY_EXPLAIN'	=> 'ข้อความที่จะส่ง เป็น ข้อความ ไม่สามารถใช้ HTML หรือ BB Code ได้ . ที่อยู่ในการส่งข้อความกลับ จะถูกกำหนดให้เป็น e-mail ของท่าน .',
 	'EMAIL_DISABLED'		=> 'ขออภัย ฟังก์ชันการส่งเมล์ไม่สามารถใช้งานได้ชั่วคราว',
@@ -2581,7 +2707,9 @@ $lang = array_merge($lang, array(
 	'EMPTY_MESSAGE_EMAIL'	=> 'คุณต้องกรอกข้อความใน อีเมล',
 	'EMPTY_MESSAGE_IM'		=> 'คุณจำเป็นต้องกรอกข้อความเพื่อส่ง.',
 	'EMPTY_NAME_EMAIL'		=> 'คุณต้องระบุชื่อจริงของผู้รับ',
-	'EMPTY_SUBJECT_EMAIL'	=> 'ท่านจำเป็นต้องใส่หัวข้อในการส่งเมลด้วย .',
+	'EMPTY_SENDER_EMAIL'	=> 'You must provide a valid email address.',
+	'EMPTY_SENDER_NAME'		=> 'You must provide a name.',
+	'EMPTY_SUBJECT_EMAIL'	=> 'You must specify a subject for the email.',
 	'EQUAL_TO'				=> 'เท่ากับ',
 
 	'FIND_USERNAME_EXPLAIN'	=> 'การค้นหาสมาชิก คุณไม่สามารถค้นหาได้ทุกข้อมูล ระบบจะค้นหาแต่ข้อมูลที่สำคัญให้ เมื่อคุณกรอกวันที่ กรุณากรอกตามรูปแบบ <kbd>YYYY-MM-DD</kbd>, ตัวอย่างเช่น <samp>2004-02-29</samp> กรุณาเลือก Username อย่างน้อยหนึ่งชื่อ และเลือกเพื่อให้ย้อนกลับมาหน้านี้',
@@ -2591,16 +2719,10 @@ $lang = array_merge($lang, array(
 	'HIDE_MEMBER_SEARCH'	=> 'ซ่อนการค้นหาสมาชิก',
 
 	'IM_ADD_CONTACT'		=> 'เพิ่มรายชื่อผู้ติดต่อ',
-	'IM_AIM'				=> 'คุณต้องมีติดตั้งโปรแกรม AOL Instant Messenger นี้ก่อนจึงจะสามารถใช้งานได้',
-	'IM_AIM_EXPRESS'		=> 'AIM Express',
 	'IM_DOWNLOAD_APP'		=> 'ดาวน์โหลด',
-	'IM_ICQ'				=> 'ผู้ใช้อาจเลือกที่จะไม่รับข้อความเชิญชวนได้',
 	'IM_JABBER'				=> 'ผู้ใช้อาจเลือกที่จะไม่รับข้อความเชิญชวนได้',
 	'IM_JABBER_SUBJECT'		=> 'นี้คือข้อความอัตโนมัติ กรุณาอย่าส่งข้อความนี้จาก ผู้ใช้งาน %1$s at %2$s.',
 	'IM_MESSAGE'			=> 'ข้อความของท่าน',
-	'IM_MSNM'				=> 'คุณต้องมีติดตั้งโปรแกรม Windows Messenger นี้ก่อนจึงจะสามารถใช้งานได้',
-	'IM_MSNM_BROWSER'		=> 'บราว์เซอร์ของคุณไม่รองรับการทำงานนี้',
-	'IM_MSNM_CONNECT'		=> 'ไม่สามารถเชื่อมต่อ MSNM ได้ \nกรุณาเชื่อมต่อ MSNM ภายหลัง',
 	'IM_NAME'				=> 'ชื่อของท่าน',
 	'IM_NO_DATA'			=> 'มีข้อมูลที่ติดต่อไม่เหมาะสมสำหรับผู้ใช้.',
 	'IM_NO_JABBER'			=> 'ขอโทษคะ ข้อความจากผู้ใช้ Jabber ไม่รองรับเซิร์ฟเวอร์นี้ คุณต้องเข้าใช้งาน Jabber จากระบบของคุณเพื่อส่งข้อความหาผู้รับเอง',
@@ -2612,15 +2734,15 @@ $lang = array_merge($lang, array(
 
 	'LAST_ACTIVE'				=> 'ใช้งานล่าสุด',
 	'LESS_THAN'					=> 'น้อยกว่า',
-	'LIST_USER'					=> 'สมาชิก 1 ท่าน',
-	'LIST_USERS'				=> 'สมาชิก %d ท่าน',
-	'LOGIN_EXPLAIN_LEADERS'		=> 'ท่านต้องเข้าสู่ระบบก่อน จึงจะสามารถดูรายชื่อทีมผู้ดูแลได้',
+	'LOGIN_EXPLAIN_TEAM'		=> 'The board requires you to be registered and logged in to view the team listing.',
 	'LOGIN_EXPLAIN_MEMBERLIST'	=> 'ท่านต้องเข้าสู่ระบบก่อน จึงจะสามารถดูรายชื่อสมาชิกได้',
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'ท่านต้องเข้าสู่ระบบก่อน จึงจะสามารถค้นหาชื่อสมาชิกได้',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'ท่านต้องเข้าสู่ระบบก่อน จึงจะสามารถดูข้อมูลส่วนตัวได้',
 
 	'MORE_THAN'				=> 'มากกว่า',
 
+	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
+	'NO_CONTACT_PAGE'		=> 'The board administrator contact page has been disabled.',
 	'NO_EMAIL'				=> 'คุณไม่มีสิทธิ์ส่ง อีเมล หาผู้ใช้',
 	'NO_VIEW_USERS'			=> 'คุณไม่สามารถดูรายชื่อสมาชิกและประวัติส่วนตัวของสมาชิกได้',
 
@@ -2637,12 +2759,12 @@ $lang = array_merge($lang, array(
 
 	'SELECT_MARKED'			=> 'เลือก',
 	'SELECT_SORT_METHOD'	=> 'เลือกการเรียงลำดับ',
-	'SEND_AIM_MESSAGE'		=> 'Send AIM message',
+	'SENDER_EMAIL_ADDRESS'	=> 'Your email address',
+	'SENDER_NAME'			=> 'Your name',
 	'SEND_ICQ_MESSAGE'		=> 'Send ICQ message',
 	'SEND_IM'				=> 'Instant messaging',
 	'SEND_JABBER_MESSAGE'	=> 'Send Jabber message',
 	'SEND_MESSAGE'			=> 'Message',
-	'SEND_MSNM_MESSAGE'		=> 'Send MSNM/WLM message',
 	'SEND_YIM_MESSAGE'		=> 'Send YIM message',
 	'SORT_EMAIL'			=> 'E-mail',
 	'SORT_LAST_ACTIVE'		=> 'ใช้งานครั้งล่าสุด',
@@ -2650,12 +2772,18 @@ $lang = array_merge($lang, array(
 
 	'USERNAME_BEGINS_WITH'	=> 'เริ่มต้นชื่อผู้ใช้ด้วย',
 	'USER_ADMIN'			=> 'ผู้ใช้งาน',
-	'USER_BAN'				=> 'ถูกแบน',
+	'USER_BAN'				=> 'Ban one or more users by username',
 	'USER_FORUM'			=> 'สถิติสมาชิก',
 	'USER_ONLINE'			=> 'ออนไลน์',
 	'USER_PRESENCE'			=> 'Board presence',
+	'USERS_PER_PAGE'		=> 'Users per page',
 
 	'VIEWING_PROFILE'		=> 'ดูประวัติส่วนตัว - %s',
+	'VIEW_FACEBOOK_PROFILE'	=> 'View Facebook Profile',
+	'VIEW_SKYPE_PROFILE'	=> 'View Skype Profile',
+	'VIEW_TWITTER_PROFILE'	=> 'View Twitter Profile',
+	'VIEW_YOUTUBE_CHANNEL'	=> 'View YouTube Channel',
+	'VIEW_GOOGLEPLUS_PROFILE' => 'View Google+ Profile',
 	'VISITED'				=> 'ใช้งานล่าสุด',
 
 	'WWW'					=> 'เว็บไซต์',
@@ -2680,6 +2808,47 @@ $lang = array_merge($lang, array(
 	'USER_COMM_RANK'	=> 'Overall reviews:',
 	'USER_COMM_PERCENT'	=> 'Overall assessment of the user:',
 
+));
+
+#######language/en/plupload.php#######
+
+$lang = array_merge($lang, array(
+	'PLUPLOAD_ADD_FILES'		=> 'Add files',
+	'PLUPLOAD_ADD_FILES_TO_QUEUE'	=> 'Add files to the upload queue and click the start button.',
+	'PLUPLOAD_ALREADY_QUEUED'	=> '%s already present in the queue.',
+	'PLUPLOAD_CLOSE'			=> 'Close',
+	'PLUPLOAD_DRAG'				=> 'Drag files here.',
+	'PLUPLOAD_DUPLICATE_ERROR'	=> 'Duplicate file error.',
+	'PLUPLOAD_DRAG_TEXTAREA'	=> 'You may also attach files by dragging and dropping them in the message box.',
+	'PLUPLOAD_ERR_INPUT'		=> 'Failed to open input stream.',
+	'PLUPLOAD_ERR_MOVE_UPLOADED'	=> 'Failed to move uploaded file.',
+	'PLUPLOAD_ERR_OUTPUT'		=> 'Failed to open output stream.',
+	'PLUPLOAD_ERR_FILE_TOO_LARGE'	=> 'File too large:',
+	'PLUPLOAD_ERR_FILE_COUNT'	=> 'File count error.',
+	'PLUPLOAD_ERR_FILE_INVALID_EXT'	=> 'Invalid file extension:',
+	'PLUPLOAD_ERR_RUNTIME_MEMORY'	=> 'Runtime ran out of available memory.',
+	'PLUPLOAD_ERR_UPLOAD_URL'	=> 'Upload URL might be wrong or does not exist.',
+	'PLUPLOAD_EXTENSION_ERROR'	=> 'File extension error.',
+	'PLUPLOAD_FILE'				=> 'File: %s',
+	'PLUPLOAD_FILE_DETAILS'		=> 'File: %s, size: %d, max file size: %d',
+	'PLUPLOAD_FILENAME'			=> 'Filename',
+	'PLUPLOAD_FILES_QUEUED'		=> '%d files queued',
+	'PLUPLOAD_GENERIC_ERROR'	=> 'Generic error.',
+	'PLUPLOAD_HTTP_ERROR'		=> 'HTTP error.',
+	'PLUPLOAD_IMAGE_FORMAT'		=> 'Image format either wrong or not supported.',
+	'PLUPLOAD_INIT_ERROR'		=> 'Init error.',
+	'PLUPLOAD_IO_ERROR'			=> 'IO error.',
+	'PLUPLOAD_NOT_APPLICABLE'	=> 'N/A',
+	'PLUPLOAD_SECURITY_ERROR'	=> 'Security error.',
+	'PLUPLOAD_SELECT_FILES'		=> 'Select files',
+	'PLUPLOAD_SIZE'				=> 'Size',
+	'PLUPLOAD_SIZE_ERROR'		=> 'File size error.',
+	'PLUPLOAD_STATUS'			=> 'Status',
+	'PLUPLOAD_START_UPLOAD'		=> 'Start upload',
+	'PLUPLOAD_START_CURRENT_UPLOAD'	=> 'Start uploading queue',
+	'PLUPLOAD_STOP_UPLOAD'		=> 'Stop upload',
+	'PLUPLOAD_STOP_CURRENT_UPLOAD'	=> 'Stop current upload',
+	'PLUPLOAD_UPLOADED'			=> 'Uploaded %d/%d files',
 ));
 
 #######language/en/portal.php#######
@@ -2925,12 +3094,12 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s <em>ปิด</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s <em>เปิด</em>',
 	'BBCODE_I_HELP'				=> 'ตัวเอียง: [i]text[/i]',
-	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]',
 	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
 	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'ใส่รูป: [img]http://image_url[/img]',
 	'BBCODE_Q_HELP'				=> 'เครื่องหมายคำพูดในข้อความ: [quote]text[/quote]',
-	'BBCODE_S_HELP'				=> 'สีตัวอักษร: [color=red]text[/color]  สามารถใช้โค้ดสี  #FF0000 ได้',
+	'BBCODE_S_HELP'				=> 'Font colour: [color=red]text[/color] or [color=#FF0000]text[/color]',
 	'BBCODE_U_HELP'				=> 'ขีดเส้นใต้ข้อความ: [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'ใส่ URL: [url]http://url[/url] or [url=http://url]URL text[/url]',
 	'BUMP_ERROR'				=> 'คุณไม่สามารถ bump กระทู้นี้ได้ทันทีหลังจากการโพสต์ครั้งสุดท้าย',
@@ -2949,8 +3118,20 @@ $lang = array_merge($lang, array(
 	'DELETE_MESSAGE'			=> 'ลบข้อความ',
 	'DELETE_MESSAGE_CONFIRM'	=> 'ต้องการลบข้อความนี้ ?',
 	'DELETE_OWN_POSTS'			=> 'ขออภัยคะ คุณสามารถลบข้อความได้แต่ข้อความที่คุณเป็นเจ้าของเท่านั้น',
+	'DELETE_PERMANENTLY'		=> 'Delete permanently',
 	'DELETE_POST_CONFIRM'		=> 'ต้องการลบข้อความนี้ ?',
-	'DELETE_POST_WARN'			=> 'หากลบข้อความแล้วไม่สามารถกู้คืนได้',
+	'DELETE_POST_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this post?',
+	'DELETE_POST_PERMANENTLY'	=> 'Permanently delete this post so it can not be recovered',
+	'DELETE_POSTS_CONFIRM'		=> 'ต้องการลบข้อความเหล่านี้?',
+	'DELETE_POSTS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these posts?',
+	'DELETE_REASON'				=> 'Reason for deleting this topic',
+	'DELETE_REASON_EXPLAIN'		=> 'The specified reason for deletion will be visible to moderators.',
+	'DELETE_POST_WARN'			=> 'Delete this post',
+	'DELETE_TOPIC_CONFIRM'		=> 'ต้องการลบกระทู้นี้?',
+	'DELETE_TOPIC_PERMANENTLY'	=> 'Permanently delete this topic so it can not be recovered',
+	'DELETE_TOPIC_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this topic?',
+	'DELETE_TOPICS_CONFIRM'		=> 'ต้องการลบกระทู้นี้?',
+	'DELETE_TOPICS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these topics?',
 	'DISABLE_BBCODE'			=> 'ไม่ใช้ BBCode ในข้อความนี้',
 	'DISABLE_MAGIC_URL'			=> 'ไม่ต้องแปลง URL ให้เป็นลิงค์',
 	'DISABLE_SMILIES'			=> 'ไม่ใช้รูปแสดงอารมณ์ในข้อความนี้',
@@ -2993,13 +3174,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_QUOTE'		=> 'คุณต้องเข้าระบบก่อนเพื่ออ้างอิงข้อความในบอร์ดนี้',
 	'LOGIN_EXPLAIN_REPLY'		=> 'คุณต้องทำการล็อกอินเข้าสู่ระบบสมาชิกก่อนจึงจะสามารถทำการตอบหัวข้อได้.',
 
-	'MAX_FONT_SIZE_EXCEEDED'	=> 'คุณอาจจะใช้ฟอร์นขนาดมากสุดคือ %1$d.',
-	'MAX_FLASH_HEIGHT_EXCEEDED'	=> 'ไฟล์ Flash ของคุณมีขนาดความสูงได้มากสุดคือ %1$d พิกเซล',
-	'MAX_FLASH_WIDTH_EXCEEDED'	=> 'ไฟล์ Flash ของคุณมีขนาดความกว้างได้มากสุดคือ %1$d พิกเซล',
-	'MAX_IMG_HEIGHT_EXCEEDED'	=> 'ไฟล์รูปภาพของคุณมีขนาดความสูงได้มากสุดคือ  %1$d พิกเซล',
-	'MAX_IMG_WIDTH_EXCEEDED'	=> 'ไฟล์รูปภาพของคุณมีขนาดความกว้างได้มากสุดคือ  %1$d พิกเซล',
-
-	'MESSAGE_BODY_EXPLAIN'		=> 'กรุณากรอกข้อความของคุณที่นี้,ต้องประกอบด้วยตัวอักษรไม่เกิน <strong>%d</strong> ตัว',
+	'MAX_FONT_SIZE_EXCEEDED'	=> 'You may only use fonts up to size %d.',
 	'MESSAGE_DELETED'			=> 'ข้อความถูกลบเรียบร้อยแล้ว',
 	'MORE_SMILIES'				=> 'รูปแสดงอารมณ์อื่นๆ',
 
@@ -3022,8 +3197,6 @@ $lang = array_merge($lang, array(
 	'POLL_MAX_OPTIONS'			=> 'ตัวเลือกสำหรับผู้ใช้ระบบ',
 	'POLL_MAX_OPTIONS_EXPLAIN'	=> 'นี่คือจำนวนตัวเลือกที่ผู้ใช้แต่ละคนเลือกได้ในการโหวต',
 	'POLL_OPTIONS'				=> 'ตัวเลือกของแบบสำรวจ',
-	'POLL_OPTIONS_EXPLAIN'		=> 'วางแต่ละตัวเลือกไว้คนละบรรทัด คุณกรอกได้ไม่เกิน <strong>%d</strong> ตัวเลือก',
-	'POLL_OPTIONS_EDIT_EXPLAIN'	=> 'วางตัวเลือกในบรรทัดใหม่. คุณอาจใช้ตัวเลือก <strong>%d</strong>. ถ้าคุณเพิ่มหรือลบตัวเลือก คะแนนโหลวทั้งหมดจะถูกคืนค่าเป็นค่าเริ่มต้น.',
 	'POLL_QUESTION'				=> 'คำถามสำหรับแบบสำรวจ',
 	'POLL_TITLE_TOO_LONG'		=> 'หัวข้อแบบสำรวจควรมีตัวอักษรอย่างน้อย 100 ตัวอักษร',
 	'POLL_TITLE_COMP_TOO_LONG'	=> 'หัวข้อแบบสำรวจมีขนาดใหญ่เกินไป, ควรลบ BBCodes หรือรอยยิ้มออก',
@@ -3033,9 +3206,9 @@ $lang = array_merge($lang, array(
 	'POST_APPROVAL_NOTIFY'		=> 'คุณจะได้รับแจ้งเมื่อโพสต์ของคุณได้รับการอนุมัติ.',
 	'POST_CONFIRMATION'			=> 'ยืนยันการโพสต์',
 	'POST_CONFIRM_EXPLAIN'		=> 'จำเป็นต้องยืนยันการโพสต์ ถ้าไม่มีรูปขึ้นกรุณาติดต่อ %s ผู้ดูแลเว็บบอร์ด%s.',
-	'POST_DELETED'				=> 'ข้อความถูกลบเรียบร้อยแล้ว',
-	'POST_EDITED'				=> 'ข้อความถูกแก้ไขเรียบร้อยแล้ว.',
-	'POST_EDITED_MOD'			=> 'ข้อความถูกแก้ไขเรียบร้อยแล้ว, แต่ต้องถูกอนุมัติจากผู้ดูแลบอร์ดก่อนถึงจะแสดงในที่สาธารณะได้. คุณจะได้รับการแจ้งเตือนเมื่อข้อความของคุณได้รับการอนุมัติแล้ว',
+	'POST_DELETED'				=> 'This post has been deleted.',
+	'POST_EDITED'				=> 'This post has been edited successfully.',
+	'POST_EDITED_MOD'			=> 'This post has been edited successfully, but it will need to be approved by a moderator before it is publicly viewable.',
 	'POST_GLOBAL'				=> 'ประกาศเพื่อแสดงทุกหมวด',
 	'POST_ICON'					=> 'ไอคอนโพสต์',
 	'POST_NORMAL'				=> 'ปกติ',
@@ -3048,8 +3221,9 @@ $lang = array_merge($lang, array(
 	'POST_TOPIC_AS'				=> 'รูปแบบของหัวข้อ',
 	'PROGRESS_BAR'				=> 'แถบสถานะการทำงาน',
 
-	'QUOTE_DEPTH_EXCEEDED'		=> 'คุณอาจจะ %1$d อ้างถึงข้อความอื่น',
+	'QUOTE_NO_NESTING'			=> 'You may not embed quotes within each other.',
 
+	'REMOTE_UPLOAD_TIMEOUT'		=> 'The specified file could not be uploaded because the request timed out.',
 	'SAVE'						=> 'บันทึกร่าง',
 	'SAVE_DATE'					=> 'บันทึกเป็น',
 	'SAVE_DRAFT'				=> 'บันทึกข้อความร่าง',
@@ -3066,8 +3240,6 @@ $lang = array_merge($lang, array(
 	'TOO_FEW_POLL_OPTIONS'		=> 'คุณต้องกรอกข้อในแบบสำรวจอย่างน้อย 2 ข้อ',
 	'TOO_MANY_ATTACHMENTS'		=> 'ไม่สามารถแนบไฟล์ได้, %d คือค่าสูงสุดแล้ว',
 	'TOO_MANY_CHARS'			=> 'ข้อความของคุณยาวเกินไป',
-	'TOO_MANY_CHARS_POST'		=> 'ข้อความของคุณ %1$d ตัวอักษร. จำนวนสูงสุดที่อนุญาตให้ใช้อักขระ %2$d. ตัวอักษร',
-	'TOO_MANY_CHARS_SIG'		=> 'ลายเซ็นต์ของคุณประกอบด้วย %1$d ตัวอักษร. จำนวนสูงสุดที่อนุญาตให้ใช้อักขระ %2$d. ตัวอักษร',
 	'TOO_MANY_POLL_OPTIONS'		=> 'คุณได้พยายามป้อนตัวเลือกของแบบสำรวจเป็นจำนวนมากเกินไป.',
 	'TOO_MANY_SMILIES'			=> 'ข้อความของคุณมีรูปรอยยิ้มมากเกินไป.จำนวนสูงสุดของรูปรอยยิ้มที่อนุญาต %d.',
 	'TOO_MANY_URLS'				=> 'ข้อความของคุณมี URL มากเกินไป. โพสต์ URL ได้ไม่เกิน %d.',
@@ -3076,6 +3248,8 @@ $lang = array_merge($lang, array(
 
 	'UNAUTHORISED_BBCODE'		=> 'คุณไม่สามารถใช้งาน BBCodes: %s.',
 	'UNGLOBALISE_EXPLAIN'		=> 'การเปลี่ยนแปลงประเภทของกระทู้จากทั่วไปเป็นธรรมดา, คุณต้องเลือกกระทู้ที่ยังไม่ได้แสดง.',
+	'UNSUPPORTED_CHARACTERS_MESSAGE'	=> 'Your message contains the following unsupported characters:<br />%s',
+	'UNSUPPORTED_CHARACTERS_SUBJECT'	=> 'Your subject contains the following unsupported characters:<br />%s',
 	'UPDATE_COMMENT'			=> 'แก้ไขคำแนะนำ',
 	'URL_INVALID'				=> 'URL นี้ไม่สามารถใช้งานได้',
 	'URL_NOT_FOUND'				=> 'ไฟล์ที่คุณระบุไม่มี.',
@@ -3090,8 +3264,8 @@ $lang = array_merge($lang, array(
 	'VIEW_MESSAGE'				=> '%s ดูข้อความที่คุณโพสต์ %s',
 	'VIEW_PRIVATE_MESSAGE'		=> '%s แสดงข้อความส่วนตัวที่คุณส่งไป%s',
 
-	'WRONG_FILESIZE'			=> 'ไฟล์มีขนาดใหญ่เกินไป, ขนาดใหญ่สุดคือ %1d %2s.',
-	'WRONG_SIZE'				=> 'รูปภาพนี้ควรมีขนาดอย่างน้อยกว้าง  %1$d พิกเซล และสูง %2$d พิกเซล และมากที่สุด กว้าง  %3$d พิกเซล และสูง %4$d พิกเซล รูปภาพของคุณมีขนาดกว้าง %5$d พิกเซล และสูง %6$d พิกเซล ',
+	'WRONG_FILESIZE'			=> 'The file is too big, maximum allowed size is %1$d %2$s.',
+	'WRONG_SIZE'				=> 'The image must be at least %1$s wide, %2$s high and at most %3$s wide and %4$s high. The submitted image is %5$s wide and %6$s high.',
 
 	'FONT_TYPE'			=> 'Typeface',
 	'FONT_COLOR'			=> 'สีตัวอักษร',
@@ -3111,10 +3285,6 @@ $lang = array_merge($lang, array(
 
 	'DISPLAY_RESULTS'		=> 'แสดงผล',
 
-	'FOUND_SEARCH_MATCH'		=> 'พบ %d ผลลัพธ์',
-	'FOUND_SEARCH_MATCHES'		=> 'พบ %d ผลลัพธ์',
-	'FOUND_MORE_SEARCH_MATCHES'	=> 'พบมากกว่า %d ผลลัพธ์',
-
 	'GLOBAL'				=> 'ประกาศทั่วไป',
 
 	'IGNORED_TERMS'			=> 'ไม่สนใจ',
@@ -3126,24 +3296,23 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_UNREADSEARCH'=> 'บอร์ดนี้กำหนดให้คุณต้องลงทะเบียนและเข้าสู่ระบบเพื่อดูข้อความในกระทู้ที่ยังไม่ได้อ่าน.',
 	'LOGIN_EXPLAIN_NEWPOSTS'	=> 'คุณจำเป็นต้องลงทะเบียนและล็อคอินเพื่อที่จะดูโพสใหม่.',
 
-	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> 'คุณใส่คำค้นมากเกินไป. กรุณาอย่าป้อนคำค้นเกิน %1$d คำ.',
-
-	'NO_KEYWORDS'			=> 'คุณต้องระบุคำที่ต้องการค้นหา โดยคำเหล่านั้นต้องประกอบไปด้วยตัวอักษรและต้องไม่มีคำพิเศษ',
+	'NO_KEYWORDS'			=> 'You must specify at least one word to search for. Each word must consist of at least %s and must not contain more than %s excluding wildcards.',
 	'NO_RECENT_SEARCHES'	=> 'ไม่สามารถค้นหาได้',
 	'NO_SEARCH'				=> 'ขออภัยท่านไม่มีลิทธิ์ ให้งานใน การค้นหา.',
 	'NO_SEARCH_RESULTS'		=> 'ผลการค้นหา ไม่พบข้อมูลที่ต้องการ',
-	'NO_SEARCH_TIME'		=> 'ตอนนี้. คุณไม่สามารถค้นหาได้ กรุณารอซักครู่แล้ว ลองใหม่.',
 	'NO_SEARCH_UNREADS'		=> 'ขออภัยการค้นหาโพสต์ที่ยังไม่ได้อ่านไม่สามารถทำได้ในบอร์ดนี้.',
 	'WORD_IN_NO_POST'		=> 'ไม่พบข้อความใด เพราะคำที่ต้องการค้นหา <strong>%s</strong>ไม่มีในข้อความใดๆ ',
 	'WORDS_IN_NO_POST'		=> 'ไม่พบข้อความใด เพราะคำที่ต้องการค้นหา <strong>%s</strong> ไม่มีในข้อความใดๆ',
 
 	'POST_CHARACTERS'		=> 'ตัวอักษร',
+	'PHRASE_SEARCH_DISABLED'	=> 'Searching by exact phrase is not supported on this board.',
 
 	'RECENT_SEARCHES'		=> 'ค้นหาปัจจุบัน',
 	'RESULT_DAYS'			=> 'ค้นหาก่อนวันที่',
 	'RESULT_SORT'			=> 'เรียงลำดับจาก',
 	'RETURN_FIRST'			=> 'ส่งค่ากลับ',
 	'RETURN_TO_SEARCH_ADV'	=> 'กลับไปหน้า การค้นหาชั้นสูง',
+	'GO_TO_SEARCH_ADV'	=> 'Go to advanced search',
 
 	'SEARCHED_FOR'				=> 'เงื่อนไขการค้นหาที่ใช้',
 	'SEARCHED_TOPIC'			=> 'ค้นหากระทู้',
@@ -3170,10 +3339,11 @@ $lang = array_merge($lang, array(
 	'SORT_FORUM'				=> 'บอร์ด',
 	'SORT_POST_SUBJECT'			=> 'หัวข้อโพสต์',
 	'SORT_TIME'					=> 'เวลาโพสต์',
+	'SPHINX_SEARCH_FAILED'		=> 'Search failed: %s',
+	'SPHINX_SEARCH_FAILED_LOG'	=> 'Sorry, search could not be performed. More information about this failure has been logged in the error log.',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
 	'SELECT_ALL_TAGS'		=> 'No selection',
-	'TOO_FEW_AUTHOR_CHARS'	=> 'คุณต้องระบุอย่างน้อย %d ตัวอักษรสำหรับชื่อเจ้าของกระทู้',
 ));
 
 #######language/en/ucp.php#######
@@ -3242,6 +3412,7 @@ $lang = array_merge($lang, array(
 	'ATTACHMENTS_EXPLAIN'			=> 'รายการไฟล์แนบของคุณทั้งหมด',
 	'ATTACHMENTS_DELETED'			=> 'ลบไฟล์แนบเรียบร้อยแล้ว',
 	'ATTACHMENT_DELETED'			=> 'ลบไฟล์แนบเรียบร้อยแล้ว',
+	'AUTOLOGIN_SESSION_KEYS_DELETED'=> 'The selected "Remember Me" login keys were successfully deleted.',
 	'AVATAR_CATEGORY'				=> 'หมวดหมู่',
 	'AVATAR_DRIVER_GRAVATAR_TITLE'	=> 'Gravatar',
 	'AVATAR_DRIVER_GRAVATAR_EXPLAIN'=> 'Gravatar is a service that allows you to maintain the same avatar across multiple websites. Visit <a href="http://www.gravatar.com/">Gravatar</a> for more information.',
@@ -3251,12 +3422,14 @@ $lang = array_merge($lang, array(
 	'AVATAR_DRIVER_REMOTE_EXPLAIN'	=> 'Link to avatar images from another website.',
 	'AVATAR_DRIVER_UPLOAD_TITLE'	=> 'Upload avatar',
 	'AVATAR_DRIVER_UPLOAD_EXPLAIN'	=> 'Upload your own custom avatar.',
-	'AVATAR_EXPLAIN'				=> 'ขนาดภาพใหญ่สุดคือ กว้าง %1$d pixel สูง %2$d pixel ขนาดไฟล์ %3$dkB',
+	'AVATAR_EXPLAIN'				=> 'Maximum dimensions; width: %1$s, height: %2$s, file size: %3$.2f KiB.',
 	'AVATAR_FEATURES_DISABLED'		=> 'รูปภาพส่วนตัวถูกยกเลิกการใช้งาน',
 	'AVATAR_GALLERY'				=> 'คลังรูปภาพ',
 	'AVATAR_GENERAL_UPLOAD_ERROR'	=> 'ไม่สามารถอัปโหลดรูปประจำตัวไปยัง %s',
 	'AVATAR_NOT_ALLOWED'			=> 'รูปประจำตัวของคุณไม่สามารถแสดงผลได้ เพราะรูปประจำตัวถูกปิดการใช้งานไว้.',
 	'AVATAR_PAGE'					=> 'หน้า',
+	'AVATAR_SELECT'					=> 'Select your avatar',
+	'AVATAR_TYPE'					=> 'Avatar type',
 	'AVATAR_TYPE_NOT_ALLOWED'		=> 'รูปประจำตัวรูปปัจจุบันของคุณไม่สามารถแสดงผลได้เพราะประเภทถูกปิดการใช้งานไว้ .',
 
 	'BACK_TO_DRAFTS'			=> 'กลับไปยังข้อความร่างที่บันทึกไว้',
@@ -3265,7 +3438,6 @@ $lang = array_merge($lang, array(
 	'BIRTHDAY_EXPLAIN'			=> 'ถ้าคุณระบุปีที่เกิด ก็จะสามารถแสดงอายุของคุณได้',
 	'BOARD_DATE_FORMAT'			=> 'รูปแบบวันที่',
 	'BOARD_DATE_FORMAT_EXPLAIN'	=> 'ให้ใช้ตามรูปแบบเดียวกับฟังก์ชัน <a href="http://www.php.net/date">date()</a> ของ PHP',
-	'BOARD_DST'					=> 'เปิดใช้งานเวลาฤดูร้อน/ปรับเวลาตามฤดูให้มีผล',
 	'BOARD_LANGUAGE'			=> 'ภาษาที่ใช้งาน',
 	'BOARD_STYLE'				=> 'รูปแบบของบอร์ด',
 	'BOARD_TIMEZONE'			=> 'ส่วนต่างของเวลาระหว่างเวลาท้องถิ่นกับเวลามาตรฐาน',
@@ -3284,8 +3456,6 @@ $lang = array_merge($lang, array(
 	'CLICK_RETURN_FOLDER'		=> '%1$sกลับไปยังโฟลเดอร์ “%3$s”%2$s',
 	'CONFIRMATION'				=> 'ยืนยันการสมัครสมาชิก',
 	'CONFIRM_CHANGES'			=> 'ยืนยันการเปลี่ยนแปลง',
-	'CONFIRM_EMAIL'				=> 'ยืนยัน E-mail',
-	'CONFIRM_EMAIL_EXPLAIN'		=> 'ถ้า คุณมีการเปลี่ยนแปลงอีเมล์ คุณต้องกรอกอีเมล์ยืนยันอีกครั้ง',
 	'CONFIRM_EXPLAIN'			=> 'เพื่อป้องกันการสมัครสมาชิกด้วยโปรแกรมอัตโนมัติ คุณจำเป็นต้องพิมพ์รหัสยืนยันตามที่คุณเห็นในรูปภาพด้านล่างนี้ ถ้าคุณไม่สามารถอ่านรหัสด้านล่างนี้ได้ กรุณาติดต่อ %s ผู้ดูแลบอร์ด%s',
 	'VC_REFRESH'				=> 'ขอดูรูปใหม่',
 	'VC_REFRESH_EXPLAIN'		=> 'ถ้าคุณอ่านข้อความคุณสามารถขอเปลี่ยนรูปใหม่ได้ โดยคลิกที่ปุ่ม',
@@ -3294,7 +3464,7 @@ $lang = array_merge($lang, array(
 	'CONFIRM_PASSWORD_EXPLAIN'	=> 'ยืนยันรหัสผ่านอีกครั้ง',
 	'COPPA_BIRTHDAY'			=> 'กรุณาเลือกวันเกิดของคุณ',
 	'COPPA_COMPLIANCE'			=> 'การปฏิบัติ COPPA',
-	'COPPA_EXPLAIN'				=> 'คลิกปุ่ม ส่ง เพื่อเริ่มสร้างบัญชีของคุณ<!--However it cannot be activated until a parent or guardian approves your registration. You will be emailed a copy of the necessary form with details of where to send it.-->',
+	'COPPA_EXPLAIN'				=> 'Please note that clicking submit will create your account. However it cannot be activated until a parent or guardian approves your registration. You will be e-mailed a copy of the necessary form with details of where to send it.',
 	'CREATE_FOLDER'				=> 'เพิ่มโฟลเดอร์…',
 	'CURRENT_IMAGE'				=> 'รูปภาพที่คุณใช้อยู่',
 	'CURRENT_PASSWORD'			=> 'รหัสผ่านปัจจุบัน',
@@ -3349,27 +3519,34 @@ $lang = array_merge($lang, array(
 	'EXPORT_FOLDER'				=> 'ส่งออกเป็นไฟล์ view',
 
 	'FIELD_REQUIRED'					=> 'ฟิล์ดนี้ “%s” ต้องสมบูรณ์',
-	'FIELD_TOO_SHORT'					=> 'ฟิล์ดนี้ “%1$s” เล็กมาก, อย่างน้อยต้อง %2$d ตัวอักษร',
-	'FIELD_TOO_LONG'					=> 'ฟิล์ดนี้ “%1$s” ยามมาก อย่างมากสุด %2$d ตัวอักษรที่อนุญาต',
-	'FIELD_TOO_SMALL'					=> 'ค่า “%1$s” เล็กมาก, ค่าน้อยที่สุดต้อง  %2$d ที่อนุญาต',
-	'FIELD_TOO_LARGE'					=> 'ค่า “%1$s” ใหญ่มาก  ค่ามากที่สุดต้อง %2$d  ที่อนุญาต',
+
+	'FIELD_TOO_SMALL'					=> 'The value of “%2$s” is too small, a minimum value of %1$d is required.',
+	'FIELD_TOO_LARGE'					=> 'The value of “%2$s” is too large, a maximum value of %1$d is allowed.',
+	'FIELD_INVALID_CHARS_INVALID'		=> 'The field “%s” has invalid characters.',
 	'FIELD_INVALID_CHARS_NUMBERS_ONLY'	=> 'ฟิล์ดนี้ “%s” ไม่สามารถใช้ตัวอักษรได้, อนุญาตเพียงตัวเลขเท่านั้น',
+	'FIELD_INVALID_CHARS_ALPHA_DOTS'	=> 'The field “%s” has invalid characters, only alphanumeric or . characters are allowed.',
 	'FIELD_INVALID_CHARS_ALPHA_ONLY'	=> 'ฟิล์ดนี้ “%s” ไม่สามารถใช้ตัวอักษรได้, อนุญาต A-Z  และ 0-9 เท่านั้น',
-	'FIELD_INVALID_CHARS_SPACERS_ONLY'	=> 'ฟิล์ดนี้ “%s” ไม่สามารถใช้ตัวอักษรได้, อนุญาต A-Z , 0-9 , ค่าว่างหรือเครื่องหมาย  -+_[] ',
+	'FIELD_INVALID_CHARS_ALPHA_PUNCTUATION'	=> 'The field “%s” has invalid characters, only alphanumeric or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_ALPHA_SPACERS'	=> 'The field “%s” has invalid characters, only alphanumeric, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_ALPHA_UNDERSCORE'	=> 'The field “%s” has invalid characters, only alphanumeric or _ characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_DOTS'	=> 'The field “%s” has invalid characters, only letter, number or . characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_ONLY'	=> 'The field “%s” has invalid characters, only letter and number characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_PUNCTUATION'	=> 'The field “%s” has invalid characters, only letter, number or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_SPACERS'		=> 'The field “%s” has invalid characters, only letter, number, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_UNDERSCORE'		=> 'The field “%s” has invalid characters, only letter, number or _ characters are allowed.',
 	'FIELD_INVALID_DATE'				=> 'ฟิล์ดนี้ “%s” ไมอนุญาตให้เป็นวันที่',
+	'FIELD_INVALID_URL'					=> 'The field “%s” has an invalid url.',
 	'FIELD_INVALID_VALUE'				=> 'ฟิล์ด “%s” ค่าไม่ถูกต้อง.',
 
 	'FOE_MESSAGE'				=> 'ข้อความจากศัตรู',
 	'FOES_EXPLAIN'				=> 'คุณจะไม่เห็นการกระทำของสมาชิกที่เป็นศัตรู เช่น ข้อความที่ศัตรูโพสต์ ข้อความส่วนตัวที่ศัตรูส่งมา แต่คุณจะยังคงเห็นข้อความของ ผู้ดูแล หรือ administrator อยู่',
 	'FOES_UPDATED'				=> 'บันทึกรายชื่อศัตรูเรียบร้อยแล้ว',
 	'FOLDER_ADDED'				=> 'เพิ่มโฟล์เดอร์เรียบร้อยแล้ว',
-	'FOLDER_MESSAGE_STATUS'		=> '%1$d จาก %2$d ข้อความ',
 	'FOLDER_NAME_EMPTY'			=> 'คุณจำเป็นต้องกรอกชื่อโฟล์เดอร์.',
 	'FOLDER_NAME_EXIST'			=> 'โฟล์เดอร์ <strong>%s</strong> นี้มีอยู่แล้ว',
 	'FOLDER_OPTIONS'			=> 'ปรับแต่งโฟล์เดอร์',
 	'FOLDER_RENAMED'			=> 'เปลี่ยนชื่อโฟล์เดอร์เรียบร้อยแล้ว',
 	'FOLDER_REMOVED'			=> 'ลบโฟล์เดอร์เรียบร้อยแล้ว',
-	'FOLDER_STATUS_MSG'			=> 'ใช้งานพื้นที่ไปแล้ว %1$d%% (ในกล่องข้อความมี %2$d ข้อความ จุได้ทั้งหมด %3$d )',
 	'FORWARD_PM'				=> 'PM ส่งต่อ',
 	'FORCE_PASSWORD_EXPLAIN'	=> 'ก่อนที่คุณจะเข้าใช้งานในบอร์ดนี้ คุณควรเปลี่ยนรหัสผ่าน',
 	'FRIEND_MESSAGE'			=> 'ข้อความจากเพื่อน',
@@ -3438,16 +3615,35 @@ $lang = array_merge($lang, array(
 	'MOVE_DELETED_MESSAGES_TO'		=> 'ย้ายข้อความไปยังโฟลเดอร์',
 	'MOVE_DOWN'						=> 'เลื่อนลง',
 	'MOVE_MARKED_TO_FOLDER'			=> 'ย้ายที่เลือกไปยัง %s',
-	'MOVE_PM_ERROR'					=> 'เกิดข้อผิดพลาดขณะย้ายข้อความเข้าโฟลเดอร์ใหม่ เพียง %1d จาก %2d ที่คุณต้องการย้าย.',
 	'MOVE_TO_FOLDER'				=> 'ย้ายไปยังโฟล์เดอร์',
 	'MOVE_UP'						=> 'เลื่อนขึ้น',
 
-	'NEW_EMAIL_CONFIRM_EMPTY'		=> 'คุณยังไม่ได้กรอก อีเมลยืนยัน .',
-	'NEW_EMAIL_ERROR'				=> 'อีเมล์ยืนยันไม่ตรงกัน โปรดตรวจสอบอีกครั้ง',
 	'NEW_FOLDER_NAME'				=> 'ชื่อโฟล์เดอร์',
 	'NEW_PASSWORD'					=> 'รหัสผ่านใหม่',
 	'NEW_PASSWORD_CONFIRM_EMPTY'	=> 'คุณยังไม่ได้กรอก ยืนยันรหัสผ่าน.',
 	'NEW_PASSWORD_ERROR'			=> 'รหัสผ่านยืนยัน ไม่ตรงกันโปรดตรวจสอบอีกครั้ง',
+
+	'NOTIFICATIONS_MARK_ALL_READ'						=> 'Mark all notifications read',
+	'NOTIFICATIONS_MARK_ALL_READ_CONFIRM'				=> 'Are you sure you want to mark all notifications read?',
+	'NOTIFICATIONS_MARK_ALL_READ_SUCCESS'				=> 'All notifications have been marked read.',
+	'NOTIFICATION_GROUP_MISCELLANEOUS'					=> 'Miscellaneous Notifications',
+	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
+	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
+	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'E-mail',
+	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
+	'NOTIFICATION_TYPE'									=> 'Notification type',
+	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
+	'NOTIFICATION_TYPE_GROUP_REQUEST'					=> 'Someone requests to join a group you lead',
+	'NOTIFICATION_TYPE_IN_MODERATION_QUEUE'				=> 'A post or topic needs approval',
+	'NOTIFICATION_TYPE_MODERATION_QUEUE'				=> 'Your topics/posts are approved or disapproved by a moderator',
+	'NOTIFICATION_TYPE_PM'								=> 'Someone sends you a private message',
+	'NOTIFICATION_TYPE_POST'							=> 'Someone replies to a topic to which you are subscribed',
+	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
+	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
+	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+
 	'NOTIFY_METHOD'					=> 'วิธีการแจ้ง',
 	'NOTIFY_METHOD_BOTH'			=> 'ทั้งสอง',
 	'NOTIFY_METHOD_EMAIL'			=> 'E-mail อย่างเดียว',
@@ -3465,10 +3661,9 @@ $lang = array_merge($lang, array(
 	'NOT_ADDED_FOES_SELF'			=> 'คุณไม่สามารถเพิ่มชื่อรายชื่อนิรนาม ลงในรายชื่อศัตรูได้',
 	'NOT_AGREE'						=> 'ไม่ยอมรับเงื่อนไข',
 	'NOT_ENOUGH_SPACE_FOLDER'		=> 'โฟลเดอร์ปลายทาง “%s” เต็มแล้ว ไม่สามารถส่งได้',
-	'NOT_MOVED_MESSAGE'				=> 'คุณมี 1 ข้อความส่วนตัวที่ถูกหยุดไว้เพราะว่าโฟลเดอร์เต็ม.',
-	'NOT_MOVED_MESSAGES'			=> 'คุณมี %d ข้อความซึ่งถูกหยุดไว้เพราะโฟลเดอร์คุณเต็ม',
 	'NO_ACTION_MODE'				=> 'ไม่มีการระบุข้อความแอคชัน',
 	'NO_AUTHOR'						=> 'ไม่พบชื่อผู้เขียนในข้อความนี้',
+	'NO_AVATAR'						=> 'No avatar selected',
 	'NO_AVATAR_CATEGORY'			=> 'ไม่มี',
 
 	'NO_AUTH_DELETE_MESSAGE'		=> 'คุณไม่มีสิทธ์ลบข้อความส่วนตัวนี้',
@@ -3476,6 +3671,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_FORWARD_MESSAGE'		=> 'คุณไม่มีสิทธ์ส่งต่อข้อความส่วนตัวนี้',
 	'NO_AUTH_GROUP_MESSAGE'			=> 'คุณไม่มีสิทธ์ส่งข้อความเข้ากลุ่มนี้',
 	'NO_AUTH_PASSWORD_REMINDER'		=> 'คุณยังไม่ได้รับอนุญาตให้ขอรหัสผ่านใหม่.',
+	'NO_AUTH_PROFILEINFO'			=> 'You are not authorised to change your profile information.',
 	'NO_AUTH_READ_HOLD_MESSAGE'		=> 'คุณยังไม่ได้รับอนุญาตให้อ่านข้อความส่วนตัวที่ถูกกันไว้.',
 	'NO_AUTH_READ_MESSAGE'			=> 'คุณไม่มีสิทธ์อ่านข้อความส่วนตัวนี้',
 	'NO_AUTH_READ_REMOVED_MESSAGE'	=> 'คุณไม่มีสิทธิอ่านข้อความนี้ เพราะเจ้าของข้อความได้ลบไปแล้ว',
@@ -3506,10 +3702,10 @@ $lang = array_merge($lang, array(
 	'NO_WATCHED_SELECTED'		=> 'คุณไม่ได้เลือกเผ้าดูหัวข้อหรือบอร์ดใดๆ.',
 	'NO_WATCHED_TOPICS'			=> 'คุณไม่สามารถดูกระทู้ นี้ได้',
 
-	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'รหัสผ่าน ต้องมีความยาว %1$d ถึง %2$d ตัวอักษร จะต้องใช้ทั้งตัวอักษรเล็ก, ใหญ่, และ ตัวเลข ผสมกัน',
-	'PASS_TYPE_ANY_EXPLAIN'		=> 'ความยาว %1$d ถึง %2$d ตัวอักษร',
-	'PASS_TYPE_CASE_EXPLAIN'	=> 'รหัสผ่าน ต้องมีความยาวระหว่าง %1$d ถึง %2$d ตัวอักษรจะต้องใช้ทั้งตัวอักษรเล็ก, ใหญ่, และ ตัวเลข ผสมกัน',
-	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'รหัสผ่าน ต้องมีความยาวระหว่าง %1$d ถึง%2$d ตัวอักษร และจะต้องใช้ทั้งตัวอักษรเล็ก, ใหญ่, และ ตัวเลข ผสมกัน, ต้องประกอบด้วยตัวเลขและสัญลักษณ์ ด้วย',
+	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case and must contain numbers.',
+	'PASS_TYPE_ANY_EXPLAIN'		=> 'Must be between %1$s and %2$s.',
+	'PASS_TYPE_CASE_EXPLAIN'	=> 'Password must be between %1$s and %2$s long and must contain letters in mixed case.',
+	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case, must contain numbers and must contain symbols.',
 	'PASSWORD'					=> 'รหัสผ่าน',
 	'PASSWORD_ACTIVATED'		=> 'รหัสผ่าน ใหม่ของคุณสามารถใช้งานได้แล้ว',
 	'PASSWORD_UPDATED'			=> 'รหัสผ่านใหม่ของคุณถูกส่งไปที่ E-mail ที่คุณใช้สมัครสมาชิกแล้ว',
@@ -3520,13 +3716,16 @@ $lang = array_merge($lang, array(
 	'PM_FROM_REMOVED_AUTHOR'	=> 'ข้อความนี้ถูกส่งโดยผู้ใช้ที่ไม่ได้ลงทะเบียน',
 	'PM_ICON'					=> 'PM ไอคอน',
 	'PM_INBOX'					=> 'กล่องขาเข้า',
+	'PM_MARK_ALL_READ'			=> 'Mark all messages read',
+	'PM_MARK_ALL_READ_SUCCESS'	=> 'All private messages in this folder have been marked read',
 	'PM_NO_USERS'				=> 'ไม่พบความต้องการของผู้ใช้.',
 	'PM_OUTBOX'					=> 'กล่องขาออก',
 	'PM_SENTBOX'				=> 'ส่งข้อความ',
 	'PM_SUBJECT'				=> 'เรื่องข้อความที่จะส่ง',
 	'PM_TO'						=> 'ส่งถึง',
+	'PM_TOOLS'					=> 'Message tools',
+	'PM_USERS_REMOVED_NO_PERMISSION'	=> 'Some users couldn’t be added as they do not have permission to read private messages.',
 	'PM_USERS_REMOVED_NO_PM'	=> 'ผู้ใช้บางท่านไม่สามารถรับข้อมูลส่วนตัวได้.',
-	'POPUP_ON_PM'				=> 'แสดงหน้าต่างใหม่เล็กๆ ถ้ามีข้อความส่งมาใหม่',
 	'POST_EDIT_PM'				=> 'แก้ไขข้อความ',
 	'POST_FORWARD_PM'			=> 'ส่งต่อข้อความ',
 	'POST_NEW_PM'				=> 'เขียนข้อความ',
@@ -3538,6 +3737,8 @@ $lang = array_merge($lang, array(
 	'PREFERENCES_UPDATED'		=> 'การตั้งค่าของคุณถูกบันทึกแล้ว',
 	'PROFILE_INFO_NOTICE'		=> 'ข้อมูลเหล่านี้จะสามารถอ่านได้โดยสมาชิกท่านอื่น กรุณาระมัดระวังข้อมูลที่เป็นส่วนตัว และจะต้องกรอกทุกช่องที่มีเครื่องหมาย *',
 	'PROFILE_UPDATED'			=> 'บันทึกข้อมูลส่วนตัวของคุณเรียบร้อยแล้ว โปรดรอสักครู่..',
+	'PROFILE_AUTOLOGIN_KEYS'	=> 'The "Remember Me" login keys automatically log you in when you visit the board. If you logout, the remember me login key is deleted only on the computer you are using to logout. Here you can see remember login keys created on other computers you used to access this site.',
+	'PROFILE_NO_AUTOLOGIN_KEYS'	=> 'There are no saved "Remember Me" login keys.',
 
 	'RECIPIENT'							=> 'ผู้รับ',
 	'RECIPIENTS'						=> 'ผู้รับ',
@@ -3562,8 +3763,6 @@ $lang = array_merge($lang, array(
 	'RULE_DELETED'						=> 'กฏถูกลบเรียบร้อยแล้ว.',
 	'RULE_LIMIT_REACHED'				=> 'คุณไม่สามารถเพิ่มกฎ PM. คุณได้มีจำนวนกฎถึงขีดจำกัดแล้ว',
 	'RULE_NOT_DEFINED'					=> 'กฎที่ระบุไม่ถูกต้อง',
-	'RULE_REMOVED_MESSAGE'				=> 'ข้อความส่วนตัวนี้ถูกลบเนื่องจากการกรองข้อความ.',
-	'RULE_REMOVED_MESSAGES'				=> '%d ข้อความส่วนตัวนี้ถูกลบเนื่องจากการกรองข้อความ.',
 
 	'SAME_PASSWORD_ERROR'		=> 'รหัสผ่าน ใหม่ของคุณเหมือนกับ รหัสผ่าน ที่คุณใช้อยู่ปัจจุบัน',
 	'SEARCH_YOUR_POSTS'			=> 'แสดงโพลต์ของคุณ',
@@ -3575,6 +3774,8 @@ $lang = array_merge($lang, array(
 	'SIGNATURE_TOO_LONG'		=> 'ลายเซ็นต์ของคุณยาวเกินไป',
 	'SELECT_CURRENT_TIME'		=> 'Select current time',
 	'SELECT_TIMEZONE'			=> 'Select timezone',
+	'SELECT_CURRENT_TIME'		=> 'Select current time',
+	'SELECT_TIMEZONE'			=> 'Select timezone',
 	'SORT'						=> 'เรียง',
 	'SORT_COMMENT'				=> 'อธิบายไฟล์',
 	'SORT_DOWNLOADS'			=> 'ดาวน์โหลด',
@@ -3584,15 +3785,28 @@ $lang = array_merge($lang, array(
 	'SORT_SIZE'					=> 'ขนาดไฟล์',
 
 	'TIMEZONE'					=> 'เขตเวลา',
-	'TO'						=> 'ถึง',
+	'TIMEZONE_DATE_SUGGESTION'	=> 'Suggestion: %s',
+	'TIMEZONE_INVALID'			=> 'The timezone you selected is invalid.',
+	'TO'						=> 'Recipient',
+	'TO_MASS'					=> 'Recipients',
+	'TO_ADD'					=> 'Add recipient',
+	'TO_ADD_MASS'				=> 'Add recipients',
+	'TO_ADD_GROUPS'				=> 'Add groups',
 	'TOO_MANY_RECIPIENTS'		=> 'ผู้รับมากเกินไป',
 	'TOO_MANY_REGISTERS'		=> 'มีผู้ลงทะเบียนมากเกินไป กรุณาลองใหม่อีกครั้ง',
 
 	'UCP'						=> 'ตั้งค่าส่วนตัว',
 	'UCP_ACTIVATE'				=> 'บัญชีรายชื่อสามารถใช้งานได้',
 	'UCP_ADMIN_ACTIVATE'		=> 'คุณต้องระบุอีเมลที่ใช้งานได้จริง เพราะเมื่อผู้ดูแลระบบตรวจสอบบัญชีรายชื่อ และอนุมัติบัญชีของคุณจะได้รับแจ้งตาม อีเมล ที่คุณระบุไว้',
-	'UCP_AIM'					=> 'AOL Instant Messenger',
 	'UCP_ATTACHMENTS'			=> 'แนบไฟล์',
+	'UCP_AUTH_LINK'				=> 'External accounts',
+	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
+	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
+	'UCP_AUTH_LINK_LINK'		=> 'ลิงค์',
+	'UCP_AUTH_LINK_MANAGE'		=> 'Manage external account associations',
+	'UCP_AUTH_LINK_NOT_SUPPORTED'	=> 'Linking board accounts to external services is not supported by this board’s current authentication method.',
+	'UCP_AUTH_LINK_TITLE'		=> 'Manage your external account associations',
+	'UCP_AUTH_LINK_UNLINK'		=> 'Unlink',
 	'UCP_AUTH_LINK'				=> 'External accounts',
 	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
 	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
@@ -3604,8 +3818,8 @@ $lang = array_merge($lang, array(
 	'UCP_COPPA_BEFORE'			=> 'ก่อน %s',
 	'UCP_COPPA_ON_AFTER'		=> 'วันนี้ หรือ หลัง %s',
 	'UCP_EMAIL_ACTIVATE'		=> 'คุณต้องระบุ อีเมล ที่สามารถใช้งานได้ เพราะคุณจะได้รับ อีเมล ในการเปิดใช้งานบัญชีรายชื่อ',
-	'UCP_ICQ'					=> 'หมายเลข ICQ',
 	'UCP_JABBER'				=> 'Jabber',
+	'UCP_LOGIN_LINK'			=> 'Set up an external account association',
 
 	'UCP_MAIN'					=> 'แสดงรายการหลัก',
 	'UCP_MAIN_ATTACHMENTS'		=> 'จัดการไฟล์แนบ',
@@ -3614,7 +3828,6 @@ $lang = array_merge($lang, array(
 	'UCP_MAIN_FRONT'			=> 'รายการหลัก',
 	'UCP_MAIN_SUBSCRIBED'		=> 'จัดการข่าวสารที่เลือกรับ',
 
-	'UCP_MSNM'					=> 'WL/MSN Messenger',
 	'UCP_NO_ATTACHMENTS'		=> 'ไม่มีไฟล์ที่คุณโพสต์',
 
 	'UCP_NOTIFICATION_LIST'				=> 'Manage notifications',
@@ -3631,8 +3844,6 @@ $lang = array_merge($lang, array(
 	'UCP_PM_COMPOSE'			=> 'เขียนข้อความ',
 	'UCP_PM_DRAFTS'				=> 'จัดการข้อความที่บันทึกค้างไว้',
 	'UCP_PM_OPTIONS'			=> 'กฏ, โฟร์เดอร์ &amp; การตั้งค่า',
-	'UCP_PM_POPUP'				=> 'ข้อความส่วนตัว',
-	'UCP_PM_POPUP_TITLE'		=> 'แสดงเตือนข้อความส่วนตัว',
 	'UCP_PM_UNREAD'				=> 'ข้อความที่ยังไม่ได้อ่าน',
 	'UCP_PM_VIEW'				=> 'แสดงข้อความ',
 
@@ -3647,11 +3858,11 @@ $lang = array_merge($lang, array(
 	'UCP_USERGROUPS_MEMBER'		=> 'เปลี่ยนกลุ่มสมาชิก',
 	'UCP_USERGROUPS_MANAGE'		=> 'จัดการกลุ่ม',
 
+	'UCP_PASSWORD_RESET_DISABLED'	=> 'The password reset functionality has been disabled. If you need help accessing your account, please contact the %sBoard Administrator%s',
 	'UCP_REGISTER_DISABLE'			=> 'ไม่สามารถสร้างบัญชีรายชื่อใหม่ได้ ณ ขณะนี้.',
 	'UCP_REMIND'					=> 'ส่งรหัสผ่าน',
 	'UCP_RESEND'					=> 'ส่งอีเมล์',
 	'UCP_WELCOME'					=> 'ยินดีต้อนรับเข้าสู่ส่วนการตั้งค่าสมาชิก. คุณสามารถตั้งค่าต่าง ๆ ของคุณจากเมนูนี้, ดูและอัปเดทข้อมูลส่วนตัว, ตั้งค่าการแสดงผลฟอรั่ม, รับ-ยกเลิก รับข่าวสารฟอรั่มและกระทู้. ส่งข้อความส่วนตัวไปยังสมาชิกท่านอื่น ๆ  (ถ้ามีการเปิดสิทธินั้นจาก Admin). หากคุณพร้อมแล้วก็สามารถเลือกและดำเนินการต่อไปได้เลย',
-	'UCP_YIM'						=> 'Yahoo Messenger',
 	'UCP_ZEBRA'						=> 'เพื่อนและศัตรู',
 	'UCP_ZEBRA_FOES'				=> 'รายชื่อศัตรู',
 	'UCP_ZEBRA_FRIENDS'				=> 'รายชื่อเพื่อน',
@@ -3661,12 +3872,12 @@ $lang = array_merge($lang, array(
 	'UPLOAD_AVATAR_FILE'			=> 'เลือกรูปจากเครื่องคุณ',
 	'UPLOAD_AVATAR_URL'				=> 'เลือกใส่รูปส่วนตัวด้วย URL',
 	'UPLOAD_AVATAR_URL_EXPLAIN'		=> 'คุณสามารถนำ URL ของรูปภาพจากเว็บที่ไหนมาใส่ก็ได้เช่นกัน',
-	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'ชื่อผู้ใช้งาน ควรอยู่ระหว่าง %1$d ถึง %2$d ตัวอักษร และควรใช้อักษรภาษาอังกฤษเท่านั้น',
-	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'ชื่อผู้ใช้งาน ควรอยู่ระหว่าง %1$d ถึง %2$d ตัวอักษรและสามารถใช้ภาษาอังกฤษ เว้นวรรค หรือ -+_[] ได้',
-	'USERNAME_ASCII_EXPLAIN'		=> 'ชื่อผู้ใช้งาน ควรอยู่ระหว่าง %1$d ถึง %2$d ตัวอักษร และใช้ได้เฉพาะตัวอักษร ASCII.',
-	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'ชื่อผู้ใช้งาน ควรอยู่ระหว่าง %1$d ถึง %2$d ตัวอักษร และสามารถใช้ตัวเลขร่วมได้',
-	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'ชื่อผู้ใช้งาน ควรอยู่ระหว่าง %1$d ถึง %2$d ตัวอักษร และใช้ตัวอักษร, ตัวเลข, ที่ว่าง หรืออักษรพิเศษ -+_[] ',
-	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'ชื่อผู้ใช้งาน ควรอยู่ระหว่าง %1$d ถึง %2$d ตัวอักษร.',
+	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only alphanumeric characters.',
+	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use alphanumeric, space or -+_[] characters.',
+	'USERNAME_ASCII_EXPLAIN'		=> 'Username must be between %1$s and %2$s long and use only ASCII characters, so no special symbols.',
+	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only letter or number characters.',
+	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use letter, number, space or -+_[] characters.',
+	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Length must be between %1$s and %2$s.',
 	'USERNAME_TAKEN_USERNAME'		=> 'ชื่อผู้ใช้งาน นี้ถูกสมาชิกท่านอื่นใช้ไปแล้ว กรุณาเปลี่ยน ชื่อผู้ใช้งาน ใหม่',
 	'USERNAME_DISALLOWED_USERNAME'	=> 'ชื่อผู้ใช้งาน นี้ถูกระงับไม่ให้ใช้งาน หรือมีข้อความที่ไม่ให้ใช้งาน กรุณาเปลี่ยน ชื่อผู้ใช้งาน ใหม่',
 	'USER_NOT_FOUND_OR_INACTIVE'	=> 'ไม่พบ ชื่อผู้ใช้งาน นี้ หรือ ชื่อผู้ใช้งาน นี้อาจยังไม่พร้อมใช้งาน',
@@ -3679,10 +3890,9 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_PM'				=> 'PM ถัดไป',
 	'VIEW_PM'					=> 'แสดงข้อความส่วนตัว',
 	'VIEW_PM_INFO'				=> 'รายละเอียดของข้อความ',
-	'VIEW_PM_MESSAGE'			=> '1 ข้อความ',
-	'VIEW_PM_MESSAGES'			=> '%d ข้อความ',
 	'VIEW_PREVIOUS_HISTORY'		=> 'ก่อน PM ในประวัติ',
 	'VIEW_PREVIOUS_PM'			=> 'ก่อน PM',
+	'VIEW_PROFILE'				=> 'View profile',
 	'VIEW_SIGS'					=> 'แสดงลายเซ็นต์',
 	'VIEW_SMILIES'				=> 'แสดงรูปรอยยิ้ม',
 	'VIEW_TOPICS_DAYS'			=> 'แสดงกระทู้ของวันก่อน',
@@ -3790,8 +4000,6 @@ $lang = array_merge($lang, array(
 	'UNREAD_POSTS_LOCKED'	=> 'โพสต์ที่ยังไม่ได้อ่าน [ ล็อก ]',
 
 	'VIEW_FORUM'			=> 'บอร์ด',
-	'VIEW_FORUM_TOPIC'		=> '1 หัวข้อ',
-	'VIEW_FORUM_TOPICS'		=> '%d หัวข้อ',
 
 	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
 	'REMOVE_FILTER'		=> 'Remove filter',
@@ -3800,6 +4008,7 @@ $lang = array_merge($lang, array(
 #######language/en/viewtopic.php#######
 
 $lang = array_merge($lang, array(
+	'APPROVE'								=> 'อนุมัติ',
 	'ATTACHMENT'						=> 'แนบไฟล์',
 	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'ส่วนการใช้งานแนบไฟล์ไม่ได้เปิดใช้งาน.',
 
@@ -3812,14 +4021,13 @@ $lang = array_merge($lang, array(
 	'BUMP_TOPIC'			=> 'Bump หัวข้อ',
 
 	'CODE'					=> 'โค้ด',
-	'COLLAPSE_QR'			=> 'ปิด ตอบด่วน',
-
+	
 	'DELETE_TOPIC'			=> 'ลบหัวข้อ',
+	'DELETED_INFORMATION'	=> 'Deleted by %1$s on %2$s',
+	'DISAPPROVE'					=> 'ไม่อนุมัติ',
 	'DOWNLOAD_NOTICE'		=> 'คุณไม่มีสิทธิ์ดูไฟล์ที่แนบมาในกระทู้',
 
-	'EDITED_TIMES_TOTAL'	=> 'แก้ไขล่าสุดโดย %1$s เมื่อ %2$s, แก้ไขแล้ว %3$d ครั้ง.',
-	'EDITED_TIME_TOTAL'		=> 'แก้ไขล่าสุดโดย %1$s เมื่อ %2$s, แก้ไขแล้ว %3$d ครั้ง',
-	'EMAIL_TOPIC'			=> 'ส่งอีเมล์ให้เพื่อน',
+	'EMAIL_TOPIC'			=> 'E-mail topic',
 	'ERROR_NO_ATTACHMENT'	=> 'ไม่สามารถเลือกไฟล์ที่เปิดใช้งานอยู่ได้',
 
 	'FILE_NOT_FOUND_404'	=> 'ไฟล์ <strong>%s</strong> ไมมีอยู่ในฐานข้อมูล.',
@@ -3834,8 +4042,6 @@ $lang = array_merge($lang, array(
 	'MAKE_GLOBAL'				=> 'เปลี่ยนเป็นหัวข้อ "ประกาศ" แสดงทุกหมวด',
 	'MAKE_NORMAL'				=> 'เปลี่ยนเป็นหัวข้อ "ธรรมดา" ',
 	'MAKE_STICKY'				=> 'เปลี่ยนเป็นหัวข้อ "ปักหมุด" ',
-	'MAX_OPTIONS_SELECT'		=> 'คุณสามารถเลือกได้ ถึง <strong>%d</strong> ตัวเลือก',
-	'MAX_OPTION_SELECT'			=> 'คุณต้องเลือก <strong>1</strong> ตัวเลือก',
 	'MISSING_INLINE_ATTACHMENT'	=> 'ไฟล์แนป <strong>%s</strong> ไม่มีอยู่แล้ว',
 	'MOVE_TOPIC'				=> 'ย้ายหัวข้อ',
 
@@ -3849,6 +4055,7 @@ $lang = array_merge($lang, array(
 	'POLL_ENDED_AT'			=> 'โพลจบเมื่อ %s',
 	'POLL_RUN_TILL'			=> 'โพลล์ยังใช้ได้อยู่ %s',
 	'POLL_VOTED_OPTION'		=> 'หัวข้อที่คุณเลือกโหวต',
+	'POST_DELETED_RESTORE'	=> 'This post has been deleted. It can be restored.',
 	'PRINT_TOPIC'			=> 'ตัวอย่างพิมพ์',
 
 	'QUICK_MOD'				=> 'เครื่องมือผู้ดูแลบอร์ด',
@@ -3856,11 +4063,14 @@ $lang = array_merge($lang, array(
 	'QUOTE'					=> 'อ้างคำพูด',
 
 	'REPLY_TO_TOPIC'		=> 'กลับไปยังกระทู้',
+	'RESTORE'				=> 'Restore',
+	'RESTORE_TOPIC'			=> 'Restore topic',
 	'RETURN_POST'			=> '%sย้อนกลับไปยังข้อความ%s',
 
 	'SHOW_QR'				=> 'ตอบด่วน',
 	'SUBMIT_VOTE'			=> 'ส่้งค่าการโหวต',
 
+	'TOPIC_TOOLS'			=> 'Topic tools',
 	'TOTAL_VOTES'			=> 'โหวตทั้งหมด',
 
 	'UNLOCK_TOPIC'			=> 'ปลดล๊อกกระทู้',
@@ -3869,10 +4079,7 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_TOPIC'		=> 'หัวข้อถัดไป>>',
 	'VIEW_PREVIOUS_TOPIC'	=> '<<หัวข้อก่อนหน้า',
 	'VIEW_RESULTS'			=> 'แสดงผลลัพธ์',
-	'VIEW_TOPIC_POST'		=> '1 โพสต์',
-	'VIEW_TOPIC_POSTS'		=> '%d โพสต์',
 	'VIEW_UNREAD_POST'		=> 'โพสต์ที่ยังไม่ได้อ่าน',
-	'VISIT_WEBSITE'			=> 'เข้าชมเว็บไซต์',
 	'VOTE_SUBMITTED'		=> 'ผลโหวตของคุณถูกคำนวณเรียบร้อยแล้ว',
 	'VOTE_CONVERTED'		=> 'ไม่รองรับการเปลี่ยนผลการสำรวจ สำหรับการสำรวจที่แปลงมา',
 
@@ -9462,6 +9669,7 @@ $lang = array_merge($lang, array(
 	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'	=> 'ขนาดที่ว่างมากที่สุดต่อผู้ใช้หนึ่งคนสำหรับไฟล์แนบข้อความส่วนตัว, ตั้งเป็น 0 คือไม่จำกัด',
 	'ATTACH_ORPHAN_URL'					=> 'ไฟล์แนบที่ไม่มีเจ้าของ',
 	'ATTACH_POST_ID'					=> 'โพสต์ ID',
+	'ATTACH_POST_TYPE'					=> 'Post type',
 	'ATTACH_QUOTA'						=> 'โควต้าไฟล์แนบทั้งหมด',
 	'ATTACH_QUOTA_EXPLAIN'				=> 'ขนาดพื้นที่ที่ว่างมากที่สุดต่อทั้งบอร์ด , ตั้งเป็น 0 คือไม่จำกัด',
 	'ATTACH_TO_POST'					=> 'แนบไฟล์กับโพสต์',
@@ -9507,6 +9715,9 @@ $lang = array_merge($lang, array(
 	'EXT_GROUP_REAL_MEDIA'			=> 'Real Media',
 	'EXT_GROUP_WINDOWS_MEDIA'		=> 'Windows Media',
 
+	'FILES_GONE'			=> 'Some of the attachments you selected for deletion do not exist. They may have been already deleted. Attachments that did exist were deleted.',
+	'FILES_STATS_WRONG'		=> 'Your file statistics are likely inaccurate and need to be resynchronised. Actual values: number of attachments = %1$d, total size of attachments = %2$s.<br />Click %3$shere%4$s to resynchronise them.',
+
 	'GO_TO_EXTENSIONS'		=> 'ไปที่หน้าจอการจัดการชนิดไฟล์แนป',
 	'GROUP_NAME'			=> 'ชื่อกลุ่ม',
 
@@ -9530,6 +9741,7 @@ $lang = array_merge($lang, array(
 	'NOT_ALLOWED_IN_PM'			=> 'อนุญาตในโพสต์เท่านั้น',
 	'NOT_ALLOWED_IN_PM_POST'	=> 'ไม่อนุญาต',
 	'NOT_ASSIGNED'				=> 'ไม่กำหนด',
+	'NO_ATTACHMENTS'			=> 'No attachments found for this period.',
 	'NO_EXT_GROUP'				=> 'ไม่มี',
 	'NO_EXT_GROUP_NAME'			=> 'ไม่มีการระบุชื่อกลุ่ม',
 	'NO_EXT_GROUP_SPECIFIED'	=> 'ไม่มีการระบุชื่อกลุ่มชนิดไฟล์',
@@ -9542,6 +9754,10 @@ $lang = array_merge($lang, array(
 	'ONLY_ALLOWED_IN_PM'	=> 'อนุญาตในข้อความส่วนตัวเท่านั้น',
 	'ORDER_ALLOW_DENY'		=> 'อนุญาต',
 	'ORDER_DENY_ALLOW'		=> 'ไม่อนุญาต',
+
+	'REMOVE_ALLOWED_IPS'			=> 'ลบหรือรวม IPs/hostnames <em>ที่อนุญาต</em> ',
+	'REMOVE_DISALLOWED_IPS'			=> 'ลบหรือรวม IPs/hostnames <em>ที่ไม่อนุญาต</em> ',
+	'RESYNC_FILES_STATS_CONFIRM'	=> 'Are you sure you wish to resynchronise file statistics?',
 
 	'REMOVE_ALLOWED_IPS'		=> 'ลบหรือรวม IPs/hostnames <em>ที่อนุญาต</em> ',
 	'REMOVE_DISALLOWED_IPS'		=> 'ลบหรือรวม IPs/hostnames <em>ที่ไม่อนุญาต</em> ',
@@ -9611,18 +9827,17 @@ $lang = array_merge($lang, array(
 	'PERMANENT'		=> 'ถาวร',
 
 	'UNTIL'						=> 'จนกระทั่ง',
-	'USER_BAN'					=> 'ถูกแบน',
+	'USER_BAN'					=> 'Ban one or more users by username',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> 'เลือกใช้งานนี้เพื่อนำผู้ใช้ที่ระบุออกจากการแบน',
 	'USER_BAN_EXPLAIN'			=> 'หากต้องการระบุมากกว่าหนึ่งผู้ใช้ ให้กรอกแต่ละอันคนละบรรทัด ใช้ <span style="text-decoration: underline;">ค้นหาสมาชิก</span> เพื่อหารายชื่อผู้ใช้ และเพิ่มเข้าในรายการอัตโนมัติ',
 	'USER_NO_BANNED'			=> 'ไม่มีผู้ใช้ถูกแบน',
-	'USER_UNBAN'				=> 'ยกเลิกการแบนผู้ใช้',
+	'USER_UNBAN'				=> 'Un-ban or un-exclude users by username',
 	'USER_UNBAN_EXPLAIN'		=> 'คุณสามารถยกเลิกการแบน หลายๆ ผู้ใช้ พร้อมกันได้ โดยใช้ เมาส์และคีย์บอร์ด ผู้ใช้ ที่ถูกเอาออกจะเป็นตัวหนา',
 ));
 
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'				=> 'เปิดใช้งานการปรับเวลาฤดูร้อน<abbr title="Daylight Saving Time">ปรับเวลาตามฤดูกาล</abbr>',
 	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
 	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
 	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
@@ -9648,16 +9863,28 @@ $lang = array_merge($lang, array(
 	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'คุณสามารถกำหนดค่าพื้นฐานเว็บบอร์ด, เช่น ตั้งชื่อเว็บบอร์ดและตั้งค่าต่างๆของ เวลา และภาษา',
+	'BOARD_INDEX_TEXT'				=> 'Board index text',
+	'BOARD_INDEX_TEXT_EXPLAIN'		=> 'This text is displayed as the board index in the board’s breadcrumbs. If not specified, it will default to “Board index”.',
+	'BOARD_STYLE'					=> 'รูปแบบของบอร์ด',
 	'CUSTOM_DATEFORMAT'				=> 'ตั้งค่าเอง…',
 	'DEFAULT_DATE_FORMAT'			=> 'รูปแบบเวลา',
 	'DEFAULT_DATE_FORMAT_EXPLAIN'	=> 'รูปแบบของเวลาเหมือนกับฟังก์ชัน <code>date</code>ของ PHP ',
 	'DEFAULT_LANGUAGE'				=> 'ภาษาเริ่มต้น',
 	'DEFAULT_STYLE'					=> 'รูปแบบเริ่มต้น',
+	'DEFAULT_STYLE_EXPLAIN'			=> 'The default style is <strong>%1$s (%2$s)</strong> which is the overriden style for all users (including bots).',
 	'DISABLE_BOARD'					=> 'ปิดเว็บบอร์ด',
-	'DISABLE_BOARD_EXPLAIN'			=> 'การตั้งค่านี้จะทำให้ผู้ใช้ไม่สามารถใช้เว็บบอร์ดได้ คุณสามารถตั้งข้อความสั้นๆ (255 ตัวอักษร) เพื่อแสดงให้ผู้ใช้ทราบถึงเหตุผลของการปิดเว็บบอร์ด',
+	'DISABLE_BOARD_EXPLAIN'			=> 'This will make the board unavailable to users who are neither administrators nor moderators. You can also enter a short (255 character) message to display if you wish.',
+	'DISPLAY_LAST_SUBJECT'			=> 'Display subject of last added post on forum list',
+	'DISPLAY_LAST_SUBJECT_EXPLAIN'	=> 'The subject of the last added post will be displayed in the forum list with a hyperlink to the post. Subjects from password protected forums and forums in which user doesn’t have read access are not shown.',
+	'GUEST_STYLE'					=> 'Guest style',
+	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'กำหนดรูปแบบกับผู้ใช้ทุกคน',
 	'OVERRIDE_STYLE_EXPLAIN'		=> 'แทนที่รูปแบบผู้ใช้ด้วยค่าเริ่มต้น',
 	'SITE_DESC'						=> 'คำอธิบายเว็บบอร์ด',
+	'SITE_HOME_TEXT'				=> 'Main website text',
+	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
+	'SITE_HOME_URL'					=> 'Main website URL',
+	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'ชื่อเว็บบอร์ด',
 	'SYSTEM_TIMEZONE'				=> 'เขตเวลาบุคคลทั่วไป',
 	'WARNINGS_EXPIRE'				=> 'ระยะเวลาการเตือน',
@@ -9697,6 +9924,7 @@ $lang = array_merge($lang, array(
 
 	'ALLOW_AVATARS'					=> 'เปิดให้ใช้งานภาพประจำตัว',
 	'ALLOW_AVATARS_EXPLAIN'			=> 'อนุญาตให้ใช้งานภาพประจำตัว;<br />ถ้าปิดการใช้งานภาพประจำตัว, รูปประจำตัวจะไม่ถูกแสดงที่หน้าบอร์ด, แต่ผู้ใช้ยังสามารถดาวน์โหลดรูปประจำตัวได้ที่ User Control Panel.',
+	'ALLOW_GRAVATAR'				=> 'Enable gravatar avatars',
 	'ALLOW_LOCAL'					=> 'ใช้งานแกลเลอรี่ภาพประจำตัว',
 	'ALLOW_REMOTE'					=> 'ใช้งานภาพประจำตัวจากเว็บอื่น',
 	'ALLOW_REMOTE_EXPLAIN'			=> 'ภาพประจำตัว ที่อ้างอิงจากเวบอื่น',
@@ -9877,6 +10105,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'เนื้อหาจากบอร์ดนี้ <strong>จะไม่ถูกรวมอยู่ใน feeds</strong>. ไม่เลือกอะไรเลยเพื่อดึงข้อมูลจากทุกบอร์ดสำหรับ feeds.<br />เลือกหรือยกเลิกการเลือกหลายๆบอร์ดพร้อมกันให้กด<samp>CTRL</samp>ค้างไว้แล้วคลิกบอร์ดที่ต้องการ.',
 
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'ส่วนนี้คุณสามารถเลือกและกำหนดค่าส่วนเสริมของ captcha ซึ่งใช้วิธีการต่างๆ เพื่อป้องกัน spambots',
+	'ACP_VC_EXT_GET_MORE'					=> 'For additional (and possibly better) anti-spam plugins, visit the <a href="https://www.phpbb.com/go/anti-spam-ext"><strong>phpBB.com Extensions Database</strong></a>. For more information on preventing spam on your board, visit the <a href="https://www.phpbb.com/go/anti-spam"><strong>phpBB.com Knowledge Base</strong></a>.',
 	'AVAILABLE_CAPTCHAS'					=> 'ส่วนเสริมที่สามารถเลือกได้',
 	'CAPTCHA_UNAVAILABLE'					=> 'CAPTCHA ไม่สามารถเลือกตามความต้องการได้.',
 	'CAPTCHA_GD'							=> 'GD CAPTCHA',
@@ -9927,18 +10156,36 @@ $lang = array_merge($lang, array(
 	'SESSION_LENGTH'			=> 'อายุ Session',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Sessions จะหมดอายุหลังจากเวลานี้,ในหน่วยวินาที',
 
+	// Contact Settings
+	'ACP_CONTACT_SETTINGS_EXPLAIN'		=> 'Here you can enable and disable the contact page and also add a text that is displayed on the page.',
+
+	'CONTACT_US_ENABLE'				=> 'Enable contact page',
+	'CONTACT_US_ENABLE_EXPLAIN'		=> 'This page allows users to send emails to board administrators',
+
+	'CONTACT_US_INFO'				=> 'Contact information',
+	'CONTACT_US_INFO_EXPLAIN'		=> 'The message is displayed on the contact page',
+	'CONTACT_US_INFO_PREVIEW'		=> 'Contact page information - Preview',
+	'CONTACT_US_INFO_UPDATED'		=> 'Contact page information has been updated.',
+
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'คุณสามารถเลือกใช้หรือไม่ใช้บางหน้าที่ของบอร์ด เพื่อลดการประมวลผลได้ ในเซิร์ฟเวอร์ทั่วไป ไม่มีความจำเป็นที่ต้องยกเลิกหน้าที่เหล่านี้ อย่างไรก็ตาม ก็สามารถทำได้หากมีความจำเป็น คุณสามารถจำกัดโหลดและ session ที่แอคทีฟ ก่อนที่บอร์ดจะออฟไลน์',
 
+	'ALLOW_CDN'						=> 'Allow usage of third party content delivery networks',
+	'ALLOW_CDN_EXPLAIN'				=> 'If this setting is enabled, some files will be served from external third party servers instead of your server. This reduces the network bandwidth required by your server, but may present a privacy issue for some board administrators. In a default phpBB installation, this includes loading “jQuery” and the font “Open Sans” from Google’s content delivery network.',
+	'ALLOW_LIVE_SEARCHES'			=> 'Allow live searches',
+	'ALLOW_LIVE_SEARCHES_EXPLAIN'	=> 'If this setting is enabled, users are provided with keyword suggestions as they type in certain fields throughout the board.',
 	'CUSTOM_PROFILE_FIELDS'			=> 'Custom profile fields',
 	'LIMIT_LOAD'					=> 'จำกัดโหลดของระบบ',
 	'LIMIT_LOAD_EXPLAIN'			=> 'ถ้าโหลดของระบบ ภายใน 1 นาที เกินค่าเฉลี่ย บอร์ดจะออฟไลน์  ค่า 1.0 เท่ากับ ~100% ของหนึ่งโปรเซสเซอร์ หน้าที่นี้ใช้ได้บน UNIX เซิร์ฟเวอร์  ค่านี้จะตั้งค่าตัวเองเป็น 0 ถ้า  phpBB ไม่สามารถตรวจสอบค่าโหลด',
 	'LIMIT_SESSIONS'				=> 'จำกัด sessions',
 	'LIMIT_SESSIONS_EXPLAIN'		=> 'ถ้า sessions ของระบบภายใน 1 นาที เกินกว่าค่านี้ บอร์ดจะออฟไลน์ ตั้งค่าเป็น 0 เพื่อไม่จำกัด sessions',
 	'LOAD_CPF_MEMBERLIST'			=> 'อนุญาติ styles สำหรับโปรไฟล์ ที่กำหนดเองใน memberlist',
+	'LOAD_CPF_PM'					=> 'Display custom profile fields in private messages',
 	'LOAD_CPF_VIEWPROFILE'			=> 'แสดง custom profile fields ใน user profiles',
 	'LOAD_CPF_VIEWTOPIC'			=> 'แสดงข้อมูลที่กำหนดเองบนหน้ากระทู้',
 	'LOAD_USER_ACTIVITY'			=> 'แสดงการใช้งานของผู้ใช้',
 	'LOAD_USER_ACTIVITY_EXPLAIN'	=> 'แสดงแอคทีฟ topic/forum ใน profiles ของผู้ใช้และ แป้นควบคุมผู้ใช้ ค่านี้แนะนำให้เลิกใช้ในบอร์ดที่มีโพสต์มากกว่าหนึ่งล้าน',
+	'READ_NOTIFICATION_EXPIRE_DAYS'	=> 'Read Notification Expiration',
+	'READ_NOTIFICATION_EXPIRE_DAYS_EXPLAIN' => 'Number of days that will elapse before a read notification will automatically be deleted. Set this value to 0 to make notifications permanent.',
 	'RECOMPILE_STYLES'				=> 'Recompile stale style components',
 	'RECOMPILE_STYLES_EXPLAIN'		=> 'ตรวจสอบอัพเดทส่วนประกอบของรูปแบบบนระบบไฟล์และคอมไพล์ใหม่',
 	'YES_ANON_READ_MARKING'			=> 'อนุญาตให้แขกทำสัญลักษณ์ในกระทู้',
@@ -9959,18 +10206,25 @@ $lang = array_merge($lang, array(
 	'YES_READ_MARKING_EXPLAIN'		=> 'เก็บสถานะอ่านแล้ว/ยังไม่ได้อ่าน ในฐานข้อมูลแทนการใช้คุกกี้',
 	'YES_UNREAD_SEARCH'				=> 'ให้คนหาโพสต์ที่ยังไม่ได้อ่าน',
 
-	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB รองรับ authentication plug-ins, หรือโมดูล ค่าการอนุญาตเหล่านี้กำหนดว่าผู้ใช้จะทำการ authenticated อย่างไร เมื่อพวกเข้าลอกอินเข้าสู่บอร์ด โดยปกติ มี 3 วิธีที่มีไว้ให้ ได้แก่ DB, LDAP และ Apache มีบางวิธีเท่านั้นที่ต้องการข้อมูลเพิ่มเติม ถ้าหากวิธีที่เลือกต้องการข้อมูลเพิ่มเติม ให้กรอกข้อมูลเพิ่มเติมนั้นด้วย',
+	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB supports authentication plug-ins, or modules. These allow you determine how users are authenticated when they log into the board. By default four plug-ins are provided: DB, LDAP, Apache, and OAuth. Not all methods require additional information so only fill out fields if they are relevant to the selected method.',
 
 	'AUTH_METHOD'				=> 'เลือกวิธีการยืนยันตัวตน',
 
+	'AUTH_PROVIDER_OAUTH_ERROR_ELEMENT_MISSING'	=> 'Both the key and secret of each enabled OAuth service provider must be provided. Only one was provided for an OAuth service provider.',
+	'AUTH_PROVIDER_OAUTH_EXPLAIN'				=> 'Each OAuth provider requires a unique secret and key in order to authenticate with the external server. These should be supplied by the OAuth service when you register your website with them and should be entered exactly as provided to you.<br />Any service that does not have both a key and a secret entered here will not be available for use by the forum users. Also note, that user can still register and login using the DB authentication plug-in.',
+	'AUTH_PROVIDER_OAUTH_KEY'					=> 'Key',
+	'AUTH_PROVIDER_OAUTH_TITLE'					=> 'OAuth',
+	'AUTH_PROVIDER_OAUTH_SECRET'				=> 'Secret',
+
 	'APACHE_SETUP_BEFORE_USE'	=> 'คุณต้องตั้งค่า apache authentication ก่อนที่คุณ สลับไปใช้ phpBB จำไว้ว่าชื่อผู้ใช้ที่คุณใช้สำหรับ apache authentication ต้องเป็นอย่างเดียวกันกับ phpBB  Apache authentication สามารถใช้กับ mod_php (ไม่ใช้กับด้วยCGI version) และไม่ใช้ safe_mode ',
 
+	'LDAP'							=> 'LDAP',
 	'LDAP_DN'						=> 'LDAP base <var>dn</var>',
 	'LDAP_DN_EXPLAIN'				=> 'ชื่อพิเศษ, ใช้สำหรับระบุข้อมูลผู้ใช้, ตัวอย่างเช่น <samp>o=My Company,c=US</samp>.',
-	'LDAP_EMAIL'					=> 'LDAP e-mail attribute',
-	'LDAP_EMAIL_EXPLAIN'			=> 'ตั้งค่านี้ให้กับชื่อผู้ใช้ ในส่วน อีเมล (ถ้ามี) เพื่อที่จะตั้งค่า อีเมล ให้อัตโนมัติสำหรับผู้ใช้ใหม่ ปล่อยให้ค่านี้ว่าง ทำให้ส่วน อีเมล ของผู้ใช้ที่ล็อกอินครั้งแรกว่างด้วย',
+	'LDAP_EMAIL'					=> 'LDAP email attribute',
+	'LDAP_EMAIL_EXPLAIN'			=> 'Set this to the name of your user entry email attribute (if one exists) in order to automatically set the email address for new users. Leaving this empty results in empty email address for users who log in for the first time.',
 	'LDAP_INCORRECT_USER_PASSWORD'	=> 'ล้มเหลวในการผูกกับ LDAP เซิร์ฟเวอร์ ด้วย user/password ที่ระบุ',
-	'LDAP_NO_EMAIL'					=> 'อีเมล ที่ระบุไม่มีอยู่จริง.',
+	'LDAP_NO_EMAIL'					=> 'The specified email attribute does not exist.',
 	'LDAP_NO_IDENTITY'				=> 'หาล็อกอินสำหรับ %s ไม่เจอ',
 	'LDAP_PASSWORD'					=> 'รหัสผ่าน LDAP ',
 	'LDAP_PASSWORD_EXPLAIN'			=> 'ปล่อยค่านี้ให้ว่างเพื่อผูกแบบไม่กำหนดผู้ใช้หรือไม่ก็กรอก password สำหรับผู้ใช้ด้านบน ต้องการสำหรับแอคทีฟไดเรกทอรี่เซิร์ฟเวอร์ <strong>คำเตือน:</strong> password นี้จะเก็บเป็นข้อความธรรมดาใน ฐานข้อมูล ทุกคนที่เข้าถึงฐานข้อมูลได้ สามารถมองเห็นได้',
@@ -9985,13 +10239,17 @@ $lang = array_merge($lang, array(
 	'LDAP_USER_FILTER'				=> 'การกรองผู้ใช้ LDAP',
 	'LDAP_USER_FILTER_EXPLAIN'		=> '(ตัวเลือก) คุณสามารถจำกัดข้อมูลที่ถูกค้นหาด้วยตัวกรองเพิ่มเติม. ตัวอย่าง <samp>objectClass=posixGroup</samp> จะให้ผลลัพธ์ในการใช้ของ <samp>(&(uid=$username)(objectClass=posixGroup))</samp>',
 
-	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'คุณกำหนดการตั้งค่าที่ขึ้นต่อกันระหว่างเซิร์ฟเวอร์และโดเมน โปรดตรวจสอบให้แน่ใจว่าทุกอย่างถูกต้อง ความผิดพลาดจะทำให้ อีเมล มีข้อมูลที่ผิด เมื่อกรอกโดเมน ต้องมี http:// หรือ โปรโตคอลอื่น คุณควรแก้ไขพอร์ตก็ต่อเมื่อคุณทราบว่าเซิร์ฟเวอร์ของคุณใช้พอร์ตอื่น พอร์ต 80 เป็นค่าเริ่มต้นอยู่แล้ว',
+	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Here you define server and domain dependent settings. Please ensure the data you enter is accurate, errors will result in emails containing incorrect information. When entering the domain name remember it does include http:// or other protocol term. Only alter the port number if you know your server uses a different value, port 80 is correct in most cases.',
 	'ENABLE_GZIP'				=> 'เปิดการบีบอีด GZip',
 	'ENABLE_GZIP_EXPLAIN'		=> 'เนื้อหาที่สร้างขึ้นจะถูกบีบอัด ก่อนที่จะส่งให้ผู้ใช้ ทำให้สามารถลดการจราจรในเครือข่ายแต่จะทำให้มีการใช้ CPU มากขึ้น ทั้งที่ฝั่งเซิร์ฟเวอร์และฝั่งลูกข่าย',
 	'FORCE_SERVER_VARS'			=> 'บังคับให้เซิร์ฟเวอร์กำหนดURL',
 	'FORCE_SERVER_VARS_EXPLAIN'	=> 'ถ้าตั้งค่าเป็นใช่ จะ้เป็นการกำหนดค่าโดยเซิร์ฟเวอร์โดยอัตโนมัติ.',
 	'ICONS_PATH'				=> 'เส้นทางเก็บไอคอนโพสต์',
 	'ICONS_PATH_EXPLAIN'		=> 'เส้นทางภายใต้ราก phpBB ไดเรกทอรี่, เช่น <samp>images/icons</samp>.',
+	'MOD_REWRITE_ENABLE'		=> 'Enable URL Rewriting',
+	'MOD_REWRITE_ENABLE_EXPLAIN' => 'When enabled, URLs containing ’app.php’ will be rewritten to remove the filename (i.e. app.php/foo will become /foo). <strong>Apache server’s mod_rewrite module is required for this functionality to work; if this option is enabled without mod_rewrite support, URLs on your board may be broken.</strong>',
+	'MOD_REWRITE_DISABLED'		=> 'The <strong>mod_rewrite</strong> module on your Apache web server is disabled. Enable the module or contact your web hosting provider if you wish to enable this feature.',
+	'MOD_REWRITE_INFORMATION_UNAVAILABLE' => 'We are unable to determine whether or not this server supports URL rewriting. This setting may be enabled but if URL rewriting is not available, paths generated by this board (such as for use in links) may be broken. Contact your web hosting provider if you are unsure whether or not you can safely enable this feature.',
 	'PATH_SETTINGS'				=> 'การตั้งค่าเส้นทาง',
 	'RANKS_PATH'				=> 'จัดอันดับเส้นทางที่เก็บภาพ',
 	'RANKS_PATH_EXPLAIN'		=> 'เส้นทางภายใต้ราก phpBB ไดเรกทอรี่, ตัวอย่างเช่น <samp>images/ranks</samp>.',
@@ -10008,13 +10266,21 @@ $lang = array_merge($lang, array(
 	'SMILIES_PATH_EXPLAIN'		=> 'เส้นทางภายใต้รูทของ phpBB ไดเรกทอรี่, ตัวอย่างเช่น <samp>images/smilies</samp>.',
 	'UPLOAD_ICONS_PATH'			=> 'ตำแหน่งที่เก็บ ไอคอนของ Extension group',
 	'UPLOAD_ICONS_PATH_EXPLAIN'	=> 'เส้นทางภายใต้ราก phpBB ไดเรกทอรี่, ตัวอย่างเช่น <samp>images/upload_icons</samp>.',
+	'USE_SYSTEM_CRON'		=> 'Run periodic tasks from system cron',
+	'USE_SYSTEM_CRON_EXPLAIN'		=> 'When off, phpBB will arrange for periodic tasks to be run automatically. When on, phpBB will not schedule any periodic tasks by itself; a system administrator must arrange for <code>bin/phpbbcli.php cron:run</code> to be run by the system cron facility at regular intervals (e.g. every 5 minutes).',
 
 	'ACP_SECURITY_SETTINGS_EXPLAIN'		=> 'คุณสามารถกำหนด session และการตั้งค่าล็อกอิน',
 	'ALL'							=> 'ทั้งหมด',
-	'ALLOW_AUTOLOGIN'				=> 'อนุญาตการล็อกอินแบบอัตโนมัติ',
-	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'กำหนดว่าผู้ใช้สามารถล็อกอินแบบอัตโนมัติ เมื่อเข้าเยี่ยมชมบอร์ดได้หรือไม่',
-	'AUTOLOGIN_LENGTH'				=> 'จำนวนวันที่ล็อกอินคีย์หมดอายุ',
-	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'จำนวนวันที่ล็อกอินคีย์หมดอายุ ใส่ค่า 0 เพื่อยกเลิกการล็อกอินอัตโนมัติ',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'ALLOW_PASSWORD_RESET'			=> 'Allow password reset ("Forgot Password")',
+	'ALLOW_PASSWORD_RESET_EXPLAIN'	=> 'Determines whether or not users are able to use the "I forgot my password" link on the login page to recover their account. If you use an external authentication mechanism you may wish to disable this feature.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
 	'BROWSER_VALID'					=> 'ตรวจสอบเบราเซอร์',
 	'BROWSER_VALID_EXPLAIN'			=> 'ตั้งค่าให้มีการทำ browser validation สำหรับแต่ละ session เพื่อปรับปรุงความปลอดภัย',
 	'CHECK_DNSBL'					=> 'ตรวจสอบ IP กับ รายการของ DNS',
@@ -10051,8 +10317,12 @@ $lang = array_merge($lang, array(
 	'PASS_TYPE_SYMBOL'				=> 'ต้องมีสัญลักษณ์อื่นๆอยู่ด้วย',
 	'REF_HOST'						=> 'ตรวจสอบเฉพาะโฮสต์',
 	'REF_PATH'						=> 'ตรวจสอบพาร์ทด้วย',
-	'REFERER_VALID'					=> 'ตรวจสอบความถูกต้องของแหล่งที่มา',
+	'REFERRER_VALID'				=> 'Validate Referrer',
+	'REFERRER_VALID_EXPLAIN'		=> 'If enabled, the referrer of POST requests will be checked against the host/script path settings. This may cause issues with boards using several domains and or external logins.',
+
+	'REFERER_VALID'					=> 'ตรวจสอบความถูกต้องของแหล่งที่มา',	//3.0.12
 	'REFERER_VALID_EXPLAIN'			=> 'ถ้าเปิดใช้งาน จะตรวจสอบแหล่งที่มา สำหรับการส่งค่าโพสต์เข้ามาจะถูกตรวจสอบโฮส /พาท์ตามการตั้งค่า การตั้งค่านี้อาจทำให้เกิดปัญหาสำหรับบอร์ดที่ใช้หลายโดเมน หรือใช้การ login จากภายนอกบอร์ด.',
+
 	'TPL_ALLOW_PHP'					=> 'อนุญาต php ในแม่แบบ',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'ถ้าเลือกใช้ตัวเลือกนี้ , <code>PHP</code> และ <code>INCLUDEPHP</code> โค้ดจะถูกประมวลในแม่แบบ',
 
@@ -10065,6 +10335,8 @@ $lang = array_merge($lang, array(
 	'BOARD_HIDE_EMAILS_EXPLAIN'		=> 'หน้าที่นี้ ทำให้ชื่ออีเมลมีความเป็นส่วนตัว',
 	'CONTACT_EMAIL'					=> 'กรอกอีเมลของแอดมิน ',
 	'CONTACT_EMAIL_EXPLAIN'			=> 'ที่อยู่นี้จะใช้เมื่อต้องการข้อมูลสำหรับการติดต่อ ข้อมูลนี้จะถูกใช้เป็น <samp>From</samp> และ <samp>Reply-To</samp> address ใน อีเมล',
+	'CONTACT_EMAIL_NAME'			=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 	'EMAIL_FUNCTION_NAME'			=> 'ชื่อฟังก์ชั่นส่งเมล',
 	'EMAIL_FUNCTION_NAME_EXPLAIN'	=> 'ใช้ฟังก์ชั่นส่งเมลของ PHP.',
 	'EMAIL_PACKAGE_SIZE'			=> 'ขนาดอีเมลแพ็คเกจ',
@@ -10255,7 +10527,7 @@ $lang = array_merge($lang, array(
 	'ACP_BAN'					=> 'การแบน',
 	'ACP_BAN_EMAILS'			=> 'อีเมลที่ถูกแบน',
 	'ACP_BAN_IPS'				=> 'ไอพีที่ถูกแบน',
-	'ACP_BAN_USERNAMES'			=> 'ชื่อผู้ใช้ที่ถูกแบน',
+	'ACP_BAN_USERNAMES'			=> 'Ban users',
 	'ACP_BBCODES'				=> 'BBCodes',
 	'ACP_BOARD_CONFIGURATION'	=> 'การปรับแต่งบอร์ด',
 	'ACP_BOARD_FEATURES'		=> 'ลักษณะหน้าตาของบอร์ด',
@@ -10264,8 +10536,10 @@ $lang = array_merge($lang, array(
 	'ACP_BOTS'					=> 'Spiders/Robots',
 
 	'ACP_CAPTCHA'				=> 'CAPTCHA',
+	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'ฐานข้อมูล',
+	'ACP_CAT_DOT_MODS'			=> '.MODs',
 	'ACP_CAT_DOT_MODS'			=> '.MODs',
 	'ACP_CAT_FORUMS'			=> 'บอร์ดและหมวดหมู่',
 	'ACP_CAT_GENERAL'			=> 'ทั่วไป',
@@ -10278,6 +10552,8 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_USERS'				=> 'ผู้ใช้',
 	'ACP_CLIENT_COMMUNICATION'	=> 'การติดต่อสื่อสารกับลูกข่าย',
 	'ACP_COOKIE_SETTINGS'		=> 'ตั้งค่าคุ้กกี้',
+	'ACP_CONTACT'				=> 'Contact page',
+	'ACP_CONTACT_SETTINGS'		=> 'Contact page settings',
 	'ACP_CRITICAL_LOGS'			=> 'บันทึกข้อผิดพลาด',
 	'ACP_CUSTOM_PROFILE_FIELDS'	=> 'ฟิลด์ของข้อมูลที่สร้างเอง',
 
@@ -10285,8 +10561,11 @@ $lang = array_merge($lang, array(
 	'ACP_DISALLOW'				=> 'ไม่อนุญาต',
 	'ACP_DISALLOW_USERNAMES'	=> 'ชื่อผู้ใช้ที่ไม่อนุญาต',
 
-	'ACP_EMAIL_SETTINGS'		=> 'การตั้งค่าอีเมล',
-	'ACP_EXTENSION_GROUPS'		=> 'จัดการกลุ่มเพิ่มเติม',
+	'ACP_EMAIL_SETTINGS'		=> 'Email settings',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
+	'ACP_EXTENSION_MANAGEMENT'	=> 'Extension management',
+	'ACP_EXTENSIONS'			=> 'Manage extensions',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
 	'ACP_FORMS'					=> 'Customizable Forms',
 	'ACP_FORMS_BUILDER'			=> 'Form Builder',
 
@@ -10307,10 +10586,10 @@ $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE'				=> 'จัดการกลุ่ม',
 	'ACP_GROUPS_MANAGEMENT'			=> 'การจัดการกลุ่ม',
 	'ACP_GROUPS_PERMISSIONS'		=> 'การอนุญาตของกลุ่ม',
+	'ACP_GROUPS_POSITION'			=> 'Manage group positions',
 
 	'ACP_ICONS'					=> 'ไอคอนกระทู้',
 	'ACP_ICONS_SMILIES'			=> 'หัวข้อ ไอคอน/รูปแสดงอารมณ์',
-	'ACP_IMAGESETS'				=> 'กลุ่มรูปภาพ',
 	'ACP_INACTIVE_USERS'		=> 'ผู้ใช้ที่ไม่ได้ใช้งาน',
 	'ACP_INDEX'					=> 'หน้าแรก ACP',
 
@@ -10322,11 +10601,15 @@ $lang = array_merge($lang, array(
 	'ACP_LOGGING'				=> 'เข้าสู่ระบบ',
 
 	'ACP_MAIN'					=> 'หน้าหลัก ACP',
-	'ACP_MANAGE_EXTENSIONS'		=> 'จัดการชนิดไฟล์',
+
+	'ACP_MANAGE_ATTACHMENTS'			=> 'จัดการไฟล์แนบ',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
+
+	'ACP_MANAGE_EXTENSIONS'		=> 'Manage attachment extensions',
 	'ACP_MANAGE_RANKS'			=> 'จัดการ การจัดอันดับ',
 	'ACP_MANAGE_REASONS'		=> 'จัดการ รายงาน/เหตุผลที่ไม่รับ',
 	'ACP_MANAGE_USERS'			=> 'จัดการผู้ใช้',
-	'ACP_MASS_EMAIL'			=> 'ส่งอีเมล์ปริมาณมาก',
+	'ACP_MASS_EMAIL'			=> 'Mass email',
 	'ACP_MESSAGES'				=> 'ข้อความ',
 	'ACP_MESSAGE_SETTINGS'		=> 'ตั้งค่าข้อความส่วนตัว',
 	'ACP_MODULE_MANAGEMENT'		=> 'จัดการโมดูล',
@@ -10371,6 +10654,8 @@ $lang = array_merge($lang, array(
 	'ACP_STYLE_COMPONENTS'		=> 'ส่วนประกอบของ Styles ',
 	'ACP_STYLE_MANAGEMENT'		=> 'การจัด Styles',
 	'ACP_STYLES'				=> 'Styles',
+	'ACP_STYLES_CACHE'			=> 'Purge Cache',
+	'ACP_STYLES_INSTALL'		=> 'Install Styles',
 
 	'ACP_SUBMIT_CHANGES'		=> 'บันทักค่าการเปลี่ยนแปลง',
 
@@ -10422,6 +10707,10 @@ $lang = array_merge($lang, array(
 
 	'COLOUR_SWATCH'			=> 'เปลี่ยนสี',
 	'CONFIG_UPDATED'		=> 'ตั้งค่า เรียบร้อยแล้ว.',
+	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
+	'CRON_NO_SUCH_TASK'		=> 'Could not find cron task â€œ%sâ€.',
+	'CRON_NO_TASK'			=> 'No cron tasks need to be run right now.',
+	'CRON_NO_TASKS'			=> 'No cron tasks could be found.',
 
 	'DEACTIVATE'				=> 'ทำให้ใช้การไม่ได้',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'เส้นทางที่ระบุ “%s” ไม่มีอยู่จริง.',
@@ -10432,6 +10721,7 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_AS'				=> 'ดาวน์โหลด เป็น',
 	'DOWNLOAD_STORE'			=> 'ดาวน์โหลดหรือเก็บรักษาไฟล์',
 	'DOWNLOAD_STORE_EXPLAIN'	=> 'คุณสามารถดาวน์โหลดไฟล์โดยตรงหรือบันทึกไฟล์ลงในแฟ้มของคุณ',
+	'DOWNLOADS'					=> 'ดาวน์โหลด',
 
 	'EDIT'					=> 'แก้ไข',
 	'ENABLE'				=> 'ทำให้ใช้ได้',
@@ -10446,6 +10736,8 @@ $lang = array_merge($lang, array(
 	'IP'					=> 'IP',
 	'IP_HOSTNAME'			=> 'ไอพีหรือชื่อโฮส',
 
+	'LOAD_NOTIFICATIONS'			=> 'Display Notifications',
+	'LOAD_NOTIFICATIONS_EXPLAIN'	=> 'Display the notifications list on every page (typically in the header).',
 	'LOGGED_IN_AS'			=> 'คุณล็อกอินในนาม:',
 	'LOGIN_ADMIN'			=> 'ในการที่จะเป็นผู้ดูแลบอร์ด คุณต้องเป็นผู้ใช้ที่ได้รับการรับรองก่อน.',
 	'LOGIN_ADMIN_CONFIRM'	=> 'กรุณาเข้าสู่ระบบอีกครั้ง ด้วยชื่อผุ้ใช้และรหัสผ่านของ Admin',
@@ -10462,7 +10754,8 @@ $lang = array_merge($lang, array(
 
 	'NOTIFY'				=> 'การประกาศ',
 	'NO_ADMIN'				=> 'คุณไม่ได้รับการรับรองที่จะให้ดูแลบอร์ดนี้.',
-	'NO_EMAILS_DEFINED'		=> 'ไม่พบอีเมลที่ระบุ.',
+	'NO_EMAILS_DEFINED'		=> 'No valid email addresses found.',
+	'NO_FILES_TO_DELETE'	=> 'Attachments you selected for deletion do not exist.',
 	'NO_PASSWORD_SUPPLIED'	=> 'โปรดระบุชื่อผู้ใช้งาน และ รหัสผ่าน.',
 
 	'OFF'					=> 'ปิด',
@@ -10478,8 +10771,8 @@ $lang = array_merge($lang, array(
 
 	'REMIND'							=> 'เตือน',
 	'RESYNC'							=> 'Resync',
-	'RETURN_TO'							=> 'ย้อนกลับไปยัง',
 
+	'RUNNING_TASK'			=> 'Running task: %s.',
 	'SELECT_ANONYMOUS'		=> 'เลือกผู้ใช้ที่ไม่เปิดเผย',
 	'SELECT_OPTION'			=> 'เลือกตัวเลือก',
 
@@ -10489,6 +10782,10 @@ $lang = array_merge($lang, array(
 	'SETTING_TOO_SHORT'		=> 'ค่าที่ตั้งสำหรับ “%1$s” นั้นสั้นเกินไป. ความสั้นต่ำสุดที่รับได้คือ %2$d.',
 
 	'SHOW_ALL_OPERATIONS'	=> 'แสดงการดำเนินการทั้งหมด',
+
+	'TASKS_NOT_READY'			=> 'Not ready tasks:',
+	'TASKS_READY'			=> 'Ready tasks:',
+	'TOTAL_SIZE'			=> 'Total size',
 
 	'UCP'					=> 'ตั้งค่าส่วนตัว',
 	'USERNAMES_EXPLAIN'		=> 'ใส่ชื่อผู้ใช้ คนละบรรทัด บรรทัดละหนึ่งคน.',
@@ -10500,7 +10797,7 @@ $lang = array_merge($lang, array(
 	'NO_PHPINFO_AVAILABLE'	=> 'ไม่สามารถบอกข้อมูลเกี่ยวกับการปรับแต่ง PHP ได้ เนื่องจาก Phpinfo() ถูกปิดการใช้งานด้วยเหตุจำเป็นด้านความปลอดภัย.',
 
 	'ACP_ADMIN_LOGS_EXPLAIN'	=> 'ข้อความนี้แจกแจงรายละเอียดของกิจกรรมที่ผู้ดูแลระบบได้กระทำไป คุณสามารถเรียงตามชื่อผู้ใช้, วันที่, IP หรือ กิจกรรม ถ้าหากว่าคุณมีสิทธิ์ที่เหมาะสม คุณก็สามารถลบแต่ละกิจกรรมหรือทั้งหมดได้',
-	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'ข้อความนี้แจกแจงรายละเอียดของกิจกรรมที่ตัวบอร์ดเองได้กระทำไป ข้อความเหล่านี้จะช่วยให้คุณสามารถแก้ปัญหาเฉพาะอย่างได้ ยกตัวอย่าง เช่น การหารายการ อีเมล ที่ไม่สามารถส่งได้หรือยังไม่ได้ส่ง คุณสามารถเรียงตามชื่อผู้ใช้, วันที่, ไอพีหรือ กิจกรรม ถ้าหากว่าคุณมีสิทธิ์ที่เหมาะสม คุณก็สามารถลบแต่ละกิจกรรมหรือทั้งหมดได้',
+	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'This lists the actions carried out by the board itself. This log provides you with information you are able to use for solving specific problems, for example non-delivery of emails. You can sort by username, date, IP or action. If you have appropriate permissions you can also clear individual operations or the log as a whole.',
 	'ACP_MOD_LOGS_EXPLAIN'		=> 'ข้อความนี้แจกแจงรายละเอียดของกิจกรรมที่ถูกกระทำใน forum, กระทู้ และ โพสต์ ที่กระทำโดยผู้ใช้ทั่วไปหรือผู้จัดการบอร์ด รวมทั้งการแบนด้วย คุณสามารถเรียงตามชื่อผู้ใช้, วันที่, ไอพี หรือ กิจกรรม ถ้าหากว่าคุณมีสิทธิ์ที่เหมาะสม คุณก็สามารถลบแต่ละกิจกรรมหรือทั้งหมดได้',
 	'ACP_USERS_LOGS_EXPLAIN'	=> 'ข้อความนี้แจกแจงรายละเอียดของกิจกรรมที่ถูกกระทำโดยผู้ใช้ หรือถูกกระทำกับผู้ใช้ (รายงานต่างๆ, การเตือน และ หมายเหตุของผู้ใช้)',
 	'ALL_ENTRIES'				=> 'เลือกทั้งหมด',
@@ -10526,6 +10823,7 @@ $lang = array_merge($lang, array(
 
 	'GZIP_COMPRESSION'	=> 'การบีบอัด GZip',
 
+	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'ไม่มี',
 	'NUMBER_FILES'		=> 'จำนวนของไฟล์แนบ',
 	'NUMBER_POSTS'		=> 'จำนวนของโพสต์',
@@ -10538,29 +10836,38 @@ $lang = array_merge($lang, array(
 	'PURGE_CACHE'			=> 'ลบ cache',
 	'PURGE_CACHE_CONFIRM'	=> 'คุณแน่ใจว่าจะลบ cache ?',
 	'PURGE_CACHE_EXPLAIN'	=> 'เคลียร์แคชทั้งหมด, การกระทำนี้จะเคลียร์แคชไฟล์แม่แบบหรือการสอบถามทั้งหมด',
+	'PURGE_CACHE_SUCCESS'	=> 'Cache successfully purged.',
 
 	'PURGE_SESSIONS'			=> 'ลบเซสชั่นทั้งหมด',
 	'PURGE_SESSIONS_CONFIRM'	=> 'ต้องการลบเซสชั่นทั้งหมด ? จะทำให้สมาชิกทั้งหมดออกจากระบบ.',
 	'PURGE_SESSIONS_EXPLAIN'	=> 'ลบเซสชั่นทั้งหมด. จะทำให้สมาชิกทั้งหมดออกจากระบบ เป็นการลบข้อมูลทั้งหมดออกจากตาราง session.',
+	'PURGE_SESSIONS_SUCCESS'	=> 'Sessions successfully purged.',
 
 	'RESET_DATE'					=> 'ตั้งเวลาเริ่มใช้บอร์ดใหม่',
 	'RESET_DATE_CONFIRM'			=> 'คุณแน่ใจว่าคุณต้องการตั้งเวลาเริ่มใช้บอร์ดใหม่ ?',
+	'RESET_DATE_SUCCESS'				=> 'Boardâ€™s start date reset',
 	'RESET_ONLINE'					=> 'ตั้งค่าผู้ใช้ที่ออนไลน์มากที่สุดใหม่',
 	'RESET_ONLINE_CONFIRM'			=> 'คุณแน่ใจว่าคุณต้องการตั้งค่าผู้ใช้ที่ออนไลน์มากที่สุดใหม่ ?',
+	'RESET_ONLINE_SUCCESS'				=> 'Most users ever online reset',
 	'RESYNC_POSTCOUNTS'				=> 'ทำการนับโพสต์ใหม่',
 	'RESYNC_POSTCOUNTS_EXPLAIN'		=> 'โพสต์ที่มีอยู่จริงเท่านั้นที่จะถูกนับ การกำจัดโพสต์จะไม่ถูกนับ',
 	'RESYNC_POSTCOUNTS_CONFIRM'		=> 'คุณแน่ใจว่าคุณต้องการจะทำการนับโพสต์ใหม่ ?',
+	'RESYNC_POSTCOUNTS_SUCCESS'			=> 'Resynchronised post counts',
 	'RESYNC_POST_MARKING'			=> 'ทำการนับใหม่ สำหรับกระทู้ที่มีการทำลายเซ็นต์',
 	'RESYNC_POST_MARKING_CONFIRM'	=> 'คุณแน่ใจว่าคุณต้องการทำการนับใหม่ สำหรับกระทู้ที่มีการทำลายเซ็นต์?',
 	'RESYNC_POST_MARKING_EXPLAIN'	=> 'ขั้นแรกให้ทำการลบลายเซ็นต์ของทุกกระทู้ จากนั้นทำลายเซ็นต์กระทู้ที่มีกิจกรรมในช่วง 6 เดือนที่ผ่านมา',
+	'RESYNC_POST_MARKING_SUCCESS'	=> 'Resynchronised dotted topics',
 	'RESYNC_STATS'					=> 'ทำการนับสถิติใหม่',
 	'RESYNC_STATS_CONFIRM'			=> 'คุณแน่ใจว่าคุณต้องการจะทำการับสถิติใหม่',
 	'RESYNC_STATS_EXPLAIN'			=> 'ทำการคำนวณจำนวนโพสต์, กระทู้, ผู้ใช้และไฟล์ทั้งหมด',
+	'RESYNC_STATS_SUCCESS'			=> 'Resynchronised statistics',
 	'RUN'							=> ' ตั้งค่า ',
 
 	'STATISTIC'					=> 'สถิติ',
 	'STATISTIC_RESYNC_OPTIONS'	=> 'ทำการนับสถิติใหม่หรือตั้งค่าสถิติใหม่',
 
+	'TIMEZONE_INVALID'	=> 'The timezone you selected is invalid.',
+	'TIMEZONE_SELECTED'	=> '(currently selected)',
 	'TOPICS_PER_DAY'	=> 'กระทู้ต่อวัน',
 
 	'UPLOAD_DIR_SIZE'	=> 'ขนาดของไฟล์แนบจากการโพสต์',
@@ -10741,9 +11048,9 @@ $lang = array_merge($lang, array(
 
 	'LOG_APPROVE_TOPIC'			=> '<strong>กระทู้ที่ได้รับการอนุมัติ</strong><br />? %s',
 	'LOG_BUMP_TOPIC'			=> '<strong>ผู้ใช้ bumpedกระทู้</strong><br />? %s',
-	'LOG_DELETE_POST'			=> '<strong>ลบโพสต์</strong><br />? %s',
-	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Deleted shadow topic</strong><br />» %s',
-	'LOG_DELETE_TOPIC'			=> '<strong>ลบกระทู้</strong><br />? %s',
+	'LOG_DELETE_POST'			=> '<strong>Deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Deleted shadow topic</strong><br />Â» %s',
+	'LOG_DELETE_TOPIC'			=> '<strong>Deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_FORK'					=> '<strong>กระทู้ถูกคัดลอก</strong><br />? จาก %s',
 	'LOG_LOCK'					=> '<strong>กระทู้ถูกล็อก</strong><br />? %s',
 	'LOG_LOCK_POST'				=> '<strong>โพสต์ถูกล็อก</strong><br />? %s',
@@ -10752,15 +11059,20 @@ $lang = array_merge($lang, array(
 	'LOG_PM_REPORT_CLOSED'		=> '<strong>ปิดรายงานเรื่อง PM</strong><br />» %s',
 	'LOG_PM_REPORT_DELETED'		=> '<strong>ลบรายงานเรื่อง PM</strong><br />» %s',
 	'LOG_POST_APPROVED'			=> '<strong>โพสต์ที่ได้รับการอนุมัติ</strong><br />? %s',
-	'LOG_POST_DISAPPROVED'		=> '<strong>โพสต์ที่ไม่ได้รับการอนุมัติ “%1$s” ด้วยเหตุผลต่อไปนี้</strong><br />? %2$s',
-	'LOG_POST_EDITED'			=> '<strong>แก้ไขโพสต์ “%1$s” แก้ไขโดย</strong><br />? %2$s',
+	'LOG_POST_DISAPPROVED'		=> '<strong>Disapproved post â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
+	'LOG_POST_EDITED'			=> '<strong>Edited post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_POST_RESTORED'			=> '<strong>Restored post</strong><br />Â» %s',
 	'LOG_REPORT_CLOSED'			=> '<strong>รายงานที่ถูกปิดแล้ว</strong><br />? %s',
 	'LOG_REPORT_DELETED'		=> '<strong>รายงานที่ถูกลบแล้ว</strong><br />? %s',
+	'LOG_RESTORE_TOPIC'			=> '<strong>Restored topic â€œ%1$sâ€ written by</strong><br />Â» %2$s',
+	'LOG_SOFTDELETE_POST'		=> '<strong>Soft deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_SOFTDELETE_TOPIC'		=> '<strong>Soft deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_SPLIT_DESTINATION'		=> '<strong>ย้ายโพสต์ที่ถูกแยก</strong><br />? ไปที่ %s',
 	'LOG_SPLIT_SOURCE'			=> '<strong>แยกโพสต์</strong><br />? จาก %s',
 
 	'LOG_TOPIC_APPROVED'		=> '<strong>กระทู้ที่ได้รับการอนุมัติ</strong><br />? %s',
-	'LOG_TOPIC_DISAPPROVED'		=> '<strong>กระทู้ที่ไม่ได้รับการอนุมัติ “%1$s” ด้วยเหตุผลต่อไปนี้</strong><br />%2$s',
+	'LOG_TOPIC_RESTORED'		=> '<strong>Restored topic</strong><br />Â» %s',
+	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Disapproved topic â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
 	'LOG_TOPIC_RESYNC'			=> '<strong>Resynchronised ตัวนับกระทู้</strong><br />? %s',
 	'LOG_TOPIC_TYPE_CHANGED'	=> '<strong>เปลี่ยนประเภทกระทู้</strong><br />? %s',
 	'LOG_UNLOCK'				=> '<strong>ปลดล็อกกระทู้</strong><br />? %s',
@@ -10812,16 +11124,6 @@ $lang = array_merge($lang, array(
 
 	'LOG_IMAGE_GENERATION_ERROR'	=> '<strong>ผิดพลาดขณะกำลังสร้างรูป</strong><br />» ผิดพลาดใน %1$s บนบรรทัดที่ %2$s: %3$s',
 
-	'LOG_IMAGESET_ADD_DB'			=> '<strong>เพิ่มกลุ่มรูปภาพใหม่ในฐานข้อมูล</strong><br />? %s',
-	'LOG_IMAGESET_ADD_FS'			=> '<strong>เพิ่มกลุ่มรูปภาพใหม่บนระบบไฟล์</strong><br />? %s',
-	'LOG_IMAGESET_DELETE'			=> '<strong>ลบกลุ่มรูปภาพ</strong><br />? %s',
-	'LOG_IMAGESET_EDIT_DETAILS'		=> '<strong>แก้ไขรายละเอียดกลุ่มรูปภาพ</strong><br />? %s',
-	'LOG_IMAGESET_EDIT'				=> '<strong>แก้ไขกลุ่มรูปภาพ</strong><br />? %s',
-	'LOG_IMAGESET_EXPORT'			=> '<strong>ส่งกลุ่มรูปภาพออก</strong><br />? %s',
-	'LOG_IMAGESET_LANG_MISSING'		=> '<strong>กลุ่มรูปภาพ misses “%2$s” localisation</strong><br />? %1$s',
-	'LOG_IMAGESET_LANG_REFRESHED'	=> '<strong>รีเฟรช “%2$s” localisation ของกลุ่มรูปภาพแล้ว</strong><br />? %1$s',
-	'LOG_IMAGESET_REFRESHED'		=> '<strong>รีเฟรชกลุ่มรูปภาพแล้ว</strong><br />? %s',
-
 	'LOG_INACTIVE_ACTIVATE'	=> '<strong>ทำให้บัญชีผู้ใช้ที่ไม่มีการเข้าใช้กลับมาใช้งานได้</strong><br />? %s',
 	'LOG_INACTIVE_DELETE'	=> '<strong>ลบผู้ใช้ที่ไม่มีการเข้าใช้</strong><br />? %s',
 	'LOG_INACTIVE_REMIND'	=> '<strong>ส่งอีเมลแจ้งเตือนไปที่ผู้ใช้ที่ไม่มีการเข้าใช้</strong><br />? %s',
@@ -10866,6 +11168,7 @@ $lang = array_merge($lang, array(
 	'LOG_U_ROLE_EDIT'		=> '<strong>แก้ไขบทบาทผู้ใช้</strong><br />? %s',
 	'LOG_U_ROLE_REMOVED'	=> '<strong>ลบบทบาทผู้ใช้</strong><br />? %s',
 
+	'LOG_PLUPLOAD_TIDY_FAILED'		=> '<strong>Unable to open %1$s for tidying, check permissions.</strong><br />Exception: %2$s<br />Trace: %3$s',
 	'LOG_PROFILE_FIELD_ACTIVATE'	=> '<strong>ทำให้ฟิลด์ข้อมูลโดยรวมใช้งานได้</strong><br />? %s',
 	'LOG_PROFILE_FIELD_CREATE'		=> '<strong>เพิ่มฟิลด์ข้อมูลโดยรวม</strong><br />? %s',
 	'LOG_PROFILE_FIELD_DEACTIVATE'	=> '<strong>ทำให้ฟิลด์ข้อมูลโดยรวมใช้งานไม่ได้</strong><br />? %s',
@@ -10874,13 +11177,13 @@ $lang = array_merge($lang, array(
 
 	'LOG_PRUNE'					=> '<strong>กระทู้ที่ถูกตัดออก</strong><br />? %s',
 	'LOG_AUTO_PRUNE'			=> '<strong>ตัดทอนอัตโนมัต</strong><br />? %s',
+	'LOG_PRUNE_SHADOW'		=> '<strong>Auto-pruned shadow topics</strong><br />Â» %s',
 	'LOG_PRUNE_USER_DEAC'		=> '<strong>ทำให้ผู้ใช้ใช้งานไม่ได้</strong><br />? %s',
 	'LOG_PRUNE_USER_DEL_DEL'	=> '<strong>ตัดผู้ใช้ออกและลบโพสต์</strong><br />? %s',
 	'LOG_PRUNE_USER_DEL_ANON'	=> '<strong>ตัดผู้ใช้ออกแต่เก็บโพสต์ไว้</strong><br />? %s',
 
 	'LOG_PURGE_CACHE'			=> '<strong>ลบ cache</strong>',
 	'LOG_PURGE_SESSIONS'		=> '<strong>sessions ถูกกำจัด</strong>',
-
 
 	'LOG_RANK_ADDED'		=> '<strong>เพิ่มอันดับใหม่</strong><br />? %s',
 	'LOG_RANK_REMOVED'		=> '<strong>ลบอันดับ</strong><br />? %s',
@@ -10890,15 +11193,17 @@ $lang = array_merge($lang, array(
 	'LOG_REASON_REMOVED'	=> '<strong>ลบเหตุผล report/denial</strong><br />? %s',
 	'LOG_REASON_UPDATED'	=> '<strong>อัพเดทเหตุผล report/denial</strong><br />? %s',
 
-	'LOG_REFERER_INVALID'		=> '<strong>แหล่งที่มาไม่ถูกต้อง</strong><br />»ผู้อ้างถึงคือ “<em>%1$s</em>”. คำร้องขอถูกยกเลิกและ session ถูกทำลาย.',
+	'LOG_REFERER_INVALID'		=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 	'LOG_RESET_DATE'			=> '<strong>ตั้งวันที่เริ่มใช้บอร์ดใหม่</strong>',
 	'LOG_RESET_ONLINE'			=> '<strong>ตั้งค่าผู้ใช้ที่ออนไลน์มากที่สุดใหม่</strong>',
+	'LOG_RESYNC_FILES_STATS'	=> '<strong>File statistics resynchronised</strong>',
 	'LOG_RESYNC_POSTCOUNTS'		=> '<strong>ทำการนับโพสต์ใหม่</strong>',
 	'LOG_RESYNC_POST_MARKING'	=> '<strong>ทำการนับใหม่ สำหรับกระทู้ที่มีการทำลายเซ็นต์</strong>',
 	'LOG_RESYNC_STATS'			=> '<strong>ทำการนับโพสต์,กระทู้และสถิติผู้ใช้ใหม่</strong>',
 
 	'LOG_SEARCH_INDEX_CREATED'	=> '<strong>สร้างดัชนีการค้นหาสำหรับ</strong><br />? %s',
 	'LOG_SEARCH_INDEX_REMOVED'	=> '<strong>ลบดัชนีการค้นหาสำหรับ</strong><br />? %s',
+	'LOG_SPHINX_ERROR'			=> '<strong>Sphinx Error</strong><br />Â» %s',
 	'LOG_STYLE_ADD'				=> '<strong>เพิ่มรูปแบบใหม่</strong><br />? %s',
 	'LOG_STYLE_DELETE'			=> '<strong>ลบรูปแบบ</strong><br />? %s',
 	'LOG_STYLE_EDIT_DETAILS'	=> '<strong>แก้ไขรูปแบบ</strong><br />? %s',
@@ -10965,15 +11270,18 @@ $lang = array_merge($lang, array(
 	'LOG_USER_GROUP_RESIGN'			=> '<strong>ผู้ใช้ลาออกจากกลุ่ม</strong><br />» %s',
 
 	'LOG_WARNING_DELETED'		=> '<strong>ลบคำเตือนของผู้ใช้</strong><br />» %s',
-	'LOG_WARNINGS_DELETED'		=> '<strong>ลบ %2$s คำเตือนของผู้ใช้</strong><br />» %1$s',
 	'LOG_WARNINGS_DELETED_ALL'	=> '<strong>ลบคำเตือนของผู้ใช้ทุกคน</strong><br />» %s',
 
 	'LOG_WORD_ADD'			=> '<strong>เพิ่มการกรองคำหยาบ</strong><br />? %s',
 	'LOG_WORD_DELETE'		=> '<strong>ลบการกรองคำหยาบ</strong><br />? %s',
 	'LOG_WORD_EDIT'			=> '<strong>แก้ไขการกรองคำหยาบ</strong><br />? %s',
+
+	'LOG_EXT_ENABLE'	=> '<strong>Extension enabled</strong><br />Â» %s',
+	'LOG_EXT_DISABLE'	=> '<strong>Extension disabled</strong><br />Â» %s',
+	'LOG_EXT_PURGE'		=> '<strong>Extensionâ€™s data deleted</strong><br />Â» %s',
+
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
-
 ));
 
 $lang = array_merge($lang, array(
@@ -11274,7 +11582,7 @@ $lang = array_merge($lang, array(
 	'ACP_PORTAL_WELCOME_EXPLAIN'=> '',
 	'ADM_LOGOUT'			=> 'ออกจากระบบ ACP',
 	'ADM_LOGGED_OUT'		=> 'ออกจากระบบ  Administration Control Panel เรียบร้อยแล้ว',
-	'LOG_REFERER_INVALID'	=> '<strong>แหล่งที่มาไม่ถูกต้อง</strong><br />»ผู้อ้างถึงคือ “<em>%1$s</em>”. คำร้องขอถูกยกเลิกและ session ถูกทำลาย.',
+	'LOG_REFERER_INVALID'	=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 
 	'ACP_ABBCODES'			=> 'BBcode Box',
 	'LOG_CONFIG_ABBCODES'	=> '<strong>Altered BBCode Box settings</strong>',
@@ -11680,7 +11988,7 @@ $lang = array_merge($lang, array(
 	'SELECT_A_PREFIX'				=> 'Select a prefix',
 	'ACP_SEOQUERYS'					=> 'SEO Queries',
 	'ACP_MANAGE_ATTACHMENTS'		=> 'จัดการไฟล์แนบ',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can list and delete files attached to posts and private messages.',
 	'LOG_ATTACH_DEL'				=> '<strong>Attachments deleted</strong><br />» %s',
 	'LOG_ATTACH_REASSIGNED'			=> '<strong>Attachment reassigned to Post</strong><br />» ID %1$d - %2$s',
 	'TOTAL_SIZE'					=> 'Total size',
@@ -11699,11 +12007,11 @@ $lang = array_merge($lang, array(
 	'ACP_INTRO'				=> 'Intro',
 
 	'ACP_MANAGE_ATTACHMENTS'		=> 'จัดการไฟล์แนบ',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
 	'TOTAL_SIZE'				=> 'Total size',
 	'DOWNLOADS'				=> 'ดาวน์โหลด',
 
-	'NO_AVATAR'				=> 'URL of the avatar for all the have no separate',
+	'NO_AVATAR'				=> 'No avatar selected',
 	'NO_AVATAR_EXPLAIN'			=> 'The optimal size of the avatar is 120x120px, this box is left blank, no picture at all. <br /> Demo URL: http://www.userboard.org/images/no_avatar_1.gif',
 	'GROUP_ICON'				=> 'Group Icon',
 	'GROUP_ICON_EXPLAIN'			=> 'Upload your Group Icons into Upload &#187; Topic/Group Icons',
@@ -12866,6 +13174,97 @@ $lang = array_merge($lang, array(
 	'NO_EMAIL_SUBJECT'		=> 'e-mail นี้ไม่มีหัวข้อ',
 ));
 
+#######language/en/acp/extensions.php#######
+
+$lang = array_merge($lang, array(
+	'EXTENSION'					=> 'ชนิดของไฟล์',
+	'EXTENSIONS'				=> 'Extensions',
+	'EXTENSIONS_ADMIN'			=> 'Extensions Manager',
+	'EXTENSIONS_EXPLAIN'		=> 'The Extensions Manager is a tool in your phpBB Board which allows you to manage all of your extensions statuses and view information about them.',
+	'EXTENSION_INVALID_LIST'	=> 'The “%s” extension is not valid.<br />%s<br /><br />',
+	'EXTENSION_NOT_AVAILABLE'	=> 'The selected extension is not available for this board, please verify your phpBB and PHP versions are allowed (see the details page).',
+	'EXTENSION_DIR_INVALID'		=> 'The selected extension has an invalid directory structure and cannot be enabled.',
+	'EXTENSION_NOT_ENABLEABLE'	=> 'The selected extension cannot be enabled, please verify the extension’s requirements.',
+
+	'DETAILS'				=> 'รายละเอียด',
+
+	'EXTENSIONS_DISABLED'	=> 'Disabled Extensions',
+	'EXTENSIONS_ENABLED'	=> 'Enabled Extensions',
+
+	'EXTENSION_DELETE_DATA'	=> 'Delete data',
+	'EXTENSION_DISABLE'		=> 'Disable',
+	'EXTENSION_ENABLE'		=> 'Enable',
+
+	'EXTENSION_DELETE_DATA_EXPLAIN'	=> 'Deleting an extension’s data removes all of its data and settings. The extension files are retained so it can be enabled again.',
+	'EXTENSION_DISABLE_EXPLAIN'		=> 'Disabling an extension retains its files, data and settings but removes any functionality added by the extension.',
+	'EXTENSION_ENABLE_EXPLAIN'		=> 'Enabling an extension allows you to use it on your board.',
+
+	'EXTENSION_DELETE_DATA_IN_PROGRESS'	=> 'The extension’s data is currently being deleted. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_DISABLE_IN_PROGRESS'	=> 'The extension is currently being disabled. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_ENABLE_IN_PROGRESS'	=> 'The extension is currently being enabled. Please do not leave or refresh this page until it is completed.',
+
+	'EXTENSION_DELETE_DATA_SUCCESS'	=> 'The extension’s data was deleted successfully',
+	'EXTENSION_DISABLE_SUCCESS'		=> 'The extension was disabled successfully',
+	'EXTENSION_ENABLE_SUCCESS'		=> 'The extension was enabled successfully',
+
+	'EXTENSION_NAME'			=> 'Extension Name',
+	'EXTENSION_ACTIONS'			=> 'Actions',
+	'EXTENSION_OPTIONS'			=> 'Options',
+	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
+	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s files from the filesystem</li>
+			<li>Upload the new files</li>
+			<li>Enable the extension</li>
+		</ol>',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s data</li>
+			<li>Delete the extension’s files from the filesystem</li>
+		</ol>',
+
+	'EXTENSION_DELETE_DATA_CONFIRM'	=> 'Are you sure that you wish to delete the data associated with “%s”?<br /><br />This removes all of its data and settings and cannot be undone!',
+	'EXTENSION_DISABLE_CONFIRM'		=> 'Are you sure that you wish to disable the “%s” extension?',
+	'EXTENSION_ENABLE_CONFIRM'		=> 'Are you sure that you wish to enable the “%s” extension?',
+	'EXTENSION_FORCE_UNSTABLE_CONFIRM'	=> 'Are you sure that you wish to force the use of unstable version?',
+
+	'RETURN_TO_EXTENSION_LIST'	=> 'Return to the extension list',
+
+	'EXT_DETAILS'			=> 'Extension Details',
+	'DISPLAY_NAME'			=> 'Disply Name (may be NULL)',
+	'CLEAN_NAME'			=> 'Clean Name',
+	'TYPE'					=> 'Type',
+	'DESCRIPTION'			=> 'คำอธิบายเว็บบอร์ด',
+	'VERSION'				=> 'เวอร์ชั่น',
+	'HOMEPAGE'				=> 'Homepage',
+	'PATH'					=> 'File Path',
+	'TIME'					=> 'เวลา',
+	'LICENSE'				=> 'Licence',
+
+	'REQUIREMENTS'			=> 'Requirements',
+	'PHPBB_VERSION'			=> 'phpBB Version',
+	'PHP_VERSION'			=> 'PHP Version',
+	'AUTHOR_INFORMATION'	=> 'Author Information',
+	'AUTHOR_NAME'			=> 'Name',
+	'AUTHOR_EMAIL'			=> 'Email',
+	'AUTHOR_HOMEPAGE'		=> 'Homepage',
+	'AUTHOR_ROLE'			=> 'Role',
+
+	'NOT_UP_TO_DATE'		=> '%s is not up to date',
+	'UP_TO_DATE'			=> '%s is up to date',
+	'ANNOUNCEMENT_TOPIC'	=> 'Release Announcement',
+	'DOWNLOAD_LATEST'		=> 'Download Version',
+	'NO_VERSIONCHECK'		=> 'No version check information given.',
+
+	'VERSIONCHECK_FORCE_UPDATE_ALL'		=> 'Re-Check all versions',
+	'FORCE_UNSTABLE'					=> 'Always check for unstable versions',
+	'EXTENSIONS_VERSION_CHECK_SETTINGS'	=> 'Version check settings',
+
+	'META_FIELD_NOT_SET'	=> 'Required meta field %s has not been set.',
+	'META_FIELD_INVALID'	=> 'Meta field %s is invalid.',
+));
+
 #######language/en/acp/forums.php#######
 
 $lang = array_merge($lang, array(
@@ -12875,6 +13274,10 @@ $lang = array_merge($lang, array(
 	'AUTO_PRUNE_FREQ_EXPLAIN'	=> 'เวลาในระหว่างวันที่ทำการตัดทอน',
 	'AUTO_PRUNE_VIEWED'			=> 'อายุการดูโพสต์ของการตัดทอนอัตโนมัต',
 	'AUTO_PRUNE_VIEWED_EXPLAIN'	=> 'จำนวนวันตั้งแต่การดูโพสต์ครั้งสุดท้ายที่กระทู้จะถูกลบ',
+	'AUTO_PRUNE_SHADOW_FREQ'	=> 'Auto-prune shadow topics frequency',
+	'AUTO_PRUNE_SHADOW_DAYS'	=> 'Auto-prune shadow topics age',
+	'AUTO_PRUNE_SHADOW_DAYS_EXPLAIN'	=> 'Number of days after which shadow topic is removed.',
+	'AUTO_PRUNE_SHADOW_FREQ_EXPLAIN'	=> 'Time in days between pruning events.',
 
 	'CONTINUE'						=> 'ต่อไป',
 	'COPY_PERMISSIONS_EXPLAIN'		=> 'เพื่อให้การตั้งค่า การอนุญาตของบอร์ดใหม่ ของคุณ คุณสามารถคัดลอกสิทธิของบอรืดที่มีอยูแล้วได้.',
@@ -12933,6 +13336,8 @@ $lang = array_merge($lang, array(
 	'FORUM_PASSWORD_OLD'				=> 'รหัสผ่านบอร์ดใช้การเข้ารหัสแบบเก่า ควรเปลี่ยน',
 	'FORUM_PASSWORD_MISMATCH'			=> 'รหัสผ่านที่คุณกรอกไม่สามารถจับคู่ได้',
 	'FORUM_PRUNE_SETTINGS'				=> 'การตั้งค่าการตัดทอนบอร์ด',
+	'FORUM_PRUNE_SHADOW'				=> 'Enable auto-pruning of shadow topics',
+	'FORUM_PRUNE_SHADOW_EXPLAIN'			=> 'Prunes the forum of shadow topics, set the frequency/age parameters below.',
 	'FORUM_RESYNCED'					=> 'resynced บอร์ด “%s” สำเร็จ ',
 	'FORUM_RULES_EXPLAIN'				=> 'กฎของบอร์ด ถูกแสดงทุกหน้าในบอร์ด ที่เลือก',
 	'FORUM_RULES_LINK'					=> 'กรุณาอ่านกฏการใช้งานบอร์ด',
@@ -13024,6 +13429,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE_EXPLAIN'		=> 'จากแป้นนี้ คุณสามารถดูแลกลุ่มผู้ใช้ คุณสามารถลบ สร้างและแก้ไขกลุ่มที่มีอยู่ นอกจากนี้, คุณสามารถเลือกผู้นำกลุ่ม , เปิด/ซ่อน/ปิด สถานะกลุ่ม ตั้งชื่อกลุ่มและคำอธิบาย ',
+	'ADD_GROUP_CATEGORY'			=> 'Add category',
 	'GROUP_ADD_USERS'				=> 'เพิ่มผู้ใช้',
 	'ADD_USERS_EXPLAIN'				=> 'คุณสามารถเพิ่มผู้ใช้ใหม่เข้ากลุ่ม คุณสามารถเลือกกลุ่มนี้เป็นกลุ่มเริ่มต้นสำหรับผู้ใช้ที่เลือก นอกจากนี้คุณยังสามารถกำหนดพวกเขาเป็นผู้นำกลุ่ม โปรดกรอกชื่อผู้ใช้ แยกคนละบรรทัด',
 
@@ -13037,11 +13443,10 @@ $lang = array_merge($lang, array(
 	'GROUP_APPROVED'				=> 'สมาชิกได้รับการอนุมัติ',
 	'GROUP_AVATAR'					=> 'ไอคอนประจำกลุ่ม',
 	'GROUP_AVATAR_EXPLAIN'			=> 'ภาพนี้จะแสดงในแป้นควบคุมของกลุ่ม',
+	'GROUP_CATEGORY_NAME'			=> 'Category name',
 	'GROUP_CLOSED'					=> 'ถูกปิด',
 	'GROUP_COLOR'					=> 'สีกลุ่ม',
 	'GROUP_COLOR_EXPLAIN'			=> 'กำหนดสีของสมาชิกที่ปรากฏ, ปล่อยว่างถ้าต้องการใช้ค่าเริ่มต้น',
-	'GROUP_CONFIRM_ADD_USER'		=> 'คุณแน่ใจว่าต้องการเพิ่มผู้ใช้ %1$s เข้ากลุ่ม?',
-	'GROUP_CONFIRM_ADD_USERS'		=> 'คุณแน่ใจว่าต้องการเพิ่มผู้ใช้ %1$s เข้ากลุ่ม?',
 	'GROUP_CREATED'					=> 'สร้างกลุ่มสำเร็จ',
 	'GROUP_DEFAULT'					=> 'ตั้งเป็นกลุ่มเริ่มต้นสำหรับสมาชิก',
 	'GROUP_DEFS_UPDATED'			=> 'กลุ่มเริ่มต้นสำหรับสมาชิกที่เลือกทั้งหมด',
@@ -13083,6 +13488,8 @@ $lang = array_merge($lang, array(
 	'GROUP_SETTINGS_SAVE'			=> 'การตั้งค่ากลุ่ม',
 	'GROUP_SKIP_AUTH'				=> 'ผู้นำกลุ่มได้รับการยกเว้นจากสิทธิ',
 	'GROUP_SKIP_AUTH_EXPLAIN'		=> 'ถ้าเปิดใช้งานผู้นำกลุ่ม ไม่ได้รับการถ่ายทอดสิทธิจากกลุ่ม.',
+	'GROUP_SPECIAL'					=> 'Pre-defined',
+	'GROUP_TEAMPAGE'				=> 'Display group on teampage',
 	'GROUP_TYPE'					=> 'ประเภทกลุ่ม',
 	'GROUP_TYPE_EXPLAIN'			=> 'ค่านี้กำหนดว่าใครสามารถเข้าร่วมหรือดูกลุ่มนี้',
 	'GROUP_UPDATED'					=> 'อัพเดทค่าความชอบของกลุ่มสำเร็จ',
@@ -13091,19 +13498,37 @@ $lang = array_merge($lang, array(
 	'GROUP_USERS_EXIST'				=> 'ผู้ใช้ที่เลือกเป็นสมาชิกอยู่แล้วสมาชิก',
 	'GROUP_USERS_REMOVE'			=> 'ลบผู้ใช้จากกลุ่ม และตั้งค่าเริ่มต้นสำเร็จ',
 
+	'LEGEND_EXPLAIN'				=> 'These are the groups which are displayed in the group legend:',
+	'LEGEND_SETTINGS'				=> 'Legend settings',
+	'LEGEND_SORT_GROUPNAME'			=> 'Sort legend by group name',
+	'LEGEND_SORT_GROUPNAME_EXPLAIN'	=> 'The order below is ignored when this option is enabled.',
+
+	'MANAGE_LEGEND'			=> 'Manage group legend',
+	'MANAGE_TEAMPAGE'		=> 'Manage teampage',
 	'MAKE_DEFAULT_FOR_ALL'		=> 'ตั้งค่าเริ่มต้นกลุ่มให้กับสมาชิกทุกคน',
 	'MEMBERS'					=> 'สมาชิก',
 
 	'NO_GROUP'					=> 'ไม่มีการตอบรับจาก กลุ่มของผู้ใช้',
+	'NO_GROUPS_ADDED'			=> 'No groups added yet.',
 	'NO_GROUPS_CREATED'			=> 'กลุ่มยังไม่ถูกสร้าง',
 	'NO_PERMISSIONS'			=> 'ไม่คัดลอกการอนุญาต',
 	'NO_USERS'					=> 'ไม่มีการตอบกลับจากผู้ใช้งาน',
 	'NO_USERS_ADDED'			=> 'ไม่มีการเพิ่ม User ในกลุ่มนี้.',
 	'NO_VALID_USERS'			=> 'ไม่ได้เลือก user ในการการทำคำสั่งนี้.',
 
+	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> 'กลุ่มที่กำหนดไว้',
 	'SPECIAL_GROUPS_EXPLAIN'	=> 'กลุ่มนี้ไม่สามารถลบหรือแก้ไขได้โดยตรง อย่างไรก็ตามคุณสามารถเพิ่มผู้ใช้และปรับแต่งค่าพื้นฐานได้',
 
+	'TEAMPAGE'					=> 'Teampage',
+	'TEAMPAGE_DISP_ALL'			=> 'All memberships',
+	'TEAMPAGE_DISP_DEFAULT'		=> 'User’s default group only',
+	'TEAMPAGE_DISP_FIRST'		=> 'First membership only',
+	'TEAMPAGE_EXPLAIN'			=> 'These are the groups which are displayed on the teampage:',
+	'TEAMPAGE_FORUMS'			=> 'Display moderated forums',
+	'TEAMPAGE_FORUMS_EXPLAIN'	=> 'If set to yes, moderators will have a list with all of the forums where they have moderator permissions displayed in their row. This can be very database intensive for big boards.',
+	'TEAMPAGE_MEMBERSHIPS'		=> 'Display user memberships',
+	'TEAMPAGE_SETTINGS'			=> 'Teampage settings',
 	'TOTAL_MEMBERS'				=> 'สมาชิก',
 
 	'USERS_APPROVED'				=> 'อนุมัติผู้ใช้สำเร็จ',
@@ -13489,26 +13914,14 @@ $lang = array_merge($lang, array(
 	'ACP_FILES'						=> 'ไฟล์ภาษา ผู้ดูแลระบบ',
 	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> 'คุณสามารถ ติดตั้ง/ลบ ภาษาของบอร์ด',
 
-	'EMAIL_FILES'			=> ' แม่แบบของอีเมล',
-
-	'FILE_CONTENTS'				=> 'เนื้อหาไฟล์',
-	'FILE_FROM_STORAGE'			=> 'ไฟล์จากโฟลเดอร์ที่เก็บ',
-
-	'HELP_FILES'				=> 'ไฟล์ช่วย',
-
-	'INSTALLED_LANGUAGE_PACKS'	=> 'ติดตั้งแพคภาษา',
-	'INVALID_LANGUAGE_PACK'		=> 'แพคภาษาที่เลือก ไม่ถูกต้อง โปรดตรวจสอบและอัพโหลดอีกครั้ง',
-	'INVALID_UPLOAD_METHOD'		=> 'วิธีอัพโหลดที่เลือก ไม่ถูกต้อง โปรดเลือกวิธีใหม่',
+	'DELETE_LANGUAGE_CONFIRM'		=> 'Are you sure you wish to delete “%s”?',
+	'INSTALLED_LANGUAGE_PACKS'		=> 'ติดตั้งแพคภาษา',
 
 	'LANGUAGE_DETAILS_UPDATED'			=> 'อัพเดทรายละเอียดภาษาสำเร็จ',
-	'LANGUAGE_ENTRIES'					=> 'รายการภาษา',
-	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'คุณสามารถเปลี่ยนรายการแพคภาษาที่มีอยู่ หรือ ไม่แปลก็ได้<br /><strong>หมายเหตุ:</strong> เมื่อคุณเปลี่ยนไฟล์ภาษา, การเปลี่ยนแปลงจะเก็บในอีกโฟลเดอร์หนึ่งเพื่อให้คุณดาวน์โหลดได้ การเปลี่ยนแปลงจะยังไม่ส่งผลถึงผู้ใช้จนกว่าคุณจะแทนที่ไฟล์ภาษาที่ webspace โดยการอัพโหลด',
-	'LANGUAGE_FILES'					=> 'ไฟล์ภาษา',
-	'LANGUAGE_KEY'						=> 'คีย์ภาษา',
 	'LANGUAGE_PACK_ALREADY_INSTALLED'	=> 'แพคภาษานี้ติดตั้งอยู่แล้ว',
-	'LANGUAGE_PACK_DELETED'				=> 'ลบแพคภาษา <strong>%s</strong> สำเร็จ ผู้ใช้ที่ใช้ภาษานี้จะถูกตั้งค่าเป็นภาษาค่าเริ่มต้น',
+	'LANGUAGE_PACK_DELETED'				=> 'The language pack “%s” has been removed successfully. All users using this language have been reset to the board’s default language.',
 	'LANGUAGE_PACK_DETAILS'				=> 'รายละเอียดแพคภาษา ',
-	'LANGUAGE_PACK_INSTALLED'			=> 'ติดตั้งแพคภาษา <strong>%s</strong> สำเร็จ',
+	'LANGUAGE_PACK_INSTALLED'			=> 'The language pack “%s” has been successfully installed.',
 	'LANGUAGE_PACK_CPF_UPDATE'			=> 'ในส่วนของ custom profile fields ภาษาจะถูกคัดลองจากภาษามาตรฐาน. ถ้าต้องการเปลี่ยนก็สามารถเปลี่ยนได้',
 	'LANGUAGE_PACK_ISO'					=> 'ISO',
 	'LANGUAGE_PACK_LOCALNAME'			=> 'ชื่อท้องถิ่น',
@@ -13521,33 +13934,44 @@ $lang = array_merge($lang, array(
 	'LANG_ISO_CODE'						=> 'ISO code',
 	'LANG_LOCAL_NAME'					=> 'ชื่อท้องถิ่น',
 
-	'MISSING_LANGUAGE_FILE'		=> 'ไฟล์ภาษา: <strong style="color:red">%s</strong> หายไป',
+	'MISSING_LANG_FILES'		=> 'Missing language files',
 	'MISSING_LANG_VARIABLES'	=> 'ตัวแปรภาษาหายไป',
-	'MODS_FILES'				=> 'MODs ไฟล์ภาษา',
 
 	'NO_FILE_SELECTED'				=> 'คุณยังไม่ได้ระบุไฟล์ภาษา',
 	'NO_LANG_ID'					=> 'คุณยังไม่ได้ระบุแพคภาษา.',
-	'NO_REMOVE_DEFAULT_LANG'		=> 'คุณไม่สามารถลบค่าเริ่มต้นแพคภาษาได้<br />หากคุณต้องการลบแพคภาษานี้ ให้เปลี่ยนค่าเริ่มต้นภาษาก่อน',
+	'NO_REMOVE_DEFAULT_LANG'		=> 'You are not able to remove the default language pack.<br />If you want to remove this language pack, change your board’s default language first.',
 	'NO_UNINSTALLED_LANGUAGE_PACKS'	=> 'ไม่มีแพคภาษาที่ถูกยกเลิกการติดตั้ง',
 
-	'REMOVE_FROM_STORAGE_FOLDER'		=> 'ลบออกจากโฟลเดอร์ที่เก็บ',
-
-	'SELECT_DOWNLOAD_FORMAT'	=> 'เลือกรูปแบบการดาวน์โหลด archive',
-	'SUBMIT_AND_DOWNLOAD'		=> 'ส่งและดาวน์โหลดไฟล์',
-	'SUBMIT_AND_UPLOAD'			=> 'ส่งและอัพโหลดไฟล์',
-
-	'THOSE_MISSING_LANG_FILES'			=> 'ไฟล์ภาษา %s ต่อไปนี้ หายไปจากโฟลเดอร์ภาษา',
-	'THOSE_MISSING_LANG_VARIABLES'		=> 'ตัวแปรภาษาหายไปจากแพคภาษา <strong>%s</strong>',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 
 	'UNINSTALLED_LANGUAGE_PACKS'	=> 'ยกเลิกการติดตั้งแพคภาษา',
 
+	// 3.0.12
+	'EMAIL_FILES'			=> ' แม่แบบของอีเมล',
+	'FILE_CONTENTS'				=> 'เนื้อหาไฟล์',
+	'FILE_FROM_STORAGE'			=> 'ไฟล์จากโฟลเดอร์ที่เก็บ',
+	'HELP_FILES'				=> 'ไฟล์ช่วย',
+	'INSTALLED_LANGUAGE_PACKS'	=> 'ติดตั้งแพคภาษา',
+	'INVALID_LANGUAGE_PACK'		=> 'แพคภาษาที่เลือก ไม่ถูกต้อง โปรดตรวจสอบและอัพโหลดอีกครั้ง',
+	'INVALID_UPLOAD_METHOD'		=> 'วิธีอัพโหลดที่เลือก ไม่ถูกต้อง โปรดเลือกวิธีใหม่',
+	'LANGUAGE_ENTRIES'					=> 'รายการภาษา',
+	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'คุณสามารถเปลี่ยนรายการแพคภาษาที่มีอยู่ หรือ ไม่แปลก็ได้<br /><strong>หมายเหตุ:</strong> เมื่อคุณเปลี่ยนไฟล์ภาษา, การเปลี่ยนแปลงจะเก็บในอีกโฟลเดอร์หนึ่งเพื่อให้คุณดาวน์โหลดได้ การเปลี่ยนแปลงจะยังไม่ส่งผลถึงผู้ใช้จนกว่าคุณจะแทนที่ไฟล์ภาษาที่ webspace โดยการอัพโหลด',
+	'LANGUAGE_FILES'					=> 'ไฟล์ภาษา',
+	'LANGUAGE_KEY'						=> 'คีย์ภาษา',
+	'MISSING_LANGUAGE_FILE'		=> 'ไฟล์ภาษา: <strong style="color:red">%s</strong> หายไป',
+	'SELECT_DOWNLOAD_FORMAT'	=> 'เลือกรูปแบบการดาวน์โหลด archive',
+	'SUBMIT_AND_DOWNLOAD'		=> 'ส่งและดาวน์โหลดไฟล์',
+	'SUBMIT_AND_UPLOAD'			=> 'ส่งและอัพโหลดไฟล์',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 	'UNABLE_TO_WRITE_FILE'		=> 'ไม่สามารถเขียนไฟล์ไปที่ %s.',
 	'UPLOAD_COMPLETED'			=> 'อัพโหลดสำเร็จ.',
 	'UPLOAD_FAILED'				=> 'อัพโหลดล้มเหลวโดยไม่ทราบเหตุผล คุณอาจจะต้องแทนที่ไฟล์ที่เกี่ยวข้องเอง',
 	'UPLOAD_METHOD'				=> 'วิธีการอัพโหลด',
 	'UPLOAD_SETTINGS'			=> 'การตั้งค่าอัพโหลด',
-
 	'WRONG_LANGUAGE_FILE'		=> 'ไฟล์ภาษาที่เลือก ไม่ถูกต้อง',
+	// 3.0.12
 ));
 
 #######language/en/acp/lexicon.php#######
@@ -13882,6 +14306,171 @@ $lang = array_merge($lang, array(
 	'ROLE_DESCRIPTION_ADMIN_FOOTBALL'	=> 'Can edit final match results.',
 ));
 
+#######language/en/acp/permissions_phpbb.php#######
+
+$lang = array_merge($lang, array(
+	'ACL_CAT_ACTIONS'		=> 'Actions',
+	'ACL_CAT_CONTENT'		=> 'Content',
+	'ACL_CAT_FORUMS'		=> 'Forums',
+	'ACL_CAT_MISC'			=> 'Misc',
+	'ACL_CAT_PERMISSIONS'	=> 'Permissions',
+	'ACL_CAT_PM'			=> 'Private messages',
+	'ACL_CAT_POLLS'			=> 'Polls',
+	'ACL_CAT_POST'			=> 'Post',
+	'ACL_CAT_POST_ACTIONS'	=> 'Post actions',
+	'ACL_CAT_POSTING'		=> 'Posting',
+	'ACL_CAT_PROFILE'		=> 'Profile',
+	'ACL_CAT_SETTINGS'		=> 'Settings',
+	'ACL_CAT_TOPIC_ACTIONS'	=> 'Topic actions',
+	'ACL_CAT_USER_GROUP'	=> 'Users &amp; Groups',
+));
+
+// User Permissions
+$lang = array_merge($lang, array(
+	'ACL_U_VIEWPROFILE'	=> 'Can view profiles, memberlist and online list',
+	'ACL_U_CHGNAME'		=> 'Can change username',
+	'ACL_U_CHGPASSWD'	=> 'Can change password',
+	'ACL_U_CHGEMAIL'	=> 'Can change email address',
+	'ACL_U_CHGAVATAR'	=> 'Can change avatar',
+	'ACL_U_CHGGRP'		=> 'Can change default usergroup',
+	'ACL_U_CHGPROFILEINFO'	=> 'Can change profile field information',
+
+	'ACL_U_ATTACH'		=> 'Can attach files',
+	'ACL_U_DOWNLOAD'	=> 'Can download files',
+	'ACL_U_SAVEDRAFTS'	=> 'Can save drafts',
+	'ACL_U_CHGCENSORS'	=> 'Can disable word censors',
+	'ACL_U_SIG'			=> 'Can use signature',
+
+	'ACL_U_SENDPM'		=> 'Can send private messages',
+	'ACL_U_MASSPM'		=> 'Can send messages to multiple users',
+	'ACL_U_MASSPM_GROUP'=> 'Can send messages to groups',
+	'ACL_U_READPM'		=> 'Can read private messages',
+	'ACL_U_PM_EDIT'		=> 'Can edit own private messages',
+	'ACL_U_PM_DELETE'	=> 'Can remove private messages from own folder',
+	'ACL_U_PM_FORWARD'	=> 'Can forward private messages',
+	'ACL_U_PM_EMAILPM'	=> 'Can email private messages',
+	'ACL_U_PM_PRINTPM'	=> 'Can print private messages',
+	'ACL_U_PM_ATTACH'	=> 'Can attach files in private messages',
+	'ACL_U_PM_DOWNLOAD'	=> 'Can download files in private messages',
+	'ACL_U_PM_BBCODE'	=> 'Can use BBCode in private messages',
+	'ACL_U_PM_SMILIES'	=> 'Can use smilies in private messages',
+	'ACL_U_PM_IMG'		=> 'Can use [img] BBCode tag in private messages',
+	'ACL_U_PM_FLASH'	=> 'Can use [flash] BBCode tag in private messages',
+
+	'ACL_U_SENDEMAIL'	=> 'Can send emails',
+	'ACL_U_SENDIM'		=> 'Can send instant messages',
+	'ACL_U_IGNOREFLOOD'	=> 'Can ignore flood limit',
+	'ACL_U_HIDEONLINE'	=> 'Can hide online status',
+	'ACL_U_VIEWONLINE'	=> 'Can view hidden online users',
+	'ACL_U_SEARCH'		=> 'Can search board',
+));
+
+// Forum Permissions
+$lang = array_merge($lang, array(
+	'ACL_F_LIST'		=> 'Can see forum',
+	'ACL_F_READ'		=> 'Can read forum',
+	'ACL_F_SEARCH'		=> 'Can search the forum',
+	'ACL_F_SUBSCRIBE'	=> 'Can subscribe forum',
+	'ACL_F_PRINT'		=> 'Can print topics',
+	'ACL_F_EMAIL'		=> 'Can email topics',
+	'ACL_F_BUMP'		=> 'Can bump topics',
+	'ACL_F_USER_LOCK'	=> 'Can lock own topics',
+	'ACL_F_DOWNLOAD'	=> 'Can download files',
+	'ACL_F_REPORT'		=> 'Can report posts',
+
+	'ACL_F_POST'		=> 'Can start new topics',
+	'ACL_F_STICKY'		=> 'Can post stickies',
+	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_REPLY'		=> 'Can reply to topics',
+	'ACL_F_EDIT'		=> 'Can edit own posts',
+	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
+	'ACL_F_SOFTDELETE'	=> 'Can soft delete own posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_F_IGNOREFLOOD' => 'Can ignore flood limit',
+	'ACL_F_POSTCOUNT'	=> 'Increment post counter<br /><em>Please note that this setting only affects new posts.</em>',
+	'ACL_F_NOAPPROVE'	=> 'Can post without approval',
+
+	'ACL_F_ATTACH'		=> 'Can attach files',
+	'ACL_F_ICONS'		=> 'Can use topic/post icons',
+	'ACL_F_BBCODE'		=> 'Can use BBCode',
+	'ACL_F_FLASH'		=> 'Can use [flash] BBCode tag',
+	'ACL_F_IMG'			=> 'Can use [img] BBCode tag',
+	'ACL_F_SIGS'		=> 'Can use signatures',
+	'ACL_F_SMILIES'		=> 'Can use smilies',
+
+	'ACL_F_POLL'		=> 'Can create polls',
+	'ACL_F_VOTE'		=> 'Can vote in polls',
+	'ACL_F_VOTECHG'		=> 'Can change existing vote',
+));
+
+// Moderator Permissions
+$lang = array_merge($lang, array(
+	'ACL_M_EDIT'		=> 'Can edit posts',
+	'ACL_M_DELETE'		=> 'Can permanently delete posts',
+	'ACL_M_SOFTDELETE'	=> 'Can soft delete posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_M_APPROVE'		=> 'Can approve and restore posts',
+	'ACL_M_REPORT'		=> 'Can close and delete reports',
+	'ACL_M_CHGPOSTER'	=> 'Can change post author',
+
+	'ACL_M_MOVE'	=> 'Can move topics',
+	'ACL_M_LOCK'	=> 'Can lock topics',
+	'ACL_M_SPLIT'	=> 'Can split topics',
+	'ACL_M_MERGE'	=> 'Can merge topics',
+
+	'ACL_M_INFO'	=> 'Can view post details',
+	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+));
+
+// Admin Permissions
+$lang = array_merge($lang, array(
+	'ACL_A_BOARD'		=> 'Can alter board settings/check for updates',
+	'ACL_A_SERVER'		=> 'Can alter server/communication settings',
+	'ACL_A_JABBER'		=> 'Can alter Jabber settings',
+	'ACL_A_PHPINFO'		=> 'Can view php settings',
+
+	'ACL_A_FORUM'		=> 'Can manage forums',
+	'ACL_A_FORUMADD'	=> 'Can add new forums',
+	'ACL_A_FORUMDEL'	=> 'Can delete forums',
+	'ACL_A_PRUNE'		=> 'Can prune forums',
+
+	'ACL_A_ICONS'		=> 'Can alter topic/post icons and smilies',
+	'ACL_A_WORDS'		=> 'Can alter word censors',
+	'ACL_A_BBCODE'		=> 'Can define BBCode tags',
+	'ACL_A_ATTACH'		=> 'Can alter attachment related settings',
+
+	'ACL_A_USER'		=> 'Can manage users<br /><em>This also includes seeing the users browser agent within the viewonline list.</em>',
+	'ACL_A_USERDEL'		=> 'Can delete/prune users',
+	'ACL_A_GROUP'		=> 'Can manage groups',
+	'ACL_A_GROUPADD'	=> 'Can add new groups',
+	'ACL_A_GROUPDEL'	=> 'Can delete groups',
+	'ACL_A_RANKS'		=> 'Can manage ranks',
+	'ACL_A_PROFILE'		=> 'Can manage custom profile fields',
+	'ACL_A_NAMES'		=> 'Can manage disallowed names',
+	'ACL_A_BAN'			=> 'Can manage bans',
+
+	'ACL_A_VIEWAUTH'	=> 'Can view permission masks',
+	'ACL_A_AUTHGROUPS'	=> 'Can alter permissions for individual groups',
+	'ACL_A_AUTHUSERS'	=> 'Can alter permissions for individual users',
+	'ACL_A_FAUTH'		=> 'Can alter forum permission class',
+	'ACL_A_MAUTH'		=> 'Can alter moderator permission class',
+	'ACL_A_AAUTH'		=> 'Can alter admin permission class',
+	'ACL_A_UAUTH'		=> 'Can alter user permission class',
+	'ACL_A_ROLES'		=> 'Can manage roles',
+	'ACL_A_SWITCHPERM'	=> 'Can use others permissions',
+
+	'ACL_A_STYLES'		=> 'Can manage styles',
+	'ACL_A_EXTENSIONS'	=> 'Can manage extensions',
+	'ACL_A_VIEWLOGS'	=> 'Can view logs',
+	'ACL_A_CLEARLOGS'	=> 'Can clear logs',
+	'ACL_A_MODULES'		=> 'Can manage modules',
+	'ACL_A_LANGUAGE'	=> 'Can manage language packs',
+	'ACL_A_EMAIL'		=> 'Can send mass email',
+	'ACL_A_BOTS'		=> 'Can manage bots',
+	'ACL_A_REASONS'		=> 'Can manage report/denial reasons',
+	'ACL_A_BACKUP'		=> 'Can backup/restore database',
+	'ACL_A_SEARCH'		=> 'Can manage search backends and settings',
+));
+
 #######language/en/acp/phpbb_seo.php#######
 
 $lang = array_merge($lang, array(
@@ -14053,6 +14642,7 @@ $lang = array_merge($lang, array(
 
 	'BBCODE_ADDED'				=> 'เพิ่ม BBCode สำเร็จ',
 	'BBCODE_EDITED'				=> 'แก้ไข BBCode สำเร็จ',
+	'BBCODE_DELETED'			=> 'The BBCode has been removed successfully.',
 	'BBCODE_NOT_EXIST'			=> 'BBCode ที่คุณเลือก ไม่มีอยู่จริง',
 	'BBCODE_HELPLINE'			=> 'Help line',
 	'BBCODE_HELPLINE_EXPLAIN'	=> 'ฟิลด์นี้คือข้อความเมื่อเมาส์เคลื่อนที่มาอยู่เหนือ BBCode',
@@ -14108,17 +14698,10 @@ $lang = array_merge($lang, array(
 	'EXPORT_SMILIES'			=> 'นำออกและดาวน์โหลด smilies.pak',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sเมื่อคลิกลิงค์นี้, smilies ที่ติดตั้งจะถูกห่อเป็น <samp>smilies.pak</samp> ซึ่งเมื่อดาวน์โหลด สามารถใช้สร้างเป็น <samp>.zip</samp> หรือ <samp>.tgz</samp> รวมทั้งไฟล์ปรับแต่ง%s.',
 
-
 	'ICONS_ADD'				=> 'สร้างไอคอนใหม่',
-	'ICONS_NONE_ADDED'		=> 'ไม่มีไอคอนใดถูกเพิ่ม',
-	'ICONS_ONE_ADDED'		=> 'เพิ่มไอคอนสำเร็จ',
-	'ICONS_ADDED'			=> 'เพิ่มไอคอนสำเร็จ',
 	'ICONS_CONFIG'			=> 'การตั้งค่า Icon',
 	'ICONS_DELETED'			=> 'ลบไอคอนสำเร็จ',
 	'ICONS_EDIT'			=> 'แก้ไขไอคอน',
-	'ICONS_ONE_EDITED'		=> 'อัพเดทไอคอนสำเร็จ',
-	'ICONS_NONE_EDITED'		=> 'ไม่มีไอคอนใดถูกอัพเดท',
-	'ICONS_EDITED'			=> 'อัพเดทไอคอนสำเร็จ',
 	'ICONS_HEIGHT'			=> 'ความสูง Icon',
 	'ICONS_IMAGE'			=> 'รูปภาพ Icon',
 	'ICONS_IMPORTED'		=> 'ไอคอนแพคติดตั้งสำเร็จ.',
@@ -14148,9 +14731,6 @@ $lang = array_merge($lang, array(
 
 	'SELECT_PACKAGE'			=> 'เลือกไฟล์ package',
 	'SMILIES_ADD'				=> 'เพิ่มรูปแสดงอารมณ์',
-	'SMILIES_NONE_ADDED'		=> 'ไม่มีรูปแสดงอารมณ์ใดถูกเพิ่ม',
-	'SMILIES_ONE_ADDED'			=> 'เพิ่มรูปแสดงอารมณ์สำเร็จ.',
-	'SMILIES_ADDED'				=> 'เพิ่มรูปแสดงอารมณ์เรียบร้อยแล้ว.',
 	'SMILIES_CODE'				=> 'โค้ดรูปแสดงอารมณ์',
 	'SMILIES_CONFIG'			=> 'ตั้งค่ารูปแสดงอารมณ์',
 	'SMILIES_DELETED'			=> 'ลบรูปแสดงอารมณ์เรียบร้อยแล้ว.',
@@ -14158,9 +14738,6 @@ $lang = array_merge($lang, array(
 	'SMILIE_NO_CODE'			=> 'smiley “%s” ถูกเพิกเฉย, เพราะไม่มีโค้ตสำหรับใส่ Smile นี้.',
 	'SMILIE_NO_EMOTION'			=> 'smiley “%s” ถูกเพิกเฉย, พราะไม่มีโค้ตสำหรับใส่ emotion นี้.',
 	'SMILIE_NO_FILE'			=> 'smiley “%s” ถูกเพิกเฉย, เพราะไม่สามารถหาไฟล์ได้.',
-	'SMILIES_NONE_EDITED'		=> 'ไม่มีรูปแสดงอารมณ์ ถูกอัพเดท',
-	'SMILIES_ONE_EDITED'		=> 'อัพเดทรูปแสดงอารมณ์เรียบร้อยแล้ว.',
-	'SMILIES_EDITED'			=> 'อัพเดทรูปแสดงอารมณ์เรียบร้อยแล้ว.',
 	'SMILIES_EMOTION'			=> 'Emotion',
 	'SMILIES_HEIGHT'			=> 'ความสูงรูปแสดงอารมณ์',
 	'SMILIES_IMAGE'				=> 'รูปแสดงอารมณ์',
@@ -14172,7 +14749,6 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'ไฟล์รูปแสดงอารมณ์',
 	'SMILIES_WIDTH'				=> 'ความกว้างรูปแสดงอารมณ์',
 
-	'TOO_MANY_SMILIES'		=> 'ข้อความของคุณมีรูปรอยยิ้มมากเกินไป.จำนวนสูงสุดของรูปรอยยิ้มที่อนุญาต %d.',
 	'WRONG_PAK_TYPE'		=> 'กลุ่มที่ระบุ มีข้อมูลที่ไม่ถูกต้อง',
 ));
 
@@ -14270,8 +14846,11 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ADDED_PROFILE_FIELD'	=> 'เพิ่มฟิลด์ประวัติที่สร้างเองสำเร็จ',
+	'ALPHA_DOTS'			=> 'Alphanumeric and dots (periods)',
 	'ALPHA_ONLY'			=> 'ตัวอักษรเลขเท่านั้น',
 	'ALPHA_SPACERS'			=> 'ตัวอักษรเลขและที่ว่าง',
+	'ALPHA_UNDERSCORE'		=> 'Alphanumeric and underscores',
+	'ALPHA_PUNCTUATION'		=> 'Alphanumeric with comma, dots, underscore and dashes beginning with a letter',
 	'ALWAYS_TODAY'			=> 'วันที่ปัจจุบันเสมอ',
 
 	'BOOL_ENTRIES_EXPLAIN'	=> 'กรอกตัวเลือกของคุณเดี๋ยวนี้',
@@ -14298,6 +14877,10 @@ $lang = array_merge($lang, array(
 	'DISPLAY_AT_PROFILE_EXPLAIN'	=> 'ผู้ใช้สามารถเปลี่ยนฟิลด์ประวัติภายในแป้นควบคุมผู้ใช้',
 	'DISPLAY_AT_REGISTER'			=> 'แสดงหน้าจอการลงทะเบียน',
 	'DISPLAY_AT_REGISTER_EXPLAIN'	=> 'ถ้าตัวเลือกนี้ถูกใช้ , ฟิลด์จะถูกแสดงตอนลงทะเบียนและสามารถแก้ไขได้ในการตั้งค่าส่วนตัว',
+	'DISPLAY_ON_MEMBERLIST'			=> 'Display on memberlist screen',
+	'DISPLAY_ON_MEMBERLIST_EXPLAIN'	=> 'If this option is enabled, the field will be displayed in the user rows on the memberlist screen.',
+	'DISPLAY_ON_PM'					=> 'Display on view private message screen',
+	'DISPLAY_ON_PM_EXPLAIN'			=> 'If this option is enabled, the field will be displayed in the mini-profile on the private message screen.',
 	'DISPLAY_ON_VT'					=> 'แสดงในหน้า viewtopic',
 	'DISPLAY_ON_VT_EXPLAIN'			=> 'ถ้าเปิดใ้ช้งานตัวเลือกนี้, ช่องที่จะแสดงในมินิโปรไฟล์ในหน้าแสดงหัวข้อ.',
 	'DISPLAY_PROFILE_FIELD'			=> 'แสดงฟิลด์ประวัติ',
@@ -14311,20 +14894,26 @@ $lang = array_merge($lang, array(
 	'EVERYTHING_OK'					=> 'ทุกอย่าง OK',
 
 	'FIELD_BOOL'				=> 'Boolean (Yes/No)',
+	'FIELD_CONTACT_DESC'		=> 'Contact description',
+	'FIELD_CONTACT_URL'			=> 'Contact link',
 	'FIELD_DATE'				=> 'วันที่',
 	'FIELD_DESCRIPTION'			=> 'การอธิบายฟิลด์',
 	'FIELD_DESCRIPTION_EXPLAIN'	=> 'ข้อความอธิบายที่จะแสดงให้ผู้ใช้เห็น',
 	'FIELD_DROPDOWN'			=> 'Dropdown box',
+	'FIELD_GOOGLEPLUS'			=> 'Google+',
 	'FIELD_IDENT'				=> 'ตัวแสดงฟิลด์',
 	'FIELD_IDENT_ALREADY_EXIST'	=> 'ตัวแสดงฟิลด์ที่เลือกมีอยู่แล้ว โปรดเลือกชื่อใหม่',
 	'FIELD_IDENT_EXPLAIN'		=> 'ตัวแสดงฟิลด์เป็นชื่อที่ใช้แสดงฟิลด์ประวัติภายในฐานข้อมูลและ Template ',
 	'FIELD_INT'					=> 'ตัวเลข',
+	'FIELD_IS_CONTACT'			=> 'Display field as a contact field',
+	'FIELD_IS_CONTACT_EXPLAIN'	=> 'Contact fields are displayed within the contact section of the user profile and are displayed differently in the mini profile next to posts and private messages. You can use <samp>%s</samp> as a placeholder variable which will be replaced by a value provided by the user.',
 	'FIELD_LENGTH'				=> 'ความยาวของฟิลด์',
 	'FIELD_NOT_FOUND'			=> 'ไม่พบฟิลด์ประวัติ',
 	'FIELD_STRING'				=> 'ฟิลด์ข้อความเดียว',
 	'FIELD_TEXT'				=> 'พื้นที่ข้อความ',
 	'FIELD_TYPE'				=> 'ประเภทฟิลด์',
 	'FIELD_TYPE_EXPLAIN'		=> 'คุณไม่สามารถเปลี่ยนประเภทฟิลด์ในภายหลัง',
+	'FIELD_URL'					=> 'URL (Link)',
 	'FIELD_VALIDATION'			=> 'การตรวจสอบความถูกต้องของฟิลด์',
 	'FIRST_OPTION'				=> 'ตัวเลือกแรก',
 
@@ -14336,6 +14925,12 @@ $lang = array_merge($lang, array(
 	'ISO_LANGUAGE'				=> 'ภาษา [%s]',
 
 	'LANG_SPECIFIC_OPTIONS'		=> 'ระบุตัวเลือกภาษา [<strong>%s</strong>]',
+
+	'LETTER_NUM_DOTS'			=> 'Any letters, numbers and dots (periods)',
+	'LETTER_NUM_ONLY'			=> 'Any letters and numbers',
+	'LETTER_NUM_PUNCTUATION'	=> 'Any letters, numbers, comma, dots, underscores and dashes beginning with any letter',
+	'LETTER_NUM_SPACERS'		=> 'Any letters, numbers and spacers',
+	'LETTER_NUM_UNDERSCORE'		=> 'Any letters, numbers and underscores',
 
 	'MAX_FIELD_CHARS'		=> 'จำนวนตัวอักษรสูงสุด',
 	'MAX_FIELD_NUMBER'		=> 'จำนวนมากที่สุดที่อนุญาต',
@@ -14390,9 +14985,9 @@ $lang = array_merge($lang, array(
 #######language/en/acp/prune.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_PRUNE_USERS_EXPLAIN'	=> 'คุณสามารถลบ (หรือ เลิกใช้) ผู้ใช้จากบอร์ด คุณสามารถทำได้หลายวิธี เช่น จากการนับโพสต์, กิจกรรมที่ทำล่าสุดและอื่นๆ แต่ละเงื่อนไขสามารถรวมกันได้ เช่น คุณสามารถตัดแต่งผู้ใช้โดยใช้กิจกรรมสุดท้ายก่อน 2002-01-01 ด้วยจำนวนโพสต์ที่น้อยกว่า 10 ครั้ง. อีกทางเลือกหนึ่ง คุณสามารถกรอกรายการของผู้ใช้โดยตรง เงื่อนไขต่างๆจะถูกละเลย ระมัดระวังการใช้ให้ดีเพราะว่าไม่สามารถย้อนกลับได้ 
-	
-ในส่วนนี้จะช่วยให้ คุณสามารถลบหรือ ยกเลิกการใช้งาน ของสมาชิืกในบอร์ดคุณ. บัญชีสามารถกรองหลายวิธีหนึ่งโดยนับโพสต์ กิจกรรมล่าสุด ฯลฯ เกณฑ์การปรับอาจจะรวมกัน เพื่อจำกัดบัญชีได้รับผลกระทบ. ตัวอย่าง เช่น คุณ สามารถตัดทอนผู้ใช้โพสต์น้อยกว่า 10 โพสต์ที่ยังไม่ได้ใช้งานหลังจาก วันที่ 2002/01/01. หรือคุณอาจข้ามเลือกเกณฑ์สมบูรณ์โดยการป้อนรายชื่อผู้ใช้ ลงในช่องข้อความ.ชื่อสมาชิกที่ถูกลบจะไม่สามารถนำกลับมาใช้ใหม่ได้',
+	'ACP_PRUNE_USERS_EXPLAIN'	=> 'This section allows you to delete or deactivate users on your board. Accounts can be filtered in a variety of ways; by post count, most recent activity, etc. Criteria may be combined to narrow down which accounts are affected. For example, you can prune users with fewer than 10 posts, who were also inactive after 2002-01-01. Use * as a wildcard for text fields. Alternatively, you may skip the criteria selection completely by entering a list of users (each on a separate line) into the text field. Take care with this facility! Once a user is deleted, there is no way to reverse the action.',
+
+	'CRITERIA'				=> 'Criteria',
 
 	'DEACTIVATE_DELETE'			=> 'ยกเลิกหรือลบ',
 	'DEACTIVATE_DELETE_EXPLAIN'	=> 'เลือกว่าจะยกเลิกการ ใช้ หรือ ลบทิ้งทั้งหมด. โปรดทราบสมาชิกที่ถูกลบ จะไม่สามารถเรียกคืน!',
@@ -14400,15 +14995,18 @@ $lang = array_merge($lang, array(
 	'DELETE_USER_POSTS'			=> 'ลบโพสต์ของผู้ใช้',
 	'DELETE_USER_POSTS_EXPLAIN'	=> 'ลบโพสต์ที่โพสต์โดยผู้ใช้ที่ถูกลบไปแล้ว, การกระทำนี้ไม่กระทบผู้ใช้ที่ยกเลิก',
 
-	'JOINED_EXPLAIN'			=> 'กรอกวันที่ให้อยู่ในรูปแบบ <kbd>YYYY-MM-DD</kbd>',
+	'JOINED_EXPLAIN'			=> 'Enter a date in <kbd>YYYY-MM-DD</kbd> format. You may use both fields to specify an interval, or leave one blank for an open date range.',
 
 	'LAST_ACTIVE_EXPLAIN'		=> 'กรอกวันที่ในรูปแบบ <kbd>YYYY-MM-DD</kbd> ใส่ 0000-00-00 เพื่อลบสมาชิกทืี่ไม่เคยเข้าระบบ,  <em>ก่อน</em>และ <em>หลัง</em> เงื่อนไขจะถูกปฏิเสธ',
 
+	'POSTS_ON_QUEUE'			=> 'Posts Awaiting Approval',
+	'PRUNE_USERS_GROUP_EXPLAIN'	=> 'Limit to users within the selected group.',
+	'PRUNE_USERS_GROUP_NONE'	=> 'All groups',
 	'PRUNE_USERS_LIST'				=> 'ผู้ใช้ที่จะถูกตัดแต่ง',
-	'PRUNE_USERS_LIST_DELETE'		=> 'ผู้ใช้ที่เข้าเงื่อนไขจะถูกลบออก',
-	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'ผู้ใช้ที่เข้าเงื่อนไขจะถูกยกเลิก',
+	'PRUNE_USERS_LIST_DELETE'		=> 'With the selected critera for pruning users the following accounts will be removed. You can remove individual users from the deletion list by unchecking the box next to their username.',
+	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'With the selected critera for pruning users the following accounts will be deactivated. You can remove individual users from the deactivation list by unchecking the box next to their username.',
 
-	'SELECT_USERS_EXPLAIN'		=> 'กรอกชื่อสมาชิกที่ท่านต้องการ, ชื่อสมาชิกจะใช้ในการตั้งค่าเกณฑ์ดังกล่าวข้างต้น. การจัดการจะไม่มีผลกับผู้ก่อตั้ง.',
+	'SELECT_USERS_EXPLAIN'		=> 'Enter specific usernames here. They will be used in preference to the criteria above. Founders cannot be pruned.',
 
 	'USER_DEACTIVATE_SUCCESS'	=> 'ผู้ใช้ที่เลือกไว้ถูกยกเลิกแล้ว',
 	'USER_DELETE_SUCCESS'		=> 'ผู้ใช้ที่เลือกไว้ถูกลบแล้ว',
@@ -14455,15 +15053,38 @@ $lang = array_merge($lang, array(
 	'DELETING_INDEX_IN_PROGRESS'			=> 'กำลังอยู่ในกระบวนการลบดัชนี',
 	'DELETING_INDEX_IN_PROGRESS_EXPLAIN'	=> 'วิธีการค้นหา กำลังทำความสะอาดดัชนี กระบวนการนี้อาจกินเวลา',
 
-	'FULLTEXT_MYSQL_INCOMPATIBLE_VERSION'	=> 'วิธีการค้นหาด้วย MySQL fulltext ใช้ได้กับ Mysql เวอร์ชั่น 4 เป็นต้นไป.',
+	'FULLTEXT_MYSQL_INCOMPATIBLE_DATABASE'	=> 'The MySQL fulltext backend can only be used with MySQL4 and above.',
 	'FULLTEXT_MYSQL_NOT_MYISAM'				=> 'MySQL fulltext indexes สามารถใช้ได้กับตารางที่กำหนดเป็น MyISAM เท่านั้น.',
 	'FULLTEXT_MYSQL_TOTAL_POSTS'			=> 'จำนวนดัชนีโพสต์ทั้งหมด',
-	'FULLTEXT_MYSQL_MBSTRING'				=> 'สนับสนุน non-latin UTF-8 characters โดยใช้ mbstring:',
-	'FULLTEXT_MYSQL_PCRE'					=> 'สนับสนุน non-latin UTF-8 characters โดยใช้ PCRE:',
-	'FULLTEXT_MYSQL_MBSTRING_EXPLAIN'		=> 'ถ้า PCRE ไม่มีคุณสมบัติ unicode , วิธีการค้นหาจะพยายามใช้ mbstring’s regular expression แทน',
-	'FULLTEXT_MYSQL_PCRE_EXPLAIN'			=> 'การค้นหาพืนหลังนี้มันต้องการคุณสมบัติ PCRE unicode, มีให้ใช้ใน PHP 4.4, 5.1 และหลังจากนี้ เท่านั้น, ถ้าคุณต้องการค้นหา ตัวอักษรที่เป็น non-latin',
 	'FULLTEXT_MYSQL_MIN_SEARCH_CHARS_EXPLAIN'	=> 'คำน้่อยที่สุดที่ใช้สำหรับการจัดทำดัชนีสำหรับการค้นหา.  โฮสต์ของคุณสามารถเปลี่ยนการตั้งค่านี้โดยการเปลี่ยนการตั้งค่าของ MySQL.',
 	'FULLTEXT_MYSQL_MAX_SEARCH_CHARS_EXPLAIN'	=> 'คำมากที่สุดต้องไม่เกินค่าการทำดัชนีสำหรับคนหา. โฮสต์ของคุณสามารถเปลี่ยนการตั้งค่านี้โดยการเปลี่ยนการตั้งค่าของ',
+
+	'FULLTEXT_POSTGRES_INCOMPATIBLE_DATABASE'	=> 'The PostgreSQL fulltext backend can only be used with PostgreSQL.',
+	'FULLTEXT_POSTGRES_TOTAL_POSTS'			=> 'Total number of indexed posts',
+	'FULLTEXT_POSTGRES_VERSION_CHECK'		=> 'PostgreSQL version',
+	'FULLTEXT_POSTGRES_TS_NAME'				=> 'Text search Configuration Profile:',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN'			=> 'Minimum word length for keywords',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN'			=> 'Maximum word length for keywords',
+	'FULLTEXT_POSTGRES_VERSION_CHECK_EXPLAIN'		=> 'This search backend requires PostgreSQL version 8.3 and above.',
+	'FULLTEXT_POSTGRES_TS_NAME_EXPLAIN'				=> 'The Text search configuration profile used to determine the parser and dictionary.',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN_EXPLAIN'			=> 'Words with at least this many characters will be included in the query to the database.',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN_EXPLAIN'			=> 'Words with no more than this many characters will be included in the query to the database.',
+
+	'FULLTEXT_SPHINX_CONFIGURE'				=> 'Configure the following settings to generate sphinx config file',
+	'FULLTEXT_SPHINX_DATA_PATH'				=> 'Path to data directory',
+	'FULLTEXT_SPHINX_DATA_PATH_EXPLAIN'		=> 'It will be used to store the indexes and log files. You should create this directory outside the web accessible directories. (should have a trailing slash)',
+	'FULLTEXT_SPHINX_DELTA_POSTS'			=> 'Number of posts in frequently updated delta index',
+	'FULLTEXT_SPHINX_HOST'					=> 'Sphinx search daemon host',
+	'FULLTEXT_SPHINX_HOST_EXPLAIN'			=> 'Host on which the sphinx search daemon (searchd) listens. Leave empty to use the default localhost',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT'		=> 'Indexer memory limit',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT_EXPLAIN'	=> 'This number should at all times be lower than the RAM available on your machine. If you experience periodic performance problems this might be due to the indexer consuming too many resources. It might help to lower the amount of memory available to the indexer.',
+	'FULLTEXT_SPHINX_MAIN_POSTS'			=> 'Number of posts in main index',
+	'FULLTEXT_SPHINX_PORT'					=> 'Sphinx search daemon port',
+	'FULLTEXT_SPHINX_PORT_EXPLAIN'			=> 'Port on which the sphinx search daemon (searchd) listens. Leave empty to use the default Sphinx API port 9312',
+	'FULLTEXT_SPHINX_WRONG_DATABASE'		=> 'The sphinx search for phpBB supports MySQL and PostgreSQL only.',
+	'FULLTEXT_SPHINX_CONFIG_FILE'			=> 'Sphinx config file',
+	'FULLTEXT_SPHINX_CONFIG_FILE_EXPLAIN'	=> 'The generated content of the sphinx config file. This data needs to be pasted into the sphinx.conf which is used by sphinx search daemon. Replace the [dbuser] and [dbpassword] placeholders with your database credentials.',
+	'FULLTEXT_SPHINX_NO_CONFIG_DATA'		=> 'The sphinx data and config directory paths are not defined. Please define them to generate the config file.',
 
 	'GENERAL_SEARCH_SETTINGS'				=> 'การตั้งค่าการค้นหาทั่วไป',
 	'GO_TO_SEARCH_INDEX'					=> 'ไปที่หน้าดัชนีการค้นหา',
@@ -14488,8 +15109,6 @@ $lang = array_merge($lang, array(
 
 	'SEARCH_GUEST_INTERVAL'					=> 'ช่วงเวลาการค้นหาของแขกที่ต้องรอ',
 	'SEARCH_GUEST_INTERVAL_EXPLAIN'			=> 'จำนวนวินาทีที่ต้องรอระหว่างการค้นหาแต่ละครั้ง',
-	'SEARCH_INDEX_CREATE_REDIRECT'			=> 'โพสต์ทั้งหมดจนถึงโพสต์ id %1$d ถูกทำดัชนีเรียบร้อยแล้ว เหลือ %2$d โพสต์ที่กำลังอยู่ระหว่างกระบวนการ<br /> อัตราการทำดัชนีอยู่ที่ประมาณ %3$.1f โพสต์ต่อวินาที<br /> อยู่ระหว่างการทำดัชนี…',
-	'SEARCH_INDEX_DELETE_REDIRECT'			=> 'โพสต์ทั้งหมดจนถึงโพสต์ id %1$d ถูกลบจากการทำดัชนี <br />อยู่ระหว่างการลบ…',
 	'SEARCH_INDEX_CREATED'					=> 'ทำดัชนีการโพสต์ในฐานข้อมูลบอร์ดสำเร็จ',
 	'SEARCH_INDEX_REMOVED'					=> 'ลบดัชนีการค้นหาสำเร็จ',
 	'SEARCH_INTERVAL'						=> 'ช่วงเวลาที่ผู้ใช้ต้องรอ',
@@ -14512,8 +15131,55 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
+	// 3.1.0
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
+
+	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
+	'CONFIRM_UNINSTALL_STYLES'		=> 'Are you sure you wish to uninstall selected styles?',
+	'COPYRIGHT'						=> 'Copyright',
+
+	'DEACTIVATE_DEFAULT'		=> 'คุณไม่สามารถยกเลิกรูปแบบเริ่มต้นได้',
+	'DELETE_FROM_FS'			=> 'ลบจากระบบไฟล์',
+	'DELETE_STYLE_FILES_FAILED'	=> 'Error deleting files for style "%s".',
+	'DELETE_STYLE_FILES_SUCCESS'	=> 'Files for style "%s" have been deleted.',
+	'DETAILS'					=> 'รายละเอียด',
+
+	'INHERITING_FROM'			=> 'Inherits from',
+	'INSTALL_STYLE'				=> 'ติดตั้งรูปแบบ',
+	'INSTALL_STYLES'			=> 'Install styles',
+	'INSTALL_STYLES_EXPLAIN'	=> 'Here you can install new styles.<br />If you cannot find a specific style in list below, check to make sure style is already installed. If it is not installed, check if it was uploaded correctly.',
+	'INVALID_STYLE_ID'			=> 'Invalid style ID.',
+
+	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
+	'NO_UNINSTALLED_STYLE'		=> 'ไม่พบการยกเลิกการติดตั้งรูปแบบ',
+
+	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
+
+	'STYLE_ACTIVATE'			=> 'ทำให้ใช้งานได้',
+	'STYLE_ACTIVE'				=> 'ใช้งานอยู่',
+	'STYLE_DEACTIVATE'			=> 'ยกเลิกการใช้งาน',
+	'STYLE_DEFAULT'				=> 'ทำให้เป็นรูปแบบเริ่มต้น',
+	'STYLE_DEFAULT_CHANGE_INACTIVE'	=> 'You must activate style before making it default style.',
+	'STYLE_ERR_INVALID_PARENT'	=> 'Invalid parent style.',
+	'STYLE_ERR_NAME_EXIST'		=> 'มีรูปแบบชื่อนี้อยู่แล้ว',
+	'STYLE_ERR_STYLE_NAME'		=> 'คุณต้องระบุชื่อสำหรับรูปแบบนี้',
+	'STYLE_INSTALLED'			=> 'Style "%s" has been installed.',
+	'STYLE_INSTALLED_RETURN_INSTALLED_STYLES'	=> 'Return to installed styles list',
+	'STYLE_INSTALLED_RETURN_UNINSTALLED_STYLES'	=> 'Install more styles',
+	'STYLE_NAME'				=> 'ชื่อรูปแบบ',
+	'STYLE_NOT_INSTALLED'		=> 'Style "%s" was not installed.',
+	'STYLE_PATH'				=> 'Style path',
+	'STYLE_UNINSTALL'			=> 'Uninstall',
+	'STYLE_UNINSTALL_DEPENDENT'	=> 'Style "%s" cannot be uninstalled because it has one or more child styles.',
+	'STYLE_UNINSTALLED'			=> 'Style "%s" uninstalled successfully.',
+	'STYLE_USED_BY'				=> 'ถูกใช้โดย (รวมบอทด้วย)',
+
+	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+
+	// 3.0.12
 	'ACP_IMAGESETS_EXPLAIN'	=> 'imagesets ประกอบด้วย ปุ่ม, forum, โฟลเดอร์, etc. และรูปอื่นที่ใช้ภายในบอร์ด. คุณสามารถแก้ไข ส่งออกหรือลบ imagesets และนำเข้า หรือ ใช้อันใหม่.',
-	'ACP_STYLES_EXPLAIN'	=> 'คุณสามารถจัดการรูปแบบที่มีอยู่.รูปแบบประกอบไปด้วย Templates,Themes และ imageset. คุณสามารถปรับแต่งรูปแบบที่มีอยู่ได้. คุณสามารถดูรูปแบบตัวอย่างได้ก่อนจาก ปุ่มแสดงตัวอย่าง. รูปแบบหลักของบอร์ดจะมีเครื่องหมายดอกจัน (*) กำกับไว้.',
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 	'ACP_TEMPLATES_EXPLAIN'	=> 'คุณสามารถปรับแต่ง Template ได้ . คุณยังสามารถใช้ BBCode เพื่อปรับแต่ง Template ได้ด้วย',
 	'ACP_THEMES_EXPLAIN'	=> 'คุณสามารปรับแต่ง Theme ได้. ตัวเลือกในการปรับแต่ง ขึ้นอยู่กับสิ่งที่ติดตั้งบนเซิร์ฟเวอร์ และการติดตั้ง phpBB, โปรดอ่านคู่มือสำหรับรายละเอียดเพิ่มเติม',
 	'ADD_IMAGESET'			=> 'Imageset',
@@ -14550,7 +15216,6 @@ $lang = array_merge($lang, array(
 	'CURRENT_IMAGE'					=> 'รูปภาพที่คุณใช้อยู่',
 
 	'DEACTIVATE_DEFAULT'		=> 'คุณไม่สามารถยกเลิกรูปแบบเริ่มต้นได้',
-	'DELETE_FROM_FS'			=> 'ลบจากระบบไฟล์',
 	'DELETE_IMAGESET'			=> 'ลบ imageset',
 	'DELETE_IMAGESET_EXPLAIN'	=> 'คุณสามารถลบ imageset ที่เลือกจากฐานข้อมูล.. โปรดจำไว้ว่าการกระทำนี้ไม่สามารถย้อนกลับได้. ถ้าเป็นไปได้ให้ส่งออกก่อนเผื่อจะนำ กลับมาใช้ใหม่ในอนาคต.',
 	'DELETE_STYLE'				=> 'ลบ style',
@@ -14749,7 +15414,6 @@ $lang = array_merge($lang, array(
 	'INCLUDE_IMAGESET'			=> 'รวม imageset',
 	'INCLUDE_TEMPLATE'			=> 'รวม  Template ',
 	'INCLUDE_THEME'				=> 'รวม  Theme ',
-	'INHERITING_FROM'			=> 'Inherits from',
 	'INSTALL_IMAGESET'			=> 'รวม imageset',
 	'INSTALL_IMAGESET_EXPLAIN'	=> 'คุณสามารถติดตั้ง imageset. คุณสามารถแก้ไขรายละเอียดได้ตามต้องการ หรือใช่ค่าเริ่มต้นของการติดตั้ง',
 	'INSTALL_STYLE'				=> 'ติดตั้งรูปแบบ',
@@ -14779,7 +15443,6 @@ $lang = array_merge($lang, array(
 	'NO_TEMPLATE'				=> 'ไม่พบ Template ในระบบไฟล์.',
 	'NO_THEME'					=> 'ไม่พบ Theme ในระบบไฟล์.',
 	'NO_UNINSTALLED_IMAGESET'	=> 'ไม่พบการยกเลิกการติดตั้ง imagesets',
-	'NO_UNINSTALLED_STYLE'		=> 'ไม่พบการยกเลิกการติดตั้งรูปแบบ',
 	'NO_UNINSTALLED_TEMPLATE'	=> 'ไม่พบการยกเลิกการติดตั้ง  Template ',
 	'NO_UNINSTALLED_THEME'		=> 'ไม่พบการยกเลิกการติดตั้ง  Theme ',
 	'NO_UNIT'					=> 'ไม่มี',
@@ -14819,30 +15482,22 @@ $lang = array_merge($lang, array(
 	'SELECTED_THEME_FILE'		=> 'ไฟล์ Theme เลือก',
 	'STORE_DATABASE'			=> 'ฐานข้อมูล',
 	'STORE_FILESYSTEM'			=> 'ระบบไฟล์',
-	'STYLE_ACTIVATE'			=> 'ทำให้ใช้งานได้',
-	'STYLE_ACTIVE'				=> 'ใช้งานอยู่',
 	'STYLE_ADDED'				=> 'เพิ่มรูปแบบเรียบร้อยแล้ว.',
-	'STYLE_DEACTIVATE'			=> 'ยกเลิกการใช้งาน',
-	'STYLE_DEFAULT'				=> 'ทำให้เป็นรูปแบบเริ่มต้น',
 	'STYLE_DELETED'				=> 'ลบรูปแบบเรียบร้อยแล้ว.',
 	'STYLE_DETAILS_UPDATED'		=> 'แก้ไขรูปแบบเรียบร้อยแล้ว.',
 	'STYLE_ERR_ARCHIVE'			=> 'โปรดเลือกวิธีการเก็บเอกสาร',
 	'STYLE_ERR_COPY_LONG'		=> 'ข้อความลิขสิทธิ์ ต้องไม่ยาวไปกว่า 60 ตัวอักษร',
 	'STYLE_ERR_MORE_ELEMENTS'	=> 'คุณต้องเลือกรูปแบบอย่างน้อยหนึ่งอัน',
 	'STYLE_ERR_NAME_CHARS'		=> 'ชื่อรูปแบบต้องเป็นตัวอักษร A-Z, 0-9, -, +, _ และช่องว่าง',
-	'STYLE_ERR_NAME_EXIST'		=> 'มีรูปแบบชื่อนี้อยู่แล้ว',
 	'STYLE_ERR_NAME_LONG'		=> 'ชื่อรูปแบบต้องไม่ยาวไปกว่า 30 ตัวอักษร',
 	'STYLE_ERR_NO_IDS'			=> 'คุณต้องเลือก Template , Theme และ imageset สำหรับรูปแบบนี้',
 	'STYLE_ERR_NOT_STYLE'		=> 'ไฟล์ที่นำเข้าหรืออัพโหลด มีรูปแบบเอกสารที่ไม่ถูกต้อง',
-	'STYLE_ERR_STYLE_NAME'		=> 'คุณต้องระบุชื่อสำหรับรูปแบบนี้',
 	'STYLE_EXPORT'				=> 'ส่งออกรูปแบบ',
 	'STYLE_EXPORT_EXPLAIN'		=> 'คุณสามารถส่งออกรูปแบบในแบบเอกสาร คุณสามารถเลือกที่จะดาวน์โหลดไฟล์โดยตรงหรือวางในโฟลเดอร์สำหรับการดาวน์โหลดทีหลัง หรือผ่านทาง',
 	'STYLE_EXPORTED'			=> 'ส่งออกรูปแบบเรียบร้อยแล้ว และเก็บใน%s.',
 	'STYLE_IMAGESET'			=> 'imageset',
-	'STYLE_NAME'				=> 'ชื่อรูปแบบ',
 	'STYLE_TEMPLATE'			=> ' Template ',
 	'STYLE_THEME'				=> ' Theme ',
-	'STYLE_USED_BY'				=> 'ถูกใช้โดย (รวมบอทด้วย)',
 
 	'TEMPLATE_ADDED'			=> 'เพิ่ม Template และเก็บลงระบบไฟล์.',
 	'TEMPLATE_ADDED_DB'			=> 'เพิ่ม Template และเก็บในฐานข้อมูล.',
@@ -14940,6 +15595,7 @@ $lang = array_merge($lang, array(
 	'CANNOT_FORCE_REACT_FOUNDER'	=> 'คุณไม่ได้รับอนุญาตให้บังคับการเรียกบัญชีผู้ก่อตั้งกลับมาใช้งานใหม่',
 	'CANNOT_FORCE_REACT_YOURSELF'	=> 'คุณไม่ได้รับอนุญาตให้บังคับการเรียกบัญชีตัวเองกลับมาใช้งานใหม่',
 	'CANNOT_REMOVE_ANONYMOUS'		=> 'คุณไม่สามารถลบบัญชีแขกผู้เยี่ยมชม',
+	'CANNOT_REMOVE_FOUNDER'			=> 'You are not allowed to remove founder accounts.',
 	'CANNOT_REMOVE_YOURSELF'		=> 'คุณไม่ได้รับอนุญาตให้ลบบัญชีตัวเอง',
 	'CANNOT_SET_FOUNDER_IGNORED'	=> 'คุณไม่สามารถยกระดับผู้ใช้ที่ถูกละเลยให้เป็นผู้ก่อตั้ง',
 	'CANNOT_SET_FOUNDER_INACTIVE'	=> 'คุณต้องทำให้ผู้ใช้ใช้งานได้ก่อนที่จะยกระดับให้เป็นผู้ก่อตั้ง',
@@ -14966,7 +15622,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'กรุณาเลือก forum ที่คุณต้องการจะย้ายโพสต์ทั้งหมดที่ผู้ใช้คนนี้ได้กระทำไป',
 
 	'NO_SPECIAL_RANK'		=> 'ไม่มีการกำหนดอันดับพิเศษ',
-	'NO_WARNINGS'			=> 'ไม่มีคำเตือน.',
+	'NO_WARNINGS'			=> 'No warnings exist.',
 	'NOT_MANAGE_FOUNDER'	=> 'ผู้ก่อตั้งเท่านั้นที่สามารถจัดการสถานะของผู้ก่อตั้งด้วยกันเอง',
 
 	'QUICK_TOOLS'			=> 'เครื่องมือลัด',

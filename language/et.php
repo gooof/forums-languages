@@ -1,5 +1,14 @@
 ﻿<?php
 
+#######language/en/app.php#######
+
+$lang = array_merge($lang, array(
+	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
+	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
+	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+));
+
 #######language/en/calendar.php#######
 
 $lang = array_merge($lang, array(
@@ -182,6 +191,55 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Sinu privaatne reCaptcha võti. Võtmeid saab <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a> veebilehelt.',
 
 	'RECAPTCHA_EXPLAIN'				=> 'Et ennetada automaatseid teateid, nõuame, et sisestaksid mõlemad sõnad tekstivälja.',
+	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
+));
+
+#######language/en/cli.php#######
+
+$lang = array_merge($lang, array(
+	'CLI_CONFIG_CANNOT_CACHED'			=> 'Set this option if the configuration option changes too frequently to be efficiently cached.',
+	'CLI_CONFIG_CURRENT'				=> 'Current configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_DELETE_SUCCESS'			=> 'Successfully deleted config %s.',
+	'CLI_CONFIG_NEW'					=> 'New configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_NOT_EXISTS'				=> 'Config %s does not exist',
+	'CLI_CONFIG_OPTION_NAME'			=> 'The configuration option’s name',
+	'CLI_CONFIG_PRINT_WITHOUT_NEWLINE'	=> 'Set this option if the value should be printed without a new line at the end.',
+	'CLI_CONFIG_INCREMENT_BY'			=> 'Amount to increment by',
+	'CLI_CONFIG_INCREMENT_SUCCESS'		=> 'Successfully incremented config %s',
+	'CLI_CONFIG_SET_FAILURE'			=> 'Could not set config %s',
+	'CLI_CONFIG_SET_SUCCESS'			=> 'Successfully set config %s',
+
+	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
+	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
+	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
+	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
+	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
+	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
+	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
+	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
+	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
+	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
+	'CLI_EXTENSION_ENABLE_FAILURE'		=> 'Could not enable extension %s',
+	'CLI_EXTENSION_ENABLE_SUCCESS'		=> 'Successfully enabled extension %s',
+	'CLI_EXTENSION_NAME'				=> 'Name of the extension',
+	'CLI_EXTENSION_PURGE_FAILURE'		=> 'Could not purge extension %s',
+	'CLI_EXTENSION_PURGE_SUCCESS'		=> 'Successfully purged extension %s',
+	'CLI_EXTENSION_NOT_FOUND'			=> 'No extensions were found.',
+	'CLI_EXTENSIONS_AVAILABLE'			=> 'Available',
+	'CLI_EXTENSIONS_DISABLED'			=> 'Disabled',
+	'CLI_EXTENSIONS_ENABLED'			=> 'Enabled',
+
+	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
 ));
 
 #######language/en/common.php#######
@@ -190,7 +248,11 @@ $lang = array_merge($lang, array(
 	'TRANSLATION_INFO'	=> 'phpBB3 free Forum by <a href="http://www.userboard.org/">UserBoard.org</a> | All Rights Reserved.',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
+	'DATETIME_FORMAT'	=> '|d M Y, H:i|',	// 01 Jan 2007, 13:37 (with Relative days enabled)
 	'USER_LANG'			=> 'et',
+
+	// See http://wiki.phpbb.com/Plural_Rules for more information
+	'PLURAL_RULE'		=> '1',
 
 	'1_DAY'			=> '1 päeva',
 	'1_MONTH'		=> '1 kuu',
@@ -204,18 +266,24 @@ $lang = array_merge($lang, array(
 	'ACCOUNT_DEACTIVATED'			=> 'Sinu konto on deaktiveeritud ja selle saab uuesti aktiveerida vaid administraator.',
 	'ACCOUNT_NOT_ACTIVATED'			=> 'Sinu konto pole veel aktiveeritud.',
 	'ACP'							=> 'Administraatori juhtpaneel',
+	'ACP_SHORT'						=> 'ACP',
 	'ACTIVE'						=> 'aktiivne',
 	'ACTIVE_ERROR'					=> 'Sisestatud kasutajanimi pole hetkel aktiveeritud. Kui sul on probleeme konto aktiveerimisega, kontakteeru foorumi administraatoriga.',
 	'ADMINISTRATOR'					=> 'Administraator',
 	'ADMINISTRATORS'				=> 'Administraatorid',
 	'AGE'							=> 'Vanus',
 	'AIM'							=> 'AIM',
+	'AJAX_ERROR_TITLE'				=> 'AJAX error',
+	'AJAX_ERROR_TEXT'				=> 'Something went wrong when processing your request.',
+	'AJAX_ERROR_TEXT_ABORT'			=> 'User aborted request.',
+	'AJAX_ERROR_TEXT_TIMEOUT'		=> 'Your request timed out; please try again.',
+	'AJAX_ERROR_TEXT_PARSERERROR'	=> 'Something went wrong with the request and the server returned an invalid reply.',
 	'ALLOWED'						=> 'Lubatud',
 	'ALL_FILES'						=> 'Kõik failid',
 	'ALL_FORUMS'					=> 'Kõik foorumid',
 	'ALL_MESSAGES'					=> 'Kõik sõnumid',
 	'ALL_POSTS'						=> 'Kõik postitused',
-	'ALL_TIMES'						=> 'Kõik kellaajad on %1$s %2$s',
+	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'Kõik teemad',
 	'AND'							=> 'ja',
 	'ARE_WATCHING_FORUM'			=> 'Oled tellinud selle foorumi uutest postitustest teatamise.',
@@ -225,6 +293,14 @@ $lang = array_merge($lang, array(
 	'ATTACHED_IMAGE_NOT_IMAGE'		=> 'Pildifail, mida üritasid lisada, on ebakorrektne.',
 	'AUTHOR'						=> 'Autor',
 	'AUTH_NO_PROFILE_CREATED'		=> 'Kasutaja profiili loomine ebaõnnestus.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_ENTRY'				=> 'Invalid database entry.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_SERVICE_TYPE'		=> 'Invalid service type provided to OAuth service handler.',
+	'AUTH_PROVIDER_OAUTH_ERROR_SERVICE_NOT_CREATED'			=> 'OAuth service not created',
+	'AUTH_PROVIDER_OAUTH_SERVICE_BITLY'						=> 'Bitly',
+	'AUTH_PROVIDER_OAUTH_SERVICE_FACEBOOK'					=> 'Facebook',
+	'AUTH_PROVIDER_OAUTH_SERVICE_GOOGLE'					=> 'Google',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_NOT_STORED'			=> 'OAuth token not stored.',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_INCORRECTLY_STORED'	=> 'OAuth token incorrectly stored.',
 	'AVATAR_DISALLOWED_CONTENT'		=> 'Üleslaadimine keelati, sest üleslaetav fail identifitseeriti rünnakuvektorina.',
 	'AVATAR_DISALLOWED_EXTENSION'	=> 'Seda faili ei saa näidata, sest selle faililühend pole lubatud.',
 	'AVATAR_EMPTY_REMOTE_DATA'		=> 'Täpsustatud avatari ei saanud üles laadida, sest see on vigane.',
@@ -235,10 +311,11 @@ $lang = array_merge($lang, array(
 	'AVATAR_PARTIAL_UPLOAD'			=> 'Fail laeti üles vaid osaliselt.',
 	'AVATAR_PHP_SIZE_NA'			=> 'Avatarifaili suurus ületab lubatu.<br />Maksimaalset lubatud failisuurust ei ole kindlaks määeratud.',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'Avatarifaili suurus ületab lubatu. Maksimaalset lubatud failisuurus on %1$d %2$s.<br />See on kirjutatud php.ini faili ja seda ei saa ületada.',
+	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
 	'AVATAR_URL_INVALID'			=> 'Sisestatud URL on ebakorrektne.',
 	'AVATAR_URL_NOT_FOUND'			=> 'Faili ei leitud',
-	'AVATAR_WRONG_FILESIZE'			=> 'Avatarifaili suurus peab olema vahemikus 0 ja %1d %2s.',
-	'AVATAR_WRONG_SIZE'				=> 'Sisestatud avatar on %5$d pikslit lai ja %6$d pikslit kõrge. Avatar peab olema vähemalt %1$d pikslit lai ja %2$d pikslit kõrge, kuid mitte rohkem kui %3$d pikslit lai ja %4$d pikslit kõrge.',
+	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
+	'AVATAR_WRONG_SIZE'				=> 'The submitted avatar is %5$s wide and %6$s high. Avatars must be at least %1$s wide and %2$s high, but no larger than %3$s wide and %4$s high.',
 
 	'BACK_TO_TOP'			=> 'Üles',
 	'BACK_TO_PREV'			=> 'Tagasi eelmisele lehele',
@@ -255,28 +332,42 @@ $lang = array_merge($lang, array(
 	'BOARD_DISABLED'		=> 'See foorum on hetkel kinni.',
 	'BOARD_UNAVAILABLE'		=> 'Vabandame, foorum pole hetkel kättesaadav, proovi mõne minuti pärast uuesti.',
 	'BROWSING_FORUM'		=> 'Kasutajad foorumit lugemas: %1$s',
-	'BROWSING_FORUM_GUEST'	=> 'Kasutajad foorumit lugemas: %1$s ja %2$d külaline',
-	'BROWSING_FORUM_GUESTS'	=> 'Kasutajad foorumit lugemas: %1$s ja %2$d külalist',
+	'BUTTON_EDIT'			=> 'Edit',
+	'BUTTON_FORUM_LOCKED'	=> 'Locked',
+	'BUTTON_NEW_TOPIC'		=> 'New Topic',
+	'BUTTON_PM'				=> 'PM',
+	'BUTTON_PM_FORWARD'		=> 'Forward',
+	'BUTTON_PM_NEW'			=> 'New PM',
+	'BUTTON_PM_REPLY'		=> 'Send Reply',
+	'BUTTON_PM_REPLY_ALL'	=> 'Reply All',
+	'BUTTON_POST_REPLY'		=> 'Post Reply',
+	'BUTTON_QUOTE'			=> 'Quote',
+	'BUTTON_TOPIC_LOCKED'	=> 'Locked',
 	'BYTES'					=> 'Baiti',
+	'BYTES_SHORT'			=> 'B',
 
 	'CANCEL'				=> 'Loobu',
 	'CHANGE'				=> 'Muuda',
 	'CHANGE_FONT_SIZE'		=> 'Muuda fondi suurust',
 	'CHANGING_PREFERENCES'	=> 'Muudab foorumi valikuid',
 	'CHANGING_PROFILE'		=> 'Muudab profiili',
-	'CLICK_VIEW_PRIVMSG'	=> '%sMine sissetulnud sõnumite juurde%s',
 	'COLLAPSE_VIEW'			=> 'Ahendatud vaade',
 	'CLOSE_WINDOW'			=> 'Sule aken',
 	'COLOUR_SWATCH'			=> 'Värviskeem',
-	'COMMA_SEPARATOR'		=> ', ',	// Used in pagination of ACP & prosilver, use localised comma if appropriate, eg: Ideographic or Arabic
+	'COLON'					=> ':',
+	'COMMA_SEPARATOR'		=> ', ',	// Comma used to join lists into a single string, use localised comma if appropriate, eg: Ideographic or Arabic
 	'CONFIRM'				=> 'Kinnita',
 	'CONFIRM_CODE'			=> 'Kinnituskood',
 	'CONFIRM_CODE_EXPLAIN'	=> 'Sisesta kood täpselt nagu pildil. Tõusutundlikkus ei loe.',
 	'CONFIRM_CODE_WRONG'	=> 'Sisestasid vale kinnituskoodi.',
 	'CONFIRM_OPERATION'		=> 'Soovid sa selle operatsiooni lõpetada?',
+	'CONFIRM_AVATAR_DELETE' => 'Are you sure you wish to delete this avatar?',
 	'CONGRATULATIONS'		=> 'Õnnitleme:',
 	'CONNECTION_FAILED'		=> 'Ühendus ebaõnnestus.',
 	'CONNECTION_SUCCESS'	=> 'Ühendus õnnestus!',
+	'CONTACT'				=> 'Võta ühendust kasutajaga',
+	'CONTACT_USER'			=> 'Contact %s',
+	'CONTACT_US'			=> 'Contact us',
 	'COOKIES_DELETED'		=> 'Kõik foorumi küpsised on kustutatud.',
 	'CURRENT_TIME'			=> 'Tänane kuupäev %s',
 
@@ -297,18 +388,13 @@ $lang = array_merge($lang, array(
 	'DISPLAY_TOPICS'		=> 'Näita teemasid eelmisest',
 	'DOWNLOADED'			=> 'Alla laetud',
 	'DOWNLOADING_FILE'		=> 'Laen faili alla',
-	'DOWNLOAD_COUNT'		=> 'Alla laetud %d kord',
-	'DOWNLOAD_COUNTS'		=> 'Alla laetud %d korda',
-	'DOWNLOAD_COUNT_NONE'	=> 'Pole veel alla laetud',
-	'VIEWED_COUNT'			=> 'Vaadatud %d kord',
-	'VIEWED_COUNTS'			=> 'Vaadatud %d korda',
-	'VIEWED_COUNT_NONE'		=> 'Pole veel vaadatud',
 
 	'EDIT_POST'							=> 'Muuda postitust',
-	'EMAIL'								=> 'E-post', // Short form for EMAIL_ADDRESS
-	'EMAIL_ADDRESS'						=> 'E-postiaadress',
-	'EMAIL_INVALID_EMAIL'				=> 'Sisestatud e-posti aadress on ebakorrektne.',
-	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Tekkis probleem: Ran into problems sending e-mail at <strong>Line %1$s</strong>. Vastus: %2$s.',
+	'ELLIPSIS'							=>	'…',
+	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
+	'EMAIL_ADDRESS'						=> 'Email address',
+	'EMAIL_INVALID_EMAIL'				=> 'The email address you entered is invalid.',
+	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ran into problems sending email at <strong>Line %1$s</strong>. Response: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Uut teemat tehes pead sisestama pealkirja.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Uut sõnumit tehes pead sisestama pealkirja',
 	'ENABLED'							=> 'Lubatud',
@@ -322,17 +408,23 @@ $lang = array_merge($lang, array(
 	'ERR_UNWATCHING'					=> 'Tellimuse peatamisel tekkis viga.',
 	'ERR_WATCHING'						=> 'Tellimisel tekkis viga.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'phpBB kaust serveris on ebakorrektne.',
+	'ERROR'									=> 'Viga',
 	'EXPAND_VIEW'						=> 'Laiendatud vaade',
 	'EXTENSION'							=> 'Laiend',
+	'EXTENSION_DISABLED'				=> 'The extension <strong>%s</strong> is not enabled.',
 	'EXTENSION_DISABLED_AFTER_POSTING'	=> 'Laiend <strong>%s</strong> on deaktiveeritud ja seda ei saa enam kuvada.',
+	'EXTENSION_DOES_NOT_EXIST'			=> 'The extension <strong>%s</strong> does not exist.',
 
+	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> 'KKK',
 	'FAQ_EXPLAIN'			=> 'Korduma Kippuvad Küsimused',
 	'FILENAME'				=> 'Faili nimi',
 	'FILESIZE'				=> 'Faili suurus',
 	'FILEDATE'				=> 'Faili kuupäev',
 	'FILE_COMMENT'			=> 'Faili kommentaar',
-	'FILE_NOT_FOUND'		=> 'Soovitud faili ei leitud',
+	'FILE_CONTENT_ERR'		=> 'Could not read the contents of file: %s',
+	'FILE_JSON_DECODE_ERR'	=> 'Failed to decode json file: %s',
+	'FILE_NOT_FOUND'		=> 'The requested file could not be found: %s',
 	'FIND_USERNAME'			=> 'Leia kasutaja',
 	'FOLDER'				=> 'Kaust',
 	'FORGOT_PASS'			=> 'Ma unustasin oma parooli',
@@ -381,6 +473,9 @@ $lang = array_merge($lang, array(
 	'GB'						=> 'GB',
 	'GIB'						=> 'GiB',
 	'GO'						=> 'Mine',
+	'GOOGLEPLUS'				=> 'Google+',
+	'GOTO_FIRST_POST'			=> 'Go to first post',
+	'GOTO_LAST_POST'			=> 'Go to last post',
 	'GOTO_PAGE'					=> 'Mine lehele',
 	'GROUP'						=> 'Grupp',
 	'GROUPS'					=> 'Grupid',
@@ -388,12 +483,6 @@ $lang = array_merge($lang, array(
 	'GROUP_ERR_USERNAME'		=> 'Grupi nime ei määratud',
 	'GROUP_ERR_USER_LONG'		=> 'Grupi nime pikkus ei tohi olla rohkem kui 60 sümbolit. Sisestatud grupi nimi on liiga pikk.',
 	'GUEST'						=> 'Külaline',
-	'GUEST_USERS_ONLINE'		=> '%d külalist on foorumil',
-	'GUEST_USERS_TOTAL'			=> '%d külalist',
-	'GUEST_USERS_ZERO_ONLINE'	=> 'Külalisi pole foorumil',
-	'GUEST_USERS_ZERO_TOTAL'	=> '0 külalist',
-	'GUEST_USER_ONLINE'			=> '%d külaline on foorumil',
-	'GUEST_USER_TOTAL'			=> '%d külaline',
 	'G_ADMINISTRATORS'			=> 'Administraatorid',
 	'G_BOTS'					=> 'Botid',
 	'G_GUESTS'					=> 'Külalised',
@@ -402,22 +491,12 @@ $lang = array_merge($lang, array(
 	'G_GLOBAL_MODERATORS'		=> 'Üldmoderaatorid',
 	'G_NEWLY_REGISTERED'		=> 'Vastregistreerunud kasutajad',
 
-	'HIDDEN_USERS_ONLINE'			=> '%d varjatud kasutajat foorumil',
-	'HIDDEN_USERS_TOTAL'			=> '%d varjatut',
-	'HIDDEN_USERS_TOTAL_AND'		=> '%d varjatut ja ',
-	'HIDDEN_USERS_ZERO_ONLINE'		=> ' 0 varjatud kasutajat foorumil',
-	'HIDDEN_USERS_ZERO_TOTAL'		=> '0 varjatut',
-	'HIDDEN_USERS_ZERO_TOTAL_AND'	=> '0 varjatut ja ',
-	'HIDDEN_USER_ONLINE'			=> '%d varjatud kasutaja foorumil',
-	'HIDDEN_USER_TOTAL'				=> '%d varjatu',
-	'HIDDEN_USER_TOTAL_AND'			=> '%d varjatu ja ',
 	'HIDE_GUESTS'					=> 'Peida külalised',
 	'HIDE_ME'						=> 'Varja minu foorumilolekut sellel sessioonil',
 	'HOURS'							=> 'Tundi',
 	'HOME'							=> 'Kodu',
 
 	'ICQ'						=> 'ICQ',
-	'ICQ_STATUS'				=> 'ICQ staatus',
 	'IF'						=> 'Kui',
 	'IMAGE'						=> 'Pilt',
 	'IMAGE_FILETYPE_INVALID'	=> 'Pilditüüp %d failitüübi %s jaoks pole lubatud.',
@@ -425,9 +504,11 @@ $lang = array_merge($lang, array(
 	'IN'						=> 'in',
 	'INDEX'						=> 'Pealeht', //Index page
 	'INFORMATION'				=> 'Teade/Info',
+	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
 	'INTERESTS'					=> 'Huvid',
 	'INVALID_DIGEST_CHALLENGE'	=> 'Viga: Invalid digest challenge.',
-	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> on ilmselt vale e-posti aadress?',
+	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> possibly an invalid email address?',
+	'INVALID_PLURAL_RULE'		=> 'The chosen plural rule is invalid. Valid values are integers between 0 and 15.',
 	'IP'						=> 'IP',
 	'IP_BLACKLISTED'			=> 'Sinu IP %1$s on blokeeritud, sest see on mustas nimekirjas. Detailide jaoks vaata: <a href=',
 
@@ -435,7 +516,8 @@ $lang = array_merge($lang, array(
 	'JOINED'				=> 'Liitunud',
 	'JUMP_PAGE'				=> 'Sisesta lehe number, kuhu soovid minna.',
 	'JUMP_TO'				=> 'Hüppa',
-	'JUMP_TO_PAGE'			=> 'Vajuta, et hüpata lehele',
+	'JUMP_TO_PAGE'			=> 'Jump to page',
+	'JUMP_TO_PAGE_CLICK'	=> 'Click to jump to page…',
 
 	'KB'					=> 'KB',
 	'KIB'					=> 'KB',
@@ -447,6 +529,8 @@ $lang = array_merge($lang, array(
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Ei suutnud ühendada LDAP serveriga.',
 	'LDAP_SEARCH_FAILED'				=> 'LDAP kaustast otsimisel tekkis viga.',
 	'LEGEND'							=> 'Legend',
+	'LIVE_SEARCHES_NOT_ALLOWED'			=> 'Live searches are not allowed.',
+	'LOADING'							=> 'Loading',
 	'LOCATION'							=> 'Asukoht',
 	'LOCK_POST'							=> 'Sule postitus',
 	'LOCK_POST_EXPLAIN'					=> 'Ära lase muuta',
@@ -457,6 +541,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_CONFIRM_EXPLAIN'				=> 'Et ära hoida brute force kontosid tahame, et sisestaksid kinnituskoodi peale nii paljusid valesid sisselogimiskatseid. Kood on kuvatud pildina siin samas all. Kui sul on nägemiskahjustus või ei saa mingil muul põhjusel pilti näha, siis kontakteeru %s Administaatoritega %s.', // unused
 	'LOGIN_ERROR_ATTEMPTS'				=> 'Sa ületasid sisselogimiskatsete arvu. Lisaks kasutajanimele ja paroolile pead nüüd ka sisestama kinnituskoodi, mida näed all.',
 	'LOGIN_ERROR_EXTERNAL_AUTH_APACHE'	=> 'Apache ei tuvastanud sind.',
+	'LOGIN_ERROR_OAUTH_SERVICE_DOES_NOT_EXIST'	=> 'A non-existant OAuth service has been requested.',
 	'LOGIN_ERROR_PASSWORD'				=> 'Sisestasid vale parooli. Kontrolli parooli ja proovi uuesti. Kui sul esineb jätkuvalt sellega probleeme, võta ühendust %sfoorumi administraatoriga%s.',
 	'LOGIN_ERROR_PASSWORD_CONVERT'		=> 'Ei olnud võimalik konvertida salasõna, kui uuendati bulletin boardi tarkvara. Palun %palu uus salasõna%. Kui probleemid jätkuvad, võta ühendust %sfoorumi administraatoriga%s.',
 	'LOGIN_ERROR_USERNAME'				=> 'Sisestasid vale kasutajanime. Kontrolli kasutajanime ja proovi uuesti. Kui sul esineb jätkuvalt sellega probleeme, võta ühendust %sfoorumi administraatoriga%s.',
@@ -465,17 +550,22 @@ $lang = array_merge($lang, array(
 	'LOGIN_VIEWFORUM'					=> 'Pead olema registreeritud ja sisse logitud, et näha seda foorumit.',
 	'LOGIN_EXPLAIN_EDIT'				=> 'Postituste muutmiseks pead olema registreeritud ja sisselogitud',
 	'LOGIN_EXPLAIN_VIEWONLINE'			=> 'Foorumilolevate kasutajate nimekirja vaatamiseks pead olema registreeritud ja sisselogitud.',
+	'LOGIN_REQUIRED'					=> 'You need to login to perform this action.',
 	'LOGOUT'							=> 'Logi välja',
 	'LOGOUT_USER'						=> 'Logi välja, [ %s ]',
-	'LOG_ME_IN'							=> 'Logi mind sisse automaatselt igal külastusel',
+	'LOG_ME_IN'							=> 'Remember me',
 
+	'MAIN'					=> 'Main',
 	'MARK'					=> 'Märgi',
 	'MARK_ALL'				=> 'Märgi kõik',
+	'MARK_ALL_READ'			=> 'Mark all read',
 	'MARK_FORUMS_READ'		=> 'Märgi foorumid loetuks',
+	'MARK_READ'				=> 'Mark read',
 	'MARK_SUBFORUMS_READ'	=> 'Märgi alafoorumit loetuks',
 	'MB'					=> 'MB',
 	'MIB'					=> 'MB',
 	'MCP'					=> 'Moderaatori juhtpaneel',
+	'MCP_SHORT'				=> 'MCP',
 	'MEMBERLIST'			=> 'Kasutajad',
 	'MEMBERLIST_EXPLAIN'	=> 'Vaata kasutajate nimekirja',
 	'MERGE'					=> 'Ühenda',
@@ -488,26 +578,47 @@ $lang = array_merge($lang, array(
 	'MODERATE'				=> 'Modereeri',
 	'MODERATOR'				=> 'Moderaator',
 	'MODERATORS'			=> 'Moderaatorid',
+	'MODULE_NOT_ACCESS'		=> 'Module not accessible',
+	'MODULE_NOT_FIND'		=> 'Cannot find module %s',
+	'MODULE_FILE_INCORRECT_CLASS'	=> 'Module file %s does not contain correct class [%s]',
 	'MONTH'					=> 'Kuud',
 	'MOVE'					=> 'Liiguta',
-	'MSNM'					=> 'MSNM/WLM',
 
 	'NA'						=> 'N/A',
 	'NEWEST_USER'				=> 'Meie uusim kasutaja on <strong>%s</strong>',
 	'NEW_MESSAGE'				=> 'Uus sõnum',
 	'NEW_MESSAGES'				=> 'Uued sõnumid',
-	'NEW_PM'					=> '<strong>%d</strong> uus sõnum',
-	'NEW_PMS'					=> '<strong>%d</strong> uut sõnumit',
 	'NEW_POST'					=> 'Uus postitus',	// Not used anymore
 	'NEW_POSTS'					=> 'Uued postitused',	// Not used anymore
 	'NEXT'						=> 'Järgmine',		// Used in pagination
 	'NEXT_STEP'					=> 'Järgmine',
 	'NEVER'						=> 'Mitte kunagi',
 	'NO'						=> 'Ei',
+	'NO_NOTIFICATIONS'			=> 'You have no notifications',
 	'NOT_ALLOWED_MANAGE_GROUP'	=> 'Sul ei ole lubatud seda gruppi hallata.',
 	'NOT_AUTHORISED'			=> 'Sul ei ole õigusi sellele alale sisenemiseks.',
 	'NOT_WATCHING_FORUM'		=> 'Sa ei telli enam seda foorumit',
 	'NOT_WATCHING_TOPIC'		=> 'Sa ei telli enam seda teemat',
+	'NOTIFICATIONS'				=> 'Notifications',
+	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
+	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
+	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
+	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
+	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
+	'NOTIFICATION_POST_IN_QUEUE'		=> '<strong>Post approval</strong> request by %1$s:',
+	'NOTIFICATION_REFERENCE'			=> '"%1$s"',
+	'NOTIFICATION_REASON'				=> '<em>Reason:</em> %1$s.',
+	'NOTIFICATION_REPORT_PM'			=> '<strong>Private Message reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_POST'			=> '<strong>Post reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_CLOSED'		=> '<strong>Report closed</strong> by %1$s for:',
+	'NOTIFICATION_TOPIC'				=> '<strong>New topic</strong> by %1$s:',
+	'NOTIFICATION_TOPIC_APPROVED'		=> '<strong>Topic approved</strong>:',
+	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
+	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
+	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> 'Palun teata sellest foorumi administraatorile või webmasterile',
 	'NOTIFY_ADMIN_EMAIL'		=> 'Palun teata sellest foorumi administraatorile või webmasterile: <a href=',
 	'NO_ACCESS_ATTACHMENT'		=> 'Sul ei ole lubatud seda faili vaadata.',
@@ -516,6 +627,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_ADMIN'				=> 'Administraatori juhtpaneeli sisenemine on keelatud, sest sul pole administraatori õigusi.',
 	'NO_AUTH_ADMIN_USER_DIFFER'	=> 'Sa ei saa end uuesti autentida teise kasutajana.',
 	'NO_AUTH_OPERATION'			=> 'Sul ei ole vajalikke õigusi selle toimingu lõpetamiseks.',
+	'NO_AVATARS'				=> 'No avatars currently available',
 	'NO_CONNECT_TO_SMTP_HOST'	=> 'Ei saanud ühendada smtp serveriga : %1$s : %2$s',
 	'NO_BIRTHDAYS'				=> 'Täna pole kellelgi sünnipäev',
 	'NO_EMAIL_MESSAGE'			=> 'E-posti sõnum oli tühi.',
@@ -531,7 +643,6 @@ $lang = array_merge($lang, array(
 	'NO_MODE'					=> 'Viisi ei valitud',
 	'NO_MODERATORS'				=> 'Moderaatoreid pole',
 	'NO_NEW_MESSAGES'			=> 'Uusi sõnumeid pole',
-	'NO_NEW_PM'					=> '<strong>0</strong> uut sõnumit',
 	'NO_NEW_POSTS'				=> 'Uusi postitusi pole',	// Not used anymore
 	'NO_ONLINE_USERS'			=> 'Registreeritud kasutajaid pole',
 	'NO_POSTS'					=> 'Postitused puuduvad',
@@ -546,7 +657,6 @@ $lang = array_merge($lang, array(
 	'NO_TOPIC_FORUM'			=> 'Teemat või foorumit enam ei eksisteeri.',
 	'NO_TOPICS'					=> 'Siin foorumis pole teemasid või postitusi',
 	'NO_TOPICS_TIME_FRAME'		=> 'Selles foorumis valitud ajavahemikus teemad puuduvad.',
-	'NO_UNREAD_PM'				=> '<strong>0</strong> lugemata sõnumit',
 	'NO_UNREAD_POSTS'			=> 'Pole lugemata postitusi',
 	'NO_UPLOAD_FORM_FOUND'		=> 'Üleslaadimine käivitus, aga ühtegi kehtivat üleslaadimise vormi ei leitud.',
 	'NO_USER'					=> 'Sellist kasutajat ei eksisteeri.',
@@ -557,15 +667,14 @@ $lang = array_merge($lang, array(
 	'OFFLINE'					=> 'Eemal',
 	'ONLINE'					=> 'Foorumil',
 	'ONLINE_BUDDIES'			=> 'Foorumil sõbrad',
-	'ONLINE_USERS_TOTAL'		=> 'Kokku on <strong>%d</strong> kasutajat foorumil :: ',
-	'ONLINE_USERS_ZERO_TOTAL'	=> 'Kokku on <strong>0</strong> kasutajat foorumil :: ',
-	'ONLINE_USER_TOTAL'			=> 'Kokku on <strong>%d</strong> kasutaja foorumil :: ',
 	'OPTIONS'					=> 'Valikud',
 
 	'PAGE_OF'				=> '<strong>%1$d</strong>. leht <strong>%2$d</strong>-st',
+	'PAGE_TITLE_NUMBER'		=> 'Page %s',
 	'PASSWORD'				=> 'Parool',
 	'PIXEL'					=> 'px',
 	'PLAY_QUICKTIME_FILE'	=> 'Esita Quicktime fail',
+	'PLEASE_WAIT'			=> 'Please wait.',
 	'PM'					=> 'PS',
 	'PM_REPORTED'			=> 'Vajuta, et raportit vaadata',
 	'POSTING_MESSAGE'		=> 'Postitab %s teemasse',
@@ -578,9 +687,15 @@ $lang = array_merge($lang, array(
 	'POSTED_ON_DATE'		=> '-',
 	'POSTS'					=> 'Postitusi',
 	'POSTS_UNAPPROVED'		=> 'Vähemalt üks postitus siin teemas pole lubatud.',
+	'POSTS_UNAPPROVED_FORUM'=> 'At least one post in this forum has not been approved.',
 	'POST_BY_AUTHOR'		=> 'Postitas',
-	'POST_BY_FOE'			=> 'Selle postituse postitas <strong>%1$s</strong>, kes on hetkel sinu ignoreeritavate kasutajate nimekirjas. %2$sNäita postitust%3$s.',
+	'POST_BY_FOE'			=> '<strong>%1$s</strong>, who is currently on your ignore list, made this post.',
+	'POST_DISPLAY'			=> '%1$sDisplay this post%2$s.',
 	'POST_DAY'				=> '%.2f postitust päevas',
+	'POST_DELETED_ACTION'	=> 'Deleted post:',
+	'POST_DELETED'			=> 'This post has been deleted.',
+	'POST_DELETED_BY'		=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s.',
+	'POST_DELETED_BY_REASON'=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s for the following reason: %4$s',
 	'POST_DETAILS'			=> 'Postituse andmed',
 	'POST_NEW_TOPIC'		=> 'Tee uus teema',
 	'POST_PCT'				=> '%.2f%% kõigist postitustest',
@@ -591,7 +706,8 @@ $lang = array_merge($lang, array(
 	'POST_SUBJECT'			=> 'Teema pealkiri',
 	'POST_TIME'				=> 'Postituse aeg',
 	'POST_TOPIC'			=> 'Tee uus teema',
-	'POST_UNAPPROVED'		=> 'See postitus ootab heakskiitu',
+	'POST_UNAPPROVED_ACTION'	=> 'Post awaiting approval:',
+	'POST_UNAPPROVED'		=> 'This post has not been approved.',
 	'POWERED_BY'			=> 'Powered by %s',
 	'PREVIEW'				=> 'Eelvaade',
 	'PREVIOUS'				=> 'Eelmine',		// Used in pagination
@@ -601,6 +717,8 @@ $lang = array_merge($lang, array(
 	'PRIVATE_MESSAGES'		=> 'Privaatsõnumid',
 	'PRIVATE_MESSAGING'		=> 'Privaatsõnumite saatmine',
 	'PROFILE'				=> 'Juhtpaneel',
+
+	'QUICK_LINKS'			=> 'Quick links',
 
 	'RANK'						=> 'Tiitel',
 	'READING_FORUM'				=> 'Vaatab teemasid %s foorumis',
@@ -614,15 +732,6 @@ $lang = array_merge($lang, array(
 	'REDIRECTS'					=> 'Suunamisi kokku',
 	'REGISTER'					=> 'Registreeru',
 	'REGISTERED_USERS'			=> 'Registreeritud kasutajad:',
-	'REG_USERS_ONLINE'			=> 'Hetkel on %d registreeritud kasutajat ja',
-	'REG_USERS_TOTAL'			=> '%d registreeritut, ',
-	'REG_USERS_TOTAL_AND'		=> '%d registreeritut ja ',
-	'REG_USERS_ZERO_ONLINE'		=> 'Hetkel on 0 registreeritud kasutajat ja',
-	'REG_USERS_ZERO_TOTAL'		=> '0 registreeritut, ',
-	'REG_USERS_ZERO_TOTAL_AND'	=> '0 registreeritut ja ',
-	'REG_USER_ONLINE'			=> 'Hetkel on %d registreeritud kasutaja ja',
-	'REG_USER_TOTAL'			=> '%d registreeritu, ',
-	'REG_USER_TOTAL_AND'		=> '%d registreeritu ja ',
 	'REMOVE'					=> 'Eemalda',
 	'REMOVE_INSTALL'			=> 'Palun kustuta, nimeta ümber või teisalda /install/ kaust ',
 	'REPLIES'					=> 'Vastuseid',
@@ -639,7 +748,8 @@ $lang = array_merge($lang, array(
 	'RETURN_FORUM'				=> '%sMine viimati külastatud foorumisse%s',
 	'RETURN_PAGE'				=> '%sMine eelmisele lehele%s',
 	'RETURN_TOPIC'				=> '%sMine viimati külastatud teemasse%s',
-	'RETURN_TO'					=> 'Mine',
+	'RETURN_TO'					=> 'Return to “%s”',
+	'RETURN_TO_INDEX'			=> 'Return to Board Index',
 	'FEED'						=> 'Vood',
 	'FEED_NEWS'					=> 'Uudised',
 	'FEED_TOPICS_ACTIVE'		=> 'Aktiivsed teemad',
@@ -667,28 +777,30 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV_EXPLAIN'		=> 'Vaata täiendatud otsingu valikuid',
 	'SEARCH_KEYWORDS'			=> 'Otsi märksõnu',
 	'SEARCHING_FORUMS'			=> 'Otsib foorumitest',
-	'SEARCH_ACTIVE_TOPICS'		=> 'Vaata aktiivseid teemasid',
+	'SEARCH_ACTIVE_TOPICS'		=> 'Active topics',
 	'SEARCH_FOR'				=> 'Otsi...',
 	'SEARCH_FORUM'				=> 'Otsi foorumist',
-	'SEARCH_NEW'				=> 'Vaata uusi postitusi',
+	'SEARCH_NEW'				=> 'New posts',
 	'SEARCH_POSTS_BY'			=> 'Otsi postitusi',
-	'SEARCH_SELF'				=> 'Vaata oma postitusi',
+	'SEARCH_SELF'				=> 'Your posts',
 	'SEARCH_MINE'				=> 'View your topics',
 	'SEARCH_TOPIC'				=> 'Otsi teemast',
-	'SEARCH_UNANSWERED'			=> 'Vaata vastamata postitusi',
-	'SEARCH_UNREAD'				=> 'Vaata lugemata postitusi',
+	'SEARCH_UNANSWERED'			=> 'Unanswered posts',
+	'SEARCH_UNREAD'				=> 'Unread posts',
 	'SEARCH_USER_POSTS'			=> 'Otsi kasutaja postitusi',
 	'SECONDS'					=> 'sekundit',
+	'SEE_ALL'					=> 'See All',
 	'SELECT'					=> 'Vali',
 	'SELECT_ALL_CODE'			=> 'Vali kõik',
 	'SELECT_DESTINATION_FORUM'	=> 'Palun vali sihtfoorum',
 	'SELECT_FORUM'				=> 'Vali foorum',
-	'SEND_EMAIL'				=> 'E-post',				// Used for submit buttons
-	'SEND_EMAIL_USER'			=> 'E-post',				// Used as: {L_SEND_EMAIL_USER} {USERNAME} -> E-mail UserX
+	'SEND_EMAIL'				=> 'Send email',				// Used for submit buttons
+	'SEND_EMAIL_USER'			=> 'Send email to %s',
 	'SEND_PRIVATE_MESSAGE'		=> 'Saada privaatsõnum',
 	'SETTINGS'					=> 'Seaded',
 	'SIGNATURE'					=> 'Signatuur',
 	'SKIP'						=> 'Jäta vahele kuni sisuni',
+	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'SMTP server ei toeta tuvastamist.',
 	'SORRY_AUTH_READ'			=> 'Sul ei ole õigusi selle foorumi lugemiseks',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'Sul ei ole õigusi seda manust alla laadida',
@@ -706,6 +818,8 @@ $lang = array_merge($lang, array(
 	'START_WATCHING_TOPIC'		=> 'Telli teema',
 	'STOP_WATCHING_FORUM'		=> 'Ära telli enam forumit',
 	'STOP_WATCHING_TOPIC'		=> 'Ära telli enam teemat',
+	'STRING_LIST_MULTI'			=> '%1$s, and %2$s',
+	'STRING_LIST_SIMPLE'		=> '%1$s and %2$s',
 	'SUBFORUM'					=> 'Alafoorum',
 	'SUBFORUMS'					=> 'Alafoorumid',
 	'SUBJECT'					=> 'Pealkiri',
@@ -717,51 +831,35 @@ $lang = array_merge($lang, array(
 	'THE_TEAM'			=> 'Juhtkond',
 	'TIB'				=> 'TiB',
 	'TIME'				=> 'Kellaaeg',
-	
+	'TIMEOUT_PROCESSING_REQ'			=> 'Request timed out.',
+
 	'TOO_LARGE'						=> 'Sisestatud väärtus on liiga suur.',
 	'TOO_LARGE_MAX_RECIPIENTS'		=> 'Sisestatud <strong>maksimaalne privaatsõnumi saajate arv</strong> on liiga suur.',
 
 	'TOO_LONG'						=> 'Sisestatud väärtus on liiga pikk.',
 
-	'TOO_LONG_AIM'					=> 'Sisestatud AIM nimi on liiga pikk.',
 	'TOO_LONG_CONFIRM_CODE'			=> 'Sisestatud kinnituskood on liiga pikk.',
 	'TOO_LONG_DATEFORMAT'			=> 'Sisestatud kuupäeva formaat on liiga pikk.',
-	'TOO_LONG_ICQ'					=> 'Sisestatud ICQ number on liiga pikk.',
-	'TOO_LONG_INTERESTS'			=> 'Sisestatud huvide nimekiri on liiga pikk.',
 	'TOO_LONG_JABBER'				=> 'Sisestatud Jabberi kasutajanimi on liiga pikk.',
-	'TOO_LONG_LOCATION'				=> 'Sisestatud asukoht on liiga pikk.',
-	'TOO_LONG_MSN'					=> 'Sisestatud MSNM/WLM aadress on liiga pikk.',
 	'TOO_LONG_NEW_PASSWORD'			=> 'Sisestatud parool on liiga pikk.',
-	'TOO_LONG_OCCUPATION'			=> 'Sisestatud ametinimetus on liiga pikk.',
 	'TOO_LONG_PASSWORD_CONFIRM'		=> 'Sisestatud paroolikinnitus on liiga pikk.',
 	'TOO_LONG_USER_PASSWORD'		=> 'Sisestatud parool on liiga pikk.',
 	'TOO_LONG_USERNAME'				=> 'Sisestatud kasutajanimi on liiga pikk.',
-	'TOO_LONG_EMAIL'				=> 'Sisestatud e-postiaadress on liiga pikk.',
-	'TOO_LONG_EMAIL_CONFIRM'		=> 'Sisestatud e-postiaadressi kinnituskood on liiga pikk.',
-	'TOO_LONG_WEBSITE'				=> 'Sisestatud lehekülje aadress on liiga pikk.',
-	'TOO_LONG_YIM'					=> 'Sisesttud Yahoo! Messengeri nimi on liiga pikk.',
+	'TOO_LONG_EMAIL'				=> 'The email address you entered is too long.',
 
 	'TOO_MANY_VOTE_OPTIONS'			=> 'Sa üritasid hääletada liiga palju valikuid.',
 
 	'TOO_SHORT'						=> 'Sisestatud väärtus on liiga lühike.',
 
-	'TOO_SHORT_AIM'					=> 'Sisestatud AIM nimi on liiga lühike.',
 	'TOO_SHORT_CONFIRM_CODE'		=> 'Sisestatud kinnituskood on liiga lühike.',
 	'TOO_SHORT_DATEFORMAT'			=> 'Sisestatud kuupäeva formaat on liiga lühike.',
-	'TOO_SHORT_ICQ'					=> 'Sisestatud ICQ number on liiga lühike.',
-	'TOO_SHORT_INTERESTS'			=> 'Sisestatud huvide nimekiri on liiga lühike.',
 	'TOO_SHORT_JABBER'				=> 'Sisestatud Jabberi kasutajanimi on liiga lühike.',
-	'TOO_SHORT_LOCATION'			=> 'Sisestatud asukoht on liiga lühike.',
-	'TOO_SHORT_MSN'					=> 'Sisestatud MSNM/WLM aadress on liiga lühike.',
 	'TOO_SHORT_NEW_PASSWORD'		=> 'Sisestatud parool on liiga lühike.',
-	'TOO_SHORT_OCCUPATION'			=> 'Sisestatud ametinimetus on liiga lühike.',
 	'TOO_SHORT_PASSWORD_CONFIRM'	=> 'Sisestatud paroolikinnitus on liiga lühike.',
 	'TOO_SHORT_USER_PASSWORD'		=> 'Sisestatud parool on liiga lühike.',
 	'TOO_SHORT_USERNAME'			=> 'Sisestatud kasutajanimi on liiga lühike.',
-	'TOO_SHORT_EMAIL'				=> 'Sisestatud e-postiaadress on liiga lühike.',
-	'TOO_SHORT_EMAIL_CONFIRM'		=> 'Sisestatud e-postiaadressi kinnitus on liiga lühike.',
-	'TOO_SHORT_WEBSITE'				=> 'Sisestatud lehekülje URL on liiga lühike.',
-	'TOO_SHORT_YIM'					=> 'Sisestatud Yahoo! Messengeri nimi on liiga lühike.',
+	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
+	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
 	
 	'TOO_SMALL'						=> 'Sisestatud väärtus on ligia väike.',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> 'Sisestatud <strong>maksimaale privaatsõnumi sdaajate arv</strong> on liiga väike.',
@@ -775,30 +873,20 @@ $lang = array_merge($lang, array(
 	'TOPIC_MOVED'		=> 'Liigutatud teema',
 	'TOPIC_REVIEW'		=> 'Teema ülevaade',
 	'TOPIC_TITLE'		=> 'Teema pealkiri',
-	'TOPIC_UNAPPROVED'	=> 'See teema pole heaks kiidetud.',
+	'TOPIC_UNAPPROVED'	=> 'This topic has not been approved.',
+	'TOPIC_DELETED'		=> 'This topic has been deleted.',
 	'TOTAL_ATTACHMENTS'	=> 'Manus(ed)',
-	'TOTAL_LOG'			=> '1 logi',
-	'TOTAL_LOGS'		=> '%d logi',
-	'TOTAL_NO_PM'		=> '0 privaatsõnumit kokku',
-	'TOTAL_PM'			=> '1 privaatsõnum kokku',
-	'TOTAL_PMS'			=> '%d privaaatsõnumit kokku',
+	'TOPIC_POLL'		=> 'This topic has a poll.',
 	'TOTAL_POSTS'		=> 'Postitusi kokku',
-	'TOTAL_POSTS_OTHER'	=> 'Postitusi kokku <strong>%s</strong>',
-	'TOTAL_POSTS_ZERO'	=> 'Postitusi kokku <strong>0</strong>',
 	'TOPIC_REPORTED'	=> 'Sellest teemast on raporteeritud',
-	'TOTAL_TOPICS_OTHER'=> 'Teemasid kokku <strong>%s</strong>',
-	'TOTAL_TOPICS_ZERO'	=> 'Teemasid kokku <strong>0</strong>',
-	'TOTAL_USERS_OTHER'	=> 'Kasutajaid kokku <strong>%s</strong>',
-	'TOTAL_USERS_ZERO'	=> 'Kasutajaid kokku <strong>0</strong>',
 	'TRACKED_PHP_ERROR'	=> 'Jälitatud PHP veateateid: %s',
+	'TWITTER'			=> 'Twitter',
 
-	'UNABLE_GET_IMAGE_SIZE'	=> 'Pildi suuruse määramine ebaõnnestus.',
+	'UNABLE_GET_IMAGE_SIZE'	=> 'It was not possible to determine the dimensions of the image. Please verify that the URL you entered is correct.',
 	'UNABLE_TO_DELIVER_FILE'=> 'Faili edastamine ebaõnnestus.',
 	'UNKNOWN_BROWSER'		=> 'Tundmatu veebibrauser',
 	'UNMARK_ALL'			=> 'Vabasta kõik',
 	'UNREAD_MESSAGES'		=> 'Lugemata sõnumid',
-	'UNREAD_PM'				=> '<strong>%d</strong> lugemata sõnum',
-	'UNREAD_PMS'			=> '<strong>%d</strong> lugemata sõnumit',
 	'UNREAD_POST'			=> 'Lugemata postitus',
 	'UNREAD_POSTS'			=> 'Lugemata postitused',
 	'UNWATCH_FORUM_CONFIRM'		=> 'Oled sa kindel, et soovid antud foorumi tellimust tühistada?',
@@ -816,8 +904,6 @@ $lang = array_merge($lang, array(
 	'USERNAMES'				=> 'Kasutajanimed',
 	'USER_AVATAR'			=> 'Kasutaja avatar',
 	'USER_CANNOT_READ'		=> 'Sa ei saa lugeda siin foorumis teemasid',
-	'USER_POST'				=> '%d postitus',
-	'USER_POSTS'			=> '%d postitust',
 	'USERS'					=> 'Kasutajad',
 	'USE_PERMISSIONS'		=> 'Kontrolli kasutaja õigusi',
 
@@ -825,6 +911,8 @@ $lang = array_merge($lang, array(
 
 	'VARIANT_DATE_SEPARATOR'	=> ' / ',	// Used in date format dropdown, eg: "Today, 13:37 / 01 Jan 2007, 13:37" ... to join a relative date with calendar date
 	'VIEWED'					=> 'Vaadatud',
+
+	'VIEWING_CONTACT_ADMIN'		=> 'Viewing contact page',
 	'VIEWING_FAQ'				=> 'Loeb KKK-d',
 	'VIEWING_MEMBERS'			=> 'Vaatab kasutaja andmeid',
 	'VIEWING_ONLINE'			=> 'Vaatab foorumil olevaid kasutajaid.',
@@ -839,8 +927,6 @@ $lang = array_merge($lang, array(
 	'VIEW_LATEST_POST'			=> 'Vaata viimast postitust',
 	'VIEW_NEWEST_POST'			=> 'Vaata esimest lugemata postitust',
 	'VIEW_NOTES'				=> 'Vaata kasutajamärkeid',
-	'VIEW_ONLINE_TIME'			=> 'põhineb viimase %d minuti aktiivsetel kasutajatel',
-	'VIEW_ONLINE_TIMES'			=> 'põhineb viimase %d minuti aktiivsetel kasutajatel',
 	'VIEW_TOPIC'				=> 'Vaata teemat',
 	'VIEW_TOPIC_ANNOUNCEMENT'	=> 'Teadaanne: ',
 	'VIEW_TOPIC_GLOBAL'			=> 'Üldteadaanne:',
@@ -861,23 +947,24 @@ $lang = array_merge($lang, array(
 	'WEBSITE'			=> 'Koduleht',
 	'WHOIS'				=> 'Kes on',
 	'WHO_IS_ONLINE'		=> 'Kes on foorumil',
+	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'Sa sisestasid vale parooli',
 	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
-	'WRONG_DATA_ICQ'			=> 'Sisestatud number pole korrektne ICQ number',
 	'WRONG_DATA_JABBER'			=> 'Sisestatud nimi pole korrektne Jabberi kasutajanimi',
 	'WRONG_DATA_LANG'			=> 'Valitud keel pole korrektne',
-	'WRONG_DATA_WEBSITE'		=> 'Kodulehekülje aadress peab olema korrektne URL, koos protokolliga. Näiteks http://www.phpbb.ee/.',
+	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
+	'WRONG_DATA_POST_SK'		=> 'The post sort option you specified is not valid.',
+	'WRONG_DATA_TOPIC_SD'		=> 'The topic sort direction you specified is not valid.',
+	'WRONG_DATA_TOPIC_SK'		=> 'The topic sort option you specified is not valid.',
 	'WROTE'						=> 'kirjutas',
 
+	'YAHOO'				=> 'Yahoo Messenger',
+	'YOUTUBE'			=> 'YouTube',
 	'YEAR'				=> 'Aasta',
 	'YEAR_MONTH_DAY'	=> '(YYYY-MM-DD)',
 	'YES'				=> 'Jah',
-	'YIM'				=> 'YIM',
 	'YOU_LAST_VISIT'	=> 'Viimati külastasid: %s',
-	'YOU_NEW_PM'		=> 'Uus privaatsõnum.',
-	'YOU_NEW_PMS'		=> 'Uued privaatsõnumid.',
-	'YOU_NO_NEW_PM'		=> 'Pole ühtegi uut privaatsõnumit.',
 
 	'default_dateformat'	=> 'd M Y, H:i', // Mon Jan 01, 2007 1:37 pm
 
@@ -1083,7 +1170,6 @@ $lang = array_merge($lang, array(
 
 	'FORUM_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this forum.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this topic.',
-	'TOO_FEW_CHARS_LIMIT'	=> 'Sinu sõnum sisaldab liiga vähe sümboleid. Miinmumarv lubatavaid sümboleid on %2$d.',
 	'REPLY_TO_MESSAGE'		=> 'Reply to message',
 
 	'RSS_CHAN_LIST_TITLE'	=> 'Foorumid',
@@ -1695,7 +1781,6 @@ $lang = array_merge($lang, array(
 	'DEV_NO_TEST_FILE'			=> 'Väärtust ei määratud testifaili muutujale konvertijas. Kui oled selle konvertija kasutaja, ei tohiks sa näha seda veateadet, palun teata sellest veast konvertija autorile. Kui oled konvertija autor, pead sisestama nime failile, mis on algfoorumis, et lubada tee selleni kinnitada.',
 	'DIRECTORIES_AND_FILES'		=> 'Kausta ja faili seaded',
 	'DISABLE_KEYS'				=> 'Võtmete keelamine',
-	'DLL_FIREBIRD'				=> 'Firebird',
 	'DLL_FTP'					=> 'Kaug-FTP tugi [ Installeerimine ]',
 	'DLL_GD'					=> 'GD graafika tugi [ Visuaalkinnitus ]',
 	'DLL_MBSTRING'				=> 'Mitmebaidiste sümbolite tugi',
@@ -1706,11 +1791,12 @@ $lang = array_merge($lang, array(
 	'DLL_MYSQLI'				=> 'MySQL koos MySQLi Extensioniga',
 	'DLL_ORACLE'				=> 'Oracle',
 	'DLL_POSTGRES'				=> 'PostgreSQL 7.x/8.x',
-	'DLL_SQLITE'				=> 'SQLite',
+	'DLL_SQLITE'				=> 'SQLite 2',
+	'DLL_SQLITE3'				=> 'SQLite 3',
 	'DLL_XML'					=> 'XML tugi [ Jabber ]',
 	'DLL_ZLIB'					=> 'zlib pakkimise tugi[ gz, .tar.gz, .zip ]',
 	'DL_CONFIG'					=> 'Lae alla konfiguratsioon',
-	'DL_CONFIG_EXPLAIN'			=> 'Võid laadida täieliku konfiguratsioonifaili oma arvutisse. YSiise pead üles laadima faili serverisse käsitsi, asendades juurkaustas oleva config.php faili. Palun pea meeles üles laadida fail ASCII formaadis (vaata oma FTP programmi abifaile, kui sa ei tea, kuidas seda aktiveerida). Kui oled üles laadinud config.php faili, kliki "Valmis" nuppu, et minna härgmisse etappi.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'Lae alla',
 	'DONE'						=> 'Valmis',
 
@@ -1722,8 +1808,6 @@ $lang = array_merge($lang, array(
 	'FILES_REQUIRED_EXPLAIN'	=> '<strong>Nõutud</strong> - Et phpBB töötaks õigesti, on vaja mõningate kaustade olemasolu, kuhu saab ka kirjutada. Kui näed "Ei leitud" kirja, pead looma vajaliku faili või kausta. Kui näed "Pole kirjutatav" kirja, pead muutma õigusi kaustal või failil, et phpBB saaks sinna kirjutada.',
 	'FILLING_TABLE'				=> 'Täidan tabelit <strong>%s</strong>',
 	'FILLING_TABLES'			=> 'Täidan tabeleid',
-
-	'FIREBIRD_DBMS_UPDATE_REQUIRED'		=> 'phpBB ei toeta enam Firebird/Interbase versioone, mis eelnevad versioonile 2.1. Palun uuenda oma Firebird installation vähemalt versioonile 2.1.0 enne uuendusega jätkamist.',
 
 	'FINAL_STEP'				=> 'Mine viimasesse etappi',
 	'FORUM_ADDRESS'				=> 'Foorumi aadress',
@@ -1749,7 +1833,30 @@ $lang = array_merge($lang, array(
 		<p>Vajutades nuppu all, viiakse sind statistilise info phpBB\'le saatmise vormi peale Administraatori juhtpaneelis (AJP). PhpBB on tänulik selle info edastamise eest. Pärast peaksid uurima sinule pakutavaid valikuid. Abi on saadaval läbi <a href="http://www.phpbb.com/support/documentation/3.0/">dokumentatsiooni(inglise keeles)</a>, <a href="%3$s">README (inglise keeles)</a> ja <a href="http://www.phpbb.ee/foorum">tugifoorumite</a>.</p><p><strong>Ppalun kustuta, teisalda või nimeta ümber /install/ kaust enne foorumi kasutamist. Kui see kaust on olemas ja oma õige nimega, pääsed ligi vaid administratsioonile.</strong>',
 	'INSTALL_INTRO'				=> 'Teretulemast installatsiooni',
 
-	'INSTALL_INTRO_BODY'		=> 'Selle valikuga on võimalik installeerida phpBB oma serverisse.</p><p>Et jätkata, pead teadma oma andmebaasi seadeid. Kui sa neid ei tea, võta ühendust oma veebiteenuse pakkujaga ja küsi. Sa ei saa jätkata ilma nendeta. Vajad:</p>',
+	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
+
+	<ul>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
+	</ul>
+
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
+
+	<p>phpBB3 supports the following databases:</p>
+	<ul>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
+		<li>SQLite 2.8.2+</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
+		<li>Oracle</li>
+	</ul>
+
+	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'Et alustada installeerimist, vajuta nuppu all.',
 	'INSTALL_LOGIN'				=> 'Logimine',
 	'INSTALL_NEXT'				=> 'Järgmine etapp',
@@ -1765,9 +1872,8 @@ $lang = array_merge($lang, array(
 	'INST_ERR_DB_NO_ERROR'		=> 'Veateadet ei antud.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'Installeeritud MySQL\'i versioon ei ühildu “MySQL koos MySQLi Laiendusega” valikuga, mille valisid. Proovi “MySQL” valikut.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'Installeeritud SQLite\'i versioon on liiga vana, See peab olema uuendatud vähemalt versioonile 2.8.2.',
+	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'Installeeritud Oracle\'i versioon nõuab sult <var>NLS_CHARACTERSET</var> parameetri muutmist väärtusele <var>UTF8</var>. Kas uuenda versoonile 9.2+ või muuda parameetrit',
-	'INST_ERR_DB_NO_FIREBIRD'	=> 'Installeeritud Firebird\'i versioon on vanem kui 2.1, palun uuenda.',
-	'INST_ERR_DB_NO_FIREBIRD_PS'=> 'Valitud andmebaas Firebird\'ile on lehe suurusega vähem kui 8192, see peab olema vähemalt 8192.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'Valitud andmebaasi ei loodud <var>UNICODE</var> või <var>UTF8</var> kodeeringus. Proovi installeerida andmebaasi nendes kodeeringutes.',
 	'INST_ERR_DB_NO_NAME'		=> 'Andmebaasi nime ei sisestatud.',
 	'INST_ERR_EMAIL_INVALID'	=> 'Sisestatud e-postiaadress pole korrektne.',
@@ -1821,6 +1927,8 @@ $lang = array_merge($lang, array(
 	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB <strong>ei tööta</strong>, kui installeerimine pole läi viidud PCRE toega UTF-8 kodeeringus.',
 	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP funktsioon getimagesize() onc saadaval',
 	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Nõutud</strong> - Et phpBB funktsioneeriks korrektselt, peab getimagesize funktsioon olema saadaval.',
+	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'Valikulised moodulid',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>Valikuline</strong> -Need moodulid või programmid on valikulised. Kuid kui need on saadaval, annavad nad lisavõimalusi.',
 	'PHP_SUPPORTED_DB'				=> 'Toetatud andmebaasid',
@@ -1829,10 +1937,10 @@ $lang = array_merge($lang, array(
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'PhpBB töötab ka siis, kui see seade on lubatud, , kuid kui võimalik, peaks see seade olema turvakaalutlustel keelatud.',
 	'PHP_SAFE_MODE'					=> 'Turvarežiim',
 	'PHP_SETTINGS'					=> 'PHP versioon ja seaded',
-	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Nõutud</strong> -Pead jooksutama vähemalt PHP versiooni 4.3.3, et installeerida foorumit. Kui <var>turvarežiim</var> on kuvatud all, siis su PHP töötab selles režiimis. See seab piirangud kaugadministratsioonile ja sarnastele võimalustele.',
+	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'PHP seade <var>allow_url_fopen</var> on lubatud',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>Valikuline</strong> - See seade on valikuline, kuid mõned foorumi funktsioonid, näiteks lingitud avatarid ei tööta korralikult ilma selleta.',
-	'PHP_VERSION_REQD'				=> 'PHP versioon >= 4.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
 	'POST_ID'						=> 'Postituse ID',
 	'PREFIX_FOUND'					=> 'Sinu tabelite skaneering näitas kehtivat installatsiooni, kasutades <strong>%s</strong> tabeli eesliitena',
 	'PREPROCESS_STEP'				=> 'Lõpetan eeltöötlemise funktsioone/käske.',
@@ -1852,6 +1960,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> 'Vali konfiguratsioon',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Otsingu indeksit ei konverditud',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Sinu vana otsingu indeksit ei konverditud. Otsimine ei anna kunagi tulemusi. Otsingu indekseid saab lisada juhtpaneelist.',
+	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> 'Foorumi tarkvara',
 	'SPECIFY_OPTIONS'			=> 'Vali konverteerimise valikud',
 	'STAGE_ADMINISTRATOR'		=> 'Administraatori andmed',
@@ -1859,7 +1968,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> 'Sellel lehel olevad seaded on vajalikud vaid siis, kui tead, et sul on vaja midagi erinevat vaikeseadetest. Kui sa pole kindel, mine järgmisesse etappi, sest neid seadeid saab muuta ka hiljem Administraatori juhtpaneelist',
 	'STAGE_CONFIG_FILE'			=> 'Konfiguratsioonifail',
 	'STAGE_CREATE_TABLE'		=> 'Loo andmebaasi tabelid',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'Andmebaasi tabelid, mida kasutab phpBB 3.0, on loodud. Jätka järgmisesse etappi, et lõpetada installeerimine.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'Andmebaasi seaded',
 	'STAGE_FINAL'				=> 'Lõppetapp',
 	'STAGE_INTRO'				=> 'Tutvustus',
@@ -1872,7 +1981,7 @@ $lang = array_merge($lang, array(
 	'SUB_LICENSE'				=> 'Litsents',
 	'SUB_SUPPORT'				=> 'Tugi',
 	'SUCCESSFUL_CONNECT'		=> 'Edukas ühendus',
-	'SUPPORT_BODY'				=> 'Väljalaskekandidaadi faasis täielikku tuge pakutakse <a href=',
+	'SUPPORT_BODY'				=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/documentation/3.1/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
 	'SYNC_FORUMS'				=> 'Alustan foorumite sünkroniseerimist',
 	'SYNC_POST_COUNT'			=> 'Sünkroniseerin postituste arvu',
 	'SYNC_POST_COUNT_ID'		=> 'Sünkroniseerin postituste arvu <var>sissekannet</var> %1$s kuni %2$s.',
@@ -1898,7 +2007,7 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ALL_FILES_UP_TO_DATE'		=> 'Kõik failid on uuendatud viimase phpBB versioonini. Peaksid nüüd <a href="../ucp.php?mode=login&amp;redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">logima sisse</a> ja kontrollima kas kõik töötab. Ära unusta kustutada, teisaldada või ümber nimetada /install/-kausta! Palun saada phpBB\'le info oma serveri ja foorumi konfiguratsiooni kohta <a href="../ucp.php?mode=login&amp;redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">Statistika saatmise</a> mooduli kaudu AJP\'s.',
+	'ALL_FILES_UP_TO_DATE'		=> 'All files are up to date with the latest phpBB version.',
 	'ARCHIVE_FILE'				=> 'Lähtefail arhiivis',
 
 	'BACK'				=> 'Tagasi',
@@ -1921,7 +2030,10 @@ $lang = array_merge($lang, array(
 	'CURRENT_VERSION'				=> 'Praegune versioon',
 
 	'DATABASE_TYPE'						=> 'Andmebaasi tüüp',
+	'DATABASE_UPDATE_COMPLETE'			=> 'Database updater has completed!',
+	'DATABASE_UPDATE_CONTINUE'			=> 'Continue database update',
 	'DATABASE_UPDATE_INFO_OLD'			=> 'Andmebaasi uuendamise fail on vananenud. Palun ole kindel, et laadisid üles õige versiooni failist.',
+	'DATABASE_UPDATE_NOT_COMPLETED'		=> 'The database update has not yet completed.',
 	'DELETE_USER_REMOVE'				=> 'Kustuta kasutaja ja eemalda postitused',
 	'DELETE_USER_RETAIN'				=> 'Kustuta kasutaja, kuid säilita postitused',
 	'DESTINATION'						=> 'Sihtfail',
@@ -1940,14 +2052,17 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_UPDATE_METHOD'			=> 'Lae alla muudetud failide arhiiv',
 	'DOWNLOAD_UPDATE_METHOD_EXPLAIN'	=> 'Pärast allalaadimist peaksid faili lahti pakkima.Arhiivi seest leiad muudetud failid, mille pead üles laadima FTP kaudu phpBB kausta. Pärast üleslaadimist kontrolli faile uuesti valikutega all.',
 
-	'ERROR'			=> 'Viga',
 	'EDIT_USERNAME'	=> 'Muud kasutajanime',
+	'ERROR'			=> 'Viga',
+	'EVERYTHING_UP_TO_DATE'		=> 'Everything is up to date with the latest phpBB version. You should now <a href="%1$s">login to your board</a> and check if everything is working fine. Do not forget to delete, rename or move your install directory! Please send us updated information about your server and board configurations from the <a href="%2$s">Send statistics</a> module in your ACP.',
 
 	'FILE_ALREADY_UP_TO_DATE'		=> 'Fail on juba uuendatud.',
 	'FILE_DIFF_NOT_ALLOWED'			=> 'Diff pole lubatud.',
 	'FILE_USED'						=> 'Informatsiooni kasutatud',			// Single file
 	'FILES_CONFLICT'				=> 'Vastuolulised failid',
 	'FILES_CONFLICT_EXPLAIN'		=> 'Järgnevad failid on muudetud ja ei ole originaalfailiga samad. phpBB tegi kindlaks, et failid satuvad vastuollu, kui neid proovida ühendada. Palun uuri vastuolusid ja proovi ühendada manuaalselt või jätkata soovitud ühendamismeetodiga. Saad valida eelistatud ühendamismeetodi eraldi igale failile. Esimene meetod võrdub vana faili vastuolus osade kadumisega, teisel juhtub sama uue failiga.',
+	'FILES_DELETED'					=> 'Deleted files',
+	'FILES_DELETED_EXPLAIN'			=> 'The following files do not exist in the new version. These files have to be deleted from your installation.',
 	'FILES_MODIFIED'				=> 'Muudetud failid',
 	'FILES_MODIFIED_EXPLAIN'		=> 'Järgnevad failid on muudetud ja ei esinda vanu faile. Uuendatud fail on ühendatud vanast ja uuest failist.',
 	'FILES_NEW'						=> 'Uued failid',
@@ -2009,6 +2124,7 @@ $lang = array_merge($lang, array(
 	'PREVIOUS_VERSION'					=> 'Eelmine versioon',
 	'PROGRESS'							=> 'Progress',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Announcement',
 	'RESULT'					=> 'Tulemus',
 	'RUN_DATABASE_SCRIPT'		=> 'Uuenda andmebaas nüüd',
 
@@ -2016,6 +2132,7 @@ $lang = array_merge($lang, array(
 	'SELECT_DOWNLOAD_FORMAT'	=> 'Vali arhiiviformaat',
 	'SELECT_FTP_SETTINGS'		=> 'Vali FTP seaded',
 	'SHOW_DIFF_CONFLICT'		=> 'Näita erinevusi/vastuolusid',
+	'SHOW_DIFF_DELETED'			=> 'Show file contents',
 	'SHOW_DIFF_FINAL'			=> 'Näita lõppfaili',
 	'SHOW_DIFF_MODIFIED'		=> 'Näita ühendatud erinevusi',
 	'SHOW_DIFF_NEW'				=> 'Näita failide sisu',
@@ -2029,6 +2146,7 @@ $lang = array_merge($lang, array(
 	'STAGE_UPDATE_FILES'		=> 'Uuenda faile',
 	'STAGE_VERSION_CHECK'		=> 'Versiooni kontroll',
 	'STATUS_CONFLICT'			=> 'Muudetud fail loob vastuolusid',
+	'STATUS_DELETED'			=> 'Deleted file',
 	'STATUS_MODIFIED'			=> 'Muudetud fail',
 	'STATUS_NEW'				=> 'Uus fail',
 	'STATUS_NEW_CONFLICT'		=> 'Vastuoludega uus fail',
@@ -2047,8 +2165,30 @@ $lang = array_merge($lang, array(
 	'UPDATE_FILES_NOTICE'			=> 'Palun ole kindel, et oled uuendanud foorumi faile ka, see fail uuendab vaid su andmebaasi.',
 	'UPDATE_INSTALLATION'			=> 'Uuenda phpBB installatsiooni',
 	'UPDATE_INSTALLATION_EXPLAIN'	=> 'Selle valikuga on võimalik uuendada installatsioon viimasele versioonile<br />Selle ajal kontrollitakse failid terviklikkust. Saad vaadata üle kõik erinevused ja failid enne uuendamist.<br /><br />Failiuuendust saab teha kahte erinevat moodi.</p><h2>Käsitsi uuendus</h2><p>Selle viisiga saad alla laadida komplekti kõikide failidega, et olla kindel, et sa ei kaota ühtegi muudetud faili. Peale allalaadimist pead failid üles laadima kaustadesse. Kui see on tehtud, saad kontrollida, kas laadisid failid õigesse kohta.</p><h2>Automaatne uuendus FTP\'ga</h2><p>See meetod on sarnane, kuid sa ei pea faile alla laadima ega üles laadima. Seda tehakse sinu eest. Et kasutada seda meetodit, pead teadma oma FTP andmeid. Kui see on lõpetatud, suunatakse sind tagasi siia, et kontrollida, kas kõik läks õigesti.<br /><br />',
-	'UPDATE_INSTRUCTIONS'			=> '<h1>Väljalaske teadaanne</h1>',
-	'UPDATE_INSTRUCTIONS_INCOMPLETE'	=> '<h1>Poolik uuendus tuvastatud</h1>',
+	'UPDATE_INSTRUCTIONS'			=> '
+
+		<h1>Release announcement</h1>
+
+		<p>Please read the release announcement for the latest version before you continue your update process, it may contain useful information. It also contains full download links as well as the change log.</p>
+
+		<br />
+
+		<h1>How to update your installation with the Automatic Update Package</h1>
+
+		<p>The recommended way of updating your installation listed here is only valid for the automatic update package. You are also able to update your installation using the methods listed within the INSTALL.html document. The steps for updating phpBB3 automatically are:</p>
+
+		<ul style="margin-left: 20px; font-size: 1.1em;">
+			<li>Go to the <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com downloads page</a> and download the "Automatic Update Package" archive.<br /><br /></li>
+			<li>Unpack the archive.<br /><br /></li>
+			<li>Upload the complete uncompressed install folder to your phpBB root directory (where your config.php file is).<br /><br /></li>
+		</ul>
+
+		<p>Once uploaded your board will be offline for normal users due to the install directory you uploaded now present.<br /><br />
+		<strong><a href="%1$s" title="%1$s">Now start the update process by pointing your browser to the install folder</a>.</strong><br />
+		<br />
+		You will then be guided through the update process. You will be notified once the update is complete.
+		</p>
+	',
 	'UPDATE_METHOD'					=> 'Uuendamise meetod',
 	'UPDATE_METHOD_EXPLAIN'			=> 'Saad nüüd valida soovitud uuendamismeetodi. Kasutades FTP meetodit pead sisestama FTP jaoks vajalikud andmed. Selle meetodiga viiakse failid automaatselt õigesse asukohta ja varukoopiad tehakse vanadest failidest, lisades nime lõppu ".bak". Kui valid failide allalaadimise, saad need pärast ise käsitsi õigesse kohta üles laadida.',
 	'UPDATE_REQUIRES_FILE'			=> 'Uuendaja nõuab järgneva faili olemasolu: %s',
@@ -2058,10 +2198,10 @@ $lang = array_merge($lang, array(
 	'UPDATING_DATA'					=> 'Uuendan andmeid',
 	'UPDATING_TO_LATEST_STABLE'		=> 'Uuendan andmebaasi viimasele väljalaskele',
 	'UPDATED_VERSION'				=> 'Uuendatud versioon',
-	'UPGRADE_INSTRUCTIONS'			=> 'Uus väljalase <strong>%1$s</strong> on saadaval. Palun loe <a href="%2$s" title="%2$s"><strong>väljalaske  teadaannet</strong>(inglise keeles)</a>, et teada saada, mis selles sisaldub ja kuidas uuendada.',
 	'UPLOAD_METHOD'					=> 'Üleslaadimise meetod',
 
 	'UPDATE_DB_SUCCESS'				=> 'Andmebaasiuuendus oli edukas.',
+	'UPDATE_FILE_SUCCESS'			=> 'File update was successful.',
 	'USER_ACTIVE'					=> 'Aktiivne kasutaja',
 	'USER_INACTIVE'					=> 'Ebaaktiivne kasutaja',
 
@@ -2121,6 +2261,33 @@ $lang = array_merge($lang, array(
 	'TOPICS_TOPIC_TITLE'			=> 'Tere tulemast phpBB3\'e',
 ));
 
+#######language/en/migrator.php#######
+
+$lang = array_merge($lang, array(
+	'CONFIG_NOT_EXIST'					=> 'The config setting "%s" unexpectedly does not exist.',
+
+	'GROUP_NOT_EXIST'					=> 'The group "%s" unexpectedly does not exist.',
+
+	'MIGRATION_APPLY_DEPENDENCIES'		=> 'Apply dependencies of %s.',
+	'MIGRATION_DATA_DONE'				=> 'Installed Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_IN_PROGRESS'		=> 'Installing Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_RUNNING'			=> 'Installing Data: %s.',
+	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
+	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
+	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
+	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
+	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
+	'MODULE_NOT_EXIST'					=> 'A required module does not exist: %s',
+
+	'PERMISSION_NOT_EXIST'				=> 'The permission setting "%s" unexpectedly does not exist.',
+
+	'ROLE_NOT_EXIST'					=> 'The permission role "%s" unexpectedly does not exist.',
+));
+
 #######language/en/mcp.php#######
 
 $lang = array_merge($lang, array(
@@ -2141,6 +2308,10 @@ $lang = array_merge($lang, array(
 	'APPROVE_POST_CONFIRM'	=> 'Kas oled kindel, et tahad lubada seda postitust?',
 	'APPROVE_POSTS'			=> 'Luba postitused',
 	'APPROVE_POSTS_CONFIRM'	=> 'Kas oled kindel, et tahad lubada valituid postitusi?',
+	'APPROVE_TOPIC'			=> 'Approve topic',
+	'APPROVE_TOPIC_CONFIRM'	=> 'Are you sure you want to approve this topic?',
+	'APPROVE_TOPICS'		=> 'Approve topics',
+	'APPROVE_TOPICS_CONFIRM'=> 'Are you sure you want to approve the selected topics?',
 
 	'CANNOT_MOVE_SAME_FORUM'=> 'Sa ei saa liigutada teemat foorumise milles see juba on.',
 	'CANNOT_WARN_ANONYMOUS'	=> 'Sa ei saa hoiatada mitte registreeritut külalist.',
@@ -2161,16 +2332,12 @@ $lang = array_merge($lang, array(
 	'DELETE_PM_REPORTS'			=> 'Kustuta PS-raportid',
 	'DELETE_PM_REPORTS_CONFIRM'	=> 'Oled kindel, et soovid need raportid kustutada?',
 	'DELETE_POSTS'				=> 'Kustuta postitused',
-	'DELETE_POSTS_CONFIRM'		=> 'Kas oled kindel, et tahad kustutada need postitused?',
-	'DELETE_POST_CONFIRM'		=> 'Kas oled kindel, et tahad kustutada selle postituse?',
 	'DELETE_REPORT'				=> 'Kustuta raport',
 	'DELETE_REPORT_CONFIRM'		=> 'Kas oled kindel, et tahad kustutada valitud raporti?',
 	'DELETE_REPORTS'			=> 'Kustuta raportid',
 	'DELETE_REPORTS_CONFIRM'	=> 'Kas oled kindel, et tahad kustutada valitud raportid?',
 	'DELETE_SHADOW_TOPIC'		=> 'Kustuta näidatud teema',
 	'DELETE_TOPICS'				=> 'Kustuta valitud teemad',
-	'DELETE_TOPICS_CONFIRM'		=> 'Kas oled kindel, et tahad kustutada need teemad?',
-	'DELETE_TOPIC_CONFIRM'		=> 'Kas oled kindel, et tahad kustutada selle teema?',
 	'DISAPPROVE'				=> 'Keela',
 	'DISAPPROVE_REASON'			=> 'Keelamise põhjus',
 	'DISAPPROVE_POST'			=> 'Keela postitus',
@@ -2208,8 +2375,6 @@ $lang = array_merge($lang, array(
 	'LATEST_WARNING_TIME'		=> 'Viimane hoiatus tehti',
 	'LATEST_WARNINGS'			=> 'Viimased 5 hoiatust',
 	'LEAVE_SHADOW'				=> 'Jäta variteema paika',
-	'LIST_REPORT'				=> '1 raport',
-	'LIST_REPORTS'				=> '%d raportit',
 	'LOCK'						=> 'Lukusta',
 	'LOCK_POST_POST'			=> 'Lukusta postitus',
 	'LOCK_POST_POST_CONFIRM'	=> 'Kas oled kindel, et tahad vältida selle postituse muutmist?',
@@ -2288,6 +2453,10 @@ $lang = array_merge($lang, array(
 	'MCP_QUEUE_UNAPPROVED_POSTS_EXPLAIN'	=> 'See on nimekiri kõigist postitustest, mis vajavad luba enne, kui need ilmuvad kasutajatele nähtavaks.',
 	'MCP_QUEUE_UNAPPROVED_TOPICS'			=> 'Teemad mis ootavad lubamist',
 	'MCP_QUEUE_UNAPPROVED_TOPICS_EXPLAIN'	=> 'See on nimekiri kõigist teemadest, mis vajavad luba enne, kui need ilmuvad kasutajatele nähtavaks.',
+	'MCP_QUEUE_DELETED_POSTS'				=> 'Deleted posts',
+	'MCP_QUEUE_DELETED_POSTS_EXPLAIN'		=> 'This is a list of all soft deleted posts. You can restore or permanently delete the posts from this screen.',
+	'MCP_QUEUE_DELETED_TOPICS'				=> 'Deleted topics',
+	'MCP_QUEUE_DELETED_TOPICS_EXPLAIN'		=> 'This is a list of all soft deleted topics. You can restore or permanently delete the topics from this screen.',
 
 	'MCP_VIEW_USER'			=> 'Vaata kindla kasutaja hoiatusi',
 
@@ -2326,25 +2495,27 @@ $lang = array_merge($lang, array(
 	'NO_POST'						=> 'Sa pead valima postituse, et hoiatada kasutajad postituse eest.',
 	'NO_POST_REPORT'				=> 'Seda postitust pole raporteeritud.',
 	'NO_POST_SELECTED'				=> 'Sa pead valima vähemalt ühe postituse, et sooritada seda tegevust.',
+	'NO_POSTS_DELETED'				=> 'There are no deleted posts.',
+	'NO_POSTS_QUEUE'				=> 'There are no posts waiting for approval.',
 	'NO_REASON_DISAPPROVAL'			=> 'Palun anna sobiv põhjus keelamiseks.',
 	'NO_REPORT'						=> 'Pole ühtegi raportit leitud',
 	'NO_REPORTS'					=> 'Pole ühtegi raportit leitud',
 	'NO_REPORT_SELECTED'			=> 'Sa pead valima vähemalt ühe raporti, et sooritada seda tegevust.',
 	'NO_TOPIC_ICON'					=> 'Pole',
 	'NO_TOPIC_SELECTED'				=> 'Sa pead valima vähemalt ühe teema, et sooritada seda tegevust.',
+	'NO_TOPICS_DELETED'				=> 'There are no deleted topics.',
 	'NO_TOPICS_QUEUE'				=> 'Pole teemasid, mis ootaksid lubamist.',
 
 	'ONLY_TOPIC'			=> 'Ainult teema “%s”',
 	'OTHER_USERS'			=> 'Teised kasutajad, kes on postitanud sellelt IP-aadressilt',
 
+	'QUICKMOD_ACTION_NOT_ALLOWED' => "%s not allowed as quickmod",
+
 	'PM_REPORT_CLOSED_SUCCESS'	=> 'Valitud PS-raport on edukalt suletud.',
 	'PM_REPORT_DELETED_SUCCESS'	=> 'Valitud PS-raport on edukalt kustutatud.',
 	'PM_REPORTED_SUCCESS'		=> 'Sellest privaatsõnumist on edukalt raporteeritud',
-	'PM_REPORT_TOTAL'			=> 'Kokku on <strong>1</strong> PS-rraport üle vaadata.',
 	'PM_REPORTS_CLOSED_SUCCESS'	=> 'Valitud PS-raportid on suletud.',
 	'PM_REPORTS_DELETED_SUCCESS'=> 'Valitud PS-raportid on kustutatud.',
-	'PM_REPORTS_TOTAL'			=> 'Kokku on <strong>%d</strong> PS-raportit üle vaadata.',
-	'PM_REPORTS_ZERO_TOTAL'		=> 'Pole ühtegi PS-raportit ülevaatamiseks.',
 	'PM_REPORT_DETAILS'			=> 'Privaatsõnumi raporteerimise andmed',
 	'POSTER'					=> 'Postitaja',
 	'POSTS_APPROVED_SUCCESS'	=> 'Valitud postitused on lubatud.',
@@ -2352,15 +2523,17 @@ $lang = array_merge($lang, array(
 	'POSTS_DISAPPROVED_SUCCESS'	=> 'Valitud postitused on keelatud.',
 	'POSTS_LOCKED_SUCCESS'		=> 'Valitud postitused on edukalt lukustatud.',
 	'POSTS_MERGED_SUCCESS'		=> 'Valitud postitused on ühendatud.',
-	'POSTS_UNLOCKED_SUCCESS'	=> 'Valitud postitused on edukalt avatud.',
 	'POSTS_PER_PAGE'			=> 'Postitusi lehe kohta',
 	'POSTS_PER_PAGE_EXPLAIN'	=> 'Vali 0, et näha kõiki postitusi.)',
+	'POSTS_RESTORED_SUCCESS'	=> 'The selected posts have been restored successfully.',
+	'POSTS_UNLOCKED_SUCCESS'	=> 'Valitud postitused on edukalt avatud.',
 	'POST_APPROVED_SUCCESS'		=> 'Valitud postitus on lubatud.',
 	'POST_DELETED_SUCCESS'		=> 'Valitud postitus on edukalt eemaldatud andmebaasist.',
 	'POST_DISAPPROVED_SUCCESS'	=> 'Valitud postitus on keelatud.',
 	'POST_LOCKED_SUCCESS'		=> 'Postitus on edukalt lukustatud.',
 	'POST_NOT_EXIST'			=> 'Sinu soovitud postitust ei eksisteeri.',
 	'POST_REPORTED_SUCCESS'		=> 'Sellest postitusest on edukalt raporteeritud.',
+	'POST_RESTORED_SUCCESS'		=> 'This post has been restored successfully.',
 	'POST_UNLOCKED_SUCCESS'		=> 'Postitus on edukalt avatud.',
 
 	'READ_USERNOTES'			=> 'Kasutaja märkmed',
@@ -2371,8 +2544,6 @@ $lang = array_merge($lang, array(
 	'REPORTED_ON_DATE'			=> '-',
 	'REPORTS_CLOSED_SUCCESS'	=> 'Valitud raportid on edukalt lukustatud.',
 	'REPORTS_DELETED_SUCCESS'	=> 'Valitud raportid on edukalt kustutatud.',
-	'REPORTS_TOTAL'				=> 'Kokku on <strong>%d</strong> raportit üle vaatamiseks.',
-	'REPORTS_ZERO_TOTAL'		=> 'Pole ühtegi raportit üle vaatamiseks.',
 	'REPORT_CLOSED'				=> 'See raport on juba suletud.',
 	'REPORT_CLOSED_SUCCESS'		=> 'Valitud raport on edukalt lukustatud.',
 	'REPORT_DELETED_SUCCESS'	=> 'Valitud raport on edukalt kustutatud.',
@@ -2384,7 +2555,15 @@ $lang = array_merge($lang, array(
 	'REPORT_POST_EXPLAIN'		=> 'Kasuta seda vormi, et raporteerida valitud postitus foorumi moderaatoritele ja administraatoritele. Raporteerimist peaksid kasutama ainult siis, kui sõnum rikub foorumi reegleid.',
 	'REPORT_REASON'				=> 'Raporti põhjus',
 	'REPORT_TIME'				=> 'Raporti aeg',
-	'REPORT_TOTAL'				=> 'Kokku on <strong>1</strong> raport ülevaatamiseks.',
+	'RESTORE'					=> 'Restore',
+	'RESTORE_POST'				=> 'Restore post',
+	'RESTORE_POST_CONFIRM'		=> 'Are you sure you want to restore this post?',
+	'RESTORE_POSTS'				=> 'Restore posts',
+	'RESTORE_POSTS_CONFIRM'		=> 'Are you sure you want to restore the selected posts?',
+	'RESTORE_TOPIC'				=> 'Restore topic',
+	'RESTORE_TOPIC_CONFIRM'		=> 'Are you sure you want to restore this topic?',
+	'RESTORE_TOPICS'			=> 'Restore topics',
+	'RESTORE_TOPICS_CONFIRM'	=> 'Are you sure you want to restore the selected topics?',
 	'RESYNC'					=> 'Resünkroniseeri',
 	'RETURN_MESSAGE'			=> '%sMine tagasi eelmisele lehele%s',
 	'RETURN_NEW_FORUM'			=> '%sMine tagasi eelmisele lehele%s',
@@ -2425,6 +2604,7 @@ $lang = array_merge($lang, array(
 	'TOPICS_FORKED_SUCCESS'		=> 'Valitud teemad on edukalt kopeeritud.',
 	'TOPICS_LOCKED_SUCCESS'		=> 'Valitud teemad on edukalt lukustatud.',
 	'TOPICS_MOVED_SUCCESS'		=> 'Valitud teemad on edukalt liigutatud.',
+	'TOPICS_RESTORED_SUCCESS'	=> 'The selected topics have been restored successfully.',
 	'TOPICS_RESYNC_SUCCESS'		=> 'Valitud teemad on resünkroniseeritud.',
 	'TOPICS_TYPE_CHANGED'		=> 'Teema tüüp on edukalt muudetud.',
 	'TOPICS_UNLOCKED_SUCCESS'	=> 'Valitud teemad on avatud.',
@@ -2435,6 +2615,7 @@ $lang = array_merge($lang, array(
 	'TOPIC_LOCKED_SUCCESS'		=> 'Valitud teema on edukalt lukustatud.',
 	'TOPIC_MOVED_SUCCESS'		=> 'Valitud teema on edukalt liigutatud.',
 	'TOPIC_NOT_EXIST'			=> 'Sinu valitud teema(sid) ei ole olemas.',
+	'TOPIC_RESTORED_SUCCESS'	=> 'The selected topic has been restored successfully.',
 	'TOPIC_RESYNC_SUCCESS'		=> 'Valitud teema on edukalt resünkroniseeritud.',
 	'TOPIC_SPLIT_SUCCESS'		=> 'Valitud teema on edukalt poolitatud.',
 	'TOPIC_TIME'				=> 'Teema aeg',
@@ -2442,9 +2623,6 @@ $lang = array_merge($lang, array(
 	'TOPIC_UNLOCKED_SUCCESS'	=> 'Valitud teema on avatud.',
 	'TOTAL_WARNINGS'			=> 'Kokku hoiatusi',
 
-	'UNAPPROVED_POSTS_TOTAL'		=> 'Kokku on <strong>%d</strong> postitust, mis ootavad lubamist.',
-	'UNAPPROVED_POSTS_ZERO_TOTAL'	=> 'Ei ole ühtegi postitust, mis ootaks lubamist.',
-	'UNAPPROVED_POST_TOTAL'			=> 'Kokku on <strong>1</strong> postitus, mis ootab lubamist.',
 	'UNLOCK'						=> 'Ava',
 	'UNLOCK_POST'					=> 'Ava postitus',
 	'UNLOCK_POST_EXPLAIN'			=> 'Luba muutmine',
@@ -2470,7 +2648,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'Järgnev on hoiatus, mille on sulle andnud administraator või moderaator siit foorumist.[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'Hoiatus antud',
 	'WARNING_POST_DEFAULT'	=> 'See on hoiatus sinu tehtud postituse eest: %s .',
-	'WARNINGS_ZERO_TOTAL'	=> 'Hoiatused puuduvad.',
+	'NO_WARNINGS'	=> 'No warnings exist.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Sa valisid teema number %d: %s.',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -2510,10 +2688,12 @@ $lang = array_merge($lang, array(
 	'ALL'					=> 'Kõik',
 	'BEFORE'				=> 'Enne',
 	'CC_EMAIL'				=> 'Saada koopia sellest e-kirjast endale.',
-	'CONTACT_USER'			=> 'Võta ühendust kasutajaga',
+	'CONTACT_ADMIN'			=> 'Contact a Board Administrator',
 
 	'DEST_LANG'				=> 'Keel',
 	'DEST_LANG_EXPLAIN'		=> 'Vali keel selle sõnumi saaja jaoks.',
+
+	'EDIT_PROFILE'			=> 'Edit Profile',
 
 	'EMAIL_BODY_EXPLAIN'	=> 'Sõnum saadetakse tekstina, ära lisa HTML\'i või BBcode\'t. Tagasisaatmisaadressiks määratakse sinu e-posti aadress.',
 	'EMAIL_DISABLED'		=> 'Vabandame, kõik e-postiga seotud funktsioonid on keelatud.',
@@ -2523,7 +2703,9 @@ $lang = array_merge($lang, array(
 	'EMPTY_MESSAGE_EMAIL'	=> 'Pead sisestama sõnumi.',
 	'EMPTY_MESSAGE_IM'		=> 'Pead sisestama sõnumi.',
 	'EMPTY_NAME_EMAIL'		=> 'Pead sisestama saaja õige nime.',
-	'EMPTY_SUBJECT_EMAIL'	=> 'Pead sisestama pealkirja.',
+	'EMPTY_SENDER_EMAIL'	=> 'You must provide a valid email address.',
+	'EMPTY_SENDER_NAME'		=> 'You must provide a name.',
+	'EMPTY_SUBJECT_EMAIL'	=> 'You must specify a subject for the email.',
 	'EQUAL_TO'				=> 'Võrdne',
 
 	'FIND_USERNAME_EXPLAIN'	=> 'Kasuta seda vormi, et otsida kindlaid kasutajaid. Sa ei pea täitma kõiki välju. Osalise sobivuse jaoks kasuta * . Kui sisestad kuupäevi, kasuta formaati <kbd>YYYY-MM-DD</kbd>, nt <samp>1990-04-04</samp> Kasuta märkimise kaste, et valida ühte või mitmeid kasutajanimesid ja kliki Vali Märgitud nupule, et minna tagasi eelmisele vormile.',
@@ -2533,16 +2715,10 @@ $lang = array_merge($lang, array(
 	'HIDE_MEMBER_SEARCH'	=> 'Peida kasutajate otsingust',
 
 	'IM_ADD_CONTACT'		=> 'Lisa kontakt',
-	'IM_AIM'				=> 'Sul peab olema AOL Messenger installeeritud, et kasutada seda.',
-	'IM_AIM_EXPRESS'		=> 'AIM Ekspress',
 	'IM_DOWNLOAD_APP'		=> 'Lae programm alla',
-	'IM_ICQ'				=> 'Kasutajad võivad olla määranud võõrastelt sõnumite vastuvõtmise.',
 	'IM_JABBER'				=> 'Kasutajad võivad olla määranud võõrastelt sõnumite vastuvõtmise.',
 	'IM_JABBER_SUBJECT'		=> 'See on automaatne sõnum, ära sellele vasta! Sõnum kasutajalt%1$s, %2$s.',
 	'IM_MESSAGE'			=> 'Sinu sõnum',
-	'IM_MSNM'				=> 'Sul peab olema installeeritud Windows Messenger, et seda funktsiooni kasutada.',
-	'IM_MSNM_BROWSER'		=> 'Sinu brauser ei toeta seda.',
-	'IM_MSNM_CONNECT'		=> 'MSNM pole sees.\\nPead MSN messengeri sisse logima.',
 	'IM_NAME'				=> 'Sinu nimi',
 	'IM_NO_DATA'			=> 'Sellel kasutajal pole sobivat kontakteerumisinfot',
 	'IM_NO_JABBER'			=> 'Vabandame, otsene sõnumite saatmine Jabberi kaudu siin serveris on keelatud. Sul peab olema Jabberi programm installeeritud, et võtta kasutajaga ühendust.',
@@ -2554,15 +2730,15 @@ $lang = array_merge($lang, array(
 
 	'LAST_ACTIVE'				=> 'Viimati foorumil',
 	'LESS_THAN'					=> 'Vähem kui',
-	'LIST_USER'					=> '1 kasutaja',
-	'LIST_USERS'				=> '%d kasutajat',
-	'LOGIN_EXPLAIN_LEADERS'		=> 'Foorum nõuab, et oleksid registreeritud ja sisse logitud enne juhtkonna vaatamist.',
+	'LOGIN_EXPLAIN_TEAM'		=> 'The board requires you to be registered and logged in to view the team listing.',
 	'LOGIN_EXPLAIN_MEMBERLIST'	=> 'Foorum nõuab, et oleksid registreeritud ja sisse logitud enne kasutajate nimekirja vaatamist.',
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'Foorum nõuab, et oleksid registreeritud ja sisse logitud enne kasutajate otsimist.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'Foorum nõuab, et oleksid registreeritud ja sisse logitud enne profiilide vaatamist.',
 
 	'MORE_THAN'				=> 'Rohkem kui',
 
+	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
+	'NO_CONTACT_PAGE'		=> 'The board administrator contact page has been disabled.',
 	'NO_EMAIL'				=> 'Sul pole lubatud saata e-kirja sellele kasutajale.',
 	'NO_VIEW_USERS'			=> 'Sul pole lubatud vaadata kasutajate nimekirja või profiile.',
 
@@ -2579,12 +2755,12 @@ $lang = array_merge($lang, array(
 
 	'SELECT_MARKED'			=> 'Vali märgitud',
 	'SELECT_SORT_METHOD'	=> 'Vali sorteerimisviis',
-	'SEND_AIM_MESSAGE'		=> 'Saada AIM sõnum',
+	'SENDER_EMAIL_ADDRESS'	=> 'Your email address',
+	'SENDER_NAME'			=> 'Your name',
 	'SEND_ICQ_MESSAGE'		=> 'Saada ICQ sõnum',
 	'SEND_IM'				=> 'Messengerid',
 	'SEND_JABBER_MESSAGE'	=> 'Saada Jabberi sõnum',
 	'SEND_MESSAGE'			=> 'Sõnum',
-	'SEND_MSNM_MESSAGE'		=> 'Saada MSN Messengeri sõnum',
 	'SEND_YIM_MESSAGE'		=> 'Saada YIM sõnum',
 	'SORT_EMAIL'			=> 'e-postiaadressi järgi',
 	'SORT_LAST_ACTIVE'		=> '"viimati foorumil" kuupäeva järgi',
@@ -2592,12 +2768,18 @@ $lang = array_merge($lang, array(
 
 	'USERNAME_BEGINS_WITH'	=> 'Kasutajanimi algab',
 	'USER_ADMIN'			=> 'Administreeri kasutajat',
-	'USER_BAN'				=> 'Bännimine',
+	'USER_BAN'				=> 'Ban one or more users by username',
 	'USER_FORUM'			=> 'Kasutaja statistika',
 	'USER_ONLINE'			=> 'Foorumil',
 	'USER_PRESENCE'			=> 'Foorumil',
+	'USERS_PER_PAGE'		=> 'Users per page',
 
 	'VIEWING_PROFILE'		=> 'Vaatan profiili - %s',
+	'VIEW_FACEBOOK_PROFILE'	=> 'View Facebook Profile',
+	'VIEW_SKYPE_PROFILE'	=> 'View Skype Profile',
+	'VIEW_TWITTER_PROFILE'	=> 'View Twitter Profile',
+	'VIEW_YOUTUBE_CHANNEL'	=> 'View YouTube Channel',
+	'VIEW_GOOGLEPLUS_PROFILE' => 'View Google+ Profile',
 	'VISITED'				=> 'Viimane külastus',
 
 	'WWW'					=> 'Veebileht',
@@ -2622,6 +2804,47 @@ $lang = array_merge($lang, array(
 	'USER_COMM_RANK'	=> 'Overall reviews:',
 	'USER_COMM_PERCENT'	=> 'Overall assessment of the user:',
 
+));
+
+#######language/en/plupload.php#######
+
+$lang = array_merge($lang, array(
+	'PLUPLOAD_ADD_FILES'		=> 'Add files',
+	'PLUPLOAD_ADD_FILES_TO_QUEUE'	=> 'Add files to the upload queue and click the start button.',
+	'PLUPLOAD_ALREADY_QUEUED'	=> '%s already present in the queue.',
+	'PLUPLOAD_CLOSE'			=> 'Close',
+	'PLUPLOAD_DRAG'				=> 'Drag files here.',
+	'PLUPLOAD_DUPLICATE_ERROR'	=> 'Duplicate file error.',
+	'PLUPLOAD_DRAG_TEXTAREA'	=> 'You may also attach files by dragging and dropping them in the message box.',
+	'PLUPLOAD_ERR_INPUT'		=> 'Failed to open input stream.',
+	'PLUPLOAD_ERR_MOVE_UPLOADED'	=> 'Failed to move uploaded file.',
+	'PLUPLOAD_ERR_OUTPUT'		=> 'Failed to open output stream.',
+	'PLUPLOAD_ERR_FILE_TOO_LARGE'	=> 'File too large:',
+	'PLUPLOAD_ERR_FILE_COUNT'	=> 'File count error.',
+	'PLUPLOAD_ERR_FILE_INVALID_EXT'	=> 'Invalid file extension:',
+	'PLUPLOAD_ERR_RUNTIME_MEMORY'	=> 'Runtime ran out of available memory.',
+	'PLUPLOAD_ERR_UPLOAD_URL'	=> 'Upload URL might be wrong or does not exist.',
+	'PLUPLOAD_EXTENSION_ERROR'	=> 'File extension error.',
+	'PLUPLOAD_FILE'				=> 'File: %s',
+	'PLUPLOAD_FILE_DETAILS'		=> 'File: %s, size: %d, max file size: %d',
+	'PLUPLOAD_FILENAME'			=> 'Filename',
+	'PLUPLOAD_FILES_QUEUED'		=> '%d files queued',
+	'PLUPLOAD_GENERIC_ERROR'	=> 'Generic error.',
+	'PLUPLOAD_HTTP_ERROR'		=> 'HTTP error.',
+	'PLUPLOAD_IMAGE_FORMAT'		=> 'Image format either wrong or not supported.',
+	'PLUPLOAD_INIT_ERROR'		=> 'Init error.',
+	'PLUPLOAD_IO_ERROR'			=> 'IO error.',
+	'PLUPLOAD_NOT_APPLICABLE'	=> 'N/A',
+	'PLUPLOAD_SECURITY_ERROR'	=> 'Security error.',
+	'PLUPLOAD_SELECT_FILES'		=> 'Select files',
+	'PLUPLOAD_SIZE'				=> 'Size',
+	'PLUPLOAD_SIZE_ERROR'		=> 'File size error.',
+	'PLUPLOAD_STATUS'			=> 'Status',
+	'PLUPLOAD_START_UPLOAD'		=> 'Start upload',
+	'PLUPLOAD_START_CURRENT_UPLOAD'	=> 'Start uploading queue',
+	'PLUPLOAD_STOP_UPLOAD'		=> 'Stop upload',
+	'PLUPLOAD_STOP_CURRENT_UPLOAD'	=> 'Stop current upload',
+	'PLUPLOAD_UPLOADED'			=> 'Uploaded %d/%d files',
 ));
 
 #######language/en/portal.php#######
@@ -2867,12 +3090,12 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBB-kood%s on <em>VÄLJAS</em>',
 	'BBCODE_IS_ON'				=> '%sBB-kood%s on <em>SEES</em>',
 	'BBCODE_I_HELP'				=> 'Kursiivtekst: [i]tekst[/i]',
-	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]',
 	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
 	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Sisesta pilt: [img]http://pildi_url[/img]',
 	'BBCODE_Q_HELP'				=> 'Tsiteeri teksti: [quote]tekst[/quote]',
-	'BBCODE_S_HELP'				=> 'Fondi värv: [color=red]tekst[/color]  Vihje: võid ka kasutada #FF0000 värvi',
+	'BBCODE_S_HELP'				=> 'Font colour: [color=red]text[/color] or [color=#FF0000]text[/color]',
 	'BBCODE_U_HELP'				=> 'Allajoonitud tekst: [u]tekst[/u]',
 	'BBCODE_W_HELP'				=> 'Sisesta URL: [url]http://url[/url] või [url=http://url]URL\'i tekst[/url]',
 	'BUMP_ERROR'				=> 'Sa ei saa tõsta teemat nii kiiresti peale viimast postitust.',
@@ -2891,8 +3114,20 @@ $lang = array_merge($lang, array(
 	'DELETE_MESSAGE'			=> 'Kustuta sõnum',
 	'DELETE_MESSAGE_CONFIRM'	=> 'Oled kindel, et soovid selle sõnumi kustutada?',
 	'DELETE_OWN_POSTS'			=> 'Saad ainult kustutada oma postitusi.',
+	'DELETE_PERMANENTLY'		=> 'Delete permanently',
 	'DELETE_POST_CONFIRM'		=> 'Kas oled kindel, et tahad kustutada selle postituse?',
-	'DELETE_POST_WARN'			=> 'Postitusi ei saa peale kustutamist taastada.',
+	'DELETE_POST_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this post?',
+	'DELETE_POST_PERMANENTLY'	=> 'Permanently delete this post so it can not be recovered',
+	'DELETE_POSTS_CONFIRM'		=> 'Kas oled kindel, et tahad kustutada need postitused?',
+	'DELETE_POSTS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these posts?',
+	'DELETE_REASON'				=> 'Reason for deleting this topic',
+	'DELETE_REASON_EXPLAIN'		=> 'The specified reason for deletion will be visible to moderators.',
+	'DELETE_POST_WARN'			=> 'Delete this post',
+	'DELETE_TOPIC_CONFIRM'		=> 'Kas oled kindel, et tahad kustutada selle teema?',
+	'DELETE_TOPIC_PERMANENTLY'	=> 'Permanently delete this topic so it can not be recovered',
+	'DELETE_TOPIC_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this topic?',
+	'DELETE_TOPICS_CONFIRM'		=> 'Kas oled kindel, et tahad kustutada need teemad?',
+	'DELETE_TOPICS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these topics?',
 	'DISABLE_BBCODE'			=> 'Keela BB-koodi kasutamine',
 	'DISABLE_MAGIC_URL'			=> 'Ära automaatselt näita URL\'i lingina',
 	'DISABLE_SMILIES'			=> 'Keela smailid',
@@ -2935,13 +3170,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_QUOTE'		=> 'Pead sisse logima, et siin foorumis postitusi tsiteerida.',
 	'LOGIN_EXPLAIN_REPLY'		=> 'Pead sisse logima, et siin foorumis teemadele vastata.',
 
-	'MAX_FONT_SIZE_EXCEEDED'	=> 'Võid vaid kasutada fonte suuruseni %1$d.',
-	'MAX_FLASH_HEIGHT_EXCEEDED'	=> 'Sinu flash failid võivad olla maksimaalselt %1$d pikslit kõrged.',
-	'MAX_FLASH_WIDTH_EXCEEDED'	=> 'Sinu flash failid võivad olla maksimaalselt %1$d pikslit laiad.',
-	'MAX_IMG_HEIGHT_EXCEEDED'	=> 'Sinu pildid võivad olla maksimaalselt %1$d pikslit kõrged.',
-	'MAX_IMG_WIDTH_EXCEEDED'	=> 'Sinu pildid võivad olla maksimaalselt %1$d pikslit laiad.',
-
-	'MESSAGE_BODY_EXPLAIN'		=> 'Sisesta sõnum siia, see ei tohi sisaldada üle <strong>%d</strong> sümboli.',
+	'MAX_FONT_SIZE_EXCEEDED'	=> 'You may only use fonts up to size %d.',
 	'MESSAGE_DELETED'			=> 'Postitus on edukalt kustutatud.',
 	'MORE_SMILIES'				=> 'Vaata veel smailisid.',
 
@@ -2964,8 +3193,6 @@ $lang = array_merge($lang, array(
 	'POLL_MAX_OPTIONS'			=> 'Valikuid kasutaja kohta',
 	'POLL_MAX_OPTIONS_EXPLAIN'	=> 'See on valikute number, mida iga kasutaja võib valida.',
 	'POLL_OPTIONS'				=> 'Hääletuse valikud',
-	'POLL_OPTIONS_EXPLAIN'		=> 'Kirjuta iga valik uuele reale. Võid sisestada kuni <strong>%d</strong> valikut.',
-	'POLL_OPTIONS_EDIT_EXPLAIN'	=> 'Kirjuta iga valik uuele reale. Võid sisestada kuni <strong>%d</strong> valikut. Kui eemaldad või lisad valikuid, tühistatakse kõik eelmised hääled.',
 	'POLL_QUESTION'				=> 'Hääletuse küsimus',
 	'POLL_TITLE_TOO_LONG'		=> 'Hääletuse pealkiri ei tohi sisaldada üle 100 sümboli.',
 	'POLL_TITLE_COMP_TOO_LONG'	=> 'Su hääletuse pealkiri on liiga pikk, kaalu BB-koodi või smailide eemaldamist.',
@@ -2975,9 +3202,9 @@ $lang = array_merge($lang, array(
 	'POST_APPROVAL_NOTIFY'		=> 'Sind teavitatakse, kui su postitus on heaks kiidetud',
 	'POST_CONFIRMATION'			=> 'Postituse kinnitus',
 	'POST_CONFIRM_EXPLAIN'		=> 'Et ennetada automaatset postitamist, nõuab foorum postitusele kinnituskoodi. Kood on pildil, mida peaksid nägema all. Kui sa ei näe koodi, kontakteeru %sfoorumi administraatoriga%s.',
-	'POST_DELETED'				=> 'Postitus edukalt kustutatud.',
-	'POST_EDITED'				=> 'Postitus edukalt muudetud.',
-	'POST_EDITED_MOD'			=> 'See postitus on edukalt muudetud, aga selle peab üle vaatama moderaator enne, kui see avaldatakse.',
+	'POST_DELETED'				=> 'This post has been deleted.',
+	'POST_EDITED'				=> 'This post has been edited successfully.',
+	'POST_EDITED_MOD'			=> 'This post has been edited successfully, but it will need to be approved by a moderator before it is publicly viewable.',
 	'POST_GLOBAL'				=> 'Üldine',
 	'POST_ICON'					=> 'Postituse ikoon',
 	'POST_NORMAL'				=> 'Tavaline',
@@ -2990,8 +3217,9 @@ $lang = array_merge($lang, array(
 	'POST_TOPIC_AS'				=> 'Postita teema kui',
 	'PROGRESS_BAR'				=> 'Edenemine',
 
-	'QUOTE_DEPTH_EXCEEDED'		=> 'Sa võid ühendada vaid %1$d tsitaati.',
+	'QUOTE_NO_NESTING'			=> 'You may not embed quotes within each other.',
 
+	'REMOTE_UPLOAD_TIMEOUT'		=> 'The specified file could not be uploaded because the request timed out.',
 	'SAVE'						=> 'Salvesta',
 	'SAVE_DATE'					=> 'Salvestatud',
 	'SAVE_DRAFT'				=> 'Salvesta mustand',
@@ -3008,8 +3236,6 @@ $lang = array_merge($lang, array(
 	'TOO_FEW_POLL_OPTIONS'		=> 'Pead sisestama vähemalt kaks hääletuse valikut.',
 	'TOO_MANY_ATTACHMENTS'		=> 'Ei saa enam manust lisada, %d on maksimum.',
 	'TOO_MANY_CHARS'			=> 'Sinu sõnum sisaldab liiga palju sümboleid.',
-	'TOO_MANY_CHARS_POST'		=> 'Sinu sõnum sisaldab %1$d sümbolit. Maksimaalne on %2$d sümbolit.',
-	'TOO_MANY_CHARS_SIG'		=> 'Sinu signatuur sisaldab %1$d sümbolit. Maksimum on %2$d sümbolit.',
 	'TOO_MANY_POLL_OPTIONS'		=> 'Üritasid sisestada liiga palju hääletuse valikuid.',
 	'TOO_MANY_SMILIES'			=> 'Sinu sõnum sisaldab liiga palju smailisid. Maksimum on %d smailit.',
 	'TOO_MANY_URLS'				=> 'Sinu sõnum sisaldab liiga palju URL linke. Maksimum on %d URL linki.',
@@ -3018,6 +3244,8 @@ $lang = array_merge($lang, array(
 
 	'UNAUTHORISED_BBCODE'		=> 'Sa ei saa kasutada teatud BB-koodi silte: %s.',
 	'UNGLOBALISE_EXPLAIN'		=> 'Et vahetada see teema tagasi tavaliseks, pead valima foorumi, kus sa soovid, et teemat näidatakse.',
+	'UNSUPPORTED_CHARACTERS_MESSAGE'	=> 'Your message contains the following unsupported characters:<br />%s',
+	'UNSUPPORTED_CHARACTERS_SUBJECT'	=> 'Your subject contains the following unsupported characters:<br />%s',
 	'UPDATE_COMMENT'			=> 'Uuenda kommentaari',
 	'URL_INVALID'				=> 'Sisestatud URL on ebakorrektne.',
 	'URL_NOT_FOUND'				=> 'Faili ei leitud.',
@@ -3032,8 +3260,8 @@ $lang = array_merge($lang, array(
 	'VIEW_MESSAGE'				=> '%sVaata oma postitatud sõnumit%s',
 	'VIEW_PRIVATE_MESSAGE'		=> '%sVaata oma saadetud privaatsõnumit%s',
 
-	'WRONG_FILESIZE'			=> 'Fail on liiga suur, Maksimum on %1d %2s.',
-	'WRONG_SIZE'				=> 'Pilt peab olema minimaalselt %1$d pikslit lai, %2$d pikslit kõrge ja maksimaalselt %3$d pikslit lai ja %4$d pikslit kõrge. Sisestatud pilt on %5$d pikslit lai ja %6$d pikslit kõrge.',
+	'WRONG_FILESIZE'			=> 'The file is too big, maximum allowed size is %1$d %2$s.',
+	'WRONG_SIZE'				=> 'The image must be at least %1$s wide, %2$s high and at most %3$s wide and %4$s high. The submitted image is %5$s wide and %6$s high.',
 
 	'FONT_TYPE'			=> 'Typeface',
 	'FONT_COLOR'			=> 'Fondi värv',
@@ -3053,10 +3281,6 @@ $lang = array_merge($lang, array(
 
 	'DISPLAY_RESULTS'		=> 'Näita tulemusi',
 
-	'FOUND_SEARCH_MATCH'		=> 'Otsing leidis %d vaste',
-	'FOUND_SEARCH_MATCHES'		=> 'Otsing leidis %d vastet',
-	'FOUND_MORE_SEARCH_MATCHES'	=> 'Otsing leidis rohkem kui %d vastet',
-
 	'GLOBAL'				=> 'Üldteadaanne',
 
 	'IGNORED_TERMS'			=> 'ignoreeritud',
@@ -3068,24 +3292,23 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_UNREADSEARCH'=> 'Foorum nõuab, et oleksid sisse logitud, et vaadata oma postitusi.',
 	'LOGIN_EXPLAIN_NEWPOSTS'	=> 'Foorum nõuab, et oleksid sisse logitud, et vaadata uusi postitusi oma viimasest külastusest saadik.',
 
-	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> 'Sa sisestasid liiga palju otsisõnu. Palun ära sisesta üle %1$d sõna.',
-
-	'NO_KEYWORDS'			=> 'Sa pead sisestama vähemalt ühe otsingusõna. Iga sõna peab koosnema vähemalt %d sümbolist ja ei tohi sisaldada rohkem kui %d sümbolit, välja arvatud wildcard\'id',
+	'NO_KEYWORDS'			=> 'You must specify at least one word to search for. Each word must consist of at least %s and must not contain more than %s excluding wildcards.',
 	'NO_RECENT_SEARCHES'	=> 'Viimasel ajal pole otsinguid sooritatud.',
 	'NO_SEARCH'				=> 'Vabandame, sul pole õigusi otsida foorumitest.',
 	'NO_SEARCH_RESULTS'		=> 'Sobivaid vasteid ei leitud',
-	'NO_SEARCH_TIME'		=> 'Vabandame, otsing pole hetkel kasutatav. Proovi mõne aja pärast uuesti',
 	'NO_SEARCH_UNREADS'		=> 'Vabandame, kuid lugemata postituste otsing on siin foorumis keelatud.',
 	'WORD_IN_NO_POST'		=> 'Postitusi ei leitud, sest sõna <strong>%s</strong> ei sisaldu üheski postituses.',
 	'WORDS_IN_NO_POST'		=> 'Postitusi ei leitud, sest sõnad <strong>%s</strong> ei sisaldu üheski postituses.',
 
 	'POST_CHARACTERS'		=> 'postituse sümbolit',
+	'PHRASE_SEARCH_DISABLED'	=> 'Searching by exact phrase is not supported on this board.',
 
 	'RECENT_SEARCHES'		=> 'Eelmised otsingud',
 	'RESULT_DAYS'			=> 'Limiteeri vastuseid eelmise',
 	'RESULT_SORT'			=> 'Sorteeri vastused',
 	'RETURN_FIRST'			=> 'Tagasi esimese juurde',
 	'RETURN_TO_SEARCH_ADV'	=> 'Tagasi täiendatud otsingusse',
+	'GO_TO_SEARCH_ADV'	=> 'Go to advanced search',
 
 	'SEARCHED_FOR'				=> 'Otsingusõna kasutatud',
 	'SEARCHED_TOPIC'			=> 'Otsitud teema',
@@ -3112,10 +3335,11 @@ $lang = array_merge($lang, array(
 	'SORT_FORUM'				=> 'Foorum',
 	'SORT_POST_SUBJECT'			=> 'Postituse teema',
 	'SORT_TIME'					=> 'Postituse aeg',
+	'SPHINX_SEARCH_FAILED'		=> 'Search failed: %s',
+	'SPHINX_SEARCH_FAILED_LOG'	=> 'Sorry, search could not be performed. More information about this failure has been logged in the error log.',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
 	'SELECT_ALL_TAGS'		=> 'No selection',
-	'TOO_FEW_AUTHOR_CHARS'	=> 'Sa pead sisestama vähemalt %d sümbolit autori nimeks.',
 ));
 
 #######language/en/ucp.php#######
@@ -3162,6 +3386,7 @@ $lang = array_merge($lang, array(
 	'ATTACHMENTS_EXPLAIN'			=> 'See on manuste nimekiri, mida oled lisanud postitustesse.',
 	'ATTACHMENTS_DELETED'			=> 'Manused edukalt kustutatud.',
 	'ATTACHMENT_DELETED'			=> 'Manus edukalt kustutatud.',
+	'AUTOLOGIN_SESSION_KEYS_DELETED'=> 'The selected "Remember Me" login keys were successfully deleted.',
 	'AVATAR_CATEGORY'				=> 'Kategooria',
 	'AVATAR_DRIVER_GRAVATAR_TITLE'	=> 'Gravatar',
 	'AVATAR_DRIVER_GRAVATAR_EXPLAIN'=> 'Gravatar is a service that allows you to maintain the same avatar across multiple websites. Visit <a href="http://www.gravatar.com/">Gravatar</a> for more information.',
@@ -3171,12 +3396,14 @@ $lang = array_merge($lang, array(
 	'AVATAR_DRIVER_REMOTE_EXPLAIN'	=> 'Link to avatar images from another website.',
 	'AVATAR_DRIVER_UPLOAD_TITLE'	=> 'Upload avatar',
 	'AVATAR_DRIVER_UPLOAD_EXPLAIN'	=> 'Upload your own custom avatar.',
-	'AVATAR_EXPLAIN'				=> 'Maksimaalsed mõõtmed: laius: %1$d pikslit, kõrgus: %2$d pikslit, failisuurus: %3$dkB.',
+	'AVATAR_EXPLAIN'				=> 'Maximum dimensions; width: %1$s, height: %2$s, file size: %3$.2f KiB.',
 	'AVATAR_FEATURES_DISABLED'		=> 'Avatarid on hetkel keelatud.',
 	'AVATAR_GALLERY'				=> 'Galerii',
 	'AVATAR_GENERAL_UPLOAD_ERROR'	=> 'Ei saa üles laadida avatari %s kausta.',
 	'AVATAR_NOT_ALLOWED'			=> 'Sinu avatari ei kuvata, sest avatarid on keelatud.',
 	'AVATAR_PAGE'					=> 'Leht',
+	'AVATAR_SELECT'					=> 'Select your avatar',
+	'AVATAR_TYPE'					=> 'Avatar type',
 	'AVATAR_TYPE_NOT_ALLOWED'		=> 'Sinu avatari ei kuvata, sest selle tüüp on keelatud.',
 
 	'BACK_TO_DRAFTS'			=> 'Tagasi mustandite juurde',
@@ -3185,7 +3412,6 @@ $lang = array_merge($lang, array(
 	'BIRTHDAY_EXPLAIN'			=> 'Aasta määramine näitab sinu vanust sünnipäeval.',
 	'BOARD_DATE_FORMAT'			=> 'Minu kuupäeva formaat',
 	'BOARD_DATE_FORMAT_EXPLAIN'	=> 'Süntaks on sama, mis PHP\'l: <a href="http://www.php.net/date">date()</a>.',
-	'BOARD_DST'					=> 'Reguleeri suveajale üleminekut',
 	'BOARD_LANGUAGE'			=> 'Minu keel',
 	'BOARD_STYLE'				=> 'Minu still',
 	'BOARD_TIMEZONE'			=> 'Minu ajatsoon',
@@ -3204,8 +3430,6 @@ $lang = array_merge($lang, array(
 	'CLICK_RETURN_FOLDER'		=> '%1$sTagasi “%3$s” kausta%2$s',
 	'CONFIRMATION'				=> 'Registreerimise kinnitus',
 	'CONFIRM_CHANGES'			=> 'Kinnita muudatused',
-	'CONFIRM_EMAIL'				=> 'Kinnita e-posti aadress',
-	'CONFIRM_EMAIL_EXPLAIN'		=> 'Pead kinnitama oma e-posti aadressi vaid siis, kui sa seda muutsid.',
 	'CONFIRM_EXPLAIN'			=> 'Et ennetada automaatseid registreerimisi, nõuab foorum sinult kinnituskoodi sisestamist. Koodi näidatakse teksti all. Kui sa ei näe seda koodi, siis kontakteeru %sfoorumi administraatoriga%s.',
 	'VC_REFRESH'				=> 'Värskenda kinnituskoodi',
 	'VC_REFRESH_EXPLAIN'		=> 'Kui sa ei suuda praegust koodi lugeda, võid soovida uut juuresolevat nuppu vajutades.',
@@ -3214,7 +3438,7 @@ $lang = array_merge($lang, array(
 	'CONFIRM_PASSWORD_EXPLAIN'	=> 'Pead kinnitama oma parooli vaid siis, kui sa seda muutsid.',
 	'COPPA_BIRTHDAY'			=> 'Et jätkata registreerimisega, sisesta, kus sa sündisid.',
 	'COPPA_COMPLIANCE'			=> 'COPPA päring',
-	'COPPA_EXPLAIN'				=> 'Sisestades oma andmeid foorumi andmebaasi luuakse sulle konto. Kontot ei aktiveerita enne, kui sinu vanem või järelvaataja on kinnitanud registreerimise. Sulle saadetakse e-kiri edasiste juhistega.',
+	'COPPA_EXPLAIN'				=> 'Please note that clicking submit will create your account. However it cannot be activated until a parent or guardian approves your registration. You will be e-mailed a copy of the necessary form with details of where to send it.',
 	'CREATE_FOLDER'				=> 'Lisa kaust',
 	'CURRENT_IMAGE'				=> 'Praegune pilt',
 	'CURRENT_PASSWORD'			=> 'Praegune parool',
@@ -3269,27 +3493,34 @@ $lang = array_merge($lang, array(
 	'EXPORT_FOLDER'				=> 'Ekspordi see vaade',
 
 	'FIELD_REQUIRED'					=> 'Väli “%s” peab olema täidetud.',
-	'FIELD_TOO_SHORT'					=> 'Väli “%1$s” on liiga lühike, minimaalselt %2$d sümbolit on nõutud.',
-	'FIELD_TOO_LONG'					=> 'Väli “%1$s” on liiga pikk, maksimaalselt %2$d sümbolit on lubatud.',
-	'FIELD_TOO_SMALL'					=> 'Välja “%1$s” väärtus on liiga väike, minimaalne väärtus on %2$d.',
-	'FIELD_TOO_LARGE'					=> 'Välja “%1$s” väärtus on liiga suur, maksimaalne väärtus on %2$d.',
+
+	'FIELD_TOO_SMALL'					=> 'The value of “%2$s” is too small, a minimum value of %1$d is required.',
+	'FIELD_TOO_LARGE'					=> 'The value of “%2$s” is too large, a maximum value of %1$d is allowed.',
+	'FIELD_INVALID_CHARS_INVALID'		=> 'The field “%s” has invalid characters.',
 	'FIELD_INVALID_CHARS_NUMBERS_ONLY'	=> 'Väljal “%s” on lubamatuid sümboleid, ainult numbrid on lubatud.',
+	'FIELD_INVALID_CHARS_ALPHA_DOTS'	=> 'The field “%s” has invalid characters, only alphanumeric or . characters are allowed.',
 	'FIELD_INVALID_CHARS_ALPHA_ONLY'	=> 'Väljal “%s” on lubamatuid sümboleid, ainult tähed ja numbrid on lubatud.',
-	'FIELD_INVALID_CHARS_SPACERS_ONLY'	=> 'Väljal “%s” on lubamatuid sümboleid, ainult tähed ja numbrid, tühikud või -+_[] sümbolid on lubatud',
+	'FIELD_INVALID_CHARS_ALPHA_PUNCTUATION'	=> 'The field “%s” has invalid characters, only alphanumeric or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_ALPHA_SPACERS'	=> 'The field “%s” has invalid characters, only alphanumeric, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_ALPHA_UNDERSCORE'	=> 'The field “%s” has invalid characters, only alphanumeric or _ characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_DOTS'	=> 'The field “%s” has invalid characters, only letter, number or . characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_ONLY'	=> 'The field “%s” has invalid characters, only letter and number characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_PUNCTUATION'	=> 'The field “%s” has invalid characters, only letter, number or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_SPACERS'		=> 'The field “%s” has invalid characters, only letter, number, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_UNDERSCORE'		=> 'The field “%s” has invalid characters, only letter, number or _ characters are allowed.',
 	'FIELD_INVALID_DATE'				=> 'Väljal “%s” on ebakorrektne kuupäev',
+	'FIELD_INVALID_URL'					=> 'The field “%s” has an invalid url.',
 	'FIELD_INVALID_VALUE'				=> 'Väljal “%s” on ebakorrektne väärtus.',
 
 	'FOE_MESSAGE'				=> 'Sõnum vaenlaselt',
 	'FOES_EXPLAIN'				=> 'Vaenlased on kasutajad, keda vaikimisi ignoreeritakse. Postitused nende poolt ei ole täielikult nähtavad. Privaatsõnumid on nendelt siiski lubatud. Sa ei saa lisada vaenlaseks moderaatorit või administraatorit',
 	'FOES_UPDATED'				=> 'Sinu vaenlaste nimekiri on edukalt uuendatud.',
 	'FOLDER_ADDED'				=> 'Kaust edukalt lisatud',
-	'FOLDER_MESSAGE_STATUS'		=> '%1$d kuni %2$d salvestatud sõnumit',
 	'FOLDER_NAME_EMPTY'			=> 'Pead sisestama kaustale nime.',
 	'FOLDER_NAME_EXIST'			=> 'Kaust <strong>%s</strong> on juba olemas.',
 	'FOLDER_OPTIONS'			=> 'Kausta valikud',
 	'FOLDER_RENAMED'			=> 'Kaust edukalt ümber nimetatud.',
 	'FOLDER_REMOVED'			=> 'Kaust edukalt eemaldatud.',
-	'FOLDER_STATUS_MSG'			=> 'Kaust %1$d%% täis (%2$d kuni %3$d salvestatud sõnumit)',
 	'FORWARD_PM'				=> 'Edasta PS',
 	'FORCE_PASSWORD_EXPLAIN'	=> 'Enne, kui saad uuesti foorumile minna, pead vahetama parooli.',
 	'FRIEND_MESSAGE'			=> 'Sõnum sõbralt.',
@@ -3358,16 +3589,35 @@ $lang = array_merge($lang, array(
 	'MOVE_DELETED_MESSAGES_TO'		=> 'Liiguta sõnumid eemaldatud kaustas',
 	'MOVE_DOWN'						=> 'Liiguta alla',
 	'MOVE_MARKED_TO_FOLDER'			=> 'Liiguta märgistatud %s kausta',
-	'MOVE_PM_ERROR'					=> 'Ilmnes viga sõnumite liigutamises uude kausta, ainult %1d %2d\'st sõnumist liigutati.',
 	'MOVE_TO_FOLDER'				=> 'Liiguta kausta',
 	'MOVE_UP'						=> 'Liiguta üles',
 
-	'NEW_EMAIL_CONFIRM_EMPTY'		=> 'Sa ei sisestanud emaili aadressi kinnituseks.',
-	'NEW_EMAIL_ERROR'				=> 'Sisestatud emailid ei kattu',
 	'NEW_FOLDER_NAME'				=> 'Uus kausta nimi',
 	'NEW_PASSWORD'					=> 'Uus parool',
 	'NEW_PASSWORD_CONFIRM_EMPTY'	=> 'Sa ei sisestanud kinnituseks parooli.',
 	'NEW_PASSWORD_ERROR'			=> 'Sisestatud paroolid ei kattu.',
+
+	'NOTIFICATIONS_MARK_ALL_READ'						=> 'Mark all notifications read',
+	'NOTIFICATIONS_MARK_ALL_READ_CONFIRM'				=> 'Are you sure you want to mark all notifications read?',
+	'NOTIFICATIONS_MARK_ALL_READ_SUCCESS'				=> 'All notifications have been marked read.',
+	'NOTIFICATION_GROUP_MISCELLANEOUS'					=> 'Miscellaneous Notifications',
+	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
+	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
+	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'E-mail',
+	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
+	'NOTIFICATION_TYPE'									=> 'Notification type',
+	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
+	'NOTIFICATION_TYPE_GROUP_REQUEST'					=> 'Someone requests to join a group you lead',
+	'NOTIFICATION_TYPE_IN_MODERATION_QUEUE'				=> 'A post or topic needs approval',
+	'NOTIFICATION_TYPE_MODERATION_QUEUE'				=> 'Your topics/posts are approved or disapproved by a moderator',
+	'NOTIFICATION_TYPE_PM'								=> 'Someone sends you a private message',
+	'NOTIFICATION_TYPE_POST'							=> 'Someone replies to a topic to which you are subscribed',
+	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
+	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
+	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+
 	'NOTIFY_METHOD'					=> 'Teatamisviis',
 	'NOTIFY_METHOD_BOTH'			=> 'Mõlemad',
 	'NOTIFY_METHOD_EMAIL'			=> 'Ainult e-post',
@@ -3385,10 +3635,9 @@ $lang = array_merge($lang, array(
 	'NOT_ADDED_FOES_SELF'			=> 'Sa ei saa lisada ennast vaenlaste nimekirja.',
 	'NOT_AGREE'						=> 'Ma ei nõustu nende tingimustega',
 	'NOT_ENOUGH_SPACE_FOLDER'		=> 'Sihtkaust “%s” on täis. Valitud toimingut ei sooritatud.',
-	'NOT_MOVED_MESSAGE'				=> 'Sul on hetkel 1 privaatsõnum ootel täis kausta tõttu.',
-	'NOT_MOVED_MESSAGES'			=> 'Sul on hetkel %d privaatsõnumit ootel täis kausta tõttu.',
 	'NO_ACTION_MODE'				=> 'Sõnumitoimingut ei valitud.',
 	'NO_AUTHOR'						=> 'Autorit ei määratud',
+	'NO_AVATAR'						=> 'No avatar selected',
 	'NO_AVATAR_CATEGORY'			=> 'Pole',
 
 	'NO_AUTH_DELETE_MESSAGE'		=> 'Sul pole lubatud kustutada privaatsõnumeid.',
@@ -3396,6 +3645,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_FORWARD_MESSAGE'		=> 'Sul pole lubatud edastada privaatsõnumeid.',
 	'NO_AUTH_GROUP_MESSAGE'			=> 'Sul pole lubatud saata gruppidele privaatsõnumeid.',
 	'NO_AUTH_PASSWORD_REMINDER'		=> 'Sul pole lubatud küsida uut parooli.',
+	'NO_AUTH_PROFILEINFO'			=> 'You are not authorised to change your profile information.',
 	'NO_AUTH_READ_HOLD_MESSAGE'		=> 'Sul pole lubatud lugeda ootel privaatsõnumeid.',
 	'NO_AUTH_READ_MESSAGE'			=> 'Sul pole lubatud lugeda privaatsõnumeid.',
 	'NO_AUTH_READ_REMOVED_MESSAGE'	=> 'Sa ei saa seda sõnumit lugeda, sest selle eemaldas autor.',
@@ -3426,10 +3676,10 @@ $lang = array_merge($lang, array(
 	'NO_WATCHED_SELECTED'		=> 'Sa pole valinud ühtegi tellitud foorumit või teemat.',
 	'NO_WATCHED_TOPICS'			=> 'Sa pole ühtegi teemat tellinud.',
 
-	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Parooli pikkus peab olema vahemikus %1$d ja %2$d sümbolit, peab sisaldama nii suuri kui ka väikeseid tähti ja numbreid.',
-	'PASS_TYPE_ANY_EXPLAIN'		=> 'Peab olema vahemikus %1$d ja %2$d sümbolit.',
-	'PASS_TYPE_CASE_EXPLAIN'	=> 'Parooli pikkus peab olema vahemikus %1$d ja %2$d sümbolit, peab sisaldama nii suuri kui ka väikeseid tähti.',
-	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Parooli pikkus peab olema vahemikus %1$d ja %2$d sümbolit, peab sisaldama nii suuri kui ka väikeseid tähti, numbreid ja sümboleid.',
+	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case and must contain numbers.',
+	'PASS_TYPE_ANY_EXPLAIN'		=> 'Must be between %1$s and %2$s.',
+	'PASS_TYPE_CASE_EXPLAIN'	=> 'Password must be between %1$s and %2$s long and must contain letters in mixed case.',
+	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case, must contain numbers and must contain symbols.',
 	'PASSWORD'					=> 'Parool',
 	'PASSWORD_ACTIVATED'		=> 'Sinu uus parool on aktiveeritud.',
 	'PASSWORD_UPDATED'			=> 'Uus parool saadeti sinu registreeritud e-posti aadressile.',
@@ -3440,13 +3690,16 @@ $lang = array_merge($lang, array(
 	'PM_FROM_REMOVED_AUTHOR'	=> 'Selle sõnumi saatis kasutaja, kes pole enam registreeritud.',
 	'PM_ICON'					=> 'PS-ikoon',
 	'PM_INBOX'					=> 'Sissetulnud sõnumid',
+	'PM_MARK_ALL_READ'			=> 'Mark all messages read',
+	'PM_MARK_ALL_READ_SUCCESS'	=> 'All private messages in this folder have been marked read',
 	'PM_NO_USERS'				=> 'Selliseid kasutajaid pole.',
 	'PM_OUTBOX'					=> 'Väljaminevad sõnumid',
 	'PM_SENTBOX'				=> 'Saadetud sõnumid',
 	'PM_SUBJECT'				=> 'Sõnumi pealkiri',
 	'PM_TO'						=> 'Kellele',
+	'PM_TOOLS'					=> 'Message tools',
+	'PM_USERS_REMOVED_NO_PERMISSION'	=> 'Some users couldn’t be added as they do not have permission to read private messages.',
 	'PM_USERS_REMOVED_NO_PM'	=> 'Mõnda kasutajat ei lisatud, sest ta on keelanud privaatsõnumite vastuvõtmise.',
-	'POPUP_ON_PM'				=> 'Popup uue privaatsõnumi puhul',
 	'POST_EDIT_PM'				=> 'Muuda sõnumit',
 	'POST_FORWARD_PM'			=> 'Edasta sõnum',
 	'POST_NEW_PM'				=> 'Uus sõnum',
@@ -3458,6 +3711,8 @@ $lang = array_merge($lang, array(
 	'PREFERENCES_UPDATED'		=> 'Sinu valikud on uuendatud.',
 	'PROFILE_INFO_NOTICE'		=> 'See info võib olla kättesaadav teistele kasutajatele. Ole ettevaatlik, kui lisad isiklikke andmeid. Tärniga märgitud väljad tuleb täita.',
 	'PROFILE_UPDATED'			=> 'Sinu profiil on uuendatud.',
+	'PROFILE_AUTOLOGIN_KEYS'	=> 'The "Remember Me" login keys automatically log you in when you visit the board. If you logout, the remember me login key is deleted only on the computer you are using to logout. Here you can see remember login keys created on other computers you used to access this site.',
+	'PROFILE_NO_AUTOLOGIN_KEYS'	=> 'There are no saved "Remember Me" login keys.',
 
 	'RECIPIENT'							=> 'Saaja',
 	'RECIPIENTS'						=> 'Saajad',
@@ -3482,8 +3737,6 @@ $lang = array_merge($lang, array(
 	'RULE_DELETED'						=> 'Reegel edukalt eemaldatud.',
 	'RULE_LIMIT_REACHED'				=> 'You cannot add more PM rules. You have reached the maximum number of rules.',
 	'RULE_NOT_DEFINED'					=> 'Reegel on ebakorrektselt vormistatud.',
-	'RULE_REMOVED_MESSAGE'				=> 'Üks privaatsõnum on eemaldatud privaatsõnumifiltrite tõttu.',
-	'RULE_REMOVED_MESSAGES'				=> '%d privaatsõnumit on eemaldatud privaatsõnumifiltrite tõttu.',
 
 	'SAME_PASSWORD_ERROR'		=> 'Sisestatud uus parool on sama, mis praegune parool',
 	'SEARCH_YOUR_POSTS'			=> 'Näita postitusi',
@@ -3495,6 +3748,8 @@ $lang = array_merge($lang, array(
 	'SIGNATURE_TOO_LONG'		=> 'Sinu signatuur on liiga pikk.',
 	'SELECT_CURRENT_TIME'		=> 'Select current time',
 	'SELECT_TIMEZONE'			=> 'Select timezone',
+	'SELECT_CURRENT_TIME'		=> 'Select current time',
+	'SELECT_TIMEZONE'			=> 'Select timezone',
 	'SORT'						=> 'Sorteeri',
 	'SORT_COMMENT'				=> 'faili kommentaaride järgi',
 	'SORT_DOWNLOADS'			=> 'allalaadimiste arvu järgi',
@@ -3504,15 +3759,28 @@ $lang = array_merge($lang, array(
 	'SORT_SIZE'					=> 'faili suuruse järgi',
 
 	'TIMEZONE'					=> 'Ajatsoon',
-	'TO'						=> 'Kellele',
+	'TIMEZONE_DATE_SUGGESTION'	=> 'Suggestion: %s',
+	'TIMEZONE_INVALID'			=> 'The timezone you selected is invalid.',
+	'TO'						=> 'Recipient',
+	'TO_MASS'					=> 'Recipients',
+	'TO_ADD'					=> 'Add recipient',
+	'TO_ADD_MASS'				=> 'Add recipients',
+	'TO_ADD_GROUPS'				=> 'Add groups',
 	'TOO_MANY_RECIPIENTS'		=> 'Proovisid saata privaatsõnumit liiga paljudele kasutajatele korraga.',
 	'TOO_MANY_REGISTERS'		=> 'Sa oled ületanud maksimaalsete registreerimiskatsete arvu sellel sessioonil. Proovi hiljem uuesti.',
 
 	'UCP'						=> 'Juhtpaneel',
 	'UCP_ACTIVATE'				=> 'Aktiveeri kasutaja',
 	'UCP_ADMIN_ACTIVATE'		=> 'Sa pead sisestama korrektse e-posti aadressi, et su kasutaja aktiveeritaks. Administraator vaatab su kasutaja üle ja kui ta su foorumisse laseb, saad sa selle kohta e-kirja.',
-	'UCP_AIM'					=> 'AOL Messenger',
 	'UCP_ATTACHMENTS'			=> 'Manused',
+	'UCP_AUTH_LINK'				=> 'External accounts',
+	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
+	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
+	'UCP_AUTH_LINK_LINK'		=> 'Link',
+	'UCP_AUTH_LINK_MANAGE'		=> 'Manage external account associations',
+	'UCP_AUTH_LINK_NOT_SUPPORTED'	=> 'Linking board accounts to external services is not supported by this board’s current authentication method.',
+	'UCP_AUTH_LINK_TITLE'		=> 'Manage your external account associations',
+	'UCP_AUTH_LINK_UNLINK'		=> 'Unlink',
 	'UCP_AUTH_LINK'				=> 'External accounts',
 	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
 	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
@@ -3524,8 +3792,8 @@ $lang = array_merge($lang, array(
 	'UCP_COPPA_BEFORE'			=> 'Enne %s',
 	'UCP_COPPA_ON_AFTER'		=> 'Samal päeval või pärast %s',
 	'UCP_EMAIL_ACTIVATE'		=> 'Sa pead sisestama korrektse e-posti aadressi, et su kasutaja aktiveeritaks. Sa saad e-kirja sellele aadressile, mis sisaldab aktiveerimislinki.',
-	'UCP_ICQ'					=> 'ICQ number',
 	'UCP_JABBER'				=> 'Jabber aadress',
+	'UCP_LOGIN_LINK'			=> 'Set up an external account association',
 
 	'UCP_MAIN'					=> 'Ülevaade',
 	'UCP_MAIN_ATTACHMENTS'		=> 'Halda manuseid',
@@ -3534,7 +3802,6 @@ $lang = array_merge($lang, array(
 	'UCP_MAIN_FRONT'			=> 'Esileht',
 	'UCP_MAIN_SUBSCRIBED'		=> 'Halda tellimusi',
 
-	'UCP_MSNM'					=> 'WL/MSN Messenger',
 	'UCP_NO_ATTACHMENTS'		=> 'Sa pole ühtegi manust lisanud.',
 
 	'UCP_NOTIFICATION_LIST'				=> 'Manage notifications',
@@ -3551,8 +3818,6 @@ $lang = array_merge($lang, array(
 	'UCP_PM_COMPOSE'			=> 'Uus sõnum',
 	'UCP_PM_DRAFTS'				=> 'Halda PS-mustandeid',
 	'UCP_PM_OPTIONS'			=> 'Reeglid, kaustad ja seaded',
-	'UCP_PM_POPUP'				=> 'Privaatsõnumid',
-	'UCP_PM_POPUP_TITLE'		=> 'Privaatsõnumi Popup',
 	'UCP_PM_UNREAD'				=> 'Lugemata sõnumid',
 	'UCP_PM_VIEW'				=> 'Vaata sõnumeid',
 
@@ -3567,11 +3832,11 @@ $lang = array_merge($lang, array(
 	'UCP_USERGROUPS_MEMBER'		=> 'Muuda liikmestaatusi',
 	'UCP_USERGROUPS_MANAGE'		=> 'Halda gruppe',
 
+	'UCP_PASSWORD_RESET_DISABLED'	=> 'The password reset functionality has been disabled. If you need help accessing your account, please contact the %sBoard Administrator%s',
 	'UCP_REGISTER_DISABLE'			=> 'Uue kasutaja loomine pole hetkel võimalik.',
 	'UCP_REMIND'					=> 'Saada parool',
 	'UCP_RESEND'					=> 'Saada aktiveerimiskiri',
 	'UCP_WELCOME'					=> 'Tere tulemast juhtpaneeli. Siit saad sa vaadata ja uuendada oma profiili, valikuid ja tellimusi. Saad saata ka sõnumid teistele kasutajatele, kui see on lubatud. Loe läbi teadaanded enne, kui jätkad.',
-	'UCP_YIM'						=> 'Yahoo Messenger',
 	'UCP_ZEBRA'						=> 'Sõbrad ja vaenlased',
 	'UCP_ZEBRA_FOES'				=> 'Halda vaenlaste nimekirja',
 	'UCP_ZEBRA_FRIENDS'				=> 'Halda sõprade nimekirja',
@@ -3581,12 +3846,12 @@ $lang = array_merge($lang, array(
 	'UPLOAD_AVATAR_FILE'			=> 'Lae üles oma masinast',
 	'UPLOAD_AVATAR_URL'				=> 'Lae üles URL\'ilt',
 	'UPLOAD_AVATAR_URL_EXPLAIN'		=> 'Sisesta pildifaili URL. Pilt kopeeritakse siia saidile.',
-	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Kasutajanimi peab olema vahemikus %1$d ja %2$d sümbolit pikk. Võid kasutada vaid kirjamärke.',
-	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Kasutajanimi peab olema vahemikus %1$d ja %2$d sümbolit pikk. Võid kasutada vaid kirjamärke, tühikut või -+_[] sümboleid.',
-	'USERNAME_ASCII_EXPLAIN'		=> 'Kasutajanimi peab olema vahemikus %1$d ja %2$d sümbolit pikk. Võid kasutada vaid ASCII sümboleid, seega mitte erisümboleid.',
-	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Kasutajanimi peab olema vahemikus %1$d ja %2$d sümbolit pikk. Võid kasutada vaid tähti ja numbreid.',
-	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Kasutajanimi peab olema vahemikus %1$d ja %2$d sümbolit pikk. Võid kasutada vaid tähti, numbreid, tühikut või -+_[] sümboleid.',
-	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Pikkus peab olema  vahemikus %1$d ja %2$d sümbolit.',
+	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only alphanumeric characters.',
+	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use alphanumeric, space or -+_[] characters.',
+	'USERNAME_ASCII_EXPLAIN'		=> 'Username must be between %1$s and %2$s long and use only ASCII characters, so no special symbols.',
+	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only letter or number characters.',
+	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use letter, number, space or -+_[] characters.',
+	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Length must be between %1$s and %2$s.',
 	'USERNAME_TAKEN_USERNAME'		=> 'Sisestatud kasutajanimi on juba registreeritud, vali midagi muud.',
 	'USERNAME_DISALLOWED_USERNAME'	=> 'Sisestatud kasutajanimi on keelatud või sisaldab keelatud sõna, vali midagi muud',
 	'USER_NOT_FOUND_OR_INACTIVE'	=> 'Sisestatud kasutajat ei leitud või teda pole aktiveeritud.',
@@ -3599,10 +3864,9 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_PM'				=> 'Järgmine PS',
 	'VIEW_PM'					=> 'Vaata privaatsõnumit',
 	'VIEW_PM_INFO'				=> 'Sõnumi andmed',
-	'VIEW_PM_MESSAGE'			=> '1 sõnum',
-	'VIEW_PM_MESSAGES'			=> '%d sõnumit',
 	'VIEW_PREVIOUS_HISTORY'		=> 'Eelmine PS-ajaloos',
 	'VIEW_PREVIOUS_PM'			=> 'Eelmine PS',
+	'VIEW_PROFILE'				=> 'View profile',
 	'VIEW_SIGS'					=> 'Näita signatuure',
 	'VIEW_SMILIES'				=> 'Näita smailisid piltidena',
 	'VIEW_TOPICS_DAYS'			=> 'Näita teemasid eelmisest',
@@ -3710,8 +3974,6 @@ $lang = array_merge($lang, array(
 	'UNREAD_POSTS_LOCKED'	=> 'Lugemata potitused [ Suletud ]',
 
 	'VIEW_FORUM'			=> 'Vaata foorumit',
-	'VIEW_FORUM_TOPIC'		=> '1 teema',
-	'VIEW_FORUM_TOPICS'		=> '%d teemat',
 
 	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
 	'REMOVE_FILTER'		=> 'Remove filter',
@@ -3720,6 +3982,7 @@ $lang = array_merge($lang, array(
 #######language/en/viewtopic.php#######
 
 $lang = array_merge($lang, array(
+	'APPROVE'								=> 'Luba',
 	'ATTACHMENT'						=> 'Manus',
 	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'Manuste lisamine on keelatud',
 
@@ -3732,14 +3995,13 @@ $lang = array_merge($lang, array(
 	'BUMP_TOPIC'			=> 'Tõsta teemat',
 
 	'CODE'					=> 'Kood',
-	'COLLAPSE_QR'			=> 'Peaida kiirvastamine',
-
+	
 	'DELETE_TOPIC'			=> 'Kustuta teema',
+	'DELETED_INFORMATION'	=> 'Deleted by %1$s on %2$s',
+	'DISAPPROVE'					=> 'Keela',
 	'DOWNLOAD_NOTICE'		=> 'Sul pole õigusi, et siin postituses manuseid näha',
 
-	'EDITED_TIMES_TOTAL'	=> 'Viimati muutis %1$s, %2$s, muudetud %3$d korda kokku.',
-	'EDITED_TIME_TOTAL'		=> 'Viimati muutis %1$s, %2$s, muudetud %3$d kord kokku.',
-	'EMAIL_TOPIC'			=> 'Saada sõbrale e-kiri',
+	'EMAIL_TOPIC'			=> 'E-mail topic',
 	'ERROR_NO_ATTACHMENT'	=> 'Valitud manust ei ole enam.',
 
 	'FILE_NOT_FOUND_404'	=> 'Faili <strong>%s</strong> ei eksisteeri.',
@@ -3754,8 +4016,6 @@ $lang = array_merge($lang, array(
 	'MAKE_GLOBAL'				=> 'Muuda üldteadaandeks',
 	'MAKE_NORMAL'				=> 'Muuda tavaliseks teemaks',
 	'MAKE_STICKY'				=> 'Muuda kleebiseks',
-	'MAX_OPTIONS_SELECT'		=> 'Sa võid valida kuni <strong>%d</strong> valikut.',
-	'MAX_OPTION_SELECT'			=> 'Sa võid valida kuni <strong>1</strong> valiku.',
 	'MISSING_INLINE_ATTACHMENT'	=> 'Manus <strong>%s</strong> pole enam saadaval.',
 	'MOVE_TOPIC'				=> 'Liiguta teema',
 
@@ -3769,6 +4029,7 @@ $lang = array_merge($lang, array(
 	'POLL_ENDED_AT'			=> 'Hääletus lõppes %s',
 	'POLL_RUN_TILL'			=> 'Hääletus kestab kuni %s',
 	'POLL_VOTED_OPTION'		=> 'Sa hääletasid selle valiku poolt',
+	'POST_DELETED_RESTORE'	=> 'This post has been deleted. It can be restored.',
 	'PRINT_TOPIC'			=> 'Printerivaade',
 
 	'QUICK_MOD'				=> 'Kiire modereerimine',
@@ -3776,11 +4037,14 @@ $lang = array_merge($lang, array(
 	'QUOTE'					=> 'Tsiteeri',
 
 	'REPLY_TO_TOPIC'		=> 'Vasta teemale',
+	'RESTORE'				=> 'Restore',
+	'RESTORE_TOPIC'			=> 'Restore topic',
 	'RETURN_POST'			=> '%sMine tagasi eelmisele lehele%s',
 
 	'SHOW_QR'				=> 'Kiirvastamine',
 	'SUBMIT_VOTE'			=> 'Anna hääl',
 
+	'TOPIC_TOOLS'			=> 'Topic tools',
 	'TOTAL_VOTES'			=> 'Hääli kokku',
 
 	'UNLOCK_TOPIC'			=> 'Ava teema',
@@ -3789,10 +4053,7 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_TOPIC'		=> 'Järgmine teema',
 	'VIEW_PREVIOUS_TOPIC'	=> 'Eelmine teema',
 	'VIEW_RESULTS'			=> 'Vaata tulemusi',
-	'VIEW_TOPIC_POST'		=> '1 postitus',
-	'VIEW_TOPIC_POSTS'		=> '%d postitust',
 	'VIEW_UNREAD_POST'		=> 'Esimene lugemata postitus',
-	'VISIT_WEBSITE'			=> 'Külasta veebilehte',
 	'VOTE_SUBMITTED'		=> 'Sinu hääl on arvesse võetud',
 	'VOTE_CONVERTED'		=> 'Häält ei saa muuta konverditud hääletuste puhul.',
 
@@ -9382,6 +9643,7 @@ $lang = array_merge($lang, array(
 	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'	=> 'Maksimaalne kettaruum, mis on igale kasutajale eraldatud privaatsõnumite manuste jaoks, 0 tähendab maksimumi puudumist.',
 	'ATTACH_ORPHAN_URL'					=> 'Postituseta manused',
 	'ATTACH_POST_ID'					=> 'Postituse ID',
+	'ATTACH_POST_TYPE'					=> 'Post type',
 	'ATTACH_QUOTA'						=> 'Manuseid lubatud',
 	'ATTACH_QUOTA_EXPLAIN'				=> 'Maksimaalne kettaruum, mis on eraldatud terve foorumi manustele. 0 tähendab maksimumi puudumist.',
 	'ATTACH_TO_POST'					=> 'Lisa fail postitusse',
@@ -9427,6 +9689,9 @@ $lang = array_merge($lang, array(
 	'EXT_GROUP_REAL_MEDIA'			=> 'Real Media',
 	'EXT_GROUP_WINDOWS_MEDIA'		=> 'Windows Media',
 
+	'FILES_GONE'			=> 'Some of the attachments you selected for deletion do not exist. They may have been already deleted. Attachments that did exist were deleted.',
+	'FILES_STATS_WRONG'		=> 'Your file statistics are likely inaccurate and need to be resynchronised. Actual values: number of attachments = %1$d, total size of attachments = %2$s.<br />Click %3$shere%4$s to resynchronise them.',
+
 	'GO_TO_EXTENSIONS'		=> 'Mine laiendahaldamise juurde',
 	'GROUP_NAME'			=> 'Grupi nimi',
 
@@ -9450,6 +9715,7 @@ $lang = array_merge($lang, array(
 	'NOT_ALLOWED_IN_PM'			=> 'Lubatud ainult postitustes',
 	'NOT_ALLOWED_IN_PM_POST'	=> 'Keelatud',
 	'NOT_ASSIGNED'				=> 'Pole määratud',
+	'NO_ATTACHMENTS'			=> 'No attachments found for this period.',
 	'NO_EXT_GROUP'				=> 'Pole',
 	'NO_EXT_GROUP_NAME'			=> 'Grupi nime ei sisestatud',
 	'NO_EXT_GROUP_SPECIFIED'	=> 'Grupi nime ei määratud.',
@@ -9462,6 +9728,10 @@ $lang = array_merge($lang, array(
 	'ONLY_ALLOWED_IN_PM'	=> 'Ainult lubatud privaatsõnumites',
 	'ORDER_ALLOW_DENY'		=> 'Luba',
 	'ORDER_DENY_ALLOW'		=> 'Keela',
+
+	'REMOVE_ALLOWED_IPS'			=> 'Eemalda või jäta sisse <em>lubatud</em> IP-d/hostinimed',
+	'REMOVE_DISALLOWED_IPS'			=> 'Eemalda või jäta sisse <em>keelatud</em> IP-d/hostinimed',
+	'RESYNC_FILES_STATS_CONFIRM'	=> 'Are you sure you wish to resynchronise file statistics?',
 
 	'REMOVE_ALLOWED_IPS'		=> 'Eemalda või jäta sisse <em>lubatud</em> IP-d/hostinimed',
 	'REMOVE_DISALLOWED_IPS'		=> 'Eemalda või jäta sisse <em>keelatud</em> IP-d/hostinimed',
@@ -9531,18 +9801,17 @@ $lang = array_merge($lang, array(
 	'PERMANENT'		=> 'Jääv',
 
 	'UNTIL'						=> 'Kuni',
-	'USER_BAN'					=> 'Bännimine',
+	'USER_BAN'					=> 'Ban one or more users by username',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> 'Luba see, et välistada sisestatud kasutajanimed kõikidest bännidest.',
 	'USER_BAN_EXPLAIN'			=> 'Sa saad bännida mitut kasutajat korraga, sisestades iga kasutajanime uuele reale. Kasuta <span style="text-decoration: underline;">Otsi kasutajat</span> võimalust, et üles leida ja lisada mitut kasutajat korraga automaatselt.',
 	'USER_NO_BANNED'			=> 'Pole bännitud kasutajanimesid',
-	'USER_UNBAN'				=> 'Võta bänn või välistamine maha kasutajanimedelt',
+	'USER_UNBAN'				=> 'Un-ban or un-exclude users by username',
 	'USER_UNBAN_EXPLAIN'		=> 'Sa saad bänni maha võtta (või välistuse maha võtta) mitmelt kasutajanimelt korraga, valides sobiva kombinatsiooni hiire ja klaviatuuriga sinu arvuti või veebilehitseja jaoks. Välistatud kasutajanimed on paksult.',
 ));
 
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'				=> 'Luba suveajale üleminek/<a href="http://et.wikipedia.org/wiki/Suveaeg">DST</a>',
 	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
 	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
 	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
@@ -9568,16 +9837,28 @@ $lang = array_merge($lang, array(
 	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Siin saad sa määrata oma foorumi põhiseadeid, anda sellele nimi ja kirjeldus, ja lisaks teistele seadetele määrata vaikeväärtused ajatsoonile ja keelele',
+	'BOARD_INDEX_TEXT'				=> 'Board index text',
+	'BOARD_INDEX_TEXT_EXPLAIN'		=> 'This text is displayed as the board index in the board’s breadcrumbs. If not specified, it will default to “Board index”.',
+	'BOARD_STYLE'					=> 'Minu still',
 	'CUSTOM_DATEFORMAT'				=> 'Kohandatud',
 	'DEFAULT_DATE_FORMAT'			=> 'Ajaformaat',
 	'DEFAULT_DATE_FORMAT_EXPLAIN'	=> 'Ajaformaat on sama, mis PHP <code>date</code> funktsioonis.',
 	'DEFAULT_LANGUAGE'				=> 'Vaikimisi keel',
 	'DEFAULT_STYLE'					=> 'Vaikimisi stiil',
+	'DEFAULT_STYLE_EXPLAIN'			=> 'The default style is <strong>%1$s (%2$s)</strong> which is the overriden style for all users (including bots).',
 	'DISABLE_BOARD'					=> 'Keela foorum',
-	'DISABLE_BOARD_EXPLAIN'			=> 'See teeb foorumi kasutajatele kättesaamatuks. Võid ka sisestada lühikese (255 sümbolit) informatsiooni kasutajatele selle kohta, kui soovid.',
+	'DISABLE_BOARD_EXPLAIN'			=> 'This will make the board unavailable to users who are neither administrators nor moderators. You can also enter a short (255 character) message to display if you wish.',
+	'DISPLAY_LAST_SUBJECT'			=> 'Display subject of last added post on forum list',
+	'DISPLAY_LAST_SUBJECT_EXPLAIN'	=> 'The subject of the last added post will be displayed in the forum list with a hyperlink to the post. Subjects from password protected forums and forums in which user doesn’t have read access are not shown.',
+	'GUEST_STYLE'					=> 'Guest style',
+	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Muuda kasutajate valitud stiil',
 	'OVERRIDE_STYLE_EXPLAIN'		=> 'Asendab kasutajate stiili vaikimisi stiiliga.',
 	'SITE_DESC'						=> 'Foorumi kirjeldus',
+	'SITE_HOME_TEXT'				=> 'Main website text',
+	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
+	'SITE_HOME_URL'					=> 'Main website URL',
+	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Foorumi nimi',
 	'SYSTEM_TIMEZONE'				=> 'Külaliste ajatsoon',
 	'WARNINGS_EXPIRE'				=> 'Hoiatuse pikkus',
@@ -9617,6 +9898,7 @@ $lang = array_merge($lang, array(
 
 	'ALLOW_AVATARS'					=> 'Luba avatarid',
 	'ALLOW_AVATARS_EXPLAIN'			=> 'Luba avataride üldkasutus;<br />Kui keelad kas kõik või osad avatarid, ei kuvata neid foorumil, kuid kasutajatel on siiski võimalus juhtpaneelis avatare laadida',
+	'ALLOW_GRAVATAR'				=> 'Enable gravatar avatars',
 	'ALLOW_LOCAL'					=> 'Luba galerii avatarid',
 	'ALLOW_REMOTE'					=> 'Luba lingitud avatarid',
 	'ALLOW_REMOTE_EXPLAIN'			=> 'Avatarid, mis on lingitud teiselt veebilehelt.',
@@ -9797,6 +10079,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Nende foorumite sisu <strong>ei näidata voogudes</strong>. Ära vali ühtegi foorumit, et voog võtaks andmed kõikidest foorumitest.<br />Vali/vabasta mitu foorumit, kasutades <samp>CTRL</samp>-klahvi.',
 
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Siin saad valida ja konfigureerida CAPTCHA lisasid, mis takistavad robotite liitumist.',
+	'ACP_VC_EXT_GET_MORE'					=> 'For additional (and possibly better) anti-spam plugins, visit the <a href="https://www.phpbb.com/go/anti-spam-ext"><strong>phpBB.com Extensions Database</strong></a>. For more information on preventing spam on your board, visit the <a href="https://www.phpbb.com/go/anti-spam"><strong>phpBB.com Knowledge Base</strong></a>.',
 	'AVAILABLE_CAPTCHAS'					=> 'Saadavalolevad lisad',
 	'CAPTCHA_UNAVAILABLE'					=> 'CAPTCHA-t ei saa valida, sest tingimused pole täidetud.',
 	'CAPTCHA_GD'							=> 'GD CAPTCHA',
@@ -9847,18 +10130,36 @@ $lang = array_merge($lang, array(
 	'SESSION_LENGTH'			=> 'Sessiooni pikkus',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Sessioonid aeguvad peale selle aja möödumist, sekundites.',
 
+	// Contact Settings
+	'ACP_CONTACT_SETTINGS_EXPLAIN'		=> 'Here you can enable and disable the contact page and also add a text that is displayed on the page.',
+
+	'CONTACT_US_ENABLE'				=> 'Enable contact page',
+	'CONTACT_US_ENABLE_EXPLAIN'		=> 'This page allows users to send emails to board administrators',
+
+	'CONTACT_US_INFO'				=> 'Contact information',
+	'CONTACT_US_INFO_EXPLAIN'		=> 'The message is displayed on the contact page',
+	'CONTACT_US_INFO_PREVIEW'		=> 'Contact page information - Preview',
+	'CONTACT_US_INFO_UPDATED'		=> 'Contact page information has been updated.',
+
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Siin saad sa lubada ja keelata foorumi funktsioone, et vähendada serveri tööd. Enamikes serverites pole see vajalik.',
 
+	'ALLOW_CDN'						=> 'Allow usage of third party content delivery networks',
+	'ALLOW_CDN_EXPLAIN'				=> 'If this setting is enabled, some files will be served from external third party servers instead of your server. This reduces the network bandwidth required by your server, but may present a privacy issue for some board administrators. In a default phpBB installation, this includes loading “jQuery” and the font “Open Sans” from Google’s content delivery network.',
+	'ALLOW_LIVE_SEARCHES'			=> 'Allow live searches',
+	'ALLOW_LIVE_SEARCHES_EXPLAIN'	=> 'If this setting is enabled, users are provided with keyword suggestions as they type in certain fields throughout the board.',
 	'CUSTOM_PROFILE_FIELDS'			=> 'Kohandatud profiiliväljad',
 	'LIMIT_LOAD'					=> 'Limiteeri süsteemi laadimist',
 	'LIMIT_LOAD_EXPLAIN'			=> 'Kui süsteemi 1 minuti laadimiskeskmine ületab selle väärtuse, muutub foorum automaatselt kättesaamatuks.',
 	'LIMIT_SESSIONS'				=> 'Limiteeri sessioone',
 	'LIMIT_SESSIONS_EXPLAIN'		=> 'Kui sessioonide arv ületab selle väärtuse ühes minutis, muutub foorum kättesaamatuks. Määra 0\'ks, et piirangut poleks.',
 	'LOAD_CPF_MEMBERLIST'			=> 'Luba stiilidel kuvada kohandatud profiilivälju kasutajate nimekirjas',
+	'LOAD_CPF_PM'					=> 'Display custom profile fields in private messages',
 	'LOAD_CPF_VIEWPROFILE'			=> 'Kuva kohandatud profiiliväljad profiilis',
 	'LOAD_CPF_VIEWTOPIC'			=> 'Kuva kohandatud profiiliväljad teemades',
 	'LOAD_USER_ACTIVITY'			=> 'Näita kasutajate aktiivsust',
 	'LOAD_USER_ACTIVITY_EXPLAIN'	=> 'Kuvab aktiivse foorumi/teema profiilis. On soovitatav see valik keelata foorumites, kus on üle miljoni postituse.',
+	'READ_NOTIFICATION_EXPIRE_DAYS'	=> 'Read Notification Expiration',
+	'READ_NOTIFICATION_EXPIRE_DAYS_EXPLAIN' => 'Number of days that will elapse before a read notification will automatically be deleted. Set this value to 0 to make notifications permanent.',
 	'RECOMPILE_STYLES'				=> 'Uuenda stiili',
 	'RECOMPILE_STYLES_EXPLAIN'		=> 'Kontrolli stiili uuendatud komponente süsteemis ja lisa need stiilile',
 	'YES_ANON_READ_MARKING'			=> 'Luba teemade markeerimine külalistel',
@@ -9879,18 +10180,25 @@ $lang = array_merge($lang, array(
 	'YES_READ_MARKING_EXPLAIN'		=> 'Salvestab loetud/lugemata info andmebaasis, mitte küpsistes.',
 	'YES_UNREAD_SEARCH'				=> 'Luba otsing lugemata postitustele',
 
-	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB toetab autenditud pluginaid või mooduleid. Need lubavad sul näha, palju kasutajaid on autenditud, kui nad logivad sisse foorumisse. Vaikimisi on määratud kolm pluginat; DB, LDAP ja Apache. Kõik meetodid ei vaja lisainformatsiooni, seega täida lüngad ainult seal, kus on vajalik sinu meetodile.',
+	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB supports authentication plug-ins, or modules. These allow you determine how users are authenticated when they log into the board. By default four plug-ins are provided: DB, LDAP, Apache, and OAuth. Not all methods require additional information so only fill out fields if they are relevant to the selected method.',
 
 	'AUTH_METHOD'				=> 'Vali autentimise meetod',
 
+	'AUTH_PROVIDER_OAUTH_ERROR_ELEMENT_MISSING'	=> 'Both the key and secret of each enabled OAuth service provider must be provided. Only one was provided for an OAuth service provider.',
+	'AUTH_PROVIDER_OAUTH_EXPLAIN'				=> 'Each OAuth provider requires a unique secret and key in order to authenticate with the external server. These should be supplied by the OAuth service when you register your website with them and should be entered exactly as provided to you.<br />Any service that does not have both a key and a secret entered here will not be available for use by the forum users. Also note, that user can still register and login using the DB authentication plug-in.',
+	'AUTH_PROVIDER_OAUTH_KEY'					=> 'Key',
+	'AUTH_PROVIDER_OAUTH_TITLE'					=> 'OAuth',
+	'AUTH_PROVIDER_OAUTH_SECRET'				=> 'Secret',
+
 	'APACHE_SETUP_BEFORE_USE'	=> 'Sa pead enne üles seadma Apache autentimise, kui lülitad ümber phpBB sellele autentimise meetodile. Jäta meelde, et Apache autentimise kasutajanimi peab olema sama, mis sul phpBB kasutajanimigi. Apache autentimist saab kasutada ainult, kui mod_php (mitte-CGI versioon) ja safe_mode on keelatud.',
 
+	'LDAP'							=> 'LDAP',
 	'LDAP_DN'						=> 'LDAP baas <var>dn</var>',
 	'LDAP_DN_EXPLAIN'				=> 'See on eristatud nimi, mis suunab kasutaja informatsiooni, nt <samp>o=Minuf Firma,c=EST</samp>.',
-	'LDAP_EMAIL'					=> 'LDAP e-posti atribuut',
-	'LDAP_EMAIL_EXPLAIN'			=> 'Määra see nimeks oma sisestatud e-posti atribuudil (kui sul on see), et automaatselt määrata e-postiaadress uutele kasutajatele. Kui jätad selle lahtri tühjaks, siis jäävad ka uute kasutajate e-postiaadressid tühjaks.',
+	'LDAP_EMAIL'					=> 'LDAP email attribute',
+	'LDAP_EMAIL_EXPLAIN'			=> 'Set this to the name of your user entry email attribute (if one exists) in order to automatically set the email address for new users. Leaving this empty results in empty email address for users who log in for the first time.',
 	'LDAP_INCORRECT_USER_PASSWORD'	=> 'Sidumine LDAP serveriga ebaõnnestus vale kasutajanime/salasõna tõttu.',
-	'LDAP_NO_EMAIL'					=> 'Valitud e-posti atribuut ei eksisteeri.',
+	'LDAP_NO_EMAIL'					=> 'The specified email attribute does not exist.',
 	'LDAP_NO_IDENTITY'				=> 'Ei suutnud logida kasutajat %s.',
 	'LDAP_PASSWORD'					=> 'LDAP salasõna',
 	'LDAP_PASSWORD_EXPLAIN'			=> 'Jäta tühjaks, et kasutada anonüümset sidumist. Muidu täida ära salasõna lahter järgnevale kasutajale. Vajalik Active Directory Servers´ite jaoks. <strong>HOIATUS:</strong> See salasõna säilitatakse tekstina andmebaasis ja on nähtav kõigile, kellel on sinu andmebaasi luba või näevad seda seadete lehte siin.',
@@ -9905,13 +10213,17 @@ $lang = array_merge($lang, array(
 	'LDAP_USER_FILTER'				=> 'LDAP kasutaja filter',
 	'LDAP_USER_FILTER_EXPLAIN'		=> 'Võid piirata otsitavaid objekte filtritega. Näiteks, <samp>objectClass=posixGroup</samp> annab tulemuse ka <samp>(&(uid=$username)(objectClass=posixGroup))</samp> kasutades.',
 
-	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Siin saad sa määrata serveri ja domeeniga seotud seaded. Palun ole kindel, et sisestatavad andmed on täpsed, vead ilmnevad e-postides, mis sisaldavad väärinfot. domeeninime sisestades pea meeles, et see ei sisaldaks protokolli http://. Muuda pordi numbrit vaid siis, kui oled kindel, et server jookseb teisel pordil peale 80-ne.',
+	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Here you define server and domain dependent settings. Please ensure the data you enter is accurate, errors will result in emails containing incorrect information. When entering the domain name remember it does include http:// or other protocol term. Only alter the port number if you know your server uses a different value, port 80 is correct in most cases.',
 	'ENABLE_GZIP'				=> 'Luba GZip pakkimine',
 	'ENABLE_GZIP_EXPLAIN'		=> 'Sisu pakitakse enne kasutajale saatmist. See võib vähendada võrgu koormust, kuid suurendab nii kasutaja kui ka saatja protsessori kasutust.',
 	'FORCE_SERVER_VARS'			=> 'Kirjuta üle serveri URL seaded',
 	'FORCE_SERVER_VARS_EXPLAIN'	=> 'Kui see on lubatud, kasutatakse siinsisestatud seadeid eelistatuna vaikimisi seadetele.',
 	'ICONS_PATH'				=> 'Postituse ikoonide kaust',
 	'ICONS_PATH_EXPLAIN'		=> 'Tee suhtes foorumi juurkaustaga, näiteks <samp>images/icons</samp>.',
+	'MOD_REWRITE_ENABLE'		=> 'Enable URL Rewriting',
+	'MOD_REWRITE_ENABLE_EXPLAIN' => 'When enabled, URLs containing ’app.php’ will be rewritten to remove the filename (i.e. app.php/foo will become /foo). <strong>Apache server’s mod_rewrite module is required for this functionality to work; if this option is enabled without mod_rewrite support, URLs on your board may be broken.</strong>',
+	'MOD_REWRITE_DISABLED'		=> 'The <strong>mod_rewrite</strong> module on your Apache web server is disabled. Enable the module or contact your web hosting provider if you wish to enable this feature.',
+	'MOD_REWRITE_INFORMATION_UNAVAILABLE' => 'We are unable to determine whether or not this server supports URL rewriting. This setting may be enabled but if URL rewriting is not available, paths generated by this board (such as for use in links) may be broken. Contact your web hosting provider if you are unsure whether or not you can safely enable this feature.',
 	'PATH_SETTINGS'				=> 'Tee seaded',
 	'RANKS_PATH'				=> 'Tiitlipiltide kaust',
 	'RANKS_PATH_EXPLAIN'		=> 'Tee suhtes foorumi juurkaustaga, näiteks <samp>images/ranks</samp>.',
@@ -9928,13 +10240,21 @@ $lang = array_merge($lang, array(
 	'SMILIES_PATH_EXPLAIN'		=> 'Tee phpBB juurkaustast alates, näiteks <samp>images/smilies</samp>.',
 	'UPLOAD_ICONS_PATH'			=> 'Laiendigruppide ikoonide kaust',
 	'UPLOAD_ICONS_PATH_EXPLAIN'	=> 'Tee phpBB juurkaustast alates, näiteks <samp>images/upload_icons</samp>.',
+	'USE_SYSTEM_CRON'		=> 'Run periodic tasks from system cron',
+	'USE_SYSTEM_CRON_EXPLAIN'		=> 'When off, phpBB will arrange for periodic tasks to be run automatically. When on, phpBB will not schedule any periodic tasks by itself; a system administrator must arrange for <code>bin/phpbbcli.php cron:run</code> to be run by the system cron facility at regular intervals (e.g. every 5 minutes).',
 
 	'ACP_SECURITY_SETTINGS_EXPLAIN'		=> 'Siin saad määrata sessiooni ja logimisega seotud seaded',
 	'ALL'							=> 'Kõik',
-	'ALLOW_AUTOLOGIN'				=> 'Luba automaatseid logimisi',
-	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Määrab, kas kasutajad saavad olla automaatselt sisselogitud, kui külastavad foorumit.',
-	'AUTOLOGIN_LENGTH'				=> 'Kindlate logimisvõtme aegumise aeg (päevades)',
-	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Arv päevades, pärast mida kindlad logimisvõtmed eemaldatakse või nullitakse.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'ALLOW_PASSWORD_RESET'			=> 'Allow password reset ("Forgot Password")',
+	'ALLOW_PASSWORD_RESET_EXPLAIN'	=> 'Determines whether or not users are able to use the "I forgot my password" link on the login page to recover their account. If you use an external authentication mechanism you may wish to disable this feature.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
 	'BROWSER_VALID'					=> 'Valideeri brauser',
 	'BROWSER_VALID_EXPLAIN'			=> 'Lubab brauseri valideerimist igal sessioonil turvalisuse parendamiseks.',
 	'CHECK_DNSBL'					=> 'Kontrolli IP\'d DNS musta augu listist',
@@ -9971,8 +10291,12 @@ $lang = array_merge($lang, array(
 	'PASS_TYPE_SYMBOL'				=> 'Peab sisaldama sümboleid',
 	'REF_HOST'						=> 'Ainult valideeri host',
 	'REF_PATH'						=> 'Lisaks valideeri teei',
-	'REFERER_VALID'					=> 'Valideeri viitaja',
+	'REFERRER_VALID'				=> 'Validate Referrer',
+	'REFERRER_VALID_EXPLAIN'		=> 'If enabled, the referrer of POST requests will be checked against the host/script path settings. This may cause issues with boards using several domains and or external logins.',
+
+	'REFERER_VALID'					=> 'Valideeri viitaja',	//3.0.12
 	'REFERER_VALID_EXPLAIN'			=> 'Kui lubatud, kontrollitakse viitajat host  skripti/tee seadetega. See võib põhjustada probleeme foorumitel, mis kasutavad mitut domeeni ja/või välist logimist.',
+
 	'TPL_ALLOW_PHP'					=> 'Luba php stiilides',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Kui see on lubatud, <code>PHP</code> ja <code>INCLUDEPHP</code> fraasid tuntakse ära ja analüüsitakse templeitides.',
 
@@ -9985,6 +10309,8 @@ $lang = array_merge($lang, array(
 	'BOARD_HIDE_EMAILS_EXPLAIN'		=> 'See funktsioon peidab täielikult e-postiaadressid.',
 	'CONTACT_EMAIL'					=> 'Kontakti e-postiaadress',
 	'CONTACT_EMAIL_EXPLAIN'			=> 'Seda aadressi kasutatakse, kui mingit kontakti on vaja, näiteks spämm, veateated jne. Seda kasutatakse <samp>Kellelt</samp> ja <samp>Kellele</samp> aadressina e-kirjades.',
+	'CONTACT_EMAIL_NAME'			=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 	'EMAIL_FUNCTION_NAME'			=> 'E-posti funktsiooni nimi',
 	'EMAIL_FUNCTION_NAME_EXPLAIN'	=> 'E-posti funktsioon, mis saadab kirju läbi PHP',
 	'EMAIL_PACKAGE_SIZE'			=> 'E-posti paki suurus',
@@ -10175,7 +10501,7 @@ $lang = array_merge($lang, array(
 	'ACP_BAN'					=> 'Bännimine',
 	'ACP_BAN_EMAILS'			=> 'Bänni e-poste',
 	'ACP_BAN_IPS'				=> 'Bänni IP aadresse',
-	'ACP_BAN_USERNAMES'			=> 'Bänni kasutajanimesid',
+	'ACP_BAN_USERNAMES'			=> 'Ban users',
 	'ACP_BBCODES'				=> 'BBCode',
 	'ACP_BOARD_CONFIGURATION'	=> 'Foorumi konfiguratsioon',
 	'ACP_BOARD_FEATURES'		=> 'Foorumi valikud',
@@ -10184,8 +10510,10 @@ $lang = array_merge($lang, array(
 	'ACP_BOTS'					=> 'Robotid/Botid',
 
 	'ACP_CAPTCHA'				=> 'CAPTCHA',
+	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'Andmebaas',
+	'ACP_CAT_DOT_MODS'			=> '.MODid',
 	'ACP_CAT_DOT_MODS'			=> '.MODid',
 	'ACP_CAT_FORUMS'			=> 'Foorumid',
 	'ACP_CAT_GENERAL'			=> 'Üldine',
@@ -10198,6 +10526,8 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_USERS'				=> 'Kasutajad',
 	'ACP_CLIENT_COMMUNICATION'	=> 'Kliendi kommunikatsioon',
 	'ACP_COOKIE_SETTINGS'		=> 'Küpsiste seaded',
+	'ACP_CONTACT'				=> 'Contact page',
+	'ACP_CONTACT_SETTINGS'		=> 'Contact page settings',
 	'ACP_CRITICAL_LOGS'			=> 'Veateadete logi',
 	'ACP_CUSTOM_PROFILE_FIELDS'	=> 'Kohandatud profiiliväljad',
 
@@ -10205,8 +10535,11 @@ $lang = array_merge($lang, array(
 	'ACP_DISALLOW'				=> 'Keelamine',
 	'ACP_DISALLOW_USERNAMES'	=> 'Keela kasutajanimesid',
 
-	'ACP_EMAIL_SETTINGS'		=> 'E-posti seaded',
-	'ACP_EXTENSION_GROUPS'		=> 'Halda faililaiendi gruppe',
+	'ACP_EMAIL_SETTINGS'		=> 'Email settings',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
+	'ACP_EXTENSION_MANAGEMENT'	=> 'Extension management',
+	'ACP_EXTENSIONS'			=> 'Manage extensions',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
 	'ACP_FORMS'					=> 'Customizable Forms',
 	'ACP_FORMS_BUILDER'			=> 'Form Builder',
 
@@ -10227,10 +10560,10 @@ $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE'				=> 'Halda gruppe',
 	'ACP_GROUPS_MANAGEMENT'			=> 'Gruppide haldamine',
 	'ACP_GROUPS_PERMISSIONS'		=> 'Gruppide õigused',
+	'ACP_GROUPS_POSITION'			=> 'Manage group positions',
 
 	'ACP_ICONS'					=> 'Teemaikoonid',
 	'ACP_ICONS_SMILIES'			=> 'Teemaikoonid/smailid',
-	'ACP_IMAGESETS'				=> 'Pildikogu',
 	'ACP_INACTIVE_USERS'		=> 'Mitteaktiivsed kasutajad',
 	'ACP_INDEX'					=> 'AJP esileht',
 
@@ -10242,11 +10575,15 @@ $lang = array_merge($lang, array(
 	'ACP_LOGGING'				=> 'Logimine',
 
 	'ACP_MAIN'					=> 'AJP esileht',
-	'ACP_MANAGE_EXTENSIONS'		=> 'Halda failitüüpe',
+
+	'ACP_MANAGE_ATTACHMENTS'			=> 'Halda manuseid',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
+
+	'ACP_MANAGE_EXTENSIONS'		=> 'Manage attachment extensions',
 	'ACP_MANAGE_RANKS'			=> 'Halda kasutajakirjeldusi',
 	'ACP_MANAGE_REASONS'		=> 'Halda raporteerimise/keelamise põhjuseid',
 	'ACP_MANAGE_USERS'			=> 'Halda kasutajaid',
-	'ACP_MASS_EMAIL'			=> 'Masskiri',
+	'ACP_MASS_EMAIL'			=> 'Mass email',
 	'ACP_MESSAGES'				=> 'Sõnumid',
 	'ACP_MESSAGE_SETTINGS'		=> 'Privaatsõnumite seaded',
 	'ACP_MODULE_MANAGEMENT'		=> 'Moodulite haldus',
@@ -10291,6 +10628,8 @@ $lang = array_merge($lang, array(
 	'ACP_STYLE_COMPONENTS'		=> 'Stiili komponendid',
 	'ACP_STYLE_MANAGEMENT'		=> 'Stiili haldamine',
 	'ACP_STYLES'				=> 'Stiilid',
+	'ACP_STYLES_CACHE'			=> 'Purge Cache',
+	'ACP_STYLES_INSTALL'		=> 'Install Styles',
 
 	'ACP_SUBMIT_CHANGES'		=> 'Salvesta muudatused',
 
@@ -10342,6 +10681,10 @@ $lang = array_merge($lang, array(
 
 	'COLOUR_SWATCH'			=> 'Värviskeem',
 	'CONFIG_UPDATED'		=> 'Konfiguratsioon edukalt uuendatud',
+	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
+	'CRON_NO_SUCH_TASK'		=> 'Could not find cron task â€œ%sâ€.',
+	'CRON_NO_TASK'			=> 'No cron tasks need to be run right now.',
+	'CRON_NO_TASKS'			=> 'No cron tasks could be found.',
 
 	'DEACTIVATE'				=> 'Deaktiveeri',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'Sisestatud “%s” ei eksisteeri.',
@@ -10352,6 +10695,7 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_AS'				=> 'Lae alla...',
 	'DOWNLOAD_STORE'			=> 'Tiri alla ja säilita serveris',
 	'DOWNLOAD_STORE_EXPLAIN'	=> 'Sa võid selle faili otse alla tirida või salvestada selle sinu <samp>store/</samp> kataloogid.',
+	'DOWNLOADS'					=> 'Allalaadimised',
 
 	'EDIT'					=> 'Muuda',
 	'ENABLE'				=> 'Luba',
@@ -10366,6 +10710,8 @@ $lang = array_merge($lang, array(
 	'IP'					=> 'IP',
 	'IP_HOSTNAME'			=> 'IP-aadressid või serverinimed',
 
+	'LOAD_NOTIFICATIONS'			=> 'Display Notifications',
+	'LOAD_NOTIFICATIONS_EXPLAIN'	=> 'Display the notifications list on every page (typically in the header).',
 	'LOGGED_IN_AS'			=> 'Sa oled sisse logitud kasutajana:',
 	'LOGIN_ADMIN'			=> 'Et administreerida foorumit, pead olema autenditud kasutaja.',
 	'LOGIN_ADMIN_CONFIRM'	=> 'Et administreerida foorumit, pead ennast uuesti autentima.',
@@ -10382,7 +10728,8 @@ $lang = array_merge($lang, array(
 
 	'NOTIFY'				=> 'Märge',
 	'NO_ADMIN'				=> 'Sa ei ole volitatud administreerima seda foorumit.',
-	'NO_EMAILS_DEFINED'		=> 'Ühtegi õiget e-posti aadressi ei leitud.',
+	'NO_EMAILS_DEFINED'		=> 'No valid email addresses found.',
+	'NO_FILES_TO_DELETE'	=> 'Attachments you selected for deletion do not exist.',
 	'NO_PASSWORD_SUPPLIED'	=> 'Sa ei saa sisse logida ilma paroolita.',
 
 	'OFF'					=> 'Väljas',
@@ -10398,8 +10745,8 @@ $lang = array_merge($lang, array(
 
 	'REMIND'							=> 'Tuleta meelde',
 	'RESYNC'							=> 'Resünkroniseeri',
-	'RETURN_TO'							=> 'Mine',
 
+	'RUNNING_TASK'			=> 'Running task: %s.',
 	'SELECT_ANONYMOUS'		=> 'Vali anonüümne kasutaja',
 	'SELECT_OPTION'			=> 'Vali valik',
 
@@ -10409,6 +10756,10 @@ $lang = array_merge($lang, array(
 	'SETTING_TOO_SHORT'		=> 'Sisestatud väärtus seadele “%1$s” on liiga lühike. Lühim lubatud väärtus on %2$d.',
 
 	'SHOW_ALL_OPERATIONS'	=> 'Näita kõiki operatsioone',
+
+	'TASKS_NOT_READY'			=> 'Not ready tasks:',
+	'TASKS_READY'			=> 'Ready tasks:',
+	'TOTAL_SIZE'			=> 'Total size',
 
 	'UCP'					=> 'Juhtpaneel',
 	'USERNAMES_EXPLAIN'		=> 'Paiguta iga kasutajanimi eraldi reale.',
@@ -10420,7 +10771,7 @@ $lang = array_merge($lang, array(
 	'NO_PHPINFO_AVAILABLE'	=> 'PHP konfiguratsiooni informatsiooni ei tuvastatud. Phpinfo () on keelatud turvalisuse pärast.',
 
 	'ACP_ADMIN_LOGS_EXPLAIN'	=> 'See näitab kõiki toiminguid, mida on teinud foorumi administraator. Sa saad neid sorteerida kasutajanime, kuupäeva, IP või teo järgi.  Kui sul on vajalikud õigused, siis saad kustutada ka logisid.',
-	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'See näitab kõiki toiminguid, mida on teinud foorum ise. Sa saad neid sorteerida kasutajanime, kuupäeva, IP või teo järgi. Kui sul on vajalikud õigused, siis saad kustutada ka logisid.',
+	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'This lists the actions carried out by the board itself. This log provides you with information you are able to use for solving specific problems, for example non-delivery of emails. You can sort by username, date, IP or action. If you have appropriate permissions you can also clear individual operations or the log as a whole.',
 	'ACP_MOD_LOGS_EXPLAIN'		=> 'See näitab kõiki toiminguid, mida on teinud moderaator. Sa saad neid sorteerida kasutajanime, kuupäeva, IP või teo järgi. Kui sul on vajalikud õigused, siis saad kustutada ka logisid.',
 	'ACP_USERS_LOGS_EXPLAIN'	=> 'See näitab kõiki toiminguid, mis on tehtud kasutaja poolt või kasutajatega.',
 	'ALL_ENTRIES'				=> 'Kõik sisestused',
@@ -10446,6 +10797,7 @@ $lang = array_merge($lang, array(
 
 	'GZIP_COMPRESSION'	=> 'GZip kompressioon',
 
+	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'Pole olemas',
 	'NUMBER_FILES'		=> 'Manuseid kokku',
 	'NUMBER_POSTS'		=> 'Postitusi kokku',
@@ -10458,29 +10810,38 @@ $lang = array_merge($lang, array(
 	'PURGE_CACHE'			=> 'Puhasta vahemälu',
 	'PURGE_CACHE_CONFIRM'	=> 'Oled sa kindel, et tahad puhastada vahemälu?',
 	'PURGE_CACHE_EXPLAIN'	=> 'Puhastab kõik vahemälus olevad asjad sealhulgas ka templeidi failid või käsud.',
+	'PURGE_CACHE_SUCCESS'	=> 'Cache successfully purged.',
 
 	'PURGE_SESSIONS'			=> 'Kustuta kõik sessioonid',
 	'PURGE_SESSIONS_CONFIRM'	=> 'Oled kindel, et soovid kustutada kõik sessioonid? See logib kõik kasutajad välja.',
 	'PURGE_SESSIONS_EXPLAIN'	=> 'Kustutab kõik sessioonid. See logib kõik kasutajad välja, puhastades sessioonitabeli.',
+	'PURGE_SESSIONS_SUCCESS'	=> 'Sessions successfully purged.',
 
 	'RESET_DATE'					=> 'Nulli foorumi installatsiooni kuupäev',
 	'RESET_DATE_CONFIRM'			=> 'Oled sa kindel, et tahad nullida foorumi installatsiooni kuupäeva?',
+	'RESET_DATE_SUCCESS'				=> 'Boardâ€™s start date reset',
 	'RESET_ONLINE'					=> 'Nulli enim kasutajaid online',
 	'RESET_ONLINE_CONFIRM'			=> 'Oled sa kindel, et tahad nullida enim kasutajaid online kaunteri?',
+	'RESET_ONLINE_SUCCESS'				=> 'Most users ever online reset',
 	'RESYNC_POSTCOUNTS'				=> 'Resünkroniseeri postituste arvu',
 	'RESYNC_POSTCOUNTS_EXPLAIN'		=> 'Ainult olemasolevad postitused võetakse arvesse. Kärbitud postitusi arvesse ei võeta.',
 	'RESYNC_POSTCOUNTS_CONFIRM'		=> 'Oled sa kindel, et tahad resünkroniseerida postituste arvu?',
+	'RESYNC_POSTCOUNTS_SUCCESS'			=> 'Resynchronised post counts',
 	'RESYNC_POST_MARKING'			=> 'Resünkroniseeri märgitud teemad',
 	'RESYNC_POST_MARKING_CONFIRM'	=> 'Oled sa kindel, et tahad sünkroniseerida märgitud teemasid?',
 	'RESYNC_POST_MARKING_EXPLAIN'	=> 'Esiteks võetakse kõigil märgistus maha ja siis märgistatakse õigesti kõik teemad, kus on olnud aktiivsust viimased 6 kuud.',
+	'RESYNC_POST_MARKING_SUCCESS'	=> 'Resynchronised dotted topics',
 	'RESYNC_STATS'					=> 'Resünkroniseeri statistika',
 	'RESYNC_STATS_CONFIRM'			=> 'Oled sa kindel, et tahad resünkroniseerida statistikat?',
 	'RESYNC_STATS_EXPLAIN'			=> 'Arvutab uuesti postituste, teemade, kasutajate ja failide arvu kokku.',
+	'RESYNC_STATS_SUCCESS'			=> 'Resynchronised statistics',
 	'RUN'							=> 'Käivita',
 
 	'STATISTIC'					=> 'Statistika',
 	'STATISTIC_RESYNC_OPTIONS'	=> 'Resünkroniseeri või nulli statistikat',
 
+	'TIMEZONE_INVALID'	=> 'The timezone you selected is invalid.',
+	'TIMEZONE_SELECTED'	=> '(currently selected)',
 	'TOPICS_PER_DAY'	=> 'Teemasid päevas',
 
 	'UPLOAD_DIR_SIZE'	=> 'Sisestatud manuste suurus kokku',
@@ -10661,9 +11022,9 @@ $lang = array_merge($lang, array(
 
 	'LOG_APPROVE_TOPIC'			=> '<strong>Teema on heaks kiidetud</strong><br />» %s',
 	'LOG_BUMP_TOPIC'			=> '<strong>Teema tõstatatud</strong><br />» %s',
-	'LOG_DELETE_POST'			=> '<strong>Postitus kustutatud</strong><br />» %s',
-	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Kustuta variteema</strong><br />» %s',
-	'LOG_DELETE_TOPIC'			=> '<strong>Teema kustutatud</strong><br />» %s',
+	'LOG_DELETE_POST'			=> '<strong>Deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Deleted shadow topic</strong><br />Â» %s',
+	'LOG_DELETE_TOPIC'			=> '<strong>Deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_FORK'					=> '<strong>Teema kopeeritud</strong><br />» from %s',
 	'LOG_LOCK'					=> '<strong>Teema suletud</strong><br />» %s',
 	'LOG_LOCK_POST'				=> '<strong>Postitus suletud</strong><br />» %s',
@@ -10672,15 +11033,20 @@ $lang = array_merge($lang, array(
 	'LOG_PM_REPORT_CLOSED'		=> '<strong>PM raport suletud</strong><br />» %s',
 	'LOG_PM_REPORT_DELETED'		=> '<strong>PM raport kustutatud</strong><br />» %s',
 	'LOG_POST_APPROVED'			=> '<strong>Postitus heaks kiidetud</strong><br />» %s',
-	'LOG_POST_DISAPPROVED'		=> '<strong>Postitus “%1$s” keelatud järgneval põhjusel</strong><br />» %2$s',
-	'LOG_POST_EDITED'			=> '<strong>Postitus “%1$s” muudetud, postituse autor</strong><br />» %2$s',
+	'LOG_POST_DISAPPROVED'		=> '<strong>Disapproved post â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
+	'LOG_POST_EDITED'			=> '<strong>Edited post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_POST_RESTORED'			=> '<strong>Restored post</strong><br />Â» %s',
 	'LOG_REPORT_CLOSED'			=> '<strong>Raport suletud</strong><br />» %s',
 	'LOG_REPORT_DELETED'		=> '<strong>Raport kustutatud</strong><br />» %s',
+	'LOG_RESTORE_TOPIC'			=> '<strong>Restored topic â€œ%1$sâ€ written by</strong><br />Â» %2$s',
+	'LOG_SOFTDELETE_POST'		=> '<strong>Soft deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_SOFTDELETE_TOPIC'		=> '<strong>Soft deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_SPLIT_DESTINATION'		=> '<strong>Liigutatud poolitatud postitused</strong><br />»  %s foorumisse',
 	'LOG_SPLIT_SOURCE'			=> '<strong>Postitused poolitatud</strong><br />»  %s foorumist',
 
 	'LOG_TOPIC_APPROVED'		=> '<strong>Teema heaks kiidetud</strong><br />» %s',
-	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Teema “%1$s” keelatud järgneval põhjusel</strong><br />%2$s',
+	'LOG_TOPIC_RESTORED'		=> '<strong>Restored topic</strong><br />Â» %s',
+	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Disapproved topic â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
 	'LOG_TOPIC_RESYNC'			=> '<strong>Teemade loendur resünkroniseeritud</strong><br />» %s',
 	'LOG_TOPIC_TYPE_CHANGED'	=> '<strong>Teema tüüp muudetud</strong><br />» %s',
 	'LOG_UNLOCK'				=> '<strong>Teema avatud</strong><br />» %s',
@@ -10732,16 +11098,6 @@ $lang = array_merge($lang, array(
 
 	'LOG_IMAGE_GENERATION_ERROR'	=> '<strong>Viga pildi loomisel</strong><br />» Viga %1$s failis %2$s. real: %3$s',
 
-	'LOG_IMAGESET_ADD_DB'			=> '<strong> Uus pildikogu lisatud andmebaasi</strong><br />» %s',
-	'LOG_IMAGESET_ADD_FS'			=> '<strong>Uus pildikogu lisatud failisüsteemi</strong><br />» %s',
-	'LOG_IMAGESET_DELETE'			=> '<strong>Pildikogu kustutatud</strong><br />» %s',
-	'LOG_IMAGESET_EDIT_DETAILS'		=> '<strong>Pildikogu andmed muudetud</strong><br />» %s',
-	'LOG_IMAGESET_EDIT'				=> '<strong>Pildikogu muudetud</strong><br />» %s',
-	'LOG_IMAGESET_EXPORT'			=> '<strong>Pildikogu eksporditud</strong><br />» %s',
-	'LOG_IMAGESET_LANG_MISSING'		=> '<strong>Pildikogul puudub “%2$s” keel</strong><br />» %1$s',
-	'LOG_IMAGESET_LANG_REFRESHED'	=> '<strong>Värskendatud “%2$s” keel pildikogule</strong><br />» %1$s',
-	'LOG_IMAGESET_REFRESHED'		=> '<strong>pildikogu värskendatud</strong><br />» %s',
-
 	'LOG_INACTIVE_ACTIVATE'	=> '<strong>Aktiveerimata kasutajad aktiveeritud</strong><br />» %s',
 	'LOG_INACTIVE_DELETE'	=> '<strong>Ebaaktiivsed kasutajad kustutatud</strong><br />» %s',
 	'LOG_INACTIVE_REMIND'	=> '<strong>Meeldetuletuskiri ebaaktiivsetele kasutajatele saadetud</strong><br />» %s',
@@ -10786,6 +11142,7 @@ $lang = array_merge($lang, array(
 	'LOG_U_ROLE_EDIT'		=> '<strong>Kasutaja roll muudetud</strong><br />» %s',
 	'LOG_U_ROLE_REMOVED'	=> '<strong>Kasutaja roll eemaldatud</strong><br />» %s',
 
+	'LOG_PLUPLOAD_TIDY_FAILED'		=> '<strong>Unable to open %1$s for tidying, check permissions.</strong><br />Exception: %2$s<br />Trace: %3$s',
 	'LOG_PROFILE_FIELD_ACTIVATE'	=> '<strong>Profiiliväli aktiveeritud</strong><br />» %s',
 	'LOG_PROFILE_FIELD_CREATE'		=> '<strong>Profiiliväli lisatud</strong><br />» %s',
 	'LOG_PROFILE_FIELD_DEACTIVATE'	=> '<strong>Profiiliväli deaktiveeritud</strong><br />» %s',
@@ -10794,13 +11151,13 @@ $lang = array_merge($lang, array(
 
 	'LOG_PRUNE'					=> '<strong>Foorumid kärbitud</strong><br />» %s',
 	'LOG_AUTO_PRUNE'			=> '<strong>Foorumid automaatselt kärbitud</strong><br />» %s',
+	'LOG_PRUNE_SHADOW'		=> '<strong>Auto-pruned shadow topics</strong><br />Â» %s',
 	'LOG_PRUNE_USER_DEAC'		=> '<strong>Kasutaja deaktiveeritud</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_DEL'	=> '<strong>Kasutaja kärbitud ja postitused kustutatud</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_ANON'	=> '<strong>Kasutaja kärbitud ja postitused säilitatud</strong><br />» %s',
 
 	'LOG_PURGE_CACHE'			=> '<strong>Vahemälu tühjendatud</strong>',
 	'LOG_PURGE_SESSIONS'		=> '<strong>Sessioonid kustutatud</strong>',
-
 
 	'LOG_RANK_ADDED'		=> '<strong>Uus tiitel lisatud</strong><br />» %s',
 	'LOG_RANK_REMOVED'		=> '<strong>Tiitel eemaldatud</strong><br />» %s',
@@ -10810,15 +11167,17 @@ $lang = array_merge($lang, array(
 	'LOG_REASON_REMOVED'	=> '<strong>Eemaldatud raporteerimise/keelamise põhjus</strong><br />» %s',
 	'LOG_REASON_UPDATED'	=> '<strong>Raporteerimise/keelamise põhjus uuendatud</strong><br />» %s',
 
-	'LOG_REFERER_INVALID'		=> '<strong>Viitaja valideerimine ebaõnnestus</strong><br />»Viitaja oli “<em>%1$s</em>”. Soov lükati tagasi ja sessioon lõpetati.',
+	'LOG_REFERER_INVALID'		=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 	'LOG_RESET_DATE'			=> '<strong>Foorumi alguskuupäev lähtestatud</strong>',
 	'LOG_RESET_ONLINE'			=> '<strong>Rekordarv kasutajaid foorumi lähtestatud</strong>',
+	'LOG_RESYNC_FILES_STATS'	=> '<strong>File statistics resynchronised</strong>',
 	'LOG_RESYNC_POSTCOUNTS'		=> '<strong>Kasutajate postituste arv resünkroniseeritud</strong>',
 	'LOG_RESYNC_POST_MARKING'	=> '<strong>Märgitud teemad resünkroniseeritud</strong>',
 	'LOG_RESYNC_STATS'			=> '<strong>Postituste, teemade ja kasutajate statistika resünkroniseeritud</strong>',
 
 	'LOG_SEARCH_INDEX_CREATED'	=> '<strong>Otsingu indeks loodud</strong><br />» %s',
 	'LOG_SEARCH_INDEX_REMOVED'	=> '<strong>Otsingu indeks eemaldatud</strong><br />» %s',
+	'LOG_SPHINX_ERROR'			=> '<strong>Sphinx Error</strong><br />Â» %s',
 	'LOG_STYLE_ADD'				=> '<strong>Uus stiil lisatud</strong><br />» %s',
 	'LOG_STYLE_DELETE'			=> '<strong>Stiil kustutatud</strong><br />» %s',
 	'LOG_STYLE_EDIT_DETAILS'	=> '<strong>Stiil muudetud</strong><br />» %s',
@@ -10885,15 +11244,18 @@ $lang = array_merge($lang, array(
 	'LOG_USER_GROUP_RESIGN'			=> '<strong>Kasutaja grupi liikmestaatusest loobutud</strong><br />» %s',
 
 	'LOG_WARNING_DELETED'		=> '<strong>Kasutaja hoiatus kustutatud</strong><br />» %s',
-	'LOG_WARNINGS_DELETED'		=> '<strong>%2$s hoiatust kustutatud</strong><br />» %1$s',
 	'LOG_WARNINGS_DELETED_ALL'	=> '<strong>Kõik hoiatused kustutatud</strong><br />» %s',
 
 	'LOG_WORD_ADD'			=> '<strong>Sõna tsensuur lisatud</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>Sõna tsensuur kustutatud</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Sõna tsensuur muudetud</strong><br />» %s',
+
+	'LOG_EXT_ENABLE'	=> '<strong>Extension enabled</strong><br />Â» %s',
+	'LOG_EXT_DISABLE'	=> '<strong>Extension disabled</strong><br />Â» %s',
+	'LOG_EXT_PURGE'		=> '<strong>Extensionâ€™s data deleted</strong><br />Â» %s',
+
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
-
 ));
 
 $lang = array_merge($lang, array(
@@ -11194,7 +11556,7 @@ $lang = array_merge($lang, array(
 	'ACP_PORTAL_WELCOME_EXPLAIN'=> '',
 	'ADM_LOGOUT'			=> 'Logi välja&nbsp;AJP',
 	'ADM_LOGGED_OUT'		=> 'Administraatori juhtpaneelist välja logitud.',
-	'LOG_REFERER_INVALID'	=> '<strong>Viitaja valideerimine ebaõnnestus</strong><br />»Viitaja oli “<em>%1$s</em>”. Soov lükati tagasi ja sessioon lõpetati.',
+	'LOG_REFERER_INVALID'	=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 
 	'ACP_ABBCODES'			=> 'BBcode Box',
 	'LOG_CONFIG_ABBCODES'	=> '<strong>Altered BBCode Box settings</strong>',
@@ -11600,7 +11962,7 @@ $lang = array_merge($lang, array(
 	'SELECT_A_PREFIX'				=> 'Select a prefix',
 	'ACP_SEOQUERYS'					=> 'SEO Queries',
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Halda manuseid',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can list and delete files attached to posts and private messages.',
 	'LOG_ATTACH_DEL'				=> '<strong>Attachments deleted</strong><br />» %s',
 	'LOG_ATTACH_REASSIGNED'			=> '<strong>Attachment reassigned to Post</strong><br />» ID %1$d - %2$s',
 	'TOTAL_SIZE'					=> 'Total size',
@@ -11619,11 +11981,11 @@ $lang = array_merge($lang, array(
 	'ACP_INTRO'				=> 'Intro',
 
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Halda manuseid',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
 	'TOTAL_SIZE'				=> 'Total size',
 	'DOWNLOADS'				=> 'Allalaadimised',
 
-	'NO_AVATAR'				=> 'URL of the avatar for all the have no separate',
+	'NO_AVATAR'				=> 'No avatar selected',
 	'NO_AVATAR_EXPLAIN'			=> 'The optimal size of the avatar is 120x120px, this box is left blank, no picture at all. <br /> Demo URL: http://www.userboard.org/images/no_avatar_1.gif',
 	'GROUP_ICON'				=> 'Group Icon',
 	'GROUP_ICON_EXPLAIN'			=> 'Upload your Group Icons into Upload &#187; Topic/Group Icons',
@@ -12786,6 +13148,97 @@ $lang = array_merge($lang, array(
 	'NO_EMAIL_SUBJECT'		=> 'E-posti pealkirja ei sisestatud',
 ));
 
+#######language/en/acp/extensions.php#######
+
+$lang = array_merge($lang, array(
+	'EXTENSION'					=> 'Laiend',
+	'EXTENSIONS'				=> 'Extensions',
+	'EXTENSIONS_ADMIN'			=> 'Extensions Manager',
+	'EXTENSIONS_EXPLAIN'		=> 'The Extensions Manager is a tool in your phpBB Board which allows you to manage all of your extensions statuses and view information about them.',
+	'EXTENSION_INVALID_LIST'	=> 'The “%s” extension is not valid.<br />%s<br /><br />',
+	'EXTENSION_NOT_AVAILABLE'	=> 'The selected extension is not available for this board, please verify your phpBB and PHP versions are allowed (see the details page).',
+	'EXTENSION_DIR_INVALID'		=> 'The selected extension has an invalid directory structure and cannot be enabled.',
+	'EXTENSION_NOT_ENABLEABLE'	=> 'The selected extension cannot be enabled, please verify the extension’s requirements.',
+
+	'DETAILS'				=> 'Andmed',
+
+	'EXTENSIONS_DISABLED'	=> 'Disabled Extensions',
+	'EXTENSIONS_ENABLED'	=> 'Enabled Extensions',
+
+	'EXTENSION_DELETE_DATA'	=> 'Delete data',
+	'EXTENSION_DISABLE'		=> 'Disable',
+	'EXTENSION_ENABLE'		=> 'Enable',
+
+	'EXTENSION_DELETE_DATA_EXPLAIN'	=> 'Deleting an extension’s data removes all of its data and settings. The extension files are retained so it can be enabled again.',
+	'EXTENSION_DISABLE_EXPLAIN'		=> 'Disabling an extension retains its files, data and settings but removes any functionality added by the extension.',
+	'EXTENSION_ENABLE_EXPLAIN'		=> 'Enabling an extension allows you to use it on your board.',
+
+	'EXTENSION_DELETE_DATA_IN_PROGRESS'	=> 'The extension’s data is currently being deleted. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_DISABLE_IN_PROGRESS'	=> 'The extension is currently being disabled. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_ENABLE_IN_PROGRESS'	=> 'The extension is currently being enabled. Please do not leave or refresh this page until it is completed.',
+
+	'EXTENSION_DELETE_DATA_SUCCESS'	=> 'The extension’s data was deleted successfully',
+	'EXTENSION_DISABLE_SUCCESS'		=> 'The extension was disabled successfully',
+	'EXTENSION_ENABLE_SUCCESS'		=> 'The extension was enabled successfully',
+
+	'EXTENSION_NAME'			=> 'Extension Name',
+	'EXTENSION_ACTIONS'			=> 'Actions',
+	'EXTENSION_OPTIONS'			=> 'Options',
+	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
+	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s files from the filesystem</li>
+			<li>Upload the new files</li>
+			<li>Enable the extension</li>
+		</ol>',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s data</li>
+			<li>Delete the extension’s files from the filesystem</li>
+		</ol>',
+
+	'EXTENSION_DELETE_DATA_CONFIRM'	=> 'Are you sure that you wish to delete the data associated with “%s”?<br /><br />This removes all of its data and settings and cannot be undone!',
+	'EXTENSION_DISABLE_CONFIRM'		=> 'Are you sure that you wish to disable the “%s” extension?',
+	'EXTENSION_ENABLE_CONFIRM'		=> 'Are you sure that you wish to enable the “%s” extension?',
+	'EXTENSION_FORCE_UNSTABLE_CONFIRM'	=> 'Are you sure that you wish to force the use of unstable version?',
+
+	'RETURN_TO_EXTENSION_LIST'	=> 'Return to the extension list',
+
+	'EXT_DETAILS'			=> 'Extension Details',
+	'DISPLAY_NAME'			=> 'Disply Name (may be NULL)',
+	'CLEAN_NAME'			=> 'Clean Name',
+	'TYPE'					=> 'Type',
+	'DESCRIPTION'			=> 'Kirjeldus',
+	'VERSION'				=> 'Versioon',
+	'HOMEPAGE'				=> 'Homepage',
+	'PATH'					=> 'File Path',
+	'TIME'					=> 'Kellaaeg',
+	'LICENSE'				=> 'Licence',
+
+	'REQUIREMENTS'			=> 'Requirements',
+	'PHPBB_VERSION'			=> 'phpBB Version',
+	'PHP_VERSION'			=> 'PHP Version',
+	'AUTHOR_INFORMATION'	=> 'Author Information',
+	'AUTHOR_NAME'			=> 'Name',
+	'AUTHOR_EMAIL'			=> 'Email',
+	'AUTHOR_HOMEPAGE'		=> 'Homepage',
+	'AUTHOR_ROLE'			=> 'Role',
+
+	'NOT_UP_TO_DATE'		=> '%s is not up to date',
+	'UP_TO_DATE'			=> '%s is up to date',
+	'ANNOUNCEMENT_TOPIC'	=> 'Release Announcement',
+	'DOWNLOAD_LATEST'		=> 'Download Version',
+	'NO_VERSIONCHECK'		=> 'No version check information given.',
+
+	'VERSIONCHECK_FORCE_UPDATE_ALL'		=> 'Re-Check all versions',
+	'FORCE_UNSTABLE'					=> 'Always check for unstable versions',
+	'EXTENSIONS_VERSION_CHECK_SETTINGS'	=> 'Version check settings',
+
+	'META_FIELD_NOT_SET'	=> 'Required meta field %s has not been set.',
+	'META_FIELD_INVALID'	=> 'Meta field %s is invalid.',
+));
+
 #######language/en/acp/forums.php#######
 
 $lang = array_merge($lang, array(
@@ -12795,6 +13248,10 @@ $lang = array_merge($lang, array(
 	'AUTO_PRUNE_FREQ_EXPLAIN'	=> 'Aeg päevades, kui kiiresti toimub kärpimine.',
 	'AUTO_PRUNE_VIEWED'			=> 'Automaatne kärpimine postituste vaatamiste järgi',
 	'AUTO_PRUNE_VIEWED_EXPLAIN'	=> 'Päevade arv viimasest teema vaatamisest, peale mida teema kustutatakse.',
+	'AUTO_PRUNE_SHADOW_FREQ'	=> 'Auto-prune shadow topics frequency',
+	'AUTO_PRUNE_SHADOW_DAYS'	=> 'Auto-prune shadow topics age',
+	'AUTO_PRUNE_SHADOW_DAYS_EXPLAIN'	=> 'Number of days after which shadow topic is removed.',
+	'AUTO_PRUNE_SHADOW_FREQ_EXPLAIN'	=> 'Time in days between pruning events.',
 
 	'CONTINUE'						=> 'Jätka',
 	'COPY_PERMISSIONS_EXPLAIN'		=> 'Et lihtsustada uue foorumi õiguste määramisi, võid kopeerida õigused olemasolevalt foorumilt.',
@@ -12853,6 +13310,8 @@ $lang = array_merge($lang, array(
 	'FORUM_PASSWORD_OLD'				=> 'Foorumi parool kasutab vana krüpteerimist ja seda peaks muutma.',
 	'FORUM_PASSWORD_MISMATCH'			=> 'Sisestatud paroolid ei ühti.',
 	'FORUM_PRUNE_SETTINGS'				=> 'Foorumi kärpimise seaded',
+	'FORUM_PRUNE_SHADOW'				=> 'Enable auto-pruning of shadow topics',
+	'FORUM_PRUNE_SHADOW_EXPLAIN'			=> 'Prunes the forum of shadow topics, set the frequency/age parameters below.',
 	'FORUM_RESYNCED'					=> 'Foorum "%s" resünkroniseeritud.',
 	'FORUM_RULES_EXPLAIN'				=> 'Foorumi reeglid kuvatakse igal lehel foorumi sees.',
 	'FORUM_RULES_LINK'					=> 'Palun vajuta siia, et näha foorumi reegleid',
@@ -12944,6 +13403,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE_EXPLAIN'		=> 'Siin paneelis saad administreerida kasutajagruppe. Sa saad kustutada, lisada ja muuta olemasolevaid gruppe. Veel saad valida grupi liidreid, valida grupi staatust (suletud/nähtamatu/avatud) ja muuta grupi nime/kirjeldust.',
+	'ADD_GROUP_CATEGORY'			=> 'Add category',
 	'GROUP_ADD_USERS'				=> 'Lisa kasutajaid',
 	'ADD_USERS_EXPLAIN'				=> 'Siin saad lisada uusi kasutajaid gruppi. Sa võid valida, kas see grupp saab vaikimisi grupiks valitud kasutajatele. Samas võid sa kasutajatest teha ka grupi liidreid. Palun sisesta iga nimi erineval real.',
 
@@ -12957,11 +13417,10 @@ $lang = array_merge($lang, array(
 	'GROUP_APPROVED'				=> 'Kinnita kasutajaid',
 	'GROUP_AVATAR'					=> 'Grupi avatar.',
 	'GROUP_AVATAR_EXPLAIN'			=> 'See pilt kuvatakse Grupi Juhtpaneelis.',
+	'GROUP_CATEGORY_NAME'			=> 'Category name',
 	'GROUP_CLOSED'					=> 'Suletud',
 	'GROUP_COLOR'					=> 'Grupi värv',
 	'GROUP_COLOR_EXPLAIN'			=> 'Siin saad valida, mis värvi kuvatakse grupi liikmete kasutajanimed. Jäta tühjaks kui tahad vaikimisi värvi.',
-	'GROUP_CONFIRM_ADD_USER'		=> 'Oled sa kindel, et tahad lisada kasutaja %1$s gruppi?',
-	'GROUP_CONFIRM_ADD_USERS'		=> 'Oled sa kindel, et tahad lisada kasutajad %1$s gruppi?',
 	'GROUP_CREATED'					=> 'Grupp on edukalt lisatud.',
 	'GROUP_DEFAULT'					=> 'Määra grupp kasutaja vaikimisi grupiks.',
 	'GROUP_DEFS_UPDATED'			=> 'Vaikimisi grupp määratud kõigile valitud kasutajatele.',
@@ -13003,6 +13462,8 @@ $lang = array_merge($lang, array(
 	'GROUP_SETTINGS_SAVE'			=> 'Grupi üldised seaded',
 	'GROUP_SKIP_AUTH'				=> 'Vabasta grupi liider õigustest',
 	'GROUP_SKIP_AUTH_EXPLAIN'		=> 'Kui lubatud, ei päri grupi liider enam grupi õigusi.',
+	'GROUP_SPECIAL'					=> 'Pre-defined',
+	'GROUP_TEAMPAGE'				=> 'Display group on teampage',
 	'GROUP_TYPE'					=> 'Grupi tüüp',
 	'GROUP_TYPE_EXPLAIN'			=> 'See näitab, millised kasutajad saavad liituda või vaadata seda gruppi.',
 	'GROUP_UPDATED'					=> 'Grupi seaded uuendatud edukalt.',
@@ -13011,19 +13472,37 @@ $lang = array_merge($lang, array(
 	'GROUP_USERS_EXIST'				=> 'Valitud kasutajad on juba grupi liikmed.',
 	'GROUP_USERS_REMOVE'			=> 'Kasutajad eemaldatud grupist ja uued vaikimisi grupid on omandatud.',
 
+	'LEGEND_EXPLAIN'				=> 'These are the groups which are displayed in the group legend:',
+	'LEGEND_SETTINGS'				=> 'Legend settings',
+	'LEGEND_SORT_GROUPNAME'			=> 'Sort legend by group name',
+	'LEGEND_SORT_GROUPNAME_EXPLAIN'	=> 'The order below is ignored when this option is enabled.',
+
+	'MANAGE_LEGEND'			=> 'Manage group legend',
+	'MANAGE_TEAMPAGE'		=> 'Manage teampage',
 	'MAKE_DEFAULT_FOR_ALL'		=> 'Muuda kõigile kasutajatele vaikimisi grupiks',
 	'MEMBERS'					=> 'Kasutajad',
 
 	'NO_GROUP'					=> 'Sellist kasutajagruppi pole',
+	'NO_GROUPS_ADDED'			=> 'No groups added yet.',
 	'NO_GROUPS_CREATED'			=> 'Ühtegi gruppi pole veel lisatud',
 	'NO_PERMISSIONS'			=> 'Ära kopeeri õigusi',
 	'NO_USERS'					=> 'Selliseid kasutajaid ei eksisteeri.',
 	'NO_USERS_ADDED'			=> 'Ühtegi kasutajat pole lisatud gruppi.',
 	'NO_VALID_USERS'			=> 'Sa pole valinud ühtegi sobivat kasutajat sellele toimingule.',
 
+	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> 'Eelloodud grupid',
 	'SPECIAL_GROUPS_EXPLAIN'	=> 'Eelloodud grupid on spetsiaalsed grupid - neid ei saa kustutada ega otseselt muuta, aga sa saad siiski lisada nendesse kasutajaid ja muuta üldiseid seadeid.',
 
+	'TEAMPAGE'					=> 'Teampage',
+	'TEAMPAGE_DISP_ALL'			=> 'All memberships',
+	'TEAMPAGE_DISP_DEFAULT'		=> 'User’s default group only',
+	'TEAMPAGE_DISP_FIRST'		=> 'First membership only',
+	'TEAMPAGE_EXPLAIN'			=> 'These are the groups which are displayed on the teampage:',
+	'TEAMPAGE_FORUMS'			=> 'Display moderated forums',
+	'TEAMPAGE_FORUMS_EXPLAIN'	=> 'If set to yes, moderators will have a list with all of the forums where they have moderator permissions displayed in their row. This can be very database intensive for big boards.',
+	'TEAMPAGE_MEMBERSHIPS'		=> 'Display user memberships',
+	'TEAMPAGE_SETTINGS'			=> 'Teampage settings',
 	'TOTAL_MEMBERS'				=> 'Kasutajad',
 
 	'USERS_APPROVED'				=> 'Kasutajad edukalt kinnitatud',
@@ -13409,26 +13888,14 @@ $lang = array_merge($lang, array(
 	'ACP_FILES'						=> 'ACP keelefailid',
 	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> 'Siin on sul võimalik paigaldada/eemaldada keelepakke. Vaikimisi keelepakk on märgitud tärniga (*)',
 
-	'EMAIL_FILES'			=> 'E-posti mallid',
-
-	'FILE_CONTENTS'				=> 'Faili sisukord',
-	'FILE_FROM_STORAGE'			=> 'Fail hoiuskaustast(kataloogist)',
-
-	'HELP_FILES'				=> 'Abifailid',
-
-	'INSTALLED_LANGUAGE_PACKS'	=> 'Paigaldatud keelepakid',
-	'INVALID_LANGUAGE_PACK'		=> 'Valitud keele pakk tundub mitte sobivat. Palun kontrolli see keelepakk üle ja kui vaja, siis lae see uuesti üles.',
-	'INVALID_UPLOAD_METHOD'		=> 'Valitud üleslaadimise meetod ei sobi, palun vali mõni muu meetod.',
+	'DELETE_LANGUAGE_CONFIRM'		=> 'Are you sure you wish to delete “%s”?',
+	'INSTALLED_LANGUAGE_PACKS'		=> 'Paigaldatud keelepakid',
 
 	'LANGUAGE_DETAILS_UPDATED'			=> 'Keele detailid on edukalt uuendatud.',
-	'LANGUAGE_ENTRIES'					=> 'Keele sisestused',
-	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Siin on sul võimalik muuta olemasoleva keelepaketi sisestusi või mitte-tõlgitud sisestusi.<br /><strong>Märge:</strong> Kui sa muudad oma keelefaili, siis see fail pannakse eraldi kausta sinu jaoks allalaadimiseks. Muutused ei ole näha enne kasutajatele, kui sa oled selle faili sealt manuaalselt oma keele kausta üleslaadinud.',
-	'LANGUAGE_FILES'					=> 'Keelefailid',
-	'LANGUAGE_KEY'						=> 'Keele võti',
 	'LANGUAGE_PACK_ALREADY_INSTALLED'	=> 'See keelepakk on juba paigaldatud.',
-	'LANGUAGE_PACK_DELETED'				=> 'Keelepakk <strong>%s</strong> on edukalt eemaldatud. Kõikide kasutajate keel, kellel oli valitud see keel, on asendatud vaikimisi keelega.',
+	'LANGUAGE_PACK_DELETED'				=> 'The language pack “%s” has been removed successfully. All users using this language have been reset to the board’s default language.',
 	'LANGUAGE_PACK_DETAILS'				=> 'Keelepaki detailid',
-	'LANGUAGE_PACK_INSTALLED'			=> 'Keelepakk <strong>%s</strong> on edukalt paigaldatud.',
+	'LANGUAGE_PACK_INSTALLED'			=> 'The language pack “%s” has been successfully installed.',
 	'LANGUAGE_PACK_CPF_UPDATE'			=> 'Kohandatud profiiliväljade keelevalikud kopeeriti vaikimisi sätestatud keelest. Palun muuda neid kui vajalik.',
 	'LANGUAGE_PACK_ISO'					=> 'ISO',
 	'LANGUAGE_PACK_LOCALNAME'			=> 'Lokaalne nimi',
@@ -13441,33 +13908,44 @@ $lang = array_merge($lang, array(
 	'LANG_ISO_CODE'						=> 'ISO kood',
 	'LANG_LOCAL_NAME'					=> 'Lokaalne nimi',
 
-	'MISSING_LANGUAGE_FILE'		=> 'Puudub keele fail: <strong style="color:red">%s</strong>',
+	'MISSING_LANG_FILES'		=> 'Missing language files',
 	'MISSING_LANG_VARIABLES'	=> 'Puuduvad keele muutujad',
-	'MODS_FILES'				=> 'MODide keele failid',
 
 	'NO_FILE_SELECTED'				=> 'Sa pole valinud keelefaili.',
 	'NO_LANG_ID'					=> 'Sa pole valinud keelepakki.',
-	'NO_REMOVE_DEFAULT_LANG'		=> 'Sa pole võimeline eemaldama vaikimisi seatud keelepakki.<br />Kui sa tahad eemaldada seda keelepakki, vaheta enne oma foorumi vaikimisi seatud keel.',
+	'NO_REMOVE_DEFAULT_LANG'		=> 'You are not able to remove the default language pack.<br />If you want to remove this language pack, change your board’s default language first.',
 	'NO_UNINSTALLED_LANGUAGE_PACKS'	=> 'Pole ühtegi eemaldatud keelepakki',
 
-	'REMOVE_FROM_STORAGE_FOLDER'		=> 'Eemalda hoiuskaust(kataloog)',
-
-	'SELECT_DOWNLOAD_FORMAT'	=> 'Vali arhiiviformaat',
-	'SUBMIT_AND_DOWNLOAD'		=> 'Saada ära ja lae alla fail',
-	'SUBMIT_AND_UPLOAD'			=> 'Saada ära ja lae üles fail',
-
-	'THOSE_MISSING_LANG_FILES'			=> 'Järgnevad keelefailid puuduvad %s keele kaustas(kataloogis)',
-	'THOSE_MISSING_LANG_VARIABLES'		=> 'Järgnevad keele muutujad puuduvad <strong>%s</strong> keelepakis',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 
 	'UNINSTALLED_LANGUAGE_PACKS'	=> 'Eemaldatud keelepakid',
 
+	// 3.0.12
+	'EMAIL_FILES'			=> 'E-posti mallid',
+	'FILE_CONTENTS'				=> 'Faili sisukord',
+	'FILE_FROM_STORAGE'			=> 'Fail hoiuskaustast(kataloogist)',
+	'HELP_FILES'				=> 'Abifailid',
+	'INSTALLED_LANGUAGE_PACKS'	=> 'Paigaldatud keelepakid',
+	'INVALID_LANGUAGE_PACK'		=> 'Valitud keele pakk tundub mitte sobivat. Palun kontrolli see keelepakk üle ja kui vaja, siis lae see uuesti üles.',
+	'INVALID_UPLOAD_METHOD'		=> 'Valitud üleslaadimise meetod ei sobi, palun vali mõni muu meetod.',
+	'LANGUAGE_ENTRIES'					=> 'Keele sisestused',
+	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Siin on sul võimalik muuta olemasoleva keelepaketi sisestusi või mitte-tõlgitud sisestusi.<br /><strong>Märge:</strong> Kui sa muudad oma keelefaili, siis see fail pannakse eraldi kausta sinu jaoks allalaadimiseks. Muutused ei ole näha enne kasutajatele, kui sa oled selle faili sealt manuaalselt oma keele kausta üleslaadinud.',
+	'LANGUAGE_FILES'					=> 'Keelefailid',
+	'LANGUAGE_KEY'						=> 'Keele võti',
+	'MISSING_LANGUAGE_FILE'		=> 'Puudub keele fail: <strong style="color:red">%s</strong>',
+	'SELECT_DOWNLOAD_FORMAT'	=> 'Vali arhiiviformaat',
+	'SUBMIT_AND_DOWNLOAD'		=> 'Saada ära ja lae alla fail',
+	'SUBMIT_AND_UPLOAD'			=> 'Saada ära ja lae üles fail',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 	'UNABLE_TO_WRITE_FILE'		=> 'Faili ei saa kirjutada ümber: %s.',
 	'UPLOAD_COMPLETED'			=> 'Üleslaadimine on edukalt lõpetatud.',
 	'UPLOAD_FAILED'				=> 'Üleslaadimine nurjus tundmatutel põhjustel. Sa pead asendama selle faili käsitsi.',
 	'UPLOAD_METHOD'				=> 'Üleslaadimise meetod',
 	'UPLOAD_SETTINGS'			=> 'Üleslaadimise seaded',
-
 	'WRONG_LANGUAGE_FILE'		=> 'Valitud keelefail ei sobi.',
+	// 3.0.12
 ));
 
 #######language/en/acp/lexicon.php#######
@@ -13799,6 +14277,171 @@ $lang = array_merge($lang, array(
 	'ROLE_DESCRIPTION_ADMIN_FOOTBALL'	=> 'Can edit final match results.',
 ));
 
+#######language/en/acp/permissions_phpbb.php#######
+
+$lang = array_merge($lang, array(
+	'ACL_CAT_ACTIONS'		=> 'Actions',
+	'ACL_CAT_CONTENT'		=> 'Content',
+	'ACL_CAT_FORUMS'		=> 'Forums',
+	'ACL_CAT_MISC'			=> 'Misc',
+	'ACL_CAT_PERMISSIONS'	=> 'Permissions',
+	'ACL_CAT_PM'			=> 'Private messages',
+	'ACL_CAT_POLLS'			=> 'Polls',
+	'ACL_CAT_POST'			=> 'Post',
+	'ACL_CAT_POST_ACTIONS'	=> 'Post actions',
+	'ACL_CAT_POSTING'		=> 'Posting',
+	'ACL_CAT_PROFILE'		=> 'Profile',
+	'ACL_CAT_SETTINGS'		=> 'Settings',
+	'ACL_CAT_TOPIC_ACTIONS'	=> 'Topic actions',
+	'ACL_CAT_USER_GROUP'	=> 'Users &amp; Groups',
+));
+
+// User Permissions
+$lang = array_merge($lang, array(
+	'ACL_U_VIEWPROFILE'	=> 'Can view profiles, memberlist and online list',
+	'ACL_U_CHGNAME'		=> 'Can change username',
+	'ACL_U_CHGPASSWD'	=> 'Can change password',
+	'ACL_U_CHGEMAIL'	=> 'Can change email address',
+	'ACL_U_CHGAVATAR'	=> 'Can change avatar',
+	'ACL_U_CHGGRP'		=> 'Can change default usergroup',
+	'ACL_U_CHGPROFILEINFO'	=> 'Can change profile field information',
+
+	'ACL_U_ATTACH'		=> 'Can attach files',
+	'ACL_U_DOWNLOAD'	=> 'Can download files',
+	'ACL_U_SAVEDRAFTS'	=> 'Can save drafts',
+	'ACL_U_CHGCENSORS'	=> 'Can disable word censors',
+	'ACL_U_SIG'			=> 'Can use signature',
+
+	'ACL_U_SENDPM'		=> 'Can send private messages',
+	'ACL_U_MASSPM'		=> 'Can send messages to multiple users',
+	'ACL_U_MASSPM_GROUP'=> 'Can send messages to groups',
+	'ACL_U_READPM'		=> 'Can read private messages',
+	'ACL_U_PM_EDIT'		=> 'Can edit own private messages',
+	'ACL_U_PM_DELETE'	=> 'Can remove private messages from own folder',
+	'ACL_U_PM_FORWARD'	=> 'Can forward private messages',
+	'ACL_U_PM_EMAILPM'	=> 'Can email private messages',
+	'ACL_U_PM_PRINTPM'	=> 'Can print private messages',
+	'ACL_U_PM_ATTACH'	=> 'Can attach files in private messages',
+	'ACL_U_PM_DOWNLOAD'	=> 'Can download files in private messages',
+	'ACL_U_PM_BBCODE'	=> 'Can use BBCode in private messages',
+	'ACL_U_PM_SMILIES'	=> 'Can use smilies in private messages',
+	'ACL_U_PM_IMG'		=> 'Can use [img] BBCode tag in private messages',
+	'ACL_U_PM_FLASH'	=> 'Can use [flash] BBCode tag in private messages',
+
+	'ACL_U_SENDEMAIL'	=> 'Can send emails',
+	'ACL_U_SENDIM'		=> 'Can send instant messages',
+	'ACL_U_IGNOREFLOOD'	=> 'Can ignore flood limit',
+	'ACL_U_HIDEONLINE'	=> 'Can hide online status',
+	'ACL_U_VIEWONLINE'	=> 'Can view hidden online users',
+	'ACL_U_SEARCH'		=> 'Can search board',
+));
+
+// Forum Permissions
+$lang = array_merge($lang, array(
+	'ACL_F_LIST'		=> 'Can see forum',
+	'ACL_F_READ'		=> 'Can read forum',
+	'ACL_F_SEARCH'		=> 'Can search the forum',
+	'ACL_F_SUBSCRIBE'	=> 'Can subscribe forum',
+	'ACL_F_PRINT'		=> 'Can print topics',
+	'ACL_F_EMAIL'		=> 'Can email topics',
+	'ACL_F_BUMP'		=> 'Can bump topics',
+	'ACL_F_USER_LOCK'	=> 'Can lock own topics',
+	'ACL_F_DOWNLOAD'	=> 'Can download files',
+	'ACL_F_REPORT'		=> 'Can report posts',
+
+	'ACL_F_POST'		=> 'Can start new topics',
+	'ACL_F_STICKY'		=> 'Can post stickies',
+	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_REPLY'		=> 'Can reply to topics',
+	'ACL_F_EDIT'		=> 'Can edit own posts',
+	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
+	'ACL_F_SOFTDELETE'	=> 'Can soft delete own posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_F_IGNOREFLOOD' => 'Can ignore flood limit',
+	'ACL_F_POSTCOUNT'	=> 'Increment post counter<br /><em>Please note that this setting only affects new posts.</em>',
+	'ACL_F_NOAPPROVE'	=> 'Can post without approval',
+
+	'ACL_F_ATTACH'		=> 'Can attach files',
+	'ACL_F_ICONS'		=> 'Can use topic/post icons',
+	'ACL_F_BBCODE'		=> 'Can use BBCode',
+	'ACL_F_FLASH'		=> 'Can use [flash] BBCode tag',
+	'ACL_F_IMG'			=> 'Can use [img] BBCode tag',
+	'ACL_F_SIGS'		=> 'Can use signatures',
+	'ACL_F_SMILIES'		=> 'Can use smilies',
+
+	'ACL_F_POLL'		=> 'Can create polls',
+	'ACL_F_VOTE'		=> 'Can vote in polls',
+	'ACL_F_VOTECHG'		=> 'Can change existing vote',
+));
+
+// Moderator Permissions
+$lang = array_merge($lang, array(
+	'ACL_M_EDIT'		=> 'Can edit posts',
+	'ACL_M_DELETE'		=> 'Can permanently delete posts',
+	'ACL_M_SOFTDELETE'	=> 'Can soft delete posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_M_APPROVE'		=> 'Can approve and restore posts',
+	'ACL_M_REPORT'		=> 'Can close and delete reports',
+	'ACL_M_CHGPOSTER'	=> 'Can change post author',
+
+	'ACL_M_MOVE'	=> 'Can move topics',
+	'ACL_M_LOCK'	=> 'Can lock topics',
+	'ACL_M_SPLIT'	=> 'Can split topics',
+	'ACL_M_MERGE'	=> 'Can merge topics',
+
+	'ACL_M_INFO'	=> 'Can view post details',
+	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+));
+
+// Admin Permissions
+$lang = array_merge($lang, array(
+	'ACL_A_BOARD'		=> 'Can alter board settings/check for updates',
+	'ACL_A_SERVER'		=> 'Can alter server/communication settings',
+	'ACL_A_JABBER'		=> 'Can alter Jabber settings',
+	'ACL_A_PHPINFO'		=> 'Can view php settings',
+
+	'ACL_A_FORUM'		=> 'Can manage forums',
+	'ACL_A_FORUMADD'	=> 'Can add new forums',
+	'ACL_A_FORUMDEL'	=> 'Can delete forums',
+	'ACL_A_PRUNE'		=> 'Can prune forums',
+
+	'ACL_A_ICONS'		=> 'Can alter topic/post icons and smilies',
+	'ACL_A_WORDS'		=> 'Can alter word censors',
+	'ACL_A_BBCODE'		=> 'Can define BBCode tags',
+	'ACL_A_ATTACH'		=> 'Can alter attachment related settings',
+
+	'ACL_A_USER'		=> 'Can manage users<br /><em>This also includes seeing the users browser agent within the viewonline list.</em>',
+	'ACL_A_USERDEL'		=> 'Can delete/prune users',
+	'ACL_A_GROUP'		=> 'Can manage groups',
+	'ACL_A_GROUPADD'	=> 'Can add new groups',
+	'ACL_A_GROUPDEL'	=> 'Can delete groups',
+	'ACL_A_RANKS'		=> 'Can manage ranks',
+	'ACL_A_PROFILE'		=> 'Can manage custom profile fields',
+	'ACL_A_NAMES'		=> 'Can manage disallowed names',
+	'ACL_A_BAN'			=> 'Can manage bans',
+
+	'ACL_A_VIEWAUTH'	=> 'Can view permission masks',
+	'ACL_A_AUTHGROUPS'	=> 'Can alter permissions for individual groups',
+	'ACL_A_AUTHUSERS'	=> 'Can alter permissions for individual users',
+	'ACL_A_FAUTH'		=> 'Can alter forum permission class',
+	'ACL_A_MAUTH'		=> 'Can alter moderator permission class',
+	'ACL_A_AAUTH'		=> 'Can alter admin permission class',
+	'ACL_A_UAUTH'		=> 'Can alter user permission class',
+	'ACL_A_ROLES'		=> 'Can manage roles',
+	'ACL_A_SWITCHPERM'	=> 'Can use others permissions',
+
+	'ACL_A_STYLES'		=> 'Can manage styles',
+	'ACL_A_EXTENSIONS'	=> 'Can manage extensions',
+	'ACL_A_VIEWLOGS'	=> 'Can view logs',
+	'ACL_A_CLEARLOGS'	=> 'Can clear logs',
+	'ACL_A_MODULES'		=> 'Can manage modules',
+	'ACL_A_LANGUAGE'	=> 'Can manage language packs',
+	'ACL_A_EMAIL'		=> 'Can send mass email',
+	'ACL_A_BOTS'		=> 'Can manage bots',
+	'ACL_A_REASONS'		=> 'Can manage report/denial reasons',
+	'ACL_A_BACKUP'		=> 'Can backup/restore database',
+	'ACL_A_SEARCH'		=> 'Can manage search backends and settings',
+));
+
 #######language/en/acp/phpbb_seo.php#######
 
 $lang = array_merge($lang, array(
@@ -13970,6 +14613,7 @@ $lang = array_merge($lang, array(
 
 	'BBCODE_ADDED'				=> 'BBCode lisatud.',
 	'BBCODE_EDITED'				=> 'BBCode muudetud.',
+	'BBCODE_DELETED'			=> 'The BBCode has been removed successfully.',
 	'BBCODE_NOT_EXIST'			=> 'Valitud BBCode\'t ei eksisteeri.',
 	'BBCODE_HELPLINE'			=> 'Abirida',
 	'BBCODE_HELPLINE_EXPLAIN'	=> 'See väli sisaldab teksti, mis kuvatakse, kui kursor on BBCode tag\'i kohal.',
@@ -14025,17 +14669,10 @@ $lang = array_merge($lang, array(
 	'EXPORT_SMILIES'			=> 'Eksporid ja lae alla smailid.pak',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sSelle lingi vajutamise korral pakitakse teie smailide konfiguratsioon kokku<samp>smailid.pak failiks</samp>, millest saab allalaetuna luua <samp>.zip</samp> või <samp>.tgz</samp> faili, mis sisaldab kõiki teie smaile ja <samp>smailid.pak</samp> konfiguratsioonifaili%s.',
 
-
 	'ICONS_ADD'				=> 'Lisa uus ikoon',
-	'ICONS_NONE_ADDED'		=> 'Ühtegi ikooni ei lisatud.',
-	'ICONS_ONE_ADDED'		=> 'Ikoon lisatud.',
-	'ICONS_ADDED'			=> 'Ikoonid lisatud.',
 	'ICONS_CONFIG'			=> 'Ikoonide konfiguratsioon.',
 	'ICONS_DELETED'			=> 'Ikoon eemaldatud.',
 	'ICONS_EDIT'			=> 'Muuda ikooni',
-	'ICONS_ONE_EDITED'		=> 'Ikoon üles laetud.',
-	'ICONS_NONE_EDITED'		=> 'Ühtegi ikooni ei uuendatud.',
-	'ICONS_EDITED'			=> 'Ikoonid edukalt uuendatud.',
 	'ICONS_HEIGHT'			=> 'Ikooni kõrgus',
 	'ICONS_IMAGE'			=> 'Ikooni pilt',
 	'ICONS_IMPORTED'		=> 'Ikoonide pakk installeeritud.',
@@ -14065,9 +14702,6 @@ $lang = array_merge($lang, array(
 
 	'SELECT_PACKAGE'			=> 'Vali paki fail',
 	'SMILIES_ADD'				=> 'Lisa uus smaili',
-	'SMILIES_NONE_ADDED'		=> 'Ühtegi smailit ei lisatud.',
-	'SMILIES_ONE_ADDED'			=> 'Smaili lisatud.',
-	'SMILIES_ADDED'				=> 'Smailid lisatud.',
 	'SMILIES_CODE'				=> 'Smaili kood',
 	'SMILIES_CONFIG'			=> 'Smailide konfiguratsioon',
 	'SMILIES_DELETED'			=> 'Smaili eemaldatud.',
@@ -14075,9 +14709,6 @@ $lang = array_merge($lang, array(
 	'SMILIE_NO_CODE'			=> 'Smailit “%s”  ignoreeriti, sest koodi ei sisestatud.',
 	'SMILIE_NO_EMOTION'			=> 'Smailit “%s” ignoreeriti, sest emotsiooni ei sisestatud.',
 	'SMILIE_NO_FILE'			=> 'Smailit “%s” ignoreeriti, sest fail on puudu.',
-	'SMILIES_NONE_EDITED'		=> 'Ühtegi smailit ei uuendatud.',
-	'SMILIES_ONE_EDITED'		=> 'Smaili uuendatud.',
-	'SMILIES_EDITED'			=> 'Smailid uuendatud.',
 	'SMILIES_EMOTION'			=> 'Emotsioon',
 	'SMILIES_HEIGHT'			=> 'Smaili kõrgus',
 	'SMILIES_IMAGE'				=> 'Smaili pilt',
@@ -14089,7 +14720,6 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'Smaili pildifail',
 	'SMILIES_WIDTH'				=> 'Smaili laius',
 
-	'TOO_MANY_SMILIES'		=> 'Sinu sõnum sisaldab liiga palju smailisid. Maksimum on %d smailit.',
 	'WRONG_PAK_TYPE'		=> 'Valitud pakk ei sisalda vajalikke andmeid.',
 ));
 
@@ -14187,8 +14817,11 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ADDED_PROFILE_FIELD'	=> 'Omaloodud profiiliväli lisatud.',
+	'ALPHA_DOTS'			=> 'Alphanumeric and dots (periods)',
 	'ALPHA_ONLY'			=> 'Ainult tähtarvud',
 	'ALPHA_SPACERS'			=> 'Tähtarvud ja tühikud',
+	'ALPHA_UNDERSCORE'		=> 'Alphanumeric and underscores',
+	'ALPHA_PUNCTUATION'		=> 'Alphanumeric with comma, dots, underscore and dashes beginning with a letter',
 	'ALWAYS_TODAY'			=> 'Alati hetkeses kuupäevas',
 
 	'BOOL_ENTRIES_EXPLAIN'	=> 'Sisesta valikud nüüd',
@@ -14215,6 +14848,10 @@ $lang = array_merge($lang, array(
 	'DISPLAY_AT_PROFILE_EXPLAIN'	=> 'Kasutaja saab muuta seda profiilivälja oma juhtpaneelis.',
 	'DISPLAY_AT_REGISTER'			=> 'Kuva registreerimisel',
 	'DISPLAY_AT_REGISTER_EXPLAIN'	=> 'Kui see valik on lubatud, kuvatakse väli registreerimisel.',
+	'DISPLAY_ON_MEMBERLIST'			=> 'Display on memberlist screen',
+	'DISPLAY_ON_MEMBERLIST_EXPLAIN'	=> 'If this option is enabled, the field will be displayed in the user rows on the memberlist screen.',
+	'DISPLAY_ON_PM'					=> 'Display on view private message screen',
+	'DISPLAY_ON_PM_EXPLAIN'			=> 'If this option is enabled, the field will be displayed in the mini-profile on the private message screen.',
 	'DISPLAY_ON_VT'					=> 'Kuvatakse teema vaatamisel',
 	'DISPLAY_ON_VT_EXPLAIN'			=> 'Kui see valik on lubatud, kuvatakse väli mini-profiilis teema kuvamisel.',
 	'DISPLAY_PROFILE_FIELD'			=> 'Kuva profiiliväli avalikult',
@@ -14228,20 +14865,26 @@ $lang = array_merge($lang, array(
 	'EVERYTHING_OK'					=> 'Kõik OK',
 
 	'FIELD_BOOL'				=> 'Buulean (Jah/Ei)',
+	'FIELD_CONTACT_DESC'		=> 'Contact description',
+	'FIELD_CONTACT_URL'			=> 'Contact link',
 	'FIELD_DATE'				=> 'Kuupäev',
 	'FIELD_DESCRIPTION'			=> 'Välja kirjeldus',
 	'FIELD_DESCRIPTION_EXPLAIN'	=> 'Seletus väljale kasutajatele.',
 	'FIELD_DROPDOWN'			=> 'Rippvalikud',
+	'FIELD_GOOGLEPLUS'			=> 'Google+',
 	'FIELD_IDENT'				=> 'Välja nimi',
 	'FIELD_IDENT_ALREADY_EXIST'	=> 'Valitud välja nimi juba eksisteerib. Palun vali mõni muu.',
 	'FIELD_IDENT_EXPLAIN'		=> 'Välja nimi on andmebaasis ja templeitides välja identifitseerimiseks.',
 	'FIELD_INT'					=> 'Numbrid',
+	'FIELD_IS_CONTACT'			=> 'Display field as a contact field',
+	'FIELD_IS_CONTACT_EXPLAIN'	=> 'Contact fields are displayed within the contact section of the user profile and are displayed differently in the mini profile next to posts and private messages. You can use <samp>%s</samp> as a placeholder variable which will be replaced by a value provided by the user.',
 	'FIELD_LENGTH'				=> 'Sisestuskasti pikkus',
 	'FIELD_NOT_FOUND'			=> 'Profiilivälja ei leitud.',
 	'FIELD_STRING'				=> 'Üksiku teksti väli',
 	'FIELD_TEXT'				=> 'Tekstiväli',
 	'FIELD_TYPE'				=> 'Välja tüüp',
 	'FIELD_TYPE_EXPLAIN'		=> 'Hiljem sa ei saa muuta välja tüüpi.',
+	'FIELD_URL'					=> 'URL (Link)',
 	'FIELD_VALIDATION'			=> 'Välja valideerimine',
 	'FIRST_OPTION'				=> 'Esimene valik',
 
@@ -14253,6 +14896,12 @@ $lang = array_merge($lang, array(
 	'ISO_LANGUAGE'				=> 'Keel [%s]',
 
 	'LANG_SPECIFIC_OPTIONS'		=> 'Keelepõhised valikud [<strong>%s</strong>]',
+
+	'LETTER_NUM_DOTS'			=> 'Any letters, numbers and dots (periods)',
+	'LETTER_NUM_ONLY'			=> 'Any letters and numbers',
+	'LETTER_NUM_PUNCTUATION'	=> 'Any letters, numbers, comma, dots, underscores and dashes beginning with any letter',
+	'LETTER_NUM_SPACERS'		=> 'Any letters, numbers and spacers',
+	'LETTER_NUM_UNDERSCORE'		=> 'Any letters, numbers and underscores',
 
 	'MAX_FIELD_CHARS'		=> 'Maksimaalne arv sümboleid',
 	'MAX_FIELD_NUMBER'		=> 'Suurim lubatud number',
@@ -14307,7 +14956,9 @@ $lang = array_merge($lang, array(
 #######language/en/acp/prune.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_PRUNE_USERS_EXPLAIN'	=> 'Siin saad sa kustutada (või deaktiveerida) kasutajaid oma foorumis. Neid saab teha erinevatel viisidel: postituse arvu, aktiivsuse jne järgi. Iga sellist kriteerium saab kombineerida, nt saad sa kärpida kasutajaid enne 2002-01-01, kellel on olnud vähem postitusi kui 10. Alternatiivselt saad sa kirjutada kasutajaid siia tekstikasti ja kõik kriteeriumid ignoreeritakse. Ole ettevaatlik siin. Kui kasutaja on kustutatud, siis teda tagasi enam ei saa.',
+	'ACP_PRUNE_USERS_EXPLAIN'	=> 'This section allows you to delete or deactivate users on your board. Accounts can be filtered in a variety of ways; by post count, most recent activity, etc. Criteria may be combined to narrow down which accounts are affected. For example, you can prune users with fewer than 10 posts, who were also inactive after 2002-01-01. Use * as a wildcard for text fields. Alternatively, you may skip the criteria selection completely by entering a list of users (each on a separate line) into the text field. Take care with this facility! Once a user is deleted, there is no way to reverse the action.',
+
+	'CRITERIA'				=> 'Criteria',
 
 	'DEACTIVATE_DELETE'			=> 'Deaktiveeri või kustuta',
 	'DEACTIVATE_DELETE_EXPLAIN'	=> 'Vali kas deaktiveerida või kustutada kasutajaid, pea meeles - tagasiteed nendel toimingutel pole.',
@@ -14315,15 +14966,18 @@ $lang = array_merge($lang, array(
 	'DELETE_USER_POSTS'			=> 'Kustuta kärbitud kasutaja postitused',
 	'DELETE_USER_POSTS_EXPLAIN'	=> 'Kustutab postitusi, mille on teinud kustutatud kasutajad. Deaktiveeritud kasutajatel neid ei kustutata.',
 
-	'JOINED_EXPLAIN'			=> 'Sisesta kuupäev <kbd>YYYY-MM-DD</kbd> formaadis.',
+	'JOINED_EXPLAIN'			=> 'Enter a date in <kbd>YYYY-MM-DD</kbd> format. You may use both fields to specify an interval, or leave one blank for an open date range.',
 
 	'LAST_ACTIVE_EXPLAIN'		=> 'Sisesta kuupäev <kbd>YYYY-MM-DD</kbd> formaadis. Sisesta <kbd>0000-00-00</kbd>, et kärpida kasutajad, kes ei ole kunagi sisse loginud <em>Enne</em> ja <em>Pärast</em> tingimusi ei arvestata.',
 
+	'POSTS_ON_QUEUE'			=> 'Posts Awaiting Approval',
+	'PRUNE_USERS_GROUP_EXPLAIN'	=> 'Limit to users within the selected group.',
+	'PRUNE_USERS_GROUP_NONE'	=> 'All groups',
 	'PRUNE_USERS_LIST'				=> 'Kärbitavad kasutajad',
-	'PRUNE_USERS_LIST_DELETE'		=> 'Valitud kriteeriumitega kustutatavad kasutajad on järgmised.',
-	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'Valitud kriteeriumitega deaktiveeritavad kasutajad on järgmised.',
+	'PRUNE_USERS_LIST_DELETE'		=> 'With the selected critera for pruning users the following accounts will be removed. You can remove individual users from the deletion list by unchecking the box next to their username.',
+	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'With the selected critera for pruning users the following accounts will be deactivated. You can remove individual users from the deactivation list by unchecking the box next to their username.',
 
-	'SELECT_USERS_EXPLAIN'		=> 'Sisesta siia kasutajanimesid, need võetakse ette kriteeriumitest olenemata. Asutajaid ei saa kärpida',
+	'SELECT_USERS_EXPLAIN'		=> 'Enter specific usernames here. They will be used in preference to the criteria above. Founders cannot be pruned.',
 
 	'USER_DEACTIVATE_SUCCESS'	=> 'Valitud kasutajad deaktiveeriti edukalt.',
 	'USER_DELETE_SUCCESS'		=> 'Valitud kasutajad kustutati edukalt.',
@@ -14370,15 +15024,38 @@ $lang = array_merge($lang, array(
 	'DELETING_INDEX_IN_PROGRESS'			=> 'Indeksi kustutamine käivitatud',
 	'DELETING_INDEX_IN_PROGRESS_EXPLAIN'	=> 'Otsingu backend puhastab hetkel oma indeksit. See võib võtta mõne minuti.',
 
-	'FULLTEXT_MYSQL_INCOMPATIBLE_VERSION'	=> 'MySQL täisteksi backend\'i saab kasutada vaid MySQL 4 või uuema versiooniga.',
+	'FULLTEXT_MYSQL_INCOMPATIBLE_DATABASE'	=> 'The MySQL fulltext backend can only be used with MySQL4 and above.',
 	'FULLTEXT_MYSQL_NOT_MYISAM'				=> 'MySQL täisteksti indekseid saab kasutada vaid MyISAM tabelitega.',
 	'FULLTEXT_MYSQL_TOTAL_POSTS'			=> 'Indekseeritud postituste koguarv',
-	'FULLTEXT_MYSQL_MBSTRING'				=> 'Tugi mitte-ladina UTF-8 sümbolitele, kasutades mbstring\'i:',
-	'FULLTEXT_MYSQL_PCRE'					=> 'Tugi mitte-ladina UTF-8 sümbolitele, kasutades PCRE\'d:',
-	'FULLTEXT_MYSQL_MBSTRING_EXPLAIN'		=> 'Kui PCRE\'l pole unicode tähestiku seadeid, üritab backend kasutada mbstring’i tavalist väljendusmootorit.',
-	'FULLTEXT_MYSQL_PCRE_EXPLAIN'			=> 'See backend vajab PCRE unicode tähestiku seadeid, saadaval vaid PHP 4.4, 5.1 ja uuemates versioonides, kui soovid otsida mitte-ladina sümboleid.',
 	'FULLTEXT_MYSQL_MIN_SEARCH_CHARS_EXPLAIN'	=> 'Sõnad, milles on minimaalselt siinsisestatud arv sümboleid, kaastakse otsingusse. Sina või sinu host saab ainult neid seadeid muuta.',
 	'FULLTEXT_MYSQL_MAX_SEARCH_CHARS_EXPLAIN'	=> 'Sõnad, milles on maksimaalselt siinsisestatud arv sümboleid, kaastakse otsingusse. Sina või sinu host saab ainult neid seadeid muuta.',
+
+	'FULLTEXT_POSTGRES_INCOMPATIBLE_DATABASE'	=> 'The PostgreSQL fulltext backend can only be used with PostgreSQL.',
+	'FULLTEXT_POSTGRES_TOTAL_POSTS'			=> 'Total number of indexed posts',
+	'FULLTEXT_POSTGRES_VERSION_CHECK'		=> 'PostgreSQL version',
+	'FULLTEXT_POSTGRES_TS_NAME'				=> 'Text search Configuration Profile:',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN'			=> 'Minimum word length for keywords',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN'			=> 'Maximum word length for keywords',
+	'FULLTEXT_POSTGRES_VERSION_CHECK_EXPLAIN'		=> 'This search backend requires PostgreSQL version 8.3 and above.',
+	'FULLTEXT_POSTGRES_TS_NAME_EXPLAIN'				=> 'The Text search configuration profile used to determine the parser and dictionary.',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN_EXPLAIN'			=> 'Words with at least this many characters will be included in the query to the database.',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN_EXPLAIN'			=> 'Words with no more than this many characters will be included in the query to the database.',
+
+	'FULLTEXT_SPHINX_CONFIGURE'				=> 'Configure the following settings to generate sphinx config file',
+	'FULLTEXT_SPHINX_DATA_PATH'				=> 'Path to data directory',
+	'FULLTEXT_SPHINX_DATA_PATH_EXPLAIN'		=> 'It will be used to store the indexes and log files. You should create this directory outside the web accessible directories. (should have a trailing slash)',
+	'FULLTEXT_SPHINX_DELTA_POSTS'			=> 'Number of posts in frequently updated delta index',
+	'FULLTEXT_SPHINX_HOST'					=> 'Sphinx search daemon host',
+	'FULLTEXT_SPHINX_HOST_EXPLAIN'			=> 'Host on which the sphinx search daemon (searchd) listens. Leave empty to use the default localhost',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT'		=> 'Indexer memory limit',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT_EXPLAIN'	=> 'This number should at all times be lower than the RAM available on your machine. If you experience periodic performance problems this might be due to the indexer consuming too many resources. It might help to lower the amount of memory available to the indexer.',
+	'FULLTEXT_SPHINX_MAIN_POSTS'			=> 'Number of posts in main index',
+	'FULLTEXT_SPHINX_PORT'					=> 'Sphinx search daemon port',
+	'FULLTEXT_SPHINX_PORT_EXPLAIN'			=> 'Port on which the sphinx search daemon (searchd) listens. Leave empty to use the default Sphinx API port 9312',
+	'FULLTEXT_SPHINX_WRONG_DATABASE'		=> 'The sphinx search for phpBB supports MySQL and PostgreSQL only.',
+	'FULLTEXT_SPHINX_CONFIG_FILE'			=> 'Sphinx config file',
+	'FULLTEXT_SPHINX_CONFIG_FILE_EXPLAIN'	=> 'The generated content of the sphinx config file. This data needs to be pasted into the sphinx.conf which is used by sphinx search daemon. Replace the [dbuser] and [dbpassword] placeholders with your database credentials.',
+	'FULLTEXT_SPHINX_NO_CONFIG_DATA'		=> 'The sphinx data and config directory paths are not defined. Please define them to generate the config file.',
 
 	'GENERAL_SEARCH_SETTINGS'				=> 'Üldised otsingu seaded',
 	'GO_TO_SEARCH_INDEX'					=> 'Mine otsingulehele',
@@ -14403,8 +15080,6 @@ $lang = array_merge($lang, array(
 
 	'SEARCH_GUEST_INTERVAL'					=> 'Külaliste otsingu intervall',
 	'SEARCH_GUEST_INTERVAL_EXPLAIN'			=> 'Arv sekundites, mis on otsingute intervall külalistele. Kui üks külaline otsib, peavad teised ootama selle aja möödumist.',
-	'SEARCH_INDEX_CREATE_REDIRECT'			=> 'Kõik postitused kuni ID\'ni %1$d on indekseeritud, millest %2$d postitust selles indekseerimises.<br />Praegune indekseerimissagedus on umbes %3$.1f postitust sekundis.<br />Indekseerimine käib...',
-	'SEARCH_INDEX_DELETE_REDIRECT'			=> 'Kõik postitused kuni ID\'ni %1$d on eemaldatud otsingu indeksist.<br />Kustutamine käib...',
 	'SEARCH_INDEX_CREATED'					=> 'Kõik postitused andmebaasis indekseeritud.',
 	'SEARCH_INDEX_REMOVED'					=> 'Otsinguindeks sellele backend\'ile kustutatud.',
 	'SEARCH_INTERVAL'						=> 'Kasutaja otsingu intervall',
@@ -14427,8 +15102,55 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
+	// 3.1.0
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
+
+	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
+	'CONFIRM_UNINSTALL_STYLES'		=> 'Are you sure you wish to uninstall selected styles?',
+	'COPYRIGHT'						=> 'Kopeerimisõigused',
+
+	'DEACTIVATE_DEFAULT'		=> 'Sa ei saa deaktiveerida vaikimisi teemat.',
+	'DELETE_FROM_FS'			=> 'Kustuta failisüsteemist',
+	'DELETE_STYLE_FILES_FAILED'	=> 'Error deleting files for style "%s".',
+	'DELETE_STYLE_FILES_SUCCESS'	=> 'Files for style "%s" have been deleted.',
+	'DETAILS'					=> 'Andmed',
+
+	'INHERITING_FROM'			=> 'Pärib',
+	'INSTALL_STYLE'				=> 'Installeeri stiil',
+	'INSTALL_STYLES'			=> 'Install styles',
+	'INSTALL_STYLES_EXPLAIN'	=> 'Here you can install new styles.<br />If you cannot find a specific style in list below, check to make sure style is already installed. If it is not installed, check if it was uploaded correctly.',
+	'INVALID_STYLE_ID'			=> 'Invalid style ID.',
+
+	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
+	'NO_UNINSTALLED_STYLE'		=> 'Ei tuvastatud installeerimata stiile.',
+
+	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
+
+	'STYLE_ACTIVATE'			=> 'Aktiveeri',
+	'STYLE_ACTIVE'				=> 'Aktiivne',
+	'STYLE_DEACTIVATE'			=> 'Deaktiveeri',
+	'STYLE_DEFAULT'				=> 'Muuda vaikimisi stiiliks',
+	'STYLE_DEFAULT_CHANGE_INACTIVE'	=> 'You must activate style before making it default style.',
+	'STYLE_ERR_INVALID_PARENT'	=> 'Invalid parent style.',
+	'STYLE_ERR_NAME_EXIST'		=> 'Sellise nimega stiil on juba olemas.',
+	'STYLE_ERR_STYLE_NAME'		=> 'Pead sisestama stiilile nime.',
+	'STYLE_INSTALLED'			=> 'Style "%s" has been installed.',
+	'STYLE_INSTALLED_RETURN_INSTALLED_STYLES'	=> 'Return to installed styles list',
+	'STYLE_INSTALLED_RETURN_UNINSTALLED_STYLES'	=> 'Install more styles',
+	'STYLE_NAME'				=> 'Stiili nimi',
+	'STYLE_NOT_INSTALLED'		=> 'Style "%s" was not installed.',
+	'STYLE_PATH'				=> 'Style path',
+	'STYLE_UNINSTALL'			=> 'Uninstall',
+	'STYLE_UNINSTALL_DEPENDENT'	=> 'Style "%s" cannot be uninstalled because it has one or more child styles.',
+	'STYLE_UNINSTALLED'			=> 'Style "%s" uninstalled successfully.',
+	'STYLE_USED_BY'				=> 'Kasutajaid (koos robotitega)',
+
+	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+
+	// 3.0.12
 	'ACP_IMAGESETS_EXPLAIN'	=> 'Pildikogu hõlmab kõikvõimalikud pildid, mida foorum kasutab. Siin saad muuta, eksportida või kustutada olemasolevaid pildikogusid ja importida või lisada uusi.',
-	'ACP_STYLES_EXPLAIN'	=> 'Siin saad hallata saadavalolevaid stiile foorumis. Stiil koosneb teemast, templeidist ja pildikogust. Võid ka muuta olemasolevaid stiile, kustutada, deaktiveerida, reaktiveerida, luua või importida uusi. Saad näha, milline stiil välja näeb, kasutades eelvaate funktsiooni. Praegune vaikimisi stiil on märgitud tärniga (*). Lisaks on toodud ka stiili kasutavate kasutajate arv. Stiili ülekirjutamine siin ei kajastu.',
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 	'ACP_TEMPLATES_EXPLAIN'	=> 'Templeit hõlmab kõiki märgistusi, et genereerida foorumi välimus. Siin saad muuta, kustutada importida ja vaadata olemasolevaid templeite. Võid ka muuta koodi, millega genereeritakse BBCode\'t.',
 	'ACP_THEMES_EXPLAIN'	=> 'Siin saad luua, installeerida, muuta, kustutada ja eksportida teemasid. Teema on kombinatsioon värvidest ja piltidest, mis määravad foorumi põhilise väljanägemise. Saadavate valikute arv sõltub serveri konfiguratsioonist ja phpBB installatsioonist. Kui lood uut teemat, ei pea võtma eelnevat teemat aluseks.',
 	'ADD_IMAGESET'			=> 'Loo pildikogu',
@@ -14465,7 +15187,6 @@ $lang = array_merge($lang, array(
 	'CURRENT_IMAGE'					=> 'Praegune pilt',
 
 	'DEACTIVATE_DEFAULT'		=> 'Sa ei saa deaktiveerida vaikimisi teemat.',
-	'DELETE_FROM_FS'			=> 'Kustuta failisüsteemist',
 	'DELETE_IMAGESET'			=> 'Kustuta pildikogu',
 	'DELETE_IMAGESET_EXPLAIN'	=> 'Siin saad eemaldada valitud pildikogu andmebaasist. Seda tagasi võtta ei saa. Kui pildikogu on kustutatud, on see jäädavalt kadunud. On soovitav, et esmalt ekspordid kogu võimalikuks kasutamiseks tulevikus.',
 	'DELETE_STYLE'				=> 'Kustuta stiil',
@@ -14662,7 +15383,6 @@ $lang = array_merge($lang, array(
 	'INCLUDE_IMAGESET'			=> 'Kaasa pildikogu',
 	'INCLUDE_TEMPLATE'			=> 'Kaasa templeit',
 	'INCLUDE_THEME'				=> 'Kaasa teema',
-	'INHERITING_FROM'			=> 'Pärib',
 	'INSTALL_IMAGESET'			=> 'Installeeri pildikogu',
 	'INSTALL_IMAGESET_EXPLAIN'	=> 'Siin saad sa installeerida pildikogu. Võid muuta andmeid, kui soovid või jätkata vaikimisi andmetega.',
 	'INSTALL_STYLE'				=> 'Installeeri stiil',
@@ -14692,7 +15412,6 @@ $lang = array_merge($lang, array(
 	'NO_TEMPLATE'				=> 'Ei leia templeiti failisüsteemis.',
 	'NO_THEME'					=> 'Ei leia teemat failisüsteemis.',
 	'NO_UNINSTALLED_IMAGESET'	=> 'Ei tuvastatud installeerimata pildikogusid.',
-	'NO_UNINSTALLED_STYLE'		=> 'Ei tuvastatud installeerimata stiile.',
 	'NO_UNINSTALLED_TEMPLATE'	=> 'Ei tuvastatud installeerimata templeite.',
 	'NO_UNINSTALLED_THEME'		=> 'Ei tuvastatud installeerimata teemasid.',
 	'NO_UNIT'					=> 'Pole',
@@ -14732,30 +15451,22 @@ $lang = array_merge($lang, array(
 	'SELECTED_THEME_FILE'		=> 'Valitud teema fail',
 	'STORE_DATABASE'			=> 'Andmebaas',
 	'STORE_FILESYSTEM'			=> 'Failisüsteem',
-	'STYLE_ACTIVATE'			=> 'Aktiveeri',
-	'STYLE_ACTIVE'				=> 'Aktiivne',
 	'STYLE_ADDED'				=> 'Stiil lisatud.',
-	'STYLE_DEACTIVATE'			=> 'Deaktiveeri',
-	'STYLE_DEFAULT'				=> 'Muuda vaikimisi stiiliks',
 	'STYLE_DELETED'				=> 'Stiil kustutatud.',
 	'STYLE_DETAILS_UPDATED'		=> 'Stiil muudetud.',
 	'STYLE_ERR_ARCHIVE'			=> 'Palun vali arhiveerimismeetod',
 	'STYLE_ERR_COPY_LONG'		=> 'Kopeerimisõigused ei tohi olla pikemad kui 60 sümbolit.',
 	'STYLE_ERR_MORE_ELEMENTS'	=> 'Pead valima vähemalt ühe stiili elemendi.',
 	'STYLE_ERR_NAME_CHARS'		=> 'Stiili nimi võib sisaldada vaid kirjamärke, miinust, plussi, alakriipsu ja tühikut.',
-	'STYLE_ERR_NAME_EXIST'		=> 'Sellise nimega stiil on juba olemas.',
 	'STYLE_ERR_NAME_LONG'		=> 'Stiili nimi ei tohi olla pikem kui 30 sümbolit.',
 	'STYLE_ERR_NO_IDS'			=> 'Pead valime templeidi, teema ja pildikogu sellele stiilile.',
 	'STYLE_ERR_NOT_STYLE'		=> 'Imporditud või üleslaetud fail ei sisaldanud korrektset arhiivi.',
-	'STYLE_ERR_STYLE_NAME'		=> 'Pead sisestama stiilile nime.',
 	'STYLE_EXPORT'				=> 'Ekspordi stiil',
 	'STYLE_EXPORT_EXPLAIN'		=> 'Siin saad eksportida stiili arhiivifailina. Stiil ei pea sisaldama kõiki elemente, kuid vähemalt ühte neist. Võid valida, kas laadida fail kohe alla või panna see FTP kausta, et pärast alla laadida.',
 	'STYLE_EXPORTED'			=> 'Stiil eksporditud ja salvestatud %s kausta.',
 	'STYLE_IMAGESET'			=> 'Pildikogu',
-	'STYLE_NAME'				=> 'Stiili nimi',
 	'STYLE_TEMPLATE'			=> 'Templeit',
 	'STYLE_THEME'				=> 'Teema',
-	'STYLE_USED_BY'				=> 'Kasutajaid (koos robotitega)',
 
 	'TEMPLATE_ADDED'			=> 'Templeit lisatud ja salvestatud failisüsteemi.',
 	'TEMPLATE_ADDED_DB'			=> 'Templeit lisatud ja salvestatud andmebaasi.',
@@ -14853,6 +15564,7 @@ $lang = array_merge($lang, array(
 	'CANNOT_FORCE_REACT_FOUNDER'	=> 'Sa ei või sundida foorumi asutajat reaktivatsioonile.',
 	'CANNOT_FORCE_REACT_YOURSELF'	=> 'Sa ei või sundida iseennast reaktivatsioonile.',
 	'CANNOT_REMOVE_ANONYMOUS'		=> 'Sa ei saa eemaldada külalise staatusega kasutajat.',
+	'CANNOT_REMOVE_FOUNDER'			=> 'You are not allowed to remove founder accounts.',
 	'CANNOT_REMOVE_YOURSELF'		=> 'Sa ei saa iseenda kasutajat eemaldada.',
 	'CANNOT_SET_FOUNDER_IGNORED'	=> 'Sa ei saa ignoreeritud kasutajaid foorumi asutajaks teha.',
 	'CANNOT_SET_FOUNDER_INACTIVE'	=> 'Sa pead enne kasutaja aktiveerima, kui teda foorumi asutajaks määrad.',
@@ -14879,7 +15591,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'Palun vali foorum, kuhu liigutatakse kõik selle kasutaja postitused.',
 
 	'NO_SPECIAL_RANK'		=> 'Spetsiaalseid kasutajakirjeldusi ei ole omistatud',
-	'NO_WARNINGS'			=> 'Hoiatusi pole.',
+	'NO_WARNINGS'			=> 'No warnings exist.',
 	'NOT_MANAGE_FOUNDER'	=> 'Sa tahtsid hallata kasutajat, kellel on foorumi asutaja staatus. Ainult foorumi asutajad saavad teisi foorumi asutajaid hallata.',
 
 	'QUICK_TOOLS'			=> 'Kiirvalikud',

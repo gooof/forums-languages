@@ -1,5 +1,14 @@
 ﻿<?php
 
+#######language/en/app.php#######
+
+$lang = array_merge($lang, array(
+	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
+	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
+	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+));
+
 #######language/en/calendar.php#######
 
 $lang = array_merge($lang, array(
@@ -182,6 +191,55 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'La vostra clau privada reCaptcha. Podeu aconseguir claus al lloc web <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 
 	'RECAPTCHA_EXPLAIN'				=> 'Per prevenir les trameses automàtiques requerim que introduïu les dues paraules que es mostren al camp de text a continuació.',
+	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
+));
+
+#######language/en/cli.php#######
+
+$lang = array_merge($lang, array(
+	'CLI_CONFIG_CANNOT_CACHED'			=> 'Set this option if the configuration option changes too frequently to be efficiently cached.',
+	'CLI_CONFIG_CURRENT'				=> 'Current configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_DELETE_SUCCESS'			=> 'Successfully deleted config %s.',
+	'CLI_CONFIG_NEW'					=> 'New configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_NOT_EXISTS'				=> 'Config %s does not exist',
+	'CLI_CONFIG_OPTION_NAME'			=> 'The configuration option’s name',
+	'CLI_CONFIG_PRINT_WITHOUT_NEWLINE'	=> 'Set this option if the value should be printed without a new line at the end.',
+	'CLI_CONFIG_INCREMENT_BY'			=> 'Amount to increment by',
+	'CLI_CONFIG_INCREMENT_SUCCESS'		=> 'Successfully incremented config %s',
+	'CLI_CONFIG_SET_FAILURE'			=> 'Could not set config %s',
+	'CLI_CONFIG_SET_SUCCESS'			=> 'Successfully set config %s',
+
+	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
+	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
+	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
+	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
+	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
+	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
+	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
+	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
+	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
+	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
+	'CLI_EXTENSION_ENABLE_FAILURE'		=> 'Could not enable extension %s',
+	'CLI_EXTENSION_ENABLE_SUCCESS'		=> 'Successfully enabled extension %s',
+	'CLI_EXTENSION_NAME'				=> 'Name of the extension',
+	'CLI_EXTENSION_PURGE_FAILURE'		=> 'Could not purge extension %s',
+	'CLI_EXTENSION_PURGE_SUCCESS'		=> 'Successfully purged extension %s',
+	'CLI_EXTENSION_NOT_FOUND'			=> 'No extensions were found.',
+	'CLI_EXTENSIONS_AVAILABLE'			=> 'Available',
+	'CLI_EXTENSIONS_DISABLED'			=> 'Disabled',
+	'CLI_EXTENSIONS_ENABLED'			=> 'Enabled',
+
+	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
 ));
 
 #######language/en/common.php#######
@@ -190,7 +248,11 @@ $lang = array_merge($lang, array(
 	'TRANSLATION_INFO'	=> '<a href="http://www.userboard.org">Traducció del UserBoard</a>',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
+	'DATETIME_FORMAT'	=> '|d M Y, H:i|',	// 01 Jan 2007, 13:37 (with Relative days enabled)
 	'USER_LANG'			=> 'ca',
+
+	// See http://wiki.phpbb.com/Plural_Rules for more information
+	'PLURAL_RULE'		=> '1',
 
 	'1_DAY'			=> '1 dia',
 	'1_MONTH'		=> '1 mes',
@@ -204,18 +266,24 @@ $lang = array_merge($lang, array(
 	'ACCOUNT_DEACTIVATED'			=> 'El vostre compte ha estat desactivat manualment. Només el pot reactivar un administrador.',
 	'ACCOUNT_NOT_ACTIVATED'			=> 'El vostre compte encara no ha estat activat.',
 	'ACP'							=> 'Tauler de control de l’administrador',
+	'ACP_SHORT'						=> 'ACP',
 	'ACTIVE'						=> 'actiu',
 	'ACTIVE_ERROR'					=> 'L’usuari especificat actualment està inactiu. Si teniu problemes per activar el vostre compte, poseu-vos en contacte amb l’administrador del fòrum.',
 	'ADMINISTRATOR'					=> 'Administrador',
 	'ADMINISTRATORS'				=> 'Administradors',
 	'AGE'							=> 'Edat',
 	'AIM'							=> 'AIM',
+	'AJAX_ERROR_TITLE'				=> 'AJAX error',
+	'AJAX_ERROR_TEXT'				=> 'Something went wrong when processing your request.',
+	'AJAX_ERROR_TEXT_ABORT'			=> 'User aborted request.',
+	'AJAX_ERROR_TEXT_TIMEOUT'		=> 'Your request timed out; please try again.',
+	'AJAX_ERROR_TEXT_PARSERERROR'	=> 'Something went wrong with the request and the server returned an invalid reply.',
 	'ALLOWED'						=> 'Permès',
 	'ALL_FILES'						=> 'Tots el fitxers',
 	'ALL_FORUMS'					=> 'Tots els fòrums',
 	'ALL_MESSAGES'					=> 'Tots els missatges',
 	'ALL_POSTS'						=> 'Totes les entrades',
-	'ALL_TIMES'						=> 'Totes les hores són %1$s %2$s',
+	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'Tots els temes',
 	'AND'							=> 'I',
 	'ARE_WATCHING_FORUM'			=> 'Esteu subscrits per rebre un avís si hi ha entrades noves en aquest fòrum.',
@@ -225,6 +293,14 @@ $lang = array_merge($lang, array(
 	'ATTACHED_IMAGE_NOT_IMAGE'		=> 'La imatge que heu intentat adjuntar no és vàlida.',
 	'AUTHOR'						=> 'Autor',
 	'AUTH_NO_PROFILE_CREATED'		=> 'No s’ha pogut crear el perfil d’usuari.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_ENTRY'				=> 'Invalid database entry.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_SERVICE_TYPE'		=> 'Invalid service type provided to OAuth service handler.',
+	'AUTH_PROVIDER_OAUTH_ERROR_SERVICE_NOT_CREATED'			=> 'OAuth service not created',
+	'AUTH_PROVIDER_OAUTH_SERVICE_BITLY'						=> 'Bitly',
+	'AUTH_PROVIDER_OAUTH_SERVICE_FACEBOOK'					=> 'Facebook',
+	'AUTH_PROVIDER_OAUTH_SERVICE_GOOGLE'					=> 'Google',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_NOT_STORED'			=> 'OAuth token not stored.',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_INCORRECTLY_STORED'	=> 'OAuth token incorrectly stored.',
 	'AVATAR_DISALLOWED_CONTENT'		=> 'El fitxer a penjar ha estat rebutjat perquè s’ha identificat com un possible vector d’atac.',
 	'AVATAR_DISALLOWED_EXTENSION'	=> 'No es pot mostrar aquest fitxer perquè l’extensió <strong>%s</strong> no està permesa.',
 	'AVATAR_EMPTY_REMOTE_DATA'		=> 'No s’ha penjat l’avatar especificat perquè les dades remotes no són vàlides o estan corruptes.',
@@ -235,10 +311,11 @@ $lang = array_merge($lang, array(
 	'AVATAR_PARTIAL_UPLOAD'			=> 'El fitxer especificat només s’ha carregat parcialment.',
 	'AVATAR_PHP_SIZE_NA'			=> 'La mida del fitxer d’avatar és massa gran.<br />No s’ha pogut determinar la mida màxima permesa definida a php.ini.',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'La mida del fitxer d’avatar és massa gran. La mida màxima permesa és de %1$d %2$s.<br />Si us plau, tingueu en compte que això es defineix al fitxer php.ini i no es pot sobreescriure.',
+	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
 	'AVATAR_URL_INVALID'			=> 'L’URL que heu especificat no és vàlida.',
 	'AVATAR_URL_NOT_FOUND'			=> 'No s’ha pogut trobar el fitxer especificat.',
-	'AVATAR_WRONG_FILESIZE'			=> 'El fitxer d’avatar ha de tenir una mida entre 0 i %1d %2s.',
-	'AVATAR_WRONG_SIZE'				=> 'L’avatar tramès té %5$d píxels d’amplària i %6$d píxels d’alçària. Els avatars han de tenir com a mínim %1$d píxels d’amplària i %2$d píxels d’alçària, i com a màxim %3$d píxels d’amplària i %4$d píxels d’alçària.',
+	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
+	'AVATAR_WRONG_SIZE'				=> 'The submitted avatar is %5$s wide and %6$s high. Avatars must be at least %1$s wide and %2$s high, but no larger than %3$s wide and %4$s high.',
 
 	'BACK_TO_TOP'			=> 'Torna a l’inici',
 	'BACK_TO_PREV'			=> 'Torna a la pàgina anterior',
@@ -255,28 +332,42 @@ $lang = array_merge($lang, array(
 	'BOARD_DISABLED'		=> 'Actualment aquest fòrum està inhabilitat.',
 	'BOARD_UNAVAILABLE'		=> 'El fòrum està temporalment no disponible, si us plau intenteu-ho d’aquí a uns minuts.',
 	'BROWSING_FORUM'		=> 'Usuaris navegant en aquest fòrum: %1$s',
-	'BROWSING_FORUM_GUEST'	=> 'Usuaris navegant en aquest fòrum: %1$s i %2$d visitant',
-	'BROWSING_FORUM_GUESTS'	=> 'Usuaris navegant en aquest fòrum: %1$s i %2$d visitants',
+	'BUTTON_EDIT'			=> 'Edit',
+	'BUTTON_FORUM_LOCKED'	=> 'Locked',
+	'BUTTON_NEW_TOPIC'		=> 'New Topic',
+	'BUTTON_PM'				=> 'PM',
+	'BUTTON_PM_FORWARD'		=> 'Forward',
+	'BUTTON_PM_NEW'			=> 'New PM',
+	'BUTTON_PM_REPLY'		=> 'Send Reply',
+	'BUTTON_PM_REPLY_ALL'	=> 'Reply All',
+	'BUTTON_POST_REPLY'		=> 'Post Reply',
+	'BUTTON_QUOTE'			=> 'Quote',
+	'BUTTON_TOPIC_LOCKED'	=> 'Locked',
 	'BYTES'					=> 'Bytes',
+	'BYTES_SHORT'			=> 'B',
 
 	'CANCEL'				=> 'Cancel·la',
 	'CHANGE'				=> 'Canvia',
 	'CHANGE_FONT_SIZE'		=> 'Canvia la mida de la lletra',
 	'CHANGING_PREFERENCES'	=> 'S’estan canviant les preferències del fòrum',
 	'CHANGING_PROFILE'		=> 'S’està canviant la configuració del perfil',
-	'CLICK_VIEW_PRIVMSG'	=> '%sVes a la meva bústia d’entrada%s',
 	'COLLAPSE_VIEW'			=> 'Redueix la vista',
 	'CLOSE_WINDOW'			=> 'Tanca la finestra',
 	'COLOUR_SWATCH'			=> 'Paleta de colors',
-	'COMMA_SEPARATOR'		=> ', ',	// Used in pagination of ACP & prosilver, use localised comma if appropriate, eg: Ideographic or Arabic
+	'COLON'					=> ':',
+	'COMMA_SEPARATOR'		=> ', ',	// Comma used to join lists into a single string, use localised comma if appropriate, eg: Ideographic or Arabic
 	'CONFIRM'				=> 'Confirmació',
 	'CONFIRM_CODE'			=> 'Codi de confirmació',
 	'CONFIRM_CODE_EXPLAIN'	=> 'Introduïu el codi tal com es mostra. No es distingeix entre majúscules i minúscules.',
 	'CONFIRM_CODE_WRONG'	=> 'El codi de confirmació que heu introduït és incorrecte.',
 	'CONFIRM_OPERATION'		=> 'Esteu segur que voleu dur a terme aquesta operació?',
+	'CONFIRM_AVATAR_DELETE' => 'Are you sure you wish to delete this avatar?',
 	'CONGRATULATIONS'		=> 'Felicitats a ',
 	'CONNECTION_FAILED'		=> 'La connexió ha fallat.',
 	'CONNECTION_SUCCESS'	=> 'La connexió ha tingut èxit!',
+	'CONTACT'				=> 'Contacta amb',
+	'CONTACT_USER'			=> 'Contact %s',
+	'CONTACT_US'			=> 'Contact us',
 	'COOKIES_DELETED'		=> 'Totes les galetes del fòrum s’han eliminat correctament.',
 	'CURRENT_TIME'			=> 'Hora i data actual: %s',
 
@@ -297,18 +388,13 @@ $lang = array_merge($lang, array(
 	'DISPLAY_TOPICS'		=> 'Mostra els temes dels darrers',
 	'DOWNLOADED'			=> 'Baixat',
 	'DOWNLOADING_FILE'		=> 'S’està baixant el fitxer',
-	'DOWNLOAD_COUNT'		=> 'S’ha baixat %d vegada',
-	'DOWNLOAD_COUNTS'		=> 'S’ha baixat %d vegades',
-	'DOWNLOAD_COUNT_NONE'	=> 'Encara no s’ha baixat',
-	'VIEWED_COUNT'			=> 'S’ha visualitzat %d vegada',
-	'VIEWED_COUNTS'			=> 'S’ha visualitzat %d vegades',
-	'VIEWED_COUNT_NONE'		=> 'Encara no s’ha visualitzat',
 
 	'EDIT_POST'							=> 'Edita l’entrada',
-	'EMAIL'								=> 'Correu electrònic', // Short form for EMAIL_ADDRESS
-	'EMAIL_ADDRESS'						=> 'Adreça electrònica',
-	'EMAIL_INVALID_EMAIL'				=> 'L’adreça electrònica que heu introduït no és vàlida.',
-	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'S’ha produït un error en enviar l’e-mail a la <strong>línia %1$s</strong>. Resposta: %2$s.',
+	'ELLIPSIS'							=>	'…',
+	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
+	'EMAIL_ADDRESS'						=> 'Email address',
+	'EMAIL_INVALID_EMAIL'				=> 'The email address you entered is invalid.',
+	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ran into problems sending email at <strong>Line %1$s</strong>. Response: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Heu d’especificar un assumpte quan publiqueu un tema nou.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Heu d’especificar un assumpte quan redacteu un missatge nou.',
 	'ENABLED'							=> 'Habilitat',
@@ -322,17 +408,23 @@ $lang = array_merge($lang, array(
 	'ERR_UNWATCHING'					=> 'S’ha produït un error en intentar cancel·lar la subscripció.',
 	'ERR_WATCHING'						=> 'S’ha produït un error en intentar crear la subscripció.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'El camí especificat per al phpBB no és vàlid.',
+	'ERROR'									=> 'Error',
 	'EXPAND_VIEW'						=> 'Amplia la vista',
 	'EXTENSION'							=> 'Extensió',
+	'EXTENSION_DISABLED'				=> 'The extension <strong>%s</strong> is not enabled.',
 	'EXTENSION_DISABLED_AFTER_POSTING'	=> 'S’ha desactivat l’extensió <strong>%s</strong> i ja no es pot mostrar.',
+	'EXTENSION_DOES_NOT_EXIST'			=> 'The extension <strong>%s</strong> does not exist.',
 
+	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> 'PMF',
 	'FAQ_EXPLAIN'			=> 'Preguntes més freqüents',
 	'FILENAME'				=> 'Nom del fitxer',
 	'FILESIZE'				=> 'Mida del fitxer',
 	'FILEDATE'				=> 'Data del fitxer',
 	'FILE_COMMENT'			=> 'Comentari del fitxer',
-	'FILE_NOT_FOUND'		=> 'No s’ha trobat el fitxer sol·licitat.',
+	'FILE_CONTENT_ERR'		=> 'Could not read the contents of file: %s',
+	'FILE_JSON_DECODE_ERR'	=> 'Failed to decode json file: %s',
+	'FILE_NOT_FOUND'		=> 'The requested file could not be found: %s',
 	'FIND_USERNAME'			=> 'Cerca un membre',
 	'FOLDER'				=> 'Carpeta',
 	'FORGOT_PASS'			=> 'He oblidat la meva contrasenya',
@@ -381,6 +473,9 @@ $lang = array_merge($lang, array(
 	'GB'						=> 'GB',
 	'GIB'						=> 'GiB',
 	'GO'						=> 'D’acord',
+	'GOOGLEPLUS'				=> 'Google+',
+	'GOTO_FIRST_POST'			=> 'Go to first post',
+	'GOTO_LAST_POST'			=> 'Go to last post',
 	'GOTO_PAGE'					=> 'Ves a la pàgina',
 	'GROUP'						=> 'Grup',
 	'GROUPS'					=> 'Grups',
@@ -388,12 +483,6 @@ $lang = array_merge($lang, array(
 	'GROUP_ERR_USERNAME'		=> 'No heu especificat un nom per al grup.',
 	'GROUP_ERR_USER_LONG'		=> 'El noms de grup no poden tenir més de 60 caràcters. El nom de grup que heu especificat és massa llarg.',
 	'GUEST'						=> 'Visitant',
-	'GUEST_USERS_ONLINE'		=> 'Hi ha %d visitants connectats',
-	'GUEST_USERS_TOTAL'			=> '%d visitants',
-	'GUEST_USERS_ZERO_ONLINE'	=> 'Hi ha 0 visitants connectats',
-	'GUEST_USERS_ZERO_TOTAL'	=> '0 visitants',
-	'GUEST_USER_ONLINE'			=> 'Hi ha %d visitant connectat',
-	'GUEST_USER_TOTAL'			=> '%d visitant',
 	'G_ADMINISTRATORS'			=> 'Administradors',
 	'G_BOTS'					=> 'Robots',
 	'G_GUESTS'					=> 'Visitants',
@@ -402,22 +491,12 @@ $lang = array_merge($lang, array(
 	'G_GLOBAL_MODERATORS'		=> 'Moderadors globals',
 	'G_NEWLY_REGISTERED'		=> 'Nous usuaris registrats',
 
-	'HIDDEN_USERS_ONLINE'			=> '%d usuaris ocults connectats',
-	'HIDDEN_USERS_TOTAL'			=> '%d ocults',
-	'HIDDEN_USERS_TOTAL_AND'		=> '%d ocults i ',
-	'HIDDEN_USERS_ZERO_ONLINE'		=> '0 usuaris ocults connectats',
-	'HIDDEN_USERS_ZERO_TOTAL'		=> '0 ocults',
-	'HIDDEN_USERS_ZERO_TOTAL_AND'	=> '0 ocults i ',
-	'HIDDEN_USER_ONLINE'			=> '%d usuari ocult connectat',
-	'HIDDEN_USER_TOTAL'				=> '%d ocult',
-	'HIDDEN_USER_TOTAL_AND'			=> '%d ocult i ',
 	'HIDE_GUESTS'					=> 'Oculta els visitants',
 	'HIDE_ME'						=> 'Oculta la meva presència durant aquesta sessió',
 	'HOURS'							=> 'Hores',
 	'HOME'							=> 'Inici',
 
 	'ICQ'						=> 'ICQ',
-	'ICQ_STATUS'				=> 'Estat ICQ',
 	'IF'						=> 'Si',
 	'IMAGE'						=> 'Imatge',
 	'IMAGE_FILETYPE_INVALID'	=> 'El tipus d’imatge %d per al tipus MIME %s no està permès.',
@@ -425,9 +504,11 @@ $lang = array_merge($lang, array(
 	'IN'						=> 'a',
 	'INDEX'						=> 'Pàgina d’índex', //Index page
 	'INFORMATION'				=> 'Informació',
+	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
 	'INTERESTS'					=> 'Aficions',
 	'INVALID_DIGEST_CHALLENGE'	=> 'Intent d’autenticació invalid.',
-	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> possiblement una adreça electrònica no vàlida?',
+	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> possibly an invalid email address?',
+	'INVALID_PLURAL_RULE'		=> 'The chosen plural rule is invalid. Valid values are integers between 0 and 15.',
 	'IP'						=> 'IP',
 	'IP_BLACKLISTED'			=> 'La vostra IP %1$s està bloquejada perquè és en una llista negra. Podeu trobar més detalls a <a href="%2$s">%2$s</a>.',
 
@@ -435,7 +516,8 @@ $lang = array_merge($lang, array(
 	'JOINED'				=> 'Membre des de',
 	'JUMP_PAGE'				=> 'Introduïu el número de la pàgina a la que desitgeu anar',
 	'JUMP_TO'				=> 'Salta a ',
-	'JUMP_TO_PAGE'			=> 'Feu clic per saltar a la pàgina…',
+	'JUMP_TO_PAGE'			=> 'Jump to page',
+	'JUMP_TO_PAGE_CLICK'	=> 'Click to jump to page…',
 
 	'KB'					=> 'KB',
 	'KIB'					=> 'KiB',
@@ -447,6 +529,8 @@ $lang = array_merge($lang, array(
 	'LDAP_NO_SERVER_CONNECTION'			=> 'No s’ha pogut connectar amb el servidor LDAP.',
 	'LDAP_SEARCH_FAILED'				=> 'S’ha produït un error mentre es cercava el directori LDAP.',
 	'LEGEND'							=> 'Llegenda',
+	'LIVE_SEARCHES_NOT_ALLOWED'			=> 'Live searches are not allowed.',
+	'LOADING'							=> 'Loading',
 	'LOCATION'							=> 'Ubicació',
 	'LOCK_POST'							=> 'Bloqueja l’entrada',
 	'LOCK_POST_EXPLAIN'					=> 'Impedeix l’edició',
@@ -457,6 +541,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_CONFIRM_EXPLAIN'				=> 'Per tal de prevenir l’entrada il·licita en comptes mitjançant la força bruta cal que introduïu un codi de confirmació després d’un nombre màxim d’intents fallits d’inici de sessió. El codi es mostra en la imatge que veieu a sota. Si teniu problemes de visió o per alguna raó no podeu llegir aquest codi, si us plau poseu-vos en contacte amb l’%sadministrador del fòrum%s.', // unused
 	'LOGIN_ERROR_ATTEMPTS'				=> 'Heu excedit el nombre màxim d’intents permesos per iniciar la sessió. A més del vostre nom d’usuari i contrasenya també heu de resoldre el CAPTCHA que hi ha a sota.',
 	'LOGIN_ERROR_EXTERNAL_AUTH_APACHE'	=> 'No us heu autenticat amb l’Apache.',
+	'LOGIN_ERROR_OAUTH_SERVICE_DOES_NOT_EXIST'	=> 'A non-existant OAuth service has been requested.',
 	'LOGIN_ERROR_PASSWORD'				=> 'Heu especificat una contrasenya incorrecta. Si us plau comproveu la vostra contrasenya i intenteu-ho una altra vegada. Si continueu tenint problemes, poseu-vos en contacte amb l’%sadministrador del fòrum%s.',
 	'LOGIN_ERROR_PASSWORD_CONVERT'		=> 'No s’ha pogut convertir la vostra contrasenya durant l’actualització d’aquest fòrum. Si us plau %sdemaneu una nova contrasenya%s. Si continueu tenint problemes poseu-vos en contate amb l’%sadministrador del fòrum%s.',
 	'LOGIN_ERROR_USERNAME'				=> 'Heu especificat un nom d’usuari incorrecte. Si us plau comproveu el vostre nom d’usuari i intenteu-ho una altra vegada. Si continueu tenint problemes, poseu-vos en contacte amb l’%sadministrador del fòrum%s.',
@@ -465,17 +550,22 @@ $lang = array_merge($lang, array(
 	'LOGIN_VIEWFORUM'					=> 'Per veure aquest fòrum heu d’estar registrats i haver iniciat la sessió.',
 	'LOGIN_EXPLAIN_EDIT'				=> 'Per editar aquesta entrada del fòrum heu d’estar registrats i haver iniciat la sessió.',
 	'LOGIN_EXPLAIN_VIEWONLINE'			=> 'Per veure la llista d’usuaris connectats heu d’estar registrats i haver iniciat la sessió.',
+	'LOGIN_REQUIRED'					=> 'You need to login to perform this action.',
 	'LOGOUT'							=> 'Finalitza la sessió',
 	'LOGOUT_USER'						=> 'Finalitza la sessió [ %s ]',
-	'LOG_ME_IN'							=> 'Inicia la sessió a cada visita automàticament',
+	'LOG_ME_IN'							=> 'Remember me',
 
+	'MAIN'					=> 'Main',
 	'MARK'					=> 'Marca',
 	'MARK_ALL'				=> 'Marca’ls tots',
+	'MARK_ALL_READ'			=> 'Mark all read',
 	'MARK_FORUMS_READ'		=> 'Marca els fòrums com a llegits',
+	'MARK_READ'				=> 'Mark read',
 	'MARK_SUBFORUMS_READ'	=> 'Marca els subfòrums com a llegits',
 	'MB'					=> 'MB',
 	'MIB'					=> 'MiB',
 	'MCP'					=> 'Tauler de control del moderador',
+	'MCP_SHORT'				=> 'MCP',
 	'MEMBERLIST'			=> 'Membres',
 	'MEMBERLIST_EXPLAIN'	=> 'Veure la llista completa de membres',
 	'MERGE'					=> 'Combina',
@@ -488,26 +578,47 @@ $lang = array_merge($lang, array(
 	'MODERATE'				=> 'Modera',
 	'MODERATOR'				=> 'Moderador',
 	'MODERATORS'			=> 'Moderadors',
+	'MODULE_NOT_ACCESS'		=> 'Module not accessible',
+	'MODULE_NOT_FIND'		=> 'Cannot find module %s',
+	'MODULE_FILE_INCORRECT_CLASS'	=> 'Module file %s does not contain correct class [%s]',
 	'MONTH'					=> 'Mes',
 	'MOVE'					=> 'Desplaça',
-	'MSNM'					=> 'MSNM/WLM',
 
 	'NA'						=> 'N/A',
 	'NEWEST_USER'				=> 'El membre més recent és <strong>%s</strong>',
 	'NEW_MESSAGE'				=> 'Missatge nou',
 	'NEW_MESSAGES'				=> 'Missatges nous',
-	'NEW_PM'					=> '<strong>%d</strong> missatge nou',
-	'NEW_PMS'					=> '<strong>%d</strong> miissatges nous',
 	'NEW_POST'					=> 'Entrada nova',	// Not used anymore
 	'NEW_POSTS'					=> 'Entrades noves',	// Not used anymore
 	'NEXT'						=> 'Següent',		// Used in pagination
 	'NEXT_STEP'					=> 'Següent',
 	'NEVER'						=> 'Mai',
 	'NO'						=> 'No',
+	'NO_NOTIFICATIONS'			=> 'You have no notifications',
 	'NOT_ALLOWED_MANAGE_GROUP'	=> 'No se us permet gestionar aquest grup.',
 	'NOT_AUTHORISED'			=> 'No esteu autoritzat a accedir a aquesta àrea.',
 	'NOT_WATCHING_FORUM'		=> 'Ja no esteu subscrit a les actualitzacións d’aquest fòrum.',
 	'NOT_WATCHING_TOPIC'		=> 'Ja no esteu subscrit a aquest tema.',
+	'NOTIFICATIONS'				=> 'Notifications',
+	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
+	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
+	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
+	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
+	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
+	'NOTIFICATION_POST_IN_QUEUE'		=> '<strong>Post approval</strong> request by %1$s:',
+	'NOTIFICATION_REFERENCE'			=> '"%1$s"',
+	'NOTIFICATION_REASON'				=> '<em>Reason:</em> %1$s.',
+	'NOTIFICATION_REPORT_PM'			=> '<strong>Private Message reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_POST'			=> '<strong>Post reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_CLOSED'		=> '<strong>Report closed</strong> by %1$s for:',
+	'NOTIFICATION_TOPIC'				=> '<strong>New topic</strong> by %1$s:',
+	'NOTIFICATION_TOPIC_APPROVED'		=> '<strong>Topic approved</strong>:',
+	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
+	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
+	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> 'Si us plau aviseu l’administrador del fòrum o l’administrador de webs.',
 	'NOTIFY_ADMIN_EMAIL'		=> 'Si us plau aviseu l’administrador del fòrum o l’administrador de webs: <a href="mailto:%1$s">%1$s</a>',
 	'NO_ACCESS_ATTACHMENT'		=> 'No se us permet accedir a aquest fitxer.',
@@ -516,6 +627,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_ADMIN'				=> 'No teniu accés al Tauler de control de l’administrador perquè no teniu permisos administratius.',
 	'NO_AUTH_ADMIN_USER_DIFFER'	=> 'No podeu reautenticar-vos com un usuari diferent.',
 	'NO_AUTH_OPERATION'			=> 'No teniu els permisos necessaris per completar aquesta operació.',
+	'NO_AVATARS'				=> 'No avatars currently available',
 	'NO_CONNECT_TO_SMTP_HOST'	=> 'No s’ha pogut connectar amb el servidor SMTP : %1$s : %2$s',
 	'NO_BIRTHDAYS'				=> 'Avui no hi ha cap aniversari',
 	'NO_EMAIL_MESSAGE'			=> 'El correu electrònic està buit',
@@ -531,7 +643,6 @@ $lang = array_merge($lang, array(
 	'NO_MODE'					=> 'No s’ha especificat cap mode.',
 	'NO_MODERATORS'				=> 'No hi ha cap moderador.',
 	'NO_NEW_MESSAGES'			=> 'No hi ha missatges nous',
-	'NO_NEW_PM'					=> '<strong>0</strong> missatges nous',
 	'NO_NEW_POSTS'				=> 'No hi ha entrades noves',	// Not used anymore
 	'NO_ONLINE_USERS'			=> 'No hi ha cap usuari registrat',
 	'NO_POSTS'					=> 'No hi ha cap entrada',
@@ -546,7 +657,6 @@ $lang = array_merge($lang, array(
 	'NO_TOPIC_FORUM'			=> 'El tema o fòrum ja no existeix.',
 	'NO_TOPICS'					=> 'No hi temes ni entrades en aquest fòrum.',
 	'NO_TOPICS_TIME_FRAME'		=> 'No existeix cap tema en aquest fòrum per al període de temps seleccionat.',
-	'NO_UNREAD_PM'				=> '<strong>0</strong> missatges no llegits',
 	'NO_UNREAD_POSTS'			=> 'No hi ha entrades no llegides',
 	'NO_UPLOAD_FORM_FOUND'		=> 'S’ha iniciat la cárrega però no s’ha trobat un formulari de càrrega de fitxer vàlid.',
 	'NO_USER'					=> 'L’usuari sol·licitat no existeix.',
@@ -557,15 +667,14 @@ $lang = array_merge($lang, array(
 	'OFFLINE'					=> 'Desconnectat',
 	'ONLINE'					=> 'Connectat',
 	'ONLINE_BUDDIES'			=> 'Amics connectats',
-	'ONLINE_USERS_TOTAL'		=> 'En total hi ha <strong>%d</strong> usuaris connectats :: ',
-	'ONLINE_USERS_ZERO_TOTAL'	=> 'En total hi ha <strong>0</strong> usuaris connectats :: ',
-	'ONLINE_USER_TOTAL'			=> 'En total hi ha <strong>%d</strong> usuari connectat :: ',
 	'OPTIONS'					=> 'Opcions',
 
 	'PAGE_OF'				=> 'Pàgina <strong>%1$d</strong> de <strong>%2$d</strong>',
+	'PAGE_TITLE_NUMBER'		=> 'Page %s',
 	'PASSWORD'				=> 'Contrasenya',
 	'PIXEL'					=> 'px',
 	'PLAY_QUICKTIME_FILE'	=> 'Reproduir fitxer Quicktime',
+	'PLEASE_WAIT'			=> 'Please wait.',
 	'PM'					=> 'MP',
 	'PM_REPORTED'			=> 'Feu clic per veure l’informe',
 	'POSTING_MESSAGE'		=> 'Està enviant el missatge en %s',
@@ -578,9 +687,15 @@ $lang = array_merge($lang, array(
 	'POSTED_ON_DATE'		=> 'Data:',
 	'POSTS'					=> 'Entrades',
 	'POSTS_UNAPPROVED'		=> 'Com a mínim una de les entrades d’aquest tema no han estat aprovades.',
+	'POSTS_UNAPPROVED_FORUM'=> 'At least one post in this forum has not been approved.',
 	'POST_BY_AUTHOR'		=> 'Autor:',
-	'POST_BY_FOE'			=> 'Aquesta entrada l’ha escrit <strong>%1$s</strong> el qual és a la vostra llista d’usuaris ignorats. %2$sMostra aquesta entrada%3$s.',
+	'POST_BY_FOE'			=> '<strong>%1$s</strong>, who is currently on your ignore list, made this post.',
+	'POST_DISPLAY'			=> '%1$sDisplay this post%2$s.',
 	'POST_DAY'				=> '%.2f entrades per dia',
+	'POST_DELETED_ACTION'	=> 'Deleted post:',
+	'POST_DELETED'			=> 'This post has been deleted.',
+	'POST_DELETED_BY'		=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s.',
+	'POST_DELETED_BY_REASON'=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s for the following reason: %4$s',
 	'POST_DETAILS'			=> 'Detalls de l’entrada',
 	'POST_NEW_TOPIC'		=> 'Publica un nou tema',
 	'POST_PCT'				=> '%.2f%% de totes les entrades',
@@ -591,7 +706,8 @@ $lang = array_merge($lang, array(
 	'POST_SUBJECT'			=> 'Assumpte de l’entrada',
 	'POST_TIME'				=> 'Data de l’entrada',
 	'POST_TOPIC'			=> 'Publica un nou tema',
-	'POST_UNAPPROVED'		=> 'Aquesta entrada està pendent d’aprovació',
+	'POST_UNAPPROVED_ACTION'	=> 'Post awaiting approval:',
+	'POST_UNAPPROVED'		=> 'This post has not been approved.',
 	'POWERED_BY'			=> 'Funciona amb %s',
 	'PREVIEW'				=> 'Previsualització',
 	'PREVIOUS'				=> 'Anterior',		// Used in pagination
@@ -601,6 +717,8 @@ $lang = array_merge($lang, array(
 	'PRIVATE_MESSAGES'		=> 'Missatges privats',
 	'PRIVATE_MESSAGING'		=> 'Missatgeria privada',
 	'PROFILE'				=> 'Tauler de control de l’usuari',
+
+	'QUICK_LINKS'			=> 'Quick links',
 
 	'RANK'						=> 'Rang',
 	'READING_FORUM'				=> 'Està veient temes a %s',
@@ -614,15 +732,6 @@ $lang = array_merge($lang, array(
 	'REDIRECTS'					=> 'Nombre de redireccions',
 	'REGISTER'					=> 'Registreu-vos',
 	'REGISTERED_USERS'			=> 'Usuaris registrats:',
-	'REG_USERS_ONLINE'			=> 'Hi ha %d usuaris registrats i ',
-	'REG_USERS_TOTAL'			=> '%d registrats, ',
-	'REG_USERS_TOTAL_AND'		=> '%d registrats i ',
-	'REG_USERS_ZERO_ONLINE'		=> 'Hi ha 0 usuaris registrats i ',
-	'REG_USERS_ZERO_TOTAL'		=> '0 registrats, ',
-	'REG_USERS_ZERO_TOTAL_AND'	=> '0 registrats i ',
-	'REG_USER_ONLINE'			=> 'Hi ha %d usuari registrat i ',
-	'REG_USER_TOTAL'			=> '%d registrat, ',
-	'REG_USER_TOTAL_AND'		=> '%d registrat i ',
 	'REMOVE'					=> 'Elimina',
 	'REMOVE_INSTALL'			=> 'Si us plau, elimineu, moveu o canvieu el nom del directori d’instal·lació abans d’utilitzar el fòrum. Si aquest directori és present, només es podrà accedir al Tauler de control de l’administrador (TCA).',
 	'REPLIES'					=> 'Respostes',
@@ -639,7 +748,8 @@ $lang = array_merge($lang, array(
 	'RETURN_FORUM'				=> '%sTorna al darrer fòrum visitat%s',
 	'RETURN_PAGE'				=> '%sTorna a la pàgina anterior%s',
 	'RETURN_TOPIC'				=> '%sTorna al darrer tema visitat%s',
-	'RETURN_TO'					=> 'Torna a:',
+	'RETURN_TO'					=> 'Return to “%s”',
+	'RETURN_TO_INDEX'			=> 'Return to Board Index',
 	'FEED'						=> 'Canal d’informació',
 	'FEED_NEWS'					=> 'Notícies',
 	'FEED_TOPICS_ACTIVE'		=> 'Temes actius',
@@ -667,28 +777,30 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV_EXPLAIN'		=> 'Mostra les opcions de cerca avançada',
 	'SEARCH_KEYWORDS'			=> 'Cerca paraules clau',
 	'SEARCHING_FORUMS'			=> 'Està cercant en els fòrums',
-	'SEARCH_ACTIVE_TOPICS'		=> 'Mostra els temes actius',
+	'SEARCH_ACTIVE_TOPICS'		=> 'Active topics',
 	'SEARCH_FOR'				=> 'Cerca',
 	'SEARCH_FORUM'				=> 'Cerca al fòrum…',
-	'SEARCH_NEW'				=> 'Mostra les entrades noves',
+	'SEARCH_NEW'				=> 'New posts',
 	'SEARCH_POSTS_BY'			=> 'Cerca les entrades per',
-	'SEARCH_SELF'				=> 'Mostra les meves entrades',
+	'SEARCH_SELF'				=> 'Your posts',
 	'SEARCH_MINE'				=> 'View your topics',
 	'SEARCH_TOPIC'				=> 'Cerca al tema…',
-	'SEARCH_UNANSWERED'			=> 'Mostra les entrades sense resposta',
-	'SEARCH_UNREAD'				=> 'Mostra les entrades no llegides',
+	'SEARCH_UNANSWERED'			=> 'Unanswered posts',
+	'SEARCH_UNREAD'				=> 'Unread posts',
 	'SEARCH_USER_POSTS'			=> 'Cerca les entrades d’aquest usuari',
 	'SECONDS'					=> 'Segons',
+	'SEE_ALL'					=> 'See All',
 	'SELECT'					=> 'Selecciona',
 	'SELECT_ALL_CODE'			=> 'Selecciona’ls tots',
 	'SELECT_DESTINATION_FORUM'	=> 'Si us plau, selecioneu el fòrum de destí',
 	'SELECT_FORUM'				=> 'Seleccioneu un fòrum',
-	'SEND_EMAIL'				=> 'Envia el correu electrònic',				// Used for submit buttons
-	'SEND_EMAIL_USER'			=> 'Envia un correu electrònic a',				// Used as: {L_SEND_EMAIL_USER} {USERNAME} -> E-mail UserX
+	'SEND_EMAIL'				=> 'Send email',				// Used for submit buttons
+	'SEND_EMAIL_USER'			=> 'Send email to %s',
 	'SEND_PRIVATE_MESSAGE'		=> 'Envia-li un missatge privat',
 	'SETTINGS'					=> 'Configuració',
 	'SIGNATURE'					=> 'Signatura',
 	'SKIP'						=> 'Saltar fins al contingut',
+	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'El servidor SMTP no permet autenticar-se.',
 	'SORRY_AUTH_READ'			=> 'No teniu autorització per llegir aquest fòrum.',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'No teniu autorització per baixar-vos aquest fitxer adjunt.',
@@ -706,6 +818,8 @@ $lang = array_merge($lang, array(
 	'START_WATCHING_TOPIC'		=> 'Subscriu-me a aquest tema',
 	'STOP_WATCHING_FORUM'		=> 'Cancel·la la subscripció a aquest fòrum',
 	'STOP_WATCHING_TOPIC'		=> 'Cancel·la la subscripció a aquest tema',
+	'STRING_LIST_MULTI'			=> '%1$s, and %2$s',
+	'STRING_LIST_SIMPLE'		=> '%1$s and %2$s',
 	'SUBFORUM'					=> 'Subfòrum',
 	'SUBFORUMS'					=> 'Subfòrums',
 	'SUBJECT'					=> 'Assumpte',
@@ -717,51 +831,35 @@ $lang = array_merge($lang, array(
 	'THE_TEAM'			=> 'L’equip',
 	'TIB'				=> 'TiB',
 	'TIME'				=> 'Data',
-	
+	'TIMEOUT_PROCESSING_REQ'			=> 'Request timed out.',
+
 	'TOO_LARGE'						=> 'El valor que heu introduït és massa gran.',
 	'TOO_LARGE_MAX_RECIPIENTS'		=> 'El valor de la configuració <strong>Nombre màxim de destinataris permesos per missatge privat</strong> que heu introduït és massa gran.',
 
 	'TOO_LONG'						=> 'El valor que heu introduït és massa llarg.',
 
-	'TOO_LONG_AIM'					=> 'L’àlies que heu introduït és massa llarg.',
 	'TOO_LONG_CONFIRM_CODE'			=> 'El codi de confirmació que heu introduït és massa llarg.',
 	'TOO_LONG_DATEFORMAT'			=> 'El format de data que heu introduït és massa llarg.',
-	'TOO_LONG_ICQ'					=> 'El número ICQ que heu introduït és massa llarg.',
-	'TOO_LONG_INTERESTS'			=> 'Les aficions que heu introduït són massa llargues.',
 	'TOO_LONG_JABBER'				=> 'El compte de Jabber que heu introduït és massa llarg.',
-	'TOO_LONG_LOCATION'				=> 'La ubicació que heu introduït és massa llarga.',
-	'TOO_LONG_MSN'					=> 'El nom MSNM/WLM que heu introduït és massa llarg.',
 	'TOO_LONG_NEW_PASSWORD'			=> 'La contrasenya que heu introduït és massa llarga.',
-	'TOO_LONG_OCCUPATION'			=> 'La feina que heu introduït és massa llarga.',
 	'TOO_LONG_PASSWORD_CONFIRM'		=> 'La confirmació de contrasenya que heu introduït és massa llarga.',
 	'TOO_LONG_USER_PASSWORD'		=> 'La contrasenya que heu introduït és massa llarga.',
 	'TOO_LONG_USERNAME'				=> 'El nom d’usuari que heu introduït és massa llarg.',
-	'TOO_LONG_EMAIL'				=> 'L’adreça electrònica que heu introduït és massa llarga.',
-	'TOO_LONG_EMAIL_CONFIRM'		=> 'La confirmació d’adreça electrònica que heu introduït és massa llarga.',
-	'TOO_LONG_WEBSITE'				=> 'L’adreça del lloc web que heu introduït és massa llarga.',
-	'TOO_LONG_YIM'					=> 'El nom de Yahoo! Messenger que heu introduït és massa llarg.',
+	'TOO_LONG_EMAIL'				=> 'The email address you entered is too long.',
 
 	'TOO_MANY_VOTE_OPTIONS'			=> 'Heu provat de votar massa opcions diferents.',
 
 	'TOO_SHORT'						=> 'El valor que heu introduït és massa curt.',
 
-	'TOO_SHORT_AIM'					=> 'L’àlies que heu introduït és massa curt.',
 	'TOO_SHORT_CONFIRM_CODE'		=> 'El codi de confirmació que heu introduït és massa curt.',
 	'TOO_SHORT_DATEFORMAT'			=> 'El format de data que heu introduït és massa curt.',
-	'TOO_SHORT_ICQ'					=> 'El número ICQ que heu introduït és massa curt.',
-	'TOO_SHORT_INTERESTS'			=> 'Les aficions que heu introduït són massa curtes.',
 	'TOO_SHORT_JABBER'				=> 'El compte de Jabber que heu introduït és massa curt.',
-	'TOO_SHORT_LOCATION'			=> 'La ubicació que heu introduït és massa curta.',
-	'TOO_SHORT_MSN'					=> 'El nom MSNM/WLM que heu introduït és massa curt.',
 	'TOO_SHORT_NEW_PASSWORD'		=> 'La contrasenya que heu introduït és massa curta.',
-	'TOO_SHORT_OCCUPATION'			=> 'La feina que heu introduït és massa curta.',
 	'TOO_SHORT_PASSWORD_CONFIRM'	=> 'La confirmació de contrasenya que heu introduït és massa curta.',
 	'TOO_SHORT_USER_PASSWORD'		=> 'La contrasenya que heu introduït és massa curta.',
 	'TOO_SHORT_USERNAME'			=> 'El nom d’usuari que heu introduït és massa curt.',
-	'TOO_SHORT_EMAIL'				=> 'L’adreça electrònica que heu introduït és massa curta.',
-	'TOO_SHORT_EMAIL_CONFIRM'		=> 'La confirmació d’adreça electrònica que heu introduït és massa curta.',
-	'TOO_SHORT_WEBSITE'				=> 'L’adreça del lloc web que heu introduït és massa curta.',
-	'TOO_SHORT_YIM'					=> 'El nom de Yahoo! Messenger que heu introduït és massa curt.',
+	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
+	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
 	
 	'TOO_SMALL'						=> 'El valor que heu introduït és massa petit.',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> 'El valor de la configuració <strong>Nombre màxim de destinataris permesos per missatge privat</strong> que heu introduït és massa petit.',
@@ -775,30 +873,20 @@ $lang = array_merge($lang, array(
 	'TOPIC_MOVED'		=> 'Tema mogut',
 	'TOPIC_REVIEW'		=> 'Revisió del tema',
 	'TOPIC_TITLE'		=> 'Títol del tema',
-	'TOPIC_UNAPPROVED'	=> 'Aquest tema no ha estat aprovat',
+	'TOPIC_UNAPPROVED'	=> 'This topic has not been approved.',
+	'TOPIC_DELETED'		=> 'This topic has been deleted.',
 	'TOTAL_ATTACHMENTS'	=> 'Fitxer(s) adjunt(s)',
-	'TOTAL_LOG'			=> '1 registre',
-	'TOTAL_LOGS'		=> '%d registres',
-	'TOTAL_NO_PM'		=> '0 missatges privats en total',
-	'TOTAL_PM'			=> '1 missatge privat en total',
-	'TOTAL_PMS'			=> '%d misstages privats en total',
+	'TOPIC_POLL'		=> 'This topic has a poll.',
 	'TOTAL_POSTS'		=> 'Nombre d’entrades',
-	'TOTAL_POSTS_OTHER'	=> 'Nombre d’entrades <strong>%s</strong>',
-	'TOTAL_POSTS_ZERO'	=> 'Nombre d’entrades <strong>0</strong>',
 	'TOPIC_REPORTED'	=> 'S’ha informat d’aquest tema',
-	'TOTAL_TOPICS_OTHER'=> 'Nombre de temes <strong>%s</strong>',
-	'TOTAL_TOPICS_ZERO'	=> 'Nombre de temes <strong>0</strong>',
-	'TOTAL_USERS_OTHER'	=> 'Nombre de membres <strong>%s</strong>',
-	'TOTAL_USERS_ZERO'	=> 'Nombre de membres <strong>0</strong>',
 	'TRACKED_PHP_ERROR'	=> 'Errors del PHP detectats: %s',
+	'TWITTER'			=> 'Twitter',
 
-	'UNABLE_GET_IMAGE_SIZE'	=> 'No s’han pogut determinar les dimensions de la imatge.',
+	'UNABLE_GET_IMAGE_SIZE'	=> 'It was not possible to determine the dimensions of the image. Please verify that the URL you entered is correct.',
 	'UNABLE_TO_DELIVER_FILE'=> 'No s’ha pogut lliurar el fitxer.',
 	'UNKNOWN_BROWSER'		=> 'Navegador desconegut',
 	'UNMARK_ALL'			=> 'Desmarca’ls tots',
 	'UNREAD_MESSAGES'		=> 'Missatges no llegits',
-	'UNREAD_PM'				=> '<strong>%d</strong> missatge no llegit',
-	'UNREAD_PMS'			=> '<strong>%d</strong> missatges no llegits',
 	'UNREAD_POST'			=> 'Entrada no llegida',
 	'UNREAD_POSTS'			=> 'Entrades no llegides',
 	'UNWATCH_FORUM_CONFIRM'		=> 'Esteu segur que voleu cancel·lar la subscripció a aquest fòrum?',
@@ -816,8 +904,6 @@ $lang = array_merge($lang, array(
 	'USERNAMES'				=> 'Noms d’usuari',
 	'USER_AVATAR'			=> 'Avatar de l’usuari',
 	'USER_CANNOT_READ'		=> 'No podeu llegir entrades en aquest fòrum.',
-	'USER_POST'				=> '%d entrada',
-	'USER_POSTS'			=> '%d entrades',
 	'USERS'					=> 'Usuaris',
 	'USE_PERMISSIONS'		=> 'Prova els permisos de l’usuari',
 
@@ -825,6 +911,8 @@ $lang = array_merge($lang, array(
 
 	'VARIANT_DATE_SEPARATOR'	=> ' / ',	// Used in date format dropdown, eg: "Today, 13:37 / 01 Jan 2007, 13:37" ... to join a relative date with calendar date
 	'VIEWED'					=> 'Visualitzat',
+
+	'VIEWING_CONTACT_ADMIN'		=> 'Viewing contact page',
 	'VIEWING_FAQ'				=> 'Està veient les PMF',
 	'VIEWING_MEMBERS'			=> 'Està veient els detalls d’un membre',
 	'VIEWING_ONLINE'			=> 'Està veient qui està connectat',
@@ -839,8 +927,6 @@ $lang = array_merge($lang, array(
 	'VIEW_LATEST_POST'			=> 'Mostra l’entrada més recent',
 	'VIEW_NEWEST_POST'			=> 'Mostra la primera entrada no llegida',
 	'VIEW_NOTES'				=> 'Mostra les notes de l’usuari',
-	'VIEW_ONLINE_TIME'			=> 'basat en els usuaris actius durant el darrer %d minut',
-	'VIEW_ONLINE_TIMES'			=> 'basat en els usuaris actius durant els darrers %d minuts',
 	'VIEW_TOPIC'				=> 'Mostra el tema',
 	'VIEW_TOPIC_ANNOUNCEMENT'	=> 'Avís: ',
 	'VIEW_TOPIC_GLOBAL'			=> 'Avís global: ',
@@ -861,23 +947,24 @@ $lang = array_merge($lang, array(
 	'WEBSITE'			=> 'Lloc web',
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> 'Qui està connectat',
+	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'Heu introduït una contrasenya incorrecta.',
 	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
-	'WRONG_DATA_ICQ'			=> 'El número que heu introduït no és un número ICQ vàlid.',
 	'WRONG_DATA_JABBER'			=> 'El nom que heu introduït no és un nom de compte Jabber vàlid.',
 	'WRONG_DATA_LANG'			=> 'L’idioma que heu especificat no és vàlid.',
-	'WRONG_DATA_WEBSITE'		=> 'L’adreça del lloc web ha de ser vàlida, incloent-hi el protocol. Per exemple http://www.exemple.cat/.',
+	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
+	'WRONG_DATA_POST_SK'		=> 'The post sort option you specified is not valid.',
+	'WRONG_DATA_TOPIC_SD'		=> 'The topic sort direction you specified is not valid.',
+	'WRONG_DATA_TOPIC_SK'		=> 'The topic sort option you specified is not valid.',
 	'WROTE'						=> 'ha escrit',
 
+	'YAHOO'				=> 'Yahoo Messenger',
+	'YOUTUBE'			=> 'YouTube',
 	'YEAR'				=> 'Any',
 	'YEAR_MONTH_DAY'	=> '(AAAA-MM-DD)',
 	'YES'				=> 'Sí',
-	'YIM'				=> 'YIM',
 	'YOU_LAST_VISIT'	=> 'Hora i data de la vostra darrera visita: %s',
-	'YOU_NEW_PM'		=> 'Teniu un missatge privat nou a la safata d’entrada.',
-	'YOU_NEW_PMS'		=> 'Teniu missatges privats nous a la safata d’entrada.',
-	'YOU_NO_NEW_PM'		=> 'No teniu cap missatge privat nou.',
 
 	'default_dateformat'	=> 'd M Y, H:i', // Mon Jan 01, 2007 1:37 pm
 
@@ -1083,7 +1170,6 @@ $lang = array_merge($lang, array(
 
 	'FORUM_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this forum.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this topic.',
-	'TOO_FEW_CHARS_LIMIT'	=> 'El vostre missatge conté %1$d caràcters. Cal que introduïu un mínim de %2$d caràcters.',
 	'REPLY_TO_MESSAGE'		=> 'Reply to message',
 
 	'RSS_CHAN_LIST_TITLE'	=> 'Fòrums',
@@ -1695,7 +1781,6 @@ $lang = array_merge($lang, array(
 	'DEV_NO_TEST_FILE'			=> 'No s’ha especificat cap valor per a la variable test_file al convertidor. Si sou un usuari del convertidor, no hauríeu de veure aquest error, si us plau comuniqueu aquest error a l’autor del convertidor. Si sou l’autor del convertidor, heu d’especificar el nom d’un fitxer que existeixi a la taula origen per que es pugui verificar-ne el camí.',
 	'DIRECTORIES_AND_FILES'		=> 'Configuració de carpetes i fitxers',
 	'DISABLE_KEYS'				=> 'S’estan desactivant les claus',
-	'DLL_FIREBIRD'				=> 'Firebird',
 	'DLL_FTP'					=> 'Compatibilitat amb FTP remot [ Instal·lació ]',
 	'DLL_GD'					=> 'Compatibilitat amb gràfics GD [ Confirmació visual ]',
 	'DLL_MBSTRING'				=> 'Compatibilitat amb caràcters multi-byte',
@@ -1706,11 +1791,12 @@ $lang = array_merge($lang, array(
 	'DLL_MYSQLI'				=> 'MySQL amb extensió MySQLi',
 	'DLL_ORACLE'				=> 'Oracle',
 	'DLL_POSTGRES'				=> 'PostgreSQL',
-	'DLL_SQLITE'				=> 'SQLite',
+	'DLL_SQLITE'				=> 'SQLite 2',
+	'DLL_SQLITE3'				=> 'SQLite 3',
 	'DLL_XML'					=> 'Compatibilitat amb XML [ Jabber ]',
 	'DLL_ZLIB'					=> 'Compatibilitat amb compressió zlib [ gz, .tar.gz, .zip ]',
 	'DL_CONFIG'					=> 'Baixada de la configuració',
-	'DL_CONFIG_EXPLAIN'			=> 'Podeu baixar el config.php complet al vostre ordinador. Cal que pugeu el fitxer manualment, reemplaçant qualsevol config.php que ja sigui al directori arrel del phpBB 3.0. Assegureu-vos de pujar el fitxer en format ASCII (llegiu la documentació del vostre client FTP si no esteu segur de com fer-ho). Quan hagueu pujat el fitxer config.php feu clic a “Fet” per continuar amb la fase següent.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'Baixa',
 	'DONE'						=> 'Fet',
 
@@ -1722,8 +1808,6 @@ $lang = array_merge($lang, array(
 	'FILES_REQUIRED_EXPLAIN'	=> '<strong>Necessaris</strong> - Per tal de funcionar correctament el phpBB ha de poder accedir o escriure determinats fitxers i directoris. Si veieu el missatge “No s’ha trobat” cal que creeu el fitxer o directori en qüestió. Si veieu el missatge “No es pot escriure” cal que canvieu els permisos del fitxer o directori per que el phpBB hi pugui escriure.',
 	'FILLING_TABLE'				=> 'S’està omplint la taula <strong>%s</strong>',
 	'FILLING_TABLES'			=> 'S’estan omplint les taules',
-
-	'FIREBIRD_DBMS_UPDATE_REQUIRED'		=> 'phpBB ja no permet l’ús de versions de Firebird/Interbase anteriors a la 2.1. Si us plau, actualitzeu la vostra instal·lació de Firebird a la versió 2.1.0 com a mínim abans de continuar amb l’actualització del phpBB.',
 
 	'FINAL_STEP'				=> 'Processa el pas final',
 	'FORUM_ADDRESS'				=> 'Adreça del fòrum',
@@ -1750,30 +1834,30 @@ $lang = array_merge($lang, array(
 		<p>Si feu clic al botó següent, anireu a un formulari per trametre dades estadístiques per al web del phpBB al Tauler de control de l’administrador (TCA). Us ho agrairíem si ens podessiu ajudar enviant-nos aquesta informació. En acabat, preneu-vos un cert temps per estudiar les opcions que teniu disponibles. Recoreu que disposeu d’ajuda en línia a la <a href="http://www.phpbb.com/support/documentation/3.0/">documentació</a> (en anglès), el fitxer <a href="%3$s">LLEGIU-ME</a> i els <a href="http://www.phpbb.com/community/viewforum.php?f=46">fòrums d’assistència oficials</a> (en anglès).</p><p><strong>Si us plau elimineu, desplaceu o canvieu el nom del directori “install” abans d’utilitzar els fòrums. Mentre el directori existeixi, només es podrà accedir al Tauler de control de l’administrador (TCA).</strong>',
 	'INSTALL_INTRO'				=> 'Benvinguts a la instal·lació',
 
-	'INSTALL_INTRO_BODY'		=> 'Amb aquesta opció podeu instal·lar el phpBB3 en el vostre servidor.</p><p>Per continura necessitareu els paràmetres de configuració de la vostra base de dades. Si no els sabeu, contacteu amb el vostre proveïdor i demaneu-los-hi. Sense ells no podreu continuar. Necessiteu:</p>
+	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
 
 	<ul>
-		<li>El tipus de base de dades que utilitzareu.</li>
-		<li>El nom (adreça) del servidor de la base de dades o DSN.</li>
-		<li>El port del servidor de la base de dades (en la majoria de casos no us farà falta).</li>
-		<li>El nom de la base de dades al servidor.</li>
-		<li>L’usuari de la base de dades i la contrasenya utilitzats per iniciar-hi la sessió i accedir a les dades.</li>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
 	</ul>
 
-	<p><strong>Nota:</strong> si utilitzeu SQLite per la instal·lació, cal que introduïu el camí complet fins al fitxer de la base de dades al camp DSN i deixeu els camps d’usuari i contrasenya en blanc. Per raons de seguretat, assegureu-vos de que el fitxer de la base de dades no sigui en una ubicació accessible des d’Internet.</p>
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
 
-	<p>phpBB3 és compatible amb les següents bases de dades:</p>
+	<p>phpBB3 supports the following databases:</p>
 	<ul>
-		<li>MySQL 3.23 o superior (compatible amb MySQLi)</li>
-		<li>PostgreSQL 7.3+</li>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
 		<li>SQLite 2.8.2+</li>
-		<li>Firebird 2.1+</li>
-		<li>MS SQL Server 2000 o superior (directament o via ODBC)</li>
-		<li>MS SQL Server 2005 o superior (natiu)</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
 		<li>Oracle</li>
 	</ul>
 
-	<p>Només es mostraran les bases de dades disponibles al vostre servidor.',
+	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'Per iniciar la instal·lació feu clic al botó següent.',
 	'INSTALL_LOGIN'				=> 'Inici de sessió',
 	'INSTALL_NEXT'				=> 'Fase següent',
@@ -1789,9 +1873,8 @@ $lang = array_merge($lang, array(
 	'INST_ERR_DB_NO_ERROR'		=> 'No s’ha rebut el missatge d’error.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'La versió de MySQL instal·lada en aquesta màquina no és compatible amb l’opció “MySQL amb extensió MySQLi” que heu seleccionat. Proveu-ho amb l’opció “MySQL”.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'La versió de l’extensió SQLite que teniu instal·lada és massa antiga, cal que l’actualitzeu, com a mínim, a la versió 2.8.2.',
+	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'La versió d’Oracle instal·lada en aquesta màquina requereix que fixeu el paràmetre <var>NLS_CHARACTERSET</var> a <var>UTF8</var>. Podeu actualitzar la base de dades a la versió 9.2+ o bé canviar el paràmetre.',
-	'INST_ERR_DB_NO_FIREBIRD'	=> 'La versió de Firebird instal·lda en aquesta màquina és massa antiga,  cal que l’actualitzeu, com a mínim, a la versió 2.1.',
-	'INST_ERR_DB_NO_FIREBIRD_PS'=> 'La base de dades que heu escollit pel Firebird té una mida de pàgina menor que 8192, ha de ser com a mínim de 8192.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'La base de dades que heu seleccionat no s’ha creat amb codificació <var>UNICODE</var> o <var>UTF8</var>. Feu la instal·lació sobre una base de dades amb codificació <var>UNICODE</var> o <var>UTF8</var>.',
 	'INST_ERR_DB_NO_NAME'		=> 'No s’ha especificat el nom de la base de dades.',
 	'INST_ERR_EMAIL_INVALID'	=> 'L’adreça electrònica que heu introduït no és vàlida.',
@@ -1845,6 +1928,8 @@ $lang = array_merge($lang, array(
 	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'El phpBB <strong>no</strong> s’executarà si la vostra instal·lació del PHP no ha estat compilada amb compatibilitat per UTF-8 i l’extensió PCRE.',
 	'PHP_GETIMAGESIZE_SUPPORT'			=> 'La funció getimagesize() del PHP està disponible',
 	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Necessàri</strong> - Per que el phpBB funcioni correctament, la funció getimagesize ha d’estar disponible.',
+	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'Mòduls opcionals',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>Opcional</strong> - Aquests mòduls o aplicacions són opcionals. Això no obstant, si estan disponibles s’habilitaran funcions addicionals.',
 	'PHP_SUPPORTED_DB'				=> 'Bases de dades compatibles',
@@ -1853,10 +1938,10 @@ $lang = array_merge($lang, array(
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'El phpBB pot funcionar amb aquest paràmetre habilitat però, si és possible, és recomanable que es dehabiliti register_globals per raons de seguretat.',
 	'PHP_SAFE_MODE'					=> 'Mode segur',
 	'PHP_SETTINGS'					=> 'Versió del PHP i configuracions',
-	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Necessari</strong> - Cal que tingueu com a mínim la versió 4.3.3 del PHP per instal·lar el phpBB. Si es mostra <var>mode segur</var> a sota, la vostra instal·lació del PHP s’està executant en aquest mode. Això imposa limitacions en l’administració remota i funcions similars.',
+	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'El paràmetre <var>allow_url_fopen</var> del PHP està habilitat',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>Opcional</strong> - Aquest parpàmetre és opcional, això no obstant, determinades funcions del phpBB com ara els avatars externs no funcionaran correctament si està inhabilitat.',
-	'PHP_VERSION_REQD'				=> 'Versió del PHP >= 4.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
 	'POST_ID'						=> 'ID de l’entrada',
 	'PREFIX_FOUND'					=> 'Un escaneig de les vostres taules ha mostrat una instal·lació vàlida que utilitza <strong>%s</strong> com a prefix de taula.',
 	'PREPROCESS_STEP'				=> 'S’estan executant les funcions/consultes de preprocessament',
@@ -1876,6 +1961,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> 'Configuració del servidor',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'No s’ha convertit l’índex de cerques',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'No s’ha convertit el vostre índex de cerques antic. Les cerques tornaran sempre un resultat buit. Per crear un índex de cerques nou aneu al Tauler de control de l’administrador, seleccioneu Manteniment i trieu Índex de cerques del submenú.',
+	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> 'Programari del fòrum',
 	'SPECIFY_OPTIONS'			=> 'Especifiqueu les opcións de conversió',
 	'STAGE_ADMINISTRATOR'		=> 'Informació de l’administrador',
@@ -1883,7 +1969,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> 'Les configuracions d’aquesta pàgina només són necessàries si sabeu que són diferents de les que hi ha per defecte. Si no esteu segur, simplement continueu a la següent pàgina ja que aquestes configuracions es poden canviar posteriorment des del Tauler de control de l’administrador.',
 	'STAGE_CONFIG_FILE'			=> 'Fitxer de configuració',
 	'STAGE_CREATE_TABLE'		=> 'Crea les taules de la base de dades',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'Les taules de la base de dades utilitzades pel phpBB 3.0 s’han creat i s’han omplert amb algunes dades inicials. Continueu a la pantalla següent per finalitzar la instal·lació del phpBB.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'Configuració de la base de dades',
 	'STAGE_FINAL'				=> 'Fase final',
 	'STAGE_INTRO'				=> 'Introducció',
@@ -1896,7 +1982,7 @@ $lang = array_merge($lang, array(
 	'SUB_LICENSE'				=> 'Llicència',
 	'SUB_SUPPORT'				=> 'Assistència',
 	'SUCCESSFUL_CONNECT'		=> 'Connexió correcta',
-	'SUPPORT_BODY'				=> 'Es proporciona assistencia completa per a la verió estable actual del phpBB3, de forma gratuïta. Això inclou:</p><ul><li>instal·lació</li><li>configuració</li><li>preguntes tècniques</li><li>problemes relacionats amb possibles errades del programari</li><li>actualitzacions des de les versions candidates (RC) a la versió estable més recent</li><li>conversió des del phpBB 2.0.x al phpBB3</li><li>conversió des d’altres programaris de fòrums al phpBB3 (veieu el <a href="http://www.phpbb.com/community/viewforum.php?f=65">Fòrum de Conversors</a>)</li></ul><p>Recomanem als usuaris que encara estiguin utilitzant versions beta del phpBB3 que substitueixin la seva instalació amb una còpia neta de la versió més recent.</p><h2>MOD / Estils</h2><p>Per questions relacionades amb els MOD, dirigiu-vos al <a href="http://www.phpbb.com/community/viewforum.php?f=81">Fòrum de modificacions</a>.<br />Per questions relacionades amb els estils, plantilles i grups d’imatges, dirigiu-vos al <a href="http://www.phpbb.com/community/viewforum.php?f=80">Fòrum d’estils</a>.<br /><br />Si la vostra pregunta està relacionada amb un paquet determinat, feu-la directament al tema dedicat al paquet.</p><h2>Obtenció d’assistència</h2><p><a href="http://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">El paquet de benvinguda al phpBB</a><br /><a href="http://www.phpbb.com/support/">Secció d’assistència</a><br /><a href="http://www.phpbb.com/support/documentation/3.0/quickstart/">Guia d’inici ràpid</a><br /><br />Per assegurar-vos que us manteniu al dia amb les darreres notícies i versions, <a href="http://www.phpbb.com/support/">subscriviu-vos a la nostra llista de correu</a>.<br /><br />',
+	'SUPPORT_BODY'				=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/documentation/3.1/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
 	'SYNC_FORUMS'				=> 'S’està iniciant la sincronització dels fòrums',
 	'SYNC_POST_COUNT'			=> 'S’està sincronitzant post_counts',
 	'SYNC_POST_COUNT_ID'		=> 'S’està sincronitzant post_counts des de <var>entry</var> %1$s a %2$s.',
@@ -1922,7 +2008,7 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ALL_FILES_UP_TO_DATE'		=> 'Tots els fitxers estan al dia amb la darrera versió del phpBB. És recomanable que <a href="../ucp.php?mode=login">inicieu la sessió al vostre fòrum</a> i comproveu que tot funciona correctament. No oblideu eliminar, canviar el nom o desplaçar el directori “install”! Si us plau, envieu-nos informació actualitzada sobre la configuració del vostre servidor i el vostre fòrum des del mòdul d’<a href="../ucp.php?mode=login&amp;redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">Enviament d’estadístques</a> del TCA.',
+	'ALL_FILES_UP_TO_DATE'		=> 'All files are up to date with the latest phpBB version.',
 	'ARCHIVE_FILE'				=> 'Fitxer font dintre de l’arxiu',
 
 	'BACK'				=> 'Torna',
@@ -1945,7 +2031,10 @@ $lang = array_merge($lang, array(
 	'CURRENT_VERSION'				=> 'Versió actual',
 
 	'DATABASE_TYPE'						=> 'Tipus de base de dades',
+	'DATABASE_UPDATE_COMPLETE'			=> 'Database updater has completed!',
+	'DATABASE_UPDATE_CONTINUE'			=> 'Continue database update',
 	'DATABASE_UPDATE_INFO_OLD'			=> 'El fitxer d’actualització de base de dades que hi ha al directori “install” és massa antic. Assegureu-vos de pujar la versió correcta del fitxer.',
+	'DATABASE_UPDATE_NOT_COMPLETED'		=> 'The database update has not yet completed.',
 	'DELETE_USER_REMOVE'				=> 'Elimina l’usuari i suprimeix-ne les entrades',
 	'DELETE_USER_RETAIN'				=> 'Elimina l’usuari però conserva’n les entrades',
 	'DESTINATION'						=> 'Fitxer de destí',
@@ -1964,14 +2053,17 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_UPDATE_METHOD'			=> 'Baixa l’arxiu de fitxers modificats',
 	'DOWNLOAD_UPDATE_METHOD_EXPLAIN'	=> 'Quan l’hagueu baixat, heu de descomprimir l’arxiu. Hi trobareu els fitxers modificats que heu de pujar al directori arrel del phpBB. Pugeu els fitxers a les seves ubicacions respectives. Un cop hagueu pujat tots els fitxers, torneu a fer la comprovació de fitxers amb l’altre botó a sota.',
 
-	'ERROR'			=> 'Error',
 	'EDIT_USERNAME'	=> 'Edita el nom d’usuari',
+	'ERROR'			=> 'Error',
+	'EVERYTHING_UP_TO_DATE'		=> 'Everything is up to date with the latest phpBB version. You should now <a href="%1$s">login to your board</a> and check if everything is working fine. Do not forget to delete, rename or move your install directory! Please send us updated information about your server and board configurations from the <a href="%2$s">Send statistics</a> module in your ACP.',
 
 	'FILE_ALREADY_UP_TO_DATE'		=> 'El fitxer ja està al dia.',
 	'FILE_DIFF_NOT_ALLOWED'			=> 'No es poden buscar les diferències del fitxer.',
 	'FILE_USED'						=> 'Informació usada de',			// Single file
 	'FILES_CONFLICT'				=> 'Fitxers amb conflictes',
 	'FILES_CONFLICT_EXPLAIN'		=> 'Els fitxers següents estan modificats i no representen els fitxers originals de la versió antiga. El phpBB ha determinat que aquests fitxers provocaran conflictes si s’intenta fusionar-los. Investigueu els conflictes i proveu de resoldre’ls manualment o continueu l’actualització triant el mètode de fusió que preferiu. Si resoleu els conflictes manualment, torneu a comprovar els fitxers després de modificar-los. Tambés és possible triar el mètode de fusió preferit per cada fitxer. El primer mètode tindrà com a resultat un fitxer en què les línies amb conflictes del vostre fitxer antic s’han perdut, l’altre tindrà com a resultat un fitxer on s’han perdut els canvis del fitxer nou.',
+	'FILES_DELETED'					=> 'Deleted files',
+	'FILES_DELETED_EXPLAIN'			=> 'The following files do not exist in the new version. These files have to be deleted from your installation.',
 	'FILES_MODIFIED'				=> 'Fitxers modificats',
 	'FILES_MODIFIED_EXPLAIN'		=> 'Els fitxers següents estan modificats i no representen els fitxers originals de la versió antiga. El fitxer actualitzat serà una fusió del les vostres modificacions i el fitxer nou.',
 	'FILES_NEW'						=> 'Fitxers nous',
@@ -2033,6 +2125,7 @@ $lang = array_merge($lang, array(
 	'PREVIOUS_VERSION'					=> 'Versió anterior',
 	'PROGRESS'							=> 'Progrés',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Announcement',
 	'RESULT'					=> 'Resultat',
 	'RUN_DATABASE_SCRIPT'		=> 'Actualitza la base de dades ara',
 
@@ -2040,6 +2133,7 @@ $lang = array_merge($lang, array(
 	'SELECT_DOWNLOAD_FORMAT'	=> 'Seleccioneu el format per baixar l’arxiu',
 	'SELECT_FTP_SETTINGS'		=> 'Seleccioneu els paràmetres FTP',
 	'SHOW_DIFF_CONFLICT'		=> 'Mostra les diferències/conflictes',
+	'SHOW_DIFF_DELETED'			=> 'Show file contents',
 	'SHOW_DIFF_FINAL'			=> 'Mostra el fitxer resultant',
 	'SHOW_DIFF_MODIFIED'		=> 'Mostra les diferències fusionades',
 	'SHOW_DIFF_NEW'				=> 'Mostra els continguts del fitxer',
@@ -2053,6 +2147,7 @@ $lang = array_merge($lang, array(
 	'STAGE_UPDATE_FILES'		=> 'Actualització dels fitxers',
 	'STAGE_VERSION_CHECK'		=> 'Comprovació de la versió',
 	'STATUS_CONFLICT'			=> 'Fitxer modificat amb conflictes',
+	'STATUS_DELETED'			=> 'Deleted file',
 	'STATUS_MODIFIED'			=> 'Fitxer modificat',
 	'STATUS_NEW'				=> 'Fitxer nou',
 	'STATUS_NEW_CONFLICT'		=> 'Fitxer nou amb conflictes',
@@ -2073,33 +2168,27 @@ $lang = array_merge($lang, array(
 	'UPDATE_INSTALLATION_EXPLAIN'	=> 'Amb aquesta opció és possible actualitzar la vostra instal·lació del phpBB a la versió més recent.<br />Durant el procés es comprovaran tots els vostres fitxers per verificar-ne la integritat. Podeu revisar totes les diferències i fitxers abans de l’actualització.<br /><br />L’actualització de fitxers en sí es pot fer de dues maneres diferents.</p><h2>Actualització manual</h2><p>Amb aquesta actualització només baixeu el vostre conjunt personal de fitxers modificats per assegurar-vos de que no perdeu les modificacions que hagueu fet als fitxers. Després de baixar aquest paquet informàtic cal que pugeu manualment els fitxers a la seva ubicació correcta dintre del directori arrel del phpBB. Quan hagueu acabat, podeu tornar a fer la comprovació de fitxers per veure si heu mogut els fitxers a la seva ubicació correcta.</p><h2>Actualització automàtica amb FTP</h2><p>Aquest mètode és similar al primer però no cal baixar els fitxers modificats i pujar-los manualment ja que es farà automàticament. Per utilitzar aquest mètode heu de saber la informació necessària per iniciar una sessió FTP ja que se us demanarà. Quan hagueu acabat se us redirigirà a la comprovació de fitxers una altra vegada per assegurar-vos de que s’ha actualitzat tot correctament.<br /><br />',
 	'UPDATE_INSTRUCTIONS'			=> '
 
-		<h1>Avís de llançament</h1>
+		<h1>Release announcement</h1>
 
-		<p>Llegiu <a href="%1$s" title="%1$s"><strong>l’avís de llançament de la versió més recent</strong></a> abans de continuar amb el procés d’actualització, és possible que contingui informació útil. També conté enllaços a les baixades completes així com el registre de canvis.</p>
+		<p>Please read the release announcement for the latest version before you continue your update process, it may contain useful information. It also contains full download links as well as the change log.</p>
 
 		<br />
 
-		<h1>Com actualitzar la vostra instal·lació amb el Paquet d’actualització automàtica</h1>
+		<h1>How to update your installation with the Automatic Update Package</h1>
 
-		<p>La manera recomanada per actualitzar la vostra instal·lació indicada aquí només és vàlida per al Paquet d’actualització automàtica. També podeu actualitzar la vostra instal·lació utilitzant els mètodes indicats al document INSTALL.html. Els passos per actualitzar el phpBB3 automàticament són:</p>
+		<p>The recommended way of updating your installation listed here is only valid for the automatic update package. You are also able to update your installation using the methods listed within the INSTALL.html document. The steps for updating phpBB3 automatically are:</p>
 
 		<ul style="margin-left: 20px; font-size: 1.1em;">
-			<li>Aneu a la <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">pàgina de baixades de phpBB.com</a> i baixeu l’arxiu "Automatic Update Package".<br /><br /></li>
-			<li>Descomprimiu l’arxiu.<br /><br /></li>
-			<li>Pugeu el directori “install” complet i descomprimit al directori arrel del phpBB (on es troba el fitxer config.php).<br /><br /></li>
+			<li>Go to the <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com downloads page</a> and download the "Automatic Update Package" archive.<br /><br /></li>
+			<li>Unpack the archive.<br /><br /></li>
+			<li>Upload the complete uncompressed install folder to your phpBB root directory (where your config.php file is).<br /><br /></li>
 		</ul>
 
-		<p>Un cop pujat el fòrum els usuaris normals no podran accedir al fòrum degut a la presència del directori “install” que heu pujat.<br /><br />
-		<strong><a href="%2$s" title="%2$s">Inicieu ara el procés d’actualització dirigint el vostre navegador al directori “install”</a>.</strong><br />
+		<p>Once uploaded your board will be offline for normal users due to the install directory you uploaded now present.<br /><br />
+		<strong><a href="%1$s" title="%1$s">Now start the update process by pointing your browser to the install folder</a>.</strong><br />
 		<br />
-		Llavors se us guiarà pel procés d’actualització. Rebreu un avís quan l’actualització hagi acabat.
+		You will then be guided through the update process. You will be notified once the update is complete.
 		</p>
-	',
-	'UPDATE_INSTRUCTIONS_INCOMPLETE'	=> '
-
-		<h1>S’ha detectat una actualització incompleta</h1>
-
-		<p>El phpBB ha detectat una actualització automàtica incompleta. Assegureu-vos de que heu seguit tots els passos de l’eina automàtica d’actualització. A continuació tornareu a trobar l’enllaç, o aneu directament al directori “install”.</p>
 	',
 	'UPDATE_METHOD'					=> 'Mètode d’actualització',
 	'UPDATE_METHOD_EXPLAIN'			=> 'Podeu triar el vostre mètode d’actualització preferit. Utilitzar la pujada per FTP us mostrarà un formulari en el qual he d’introduir la informació del vostre compte. Amb aquest mètode els fitxers es desplaçaran automàticament a la nova ubicació i es crearan còpies de seguretat dels fitxers antics afegint l’extensió .bak al nom del fitxer. Si trieu baixar els fitxers modificats podeu descomprimir-los i pujar-los manualment a la seva ubicació correcta més tard.',
@@ -2110,10 +2199,10 @@ $lang = array_merge($lang, array(
 	'UPDATING_DATA'					=> 'S’estan actualitzant les dades',
 	'UPDATING_TO_LATEST_STABLE'		=> 'S’està actualitzant la base de dades a la versió estable més recent',
 	'UPDATED_VERSION'				=> 'Versió actualitzada',
-	'UPGRADE_INSTRUCTIONS'			=> 'Hi ha disponible una versió amb noves funcions <strong>%1$s</strong>. Si us plau, llegiu <a href="%2$s" title="%2$s"><strong>l’avís de llançament</strong></a> per assabentar-vos de les novetats i de com actualitzar el fòrum.',
 	'UPLOAD_METHOD'					=> 'Mètode de pujada',
 
 	'UPDATE_DB_SUCCESS'				=> 'S’ha actualitzat la base de dades correctament.',
+	'UPDATE_FILE_SUCCESS'			=> 'File update was successful.',
 	'USER_ACTIVE'					=> 'Usuari actiu',
 	'USER_INACTIVE'					=> 'Usuari inactiu',
 
@@ -2173,6 +2262,33 @@ $lang = array_merge($lang, array(
 	'TOPICS_TOPIC_TITLE'			=> 'Benvingut al phpBB3',
 ));
 
+#######language/en/migrator.php#######
+
+$lang = array_merge($lang, array(
+	'CONFIG_NOT_EXIST'					=> 'The config setting "%s" unexpectedly does not exist.',
+
+	'GROUP_NOT_EXIST'					=> 'The group "%s" unexpectedly does not exist.',
+
+	'MIGRATION_APPLY_DEPENDENCIES'		=> 'Apply dependencies of %s.',
+	'MIGRATION_DATA_DONE'				=> 'Installed Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_IN_PROGRESS'		=> 'Installing Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_RUNNING'			=> 'Installing Data: %s.',
+	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
+	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
+	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
+	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
+	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
+	'MODULE_NOT_EXIST'					=> 'A required module does not exist: %s',
+
+	'PERMISSION_NOT_EXIST'				=> 'The permission setting "%s" unexpectedly does not exist.',
+
+	'ROLE_NOT_EXIST'					=> 'The permission role "%s" unexpectedly does not exist.',
+));
+
 #######language/en/mcp.php#######
 
 $lang = array_merge($lang, array(
@@ -2193,6 +2309,10 @@ $lang = array_merge($lang, array(
 	'APPROVE_POST_CONFIRM'	=> 'Esteu segur que voleu aprovar aquesta entrada?',
 	'APPROVE_POSTS'			=> 'Aprova les entrades',
 	'APPROVE_POSTS_CONFIRM'	=> 'Esteu segur que voleu aprovar les entrades seleccionades?',
+	'APPROVE_TOPIC'			=> 'Approve topic',
+	'APPROVE_TOPIC_CONFIRM'	=> 'Are you sure you want to approve this topic?',
+	'APPROVE_TOPICS'		=> 'Approve topics',
+	'APPROVE_TOPICS_CONFIRM'=> 'Are you sure you want to approve the selected topics?',
 
 	'CANNOT_MOVE_SAME_FORUM'=> 'No podeu desplaçar un tema al mateix fòrum en què es troba.',
 	'CANNOT_WARN_ANONYMOUS'	=> 'No podeu fer advertiments a usuaris visitants sense registrar.',
@@ -2213,16 +2333,12 @@ $lang = array_merge($lang, array(
 	'DELETE_PM_REPORTS'			=> 'Elimina els informes de missatge privat',
 	'DELETE_PM_REPORTS_CONFIRM'	=> 'Esteu segur que voleu eliminar els informes de missatge privat seleccionats?',
 	'DELETE_POSTS'				=> 'Elimina les entrades',
-	'DELETE_POSTS_CONFIRM'		=> 'Esteu segur que voleu eliminar aquestes entrades?',
-	'DELETE_POST_CONFIRM'		=> 'Esteu segur que voleu eliminar aquesta entrada?',
 	'DELETE_REPORT'				=> 'Elimina l’informe',
 	'DELETE_REPORT_CONFIRM'		=> 'Esteu segur que voleu eliminar l’informe seleccionat?',
 	'DELETE_REPORTS'			=> 'Elimina els informes',
 	'DELETE_REPORTS_CONFIRM'	=> 'Esteu segur que voleu eliminar els informes seleccionats?',
 	'DELETE_SHADOW_TOPIC'		=> 'Elimina l’entrada ombra',
 	'DELETE_TOPICS'				=> 'Elimina els temes seleccionats',
-	'DELETE_TOPICS_CONFIRM'		=> 'Esteu segur que voleu eliminar aquests temes?',
-	'DELETE_TOPIC_CONFIRM'		=> 'Esteu segur que voleu eliminar aquest tema?',
 	'DISAPPROVE'				=> 'Rebutja',
 	'DISAPPROVE_REASON'			=> 'Raó per la qual es rebutja',
 	'DISAPPROVE_POST'			=> 'Rebutja l’entrada',
@@ -2260,8 +2376,6 @@ $lang = array_merge($lang, array(
 	'LATEST_WARNING_TIME'		=> 'Darrer advertiment emès',
 	'LATEST_WARNINGS'			=> '5 darrers advertiments',
 	'LEAVE_SHADOW'				=> 'Deixa-hi un tema ombra',
-	'LIST_REPORT'				=> '1 informe',
-	'LIST_REPORTS'				=> '%d informes',
 	'LOCK'						=> 'Bloqueja’l',
 	'LOCK_POST_POST'			=> 'Bloqueja l’entrada',
 	'LOCK_POST_POST_CONFIRM'	=> 'Esteu segur que voleu impedir l’edició d’aquesta entrada?',
@@ -2340,6 +2454,10 @@ $lang = array_merge($lang, array(
 	'MCP_QUEUE_UNAPPROVED_POSTS_EXPLAIN'	=> 'És una llista de totes les entrades que requereixen aprovació abans de ser visibles als usuaris.',
 	'MCP_QUEUE_UNAPPROVED_TOPICS'			=> 'Temes en espera d’aprovació',
 	'MCP_QUEUE_UNAPPROVED_TOPICS_EXPLAIN'	=> 'És una llista de tots els temes que requereixen aprovació abans de ser visibles als usuaris.',
+	'MCP_QUEUE_DELETED_POSTS'				=> 'Deleted posts',
+	'MCP_QUEUE_DELETED_POSTS_EXPLAIN'		=> 'This is a list of all soft deleted posts. You can restore or permanently delete the posts from this screen.',
+	'MCP_QUEUE_DELETED_TOPICS'				=> 'Deleted topics',
+	'MCP_QUEUE_DELETED_TOPICS_EXPLAIN'		=> 'This is a list of all soft deleted topics. You can restore or permanently delete the topics from this screen.',
 
 	'MCP_VIEW_USER'			=> 'Mostra els advertiments d’un usuari determinat',
 
@@ -2378,25 +2496,27 @@ $lang = array_merge($lang, array(
 	'NO_POST'						=> 'Heu de seleccionar una entrada si voleu advertir un usuari sobre una entrada.',
 	'NO_POST_REPORT'				=> 'No s’ha informat d’aquesta entrada.',
 	'NO_POST_SELECTED'				=> 'Heu de seleccionar com a mínim una entrada per dur a terme aquesta acció.',
+	'NO_POSTS_DELETED'				=> 'There are no deleted posts.',
+	'NO_POSTS_QUEUE'				=> 'There are no posts waiting for approval.',
 	'NO_REASON_DISAPPROVAL'			=> 'Si us plau, doneu una raó apropiada per al rebuig.',
 	'NO_REPORT'						=> 'No s’ha trobat cap informe',
 	'NO_REPORTS'					=> 'No s’ha trobat cap informe',
 	'NO_REPORT_SELECTED'			=> 'Heu de seleccionar com a mínim un informe per dur a terme aquesta acció.',
 	'NO_TOPIC_ICON'					=> 'Cap',
 	'NO_TOPIC_SELECTED'				=> 'Heu de seleccionar com a mínim un tema per dur a terme aquesta acció.',
+	'NO_TOPICS_DELETED'				=> 'There are no deleted topics.',
 	'NO_TOPICS_QUEUE'				=> 'No hi ha cap tema pendent d’aprovació.',
 
 	'ONLY_TOPIC'			=> 'Només el tema “%s”',
 	'OTHER_USERS'			=> 'Altres usuaris que publiquen des d’aquesta IP',
 
+	'QUICKMOD_ACTION_NOT_ALLOWED' => "%s not allowed as quickmod",
+
 	'PM_REPORT_CLOSED_SUCCESS'	=> 'L’informe de missatge privat seleccionat s’ha tancat correctament.',
 	'PM_REPORT_DELETED_SUCCESS'	=> 'L’informe de missatge privat seleccionat s’ha eliminat correctament.',
 	'PM_REPORTED_SUCCESS'		=> 'S’ha informat d’aquest missatge privat correctament.',
-	'PM_REPORT_TOTAL'			=> 'En total hi ha <strong>1</strong> informe de missatge privat per revisar.',
 	'PM_REPORTS_CLOSED_SUCCESS'	=> 'Els informes de missatge privat seleccionats s’han tancat correctament.',
 	'PM_REPORTS_DELETED_SUCCESS'=> 'Els informes de missatge privat seleccionats s’han eliminat correctament.',
-	'PM_REPORTS_TOTAL'			=> 'En total hi ha <strong>%d</strong> informes de missatge privat per revisar.',
-	'PM_REPORTS_ZERO_TOTAL'		=> 'No hi ha cap informe de missatge privat per revisar.',
 	'PM_REPORT_DETAILS'			=> 'Detalls de l’informe de miisatge privat',
 	'POSTER'					=> 'Autor',
 	'POSTS_APPROVED_SUCCESS'	=> 'S’han aprovat les entrades seleccionades.',
@@ -2404,15 +2524,17 @@ $lang = array_merge($lang, array(
 	'POSTS_DISAPPROVED_SUCCESS'	=> 'S’han rebutjat les entrades seleccionades.',
 	'POSTS_LOCKED_SUCCESS'		=> 'S’han bloquejat les entrades seleccionades correctament.',
 	'POSTS_MERGED_SUCCESS'		=> 'S’han combinat les entrades seleccionades.',
-	'POSTS_UNLOCKED_SUCCESS'	=> 'S’han desbloquejat les entrades seleccionades correctament.',
 	'POSTS_PER_PAGE'			=> 'Entrades per pàgina',
 	'POSTS_PER_PAGE_EXPLAIN'	=> '(Poseu un 0 per veure totes les entrades.)',
+	'POSTS_RESTORED_SUCCESS'	=> 'The selected posts have been restored successfully.',
+	'POSTS_UNLOCKED_SUCCESS'	=> 'S’han desbloquejat les entrades seleccionades correctament.',
 	'POST_APPROVED_SUCCESS'		=> 'S’ha aprovat l’entrada seleccionada.',
 	'POST_DELETED_SUCCESS'		=> 'S’ha eliminat l’entrada de la base de dades correctament.',
 	'POST_DISAPPROVED_SUCCESS'	=> 'S’ha rebutjat l’entrada seleccionada.',
 	'POST_LOCKED_SUCCESS'		=> 'S’ha bloquejat l’entrada correctament.',
 	'POST_NOT_EXIST'			=> 'L’entrada que heu sol·licitat no existeix.',
 	'POST_REPORTED_SUCCESS'		=> 'S’ha informat correctament d’aquesta entrada.',
+	'POST_RESTORED_SUCCESS'		=> 'This post has been restored successfully.',
 	'POST_UNLOCKED_SUCCESS'		=> 'S’ha bloquejat l’entrada correctament.',
 
 	'READ_USERNOTES'			=> 'Notes de l’usuari',
@@ -2423,8 +2545,6 @@ $lang = array_merge($lang, array(
 	'REPORTED_ON_DATE'			=> 'Data:',
 	'REPORTS_CLOSED_SUCCESS'	=> 'S’han tancat els informes seleccionats correctament.',
 	'REPORTS_DELETED_SUCCESS'	=> 'S’han eliminat els informes seleccionats correctament.',
-	'REPORTS_TOTAL'				=> 'Hi ha un total de <strong>%d</strong> informes per revisar.',
-	'REPORTS_ZERO_TOTAL'		=> 'No hi ha cap informe per revisar.',
 	'REPORT_CLOSED'				=> 'Aquest informe ja s’ha tancat.',
 	'REPORT_CLOSED_SUCCESS'		=> 'S’ha tancat l’informe seleccionat correctament.',
 	'REPORT_DELETED_SUCCESS'	=> 'S’ha eliminat l’informe seleccionat correctament.',
@@ -2436,7 +2556,15 @@ $lang = array_merge($lang, array(
 	'REPORT_POST_EXPLAIN'		=> 'Utilitzeu aquest formulari per informar de l’entrada seleccionada als moderadors i els administradors del fòrum. És recomanable que només informeu de les entrades que incompleixen les normes del fòrum.',
 	'REPORT_REASON'				=> 'Raó de l’informe',
 	'REPORT_TIME'				=> 'Data de l’informe',
-	'REPORT_TOTAL'				=> 'Hi ha un total d’<strong>1</strong> informe per revisar.',
+	'RESTORE'					=> 'Restore',
+	'RESTORE_POST'				=> 'Restore post',
+	'RESTORE_POST_CONFIRM'		=> 'Are you sure you want to restore this post?',
+	'RESTORE_POSTS'				=> 'Restore posts',
+	'RESTORE_POSTS_CONFIRM'		=> 'Are you sure you want to restore the selected posts?',
+	'RESTORE_TOPIC'				=> 'Restore topic',
+	'RESTORE_TOPIC_CONFIRM'		=> 'Are you sure you want to restore this topic?',
+	'RESTORE_TOPICS'			=> 'Restore topics',
+	'RESTORE_TOPICS_CONFIRM'	=> 'Are you sure you want to restore the selected topics?',
 	'RESYNC'					=> 'Resincronitza',
 	'RETURN_MESSAGE'			=> '%sTorna al missatge%s',
 	'RETURN_NEW_FORUM'			=> '%sVes al fòrum nou%s',
@@ -2477,6 +2605,7 @@ $lang = array_merge($lang, array(
 	'TOPICS_FORKED_SUCCESS'		=> 'S’han copiat els temes seleccionats correctament.',
 	'TOPICS_LOCKED_SUCCESS'		=> 'S’han bloquejat els temes seleccionats.',
 	'TOPICS_MOVED_SUCCESS'		=> 'S’han mogut els temes seleccionats correctament.',
+	'TOPICS_RESTORED_SUCCESS'	=> 'The selected topics have been restored successfully.',
 	'TOPICS_RESYNC_SUCCESS'		=> 'S’han resincronitzat els temes seleccionats.',
 	'TOPICS_TYPE_CHANGED'		=> 'S’han canviat els tipus de tema correctament.',
 	'TOPICS_UNLOCKED_SUCCESS'	=> 'S’han desbloquejat els temes seleccionats correctament.',
@@ -2487,6 +2616,7 @@ $lang = array_merge($lang, array(
 	'TOPIC_LOCKED_SUCCESS'		=> 'S’ha bloquejat el tema seleccionat.',
 	'TOPIC_MOVED_SUCCESS'		=> 'S’ha mogut el tema seleccionat correctament.',
 	'TOPIC_NOT_EXIST'			=> 'El tema que heu sol·licitat no existeix.',
+	'TOPIC_RESTORED_SUCCESS'	=> 'The selected topic has been restored successfully.',
 	'TOPIC_RESYNC_SUCCESS'		=> 'S’ha resincronitzat el tema seleccionat.',
 	'TOPIC_SPLIT_SUCCESS'		=> 'S’ha dividit el tema seleccionat correctament.',
 	'TOPIC_TIME'				=> 'Data del tema',
@@ -2494,9 +2624,6 @@ $lang = array_merge($lang, array(
 	'TOPIC_UNLOCKED_SUCCESS'	=> 'S’ha desbloquejat el tema seleccionat.',
 	'TOTAL_WARNINGS'			=> 'Nombre total d’advertiments',
 
-	'UNAPPROVED_POSTS_TOTAL'		=> 'En total hi ha <strong>%d</strong> entrades pedents d’aprovació.',
-	'UNAPPROVED_POSTS_ZERO_TOTAL'	=> 'No hi ha cap entrada pendent d’aprovació.',
-	'UNAPPROVED_POST_TOTAL'			=> 'En total hi ha <strong>1</strong> entrada pedent d’aprovació.',
 	'UNLOCK'						=> 'Desbloqueja',
 	'UNLOCK_POST'					=> 'Desbloqueja l’entrada',
 	'UNLOCK_POST_EXPLAIN'			=> 'Permet l’edició',
@@ -2522,7 +2649,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'Això és un advertiment enviat per un administrador o un moderador d’aquest lloc web.[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'Advertiment del fòrum emès',
 	'WARNING_POST_DEFAULT'	=> 'Aquest advertiment fa referència a l’entrada següent que heu escrit: %s .',
-	'WARNINGS_ZERO_TOTAL'	=> 'No hi ha cap advertiment.',
+	'NO_WARNINGS'	=> 'No warnings exist.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Heu seleccionat el tema número %d: %s.',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -2562,10 +2689,12 @@ $lang = array_merge($lang, array(
 	'ALL'					=> 'Tot',
 	'BEFORE'				=> 'Abans',
 	'CC_EMAIL'				=> 'Envia’m una còpia d’aquest correu.',
-	'CONTACT_USER'			=> 'Contacta amb',
+	'CONTACT_ADMIN'			=> 'Contact a Board Administrator',
 
 	'DEST_LANG'				=> 'Idioma',
 	'DEST_LANG_EXPLAIN'		=> 'Selecioneu l’idioma adient per al destinatari d’aquest missatge, si és que està disponible.',
+
+	'EDIT_PROFILE'			=> 'Edit Profile',
 
 	'EMAIL_BODY_EXPLAIN'	=> 'Aquest missatge s’enviarà com text net, no hi inclogueu HTML ni BBCode. L’adreça de resposta per aquest missatge serà la vostra adreça electrònica.',
 	'EMAIL_DISABLED'		=> 'Les funcions d’enviament de correu electrònic estan desactivades.',
@@ -2575,7 +2704,9 @@ $lang = array_merge($lang, array(
 	'EMPTY_MESSAGE_EMAIL'	=> 'Heu d’introduir un missatge per enviar el correu.',
 	'EMPTY_MESSAGE_IM'		=> 'Heu d’introduir un missatge.',
 	'EMPTY_NAME_EMAIL'		=> 'Heu d’introduir el nom real del destinatari.',
-	'EMPTY_SUBJECT_EMAIL'	=> 'Heu d’especificar un assumpte per al correu.',
+	'EMPTY_SENDER_EMAIL'	=> 'You must provide a valid email address.',
+	'EMPTY_SENDER_NAME'		=> 'You must provide a name.',
+	'EMPTY_SUBJECT_EMAIL'	=> 'You must specify a subject for the email.',
 	'EQUAL_TO'				=> 'Igual a',
 
 	'FIND_USERNAME_EXPLAIN'	=> 'Utilitzeu aquest formulari per cercar membres determinats. No cal que ompliu tots els camps. Per obtenir coincidències parcials utilitzeu * com a comodí. Per introduir dates utilitzeu el format <kbd>AAAA-MM-DD</kbd>, p.ex. <samp>2004-02-29</samp>. Utilitzeu les caselles de selecció per triar un o més usuaris (depenent del formulari és possible acceptar diversos usuaris) i feu clic sobre el botó "Selecciona els marcats" per tornar al formulari anterior.',
@@ -2585,16 +2716,10 @@ $lang = array_merge($lang, array(
 	'HIDE_MEMBER_SEARCH'	=> 'Oculta la cerca de membres',
 
 	'IM_ADD_CONTACT'		=> 'Afegeix un contacte',
-	'IM_AIM'				=> 'Tingueu en compte que cal tenir l’AOL Instant Messenger instal·lat per utilitzar aquesta funció.',
-	'IM_AIM_EXPRESS'		=> 'AIM Express',
 	'IM_DOWNLOAD_APP'		=> 'Baixa l’aplicació',
-	'IM_ICQ'				=> 'Tingueu en compte que els usuaris poden haver demanat no rebre missatges instantanis d’usuaris desconeguts.',
 	'IM_JABBER'				=> 'Tingueu en compte que els usuaris poden haver demanat no rebre missatges instantanis d’usuaris desconeguts.',
 	'IM_JABBER_SUBJECT'		=> 'Aquest és un missatge automàtic, no hi respongueu! Missatge de l’usuari %1$s a les %2$s.',
 	'IM_MESSAGE'			=> 'El vostre missatge',
-	'IM_MSNM'				=> 'Tingueu en compte que cal tenir el Windows Messenger instal·lat per utilitzar aquesta funció.',
-	'IM_MSNM_BROWSER'		=> 'El vostre navegador no és compatible amb aquesta funció.',
-	'IM_MSNM_CONNECT'		=> 'No esteu connectat al MSNM.\nHeu de connectar-vos al MSNM per continuar.',
 	'IM_NAME'				=> 'El vostre nom',
 	'IM_NO_DATA'			=> 'No hi ha informació de contacte adient per aquest usuari.',
 	'IM_NO_JABBER'			=> 'La missatgeria directa d’usuaris Jabber no està permesa en aquest fòrum. Necessitareu un client Jabber instal·lat a la vostra màquina per posar-vos en contacte amb el destinatari llistat a sobre.',
@@ -2606,15 +2731,15 @@ $lang = array_merge($lang, array(
 
 	'LAST_ACTIVE'				=> 'Darrera connexió',
 	'LESS_THAN'					=> 'Menys de ',
-	'LIST_USER'					=> '1 usuari',
-	'LIST_USERS'				=> '%d usuaris',
-	'LOGIN_EXPLAIN_LEADERS'		=> 'Cal estar registrat i haver iniciat la sessió per mostrar el llistat amb l’equip del fòrum.',
+	'LOGIN_EXPLAIN_TEAM'		=> 'The board requires you to be registered and logged in to view the team listing.',
 	'LOGIN_EXPLAIN_MEMBERLIST'	=> 'Cal estar registrat i haver iniciat la sessió per accedir a la llista de membres.',
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'Cal estar registrat i haver iniciat la sessió per cercar usuaris.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'Cal estar registrat i haver iniciat la sessió per visualitzar perfils.',
 
 	'MORE_THAN'				=> 'Més de ',
 
+	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
+	'NO_CONTACT_PAGE'		=> 'The board administrator contact page has been disabled.',
 	'NO_EMAIL'				=> 'No se us permet enviar correus electrònics a aquest usuari.',
 	'NO_VIEW_USERS'			=> 'No esteu autoritzat a veure la llista d’usuaris ni els perfils.',
 
@@ -2631,12 +2756,12 @@ $lang = array_merge($lang, array(
 
 	'SELECT_MARKED'			=> 'Selecciona els marcats',
 	'SELECT_SORT_METHOD'	=> 'Selecciona el mètode d’ordenació',
-	'SEND_AIM_MESSAGE'		=> 'Envia un missatge AIM',
+	'SENDER_EMAIL_ADDRESS'	=> 'Your email address',
+	'SENDER_NAME'			=> 'Your name',
 	'SEND_ICQ_MESSAGE'		=> 'Envia un missatge ICQ',
 	'SEND_IM'				=> 'Missatgeria instantània',
 	'SEND_JABBER_MESSAGE'	=> 'Envia un missatge Jabber',
 	'SEND_MESSAGE'			=> 'Missatge',
-	'SEND_MSNM_MESSAGE'		=> 'Envia un missatge MSNM/WLM',
 	'SEND_YIM_MESSAGE'		=> 'Envia un missatge YIM',
 	'SORT_EMAIL'			=> 'Adreça electrònica',
 	'SORT_LAST_ACTIVE'		=> 'Darrera connexió',
@@ -2644,12 +2769,18 @@ $lang = array_merge($lang, array(
 
 	'USERNAME_BEGINS_WITH'	=> 'El nom de l’usuari comença per',
 	'USER_ADMIN'			=> 'Administra aquest usuari',
-	'USER_BAN'				=> 'Bandeig',
+	'USER_BAN'				=> 'Ban one or more users by username',
 	'USER_FORUM'			=> 'Estadístiques de l’usuari',
 	'USER_ONLINE'			=> 'Connectat',
 	'USER_PRESENCE'			=> 'Presència als fòrums',
+	'USERS_PER_PAGE'		=> 'Users per page',
 
 	'VIEWING_PROFILE'		=> 'Esteu veient el perfil de: %s',
+	'VIEW_FACEBOOK_PROFILE'	=> 'View Facebook Profile',
+	'VIEW_SKYPE_PROFILE'	=> 'View Skype Profile',
+	'VIEW_TWITTER_PROFILE'	=> 'View Twitter Profile',
+	'VIEW_YOUTUBE_CHANNEL'	=> 'View YouTube Channel',
+	'VIEW_GOOGLEPLUS_PROFILE' => 'View Google+ Profile',
 	'VISITED'				=> 'Darrera connexió',
 
 	'WWW'					=> 'Lloc web',
@@ -2674,6 +2805,47 @@ $lang = array_merge($lang, array(
 	'USER_COMM_RANK'	=> 'Overall reviews:',
 	'USER_COMM_PERCENT'	=> 'Overall assessment of the user:',
 
+));
+
+#######language/en/plupload.php#######
+
+$lang = array_merge($lang, array(
+	'PLUPLOAD_ADD_FILES'		=> 'Add files',
+	'PLUPLOAD_ADD_FILES_TO_QUEUE'	=> 'Add files to the upload queue and click the start button.',
+	'PLUPLOAD_ALREADY_QUEUED'	=> '%s already present in the queue.',
+	'PLUPLOAD_CLOSE'			=> 'Close',
+	'PLUPLOAD_DRAG'				=> 'Drag files here.',
+	'PLUPLOAD_DUPLICATE_ERROR'	=> 'Duplicate file error.',
+	'PLUPLOAD_DRAG_TEXTAREA'	=> 'You may also attach files by dragging and dropping them in the message box.',
+	'PLUPLOAD_ERR_INPUT'		=> 'Failed to open input stream.',
+	'PLUPLOAD_ERR_MOVE_UPLOADED'	=> 'Failed to move uploaded file.',
+	'PLUPLOAD_ERR_OUTPUT'		=> 'Failed to open output stream.',
+	'PLUPLOAD_ERR_FILE_TOO_LARGE'	=> 'File too large:',
+	'PLUPLOAD_ERR_FILE_COUNT'	=> 'File count error.',
+	'PLUPLOAD_ERR_FILE_INVALID_EXT'	=> 'Invalid file extension:',
+	'PLUPLOAD_ERR_RUNTIME_MEMORY'	=> 'Runtime ran out of available memory.',
+	'PLUPLOAD_ERR_UPLOAD_URL'	=> 'Upload URL might be wrong or does not exist.',
+	'PLUPLOAD_EXTENSION_ERROR'	=> 'File extension error.',
+	'PLUPLOAD_FILE'				=> 'File: %s',
+	'PLUPLOAD_FILE_DETAILS'		=> 'File: %s, size: %d, max file size: %d',
+	'PLUPLOAD_FILENAME'			=> 'Filename',
+	'PLUPLOAD_FILES_QUEUED'		=> '%d files queued',
+	'PLUPLOAD_GENERIC_ERROR'	=> 'Generic error.',
+	'PLUPLOAD_HTTP_ERROR'		=> 'HTTP error.',
+	'PLUPLOAD_IMAGE_FORMAT'		=> 'Image format either wrong or not supported.',
+	'PLUPLOAD_INIT_ERROR'		=> 'Init error.',
+	'PLUPLOAD_IO_ERROR'			=> 'IO error.',
+	'PLUPLOAD_NOT_APPLICABLE'	=> 'N/A',
+	'PLUPLOAD_SECURITY_ERROR'	=> 'Security error.',
+	'PLUPLOAD_SELECT_FILES'		=> 'Select files',
+	'PLUPLOAD_SIZE'				=> 'Size',
+	'PLUPLOAD_SIZE_ERROR'		=> 'File size error.',
+	'PLUPLOAD_STATUS'			=> 'Status',
+	'PLUPLOAD_START_UPLOAD'		=> 'Start upload',
+	'PLUPLOAD_START_CURRENT_UPLOAD'	=> 'Start uploading queue',
+	'PLUPLOAD_STOP_UPLOAD'		=> 'Stop upload',
+	'PLUPLOAD_STOP_CURRENT_UPLOAD'	=> 'Stop current upload',
+	'PLUPLOAD_UPLOADED'			=> 'Uploaded %d/%d files',
 ));
 
 #######language/en/portal.php#######
@@ -2919,12 +3091,12 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> 'El %sBBCode%s està <em>INACTIU</em>',
 	'BBCODE_IS_ON'				=> 'El %sBBCode%s està <em>ACTIU</em>',
 	'BBCODE_I_HELP'				=> 'Text en cursiva: [i]text[/i]',
-	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]',
 	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
 	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Insereix una imatge: [img]http://url_imatge[/img]',
 	'BBCODE_Q_HELP'				=> 'Cita un text: [quote]text[/quote]',
-	'BBCODE_S_HELP'				=> 'Color de lletra: [color=red]text[/color]  Consell: també podeu utilitzar color=#FF0000',
+	'BBCODE_S_HELP'				=> 'Font colour: [color=red]text[/color] or [color=#FF0000]text[/color]',
 	'BBCODE_U_HELP'				=> 'Text subratllat: [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'Insereix una URL: [url]http://url[/url] o [url=http://url]text de l’URL[/url]',
 	'BUMP_ERROR'				=> 'No podeu reactivar aquest tema tan aviat després de la darrera entrada.',
@@ -2943,8 +3115,20 @@ $lang = array_merge($lang, array(
 	'DELETE_MESSAGE'			=> 'Elimina el missatge',
 	'DELETE_MESSAGE_CONFIRM'	=> 'Esteu segur que voleu eliminar aquest missatge?',
 	'DELETE_OWN_POSTS'			=> 'Només podeu eliminar les vostres entrades.',
+	'DELETE_PERMANENTLY'		=> 'Delete permanently',
 	'DELETE_POST_CONFIRM'		=> 'Esteu segur que voleu eliminar aquesta entrada?',
-	'DELETE_POST_WARN'			=> 'Un cop eliminada, l’entrada ja no es pot restablir',
+	'DELETE_POST_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this post?',
+	'DELETE_POST_PERMANENTLY'	=> 'Permanently delete this post so it can not be recovered',
+	'DELETE_POSTS_CONFIRM'		=> 'Esteu segur que voleu eliminar aquestes entrades?',
+	'DELETE_POSTS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these posts?',
+	'DELETE_REASON'				=> 'Reason for deleting this topic',
+	'DELETE_REASON_EXPLAIN'		=> 'The specified reason for deletion will be visible to moderators.',
+	'DELETE_POST_WARN'			=> 'Delete this post',
+	'DELETE_TOPIC_CONFIRM'		=> 'Esteu segur que voleu eliminar aquest tema?',
+	'DELETE_TOPIC_PERMANENTLY'	=> 'Permanently delete this topic so it can not be recovered',
+	'DELETE_TOPIC_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this topic?',
+	'DELETE_TOPICS_CONFIRM'		=> 'Esteu segur que voleu eliminar aquests temes?',
+	'DELETE_TOPICS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these topics?',
 	'DISABLE_BBCODE'			=> 'Desactiva el BBCode',
 	'DISABLE_MAGIC_URL'			=> 'No transformis automàticament els URLs',
 	'DISABLE_SMILIES'			=> 'Desactiva les emoticones',
@@ -2987,13 +3171,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_QUOTE'		=> 'Cal que inicieu la sessió per poder citar entrades en aquest fòrum.',
 	'LOGIN_EXPLAIN_REPLY'		=> 'Cal que inicieu la sessió per poder publicar respostes en aquest fòrum.',
 
-	'MAX_FONT_SIZE_EXCEEDED'	=> 'Podeu utilitzar lletres de mida %1$d com a màxim.',
-	'MAX_FLASH_HEIGHT_EXCEEDED'	=> 'Els fitxers flash poden tenir un màxim de %1$d píxels d’alçària.',
-	'MAX_FLASH_WIDTH_EXCEEDED'	=> 'Els fitxers flash poden tenir un màxim de %1$d píxels d’amplària.',
-	'MAX_IMG_HEIGHT_EXCEEDED'	=> 'Les imatges poden tenir un màxim de %1$d píxels d’alçària.',
-	'MAX_IMG_WIDTH_EXCEEDED'	=> 'Les imatges poden tenir un màxim de %1$d píxels d’amplària.',
-
-	'MESSAGE_BODY_EXPLAIN'		=> 'Introduïu el vostre missatge aquí, no pot contenir més de <strong>%d</strong> caràcters.',
+	'MAX_FONT_SIZE_EXCEEDED'	=> 'You may only use fonts up to size %d.',
 	'MESSAGE_DELETED'			=> 'Aquest missatge s’ha eliminat correctament.',
 	'MORE_SMILIES'				=> 'Mostra més emoticones',
 
@@ -3016,8 +3194,6 @@ $lang = array_merge($lang, array(
 	'POLL_MAX_OPTIONS'			=> 'Opcions per usuari',
 	'POLL_MAX_OPTIONS_EXPLAIN'	=> 'Nombre d’opcions que cada usuari pot seleccionar quan vota.',
 	'POLL_OPTIONS'				=> 'Opcions de l’enquesta',
-	'POLL_OPTIONS_EXPLAIN'		=> 'Situeu cada opció en una línia nova. Podeu introduir fins a <strong>%d</strong> opcions.',
-	'POLL_OPTIONS_EDIT_EXPLAIN'	=> 'Situeu cada opció en una línia nova. Podeu introduir fins a <strong>%d</strong> opcions. Si elimineu o afegiu opcions els vots existents es reinicialitzaran.',
 	'POLL_QUESTION'				=> 'Pregunta de l’enquesta',
 	'POLL_TITLE_TOO_LONG'		=> 'El títol de l’enquesta ha de tenir menys de 100 caràcters.',
 	'POLL_TITLE_COMP_TOO_LONG'	=> 'El títol de l’enquesta és massa gran, proveu de treure BBCodes o emoticones.',
@@ -3027,9 +3203,9 @@ $lang = array_merge($lang, array(
 	'POST_APPROVAL_NOTIFY'		=> 'Rebreu un avís quan l’entrada hagi estat aprovada.',
 	'POST_CONFIRMATION'			=> 'Confirmació de l’entrada',
 	'POST_CONFIRM_EXPLAIN'		=> 'Per tal de prevenir entrades automàtiques cal que introduïu un codi de confirmació. El codi es mostra en la imatge que veieu a sota. Si teniu problemes de visió o per alguna raó no podeu llegir aquest codi, si us plau poseu-vos en contacte amb l’%sadministrador del fòrum%s.',
-	'POST_DELETED'				=> 'S’ha eliminat aquesta entrada correctament.',
-	'POST_EDITED'				=> 'S’ha editat aquesta entrada correctament.',
-	'POST_EDITED_MOD'			=> 'S’ha editat aquesta entrada correctament però cal que l’aprovi un moderador abans que sigui visible públicament.',
+	'POST_DELETED'				=> 'This post has been deleted.',
+	'POST_EDITED'				=> 'This post has been edited successfully.',
+	'POST_EDITED_MOD'			=> 'This post has been edited successfully, but it will need to be approved by a moderator before it is publicly viewable.',
 	'POST_GLOBAL'				=> 'Global',
 	'POST_ICON'					=> 'Icona de l’entrada',
 	'POST_NORMAL'				=> 'Normal',
@@ -3042,8 +3218,9 @@ $lang = array_merge($lang, array(
 	'POST_TOPIC_AS'				=> 'Publica el tema com',
 	'PROGRESS_BAR'				=> 'Barra de progrés',
 
-	'QUOTE_DEPTH_EXCEEDED'		=> 'Només podeu incrustar %1$d nivells de citacions.',
+	'QUOTE_NO_NESTING'			=> 'You may not embed quotes within each other.',
 
+	'REMOTE_UPLOAD_TIMEOUT'		=> 'The specified file could not be uploaded because the request timed out.',
 	'SAVE'						=> 'Desa',
 	'SAVE_DATE'					=> 'Desa a',
 	'SAVE_DRAFT'				=> 'Desa un esborrany',
@@ -3060,8 +3237,6 @@ $lang = array_merge($lang, array(
 	'TOO_FEW_POLL_OPTIONS'		=> 'Com a mínim heu d’introduir dues opcions a l’enquesta.',
 	'TOO_MANY_ATTACHMENTS'		=> 'No podeu afegir un altre fitxer adjunt, el màxim és %d.',
 	'TOO_MANY_CHARS'			=> 'El vostre missatge té massa caràcters.',
-	'TOO_MANY_CHARS_POST'		=> 'El vostre missatge conté %1$d caràcters. El nombre màxim de caràcters permesos és %2$d.',
-	'TOO_MANY_CHARS_SIG'		=> 'La vostra signatura conté %1$d caràcters. El nombre màxim de caràcters permesos és %2$d.',
 	'TOO_MANY_POLL_OPTIONS'		=> 'Heu introduït massa opcions a l’enquesta.',
 	'TOO_MANY_SMILIES'			=> 'El vostre missatge té massa emoticones. El nombre màxim d’emoticones permeses és %d.',
 	'TOO_MANY_URLS'				=> 'El vostre missatge té massa URL. El nombre màxim d’URL permeses és %d.',
@@ -3070,6 +3245,8 @@ $lang = array_merge($lang, array(
 
 	'UNAUTHORISED_BBCODE'		=> 'No podeu utilitzar determinats BBCodes: %s.',
 	'UNGLOBALISE_EXPLAIN'		=> 'Per canviar aquest tema de global a normal cal que seleccioneu el fòrum en el qual voleu que es mostri.',
+	'UNSUPPORTED_CHARACTERS_MESSAGE'	=> 'Your message contains the following unsupported characters:<br />%s',
+	'UNSUPPORTED_CHARACTERS_SUBJECT'	=> 'Your subject contains the following unsupported characters:<br />%s',
 	'UPDATE_COMMENT'			=> 'Actualitza el comentari',
 	'URL_INVALID'				=> 'L’URL que heu especificat no és vàlida.',
 	'URL_NOT_FOUND'				=> 'El fitxer que heu especificat no és vàlid.',
@@ -3084,8 +3261,8 @@ $lang = array_merge($lang, array(
 	'VIEW_MESSAGE'				=> '%sMostra el missatge enviat%s',
 	'VIEW_PRIVATE_MESSAGE'		=> '%sMostra el missatge privat enviat%s',
 
-	'WRONG_FILESIZE'			=> 'El fitxer és massa gran, la mida màxima permesa és %1d %2s.',
-	'WRONG_SIZE'				=> 'La imatge ha de tenir com a mínim %1$d píxels d’amplària, %2$d píxels d’alçària i com a màxim %3$d píxels d’amplària i %4$d píxels d’alçària. La imatge que heu tramès té %5$d píxels d’amplària i %6$d píxels d’alçària.',
+	'WRONG_FILESIZE'			=> 'The file is too big, maximum allowed size is %1$d %2$s.',
+	'WRONG_SIZE'				=> 'The image must be at least %1$s wide, %2$s high and at most %3$s wide and %4$s high. The submitted image is %5$s wide and %6$s high.',
 
 	'FONT_TYPE'			=> 'Typeface',
 	'FONT_COLOR'			=> 'Color de lletra',
@@ -3105,10 +3282,6 @@ $lang = array_merge($lang, array(
 
 	'DISPLAY_RESULTS'		=> 'Mostra els resultats com',
 
-	'FOUND_SEARCH_MATCH'		=> 'La cerca ha trobat %d coincidència',
-	'FOUND_SEARCH_MATCHES'		=> 'La cerca ha trobat %d coincidències',
-	'FOUND_MORE_SEARCH_MATCHES'	=> 'La cerca ha trobat més de %d coincidències',
-
 	'GLOBAL'				=> 'Avís global',
 
 	'IGNORED_TERMS'			=> 'ignorats',
@@ -3120,24 +3293,23 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_UNREADSEARCH'=> 'Cal que esteu registrat i amb la sessió iniciada per visualitzar les vostres entrades no llegides.',
 	'LOGIN_EXPLAIN_NEWPOSTS'	=> 'Cal que esteu registrat i amb la sessió iniciada per visualitzar les entrades noves des de la vostra darrera visita.',
 
-	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> 'Heu especificat massa paraules per a la cerca. No introduïu més de %1$d paraules.',
-
-	'NO_KEYWORDS'			=> 'Heu d’especificar com a mínim una paraula per a la cerca. Cada paraula ha de tenir un mínim de %d caràcters i no pot contenir més de %d caràcters sense tenir en compte els comodins.',
+	'NO_KEYWORDS'			=> 'You must specify at least one word to search for. Each word must consist of at least %s and must not contain more than %s excluding wildcards.',
 	'NO_RECENT_SEARCHES'	=> 'No s’ha fet cap cerca recentment.',
 	'NO_SEARCH'				=> 'No se us permet utilitzar el sistema de cerques.',
 	'NO_SEARCH_RESULTS'		=> 'No s’ha trobat cap coincidència.',
-	'NO_SEARCH_TIME'		=> 'Ara mateix no es pot utilitzar la cerca. Si us plau torneu a provar-ho d’aquí a uns minuts.',
 	'NO_SEARCH_UNREADS'		=> 'La cerca d’entrades no llegides està inhabilitada en aquest fòrum.',
 	'WORD_IN_NO_POST'		=> 'No s’ha trobat cap entrada perquè la paraula <strong>%s</strong> no apareix en cap entrada.',
 	'WORDS_IN_NO_POST'		=> 'No s’ha trobat cap entrada perquè les paraules <strong>%s</strong> no apareixen en cap entrada.',
 
 	'POST_CHARACTERS'		=> 'caràcters de les entrades',
+	'PHRASE_SEARCH_DISABLED'	=> 'Searching by exact phrase is not supported on this board.',
 
 	'RECENT_SEARCHES'		=> 'Cerques recents',
 	'RESULT_DAYS'			=> 'Limita els resultats als darrers',
 	'RESULT_SORT'			=> 'Ordena els resultats per',
 	'RETURN_FIRST'			=> 'Retorna els primers',
 	'RETURN_TO_SEARCH_ADV'	=> 'Torna a la cerca avançada',
+	'GO_TO_SEARCH_ADV'	=> 'Go to advanced search',
 
 	'SEARCHED_FOR'				=> 'Paraules utilitzades en la cerca',
 	'SEARCHED_TOPIC'			=> 'Tema on s’ha fet la cerca',
@@ -3164,10 +3336,11 @@ $lang = array_merge($lang, array(
 	'SORT_FORUM'				=> 'Fòrum',
 	'SORT_POST_SUBJECT'			=> 'Assumpte de l’entrada',
 	'SORT_TIME'					=> 'Data de l’entrada',
+	'SPHINX_SEARCH_FAILED'		=> 'Search failed: %s',
+	'SPHINX_SEARCH_FAILED_LOG'	=> 'Sorry, search could not be performed. More information about this failure has been logged in the error log.',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
 	'SELECT_ALL_TAGS'		=> 'No selection',
-	'TOO_FEW_AUTHOR_CHARS'	=> 'Heu d’especificar com a mínim %d caràcters del nom de l’autor.',
 ));
 
 #######language/en/ucp.php#######
@@ -3223,6 +3396,7 @@ $lang = array_merge($lang, array(
 	'ATTACHMENTS_EXPLAIN'			=> 'Aquesta és una llista dels fitxers que heu adjuntat a les entrades d’aquest fòrum.',
 	'ATTACHMENTS_DELETED'			=> 'S’han eliminat els fitxers adjunts correctament.',
 	'ATTACHMENT_DELETED'			=> 'S’ha eliminat el fitxer adjunt correctament.',
+	'AUTOLOGIN_SESSION_KEYS_DELETED'=> 'The selected "Remember Me" login keys were successfully deleted.',
 	'AVATAR_CATEGORY'				=> 'Categoria',
 	'AVATAR_DRIVER_GRAVATAR_TITLE'	=> 'Gravatar',
 	'AVATAR_DRIVER_GRAVATAR_EXPLAIN'=> 'Gravatar is a service that allows you to maintain the same avatar across multiple websites. Visit <a href="http://www.gravatar.com/">Gravatar</a> for more information.',
@@ -3232,12 +3406,14 @@ $lang = array_merge($lang, array(
 	'AVATAR_DRIVER_REMOTE_EXPLAIN'	=> 'Link to avatar images from another website.',
 	'AVATAR_DRIVER_UPLOAD_TITLE'	=> 'Upload avatar',
 	'AVATAR_DRIVER_UPLOAD_EXPLAIN'	=> 'Upload your own custom avatar.',
-	'AVATAR_EXPLAIN'				=> 'Mides màximes; amplària: %1$d píxels, alçària: %2$d píxels, mida del fitxer: %3$.2f KiB.',
+	'AVATAR_EXPLAIN'				=> 'Maximum dimensions; width: %1$s, height: %2$s, file size: %3$.2f KiB.',
 	'AVATAR_FEATURES_DISABLED'		=> 'Actualment la funció d’avatars està inhabilitada.',
 	'AVATAR_GALLERY'				=> 'Galeria local',
 	'AVATAR_GENERAL_UPLOAD_ERROR'	=> 'No s’ha pogut penjar l’avatar a %s.',
 	'AVATAR_NOT_ALLOWED'			=> 'No es pot mostrar el vostre avatar perquè els avatars estan inhabilitats.',
 	'AVATAR_PAGE'					=> 'Pàgina',
+	'AVATAR_SELECT'					=> 'Select your avatar',
+	'AVATAR_TYPE'					=> 'Avatar type',
 	'AVATAR_TYPE_NOT_ALLOWED'		=> 'El vostre avatar actual no es pot mostrar perquè aquest tipus d’avatar està inhabilitat.',
 
 	'BACK_TO_DRAFTS'			=> 'Torna als esborranys desats',
@@ -3246,7 +3422,6 @@ $lang = array_merge($lang, array(
 	'BIRTHDAY_EXPLAIN'			=> 'Si definiu un any, es mostrarà la vostra edat quan sigui el vostre aniversari.',
 	'BOARD_DATE_FORMAT'			=> 'Format de data',
 	'BOARD_DATE_FORMAT_EXPLAIN'	=> 'La sintaxi utilitzada és idèntica a la de la funció <a href="http://www.php.net/date">date()</a> del PHP.',
-	'BOARD_DST'					=> 'L’horari d’estiu/<abbr title="Daylight Saving Time">DST</abbr> està activat',
 	'BOARD_LANGUAGE'			=> 'Idioma',
 	'BOARD_STYLE'				=> 'Estil del fòrum',
 	'BOARD_TIMEZONE'			=> 'Fus horari',
@@ -3265,8 +3440,6 @@ $lang = array_merge($lang, array(
 	'CLICK_RETURN_FOLDER'		=> '%1$sTorna a la meva carpeta “%3$s”%2$s',
 	'CONFIRMATION'				=> 'Confirmació de registre',
 	'CONFIRM_CHANGES'			=> 'Confirma els canvis',
-	'CONFIRM_EMAIL'				=> 'Confirmeu l’adreça electrònica',
-	'CONFIRM_EMAIL_EXPLAIN'		=> 'Només cal que l’especifiqueu si voleu canviar la vostra adreça electrònica.',
 	'CONFIRM_EXPLAIN'			=> 'Per tal de prevenir els registres automàtics cal que introduïu un codi de confirmació. El codi es mostra en la imatge que veieu a sota. Si teniu problemes de visió o per alguna raó no podeu llegir aquest codi, si us plau poseu-vos en contacte amb l’%sadministrador del fòrum%s.',
 	'VC_REFRESH'				=> 'Refresca el codi de confirmació',
 	'VC_REFRESH_EXPLAIN'		=> 'Si no podeu llegir el codi, podeu demanar-ne un de nou fent clic al botó.',
@@ -3275,7 +3448,7 @@ $lang = array_merge($lang, array(
 	'CONFIRM_PASSWORD_EXPLAIN'	=> 'Només cal que confirmeu la contrasenya si l’heu canviada a sobre.',
 	'COPPA_BIRTHDAY'			=> 'Per continuar amb el procediment de registre digueu quan vau néixer.',
 	'COPPA_COMPLIANCE'			=> 'Compliment de COPPA',
-	'COPPA_EXPLAIN'				=> 'Tingueu en compte que en fer clic a Tramet es crearà el vostre compte. Això no obstant, no es pot activar fins que un dels vostres pares o tutors aprovi el vostre registre. Se us enviarà per correu electrònic una còpia del formulari necessari amb els detalls d’on l’heu d’enviar.',
+	'COPPA_EXPLAIN'				=> 'Please note that clicking submit will create your account. However it cannot be activated until a parent or guardian approves your registration. You will be e-mailed a copy of the necessary form with details of where to send it.',
 	'CREATE_FOLDER'				=> 'Afegeix una carpeta…',
 	'CURRENT_IMAGE'				=> 'Imatge actual',
 	'CURRENT_PASSWORD'			=> 'Contrasenya actual',
@@ -3330,27 +3503,34 @@ $lang = array_merge($lang, array(
 	'EXPORT_FOLDER'				=> 'Exporta aquesta vista',
 
 	'FIELD_REQUIRED'					=> 'El camp “%s” s’ha d’emplenar.',
-	'FIELD_TOO_SHORT'					=> 'El camp “%1$s” és massa curt, calen un mínim de %2$d caràcters.',
-	'FIELD_TOO_LONG'					=> 'El camp “%1$s” és massa llarg, es permet un màxim de %2$d caràcters.',
-	'FIELD_TOO_SMALL'					=> 'El valor de “%1$s” és massa petit, cal un valor mínim de %2$d.',
-	'FIELD_TOO_LARGE'					=> 'El valor de “%1$s” és massa gran, es permet un valor màxim de %2$d.',
+
+	'FIELD_TOO_SMALL'					=> 'The value of “%2$s” is too small, a minimum value of %1$d is required.',
+	'FIELD_TOO_LARGE'					=> 'The value of “%2$s” is too large, a maximum value of %1$d is allowed.',
+	'FIELD_INVALID_CHARS_INVALID'		=> 'The field “%s” has invalid characters.',
 	'FIELD_INVALID_CHARS_NUMBERS_ONLY'	=> 'El camp “%s” conte caràcters no vàlids, només es permeten números.',
+	'FIELD_INVALID_CHARS_ALPHA_DOTS'	=> 'The field “%s” has invalid characters, only alphanumeric or . characters are allowed.',
 	'FIELD_INVALID_CHARS_ALPHA_ONLY'	=> 'El camp “%s” conte caràcters no vàlids, només es permeten caràcters alfanumèrics.',
-	'FIELD_INVALID_CHARS_SPACERS_ONLY'	=> 'El camp “%s” conte caràcters no vàlids, només es permeten caràcters alfanumèrics, espais o -+_[]',
+	'FIELD_INVALID_CHARS_ALPHA_PUNCTUATION'	=> 'The field “%s” has invalid characters, only alphanumeric or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_ALPHA_SPACERS'	=> 'The field “%s” has invalid characters, only alphanumeric, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_ALPHA_UNDERSCORE'	=> 'The field “%s” has invalid characters, only alphanumeric or _ characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_DOTS'	=> 'The field “%s” has invalid characters, only letter, number or . characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_ONLY'	=> 'The field “%s” has invalid characters, only letter and number characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_PUNCTUATION'	=> 'The field “%s” has invalid characters, only letter, number or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_SPACERS'		=> 'The field “%s” has invalid characters, only letter, number, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_UNDERSCORE'		=> 'The field “%s” has invalid characters, only letter, number or _ characters are allowed.',
 	'FIELD_INVALID_DATE'				=> 'El camp “%s” conté una data no vàlida.',
+	'FIELD_INVALID_URL'					=> 'The field “%s” has an invalid url.',
 	'FIELD_INVALID_VALUE'				=> 'El camp “%s” conté un valor no vàlid.',
 
 	'FOE_MESSAGE'				=> 'Missatge d’un enemic',
 	'FOES_EXPLAIN'				=> 'Els enemics són usuaris que són ignorats per defecte. Les entrades d’aquests usuaris no seran completament visibles. El missatges personals dels enemics sí que es permeten. Tingueu en compte que no podeu ignorar els moderadors o els administradors.',
 	'FOES_UPDATED'				=> 'S’ha actualitzat la vostra llista d’enemics correctament.',
 	'FOLDER_ADDED'				=> 'S’ha afegit la carpeta correctament.',
-	'FOLDER_MESSAGE_STATUS'		=> '%1$d missatges emmagatzemats de %2$d',
 	'FOLDER_NAME_EMPTY'			=> 'Cal que introduïu un nom per aquesta carpeta.',
 	'FOLDER_NAME_EXIST'			=> 'La carpeta <strong>%s</strong> ja existeix.',
 	'FOLDER_OPTIONS'			=> 'Opcions de la carpeta',
 	'FOLDER_RENAMED'			=> 'S’ha canviat el nom de la carpeta correctament.',
 	'FOLDER_REMOVED'			=> 'S’ha eliminat correctament la carpeta.',
-	'FOLDER_STATUS_MSG'			=> 'La utilització de la carpeta és del %1$d%% (%2$d missatges emmagatzemats de %3$d)',
 	'FORWARD_PM'				=> 'Reenvia el MP',
 	'FORCE_PASSWORD_EXPLAIN'	=> 'Abans de continuar navegant pel fòrum cal que canvieu la vostra contrasenya.',
 	'FRIEND_MESSAGE'			=> 'Missatge d’un amic',
@@ -3419,16 +3599,35 @@ $lang = array_merge($lang, array(
 	'MOVE_DELETED_MESSAGES_TO'		=> 'Desplaça els missatges de la carpeta eliminada a',
 	'MOVE_DOWN'						=> 'Baixa',
 	'MOVE_MARKED_TO_FOLDER'			=> 'Desplaça els missatges marcats a %s',
-	'MOVE_PM_ERROR'					=> 'S’ha produït un error mentre es movien els missatges a la carpeta nova, només s’han mogut %1d missatges de %2d.',
 	'MOVE_TO_FOLDER'				=> 'Desplaça’l a la carpeta',
 	'MOVE_UP'						=> 'Puja',
 
-	'NEW_EMAIL_CONFIRM_EMPTY'		=> 'No heu introduït l’adreça electrònica de confirmació.',
-	'NEW_EMAIL_ERROR'				=> 'Les adreces electròniques que heu introduït no coincideixen.',
 	'NEW_FOLDER_NAME'				=> 'Nom de la carpeta nova',
 	'NEW_PASSWORD'					=> 'Contrasenya nova',
 	'NEW_PASSWORD_CONFIRM_EMPTY'	=> 'No heu introduït la contrasenya de confirmació.',
 	'NEW_PASSWORD_ERROR'			=> 'Les contrasenyes que heu heu introduït no coincideixen.',
+
+	'NOTIFICATIONS_MARK_ALL_READ'						=> 'Mark all notifications read',
+	'NOTIFICATIONS_MARK_ALL_READ_CONFIRM'				=> 'Are you sure you want to mark all notifications read?',
+	'NOTIFICATIONS_MARK_ALL_READ_SUCCESS'				=> 'All notifications have been marked read.',
+	'NOTIFICATION_GROUP_MISCELLANEOUS'					=> 'Miscellaneous Notifications',
+	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
+	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
+	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'E-mail',
+	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
+	'NOTIFICATION_TYPE'									=> 'Notification type',
+	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
+	'NOTIFICATION_TYPE_GROUP_REQUEST'					=> 'Someone requests to join a group you lead',
+	'NOTIFICATION_TYPE_IN_MODERATION_QUEUE'				=> 'A post or topic needs approval',
+	'NOTIFICATION_TYPE_MODERATION_QUEUE'				=> 'Your topics/posts are approved or disapproved by a moderator',
+	'NOTIFICATION_TYPE_PM'								=> 'Someone sends you a private message',
+	'NOTIFICATION_TYPE_POST'							=> 'Someone replies to a topic to which you are subscribed',
+	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
+	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
+	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+
 	'NOTIFY_METHOD'					=> 'Mètode de notificació',
 	'NOTIFY_METHOD_BOTH'			=> 'Ambdós',
 	'NOTIFY_METHOD_EMAIL'			=> 'Només per correu electrònic',
@@ -3446,10 +3645,9 @@ $lang = array_merge($lang, array(
 	'NOT_ADDED_FOES_SELF'			=> 'No podeu afegir-vos a la llista d’enemics.',
 	'NOT_AGREE'						=> 'No accepto aquestes condicions',
 	'NOT_ENOUGH_SPACE_FOLDER'		=> 'La carpeta de destí “%s” és plena. L’acció sol·licitada no s’ha dut a terme.',
-	'NOT_MOVED_MESSAGE'				=> 'Actualment teniu 1 missatge privat retingut perquè la carpeta és plena.',
-	'NOT_MOVED_MESSAGES'			=> 'Actualment teniu %d missatges privats retinguts perquè la carpeta és plena.',
 	'NO_ACTION_MODE'				=> 'No s’ha especificat cap acció per al missatge.',
 	'NO_AUTHOR'						=> 'No s’ha especificat cap autor per aquest missatge',
+	'NO_AVATAR'						=> 'No avatar selected',
 	'NO_AVATAR_CATEGORY'			=> 'Cap',
 
 	'NO_AUTH_DELETE_MESSAGE'		=> 'No esteu autoritzat a eliminar missatges privats.',
@@ -3457,6 +3655,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_FORWARD_MESSAGE'		=> 'No esteu autoritzat a reenviar missatges privats.',
 	'NO_AUTH_GROUP_MESSAGE'			=> 'No esteu autoritzat a enviar missatges privats a grups.',
 	'NO_AUTH_PASSWORD_REMINDER'		=> 'No esteu autoritzat a sol·licitar una contrasenya nova.',
+	'NO_AUTH_PROFILEINFO'			=> 'You are not authorised to change your profile information.',
 	'NO_AUTH_READ_HOLD_MESSAGE'		=> 'No esteu autoritzat a llegir missatges privats retinguts.',
 	'NO_AUTH_READ_MESSAGE'			=> 'No esteu autoritzat a llegir missatges privats.',
 	'NO_AUTH_READ_REMOVED_MESSAGE'	=> 'No podeu llegir aquest missatge privat perquè l’autor l’ha eliminat.',
@@ -3487,10 +3686,10 @@ $lang = array_merge($lang, array(
 	'NO_WATCHED_SELECTED'		=> 'No heu seleccionat cap tema o fòrum al qual estigueu subscrit.',
 	'NO_WATCHED_TOPICS'			=> 'No esteu subscrit a cap tema.',
 
-	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'La contrasenya ha de tenir entre %1$d i %2$d caràcters i ha de contenir majúscules, minúscules i números.',
-	'PASS_TYPE_ANY_EXPLAIN'		=> 'Ha de tenir una longitud d’entre %1$d i %2$d caràcters.',
-	'PASS_TYPE_CASE_EXPLAIN'	=> 'La contrasenya ha de tenir entre %1$d i %2$d caràcters i ha de contenir majúscules, minúscules.',
-	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'La contrasenya ha de tenir entre %1$d i %2$d caràcters i ha de contenir majúscules, minúscules, números i signes.',
+	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case and must contain numbers.',
+	'PASS_TYPE_ANY_EXPLAIN'		=> 'Must be between %1$s and %2$s.',
+	'PASS_TYPE_CASE_EXPLAIN'	=> 'Password must be between %1$s and %2$s long and must contain letters in mixed case.',
+	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case, must contain numbers and must contain symbols.',
 	'PASSWORD'					=> 'Contrasenya',
 	'PASSWORD_ACTIVATED'		=> 'S’ha activat la vostra contrasenya nova.',
 	'PASSWORD_UPDATED'			=> 'S’ha enviat una contrasenya nova a l’adreça electrònica amb la que us vau registrar.',
@@ -3501,13 +3700,16 @@ $lang = array_merge($lang, array(
 	'PM_FROM_REMOVED_AUTHOR'	=> 'Aquest missatge l’ha enviat un usuari que ja no està registrat.',
 	'PM_ICON'					=> 'Icona MP',
 	'PM_INBOX'					=> 'Safata d’entrada',
+	'PM_MARK_ALL_READ'			=> 'Mark all messages read',
+	'PM_MARK_ALL_READ_SUCCESS'	=> 'All private messages in this folder have been marked read',
 	'PM_NO_USERS'				=> 'Els usuaris que heu intentat afegir no existeixen.',
 	'PM_OUTBOX'					=> 'Safata de sortida',
 	'PM_SENTBOX'				=> 'Missatges enviats',
 	'PM_SUBJECT'				=> 'Assumpte del missatge',
 	'PM_TO'						=> 'Envia’l a',
+	'PM_TOOLS'					=> 'Message tools',
+	'PM_USERS_REMOVED_NO_PERMISSION'	=> 'Some users couldn’t be added as they do not have permission to read private messages.',
 	'PM_USERS_REMOVED_NO_PM'	=> 'No s’han pogut afegir alguns usuaris perquè han inhabilitat la recepció de missatges privats.',
-	'POPUP_ON_PM'				=> 'Mostra una finestra emergent quan rebi un missatge privat nou',
 	'POST_EDIT_PM'				=> 'Edició de missatges',
 	'POST_FORWARD_PM'			=> 'Reenviament de missatges',
 	'POST_NEW_PM'				=> 'Redacció de missatges',
@@ -3519,6 +3721,8 @@ $lang = array_merge($lang, array(
 	'PREFERENCES_UPDATED'		=> 'S’han actualitzat les vostres preferències.',
 	'PROFILE_INFO_NOTICE'		=> 'Tingueu en compte que aquesta informació pot ser vista per altres membres. Sigueu prudent amb la informació personal que afegiu. Els camps marcats amb un * són obligatoris.',
 	'PROFILE_UPDATED'			=> 'S’ha actualitzat el vostre perfil.',
+	'PROFILE_AUTOLOGIN_KEYS'	=> 'The "Remember Me" login keys automatically log you in when you visit the board. If you logout, the remember me login key is deleted only on the computer you are using to logout. Here you can see remember login keys created on other computers you used to access this site.',
+	'PROFILE_NO_AUTOLOGIN_KEYS'	=> 'There are no saved "Remember Me" login keys.',
 
 	'RECIPIENT'							=> 'Destinatari',
 	'RECIPIENTS'						=> 'Destinataris',
@@ -3543,8 +3747,6 @@ $lang = array_merge($lang, array(
 	'RULE_DELETED'						=> 'S’ha eliminat la regla correctament.',
 	'RULE_LIMIT_REACHED'				=> 'No podeu afegir més regles de MP. Heu assolit el nombre màxim de regles.',
 	'RULE_NOT_DEFINED'					=> 'No s’ha especificat la regla correctament.',
-	'RULE_REMOVED_MESSAGE'				=> 'S’ha eliminat 1 missatge privat a causa dels filtres.',
-	'RULE_REMOVED_MESSAGES'				=> 'S’han eliminat %d missatges privats a causa dels filtres.',
 
 	'SAME_PASSWORD_ERROR'		=> 'La contrasenya nova que heu introduït és la mateixa que la vostra contrasenya actual.',
 	'SEARCH_YOUR_POSTS'			=> 'Mostra les meves entrades',
@@ -3556,6 +3758,8 @@ $lang = array_merge($lang, array(
 	'SIGNATURE_TOO_LONG'		=> 'La vostra signatura és massa llarga.',
 	'SELECT_CURRENT_TIME'		=> 'Select current time',
 	'SELECT_TIMEZONE'			=> 'Select timezone',
+	'SELECT_CURRENT_TIME'		=> 'Select current time',
+	'SELECT_TIMEZONE'			=> 'Select timezone',
 	'SORT'						=> 'Ordena',
 	'SORT_COMMENT'				=> 'Comentari del fitxer',
 	'SORT_DOWNLOADS'			=> 'Baixades',
@@ -3565,15 +3769,28 @@ $lang = array_merge($lang, array(
 	'SORT_SIZE'					=> 'Mida del fitxer',
 
 	'TIMEZONE'					=> 'Fus horari',
-	'TO'						=> 'Destinatari',
+	'TIMEZONE_DATE_SUGGESTION'	=> 'Suggestion: %s',
+	'TIMEZONE_INVALID'			=> 'The timezone you selected is invalid.',
+	'TO'						=> 'Recipient',
+	'TO_MASS'					=> 'Recipients',
+	'TO_ADD'					=> 'Add recipient',
+	'TO_ADD_MASS'				=> 'Add recipients',
+	'TO_ADD_GROUPS'				=> 'Add groups',
 	'TOO_MANY_RECIPIENTS'		=> 'Heu provat d’enviar un missatge privat a massa destinataris.',
 	'TOO_MANY_REGISTERS'		=> 'Heu excedit el nombre màxim d’intents de registre durant aquesta sessió. Si us plau, torneu a intentar-ho més tard.',
 
 	'UCP'						=> 'Tauler de control de l’usuari',
 	'UCP_ACTIVATE'				=> 'Activa el compte',
 	'UCP_ADMIN_ACTIVATE'		=> 'Tingueu en compte que haureu d’introduir una adreça electrònica vàlida abans que el vostre compte sigui activat. L’administrador revisarà el vostre compte i si l’aprova rebreu un correu electrònic a l’adreça que heu especificat.',
-	'UCP_AIM'					=> 'AOL Instant Messenger',
 	'UCP_ATTACHMENTS'			=> 'Fitxers adjunts',
+	'UCP_AUTH_LINK'				=> 'External accounts',
+	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
+	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
+	'UCP_AUTH_LINK_LINK'		=> 'Enllaç',
+	'UCP_AUTH_LINK_MANAGE'		=> 'Manage external account associations',
+	'UCP_AUTH_LINK_NOT_SUPPORTED'	=> 'Linking board accounts to external services is not supported by this board’s current authentication method.',
+	'UCP_AUTH_LINK_TITLE'		=> 'Manage your external account associations',
+	'UCP_AUTH_LINK_UNLINK'		=> 'Unlink',
 	'UCP_AUTH_LINK'				=> 'External accounts',
 	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
 	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
@@ -3585,8 +3802,8 @@ $lang = array_merge($lang, array(
 	'UCP_COPPA_BEFORE'			=> 'Abans del %s',
 	'UCP_COPPA_ON_AFTER'		=> 'Durant o després del %s',
 	'UCP_EMAIL_ACTIVATE'		=> 'Tingueu en compte que haureu d’introduir una adreça electrònica vàlida abans que el vostre compte sigui activat. Rebreu un correu electrònic que conté un enllaç d’activació a l’adreça que heu especificat.',
-	'UCP_ICQ'					=> 'Número ICQ',
 	'UCP_JABBER'				=> 'Adreça Jabber',
+	'UCP_LOGIN_LINK'			=> 'Set up an external account association',
 
 	'UCP_MAIN'					=> 'Principal',
 	'UCP_MAIN_ATTACHMENTS'		=> 'Gestió dels fitxers adjunts',
@@ -3595,7 +3812,6 @@ $lang = array_merge($lang, array(
 	'UCP_MAIN_FRONT'			=> 'Pàgina principal',
 	'UCP_MAIN_SUBSCRIBED'		=> 'Gestió de les subscripcions',
 
-	'UCP_MSNM'					=> 'WL/MSN Messenger',
 	'UCP_NO_ATTACHMENTS'		=> 'No heu publicat cap fitxer.',
 
 	'UCP_NOTIFICATION_LIST'				=> 'Manage notifications',
@@ -3612,8 +3828,6 @@ $lang = array_merge($lang, array(
 	'UCP_PM_COMPOSE'			=> 'Redacció de missatges',
 	'UCP_PM_DRAFTS'				=> 'Gestió dels esborranys de MP',
 	'UCP_PM_OPTIONS'			=> 'Regles, carpetes i preferències',
-	'UCP_PM_POPUP'				=> 'Missatges privats',
-	'UCP_PM_POPUP_TITLE'		=> 'Finestra emergent per a missatges privats',
 	'UCP_PM_UNREAD'				=> 'Missatges no llegits',
 	'UCP_PM_VIEW'				=> 'Visualització dels missatges',
 
@@ -3628,11 +3842,11 @@ $lang = array_merge($lang, array(
 	'UCP_USERGROUPS_MEMBER'		=> 'Edició de les afiliacions',
 	'UCP_USERGROUPS_MANAGE'		=> 'Gestió dels grups',
 
+	'UCP_PASSWORD_RESET_DISABLED'	=> 'The password reset functionality has been disabled. If you need help accessing your account, please contact the %sBoard Administrator%s',
 	'UCP_REGISTER_DISABLE'			=> 'No és possible crear un compte nou actualment.',
 	'UCP_REMIND'					=> 'Envia la contrasenya',
 	'UCP_RESEND'					=> 'Envia el correu electrònic d’activació',
 	'UCP_WELCOME'					=> 'Benvingut al Tauler de control de l’usuari. Des d’aquí podeu visualitzar, actualitzar i fer un seguiment del vostre perfil, preferències, i subscripcions. També podeu enviar missatges a altres usuaris si se’n permet l’ús. Asegureu-vos de llegir els possibles avisos abans de continuar.',
-	'UCP_YIM'						=> 'Yahoo Messenger',
 	'UCP_ZEBRA'						=> 'Amics i enemics',
 	'UCP_ZEBRA_FOES'				=> 'Gestió dels enemics',
 	'UCP_ZEBRA_FRIENDS'				=> 'Gestió dels amics',
@@ -3642,12 +3856,12 @@ $lang = array_merge($lang, array(
 	'UPLOAD_AVATAR_FILE'			=> 'Penja’l des de la meva màquina',
 	'UPLOAD_AVATAR_URL'				=> 'Penja’l des d’un URL',
 	'UPLOAD_AVATAR_URL_EXPLAIN'		=> 'Introduïu l’URL on està ubicada la imatge. La imatge es copiarà en aquest lloc web.',
-	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'El nom d’usuari ha de tenir entre %1$d i %2$d caràcters i només es poden utilitzar caràcters alfanumèrics.',
-	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'El nom d’usuari ha de tenir entre %1$d i %2$d caràcters i només es poden utilitzar caràcters alfanumèrics, espais o els caràcters -+_[]',
-	'USERNAME_ASCII_EXPLAIN'		=> 'El nom d’usuari ha de tenir entre %1$d i %2$d caràcters i només es poden utilitzar caràcters ASCII, és a dir sense signes especials.',
-	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'El nom d’usuari ha de tenir entre %1$d i %2$d caràcters i només es poden utilitzar lletres i números.',
-	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'El nom d’usuari ha de tenir entre %1$d i %2$d caràcters i només es poden utilitzar lletres, números, espais o els caràcters -+_[]',
-	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Ha de tenir una longitud d’entre %1$d i %2$d caràcters.',
+	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only alphanumeric characters.',
+	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use alphanumeric, space or -+_[] characters.',
+	'USERNAME_ASCII_EXPLAIN'		=> 'Username must be between %1$s and %2$s long and use only ASCII characters, so no special symbols.',
+	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only letter or number characters.',
+	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use letter, number, space or -+_[] characters.',
+	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Length must be between %1$s and %2$s.',
 	'USERNAME_TAKEN_USERNAME'		=> 'El nom d’usuari que heu introduït ja existeix, si us plau trieu un nom d’usuari diferent.',
 	'USERNAME_DISALLOWED_USERNAME'	=> 'El nom d’usuari que heu introduït no està permès o conté una paraula no permesa. Si us plau, trieu nom d’usuari diferent.',
 	'USER_NOT_FOUND_OR_INACTIVE'	=> 'Els noms d’usuari que heu especificat no s’han pogut trobar o bé són d’usuaris no activats.',
@@ -3660,10 +3874,9 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_PM'				=> 'MP següent',
 	'VIEW_PM'					=> 'Mostra el missatge privat',
 	'VIEW_PM_INFO'				=> 'Detalls del missatge',
-	'VIEW_PM_MESSAGE'			=> '1 missatge',
-	'VIEW_PM_MESSAGES'			=> '%d missatges',
 	'VIEW_PREVIOUS_HISTORY'		=> 'MP precedent de l’historial',
 	'VIEW_PREVIOUS_PM'			=> 'MP precedent',
+	'VIEW_PROFILE'				=> 'View profile',
 	'VIEW_SIGS'					=> 'Mostra les signatures',
 	'VIEW_SMILIES'				=> 'Mostra les emoticones amb imatges',
 	'VIEW_TOPICS_DAYS'			=> 'Mostra els temes dels darrers dies',
@@ -3771,8 +3984,6 @@ $lang = array_merge($lang, array(
 	'UNREAD_POSTS_LOCKED'	=> 'Entrades no llegides [ Bloquejat ]',
 
 	'VIEW_FORUM'			=> 'Mostra el fòrum',
-	'VIEW_FORUM_TOPIC'		=> '1 tema',
-	'VIEW_FORUM_TOPICS'		=> '%d temes',
 
 	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
 	'REMOVE_FILTER'		=> 'Remove filter',
@@ -3781,6 +3992,7 @@ $lang = array_merge($lang, array(
 #######language/en/viewtopic.php#######
 
 $lang = array_merge($lang, array(
+	'APPROVE'								=> 'Aprova',
 	'ATTACHMENT'						=> 'Fitxer adjunt',
 	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'La funció de fitxers adjunts està inhabilitada.',
 
@@ -3793,14 +4005,13 @@ $lang = array_merge($lang, array(
 	'BUMP_TOPIC'			=> 'Reactiva el tema',
 
 	'CODE'					=> 'Codi',
-	'COLLAPSE_QR'			=> 'Oculta la reposta ràpida',
-
+	
 	'DELETE_TOPIC'			=> 'Elimina el tema',
+	'DELETED_INFORMATION'	=> 'Deleted by %1$s on %2$s',
+	'DISAPPROVE'					=> 'Rebutja',
 	'DOWNLOAD_NOTICE'		=> 'No teniu els permisos necessaris per veure els fitxers adjunts d’aquesta entrada.',
 
-	'EDITED_TIMES_TOTAL'	=> '%1$s l’ha editat per darrera vegada el dia: %2$s, en total s’ha editat %3$d vegades.',
-	'EDITED_TIME_TOTAL'		=> '%1$s l’ha editat per darrera vegada el dia: %2$s, en total s’ha editat %3$d vegada.',
-	'EMAIL_TOPIC'			=> 'Envia’l per correu electrònic a un amic',
+	'EMAIL_TOPIC'			=> 'E-mail topic',
 	'ERROR_NO_ATTACHMENT'	=> 'El fitxer adjunt seleccionat ja no existeix.',
 
 	'FILE_NOT_FOUND_404'	=> 'El fitxer <strong>%s</strong> no existeix.',
@@ -3815,8 +4026,6 @@ $lang = array_merge($lang, array(
 	'MAKE_GLOBAL'				=> 'Canvia’l a “Global”',
 	'MAKE_NORMAL'				=> 'Canvia’l a “Tema estàndard”',
 	'MAKE_STICKY'				=> 'Canvia’l a “Tema recurrent”',
-	'MAX_OPTIONS_SELECT'		=> 'Podeu seleccionar fins a <strong>%d</strong> opcions',
-	'MAX_OPTION_SELECT'			=> 'Podeu seleccionar <strong>1</strong> opció',
 	'MISSING_INLINE_ATTACHMENT'	=> 'El fitxer adjunt <strong>%s</strong> ja no està disponible',
 	'MOVE_TOPIC'				=> 'Desplaça el tema',
 
@@ -3830,6 +4039,7 @@ $lang = array_merge($lang, array(
 	'POLL_ENDED_AT'			=> 'L’enquesta ha acabat el %s',
 	'POLL_RUN_TILL'			=> 'L’enquesta dura fins %s',
 	'POLL_VOTED_OPTION'		=> 'Heu votat per aquesta opció',
+	'POST_DELETED_RESTORE'	=> 'This post has been deleted. It can be restored.',
 	'PRINT_TOPIC'			=> 'Vista d’impressió',
 
 	'QUICK_MOD'				=> 'Eines de moderació ràpida',
@@ -3837,11 +4047,14 @@ $lang = array_merge($lang, array(
 	'QUOTE'					=> 'Citació',
 
 	'REPLY_TO_TOPIC'		=> 'Respon al tema',
+	'RESTORE'				=> 'Restore',
+	'RESTORE_TOPIC'			=> 'Restore topic',
 	'RETURN_POST'			=> '%sTorna a l’entrada%s',
 
 	'SHOW_QR'				=> 'Resposta ràpida',
 	'SUBMIT_VOTE'			=> 'Emet el vot',
 
+	'TOPIC_TOOLS'			=> 'Topic tools',
 	'TOTAL_VOTES'			=> 'Vots totals',
 
 	'UNLOCK_TOPIC'			=> 'Desbloqueja el tema',
@@ -3850,10 +4063,7 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_TOPIC'		=> 'Tema següent',
 	'VIEW_PREVIOUS_TOPIC'	=> 'Tema precedent',
 	'VIEW_RESULTS'			=> 'Mostra els resultats',
-	'VIEW_TOPIC_POST'		=> '1 entrada',
-	'VIEW_TOPIC_POSTS'		=> '%d entrades',
 	'VIEW_UNREAD_POST'		=> 'Primera entrada no llegida',
-	'VISIT_WEBSITE'			=> 'Visita el lloc web',
 	'VOTE_SUBMITTED'		=> 'S’ha emès el vostre vot.',
 	'VOTE_CONVERTED'		=> 'No es permet el canvi de vot en enquestes convertides des d’un altre tipus de fòrum.',
 
@@ -9443,6 +9653,7 @@ $lang = array_merge($lang, array(
 	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'	=> 'Mida màxima de cada fitxer fitxer adjunts a un missatge privat, un 0 significa il·limitada.',
 	'ATTACH_ORPHAN_URL'					=> 'Fitxers adjunts orfes',
 	'ATTACH_POST_ID'					=> 'ID de l’entrada',
+	'ATTACH_POST_TYPE'					=> 'Post type',
 	'ATTACH_QUOTA'						=> 'Quota de disc total per a fitxers adjunts',
 	'ATTACH_QUOTA_EXPLAIN'				=> 'Espai màxim en disc disponible per als fitxers adjunts de tot el fòrum, un 0 significa il·limitat.',
 	'ATTACH_TO_POST'					=> 'Adjunta el fitxer a l’entrada',
@@ -9488,6 +9699,9 @@ $lang = array_merge($lang, array(
 	'EXT_GROUP_REAL_MEDIA'			=> 'Real Media',
 	'EXT_GROUP_WINDOWS_MEDIA'		=> 'Windows Media',
 
+	'FILES_GONE'			=> 'Some of the attachments you selected for deletion do not exist. They may have been already deleted. Attachments that did exist were deleted.',
+	'FILES_STATS_WRONG'		=> 'Your file statistics are likely inaccurate and need to be resynchronised. Actual values: number of attachments = %1$d, total size of attachments = %2$s.<br />Click %3$shere%4$s to resynchronise them.',
+
 	'GO_TO_EXTENSIONS'		=> 'Salta a la pantalla de gestió d’extensions',
 	'GROUP_NAME'			=> 'Nom del grup',
 
@@ -9511,6 +9725,7 @@ $lang = array_merge($lang, array(
 	'NOT_ALLOWED_IN_PM'			=> 'Només permès a les entrades',
 	'NOT_ALLOWED_IN_PM_POST'	=> 'No permès',
 	'NOT_ASSIGNED'				=> 'No assignat',
+	'NO_ATTACHMENTS'			=> 'No attachments found for this period.',
 	'NO_EXT_GROUP'				=> 'Cap',
 	'NO_EXT_GROUP_NAME'			=> 'No heu introduït el nom del grup',
 	'NO_EXT_GROUP_SPECIFIED'	=> 'No heu especificat cap grup d’extensions.',
@@ -9523,6 +9738,10 @@ $lang = array_merge($lang, array(
 	'ONLY_ALLOWED_IN_PM'	=> 'Només permès als missatges privats',
 	'ORDER_ALLOW_DENY'		=> 'Permet',
 	'ORDER_DENY_ALLOW'		=> 'Denega',
+
+	'REMOVE_ALLOWED_IPS'			=> 'Treu o desexclou les adreces IP/noms d’amfitrió <em>permeses</em>',
+	'REMOVE_DISALLOWED_IPS'			=> 'Treu o desexclou les adreces IP/noms d’amfitrió <em>no permeses</em>',
+	'RESYNC_FILES_STATS_CONFIRM'	=> 'Are you sure you wish to resynchronise file statistics?',
 
 	'REMOVE_ALLOWED_IPS'		=> 'Treu o desexclou les adreces IP/noms d’amfitrió <em>permeses</em>',
 	'REMOVE_DISALLOWED_IPS'		=> 'Treu o desexclou les adreces IP/noms d’amfitrió <em>no permeses</em>',
@@ -9592,18 +9811,17 @@ $lang = array_merge($lang, array(
 	'PERMANENT'		=> 'Permanent',
 
 	'UNTIL'						=> 'Fins el',
-	'USER_BAN'					=> 'Bandeig',
+	'USER_BAN'					=> 'Ban one or more users by username',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> 'Habiliteu aquesta opció per excloure els usuaris introduïts de tots els bandejos actuals.',
 	'USER_BAN_EXPLAIN'			=> 'Podeu bandejar múltiples usuaris d’un sol cop introduïnt cada nom en una línia nova. Utilitzeu la funció <span style="text-decoration: underline;">Cerca un membre</span> per trobar i afegir un o més usuaris automàticament.',
 	'USER_NO_BANNED'			=> 'No hi ha noms d’usuari bandejats',
-	'USER_UNBAN'				=> 'Desbandeja o desexclou els noms d’usuari',
+	'USER_UNBAN'				=> 'Un-ban or un-exclude users by username',
 	'USER_UNBAN_EXPLAIN'		=> 'Podeu desbandejar (o desexcloure) múltiples usuaris d’un sol cop si utilitzeu la combinació de ratolí i teclat adequada per al vostre ordinador i navegador. Els usuaris exclosos estan ressaltats.',
 ));
 
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'				=> 'Habilita l’horari d’estiu/<abbr title="Daylight Saving Time">DST</abbr>',
 	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
 	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
 	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
@@ -9629,16 +9847,28 @@ $lang = array_merge($lang, array(
 	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Aquí podeu determinar l’operació bàsica del vostre fòrum, donar-li un nom i una descripció adequats i, entre altres configuracions, ajustar els valors per defecte per al fus horari i l’idioma.',
+	'BOARD_INDEX_TEXT'				=> 'Board index text',
+	'BOARD_INDEX_TEXT_EXPLAIN'		=> 'This text is displayed as the board index in the board’s breadcrumbs. If not specified, it will default to “Board index”.',
+	'BOARD_STYLE'					=> 'Estil del fòrum',
 	'CUSTOM_DATEFORMAT'				=> 'Personalitzada…',
 	'DEFAULT_DATE_FORMAT'			=> 'Format de data',
 	'DEFAULT_DATE_FORMAT_EXPLAIN'	=> 'El format de data és el mateix que el de la funció <code>date</code> del PHP.',
 	'DEFAULT_LANGUAGE'				=> 'Idioma per defecte',
 	'DEFAULT_STYLE'					=> 'Estil per defecte',
+	'DEFAULT_STYLE_EXPLAIN'			=> 'The default style is <strong>%1$s (%2$s)</strong> which is the overriden style for all users (including bots).',
 	'DISABLE_BOARD'					=> 'Inhabilita el fòrum',
-	'DISABLE_BOARD_EXPLAIN'			=> 'Això fa que el fòrum no estigui disponible per als usuaris. També podeu introduir un missatge curt (255 caràcters) per que es mostri.',
+	'DISABLE_BOARD_EXPLAIN'			=> 'This will make the board unavailable to users who are neither administrators nor moderators. You can also enter a short (255 character) message to display if you wish.',
+	'DISPLAY_LAST_SUBJECT'			=> 'Display subject of last added post on forum list',
+	'DISPLAY_LAST_SUBJECT_EXPLAIN'	=> 'The subject of the last added post will be displayed in the forum list with a hyperlink to the post. Subjects from password protected forums and forums in which user doesn’t have read access are not shown.',
+	'GUEST_STYLE'					=> 'Guest style',
+	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Sobreescriu l’estil dels usuaris',
 	'OVERRIDE_STYLE_EXPLAIN'		=> 'Reemplaça l’estil dels usuaris amb l’estil per defecte.',
 	'SITE_DESC'						=> 'Descripció del lloc web',
+	'SITE_HOME_TEXT'				=> 'Main website text',
+	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
+	'SITE_HOME_URL'					=> 'Main website URL',
+	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Nom del lloc web',
 	'SYSTEM_TIMEZONE'				=> 'Fus horari dels visitants',
 	'WARNINGS_EXPIRE'				=> 'Durada dels advertiments',
@@ -9678,6 +9908,7 @@ $lang = array_merge($lang, array(
 
 	'ALLOW_AVATARS'					=> 'Habilita els avatars',
 	'ALLOW_AVATARS_EXPLAIN'			=> 'Permet l’ús d’avatars en general;<br />Si inhabiliteu els avatars en general o en qualsevol dels diferents modes, els avatars inhabilitats ja no es mostraran als fòrums però els usuaris encara podran baixar-se els seus propis avatars des del Tauler de control de l’usuari.',
+	'ALLOW_GRAVATAR'				=> 'Enable gravatar avatars',
 	'ALLOW_LOCAL'					=> 'Habilita la galeria d’avatars',
 	'ALLOW_REMOTE'					=> 'Habilita els avatars remots',
 	'ALLOW_REMOTE_EXPLAIN'			=> 'Avatars enllaçats des d’un altre lloc web.',
@@ -9858,6 +10089,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'El contingut d’aquests fòrums <strong>no s’inclourà als canals d’informació</strong>. Si no seleccioneu cap fòrum, s’obtindran dades de tots els fòrums.<br />Podeu seleccionar o desseleccionar diversos fòrums si manteniu premut <samp>CTRL</samp> mentre feu clic.',
 
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Aquí podeu seleccionar i configurar connectors que estan dissenyats per bloquejar la tramesa automàtica de formularis per part dels robots de brossa (spambots en anglès). Aquests connectors típicament funcionen plantejant a l’usuari un <em>CAPTCHA</em>, una prova que està dissenyada per que sigui dificil que un ordinador la resolgui.',
+	'ACP_VC_EXT_GET_MORE'					=> 'For additional (and possibly better) anti-spam plugins, visit the <a href="https://www.phpbb.com/go/anti-spam-ext"><strong>phpBB.com Extensions Database</strong></a>. For more information on preventing spam on your board, visit the <a href="https://www.phpbb.com/go/anti-spam"><strong>phpBB.com Knowledge Base</strong></a>.',
 	'AVAILABLE_CAPTCHAS'					=> 'Connectors disponibles',
 	'CAPTCHA_UNAVAILABLE'					=> 'No podeu seleccionar aquest connector ja que no es compleixen els seus requeriments.',
 	'CAPTCHA_GD'							=> 'Imatge GD',
@@ -9908,18 +10140,36 @@ $lang = array_merge($lang, array(
 	'SESSION_LENGTH'			=> 'Durada de la sessió',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Les sessións venceran després d’aquest temps en segons.',
 
+	// Contact Settings
+	'ACP_CONTACT_SETTINGS_EXPLAIN'		=> 'Here you can enable and disable the contact page and also add a text that is displayed on the page.',
+
+	'CONTACT_US_ENABLE'				=> 'Enable contact page',
+	'CONTACT_US_ENABLE_EXPLAIN'		=> 'This page allows users to send emails to board administrators',
+
+	'CONTACT_US_INFO'				=> 'Contact information',
+	'CONTACT_US_INFO_EXPLAIN'		=> 'The message is displayed on the contact page',
+	'CONTACT_US_INFO_PREVIEW'		=> 'Contact page information - Preview',
+	'CONTACT_US_INFO_UPDATED'		=> 'Contact page information has been updated.',
+
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Aquí podeu habilitar i inhabilitar determinades funcions del fòrum per reduir la quantitat necessària de processament. En la majoria de servidors no cal inhabilitar cap funció. Això no obstant, en determinats sistemes o en entorns d’allotjament compartit pot ser beneficiós inhabilitar capacitats que no necessiteu realment. També podeu especificar límits per a la càrrega del sistema i sessions actives més enllà de les quals el fòrum es quedarà fora de línia.',
 
+	'ALLOW_CDN'						=> 'Allow usage of third party content delivery networks',
+	'ALLOW_CDN_EXPLAIN'				=> 'If this setting is enabled, some files will be served from external third party servers instead of your server. This reduces the network bandwidth required by your server, but may present a privacy issue for some board administrators. In a default phpBB installation, this includes loading “jQuery” and the font “Open Sans” from Google’s content delivery network.',
+	'ALLOW_LIVE_SEARCHES'			=> 'Allow live searches',
+	'ALLOW_LIVE_SEARCHES_EXPLAIN'	=> 'If this setting is enabled, users are provided with keyword suggestions as they type in certain fields throughout the board.',
 	'CUSTOM_PROFILE_FIELDS'			=> 'Camps personalitzats del perfil',
 	'LIMIT_LOAD'					=> 'Limita la càrrega del sistema',
 	'LIMIT_LOAD_EXPLAIN'			=> 'Si la càrrega del sistema per a 1 minut sobrepassa aquest valor, el fòrum quedarà automàticament fora de línia. El valor 1.0 equival a una utilització aproximada del 100% d’un processador. Això només funciona en servidors basats en UNIX i on aquesta informació estigui accessible. Aquest valor es reinicialitza automàticament a 0 si el phpBB no es capaç d’obtenir el límit de càrrega.',
 	'LIMIT_SESSIONS'				=> 'Limita les sessions',
 	'LIMIT_SESSIONS_EXPLAIN'		=> 'Si el nombre de sessions sobrepassa aquest valor dintre d’un periode d’un minut, el fòrum quedarà fora de línia. Introduïu un 0 per a sessions il·limitades.',
 	'LOAD_CPF_MEMBERLIST'			=> 'Permet que els estils mostrin camps personalitzats del perfil a la llista de membres',
+	'LOAD_CPF_PM'					=> 'Display custom profile fields in private messages',
 	'LOAD_CPF_VIEWPROFILE'			=> 'Mostra els camps personalitzats del perfil als perfils d’usuari',
 	'LOAD_CPF_VIEWTOPIC'			=> 'Mostra els camps personalitzats del perfil a les pàgines dels temes',
 	'LOAD_USER_ACTIVITY'			=> 'Mostra l’activitat de l’usuari',
 	'LOAD_USER_ACTIVITY_EXPLAIN'	=> 'Mostra els temes/fòrums actius als perfils de l’usuari i al tauler de control de l’usuari. És recomanable inhabilitar aquesta opció en fòrums amb més d’un milió d’entrades.',
+	'READ_NOTIFICATION_EXPIRE_DAYS'	=> 'Read Notification Expiration',
+	'READ_NOTIFICATION_EXPIRE_DAYS_EXPLAIN' => 'Number of days that will elapse before a read notification will automatically be deleted. Set this value to 0 to make notifications permanent.',
 	'RECOMPILE_STYLES'				=> 'Recompila els elements dels estils desactualitzats',
 	'RECOMPILE_STYLES_EXPLAIN'		=> 'Comprova si hi ha elements dels estils actualitzats al sistema de fitxers i els recompila.',
 	'YES_ANON_READ_MARKING'			=> 'Habilita el marcat de temes per als usuaris visitants',
@@ -9940,18 +10190,25 @@ $lang = array_merge($lang, array(
 	'YES_READ_MARKING_EXPLAIN'		=> 'Emmagatzema la informació de l’estat llegit/no llegit a la base de dades en lloc d’utilitzar una galeta.',
 	'YES_UNREAD_SEARCH'				=> 'Habilita la cerca d’entrades no llegides',
 
-	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'El phpBB permet l’ús de connectors o mòduls d’autenticació. Aquests us permeten determinar com s’autentiquen els usuaris quan inicien la sessió al fòrum. Per defecte es proporcionen tres connectors; base de dades, LDAP i Apache. No tots els mètodes necessiten informació addicional, només introduïu els camps que siguin rellevants per al mètode seleccionat.',
+	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB supports authentication plug-ins, or modules. These allow you determine how users are authenticated when they log into the board. By default four plug-ins are provided: DB, LDAP, Apache, and OAuth. Not all methods require additional information so only fill out fields if they are relevant to the selected method.',
 
 	'AUTH_METHOD'				=> 'Seleccioneu un mètode d’autenticació',
 
+	'AUTH_PROVIDER_OAUTH_ERROR_ELEMENT_MISSING'	=> 'Both the key and secret of each enabled OAuth service provider must be provided. Only one was provided for an OAuth service provider.',
+	'AUTH_PROVIDER_OAUTH_EXPLAIN'				=> 'Each OAuth provider requires a unique secret and key in order to authenticate with the external server. These should be supplied by the OAuth service when you register your website with them and should be entered exactly as provided to you.<br />Any service that does not have both a key and a secret entered here will not be available for use by the forum users. Also note, that user can still register and login using the DB authentication plug-in.',
+	'AUTH_PROVIDER_OAUTH_KEY'					=> 'Key',
+	'AUTH_PROVIDER_OAUTH_TITLE'					=> 'OAuth',
+	'AUTH_PROVIDER_OAUTH_SECRET'				=> 'Secret',
+
 	'APACHE_SETUP_BEFORE_USE'	=> 'Cal que configureu l’autenticació de l’Apache abans de canviar el phpBB a aquest mètode d’autenticació. Recordeu que el nom d’usuari que utilitzeu per a l’autenticació amb Apache ha de ser el mateix que el nom d’usuari al phpBB. L’autenticació amb Apache només es pot utilitzar amb mod_php (no amb una versió CGI) i safe_mode inhabilitat.',
 
+	'LDAP'							=> 'LDAP',
 	'LDAP_DN'						=> '<var>dn</var> de la base LDAP',
 	'LDAP_DN_EXPLAIN'				=> 'Això es el “Distinguished Name”, que localitza la informació d’usuari, p.ex. <samp>o=La meva companyia,c=ES</samp>.',
-	'LDAP_EMAIL'					=> 'Atribut de correu electrònic de LDAP',
-	'LDAP_EMAIL_EXPLAIN'			=> 'Indiqueu el nom de la vostra entrada d’atribut de correu electrònic (si n’existeix una) per obtenir l’adreça electrònica dels usuaris nous automàticament. Si ho deixeu buit, les adreces electròniques dels usuaris que iniciïn la sessió per primera vegada estaran buides.',
+	'LDAP_EMAIL'					=> 'LDAP email attribute',
+	'LDAP_EMAIL_EXPLAIN'			=> 'Set this to the name of your user entry email attribute (if one exists) in order to automatically set the email address for new users. Leaving this empty results in empty email address for users who log in for the first time.',
 	'LDAP_INCORRECT_USER_PASSWORD'	=> 'La vinculació amb el servidor LDAP amb el nom d’usuari/contrasenya especificats ha fallat.',
-	'LDAP_NO_EMAIL'					=> 'L’atribut de correu electrònic especificat no existeix.',
+	'LDAP_NO_EMAIL'					=> 'The specified email attribute does not exist.',
 	'LDAP_NO_IDENTITY'				=> 'No s’ha trobat una identitat d’inici de sessió per a  %s.',
 	'LDAP_PASSWORD'					=> 'Contrasenya LDAP',
 	'LDAP_PASSWORD_EXPLAIN'			=> 'Deixeu-la buida per utilitzar la vinculació anònima. Altrament, introduïu la contrasenya de l’usuari que hi ha a sobre. És necessària per a servidors Active Directory.<br /><em><strong>Advertiment:</strong> Aquesta contrasenya s’emmagatzemarà a la base de dades com a text net i serà visible per a qualsevol que pugui accedir a la vostra base de dades o que pugui veure aquesta pàgina de configuració.</em>',
@@ -9966,13 +10223,17 @@ $lang = array_merge($lang, array(
 	'LDAP_USER_FILTER'				=> 'Filtre d’usuaris LDAP',
 	'LDAP_USER_FILTER_EXPLAIN'		=> 'Opcionalment, podeu limitar encara més els objectes cercats amb filtres addicionals. Per exemple <samp>objectClass=posixGroup</samp> tindria com a resultat l’ús de <samp>(&amp;(uid=$usuari)(objectClass=posixGroup))</samp>',
 
-	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Aquí podeu definir configuracions que depenen del servidor i del domini. Assegureu-vos que les dades que introduïu són correctes, si hi ha errors els correus electrònics que s’enviïn des del fòrum contindran informació incorrecta. Quan introduïu el nom de domini recordeu-vos d’incloure http:// o el protocol adequat. Modifiqueu el número de port només si sabeu que el servidor utilitza un valor diferent, el port 80 és correcte en la majoria de casos.',
+	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Here you define server and domain dependent settings. Please ensure the data you enter is accurate, errors will result in emails containing incorrect information. When entering the domain name remember it does include http:// or other protocol term. Only alter the port number if you know your server uses a different value, port 80 is correct in most cases.',
 	'ENABLE_GZIP'				=> 'Habilita la compressió gzip',
 	'ENABLE_GZIP_EXPLAIN'		=> 'Es comprimirà el contingut generat abans d’enviar-lo a l’usuari. Això pot reduir el trànsit de la xarxa però augmentarà l’ús de la CPU tant en el servidor com en el client. Requereix que l’extensió zlib del PHP estigui carregada.',
 	'FORCE_SERVER_VARS'			=> 'Força la configuració de l’URL del servidor',
 	'FORCE_SERVER_VARS_EXPLAIN'	=> 'Si l’habiliteu, s’utilitzarà la configuració del servidor definida aquí en lloc dels valors determinats automàticament.',
 	'ICONS_PATH'				=> 'Camí d’emmagatzemament de les icones per a les entrades',
 	'ICONS_PATH_EXPLAIN'		=> 'Camí a partir del directori arrel del phpBB, p.ex. <samp>images/icons</samp>.',
+	'MOD_REWRITE_ENABLE'		=> 'Enable URL Rewriting',
+	'MOD_REWRITE_ENABLE_EXPLAIN' => 'When enabled, URLs containing ’app.php’ will be rewritten to remove the filename (i.e. app.php/foo will become /foo). <strong>Apache server’s mod_rewrite module is required for this functionality to work; if this option is enabled without mod_rewrite support, URLs on your board may be broken.</strong>',
+	'MOD_REWRITE_DISABLED'		=> 'The <strong>mod_rewrite</strong> module on your Apache web server is disabled. Enable the module or contact your web hosting provider if you wish to enable this feature.',
+	'MOD_REWRITE_INFORMATION_UNAVAILABLE' => 'We are unable to determine whether or not this server supports URL rewriting. This setting may be enabled but if URL rewriting is not available, paths generated by this board (such as for use in links) may be broken. Contact your web hosting provider if you are unsure whether or not you can safely enable this feature.',
 	'PATH_SETTINGS'				=> 'Configuració dels camins',
 	'RANKS_PATH'				=> 'Camí d’emmagatzemament de les imatges de rang',
 	'RANKS_PATH_EXPLAIN'		=> 'Camí a partir del directori arrel del phpBB, p.ex. <samp>images/ranks</samp>.',
@@ -9989,13 +10250,21 @@ $lang = array_merge($lang, array(
 	'SMILIES_PATH_EXPLAIN'		=> 'Camí a partir del directori arrel del phpBB, p.ex. <samp>images/smilies</samp>.',
 	'UPLOAD_ICONS_PATH'			=> 'Camí d’emmagatzemament de les icones dels grups d’extensions',
 	'UPLOAD_ICONS_PATH_EXPLAIN'	=> 'Camí a partir del directori arrel del phpBB, p.ex. <samp>images/upload_icons</samp>.',
+	'USE_SYSTEM_CRON'		=> 'Run periodic tasks from system cron',
+	'USE_SYSTEM_CRON_EXPLAIN'		=> 'When off, phpBB will arrange for periodic tasks to be run automatically. When on, phpBB will not schedule any periodic tasks by itself; a system administrator must arrange for <code>bin/phpbbcli.php cron:run</code> to be run by the system cron facility at regular intervals (e.g. every 5 minutes).',
 
 	'ACP_SECURITY_SETTINGS_EXPLAIN'		=> 'Aquí podeu definir les configuracions relacionades amb les session i l’inici de sessions.',
 	'ALL'							=> 'Tot',
-	'ALLOW_AUTOLOGIN'				=> 'Permet l’inici de sessió persistent',
-	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determina si els usuaris poden iniciar la sessió automàticament quan visiten el fòrum.',
-	'AUTOLOGIN_LENGTH'				=> 'Durada de la clau d’inici de sessió persistent (en dies)',
-	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Nombre de dies després dels quals s’eliminen les claus d’inici de sessió persistent. Introduïu un zero per inhabilitar-ho.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'ALLOW_PASSWORD_RESET'			=> 'Allow password reset ("Forgot Password")',
+	'ALLOW_PASSWORD_RESET_EXPLAIN'	=> 'Determines whether or not users are able to use the "I forgot my password" link on the login page to recover their account. If you use an external authentication mechanism you may wish to disable this feature.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
 	'BROWSER_VALID'					=> 'Validació del navegador',
 	'BROWSER_VALID_EXPLAIN'			=> 'Habilita la validació del navegador per cada sessió per millorar la seguretat.',
 	'CHECK_DNSBL'					=> 'Comprova l’adreça IP contra la llista DNS Blackhole List',
@@ -10032,8 +10301,12 @@ $lang = array_merge($lang, array(
 	'PASS_TYPE_SYMBOL'				=> 'Ha de contenir símbols',
 	'REF_HOST'						=> 'Valida només l’amfitrió',
 	'REF_PATH'						=> 'Valida també el camí',
-	'REFERER_VALID'					=> 'Valida la pàgina d’origen',
+	'REFERRER_VALID'				=> 'Validate Referrer',
+	'REFERRER_VALID_EXPLAIN'		=> 'If enabled, the referrer of POST requests will be checked against the host/script path settings. This may cause issues with boards using several domains and or external logins.',
+
+	'REFERER_VALID'					=> 'Valida la pàgina d’origen',	//3.0.12
 	'REFERER_VALID_EXPLAIN'			=> 'Si l’habiliteu, es comprovarà la pàgina des de la qual es fan les peticions POST segons la configuració d’amfitrió/camí. Això pot donar problemes amb fòrums que utilitzin diversos dominis i/o un inici de sessió extern.',
+
 	'TPL_ALLOW_PHP'					=> 'Permet el php a les plantilles',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Si s’habilita aquesta opció, les sentències <code>PHP</code> i <code>INCLUDEPHP</code> a les plantilles es reconeixeran i s’analitzaran.',
 
@@ -10046,6 +10319,8 @@ $lang = array_merge($lang, array(
 	'BOARD_HIDE_EMAILS_EXPLAIN'		=> 'Aquesta funció manté les adreces electròniques completament privades.',
 	'CONTACT_EMAIL'					=> 'Adreça electrònica de contacte',
 	'CONTACT_EMAIL_EXPLAIN'			=> 'S’utilitzarà aquesta adreça quan es necessiti un punt de contacte específic, p.ex. correu brossa, errors, etc. S’utilitzarà sempre com a adreça en els camps <samp>From</samp> i <samp>Reply-To</samp> dels correus electrònics.',
+	'CONTACT_EMAIL_NAME'			=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 	'EMAIL_FUNCTION_NAME'			=> 'Nom de la funció de correu electrònic',
 	'EMAIL_FUNCTION_NAME_EXPLAIN'	=> 'La funció utilitzada per enviar correus electrònics a través del PHP.',
 	'EMAIL_PACKAGE_SIZE'			=> 'Mida dels paquets de correu electrònic',
@@ -10236,7 +10511,7 @@ $lang = array_merge($lang, array(
 	'ACP_BAN'					=> 'Bandeig',
 	'ACP_BAN_EMAILS'			=> 'Bandeig d’adreces electròniques',
 	'ACP_BAN_IPS'				=> 'Bandeig d’adreces IP',
-	'ACP_BAN_USERNAMES'			=> 'Bandeig de noms d’usuari',
+	'ACP_BAN_USERNAMES'			=> 'Ban users',
 	'ACP_BBCODES'				=> 'BBCodes',
 	'ACP_BOARD_CONFIGURATION'	=> 'Configuració del fòrum',
 	'ACP_BOARD_FEATURES'		=> 'Característiques del fòrum',
@@ -10245,8 +10520,10 @@ $lang = array_merge($lang, array(
 	'ACP_BOTS'					=> 'Aranyes/Robots',
 
 	'ACP_CAPTCHA'				=> 'CAPTCHA',
+	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'Base de dades',
+	'ACP_CAT_DOT_MODS'			=> '.MODs',
 	'ACP_CAT_DOT_MODS'			=> '.MODs',
 	'ACP_CAT_FORUMS'			=> 'Fòrums',
 	'ACP_CAT_GENERAL'			=> 'General',
@@ -10259,6 +10536,8 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_USERS'				=> 'Usuaris',
 	'ACP_CLIENT_COMMUNICATION'	=> 'Comunicació amb clients',
 	'ACP_COOKIE_SETTINGS'		=> 'Configuració de les galetes',
+	'ACP_CONTACT'				=> 'Contact page',
+	'ACP_CONTACT_SETTINGS'		=> 'Contact page settings',
 	'ACP_CRITICAL_LOGS'			=> 'Registre d’errors',
 	'ACP_CUSTOM_PROFILE_FIELDS'	=> 'Camps del perfil personalitzats',
 
@@ -10266,8 +10545,11 @@ $lang = array_merge($lang, array(
 	'ACP_DISALLOW'				=> 'Prohibició',
 	'ACP_DISALLOW_USERNAMES'	=> 'Prohibició de noms d’usuari',
 
-	'ACP_EMAIL_SETTINGS'		=> 'Configuració del correu electrònic',
-	'ACP_EXTENSION_GROUPS'		=> 'Gestió de grups d’extensions',
+	'ACP_EMAIL_SETTINGS'		=> 'Email settings',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
+	'ACP_EXTENSION_MANAGEMENT'	=> 'Extension management',
+	'ACP_EXTENSIONS'			=> 'Manage extensions',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
 	'ACP_FORMS'					=> 'Customizable Forms',
 	'ACP_FORMS_BUILDER'			=> 'Form Builder',
 
@@ -10288,10 +10570,10 @@ $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE'				=> 'Gestió dels grups',
 	'ACP_GROUPS_MANAGEMENT'			=> 'Gestió de grups',
 	'ACP_GROUPS_PERMISSIONS'		=> 'Permisos de grups',
+	'ACP_GROUPS_POSITION'			=> 'Manage group positions',
 
 	'ACP_ICONS'					=> 'Icones de tema',
 	'ACP_ICONS_SMILIES'			=> 'Icones de tema/emoticones',
-	'ACP_IMAGESETS'				=> 'Grups d’imatges',
 	'ACP_INACTIVE_USERS'		=> 'Usuaris inactius',
 	'ACP_INDEX'					=> 'Índex del TCA',
 
@@ -10303,11 +10585,15 @@ $lang = array_merge($lang, array(
 	'ACP_LOGGING'				=> 'Enregistrament',
 
 	'ACP_MAIN'					=> 'Índex del TCA',
-	'ACP_MANAGE_EXTENSIONS'		=> 'Gestió de les extensions',
+
+	'ACP_MANAGE_ATTACHMENTS'			=> 'Gestió dels fitxers adjunts',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
+
+	'ACP_MANAGE_EXTENSIONS'		=> 'Manage attachment extensions',
 	'ACP_MANAGE_RANKS'			=> 'Gestió dels rangs',
 	'ACP_MANAGE_REASONS'		=> 'Gestió de les raons d’informe/rebuig',
 	'ACP_MANAGE_USERS'			=> 'Gestió dels usuaris',
-	'ACP_MASS_EMAIL'			=> 'Correu electrònic massiu',
+	'ACP_MASS_EMAIL'			=> 'Mass email',
 	'ACP_MESSAGES'				=> 'Missatges',
 	'ACP_MESSAGE_SETTINGS'		=> 'Configuració dels missatges privats',
 	'ACP_MODULE_MANAGEMENT'		=> 'Configuració de mòduls',
@@ -10352,6 +10638,8 @@ $lang = array_merge($lang, array(
 	'ACP_STYLE_COMPONENTS'		=> 'Elements dels estils',
 	'ACP_STYLE_MANAGEMENT'		=> 'Gestió dels estils',
 	'ACP_STYLES'				=> 'Estils',
+	'ACP_STYLES_CACHE'			=> 'Purge Cache',
+	'ACP_STYLES_INSTALL'		=> 'Install Styles',
 
 	'ACP_SUBMIT_CHANGES'		=> 'Tramet els canvis',
 
@@ -10403,6 +10691,10 @@ $lang = array_merge($lang, array(
 
 	'COLOUR_SWATCH'			=> 'Paleta de colors',
 	'CONFIG_UPDATED'		=> 'La configuració s’ha actualitzat correctament.',
+	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
+	'CRON_NO_SUCH_TASK'		=> 'Could not find cron task â€œ%sâ€.',
+	'CRON_NO_TASK'			=> 'No cron tasks need to be run right now.',
+	'CRON_NO_TASKS'			=> 'No cron tasks could be found.',
 
 	'DEACTIVATE'				=> 'Desactiva',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'El camí introduït “%s” no existeix.',
@@ -10413,6 +10705,7 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_AS'				=> 'Baixa com',
 	'DOWNLOAD_STORE'			=> 'Baixa o emmagatzema un fitxer',
 	'DOWNLOAD_STORE_EXPLAIN'	=> 'Podeu baixar directament el fitxer o desar-lo al directori <samp>store/</samp>.',
+	'DOWNLOADS'					=> 'Baixades',
 
 	'EDIT'					=> 'Edita',
 	'ENABLE'				=> 'Habilita',
@@ -10427,6 +10720,8 @@ $lang = array_merge($lang, array(
 	'IP'					=> 'IP',
 	'IP_HOSTNAME'			=> 'Adreces IP o noms d’amfitrió',
 
+	'LOAD_NOTIFICATIONS'			=> 'Display Notifications',
+	'LOAD_NOTIFICATIONS_EXPLAIN'	=> 'Display the notifications list on every page (typically in the header).',
 	'LOGGED_IN_AS'			=> 'Heu iniciat la sessió com:',
 	'LOGIN_ADMIN'			=> 'Per administrar el fòrum, heu de ser un usuari autenticat.',
 	'LOGIN_ADMIN_CONFIRM'	=> 'Per administrar el fòrum us heu de reautenticar.',
@@ -10443,7 +10738,8 @@ $lang = array_merge($lang, array(
 
 	'NOTIFY'				=> 'Notificació',
 	'NO_ADMIN'				=> 'No esteu autoritzat a administrar aquest fòrum.',
-	'NO_EMAILS_DEFINED'		=> 'No s’ha trobat cap adreça electrònica vàlida.',
+	'NO_EMAILS_DEFINED'		=> 'No valid email addresses found.',
+	'NO_FILES_TO_DELETE'	=> 'Attachments you selected for deletion do not exist.',
 	'NO_PASSWORD_SUPPLIED'	=> 'No podeu iniciar la sessió sense una contrasenya.',
 
 	'OFF'					=> 'Inactiu',
@@ -10459,8 +10755,8 @@ $lang = array_merge($lang, array(
 
 	'REMIND'							=> 'Recordatori',
 	'RESYNC'							=> 'Resincronitza',
-	'RETURN_TO'							=> 'Torna a:',
 
+	'RUNNING_TASK'			=> 'Running task: %s.',
 	'SELECT_ANONYMOUS'		=> 'Selecciona l’usuari anònim',
 	'SELECT_OPTION'			=> 'Seleccioneu una opció',
 
@@ -10470,6 +10766,10 @@ $lang = array_merge($lang, array(
 	'SETTING_TOO_SHORT'		=> 'El valor proporcionat per a la configuració “%1$s” no es prou llarg. La llargada mínima acceptada és %2$d.',
 
 	'SHOW_ALL_OPERATIONS'	=> 'Mostra totes les operacions',
+
+	'TASKS_NOT_READY'			=> 'Not ready tasks:',
+	'TASKS_READY'			=> 'Ready tasks:',
+	'TOTAL_SIZE'			=> 'Total size',
 
 	'UCP'					=> 'Tauler de control de l’usuari',
 	'USERNAMES_EXPLAIN'		=> 'Introduïu cada nom d’usuari en una línia nova.',
@@ -10481,7 +10781,7 @@ $lang = array_merge($lang, array(
 	'NO_PHPINFO_AVAILABLE'	=> 'No s’ha pogut obtenir informació de la vostra configuració del PHP. La funció phpinfo() està inhabilitada per raons de seguretat.',
 
 	'ACP_ADMIN_LOGS_EXPLAIN'	=> 'Aquí es llisten totes les accions que els administradors han dut a terme. Podeu ordenar per nom d’usuari, data, IP o acció. Si teniu els permisos adequats, també podeu esborrar operacions individuals o el registre complet.',
-	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'Aquí es llisten totes les accions dutes a terme pel propi fòrum. Aquest registre us proporciona informació que podeu utilitzar per resoldre problemes determinats, per exemple fallades d’enviament de correu electrònic. Podeu ordenar per nom d’usuari, data, IP o acció. Si teniu els permisos adequats, també podeu esborrar operacions individuals o el registre complet.',
+	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'This lists the actions carried out by the board itself. This log provides you with information you are able to use for solving specific problems, for example non-delivery of emails. You can sort by username, date, IP or action. If you have appropriate permissions you can also clear individual operations or the log as a whole.',
 	'ACP_MOD_LOGS_EXPLAIN'		=> 'Aquí es llisten totes les accions que els moderadors han dut a terme a fòrums, temes i entrades així com accions sobre usuaris, incloent-hi bandejos. Podeu ordenar per nom d’usuari, data, IP o acció. Si teniu els permisos adequats, també podeu esborrar operacions individuals o el registre complet.',
 	'ACP_USERS_LOGS_EXPLAIN'	=> 'Aquí es llisten totes les accions que els usuaris han dut a terme sobre altres usuaris (informes, advertiments i notes de l’usuari).',
 	'ALL_ENTRIES'				=> 'Tots els registres',
@@ -10507,6 +10807,7 @@ $lang = array_merge($lang, array(
 
 	'GZIP_COMPRESSION'	=> 'Compressió gzip',
 
+	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'No disponible',
 	'NUMBER_FILES'		=> 'Nombre de fitxers adjunts',
 	'NUMBER_POSTS'		=> 'Nombre d’entrades',
@@ -10519,29 +10820,38 @@ $lang = array_merge($lang, array(
 	'PURGE_CACHE'			=> 'Buida la memòria cau',
 	'PURGE_CACHE_CONFIRM'	=> 'Esteu segur de que voleu buidar la memòria cau?',
 	'PURGE_CACHE_EXPLAIN'	=> 'Elimina tots els elements relacionats amb la memòria cau, això inclu fitxers de plantilla i consultes.',
+	'PURGE_CACHE_SUCCESS'	=> 'Cache successfully purged.',
 
 	'PURGE_SESSIONS'			=> 'Elimina totes les sessions',
 	'PURGE_SESSIONS_CONFIRM'	=> 'Esteu segur que voleu eliminar totes les sessions? Això finalitzarà la sessió de tots els usuaris.',
 	'PURGE_SESSIONS_EXPLAIN'	=> 'Elimina totes les sessions. Això finalitzarà la sessió de tots els usuaris truncant la taula de sessions.',
+	'PURGE_SESSIONS_SUCCESS'	=> 'Sessions successfully purged.',
 
 	'RESET_DATE'					=> 'Reinicialitza la data d’inici del fòrum',
 	'RESET_DATE_CONFIRM'			=> 'Esteu segur de que voleu reinicialitzar la data d’inici del fòrum?',
+	'RESET_DATE_SUCCESS'				=> 'Boardâ€™s start date reset',
 	'RESET_ONLINE'					=> 'Reinicialitza el nombre màxim d’usuaris connectats',
 	'RESET_ONLINE_CONFIRM'			=> 'Esteu segur de que voleu reinicialitzar el nombre màxim d’usuaris connectats?',
+	'RESET_ONLINE_SUCCESS'				=> 'Most users ever online reset',
 	'RESYNC_POSTCOUNTS'				=> 'Resincronitza els comptadors d’entrades',
 	'RESYNC_POSTCOUNTS_EXPLAIN'		=> 'Només es consideraran les entrades existents. Les entrades podades no es comptaràn.',
 	'RESYNC_POSTCOUNTS_CONFIRM'		=> 'Esteu segur de que voleu resincronitzar els comptadors d’entrades?',
+	'RESYNC_POSTCOUNTS_SUCCESS'			=> 'Resynchronised post counts',
 	'RESYNC_POST_MARKING'			=> 'Resincronitza els temes marcats',
 	'RESYNC_POST_MARKING_CONFIRM'	=> 'Esteu segur de que voleu resincronitzar els temes marcats?',
 	'RESYNC_POST_MARKING_EXPLAIN'	=> 'Primer desmarca tots els temes i llavors marca correctament els temes que han tingut alguna activitat durant els darrers 6 mesos.',
+	'RESYNC_POST_MARKING_SUCCESS'	=> 'Resynchronised dotted topics',
 	'RESYNC_STATS'					=> 'Resincronitza les estadístiques',
 	'RESYNC_STATS_CONFIRM'			=> 'Esteu segur de que voleu resincronitzar les estadístiques?',
 	'RESYNC_STATS_EXPLAIN'			=> 'Recalcula el nombre total d’entrades, temes, usuaris i fitxers.',
+	'RESYNC_STATS_SUCCESS'			=> 'Resynchronised statistics',
 	'RUN'							=> 'Executa',
 
 	'STATISTIC'					=> 'Estadística',
 	'STATISTIC_RESYNC_OPTIONS'	=> 'Resincronitza o reinicialitza les estadístiques',
 
+	'TIMEZONE_INVALID'	=> 'The timezone you selected is invalid.',
+	'TIMEZONE_SELECTED'	=> '(currently selected)',
 	'TOPICS_PER_DAY'	=> 'Temes per dia',
 
 	'UPLOAD_DIR_SIZE'	=> 'Mida dels fitxers adjunts publicats',
@@ -10722,9 +11032,9 @@ $lang = array_merge($lang, array(
 
 	'LOG_APPROVE_TOPIC'			=> '<strong>Ha aprovat el tema</strong><br />» %s',
 	'LOG_BUMP_TOPIC'			=> '<strong>L’usuari ha reactivat el tema</strong><br />» %s',
-	'LOG_DELETE_POST'			=> '<strong>Ha eliminat l’entrada “%1$s” escrita per</strong><br />» %2s',
-	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Ha eliminat el tema ombra</strong><br />» %s',
-	'LOG_DELETE_TOPIC'			=> '<strong>Ha eliminat el tema “%1$s” escrit per</strong><br />» %2s',
+	'LOG_DELETE_POST'			=> '<strong>Deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Deleted shadow topic</strong><br />Â» %s',
+	'LOG_DELETE_TOPIC'			=> '<strong>Deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_FORK'					=> '<strong>Ha copiat el tema</strong><br />» de %s',
 	'LOG_LOCK'					=> '<strong>Ha bloquejat el tema</strong><br />» %s',
 	'LOG_LOCK_POST'				=> '<strong>Ha bloquejat l’entrada</strong><br />» %s',
@@ -10733,15 +11043,20 @@ $lang = array_merge($lang, array(
 	'LOG_PM_REPORT_CLOSED'		=> '<strong>Ha tancat l’informe de missatge privat</strong><br />» %s',
 	'LOG_PM_REPORT_DELETED'		=> '<strong>Ha eliminat l’informe de missatge privat</strong><br />» %s',
 	'LOG_POST_APPROVED'			=> '<strong>Ha aprovat l’entrada</strong><br />» %s',
-	'LOG_POST_DISAPPROVED'		=> '<strong>Ha rebutjat l’entrada “%1$s” per la raó següent</strong><br />» %2$s',
-	'LOG_POST_EDITED'			=> '<strong>Ha editat l’entrada “%1$s” escrita per</strong><br />» %2$s',
+	'LOG_POST_DISAPPROVED'		=> '<strong>Disapproved post â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
+	'LOG_POST_EDITED'			=> '<strong>Edited post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_POST_RESTORED'			=> '<strong>Restored post</strong><br />Â» %s',
 	'LOG_REPORT_CLOSED'			=> '<strong>Ha tancat l’informe</strong><br />» %s',
 	'LOG_REPORT_DELETED'		=> '<strong>Ha eliminat l’informe</strong><br />» %s',
+	'LOG_RESTORE_TOPIC'			=> '<strong>Restored topic â€œ%1$sâ€ written by</strong><br />Â» %2$s',
+	'LOG_SOFTDELETE_POST'		=> '<strong>Soft deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_SOFTDELETE_TOPIC'		=> '<strong>Soft deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_SPLIT_DESTINATION'		=> '<strong>Ha desplaçat les entrades dividides</strong><br />» a %s',
 	'LOG_SPLIT_SOURCE'			=> '<strong>Ha dividit les entrades</strong><br />» de %s',
 
 	'LOG_TOPIC_APPROVED'		=> '<strong>Ha aprovat el tema</strong><br />» %s',
-	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Ha rebutjat el tema “%1$s” per la raó següent</strong><br />%2$s',
+	'LOG_TOPIC_RESTORED'		=> '<strong>Restored topic</strong><br />Â» %s',
+	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Disapproved topic â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
 	'LOG_TOPIC_RESYNC'			=> '<strong>Ha resincronitzat els comptadors de temes</strong><br />» %s',
 	'LOG_TOPIC_TYPE_CHANGED'	=> '<strong>Ha canviat el tipus de tema</strong><br />» %s',
 	'LOG_UNLOCK'				=> '<strong>Ha desbloquejat el tema</strong><br />» %s',
@@ -10793,16 +11108,6 @@ $lang = array_merge($lang, array(
 
 	'LOG_IMAGE_GENERATION_ERROR'	=> '<strong>S’ha produït un error mentre es creava la imatge</strong><br />» Error a %1$s a la línia %2$s: %3$s',
 
-	'LOG_IMAGESET_ADD_DB'			=> '<strong>Ha afegit un nou grup d’imatges a la base de dades</strong><br />» %s',
-	'LOG_IMAGESET_ADD_FS'			=> '<strong>Ha afegit un nou grup d’imatges al sistema de fitxers</strong><br />» %s',
-	'LOG_IMAGESET_DELETE'			=> '<strong>Ha eliminat el grup d’imatges</strong><br />» %s',
-	'LOG_IMAGESET_EDIT_DETAILS'		=> '<strong>Ha editat els detalls del grup d’imatges</strong><br />» %s',
-	'LOG_IMAGESET_EDIT'				=> '<strong>Ha editat el grup d’imatges</strong><br />» %s',
-	'LOG_IMAGESET_EXPORT'			=> '<strong>Ha exportat el grup d’imatges</strong><br />» %s',
-	'LOG_IMAGESET_LANG_MISSING'		=> '<strong>Falta la localització “%2$s” del grup d’imatges</strong><br />» %1$s',
-	'LOG_IMAGESET_LANG_REFRESHED'	=> '<strong>Ha refrescat la localització “%2$s” del grup d’imatges</strong><br />» %1$s',
-	'LOG_IMAGESET_REFRESHED'		=> '<strong>Ha refrescat el grup d’imatges</strong><br />» %s',
-
 	'LOG_INACTIVE_ACTIVATE'	=> '<strong>Ha activat els usuaris inactius</strong><br />» %s',
 	'LOG_INACTIVE_DELETE'	=> '<strong>Ha eliminat els usuaris inactius</strong><br />» %s',
 	'LOG_INACTIVE_REMIND'	=> '<strong>Ha enviat un correu electrònic de recordatori als usuaris inactius</strong><br />» %s',
@@ -10847,6 +11152,7 @@ $lang = array_merge($lang, array(
 	'LOG_U_ROLE_EDIT'		=> '<strong>Ha editat el rol d’usuari</strong><br />» %s',
 	'LOG_U_ROLE_REMOVED'	=> '<strong>Ha eliminat el rol d’usuari</strong><br />» %s',
 
+	'LOG_PLUPLOAD_TIDY_FAILED'		=> '<strong>Unable to open %1$s for tidying, check permissions.</strong><br />Exception: %2$s<br />Trace: %3$s',
 	'LOG_PROFILE_FIELD_ACTIVATE'	=> '<strong>Ha activat el camp del perfil</strong><br />» %s',
 	'LOG_PROFILE_FIELD_CREATE'		=> '<strong>Ha afegit el camp del perfil</strong><br />» %s',
 	'LOG_PROFILE_FIELD_DEACTIVATE'	=> '<strong>Ha desactivat el camp del perfil</strong><br />» %s',
@@ -10855,13 +11161,13 @@ $lang = array_merge($lang, array(
 
 	'LOG_PRUNE'					=> '<strong>Ha podat els fòrums</strong><br />» %s',
 	'LOG_AUTO_PRUNE'			=> '<strong>S’han podat automàticament els fòrums</strong><br />» %s',
+	'LOG_PRUNE_SHADOW'		=> '<strong>Auto-pruned shadow topics</strong><br />Â» %s',
 	'LOG_PRUNE_USER_DEAC'		=> '<strong>Ha desactivat els usuaris</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_DEL'	=> '<strong>Ha podat els usuaris eliminant-ne les entrades</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_ANON'	=> '<strong>Ha podat els usuaris mantenint les entrades</strong><br />» %s',
 
 	'LOG_PURGE_CACHE'			=> '<strong>Ha buidat la memòria cau</strong>',
 	'LOG_PURGE_SESSIONS'		=> '<strong>Ha eliminat totes les sessions</strong>',
-
 
 	'LOG_RANK_ADDED'		=> '<strong>Ha afegit el nou rang</strong><br />» %s',
 	'LOG_RANK_REMOVED'		=> '<strong>Ha eliminat el rang</strong><br />» %s',
@@ -10871,15 +11177,17 @@ $lang = array_merge($lang, array(
 	'LOG_REASON_REMOVED'	=> '<strong>Ha eliminat la raó d’informe/rebuig</strong><br />» %s',
 	'LOG_REASON_UPDATED'	=> '<strong>Ha actualitzat la raó d’informe/rebuig</strong><br />» %s',
 
-	'LOG_REFERER_INVALID'		=> '<strong>Li ha fallat la validació de la pàgina d’origen</strong><br />»La pàgina d’origen era “<em>%1$s</em>”. S’ha rebutjat la petició i s’ha matat la sessió.',
+	'LOG_REFERER_INVALID'		=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 	'LOG_RESET_DATE'			=> '<strong>Ha reinicialitzat la data d’inici del fòrum</strong>',
 	'LOG_RESET_ONLINE'			=> '<strong>Ha reinicialitzat el nombre màxim d’usuaris connectats</strong>',
+	'LOG_RESYNC_FILES_STATS'	=> '<strong>File statistics resynchronised</strong>',
 	'LOG_RESYNC_POSTCOUNTS'		=> '<strong>Ha resincronitzat els comptadors d’entrades</strong>',
 	'LOG_RESYNC_POST_MARKING'	=> '<strong>Ha resincronitzat els temes marcats</strong>',
 	'LOG_RESYNC_STATS'			=> '<strong>Ha resincronitzat les estadístiques d’entrades, temes i usuaris</strong>',
 
 	'LOG_SEARCH_INDEX_CREATED'	=> '<strong>Ha creat un índex de cerca per</strong><br />» %s',
 	'LOG_SEARCH_INDEX_REMOVED'	=> '<strong>Ha eliminat l’índex de cerca per</strong><br />» %s',
+	'LOG_SPHINX_ERROR'			=> '<strong>Sphinx Error</strong><br />Â» %s',
 	'LOG_STYLE_ADD'				=> '<strong>Ha afegit el nou estil</strong><br />» %s',
 	'LOG_STYLE_DELETE'			=> '<strong>Ha eliminat l’estil</strong><br />» %s',
 	'LOG_STYLE_EDIT_DETAILS'	=> '<strong>Ha editat l’estil</strong><br />» %s',
@@ -10946,15 +11254,18 @@ $lang = array_merge($lang, array(
 	'LOG_USER_GROUP_RESIGN'			=> '<strong>L’usuari ha abandonat el grup</strong><br />» %s',
 
 	'LOG_WARNING_DELETED'		=> '<strong>Ha eliminat un advertiment de l’usuari</strong><br />» %s',
-	'LOG_WARNINGS_DELETED'		=> '<strong>Ha eliminat %2$s advertiments de l’usuari</strong><br />» %1$s',
 	'LOG_WARNINGS_DELETED_ALL'	=> '<strong>Ha eliminat tots els advertiments de l’usuari</strong><br />» %s',
 
 	'LOG_WORD_ADD'			=> '<strong>Ha afegit la paraula censurada</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>Ha eliminat la paraula censurada</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Ha editat la paraula censurada</strong><br />» %s',
+
+	'LOG_EXT_ENABLE'	=> '<strong>Extension enabled</strong><br />Â» %s',
+	'LOG_EXT_DISABLE'	=> '<strong>Extension disabled</strong><br />Â» %s',
+	'LOG_EXT_PURGE'		=> '<strong>Extensionâ€™s data deleted</strong><br />Â» %s',
+
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
-
 ));
 
 $lang = array_merge($lang, array(
@@ -11255,7 +11566,7 @@ $lang = array_merge($lang, array(
 	'ACP_PORTAL_WELCOME_EXPLAIN'=> '',
 	'ADM_LOGOUT'			=> 'Surt&nbsp;del&nbsp;TCA',
 	'ADM_LOGGED_OUT'		=> 'Heu finalitzat la sessió del Tauler de control de l’administrador correctament',
-	'LOG_REFERER_INVALID'	=> '<strong>Li ha fallat la validació de la pàgina d’origen</strong><br />»La pàgina d’origen era “<em>%1$s</em>”. S’ha rebutjat la petició i s’ha matat la sessió.',
+	'LOG_REFERER_INVALID'	=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 
 	'ACP_ABBCODES'			=> 'BBcode Box',
 	'LOG_CONFIG_ABBCODES'	=> '<strong>Altered BBCode Box settings</strong>',
@@ -11661,7 +11972,7 @@ $lang = array_merge($lang, array(
 	'SELECT_A_PREFIX'				=> 'Select a prefix',
 	'ACP_SEOQUERYS'					=> 'SEO Queries',
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Gestió dels fitxers adjunts',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can list and delete files attached to posts and private messages.',
 	'LOG_ATTACH_DEL'				=> '<strong>Attachments deleted</strong><br />» %s',
 	'LOG_ATTACH_REASSIGNED'			=> '<strong>Attachment reassigned to Post</strong><br />» ID %1$d - %2$s',
 	'TOTAL_SIZE'					=> 'Total size',
@@ -11680,11 +11991,11 @@ $lang = array_merge($lang, array(
 	'ACP_INTRO'				=> 'Intro',
 
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Gestió dels fitxers adjunts',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
 	'TOTAL_SIZE'				=> 'Total size',
 	'DOWNLOADS'				=> 'Baixades',
 
-	'NO_AVATAR'				=> 'URL of the avatar for all the have no separate',
+	'NO_AVATAR'				=> 'No avatar selected',
 	'NO_AVATAR_EXPLAIN'			=> 'The optimal size of the avatar is 120x120px, this box is left blank, no picture at all. <br /> Demo URL: http://www.userboard.org/images/no_avatar_1.gif',
 	'GROUP_ICON'				=> 'Group Icon',
 	'GROUP_ICON_EXPLAIN'			=> 'Upload your Group Icons into Upload &#187; Topic/Group Icons',
@@ -12847,6 +13158,97 @@ $lang = array_merge($lang, array(
 	'NO_EMAIL_SUBJECT'		=> 'No s’ha especificat l’assumpte del correu electrònic.',
 ));
 
+#######language/en/acp/extensions.php#######
+
+$lang = array_merge($lang, array(
+	'EXTENSION'					=> 'Extensió',
+	'EXTENSIONS'				=> 'Extensions',
+	'EXTENSIONS_ADMIN'			=> 'Extensions Manager',
+	'EXTENSIONS_EXPLAIN'		=> 'The Extensions Manager is a tool in your phpBB Board which allows you to manage all of your extensions statuses and view information about them.',
+	'EXTENSION_INVALID_LIST'	=> 'The “%s” extension is not valid.<br />%s<br /><br />',
+	'EXTENSION_NOT_AVAILABLE'	=> 'The selected extension is not available for this board, please verify your phpBB and PHP versions are allowed (see the details page).',
+	'EXTENSION_DIR_INVALID'		=> 'The selected extension has an invalid directory structure and cannot be enabled.',
+	'EXTENSION_NOT_ENABLEABLE'	=> 'The selected extension cannot be enabled, please verify the extension’s requirements.',
+
+	'DETAILS'				=> 'Detalls',
+
+	'EXTENSIONS_DISABLED'	=> 'Disabled Extensions',
+	'EXTENSIONS_ENABLED'	=> 'Enabled Extensions',
+
+	'EXTENSION_DELETE_DATA'	=> 'Delete data',
+	'EXTENSION_DISABLE'		=> 'Disable',
+	'EXTENSION_ENABLE'		=> 'Enable',
+
+	'EXTENSION_DELETE_DATA_EXPLAIN'	=> 'Deleting an extension’s data removes all of its data and settings. The extension files are retained so it can be enabled again.',
+	'EXTENSION_DISABLE_EXPLAIN'		=> 'Disabling an extension retains its files, data and settings but removes any functionality added by the extension.',
+	'EXTENSION_ENABLE_EXPLAIN'		=> 'Enabling an extension allows you to use it on your board.',
+
+	'EXTENSION_DELETE_DATA_IN_PROGRESS'	=> 'The extension’s data is currently being deleted. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_DISABLE_IN_PROGRESS'	=> 'The extension is currently being disabled. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_ENABLE_IN_PROGRESS'	=> 'The extension is currently being enabled. Please do not leave or refresh this page until it is completed.',
+
+	'EXTENSION_DELETE_DATA_SUCCESS'	=> 'The extension’s data was deleted successfully',
+	'EXTENSION_DISABLE_SUCCESS'		=> 'The extension was disabled successfully',
+	'EXTENSION_ENABLE_SUCCESS'		=> 'The extension was enabled successfully',
+
+	'EXTENSION_NAME'			=> 'Extension Name',
+	'EXTENSION_ACTIONS'			=> 'Actions',
+	'EXTENSION_OPTIONS'			=> 'Options',
+	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
+	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s files from the filesystem</li>
+			<li>Upload the new files</li>
+			<li>Enable the extension</li>
+		</ol>',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s data</li>
+			<li>Delete the extension’s files from the filesystem</li>
+		</ol>',
+
+	'EXTENSION_DELETE_DATA_CONFIRM'	=> 'Are you sure that you wish to delete the data associated with “%s”?<br /><br />This removes all of its data and settings and cannot be undone!',
+	'EXTENSION_DISABLE_CONFIRM'		=> 'Are you sure that you wish to disable the “%s” extension?',
+	'EXTENSION_ENABLE_CONFIRM'		=> 'Are you sure that you wish to enable the “%s” extension?',
+	'EXTENSION_FORCE_UNSTABLE_CONFIRM'	=> 'Are you sure that you wish to force the use of unstable version?',
+
+	'RETURN_TO_EXTENSION_LIST'	=> 'Return to the extension list',
+
+	'EXT_DETAILS'			=> 'Extension Details',
+	'DISPLAY_NAME'			=> 'Disply Name (may be NULL)',
+	'CLEAN_NAME'			=> 'Clean Name',
+	'TYPE'					=> 'Type',
+	'DESCRIPTION'			=> 'Descripció',
+	'VERSION'				=> 'Versió',
+	'HOMEPAGE'				=> 'Homepage',
+	'PATH'					=> 'File Path',
+	'TIME'					=> 'Data',
+	'LICENSE'				=> 'Licence',
+
+	'REQUIREMENTS'			=> 'Requirements',
+	'PHPBB_VERSION'			=> 'phpBB Version',
+	'PHP_VERSION'			=> 'PHP Version',
+	'AUTHOR_INFORMATION'	=> 'Author Information',
+	'AUTHOR_NAME'			=> 'Name',
+	'AUTHOR_EMAIL'			=> 'Email',
+	'AUTHOR_HOMEPAGE'		=> 'Homepage',
+	'AUTHOR_ROLE'			=> 'Role',
+
+	'NOT_UP_TO_DATE'		=> '%s is not up to date',
+	'UP_TO_DATE'			=> '%s is up to date',
+	'ANNOUNCEMENT_TOPIC'	=> 'Release Announcement',
+	'DOWNLOAD_LATEST'		=> 'Download Version',
+	'NO_VERSIONCHECK'		=> 'No version check information given.',
+
+	'VERSIONCHECK_FORCE_UPDATE_ALL'		=> 'Re-Check all versions',
+	'FORCE_UNSTABLE'					=> 'Always check for unstable versions',
+	'EXTENSIONS_VERSION_CHECK_SETTINGS'	=> 'Version check settings',
+
+	'META_FIELD_NOT_SET'	=> 'Required meta field %s has not been set.',
+	'META_FIELD_INVALID'	=> 'Meta field %s is invalid.',
+));
+
 #######language/en/acp/forums.php#######
 
 $lang = array_merge($lang, array(
@@ -12856,6 +13258,10 @@ $lang = array_merge($lang, array(
 	'AUTO_PRUNE_FREQ_EXPLAIN'	=> 'Temps en dies entre execucions automàtiques de poda.',
 	'AUTO_PRUNE_VIEWED'			=> 'Poda automàtica per temps de visualització',
 	'AUTO_PRUNE_VIEWED_EXPLAIN'	=> 'Nombre de dies des de la darrera visualització després dels quals s’elimina el tema.',
+	'AUTO_PRUNE_SHADOW_FREQ'	=> 'Auto-prune shadow topics frequency',
+	'AUTO_PRUNE_SHADOW_DAYS'	=> 'Auto-prune shadow topics age',
+	'AUTO_PRUNE_SHADOW_DAYS_EXPLAIN'	=> 'Number of days after which shadow topic is removed.',
+	'AUTO_PRUNE_SHADOW_FREQ_EXPLAIN'	=> 'Time in days between pruning events.',
 
 	'CONTINUE'						=> 'Continua',
 	'COPY_PERMISSIONS_EXPLAIN'		=> 'Per facilitar l’assignació de permisos al nou fòrum podeu copiar el permisos d’un altre fòrum que ja existeixi.',
@@ -12914,6 +13320,8 @@ $lang = array_merge($lang, array(
 	'FORUM_PASSWORD_OLD'				=> 'La contrasenya del fòrum utilitza una funció de resum antiga i és recomanable que la canvieu.',
 	'FORUM_PASSWORD_MISMATCH'			=> 'Les contrasenyes que heu introduït no coincideixen.',
 	'FORUM_PRUNE_SETTINGS'				=> 'Configuració de poda del fòrum',
+	'FORUM_PRUNE_SHADOW'				=> 'Enable auto-pruning of shadow topics',
+	'FORUM_PRUNE_SHADOW_EXPLAIN'			=> 'Prunes the forum of shadow topics, set the frequency/age parameters below.',
 	'FORUM_RESYNCED'					=> 'El fòrum “%s” s’ha resincronitzat correctament',
 	'FORUM_RULES_EXPLAIN'				=> 'Les regles del fòrum es mostren a qualsevol pagina del propi fòrum.',
 	'FORUM_RULES_LINK'					=> 'Si us plau feu clic aquí per veure les regles del fòrum',
@@ -13005,6 +13413,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE_EXPLAIN'		=> 'Aquí podeu administrar tots els grups d’usuaris. Podeu eliminar, crear i editar grups existents. A més, podeu triar líders de grup, canviar l’estat dels grups a obert/ocult/tancat i definir el nom del grup i la seva descripció.',
+	'ADD_GROUP_CATEGORY'			=> 'Add category',
 	'GROUP_ADD_USERS'				=> 'Afegeix usuaris',
 	'ADD_USERS_EXPLAIN'				=> 'Aquí podeu afegir usuaris nous al grup. Podeu seleccionar si aquest grup es converteix en el nou grup per defecte per als usuaris seleccionats. Addicionalment, podeu fer-los líders del grup. Introduïu cada usuari en una línia nova.',
 
@@ -13018,11 +13427,10 @@ $lang = array_merge($lang, array(
 	'GROUP_APPROVED'				=> 'Membres aprovats',
 	'GROUP_AVATAR'					=> 'Avatar del grup',
 	'GROUP_AVATAR_EXPLAIN'			=> 'Aquesta imatge es mostrarà al Tauler de control del grup.',
+	'GROUP_CATEGORY_NAME'			=> 'Category name',
 	'GROUP_CLOSED'					=> 'Tancat',
 	'GROUP_COLOR'					=> 'Color del grup',
 	'GROUP_COLOR_EXPLAIN'			=> 'Defineix el color amb el qual apareixerà el nom d’usuari dels membres, deixeu-lo en blanc per utilitzar el color per defecte de l’usuari.',
-	'GROUP_CONFIRM_ADD_USER'		=> 'Esteu segur de que voleu afegir l’usuari %1$s al grup?',
-	'GROUP_CONFIRM_ADD_USERS'		=> 'Esteu segur de que voleu afegir els usuaris %1$s al grup?',
 	'GROUP_CREATED'					=> 'S’ha creat el grup correctament.',
 	'GROUP_DEFAULT'					=> 'Fes que sigui el grup per defecte del membre',
 	'GROUP_DEFS_UPDATED'			=> 'S’ha establert el grup per defecte per tots els membres seleccionats.',
@@ -13064,6 +13472,8 @@ $lang = array_merge($lang, array(
 	'GROUP_SETTINGS_SAVE'			=> 'Configuració del grup',
 	'GROUP_SKIP_AUTH'				=> 'Exclou al líder dels permisos del grup',
 	'GROUP_SKIP_AUTH_EXPLAIN'		=> 'Si habiliteu aquesta opció, el líder no heretarà els permisos del grup.',
+	'GROUP_SPECIAL'					=> 'Pre-defined',
+	'GROUP_TEAMPAGE'				=> 'Display group on teampage',
 	'GROUP_TYPE'					=> 'Tipus de grup',
 	'GROUP_TYPE_EXPLAIN'			=> 'Això determina quins usuaris poden unir-se o veure el grup.',
 	'GROUP_UPDATED'					=> 'S’han actualitzat les preferències del grup correctament.',
@@ -13072,19 +13482,37 @@ $lang = array_merge($lang, array(
 	'GROUP_USERS_EXIST'				=> 'Els usuaris seleccionats ja són membres.',
 	'GROUP_USERS_REMOVE'			=> 'S’han tret els usuaris del grup i s’han definit els nous valors per defecte correctament.',
 
+	'LEGEND_EXPLAIN'				=> 'These are the groups which are displayed in the group legend:',
+	'LEGEND_SETTINGS'				=> 'Legend settings',
+	'LEGEND_SORT_GROUPNAME'			=> 'Sort legend by group name',
+	'LEGEND_SORT_GROUPNAME_EXPLAIN'	=> 'The order below is ignored when this option is enabled.',
+
+	'MANAGE_LEGEND'			=> 'Manage group legend',
+	'MANAGE_TEAMPAGE'		=> 'Manage teampage',
 	'MAKE_DEFAULT_FOR_ALL'		=> 'Fes que sigui el grup per defecte de tots els membres',
 	'MEMBERS'					=> 'Membres',
 
 	'NO_GROUP'					=> 'El grup d’usuaris sol·licitat no existeix.',
+	'NO_GROUPS_ADDED'			=> 'No groups added yet.',
 	'NO_GROUPS_CREATED'			=> 'Encara no s’ha creat cap grup.',
 	'NO_PERMISSIONS'			=> 'No copiïs cap permís',
 	'NO_USERS'					=> 'Els usuaris sol·licitats no existeixen.',
 	'NO_USERS_ADDED'			=> 'No s’ha afegit cap usuari al grup.',
 	'NO_VALID_USERS'			=> 'No heu introduït cap usuari per al qual estigui permesa aquesta acció.',
 
+	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> 'Grups predefinits',
 	'SPECIAL_GROUPS_EXPLAIN'	=> 'Els grups predefinits són grups especials, no es poden eliminar ni modificar directament. Això no obstant, podeu afegir-hi usuaris i modificar configuracions bàsiques.',
 
+	'TEAMPAGE'					=> 'Teampage',
+	'TEAMPAGE_DISP_ALL'			=> 'All memberships',
+	'TEAMPAGE_DISP_DEFAULT'		=> 'User’s default group only',
+	'TEAMPAGE_DISP_FIRST'		=> 'First membership only',
+	'TEAMPAGE_EXPLAIN'			=> 'These are the groups which are displayed on the teampage:',
+	'TEAMPAGE_FORUMS'			=> 'Display moderated forums',
+	'TEAMPAGE_FORUMS_EXPLAIN'	=> 'If set to yes, moderators will have a list with all of the forums where they have moderator permissions displayed in their row. This can be very database intensive for big boards.',
+	'TEAMPAGE_MEMBERSHIPS'		=> 'Display user memberships',
+	'TEAMPAGE_SETTINGS'			=> 'Teampage settings',
 	'TOTAL_MEMBERS'				=> 'Membres',
 
 	'USERS_APPROVED'				=> 'S’han aprovat les sol·licituds d’afiliació correctament.',
@@ -13470,26 +13898,14 @@ $lang = array_merge($lang, array(
 	'ACP_FILES'						=> 'Fitxers d’idioma de l’administrador',
 	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> 'Aquí podeu instal·lar/eliminar paquets d’idioma. El paquet d’idioma per defecte està marcat amb un asterisc (*).',
 
-	'EMAIL_FILES'			=> 'Plantilles de correu electrònic',
-
-	'FILE_CONTENTS'				=> 'Continguts del fitxer',
-	'FILE_FROM_STORAGE'			=> 'Fitxer del directori d’emmagatzemament',
-
-	'HELP_FILES'				=> 'Fitxers d’ajuda',
-
-	'INSTALLED_LANGUAGE_PACKS'	=> 'Paquets d’idioma instal·lats',
-	'INVALID_LANGUAGE_PACK'		=> 'El paquet d’idioma seleccionat no és vàlid. Verifiqueu el paquet d’idioma i pugeu-lo de nou si fes falta.',
-	'INVALID_UPLOAD_METHOD'		=> 'El mètode de pujada seleccionat no és vàlid, trieu un mètode diferent.',
+	'DELETE_LANGUAGE_CONFIRM'		=> 'Are you sure you wish to delete “%s”?',
+	'INSTALLED_LANGUAGE_PACKS'		=> 'Paquets d’idioma instal·lats',
 
 	'LANGUAGE_DETAILS_UPDATED'			=> 'S’ha actualitzat la informació de l’idioma correctament.',
-	'LANGUAGE_ENTRIES'					=> 'Entrades d’idioma',
-	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Aquí podeu canviar entrades del paquet d’idioma existents o que encara no estiguin traduïdes.<br /><strong>Nota:</strong> Un cop hagueu canviat un fitxer d’idioma, els canvis s’emmagatzemaran en un directori a part per que els baixeu. Els usuaris no veuran els canvis fins que reemplaceu els fitxers d’idioma originals pujant-los al vostre lloc web.',
-	'LANGUAGE_FILES'					=> 'Fitxers d’idioma',
-	'LANGUAGE_KEY'						=> 'Clau d’idioma',
 	'LANGUAGE_PACK_ALREADY_INSTALLED'	=> 'Aquest paquet d’idioma ja està instal·lat.',
-	'LANGUAGE_PACK_DELETED'				=> 'S’ha eliminat el paquet d’idioma <strong>%s</strong> correctament. A tots els usuaris que utilitzaven aquest idioma se’ls ha assignat l’idioma per defecte del fòrum.',
+	'LANGUAGE_PACK_DELETED'				=> 'The language pack “%s” has been removed successfully. All users using this language have been reset to the board’s default language.',
 	'LANGUAGE_PACK_DETAILS'				=> 'Informació del paquet d’idioma',
-	'LANGUAGE_PACK_INSTALLED'			=> 'S’ha instal·lat el paquet d’idioma <strong>%s</strong> correctament.',
+	'LANGUAGE_PACK_INSTALLED'			=> 'The language pack “%s” has been successfully installed.',
 	'LANGUAGE_PACK_CPF_UPDATE'			=> 'Les cadenes d’idioma dels camps de perfil personalitzats s’han copiat des de l’idioma per defecte. Canvieu-los si fos necessari.',
 	'LANGUAGE_PACK_ISO'					=> 'ISO',
 	'LANGUAGE_PACK_LOCALNAME'			=> 'Nom local',
@@ -13502,33 +13918,44 @@ $lang = array_merge($lang, array(
 	'LANG_ISO_CODE'						=> 'Codi ISO',
 	'LANG_LOCAL_NAME'					=> 'Nom local',
 
-	'MISSING_LANGUAGE_FILE'		=> 'Fitxer d’idioma absent: <strong style="color:red">%s</strong>',
+	'MISSING_LANG_FILES'		=> 'Missing language files',
 	'MISSING_LANG_VARIABLES'	=> 'Variables d’idioma absent',
-	'MODS_FILES'				=> 'Fitxers d’idioma dels MODs',
 
 	'NO_FILE_SELECTED'				=> 'No heu especificat un fitxer d’idioma.',
 	'NO_LANG_ID'					=> 'No heu especificat un paquet d’idioma.',
-	'NO_REMOVE_DEFAULT_LANG'		=> 'No podeu eliminar el paquet d’idioma per defecte.<br />Per eliminar aquest paquet d’idioma, canvieu abans l’idioma per defecte del fòrum.',
+	'NO_REMOVE_DEFAULT_LANG'		=> 'You are not able to remove the default language pack.<br />If you want to remove this language pack, change your board’s default language first.',
 	'NO_UNINSTALLED_LANGUAGE_PACKS'	=> 'No hi ha paquets d’idioma desinstal·lats',
 
-	'REMOVE_FROM_STORAGE_FOLDER'		=> 'Elimina’l del directori d’emmagatzemament',
-
-	'SELECT_DOWNLOAD_FORMAT'	=> 'Seleccioneu el format per baixar l’arxiu',
-	'SUBMIT_AND_DOWNLOAD'		=> 'Tramet i baixa el fitxer',
-	'SUBMIT_AND_UPLOAD'			=> 'Tramet i puja el fitxer',
-
-	'THOSE_MISSING_LANG_FILES'			=> 'Falten els fitxers d’idioma següents al directori d’idioma %s',
-	'THOSE_MISSING_LANG_VARIABLES'		=> 'Falten les variables d’idioma següents al paquet d’idioma <strong>%s</strong>',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 
 	'UNINSTALLED_LANGUAGE_PACKS'	=> 'Paquets d’idioma desinstal·lats',
 
+	// 3.0.12
+	'EMAIL_FILES'			=> 'Plantilles de correu electrònic',
+	'FILE_CONTENTS'				=> 'Continguts del fitxer',
+	'FILE_FROM_STORAGE'			=> 'Fitxer del directori d’emmagatzemament',
+	'HELP_FILES'				=> 'Fitxers d’ajuda',
+	'INSTALLED_LANGUAGE_PACKS'	=> 'Paquets d’idioma instal·lats',
+	'INVALID_LANGUAGE_PACK'		=> 'El paquet d’idioma seleccionat no és vàlid. Verifiqueu el paquet d’idioma i pugeu-lo de nou si fes falta.',
+	'INVALID_UPLOAD_METHOD'		=> 'El mètode de pujada seleccionat no és vàlid, trieu un mètode diferent.',
+	'LANGUAGE_ENTRIES'					=> 'Entrades d’idioma',
+	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Aquí podeu canviar entrades del paquet d’idioma existents o que encara no estiguin traduïdes.<br /><strong>Nota:</strong> Un cop hagueu canviat un fitxer d’idioma, els canvis s’emmagatzemaran en un directori a part per que els baixeu. Els usuaris no veuran els canvis fins que reemplaceu els fitxers d’idioma originals pujant-los al vostre lloc web.',
+	'LANGUAGE_FILES'					=> 'Fitxers d’idioma',
+	'LANGUAGE_KEY'						=> 'Clau d’idioma',
+	'MISSING_LANGUAGE_FILE'		=> 'Fitxer d’idioma absent: <strong style="color:red">%s</strong>',
+	'SELECT_DOWNLOAD_FORMAT'	=> 'Seleccioneu el format per baixar l’arxiu',
+	'SUBMIT_AND_DOWNLOAD'		=> 'Tramet i baixa el fitxer',
+	'SUBMIT_AND_UPLOAD'			=> 'Tramet i puja el fitxer',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 	'UNABLE_TO_WRITE_FILE'		=> 'No s’ha pogut escriure el fitxer a  %s.',
 	'UPLOAD_COMPLETED'			=> 'S’ha realitzat la pujada correctament.',
 	'UPLOAD_FAILED'				=> 'La pujada ha fallat per causes desconegudes. És possible que us calgui reemplaçar el fitxer en questió manualment.',
 	'UPLOAD_METHOD'				=> 'Mètode de pujada',
 	'UPLOAD_SETTINGS'			=> 'Configuració de pujada',
-
 	'WRONG_LANGUAGE_FILE'		=> 'El fitxer d’idioma seleccionat no és vàlid.',
+	// 3.0.12
 ));
 
 #######language/en/acp/lexicon.php#######
@@ -13861,6 +14288,171 @@ $lang = array_merge($lang, array(
 	'ROLE_DESCRIPTION_ADMIN_FOOTBALL'	=> 'Can edit final match results.',
 ));
 
+#######language/en/acp/permissions_phpbb.php#######
+
+$lang = array_merge($lang, array(
+	'ACL_CAT_ACTIONS'		=> 'Actions',
+	'ACL_CAT_CONTENT'		=> 'Content',
+	'ACL_CAT_FORUMS'		=> 'Forums',
+	'ACL_CAT_MISC'			=> 'Misc',
+	'ACL_CAT_PERMISSIONS'	=> 'Permissions',
+	'ACL_CAT_PM'			=> 'Private messages',
+	'ACL_CAT_POLLS'			=> 'Polls',
+	'ACL_CAT_POST'			=> 'Post',
+	'ACL_CAT_POST_ACTIONS'	=> 'Post actions',
+	'ACL_CAT_POSTING'		=> 'Posting',
+	'ACL_CAT_PROFILE'		=> 'Profile',
+	'ACL_CAT_SETTINGS'		=> 'Settings',
+	'ACL_CAT_TOPIC_ACTIONS'	=> 'Topic actions',
+	'ACL_CAT_USER_GROUP'	=> 'Users &amp; Groups',
+));
+
+// User Permissions
+$lang = array_merge($lang, array(
+	'ACL_U_VIEWPROFILE'	=> 'Can view profiles, memberlist and online list',
+	'ACL_U_CHGNAME'		=> 'Can change username',
+	'ACL_U_CHGPASSWD'	=> 'Can change password',
+	'ACL_U_CHGEMAIL'	=> 'Can change email address',
+	'ACL_U_CHGAVATAR'	=> 'Can change avatar',
+	'ACL_U_CHGGRP'		=> 'Can change default usergroup',
+	'ACL_U_CHGPROFILEINFO'	=> 'Can change profile field information',
+
+	'ACL_U_ATTACH'		=> 'Can attach files',
+	'ACL_U_DOWNLOAD'	=> 'Can download files',
+	'ACL_U_SAVEDRAFTS'	=> 'Can save drafts',
+	'ACL_U_CHGCENSORS'	=> 'Can disable word censors',
+	'ACL_U_SIG'			=> 'Can use signature',
+
+	'ACL_U_SENDPM'		=> 'Can send private messages',
+	'ACL_U_MASSPM'		=> 'Can send messages to multiple users',
+	'ACL_U_MASSPM_GROUP'=> 'Can send messages to groups',
+	'ACL_U_READPM'		=> 'Can read private messages',
+	'ACL_U_PM_EDIT'		=> 'Can edit own private messages',
+	'ACL_U_PM_DELETE'	=> 'Can remove private messages from own folder',
+	'ACL_U_PM_FORWARD'	=> 'Can forward private messages',
+	'ACL_U_PM_EMAILPM'	=> 'Can email private messages',
+	'ACL_U_PM_PRINTPM'	=> 'Can print private messages',
+	'ACL_U_PM_ATTACH'	=> 'Can attach files in private messages',
+	'ACL_U_PM_DOWNLOAD'	=> 'Can download files in private messages',
+	'ACL_U_PM_BBCODE'	=> 'Can use BBCode in private messages',
+	'ACL_U_PM_SMILIES'	=> 'Can use smilies in private messages',
+	'ACL_U_PM_IMG'		=> 'Can use [img] BBCode tag in private messages',
+	'ACL_U_PM_FLASH'	=> 'Can use [flash] BBCode tag in private messages',
+
+	'ACL_U_SENDEMAIL'	=> 'Can send emails',
+	'ACL_U_SENDIM'		=> 'Can send instant messages',
+	'ACL_U_IGNOREFLOOD'	=> 'Can ignore flood limit',
+	'ACL_U_HIDEONLINE'	=> 'Can hide online status',
+	'ACL_U_VIEWONLINE'	=> 'Can view hidden online users',
+	'ACL_U_SEARCH'		=> 'Can search board',
+));
+
+// Forum Permissions
+$lang = array_merge($lang, array(
+	'ACL_F_LIST'		=> 'Can see forum',
+	'ACL_F_READ'		=> 'Can read forum',
+	'ACL_F_SEARCH'		=> 'Can search the forum',
+	'ACL_F_SUBSCRIBE'	=> 'Can subscribe forum',
+	'ACL_F_PRINT'		=> 'Can print topics',
+	'ACL_F_EMAIL'		=> 'Can email topics',
+	'ACL_F_BUMP'		=> 'Can bump topics',
+	'ACL_F_USER_LOCK'	=> 'Can lock own topics',
+	'ACL_F_DOWNLOAD'	=> 'Can download files',
+	'ACL_F_REPORT'		=> 'Can report posts',
+
+	'ACL_F_POST'		=> 'Can start new topics',
+	'ACL_F_STICKY'		=> 'Can post stickies',
+	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_REPLY'		=> 'Can reply to topics',
+	'ACL_F_EDIT'		=> 'Can edit own posts',
+	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
+	'ACL_F_SOFTDELETE'	=> 'Can soft delete own posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_F_IGNOREFLOOD' => 'Can ignore flood limit',
+	'ACL_F_POSTCOUNT'	=> 'Increment post counter<br /><em>Please note that this setting only affects new posts.</em>',
+	'ACL_F_NOAPPROVE'	=> 'Can post without approval',
+
+	'ACL_F_ATTACH'		=> 'Can attach files',
+	'ACL_F_ICONS'		=> 'Can use topic/post icons',
+	'ACL_F_BBCODE'		=> 'Can use BBCode',
+	'ACL_F_FLASH'		=> 'Can use [flash] BBCode tag',
+	'ACL_F_IMG'			=> 'Can use [img] BBCode tag',
+	'ACL_F_SIGS'		=> 'Can use signatures',
+	'ACL_F_SMILIES'		=> 'Can use smilies',
+
+	'ACL_F_POLL'		=> 'Can create polls',
+	'ACL_F_VOTE'		=> 'Can vote in polls',
+	'ACL_F_VOTECHG'		=> 'Can change existing vote',
+));
+
+// Moderator Permissions
+$lang = array_merge($lang, array(
+	'ACL_M_EDIT'		=> 'Can edit posts',
+	'ACL_M_DELETE'		=> 'Can permanently delete posts',
+	'ACL_M_SOFTDELETE'	=> 'Can soft delete posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_M_APPROVE'		=> 'Can approve and restore posts',
+	'ACL_M_REPORT'		=> 'Can close and delete reports',
+	'ACL_M_CHGPOSTER'	=> 'Can change post author',
+
+	'ACL_M_MOVE'	=> 'Can move topics',
+	'ACL_M_LOCK'	=> 'Can lock topics',
+	'ACL_M_SPLIT'	=> 'Can split topics',
+	'ACL_M_MERGE'	=> 'Can merge topics',
+
+	'ACL_M_INFO'	=> 'Can view post details',
+	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+));
+
+// Admin Permissions
+$lang = array_merge($lang, array(
+	'ACL_A_BOARD'		=> 'Can alter board settings/check for updates',
+	'ACL_A_SERVER'		=> 'Can alter server/communication settings',
+	'ACL_A_JABBER'		=> 'Can alter Jabber settings',
+	'ACL_A_PHPINFO'		=> 'Can view php settings',
+
+	'ACL_A_FORUM'		=> 'Can manage forums',
+	'ACL_A_FORUMADD'	=> 'Can add new forums',
+	'ACL_A_FORUMDEL'	=> 'Can delete forums',
+	'ACL_A_PRUNE'		=> 'Can prune forums',
+
+	'ACL_A_ICONS'		=> 'Can alter topic/post icons and smilies',
+	'ACL_A_WORDS'		=> 'Can alter word censors',
+	'ACL_A_BBCODE'		=> 'Can define BBCode tags',
+	'ACL_A_ATTACH'		=> 'Can alter attachment related settings',
+
+	'ACL_A_USER'		=> 'Can manage users<br /><em>This also includes seeing the users browser agent within the viewonline list.</em>',
+	'ACL_A_USERDEL'		=> 'Can delete/prune users',
+	'ACL_A_GROUP'		=> 'Can manage groups',
+	'ACL_A_GROUPADD'	=> 'Can add new groups',
+	'ACL_A_GROUPDEL'	=> 'Can delete groups',
+	'ACL_A_RANKS'		=> 'Can manage ranks',
+	'ACL_A_PROFILE'		=> 'Can manage custom profile fields',
+	'ACL_A_NAMES'		=> 'Can manage disallowed names',
+	'ACL_A_BAN'			=> 'Can manage bans',
+
+	'ACL_A_VIEWAUTH'	=> 'Can view permission masks',
+	'ACL_A_AUTHGROUPS'	=> 'Can alter permissions for individual groups',
+	'ACL_A_AUTHUSERS'	=> 'Can alter permissions for individual users',
+	'ACL_A_FAUTH'		=> 'Can alter forum permission class',
+	'ACL_A_MAUTH'		=> 'Can alter moderator permission class',
+	'ACL_A_AAUTH'		=> 'Can alter admin permission class',
+	'ACL_A_UAUTH'		=> 'Can alter user permission class',
+	'ACL_A_ROLES'		=> 'Can manage roles',
+	'ACL_A_SWITCHPERM'	=> 'Can use others permissions',
+
+	'ACL_A_STYLES'		=> 'Can manage styles',
+	'ACL_A_EXTENSIONS'	=> 'Can manage extensions',
+	'ACL_A_VIEWLOGS'	=> 'Can view logs',
+	'ACL_A_CLEARLOGS'	=> 'Can clear logs',
+	'ACL_A_MODULES'		=> 'Can manage modules',
+	'ACL_A_LANGUAGE'	=> 'Can manage language packs',
+	'ACL_A_EMAIL'		=> 'Can send mass email',
+	'ACL_A_BOTS'		=> 'Can manage bots',
+	'ACL_A_REASONS'		=> 'Can manage report/denial reasons',
+	'ACL_A_BACKUP'		=> 'Can backup/restore database',
+	'ACL_A_SEARCH'		=> 'Can manage search backends and settings',
+));
+
 #######language/en/acp/phpbb_seo.php#######
 
 $lang = array_merge($lang, array(
@@ -14032,6 +14624,7 @@ $lang = array_merge($lang, array(
 
 	'BBCODE_ADDED'				=> 'Sha afegit el BBCode correctament.',
 	'BBCODE_EDITED'				=> 'S’ha editat el BBCode correctament.',
+	'BBCODE_DELETED'			=> 'The BBCode has been removed successfully.',
 	'BBCODE_NOT_EXIST'			=> 'El BBCode que heu seleccionat no existeix.',
 	'BBCODE_HELPLINE'			=> 'Línia d’ajuda',
 	'BBCODE_HELPLINE_EXPLAIN'	=> 'Aquest camp conté el text que es mostra en passar el ratolí per damunt del text del BBCode.',
@@ -14087,17 +14680,10 @@ $lang = array_merge($lang, array(
 	'EXPORT_SMILIES'			=> 'Exporta i baixa smilies.pak',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sEn fer clic sobre aquest enllaç, la configuració de les emoticones instal·lades s’empaquetarà al fitxer <samp>smilies.pak</samp> que un cop baixat pot ser utilitzat per crear un fitxer <samp>.zip</samp> o <samp>.tgz</samp> que contingui totes les emoticones més la configuració d’aquest fitxer <samp>smilies.pak</samp>%s.',
 
-
 	'ICONS_ADD'				=> 'Afegeix una icona nova',
-	'ICONS_NONE_ADDED'		=> 'No s’ha afegit cap icona.',
-	'ICONS_ONE_ADDED'		=> 'S’ha afegit la icona correctament.',
-	'ICONS_ADDED'			=> 'S’han afegit les icones correctament.',
 	'ICONS_CONFIG'			=> 'Configuració d’icones',
 	'ICONS_DELETED'			=> 'S’ha eliminat la icona correctament.',
 	'ICONS_EDIT'			=> 'Edita la icona',
-	'ICONS_ONE_EDITED'		=> 'S’ha actualitzat la icona correctament.',
-	'ICONS_NONE_EDITED'		=> 'No s’ha actualitzat cap icona.',
-	'ICONS_EDITED'			=> 'S’han actualitzat les icones correctament.',
 	'ICONS_HEIGHT'			=> 'Alçària de la icona',
 	'ICONS_IMAGE'			=> 'Imatge de la icona',
 	'ICONS_IMPORTED'		=> 'S’ha instal·lat el paquet d’icones correctament.',
@@ -14127,9 +14713,6 @@ $lang = array_merge($lang, array(
 
 	'SELECT_PACKAGE'			=> 'Seleccioneu un fitxer de paquet',
 	'SMILIES_ADD'				=> 'Afegeix una emoticona nova',
-	'SMILIES_NONE_ADDED'		=> 'No s’ha afegit cap emoticona.',
-	'SMILIES_ONE_ADDED'			=> 'S’ha afegit l’emoticona correctament.',
-	'SMILIES_ADDED'				=> 'S’han afegit les emoticones correctament.',
 	'SMILIES_CODE'				=> 'Codi de l’emoticona',
 	'SMILIES_CONFIG'			=> 'Configuració d’emoticones',
 	'SMILIES_DELETED'			=> 'S’ha eliminat l’emoticona correctament.',
@@ -14137,9 +14720,6 @@ $lang = array_merge($lang, array(
 	'SMILIE_NO_CODE'			=> 'S’ha ignorat l’emoticona “%s” perquè no heu introduït cap codi.',
 	'SMILIE_NO_EMOTION'			=> 'S’ha ignorat l’emoticona “%s” perquè no heu introduït cap emoció.',
 	'SMILIE_NO_FILE'			=> 'S’ha ignorat l’emoticona “%s” perquè no s’ha trobat el fitxer.',
-	'SMILIES_NONE_EDITED'		=> 'S’ha actualitzat l’emoticona correctament.',
-	'SMILIES_ONE_EDITED'		=> 'S’han actualitzat les emoticones correctament.',
-	'SMILIES_EDITED'			=> 'S’ha editat l’emoticona correctament.',
 	'SMILIES_EMOTION'			=> 'Emoció',
 	'SMILIES_HEIGHT'			=> 'Alçària de l’emoticona',
 	'SMILIES_IMAGE'				=> 'Imatge de l’emoticona',
@@ -14151,7 +14731,6 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'Fitxer d’imatge de l’emoticona',
 	'SMILIES_WIDTH'				=> 'Amplària de l’emoticona',
 
-	'TOO_MANY_SMILIES'		=> 'El vostre missatge té massa emoticones. El nombre màxim d’emoticones permeses és %d.',
 	'WRONG_PAK_TYPE'		=> 'El paquet especificat no conté les dades adequades.',
 ));
 
@@ -14249,8 +14828,11 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ADDED_PROFILE_FIELD'	=> 'S’ha afegit el camp personalitzat del perfil correctament.',
+	'ALPHA_DOTS'			=> 'Alphanumeric and dots (periods)',
 	'ALPHA_ONLY'			=> 'Només alfanumèrics',
 	'ALPHA_SPACERS'			=> 'Alfanumèrics i d’espaiat',
+	'ALPHA_UNDERSCORE'		=> 'Alphanumeric and underscores',
+	'ALPHA_PUNCTUATION'		=> 'Alphanumeric with comma, dots, underscore and dashes beginning with a letter',
 	'ALWAYS_TODAY'			=> 'Sempre la data actual',
 
 	'BOOL_ENTRIES_EXPLAIN'	=> 'Introduïu les opcions ara',
@@ -14277,6 +14859,10 @@ $lang = array_merge($lang, array(
 	'DISPLAY_AT_PROFILE_EXPLAIN'	=> 'Els usuaris poden canviar aquest camp del perfil des del Tauler de control de l’usuari.',
 	'DISPLAY_AT_REGISTER'			=> 'Mostra’l a la pantalla de registre',
 	'DISPLAY_AT_REGISTER_EXPLAIN'	=> 'Si aquesta opció està habilitada, el camp es mostrarà durant el registre d’usuaris.',
+	'DISPLAY_ON_MEMBERLIST'			=> 'Display on memberlist screen',
+	'DISPLAY_ON_MEMBERLIST_EXPLAIN'	=> 'If this option is enabled, the field will be displayed in the user rows on the memberlist screen.',
+	'DISPLAY_ON_PM'					=> 'Display on view private message screen',
+	'DISPLAY_ON_PM_EXPLAIN'			=> 'If this option is enabled, the field will be displayed in the mini-profile on the private message screen.',
 	'DISPLAY_ON_VT'					=> 'Mostra’l a la pantalla d’entrades',
 	'DISPLAY_ON_VT_EXPLAIN'			=> 'Si aquesta opció està habilitada, el camp es mostrarà al miniperfil a la pantalla d’entrades.',
 	'DISPLAY_PROFILE_FIELD'			=> 'Mostra el camp del perfil publicament',
@@ -14290,20 +14876,26 @@ $lang = array_merge($lang, array(
 	'EVERYTHING_OK'					=> 'Tot correcte',
 
 	'FIELD_BOOL'				=> 'Booleà (Sí/No)',
+	'FIELD_CONTACT_DESC'		=> 'Contact description',
+	'FIELD_CONTACT_URL'			=> 'Contact link',
 	'FIELD_DATE'				=> 'Data',
 	'FIELD_DESCRIPTION'			=> 'Descripció del camp',
 	'FIELD_DESCRIPTION_EXPLAIN'	=> 'L’explicació presentada a l’usuari per aquest camp.',
 	'FIELD_DROPDOWN'			=> 'Desplegable',
+	'FIELD_GOOGLEPLUS'			=> 'Google+',
 	'FIELD_IDENT'				=> 'Identificador del camp',
 	'FIELD_IDENT_ALREADY_EXIST'	=> 'L’identificador que heu escollit ja existeix. Trieu un altre nom.',
 	'FIELD_IDENT_EXPLAIN'		=> 'L’identificador del camp és un nom que identifica el camp del perfil a la base de dades i les plantilles.',
 	'FIELD_INT'					=> 'Números',
+	'FIELD_IS_CONTACT'			=> 'Display field as a contact field',
+	'FIELD_IS_CONTACT_EXPLAIN'	=> 'Contact fields are displayed within the contact section of the user profile and are displayed differently in the mini profile next to posts and private messages. You can use <samp>%s</samp> as a placeholder variable which will be replaced by a value provided by the user.',
 	'FIELD_LENGTH'				=> 'Longitud de la casella de text',
 	'FIELD_NOT_FOUND'			=> 'No s’ha trobat el camp del perfil.',
 	'FIELD_STRING'				=> 'Camp de text simple',
 	'FIELD_TEXT'				=> 'Àrea de text',
 	'FIELD_TYPE'				=> 'Tipus de camp',
 	'FIELD_TYPE_EXPLAIN'		=> 'No es pot canviar el tipus de camp més endavant.',
+	'FIELD_URL'					=> 'URL (Link)',
 	'FIELD_VALIDATION'			=> 'Validació del camp',
 	'FIRST_OPTION'				=> 'Primera opció',
 
@@ -14315,6 +14907,12 @@ $lang = array_merge($lang, array(
 	'ISO_LANGUAGE'				=> 'Idioma [%s]',
 
 	'LANG_SPECIFIC_OPTIONS'		=> 'Opcions específiques de l’idioma [<strong>%s</strong>]',
+
+	'LETTER_NUM_DOTS'			=> 'Any letters, numbers and dots (periods)',
+	'LETTER_NUM_ONLY'			=> 'Any letters and numbers',
+	'LETTER_NUM_PUNCTUATION'	=> 'Any letters, numbers, comma, dots, underscores and dashes beginning with any letter',
+	'LETTER_NUM_SPACERS'		=> 'Any letters, numbers and spacers',
+	'LETTER_NUM_UNDERSCORE'		=> 'Any letters, numbers and underscores',
 
 	'MAX_FIELD_CHARS'		=> 'Nombre màxim de caràcters',
 	'MAX_FIELD_NUMBER'		=> 'Número màxim permès',
@@ -14369,7 +14967,9 @@ $lang = array_merge($lang, array(
 #######language/en/acp/prune.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_PRUNE_USERS_EXPLAIN'	=> 'Aquesta secció us permet eliminar o desactivar usuaris del vostre fòrum. Els comptes es poden filtrar de diverses maneres: per nombre d’entrades, activitat més recent, etc. Es poden combinar diversos criteris per ajustar quins comptes es veuran afectats. Per exemple, podeu podar els usuaris amb menys de 10 entrades i que també estiguin inactius des del 2002-01-01. De forma alternativa, podeu ignorar completament la selecció per criteris introduïnt una llista d’usuaris (cadascun en una línia nova) a la casella de text. Aneu amb compte amb aquesta utilitat! L’eliminació d’un usuari no es pot desfer.',
+	'ACP_PRUNE_USERS_EXPLAIN'	=> 'This section allows you to delete or deactivate users on your board. Accounts can be filtered in a variety of ways; by post count, most recent activity, etc. Criteria may be combined to narrow down which accounts are affected. For example, you can prune users with fewer than 10 posts, who were also inactive after 2002-01-01. Use * as a wildcard for text fields. Alternatively, you may skip the criteria selection completely by entering a list of users (each on a separate line) into the text field. Take care with this facility! Once a user is deleted, there is no way to reverse the action.',
+
+	'CRITERIA'				=> 'Criteria',
 
 	'DEACTIVATE_DELETE'			=> 'Desactiva o elimina',
 	'DEACTIVATE_DELETE_EXPLAIN'	=> 'Trieu si voleu desactivar els usuaris o eliminar-los completament. Tingueu en compte que els usuaris eliminats no es poden recuperar!',
@@ -14377,15 +14977,18 @@ $lang = array_merge($lang, array(
 	'DELETE_USER_POSTS'			=> 'Elimina les entrades dels usuaris podats',
 	'DELETE_USER_POSTS_EXPLAIN'	=> 'Suprimeix les entrades realitzades pels usuaris eliminats, no té cap efecte si només desactiveu els usuaris.',
 
-	'JOINED_EXPLAIN'			=> 'Introduïu una data en el format <kbd>AAAA-MM-DD</kbd>.',
+	'JOINED_EXPLAIN'			=> 'Enter a date in <kbd>YYYY-MM-DD</kbd> format. You may use both fields to specify an interval, or leave one blank for an open date range.',
 
 	'LAST_ACTIVE_EXPLAIN'		=> 'Introduïu una data en el format <kbd>AAAA-MM-DD</kbd>. Introduïu <kbd>0000-00-00</kbd> per podar els usuaris que no han iniciat mai la sessió, les condicions <em>Abans</em> i <em>Després</em> s’ignoraran.',
 
+	'POSTS_ON_QUEUE'			=> 'Posts Awaiting Approval',
+	'PRUNE_USERS_GROUP_EXPLAIN'	=> 'Limit to users within the selected group.',
+	'PRUNE_USERS_GROUP_NONE'	=> 'All groups',
 	'PRUNE_USERS_LIST'				=> 'Usuaris que es podaran',
-	'PRUNE_USERS_LIST_DELETE'		=> 'Amb els criteris seleccionats per podar usuaris s’eliminaran els comptes següents.',
-	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'Amb els criteris seleccionats per podar usuaris es desactivaran els comptes següents.',
+	'PRUNE_USERS_LIST_DELETE'		=> 'With the selected critera for pruning users the following accounts will be removed. You can remove individual users from the deletion list by unchecking the box next to their username.',
+	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'With the selected critera for pruning users the following accounts will be deactivated. You can remove individual users from the deactivation list by unchecking the box next to their username.',
 
-	'SELECT_USERS_EXPLAIN'		=> 'Introduïu noms d’usuari concrets a la casella de text i s’utilitzarà aquesta llista en lloc dels criteris especificats més amunt. No es pot podar als usuaris fundadors.',
+	'SELECT_USERS_EXPLAIN'		=> 'Enter specific usernames here. They will be used in preference to the criteria above. Founders cannot be pruned.',
 
 	'USER_DEACTIVATE_SUCCESS'	=> 'Els usuaris seleccionats s’han desactivat correctament.',
 	'USER_DELETE_SUCCESS'		=> 'Els usuaris seleccionats s’han eliminat correctament.',
@@ -14432,15 +15035,38 @@ $lang = array_merge($lang, array(
 	'DELETING_INDEX_IN_PROGRESS'			=> 'S’està eliminant l’índex',
 	'DELETING_INDEX_IN_PROGRESS_EXPLAIN'	=> 'El motor de cerca està netejant el seu índex. Això pot trigar uns quants minuts.',
 
-	'FULLTEXT_MYSQL_INCOMPATIBLE_VERSION'	=> 'Només podeu utilitzar el motor MySQL fulltext amb MySQL4 o superior.',
+	'FULLTEXT_MYSQL_INCOMPATIBLE_DATABASE'	=> 'The MySQL fulltext backend can only be used with MySQL4 and above.',
 	'FULLTEXT_MYSQL_NOT_MYISAM'				=> 'Els índexs MySQL fulltext només es poden utilitzar amb taules MyISAM.',
 	'FULLTEXT_MYSQL_TOTAL_POSTS'			=> 'Nombre total d’entrades indexades',
-	'FULLTEXT_MYSQL_MBSTRING'				=> 'Compatibilitat per caràcters UTF-8 no llatins utilitzant mbstring:',
-	'FULLTEXT_MYSQL_PCRE'					=> 'Compatibilitat per caràcters UTF-8 no llatins utilitzant PCRE:',
-	'FULLTEXT_MYSQL_MBSTRING_EXPLAIN'		=> 'Si PCRE no té propietats de caràcters unicode, el motor de cerca intentarà utilitzar el motor d’expressions regulars de mbstring.',
-	'FULLTEXT_MYSQL_PCRE_EXPLAIN'			=> 'Aquest motor de cerca necessita les propietats de caràcters unicode del PCRE que només estan disponibles al PHP 4.4, 5.1 i superiors, si voleu fer cerques utilitzant caràcters no llatins.',
 	'FULLTEXT_MYSQL_MIN_SEARCH_CHARS_EXPLAIN'	=> 'Només s’indexaran per a les cerques les paraules que tinguin com a mínim aquest nombre de caràcters. Només podeu canviar aquest paràmetre modificant la configuració del MySQL.',
 	'FULLTEXT_MYSQL_MAX_SEARCH_CHARS_EXPLAIN'	=> 'Només s’indexaran per a les cerques les paraules que tinguin com a màxim aquest nombre de caràcters. Només podeu canviar aquest paràmetre modificant la configuració del MySQL.',
+
+	'FULLTEXT_POSTGRES_INCOMPATIBLE_DATABASE'	=> 'The PostgreSQL fulltext backend can only be used with PostgreSQL.',
+	'FULLTEXT_POSTGRES_TOTAL_POSTS'			=> 'Total number of indexed posts',
+	'FULLTEXT_POSTGRES_VERSION_CHECK'		=> 'PostgreSQL version',
+	'FULLTEXT_POSTGRES_TS_NAME'				=> 'Text search Configuration Profile:',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN'			=> 'Minimum word length for keywords',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN'			=> 'Maximum word length for keywords',
+	'FULLTEXT_POSTGRES_VERSION_CHECK_EXPLAIN'		=> 'This search backend requires PostgreSQL version 8.3 and above.',
+	'FULLTEXT_POSTGRES_TS_NAME_EXPLAIN'				=> 'The Text search configuration profile used to determine the parser and dictionary.',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN_EXPLAIN'			=> 'Words with at least this many characters will be included in the query to the database.',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN_EXPLAIN'			=> 'Words with no more than this many characters will be included in the query to the database.',
+
+	'FULLTEXT_SPHINX_CONFIGURE'				=> 'Configure the following settings to generate sphinx config file',
+	'FULLTEXT_SPHINX_DATA_PATH'				=> 'Path to data directory',
+	'FULLTEXT_SPHINX_DATA_PATH_EXPLAIN'		=> 'It will be used to store the indexes and log files. You should create this directory outside the web accessible directories. (should have a trailing slash)',
+	'FULLTEXT_SPHINX_DELTA_POSTS'			=> 'Number of posts in frequently updated delta index',
+	'FULLTEXT_SPHINX_HOST'					=> 'Sphinx search daemon host',
+	'FULLTEXT_SPHINX_HOST_EXPLAIN'			=> 'Host on which the sphinx search daemon (searchd) listens. Leave empty to use the default localhost',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT'		=> 'Indexer memory limit',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT_EXPLAIN'	=> 'This number should at all times be lower than the RAM available on your machine. If you experience periodic performance problems this might be due to the indexer consuming too many resources. It might help to lower the amount of memory available to the indexer.',
+	'FULLTEXT_SPHINX_MAIN_POSTS'			=> 'Number of posts in main index',
+	'FULLTEXT_SPHINX_PORT'					=> 'Sphinx search daemon port',
+	'FULLTEXT_SPHINX_PORT_EXPLAIN'			=> 'Port on which the sphinx search daemon (searchd) listens. Leave empty to use the default Sphinx API port 9312',
+	'FULLTEXT_SPHINX_WRONG_DATABASE'		=> 'The sphinx search for phpBB supports MySQL and PostgreSQL only.',
+	'FULLTEXT_SPHINX_CONFIG_FILE'			=> 'Sphinx config file',
+	'FULLTEXT_SPHINX_CONFIG_FILE_EXPLAIN'	=> 'The generated content of the sphinx config file. This data needs to be pasted into the sphinx.conf which is used by sphinx search daemon. Replace the [dbuser] and [dbpassword] placeholders with your database credentials.',
+	'FULLTEXT_SPHINX_NO_CONFIG_DATA'		=> 'The sphinx data and config directory paths are not defined. Please define them to generate the config file.',
 
 	'GENERAL_SEARCH_SETTINGS'				=> 'Configuracions generals de les cerques',
 	'GO_TO_SEARCH_INDEX'					=> 'Ves a la pàgina d’índexs de cerca',
@@ -14465,8 +15091,6 @@ $lang = array_merge($lang, array(
 
 	'SEARCH_GUEST_INTERVAL'					=> 'Interval d’inundació de cerques per a visitants',
 	'SEARCH_GUEST_INTERVAL_EXPLAIN'			=> 'Nombre de segons que han d’esperar els visitants entre dues cerques consecutives. Si un dels visitants fa una cerca, tots els altres s’han d’esperar fins que l’interval de temps hagi passat.',
-	'SEARCH_INDEX_CREATE_REDIRECT'			=> 'Totes les entrades fins l’entrada amb l’id %1$d s’han indexat, de les quals %2$d entrades estaven dintre d’aquest pas.<br />La velocitat d’indexació actual és d’aproximadament %3$.1f entrades per segon.<br />Indexació en curs…',
-	'SEARCH_INDEX_DELETE_REDIRECT'			=> 'Totes les entrades fins l’entrada amb l’id %1$d s’han tret de l’índex de cerca.<br />Eliminació en curs…',
 	'SEARCH_INDEX_CREATED'					=> 'S’han indexat totes les entrades de la base de dades del fòrum correctament.',
 	'SEARCH_INDEX_REMOVED'					=> 'S’ha eliminat l’índex de cerca d’aquest motor correctament.',
 	'SEARCH_INTERVAL'						=> 'Interval d’inundació de cerques per a usuaris',
@@ -14489,8 +15113,55 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
+	// 3.1.0
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
+
+	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
+	'CONFIRM_UNINSTALL_STYLES'		=> 'Are you sure you wish to uninstall selected styles?',
+	'COPYRIGHT'						=> 'Copyright',
+
+	'DEACTIVATE_DEFAULT'		=> 'No podeu desactivar l’estil per defecte.',
+	'DELETE_FROM_FS'			=> 'Elimina’l del sistema de fitxers',
+	'DELETE_STYLE_FILES_FAILED'	=> 'Error deleting files for style "%s".',
+	'DELETE_STYLE_FILES_SUCCESS'	=> 'Files for style "%s" have been deleted.',
+	'DETAILS'					=> 'Detalls',
+
+	'INHERITING_FROM'			=> 'Hereta de',
+	'INSTALL_STYLE'				=> 'Instal·la l’estil',
+	'INSTALL_STYLES'			=> 'Install styles',
+	'INSTALL_STYLES_EXPLAIN'	=> 'Here you can install new styles.<br />If you cannot find a specific style in list below, check to make sure style is already installed. If it is not installed, check if it was uploaded correctly.',
+	'INVALID_STYLE_ID'			=> 'Invalid style ID.',
+
+	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
+	'NO_UNINSTALLED_STYLE'		=> 'No s’han detectat estils desinstal·lats.',
+
+	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
+
+	'STYLE_ACTIVATE'			=> 'Activa',
+	'STYLE_ACTIVE'				=> 'Actiu',
+	'STYLE_DEACTIVATE'			=> 'Desactiva',
+	'STYLE_DEFAULT'				=> 'És l’estil per defecte',
+	'STYLE_DEFAULT_CHANGE_INACTIVE'	=> 'You must activate style before making it default style.',
+	'STYLE_ERR_INVALID_PARENT'	=> 'Invalid parent style.',
+	'STYLE_ERR_NAME_EXIST'		=> 'Ja existeix un estil amb aquest nom.',
+	'STYLE_ERR_STYLE_NAME'		=> 'Heu de proporcionar un nom per aquest estil.',
+	'STYLE_INSTALLED'			=> 'Style "%s" has been installed.',
+	'STYLE_INSTALLED_RETURN_INSTALLED_STYLES'	=> 'Return to installed styles list',
+	'STYLE_INSTALLED_RETURN_UNINSTALLED_STYLES'	=> 'Install more styles',
+	'STYLE_NAME'				=> 'Nom de l’estil',
+	'STYLE_NOT_INSTALLED'		=> 'Style "%s" was not installed.',
+	'STYLE_PATH'				=> 'Style path',
+	'STYLE_UNINSTALL'			=> 'Uninstall',
+	'STYLE_UNINSTALL_DEPENDENT'	=> 'Style "%s" cannot be uninstalled because it has one or more child styles.',
+	'STYLE_UNINSTALLED'			=> 'Style "%s" uninstalled successfully.',
+	'STYLE_USED_BY'				=> 'Utilitzat per (incloent-hi els robots)',
+
+	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+
+	// 3.0.12
 	'ACP_IMAGESETS_EXPLAIN'	=> 'Els grups d’imatges constitueixen totes les imatges de botons, fòrums, carpetes, etc. i d’altres no específiques d’un estil utilitzades pel fòrum. Aquí podeu editar, exportar o eliminar grups d’imatges existents i importar o activar grups nous.',
-	'ACP_STYLES_EXPLAIN'	=> 'Aquí podeu gestionar els estils disponibles al fòrum. Un estil està format per una plantilla, un tema i un grup d’imatges. Podeu modificar estils existents, eliminar-los, desactivar-los, reactivar-los, crear-los o importar-ne de nous. També podeu veure quin aspecte tindrà un estil utilitzant la funció de previsualització. L’estil per defecte actual está marcat amb un asterisc (*). També es llista el nombre total d’usuaris per cada estil, tingueu en compte que la sobreescriptura de l’estil triat pels usuaris no es reflecteix aquí.',
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 	'ACP_TEMPLATES_EXPLAIN'	=> 'Un grup de plantilles constitueix tot l’etiquetatge utilitzat per generar el format del fòrum. Aquí podeu editar grups de plantilles existents, eliminar-los, exportar-los, importar-los i previsualitzar-los. També podeu modificar el codi de plantilles utilitzat per generar el BBCode.',
 	'ACP_THEMES_EXPLAIN'	=> 'Des d’aquí podeu crear, instal·lar, editar, eliminar i exportar temes. Un tema és la combinació de colors i imatges que s’apliquen a les plantilles per definir l’aparença bàsica dels fòrum. El rang d’opcions disponibles depèn de la configuració del servidor i la instal·lació del phpBB, vegeu el manual per obtenir informació més detallada. Tingueu en compte que, quan creeu temes nous, l’ús d’un tema existent com a base és opcional.',
 	'ADD_IMAGESET'			=> 'Crea un grup d’imatges',
@@ -14527,7 +15198,6 @@ $lang = array_merge($lang, array(
 	'CURRENT_IMAGE'					=> 'Imatge actual',
 
 	'DEACTIVATE_DEFAULT'		=> 'No podeu desactivar l’estil per defecte.',
-	'DELETE_FROM_FS'			=> 'Elimina’l del sistema de fitxers',
 	'DELETE_IMAGESET'			=> 'Elimina el grup d’imatge',
 	'DELETE_IMAGESET_EXPLAIN'	=> 'Aquí podeu eliminar el grup d’imatges seleccionat de la base de dades. Tingueu en compte que no es poden desfer els canvis. És recomanable que abans exporteu el grup per si l’heu d’utilitzar en el futur.',
 	'DELETE_STYLE'				=> 'Elimina l’estil',
@@ -14724,7 +15394,6 @@ $lang = array_merge($lang, array(
 	'INCLUDE_IMAGESET'			=> 'Inclou el grup d’imatges',
 	'INCLUDE_TEMPLATE'			=> 'Inclou la plantilla',
 	'INCLUDE_THEME'				=> 'Inclou el tema',
-	'INHERITING_FROM'			=> 'Hereta de',
 	'INSTALL_IMAGESET'			=> 'Instal·la el grup d’imatges',
 	'INSTALL_IMAGESET_EXPLAIN'	=> 'Aquí podeu instal·lar el grup d’imatges que trieu. Si ho voleu, podeu editar determinats detalls o utilitzar els valors per defecte de la instal·lació.',
 	'INSTALL_STYLE'				=> 'Instal·la l’estil',
@@ -14754,7 +15423,6 @@ $lang = array_merge($lang, array(
 	'NO_TEMPLATE'				=> 'No s’ha pogut trobar la plantilla al sistema de fitxers.',
 	'NO_THEME'					=> 'No s’ha pogut trobar el tema al sistema de fitxers.',
 	'NO_UNINSTALLED_IMAGESET'	=> 'No s’han detectat grups d’imatges desinstal·lats.',
-	'NO_UNINSTALLED_STYLE'		=> 'No s’han detectat estils desinstal·lats.',
 	'NO_UNINSTALLED_TEMPLATE'	=> 'No s’han detectat plantilles desinstal·lades.',
 	'NO_UNINSTALLED_THEME'		=> 'No s’han detectat temes desinstal·lats.',
 	'NO_UNIT'					=> 'Cap',
@@ -14794,30 +15462,22 @@ $lang = array_merge($lang, array(
 	'SELECTED_THEME_FILE'		=> 'Fitxer de tema seleccionat',
 	'STORE_DATABASE'			=> 'Base de dades',
 	'STORE_FILESYSTEM'			=> 'Sistema de fitxers',
-	'STYLE_ACTIVATE'			=> 'Activa',
-	'STYLE_ACTIVE'				=> 'Actiu',
 	'STYLE_ADDED'				=> 'S’ha afegit l’estil correctament.',
-	'STYLE_DEACTIVATE'			=> 'Desactiva',
-	'STYLE_DEFAULT'				=> 'És l’estil per defecte',
 	'STYLE_DELETED'				=> 'S’ha eliminat l’estil correctament.',
 	'STYLE_DETAILS_UPDATED'		=> 'S’ha editat l’estil correctament.',
 	'STYLE_ERR_ARCHIVE'			=> 'Seleccioneu un mètode per arxivar.',
 	'STYLE_ERR_COPY_LONG'		=> 'La longitud màxima del copyright és de 60 caràcters.',
 	'STYLE_ERR_MORE_ELEMENTS'	=> 'Heu de seleccionar un element d’estil com a mínim.',
 	'STYLE_ERR_NAME_CHARS'		=> 'El nom de l’estil només pot contenir caràcters alfanumèrics, -, +, _ i l’espai.',
-	'STYLE_ERR_NAME_EXIST'		=> 'Ja existeix un estil amb aquest nom.',
 	'STYLE_ERR_NAME_LONG'		=> 'La longitud màxima del nom de l’estil és de 30 caràcters.',
 	'STYLE_ERR_NO_IDS'			=> 'Heu de seleccionar una plantilla, un tema i un grup d’imatges per aquest estil.',
 	'STYLE_ERR_NOT_STYLE'		=> 'El fitxer importat o pujat no conté un arxiu d’estil vàlid.',
-	'STYLE_ERR_STYLE_NAME'		=> 'Heu de proporcionar un nom per aquest estil.',
 	'STYLE_EXPORT'				=> 'Exporta l’estil',
 	'STYLE_EXPORT_EXPLAIN'		=> 'Aquí podeu exportar un estil en forma d’arxiu. No cal que un estil contingui tots els elements però n’ha de contenir com a mínim un. Per exemple si heu creat un tema i grup d’imatges per a una plantilla utilitzada freqüentment, podeu exportar simplement el tema i el grup d’imatges i ometre la plantilla. Podeu seleccionar si baixeu el fitxer directament o situar-lo al directori “store” per baixar-lo després o per FTP.',
 	'STYLE_EXPORTED'			=> 'S’ha exportat l’estil correctament i s’ha emmagatzemat a %s.',
 	'STYLE_IMAGESET'			=> 'Grup d’imatges',
-	'STYLE_NAME'				=> 'Nom de l’estil',
 	'STYLE_TEMPLATE'			=> 'Plantilla',
 	'STYLE_THEME'				=> 'Tema',
-	'STYLE_USED_BY'				=> 'Utilitzat per (incloent-hi els robots)',
 
 	'TEMPLATE_ADDED'			=> 'S’ha afegit i emmagatzemat el grup de plantilles nou al sistema de fitxers.',
 	'TEMPLATE_ADDED_DB'			=> 'S’ha afegit i emmagatzemat el grup de plantilles nou a la base de dades.',
@@ -14915,6 +15575,7 @@ $lang = array_merge($lang, array(
 	'CANNOT_FORCE_REACT_FOUNDER'	=> 'No esteu autoritzat a forçar la reactivació de comptes de fundadors.',
 	'CANNOT_FORCE_REACT_YOURSELF'	=> 'No esteu autoritzat a forçar la reactivació del vostre propi compte.',
 	'CANNOT_REMOVE_ANONYMOUS'		=> 'No esteu autoritzat a eliminar el compte d’usuari visitant.',
+	'CANNOT_REMOVE_FOUNDER'			=> 'You are not allowed to remove founder accounts.',
 	'CANNOT_REMOVE_YOURSELF'		=> 'No esteu autoritzat a eliminar el vostre propi compte.',
 	'CANNOT_SET_FOUNDER_IGNORED'	=> 'No podeu ascendir a fundador usuaris ignorats.',
 	'CANNOT_SET_FOUNDER_INACTIVE'	=> 'Abans d’ascendir un usuari a fundador, cal que l’activeu. Només els usuaris activats poden ser ascendits.',
@@ -14941,7 +15602,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'Seleccioneu el fòrum al qual voleu moure totes les entrades que ha fet aquest usuari.',
 
 	'NO_SPECIAL_RANK'		=> 'Sense rang especial',
-	'NO_WARNINGS'			=> 'Sense advertiments.',
+	'NO_WARNINGS'			=> 'No warnings exist.',
 	'NOT_MANAGE_FOUNDER'	=> 'Heu intentat gestionar un usuari amb estat de fundador. Només els fundadors poden gestionar altres fundadors.',
 
 	'QUICK_TOOLS'			=> 'Eines ràpides',

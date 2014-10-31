@@ -1,5 +1,14 @@
 ﻿<?php
 
+#######language/en/app.php#######
+
+$lang = array_merge($lang, array(
+	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
+	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
+	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+));
+
 #######language/en/calendar.php#######
 
 $lang = array_merge($lang, array(
@@ -182,6 +191,55 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'A privát reCaptcha kulcsod. Kulcs a <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a> oldalon kérhető.',
 
 	'RECAPTCHA_EXPLAIN'				=> 'A robotok általi automatikus űrlapküldések megakadályozása érdekében be kell írnod a képen látható mindkét szót az alatta lévő szövegmezőbe.',
+	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
+));
+
+#######language/en/cli.php#######
+
+$lang = array_merge($lang, array(
+	'CLI_CONFIG_CANNOT_CACHED'			=> 'Set this option if the configuration option changes too frequently to be efficiently cached.',
+	'CLI_CONFIG_CURRENT'				=> 'Current configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_DELETE_SUCCESS'			=> 'Successfully deleted config %s.',
+	'CLI_CONFIG_NEW'					=> 'New configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_NOT_EXISTS'				=> 'Config %s does not exist',
+	'CLI_CONFIG_OPTION_NAME'			=> 'The configuration option’s name',
+	'CLI_CONFIG_PRINT_WITHOUT_NEWLINE'	=> 'Set this option if the value should be printed without a new line at the end.',
+	'CLI_CONFIG_INCREMENT_BY'			=> 'Amount to increment by',
+	'CLI_CONFIG_INCREMENT_SUCCESS'		=> 'Successfully incremented config %s',
+	'CLI_CONFIG_SET_FAILURE'			=> 'Could not set config %s',
+	'CLI_CONFIG_SET_SUCCESS'			=> 'Successfully set config %s',
+
+	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
+	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
+	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
+	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
+	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
+	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
+	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
+	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
+	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
+	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
+	'CLI_EXTENSION_ENABLE_FAILURE'		=> 'Could not enable extension %s',
+	'CLI_EXTENSION_ENABLE_SUCCESS'		=> 'Successfully enabled extension %s',
+	'CLI_EXTENSION_NAME'				=> 'Name of the extension',
+	'CLI_EXTENSION_PURGE_FAILURE'		=> 'Could not purge extension %s',
+	'CLI_EXTENSION_PURGE_SUCCESS'		=> 'Successfully purged extension %s',
+	'CLI_EXTENSION_NOT_FOUND'			=> 'No extensions were found.',
+	'CLI_EXTENSIONS_AVAILABLE'			=> 'Available',
+	'CLI_EXTENSIONS_DISABLED'			=> 'Disabled',
+	'CLI_EXTENSIONS_ENABLED'			=> 'Enabled',
+
+	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
 ));
 
 #######language/en/common.php#######
@@ -190,7 +248,11 @@ $lang = array_merge($lang, array(
 	'TRANSLATION_INFO'	=> 'Magyar fordítás <a href="http://phpbb.hu/">phpbb.hu</a>',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|Y.m.d.|',	// 01 Jan 2007 (with Relative days enabled)
+	'DATETIME_FORMAT'	=> '|d M Y, H:i|',	// 01 Jan 2007, 13:37 (with Relative days enabled)
 	'USER_LANG'			=> 'hu',
+
+	// See http://wiki.phpbb.com/Plural_Rules for more information
+	'PLURAL_RULE'		=> '1',
 
 	'1_DAY'			=> '1 nap',
 	'1_MONTH'		=> '1 hónap',
@@ -204,18 +266,24 @@ $lang = array_merge($lang, array(
 	'ACCOUNT_DEACTIVATED'			=> 'Az azonosítód kézzel deaktiválásra került, csak egy adminisztrátor tudja újraaktiválni.',
 	'ACCOUNT_NOT_ACTIVATED'			=> 'Az azonosítód még nem aktiváltuk.',
 	'ACP'							=> 'Adminisztrátori vezérlőpult',
+	'ACP_SHORT'						=> 'ACP',
 	'ACTIVE'						=> 'aktív',
 	'ACTIVE_ERROR'					=> 'A megadott felhasználónév jelenleg inaktív. Ha problémáid akadnának az azonosítód aktiválásával, lépj kapcsolatba a fórum adminisztrátorával.',
 	'ADMINISTRATOR'					=> 'Adminisztrátor',
 	'ADMINISTRATORS'				=> 'Adminisztrátorok',
 	'AGE'							=> 'Kor',
 	'AIM'							=> 'AIM',
+	'AJAX_ERROR_TITLE'				=> 'AJAX error',
+	'AJAX_ERROR_TEXT'				=> 'Something went wrong when processing your request.',
+	'AJAX_ERROR_TEXT_ABORT'			=> 'User aborted request.',
+	'AJAX_ERROR_TEXT_TIMEOUT'		=> 'Your request timed out; please try again.',
+	'AJAX_ERROR_TEXT_PARSERERROR'	=> 'Something went wrong with the request and the server returned an invalid reply.',
 	'ALLOWED'						=> 'Engedélyezett',
 	'ALL_FILES'						=> 'Összes állomány',
 	'ALL_FORUMS'					=> 'Összes fórum',
 	'ALL_MESSAGES'					=> 'Összes üzenet',
 	'ALL_POSTS'						=> 'Összes hozzászólás',
-	'ALL_TIMES'						=> 'Időzóna: %1$s %2$s',
+	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'Összes téma',
 	'AND'							=> 'és',
 	'ARE_WATCHING_FORUM'			=> 'Sikeresen feliratkoztál erre a fórumra.',
@@ -225,6 +293,14 @@ $lang = array_merge($lang, array(
 	'ATTACHED_IMAGE_NOT_IMAGE'		=> 'A csatolni próbált képállomány hibás.',
 	'AUTHOR'						=> 'Szerző',
 	'AUTH_NO_PROFILE_CREATED'		=> 'Nem sikerült létrehozni a felhasználói profilt.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_ENTRY'				=> 'Invalid database entry.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_SERVICE_TYPE'		=> 'Invalid service type provided to OAuth service handler.',
+	'AUTH_PROVIDER_OAUTH_ERROR_SERVICE_NOT_CREATED'			=> 'OAuth service not created',
+	'AUTH_PROVIDER_OAUTH_SERVICE_BITLY'						=> 'Bitly',
+	'AUTH_PROVIDER_OAUTH_SERVICE_FACEBOOK'					=> 'Facebook',
+	'AUTH_PROVIDER_OAUTH_SERVICE_GOOGLE'					=> 'Google',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_NOT_STORED'			=> 'OAuth token not stored.',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_INCORRECTLY_STORED'	=> 'OAuth token incorrectly stored.',
 	'AVATAR_DISALLOWED_CONTENT'		=> 'A feltöltés visszautasításra került, mivel a feltöltött állomány egy esetleges támadás hordozója lehet.',
 	'AVATAR_DISALLOWED_EXTENSION'	=> 'Az állományt nem lehet megjeleníteni, mivel a <strong>%s</strong> kiterjesztés nem engedélyezett.',
 	'AVATAR_EMPTY_REMOTE_DATA'		=> 'Nem sikerült feltölteni az avatart, mivel a külső forrás hibásnak tűnik.',
@@ -235,10 +311,11 @@ $lang = array_merge($lang, array(
 	'AVATAR_PARTIAL_UPLOAD'			=> 'Az avatart csak részben sikerült feltölteni.',
 	'AVATAR_PHP_SIZE_NA'			=> 'Az avatar állomány mérete túl nagy.<br />Nem sikerült megállapítani a PHP php.ini-jében meghatározott maximális méretet.',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'Az avatar állomány mérete túl nagy, a maximum feltölthető méret %1$d %2$s.<br />Kérjük, vedd figyelembe, hogy ez a php.ini-ben van meghatározva, ezért nem írható felül.',
+	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
 	'AVATAR_URL_INVALID'			=> 'A megadott URL hibás.',
 	'AVATAR_URL_NOT_FOUND'			=> 'A megadott állomány nem található.',
-	'AVATAR_WRONG_FILESIZE'			=> 'Az avatarnak 0 és %1d %2s között kell lennie.',
-	'AVATAR_WRONG_SIZE'				=> 'A megadott avatar %5$d pixel széles, és %6$d pixel magas. Az avatarnak legalább %1$d pixel szélesnek és %2$d pixel magasnak kell lennie, valamint legfeljebb %3$d pixel széles és %4$d pixel magas lehet.',
+	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
+	'AVATAR_WRONG_SIZE'				=> 'The submitted avatar is %5$s wide and %6$s high. Avatars must be at least %1$s wide and %2$s high, but no larger than %3$s wide and %4$s high.',
 
 	'BACK_TO_TOP'			=> 'Vissza a tetejére',
 	'BACK_TO_PREV'			=> 'Vissza az előző oldalra',
@@ -255,28 +332,42 @@ $lang = array_merge($lang, array(
 	'BOARD_DISABLED'		=> 'A fórum ideiglenesen szünetel.',
 	'BOARD_UNAVAILABLE'		=> 'A fórum ideiglenesen nem elérhető, kérünk, próbálkozz újra pár perc múlva.',
 	'BROWSING_FORUM'		=> 'Jelenlévő fórumuzók: %1$s',
-	'BROWSING_FORUM_GUEST'	=> 'Jelenlévő fórumozók: %1$s valamint %2$d vendég',
-	'BROWSING_FORUM_GUESTS'	=> 'Jelenlévő fórumozók: %1$s valamint %2$d vendég',
+	'BUTTON_EDIT'			=> 'Edit',
+	'BUTTON_FORUM_LOCKED'	=> 'Locked',
+	'BUTTON_NEW_TOPIC'		=> 'New Topic',
+	'BUTTON_PM'				=> 'PM',
+	'BUTTON_PM_FORWARD'		=> 'Forward',
+	'BUTTON_PM_NEW'			=> 'New PM',
+	'BUTTON_PM_REPLY'		=> 'Send Reply',
+	'BUTTON_PM_REPLY_ALL'	=> 'Reply All',
+	'BUTTON_POST_REPLY'		=> 'Post Reply',
+	'BUTTON_QUOTE'			=> 'Quote',
+	'BUTTON_TOPIC_LOCKED'	=> 'Locked',
 	'BYTES'					=> 'bájt',
+	'BYTES_SHORT'			=> 'B',
 
 	'CANCEL'				=> 'Mégsem',
 	'CHANGE'				=> 'Változtatás',
 	'CHANGE_FONT_SIZE'		=> 'Betűméret megváltoztatása',
 	'CHANGING_PREFERENCES'	=> 'Fórum beállítások megváltoztatása',
 	'CHANGING_PROFILE'		=> 'Profil megváltoztatása',
-	'CLICK_VIEW_PRIVMSG'	=> '%sBejövő mappa megtekintése%s',
 	'COLLAPSE_VIEW'			=> 'Összecsukás',
 	'CLOSE_WINDOW'			=> 'Ablak bezárása',
 	'COLOUR_SWATCH'			=> 'Szín kiválasztása',
-	'COMMA_SEPARATOR'		=> ', ',	// Used in pagination of ACP & prosilver, use localised comma if appropriate, eg: Ideographic or Arabic
+	'COLON'					=> ':',
+	'COMMA_SEPARATOR'		=> ', ',	// Comma used to join lists into a single string, use localised comma if appropriate, eg: Ideographic or Arabic
 	'CONFIRM'				=> 'Megerősítés',
 	'CONFIRM_CODE'			=> 'Megerősítő kód',
 	'CONFIRM_CODE_EXPLAIN'	=> 'Gépeld be a képen látható kódot. A kis- vagy nagybetűk nem számítanak.',
 	'CONFIRM_CODE_WRONG'	=> 'A megadott megerősítő kód hibás.',
 	'CONFIRM_OPERATION'		=> 'Biztosan végre akarod hajtani ezt a műveletet?',
+	'CONFIRM_AVATAR_DELETE' => 'Are you sure you wish to delete this avatar?',
 	'CONGRATULATIONS'		=> 'Gratulálunk',
 	'CONNECTION_FAILED'		=> 'Sikertelen kapcsolódási kísérlet',
 	'CONNECTION_SUCCESS'	=> 'Sikerült csatlakozni!',
+	'CONTACT'				=> 'Kapcsolat:',
+	'CONTACT_USER'			=> 'Contact %s',
+	'CONTACT_US'			=> 'Contact us',
 	'COOKIES_DELETED'		=> 'A fórum sütijei törlésre kerültek.',
 	'CURRENT_TIME'			=> 'Pontos idő: %s',
 
@@ -297,18 +388,13 @@ $lang = array_merge($lang, array(
 	'DISPLAY_TOPICS'		=> 'Témák megjelenítése',
 	'DOWNLOADED'			=> 'Letöltve',
 	'DOWNLOADING_FILE'		=> 'Állomány letöltése',
-	'DOWNLOAD_COUNT'		=> '%d alkalommal.',
-	'DOWNLOAD_COUNTS'		=> '%d alkalommal.',
-	'DOWNLOAD_COUNT_NONE'	=> 'Még senki sem töltötte le.',
-	'VIEWED_COUNT'			=> 'Megtekintve %d alkalommal.',
-	'VIEWED_COUNTS'			=> 'Megtekintve %d alkalommal.',
-	'VIEWED_COUNT_NONE'		=> 'Még senki sem tekintette meg.',
 
 	'EDIT_POST'							=> 'Hozzászólás szerkesztése',
-	'EMAIL'								=> 'E-mail', // Short form for EMAIL_ADDRESS
-	'EMAIL_ADDRESS'						=> 'E-mail cím',
-	'EMAIL_INVALID_EMAIL'				=> 'A megadott e-mail cím hibás.',
-	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Problémába ütköztünk egy levél elküldése során a <strong>%1$s.</strong> sorban. Válasz: %2$s',
+	'ELLIPSIS'							=>	'…',
+	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
+	'EMAIL_ADDRESS'						=> 'Email address',
+	'EMAIL_INVALID_EMAIL'				=> 'The email address you entered is invalid.',
+	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ran into problems sending email at <strong>Line %1$s</strong>. Response: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Új téma indításához meg kell adnod a téma címét.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Meg kell adnod az üzenet témáját.',
 	'ENABLED'							=> 'Bekapcsolva',
@@ -322,17 +408,23 @@ $lang = array_merge($lang, array(
 	'ERR_UNWATCHING'					=> 'Hiba lépett fel a leiratkozás során.',
 	'ERR_WATCHING'						=> 'Hiba lépett fel a feliratkozás során.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'A megadott phpBB elérési útvonal feltehetőleg hibás.',
+	'ERROR'									=> 'Hiba',
 	'EXPAND_VIEW'						=> 'Kinyitás',
 	'EXTENSION'							=> 'Kiterjesztés',
+	'EXTENSION_DISABLED'				=> 'The extension <strong>%s</strong> is not enabled.',
 	'EXTENSION_DISABLED_AFTER_POSTING'	=> 'A <b>%s</b> kiterjesztés deaktiválva lett, ezért a csatolmány nem kerül megjelenítésre.',
+	'EXTENSION_DOES_NOT_EXIST'			=> 'The extension <strong>%s</strong> does not exist.',
 
+	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> 'GyIK',
 	'FAQ_EXPLAIN'			=> 'Gyakran ismételt kérdések',
 	'FILENAME'				=> 'Állomány neve',
 	'FILESIZE'				=> 'Állomány mérete',
 	'FILEDATE'				=> 'Állomány feltöltve',
 	'FILE_COMMENT'			=> 'Magyarázat',
-	'FILE_NOT_FOUND'		=> 'A keresett állomány nem található.',
+	'FILE_CONTENT_ERR'		=> 'Could not read the contents of file: %s',
+	'FILE_JSON_DECODE_ERR'	=> 'Failed to decode json file: %s',
+	'FILE_NOT_FOUND'		=> 'The requested file could not be found: %s',
 	'FIND_USERNAME'			=> 'Felhasználó keresése',
 	'FOLDER'				=> 'Mappa',
 	'FORGOT_PASS'			=> 'Elfelejtettem a jelszavam',
@@ -381,6 +473,9 @@ $lang = array_merge($lang, array(
 	'GB'						=> 'GB',
 	'GIB'						=> 'GiB',
 	'GO'						=> 'Mehet',
+	'GOOGLEPLUS'				=> 'Google+',
+	'GOTO_FIRST_POST'			=> 'Go to first post',
+	'GOTO_LAST_POST'			=> 'Go to last post',
 	'GOTO_PAGE'					=> 'Oldal',
 	'GROUP'						=> 'Csoport',
 	'GROUPS'					=> 'Csoportok',
@@ -388,12 +483,6 @@ $lang = array_merge($lang, array(
 	'GROUP_ERR_USERNAME'		=> 'Nem adtad meg a csoport nevét.',
 	'GROUP_ERR_USER_LONG'		=> 'Egy csoport neve legfeljebb 60 karakter hosszú lehet. A megadott csoportnév túl hosszú.',
 	'GUEST'						=> 'Vendég',
-	'GUEST_USERS_ONLINE'		=> '%d vendég van jelen.',
-	'GUEST_USERS_TOTAL'			=> '%d vendég.',
-	'GUEST_USERS_ZERO_ONLINE'	=> '0 vendég van jelen.',
-	'GUEST_USERS_ZERO_TOTAL'	=> '0 vendég.',
-	'GUEST_USER_ONLINE'			=> '%d vendég van jelen.',
-	'GUEST_USER_TOTAL'			=> '%d vendég.',
 	'G_ADMINISTRATORS'			=> 'Adminisztrátorok',
 	'G_BOTS'					=> 'Robotok',
 	'G_GUESTS'					=> 'Vendégek',
@@ -402,22 +491,12 @@ $lang = array_merge($lang, array(
 	'G_GLOBAL_MODERATORS'		=> 'Globális moderátorok',
 	'G_NEWLY_REGISTERED'		=> 'Újonnan regisztrált felhasználók',
 
-	'HIDDEN_USERS_ONLINE'			=> '%d rejtett felhasználó van jelen.',
-	'HIDDEN_USERS_TOTAL'			=> '%d rejtett',
-	'HIDDEN_USERS_TOTAL_AND'		=> '%d rejtett és ',
-	'HIDDEN_USERS_ZERO_ONLINE'		=> '0 rejtett felhasználó van jelen.',
-	'HIDDEN_USERS_ZERO_TOTAL'		=> '0 rejtett',
-	'HIDDEN_USERS_ZERO_TOTAL_AND'	=> '0 rejtett és ',
-	'HIDDEN_USER_ONLINE'			=> '%d rejtett felhasználó van jelen.',
-	'HIDDEN_USER_TOTAL'				=> '%d rejtett',
-	'HIDDEN_USER_TOTAL_AND'			=> '%d rejtett és ',
 	'HIDE_GUESTS'					=> 'Vendégek elrejtése',
 	'HIDE_ME'						=> 'Bejelentkezés rejtettként',
 	'HOURS'							=> 'óra',
 	'HOME'							=> 'Főoldal',
 
 	'ICQ'						=> 'ICQ',
-	'ICQ_STATUS'				=> 'ICQ állapot',
 	'IF'						=> 'Feltétel',
 	'IMAGE'						=> 'Kép',
 	'IMAGE_FILETYPE_INVALID'	=> 'A %d kiterjesztésű %s MIME típusú kép nem támogatott.',
@@ -425,9 +504,11 @@ $lang = array_merge($lang, array(
 	'IN'						=> 'Fórum:',
 	'INDEX'						=> 'Fórum kezdőlap megtekintése', //Index page
 	'INFORMATION'				=> 'Információ',
+	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
 	'INTERESTS'					=> 'Érdeklődési kör',
 	'INVALID_DIGEST_CHALLENGE'	=> 'Hibás feltárási kérés',
-	'INVALID_EMAIL_LOG'			=> 'A <strong>%s</strong> feltehetőleg egy nem létező e-mail cím.',
+	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> possibly an invalid email address?',
+	'INVALID_PLURAL_RULE'		=> 'The chosen plural rule is invalid. Valid values are integers between 0 and 15.',
 	'IP'						=> 'IP-cím',
 	'IP_BLACKLISTED'			=> 'Az IP-címed tiltólistára került, ezért a hozzáférésed a fórumhoz blokkoltuk. További információ: <a href="%2$s">%2$s</a>.',
 
@@ -435,7 +516,8 @@ $lang = array_merge($lang, array(
 	'JOINED'				=> 'Csatlakozott',
 	'JUMP_PAGE'				=> 'Add meg annak az oldalnak a számát, ahová menni szeretnél',
 	'JUMP_TO'				=> 'Ugrás',
-	'JUMP_TO_PAGE'			=> 'Kattints ide egy fel nem sorolt oldalra való ugráshoz',
+	'JUMP_TO_PAGE'			=> 'Jump to page',
+	'JUMP_TO_PAGE_CLICK'	=> 'Click to jump to page…',
 
 	'KB'					=> 'KB',
 	'KIB'					=> 'KiB',
@@ -447,6 +529,8 @@ $lang = array_merge($lang, array(
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Nem sikerült csatlakozni az LDAP szerverhez.',
 	'LDAP_SEARCH_FAILED'				=> 'Hiba történt az LDAP könyvtár keresése közben.',
 	'LEGEND'							=> 'Magyarázat',
+	'LIVE_SEARCHES_NOT_ALLOWED'			=> 'Live searches are not allowed.',
+	'LOADING'							=> 'Loading',
 	'LOCATION'							=> 'Tartózkodási hely',
 	'LOCK_POST'							=> 'Hozzászólás lezárása',
 	'LOCK_POST_EXPLAIN'					=> 'A felhasználó nem fogja tudni szerkeszteni a hozzászólást.',
@@ -457,6 +541,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_CONFIRM_EXPLAIN'				=> 'Az azonosítók feltörésének megakadályozása érdekében egy bizonyos számú sikertelen belépési kísérlet után meg kell adnod egy megerősítő kódot. A kód az alábbi képen található. Ha látási (vagy egyéb) problémák folytán nem tudnád elolvasni a kódot, vedd fel a kapcsolatot a %sfórum adminisztrátorával%s.', // unused
 	'LOGIN_ERROR_ATTEMPTS'				=> 'Túllépted az engedélyezett belépési kísérletek számát. Ezért a felhasználóneved és a jelszavad megadása mellett most el kell végezned az alább látható CAPTCHA-t is.',
 	'LOGIN_ERROR_EXTERNAL_AUTH_APACHE'	=> 'Az Apache szervernek nem sikerült azonosítania téged.',
+	'LOGIN_ERROR_OAUTH_SERVICE_DOES_NOT_EXIST'	=> 'A non-existant OAuth service has been requested.',
 	'LOGIN_ERROR_PASSWORD'				=> 'Rossz jelszót adtál meg. Ellenőrizd le a jelszavad, majd próbálkozz újra. Ha továbbra is gondjaid lennének, lépj kapcsolatba a %sfórum adminisztrátorával%s.',
 	'LOGIN_ERROR_PASSWORD_CONVERT'		=> 'Nem sikerült átkonvertálni a jelszavad a fórum szoftverének frissítése során. Kérünk, %sigényelj egy új jelszót%s. Ha továbbra is problémáid lennének, lépj kapcsolatba a %sfórum adminisztrátorával%s.',
 	'LOGIN_ERROR_USERNAME'				=> 'Rossz felhasználónevet adtál meg. Ellenőrizd le a felhasználónevet, majd próbálkozz újra. Ha továbbra is gondjaid lennének, lépj kapcsolatba a %sfórum adminisztrátorával%s.',
@@ -465,17 +550,22 @@ $lang = array_merge($lang, array(
 	'LOGIN_VIEWFORUM'					=> 'Csak regisztrált felhasználók tekinthetik meg ezt a fórumot.',
 	'LOGIN_EXPLAIN_EDIT'				=> 'Csak regisztrált felhasználók szerkeszthetik a hozzászólásaikat ebben a fórumban.',
 	'LOGIN_EXPLAIN_VIEWONLINE'			=> 'Csak regisztrált felhasználók tekinthetik meg a jelenlévők listáját.',
+	'LOGIN_REQUIRED'					=> 'You need to login to perform this action.',
 	'LOGOUT'							=> 'Kilépés',
 	'LOGOUT_USER'						=> 'Kilépés [ %s ]',
-	'LOG_ME_IN'							=> 'Automatikus bejelentkezés',
+	'LOG_ME_IN'							=> 'Remember me',
 
+	'MAIN'					=> 'Main',
 	'MARK'					=> 'Kijelölés',
 	'MARK_ALL'				=> 'Összes kijelölése',
+	'MARK_ALL_READ'			=> 'Mark all read',
 	'MARK_FORUMS_READ'		=> 'Fórumok megjelölése olvasottként',
+	'MARK_READ'				=> 'Mark read',
 	'MARK_SUBFORUMS_READ'	=> 'Alfórumok megjelölése olvasottként',
 	'MB'					=> 'MB',
 	'MIB'					=> 'MiB',
 	'MCP'					=> 'Moderátori vezérlőpult',
+	'MCP_SHORT'				=> 'MCP',
 	'MEMBERLIST'			=> 'Taglista',
 	'MEMBERLIST_EXPLAIN'	=> 'Felhasználók listájának megtekintése',
 	'MERGE'					=> 'Összevonás',
@@ -488,26 +578,47 @@ $lang = array_merge($lang, array(
 	'MODERATE'				=> 'Moderálás',
 	'MODERATOR'				=> 'Moderátor',
 	'MODERATORS'			=> 'Moderátorok',
+	'MODULE_NOT_ACCESS'		=> 'Module not accessible',
+	'MODULE_NOT_FIND'		=> 'Cannot find module %s',
+	'MODULE_FILE_INCORRECT_CLASS'	=> 'Module file %s does not contain correct class [%s]',
 	'MONTH'					=> 'hónap',
 	'MOVE'					=> 'Áthelyezés',
-	'MSNM'					=> 'MSNM/WLM',
 
 	'NA'						=> 'N/A',
 	'NEWEST_USER'				=> 'Legújabb regisztrált tagunk: <strong>%s</strong>',
 	'NEW_MESSAGE'				=> 'Új üzenet',
 	'NEW_MESSAGES'				=> 'Új üzenetek',
-	'NEW_PM'					=> '<strong>%d</strong> új üzenet',
-	'NEW_PMS'					=> '<strong>%d</strong> új üzenet',
 	'NEW_POST'					=> 'Új hozzászólás',	// Not used anymore
 	'NEW_POSTS'					=> 'Új hozzászólások',	// Not used anymore
 	'NEXT'						=> 'Következő',		// Used in pagination
 	'NEXT_STEP'					=> 'Tovább',
 	'NEVER'						=> 'Soha',
 	'NO'						=> 'Nem',
+	'NO_NOTIFICATIONS'			=> 'You have no notifications',
 	'NOT_ALLOWED_MANAGE_GROUP'	=> 'Nincs jogosultságod a csoport kezeléséhez.',
 	'NOT_AUTHORISED'			=> 'Nincs jogosultságod hozzáférni ehhez a részhez.',
 	'NOT_WATCHING_FORUM'		=> 'Sikeresen leiratkoztál a fórumról.',
 	'NOT_WATCHING_TOPIC'		=> 'Sikeresen leiratkoztál a témáról.',
+	'NOTIFICATIONS'				=> 'Notifications',
+	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
+	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
+	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
+	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
+	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
+	'NOTIFICATION_POST_IN_QUEUE'		=> '<strong>Post approval</strong> request by %1$s:',
+	'NOTIFICATION_REFERENCE'			=> '"%1$s"',
+	'NOTIFICATION_REASON'				=> '<em>Reason:</em> %1$s.',
+	'NOTIFICATION_REPORT_PM'			=> '<strong>Private Message reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_POST'			=> '<strong>Post reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_CLOSED'		=> '<strong>Report closed</strong> by %1$s for:',
+	'NOTIFICATION_TOPIC'				=> '<strong>New topic</strong> by %1$s:',
+	'NOTIFICATION_TOPIC_APPROVED'		=> '<strong>Topic approved</strong>:',
+	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
+	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
+	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> 'Kérjük, értesítsd a fórum adminisztrátorát vagy a webmestert.',
 	'NOTIFY_ADMIN_EMAIL'		=> 'Kérjük, értesítsd a fórum adminisztrátorát vagy a webmestert: <a href="mailto:%1$s">%1$s</a>',
 	'NO_ACCESS_ATTACHMENT'		=> 'Nincs jogosultságod hozzáférni ehhez az állományhoz.',
@@ -516,6 +627,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_ADMIN'				=> 'Nem férhetsz hozzá az adminisztrátori vezérlőpulthoz, mivel nincs adminisztrátori jogosultságod.',
 	'NO_AUTH_ADMIN_USER_DIFFER'	=> 'Nem azonosíthatod magad egy másik felhasználóként.',
 	'NO_AUTH_OPERATION'			=> 'Nincs meg a megfelelő jogosultságod ezen művelet elvégzéséhez.',
+	'NO_AVATARS'				=> 'No avatars currently available',
 	'NO_CONNECT_TO_SMTP_HOST'	=> 'Nem sikerült csatlakozni az SMTP szerverhez: %1$s : %2$s',
 	'NO_BIRTHDAYS'				=> 'Ma senkinek sincs születésnapja.',
 	'NO_EMAIL_MESSAGE'			=> 'Az e-mail üzenet üres.',
@@ -531,7 +643,6 @@ $lang = array_merge($lang, array(
 	'NO_MODE'					=> 'Nem adtál meg módot.',
 	'NO_MODERATORS'				=> 'Nincs moderátor.',
 	'NO_NEW_MESSAGES'			=> 'Nincs új üzenet.',
-	'NO_NEW_PM'					=> '<strong>0</strong> új üzenet',
 	'NO_NEW_POSTS'				=> 'Nincs új hozzászólás',	// Not used anymore
 	'NO_ONLINE_USERS'			=> 'nincs regisztrált felhasználó',
 	'NO_POSTS'					=> 'Nincs hozzászólás',
@@ -546,7 +657,6 @@ $lang = array_merge($lang, array(
 	'NO_TOPIC_FORUM'			=> 'A téma vagy fórum már nem létezik.',
 	'NO_TOPICS'					=> 'A fórum nem tartalmaz témákat, illetve hozzászólásokat.',
 	'NO_TOPICS_TIME_FRAME'		=> 'A fórum nem tartalmaz témákat a megadott időtartamon belül.',
-	'NO_UNREAD_PM'				=> '<strong>0</strong> olvasatlan üzenet',
 	'NO_UNREAD_POSTS'			=> 'Nincs olvasatlan hozzászólás',
 	'NO_UPLOAD_FORM_FOUND'		=> 'Kezdeményeztél egy feltöltést, azonban erre most nincs lehetőség.',
 	'NO_USER'					=> 'A keresett felhasználó nem létezik.',
@@ -557,15 +667,14 @@ $lang = array_merge($lang, array(
 	'OFFLINE'					=> 'Offline',
 	'ONLINE'					=> 'Online',
 	'ONLINE_BUDDIES'			=> 'Jelenlévő barátok',
-	'ONLINE_USERS_TOTAL'		=> 'Jelenleg <strong>%d</strong> felhasználó van jelen: ',
-	'ONLINE_USERS_ZERO_TOTAL'	=> 'Jelenleg <strong>0</strong> felhasználó van jelen: ',
-	'ONLINE_USER_TOTAL'			=> 'Jelenleg <strong>%d</strong> felhasználó van jelen: ',
 	'OPTIONS'					=> 'Opciók',
 
 	'PAGE_OF'				=> 'Oldal: <strong>%1$d</strong> / <strong>%2$d</strong>',
+	'PAGE_TITLE_NUMBER'		=> 'Page %s',
 	'PASSWORD'				=> 'Jelszó',
 	'PIXEL'					=> 'px',
 	'PLAY_QUICKTIME_FILE'	=> 'Quicktime állomány lejátszása',
+	'PLEASE_WAIT'			=> 'Please wait.',
 	'PM'					=> 'PÜ',
 	'PM_REPORTED'			=> 'Kattints ide a jelentés megtekintéséhez',
 	'POSTING_MESSAGE'		=> 'Üzenet küldése a %s fórumban',
@@ -578,9 +687,15 @@ $lang = array_merge($lang, array(
 	'POSTED_ON_DATE'		=> 'Dátum:',
 	'POSTS'					=> 'Hozzászólások',
 	'POSTS_UNAPPROVED'		=> 'Jóvá nem hagyott hozzászólás(ok)',
+	'POSTS_UNAPPROVED_FORUM'=> 'At least one post in this forum has not been approved.',
 	'POST_BY_AUTHOR'		=> 'Szerző:',
-	'POST_BY_FOE'			=> 'Ezt a hozzászólást <strong>%1$s</strong> küldte, aki jelenleg a tiltólistádon van. %2$sHozzászólás megjelenítése%3$s',
+	'POST_BY_FOE'			=> '<strong>%1$s</strong>, who is currently on your ignore list, made this post.',
+	'POST_DISPLAY'			=> '%1$sDisplay this post%2$s.',
 	'POST_DAY'				=> 'Naponta %.2f hozzászólás',
+	'POST_DELETED_ACTION'	=> 'Deleted post:',
+	'POST_DELETED'			=> 'This post has been deleted.',
+	'POST_DELETED_BY'		=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s.',
+	'POST_DELETED_BY_REASON'=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s for the following reason: %4$s',
 	'POST_DETAILS'			=> 'Hozzászólás adatai',
 	'POST_NEW_TOPIC'		=> 'Új téma nyitása',
 	'POST_PCT'				=> 'Az összes hozzászólás %.2f%%-a',
@@ -591,7 +706,8 @@ $lang = array_merge($lang, array(
 	'POST_SUBJECT'			=> 'Hozzászólás témája',
 	'POST_TIME'				=> 'Elküldés ideje',
 	'POST_TOPIC'			=> 'Új téma nyitása',
-	'POST_UNAPPROVED'		=> 'A hozzászólás jóváhagyásra vár',
+	'POST_UNAPPROVED_ACTION'	=> 'Post awaiting approval:',
+	'POST_UNAPPROVED'		=> 'This post has not been approved.',
 	'POWERED_BY'			=> 'Powered by %s',
 	'PREVIEW'				=> 'Előnézet',
 	'PREVIOUS'				=> 'Előző',		// Used in pagination
@@ -601,6 +717,8 @@ $lang = array_merge($lang, array(
 	'PRIVATE_MESSAGES'		=> 'Privát üzenetek',
 	'PRIVATE_MESSAGING'		=> 'privát üzenet',
 	'PROFILE'				=> 'Felhasználói vezérlőpult',
+
+	'QUICK_LINKS'			=> 'Quick links',
 
 	'RANK'						=> 'Rang',
 	'READING_FORUM'				=> '%s fórum megtekintése',
@@ -614,15 +732,6 @@ $lang = array_merge($lang, array(
 	'REDIRECTS'					=> 'Átirányítások száma',
 	'REGISTER'					=> 'Regisztráció',
 	'REGISTERED_USERS'			=> 'Regisztrált felhasználók:',
-	'REG_USERS_ONLINE'			=> '%d regisztrált és ',
-	'REG_USERS_TOTAL'			=> '%d regisztrált, ',
-	'REG_USERS_TOTAL_AND'		=> '%d regisztrált és ',
-	'REG_USERS_ZERO_ONLINE'		=> '0 regisztrált és ',
-	'REG_USERS_ZERO_TOTAL'		=> '0 regisztrált, ',
-	'REG_USERS_ZERO_TOTAL_AND'	=> '0 regisztrált és ',
-	'REG_USER_ONLINE'			=> '%d regisztrált és ',
-	'REG_USER_TOTAL'			=> '%d regisztrált, ',
-	'REG_USER_TOTAL_AND'		=> '%d regisztrált és ',
 	'REMOVE'					=> 'Törlés',
 	'REMOVE_INSTALL'			=> 'Kérjük, töröld, helyezd át, vagy nevezd át az install könyvtárat a fórum használatba vétele előtt. Amíg ez a könyvtár létezik, csak az adminisztrátori vezérlőpult lesz elérhető.',
 	'REPLIES'					=> 'Válaszok',
@@ -639,7 +748,8 @@ $lang = array_merge($lang, array(
 	'RETURN_FORUM'				=> '%sVissza a legutóbb látogatott fórumhoz %s',
 	'RETURN_PAGE'				=> '%sVissza az előző oldalra%s',
 	'RETURN_TOPIC'				=> '%sVissza a legutóbb látogatott témához%s',
-	'RETURN_TO'					=> 'Vissza:',
+	'RETURN_TO'					=> 'Return to “%s”',
+	'RETURN_TO_INDEX'			=> 'Return to Board Index',
 	'FEED'						=> 'Csatorna',
 	'FEED_NEWS'					=> 'Hírek',
 	'FEED_TOPICS_ACTIVE'		=> 'Aktív témák',
@@ -667,28 +777,30 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV_EXPLAIN'		=> 'Részletes keresés beállításainak megtekintése',
 	'SEARCH_KEYWORDS'			=> 'Kulcsszavak',
 	'SEARCHING_FORUMS'			=> 'Fórumok keresése',
-	'SEARCH_ACTIVE_TOPICS'		=> 'Aktív témák',
+	'SEARCH_ACTIVE_TOPICS'		=> 'Active topics',
 	'SEARCH_FOR'				=> 'Keresés',
 	'SEARCH_FORUM'				=> 'Keresés a fórumban…',
-	'SEARCH_NEW'				=> 'Új hozzászólások',
+	'SEARCH_NEW'				=> 'New posts',
 	'SEARCH_POSTS_BY'			=> 'Hozzászólások keresése:',
-	'SEARCH_SELF'				=> 'Saját hozzászólásaim',
+	'SEARCH_SELF'				=> 'Your posts',
 	'SEARCH_MINE'				=> 'View your topics',
 	'SEARCH_TOPIC'				=> 'Keresés a témában…',
-	'SEARCH_UNANSWERED'			=> 'Megválaszolatlan hozzászólások',
-	'SEARCH_UNREAD'				=> 'Olvasatlan hozzászólások megtekintése',
+	'SEARCH_UNANSWERED'			=> 'Unanswered posts',
+	'SEARCH_UNREAD'				=> 'Unread posts',
 	'SEARCH_USER_POSTS'			=> 'Felhasználó hozzászólásainak megtekintése',
 	'SECONDS'					=> 'másodperc',
+	'SEE_ALL'					=> 'See All',
 	'SELECT'					=> 'Kiválasztás',
 	'SELECT_ALL_CODE'			=> 'Egész kijelölése',
 	'SELECT_DESTINATION_FORUM'	=> 'Célfórum kiválasztása',
 	'SELECT_FORUM'				=> 'Fórum kiválasztása',
-	'SEND_EMAIL'				=> 'E-mail küldése',				// Used for submit buttons
-	'SEND_EMAIL_USER'			=> 'E-mail küldése:',				// Used as: {L_SEND_EMAIL_USER} {USERNAME} -> E-mail UserX
+	'SEND_EMAIL'				=> 'Send email',				// Used for submit buttons
+	'SEND_EMAIL_USER'			=> 'Send email to %s',
 	'SEND_PRIVATE_MESSAGE'		=> 'Privát üzenet küldése',
 	'SETTINGS'					=> 'Beállítások',
 	'SIGNATURE'					=> 'Aláírás',
 	'SKIP'						=> 'Ugrás a tartalomhoz',
+	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'Az SMTP szerver nem támogatja az azonosítás funkciót.',
 	'SORRY_AUTH_READ'			=> 'Nincs jogosultságod a fórum megtekintéséhez.',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'Nincs jogosultságod a csatolmány letöltéséhez.',
@@ -706,6 +818,8 @@ $lang = array_merge($lang, array(
 	'START_WATCHING_TOPIC'		=> 'Feliratkozás a témára',
 	'STOP_WATCHING_FORUM'		=> 'Leiratkozás a fórumról',
 	'STOP_WATCHING_TOPIC'		=> 'Leiratkozás a témáról',
+	'STRING_LIST_MULTI'			=> '%1$s, and %2$s',
+	'STRING_LIST_SIMPLE'		=> '%1$s and %2$s',
 	'SUBFORUM'					=> 'Alfórum',
 	'SUBFORUMS'					=> 'Alfórumok',
 	'SUBJECT'					=> 'Téma',
@@ -717,51 +831,35 @@ $lang = array_merge($lang, array(
 	'THE_TEAM'			=> 'A csapat',
 	'TIB'				=> 'TiB',
 	'TIME'				=> 'Idő',
-	
+	'TIMEOUT_PROCESSING_REQ'			=> 'Request timed out.',
+
 	'TOO_LARGE'						=> 'A megadott érték túl nagy.',
 	'TOO_LARGE_MAX_RECIPIENTS'		=> 'Az <strong>Engedélyezett címzettek maximum száma</strong> beállításnak megadott érték túl nagy.',
 
 	'TOO_LONG'						=> 'A megadott érték túl hosszú.',
 
-	'TOO_LONG_AIM'					=> 'A megadott AIM azonosító túl hosszú.',
 	'TOO_LONG_CONFIRM_CODE'			=> 'A megadott megerősítő kód túl hosszú.',
 	'TOO_LONG_DATEFORMAT'			=> 'A megadott dátum formátum túl hosszú.',
-	'TOO_LONG_ICQ'					=> 'A megadott ICQ azonosító túl hosszú.',
-	'TOO_LONG_INTERESTS'			=> 'A megadott érdeklődési kör túl hosszú.',
 	'TOO_LONG_JABBER'				=> 'A megadott Jabber azonosító túl hosszú.',
-	'TOO_LONG_LOCATION'				=> 'A megadott tartózkodási hely túl hosszú.',
-	'TOO_LONG_MSN'					=> 'A megadott MSNM/WLM azonosító túl hosszú.',
 	'TOO_LONG_NEW_PASSWORD'			=> 'A megadott jelszó túl hosszú.',
-	'TOO_LONG_OCCUPATION'			=> 'A megadott foglalkozás túl hosszú.',
 	'TOO_LONG_PASSWORD_CONFIRM'		=> 'A megadott jelszó megerősítés túl hosszú.',
 	'TOO_LONG_USER_PASSWORD'		=> 'A megadott jelszó túl hosszú.',
 	'TOO_LONG_USERNAME'				=> 'A megadott felhasználónév túl hosszú.',
-	'TOO_LONG_EMAIL'				=> 'A megadott e-mail cím túl hosszú.',
-	'TOO_LONG_EMAIL_CONFIRM'		=> 'A megadott e-mail cím megerősítés túl hosszú.',
-	'TOO_LONG_WEBSITE'				=> 'A megadott honlap cím túl hosszú.',
-	'TOO_LONG_YIM'					=> 'A megadott Yahoo! Messenger azonosító túl hosszú.',
+	'TOO_LONG_EMAIL'				=> 'The email address you entered is too long.',
 
 	'TOO_MANY_VOTE_OPTIONS'			=> 'Túl sok lehetőségre próbáltál meg szavazni.',
 
 	'TOO_SHORT'						=> 'A megadott érték túl rövid.',
 
-	'TOO_SHORT_AIM'					=> 'A megadott AIM azonosító túl rövid.',
 	'TOO_SHORT_CONFIRM_CODE'		=> 'A megadott megerősítő kód túl rövid.',
 	'TOO_SHORT_DATEFORMAT'			=> 'A megadott dátum formátum túl rövid.',
-	'TOO_SHORT_ICQ'					=> 'A megadott ICQ azonosító túl rövid.',
-	'TOO_SHORT_INTERESTS'			=> 'A megadott érdeklődési kör túl rövid.',
 	'TOO_SHORT_JABBER'				=> 'A megadott Jabber azonosító túl rövid.',
-	'TOO_SHORT_LOCATION'			=> 'A megadott tartózkodási hely túl rövid.',
-	'TOO_SHORT_MSN'					=> 'A megadott MSNM/WLM azonosító túl rövid.',
 	'TOO_SHORT_NEW_PASSWORD'		=> 'A megadott jelszó túl rövid.',
-	'TOO_SHORT_OCCUPATION'			=> 'A megadott foglalkozás túl rövid.',
 	'TOO_SHORT_PASSWORD_CONFIRM'	=> 'A megadott jelszó megerősítés túl rövid.',
 	'TOO_SHORT_USER_PASSWORD'		=> 'A megadott jelszó túl rövid.',
 	'TOO_SHORT_USERNAME'			=> 'A megadott felhasználónév túl rövid.',
-	'TOO_SHORT_EMAIL'				=> 'A megadott e-mail cím túl rövid.',
-	'TOO_SHORT_EMAIL_CONFIRM'		=> 'A megadott e-mail cím megerősítés túl rövid.',
-	'TOO_SHORT_WEBSITE'				=> 'A megadott honlap cím túl rövid.',
-	'TOO_SHORT_YIM'					=> 'A megadott Yahoo! Messenger azonosító túl rövid.',
+	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
+	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
 	
 	'TOO_SMALL'						=> 'A megadott érték túl kicsi.',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> 'Az <strong>Engedélyezett címzettek maximum száma</strong> beállításnak megadott érték túl kicsi.',
@@ -775,30 +873,20 @@ $lang = array_merge($lang, array(
 	'TOPIC_MOVED'		=> 'Áthelyezett téma',
 	'TOPIC_REVIEW'		=> 'Téma áttekintése',
 	'TOPIC_TITLE'		=> 'Téma címe',
-	'TOPIC_UNAPPROVED'	=> 'Jóvá nem hagyott téma',
+	'TOPIC_UNAPPROVED'	=> 'This topic has not been approved.',
+	'TOPIC_DELETED'		=> 'This topic has been deleted.',
 	'TOTAL_ATTACHMENTS'	=> 'Csatolmány(ok)',
-	'TOTAL_LOG'			=> '1 bejegyzés',
-	'TOTAL_LOGS'		=> '%d bejegyzés',
-	'TOTAL_NO_PM'		=> 'Összesen 0 privát üzenet',
-	'TOTAL_PM'			=> 'Összesen 1 privát üzenet',
-	'TOTAL_PMS'			=> 'Összesen %d privát üzenet',
+	'TOPIC_POLL'		=> 'This topic has a poll.',
 	'TOTAL_POSTS'		=> 'Hozzászólások száma',
-	'TOTAL_POSTS_OTHER'	=> 'Hozzászólások száma: <strong>%s</strong>',
-	'TOTAL_POSTS_ZERO'	=> 'Hozzászólások száma: <strong>0</strong>',
 	'TOPIC_REPORTED'	=> 'Jelentett téma',
-	'TOTAL_TOPICS_OTHER'=> 'Témák száma: <strong>%s</strong>',
-	'TOTAL_TOPICS_ZERO'	=> 'Témák száma: <strong>0</strong>',
-	'TOTAL_USERS_OTHER'	=> 'Felhasználók száma: <strong>%s</strong>',
-	'TOTAL_USERS_ZERO'	=> 'Felhasználók száma: <strong>0</strong>',
 	'TRACKED_PHP_ERROR'	=> 'PHP hibák: %s',
+	'TWITTER'			=> 'Twitter',
 
-	'UNABLE_GET_IMAGE_SIZE'	=> 'Nem sikerült meghatározni a kép méretét.',
+	'UNABLE_GET_IMAGE_SIZE'	=> 'It was not possible to determine the dimensions of the image. Please verify that the URL you entered is correct.',
 	'UNABLE_TO_DELIVER_FILE'=> 'Nem sikerült elküldeni az állományt.',
 	'UNKNOWN_BROWSER'		=> 'Ismeretlen böngésző',
 	'UNMARK_ALL'			=> 'Összes kijelölésének megszüntetése',
 	'UNREAD_MESSAGES'		=> 'Olvasatlan üzenetek',
-	'UNREAD_PM'				=> '<strong>%d</strong> olvasatlan üzenet',
-	'UNREAD_PMS'			=> '<strong>%d</strong> olvasatlan üzenet',
 	'UNREAD_POST'			=> 'Olvasatlan hozzászólás',
 	'UNREAD_POSTS'			=> 'Olvasatlan hozzászólások',
 	'UNWATCH_FORUM_CONFIRM'		=> 'Valóban le szeretnél iratkozni erről a fórumról?',
@@ -816,8 +904,6 @@ $lang = array_merge($lang, array(
 	'USERNAMES'				=> 'Felhasználónevek',
 	'USER_AVATAR'			=> 'Avatar',
 	'USER_CANNOT_READ'		=> 'Nincs jogosultságod a hozzászólások megtekintéséhez ebben a fórumban.',
-	'USER_POST'				=> '%d hozzászólás',
-	'USER_POSTS'			=> '%d hozzászólás',
 	'USERS'					=> 'Felhasználók',
 	'USE_PERMISSIONS'		=> 'Felhasználó jogosultságainak kipróbálása',
 
@@ -825,6 +911,8 @@ $lang = array_merge($lang, array(
 
 	'VARIANT_DATE_SEPARATOR'	=> ' / ',	// Used in date format dropdown, eg: "Today, 13:37 / 01 Jan 2007, 13:37" ... to join a relative date with calendar date
 	'VIEWED'					=> 'Megtekintve',
+
+	'VIEWING_CONTACT_ADMIN'		=> 'Viewing contact page',
 	'VIEWING_FAQ'				=> 'GyIK megtekintése',
 	'VIEWING_MEMBERS'			=> 'Taglista megtekintése',
 	'VIEWING_ONLINE'			=> 'Jelenlévők listájának megtekintése',
@@ -839,8 +927,6 @@ $lang = array_merge($lang, array(
 	'VIEW_LATEST_POST'			=> 'Utolsó hozzászólás megtekintése',
 	'VIEW_NEWEST_POST'			=> 'Első olvasatlan hozzászólás megtekintése',
 	'VIEW_NOTES'				=> 'Feljegyzések megtekintése',
-	'VIEW_ONLINE_TIME'			=> 'Az elmúlt %d percben aktív felhasználók alapján.',
-	'VIEW_ONLINE_TIMES'			=> 'Az elmúlt %d percben aktív felhasználók alapján.',
 	'VIEW_TOPIC'				=> 'Téma megtekintése',
 	'VIEW_TOPIC_ANNOUNCEMENT'	=> 'Közlemény: ',
 	'VIEW_TOPIC_GLOBAL'			=> 'Általános közlemény: ',
@@ -861,23 +947,24 @@ $lang = array_merge($lang, array(
 	'WEBSITE'			=> 'Honlap',
 	'WHOIS'				=> 'IP adatok',
 	'WHO_IS_ONLINE'		=> 'Ki van itt',
+	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'Hibás jelszót adtál meg.',
 	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
-	'WRONG_DATA_ICQ'			=> 'A megadott ICQ azonosító hibás.',
 	'WRONG_DATA_JABBER'			=> 'A megadott Jabber azonosító hibás.',
 	'WRONG_DATA_LANG'			=> 'A megadott nyelv hibás.',
-	'WRONG_DATA_WEBSITE'		=> 'A honlap címének egy rendes URL-nek kell lennie (a protokollal együtt). Például: http://www.pelda.hu/.',
+	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
+	'WRONG_DATA_POST_SK'		=> 'The post sort option you specified is not valid.',
+	'WRONG_DATA_TOPIC_SD'		=> 'The topic sort direction you specified is not valid.',
+	'WRONG_DATA_TOPIC_SK'		=> 'The topic sort option you specified is not valid.',
 	'WROTE'						=> 'írta',
 
+	'YAHOO'				=> 'Yahoo Messenger',
+	'YOUTUBE'			=> 'YouTube',
 	'YEAR'				=> 'év',
 	'YEAR_MONTH_DAY'	=> '(ÉÉÉÉ-HH-NN)',
 	'YES'				=> 'Igen',
-	'YIM'				=> 'YIM',
 	'YOU_LAST_VISIT'	=> 'Utolsó látogatás: %s',
-	'YOU_NEW_PM'		=> 'Új privát üzeneted érkezett.',
-	'YOU_NEW_PMS'		=> 'Új privát üzeneteid érkeztek.',
-	'YOU_NO_NEW_PM'		=> 'Nincs új privát üzeneted.',
 
 	'default_dateformat'	=> '|Y.m.d.| H:i', // Mon Jan 01, 2007 1:37 pm
 
@@ -1083,7 +1170,6 @@ $lang = array_merge($lang, array(
 
 	'FORUM_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this forum.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this topic.',
-	'TOO_FEW_CHARS_LIMIT'	=> 'Az üzeneted %1$d karaktert tartalmaz. Legalább %2$d karakter hosszúnak kell lennie.',
 	'REPLY_TO_MESSAGE'		=> 'Reply to message',
 
 	'RSS_CHAN_LIST_TITLE'	=> 'Fórumok',
@@ -1695,7 +1781,6 @@ $lang = array_merge($lang, array(
 	'DEV_NO_TEST_FILE'			=> 'Nem került megadásra a test_file változó értéke a konvertálóban. Ha csak egy használója vagy ennek a konvertálónak, nem szabadna ezt a hibaüzenetet látnod – kérjük, értesítsd a konvertáló készítőjét. Ha a konvertáló készítője vagy, meg kell adnod egy az eredeti fórumban lévő állomány helyét, hogy le lehessen ellenőrizni az eredeti fórum elérési útját.',
 	'DIRECTORIES_AND_FILES'		=> 'Könyvtárak és állományok beállítása',
 	'DISABLE_KEYS'				=> 'Kulcsok kikapcsolása',
-	'DLL_FIREBIRD'				=> 'Firebird',
 	'DLL_FTP'					=> 'Távoli FTP támogatás [ telepítés ]',
 	'DLL_GD'					=> 'GD grafikai támogatás [ vizuális megerősítés ]',
 	'DLL_MBSTRING'				=> 'Multibyte karakterkódolás támogatás',
@@ -1706,11 +1791,12 @@ $lang = array_merge($lang, array(
 	'DLL_MYSQLI'				=> 'MySQL MySQLi kiterjesztéssel',
 	'DLL_ORACLE'				=> 'Oracle',
 	'DLL_POSTGRES'				=> 'PostgreSQL 7.x/8.x',
-	'DLL_SQLITE'				=> 'SQLite',
+	'DLL_SQLITE'				=> 'SQLite 2',
+	'DLL_SQLITE3'				=> 'SQLite 3',
 	'DLL_XML'					=> 'XML támogatás [ Jabber ]',
 	'DLL_ZLIB'					=> 'Zlib tömörítés támogatás [ .gz, .tar.gz, .zip ]',
 	'DL_CONFIG'					=> 'Konfiguráció letöltése',
-	'DL_CONFIG_EXPLAIN'			=> 'Letöltheted a teljes conifg.php-t a saját számítógépedre. Ezután fel kell töltened ezt az állományt kézzel a phpBB gyökérkönyvtárába, felülírva a már létező config.php-t. Ne feledkezz meg róla, hogy az állományt ASCII módban töltsd fel (ha ezt nem tudod hogyan teheted meg, nézd meg az FTP programod dokumentációját). Ha felöltötted a config.php-t, kattints a „Kész” gombra, hogy továbblépj a következő lépésre.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'Letöltés',
 	'DONE'						=> 'Kész',
 
@@ -1722,8 +1808,6 @@ $lang = array_merge($lang, array(
 	'FILES_REQUIRED_EXPLAIN'	=> '<strong>Szükséges</strong> – A phpBB-nek a helyes működéshez hozzá kell tudnia férnie, illetve tudnia kell írnia néhány állományba vagy könyvtárba. Ha a „Nem található” feliratot látod, akkor létre kell hoznod a megfelelő állományt vagy könyvtárat. Ha a „Nem írható” feliratot látod, akkor meg kell változtatnod az adott állomány vagy könyvtár jogosultságát, hogy a phpBB írni tudjon bele.',
 	'FILLING_TABLE'				=> '<strong>%s</strong> tábla feltöltése',
 	'FILLING_TABLES'			=> 'Táblák feltöltése',
-
-	'FIREBIRD_DBMS_UPDATE_REQUIRED'		=> 'A phpBB már nem támogatja a 2.1-nél korábbi verziójú Firebird/Interbase adatbázisokat. Kérjük, a frissítés folytatása előtt frissítsd legalább 2.1-es verziójúra a Firebirdöt.',
 
 	'FINAL_STEP'				=> 'Végső lépés végrehajtása',
 	'FORUM_ADDRESS'				=> 'Fórum webcíme',
@@ -1750,29 +1834,30 @@ $lang = array_merge($lang, array(
 		<p>Az alábbi gombra kattintva az adminisztrátori vezérlőpult (AVP) statisztikai adatok küldése oldalára jutsz. Nagyra értékelnénk, ha segítenél nekünk ezen információk elküldésével. Ezután szánj rá egy kis időt, és vizsgáld meg a beállítási lehetőségeket. Ne feledkezz meg róla, hogy a phpBB-vel kapcsolatban segítséget nyújt az angol <a href="http://www.phpbb.com/support/documentation/3.0/">Felhasználói kézikönyv</a> és a <a href="http://www.phpbb.com/phpBB/viewforum.php?f=46">phpBB.com támogatás fóruma</a>; további információt a <a href="%3$s">README</a>-ben találsz.</p><p><strong>Most kérjük, töröld, helyezd át vagy nevezd át az install könyvtárat, mert amíg ez a könyvtár létezik, csak az adminisztrátori vezérlőpult (AVP) lesz elérhető.</strong>',
 	'INSTALL_INTRO'				=> 'Üdvözlünk a telepítőben',
 
-	'INSTALL_INTRO_BODY'		=> 'Ezen menüpont segítségével feltelepítheted a phpBB3-mat a szerveredre.</p><p>A folytatás során szükséged lesz az adatbázis adatokra. Ha nem ismered ezeket, lépj kapcsolatba a tárhelyszolgáltatóddal, és tájékozódj róluk. Ezen adatok nélkül nem tudsz továbblépni. A következőkre lesz szükséged:</p>
+	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
+
 	<ul>
-		<li>az adatbázis típusára – milyen adatbázisrendszert fogsz használni;</li>
-		<li>az adatbáziskiszolgáló hosztnevére vagy DSN-jére – az adatbázisszerver címe, elérhetősége;</li>
-		<li>az adatbáziskiszolgáló portjára – milyen porton lehet csatlakozni az adatbázisszerverhez (az esetek nagy többségében ez nem szükséges);</li>
-		<li>az adatbázis nevére – az adatbázis neve a szerveren;</li>
-		<li>az adatbázis-felhasználónévre és az ehhez tartozó jelszóra – a kapcsolódáshoz szükséges adatok.</li>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
 	</ul>
 
-	<p><strong>Megjegyzés:</strong> ha SQLite-ot használsz, a DSN mezőben a teljes elérési utat add meg az adatbázishoz, valamint hagyd a felhasználónév és a jelszó mezőt üresen. Biztonsági szempontból fontos, hogy az adatbázis-állomány ne egy webről elérhető könyvtárban legyen tárolva.</p>
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
 
-	<p>A phpBB3 a következő adatbázisrendszereket támogatja:</p>
+	<p>phpBB3 supports the following databases:</p>
 	<ul>
-		<li>MySQL 3.23 vagy újabb (MySQLi is támogatott)</li>
-		<li>PostgreSQL 7.3+</li>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
 		<li>SQLite 2.8.2+</li>
-		<li>Firebird 2.1+</li>
-		<li>MS SQL Server 2000 vagy újabb (közvetlenül ODBC-n keresztül)</li>
-		<li>MS SQL Server 2005 vagy újabb (natív)</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
 		<li>Oracle</li>
 	</ul>
 
-	<p>A választásnál csak a szerver által támogatott adatbázisok kerülnek majd megjelenítésre.',
+	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'A telepítés megkezdéséhez nyomd meg az alábbi gombot.',
 	'INSTALL_LOGIN'				=> 'Belépés',
 	'INSTALL_NEXT'				=> 'Következő lépés',
@@ -1788,9 +1873,8 @@ $lang = array_merge($lang, array(
 	'INST_ERR_DB_NO_ERROR'		=> 'Nincs hibaüzenet.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'A kiszolgálón lévő MySQL nem kompatibilis a kiválasztott „MySQL MySQLi kiterjesztéssel” csatlakozási móddal. Kérjük, a „MySQL”-t válaszd ki.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'Az SQLite kiterjesztés verziója túl régi, frissíteni kell legalább a 2.8.2-es verzióra.',
+	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'A szerveren lévő Oracle verziója megköveteli, hogy a <var>NLS_CHARACTERSET</var> paraméter <var>UTF8</var>-ra legyen állítva. Frissítsd az Oracle verzióját legalább 9.2-esre, vagy változtasd meg a paraméter értékét.',
-	'INST_ERR_DB_NO_FIREBIRD'	=> 'A kiszolgálón lévő Firebird verziója régebbi, mint 2.1, kérünk, frissíts egy újabb verzióra. ',
-	'INST_ERR_DB_NO_FIREBIRD_PS'=> 'A kiválasztott Firebird adatbázis „page size” értéke kisebb, mint 8192, legalább ennyinek kell lennie.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'A kiválasztott adatbázis nem <var>UNICODE</var> vagy <var>UTF8</var> karakterkódolással került létrehozásra. Próbáld meg a telepítést egy <var>UNICODE</var> vagy <var>UTF8</var> karakterkódolású adatbázissal. ',
 	'INST_ERR_DB_NO_NAME'		=> 'Nem adtad meg az adatbázis nevét.',
 	'INST_ERR_EMAIL_INVALID'	=> 'A megadott e-mail cím hibás.',
@@ -1844,6 +1928,8 @@ $lang = array_merge($lang, array(
 	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'A phpBB <strong>nem</strong> fog működni, ha a PHP a PCRE kiterjesztés UTF-8 támogatása nélkül került fordításra.',
 	'PHP_GETIMAGESIZE_SUPPORT'			=> 'getimagesize() PHP függvény elérhető',
 	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Szükséges</strong> – A phpBB-nek a helyes működéshez szüksége van a getimagesize függvényre.',
+	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'Opcionális modulok',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>Opcionális</strong> – Ezek a modulok vagy alkalmazások opcionálisak. Azonban ha elérhetők, extra funkciók használata válik lehetségessé velük.',
 	'PHP_SUPPORTED_DB'				=> 'Támogatott adatbázisok',
@@ -1852,10 +1938,10 @@ $lang = array_merge($lang, array(
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'A phpBB akkor is működni fog, ha ez a beállítás be van kapcsolva, azonban biztonsági szempontból ajánlott a kikapcsolása.',
 	'PHP_SAFE_MODE'					=> 'Biztonságos mód',
 	'PHP_SETTINGS'					=> 'PHP verzió és beállítások',
-	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Szükséges</strong> – A phpBB telepítéséhez legalább 4.3.3-as verziójú PHP-val kell rendelkezned. Ha alább megjelenik a <var>biztonságos mód</var> felirat, akkor a PHP ebben a módban fut. Ez korlátozásokkal jár a távoli adminisztráció és ehhez hasonló funkciók terén.',
+	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> '<var>allow_url_fopen</var> PHP beállítás bekapcsolva',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>Opcionális</strong> – Ez a beállítás opcionális, bár a phpBB néhány funkciója, mint például a külső avatarok, nem fog rendesen működni nélküle.',
-	'PHP_VERSION_REQD'				=> 'PHP verzió ≥ 4.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
 	'POST_ID'						=> 'Hozzászólás azonosító',
 	'PREFIX_FOUND'					=> 'Az adatbázistábláid azt mutatják, hogy van már egy telepített phpBB-d, melynek a tábla előtagja <strong>%s</strong>.',
 	'PREPROCESS_STEP'				=> 'Függvények/parancsok előfeldolgozásának végrehajtása',
@@ -1875,6 +1961,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> 'Szerver beállítások',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'A keresési index nem került konvertálásra',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'A kereső indexe nem lett átkonvertálva, így a keresések nem fognak találatot adni. A keresési index létrehozásához menj az adminisztrátori vezérlőpultra, válaszd ki a Karbantartást, majd az almenüben kattints a Keresési indexre.',
+	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> 'Fórumszoftver',
 	'SPECIFY_OPTIONS'			=> 'Konvertálás beállításainak megadása',
 	'STAGE_ADMINISTRATOR'		=> 'Adminisztrátor adatok',
@@ -1882,7 +1969,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> 'Ezeket a beállításokat csak akkor add meg, ha biztosan tudod, hogy az alap beállítástól valami eltérőre van szükséged. Ha nem vagy benne biztos, lépj tovább a következő lépésre, ezeket később az adminisztrátori vezérlőpultról is megváltoztathatod.',
 	'STAGE_CONFIG_FILE'			=> 'Konfigurációs állomány',
 	'STAGE_CREATE_TABLE'		=> 'Adatbázistáblák létrehozása',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'A phpBB 3.0 adatbázistáblái sikeresen létrejöttek, bennük néhány kezdeti adattal. Lépj tovább a következő oldalra, hogy befejezd a phpBB telepítését.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'Adatbázis adatok',
 	'STAGE_FINAL'				=> 'Befejező lépés',
 	'STAGE_INTRO'				=> 'Bevezető',
@@ -1895,7 +1982,7 @@ $lang = array_merge($lang, array(
 	'SUB_LICENSE'				=> 'Licenc',
 	'SUB_SUPPORT'				=> 'Támogatás',
 	'SUCCESSFUL_CONNECT'		=> 'Sikeres kapcsolódás',
-	'SUPPORT_BODY'				=> 'A phpBB3 stabil kiadásaihoz teljes támogatás elérhető, térítésmentesen. Ez magában foglalja az alábbiakat:</p><ul><li>telepítés,</li><li>konfiguráció,</li><li>technikai kérdések,</li><li>a szoftverben lévő lehetséges hibákkal kapcsolatos problémák,</li><li>frissítés a Release Candidate (RC) verziókról a legfrissebb stabil verzióra,</li><li>konvertálás phpBB 2.0.x-ről phpBB3-ra,</li><li>konvertálás más fórumszoftverről phpBB3-ra (ezzel kapcsolatban lásd a <a href="http://www.phpbb.com/community/viewforum.php?f=65">Konvertálók fórumot</a>).</li></ul><p>A phpBB3 még béta verzióját futtató felhasználóinknak tanácsoljuk, hogy a jelenlegi fórumukat cseréljék le egy friss telepítésűre a legújabb verzióból.</p><h2>MOD-ok, megjelenések</h2><p>A MOD-okkal kapcsolatos ügyekkel, kérünk, a megfelelő, <a href="http://www.phpbb.com/community/viewforum.php?f=81">Modifikációk fórumba</a> írj.<br />A megjelenésekkel, sablonokkal és képkészletekkel kapcsolatban, kérünk, szintén fordulj az ezeknek megfelelő, <a href="http://www.phpbb.com/community/viewforum.php?f=80">Megjelenések fórumba</a>.<br /><br />Ha a kérdésed egy bizonyos csomagra irányul, kérünk, közvetlenül a csomaggal foglalkozó témába küldd a hozzászólásod.</p><h2>Támogatás elérhetősége</h2><p><a href="http://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">A phpBB üdvözlő csomag</a><br /><a href="http://www.phpbb.com/support/">Támogatás részleg</a><br /><a href="http://www.phpbb.com/support/documentation/3.0/quickstart/">Gyorstalpaló</a><br /><br />Hogy mindig azonnal értesülj a phpBB frissítéseiről, <a href="http://www.phpbb.com/support/">iratkozz fel a hírlevelünkre</a>.</p><h2>Saját nyelvű támogatás</h2><p>A phpBB.com angol nyelvű támogatása mellett a <a href="http://www.phpbb.com/support/intl/">nemzetközi phpBB oldalak</a> is örömmel állnak rendelkezésre. Ez a magyar nyelv esetében a <a href="http://phpbb.hu/">Magyar phpBB Közösség</a> oldalát jelenti. Ezeken a webhelyeken főképp az alap phpBB-hez nyújtanak támogatást, MOD-okhoz, megjelenésekhez többnyire csak részlegesen, nem minden esetben lehet segítséget kapni. Amennyiben az adott oldalon nem foglalkoznak az adott bővítménnyel, keresd fel a phpBB.com megfelelő fórumtémáját.<br /><br />',
+	'SUPPORT_BODY'				=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/documentation/3.1/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
 	'SYNC_FORUMS'				=> 'Fórumok szinkronizációjának megkezdése',
 	'SYNC_POST_COUNT'			=> 'Hozzászólásszámok szinkronizálása',
 	'SYNC_POST_COUNT_ID'		=> 'Hozzászólásszámok szinkronizálása; <var>entry</var> %1$s – %2$s.',
@@ -1921,7 +2008,7 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ALL_FILES_UP_TO_DATE'		=> 'Az összes állomány megfelel a legújabb verziójú phpBB csomagnak. Most <a href="../ucp.php?mode=login">lépj be a fórumon</a>, és ellenőrizd, hogy minden rendesen működik-e. Ne felejtsd el törölni, átnevezni vagy áthelyezni az install könyvtárat! Kérünk, küldj friss adatokat a szerver és fórum beállításaidról az AVP <a href="../ucp.php?mode=login&amp;redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">statisztikai adatok küldése</a> oldaláról!',
+	'ALL_FILES_UP_TO_DATE'		=> 'All files are up to date with the latest phpBB version.',
 	'ARCHIVE_FILE'				=> 'Csomagbeli forrásállomány',
 
 	'BACK'				=> 'Vissza',
@@ -1944,7 +2031,10 @@ $lang = array_merge($lang, array(
 	'CURRENT_VERSION'				=> 'Jelenlegi verzió',
 
 	'DATABASE_TYPE'						=> 'Adatbázis típusa',
+	'DATABASE_UPDATE_COMPLETE'			=> 'Database updater has completed!',
+	'DATABASE_UPDATE_CONTINUE'			=> 'Continue database update',
 	'DATABASE_UPDATE_INFO_OLD'			=> 'Az install könyvtárban található adatbázis-frissítő állomány nem a legújabb. Kérünk, győződj meg róla, hogy a jó verzióját töltötted fel az állománynak.',
+	'DATABASE_UPDATE_NOT_COMPLETED'		=> 'The database update has not yet completed.',
 	'DELETE_USER_REMOVE'				=> 'Felhasználó törlése és hozzászólásainak eltávolítása',
 	'DELETE_USER_RETAIN'				=> 'Felhasználó törlése de hozzászólásainak megtartása',
 	'DESTINATION'						=> 'Célállomány',
@@ -1963,14 +2053,17 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_UPDATE_METHOD'			=> 'Megváltozott állományokat tartalmazó csomag letöltése',
 	'DOWNLOAD_UPDATE_METHOD_EXPLAIN'	=> 'Miután letöltötted a csomagot, tömörítsd ki. A csomagban található megváltozott állományokat töltsd fel a phpBB-d gyökérkönyvtárába, a megfelelő helyükre. Miután feltöltötted az összes állományt, vesd össze újra az állományokat a másik alábbi gomb segítségével.',
 
-	'ERROR'			=> 'Hiba',
 	'EDIT_USERNAME'	=> 'Felhasználónév módosítása',
+	'ERROR'			=> 'Hiba',
+	'EVERYTHING_UP_TO_DATE'		=> 'Everything is up to date with the latest phpBB version. You should now <a href="%1$s">login to your board</a> and check if everything is working fine. Do not forget to delete, rename or move your install directory! Please send us updated information about your server and board configurations from the <a href="%2$s">Send statistics</a> module in your ACP.',
 
 	'FILE_ALREADY_UP_TO_DATE'		=> 'Az állomány már a legújabb verziójú',
 	'FILE_DIFF_NOT_ALLOWED'			=> 'Ezen az állományon nem végezhető diff.',
 	'FILE_USED'						=> 'Információ a következő állományból',			// Single file
 	'FILES_CONFLICT'				=> 'Ütközéseket tartalmazó állományok',
 	'FILES_CONFLICT_EXPLAIN'		=> 'A következő állományok korábban módosítva lettek, és nem teljesen egyeznek meg a régiverzió-beli állománnyal. Az egyesítésük során ütközés lép fel. Kérünk, járj utána ezeknek az ütközéseknek, és próbáld meg megoldani őket kézzel, vagy folytasd a frissítést a kívánt egyesítési mód kiválasztásával. Ha saját magad oldod meg az ütközések problémáját, miután megváltoztattad az állományokat, vesd őket újra össze. Emellett választhatsz különböző egyesítési módok közül is. Az első használata eredményeképp az új állományban a régi állomány ütköző sorai nem lesznek megtalálhatók, míg a második használatakor az új állomány változásai vesznek el.',
+	'FILES_DELETED'					=> 'Deleted files',
+	'FILES_DELETED_EXPLAIN'			=> 'The following files do not exist in the new version. These files have to be deleted from your installation.',
 	'FILES_MODIFIED'				=> 'Módosított állományok',
 	'FILES_MODIFIED_EXPLAIN'		=> 'A következő állományok korábban módosítva lettek, és nem teljesen egyeznek meg a régiverzió-beli állománnyal. A frissített állomány a saját módosításaid és az új állomány egyesítése lesz.',
 	'FILES_NEW'						=> 'Új állományok',
@@ -2032,6 +2125,7 @@ $lang = array_merge($lang, array(
 	'PREVIOUS_VERSION'					=> 'Előző verzió',
 	'PROGRESS'							=> 'Haladás',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Announcement',
 	'RESULT'					=> 'Eredmény',
 	'RUN_DATABASE_SCRIPT'		=> 'Adatbázis frissítése most',
 
@@ -2039,6 +2133,7 @@ $lang = array_merge($lang, array(
 	'SELECT_DOWNLOAD_FORMAT'	=> 'Letöltendő csomag formátumának kiválasztása',
 	'SELECT_FTP_SETTINGS'		=> 'FTP beállítások megadása',
 	'SHOW_DIFF_CONFLICT'		=> 'Különbségek/ütközések megjelenítése',
+	'SHOW_DIFF_DELETED'			=> 'Show file contents',
 	'SHOW_DIFF_FINAL'			=> 'Eredmény megjelenítése',
 	'SHOW_DIFF_MODIFIED'		=> 'Különbségek egyesítésének megjelenítése',
 	'SHOW_DIFF_NEW'				=> 'Állomány tartalmának megjelenítése',
@@ -2052,6 +2147,7 @@ $lang = array_merge($lang, array(
 	'STAGE_UPDATE_FILES'		=> 'Állományok frissítése',
 	'STAGE_VERSION_CHECK'		=> 'Verzió ellenőrzése',
 	'STATUS_CONFLICT'			=> 'Ütközéseket eredményező módosított állomány',
+	'STATUS_DELETED'			=> 'Deleted file',
 	'STATUS_MODIFIED'			=> 'Módosított állomány',
 	'STATUS_NEW'				=> 'Új állomány',
 	'STATUS_NEW_CONFLICT'		=> 'Ütköző új állomány',
@@ -2072,33 +2168,27 @@ $lang = array_merge($lang, array(
 	'UPDATE_INSTALLATION_EXPLAIN'	=> 'Itt frissítheted a phpBB-d a legújabb verzióra.<br />A frissítés folyamata során minden állomány ellenőrzésre kerül. A tényleges frissítés előtt minden különbséget átnézhetsz.<br /><br />Maga az állományok frissítése két módon végezhető el.</p><h2>Kézi frissítés</h2><p>Ezen frissítési mód használatakor csak a saját megváltozott állományaidat töltöd le, így meggyőződhetsz róla, hogy nem vesztesz el semmilyen módosítást, amit csinálhattál. Miután letöltötted ezt a csomagot, a benne lévő állományokat fel kell töltened a phpBB-d gyökérkönyvtárába, a megfelelő helyükre. Ezután mégegyszer összevetheted az állományokat, hogy leellenőrizd, a megfelelő helyre töltötted fel őket.</p><h2>Automatikus frissítés FTP-vel</h2><p>Ez a frissítési mód hasonló az előbbihez, azonban ennél nem kell saját magadnak letöltened, majd feltöltened a megváltozott állományokat – ezt megteszi a phpBB. Ezen mód használatához ismerned kell az FTP-belépéshez szükséges dolgokat, mivel egy űrlapon meg kell adnod ezeket. Miután ezt befejezted, át leszel irányítva az állományok összevetéséhez, hogy meggyőződhess, minden sikeresen frissítésre került.<br /><br />',
 	'UPDATE_INSTRUCTIONS'			=> '
 
-		<h1>Verziómegjelenési közlemény</h1>
+		<h1>Release announcement</h1>
 
-		<p>A frissítés folytatása előtt, kérjük, olvasd el <a href="%1$s" title="%1$s"><strong>a legfrissebb verziót bejelentő közleményt</strong></a>, mivel hasznos információkat tartalmazhat. Mindenképp szerepel benne a változások listája és közvetlen link az új verzió letöltésére.</p>
+		<p>Please read the release announcement for the latest version before you continue your update process, it may contain useful information. It also contains full download links as well as the change log.</p>
 
 		<br />
 
-		<h1>Frissítés módja az automatikus frissítő csomag használatával</h1>
+		<h1>How to update your installation with the Automatic Update Package</h1>
 
-		<p>Az itt részletezett javasolt frissítési mód az automatikus frissítő csomag használatát feltételezi. A phpBB-det az INSTALL.html-ben leírt módokon is frissítheted. A phpBB3 automatikusan történő frissítése a következő lépésekből áll:</p>
+		<p>The recommended way of updating your installation listed here is only valid for the automatic update package. You are also able to update your installation using the methods listed within the INSTALL.html document. The steps for updating phpBB3 automatically are:</p>
 
 		<ul style="margin-left: 20px; font-size: 1.1em;">
-			<li>Menj a <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com letöltések oldalára</a>, és töltsd le a megfelelő automatikus frissítő csomagot.<br /><br /></li>
-			<li>Csomagold ki a csomagot.<br /><br /></li>
-			<li>A kicsomagolt csomag install könyvtárát töltsd fel a phpBB-d gyökérkönyvtárába (ahol a config.php található).<br /><br /></li>
+			<li>Go to the <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com downloads page</a> and download the "Automatic Update Package" archive.<br /><br /></li>
+			<li>Unpack the archive.<br /><br /></li>
+			<li>Upload the complete uncompressed install folder to your phpBB root directory (where your config.php file is).<br /><br /></li>
 		</ul>
 
-		<p>Miután feltöltötted, a normál felhasználók nem tudják majd elérni a fórumot az install könyvtár létezése miatt.<br /><br />
-		<strong><a href="%2$s" title="%2$s">Most kezdd el a frissítést az install könyvtárba lépéssel.</a></strong><br />
+		<p>Once uploaded your board will be offline for normal users due to the install directory you uploaded now present.<br /><br />
+		<strong><a href="%1$s" title="%1$s">Now start the update process by pointing your browser to the install folder</a>.</strong><br />
 		<br />
-		Ez után a rendszer végigvezet a frissítés folyamatán. A frissítés végeztével meg fog jelenni egy értesítő üzenet.
+		You will then be guided through the update process. You will be notified once the update is complete.
 		</p>
-	',
-	'UPDATE_INSTRUCTIONS_INCOMPLETE'	=> '
-
-		<h1>Befejezetlen frissítés</h1>
-
-		<p>A phpBB észrevett egy befejezetlen automatikus frissítési próbálkozást. Kérünk, győződj meg róla, hogy elvégezted az automatikus frissítő összes lépését. Alább megtalálod a linket újra, vagy menj közvetlenül az install könyvtárba.</p>
 	',
 	'UPDATE_METHOD'					=> 'Frissítési mód',
 	'UPDATE_METHOD_EXPLAIN'			=> 'Most kiválaszthatod a kívánt frissítési módot. Ha az FTP feltöltést választod, egy űrlap fog megjelenni, ahol meg kell adnod az FTP-csatlakozáshoz szükséges adatokat. Ezen mód használatakor az állományok automatikusan áthelyezésre kerülnek az új helyükre, és a régi állományokról biztonsági másolat készül az állományok nevéhez való .bak kiterjesztés hozzáfűzésével. Ha a módosított fájlok letöltését választod, ki kell csomagolnod a letöltött csomagot, majd kézzel feltöltened a tartalmát a megfelelő helyre.',
@@ -2109,10 +2199,10 @@ $lang = array_merge($lang, array(
 	'UPDATING_DATA'					=> 'Adatok frissítése',
 	'UPDATING_TO_LATEST_STABLE'		=> 'Adatbázis frissítése az utolsó stabil kiadásra',
 	'UPDATED_VERSION'				=> 'Frissített verzió',
-	'UPGRADE_INSTRUCTIONS'			=> 'Egy új nagyobb verzió <strong>%1$s</strong> érhető el. Kérjük, olvasd el a <a href="%2$s" title="%2$s"><strong>a verziómegjelenési közleményt</strong></a>, melyből tájékozódhatsz az új kiadás újdonságairól és a frissítés menetéről.',
 	'UPLOAD_METHOD'					=> 'Feltöltési mód',
 
 	'UPDATE_DB_SUCCESS'				=> 'Sikeres adatbázis-frissítés',
+	'UPDATE_FILE_SUCCESS'			=> 'File update was successful.',
 	'USER_ACTIVE'					=> 'Aktív felhasználó',
 	'USER_INACTIVE'					=> 'Inaktív felhasználó',
 
@@ -2172,6 +2262,33 @@ $lang = array_merge($lang, array(
 	'TOPICS_TOPIC_TITLE'			=> 'Üdvözlünk a phpBB3-ban!',
 ));
 
+#######language/en/migrator.php#######
+
+$lang = array_merge($lang, array(
+	'CONFIG_NOT_EXIST'					=> 'The config setting "%s" unexpectedly does not exist.',
+
+	'GROUP_NOT_EXIST'					=> 'The group "%s" unexpectedly does not exist.',
+
+	'MIGRATION_APPLY_DEPENDENCIES'		=> 'Apply dependencies of %s.',
+	'MIGRATION_DATA_DONE'				=> 'Installed Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_IN_PROGRESS'		=> 'Installing Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_RUNNING'			=> 'Installing Data: %s.',
+	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
+	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
+	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
+	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
+	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
+	'MODULE_NOT_EXIST'					=> 'A required module does not exist: %s',
+
+	'PERMISSION_NOT_EXIST'				=> 'The permission setting "%s" unexpectedly does not exist.',
+
+	'ROLE_NOT_EXIST'					=> 'The permission role "%s" unexpectedly does not exist.',
+));
+
 #######language/en/mcp.php#######
 
 $lang = array_merge($lang, array(
@@ -2192,6 +2309,10 @@ $lang = array_merge($lang, array(
 	'APPROVE_POST_CONFIRM'	=> 'Biztosan jóvá akarod hagyni a kiválasztott hozzászólást?',
 	'APPROVE_POSTS'			=> 'Hozzászólások jóváhagyása',
 	'APPROVE_POSTS_CONFIRM'	=> 'Biztosan jóvá akarod hagyni a kiválasztott hozzászólásokat?',
+	'APPROVE_TOPIC'			=> 'Approve topic',
+	'APPROVE_TOPIC_CONFIRM'	=> 'Are you sure you want to approve this topic?',
+	'APPROVE_TOPICS'		=> 'Approve topics',
+	'APPROVE_TOPICS_CONFIRM'=> 'Are you sure you want to approve the selected topics?',
 
 	'CANNOT_MOVE_SAME_FORUM'=> 'Egy témát nem helyezhetsz át abba a fórumba, amiben jelenleg van.',
 	'CANNOT_WARN_ANONYMOUS'	=> 'Nem tudod figyelmeztetni a nem regisztrált (vendég) felhasználókat.',
@@ -2212,16 +2333,12 @@ $lang = array_merge($lang, array(
 	'DELETE_PM_REPORTS'			=> 'PÜ jelentések törlése',
 	'DELETE_PM_REPORTS_CONFIRM'	=> 'Biztosan törölni akarod a kiválasztott PÜ jelentéseket?',
 	'DELETE_POSTS'				=> 'Hozzászólások törlése',
-	'DELETE_POSTS_CONFIRM'		=> 'Biztosan törölni akarod ezeket a hozzászólásokat?',
-	'DELETE_POST_CONFIRM'		=> 'Biztosan törölni akarod ezt a hozzászólást?',
 	'DELETE_REPORT'				=> 'Jelentés törlése',
 	'DELETE_REPORT_CONFIRM'		=> 'Biztosan törölni akarod a kiválasztott jelentést?',
 	'DELETE_REPORTS'			=> 'Jelentések törlése',
 	'DELETE_REPORTS_CONFIRM'	=> 'Biztosan törölni akarod a kiválasztott jelentéseket?',
 	'DELETE_SHADOW_TOPIC'		=> 'Árnyék téma törlése',
 	'DELETE_TOPICS'				=> 'Kiválasztott témák törlése',
-	'DELETE_TOPICS_CONFIRM'		=> 'Biztosan törölni akarod ezeket a témákat?',
-	'DELETE_TOPIC_CONFIRM'		=> 'Biztosan törölni akarod ezt a témát?',
 	'DISAPPROVE'				=> 'Elutasítás',
 	'DISAPPROVE_REASON'			=> 'Elutasítás oka',
 	'DISAPPROVE_POST'			=> 'Hozzászólás elutasítása',
@@ -2259,8 +2376,6 @@ $lang = array_merge($lang, array(
 	'LATEST_WARNING_TIME'		=> 'Legutóbbi figyelmeztetések',
 	'LATEST_WARNINGS'			=> 'Legutóbbi 5 figyelmeztetés',
 	'LEAVE_SHADOW'				=> 'Árnyék téma hagyása a régi fórumban',
-	'LIST_REPORT'				=> '1 jelentés',
-	'LIST_REPORTS'				=> '%d jelentés',
 	'LOCK'						=> 'Lezárás',
 	'LOCK_POST_POST'			=> 'Hozzászólás lezárása',
 	'LOCK_POST_POST_CONFIRM'	=> 'Biztosan azt akarod, hogy ne lehessen szerkeszteni ezt a hozzászólást?',
@@ -2339,6 +2454,10 @@ $lang = array_merge($lang, array(
 	'MCP_QUEUE_UNAPPROVED_POSTS_EXPLAIN'	=> 'Ez a lista azokat a hozzászólásokat tartalmazza, melyek egyelőre nem láthatók a felhasználók számára, mivel még nem kerültek jóváhagyásra.',
 	'MCP_QUEUE_UNAPPROVED_TOPICS'			=> 'Jóváhagyásra váró témák',
 	'MCP_QUEUE_UNAPPROVED_TOPICS_EXPLAIN'	=> 'Ez a lista azokat a témákat tartalmazza, melyek egyelőre nem láthatók a felhasználók számára, mivel még nem kerültek jóváhagyásra.',
+	'MCP_QUEUE_DELETED_POSTS'				=> 'Deleted posts',
+	'MCP_QUEUE_DELETED_POSTS_EXPLAIN'		=> 'This is a list of all soft deleted posts. You can restore or permanently delete the posts from this screen.',
+	'MCP_QUEUE_DELETED_TOPICS'				=> 'Deleted topics',
+	'MCP_QUEUE_DELETED_TOPICS_EXPLAIN'		=> 'This is a list of all soft deleted topics. You can restore or permanently delete the topics from this screen.',
 
 	'MCP_VIEW_USER'			=> 'Meghatározott felhasználó figyelmeztetéseinek megtekintése',
 
@@ -2377,25 +2496,27 @@ $lang = array_merge($lang, array(
 	'NO_POST'						=> 'Ki kell választanod egy hozzászólást, hogy figyelmeztethesd a felhasználót egy hozzászólásáért.',
 	'NO_POST_REPORT'				=> 'Ezt a hozzászólást nem jelentették.',
 	'NO_POST_SELECTED'				=> 'Legalább egy hozzászólást ki kell választanod, hogy elvégezhesd ezt a műveletet.',
+	'NO_POSTS_DELETED'				=> 'There are no deleted posts.',
+	'NO_POSTS_QUEUE'				=> 'There are no posts waiting for approval.',
 	'NO_REASON_DISAPPROVAL'			=> 'Kérünk, adj meg egy megfelelő okot az elutasításra.',
 	'NO_REPORT'						=> 'Nincs ilyen jelentés.',
 	'NO_REPORTS'					=> 'Nincs ilyen jelentés.',
 	'NO_REPORT_SELECTED'			=> 'Legalább egy jelentést ki kell választanod, hogy végrehajthasd ezt a műveletet.',
 	'NO_TOPIC_ICON'					=> 'nincs',
 	'NO_TOPIC_SELECTED'				=> 'Legalább egy témát ki kell választanod, hogy elvégezhesd ezt a műveletet.',
+	'NO_TOPICS_DELETED'				=> 'There are no deleted topics.',
 	'NO_TOPICS_QUEUE'				=> 'Nincs jóváhagyásra váró téma.',
 
 	'ONLY_TOPIC'			=> 'Csak a „%s” téma',
 	'OTHER_USERS'			=> 'Más erről az IP-ről hozzászóló felhasználók',
 
+	'QUICKMOD_ACTION_NOT_ALLOWED' => "%s not allowed as quickmod",
+
 	'PM_REPORT_CLOSED_SUCCESS'	=> 'A kiválasztott PÜ jelentés sikeresen lezárásra került.',
 	'PM_REPORT_DELETED_SUCCESS'	=> 'A kiválasztott PÜ jelentés sikeresen törlésre került.',
 	'PM_REPORTED_SUCCESS'		=> 'A privát üzenet sikeresen jelentésre került.',
-	'PM_REPORT_TOTAL'			=> 'Összesen <strong>1</strong> áttekintésre váró PÜ jelentés van.',
 	'PM_REPORTS_CLOSED_SUCCESS'	=> 'A kiválasztott PÜ jelentések sikeresen lezárásra kerültek.',
 	'PM_REPORTS_DELETED_SUCCESS'=> 'A kiválasztott PÜ jelentések sikeresen törlésre kerültek.',
-	'PM_REPORTS_TOTAL'			=> 'Összesen <strong>%d</strong> áttekintésre váró PÜ jelentés van.',
-	'PM_REPORTS_ZERO_TOTAL'		=> 'Nincs áttekintésre váró PÜ jelentés.',
 	'PM_REPORT_DETAILS'			=> 'Privát üzenet jelentés részletek',
 	'POSTER'					=> 'Küldő',
 	'POSTS_APPROVED_SUCCESS'	=> 'A kiválasztott hozzászólások jóváhagyásra kerültek.',
@@ -2403,15 +2524,17 @@ $lang = array_merge($lang, array(
 	'POSTS_DISAPPROVED_SUCCESS'	=> 'A kiválasztott hozzászólások elutasításra kerültek.',
 	'POSTS_LOCKED_SUCCESS'		=> 'A kiválasztott hozzászólások sikeresen lezárásra kerültek.',
 	'POSTS_MERGED_SUCCESS'		=> 'A kiválasztott hozzászólások áthelyezésre kerültek.',
-	'POSTS_UNLOCKED_SUCCESS'	=> 'A kiválasztott lezárt hozzászólások sikeresen megnyitásra kerültek.',
 	'POSTS_PER_PAGE'			=> 'Hozzászólások oldalanként',
 	'POSTS_PER_PAGE_EXPLAIN'	=> 'Állítsd 0-ra az összes megjelenítéséhez.',
+	'POSTS_RESTORED_SUCCESS'	=> 'The selected posts have been restored successfully.',
+	'POSTS_UNLOCKED_SUCCESS'	=> 'A kiválasztott lezárt hozzászólások sikeresen megnyitásra kerültek.',
 	'POST_APPROVED_SUCCESS'		=> 'A kiválasztott hozzászólás jóváhagyásra került.',
 	'POST_DELETED_SUCCESS'		=> 'A kiválasztott hozzászólás sikeresen eltávolításra került az adatbázisból.',
 	'POST_DISAPPROVED_SUCCESS'	=> 'A kiválasztott hozzászólás elutasításra került.',
 	'POST_LOCKED_SUCCESS'		=> 'A hozzászólás sikeresen lezárásra került.',
 	'POST_NOT_EXIST'			=> 'A kért hozzászólás nem létezik.',
 	'POST_REPORTED_SUCCESS'		=> 'A hozzászólás sikeresen jelentésre került.',
+	'POST_RESTORED_SUCCESS'		=> 'This post has been restored successfully.',
 	'POST_UNLOCKED_SUCCESS'		=> 'A lezárt hozzászólás sikeresen megnyitásra került.',
 
 	'READ_USERNOTES'			=> 'Felhasználói feljegyzések',
@@ -2422,8 +2545,6 @@ $lang = array_merge($lang, array(
 	'REPORTED_ON_DATE'			=> 'Dátum:',
 	'REPORTS_CLOSED_SUCCESS'	=> 'A kiválasztott jelentések sikeresen lezárásra kerültek.',
 	'REPORTS_DELETED_SUCCESS'	=> 'A kiválasztott jelentések sikeresen törlésre kerültek.',
-	'REPORTS_TOTAL'				=> 'Összesen <strong>%d</strong> áttekintésre váró jelentés van.',
-	'REPORTS_ZERO_TOTAL'		=> 'Nincs áttekintésre váró jelentés.',
 	'REPORT_CLOSED'				=> 'A jelentés már lezárásra került.',
 	'REPORT_CLOSED_SUCCESS'		=> 'A kiválasztott jelentés sikeresen lezárásra került.',
 	'REPORT_DELETED_SUCCESS'	=> 'A kiválasztott jelentés sikeresen törlésre került.',
@@ -2435,7 +2556,15 @@ $lang = array_merge($lang, array(
 	'REPORT_POST_EXPLAIN'		=> 'Ennek az űrlapnak a segítségével a kiválasztott hozzászólást jelentheted a fórum adminisztrátorainak. A jelentés csak arra az esetre való, ha a hozzászólás megszegi a fórum szabályait.',
 	'REPORT_REASON'				=> 'Jelentés oka',
 	'REPORT_TIME'				=> 'Jelentés ideje',
-	'REPORT_TOTAL'				=> 'Összesen <strong>1</strong> áttekintésre váró jelentés van.',
+	'RESTORE'					=> 'Restore',
+	'RESTORE_POST'				=> 'Restore post',
+	'RESTORE_POST_CONFIRM'		=> 'Are you sure you want to restore this post?',
+	'RESTORE_POSTS'				=> 'Restore posts',
+	'RESTORE_POSTS_CONFIRM'		=> 'Are you sure you want to restore the selected posts?',
+	'RESTORE_TOPIC'				=> 'Restore topic',
+	'RESTORE_TOPIC_CONFIRM'		=> 'Are you sure you want to restore this topic?',
+	'RESTORE_TOPICS'			=> 'Restore topics',
+	'RESTORE_TOPICS_CONFIRM'	=> 'Are you sure you want to restore the selected topics?',
 	'RESYNC'					=> 'Szinkronizálás',
 	'RETURN_MESSAGE'			=> '%sVissza az üzenethez%s',
 	'RETURN_NEW_FORUM'			=> '%sTovább az új fórumhoz%s',
@@ -2476,6 +2605,7 @@ $lang = array_merge($lang, array(
 	'TOPICS_FORKED_SUCCESS'		=> 'A kiválasztott témák sikeresen meg lettek kettőzve.',
 	'TOPICS_LOCKED_SUCCESS'		=> 'A kiválasztott témák lezárásra kerültek.',
 	'TOPICS_MOVED_SUCCESS'		=> 'A kiválasztott témák sikeresen áthelyezésre kerültek.',
+	'TOPICS_RESTORED_SUCCESS'	=> 'The selected topics have been restored successfully.',
 	'TOPICS_RESYNC_SUCCESS'		=> 'A kiválasztott témák sikeresen szinkronizálásra kerültek.',
 	'TOPICS_TYPE_CHANGED'		=> 'A téma típusok sikeresen megváltoztatásra kerültek.',
 	'TOPICS_UNLOCKED_SUCCESS'	=> 'A kiválasztott témák sikeresen megnyitásra kerültek.',
@@ -2486,6 +2616,7 @@ $lang = array_merge($lang, array(
 	'TOPIC_LOCKED_SUCCESS'		=> 'A kiválasztott téma lezárásra került.',
 	'TOPIC_MOVED_SUCCESS'		=> 'A kiválasztott téma sikeresen áthelyezésre került.',
 	'TOPIC_NOT_EXIST'			=> 'A kiválasztott téma nem létezik.',
+	'TOPIC_RESTORED_SUCCESS'	=> 'The selected topic has been restored successfully.',
 	'TOPIC_RESYNC_SUCCESS'		=> 'A kiválasztott téma szinkronizálásra került.',
 	'TOPIC_SPLIT_SUCCESS'		=> 'A kiválasztott téma sikeresen szétválasztásra került.',
 	'TOPIC_TIME'				=> 'Témanyitás ideje',
@@ -2493,9 +2624,6 @@ $lang = array_merge($lang, array(
 	'TOPIC_UNLOCKED_SUCCESS'	=> 'A kiválasztott téma megnyitásra került.',
 	'TOTAL_WARNINGS'			=> 'Figyelmeztetések száma',
 
-	'UNAPPROVED_POSTS_TOTAL'		=> 'Összesen <strong>%d</strong> jóváhagyásra váró hozzáászólás van.',
-	'UNAPPROVED_POSTS_ZERO_TOTAL'	=> 'Nincs jóváhagyásra váró hozzászólás.',
-	'UNAPPROVED_POST_TOTAL'			=> 'Összesen <strong>1</strong> jóváhagyásra váró hozzászólás van.',
 	'UNLOCK'						=> 'Megnyitás',
 	'UNLOCK_POST'					=> 'Hozzászólás megnyitása',
 	'UNLOCK_POST_EXPLAIN'			=> 'Szerkesztés engedélyezése',
@@ -2521,7 +2649,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'A következő figyelmeztetésben részesültél egy adminisztrátor vagy egy moderátor által:[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'Figyelmeztetés',
 	'WARNING_POST_DEFAULT'	=> 'A következő hozzászólásod miatt figyelmeztetésben részesültél: %s .',
-	'WARNINGS_ZERO_TOTAL'	=> 'Nincs figyelmeztetés.',
+	'NO_WARNINGS'	=> 'No warnings exist.',
 
 	'YOU_SELECTED_TOPIC'	=> 'A %d. számú témát választottad ki: %s',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -2561,10 +2689,12 @@ $lang = array_merge($lang, array(
 	'ALL'					=> 'Összes',
 	'BEFORE'				=> 'Korábban mint',
 	'CC_EMAIL'				=> 'Másolat küldése magadnak',
-	'CONTACT_USER'			=> 'Kapcsolat:',
+	'CONTACT_ADMIN'			=> 'Contact a Board Administrator',
 
 	'DEST_LANG'				=> 'Nyelv',
 	'DEST_LANG_EXPLAIN'		=> 'Válassz ki egy az üzenet címzettjének megfelelő nyelvet (ha elérhető).',
+
+	'EDIT_PROFILE'			=> 'Edit Profile',
 
 	'EMAIL_BODY_EXPLAIN'	=> 'Az üzenet sima szövegként kerül elküldésre, ne használj HTML-t vagy BBCode-ot. Az üzenet válaszcíme a te e-mail címed lesz.',
 	'EMAIL_DISABLED'		=> 'Sajnáljuk, de az e-mail küldéssel kapcsolatos funkciók kikapcsolásra kerültek.',
@@ -2574,7 +2704,9 @@ $lang = array_merge($lang, array(
 	'EMPTY_MESSAGE_EMAIL'	=> 'Nem küldhetsz üres üzenetet.',
 	'EMPTY_MESSAGE_IM'		=> 'Nem küldhetsz üres üzenetet.',
 	'EMPTY_NAME_EMAIL'		=> 'Meg kell adnod a címzett valódi nevét.',
-	'EMPTY_SUBJECT_EMAIL'	=> 'Meg kell adnod az e-mail témáját.',
+	'EMPTY_SENDER_EMAIL'	=> 'You must provide a valid email address.',
+	'EMPTY_SENDER_NAME'		=> 'You must provide a name.',
+	'EMPTY_SUBJECT_EMAIL'	=> 'You must specify a subject for the email.',
 	'EQUAL_TO'				=> 'Annyi mint',
 
 	'FIND_USERNAME_EXPLAIN'	=> 'Ennek az űrlapnak a segítségével konkrét felhasználókra kereshetsz rá. Nem kell az összes mezőt kitöltened. Részleges szavakhoz használd a * jokerkaraktert. A dátumokat <kbd>ÉÉÉÉ-HH-NN</kbd> formában add meg (például <samp>2004-02-29</samp>). Használd a jelölőnégyzeteket egy vagy több felhasználó kiválasztásához (az űrlaptól függ, hányat választhatsz ki), majd kattints a kijelöltek kiválasztása gombra, hogy visszatérj az előző űrlaphoz.',
@@ -2584,16 +2716,10 @@ $lang = array_merge($lang, array(
 	'HIDE_MEMBER_SEARCH'	=> 'Felhasználó keresésének elrejtése',
 
 	'IM_ADD_CONTACT'		=> 'Felvétel a kapcsolatok közé',
-	'IM_AIM'				=> 'Kérjük, vedd figyelembe, hogy ennek használatához szükséged van az AOL Instant Messenger programra.',
-	'IM_AIM_EXPRESS'		=> 'AIM Express',
 	'IM_DOWNLOAD_APP'		=> 'Alkalmazás letöltése',
-	'IM_ICQ'				=> 'Kérjük, vedd figyelembe, hogy a felhasználók lehet, hogy beállították, hogy ne kapjanak kéretlen üzeneteket.',
 	'IM_JABBER'				=> 'Kérjük, vedd figyelembe, hogy a felhasználók lehet, hogy beállították, hogy ne kapjanak kéretlen üzeneteket.',
 	'IM_JABBER_SUBJECT'		=> 'Ez egy automatikus üzenet, kérjük, ne válaszolj! Üzenet %1$s felhasználótól %2$s-kor.',
 	'IM_MESSAGE'			=> 'Az üzeneted',
-	'IM_MSNM'				=> 'Kérjük, vedd figyelembe, hogy ennek használatához szükséged van a Windows Messenger programra.',
-	'IM_MSNM_BROWSER'		=> 'Sajnos a böngésződ nem támogatja ezt.',
-	'IM_MSNM_CONNECT'		=> 'Az MSNM nem csatlakozott.\nA folytatáshoz kapcsolódnod kell az MSNM-hez.',
 	'IM_NAME'				=> 'Neved',
 	'IM_NO_DATA'			=> 'Nincs megfelelő kapcsolat információ ehhez a felhasználóhoz.',
 	'IM_NO_JABBER'			=> 'Sajnos ezen a fórumon nem támogatott a direkt üzenetküldés Jabberes felhasználóknak. A címzettel való kapcsolatba lépéshez szükséged lesz egy Jabber kliensre.',
@@ -2605,15 +2731,15 @@ $lang = array_merge($lang, array(
 
 	'LAST_ACTIVE'				=> 'Utoljára aktív',
 	'LESS_THAN'					=> 'Kevesebb mint',
-	'LIST_USER'					=> '1 felhasználó',
-	'LIST_USERS'				=> '%d felhasználó',
-	'LOGIN_EXPLAIN_LEADERS'		=> 'A csapat megtekintéséhez be kell jelentkezned.',
+	'LOGIN_EXPLAIN_TEAM'		=> 'The board requires you to be registered and logged in to view the team listing.',
 	'LOGIN_EXPLAIN_MEMBERLIST'	=> 'A taglista megtekintéséhez be kell jelentkezned.',
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'Felhasználók kereséséhez be kell jelentkezned.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'Egy felhasználó profiljának megtekintéséhez be kell jelentkezned.',
 
 	'MORE_THAN'				=> 'Több mint',
 
+	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
+	'NO_CONTACT_PAGE'		=> 'The board administrator contact page has been disabled.',
 	'NO_EMAIL'				=> 'Nem küldhetsz e-mailt ennek a felhasználónak.',
 	'NO_VIEW_USERS'			=> 'Nincs jogosultságod a taglista vagy a felhasználók profiljainak megtekintéséhez.',
 
@@ -2630,12 +2756,12 @@ $lang = array_merge($lang, array(
 
 	'SELECT_MARKED'			=> 'Kijelöltek kiválasztása',
 	'SELECT_SORT_METHOD'	=> 'Rendezés',
-	'SEND_AIM_MESSAGE'		=> 'AIM üzenet küldése',
+	'SENDER_EMAIL_ADDRESS'	=> 'Your email address',
+	'SENDER_NAME'			=> 'Your name',
 	'SEND_ICQ_MESSAGE'		=> 'ICQ üzenet küldése',
 	'SEND_IM'				=> 'Azonnali üzenetküldés',
 	'SEND_JABBER_MESSAGE'	=> 'Jabber üzenet küldése',
 	'SEND_MESSAGE'			=> 'Üzenet küldése',
-	'SEND_MSNM_MESSAGE'		=> 'MSNM/WLM üzenet küldése',
 	'SEND_YIM_MESSAGE'		=> 'YIM üzenet küldése',
 	'SORT_EMAIL'			=> 'E-mail',
 	'SORT_LAST_ACTIVE'		=> 'Utolsó aktivitás időpontja',
@@ -2643,12 +2769,18 @@ $lang = array_merge($lang, array(
 
 	'USERNAME_BEGINS_WITH'	=> 'Felhasználónév kezdőbetűje',
 	'USER_ADMIN'			=> 'Felhasználó kezelése',
-	'USER_BAN'				=> 'Kitiltások',
+	'USER_BAN'				=> 'Ban one or more users by username',
 	'USER_FORUM'			=> 'Statisztika',
 	'USER_ONLINE'			=> 'Online',
 	'USER_PRESENCE'			=> 'Jelenlét a fórumban',
+	'USERS_PER_PAGE'		=> 'Users per page',
 
 	'VIEWING_PROFILE'		=> 'Profil megtekintése: %s',
+	'VIEW_FACEBOOK_PROFILE'	=> 'View Facebook Profile',
+	'VIEW_SKYPE_PROFILE'	=> 'View Skype Profile',
+	'VIEW_TWITTER_PROFILE'	=> 'View Twitter Profile',
+	'VIEW_YOUTUBE_CHANNEL'	=> 'View YouTube Channel',
+	'VIEW_GOOGLEPLUS_PROFILE' => 'View Google+ Profile',
 	'VISITED'				=> 'Utolsó látogatás',
 
 	'WWW'					=> 'Honlap',
@@ -2673,6 +2805,47 @@ $lang = array_merge($lang, array(
 	'USER_COMM_RANK'	=> 'Overall reviews:',
 	'USER_COMM_PERCENT'	=> 'Overall assessment of the user:',
 
+));
+
+#######language/en/plupload.php#######
+
+$lang = array_merge($lang, array(
+	'PLUPLOAD_ADD_FILES'		=> 'Add files',
+	'PLUPLOAD_ADD_FILES_TO_QUEUE'	=> 'Add files to the upload queue and click the start button.',
+	'PLUPLOAD_ALREADY_QUEUED'	=> '%s already present in the queue.',
+	'PLUPLOAD_CLOSE'			=> 'Close',
+	'PLUPLOAD_DRAG'				=> 'Drag files here.',
+	'PLUPLOAD_DUPLICATE_ERROR'	=> 'Duplicate file error.',
+	'PLUPLOAD_DRAG_TEXTAREA'	=> 'You may also attach files by dragging and dropping them in the message box.',
+	'PLUPLOAD_ERR_INPUT'		=> 'Failed to open input stream.',
+	'PLUPLOAD_ERR_MOVE_UPLOADED'	=> 'Failed to move uploaded file.',
+	'PLUPLOAD_ERR_OUTPUT'		=> 'Failed to open output stream.',
+	'PLUPLOAD_ERR_FILE_TOO_LARGE'	=> 'File too large:',
+	'PLUPLOAD_ERR_FILE_COUNT'	=> 'File count error.',
+	'PLUPLOAD_ERR_FILE_INVALID_EXT'	=> 'Invalid file extension:',
+	'PLUPLOAD_ERR_RUNTIME_MEMORY'	=> 'Runtime ran out of available memory.',
+	'PLUPLOAD_ERR_UPLOAD_URL'	=> 'Upload URL might be wrong or does not exist.',
+	'PLUPLOAD_EXTENSION_ERROR'	=> 'File extension error.',
+	'PLUPLOAD_FILE'				=> 'File: %s',
+	'PLUPLOAD_FILE_DETAILS'		=> 'File: %s, size: %d, max file size: %d',
+	'PLUPLOAD_FILENAME'			=> 'Filename',
+	'PLUPLOAD_FILES_QUEUED'		=> '%d files queued',
+	'PLUPLOAD_GENERIC_ERROR'	=> 'Generic error.',
+	'PLUPLOAD_HTTP_ERROR'		=> 'HTTP error.',
+	'PLUPLOAD_IMAGE_FORMAT'		=> 'Image format either wrong or not supported.',
+	'PLUPLOAD_INIT_ERROR'		=> 'Init error.',
+	'PLUPLOAD_IO_ERROR'			=> 'IO error.',
+	'PLUPLOAD_NOT_APPLICABLE'	=> 'N/A',
+	'PLUPLOAD_SECURITY_ERROR'	=> 'Security error.',
+	'PLUPLOAD_SELECT_FILES'		=> 'Select files',
+	'PLUPLOAD_SIZE'				=> 'Size',
+	'PLUPLOAD_SIZE_ERROR'		=> 'File size error.',
+	'PLUPLOAD_STATUS'			=> 'Status',
+	'PLUPLOAD_START_UPLOAD'		=> 'Start upload',
+	'PLUPLOAD_START_CURRENT_UPLOAD'	=> 'Start uploading queue',
+	'PLUPLOAD_STOP_UPLOAD'		=> 'Stop upload',
+	'PLUPLOAD_STOP_CURRENT_UPLOAD'	=> 'Stop current upload',
+	'PLUPLOAD_UPLOADED'			=> 'Uploaded %d/%d files',
 ));
 
 #######language/en/portal.php#######
@@ -2918,12 +3091,12 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s <em>kikapcsolva</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s <em>bekapcsolva</em>',
 	'BBCODE_I_HELP'				=> 'Dőlt: [i]szöveg[/i]',
-	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]',
 	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
 	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Kép: [img]http://kep_url[/img]',
 	'BBCODE_Q_HELP'				=> 'Idézet: [quote]szöveg[/quote]',
-	'BBCODE_S_HELP'				=> 'Betűszín: [color=red]szöveg[/color] Tipp: a színt color=#FF0000 formában is megadhatod.',
+	'BBCODE_S_HELP'				=> 'Font colour: [color=red]text[/color] or [color=#FF0000]text[/color]',
 	'BBCODE_U_HELP'				=> 'Aláhúzás: [u]szöveg[/u]',
 	'BBCODE_W_HELP'				=> 'Link: [url]http://url[/url] vagy [url=http://url]link szöveg[/url]',
 	'BUMP_ERROR'				=> 'Nem ugraszthatod előre a témát, mivel az utolsó hozzászólás nemrég került elküldésre.',
@@ -2942,8 +3115,20 @@ $lang = array_merge($lang, array(
 	'DELETE_MESSAGE'			=> 'Üzenet törlése',
 	'DELETE_MESSAGE_CONFIRM'	=> 'Biztosan törölni akarod ezt az üzenetet?',
 	'DELETE_OWN_POSTS'			=> 'Csak a saját hozzászólásaidat törölheted.',
+	'DELETE_PERMANENTLY'		=> 'Delete permanently',
 	'DELETE_POST_CONFIRM'		=> 'Biztosan törölni akarod ezt a hozzászólást?',
-	'DELETE_POST_WARN'			=> 'Törlés után a hozzászólás nem visszaállítható.',
+	'DELETE_POST_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this post?',
+	'DELETE_POST_PERMANENTLY'	=> 'Permanently delete this post so it can not be recovered',
+	'DELETE_POSTS_CONFIRM'		=> 'Biztosan törölni akarod ezeket a hozzászólásokat?',
+	'DELETE_POSTS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these posts?',
+	'DELETE_REASON'				=> 'Reason for deleting this topic',
+	'DELETE_REASON_EXPLAIN'		=> 'The specified reason for deletion will be visible to moderators.',
+	'DELETE_POST_WARN'			=> 'Delete this post',
+	'DELETE_TOPIC_CONFIRM'		=> 'Biztosan törölni akarod ezt a témát?',
+	'DELETE_TOPIC_PERMANENTLY'	=> 'Permanently delete this topic so it can not be recovered',
+	'DELETE_TOPIC_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this topic?',
+	'DELETE_TOPICS_CONFIRM'		=> 'Biztosan törölni akarod ezeket a témákat?',
+	'DELETE_TOPICS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these topics?',
 	'DISABLE_BBCODE'			=> 'BBCode kikapcsolása',
 	'DISABLE_MAGIC_URL'			=> 'Webcímek automatikus linkké alakításának kikapcsolása',
 	'DISABLE_SMILIES'			=> 'Emotikonok kikapcsolása',
@@ -2986,13 +3171,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_QUOTE'		=> 'Egy hozzászólás idézéséhez be kell jelentkezned ebben a fórumban.',
 	'LOGIN_EXPLAIN_REPLY'		=> 'Hozzászólás küldéséhez be kell jelentkezned ebben a fórumban.',
 
-	'MAX_FONT_SIZE_EXCEEDED'	=> 'Legfeljebb %1$d nagyságú betűket használhatsz.',
-	'MAX_FLASH_HEIGHT_EXCEEDED'	=> 'Legfeljebb %1$d pixel magas flasht animációt illeszthetsz be a hozzászólásodba.',
-	'MAX_FLASH_WIDTH_EXCEEDED'	=> 'Legfeljebb %1$d pixel széles flasht animációt illeszthetsz be a hozzászólásodba.',
-	'MAX_IMG_HEIGHT_EXCEEDED'	=> 'Legfeljebb %1$d pixel magas képet illeszthetsz be a hozzászólásodba.',
-	'MAX_IMG_WIDTH_EXCEEDED'	=> 'Legfeljebb %1$d pixel széles képet illeszthetsz be a hozzászólásodba.',
-
-	'MESSAGE_BODY_EXPLAIN'		=> 'Ide írd az üzenetet, legfeljebb <strong>%d</strong> karakter hosszú lehet.',
+	'MAX_FONT_SIZE_EXCEEDED'	=> 'You may only use fonts up to size %d.',
 	'MESSAGE_DELETED'			=> 'Az üzenet sikeresen törlésre került.',
 	'MORE_SMILIES'				=> 'További emotikonok',
 
@@ -3015,8 +3194,6 @@ $lang = array_merge($lang, array(
 	'POLL_MAX_OPTIONS'			=> 'Felhasználónként válaszható lehetőségek',
 	'POLL_MAX_OPTIONS_EXPLAIN'	=> 'Egy felhasználó ennyi választási lehetőségre szavazhat.',
 	'POLL_OPTIONS'				=> 'Választási lehetőségek',
-	'POLL_OPTIONS_EXPLAIN'		=> 'Írd mindegyiket külön sorba. Legfeljebb <strong>%d</strong> választási lehetőséget adhatsz meg.',
-	'POLL_OPTIONS_EDIT_EXPLAIN'	=> 'Írd mindegyiket külön sorba. Legfeljebb <strong>%d</strong> választási lehetőséget adhatsz meg. Ha eltávolítasz vagy hozzáadsz egy választási lehetőséget, az eddigi eredmény lenullázásra kerül.',
 	'POLL_QUESTION'				=> 'Szavazás kérdése',
 	'POLL_TITLE_TOO_LONG'		=> 'A szavazás kérdésének rövidebbnek kell lennie 100 karakternél.',
 	'POLL_TITLE_COMP_TOO_LONG'	=> 'A feldolgozott szavazáskérdés túl hosszú, próbálj meg eltávolítani néhány BBCode-ot, illetve emotikont.',
@@ -3026,9 +3203,9 @@ $lang = array_merge($lang, array(
 	'POST_APPROVAL_NOTIFY'		=> 'Amint jóváhagyásra kerül, értesíteni fogunk.',
 	'POST_CONFIRMATION'			=> 'Hozzászólás megerősítése',
 	'POST_CONFIRM_EXPLAIN'		=> 'Az automatikus hozzászólások megakadályozása érdekében meg kell adnod egy megerősítő kódot. A kód az alábbi képen szerepel. Ha látási vagy egyéb problémák miatt nem tudod elolvasni a kódot, lépj kapcsolatba a %sfórum adminisztrátorával%s.',
-	'POST_DELETED'				=> 'Az üzenet sikeresen törlésre került.',
-	'POST_EDITED'				=> 'Az üzenet sikeresen szerkesztésre került.',
-	'POST_EDITED_MOD'			=> 'Az üzenet sikeresen szerkesztésre került, azonban egy moderátornak még jóvá kell hagynia mielőtt mindenki által megtekinthető lenne.',
+	'POST_DELETED'				=> 'This post has been deleted.',
+	'POST_EDITED'				=> 'This post has been edited successfully.',
+	'POST_EDITED_MOD'			=> 'This post has been edited successfully, but it will need to be approved by a moderator before it is publicly viewable.',
 	'POST_GLOBAL'				=> 'Globális közlemény',
 	'POST_ICON'					=> 'Hozzászólás ikon',
 	'POST_NORMAL'				=> 'Sima',
@@ -3041,8 +3218,9 @@ $lang = array_merge($lang, array(
 	'POST_TOPIC_AS'				=> 'Téma típusa',
 	'PROGRESS_BAR'				=> 'Feltöltés állapota',
 
-	'QUOTE_DEPTH_EXCEEDED'		=> 'Legfeljebb %1$d idézetet ágyazhatsz egymásba.',
+	'QUOTE_NO_NESTING'			=> 'You may not embed quotes within each other.',
 
+	'REMOTE_UPLOAD_TIMEOUT'		=> 'The specified file could not be uploaded because the request timed out.',
 	'SAVE'						=> 'Elmentés',
 	'SAVE_DATE'					=> 'Elmentve',
 	'SAVE_DRAFT'				=> 'Piszkozat elmentése',
@@ -3059,8 +3237,6 @@ $lang = array_merge($lang, array(
 	'TOO_FEW_POLL_OPTIONS'		=> 'Legalább két választási lehetőséget meg kell adnod.',
 	'TOO_MANY_ATTACHMENTS'		=> 'Nem lehet újabb csatolmányt hozzáadni, %d a maximum.',
 	'TOO_MANY_CHARS'			=> 'Az üzenet túl hosszú.',
-	'TOO_MANY_CHARS_POST'		=> 'Az üzeneted %1$d karaktert tartalmaz. Legfeljebb %2$d karakter hosszú lehet.',
-	'TOO_MANY_CHARS_SIG'		=> 'Az aláírásod %1$d karaktert tartalmaz. Legfeljebb %2$d karakter hosszú lehet.',
 	'TOO_MANY_POLL_OPTIONS'		=> 'Túl sok választási lehetőséget adtál meg.',
 	'TOO_MANY_SMILIES'			=> 'Az üzenet túl sok emotikont tartalmaz. Legfeljebb %d használható.',
 	'TOO_MANY_URLS'				=> 'Az üzenet túl sok linket tartalmaz. Legfeljebb %d lehet benne.',
@@ -3069,6 +3245,8 @@ $lang = array_merge($lang, array(
 
 	'UNAUTHORISED_BBCODE'		=> 'Bizonyos BBCode-okat nem használhatsz: %s:',
 	'UNGLOBALISE_EXPLAIN'		=> 'Ahhoz, hogy a témát általános közleményből sima témává minősítsd vissza, ki kell választanod egy fórumot, amelyben a téma meg fog jelenni.',
+	'UNSUPPORTED_CHARACTERS_MESSAGE'	=> 'Your message contains the following unsupported characters:<br />%s',
+	'UNSUPPORTED_CHARACTERS_SUBJECT'	=> 'Your subject contains the following unsupported characters:<br />%s',
 	'UPDATE_COMMENT'			=> 'Magyarázat frissítése',
 	'URL_INVALID'				=> 'A megadott URL hibás.',
 	'URL_NOT_FOUND'				=> 'A megadott állomány nem található.',
@@ -3083,8 +3261,8 @@ $lang = array_merge($lang, array(
 	'VIEW_MESSAGE'				=> '%sElküldött üzenet megtekintése%s',
 	'VIEW_PRIVATE_MESSAGE'		=> '%sElküldött privát üzenet megtekintése%s',
 
-	'WRONG_FILESIZE'			=> 'Az állomány túl nagy, a maximum megengedett méret %1d %2s.',
-	'WRONG_SIZE'				=> 'A képnek legalább %1$d pixel szélesnek és %2$d pixel magasnak kell lennie, valamint legfeljebb %3$d pixel széles és %4$d pixel magas lehet. A megadott kép %5$d pixel széles, és %6$d pixel magas.',
+	'WRONG_FILESIZE'			=> 'The file is too big, maximum allowed size is %1$d %2$s.',
+	'WRONG_SIZE'				=> 'The image must be at least %1$s wide, %2$s high and at most %3$s wide and %4$s high. The submitted image is %5$s wide and %6$s high.',
 
 	'FONT_TYPE'			=> 'Typeface',
 	'FONT_COLOR'			=> 'Betűszín',
@@ -3104,10 +3282,6 @@ $lang = array_merge($lang, array(
 
 	'DISPLAY_RESULTS'		=> 'Találatok megjelenítése',
 
-	'FOUND_SEARCH_MATCH'		=> '%d találat',
-	'FOUND_SEARCH_MATCHES'		=> '%d találat',
-	'FOUND_MORE_SEARCH_MATCHES'	=> 'Több, mint %d találat',
-
 	'GLOBAL'				=> 'Globális közlemény',
 
 	'IGNORED_TERMS'			=> 'mellőzött',
@@ -3119,24 +3293,23 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_UNREADSEARCH'=> 'Az olvasatlan hozzászólásaid megtekintéséhez be kell jelentkezned.',
 	'LOGIN_EXPLAIN_NEWPOSTS'	=> 'Az utolsó látogatásod óta keletkezett hozzászólások megtekintéséhez be kell jelentkezned.',
 
-	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> 'Túl sok keresendő szót adtál meg. Kérünk, legfeljebb %1$d szót adj meg.',
-
-	'NO_KEYWORDS'			=> 'Legalább egy keresendő szót meg kell adnod. Minden szónak, a jokerkaraktereket nem számítva, legalább %d és legfeljebb %d karakterből kell állnia.',
+	'NO_KEYWORDS'			=> 'You must specify at least one word to search for. Each word must consist of at least %s and must not contain more than %s excluding wildcards.',
 	'NO_RECENT_SEARCHES'	=> 'Nem történt keresés a közelmúltban.',
 	'NO_SEARCH'				=> 'Sajnos számodra nem engedélyezett a kereső használata.',
 	'NO_SEARCH_RESULTS'		=> 'Nincs a keresési feltételeknek megfelelő találat.',
-	'NO_SEARCH_TIME'		=> 'Most nem használhatod a keresőt. Kérjük, próbálkozz újra pár perc múlva.',
 	'NO_SEARCH_UNREADS'		=> 'Sajnos az olvasatlan hozzászólásokra való keresés ki van kapcsolva ezen a fórumon.',
 	'WORD_IN_NO_POST'		=> 'Nincs találat, mivel a <strong>%s</strong> szót nem tartalmazza egy hozzászólás sem.',
 	'WORDS_IN_NO_POST'		=> 'Nincs találat, mivel a <strong>%s</strong> szavakat nem tartalmazza egy hozzászólás sem.',
 
 	'POST_CHARACTERS'		=> 'karakterének megjelenítése',
+	'PHRASE_SEARCH_DISABLED'	=> 'Searching by exact phrase is not supported on this board.',
 
 	'RECENT_SEARCHES'		=> 'Legutóbbi keresések',
 	'RESULT_DAYS'			=> 'Időintervallum',
 	'RESULT_SORT'			=> 'Találatok rendezése',
 	'RETURN_FIRST'			=> 'Hozzászólások első',
 	'RETURN_TO_SEARCH_ADV'	=> 'Vissza a részletes kereséshez',
+	'GO_TO_SEARCH_ADV'	=> 'Go to advanced search',
 
 	'SEARCHED_FOR'				=> 'Keresett kifejezés',
 	'SEARCHED_TOPIC'			=> 'Keresett téma',
@@ -3163,10 +3336,11 @@ $lang = array_merge($lang, array(
 	'SORT_FORUM'				=> 'Fórum',
 	'SORT_POST_SUBJECT'			=> 'Hozzászólás témája',
 	'SORT_TIME'					=> 'Elküldés időpontja',
+	'SPHINX_SEARCH_FAILED'		=> 'Search failed: %s',
+	'SPHINX_SEARCH_FAILED_LOG'	=> 'Sorry, search could not be performed. More information about this failure has been logged in the error log.',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
 	'SELECT_ALL_TAGS'		=> 'No selection',
-	'TOO_FEW_AUTHOR_CHARS'	=> 'A szerző nevéből legalább %d karaktert meg kell adnod.',
 ));
 
 #######language/en/ucp.php#######
@@ -3220,6 +3394,7 @@ $lang = array_merge($lang, array(
 	'ATTACHMENTS_EXPLAIN'			=> 'Az alábbi lista a fórumon a hozzászólásaidhoz csatolt állományokat tartalmazza.',
 	'ATTACHMENTS_DELETED'			=> 'A csatolmányok sikeresen törlésre kerültek.',
 	'ATTACHMENT_DELETED'			=> 'A csatolmány sikeresen törlésre került.',
+	'AUTOLOGIN_SESSION_KEYS_DELETED'=> 'The selected "Remember Me" login keys were successfully deleted.',
 	'AVATAR_CATEGORY'				=> 'Kategória',
 	'AVATAR_DRIVER_GRAVATAR_TITLE'	=> 'Gravatar',
 	'AVATAR_DRIVER_GRAVATAR_EXPLAIN'=> 'Gravatar is a service that allows you to maintain the same avatar across multiple websites. Visit <a href="http://www.gravatar.com/">Gravatar</a> for more information.',
@@ -3229,12 +3404,14 @@ $lang = array_merge($lang, array(
 	'AVATAR_DRIVER_REMOTE_EXPLAIN'	=> 'Link to avatar images from another website.',
 	'AVATAR_DRIVER_UPLOAD_TITLE'	=> 'Upload avatar',
 	'AVATAR_DRIVER_UPLOAD_EXPLAIN'	=> 'Upload your own custom avatar.',
-	'AVATAR_EXPLAIN'				=> 'Maximális méret: szélesség %1$d pixel, magasság %2$d pixel, állomány mérete %3$.2f KiB.',
+	'AVATAR_EXPLAIN'				=> 'Maximum dimensions; width: %1$s, height: %2$s, file size: %3$.2f KiB.',
 	'AVATAR_FEATURES_DISABLED'		=> 'Az avatarok funkció jelenleg ki van kapcsolva.',
 	'AVATAR_GALLERY'				=> 'Helyi galéria',
 	'AVATAR_GENERAL_UPLOAD_ERROR'	=> 'Nem sikerült feltölteni az avatart a következő helyre: %s.',
 	'AVATAR_NOT_ALLOWED'			=> 'Az avatarod nem lehet megjeleníteni, mivel az avatarok kikapcsolásra kerültek.',
 	'AVATAR_PAGE'					=> 'Oldal',
+	'AVATAR_SELECT'					=> 'Select your avatar',
+	'AVATAR_TYPE'					=> 'Avatar type',
 	'AVATAR_TYPE_NOT_ALLOWED'		=> 'A jelenlegi avatarod nem lehet megjeleníteni, mivel a típusa kikapcsolásra került.',
 
 	'BACK_TO_DRAFTS'			=> 'Vissza az elmentett piszkozatokhoz',
@@ -3243,7 +3420,6 @@ $lang = array_merge($lang, array(
 	'BIRTHDAY_EXPLAIN'			=> 'Ha megadod a születési éved, a születésnapodkor látszani fog a korod is.',
 	'BOARD_DATE_FORMAT'			=> 'Dátum formátum',
 	'BOARD_DATE_FORMAT_EXPLAIN'	=> 'A formátum megegyezik a PHP <a href="http://www.php-blog.hu/php-magyar-kezikonyv/function.date.html">date()</a> függvényéjével.',
-	'BOARD_DST'					=> 'Nyári időszámítás érvényben',
 	'BOARD_LANGUAGE'			=> 'Nyelv',
 	'BOARD_STYLE'				=> 'Megjelenés',
 	'BOARD_TIMEZONE'			=> 'Időzóna',
@@ -3262,8 +3438,6 @@ $lang = array_merge($lang, array(
 	'CLICK_RETURN_FOLDER'		=> '%1$sVissza a „%3$s” mappához%2$s',
 	'CONFIRMATION'				=> 'Regisztráció megerősítése',
 	'CONFIRM_CHANGES'			=> 'Változtatások megerősítése',
-	'CONFIRM_EMAIL'				=> 'E-mail cím megerősítése',
-	'CONFIRM_EMAIL_EXPLAIN'		=> 'Csak akkor kell megadnod, ha meg szeretnéd változtatni az e-mail címed.',
 	'CONFIRM_EXPLAIN'			=> 'A robot regisztrációk megakadályozása érdekében meg kell adnod egy megerősítő kódot. A kód az alábbi képen szerepel. Ha látási vagy egyéb problémák miatt nem tudod elolvasni a kódot, lépj kapcsolatba a %sfórum adminisztrátorával%s.',
 	'VC_REFRESH'				=> 'Megerősítő kód frissítése',
 	'VC_REFRESH_EXPLAIN'		=> 'Ha nem tudod elolvasni a kódot, a gombra kattintva kérhetsz újat.',
@@ -3272,7 +3446,7 @@ $lang = array_merge($lang, array(
 	'CONFIRM_PASSWORD_EXPLAIN'	=> 'Csak akkor kell megadnod, ha meg szeretnéd változtatni a jelszavad.',
 	'COPPA_BIRTHDAY'			=> 'A regisztráció folytatásához, kérjük, add meg, mikor születtél.',
 	'COPPA_COMPLIANCE'			=> 'COPPA egyeztetés',
-	'COPPA_EXPLAIN'				=> 'Kérjük, vedd figyelembe, hogy az elküld gombra kattintva elkészül az azonosítód, azonban addig nem lesz aktiválva, míg egy szülőd vagy gondviselőd jóvá nem hagyja a regisztrációd. E-mailben elküldjük a megfelelő űrlapot, illetve a címet, hogy hova küldd vissza.',
+	'COPPA_EXPLAIN'				=> 'Please note that clicking submit will create your account. However it cannot be activated until a parent or guardian approves your registration. You will be e-mailed a copy of the necessary form with details of where to send it.',
 	'CREATE_FOLDER'				=> 'Mappa létrehozása…',
 	'CURRENT_IMAGE'				=> 'Jelenlegi kép',
 	'CURRENT_PASSWORD'			=> 'Jelenlegi jelszó',
@@ -3327,27 +3501,34 @@ $lang = array_merge($lang, array(
 	'EXPORT_FOLDER'				=> 'Aktuális nézet kimentése',
 
 	'FIELD_REQUIRED'					=> 'A „%s” mezőt nem hagyhatod üresen.',
-	'FIELD_TOO_SHORT'					=> 'A „%1$s” mező tartalma túl rövid, legalább %2$d karakter hosszúnak kell lennie.',
-	'FIELD_TOO_LONG'					=> 'A „%1$s” mező tartalma túl hosszú, legfeljebb %2$d karakter engedélyezett.',
-	'FIELD_TOO_SMALL'					=> 'A „%1$s” mező értéke túl kicsi, legalább %2$d-nek kell lennie.',
-	'FIELD_TOO_LARGE'					=> 'A „%1$s” mező értéke túl nagy, legfeljebb %2$d engedélyezett.',
+
+	'FIELD_TOO_SMALL'					=> 'The value of “%2$s” is too small, a minimum value of %1$d is required.',
+	'FIELD_TOO_LARGE'					=> 'The value of “%2$s” is too large, a maximum value of %1$d is allowed.',
+	'FIELD_INVALID_CHARS_INVALID'		=> 'The field “%s” has invalid characters.',
 	'FIELD_INVALID_CHARS_NUMBERS_ONLY'	=> 'A „%1$s” mező hibás karaktereket tartalmaz, csak számok engedélyezettek.',
+	'FIELD_INVALID_CHARS_ALPHA_DOTS'	=> 'The field “%s” has invalid characters, only alphanumeric or . characters are allowed.',
 	'FIELD_INVALID_CHARS_ALPHA_ONLY'	=> 'A „%1$s” mező hibás karaktereket tartalmaz, csak alfanumerikus karakterek használata engedélyezett.',
-	'FIELD_INVALID_CHARS_SPACERS_ONLY'	=> 'A „%1$s” mező hibás karaktereket tartalmaz, csak alfanumerikus karakterek, szóköz és -+_[] jelek használata engedélyezett.',
+	'FIELD_INVALID_CHARS_ALPHA_PUNCTUATION'	=> 'The field “%s” has invalid characters, only alphanumeric or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_ALPHA_SPACERS'	=> 'The field “%s” has invalid characters, only alphanumeric, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_ALPHA_UNDERSCORE'	=> 'The field “%s” has invalid characters, only alphanumeric or _ characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_DOTS'	=> 'The field “%s” has invalid characters, only letter, number or . characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_ONLY'	=> 'The field “%s” has invalid characters, only letter and number characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_PUNCTUATION'	=> 'The field “%s” has invalid characters, only letter, number or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_SPACERS'		=> 'The field “%s” has invalid characters, only letter, number, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_UNDERSCORE'		=> 'The field “%s” has invalid characters, only letter, number or _ characters are allowed.',
 	'FIELD_INVALID_DATE'				=> 'A „%1$s” mező érvénytelen dátumot tartalmaz.',
+	'FIELD_INVALID_URL'					=> 'The field “%s” has an invalid url.',
 	'FIELD_INVALID_VALUE'				=> 'A “%s” mező érvénytelen értéket tartalmaz.',
 
 	'FOE_MESSAGE'				=> 'Üzenet haragostól',
 	'FOES_EXPLAIN'				=> 'A haragosok olyan felhasználók, akik alapból mellőzésre kerülnek. A hozzászólásaik nem teljesen jelennek meg, privát üzenetet azonban küldhetnek. Kérjük, vedd figyelembe, hogy nem mellőzhetsz egy moderátort vagy egy adminisztrátort.',
 	'FOES_UPDATED'				=> 'A haragosaid listája sikeresen frissítésre került.',
 	'FOLDER_ADDED'				=> 'A mappa sikeresen hozzáadásra került.',
-	'FOLDER_MESSAGE_STATUS'		=> '%1$d / %2$d üzenet',
 	'FOLDER_NAME_EMPTY'			=> 'Nevet kell adnod a mappának.',
 	'FOLDER_NAME_EXIST'			=> '<strong>%s</strong> nevű mappa már létezik.',
 	'FOLDER_OPTIONS'			=> 'Mappa beállítások',
 	'FOLDER_RENAMED'			=> 'A mappa sikeresen átnevezésre került.',
 	'FOLDER_REMOVED'			=> 'A mappa sikeresen törlésre került.',
-	'FOLDER_STATUS_MSG'			=> 'A mappa %1$d%%-a telt meg (%2$d / %3$d üzenet).',
 	'FORWARD_PM'				=> 'PÜ továbbítása',
 	'FORCE_PASSWORD_EXPLAIN'	=> 'Mielőtt továbbléphetnél a fórumon, meg kell változtatnod a jelszavad.',
 	'FRIEND_MESSAGE'			=> 'Üzenet baráttól',
@@ -3416,16 +3597,35 @@ $lang = array_merge($lang, array(
 	'MOVE_DELETED_MESSAGES_TO'		=> 'Töröltmappabeli üzenetek áthelyezése',
 	'MOVE_DOWN'						=> 'Lejjebb',
 	'MOVE_MARKED_TO_FOLDER'			=> 'Kijelöltek áthelyezése: %s',
-	'MOVE_PM_ERROR'					=> 'Hiba lépett fel az üzenetek áthelyezése közben, csak a %1d és a %2d közötti üzeneteket sikerült áthelyezni.',
 	'MOVE_TO_FOLDER'				=> 'Áthelyezés',
 	'MOVE_UP'						=> 'Feljebb',
 
-	'NEW_EMAIL_CONFIRM_EMPTY'		=> 'Kétszer kell megadnod az e-mail címed.',
-	'NEW_EMAIL_ERROR'				=> 'A megadott e-mail címek nem egyeznek meg.',
 	'NEW_FOLDER_NAME'				=> 'Mappa új neve',
 	'NEW_PASSWORD'					=> 'Új jelszó',
 	'NEW_PASSWORD_CONFIRM_EMPTY'	=> 'Kétszer kell megadnod az új jelszavad.',
 	'NEW_PASSWORD_ERROR'			=> 'A megadott jelszavak nem egyeznek meg.',
+
+	'NOTIFICATIONS_MARK_ALL_READ'						=> 'Mark all notifications read',
+	'NOTIFICATIONS_MARK_ALL_READ_CONFIRM'				=> 'Are you sure you want to mark all notifications read?',
+	'NOTIFICATIONS_MARK_ALL_READ_SUCCESS'				=> 'All notifications have been marked read.',
+	'NOTIFICATION_GROUP_MISCELLANEOUS'					=> 'Miscellaneous Notifications',
+	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
+	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
+	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'E-mail',
+	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
+	'NOTIFICATION_TYPE'									=> 'Notification type',
+	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
+	'NOTIFICATION_TYPE_GROUP_REQUEST'					=> 'Someone requests to join a group you lead',
+	'NOTIFICATION_TYPE_IN_MODERATION_QUEUE'				=> 'A post or topic needs approval',
+	'NOTIFICATION_TYPE_MODERATION_QUEUE'				=> 'Your topics/posts are approved or disapproved by a moderator',
+	'NOTIFICATION_TYPE_PM'								=> 'Someone sends you a private message',
+	'NOTIFICATION_TYPE_POST'							=> 'Someone replies to a topic to which you are subscribed',
+	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
+	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
+	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+
 	'NOTIFY_METHOD'					=> 'Értesítés módja',
 	'NOTIFY_METHOD_BOTH'			=> 'Mindkettő',
 	'NOTIFY_METHOD_EMAIL'			=> 'Csak e-mail',
@@ -3443,10 +3643,9 @@ $lang = array_merge($lang, array(
 	'NOT_ADDED_FOES_SELF'			=> 'Nem veheted fel saját magad a haragosaid listájára.',
 	'NOT_AGREE'						=> 'Nem fogadom el a feltételeket',
 	'NOT_ENOUGH_SPACE_FOLDER'		=> 'A célmappa („%s”) teli van. A végrehajtani kívánt művelet nem került elvégzésre.',
-	'NOT_MOVED_MESSAGE'				=> 'Teli mappa miatt jelenleg 1 privát üzenet van visszatartva.',
-	'NOT_MOVED_MESSAGES'			=> 'Teli mappa miatt jelenleg %d privát üzenet van visszatartva.',
 	'NO_ACTION_MODE'				=> 'Nem adtál meg semmilyen teendőt.',
 	'NO_AUTHOR'						=> 'Az üzenethez nem tartozik feladó.',
+	'NO_AVATAR'						=> 'No avatar selected',
 	'NO_AVATAR_CATEGORY'			=> 'Nincs',
 
 	'NO_AUTH_DELETE_MESSAGE'		=> 'Nincs jogosultságod privát üzenetet törölni.',
@@ -3454,6 +3653,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_FORWARD_MESSAGE'		=> 'Nincs jogosultságod privát üzenetet továbbítani.',
 	'NO_AUTH_GROUP_MESSAGE'			=> 'Nincs jogosultságod privát üzenet küldeni csoportok részére.',
 	'NO_AUTH_PASSWORD_REMINDER'		=> 'Nincs jogosultságod új jelszót kérni.',
+	'NO_AUTH_PROFILEINFO'			=> 'You are not authorised to change your profile information.',
 	'NO_AUTH_READ_HOLD_MESSAGE'		=> 'Nincs jogosultságod visszatartott privát üzenetet olvasni.',
 	'NO_AUTH_READ_MESSAGE'			=> 'Nincs jogosultságod privát üzenetek megtekintéséhez.',
 	'NO_AUTH_READ_REMOVED_MESSAGE'	=> 'Ezt az üzenetet nem tudod elolvasni, mivel a küldője törölte.',
@@ -3484,10 +3684,10 @@ $lang = array_merge($lang, array(
 	'NO_WATCHED_SELECTED'		=> 'Nem választottál ki egy témát vagy fórumot se, melyre fel vagy iratkozva.',
 	'NO_WATCHED_TOPICS'			=> 'Nem iratkoztál fel egy témára se.',
 
-	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'A jelszó hosszának %1$d és %2$d karakter között kell lennie, szerepelnie kell benne kis- és nagybetűknek egyaránt, valamint tartalmaznia kell számokat.',
-	'PASS_TYPE_ANY_EXPLAIN'		=> 'A hosszának %1$d és %2$d karakter között kell lennie.',
-	'PASS_TYPE_CASE_EXPLAIN'	=> 'A jelszó hosszának %1$d és %2$d karakter között kell lennie, valamint szerepelnie kell benne kis- és nagybetűknek egyaránt.',
-	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'A jelszó hosszának %1$d és %2$d karakter között kell lennie, szerepelnie kell benne kis- és nagybetűknek egyaránt, valamint tartalmaznia kell számokat és speciális karaktereket is.',
+	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case and must contain numbers.',
+	'PASS_TYPE_ANY_EXPLAIN'		=> 'Must be between %1$s and %2$s.',
+	'PASS_TYPE_CASE_EXPLAIN'	=> 'Password must be between %1$s and %2$s long and must contain letters in mixed case.',
+	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case, must contain numbers and must contain symbols.',
 	'PASSWORD'					=> 'Jelszó',
 	'PASSWORD_ACTIVATED'		=> 'Az új jelszavad aktiválásra került.',
 	'PASSWORD_UPDATED'			=> 'Az új jelszavad elküldésre került az e-mail címedre.',
@@ -3498,13 +3698,16 @@ $lang = array_merge($lang, array(
 	'PM_FROM_REMOVED_AUTHOR'	=> 'Az üzenetet egy már nem regisztrált felhasználó küldte.',
 	'PM_ICON'					=> 'PÜ ikon',
 	'PM_INBOX'					=> 'Bejövő',
+	'PM_MARK_ALL_READ'			=> 'Mark all messages read',
+	'PM_MARK_ALL_READ_SUCCESS'	=> 'All private messages in this folder have been marked read',
 	'PM_NO_USERS'				=> 'A hozzáadni kívánt felhasználók nem léteznek.',
 	'PM_OUTBOX'					=> 'Kimenő',
 	'PM_SENTBOX'				=> 'Elküldött',
 	'PM_SUBJECT'				=> 'Téma',
 	'PM_TO'						=> 'Címzett:',
+	'PM_TOOLS'					=> 'Message tools',
+	'PM_USERS_REMOVED_NO_PERMISSION'	=> 'Some users couldn’t be added as they do not have permission to read private messages.',
 	'PM_USERS_REMOVED_NO_PM'	=> 'Nem mindegyik felhasználót sikerült hozzáadni, mivel nem mindenki engedélyezte privát üzenetek fogadását.',
-	'POPUP_ON_PM'				=> 'Felugró ablak új privát üzenet érkezésekor',
 	'POST_EDIT_PM'				=> 'Üzenet szerkesztése',
 	'POST_FORWARD_PM'			=> 'Üzenet továbbítása',
 	'POST_NEW_PM'				=> 'Üzenet küldése',
@@ -3516,6 +3719,8 @@ $lang = array_merge($lang, array(
 	'PREFERENCES_UPDATED'		=> 'A beállításaid sikeresen frissítésre kerültek.',
 	'PROFILE_INFO_NOTICE'		=> 'Kérjük, vedd figyelembe, hogy ezek az információk lehet, hogy a többi felhasználó számára is láthatóak lesznek. Légy óvatos bármilyen személyes adat megadásánál. A *-gal megjelölt mezők kitöltése kötelező.',
 	'PROFILE_UPDATED'			=> 'A profilod sikeresen frissítésre került.',
+	'PROFILE_AUTOLOGIN_KEYS'	=> 'The "Remember Me" login keys automatically log you in when you visit the board. If you logout, the remember me login key is deleted only on the computer you are using to logout. Here you can see remember login keys created on other computers you used to access this site.',
+	'PROFILE_NO_AUTOLOGIN_KEYS'	=> 'There are no saved "Remember Me" login keys.',
 
 	'RECIPIENT'							=> 'Címzett',
 	'RECIPIENTS'						=> 'Címzettek',
@@ -3540,8 +3745,6 @@ $lang = array_merge($lang, array(
 	'RULE_DELETED'						=> 'A szűrő sikeresen törlésre került.',
 	'RULE_LIMIT_REACHED'				=> 'You cannot add more PM rules. You have reached the maximum number of rules.',
 	'RULE_NOT_DEFINED'					=> 'A szűrőt nem helyesen adtad meg.',
-	'RULE_REMOVED_MESSAGE'				=> 'Egy privát üzenet törlésre került a szűrők következtében.',
-	'RULE_REMOVED_MESSAGES'				=> '%d privát üzenet törlésre került a szűrők következtében.',
 
 	'SAME_PASSWORD_ERROR'		=> 'A megadott új jelszó megegyezik a jelenlegi jelszavaddal.',
 	'SEARCH_YOUR_POSTS'			=> 'Saját hozzászólások megtekintése',
@@ -3553,6 +3756,8 @@ $lang = array_merge($lang, array(
 	'SIGNATURE_TOO_LONG'		=> 'Az aláírásod túl hosszú.',
 	'SELECT_CURRENT_TIME'		=> 'Select current time',
 	'SELECT_TIMEZONE'			=> 'Select timezone',
+	'SELECT_CURRENT_TIME'		=> 'Select current time',
+	'SELECT_TIMEZONE'			=> 'Select timezone',
 	'SORT'						=> 'Rendezés',
 	'SORT_COMMENT'				=> 'Magyarázat',
 	'SORT_DOWNLOADS'			=> 'Letöltések száma',
@@ -3562,15 +3767,28 @@ $lang = array_merge($lang, array(
 	'SORT_SIZE'					=> 'Állomány mérete',
 
 	'TIMEZONE'					=> 'Időzóna',
-	'TO'						=> 'Címzett',
+	'TIMEZONE_DATE_SUGGESTION'	=> 'Suggestion: %s',
+	'TIMEZONE_INVALID'			=> 'The timezone you selected is invalid.',
+	'TO'						=> 'Recipient',
+	'TO_MASS'					=> 'Recipients',
+	'TO_ADD'					=> 'Add recipient',
+	'TO_ADD_MASS'				=> 'Add recipients',
+	'TO_ADD_GROUPS'				=> 'Add groups',
 	'TOO_MANY_RECIPIENTS'		=> 'Túl sok címzettet adtál meg.',
 	'TOO_MANY_REGISTERS'		=> 'Túllépted a legfeljebb engedélyezett regisztrációkísérletek számát. Kérjük, próbálkozz később.',
 
 	'UCP'						=> 'Felhasználói vezérlőpult',
 	'UCP_ACTIVATE'				=> 'Azonosító aktiválása',
 	'UCP_ADMIN_ACTIVATE'		=> 'Kérjük, vedd figyelembe, hogy egy valós e-mail címet kell megadnod, hogy az azonosítód aktiválva lehessen. Az adminisztrátor át fogja nézni az azonosítód, és ha jóváhagyja, kapni fogsz egy e-mailt a megadott címre.',
-	'UCP_AIM'					=> 'AOL Instant Messenger',
 	'UCP_ATTACHMENTS'			=> 'Csatolmányok',
+	'UCP_AUTH_LINK'				=> 'External accounts',
+	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
+	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
+	'UCP_AUTH_LINK_LINK'		=> 'Link',
+	'UCP_AUTH_LINK_MANAGE'		=> 'Manage external account associations',
+	'UCP_AUTH_LINK_NOT_SUPPORTED'	=> 'Linking board accounts to external services is not supported by this board’s current authentication method.',
+	'UCP_AUTH_LINK_TITLE'		=> 'Manage your external account associations',
+	'UCP_AUTH_LINK_UNLINK'		=> 'Unlink',
 	'UCP_AUTH_LINK'				=> 'External accounts',
 	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
 	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
@@ -3582,8 +3800,8 @@ $lang = array_merge($lang, array(
 	'UCP_COPPA_BEFORE'			=> '%s előtt',
 	'UCP_COPPA_ON_AFTER'		=> '%s-én vagy utána',
 	'UCP_EMAIL_ACTIVATE'		=> 'Kérjük, vedd figyelembe, hogy egy valós e-mail címet kell megadnod, hogy az azonosítód aktiválva lehessen. A regisztráció után kapni fogsz egy e-mailt a megadott címre, amely tartalmazni fogja az aktivációs linket.',
-	'UCP_ICQ'					=> 'ICQ azonosító',
 	'UCP_JABBER'				=> 'Jabber azonosító',
+	'UCP_LOGIN_LINK'			=> 'Set up an external account association',
 
 	'UCP_MAIN'					=> 'Áttekintés',
 	'UCP_MAIN_ATTACHMENTS'		=> 'Csatolmányok kezelése',
@@ -3592,7 +3810,6 @@ $lang = array_merge($lang, array(
 	'UCP_MAIN_FRONT'			=> 'Kezdőlap',
 	'UCP_MAIN_SUBSCRIBED'		=> 'Feliratkozások kezelése',
 
-	'UCP_MSNM'					=> 'WL/MSN Messenger',
 	'UCP_NO_ATTACHMENTS'		=> 'Nem töltöttél fel csatolmányt a fórumra.',
 
 	'UCP_NOTIFICATION_LIST'				=> 'Manage notifications',
@@ -3609,8 +3826,6 @@ $lang = array_merge($lang, array(
 	'UCP_PM_COMPOSE'			=> 'Üzenet írása',
 	'UCP_PM_DRAFTS'				=> 'PÜ piszkozatok kezelése',
 	'UCP_PM_OPTIONS'			=> 'Szűrők, mappák és beállítások',
-	'UCP_PM_POPUP'				=> 'Privát üzenetek',
-	'UCP_PM_POPUP_TITLE'		=> 'Privát üzenet felugró ablak',
 	'UCP_PM_UNREAD'				=> 'Olvasatlan üzenet',
 	'UCP_PM_VIEW'				=> 'Üzenetek megtekintése',
 
@@ -3625,11 +3840,11 @@ $lang = array_merge($lang, array(
 	'UCP_USERGROUPS_MEMBER'		=> 'Tagságok szerkesztése',
 	'UCP_USERGROUPS_MANAGE'		=> 'Csoportok kezelése',
 
+	'UCP_PASSWORD_RESET_DISABLED'	=> 'The password reset functionality has been disabled. If you need help accessing your account, please contact the %sBoard Administrator%s',
 	'UCP_REGISTER_DISABLE'			=> 'Jelenleg nem lehet létrehozni új azonosítót.',
 	'UCP_REMIND'					=> 'Jelszó elküldése',
 	'UCP_RESEND'					=> 'Aktivációs e-mail elküldése',
 	'UCP_WELCOME'					=> 'Köszöntünk a felhasználói vezérlőpulton! Itt megtekintheted, illetve megváltoztathatod a profilodat, a fórum beállításaidat és a feliratkozásaidat. Privát üzenetet is küldhetsz más felhasználóknak (ha engedélyezve van). Mielőtt továbblépnél, kérünk győződj meg róla, hogy elolvastad a közleményeket.',
-	'UCP_YIM'						=> 'Yahoo Messenger',
 	'UCP_ZEBRA'						=> 'Barátok és haragosok',
 	'UCP_ZEBRA_FOES'				=> 'Haragosok kezelése',
 	'UCP_ZEBRA_FRIENDS'				=> 'Barátok kezelése',
@@ -3639,12 +3854,12 @@ $lang = array_merge($lang, array(
 	'UPLOAD_AVATAR_FILE'			=> 'Feltöltés a számítógépről',
 	'UPLOAD_AVATAR_URL'				=> 'Feltöltés webcímről',
 	'UPLOAD_AVATAR_URL_EXPLAIN'		=> 'Add meg a kép URL-jét (webcímét). A kép átmásolásra kerül erre az oldalra.',
-	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'A felhasználónév hosszának %1$d és %2$d karakter között kell lennie, és csak alfanumerikus karaktereket tartalmazhat.',
-	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'A felhasználónév hosszának %1$d és %2$d karakter között kell lennie, valamint csak alfanumerikus karaktereket, szóközt és -+_[] jeleket tartalmazhat.',
-	'USERNAME_ASCII_EXPLAIN'		=> 'A felhasználónév hosszának %1$d és %2$d karakter között kell lennie, valamint csak ASCII karaktereket tartalmazhat, tehát ékezetes betűket és szimbólumokat nem.',
-	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'A felhasználónév hosszának %1$d és %2$d karakter között kell lennie, valamint csak betűket és számokat tartalmazhat.',
-	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'A felhasználónév hosszának %1$d és %2$d karakter között kell lennie, valamint csak betűket, számokat, szóközt és -+_[] jeleket tartmazhat.',
-	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'A hosszának %1$d és %2$d karakter között kell lennie.',
+	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only alphanumeric characters.',
+	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use alphanumeric, space or -+_[] characters.',
+	'USERNAME_ASCII_EXPLAIN'		=> 'Username must be between %1$s and %2$s long and use only ASCII characters, so no special symbols.',
+	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only letter or number characters.',
+	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use letter, number, space or -+_[] characters.',
+	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Length must be between %1$s and %2$s.',
 	'USERNAME_TAKEN_USERNAME'		=> 'A megadott felhasználónév már használatban van, kérünk válassz másikat.',
 	'USERNAME_DISALLOWED_USERNAME'	=> 'A megadott felhasználónév le lett tiltva vagy nem engedélyezett szót tartalmaz. Kérünk válassz egy másik nevet.',
 	'USER_NOT_FOUND_OR_INACTIVE'	=> 'A megadott felhasználónévek nem találhatók, vagy még nem aktivált felhsználók.',
@@ -3657,10 +3872,9 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_PM'				=> 'Következő PÜ',
 	'VIEW_PM'					=> 'Privát üzenet megtekintése',
 	'VIEW_PM_INFO'				=> 'Üzenet adatok',
-	'VIEW_PM_MESSAGE'			=> '1 üzenet',
-	'VIEW_PM_MESSAGES'			=> '%d üzenet',
 	'VIEW_PREVIOUS_HISTORY'		=> 'Előző kapcsolódó PÜ',
 	'VIEW_PREVIOUS_PM'			=> 'Előző PÜ',
+	'VIEW_PROFILE'				=> 'View profile',
 	'VIEW_SIGS'					=> 'Aláírások megjelenítése',
 	'VIEW_SMILIES'				=> 'Emotikonok megjelenítése képként',
 	'VIEW_TOPICS_DAYS'			=> 'Témák megjelenítése a következő időszakból',
@@ -3768,8 +3982,6 @@ $lang = array_merge($lang, array(
 	'UNREAD_POSTS_LOCKED'	=> 'Olvasatlan hozzászólások [ lezárt ]',
 
 	'VIEW_FORUM'			=> 'Fórum megtekintése',
-	'VIEW_FORUM_TOPIC'		=> '1 téma',
-	'VIEW_FORUM_TOPICS'		=> '%d téma',
 
 	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
 	'REMOVE_FILTER'		=> 'Remove filter',
@@ -3778,6 +3990,7 @@ $lang = array_merge($lang, array(
 #######language/en/viewtopic.php#######
 
 $lang = array_merge($lang, array(
+	'APPROVE'								=> 'Jóváhagyás',
 	'ATTACHMENT'						=> 'Csatolmány',
 	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'A csatolmány funkciók nem elérhetők.',
 
@@ -3790,14 +4003,13 @@ $lang = array_merge($lang, array(
 	'BUMP_TOPIC'			=> 'Előreugrasztás',
 
 	'CODE'					=> 'Kód',
-	'COLLAPSE_QR'			=> 'Gyors válasz elrejtése',
-
+	
 	'DELETE_TOPIC'			=> 'Téma törlése',
+	'DELETED_INFORMATION'	=> 'Deleted by %1$s on %2$s',
+	'DISAPPROVE'					=> 'Elutasítás',
 	'DOWNLOAD_NOTICE'		=> 'Nincs meg a kellő jogosultságod a hozzászóláshoz csatolt állományok megtekintéséhez.',
 
-	'EDITED_TIMES_TOTAL'	=> 'A hozzászólást %3$d alkalommal szerkesztették, utoljára %1$s %2$s-kor.',
-	'EDITED_TIME_TOTAL'		=> 'A hozzászólást %3$d alkalommal szerkesztették, utoljára %1$s %2$s-kor.',
-	'EMAIL_TOPIC'			=> 'Barát értesítése e-mailben',
+	'EMAIL_TOPIC'			=> 'E-mail topic',
 	'ERROR_NO_ATTACHMENT'	=> 'A csatolmány már nem létezik.',
 
 	'FILE_NOT_FOUND_404'	=> 'A <strong>%s</strong> fájl nem létezik.',
@@ -3812,8 +4024,6 @@ $lang = array_merge($lang, array(
 	'MAKE_GLOBAL'				=> 'Globális közleménnyé tétel',
 	'MAKE_NORMAL'				=> 'Normál témává tétel',
 	'MAKE_STICKY'				=> 'Kiemeltté tétel',
-	'MAX_OPTIONS_SELECT'		=> '<strong>%d</strong> választási lehetőségre szavazhatsz.',
-	'MAX_OPTION_SELECT'			=> '<strong>1</strong> választási lehetőségre szavazhatsz.',
 	'MISSING_INLINE_ATTACHMENT'	=> 'A <strong>%s</strong> csatolmány már nem érhető el.',
 	'MOVE_TOPIC'				=> 'Téma áthelyezése',
 
@@ -3827,6 +4037,7 @@ $lang = array_merge($lang, array(
 	'POLL_ENDED_AT'			=> 'A szavazás %s-kor befejeződött.',
 	'POLL_RUN_TILL'			=> 'A szavazás %s-ig van érvényben.',
 	'POLL_VOTED_OPTION'		=> 'Erre a lehetőségre szavaztál',
+	'POST_DELETED_RESTORE'	=> 'This post has been deleted. It can be restored.',
 	'PRINT_TOPIC'			=> 'Nyomtatóbarát verzió',
 
 	'QUICK_MOD'				=> 'Gyors moderátori eszközök',
@@ -3834,11 +4045,14 @@ $lang = array_merge($lang, array(
 	'QUOTE'					=> 'Idézet',
 
 	'REPLY_TO_TOPIC'		=> 'Hozzászólás a témához',
+	'RESTORE'				=> 'Restore',
+	'RESTORE_TOPIC'			=> 'Restore topic',
 	'RETURN_POST'			=> '%sVissza a hozzászóláshoz%s',
 
 	'SHOW_QR'				=> 'Gyors válasz',
 	'SUBMIT_VOTE'			=> 'Szavazat elküldése',
 
+	'TOPIC_TOOLS'			=> 'Topic tools',
 	'TOTAL_VOTES'			=> 'Szavazatok száma',
 
 	'UNLOCK_TOPIC'			=> 'Téma megnyitása',
@@ -3847,10 +4061,7 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_TOPIC'		=> 'Következő téma',
 	'VIEW_PREVIOUS_TOPIC'	=> 'Előző téma',
 	'VIEW_RESULTS'			=> 'Eredmény megtekintése',
-	'VIEW_TOPIC_POST'		=> '1 hozzászólás',
-	'VIEW_TOPIC_POSTS'		=> '%d hozzászólás',
 	'VIEW_UNREAD_POST'		=> 'Első olvasatlan hozzászólás',
-	'VISIT_WEBSITE'			=> 'Honlap meglátogatása',
 	'VOTE_SUBMITTED'		=> 'A szavazatod sikeresen eltárolásra került.',
 	'VOTE_CONVERTED'		=> 'A szavazatváltoztatás konvertált szavazásoknál nem támogatott.',
 
@@ -9440,6 +9651,7 @@ $lang = array_merge($lang, array(
 	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'	=> 'Privát üzenethez csatolható legnagyobb állomány mérete. A 0 érték kikapcsolja a korlátozást.',
 	'ATTACH_ORPHAN_URL'					=> 'Árva csatolmányok',
 	'ATTACH_POST_ID'					=> 'Hozzászólás azonosító',
+	'ATTACH_POST_TYPE'					=> 'Post type',
 	'ATTACH_QUOTA'						=> 'Csatolmányok tárhelye',
 	'ATTACH_QUOTA_EXPLAIN'				=> 'Az egész fórumon a csatolmányok legfeljebb ekkora helyet foglalhatnak el összesen. A 0 érték kikapcsolja a korlátozást.',
 	'ATTACH_TO_POST'					=> 'Állomány csatolása hozzászóláshoz',
@@ -9485,6 +9697,9 @@ $lang = array_merge($lang, array(
 	'EXT_GROUP_REAL_MEDIA'			=> 'Real média',
 	'EXT_GROUP_WINDOWS_MEDIA'		=> 'Windows média',
 
+	'FILES_GONE'			=> 'Some of the attachments you selected for deletion do not exist. They may have been already deleted. Attachments that did exist were deleted.',
+	'FILES_STATS_WRONG'		=> 'Your file statistics are likely inaccurate and need to be resynchronised. Actual values: number of attachments = %1$d, total size of attachments = %2$s.<br />Click %3$shere%4$s to resynchronise them.',
+
 	'GO_TO_EXTENSIONS'		=> 'Ugrás a kiterjesztések kezeléséhez',
 	'GROUP_NAME'			=> 'Csoport neve',
 
@@ -9508,6 +9723,7 @@ $lang = array_merge($lang, array(
 	'NOT_ALLOWED_IN_PM'			=> 'Csak hozzászólásokban engedélyezett',
 	'NOT_ALLOWED_IN_PM_POST'	=> 'Nem engedélyezett',
 	'NOT_ASSIGNED'				=> 'Nincs hozzárendelve',
+	'NO_ATTACHMENTS'			=> 'No attachments found for this period.',
 	'NO_EXT_GROUP'				=> 'Nincs',
 	'NO_EXT_GROUP_NAME'			=> 'A csoport neve nem lett megadva.',
 	'NO_EXT_GROUP_SPECIFIED'	=> 'Nem lett megadva kiterjesztéscsoport.',
@@ -9520,6 +9736,10 @@ $lang = array_merge($lang, array(
 	'ONLY_ALLOWED_IN_PM'	=> 'Csak privát üzenetekben engedélyezett',
 	'ORDER_ALLOW_DENY'		=> 'Engedélyezettek',
 	'ORDER_DENY_ALLOW'		=> 'Tiltottak',
+
+	'REMOVE_ALLOWED_IPS'			=> '<em>Engedélyezett</em> IP-k/hosztnevek eltávolítása vagy kizárásuk megszüntetése',
+	'REMOVE_DISALLOWED_IPS'			=> '<em>Nem engedélyezett</em> IP-k/hosztnevek eltávolítása vagy kizárásuk megszüntetése',
+	'RESYNC_FILES_STATS_CONFIRM'	=> 'Are you sure you wish to resynchronise file statistics?',
 
 	'REMOVE_ALLOWED_IPS'		=> '<em>Engedélyezett</em> IP-k/hosztnevek eltávolítása vagy kizárásuk megszüntetése',
 	'REMOVE_DISALLOWED_IPS'		=> '<em>Nem engedélyezett</em> IP-k/hosztnevek eltávolítása vagy kizárásuk megszüntetése',
@@ -9589,18 +9809,17 @@ $lang = array_merge($lang, array(
 	'PERMANENT'		=> 'Tartós',
 
 	'UNTIL'						=> 'Eddig',
-	'USER_BAN'					=> 'Kitiltások',
+	'USER_BAN'					=> 'Ban one or more users by username',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> 'Ha igenre állítod, a megadott felhasználók minden jelenlegi kitiltás alól mentesítve lesznek.',
 	'USER_BAN_EXPLAIN'			=> 'Egyszerre több felhasználót is kitilthatsz, mindegyik nevét új sorba írva. A <span style="text-decoration: underline;">Felhasználó keresése</span> funkció segítségével könnyen rákereshetsz felhasználókra, és beillesztheted őket a listába. ',
 	'USER_NO_BANNED'			=> 'Nincs kitiltott felhasználó.',
-	'USER_UNBAN'				=> 'Felhasználók kitiltásának vagy feloldásának megszüntetése',
+	'USER_UNBAN'				=> 'Un-ban or un-exclude users by username',
 	'USER_UNBAN_EXPLAIN'		=> 'Egyszerre több felhasználó kitiltását vagy feloldását is megszüntetheted az egered és a billentyűzeted a böngésződnek megfelelő kombinációjának használatával. A kitiltások alól feloldott felhasználók ki vannak emelve.',
 ));
 
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'				=> 'Nyári időszámítás érvényben',
 	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
 	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
 	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
@@ -9626,16 +9845,28 @@ $lang = array_merge($lang, array(
 	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Itt a fórumod alapvető működését tudod meghatározni, adhatsz neki egy hozzáillő nevet és leírást, valamint többek között beállíthatod az alapértelmezett nyelvet és időzónát.',
+	'BOARD_INDEX_TEXT'				=> 'Board index text',
+	'BOARD_INDEX_TEXT_EXPLAIN'		=> 'This text is displayed as the board index in the board’s breadcrumbs. If not specified, it will default to “Board index”.',
+	'BOARD_STYLE'					=> 'Megjelenés',
 	'CUSTOM_DATEFORMAT'				=> 'Egyéni…',
 	'DEFAULT_DATE_FORMAT'			=> 'Dátum formátum',
 	'DEFAULT_DATE_FORMAT_EXPLAIN'	=> 'A formátum megegyezik a PHP <code>date</code> függvényéjével.',
 	'DEFAULT_LANGUAGE'				=> 'Alapértelmezett nyelv',
 	'DEFAULT_STYLE'					=> 'Alapértelmezett megjelenés',
+	'DEFAULT_STYLE_EXPLAIN'			=> 'The default style is <strong>%1$s (%2$s)</strong> which is the overriden style for all users (including bots).',
 	'DISABLE_BOARD'					=> 'Fórum kikapcsolása',
-	'DISABLE_BOARD_EXPLAIN'			=> 'Ennek igenre állításával a fórum nem lesz elérhető a felhasználók számára. Egy rövid üzenetet is megadhatsz (legfeljebb 255 karakter), mely meg fog jelenni a felhasználóknak.',
+	'DISABLE_BOARD_EXPLAIN'			=> 'This will make the board unavailable to users who are neither administrators nor moderators. You can also enter a short (255 character) message to display if you wish.',
+	'DISPLAY_LAST_SUBJECT'			=> 'Display subject of last added post on forum list',
+	'DISPLAY_LAST_SUBJECT_EXPLAIN'	=> 'The subject of the last added post will be displayed in the forum list with a hyperlink to the post. Subjects from password protected forums and forums in which user doesn’t have read access are not shown.',
+	'GUEST_STYLE'					=> 'Guest style',
+	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Felhasználó megjelenésének felülírása',
 	'OVERRIDE_STYLE_EXPLAIN'		=> 'Kicseréli a felhasználó megjelenését az alapértelmezettre.',
 	'SITE_DESC'						=> 'Oldal leírása',
+	'SITE_HOME_TEXT'				=> 'Main website text',
+	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
+	'SITE_HOME_URL'					=> 'Main website URL',
+	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Oldal neve',
 	'SYSTEM_TIMEZONE'				=> 'Rendszer időzóna',
 	'WARNINGS_EXPIRE'				=> 'Figyelmeztetés időtartama',
@@ -9675,6 +9906,7 @@ $lang = array_merge($lang, array(
 
 	'ALLOW_AVATARS'					=> 'Avatarok bekapcsolása',
 	'ALLOW_AVATARS_EXPLAIN'			=> 'Avatarok használatának engedélyezése általánosságban.<br />Amikor kikapcsolod az avatar funkciót vagy az egyes módon feltöltött avatar képeket, az érintett avatarok nem jelennek meg többet, de a felhasználók továbbra is le tudják tölteni a saját avatarukat a felhasználói vezérlőpultból.',
+	'ALLOW_GRAVATAR'				=> 'Enable gravatar avatars',
 	'ALLOW_LOCAL'					=> 'Avatar galéria bekapcsolása',
 	'ALLOW_REMOTE'					=> 'Külső avatarok engedélyezése',
 	'ALLOW_REMOTE_EXPLAIN'			=> 'Olyan avatarok, melyek egy másik weboldalról vannak linkelve.',
@@ -9855,6 +10087,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Content from these will be <strong>not included in feeds</strong>. Select no forum to pull data from all forums.<br />Select/Deselect multiple forums by holding <samp>CTRL</samp> and clicking.',
 
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Itt az anti-robot bővítményeket tudod kezelni, melyek különböző módokon próbálják megakadályozni az ún. spamrobotok regisztrációját. Ezek a bővítmények általában egy olyan feladat megoldását követelik meg a felhasználótól, melyek a robotok számára nehezek.',
+	'ACP_VC_EXT_GET_MORE'					=> 'For additional (and possibly better) anti-spam plugins, visit the <a href="https://www.phpbb.com/go/anti-spam-ext"><strong>phpBB.com Extensions Database</strong></a>. For more information on preventing spam on your board, visit the <a href="https://www.phpbb.com/go/anti-spam"><strong>phpBB.com Knowledge Base</strong></a>.',
 	'AVAILABLE_CAPTCHAS'					=> 'Elérhető bővítmények',
 	'CAPTCHA_UNAVAILABLE'					=> 'Ezt a bővítményt nem lehet kiválasztani, mivel a működéséhez szükséges követelmények nem teljesülnek.',
 	'CAPTCHA_GD'							=> 'GD kép',
@@ -9905,18 +10138,36 @@ $lang = array_merge($lang, array(
 	'SESSION_LENGTH'			=> 'Munkamenet hossza',
 	'SESSION_LENGTH_EXPLAIN'	=> 'A munkamenet ennyi idő elteltével jár le, másodpercben.',
 
+	// Contact Settings
+	'ACP_CONTACT_SETTINGS_EXPLAIN'		=> 'Here you can enable and disable the contact page and also add a text that is displayed on the page.',
+
+	'CONTACT_US_ENABLE'				=> 'Enable contact page',
+	'CONTACT_US_ENABLE_EXPLAIN'		=> 'This page allows users to send emails to board administrators',
+
+	'CONTACT_US_INFO'				=> 'Contact information',
+	'CONTACT_US_INFO_EXPLAIN'		=> 'The message is displayed on the contact page',
+	'CONTACT_US_INFO_PREVIEW'		=> 'Contact page information - Preview',
+	'CONTACT_US_INFO_UPDATED'		=> 'Contact page information has been updated.',
+
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Itt be- vagy kikapcsolhatod a fórum bizonyos funkcióit a jobb teljesítmény érdekében. A legtöbb szerveren nincs szükség semmilyen funkció kikapcsolására. Azonban egyes rendszereken vagy másokkal megosztott tárhelyszolgáltatás esetében előnyös lehet kikapcsolni néhány igazából nem használt lehetőséget. Emellett korlátokat is meghatározhatsz a rendszer terhelésére vagy az aktív munkamenetek számára, melyek fölött a fórum automatikusan szünetelni fog.',
 
+	'ALLOW_CDN'						=> 'Allow usage of third party content delivery networks',
+	'ALLOW_CDN_EXPLAIN'				=> 'If this setting is enabled, some files will be served from external third party servers instead of your server. This reduces the network bandwidth required by your server, but may present a privacy issue for some board administrators. In a default phpBB installation, this includes loading “jQuery” and the font “Open Sans” from Google’s content delivery network.',
+	'ALLOW_LIVE_SEARCHES'			=> 'Allow live searches',
+	'ALLOW_LIVE_SEARCHES_EXPLAIN'	=> 'If this setting is enabled, users are provided with keyword suggestions as they type in certain fields throughout the board.',
 	'CUSTOM_PROFILE_FIELDS'			=> 'Egyedi profil mezők',
 	'LIMIT_LOAD'					=> 'Rendszerterhelés korlátozása',
 	'LIMIT_LOAD_EXPLAIN'			=> 'Ha a rendszer egy perces átlagos terhelése meghaladja ezt az értéket, a fórum automatikusan szünetelni fog. Az 1.0 érték megegyezik egy processzor ~100%-os használatával. A funkció csak UNIX alapú rendszereken működik, és akkor is csak akkor, ha elérhető ez az információ. Amennyiben a phpBB-nek nem sikerül meghatároznia a terheléskorlátot, ez az érték automatikusan 0-ra állítódik.',
 	'LIMIT_SESSIONS'				=> 'Munkamenetek korlátozása',
 	'LIMIT_SESSIONS_EXPLAIN'		=> 'Ha a munkamenetek száma egy perc alatt meghaladja ezt az értéket, a fórum automatikusan szünetelni fog. Állítsd 0-ra, hogy ne legyen korlátozás.',
 	'LOAD_CPF_MEMBERLIST'			=> 'Egyedi profil mezők megjelenítése a taglistában',
+	'LOAD_CPF_PM'					=> 'Display custom profile fields in private messages',
 	'LOAD_CPF_VIEWPROFILE'			=> 'Egyedi profil mezők megjelenítése a felhasználók profiljában',
 	'LOAD_CPF_VIEWTOPIC'			=> 'Egyedi profil mezők megjelenítése a téma oldalakon',
 	'LOAD_USER_ACTIVITY'			=> 'Felhasználó aktivitásának mutatása',
 	'LOAD_USER_ACTIVITY_EXPLAIN'	=> 'Legaktívabb téma/fórum megjelenítése a felhasználók profiljában és a felhasználói vezérlőpultban. Több, mint egymillió hozzászólással rendelkező fórumoknál ajánlott kikapcsolni.',
+	'READ_NOTIFICATION_EXPIRE_DAYS'	=> 'Read Notification Expiration',
+	'READ_NOTIFICATION_EXPIRE_DAYS_EXPLAIN' => 'Number of days that will elapse before a read notification will automatically be deleted. Set this value to 0 to make notifications permanent.',
 	'RECOMPILE_STYLES'				=> 'Elévült megjelenés komponensek újrafeldolgozása',
 	'RECOMPILE_STYLES_EXPLAIN'		=> 'Megnézi, hogy frissült-e az adott megjelenés komponens, és ha igen, újra feldolgozza.',
 	'YES_ANON_READ_MARKING'			=> 'Olvasottságmegjelölés engedélyezése vendégeknek',
@@ -9937,18 +10188,25 @@ $lang = array_merge($lang, array(
 	'YES_READ_MARKING_EXPLAIN'		=> 'Az olvasott témákról/fórumokról az információt az adatbázisban tárolja süti helyett.',
 	'YES_UNREAD_SEARCH'				=> 'Olvasatlan hozzászólások keresésének engedélyezése',
 
-	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'A phpBB különböző azonosítási bővítményeket vagy modulokat is támogat. Ezek határozzák meg, hogy mi történik, amikor egy felhasználó belép a fórumra. Alapból három bővítmény áll rendelkezésre: DB (adatbázis), LDAP és Apache. Nem mindegyiknek van szüksége kiegészítő információkra, így csak azokat a mezőket töltsd ki, amelyek a kiválasztott bővítményhez tartoznak.',
+	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB supports authentication plug-ins, or modules. These allow you determine how users are authenticated when they log into the board. By default four plug-ins are provided: DB, LDAP, Apache, and OAuth. Not all methods require additional information so only fill out fields if they are relevant to the selected method.',
 
 	'AUTH_METHOD'				=> 'Azonosítási mód',
 
+	'AUTH_PROVIDER_OAUTH_ERROR_ELEMENT_MISSING'	=> 'Both the key and secret of each enabled OAuth service provider must be provided. Only one was provided for an OAuth service provider.',
+	'AUTH_PROVIDER_OAUTH_EXPLAIN'				=> 'Each OAuth provider requires a unique secret and key in order to authenticate with the external server. These should be supplied by the OAuth service when you register your website with them and should be entered exactly as provided to you.<br />Any service that does not have both a key and a secret entered here will not be available for use by the forum users. Also note, that user can still register and login using the DB authentication plug-in.',
+	'AUTH_PROVIDER_OAUTH_KEY'					=> 'Key',
+	'AUTH_PROVIDER_OAUTH_TITLE'					=> 'OAuth',
+	'AUTH_PROVIDER_OAUTH_SECRET'				=> 'Secret',
+
 	'APACHE_SETUP_BEFORE_USE'	=> 'Az apache azonosítást előbb kell beállítanod, mint hogy a phpBB-t erre az azonosítási módra állítanád. Ne felejtesd el, hogy az apache azonosításhoz használt felhasználónévnek meg kell egyeznie a phpBB-beli felhasználónévvel. Az apache azonosítás csak mod_php-vel használható (CGI verzióval nem), és a safe_mode-nak kikapcsolva kell lennie.',
 
+	'LDAP'							=> 'LDAP',
 	'LDAP_DN'						=> 'LDAP base <var>dn</var>',
 	'LDAP_DN_EXPLAIN'				=> 'A felhasználóról információt tartalmazó Distinguished Name, pl. <samp>o=My Company,c=US</samp>.',
-	'LDAP_EMAIL'					=> 'LDAP e-mail attribútum',
-	'LDAP_EMAIL_EXPLAIN'			=> 'Add meg a felhasználók e-mail címét tartalmazó attribútum nevét (ha van), hogy az új felhasználók e-mail címe automatikusan beállításra kerüljön. Ha üresen hagyod, az első alkalommal belépő felhasználóknak üres lesz az e-mail címük.',
+	'LDAP_EMAIL'					=> 'LDAP email attribute',
+	'LDAP_EMAIL_EXPLAIN'			=> 'Set this to the name of your user entry email attribute (if one exists) in order to automatically set the email address for new users. Leaving this empty results in empty email address for users who log in for the first time.',
 	'LDAP_INCORRECT_USER_PASSWORD'	=> 'Nem sikerült az LDAP szervert összekötni a megadott felhasználó/jelszó páros használatával.',
-	'LDAP_NO_EMAIL'					=> 'A megadott e-mail paraméter nem létezik.',
+	'LDAP_NO_EMAIL'					=> 'The specified email attribute does not exist.',
 	'LDAP_NO_IDENTITY'				=> 'Nem található belépési azonosító: %s.',
 	'LDAP_PASSWORD'					=> 'LDAP jelszó',
 	'LDAP_PASSWORD_EXPLAIN'			=> 'Névtelen hozzáférés használatához hagyd üresen, egyébként add meg a fenti felhasználóhoz tartozó jelszót. Active Directory szervereknél szükséges.<br /><em><strong>Figyelmeztetés:</strong> Ez a jelszó az adatbázisban sima szövegként kerül tárolásra, így bárki által hozzáférhető, aki hozzáfér az adatbázishoz vagy látja ezt a beállítás oldalt.</em>',
@@ -9963,13 +10221,17 @@ $lang = array_merge($lang, array(
 	'LDAP_USER_FILTER'				=> 'LDAP felhasználószűrő',
 	'LDAP_USER_FILTER_EXPLAIN'		=> 'Tetszőlegesen tovább korlátozhatod a keresett objektumokat további szűrőkkel. Például a <samp>objectClass=posixGroup</samp> megadása a <samp>(&amp;(uid=$username)(objectClass=posixGroup))</samp> használatát eredményezné.',
 
-	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Itt a szerverrel és a domainnel kapcsolatos beállításokat adhatod meg. Kérünk, győződj meg róla, hogy az adatok pontosak, mivel nem helyes megadás esetén az e-mailek hibás információt fognak tartalmazni. A domain név megadásánál ne felejtsd el, hogy a http:// vagy más protokollspecifikáció nem része a címnek. A portot csak akkor módosítsd, ha biztosan tudod, hogy a szerver egy másikat használ, a 80-as port a legtöbb esetben megfelelő.',
+	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Here you define server and domain dependent settings. Please ensure the data you enter is accurate, errors will result in emails containing incorrect information. When entering the domain name remember it does include http:// or other protocol term. Only alter the port number if you know your server uses a different value, port 80 is correct in most cases.',
 	'ENABLE_GZIP'				=> 'GZip tömörítés bekapcsolása',
 	'ENABLE_GZIP_EXPLAIN'		=> 'A generált tartalom a felhasználónak való elküldés előtt tömörítésre kerül. Ezzel csökkenteni lehet a hálózati forgalmat, ugyanakkor a CPU-igénybevétel nőni fog, mind a szerver-, mind a kliensoldalon. A működéséhez a zlib PHP bővítménynek betöltve kell lennie.',
 	'FORCE_SERVER_VARS'			=> 'Szerver URL beállítások használata',
 	'FORCE_SERVER_VARS_EXPLAIN'	=> 'Ha igenre van állítva, az itt megadott beállítások kerülnek használatra az automatikus megállapítás helyett.',
 	'ICONS_PATH'				=> 'Hozzászólás ikonok elérési útja',
 	'ICONS_PATH_EXPLAIN'		=> 'A phpBB-d gyökérkönyvtárától viszonyított elérési út, pl. <samp>images/icons</samp>.',
+	'MOD_REWRITE_ENABLE'		=> 'Enable URL Rewriting',
+	'MOD_REWRITE_ENABLE_EXPLAIN' => 'When enabled, URLs containing ’app.php’ will be rewritten to remove the filename (i.e. app.php/foo will become /foo). <strong>Apache server’s mod_rewrite module is required for this functionality to work; if this option is enabled without mod_rewrite support, URLs on your board may be broken.</strong>',
+	'MOD_REWRITE_DISABLED'		=> 'The <strong>mod_rewrite</strong> module on your Apache web server is disabled. Enable the module or contact your web hosting provider if you wish to enable this feature.',
+	'MOD_REWRITE_INFORMATION_UNAVAILABLE' => 'We are unable to determine whether or not this server supports URL rewriting. This setting may be enabled but if URL rewriting is not available, paths generated by this board (such as for use in links) may be broken. Contact your web hosting provider if you are unsure whether or not you can safely enable this feature.',
 	'PATH_SETTINGS'				=> 'Elérési utak',
 	'RANKS_PATH'				=> 'Rang képek elérési útja',
 	'RANKS_PATH_EXPLAIN'		=> 'A phpBB-d gyökérkönyvtárától viszonyított elérési út, pl. <samp>images/ranks</samp>.',
@@ -9986,13 +10248,21 @@ $lang = array_merge($lang, array(
 	'SMILIES_PATH_EXPLAIN'		=> 'A phpBB-d gyökérkönyvtárától viszonyított elérési út, pl. <samp>images/smilies</samp>.',
 	'UPLOAD_ICONS_PATH'			=> 'Kiterjesztéscsoport ikonok elérési útja',
 	'UPLOAD_ICONS_PATH_EXPLAIN'	=> 'A phpBB-d gyökérkönyvtárától viszonyított elérési út, pl. <samp>images/upload_icons</samp>.',
+	'USE_SYSTEM_CRON'		=> 'Run periodic tasks from system cron',
+	'USE_SYSTEM_CRON_EXPLAIN'		=> 'When off, phpBB will arrange for periodic tasks to be run automatically. When on, phpBB will not schedule any periodic tasks by itself; a system administrator must arrange for <code>bin/phpbbcli.php cron:run</code> to be run by the system cron facility at regular intervals (e.g. every 5 minutes).',
 
 	'ACP_SECURITY_SETTINGS_EXPLAIN'		=> 'Itt a munkamenetekkel és a belépéssel kapcsolatos beállításokat tudsz megadni.',
 	'ALL'							=> 'Összes',
-	'ALLOW_AUTOLOGIN'				=> 'Tartós bejelentkezés engedélyezése',
-	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'A felhasználók használhatják-e az automatikus bejelentkezést.',
-	'AUTOLOGIN_LENGTH'				=> 'Tartós bejelentkezési kulcs lejárati hossza',
-	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Ennyi nap elteltével törlésre kerülnek a tartós bejelentkezési kulcsok. A 0 kikapcsolja ezt.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'ALLOW_PASSWORD_RESET'			=> 'Allow password reset ("Forgot Password")',
+	'ALLOW_PASSWORD_RESET_EXPLAIN'	=> 'Determines whether or not users are able to use the "I forgot my password" link on the login page to recover their account. If you use an external authentication mechanism you may wish to disable this feature.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
 	'BROWSER_VALID'					=> 'Böngésző ellenőrzése',
 	'BROWSER_VALID_EXPLAIN'			=> 'A böngésző típusa ellenőrzésre kerül, ezáltal javítva a munkamenet biztonságát.',
 	'CHECK_DNSBL'					=> 'IP összevetése a DNSBL feketelistával',
@@ -10029,8 +10299,12 @@ $lang = array_merge($lang, array(
 	'PASS_TYPE_SYMBOL'				=> 'Tartalmaznia kell szimbólumokat',
 	'REF_HOST'						=> 'Csak hoszt ellenőrzése',
 	'REF_PATH'						=> 'Elérési út ellenőrzése is',
-	'REFERER_VALID'					=> 'Hivatkozó oldal (referer) ellenőrzése',
+	'REFERRER_VALID'				=> 'Validate Referrer',
+	'REFERRER_VALID_EXPLAIN'		=> 'If enabled, the referrer of POST requests will be checked against the host/script path settings. This may cause issues with boards using several domains and or external logins.',
+
+	'REFERER_VALID'					=> 'Hivatkozó oldal (referer) ellenőrzése',	//3.0.12
 	'REFERER_VALID_EXPLAIN'			=> 'Ha be van kapcsolva, a POST kérések hivatkozó oldalainak címe (referer) összevetésre kerül a hoszt/szkript elérési út beállításokkal. Ez gondot okozhat egyszerre több domaint vagy külső bejelentkező oldalt használó fórumoknál.',
+
 	'TPL_ALLOW_PHP'					=> 'Php engedélyezése sablonokban',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Ha be van kapcsolva a beállítás, akkor a sablonokban a <code>PHP</code> és az <code>INCLUDEPHP</code> címkék is értelmezésre kerülnek.',
 
@@ -10043,6 +10317,8 @@ $lang = array_merge($lang, array(
 	'BOARD_HIDE_EMAILS_EXPLAIN'		=> 'Ez a funkció gondoskodik róla, hogy az e-mail címek teljesen privátak maradjanak.',
 	'CONTACT_EMAIL'					=> 'Kapcsolat e-mail cím',
 	'CONTACT_EMAIL_EXPLAIN'			=> 'Ez az e-mail cím kerül megadásra, ha szükség van bármilyen kapcsolatbalépési lehetőségre, pl. spam, hibaüzenet stb. Mindig ez a cím kerül megadásra a levelek <samp>From</samp> (feladó) és <samp>Reply-To</samp> (válaszcím) fejlécének.',
+	'CONTACT_EMAIL_NAME'			=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 	'EMAIL_FUNCTION_NAME'			=> 'E-mail függvény neve',
 	'EMAIL_FUNCTION_NAME_EXPLAIN'	=> 'A függvény neve, amivel e-mailt lehet küldeni PHP-n keresztül.',
 	'EMAIL_PACKAGE_SIZE'			=> 'E-mail csomag mérete',
@@ -10233,7 +10509,7 @@ $lang = array_merge($lang, array(
 	'ACP_BAN'					=> 'Kitiltások',
 	'ACP_BAN_EMAILS'			=> 'E-mail címek kitiltása',
 	'ACP_BAN_IPS'				=> 'IP-címek kitiltása',
-	'ACP_BAN_USERNAMES'			=> 'Felhasználók kitiltása',
+	'ACP_BAN_USERNAMES'			=> 'Ban users',
 	'ACP_BBCODES'				=> 'BBCode-ok',
 	'ACP_BOARD_CONFIGURATION'	=> 'Fórum konfiguráció',
 	'ACP_BOARD_FEATURES'		=> 'Fórum funkciók',
@@ -10242,8 +10518,10 @@ $lang = array_merge($lang, array(
 	'ACP_BOTS'					=> '(Kereső)robotok',
 
 	'ACP_CAPTCHA'				=> 'Vizuális megerősítés',
+	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'Adatbázis',
+	'ACP_CAT_DOT_MODS'			=> '.MOD-ok',
 	'ACP_CAT_DOT_MODS'			=> '.MOD-ok',
 	'ACP_CAT_FORUMS'			=> 'Fórumok',
 	'ACP_CAT_GENERAL'			=> 'Általános',
@@ -10256,6 +10534,8 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_USERS'				=> 'Felhasználók',
 	'ACP_CLIENT_COMMUNICATION'	=> 'Kommunikáció a kliensekkel',
 	'ACP_COOKIE_SETTINGS'		=> 'Süti beállítások',
+	'ACP_CONTACT'				=> 'Contact page',
+	'ACP_CONTACT_SETTINGS'		=> 'Contact page settings',
 	'ACP_CRITICAL_LOGS'			=> 'Hibanapló',
 	'ACP_CUSTOM_PROFILE_FIELDS'	=> 'Egyedi profil mezők',
 
@@ -10263,8 +10543,11 @@ $lang = array_merge($lang, array(
 	'ACP_DISALLOW'				=> 'Letiltás',
 	'ACP_DISALLOW_USERNAMES'	=> 'Felhasználónevek letiltása',
 
-	'ACP_EMAIL_SETTINGS'		=> 'E-mail beállítások',
-	'ACP_EXTENSION_GROUPS'		=> 'Kiterjesztéscsoportok kezelése',
+	'ACP_EMAIL_SETTINGS'		=> 'Email settings',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
+	'ACP_EXTENSION_MANAGEMENT'	=> 'Extension management',
+	'ACP_EXTENSIONS'			=> 'Manage extensions',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
 	'ACP_FORMS'					=> 'Customizable Forms',
 	'ACP_FORMS_BUILDER'			=> 'Form Builder',
 
@@ -10285,10 +10568,10 @@ $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE'				=> 'Csoportok kezelése',
 	'ACP_GROUPS_MANAGEMENT'			=> 'Csoport-kezelés',
 	'ACP_GROUPS_PERMISSIONS'		=> 'Csoportok jogosultságai',
+	'ACP_GROUPS_POSITION'			=> 'Manage group positions',
 
 	'ACP_ICONS'					=> 'Téma ikonok',
 	'ACP_ICONS_SMILIES'			=> 'Téma ikonok/emotikonok',
-	'ACP_IMAGESETS'				=> 'Képkészletek',
 	'ACP_INACTIVE_USERS'		=> 'Inaktív felhasználók',
 	'ACP_INDEX'					=> 'AVP kezdőlap',
 
@@ -10300,11 +10583,15 @@ $lang = array_merge($lang, array(
 	'ACP_LOGGING'				=> 'Naplózás',
 
 	'ACP_MAIN'					=> 'AVP kezdőlap',
-	'ACP_MANAGE_EXTENSIONS'		=> 'Kiterjesztések kezelése',
+
+	'ACP_MANAGE_ATTACHMENTS'			=> 'Csatolmányok kezelése',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
+
+	'ACP_MANAGE_EXTENSIONS'		=> 'Manage attachment extensions',
 	'ACP_MANAGE_RANKS'			=> 'Rangok kezelése',
 	'ACP_MANAGE_REASONS'		=> 'Jelentés/visszautasítás okok kezelése',
 	'ACP_MANAGE_USERS'			=> 'Felhasználók kezelése',
-	'ACP_MASS_EMAIL'			=> 'Csoportos e-mail',
+	'ACP_MASS_EMAIL'			=> 'Mass email',
 	'ACP_MESSAGES'				=> 'Üzenetek',
 	'ACP_MESSAGE_SETTINGS'		=> 'Privát üzenet beállítások',
 	'ACP_MODULE_MANAGEMENT'		=> 'Modulok kezelése',
@@ -10349,6 +10636,8 @@ $lang = array_merge($lang, array(
 	'ACP_STYLE_COMPONENTS'		=> 'Megjelenés alkotóelemek',
 	'ACP_STYLE_MANAGEMENT'		=> 'Megjelenések kezelése',
 	'ACP_STYLES'				=> 'Megjelenések',
+	'ACP_STYLES_CACHE'			=> 'Purge Cache',
+	'ACP_STYLES_INSTALL'		=> 'Install Styles',
 
 	'ACP_SUBMIT_CHANGES'		=> 'Változtatások elküldése',
 
@@ -10400,6 +10689,10 @@ $lang = array_merge($lang, array(
 
 	'COLOUR_SWATCH'			=> 'Szín kiválasztása',
 	'CONFIG_UPDATED'		=> 'A konfiguráció sikeresen frissítésre került.',
+	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
+	'CRON_NO_SUCH_TASK'		=> 'Could not find cron task â€œ%sâ€.',
+	'CRON_NO_TASK'			=> 'No cron tasks need to be run right now.',
+	'CRON_NO_TASKS'			=> 'No cron tasks could be found.',
 
 	'DEACTIVATE'				=> 'Deaktiválás',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'A megadott „%s” elérési út nem létezik.',
@@ -10410,6 +10703,7 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_AS'				=> 'Tömörítés',
 	'DOWNLOAD_STORE'			=> 'Állomány letöltése vagy eltárolása',
 	'DOWNLOAD_STORE_EXPLAIN'	=> 'Az állományt közvetlenül letöltheted, vagy elmentheted a <samp>store/</samp> könyvtáradba.',
+	'DOWNLOADS'					=> 'Letöltések száma',
 
 	'EDIT'					=> 'Szerkesztés',
 	'ENABLE'				=> 'Bekapcsolás',
@@ -10424,6 +10718,8 @@ $lang = array_merge($lang, array(
 	'IP'					=> 'IP-cím',
 	'IP_HOSTNAME'			=> 'IP-címek vagy hosztnevek',
 
+	'LOAD_NOTIFICATIONS'			=> 'Display Notifications',
+	'LOAD_NOTIFICATIONS_EXPLAIN'	=> 'Display the notifications list on every page (typically in the header).',
 	'LOGGED_IN_AS'			=> 'Bejelentkezve:',
 	'LOGIN_ADMIN'			=> 'A fórum adminisztrálásához azonosított felhasználónak kell lenned.',
 	'LOGIN_ADMIN_CONFIRM'	=> 'A fórum adminisztrálásához újra azonosítanod kell magad.',
@@ -10440,7 +10736,8 @@ $lang = array_merge($lang, array(
 
 	'NOTIFY'				=> 'Értesítés',
 	'NO_ADMIN'				=> 'Nincs jogosultságod a fórum adminisztrálásához.',
-	'NO_EMAILS_DEFINED'		=> 'Nem található valós e-mail cím.',
+	'NO_EMAILS_DEFINED'		=> 'No valid email addresses found.',
+	'NO_FILES_TO_DELETE'	=> 'Attachments you selected for deletion do not exist.',
 	'NO_PASSWORD_SUPPLIED'	=> 'Nem adtad meg a jelszavad.',
 
 	'OFF'					=> 'Kikapcsolva',
@@ -10456,8 +10753,8 @@ $lang = array_merge($lang, array(
 
 	'REMIND'							=> 'Emlékeztetés',
 	'RESYNC'							=> 'Szinkronizálás',
-	'RETURN_TO'							=> 'Vissza:',
 
+	'RUNNING_TASK'			=> 'Running task: %s.',
 	'SELECT_ANONYMOUS'		=> 'Vendég felhasználó kiválasztása',
 	'SELECT_OPTION'			=> 'Opció kiválasztása',
 
@@ -10467,6 +10764,10 @@ $lang = array_merge($lang, array(
 	'SETTING_TOO_SHORT'		=> 'A „%1$s” beállításnak megadott érték túl rövid. A legrövidebb elfogadható hossz %2$d karakter.',
 
 	'SHOW_ALL_OPERATIONS'	=> 'Összes művelet megjelenítése',
+
+	'TASKS_NOT_READY'			=> 'Not ready tasks:',
+	'TASKS_READY'			=> 'Ready tasks:',
+	'TOTAL_SIZE'			=> 'Total size',
 
 	'UCP'					=> 'Felhasználói vezérlőpult',
 	'USERNAMES_EXPLAIN'		=> 'Minden felhasználónevet külön sorba írj.',
@@ -10478,7 +10779,7 @@ $lang = array_merge($lang, array(
 	'NO_PHPINFO_AVAILABLE'	=> 'Nem lehet információkat megtudni a PHP konfigurációdról. A phpinfo() biztonsági okokból le lett tiltva.',
 
 	'ACP_ADMIN_LOGS_EXPLAIN'	=> 'Ez a lista az adminisztrátorok összes műveletét, tevékenységét tartalmazza. Rendezheted felhasználónév, idő, IP-cím vagy művelet szerint. Ha rendelkezel a szükséges jogosultságokkal, törölheted az egyes bejegyzéseket vagy akár a napló teljes tartalmát.',
-	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'Ez a lista a fórum által végrehajtott műveleteket tartalmazza. Ez a napló olyan információkat nyújt, melyeket fel tudsz használni problémák megoldásához, például hogy miért nem mennek el az e-mailek. Rendezheted felhasználónév, idő, IP-cím vagy művelet szerint. Ha rendelkezel a szükséges jogosultságokkal, törölheted az egyes bejegyzéseket vagy akár a teljes napló tartalmát.',
+	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'This lists the actions carried out by the board itself. This log provides you with information you are able to use for solving specific problems, for example non-delivery of emails. You can sort by username, date, IP or action. If you have appropriate permissions you can also clear individual operations or the log as a whole.',
 	'ACP_MOD_LOGS_EXPLAIN'		=> 'Ez a lista a moderátorok által a fórumokon, témákon és hozzászólásokon végrehajtott műveleteket tartalmazza, ide értve a kitiltásokat is. Rendezheted felhasználónév, idő, IP-cím vagy művelet szerint. Ha rendelkezel a szükséges jogosultságokkal, törölheted az egyes bejegyzéseket vagy akár a teljes napló tartalmát.',
 	'ACP_USERS_LOGS_EXPLAIN'	=> 'Ez a lista a felhasználókon vagy a felhasználók által végrehajtott műveleteket tartalmazza (jelentések, figyelmeztetések és feljegyzések).',
 	'ALL_ENTRIES'				=> 'Összes bejegyzés',
@@ -10504,6 +10805,7 @@ $lang = array_merge($lang, array(
 
 	'GZIP_COMPRESSION'	=> 'GZip tömörítés',
 
+	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'Nem elérhető',
 	'NUMBER_FILES'		=> 'Csatolmányok száma',
 	'NUMBER_POSTS'		=> 'Hozzászólások száma',
@@ -10516,29 +10818,38 @@ $lang = array_merge($lang, array(
 	'PURGE_CACHE'			=> 'Gyorsítótár kiürítése',
 	'PURGE_CACHE_CONFIRM'	=> 'Biztosan ki akarod üríteni a gyorsítótárat?',
 	'PURGE_CACHE_EXPLAIN'	=> 'Minden gyorsítótárazott elem törlésre kerül, beleértve a gyorsítótárazott sablon állományokat és adatbázis-lekérdezéseket is.',
+	'PURGE_CACHE_SUCCESS'	=> 'Cache successfully purged.',
 
 	'PURGE_SESSIONS'			=> 'Munkamenetek törlése',
 	'PURGE_SESSIONS_CONFIRM'	=> 'Bitosan törölni szeretnéd az összes munkamenetet? Ennek folytán az összes felhasználó kiléptetésre fog kerülni.',
 	'PURGE_SESSIONS_EXPLAIN'	=> 'Megszakítja és törli az összes munkamenetet. Minden felhasználó kiléptetésre kerül, mivel a munkamenet tábla kiürítődik.',
+	'PURGE_SESSIONS_SUCCESS'	=> 'Sessions successfully purged.',
 
 	'RESET_DATE'					=> 'Fórum indulási dátumának lenullázása',
 	'RESET_DATE_CONFIRM'			=> 'Biztosan meg akarod változtatni a fórum indulásának dátumát mostanra?',
+	'RESET_DATE_SUCCESS'				=> 'Boardâ€™s start date reset',
 	'RESET_ONLINE'					=> 'Valaha jelenlévő legtöbb felhasználó számának lenullázása',
 	'RESET_ONLINE_CONFIRM'			=> 'Biztosan le akarod nullázni a valaha jelenlévő legtöbb felhasználó számlálót?',
+	'RESET_ONLINE_SUCCESS'				=> 'Most users ever online reset',
 	'RESYNC_POSTCOUNTS'				=> 'Hozzászólásszámok újraszinkronizálása',
 	'RESYNC_POSTCOUNTS_EXPLAIN'		=> 'Csak a létező hozzászólások kerülnek figyelembevételre. Az automatikus tisztítás által törölt hozzászólások nem lesznek beleszámolva.',
 	'RESYNC_POSTCOUNTS_CONFIRM'		=> 'Biztosan újra akarod szinkronizálni a hozzászólásszámokat?',
+	'RESYNC_POSTCOUNTS_SUCCESS'			=> 'Resynchronised post counts',
 	'RESYNC_POST_MARKING'			=> 'Csillagozott témák újraszinkronizálása',
 	'RESYNC_POST_MARKING_CONFIRM'	=> 'Biztosan újra akarod szinkronizálni a csillagozott témákat?',
 	'RESYNC_POST_MARKING_EXPLAIN'	=> 'Először visszavonódik a megjelölés minden témáról, majd helyesen megjelölésre kerülnek azok a témák, melyekben volt valami aktivitás az elmúlt fél évben.',
+	'RESYNC_POST_MARKING_SUCCESS'	=> 'Resynchronised dotted topics',
 	'RESYNC_STATS'					=> 'Statisztika újraszinkronizálása',
 	'RESYNC_STATS_CONFIRM'			=> 'Biztosan újra akarod szinkronizálni a statisztikát?',
 	'RESYNC_STATS_EXPLAIN'			=> 'Újraszámolja a fórum hozzászólásait, témáit, felhasználóit és állományait.',
+	'RESYNC_STATS_SUCCESS'			=> 'Resynchronised statistics',
 	'RUN'							=> 'Futtatás most',
 
 	'STATISTIC'					=> 'Statisztika',
 	'STATISTIC_RESYNC_OPTIONS'	=> 'Statisztikák újraszinkronizálása vagy lenullázása',
 
+	'TIMEZONE_INVALID'	=> 'The timezone you selected is invalid.',
+	'TIMEZONE_SELECTED'	=> '(currently selected)',
 	'TOPICS_PER_DAY'	=> 'Témák száma naponta',
 
 	'UPLOAD_DIR_SIZE'	=> 'Feltöltött csatolmányok mérete',
@@ -10719,9 +11030,9 @@ $lang = array_merge($lang, array(
 
 	'LOG_APPROVE_TOPIC'			=> '<strong>Téma jóváhagyása</strong><br />» %s',
 	'LOG_BUMP_TOPIC'			=> '<strong>Téma előreugrasztása</strong><br />» %s',
-	'LOG_DELETE_POST'			=> '<strong>Hozzászólás törlése</strong><br />» %s',
-	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Árnyék téma törlése</strong><br />» %s',
-	'LOG_DELETE_TOPIC'			=> '<strong>Téma törlése</strong><br />» %s',
+	'LOG_DELETE_POST'			=> '<strong>Deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Deleted shadow topic</strong><br />Â» %s',
+	'LOG_DELETE_TOPIC'			=> '<strong>Deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_FORK'					=> '<strong>Téma másolása</strong><br />» %s',
 	'LOG_LOCK'					=> '<strong>Téma lezárása</strong><br />» %s',
 	'LOG_LOCK_POST'				=> '<strong>Hozzászólás lezárása</strong><br />» %s',
@@ -10730,15 +11041,20 @@ $lang = array_merge($lang, array(
 	'LOG_PM_REPORT_CLOSED'		=> '<strong>PÜ jelentés lezárása</strong><br />» %s',
 	'LOG_PM_REPORT_DELETED'		=> '<strong>PÜ jelentés törlése</strong><br />» %s',
 	'LOG_POST_APPROVED'			=> '<strong>Hozzászólás jóváhagyása</strong><br />» %s',
-	'LOG_POST_DISAPPROVED'		=> '<strong>„%1$s” hozzászólás elutasítása</strong><br />» ok: %2$s',
-	'LOG_POST_EDITED'			=> '<strong>„%1$s” hozzászólás szerkesztése</strong><br />» szerző: %2$s',
+	'LOG_POST_DISAPPROVED'		=> '<strong>Disapproved post â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
+	'LOG_POST_EDITED'			=> '<strong>Edited post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_POST_RESTORED'			=> '<strong>Restored post</strong><br />Â» %s',
 	'LOG_REPORT_CLOSED'			=> '<strong>Jelentés lezárása</strong><br />» %s',
 	'LOG_REPORT_DELETED'		=> '<strong>Jelentés törlése</strong><br />» %s',
+	'LOG_RESTORE_TOPIC'			=> '<strong>Restored topic â€œ%1$sâ€ written by</strong><br />Â» %2$s',
+	'LOG_SOFTDELETE_POST'		=> '<strong>Soft deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_SOFTDELETE_TOPIC'		=> '<strong>Soft deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_SPLIT_DESTINATION'		=> '<strong>Szétválasztott hozzászólások áthelyezése</strong><br />» %s témába',
 	'LOG_SPLIT_SOURCE'			=> '<strong>Téma szétválasztása</strong><br />» %s',
 
 	'LOG_TOPIC_APPROVED'		=> '<strong>Téma jóváhagyása</strong><br />» %s',
-	'LOG_TOPIC_DISAPPROVED'		=> '<strong>„%1$s” téma elutasítása</strong><br />ok: %2$s',
+	'LOG_TOPIC_RESTORED'		=> '<strong>Restored topic</strong><br />Â» %s',
+	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Disapproved topic â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
 	'LOG_TOPIC_RESYNC'			=> '<strong>Téma újraszinkronizálása</strong><br />» %s',
 	'LOG_TOPIC_TYPE_CHANGED'	=> '<strong>Téma típusának megváltoztatása</strong><br />» %s',
 	'LOG_UNLOCK'				=> '<strong>Téma megnyitása</strong><br />» %s',
@@ -10790,16 +11106,6 @@ $lang = array_merge($lang, array(
 
 	'LOG_IMAGE_GENERATION_ERROR'	=> '<strong>Hiba kép generálása közben</strong><br />» Hiba az %1$s állomány %2$s sorában: %3$s',
 
-	'LOG_IMAGESET_ADD_DB'			=> '<strong>Új képkészlet felvétele az adatbázisba</strong><br />» %s',
-	'LOG_IMAGESET_ADD_FS'			=> '<strong>Új képkészlet felvétele a fájlrendszerbe</strong><br />» %s',
-	'LOG_IMAGESET_DELETE'			=> '<strong>Képkészlet törlése</strong><br />» %s',
-	'LOG_IMAGESET_EDIT_DETAILS'		=> '<strong>Képkészlet részletek szerkesztése</strong><br />» %s',
-	'LOG_IMAGESET_EDIT'				=> '<strong>Képkészlet szerkesztéses</strong><br />» %s',
-	'LOG_IMAGESET_EXPORT'			=> '<strong>Képkészlet exportálása</strong><br />» %s',
-	'LOG_IMAGESET_LANG_MISSING'		=> '<strong>Képkészlet „%2$s” lokalizációja hiányzik</strong><br />» %1$s',
-	'LOG_IMAGESET_LANG_REFRESHED'	=> '<strong>Képkészlet „%2$s” lokalizációjának újratöltése</strong><br />» %1$s',
-	'LOG_IMAGESET_REFRESHED'		=> '<strong>Képkészlet újratöltése</strong><br />» %s',
-
 	'LOG_INACTIVE_ACTIVATE'	=> '<strong>Inaktív felhasználók aktiválása</strong><br />» %s',
 	'LOG_INACTIVE_DELETE'	=> '<strong>Inaktív felhasználók törlése</strong><br />» %s',
 	'LOG_INACTIVE_REMIND'	=> '<strong>Emlékeztető e-mail küldése inaktív felhasználóknak</strong><br />» %s',
@@ -10844,6 +11150,7 @@ $lang = array_merge($lang, array(
 	'LOG_U_ROLE_EDIT'		=> '<strong>Felhasználói szerep szerkesztése</strong><br />» %s',
 	'LOG_U_ROLE_REMOVED'	=> '<strong>Felhasználói szerep törlése</strong><br />» %s',
 
+	'LOG_PLUPLOAD_TIDY_FAILED'		=> '<strong>Unable to open %1$s for tidying, check permissions.</strong><br />Exception: %2$s<br />Trace: %3$s',
 	'LOG_PROFILE_FIELD_ACTIVATE'	=> '<strong>Profil mező aktiválása</strong><br />» %s',
 	'LOG_PROFILE_FIELD_CREATE'		=> '<strong>Profil mező hozzáadása</strong><br />» %s',
 	'LOG_PROFILE_FIELD_DEACTIVATE'	=> '<strong>Profil mező deaktiválása</strong><br />» %s',
@@ -10852,13 +11159,13 @@ $lang = array_merge($lang, array(
 
 	'LOG_PRUNE'					=> '<strong>Fórumok megtisztítása</strong><br />» %s',
 	'LOG_AUTO_PRUNE'			=> '<strong>Fórumok automatikus tisztítása</strong><br />» %s',
+	'LOG_PRUNE_SHADOW'		=> '<strong>Auto-pruned shadow topics</strong><br />Â» %s',
 	'LOG_PRUNE_USER_DEAC'		=> '<strong>Felhasználók deaktiválása</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_DEL'	=> '<strong>Felhasználók megtisztítása – törölt felhasználók hozzászólásainak törlése</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_ANON'	=> '<strong>Felhasználók megtisztítása – törölt felhasználók hozzászólásainak megtartása</strong><br />» %s',
 
 	'LOG_PURGE_CACHE'			=> '<strong>Gyorsítótár kiürítése</strong>',
 	'LOG_PURGE_SESSIONS'		=> '<strong>Munkamenetek törlése</strong>',
-
 
 	'LOG_RANK_ADDED'		=> '<strong>Új rang hozzáadása</strong><br />» %s',
 	'LOG_RANK_REMOVED'		=> '<strong>Rang törlése</strong><br />» %s',
@@ -10868,15 +11175,17 @@ $lang = array_merge($lang, array(
 	'LOG_REASON_REMOVED'	=> '<strong>Jelentés/visszautasítás ok törlése</strong><br />» %s',
 	'LOG_REASON_UPDATED'	=> '<strong>Jelentés/visszautasítás ok frissítése</strong><br />» %s',
 
-	'LOG_REFERER_INVALID'		=> '<strong>Sikertelen referer összevetés</strong><br />»Referer értéke: “<em>%1$s</em>”. A kérés visszautasításra került, a munkamenet meg lett szüntetve.',
+	'LOG_REFERER_INVALID'		=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 	'LOG_RESET_DATE'			=> '<strong>Fórum indulási dátumának lenullázása</strong>',
 	'LOG_RESET_ONLINE'			=> '<strong>Valaha jelenlévő legtöbb felhasználó számának lenullázása</strong>',
+	'LOG_RESYNC_FILES_STATS'	=> '<strong>File statistics resynchronised</strong>',
 	'LOG_RESYNC_POSTCOUNTS'		=> '<strong>Felhasználói hozzászólásszámok újraszinkronizálása</strong>',
 	'LOG_RESYNC_POST_MARKING'	=> '<strong>Csillagozott témák újraszinkronizálása</strong>',
 	'LOG_RESYNC_STATS'			=> '<strong>Hozzászólás, téma és felhasználói statisztikák újraszinkronizálása</strong>',
 
 	'LOG_SEARCH_INDEX_CREATED'	=> '<strong>Keresőindex létrehozása</strong><br />» %s',
 	'LOG_SEARCH_INDEX_REMOVED'	=> '<strong>Keresőindex törlése</strong><br />» %s',
+	'LOG_SPHINX_ERROR'			=> '<strong>Sphinx Error</strong><br />Â» %s',
 	'LOG_STYLE_ADD'				=> '<strong>Új megjelenés felvétele</strong><br />» %s',
 	'LOG_STYLE_DELETE'			=> '<strong>Megjelenés törlése</strong><br />» %s',
 	'LOG_STYLE_EDIT_DETAILS'	=> '<strong>Megjelenés szerkesztése</strong><br />» %s',
@@ -10943,15 +11252,18 @@ $lang = array_merge($lang, array(
 	'LOG_USER_GROUP_RESIGN'			=> '<strong>Lemondás a csoporttagságról:</strong><br />» %s',
 
 	'LOG_WARNING_DELETED'		=> '<strong>Felhasználó figyelmeztetésének törlése</strong><br />» %s',
-	'LOG_WARNINGS_DELETED'		=> '<strong>Felhasználó %2$s figyelmeztetésének törlése</strong><br />» %1$s',
 	'LOG_WARNINGS_DELETED_ALL'	=> '<strong>Felhasználó összes figyelmeztetésének törlése</strong><br />» %s',
 
 	'LOG_WORD_ADD'			=> '<strong>Cenzúrázott szó hozzáadása</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>Cenzúrázott szó törlése</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Cenzúrázott szó szerkesztése</strong><br />» %s',
+
+	'LOG_EXT_ENABLE'	=> '<strong>Extension enabled</strong><br />Â» %s',
+	'LOG_EXT_DISABLE'	=> '<strong>Extension disabled</strong><br />Â» %s',
+	'LOG_EXT_PURGE'		=> '<strong>Extensionâ€™s data deleted</strong><br />Â» %s',
+
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
-
 ));
 
 $lang = array_merge($lang, array(
@@ -11252,7 +11564,7 @@ $lang = array_merge($lang, array(
 	'ACP_PORTAL_WELCOME_EXPLAIN'=> '',
 	'ADM_LOGOUT'			=> 'AVP&nbsp;kilépés',
 	'ADM_LOGGED_OUT'		=> 'Sikeresen kiléptél az adminisztrátori vezérlőpultból.',
-	'LOG_REFERER_INVALID'	=> '<strong>Sikertelen referer összevetés</strong><br />»Referer értéke: “<em>%1$s</em>”. A kérés visszautasításra került, a munkamenet meg lett szüntetve.',
+	'LOG_REFERER_INVALID'	=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 
 	'ACP_ABBCODES'			=> 'BBcode Box',
 	'LOG_CONFIG_ABBCODES'	=> '<strong>Altered BBCode Box settings</strong>',
@@ -11658,7 +11970,7 @@ $lang = array_merge($lang, array(
 	'SELECT_A_PREFIX'				=> 'Select a prefix',
 	'ACP_SEOQUERYS'					=> 'SEO Queries',
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Csatolmányok kezelése',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can list and delete files attached to posts and private messages.',
 	'LOG_ATTACH_DEL'				=> '<strong>Attachments deleted</strong><br />» %s',
 	'LOG_ATTACH_REASSIGNED'			=> '<strong>Attachment reassigned to Post</strong><br />» ID %1$d - %2$s',
 	'TOTAL_SIZE'					=> 'Total size',
@@ -11677,11 +11989,11 @@ $lang = array_merge($lang, array(
 	'ACP_INTRO'				=> 'Intro',
 
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Csatolmányok kezelése',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
 	'TOTAL_SIZE'				=> 'Total size',
 	'DOWNLOADS'				=> 'Letöltések száma',
 
-	'NO_AVATAR'				=> 'URL of the avatar for all the have no separate',
+	'NO_AVATAR'				=> 'No avatar selected',
 	'NO_AVATAR_EXPLAIN'			=> 'The optimal size of the avatar is 120x120px, this box is left blank, no picture at all. <br /> Demo URL: http://www.userboard.org/images/no_avatar_1.gif',
 	'GROUP_ICON'				=> 'Group Icon',
 	'GROUP_ICON_EXPLAIN'			=> 'Upload your Group Icons into Upload &#187; Topic/Group Icons',
@@ -12844,6 +13156,97 @@ $lang = array_merge($lang, array(
 	'NO_EMAIL_SUBJECT'		=> 'Nem adtad meg az e-mail témáját.',
 ));
 
+#######language/en/acp/extensions.php#######
+
+$lang = array_merge($lang, array(
+	'EXTENSION'					=> 'Kiterjesztés',
+	'EXTENSIONS'				=> 'Extensions',
+	'EXTENSIONS_ADMIN'			=> 'Extensions Manager',
+	'EXTENSIONS_EXPLAIN'		=> 'The Extensions Manager is a tool in your phpBB Board which allows you to manage all of your extensions statuses and view information about them.',
+	'EXTENSION_INVALID_LIST'	=> 'The “%s” extension is not valid.<br />%s<br /><br />',
+	'EXTENSION_NOT_AVAILABLE'	=> 'The selected extension is not available for this board, please verify your phpBB and PHP versions are allowed (see the details page).',
+	'EXTENSION_DIR_INVALID'		=> 'The selected extension has an invalid directory structure and cannot be enabled.',
+	'EXTENSION_NOT_ENABLEABLE'	=> 'The selected extension cannot be enabled, please verify the extension’s requirements.',
+
+	'DETAILS'				=> 'Adatok',
+
+	'EXTENSIONS_DISABLED'	=> 'Disabled Extensions',
+	'EXTENSIONS_ENABLED'	=> 'Enabled Extensions',
+
+	'EXTENSION_DELETE_DATA'	=> 'Delete data',
+	'EXTENSION_DISABLE'		=> 'Disable',
+	'EXTENSION_ENABLE'		=> 'Enable',
+
+	'EXTENSION_DELETE_DATA_EXPLAIN'	=> 'Deleting an extension’s data removes all of its data and settings. The extension files are retained so it can be enabled again.',
+	'EXTENSION_DISABLE_EXPLAIN'		=> 'Disabling an extension retains its files, data and settings but removes any functionality added by the extension.',
+	'EXTENSION_ENABLE_EXPLAIN'		=> 'Enabling an extension allows you to use it on your board.',
+
+	'EXTENSION_DELETE_DATA_IN_PROGRESS'	=> 'The extension’s data is currently being deleted. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_DISABLE_IN_PROGRESS'	=> 'The extension is currently being disabled. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_ENABLE_IN_PROGRESS'	=> 'The extension is currently being enabled. Please do not leave or refresh this page until it is completed.',
+
+	'EXTENSION_DELETE_DATA_SUCCESS'	=> 'The extension’s data was deleted successfully',
+	'EXTENSION_DISABLE_SUCCESS'		=> 'The extension was disabled successfully',
+	'EXTENSION_ENABLE_SUCCESS'		=> 'The extension was enabled successfully',
+
+	'EXTENSION_NAME'			=> 'Extension Name',
+	'EXTENSION_ACTIONS'			=> 'Actions',
+	'EXTENSION_OPTIONS'			=> 'Options',
+	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
+	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s files from the filesystem</li>
+			<li>Upload the new files</li>
+			<li>Enable the extension</li>
+		</ol>',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s data</li>
+			<li>Delete the extension’s files from the filesystem</li>
+		</ol>',
+
+	'EXTENSION_DELETE_DATA_CONFIRM'	=> 'Are you sure that you wish to delete the data associated with “%s”?<br /><br />This removes all of its data and settings and cannot be undone!',
+	'EXTENSION_DISABLE_CONFIRM'		=> 'Are you sure that you wish to disable the “%s” extension?',
+	'EXTENSION_ENABLE_CONFIRM'		=> 'Are you sure that you wish to enable the “%s” extension?',
+	'EXTENSION_FORCE_UNSTABLE_CONFIRM'	=> 'Are you sure that you wish to force the use of unstable version?',
+
+	'RETURN_TO_EXTENSION_LIST'	=> 'Return to the extension list',
+
+	'EXT_DETAILS'			=> 'Extension Details',
+	'DISPLAY_NAME'			=> 'Disply Name (may be NULL)',
+	'CLEAN_NAME'			=> 'Clean Name',
+	'TYPE'					=> 'Type',
+	'DESCRIPTION'			=> 'Leírás',
+	'VERSION'				=> 'Verzió',
+	'HOMEPAGE'				=> 'Homepage',
+	'PATH'					=> 'File Path',
+	'TIME'					=> 'Idő',
+	'LICENSE'				=> 'Licence',
+
+	'REQUIREMENTS'			=> 'Requirements',
+	'PHPBB_VERSION'			=> 'phpBB Version',
+	'PHP_VERSION'			=> 'PHP Version',
+	'AUTHOR_INFORMATION'	=> 'Author Information',
+	'AUTHOR_NAME'			=> 'Name',
+	'AUTHOR_EMAIL'			=> 'Email',
+	'AUTHOR_HOMEPAGE'		=> 'Homepage',
+	'AUTHOR_ROLE'			=> 'Role',
+
+	'NOT_UP_TO_DATE'		=> '%s is not up to date',
+	'UP_TO_DATE'			=> '%s is up to date',
+	'ANNOUNCEMENT_TOPIC'	=> 'Release Announcement',
+	'DOWNLOAD_LATEST'		=> 'Download Version',
+	'NO_VERSIONCHECK'		=> 'No version check information given.',
+
+	'VERSIONCHECK_FORCE_UPDATE_ALL'		=> 'Re-Check all versions',
+	'FORCE_UNSTABLE'					=> 'Always check for unstable versions',
+	'EXTENSIONS_VERSION_CHECK_SETTINGS'	=> 'Version check settings',
+
+	'META_FIELD_NOT_SET'	=> 'Required meta field %s has not been set.',
+	'META_FIELD_INVALID'	=> 'Meta field %s is invalid.',
+));
+
 #######language/en/acp/forums.php#######
 
 $lang = array_merge($lang, array(
@@ -12853,6 +13256,10 @@ $lang = array_merge($lang, array(
 	'AUTO_PRUNE_FREQ_EXPLAIN'	=> 'A megtisztítások között eltelt idő napokban.',
 	'AUTO_PRUNE_VIEWED'			=> 'Automatikus megtisztítás utolsó megtekintés ideje alapján',
 	'AUTO_PRUNE_VIEWED_EXPLAIN'	=> 'A téma az utolsó megtekintés után ennyi nap elteltével kerül eltávolításra.',
+	'AUTO_PRUNE_SHADOW_FREQ'	=> 'Auto-prune shadow topics frequency',
+	'AUTO_PRUNE_SHADOW_DAYS'	=> 'Auto-prune shadow topics age',
+	'AUTO_PRUNE_SHADOW_DAYS_EXPLAIN'	=> 'Number of days after which shadow topic is removed.',
+	'AUTO_PRUNE_SHADOW_FREQ_EXPLAIN'	=> 'Time in days between pruning events.',
 
 	'CONTINUE'						=> 'Folytatás',
 	'COPY_PERMISSIONS_EXPLAIN'		=> 'Az új fórum jogosultságbeállításának megkönnyítése érdekében a jogosultságokat egy az egyben átmásolhatod egy másik fórumról.',
@@ -12911,6 +13318,8 @@ $lang = array_merge($lang, array(
 	'FORUM_PASSWORD_OLD'				=> 'A fórum jelszó régi kódolási eljárást használ, ezért meg kell változtatni.',
 	'FORUM_PASSWORD_MISMATCH'			=> 'A megadott jelszavak nem egyeznek meg.',
 	'FORUM_PRUNE_SETTINGS'				=> 'Fórum megtisztítás beállítások',
+	'FORUM_PRUNE_SHADOW'				=> 'Enable auto-pruning of shadow topics',
+	'FORUM_PRUNE_SHADOW_EXPLAIN'			=> 'Prunes the forum of shadow topics, set the frequency/age parameters below.',
 	'FORUM_RESYNCED'					=> 'A „%s” fórum sikeresen újraszinkronizálásra került.',
 	'FORUM_RULES_EXPLAIN'				=> 'A fórum szabályok az adott fórum összes oldalán megjelennek.',
 	'FORUM_RULES_LINK'					=> 'Kattints ide a fórum szabályainak megtekintéséhez',
@@ -13002,6 +13411,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE_EXPLAIN'		=> 'Az oldal e részén a csoportokat tudod adminisztrálni. Létrehozhatsz újakat, valamint törölheted és szerkesztheted a már meglévőket. Ezen túl csoportvezetőket jelölhetsz ki, megadhatod, a csoportok státusza nyitott/rejtett/zárt legyen, vagy módosíthatod a csoportok nevét és leírását.',
+	'ADD_GROUP_CATEGORY'			=> 'Add category',
 	'GROUP_ADD_USERS'				=> 'Felhasználók felvétele',
 	'ADD_USERS_EXPLAIN'				=> 'Itt fel tudsz venni új felhasználókat a csoportba. Megadhatod azt is, hogy a felhasználóknak ez legyen az új elsődleges csoportjuk. Továbbá csoportvezetőkké is teheted őket. Kérjük, minden felhasználónevet külön sorba írj.',
 
@@ -13015,11 +13425,10 @@ $lang = array_merge($lang, array(
 	'GROUP_APPROVED'				=> 'Jóváhagyott tagok',
 	'GROUP_AVATAR'					=> 'Csoport avatar',
 	'GROUP_AVATAR_EXPLAIN'			=> 'Ez a kép kerül megjelenítésre a csoport vezérlőpultban.',
+	'GROUP_CATEGORY_NAME'			=> 'Category name',
 	'GROUP_CLOSED'					=> 'Zárt',
 	'GROUP_COLOR'					=> 'Csoportszín',
 	'GROUP_COLOR_EXPLAIN'			=> 'Ebben a színben fog megjelenni a tagok felhasználóneve, az alapértelmezett felhasználói érték használatához hagyd üresen.',
-	'GROUP_CONFIRM_ADD_USER'		=> 'Biztosan fel akarod venni a %1$s felhasználót a csoportba?',
-	'GROUP_CONFIRM_ADD_USERS'		=> 'Biztosan fel akarod venni a %1$s felhasználókat a csoportba?',
 	'GROUP_CREATED'					=> 'A csoport sikeresen létrehozásra került.',
 	'GROUP_DEFAULT'					=> 'Csoport elsődlegessé tétele a tagnak',
 	'GROUP_DEFS_UPDATED'			=> 'A csoport elsődlegessé tételre került a kiválasztott tagoknak.',
@@ -13061,6 +13470,8 @@ $lang = array_merge($lang, array(
 	'GROUP_SETTINGS_SAVE'			=> 'Csoportra kiterjedő beállítások',
 	'GROUP_SKIP_AUTH'				=> 'Csoportvezető felmentése a csoport jogosultságok alól',
 	'GROUP_SKIP_AUTH_EXPLAIN'		=> 'Ha be van kapcsolva, a csoportvezetőre nem vonatkoznak a csoportra beállított jogosultságok.',
+	'GROUP_SPECIAL'					=> 'Pre-defined',
+	'GROUP_TEAMPAGE'				=> 'Display group on teampage',
 	'GROUP_TYPE'					=> 'Csoport típusa',
 	'GROUP_TYPE_EXPLAIN'			=> 'Ez határozza meg melyik felhasználók láthatják a csoportot vagy csatlakozhatnak hozzá.',
 	'GROUP_UPDATED'					=> 'A csoport beállítások sikeresen frissítésre kerültek.',
@@ -13069,19 +13480,37 @@ $lang = array_merge($lang, array(
 	'GROUP_USERS_EXIST'				=> 'A kiválasztott felhasználók már tagok.',
 	'GROUP_USERS_REMOVE'			=> 'A felhasználók eltávolításra kerültek a csoportból, valamint az alapértelmezett dolgok is sikeresen beállításra kerültek.',
 
+	'LEGEND_EXPLAIN'				=> 'These are the groups which are displayed in the group legend:',
+	'LEGEND_SETTINGS'				=> 'Legend settings',
+	'LEGEND_SORT_GROUPNAME'			=> 'Sort legend by group name',
+	'LEGEND_SORT_GROUPNAME_EXPLAIN'	=> 'The order below is ignored when this option is enabled.',
+
+	'MANAGE_LEGEND'			=> 'Manage group legend',
+	'MANAGE_TEAMPAGE'		=> 'Manage teampage',
 	'MAKE_DEFAULT_FOR_ALL'		=> 'Elsődleges csoporttá tétel minden tagnak',
 	'MEMBERS'					=> 'Tagok',
 
 	'NO_GROUP'					=> 'A keresett csoport nem létezik.',
+	'NO_GROUPS_ADDED'			=> 'No groups added yet.',
 	'NO_GROUPS_CREATED'			=> 'Még nem lett létrehozva csoport.',
 	'NO_PERMISSIONS'			=> 'Ne másolja a jogosultságokat',
 	'NO_USERS'					=> 'A keresett felhasználók nem léteznek.',
 	'NO_USERS_ADDED'			=> 'Nem került felhasználó hozzáadásra a csoporthoz.',
 	'NO_VALID_USERS'			=> 'Nem adtál meg felhasználót, akin elvégezhető lenne ez a művelet.',
 
+	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> 'Előre meghatározott csoportok',
 	'SPECIAL_GROUPS_EXPLAIN'	=> 'Az előre meghatározott csoportok speciális csoportok, melyeket nem lehet törölni vagy közvetlenül módosítani. Mindazonáltal felhasználókat fel tudsz venni beléjük és néhány alap beállítást is megváltoztathatsz.',
 
+	'TEAMPAGE'					=> 'Teampage',
+	'TEAMPAGE_DISP_ALL'			=> 'All memberships',
+	'TEAMPAGE_DISP_DEFAULT'		=> 'User’s default group only',
+	'TEAMPAGE_DISP_FIRST'		=> 'First membership only',
+	'TEAMPAGE_EXPLAIN'			=> 'These are the groups which are displayed on the teampage:',
+	'TEAMPAGE_FORUMS'			=> 'Display moderated forums',
+	'TEAMPAGE_FORUMS_EXPLAIN'	=> 'If set to yes, moderators will have a list with all of the forums where they have moderator permissions displayed in their row. This can be very database intensive for big boards.',
+	'TEAMPAGE_MEMBERSHIPS'		=> 'Display user memberships',
+	'TEAMPAGE_SETTINGS'			=> 'Teampage settings',
 	'TOTAL_MEMBERS'				=> 'Tagok',
 
 	'USERS_APPROVED'				=> 'A felhasználók sikeresen jóváhagyásra kerültek',
@@ -13467,26 +13896,14 @@ $lang = array_merge($lang, array(
 	'ACP_FILES'						=> 'Adminisztrátori nyelvi állományok',
 	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> 'Itt a nyelvi csomagokat telepítheted, illetve törölheted. Az alapértelmezett nyelvi csomag egy csillaggal (*) van megjelölve.',
 
-	'EMAIL_FILES'			=> 'E-mail sablonok',
-
-	'FILE_CONTENTS'				=> 'Állomány tartalma',
-	'FILE_FROM_STORAGE'			=> 'Állomány a tároló mappából',
-
-	'HELP_FILES'				=> 'Súgó állományok',
-
-	'INSTALLED_LANGUAGE_PACKS'	=> 'Telepített nyelvi csomagok',
-	'INVALID_LANGUAGE_PACK'		=> 'A kiválasztott nyelvi csomag nem tűnik érvényesnek. Kérjük, ellenőrizd a nyelvi csomagot, és ha szükséges, töltsd fel újra.',
-	'INVALID_UPLOAD_METHOD'		=> 'A kiválasztott feltöltési mód nem érvényes, kérünk, válassz másik módot.',
+	'DELETE_LANGUAGE_CONFIRM'		=> 'Are you sure you wish to delete “%s”?',
+	'INSTALLED_LANGUAGE_PACKS'		=> 'Telepített nyelvi csomagok',
 
 	'LANGUAGE_DETAILS_UPDATED'			=> 'A nyelvi adatok sikeresen frissítésre kerültek.',
-	'LANGUAGE_ENTRIES'					=> 'Nyelvi elemek',
-	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Itt megváltoztathatod a jelenlegi nyelvi csomag bejegyzéseket vagy a még nem lefordítottakat.<br /><strong>Megjegyzés:</strong> Miután módosítottad a nyelvi állományt, a változtatások egy külön mappában kerülnek majd tárolásra, ahonnan letöltheted a csomagot. Amíg az eredeti nyelvi állományokat nem helyettesíted az újakkal (azzal, hogy feltöltöd a tárhelyedre), a változtatások a felhasználóid számára nem lesznek érzékelhetők.',
-	'LANGUAGE_FILES'					=> 'Nyelvi állományok',
-	'LANGUAGE_KEY'						=> 'Nyelvi kulcs',
 	'LANGUAGE_PACK_ALREADY_INSTALLED'	=> 'Ez a nyelvi csomag már telepítve van.',
-	'LANGUAGE_PACK_DELETED'				=> 'A <strong>%s</strong> nyelvi csomag sikeresen eltávolításra került. Az ezt a nyelvet használó felhasználók nyelve visszaállításra került a fórum alapértelmezett nyelvére.',
+	'LANGUAGE_PACK_DELETED'				=> 'The language pack “%s” has been removed successfully. All users using this language have been reset to the board’s default language.',
 	'LANGUAGE_PACK_DETAILS'				=> 'Nyelvi csomag adatok',
-	'LANGUAGE_PACK_INSTALLED'			=> 'A <strong>%s</strong> nyelvi csomag sikeresen telepítésre került.',
+	'LANGUAGE_PACK_INSTALLED'			=> 'The language pack “%s” has been successfully installed.',
 	'LANGUAGE_PACK_CPF_UPDATE'			=> 'Az egyedi profil mezők nyelvspecifikus szövegei az alapértelmezett nyelvből lettek átmásolva. Módosítd őket, ha szükséges.',
 	'LANGUAGE_PACK_ISO'					=> 'ISO',
 	'LANGUAGE_PACK_LOCALNAME'			=> 'Lokalizált név',
@@ -13499,33 +13916,44 @@ $lang = array_merge($lang, array(
 	'LANG_ISO_CODE'						=> 'ISO kód',
 	'LANG_LOCAL_NAME'					=> 'Lokalizált név',
 
-	'MISSING_LANGUAGE_FILE'		=> 'Hiányzó nyelvi állomány: <strong style="color:red">%s</strong>',
+	'MISSING_LANG_FILES'		=> 'Missing language files',
 	'MISSING_LANG_VARIABLES'	=> 'Hiányzó nyelvi változók',
-	'MODS_FILES'				=> 'MOD-ok nyelvi állományai',
 
 	'NO_FILE_SELECTED'				=> 'Nem adtál meg nyelvi állományt.',
 	'NO_LANG_ID'					=> 'Nem adtál meg nyelvi csomagot.',
-	'NO_REMOVE_DEFAULT_LANG'		=> 'Az alapértelmezett nyelvi csomagot nem tudod eltávolítani.<br />Ha törölni szeretnéd ezt a nyelvi csomagot, először változtasd meg a fórum alapértelmezett nyelvét.',
+	'NO_REMOVE_DEFAULT_LANG'		=> 'You are not able to remove the default language pack.<br />If you want to remove this language pack, change your board’s default language first.',
 	'NO_UNINSTALLED_LANGUAGE_PACKS'	=> 'Nincs telepítetlen nyelvi csomag.',
 
-	'REMOVE_FROM_STORAGE_FOLDER'		=> 'Törlés a tárolási mappából',
-
-	'SELECT_DOWNLOAD_FORMAT'	=> 'Letöltendő csomag formátumának kiválasztása',
-	'SUBMIT_AND_DOWNLOAD'		=> 'Állomány elküldése és letöltése',
-	'SUBMIT_AND_UPLOAD'			=> 'Állomány elküldése és feltöltése',
-
-	'THOSE_MISSING_LANG_FILES'			=> 'A következő nyelvi állományok hiányoznak a %s nyelvi könyvtárból:',
-	'THOSE_MISSING_LANG_VARIABLES'		=> 'A következő nyelvi változók hiányoznak a <strong>%s</strong> nyelvi csomagból:',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 
 	'UNINSTALLED_LANGUAGE_PACKS'	=> 'Telepítetlen nyelvi csomagok.',
 
+	// 3.0.12
+	'EMAIL_FILES'			=> 'E-mail sablonok',
+	'FILE_CONTENTS'				=> 'Állomány tartalma',
+	'FILE_FROM_STORAGE'			=> 'Állomány a tároló mappából',
+	'HELP_FILES'				=> 'Súgó állományok',
+	'INSTALLED_LANGUAGE_PACKS'	=> 'Telepített nyelvi csomagok',
+	'INVALID_LANGUAGE_PACK'		=> 'A kiválasztott nyelvi csomag nem tűnik érvényesnek. Kérjük, ellenőrizd a nyelvi csomagot, és ha szükséges, töltsd fel újra.',
+	'INVALID_UPLOAD_METHOD'		=> 'A kiválasztott feltöltési mód nem érvényes, kérünk, válassz másik módot.',
+	'LANGUAGE_ENTRIES'					=> 'Nyelvi elemek',
+	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Itt megváltoztathatod a jelenlegi nyelvi csomag bejegyzéseket vagy a még nem lefordítottakat.<br /><strong>Megjegyzés:</strong> Miután módosítottad a nyelvi állományt, a változtatások egy külön mappában kerülnek majd tárolásra, ahonnan letöltheted a csomagot. Amíg az eredeti nyelvi állományokat nem helyettesíted az újakkal (azzal, hogy feltöltöd a tárhelyedre), a változtatások a felhasználóid számára nem lesznek érzékelhetők.',
+	'LANGUAGE_FILES'					=> 'Nyelvi állományok',
+	'LANGUAGE_KEY'						=> 'Nyelvi kulcs',
+	'MISSING_LANGUAGE_FILE'		=> 'Hiányzó nyelvi állomány: <strong style="color:red">%s</strong>',
+	'SELECT_DOWNLOAD_FORMAT'	=> 'Letöltendő csomag formátumának kiválasztása',
+	'SUBMIT_AND_DOWNLOAD'		=> 'Állomány elküldése és letöltése',
+	'SUBMIT_AND_UPLOAD'			=> 'Állomány elküldése és feltöltése',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 	'UNABLE_TO_WRITE_FILE'		=> 'Az állományt nem sikerült kiírni a %s helyre.',
 	'UPLOAD_COMPLETED'			=> 'A feltöltés sikeresen befejezésre került.',
 	'UPLOAD_FAILED'				=> 'A feltöltés ismeretlen okokból nem volt sikeres. A megfelelő állományt helyettesítsd kézzel.',
 	'UPLOAD_METHOD'				=> 'Feltöltési mód',
 	'UPLOAD_SETTINGS'			=> 'Feltöltés beállítások',
-
 	'WRONG_LANGUAGE_FILE'		=> 'A kiválasztott nyelvi állomány hibás.',
+	// 3.0.12
 ));
 
 #######language/en/acp/lexicon.php#######
@@ -13858,6 +14286,171 @@ $lang = array_merge($lang, array(
 	'ROLE_DESCRIPTION_ADMIN_FOOTBALL'	=> 'Can edit final match results.',
 ));
 
+#######language/en/acp/permissions_phpbb.php#######
+
+$lang = array_merge($lang, array(
+	'ACL_CAT_ACTIONS'		=> 'Actions',
+	'ACL_CAT_CONTENT'		=> 'Content',
+	'ACL_CAT_FORUMS'		=> 'Forums',
+	'ACL_CAT_MISC'			=> 'Misc',
+	'ACL_CAT_PERMISSIONS'	=> 'Permissions',
+	'ACL_CAT_PM'			=> 'Private messages',
+	'ACL_CAT_POLLS'			=> 'Polls',
+	'ACL_CAT_POST'			=> 'Post',
+	'ACL_CAT_POST_ACTIONS'	=> 'Post actions',
+	'ACL_CAT_POSTING'		=> 'Posting',
+	'ACL_CAT_PROFILE'		=> 'Profile',
+	'ACL_CAT_SETTINGS'		=> 'Settings',
+	'ACL_CAT_TOPIC_ACTIONS'	=> 'Topic actions',
+	'ACL_CAT_USER_GROUP'	=> 'Users &amp; Groups',
+));
+
+// User Permissions
+$lang = array_merge($lang, array(
+	'ACL_U_VIEWPROFILE'	=> 'Can view profiles, memberlist and online list',
+	'ACL_U_CHGNAME'		=> 'Can change username',
+	'ACL_U_CHGPASSWD'	=> 'Can change password',
+	'ACL_U_CHGEMAIL'	=> 'Can change email address',
+	'ACL_U_CHGAVATAR'	=> 'Can change avatar',
+	'ACL_U_CHGGRP'		=> 'Can change default usergroup',
+	'ACL_U_CHGPROFILEINFO'	=> 'Can change profile field information',
+
+	'ACL_U_ATTACH'		=> 'Can attach files',
+	'ACL_U_DOWNLOAD'	=> 'Can download files',
+	'ACL_U_SAVEDRAFTS'	=> 'Can save drafts',
+	'ACL_U_CHGCENSORS'	=> 'Can disable word censors',
+	'ACL_U_SIG'			=> 'Can use signature',
+
+	'ACL_U_SENDPM'		=> 'Can send private messages',
+	'ACL_U_MASSPM'		=> 'Can send messages to multiple users',
+	'ACL_U_MASSPM_GROUP'=> 'Can send messages to groups',
+	'ACL_U_READPM'		=> 'Can read private messages',
+	'ACL_U_PM_EDIT'		=> 'Can edit own private messages',
+	'ACL_U_PM_DELETE'	=> 'Can remove private messages from own folder',
+	'ACL_U_PM_FORWARD'	=> 'Can forward private messages',
+	'ACL_U_PM_EMAILPM'	=> 'Can email private messages',
+	'ACL_U_PM_PRINTPM'	=> 'Can print private messages',
+	'ACL_U_PM_ATTACH'	=> 'Can attach files in private messages',
+	'ACL_U_PM_DOWNLOAD'	=> 'Can download files in private messages',
+	'ACL_U_PM_BBCODE'	=> 'Can use BBCode in private messages',
+	'ACL_U_PM_SMILIES'	=> 'Can use smilies in private messages',
+	'ACL_U_PM_IMG'		=> 'Can use [img] BBCode tag in private messages',
+	'ACL_U_PM_FLASH'	=> 'Can use [flash] BBCode tag in private messages',
+
+	'ACL_U_SENDEMAIL'	=> 'Can send emails',
+	'ACL_U_SENDIM'		=> 'Can send instant messages',
+	'ACL_U_IGNOREFLOOD'	=> 'Can ignore flood limit',
+	'ACL_U_HIDEONLINE'	=> 'Can hide online status',
+	'ACL_U_VIEWONLINE'	=> 'Can view hidden online users',
+	'ACL_U_SEARCH'		=> 'Can search board',
+));
+
+// Forum Permissions
+$lang = array_merge($lang, array(
+	'ACL_F_LIST'		=> 'Can see forum',
+	'ACL_F_READ'		=> 'Can read forum',
+	'ACL_F_SEARCH'		=> 'Can search the forum',
+	'ACL_F_SUBSCRIBE'	=> 'Can subscribe forum',
+	'ACL_F_PRINT'		=> 'Can print topics',
+	'ACL_F_EMAIL'		=> 'Can email topics',
+	'ACL_F_BUMP'		=> 'Can bump topics',
+	'ACL_F_USER_LOCK'	=> 'Can lock own topics',
+	'ACL_F_DOWNLOAD'	=> 'Can download files',
+	'ACL_F_REPORT'		=> 'Can report posts',
+
+	'ACL_F_POST'		=> 'Can start new topics',
+	'ACL_F_STICKY'		=> 'Can post stickies',
+	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_REPLY'		=> 'Can reply to topics',
+	'ACL_F_EDIT'		=> 'Can edit own posts',
+	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
+	'ACL_F_SOFTDELETE'	=> 'Can soft delete own posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_F_IGNOREFLOOD' => 'Can ignore flood limit',
+	'ACL_F_POSTCOUNT'	=> 'Increment post counter<br /><em>Please note that this setting only affects new posts.</em>',
+	'ACL_F_NOAPPROVE'	=> 'Can post without approval',
+
+	'ACL_F_ATTACH'		=> 'Can attach files',
+	'ACL_F_ICONS'		=> 'Can use topic/post icons',
+	'ACL_F_BBCODE'		=> 'Can use BBCode',
+	'ACL_F_FLASH'		=> 'Can use [flash] BBCode tag',
+	'ACL_F_IMG'			=> 'Can use [img] BBCode tag',
+	'ACL_F_SIGS'		=> 'Can use signatures',
+	'ACL_F_SMILIES'		=> 'Can use smilies',
+
+	'ACL_F_POLL'		=> 'Can create polls',
+	'ACL_F_VOTE'		=> 'Can vote in polls',
+	'ACL_F_VOTECHG'		=> 'Can change existing vote',
+));
+
+// Moderator Permissions
+$lang = array_merge($lang, array(
+	'ACL_M_EDIT'		=> 'Can edit posts',
+	'ACL_M_DELETE'		=> 'Can permanently delete posts',
+	'ACL_M_SOFTDELETE'	=> 'Can soft delete posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_M_APPROVE'		=> 'Can approve and restore posts',
+	'ACL_M_REPORT'		=> 'Can close and delete reports',
+	'ACL_M_CHGPOSTER'	=> 'Can change post author',
+
+	'ACL_M_MOVE'	=> 'Can move topics',
+	'ACL_M_LOCK'	=> 'Can lock topics',
+	'ACL_M_SPLIT'	=> 'Can split topics',
+	'ACL_M_MERGE'	=> 'Can merge topics',
+
+	'ACL_M_INFO'	=> 'Can view post details',
+	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+));
+
+// Admin Permissions
+$lang = array_merge($lang, array(
+	'ACL_A_BOARD'		=> 'Can alter board settings/check for updates',
+	'ACL_A_SERVER'		=> 'Can alter server/communication settings',
+	'ACL_A_JABBER'		=> 'Can alter Jabber settings',
+	'ACL_A_PHPINFO'		=> 'Can view php settings',
+
+	'ACL_A_FORUM'		=> 'Can manage forums',
+	'ACL_A_FORUMADD'	=> 'Can add new forums',
+	'ACL_A_FORUMDEL'	=> 'Can delete forums',
+	'ACL_A_PRUNE'		=> 'Can prune forums',
+
+	'ACL_A_ICONS'		=> 'Can alter topic/post icons and smilies',
+	'ACL_A_WORDS'		=> 'Can alter word censors',
+	'ACL_A_BBCODE'		=> 'Can define BBCode tags',
+	'ACL_A_ATTACH'		=> 'Can alter attachment related settings',
+
+	'ACL_A_USER'		=> 'Can manage users<br /><em>This also includes seeing the users browser agent within the viewonline list.</em>',
+	'ACL_A_USERDEL'		=> 'Can delete/prune users',
+	'ACL_A_GROUP'		=> 'Can manage groups',
+	'ACL_A_GROUPADD'	=> 'Can add new groups',
+	'ACL_A_GROUPDEL'	=> 'Can delete groups',
+	'ACL_A_RANKS'		=> 'Can manage ranks',
+	'ACL_A_PROFILE'		=> 'Can manage custom profile fields',
+	'ACL_A_NAMES'		=> 'Can manage disallowed names',
+	'ACL_A_BAN'			=> 'Can manage bans',
+
+	'ACL_A_VIEWAUTH'	=> 'Can view permission masks',
+	'ACL_A_AUTHGROUPS'	=> 'Can alter permissions for individual groups',
+	'ACL_A_AUTHUSERS'	=> 'Can alter permissions for individual users',
+	'ACL_A_FAUTH'		=> 'Can alter forum permission class',
+	'ACL_A_MAUTH'		=> 'Can alter moderator permission class',
+	'ACL_A_AAUTH'		=> 'Can alter admin permission class',
+	'ACL_A_UAUTH'		=> 'Can alter user permission class',
+	'ACL_A_ROLES'		=> 'Can manage roles',
+	'ACL_A_SWITCHPERM'	=> 'Can use others permissions',
+
+	'ACL_A_STYLES'		=> 'Can manage styles',
+	'ACL_A_EXTENSIONS'	=> 'Can manage extensions',
+	'ACL_A_VIEWLOGS'	=> 'Can view logs',
+	'ACL_A_CLEARLOGS'	=> 'Can clear logs',
+	'ACL_A_MODULES'		=> 'Can manage modules',
+	'ACL_A_LANGUAGE'	=> 'Can manage language packs',
+	'ACL_A_EMAIL'		=> 'Can send mass email',
+	'ACL_A_BOTS'		=> 'Can manage bots',
+	'ACL_A_REASONS'		=> 'Can manage report/denial reasons',
+	'ACL_A_BACKUP'		=> 'Can backup/restore database',
+	'ACL_A_SEARCH'		=> 'Can manage search backends and settings',
+));
+
 #######language/en/acp/phpbb_seo.php#######
 
 $lang = array_merge($lang, array(
@@ -14029,6 +14622,7 @@ $lang = array_merge($lang, array(
 
 	'BBCODE_ADDED'				=> 'A BBCode sikeresen felvételre került.',
 	'BBCODE_EDITED'				=> 'A BBCode sikeresen szerkesztésre került.',
+	'BBCODE_DELETED'			=> 'The BBCode has been removed successfully.',
 	'BBCODE_NOT_EXIST'			=> 'A kiválasztott BBCode nem létezik.',
 	'BBCODE_HELPLINE'			=> 'Segítség',
 	'BBCODE_HELPLINE_EXPLAIN'	=> 'Ennek a mezőnek a tartalma fog megjelenni, ha a BBCode fölé viszed az egeret.',
@@ -14084,17 +14678,10 @@ $lang = array_merge($lang, array(
 	'EXPORT_SMILIES'			=> 'Smilies.pak exportálása és letöltése',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sErre a linkre kattintva a telepített emotikonok konfigurációja ki lesz írva a <samp>smilies.pak</samp> állományba, mely segítségével a letöltés után létre lehet hozni az összes emotikont plusz ezt a konfigurációs állományt tartalmazó <samp>.zip</samp> vagy <samp>.tgz</samp> csomagot.%s',
 
-
 	'ICONS_ADD'				=> 'Új ikon felvétele',
-	'ICONS_NONE_ADDED'		=> 'Nem került felvételre ikon.',
-	'ICONS_ONE_ADDED'		=> 'Az ikon sikeresen felvételre került.',
-	'ICONS_ADDED'			=> 'Az ikonok sikeresen felvételre kerültek.',
 	'ICONS_CONFIG'			=> 'Ikon konfiguráció',
 	'ICONS_DELETED'			=> 'Az ikon sikeresen törlésre került.',
 	'ICONS_EDIT'			=> 'Ikon szerkesztése',
-	'ICONS_ONE_EDITED'		=> 'Az ikon sikeresen frissítésre került.',
-	'ICONS_NONE_EDITED'		=> 'Nem került ikon frissítésre.',
-	'ICONS_EDITED'			=> 'Az ikonok sikeresen frissítésre kerültek.',
 	'ICONS_HEIGHT'			=> 'Ikon magasság',
 	'ICONS_IMAGE'			=> 'Ikon kép',
 	'ICONS_IMPORTED'		=> 'Az ikon csomag sikeresen telepítésre került.',
@@ -14124,9 +14711,6 @@ $lang = array_merge($lang, array(
 
 	'SELECT_PACKAGE'			=> 'Csomag állomány kiválasztása',
 	'SMILIES_ADD'				=> 'Új emotikon felvétele',
-	'SMILIES_NONE_ADDED'		=> 'Nem került felvételre emotikon.',
-	'SMILIES_ONE_ADDED'			=> 'Az emotikon sikeresen hozzáadásra került.',
-	'SMILIES_ADDED'				=> 'Az emotikonok sikeresen felvételre kerültek.',
 	'SMILIES_CODE'				=> 'Emotikon kód',
 	'SMILIES_CONFIG'			=> 'Emotikon konfiguráció',
 	'SMILIES_DELETED'			=> 'Az emotikon sikeresen törlésre került.',
@@ -14134,9 +14718,6 @@ $lang = array_merge($lang, array(
 	'SMILIE_NO_CODE'			=> 'Az „%s” emotikon nem lett figyelembe véve, mivel nem lett hozzá kód megadva.',
 	'SMILIE_NO_EMOTION'			=> 'Az „%s” emotikon nem lett figyelembe véve, mivel nem lett hozzá kitöltve az érzelem mező.',
 	'SMILIE_NO_FILE'			=> 'Az „%s” emotikon nem lett figyelembe véve, mivel a képfájl nem létezik.',
-	'SMILIES_NONE_EDITED'		=> 'Nem került frissítésre emotikon.',
-	'SMILIES_ONE_EDITED'		=> 'Az emotikon sikeresen frissítésre került.',
-	'SMILIES_EDITED'			=> 'Az emotikonok sikeresen frissítésre kerültek.',
 	'SMILIES_EMOTION'			=> 'Érzelem',
 	'SMILIES_HEIGHT'			=> 'Emotikon magasság',
 	'SMILIES_IMAGE'				=> 'Emotikon kép',
@@ -14148,7 +14729,6 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'Emotikon képállomány',
 	'SMILIES_WIDTH'				=> 'Emotikon szélesség',
 
-	'TOO_MANY_SMILIES'		=> 'Az üzenet túl sok emotikont tartalmaz. Legfeljebb %d használható.',
 	'WRONG_PAK_TYPE'		=> 'A megadott csomag nem tartalmazza a megfelelő adatokat.',
 ));
 
@@ -14246,8 +14826,11 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ADDED_PROFILE_FIELD'	=> 'Az egyedi profil mező sikeresen létrehozásra került.',
+	'ALPHA_DOTS'			=> 'Alphanumeric and dots (periods)',
 	'ALPHA_ONLY'			=> 'Csak alfanumerikus',
 	'ALPHA_SPACERS'			=> 'Alfanumerikus és térköz',
+	'ALPHA_UNDERSCORE'		=> 'Alphanumeric and underscores',
+	'ALPHA_PUNCTUATION'		=> 'Alphanumeric with comma, dots, underscore and dashes beginning with a letter',
 	'ALWAYS_TODAY'			=> 'Mindig a jelenlegi dátum',
 
 	'BOOL_ENTRIES_EXPLAIN'	=> 'Itt add meg a választási lehetőségeket.',
@@ -14274,6 +14857,10 @@ $lang = array_merge($lang, array(
 	'DISPLAY_AT_PROFILE_EXPLAIN'	=> 'A felhasználó a profil mező értékét a felhasználói vezérlőpultban módosíthatja.',
 	'DISPLAY_AT_REGISTER'			=> 'Megjelenítés regisztrációkor',
 	'DISPLAY_AT_REGISTER_EXPLAIN'	=> 'Ha ez be van állítva, a mező megjelenítésre kerül a regisztrációkor.',
+	'DISPLAY_ON_MEMBERLIST'			=> 'Display on memberlist screen',
+	'DISPLAY_ON_MEMBERLIST_EXPLAIN'	=> 'If this option is enabled, the field will be displayed in the user rows on the memberlist screen.',
+	'DISPLAY_ON_PM'					=> 'Display on view private message screen',
+	'DISPLAY_ON_PM_EXPLAIN'			=> 'If this option is enabled, the field will be displayed in the mini-profile on the private message screen.',
 	'DISPLAY_ON_VT'					=> 'Megjelenítés a témákban',
 	'DISPLAY_ON_VT_EXPLAIN'			=> 'Ha ez be van állítva, a mező megjelenítésre kerül a témákban, a hozzászólások melleti mini profilban.',
 	'DISPLAY_PROFILE_FIELD'			=> 'Profil mező nyilvános megjelenítése',
@@ -14287,20 +14874,26 @@ $lang = array_merge($lang, array(
 	'EVERYTHING_OK'					=> 'Minden rendben',
 
 	'FIELD_BOOL'				=> 'Logikai (igen/nem)',
+	'FIELD_CONTACT_DESC'		=> 'Contact description',
+	'FIELD_CONTACT_URL'			=> 'Contact link',
 	'FIELD_DATE'				=> 'Dátum',
 	'FIELD_DESCRIPTION'			=> 'Mező leírása',
 	'FIELD_DESCRIPTION_EXPLAIN'	=> 'A felhasználónak megjelenő leírás a mezőről.',
 	'FIELD_DROPDOWN'			=> 'Lenyíló lista',
+	'FIELD_GOOGLEPLUS'			=> 'Google+',
 	'FIELD_IDENT'				=> 'Mezőazonosító',
 	'FIELD_IDENT_ALREADY_EXIST'	=> 'A kiválasztott mezőazonosító már létezik. Kérünk, válassz másikat.',
 	'FIELD_IDENT_EXPLAIN'		=> 'A mezőazonosító a profil mező azonosítására való az adatbázisban és a sablonokban.',
 	'FIELD_INT'					=> 'Szám',
+	'FIELD_IS_CONTACT'			=> 'Display field as a contact field',
+	'FIELD_IS_CONTACT_EXPLAIN'	=> 'Contact fields are displayed within the contact section of the user profile and are displayed differently in the mini profile next to posts and private messages. You can use <samp>%s</samp> as a placeholder variable which will be replaced by a value provided by the user.',
 	'FIELD_LENGTH'				=> 'Űrlap mező hossza',
 	'FIELD_NOT_FOUND'			=> 'A profil mező nem található.',
 	'FIELD_STRING'				=> 'Sima szövegmező',
 	'FIELD_TEXT'				=> 'Szövegdoboz',
 	'FIELD_TYPE'				=> 'Mező típusa',
 	'FIELD_TYPE_EXPLAIN'		=> 'A mező típusát később nem tudod megváltoztatni.',
+	'FIELD_URL'					=> 'URL (Link)',
 	'FIELD_VALIDATION'			=> 'Érvényesítés feltétel',
 	'FIRST_OPTION'				=> 'Első lehetőség',
 
@@ -14312,6 +14905,12 @@ $lang = array_merge($lang, array(
 	'ISO_LANGUAGE'				=> 'Nyelv [%s]',
 
 	'LANG_SPECIFIC_OPTIONS'		=> 'Nyelvspecifikus beállítások [<strong>%s</strong>]',
+
+	'LETTER_NUM_DOTS'			=> 'Any letters, numbers and dots (periods)',
+	'LETTER_NUM_ONLY'			=> 'Any letters and numbers',
+	'LETTER_NUM_PUNCTUATION'	=> 'Any letters, numbers, comma, dots, underscores and dashes beginning with any letter',
+	'LETTER_NUM_SPACERS'		=> 'Any letters, numbers and spacers',
+	'LETTER_NUM_UNDERSCORE'		=> 'Any letters, numbers and underscores',
 
 	'MAX_FIELD_CHARS'		=> 'Maximum karakterszám',
 	'MAX_FIELD_NUMBER'		=> 'Legnagyobb megengedett szám',
@@ -14366,7 +14965,9 @@ $lang = array_merge($lang, array(
 #######language/en/acp/prune.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_PRUNE_USERS_EXPLAIN'	=> 'Itt törölhetsz (vagy deaktiválhatsz) felhasználókat a fórumodról. Az azonosítók több különböző módon szűrhetők: hozzászólászám, legutolsó aktivitás stb. alapján. Minden feltétel kombinálható, tehát például törölheteted csak azokat a felhasználókat, akik 2002-01-01 előtt voltak utoljára aktívak, és kevesebb mint 10 hozzászólásszal rendelkeznek. Feltételek helyett beírhatsz közvetlenül felhasználóneveket a szövegmezőbe, mindegyiket külön sorba. Vigyázz ezzel a funkcióval! Ha töröltél egy felhasználót, később nem lehet visszaállítani.',
+	'ACP_PRUNE_USERS_EXPLAIN'	=> 'This section allows you to delete or deactivate users on your board. Accounts can be filtered in a variety of ways; by post count, most recent activity, etc. Criteria may be combined to narrow down which accounts are affected. For example, you can prune users with fewer than 10 posts, who were also inactive after 2002-01-01. Use * as a wildcard for text fields. Alternatively, you may skip the criteria selection completely by entering a list of users (each on a separate line) into the text field. Take care with this facility! Once a user is deleted, there is no way to reverse the action.',
+
+	'CRITERIA'				=> 'Criteria',
 
 	'DEACTIVATE_DELETE'			=> 'Deaktiválás vagy törlés',
 	'DEACTIVATE_DELETE_EXPLAIN'	=> 'Válaszd ki, hogy deaktiválni vagy törölni szeretnéd teljesen a felhasználókat. Kérjük, vedd figyelmbe, hogy nincs mód a visszaállításra!',
@@ -14374,15 +14975,18 @@ $lang = array_merge($lang, array(
 	'DELETE_USER_POSTS'			=> 'Megtisztított felhasználók hozzászólásainak törlése',
 	'DELETE_USER_POSTS_EXPLAIN'	=> 'A törölt felhasználók hozzászólásai törölve legyenek-e. Nincs hatása ha a felhasználók deaktiválásra kerülnek.',
 
-	'JOINED_EXPLAIN'			=> 'Adj meg egy dátumot <kbd>ÉÉÉÉ-HH-NN</kbd> formátumban.',
+	'JOINED_EXPLAIN'			=> 'Enter a date in <kbd>YYYY-MM-DD</kbd> format. You may use both fields to specify an interval, or leave one blank for an open date range.',
 
 	'LAST_ACTIVE_EXPLAIN'		=> 'Adj meg egy dátumot <kbd>ÉÉÉÉ-HH-NN</kbd> formátumban. Ha <kbd>0000-00-00</kbd>-t adsz meg, a soha be nem lépett felhasználók kerülnek törlésre – ebben az esetben a korábban/későbben feltétel nem lesz figyelembe véve.',
 
+	'POSTS_ON_QUEUE'			=> 'Posts Awaiting Approval',
+	'PRUNE_USERS_GROUP_EXPLAIN'	=> 'Limit to users within the selected group.',
+	'PRUNE_USERS_GROUP_NONE'	=> 'All groups',
 	'PRUNE_USERS_LIST'				=> 'Megtisztítandó felhasználók',
-	'PRUNE_USERS_LIST_DELETE'		=> 'A felhasználók megtisztításához jelenleg megadott feltételekkel a következő azonosítók lesznek eltávolítva.',
-	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'A felhasználók megtisztításához jelenleg megadott feltételekkel a következő azonosítók lesznek deaktiválva.',
+	'PRUNE_USERS_LIST_DELETE'		=> 'With the selected critera for pruning users the following accounts will be removed. You can remove individual users from the deletion list by unchecking the box next to their username.',
+	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'With the selected critera for pruning users the following accounts will be deactivated. You can remove individual users from the deactivation list by unchecking the box next to their username.',
 
-	'SELECT_USERS_EXPLAIN'		=> 'Itt konkrét felhasználóneveket adj meg. Ha kitöltöd, ezek lesznek használva a fentebbi feltételektől függetlenül. Alapítókat nem lehet törölni.',
+	'SELECT_USERS_EXPLAIN'		=> 'Enter specific usernames here. They will be used in preference to the criteria above. Founders cannot be pruned.',
 
 	'USER_DEACTIVATE_SUCCESS'	=> 'A kiválasztott felhasználók sikeresen deaktiválásra kerültek.',
 	'USER_DELETE_SUCCESS'		=> 'A kiválasztott felhasználók sikeresen törlésre kerültek.',
@@ -14429,15 +15033,38 @@ $lang = array_merge($lang, array(
 	'DELETING_INDEX_IN_PROGRESS'			=> 'Index törlése folyamatban',
 	'DELETING_INDEX_IN_PROGRESS_EXPLAIN'	=> 'A keresőmodul jelenleg megtisztítja az indexét. Ez eltarthat néhány percig.',
 
-	'FULLTEXT_MYSQL_INCOMPATIBLE_VERSION'	=> 'A MySQL fulltext modul csak MySQL4-gyel vagy újabbal használható.',
+	'FULLTEXT_MYSQL_INCOMPATIBLE_DATABASE'	=> 'The MySQL fulltext backend can only be used with MySQL4 and above.',
 	'FULLTEXT_MYSQL_NOT_MYISAM'				=> 'A MySQL fulltext index csak MyISAM táblákkal használható.',
 	'FULLTEXT_MYSQL_TOTAL_POSTS'			=> 'Indexelt hozzászólások száma',
-	'FULLTEXT_MYSQL_MBSTRING'				=> 'Nem latin UTF-8 karakterek támogatása mbstring-gel:',
-	'FULLTEXT_MYSQL_PCRE'					=> 'Nem latin UTF-8 karakterek támogatása PCRE-vel:',
-	'FULLTEXT_MYSQL_MBSTRING_EXPLAIN'		=> 'Ha a PCRE nem rendelkezik az unicode karakter tulajdonságokkal, a keresőmodul az mbstring reguláriskifejezés-motorját fogja meg próbálni használni.',
-	'FULLTEXT_MYSQL_PCRE_EXPLAIN'			=> 'Ennek a keresőmodulnak a nem latin karakterekre való kereséshez szüksége van rá, hogy a PCRE rendelkezzen az unicode karakter tulajdonságokkal, mely csak a PHP 4.4-ben, ill. 5.1-ben és az újabb verziókban érhető el.',
 	'FULLTEXT_MYSQL_MIN_SEARCH_CHARS_EXPLAIN'	=> 'Legalább ennyi karakterből álló szavak kerülnek indexelésre. Ez a beállítás csak a MySQL konfigurációban történő változtatással módosítható, amit lehet, hogy csak a szolgáltatód tud megtenni.',
 	'FULLTEXT_MYSQL_MAX_SEARCH_CHARS_EXPLAIN'	=> 'Legfeljebb ennyi karakterből álló szavak kerülnek indexelésre. Ez a beállítás csak a MySQL konfigurációban történő változtatással módosítható, amit lehet, hogy csak a szolgáltatód tud megtenni.',
+
+	'FULLTEXT_POSTGRES_INCOMPATIBLE_DATABASE'	=> 'The PostgreSQL fulltext backend can only be used with PostgreSQL.',
+	'FULLTEXT_POSTGRES_TOTAL_POSTS'			=> 'Total number of indexed posts',
+	'FULLTEXT_POSTGRES_VERSION_CHECK'		=> 'PostgreSQL version',
+	'FULLTEXT_POSTGRES_TS_NAME'				=> 'Text search Configuration Profile:',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN'			=> 'Minimum word length for keywords',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN'			=> 'Maximum word length for keywords',
+	'FULLTEXT_POSTGRES_VERSION_CHECK_EXPLAIN'		=> 'This search backend requires PostgreSQL version 8.3 and above.',
+	'FULLTEXT_POSTGRES_TS_NAME_EXPLAIN'				=> 'The Text search configuration profile used to determine the parser and dictionary.',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN_EXPLAIN'			=> 'Words with at least this many characters will be included in the query to the database.',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN_EXPLAIN'			=> 'Words with no more than this many characters will be included in the query to the database.',
+
+	'FULLTEXT_SPHINX_CONFIGURE'				=> 'Configure the following settings to generate sphinx config file',
+	'FULLTEXT_SPHINX_DATA_PATH'				=> 'Path to data directory',
+	'FULLTEXT_SPHINX_DATA_PATH_EXPLAIN'		=> 'It will be used to store the indexes and log files. You should create this directory outside the web accessible directories. (should have a trailing slash)',
+	'FULLTEXT_SPHINX_DELTA_POSTS'			=> 'Number of posts in frequently updated delta index',
+	'FULLTEXT_SPHINX_HOST'					=> 'Sphinx search daemon host',
+	'FULLTEXT_SPHINX_HOST_EXPLAIN'			=> 'Host on which the sphinx search daemon (searchd) listens. Leave empty to use the default localhost',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT'		=> 'Indexer memory limit',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT_EXPLAIN'	=> 'This number should at all times be lower than the RAM available on your machine. If you experience periodic performance problems this might be due to the indexer consuming too many resources. It might help to lower the amount of memory available to the indexer.',
+	'FULLTEXT_SPHINX_MAIN_POSTS'			=> 'Number of posts in main index',
+	'FULLTEXT_SPHINX_PORT'					=> 'Sphinx search daemon port',
+	'FULLTEXT_SPHINX_PORT_EXPLAIN'			=> 'Port on which the sphinx search daemon (searchd) listens. Leave empty to use the default Sphinx API port 9312',
+	'FULLTEXT_SPHINX_WRONG_DATABASE'		=> 'The sphinx search for phpBB supports MySQL and PostgreSQL only.',
+	'FULLTEXT_SPHINX_CONFIG_FILE'			=> 'Sphinx config file',
+	'FULLTEXT_SPHINX_CONFIG_FILE_EXPLAIN'	=> 'The generated content of the sphinx config file. This data needs to be pasted into the sphinx.conf which is used by sphinx search daemon. Replace the [dbuser] and [dbpassword] placeholders with your database credentials.',
+	'FULLTEXT_SPHINX_NO_CONFIG_DATA'		=> 'The sphinx data and config directory paths are not defined. Please define them to generate the config file.',
 
 	'GENERAL_SEARCH_SETTINGS'				=> 'Általános kereső beállítások',
 	'GO_TO_SEARCH_INDEX'					=> 'Tovább a keresőindex oldalra',
@@ -14462,8 +15089,6 @@ $lang = array_merge($lang, array(
 
 	'SEARCH_GUEST_INTERVAL'					=> 'Vendég keresési flood időköz',
 	'SEARCH_GUEST_INTERVAL_EXPLAIN'			=> 'A vendégeknek két keresés között ennyi másodpercet kell várniuk. Ha egy felhasználó végez egy keresést, az összes többinek várnia kell az időköz leteltéig.',
-	'SEARCH_INDEX_CREATE_REDIRECT'			=> 'A %1$d azonosítóig terjedő hozzászólások lettek eddig indexelve, ebből %2$d ebben a lépésben.<br />Az indexelés jelenlegi sebessége körülbelül %3$.1f hozzászólás per másodperc.<br />Indexelés folyamatban…',
-	'SEARCH_INDEX_DELETE_REDIRECT'			=> 'A %1$d azonosítóig terjedő hozzászólások el lettek távolítva a keresőindexből.<br />Törlés',
 	'SEARCH_INDEX_CREATED'					=> 'A fórum adatbázisában lévő összes hozzászólás sikeresen indexelésre került.',
 	'SEARCH_INDEX_REMOVED'					=> 'A modul keresőindexe sikeresen törlésre került.',
 	'SEARCH_INTERVAL'						=> 'Felhasználói keresési időköz',
@@ -14486,8 +15111,55 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
+	// 3.1.0
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
+
+	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
+	'CONFIRM_UNINSTALL_STYLES'		=> 'Are you sure you wish to uninstall selected styles?',
+	'COPYRIGHT'						=> 'Copyright',
+
+	'DEACTIVATE_DEFAULT'		=> 'Nem tudod deaktiválni az alapértelmezett megjelenést.',
+	'DELETE_FROM_FS'			=> 'Törlés a fájlrendszerből',
+	'DELETE_STYLE_FILES_FAILED'	=> 'Error deleting files for style "%s".',
+	'DELETE_STYLE_FILES_SUCCESS'	=> 'Files for style "%s" have been deleted.',
+	'DETAILS'					=> 'Adatok',
+
+	'INHERITING_FROM'			=> 'Öröklés',
+	'INSTALL_STYLE'				=> 'Megjelenés telepítése',
+	'INSTALL_STYLES'			=> 'Install styles',
+	'INSTALL_STYLES_EXPLAIN'	=> 'Here you can install new styles.<br />If you cannot find a specific style in list below, check to make sure style is already installed. If it is not installed, check if it was uploaded correctly.',
+	'INVALID_STYLE_ID'			=> 'Invalid style ID.',
+
+	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
+	'NO_UNINSTALLED_STYLE'		=> 'Nincs telepítetlen megjelenés.',
+
+	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
+
+	'STYLE_ACTIVATE'			=> 'Aktiválás',
+	'STYLE_ACTIVE'				=> 'Aktív',
+	'STYLE_DEACTIVATE'			=> 'Deaktiválás',
+	'STYLE_DEFAULT'				=> 'Alapértelmezett megjelenéssé tétel',
+	'STYLE_DEFAULT_CHANGE_INACTIVE'	=> 'You must activate style before making it default style.',
+	'STYLE_ERR_INVALID_PARENT'	=> 'Invalid parent style.',
+	'STYLE_ERR_NAME_EXIST'		=> 'Már létezik megjelenés ilyen névvel.',
+	'STYLE_ERR_STYLE_NAME'		=> 'El kell látnod névvel a megjelenést',
+	'STYLE_INSTALLED'			=> 'Style "%s" has been installed.',
+	'STYLE_INSTALLED_RETURN_INSTALLED_STYLES'	=> 'Return to installed styles list',
+	'STYLE_INSTALLED_RETURN_UNINSTALLED_STYLES'	=> 'Install more styles',
+	'STYLE_NAME'				=> 'Megjelenés neve',
+	'STYLE_NOT_INSTALLED'		=> 'Style "%s" was not installed.',
+	'STYLE_PATH'				=> 'Style path',
+	'STYLE_UNINSTALL'			=> 'Uninstall',
+	'STYLE_UNINSTALL_DEPENDENT'	=> 'Style "%s" cannot be uninstalled because it has one or more child styles.',
+	'STYLE_UNINSTALLED'			=> 'Style "%s" uninstalled successfully.',
+	'STYLE_USED_BY'				=> 'Használók száma (robotok beleértve)',
+
+	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+
+	// 3.0.12
 	'ACP_IMAGESETS_EXPLAIN'	=> 'A képkészletek felelősek a fórum által használt összes gombért, ikonért stb., és más nem megjelenéstől függő képekért. Itt szerkesztheted, exportálhatod, illetve törölheted a már létező képkészleteket, vagy aktiválhatod az újakat.',
-	'ACP_STYLES_EXPLAIN'	=> 'Itt a fórumon elérhető megjelenéseket tudod kezelni. Egy megjelenés egy sablonból, egy stílusból és egy képkészletből áll. A megjelenéseket módosíthatod, törölheted, deaktiválhatod, újraaktiválhatod, vagy készíthetsz, illetve importálhatsz újakat is. Az előnézet funkció segítségével azt is megnézheted, hogy egy megjelenés hogyan fog kinézni. A jelenlegi alapértelmezett megjelenés egy csillaggal van megjelölve (*). Emellett minden megjelenés mellett megjelenik, hányan használják, azonban ebben az értékben nem jelentkezik a felhasználói sablon felülírás hatása.',
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 	'ACP_TEMPLATES_EXPLAIN'	=> 'A sablonkészletek felelősek a fórum szerkezetének generálásához használt kódért. Itt szerkesztheted, törölheted, illetve exportálathod a már meglévő sablonkészleteket, vagy importálhatsz újakat.',
 	'ACP_THEMES_EXPLAIN'	=> 'Itt létrehozhatsz, telepíthetsz, szerkeszthetsz, törölhetsz, illetve exportálhatsz stílusokat. Egy stílus színek és képek kombinációja, mely alkalmazásra kerül a sablonon, és ezáltal megadja a fórum alap kinézetét. A lehetőségek bősége a szerver és a phpBB konfigurációjától függ, további információért lásd a dokumentációt. Kérjük, vedd figyelembe, hogy egy új stílus létrehozásánál egy stílus használata kiindulásként csak opcionális.',
 	'ADD_IMAGESET'			=> 'Képkészlet létrehozása',
@@ -14524,7 +15196,6 @@ $lang = array_merge($lang, array(
 	'CURRENT_IMAGE'					=> 'Jelenlegi kép',
 
 	'DEACTIVATE_DEFAULT'		=> 'Nem tudod deaktiválni az alapértelmezett megjelenést.',
-	'DELETE_FROM_FS'			=> 'Törlés a fájlrendszerből',
 	'DELETE_IMAGESET'			=> 'Képkészlet törlése',
 	'DELETE_IMAGESET_EXPLAIN'	=> 'Itt törölni tudod a kiválasztott képkészletet az adatbázisból. Kérjük, vedd figyelembe, hogy ezt a műveletet nem lehet visszacsinálni. Ajánlott a képkészletet a törlés előtt előbb kiexportálni, hogy esetlegesen később lehessen használni.',
 	'DELETE_STYLE'				=> 'Megjelenés törlése',
@@ -14721,7 +15392,6 @@ $lang = array_merge($lang, array(
 	'INCLUDE_IMAGESET'			=> 'Képkészlet tartalmazása',
 	'INCLUDE_TEMPLATE'			=> 'Sablon tartalmazása',
 	'INCLUDE_THEME'				=> 'Stílus tartalmazása',
-	'INHERITING_FROM'			=> 'Öröklés',
 	'INSTALL_IMAGESET'			=> 'Képkészlet telepítése',
 	'INSTALL_IMAGESET_EXPLAIN'	=> 'Itt telepíteni tudod a kiválasztott képkészletet. Ha szeretnéd, módosíthatsz egyes adatokat, vagy használhatod az alapértelmezett értékeket.',
 	'INSTALL_STYLE'				=> 'Megjelenés telepítése',
@@ -14751,7 +15421,6 @@ $lang = array_merge($lang, array(
 	'NO_TEMPLATE'				=> 'A sablon nem található a fájlrendszerben.',
 	'NO_THEME'					=> 'A stílus nem található a fájlrendszerben.',
 	'NO_UNINSTALLED_IMAGESET'	=> 'Nincs telepítetlen képkészlet.',
-	'NO_UNINSTALLED_STYLE'		=> 'Nincs telepítetlen megjelenés.',
 	'NO_UNINSTALLED_TEMPLATE'	=> 'Nincs telepítetlen sablon.',
 	'NO_UNINSTALLED_THEME'		=> 'Nincs telepítetlen stílus.',
 	'NO_UNIT'					=> 'Nincs',
@@ -14791,30 +15460,22 @@ $lang = array_merge($lang, array(
 	'SELECTED_THEME_FILE'		=> 'Kiválasztott stílus állomány',
 	'STORE_DATABASE'			=> 'Adatbázis',
 	'STORE_FILESYSTEM'			=> 'Fájlrendszer',
-	'STYLE_ACTIVATE'			=> 'Aktiválás',
-	'STYLE_ACTIVE'				=> 'Aktív',
 	'STYLE_ADDED'				=> 'A megjelenés sikeresen felvételre került.',
-	'STYLE_DEACTIVATE'			=> 'Deaktiválás',
-	'STYLE_DEFAULT'				=> 'Alapértelmezett megjelenéssé tétel',
 	'STYLE_DELETED'				=> 'A megjelenés sikeresen törlésre került.',
 	'STYLE_DETAILS_UPDATED'		=> 'A megjelenés sikeresen szerkesztésre került.',
 	'STYLE_ERR_ARCHIVE'			=> 'Kérünk, válassz ki egy csomagformátumot.',
 	'STYLE_ERR_COPY_LONG'		=> 'A copyright nem lehet hosszabb 60 karakternél.',
 	'STYLE_ERR_MORE_ELEMENTS'	=> 'Legalább egy megjelenés alkotóelemet ki kell választanod.',
 	'STYLE_ERR_NAME_CHARS'		=> 'A megjelenés neve csak alfanumerikus karaktereket, -, +, _ jelet, valamint szóközt tartalmazhat.',
-	'STYLE_ERR_NAME_EXIST'		=> 'Már létezik megjelenés ilyen névvel.',
 	'STYLE_ERR_NAME_LONG'		=> 'A megjelenés neve nem lehet hosszabb 30 karakternél.',
 	'STYLE_ERR_NO_IDS'			=> 'Ki kell választanod egy sablont, egy stílust és egy képkészletet a megjelenéshez.',
 	'STYLE_ERR_NOT_STYLE'		=> 'Az importált vagy feltöltött állomány nem tartalmazott egy helyes megjelenés csomagot.',
-	'STYLE_ERR_STYLE_NAME'		=> 'El kell látnod névvel a megjelenést',
 	'STYLE_EXPORT'				=> 'Megjelenés exportálása',
 	'STYLE_EXPORT_EXPLAIN'		=> 'Itt kiexportálhatod a képkészletet egy csomagba. A megjelenésnek nem kell tartalmaznia az összes alkotóelemét, de legalább egyet kell. Például, ha készítettél egy stílust és egy képkészletet egy széles körben használt sablonhoz, elég csak csak a stílust és a képkészletet kiexportálnod, a sablont kihagyhatod. Megválaszthatod, hogy közvetlenül le szeretnéd tölteni az állományt, vagy a store könyvtárba helyeznéd el, hogy később letöltsd FTP-n keresztül.',
 	'STYLE_EXPORTED'			=> 'A megjelenés sikeresen kiexportálásra került, és el lett tárolva a %s helyen.',
 	'STYLE_IMAGESET'			=> 'Képkészlet',
-	'STYLE_NAME'				=> 'Megjelenés neve',
 	'STYLE_TEMPLATE'			=> 'Sablon',
 	'STYLE_THEME'				=> 'Stílus',
-	'STYLE_USED_BY'				=> 'Használók száma (robotok beleértve)',
 
 	'TEMPLATE_ADDED'			=> 'A sablonkészlet felvételre került, és el lett tárolva a fájlrendszerben.',
 	'TEMPLATE_ADDED_DB'			=> 'A sablonkészlet felvételre került, és el lett tárolva az adatbázisban.',
@@ -14912,6 +15573,7 @@ $lang = array_merge($lang, array(
 	'CANNOT_FORCE_REACT_FOUNDER'	=> 'Alapítói azonosítókat nem tudsz újraaktivációra kötelezni.',
 	'CANNOT_FORCE_REACT_YOURSELF'	=> 'A saját azonosítód nem tudod újraaktivációra kötelezni.',
 	'CANNOT_REMOVE_ANONYMOUS'		=> 'A vendég felhasználói azonosítót nem tudod eltávolítani.',
+	'CANNOT_REMOVE_FOUNDER'			=> 'You are not allowed to remove founder accounts.',
 	'CANNOT_REMOVE_YOURSELF'		=> 'A saját azonosítód nem tudod eltávolítani.',
 	'CANNOT_SET_FOUNDER_IGNORED'	=> 'Mellőzött felhasználókat nem tudsz alapítóvá előléptetni.',
 	'CANNOT_SET_FOUNDER_INACTIVE'	=> 'Aktiválnod kell a felhasználókat, mielőtt előléptethetnéd őket alapítóvá, csak aktivált felhasználókat lehet előléptetni.',
@@ -14938,7 +15600,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'Kérünk, válaszd ki a fórumot, amelybe át szeretnéd mozgatni a felhasználó által küldött összes hozzászólást.',
 
 	'NO_SPECIAL_RANK'		=> 'Nincs speciális rang hozzárendelve',
-	'NO_WARNINGS'			=> 'Nincs kitiltás.',
+	'NO_WARNINGS'			=> 'No warnings exist.',
 	'NOT_MANAGE_FOUNDER'	=> 'Alapító státusszal rendelkező felhasználót próbáltál meg kezelni. Csak alapítók kezelhetik a többi alapítót.',
 
 	'QUICK_TOOLS'			=> 'Gyorseszközök',

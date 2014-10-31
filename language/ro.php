@@ -1,5 +1,14 @@
 ﻿<?php
 
+#######language/en/app.php#######
+
+$lang = array_merge($lang, array(
+	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
+	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
+	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+));
+
 #######language/en/calendar.php#######
 
 $lang = array_merge($lang, array(
@@ -182,6 +191,55 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Cheia privată reCaptcha proprie. Cheile pot fi obţinute la adresa <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 
 	'RECAPTCHA_EXPLAIN'				=> 'Pentru a preveni trimiterile automate, vă rugăm să scrieţi ambele cuvinte afişate în căsuţa de text de mai jos.',
+	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
+));
+
+#######language/en/cli.php#######
+
+$lang = array_merge($lang, array(
+	'CLI_CONFIG_CANNOT_CACHED'			=> 'Set this option if the configuration option changes too frequently to be efficiently cached.',
+	'CLI_CONFIG_CURRENT'				=> 'Current configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_DELETE_SUCCESS'			=> 'Successfully deleted config %s.',
+	'CLI_CONFIG_NEW'					=> 'New configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_NOT_EXISTS'				=> 'Config %s does not exist',
+	'CLI_CONFIG_OPTION_NAME'			=> 'The configuration option’s name',
+	'CLI_CONFIG_PRINT_WITHOUT_NEWLINE'	=> 'Set this option if the value should be printed without a new line at the end.',
+	'CLI_CONFIG_INCREMENT_BY'			=> 'Amount to increment by',
+	'CLI_CONFIG_INCREMENT_SUCCESS'		=> 'Successfully incremented config %s',
+	'CLI_CONFIG_SET_FAILURE'			=> 'Could not set config %s',
+	'CLI_CONFIG_SET_SUCCESS'			=> 'Successfully set config %s',
+
+	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
+	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
+	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
+	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
+	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
+	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
+	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
+	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
+	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
+	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
+	'CLI_EXTENSION_ENABLE_FAILURE'		=> 'Could not enable extension %s',
+	'CLI_EXTENSION_ENABLE_SUCCESS'		=> 'Successfully enabled extension %s',
+	'CLI_EXTENSION_NAME'				=> 'Name of the extension',
+	'CLI_EXTENSION_PURGE_FAILURE'		=> 'Could not purge extension %s',
+	'CLI_EXTENSION_PURGE_SUCCESS'		=> 'Successfully purged extension %s',
+	'CLI_EXTENSION_NOT_FOUND'			=> 'No extensions were found.',
+	'CLI_EXTENSIONS_AVAILABLE'			=> 'Available',
+	'CLI_EXTENSIONS_DISABLED'			=> 'Disabled',
+	'CLI_EXTENSIONS_ENABLED'			=> 'Enabled',
+
+	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
 ));
 
 #######language/en/common.php#######
@@ -190,7 +248,11 @@ $lang = array_merge($lang, array(
 	'TRANSLATION_INFO'	=> 'Translation/Traducere: <a href="http://www.phpbb.ro/">phpBB România</a>',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
+	'DATETIME_FORMAT'	=> '|d M Y, H:i|',	// 01 Jan 2007, 13:37 (with Relative days enabled)
 	'USER_LANG'			=> 'ro',
+
+	// See http://wiki.phpbb.com/Plural_Rules for more information
+	'PLURAL_RULE'		=> '1',
 
 	'1_DAY'			=> '1 zi',
 	'1_MONTH'		=> '1 lună',
@@ -204,18 +266,24 @@ $lang = array_merge($lang, array(
 	'ACCOUNT_DEACTIVATED'			=> 'Contul dumneavoastră a fost dezactivat manual şi poate fi reactivat doar de către un administrator.',
 	'ACCOUNT_NOT_ACTIVATED'			=> 'Contul dumneavoastră încă nu a fost activat.',
 	'ACP'							=> 'Panoul administratorului',
+	'ACP_SHORT'						=> 'ACP',
 	'ACTIVE'						=> 'activ',
 	'ACTIVE_ERROR'					=> 'Numele de utilizator specificat este momentan inactiv. Dacă aveţi probleme cu activarea contului, vă rugăm să contactaţi un administrator.',
 	'ADMINISTRATOR'					=> 'Administrator',
 	'ADMINISTRATORS'				=> 'Administratori',
 	'AGE'							=> 'Vârsta',
 	'AIM'							=> 'AIM',
+	'AJAX_ERROR_TITLE'				=> 'AJAX error',
+	'AJAX_ERROR_TEXT'				=> 'Something went wrong when processing your request.',
+	'AJAX_ERROR_TEXT_ABORT'			=> 'User aborted request.',
+	'AJAX_ERROR_TEXT_TIMEOUT'		=> 'Your request timed out; please try again.',
+	'AJAX_ERROR_TEXT_PARSERERROR'	=> 'Something went wrong with the request and the server returned an invalid reply.',
 	'ALLOWED'						=> 'Permis',
 	'ALL_FILES'						=> 'Toate fişierele',
 	'ALL_FORUMS'					=> 'Toate forumurile',
 	'ALL_MESSAGES'					=> 'Toate mesajele',
 	'ALL_POSTS'						=> 'Toate mesajele',
-	'ALL_TIMES'						=> 'Ora este %1$s %2$s',
+	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'Toate subiectele',
 	'AND'							=> 'Şi',
 	'ARE_WATCHING_FORUM'			=> 'Aţi subscris pentru a fi notificat de mesajele noi publicate în acest forum.',
@@ -225,6 +293,14 @@ $lang = array_merge($lang, array(
 	'ATTACHED_IMAGE_NOT_IMAGE'		=> 'Fişierul imagine pe care încercaţi să-l ataşaţi este invalid.',
 	'AUTHOR'						=> 'Autor',
 	'AUTH_NO_PROFILE_CREATED'		=> 'Crearea profilului de utilizator nu a fost efectuată cu succes.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_ENTRY'				=> 'Invalid database entry.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_SERVICE_TYPE'		=> 'Invalid service type provided to OAuth service handler.',
+	'AUTH_PROVIDER_OAUTH_ERROR_SERVICE_NOT_CREATED'			=> 'OAuth service not created',
+	'AUTH_PROVIDER_OAUTH_SERVICE_BITLY'						=> 'Bitly',
+	'AUTH_PROVIDER_OAUTH_SERVICE_FACEBOOK'					=> 'Facebook',
+	'AUTH_PROVIDER_OAUTH_SERVICE_GOOGLE'					=> 'Google',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_NOT_STORED'			=> 'OAuth token not stored.',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_INCORRECTLY_STORED'	=> 'OAuth token incorrectly stored.',
 	'AVATAR_DISALLOWED_CONTENT'		=> 'Încărcarea a fost respinsă deoarece fişierul încărcat a fost identificat ca un posibil atac vector.',
 	'AVATAR_DISALLOWED_EXTENSION'	=> 'Fişierul nu poate fi afişat deoarece extensia <strong>%s</strong> nu este permisă.',
 	'AVATAR_EMPTY_REMOTE_DATA'		=> 'Avatarul specificat nu a putut fi încărcat pentru că datele de la distanţă sunt invalide sau corupte.',
@@ -235,10 +311,11 @@ $lang = array_merge($lang, array(
 	'AVATAR_PARTIAL_UPLOAD'			=> 'Fişierul specificat a fost încărcat doar parţial.',
 	'AVATAR_PHP_SIZE_NA'			=> 'Dimensiunea fişierului avatar este prea mare.<br />Dimensiunea maximă permisă setată în php.ini nu a putut fi determinată.',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'Dimensiunea fişierului avatar este prea mare. Dimensiunea maximă permisă pentru încărcare este de %1$d %2$s.<br />Ţineţi minte că aceasta este setată în php.ini şi nu poate fi suprascrisă.',
+	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
 	'AVATAR_URL_INVALID'			=> 'URL-ul specificat este invalid.',
 	'AVATAR_URL_NOT_FOUND'			=> 'Fişierul specificat nu a putut fi găsit.',
-	'AVATAR_WRONG_FILESIZE'			=> 'Dimensiunea fişierului avatar trebuie să fie între 0 şi %1d %2s.',
-	'AVATAR_WRONG_SIZE'				=> 'Avatarul trimis este de %5$d pixeli lungime şi %6$d pixeli înălţime. Avatarurile trebuie să fie de cel puţin %1$d pixeli lungime şi %2$d pixeli înălţime, dar nu mai mari de %3$d pixeli lungime şi %4$d pixeli înălţime.',
+	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
+	'AVATAR_WRONG_SIZE'				=> 'The submitted avatar is %5$s wide and %6$s high. Avatars must be at least %1$s wide and %2$s high, but no larger than %3$s wide and %4$s high.',
 
 	'BACK_TO_TOP'			=> 'Sus',
 	'BACK_TO_PREV'			=> 'Înapoi la pagina anterioară',
@@ -255,28 +332,42 @@ $lang = array_merge($lang, array(
 	'BOARD_DISABLED'		=> 'Acest forum este momentan dezactivat.',
 	'BOARD_UNAVAILABLE'		=> 'Ne pare rău, dar acest forum, momentan nu este disponibil. Vă rugăm să încercaţi din nou în câteva minute.',
 	'BROWSING_FORUM'		=> 'Utilizatorii ce navighează pe acest forum: %1$s',
-	'BROWSING_FORUM_GUEST'	=> 'Utilizatorii ce navighează pe acest forum: %1$s şi %2$d vizitator',
-	'BROWSING_FORUM_GUESTS'	=> 'Utilizatorii ce navighează pe acest forum: %1$s şi %2$d vizitatori',
+	'BUTTON_EDIT'			=> 'Edit',
+	'BUTTON_FORUM_LOCKED'	=> 'Locked',
+	'BUTTON_NEW_TOPIC'		=> 'New Topic',
+	'BUTTON_PM'				=> 'PM',
+	'BUTTON_PM_FORWARD'		=> 'Forward',
+	'BUTTON_PM_NEW'			=> 'New PM',
+	'BUTTON_PM_REPLY'		=> 'Send Reply',
+	'BUTTON_PM_REPLY_ALL'	=> 'Reply All',
+	'BUTTON_POST_REPLY'		=> 'Post Reply',
+	'BUTTON_QUOTE'			=> 'Quote',
+	'BUTTON_TOPIC_LOCKED'	=> 'Locked',
 	'BYTES'					=> 'Octeţi',
+	'BYTES_SHORT'			=> 'B',
 
 	'CANCEL'				=> 'Anulează',
 	'CHANGE'				=> 'Schimbă',
 	'CHANGE_FONT_SIZE'		=> 'Schimbă dimensiunea fontului',
 	'CHANGING_PREFERENCES'	=> 'Schimbare preferinţe forum',
 	'CHANGING_PROFILE'		=> 'Schimbare preferinţe profil',
-	'CLICK_VIEW_PRIVMSG'	=> '%sDu-te în căsuţa cu mesaje private%s',
 	'COLLAPSE_VIEW'			=> 'Vizualizare restrânsă',
 	'CLOSE_WINDOW'			=> 'Închide fereastra',
 	'COLOUR_SWATCH'			=> 'Schimbă culoarea',
-	'COMMA_SEPARATOR'		=> ', ',	// Used in pagination of ACP & prosilver, use localised comma if appropriate, eg: Ideographic or Arabic
+	'COLON'					=> ':',
+	'COMMA_SEPARATOR'		=> ', ',	// Comma used to join lists into a single string, use localised comma if appropriate, eg: Ideographic or Arabic
 	'CONFIRM'				=> 'Confirmă',
 	'CONFIRM_CODE'			=> 'Codul de confirmare',
 	'CONFIRM_CODE_EXPLAIN'	=> 'Introduceţi codul exact cum apare. Nu există diferenţă între literele mari şi cele mici.',
 	'CONFIRM_CODE_WRONG'	=> 'Codul de confirmare introdus este incorect.',
 	'CONFIRM_OPERATION'		=> 'Sunteţi sigur că vreţi să continuaţi această operaţiune?',
+	'CONFIRM_AVATAR_DELETE' => 'Are you sure you wish to delete this avatar?',
 	'CONGRATULATIONS'		=> 'La mulți ani! ',
 	'CONNECTION_FAILED'		=> 'Conexiune eşuată.',
 	'CONNECTION_SUCCESS'	=> 'Conexiunea a fost efectuată cu succes!',
+	'CONTACT'				=> 'Contactează',
+	'CONTACT_USER'			=> 'Contact %s',
+	'CONTACT_US'			=> 'Contact us',
 	'COOKIES_DELETED'		=> 'Toate cookie-urile forumului au fost şterse cu succes.',
 	'CURRENT_TIME'			=> 'Acum este %s',
 
@@ -297,18 +388,13 @@ $lang = array_merge($lang, array(
 	'DISPLAY_TOPICS'		=> 'Afişează subiectele din ultimele',
 	'DOWNLOADED'			=> 'Descărcat',
 	'DOWNLOADING_FILE'		=> 'Fişierul se descarcă',
-	'DOWNLOAD_COUNT'		=> 'Descărcat de %d dată',
-	'DOWNLOAD_COUNTS'		=> 'Descărcat de %d ori',
-	'DOWNLOAD_COUNT_NONE'	=> 'Încă nu a fost descărcat',
-	'VIEWED_COUNT'			=> 'Vizualizat de %d dată',
-	'VIEWED_COUNTS'			=> 'Vizualizat de %d ori',
-	'VIEWED_COUNT_NONE'		=> 'Încă nu a fost vizualizat',
 
 	'EDIT_POST'							=> 'Modifică mesaj',
-	'EMAIL'								=> 'E-mail', // Short form for EMAIL_ADDRESS
-	'EMAIL_ADDRESS'						=> 'Adresă de e-mail',
-	'EMAIL_INVALID_EMAIL'				=> 'Adresa e-mail introdusă este invalidă.',
-	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Probleme în trimiterea e-mail-ului la <strong>Linia %1$s</strong>. Răspuns: %2$s.',
+	'ELLIPSIS'							=>	'…',
+	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
+	'EMAIL_ADDRESS'						=> 'Email address',
+	'EMAIL_INVALID_EMAIL'				=> 'The email address you entered is invalid.',
+	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ran into problems sending email at <strong>Line %1$s</strong>. Response: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Trebuie să specificaţi un subiect când scrieţi un subiect nou.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Trebuie să specificaţi un subiect când compuneţi un mesaj nou.',
 	'ENABLED'							=> 'Activat',
@@ -322,17 +408,23 @@ $lang = array_merge($lang, array(
 	'ERR_UNWATCHING'					=> 'Eroare la încercarea de dezabonare.',
 	'ERR_WATCHING'						=> 'Eroare la încercarea de abonare.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'Calea specificată către phpBB este invalidă.',
+	'ERROR'									=> 'Eroare',
 	'EXPAND_VIEW'						=> 'Vizualizare extinsă',
 	'EXTENSION'							=> 'Extensie',
+	'EXTENSION_DISABLED'				=> 'The extension <strong>%s</strong> is not enabled.',
 	'EXTENSION_DISABLED_AFTER_POSTING'	=> 'Extensia <strong>%s</strong> a fost dezactivată şi nu mai poate fi afişată.',
+	'EXTENSION_DOES_NOT_EXIST'			=> 'The extension <strong>%s</strong> does not exist.',
 
+	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> 'FAQ',
 	'FAQ_EXPLAIN'			=> 'Întrebări puse frecvent',
 	'FILENAME'				=> 'Nume fişier',
 	'FILESIZE'				=> 'Dimensiune fişier',
 	'FILEDATE'				=> 'Dată fişier',
 	'FILE_COMMENT'			=> 'Comentariu fişier',
-	'FILE_NOT_FOUND'		=> 'Fişierul cerut nu a putut fi găsit.',
+	'FILE_CONTENT_ERR'		=> 'Could not read the contents of file: %s',
+	'FILE_JSON_DECODE_ERR'	=> 'Failed to decode json file: %s',
+	'FILE_NOT_FOUND'		=> 'The requested file could not be found: %s',
 	'FIND_USERNAME'			=> 'Caută un membru',
 	'FOLDER'				=> 'Folder',
 	'FORGOT_PASS'			=> 'Am uitat parola',
@@ -381,6 +473,9 @@ $lang = array_merge($lang, array(
 	'GB'						=> 'GB',
 	'GIB'						=> 'GiB',
 	'GO'						=> 'Du-te',
+	'GOOGLEPLUS'				=> 'Google+',
+	'GOTO_FIRST_POST'			=> 'Go to first post',
+	'GOTO_LAST_POST'			=> 'Go to last post',
 	'GOTO_PAGE'					=> 'Du-te la pagina',
 	'GROUP'						=> 'Grup',
 	'GROUPS'					=> 'Grupuri',
@@ -388,12 +483,6 @@ $lang = array_merge($lang, array(
 	'GROUP_ERR_USERNAME'		=> 'Numele grupului nu a fost specificat.',
 	'GROUP_ERR_USER_LONG'		=> 'Numele grupului nu poate depăşi 60 de caractere. Numele grupului specificat este prea mare.',
 	'GUEST'						=> 'Vizitator',
-	'GUEST_USERS_ONLINE'		=> 'Sunt %d vizitatori conectaţi',
-	'GUEST_USERS_TOTAL'			=> '%d vizitatori',
-	'GUEST_USERS_ZERO_ONLINE'	=> 'Sunt 0 vizitatori conectaţi',
-	'GUEST_USERS_ZERO_TOTAL'	=> '0 vizitatori',
-	'GUEST_USER_ONLINE'			=> 'Este %d vizitator conectat',
-	'GUEST_USER_TOTAL'			=> '%d vizitator',
 	'G_ADMINISTRATORS'			=> 'Administratori',
 	'G_BOTS'					=> 'Boţi',
 	'G_GUESTS'					=> 'Vizitatori',
@@ -402,22 +491,12 @@ $lang = array_merge($lang, array(
 	'G_GLOBAL_MODERATORS'		=> 'Moderatori globali',
 	'G_NEWLY_REGISTERED'		=> 'Utilizatori înregistraţi recent',
 
-	'HIDDEN_USERS_ONLINE'			=> '%d utilizatori invizibili conectaţi',
-	'HIDDEN_USERS_TOTAL'			=> '%d invizibili',
-	'HIDDEN_USERS_TOTAL_AND'		=> '%d invizibili şi ',
-	'HIDDEN_USERS_ZERO_ONLINE'		=> '0 utilizatori invizibili conectaţi',
-	'HIDDEN_USERS_ZERO_TOTAL'		=> '0 invizibili',
-	'HIDDEN_USERS_ZERO_TOTAL_AND'	=> '0 invizibili şi ',
-	'HIDDEN_USER_ONLINE'			=> '%d utilizator invizibil conectat',
-	'HIDDEN_USER_TOTAL'				=> '%d invizibil',
-	'HIDDEN_USER_TOTAL_AND'			=> '%d invizibil şi ',
 	'HIDE_GUESTS'					=> 'Ascunde vizitatori',
 	'HIDE_ME'						=> 'Ascunde starea mea online în această sesiune',
 	'HOURS'							=> 'Ore',
 	'HOME'							=> 'Acasă',
 
 	'ICQ'						=> 'ICQ',
-	'ICQ_STATUS'				=> 'Status ICQ',
 	'IF'						=> 'Dacă',
 	'IMAGE'						=> 'Imagine',
 	'IMAGE_FILETYPE_INVALID'	=> 'Tip de fişier imagine %d pentru tipul mime %s nu este suportat.',
@@ -425,9 +504,11 @@ $lang = array_merge($lang, array(
 	'IN'						=> 'în',
 	'INDEX'						=> 'Prima pagină', //Index page
 	'INFORMATION'				=> 'Informaţie',
+	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
 	'INTERESTS'					=> 'Interese',
 	'INVALID_DIGEST_CHALLENGE'	=> 'Cerere invalidă de sistematizare.',
-	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> o adresă de e-mail posibil invalidă?',
+	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> possibly an invalid email address?',
+	'INVALID_PLURAL_RULE'		=> 'The chosen plural rule is invalid. Valid values are integers between 0 and 15.',
 	'IP'						=> 'IP',
 	'IP_BLACKLISTED'			=> 'IP-ul dumneavoastră %1$s a fost blocat pentru că este în lista neagră. Pentru detalii vizualizaţi <a href="%2$s">%2$s</a>.',
 
@@ -435,7 +516,8 @@ $lang = array_merge($lang, array(
 	'JOINED'				=> 'Membru din',
 	'JUMP_PAGE'				=> 'Introduceţi numărul paginii la care doriţi să vă duceţi.',
 	'JUMP_TO'				=> 'Mergi la',
-	'JUMP_TO_PAGE'			=> 'Click pentru a vă duce la pagina…',
+	'JUMP_TO_PAGE'			=> 'Jump to page',
+	'JUMP_TO_PAGE_CLICK'	=> 'Click to jump to page…',
 
 	'KB'					=> 'KB',
 	'KIB'					=> 'KiB',
@@ -447,6 +529,8 @@ $lang = array_merge($lang, array(
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Nu s-a putut efectua conexiunea la server-ul LDAP.',
 	'LDAP_SEARCH_FAILED'				=> 'O eroare a apărut în timpul căutării în directorul LDAP.',
 	'LEGEND'							=> 'Legendă',
+	'LIVE_SEARCHES_NOT_ALLOWED'			=> 'Live searches are not allowed.',
+	'LOADING'							=> 'Loading',
 	'LOCATION'							=> 'Localitate',
 	'LOCK_POST'							=> 'Închide mesaj',
 	'LOCK_POST_EXPLAIN'					=> 'Previne editarea',
@@ -457,6 +541,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_CONFIRM_EXPLAIN'				=> 'Pentru a preveni conturile forţate, forumul vă cere să introduceţi un cod de confirmare după un număr maxim de încercări de autentificare eşuate. Codul este afişat în imaginea de mai jos. Dacă aveţi probleme cu vizualizarea acestuia sau nu puteţi citi codul, vă rugăm să contactaţi %sAdministratorul forumului%s.', // unused
 	'LOGIN_ERROR_ATTEMPTS'				=> 'Aţi depăşit numărul maxim de încercări de autentificare. Adiţional cu numele de utilizator şi parola mai trebuie să verificaţi componenta afişată mai jos.',
 	'LOGIN_ERROR_EXTERNAL_AUTH_APACHE'	=> 'Nu aţi fost autentificat de Apache.',
+	'LOGIN_ERROR_OAUTH_SERVICE_DOES_NOT_EXIST'	=> 'A non-existant OAuth service has been requested.',
 	'LOGIN_ERROR_PASSWORD'				=> 'Aţi specificat o parolă incorectă. Vă rugăm să vă verificaţi parola şi să încercaţi din nou. Dacă continuaţi să aveţi probleme, vă rugăm să contactaţi %sAdministratorul forumului%s.',
 	'LOGIN_ERROR_PASSWORD_CONVERT'		=> 'Nu a fost posibil să fie convertită parola în timpul actualizării softului de forum. Vă rugăm să %scereţi o nouă parolă%s. Dacă continuaţi să aveţi probleme, vă rugăm să contactaţi %sAdministratorul forumului%s.',
 	'LOGIN_ERROR_USERNAME'				=> 'Aţi specificat un nume de utilizator incorect. Vă rugăm să vă verificaţi numele de utilizator şi să încercaţi din nou. Dacă continuaţi să aveţi probleme, vă rugăm să contactaţi %sAdministratorul forumului%s.',
@@ -465,17 +550,22 @@ $lang = array_merge($lang, array(
 	'LOGIN_VIEWFORUM'					=> 'Necesită să fiţi înregistrat şi autentificat pentru a putea vizualiza acest forum.',
 	'LOGIN_EXPLAIN_EDIT'				=> 'Pentru a putea modifica mesajele din acest forum, trebuie să vă înregistraţi şi să vă autentificaţi.',
 	'LOGIN_EXPLAIN_VIEWONLINE'			=> 'Pentru a putea vizualiza lista cu cei care sunt online, trebuie să vă înregistraţi şi să vă autentificaţi.',
+	'LOGIN_REQUIRED'					=> 'You need to login to perform this action.',
 	'LOGOUT'							=> 'Ieşire',
 	'LOGOUT_USER'						=> 'Ieşire [ %s ]',
-	'LOG_ME_IN'							=> 'Autentifică-mă automat la fiecare vizită',
+	'LOG_ME_IN'							=> 'Remember me',
 
+	'MAIN'					=> 'Main',
 	'MARK'					=> 'Marchează',
 	'MARK_ALL'				=> 'Marchează toate',
+	'MARK_ALL_READ'			=> 'Mark all read',
 	'MARK_FORUMS_READ'		=> 'Marchează forumurile ca fiind citite',
+	'MARK_READ'				=> 'Mark read',
 	'MARK_SUBFORUMS_READ'	=> 'Marchează subforumurile ca fiind citite',
 	'MB'					=> 'MB',
 	'MIB'					=> 'MiB',
 	'MCP'					=> 'Panoul moderatorului',
+	'MCP_SHORT'				=> 'MCP',
 	'MEMBERLIST'			=> 'Membri',
 	'MEMBERLIST_EXPLAIN'	=> 'Vezi lista completă a membrilor',
 	'MERGE'					=> 'Uneşte',
@@ -488,26 +578,47 @@ $lang = array_merge($lang, array(
 	'MODERATE'				=> 'Moderează',
 	'MODERATOR'				=> 'Moderator',
 	'MODERATORS'			=> 'Moderatori',
+	'MODULE_NOT_ACCESS'		=> 'Module not accessible',
+	'MODULE_NOT_FIND'		=> 'Cannot find module %s',
+	'MODULE_FILE_INCORRECT_CLASS'	=> 'Module file %s does not contain correct class [%s]',
 	'MONTH'					=> 'Lună',
 	'MOVE'					=> 'Mută',
-	'MSNM'					=> 'MSNM/WLM',
 
 	'NA'						=> 'N/A',
 	'NEWEST_USER'				=> 'Cel mai nou membru <strong>%s</strong>',
 	'NEW_MESSAGE'				=> 'Mesaj nou',
 	'NEW_MESSAGES'				=> 'Mesaje noi',
-	'NEW_PM'					=> '<strong>%d</strong> mesaj nou',
-	'NEW_PMS'					=> '<strong>%d</strong> mesaje noi',
 	'NEW_POST'					=> 'Mesaj nou',	// Not used anymore
 	'NEW_POSTS'					=> 'Mesaje noi',	// Not used anymore
 	'NEXT'						=> 'Următorul',		// Used in pagination
 	'NEXT_STEP'					=> 'Următorul',
 	'NEVER'						=> 'Niciodată',
 	'NO'						=> 'Nu',
+	'NO_NOTIFICATIONS'			=> 'You have no notifications',
 	'NOT_ALLOWED_MANAGE_GROUP'	=> 'Nu sunteţi autorizat să conduceţi acest grup.',
 	'NOT_AUTHORISED'			=> 'Nu sunteţi autorizat să accesaţi această zonă.',
 	'NOT_WATCHING_FORUM'		=> 'Nu mai sunteţi abonat la actualizările acestui forum.',
 	'NOT_WATCHING_TOPIC'		=> 'Nu mai sunteţi abonat la acest subiect.',
+	'NOTIFICATIONS'				=> 'Notifications',
+	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
+	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
+	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
+	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
+	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
+	'NOTIFICATION_POST_IN_QUEUE'		=> '<strong>Post approval</strong> request by %1$s:',
+	'NOTIFICATION_REFERENCE'			=> '"%1$s"',
+	'NOTIFICATION_REASON'				=> '<em>Reason:</em> %1$s.',
+	'NOTIFICATION_REPORT_PM'			=> '<strong>Private Message reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_POST'			=> '<strong>Post reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_CLOSED'		=> '<strong>Report closed</strong> by %1$s for:',
+	'NOTIFICATION_TOPIC'				=> '<strong>New topic</strong> by %1$s:',
+	'NOTIFICATION_TOPIC_APPROVED'		=> '<strong>Topic approved</strong>:',
+	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
+	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
+	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> 'Vă rugăm să anunţaţi administratorul forumului sau webmaster-ul.',
 	'NOTIFY_ADMIN_EMAIL'		=> 'Va rugăm să anunţati administratorul forumului sau webmaster-ul: <a href="mailto:%1$s">%1$s</a>',
 	'NO_ACCESS_ATTACHMENT'		=> 'Nu sunteţi autorizat să accesaţi acest fişier.',
@@ -516,6 +627,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_ADMIN'				=> 'Accesul la Panoul administratorului este interzis pentru că nu aveţi permisiuni administrative.',
 	'NO_AUTH_ADMIN_USER_DIFFER'	=> 'Nu puteţi să vă reautentificaţi ca un alt utilizator.',
 	'NO_AUTH_OPERATION'			=> 'Nu aveţi permisiunile necesare pentru a termina această operaţie.',
+	'NO_AVATARS'				=> 'No avatars currently available',
 	'NO_CONNECT_TO_SMTP_HOST'	=> 'Nu s-a putut efectua conexiunea către hostul smtp: %1$s : %2$s',
 	'NO_BIRTHDAYS'				=> 'Nicio zi de naştere astăzi',
 	'NO_EMAIL_MESSAGE'			=> 'E-mailul a fost gol.',
@@ -531,7 +643,6 @@ $lang = array_merge($lang, array(
 	'NO_MODE'					=> 'Niciun mod specificat.',
 	'NO_MODERATORS'				=> 'Nu sunt moderatori.',
 	'NO_NEW_MESSAGES'			=> 'Niciun mesaj nou',
-	'NO_NEW_PM'					=> '<strong>0</strong> mesaje noi',
 	'NO_NEW_POSTS'				=> 'Niciun mesaj nou',	// Not used anymore
 	'NO_ONLINE_USERS'			=> 'Niciun utilizator înregistrat',
 	'NO_POSTS'					=> 'Niciun mesaj',
@@ -546,7 +657,6 @@ $lang = array_merge($lang, array(
 	'NO_TOPIC_FORUM'			=> 'Subiectul sau forumul nu există.',
 	'NO_TOPICS'					=> 'Nu există subiecte sau mesaje în acest forum.',
 	'NO_TOPICS_TIME_FRAME'		=> 'Nu există niciun subiect în interiorul acestui forum pentru perioada de timp selectată.',
-	'NO_UNREAD_PM'				=> '<strong>0</strong> mesaje necitite',
 	'NO_UNREAD_POSTS'			=> 'Niciun mesaj necitit',
 	'NO_UPLOAD_FORM_FOUND'		=> 'Încărcare iniţiată, dar nu a fost găsit niciun formular de încărcare valid.',
 	'NO_USER'					=> 'Utilizatorul specificat nu există.',
@@ -557,15 +667,14 @@ $lang = array_merge($lang, array(
 	'OFFLINE'					=> 'Neconectat',
 	'ONLINE'					=> 'Conectat',
 	'ONLINE_BUDDIES'			=> 'Prieteni conectaţi',
-	'ONLINE_USERS_TOTAL'		=> 'În total sunt <strong>%d</strong> utilizatori conectaţi :: ',
-	'ONLINE_USERS_ZERO_TOTAL'	=> 'În total sunt <strong>0</strong> utilizatori conectaţi :: ',
-	'ONLINE_USER_TOTAL'			=> 'În total există <strong>%d</strong> utilizator conectat :: ',
 	'OPTIONS'					=> 'Opţiuni',
 
 	'PAGE_OF'				=> 'Pagina <strong>%1$d</strong> din <strong>%2$d</strong>',
+	'PAGE_TITLE_NUMBER'		=> 'Page %s',
 	'PASSWORD'				=> 'Parolă',
 	'PIXEL'					=> 'px',
 	'PLAY_QUICKTIME_FILE'	=> 'Deschide fişierul Quicktime',
+	'PLEASE_WAIT'			=> 'Please wait.',
 	'PM'					=> 'Mesaj privat',
 	'PM_REPORTED'			=> 'Apăsaţi aici ca să citiţi raportul',
 	'POSTING_MESSAGE'		=> 'Scrie mesaj în %s',
@@ -578,9 +687,15 @@ $lang = array_merge($lang, array(
 	'POSTED_ON_DATE'		=> 'pe',
 	'POSTS'					=> 'Mesaje',
 	'POSTS_UNAPPROVED'		=> 'Cel puţin un mesaj din acest subiect nu a fost aprobat.',
+	'POSTS_UNAPPROVED_FORUM'=> 'At least one post in this forum has not been approved.',
 	'POST_BY_AUTHOR'		=> 'de',
-	'POST_BY_FOE'			=> 'Acest mesaj a fost făcut de <strong>%1$s</strong> care este momentan în lista de ignore. %2$sAfişează acest mesaj%3$s.',
+	'POST_BY_FOE'			=> '<strong>%1$s</strong>, who is currently on your ignore list, made this post.',
+	'POST_DISPLAY'			=> '%1$sDisplay this post%2$s.',
 	'POST_DAY'				=> '%.2f mesaje pe zi',
+	'POST_DELETED_ACTION'	=> 'Deleted post:',
+	'POST_DELETED'			=> 'This post has been deleted.',
+	'POST_DELETED_BY'		=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s.',
+	'POST_DELETED_BY_REASON'=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s for the following reason: %4$s',
 	'POST_DETAILS'			=> 'Detalii mesaj',
 	'POST_NEW_TOPIC'		=> 'Scrie un subiect nou',
 	'POST_PCT'				=> '%.2f%% din toate mesajele',
@@ -591,7 +706,8 @@ $lang = array_merge($lang, array(
 	'POST_SUBJECT'			=> 'Subiectul mesajului',
 	'POST_TIME'				=> 'Dată mesaj',
 	'POST_TOPIC'			=> 'Scrie un subiect nou',
-	'POST_UNAPPROVED'		=> 'Acest mesaj aşteaptă pentru a fi aprobat',
+	'POST_UNAPPROVED_ACTION'	=> 'Post awaiting approval:',
+	'POST_UNAPPROVED'		=> 'This post has not been approved.',
 	'POWERED_BY'			=> 'Furnizat de %s',
 	'PREVIEW'				=> 'Previzualizează',
 	'PREVIOUS'				=> 'Anterior',		// Used in pagination
@@ -601,6 +717,8 @@ $lang = array_merge($lang, array(
 	'PRIVATE_MESSAGES'		=> 'Mesaje private',
 	'PRIVATE_MESSAGING'		=> 'Mesageria privată',
 	'PROFILE'				=> 'Panoul utilizatorului',
+
+	'QUICK_LINKS'			=> 'Quick links',
 
 	'RANK'						=> 'Rang',
 	'READING_FORUM'				=> 'Vizualizare subiecte în %s',
@@ -614,15 +732,6 @@ $lang = array_merge($lang, array(
 	'REDIRECTS'					=> 'Totalul redirecţionărilor',
 	'REGISTER'					=> 'Înregistrare',
 	'REGISTERED_USERS'			=> 'Utilizatori înregistraţi:',
-	'REG_USERS_ONLINE'			=> 'Sunt %d utilizatori înregistraţi şi ',
-	'REG_USERS_TOTAL'			=> '%d înregistraţi, ',
-	'REG_USERS_TOTAL_AND'		=> '%d înregistraţi şi ',
-	'REG_USERS_ZERO_ONLINE'		=> 'Sunt 0 utilizatori înregistraţi şi ',
-	'REG_USERS_ZERO_TOTAL'		=> '0 înregistraţi, ',
-	'REG_USERS_ZERO_TOTAL_AND'	=> '0 înregistraţi şi ',
-	'REG_USER_ONLINE'			=> 'Este %d utilizator înregistrat şi ',
-	'REG_USER_TOTAL'			=> '%d înregistrat, ',
-	'REG_USER_TOTAL_AND'		=> '%d înregistrat şi ',
 	'REMOVE'					=> 'Elimină',
 	'REMOVE_INSTALL'			=> 'Şterge, mută sau redenumeşte directorul install înainte de a folosi forumul. Dacă acest director este în continuare prezent, numai Panoul administratorului (PA) va fi accesibil.',
 	'REPLIES'					=> 'Răspunsuri',
@@ -639,7 +748,8 @@ $lang = array_merge($lang, array(
 	'RETURN_FORUM'				=> '%sÎnapoi la ultimul forum vizitat%s',
 	'RETURN_PAGE'				=> '%sÎnapoi la pagina anterioară%s',
 	'RETURN_TOPIC'				=> '%sÎnapoi la ultimul subiect vizitat%s',
-	'RETURN_TO'					=> 'Înapoi la',
+	'RETURN_TO'					=> 'Return to “%s”',
+	'RETURN_TO_INDEX'			=> 'Return to Board Index',
 	'FEED'						=> 'Flux',
 	'FEED_NEWS'					=> 'Ştiri',
 	'FEED_TOPICS_ACTIVE'		=> 'Subiecte active',
@@ -667,28 +777,30 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV_EXPLAIN'		=> 'Vezi opţiuni căutare avansată',
 	'SEARCH_KEYWORDS'			=> 'Căutare după cuvinte cheie',
 	'SEARCHING_FORUMS'			=> 'Căutare forumuri',
-	'SEARCH_ACTIVE_TOPICS'		=> 'Vezi subiecte active',
+	'SEARCH_ACTIVE_TOPICS'		=> 'Active topics',
 	'SEARCH_FOR'				=> 'Căutare după',
 	'SEARCH_FORUM'				=> 'Căutare în acest forum…',
-	'SEARCH_NEW'				=> 'Vezi mesaje noi',
+	'SEARCH_NEW'				=> 'New posts',
 	'SEARCH_POSTS_BY'			=> 'Căutare mesaje după',
-	'SEARCH_SELF'				=> 'Vezi mesaje proprii',
+	'SEARCH_SELF'				=> 'Your posts',
 	'SEARCH_MINE'				=> 'View your topics',
 	'SEARCH_TOPIC'				=> 'Căutare în acest subiect…',
-	'SEARCH_UNANSWERED'			=> 'Vezi mesaje fără răspuns',
-	'SEARCH_UNREAD'				=> 'Vezi mesaje necitite',
+	'SEARCH_UNANSWERED'			=> 'Unanswered posts',
+	'SEARCH_UNREAD'				=> 'Unread posts',
 	'SEARCH_USER_POSTS'			=> 'Caută mesajele utilizatorului',
 	'SECONDS'					=> 'Secunde',
+	'SEE_ALL'					=> 'See All',
 	'SELECT'					=> 'Selectaţi',
 	'SELECT_ALL_CODE'			=> 'Selectaţi tot',
 	'SELECT_DESTINATION_FORUM'	=> 'Vă rugăm să selectaţi un forum destinaţie',
 	'SELECT_FORUM'				=> 'Selectaţi un forum',
-	'SEND_EMAIL'				=> 'E-mail',				// Used for submit buttons
-	'SEND_EMAIL_USER'			=> 'E-mail',				// Used as: {L_SEND_EMAIL_USER} {USERNAME} -> E-mail UserX
+	'SEND_EMAIL'				=> 'Send email',				// Used for submit buttons
+	'SEND_EMAIL_USER'			=> 'Send email to %s',
 	'SEND_PRIVATE_MESSAGE'		=> 'Trimiteţi mesaj privat',
 	'SETTINGS'					=> 'Setări',
 	'SIGNATURE'					=> 'Semnătură',
 	'SKIP'						=> 'Treci peste conţinut',
+	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'Server-ul SMTP nu suportă autentificarea.',
 	'SORRY_AUTH_READ'			=> 'Nu sunteţi autorizat să citiţi acest forum.',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'Nu sunteţi autorizat să descărcaţi acest fişier ataşat.',
@@ -706,6 +818,8 @@ $lang = array_merge($lang, array(
 	'START_WATCHING_TOPIC'		=> 'Abonare subiect',
 	'STOP_WATCHING_FORUM'		=> 'Dezabonare forum',
 	'STOP_WATCHING_TOPIC'		=> 'Dezabonare subiect',
+	'STRING_LIST_MULTI'			=> '%1$s, and %2$s',
+	'STRING_LIST_SIMPLE'		=> '%1$s and %2$s',
 	'SUBFORUM'					=> 'Subforum',
 	'SUBFORUMS'					=> 'Subforumuri',
 	'SUBJECT'					=> 'Subiect',
@@ -717,51 +831,35 @@ $lang = array_merge($lang, array(
 	'THE_TEAM'			=> 'Echipa',
 	'TIB'				=> 'TiB',
 	'TIME'				=> 'Data',
-	
+	'TIMEOUT_PROCESSING_REQ'			=> 'Request timed out.',
+
 	'TOO_LARGE'						=> 'Valoarea specificată este prea mare.',
 	'TOO_LARGE_MAX_RECIPIENTS'		=> 'Valoarea introdusă pentru setarea <strong>Numărul maxim permis de destinatari pentru fiecare mesaj privat</strong> este prea mare.',
 
 	'TOO_LONG'						=> 'Valoarea specificată este prea lungă.',
 
-	'TOO_LONG_AIM'					=> 'Cuvântul introdus este prea lung.',
 	'TOO_LONG_CONFIRM_CODE'			=> 'Codul de confirmare introdus este prea lung.',
 	'TOO_LONG_DATEFORMAT'			=> 'Formatul datei introdus este prea lung.',
-	'TOO_LONG_ICQ'					=> 'Numărul ICQ introdus este prea lung.',
-	'TOO_LONG_INTERESTS'			=> 'Cuvântul pentru interese introdus este prea lung.',
 	'TOO_LONG_JABBER'				=> 'Numele contului Jabber introdus este prea lung.',
-	'TOO_LONG_LOCATION'				=> 'Locaţia introdusă este prea lungă.',
-	'TOO_LONG_MSN'					=> 'Numele MSN/WLM introdus este prea lung.',
 	'TOO_LONG_NEW_PASSWORD'			=> 'Parola introdusă este prea lungă.',
-	'TOO_LONG_OCCUPATION'			=> 'Cuvântul pentru ocupaţie introdus este prea lung.',
 	'TOO_LONG_PASSWORD_CONFIRM'		=> 'Confirmarea parolei introdusă este prea lungă.',
 	'TOO_LONG_USER_PASSWORD'		=> 'Parola introdusă este prea lungă.',
 	'TOO_LONG_USERNAME'				=> 'Numele de utilizator introdus este prea lung.',
-	'TOO_LONG_EMAIL'				=> 'Adresa de e-mail introdusă este prea lungă.',
-	'TOO_LONG_EMAIL_CONFIRM'		=> 'Confirmarea adresei de e-mail introdusă este prea lungă.',
-	'TOO_LONG_WEBSITE'				=> 'Adresa site-ului web introdusă este prea lungă.',
-	'TOO_LONG_YIM'					=> 'Numele Yahoo! Messenger introdus este prea lung.',
+	'TOO_LONG_EMAIL'				=> 'The email address you entered is too long.',
 
 	'TOO_MANY_VOTE_OPTIONS'			=> 'Aţi încercat să votaţi la prea multe opţiuni.',
 
 	'TOO_SHORT'						=> 'Valoarea specificată este prea scurtă.',
 
-	'TOO_SHORT_AIM'					=> 'Cuvântul introdus este prea scurt.',
 	'TOO_SHORT_CONFIRM_CODE'		=> 'Codul de confirmare introdus este prea scurt.',
 	'TOO_SHORT_DATEFORMAT'			=> 'Formatul datei introduse este prea scurt.',
-	'TOO_SHORT_ICQ'					=> 'Numărul ICQ introdus este prea scurt.',
-	'TOO_SHORT_INTERESTS'			=> 'Cuvântul pentru interese introdus este prea scurt.',
 	'TOO_SHORT_JABBER'				=> 'Numele contului Jabber introdus este prea scurt.',
-	'TOO_SHORT_LOCATION'			=> 'Locaţia introdusă este prea scurtă.',
-	'TOO_SHORT_MSN'					=> 'Numele MSN/WLM introdus este prea scurt.',
 	'TOO_SHORT_NEW_PASSWORD'		=> 'Parola introdusă este prea scurtă.',
-	'TOO_SHORT_OCCUPATION'			=> 'Ocupaţia introdusă este prea scurtă.',
 	'TOO_SHORT_PASSWORD_CONFIRM'	=> 'Confirmarea parolei introdusă este prea scurtă.',
 	'TOO_SHORT_USER_PASSWORD'		=> 'Parola introdusă este prea scurtă.',
 	'TOO_SHORT_USERNAME'			=> 'Numele de utilizator introdus este prea scurt.',
-	'TOO_SHORT_EMAIL'				=> 'Adresa de e-mail introdusă este prea scurtă.',
-	'TOO_SHORT_EMAIL_CONFIRM'		=> 'Confirmarea adresei de e-mail introdusă este prea scurtă.',
-	'TOO_SHORT_WEBSITE'				=> 'Adresa site-ului web introdusă este prea scurtă.',
-	'TOO_SHORT_YIM'					=> 'Numele Yahoo! Messenger introdus este prea scurt.',
+	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
+	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
 	
 	'TOO_SMALL'						=> 'Valoare specificată este prea mică.',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> 'Valoarea introdusă pentru setarea <strong>Numărul maxim permis de destinatari pentru fiecare mesaj privat</strong> este prea mică.',
@@ -775,30 +873,20 @@ $lang = array_merge($lang, array(
 	'TOPIC_MOVED'		=> 'Subiect mutat',
 	'TOPIC_REVIEW'		=> 'Subiect revizuit',
 	'TOPIC_TITLE'		=> 'Titlu subiect',
-	'TOPIC_UNAPPROVED'	=> 'Acest subiect nu a fost aprobat',
+	'TOPIC_UNAPPROVED'	=> 'This topic has not been approved.',
+	'TOPIC_DELETED'		=> 'This topic has been deleted.',
 	'TOTAL_ATTACHMENTS'	=> 'Fişier(e) ataşat(e)',
-	'TOTAL_LOG'			=> '1 log',
-	'TOTAL_LOGS'		=> '%d loguri',
-	'TOTAL_NO_PM'		=> '0 mesaje private în total',
-	'TOTAL_PM'			=> '1 mesaj privat în total',
-	'TOTAL_PMS'			=> '$d mesaje private în total',
+	'TOPIC_POLL'		=> 'This topic has a poll.',
 	'TOTAL_POSTS'		=> 'Total mesaje',
-	'TOTAL_POSTS_OTHER'	=> 'Total mesaje <strong>%s</strong>',
-	'TOTAL_POSTS_ZERO'	=> 'Total mesaje <strong>0</strong>',
 	'TOPIC_REPORTED'	=> 'Acest subiect a fost raportat',
-	'TOTAL_TOPICS_OTHER'=> 'Total subiecte <strong>%s</strong>',
-	'TOTAL_TOPICS_ZERO'	=> 'Total subiecte <strong>0</strong>',
-	'TOTAL_USERS_OTHER'	=> 'Total membri <strong>%s</strong>',
-	'TOTAL_USERS_ZERO'	=> 'Total membri <strong>0</strong>',
 	'TRACKED_PHP_ERROR'	=> 'Erori PHP depistate: %s',
+	'TWITTER'			=> 'Twitter',
 
-	'UNABLE_GET_IMAGE_SIZE'	=> 'Nu a fost posibilă determinarea dimensiunilor imaginii.',
+	'UNABLE_GET_IMAGE_SIZE'	=> 'It was not possible to determine the dimensions of the image. Please verify that the URL you entered is correct.',
 	'UNABLE_TO_DELIVER_FILE'=> 'Nu s-a putut trimite fişierul.',
 	'UNKNOWN_BROWSER'		=> 'Browser necunoscut',
 	'UNMARK_ALL'			=> 'Deselectează toate',
 	'UNREAD_MESSAGES'		=> 'Mesaje necitite',
-	'UNREAD_PM'				=> '<strong>%d</strong> mesaj necitit',
-	'UNREAD_PMS'			=> '<strong>%d</strong> mesaje necitite',
 	'UNREAD_POST'			=> 'Mesaj necitit',
 	'UNREAD_POSTS'			=> 'Mesaje necitite',
 	'UNWATCH_FORUM_CONFIRM'		=> 'Sunteți sigur că doriți să vă dezabonați de la acest forum?',
@@ -816,8 +904,6 @@ $lang = array_merge($lang, array(
 	'USERNAMES'				=> 'Nume utilizatori',
 	'USER_AVATAR'			=> 'Avatar utilizator',
 	'USER_CANNOT_READ'		=> 'Nu puteţi citi mesajele din acest forum.',
-	'USER_POST'				=> '%d mesaj',
-	'USER_POSTS'			=> '%d mesaje',
 	'USERS'					=> 'Utilizatori',
 	'USE_PERMISSIONS'		=> 'Testează permisiunile utilizatorului',
 
@@ -825,6 +911,8 @@ $lang = array_merge($lang, array(
 
 	'VARIANT_DATE_SEPARATOR'	=> ' / ',	// Used in date format dropdown, eg: "Today, 13:37 / 01 Jan 2007, 13:37" ... to join a relative date with calendar date
 	'VIEWED'					=> 'Vizualizat',
+
+	'VIEWING_CONTACT_ADMIN'		=> 'Viewing contact page',
 	'VIEWING_FAQ'				=> 'Vizualizare FAQ',
 	'VIEWING_MEMBERS'			=> 'Vizualizare detalii membru',
 	'VIEWING_ONLINE'			=> 'Vizualizare cine este conectat',
@@ -839,8 +927,6 @@ $lang = array_merge($lang, array(
 	'VIEW_LATEST_POST'			=> 'Vezi ultimul mesaj',
 	'VIEW_NEWEST_POST'			=> 'Vezi ultimul mesaj necitit',
 	'VIEW_NOTES'				=> 'Vezi notiţele utilizatorului',
-	'VIEW_ONLINE_TIME'			=> 'date care se bazează pe utilizatorii activi în ultimul %d minut',
-	'VIEW_ONLINE_TIMES'			=> 'date care se bazează pe utilizatorii activi în ultimele %d minute',
 	'VIEW_TOPIC'				=> 'Vezi subiect',
 	'VIEW_TOPIC_ANNOUNCEMENT'	=> 'Anunţ: ',
 	'VIEW_TOPIC_GLOBAL'			=> 'Anunţ global: ',
@@ -861,23 +947,24 @@ $lang = array_merge($lang, array(
 	'WEBSITE'			=> 'Site web',
 	'WHOIS'				=> 'Cine este',
 	'WHO_IS_ONLINE'		=> 'Cine este conectat',
+	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'Aţi introdus o parolă incorectă.',
 	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
-	'WRONG_DATA_ICQ'			=> 'Numărul introdus nu este un număr ICQ valid.',
 	'WRONG_DATA_JABBER'			=> 'Numele introdus nu este un nume de cont Jabber valid.',
 	'WRONG_DATA_LANG'			=> 'Limba specificată nu este validă.',
-	'WRONG_DATA_WEBSITE'		=> 'Adresa site-ului web trebuie să fie un url valid, incluzând şi protocolul. De exemplu, http://www.example.com/.',
+	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
+	'WRONG_DATA_POST_SK'		=> 'The post sort option you specified is not valid.',
+	'WRONG_DATA_TOPIC_SD'		=> 'The topic sort direction you specified is not valid.',
+	'WRONG_DATA_TOPIC_SK'		=> 'The topic sort option you specified is not valid.',
 	'WROTE'						=> 'scrie',
 
+	'YAHOO'				=> 'Yahoo Messenger',
+	'YOUTUBE'			=> 'YouTube',
 	'YEAR'				=> 'An',
 	'YEAR_MONTH_DAY'	=> '(YYYY-MM-DD)',
 	'YES'				=> 'Da',
-	'YIM'				=> 'YIM',
 	'YOU_LAST_VISIT'	=> 'Ultima vizită a fost: %s',
-	'YOU_NEW_PM'		=> 'Un nou mesaj privat vă aşteaptă în căsuţa cu mesaje private.',
-	'YOU_NEW_PMS'		=> 'Noi mesaje private vă aşteaptă în căsuţa cu mesaje private.',
-	'YOU_NO_NEW_PM'		=> 'Nu aveţi niciun mesaj privat.',
 
 	'default_dateformat'	=> 'D M d, Y g:i a', // Mon Jan 01, 2007 1:37 pm
 
@@ -1083,7 +1170,6 @@ $lang = array_merge($lang, array(
 
 	'FORUM_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this forum.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this topic.',
-	'TOO_FEW_CHARS_LIMIT'	=> 'Mesajul propriu conţine %1$d caractere. Numărul minim al caracterelor pe care trebuie să le introduceţi este de %2$d.',
 	'REPLY_TO_MESSAGE'		=> 'Reply to message',
 
 	'RSS_CHAN_LIST_TITLE'	=> 'Forumuri',
@@ -1695,7 +1781,6 @@ $lang = array_merge($lang, array(
 	'DEV_NO_TEST_FILE'			=> 'Nicio valoare nu a fost specificată în convertor pentru variabila test_file. Dacă sunteţi un utilizator al acestui convertor, nu ar trebui să vedeţi această eroare, vă rugăm să raportaţi acest mesaj autorului convertorului. Dacă sunteţi un autor de convertor, trebuie să specificaţi numele fişierului ce există în forumul sursă pentru a permite ca să fie verificată calea către acesta.',
 	'DIRECTORIES_AND_FILES'		=> 'Pregătirea directorului şi a fişierului',
 	'DISABLE_KEYS'				=> 'Dezactivare chei',
-	'DLL_FIREBIRD'				=> 'Firebird',
 	'DLL_FTP'					=> 'Suport FTP la distanţă [ Instalare ]',
 	'DLL_GD'					=> 'Suport grafic GD [ Confirmare vizuală ]',
 	'DLL_MBSTRING'				=> 'Suport caracter multi-byte',
@@ -1706,11 +1791,12 @@ $lang = array_merge($lang, array(
 	'DLL_MYSQLI'				=> 'MySQL cu extensie MySQLi',
 	'DLL_ORACLE'				=> 'Oracle',
 	'DLL_POSTGRES'				=> 'PostgreSQL',
-	'DLL_SQLITE'				=> 'SQLite',
+	'DLL_SQLITE'				=> 'SQLite 2',
+	'DLL_SQLITE3'				=> 'SQLite 3',
 	'DLL_XML'					=> 'Suport XML [ Jabber ]',
 	'DLL_ZLIB'					=> 'Suport compresie zlib [ gz, .tar.gz, .zip ]',
 	'DL_CONFIG'					=> 'Descarcă fişier de configurare',
-	'DL_CONFIG_EXPLAIN'			=> 'Puteţi descărca fişierul complet config.php pe calculatorul personal. Atunci va trebui să actulizaţi fişierul manual, înlocuind orice fişier existent din rădăcina forumului phpBB 3.0 cu cel descărcat. Reţineţi să încărcaţi fişierul în formatul ASCII (consultaţi documentaţia aplicaţiei FTP dacă nu sunteţi sigur cum să efectuaţi această operaţie). Când aţi încărcat config.php vă rugăm apăsaţi “Gata” pentru a trece la următoarea etapă.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'Descarcă',
 	'DONE'						=> 'Gata',
 
@@ -1722,8 +1808,6 @@ $lang = array_merge($lang, array(
 	'FILES_REQUIRED_EXPLAIN'	=> '<strong>Obligatoriu</strong> - Pentru ca phpBB să funcţioneze corect trebuie să poată accesa sau scrie anumite fişiere sau directoare. Dacă vedeţi mesajul “Nu a fost găsit” trebuie să creezi fişierul sau directorul relevant. Dacă vezi “Nescriibil” trebuie să schimbi permisiunile fişierului sau directorului pentru ca phpBB să le poată scrie.',
 	'FILLING_TABLE'				=> 'Completează tabelul <strong>%s</strong>',
 	'FILLING_TABLES'			=> 'Completează tabelele',
-
-	'FIREBIRD_DBMS_UPDATE_REQUIRED'		=> 'phpBB nu mai suportă Firebird/Interbase mai vechi de versiunea 2.1. Vă rugăm să actualizaţi versiunea Firebird proprie la cel puţin 2.1.0 înainte de a proceda cu această procedură de actualizare.',
 
 	'FINAL_STEP'				=> 'Continuă cu pasul final',
 	'FORUM_ADDRESS'				=> 'Adresă forum',
@@ -1750,30 +1834,30 @@ $lang = array_merge($lang, array(
 		<p>Accesând butonul de mai jos, veţi ajunge la un formular folosit pentru a trimite informaţii statistice la phpBB direct din Panoul administratorului (ACP). Acordaţi-vă puţin timp pentru a examina opţiunile disponibile. Reţineţi că ajutorul este disponibil online via <a href="http://www.phpbb.com/support/documentation/3.0/">Documentaţie</a>, <a href="%3$s">fişierul CITEŞTE-MĂ</a> şi <a href="http://www.phpbb.com/community/viewforum.php?f=46">forumurile de suport</a>.</p><p><strong>Vă rugăm să ştergeţi, să mutaţi sau să redenumiţi directorul install înainte de a accesa forumul propriu. Dacă acest director este în continuare prezent, doar Panoul administratorului (PA) va fi disponibil.</strong>',
 	'INSTALL_INTRO'				=> 'Bine aţi venit la instalare',
 
-	'INSTALL_INTRO_BODY'		=> 'Cu această opţiune puteţi să instalaţi phpBB pe serverul propriu.</p><p>Pentru a începe aveţi nevoie de setările bazei de date. Dacă nu ştiţi setările bazei de date, contactaţi provider-ul hostului şi cereţi informaţii despre aceastea. Nu veţi putea continua fără aceste setări. Aveţi nevoie de:</p>
+	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
 
 	<ul>
-		<li>Tipul bazei de date - baza de date pe care o veţi folosi.</li>
-		<li>Numele serverului de găzduire a bazei de date sau DSN-ul acesteia - adresa către serverul bazei de date.</li>
-		<li>Portul serverului bazei de date - portul serverului bazei de date (în majoritatea cazurilor acesta nu este necesar).</li>
-		<li>Numele bazei de date - numele bazei de date de pe server.</li>
-		<li>Numele de utilizator şi parola bazei de date - Datele de autentificare pentru a accesa baza de date.</li>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
 	</ul>
 
-	<p><strong>Notă:</strong> dacă instalaţi forumul folosind SQLite va trebui să specificaţi în câmpul DSN calea completă către fişierul bazei de date şi să lăsaţi necompletate câmpurile nume utilizator şi parolă. Din motive de securitate va trebui să vă asiguraţi că fişierul bazei de date nu este stocat într-o locaţie accesibilă de pe web.</p>
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
 
-	<p>phpBB3 suportă următoarele baze de date:</p>
+	<p>phpBB3 supports the following databases:</p>
 	<ul>
-		<li>MySQL 3.23 sau mai nou (MySQLi suportat deasemenea)</li>
-		<li>PostgreSQL 7.3+</li>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
 		<li>SQLite 2.8.2+</li>
-		<li>Firebird 2.1+</li>
-		<li>MS SQL Server 2000 sau mai nou (direct sau via ODBC)</li>
-		<li>MS SQL Server 2005 sau mai nou (nativ)</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
 		<li>Oracle</li>
 	</ul>
-	
-	<p>Vor fi afişate numai acele baze de date suportate pe serverul propriu.',
+
+	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'Pentru a începe instalarea apăsaţi butonul de mai jos.',
 	'INSTALL_LOGIN'				=> 'Autentificare',
 	'INSTALL_NEXT'				=> 'Următoarea etapă',
@@ -1789,9 +1873,8 @@ $lang = array_merge($lang, array(
 	'INST_ERR_DB_NO_ERROR'		=> 'Niciun mesaj de eroare',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'Versiunea MySQL instalată pe acest server este incompatibilă cu opţiunea “MySQL cu extensie MySQLi” pe care aţi selectat-o. În loc de aceasta, vă rugăm să încercaţi opţiunea “MySQL”.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'Versiunea extensiei SQLite pe care aţi instalat-o este prea veche, trebuie să fie actulizată la cel puţin 2.8.2.',
+	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'Versiunea Oracle instalată pe acest server necesită setarea valorii <var>UTF8</var> în parametrul <var>NLS_CHARACTERSET</var>. Fie actualizaţi instalarea la 9.2+ sau schimbaţi parametrii.',
-	'INST_ERR_DB_NO_FIREBIRD'	=> 'Versiunea Firebird instalată pe acest forum este mai veche decât 2.1, vă rugăm să actualizaţi la o versiune mai nouă.',
-	'INST_ERR_DB_NO_FIREBIRD_PS'=> 'Baza de date selectată pentru Firebird are o dimensiune a paginii mai mică de 8192, trebuie să fie de cel puţin 8192.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'Baza de date selectată nu a fost creată în codarea <var>UNICODE</var> sau <var>UTF8</var>. Încercaţi să instalaţi forumul cu baza de date în codarea <var>UNICODE</var> sau <var>UTF8</var>',
 	'INST_ERR_DB_NO_NAME'		=> 'Niciun nume specificat pentru baza de date',
 	'INST_ERR_EMAIL_INVALID'	=> 'Adresa de email pe care aţi specificat-o este invalidă',
@@ -1845,6 +1928,8 @@ $lang = array_merge($lang, array(
 	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB <strong>nu</strong> va rula dacă instalarea PHP nu este compilată cu suport UTF-8 în extensia PCRE',
 	'PHP_GETIMAGESIZE_SUPPORT'			=> 'Funcţia PHP getimagesize() este disponibilă',
 	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Necesar</strong> - Pentru ca phpBB să funcţioneze corect, funcţia getimagesize trebuie să fie disponibilă.',
+	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'Module opţionale',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>Opţional</strong> - Aceste module sau aplicaţii sunt opţionale. Totuşi, dacă ele sunt disponibile, acestea vor activa funcţionalităţi suplimentare.',
 	'PHP_SUPPORTED_DB'				=> 'Baze de date suportate',
@@ -1853,10 +1938,10 @@ $lang = array_merge($lang, array(
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'phpBB va rula în continuare dacă această setare este activată, dar dacă este posibil, este recomandat ca register_globals să fie dezactivată din motive de securitate.',
 	'PHP_SAFE_MODE'					=> 'Mod protejat',
 	'PHP_SETTINGS'					=> 'Versiune PHP şi setări',
-	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Necesar</strong> - Trebuie să aveţi cel puţin versiunea 4.3.3 a PHP pentru a putea instala phpBB. Dacă <var>safe mode</var> este afişat mai jos, instalarea PHP va rula în acest mod. Acest fapt va impune limitări administrării la distanţă şi altor funcţionalităţi similare.',
+	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'Setarea PHP <var>allow_url_fopen</var> este disponibilă',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>Opţional</strong> - Această setare este opţională, oricum anumite funcţii phpBB ca avatarele la distanţă nu vor funcţiona corect fără ea.',
-	'PHP_VERSION_REQD'				=> 'Versiune PHP >= 4.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
 	'POST_ID'						=> 'Identificator mesaj',
 	'PREFIX_FOUND'					=> 'O scanare a tabelelor a arătat că instalarea este validă folosind <strong>%s</strong> ca şi prefix pentru tabelă.',
 	'PREPROCESS_STEP'				=> 'Execută preprocesarea funcţiilor/interogărilor',
@@ -1876,6 +1961,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> 'Configuraţie server',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Indexul de căutare nu a fost convertit',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Vechiul index de căutare nu a fost convertit. Căutările vor genera întotdeauna rezultate goale. Pentru a crea un nou index de căutare accesaţi Panoul de control al administratorului, selectaţi Întreţinere şi alegeţi Indexul căutării din submeniu.',
+	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> 'Softul forumului',
 	'SPECIFY_OPTIONS'			=> 'Specificaţi opţiunile de conversie',
 	'STAGE_ADMINISTRATOR'		=> 'Detalii administrator',
@@ -1883,7 +1969,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> 'Setările din această pagină sunt necesare numai pentru a fi definite dacă ştiţi că este necesar altceva decât valorile iniţiale. Dacă sunteţi nesigur, continuaţi cu pasul următor, acestea pot fi modificate ulterior din Panoul administratorului.',
 	'STAGE_CONFIG_FILE'			=> 'Fişierul de configurare',
 	'STAGE_CREATE_TABLE'		=> 'Crează tabelele bazei de date',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'Baza de date folosită de către phpBB 3.0 a fost creată şi populată cu datele iniţiale. Continuaţi cu pasul următor pentru a finaliza instalarea phpBB.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'Setări bază de date',
 	'STAGE_FINAL'				=> 'Ultima etapă',
 	'STAGE_INTRO'				=> 'Introducere',
@@ -1896,7 +1982,7 @@ $lang = array_merge($lang, array(
 	'SUB_LICENSE'				=> 'Licenţă',
 	'SUB_SUPPORT'				=> 'Suport',
 	'SUCCESSFUL_CONNECT'		=> 'Conexiune efectuată cu succes',
-	'SUPPORT_BODY'				=> 'Suportul total va fi oferit gratuit pentru versiunea curenta stabilă a phpBB3. Acesta include:</p><ul><li>instalare</li><li>configurare</li><li>întrebări tehnice</li><li>probleme legate de erori posibile în software</li><li>actualizări de la versiunile de tip candidat (RC) la ultima versiune stabilă</li><li>conversia de la phpBB 2.0.x la phpBB3</li><li>conversia de la alt software pentru forum la phpBB3 (vă rugăm să consultaţi <a href="http://www.phpbb.com/community/viewforum.php?f=65">Forumul de convertoare</a>)</li></ul><p>Noi încurajăm utilizatorii care încă rulează versiunile beta ale phpBB3 să-şi înlocuiască instalările o copie proaspătă a ultimei versiuni.</p><h2>MOD-uri / Stiluri</h2><p>Pentru problemele legate de MOD-uri, vă rugăm să scrieţi în <a href="http://www.phpbb.com/community/viewforum.php?f=81">Forumul de MOD-ificări</a>.<br />Pentru problemele legate de stiluri, şabloane şi seturi de imagini, vă rugăm să scrieţi în <a href="http://www.phpbb.com/community/viewforum.php?f=80">Forumul de stiluri</a>.<br /><br />Dacă întrebarea este legată de un pachet anume, vă rugăm să scrieţi în direct în subiectul dedicat pachetului.</p><h2>Cum se obţine suportul</h2><p><a href="http://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">Pachetul de bun venit al phpBB</a><br /><a href="http://www.phpbb.com/support/">Secţiune suport</a><br /><a href="http://www.phpbb.com/support/documentation/3.0/quickstart/">Ghid scurt de început</a><br /><br />. Pentru a vă asigura că sunteţi la zi cu ultimele ştiri şi versiuni, <a href="http://www.phpbb.com/support/">înscrieţi-vă la lista noastră de email</a>!<br /><br />',
+	'SUPPORT_BODY'				=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/documentation/3.1/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
 	'SYNC_FORUMS'				=> 'Începe sincronizarea forumurilor',
 	'SYNC_POST_COUNT'			=> 'Sincronizează numărarea mesajelor',
 	'SYNC_POST_COUNT_ID'		=> 'Sincronizează numărarea mesajelor de la <var>entry</var> %1$s la %2$s.',
@@ -1922,7 +2008,7 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ALL_FILES_UP_TO_DATE'		=> 'Toate fişiere sunt actualizate cu ultima versiune a phpBB. Acum trebuie <a href="../ucp.php?mode=login">să vă autentificaţi pe forum</a> şi să verificaţi dacă totul decurge normal. Nu uitaţi să ştergeţi, să redenumiţi sau să mutaţi directorul de instalare! Vă rugăm să ne trimiteţi informaţii actualizate despre serverul propriu şi configuraţiile forumului folosind modulul <a href="../ucp.php?mode=login&amp;redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">Trimite statistici</a> din cadrul Panoului administratorului.',
+	'ALL_FILES_UP_TO_DATE'		=> 'All files are up to date with the latest phpBB version.',
 	'ARCHIVE_FILE'				=> 'Sursa fişierelor din arhivă',
 
 	'BACK'				=> 'Înapoi',
@@ -1945,7 +2031,10 @@ $lang = array_merge($lang, array(
 	'CURRENT_VERSION'				=> 'Versiunea curentă',
 
 	'DATABASE_TYPE'						=> 'Tipul bazei de date',
+	'DATABASE_UPDATE_COMPLETE'			=> 'Database updater has completed!',
+	'DATABASE_UPDATE_CONTINUE'			=> 'Continue database update',
 	'DATABASE_UPDATE_INFO_OLD'			=> 'Fişierul de actualizare a bazei de date din directorul de instalare nu este actualizat. Vă rugăm să vă asiguraţi că aţi încărcat versiunea corectă a fişerului.',
+	'DATABASE_UPDATE_NOT_COMPLETED'		=> 'The database update has not yet completed.',
 	'DELETE_USER_REMOVE'				=> 'Şterge utilizatorul şi elimină mesajele',
 	'DELETE_USER_RETAIN'				=> 'Şterge utilizatorul dar păstrează mesajele',
 	'DESTINATION'						=> 'Fişierul destinaţie',
@@ -1964,14 +2053,17 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_UPDATE_METHOD'			=> 'Descarcă arhiva cu fişierele modificate',
 	'DOWNLOAD_UPDATE_METHOD_EXPLAIN'	=> 'Odată descărcată ar trebui să deschideți arhiva. Veţi găsi fişierele modificate pe care trebuie să le încărcaţi în rădăcina directorului phpBB. Vă rugăm să încărcaţi fişierele în locaţia lor respectivă. După ce aţi încărcat toate fişierele, vă rugăm să verificaţi din nou fişierele cu celălălt buton de mai jos.',
 
-	'ERROR'			=> 'Eroare',
 	'EDIT_USERNAME'	=> 'Modifică nume de utilizator',
+	'ERROR'			=> 'Eroare',
+	'EVERYTHING_UP_TO_DATE'		=> 'Everything is up to date with the latest phpBB version. You should now <a href="%1$s">login to your board</a> and check if everything is working fine. Do not forget to delete, rename or move your install directory! Please send us updated information about your server and board configurations from the <a href="%2$s">Send statistics</a> module in your ACP.',
 
 	'FILE_ALREADY_UP_TO_DATE'		=> 'Fişierul este deja actualizat la zi',
 	'FILE_DIFF_NOT_ALLOWED'			=> 'Fişierul nu poate fi verificat pentru stabilirea diferenţelor',
 	'FILE_USED'						=> 'Informaţii folosite din',			// Single file
 	'FILES_CONFLICT'				=> 'Fişiere de conflict',
 	'FILES_CONFLICT_EXPLAIN'		=> 'Următoarele fişiere sunt modificate şi nu reprezintă fişierele originale din versiunea veche. phpBB a stabilit că aceste fişiere crează conflicte şi dacă s-a încercat să fie unite. Vă rugăm să investigaţi confictele şi să încercaţi să le rezolvaţi manual sau continuaţ să le actualizaţi folosind metoda preferată de unire. Dacă rezolvaţi conflictele manual, verificaţi din nou fişierele după ce le-aţi modificat. De asemenea, puteţi să alegeţi metoda preferată de unire pentru fiecare fişier. Primul va rezulta într-un fişier unde liniile de conflict din versiunea veche a fişierului vor fi pierdute, cealaltă va rezulta în pierderea schimbărilor din fişierul nou.',
+	'FILES_DELETED'					=> 'Deleted files',
+	'FILES_DELETED_EXPLAIN'			=> 'The following files do not exist in the new version. These files have to be deleted from your installation.',
 	'FILES_MODIFIED'				=> 'Fişiere modificate',
 	'FILES_MODIFIED_EXPLAIN'		=> 'Următoarele fişiere sunt modificate şi nu reprezintă fişierele originale din versiunea veche. Fişierul actualizat va fi rezultatul unirii între modificările prpprii şi noul fişier.',
 	'FILES_NEW'						=> 'Fişiere noi',
@@ -2033,6 +2125,7 @@ $lang = array_merge($lang, array(
 	'PREVIOUS_VERSION'					=> 'Versiunea anterioară',
 	'PROGRESS'							=> 'Progres',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Announcement',
 	'RESULT'					=> 'Rezultat',
 	'RUN_DATABASE_SCRIPT'		=> 'Actualizează acum baza de date',
 
@@ -2040,6 +2133,7 @@ $lang = array_merge($lang, array(
 	'SELECT_DOWNLOAD_FORMAT'	=> 'Selectaţi formatul de descărcare al arhivei',
 	'SELECT_FTP_SETTINGS'		=> 'Selectaţi setările FTP',
 	'SHOW_DIFF_CONFLICT'		=> 'Arată diferenţe/conflicte',
+	'SHOW_DIFF_DELETED'			=> 'Show file contents',
 	'SHOW_DIFF_FINAL'			=> 'Arată fişierul rezultat',
 	'SHOW_DIFF_MODIFIED'		=> 'Arată diferenţele unite',
 	'SHOW_DIFF_NEW'				=> 'Arată conţinutul fişierului',
@@ -2053,6 +2147,7 @@ $lang = array_merge($lang, array(
 	'STAGE_UPDATE_FILES'		=> 'Actualizează fişiere',
 	'STAGE_VERSION_CHECK'		=> 'Verificare versiune',
 	'STATUS_CONFLICT'			=> 'Fişierul modificat produce conflicte',
+	'STATUS_DELETED'			=> 'Deleted file',
 	'STATUS_MODIFIED'			=> 'Fişierul modificat',
 	'STATUS_NEW'				=> 'Noul fişier',
 	'STATUS_NEW_CONFLICT'		=> 'Conflictele noului fişier',
@@ -2073,33 +2168,27 @@ $lang = array_merge($lang, array(
 	'UPDATE_INSTALLATION_EXPLAIN'	=> 'Cu această opţiune, este posibil să actualizaţi instalarea phpBB la ultima versiune.<br />În timpul procesului toate fişierele proprii vor fi verificate pentru integritatea lor. Puteţi revizui tote diferenţele şi fişierele înainte de actualizare.<br /><br />Actualizarea propriu zisă a fişierului se poate efectua în două moduri diferite.</p><h2>Actualizare manuală</h2><p>Cu această actualizare doar descărcaţi setul personal al fişierelor modificate pentru a vă asigura că nu pierdeţi modificările fişierelor pe care le-ai efectuat. După ce aţi descărcat acest pachet trebuie să încărcaţi manual fişierele în locaţia corectă din directorul rădăcina al phpBB. Odată ce este gata, puteţi porni din nou procesul de verificare al fişierelor ca să vedeţi dacă aţi mutat fişierele în locaţia corectă.</p><h2>Actualizare automată cu FTP</h2><p>Această metodă este similară cu prima dar fără a fi necesară descărcarea şi încărcarea proprie a fişierelor modificate. Aceste operaţii vor fi efectuate pentru dumneavoastră. Pentru a folosi această metodă trebuie să ştiţi detalile de autentificare pe FTP dn moment ce veţi fi întrebat de ele. Odată ce aţi terminat, vei fi redirecţionat către etapa de verificare a fişierelor pentru a vă asigura că totul s-a actualizat corect.',
 	'UPDATE_INSTRUCTIONS'			=> '
 
-		<h1>Anunţ de lansare</h1>
+		<h1>Release announcement</h1>
 
-		<p>Vă rugăm să citiţi <a href="%1$s" title="%1$s">anunţurile relatărilor pentru ultima versiune</a> înainte de a continua procesul de actualizare, s-ar putea să conţină informaţii folositoare. De asemenea conţine link-urile pentru descărcarea completă precum şi jurnalul schimbărilor.</p>
+		<p>Please read the release announcement for the latest version before you continue your update process, it may contain useful information. It also contains full download links as well as the change log.</p>
 
 		<br />
 
-		<h1>Cum să actualizaţi instalarea cu Pachetul de actualizate automată (Automatic Update Package)</h1>
+		<h1>How to update your installation with the Automatic Update Package</h1>
 
-		<p>Modul recomandat pentru a actualiza instalarea afişată aici este disponibil numai pentru pachetul de actualizare automată. De asemenea puteţi să actualizaţi instalarea folosind metodele afişate în documentul INSTALL.html. Paşii pentru actualizarea automată a phpBB3 sunt:</p>
+		<p>The recommended way of updating your installation listed here is only valid for the automatic update package. You are also able to update your installation using the methods listed within the INSTALL.html document. The steps for updating phpBB3 automatically are:</p>
 
 		<ul style="margin-left: 20px; font-size: 1.1em;">
-			<li>Accesaţi <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">pagina de descărcări a phpBB.com</a> şi descărcaţi arhiva "Automatic Update Package".<br /><br /></li>
-			<li>Dezarhivaţi arhiva.<br /><br /></li>
-			<li>Încărcaţi directorul complet de instalare dezarhivat în rădăcina directorului phpBB (unde este localizat fişierul config.php).<br /><br /></li>
+			<li>Go to the <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com downloads page</a> and download the "Automatic Update Package" archive.<br /><br /></li>
+			<li>Unpack the archive.<br /><br /></li>
+			<li>Upload the complete uncompressed install folder to your phpBB root directory (where your config.php file is).<br /><br /></li>
 		</ul>
 
-		<p>Odată încărcat, forumul propriu va fi offline pentru utilizatorii normali cât timp directorul install încărcat va fi prezent.<br /><br />
-		<strong><a href="%2$s" title="%2$s">Acum porniţi procesul de actualizare accesând din browser directorul install</a>.</strong><br />
+		<p>Once uploaded your board will be offline for normal users due to the install directory you uploaded now present.<br /><br />
+		<strong><a href="%1$s" title="%1$s">Now start the update process by pointing your browser to the install folder</a>.</strong><br />
 		<br />
-		Veţi fi ghidat în timpul procesului de actualizare. Veţi fi notificat odată ce actualizarea va fi efectuată cu succes.
+		You will then be guided through the update process. You will be notified once the update is complete.
 		</p>
-	',
-	'UPDATE_INSTRUCTIONS_INCOMPLETE'	=> '
-
-		<h1>A fost găsită o actualizare incompletă</h1>
-
-		<p>phpBB a detectat o actualizare automată incompletă. Vă rugăm să vă asiguraţi că aţi urmat fiecare pas din actualizarea automată. Mai jos veţi găsi un link ca să reluaţi actualizarea sau puteţi să accesaţi direct directorul install.</p>
 	',
 	'UPDATE_METHOD'					=> 'Metoda de încărcare',
 	'UPDATE_METHOD_EXPLAIN'			=> 'Puteţi alege metoda preferată de actualizare. Folosind opţiunea Încărcare prin FTP vi se va pune la dispoziţie un formular unde trebuie să introduceţi detaliile contului FTP. Cu această metodă, fişierele vor fi mutate automat către noua lor locaţie iar copiile de siguranţă (backup) ale fişierelor vechi vor fi create într-un fişier cu extensia .bak. Dacă alegeţi să descărcaţi fişierele modificate, mai târziu le puteţi dezarhiva şi încărca manual în locaţia lor corectă.',
@@ -2110,10 +2199,10 @@ $lang = array_merge($lang, array(
 	'UPDATING_DATA'					=> 'Actualizează datele',
 	'UPDATING_TO_LATEST_STABLE'		=> 'Actualizează baza de date la ultima versiune stabilă',
 	'UPDATED_VERSION'				=> 'Versiune actualizată',
-	'UPGRADE_INSTRUCTIONS'			=> 'O versiune nouă <strong>%1$s</strong> este disponibilă. Citiţi <a href="%2$s" title="%2$s"><strong>anunţul lansării versiunii</strong></a> pentru a afla ce vă oferă şi cum să o actualizaţi.',
 	'UPLOAD_METHOD'					=> 'Metoda de încărcare',
 
 	'UPDATE_DB_SUCCESS'				=> 'Actualizarea bazei de date a fost efectuată cu succes.',
+	'UPDATE_FILE_SUCCESS'			=> 'File update was successful.',
 	'USER_ACTIVE'					=> 'Utilizator activ',
 	'USER_INACTIVE'					=> 'Utilizator inactiv',
 
@@ -2173,6 +2262,33 @@ $lang = array_merge($lang, array(
 	'TOPICS_TOPIC_TITLE'			=> 'Bine aţi venit în phpBB3',
 ));
 
+#######language/en/migrator.php#######
+
+$lang = array_merge($lang, array(
+	'CONFIG_NOT_EXIST'					=> 'The config setting "%s" unexpectedly does not exist.',
+
+	'GROUP_NOT_EXIST'					=> 'The group "%s" unexpectedly does not exist.',
+
+	'MIGRATION_APPLY_DEPENDENCIES'		=> 'Apply dependencies of %s.',
+	'MIGRATION_DATA_DONE'				=> 'Installed Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_IN_PROGRESS'		=> 'Installing Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_RUNNING'			=> 'Installing Data: %s.',
+	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
+	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
+	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
+	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
+	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
+	'MODULE_NOT_EXIST'					=> 'A required module does not exist: %s',
+
+	'PERMISSION_NOT_EXIST'				=> 'The permission setting "%s" unexpectedly does not exist.',
+
+	'ROLE_NOT_EXIST'					=> 'The permission role "%s" unexpectedly does not exist.',
+));
+
 #######language/en/mcp.php#######
 
 $lang = array_merge($lang, array(
@@ -2193,6 +2309,10 @@ $lang = array_merge($lang, array(
 	'APPROVE_POST_CONFIRM'	=> 'Sunteţi sigur că vreţi să aprobaţi acest mesaj?',
 	'APPROVE_POSTS'			=> 'Aprobare mesaje',
 	'APPROVE_POSTS_CONFIRM'	=> 'Sunteţi sigur că vreţi să aprobaţi mesajele selectate?',
+	'APPROVE_TOPIC'			=> 'Approve topic',
+	'APPROVE_TOPIC_CONFIRM'	=> 'Are you sure you want to approve this topic?',
+	'APPROVE_TOPICS'		=> 'Approve topics',
+	'APPROVE_TOPICS_CONFIRM'=> 'Are you sure you want to approve the selected topics?',
 
 	'CANNOT_MOVE_SAME_FORUM'=> 'Nu puteţi să mutaţi un subiect în acelaşi forum în care se află deja',
 	'CANNOT_WARN_ANONYMOUS'	=> 'Nu puteţi să avertizaţi utilizatorii neînregistraţi',
@@ -2213,16 +2333,12 @@ $lang = array_merge($lang, array(
 	'DELETE_PM_REPORTS'			=> 'Şterge rapoarte mesaje private',
 	'DELETE_PM_REPORTS_CONFIRM'	=> 'Sunteţi sigur că vreţi să ştergeţi raportele mesajulor private selectate?',
 	'DELETE_POSTS'				=> 'Şterge mesajele',
-	'DELETE_POSTS_CONFIRM'		=> 'Sunteţi sigur că vreţi să ştergeţi mesajele selectate?',
-	'DELETE_POST_CONFIRM'		=> 'Sunteţi sigur că vreţi să ştergeţi mesajul selectat?',
 	'DELETE_REPORT'				=> 'Şterge raportul',
 	'DELETE_REPORT_CONFIRM'		=> 'Sunteţi sigur că vreţi să ştergeţi raportul selectat?',
 	'DELETE_REPORTS'			=> 'Şterge rapoartele',
 	'DELETE_REPORTS_CONFIRM'	=> 'Sunteţi sigur că vreţi să ştergeţi rapoartele selectate?',
 	'DELETE_SHADOW_TOPIC'		=> 'Şterge umbră subiect',
 	'DELETE_TOPICS'				=> 'Şterge subiectele selectate',
-	'DELETE_TOPICS_CONFIRM'		=> 'Sunteţi sigur că vreţi să ştergeţi aceste subiecte?',
-	'DELETE_TOPIC_CONFIRM'		=> 'Sunteţi sigur că vreţi să ştergeţi acest subiect?',
 	'DISAPPROVE'				=> 'Dezaprobaţi',
 	'DISAPPROVE_REASON'			=> 'Motivul dezaprobării',
 	'DISAPPROVE_POST'			=> 'Dezaprobaţi mesajul',
@@ -2260,8 +2376,6 @@ $lang = array_merge($lang, array(
 	'LATEST_WARNING_TIME'		=> 'Ultimele avertismente emise',
 	'LATEST_WARNINGS'			=> 'Ultimele 5 avertismente',
 	'LEAVE_SHADOW'				=> 'Lăsaţi o umbră în forum',
-	'LIST_REPORT'				=> '1 raport',
-	'LIST_REPORTS'				=> '%d rapoarte',
 	'LOCK'						=> 'Închide',
 	'LOCK_POST_POST'			=> 'Închide mesajul',
 	'LOCK_POST_POST_CONFIRM'	=> 'Sunteţi sigur că vreţi să preîntâmpinaţi modificarea acestui mesaj?',
@@ -2340,6 +2454,10 @@ $lang = array_merge($lang, array(
 	'MCP_QUEUE_UNAPPROVED_POSTS_EXPLAIN'	=> 'Aceasta este o listă cu mesajele în aşteptare pentru a fi aprobate înainte de a deveni vizibile utilizatorilor',
 	'MCP_QUEUE_UNAPPROVED_TOPICS'			=> 'Subiecte în aşteptare pentru a fi aprobate',
 	'MCP_QUEUE_UNAPPROVED_TOPICS_EXPLAIN'	=> 'Aceasta este o listă cu subiectele în aşteptare pentru a fi aprobate înainte de a deveni vizibile utilizatorilor',
+	'MCP_QUEUE_DELETED_POSTS'				=> 'Deleted posts',
+	'MCP_QUEUE_DELETED_POSTS_EXPLAIN'		=> 'This is a list of all soft deleted posts. You can restore or permanently delete the posts from this screen.',
+	'MCP_QUEUE_DELETED_TOPICS'				=> 'Deleted topics',
+	'MCP_QUEUE_DELETED_TOPICS_EXPLAIN'		=> 'This is a list of all soft deleted topics. You can restore or permanently delete the topics from this screen.',
 
 	'MCP_VIEW_USER'			=> 'Vezi avertismentele unui anumit utilizator',
 
@@ -2378,25 +2496,27 @@ $lang = array_merge($lang, array(
 	'NO_POST'						=> 'Trebuie să selectaţi un mesaj pentru a da un avertisment',
 	'NO_POST_REPORT'				=> 'Acest mesaj nu a fost raportat.',
 	'NO_POST_SELECTED'				=> 'Trebuie să selectaţi cel puţin un mesaj pentru a efectua această acţiune',
+	'NO_POSTS_DELETED'				=> 'There are no deleted posts.',
+	'NO_POSTS_QUEUE'				=> 'There are no posts waiting for approval.',
 	'NO_REASON_DISAPPROVAL'			=> 'Adăugaţi un motiv rezonabil pentru această dezaprobare',
 	'NO_REPORT'						=> 'Nu a fost găsit niciun raport',
 	'NO_REPORTS'					=> 'Nu a fost găsit niciun raport',
 	'NO_REPORT_SELECTED'			=> 'Trebuie să selectați cel puţin un raport pentru a efectua această acţiune.',
 	'NO_TOPIC_ICON'					=> 'Nimic',
 	'NO_TOPIC_SELECTED'				=> 'Trebuie să selectaţi cel puţin un subiect pentru a efectua această acţiune',
+	'NO_TOPICS_DELETED'				=> 'There are no deleted topics.',
 	'NO_TOPICS_QUEUE'				=> 'Nu sunt subiecte pentru a fi aprobate.',
 
 	'ONLY_TOPIC'			=> 'Numai subiecte "%s"',
 	'OTHER_USERS'			=> 'Utilizatorii care au publicat de la această adresa de IP',
 
+	'QUICKMOD_ACTION_NOT_ALLOWED' => "%s not allowed as quickmod",
+
 	'PM_REPORT_CLOSED_SUCCESS'	=> 'Raportul mesajului privat selectat a fost închis cu succes.',
 	'PM_REPORT_DELETED_SUCCESS'	=> 'Raportul mesajului privat selectat a fost şters cu succes.',
 	'PM_REPORTED_SUCCESS'		=> 'Acest mesaj privat a fost raportat cu succes.',
-	'PM_REPORT_TOTAL'			=> 'Există <strong>1</strong> raport pentru mesaje private de analizat.',
 	'PM_REPORTS_CLOSED_SUCCESS'	=> 'Rapoartele mesajului privat selectat au fost închise cu succes.',
 	'PM_REPORTS_DELETED_SUCCESS'=> 'Rapoartele mesajului privat selectat au fost şterse cu succes.',
-	'PM_REPORTS_TOTAL'			=> 'Există <strong>%d</strong> rapoarte pentru mesaje private de analizat.',
-	'PM_REPORTS_ZERO_TOTAL'		=> 'Nu sunt rapoarte pentru mesaje private de analizat.',
 	'PM_REPORT_DETAILS'			=> 'Detalii raport mesaj privat',
 	'POSTER'					=> 'Autorul',
 	'POSTS_APPROVED_SUCCESS'	=> 'Mesajele selectate au fost aprobate',
@@ -2404,15 +2524,17 @@ $lang = array_merge($lang, array(
 	'POSTS_DISAPPROVED_SUCCESS'	=> 'Mesajele selectate au fost dezaprobate',
 	'POSTS_LOCKED_SUCCESS'		=> 'Mesajele selectate au fost închise cu succes',
 	'POSTS_MERGED_SUCCESS'		=> 'Mesajele selectate au fost unite',
-	'POSTS_UNLOCKED_SUCCESS'	=> 'Mesajele selectate au fost deschise cu succes',
 	'POSTS_PER_PAGE'			=> 'Mesaje pe pagină',
 	'POSTS_PER_PAGE_EXPLAIN'	=> '(Setaţi 0 pentru a vedea toate mesajele)',
+	'POSTS_RESTORED_SUCCESS'	=> 'The selected posts have been restored successfully.',
+	'POSTS_UNLOCKED_SUCCESS'	=> 'Mesajele selectate au fost deschise cu succes',
 	'POST_APPROVED_SUCCESS'		=> 'Mesajul selectat a fost aprobat',
 	'POST_DELETED_SUCCESS'		=> 'Mesajul selectat a fost şters din baza de date cu succes',
 	'POST_DISAPPROVED_SUCCESS'	=> 'Mesajul selectat a fost dezaprobat',
 	'POST_LOCKED_SUCCESS'		=> 'Mesaj închis cu succes',
 	'POST_NOT_EXIST'			=> 'Mesajul cerut nu există',
 	'POST_REPORTED_SUCCESS'		=> 'Acest mesaj a fost raportat cu succes',
+	'POST_RESTORED_SUCCESS'		=> 'This post has been restored successfully.',
 	'POST_UNLOCKED_SUCCESS'		=> 'Mesaj deshis cu succes',
 
 	'READ_USERNOTES'			=> 'Însemnări utilizator',
@@ -2423,8 +2545,6 @@ $lang = array_merge($lang, array(
 	'REPORTED_ON_DATE'			=> 'la',
 	'REPORTS_CLOSED_SUCCESS'	=> 'Rapoartele selectate au fost închise cu succes.',
 	'REPORTS_DELETED_SUCCESS'	=> 'Rapoartele selectate au fost şterse cu succes.',
-	'REPORTS_TOTAL'				=> 'În total sunt <strong>%d</strong> rapoarte pentru revizuire',
-	'REPORTS_ZERO_TOTAL'		=> 'Nu există niciun raport pentru revizuire',
 	'REPORT_CLOSED'				=> 'Acest raport a fost deja închis.',
 	'REPORT_CLOSED_SUCCESS'		=> 'Raportul selectat a fost închis cu succes.',
 	'REPORT_DELETED_SUCCESS'	=> 'Raportul selectat a fost şters cu succes.',
@@ -2436,7 +2556,15 @@ $lang = array_merge($lang, array(
 	'REPORT_POST_EXPLAIN'		=> 'Utilizaţi acest formular pentru a raporta mesajul selectat către administratori. Rapoartele ar trebui folosite doar dacă mesajul respectiv încalcă regulile forumului.',
 	'REPORT_REASON'				=> 'Motiv raport',
 	'REPORT_TIME'				=> 'Dată raport',
-	'REPORT_TOTAL'				=> 'În total există <strong>1</strong> raport pentru revizuire',
+	'RESTORE'					=> 'Restore',
+	'RESTORE_POST'				=> 'Restore post',
+	'RESTORE_POST_CONFIRM'		=> 'Are you sure you want to restore this post?',
+	'RESTORE_POSTS'				=> 'Restore posts',
+	'RESTORE_POSTS_CONFIRM'		=> 'Are you sure you want to restore the selected posts?',
+	'RESTORE_TOPIC'				=> 'Restore topic',
+	'RESTORE_TOPIC_CONFIRM'		=> 'Are you sure you want to restore this topic?',
+	'RESTORE_TOPICS'			=> 'Restore topics',
+	'RESTORE_TOPICS_CONFIRM'	=> 'Are you sure you want to restore the selected topics?',
 	'RESYNC'					=> 'Resincronizare',
 	'RETURN_MESSAGE'			=> '%sReveniţi la mesaj%s',
 	'RETURN_NEW_FORUM'			=> '%sDu-te la noul forum%s',
@@ -2477,6 +2605,7 @@ $lang = array_merge($lang, array(
 	'TOPICS_FORKED_SUCCESS'		=> 'Subiectele selectate au fost copiate cu succes',
 	'TOPICS_LOCKED_SUCCESS'		=> 'Subiectele selectate au fost închise',
 	'TOPICS_MOVED_SUCCESS'		=> 'Subiectele selectate au fost mutate cu succes',
+	'TOPICS_RESTORED_SUCCESS'	=> 'The selected topics have been restored successfully.',
 	'TOPICS_RESYNC_SUCCESS'		=> 'Subiectele selectate au fost resincronizate',
 	'TOPICS_TYPE_CHANGED'		=> 'Tipurile subiectului au fost schimbate cu succes.',
 	'TOPICS_UNLOCKED_SUCCESS'	=> 'Subiectele selectate au fost deschise',
@@ -2487,6 +2616,7 @@ $lang = array_merge($lang, array(
 	'TOPIC_LOCKED_SUCCESS'		=> 'Subiectul selectat a fost închis',
 	'TOPIC_MOVED_SUCCESS'		=> 'Subiectul selectat a fost mutat cu succes',
 	'TOPIC_NOT_EXIST'			=> 'Subiectul selectat nu există',
+	'TOPIC_RESTORED_SUCCESS'	=> 'The selected topic has been restored successfully.',
 	'TOPIC_RESYNC_SUCCESS'		=> 'Subiectul selectat a fost resincronizat',
 	'TOPIC_SPLIT_SUCCESS'		=> 'Subiectul selectat a fost împărţit cu succes',
 	'TOPIC_TIME'				=> 'Data subiectului',
@@ -2494,9 +2624,6 @@ $lang = array_merge($lang, array(
 	'TOPIC_UNLOCKED_SUCCESS'	=> 'Subiectul selectat a fost deschis',
 	'TOTAL_WARNINGS'			=> 'Avertismente totale',
 
-	'UNAPPROVED_POSTS_TOTAL'		=> 'În total există <strong>%d</strong> mesaje în aşteptare pentru a fi aprobate',
-	'UNAPPROVED_POSTS_ZERO_TOTAL'	=> 'Nu există mesaje în aşteptare pentru a fi aprobate',
-	'UNAPPROVED_POST_TOTAL'			=> 'În total exista <strong>1</strong> mesaj în aşteptare pentru a fi aprobat',
 	'UNLOCK'						=> 'Deschide',
 	'UNLOCK_POST'					=> 'Deblocaţi mesajul',
 	'UNLOCK_POST_EXPLAIN'			=> 'Permiteţi modificarea',
@@ -2522,7 +2649,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'Următorul este un avertisment emis de un administrator sau un moderator către dumneavoastră.[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'Avertismente emise',
 	'WARNING_POST_DEFAULT'	=> 'Acesta este un avertisment asupra următorului mesaj publicat de dumneavoastră: %s',
-	'WARNINGS_ZERO_TOTAL'	=> 'Nu există avertismente',
+	'NO_WARNINGS'	=> 'No warnings exist.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Aţi selectat numărul subiectului %d: %s',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -2562,10 +2689,12 @@ $lang = array_merge($lang, array(
 	'ALL'					=> 'Toate',
 	'BEFORE'				=> 'Înainte',
 	'CC_EMAIL'				=> 'Trimite-ţi o copie a acestui email.',
-	'CONTACT_USER'			=> 'Contactează',
+	'CONTACT_ADMIN'			=> 'Contact a Board Administrator',
 
 	'DEST_LANG'				=> 'Limbă',
 	'DEST_LANG_EXPLAIN'		=> 'Selectaţi o limbă potrivită (dacă e disponibilă) pentru destinatarul acestui mesaj.',
+
+	'EDIT_PROFILE'			=> 'Edit Profile',
 
 	'EMAIL_BODY_EXPLAIN'	=> 'Acest mesaj va fi trimis ca text simplu, aşadar nu includeţi coduri HTML sau BBCode. Adresa de întoarcere pentru acest mesaj va fi setată ca fiind adresa dumneavoastră de e-mail.',
 	'EMAIL_DISABLED'		=> 'Scuze, dar toate funcţiile cu privire la e-mail au fost dezactivate.',
@@ -2575,7 +2704,9 @@ $lang = array_merge($lang, array(
 	'EMPTY_MESSAGE_EMAIL'	=> 'Trebuie să introduceţi un mesaj care să fie trimis prin e-mail.',
 	'EMPTY_MESSAGE_IM'		=> 'Trebuie să introduceţi un mesaj pentru a fi trimis.',
 	'EMPTY_NAME_EMAIL'		=> 'Trebuie să introduceţi numele real al destinatarului.',
-	'EMPTY_SUBJECT_EMAIL'	=> 'Trebuie să specificaţi un subiect pentru e-mail.',
+	'EMPTY_SENDER_EMAIL'	=> 'You must provide a valid email address.',
+	'EMPTY_SENDER_NAME'		=> 'You must provide a name.',
+	'EMPTY_SUBJECT_EMAIL'	=> 'You must specify a subject for the email.',
 	'EQUAL_TO'				=> 'Egal cu',
 
 	'FIND_USERNAME_EXPLAIN'	=> 'Folosiţi acest formular pentru a căuta anumiţi membri. Nu trebuie să completaţi toate câmpurile. Pentru părţi de cuvinte, folosiţi * ca wildcard. Când introduceţi data, folosiţi formatul <kbd>YYYY-MM-DD</kbd>, ex. <samp>2004-02-29</samp>. Puteţi folosi acele căsuţe pentru a selecta unul sau mai mulţi utilizatori (unii utilizatori pot fi acceptaţi în funcţie de formular) şi apăsaţi pe butonul de selectare marcări pentru a vă întoarce la formularul anterior.',
@@ -2585,16 +2716,10 @@ $lang = array_merge($lang, array(
 	'HIDE_MEMBER_SEARCH'	=> 'Ascunde căutarea de utilizatori',
 
 	'IM_ADD_CONTACT'		=> 'Adaugă contact',
-	'IM_AIM'				=> 'Ţineţi cont de faptul că aveţi nevoie de AOL Instant Messenger pentru a folosi această opţiune.',
-	'IM_AIM_EXPRESS'		=> 'AIM Express',
 	'IM_DOWNLOAD_APP'		=> 'Descarcă aplicaţie',
-	'IM_ICQ'				=> 'Ţineţi cont de faptul că unii utilizatori au ales să nu primească mesaje instant nesolicitate.',
 	'IM_JABBER'				=> 'Ţineţi cont de faptul că unii utilizatori au ales să nu primească mesaje instant nesolicitate.',
 	'IM_JABBER_SUBJECT'		=> 'Acesta este un mesaj automat, vă rugăm să nu răspundeţi! Mesaj de la utilizatorul %1$s la %2$s.',
 	'IM_MESSAGE'			=> 'Mesajul dumneavoastră',
-	'IM_MSNM'				=> 'Ţineţi cont de faptul că aveţi nevoie de Windows Messenger instalat pentru a folosi această opţiune.',
-	'IM_MSNM_BROWSER'		=> 'Browser-ul dumneavoastră nu suportă această facilitate.',
-	'IM_MSNM_CONNECT'		=> 'MSNM nu este conectat.\nTrebuie să vă conectaţi la MSNM pentru a continua.',
 	'IM_NAME'				=> 'Numele dumneavoastră',
 	'IM_NO_DATA'			=> 'Nu există nicio informaţie corespunzătoare de contact pentru acest utilizator.',
 	'IM_NO_JABBER'			=> 'Scuze, mesageria directă a utilizatorilor Jabber nu este suportată pe acest forum. Aveţi nevoie de un client Jabber instalat pe sistemul dumneavoastră pentru a contacta destinatarul de mai sus.',
@@ -2606,15 +2731,15 @@ $lang = array_merge($lang, array(
 
 	'LAST_ACTIVE'				=> 'Activ ultima oară',
 	'LESS_THAN'					=> 'Mai puţin de',
-	'LIST_USER'					=> '1 utilizator',
-	'LIST_USERS'				=> '%d utilizatori',
-	'LOGIN_EXPLAIN_LEADERS'		=> 'Forumul necesită ca dumneavoastră să fiţi înregistrat şi autentificat pentru a vedea lista echipei.',
+	'LOGIN_EXPLAIN_TEAM'		=> 'The board requires you to be registered and logged in to view the team listing.',
 	'LOGIN_EXPLAIN_MEMBERLIST'	=> 'Forumul necesită ca dumneavoastră să fiţi înregistrat şi autentificat pentru a accesa lista de membri.',
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'Forumul necesită ca dumneavoastră să fiţi înregistrat şi autentificat pentru a căuta utilizatori.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'Forumul necesită ca dumneavoastră să fiţi înregistrat şi autentificat pentru a vedea profilurile.',
 
 	'MORE_THAN'				=> 'Mai mult de',
 
+	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
+	'NO_CONTACT_PAGE'		=> 'The board administrator contact page has been disabled.',
 	'NO_EMAIL'				=> 'Nu aveţi permisiunea să trimiteţi e-mail acestui utilizator.',
 	'NO_VIEW_USERS'			=> 'Nu aveţi permisiunea să vizualizaţi lista cu membri sau profilurile.',
 
@@ -2631,12 +2756,12 @@ $lang = array_merge($lang, array(
 
 	'SELECT_MARKED'			=> 'Selectează marcările',
 	'SELECT_SORT_METHOD'	=> 'Selectează metoda de sortare',
-	'SEND_AIM_MESSAGE'		=> 'Trimite mesaj AIM',
+	'SENDER_EMAIL_ADDRESS'	=> 'Your email address',
+	'SENDER_NAME'			=> 'Your name',
 	'SEND_ICQ_MESSAGE'		=> 'Trimite mesaj ICQ',
 	'SEND_IM'				=> 'Mesagerie instant',
 	'SEND_JABBER_MESSAGE'	=> 'Trimite mesaj Jabber',
 	'SEND_MESSAGE'			=> 'Mesaj',
-	'SEND_MSNM_MESSAGE'		=> 'Trimite mesaj MSNM/WLM',
 	'SEND_YIM_MESSAGE'		=> 'Trimite mesaj YIM',
 	'SORT_EMAIL'			=> 'E-mail',
 	'SORT_LAST_ACTIVE'		=> 'Ultima oară activ',
@@ -2644,12 +2769,18 @@ $lang = array_merge($lang, array(
 
 	'USERNAME_BEGINS_WITH'	=> 'Numele de utilizator începe cu',
 	'USER_ADMIN'			=> 'Administrare utilizator',
-	'USER_BAN'				=> 'Interziceri',
+	'USER_BAN'				=> 'Ban one or more users by username',
 	'USER_FORUM'			=> 'Statistici utilizator',
 	'USER_ONLINE'			=> 'Conectat',
 	'USER_PRESENCE'			=> 'Prezenţa forumului',
+	'USERS_PER_PAGE'		=> 'Users per page',
 
 	'VIEWING_PROFILE'		=> 'Vizualizare profil - %s',
+	'VIEW_FACEBOOK_PROFILE'	=> 'View Facebook Profile',
+	'VIEW_SKYPE_PROFILE'	=> 'View Skype Profile',
+	'VIEW_TWITTER_PROFILE'	=> 'View Twitter Profile',
+	'VIEW_YOUTUBE_CHANNEL'	=> 'View YouTube Channel',
+	'VIEW_GOOGLEPLUS_PROFILE' => 'View Google+ Profile',
 	'VISITED'				=> 'Ultima vizită',
 
 	'WWW'					=> 'Site Web',
@@ -2674,6 +2805,47 @@ $lang = array_merge($lang, array(
 	'USER_COMM_RANK'	=> 'Overall reviews:',
 	'USER_COMM_PERCENT'	=> 'Overall assessment of the user:',
 
+));
+
+#######language/en/plupload.php#######
+
+$lang = array_merge($lang, array(
+	'PLUPLOAD_ADD_FILES'		=> 'Add files',
+	'PLUPLOAD_ADD_FILES_TO_QUEUE'	=> 'Add files to the upload queue and click the start button.',
+	'PLUPLOAD_ALREADY_QUEUED'	=> '%s already present in the queue.',
+	'PLUPLOAD_CLOSE'			=> 'Close',
+	'PLUPLOAD_DRAG'				=> 'Drag files here.',
+	'PLUPLOAD_DUPLICATE_ERROR'	=> 'Duplicate file error.',
+	'PLUPLOAD_DRAG_TEXTAREA'	=> 'You may also attach files by dragging and dropping them in the message box.',
+	'PLUPLOAD_ERR_INPUT'		=> 'Failed to open input stream.',
+	'PLUPLOAD_ERR_MOVE_UPLOADED'	=> 'Failed to move uploaded file.',
+	'PLUPLOAD_ERR_OUTPUT'		=> 'Failed to open output stream.',
+	'PLUPLOAD_ERR_FILE_TOO_LARGE'	=> 'File too large:',
+	'PLUPLOAD_ERR_FILE_COUNT'	=> 'File count error.',
+	'PLUPLOAD_ERR_FILE_INVALID_EXT'	=> 'Invalid file extension:',
+	'PLUPLOAD_ERR_RUNTIME_MEMORY'	=> 'Runtime ran out of available memory.',
+	'PLUPLOAD_ERR_UPLOAD_URL'	=> 'Upload URL might be wrong or does not exist.',
+	'PLUPLOAD_EXTENSION_ERROR'	=> 'File extension error.',
+	'PLUPLOAD_FILE'				=> 'File: %s',
+	'PLUPLOAD_FILE_DETAILS'		=> 'File: %s, size: %d, max file size: %d',
+	'PLUPLOAD_FILENAME'			=> 'Filename',
+	'PLUPLOAD_FILES_QUEUED'		=> '%d files queued',
+	'PLUPLOAD_GENERIC_ERROR'	=> 'Generic error.',
+	'PLUPLOAD_HTTP_ERROR'		=> 'HTTP error.',
+	'PLUPLOAD_IMAGE_FORMAT'		=> 'Image format either wrong or not supported.',
+	'PLUPLOAD_INIT_ERROR'		=> 'Init error.',
+	'PLUPLOAD_IO_ERROR'			=> 'IO error.',
+	'PLUPLOAD_NOT_APPLICABLE'	=> 'N/A',
+	'PLUPLOAD_SECURITY_ERROR'	=> 'Security error.',
+	'PLUPLOAD_SELECT_FILES'		=> 'Select files',
+	'PLUPLOAD_SIZE'				=> 'Size',
+	'PLUPLOAD_SIZE_ERROR'		=> 'File size error.',
+	'PLUPLOAD_STATUS'			=> 'Status',
+	'PLUPLOAD_START_UPLOAD'		=> 'Start upload',
+	'PLUPLOAD_START_CURRENT_UPLOAD'	=> 'Start uploading queue',
+	'PLUPLOAD_STOP_UPLOAD'		=> 'Stop upload',
+	'PLUPLOAD_STOP_CURRENT_UPLOAD'	=> 'Stop current upload',
+	'PLUPLOAD_UPLOADED'			=> 'Uploaded %d/%d files',
 ));
 
 #######language/en/portal.php#######
@@ -2919,12 +3091,12 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s este <em>DEZACTIVAT</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s este <em>ACTIVAT</em>',
 	'BBCODE_I_HELP'				=> 'Text italic: [i]text[/i]',
-	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]',
 	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
 	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Adaugă imagine: [img]http://cale_imagine[/img]',
 	'BBCODE_Q_HELP'				=> 'Citează text: [quote]text[/quote]',
-	'BBCODE_S_HELP'				=> 'Culoare font: [color=red]text[/color]  Sfat: de asemenea puteţi folosi culorile hexazecimale culoare=#FF0000',
+	'BBCODE_S_HELP'				=> 'Font colour: [color=red]text[/color] or [color=#FF0000]text[/color]',
 	'BBCODE_U_HELP'				=> 'Text subliniat: [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'Adaugă URL: [url]http://url[/url] sau [url=http://url]text URL[/url]',
 	'BUMP_ERROR'				=> 'Nu puteţi readuce subiectul acesta în atenţie atât de curând de la ultimul mesaj.',
@@ -2943,8 +3115,20 @@ $lang = array_merge($lang, array(
 	'DELETE_MESSAGE'			=> 'Şterge mesaj',
 	'DELETE_MESSAGE_CONFIRM'	=> 'Sunteţi sigur că vreţi să ştergeţi acest mesaj?',
 	'DELETE_OWN_POSTS'			=> 'Ne pare rău, dar puteţi şterge doar propriile mesaje.',
+	'DELETE_PERMANENTLY'		=> 'Delete permanently',
 	'DELETE_POST_CONFIRM'		=> 'Sunteţi sigur că vreţi să ştergeţi mesajul selectat?',
-	'DELETE_POST_WARN'			=> 'Odată şters, mesajul nu mai poate fi recuperat',
+	'DELETE_POST_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this post?',
+	'DELETE_POST_PERMANENTLY'	=> 'Permanently delete this post so it can not be recovered',
+	'DELETE_POSTS_CONFIRM'		=> 'Sunteţi sigur că vreţi să ştergeţi mesajele selectate?',
+	'DELETE_POSTS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these posts?',
+	'DELETE_REASON'				=> 'Reason for deleting this topic',
+	'DELETE_REASON_EXPLAIN'		=> 'The specified reason for deletion will be visible to moderators.',
+	'DELETE_POST_WARN'			=> 'Delete this post',
+	'DELETE_TOPIC_CONFIRM'		=> 'Sunteţi sigur că vreţi să ştergeţi acest subiect?',
+	'DELETE_TOPIC_PERMANENTLY'	=> 'Permanently delete this topic so it can not be recovered',
+	'DELETE_TOPIC_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this topic?',
+	'DELETE_TOPICS_CONFIRM'		=> 'Sunteţi sigur că vreţi să ştergeţi aceste subiecte?',
+	'DELETE_TOPICS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these topics?',
 	'DISABLE_BBCODE'			=> 'Dezactivează CodulBB',
 	'DISABLE_MAGIC_URL'			=> 'Nu analiza automat legăturile',
 	'DISABLE_SMILIES'			=> 'Dezactivează zâmbetele',
@@ -2987,13 +3171,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_QUOTE'		=> 'Trebuie să vă autentificaţi pentru a putea cita mesajele din acest forum.',
 	'LOGIN_EXPLAIN_REPLY'		=> 'Trebuie să vă autentificaţi pentru a putea răspunde în subiectele din acest forum.',
 
-	'MAX_FONT_SIZE_EXCEEDED'	=> 'Poţi folosi fonturile doar până la marimea de %1$d.',
-	'MAX_FLASH_HEIGHT_EXCEEDED'	=> 'Fişierele dumneavostră flash pot avea înălţimea de maxim %1$d pixeli.',
-	'MAX_FLASH_WIDTH_EXCEEDED'	=> 'Fişierele dumneavostră flash pot avea lăţimea de maxim %1$d pixeli.',
-	'MAX_IMG_HEIGHT_EXCEEDED'	=> 'Imaginile dumneavostră pot avea înălţimea de maxim %1$d pixeli.',
-	'MAX_IMG_WIDTH_EXCEEDED'	=> 'Imaginile dumneavostră pot avea lăţimea de maxim %1$d pixeli.',
-
-	'MESSAGE_BODY_EXPLAIN'		=> 'Introduceţi mesajul dumneavostră aici, acesta nu poate conţine mai mult de <strong>%d</strong> caractere.',
+	'MAX_FONT_SIZE_EXCEEDED'	=> 'You may only use fonts up to size %d.',
 	'MESSAGE_DELETED'			=> 'Acest mesaj a fost şters cu succes.',
 	'MORE_SMILIES'				=> 'Vezi mai multe zâmbete',
 
@@ -3016,8 +3194,6 @@ $lang = array_merge($lang, array(
 	'POLL_MAX_OPTIONS'			=> 'Opţiuni per utilizator',
 	'POLL_MAX_OPTIONS_EXPLAIN'	=> 'Acesta este numărul opţiunilor pe care fiecare utilizator le poate selecta când votează.',
 	'POLL_OPTIONS'				=> 'Opţiuni chestionar',
-	'POLL_OPTIONS_EXPLAIN'		=> 'Introduceţi fiecare opţiune într-o linie nouă. Puteţi introduce până la <strong>%d</strong> opţiuni.',
-	'POLL_OPTIONS_EDIT_EXPLAIN'	=> 'Introduceţi fiecare opţiune într-o linie nouă. Puteţi introduce până la <strong>%d</strong> opţiuni. Dacă scoateţi sau adăugaţi opţiuni, toate voturile precedente vor fi resetate.',
 	'POLL_QUESTION'				=> 'Întrebări chestionar',
 	'POLL_TITLE_TOO_LONG'		=> 'Titlul chestionarului trebuie să conţină mai puţin de 100 caractere.',
 	'POLL_TITLE_COMP_TOO_LONG'	=> 'Dimensiunea titlului chestionarului este prea mare, luați în considerare eliminarea codurilor BB sau a zâmbetelor.',
@@ -3027,9 +3203,9 @@ $lang = array_merge($lang, array(
 	'POST_APPROVAL_NOTIFY'		=> ' Acum veţi fi notificat când mesajul dumneavostră va fi aprobat.',
 	'POST_CONFIRMATION'			=> 'Confirmarea mesajului',
 	'POST_CONFIRM_EXPLAIN'		=> 'Pentru a preveni mesajele automate, administratorul forumului cere introducerea unui cod de confirmare. Codul este afişat în imaginea pe care o puteţi vedea mai jos. Dacă aveţi probleme cu vizualizarea acestuia sau nu puteţi citi codul din alte motive, vă rugăm să contactaţi %sAdministratorul forumului%s.',
-	'POST_DELETED'				=> 'Acest mesaj a fost şters cu succes.',
-	'POST_EDITED'				=> 'Acest mesaj a fost modificat cu succes.',
-	'POST_EDITED_MOD'			=> 'Acest mesaj a fost modificat cu succes, dar necesită aprobarea unui moderator înainte de a fi vizibil public.',
+	'POST_DELETED'				=> 'This post has been deleted.',
+	'POST_EDITED'				=> 'This post has been edited successfully.',
+	'POST_EDITED_MOD'			=> 'This post has been edited successfully, but it will need to be approved by a moderator before it is publicly viewable.',
 	'POST_GLOBAL'				=> 'Global',
 	'POST_ICON'					=> 'Iconiţă mesaj',
 	'POST_NORMAL'				=> 'Normal',
@@ -3042,8 +3218,9 @@ $lang = array_merge($lang, array(
 	'POST_TOPIC_AS'				=> 'Afişează subiectul ca',
 	'PROGRESS_BAR'				=> 'Bară progres',
 
-	'QUOTE_DEPTH_EXCEEDED'		=> 'Puteţi să introduceţi numai %1$d citate în orice ordine.',
+	'QUOTE_NO_NESTING'			=> 'You may not embed quotes within each other.',
 
+	'REMOTE_UPLOAD_TIMEOUT'		=> 'The specified file could not be uploaded because the request timed out.',
 	'SAVE'						=> 'Salvează',
 	'SAVE_DATE'					=> 'Salvat la',
 	'SAVE_DRAFT'				=> 'Salvează mesajul în lucru',
@@ -3060,8 +3237,6 @@ $lang = array_merge($lang, array(
 	'TOO_FEW_POLL_OPTIONS'		=> 'Trebuie să introduceţi cel puţin două opţiuni în chestionar.',
 	'TOO_MANY_ATTACHMENTS'		=> 'Nu puteţi adăuga alt fişier ataşat, %d este maxim.',
 	'TOO_MANY_CHARS'			=> 'Mesajul dumneavostră conţine prea multe caractere.',
-	'TOO_MANY_CHARS_POST'		=> 'Mesajul dumneavostră conţine %1$d caractere. Numărul maxim de caractere permis este de %2$d.',
-	'TOO_MANY_CHARS_SIG'		=> 'Semnătura dumneavostră conţine %1$d caractere. Numărul maxim de caractere permis este de %2$d.',
 	'TOO_MANY_POLL_OPTIONS'		=> 'Aţi încercat să introduceţi prea multe opţiuni în chestionar.',
 	'TOO_MANY_SMILIES'			=> 'Mesajul dumneavostră conţine prea multe zâmbete. Numărul maxim de zâmbete permis este de %d.',
 	'TOO_MANY_URLS'				=> 'Mesajul dumneavostră conţine prea multe URL-uri. Numărul maxim de URL-uri permis este de %d.',
@@ -3070,6 +3245,8 @@ $lang = array_merge($lang, array(
 
 	'UNAUTHORISED_BBCODE'		=> 'Nu puteţi folosi anumite coduriBB: %s.',
 	'UNGLOBALISE_EXPLAIN'		=> 'Pentru a schimba acest subiect înapoi, de la global la subiect normal, trebuie să selectaţi forumul în care doriţi ca acest subiect să fie afişat.',
+	'UNSUPPORTED_CHARACTERS_MESSAGE'	=> 'Your message contains the following unsupported characters:<br />%s',
+	'UNSUPPORTED_CHARACTERS_SUBJECT'	=> 'Your subject contains the following unsupported characters:<br />%s',
 	'UPDATE_COMMENT'			=> 'Comentariu actualizat',
 	'URL_INVALID'				=> 'URL-ul specificat este invalid.',
 	'URL_NOT_FOUND'				=> 'Fişierul specificat nu poate fi găsit.',
@@ -3084,8 +3261,8 @@ $lang = array_merge($lang, array(
 	'VIEW_MESSAGE'				=> '%sVizualizaţi mesajul propriu trimis%s',
 	'VIEW_PRIVATE_MESSAGE'		=> '%sVizualizaţi mesajul privat propriu trimis%s',
 
-	'WRONG_FILESIZE'			=> 'Fişierul este prea mare, mărimea maximă permisă este %1d %2s.',
-	'WRONG_SIZE'				=> 'Imaginea trebuie să fie de cel puţin %1$d pixeli lăţime, %2$d pixeli înălţime şi cel mult %3$d pixeli lăţime şi %4$d pixeli înălţime. Imaginea trimisă are lăţimea de %5$d pixeli şi înălţimea de %6$d pixeli.',
+	'WRONG_FILESIZE'			=> 'The file is too big, maximum allowed size is %1$d %2$s.',
+	'WRONG_SIZE'				=> 'The image must be at least %1$s wide, %2$s high and at most %3$s wide and %4$s high. The submitted image is %5$s wide and %6$s high.',
 
 	'FONT_TYPE'			=> 'Typeface',
 	'FONT_COLOR'			=> 'Culoare font',
@@ -3105,10 +3282,6 @@ $lang = array_merge($lang, array(
 
 	'DISPLAY_RESULTS'		=> 'Afişează rezultatele ca',
 
-	'FOUND_SEARCH_MATCH'		=> 'Căutarea a găsit %d rezultat',
-	'FOUND_SEARCH_MATCHES'		=> 'Căutarea a găsit %d rezultate',
-	'FOUND_MORE_SEARCH_MATCHES'	=> 'Căutarea a găsit mai mult de %d rezultate',
-
 	'GLOBAL'				=> 'Anunţ global',
 
 	'IGNORED_TERMS'			=> 'ignorat',
@@ -3120,24 +3293,23 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_UNREADSEARCH'=> 'Forumul vă cere să fiţi înregistrat şi autentificat pentru a putea vizualiza mesajele necitite.',
 	'LOGIN_EXPLAIN_NEWPOSTS'	=> 'Forumul vă cere să fiţi înregistrat şi autentificat pentru a putea vizualiza mesajele noi de la ultima vizită.',
 
-	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> 'Aţi specificat prea multe cuvinte pentru căutare. Vă rugăm să nu introduceţi mai mult de %1$d cuvinte.',
-
-	'NO_KEYWORDS'			=> 'Trebuie să introduceţi cel puţin un cuvânt de căutat. Fiecare cuvânt trebuie să conţină cel puţin %d caractere şi nu trebuie să conţină mai mult de %d caractere, excluzând wildcardurile.',
+	'NO_KEYWORDS'			=> 'You must specify at least one word to search for. Each word must consist of at least %s and must not contain more than %s excluding wildcards.',
 	'NO_RECENT_SEARCHES'	=> 'Nicio căutare nu a fost efectuată recent.',
 	'NO_SEARCH'				=> 'Ne pare rău, dar nu aveţi permisiunea să folosiţi funcţia Căutare.',
 	'NO_SEARCH_RESULTS'		=> 'Nu a fost găsit niciun rezultat.',
-	'NO_SEARCH_TIME'		=> 'Ne pare rău dar nu puteţi căuta pe forum în acest moment. Încercaţi din nou peste câteva minute.',
 	'NO_SEARCH_UNREADS'		=> 'Ne pare rău dar căutarea pentru mesajele necitite a fost dezactivată pe acest forum.',
 	'WORD_IN_NO_POST'		=> 'Niciun mesaj nu a fost găsit deoarece cuvântul <strong>%s</strong> nu face parte din niciun mesaj.',
 	'WORDS_IN_NO_POST'		=> 'Niciun mesaj nu a fost găsit deoarece cuvintele <strong>%s</strong> nu fac parte din niciun mesaj.',
 
 	'POST_CHARACTERS'		=> 'de caractere din conţinutul mesajelor',
+	'PHRASE_SEARCH_DISABLED'	=> 'Searching by exact phrase is not supported on this board.',
 
 	'RECENT_SEARCHES'		=> 'Căutări recente',
 	'RESULT_DAYS'			=> 'Limitează rezultatele anterioare',
 	'RESULT_SORT'			=> 'Sortează rezultatele după',
 	'RETURN_FIRST'			=> 'Afişează primele',
 	'RETURN_TO_SEARCH_ADV'	=> 'Inapoi la căutare avansată',
+	'GO_TO_SEARCH_ADV'	=> 'Go to advanced search',
 
 	'SEARCHED_FOR'				=> 'Caută termenul folosit',
 	'SEARCHED_TOPIC'			=> 'Subiect căutat',
@@ -3164,10 +3336,11 @@ $lang = array_merge($lang, array(
 	'SORT_FORUM'				=> 'Forum',
 	'SORT_POST_SUBJECT'			=> 'Subiectul mesajului',
 	'SORT_TIME'					=> 'Data mesajului',
+	'SPHINX_SEARCH_FAILED'		=> 'Search failed: %s',
+	'SPHINX_SEARCH_FAILED_LOG'	=> 'Sorry, search could not be performed. More information about this failure has been logged in the error log.',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
 	'SELECT_ALL_TAGS'		=> 'No selection',
-	'TOO_FEW_AUTHOR_CHARS'	=> 'Trebuie să specificaţi cel puţin %d caractere ale numelui autorului.',
 ));
 
 #######language/en/ucp.php#######
@@ -3223,6 +3396,7 @@ $lang = array_merge($lang, array(
 	'ATTACHMENTS_EXPLAIN'			=> 'Aceasta este o listă de fişiere ataşate pe care le-aţi trimis în mesajele din acest forum.',
 	'ATTACHMENTS_DELETED'			=> 'Fişiere ataşate şterse cu succes.',
 	'ATTACHMENT_DELETED'			=> 'Fişier ataşat şters cu succes.',
+	'AUTOLOGIN_SESSION_KEYS_DELETED'=> 'The selected "Remember Me" login keys were successfully deleted.',
 	'AVATAR_CATEGORY'				=> 'Categorie',
 	'AVATAR_DRIVER_GRAVATAR_TITLE'	=> 'Gravatar',
 	'AVATAR_DRIVER_GRAVATAR_EXPLAIN'=> 'Gravatar is a service that allows you to maintain the same avatar across multiple websites. Visit <a href="http://www.gravatar.com/">Gravatar</a> for more information.',
@@ -3232,12 +3406,14 @@ $lang = array_merge($lang, array(
 	'AVATAR_DRIVER_REMOTE_EXPLAIN'	=> 'Link to avatar images from another website.',
 	'AVATAR_DRIVER_UPLOAD_TITLE'	=> 'Upload avatar',
 	'AVATAR_DRIVER_UPLOAD_EXPLAIN'	=> 'Upload your own custom avatar.',
-	'AVATAR_EXPLAIN'				=> 'Dimensiuni maxime; lăţime %1$d pixeli, înălţime %2$d pixeli, mărime fişier %3$.2f KiB.',
+	'AVATAR_EXPLAIN'				=> 'Maximum dimensions; width: %1$s, height: %2$s, file size: %3$.2f KiB.',
 	'AVATAR_FEATURES_DISABLED'		=> 'Funcţionalitatea avatarului este momentan dezactivată.',
 	'AVATAR_GALLERY'				=> 'Galerie locală',
 	'AVATAR_GENERAL_UPLOAD_ERROR'	=> 'Nu s-a putut încărca avatarul la %s.',
 	'AVATAR_NOT_ALLOWED'			=> 'Avatarul propriu nu poate fi afişat pentru că avatarele au fost dezactivate.',
 	'AVATAR_PAGE'					=> 'Pagină',
+	'AVATAR_SELECT'					=> 'Select your avatar',
+	'AVATAR_TYPE'					=> 'Avatar type',
 	'AVATAR_TYPE_NOT_ALLOWED'		=> 'Avatarul curent nu poate fi afişat pentru că tipul de fişier folosit a fost dezactivat.',
 
 	'BACK_TO_DRAFTS'			=> 'Înapoi la mesajele în lucru salvate',
@@ -3246,7 +3422,6 @@ $lang = array_merge($lang, array(
 	'BIRTHDAY_EXPLAIN'			=> 'Alegerea unui an va lista vârsta dumneavoastră când este ziua de naştere.',
 	'BOARD_DATE_FORMAT'			=> 'Formatul meu de dată',
 	'BOARD_DATE_FORMAT_EXPLAIN'	=> 'Sintaxa folosită este identică cu funcţia PHP <a href="http://www.php.net/date">date()</a>.',
-	'BOARD_DST'					=> 'Trecerea automată la ora de vară este activă',
 	'BOARD_LANGUAGE'			=> 'Limba mea',
 	'BOARD_STYLE'				=> 'Stilul meu',
 	'BOARD_TIMEZONE'			=> 'Fusul meu orar',
@@ -3265,8 +3440,6 @@ $lang = array_merge($lang, array(
 	'CLICK_RETURN_FOLDER'		=> '%1$sÎntoarcere la dosarul “%3$s”%2$s',
 	'CONFIRMATION'				=> 'Confirmarea înregistrării',
 	'CONFIRM_CHANGES'			=> 'Confirmare modificări',
-	'CONFIRM_EMAIL'				=> 'Confirmare adresă e-mail',
-	'CONFIRM_EMAIL_EXPLAIN'		=> 'Trebuie doar să specificaţi această informaţie dacă modificaţi adresa de e-mail.',
 	'CONFIRM_EXPLAIN'			=> 'Pentru a preveni înregistrările automate, forumul vă cere introducerea unui cod de confirmare. Codul este afişat în imaginea de mai jos. Dacă aveţi probleme de vizualizare sau nu puteţi citi acest cod, vă rugăm să contactaţi %sAdministratorul forumului%s.',
 	'VC_REFRESH'				=> 'Reîmprospătează codul de confirmare',
 	'VC_REFRESH_EXPLAIN'		=> 'Dacă nu puteţi citi codul, atunci puteţi solicita unul nou apăsând pe buton.',
@@ -3275,7 +3448,7 @@ $lang = array_merge($lang, array(
 	'CONFIRM_PASSWORD_EXPLAIN'	=> 'Trebuie să confirmaţi parola doar dacă o modificaţi mai sus.',
 	'COPPA_BIRTHDAY'			=> 'Pentru a continua procedura de înregistrare, vă rugăm să introduceţi data naşterii.',
 	'COPPA_COMPLIANCE'			=> 'În conformitate cu COPPA',
-	'COPPA_EXPLAIN'				=> 'Trimiterea formularului va crea contul de utilizator. Totuşi, nu poate fi activat până când un părinte sau tutore aprobă înregistrarea dumneavoastră. O copie a formularului necesar vă va fi trimis prin e-mail alături de detalii referitoare la expedierea acestuia.',
+	'COPPA_EXPLAIN'				=> 'Please note that clicking submit will create your account. However it cannot be activated until a parent or guardian approves your registration. You will be e-mailed a copy of the necessary form with details of where to send it.',
 	'CREATE_FOLDER'				=> 'Adăugare dosar…',
 	'CURRENT_IMAGE'				=> 'Imaginea curentă',
 	'CURRENT_PASSWORD'			=> 'Parola curentă',
@@ -3330,27 +3503,34 @@ $lang = array_merge($lang, array(
 	'EXPORT_FOLDER'				=> 'Exportă dosar',
 
 	'FIELD_REQUIRED'					=> 'Câmpul “%s” trebuie să fie completat.',
-	'FIELD_TOO_SHORT'					=> 'Câmpul “%1$s” este prea scurt, un număr de minim %2$d caractere este necesar.',
-	'FIELD_TOO_LONG'					=> 'Câmpul “%1$s” este prea lung, un număr de maxim %2$d caractere este necesar.',
-	'FIELD_TOO_SMALL'					=> 'Valoarea “%1$s” este prea mică, un număr de minim %2$d caractere este necesar.',
-	'FIELD_TOO_LARGE'					=> 'Valoarea “%1$s” este prea mare, un număr de maxim %2$d caractere este necesar.',
+
+	'FIELD_TOO_SMALL'					=> 'The value of “%2$s” is too small, a minimum value of %1$d is required.',
+	'FIELD_TOO_LARGE'					=> 'The value of “%2$s” is too large, a maximum value of %1$d is allowed.',
+	'FIELD_INVALID_CHARS_INVALID'		=> 'The field “%s” has invalid characters.',
 	'FIELD_INVALID_CHARS_NUMBERS_ONLY'	=> 'Câmpul “%s” conţine caractere invalide, sunt acceptate doar cifrele.',
+	'FIELD_INVALID_CHARS_ALPHA_DOTS'	=> 'The field “%s” has invalid characters, only alphanumeric or . characters are allowed.',
 	'FIELD_INVALID_CHARS_ALPHA_ONLY'	=> 'Câmpul “%s” conţine caractere invalide, sunt acceptate doar caracterele alfanumerice.',
-	'FIELD_INVALID_CHARS_SPACERS_ONLY'	=> 'Câmpul “%s” conţine caractere invalide, sunt acceptate doar caracterele alfanumerice, spaţiile şi semnele -+_[].',
+	'FIELD_INVALID_CHARS_ALPHA_PUNCTUATION'	=> 'The field “%s” has invalid characters, only alphanumeric or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_ALPHA_SPACERS'	=> 'The field “%s” has invalid characters, only alphanumeric, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_ALPHA_UNDERSCORE'	=> 'The field “%s” has invalid characters, only alphanumeric or _ characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_DOTS'	=> 'The field “%s” has invalid characters, only letter, number or . characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_ONLY'	=> 'The field “%s” has invalid characters, only letter and number characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_PUNCTUATION'	=> 'The field “%s” has invalid characters, only letter, number or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_SPACERS'		=> 'The field “%s” has invalid characters, only letter, number, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_UNDERSCORE'		=> 'The field “%s” has invalid characters, only letter, number or _ characters are allowed.',
 	'FIELD_INVALID_DATE'				=> 'Câmpul “%s” conţine o dată invalidă.',
+	'FIELD_INVALID_URL'					=> 'The field “%s” has an invalid url.',
 	'FIELD_INVALID_VALUE'				=> 'Câmpul “%s” conţine o valoare invalidă.',
 
 	'FOE_MESSAGE'				=> 'Mesaj de la o persoană neagreată',
 	'FOES_EXPLAIN'				=> 'Persoanele neagreate sunt utilizatori care vor fi ignoraţi. Mesajele acestora nu vor fi total vizibile. Mesajele personale de la persoanele neagreate sunt încă permise. Nu puteţi ignora moderatorii şi administratorii.',
 	'FOES_UPDATED'				=> 'Lista dumneavoastră cu persoane neagreate a fost actualizată cu succes.',
 	'FOLDER_ADDED'				=> 'Dosarul a fost adăugat cu succes.',
-	'FOLDER_MESSAGE_STATUS'		=> 'Sunt păstrate %1$d din %2$d mesaje',
 	'FOLDER_NAME_EMPTY'			=> 'Trebuie să specificaţi un nume pentru acest director.',
 	'FOLDER_NAME_EXIST'			=> 'Dosarul <strong>%s</strong> există deja.',
 	'FOLDER_OPTIONS'			=> 'Opţiunile dosarului',
 	'FOLDER_RENAMED'			=> 'Dosar redenumit cu succes.',
 	'FOLDER_REMOVED'			=> 'Dosar şters cu succes.',
-	'FOLDER_STATUS_MSG'			=> 'Dosarul este plin %1$d%% (sunt păstrate %2$d din %3$d mesaje)',
 	'FORWARD_PM'				=> 'Redirecţionare mesaj privat',
 	'FORCE_PASSWORD_EXPLAIN'	=> 'Înainte să puteţi continua navigharea forumului, trebuie să modificaţi parola.',
 	'FRIEND_MESSAGE'			=> 'Mesaj de la un prieten',
@@ -3419,16 +3599,35 @@ $lang = array_merge($lang, array(
 	'MOVE_DELETED_MESSAGES_TO'		=> 'Mută mesaje din dosarul şterse',
 	'MOVE_DOWN'						=> 'Mută mai jos',
 	'MOVE_MARKED_TO_FOLDER'			=> 'Mută mesaje marcate în %s',
-	'MOVE_PM_ERROR'					=> 'O eroare a apărut în timpul mutării mesajelor în noul dosar, au fost mutate doar %1d din %2d mesaje.',
 	'MOVE_TO_FOLDER'				=> 'Mută în dosar',
 	'MOVE_UP'						=> 'Mută mai sus',
 
-	'NEW_EMAIL_CONFIRM_EMPTY'		=> 'Nu ați confirmat adresa de e-mail.',
-	'NEW_EMAIL_ERROR'				=> 'Adresele de e-mail introduse nu se potrivesc.',
 	'NEW_FOLDER_NAME'				=> 'Numele noului dosar',
 	'NEW_PASSWORD'					=> 'Parola nouă',
 	'NEW_PASSWORD_CONFIRM_EMPTY'	=> 'Nu ați confirmat parola.',
 	'NEW_PASSWORD_ERROR'			=> 'Parolele introduse nu se potrivesc.',
+
+	'NOTIFICATIONS_MARK_ALL_READ'						=> 'Mark all notifications read',
+	'NOTIFICATIONS_MARK_ALL_READ_CONFIRM'				=> 'Are you sure you want to mark all notifications read?',
+	'NOTIFICATIONS_MARK_ALL_READ_SUCCESS'				=> 'All notifications have been marked read.',
+	'NOTIFICATION_GROUP_MISCELLANEOUS'					=> 'Miscellaneous Notifications',
+	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
+	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
+	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'E-mail',
+	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
+	'NOTIFICATION_TYPE'									=> 'Notification type',
+	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
+	'NOTIFICATION_TYPE_GROUP_REQUEST'					=> 'Someone requests to join a group you lead',
+	'NOTIFICATION_TYPE_IN_MODERATION_QUEUE'				=> 'A post or topic needs approval',
+	'NOTIFICATION_TYPE_MODERATION_QUEUE'				=> 'Your topics/posts are approved or disapproved by a moderator',
+	'NOTIFICATION_TYPE_PM'								=> 'Someone sends you a private message',
+	'NOTIFICATION_TYPE_POST'							=> 'Someone replies to a topic to which you are subscribed',
+	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
+	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
+	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+
 	'NOTIFY_METHOD'					=> 'Metodă de notificare',
 	'NOTIFY_METHOD_BOTH'			=> 'Ambele',
 	'NOTIFY_METHOD_EMAIL'			=> 'Doar e-mail',
@@ -3446,10 +3645,9 @@ $lang = array_merge($lang, array(
 	'NOT_ADDED_FOES_SELF'			=> 'Nu vă puteţi adăuga în lista cu persoane neagreate.',
 	'NOT_AGREE'						=> 'Nu sunt de acord cu aceşti termeni',
 	'NOT_ENOUGH_SPACE_FOLDER'		=> 'Dosarul de destinaţie “%s” pare să fie plin. Acţiunea cerută nu poate fi realizată.',
-	'NOT_MOVED_MESSAGE'				=> 'Aveţi 1 mesaj privat în aşteptare datorită faptului că dosarul este plin.',
-	'NOT_MOVED_MESSAGES'			=> 'Aveţi %d mesaje private în aşteptare datorită faptului că dosarul este plin.',
 	'NO_ACTION_MODE'				=> 'Nicio acţiune nu a fost specificată.',
 	'NO_AUTHOR'						=> 'Acest mesaj nu are niciun autor definit',
+	'NO_AVATAR'						=> 'No avatar selected',
 	'NO_AVATAR_CATEGORY'			=> 'Niciuna',
 
 	'NO_AUTH_DELETE_MESSAGE'		=> 'Nu sunteţi autorizat să ştergeţi mesaje private.',
@@ -3457,6 +3655,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_FORWARD_MESSAGE'		=> 'Nu sunteţi autorizat să redirecţionaţi mesaje private.',
 	'NO_AUTH_GROUP_MESSAGE'			=> 'Nu sunteţi autorizat să trimiteţi mesaje private spre grupuri.',
 	'NO_AUTH_PASSWORD_REMINDER'		=> 'Nu sunteţi autorizat să cereţi o parolă nouă.',
+	'NO_AUTH_PROFILEINFO'			=> 'You are not authorised to change your profile information.',
 	'NO_AUTH_READ_HOLD_MESSAGE'		=> 'Nu sunteţi autorizat să citiţi mesaje private care sunt expediate.',
 	'NO_AUTH_READ_MESSAGE'			=> 'Nu sunteţi autorizat să citiţi mesaje private.',
 	'NO_AUTH_READ_REMOVED_MESSAGE'	=> 'Nu puteţi citi acest mesaj pentru că a fost şters de către autor.',
@@ -3487,10 +3686,10 @@ $lang = array_merge($lang, array(
 	'NO_WATCHED_SELECTED'		=> 'Nu aţi selectat niciun subiect sau forum urmărit.',
 	'NO_WATCHED_TOPICS'			=> 'Nu urmăriţi niciun subiect.',
 
-	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Parola trebuie să conţină între %1$d şi %2$d caractere, trebuie să conţină litere mari şi mici şi cifre.',
-	'PASS_TYPE_ANY_EXPLAIN'		=> 'Trebuie să fie între %1$d şi %2$d caractere.',
-	'PASS_TYPE_CASE_EXPLAIN'	=> 'Parola trebuie să conţină între %1$d şi %2$d litere mari şi mici.',
-	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Parola trebuie să conţină între %1$d şi %2$d caractere, trebuie să conţină litere mari şi mici, cifre şi simboluri.',
+	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case and must contain numbers.',
+	'PASS_TYPE_ANY_EXPLAIN'		=> 'Must be between %1$s and %2$s.',
+	'PASS_TYPE_CASE_EXPLAIN'	=> 'Password must be between %1$s and %2$s long and must contain letters in mixed case.',
+	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case, must contain numbers and must contain symbols.',
 	'PASSWORD'					=> 'Parolă',
 	'PASSWORD_ACTIVATED'		=> 'Noua dumneavoastră parolă a fost activată.',
 	'PASSWORD_UPDATED'			=> 'O nouă parolă a fost trimisă la adresa de e-mail înregistrată.',
@@ -3501,13 +3700,16 @@ $lang = array_merge($lang, array(
 	'PM_FROM_REMOVED_AUTHOR'	=> 'Acest mesaj a fost trimis de un utilizator care nu mai este înregistrat.',
 	'PM_ICON'					=> 'Iconiţă mesaj privat',
 	'PM_INBOX'					=> 'Primite',
+	'PM_MARK_ALL_READ'			=> 'Mark all messages read',
+	'PM_MARK_ALL_READ_SUCCESS'	=> 'All private messages in this folder have been marked read',
 	'PM_NO_USERS'				=> 'Utilizatorii selectaţi să fie adăugaţi nu există.',
 	'PM_OUTBOX'					=> 'Expediate',
 	'PM_SENTBOX'				=> 'Mesaje trimise',
 	'PM_SUBJECT'				=> 'Subiectul mesajului',
 	'PM_TO'						=> 'Destinatar',
+	'PM_TOOLS'					=> 'Message tools',
+	'PM_USERS_REMOVED_NO_PERMISSION'	=> 'Some users couldn’t be added as they do not have permission to read private messages.',
 	'PM_USERS_REMOVED_NO_PM'	=> 'Anumiţi utilizatori nu au putut fi adăugaţi pentru că şi-au dezactivat recipientul de mesaje private.',
-	'POPUP_ON_PM'				=> 'Afişează pop-up cu noile mesaje private',
 	'POST_EDIT_PM'				=> 'Modificare mesaj',
 	'POST_FORWARD_PM'			=> 'Redirecţionare mesaj',
 	'POST_NEW_PM'				=> 'Crează mesaj',
@@ -3519,6 +3721,8 @@ $lang = array_merge($lang, array(
 	'PREFERENCES_UPDATED'		=> 'Preferinţele dumneavoastră au fost actualizate.',
 	'PROFILE_INFO_NOTICE'		=> 'Aceste informaţii vor fi vizibile celorlalţi utilizatori. Fiţi atent la includerea detaliilor personale. Orice câmp marcat cu * trebuie să fie completat.',
 	'PROFILE_UPDATED'			=> 'Profilul dumneavoastră a fost actualizat.',
+	'PROFILE_AUTOLOGIN_KEYS'	=> 'The "Remember Me" login keys automatically log you in when you visit the board. If you logout, the remember me login key is deleted only on the computer you are using to logout. Here you can see remember login keys created on other computers you used to access this site.',
+	'PROFILE_NO_AUTOLOGIN_KEYS'	=> 'There are no saved "Remember Me" login keys.',
 
 	'RECIPIENT'							=> 'Recipient',
 	'RECIPIENTS'						=> 'Destinatari',
@@ -3543,8 +3747,6 @@ $lang = array_merge($lang, array(
 	'RULE_DELETED'						=> 'Regula a fost ştearsă cu succes.',
 	'RULE_LIMIT_REACHED'				=> 'Nu mai puteți adăuga mai multe reguli pentru mesajele private. Ați atins numărul maxim de reguli.',
 	'RULE_NOT_DEFINED'					=> 'Regula nu a fost specificată corect.',
-	'RULE_REMOVED_MESSAGE'				=> 'Un mesaj privat a fost şters datorită filtrării mesajelor private.',
-	'RULE_REMOVED_MESSAGES'				=> '%d mesaje private au fost şterse datorită filtrării mesajelor private.',
 
 	'SAME_PASSWORD_ERROR'		=> 'Noua parolă introdusă este aceeaşi cu parola actuală.',
 	'SEARCH_YOUR_POSTS'			=> 'Afişare mesaje proprii',
@@ -3556,6 +3758,8 @@ $lang = array_merge($lang, array(
 	'SIGNATURE_TOO_LONG'		=> 'Semătura dumneavoastră este prea lungă.',
 	'SELECT_CURRENT_TIME'		=> 'Select current time',
 	'SELECT_TIMEZONE'			=> 'Select timezone',
+	'SELECT_CURRENT_TIME'		=> 'Select current time',
+	'SELECT_TIMEZONE'			=> 'Select timezone',
 	'SORT'						=> 'Sortare',
 	'SORT_COMMENT'				=> 'Comentariu fişier',
 	'SORT_DOWNLOADS'			=> 'Descărcări',
@@ -3565,15 +3769,28 @@ $lang = array_merge($lang, array(
 	'SORT_SIZE'					=> 'Mărime fişier',
 
 	'TIMEZONE'					=> 'Fus orar',
-	'TO'						=> 'Destinatar',
+	'TIMEZONE_DATE_SUGGESTION'	=> 'Suggestion: %s',
+	'TIMEZONE_INVALID'			=> 'The timezone you selected is invalid.',
+	'TO'						=> 'Recipient',
+	'TO_MASS'					=> 'Recipients',
+	'TO_ADD'					=> 'Add recipient',
+	'TO_ADD_MASS'				=> 'Add recipients',
+	'TO_ADD_GROUPS'				=> 'Add groups',
 	'TOO_MANY_RECIPIENTS'		=> 'Aţi încercat să trimiteţi un mesaj privat la prea mulţi destinatari.',
 	'TOO_MANY_REGISTERS'		=> 'Aţi depăşit numărul maxim de încercări de înregistrare pentru această sesiune. Vă rugăm încercaţi mai târziu.',
 
 	'UCP'						=> 'Panoul utilizatorului',
 	'UCP_ACTIVATE'				=> 'Activare cont',
 	'UCP_ADMIN_ACTIVATE'		=> 'Trebuie să introduceţi o adresă de e-mail validă înainte de activarea contului dumneavoastră. Administratorul va verifica acest cont şi, dacă îl va aproba, veţi primi un e-mail la adresa specificată.',
-	'UCP_AIM'					=> 'AOL Instant Messenger',
 	'UCP_ATTACHMENTS'			=> 'Administrare fişiere ataşate',
+	'UCP_AUTH_LINK'				=> 'External accounts',
+	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
+	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
+	'UCP_AUTH_LINK_LINK'		=> 'Legatură',
+	'UCP_AUTH_LINK_MANAGE'		=> 'Manage external account associations',
+	'UCP_AUTH_LINK_NOT_SUPPORTED'	=> 'Linking board accounts to external services is not supported by this board’s current authentication method.',
+	'UCP_AUTH_LINK_TITLE'		=> 'Manage your external account associations',
+	'UCP_AUTH_LINK_UNLINK'		=> 'Unlink',
 	'UCP_AUTH_LINK'				=> 'External accounts',
 	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
 	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
@@ -3585,8 +3802,8 @@ $lang = array_merge($lang, array(
 	'UCP_COPPA_BEFORE'			=> 'Înainte de %s',
 	'UCP_COPPA_ON_AFTER'		=> 'În sau după %s',
 	'UCP_EMAIL_ACTIVATE'		=> 'Trebuie să introduceţi o adresă de e-mail validă înainte de activarea contului. Veţi primi un e-mail la această adresă care va conţine legătura de activare a contului.',
-	'UCP_ICQ'					=> 'Număr ICQ',
 	'UCP_JABBER'				=> 'Adresa Jabber',
+	'UCP_LOGIN_LINK'			=> 'Set up an external account association',
 
 	'UCP_MAIN'					=> 'Panou principal',
 	'UCP_MAIN_ATTACHMENTS'		=> 'Administrare fişiere ataşate',
@@ -3595,7 +3812,6 @@ $lang = array_merge($lang, array(
 	'UCP_MAIN_FRONT'			=> 'Pagina principală',
 	'UCP_MAIN_SUBSCRIBED'		=> 'Administrare subscrieri',
 
-	'UCP_MSNM'					=> 'Messenger WL/MSN',
 	'UCP_NO_ATTACHMENTS'		=> 'Nu aţi trimis niciun fişier.',
 
 	'UCP_NOTIFICATION_LIST'				=> 'Manage notifications',
@@ -3612,8 +3828,6 @@ $lang = array_merge($lang, array(
 	'UCP_PM_COMPOSE'			=> 'Compune mesaj',
 	'UCP_PM_DRAFTS'				=> 'Administrare mesaje private în lucru',
 	'UCP_PM_OPTIONS'			=> 'Reguli, dosare &amp; setări',
-	'UCP_PM_POPUP'				=> 'Mesaje private',
-	'UCP_PM_POPUP_TITLE'		=> 'Pop-up mesaje private',
 	'UCP_PM_UNREAD'				=> 'Mesaje necitite',
 	'UCP_PM_VIEW'				=> 'Vizualizare mesaje',
 
@@ -3628,11 +3842,11 @@ $lang = array_merge($lang, array(
 	'UCP_USERGROUPS_MEMBER'		=> 'Modificarea calităţii de membru',
 	'UCP_USERGROUPS_MANAGE'		=> 'Administrare grupuri',
 
+	'UCP_PASSWORD_RESET_DISABLED'	=> 'The password reset functionality has been disabled. If you need help accessing your account, please contact the %sBoard Administrator%s',
 	'UCP_REGISTER_DISABLE'			=> 'Crearea unui nou cont de utilizator nu este posibilă.',
 	'UCP_REMIND'					=> 'Trimitere parolă',
 	'UCP_RESEND'					=> 'Trimitere e-mail de activare',
 	'UCP_WELCOME'					=> 'Bun venit la Panoul utilizatorului. De aici puteţi monitoriza, vizualiza şi actualiza profilul dumneavoastră, preferinţele, forumurile şi subiectele urmărite. Puteţi de asemenea trimite mesaje celorlalţi utilizatori (dacă este permis). Vă rugăm asiguraţi-vă că aţi citit anunţurile înainte de a continua.',
-	'UCP_YIM'						=> 'Yahoo Messenger',
 	'UCP_ZEBRA'						=> 'Prieteni &amp; persoane neagreate',
 	'UCP_ZEBRA_FOES'				=> 'Administrare persoane neagreate',
 	'UCP_ZEBRA_FRIENDS'				=> 'Administrare prieteni',
@@ -3642,12 +3856,12 @@ $lang = array_merge($lang, array(
 	'UPLOAD_AVATAR_FILE'			=> 'Încărcare de pe computer',
 	'UPLOAD_AVATAR_URL'				=> 'Încărcare de la URL',
 	'UPLOAD_AVATAR_URL_EXPLAIN'		=> 'Introduceţi URL-ul locaţiei care conţine imaginea, aceasta va fi copiată aici pe site.',
-	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Numele de utilizator trebuie să fie între %1$d şi %2$d caractere. Sunt acceptate doar caracterele alfanumerice.',
-	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Numele de utilizator trebuie să fie între %1$d şi %2$d caractere. Sunt acceptate doar caracterele alfanumerice, spaţiile sau caracterele -+_[].',
-	'USERNAME_ASCII_EXPLAIN'		=> 'Numele de utilizator trebuie să fie între  %1$d şi %2$d caractere şi să folosească doar caracterele ASCII, fără simboluri speciale.',
-	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Numele de utilizator trebuie să fie între  %1$d şi %2$d caractere şi să folosească doar litere şi cifre.',
-	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Numele de utilizator trebuie să fie între  %1$d şi %2$d caractere şi să folosească litere, cifre, spaţii sau caracterele -+_[].',
-	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Lungimea trebuie să fie între %1$d şi %2$d caractere.',
+	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only alphanumeric characters.',
+	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use alphanumeric, space or -+_[] characters.',
+	'USERNAME_ASCII_EXPLAIN'		=> 'Username must be between %1$s and %2$s long and use only ASCII characters, so no special symbols.',
+	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only letter or number characters.',
+	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use letter, number, space or -+_[] characters.',
+	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Length must be between %1$s and %2$s.',
 	'USERNAME_TAKEN_USERNAME'		=> 'Numele de utilizator introdus este folosit deja, vă rugăm alegeţi altul.',
 	'USERNAME_DISALLOWED_USERNAME'	=> 'Numele de utilizator introdus a fost interzis sau conţine un cuvânt interzis. Vă rugăm alegeţi alt nume.',
 	'USER_NOT_FOUND_OR_INACTIVE'	=> 'Numele de utilizatori introduse ori nu au putut fi găsite, ori nu au fost activate.',
@@ -3660,10 +3874,9 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_PM'				=> 'Următorul mesaj privat',
 	'VIEW_PM'					=> 'Vezi mesaj privat',
 	'VIEW_PM_INFO'				=> 'Detaliile mesajului',
-	'VIEW_PM_MESSAGE'			=> '1 mesaj',
-	'VIEW_PM_MESSAGES'			=> '%d mesaje',
 	'VIEW_PREVIOUS_HISTORY'		=> 'Mesajul privat anterior din istoric',
 	'VIEW_PREVIOUS_PM'			=> 'Mesajul privat anterior',
+	'VIEW_PROFILE'				=> 'View profile',
 	'VIEW_SIGS'					=> 'Afişare semnături',
 	'VIEW_SMILIES'				=> 'Afişare zâmbete ca imagini',
 	'VIEW_TOPICS_DAYS'			=> 'Afişare subiecte din zilele anterioare',
@@ -3771,8 +3984,6 @@ $lang = array_merge($lang, array(
 	'UNREAD_POSTS_LOCKED'	=> 'Mesaje necitite [ Închis ]',
 
 	'VIEW_FORUM'			=> 'Vizualizare forum',
-	'VIEW_FORUM_TOPIC'		=> '1 subiect',
-	'VIEW_FORUM_TOPICS'		=> '%d subiecte',
 
 	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
 	'REMOVE_FILTER'		=> 'Remove filter',
@@ -3781,6 +3992,7 @@ $lang = array_merge($lang, array(
 #######language/en/viewtopic.php#######
 
 $lang = array_merge($lang, array(
+	'APPROVE'								=> 'Aprobare',
 	'ATTACHMENT'						=> 'Fişiere ataşate',
 	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'Facilitatea de fişiere ataşate a fost dezactivată.',
 
@@ -3793,14 +4005,13 @@ $lang = array_merge($lang, array(
 	'BUMP_TOPIC'			=> 'Ridică subiect',
 
 	'CODE'					=> 'Cod',
-	'COLLAPSE_QR'			=> 'Ascunde Răspuns rapid',
-
+	
 	'DELETE_TOPIC'			=> 'Şterge subiect',
+	'DELETED_INFORMATION'	=> 'Deleted by %1$s on %2$s',
+	'DISAPPROVE'					=> 'Dezaprobaţi',
 	'DOWNLOAD_NOTICE'		=> 'Nu aveţi permisiunea de a vizualiza fişierele ataşate acestui mesaj.',
 
-	'EDITED_TIMES_TOTAL'	=> 'Ultima oară modificat de %1$s pe %2$s, modificat de %3$d ori în total.',
-	'EDITED_TIME_TOTAL'		=> 'Ultima oară modificat de %1$s pe %2$s, modificat %3$d dată în total.',
-	'EMAIL_TOPIC'			=> 'Trimite prin e-mail unui prieten',
+	'EMAIL_TOPIC'			=> 'E-mail topic',
 	'ERROR_NO_ATTACHMENT'	=> 'Fişierul ataşat selectat nu mai există.',
 
 	'FILE_NOT_FOUND_404'	=> 'Fişierul <strong>%s</strong> nu există.',
@@ -3815,8 +4026,6 @@ $lang = array_merge($lang, array(
 	'MAKE_GLOBAL'				=> 'Schimbă în “Global”',
 	'MAKE_NORMAL'				=> 'Schimbă în “Subiect obişnuit”',
 	'MAKE_STICKY'				=> 'Schimbă în “Important”',
-	'MAX_OPTIONS_SELECT'		=> 'Puteţi selecta până la <strong>%d</strong> opţiuni',
-	'MAX_OPTION_SELECT'			=> 'Puteţi selecta <strong>1</strong> opţiune',
 	'MISSING_INLINE_ATTACHMENT'	=> 'Fişierul ataşat <strong>%s</strong> nu mai este disponibil',
 	'MOVE_TOPIC'				=> 'Mută subiect',
 
@@ -3830,6 +4039,7 @@ $lang = array_merge($lang, array(
 	'POLL_ENDED_AT'			=> 'Chestionarul s-a închis pe data de %s',
 	'POLL_RUN_TILL'			=> 'Chestionarul este deschis până pe data de %s',
 	'POLL_VOTED_OPTION'		=> 'Aţi votat pentru această opţiune',
+	'POST_DELETED_RESTORE'	=> 'This post has been deleted. It can be restored.',
 	'PRINT_TOPIC'			=> 'Versiune printabilă',
 
 	'QUICK_MOD'				=> 'Utilităţi rapide',
@@ -3837,11 +4047,14 @@ $lang = array_merge($lang, array(
 	'QUOTE'					=> 'Citat',
 
 	'REPLY_TO_TOPIC'		=> 'Răspunde la subiect',
+	'RESTORE'				=> 'Restore',
+	'RESTORE_TOPIC'			=> 'Restore topic',
 	'RETURN_POST'			=> '%sReveniţi la mesaj%s',
 
 	'SHOW_QR'				=> 'Răspuns rapid',
 	'SUBMIT_VOTE'			=> 'Trimite vot',
 
+	'TOPIC_TOOLS'			=> 'Topic tools',
 	'TOTAL_VOTES'			=> 'Voturi totale',
 
 	'UNLOCK_TOPIC'			=> 'Deblocaţi subiectul',
@@ -3850,10 +4063,7 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_TOPIC'		=> 'Următorul subiect',
 	'VIEW_PREVIOUS_TOPIC'	=> 'Subiectul anterior',
 	'VIEW_RESULTS'			=> 'Vezi rezultatele',
-	'VIEW_TOPIC_POST'		=> '1 mesaj',
-	'VIEW_TOPIC_POSTS'		=> '%d mesaje',
 	'VIEW_UNREAD_POST'		=> 'Primul mesaj necitit',
-	'VISIT_WEBSITE'			=> 'Vizitează site web',
 	'VOTE_SUBMITTED'		=> 'Votul dumneavoastră a fost adăugat.',
 	'VOTE_CONVERTED'		=> 'Schimbarea voturilor nu este suportată pentru voturile convertite.',
 
@@ -9443,6 +9653,7 @@ $lang = array_merge($lang, array(
 	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'	=> 'Mărimea maximă a fiecărui fişier ataşat unui mesaj privat, 0 înseamnă nelimitat.',
 	'ATTACH_ORPHAN_URL'					=> 'Fişiere ataşate orfane',
 	'ATTACH_POST_ID'					=> 'ID-ul mesajului',
+	'ATTACH_POST_TYPE'					=> 'Post type',
 	'ATTACH_QUOTA'						=> 'Limita totală pentru fişiere ataşate',
 	'ATTACH_QUOTA_EXPLAIN'				=> 'Spaţiu maxim alocat pentru fişiere ataşate, 0 înseamnă nelimitat.',
 	'ATTACH_TO_POST'					=> 'Ataşează fişier la mesaj',
@@ -9488,6 +9699,9 @@ $lang = array_merge($lang, array(
 	'EXT_GROUP_REAL_MEDIA'			=> 'Real Media',
 	'EXT_GROUP_WINDOWS_MEDIA'		=> 'Windows Media',
 
+	'FILES_GONE'			=> 'Some of the attachments you selected for deletion do not exist. They may have been already deleted. Attachments that did exist were deleted.',
+	'FILES_STATS_WRONG'		=> 'Your file statistics are likely inaccurate and need to be resynchronised. Actual values: number of attachments = %1$d, total size of attachments = %2$s.<br />Click %3$shere%4$s to resynchronise them.',
+
 	'GO_TO_EXTENSIONS'		=> 'Du-te la ecranul de administrare al extensiilor',
 	'GROUP_NAME'			=> 'Numele grupului',
 
@@ -9511,6 +9725,7 @@ $lang = array_merge($lang, array(
 	'NOT_ALLOWED_IN_PM'			=> 'Doar permis în mesaje',
 	'NOT_ALLOWED_IN_PM_POST'	=> 'Nepermis',
 	'NOT_ASSIGNED'				=> 'Nealocat',
+	'NO_ATTACHMENTS'			=> 'No attachments found for this period.',
 	'NO_EXT_GROUP'				=> 'Niciunul/una',
 	'NO_EXT_GROUP_NAME'			=> 'Niciun nume de grup specificat',
 	'NO_EXT_GROUP_SPECIFIED'	=> 'Niciun grup de extensii specificat.',
@@ -9523,6 +9738,10 @@ $lang = array_merge($lang, array(
 	'ONLY_ALLOWED_IN_PM'	=> 'Permis doar în mesajele private',
 	'ORDER_ALLOW_DENY'		=> 'Permite',
 	'ORDER_DENY_ALLOW'		=> 'Nu permite',
+
+	'REMOVE_ALLOWED_IPS'			=> 'Şterge sau exclude IP-uri/nume de host-uri <em>permise</em>',
+	'REMOVE_DISALLOWED_IPS'			=> 'Şterge sau exclude IP-uri/nume de host-uri <em>nepermise</em>',
+	'RESYNC_FILES_STATS_CONFIRM'	=> 'Are you sure you wish to resynchronise file statistics?',
 
 	'REMOVE_ALLOWED_IPS'		=> 'Şterge sau exclude IP-uri/nume de host-uri <em>permise</em>',
 	'REMOVE_DISALLOWED_IPS'		=> 'Şterge sau exclude IP-uri/nume de host-uri <em>nepermise</em>',
@@ -9592,18 +9811,17 @@ $lang = array_merge($lang, array(
 	'PERMANENT'		=> 'Permanent',
 
 	'UNTIL'						=> 'Până',
-	'USER_BAN'					=> 'Interziceri',
+	'USER_BAN'					=> 'Ban one or more users by username',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> 'Selectaţi pentru a exclude utilizatorii specificaţi din toate banările curente.',
 	'USER_BAN_EXPLAIN'			=> 'Puteţi bana mai mulţi utilizatori deodată introducând fiecare nume pe un rând. Folosiţi funcția <span style="text-decoration: underline;">Caută un membru</span> pentru a găsi şi adăuga automat unul sau mai mulţi utilizatori.',
 	'USER_NO_BANNED'			=> 'Niciun utilizator banat',
-	'USER_UNBAN'				=> 'Debanaţi sau includeţi utilizatori',
+	'USER_UNBAN'				=> 'Un-ban or un-exclude users by username',
 	'USER_UNBAN_EXPLAIN'		=> 'Puteţi debana (sau include) mai mulţi utilizatori printr-o singură mişcare folosind cea mai apropiată combinaţie a mouse-ului şi a tastaturii calculatorului şi browser-ului propriu. Utilizatorii excluşi au fundalul marcat.',
 ));
 
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'				=> 'Activează timpul de vară/<abbr title="Daylight Saving Time">DST</abbr>',
 	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
 	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
 	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
@@ -9629,16 +9847,28 @@ $lang = array_merge($lang, array(
 	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Aici puteţi efectua operaţiunile de bază pentru forumul propriu, ca de exemplu alocarea unui nume şi unei descrieri, specificarea valorilor standard pentru fusul orar sau limbă, etc.',
+	'BOARD_INDEX_TEXT'				=> 'Board index text',
+	'BOARD_INDEX_TEXT_EXPLAIN'		=> 'This text is displayed as the board index in the board’s breadcrumbs. If not specified, it will default to “Board index”.',
+	'BOARD_STYLE'					=> 'Stilul meu',
 	'CUSTOM_DATEFORMAT'				=> 'Personalizare',
 	'DEFAULT_DATE_FORMAT'			=> 'Format dată',
 	'DEFAULT_DATE_FORMAT_EXPLAIN'	=> 'Formatul datei este acelaşi ca şi funcţia PHP <code>date</code>.',
 	'DEFAULT_LANGUAGE'				=> 'Limba standard',
 	'DEFAULT_STYLE'					=> 'Stil standard',
+	'DEFAULT_STYLE_EXPLAIN'			=> 'The default style is <strong>%1$s (%2$s)</strong> which is the overriden style for all users (including bots).',
 	'DISABLE_BOARD'					=> 'Dezactivează forum',
-	'DISABLE_BOARD_EXPLAIN'			=> 'Aceasta operaţie va face forumul indisponibil pentru utilizatori. De asemenea, dacă doriţi puteţi specifica un mesaj scurt (255 caractere) ce va fi afişat.',
+	'DISABLE_BOARD_EXPLAIN'			=> 'This will make the board unavailable to users who are neither administrators nor moderators. You can also enter a short (255 character) message to display if you wish.',
+	'DISPLAY_LAST_SUBJECT'			=> 'Display subject of last added post on forum list',
+	'DISPLAY_LAST_SUBJECT_EXPLAIN'	=> 'The subject of the last added post will be displayed in the forum list with a hyperlink to the post. Subjects from password protected forums and forums in which user doesn’t have read access are not shown.',
+	'GUEST_STYLE'					=> 'Guest style',
+	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Suprascrie stilul utilizatorului',
 	'OVERRIDE_STYLE_EXPLAIN'		=> 'Înlocuieşte stilul utilizatorului cu cel standard.',
 	'SITE_DESC'						=> 'Descriere site',
+	'SITE_HOME_TEXT'				=> 'Main website text',
+	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
+	'SITE_HOME_URL'					=> 'Main website URL',
+	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Nume site',
 	'SYSTEM_TIMEZONE'				=> 'Fusul orar al vizitatorului',
 	'WARNINGS_EXPIRE'				=> 'Durată avertisment',
@@ -9678,6 +9908,7 @@ $lang = array_merge($lang, array(
 
 	'ALLOW_AVATARS'					=> 'Activare avataruri',
 	'ALLOW_AVATARS_EXPLAIN'			=> 'Permite folosirea globală a avatarurilor;<br />Dacă dezactivaţi avatarurile în general sau avatarurile unui anumit mod, avatarurile dezactivate nu vor mai fi afişate în forum dar utilizatorii vor avea în continuare posibilitatea de a-şi descărca propriul avatar în Panoul utilizatorului.',
+	'ALLOW_GRAVATAR'				=> 'Enable gravatar avatars',
 	'ALLOW_LOCAL'					=> 'Permite galerie avataruri',
 	'ALLOW_REMOTE'					=> 'Permite avataruri la distanţă',
 	'ALLOW_REMOTE_EXPLAIN'			=> 'Avatarul este localizat pe alt site web',
@@ -9858,6 +10089,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Conţinutul acestor forumuri <strong>nu va fi inclus în fluxuri</strong>. Se vor extrage informaţii din toate forumurile dacă nu selectaţi niciun forum.<br />Selectaţi/Deselectaţi mai multe forumuri ţinând apăsată tasta <samp>CTRL</samp> şi făcând click.',
 
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Aici puteţi selecta şi configura componente ce implementează diverse metode pentru a respinge încercările de înregistrare ale aşa numiţilor roboţi de spam. Aceste plugin-uri provoaca utilizatorul cu un <em>CAPTCHA</em>, un test care este conceput a fi dificil de rezolvat de către calculatoare.',
+	'ACP_VC_EXT_GET_MORE'					=> 'For additional (and possibly better) anti-spam plugins, visit the <a href="https://www.phpbb.com/go/anti-spam-ext"><strong>phpBB.com Extensions Database</strong></a>. For more information on preventing spam on your board, visit the <a href="https://www.phpbb.com/go/anti-spam"><strong>phpBB.com Knowledge Base</strong></a>.',
 	'AVAILABLE_CAPTCHAS'					=> 'Componente disponibile',
 	'CAPTCHA_UNAVAILABLE'					=> 'Componenta nu poate fi selectată pentru că nu sunt îndeplinite cerinţele pentru a putea fi folosită.',
 	'CAPTCHA_GD'							=> 'Imagine GD',
@@ -9908,18 +10140,36 @@ $lang = array_merge($lang, array(
 	'SESSION_LENGTH'			=> 'Durată sesiune',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Sesiunea va expira după acest timp, în secunde.',
 
+	// Contact Settings
+	'ACP_CONTACT_SETTINGS_EXPLAIN'		=> 'Here you can enable and disable the contact page and also add a text that is displayed on the page.',
+
+	'CONTACT_US_ENABLE'				=> 'Enable contact page',
+	'CONTACT_US_ENABLE_EXPLAIN'		=> 'This page allows users to send emails to board administrators',
+
+	'CONTACT_US_INFO'				=> 'Contact information',
+	'CONTACT_US_INFO_EXPLAIN'		=> 'The message is displayed on the contact page',
+	'CONTACT_US_INFO_PREVIEW'		=> 'Contact page information - Preview',
+	'CONTACT_US_INFO_UPDATED'		=> 'Contact page information has been updated.',
+
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Aici puteţi activa şi dezactiva anumite funcţii ale forumului pentru a reduce volumul de procesare cerut. Pe majoritatea serverelor nu este nevoie să dezactivaţi vreo funcţie. Oricum, pe anumite sisteme sau în mediile de gazduire partajate s-ar putea să fie benefică dezactivarea acestor capabilităţi de care nu aveţi neapărat nevoie. De asemenea, puteţi specifica înainte limitele pentru încărcarea sistemului şi sesiunile active ce vor determina ca forumul să devină indisponibil.',
 
+	'ALLOW_CDN'						=> 'Allow usage of third party content delivery networks',
+	'ALLOW_CDN_EXPLAIN'				=> 'If this setting is enabled, some files will be served from external third party servers instead of your server. This reduces the network bandwidth required by your server, but may present a privacy issue for some board administrators. In a default phpBB installation, this includes loading “jQuery” and the font “Open Sans” from Google’s content delivery network.',
+	'ALLOW_LIVE_SEARCHES'			=> 'Allow live searches',
+	'ALLOW_LIVE_SEARCHES_EXPLAIN'	=> 'If this setting is enabled, users are provided with keyword suggestions as they type in certain fields throughout the board.',
 	'CUSTOM_PROFILE_FIELDS'			=> 'Câmpuri profil personalizate',
 	'LIMIT_LOAD'					=> 'Limitează încărcarea sistemului',
 	'LIMIT_LOAD_EXPLAIN'			=> 'Dacă media primului minut de încărcare a sistemului depăşeşte această valoare atunci forumul va trece automat offline. O valoarea de 1.0 este egală cu ~100% din utilizarea unui procesor. Acestea funcţionează doar pe servere UNIX şi unde această informaţie este accesibilă. Valoarea de aici se resetează la 0 dacă phpBB nu a reuşit să ajungă la limita de încărcare.',
 	'LIMIT_SESSIONS'				=> 'Limita sesiunilor',
 	'LIMIT_SESSIONS_EXPLAIN'		=> 'Dacă numărul de sesiuni depăşeşte această valoare într-un minut, forumul va trece offline. Specificaţi 0 pentru sesiuni nelimitate.',
 	'LOAD_CPF_MEMBERLIST'			=> 'Permite stilurilor să afişeze câmpuri de profil personalizate în lista membrilor',
+	'LOAD_CPF_PM'					=> 'Display custom profile fields in private messages',
 	'LOAD_CPF_VIEWPROFILE'			=> 'Afişează câmpuri de profil personalizate în profilul utilizatorului',
 	'LOAD_CPF_VIEWTOPIC'			=> 'Afişează câmpuri de profil personalizate în paginile subiectului',
 	'LOAD_USER_ACTIVITY'			=> 'Arată activitatea utilizatorului',
 	'LOAD_USER_ACTIVITY_EXPLAIN'	=> 'Afişează subiectul/forumul activ în profilurile utilizatorilor dar şi în panoul utilizatorului. Este recomandat să dezactivaţi această opţiune pe un forum cu mai mult de un milion de mesaje.',
+	'READ_NOTIFICATION_EXPIRE_DAYS'	=> 'Read Notification Expiration',
+	'READ_NOTIFICATION_EXPIRE_DAYS_EXPLAIN' => 'Number of days that will elapse before a read notification will automatically be deleted. Set this value to 0 to make notifications permanent.',
 	'RECOMPILE_STYLES'				=> 'Recompilează componentele vechi ale stilului',
 	'RECOMPILE_STYLES_EXPLAIN'		=> 'Caută componentele de stil actualizate în sistemul de fişiere şi le recompilează.',
 	'YES_ANON_READ_MARKING'			=> 'Permite marcarea subiectelor pentru vizitatori',
@@ -9940,18 +10190,25 @@ $lang = array_merge($lang, array(
 	'YES_READ_MARKING_EXPLAIN'		=> 'Păstrează informaţiile de stare citite/necitite în baza de date mai degrabă decât într-un cookie.',
 	'YES_UNREAD_SEARCH'				=> 'Activează căutarea pentru mesajele necitite',
 
-	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB suportă plugin-uri de autentificare sau module. Acestea vă permit să determinaţi câţi utilizatori sunt autentificaţi când aceştia intra pe forum. În mod standard sunt furnizate trei plugin-uri; DB, LDAP şi Apache. Nu toate metodele necesită informaţii adiţionale, aşa că specificaţi valorile pentru câmpuri dacă ele sunt relevante pentru metoda selectată.',
+	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB supports authentication plug-ins, or modules. These allow you determine how users are authenticated when they log into the board. By default four plug-ins are provided: DB, LDAP, Apache, and OAuth. Not all methods require additional information so only fill out fields if they are relevant to the selected method.',
 
 	'AUTH_METHOD'				=> 'Selectaţi o metodă de autentificare',
 
+	'AUTH_PROVIDER_OAUTH_ERROR_ELEMENT_MISSING'	=> 'Both the key and secret of each enabled OAuth service provider must be provided. Only one was provided for an OAuth service provider.',
+	'AUTH_PROVIDER_OAUTH_EXPLAIN'				=> 'Each OAuth provider requires a unique secret and key in order to authenticate with the external server. These should be supplied by the OAuth service when you register your website with them and should be entered exactly as provided to you.<br />Any service that does not have both a key and a secret entered here will not be available for use by the forum users. Also note, that user can still register and login using the DB authentication plug-in.',
+	'AUTH_PROVIDER_OAUTH_KEY'					=> 'Key',
+	'AUTH_PROVIDER_OAUTH_TITLE'					=> 'OAuth',
+	'AUTH_PROVIDER_OAUTH_SECRET'				=> 'Secret',
+
 	'APACHE_SETUP_BEFORE_USE'	=> 'Trebuie să configuraţi autentificarea Apache înainte să folosiţi phpBB cu această metodă. Reţineţi că numele de utilizator pe care-l folosiţi pentru autentificarea Apache trebuie să fie acelaşi cu numele propriu de utilizator phpBB. Autentificarea Apache poate fi folosită doar cu mod_php (nu cu o versiune CGI) şi safe_mode dezactivat.',
 
+	'LDAP'							=> 'LDAP',
 	'LDAP_DN'						=> 'Baza LDAP <var>dn</var>',
 	'LDAP_DN_EXPLAIN'				=> 'Acesta este Distinguished Name, localizează informaţiile utilizatorului, ex. <samp>o=Compania mea,c=US</samp>',
-	'LDAP_EMAIL'					=> 'Atributul e-mail-ului LDAP',
-	'LDAP_EMAIL_EXPLAIN'			=> 'Specificaţi această valoare atributului de e-mail al numelui de utilizator propriu (dacă există unul) ca să asociaţi automat adresa de e-mail utilizatorilor noi creaţi. Dacă lăsaţi acest câmp necompletat, atunci câmpul de adresa e-mail pentru utilizatorii care s-au autentificat pentru prima oară va fi gol.',
+	'LDAP_EMAIL'					=> 'LDAP email attribute',
+	'LDAP_EMAIL_EXPLAIN'			=> 'Set this to the name of your user entry email attribute (if one exists) in order to automatically set the email address for new users. Leaving this empty results in empty email address for users who log in for the first time.',
 	'LDAP_INCORRECT_USER_PASSWORD'	=> 'Legătura la serverul LDAP folosind utilizatorul/parola specificată a eşuat.',
-	'LDAP_NO_EMAIL'					=> 'Atributul e-mail specificat nu există.',
+	'LDAP_NO_EMAIL'					=> 'The specified email attribute does not exist.',
 	'LDAP_NO_IDENTITY'				=> 'Nu a putut găsi o identitate de autentificare pentru %s.',
 	'LDAP_PASSWORD'					=> 'Parola LDAP',
 	'LDAP_PASSWORD_EXPLAIN'			=> 'Lăsaţi necompletat pentru a folosi legătura anonimă, altfel specificaţi parola pentru utilizatorul de mai sus. Necesar pentru serverele Active Directory. <br /><em><strong>AVERTISMENT:</strong> Această parola va fi păstrată ca text plin în baza de date, fiind vizibilă tuturor celor care pot accesa baza de date sau care pot vizualiza această pagina de configurare.</em>',
@@ -9966,13 +10223,17 @@ $lang = array_merge($lang, array(
 	'LDAP_USER_FILTER'				=> 'Filtru utilizator LDAP',
 	'LDAP_USER_FILTER_EXPLAIN'		=> 'Opţional, mai departe puteţi limita cu filtre suplimentare obiectele căutate. De exemplu <samp>objectClass=posixGroup</samp> ar rezulta în a folosi <samp>(&amp;(uid=$username)(objectClass=posixGroup))</samp>',
 
-	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Aici puteţi defini setările legate de server şi domeniu. Asiguraţi-vă că datele introduse sunt corecte, erorile vor duce la e-mail-uri conţinând informaţii incorecte. Când specificaţi numele domeniului nu uitaţi să includeţi http:// sau alt termen de protocol. Modificaţi doar numărul portului dacă ştiţi că serverul foloseşte o altă valoare, portul 80 este corect în majoritatea cazurilor.',
+	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Here you define server and domain dependent settings. Please ensure the data you enter is accurate, errors will result in emails containing incorrect information. When entering the domain name remember it does include http:// or other protocol term. Only alter the port number if you know your server uses a different value, port 80 is correct in most cases.',
 	'ENABLE_GZIP'				=> 'Activează compresia GZip',
 	'ENABLE_GZIP_EXPLAIN'		=> 'Conţinutul generat va fi compresat înainte de a fi trimis utilizatorului. Această operaţie poate reduce traficul reţelei, dar de asemenea va mări gradul de folosire al procesorului pe server şi pe partea clientului. Pentru a funcţiona, trebuie ca extensia PHP zlib să fie încărcată.',
 	'FORCE_SERVER_VARS'			=> 'Forţează setările URL pentru server',
 	'FORCE_SERVER_VARS_EXPLAIN'	=> 'Dacă alegeţi "Da", setările serverului definite vor fi folosite în locul determinării automate a valorilor.',
 	'ICONS_PATH'				=> 'Cale stocare iconiţe mesaj',
 	'ICONS_PATH_EXPLAIN'		=> 'Calea din directorul rădăcină al phpBB, de exemplu <samp>images/icons</samp>',
+	'MOD_REWRITE_ENABLE'		=> 'Enable URL Rewriting',
+	'MOD_REWRITE_ENABLE_EXPLAIN' => 'When enabled, URLs containing ’app.php’ will be rewritten to remove the filename (i.e. app.php/foo will become /foo). <strong>Apache server’s mod_rewrite module is required for this functionality to work; if this option is enabled without mod_rewrite support, URLs on your board may be broken.</strong>',
+	'MOD_REWRITE_DISABLED'		=> 'The <strong>mod_rewrite</strong> module on your Apache web server is disabled. Enable the module or contact your web hosting provider if you wish to enable this feature.',
+	'MOD_REWRITE_INFORMATION_UNAVAILABLE' => 'We are unable to determine whether or not this server supports URL rewriting. This setting may be enabled but if URL rewriting is not available, paths generated by this board (such as for use in links) may be broken. Contact your web hosting provider if you are unsure whether or not you can safely enable this feature.',
 	'PATH_SETTINGS'				=> 'Setări cale',
 	'RANKS_PATH'				=> 'Cale stocare imagini rang',
 	'RANKS_PATH_EXPLAIN'		=> 'Calea din directorul rădăcină al phpBB, de exemplu <samp>images/ranks</samp>',
@@ -9989,13 +10250,21 @@ $lang = array_merge($lang, array(
 	'SMILIES_PATH_EXPLAIN'		=> 'Calea din directorul rădăcină al phpBB, de exemplu <samp>images/smilies</samp>',
 	'UPLOAD_ICONS_PATH'			=> 'Cale stocare extensii iconiţe grup',
 	'UPLOAD_ICONS_PATH_EXPLAIN'	=> 'Calea din directorul rădăcină al phpBB, de exemplu <samp>images/upload_icons</samp>',
+	'USE_SYSTEM_CRON'		=> 'Run periodic tasks from system cron',
+	'USE_SYSTEM_CRON_EXPLAIN'		=> 'When off, phpBB will arrange for periodic tasks to be run automatically. When on, phpBB will not schedule any periodic tasks by itself; a system administrator must arrange for <code>bin/phpbbcli.php cron:run</code> to be run by the system cron facility at regular intervals (e.g. every 5 minutes).',
 
 	'ACP_SECURITY_SETTINGS_EXPLAIN'		=> 'Aici puteţi defini setările legate de sesiune şi autentificare.',
 	'ALL'							=> 'Toate',
-	'ALLOW_AUTOLOGIN'				=> 'Permite autentificări persistente',
-	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determină dacă utilizatorii se pot autentifica automat când vizitează forumul.',
-	'AUTOLOGIN_LENGTH'				=> 'Durata de expirare a legăturilor de autentificare persistente (în zile)',
-	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Numărul de zile după care legăturile persistente de autentificare sunt eliminate sau 0 pentru a dezactiva.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'ALLOW_PASSWORD_RESET'			=> 'Allow password reset ("Forgot Password")',
+	'ALLOW_PASSWORD_RESET_EXPLAIN'	=> 'Determines whether or not users are able to use the "I forgot my password" link on the login page to recover their account. If you use an external authentication mechanism you may wish to disable this feature.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
 	'BROWSER_VALID'					=> 'Validare browser',
 	'BROWSER_VALID_EXPLAIN'			=> 'Permite validarea browser-ului pentru fiecare sesiune, îmbunătăţind securitatea.',
 	'CHECK_DNSBL'					=> 'Caută IP împotriva listei negre DNS',
@@ -10032,8 +10301,12 @@ $lang = array_merge($lang, array(
 	'PASS_TYPE_SYMBOL'				=> 'Trebuie să conţină simboluri',
 	'REF_HOST'						=> 'Validează doar serverul',
 	'REF_PATH'						=> 'Validează şi calea',
-	'REFERER_VALID'					=> 'Validează Referer-ul',
+	'REFERRER_VALID'				=> 'Validate Referrer',
+	'REFERRER_VALID_EXPLAIN'		=> 'If enabled, the referrer of POST requests will be checked against the host/script path settings. This may cause issues with boards using several domains and or external logins.',
+
+	'REFERER_VALID'					=> 'Validează Referer-ul',	//3.0.12
 	'REFERER_VALID_EXPLAIN'			=> 'Dacă este activată, referer-ul cererilor POST vor fi verificate cu setările căii pentru server/script. Aceasta poate cauza probleme cu forumuri ce folosesc mai multe domenii şi sau autentificări externe.',
+
 	'TPL_ALLOW_PHP'					=> 'Permite php în şabloane',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Dacă această opţiune este activată, <code>PHP</code> şi declaraţiile <code>INCLUDEPHP</code>  vor fi recunoscute şi analizate în şabloane.',
 
@@ -10046,6 +10319,8 @@ $lang = array_merge($lang, array(
 	'BOARD_HIDE_EMAILS_EXPLAIN'		=> 'Această funcţie păstrează adresele de e-mail complet private.',
 	'CONTACT_EMAIL'					=> 'Adresa de e-mail de contact',
 	'CONTACT_EMAIL_EXPLAIN'			=> 'Această adresă va fi folosită doar când este necesar un punct de contact, de exemplu spam, erori, etc. Va fi folosită întotdeauna în secţiunile <samp>De la</samp> şi <samp>Răspunde la</samp> din mesajele electronice.',
+	'CONTACT_EMAIL_NAME'			=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 	'EMAIL_FUNCTION_NAME'			=> 'Nume funcţie e-mail',
 	'EMAIL_FUNCTION_NAME_EXPLAIN'	=> 'Funcţia e-mail folosită pentru a trimite mesaje electronice direct prin PHP.',
 	'EMAIL_PACKAGE_SIZE'			=> 'Dimensiunea pachetului de e-mail',
@@ -10236,7 +10511,7 @@ $lang = array_merge($lang, array(
 	'ACP_BAN'					=> 'Banare',
 	'ACP_BAN_EMAILS'			=> 'Banare conturi e-mail',
 	'ACP_BAN_IPS'				=> 'Banare IP-uri',
-	'ACP_BAN_USERNAMES'			=> 'Banare nume utilizatori',
+	'ACP_BAN_USERNAMES'			=> 'Ban users',
 	'ACP_BBCODES'				=> 'CoduriBB',
 	'ACP_BOARD_CONFIGURATION'	=> 'Configurare forum',
 	'ACP_BOARD_FEATURES'		=> 'Caracteristici forum',
@@ -10245,8 +10520,10 @@ $lang = array_merge($lang, array(
 	'ACP_BOTS'					=> 'Păienjeni/Roboţi',
 
 	'ACP_CAPTCHA'				=> 'CAPTCHA',
+	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'Baza de date',
+	'ACP_CAT_DOT_MODS'			=> '.Mod-uri',
 	'ACP_CAT_DOT_MODS'			=> '.Mod-uri',
 	'ACP_CAT_FORUMS'			=> 'Forumuri',
 	'ACP_CAT_GENERAL'			=> 'General',
@@ -10259,6 +10536,8 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_USERS'				=> 'Utilizatori',
 	'ACP_CLIENT_COMMUNICATION'	=> 'Comunicaţii client',
 	'ACP_COOKIE_SETTINGS'		=> 'Configurări cookie',
+	'ACP_CONTACT'				=> 'Contact page',
+	'ACP_CONTACT_SETTINGS'		=> 'Contact page settings',
 	'ACP_CRITICAL_LOGS'			=> 'Log erori',
 	'ACP_CUSTOM_PROFILE_FIELDS'	=> 'Câmpuri profil personalizabil',
 
@@ -10266,8 +10545,11 @@ $lang = array_merge($lang, array(
 	'ACP_DISALLOW'				=> 'Dezactivări',
 	'ACP_DISALLOW_USERNAMES'	=> 'Nume utilizatori dezactivate',
 
-	'ACP_EMAIL_SETTINGS'		=> 'Configurări e-mail',
-	'ACP_EXTENSION_GROUPS'		=> 'Administrare extensii grupuri',
+	'ACP_EMAIL_SETTINGS'		=> 'Email settings',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
+	'ACP_EXTENSION_MANAGEMENT'	=> 'Extension management',
+	'ACP_EXTENSIONS'			=> 'Manage extensions',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
 	'ACP_FORMS'					=> 'Customizable Forms',
 	'ACP_FORMS_BUILDER'			=> 'Form Builder',
 
@@ -10288,10 +10570,10 @@ $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE'				=> 'Administrare grupuri',
 	'ACP_GROUPS_MANAGEMENT'			=> 'Administrare grup',
 	'ACP_GROUPS_PERMISSIONS'		=> 'Permisiuni grupuri',
+	'ACP_GROUPS_POSITION'			=> 'Manage group positions',
 
 	'ACP_ICONS'					=> 'Iconiţe subiect',
 	'ACP_ICONS_SMILIES'			=> 'Iconiţe/zâmbete subiect',
-	'ACP_IMAGESETS'				=> 'Seturi imagine',
 	'ACP_INACTIVE_USERS'		=> 'Utilizatori inactivi',
 	'ACP_INDEX'					=> 'Index Panoul administratorului',
 
@@ -10303,11 +10585,15 @@ $lang = array_merge($lang, array(
 	'ACP_LOGGING'				=> 'Logare',
 
 	'ACP_MAIN'					=> 'Panoul administratorului',
-	'ACP_MANAGE_EXTENSIONS'		=> 'Administrare extensii',
+
+	'ACP_MANAGE_ATTACHMENTS'			=> 'Administrare fişiere ataşate',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
+
+	'ACP_MANAGE_EXTENSIONS'		=> 'Manage attachment extensions',
 	'ACP_MANAGE_RANKS'			=> 'Administrare ranguri',
 	'ACP_MANAGE_REASONS'		=> 'Administrare motive raportări/contestări',
 	'ACP_MANAGE_USERS'			=> 'Administrare utilizatori',
-	'ACP_MASS_EMAIL'			=> 'E-mail în masă',
+	'ACP_MASS_EMAIL'			=> 'Mass email',
 	'ACP_MESSAGES'				=> 'Mesaje',
 	'ACP_MESSAGE_SETTINGS'		=> 'Configurări mesaje private',
 	'ACP_MODULE_MANAGEMENT'		=> 'Modul administrare',
@@ -10352,6 +10638,8 @@ $lang = array_merge($lang, array(
 	'ACP_STYLE_COMPONENTS'		=> 'Componente stil',
 	'ACP_STYLE_MANAGEMENT'		=> 'Administrare stil',
 	'ACP_STYLES'				=> 'Stiluri',
+	'ACP_STYLES_CACHE'			=> 'Purge Cache',
+	'ACP_STYLES_INSTALL'		=> 'Install Styles',
 
 	'ACP_SUBMIT_CHANGES'		=> 'Trimite modificări',
 
@@ -10403,6 +10691,10 @@ $lang = array_merge($lang, array(
 
 	'COLOUR_SWATCH'			=> 'Schimbă culoarea',
 	'CONFIG_UPDATED'		=> 'Configurarea a fost actualizată cu succes.',
+	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
+	'CRON_NO_SUCH_TASK'		=> 'Could not find cron task â€œ%sâ€.',
+	'CRON_NO_TASK'			=> 'No cron tasks need to be run right now.',
+	'CRON_NO_TASKS'			=> 'No cron tasks could be found.',
 
 	'DEACTIVATE'				=> 'Dezactivează',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'Calea introdusă “%s” nu există.',
@@ -10413,6 +10705,7 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_AS'				=> 'Descarcă sub un nume nou',
 	'DOWNLOAD_STORE'			=> 'Descarcă sau stochează fişier',
 	'DOWNLOAD_STORE_EXPLAIN'	=> 'Puteţi descărca direct fişierul sau să-l salvaţi într-un director <samp>de stocat/</samp>.',
+	'DOWNLOADS'					=> 'Descărcări',
 
 	'EDIT'					=> 'Modifică',
 	'ENABLE'				=> 'Activează',
@@ -10427,6 +10720,8 @@ $lang = array_merge($lang, array(
 	'IP'					=> 'IP',
 	'IP_HOSTNAME'			=> 'Adrese IP sau hosturi',
 
+	'LOAD_NOTIFICATIONS'			=> 'Display Notifications',
+	'LOAD_NOTIFICATIONS_EXPLAIN'	=> 'Display the notifications list on every page (typically in the header).',
 	'LOGGED_IN_AS'			=> 'Sunteţi autentificat ca:',
 	'LOGIN_ADMIN'			=> 'Pentru a administra forumul, trebuie să fiţi un utilizator autentificat.',
 	'LOGIN_ADMIN_CONFIRM'	=> 'Pentru a administra forumul, trebuie să vă reautentificaţi.',
@@ -10443,7 +10738,8 @@ $lang = array_merge($lang, array(
 
 	'NOTIFY'				=> 'Notificare',
 	'NO_ADMIN'				=> 'Nu sunteţi autorizat să administraţi acest forum.',
-	'NO_EMAILS_DEFINED'		=> 'Nu a fost găsită o adresă de e-mail validă.',
+	'NO_EMAILS_DEFINED'		=> 'No valid email addresses found.',
+	'NO_FILES_TO_DELETE'	=> 'Attachments you selected for deletion do not exist.',
 	'NO_PASSWORD_SUPPLIED'	=> 'Nu vă puteţi autentifica fără parolă.',
 
 	'OFF'					=> 'Dezactivat',
@@ -10459,8 +10755,8 @@ $lang = array_merge($lang, array(
 
 	'REMIND'							=> 'Reaminteşte',
 	'RESYNC'							=> 'Resincronizare',
-	'RETURN_TO'							=> 'Înapoi la',
 
+	'RUNNING_TASK'			=> 'Running task: %s.',
 	'SELECT_ANONYMOUS'		=> 'Selectează utilizatorul anonim',
 	'SELECT_OPTION'			=> 'Selectează opţiune',
 
@@ -10470,6 +10766,10 @@ $lang = array_merge($lang, array(
 	'SETTING_TOO_SHORT'		=> 'Valoarea specificată pentru variabila “%1$s” prea scurtă. Lungimea minimă admisă este %2$d.',
 
 	'SHOW_ALL_OPERATIONS'	=> 'Arată toate operaţiile',
+
+	'TASKS_NOT_READY'			=> 'Not ready tasks:',
+	'TASKS_READY'			=> 'Ready tasks:',
+	'TOTAL_SIZE'			=> 'Total size',
 
 	'UCP'					=> 'Panoul utilizatorului',
 	'USERNAMES_EXPLAIN'		=> 'Introduceţi fiecare nume de utilizator pe linii separate.',
@@ -10481,7 +10781,7 @@ $lang = array_merge($lang, array(
 	'NO_PHPINFO_AVAILABLE'	=> 'Informaţiile despre configuraţia PHP nu pot fi determinate. Phpinfo() a fost dezactivat din motive de securitate.',
 
 	'ACP_ADMIN_LOGS_EXPLAIN'	=> 'Aici vedeţi listate toate acţiunile efectuate de administratorii forumului. Le puteţi sorta după nume de utilizator, după dată, IP sau acţiune. Dacă aveţi permisiunile necesare, puteţi să ştergeţi operaţiunile individuale sau tot log-ul.',
-	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'Aici vedeţi toate acţiunile efectuate de către forum. Acest log vă inştiinţează cu informaţii pe care le puteţi folosi la rezolvarea problemelor specifice, de exemplu netrimiterea e-mail-urilor. Le puteţi sorta după nume utilizator, dată, IP sau acţiune. Dacă aveţi permisiunile necesare, puteţi să ştergeţi operaţiunile individuale sau tot log-ul.',
+	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'This lists the actions carried out by the board itself. This log provides you with information you are able to use for solving specific problems, for example non-delivery of emails. You can sort by username, date, IP or action. If you have appropriate permissions you can also clear individual operations or the log as a whole.',
 	'ACP_MOD_LOGS_EXPLAIN'		=> 'Aici vedeţi toate acţiunile efectuate de către moderatori în forumuri, subiecte şi mesaje, de asemenea acţiunile efectuate asupra utilizatorilor, inclusiv banarea. Le poţi sorta după nume utilizator, dată, IP sau acţiune. Dacă aveţi permisiunile necesare, puteţi să ştergeţi operaţiunile individuale sau tot log-ul.',
 	'ACP_USERS_LOGS_EXPLAIN'	=> 'Aici vedeţi toate acţiunile realizate de către utilizatori sau asupra utilizatorilor (raportări, avertismente şi note user).',
 	'ALL_ENTRIES'				=> 'Toate intrările',
@@ -10507,6 +10807,7 @@ $lang = array_merge($lang, array(
 
 	'GZIP_COMPRESSION'	=> 'Compresii GZip',
 
+	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'Nu este disponibil',
 	'NUMBER_FILES'		=> 'Număr de fişiere ataşate',
 	'NUMBER_POSTS'		=> 'Număr de mesaje',
@@ -10519,29 +10820,38 @@ $lang = array_merge($lang, array(
 	'PURGE_CACHE'			=> 'Şterge cache',
 	'PURGE_CACHE_CONFIRM'	=> 'Sunteţi sigur că doriţi să ştergeţi cache-ul?',
 	'PURGE_CACHE_EXPLAIN'	=> 'Şterge toate articolele legate de cache, aceasta include orice cache al fişierelor de șabloane sau interogările.',
+	'PURGE_CACHE_SUCCESS'	=> 'Cache successfully purged.',
 
 	'PURGE_SESSIONS'			=> 'Şterge toate sesiunile',
 	'PURGE_SESSIONS_CONFIRM'	=> 'Sunteţi sigur că vreţi să şergeţi toate sesiunile? Această operaţiune va scoate afară toţi utilizatorii.',
 	'PURGE_SESSIONS_EXPLAIN'	=> 'Şterge toate sesiunile. Această operaţiune va scoate afară toţi utilizatorii prin iniţializarea tabelei pentru sesiuni.',
+	'PURGE_SESSIONS_SUCCESS'	=> 'Sessions successfully purged.',
 
 	'RESET_DATE'					=> 'Resetare dată de start a forumului',
 	'RESET_DATE_CONFIRM'			=> 'Sunteţi sigur că vreţi să resetaţi data de start a forumului?',
+	'RESET_DATE_SUCCESS'				=> 'Boardâ€™s start date reset',
 	'RESET_ONLINE'					=> 'Resetare contor care indică cei mai multi utilizatori online',
 	'RESET_ONLINE_CONFIRM'			=> 'Sunteţi sigur că vreţi să resetaţi contorul care indică cei mai mulţi utilizatori online?',
+	'RESET_ONLINE_SUCCESS'				=> 'Most users ever online reset',
 	'RESYNC_POSTCOUNTS'				=> 'Resincronizare contor mesaje',
 	'RESYNC_POSTCOUNTS_EXPLAIN'		=> 'Numai mesajele existente vor fi luate în considerare. Mesajele şterse nu se vor număra.',
 	'RESYNC_POSTCOUNTS_CONFIRM'		=> 'Sunteţi sigur că vreţi să resincronizaţi contorul mesajelor?',
+	'RESYNC_POSTCOUNTS_SUCCESS'			=> 'Resynchronised post counts',
 	'RESYNC_POST_MARKING'			=> 'Resincronizare subiecte punctate',
 	'RESYNC_POST_MARKING_CONFIRM'	=> 'Sunteţi sigur că doriţi să resincronizaţi subiectele punctate?',
 	'RESYNC_POST_MARKING_EXPLAIN'	=> 'Mai întâi deselectaţi toate subiectele şi apoi selectaţi corect subiectele care au avut activitate în ultimele şase luni.',
+	'RESYNC_POST_MARKING_SUCCESS'	=> 'Resynchronised dotted topics',
 	'RESYNC_STATS'					=> 'Resincronizare statistici',
 	'RESYNC_STATS_CONFIRM'			=> 'Sunteţi sigur că vreţi să resincronizaţi statisticile?',
 	'RESYNC_STATS_EXPLAIN'			=> 'Recalculare număr total de mesaje, subiecte, utilizatori şi fişiere.',
+	'RESYNC_STATS_SUCCESS'			=> 'Resynchronised statistics',
 	'RUN'							=> 'Porneşte acum',
 
 	'STATISTIC'					=> 'Statistică',
 	'STATISTIC_RESYNC_OPTIONS'	=> 'Resincronizează sau resetează statisticile',
 
+	'TIMEZONE_INVALID'	=> 'The timezone you selected is invalid.',
+	'TIMEZONE_SELECTED'	=> '(currently selected)',
 	'TOPICS_PER_DAY'	=> 'Subiecte pe zi',
 
 	'UPLOAD_DIR_SIZE'	=> 'Dimensiunea fişierelor ataşate trimise',
@@ -10722,9 +11032,9 @@ $lang = array_merge($lang, array(
 
 	'LOG_APPROVE_TOPIC'			=> '<strong>Subiect aprobat</strong><br />» %s',
 	'LOG_BUMP_TOPIC'			=> '<strong>Subiectul uitlizatorului adus în atenţie</strong><br />» %s',
-	'LOG_DELETE_POST'			=> '<strong>Mesaj şters</strong><br />» %s',
-	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Subiect umbră şters</strong><br />» %s',
-	'LOG_DELETE_TOPIC'			=> '<strong>Subiect şters</strong><br />» %s',
+	'LOG_DELETE_POST'			=> '<strong>Deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Deleted shadow topic</strong><br />Â» %s',
+	'LOG_DELETE_TOPIC'			=> '<strong>Deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_FORK'					=> '<strong>Subiect copiat</strong><br />» din %s',
 	'LOG_LOCK'					=> '<strong>Subiect închis</strong><br />» %s',
 	'LOG_LOCK_POST'				=> '<strong>Mesaj închis</strong><br />» %s',
@@ -10733,15 +11043,20 @@ $lang = array_merge($lang, array(
 	'LOG_PM_REPORT_CLOSED'		=> '<strong>Raport Mesaj privat închis</strong><br />» %s',
 	'LOG_PM_REPORT_DELETED'		=> '<strong>Raport Mesaj privat şters</strong><br />» %s',
 	'LOG_POST_APPROVED'			=> '<strong>Mesaj aprobat</strong><br />» %s',
-	'LOG_POST_DISAPPROVED'		=> '<strong>Mesaj neaprobat “%1$s” din următorul motiv</strong><br />» %2$s',
-	'LOG_POST_EDITED'			=> '<strong>Mesaj modificat “%1$s” de către</strong><br />» %2$s',
+	'LOG_POST_DISAPPROVED'		=> '<strong>Disapproved post â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
+	'LOG_POST_EDITED'			=> '<strong>Edited post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_POST_RESTORED'			=> '<strong>Restored post</strong><br />Â» %s',
 	'LOG_REPORT_CLOSED'			=> '<strong>Raport închis</strong><br />» %s',
 	'LOG_REPORT_DELETED'		=> '<strong>Raport şters</strong><br />» %s',
+	'LOG_RESTORE_TOPIC'			=> '<strong>Restored topic â€œ%1$sâ€ written by</strong><br />Â» %2$s',
+	'LOG_SOFTDELETE_POST'		=> '<strong>Soft deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_SOFTDELETE_TOPIC'		=> '<strong>Soft deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_SPLIT_DESTINATION'		=> '<strong>Mesajele împărţite mutate</strong><br />» la %s',
 	'LOG_SPLIT_SOURCE'			=> '<strong>Împarte mesaje</strong><br />» de la %s',
 
 	'LOG_TOPIC_APPROVED'		=> '<strong>Subiect aprobat</strong><br />» %s',
-	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Subiect neaprobat “%1$s” din următorul motiv</strong><br />%2$s',
+	'LOG_TOPIC_RESTORED'		=> '<strong>Restored topic</strong><br />Â» %s',
+	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Disapproved topic â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
 	'LOG_TOPIC_RESYNC'			=> '<strong>Contoare subiect resincronizate</strong><br />» %s',
 	'LOG_TOPIC_TYPE_CHANGED'	=> '<strong>Tipul schimbat al subiectului</strong><br />» %s',
 	'LOG_UNLOCK'				=> '<strong>Subiect deschis</strong><br />» %s',
@@ -10793,16 +11108,6 @@ $lang = array_merge($lang, array(
 
 	'LOG_IMAGE_GENERATION_ERROR'	=> '<strong>Eroare la crearea imaginii</strong><br />» Eroare în %1$s la linia %2$s: %3$s',
 
-	'LOG_IMAGESET_ADD_DB'			=> '<strong>Set nou de imagini adăugat în baza de date</strong><br />» %s',
-	'LOG_IMAGESET_ADD_FS'			=> '<strong>Set nou de imagini adăugat în sistemul de fişiere</strong><br />» %s',
-	'LOG_IMAGESET_DELETE'			=> '<strong>Set de imagini şters</strong><br />» %s',
-	'LOG_IMAGESET_EDIT_DETAILS'		=> '<strong>Detaliile setului de imagini modificate</strong><br />» %s',
-	'LOG_IMAGESET_EDIT'				=> '<strong>Set de imagini modificat</strong><br />» %s',
-	'LOG_IMAGESET_EXPORT'			=> '<strong>Set de imagini exportat</strong><br />» %s',
-	'LOG_IMAGESET_LANG_MISSING'		=> '<strong>Setul de imagini nu poate găsi localizarea “%2$s”</strong><br />» %1$s',
-	'LOG_IMAGESET_LANG_REFRESHED'	=> '<strong>Localizarea “%2$s” a setului de imagini reîmprospătată</strong><br />» %1$s',
-	'LOG_IMAGESET_REFRESHED'		=> '<strong>Set de imagini reîmprospătat</strong><br />» %s',
-
 	'LOG_INACTIVE_ACTIVATE'	=> '<strong>Utilizatori inactivi activaţi</strong><br />» %s',
 	'LOG_INACTIVE_DELETE'	=> '<strong>Utilizatori inactivi şterşi</strong><br />» %s',
 	'LOG_INACTIVE_REMIND'	=> '<strong>Email-uri de reamintire trimise utilizatorilor inactivi</strong><br />» %s',
@@ -10847,6 +11152,7 @@ $lang = array_merge($lang, array(
 	'LOG_U_ROLE_EDIT'		=> '<strong>Rol utilizator modificat</strong><br />» %s',
 	'LOG_U_ROLE_REMOVED'	=> '<strong>Rol utilizator şters</strong><br />» %s',
 
+	'LOG_PLUPLOAD_TIDY_FAILED'		=> '<strong>Unable to open %1$s for tidying, check permissions.</strong><br />Exception: %2$s<br />Trace: %3$s',
 	'LOG_PROFILE_FIELD_ACTIVATE'	=> '<strong>Câmp profil activat</strong><br />» %s',
 	'LOG_PROFILE_FIELD_CREATE'		=> '<strong>Câmp profil adăugat</strong><br />» %s',
 	'LOG_PROFILE_FIELD_DEACTIVATE'	=> '<strong>Câmp profil dezactivat</strong><br />» %s',
@@ -10855,13 +11161,13 @@ $lang = array_merge($lang, array(
 
 	'LOG_PRUNE'					=> '<strong>Forumuri şterse</strong><br />» %s',
 	'LOG_AUTO_PRUNE'			=> '<strong>Forumuri şterse automat</strong><br />» %s',
+	'LOG_PRUNE_SHADOW'		=> '<strong>Auto-pruned shadow topics</strong><br />Â» %s',
 	'LOG_PRUNE_USER_DEAC'		=> '<strong>Utilizatori dezactivaţi</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_DEL'	=> '<strong>Utilizatori şterşi şi mesajele lor şterse</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_ANON'	=> '<strong>Utilizatori şterşi şi mesaje lor reţinute</strong><br />» %s',
 
 	'LOG_PURGE_CACHE'			=> '<strong>Şterge cache</strong>',
 	'LOG_PURGE_SESSIONS'		=> '<strong>Şterge sesiuni</strong>',
-
 
 	'LOG_RANK_ADDED'		=> '<strong>Rang nou adăugat</strong><br />» %s',
 	'LOG_RANK_REMOVED'		=> '<strong>Rang şters</strong><br />» %s',
@@ -10871,15 +11177,17 @@ $lang = array_merge($lang, array(
 	'LOG_REASON_REMOVED'	=> '<strong>Motiv raport/negare şters</strong><br />» %s',
 	'LOG_REASON_UPDATED'	=> '<strong>Motiv report/negare actualizat</strong><br />» %s',
 
-	'LOG_REFERER_INVALID'		=> '<strong>Validare eşuată a Referer-ului</strong><br />»Referer a fost “<em>%1$s</em>”. Cererea a fost respinsă şi sesiunea închisă.',
+	'LOG_REFERER_INVALID'		=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 	'LOG_RESET_DATE'			=> '<strong>Dată de start pentru forum resetată</strong>',
 	'LOG_RESET_ONLINE'			=> '<strong>Contorul cu majoritatea utilizatorilor online resetat</strong>',
+	'LOG_RESYNC_FILES_STATS'	=> '<strong>File statistics resynchronised</strong>',
 	'LOG_RESYNC_POSTCOUNTS'		=> '<strong>Contor mesaje pentru utilizatori resincronizat</strong>',
 	'LOG_RESYNC_POST_MARKING'	=> '<strong>Subiecte punctate resincronizate</strong>',
 	'LOG_RESYNC_STATS'			=> '<strong>Mesaje, subiecte şi statistici utilizatori resincronizate</strong>',
 
 	'LOG_SEARCH_INDEX_CREATED'	=> '<strong>Index de căutare creat pentru</strong><br />» %s',
 	'LOG_SEARCH_INDEX_REMOVED'	=> '<strong>Index de căutare şters pentru</strong><br />» %s',
+	'LOG_SPHINX_ERROR'			=> '<strong>Sphinx Error</strong><br />Â» %s',
 	'LOG_STYLE_ADD'				=> '<strong>Stil nou adăugat</strong><br />» %s',
 	'LOG_STYLE_DELETE'			=> '<strong>Stil şters</strong><br />» %s',
 	'LOG_STYLE_EDIT_DETAILS'	=> '<strong>Stil modificat</strong><br />» %s',
@@ -10946,15 +11254,18 @@ $lang = array_merge($lang, array(
 	'LOG_USER_GROUP_RESIGN'			=> '<strong>Utilizatorul a părăsit grupul</strong><br />» %s',
 
 	'LOG_WARNING_DELETED'		=> '<strong>Avertismente şterse pentru utilizatorul</strong><br />» %s',
-	'LOG_WARNINGS_DELETED'		=> '<strong>Au fost şterse %2$s avertismente pentru utilizatorul</strong><br />» %1$s',
 	'LOG_WARNINGS_DELETED_ALL'	=> '<strong>Au fost şterse toate avertismentele utilizatorului</strong><br />» %s',
 
 	'LOG_WORD_ADD'			=> '<strong>Cuvânt restricţionat adăugat</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>Cuvânt restricţionat şters</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Cuvânt restricţionat modificat</strong><br />» %s',
+
+	'LOG_EXT_ENABLE'	=> '<strong>Extension enabled</strong><br />Â» %s',
+	'LOG_EXT_DISABLE'	=> '<strong>Extension disabled</strong><br />Â» %s',
+	'LOG_EXT_PURGE'		=> '<strong>Extensionâ€™s data deleted</strong><br />Â» %s',
+
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
-
 ));
 
 $lang = array_merge($lang, array(
@@ -11255,7 +11566,7 @@ $lang = array_merge($lang, array(
 	'ACP_PORTAL_WELCOME_EXPLAIN'=> '',
 	'ADM_LOGOUT'			=> 'Ieşire&nbsp;din&nbsp;PA',
 	'ADM_LOGGED_OUT'		=> 'Ieşire reuşită din Panoul de control al administratorului',
-	'LOG_REFERER_INVALID'	=> '<strong>Validare eşuată a Referer-ului</strong><br />»Referer a fost “<em>%1$s</em>”. Cererea a fost respinsă şi sesiunea închisă.',
+	'LOG_REFERER_INVALID'	=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 
 	'ACP_ABBCODES'			=> 'BBcode Box',
 	'LOG_CONFIG_ABBCODES'	=> '<strong>Altered BBCode Box settings</strong>',
@@ -11661,7 +11972,7 @@ $lang = array_merge($lang, array(
 	'SELECT_A_PREFIX'				=> 'Select a prefix',
 	'ACP_SEOQUERYS'					=> 'SEO Queries',
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Administrare fişiere ataşate',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can list and delete files attached to posts and private messages.',
 	'LOG_ATTACH_DEL'				=> '<strong>Attachments deleted</strong><br />» %s',
 	'LOG_ATTACH_REASSIGNED'			=> '<strong>Attachment reassigned to Post</strong><br />» ID %1$d - %2$s',
 	'TOTAL_SIZE'					=> 'Total size',
@@ -11680,11 +11991,11 @@ $lang = array_merge($lang, array(
 	'ACP_INTRO'				=> 'Intro',
 
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Administrare fişiere ataşate',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
 	'TOTAL_SIZE'				=> 'Total size',
 	'DOWNLOADS'				=> 'Descărcări',
 
-	'NO_AVATAR'				=> 'URL of the avatar for all the have no separate',
+	'NO_AVATAR'				=> 'No avatar selected',
 	'NO_AVATAR_EXPLAIN'			=> 'The optimal size of the avatar is 120x120px, this box is left blank, no picture at all. <br /> Demo URL: http://www.userboard.org/images/no_avatar_1.gif',
 	'GROUP_ICON'				=> 'Group Icon',
 	'GROUP_ICON_EXPLAIN'			=> 'Upload your Group Icons into Upload &#187; Topic/Group Icons',
@@ -12847,6 +13158,97 @@ $lang = array_merge($lang, array(
 	'NO_EMAIL_SUBJECT'		=> 'Nu aţi specificat subiectul e-mailului.',
 ));
 
+#######language/en/acp/extensions.php#######
+
+$lang = array_merge($lang, array(
+	'EXTENSION'					=> 'Extensie',
+	'EXTENSIONS'				=> 'Extensions',
+	'EXTENSIONS_ADMIN'			=> 'Extensions Manager',
+	'EXTENSIONS_EXPLAIN'		=> 'The Extensions Manager is a tool in your phpBB Board which allows you to manage all of your extensions statuses and view information about them.',
+	'EXTENSION_INVALID_LIST'	=> 'The “%s” extension is not valid.<br />%s<br /><br />',
+	'EXTENSION_NOT_AVAILABLE'	=> 'The selected extension is not available for this board, please verify your phpBB and PHP versions are allowed (see the details page).',
+	'EXTENSION_DIR_INVALID'		=> 'The selected extension has an invalid directory structure and cannot be enabled.',
+	'EXTENSION_NOT_ENABLEABLE'	=> 'The selected extension cannot be enabled, please verify the extension’s requirements.',
+
+	'DETAILS'				=> 'Detalii',
+
+	'EXTENSIONS_DISABLED'	=> 'Disabled Extensions',
+	'EXTENSIONS_ENABLED'	=> 'Enabled Extensions',
+
+	'EXTENSION_DELETE_DATA'	=> 'Delete data',
+	'EXTENSION_DISABLE'		=> 'Disable',
+	'EXTENSION_ENABLE'		=> 'Enable',
+
+	'EXTENSION_DELETE_DATA_EXPLAIN'	=> 'Deleting an extension’s data removes all of its data and settings. The extension files are retained so it can be enabled again.',
+	'EXTENSION_DISABLE_EXPLAIN'		=> 'Disabling an extension retains its files, data and settings but removes any functionality added by the extension.',
+	'EXTENSION_ENABLE_EXPLAIN'		=> 'Enabling an extension allows you to use it on your board.',
+
+	'EXTENSION_DELETE_DATA_IN_PROGRESS'	=> 'The extension’s data is currently being deleted. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_DISABLE_IN_PROGRESS'	=> 'The extension is currently being disabled. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_ENABLE_IN_PROGRESS'	=> 'The extension is currently being enabled. Please do not leave or refresh this page until it is completed.',
+
+	'EXTENSION_DELETE_DATA_SUCCESS'	=> 'The extension’s data was deleted successfully',
+	'EXTENSION_DISABLE_SUCCESS'		=> 'The extension was disabled successfully',
+	'EXTENSION_ENABLE_SUCCESS'		=> 'The extension was enabled successfully',
+
+	'EXTENSION_NAME'			=> 'Extension Name',
+	'EXTENSION_ACTIONS'			=> 'Actions',
+	'EXTENSION_OPTIONS'			=> 'Options',
+	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
+	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s files from the filesystem</li>
+			<li>Upload the new files</li>
+			<li>Enable the extension</li>
+		</ol>',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s data</li>
+			<li>Delete the extension’s files from the filesystem</li>
+		</ol>',
+
+	'EXTENSION_DELETE_DATA_CONFIRM'	=> 'Are you sure that you wish to delete the data associated with “%s”?<br /><br />This removes all of its data and settings and cannot be undone!',
+	'EXTENSION_DISABLE_CONFIRM'		=> 'Are you sure that you wish to disable the “%s” extension?',
+	'EXTENSION_ENABLE_CONFIRM'		=> 'Are you sure that you wish to enable the “%s” extension?',
+	'EXTENSION_FORCE_UNSTABLE_CONFIRM'	=> 'Are you sure that you wish to force the use of unstable version?',
+
+	'RETURN_TO_EXTENSION_LIST'	=> 'Return to the extension list',
+
+	'EXT_DETAILS'			=> 'Extension Details',
+	'DISPLAY_NAME'			=> 'Disply Name (may be NULL)',
+	'CLEAN_NAME'			=> 'Clean Name',
+	'TYPE'					=> 'Type',
+	'DESCRIPTION'			=> 'Descriere',
+	'VERSION'				=> 'Versiune',
+	'HOMEPAGE'				=> 'Homepage',
+	'PATH'					=> 'File Path',
+	'TIME'					=> 'Data',
+	'LICENSE'				=> 'Licence',
+
+	'REQUIREMENTS'			=> 'Requirements',
+	'PHPBB_VERSION'			=> 'phpBB Version',
+	'PHP_VERSION'			=> 'PHP Version',
+	'AUTHOR_INFORMATION'	=> 'Author Information',
+	'AUTHOR_NAME'			=> 'Name',
+	'AUTHOR_EMAIL'			=> 'Email',
+	'AUTHOR_HOMEPAGE'		=> 'Homepage',
+	'AUTHOR_ROLE'			=> 'Role',
+
+	'NOT_UP_TO_DATE'		=> '%s is not up to date',
+	'UP_TO_DATE'			=> '%s is up to date',
+	'ANNOUNCEMENT_TOPIC'	=> 'Release Announcement',
+	'DOWNLOAD_LATEST'		=> 'Download Version',
+	'NO_VERSIONCHECK'		=> 'No version check information given.',
+
+	'VERSIONCHECK_FORCE_UPDATE_ALL'		=> 'Re-Check all versions',
+	'FORCE_UNSTABLE'					=> 'Always check for unstable versions',
+	'EXTENSIONS_VERSION_CHECK_SETTINGS'	=> 'Version check settings',
+
+	'META_FIELD_NOT_SET'	=> 'Required meta field %s has not been set.',
+	'META_FIELD_INVALID'	=> 'Meta field %s is invalid.',
+));
+
 #######language/en/acp/forums.php#######
 
 $lang = array_merge($lang, array(
@@ -12856,6 +13258,10 @@ $lang = array_merge($lang, array(
 	'AUTO_PRUNE_FREQ_EXPLAIN'	=> 'Timpul în zile între evenimentele de ştergere.',
 	'AUTO_PRUNE_VIEWED'			=> 'Autoşterge mesaje în funcţie de vârsta vizualizării',
 	'AUTO_PRUNE_VIEWED_EXPLAIN'	=> 'Numărul de zile de când subiectul a fost vizualizat după care subiectul este mutat.',
+	'AUTO_PRUNE_SHADOW_FREQ'	=> 'Auto-prune shadow topics frequency',
+	'AUTO_PRUNE_SHADOW_DAYS'	=> 'Auto-prune shadow topics age',
+	'AUTO_PRUNE_SHADOW_DAYS_EXPLAIN'	=> 'Number of days after which shadow topic is removed.',
+	'AUTO_PRUNE_SHADOW_FREQ_EXPLAIN'	=> 'Time in days between pruning events.',
 
 	'CONTINUE'						=> 'Continuare',
 	'COPY_PERMISSIONS_EXPLAIN'		=> 'Pentru a facilita setarea permisiunilor pentru noul forum propriu, puteţi copia permisiunile unul forum ce există deja.',
@@ -12914,6 +13320,8 @@ $lang = array_merge($lang, array(
 	'FORUM_PASSWORD_OLD'				=> 'Parola forumului foloseşte o metodă hashing veche şi ar trebui schimbată.',
 	'FORUM_PASSWORD_MISMATCH'			=> 'Parolele specificate nu s-au potrivit.',
 	'FORUM_PRUNE_SETTINGS'				=> 'Setările de ştergere a forumului',
+	'FORUM_PRUNE_SHADOW'				=> 'Enable auto-pruning of shadow topics',
+	'FORUM_PRUNE_SHADOW_EXPLAIN'			=> 'Prunes the forum of shadow topics, set the frequency/age parameters below.',
 	'FORUM_RESYNCED'					=> 'Forumul "%s" resincronizat cu succes',
 	'FORUM_RULES_EXPLAIN'				=> 'Regulile forumului sunt afişate în fiecare pagină a forumurilor afişate.',
 	'FORUM_RULES_LINK'					=> 'Accesează link-ul pentru a putea vedea regulile forumului',
@@ -13005,6 +13413,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE_EXPLAIN'		=> 'Din acest panou puteţi administra toate grupurile proprii. Puteţi şterge, crea şi modifica grupurile existente. Mai mult, puteţi alege liderii de grup, puteţi schimba starea grupului în deschis/ascuns/închis şi puteţi specifica numele şi descrierea grupului.',
+	'ADD_GROUP_CATEGORY'			=> 'Add category',
 	'GROUP_ADD_USERS'				=> 'Adăugare utilizatori',
 	'ADD_USERS_EXPLAIN'				=> 'Aici puteţi adăuga grupului utilizatori noi. Puteţi alege dacă acest grup este cel standard pentru utilizatorii selectaţi. În plus, îi puteţi defini ca lideri ai grupului. Va rugăm să scrieţi un utilizator pe fiecare linie.',
 
@@ -13018,11 +13427,10 @@ $lang = array_merge($lang, array(
 	'GROUP_APPROVED'				=> 'Membri aprobaţi',
 	'GROUP_AVATAR'					=> 'Avatarul grupului',
 	'GROUP_AVATAR_EXPLAIN'			=> 'Aceasta imagine va fi arătată in Panoul de control al grupului',
+	'GROUP_CATEGORY_NAME'			=> 'Category name',
 	'GROUP_CLOSED'					=> 'Închis',
 	'GROUP_COLOR'					=> 'Culoarea grupului',
 	'GROUP_COLOR_EXPLAIN'			=> 'Definţi culoarea numelui membrilor care va fi arătată, lăsaţi liber pentru setarea implicită.',
-	'GROUP_CONFIRM_ADD_USER'		=> 'Sunteţi sigur că vreţi să adăugaţi utilizatorul %s la grup?',
-	'GROUP_CONFIRM_ADD_USERS'		=> 'Sunteţi sigur că vreţi să adaugaţi utilizatorii %s la grup?',
 	'GROUP_CREATED'					=> 'Grupul a fost creat cu succes',
 	'GROUP_DEFAULT'					=> 'Specifică acest grup ca implicit pentru cei selectați',
 	'GROUP_DEFS_UPDATED'			=> 'Acest grup a fost specificat ca fiind implicit pentru membrii selectaţi',
@@ -13064,6 +13472,8 @@ $lang = array_merge($lang, array(
 	'GROUP_SETTINGS_SAVE'			=> 'Setările generale ale grupului',
 	'GROUP_SKIP_AUTH'				=> 'Exclude liderul grupului din permisiuni',
 	'GROUP_SKIP_AUTH_EXPLAIN'		=> 'Dacă este activată, liderul grupului nu va mai fi moştenit din permisiunile grupului.',
+	'GROUP_SPECIAL'					=> 'Pre-defined',
+	'GROUP_TEAMPAGE'				=> 'Display group on teampage',
 	'GROUP_TYPE'					=> 'Tipul grupului',
 	'GROUP_TYPE_EXPLAIN'			=> 'Această permisiune determină care utilizatori pot să adere sau să vadă grupul.',
 	'GROUP_UPDATED'					=> 'Preferinţele grupului au fost actualizate cu succes.',
@@ -13072,19 +13482,37 @@ $lang = array_merge($lang, array(
 	'GROUP_USERS_EXIST'				=> 'Utilizatorii selectaţi sunt deja membri.',
 	'GROUP_USERS_REMOVE'			=> 'Utilizatorii au fost scoşi cu succes din grup şi valorile implicite setate.',
 
+	'LEGEND_EXPLAIN'				=> 'These are the groups which are displayed in the group legend:',
+	'LEGEND_SETTINGS'				=> 'Legend settings',
+	'LEGEND_SORT_GROUPNAME'			=> 'Sort legend by group name',
+	'LEGEND_SORT_GROUPNAME_EXPLAIN'	=> 'The order below is ignored when this option is enabled.',
+
+	'MANAGE_LEGEND'			=> 'Manage group legend',
+	'MANAGE_TEAMPAGE'		=> 'Manage teampage',
 	'MAKE_DEFAULT_FOR_ALL'		=> 'Specificaţi acest grup implicit pentru fiecare membru',
 	'MEMBERS'					=> 'Membri',
 
 	'NO_GROUP'					=> 'Grupul cerut nu există.',
+	'NO_GROUPS_ADDED'			=> 'No groups added yet.',
 	'NO_GROUPS_CREATED'			=> 'Niciun grup creat pană acum.',
 	'NO_PERMISSIONS'			=> 'Nu copia permisiunile',
 	'NO_USERS'					=> 'Utilizatorii specificaţi nu există.',
 	'NO_USERS_ADDED'			=> 'Niciun utilizator nu a fost adăugat la grup.',
 	'NO_VALID_USERS'			=> 'Nu aţi specificat niciun utilizator eligibil pentru acţiunea respectivă.',
 
+	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> 'Grupuri predefinite',
 	'SPECIAL_GROUPS_EXPLAIN'	=> 'Grupurile predefinite sunt grupuri speciale, ele nu pot fi şterse sau modificate direct. Puteţi adăuga utilizatori sau să modificaţi setările de bază.',
 
+	'TEAMPAGE'					=> 'Teampage',
+	'TEAMPAGE_DISP_ALL'			=> 'All memberships',
+	'TEAMPAGE_DISP_DEFAULT'		=> 'User’s default group only',
+	'TEAMPAGE_DISP_FIRST'		=> 'First membership only',
+	'TEAMPAGE_EXPLAIN'			=> 'These are the groups which are displayed on the teampage:',
+	'TEAMPAGE_FORUMS'			=> 'Display moderated forums',
+	'TEAMPAGE_FORUMS_EXPLAIN'	=> 'If set to yes, moderators will have a list with all of the forums where they have moderator permissions displayed in their row. This can be very database intensive for big boards.',
+	'TEAMPAGE_MEMBERSHIPS'		=> 'Display user memberships',
+	'TEAMPAGE_SETTINGS'			=> 'Teampage settings',
 	'TOTAL_MEMBERS'				=> 'Membri',
 
 	'USERS_APPROVED'				=> 'Utilizatorii au fost aprobaţi cu succes.',
@@ -13470,26 +13898,14 @@ $lang = array_merge($lang, array(
 	'ACP_FILES'						=> 'Fişierele de limbă ale administratorului',
 	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> 'Aici puteţi instala/dezinstala pachetele de limbă. Pachetul de limbă standard este marcat cu un asterix (*).',
 
-	'EMAIL_FILES'			=> 'Şabloane pentru mesajele electronice',
-
-	'FILE_CONTENTS'				=> 'Conţinut fişiere',
-	'FILE_FROM_STORAGE'			=> 'Fişiere din directorul de stocare',
-
-	'HELP_FILES'				=> 'Fişiere de ajutor',
-
-	'INSTALLED_LANGUAGE_PACKS'	=> 'Pachete de limbă instalate',
-	'INVALID_LANGUAGE_PACK'		=> 'Pachetul de limbă selectate pare să nu fie vaild. Vă rugăm să verificaţi pachetul de limbă şi să îl încărcaţi din nou dacă este necesar.',
-	'INVALID_UPLOAD_METHOD'		=> 'Metoda selectată de încărcare nu este validă, vă rugăm să alegeţi o altă metodă.',
+	'DELETE_LANGUAGE_CONFIRM'		=> 'Are you sure you wish to delete “%s”?',
+	'INSTALLED_LANGUAGE_PACKS'		=> 'Pachete de limbă instalate',
 
 	'LANGUAGE_DETAILS_UPDATED'			=> 'Detaliile de limbaj au fost actualizate cu succes.',
-	'LANGUAGE_ENTRIES'					=> 'Variabile limbă',
-	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Aici puteţi schimba variabilele pachetelor de limbă existente sau a celor care încă nu au fost traduse.<br /><strong>Reţineţi:</strong> Odată ce aţi schimbat un fişer de limbă, schimbările vor fi stocate într-un director separat pentru a putea fi descărcat. Schimbările nu vor fi vizibile de către utilizatori până nu înlocuiţi fişierele originale de limbă din spaţiul web propriu (prin upload).',
-	'LANGUAGE_FILES'					=> 'Fişiere de limbă',
-	'LANGUAGE_KEY'						=> 'Cheie',
 	'LANGUAGE_PACK_ALREADY_INSTALLED'	=> 'Acest pachet de limbă este deja instalat.',
-	'LANGUAGE_PACK_DELETED'				=> 'Pachetul de limbă <strong>%s</strong> a fost eliminat cu succes. Toţi utilizatorii ce folosesc acest limbaj au fost resetaţi la fişierele standard de limbă ale forumului.',
+	'LANGUAGE_PACK_DELETED'				=> 'The language pack “%s” has been removed successfully. All users using this language have been reset to the board’s default language.',
 	'LANGUAGE_PACK_DETAILS'				=> 'Detalii pachet de limbă',
-	'LANGUAGE_PACK_INSTALLED'			=> 'Pachetul de limbă <strong>%s</strong> a fost instalat cu succes.',
+	'LANGUAGE_PACK_INSTALLED'			=> 'The language pack “%s” has been successfully installed.',
 	'LANGUAGE_PACK_CPF_UPDATE'			=> 'Textele de limbă pentru câmpurile de profil personalizate au fost copiate din limba standard. Vă rugăm să le modificați dacă este cazul.',
 	'LANGUAGE_PACK_ISO'					=> 'ISO',
 	'LANGUAGE_PACK_LOCALNAME'			=> 'Nume local',
@@ -13502,33 +13918,44 @@ $lang = array_merge($lang, array(
 	'LANG_ISO_CODE'						=> 'Cod ISO',
 	'LANG_LOCAL_NAME'					=> 'Nume local',
 
-	'MISSING_LANGUAGE_FILE'		=> 'Lipseşte fişierul de limbă: <strong style="color:red">%s</strong>',
+	'MISSING_LANG_FILES'		=> 'Missing language files',
 	'MISSING_LANG_VARIABLES'	=> 'Lipsesc variabile de limbă',
-	'MODS_FILES'				=> 'MOD-ificările fişierelor de limbă',
 
 	'NO_FILE_SELECTED'				=> 'Nu aţi specificat un fişier de limbă.',
 	'NO_LANG_ID'					=> 'Nu aţi specificat un pachet de limbă.',
-	'NO_REMOVE_DEFAULT_LANG'		=> 'Nu puteţi elimina pachetul de limbă iniţial.<br />Dacă vreţi să eliminaţi acest pachet de limbă, schimbaţi mai întâi limba standard folosită pe forum.',
+	'NO_REMOVE_DEFAULT_LANG'		=> 'You are not able to remove the default language pack.<br />If you want to remove this language pack, change your board’s default language first.',
 	'NO_UNINSTALLED_LANGUAGE_PACKS'	=> 'Niciun pachet de limbă dezinstalat',
 
-	'REMOVE_FROM_STORAGE_FOLDER'		=> 'Eliminaţi din directorul de stocare',
-
-	'SELECT_DOWNLOAD_FORMAT'	=> 'Selectaţi formatul de descărcare al arhivei',
-	'SUBMIT_AND_DOWNLOAD'		=> 'Trimiteţi şi descărcaţi fişierul',
-	'SUBMIT_AND_UPLOAD'			=> 'Trimiteţi şi încărcaţi fişierul',
-
-	'THOSE_MISSING_LANG_FILES'			=> 'Următoarele fişiere de limbă lispesc din directorul de limbă %s',
-	'THOSE_MISSING_LANG_VARIABLES'		=> 'Următoarele variabile de limbă lipsesc din pachetul de limbă <strong>%s</strong>',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 
 	'UNINSTALLED_LANGUAGE_PACKS'	=> 'Pachetele de limbă dezinstalate',
 
+	// 3.0.12
+	'EMAIL_FILES'			=> 'Şabloane pentru mesajele electronice',
+	'FILE_CONTENTS'				=> 'Conţinut fişiere',
+	'FILE_FROM_STORAGE'			=> 'Fişiere din directorul de stocare',
+	'HELP_FILES'				=> 'Fişiere de ajutor',
+	'INSTALLED_LANGUAGE_PACKS'	=> 'Pachete de limbă instalate',
+	'INVALID_LANGUAGE_PACK'		=> 'Pachetul de limbă selectate pare să nu fie vaild. Vă rugăm să verificaţi pachetul de limbă şi să îl încărcaţi din nou dacă este necesar.',
+	'INVALID_UPLOAD_METHOD'		=> 'Metoda selectată de încărcare nu este validă, vă rugăm să alegeţi o altă metodă.',
+	'LANGUAGE_ENTRIES'					=> 'Variabile limbă',
+	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Aici puteţi schimba variabilele pachetelor de limbă existente sau a celor care încă nu au fost traduse.<br /><strong>Reţineţi:</strong> Odată ce aţi schimbat un fişer de limbă, schimbările vor fi stocate într-un director separat pentru a putea fi descărcat. Schimbările nu vor fi vizibile de către utilizatori până nu înlocuiţi fişierele originale de limbă din spaţiul web propriu (prin upload).',
+	'LANGUAGE_FILES'					=> 'Fişiere de limbă',
+	'LANGUAGE_KEY'						=> 'Cheie',
+	'MISSING_LANGUAGE_FILE'		=> 'Lipseşte fişierul de limbă: <strong style="color:red">%s</strong>',
+	'SELECT_DOWNLOAD_FORMAT'	=> 'Selectaţi formatul de descărcare al arhivei',
+	'SUBMIT_AND_DOWNLOAD'		=> 'Trimiteţi şi descărcaţi fişierul',
+	'SUBMIT_AND_UPLOAD'			=> 'Trimiteţi şi încărcaţi fişierul',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 	'UNABLE_TO_WRITE_FILE'		=> 'Fişierul nu a putut fi scris în %s.',
 	'UPLOAD_COMPLETED'			=> 'Încărcarea a fost efectuată cu succes.',
 	'UPLOAD_FAILED'				=> 'Încărcarea a eşuat din motive necunoscute. Va trebui să înlocuiţi manual fişierul aferent.',
 	'UPLOAD_METHOD'				=> 'Metoda de încărcare',
 	'UPLOAD_SETTINGS'			=> 'Setări de încărcare',
-
 	'WRONG_LANGUAGE_FILE'		=> 'Fişierul de limbă selectat nu este valid.',
+	// 3.0.12
 ));
 
 #######language/en/acp/lexicon.php#######
@@ -13861,6 +14288,171 @@ $lang = array_merge($lang, array(
 	'ROLE_DESCRIPTION_ADMIN_FOOTBALL'	=> 'Can edit final match results.',
 ));
 
+#######language/en/acp/permissions_phpbb.php#######
+
+$lang = array_merge($lang, array(
+	'ACL_CAT_ACTIONS'		=> 'Actions',
+	'ACL_CAT_CONTENT'		=> 'Content',
+	'ACL_CAT_FORUMS'		=> 'Forums',
+	'ACL_CAT_MISC'			=> 'Misc',
+	'ACL_CAT_PERMISSIONS'	=> 'Permissions',
+	'ACL_CAT_PM'			=> 'Private messages',
+	'ACL_CAT_POLLS'			=> 'Polls',
+	'ACL_CAT_POST'			=> 'Post',
+	'ACL_CAT_POST_ACTIONS'	=> 'Post actions',
+	'ACL_CAT_POSTING'		=> 'Posting',
+	'ACL_CAT_PROFILE'		=> 'Profile',
+	'ACL_CAT_SETTINGS'		=> 'Settings',
+	'ACL_CAT_TOPIC_ACTIONS'	=> 'Topic actions',
+	'ACL_CAT_USER_GROUP'	=> 'Users &amp; Groups',
+));
+
+// User Permissions
+$lang = array_merge($lang, array(
+	'ACL_U_VIEWPROFILE'	=> 'Can view profiles, memberlist and online list',
+	'ACL_U_CHGNAME'		=> 'Can change username',
+	'ACL_U_CHGPASSWD'	=> 'Can change password',
+	'ACL_U_CHGEMAIL'	=> 'Can change email address',
+	'ACL_U_CHGAVATAR'	=> 'Can change avatar',
+	'ACL_U_CHGGRP'		=> 'Can change default usergroup',
+	'ACL_U_CHGPROFILEINFO'	=> 'Can change profile field information',
+
+	'ACL_U_ATTACH'		=> 'Can attach files',
+	'ACL_U_DOWNLOAD'	=> 'Can download files',
+	'ACL_U_SAVEDRAFTS'	=> 'Can save drafts',
+	'ACL_U_CHGCENSORS'	=> 'Can disable word censors',
+	'ACL_U_SIG'			=> 'Can use signature',
+
+	'ACL_U_SENDPM'		=> 'Can send private messages',
+	'ACL_U_MASSPM'		=> 'Can send messages to multiple users',
+	'ACL_U_MASSPM_GROUP'=> 'Can send messages to groups',
+	'ACL_U_READPM'		=> 'Can read private messages',
+	'ACL_U_PM_EDIT'		=> 'Can edit own private messages',
+	'ACL_U_PM_DELETE'	=> 'Can remove private messages from own folder',
+	'ACL_U_PM_FORWARD'	=> 'Can forward private messages',
+	'ACL_U_PM_EMAILPM'	=> 'Can email private messages',
+	'ACL_U_PM_PRINTPM'	=> 'Can print private messages',
+	'ACL_U_PM_ATTACH'	=> 'Can attach files in private messages',
+	'ACL_U_PM_DOWNLOAD'	=> 'Can download files in private messages',
+	'ACL_U_PM_BBCODE'	=> 'Can use BBCode in private messages',
+	'ACL_U_PM_SMILIES'	=> 'Can use smilies in private messages',
+	'ACL_U_PM_IMG'		=> 'Can use [img] BBCode tag in private messages',
+	'ACL_U_PM_FLASH'	=> 'Can use [flash] BBCode tag in private messages',
+
+	'ACL_U_SENDEMAIL'	=> 'Can send emails',
+	'ACL_U_SENDIM'		=> 'Can send instant messages',
+	'ACL_U_IGNOREFLOOD'	=> 'Can ignore flood limit',
+	'ACL_U_HIDEONLINE'	=> 'Can hide online status',
+	'ACL_U_VIEWONLINE'	=> 'Can view hidden online users',
+	'ACL_U_SEARCH'		=> 'Can search board',
+));
+
+// Forum Permissions
+$lang = array_merge($lang, array(
+	'ACL_F_LIST'		=> 'Can see forum',
+	'ACL_F_READ'		=> 'Can read forum',
+	'ACL_F_SEARCH'		=> 'Can search the forum',
+	'ACL_F_SUBSCRIBE'	=> 'Can subscribe forum',
+	'ACL_F_PRINT'		=> 'Can print topics',
+	'ACL_F_EMAIL'		=> 'Can email topics',
+	'ACL_F_BUMP'		=> 'Can bump topics',
+	'ACL_F_USER_LOCK'	=> 'Can lock own topics',
+	'ACL_F_DOWNLOAD'	=> 'Can download files',
+	'ACL_F_REPORT'		=> 'Can report posts',
+
+	'ACL_F_POST'		=> 'Can start new topics',
+	'ACL_F_STICKY'		=> 'Can post stickies',
+	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_REPLY'		=> 'Can reply to topics',
+	'ACL_F_EDIT'		=> 'Can edit own posts',
+	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
+	'ACL_F_SOFTDELETE'	=> 'Can soft delete own posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_F_IGNOREFLOOD' => 'Can ignore flood limit',
+	'ACL_F_POSTCOUNT'	=> 'Increment post counter<br /><em>Please note that this setting only affects new posts.</em>',
+	'ACL_F_NOAPPROVE'	=> 'Can post without approval',
+
+	'ACL_F_ATTACH'		=> 'Can attach files',
+	'ACL_F_ICONS'		=> 'Can use topic/post icons',
+	'ACL_F_BBCODE'		=> 'Can use BBCode',
+	'ACL_F_FLASH'		=> 'Can use [flash] BBCode tag',
+	'ACL_F_IMG'			=> 'Can use [img] BBCode tag',
+	'ACL_F_SIGS'		=> 'Can use signatures',
+	'ACL_F_SMILIES'		=> 'Can use smilies',
+
+	'ACL_F_POLL'		=> 'Can create polls',
+	'ACL_F_VOTE'		=> 'Can vote in polls',
+	'ACL_F_VOTECHG'		=> 'Can change existing vote',
+));
+
+// Moderator Permissions
+$lang = array_merge($lang, array(
+	'ACL_M_EDIT'		=> 'Can edit posts',
+	'ACL_M_DELETE'		=> 'Can permanently delete posts',
+	'ACL_M_SOFTDELETE'	=> 'Can soft delete posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_M_APPROVE'		=> 'Can approve and restore posts',
+	'ACL_M_REPORT'		=> 'Can close and delete reports',
+	'ACL_M_CHGPOSTER'	=> 'Can change post author',
+
+	'ACL_M_MOVE'	=> 'Can move topics',
+	'ACL_M_LOCK'	=> 'Can lock topics',
+	'ACL_M_SPLIT'	=> 'Can split topics',
+	'ACL_M_MERGE'	=> 'Can merge topics',
+
+	'ACL_M_INFO'	=> 'Can view post details',
+	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+));
+
+// Admin Permissions
+$lang = array_merge($lang, array(
+	'ACL_A_BOARD'		=> 'Can alter board settings/check for updates',
+	'ACL_A_SERVER'		=> 'Can alter server/communication settings',
+	'ACL_A_JABBER'		=> 'Can alter Jabber settings',
+	'ACL_A_PHPINFO'		=> 'Can view php settings',
+
+	'ACL_A_FORUM'		=> 'Can manage forums',
+	'ACL_A_FORUMADD'	=> 'Can add new forums',
+	'ACL_A_FORUMDEL'	=> 'Can delete forums',
+	'ACL_A_PRUNE'		=> 'Can prune forums',
+
+	'ACL_A_ICONS'		=> 'Can alter topic/post icons and smilies',
+	'ACL_A_WORDS'		=> 'Can alter word censors',
+	'ACL_A_BBCODE'		=> 'Can define BBCode tags',
+	'ACL_A_ATTACH'		=> 'Can alter attachment related settings',
+
+	'ACL_A_USER'		=> 'Can manage users<br /><em>This also includes seeing the users browser agent within the viewonline list.</em>',
+	'ACL_A_USERDEL'		=> 'Can delete/prune users',
+	'ACL_A_GROUP'		=> 'Can manage groups',
+	'ACL_A_GROUPADD'	=> 'Can add new groups',
+	'ACL_A_GROUPDEL'	=> 'Can delete groups',
+	'ACL_A_RANKS'		=> 'Can manage ranks',
+	'ACL_A_PROFILE'		=> 'Can manage custom profile fields',
+	'ACL_A_NAMES'		=> 'Can manage disallowed names',
+	'ACL_A_BAN'			=> 'Can manage bans',
+
+	'ACL_A_VIEWAUTH'	=> 'Can view permission masks',
+	'ACL_A_AUTHGROUPS'	=> 'Can alter permissions for individual groups',
+	'ACL_A_AUTHUSERS'	=> 'Can alter permissions for individual users',
+	'ACL_A_FAUTH'		=> 'Can alter forum permission class',
+	'ACL_A_MAUTH'		=> 'Can alter moderator permission class',
+	'ACL_A_AAUTH'		=> 'Can alter admin permission class',
+	'ACL_A_UAUTH'		=> 'Can alter user permission class',
+	'ACL_A_ROLES'		=> 'Can manage roles',
+	'ACL_A_SWITCHPERM'	=> 'Can use others permissions',
+
+	'ACL_A_STYLES'		=> 'Can manage styles',
+	'ACL_A_EXTENSIONS'	=> 'Can manage extensions',
+	'ACL_A_VIEWLOGS'	=> 'Can view logs',
+	'ACL_A_CLEARLOGS'	=> 'Can clear logs',
+	'ACL_A_MODULES'		=> 'Can manage modules',
+	'ACL_A_LANGUAGE'	=> 'Can manage language packs',
+	'ACL_A_EMAIL'		=> 'Can send mass email',
+	'ACL_A_BOTS'		=> 'Can manage bots',
+	'ACL_A_REASONS'		=> 'Can manage report/denial reasons',
+	'ACL_A_BACKUP'		=> 'Can backup/restore database',
+	'ACL_A_SEARCH'		=> 'Can manage search backends and settings',
+));
+
 #######language/en/acp/phpbb_seo.php#######
 
 $lang = array_merge($lang, array(
@@ -14032,6 +14624,7 @@ $lang = array_merge($lang, array(
 
 	'BBCODE_ADDED'				=> 'Codul BB a fost adăugat cu succes.',
 	'BBCODE_EDITED'				=> 'Codul BB a fost modificat cu succes.',
+	'BBCODE_DELETED'			=> 'The BBCode has been removed successfully.',
 	'BBCODE_NOT_EXIST'			=> 'Codul BB pe care l-aţi selectat nu există.',
 	'BBCODE_HELPLINE'			=> 'Asistenţă',
 	'BBCODE_HELPLINE_EXPLAIN'	=> 'Acest câmp conţine efectul de text "mouseover" al codului BB',
@@ -14087,17 +14680,10 @@ $lang = array_merge($lang, array(
 	'EXPORT_SMILIES'			=> 'Exportă şi descarcă smilies.pak',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sAccesând acest link, configuraţia pentru zâmbetele instalate va fi adăugată în fişierul <samp>smilies.pak</samp> care odată descărcat poate fi folosit pentru a crea un fişier de tip <samp>.zip</samp> or <samp>.tgz</samp> conţinând toate zâmbetele proprii plus acest fişier de configurare <samp>smilies.pak</samp>%s.',
 
-
 	'ICONS_ADD'				=> 'Adaugă o iconiţă',
-	'ICONS_NONE_ADDED'		=> 'Nicio iconiţă nu a fost adăugată.',
-	'ICONS_ONE_ADDED'		=> 'Iconiţa a fost adăugată cu succes.',
-	'ICONS_ADDED'			=> 'Iconiţele au fost adăugate cu succes.',
 	'ICONS_CONFIG'			=> 'Configurăre iconiţă',
 	'ICONS_DELETED'			=> 'Iconiţa a fost ştearsă cu succes.',
 	'ICONS_EDIT'			=> 'Modifică iconiţă',
-	'ICONS_ONE_EDITED'		=> 'Iconiţa a fost actualizată cu succes.',
-	'ICONS_NONE_EDITED'		=> 'Nicio iconiţă nu a fost actualizată.',
-	'ICONS_EDITED'			=> 'Iconiţele au fost actualizate cu succes.',
 	'ICONS_HEIGHT'			=> 'Înălţime iconiţă',
 	'ICONS_IMAGE'			=> 'Imagine iconiţă',
 	'ICONS_IMPORTED'		=> 'Pachetul de iconiţe a fost instalat cu succes.',
@@ -14127,9 +14713,6 @@ $lang = array_merge($lang, array(
 
 	'SELECT_PACKAGE'			=> 'Selectează un fişier pachet',
 	'SMILIES_ADD'				=> 'Adaugă un zâmbet nou',
-	'SMILIES_NONE_ADDED'		=> 'Nu a fost adăugat niciun zâmbet.',
-	'SMILIES_ONE_ADDED'			=> 'Zâmbetul a fost adăugat cu succes.',
-	'SMILIES_ADDED'				=> 'Zâmbetele au fost adăugate cu succes.',
 	'SMILIES_CODE'				=> 'Cod zâmbet',
 	'SMILIES_CONFIG'			=> 'Configuraţie zâmbet',
 	'SMILIES_DELETED'			=> 'Zâmbetul a fost şters cu succes.',
@@ -14137,9 +14720,6 @@ $lang = array_merge($lang, array(
 	'SMILIE_NO_CODE'			=> 'Zâmbetul “%s” a fost ignorat pentru că niciun cod nu a fost specificat.',
 	'SMILIE_NO_EMOTION'			=> 'Zâmbetul “%s” a fost ignorat pentru că nicio emoţie nu a fost specificată.',
 	'SMILIE_NO_FILE'			=> 'Zâmbetul “%s” a fost ignorat pentru că lipsește fișierul.',
-	'SMILIES_NONE_EDITED'		=> 'Nu a fost actualizat niciun zâmbet.',
-	'SMILIES_ONE_EDITED'		=> 'Zâmbetul a fost actualizat cu succes.',
-	'SMILIES_EDITED'			=> 'Zâmbetul a fost updatat cu succes.',
 	'SMILIES_EMOTION'			=> 'Emoţie',
 	'SMILIES_HEIGHT'			=> 'Înălţime zâmbet',
 	'SMILIES_IMAGE'				=> 'Imagine zâmbet',
@@ -14151,7 +14731,6 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'Fişier imagine zâmbet',
 	'SMILIES_WIDTH'				=> 'Lăţime zâmbet',
 
-	'TOO_MANY_SMILIES'		=> 'Mesajul dumneavostră conţine prea multe zâmbete. Numărul maxim de zâmbete permis este de %d.',
 	'WRONG_PAK_TYPE'		=> 'Pachetul specificat nu conţine datele corespunzătoare.',
 ));
 
@@ -14249,8 +14828,11 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ADDED_PROFILE_FIELD'	=> 'Câmp profil particularizat adăugat cu succes.',
+	'ALPHA_DOTS'			=> 'Alphanumeric and dots (periods)',
 	'ALPHA_ONLY'			=> 'Numai alfanumeric',
 	'ALPHA_SPACERS'			=> 'Alfanumeric şi spaţii',
+	'ALPHA_UNDERSCORE'		=> 'Alphanumeric and underscores',
+	'ALPHA_PUNCTUATION'		=> 'Alphanumeric with comma, dots, underscore and dashes beginning with a letter',
 	'ALWAYS_TODAY'			=> 'Întotdeauna data curentă',
 
 	'BOOL_ENTRIES_EXPLAIN'	=> 'Introduceţi acum opţiunile dumneavoastră',
@@ -14277,6 +14859,10 @@ $lang = array_merge($lang, array(
 	'DISPLAY_AT_PROFILE_EXPLAIN'	=> 'Utilizatorul este capabil să schimbe acest câmp de profil din panoul de control al utilizatorului.',
 	'DISPLAY_AT_REGISTER'			=> 'Afişează în fereastra de înregistrare',
 	'DISPLAY_AT_REGISTER_EXPLAIN'	=> 'Dacă această opţiune este activată, câmpul va fi afişat la înregistrare.',
+	'DISPLAY_ON_MEMBERLIST'			=> 'Display on memberlist screen',
+	'DISPLAY_ON_MEMBERLIST_EXPLAIN'	=> 'If this option is enabled, the field will be displayed in the user rows on the memberlist screen.',
+	'DISPLAY_ON_PM'					=> 'Display on view private message screen',
+	'DISPLAY_ON_PM_EXPLAIN'			=> 'If this option is enabled, the field will be displayed in the mini-profile on the private message screen.',
 	'DISPLAY_ON_VT'					=> 'Afişează în fereastra de vizualizare a subiectului',
 	'DISPLAY_ON_VT_EXPLAIN'			=> 'Dacă această opţiune este activată, câmpul va fi afişat în mini-profilul din pagina subiectului.',
 	'DISPLAY_PROFILE_FIELD'			=> 'Afişează public câmpul de profil',
@@ -14290,20 +14876,26 @@ $lang = array_merge($lang, array(
 	'EVERYTHING_OK'					=> 'Totul este în regulă',
 
 	'FIELD_BOOL'				=> 'Boolean (Da/Nu)',
+	'FIELD_CONTACT_DESC'		=> 'Contact description',
+	'FIELD_CONTACT_URL'			=> 'Contact link',
 	'FIELD_DATE'				=> 'Dată',
 	'FIELD_DESCRIPTION'			=> 'Descriere câmp',
 	'FIELD_DESCRIPTION_EXPLAIN'	=> 'Explicaţia acestui câmp prezentată utilizatorului',
 	'FIELD_DROPDOWN'			=> 'Căsuţă dropdown',
+	'FIELD_GOOGLEPLUS'			=> 'Google+',
 	'FIELD_IDENT'				=> 'Identificare câmp',
 	'FIELD_IDENT_ALREADY_EXIST'	=> 'Numele câmpului ales există deja. Alege alt nume.',
 	'FIELD_IDENT_EXPLAIN'		=> 'Identificarea câmpului este un nume pentru a identifica câmpul de profil în baza de date şi şabloane.',
 	'FIELD_INT'					=> 'Numere',
+	'FIELD_IS_CONTACT'			=> 'Display field as a contact field',
+	'FIELD_IS_CONTACT_EXPLAIN'	=> 'Contact fields are displayed within the contact section of the user profile and are displayed differently in the mini profile next to posts and private messages. You can use <samp>%s</samp> as a placeholder variable which will be replaced by a value provided by the user.',
 	'FIELD_LENGTH'				=> 'Mărimea căsuţei de intrare',
 	'FIELD_NOT_FOUND'			=> 'Câmpul de profil nu a fost găsit.',
 	'FIELD_STRING'				=> 'Un singur câmp text',
 	'FIELD_TEXT'				=> 'Suprafaţă text',
 	'FIELD_TYPE'				=> 'Tip câmp',
 	'FIELD_TYPE_EXPLAIN'		=> 'Nu puteţi schimba mai târziu tipul câmpului.',
+	'FIELD_URL'					=> 'URL (Link)',
 	'FIELD_VALIDATION'			=> 'Validare câmp',
 	'FIRST_OPTION'				=> 'Prima opţiune',
 
@@ -14315,6 +14907,12 @@ $lang = array_merge($lang, array(
 	'ISO_LANGUAGE'				=> 'Limba [%s]',
 
 	'LANG_SPECIFIC_OPTIONS'		=> 'Opţiuni specifice limbii [<strong>%s</strong>]',
+
+	'LETTER_NUM_DOTS'			=> 'Any letters, numbers and dots (periods)',
+	'LETTER_NUM_ONLY'			=> 'Any letters and numbers',
+	'LETTER_NUM_PUNCTUATION'	=> 'Any letters, numbers, comma, dots, underscores and dashes beginning with any letter',
+	'LETTER_NUM_SPACERS'		=> 'Any letters, numbers and spacers',
+	'LETTER_NUM_UNDERSCORE'		=> 'Any letters, numbers and underscores',
 
 	'MAX_FIELD_CHARS'		=> 'Număr maxim de caractere',
 	'MAX_FIELD_NUMBER'		=> 'Cel mai mare număr permis',
@@ -14369,7 +14967,9 @@ $lang = array_merge($lang, array(
 #######language/en/acp/prune.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_PRUNE_USERS_EXPLAIN'	=> 'Aici puteţi şterge (sau dezactiva) utilizatorii din forumul propriu. Conturile pot fi filtrate printr-o varietate de moduri: după numărul de mesaje, ultima activitate, etc. Fiecare dintre aceste criterii poate fi combinat pentru a limita conturile ce vor fi afectate, de exemplu puteţi şterge utilizatorii cu mai puţin de 10 mesaje care erau inactivi după 2002-01-01 . Alternativ, puteţi specifica direct în căsuţa de text o listă a utilizatorilor, orice criteriu introdus fiind ignorat. Aveţi grijă cu această facilitate! Odată ce un utilizator este şters, nu-l mai puteţi recupera.',
+	'ACP_PRUNE_USERS_EXPLAIN'	=> 'This section allows you to delete or deactivate users on your board. Accounts can be filtered in a variety of ways; by post count, most recent activity, etc. Criteria may be combined to narrow down which accounts are affected. For example, you can prune users with fewer than 10 posts, who were also inactive after 2002-01-01. Use * as a wildcard for text fields. Alternatively, you may skip the criteria selection completely by entering a list of users (each on a separate line) into the text field. Take care with this facility! Once a user is deleted, there is no way to reverse the action.',
+
+	'CRITERIA'				=> 'Criteria',
 
 	'DEACTIVATE_DELETE'			=> 'Dezactivaţi sau ştergeţi',
 	'DEACTIVATE_DELETE_EXPLAIN'	=> 'Alegeţi între a dezactiva utilizatorii sau a-i şterge în totalitate, reţineţi că utilizatorii şterşi nu mai pot fi restauraţi!',
@@ -14377,15 +14977,18 @@ $lang = array_merge($lang, array(
 	'DELETE_USER_POSTS'			=> 'Ştergeţi mesajele utilizatorilor eliminaţi',
 	'DELETE_USER_POSTS_EXPLAIN'	=> 'Şterge mesajele scrise de utlizatorii eliminaţi, nu are niciun efect daca utilizatorii sunt dezactivaţi.',
 
-	'JOINED_EXPLAIN'			=> 'Introduceţi o dată în formatul <kbd>YYYY-MM-DD</kbd>.',
+	'JOINED_EXPLAIN'			=> 'Enter a date in <kbd>YYYY-MM-DD</kbd> format. You may use both fields to specify an interval, or leave one blank for an open date range.',
 
 	'LAST_ACTIVE_EXPLAIN'		=> 'Introduceţi o dată în formatul <kbd>YYYY-MM-DD</kbd>. Introduceţi <kbd>0000-00-00</kbd> pentru a şterge utilizatorii care nu s-au autentificat, condiţiile <em>Înainte</em> şi <em>După</em> vor fi ignorate.',
 
+	'POSTS_ON_QUEUE'			=> 'Posts Awaiting Approval',
+	'PRUNE_USERS_GROUP_EXPLAIN'	=> 'Limit to users within the selected group.',
+	'PRUNE_USERS_GROUP_NONE'	=> 'All groups',
 	'PRUNE_USERS_LIST'				=> 'Utilizatorii care vor fi şterşi',
-	'PRUNE_USERS_LIST_DELETE'		=> 'Următoarele conturi vor fi eliminate conform cu criteriul selectat pentru ştergerea utilizatorilor.',
-	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'Următoarele conturi vor fi dezactivate conform cu criteriul selectat pentru ştergerea utilizatorilor.',
+	'PRUNE_USERS_LIST_DELETE'		=> 'With the selected critera for pruning users the following accounts will be removed. You can remove individual users from the deletion list by unchecking the box next to their username.',
+	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'With the selected critera for pruning users the following accounts will be deactivated. You can remove individual users from the deactivation list by unchecking the box next to their username.',
 
-	'SELECT_USERS_EXPLAIN'		=> 'Precizaţi aici numele utilizatorilor, vor fi folosite de preferinţă pentru criteriile de mai sus. Fondatorii nu pot fi şterşi.',
+	'SELECT_USERS_EXPLAIN'		=> 'Enter specific usernames here. They will be used in preference to the criteria above. Founders cannot be pruned.',
 
 	'USER_DEACTIVATE_SUCCESS'	=> 'Utilizatorii selectaţi au fost dezactivaţi cu succes.',
 	'USER_DELETE_SUCCESS'		=> 'Utilizatorii selectaţi au fost şterşi cu succes.',
@@ -14432,15 +15035,38 @@ $lang = array_merge($lang, array(
 	'DELETING_INDEX_IN_PROGRESS'			=> 'Ştergerea indexului este în progres',
 	'DELETING_INDEX_IN_PROGRESS_EXPLAIN'	=> 'Căutarea backend îşi curăţă indexul. Această operaţie poate dura câteva minute.',
 
-	'FULLTEXT_MYSQL_INCOMPATIBLE_VERSION'	=> 'Textul MySQL al backend-ului poate fi folosit doar cu versiunea MySQL4 sau alta mai nouă.',
+	'FULLTEXT_MYSQL_INCOMPATIBLE_DATABASE'	=> 'The MySQL fulltext backend can only be used with MySQL4 and above.',
 	'FULLTEXT_MYSQL_NOT_MYISAM'				=> 'Textul MySQL pentru indecşi poate fi folosit doar cu tabele MyISAM.',
 	'FULLTEXT_MYSQL_TOTAL_POSTS'			=> 'Numărul total al mesajelor indexate',
-	'FULLTEXT_MYSQL_MBSTRING'				=> 'Suport pentru caracterele ne-latine UTF-8 folosind mbstring:',
-	'FULLTEXT_MYSQL_PCRE'					=> 'Suport pentru caracterele ne-latine UTF-8 folosind PCRE:',
-	'FULLTEXT_MYSQL_MBSTRING_EXPLAIN'		=> 'Dacă PCRE nu are proprietăţi de caracter unicod, căutarea backend va încerca să folosească motorul expresiilor mbstring.',
-	'FULLTEXT_MYSQL_PCRE_EXPLAIN'			=> 'Căutarea backend necesită proprietăţile de caracter unicod PCRE, disponibile numai în PHP 4.4, 5.1 sau mai nou, dacă vreţi să căutaţi caractere ne-latine.',
 	'FULLTEXT_MYSQL_MIN_SEARCH_CHARS_EXPLAIN'	=> 'Cuvintele cu cel puţin atâtea caractere vor fi indexate pentru căutare. Veţi putea schimba această setare doar modificând fişierul de configurare mysql.',
 	'FULLTEXT_MYSQL_MAX_SEARCH_CHARS_EXPLAIN'	=> 'Cuvintele cu cel mult atâtea caractere vor fi indexate pentru căutare. Veţi putea schimba această setare doar modificând fişierul de configurare mysql..',
+
+	'FULLTEXT_POSTGRES_INCOMPATIBLE_DATABASE'	=> 'The PostgreSQL fulltext backend can only be used with PostgreSQL.',
+	'FULLTEXT_POSTGRES_TOTAL_POSTS'			=> 'Total number of indexed posts',
+	'FULLTEXT_POSTGRES_VERSION_CHECK'		=> 'PostgreSQL version',
+	'FULLTEXT_POSTGRES_TS_NAME'				=> 'Text search Configuration Profile:',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN'			=> 'Minimum word length for keywords',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN'			=> 'Maximum word length for keywords',
+	'FULLTEXT_POSTGRES_VERSION_CHECK_EXPLAIN'		=> 'This search backend requires PostgreSQL version 8.3 and above.',
+	'FULLTEXT_POSTGRES_TS_NAME_EXPLAIN'				=> 'The Text search configuration profile used to determine the parser and dictionary.',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN_EXPLAIN'			=> 'Words with at least this many characters will be included in the query to the database.',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN_EXPLAIN'			=> 'Words with no more than this many characters will be included in the query to the database.',
+
+	'FULLTEXT_SPHINX_CONFIGURE'				=> 'Configure the following settings to generate sphinx config file',
+	'FULLTEXT_SPHINX_DATA_PATH'				=> 'Path to data directory',
+	'FULLTEXT_SPHINX_DATA_PATH_EXPLAIN'		=> 'It will be used to store the indexes and log files. You should create this directory outside the web accessible directories. (should have a trailing slash)',
+	'FULLTEXT_SPHINX_DELTA_POSTS'			=> 'Number of posts in frequently updated delta index',
+	'FULLTEXT_SPHINX_HOST'					=> 'Sphinx search daemon host',
+	'FULLTEXT_SPHINX_HOST_EXPLAIN'			=> 'Host on which the sphinx search daemon (searchd) listens. Leave empty to use the default localhost',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT'		=> 'Indexer memory limit',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT_EXPLAIN'	=> 'This number should at all times be lower than the RAM available on your machine. If you experience periodic performance problems this might be due to the indexer consuming too many resources. It might help to lower the amount of memory available to the indexer.',
+	'FULLTEXT_SPHINX_MAIN_POSTS'			=> 'Number of posts in main index',
+	'FULLTEXT_SPHINX_PORT'					=> 'Sphinx search daemon port',
+	'FULLTEXT_SPHINX_PORT_EXPLAIN'			=> 'Port on which the sphinx search daemon (searchd) listens. Leave empty to use the default Sphinx API port 9312',
+	'FULLTEXT_SPHINX_WRONG_DATABASE'		=> 'The sphinx search for phpBB supports MySQL and PostgreSQL only.',
+	'FULLTEXT_SPHINX_CONFIG_FILE'			=> 'Sphinx config file',
+	'FULLTEXT_SPHINX_CONFIG_FILE_EXPLAIN'	=> 'The generated content of the sphinx config file. This data needs to be pasted into the sphinx.conf which is used by sphinx search daemon. Replace the [dbuser] and [dbpassword] placeholders with your database credentials.',
+	'FULLTEXT_SPHINX_NO_CONFIG_DATA'		=> 'The sphinx data and config directory paths are not defined. Please define them to generate the config file.',
 
 	'GENERAL_SEARCH_SETTINGS'				=> 'Setări generale de căutare',
 	'GO_TO_SEARCH_INDEX'					=> 'Mergi la pagina principală de căutare',
@@ -14465,8 +15091,6 @@ $lang = array_merge($lang, array(
 
 	'SEARCH_GUEST_INTERVAL'					=> 'Intervalul de flood al vizitatorilor pentru căutare',
 	'SEARCH_GUEST_INTERVAL_EXPLAIN'			=> 'Numărul de secunde pe care vizitatorii trebuie să-l aştepte între căutări. Dacă un vizitator efectueză o căutare, atunci toţi ceilalţi vizitatori trebuie să aştepe până trece acest interval.',
-	'SEARCH_INDEX_CREATE_REDIRECT'			=> 'Au fost indexate toate mesajele până la id-ul mesajului %1$d, din care %2$d mesaje au fost în această etapă.<br />Rata curentă a indexării este de aproximativ %3$.1f mesaje pe secundă.<br />Indexare în progres…',
-	'SEARCH_INDEX_DELETE_REDIRECT'			=> 'Au fost scoase din indexul căutării toate mesajele până la id-ul mesajului %1$d .<br />Ştergere în progres…',
 	'SEARCH_INDEX_CREATED'					=> 'Toate mesajele au fost indexate cu succes în baza de date a forumului.',
 	'SEARCH_INDEX_REMOVED'					=> 'Indexul de căutare a fost şters cu succes.',
 	'SEARCH_INTERVAL'						=> 'Intervalul de flood al utilizatorilor pentru căutare',
@@ -14489,8 +15113,55 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
+	// 3.1.0
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
+
+	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
+	'CONFIRM_UNINSTALL_STYLES'		=> 'Are you sure you wish to uninstall selected styles?',
+	'COPYRIGHT'						=> 'Drepturi de autor',
+
+	'DEACTIVATE_DEFAULT'		=> 'Nu puteţi dezactiva stilul iniţial.',
+	'DELETE_FROM_FS'			=> 'Şterge din sistemul de fişiere',
+	'DELETE_STYLE_FILES_FAILED'	=> 'Error deleting files for style "%s".',
+	'DELETE_STYLE_FILES_SUCCESS'	=> 'Files for style "%s" have been deleted.',
+	'DETAILS'					=> 'Detalii',
+
+	'INHERITING_FROM'			=> 'Moşteneşte de la',
+	'INSTALL_STYLE'				=> 'Instalează stil',
+	'INSTALL_STYLES'			=> 'Install styles',
+	'INSTALL_STYLES_EXPLAIN'	=> 'Here you can install new styles.<br />If you cannot find a specific style in list below, check to make sure style is already installed. If it is not installed, check if it was uploaded correctly.',
+	'INVALID_STYLE_ID'			=> 'Invalid style ID.',
+
+	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
+	'NO_UNINSTALLED_STYLE'		=> 'Niciun stil dezinstalat nu a fost detectat',
+
+	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
+
+	'STYLE_ACTIVATE'			=> 'Activează',
+	'STYLE_ACTIVE'				=> 'Activ',
+	'STYLE_DEACTIVATE'			=> 'Dezactivează',
+	'STYLE_DEFAULT'				=> 'Setează stilul standard',
+	'STYLE_DEFAULT_CHANGE_INACTIVE'	=> 'You must activate style before making it default style.',
+	'STYLE_ERR_INVALID_PARENT'	=> 'Invalid parent style.',
+	'STYLE_ERR_NAME_EXIST'		=> 'Un stil cu acest nume există deja.',
+	'STYLE_ERR_STYLE_NAME'		=> 'Trebuie să specificaţi un nume pentru acest stil.',
+	'STYLE_INSTALLED'			=> 'Style "%s" has been installed.',
+	'STYLE_INSTALLED_RETURN_INSTALLED_STYLES'	=> 'Return to installed styles list',
+	'STYLE_INSTALLED_RETURN_UNINSTALLED_STYLES'	=> 'Install more styles',
+	'STYLE_NAME'				=> 'Nume stil',
+	'STYLE_NOT_INSTALLED'		=> 'Style "%s" was not installed.',
+	'STYLE_PATH'				=> 'Style path',
+	'STYLE_UNINSTALL'			=> 'Uninstall',
+	'STYLE_UNINSTALL_DEPENDENT'	=> 'Style "%s" cannot be uninstalled because it has one or more child styles.',
+	'STYLE_UNINSTALLED'			=> 'Style "%s" uninstalled successfully.',
+	'STYLE_USED_BY'				=> 'Folosit de (incluzând roboţii)',
+
+	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+
+	// 3.0.12
 	'ACP_IMAGESETS_EXPLAIN'	=> 'Seturile de imagini cuprind toate butoanele, forumul, dosarul, etc. şi alte imagini în afara stilului, specifice forumului. Aici puteţi modifica, exporta sau şterge seturile de imagini existente şi importa sau activa seturi noi.',
-	'ACP_STYLES_EXPLAIN'	=> 'Aici puteţi administra stilurile disponibile în forumul propriu. Un stil constă dintr-un şablon, o temă şi setul de imagini. Puteţi modifica stilurile existente, şterge, dezactiva, reactiva, crea sau importa unele noi. De asemenea, puteţi vedea cum va arăta un stil folosind funcţia de previzualizare. Stilul curent iniţial este notat prin prezenţa unui asterix (*). De asemenea, este afişat totalul numărului de utilizatori pentru fiecare stil, cu menţiunea ca stilurile suprascrise utilizatorilor nu vor fi reflectate aici.',
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 	'ACP_TEMPLATES_EXPLAIN'	=> 'Un set de şabloane cuprinde toate punctele de marcaj folosite pentru a genera formatul forumului. Aici puteţi modifica setul de şabloane existente, şterge, exporta, importa şi previzualiza seturile. De asemenea, puteţi modifica codul şablonului folosit pentru a genera codul BB.',
 	'ACP_THEMES_EXPLAIN'	=> 'De aici puteţi crea, instala, modifica, şterge şi exporta temele. O temă este combinaţia de culori şi imagini ce sunt aplicate şabloanelor proprii pentru a defini înfăţişarea de bază a forumului propriu. Raza opţiunilor deschise pentru dumneavoastră depinde de configuraţia serverului propriu şi de instalarea phpBB, consultaţi manualul pentru mai multe detalii. Reţineţi când creaţi noi teme că este opţională folosirea unei teme existente ca bază.',
 	'ADD_IMAGESET'			=> 'Crează setul de imagini',
@@ -14527,7 +15198,6 @@ $lang = array_merge($lang, array(
 	'CURRENT_IMAGE'					=> 'Imaginea curentă',
 
 	'DEACTIVATE_DEFAULT'		=> 'Nu puteţi dezactiva stilul iniţial.',
-	'DELETE_FROM_FS'			=> 'Şterge din sistemul de fişiere',
 	'DELETE_IMAGESET'			=> 'Şterge set de imagini',
 	'DELETE_IMAGESET_EXPLAIN'	=> 'Aici puteţi să eliminaţi setul de imagini din baza de date. Reţineţi că nu există cale de întoarcere pentru aceste acţiuni. Este recomandat ca mai întâi să exportaţi setul pentru posibile folosiri ulterioare.',
 	'DELETE_STYLE'				=> 'Şterge stil',
@@ -14724,7 +15394,6 @@ $lang = array_merge($lang, array(
 	'INCLUDE_IMAGESET'			=> 'Include set imagini',
 	'INCLUDE_TEMPLATE'			=> 'Include şablon',
 	'INCLUDE_THEME'				=> 'Include temă',
-	'INHERITING_FROM'			=> 'Moşteneşte de la',
 	'INSTALL_IMAGESET'			=> 'Instalează set imagini',
 	'INSTALL_IMAGESET_EXPLAIN'	=> 'Aici puteţi instala setul de imagini selectat. Puteţi modifica anumite detalii dacă preferaţi sau puteţi folosi setările standard de instalare.',
 	'INSTALL_STYLE'				=> 'Instalează stil',
@@ -14754,7 +15423,6 @@ $lang = array_merge($lang, array(
 	'NO_TEMPLATE'				=> 'Nu poate fi găsit şablonul în sistemul de fişiere.',
 	'NO_THEME'					=> 'Nu poate fi găsită tema în sistemul de fişiere.',
 	'NO_UNINSTALLED_IMAGESET'	=> 'Niciun set de imagini dezinstalat nu a fost detectat',
-	'NO_UNINSTALLED_STYLE'		=> 'Niciun stil dezinstalat nu a fost detectat',
 	'NO_UNINSTALLED_TEMPLATE'	=> 'Niciun şablon dezinstalat nu a fost detectat',
 	'NO_UNINSTALLED_THEME'		=> 'Nicio temă dezinstalată nu a fost detectată',
 	'NO_UNIT'					=> 'Niciunul',
@@ -14794,30 +15462,22 @@ $lang = array_merge($lang, array(
 	'SELECTED_THEME_FILE'		=> 'Fişier temă selectată',
 	'STORE_DATABASE'			=> 'Baza de date',
 	'STORE_FILESYSTEM'			=> 'Sistem de fişiere',
-	'STYLE_ACTIVATE'			=> 'Activează',
-	'STYLE_ACTIVE'				=> 'Activ',
 	'STYLE_ADDED'				=> 'Stil adăugat cu succes.',
-	'STYLE_DEACTIVATE'			=> 'Dezactivează',
-	'STYLE_DEFAULT'				=> 'Setează stilul standard',
 	'STYLE_DELETED'				=> 'Stil şters cu succes.',
 	'STYLE_DETAILS_UPDATED'		=> 'Stil modificat cu succes.',
 	'STYLE_ERR_ARCHIVE'			=> 'Vă rugăm să alegeţi o metodă de arhivare.',
 	'STYLE_ERR_COPY_LONG'		=> 'Câmpul Drepturi de autor nu poate fi mai lung de 60 caractere.',
 	'STYLE_ERR_MORE_ELEMENTS'	=> 'Trebuie să selectaţi cel puţin un element de stil.',
 	'STYLE_ERR_NAME_CHARS'		=> 'Numele stilului poate conţine doar caractere alfanumerice, -, +, _ şi spaţiu.',
-	'STYLE_ERR_NAME_EXIST'		=> 'Un stil cu acest nume există deja.',
 	'STYLE_ERR_NAME_LONG'		=> 'Numele stilului nu poate fi mai lung de 30 caractere.',
 	'STYLE_ERR_NO_IDS'			=> 'Trebuie să selectaţi un şablon, tema şi setul de imagini pentru acest stil.',
 	'STYLE_ERR_NOT_STYLE'		=> 'Fişierul importat sau încărcat nu conţine o arhivă validă a stilului.',
-	'STYLE_ERR_STYLE_NAME'		=> 'Trebuie să specificaţi un nume pentru acest stil.',
 	'STYLE_EXPORT'				=> 'Exportă stil',
 	'STYLE_EXPORT_EXPLAIN'		=> 'Aici puteţi exporta un stil sub forma unei arhive. Un stil nu trebuie să conţină toate elementele dar trebuie să aibă cel puţin unul. De exemplu dacă aţi creat o temă nouă şi un set de imagini pentru un şablon folosit în general, aţi putea să doar să exportaţi tema şi setul de imagini omiţând şablonul.  Puteţi opta fie să descărcaţi fişierul direct sau să-l puneţi în directorul de stocare pentru a-l descărca mai târziu prin FTP.',
 	'STYLE_EXPORTED'			=> 'Stil exportat cu succes şi stocat în %s.',
 	'STYLE_IMAGESET'			=> 'Set de imagini',
-	'STYLE_NAME'				=> 'Nume stil',
 	'STYLE_TEMPLATE'			=> 'Şablon',
 	'STYLE_THEME'				=> 'Temă',
-	'STYLE_USED_BY'				=> 'Folosit de (incluzând roboţii)',
 
 	'TEMPLATE_ADDED'			=> 'Set şablon adăugat şi stocat în sistemul de fişiere.',
 	'TEMPLATE_ADDED_DB'			=> 'Set şablon adăugat şi stocat în baza de date.',
@@ -14915,6 +15575,7 @@ $lang = array_merge($lang, array(
 	'CANNOT_FORCE_REACT_FOUNDER'	=> 'Nu vă este permis să forţaţi reactivarea conturilor fondatorilor.',
 	'CANNOT_FORCE_REACT_YOURSELF'	=> 'Nu vă este permis să forţaţi reactivarea propriul cont.',
 	'CANNOT_REMOVE_ANONYMOUS'		=> 'Nu aveţi permisiunea să ştergeţi conturile vizitatorilor.',
+	'CANNOT_REMOVE_FOUNDER'			=> 'You are not allowed to remove founder accounts.',
 	'CANNOT_REMOVE_YOURSELF'		=> 'Nu aveţi permisiunea să ştergeţi propriul cont de utilizator.',
 	'CANNOT_SET_FOUNDER_IGNORED'	=> 'Nu puteţi să promovaţi utilizatorii ignoraţi ca şi fondatori.',
 	'CANNOT_SET_FOUNDER_INACTIVE'	=> 'Trebuie să activaţi utilizatorii înainte să-i promovaţi ca fondatori, numai utilizatorilor activaţi le este permis să fie promovaţi.',
@@ -14941,7 +15602,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'Selectaţi forumul în care doriţi să mutaţi toate mesajele scrise de către utilizatorul selectat.',
 
 	'NO_SPECIAL_RANK'		=> 'Niciun rang special atribuit',
-	'NO_WARNINGS'			=> 'Niciun avertisment.',
+	'NO_WARNINGS'			=> 'No warnings exist.',
 	'NOT_MANAGE_FOUNDER'	=> 'Aţi încercat să administraţi un utilizator cu statutul de fondator. Numai fondatorii sunt autorizaţi să administreze alţi fondatori.',
 
 	'QUICK_TOOLS'			=> 'Unelte rapide',

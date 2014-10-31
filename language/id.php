@@ -1,5 +1,14 @@
 ﻿<?php
 
+#######language/en/app.php#######
+
+$lang = array_merge($lang, array(
+	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
+	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
+	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+));
+
 #######language/en/calendar.php#######
 
 $lang = array_merge($lang, array(
@@ -182,6 +191,55 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Private reCaptcha anda. Key dapat diperoleh di <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 
 	'RECAPTCHA_EXPLAIN'				=> 'Untuk pencegahan submisi otomatis, anda harus memasukkan kedua kata yang ditampilkan pada kotak isian di bawah ini.',
+	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
+));
+
+#######language/en/cli.php#######
+
+$lang = array_merge($lang, array(
+	'CLI_CONFIG_CANNOT_CACHED'			=> 'Set this option if the configuration option changes too frequently to be efficiently cached.',
+	'CLI_CONFIG_CURRENT'				=> 'Current configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_DELETE_SUCCESS'			=> 'Successfully deleted config %s.',
+	'CLI_CONFIG_NEW'					=> 'New configuration value, use 0 and 1 to specify boolean values',
+	'CLI_CONFIG_NOT_EXISTS'				=> 'Config %s does not exist',
+	'CLI_CONFIG_OPTION_NAME'			=> 'The configuration option’s name',
+	'CLI_CONFIG_PRINT_WITHOUT_NEWLINE'	=> 'Set this option if the value should be printed without a new line at the end.',
+	'CLI_CONFIG_INCREMENT_BY'			=> 'Amount to increment by',
+	'CLI_CONFIG_INCREMENT_SUCCESS'		=> 'Successfully incremented config %s',
+	'CLI_CONFIG_SET_FAILURE'			=> 'Could not set config %s',
+	'CLI_CONFIG_SET_SUCCESS'			=> 'Successfully set config %s',
+
+	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
+	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
+	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
+	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
+	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
+	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
+	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
+	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
+	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
+	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
+	'CLI_EXTENSION_ENABLE_FAILURE'		=> 'Could not enable extension %s',
+	'CLI_EXTENSION_ENABLE_SUCCESS'		=> 'Successfully enabled extension %s',
+	'CLI_EXTENSION_NAME'				=> 'Name of the extension',
+	'CLI_EXTENSION_PURGE_FAILURE'		=> 'Could not purge extension %s',
+	'CLI_EXTENSION_PURGE_SUCCESS'		=> 'Successfully purged extension %s',
+	'CLI_EXTENSION_NOT_FOUND'			=> 'No extensions were found.',
+	'CLI_EXTENSIONS_AVAILABLE'			=> 'Available',
+	'CLI_EXTENSIONS_DISABLED'			=> 'Disabled',
+	'CLI_EXTENSIONS_ENABLED'			=> 'Enabled',
+
+	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
 ));
 
 #######language/en/common.php#######
@@ -190,7 +248,11 @@ $lang = array_merge($lang, array(
 	'TRANSLATION_INFO'	=> 'phpBB3 free Forum by <a href="http://www.userboard.org/">UserBoard.org</a> | All Rights Reserved.',
 	'DIRECTION'			=> 'ltr',
 	'DATE_FORMAT'		=> '|d M Y|',	// 01 Jan 2007 (with Relative days enabled)
+	'DATETIME_FORMAT'	=> '|d M Y, H:i|',	// 01 Jan 2007, 13:37 (with Relative days enabled)
 	'USER_LANG'			=> 'id',
+
+	// See http://wiki.phpbb.com/Plural_Rules for more information
+	'PLURAL_RULE'		=> '1',
 
 	'1_DAY'			=> '1 hari',
 	'1_MONTH'		=> '1 bulan',
@@ -204,18 +266,24 @@ $lang = array_merge($lang, array(
 	'ACCOUNT_DEACTIVATED'			=> 'Account anda telah dinonaktifkan secara manual dan hanya dapat diaktifkan kembali oleh administrator.',
 	'ACCOUNT_NOT_ACTIVATED'			=> 'Account anda belum diaktifkan.',
 	'ACP'							=> 'Papan Pengaturan Administrasi',
+	'ACP_SHORT'						=> 'ACP',
 	'ACTIVE'						=> 'aktif',
 	'ACTIVE_ERROR'					=> 'Nama pengguna yang dimaksud non-aktifkan sekarang ini. Jika anda memiliki permasalahan mengenai pengaktifan account anda, silahkan menghubungi administrator.',
 	'ADMINISTRATOR'					=> 'Administrator',
 	'ADMINISTRATORS'				=> 'Administrator',
 	'AGE'							=> 'Umur',
 	'AIM'							=> 'AIM',
+	'AJAX_ERROR_TITLE'				=> 'AJAX error',
+	'AJAX_ERROR_TEXT'				=> 'Something went wrong when processing your request.',
+	'AJAX_ERROR_TEXT_ABORT'			=> 'User aborted request.',
+	'AJAX_ERROR_TEXT_TIMEOUT'		=> 'Your request timed out; please try again.',
+	'AJAX_ERROR_TEXT_PARSERERROR'	=> 'Something went wrong with the request and the server returned an invalid reply.',
 	'ALLOWED'						=> 'Diijinkan',
 	'ALL_FILES'						=> 'Semua file',
 	'ALL_FORUMS'					=> 'Semua forum',
 	'ALL_MESSAGES'					=> 'Semua pesan',
 	'ALL_POSTS'						=> 'Semua post',
-	'ALL_TIMES'						=> 'Waktu dalam %1$s %2$s',
+	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'Semua topik',
 	'AND'							=> 'Dan',
 	'ARE_WATCHING_FORUM'			=> 'Anda telah berlanggan untuk diberitahukan mengenai post yang baru di forum ini.',
@@ -225,6 +293,14 @@ $lang = array_merge($lang, array(
 	'ATTACHED_IMAGE_NOT_IMAGE'		=> 'File gambar yang anda coba lampirkan tidak sah.',
 	'AUTHOR'						=> 'Pengarang',
 	'AUTH_NO_PROFILE_CREATED'		=> 'Pembuatan profil pengguna tidak berhasil.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_ENTRY'				=> 'Invalid database entry.',
+	'AUTH_PROVIDER_OAUTH_ERROR_INVALID_SERVICE_TYPE'		=> 'Invalid service type provided to OAuth service handler.',
+	'AUTH_PROVIDER_OAUTH_ERROR_SERVICE_NOT_CREATED'			=> 'OAuth service not created',
+	'AUTH_PROVIDER_OAUTH_SERVICE_BITLY'						=> 'Bitly',
+	'AUTH_PROVIDER_OAUTH_SERVICE_FACEBOOK'					=> 'Facebook',
+	'AUTH_PROVIDER_OAUTH_SERVICE_GOOGLE'					=> 'Google',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_NOT_STORED'			=> 'OAuth token not stored.',
+	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_INCORRECTLY_STORED'	=> 'OAuth token incorrectly stored.',
 	'AVATAR_DISALLOWED_CONTENT'		=> 'Upload ditolak karena file yang diupload dikenali kemungkinan penyerangan.',
 	'AVATAR_DISALLOWED_EXTENSION'	=> 'File ini tidak dapat ditampilkan karena ekstensi file <strong>%s</strong> tidak diijinkan.',
 	'AVATAR_EMPTY_REMOTE_DATA'		=> 'Avatar yang dimaksud tidak dapat diupload karena remote data kelihatannya tidak sah ataupun rusak.',
@@ -235,10 +311,11 @@ $lang = array_merge($lang, array(
 	'AVATAR_PARTIAL_UPLOAD'			=> 'File yang dimaksud diupload secara parsial.',
 	'AVATAR_PHP_SIZE_NA'			=> 'Ukuran file avatar terlalu besar.<br />Batas ukuran besar file maksimum yang diijinkan yang diatur di php.ini tidak dapat ditentukan.',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'Ukuran file avatar terlalu besar. Ukuran maksimum file upload adalah %1$d %2$s.<br />Mohon dicatat bahwa ini diatur pada php.ini dan tidak dapat dikesampingkan.',
+	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
 	'AVATAR_URL_INVALID'			=> 'URL yang anda maksudkan tidak sah.',
 	'AVATAR_URL_NOT_FOUND'			=> 'File yang dimaksud tidak dapat ditemukan.',
-	'AVATAR_WRONG_FILESIZE'			=> 'Besar ukuran file avatar harus diantara 0 dan %1d %2s.',
-	'AVATAR_WRONG_SIZE'				=> 'Lebar ukuran avatar yang diajukan adalah %5$d piksel dan tinggi %6$d piksel. Paling tidak lebarnya %1$d pixels dan panjangnya %2$d pixels, tetapi lebarnya tidak boleh lebih besar dari %3$d pixels dan tingginya %4$d pixels.',
+	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
+	'AVATAR_WRONG_SIZE'				=> 'The submitted avatar is %5$s wide and %6$s high. Avatars must be at least %1$s wide and %2$s high, but no larger than %3$s wide and %4$s high.',
 
 	'BACK_TO_TOP'			=> 'Atas',
 	'BACK_TO_PREV'			=> 'Kembali kehalaman sebelumnya',
@@ -255,28 +332,42 @@ $lang = array_merge($lang, array(
 	'BOARD_DISABLED'		=> 'Halaman ini belum dapat digunakan sekarang.',
 	'BOARD_UNAVAILABLE'		=> 'Maaf, halaman ini tidak dapat digunakan untuk sementara, cobalah beberapa saat lagi.',
 	'BROWSING_FORUM'		=> 'Pengguna yang berada di forum ini: %1$s',
-	'BROWSING_FORUM_GUEST'	=> 'Pengguna yang berada di forum ini: %1$s dan %2$d tamu',
-	'BROWSING_FORUM_GUESTS'	=> 'Pengguna yang berada di forum ini: %1$s dan %2$d tamu',
+	'BUTTON_EDIT'			=> 'Edit',
+	'BUTTON_FORUM_LOCKED'	=> 'Locked',
+	'BUTTON_NEW_TOPIC'		=> 'New Topic',
+	'BUTTON_PM'				=> 'PM',
+	'BUTTON_PM_FORWARD'		=> 'Forward',
+	'BUTTON_PM_NEW'			=> 'New PM',
+	'BUTTON_PM_REPLY'		=> 'Send Reply',
+	'BUTTON_PM_REPLY_ALL'	=> 'Reply All',
+	'BUTTON_POST_REPLY'		=> 'Post Reply',
+	'BUTTON_QUOTE'			=> 'Quote',
+	'BUTTON_TOPIC_LOCKED'	=> 'Locked',
 	'BYTES'					=> 'Bytes',
+	'BYTES_SHORT'			=> 'B',
 
 	'CANCEL'				=> 'Batalkan',
 	'CHANGE'				=> 'Ubah',
 	'CHANGE_FONT_SIZE'		=> 'Ubah ukuran huruf',
 	'CHANGING_PREFERENCES'	=> 'Mengubah pilihan halaman',
 	'CHANGING_PROFILE'		=> 'Mengubah pengaturan profil',
-	'CLICK_VIEW_PRIVMSG'	=> '%sMasuk ke inbox%s',
 	'COLLAPSE_VIEW'			=> 'Persempit tampilan',
 	'CLOSE_WINDOW'			=> 'Tutup halaman',
 	'COLOUR_SWATCH'			=> 'Pencarian warna',
-	'COMMA_SEPARATOR'		=> ', ',	// Used in pagination of ACP & prosilver, use localised comma if appropriate, eg: Ideographic or Arabic
+	'COLON'					=> ':',
+	'COMMA_SEPARATOR'		=> ', ',	// Comma used to join lists into a single string, use localised comma if appropriate, eg: Ideographic or Arabic
 	'CONFIRM'				=> 'Konfirmasikan',
 	'CONFIRM_CODE'			=> 'Kode konfirmasi',
 	'CONFIRM_CODE_EXPLAIN'	=> 'Masukkan kode dengan tepat seperti yang ditampilkan. Semua huruf case insensitif.',
 	'CONFIRM_CODE_WRONG'	=> 'Kode konfirmasi yang anda masukkan tidak tepat.',
 	'CONFIRM_OPERATION'		=> 'Apakah anda yakin ingin melakukan ini?',
+	'CONFIRM_AVATAR_DELETE' => 'Are you sure you wish to delete this avatar?',
 	'CONGRATULATIONS'		=> 'Selamat kepada',
 	'CONNECTION_FAILED'		=> 'Koneksi gagal!.',
 	'CONNECTION_SUCCESS'	=> 'Koneksi berhasil!',
+	'CONTACT'				=> 'Hubungi',
+	'CONTACT_USER'			=> 'Contact %s',
+	'CONTACT_US'			=> 'Contact us',
 	'COOKIES_DELETED'		=> 'Semua cookies halaman telah berhasil dihapus.',
 	'CURRENT_TIME'			=> 'Sekarang ini %s',
 
@@ -297,18 +388,13 @@ $lang = array_merge($lang, array(
 	'DISPLAY_TOPICS'		=> 'Tampilkan topik-topik sebelumnya',
 	'DOWNLOADED'			=> 'Didownload',
 	'DOWNLOADING_FILE'		=> 'Mendownload file',
-	'DOWNLOAD_COUNT'		=> 'Didownload %d kali',
-	'DOWNLOAD_COUNTS'		=> 'Didownload %d kali',
-	'DOWNLOAD_COUNT_NONE'	=> 'Belum didownload sama sekali',
-	'VIEWED_COUNT'			=> 'Dilihat %d kali',
-	'VIEWED_COUNTS'			=> 'Dilihat %d kali',
-	'VIEWED_COUNT_NONE'		=> 'Belum dilihat sama sekali',
 
 	'EDIT_POST'							=> 'Ubah post',
-	'EMAIL'								=> 'E-mail', // Short form for EMAIL_ADDRESS
-	'EMAIL_ADDRESS'						=> 'Alamat e-mail',
-	'EMAIL_INVALID_EMAIL'				=> 'Alamat e-mail yang anda masukkan tidak sah.',
-	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Pengiriman e-mail dijalankan dengan masalah pada <strong>baris %1$s</strong>. Responsi: %2$s.',
+	'ELLIPSIS'							=>	'…',
+	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
+	'EMAIL_ADDRESS'						=> 'Email address',
+	'EMAIL_INVALID_EMAIL'				=> 'The email address you entered is invalid.',
+	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ran into problems sending email at <strong>Line %1$s</strong>. Response: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Anda harus memasukkan subjek jika memulai topik baru.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Anda harus memasukkan subjek jika membuat pesan baru.',
 	'ENABLED'							=> 'Aktif',
@@ -322,17 +408,23 @@ $lang = array_merge($lang, array(
 	'ERR_UNWATCHING'					=> 'Error terjadi pada saat mencoba berhenti berlangganan.',
 	'ERR_WATCHING'						=> 'Error terjadi pada saat mencoba berlangganan.',
 	'ERR_WRONG_PATH_TO_PHPBB'			=> 'Path phpBB yang anda tentukan sepertinya salah.',
+	'ERROR'									=> 'Error',
 	'EXPAND_VIEW'						=> 'Perluas tampilan',
 	'EXTENSION'							=> 'Ekstensi',
+	'EXTENSION_DISABLED'				=> 'The extension <strong>%s</strong> is not enabled.',
 	'EXTENSION_DISABLED_AFTER_POSTING'	=> 'The extension <strong>%s</strong> has been deactivated and can no longer be displayed.',
+	'EXTENSION_DOES_NOT_EXIST'			=> 'The extension <strong>%s</strong> does not exist.',
 
+	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> 'Bantuan',
 	'FAQ_EXPLAIN'			=> 'Pertanyaan Yang Sering Diajukan',
 	'FILENAME'				=> 'Nama file',
 	'FILESIZE'				=> 'Ukuran file',
 	'FILEDATE'				=> 'Tanggal file',
 	'FILE_COMMENT'			=> 'Komentar file',
-	'FILE_NOT_FOUND'		=> 'Fila yang dicari tidak dapat ditemukan.',
+	'FILE_CONTENT_ERR'		=> 'Could not read the contents of file: %s',
+	'FILE_JSON_DECODE_ERR'	=> 'Failed to decode json file: %s',
+	'FILE_NOT_FOUND'		=> 'The requested file could not be found: %s',
 	'FIND_USERNAME'			=> 'Cari anggota',
 	'FOLDER'				=> 'Folder',
 	'FORGOT_PASS'			=> 'Saya lupa kata sandi',
@@ -381,6 +473,9 @@ $lang = array_merge($lang, array(
 	'GB'						=> 'GB',
 	'GIB'						=> 'GiB',
 	'GO'						=> 'Laksanakan',
+	'GOOGLEPLUS'				=> 'Google+',
+	'GOTO_FIRST_POST'			=> 'Go to first post',
+	'GOTO_LAST_POST'			=> 'Go to last post',
 	'GOTO_PAGE'					=> 'Pergi ke halaman',
 	'GROUP'						=> 'Grup',
 	'GROUPS'					=> 'Grup',
@@ -388,12 +483,6 @@ $lang = array_merge($lang, array(
 	'GROUP_ERR_USERNAME'		=> 'Belum ada nama grup yang ditentukan.',
 	'GROUP_ERR_USER_LONG'		=> 'Nama grup tidak boleh melebihi 60 karakter. Nama grup yang ditentukan terlalu panjang.',
 	'GUEST'						=> 'Tamu',
-	'GUEST_USERS_ONLINE'		=> 'Ada %d tamu online',
-	'GUEST_USERS_TOTAL'			=> '%d tamu',
-	'GUEST_USERS_ZERO_ONLINE'	=> 'Ada 0 tamu yang online',
-	'GUEST_USERS_ZERO_TOTAL'	=> '0 tamu',
-	'GUEST_USER_ONLINE'			=> 'Ada %d tamu yang online',
-	'GUEST_USER_TOTAL'			=> '%d tamu',
 	'G_ADMINISTRATORS'			=> 'Administrator',
 	'G_BOTS'					=> 'Bot',
 	'G_GUESTS'					=> 'Tamu',
@@ -402,22 +491,12 @@ $lang = array_merge($lang, array(
 	'G_GLOBAL_MODERATORS'		=> 'Global Moderators',
 	'G_NEWLY_REGISTERED'		=> 'Pengguna baru terdaftar',
 
-	'HIDDEN_USERS_ONLINE'			=> '%d pengguna tersembunyi yang online',
-	'HIDDEN_USERS_TOTAL'			=> '%d tersembunyi',
-	'HIDDEN_USERS_TOTAL_AND'		=> '%d tersembunyi dan ',
-	'HIDDEN_USERS_ZERO_ONLINE'		=> '0 pengguna tersembunyi yang online',
-	'HIDDEN_USERS_ZERO_TOTAL'		=> '0 tersembunyi',
-	'HIDDEN_USERS_ZERO_TOTAL_AND'	=> '0 tersembunyi dan ',
-	'HIDDEN_USER_ONLINE'			=> '%d pengguna tersembunyi yang online',
-	'HIDDEN_USER_TOTAL'				=> '%d tersembunyi',
-	'HIDDEN_USER_TOTAL_AND'			=> '%d tersembunyi dan ',
 	'HIDE_GUESTS'					=> 'Sembunyikan tamu',
 	'HIDE_ME'						=> 'Sembunyikan status online saya di sesi ini',
 	'HOURS'							=> 'Jam',
 	'HOME'							=> 'Home',
 
 	'ICQ'						=> 'ICQ',
-	'ICQ_STATUS'				=> 'Status ICQ',
 	'IF'						=> 'Jika',
 	'IMAGE'						=> 'Gambar',
 	'IMAGE_FILETYPE_INVALID'	=> 'Tipe file gambar %d untuk mimetype %s tidak didukung.',
@@ -425,9 +504,11 @@ $lang = array_merge($lang, array(
 	'IN'						=> 'dalam',
 	'INDEX'						=> 'Halaman Indeks', //Index page
 	'INFORMATION'				=> 'Informasi',
+	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
 	'INTERESTS'					=> 'Minat',
 	'INVALID_DIGEST_CHALLENGE'	=> 'Intisari tantangan tidak benar.',
-	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> kemungkinan merupakan alamat e-mail yang salah?',
+	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> possibly an invalid email address?',
+	'INVALID_PLURAL_RULE'		=> 'The chosen plural rule is invalid. Valid values are integers between 0 and 15.',
 	'IP'						=> 'IP',
 	'IP_BLACKLISTED'			=> 'IP Anda %1$s telah diblokir karena sudah dimasukkan kedalam daftar hitam. Untuk keterangan lebih lanjut, silahkan lihat <a href="%2$s">%2$s</a>.',
 
@@ -435,7 +516,8 @@ $lang = array_merge($lang, array(
 	'JOINED'				=> 'Bergabung',
 	'JUMP_PAGE'				=> 'Masukkan nomor halaman yang ingin dituju',
 	'JUMP_TO'				=> 'Lompat ke',
-	'JUMP_TO_PAGE'			=> 'Klik untuk melompat ke page…',
+	'JUMP_TO_PAGE'			=> 'Jump to page',
+	'JUMP_TO_PAGE_CLICK'	=> 'Click to jump to page…',
 
 	'KB'					=> 'KB',
 	'KIB'					=> 'KiB',
@@ -447,6 +529,8 @@ $lang = array_merge($lang, array(
 	'LDAP_NO_SERVER_CONNECTION'			=> 'Tidak dapat tersambung ke LDAP server.',
 	'LDAP_SEARCH_FAILED'				=> 'Kesalahan terjadi pada saaat mencari direktori LDAP.',
 	'LEGEND'							=> 'Daftar Grup',
+	'LIVE_SEARCHES_NOT_ALLOWED'			=> 'Live searches are not allowed.',
+	'LOADING'							=> 'Loading',
 	'LOCATION'							=> 'Lokasi',
 	'LOCK_POST'							=> 'Tutup post',
 	'LOCK_POST_EXPLAIN'					=> 'Mencegah pengubahan',
@@ -457,6 +541,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_CONFIRM_EXPLAIN'				=> 'Untuk mencegah penyerangan account, halaman membutuhkan anda untuk memasukkan kode konfirmasi setelah jumlah kegagalan maksimum untuk masuk tercapai. Kode tersebut ditampilkan dalam gambar sperti yang anda lihat dibawah ini. Jika anda mengalami kesulitan untuk melihat ataupun tidak dapat membaca kode tersebut silahkan menghubungi %sAdministrator%s.', // unused
 	'LOGIN_ERROR_ATTEMPTS'				=> 'Anda telah mencapai batas maksimum percobaan untuk bisa masuk. Sebagai tambahan terhadap nama pengguna dan kata sandi anda, anda juga harus menyelesaikan CAPTCHA dibawah ini.',
 	'LOGIN_ERROR_EXTERNAL_AUTH_APACHE'	=> 'Anda belum diotentifikasi oleh Apache.',
+	'LOGIN_ERROR_OAUTH_SERVICE_DOES_NOT_EXIST'	=> 'A non-existant OAuth service has been requested.',
 	'LOGIN_ERROR_PASSWORD'				=> 'Anda telah memasukkan kata sandi yang salah. Silahkan periksa kata sandi anda dan coba lagi. Jika anda masih mengalami masalah silahkan menghubungi %sAdministrator%s.',
 	'LOGIN_ERROR_PASSWORD_CONVERT'		=> 'Kata sandi tidak mungkin dikonversikan pada saat mengupdate bulletin board’s software ini. Silahkan %smeminta kata sandi baru%s. Jika anda masih mengalami masalah silahkan hubungi %sAdministrator%s.',
 	'LOGIN_ERROR_USERNAME'				=> 'Anda telah memasukan nama pengguna yang salah. Silahkan periksa nama pengguna anda dan coba lagi. Jika anda masih mengalami kesulitan silahkan hubungi %sAdministrator%s.',
@@ -465,17 +550,22 @@ $lang = array_merge($lang, array(
 	'LOGIN_VIEWFORUM'					=> 'Untuk melihat forum ini anda harus didaftarkan dan dimasukkan.',
 	'LOGIN_EXPLAIN_EDIT'				=> 'Untuk mengubah post di dalam forum ini anda harus didaftarkan dan dimasukkan.',
 	'LOGIN_EXPLAIN_VIEWONLINE'			=> 'Untuk melihat daftar online anda harus didaftarkan dan dimasukkan.',
+	'LOGIN_REQUIRED'					=> 'You need to login to perform this action.',
 	'LOGOUT'							=> 'Keluar',
 	'LOGOUT_USER'						=> 'Keluar [ %s ]',
-	'LOG_ME_IN'							=> 'Masukkan saya secara otomatis setiap kunjungan',
+	'LOG_ME_IN'							=> 'Remember me',
 
+	'MAIN'					=> 'Main',
 	'MARK'					=> 'Tandai',
 	'MARK_ALL'				=> 'Tandai semua',
+	'MARK_ALL_READ'			=> 'Mark all read',
 	'MARK_FORUMS_READ'		=> 'Tandai forum sudah dibaca',
+	'MARK_READ'				=> 'Mark read',
 	'MARK_SUBFORUMS_READ'	=> 'Tandai sub forum sudah dibaca',
 	'MB'					=> 'MB',
 	'MIB'					=> 'MiB',
 	'MCP'					=> 'Papan Pengaturan Moderator',
+	'MCP_SHORT'				=> 'MCP',
 	'MEMBERLIST'			=> 'Daftar Anggota',
 	'MEMBERLIST_EXPLAIN'	=> 'Lihat daftar lengkap anggota',
 	'MERGE'					=> 'Gabungkan',
@@ -488,26 +578,47 @@ $lang = array_merge($lang, array(
 	'MODERATE'				=> 'Moderasi',
 	'MODERATOR'				=> 'Moderator',
 	'MODERATORS'			=> 'Moderator-moderator',
+	'MODULE_NOT_ACCESS'		=> 'Module not accessible',
+	'MODULE_NOT_FIND'		=> 'Cannot find module %s',
+	'MODULE_FILE_INCORRECT_CLASS'	=> 'Module file %s does not contain correct class [%s]',
 	'MONTH'					=> 'Bulan',
 	'MOVE'					=> 'Pindahkan',
-	'MSNM'					=> 'MSNM/WLM',
 
 	'NA'						=> 'Tidak ada',
 	'NEWEST_USER'				=> 'Anggota terbaru: <strong>%s</strong>',
 	'NEW_MESSAGE'				=> 'Pesan baru',
 	'NEW_MESSAGES'				=> 'Pesan-pesan baru',
-	'NEW_PM'					=> '<strong>%d</strong> pesan baru',
-	'NEW_PMS'					=> '<strong>%d</strong> pesan baru',
 	'NEW_POST'					=> 'Post baru',	// Not used anymore
 	'NEW_POSTS'					=> 'Post-post baru',	// Not used anymore
 	'NEXT'						=> 'Berikutnya',		// Used in pagination
 	'NEXT_STEP'					=> 'Berikutnya',
 	'NEVER'						=> 'Jangan pernah',
 	'NO'						=> 'Tidak',
+	'NO_NOTIFICATIONS'			=> 'You have no notifications',
 	'NOT_ALLOWED_MANAGE_GROUP'	=> 'Anda tidak diijinkan untuk mengatur grup ini.',
 	'NOT_AUTHORISED'			=> 'anda tidak berhak mengakses area ini.',
 	'NOT_WATCHING_FORUM'		=> 'Anda tidak berlangganan untuk mengupdate forum ini lagi.',
 	'NOT_WATCHING_TOPIC'		=> 'Anda tidak berlangganan topik ini lagi.',
+	'NOTIFICATIONS'				=> 'Notifications',
+	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
+	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
+	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
+	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
+	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
+	'NOTIFICATION_POST_IN_QUEUE'		=> '<strong>Post approval</strong> request by %1$s:',
+	'NOTIFICATION_REFERENCE'			=> '"%1$s"',
+	'NOTIFICATION_REASON'				=> '<em>Reason:</em> %1$s.',
+	'NOTIFICATION_REPORT_PM'			=> '<strong>Private Message reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_POST'			=> '<strong>Post reported</strong> by %1$s:',
+	'NOTIFICATION_REPORT_CLOSED'		=> '<strong>Report closed</strong> by %1$s for:',
+	'NOTIFICATION_TOPIC'				=> '<strong>New topic</strong> by %1$s:',
+	'NOTIFICATION_TOPIC_APPROVED'		=> '<strong>Topic approved</strong>:',
+	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
+	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
+	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> 'Silahkan memberitahukan administrator atau webmaster.',
 	'NOTIFY_ADMIN_EMAIL'		=> 'Silahkan memeberitahukan administrator atau webmaster: <a href="mailto:%1$s">%1$s</a>',
 	'NO_ACCESS_ATTACHMENT'		=> 'Anda tidak diijinkan untuk mengakses file ini.',
@@ -516,6 +627,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_ADMIN'				=> 'Akses ke Papan Pengaturan Administrator tidak diijinkan karena anda tidak memiliki ijin administrasi.',
 	'NO_AUTH_ADMIN_USER_DIFFER'	=> 'Anda tidak dapat mengotentifikasi ulang sebagai pengguna yang lain.',
 	'NO_AUTH_OPERATION'			=> 'Anda tidak memiliki ijin yang dibutuhkan untuk menyelesaikan operasi ini.',
+	'NO_AVATARS'				=> 'No avatars currently available',
 	'NO_CONNECT_TO_SMTP_HOST'	=> 'Tidak dapat menyambungkan ke host smtp : %1$s : %2$s',
 	'NO_BIRTHDAYS'				=> 'Tidak ada yang berulang tahun hari ini',
 	'NO_EMAIL_MESSAGE'			=> 'Pesan e-mail kosong.',
@@ -531,7 +643,6 @@ $lang = array_merge($lang, array(
 	'NO_MODE'					=> 'Tidak ada mode yang ditentukan.',
 	'NO_MODERATORS'				=> 'Tidak ada moderator.',
 	'NO_NEW_MESSAGES'			=> 'Tidak ada pesan baru',
-	'NO_NEW_PM'					=> '<strong>0</strong> pesan baru',
 	'NO_NEW_POSTS'				=> 'Tidak ada pesan baru',	// Not used anymore
 	'NO_ONLINE_USERS'			=> 'Tidak ada pengguna yang terdaftar',
 	'NO_POSTS'					=> 'Tidak ada post',
@@ -546,7 +657,6 @@ $lang = array_merge($lang, array(
 	'NO_TOPIC_FORUM'			=> 'Topik atau forum sudah tidak ada lagi.',
 	'NO_TOPICS'					=> 'Tidak ada topik atau post di forum ini.',
 	'NO_TOPICS_TIME_FRAME'		=> 'Tidak ada topik di dalam forum ini untuk rentang waktu yang dipilih.',
-	'NO_UNREAD_PM'				=> '<strong>0</strong> pesan tak terbaca',
 	'NO_UNREAD_POSTS'			=> 'Tidak ada post takterbaca',
 	'NO_UPLOAD_FORM_FOUND'		=> 'Upload dimulai tetapi tidak ada ditemukan bentuk file yang benar.',
 	'NO_USER'					=> 'Tidak ada pengguna.',
@@ -557,15 +667,14 @@ $lang = array_merge($lang, array(
 	'OFFLINE'					=> 'Offline',
 	'ONLINE'					=> 'Online',
 	'ONLINE_BUDDIES'			=> 'Teman Online',
-	'ONLINE_USERS_TOTAL'		=> 'Total <strong>%d</strong> pengguna yang online :: ',
-	'ONLINE_USERS_ZERO_TOTAL'	=> 'Total <strong>0</strong> pengguna yang online :: ',
-	'ONLINE_USER_TOTAL'			=> 'Total <strong>%d</strong> pengguna yang online :: ',
 	'OPTIONS'					=> 'Pilihan',
 
 	'PAGE_OF'				=> 'Halaman <strong>%1$d</strong> dari <strong>%2$d</strong>',
+	'PAGE_TITLE_NUMBER'		=> 'Page %s',
 	'PASSWORD'				=> 'Kata sandi',
 	'PIXEL'					=> 'px',
 	'PLAY_QUICKTIME_FILE'	=> 'Mainkan file Quicktime',
+	'PLEASE_WAIT'			=> 'Please wait.',
 	'PM'					=> 'PM',
 	'PM_REPORTED'			=> 'Klik untuk melihat laporan',
 	'POSTING_MESSAGE'		=> 'Mempost pesan di %s',
@@ -578,9 +687,15 @@ $lang = array_merge($lang, array(
 	'POSTED_ON_DATE'		=> 'pada',
 	'POSTS'					=> 'Post',
 	'POSTS_UNAPPROVED'		=> 'Setidaknya ada satu post di topik ini yang belum disetujui.',
+	'POSTS_UNAPPROVED_FORUM'=> 'At least one post in this forum has not been approved.',
 	'POST_BY_AUTHOR'		=> 'oleh',
-	'POST_BY_FOE'			=> 'Post ini dibuat oleh <strong>%1$s</strong> yang ada didalam daftar pengguna tersisih anda. %2$sTampilkan post ini%3$s.',
+	'POST_BY_FOE'			=> '<strong>%1$s</strong>, who is currently on your ignore list, made this post.',
+	'POST_DISPLAY'			=> '%1$sDisplay this post%2$s.',
 	'POST_DAY'				=> '%.2f post perhari',
+	'POST_DELETED_ACTION'	=> 'Deleted post:',
+	'POST_DELETED'			=> 'This post has been deleted.',
+	'POST_DELETED_BY'		=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s.',
+	'POST_DELETED_BY_REASON'=> '<strong>%2$s</strong> deleted the post by <strong>%1$s</strong> on %3$s for the following reason: %4$s',
 	'POST_DETAILS'			=> 'Keterangan post',
 	'POST_NEW_TOPIC'		=> 'Postkan topik baru',
 	'POST_PCT'				=> '%.2f%% semua post',
@@ -591,7 +706,8 @@ $lang = array_merge($lang, array(
 	'POST_SUBJECT'			=> 'Subjek post',
 	'POST_TIME'				=> 'Waktu post',
 	'POST_TOPIC'			=> 'Postkan topik baru',
-	'POST_UNAPPROVED'		=> 'Post ini sedang menunggu persetujuan',
+	'POST_UNAPPROVED_ACTION'	=> 'Post awaiting approval:',
+	'POST_UNAPPROVED'		=> 'This post has not been approved.',
 	'POWERED_BY'			=> 'Powered by %s',
 	'PREVIEW'				=> 'Lihat Pratayang',
 	'PREVIOUS'				=> 'Sebelumnya',		// Used in pagination
@@ -601,6 +717,8 @@ $lang = array_merge($lang, array(
 	'PRIVATE_MESSAGES'		=> 'Pesan-pesan pribadi',
 	'PRIVATE_MESSAGING'		=> 'Perpesanan pribadi',
 	'PROFILE'				=> 'Papan Pengaturan Pengguna',
+
+	'QUICK_LINKS'			=> 'Quick links',
 
 	'RANK'						=> 'Ranking',
 	'READING_FORUM'				=> 'Melihat topik di %s',
@@ -614,15 +732,6 @@ $lang = array_merge($lang, array(
 	'REDIRECTS'					=> 'Total pengalihan',
 	'REGISTER'					=> 'Daftar',
 	'REGISTERED_USERS'			=> 'Pengguna terdaftar:',
-	'REG_USERS_ONLINE'			=> 'Ada %d pengguna terdaftar dan ',
-	'REG_USERS_TOTAL'			=> '%d terdaftar, ',
-	'REG_USERS_TOTAL_AND'		=> '%d terdaftar dan ',
-	'REG_USERS_ZERO_ONLINE'		=> 'Ada 0 pengguna terdaftar dan ',
-	'REG_USERS_ZERO_TOTAL'		=> '0 terdaftar, ',
-	'REG_USERS_ZERO_TOTAL_AND'	=> '0 terdaftar dan ',
-	'REG_USER_ONLINE'			=> 'Ada %d pengguna terdaftar dan ',
-	'REG_USER_TOTAL'			=> '%d terdaftar, ',
-	'REG_USER_TOTAL_AND'		=> '%d terdaftar dan ',
 	'REMOVE'					=> 'Singkirkan',
 	'REMOVE_INSTALL'			=> 'Silahkan hapus, pindahkan atau beri nama yang lain untuk direktori install sebelum anda menggunakan halaman ini. Jika direktori ini masih ada, hanya Papan Pengaturan Administrator yang bisa diakses.',
 	'REPLIES'					=> 'Balasan',
@@ -639,7 +748,8 @@ $lang = array_merge($lang, array(
 	'RETURN_FORUM'				=> '%sKembali ke forum yang terakhir dikunjungi%s',
 	'RETURN_PAGE'				=> '%sKembali ke halaman sebelumnya%s',
 	'RETURN_TOPIC'				=> '%sKembali ke topik yang terakhir dikunjungi%s',
-	'RETURN_TO'					=> 'Kembali ke',
+	'RETURN_TO'					=> 'Return to “%s”',
+	'RETURN_TO_INDEX'			=> 'Return to Board Index',
 	'FEED'						=> 'Umpan',
 	'FEED_NEWS'					=> 'Umpan Terbaru',
 	'FEED_TOPICS_ACTIVE'		=> 'Topik Aktif',
@@ -667,28 +777,30 @@ $lang = array_merge($lang, array(
 	'SEARCH_ADV_EXPLAIN'		=> 'Lihat pilihan pencarian lanjutan',
 	'SEARCH_KEYWORDS'			=> 'Cari untuk kata kunci',
 	'SEARCHING_FORUMS'			=> 'Pencarian forum',
-	'SEARCH_ACTIVE_TOPICS'		=> 'Lihat topik yang aktif',
+	'SEARCH_ACTIVE_TOPICS'		=> 'Active topics',
 	'SEARCH_FOR'				=> 'Cari',
 	'SEARCH_FORUM'				=> 'Cari forum ini…',
-	'SEARCH_NEW'				=> 'Lihat post baru',
+	'SEARCH_NEW'				=> 'New posts',
 	'SEARCH_POSTS_BY'			=> 'Cari post dengan',
-	'SEARCH_SELF'				=> 'Lihat post anda',
+	'SEARCH_SELF'				=> 'Your posts',
 	'SEARCH_MINE'				=> 'View your topics',
 	'SEARCH_TOPIC'				=> 'Cari topik ini…',
-	'SEARCH_UNANSWERED'			=> 'Lihat post yang belum terjawab',
-	'SEARCH_UNREAD'				=> 'Lihat post yang belum terbaca',
+	'SEARCH_UNANSWERED'			=> 'Unanswered posts',
+	'SEARCH_UNREAD'				=> 'Unread posts',
 	'SEARCH_USER_POSTS'			=> 'Cari post pengguna',
 	'SECONDS'					=> 'Detik',
+	'SEE_ALL'					=> 'See All',
 	'SELECT'					=> 'Pilih',
 	'SELECT_ALL_CODE'			=> 'Pilih semua',
 	'SELECT_DESTINATION_FORUM'	=> 'Silahkan pilih forum tujuan',
 	'SELECT_FORUM'				=> 'Pilih forum',
-	'SEND_EMAIL'				=> 'E-mail',				// Used for submit buttons
-	'SEND_EMAIL_USER'			=> 'E-mail',				// Used as: {L_SEND_EMAIL_USER} {USERNAME} -> E-mail UserX
+	'SEND_EMAIL'				=> 'Send email',				// Used for submit buttons
+	'SEND_EMAIL_USER'			=> 'Send email to %s',
 	'SEND_PRIVATE_MESSAGE'		=> 'Kirim pesan pribadi',
 	'SETTINGS'					=> 'Pengaturan',
 	'SIGNATURE'					=> 'Tanda tangan',
 	'SKIP'						=> 'Lompat ke isi',
+	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'Server SMTP tidak mendukung otentifikasi.',
 	'SORRY_AUTH_READ'			=> 'Anda tidak berhak membaca di forum ini.',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'anda tidak berhak mendownload lampiran.',
@@ -706,6 +818,8 @@ $lang = array_merge($lang, array(
 	'START_WATCHING_TOPIC'		=> 'Langganan topik',
 	'STOP_WATCHING_FORUM'		=> 'Berhenti langganan forum',
 	'STOP_WATCHING_TOPIC'		=> 'Berhenti langganan topik',
+	'STRING_LIST_MULTI'			=> '%1$s, and %2$s',
+	'STRING_LIST_SIMPLE'		=> '%1$s and %2$s',
 	'SUBFORUM'					=> 'Subforum',
 	'SUBFORUMS'					=> 'Subforum',
 	'SUBJECT'					=> 'Subjek',
@@ -717,51 +831,35 @@ $lang = array_merge($lang, array(
 	'THE_TEAM'			=> 'Team',
 	'TIB'				=> 'TiB',
 	'TIME'				=> 'Waktu',
-	
+	'TIMEOUT_PROCESSING_REQ'			=> 'Request timed out.',
+
 	'TOO_LARGE'						=> 'Nilai yang anda masukkan terlalu besar.',
 	'TOO_LARGE_MAX_RECIPIENTS'		=> 'Nilai dari pengaturan <strong>Jumlah maksimum dari penerima yang diijinkan per pesan pribadi</strong> terlalu besar.',
 
 	'TOO_LONG'						=> 'Nilai yang anda masukkan terlalu panjang.',
 
-	'TOO_LONG_AIM'					=> 'Nama tampilan yang anda masukkan terlalu panjang.',
 	'TOO_LONG_CONFIRM_CODE'			=> 'Kode konfirmasi yang anda masukkan terlalu panjang.',
 	'TOO_LONG_DATEFORMAT'			=> 'Format tanggal yang anda masukkan terlalu panjang.',
-	'TOO_LONG_ICQ'					=> 'Nomor ICQ yang anda masukkan terlalu panjang.',
-	'TOO_LONG_INTERESTS'			=> 'Minat-minat yang anda masukkan terlalu panjang.',
 	'TOO_LONG_JABBER'				=> 'Nama account Jabber yang anda masukkan terlalu panjang.',
-	'TOO_LONG_LOCATION'				=> 'Lokasi yang anda masukkan terlalu panjang.',
-	'TOO_LONG_MSN'					=> 'Nama MSNM/WLM yang anda masukkan terlalu panjang.',
 	'TOO_LONG_NEW_PASSWORD'			=> 'Kata sandi yang anda masukkan terlalu panjang.',
-	'TOO_LONG_OCCUPATION'			=> 'Pekerjaan yang anda masukkan terlalu panjang.',
 	'TOO_LONG_PASSWORD_CONFIRM'		=> 'Kata sandi konfirmasi yang anda masukkan terlalu panjang.',
 	'TOO_LONG_USER_PASSWORD'		=> 'Kata sandi yang anda masukkan terlalu panjang.',
 	'TOO_LONG_USERNAME'				=> 'Nama pengguna yang anda masukkan terlalu panjang.',
-	'TOO_LONG_EMAIL'				=> 'Alamat e-mail yang anda masukkan terlalu panjang.',
-	'TOO_LONG_EMAIL_CONFIRM'		=> 'Alamat e-mail konfirmasi yang anda masukkan terlalu panjang.',
-	'TOO_LONG_WEBSITE'				=> 'Alamat website yang anda masukkan terlalu panjang.',
-	'TOO_LONG_YIM'					=> 'Nama The Yahoo! Messenger yang anda masukkan terlalu panjang.',
+	'TOO_LONG_EMAIL'				=> 'The email address you entered is too long.',
 
 	'TOO_MANY_VOTE_OPTIONS'			=> 'Anda mencoba memberikan pilihan suara terlalu banyak.',
 
 	'TOO_SHORT'						=> 'Nilai yang anda masukkan terlalu pendek.',
 
-	'TOO_SHORT_AIM'					=> 'Nama tampilan yang anda masukkan terlalu pendek.',
 	'TOO_SHORT_CONFIRM_CODE'		=> 'Kode konfirmasi yang anda masukkan terlalu pendek.',
 	'TOO_SHORT_DATEFORMAT'			=> 'Format tanggal yang anda masukkan terlalu pendek.',
-	'TOO_SHORT_ICQ'					=> 'Nomor ICQ yang anda masukkan terlalu pendek.',
-	'TOO_SHORT_INTERESTS'			=> 'Minat-minat yang anda masukkan terlalu pendek.',
 	'TOO_SHORT_JABBER'				=> 'Nama account Jabber yang anda masukkan terlalu pendek.',
-	'TOO_SHORT_LOCATION'			=> 'Lokasi yang anda masukkan terlalu pendek.',
-	'TOO_SHORT_MSN'					=> 'Nama MSNM/WLM yang anda masukkan terlalu pendek.',
 	'TOO_SHORT_NEW_PASSWORD'		=> 'Kata sandi yang anda masukkan terlalu pendek.',
-	'TOO_SHORT_OCCUPATION'			=> 'Pekerjaan yang anda masukkan terlalu pendek.',
 	'TOO_SHORT_PASSWORD_CONFIRM'	=> 'Konfirmasi kata sandi yang anda masukkan terlalu pendek.',
 	'TOO_SHORT_USER_PASSWORD'		=> 'Kata sandi yang anda masukkan terlalu pendek.',
 	'TOO_SHORT_USERNAME'			=> 'Nama pengguna yang anda masukkan terlalu pendek.',
-	'TOO_SHORT_EMAIL'				=> 'Alamat e-mail yang anda masukkan terlalu pendek.',
-	'TOO_SHORT_EMAIL_CONFIRM'		=> 'Konfirmasi alamat e-mail yang anda masukkan terlalu pendek.',
-	'TOO_SHORT_WEBSITE'				=> 'Website yang anda masukkan terlalu pendek.',
-	'TOO_SHORT_YIM'					=> 'Nama Yahoo! Messenger yang anda masukkan terlalu pendek.',
+	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
+	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
 	
 	'TOO_SMALL'						=> 'Nilai yang anda masukkan terlalu kecil.',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> 'Nilai dari pengaturan <strong>Jumlah maksimum dari penerima yang diijinkan per pesan pribadi</strong> terlalu kecil.',
@@ -775,30 +873,20 @@ $lang = array_merge($lang, array(
 	'TOPIC_MOVED'		=> 'Topik dipindahkan',
 	'TOPIC_REVIEW'		=> 'Tinjauan Topik',
 	'TOPIC_TITLE'		=> 'Judul Topik',
-	'TOPIC_UNAPPROVED'	=> 'Topik ini belum disetujui',
+	'TOPIC_UNAPPROVED'	=> 'This topic has not been approved.',
+	'TOPIC_DELETED'		=> 'This topic has been deleted.',
 	'TOTAL_ATTACHMENTS'	=> 'Lampiran',
-	'TOTAL_LOG'			=> '1 log',
-	'TOTAL_LOGS'		=> '%d log',
-	'TOTAL_NO_PM'		=> 'Total 0 pesan pribadi',
-	'TOTAL_PM'			=> 'Total 1 pesan pribadi',
-	'TOTAL_PMS'			=> 'Total %d pesan pribadi',
+	'TOPIC_POLL'		=> 'This topic has a poll.',
 	'TOTAL_POSTS'		=> 'Total post',
-	'TOTAL_POSTS_OTHER'	=> 'Total post <strong>%s</strong>',
-	'TOTAL_POSTS_ZERO'	=> 'Total post <strong>0</strong>',
 	'TOPIC_REPORTED'	=> 'Topik ini telah diberitakan',
-	'TOTAL_TOPICS_OTHER'=> 'Total topik <strong>%s</strong>',
-	'TOTAL_TOPICS_ZERO'	=> 'Total topik <strong>0</strong>',
-	'TOTAL_USERS_OTHER'	=> 'Total anggota <strong>%s</strong>',
-	'TOTAL_USERS_ZERO'	=> 'Total anggota <strong>0</strong>',
 	'TRACKED_PHP_ERROR'	=> 'Jejak error PHP: %s',
+	'TWITTER'			=> 'Twitter',
 
-	'UNABLE_GET_IMAGE_SIZE'	=> 'Tidak bisa mendapatkan ukuran gambar.',
+	'UNABLE_GET_IMAGE_SIZE'	=> 'It was not possible to determine the dimensions of the image. Please verify that the URL you entered is correct.',
 	'UNABLE_TO_DELIVER_FILE'=> 'Tidak bisa mengirimkan file.',
 	'UNKNOWN_BROWSER'		=> 'Browser tidak dikenali',
 	'UNMARK_ALL'			=> 'Hapus semua tanda',
 	'UNREAD_MESSAGES'		=> 'Pesan tak terbaca',
-	'UNREAD_PM'				=> '<strong>%d</strong> pesan tak terbaca',
-	'UNREAD_PMS'			=> '<strong>%d</strong> pesan tak terbaca',
 	'UNREAD_POST'			=> 'Post tak terbaca',
 	'UNREAD_POSTS'			=> 'Post-post tak terbaca',
 	'UNWATCH_FORUM_CONFIRM'		=> 'Are you sure you wish to unsubscribe from this forum?',
@@ -816,8 +904,6 @@ $lang = array_merge($lang, array(
 	'USERNAMES'				=> 'Nama-nama pengguna',
 	'USER_AVATAR'			=> 'Avatar pengguna',
 	'USER_CANNOT_READ'		=> 'Anda tidak dapat membaca post di forum ini.',
-	'USER_POST'				=> '%d Post',
-	'USER_POSTS'			=> '%d Post',
 	'USERS'					=> 'Pengguna',
 	'USE_PERMISSIONS'		=> 'Coba ijin pengguna',
 
@@ -825,6 +911,8 @@ $lang = array_merge($lang, array(
 
 	'VARIANT_DATE_SEPARATOR'	=> ' / ',	// Used in date format dropdown, eg: "Today, 13:37 / 01 Jan 2007, 13:37" ... to join a relative date with calendar date
 	'VIEWED'					=> 'Dilihat',
+
+	'VIEWING_CONTACT_ADMIN'		=> 'Viewing contact page',
 	'VIEWING_FAQ'				=> 'Melihat Bantuan',
 	'VIEWING_MEMBERS'			=> 'Melihat keterangan anggota',
 	'VIEWING_ONLINE'			=> 'Melihat siapa yang online',
@@ -839,8 +927,6 @@ $lang = array_merge($lang, array(
 	'VIEW_LATEST_POST'			=> 'Lihat pesan terbaru',
 	'VIEW_NEWEST_POST'			=> 'Lihat post yang belum dibaca',
 	'VIEW_NOTES'				=> 'Lihat catatan pengguna',
-	'VIEW_ONLINE_TIME'			=> 'didasarkan pada pengguna yang aktif selama %d menit terakhir',
-	'VIEW_ONLINE_TIMES'			=> 'didasarkan pada pengguna yang aktif selama %d menit terakhir',
 	'VIEW_TOPIC'				=> 'Melihat topik',
 	'VIEW_TOPIC_ANNOUNCEMENT'	=> 'Pengumuman: ',
 	'VIEW_TOPIC_GLOBAL'			=> 'Pengumuman Global: ',
@@ -861,23 +947,24 @@ $lang = array_merge($lang, array(
 	'WEBSITE'			=> 'Website',
 	'WHOIS'				=> 'Whois',
 	'WHO_IS_ONLINE'		=> 'Siapa yang online',
+	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'Anda memasukkan kata sandi yang salah.',
 	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
-	'WRONG_DATA_ICQ'			=> 'Nomor ICQ yang anda masukkan salah.',
 	'WRONG_DATA_JABBER'			=> 'Nama yang anda masukkan bukan nama account jabber yang benar.',
 	'WRONG_DATA_LANG'			=> 'Bahasa yang anda tentukan tidak benar.',
-	'WRONG_DATA_WEBSITE'		=> 'Alamat situs web harus merupakan URL yang benar, termasuk protokol. Sebagai contoh http://www.example.com/.',
+	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
+	'WRONG_DATA_POST_SK'		=> 'The post sort option you specified is not valid.',
+	'WRONG_DATA_TOPIC_SD'		=> 'The topic sort direction you specified is not valid.',
+	'WRONG_DATA_TOPIC_SK'		=> 'The topic sort option you specified is not valid.',
 	'WROTE'						=> 'menulis',
 
+	'YAHOO'				=> 'Yahoo Messenger',
+	'YOUTUBE'			=> 'YouTube',
 	'YEAR'				=> 'Tahun',
 	'YEAR_MONTH_DAY'	=> '(TTTT-BB-HH)',
 	'YES'				=> 'Ya',
-	'YIM'				=> 'YIM',
 	'YOU_LAST_VISIT'	=> 'Kunjungan terakhir pada: %s',
-	'YOU_NEW_PM'		=> 'Sebuah pesan pribadi yang baru sudah ada di kotak masuk anda.',
-	'YOU_NEW_PMS'		=> 'Sebuah pesan-pesan pribadi yang baru sudah ada di kotak masuk anda.',
-	'YOU_NO_NEW_PM'		=> 'Tidak ada pesan pribadi yang baru.',
 
 	'default_dateformat'	=> 'D M d, Y g:i a', // Mon Jan 01, 2007 1:37 pm
 
@@ -1083,7 +1170,6 @@ $lang = array_merge($lang, array(
 
 	'FORUM_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this forum.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'You do not have enough posts to enter this topic.',
-	'TOO_FEW_CHARS_LIMIT'	=> 'Pesan anda mengandung %1$d karakter. Jumlah minimum karakter yang harus anda masukkan adalah %2$d.',
 	'REPLY_TO_MESSAGE'		=> 'Reply to message',
 
 	'RSS_CHAN_LIST_TITLE'	=> 'Forum',
@@ -1695,7 +1781,6 @@ $lang = array_merge($lang, array(
 	'DEV_NO_TEST_FILE'			=> 'Tidak ada nilai yang ditentukan untukk variabel test_file di konvertor. Jika anda pengguna konvertor ini, anda seharusnya tidak melihat error ini, silahkan laporkan pesan ini kepada pembuat konvertor, anda harus menentukan nama file yang ada pada sumber halaman untuk mengijinkan lokasi untuk diverifikasi.',
 	'DIRECTORIES_AND_FILES'		=> 'Direktori dan setup file',
 	'DISABLE_KEYS'				=> 'Menonaktifkan kunci',
-	'DLL_FIREBIRD'				=> 'Firebird',
 	'DLL_FTP'					=> 'Dukungan Remote FTP [ Instalasi ]',
 	'DLL_GD'					=> 'Dukungan GD graphic [ Konfirmasi visual ]',
 	'DLL_MBSTRING'				=> 'Dukungan karakter Multi-byte',
@@ -1706,11 +1791,12 @@ $lang = array_merge($lang, array(
 	'DLL_MYSQLI'				=> 'MySQL dengan ekstensi MySQLi',
 	'DLL_ORACLE'				=> 'Oracle',
 	'DLL_POSTGRES'				=> 'PostgreSQL 7.x/8.x',
-	'DLL_SQLITE'				=> 'SQLite',
+	'DLL_SQLITE'				=> 'SQLite 2',
+	'DLL_SQLITE3'				=> 'SQLite 3',
 	'DLL_XML'					=> 'Dukungan XML [ Jabber ]',
 	'DLL_ZLIB'					=> 'Dukungan Kompresi zlib [ gz, .tar.gz, .zip ]',
 	'DL_CONFIG'					=> 'Download konfigurasi',
-	'DL_CONFIG_EXPLAIN'			=> 'Anda boleh mendownload config.php secara lengkap ke PC anda. Kemudian anda harus mengupload file tersebut secara manual, menimpa config.php pada direktori phpBB 3.0 anda. Mohon diingat untuk mengupload file tersebuta dalam format ASCII (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'Download',
 	'DONE'						=> 'Selesai',
 
@@ -1722,8 +1808,6 @@ $lang = array_merge($lang, array(
 	'FILES_REQUIRED_EXPLAIN'	=> '<strong>Dibuthkan</strong> - Untuk memfungsikan phpBB secara benar dibutuhkan akses untuk menulis dibutuhkan akses untuk menulis ke file dan direktori tertentu. Jika anda melihat “Tidak Ditemukan” maka anda harus membuat file dan direktori yang relevan. Jika anda melihat “Tidak Bisa Ditulisi” maka anda harus mengubah perijinan untuk file atau direktori agar bisa ditulis oleh phpBB.',
 	'FILLING_TABLE'				=> 'Tabel isian <strong>%s</strong>',
 	'FILLING_TABLES'			=> 'Tabel-tabel isian',
-
-	'FIREBIRD_DBMS_UPDATE_REQUIRED'		=> 'phpBB tidak lagi mendukung Firebird/Interbase versi 2.1. Silahkan perbarui instalasi Firebird anda paling tidak dengan versi 2.1.0 sebelum melanjutkan pembaruan.',
 
 	'FINAL_STEP'				=> 'Langkah terakhir proses',
 	'FORUM_ADDRESS'				=> 'Alamat halaman',
@@ -1750,30 +1834,30 @@ $lang = array_merge($lang, array(
 		<p>Dengan mengklik tombol di bawah ini akan mengantarkan anda ke Papan Pengaturan Administrasi. Ambil beberapa waktu untuk pilihan yang tersedia untuk anda. Mohon diingat bahwa bantuan tersedia secara online melalui <a href="http://www.phpbb.com/support/documentation/3.0/">Documentation</a> dan <a href="http://www.phpbb.com/community/viewforum.php?f=46">support forums</a>, silahkan lihat <a href="%3$s">README</a> untuk informasi lebih lanjut.</p><p><strong>Silahkan hapus, singkirkan atau namai ulang sekarang direktori instal sebelum menggunakan halaman anda. Jika direktori ini masih tetap ada, maka hanya Papan Pengaturan Administrasi (PPA) yang bisa diaksese.</strong></p>',
 	'INSTALL_INTRO'				=> 'Selamat Datang Ke Instalasi',
 
-	'INSTALL_INTRO_BODY'		=> 'Dengan pilihan ini adalah memungkinkan untuk menginstall phpBB3 ke server anda.</p><p>Untuk memproses, anda membutuhkan pengaturan database. Jika anda tidak mengetahui pengaturan database anda, silahkan hubungi host anda dan tanyakan mereka. Anda tidak akan bisa melanjutkan tanpa pengaturan tersebut. Anda harus:</p>
+	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
 
 	<ul>
-		<li>Tipe Database - database yang akan anda gunakan.</li>
-		<li>Nama host server database atau DSN - alamat dari server database.</li>
-		<li>Port Server Database - port dari server database (biasanya tidak dibutuhkan).</li>
-		<li>Nama Database - nama database di server tersebut.</li>
-		<li>Nama Pengguna dan Kata Sandi Database - masukan untuk mengakses database.</li>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
 	</ul>
 
-	<p><strong>Catatan:</strong> jika anda menggunakan SQLite untuk instalasi, anda harus memasukkan alamat lengkap ke file database anda pada DSN isian dan biarkan kosong isian untuk nama pengguna dan kata sandinya. Untuk alasan keamanan, anda harus yakin bahwa file database tersebut tidak disimpan di lokasi web yang dapat diakses.</p>
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
 
-	<p>phpBB3 mendukung beberapa database berikut ini:</p>
+	<p>phpBB3 supports the following databases:</p>
 	<ul>
-		<li>MySQL 3.23 atau di bawahnya (Mendukung MySQLi)</li>
-		<li>PostgreSQL 7.3+</li>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
 		<li>SQLite 2.8.2+</li>
-		<li>Firebird 2.0+</li>
-		<li>MS SQL Server 2000 atau di bawahnya (langsung ataupun via ODBC)</li>
-		<li>MS SQL Server 2005 atau ke atas (asli)</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
 		<li>Oracle</li>
 	</ul>
 
-	<p>Hanya database yang didukung pada server anda yang akan ditampilkan.',
+	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'Untuk memulai instalasi, silahkan tekan tombol di bawah ini.',
 	'INSTALL_LOGIN'				=> 'Masuk',
 	'INSTALL_NEXT'				=> 'Tahap selanjutnya',
@@ -1789,9 +1873,8 @@ $lang = array_merge($lang, array(
 	'INST_ERR_DB_NO_ERROR'		=> 'Tidak ada pesan error yang diberikan.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'Versi dari MySQL yang terinstal pada mesin ini tidak cocok dengan pilihan “MySQL dengan Ekstensi MySQLi” yang anda gunakan. Silahkan coba pilihan “MySQL”.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'Versi dari ekstensi SQLite yang anda miliki terlalu lama, harus di upgrade paling tidak ke versi 2.8.2.',
+	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'Versi dari of Oracle yang diinstal pada mesin ini membutuhkan anda untuk membuat parameter <var>NLS_CHARACTERSET</var> untuk <var>UTF8</var>. Upgrade juga instalasi anda ke versi 9.2+ atau ubah parameternya.',
-	'INST_ERR_DB_NO_FIREBIRD'	=> 'Versi dari Firebird yang diinstal pada mesin di bawah 2.0, silahkan upgrade versi yang terbaru.',
-	'INST_ERR_DB_NO_FIREBIRD_PS'=> 'Database yang anda pilih untuk Firebird memiliki ukuran halaman kurang dari 8192, palng sedikitnya harus 8192.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'Database yang anda pilih tidak dibuat dalam coding <var>UNICODE</var> atau <var>UTF8</var>. Cobalah instal dengan database coding <var>UNICODE</var> atau <var>UTF8</var>.',
 	'INST_ERR_DB_NO_NAME'		=> 'Tidak ada database yang ditentukan.',
 	'INST_ERR_EMAIL_INVALID'	=> 'Alamat e-mail yang anda masukkan salah.',
@@ -1845,6 +1928,8 @@ $lang = array_merge($lang, array(
 	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB <strong>tidak</strong> akan berjalan apabila instalasi PHP anda tidak dikompilasi dengan dukungan UTF-8 pada ekstensi PCRE.',
 	'PHP_GETIMAGESIZE_SUPPORT'			=> 'Fungsi PHP getimagesize() tersedia',
 	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Dibutuhkan</strong> - Agar phpBB dapat berfungsi dengan baik, fungsi getimagesize harus disediakan.',
+	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'Modul-modul opsional',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>Opsional</strong> - Modul atau aplikasi ini adalah opsional. akan tetapi, jika tersedia akan mengaktifkan fitur tambahan.',
 	'PHP_SUPPORTED_DB'				=> 'Databases yang disupport',
@@ -1853,10 +1938,10 @@ $lang = array_merge($lang, array(
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'phpBB akan tetap berjalan jika pengaturan ini diaktifkan, tetapi jika memungkinkan, dan disarankan fungsi register_globals dinonaktifkan pada instal PHP anda untuk alasan keamanan.',
 	'PHP_SAFE_MODE'					=> 'Safe mode',
 	'PHP_SETTINGS'					=> 'Versi PHP dan pengaturan',
-	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Dibutuhkan</strong> - Setidaknya anda harus berjalan dengan PHP versi 4.3.3 untuk menginstal phpBB. Jika <var>safe mode</var> ditampilkan pada bagian bawah instalasi PHP anda berarti anda sedang menjalankan mode tersebut. Ini akan menyebabkan pembatasan pada administarsi remote dan fitur-fitur yang serupa.',
+	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'Pengaturan PHP <var>allow_url_fopen</var> aktif',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>Opsional</strong> - Pengaturan ini adalah opsional, akan tetapi fungsi phpBB tertentu seperti avatar off-site tidak akan berfungsi dengan baik tanpanya. ',
-	'PHP_VERSION_REQD'				=> 'Versi PHP >= 4.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
 	'POST_ID'						=> 'ID Post',
 	'PREFIX_FOUND'					=> 'Sebuah pemeriksaan terhadap telah menunjukkan instalsi yang benar menggunakan <strong>%s</strong> sebagai prefik tabel.',
 	'PREPROCESS_STEP'				=> 'Mengeksekusi fungsi/query pra-proses',
@@ -1876,6 +1961,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> 'Konfigurasi server',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Indeks pencarian tidak dikonversikan',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Indeks pencarian anda yang lama tidak dikonversikan. Pencarian akan selalu memberikan hasil yang kosong. Untuk membuat indeks pencarian yang baru, kunjungi Papan Pengaturan Administrator, pilih Perawatan dan Indeks pencarian dari sub menunya.',
+	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> 'Perangkat Lunak Halaman',
 	'SPECIFY_OPTIONS'			=> 'Tentukan pilihan konversi',
 	'STAGE_ADMINISTRATOR'		=> 'Keterangan administrator',
@@ -1883,7 +1969,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> 'Pengaturan pada halaman ini hanya diperlukan untuk diubah jika anda tahu anda membutuhkan sesuatu yang berbeda dari defaultnya. Jika anda tidak yakin, silahkan proses ke halaman berikutnya, karena pengaturan ini bisa diubah dari Papan Pengaturan Administrasi nantinya.',
 	'STAGE_CONFIG_FILE'			=> 'File konfigurasi',
 	'STAGE_CREATE_TABLE'		=> 'Menbuat tabel database',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'Tabel database yang digunakan 3.0 telah dibuat dan dikumpulkan beberapa data asalnya. Lanjutkan ke halaman selanjutnya untuk menyelesaikan instalasi phpBB.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'Pengaturan database',
 	'STAGE_FINAL'				=> 'Tahap akhir',
 	'STAGE_INTRO'				=> 'Pengenalan',
@@ -1896,7 +1982,7 @@ $lang = array_merge($lang, array(
 	'SUB_LICENSE'				=> 'Lisensi',
 	'SUB_SUPPORT'				=> 'Support',
 	'SUCCESSFUL_CONNECT'		=> 'Koneksi berhasil',
-	'SUPPORT_BODY'				=> 'Dukungan penuh akan diberikan untuk rilis sekarang yang stabil dari phpBB3, gratis. Ini termasuk :</p><ul><li>instalasi</li><li>konfigurasi</li><li>pertanyaan teknikal</li><li>permasalah yang berhubungan dengan bug-bug potensial pada perangkat lunak ini</li><li>memperbarui dari versi Release Candidate (RC) ke versi yang stabil</li><li>mengkonversikan dari phpBB 2.0.x ke phpBB3</li><li>mengkonversikan dari halaman diskusi yang lain ke phpBB3 (silahkan lihat <a href="http://www.phpbb.com/community/viewforum.php?f=65">Convertors Forum</a>)</li></ul><p>Kami menyarankan pengguna masih menjalankan versi beta dari phpBB3 untuk mengganti instalasi mereka dengan salinan yang fresh dari versi terbaru.</p><h2>MODs / Styles</h2><p>Untuk sesuatu yang berhubungan dengan MOD, silahkan post yang sesuai di <a href="http://www.phpbb.com/community/viewforum.php?f=81">Modifications Forum</a>.<br />Untuk sesuatu yang berhubungan dengan gaya, template dan imageset, silahkan post yang sesuai di <a href="http://www.phpbb.com/community/viewforum.php?f=80">Styles Forum</a>.<br /><br />Jika pertanyaan anda berhubungan dengan paket tertentu, silahkan post secara langsung pada topic untuk paket yang dimasksud.</p><h2>Obtaining Support</h2><p><a href="http://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="http://www.phpbb.com/support/">Support Section</a><br /><a href="http://www.phpbb.com/support/documentation/3.0/quickstart/">Quick Start Guide</a><br /><br />Untuk meyakinkan anda tetap terbarukan dengan berita dan rilis terbaru, kenapa tidak <a href="http://www.phpbb.com/support/">berlangganan milis kami</a>?<br /><br />',
+	'SUPPORT_BODY'				=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/documentation/3.1/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
 	'SYNC_FORUMS'				=> 'Memulai menyinkronisasi forum',
 	'SYNC_POST_COUNT'			=> 'Menyinkronisasi post_counts',
 	'SYNC_POST_COUNT_ID'		=> 'Menyinkronisasi post_counts dari <var>masukan</var> %1$s ke %2$s.',
@@ -1922,7 +2008,7 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ALL_FILES_UP_TO_DATE'		=> 'Semua berkas sudah terbarukan dengan versi phpBB yang terbaru. Anda sebaiknya <a href="../ucp.php?mode=login">masuk ke papan pengaturan</a> sekarang dan periksalah apakah semua bekerja dengan baik. Jangan lupa untuk menghapus, mengganti nama atau memindahkan direktori install anda! Silahkan kirim informasi pembaruan tentang server dan pengaturan papan anda dari modul <a href="../ucp.php?mode=login&amp;redirect=adm/index.php%3Fi=send_statistics%26mode=send_statistics">Kirim statistik</a> di ACP.',
+	'ALL_FILES_UP_TO_DATE'		=> 'All files are up to date with the latest phpBB version.',
 	'ARCHIVE_FILE'				=> 'File sumber dalam arsip',
 
 	'BACK'				=> 'Kembali',
@@ -1945,7 +2031,10 @@ $lang = array_merge($lang, array(
 	'CURRENT_VERSION'				=> 'Versi sekarang',
 
 	'DATABASE_TYPE'						=> 'Tipe database',
+	'DATABASE_UPDATE_COMPLETE'			=> 'Database updater has completed!',
+	'DATABASE_UPDATE_CONTINUE'			=> 'Continue database update',
 	'DATABASE_UPDATE_INFO_OLD'			=> 'File pembaruan database dalam direktori install sudah usang. Mohon periksa bahwa anda mengupload versi file yang benar.',
+	'DATABASE_UPDATE_NOT_COMPLETED'		=> 'The database update has not yet completed.',
 	'DELETE_USER_REMOVE'				=> 'Hapus pengguna dan singkirkan post',
 	'DELETE_USER_RETAIN'				=> 'Hapus pengguna tetapi tinggalkan postnya',
 	'DESTINATION'						=> 'File tujuan',
@@ -1964,14 +2053,17 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_UPDATE_METHOD'			=> 'Download file-file arsip yang dimodifikasi',
 	'DOWNLOAD_UPDATE_METHOD_EXPLAIN'	=> 'Setelah selesai di donwnload anda harus membuka file arsip. Anda akan menemukan file-file yang dimodifikasi yang harus anda upload ke direktori phpBB root directory anda. Silahkan upload file tersebut ke lokasi yang sesuai setelahnya. Setelah anda mengupload semua file, silahkan periksa lagi file dengan tombol lainnya di bawah ini.',
 
-	'ERROR'			=> 'Error',
 	'EDIT_USERNAME'	=> 'Ubah nama pengguna',
+	'ERROR'			=> 'Error',
+	'EVERYTHING_UP_TO_DATE'		=> 'Everything is up to date with the latest phpBB version. You should now <a href="%1$s">login to your board</a> and check if everything is working fine. Do not forget to delete, rename or move your install directory! Please send us updated information about your server and board configurations from the <a href="%2$s">Send statistics</a> module in your ACP.',
 
 	'FILE_ALREADY_UP_TO_DATE'		=> 'File sudah yang terbarukan.',
 	'FILE_DIFF_NOT_ALLOWED'			=> 'File tidak diijinkan untuk dibedakan.',
 	'FILE_USED'						=> 'Informasi yang digunakan dari',			// Single file
 	'FILES_CONFLICT'				=> 'File-file konflik',
 	'FILES_CONFLICT_EXPLAIN'		=> 'File berikut dimodifikasi dan bukan sebagai file asli dari versi yang lama. phpBB menentukan bahwa file-file ini menimbulkan konflik jika dicoba digabungkan. Silahkan diperiksa konflik tersebut dan cobalah menyelesaikan secara manual atau lanjutkan pembaruan dengan memilih metode penggabungan yang dikehendaki. Jika anda menyelesaikan konflik tersebut secara manual, silahkan periksa file-file tersebut kembali setelah anda memodifikasinya. Anda juga boleh memilih metode yang dikehendaki untuk menggabungkan setiap file. Yang pertama akan menghasilkan sebuah file dimana baris konflik dari file lama anda akan dihapus, sedangkan metode yang lain akan menghilangkan perubahan dari file yang baru.',
+	'FILES_DELETED'					=> 'Deleted files',
+	'FILES_DELETED_EXPLAIN'			=> 'The following files do not exist in the new version. These files have to be deleted from your installation.',
 	'FILES_MODIFIED'				=> 'File-file yang dimodifikasi',
 	'FILES_MODIFIED_EXPLAIN'		=> 'File-file berikut dimodifikasi yang tidak menunjukkan file-file asli anda dari versi yang lama. File yang diperbarui akan digabungkan antara modifikasi anda dan file yang baru.',
 	'FILES_NEW'						=> 'File-file baru',
@@ -2033,6 +2125,7 @@ $lang = array_merge($lang, array(
 	'PREVIOUS_VERSION'					=> 'Versi sebelumnya',
 	'PROGRESS'							=> 'Progres',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Announcement',
 	'RESULT'					=> 'Hasil',
 	'RUN_DATABASE_SCRIPT'		=> 'Perbarui database saya sekarang',
 
@@ -2040,6 +2133,7 @@ $lang = array_merge($lang, array(
 	'SELECT_DOWNLOAD_FORMAT'	=> 'Pilih format arsip download',
 	'SELECT_FTP_SETTINGS'		=> 'Pilih pengaturan FTP',
 	'SHOW_DIFF_CONFLICT'		=> 'Tampilkan perbedaan/konflik',
+	'SHOW_DIFF_DELETED'			=> 'Show file contents',
 	'SHOW_DIFF_FINAL'			=> 'Tampilkan file hasil',
 	'SHOW_DIFF_MODIFIED'		=> 'Tampilkan perbedaan yang digabungkan',
 	'SHOW_DIFF_NEW'				=> 'Tampilkan isi file',
@@ -2053,6 +2147,7 @@ $lang = array_merge($lang, array(
 	'STAGE_UPDATE_FILES'		=> 'Perbarui file-file',
 	'STAGE_VERSION_CHECK'		=> 'Periksa versi',
 	'STATUS_CONFLICT'			=> 'File yang dimodifikasi menghasilkan konflik',
+	'STATUS_DELETED'			=> 'Deleted file',
 	'STATUS_MODIFIED'			=> 'File dimodifikasi',
 	'STATUS_NEW'				=> 'File baru',
 	'STATUS_NEW_CONFLICT'		=> 'Mengkonflik file baru',
@@ -2073,33 +2168,27 @@ $lang = array_merge($lang, array(
 	'UPDATE_INSTALLATION_EXPLAIN'	=> 'Dengan pilihan ini, adalah memungkinkan untuk memperbarui instalasi phpBB anda ke versi yang terbaru.<br />Selama proses tersebut semua file anda akan diperiksa untuk integritasnya. Anda boleh meninjau semua perbedaan dan file sebelum memperbarui.<br /><br />File update tersebut bisa dilakukan dengan dua cara yang berbeda.</p><h2>Pembaruan Secara Manual</h2><p>Dengan pembaruan ini anda hanya mendownload sekumpulan pengaturan pribadi anda untuk file yang diganti untuk memastikan file modifikasi anda sudah selesai. Setelah anda mendownload paket ini, anda perlu mengupload secara manual masing-masing ke lokasi yang benar pada direktori root phpBB. Setelah selesai, anda bisa melaksanakan tahap pemeriksaan file lagi untuk melihat apakah anda sudah memindahkan file-file tersebut kelokasinya yang benar masing-masing.</p><h2>Pembaruan Otomatis dengan FTP</h2><p>Metode ini sama dengan metode yang pertama tetapi tanpa perlu mendownload file yang diganti dan menguploadnya ke tempat anda. Ini akan diselesaikan dengan sendirinya. Untuk menggunakan metode ini anda harus mengetahui informasi masuk ke FTP anda pada saat ditanyakan. Setelah selesai anda akan dialihkan ke pemeriksaan file kembali untuk memastikan semuanya sudah diperbarui dengan benar.<br /><br />',
 	'UPDATE_INSTRUCTIONS'			=> '
 
-		<h1>Pengumuman Rilis</h1>
+		<h1>Release announcement</h1>
 
-		<p>Silahkan baca <a href="%1$s" title="%1$s"><strong>pengumuman rilis untuk versi terbaru</strong></a> sebelum anda melanjutkan proses pembaruan anda, hal tersebut mungkin mengandung informasi yang penting. Juga mengandung link download lengkap sesuai dengan log perubahannya.</p>
+		<p>Please read the release announcement for the latest version before you continue your update process, it may contain useful information. It also contains full download links as well as the change log.</p>
 
 		<br />
 
-		<h1>Bagaimana membarui instalasi anda dengan Paket Pembaruan Otomatis</h1>
+		<h1>How to update your installation with the Automatic Update Package</h1>
 
-		<p>Cara yang disarankan untuk memperbarui instalasi anda yang dijelaskan di sini hanya berguna untuk automatic update package. Anda juga bisa memperbarui instalasi anda dengan metode yang diberikan pada dokument INSTALL.html document. Tahap-tahap untuk memperbarui phpBB3 secara otomatis adalah:</p>
+		<p>The recommended way of updating your installation listed here is only valid for the automatic update package. You are also able to update your installation using the methods listed within the INSTALL.html document. The steps for updating phpBB3 automatically are:</p>
 
 		<ul style="margin-left: 20px; font-size: 1.1em;">
-			<li>Kunjungi <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com downloads page</a> dan download arsip "Automatic Update Package".<br /><br /></li>
-			<li>Buka/unpack file arsip.<br /><br /></li>
-			<li>Upload folder install yang yang sudah dibuka/unpack seluruhnya ke direktori root phpBB anda (dimana file config.php ditempatkan).<br /><br /></li>
+			<li>Go to the <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com downloads page</a> and download the "Automatic Update Package" archive.<br /><br /></li>
+			<li>Unpack the archive.<br /><br /></li>
+			<li>Upload the complete uncompressed install folder to your phpBB root directory (where your config.php file is).<br /><br /></li>
 		</ul>
 
-		<p>Setelah diupload halaman anda akan menjadi offline untuk pengguna biasa yang disebabkan oleh adanya direktori install yang anda upload.<br /><br />
-		<strong><a href="%2$s" title="%2$s">Mulailah proses pembaruan sekarang dengan mengarahkan browser anda ke folder install</a>.</strong><br />
+		<p>Once uploaded your board will be offline for normal users due to the install directory you uploaded now present.<br /><br />
+		<strong><a href="%1$s" title="%1$s">Now start the update process by pointing your browser to the install folder</a>.</strong><br />
 		<br />
-		Untuk selanjutnya anda akan dibimbing selama proses pembaruan. Anda akan segera diberitahu jika pembaruan tersebut sudah selesai.
+		You will then be guided through the update process. You will be notified once the update is complete.
 		</p>
-	',
-	'UPDATE_INSTRUCTIONS_INCOMPLETE'	=> '
-
-		<h1>Pembaruan yang tidak lengkap dideteksi</h1>
-
-		<p>phpBB mendeteksi adanya pembaruan otomatis yang tidak lengkap. Silahkan periksa apakah anda sudah mengikuti semua langkah pada alat pembaruan otomatis. Berikut ini anda akan melihat tersebut lagi, atau langsung pada direktori install anda.</p>
 	',
 	'UPDATE_METHOD'					=> 'Metode pembaruan',
 	'UPDATE_METHOD_EXPLAIN'			=> 'Anda dapat memilih metode yang anda senangi. Dengan menggunakan upload FTP akan menghadapkan anda dengan formulir isian yang harus anda lengkapi dengan memasukkan keterangan account anda. Dengan metode ini file-file secara otomatis akan dipindahkan ke lokasi yang baru dan membuat salinan dari file yang lama dengan menambahkan .bak ke nama file tersebut. Jika anda memilih untuk mendownload file yang dimodifikasi tersebut maka anda dapat membuka paket file itu dan menguploadnya ke lokasi yang benar nantinya.',
@@ -2110,10 +2199,10 @@ $lang = array_merge($lang, array(
 	'UPDATING_DATA'					=> 'Memperbarui data',
 	'UPDATING_TO_LATEST_STABLE'		=> 'Pembaruan database ke versi terbaru yang stabil',
 	'UPDATED_VERSION'				=> 'Versi terbarukan',
-	'UPGRADE_INSTRUCTIONS'			=> 'Sebuah fitur baru rilis <strong>%1$s</strong> telah tersedia. Silahkan baca <a href="%2$s" title="%2$s"><strong>pengumuman rilis</strong></a> untuk mempelajari apa-apa saja yang ditawarkan, dan cara pembaruannya.',
 	'UPLOAD_METHOD'					=> 'Metode upload',
 
 	'UPDATE_DB_SUCCESS'				=> 'Pembaruan database telah berhasil.',
+	'UPDATE_FILE_SUCCESS'			=> 'File update was successful.',
 	'USER_ACTIVE'					=> 'Pengguna aktif',
 	'USER_INACTIVE'					=> 'Pengguna nonaktif',
 
@@ -2173,6 +2262,33 @@ $lang = array_merge($lang, array(
 	'TOPICS_TOPIC_TITLE'			=> 'Selamat datang di phpBB3',
 ));
 
+#######language/en/migrator.php#######
+
+$lang = array_merge($lang, array(
+	'CONFIG_NOT_EXIST'					=> 'The config setting "%s" unexpectedly does not exist.',
+
+	'GROUP_NOT_EXIST'					=> 'The group "%s" unexpectedly does not exist.',
+
+	'MIGRATION_APPLY_DEPENDENCIES'		=> 'Apply dependencies of %s.',
+	'MIGRATION_DATA_DONE'				=> 'Installed Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_IN_PROGRESS'		=> 'Installing Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_DATA_RUNNING'			=> 'Installing Data: %s.',
+	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
+	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
+	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
+	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
+	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
+	'MODULE_NOT_EXIST'					=> 'A required module does not exist: %s',
+
+	'PERMISSION_NOT_EXIST'				=> 'The permission setting "%s" unexpectedly does not exist.',
+
+	'ROLE_NOT_EXIST'					=> 'The permission role "%s" unexpectedly does not exist.',
+));
+
 #######language/en/mcp.php#######
 
 $lang = array_merge($lang, array(
@@ -2193,6 +2309,10 @@ $lang = array_merge($lang, array(
 	'APPROVE_POST_CONFIRM'	=> 'Apakah anda yakin ingin menyetujui post ini?',
 	'APPROVE_POSTS'			=> 'Setujui post-post',
 	'APPROVE_POSTS_CONFIRM'	=> 'Apakah anda yakin ingin menyetujui post-post yang dipilih ini?',
+	'APPROVE_TOPIC'			=> 'Approve topic',
+	'APPROVE_TOPIC_CONFIRM'	=> 'Are you sure you want to approve this topic?',
+	'APPROVE_TOPICS'		=> 'Approve topics',
+	'APPROVE_TOPICS_CONFIRM'=> 'Are you sure you want to approve the selected topics?',
 
 	'CANNOT_MOVE_SAME_FORUM'=> 'Anda tidak dapat memindahkan sebuah topik ke forum yang sudah dimasukkan/ada.',
 	'CANNOT_WARN_ANONYMOUS'	=> 'Anda tidak dapat memperingatkan tamu yang belum terdaftar.',
@@ -2213,16 +2333,12 @@ $lang = array_merge($lang, array(
 	'DELETE_PM_REPORTS'			=> 'Hapus laporan PM',
 	'DELETE_PM_REPORTS_CONFIRM'	=> 'Apakah anda yakin untuk menghapus laporan-laporan PM yang dipilih?',
 	'DELETE_POSTS'				=> 'Hapus post-post',
-	'DELETE_POSTS_CONFIRM'		=> 'Apakah anda yakin ingin menghapus post-post ini?',
-	'DELETE_POST_CONFIRM'		=> 'Apakah anda yakin ingin menghapus post ini?',
 	'DELETE_REPORT'				=> 'Hapus laporan',
 	'DELETE_REPORT_CONFIRM'		=> 'Apakah anda yakin ingin menghapus laporan yang dipilih?',
 	'DELETE_REPORTS'			=> 'Hapus laporan-laporan',
 	'DELETE_REPORTS_CONFIRM'	=> 'Apakah anda yakin ingin menghapus laporan-laporan yang dipilih?',
 	'DELETE_SHADOW_TOPIC'		=> 'Hapus topik bayangan',
 	'DELETE_TOPICS'				=> 'Hapus topik-topik yang dipilih',
-	'DELETE_TOPICS_CONFIRM'		=> 'Apakah anda yankin ingin menghapus topik-topik yang dipilih?',
-	'DELETE_TOPIC_CONFIRM'		=> 'Apakah anda yankin ingin menghapus topik yang dipilih?',
 	'DISAPPROVE'				=> 'Tidak menyetujui',
 	'DISAPPROVE_REASON'			=> 'Alasan untuk tidak menyetujui',
 	'DISAPPROVE_POST'			=> 'Tidak menyetujui post',
@@ -2260,8 +2376,6 @@ $lang = array_merge($lang, array(
 	'LATEST_WARNING_TIME'		=> 'Peringatan terakhir yang dikeluarkan',
 	'LATEST_WARNINGS'			=> '5 pereinganan terakhir',
 	'LEAVE_SHADOW'				=> 'Tinggalkan topik bayangan di tempatnya',
-	'LIST_REPORT'				=> '1 laporan',
-	'LIST_REPORTS'				=> '%d laporan',
 	'LOCK'						=> 'Kunci',
 	'LOCK_POST_POST'			=> 'Kunci post',
 	'LOCK_POST_POST_CONFIRM'	=> 'Apakah anda yakin ingin mencegah pengubahan terhadap post ini?',
@@ -2340,6 +2454,10 @@ $lang = array_merge($lang, array(
 	'MCP_QUEUE_UNAPPROVED_POSTS_EXPLAIN'	=> 'Ini adalah daftar dari semua post yang membutuhkan persetujuan sebelum ditampilkan kepengguna.',
 	'MCP_QUEUE_UNAPPROVED_TOPICS'			=> 'Topik menunggu persetujuan',
 	'MCP_QUEUE_UNAPPROVED_TOPICS_EXPLAIN'	=> 'Ini adalah daftar dari semua topik yang membutuhkan persetujuan sebelum ditampilkan kepengguna.',
+	'MCP_QUEUE_DELETED_POSTS'				=> 'Deleted posts',
+	'MCP_QUEUE_DELETED_POSTS_EXPLAIN'		=> 'This is a list of all soft deleted posts. You can restore or permanently delete the posts from this screen.',
+	'MCP_QUEUE_DELETED_TOPICS'				=> 'Deleted topics',
+	'MCP_QUEUE_DELETED_TOPICS_EXPLAIN'		=> 'This is a list of all soft deleted topics. You can restore or permanently delete the topics from this screen.',
 
 	'MCP_VIEW_USER'			=> 'Lihat peringatan-peringatan untuk pengguna yang spesifik',
 
@@ -2378,25 +2496,27 @@ $lang = array_merge($lang, array(
 	'NO_POST'						=> 'Anda harus memilih sebuah post untuk memperingatkan pengguna.',
 	'NO_POST_REPORT'				=> 'Post ini tidak dilaporkan.',
 	'NO_POST_SELECTED'				=> 'Anda harus memilih paling tidak satu post untuk melakukan tindakan ini.',
+	'NO_POSTS_DELETED'				=> 'There are no deleted posts.',
+	'NO_POSTS_QUEUE'				=> 'There are no posts waiting for approval.',
 	'NO_REASON_DISAPPROVAL'			=> 'Mohon berikan alasan yang tepat untuk penolakan.',
 	'NO_REPORT'						=> 'Tidak ada laporan ditemukan',
 	'NO_REPORTS'					=> 'Tidak ada laporan-laporan ditemukan',
 	'NO_REPORT_SELECTED'			=> 'Anda harus memilih paling sedilitnya satu laporan untuk melaksanakan tindakan ini.',
 	'NO_TOPIC_ICON'					=> 'Tidak ada',
 	'NO_TOPIC_SELECTED'				=> 'Anda harus memilih paling tidak satu topik untuk melaksakan tindakan ini.',
+	'NO_TOPICS_DELETED'				=> 'There are no deleted topics.',
 	'NO_TOPICS_QUEUE'				=> 'Tidak ada topik-topik yang menunggu persetujuan.',
 
 	'ONLY_TOPIC'			=> 'Hanya topik “%s”',
 	'OTHER_USERS'			=> 'Pengguna-pengguna yang lain mempost dari IP ini',
 
+	'QUICKMOD_ACTION_NOT_ALLOWED' => "%s not allowed as quickmod",
+
 	'PM_REPORT_CLOSED_SUCCESS'	=> 'Laporan PM yang dipilih sudah berhasil ditutup.',
 	'PM_REPORT_DELETED_SUCCESS'	=> 'Laporan PM yang dipilih sudah berhasil dihapus.',
 	'PM_REPORTED_SUCCESS'		=> 'Pesan pribadi ini sudah berhasil dilaporkan.',
-	'PM_REPORT_TOTAL'			=> 'Total ada <strong>1</strong> laporan PM yang ditinjau.',
 	'PM_REPORTS_CLOSED_SUCCESS'	=> 'Laporan PM yang dipilih sudah berhasil ditutup.',
 	'PM_REPORTS_DELETED_SUCCESS'=> 'Laporan PM yang dipilih sudah berhasil dihapus.',
-	'PM_REPORTS_TOTAL'			=> 'Total ada <strong>%d</strong> laporan PM yang ditinjau.',
-	'PM_REPORTS_ZERO_TOTAL'		=> 'Tidak ada laporan PM yang ditinjau.',
 	'PM_REPORT_DETAILS'			=> 'Keterangan laporan pesan pribadi',
 	'POSTER'					=> 'Pengepost',
 	'POSTS_APPROVED_SUCCESS'	=> 'Post-post yang dipilih telah disetujui.',
@@ -2404,15 +2524,17 @@ $lang = array_merge($lang, array(
 	'POSTS_DISAPPROVED_SUCCESS'	=> 'Post-post yang dipilih telah ditolak.',
 	'POSTS_LOCKED_SUCCESS'		=> 'Post-post yang dipilih telah berhasil dikunci.',
 	'POSTS_MERGED_SUCCESS'		=> 'Post-post yang dipilih telah digabungkan.',
-	'POSTS_UNLOCKED_SUCCESS'	=> 'Post-post yang dipilih telah berhasil dibuka.',
 	'POSTS_PER_PAGE'			=> 'Post-post perhalaman',
 	'POSTS_PER_PAGE_EXPLAIN'	=> '(Pilih ke 0 untuk melihat semua post.)',
+	'POSTS_RESTORED_SUCCESS'	=> 'The selected posts have been restored successfully.',
+	'POSTS_UNLOCKED_SUCCESS'	=> 'Post-post yang dipilih telah berhasil dibuka.',
 	'POST_APPROVED_SUCCESS'		=> 'Post yang dipilih telah disetujui.',
 	'POST_DELETED_SUCCESS'		=> 'Post yang dipilih telah berhasil disingkirkan dari database.',
 	'POST_DISAPPROVED_SUCCESS'	=> 'Post yang dipilih telah ditolak.',
 	'POST_LOCKED_SUCCESS'		=> 'Post berhasil dikunci.',
 	'POST_NOT_EXIST'			=> 'Post yang anda minta tidak ada.',
 	'POST_REPORTED_SUCCESS'		=> 'Post yang dipilih telah berhasil dilaporkan.',
+	'POST_RESTORED_SUCCESS'		=> 'This post has been restored successfully.',
 	'POST_UNLOCKED_SUCCESS'		=> 'Post berhasil dikunci.',
 
 	'READ_USERNOTES'			=> 'Catatan pengguna',
@@ -2423,8 +2545,6 @@ $lang = array_merge($lang, array(
 	'REPORTED_ON_DATE'			=> 'pada',
 	'REPORTS_CLOSED_SUCCESS'	=> 'Laporan yang dipilih telah berhasil dikunci.',
 	'REPORTS_DELETED_SUCCESS'	=> 'Laporan-laporan yang dipilih telah berhasil dihapus.',
-	'REPORTS_TOTAL'				=> 'Totalnya ada <strong>%d</strong> laporan untuk ditinjau.',
-	'REPORTS_ZERO_TOTAL'		=> 'Tidak ada laporan-laporan yang ditinjau.',
 	'REPORT_CLOSED'				=> 'Laporan ini sudah ditutup.',
 	'REPORT_CLOSED_SUCCESS'		=> 'Laporan yang dipilih telah berhasil ditutup.',
 	'REPORT_DELETED_SUCCESS'	=> 'Laporan yang dipilih telah berhasil dihapus.',
@@ -2436,7 +2556,15 @@ $lang = array_merge($lang, array(
 	'REPORT_POST_EXPLAIN'		=> 'Gunakan form ini untuk melaporkan post yang dipilih ke moderator-moderator forum dan administrator. Pada dasarnya pelaporan harus digunakan apabila pesan tersebut diluar dari peraturan forum.',
 	'REPORT_REASON'				=> 'Alasan laporan',
 	'REPORT_TIME'				=> 'Waktu laporan',
-	'REPORT_TOTAL'				=> 'Totalnya ada <strong>1</strong> laporan untuk ditinjau.',
+	'RESTORE'					=> 'Restore',
+	'RESTORE_POST'				=> 'Restore post',
+	'RESTORE_POST_CONFIRM'		=> 'Are you sure you want to restore this post?',
+	'RESTORE_POSTS'				=> 'Restore posts',
+	'RESTORE_POSTS_CONFIRM'		=> 'Are you sure you want to restore the selected posts?',
+	'RESTORE_TOPIC'				=> 'Restore topic',
+	'RESTORE_TOPIC_CONFIRM'		=> 'Are you sure you want to restore this topic?',
+	'RESTORE_TOPICS'			=> 'Restore topics',
+	'RESTORE_TOPICS_CONFIRM'	=> 'Are you sure you want to restore the selected topics?',
 	'RESYNC'					=> 'Samakan kembali',
 	'RETURN_MESSAGE'			=> '%sKembali kepesan%s',
 	'RETURN_NEW_FORUM'			=> '%sPergi ke forum baru%s',
@@ -2477,6 +2605,7 @@ $lang = array_merge($lang, array(
 	'TOPICS_FORKED_SUCCESS'		=> 'Topik-topik yang dipilih telah berhasil disalin.',
 	'TOPICS_LOCKED_SUCCESS'		=> 'Topik-topik yang dipilih telah dikunci.',
 	'TOPICS_MOVED_SUCCESS'		=> 'Topik-topik yang dipilih telah berhasil dipindahkan.',
+	'TOPICS_RESTORED_SUCCESS'	=> 'The selected topics have been restored successfully.',
 	'TOPICS_RESYNC_SUCCESS'		=> 'Topik-topik yang dipilih telah disamakan kembali.',
 	'TOPICS_TYPE_CHANGED'		=> 'Jenis topik telah berhasil diubah.',
 	'TOPICS_UNLOCKED_SUCCESS'	=> 'Topik-topik yang dipilih telah dibuka.',
@@ -2487,6 +2616,7 @@ $lang = array_merge($lang, array(
 	'TOPIC_LOCKED_SUCCESS'		=> 'Topik yang dipilih telah berhasil dikunci.',
 	'TOPIC_MOVED_SUCCESS'		=> 'Topik yang dipilih telah berhasil dipindahkan.',
 	'TOPIC_NOT_EXIST'			=> 'Topik yang dipilih tidak ada.',
+	'TOPIC_RESTORED_SUCCESS'	=> 'The selected topic has been restored successfully.',
 	'TOPIC_RESYNC_SUCCESS'		=> 'Topik yang dipilih telah disamakan kembali.',
 	'TOPIC_SPLIT_SUCCESS'		=> 'Topik yang dipilih telah dipisahkan.',
 	'TOPIC_TIME'				=> 'Waktu topik',
@@ -2494,9 +2624,6 @@ $lang = array_merge($lang, array(
 	'TOPIC_UNLOCKED_SUCCESS'	=> 'Topik yang dipilih telah dibuka.',
 	'TOTAL_WARNINGS'			=> 'Total Peringatan',
 
-	'UNAPPROVED_POSTS_TOTAL'		=> 'Totalnya ada <strong>%d</strong> post yang menunggu persetujuan.',
-	'UNAPPROVED_POSTS_ZERO_TOTAL'	=> 'Tidak ada post-post yang menunggu persetujuan.',
-	'UNAPPROVED_POST_TOTAL'			=> 'Totalnya ada <strong>1</strong> post yang menunggu persetujuan.',
 	'UNLOCK'						=> 'Dibuka',
 	'UNLOCK_POST'					=> 'Post dibuka',
 	'UNLOCK_POST_EXPLAIN'			=> 'Ijinkan pengubahan',
@@ -2522,7 +2649,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'Berikut ini adalah sebuah peringatan yang telah dikeluarkan kepada anda oleh administrator atau moserator situs ini.[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'Peringatan halaman dikeluarkan',
 	'WARNING_POST_DEFAULT'	=> 'Ini adalah peringatan yang anda buat sehubungan dengan post berikut: %s .',
-	'WARNINGS_ZERO_TOTAL'	=> 'Tidak ada peringatan.',
+	'NO_WARNINGS'	=> 'No warnings exist.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Anda memilih topik nomor %d: %s.',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -2562,10 +2689,12 @@ $lang = array_merge($lang, array(
 	'ALL'					=> 'Semua',
 	'BEFORE'				=> 'Sebelum',
 	'CC_EMAIL'				=> 'Kirim salinan e-mail ini ke anda sendiri.',
-	'CONTACT_USER'			=> 'Hubungi',
+	'CONTACT_ADMIN'			=> 'Contact a Board Administrator',
 
 	'DEST_LANG'				=> 'Bahasa',
 	'DEST_LANG_EXPLAIN'		=> 'Pilih bahasa yang sesuai (jika tersedia) untuk penerima pesan ini.',
+
+	'EDIT_PROFILE'			=> 'Edit Profile',
 
 	'EMAIL_BODY_EXPLAIN'	=> 'Pesan ini akan dikirimkan sebagai teks biasa, tidak mengikutsertakan HTML ataupun BBCode. Alamat pengirim untuk pesan ini akan diatur ke alamat e-mail anda.',
 	'EMAIL_DISABLED'		=> 'Maaf, semua fungsi yang berhubungan dengan e-mail tidak diperbolehkan.',
@@ -2575,7 +2704,9 @@ $lang = array_merge($lang, array(
 	'EMPTY_MESSAGE_EMAIL'	=> 'Anda harus menuliskan pesan untuk dikirim melalui e-mail.',
 	'EMPTY_MESSAGE_IM'		=> 'Anda harus menuliskan pesan untuk dikirimkan.',
 	'EMPTY_NAME_EMAIL'		=> 'Anda harus memasukkan nama lengkap penerima.',
-	'EMPTY_SUBJECT_EMAIL'	=> 'Anda harus menentukan subjek e-mail.',
+	'EMPTY_SENDER_EMAIL'	=> 'You must provide a valid email address.',
+	'EMPTY_SENDER_NAME'		=> 'You must provide a name.',
+	'EMPTY_SUBJECT_EMAIL'	=> 'You must specify a subject for the email.',
 	'EQUAL_TO'				=> 'Sama dengan',
 
 	'FIND_USERNAME_EXPLAIN'	=> 'Gunakan halaman ini untuk mencari anggota. Anda tidak perlu melengkapi semua isian. Untuk mencocokkan hanya sebagian data saja, gunakan simbol * sebagai wildcard. Pada saat memasukkan tanggal gunakanlah format <kbd>TTTT-BB-HH</kbd>, contoh. <samp>2004-02-29</samp>. Gunakan tanda centang untuk memilih satu atau lebih nama pengguna (nama pengguna yang lain bisa dipilih sekaligus) dan klik Pilih untuk kembali kehalaman sebelumnya.',
@@ -2585,16 +2716,10 @@ $lang = array_merge($lang, array(
 	'HIDE_MEMBER_SEARCH'	=> 'Sembunyikan pencarian anggota',
 
 	'IM_ADD_CONTACT'		=> 'Tambahkan Contak',
-	'IM_AIM'				=> 'Mohon dicatat bahwa anda membutuhkan AOL Instant Messenger yang sudah diinstall untuk menggunakan layanan ini.',
-	'IM_AIM_EXPRESS'		=> 'AIM Express',
 	'IM_DOWNLOAD_APP'		=> 'Download aplikasi',
-	'IM_ICQ'				=> 'Mohon dicatat bahwa pengguna mungkin telah memilih untuk tidak menerima pesan-pesan singkat.',
 	'IM_JABBER'				=> 'Mohon dicatat bahwa pengguna mungkin telah memilih untuk tidak menerima pesan-pesan singkat.',
 	'IM_JABBER_SUBJECT'		=> 'Ini adalah pesan otomatis, mohon untuk tidak mengirimkan balasan! Pesan dari pengguna %1$s dari %2$s.',
 	'IM_MESSAGE'			=> 'Pesan anda',
-	'IM_MSNM'				=> 'Harap dicatat bahwa anda membutuhkan Windows Messenger yang sudah diinstal untuk menggunakan layanan ini.',
-	'IM_MSNM_BROWSER'		=> 'Browser anda tidak mendukung layanan ini.',
-	'IM_MSNM_CONNECT'		=> 'MSNM belum tersambung.\nAda harus menyambungkan ke MSNM untuk melanjutkan.',
 	'IM_NAME'				=> 'Nama Anda',
 	'IM_NO_DATA'			=> 'Tidak ada informasi kontak dari yang sesuai dari pengguna ini.',
 	'IM_NO_JABBER'			=> 'Maaf, perpesanan secara langsung bagi pengguna-pengguna Jabber tidak didukung dihalaman ini. Anda membutuhkan klien Jabber yang sudah diinstal di sistem anda untuk menghubungi penerima di atas ini.',
@@ -2606,15 +2731,15 @@ $lang = array_merge($lang, array(
 
 	'LAST_ACTIVE'				=> 'Terakhir aktif',
 	'LESS_THAN'					=> 'Lebih dari',
-	'LIST_USER'					=> '1 pengguna',
-	'LIST_USERS'				=> '%d pengguna',
-	'LOGIN_EXPLAIN_LEADERS'		=> 'Halaman ini membutuhkan anda untuk didaftarkan dan dimasukkan agar dapat melihat daftar tim.',
+	'LOGIN_EXPLAIN_TEAM'		=> 'The board requires you to be registered and logged in to view the team listing.',
 	'LOGIN_EXPLAIN_MEMBERLIST'	=> 'Halaman ini membutuhkan anda untuk didaftarkan dan dimasukkan agar dapat mengakses daftar anggota.',
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'Halaman ini membutuhkan anda untuk didaftarkan dan dimasukkan agar dapat mencari pengguna.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'Halaman ini membutuhkan anda untuk didaftarkan dan dimasukkan agar dapat melihat profil.',
 
 	'MORE_THAN'				=> 'Lebih dari',
 
+	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
+	'NO_CONTACT_PAGE'		=> 'The board administrator contact page has been disabled.',
 	'NO_EMAIL'				=> 'Anda tidak diijinkan untuk mengirim e-mail kepengguna ini.',
 	'NO_VIEW_USERS'			=> 'Anda tidak berhak melihat daftar atau profil anggota.',
 
@@ -2631,12 +2756,12 @@ $lang = array_merge($lang, array(
 
 	'SELECT_MARKED'			=> 'Pilih yang ditandai',
 	'SELECT_SORT_METHOD'	=> 'Pilih cara urutan',
-	'SEND_AIM_MESSAGE'		=> 'Kirim pesan AIM',
+	'SENDER_EMAIL_ADDRESS'	=> 'Your email address',
+	'SENDER_NAME'			=> 'Your name',
 	'SEND_ICQ_MESSAGE'		=> 'Kirim pesan ICQ',
 	'SEND_IM'				=> 'Perpesanan singkat',
 	'SEND_JABBER_MESSAGE'	=> 'Kirim pesan Jabber',
 	'SEND_MESSAGE'			=> 'Pesan',
-	'SEND_MSNM_MESSAGE'		=> 'Kirim pesan MSNM/WLM',
 	'SEND_YIM_MESSAGE'		=> 'Kirim pesan YIM',
 	'SORT_EMAIL'			=> 'E-mail',
 	'SORT_LAST_ACTIVE'		=> 'Terakhir aktif',
@@ -2644,12 +2769,18 @@ $lang = array_merge($lang, array(
 
 	'USERNAME_BEGINS_WITH'	=> 'Nama pengguna yang dimulai dengan',
 	'USER_ADMIN'			=> 'Admin',
-	'USER_BAN'				=> 'Larang pengguna',
+	'USER_BAN'				=> 'Ban one or more users by username',
 	'USER_FORUM'			=> 'Statistik pengguna',
 	'USER_ONLINE'			=> 'Online',
 	'USER_PRESENCE'			=> 'kehadiran pengguna',
+	'USERS_PER_PAGE'		=> 'Users per page',
 
 	'VIEWING_PROFILE'		=> 'Lihat profile - %s',
+	'VIEW_FACEBOOK_PROFILE'	=> 'View Facebook Profile',
+	'VIEW_SKYPE_PROFILE'	=> 'View Skype Profile',
+	'VIEW_TWITTER_PROFILE'	=> 'View Twitter Profile',
+	'VIEW_YOUTUBE_CHANNEL'	=> 'View YouTube Channel',
+	'VIEW_GOOGLEPLUS_PROFILE' => 'View Google+ Profile',
 	'VISITED'				=> 'Kunjungan terakhir',
 
 	'WWW'					=> 'Website',
@@ -2674,6 +2805,47 @@ $lang = array_merge($lang, array(
 	'USER_COMM_RANK'	=> 'Overall reviews:',
 	'USER_COMM_PERCENT'	=> 'Overall assessment of the user:',
 
+));
+
+#######language/en/plupload.php#######
+
+$lang = array_merge($lang, array(
+	'PLUPLOAD_ADD_FILES'		=> 'Add files',
+	'PLUPLOAD_ADD_FILES_TO_QUEUE'	=> 'Add files to the upload queue and click the start button.',
+	'PLUPLOAD_ALREADY_QUEUED'	=> '%s already present in the queue.',
+	'PLUPLOAD_CLOSE'			=> 'Close',
+	'PLUPLOAD_DRAG'				=> 'Drag files here.',
+	'PLUPLOAD_DUPLICATE_ERROR'	=> 'Duplicate file error.',
+	'PLUPLOAD_DRAG_TEXTAREA'	=> 'You may also attach files by dragging and dropping them in the message box.',
+	'PLUPLOAD_ERR_INPUT'		=> 'Failed to open input stream.',
+	'PLUPLOAD_ERR_MOVE_UPLOADED'	=> 'Failed to move uploaded file.',
+	'PLUPLOAD_ERR_OUTPUT'		=> 'Failed to open output stream.',
+	'PLUPLOAD_ERR_FILE_TOO_LARGE'	=> 'File too large:',
+	'PLUPLOAD_ERR_FILE_COUNT'	=> 'File count error.',
+	'PLUPLOAD_ERR_FILE_INVALID_EXT'	=> 'Invalid file extension:',
+	'PLUPLOAD_ERR_RUNTIME_MEMORY'	=> 'Runtime ran out of available memory.',
+	'PLUPLOAD_ERR_UPLOAD_URL'	=> 'Upload URL might be wrong or does not exist.',
+	'PLUPLOAD_EXTENSION_ERROR'	=> 'File extension error.',
+	'PLUPLOAD_FILE'				=> 'File: %s',
+	'PLUPLOAD_FILE_DETAILS'		=> 'File: %s, size: %d, max file size: %d',
+	'PLUPLOAD_FILENAME'			=> 'Filename',
+	'PLUPLOAD_FILES_QUEUED'		=> '%d files queued',
+	'PLUPLOAD_GENERIC_ERROR'	=> 'Generic error.',
+	'PLUPLOAD_HTTP_ERROR'		=> 'HTTP error.',
+	'PLUPLOAD_IMAGE_FORMAT'		=> 'Image format either wrong or not supported.',
+	'PLUPLOAD_INIT_ERROR'		=> 'Init error.',
+	'PLUPLOAD_IO_ERROR'			=> 'IO error.',
+	'PLUPLOAD_NOT_APPLICABLE'	=> 'N/A',
+	'PLUPLOAD_SECURITY_ERROR'	=> 'Security error.',
+	'PLUPLOAD_SELECT_FILES'		=> 'Select files',
+	'PLUPLOAD_SIZE'				=> 'Size',
+	'PLUPLOAD_SIZE_ERROR'		=> 'File size error.',
+	'PLUPLOAD_STATUS'			=> 'Status',
+	'PLUPLOAD_START_UPLOAD'		=> 'Start upload',
+	'PLUPLOAD_START_CURRENT_UPLOAD'	=> 'Start uploading queue',
+	'PLUPLOAD_STOP_UPLOAD'		=> 'Stop upload',
+	'PLUPLOAD_STOP_CURRENT_UPLOAD'	=> 'Stop current upload',
+	'PLUPLOAD_UPLOADED'			=> 'Uploaded %d/%d files',
 ));
 
 #######language/en/portal.php#######
@@ -2919,12 +3091,12 @@ $lang = array_merge($lang, array(
 	'BBCODE_IS_OFF'				=> '%sBBCode%s <em>Mati</em>',
 	'BBCODE_IS_ON'				=> '%sBBCode%s <em>Hidup</em>',
 	'BBCODE_I_HELP'				=> 'Tulisan miring: [i]teks[/i]',
-	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]', 
+	'BBCODE_L_HELP'				=> 'List: [list][*]text[/list]',
 	'BBCODE_LISTITEM_HELP'		=> 'List item: [*]text',
 	'BBCODE_O_HELP'				=> 'Ordered list: e.g. [list=1][*]First point[/list] or [list=a][*]Point a[/list]',
 	'BBCODE_P_HELP'				=> 'Masukkan gambar: [img]http://image_url[/img]',
 	'BBCODE_Q_HELP'				=> 'Kutip teks: [quote]text[/quote]',
-	'BBCODE_S_HELP'				=> 'Warna huruf: [color=red]text[/color]  Tips: anda dapat menggunakan color=#FF0000',
+	'BBCODE_S_HELP'				=> 'Font colour: [color=red]text[/color] or [color=#FF0000]text[/color]',
 	'BBCODE_U_HELP'				=> 'Huruf bergaris bawah: [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'Masukkan URL: [url]http://url[/url] or [url=http://url]URL text[/url]',
 	'BUMP_ERROR'				=> 'Anda tidak dapat menggeser topik ini sebagimana adanya setelah pos terakhir.',
@@ -2943,8 +3115,20 @@ $lang = array_merge($lang, array(
 	'DELETE_MESSAGE'			=> 'Hapus pesan',
 	'DELETE_MESSAGE_CONFIRM'	=> 'Apakah anda yakin ingin menghapus pesan ini?',
 	'DELETE_OWN_POSTS'			=> 'Maaf, anda hanya dapat menghapus pos anda sendiri.',
+	'DELETE_PERMANENTLY'		=> 'Delete permanently',
 	'DELETE_POST_CONFIRM'		=> 'Apakah anda yakin ingin menghapus post ini?',
-	'DELETE_POST_WARN'			=> 'Pesan yang sudah dihapus tidak dapat dikembalikan lagi',
+	'DELETE_POST_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this post?',
+	'DELETE_POST_PERMANENTLY'	=> 'Permanently delete this post so it can not be recovered',
+	'DELETE_POSTS_CONFIRM'		=> 'Apakah anda yakin ingin menghapus post-post ini?',
+	'DELETE_POSTS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these posts?',
+	'DELETE_REASON'				=> 'Reason for deleting this topic',
+	'DELETE_REASON_EXPLAIN'		=> 'The specified reason for deletion will be visible to moderators.',
+	'DELETE_POST_WARN'			=> 'Delete this post',
+	'DELETE_TOPIC_CONFIRM'		=> 'Apakah anda yankin ingin menghapus topik yang dipilih?',
+	'DELETE_TOPIC_PERMANENTLY'	=> 'Permanently delete this topic so it can not be recovered',
+	'DELETE_TOPIC_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete this topic?',
+	'DELETE_TOPICS_CONFIRM'		=> 'Apakah anda yankin ingin menghapus topik-topik yang dipilih?',
+	'DELETE_TOPICS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these topics?',
 	'DISABLE_BBCODE'			=> 'Matikan BBCode',
 	'DISABLE_MAGIC_URL'			=> 'Jangan uraikan URL secara otomatis',
 	'DISABLE_SMILIES'			=> 'Matikan tanda senyuman',
@@ -2987,13 +3171,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_QUOTE'		=> 'Anda harus masuk untuk mengutip post-post di dalam forum ini.',
 	'LOGIN_EXPLAIN_REPLY'		=> 'Anda harus masuk untuk membalas topik di dalam forum ini.',
 
-	'MAX_FONT_SIZE_EXCEEDED'	=> 'Anda hanya bisa menggunakan besar huruf sampai dengan %1$d.',
-	'MAX_FLASH_HEIGHT_EXCEEDED'	=> 'Tinggi ukuran file flash anda hanya diperbolehkan sampai %1$d piksel.',
-	'MAX_FLASH_WIDTH_EXCEEDED'	=> 'Lebar ukuran file flash anda hanya diperbolehkan sampai %1$d piksel.',
-	'MAX_IMG_HEIGHT_EXCEEDED'	=> 'Tinggi ukuran gambar anda hanya diperbolehkan sampai  %1$d piksel.',
-	'MAX_IMG_WIDTH_EXCEEDED'	=> 'Lebar ukuran gambar anda hanya diperbolehkan sampai %1$d piksel.',
-
-	'MESSAGE_BODY_EXPLAIN'		=> 'Masukkan pesan anda disin, pesan anda tidak boleh melebihi <strong>%d</strong> karakter.',
+	'MAX_FONT_SIZE_EXCEEDED'	=> 'You may only use fonts up to size %d.',
 	'MESSAGE_DELETED'			=> 'Pesan ini telah berhasil dihapus.',
 	'MORE_SMILIES'				=> 'Lihat tanda senyuman yang lain',
 
@@ -3016,8 +3194,6 @@ $lang = array_merge($lang, array(
 	'POLL_MAX_OPTIONS'			=> 'Pilihan per pengguna',
 	'POLL_MAX_OPTIONS_EXPLAIN'	=> 'Ini adalah jumlah pilihan setiap pengguna yang dapat dipilih oleh pengguna pada saat pemilihan.',
 	'POLL_OPTIONS'				=> 'Pilihan-pilihan pemungutan suara',
-	'POLL_OPTIONS_EXPLAIN'		=> 'Tempatkan setiap pilihan pada baris baru. Anda hanya dapat memasukkan pilihan sampai <strong>%d</strong> pilihan.',
-	'POLL_OPTIONS_EDIT_EXPLAIN'	=> 'Tempatkan setiap pilihan pada baris baru. Anda hanya dapat memasukkan pilihan sampai <strong>%d</strong> pilihan. Jika anda membuang atau menambah pilihan maka semua suara akan diulangi.',
 	'POLL_QUESTION'				=> 'Pertanyaan pemungutan suara',
 	'POLL_TITLE_TOO_LONG'		=> 'Judul dari pemungutan suara harus lebih kecil dari 100 karekter.',
 	'POLL_TITLE_COMP_TOO_LONG'	=> 'Ukuran pemungutan suara yang anda pisahkan terlalu besar, pertimbangkan untuk menyingkirkan BBCodes atau simbol senyuman.',
@@ -3027,9 +3203,9 @@ $lang = array_merge($lang, array(
 	'POST_APPROVAL_NOTIFY'		=> 'Anda akan diberitahukan apabila post anda sudah disetujui.',
 	'POST_CONFIRMATION'			=> 'Konfirmasi dari post',
 	'POST_CONFIRM_EXPLAIN'		=> 'Untuk mencegah post secara otomatis, halaman berikut membutuhkan anda untuk memasukkan kode konfirmasi. Kodenya ditampilkan di dalam gambar yang anda lihat di bawah ini. Jika anda tidak jelas melihat ataupun membaca kode tersebut, silahkan hubungi %sBoard Administrator%s.',
-	'POST_DELETED'				=> 'Pesan ini telah berhasil dihapus.',
-	'POST_EDITED'				=> 'Pesan ini telah berhasil diubah.',
-	'POST_EDITED_MOD'			=> 'Pesan ini telah berhasil diubah, namun masih membutuhkan persetujuan dari moderator sebelum dipublikasikan.',
+	'POST_DELETED'				=> 'This post has been deleted.',
+	'POST_EDITED'				=> 'This post has been edited successfully.',
+	'POST_EDITED_MOD'			=> 'This post has been edited successfully, but it will need to be approved by a moderator before it is publicly viewable.',
 	'POST_GLOBAL'				=> 'Umum',
 	'POST_ICON'					=> 'Ikon post',
 	'POST_NORMAL'				=> 'Normal',
@@ -3042,8 +3218,9 @@ $lang = array_merge($lang, array(
 	'POST_TOPIC_AS'				=> 'Post topik sebagai',
 	'PROGRESS_BAR'				=> 'Tingkat kemajuan',
 
-	'QUOTE_DEPTH_EXCEEDED'		=> 'Anda hanya boleh menggunakan %1$d kutipan dengan yang lainnya.',
+	'QUOTE_NO_NESTING'			=> 'You may not embed quotes within each other.',
 
+	'REMOTE_UPLOAD_TIMEOUT'		=> 'The specified file could not be uploaded because the request timed out.',
 	'SAVE'						=> 'Simpan',
 	'SAVE_DATE'					=> 'Disimpan di',
 	'SAVE_DRAFT'				=> 'Simpan Naskah',
@@ -3060,8 +3237,6 @@ $lang = array_merge($lang, array(
 	'TOO_FEW_POLL_OPTIONS'		=> 'Anda harus memasukkan paling sedikitnya dua pilihan pemungutan suara.',
 	'TOO_MANY_ATTACHMENTS'		=> 'Tidah dapat menambahkan lapiran yang lain, batas maksimumnya adalah %d.',
 	'TOO_MANY_CHARS'			=> 'Pesan anda mengandung karakter yang teralalu banyak.',
-	'TOO_MANY_CHARS_POST'		=> 'Pesan anda mengandung %1$d karakter. Jumlah maksimum karekter yang diijinkan adalah %2$d.',
-	'TOO_MANY_CHARS_SIG'		=> 'Tanda tangan anda mengandung %1$d karekter. Jumlah maksimum karekter yang diijinkan adalah %2$d.',
 	'TOO_MANY_POLL_OPTIONS'		=> 'Anda telah mencoba memasukkan pilihan-pilihan pemungutan suara yang cukup banyak.',
 	'TOO_MANY_SMILIES'			=> 'Pesan anda mengandung tanda senyuman yang terlalu banyak. Jumlah maksimum tanda senyuman yang diijinkan adalah %d.',
 	'TOO_MANY_URLS'				=> 'Pesan anda mengandung URL yang terlalu banyak. Jumlah maksimum URL yang diijinkan adalah %d.',
@@ -3070,6 +3245,8 @@ $lang = array_merge($lang, array(
 
 	'UNAUTHORISED_BBCODE'		=> 'Anda tidak boleh menggunakan beberapa BBCodes: %s.',
 	'UNGLOBALISE_EXPLAIN'		=> 'Untuk mengganti topik ini yang telah diubah dari topik global menjadi topik normal, anda perlu memilih forum yang anda inginkan untuk menampilkan topik ini.',
+	'UNSUPPORTED_CHARACTERS_MESSAGE'	=> 'Your message contains the following unsupported characters:<br />%s',
+	'UNSUPPORTED_CHARACTERS_SUBJECT'	=> 'Your subject contains the following unsupported characters:<br />%s',
 	'UPDATE_COMMENT'			=> 'Perbaharui komentar',
 	'URL_INVALID'				=> 'URL yang anda masukkan salah.',
 	'URL_NOT_FOUND'				=> 'File yang ditentukan tidak dapat ditemukan.',
@@ -3084,8 +3261,8 @@ $lang = array_merge($lang, array(
 	'VIEW_MESSAGE'				=> '%sLihat pesan yang anda ajukan%s',
 	'VIEW_PRIVATE_MESSAGE'		=> '%sLihat pesan pribadi yang anda ajukan%s',
 
-	'WRONG_FILESIZE'			=> 'Ukuran file terlalu besar, ukuran maksimum yang diijinkan adalah %1d %2s.',
-	'WRONG_SIZE'				=> 'Ukuran lebar gambar yang paling kecil harus %1$d piksel dengan tinggi %2$d piksel dan ukuran lebar gambar paling besar adalah %3$d piksel dengan tinggi %4$d. Ukuran lebar gambar yang diajukan adalah %5$d piksel dengan tinggi %6$d piksel.',
+	'WRONG_FILESIZE'			=> 'The file is too big, maximum allowed size is %1$d %2$s.',
+	'WRONG_SIZE'				=> 'The image must be at least %1$s wide, %2$s high and at most %3$s wide and %4$s high. The submitted image is %5$s wide and %6$s high.',
 
 	'FONT_TYPE'			=> 'Typeface',
 	'FONT_COLOR'			=> 'Warna huruf',
@@ -3105,10 +3282,6 @@ $lang = array_merge($lang, array(
 
 	'DISPLAY_RESULTS'		=> 'Tampilkan hasil sebagai',
 
-	'FOUND_SEARCH_MATCH'		=> 'Ditemukan %d pencarian yang cocok',
-	'FOUND_SEARCH_MATCHES'		=> 'Ditemukan %d pencarian yang cocok',
-	'FOUND_MORE_SEARCH_MATCHES'	=> 'Ditemukan lebih dari %d pencarian yang cocok',
-
 	'GLOBAL'				=> 'Pengumuman Global',
 
 	'IGNORED_TERMS'			=> 'diabaikan',
@@ -3120,24 +3293,23 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_UNREADSEARCH'=> 'Halaman membutuhkan anda untuk didaftarkan dan dimasukkan untuk melihat post anda yang belum terbaca.',
 	'LOGIN_EXPLAIN_NEWPOSTS'	=> 'Papan membutuhkan anda untuk terdaftar dan masuk untuk melihat post baru sejak kunjungan terakhir anda.',
 
-	'MAX_NUM_SEARCH_KEYWORDS_REFINE'	=> 'Kata-kata yang anda masukkan terlalu banyak. Silahkan masukkan dengan tidak lebih dari %1$d kata.',
-
-	'NO_KEYWORDS'			=> 'Anda harus menetukan paling sedikitnya satu kata untuk dicari. Setiap kata paling sedikitnya harus terdiri dari %d karakter dan tidak melebihi %d karakter termasuk wildcard.',
+	'NO_KEYWORDS'			=> 'You must specify at least one word to search for. Each word must consist of at least %s and must not contain more than %s excluding wildcards.',
 	'NO_RECENT_SEARCHES'	=> 'Tidak ada pencarian yang dimuat akhir ini.',
 	'NO_SEARCH'				=> 'Maaf, anda tidak diijinkan untuk menggunakan sistem pencarian.',
 	'NO_SEARCH_RESULTS'		=> 'Pencarian tidak ditemukan.',
-	'NO_SEARCH_TIME'		=> 'Maaf, anda tidak bisa menggunakan pencarian saat ini. Silahkan coba lagi dalam beberapa menit.',
 	'NO_SEARCH_UNREADS'		=> 'Maaf, pencarian untuk post tak terbaca sudah dinonaktifkan di halaman ini.',
 	'WORD_IN_NO_POST'		=> 'Tidak ada post yang ditemukan karena kata pencarian <strong>%s</strong> tidak ditemukan di post lainnya.',
 	'WORDS_IN_NO_POST'		=> 'Tidak ada post yang ditemukan karena kata-kata pencarian <strong>%s</strong> tidak ditemukan di post lainnya.',
 
 	'POST_CHARACTERS'		=> 'karakter post',
+	'PHRASE_SEARCH_DISABLED'	=> 'Searching by exact phrase is not supported on this board.',
 
 	'RECENT_SEARCHES'		=> 'Pencarian-pencarian terakhir',
 	'RESULT_DAYS'			=> 'Batas hasil',
 	'RESULT_SORT'			=> 'Urutkan hasil dengan',
 	'RETURN_FIRST'			=> 'Kembali ke awal',
 	'RETURN_TO_SEARCH_ADV'	=> 'Kembali ke pencarian lanjutan',
+	'GO_TO_SEARCH_ADV'	=> 'Go to advanced search',
 
 	'SEARCHED_FOR'				=> 'Cari istilah yang digunakan',
 	'SEARCHED_TOPIC'			=> 'Topik tercari',
@@ -3164,10 +3336,11 @@ $lang = array_merge($lang, array(
 	'SORT_FORUM'				=> 'Forum',
 	'SORT_POST_SUBJECT'			=> 'Subjek post',
 	'SORT_TIME'					=> 'Waktu post',
+	'SPHINX_SEARCH_FAILED'		=> 'Search failed: %s',
+	'SPHINX_SEARCH_FAILED_LOG'	=> 'Sorry, search could not be performed. More information about this failure has been logged in the error log.',
 
 	'SEARCH_PREFIX'			=> 'Thread Prefixes',
 	'SELECT_ALL_TAGS'		=> 'No selection',
-	'TOO_FEW_AUTHOR_CHARS'	=> 'Anda harus menentukan paling sedikitnya %d karakter dai nama pengarang.',
 ));
 
 #######language/en/ucp.php#######
@@ -3223,6 +3396,7 @@ $lang = array_merge($lang, array(
 	'ATTACHMENTS_EXPLAIN'			=> 'Ini adalah daftar nama lampiran yang telah anda buat di post halaman ini.',
 	'ATTACHMENTS_DELETED'			=> 'Lampiran telah berhasil dihapus.',
 	'ATTACHMENT_DELETED'			=> 'Lampiran telah berhasil dihapus.',
+	'AUTOLOGIN_SESSION_KEYS_DELETED'=> 'The selected "Remember Me" login keys were successfully deleted.',
 	'AVATAR_CATEGORY'				=> 'Kategori',
 	'AVATAR_DRIVER_GRAVATAR_TITLE'	=> 'Gravatar',
 	'AVATAR_DRIVER_GRAVATAR_EXPLAIN'=> 'Gravatar is a service that allows you to maintain the same avatar across multiple websites. Visit <a href="http://www.gravatar.com/">Gravatar</a> for more information.',
@@ -3232,12 +3406,14 @@ $lang = array_merge($lang, array(
 	'AVATAR_DRIVER_REMOTE_EXPLAIN'	=> 'Link to avatar images from another website.',
 	'AVATAR_DRIVER_UPLOAD_TITLE'	=> 'Upload avatar',
 	'AVATAR_DRIVER_UPLOAD_EXPLAIN'	=> 'Upload your own custom avatar.',
-	'AVATAR_EXPLAIN'				=> 'Ukuran maksimal; lebar: %1$d piksel, tinggi: %2$d piksel, besar file: %3$.2f KiB.',
+	'AVATAR_EXPLAIN'				=> 'Maximum dimensions; width: %1$s, height: %2$s, file size: %3$.2f KiB.',
 	'AVATAR_FEATURES_DISABLED'		=> 'Avatar tidak diperbolehkan sekarang ini.',
 	'AVATAR_GALLERY'				=> 'Galeri lokal',
 	'AVATAR_GENERAL_UPLOAD_ERROR'	=> 'Tidak dapat meng-upload avatar ke %s.',
 	'AVATAR_NOT_ALLOWED'			=> 'Avatar anda tidak bisa ditampilkan karena avatar tidak diijinkan.',
 	'AVATAR_PAGE'					=> 'Halaman',
+	'AVATAR_SELECT'					=> 'Select your avatar',
+	'AVATAR_TYPE'					=> 'Avatar type',
 	'AVATAR_TYPE_NOT_ALLOWED'		=> 'Avatar anda tidak bisa ditampilkan karena tipe avatar tidak diijinkan.',
 
 	'BACK_TO_DRAFTS'			=> 'Kembali ke naskah yang tersimpan',
@@ -3246,7 +3422,6 @@ $lang = array_merge($lang, array(
 	'BIRTHDAY_EXPLAIN'			=> 'Pengaturan tahun akan mendaftarkan umur anda pada saat hari ulang tahun anda.',
 	'BOARD_DATE_FORMAT'			=> 'Format tanggal',
 	'BOARD_DATE_FORMAT_EXPLAIN'	=> 'Sintaksis yang digunakan serupa dengan fungsi tanggal PHP <a href="http://www.php.net/date"></a>.',
-	'BOARD_DST'					=> 'Waktu musim panas/<singkatan dari ="Daylight Saving Time">DST</abbr> berpengaruh',
 	'BOARD_LANGUAGE'			=> 'Bahasaku',
 	'BOARD_STYLE'				=> 'Gaya halamanku',
 	'BOARD_TIMEZONE'			=> 'Zona waktuku',
@@ -3265,8 +3440,6 @@ $lang = array_merge($lang, array(
 	'CLICK_RETURN_FOLDER'		=> '%1$sKembali ke halaman anda',
 	'CONFIRMATION'				=> 'Konfirmasi Pendaftaran',
 	'CONFIRM_CHANGES'			=> 'Konfirmasikan perubahan',
-	'CONFIRM_EMAIL'				=> 'Konfimasi alamat e-mail',
-	'CONFIRM_EMAIL_EXPLAIN'		=> 'Anda hanya dapat menentukan hal ini apabila anda mengubah alamat e-mail anda.',
 	'CONFIRM_EXPLAIN'			=> 'Untuk mencegah pendaftaran otomatis, anda harus memasukkan kode konfirmasi. Kode konfirmasi ditampilkan pada gambar yang anda lihat di bawah ini. Jika anda memiliki pengelihatan yang lemah ataupun dengan kata lain tidak dapat membaca kode ini, silahkan menghubungi %sAdministrator%s.',
 	'VC_REFRESH'				=> 'Refresh kode konfirmasi',
 	'VC_REFRESH_EXPLAIN'		=> 'Jika anda tidak dapat melihat atau membaca kode konfirmasi tersebut, anda dapat meminta kode konfirmasi yang baru dengan mengklik tombol.',
@@ -3275,7 +3448,7 @@ $lang = array_merge($lang, array(
 	'CONFIRM_PASSWORD_EXPLAIN'	=> 'Anda hanya perlu mengkonfirmasikan kata sandi apabila anda telah mengubahnya di atas.',
 	'COPPA_BIRTHDAY'			=> 'Untuk melanjutkan proses pendaftaran, mohon diberitahukan kapan anda dilahirkan.',
 	'COPPA_COMPLIANCE'			=> 'Pemenuhan COPPA',
-	'COPPA_EXPLAIN'				=> 'Mohon dicatat bahwa dengan menekan pengajuan akan membentuk nama anda. Akan tetapi, tidak dapat diaktifkan sebelum orang tua atau wali menyetujui pendaftaran anda. Anda akan dikirimkan e-mail atau salinan formulir keterangan yang dibutuhkan ke alamat yang dituju.',
+	'COPPA_EXPLAIN'				=> 'Please note that clicking submit will create your account. However it cannot be activated until a parent or guardian approves your registration. You will be e-mailed a copy of the necessary form with details of where to send it.',
 	'CREATE_FOLDER'				=> 'Tambahkan folder',
 	'CURRENT_IMAGE'				=> 'Gambar sekarang',
 	'CURRENT_PASSWORD'			=> 'Kata sandi sekarang',
@@ -3330,27 +3503,34 @@ $lang = array_merge($lang, array(
 	'EXPORT_FOLDER'				=> 'Ekspor ke',
 
 	'FIELD_REQUIRED'					=> 'Isian ini “%s” harus dilengkapi.',
-	'FIELD_TOO_SHORT'					=> 'Isian ini “%1$s” terlalu singkat, karakter minimal yang diijinkan adalah %2$d.',
-	'FIELD_TOO_LONG'					=> 'Isian ini “%1$s” terlalu panjang, karakter maksimal yang diijinkan adalah %2$d.',
-	'FIELD_TOO_SMALL'					=> 'Nilai dari “%1$s” terlalu kecil, nilai terkecil yang diijinkan adalah %2$d.',
-	'FIELD_TOO_LARGE'					=> 'Nilai dari “%1$s” terlalu besar, nilai maksimal yang diijinkan adalah %2$d.',
+
+	'FIELD_TOO_SMALL'					=> 'The value of “%2$s” is too small, a minimum value of %1$d is required.',
+	'FIELD_TOO_LARGE'					=> 'The value of “%2$s” is too large, a maximum value of %1$d is allowed.',
+	'FIELD_INVALID_CHARS_INVALID'		=> 'The field “%s” has invalid characters.',
 	'FIELD_INVALID_CHARS_NUMBERS_ONLY'	=> 'Isian ini “%s” memiliki karakter yang tidak sah, hanya nomor yang diijinkan.',
+	'FIELD_INVALID_CHARS_ALPHA_DOTS'	=> 'The field “%s” has invalid characters, only alphanumeric or . characters are allowed.',
 	'FIELD_INVALID_CHARS_ALPHA_ONLY'	=> 'Isian ini “%s” memiliki karakter yang tidak sah, hanya karakter alphanumeric yang diijinkan.',
-	'FIELD_INVALID_CHARS_SPACERS_ONLY'	=> 'Isian ini “%s” memiliki karakter yang tidak sah, hanya karakter alphanumeric, spasi atau -+_[] yang diijinkan.',
+	'FIELD_INVALID_CHARS_ALPHA_PUNCTUATION'	=> 'The field “%s” has invalid characters, only alphanumeric or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_ALPHA_SPACERS'	=> 'The field “%s” has invalid characters, only alphanumeric, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_ALPHA_UNDERSCORE'	=> 'The field “%s” has invalid characters, only alphanumeric or _ characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_DOTS'	=> 'The field “%s” has invalid characters, only letter, number or . characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_ONLY'	=> 'The field “%s” has invalid characters, only letter and number characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_PUNCTUATION'	=> 'The field “%s” has invalid characters, only letter, number or _,-. characters are allowed and the first character must be alphabetic.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_SPACERS'		=> 'The field “%s” has invalid characters, only letter, number, space or -+_[] characters are allowed.',
+	'FIELD_INVALID_CHARS_LETTER_NUM_UNDERSCORE'		=> 'The field “%s” has invalid characters, only letter, number or _ characters are allowed.',
 	'FIELD_INVALID_DATE'				=> 'Isian ini “%s” memiliki tanggal yang tidak sah.',
+	'FIELD_INVALID_URL'					=> 'The field “%s” has an invalid url.',
 	'FIELD_INVALID_VALUE'				=> 'Isian ini “%s” tidak memiliki nilai yang sah.',
 
 	'FOE_MESSAGE'				=> 'Pesan dari lawan',
 	'FOES_EXPLAIN'				=> 'Lawan adalah pengguna yang diabaikan sebagaimana adanya. Pos dari mereka tidak akan terlihat sepenuhnya. Pesan pribadi dari lawan masih diijinkan. Mohon dicatat bahwa anda tidak dapat mengabaikan moderator ataupun administrator.',
 	'FOES_UPDATED'				=> 'Daftar lawan anda telah berhasil diperbarui.',
 	'FOLDER_ADDED'				=> 'Folder berhasil ditambahkan.',
-	'FOLDER_MESSAGE_STATUS'		=> '%1$d dari %2$d pesan disimpan',
 	'FOLDER_NAME_EMPTY'			=> 'Anda harus memberikan nama untuk folder ini.',
 	'FOLDER_NAME_EXIST'			=> 'Folder <strong>%s</strong> sudah ada.',
 	'FOLDER_OPTIONS'			=> 'Opsi folder',
 	'FOLDER_RENAMED'			=> 'Folder berhasil dinamai.',
 	'FOLDER_REMOVED'			=> 'Folder berhasil disingkirkan.',
-	'FOLDER_STATUS_MSG'			=> 'Folder %1$d%% penuh (%2$d dari %3$d pesan disimpan)',
 	'FORWARD_PM'				=> 'Alihkan PM',
 	'FORCE_PASSWORD_EXPLAIN'	=> 'Sebelum anda diperbolehkan melanjutkan melihat-lihat halaman ini, anda diperlukan untuk mengganti kata sandi anda.',
 	'FRIEND_MESSAGE'			=> 'Pesan dari teman',
@@ -3419,16 +3599,35 @@ $lang = array_merge($lang, array(
 	'MOVE_DELETED_MESSAGES_TO'		=> 'Pindahkan pesan dari folder yang disingkirkan ke',
 	'MOVE_DOWN'						=> 'PIndah ke bawah',
 	'MOVE_MARKED_TO_FOLDER'			=> 'Pindahkan yang ditandai ke %s',
-	'MOVE_PM_ERROR'					=> 'Kesalahan terjadi pada saat pemindahan pesan ke folder yang baru, hanya %1d dari %2d pesan yang dipindahkan.',
 	'MOVE_TO_FOLDER'				=> 'Pindah ke folder',
 	'MOVE_UP'						=> 'Pindah ke atas',
 
-	'NEW_EMAIL_CONFIRM_EMPTY'		=> 'You did not enter a confirm e-mail address.',
-	'NEW_EMAIL_ERROR'				=> 'Alamat e-mail yang anda masukkan tidak cocok.',
 	'NEW_FOLDER_NAME'				=> 'Nama folder baru',
 	'NEW_PASSWORD'					=> 'Kata sandi yang baru',
 	'NEW_PASSWORD_CONFIRM_EMPTY'	=> 'You did not enter a confirm password.',
 	'NEW_PASSWORD_ERROR'			=> 'Kara kunci yang masukkan tidak cocok.',
+
+	'NOTIFICATIONS_MARK_ALL_READ'						=> 'Mark all notifications read',
+	'NOTIFICATIONS_MARK_ALL_READ_CONFIRM'				=> 'Are you sure you want to mark all notifications read?',
+	'NOTIFICATIONS_MARK_ALL_READ_SUCCESS'				=> 'All notifications have been marked read.',
+	'NOTIFICATION_GROUP_MISCELLANEOUS'					=> 'Miscellaneous Notifications',
+	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
+	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
+	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'E-mail',
+	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
+	'NOTIFICATION_TYPE'									=> 'Notification type',
+	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
+	'NOTIFICATION_TYPE_GROUP_REQUEST'					=> 'Someone requests to join a group you lead',
+	'NOTIFICATION_TYPE_IN_MODERATION_QUEUE'				=> 'A post or topic needs approval',
+	'NOTIFICATION_TYPE_MODERATION_QUEUE'				=> 'Your topics/posts are approved or disapproved by a moderator',
+	'NOTIFICATION_TYPE_PM'								=> 'Someone sends you a private message',
+	'NOTIFICATION_TYPE_POST'							=> 'Someone replies to a topic to which you are subscribed',
+	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
+	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
+	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+
 	'NOTIFY_METHOD'					=> 'Metode Pemberitahuan',
 	'NOTIFY_METHOD_BOTH'			=> 'Keduanya',
 	'NOTIFY_METHOD_EMAIL'			=> 'Hanya dengan e-mail',
@@ -3446,10 +3645,9 @@ $lang = array_merge($lang, array(
 	'NOT_ADDED_FOES_SELF'			=> 'Anda tidak dapat manambahkan diri anda sendiri ke dalam daftar lawan anda.',
 	'NOT_AGREE'						=> 'Saya tidak menyetujui syarat-syarat ini',
 	'NOT_ENOUGH_SPACE_FOLDER'		=> 'Folder yang dituju “%s” sepertinya penuh. Tindakan permohonon belum diambil.',
-	'NOT_MOVED_MESSAGE'				=> 'Anda memiliki 1 pesan pribadi yang sekarang ini ditahan karena folder penuh.',
-	'NOT_MOVED_MESSAGES'			=> 'Anda memiliki %d pesan pribadi yang sekarang ini ditahan karena folder penuh.',
 	'NO_ACTION_MODE'				=> 'Tidak ada tindakan yang ditetapkan.',
 	'NO_AUTHOR'						=> 'Tidak ada pengarang yang ditetapkan untuk pesan ini',
+	'NO_AVATAR'						=> 'No avatar selected',
 	'NO_AVATAR_CATEGORY'			=> 'Kosong',
 
 	'NO_AUTH_DELETE_MESSAGE'		=> 'Anda tidak berhak untuk menghapus pesan pribadi.',
@@ -3457,6 +3655,7 @@ $lang = array_merge($lang, array(
 	'NO_AUTH_FORWARD_MESSAGE'		=> 'Anda tidak berhak untuk meneruskan pesan pribadi.',
 	'NO_AUTH_GROUP_MESSAGE'			=> 'Anda tidak berhak untuk mengirim pesan pribadi ke grup.',
 	'NO_AUTH_PASSWORD_REMINDER'		=> 'Anda tidak berhak untuk meminta katakunci yang baru.',
+	'NO_AUTH_PROFILEINFO'			=> 'You are not authorised to change your profile information.',
 	'NO_AUTH_READ_HOLD_MESSAGE'		=> 'Anda tidak berhak untuk membaca pesan pribadi yang masih tertahan.',
 	'NO_AUTH_READ_MESSAGE'			=> 'Anda tidak berhak untuk membaca pesan pribadi.',
 	'NO_AUTH_READ_REMOVED_MESSAGE'	=> 'Anda tidak dapat membaca pesan ini karena telah disingkiran oleh pengarangnya.',
@@ -3487,10 +3686,10 @@ $lang = array_merge($lang, array(
 	'NO_WATCHED_SELECTED'		=> 'Anda belum memilih topik atau forum yang ditempatkan.',
 	'NO_WATCHED_TOPICS'			=> 'Anda tidak ditempatkan di topik manapun.',
 
-	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Panjang kata sandi harus diantara %1$d sampai %2$d karakter, harus mengandung pencampuran huruf besar dan kecil dan harus mengandung angka.',
-	'PASS_TYPE_ANY_EXPLAIN'		=> 'Panjang kata sandi harus diantara %1$d sampai %2$d karakter.',
-	'PASS_TYPE_CASE_EXPLAIN'	=> 'Panjang kata sandi harus diantara %1$d sampai %2$d karakter dan harus mengandung pencampuran huruf besar dan kecil.',
-	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Panjang kata sandi harus diantara %1$d sampai %2$d karakter, harus mengandung pencampuran huruf besar dan kecil, harus mengandung angka dan harus mengandung angka symbol.',
+	'PASS_TYPE_ALPHA_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case and must contain numbers.',
+	'PASS_TYPE_ANY_EXPLAIN'		=> 'Must be between %1$s and %2$s.',
+	'PASS_TYPE_CASE_EXPLAIN'	=> 'Password must be between %1$s and %2$s long and must contain letters in mixed case.',
+	'PASS_TYPE_SYMBOL_EXPLAIN'	=> 'Password must be between %1$s and %2$s long, must contain letters in mixed case, must contain numbers and must contain symbols.',
 	'PASSWORD'					=> 'Kata sandi',
 	'PASSWORD_ACTIVATED'		=> 'Kata sandi anda yang baru telah diaktifkan.',
 	'PASSWORD_UPDATED'			=> 'Sebuah kata sandi yang baru sudah dikirim ke alamat e-mail terdaftar anda.',
@@ -3501,13 +3700,16 @@ $lang = array_merge($lang, array(
 	'PM_FROM_REMOVED_AUTHOR'	=> 'Pesan ini dikirim oleh pengguna yang tidak terdaftar lagi.',
 	'PM_ICON'					=> 'Lambang PM',
 	'PM_INBOX'					=> 'Kotak masuk',
+	'PM_MARK_ALL_READ'			=> 'Mark all messages read',
+	'PM_MARK_ALL_READ_SUCCESS'	=> 'All private messages in this folder have been marked read',
 	'PM_NO_USERS'				=> 'Pengguna yang diminta untuk ditambahkan tidak ada.',
 	'PM_OUTBOX'					=> 'Kotak keluar',
 	'PM_SENTBOX'				=> 'Kirim pesan',
 	'PM_SUBJECT'				=> 'Subjek pesan',
 	'PM_TO'						=> 'Kirim ke',
+	'PM_TOOLS'					=> 'Message tools',
+	'PM_USERS_REMOVED_NO_PERMISSION'	=> 'Some users couldn’t be added as they do not have permission to read private messages.',
 	'PM_USERS_REMOVED_NO_PM'	=> 'Beberapa pengguna tidak dapat ditambahkan sebagimana mereka tidak memperbolehkan penerimaan pesan pribadi.',
-	'POPUP_ON_PM'				=> 'Pop up window pada pesan pribadi yang baru',
 	'POST_EDIT_PM'				=> 'Ubah pesan',
 	'POST_FORWARD_PM'			=> 'Teruskan pesan',
 	'POST_NEW_PM'				=> 'Buat pesan',
@@ -3519,6 +3721,8 @@ $lang = array_merge($lang, array(
 	'PREFERENCES_UPDATED'		=> 'Preferensi anda telah diperbarui.',
 	'PROFILE_INFO_NOTICE'		=> 'Mohon dicatat bahwa informasi ini hanya dapat dilihat oleh anggota yang lain. Hati-hati ketika mengikutsertakan keterangan pribadi. Semua isian yang ditandai dengan * harus dilengkapi.',
 	'PROFILE_UPDATED'			=> 'Profil anda telah diperbarui.',
+	'PROFILE_AUTOLOGIN_KEYS'	=> 'The "Remember Me" login keys automatically log you in when you visit the board. If you logout, the remember me login key is deleted only on the computer you are using to logout. Here you can see remember login keys created on other computers you used to access this site.',
+	'PROFILE_NO_AUTOLOGIN_KEYS'	=> 'There are no saved "Remember Me" login keys.',
 
 	'RECIPIENT'							=> 'Penerima',
 	'RECIPIENTS'						=> 'Penerima',
@@ -3543,8 +3747,6 @@ $lang = array_merge($lang, array(
 	'RULE_DELETED'						=> 'Peraturan berhasil disingkirkan.',
 	'RULE_LIMIT_REACHED'				=> 'You cannot add more PM rules. You have reached the maximum number of rules.',
 	'RULE_NOT_DEFINED'					=> 'Peraturan tidak ditentukan dengan benar.',
-	'RULE_REMOVED_MESSAGE'				=> 'Satu pesan pribadi telah disingkirkan yang berkaitan dengan penyaringan pesan.',
-	'RULE_REMOVED_MESSAGES'				=> '%d pesan pribadi disingkirkan yang berkaitan dengan penyaringan pesan.',
 
 	'SAME_PASSWORD_ERROR'		=> 'Kata sandi yang baru yang anda masukkan sama dengan kata sandi yang sekarang.',
 	'SEARCH_YOUR_POSTS'			=> 'Tampilkan pos anda',
@@ -3556,6 +3758,8 @@ $lang = array_merge($lang, array(
 	'SIGNATURE_TOO_LONG'		=> 'Tanda tangan anda terlalu panjang.',
 	'SELECT_CURRENT_TIME'		=> 'Select current time',
 	'SELECT_TIMEZONE'			=> 'Select timezone',
+	'SELECT_CURRENT_TIME'		=> 'Select current time',
+	'SELECT_TIMEZONE'			=> 'Select timezone',
 	'SORT'						=> 'Urutkan',
 	'SORT_COMMENT'				=> 'Komentar file',
 	'SORT_DOWNLOADS'			=> 'Download',
@@ -3565,15 +3769,28 @@ $lang = array_merge($lang, array(
 	'SORT_SIZE'					=> 'Ukuran file',
 
 	'TIMEZONE'					=> 'Zona waktu',
-	'TO'						=> 'Ke',
+	'TIMEZONE_DATE_SUGGESTION'	=> 'Suggestion: %s',
+	'TIMEZONE_INVALID'			=> 'The timezone you selected is invalid.',
+	'TO'						=> 'Recipient',
+	'TO_MASS'					=> 'Recipients',
+	'TO_ADD'					=> 'Add recipient',
+	'TO_ADD_MASS'				=> 'Add recipients',
+	'TO_ADD_GROUPS'				=> 'Add groups',
 	'TOO_MANY_RECIPIENTS'		=> 'Anda mencoba mengirimkan pesan kepada penerima yang terlalu banyak.',
 	'TOO_MANY_REGISTERS'		=> 'Anda telah mencapai angka pendaftaran maksimum yang dicoba di sesi ini. Mohon coba beberapa saat lagi.',
 
 	'UCP'						=> 'Papan Pengaturan Pengguna',
 	'UCP_ACTIVATE'				=> 'Aktifkan nama',
 	'UCP_ADMIN_ACTIVATE'		=> 'Harap diperhatikan bahwa anda harus memasukan alamat e-mail yang resmi sebelum account anda diaktifkan. Administrator akan meninjau account anda dan jika disetujui anda akan menerima e-mail ke alamat yang anda tentukan.',
-	'UCP_AIM'					=> 'AOL Instant Messenger',
 	'UCP_ATTACHMENTS'			=> 'Lampiran',
+	'UCP_AUTH_LINK'				=> 'External accounts',
+	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
+	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
+	'UCP_AUTH_LINK_LINK'		=> 'Link',
+	'UCP_AUTH_LINK_MANAGE'		=> 'Manage external account associations',
+	'UCP_AUTH_LINK_NOT_SUPPORTED'	=> 'Linking board accounts to external services is not supported by this board’s current authentication method.',
+	'UCP_AUTH_LINK_TITLE'		=> 'Manage your external account associations',
+	'UCP_AUTH_LINK_UNLINK'		=> 'Unlink',
 	'UCP_AUTH_LINK'				=> 'External accounts',
 	'UCP_AUTH_LINK_ASK'			=> 'You currently have no account associated with this external service. Click the button below to link your board account to an account with this external service.',
 	'UCP_AUTH_LINK_ID'			=> 'Unique identifier',
@@ -3585,8 +3802,8 @@ $lang = array_merge($lang, array(
 	'UCP_COPPA_BEFORE'			=> 'Sebelum %s',
 	'UCP_COPPA_ON_AFTER'		=> 'Atau sesudah %s',
 	'UCP_EMAIL_ACTIVATE'		=> 'Harap diperhatikan bahwa anda harus memasukan alamat e-mail yang resmi sebelum account anda diaktifkan. Anda akan menerima e-mail ke alamat yang anda berikan yang mengandung link pengaktifan account.',
-	'UCP_ICQ'					=> 'Nomor ICQ',
 	'UCP_JABBER'				=> 'Alamat Jabber',
+	'UCP_LOGIN_LINK'			=> 'Set up an external account association',
 
 	'UCP_MAIN'					=> 'Ikhtisar',
 	'UCP_MAIN_ATTACHMENTS'		=> 'Atur Lampiran',
@@ -3595,7 +3812,6 @@ $lang = array_merge($lang, array(
 	'UCP_MAIN_FRONT'			=> 'Halaman muka',
 	'UCP_MAIN_SUBSCRIBED'		=> 'Atur langganan',
 
-	'UCP_MSNM'					=> 'MSN Messenger',
 	'UCP_NO_ATTACHMENTS'		=> 'Anda belum mempostkan file.',
 
 	'UCP_NOTIFICATION_LIST'				=> 'Manage notifications',
@@ -3612,8 +3828,6 @@ $lang = array_merge($lang, array(
 	'UCP_PM_COMPOSE'			=> 'Tulis pesan',
 	'UCP_PM_DRAFTS'				=> 'Atur Naskah Pesan Pribadi',
 	'UCP_PM_OPTIONS'			=> 'Peraturan, folder &amp; pengaturan',
-	'UCP_PM_POPUP'				=> 'Pesan Pribadi',
-	'UCP_PM_POPUP_TITLE'		=> 'Popup pesan pribadi',
 	'UCP_PM_UNREAD'				=> 'Pesan tak terbaca',
 	'UCP_PM_VIEW'				=> 'Lihat pesan',
 
@@ -3628,11 +3842,11 @@ $lang = array_merge($lang, array(
 	'UCP_USERGROUPS_MEMBER'		=> 'Edit keanggotaan',
 	'UCP_USERGROUPS_MANAGE'		=> 'Atur grup',
 
+	'UCP_PASSWORD_RESET_DISABLED'	=> 'The password reset functionality has been disabled. If you need help accessing your account, please contact the %sBoard Administrator%s',
 	'UCP_REGISTER_DISABLE'			=> 'Membuat account baru tidak mungkin untuk sekarang ini.',
 	'UCP_REMIND'					=> 'Kirim password',
 	'UCP_RESEND'					=> 'Kirim e-mail aktivasi',
 	'UCP_WELCOME'					=> 'Selamat datang di Pengaturan Papan Pengguna. Dari sini anda dapat memonitor, melihat dan meng-update profil anda, preferensi, subscribed forum dan topik. Anda juga dapat megirim pesan ke user-user (jika diijinkan).  Sebelum melanjutkan, pastikan anda membaca semua pengumuman terlebih dahulu.',
-	'UCP_YIM'						=> 'Yahoo Messenger',
 	'UCP_ZEBRA'						=> 'Teman &amp; Lawan',
 	'UCP_ZEBRA_FOES'				=> 'Atur lawan',
 	'UCP_ZEBRA_FRIENDS'				=> 'Atur teman',
@@ -3642,12 +3856,12 @@ $lang = array_merge($lang, array(
 	'UPLOAD_AVATAR_FILE'			=> 'Upload dari mesin anda',
 	'UPLOAD_AVATAR_URL'				=> 'Upload dari URL',
 	'UPLOAD_AVATAR_URL_EXPLAIN'		=> 'Masukkan lokasi URL yang mengandung gambar. Gambar tersebut akan disalin ke situs ini.',
-	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Panjang karakter nama pengguna harus diantara %1$d dan %2$d dan hanya menggunakan karakter alphnumeric.',
-	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Panjang karakter nama pengguna harus diantara %1$d and %2$d dan hanya menggunakan karakter alphnumeric, spasi atau karakter -+_[].',
-	'USERNAME_ASCII_EXPLAIN'		=> 'Panjang karakter nama pengguna harus diantara %1$d and %2$d dan hanya menggunakan karakter ASCII, dan tidak ada simbol spesial.',
-	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Panjang karakter nama pengguna harus diantara %1$d and %2$d dan hanya menggunakan karakter huruf dan angka.',
-	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Panjang karakter nama pengguna harus diantaras %1$d and %2$d dan hanya menggunakan karakter, angka, spasi atau karakter -+_[].',
-	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Panjang nama pengguna harus diantara %1$d sampai %2$d karakter.',
+	'USERNAME_ALPHA_ONLY_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only alphanumeric characters.',
+	'USERNAME_ALPHA_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use alphanumeric, space or -+_[] characters.',
+	'USERNAME_ASCII_EXPLAIN'		=> 'Username must be between %1$s and %2$s long and use only ASCII characters, so no special symbols.',
+	'USERNAME_LETTER_NUM_EXPLAIN'	=> 'Username must be between %1$s and %2$s long and use only letter or number characters.',
+	'USERNAME_LETTER_NUM_SPACERS_EXPLAIN'=> 'Username must be between %1$s and %2$s long and use letter, number, space or -+_[] characters.',
+	'USERNAME_CHARS_ANY_EXPLAIN'	=> 'Length must be between %1$s and %2$s.',
 	'USERNAME_TAKEN_USERNAME'		=> 'Nama pengguna yang anda masukkan sudah digunakan, silahkan pilih alternatif lain.',
 	'USERNAME_DISALLOWED_USERNAME'	=> 'Nama pengguna yang anda masukkan dilarang atau mengandung kata-kata yang dilarang. Silahkan pilih nama yang lain.',
 	'USER_NOT_FOUND_OR_INACTIVE'	=> 'Nama penguna yang anda tentuakn kemungkinan tidak dapat ditemukan atau bukan pengguna yang aktif.',
@@ -3660,10 +3874,9 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_PM'				=> 'PM selanjutnya',
 	'VIEW_PM'					=> 'Lihat pesan pribadi',
 	'VIEW_PM_INFO'				=> 'Keterangan pesan',
-	'VIEW_PM_MESSAGE'			=> '1 pesan',
-	'VIEW_PM_MESSAGES'			=> '%d pesan',
 	'VIEW_PREVIOUS_HISTORY'		=> 'PM sebelumnya berada di history',
 	'VIEW_PREVIOUS_PM'			=> 'PM sebelumnya',
+	'VIEW_PROFILE'				=> 'View profile',
 	'VIEW_SIGS'					=> 'Tampilkan tanda tangan',
 	'VIEW_SMILIES'				=> 'Tampilkan smilies sebagai gambar',
 	'VIEW_TOPICS_DAYS'			=> 'Tampilkan topik dari hari sebelumnya',
@@ -3771,8 +3984,6 @@ $lang = array_merge($lang, array(
 	'UNREAD_POSTS_LOCKED'	=> 'Post tak terbaca [ Dikunci ]',
 
 	'VIEW_FORUM'			=> 'Lihat forum',
-	'VIEW_FORUM_TOPIC'		=> '1 topik',
-	'VIEW_FORUM_TOPICS'		=> '%d topik',
 
 	'REMOVE_ALL_FILTER'	=> 'Remove all Filters',
 	'REMOVE_FILTER'		=> 'Remove filter',
@@ -3781,6 +3992,7 @@ $lang = array_merge($lang, array(
 #######language/en/viewtopic.php#######
 
 $lang = array_merge($lang, array(
+	'APPROVE'								=> 'Setujui',
 	'ATTACHMENT'						=> 'Lampiran',
 	'ATTACHMENT_FUNCTIONALITY_DISABLED'	=> 'Fitur lampiran telah di-disable.',
 
@@ -3793,14 +4005,13 @@ $lang = array_merge($lang, array(
 	'BUMP_TOPIC'			=> 'Ambil topik',
 
 	'CODE'					=> 'Kode',
-	'COLLAPSE_QR'			=> 'Sembunyikan Balas Cepat',
-
+	
 	'DELETE_TOPIC'			=> 'Hapus topik',
+	'DELETED_INFORMATION'	=> 'Deleted by %1$s on %2$s',
+	'DISAPPROVE'					=> 'Tidak menyetujui',
 	'DOWNLOAD_NOTICE'		=> 'Anda tidak memiliki ijin yang dibutuhkan untuk melihat file yang dilampirkan ke post ini.',
 
-	'EDITED_TIMES_TOTAL'	=> 'Diubah terakhir kali oleh %1$s on %2$s, total pengubahan %3$d kali.',
-	'EDITED_TIME_TOTAL'		=> 'Diubah terakhir kali oleh %1$s on %2$s, total pengubahan %3$d kali.',
-	'EMAIL_TOPIC'			=> 'E-mail teman',
+	'EMAIL_TOPIC'			=> 'E-mail topic',
 	'ERROR_NO_ATTACHMENT'	=> 'Lampiran yang dipilih sudah tidak ada lagi.',
 
 	'FILE_NOT_FOUND_404'	=> 'File <strong>%s</strong> tidak ada.',
@@ -3815,8 +4026,6 @@ $lang = array_merge($lang, array(
 	'MAKE_GLOBAL'				=> 'Ubah menjadi “Global”',
 	'MAKE_NORMAL'				=> 'Ubah menjadi “Topik Standar”',
 	'MAKE_STICKY'				=> 'Ubah menjadi “Sticky”',
-	'MAX_OPTIONS_SELECT'		=> 'Anda boleh memilih sampai <strong>%d</strong> pilihan',
-	'MAX_OPTION_SELECT'			=> 'Anda boleh memilih <strong>1</strong> pilihan',
 	'MISSING_INLINE_ATTACHMENT'	=> 'Lampiran <strong>%s</strong> sudah tidak tersedia',
 	'MOVE_TOPIC'				=> 'Pindahkan topik',
 
@@ -3830,6 +4039,7 @@ $lang = array_merge($lang, array(
 	'POLL_ENDED_AT'			=> 'Pemberian suara diakhiri pada %s',
 	'POLL_RUN_TILL'			=> 'Pemberian suara berlangsung sampai %s',
 	'POLL_VOTED_OPTION'		=> 'Anda memberikan suara pada pilihan ini',
+	'POST_DELETED_RESTORE'	=> 'This post has been deleted. It can be restored.',
 	'PRINT_TOPIC'			=> 'Cetak topik',
 
 	'QUICK_MOD'				=> 'Alat mod cepat',
@@ -3837,11 +4047,14 @@ $lang = array_merge($lang, array(
 	'QUOTE'					=> 'Kutipan',
 
 	'REPLY_TO_TOPIC'		=> 'Balas ke topik',
+	'RESTORE'				=> 'Restore',
+	'RESTORE_TOPIC'			=> 'Restore topic',
 	'RETURN_POST'			=> '%sKembali ke post%s',
 
 	'SHOW_QR'				=> 'Balas Cepat',
 	'SUBMIT_VOTE'			=> 'Ajukan suara',
 
+	'TOPIC_TOOLS'			=> 'Topic tools',
 	'TOTAL_VOTES'			=> 'Total suara',
 
 	'UNLOCK_TOPIC'			=> 'Buka topik',
@@ -3850,10 +4063,7 @@ $lang = array_merge($lang, array(
 	'VIEW_NEXT_TOPIC'		=> 'Topik selanjutnya',
 	'VIEW_PREVIOUS_TOPIC'	=> 'Topik sebelumnya',
 	'VIEW_RESULTS'			=> 'Tampilkan hasil',
-	'VIEW_TOPIC_POST'		=> '1 post',
-	'VIEW_TOPIC_POSTS'		=> '%d post',
 	'VIEW_UNREAD_POST'		=> 'Post pertama yang belum dibaca',
-	'VISIT_WEBSITE'			=> 'Mengunjungi website',
 	'VOTE_SUBMITTED'		=> 'Suara anda telah dimasukkan.',
 	'VOTE_CONVERTED'		=> 'Pengubahan suara tidak didukung oleh pemilihan suara yang diubah ke bentuk lain.',
 
@@ -9443,6 +9653,7 @@ $lang = array_merge($lang, array(
 	'ATTACH_MAX_PM_FILESIZE_EXPLAIN'	=> 'Ukuran maksimum setiap file, dari 0 ke tak terhingga, dilampirkan ke pesan pribadi.',
 	'ATTACH_ORPHAN_URL'					=> 'Lampiran-lampiran tanpa kepemilikan',
 	'ATTACH_POST_ID'					=> 'Post ID',
+	'ATTACH_POST_TYPE'					=> 'Post type',
 	'ATTACH_QUOTA'						=> 'Kuota total lampiran',
 	'ATTACH_QUOTA_EXPLAIN'				=> 'Ruang maksimum untuk yang tersedia untuk lampiran seluruh halaman, dari 0 ke tak terhingga.',
 	'ATTACH_TO_POST'					=> 'Lampirkan file ke post',
@@ -9488,6 +9699,9 @@ $lang = array_merge($lang, array(
 	'EXT_GROUP_REAL_MEDIA'			=> 'Real Media',
 	'EXT_GROUP_WINDOWS_MEDIA'		=> 'Windows Media',
 
+	'FILES_GONE'			=> 'Some of the attachments you selected for deletion do not exist. They may have been already deleted. Attachments that did exist were deleted.',
+	'FILES_STATS_WRONG'		=> 'Your file statistics are likely inaccurate and need to be resynchronised. Actual values: number of attachments = %1$d, total size of attachments = %2$s.<br />Click %3$shere%4$s to resynchronise them.',
+
 	'GO_TO_EXTENSIONS'		=> 'Pergi ke halaman manajemen ekstensi',
 	'GROUP_NAME'			=> 'Nama grup',
 
@@ -9511,6 +9725,7 @@ $lang = array_merge($lang, array(
 	'NOT_ALLOWED_IN_PM'			=> 'Ijinkan hanya dipost saja',
 	'NOT_ALLOWED_IN_PM_POST'	=> 'Tidak diijinkan',
 	'NOT_ASSIGNED'				=> 'Belum ditetapkan',
+	'NO_ATTACHMENTS'			=> 'No attachments found for this period.',
 	'NO_EXT_GROUP'				=> 'Tidak ada',
 	'NO_EXT_GROUP_NAME'			=> 'Tidak ada nama grup yang dimasukkan',
 	'NO_EXT_GROUP_SPECIFIED'	=> 'Tidak ada ekstensi grup yang ditentukan.',
@@ -9523,6 +9738,10 @@ $lang = array_merge($lang, array(
 	'ONLY_ALLOWED_IN_PM'	=> 'Ijinkan hanya di pesan pribadi saja',
 	'ORDER_ALLOW_DENY'		=> 'Ijinkan',
 	'ORDER_DENY_ALLOW'		=> 'Abaikan',
+
+	'REMOVE_ALLOWED_IPS'			=> 'Singkirkan IP/nama host <em>yang diijinkan</em>',
+	'REMOVE_DISALLOWED_IPS'			=> 'Singkirkan IP/nama host <em>yang tidak diijinkan</em>',
+	'RESYNC_FILES_STATS_CONFIRM'	=> 'Are you sure you wish to resynchronise file statistics?',
 
 	'REMOVE_ALLOWED_IPS'		=> 'Singkirkan IP/nama host <em>yang diijinkan</em>',
 	'REMOVE_DISALLOWED_IPS'		=> 'Singkirkan IP/nama host <em>yang tidak diijinkan</em>',
@@ -9592,18 +9811,17 @@ $lang = array_merge($lang, array(
 	'PERMANENT'		=> 'Tetap',
 
 	'UNTIL'						=> 'Sampai',
-	'USER_BAN'					=> 'Larang pengguna',
+	'USER_BAN'					=> 'Ban one or more users by username',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> 'Gunakan ini untuk mengeluarkan pengguna yang dimasukkan dari semua larangan yang sekarang.',
 	'USER_BAN_EXPLAIN'			=> 'Anda dapat melarang beberapa pengguna dengan sekali perintah dengan cara memasukkan nama di setiap baris baru. Gunakan fasilitas <span style="text-decoration: underline;">Cari anggota</span> untuk melihat dan menambah satu atau lebih pengguna secara otomatis.',
 	'USER_NO_BANNED'			=> 'Tidak ada nama pengguna yang dilarang',
-	'USER_UNBAN'				=> 'Ijinkan nama pengguna',
+	'USER_UNBAN'				=> 'Un-ban or un-exclude users by username',
 	'USER_UNBAN_EXPLAIN'		=> 'Anda dapat mengijinkan beberapa pengguna dengan sekali perintah dengan menggunakan kombinasi mouse dan keyboard untuk komputer dan browser anda. Penyingkiran alamat e-mail ditekankan.',
 ));
 
 #######language/en/acp/board.php#######
 
 $lang = array_merge($lang, array(
-	'SYSTEM_DST'				=> 'Gunakan Waktu Musim Panas/<abbr title="Daylight Saving Time">DST</abbr>',
 	'JS_HOSTER_VALID'			=> 'Your hoster was successful added.\n Do not forget press submit.',
 	'JS_HOSTER_INVALID'			=> 'Invalid url!\n We can not add your hoster to the list',
 	'POSTS_PER_PAGE_CONFIG_EXPLAIN'	=> 'e.g. posts in topics, search results for posts',
@@ -9629,16 +9847,28 @@ $lang = array_merge($lang, array(
 	'ADD_OWN_URL'				=> 'Your own URL',
 
 	'ACP_BOARD_SETTINGS_EXPLAIN'	=> 'Di sini ini anda bisa menetukan pengaturan untuk halaman anda, memberikan penamaan dan gambaran, dan pengaturan lainnya seperti pengaturan zona waktu dan bahasa.',
+	'BOARD_INDEX_TEXT'				=> 'Board index text',
+	'BOARD_INDEX_TEXT_EXPLAIN'		=> 'This text is displayed as the board index in the board’s breadcrumbs. If not specified, it will default to “Board index”.',
+	'BOARD_STYLE'					=> 'Gaya halamanku',
 	'CUSTOM_DATEFORMAT'				=> 'Custom…',
 	'DEFAULT_DATE_FORMAT'			=> 'Format tanggal',
 	'DEFAULT_DATE_FORMAT_EXPLAIN'	=> 'Format tanggal sama seperti format PHP <code>date</code> function.',
 	'DEFAULT_LANGUAGE'				=> 'Bahasa default',
 	'DEFAULT_STYLE'					=> 'Gaya default',
+	'DEFAULT_STYLE_EXPLAIN'			=> 'The default style is <strong>%1$s (%2$s)</strong> which is the overriden style for all users (including bots).',
 	'DISABLE_BOARD'					=> 'Nonaktifkan halaman',
-	'DISABLE_BOARD_EXPLAIN'			=> 'Ini akan membuat halaman tidak bisa digunakan oleh pengguna. Anda juga bisa memasukkan pesan singkat (255 karakter) untuk ditampilkan.',
+	'DISABLE_BOARD_EXPLAIN'			=> 'This will make the board unavailable to users who are neither administrators nor moderators. You can also enter a short (255 character) message to display if you wish.',
+	'DISPLAY_LAST_SUBJECT'			=> 'Display subject of last added post on forum list',
+	'DISPLAY_LAST_SUBJECT_EXPLAIN'	=> 'The subject of the last added post will be displayed in the forum list with a hyperlink to the post. Subjects from password protected forums and forums in which user doesn’t have read access are not shown.',
+	'GUEST_STYLE'					=> 'Guest style',
+	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Kesampingkan gaya pengguna',
 	'OVERRIDE_STYLE_EXPLAIN'		=> 'Ganti gaya pengguna dengan gaya default.',
 	'SITE_DESC'						=> 'Gambaran Situs',
+	'SITE_HOME_TEXT'				=> 'Main website text',
+	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
+	'SITE_HOME_URL'					=> 'Main website URL',
+	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Nama Situs',
 	'SYSTEM_TIMEZONE'				=> 'Zona waktu tamu',
 	'WARNINGS_EXPIRE'				=> 'Lama peringatan',
@@ -9678,6 +9908,7 @@ $lang = array_merge($lang, array(
 
 	'ALLOW_AVATARS'					=> 'Aktifkan avatar',
 	'ALLOW_AVATARS_EXPLAIN'			=> 'Ijinkan penggunaan umum avatar;<br />Jika anda menonaktifkan avatar secara umum atau dengan mode tertentu, avatar yang dinonaktifkan tidak akan terlihat di halaman, akan tetapi pengguna masih bisa mengunduh avatar mereka sendiri di Papan Pengaturan Pengguna.',
+	'ALLOW_GRAVATAR'				=> 'Enable gravatar avatars',
 	'ALLOW_LOCAL'					=> 'Gunakan galeri avatar',
 	'ALLOW_REMOTE'					=> 'Gunakan remote avatar',
 	'ALLOW_REMOTE_EXPLAIN'			=> 'Avatar dari website yang lain.',
@@ -9858,6 +10089,7 @@ $lang = array_merge($lang, array(
 	'ACP_FEED_EXCLUDE_ID_EXPLAIN'		=> 'Konten ini <strong>tidak akan dimasukkan dalam pengumpan</strong>. Jangan pilih forum apapun untuk menarik data dari semua forum.<br />Pilih/abaikan banyak forum dengan menekan tombol <samp>CTRL</samp> dan klik.',
 
 	'ACP_VC_SETTINGS_EXPLAIN'				=> 'Di sini anda dapat memilih dan menentukan pengaturan plugin yang didesain untuk memblokir secara otomatis dari spambot. Pada dasarnya plugin ini bekerja dengan menantang pengguna melalui <em>CAPTCHA</em>, yang merupakan sebuah desain yang sulit diselesaikan oleh komputer.',
+	'ACP_VC_EXT_GET_MORE'					=> 'For additional (and possibly better) anti-spam plugins, visit the <a href="https://www.phpbb.com/go/anti-spam-ext"><strong>phpBB.com Extensions Database</strong></a>. For more information on preventing spam on your board, visit the <a href="https://www.phpbb.com/go/anti-spam"><strong>phpBB.com Knowledge Base</strong></a>.',
 	'AVAILABLE_CAPTCHAS'					=> 'Plugin yang tersedia',
 	'CAPTCHA_UNAVAILABLE'					=> 'Plugin tidak dapat dipilih karena tidak sesuai dengan persyarataran.',
 	'CAPTCHA_GD'							=> 'Gambar GD',
@@ -9908,18 +10140,36 @@ $lang = array_merge($lang, array(
 	'SESSION_LENGTH'			=> 'Panjang sesi',
 	'SESSION_LENGTH_EXPLAIN'	=> 'Sesi akan berakhir setelah detik ini.',
 
+	// Contact Settings
+	'ACP_CONTACT_SETTINGS_EXPLAIN'		=> 'Here you can enable and disable the contact page and also add a text that is displayed on the page.',
+
+	'CONTACT_US_ENABLE'				=> 'Enable contact page',
+	'CONTACT_US_ENABLE_EXPLAIN'		=> 'This page allows users to send emails to board administrators',
+
+	'CONTACT_US_INFO'				=> 'Contact information',
+	'CONTACT_US_INFO_EXPLAIN'		=> 'The message is displayed on the contact page',
+	'CONTACT_US_INFO_PREVIEW'		=> 'Contact page information - Preview',
+	'CONTACT_US_INFO_UPDATED'		=> 'Contact page information has been updated.',
+
 	'ACP_LOAD_SETTINGS_EXPLAIN'	=> 'Di halaman ini anda dapat mengaktifkan dan mononaktifkan fungsi-fungsi tertentu untuk mengurangi jumlah proses yang dibutuhkan. Pada beberapa server tidak perlu menonaktifkan beberapa fungsi. Akan tetapi pada server tertentu atau di lingkungan pembagian hosting mungkin merupakan suatu keuntungan untuk menonaktifkan fungsi-fungsi tertentu yang tidak diperlukan. Anda juga dapat membatasi load dari sistem dan sesi yang aktif di sekitar halaman yang offline.',
 
+	'ALLOW_CDN'						=> 'Allow usage of third party content delivery networks',
+	'ALLOW_CDN_EXPLAIN'				=> 'If this setting is enabled, some files will be served from external third party servers instead of your server. This reduces the network bandwidth required by your server, but may present a privacy issue for some board administrators. In a default phpBB installation, this includes loading “jQuery” and the font “Open Sans” from Google’s content delivery network.',
+	'ALLOW_LIVE_SEARCHES'			=> 'Allow live searches',
+	'ALLOW_LIVE_SEARCHES_EXPLAIN'	=> 'If this setting is enabled, users are provided with keyword suggestions as they type in certain fields throughout the board.',
 	'CUSTOM_PROFILE_FIELDS'			=> 'Data profil tambahan',
 	'LIMIT_LOAD'					=> 'Batas load sistem',
 	'LIMIT_LOAD_EXPLAIN'			=> 'Jika load 1 menit sistem terlampaui maka halaman akan menjadi offline secara otomatis. Untuk satu prosesor nilai 1.0 setara dengan ~100% utilisasi. Hanya berfungsi di server UNIX dan dimana informasi ini akan diakses. Nilai ini akan direset dengan sendirinya jika phpBB tidak dapat menempuh batasan load tersebut.',
 	'LIMIT_SESSIONS'				=> 'Batas sesi',
 	'LIMIT_SESSIONS_EXPLAIN'		=> 'Jika selang waktu untuk sesi melampaui batas load satu menit maka halaman tersebut akan menjadi offline. Gunakan 0 untuk tidak membatasi sesi.',
 	'LOAD_CPF_MEMBERLIST'			=> 'Ijinkan gaya ditampilkan di data profil tambahan pada daftar anggota',
+	'LOAD_CPF_PM'					=> 'Display custom profile fields in private messages',
 	'LOAD_CPF_VIEWPROFILE'			=> 'Tampilkan data profil tambahan di profil pengguna',
 	'LOAD_CPF_VIEWTOPIC'			=> 'Tampilkan data profil tambahan di halaman topik',
 	'LOAD_USER_ACTIVITY'			=> 'Tampilkan aktifitas pengguna',
 	'LOAD_USER_ACTIVITY_EXPLAIN'	=> 'Tampilkan topik/forum yang aktif di profil pengguna dan papan pengaturan pengguna. Sangat disarankan untuk menonaktifkan fungsi ini untuk jumlah post yang lebih dari satu juta.',
+	'READ_NOTIFICATION_EXPIRE_DAYS'	=> 'Read Notification Expiration',
+	'READ_NOTIFICATION_EXPIRE_DAYS_EXPLAIN' => 'Number of days that will elapse before a read notification will automatically be deleted. Set this value to 0 to make notifications permanent.',
 	'RECOMPILE_STYLES'				=> 'Kompilasi ulang komponen gaya yang sudang usang',
 	'RECOMPILE_STYLES_EXPLAIN'		=> 'Periksa update dari komponen gaya di sistem file dan kompilasi ulang.',
 	'YES_ANON_READ_MARKING'			=> 'Aktifkan penanda topik untuk tamu',
@@ -9940,18 +10190,25 @@ $lang = array_merge($lang, array(
 	'YES_READ_MARKING_EXPLAIN'		=> 'Simpan status yang sudah dibaca atau belum di database.',
 	'YES_UNREAD_SEARCH'				=> 'Aktifkan pencarian untuk post yang belum terbaca',
 
-	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB mendukung otentifikasi plug-in atau modul. Di sini anda dapat menentukan cara otentifikasi pengguna pada saat masuk atau keluar dari halaman. Secara defaultnya, tiga plug-in telah disediakan; DB, LDAP dan Apache. Tidak semua metoda membutuhkan informasi tambahan, isikanlah jika cara yang digunakan saling berhubungan..',
+	'ACP_AUTH_SETTINGS_EXPLAIN'	=> 'phpBB supports authentication plug-ins, or modules. These allow you determine how users are authenticated when they log into the board. By default four plug-ins are provided: DB, LDAP, Apache, and OAuth. Not all methods require additional information so only fill out fields if they are relevant to the selected method.',
 
 	'AUTH_METHOD'				=> 'Pilih cara otentifikasi',
 
+	'AUTH_PROVIDER_OAUTH_ERROR_ELEMENT_MISSING'	=> 'Both the key and secret of each enabled OAuth service provider must be provided. Only one was provided for an OAuth service provider.',
+	'AUTH_PROVIDER_OAUTH_EXPLAIN'				=> 'Each OAuth provider requires a unique secret and key in order to authenticate with the external server. These should be supplied by the OAuth service when you register your website with them and should be entered exactly as provided to you.<br />Any service that does not have both a key and a secret entered here will not be available for use by the forum users. Also note, that user can still register and login using the DB authentication plug-in.',
+	'AUTH_PROVIDER_OAUTH_KEY'					=> 'Key',
+	'AUTH_PROVIDER_OAUTH_TITLE'					=> 'OAuth',
+	'AUTH_PROVIDER_OAUTH_SECRET'				=> 'Secret',
+
 	'APACHE_SETUP_BEFORE_USE'	=> 'Anda harus membuat pengaturan otentifikasi apache sebelum anda menjalankan phpBB dengan menggunakan otentifikasi ini. Mohon dicatat bahwa nama pengguna yang yang anda pakai untuk otentifikasi apache adalah sama dengan nama pengguna di phpBB anda. Otentifikasi Apache hanya dapat digunakan dengan mod_php (bukan dengan versi CGI) dan safe_mode dinonaktifkan.',
 
+	'LDAP'							=> 'LDAP',
 	'LDAP_DN'						=> 'Dasar LDAP <var>dn</var>',
 	'LDAP_DN_EXPLAIN'				=> 'Ini adalah Distinguished Name atau DN, menempatkan informasi pengguna, sebagai contoh <samp>o=My Company,c=US</samp>.',
-	'LDAP_EMAIL'					=> 'Atribut e-mail LDAP',
-	'LDAP_EMAIL_EXPLAIN'			=> 'Gunakan ini ke nama atribut e-mail pengguna anda (jika ada) agar alamat e-mail pengguna yang baru ditentukan secara otomatis. Jika dibiarkan kosong maka tidak ada alamat e-mail untuk pengguna pada saat pertama.',
+	'LDAP_EMAIL'					=> 'LDAP email attribute',
+	'LDAP_EMAIL_EXPLAIN'			=> 'Set this to the name of your user entry email attribute (if one exists) in order to automatically set the email address for new users. Leaving this empty results in empty email address for users who log in for the first time.',
 	'LDAP_INCORRECT_USER_PASSWORD'	=> 'Binding ke server LDAP server jika nama penguna ata kata sandi salah.',
-	'LDAP_NO_EMAIL'					=> 'Atribut e-mail yang ditentukan tidak ada.',
+	'LDAP_NO_EMAIL'					=> 'The specified email attribute does not exist.',
 	'LDAP_NO_IDENTITY'				=> 'Tidak dapat menemukan identitas masuk untuk %s.',
 	'LDAP_PASSWORD'					=> 'Kata sandi LDAP',
 	'LDAP_PASSWORD_EXPLAIN'			=> 'Biarkan kosong untuk menggunakan binding anonim, sebaliknya isikan pada kata sandi untuk pengguna di bawah ini. Dibutuhkan untuk Active Directory Servers. <strong>PERINGATAN:</strong> Kata sandi ini akan disimpan sebagai teks biasa di database, yang dapat dilihat semua orang yang bisa mengakses database atau orang yang bisa melihat halaman konfigurasinya.',
@@ -9966,13 +10223,17 @@ $lang = array_merge($lang, array(
 	'LDAP_USER_FILTER'				=> 'LDAP penyaringan pengguna',
 	'LDAP_USER_FILTER_EXPLAIN'		=> 'Pada pilihannya anda dapat membatasi objek pencarian dengan saringan tambahan. Sebagai contoh <samp>objectClass=posixGroup</samp> akan menghasilkan penggunaan dari <samp>(&amp;(uid=$username)(objectClass=posixGroup))</samp>',
 
-	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Di halaman ini anda dapat menentukan pengaturan server dan domain. Mohon diperiksa apakah data yang anda masukkan sudah benar, error akan menghasilkan e-mail yang mengandung informasi ygan salah. Mohon diingat pada saat memasukkan nama domain anda telah mengikutsertakan http:// atau syarat protokol yang lain. Ubahlah nomor port apabila server anda menggunakan port yang berbeda, port 80 yang biasa digunakan.',
+	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Here you define server and domain dependent settings. Please ensure the data you enter is accurate, errors will result in emails containing incorrect information. When entering the domain name remember it does include http:// or other protocol term. Only alter the port number if you know your server uses a different value, port 80 is correct in most cases.',
 	'ENABLE_GZIP'				=> 'Aktifkan kompresi GZip',
 	'ENABLE_GZIP_EXPLAIN'		=> 'Isi yang dihasilkan oleh kompresi GZip akan dikompresi dan dikirim ke pengguna. Hal ini akan mengurangi lalu lintas jaringan dan meningkatkan penggunaan CPU pada sisi server dan klien.',
 	'FORCE_SERVER_VARS'			=> 'Pengaturan server URL paksaan',
 	'FORCE_SERVER_VARS_EXPLAIN'	=> 'Jika dipilih ya maka pengaturan server yang telah ditentukan di sini akan digunakan sebagai nilai yang telah ditentukan secara otomatis.',
 	'ICONS_PATH'				=> 'Path penyimpanan ikon post',
 	'ICONS_PATH_EXPLAIN'		=> 'Lokasi di bawah direktori phpBB anda, contoh: <samp>images/icons</samp>.',
+	'MOD_REWRITE_ENABLE'		=> 'Enable URL Rewriting',
+	'MOD_REWRITE_ENABLE_EXPLAIN' => 'When enabled, URLs containing ’app.php’ will be rewritten to remove the filename (i.e. app.php/foo will become /foo). <strong>Apache server’s mod_rewrite module is required for this functionality to work; if this option is enabled without mod_rewrite support, URLs on your board may be broken.</strong>',
+	'MOD_REWRITE_DISABLED'		=> 'The <strong>mod_rewrite</strong> module on your Apache web server is disabled. Enable the module or contact your web hosting provider if you wish to enable this feature.',
+	'MOD_REWRITE_INFORMATION_UNAVAILABLE' => 'We are unable to determine whether or not this server supports URL rewriting. This setting may be enabled but if URL rewriting is not available, paths generated by this board (such as for use in links) may be broken. Contact your web hosting provider if you are unsure whether or not you can safely enable this feature.',
 	'PATH_SETTINGS'				=> 'Pengaturan lokasi direktori',
 	'RANKS_PATH'				=> 'Lokasi penyimpanan gambar ranking',
 	'RANKS_PATH_EXPLAIN'		=> 'Lokasi di bawah direktori phpBB anda, contoh: <samp>images/ranks</samp>.',
@@ -9989,13 +10250,21 @@ $lang = array_merge($lang, array(
 	'SMILIES_PATH_EXPLAIN'		=> 'Lokasi di bawah direktori phpBB anda, contoh: <samp>images/smilies</samp>.',
 	'UPLOAD_ICONS_PATH'			=> 'Lokasi penyimapanan ikon ekstensi grup',
 	'UPLOAD_ICONS_PATH_EXPLAIN'	=> 'Lokasi di bawah direktori phpBB anda, contoh: <samp>images/upload_icons</samp>.',
+	'USE_SYSTEM_CRON'		=> 'Run periodic tasks from system cron',
+	'USE_SYSTEM_CRON_EXPLAIN'		=> 'When off, phpBB will arrange for periodic tasks to be run automatically. When on, phpBB will not schedule any periodic tasks by itself; a system administrator must arrange for <code>bin/phpbbcli.php cron:run</code> to be run by the system cron facility at regular intervals (e.g. every 5 minutes).',
 
 	'ACP_SECURITY_SETTINGS_EXPLAIN'		=> 'Di sini anda dapat menentukan pengaturan sesi dan cara masuk ke halaman.',
 	'ALL'							=> 'Semua',
-	'ALLOW_AUTOLOGIN'				=> 'Ijinkan masuk secara ototmatis',
-	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Menentukan apakah pengguna dapat masuk secara otomatis pada saat kunjungan ke halaman.',
-	'AUTOLOGIN_LENGTH'				=> 'Lama waktu masuk secara otomatis (dalam hari)',
-	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Jumlah hari setelah masuk secara otomatis disingkirkan atau gunakan nol untuk menonaktifkannya.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'ALLOW_PASSWORD_RESET'			=> 'Allow password reset ("Forgot Password")',
+	'ALLOW_PASSWORD_RESET_EXPLAIN'	=> 'Determines whether or not users are able to use the "I forgot my password" link on the login page to recover their account. If you use an external authentication mechanism you may wish to disable this feature.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
+	'ALLOW_AUTOLOGIN'				=> 'Allow "Remember Me" logins',
+	'ALLOW_AUTOLOGIN_EXPLAIN'		=> 'Determines whether users are given "Remember Me" option when they visit the board.',
+	'AUTOLOGIN_LENGTH'				=> '"Remember Me" login key expiration length (in days)',
+	'AUTOLOGIN_LENGTH_EXPLAIN'		=> 'Number of days after which "Remember Me" login keys are removed or zero to disable.',
 	'BROWSER_VALID'					=> 'Sahkan browser',
 	'BROWSER_VALID_EXPLAIN'			=> 'Mengaktifkan pengesahan browser untuk meningkatkan keamaan untuk setiap sesi.',
 	'CHECK_DNSBL'					=> 'Periksa alamat IP yang menyerang DNS Blackhole List',
@@ -10032,8 +10301,12 @@ $lang = array_merge($lang, array(
 	'PASS_TYPE_SYMBOL'				=> 'Harus mengandung simbol',
 	'REF_HOST'						=> 'Hanya host yang resmi',
 	'REF_PATH'						=> 'Lokasi yang sah juga',
-	'REFERER_VALID'					=> 'Sahkan Referer',
+	'REFERRER_VALID'				=> 'Validate Referrer',
+	'REFERRER_VALID_EXPLAIN'		=> 'If enabled, the referrer of POST requests will be checked against the host/script path settings. This may cause issues with boards using several domains and or external logins.',
+
+	'REFERER_VALID'					=> 'Sahkan Referer',	//3.0.12
 	'REFERER_VALID_EXPLAIN'			=> 'Jika diaktifkan, permintaan post dari referer akan diperiksa terhadap pengaturan host atau lokasi skrip. Hal ini akan menyebabkan halaman menggunakan beberapa domain.',
+
 	'TPL_ALLOW_PHP'					=> 'Ijinkan php di template',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Jika pilihan ini diaktifkan maka pernyataan <code>PHP</code> dan <code>INCLUDEPHP</code>akan dikenali dan dipisahkan di template.',
 
@@ -10046,6 +10319,8 @@ $lang = array_merge($lang, array(
 	'BOARD_HIDE_EMAILS_EXPLAIN'		=> 'Fungsi ini menyimpan alamat e-mail secara rahasia.',
 	'CONTACT_EMAIL'					=> 'Alamat e-mail kontak',
 	'CONTACT_EMAIL_EXPLAIN'			=> 'Alamat ini akan digunakan apabila kontak spesifik dibutuhkan, contohnya: spam, error output, dsb. Akan selalu digunakan untuk alamat <samp>Dari</samp> dan <samp>Kepada</samp> pada e-mail.',
+	'CONTACT_EMAIL_NAME'			=> 'Contact name',
+	'CONTACT_EMAIL_NAME_EXPLAIN'	=> 'This is the contact name that e-mail recipients see. Leave blank to just send the e-mail address',
 	'EMAIL_FUNCTION_NAME'			=> 'Nama fungsi e-mail',
 	'EMAIL_FUNCTION_NAME_EXPLAIN'	=> 'Fungsi e-mail digunakan untuk mengirim e-mail melalui PHP.',
 	'EMAIL_PACKAGE_SIZE'			=> 'Ukuran paket e-mail',
@@ -10236,7 +10511,7 @@ $lang = array_merge($lang, array(
 	'ACP_BAN'					=> 'Pelarangan',
 	'ACP_BAN_EMAILS'			=> 'Larang e-mail',
 	'ACP_BAN_IPS'				=> 'Larang IP',
-	'ACP_BAN_USERNAMES'			=> 'Larang nama pengguna',
+	'ACP_BAN_USERNAMES'			=> 'Ban users',
 	'ACP_BBCODES'				=> 'BBCode',
 	'ACP_BOARD_CONFIGURATION'	=> 'Konfigurasi halaman',
 	'ACP_BOARD_FEATURES'		=> 'Fitur halaman',
@@ -10245,8 +10520,10 @@ $lang = array_merge($lang, array(
 	'ACP_BOTS'					=> 'Spider/Robot',
 
 	'ACP_CAPTCHA'				=> 'CAPTCHA',
+	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'Database',
+	'ACP_CAT_DOT_MODS'			=> '.MODs',
 	'ACP_CAT_DOT_MODS'			=> '.MODs',
 	'ACP_CAT_FORUMS'			=> 'Forum',
 	'ACP_CAT_GENERAL'			=> 'Umum',
@@ -10259,6 +10536,8 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_USERS'				=> 'Pengguna',
 	'ACP_CLIENT_COMMUNICATION'	=> 'KOmunikasi klien',
 	'ACP_COOKIE_SETTINGS'		=> 'Pengaturan cookie',
+	'ACP_CONTACT'				=> 'Contact page',
+	'ACP_CONTACT_SETTINGS'		=> 'Contact page settings',
 	'ACP_CRITICAL_LOGS'			=> 'Log error',
 	'ACP_CUSTOM_PROFILE_FIELDS'	=> 'Kustom isian profil',
 
@@ -10266,8 +10545,11 @@ $lang = array_merge($lang, array(
 	'ACP_DISALLOW'				=> 'Tolak',
 	'ACP_DISALLOW_USERNAMES'	=> 'Tolak nama pengguna',
 
-	'ACP_EMAIL_SETTINGS'		=> 'Pengaturan e-mail',
-	'ACP_EXTENSION_GROUPS'		=> 'Atur ekstensi grup',
+	'ACP_EMAIL_SETTINGS'		=> 'Email settings',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
+	'ACP_EXTENSION_MANAGEMENT'	=> 'Extension management',
+	'ACP_EXTENSIONS'			=> 'Manage extensions',
+	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
 	'ACP_FORMS'					=> 'Customizable Forms',
 	'ACP_FORMS_BUILDER'			=> 'Form Builder',
 
@@ -10288,10 +10570,10 @@ $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE'				=> 'Pengaturan grup',
 	'ACP_GROUPS_MANAGEMENT'			=> 'Manajemen grup',
 	'ACP_GROUPS_PERMISSIONS'		=> 'Perijinan grups',
+	'ACP_GROUPS_POSITION'			=> 'Manage group positions',
 
 	'ACP_ICONS'					=> 'Ikon topik',
 	'ACP_ICONS_SMILIES'			=> 'Ikon/tanda senyuman topik',
-	'ACP_IMAGESETS'				=> 'Imageset',
 	'ACP_INACTIVE_USERS'		=> 'Pengguna nonaktif',
 	'ACP_INDEX'					=> 'Indeks ACP',
 
@@ -10303,11 +10585,15 @@ $lang = array_merge($lang, array(
 	'ACP_LOGGING'				=> 'Logging',
 
 	'ACP_MAIN'					=> 'Indeks ACP',
-	'ACP_MANAGE_EXTENSIONS'		=> 'Atur ekstensi',
+
+	'ACP_MANAGE_ATTACHMENTS'			=> 'Atur Lampiran',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
+
+	'ACP_MANAGE_EXTENSIONS'		=> 'Manage attachment extensions',
 	'ACP_MANAGE_RANKS'			=> 'Atur ranking',
 	'ACP_MANAGE_REASONS'		=> 'Atur laporan/alasan penolakan',
 	'ACP_MANAGE_USERS'			=> 'Pengaturan pengguna',
-	'ACP_MASS_EMAIL'			=> 'E-mail massa',
+	'ACP_MASS_EMAIL'			=> 'Mass email',
 	'ACP_MESSAGES'				=> 'Perpesanan',
 	'ACP_MESSAGE_SETTINGS'		=> 'Pengaturan pesan pribadi',
 	'ACP_MODULE_MANAGEMENT'		=> 'Manajemen modul',
@@ -10352,6 +10638,8 @@ $lang = array_merge($lang, array(
 	'ACP_STYLE_COMPONENTS'		=> 'Komponen gaya',
 	'ACP_STYLE_MANAGEMENT'		=> 'Manajemen gaya',
 	'ACP_STYLES'				=> 'Gaya',
+	'ACP_STYLES_CACHE'			=> 'Purge Cache',
+	'ACP_STYLES_INSTALL'		=> 'Install Styles',
 
 	'ACP_SUBMIT_CHANGES'		=> 'Ajukan pengubahan',
 
@@ -10403,6 +10691,10 @@ $lang = array_merge($lang, array(
 
 	'COLOUR_SWATCH'			=> 'Pencarian warna',
 	'CONFIG_UPDATED'		=> 'Konfigurasi berhasil diperbarui.',
+	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
+	'CRON_NO_SUCH_TASK'		=> 'Could not find cron task â€œ%sâ€.',
+	'CRON_NO_TASK'			=> 'No cron tasks need to be run right now.',
+	'CRON_NO_TASKS'			=> 'No cron tasks could be found.',
 
 	'DEACTIVATE'				=> 'Nonaktifkan',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'Path yang dimasukkan “%s” tidak ada.',
@@ -10413,6 +10705,7 @@ $lang = array_merge($lang, array(
 	'DOWNLOAD_AS'				=> 'Download sebagai',
 	'DOWNLOAD_STORE'			=> 'Download atau simpan file',
 	'DOWNLOAD_STORE_EXPLAIN'	=> 'Anda bisa secara langsung mendownload file tersebut ataupun menyimpannya di folder <samp>store/</samp> anda.',
+	'DOWNLOADS'					=> 'Download',
 
 	'EDIT'					=> 'Ubah',
 	'ENABLE'				=> 'Gunakan',
@@ -10427,6 +10720,8 @@ $lang = array_merge($lang, array(
 	'IP'					=> 'IP',
 	'IP_HOSTNAME'			=> 'Alamat IP atau nama host',
 
+	'LOAD_NOTIFICATIONS'			=> 'Display Notifications',
+	'LOAD_NOTIFICATIONS_EXPLAIN'	=> 'Display the notifications list on every page (typically in the header).',
 	'LOGGED_IN_AS'			=> 'Anda dimasukkan sebagai:',
 	'LOGIN_ADMIN'			=> 'Untuk mengadministrasi halaman ini anda harus menjadi pengguna yang terotentifikasi.',
 	'LOGIN_ADMIN_CONFIRM'	=> 'Silahkan otentifikasikan ulang diri anda untuk mengadministrasi halaman ini.',
@@ -10443,7 +10738,8 @@ $lang = array_merge($lang, array(
 
 	'NOTIFY'				=> 'Pemberitahuan',
 	'NO_ADMIN'				=> 'Anda tidak memiliki otorisasi untuk mengatur halaman ini.',
-	'NO_EMAILS_DEFINED'		=> 'Tidak ada alamat e-mail ditemukan.',
+	'NO_EMAILS_DEFINED'		=> 'No valid email addresses found.',
+	'NO_FILES_TO_DELETE'	=> 'Attachments you selected for deletion do not exist.',
 	'NO_PASSWORD_SUPPLIED'	=> 'Anda tidak dapat masuk tanpa kata sandi.',
 
 	'OFF'					=> 'Hidup',
@@ -10459,8 +10755,8 @@ $lang = array_merge($lang, array(
 
 	'REMIND'							=> 'Mengingatkan',
 	'RESYNC'							=> 'Samakan kembali',
-	'RETURN_TO'							=> 'Kembali ke',
 
+	'RUNNING_TASK'			=> 'Running task: %s.',
 	'SELECT_ANONYMOUS'		=> 'Pilih pengguna anonim',
 	'SELECT_OPTION'			=> 'Gunakan pilihan',
 
@@ -10470,6 +10766,10 @@ $lang = array_merge($lang, array(
 	'SETTING_TOO_SHORT'		=> 'Nilai yang dimasukkan untuk pengaturan “%1$s” is not long enough. Panjang minimal yang diijinkan adalah %2$d.',
 
 	'SHOW_ALL_OPERATIONS'	=> 'Tampilkan semua operasi',
+
+	'TASKS_NOT_READY'			=> 'Not ready tasks:',
+	'TASKS_READY'			=> 'Ready tasks:',
+	'TOTAL_SIZE'			=> 'Total size',
 
 	'UCP'					=> 'Papan Pengaturan Pengguna',
 	'USERNAMES_EXPLAIN'		=> 'Tempatkan setiap nama pengguna di baris baru.',
@@ -10481,7 +10781,7 @@ $lang = array_merge($lang, array(
 	'NO_PHPINFO_AVAILABLE'	=> 'Informasi mengenai konfigurasi PHP anda tidak dapat ditentukan. Phpinfo() tidak dapat digunakan untuk alasan keamanan.',
 
 	'ACP_ADMIN_LOGS_EXPLAIN'	=> 'Tindakan yang dibuat oleh administrator halaman ditampilkan di sini. Anda depat mengurutkan sesuai dengan nama pengguna, tanggal, alamat IP atau tindakan. Jika anda memiliki perijinan yang dibutuhkan, anda juga dapat membersihkan operasi individu atau keseluruhan dari log ini.',
-	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'Tindakan yang dibuat oleh halaman ini ditampilkan di sini. Log ini menyediakan informasi yang bisa anda gunakan untuk menyelesaikan masalah yang spesifik, sebagai contoh e-mail yang tidak terkirim. Anda depat mengurutkan sesuai dengan nama pengguna, tanggal, alamat IP atau jenis tindakan. Jika anda memiliki perijinan yang dibutuhkan, anda juga dapat membersihkan operasi perorangan atau keseluruhan dari log ini.',
+	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'This lists the actions carried out by the board itself. This log provides you with information you are able to use for solving specific problems, for example non-delivery of emails. You can sort by username, date, IP or action. If you have appropriate permissions you can also clear individual operations or the log as a whole.',
 	'ACP_MOD_LOGS_EXPLAIN'		=> 'Tindakan yang diselesaikan di halaman ditampilkan di sini, topik dan post sebagai tindakan yang dibawa pengguna oleh moderator dan termasuk larangan. Anda dapat mengurutkan sesuai dengan nama pengguna, tanggal, alamat IP atau jenis tindakan. Jika anda memiliki perijinan yang dibutuhkan, anda juga dapat membersihkan operasi perorangan atau keseluruhan dari log ini.',
 	'ACP_USERS_LOGS_EXPLAIN'	=> 'Tindakan yang dibuat oleh pengguna ditampilkan di sini (laporan, peringatan dan catatan pengguna).',
 	'ALL_ENTRIES'				=> 'Semua masukan',
@@ -10507,6 +10807,7 @@ $lang = array_merge($lang, array(
 
 	'GZIP_COMPRESSION'	=> 'Kompresi GZip',
 
+	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'Tidak tersedia',
 	'NUMBER_FILES'		=> 'Jumlah lampiran',
 	'NUMBER_POSTS'		=> 'Jumlah post',
@@ -10519,29 +10820,38 @@ $lang = array_merge($lang, array(
 	'PURGE_CACHE'			=> 'Bersihkan tembolok',
 	'PURGE_CACHE_CONFIRM'	=> 'Apakah anda yakin ingin membersihkan tembolok?',
 	'PURGE_CACHE_EXPLAIN'	=> 'Bersihkan semua tembolok yang berhubungan, juga termasuk semua file template ataupun query.',
+	'PURGE_CACHE_SUCCESS'	=> 'Cache successfully purged.',
 
 	'PURGE_SESSIONS'			=> 'Bersihkan semua sesi',
 	'PURGE_SESSIONS_CONFIRM'	=> 'Apakah anda yakin ingin membersihkan semua sesi? Tindakan ini akan mengeluarkan semua pengguna yang sudah masuk.',
 	'PURGE_SESSIONS_EXPLAIN'	=> 'Bersihkan semua sesi. Tindakan ini akan mengeluarkan semua pengguna yang sudah masuk dengan memotong semua tabel.',
+	'PURGE_SESSIONS_SUCCESS'	=> 'Sessions successfully purged.',
 
 	'RESET_DATE'					=> 'Reset tanggal awal halaman',
 	'RESET_DATE_CONFIRM'			=> 'Apakah anda yakin ingin mereset tanggal awal halaman?',
+	'RESET_DATE_SUCCESS'				=> 'Boardâ€™s start date reset',
 	'RESET_ONLINE'					=> 'Reset pengguna terbanyak yang pernah online',
 	'RESET_ONLINE_CONFIRM'			=> 'Apakah anda yakin ingin mereset penghitungan pengguna terbanyak yang pernah online?',
+	'RESET_ONLINE_SUCCESS'				=> 'Most users ever online reset',
 	'RESYNC_POSTCOUNTS'				=> 'Sinkronisasi ulang penghitungan post',
 	'RESYNC_POSTCOUNTS_EXPLAIN'		=> 'Hanya post yang ada yang akan diambil untuk dipertimbangkan. Pengurangan post tidak akan dihitung.',
 	'RESYNC_POSTCOUNTS_CONFIRM'		=> 'Apakah anda yakin ingin mensinkronisasi ulang penghitungan post?',
+	'RESYNC_POSTCOUNTS_SUCCESS'			=> 'Resynchronised post counts',
 	'RESYNC_POST_MARKING'			=> 'Sinkronisasi ulang topik yang ditandai',
 	'RESYNC_POST_MARKING_CONFIRM'	=> 'Apakah anda yakin ingin mensinkronisasi ulang topik yang ditandai?',
 	'RESYNC_POST_MARKING_EXPLAIN'	=> 'Yang tidak ditandai pertama sekali dan topik yang ditandai yang terlihat memiliki aktifitas selama enam bulan belakangan.',
+	'RESYNC_POST_MARKING_SUCCESS'	=> 'Resynchronised dotted topics',
 	'RESYNC_STATS'					=> 'Sinkronisasi ulang statistik',
 	'RESYNC_STATS_CONFIRM'			=> 'Apakah anda yakin ingin mensinkronisasi ulang statistik?',
 	'RESYNC_STATS_EXPLAIN'			=> 'Penghitungan ulang jumlah total post, topik, pengguna dan file.',
+	'RESYNC_STATS_SUCCESS'			=> 'Resynchronised statistics',
 	'RUN'							=> 'Jalankan sekarang',
 
 	'STATISTIC'					=> 'Statistik',
 	'STATISTIC_RESYNC_OPTIONS'	=> 'Sinkronisasi ulang atau reset statistik',
 
+	'TIMEZONE_INVALID'	=> 'The timezone you selected is invalid.',
+	'TIMEZONE_SELECTED'	=> '(currently selected)',
 	'TOPICS_PER_DAY'	=> 'Topik per hari',
 
 	'UPLOAD_DIR_SIZE'	=> 'Ukuran lampiran yang dipost',
@@ -10722,9 +11032,9 @@ $lang = array_merge($lang, array(
 
 	'LOG_APPROVE_TOPIC'			=> '<strong>Menyetujui topik</strong><br />» %s',
 	'LOG_BUMP_TOPIC'			=> '<strong>Menggeser topik</strong><br />» %s',
-	'LOG_DELETE_POST'			=> '<strong>Menghapus pesan</strong><br />» %s',
-	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Menghapus topik bayangan</strong><br />» %s',
-	'LOG_DELETE_TOPIC'			=> '<strong>Menghapus topik</strong><br />» %s',
+	'LOG_DELETE_POST'			=> '<strong>Deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Deleted shadow topic</strong><br />Â» %s',
+	'LOG_DELETE_TOPIC'			=> '<strong>Deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_FORK'					=> '<strong>Menyalin topik</strong><br />» from %s',
 	'LOG_LOCK'					=> '<strong>Mengunci topik</strong><br />» %s',
 	'LOG_LOCK_POST'				=> '<strong>Mengunci topik</strong><br />» %s',
@@ -10733,15 +11043,20 @@ $lang = array_merge($lang, array(
 	'LOG_PM_REPORT_CLOSED'		=> '<strong>Laporan PM yang ditutup</strong><br />» %s',
 	'LOG_PM_REPORT_DELETED'		=> '<strong>Laporan PM yang dihapus</strong><br />» %s',
 	'LOG_POST_APPROVED'			=> '<strong>Menyetujui topik</strong><br />» %s',
-	'LOG_POST_DISAPPROVED'		=> '<strong>Tidak menyetujui post “%1$s” dengan alasan sebagai berikut</strong><br />» %2$s',
-	'LOG_POST_EDITED'			=> '<strong>Mengubah post “%1$s” yang ditulis oleh</strong><br />» %2$s',
+	'LOG_POST_DISAPPROVED'		=> '<strong>Disapproved post â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
+	'LOG_POST_EDITED'			=> '<strong>Edited post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_POST_RESTORED'			=> '<strong>Restored post</strong><br />Â» %s',
 	'LOG_REPORT_CLOSED'			=> '<strong>Menutup laporan</strong><br />» %s',
 	'LOG_REPORT_DELETED'		=> '<strong>Menghapus laporan</strong><br />» %s',
+	'LOG_RESTORE_TOPIC'			=> '<strong>Restored topic â€œ%1$sâ€ written by</strong><br />Â» %2$s',
+	'LOG_SOFTDELETE_POST'		=> '<strong>Soft deleted post â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
+	'LOG_SOFTDELETE_TOPIC'		=> '<strong>Soft deleted topic â€œ%1$sâ€ written by â€œ%2$sâ€ for the following reason</strong><br />Â» %3$s',
 	'LOG_SPLIT_DESTINATION'		=> '<strong>memindahkan post yang dipecah</strong><br />» to %s',
 	'LOG_SPLIT_SOURCE'			=> '<strong>Memecah post</strong><br />» dari %s',
 
 	'LOG_TOPIC_APPROVED'		=> '<strong>Menyetujui topik</strong><br />» %s',
-	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Tidak menyetujui topik “%1$s” dengan alasan sebagai berikut</strong><br />%2$s',
+	'LOG_TOPIC_RESTORED'		=> '<strong>Restored topic</strong><br />Â» %s',
+	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Disapproved topic â€œ%1$sâ€ written by â€œ%3$sâ€ for the following reason</strong><br />Â» %2$s',
 	'LOG_TOPIC_RESYNC'			=> '<strong>Melakukan sinkronisasi ulang penghitung topik</strong><br />» %s',
 	'LOG_TOPIC_TYPE_CHANGED'	=> '<strong>Merubah tipe topik</strong><br />» %s',
 	'LOG_UNLOCK'				=> '<strong>Membuka topik yang terkunci</strong><br />» %s',
@@ -10793,16 +11108,6 @@ $lang = array_merge($lang, array(
 
 	'LOG_IMAGE_GENERATION_ERROR'	=> '<strong>Error pada saat pembuatan gambar</strong><br />» Error pada %1$s di baris %2$s: %3$s',
 
-	'LOG_IMAGESET_ADD_DB'			=> '<strong>Menambah imageset yang baru di database</strong><br />» %s',
-	'LOG_IMAGESET_ADD_FS'			=> '<strong>Menambah imageset yang baru di filesystem</strong><br />» %s',
-	'LOG_IMAGESET_DELETE'			=> '<strong>Menghapus imageset</strong><br />» %s',
-	'LOG_IMAGESET_EDIT_DETAILS'		=> '<strong>Mengubah keterangan imageset</strong><br />» %s',
-	'LOG_IMAGESET_EDIT'				=> '<strong>Mengubah imageset</strong><br />» %s',
-	'LOG_IMAGESET_EXPORT'			=> '<strong>Mengekpspor imageset</strong><br />» %s',
-	'LOG_IMAGESET_LANG_MISSING'		=> '<strong>Menghilangkan lokalisasi imageset “%2$s”</strong><br />» %1$s',
-	'LOG_IMAGESET_LANG_REFRESHED'	=> '<strong>Merefresh lokalisasi imageset “%2$s”</strong><br />» %1$s',
-	'LOG_IMAGESET_REFRESHED'		=> '<strong>erefresh imageset</strong><br />» %s',
-
 	'LOG_INACTIVE_ACTIVATE'	=> '<strong>Mengaktifkan pengguna yang belum aktif</strong><br />» %s',
 	'LOG_INACTIVE_DELETE'	=> '<strong>Menghapus pengguna yang belum aktif</strong><br />» %s',
 	'LOG_INACTIVE_REMIND'	=> '<strong>Mengingatkan pengguna dengan mengirim e-mails kepengguna yang belu aktif</strong><br />» %s',
@@ -10847,6 +11152,7 @@ $lang = array_merge($lang, array(
 	'LOG_U_ROLE_EDIT'		=> '<strong>Mengubah peranan pengguna</strong><br />» %s',
 	'LOG_U_ROLE_REMOVED'	=> '<strong>Menyingkirkan peranan pengguna</strong><br />» %s',
 
+	'LOG_PLUPLOAD_TIDY_FAILED'		=> '<strong>Unable to open %1$s for tidying, check permissions.</strong><br />Exception: %2$s<br />Trace: %3$s',
 	'LOG_PROFILE_FIELD_ACTIVATE'	=> '<strong>Mengaktifkan isian profil</strong><br />» %s',
 	'LOG_PROFILE_FIELD_CREATE'		=> '<strong>Menambahkan isian profil</strong><br />» %s',
 	'LOG_PROFILE_FIELD_DEACTIVATE'	=> '<strong>Menonaktifkan isian profile</strong><br />» %s',
@@ -10855,13 +11161,13 @@ $lang = array_merge($lang, array(
 
 	'LOG_PRUNE'					=> '<strong>Mengurangi forum</strong><br />» %s',
 	'LOG_AUTO_PRUNE'			=> '<strong>Mengurangi forum secara otomatis</strong><br />» %s',
+	'LOG_PRUNE_SHADOW'		=> '<strong>Auto-pruned shadow topics</strong><br />Â» %s',
 	'LOG_PRUNE_USER_DEAC'		=> '<strong>Menonaktifkan pengguna</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_DEL'	=> '<strong>Mengurangi pengguna dan menghapus post</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_ANON'	=> '<strong>Mengurangi pengguna dan mempertahankan post</strong><br />» %s',
 
 	'LOG_PURGE_CACHE'			=> '<strong>Cache yang dibersihkan</strong>',
 	'LOG_PURGE_SESSIONS'		=> '<strong>Sesi yang dibersihkan</strong>',
-
 
 	'LOG_RANK_ADDED'		=> '<strong>Menambahkan ranking baru</strong><br />» %s',
 	'LOG_RANK_REMOVED'		=> '<strong>Menyingkirkan ranking</strong><br />» %s',
@@ -10871,15 +11177,17 @@ $lang = array_merge($lang, array(
 	'LOG_REASON_REMOVED'	=> '<strong>Menyingkirkan laporan/alasan penolakan</strong><br />» %s',
 	'LOG_REASON_UPDATED'	=> '<strong>Memperbaharui laporan/alasan penolakan</strong><br />» %s',
 
-	'LOG_REFERER_INVALID'		=> '<strong>Gagal memberlakukan referer</strong><br />»Referer “<em>%1$s</em>”. Permintaan ditolak dan menghentikan sesi.',
+	'LOG_REFERER_INVALID'		=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 	'LOG_RESET_DATE'			=> '<strong>Melakukan reset tanggal awal halaman</strong>',
 	'LOG_RESET_ONLINE'			=> '<strong>Melakukan rest pengguna yang pernah online</strong>',
+	'LOG_RESYNC_FILES_STATS'	=> '<strong>File statistics resynchronised</strong>',
 	'LOG_RESYNC_POSTCOUNTS'		=> '<strong>Melakukan sinkronisasi ulang penghitung post</strong>',
 	'LOG_RESYNC_POST_MARKING'	=> '<strong>Melakukan sinkronisasi ulang topik yang ditandai</strong>',
 	'LOG_RESYNC_STATS'			=> '<strong>Melakukan sinkronisasi ulang post, topik dan statistik pengguna</strong>',
 
 	'LOG_SEARCH_INDEX_CREATED'	=> '<strong>Membuat indeks untuk pencarian untuk</strong><br />» %s',
 	'LOG_SEARCH_INDEX_REMOVED'	=> '<strong>Menyingkirkan indeks pencarian untuk</strong><br />» %s',
+	'LOG_SPHINX_ERROR'			=> '<strong>Sphinx Error</strong><br />Â» %s',
 	'LOG_STYLE_ADD'				=> '<strong>Menambahkan gaya baru</strong><br />» %s',
 	'LOG_STYLE_DELETE'			=> '<strong>Menghapus gaya</strong><br />» %s',
 	'LOG_STYLE_EDIT_DETAILS'	=> '<strong>Mengubah gaya</strong><br />» %s',
@@ -10946,15 +11254,18 @@ $lang = array_merge($lang, array(
 	'LOG_USER_GROUP_RESIGN'			=> '<strong>Pengguna berhenti dari keanggotaan dari grup</strong><br />» %s',
 
 	'LOG_WARNING_DELETED'		=> '<strong>Menghapus peringatan pengguna</strong><br />» %s',
-	'LOG_WARNINGS_DELETED'		=> '<strong>Menghapus %2$s peringatan pengguna</strong><br />» %1$s',
 	'LOG_WARNINGS_DELETED_ALL'	=> '<strong>Menghapus semua peringatan pengguna</strong><br />» %s',
 
 	'LOG_WORD_ADD'			=> '<strong>Manambahkan sensor kata</strong><br />» %s',
 	'LOG_WORD_DELETE'		=> '<strong>Menghapus sensor kata</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Mengubah sensor kata</strong><br />» %s',
+
+	'LOG_EXT_ENABLE'	=> '<strong>Extension enabled</strong><br />Â» %s',
+	'LOG_EXT_DISABLE'	=> '<strong>Extension disabled</strong><br />Â» %s',
+	'LOG_EXT_PURGE'		=> '<strong>Extensionâ€™s data deleted</strong><br />Â» %s',
+
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
-
 ));
 
 $lang = array_merge($lang, array(
@@ -11255,7 +11566,7 @@ $lang = array_merge($lang, array(
 	'ACP_PORTAL_WELCOME_EXPLAIN'=> '',
 	'ADM_LOGOUT'			=> 'Keluar&nbsp;Papan Pengaturan Administrasi',
 	'ADM_LOGGED_OUT'		=> 'Berhasil keluar dari Papan Pengaturan Administrasi',
-	'LOG_REFERER_INVALID'	=> '<strong>Gagal memberlakukan referer</strong><br />»Referer “<em>%1$s</em>”. Permintaan ditolak dan menghentikan sesi.',
+	'LOG_REFERER_INVALID'	=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
 
 	'ACP_ABBCODES'			=> 'BBcode Box',
 	'LOG_CONFIG_ABBCODES'	=> '<strong>Altered BBCode Box settings</strong>',
@@ -11661,7 +11972,7 @@ $lang = array_merge($lang, array(
 	'SELECT_A_PREFIX'				=> 'Select a prefix',
 	'ACP_SEOQUERYS'					=> 'SEO Queries',
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Atur Lampiran',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'=> 'Here you can list and delete files attached to posts and private messages.',
 	'LOG_ATTACH_DEL'				=> '<strong>Attachments deleted</strong><br />» %s',
 	'LOG_ATTACH_REASSIGNED'			=> '<strong>Attachment reassigned to Post</strong><br />» ID %1$d - %2$s',
 	'TOTAL_SIZE'					=> 'Total size',
@@ -11680,11 +11991,11 @@ $lang = array_merge($lang, array(
 	'ACP_INTRO'				=> 'Intro',
 
 	'ACP_MANAGE_ATTACHMENTS'		=> 'Atur Lampiran',
-	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can manage files attached to posts. You are able to delete the files or reassign them to existing posts. Reassigning to posts requires a valid post ID, you have to determine this ID by yourself. This will reassign the already assigned attachment to the post you entered.',
+	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Here you can list and delete files attached to posts and private messages.',
 	'TOTAL_SIZE'				=> 'Total size',
 	'DOWNLOADS'				=> 'Download',
 
-	'NO_AVATAR'				=> 'URL of the avatar for all the have no separate',
+	'NO_AVATAR'				=> 'No avatar selected',
 	'NO_AVATAR_EXPLAIN'			=> 'The optimal size of the avatar is 120x120px, this box is left blank, no picture at all. <br /> Demo URL: http://www.userboard.org/images/no_avatar_1.gif',
 	'GROUP_ICON'				=> 'Group Icon',
 	'GROUP_ICON_EXPLAIN'			=> 'Upload your Group Icons into Upload &#187; Topic/Group Icons',
@@ -12847,6 +13158,97 @@ $lang = array_merge($lang, array(
 	'NO_EMAIL_SUBJECT'		=> 'Tidak ada subjek e-mail yang dimasukkan.',
 ));
 
+#######language/en/acp/extensions.php#######
+
+$lang = array_merge($lang, array(
+	'EXTENSION'					=> 'Ekstensi',
+	'EXTENSIONS'				=> 'Extensions',
+	'EXTENSIONS_ADMIN'			=> 'Extensions Manager',
+	'EXTENSIONS_EXPLAIN'		=> 'The Extensions Manager is a tool in your phpBB Board which allows you to manage all of your extensions statuses and view information about them.',
+	'EXTENSION_INVALID_LIST'	=> 'The “%s” extension is not valid.<br />%s<br /><br />',
+	'EXTENSION_NOT_AVAILABLE'	=> 'The selected extension is not available for this board, please verify your phpBB and PHP versions are allowed (see the details page).',
+	'EXTENSION_DIR_INVALID'		=> 'The selected extension has an invalid directory structure and cannot be enabled.',
+	'EXTENSION_NOT_ENABLEABLE'	=> 'The selected extension cannot be enabled, please verify the extension’s requirements.',
+
+	'DETAILS'				=> 'Keterangan',
+
+	'EXTENSIONS_DISABLED'	=> 'Disabled Extensions',
+	'EXTENSIONS_ENABLED'	=> 'Enabled Extensions',
+
+	'EXTENSION_DELETE_DATA'	=> 'Delete data',
+	'EXTENSION_DISABLE'		=> 'Disable',
+	'EXTENSION_ENABLE'		=> 'Enable',
+
+	'EXTENSION_DELETE_DATA_EXPLAIN'	=> 'Deleting an extension’s data removes all of its data and settings. The extension files are retained so it can be enabled again.',
+	'EXTENSION_DISABLE_EXPLAIN'		=> 'Disabling an extension retains its files, data and settings but removes any functionality added by the extension.',
+	'EXTENSION_ENABLE_EXPLAIN'		=> 'Enabling an extension allows you to use it on your board.',
+
+	'EXTENSION_DELETE_DATA_IN_PROGRESS'	=> 'The extension’s data is currently being deleted. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_DISABLE_IN_PROGRESS'	=> 'The extension is currently being disabled. Please do not leave or refresh this page until it is completed.',
+	'EXTENSION_ENABLE_IN_PROGRESS'	=> 'The extension is currently being enabled. Please do not leave or refresh this page until it is completed.',
+
+	'EXTENSION_DELETE_DATA_SUCCESS'	=> 'The extension’s data was deleted successfully',
+	'EXTENSION_DISABLE_SUCCESS'		=> 'The extension was disabled successfully',
+	'EXTENSION_ENABLE_SUCCESS'		=> 'The extension was enabled successfully',
+
+	'EXTENSION_NAME'			=> 'Extension Name',
+	'EXTENSION_ACTIONS'			=> 'Actions',
+	'EXTENSION_OPTIONS'			=> 'Options',
+	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
+	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s files from the filesystem</li>
+			<li>Upload the new files</li>
+			<li>Enable the extension</li>
+		</ol>',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
+			<li>Disable the extension</li>
+			<li>Delete the extension’s data</li>
+			<li>Delete the extension’s files from the filesystem</li>
+		</ol>',
+
+	'EXTENSION_DELETE_DATA_CONFIRM'	=> 'Are you sure that you wish to delete the data associated with “%s”?<br /><br />This removes all of its data and settings and cannot be undone!',
+	'EXTENSION_DISABLE_CONFIRM'		=> 'Are you sure that you wish to disable the “%s” extension?',
+	'EXTENSION_ENABLE_CONFIRM'		=> 'Are you sure that you wish to enable the “%s” extension?',
+	'EXTENSION_FORCE_UNSTABLE_CONFIRM'	=> 'Are you sure that you wish to force the use of unstable version?',
+
+	'RETURN_TO_EXTENSION_LIST'	=> 'Return to the extension list',
+
+	'EXT_DETAILS'			=> 'Extension Details',
+	'DISPLAY_NAME'			=> 'Disply Name (may be NULL)',
+	'CLEAN_NAME'			=> 'Clean Name',
+	'TYPE'					=> 'Type',
+	'DESCRIPTION'			=> 'Gambaran',
+	'VERSION'				=> 'Versi',
+	'HOMEPAGE'				=> 'Homepage',
+	'PATH'					=> 'File Path',
+	'TIME'					=> 'Waktu',
+	'LICENSE'				=> 'Licence',
+
+	'REQUIREMENTS'			=> 'Requirements',
+	'PHPBB_VERSION'			=> 'phpBB Version',
+	'PHP_VERSION'			=> 'PHP Version',
+	'AUTHOR_INFORMATION'	=> 'Author Information',
+	'AUTHOR_NAME'			=> 'Name',
+	'AUTHOR_EMAIL'			=> 'Email',
+	'AUTHOR_HOMEPAGE'		=> 'Homepage',
+	'AUTHOR_ROLE'			=> 'Role',
+
+	'NOT_UP_TO_DATE'		=> '%s is not up to date',
+	'UP_TO_DATE'			=> '%s is up to date',
+	'ANNOUNCEMENT_TOPIC'	=> 'Release Announcement',
+	'DOWNLOAD_LATEST'		=> 'Download Version',
+	'NO_VERSIONCHECK'		=> 'No version check information given.',
+
+	'VERSIONCHECK_FORCE_UPDATE_ALL'		=> 'Re-Check all versions',
+	'FORCE_UNSTABLE'					=> 'Always check for unstable versions',
+	'EXTENSIONS_VERSION_CHECK_SETTINGS'	=> 'Version check settings',
+
+	'META_FIELD_NOT_SET'	=> 'Required meta field %s has not been set.',
+	'META_FIELD_INVALID'	=> 'Meta field %s is invalid.',
+));
+
 #######language/en/acp/forums.php#######
 
 $lang = array_merge($lang, array(
@@ -12856,6 +13258,10 @@ $lang = array_merge($lang, array(
 	'AUTO_PRUNE_FREQ_EXPLAIN'	=> 'Jumlah hari antara kegiatan pengurangan.',
 	'AUTO_PRUNE_VIEWED'			=> 'Pangkas secara otomatis post yang dilihat',
 	'AUTO_PRUNE_VIEWED_EXPLAIN'	=> 'Jumlah hari sejak topik dilihat setelah topik disingkirkan.',
+	'AUTO_PRUNE_SHADOW_FREQ'	=> 'Auto-prune shadow topics frequency',
+	'AUTO_PRUNE_SHADOW_DAYS'	=> 'Auto-prune shadow topics age',
+	'AUTO_PRUNE_SHADOW_DAYS_EXPLAIN'	=> 'Number of days after which shadow topic is removed.',
+	'AUTO_PRUNE_SHADOW_FREQ_EXPLAIN'	=> 'Time in days between pruning events.',
 
 	'CONTINUE'						=> 'Lanjutkan',
 	'COPY_PERMISSIONS_EXPLAIN'		=> 'Untuk melancarkan stup perijinan untuk forum baru anda, anda bisa menyalin perijinan dari forum tertentu.',
@@ -12914,6 +13320,8 @@ $lang = array_merge($lang, array(
 	'FORUM_PASSWORD_OLD'				=> 'Kata sandi forum menggunakan enkripsi yang sudah lama dan seharusnya diganti.',
 	'FORUM_PASSWORD_MISMATCH'			=> 'Kata sandi yang anda masukkan tidak tepat.',
 	'FORUM_PRUNE_SETTINGS'				=> 'Pengaturan pengurangan forum',
+	'FORUM_PRUNE_SHADOW'				=> 'Enable auto-pruning of shadow topics',
+	'FORUM_PRUNE_SHADOW_EXPLAIN'			=> 'Prunes the forum of shadow topics, set the frequency/age parameters below.',
 	'FORUM_RESYNCED'					=> 'Forum “%s” berhasil disinkronisasi ulang',
 	'FORUM_RULES_EXPLAIN'				=> 'Peraturan forum ditampilkan di setiap halaman di dalam forum tersebut.',
 	'FORUM_RULES_LINK'					=> 'Silahkan klik di sini untuk melihat peraturan forum',
@@ -13005,6 +13413,7 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGE_EXPLAIN'		=> 'Di halaman ini anda dapat mengatur semua grup pengguna. Anda bisa menghapus, membuat dan mengubah grup yang sudah ada. Untuk selanjutnya anda bisa memilih pemimpin grup, membuka, menyembunyikan dan menutup grup serta menentukan nama grup dan gambarannya.',
+	'ADD_GROUP_CATEGORY'			=> 'Add category',
 	'GROUP_ADD_USERS'				=> 'Tambahkan pengguna',
 	'ADD_USERS_EXPLAIN'				=> 'Di sini anda dapat menambahkan pengguna yang baru ke grup. Anda bisa menentukan apakah grup ini menjadi grup default pengguna tersebut. Sebagi tambahan, anda juga dapat memilih mereka sebagai pemimpin grup. Silahkan masukkan setiap nama pengguna di baris baru.',
 
@@ -13018,11 +13427,10 @@ $lang = array_merge($lang, array(
 	'GROUP_APPROVED'				=> 'Anggota diijinkan',
 	'GROUP_AVATAR'					=> 'Avatar Grup',
 	'GROUP_AVATAR_EXPLAIN'			=> 'Gambar ini akan ditampilkan di Papan Pengaturan Grup.',
+	'GROUP_CATEGORY_NAME'			=> 'Category name',
 	'GROUP_CLOSED'					=> 'Tertutup',
 	'GROUP_COLOR'					=> 'Warna grup',
 	'GROUP_COLOR_EXPLAIN'			=> 'Tentukan warna anggota yang akan ditampilkan, biarkan kosong untuk defaultnya.',
-	'GROUP_CONFIRM_ADD_USER'		=> 'Apakah anda yakin ingin menambahkan pengguna %1$s ke grup tersebut?',
-	'GROUP_CONFIRM_ADD_USERS'		=> 'Apakah anda yakin ingin menambahkan pengguna-pengguna %1$s ke grup tersebut?',
 	'GROUP_CREATED'					=> 'Grup telah berhasil dibuat.',
 	'GROUP_DEFAULT'					=> 'Buat default grup ke anggota',
 	'GROUP_DEFS_UPDATED'			=> 'Grup default dibuat untuk semua anggota yang dipilih.',
@@ -13064,6 +13472,8 @@ $lang = array_merge($lang, array(
 	'GROUP_SETTINGS_SAVE'			=> 'Pengaturan keseluruhan grup',
 	'GROUP_SKIP_AUTH'				=> 'Bebaskan pemimpin grup dari perijinan',
 	'GROUP_SKIP_AUTH_EXPLAIN'		=> 'Jika diaktifkan maka pemimpin grup tidak lagi memiliki perijinan dari grup.',
+	'GROUP_SPECIAL'					=> 'Pre-defined',
+	'GROUP_TEAMPAGE'				=> 'Display group on teampage',
 	'GROUP_TYPE'					=> 'Jenis grup',
 	'GROUP_TYPE_EXPLAIN'			=> 'Halaman ini menentukan pengguna yang bisa bergabung atau melihat grup ini.',
 	'GROUP_UPDATED'					=> 'Preferensi grup telah berhasil diperbarui.',
@@ -13072,19 +13482,37 @@ $lang = array_merge($lang, array(
 	'GROUP_USERS_EXIST'				=> 'Pengguna yang dipilih sudah menjadi anggota grup.',
 	'GROUP_USERS_REMOVE'			=> 'Pengguna telah disingkirkan dari grup dan grup default barunya telah berhasil dibuat.',
 
+	'LEGEND_EXPLAIN'				=> 'These are the groups which are displayed in the group legend:',
+	'LEGEND_SETTINGS'				=> 'Legend settings',
+	'LEGEND_SORT_GROUPNAME'			=> 'Sort legend by group name',
+	'LEGEND_SORT_GROUPNAME_EXPLAIN'	=> 'The order below is ignored when this option is enabled.',
+
+	'MANAGE_LEGEND'			=> 'Manage group legend',
+	'MANAGE_TEAMPAGE'		=> 'Manage teampage',
 	'MAKE_DEFAULT_FOR_ALL'		=> 'Buat grup default untuk setiap anggota',
 	'MEMBERS'					=> 'Anggota',
 
 	'NO_GROUP'					=> 'Grup pengguna yang diminta tidak ada.',
+	'NO_GROUPS_ADDED'			=> 'No groups added yet.',
 	'NO_GROUPS_CREATED'			=> 'Belum ada grup yang dibuat.',
 	'NO_PERMISSIONS'			=> 'Jangan salin perijinan',
 	'NO_USERS'					=> 'Tidak ada pengguna.',
 	'NO_USERS_ADDED'			=> 'Belum ada pengguna yang ditambahkan ke grup.',
 	'NO_VALID_USERS'			=> 'Anda belum memasukkan pengguna yang dipilih.',
 
+	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> 'Grup yang sudah dikenal',
 	'SPECIAL_GROUPS_EXPLAIN'	=> 'Grup yang sudah dikenal merupakan grup yang spesial, grup ini tidak dapat dihapus atau dimodifikasi. Akan tetapi anda masih dapat menambahkan dan mengubah pengaturan dasarnya.',
 
+	'TEAMPAGE'					=> 'Teampage',
+	'TEAMPAGE_DISP_ALL'			=> 'All memberships',
+	'TEAMPAGE_DISP_DEFAULT'		=> 'User’s default group only',
+	'TEAMPAGE_DISP_FIRST'		=> 'First membership only',
+	'TEAMPAGE_EXPLAIN'			=> 'These are the groups which are displayed on the teampage:',
+	'TEAMPAGE_FORUMS'			=> 'Display moderated forums',
+	'TEAMPAGE_FORUMS_EXPLAIN'	=> 'If set to yes, moderators will have a list with all of the forums where they have moderator permissions displayed in their row. This can be very database intensive for big boards.',
+	'TEAMPAGE_MEMBERSHIPS'		=> 'Display user memberships',
+	'TEAMPAGE_SETTINGS'			=> 'Teampage settings',
 	'TOTAL_MEMBERS'				=> 'Total Anggota',
 
 	'USERS_APPROVED'				=> 'Pengguna telah berhasil disetujui.',
@@ -13470,26 +13898,14 @@ $lang = array_merge($lang, array(
 	'ACP_FILES'						=> 'File-file bahasa admin',
 	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> 'Di sini anda bisa menginstal/menyingkirkan file bahasa.',
 
-	'EMAIL_FILES'			=> 'Template E-mail',
-
-	'FILE_CONTENTS'				=> 'Isi file',
-	'FILE_FROM_STORAGE'			=> 'File dari folder penyimpanan',
-
-	'HELP_FILES'				=> 'File-file pertolongan',
-
-	'INSTALLED_LANGUAGE_PACKS'	=> 'Paket bahasa yang diinstall',
-	'INVALID_LANGUAGE_PACK'		=> 'Paket bahasa yang dipilih sepertinya rusak. Silahkan Please periksa file bahasa tersebut dan upload kembali bila diperlukan.',
-	'INVALID_UPLOAD_METHOD'		=> 'Cara upload yang dipilih salah, silahkan pilih cara yang lain.',
+	'DELETE_LANGUAGE_CONFIRM'		=> 'Are you sure you wish to delete “%s”?',
+	'INSTALLED_LANGUAGE_PACKS'		=> 'Paket bahasa yang diinstall',
 
 	'LANGUAGE_DETAILS_UPDATED'			=> 'Keterangan-keterangan bahasa telah berhasil diperbarui.',
-	'LANGUAGE_ENTRIES'					=> 'Catatan bahasa',
-	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Di sini anda dapat mengganti paket bahasa yang sudah ada atau yang sudah diterjemahkan.<br /><strong>Catatan:</strong> Sekali anda mengubah file bahasa, maka pengubahan tersebut akan disimpan dalam folder terpisah untuk download. Pengubahan tersebut tidak dpat dilihat oleh pengguna lain sebelum anda menimpa file asli ke workspace anda (dengan mengupload).',
-	'LANGUAGE_FILES'					=> 'File-file bahasa',
-	'LANGUAGE_KEY'						=> 'Tanda bahasa',
 	'LANGUAGE_PACK_ALREADY_INSTALLED'	=> 'Paket bahasa ini telah diinstal.',
-	'LANGUAGE_PACK_DELETED'				=> 'Paket bahasa <strong>%s</strong> telah berhasil disingkirkan. Semua pengguna yang memakai bahasa ini akan diubah menjadi bahasa default halaman.',
+	'LANGUAGE_PACK_DELETED'				=> 'The language pack “%s” has been removed successfully. All users using this language have been reset to the board’s default language.',
 	'LANGUAGE_PACK_DETAILS'				=> 'Keterangan paket bahasa',
-	'LANGUAGE_PACK_INSTALLED'			=> 'Paket bahasa <strong>%s</strong> telah berhasil diinstal.',
+	'LANGUAGE_PACK_INSTALLED'			=> 'The language pack “%s” has been successfully installed.',
 	'LANGUAGE_PACK_CPF_UPDATE'			=> 'The custom profile fields’ language strings were copied from the default language. Please change them if necessary.',
 	'LANGUAGE_PACK_ISO'					=> 'ISO',
 	'LANGUAGE_PACK_LOCALNAME'			=> 'Nama lokal',
@@ -13502,33 +13918,44 @@ $lang = array_merge($lang, array(
 	'LANG_ISO_CODE'						=> 'Kode ISO',
 	'LANG_LOCAL_NAME'					=> 'Nama lokal',
 
-	'MISSING_LANGUAGE_FILE'		=> 'File bahasa hilang: <strong style="color:red">%s</strong>',
+	'MISSING_LANG_FILES'		=> 'Missing language files',
 	'MISSING_LANG_VARIABLES'	=> 'Variable bahasa hilang',
-	'MODS_FILES'				=> 'File-file bahasa MOD',
 
 	'NO_FILE_SELECTED'				=> 'Anda belum menentukan file bahasa.',
 	'NO_LANG_ID'					=> 'Anda belum menentukan paket bahasa.',
-	'NO_REMOVE_DEFAULT_LANG'		=> 'Anda tidak dapat menyingkirkan pake bahasa default.<br />Jika anda ingin menyingkirkan paket bahasa ini, silahkan ubah bahasa default halaman terlebih dahulu.',
+	'NO_REMOVE_DEFAULT_LANG'		=> 'You are not able to remove the default language pack.<br />If you want to remove this language pack, change your board’s default language first.',
 	'NO_UNINSTALLED_LANGUAGE_PACKS'	=> 'Tidak ada paket bahasa yang diuninstal',
 
-	'REMOVE_FROM_STORAGE_FOLDER'		=> 'Singkirkan dari folder penyimpanan',
-
-	'SELECT_DOWNLOAD_FORMAT'	=> 'Pilih format arsip download',
-	'SUBMIT_AND_DOWNLOAD'		=> 'Ajukan dan download file',
-	'SUBMIT_AND_UPLOAD'			=> 'Ajukan dan upload file',
-
-	'THOSE_MISSING_LANG_FILES'			=> 'File bahasa berikut ini hilang dari %s folder bahasa',
-	'THOSE_MISSING_LANG_VARIABLES'		=> 'Variabel bahasa berikut ini hilang dari <strong>%s</strong> paket bahasa',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 
 	'UNINSTALLED_LANGUAGE_PACKS'	=> 'Paket bahasa diuninstal',
 
+	// 3.0.12
+	'EMAIL_FILES'			=> 'Template E-mail',
+	'FILE_CONTENTS'				=> 'Isi file',
+	'FILE_FROM_STORAGE'			=> 'File dari folder penyimpanan',
+	'HELP_FILES'				=> 'File-file pertolongan',
+	'INSTALLED_LANGUAGE_PACKS'	=> 'Paket bahasa yang diinstall',
+	'INVALID_LANGUAGE_PACK'		=> 'Paket bahasa yang dipilih sepertinya rusak. Silahkan Please periksa file bahasa tersebut dan upload kembali bila diperlukan.',
+	'INVALID_UPLOAD_METHOD'		=> 'Cara upload yang dipilih salah, silahkan pilih cara yang lain.',
+	'LANGUAGE_ENTRIES'					=> 'Catatan bahasa',
+	'LANGUAGE_ENTRIES_EXPLAIN'			=> 'Di sini anda dapat mengganti paket bahasa yang sudah ada atau yang sudah diterjemahkan.<br /><strong>Catatan:</strong> Sekali anda mengubah file bahasa, maka pengubahan tersebut akan disimpan dalam folder terpisah untuk download. Pengubahan tersebut tidak dpat dilihat oleh pengguna lain sebelum anda menimpa file asli ke workspace anda (dengan mengupload).',
+	'LANGUAGE_FILES'					=> 'File-file bahasa',
+	'LANGUAGE_KEY'						=> 'Tanda bahasa',
+	'MISSING_LANGUAGE_FILE'		=> 'File bahasa hilang: <strong style="color:red">%s</strong>',
+	'SELECT_DOWNLOAD_FORMAT'	=> 'Pilih format arsip download',
+	'SUBMIT_AND_DOWNLOAD'		=> 'Ajukan dan download file',
+	'SUBMIT_AND_UPLOAD'			=> 'Ajukan dan upload file',
+	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
 	'UNABLE_TO_WRITE_FILE'		=> 'File tersebut tidak dapat ditulis ke %s.',
 	'UPLOAD_COMPLETED'			=> 'Upload telah berhasil.',
 	'UPLOAD_FAILED'				=> 'Upload telah gagal dengan alasan yang tidak diketahui. Anda perlu mengganti file tersebut secara manual.',
 	'UPLOAD_METHOD'				=> 'Metode upload',
 	'UPLOAD_SETTINGS'			=> 'Upload pengaturan',
-
 	'WRONG_LANGUAGE_FILE'		=> 'File bahasa yang dipilih salah.',
+	// 3.0.12
 ));
 
 #######language/en/acp/lexicon.php#######
@@ -13861,6 +14288,171 @@ $lang = array_merge($lang, array(
 	'ROLE_DESCRIPTION_ADMIN_FOOTBALL'	=> 'Can edit final match results.',
 ));
 
+#######language/en/acp/permissions_phpbb.php#######
+
+$lang = array_merge($lang, array(
+	'ACL_CAT_ACTIONS'		=> 'Actions',
+	'ACL_CAT_CONTENT'		=> 'Content',
+	'ACL_CAT_FORUMS'		=> 'Forums',
+	'ACL_CAT_MISC'			=> 'Misc',
+	'ACL_CAT_PERMISSIONS'	=> 'Permissions',
+	'ACL_CAT_PM'			=> 'Private messages',
+	'ACL_CAT_POLLS'			=> 'Polls',
+	'ACL_CAT_POST'			=> 'Post',
+	'ACL_CAT_POST_ACTIONS'	=> 'Post actions',
+	'ACL_CAT_POSTING'		=> 'Posting',
+	'ACL_CAT_PROFILE'		=> 'Profile',
+	'ACL_CAT_SETTINGS'		=> 'Settings',
+	'ACL_CAT_TOPIC_ACTIONS'	=> 'Topic actions',
+	'ACL_CAT_USER_GROUP'	=> 'Users &amp; Groups',
+));
+
+// User Permissions
+$lang = array_merge($lang, array(
+	'ACL_U_VIEWPROFILE'	=> 'Can view profiles, memberlist and online list',
+	'ACL_U_CHGNAME'		=> 'Can change username',
+	'ACL_U_CHGPASSWD'	=> 'Can change password',
+	'ACL_U_CHGEMAIL'	=> 'Can change email address',
+	'ACL_U_CHGAVATAR'	=> 'Can change avatar',
+	'ACL_U_CHGGRP'		=> 'Can change default usergroup',
+	'ACL_U_CHGPROFILEINFO'	=> 'Can change profile field information',
+
+	'ACL_U_ATTACH'		=> 'Can attach files',
+	'ACL_U_DOWNLOAD'	=> 'Can download files',
+	'ACL_U_SAVEDRAFTS'	=> 'Can save drafts',
+	'ACL_U_CHGCENSORS'	=> 'Can disable word censors',
+	'ACL_U_SIG'			=> 'Can use signature',
+
+	'ACL_U_SENDPM'		=> 'Can send private messages',
+	'ACL_U_MASSPM'		=> 'Can send messages to multiple users',
+	'ACL_U_MASSPM_GROUP'=> 'Can send messages to groups',
+	'ACL_U_READPM'		=> 'Can read private messages',
+	'ACL_U_PM_EDIT'		=> 'Can edit own private messages',
+	'ACL_U_PM_DELETE'	=> 'Can remove private messages from own folder',
+	'ACL_U_PM_FORWARD'	=> 'Can forward private messages',
+	'ACL_U_PM_EMAILPM'	=> 'Can email private messages',
+	'ACL_U_PM_PRINTPM'	=> 'Can print private messages',
+	'ACL_U_PM_ATTACH'	=> 'Can attach files in private messages',
+	'ACL_U_PM_DOWNLOAD'	=> 'Can download files in private messages',
+	'ACL_U_PM_BBCODE'	=> 'Can use BBCode in private messages',
+	'ACL_U_PM_SMILIES'	=> 'Can use smilies in private messages',
+	'ACL_U_PM_IMG'		=> 'Can use [img] BBCode tag in private messages',
+	'ACL_U_PM_FLASH'	=> 'Can use [flash] BBCode tag in private messages',
+
+	'ACL_U_SENDEMAIL'	=> 'Can send emails',
+	'ACL_U_SENDIM'		=> 'Can send instant messages',
+	'ACL_U_IGNOREFLOOD'	=> 'Can ignore flood limit',
+	'ACL_U_HIDEONLINE'	=> 'Can hide online status',
+	'ACL_U_VIEWONLINE'	=> 'Can view hidden online users',
+	'ACL_U_SEARCH'		=> 'Can search board',
+));
+
+// Forum Permissions
+$lang = array_merge($lang, array(
+	'ACL_F_LIST'		=> 'Can see forum',
+	'ACL_F_READ'		=> 'Can read forum',
+	'ACL_F_SEARCH'		=> 'Can search the forum',
+	'ACL_F_SUBSCRIBE'	=> 'Can subscribe forum',
+	'ACL_F_PRINT'		=> 'Can print topics',
+	'ACL_F_EMAIL'		=> 'Can email topics',
+	'ACL_F_BUMP'		=> 'Can bump topics',
+	'ACL_F_USER_LOCK'	=> 'Can lock own topics',
+	'ACL_F_DOWNLOAD'	=> 'Can download files',
+	'ACL_F_REPORT'		=> 'Can report posts',
+
+	'ACL_F_POST'		=> 'Can start new topics',
+	'ACL_F_STICKY'		=> 'Can post stickies',
+	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_REPLY'		=> 'Can reply to topics',
+	'ACL_F_EDIT'		=> 'Can edit own posts',
+	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
+	'ACL_F_SOFTDELETE'	=> 'Can soft delete own posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_F_IGNOREFLOOD' => 'Can ignore flood limit',
+	'ACL_F_POSTCOUNT'	=> 'Increment post counter<br /><em>Please note that this setting only affects new posts.</em>',
+	'ACL_F_NOAPPROVE'	=> 'Can post without approval',
+
+	'ACL_F_ATTACH'		=> 'Can attach files',
+	'ACL_F_ICONS'		=> 'Can use topic/post icons',
+	'ACL_F_BBCODE'		=> 'Can use BBCode',
+	'ACL_F_FLASH'		=> 'Can use [flash] BBCode tag',
+	'ACL_F_IMG'			=> 'Can use [img] BBCode tag',
+	'ACL_F_SIGS'		=> 'Can use signatures',
+	'ACL_F_SMILIES'		=> 'Can use smilies',
+
+	'ACL_F_POLL'		=> 'Can create polls',
+	'ACL_F_VOTE'		=> 'Can vote in polls',
+	'ACL_F_VOTECHG'		=> 'Can change existing vote',
+));
+
+// Moderator Permissions
+$lang = array_merge($lang, array(
+	'ACL_M_EDIT'		=> 'Can edit posts',
+	'ACL_M_DELETE'		=> 'Can permanently delete posts',
+	'ACL_M_SOFTDELETE'	=> 'Can soft delete posts<br /><em>Moderators, who have the approve posts permission, can restore soft deleted posts.</em>',
+	'ACL_M_APPROVE'		=> 'Can approve and restore posts',
+	'ACL_M_REPORT'		=> 'Can close and delete reports',
+	'ACL_M_CHGPOSTER'	=> 'Can change post author',
+
+	'ACL_M_MOVE'	=> 'Can move topics',
+	'ACL_M_LOCK'	=> 'Can lock topics',
+	'ACL_M_SPLIT'	=> 'Can split topics',
+	'ACL_M_MERGE'	=> 'Can merge topics',
+
+	'ACL_M_INFO'	=> 'Can view post details',
+	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+));
+
+// Admin Permissions
+$lang = array_merge($lang, array(
+	'ACL_A_BOARD'		=> 'Can alter board settings/check for updates',
+	'ACL_A_SERVER'		=> 'Can alter server/communication settings',
+	'ACL_A_JABBER'		=> 'Can alter Jabber settings',
+	'ACL_A_PHPINFO'		=> 'Can view php settings',
+
+	'ACL_A_FORUM'		=> 'Can manage forums',
+	'ACL_A_FORUMADD'	=> 'Can add new forums',
+	'ACL_A_FORUMDEL'	=> 'Can delete forums',
+	'ACL_A_PRUNE'		=> 'Can prune forums',
+
+	'ACL_A_ICONS'		=> 'Can alter topic/post icons and smilies',
+	'ACL_A_WORDS'		=> 'Can alter word censors',
+	'ACL_A_BBCODE'		=> 'Can define BBCode tags',
+	'ACL_A_ATTACH'		=> 'Can alter attachment related settings',
+
+	'ACL_A_USER'		=> 'Can manage users<br /><em>This also includes seeing the users browser agent within the viewonline list.</em>',
+	'ACL_A_USERDEL'		=> 'Can delete/prune users',
+	'ACL_A_GROUP'		=> 'Can manage groups',
+	'ACL_A_GROUPADD'	=> 'Can add new groups',
+	'ACL_A_GROUPDEL'	=> 'Can delete groups',
+	'ACL_A_RANKS'		=> 'Can manage ranks',
+	'ACL_A_PROFILE'		=> 'Can manage custom profile fields',
+	'ACL_A_NAMES'		=> 'Can manage disallowed names',
+	'ACL_A_BAN'			=> 'Can manage bans',
+
+	'ACL_A_VIEWAUTH'	=> 'Can view permission masks',
+	'ACL_A_AUTHGROUPS'	=> 'Can alter permissions for individual groups',
+	'ACL_A_AUTHUSERS'	=> 'Can alter permissions for individual users',
+	'ACL_A_FAUTH'		=> 'Can alter forum permission class',
+	'ACL_A_MAUTH'		=> 'Can alter moderator permission class',
+	'ACL_A_AAUTH'		=> 'Can alter admin permission class',
+	'ACL_A_UAUTH'		=> 'Can alter user permission class',
+	'ACL_A_ROLES'		=> 'Can manage roles',
+	'ACL_A_SWITCHPERM'	=> 'Can use others permissions',
+
+	'ACL_A_STYLES'		=> 'Can manage styles',
+	'ACL_A_EXTENSIONS'	=> 'Can manage extensions',
+	'ACL_A_VIEWLOGS'	=> 'Can view logs',
+	'ACL_A_CLEARLOGS'	=> 'Can clear logs',
+	'ACL_A_MODULES'		=> 'Can manage modules',
+	'ACL_A_LANGUAGE'	=> 'Can manage language packs',
+	'ACL_A_EMAIL'		=> 'Can send mass email',
+	'ACL_A_BOTS'		=> 'Can manage bots',
+	'ACL_A_REASONS'		=> 'Can manage report/denial reasons',
+	'ACL_A_BACKUP'		=> 'Can backup/restore database',
+	'ACL_A_SEARCH'		=> 'Can manage search backends and settings',
+));
+
 #######language/en/acp/phpbb_seo.php#######
 
 $lang = array_merge($lang, array(
@@ -14032,6 +14624,7 @@ $lang = array_merge($lang, array(
 
 	'BBCODE_ADDED'				=> 'BBCode berhasil ditambahkan.',
 	'BBCODE_EDITED'				=> 'BBCode berhasil diubah.',
+	'BBCODE_DELETED'			=> 'The BBCode has been removed successfully.',
 	'BBCODE_NOT_EXIST'			=> 'BBCode yang anda pilih tidak ada.',
 	'BBCODE_HELPLINE'			=> 'Baris bantuan',
 	'BBCODE_HELPLINE_EXPLAIN'	=> 'Field ini berisi teks mouse over dari BBCode.',
@@ -14087,17 +14680,10 @@ $lang = array_merge($lang, array(
 	'EXPORT_SMILIES'			=> 'Ekspor dan download icons.pak',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sDengan mengklik link ini, konfigurasi untuk tanda senyuman anda yang terinstal akan dikemas menjadi <samp>smilies.pak</samp> yang bisa digunakan untuk membuat sebuah file <samp>.zip</samp> atatu <samp>.tgz</samp> yang mengandung semua ikon anda ditambah file konfigurasi <samp>smilies.pak</samp> ini%s.',
 
-
 	'ICONS_ADD'				=> 'Tambahkan ikon baru',
-	'ICONS_NONE_ADDED'		=> 'Tidak ada ikon yang ditambahkan.',
-	'ICONS_ONE_ADDED'		=> 'Ikon tersebut telah berhasil ditambahkan.',
-	'ICONS_ADDED'			=> 'Ikon tersebut telah berhasil ditambahkan.',
 	'ICONS_CONFIG'			=> 'Konfigurasi ikon',
 	'ICONS_DELETED'			=> 'Ikon tersebut telah berhasil disingkirkan.',
 	'ICONS_EDIT'			=> 'Ubah ikon',
-	'ICONS_ONE_EDITED'		=> 'Ikon tersebut telah berhasil diubah.',
-	'ICONS_NONE_EDITED'		=> 'Tidak ada ikon yang diperbarui.',
-	'ICONS_EDITED'			=> 'Ikon tersebut telah berhasil diperbarui.',
 	'ICONS_HEIGHT'			=> 'Tinggi ikon',
 	'ICONS_IMAGE'			=> 'Gambar ikon',
 	'ICONS_IMPORTED'		=> 'Paket ikon telah berhasil diinstal.',
@@ -14127,9 +14713,6 @@ $lang = array_merge($lang, array(
 
 	'SELECT_PACKAGE'			=> 'Pilih sebuah paket file',
 	'SMILIES_ADD'				=> 'Tambahkan sebuah tanda senyuman yang baru',
-	'SMILIES_NONE_ADDED'		=> 'Tidak ada tanda senyuman yang ditambahkan.',
-	'SMILIES_ONE_ADDED'			=> 'Tanda senyuman telah berhasil ditambahkan.',
-	'SMILIES_ADDED'				=> 'Tanda senyuman telah berhasil ditambahkan.',
 	'SMILIES_CODE'				=> 'Kode tanda senyuman',
 	'SMILIES_CONFIG'			=> 'Konfigurasi tanda senyuman',
 	'SMILIES_DELETED'			=> 'Tanda senyuman telah berhasil disingkirkan.',
@@ -14137,9 +14720,6 @@ $lang = array_merge($lang, array(
 	'SMILIE_NO_CODE'			=> 'Tanda senyuman “%s”  dibaikan, karena tidak ada kode yang dimasukkan.',
 	'SMILIE_NO_EMOTION'			=> 'Tanda senyuman “%s” dibaikan, karena tidak ada tanda emosi yang dimasukkan.',
 	'SMILIE_NO_FILE'			=> 'Tanda senyuman “%s” diabaikan, kerena berkas hilang.',
-	'SMILIES_NONE_EDITED'		=> 'Tidak ada tanda senyuman yang diperbarui.',
-	'SMILIES_ONE_EDITED'		=> 'Tanda senyuman telah berhasil diperbarui.',
-	'SMILIES_EDITED'			=> 'Tanda senyuman telah berhasil diperbarui.',
 	'SMILIES_EMOTION'			=> 'Tanda emosi',
 	'SMILIES_HEIGHT'			=> 'Tinggi tanda senyuman',
 	'SMILIES_IMAGE'				=> 'Gambar tanda senyuman',
@@ -14151,7 +14731,6 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'File gambar tanda senyuman',
 	'SMILIES_WIDTH'				=> 'Lebar tanda senyuman',
 
-	'TOO_MANY_SMILIES'		=> 'Pesan anda mengandung tanda senyuman yang terlalu banyak. Jumlah maksimum tanda senyuman yang diijinkan adalah %d.',
 	'WRONG_PAK_TYPE'		=> 'Paket yang ditentukan tidak mengandung data yang sesuai.',
 ));
 
@@ -14249,8 +14828,11 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ADDED_PROFILE_FIELD'	=> 'Berhasil menambahkan isian custom profil.',
+	'ALPHA_DOTS'			=> 'Alphanumeric and dots (periods)',
 	'ALPHA_ONLY'			=> 'Hanya alpanumerik',
 	'ALPHA_SPACERS'			=> 'Spasi dan alpanumerik',
+	'ALPHA_UNDERSCORE'		=> 'Alphanumeric and underscores',
+	'ALPHA_PUNCTUATION'		=> 'Alphanumeric with comma, dots, underscore and dashes beginning with a letter',
 	'ALWAYS_TODAY'			=> 'Selalu tanggal sekarang',
 
 	'BOOL_ENTRIES_EXPLAIN'	=> 'Masukkan pilihan anda sekarang',
@@ -14277,6 +14859,10 @@ $lang = array_merge($lang, array(
 	'DISPLAY_AT_PROFILE_EXPLAIN'	=> 'Pengguna ini dapat mengganti isian profil melalui papan pengaturan pengguna.',
 	'DISPLAY_AT_REGISTER'			=> 'Tampilkan di halaman pendaftaran',
 	'DISPLAY_AT_REGISTER_EXPLAIN'	=> 'Jika pilihan ini diaktifkan, maka isian akan ditampilkan pada halaman pendaftaran dan dapat diganti melalui papan pengaturan pengguna.',
+	'DISPLAY_ON_MEMBERLIST'			=> 'Display on memberlist screen',
+	'DISPLAY_ON_MEMBERLIST_EXPLAIN'	=> 'If this option is enabled, the field will be displayed in the user rows on the memberlist screen.',
+	'DISPLAY_ON_PM'					=> 'Display on view private message screen',
+	'DISPLAY_ON_PM_EXPLAIN'			=> 'If this option is enabled, the field will be displayed in the mini-profile on the private message screen.',
 	'DISPLAY_ON_VT'					=> 'Tampilan pada layar viewtopic',
 	'DISPLAY_ON_VT_EXPLAIN'			=> 'JIka pilihan ini diaktifkan, maka isian akan ditampilkan pada mini-profile pada layar topik.',
 	'DISPLAY_PROFILE_FIELD'			=> 'Publikasikan tampilan isian profil',
@@ -14290,20 +14876,26 @@ $lang = array_merge($lang, array(
 	'EVERYTHING_OK'					=> 'Semuanya bagus',
 
 	'FIELD_BOOL'				=> 'Boolean (Ya/Tidak)',
+	'FIELD_CONTACT_DESC'		=> 'Contact description',
+	'FIELD_CONTACT_URL'			=> 'Contact link',
 	'FIELD_DATE'				=> 'Tanggal',
 	'FIELD_DESCRIPTION'			=> 'Keterangan Isian',
 	'FIELD_DESCRIPTION_EXPLAIN'	=> 'Keterangan untuk isian ini yang ditampilkan kepada pengguna.',
 	'FIELD_DROPDOWN'			=> 'Dropdown box',
+	'FIELD_GOOGLEPLUS'			=> 'Google+',
 	'FIELD_IDENT'				=> 'Identifikasi isian',
 	'FIELD_IDENT_ALREADY_EXIST'	=> 'Identifikasi isian yang dipilih sudah ada. Silahkan pilih nama yang lain.',
 	'FIELD_IDENT_EXPLAIN'		=> 'Identifikasi isian adalah sebuah nama untuk mengidentifikasikan isian profil dalam database dan template.',
 	'FIELD_INT'					=> 'Nomor',
+	'FIELD_IS_CONTACT'			=> 'Display field as a contact field',
+	'FIELD_IS_CONTACT_EXPLAIN'	=> 'Contact fields are displayed within the contact section of the user profile and are displayed differently in the mini profile next to posts and private messages. You can use <samp>%s</samp> as a placeholder variable which will be replaced by a value provided by the user.',
 	'FIELD_LENGTH'				=> 'panjang input box',
 	'FIELD_NOT_FOUND'			=> 'Isian profil tidak ditemukan.',
 	'FIELD_STRING'				=> 'Isian Singletext',
 	'FIELD_TEXT'				=> 'Textarea',
 	'FIELD_TYPE'				=> 'Tipe isian',
 	'FIELD_TYPE_EXPLAIN'		=> 'Anda tidak dapat tipe isian nantinya.',
+	'FIELD_URL'					=> 'URL (Link)',
 	'FIELD_VALIDATION'			=> 'Validasi isian',
 	'FIRST_OPTION'				=> 'Pilihan pertama',
 
@@ -14315,6 +14907,12 @@ $lang = array_merge($lang, array(
 	'ISO_LANGUAGE'				=> 'Bahasa [%s]',
 
 	'LANG_SPECIFIC_OPTIONS'		=> 'Pilihan spesifik bahasa [<strong>%s</strong>]',
+
+	'LETTER_NUM_DOTS'			=> 'Any letters, numbers and dots (periods)',
+	'LETTER_NUM_ONLY'			=> 'Any letters and numbers',
+	'LETTER_NUM_PUNCTUATION'	=> 'Any letters, numbers, comma, dots, underscores and dashes beginning with any letter',
+	'LETTER_NUM_SPACERS'		=> 'Any letters, numbers and spacers',
+	'LETTER_NUM_UNDERSCORE'		=> 'Any letters, numbers and underscores',
 
 	'MAX_FIELD_CHARS'		=> 'Jumlah maksimum karakter',
 	'MAX_FIELD_NUMBER'		=> 'Nomor tertinggi yang diijinkan',
@@ -14369,7 +14967,9 @@ $lang = array_merge($lang, array(
 #######language/en/acp/prune.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_PRUNE_USERS_EXPLAIN'	=> 'Di sini anda dapat menghapus (atau menonaktifkan) pengguna dari halaman anda. Hal ini dapat dilaksanakan dengan beberapa cara yaitu; dengan jumlah post, saat aktif terakhir kali dsb. Setiap kriteria ini bisa dikombinasikan, sebagi contoh anda dapat mengurangi pengguna yang terkhir aktif sebelum 2002-01-01 dengan jumlah post yang lebih kecil dari 10. Sebagai alternatif anda bisa memasukkan daftar pengguna secara langsung ke dalam kotak teks, kriteria lain yang dimasukkan akan diabaikan. Mohon berhati-hati untuk menggunakan fasilitas ini! Jika pengguna dihapus maka tidak ada satupun cara untuk mengembalikannya.',
+	'ACP_PRUNE_USERS_EXPLAIN'	=> 'This section allows you to delete or deactivate users on your board. Accounts can be filtered in a variety of ways; by post count, most recent activity, etc. Criteria may be combined to narrow down which accounts are affected. For example, you can prune users with fewer than 10 posts, who were also inactive after 2002-01-01. Use * as a wildcard for text fields. Alternatively, you may skip the criteria selection completely by entering a list of users (each on a separate line) into the text field. Take care with this facility! Once a user is deleted, there is no way to reverse the action.',
+
+	'CRITERIA'				=> 'Criteria',
 
 	'DEACTIVATE_DELETE'			=> 'Nonaktifkan atau hapus',
 	'DEACTIVATE_DELETE_EXPLAIN'	=> 'Pilihlah pengguna yang ingin dinonaktifkan atau dihapus seluruhnya, mohon dicatat bahwa ini tidak bisa diulangi!',
@@ -14377,15 +14977,18 @@ $lang = array_merge($lang, array(
 	'DELETE_USER_POSTS'			=> 'Hapus atau kurangi post pengguna',
 	'DELETE_USER_POSTS_EXPLAIN'	=> 'Singkirkan post yang dibuat oleh pengguna yang dihapus, tidak ada efek apa-apa apabila pengguna ini dinonaktifkan.',
 
-	'JOINED_EXPLAIN'			=> 'Masukkan tanggal dalam format <kbd>TTTT-BB-HH</kbd>.',
+	'JOINED_EXPLAIN'			=> 'Enter a date in <kbd>YYYY-MM-DD</kbd> format. You may use both fields to specify an interval, or leave one blank for an open date range.',
 
 	'LAST_ACTIVE_EXPLAIN'		=> 'Masukkan tanggal dalam format <kbd>TTTT-BB-HH</kbd>.',
 
+	'POSTS_ON_QUEUE'			=> 'Posts Awaiting Approval',
+	'PRUNE_USERS_GROUP_EXPLAIN'	=> 'Limit to users within the selected group.',
+	'PRUNE_USERS_GROUP_NONE'	=> 'All groups',
 	'PRUNE_USERS_LIST'				=> 'Pengguna yang akan dikurangi',
-	'PRUNE_USERS_LIST_DELETE'		=> 'Dengan ktiteria yang dipilih untuk pengurangan pengguna maka account akan disingkirkan.',
-	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'Dengan kriteria yang dipilih untuk pengurangan pengguna, account berikut ini akan dinonaktifkan.',
+	'PRUNE_USERS_LIST_DELETE'		=> 'With the selected critera for pruning users the following accounts will be removed. You can remove individual users from the deletion list by unchecking the box next to their username.',
+	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'With the selected critera for pruning users the following accounts will be deactivated. You can remove individual users from the deactivation list by unchecking the box next to their username.',
 
-	'SELECT_USERS_EXPLAIN'		=> 'Masukkan nama pengguna yang ditentukan di sini, nama tersebut akan digunakan dalam pilihan kriteria di bwah ini.',
+	'SELECT_USERS_EXPLAIN'		=> 'Enter specific usernames here. They will be used in preference to the criteria above. Founders cannot be pruned.',
 
 	'USER_DEACTIVATE_SUCCESS'	=> 'Pengguna yang dipilih telah berhasil dinonaktifkan.',
 	'USER_DELETE_SUCCESS'		=> 'Pengguna yang dipilih telah berhasil dihapus.',
@@ -14432,15 +15035,38 @@ $lang = array_merge($lang, array(
 	'DELETING_INDEX_IN_PROGRESS'			=> 'Penghapusan indeks sedang dalam progres',
 	'DELETING_INDEX_IN_PROGRESS_EXPLAIN'	=> 'Backend pencarian sedang membersihkan indeksnya. Ini bisa berlangsung dalm beberapa menit.',
 
-	'FULLTEXT_MYSQL_INCOMPATIBLE_VERSION'	=> 'MySQL backend fulltext hanya dapat digunakan dengan MySQL4 dan versi di atasnya.',
+	'FULLTEXT_MYSQL_INCOMPATIBLE_DATABASE'	=> 'The MySQL fulltext backend can only be used with MySQL4 and above.',
 	'FULLTEXT_MYSQL_NOT_MYISAM'				=> 'MySQL indeks fulltext hanya dapat digunakan dengan table MyISAM.',
 	'FULLTEXT_MYSQL_TOTAL_POSTS'			=> 'Jumlah total post indeks',
-	'FULLTEXT_MYSQL_MBSTRING'				=> 'Mendukung karakter UTF-8 non-latin menggunakan mbstring:',
-	'FULLTEXT_MYSQL_PCRE'					=> 'Mendukung karakter UTF-8 non-latin menggunakan PCRE:',
-	'FULLTEXT_MYSQL_MBSTRING_EXPLAIN'		=> 'Jika PCRE tidak memiliki properti karakter unicode, backend pencarian akan mencoba menggunakan mesin ekspresi mbstring biasa.',
-	'FULLTEXT_MYSQL_PCRE_EXPLAIN'			=> 'Backend pencarian ini membutuhkan properti karakter unicode PCRE, hanya tersedia di 4.4, 5.1 dan versi di atasnya, jika anda ingin mencari karakter non-latin.',
 	'FULLTEXT_MYSQL_MIN_SEARCH_CHARS_EXPLAIN'	=> 'Kata-kata dengan jumlah paling tidak sebanyak karakter ini akan diindeks untuk pencarian. Anda ataupun host anda hanya bisa mengubah pengaturan ini dengan mengubah konfigurasi mysql.',
 	'FULLTEXT_MYSQL_MAX_SEARCH_CHARS_EXPLAIN'	=> 'Kata kata dengan jumlah yang tidak lebih banyak dari karakter ini akan diindeks untuk pencarian. Anda ataupun host anda hanya bisa mengubah pengaturan ini dengan mengubah konfigurasi mysql.',
+
+	'FULLTEXT_POSTGRES_INCOMPATIBLE_DATABASE'	=> 'The PostgreSQL fulltext backend can only be used with PostgreSQL.',
+	'FULLTEXT_POSTGRES_TOTAL_POSTS'			=> 'Total number of indexed posts',
+	'FULLTEXT_POSTGRES_VERSION_CHECK'		=> 'PostgreSQL version',
+	'FULLTEXT_POSTGRES_TS_NAME'				=> 'Text search Configuration Profile:',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN'			=> 'Minimum word length for keywords',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN'			=> 'Maximum word length for keywords',
+	'FULLTEXT_POSTGRES_VERSION_CHECK_EXPLAIN'		=> 'This search backend requires PostgreSQL version 8.3 and above.',
+	'FULLTEXT_POSTGRES_TS_NAME_EXPLAIN'				=> 'The Text search configuration profile used to determine the parser and dictionary.',
+	'FULLTEXT_POSTGRES_MIN_WORD_LEN_EXPLAIN'			=> 'Words with at least this many characters will be included in the query to the database.',
+	'FULLTEXT_POSTGRES_MAX_WORD_LEN_EXPLAIN'			=> 'Words with no more than this many characters will be included in the query to the database.',
+
+	'FULLTEXT_SPHINX_CONFIGURE'				=> 'Configure the following settings to generate sphinx config file',
+	'FULLTEXT_SPHINX_DATA_PATH'				=> 'Path to data directory',
+	'FULLTEXT_SPHINX_DATA_PATH_EXPLAIN'		=> 'It will be used to store the indexes and log files. You should create this directory outside the web accessible directories. (should have a trailing slash)',
+	'FULLTEXT_SPHINX_DELTA_POSTS'			=> 'Number of posts in frequently updated delta index',
+	'FULLTEXT_SPHINX_HOST'					=> 'Sphinx search daemon host',
+	'FULLTEXT_SPHINX_HOST_EXPLAIN'			=> 'Host on which the sphinx search daemon (searchd) listens. Leave empty to use the default localhost',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT'		=> 'Indexer memory limit',
+	'FULLTEXT_SPHINX_INDEXER_MEM_LIMIT_EXPLAIN'	=> 'This number should at all times be lower than the RAM available on your machine. If you experience periodic performance problems this might be due to the indexer consuming too many resources. It might help to lower the amount of memory available to the indexer.',
+	'FULLTEXT_SPHINX_MAIN_POSTS'			=> 'Number of posts in main index',
+	'FULLTEXT_SPHINX_PORT'					=> 'Sphinx search daemon port',
+	'FULLTEXT_SPHINX_PORT_EXPLAIN'			=> 'Port on which the sphinx search daemon (searchd) listens. Leave empty to use the default Sphinx API port 9312',
+	'FULLTEXT_SPHINX_WRONG_DATABASE'		=> 'The sphinx search for phpBB supports MySQL and PostgreSQL only.',
+	'FULLTEXT_SPHINX_CONFIG_FILE'			=> 'Sphinx config file',
+	'FULLTEXT_SPHINX_CONFIG_FILE_EXPLAIN'	=> 'The generated content of the sphinx config file. This data needs to be pasted into the sphinx.conf which is used by sphinx search daemon. Replace the [dbuser] and [dbpassword] placeholders with your database credentials.',
+	'FULLTEXT_SPHINX_NO_CONFIG_DATA'		=> 'The sphinx data and config directory paths are not defined. Please define them to generate the config file.',
 
 	'GENERAL_SEARCH_SETTINGS'				=> 'Pengaturan pencarian general',
 	'GO_TO_SEARCH_INDEX'					=> 'Pergi ke halaman pencarian indeks',
@@ -14465,8 +15091,6 @@ $lang = array_merge($lang, array(
 
 	'SEARCH_GUEST_INTERVAL'					=> 'Interval flood pencarian tamu',
 	'SEARCH_GUEST_INTERVAL_EXPLAIN'			=> 'Jumlah tamu kedua yang harus menunggu antar pencarian. Jika satu tamu sedang melakukan pencarian, maka semua tamu yang lain harus menunggu sampai batas interval waktu ditempuh.',
-	'SEARCH_INDEX_CREATE_REDIRECT'			=> 'Semua post sampai ke id post %1$d telah diindeks sekarang, dan id post %2$d masih dalam tahap ini.<br />Kecepatan indeks saat ini adalah kira-kira %3$.1f post per detik.<br />Indeks sedang dalam progres…',
-	'SEARCH_INDEX_DELETE_REDIRECT'			=> 'Semua post sampai ke id post %1$d telah disingkirkan dari indeks pencarian.<br />Penghapusan sedang dalam progres…',
 	'SEARCH_INDEX_CREATED'					=> 'Berhasil melakukan indeks semua post pada database halaman.',
 	'SEARCH_INDEX_REMOVED'					=> 'Berhasil menghapus indeks pencarian dari backend ini.',
 	'SEARCH_INTERVAL'						=> 'Interval flood pencarian pengguna',
@@ -14489,8 +15113,55 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
+	// 3.1.0
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
+
+	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
+	'CONFIRM_UNINSTALL_STYLES'		=> 'Are you sure you wish to uninstall selected styles?',
+	'COPYRIGHT'						=> 'Hak cipta',
+
+	'DEACTIVATE_DEFAULT'		=> 'Anda tidak dapat menonaktifkan gaya ini.',
+	'DELETE_FROM_FS'			=> 'Hapus dari sistem file',
+	'DELETE_STYLE_FILES_FAILED'	=> 'Error deleting files for style "%s".',
+	'DELETE_STYLE_FILES_SUCCESS'	=> 'Files for style "%s" have been deleted.',
+	'DETAILS'					=> 'Keterangan',
+
+	'INHERITING_FROM'			=> 'berasal dari',
+	'INSTALL_STYLE'				=> 'Instal gaya',
+	'INSTALL_STYLES'			=> 'Install styles',
+	'INSTALL_STYLES_EXPLAIN'	=> 'Here you can install new styles.<br />If you cannot find a specific style in list below, check to make sure style is already installed. If it is not installed, check if it was uploaded correctly.',
+	'INVALID_STYLE_ID'			=> 'Invalid style ID.',
+
+	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
+	'NO_UNINSTALLED_STYLE'		=> 'Tidak ada gaya yang diuninstal.',
+
+	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
+
+	'STYLE_ACTIVATE'			=> 'Aktifkan',
+	'STYLE_ACTIVE'				=> 'Aktif',
+	'STYLE_DEACTIVATE'			=> 'Nonaktifkan',
+	'STYLE_DEFAULT'				=> 'Jadikan gaya default',
+	'STYLE_DEFAULT_CHANGE_INACTIVE'	=> 'You must activate style before making it default style.',
+	'STYLE_ERR_INVALID_PARENT'	=> 'Invalid parent style.',
+	'STYLE_ERR_NAME_EXIST'		=> 'Gaya dengan nama tersebut sudah ada.',
+	'STYLE_ERR_STYLE_NAME'		=> 'Anda harus memberikan sebuah nama untuk gaya ini.',
+	'STYLE_INSTALLED'			=> 'Style "%s" has been installed.',
+	'STYLE_INSTALLED_RETURN_INSTALLED_STYLES'	=> 'Return to installed styles list',
+	'STYLE_INSTALLED_RETURN_UNINSTALLED_STYLES'	=> 'Install more styles',
+	'STYLE_NAME'				=> 'Nama gaya',
+	'STYLE_NOT_INSTALLED'		=> 'Style "%s" was not installed.',
+	'STYLE_PATH'				=> 'Style path',
+	'STYLE_UNINSTALL'			=> 'Uninstall',
+	'STYLE_UNINSTALL_DEPENDENT'	=> 'Style "%s" cannot be uninstalled because it has one or more child styles.',
+	'STYLE_UNINSTALLED'			=> 'Style "%s" uninstalled successfully.',
+	'STYLE_USED_BY'				=> 'Digunakan oleh (termasuk robot)',
+
+	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+
+	// 3.0.12
 	'ACP_IMAGESETS_EXPLAIN'	=> 'Imageset berisikan semua tombol, forum, folder dsb serta gambar spesifik lainnya yang digunakan oleh halaman. Di sini anda dapat mengubah, mengekspor, dan menghapus imageset yang sudah ada serta mengimpor dan mengaktifkan imageset yang baru.',
-	'ACP_STYLES_EXPLAIN'	=> 'Di sini anda dapat mengatur semua gaya-gaya yang tersedia pada halaman anda. Sebuah gaya terdiri dari template, thema dan imageset. Anda bisa mengubah gaya-gaya yang sudah ada, menghapus, menonaktifkan, mengaktifkan, membuat atapun mengimport yang baru. Anda juga bisa melihat gaya tersebut dengan fungsi priview. Gaya yang digunakan sekarang ini diperlihatkan dengan tanda bintang (*). Di halaman ini juga ditampilkan total dari jumlah pengguna untuk setiap gaya, dan mohon dicatat bahwa pengesampingan gaya pengguna tidak akan direfleksikan di sini.',
+	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 	'ACP_TEMPLATES_EXPLAIN'	=> 'Sebuah kumpulan template berisikan semua markup yang digunakan untuk menghasilkan tampilan untuk halaman anda. Di sini anda dapat mengubah kumpulan template, menghapus, mengekspor, mengimpor, dan melihat tampilan template. Anda juga bisa mengubah kode template yang digunakan untuk menghasilkan BBCode.',
 	'ACP_THEMES_EXPLAIN'	=> 'Di sini anda dapat membuat, menginstal, mengubah, menghapus dan mengekspot thema. Thema adalah kombinasi dari warna dan gambar yang digunakan pada template anda untuk menentukan tampilan dasar dari halaman anda. Batas pilihan yang tersedia tergantung dari konfigurasi server dan instalasi phpBB anda, silahkan lihat panduan manual untuk informasi lebi lanjut. Mohon dicatat bahwa pada saat menciptakan thema yang baru maka thema yang digunakan sekarang merupakan sebuah pilihan dasar.',
 	'ADD_IMAGESET'			=> 'Buat imageset',
@@ -14527,7 +15198,6 @@ $lang = array_merge($lang, array(
 	'CURRENT_IMAGE'					=> 'Gambar sekarang',
 
 	'DEACTIVATE_DEFAULT'		=> 'Anda tidak dapat menonaktifkan gaya ini.',
-	'DELETE_FROM_FS'			=> 'Hapus dari sistem file',
 	'DELETE_IMAGESET'			=> 'Hapus imageset',
 	'DELETE_IMAGESET_EXPLAIN'	=> 'Di sini anda dapat menyingkirkan imejset dari database. Perlu diingat bahwa tidak ada fasilitas pengembalian. Disarankan agar anda mengekspor set terlebih dulu untuk kemungkinan penggunaan di masa yang akan datang.',
 	'DELETE_STYLE'				=> 'Hapus gaya',
@@ -14724,7 +15394,6 @@ $lang = array_merge($lang, array(
 	'INCLUDE_IMAGESET'			=> 'Ikutkan imageset',
 	'INCLUDE_TEMPLATE'			=> 'Ikutkan template',
 	'INCLUDE_THEME'				=> 'Ikutkan thema',
-	'INHERITING_FROM'			=> 'berasal dari',
 	'INSTALL_IMAGESET'			=> 'Instal imageset',
 	'INSTALL_IMAGESET_EXPLAIN'	=> 'Di sini anda dapat menginstal imageset yang dipilih. Anda bisa mengubah keterangan tertentu jika anda kehendaki ataupun menggunakan default instalasi.',
 	'INSTALL_STYLE'				=> 'Instal gaya',
@@ -14754,7 +15423,6 @@ $lang = array_merge($lang, array(
 	'NO_TEMPLATE'				=> 'Tidak dapat menemukan template di filesystem.',
 	'NO_THEME'					=> 'Tidak dapat menemukan di filesystem.',
 	'NO_UNINSTALLED_IMAGESET'	=> 'Tidak ada imageset yang diuninstal.',
-	'NO_UNINSTALLED_STYLE'		=> 'Tidak ada gaya yang diuninstal.',
 	'NO_UNINSTALLED_TEMPLATE'	=> 'Tidak ada tempalate yang diuninstal.',
 	'NO_UNINSTALLED_THEME'		=> 'Tidak ada thema yang diuninstal.',
 	'NO_UNIT'					=> 'Kosong',
@@ -14794,30 +15462,22 @@ $lang = array_merge($lang, array(
 	'SELECTED_THEME_FILE'		=> 'File thema yang dipilih',
 	'STORE_DATABASE'			=> 'Database',
 	'STORE_FILESYSTEM'			=> 'Filesystem',
-	'STYLE_ACTIVATE'			=> 'Aktifkan',
-	'STYLE_ACTIVE'				=> 'Aktif',
 	'STYLE_ADDED'				=> 'Gaya berhasil ditambahkan.',
-	'STYLE_DEACTIVATE'			=> 'Nonaktifkan',
-	'STYLE_DEFAULT'				=> 'Jadikan gaya default',
 	'STYLE_DELETED'				=> 'Gaya berhasil dihapus.',
 	'STYLE_DETAILS_UPDATED'		=> 'Gaya berhasil diubah.',
 	'STYLE_ERR_ARCHIVE'			=> 'Silahkan pilih metoda arsip.',
 	'STYLE_ERR_COPY_LONG'		=> 'Hak cipta tidak boleh melebihi 60 karakter.',
 	'STYLE_ERR_MORE_ELEMENTS'	=> 'Paling sedikitnya anda harus memilih satu elemen gaya.',
 	'STYLE_ERR_NAME_CHARS'		=> 'Nama gaya hanya bisa mengandung karakter alphanumerik, -, +, _ dan spasi.',
-	'STYLE_ERR_NAME_EXIST'		=> 'Gaya dengan nama tersebut sudah ada.',
 	'STYLE_ERR_NAME_LONG'		=> 'Nama gaya tidak boleh melebihi 30 karakter.',
 	'STYLE_ERR_NO_IDS'			=> 'Anda harus memilih sebuah template, thema dan imageset untuk gaya ini.',
 	'STYLE_ERR_NOT_STYLE'		=> 'File yang diimport ataupun diupload tidak mengandung arsip gaya yang benar.',
-	'STYLE_ERR_STYLE_NAME'		=> 'Anda harus memberikan sebuah nama untuk gaya ini.',
 	'STYLE_EXPORT'				=> 'Ekspor gaya',
 	'STYLE_EXPORT_EXPLAIN'		=> 'Di sini anda dapat mengekspor gaya dalam bentuk arsip. Sebuah gaya tidak membutuhkan kandungan semua elemen gaya, paling sedikitnya harus satu elemen gaya. Sebagai contoh jika anda menciptakan thema dan imageset baru dari template yang sering digunakan, anda bisa dengan mudah mengekspor thema dan imageset tersebut tanpa mengikutsertakan templatenya. Anda bisa memilih apakah langsung mendownload file tersebut atau menyimpannya di folder untuk didownload nantinya atau melalui FTP.',
 	'STYLE_EXPORTED'			=> 'Gaya berhasil diekspor dan disimpan %s.',
 	'STYLE_IMAGESET'			=> 'Imageset',
-	'STYLE_NAME'				=> 'Nama gaya',
 	'STYLE_TEMPLATE'			=> 'Template',
 	'STYLE_THEME'				=> 'Thema',
-	'STYLE_USED_BY'				=> 'Digunakan oleh (termasuk robot)',
 
 	'TEMPLATE_ADDED'			=> 'Kumpulan template ditambahkan dan disimpan ke filesystem.',
 	'TEMPLATE_ADDED_DB'			=> 'Kumpulan template ditambahkan dan disimpan database.',
@@ -14915,6 +15575,7 @@ $lang = array_merge($lang, array(
 	'CANNOT_FORCE_REACT_FOUNDER'	=> 'Anda tidak diijinkan untuk memaksakan pengaktifan kembali untuk account pendiri.',
 	'CANNOT_FORCE_REACT_YOURSELF'	=> 'Anda tidak diijinkan untuk memaksakan pengaktifan kembali untuk account anda.',
 	'CANNOT_REMOVE_ANONYMOUS'		=> 'Anda tidak dapat menyingkirkan account tamu.',
+	'CANNOT_REMOVE_FOUNDER'			=> 'You are not allowed to remove founder accounts.',
 	'CANNOT_REMOVE_YOURSELF'		=> 'anda tidak dapat menyingkirkan account anda sendiri.',
 	'CANNOT_SET_FOUNDER_IGNORED'	=> 'anda tidak dapat mempromosikan pengguna yang diabaikan menjadi pendiri.',
 	'CANNOT_SET_FOUNDER_INACTIVE'	=> 'Anda harus mengaktifkan pengguna sebelum mempromosikan mereka menjadi pendiri, hanya pengguna yang aktif yang bisa dipromosikan.',
@@ -14941,7 +15602,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'Silahkan pilih forum untuk memindahkan semua post yang telah dibuat pengguna ini.',
 
 	'NO_SPECIAL_RANK'		=> 'Jangan gunakan ranking spesial',
-	'NO_WARNINGS'			=> 'Tidak ada peringatan.',
+	'NO_WARNINGS'			=> 'No warnings exist.',
 	'NOT_MANAGE_FOUNDER'	=> 'anda mencoba untuk mengatur pengguna dengan status pendiri. Hanya pendiri yang bisa mengatur pendiri yang lainnya.',
 
 	'QUICK_TOOLS'			=> 'Alat cepat',
