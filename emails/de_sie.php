@@ -805,22 +805,22 @@ Der folgende Grund wurde dafür angegeben:
 
 
 $email = array_merge($email, array(
-	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/topic_notify.txt' 		=> '{EMAILSUBJECT:} Benachrichtigung über neue Antwort - „{TOPIC_TITLE}“
 
-Hello {USERNAME},
+Guten Tag {USERNAME},
 
-You are receiving this notification because you are watching the topic "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply<!-- IF AUTHOR_NAME !== \'\' --> by {AUTHOR_NAME}<!-- ENDIF --> since your last visit. No more notifications will be sent until you visit the topic.
+Sie erhalten diese Benachrichtigung, weil Sie das Thema „{TOPIC_TITLE}“ auf „{SITENAME}“ abonniert haben. Seit Ihrem letzten Besuch wurde zu diesem Thema eine neue Antwort<!-- IF AUTHOR_NAME !== \'\' --> von {AUTHOR_NAME}<!-- ENDIF --> erstellt. Sie erhalten keine weitere Benachrichtigung, bis Sie das Thema besucht haben.
 
-If you want to view the newest post made since your last visit, click the following link:
+Sie können Ihnen die neuesten Antworten seit Ihrem letzten Besuch ansehen, wenn Sie folgenden Link aufrufst:
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Sie können Ihnen das Thema ansehen, wenn Sie folgenden Link aufrufst:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Sie können Ihnen das Forum ansehen, wenn Sie folgenden Link aufrufst:
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
+Wenn Sie das Thema nicht länger abonnieren möchten, verwenden Sie entweder den Link „Abonnement des Themas beenden“ im entsprechenden Thema oder rufe folgenden Link auf:
 {U_STOP_WATCHING_TOPIC}
 
 {EMAIL_SIG}',
@@ -1113,22 +1113,22 @@ Hier geht es zum Tippspiel: {U_BOARD}/formel1.php
 
 
 $email = array_merge($email, array(
-	'email/bookmark.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/bookmark.txt' 		=> '{EMAILSUBJECT:} Benachrichtigung über neue Antwort — „{TOPIC_TITLE}“
 
-Hello {USERNAME},
+Guten Tag {USERNAME},
 
-You are receiving this notification because a topic you bookmarked, "{TOPIC_TITLE}" at "{SITENAME}", has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+Sie erhalten diese Benachrichtigung, weil Sie für das Thema „{TOPIC_TITLE}“ auf „{SITENAME}“ ein Lesezeichen gesetzt haben. Seit Ihrem letzten Besuch wurde zu diesem Thema eine neue Antwort erstellt. Sie können den folgenden Link benutzen, um die neuen Antworten anzusehen. Sie erhalten keine weitere Benachrichtigung, bis Sie das Thema besucht haben.
 
-If you want to view the newest post made since your last visit, click the following link:
+Sie können Ihnen die neuesten Antworten seit Ihrem letzten Besuch ansehen, wenn Sie folgenden Link aufrufst:
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Sie können Ihnen das Thema ansehen, wenn Sie folgenden Link aufrufst:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Sie können Ihnen das Forum ansehen, wenn Sie folgenden Link aufrufst:
 {U_FORUM}
 
-If you no longer wish to receive updates about replies to bookmarks, please update your notification settings here:
+Wenn Sie nicht länger E-Mails erhalten möchten, wenn auf ein Thema, für das Sie ein Lesezeichen gesetzt haben, geantwortet wurde, müssen Sie Ihre Benachrichtigungseinstellungen ändern. Diese können Sie ändern, wenn Sie folgenden Link aufrufst:
 
 {U_NOTIFICATION_SETTINGS}
 
@@ -1139,26 +1139,26 @@ If you no longer wish to receive updates about replies to bookmarks, please upda
 
 $email = array_merge($email, array(
 	'email/contact_admin.txt' 		=> '
-Hello {TO_USERNAME},
+Guten Tag {TO_USERNAME},
 
-The following is an e-mail sent to you through the administration contact page on "{SITENAME}".
+die folgende Nachricht wurde Ihnen als Administrator über die Kontakt-Funktion auf „{SITENAME}“ gesendet:
 
 <!-- IF S_IS_REGISTERED -->
-The message has been sent from an account on the site.
-Username: {FROM_USERNAME}
-E-mail address: {FROM_EMAIL_ADDRESS}
-IP Address: {FROM_IP_ADDRESS}
-Profile: {U_FROM_PROFILE}
+Die Nachricht wurde von einem registrierten Benutzer gesendet.
+Benutzername: {FROM_USERNAME}
+E-mail-Adresse: {FROM_EMAIL_ADDRESS}
+IP-Adresse: {FROM_IP_ADDRESS}
+Profil: {U_FROM_PROFILE}
 <!-- ELSE -->
-The message was sent from a guest who specified the following contact information:
+Die Nachricht wurde von einem Gast gesendet, der folgende Kontaktdaten angegeben hat:
 Name: {FROM_USERNAME}
-E-mail address: {FROM_EMAIL_ADDRESS}
-IP Address: {FROM_IP_ADDRESS}
+E-mail-Adresse: {FROM_EMAIL_ADDRESS}
+IP-Adresse: {FROM_IP_ADDRESS}
 <!-- ENDIF -->
 
 
-Message sent to you follows
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Es folgt die an Sie gesendete Nachricht
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 {MESSAGE}
 
@@ -1168,16 +1168,16 @@ Message sent to you follows
 
 
 $email = array_merge($email, array(
-	'email/post_in_queue.txt' 		=> '{EMAILSUBJECT:} Post moderation notification - "{TOPIC_TITLE}"
+	'email/post_in_queue.txt' 		=> '{EMAILSUBJECT:} Benachrichtigung zur Beitrags-Moderation — „{TOPIC_TITLE}“
 
-Hello {USERNAME},
+Guten Tag {USERNAME},
 
-You are receiving this notification because the post "{POST_SUBJECT}" at "{SITENAME}" needs approval.
+Sie erhalten diese Nachricht, weil der Beitrag „{POST_SUBJECT}“ auf „{SITENAME}“ auf Freigabe wartet.
 
-If you want to view the post, click the following link:
+Sie können Ihnen den Beitrag ansehen, wenn Sie folgenden Link aufrufst:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Sie können Ihnen das Thema ansehen, wenn Sie folgenden Link aufrufst:
 {U_TOPIC}
 
 {EMAIL_SIG}',
@@ -1186,23 +1186,22 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/quote.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/quote.txt' 		=> '{EMAILSUBJECT:} Benachrichtigung über neue Antwort — „{TOPIC_TITLE}“
 
-Hello {USERNAME},
+Guten Tag {USERNAME},
 
-You are receiving this notification because "{AUTHOR_NAME}" quoted you in the topic "{TOPIC_TITLE}" at "{SITENAME}". You can use the following link to view the reply made.
+Sie erhalten diese Benachrichtigung, weil „{AUTHOR_NAME}“ sich im Thema „{TOPIC_TITLE}“ auf „{SITENAME}“ zitiert hat. Sie können den folgenden Link benutzen, um die erstellte Antwort anzusehen.
 
-If you want to view the quoted post, click the following link:
+Sie können Ihnen den Beitrag, in dem Sie zitiert wurdest, ansehen, wenn Sie folgenden Link aufrufst:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Sie können Ihnen das Thema ansehen, wenn Sie folgenden Link aufrufst:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Sie können Ihnen das Forum ansehen, wenn Sie folgenden Link aufrufst:
 {U_FORUM}
 
-If you no longer wish to receive updates about replies quoting you, please update your notification settings here:
-
+Wenn Sie nicht länger E-Mails erhalten möchten, wenn Sie in einem Beitrag zitiert wurdest, müssen Sie Ihre Benachrichtigungseinstellungen ändern. Diese können Sie ändern, wenn Sie folgenden Link aufrufst: 
 {U_NOTIFICATION_SETTINGS}
 
 {EMAIL_SIG}',
@@ -1211,13 +1210,13 @@ If you no longer wish to receive updates about replies quoting you, please updat
 
 
 $email = array_merge($email, array(
-	'email/report_pm.txt' 		=> '{EMAILSUBJECT:} Private Message report - "{TOPIC_TITLE}"
+	'email/report_pm.txt' 		=> '{EMAILSUBJECT:} Gemeldete Private Nachricht — „{TOPIC_TITLE}“
 
-Hello {USERNAME},
+Guten Tag {USERNAME},
 
-You are receiving this notification because a Private Message titled "{SUBJECT}" by "{AUTHOR_NAME}" at "{SITENAME}" was reported.
+Sie erhalten diese Benachrichtigung, weil eine Private Nachricht mit dem Titel „{SUBJECT}“ von „{AUTHOR_NAME}“ auf „{SITENAME}“ gemeldet wurde.
 
-If you want to view the report, click the following link:
+Sie können Ihnen die Meldung ansehen, wenn Sie folgenden Link aufrufst:
 {U_VIEW_REPORT}
 
 {EMAIL_SIG}',
@@ -1226,16 +1225,16 @@ If you want to view the report, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/report_post.txt' 		=> '{EMAILSUBJECT:} Post report - "{TOPIC_TITLE}"
+	'email/report_post.txt' 		=> '{EMAILSUBJECT:} Gemeldeter Beitrag — „{TOPIC_TITLE}“
 
-Hello {USERNAME},
+Guten Tag {USERNAME},
 
-You are receiving this notification because the post "{POST_SUBJECT}" at "{SITENAME}" was reported.
+Sie erhalten diese Benachrichtigung, weil der Beitrag „{POST_SUBJECT}“ auf „{SITENAME}“ gemeldet wurde.
 
-If you want to view the report, click the following link:
+Sie können Ihnen die Meldung ansehen, wenn Sie folgenden Link aufrufst:
 {U_VIEW_REPORT}
 
-If you want to view the post, click the following link:
+Sie können Ihnen den Beitrag ansehen, wenn Sie folgenden Link aufrufst:
 {U_VIEW_POST}
 
 {EMAIL_SIG}',
@@ -1244,16 +1243,16 @@ If you want to view the post, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/topic_in_queue.txt' 		=> '{EMAILSUBJECT:} Topic moderation notification - "{TOPIC_TITLE}"
+	'email/topic_in_queue.txt' 		=> '{EMAILSUBJECT:} Benachrichtigung zur Themen-Moderation — „{TOPIC_TITLE}“
 
-Hello {USERNAME},
+Guten Tag {USERNAME},
 
-You are receiving this notification because the topic "{TOPIC_TITLE}" at "{SITENAME}" needs approval.
+Sie erhalten diese Nachricht, weil das Thema „{TOPIC_TITLE}“ auf „{SITENAME}“ auf Freigabe wartet.
 
-If you want to view the topic, click the following link:
+Sie können Ihnen das Thema ansehen, wenn Sie folgenden Link aufrufst:
 {U_VIEW_TOPIC}
 
-If you want to view the forum, click the following link:
+Sie können Ihnen das Forum ansehen, wenn Sie folgenden Link aufrufst:
 {U_FORUM}
 
 {EMAIL_SIG}',
@@ -1262,22 +1261,22 @@ If you want to view the forum, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/short/bookmark.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/short/bookmark.txt' 		=> '{EMAILSUBJECT:} Benachrichtigung über neue Antwort — „{TOPIC_TITLE}“
 
-Hello {USERNAME},
+Guten Tag {USERNAME},
 
-You are receiving this notification because a topic you bookmarked, "{TOPIC_TITLE}" at "{SITENAME}", has received a reply since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+Sie erhalten diese Benachrichtigung, weil Sie für das Thema „{TOPIC_TITLE}“ auf „{SITENAME}“ ein Lesezeichen gesetzt haben. Seit Ihrem letzten Besuch wurde zu diesem Thema eine neue Antwort erstellt. Sie können den folgenden Link benutzen, um die neuen Antworten anzusehen. Sie erhalten keine weitere Benachrichtigung, bis Sie das Thema besucht haben.
 
-If you want to view the newest post made since your last visit, click the following link:
+Sie können Ihnen die neuesten Antworten seit Ihrem letzten Besuch ansehen, wenn Sie folgenden Link aufrufst:
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Sie können Ihnen das Thema ansehen, wenn Sie folgenden Link aufrufst:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Sie können Ihnen das Forum ansehen, wenn Sie folgenden Link aufrufst:
 {U_FORUM}
 
-If you no longer wish to receive updates about replies to bookmarks, please update your notification settings here:
+Wenn Sie nicht länger E-Mails erhalten möchten, wenn auf ein Thema, für das Sie ein Lesezeichen gesetzt haben, geantwortet wurde, müssen Sie Ihre Benachrichtigungseinstellungen ändern. Diese können Sie ändern, wenn Sie folgenden Link aufrufst:
 
 {U_NOTIFICATION_SETTINGS}
 
@@ -1287,16 +1286,16 @@ If you no longer wish to receive updates about replies to bookmarks, please upda
 
 
 $email = array_merge($email, array(
-	'email/short/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} New topic notification - "{FORUM_NAME}"
+	'email/short/newtopic_notify.txt' 		=> '{EMAILSUBJECT:} Benachrichtigung über neues Thema — „{FORUM_NAME}“
 
-Hello {USERNAME},
+Guten Tag {USERNAME},
 
-You are receiving this notification because you are watching the forum "{FORUM_NAME}" at "{SITENAME}". This forum has received a new topic<!-- IF AUTHOR_NAME --> by {AUTHOR_NAME}<!-- ENDIF --> since your last visit, "{TOPIC_TITLE}". You can use the following link to view the forum, no more notifications will be sent until you visit the forum.
+Sie erhalten diese Benachrichtigung, weil Sie das Forum „{FORUM_NAME}“ auf „{SITENAME}“ abonniert haben. Seit Ihrem letzten Besuch wurde in diesem Forum ein neues Thema<!-- IF AUTHOR_NAME --> von {AUTHOR_NAME}<!-- ENDIF --> erstellt: „{TOPIC_TITLE}“. Sie erhalten keine weitere Benachrichtigung, bis Sie das Forum besucht haben.
 
+Sie können Ihnen das Forum ansehen, wenn Sie folgenden Link aufrufst:
 {U_FORUM}
 
-If you no longer wish to watch this forum you can either click the "Unsubscribe forum" link found in the forum above, or by clicking the following link:
-
+Wenn Sie das Forum nicht länger abonnieren möchten, verwenden Sie entweder den Link „Abonnement des Forums beenden“ im entsprechenden Forum oder rufe folgenden Link auf:
 {U_STOP_WATCHING_FORUM}
 
 {EMAIL_SIG}',
@@ -1305,16 +1304,16 @@ If you no longer wish to watch this forum you can either click the "Unsubscribe 
 
 
 $email = array_merge($email, array(
-	'email/short/post_approved.txt' 		=> '{EMAILSUBJECT:} Post approved - "{POST_SUBJECT}"
+	'email/short/post_approved.txt' 		=> '{EMAILSUBJECT:} Beitrag freigegeben — „{POST_SUBJECT}“
 
-Hello {USERNAME},
+Guten Tag {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was approved by a moderator or administrator.
+Sie erhalten diese Nachricht, weil Ihr Beitrag „{POST_SUBJECT}“ auf „{SITENAME}“ durch einen Moderator oder Administrator freigegeben wurde.
 
-If you want to view the post, click the following link:
+Sie können Ihnen den Beitrag ansehen, wenn Sie folgenden Link aufrufst:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Sie können Ihnen das Thema ansehen, wenn Sie folgenden Link aufrufst:
 {U_VIEW_TOPIC}
 
 {EMAIL_SIG}',
@@ -1339,16 +1338,16 @@ The following reason was given for the disapproval:
 
 
 $email = array_merge($email, array(
-	'email/short/post_in_queue.txt' 		=> '{EMAILSUBJECT:} Post moderation notification - "{TOPIC_TITLE}"
+	'email/short/post_in_queue.txt' 		=> '{EMAILSUBJECT:} Benachrichtigung zur Beitrags-Moderation — „{TOPIC_TITLE}“
 
-Hello {USERNAME},
+Guten Tag {USERNAME},
 
-You are receiving this notification because the post "{POST_SUBJECT}" at "{SITENAME}" needs approval.
+Sie erhalten diese Nachricht, weil der Beitrag „{POST_SUBJECT}“ auf „{SITENAME}“ auf Freigabe wartet.
 
-If you want to view the post, click the following link:
+Sie können Ihnen den Beitrag ansehen, wenn Sie folgenden Link aufrufst:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Sie können Ihnen das Thema ansehen, wenn Sie folgenden Link aufrufst:
 {U_TOPIC}
 
 {EMAIL_SIG}',
@@ -1357,19 +1356,19 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/short/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
+	'email/short/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} Neue Private Nachricht erhalten
 
-Hello {USERNAME},
+Guten Tag {USERNAME},
 
-You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
+Sie haben auf „{SITENAME}“ eine neue Private Nachricht von „{AUTHOR_NAME}“ mit folgendem Betreff erhalten:
 
 {SUBJECT}
 
-You can view your new message by clicking on the following link:
+Sie können Ihnen die neue Nachricht ansehen, wenn Sie folgenden Link aufrufst:
 
 {U_VIEW_MESSAGE}
 
-You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
+Sie haben ausgewählt, dass Sie bei neuen Privaten Nachrichten informiert werden möchten. Sie können diese Benachrichtigungen in Ihrem persönlichen Bereich abstellen.
 
 {EMAIL_SIG}',
 ));
@@ -1377,24 +1376,22 @@ You have requested that you be notified on this event, remember that you can alw
 
 
 $email = array_merge($email, array(
-	'email/short/quote.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/short/quote.txt' 		=> '{EMAILSUBJECT:} Benachrichtigung über neue Antwort — „{TOPIC_TITLE}“
 
-Hello {USERNAME},
+Guten Tag {USERNAME},
 
-You are receiving this notification because "{AUTHOR_NAME}" quoted you in the topic "{TOPIC_TITLE}" at "{SITENAME}". You can use the following link to view the reply made.
+Sie erhalten diese Benachrichtigung, weil „{AUTHOR_NAME}“ sich im Thema „{TOPIC_TITLE}“ auf „{SITENAME}“ zitiert hat. Sie können den folgenden Link benutzen, um die erstellte Antwort anzusehen.
 
-If you want to view the quoted post, click the following link:
+Sie können Ihnen den Beitrag, in dem Sie zitiert wurdest, ansehen, wenn Sie folgenden Link aufrufst:
 {U_VIEW_POST}
 
-If you want to view the topic, click the following link:
+Sie können Ihnen das Thema ansehen, wenn Sie folgenden Link aufrufst:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Sie können Ihnen das Forum ansehen, wenn Sie folgenden Link aufrufst:
 {U_FORUM}
 
-If you no longer wish to receive updates about replies quoting you, please update your notification settings here:
-
-{U_NOTIFICATION_SETTINGS}
+Wenn Sie nicht länger E-Mails erhalten möchten, wenn Sie in einem Beitrag zitiert wurdest, müssen Sie Ihre Benachrichtigungseinstellungen ändern. Diese können Sie ändern, wenn Sie folgenden Link aufrufst: {U_NOTIFICATION_SETTINGS}
 
 {EMAIL_SIG}',
 ));
@@ -1402,13 +1399,13 @@ If you no longer wish to receive updates about replies quoting you, please updat
 
 
 $email = array_merge($email, array(
-	'email/short/report_pm.txt' 		=> '{EMAILSUBJECT:} Private Message report - "{TOPIC_TITLE}"
+	'email/short/report_pm.txt' 		=> '{EMAILSUBJECT:} Gemeldete Private Nachricht — „{TOPIC_TITLE}“
 
-Hello {USERNAME},
+Guten Tag {USERNAME},
 
-You are receiving this notification because a Private Message titled "{SUBJECT}" by "{AUTHOR_NAME}" at "{SITENAME}" was reported.
+Sie erhalten diese Benachrichtigung, weil eine Private Nachricht mit dem Titel „{SUBJECT}“ von „{AUTHOR_NAME}“ auf „{SITENAME}“ gemeldet wurde.
 
-If you want to view the report, click the following link:
+Sie können Ihnen die Meldung ansehen, wenn Sie folgenden Link aufrufst:
 {U_VIEW_REPORT}
 
 {EMAIL_SIG}',
@@ -1417,16 +1414,16 @@ If you want to view the report, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/short/report_post.txt' 		=> '{EMAILSUBJECT:} Post report - "{TOPIC_TITLE}"
+	'email/short/report_post.txt' 		=> '{EMAILSUBJECT:} Gemeldeter Beitrag — „{TOPIC_TITLE}“
 
-Hello {USERNAME},
+Guten Tag {USERNAME},
 
-You are receiving this notification because the post "{POST_SUBJECT}" at "{SITENAME}" was reported.
+Sie erhalten diese Benachrichtigung, weil der Beitrag „{POST_SUBJECT}“ auf „{SITENAME}“ gemeldet wurde.
 
-If you want to view the report, click the following link:
+Sie können Ihnen die Meldung ansehen, wenn Sie folgenden Link aufrufst:
 {U_VIEW_REPORT}
 
-If you want to view the post, click the following link:
+Sie können Ihnen den Beitrag ansehen, wenn Sie folgenden Link aufrufst:
 {U_VIEW_POST}
 
 {EMAIL_SIG}',
@@ -1435,13 +1432,13 @@ If you want to view the post, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/short/topic_approved.txt' 		=> '{EMAILSUBJECT:} Topic approved - "{TOPIC_TITLE}"
+	'email/short/topic_approved.txt' 		=> '{EMAILSUBJECT:} Thema freigegeben — „{TOPIC_TITLE}“
 
-Hello {USERNAME},
+Guten Tag {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was approved by a moderator or administrator.
+Sie erhalten diese Benachrichtigung, weil Ihr Thema „{TOPIC_TITLE}“ auf „{SITENAME}“ durch einen Moderator oder Administrator freigegeben wurde.
 
-If you want to view the topic, click the following link:
+Sie können Ihnen das Thema ansehen, wenn Sie folgenden Link aufrufst:
 {U_VIEW_TOPIC}
 
 {EMAIL_SIG}',
@@ -1450,13 +1447,13 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/short/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Topic disapproved - "{TOPIC_TITLE}"
+	'email/short/topic_disapproved.txt' 		=> '{EMAILSUBJECT:} Themenfreigabe verweigert — „{TOPIC_TITLE}“
 
-Hello {USERNAME},
+Guten Tag {USERNAME},
 
-You are receiving this notification because your topic "{TOPIC_TITLE}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Sie erhalten diese Benachrichtigung, weil Ihrem Thema „{TOPIC_TITLE}“ auf „{SITENAME}“ von einem Moderator oder Administrator die Freigabe verweigert wurde.
 
-The following reason was given for the disapproval:
+Der folgende Grund wurde dafür angegeben:
 
 {REASON}
 
@@ -1466,16 +1463,16 @@ The following reason was given for the disapproval:
 
 
 $email = array_merge($email, array(
-	'email/short/topic_in_queue.txt' 		=> '{EMAILSUBJECT:} Topic moderation notification - "{TOPIC_TITLE}"
+	'email/short/topic_in_queue.txt' 		=> '{EMAILSUBJECT:} Benachrichtigung zur Themen-Moderation — „{TOPIC_TITLE}“
 
-Hello {USERNAME},
+Guten Tag {USERNAME},
 
-You are receiving this notification because the topic "{TOPIC_TITLE}" at "{SITENAME}" needs approval.
+Sie erhalten diese Nachricht, weil das Thema „{TOPIC_TITLE}“ auf „{SITENAME}“ auf Freigabe wartet.
 
-If you want to view the topic, click the following link:
+Sie können Ihnen das Thema ansehen, wenn Sie folgenden Link aufrufst:
 {U_VIEW_TOPIC}
 
-If you want to view the forum, click the following link:
+Sie können Ihnen das Forum ansehen, wenn Sie folgenden Link aufrufst:
 {U_FORUM}
 
 {EMAIL_SIG}',
@@ -1484,23 +1481,22 @@ If you want to view the forum, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/short/topic_notify.txt' 		=> '{EMAILSUBJECT:} Topic reply notification - "{TOPIC_TITLE}"
+	'email/short/topic_notify.txt' 		=> '{EMAILSUBJECT:} Benachrichtigung über neue Antwort — „{TOPIC_TITLE}“
 
-Hello {USERNAME},
+Guten Tag {USERNAME},
 
-You are receiving this notification because you are watching the topic "{TOPIC_TITLE}" at "{SITENAME}". This topic has received a reply<!-- IF AUTHOR_NAME --> by {AUTHOR_NAME}<!-- ENDIF --> since your last visit. You can use the following link to view the replies made, no more notifications will be sent until you visit the topic.
+Sie erhalten diese Benachrichtigung, weil Sie das Thema „{TOPIC_TITLE}“ auf „{SITENAME}“ abonniert haben. Seit Ihrem letzten Besuch wurde zu diesem Thema eine neue Antwort<!-- IF AUTHOR_NAME --> von {AUTHOR_NAME}<!-- ENDIF --> erstellt. Sie erhalten keine weitere Benachrichtigung, bis Sie das Thema besucht haben.
 
-If you want to view the newest post made since your last visit, click the following link:
+Sie können Ihnen die neuesten Antworten seit Ihrem letzten Besuch ansehen, wenn Sie folgenden Link aufrufst:
 {U_NEWEST_POST}
 
-If you want to view the topic, click the following link:
+Sie können Ihnen das Thema ansehen, wenn Sie folgenden Link aufrufst:
 {U_TOPIC}
 
-If you want to view the forum, click the following link:
+Sie können Ihnen das Forum ansehen, wenn Sie folgenden Link aufrufst:
 {U_FORUM}
 
-If you no longer wish to watch this topic you can either click the "Unsubscribe topic" link found at the bottom of the topic above, or by clicking the following link:
-
+Wenn Sie das Thema nicht länger abonnieren möchten, verwenden Sie entweder den Link „Abonnement des Themas beenden“ im entsprechenden Thema oder rufe folgenden Link auf:
 {U_STOP_WATCHING_TOPIC}
 
 {EMAIL_SIG}',
