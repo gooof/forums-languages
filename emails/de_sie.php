@@ -1322,13 +1322,13 @@ Sie können Ihnen das Thema ansehen, wenn Sie folgenden Link aufrufst:
 
 
 $email = array_merge($email, array(
-	'email/short/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Post disapproved - "{POST_SUBJECT}"
+	'email/short/post_disapproved.txt' 		=> '{EMAILSUBJECT:} Beitragsfreigabe verweigert — „{POST_SUBJECT}“
 
-Hello {USERNAME},
+Guten Tag {USERNAME},
 
-You are receiving this notification because your post "{POST_SUBJECT}" at "{SITENAME}" was disapproved by a moderator or administrator.
+Sie erhalten diese Nachricht, weil Ihrem Beitrag „{POST_SUBJECT}“ auf „{SITENAME}“ von einem Moderator oder Administrator die Freigabe verweigert wurde.
 
-The following reason was given for the disapproval:
+Der folgende Grund wurde dafür angegeben:
 
 {REASON}
 

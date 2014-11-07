@@ -393,8 +393,8 @@ $lang = array_merge($lang, array(
 	'ELLIPSIS'							=>	'…',
 	'EMAIL'								=> 'Email', // Short form for EMAIL_ADDRESS
 	'EMAIL_ADDRESS'						=> 'E-Mail-Adresse',
-	'EMAIL_INVALID_EMAIL'				=> 'The email address you entered is invalid.',
-	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Ran into problems sending email at <strong>Line %1$s</strong>. Response: %2$s.',
+	'EMAIL_INVALID_EMAIL'				=> 'Die von dir angegebene E-Mail-Adresse ist ungültig.',
+	'EMAIL_SMTP_ERROR_RESPONSE'			=> 'Probleme beim Mailversand in <strong>Zeile %1$s</strong>. Antwort: %2$s.',
 	'EMPTY_SUBJECT'						=> 'Du musst einen Betreff angeben, wenn du ein neues Thema erstellen möchtest.',
 	'EMPTY_MESSAGE_SUBJECT'				=> 'Du musst einen Betreff angeben, wenn du eine neue Nachricht verfassen möchtest.',
 	'ENABLED'							=> 'Aktiviert',
@@ -507,7 +507,7 @@ $lang = array_merge($lang, array(
 	'INSECURE_REDIRECT'			=> 'Es wurde versucht, zu einer möglicherweise unsicheren URL weiterzuleiten.',
 	'INTERESTS'					=> 'Interessen',
 	'INVALID_DIGEST_CHALLENGE'	=> 'Ungültiger Digest Challenge.',
-	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> possibly an invalid email address?',
+	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> ist vermutlich eine ungültige E-Mail-Adresse.',
 	'INVALID_PLURAL_RULE'		=> 'Die ausgewählte Plural-Regel ist ungültig. Zulässig sind ganzzahlige Werte von 0 bis 15.',
 	'IP'						=> 'IP',
 	'IP_BLACKLISTED'			=> 'Deine IP-Adresse %1$s wurde gesperrt, da sie auf der schwarzen Liste steht. Details findest du unter <a href="%2$s">%2$s</a>.',
@@ -782,10 +782,10 @@ $lang = array_merge($lang, array(
 	'SEARCH_FORUM'				=> 'Forum durchsuchen…',
 	'SEARCH_NEW'				=> 'Neue Beiträge',
 	'SEARCH_POSTS_BY'			=> 'Suche Beiträge von',
-	'SEARCH_SELF'				=> 'Your posts',
+	'SEARCH_SELF'				=> 'Eigene Beiträge',
 	'SEARCH_MINE'				=> 'Eigene Themen',
 	'SEARCH_TOPIC'				=> 'Thema durchsuchen…',
-	'SEARCH_UNANSWERED'			=> 'Unanswered posts',
+	'SEARCH_UNANSWERED'			=> 'Unbeantwortete Beiträge',
 	'SEARCH_UNREAD'				=> 'Ungelesene Beiträge',
 	'SEARCH_USER_POSTS'			=> 'Beiträge des Benutzers suchen',
 	'SECONDS'					=> 'Sekunden',
@@ -794,7 +794,7 @@ $lang = array_merge($lang, array(
 	'SELECT_ALL_CODE'			=> 'Alles auswählen',
 	'SELECT_DESTINATION_FORUM'	=> 'Wähle bitte ein Zielforum aus',
 	'SELECT_FORUM'				=> 'Wähle ein Forum aus',
-	'SEND_EMAIL'				=> 'Send email',				// Used for submit buttons
+	'SEND_EMAIL'				=> 'E-Mail senden',				// Used for submit buttons
 	'SEND_EMAIL_USER'			=> 'E-Mail an %s senden',
 	'SEND_PRIVATE_MESSAGE'		=> 'Private Nachricht senden',
 	'SETTINGS'					=> 'Einstellungen',
@@ -845,7 +845,7 @@ $lang = array_merge($lang, array(
 	'TOO_LONG_PASSWORD_CONFIRM'		=> 'Die angegebene Bestätigung des Passworts ist zu lang.',
 	'TOO_LONG_USER_PASSWORD'		=> 'Das angegebene Passwort ist zu lang.',
 	'TOO_LONG_USERNAME'				=> 'Der angegebene Benutzername ist zu lang.',
-	'TOO_LONG_EMAIL'				=> 'The email address you entered is too long.',
+	'TOO_LONG_EMAIL'				=> 'Die angegebene E-Mail-Adresse ist zu lang.',
 
 	'TOO_MANY_VOTE_OPTIONS'			=> 'Du hast versucht, für zu viele Optionen zu stimmen.',
 
@@ -858,8 +858,8 @@ $lang = array_merge($lang, array(
 	'TOO_SHORT_PASSWORD_CONFIRM'	=> 'Die angegebene Bestätigung für das Passwort ist zu kurz.',
 	'TOO_SHORT_USER_PASSWORD'		=> 'Das angegebene Passwort ist zu kurz.',
 	'TOO_SHORT_USERNAME'			=> 'Der angegebene Benutzername ist zu kurz.',
-	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
-	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
+	'TOO_SHORT_EMAIL'				=> 'Die angegebene E-Mail-Adresse ist zu kurz.',
+	'TOO_SHORT_EMAIL_CONFIRM'		=> 'Die angegebene Bestätigung der E-Mail-Adresse ist zu kurz.',
 	
 	'TOO_SMALL'						=> 'Der angegebene Wert ist zu klein.',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> 'Die Zahl, die als <strong>Maximale Anzahl zulässiger Empfänger pro Privater Nachricht</strong> angegeben wurde, ist zu klein.',
@@ -1834,30 +1834,29 @@ $lang = array_merge($lang, array(
 		<p>Wenn du unten auf die Schaltfläche klickst, wirst du zu einem Formular im Administrations-Bereich weitergeleitet, mit dem du statistische Daten an phpBB.com übermitteln kannst. Wir würden uns freuen, wenn du unsere Arbeit mit deinen Angaben unterstützen würdest. Anschließend solltest du dir etwas Zeit nehmen, um die verfügbaren Optionen kennen zu lernen. Hilfe zum Gebrauch von phpBB erhältst du online über die <a href="http://www.phpbb.com/support/documentation/3.0/">Dokumentation (englisch)</a> (<a href="http://www.phpbb.de/go/3/dokumentation">deutsche Übersetzung</a>), die <a href="%3$s">README</a> und das <a href="http://www.phpbb.com/community/viewforum.php?f=46">Support-Forum (englisch)</a> (<a href="http://www.phpbb.de/go/3/supportforum">deutschsprachiges Forum auf phpBB.de</a>).<br/><br/><strong>Bitte lösche oder verschiebe das Installations-Verzeichnis „install“ oder nenne es um, bevor du dein Board benutzt. Solange dieses Verzeichnis existiert, ist nur der Administrations-Bereich zugänglich.</strong></p>',
 	'INSTALL_INTRO'				=> 'Willkommen bei der Installation',
 
-	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
-
+	'INSTALL_INTRO_BODY'		=> 'Dieser Assistent ermöglicht dir die Installation von phpBB3 auf deinem Server.</p><p>Bevor du fortsetzen kannst, benötigst du die Daten deiner Datenbank. Wenn du die Daten deiner Datenbank nicht kennst, kontaktiere bitte deinen Server-Betreiber und frage nach den Daten. Ohne die Datenbankdaten kannst du nicht fortfahren. Du benötigst:</p>
 	<ul>
-		<li>The Database Type - the database you will be using.</li>
-		<li>The Database server hostname or DSN - the address of the database server.</li>
-		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
-		<li>The Database name - the name of the database on the server.</li>
-		<li>The Database username and Database password - the login data to access the database.</li>
+		<li>Den Datenbank-Typ — die Art der Datenbank, auf die du zugreifen wirst.</li>
+		<li>Den Hostname oder DSN des Datenbankservers — die Adresse, unter der der Datenbankserver erreichbar ist.</li>
+		<li>Den Port des Datenbank-Servers — den Port, über den der Datenbankserver erreicht wird (in den meisten Fällen ist diese Information nicht notwendig).</li>
+		<li>Den Namen der Datenbank — den Namen der Datenbank auf dem Server.</li>
+		<li>Den Benutzernamen und das Passwort für die Datenbank — die Zugangsdaten, um auf die Datenbank zugreifen zu können.</li>
 	</ul>
 
-	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
+	<p><strong>Hinweis:</strong> wenn du SQLite verwendest, solltest du den vollständigen Pfad zu deiner Datenbank-Datei im DSN-Feld eingeben und die Felder für Benutzername und Passwort frei lassen. Aus Sicherheitsgründen sollte die Datenbank in keinem Verzeichnis gespeichert werden, das aus dem Internet zugänglich ist.</p>
 
-	<p>phpBB3 supports the following databases:</p>
+	<p>phpBB3 unterstützt folgende Datenbank-Typen:</p>
 	<ul>
-		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>MySQL 3.23 und höher (MySQLi wird unterstützt)</li>
 		<li>PostgreSQL 8.3+</li>
 		<li>SQLite 2.8.2+</li>
 		<li>SQLite 3.6.15+</li>
-		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
-		<li>MS SQL Server 2005 or above (native)</li>
+		<li>MS SQL Server 2000 und höher (direkt oder über ODBC)</li>
+		<li>MS SQL Server 2005 und höher (nativ)</li>
 		<li>Oracle</li>
 	</ul>
 
-	<p>Only those databases supported on your server will be displayed.',
+	<p>Es werden nur die Datenbank-Typen zur Auswahl angeboten, die dein Server unterstützt.',
 	'INSTALL_INTRO_NEXT'		=> 'Klicke unten auf die Schaltfläche, um mit der Installation zu beginnen.',
 	'INSTALL_LOGIN'				=> 'Anmelden',
 	'INSTALL_NEXT'				=> 'Nächster Schritt',
@@ -2168,28 +2167,28 @@ $lang = array_merge($lang, array(
 	'UPDATE_INSTALLATION_EXPLAIN'	=> 'Mit dieser Option kannst du deine phpBB-Version auf den neuesten Stand bringen.<br />Während dieses Prozesses wird die Integrität aller deiner Dateien überprüft. Du hast die Möglichkeit, alle Dateiunterschiede vor dem Update zu überprüfen.<br /><br />Die Dateiaktualisierung an sich kann auf zwei Wegen erfolgen:</p><h2>Manuelle Aktualisierung</h2><p>Bei dieser Methode lädst du nur die von dir geänderten Dateien herunter, damit du sichergehen kannst, dass die erfolgten Dateiänderungen nicht verloren gehen. Nach dem Herunterladen dieses Archivs musst du die Dateien in die entsprechenden Verzeichnisse deiner phpBB-Installation hochladen. Nachdem du das getan hast, kannst du die Dateiüberprüfung erneut ausführen, um zu sehen, ob du alle Dateien korrekt hochgeladen hast.</p><h2>Automatische Aktualisierung über FTP</h2><p>Diese Methode ist der ersten sehr ähnlich, mit dem Unterschied, dass du die veränderten Dateien nicht herunter- und anschließend von Hand wieder hochladen musst. Dies wird automatisch erledigt. Um diese Methode nutzen zu können, musst du deine FTP-Anmeldedaten kennen und eingeben. Nach der Fertigstellung wird auch hier eine Integritätsprüfung der Dateien ausgeführt.',
 	'UPDATE_INSTRUCTIONS'			=> '
 
-		<h1>Release announcement</h1>
+		<h1>Bekanntmachungen zur Veröffentlichung</h1>
 
-		<p>Please read the release announcement for the latest version before you continue your update process, it may contain useful information. It also contains full download links as well as the change log.</p>
+		<p>Bitte lies die Bekanntmachung zur Veröffentlichung (Release announcement) der neuesten Version, bevor du den Update-Prozess beginnst, sie enthält wichtige Informationen. Außerdem enthält sie die Download-Links sowie ein Änderungsprotokoll (Changelog) der Versionen.</p>
 
 		<br />
 
-		<h1>How to update your installation with the Automatic Update Package</h1>
+		<h1>Wie du ein Update deiner Installation mit dem „Automatisches-Update-Paket“ durchführst</h1>
 
-		<p>The recommended way of updating your installation listed here is only valid for the automatic update package. You are also able to update your installation using the methods listed within the INSTALL.html document. The steps for updating phpBB3 automatically are:</p>
+		<p>Diese empfohlene Anleitung zum Update deiner Installation gilt nur für das „Automatisches-Update-Paket“ („automatic update package“). Du kannst deine Installation auch mit den in der INSTALL.html beschriebenen Methoden aktualisieren. Zum automatischen Update von phpBB musst du folgende Schritte ausführen:</p>
 
 		<ul style="margin-left: 20px; font-size: 1.1em;">
-			<li>Go to the <a href="http://www.phpbb.com/downloads/" title="http://www.phpbb.com/downloads/">phpBB.com downloads page</a> and download the "Automatic Update Package" archive.<br /><br /></li>
-			<li>Unpack the archive.<br /><br /></li>
-			<li>Upload the complete uncompressed install folder to your phpBB root directory (where your config.php file is).<br /><br /></li>
+			<li>Gehe zur <a href="https://www.phpbb.com/downloads/" title="https://www.phpbb.com/downloads/">phpBB.com-Downloadseite</a> und lade das entsprechende „Automatisches-Update-Paket“ herunter (<a href="https://www.phpbb.de/go/3.1/downloads">deutschsprachige Downloadseite</a>).<br /><br /></li>
+			<li>Entpacke das Archiv.<br /><br /></li>
+			<li>Lade die entpackten Verzeichnisse „install“ und „vendor“ komplett in dein phpBB-Hauptverzeichnis (dort, wo die config.php ist).<br /><br /></li>
 		</ul>
 
-		<p>Once uploaded your board will be offline for normal users due to the install directory you uploaded now present.<br /><br />
-		<strong><a href="%1$s" title="%1$s">Now start the update process by pointing your browser to the install folder</a>.</strong><br />
+		<p>Nach dem Upload wird das Forum vorübergehend für normale Benutzer nicht zugänglich sein, da das von dir hochgeladene Installations-Verzeichnis vorhanden ist.<br /><br />
+		<strong><a href="%1$s" title="%1$s">Starte nun den Update-Prozess, indem du in deinem Webbrowser die Adresse zum Installationsverzeichnis angibst</a>.</strong><br />
 		<br />
-		You will then be guided through the update process. You will be notified once the update is complete.
+		Anschließend wirst du durch den Update-Prozess geführt. Du wirst benachrichtigt, sobald das Update abgeschlossen ist.
 		</p>
-	',
+',
 	'UPDATE_METHOD'					=> 'Aktualisierungs-Methode',
 	'UPDATE_METHOD_EXPLAIN'			=> 'Du kannst nun deine bevorzugte Aktualisierungs-Methode auswählen. Wenn du den FTP-Upload wählst, musst du deine FTP-Zugangsdaten eingeben. Mit dieser Methode werden die Dateien automatisch an die richtigen Stellen kopiert. Außerdem werden hierbei Sicherheitskopien der alten Dateien erstellt. Bei diesen Sicherheitskopien wird der Dateiname um .bak ergänzt. Wenn du auswählst, dass du die geänderten Dateien herunterladen möchtest, dann musst du sie aus einem Archiv entpacken und später von Hand in das korrekte Verzeichnis hochladen.',
 	'UPDATE_REQUIRES_FILE'			=> 'Das Aktualisierungs-Programm benötigt folgende Datei: %s',
@@ -2707,7 +2706,7 @@ $lang = array_merge($lang, array(
 	'EMPTY_NAME_EMAIL'		=> 'Du musst den Namen des Empfängers angeben.',
 	'EMPTY_SENDER_EMAIL'	=> 'Du musst eine gültige E-Mail-Adresse angeben.',
 	'EMPTY_SENDER_NAME'		=> 'Du musst einen Namen angeben.',
-	'EMPTY_SUBJECT_EMAIL'	=> 'You must specify a subject for the email.',
+	'EMPTY_SUBJECT_EMAIL'	=> 'Du musst einen Betreff für die E-Mail angeben.',
 	'EQUAL_TO'				=> 'Entspricht',
 
 	'FIND_USERNAME_EXPLAIN'	=> 'Benutze dieses Formular, um nach Mitgliedern zu suchen. Es müssen nicht alle Felder ausgefüllt werden. Verwende ein * als Platzhalter für teilweise Übereinstimmungen. Verwende das Format <kbd>JJJJ-MM-TT</kbd> (z.&nbsp;B. <samp>2002-01-01</samp>), um Datumswerte anzugeben. Benutze die Kontrollkästchen, um mehrere Benutzer auszuwählen (mehrere Benutzer werden abhängig vom Formular akzeptiert) und wähle dann „Markierte auswählen“.',
@@ -3205,8 +3204,8 @@ $lang = array_merge($lang, array(
 	'POST_CONFIRMATION'			=> 'Bestätigung des Beitrags',
 	'POST_CONFIRM_EXPLAIN'		=> 'Um automatisch verfasste Beiträge zu verhindern, musst du einen Bestätigungscode eingeben. Den Code siehst du im folgenden Bild. Wenn du nur über ein eingeschränktes Sehvermögen verfügst oder aus einem anderen Grund den Code nicht lesen kannst, kontaktiere bitte die %sBoard-Administration%s.',
 	'POST_DELETED'				=> 'Dieser Beitrag wurde gelöscht.',
-	'POST_EDITED'				=> 'This post has been edited successfully.',
-	'POST_EDITED_MOD'			=> 'This post has been edited successfully, but it will need to be approved by a moderator before it is publicly viewable.',
+	'POST_EDITED'				=> 'Der Beitrag wurde erfolgreich bearbeitet.',
+	'POST_EDITED_MOD'			=> 'Der Beitrag wurde erfolgreich bearbeitet. Er muss jedoch erst von einem Moderator freigegeben werden, bevor er öffentlich einsehbar ist.',
 	'POST_GLOBAL'				=> 'Globale Bekanntmachung',
 	'POST_ICON'					=> 'Beitrags-Symbol',
 	'POST_NORMAL'				=> 'Normal',
@@ -3219,7 +3218,7 @@ $lang = array_merge($lang, array(
 	'POST_TOPIC_AS'				=> 'Thema schreiben als',
 	'PROGRESS_BAR'				=> 'Statusanzeige',
 
-	'QUOTE_NO_NESTING'			=> 'You may not embed quotes within each other.',
+	'QUOTE_NO_NESTING'			=> 'Du kannst Zitate nicht ineinander verschachteln.',
 
 	'REMOTE_UPLOAD_TIMEOUT'		=> 'Die ausgewählte Datei konnte nicht hochgeladen werden, da bei der Anfrage eine Zeitüberschreitung aufgetreten ist.',
 	'SAVE'						=> 'Speichern',
@@ -3488,7 +3487,7 @@ $lang = array_merge($lang, array(
 	'CONFIRM_PASSWORD_EXPLAIN'	=> 'Du musst dein Passwort nur bestätigen, wenn du es oben änderst.',
 	'COPPA_BIRTHDAY'			=> 'Um mit dem Registrierungs-Prozess fortzufahren, teile uns bitte mit, wann du geboren wurdest.',
 	'COPPA_COMPLIANCE'			=> 'COPPA-Einwilligung',
-	'COPPA_EXPLAIN'				=> 'Please note that clicking submit will create your account. However it cannot be activated until a parent or guardian approves your registration. You will be e-mailed a copy of the necessary form with details of where to send it.',
+	'COPPA_EXPLAIN'				=> 'Bitte beachte, dass durch Absenden des Formulars dein Benutzerkonto erstellt wird. Allerdings kann es nicht aktiviert werden, bis ein Elternteil oder ein Erziehungsberechtigter deine Registrierung bestätigt hat. Du erhältst per E-Mail das dafür notwendige Formular und Details, wohin es gesendet werden muss.',
 	'CREATE_FOLDER'				=> 'Ordner anlegen …',
 	'CURRENT_IMAGE'				=> 'Derzeitiges Bild',
 	'CURRENT_PASSWORD'			=> 'Derzeitiges Passwort',
@@ -4051,7 +4050,7 @@ $lang = array_merge($lang, array(
 	'DISAPPROVE'					=> 'Freigabe verweigern',
 	'DOWNLOAD_NOTICE'		=> 'Du hast keine ausreichende Berechtigung, um die Dateianhänge dieses Beitrags anzusehen.',
 
-	'EMAIL_TOPIC'			=> 'E-mail topic',
+	'EMAIL_TOPIC'			=> 'Thema weiterempfehlen',
 	'ERROR_NO_ATTACHMENT'	=> 'Der ausgewählte Dateianhang existiert nicht mehr.',
 
 	'FILE_NOT_FOUND_404'	=> 'Die Datei <strong>%s</strong> existiert nicht.',
@@ -9763,7 +9762,7 @@ $lang = array_merge($lang, array(
 	'NOT_ALLOWED_IN_PM'			=> 'Nur in Beiträgen erlaubt',
 	'NOT_ALLOWED_IN_PM_POST'	=> 'Nicht erlaubt',
 	'NOT_ASSIGNED'				=> 'Nicht zugewiesen',
-	'NO_ATTACHMENTS'			=> 'No attachments found for this period.',
+	'NO_ATTACHMENTS'			=> 'Keine Dateianhänge für diesen Zeitraum gefunden.',
 	'NO_EXT_GROUP'				=> 'Keine',
 	'NO_EXT_GROUP_NAME'			=> 'Kein Gruppenname eingegeben.',
 	'NO_EXT_GROUP_SPECIFIED'	=> 'Keine Dateityp-Gruppe angegeben.',
@@ -10243,10 +10242,10 @@ $lang = array_merge($lang, array(
 	'LDAP'							=> 'LDAP',
 	'LDAP_DN'						=> 'LDAP-Basis <var>DN</var>',
 	'LDAP_DN_EXPLAIN'				=> 'Distinguished Name des Verzeichnisses, in dem sich die Benutzer-Daten befinden, z.&nbsp;B. <samp>o=Meine&nbsp;Firma,c=DE</samp>.',
-	'LDAP_EMAIL'					=> 'LDAP email attribute',
-	'LDAP_EMAIL_EXPLAIN'			=> 'Set this to the name of your user entry email attribute (if one exists) in order to automatically set the email address for new users. Leaving this empty results in empty email address for users who log in for the first time.',
+	'LDAP_EMAIL'					=> 'LDAP-E-Mail-Attribut',
+	'LDAP_EMAIL_EXPLAIN'			=> 'Gib hier den Namen des E-Mail-Attributes (falls existent) ein, um die E-Mail-Adresse für neue Benutzer automatisch zu setzen. Wenn dieses Feld freigelassen wird, ist bei Benutzern, die sich zum ersten Mal anmelden, keine E-Mail-Adresse gesetzt.',
 	'LDAP_INCORRECT_USER_PASSWORD'	=> 'Die Verbindung zum LDAP-Server mit der angegebenen Benutzernamen und Passwort ist gescheitert.',
-	'LDAP_NO_EMAIL'					=> 'The specified email attribute does not exist.',
+	'LDAP_NO_EMAIL'					=> 'Das angegebene E-Mail-Attribut existiert nicht.',
 	'LDAP_NO_IDENTITY'				=> 'Kann keine Anmeldekennung für %s finden.',
 	'LDAP_PASSWORD'					=> 'LDAP-Passwort',
 	'LDAP_PASSWORD_EXPLAIN'			=> 'Lasse das Feld für eine anonyme Verbindung frei; ansonsten gebe das Passwort für obigen Benutzer an. Erforderlich bei Active Directory-Servern.<br/><em><strong>WARNUNG:</strong> Dieses Passwort wird im Klartext in der Datenbank gespeichert und ist daher für jeden einsehbar, der Zugriff auf die Datenbank oder diese Konfigurationsseite hat.</em>',
@@ -10261,7 +10260,7 @@ $lang = array_merge($lang, array(
 	'LDAP_USER_FILTER'				=> 'LDAP Benutzer-Filter',
 	'LDAP_USER_FILTER_EXPLAIN'		=> 'Du kannst optional die durchsuchten Objekte durch weitere Filter einschränken. Zum Beispiel führt <samp>objectClass=posixGruppe</samp> zur Benutzung von <samp>(&amp;(uid=$username)(objectClass=posixGruppe))</samp>.',
 
-	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Here you define server and domain dependent settings. Please ensure the data you enter is accurate, errors will result in emails containing incorrect information. When entering the domain name remember it does include http:// or other protocol term. Only alter the port number if you know your server uses a different value, port 80 is correct in most cases.',
+	'ACP_SERVER_SETTINGS_EXPLAIN'	=> 'Hier kannst du einige Einstellungen bezüglich Server und Domain vornehmen. Bitte stelle sicher, dass die Daten, die du eingibst, auch wirklich stimmen, denn fehlerhafte Angaben könnten zu E-Mails führen, die falsche Informationen enthalten. Wenn du den Domain-Namen eingibst, denk daran, dass http:// oder eine andere Protokoll-Bezeichnung darin enthalten ist. Ändere den Port nur, wenn du weißt, dass dein Server einen anderen Port nutzt; Port 80 ist in den allermeisten Fällen richtig.',
 	'ENABLE_GZIP'				=> 'gzip-Komprimierung aktivieren',
 	'ENABLE_GZIP_EXPLAIN'		=> 'Der Seiteninhalt wird vor dem Senden an den Benutzer komprimiert. Dies kann den Netzverkehr reduzieren, wird aber auch zu einer Erhöhung der CPU-Last sowohl auf Server- als auch auf Benutzerseite führen. Erfordert, dass die zlib-Erweiterung von PHP geladen ist.',
 	'FORCE_SERVER_VARS'			=> 'Erzwinge Server-URL-Einstellungen',
@@ -10583,11 +10582,11 @@ $lang = array_merge($lang, array(
 	'ACP_DISALLOW'				=> 'Verbieten',
 	'ACP_DISALLOW_USERNAMES'	=> 'Benutzernamen verbieten',
 
-	'ACP_EMAIL_SETTINGS'		=> 'Email settings',
-	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
+	'ACP_EMAIL_SETTINGS'		=> 'Board-E-Mails',
+	'ACP_EXTENSION_GROUPS'		=> 'Dateityp-Gruppen verwalten',
 	'ACP_EXTENSION_MANAGEMENT'	=> 'Erweiterungs-Verwaltung',
 	'ACP_EXTENSIONS'			=> 'Erweiterungen verwalten',
-	'ACP_EXTENSION_GROUPS'		=> 'Manage attachment extension groups',
+	'ACP_EXTENSION_GROUPS'		=> 'Dateityp-Gruppen verwalten',
 	'ACP_FORMS'					=> 'Anpassbare Formulare',
 	'ACP_FORMS_BUILDER'			=> 'Formular-Generator',
 
@@ -10627,11 +10626,11 @@ $lang = array_merge($lang, array(
 	'ACP_MANAGE_ATTACHMENTS'			=> 'Dateianhänge verwalten',
 	'ACP_MANAGE_ATTACHMENTS_EXPLAIN'	=> 'Hier kannst du Dateianhänge von Beiträgen und Privaten Nachrichten anzeigen und löschen.',
 
-	'ACP_MANAGE_EXTENSIONS'		=> 'Manage attachment extensions',
+	'ACP_MANAGE_EXTENSIONS'		=> 'Dateitypen verwalten',
 	'ACP_MANAGE_RANKS'			=> 'Ränge verwalten',
 	'ACP_MANAGE_REASONS'		=> 'Meldungs-/Ablehnungs-Gründe verwalten',
 	'ACP_MANAGE_USERS'			=> 'Benutzer verwalten',
-	'ACP_MASS_EMAIL'			=> 'Mass email',
+	'ACP_MASS_EMAIL'			=> 'Massen-E-Mail',
 	'ACP_MESSAGES'				=> 'Nachrichten',
 	'ACP_MESSAGE_SETTINGS'		=> 'Private Nachrichten',
 	'ACP_MODULE_MANAGEMENT'		=> 'Modul-Konfiguration',
@@ -10776,7 +10775,7 @@ $lang = array_merge($lang, array(
 
 	'NOTIFY'				=> 'Benachrichtigung',
 	'NO_ADMIN'				=> 'Du bist nicht berechtigt, dieses Board zu administrieren.',
-	'NO_EMAILS_DEFINED'		=> 'No valid email addresses found.',
+	'NO_EMAILS_DEFINED'		=> 'Keine gültigen E-Mail-Adressen gefunden.',
 	'NO_FILES_TO_DELETE'	=> 'Die Dateianhänge, die du zum Löschen ausgewählt hast, existieren nicht.',
 	'NO_PASSWORD_SUPPLIED'	=> 'Du kannst dich nicht ohne Passwort anmelden.',
 
@@ -10819,7 +10818,7 @@ $lang = array_merge($lang, array(
 	'NO_PHPINFO_AVAILABLE'	=> 'Es konnten keine Informationen über deine PHP-Installation ermittelt werden. phpinfo() wurde vermutlich aus Sicherheitsgründen deaktiviert.',
 
 	'ACP_ADMIN_LOGS_EXPLAIN'	=> 'Diese Liste zeigt alle Vorgänge, die von Board-Administratoren durchgeführt wurden. Du kannst nach Benutzername, Datum, IP-Adresse oder Vorgang sortieren.',
-	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'This lists the actions carried out by the board itself. This log provides you with information you are able to use for solving specific problems, for example non-delivery of emails. You can sort by username, date, IP or action. If you have appropriate permissions you can also clear individual operations or the log as a whole.',
+	'ACP_CRITICAL_LOGS_EXPLAIN'	=> 'Diese Liste zeigt alle Vorgänge, die durch das Board selbst ausgeführt wurden. Dieses Protokoll stellt dir Informationen zur Lösung spezifischer Probleme bereit, wie z.&nbsp;B. die Nicht-Auslieferung von E-Mails. Du kannst nach Benutzername, Datum, IP-Adresse oder Vorgang sortieren.',
 	'ACP_MOD_LOGS_EXPLAIN'		=> 'Diese Liste zeigt alle Vorgänge, die von Moderatoren an Foren, Themen, Beiträgen und Benutzern ausgeführt wurden — inklusive von Sperrungen. Du kannst nach Benutzername, Datum, IP-Adresse oder Vorgang sortieren.',
 	'ACP_USERS_LOGS_EXPLAIN'	=> 'Diese Liste zeigt alle Vorgänge, die von oder an Benutzern ausgeführt wurden (Meldungen, Verwarnungen und Notizen).',
 	'ALL_ENTRIES'				=> 'Alle Einträge',
@@ -11071,7 +11070,7 @@ $lang = array_merge($lang, array(
 	'LOG_APPROVE_TOPIC'			=> '<strong>Thema freigegeben</strong><br />» %s',
 	'LOG_BUMP_TOPIC'			=> '<strong>Thema als neu markiert</strong><br />» %s',
 	'LOG_DELETE_POST'			=> '<strong>Beitrag „%1$s“ (Autor: „%2$s“) gelöscht aus folgendem Grund</strong><br />» %3$s',
-	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Deleted shadow topic</strong><br />Â» %s',
+	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Link zum verschobenem Thema gelöscht</strong><br />» %s',
 	'LOG_DELETE_TOPIC'			=> '<strong>Thema „%1$s“ (Autor: „%2$s“) gelöscht aus folgendem Grund</strong><br />» %3$s',
 	'LOG_FORK'					=> '<strong>Thema dupliziert</strong><br />» von %s',
 	'LOG_LOCK'					=> '<strong>Thema gesperrt</strong><br />» %s',
@@ -11215,7 +11214,7 @@ $lang = array_merge($lang, array(
 	'LOG_REASON_REMOVED'	=> '<strong>Meldungs-/Ablehnungs-Grund entfernt</strong><br />» %s',
 	'LOG_REASON_UPDATED'	=> '<strong>Meldungs-/Ablehnungs-Grund geändert</strong><br />» %s',
 
-	'LOG_REFERER_INVALID'		=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
+	'LOG_REFERER_INVALID'		=> '<strong>Überprüfung des Referrers gescheitert</strong><br />»Referrer war „<em>%1$s</em>“. Anfrage wurde abgewiesen und Sitzung beendet.',
 	'LOG_RESET_DATE'			=> '<strong>Einrichtungsdatum zurückgesetzt</strong>',
 	'LOG_RESET_ONLINE'			=> '<strong>Besucherrekord zurückgesetzt</strong>',
 	'LOG_RESYNC_FILES_STATS'	=> '<strong>Datei-Statistiken resynchronisiert</strong>',
@@ -11630,7 +11629,7 @@ $lang = array_merge($lang, array(
 	'ACP_PORTAL_WELCOME_EXPLAIN'=> '',
 	'ADM_LOGOUT'			=> 'ACP Logout',
 	'ADM_LOGGED_OUT'		=> 'Du wurdest erfolgreich vom Administrations-Bereich abgemeldet.',
-	'LOG_REFERER_INVALID'	=> '<strong>Referrer validation failed</strong><br />Â»Referrer was â€œ<em>%1$s</em>â€. The request was rejected and the session killed.',
+	'LOG_REFERER_INVALID'	=> '<strong>Überprüfung des Referrers gescheitert</strong><br />»Referrer war „<em>%1$s</em>“. Anfrage wurde abgewiesen und Sitzung beendet.',
 
 	'ACP_ABBCODES'			=> 'BBcode Box',
 	'LOG_CONFIG_ABBCODES'	=> '<strong>Änderte Editor Einstellungen</strong>',
@@ -11810,7 +11809,7 @@ $lang = array_merge($lang, array(
 	'ACP_FORMS_OVERPERMS'			=> 'Forum Berechtigungen überschreiben',
 	'ACP_FORMS_OVERPERMS_EXPLAIN'		=> 'If this is checked, the post will be created on the forum/topic regardless of permissions or locks. If unchecked, the post will still be created, but will be moderated and will not show until it is approved.',
 	'ACP_FORMS_PMGROUP'				=> 'Gruppen die eine PN empfangen sollen',
-	'ACP_FORMS_PMGROUP_EXPLAIN'		=> 'Post the form as a Private Message to the selected groups. To select more than one, hold Control while clicking the desired groups.',
+	'ACP_FORMS_PMGROUP_EXPLAIN'		=> 'Formular als eine Private Nachricht an die ausgewählten Gruppen senden. Um mehrere auszuwählen, halten Sie STRG gedrückt und wählen dann mit der Maus die gewünschten Gruppen.',
 	'ACP_FORMS_PM_NOTE'				=> 'NOTE: This form will adhere to the established Private Message permission masks. If the user submitting this form cannot send PMs or the user(s) and/or group(s) listed in this section cannot receive PMs, the message will not be sent between the respective parties.',
 	'ACP_FORMS_PMUSER'				=> 'Benutzer die eine PN erhalten sollen',
 	'ACP_FORMS_PMUSER_EXPLAIN'		=> 'Versendet das Formular als eine Private Nachricht an diese Benutzer. Bitte füge jeden Benutzer in einer neuen Zeile ein.',
@@ -13982,16 +13981,16 @@ $lang = array_merge($lang, array(
 	'LANG_ISO_CODE'						=> 'ISO-Code',
 	'LANG_LOCAL_NAME'					=> 'Lokaler Name',
 
-	'MISSING_LANG_FILES'		=> 'Missing language files',
+	'MISSING_LANG_FILES'		=> 'Fehlende Sprachdateien',
 	'MISSING_LANG_VARIABLES'	=> 'Fehlende Sprachvariablen',
 
 	'NO_FILE_SELECTED'				=> 'Du musst mindestens eine Datei auswählen.',
 	'NO_LANG_ID'					=> 'Du hast kein Sprachpaket angegeben.',
-	'NO_REMOVE_DEFAULT_LANG'		=> 'You are not able to remove the default language pack.<br />If you want to remove this language pack, change your board’s default language first.',
+	'NO_REMOVE_DEFAULT_LANG'		=> 'Du kannst das Standard-Sprachpaket nicht entfernen.<br />Wenn du dieses Sprachpaket entfernen möchtest, musst du zuerst die Standard-Sprache das Boards ändern.',
 	'NO_UNINSTALLED_LANGUAGE_PACKS'	=> 'Keine deinstallierten Sprachpakete',
 
-	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
-	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
+	'THOSE_MISSING_LANG_FILES'			=> 'Die folgenden Sprachdateien fehlen im %s-Sprachpaket',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'Die folgenden Sprachvariablen fehlen im <strong>%s</strong>-Sprachpaket',
 
 	'UNINSTALLED_LANGUAGE_PACKS'	=> 'Deinstallierte Sprachpakete',
 
@@ -14011,8 +14010,8 @@ $lang = array_merge($lang, array(
 	'SELECT_DOWNLOAD_FORMAT'	=> 'Format des Download-Archivs wählen',
 	'SUBMIT_AND_DOWNLOAD'		=> 'Absenden und Datei herunterladen',
 	'SUBMIT_AND_UPLOAD'			=> 'Absenden und Datei hochladen',
-	'THOSE_MISSING_LANG_FILES'			=> 'The following language files are missing from the “%s” language folder',
-	'THOSE_MISSING_LANG_VARIABLES'		=> 'The following language variables are missing from the “%s” language pack',
+	'THOSE_MISSING_LANG_FILES'			=> 'Die folgenden Sprachdateien fehlen im %s-Sprachpaket',
+	'THOSE_MISSING_LANG_VARIABLES'		=> 'Die folgenden Sprachvariablen fehlen im <strong>%s</strong>-Sprachpaket',
 	'UNABLE_TO_WRITE_FILE'		=> 'Die Datei konnte nicht nach %s geschrieben werden.',
 	'UPLOAD_COMPLETED'			=> 'Das Hochladen wurde abgeschlossen.',
 	'UPLOAD_FAILED'				=> 'Das Hochladen ist aus einem nicht bekanntem Grund gescheitert. Du musst eventuell die betroffene Datei manuell ersetzen.',
@@ -15034,7 +15033,7 @@ $lang = array_merge($lang, array(
 	'PRUNE_USERS_LIST_DELETE'		=> 'Mit den angegebenen Kriterien werden folgende Benutzer gelöscht. Du kannst einzelne Benutzer von der Liste der zu löschenden Benutzer entfernen, in dem du die Markierung neben dem Benutzernamen entfernst.',
 	'PRUNE_USERS_LIST_DEACTIVATE'	=> 'Mit den angegebenen Kriterien werden folgende Benutzer deaktiviert. Du kannst einzelne Benutzer von der Liste der zu deaktivierenden Benutzer entfernen, in dem du die Markierung neben dem Benutzernamen entfernst.',
 
-	'SELECT_USERS_EXPLAIN'		=> 'Enter specific usernames here. They will be used in preference to the criteria above. Founders cannot be pruned.',
+	'SELECT_USERS_EXPLAIN'		=> 'Gib hier spezifische Benutzernamen ein. Die oben angegebenen Kriterien werden dann ignoriert. Gründer können nicht gelöscht werden.',
 
 	'USER_DEACTIVATE_SUCCESS'	=> 'Die ausgewählten Benutzer wurden erfolgreich deaktiviert.',
 	'USER_DELETE_SUCCESS'		=> 'Die ausgewählten Benutzer wurden erfolgreich gelöscht.',
