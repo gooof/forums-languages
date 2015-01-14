@@ -7124,7 +7124,6 @@ $lang = array_merge($lang, array(
 	'LOG_FOOTBALL_SETTINGS'				=> '<strong>Prediction league settings changed</strong>',
 
 	'ACP_FOOTBALL_EXTRA'					=> 'Special tips',
-	'ACP_FOOTBALL_EXTRA_MANAGE'				=> 'Manage special tips',
 	'ACP_FOOTBALL_EXTRA_MANAGE_EXPLAIN'		=> 'Here you can assign special tips to matchdays of a league. You can extinguish passing ones or change or provide a new special tip, as well as type, evaluation, points and the end time point of the special tips put.',
 	'ACP_FOOTBALL_EXTRA_MANAGEMENT'			=> 'Special tips',
 
@@ -7177,7 +7176,6 @@ $lang = array_merge($lang, array(
 	'TOO_SMALL_MATCHDAY_EVAL'				=> 'You must choose an evaluation matchday.',
 	
 	'ACP_FOOTBALL_KO'					=> 'KO-winner',
-	'ACP_FOOTBALL_KO_MANAGE'			=> 'Calculate KO-winner',
 	'ACP_FOOTBALL_KO_MANAGE_EXPLAIN'	=> 'Here you can determine KO-round winners on matches or on table ranking and enable them for the next matchdays. Only these teams are selectable on next rounds. Also it is possibly to transferr teams depending on table ranks in another KO league.',
 	'ACP_FOOTBALL_KO_MANAGEMENT'		=> 'KO-round management',
 
@@ -7282,11 +7280,9 @@ $lang = array_merge($lang, array(
 
 	'WINS'									=> 'Wins',
 	'ACP_FOOTBALL_ALL_BETS'					=> 'All bets',
-	'ACP_FOOTBALL_ALL_BETS_VIEW'			=> 'View all bets',
 	'ACP_FOOTBALL_ALL_BETS_VIEW_EXPLAIN'	=> 'Here you can view all bets of all users.',
 
 	'ACP_FOOTBALL_TEAMS'					=> 'Teams',
-	'ACP_FOOTBALL_TEAMS_MANAGE'				=> 'Manage teams',
 	'ACP_FOOTBALL_TEAMS_MANAGE_EXPLAIN'		=> 'Here you can assign season teams of a league. You can remove passing ones or change or create a new team, as well as type, number of the matchdays, wins, name and Kurzbezeichnug of the team put. ',
 	'ACP_FOOTBALL_TEAMS_MANAGEMENT'			=> 'Team management',
 	'ADD_TEAM'								=> 'Add team to the league',
@@ -7403,7 +7399,6 @@ $lang = array_merge($lang, array(
 	'YEAR'									=> 'Année ',
 
 	'ACP_FOOTBALL_MATCHDAYS'					=> 'Matchdays',
-	'ACP_FOOTBALL_MATCHDAYS_MANAGE'				=> 'Manage matchdays',
 	'ACP_FOOTBALL_MATCHDAYS_MANAGE_EXPLAIN'		=> 'Here you can assign league matchdays of a season. You can remove passing ones or change or create a new matchday, as well as type, number of the matchdays, wins, name and Kurzbezeichnug the matchday put.',
 	'ACP_FOOTBALL_MATCHDAYS_MANAGEMENT'			=> 'Matchdays management',
 	'ADD_MATCHDAY'								=> 'Matchday to the league add',
@@ -7490,7 +7485,6 @@ $lang = array_merge($lang, array(
 	'UPDATE_DELIVERY_EXPLAIN'					=> 'W&auml;hle die Datens&auml;tze aus, deren Abgabezeit neu gesetzt werden soll. Rot markierte Abgabezeiten liegen nach dem neu berechneten Abgabetermin.',
 
 	'ACP_FOOTBALL_LEAGUES'					=> 'Leagues',
-	'ACP_FOOTBALL_LEAGUES_MANAGE'			=> 'Manage leagues',
 	'ACP_FOOTBALL_LEAGUES_MANAGE_EXPLAIN'	=> 'Here you can administer all leagues. You can remove passing ones, change or create a new league, as well as edit type, number of the matchdays, wins, name and shortname of the league. ',
 	'ACP_FOOTBALL_LEAGUES_MANAGEMENT'		=> 'Leagues management',
 	'ADD_GROUP'								=> 'Add Group',
@@ -7687,7 +7681,6 @@ $lang = array_merge($lang, array(
 	'LOG_FOOTBALL_SETTINGS'				=> '<strong>Prediction league settings changed</strong>',
 
 	'ACP_FOOTBALL_UPDATE'					=> 'Update fixture lists',
-	'ACP_FOOTBALL_UPDATE_MANAGE'			=> 'Update fixture lists',
 	'ACP_FOOTBALL_UPDATE_MANAGE_EXPLAIN'	=> 'Here you can update fixture lists with data from the demo page or another Football Mod site. First, choose a league of the source site that sent the update. After selecting the destination league you get differences between this league and the update displayed and can choose the changes you want to be updated. If you want to create a new league, all data is transferred. ',
 	'ACP_FOOTBALL_UPDATE_MANAGEMENT'		=> 'Update fixture lists',
 
@@ -7830,7 +7823,6 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_FOOTBALL_MATCHES'					=> 'Match schedules',
-	'ACP_FOOTBALL_MATCHES_MANAGE'			=> 'Manage match schedules',
 	'ACP_FOOTBALL_MATCHES_MANAGE_EXPLAIN'	=> 'Here you can administer season and league programmes. You can add missing match mating to the programme and administer the match data of a matchday.',
 	'ACP_FOOTBALL_MATCHES_MANAGEMENT'		=> 'Match schedules management',
 
@@ -8887,14 +8879,6 @@ $lang = array_merge($lang, array(
 #######language/en/mods/points.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_POINTS'						=> 'Ultimate Points',
-	'ACP_POINTS_BANK_TITLE'				=> 'Bank Settings',
-	'ACP_POINTS_FORUM_TITLE'			=> 'Forum Points Settings',
-	'ACP_POINTS_INDEX_TITLE'			=> 'Point Settings',
-	'ACP_POINTS_LOTTERY_TITLE'			=> 'Lottery Settings',
-	'ACP_POINTS_ROBBERY_TITLE'			=> 'Robbery Settings',
-	'ACP_POINTS_USERGUIDE_TITLE'		=> 'User Guide',
-
 	'BANK_ACCOUNT_OPENING'				=> 'Open an account',
 	'BANK_ACTIONS'						=> 'Actions',
 	'BANK_BACK_TO_BANK'					=> 'Click %shere%s to return to the bank',
@@ -10439,7 +10423,6 @@ $lang = array_merge($lang, array(
 	'ACP_FOOTBALL'					=> 'Football',
 	'ACP_FOOTBALL_OPERATION'		=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Game mode',
 	'ACP_FOOTBALL_MANAGE'			=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Manage match schedule',
-	'LOG_FOOTB_UPDATE'				=> '<strong>Football Mod Match Schedule Update</strong><br />- %s',
 	'ACP_FOOTBALL_CONFIGURATION'	=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Prediction league configuration',
 	'ACP_FOOTBALL_MANAGEMENT'		=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Manage Prediction league',
 	'ACP_FOOTBALL_SETTINGS'			=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Prediction league settings',
@@ -10448,10 +10431,25 @@ $lang = array_merge($lang, array(
 	'ACP_FOOTBALL_SEASONS_MANAGE'	=> 'Manage Seasons',
 	'ACP_FOOTBALL_SEASONS_MANAGEMENT'	=> 'Seasons management',
 	'ACP_POINTS'					=> 'Ultimate Points',
+	'ACP_POINTS_BANK_TITLE'			=> 'Bank Settings',
+	'ACP_POINTS_FORUM_TITLE'		=> 'Forum Points Settings',
+	'ACP_POINTS_INDEX_TITLE'		=> 'Point Settings',
+	'ACP_POINTS_LOTTERY_TITLE'		=> 'Lottery Settings',
+	'ACP_POINTS_ROBBERY_TITLE'		=> 'Robbery Settings',
+	'ACP_POINTS_USERGUIDE_TITLE'	=> 'User Guide',
 	'ACP_FOOTBALL_BETS_MANAGE'		=> 'Edit bets',
 	'ACP_FOOTBALL_BANK_MANAGE'		=> 'Manage Accounts',
 	'ACP_FOOTBALL_RESULTS_MANAGE'	=> 'Manage match results',
+	'ACP_FOOTBALL_LEAGUES_MANAGE'	=> 'Manage leagues',
+	'ACP_FOOTBALL_MATCHDAYS_MANAGE'	=> 'Manage matchdays',
+	'ACP_FOOTBALL_TEAMS_MANAGE'		=> 'Manage teams',
+	'ACP_FOOTBALL_MATCHES_MANAGE'	=> 'Manage match schedules',
+	'ACP_FOOTBALL_EXTRA_MANAGE'		=> 'Manage special tips',
+	'ACP_FOOTBALL_UPDATE_MANAGE'	=> 'Update fixture lists',
+	'ACP_FOOTBALL_ALL_BETS_VIEW'	=> 'View all bets',
+	'ACP_FOOTBALL_KO_MANAGE'		=> 'Calculate KO-winner',
 
+	'LOG_FOOTB_UPDATE'				=> '<strong>Football Mod Match Schedule Update</strong><br />- %s',
 	'LOG_USER_TRANSFER'				=> '<strong>Points Transfer</strong><br />» %1$s transferred %3$s %4$s to %2$s',
 	'LOG_ATTACH_POINTS_EXT_UPDATE'	=> '<strong>The extension has been updated for UPS</strong><br />» %s',
 	'LOG_GROUP_TRANSFER_ADD'		=> 'Transferred Points to a group',
@@ -10472,7 +10470,6 @@ $lang = array_merge($lang, array(
 	'ACP_MANAGE_CATEGORIES'			=> 'Manage Categories',
 	'ACP_MANAGE_DOWNLOADS'			=> 'Manage Downloads',
 	'ACP_HANGMAN_SETTINGS' 			=> 'Hangman Settings',
-
 
 	'ACP_ADMINISTRATORS'		=> 'Administrateurs',
 	'ACP_ADMIN_LOGS'			=> 'Historique des administrateurs',

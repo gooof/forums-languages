@@ -7159,7 +7159,6 @@ $lang = array_merge($lang, array(
 	'LOG_FOOTBALL_SETTINGS'				=> '<strong>Tipprunde-Einstellungen geändert</strong>',
 
 	'ACP_FOOTBALL_EXTRA'					=> 'Sondertipps',
-	'ACP_FOOTBALL_EXTRA_MANAGE'				=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Sondertipps verwalten',
 	'ACP_FOOTBALL_EXTRA_MANAGE_EXPLAIN'		=> 'Hier kannst du Sondertipps zu Spieltagen einer Liga zuordnen. Du kannst bestehende löschen oder ändern oder einen neuen Sondertipp erstellen, sowie Typ, Wertung, Punkte und den Endzeitpunkt der Sondertipps einstellen.',
 	'ACP_FOOTBALL_EXTRA_MANAGEMENT'			=> 'Sondertipp-Verwaltung',
 
@@ -7212,7 +7211,6 @@ $lang = array_merge($lang, array(
 	'TOO_SMALL_MATCHDAY_EVAL'				=> 'Du musst einen Auswertungs-Spieltag wählen.',
 	
 	'ACP_FOOTBALL_KO'					=> 'KO-Runden Gewinner',
-	'ACP_FOOTBALL_KO_MANAGE'			=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> KO-Runden Gewinner ermitteln',
 	'ACP_FOOTBALL_KO_MANAGE_EXPLAIN'	=> 'Hier kannst du zu einer KO-Runde die Gewinner anhand der Begegnung(en) oder des Tabellenplatzes ermitteln und für kommende Spieltage freischalten. Bei der Spielplanerstellung werden nur diese Mannschaften für die Spieltage zur Auswahl angeboten. Ebenso ist es möglich Mannschaften anhand des Tabellenplatzes in eine andere KO-Liga zu überführen.',
 	'ACP_FOOTBALL_KO_MANAGEMENT'		=> 'KO-Runden abschliessen',
 
@@ -7317,11 +7315,9 @@ $lang = array_merge($lang, array(
 
 	'WINS'									=> 'Gewinne',
 	'ACP_FOOTBALL_ALL_BETS'					=> 'Alle Tipps',
-	'ACP_FOOTBALL_ALL_BETS_VIEW'			=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Alle Tipps ansehen',
 	'ACP_FOOTBALL_ALL_BETS_VIEW_EXPLAIN'	=> 'Hier kannst du alle Tipps der Tipper einsehen.',
 
 	'ACP_FOOTBALL_TEAMS'					=> 'Teams',
-	'ACP_FOOTBALL_TEAMS_MANAGE'				=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Teams verwalten',
 	'ACP_FOOTBALL_TEAMS_MANAGE_EXPLAIN'		=> 'Hier kannst du je Saison Teams einer Liga zuordnen. Du kannst bestehende löschen oder ändern oder eine neues Team erstellen, sowie Typ, Anzahl der Spieltage, Gewinne, Name und Kurzbezeichnug des Teams einstellen.',
 	'ACP_FOOTBALL_TEAMS_MANAGEMENT'			=> 'Team-Verwaltung',
 	'ADD_TEAM'								=> 'Team zur Liga hinzufügen',
@@ -7438,7 +7434,6 @@ $lang = array_merge($lang, array(
 	'YEAR'									=> 'Jahr',
 
 	'ACP_FOOTBALL_MATCHDAYS'					=> 'Spieltage',
-	'ACP_FOOTBALL_MATCHDAYS_MANAGE'				=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Spieltage verwalten',
 	'ACP_FOOTBALL_MATCHDAYS_MANAGE_EXPLAIN'		=> 'Hier kannst du je Liga Spieltage einer Saison zuordnen. Du kannst bestehende löschen oder ändern oder einen neuen Spieltag erstellen, sowie Typ, Anzahl der Spieltage, Gewinne, Name und Kurzbezeichnug der Spieltag einstellen.',
 	'ACP_FOOTBALL_MATCHDAYS_MANAGEMENT'			=> 'Spieltags-Verwaltung',
 	'ADD_MATCHDAY'								=> 'Spieltag zur Liga hinzufügen',
@@ -7525,7 +7520,6 @@ $lang = array_merge($lang, array(
 	'UPDATE_DELIVERY_EXPLAIN'					=> 'Wähle die Datensätze aus, deren Abgabezeit neu gesetzt werden soll. Rot markierte Abgabezeiten liegen nach dem neu berechneten Abgabetermin.',
 
 	'ACP_FOOTBALL_LEAGUES'					=> 'Ligen',
-	'ACP_FOOTBALL_LEAGUES_MANAGE'			=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Ligen verwalten',
 	'ACP_FOOTBALL_LEAGUES_MANAGE_EXPLAIN'	=> 'Hier kannst du alle Ligen verwalten. Du kannst bestehende löschen oder ändern oder eine neue Liga erstellen, sowie Typ, Anzahl der Spieltage, Gewinne, Name und Kurzbezeichnug der Liga einstellen. ',
 	'ACP_FOOTBALL_LEAGUES_MANAGEMENT'		=> 'Liga-Verwaltung',
 	'ADD_GROUP'								=> 'Gruppe hinzufügen',
@@ -7722,7 +7716,6 @@ $lang = array_merge($lang, array(
 	'LOG_FOOTBALL_SETTINGS'				=> '<strong>Tipprunde-Einstellungen geändert</strong>',
 
 	'ACP_FOOTBALL_UPDATE'					=> 'Spielplan aktualisieren',
-	'ACP_FOOTBALL_UPDATE_MANAGE'			=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Spielplan aktualisieren',
 	'ACP_FOOTBALL_UPDATE_MANAGE_EXPLAIN'	=> 'Hier kannst du deine Spielpläne, mit Daten von der Demoseite oder einer anderen Tipprunden-Seite aktualisieren oder neu erstellen. Wähle zuerst eine Tipprunden-Seite und Liga aus, von der das Update stammt. Nach Auswahl der Ziel-Liga bekommst du Abweichungen zwischen dieser Liga und dem Update angezeigt und kannst wählen welche Änderungen du übernehmen möchtest. Falls du eine neue Liga erstellen möchtest, werden alle Daten übernommen. ',
 	'ACP_FOOTBALL_UPDATE_MANAGEMENT'		=> 'Spielplan aktualisieren',
 
@@ -7865,7 +7858,6 @@ $lang = array_merge($lang, array(
 
 $lang = array_merge($lang, array(
 	'ACP_FOOTBALL_MATCHES'					=> 'Spielpläne',
-	'ACP_FOOTBALL_MATCHES_MANAGE'			=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Spielpläne verwalten',
 	'ACP_FOOTBALL_MATCHES_MANAGE_EXPLAIN'	=> 'Hier kannst du je Saison und Liga Spielpläne verwalten. Du kannst fehlende Spielpaarung zum Spielplan hinzufügen und die Spieldaten eines Spieltags verwalten.',
 	'ACP_FOOTBALL_MATCHES_MANAGEMENT'		=> 'Spielplan-Verwaltung',
 
@@ -8923,14 +8915,6 @@ $lang = array_merge($lang, array(
 #######language/en/mods/points.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_POINTS'						=> 'Ultimate Points',
-	'ACP_POINTS_BANK_TITLE'				=> 'Bank Einstellungen',
-	'ACP_POINTS_FORUM_TITLE'			=> 'Forenpunkte Einstellungen',
-	'ACP_POINTS_INDEX_TITLE'			=> 'Punkte Einstellungen',
-	'ACP_POINTS_LOTTERY_TITLE'			=> 'Lotterie Einstellungen',
-	'ACP_POINTS_ROBBERY_TITLE'			=> 'Diebstahl Einstellungen',
-	'ACP_POINTS_USERGUIDE_TITLE'		=> 'Benutzerhilfe',
-
 	'BANK_ACCOUNT_OPENING'				=> 'Eröffne ein Konto',
 	'BANK_ACTIONS'						=> 'Aktionen',
 	'BANK_BACK_TO_BANK'					=> 'Klicke %shier%s, um zur Bank zurückzukehren',
@@ -10475,7 +10459,6 @@ $lang = array_merge($lang, array(
 	'ACP_FOOTBALL'					=> 'Fussball',
 	'ACP_FOOTBALL_OPERATION'		=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Spielbetrieb',
 	'ACP_FOOTBALL_MANAGE'			=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Spielplan Verwalten',
-	'LOG_FOOTB_UPDATE'				=> '<strong>Fussball Mod Spielplan-Update</strong><br />- %s',
 	'ACP_FOOTBALL_CONFIGURATION'	=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Tipprunden Einstellungen',
 	'ACP_FOOTBALL_MANAGEMENT'		=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Tipprunde Verwaltung',
 	'ACP_FOOTBALL_SETTINGS'			=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Tipprunden Einstellungen',
@@ -10484,10 +10467,25 @@ $lang = array_merge($lang, array(
 	'ACP_FOOTBALL_SEASONS_MANAGE'	=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Saisons verwalten',
 	'ACP_FOOTBALL_SEASONS_MANAGEMENT'	=> 'Saison-Verwaltung',
 	'ACP_POINTS'					=> 'Ultimate Points',
+	'ACP_POINTS_BANK_TITLE'			=> 'Bank Einstellungen',
+	'ACP_POINTS_FORUM_TITLE'		=> 'Forenpunkte Einstellungen',
+	'ACP_POINTS_INDEX_TITLE'		=> 'Punkte Einstellungen',
+	'ACP_POINTS_LOTTERY_TITLE'		=> 'Lotterie Einstellungen',
+	'ACP_POINTS_ROBBERY_TITLE'		=> 'Diebstahl Einstellungen',
+	'ACP_POINTS_USERGUIDE_TITLE'	=> 'Benutzerhilfe',
 	'ACP_FOOTBALL_BETS_MANAGE'		=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Tipps editieren',
 	'ACP_FOOTBALL_BANK_MANAGE'		=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Konten verwalten',
 	'ACP_FOOTBALL_RESULTS_MANAGE'	=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Spielergebnisse eingeben',
+	'ACP_FOOTBALL_LEAGUES_MANAGE'	=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Ligen verwalten',
+	'ACP_FOOTBALL_MATCHDAYS_MANAGE'	=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Spieltage verwalten',
+	'ACP_FOOTBALL_TEAMS_MANAGE'		=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Teams verwalten',
+	'ACP_FOOTBALL_MATCHES_MANAGE'	=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Spielpläne verwalten',
+	'ACP_FOOTBALL_EXTRA_MANAGE'		=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Sondertipps verwalten',
+	'ACP_FOOTBALL_UPDATE_MANAGE'	=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Spielplan aktualisieren',
+	'ACP_FOOTBALL_ALL_BETS_VIEW'	=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Alle Tipps ansehen',
+	'ACP_FOOTBALL_KO_MANAGE'		=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> KO-Runden Gewinner ermitteln',
 
+	'LOG_FOOTB_UPDATE'				=> '<strong>Fussball Mod Spielplan-Update</strong><br />- %s',
 	'LOG_USER_TRANSFER'				=> '<strong>Punkte Transfer</strong><br />» %1$s hat %2$s %3$s %4$s überwiesen',
 	'LOG_ATTACH_POINTS_EXT_UPDATE'	=> '<strong>Die Erweiterung wurde für UPS aktualisiert</strong><br />» %s',
 	'LOG_GROUP_TRANSFER_ADD'		=> 'Es wurde einer Gruppe Punkte überwiesen',
@@ -10508,7 +10506,6 @@ $lang = array_merge($lang, array(
 	'ACP_MANAGE_CATEGORIES'			=> 'Kategorien verwalten',
 	'ACP_MANAGE_DOWNLOADS'			=> 'Downloads verwalten',
 	'ACP_HANGMAN_SETTINGS' 			=> 'Hangman Einstellungen',
-
 
 	'ACP_ADMINISTRATORS'		=> 'Administratoren',
 	'ACP_ADMIN_LOGS'			=> 'Administrations-Protokoll',
