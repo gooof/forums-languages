@@ -3952,6 +3952,36 @@ $lang = array_merge($lang, array(
 	'UCP_YMSM'					=> 'Maps',
 	'UCP_YMSM_SETTINGS'			=> 'Setări',
 	'UCP_YMSM_USERMARK'			=> 'Board members map',
+	'UCP_ARCADE_SETTINGS_EXPLAIN'		=> 'These settings control various aspects of the arcade.',
+	'UCP_ARCADE_FAVORITES_EXPLAIN'		=> 'You can view and delete your favorite games below.',
+	'ARCADE_FAVORITES_DELETED'			=> 'Favorite games successfully deleted.',
+	'ARCADE_FAVORITE_DELETED'			=> 'Favorite game successfully deleted.',
+	'ARCADE_DELETE_FAVORITE'			=> 'Delete favorite game',
+	'ARCADE_DELETE_FAVORITES'			=> 'Delete favorite games',
+	'ARCADE_DELETE_FAVORITE_CONFIRM'	=> 'Are you sure you want to delete this favorite game?',
+	'ARCADE_DELETE_FAVORITES_CONFIRM'	=> 'Are you sure you want to delete these favorite games?',
+
+	'UCP_CHALLENGE_ON'				=> 'Enable Challenges',
+	'UCP_CHALLENGE_ON_EXPLAIN'		=> 'If enabled users can challenge against each other',
+	'UCP_CHALLENGE_PM_ON'			=> 'The challenge can use the PM',
+	'UCP_CHALLENGE_PM_ON_EXPLAIN'	=> 'If enabled you got a PM about every challange.',
+	'UCP_CHALLENGE_STAT_AC'			=> 'Number of statistic data on a page',
+	'UCP_CHALLENGE_STAT_AC_EXPLAIN'	=> 'The users statistic will be listed by The given value on a page.',
+
+	'UCP_ARCADE_CHALLENGE'			=> 'Challenge',
+	'UCP_ARCADE'					=> 'Arcade',
+	'UCP_ARCADE_SETTINGS'			=> 'Manage settings',
+	'UCP_ARCADE_FAVORITES'			=> 'Manage favorites',
+	'UCP_GALLERY'					=> 'Gallery',
+	'UCP_GALLERY_FAVORITES'			=> 'Manage favorites',
+	'UCP_GALLERY_PERSONAL_ALBUMS'	=> 'Manage personal albums',
+	'UCP_GALLERY_SETTINGS'			=> 'Personal settings',
+	'UCP_GALLERY_WATCH'				=> 'Administrare subscrieri',
+	'UCP_SHOP'						=> 'Shop',
+	'UCP_SHOP_INVENTORY'			=> 'Inventory',
+	'UCP_SHOP_PRESENT'				=> 'Donate',
+	'UCP_SHOP_CONFIG'				=> 'Setări',
+	'UCP_SHOP_SELL'					=> 'Selling',
 ));
 
 #######language/en/viewforum.php#######
@@ -6825,7 +6855,7 @@ $lang = array_merge($lang, array(
 
 ));
 
-#######language/en/mods/info_acp_dm_eds.php#######
+#######language/en/mods/acp_dm_eds.php#######
 
 $lang = array_merge($lang, array(
 	'ACP_ADD'							=> 'Adăugaţi',
@@ -6909,10 +6939,8 @@ Have fun!',
 	'ACP_EDIT_FILENAME'					=> 'Saved File',
 	'ACP_EDIT_FILENAME_EXPLAIN'			=> '<strong>IMPORTANT:</strong> If you change the filename over here, there will be no further check, if the file really exists on your webspace. <strong>You need to upload the new file via FTP and manually delete the old one!</strong>',
 	'ACP_EDIT_SUB_CAT_EXPLAIN'			=> 'The already created subdirectory can\'t be edited. So if you like to have a different subdirectory, you need to delete the current category and create a new one!',
-	'ACP_MANAGE_CATEGORIES'				=> 'Manage Categories',
 	'ACP_MANAGE_CONFIG'					=> 'Configuration',
 	'ACP_MANAGE_CONFIG_EXPLAIN'			=> 'Here you can set a few basic values',
-	'ACP_MANAGE_DOWNLOADS'				=> 'Manage Downloads',
 	'ACP_MANAGE_DOWNLOADS_EXPLAIN'		=> 'Here you can add, edit or delete your downloads',
 	'ACP_MULTI_DOWNLOAD'				=> '%d downloads',
 	'ACP_NEED_DATA'						=> 'You need to fill all fields!',
@@ -6987,20 +7015,10 @@ Have fun!',
 
 ));
 
-#######language/en/mods/info_acp_football.php#######
+#######language/en/mods/acp_football.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_FOOTBALL'					=> 'Football',
-	'ACP_FOOTBALL_OPERATION'		=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Game mode',
-	'ACP_FOOTBALL_MANAGE'			=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Manage match schedule',
-	'LOG_FOOTB_UPDATE'				=> '<strong>Football Mod Match Schedule Update</strong><br />- %s',
 	'R_NEW_TEAM'					=> 'New Team',
-
-	'ACP_FOOTBALL_CONFIGURATION'		=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Prediction league configuration',
-	'ACP_FOOTBALL_MANAGEMENT'			=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Manage Prediction league',
-	'ACP_FOOTBALL_SETTINGS'				=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Prediction league settings',
-	'ACP_FOOTBALL_SETTINGS_EXPLAIN'		=> 'Here you can carry out some basic settings of the Prediction league, give it a suitable name and description and define a football side announcement and other values. ',
-
 	'DISABLE_FOOTBALL'					=> 'Deactivate Prediction league',
 	'DISABLE_FOOTBALL_EXPLAIN'			=> 'You can disable the Prediction league for all users. If you wanted, you can display a short message (up to 255 signs). ',
 	'DISPLAY_RANKS'						=> 'Number of indicated User in total ranking',
@@ -7041,9 +7059,6 @@ $lang = array_merge($lang, array(
 
 	'WIN_NAME'							=> 'Win',
 	'WIN_NAME_EXPLAIN'					=> 'The name or currency you want to disaply for the wins in the prediction league',
-));
-
-$lang = array_merge($lang, array(
 
 	'BANK'								=> 'Manage prediction league account',
 	'BANK_EXPLAIN'						=> 'Should prediction league accounts be maintained with bets and profits?',
@@ -7086,8 +7101,8 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ACP_FOOTBALL_MENU'					=> 'Menu settings',
 	'ACP_FOOTBALL_MENU_EXPLAIN'			=> 'Here you can deposit community references as a navigation for the Prediction league menu. You can choose the Menutext, besides, freely, give another name aslo to the link to the community. ',
+	'ACP_FOOTBALL_SETTINGS_EXPLAIN'		=> 'Here you can carry out some basic settings of the Prediction league, give it a suitable name and description and define a football side announcement and other values. ',
 
 	'MENU_DESC1'						=> 'Text Link 1',
 	'MENU_DESC2'						=> 'Text Link 2',
@@ -7192,11 +7207,9 @@ $lang = array_merge($lang, array(
 	'PREDICTION_LEAGUE'					=> 'Prediction league',
 
 	'ACP_FOOTBALL_BETS'						=> 'Bets',
-	'ACP_FOOTBALL_BETS_MANAGE'				=> 'Edit bets',
 	'ACP_FOOTBALL_BETS_MANAGE_EXPLAIN'		=> 'Here you can edit all bets of all users.',
 	'ACP_FOOTBALL_BETS_MANAGEMENT'			=> 'Bets management',
 	'ACP_FOOTBALL_BANK'						=> 'Accounts ',
-	'ACP_FOOTBALL_BANK_MANAGE'				=> 'Manage Accounts',
 	'ACP_FOOTBALL_BANK_MANAGE_EXPLAIN'		=> 'Here you can manage all prediction league accounts. You can draw bets, administer payments and payment and control.',
 	'ACP_FOOTBALL_BANK_MANAGEMENT'			=> 'Accounts Management',
 
@@ -7333,7 +7346,6 @@ $lang = array_merge($lang, array(
 	'WRONG_DATA_TEAM_GROUP'					=> 'No valid group for the group matches. Valid groups are A-Z.',
 
 	'ACP_FOOTBALL_RESULTS'					=> 'Match results',
-	'ACP_FOOTBALL_RESULTS_MANAGE'			=> 'Manage match results',
 	'ACP_FOOTBALL_RESULTS_MANAGE_EXPLAIN'	=> 'Here you can confirm match results, give, remove or take from the evaluation.',
 	'ACP_FOOTBALL_RESULTS_MANAGEMENT'		=> 'Matcht results management',
 	'ADVICE'								=> 'Advice',
@@ -7589,9 +7601,6 @@ $lang = array_merge($lang, array(
 
 
 $lang = array_merge($lang, array(
-	'ACP_FOOTBALL_CONFIGURATION'		=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Prediction league configuration',
-	'ACP_FOOTBALL_MANAGEMENT'			=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Manage Prediction league',
-	'ACP_FOOTBALL_SETTINGS'				=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Prediction league settings',
 	'ACP_FOOTBALL_SETTINGS_EXPLAIN'		=> 'Here you can carry out some basic settings of the Prediction league, give it a suitable name and description and define a football side announcement and other values. ',
 
 	'DISABLE_FOOTBALL'					=> 'Deactivate Prediction league',
@@ -7775,10 +7784,7 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ACP_FOOTBALL_SEASONS'					=> 'Seasons',
-	'ACP_FOOTBALL_SEASONS_MANAGE'			=> 'Manage Seasons',
 	'ACP_FOOTBALL_SEASONS_MANAGE_EXPLAIN'	=> 'Here you can administer all seasons. You can remove passing ones or change or create a new season, as well as edit name and shortname of the season.',
-	'ACP_FOOTBALL_SEASONS_MANAGEMENT'		=> 'Seasons management',
 
 	'CREATE_SEASON'							=> 'Create new season',
 
@@ -7891,7 +7897,7 @@ $lang = array_merge($lang, array(
 	'YEAR'									=> 'An',
 ));
 
-#######language/en/mods/info_acp_hangman.php#######
+#######language/en/mods/acp_hangman.php#######
 
 $lang = array_merge($lang, array(
 	'ACP_IMPORT_BONUS'					=> 'Import Bonus',
@@ -7936,7 +7942,6 @@ $lang = array_merge($lang, array(
 	'ACP_ALLOW_SMILIES'			=> 'Smilies in subject and help',
 	'ACP_ALLOW_SMILIES_EXP'		=> 'Do you want to allow the use of smilies in the subject line and in the help text?',
 	'ACP_HANGMAN_MANAGEMENT' 	=> 'Hangman Managment',
-	'ACP_HANGMAN_SETTINGS' 		=> 'Hangman Settings',
 	'ACP_HANGMAN_IMPORT' 		=> 'Hangman Import',
 	'ACP_CONFIG_TITLE' 			=> 'Hangman Configuration Options',
 	'ACP_CONFIG_HEAD'			=> 'Configuration',
@@ -8055,10 +8060,9 @@ $lang = array_merge($lang, array(
 
 ));
 
-#######language/en/mods/info_acp_points.php#######
+#######language/en/mods/acp_points.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_POINTS'						=> 'Ultimate Points',
 	'ACP_POINTS_BANK_EXPLAIN'			=> 'Here you can alter the settings for the Bank module',
 	'ACP_POINTS_BANK_TITLE'				=> 'Bank Settings',
 	'ACP_POINTS_DEACTIVATED'			=> 'Ultimate Points is currently disabled!',
@@ -8124,23 +8128,6 @@ $lang = array_merge($lang, array(
 	'FORUM_POINT_UPDATE'				=> 'Update global forum points and attachment cost switch',
 	'FORUM_POINT_UPDATE_CONFIRM'		=> '<br />Are you sure you want to update all forum points with the given values and set the switch for the attachment costs?<br />This step will overwrite all current settings and cannot made reversable!',
 
-	'LOG_USER_TRANSFER'					=> '<strong>Points Transfer</strong><br />» %1$s transferred %3$s %4$s to %2$s',
-	'LOG_ATTACH_POINTS_EXT_UPDATE'		=> '<strong>The extension has been updated for UPS</strong><br />» %s',
-	'LOG_GROUP_TRANSFER_ADD'			=> 'Transferred Points to a group',
-	'LOG_GROUP_TRANSFER_SET'			=> 'Set Points to a new value for a group',
-	'LOG_MOD_BANK'						=> 'Edited %1s bank points',
-	'LOG_MOD_POINTS'					=> 'Edited %1s points',
-	'LOG_MOD_POINTS_BANK'				=> 'Edited bank settings',
-	'LOG_MOD_POINTS_FORUM'				=> 'Edited Global Forum Points settings',
-	'LOG_MOD_POINTS_FORUM_SWITCH'		=> 'Edited Forum Point Switches',
-	'LOG_MOD_POINTS_FORUM_VALUES'		=> 'Edited Forum Point Values',
-	'LOG_MOD_POINTS_LOTTERY'			=> 'Edited Lottery settings',
-	'LOG_MOD_POINTS_ROBBERY'			=> 'Edited Robbery settings',
-	'LOG_MOD_POINTS_SETTINGS'			=> 'Edited Points settings',
-	'LOG_RESYNC_BANK_ACCOUNTS'			=> '<strong>All bank accounts were deleted successfully</strong>',
-	'LOG_RESYNC_LOTTERY_HISTORY'		=> '<strong>The lottery history was reset successfully</strong>',
-	'LOG_RESYNC_POINTSCOUNTS'			=> '<strong>All users points were reset successfully</strong>',
-	'LOG_RESYNC_POINTSLOGSCOUNTS'		=> '<strong>All user logs were reset successfully</strong>',
 	'LOTTERY_BASE_AMOUNT'				=> 'Base jackpot',
 	'LOTTERY_BASE_AMOUNT_EXPLAIN'		=> 'The Jackpot will begin initially with this amount. If raised during a draw period, additional sums will be added to the next draw. The Jackpot will not decrease if lowered.',
 	'LOTTERY_CHANCE'					=> 'Chance to win the Jackpot',
@@ -8284,55 +8271,6 @@ $lang = array_merge($lang, array(
 	'USER_POINTS'						=> 'User Points',
 	'USER_POINTS_EXPLAIN'				=> 'Amount of points the user owns',
 	'POINTS_COST_ATTACHMENT'			=> 'Cost per download a file attachment (set 0 to disable)',
-));
-
-#######language/en/mods/info_ucp_arcade.php#######
-
-$lang = array_merge($lang, array(
-	'UCP_ARCADE'							=> 'phpBB Arcade',
-	'UCP_ARCADE_SETTINGS'					=> 'Manage settings',
-	'UCP_ARCADE_SETTINGS_EXPLAIN'			=> 'These settings control various aspects of the arcade.',
-	'UCP_ARCADE_FAVORITES'					=> 'Manage favorites',
-	'UCP_ARCADE_FAVORITES_EXPLAIN'			=> 'You can view and delete your favorite games below.',
-
-	'ARCADE_FAVORITES_DELETED'				=> 'Favorite games successfully deleted.',
-	'ARCADE_FAVORITE_DELETED'				=> 'Favorite game successfully deleted.',
-	'ARCADE_DELETE_FAVORITE'				=> 'Delete favorite game',
-	'ARCADE_DELETE_FAVORITES'				=> 'Delete favorite games',
-	'ARCADE_DELETE_FAVORITE_CONFIRM'		=> 'Are you sure you want to delete this favorite game?',
-	'ARCADE_DELETE_FAVORITES_CONFIRM'		=> 'Are you sure you want to delete these favorite games?',
-));
-
-#######language/en/mods/info_ucp_arcade_challenge.php#######
-
-$lang = array_merge($lang, array(
-	'UCP_ARCADE_CHALLENGE'			=> 'Challenge',
-	'UCP_CHALLENGE_ON'				=> 'Enable Challenges',
-	'UCP_CHALLENGE_ON_EXPLAIN'		=> 'If enabled users can challenge against each other',
-	'UCP_CHALLENGE_PM_ON'			=> 'The challenge can use the PM',
-	'UCP_CHALLENGE_PM_ON_EXPLAIN'	=> 'If enabled you got a PM about every challange.',
-	'UCP_CHALLENGE_STAT_AC'			=> 'Number of statistic data on a page',
-	'UCP_CHALLENGE_STAT_AC_EXPLAIN'	=> 'The users statistic will be listed by The given value on a page.',
-));
-
-#######language/en/mods/info_ucp_gallery.php#######
-
-$lang = array_merge($lang, array(
-	'UCP_GALLERY'						=> 'Gallery',
-	'UCP_GALLERY_FAVORITES'				=> 'Manage favorites',
-	'UCP_GALLERY_PERSONAL_ALBUMS'		=> 'Manage personal albums',
-	'UCP_GALLERY_SETTINGS'				=> 'Personal settings',
-	'UCP_GALLERY_WATCH'					=> 'Administrare subscrieri',
-));
-
-#######language/en/mods/info_ucp_shop.php#######
-
-$lang = array_merge($lang, array(
-	'UCP_SHOP'					=> 'Shop',
-	'UCP_SHOP_INVENTORY'		=> 'Inventory',
-	'UCP_SHOP_PRESENT'			=> 'Donate',
-	'UCP_SHOP_CONFIG'			=> 'Setări',
-	'UCP_SHOP_SELL'				=> 'Selling',
 ));
 
 #######language/en/mods/lang_football.php#######
@@ -10498,6 +10436,43 @@ $lang = array_merge($lang, array(
 	'ACP_API'				=> 'API',
 	'DATABASE_SERVER_INFO'	=> 'Server bază de date',
 	'ADD_USERS'					=> 'Adăugare utilizatori',
+	'ACP_FOOTBALL'					=> 'Football',
+	'ACP_FOOTBALL_OPERATION'		=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Game mode',
+	'ACP_FOOTBALL_MANAGE'			=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Manage match schedule',
+	'LOG_FOOTB_UPDATE'				=> '<strong>Football Mod Match Schedule Update</strong><br />- %s',
+	'ACP_FOOTBALL_CONFIGURATION'	=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Prediction league configuration',
+	'ACP_FOOTBALL_MANAGEMENT'		=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Manage Prediction league',
+	'ACP_FOOTBALL_SETTINGS'			=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Prediction league settings',
+	'ACP_FOOTBALL_MENU'				=> 'Menu settings',
+	'ACP_FOOTBALL_SEASONS'			=> 'Seasons',
+	'ACP_FOOTBALL_SEASONS_MANAGE'	=> 'Manage Seasons',
+	'ACP_FOOTBALL_SEASONS_MANAGEMENT'	=> 'Seasons management',
+	'ACP_POINTS'					=> 'Ultimate Points',
+	'ACP_FOOTBALL_BETS_MANAGE'		=> 'Edit bets',
+	'ACP_FOOTBALL_BANK_MANAGE'		=> 'Manage Accounts',
+	'ACP_FOOTBALL_RESULTS_MANAGE'	=> 'Manage match results',
+
+	'LOG_USER_TRANSFER'				=> '<strong>Points Transfer</strong><br />» %1$s transferred %3$s %4$s to %2$s',
+	'LOG_ATTACH_POINTS_EXT_UPDATE'	=> '<strong>The extension has been updated for UPS</strong><br />» %s',
+	'LOG_GROUP_TRANSFER_ADD'		=> 'Transferred Points to a group',
+	'LOG_GROUP_TRANSFER_SET'		=> 'Set Points to a new value for a group',
+	'LOG_MOD_BANK'					=> 'Edited %1s bank points',
+	'LOG_MOD_POINTS'				=> 'Edited %1s points',
+	'LOG_MOD_POINTS_BANK'			=> 'Edited bank settings',
+	'LOG_MOD_POINTS_FORUM'			=> 'Edited Global Forum Points settings',
+	'LOG_MOD_POINTS_FORUM_SWITCH'	=> 'Edited Forum Point Switches',
+	'LOG_MOD_POINTS_FORUM_VALUES'	=> 'Edited Forum Point Values',
+	'LOG_MOD_POINTS_LOTTERY'		=> 'Edited Lottery settings',
+	'LOG_MOD_POINTS_ROBBERY'		=> 'Edited Robbery settings',
+	'LOG_MOD_POINTS_SETTINGS'		=> 'Edited Points settings',
+	'LOG_RESYNC_BANK_ACCOUNTS'		=> '<strong>All bank accounts were deleted successfully</strong>',
+	'LOG_RESYNC_LOTTERY_HISTORY'	=> '<strong>The lottery history was reset successfully</strong>',
+	'LOG_RESYNC_POINTSCOUNTS'		=> '<strong>All users points were reset successfully</strong>',
+	'LOG_RESYNC_POINTSLOGSCOUNTS'	=> '<strong>All user logs were reset successfully</strong>',
+	'ACP_MANAGE_CATEGORIES'			=> 'Manage Categories',
+	'ACP_MANAGE_DOWNLOADS'			=> 'Manage Downloads',
+	'ACP_HANGMAN_SETTINGS' 			=> 'Hangman Settings',
+
 
 	'ACP_ADMINISTRATORS'		=> 'Administratori',
 	'ACP_ADMIN_LOGS'			=> 'Log administrator',
@@ -15185,8 +15160,8 @@ $lang = array_merge($lang, array(
 
 	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
 
-
 	// 3.0.12
+	'ACP_IMAGESETS'			=> 'Seturi imagine',
 	'ACP_IMAGESETS_EXPLAIN'	=> 'Seturile de imagini cuprind toate butoanele, forumul, dosarul, etc. şi alte imagini în afara stilului, specifice forumului. Aici puteţi modifica, exporta sau şterge seturile de imagini existente şi importa sau activa seturi noi.',
 	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 	'ACP_TEMPLATES_EXPLAIN'	=> 'Un set de şabloane cuprinde toate punctele de marcaj folosite pentru a genera formatul forumului. Aici puteţi modifica setul de şabloane existente, şterge, exporta, importa şi previzualiza seturile. De asemenea, puteţi modifica codul şablonului folosit pentru a genera codul BB.',

@@ -3990,6 +3990,36 @@ $lang = array_merge($lang, array(
 	'UCP_YMSM'					=> 'Karte',
 	'UCP_YMSM_SETTINGS'			=> 'Einstellungen',
 	'UCP_YMSM_USERMARK'			=> 'Mitglieder Karte',
+	'UCP_ARCADE_SETTINGS_EXPLAIN'		=> 'Diese Einstellungen steuern verschiedene Aspekte der Spiele.',
+	'UCP_ARCADE_FAVORITES_EXPLAIN'		=> 'Hier können Sie sich Ihre Lieblingsspiele angucken und löschen.',
+	'ARCADE_FAVORITES_DELETED'			=> 'Lieblingsspiele erfolgreich gelöscht.',
+	'ARCADE_FAVORITE_DELETED'			=> 'Lieblingsspiel erfolgreich gelöscht.',
+	'ARCADE_DELETE_FAVORITE'			=> 'Lieblingsspiel löschen',
+	'ARCADE_DELETE_FAVORITES'			=> 'Lieblingsspiele löschen',
+	'ARCADE_DELETE_FAVORITE_CONFIRM'	=> 'Wollen Sie das Spiel wirklich löschen?',
+	'ARCADE_DELETE_FAVORITES_CONFIRM'	=> 'Wollen Sie die Spiele wirklich löschen?',
+
+	'UCP_CHALLENGE_ON'				=> 'Enable Challenges',
+	'UCP_CHALLENGE_ON_EXPLAIN'		=> 'If enabled users can challenge against each other',
+	'UCP_CHALLENGE_PM_ON'			=> 'The challenge can use the PM',
+	'UCP_CHALLENGE_PM_ON_EXPLAIN'	=> 'If enabled you got a PM about every challange.',
+	'UCP_CHALLENGE_STAT_AC'			=> 'Number of statistic data on a page',
+	'UCP_CHALLENGE_STAT_AC_EXPLAIN'	=> 'The users statistic will be listed by The given value on a page.',
+
+	'UCP_ARCADE_CHALLENGE'			=> 'Challenge',
+	'UCP_ARCADE'					=> 'Spiele',
+	'UCP_ARCADE_SETTINGS'			=> 'Einstellungen',
+	'UCP_ARCADE_FAVORITES'			=> 'Top Spiele verwalten',
+	'UCP_GALLERY'					=> 'Galerie',
+	'UCP_GALLERY_FAVORITES'			=> 'Lieblingsbilder verwalten',
+	'UCP_GALLERY_PERSONAL_ALBUMS'	=> 'Persönliche Alben verwalten',
+	'UCP_GALLERY_SETTINGS'			=> 'Persönliche Einstellungen',
+	'UCP_GALLERY_WATCH'				=> 'Benachrichtigungen verwalten',
+	'UCP_SHOP'						=> 'Shop',
+	'UCP_SHOP_INVENTORY'			=> 'Inventar',
+	'UCP_SHOP_PRESENT'				=> 'Schenken',
+	'UCP_SHOP_CONFIG'				=> 'Einstellungen',
+	'UCP_SHOP_SELL'					=> 'Verkaufen',
 ));
 
 #######language/en/viewforum.php#######
@@ -6860,7 +6890,7 @@ $lang = array_merge($lang, array(
 
 ));
 
-#######language/en/mods/info_acp_dm_eds.php#######
+#######language/en/mods/acp_dm_eds.php#######
 
 $lang = array_merge($lang, array(
 	'ACP_ADD'							=> 'Hinzufügen',
@@ -6944,10 +6974,8 @@ Viel Spaß damit!',
 	'ACP_EDIT_FILENAME'					=> 'Gespeicherte Datei',
 	'ACP_EDIT_FILENAME_EXPLAIN'			=> '<strong>WICHTIG:</strong> Wenn Sie hier den Dateinamen ändern, findet keine Prüfung mehr statt, ob die Datei auch tatsächlich auf Ihrem Webspace existiert! <strong>Sie müssen die Datei dann per FTP hochladen und die alte Datei manuell löschen!</strong>',
 	'ACP_EDIT_SUB_CAT_EXPLAIN'			=> 'Das angelegte Unterverzeichnis können Sie nicht mehr ändern. Wenn Sie einen anderen Verzeichnisnamen wünscht, mußt Sie die bereits angelegt Kategorie löschen und eine neue Kategroie mit einem anderen Verzeichnisnamen anlegen!',
-	'ACP_MANAGE_CATEGORIES'				=> 'Kategorien verwalten',
 	'ACP_MANAGE_CONFIG'					=> 'Konfiguration',
 	'ACP_MANAGE_CONFIG_EXPLAIN'			=> 'Hier können Sie ein paar Basiseinstellungen vornehmen',
-	'ACP_MANAGE_DOWNLOADS'				=> 'Downloads verwalten',
 	'ACP_MANAGE_DOWNLOADS_EXPLAIN'		=> 'Hier können Sie Downloads hinzufügen, bearbeiten oder löschen',
 	'ACP_MULTI_DOWNLOAD'				=> '%1$s Downloads',
 	'ACP_NEED_DATA'						=> 'Sie müssen alle Felder ausfüllen!',
@@ -7022,20 +7050,10 @@ Viel Spaß damit!',
 
 ));
 
-#######language/en/mods/info_acp_football.php#######
+#######language/en/mods/acp_football.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_FOOTBALL'					=> 'Fussball',
-	'ACP_FOOTBALL_OPERATION'		=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Spielbetrieb',
-	'ACP_FOOTBALL_MANAGE'			=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Spielplan Verwalten',
-	'LOG_FOOTB_UPDATE'				=> '<strong>Fussball Mod Spielplan-Update</strong><br />- %s',
 	'R_NEW_TEAM'					=> 'Neues Team',
-
-	'ACP_FOOTBALL_CONFIGURATION'		=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Tipprunden Einstellungen',
-	'ACP_FOOTBALL_MANAGEMENT'			=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Tipprunde Verwaltung',
-	'ACP_FOOTBALL_SETTINGS'				=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Tipprunden Einstellungen',
-	'ACP_FOOTBALL_SETTINGS_EXPLAIN'		=> 'Hier können Sie einige grundlegende Einstellungen der Tipprunde vornehmen, ihr einen passenden Namen und eine Beschreibung geben und, neben anderen Werten, die Standard-Einstellungen für die Anzeige anpassen. ',
-
 	'DISABLE_FOOTBALL'					=> 'Tipprunde deaktivieren',
 	'DISABLE_FOOTBALL_EXPLAIN'			=> 'Hiermit sperrst Sie die Tipprunde für alle Benutzer. Wenn Sie möchten, können Sie eine kurze Nachricht (bis zu 255 Zeichen) angeben. ',
 	'DISPLAY_RANKS'						=> 'Anzahl angezeigter Tipper in den Übersichts-Ranglisten',
@@ -7076,9 +7094,6 @@ $lang = array_merge($lang, array(
 
 	'WIN_NAME'							=> 'Gewinn Name (oder Währung)',
 	'WIN_NAME_EXPLAIN'					=> 'Der Name, der für die Gewinne in der Tipprunde angezeigt werden soll',
-));
-
-$lang = array_merge($lang, array(
 
 	'BANK'								=> 'Tipprunden Konto verwalten',
 	'BANK_EXPLAIN'						=> 'Sollen Tipprunden Konten mit Einsätzen und Gewinnen gepflegt werden?',
@@ -7121,8 +7136,8 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ACP_FOOTBALL_MENU'					=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Menü Einstellungen',
 	'ACP_FOOTBALL_MENU_EXPLAIN'			=> 'Hier können Sie Forenverweise als Menueinträge für das Tipprunden-Menue hinterlegen. Den Menutext können Sie dabei frei wählen, aslo dem Link zum Forum einen anderen Namen geben. ',
+	'ACP_FOOTBALL_SETTINGS_EXPLAIN'		=> 'Hier können Sie einige grundlegende Einstellungen der Tipprunde vornehmen, ihr einen passenden Namen und eine Beschreibung geben und, neben anderen Werten, die Standard-Einstellungen für die Anzeige anpassen. ',
 
 	'MENU_DESC1'						=> 'Text Link 1',
 	'MENU_DESC2'						=> 'Text Link 2',
@@ -7227,11 +7242,9 @@ $lang = array_merge($lang, array(
 	'PREDICTION_LEAGUE'					=> 'Tipprunde',
 
 	'ACP_FOOTBALL_BETS'						=> 'Tipps',
-	'ACP_FOOTBALL_BETS_MANAGE'				=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Tipps editieren',
 	'ACP_FOOTBALL_BETS_MANAGE_EXPLAIN'		=> 'Hier können Sie alle Tipps der Tipper editieren.',
 	'ACP_FOOTBALL_BETS_MANAGEMENT'			=> 'Tipps editieren',
 	'ACP_FOOTBALL_BANK'						=> 'Konten',
-	'ACP_FOOTBALL_BANK_MANAGE'				=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Konten verwalten',
 	'ACP_FOOTBALL_BANK_MANAGE_EXPLAIN'		=> 'Hier können Sie alle Tipprunden Konten verwalten. Sie können Einsätze einziehen, Ein- und Auszahlungen verwalten und kontrollieren.',
 	'ACP_FOOTBALL_BANK_MANAGEMENT'			=> 'Konten-Verwaltung',
 
@@ -7368,7 +7381,6 @@ $lang = array_merge($lang, array(
 	'WRONG_DATA_TEAM_GROUP'					=> 'Keine gültige Gruppe für die Gruppenspiele. Gültige Gruppen sind A-Z.',
 
 	'ACP_FOOTBALL_RESULTS'					=> 'Spielergebnisse',
-	'ACP_FOOTBALL_RESULTS_MANAGE'			=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Spielergebnisse eingeben',
 	'ACP_FOOTBALL_RESULTS_MANAGE_EXPLAIN'	=> 'Hier können Sie Spielergebnisse bestätigen, eingeben, löschen oder aus der Wertung nehmen.',
 	'ACP_FOOTBALL_RESULTS_MANAGEMENT'		=> 'Spielergebnis-Verwaltung',
 	'ADVICE'								=> 'Hinweis',
@@ -7624,9 +7636,6 @@ $lang = array_merge($lang, array(
 
 
 $lang = array_merge($lang, array(
-	'ACP_FOOTBALL_CONFIGURATION'		=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Tipprunden Einstellungen',
-	'ACP_FOOTBALL_MANAGEMENT'			=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Tipprunde Verwaltung',
-	'ACP_FOOTBALL_SETTINGS'				=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Tipprunden Einstellungen',
 	'ACP_FOOTBALL_SETTINGS_EXPLAIN'		=> 'Hier können Sie einige grundlegende Einstellungen der Tipprunde vornehmen, ihr einen passenden Namen und eine Beschreibung geben und, neben anderen Werten, die Standard-Einstellungen für die Anzeige anpassen. ',
 
 	'DISABLE_FOOTBALL'					=> 'Tipprunde deaktivieren',
@@ -7810,10 +7819,7 @@ $lang = array_merge($lang, array(
 ));
 
 $lang = array_merge($lang, array(
-	'ACP_FOOTBALL_SEASONS'					=> 'Saisons',
-	'ACP_FOOTBALL_SEASONS_MANAGE'			=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Saisons verwalten',
 	'ACP_FOOTBALL_SEASONS_MANAGE_EXPLAIN'	=> 'Hier können Sie alle Saisons verwalten. Sie können bestehende löschen oder ändern oder eine neue Saison erstellen, sowie Name und Kurzbezeichnug der Saison einstellen.',
-	'ACP_FOOTBALL_SEASONS_MANAGEMENT'		=> 'Saison-Verwaltung',
 
 	'CREATE_SEASON'							=> 'Neue Saison erstellen',
 
@@ -7926,7 +7932,7 @@ $lang = array_merge($lang, array(
 	'YEAR'									=> 'Jahr',
 ));
 
-#######language/en/mods/info_acp_hangman.php#######
+#######language/en/mods/acp_hangman.php#######
 
 $lang = array_merge($lang, array(
 	'ACP_IMPORT_BONUS'					=> 'Import Bonus',
@@ -7971,7 +7977,6 @@ $lang = array_merge($lang, array(
 	'ACP_ALLOW_SMILIES'			=> 'Smilies in der Beschreibung und in der Hilfe',
 	'ACP_ALLOW_SMILIES_EXP'		=> 'Dürfen Smilies in der Beschreibung und in der Hilfe verwendet werden?',
 	'ACP_HANGMAN_MANAGEMENT' 	=> 'Hangman Verwaltung',
-	'ACP_HANGMAN_SETTINGS' 		=> 'Hangman Einstellungen',
 	'ACP_HANGMAN_IMPORT' 		=> 'Hangman Import/Export',
 	'ACP_CONFIG_TITLE' 			=> 'Hangman Konfigurationsseite',
 	'ACP_CONFIG_HEAD'			=> 'Einstellungen',
@@ -8090,10 +8095,9 @@ $lang = array_merge($lang, array(
 
 ));
 
-#######language/en/mods/info_acp_points.php#######
+#######language/en/mods/acp_points.php#######
 
 $lang = array_merge($lang, array(
-	'ACP_POINTS'						=> 'Ultimate Points',
 	'ACP_POINTS_BANK_EXPLAIN'			=> 'Hier können Sie die Einstellungen für das Bank Modul vornehmen',
 	'ACP_POINTS_BANK_TITLE'				=> 'Bank Einstellungen',
 	'ACP_POINTS_DEACTIVATED'			=> 'Der Ultimate Points ist derzeit deaktiviert!',
@@ -8159,23 +8163,6 @@ $lang = array_merge($lang, array(
 	'FORUM_POINT_UPDATE'				=> 'Die Forenpunkte und den Dateianghang Schalter global aktualisieren',
 	'FORUM_POINT_UPDATE_CONFIRM'		=> '<br />Sind Sie sicher, dass Sie alle Foren Punkte mit den vorgegebenen Punkten und den Dateianhang Schalter aktualisieren wollen?<br />Dieser Schritt überschreibt alle bisherigen Einstellungen und kann nicht rückgängig gemacht werden!',
 
-	'LOG_USER_TRANSFER'					=> '<strong>Punkte Transfer</strong><br />» %1$s hat %2$s %3$s %4$s überwiesen',
-	'LOG_ATTACH_POINTS_EXT_UPDATE'		=> '<strong>Die Erweiterung wurde für UPS aktualisiert</strong><br />» %s',
-	'LOG_GROUP_TRANSFER_ADD'			=> 'Es wurde einer Gruppe Punkte überwiesen',
-	'LOG_GROUP_TRANSFER_SET'			=> 'Es wurde einer Gruppe die Punkte auf einen neuen Wert gesetzt',
-	'LOG_MOD_BANK'						=> '%1s Bank Punkte bearbeitet',
-	'LOG_MOD_POINTS'					=> '%1s Punkte bearbeitet',
-	'LOG_MOD_POINTS_BANK'				=> 'Bank Einstellungen bearbeitet',
-	'LOG_MOD_POINTS_FORUM'				=> 'Globale Forum Punkte Einstellungen bearbeitet',
-	'LOG_MOD_POINTS_FORUM_SWITCH'		=> 'Foren Punkte Schalter bearbeitet',
-	'LOG_MOD_POINTS_FORUM_VALUES'		=> 'Foren Punkte Werte bearbeitet',
-	'LOG_MOD_POINTS_LOTTERY'			=> 'Lotterie Einstellungen bearbeitet',
-	'LOG_MOD_POINTS_ROBBERY'			=> 'Diebstahl Einstellungen bearbeitet',
-	'LOG_MOD_POINTS_SETTINGS'			=> 'Punkte Einstellungen bearbeitet',
-	'LOG_RESYNC_BANK_ACCOUNTS'			=> '<strong>Alle Bankkonten wurden erfolgreich gelöscht</strong>',
-	'LOG_RESYNC_LOTTERY_HISTORY'		=> '<strong>Die Lotterie Historie wurde erfolgreich zurückgesetzt</strong>',
-	'LOG_RESYNC_POINTSCOUNTS'			=> '<strong>Alle Benutzer Punkte wurden erfolgreich zurückgesetzt</strong>',
-	'LOG_RESYNC_POINTSLOGSCOUNTS'		=> '<strong>Alle Benutzer Logs wurden erfolgreich zurückgesetzt</strong>',
 	'LOTTERY_BASE_AMOUNT'				=> 'Basis Jackpot',
 	'LOTTERY_BASE_AMOUNT_EXPLAIN'		=> 'Der Jackpot beginnt mit diesem Wert. Während der Kaufphase kann dieser Wert ansteigen. Alles was zusätzlich eingezahlt wird, erhöht den Gesamt Jackpot für die folgende Auslosung. Der Jackpot kann nicht unterhalb dieses Wertes fallen.',
 	'LOTTERY_CHANCE'					=> 'Erfolgswahrscheinlichkeit',
@@ -8319,55 +8306,6 @@ $lang = array_merge($lang, array(
 	'USER_POINTS'						=> 'Benutzerpunkte',
 	'USER_POINTS_EXPLAIN'				=> 'Anzahl Punkte, die der Benutzer hat',
 	'POINTS_COST_ATTACHMENT'			=> 'Kosten pro Download eines Dateianhanges (setze 0 zum deaktivieren)',
-));
-
-#######language/en/mods/info_ucp_arcade.php#######
-
-$lang = array_merge($lang, array(
-	'UCP_ARCADE'							=> 'Spiele',
-	'UCP_ARCADE_SETTINGS'					=> 'Einstellungen',
-	'UCP_ARCADE_SETTINGS_EXPLAIN'			=> 'Diese Einstellungen steuern verschiedene Aspekte der Spiele.',
-	'UCP_ARCADE_FAVORITES'					=> 'Top Spiele verwalten',
-	'UCP_ARCADE_FAVORITES_EXPLAIN'			=> 'Hier können Sie sich Ihre Lieblingsspiele angucken und löschen.',
-
-	'ARCADE_FAVORITES_DELETED'				=> 'Lieblingsspiele erfolgreich gelöscht.',
-	'ARCADE_FAVORITE_DELETED'				=> 'Lieblingsspiel erfolgreich gelöscht.',
-	'ARCADE_DELETE_FAVORITE'				=> 'Lieblingsspiel löschen',
-	'ARCADE_DELETE_FAVORITES'				=> 'Lieblingsspiele löschen',
-	'ARCADE_DELETE_FAVORITE_CONFIRM'		=> 'Wollen Sie das Spiel wirklich löschen?',
-	'ARCADE_DELETE_FAVORITES_CONFIRM'		=> 'Wollen Sie die Spiele wirklich löschen?',
-));
-
-#######language/en/mods/info_ucp_arcade_challenge.php#######
-
-$lang = array_merge($lang, array(
-	'UCP_ARCADE_CHALLENGE'			=> 'Challenge',
-	'UCP_CHALLENGE_ON'				=> 'Enable Challenges',
-	'UCP_CHALLENGE_ON_EXPLAIN'		=> 'If enabled users can challenge against each other',
-	'UCP_CHALLENGE_PM_ON'			=> 'The challenge can use the PM',
-	'UCP_CHALLENGE_PM_ON_EXPLAIN'	=> 'If enabled you got a PM about every challange.',
-	'UCP_CHALLENGE_STAT_AC'			=> 'Number of statistic data on a page',
-	'UCP_CHALLENGE_STAT_AC_EXPLAIN'	=> 'The users statistic will be listed by The given value on a page.',
-));
-
-#######language/en/mods/info_ucp_gallery.php#######
-
-$lang = array_merge($lang, array(
-	'UCP_GALLERY'						=> 'Galerie',
-	'UCP_GALLERY_FAVORITES'				=> 'Lieblingsbilder verwalten',
-	'UCP_GALLERY_PERSONAL_ALBUMS'		=> 'Persönliche Alben verwalten',
-	'UCP_GALLERY_SETTINGS'				=> 'Persönliche Einstellungen',
-	'UCP_GALLERY_WATCH'					=> 'Benachrichtigungen verwalten',
-));
-
-#######language/en/mods/info_ucp_shop.php#######
-
-$lang = array_merge($lang, array(
-	'UCP_SHOP'					=> 'Shop',
-	'UCP_SHOP_INVENTORY'		=> 'Inventar',
-	'UCP_SHOP_PRESENT'			=> 'Schenken',
-	'UCP_SHOP_CONFIG'			=> 'Einstellungen',
-	'UCP_SHOP_SELL'				=> 'Verkaufen',
 ));
 
 #######language/en/mods/lang_football.php#######
@@ -10534,6 +10472,43 @@ $lang = array_merge($lang, array(
 	'ACP_API'				=> 'API',
 	'DATABASE_SERVER_INFO'	=> 'Hilfe und Support Forum',
 	'ADD_USERS'					=> 'Benutzer hinzufügen',
+	'ACP_FOOTBALL'					=> 'Fussball',
+	'ACP_FOOTBALL_OPERATION'		=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Spielbetrieb',
+	'ACP_FOOTBALL_MANAGE'			=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Spielplan Verwalten',
+	'LOG_FOOTB_UPDATE'				=> '<strong>Fussball Mod Spielplan-Update</strong><br />- %s',
+	'ACP_FOOTBALL_CONFIGURATION'	=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Tipprunden Einstellungen',
+	'ACP_FOOTBALL_MANAGEMENT'		=> '<img src="http://img.userboard.org/images/acp/icon_football.gif" width="12" height="12"> Tipprunde Verwaltung',
+	'ACP_FOOTBALL_SETTINGS'			=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Tipprunden Einstellungen',
+	'ACP_FOOTBALL_MENU'				=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Menü Einstellungen',
+	'ACP_FOOTBALL_SEASONS'			=> 'Saisons',
+	'ACP_FOOTBALL_SEASONS_MANAGE'	=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Saisons verwalten',
+	'ACP_FOOTBALL_SEASONS_MANAGEMENT'	=> 'Saison-Verwaltung',
+	'ACP_POINTS'					=> 'Ultimate Points',
+	'ACP_FOOTBALL_BETS_MANAGE'		=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Tipps editieren',
+	'ACP_FOOTBALL_BANK_MANAGE'		=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Konten verwalten',
+	'ACP_FOOTBALL_RESULTS_MANAGE'	=> '<img src="http://img.userboard.org/images/acp/icon_fussball.jpg"> Spielergebnisse eingeben',
+
+	'LOG_USER_TRANSFER'				=> '<strong>Punkte Transfer</strong><br />» %1$s hat %2$s %3$s %4$s überwiesen',
+	'LOG_ATTACH_POINTS_EXT_UPDATE'	=> '<strong>Die Erweiterung wurde für UPS aktualisiert</strong><br />» %s',
+	'LOG_GROUP_TRANSFER_ADD'		=> 'Es wurde einer Gruppe Punkte überwiesen',
+	'LOG_GROUP_TRANSFER_SET'		=> 'Es wurde einer Gruppe die Punkte auf einen neuen Wert gesetzt',
+	'LOG_MOD_BANK'					=> '%1s Bank Punkte bearbeitet',
+	'LOG_MOD_POINTS'				=> '%1s Punkte bearbeitet',
+	'LOG_MOD_POINTS_BANK'			=> 'Bank Einstellungen bearbeitet',
+	'LOG_MOD_POINTS_FORUM'			=> 'Globale Forum Punkte Einstellungen bearbeitet',
+	'LOG_MOD_POINTS_FORUM_SWITCH'	=> 'Foren Punkte Schalter bearbeitet',
+	'LOG_MOD_POINTS_FORUM_VALUES'	=> 'Foren Punkte Werte bearbeitet',
+	'LOG_MOD_POINTS_LOTTERY'		=> 'Lotterie Einstellungen bearbeitet',
+	'LOG_MOD_POINTS_ROBBERY'		=> 'Diebstahl Einstellungen bearbeitet',
+	'LOG_MOD_POINTS_SETTINGS'		=> 'Punkte Einstellungen bearbeitet',
+	'LOG_RESYNC_BANK_ACCOUNTS'		=> '<strong>Alle Bankkonten wurden erfolgreich gelöscht</strong>',
+	'LOG_RESYNC_LOTTERY_HISTORY'	=> '<strong>Die Lotterie Historie wurde erfolgreich zurückgesetzt</strong>',
+	'LOG_RESYNC_POINTSCOUNTS'		=> '<strong>Alle Benutzer Punkte wurden erfolgreich zurückgesetzt</strong>',
+	'LOG_RESYNC_POINTSLOGSCOUNTS'	=> '<strong>Alle Benutzer Logs wurden erfolgreich zurückgesetzt</strong>',
+	'ACP_MANAGE_CATEGORIES'			=> 'Kategorien verwalten',
+	'ACP_MANAGE_DOWNLOADS'			=> 'Downloads verwalten',
+	'ACP_HANGMAN_SETTINGS' 			=> 'Hangman Einstellungen',
+
 
 	'ACP_ADMINISTRATORS'		=> 'Administratoren',
 	'ACP_ADMIN_LOGS'			=> 'Administrations-Protokoll',
@@ -15203,8 +15178,8 @@ $lang = array_merge($lang, array(
 
 	'UNINSTALL_DEFAULT'		=> 'Der Standard-Style kann nicht deinstalliert werden.',
 
-
 	// 3.0.12
+	'ACP_IMAGESETS'			=> 'Grafiksammlungen',
 	'ACP_IMAGESETS_EXPLAIN'	=> 'Grafiksammlungen fassen alle Schaltflächen, Symbole und weitere nicht Style-spezifische Grafiken zusammen, die vom Board verwendet werden. Hier können Sie bestehende Grafiksammlungen ändern, löschen und normalisieren.',
 	'ACP_STYLES_EXPLAIN'	=> 'Hier können Sie die auf Ihrem Board verfügbaren Styles verwalten. Sie können bestehende Styles ändern, löschen, deaktivieren, reaktivieren oder neue installieren. Sie können mit der Vorschau-Funktion auch sehen, wie ein Style aussehen wird. Außerdem ist die Zahl der Benutzer angegeben, die ein Style verwenden. Bitte beachten Sie, dass hier nicht berücksichtigt wird, ob der Style überschrieben wird.',
 	'ACP_TEMPLATES_EXPLAIN'	=> 'Eine Template-Sammlung umfasst all den HTML-Code, der für das Layout des Boards verwendet wird. Sie können bestehende Template-Sammlungen ändern, löschen und normalisieren.',
