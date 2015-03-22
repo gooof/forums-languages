@@ -2690,6 +2690,8 @@ $lang = array_merge($lang, array(
 	'ALL'					=> 'All',
 	'BEFORE'				=> 'Before',
 	'CC_EMAIL'				=> 'Send a copy of this e-mail to yourself.',
+	'CC_SENDER'				=> 'Send a copy of this e-mail to yourself.',
+
 	'CONTACT_ADMIN'			=> 'Contact a Board Administrator',
 
 	'DEST_LANG'				=> 'Language',
@@ -3100,6 +3102,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_S_HELP'				=> 'Font colour: [color=red]text[/color] or [color=#FF0000]text[/color]',
 	'BBCODE_U_HELP'				=> 'Underline text: [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'Insert URL: [url]http://url[/url] or [url=http://url]URL text[/url]',
+	'BBCODE_Y_HELP'				=> 'List: Add list element'',
 	'BUMP_ERROR'				=> 'You cannot bump this topic so soon after the last post.',
 	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
@@ -15135,6 +15138,8 @@ $lang = array_merge($lang, array(
 	'NO_UNINSTALLED_STYLE'		=> 'No uninstalled styles detected.',
 
 	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
+
+	'STYLE_NAME_RESERVED'		=> 'Style "%s" can not be installed, because the name is reserved.',
 
 	'STYLE_ACTIVATE'			=> 'Activate',
 	'STYLE_ACTIVE'				=> 'Active',

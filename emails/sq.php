@@ -619,7 +619,7 @@ $email = array_merge($email, array(
 
 Hello {USERNAME},
 
-you have received a new private message to your account on "{SITENAME}". You can view your new message by clicking on the following link: {U_INBOX}
+you have received a new private message to your account on "{SITENAME}". You can view your new message by clicking on the following link: {U_VIEW_MESSAGE}
 _____________________________________________________________________
 
 From: {AUTHOR_NAME}
@@ -669,7 +669,7 @@ Ju keni marrë një mesazh privat nga "{AUTHOR_NAME}" në llogarinë tuaj tek "{
 
 Ju mund të shikoni këtë mesazh duke klikuar linkun e mëposhtëm:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
 Ju keni kërkuar që të lajmëroheni sa herë merrni mesazh privat. Ju kujtojmë që ju mund të zgjidhni që të mos lajmëroheni për mesazhet e reja duke ndryshuar opsionet e duhura në profilin tuaj.
 

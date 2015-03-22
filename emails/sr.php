@@ -617,7 +617,7 @@ $email = array_merge($email, array(
 
 Hello {USERNAME},
 
-you have received a new private message to your account on "{SITENAME}". You can view your new message by clicking on the following link: {U_INBOX}
+you have received a new private message to your account on "{SITENAME}". You can view your new message by clicking on the following link: {U_VIEW_MESSAGE}
 _____________________________________________________________________
 
 From: {AUTHOR_NAME}
@@ -657,19 +657,19 @@ If you want to view the topic, click the following link:
 
 
 $email = array_merge($email, array(
-	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} Pristigla je nova privatna poruka
+	'email/privmsg_notify.txt' 		=> '{EMAILSUBJECT:} New private message has arrived
 
-Zdravo {USERNAME},
+Hello {USERNAME},
 
-Dobili ste novu privatnu poruku od “{AUTHOR_NAME}” na vaš nalog na forumu “{SITENAME}” sa sledećom temom:
+You have received a new private message from "{AUTHOR_NAME}" to your account on "{SITENAME}" with the following subject:
 
 {SUBJECT}
 
-Možete pogledati vašu novu poruku klikom na sledeći link:
+You can view your new message by clicking on the following link:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
-Zahtevali sta da budete obavešteni za ovaj događaj, ali znajte da možete uvek izabrati da ne budete obavešteni o novim porukama tako što ćete izmeniti odgovarajuće podešavanje u vašem profilu.
+You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
 
 {EMAIL_SIG}',
 ));

@@ -623,7 +623,7 @@ $email = array_merge($email, array(
 
 Hello {USERNAME},
 
-you have received a new private message to your account on "{SITENAME}". You can view your new message by clicking on the following link: {U_INBOX}
+you have received a new private message to your account on "{SITENAME}". You can view your new message by clicking on the following link: {U_VIEW_MESSAGE}
 _____________________________________________________________________
 
 From: {AUTHOR_NAME}
@@ -673,7 +673,7 @@ $email = array_merge($email, array(
 
 Може да ја видите и прочитате пораката на следниот линк:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
 Вие побаравте да бидете известени за нови приватни пораки, запомнете дека може и да не добивате известувања со изменување на подесувањата на вашиот профил.
 

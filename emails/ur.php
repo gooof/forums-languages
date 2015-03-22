@@ -612,7 +612,7 @@ $email = array_merge($email, array(
 
 Hello {USERNAME},
 
-you have received a new private message to your account on "{SITENAME}". You can view your new message by clicking on the following link: {U_INBOX}
+you have received a new private message to your account on "{SITENAME}". You can view your new message by clicking on the following link: {U_VIEW_MESSAGE}
 _____________________________________________________________________
 
 From: {AUTHOR_NAME}
@@ -664,7 +664,7 @@ $email = array_merge($email, array(
 
 آپ اس نئے ذاتی پیغام کو  ذیل میں مہیا کیے گئے ربط پر ملاحظہ کر سکتے ہیں:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
 اس اطلاع نامہ کے حصول کے لیے آپ نے اپنے کوائف نامہ میں درخواست کر رکھی ہے، یاد رھے کہ اگر آپپ آئندہ اس قسم کا اطلاع نامہ وصول نہیں کرنا چاہتے تو اپنے کوائف نامہ کی ترتیبات میں تبدیلی کے ذریعہ ایسا کر سکتے ہیں ـ
 

@@ -604,7 +604,7 @@ $email = array_merge($email, array(
 
 Hello {USERNAME},
 
-you have received a new private message to your account on "{SITENAME}". You can view your new message by clicking on the following link: {U_INBOX}
+you have received a new private message to your account on "{SITENAME}". You can view your new message by clicking on the following link: {U_VIEW_MESSAGE}
 _____________________________________________________________________
 
 From: {AUTHOR_NAME}
@@ -654,7 +654,7 @@ Du har mottatt en ny personlig melding fra "{AUTHOR_NAME}" til din brukerkonto p
 
 Du kan lese denne meldingen ved å klikke på følgende link:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
 Du mottar denne e-posten fordi du har valgt å motta slike varsler i profilinnstillingene dine. Hvis du ikke lenger ønsker å motta slike varsler kan du deaktivere dette i profilen din.
 

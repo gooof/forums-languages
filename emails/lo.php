@@ -623,7 +623,7 @@ $email = array_merge($email, array(
 
 Hello {USERNAME},
 
-you have received a new private message to your account on "{SITENAME}". You can view your new message by clicking on the following link: {U_INBOX}
+you have received a new private message to your account on "{SITENAME}". You can view your new message by clicking on the following link: {U_VIEW_MESSAGE}
 _____________________________________________________________________
 
 From: {AUTHOR_NAME}
@@ -673,7 +673,7 @@ You have received a new private message from "{AUTHOR_NAME}" to your account on 
 
 You can view your new message by clicking on the following link:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
 You have requested that you be notified on this event, remember that you can always choose not to be notified of new messages by changing the appropriate setting in your profile.
 

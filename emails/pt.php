@@ -685,7 +685,7 @@ $email = array_merge($email, array(
 
 Hello {USERNAME},
 
-you have received a new private message to your account on "{SITENAME}". You can view your new message by clicking on the following link: {U_INBOX}
+you have received a new private message to your account on "{SITENAME}". You can view your new message by clicking on the following link: {U_VIEW_MESSAGE}
 _____________________________________________________________________
 
 From: {AUTHOR_NAME}
@@ -735,15 +735,11 @@ Tem uma Mensagem Privada nova em "{SITENAME}" com o seguinte assunto:
 Veja a Mensagem no seguinte endereço:
 {U_VIEW_MESSAGE}
 
-
 Se não deseja continuar a ser notificado sempre que recebe Mensagens Privadas novas, altere a configuração desta opção no seu "Perfil".
-
 
 Obrigado {USERNAME}.
 Continue a participar ativamente.
 A sua colaboração é fundamental para todos nós.
-
-
 
 {EMAIL_SIG}',
 ));

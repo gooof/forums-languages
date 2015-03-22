@@ -632,7 +632,7 @@ $email = array_merge($email, array(
 
 Guten Tag {USERNAME}, 
 
-Sie haben unter Ihrem Konto auf "{SITENAME}" eine neue private Nachricht erhalten. Sie können die Nachricht durch einen Klick auf den folgenden Link lesen und beantworten: {U_INBOX}
+Sie haben unter Ihrem Konto auf "{SITENAME}" eine neue private Nachricht erhalten. Sie können die Nachricht durch einen Klick auf den folgenden Link lesen und beantworten: {U_VIEW_MESSAGE}
 _____________________________________________________________________
 
 Von: {AUTHOR_NAME}
@@ -641,7 +641,7 @@ Nachricht:
 {MESSAGE}
 _____________________________________________________________________
 
-Sie haben darum gebeten, dass Sie über neue Persönliche Mitteilungen benachrichtigt werden wollen. Bitte beachten Sie, dass Sie Benachrichtigungen in Ihrem Profil an- und abstellen können.
+Sie haben darum gebeten, dass Sie über neue Persönliche Mitteilungen benachrichtigt werden wollen. Bitte beachten Sie, dass Sie Benachrichtigungen in Ihrem Profil an- und abbestellen können.
 {EMAIL_SIG}',
 ));
 
@@ -680,11 +680,11 @@ Sie haben auf „{SITENAME}“ eine neue Private Nachricht von „{AUTHOR_NAME}�
 
 {SUBJECT}
 
-Sie können Ihre neue Nachricht ansehen, indem Sie den folgenden Link besuchen:
+Sie können Ihnen die neue Nachricht ansehen, wenn Sie folgenden Link aufrufst:
 
 {U_VIEW_MESSAGE}
 
-Sie haben ausgewählt, dass Sie bei neuen Privaten Nachrichten informiert werden möchten. Sie können diese Benachrichtigungen jederzeit in Ihrem persönlichen Bereich abstellen.
+Sie haben ausgewählt, dass Sie bei neuen Privaten Nachrichten informiert werden möchten. Sie können diese Benachrichtigungen in Ihrem persönlichen Bereich abstellen.
 
 {EMAIL_SIG}',
 ));

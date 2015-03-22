@@ -624,7 +624,7 @@ $email = array_merge($email, array(
 
 Hello {USERNAME},
 
-you have received a new private message to your account on "{SITENAME}". You can view your new message by clicking on the following link: {U_INBOX}
+you have received a new private message to your account on "{SITENAME}". You can view your new message by clicking on the following link: {U_VIEW_MESSAGE}
 _____________________________________________________________________
 
 From: {AUTHOR_NAME}
@@ -674,7 +674,7 @@ Anda telah menerima sebuah pesan pribadi yang baru dari "{AUTHOR_NAME}" di "{SIT
 
 Anda dapat melihat pesan baru anda dengan mengklik link berikut ini:
 
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
 Dalam hal ini, anda telah meminta untuk diberitahukan, mohon diingat bahwa anda dapat memilih untuk tidak diberitahukan atas pesan baru dengan mengubah pengaturan yang sesuai di profil anda.
 

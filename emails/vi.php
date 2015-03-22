@@ -602,7 +602,7 @@ $email = array_merge($email, array(
 
 Hello {USERNAME},
 
-you have received a new private message to your account on "{SITENAME}". You can view your new message by clicking on the following link: {U_INBOX}
+you have received a new private message to your account on "{SITENAME}". You can view your new message by clicking on the following link: {U_VIEW_MESSAGE}
 _____________________________________________________________________
 
 From: {AUTHOR_NAME}
@@ -650,7 +650,7 @@ Bạn có một tin nhắn mới được gửi đến từ thành viên "{AUTHO
 {SUBJECT}
 
 Bạn có thể xem nội dung của tin nhắn mới này bằng cách bấm vào liên kết dưới đây:
-{U_INBOX}
+{U_VIEW_MESSAGE}
 
 Bạn đã yêu cầu thông báo cho bạn biết về điều này. Hãy nhớ rằng bạn luôn luôn có quyền lựa chọn tắt thông báo này mỗi khi có tin nhắn mới bằng cách thay đổi lại thiết lập cá nhân của mình trong hệ thống.
 
