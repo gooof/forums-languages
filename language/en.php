@@ -3102,7 +3102,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_S_HELP'				=> 'Font colour: [color=red]text[/color] or [color=#FF0000]text[/color]',
 	'BBCODE_U_HELP'				=> 'Underline text: [u]text[/u]',
 	'BBCODE_W_HELP'				=> 'Insert URL: [url]http://url[/url] or [url=http://url]URL text[/url]',
-	'BBCODE_Y_HELP'				=> 'List: Add list element'',
+	'BBCODE_Y_HELP'				=> 'List: Add list element',
 	'BUMP_ERROR'				=> 'You cannot bump this topic so soon after the last post.',
 	'BBCODE_MAP_HELP' 			=> 'Insert a map: [map]latitude,longitude(title); ...[/map]',
 
