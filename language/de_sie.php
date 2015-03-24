@@ -3185,7 +3185,7 @@ $lang = array_merge($lang, array(
 	'NO_PM_ICON'				=> 'Kein PN-Symbol',
 	'NO_POLL_TITLE'				=> 'Sie müssen einen Umfragentitel angeben.',
 	'NO_POST'					=> 'Die angeforderte Nachricht existiert nicht.',
-	'NO_POST_MODE'				=> 'Keine Post-Methode angelegt.',
+	'NO_POST_MODE'				=> 'Kein Eintragsmodus gewählt.',
 
 	'PARTIAL_UPLOAD'			=> 'Die Datei wurde nur teilweise hochgeladen.',
 	'PHP_SIZE_NA'				=> 'Der Dateianhang ist zu groß.<br />Die durch PHP in der php.ini festgelegte maximale Größe konnte nicht ermittelt werden.',
@@ -3212,7 +3212,7 @@ $lang = array_merge($lang, array(
 	'POST_GLOBAL'				=> 'Globale Bekanntmachung',
 	'POST_ICON'					=> 'Beitrags-Symbol',
 	'POST_NORMAL'				=> 'Normal',
-	'POST_REVIEW'				=> 'Geänderter Beitrag',
+	'POST_REVIEW'				=> 'Neue Beiträge im Thema',
 	'POST_REVIEW_EDIT'			=> 'Geänderter Beitrag',
 	'POST_REVIEW_EDIT_EXPLAIN'	=> 'Dieser Beitrag wurde von einem anderen Benutzer geändert, während Sie ihn bearbeitet haben. Sie können Ihre Änderungen überprüfen und sie gegebenenfalls anpassen.',
 	'POST_REVIEW_EXPLAIN'		=> 'In dem Thema wurde in der Zwischenzeit mindestens ein neuer Beitrag erstellt. Sie können Ihren Beitrag überprüfen und ihn gegebenenfalls anpassen.',
@@ -3234,7 +3234,7 @@ $lang = array_merge($lang, array(
 	'STICKY_ANNOUNCE_TIME_LIMIT'=> 'Zeitlimit für wichtige Themen/Bekanntmachungen',
 	'STICK_TOPIC_FOR'			=> 'Thema anpinnen für',
 	'STICK_TOPIC_FOR_EXPLAIN'	=> 'Dieses Thema erscheint dauerhaft als wichtig/Bekanntmachung, wenn 0 als Wert eingestellt wird. Beachten Sie, dass sich diese Angabe auf den Erstellungszeitpunkt des Themas bezieht.',
-	'STYLES_TIP'				=> 'Tipp: Styles können schnell auf den gewählten Text übertragen werden.',
+	'STYLES_TIP'				=> 'Tipp: Formatierungen können schnell auf den markierten Text angewandt werden.',
 
 	'TOO_FEW_CHARS'				=> 'Die eingegebene Nachricht ist zu kurz.',
 	'TOO_FEW_POLL_OPTIONS'		=> 'Sie müssen mindestens zwei Antwortmöglichkeiten für die Umfrage eingeben.',
