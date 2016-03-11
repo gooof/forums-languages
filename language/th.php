@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 #######language/en/app.php#######
 
@@ -6,7 +6,7 @@ $lang = array_merge($lang, array(
 	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
 	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
 	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
-	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller “<strong>%s</strong>” is not defined in ./config/services.yml.',
 ));
 
 #######language/en/calendar.php#######
@@ -2652,7 +2652,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'นี้คือคำเตือนที่ถูกออกให้คุณโดย administrator หรือ moderator ของเว็บนี้.[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'ข้อความเตือนจะเว็บบอร์ด',
 	'WARNING_POST_DEFAULT'	=> 'ข้อความที่แสดงด้านล่างนี้ถูกส่งมาจาก : %s ของเว็บบอร์ด กรุณาให้ความใส่ใจข้อความด้านล่างนี้ด้วย.. .',
-	'NO_WARNINGS'	=> 'ไม่มีการเตือน',
+	'NO_WARNINGS'	=> 'ไม่มีคำเตือน.',
 
 	'YOU_SELECTED_TOPIC'	=> 'จำนวนกระทู้ที่เลือก  %d: %s.',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -6215,7 +6215,7 @@ $lang = array_merge($lang, array(
 	'ALBUM_COPY_PERMISSIONS_ADD_EXPLAIN'	=> 'If you select to copy permissions, the album will have the same permissions as the one you select here. If no album is selected you need to set the permissions afterwards.',
 	'COPY_PERMISSIONS_ALBUM_FROM_EXPLAIN'	=> 'The source album you want to copy permissions from.',
 	'COPY_PERMISSIONS_ALBUM_TO_EXPLAIN'		=> 'The destination albums you want the copied permissions applied to.',
-	'COPY_PERMISSIONS_CONFIRM'		=> 'แน่ใจที่ต้องการคัดลองการอนุญาต? มันจะแทนที่การอนุญาตของเดิมที่มีอยู่.',
+	'COPY_PERMISSIONS_CONFIRM'		=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'ALBUM_COPY_PERMISSIONS_EDIT_EXPLAIN'	=> 'If you select to copy permissions, the album will have the same permissions as the one you select here. This will overwrite any permissions you have previously set for this album with the permissions of the album you select here. If no album is selected the current permissions will be kept.',
 	'COPY_PERMISSIONS_FROM'			=> 'คัดลองการอนุญาตจาก',
 	'COPY_PERMISSIONS_SUCCESSFUL'	=> 'Copied permissions successful to target albums.',
@@ -6482,7 +6482,7 @@ $lang = array_merge($lang, array(
 	'SELECTED_ALBUMS'				=> 'Selected albums',
 	'SELECTED_GROUPS'				=> 'Selected groups',
 	'SELECTED_PERM_SYS'				=> 'Selected permission-system',
-	'SET_PERMISSIONS'				=> 'ตั้งค่าการอนุญาต',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SHORTED_IMAGENAMES'			=> 'Shorten Imagenames',
 	'SHORTED_IMAGENAMES_EXP'		=> 'If the name of an image is to long and doesn’t include spaces, the layout maybe destroyed.',
 	'SORRY_NO_STATISTIC'			=> 'Sorry, this statistic-value is not yet available.',
@@ -14130,7 +14130,7 @@ $lang = array_merge($lang, array(
 	'APPLY_PERMISSIONS_EXPLAIN'	=> 'การอนุญาตและบทบาทที่กำหนดสำหรับรายการนี้จะมีผลกับรายการนี้และรายการที่ถูกเลือกทั้งหมด',
 	'AUTH_UPDATED'				=> 'อัดเดดการอนุญาตเรียบร้อยแล้ว',
 
-	'COPY_PERMISSIONS_CONFIRM'				=> 'แน่ใจที่ต้องการคัดลองการอนุญาต? มันจะแทนที่การอนุญาตของเดิมที่มีอยู่.',
+	'COPY_PERMISSIONS_CONFIRM'				=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'COPY_PERMISSIONS_FORUM_FROM_EXPLAIN'	=> 'บอร์ดนี้คุณต้องการคำลองการอนุญาตจาก.',
 	'COPY_PERMISSIONS_FORUM_TO_EXPLAIN'		=> 'บอร์ดที่คุณต้องการนำการอนุญาตไปใช้.',
 	'COPY_PERMISSIONS_FROM'					=> 'คัดลองการอนุญาตจาก',
@@ -14243,7 +14243,7 @@ $lang = array_merge($lang, array(
 	'SELECT_FORUM_SUBFORUM_EXPLAIN'	=> 'บอร์ดที่คุณเลือกที่นี่จะรวมเอาบอร์ดย่อยทั้งหมดเข้าไปในการเลือกนี้ด้วย',
 	'SELECT_ROLE'					=> 'เลือก บทบาท…',
 	'SELECT_TYPE'					=> 'เลือก ประเภท',
-	'SET_PERMISSIONS'				=> 'ตั้งค่าการอนุญาต',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SET_ROLE_PERMISSIONS'			=> 'ตั้งค่าการอนุญาตบทบาท',
 	'SET_USERS_PERMISSIONS'			=> 'ตั้งค่าการอนุญาตผู้ใช้',
 	'SET_USERS_FORUM_PERMISSIONS'	=> 'ตั้งค่าการอนุญาตผู้ใช้บอร์ด',
@@ -14383,6 +14383,7 @@ $lang = array_merge($lang, array(
 	'ACL_F_POST'		=> 'Can start new topics',
 	'ACL_F_STICKY'		=> 'Can post stickies',
 	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_ANNOUNCE_GLOBAL'	=> 'Can post global announcements',
 	'ACL_F_REPLY'		=> 'Can reply to topics',
 	'ACL_F_EDIT'		=> 'Can edit own posts',
 	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
@@ -14420,6 +14421,7 @@ $lang = array_merge($lang, array(
 
 	'ACL_M_INFO'	=> 'Can view post details',
 	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_PM_REPORT'	=> 'Can close and delete reports of private messages<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 ));
 
@@ -15626,7 +15628,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'กรุณาเลือก forum ที่คุณต้องการจะย้ายโพสต์ทั้งหมดที่ผู้ใช้คนนี้ได้กระทำไป',
 
 	'NO_SPECIAL_RANK'		=> 'ไม่มีการกำหนดอันดับพิเศษ',
-	'NO_WARNINGS'			=> 'ไม่มีการเตือน',
+	'NO_WARNINGS'			=> 'ไม่มีคำเตือน.',
 	'NOT_MANAGE_FOUNDER'	=> 'ผู้ก่อตั้งเท่านั้นที่สามารถจัดการสถานะของผู้ก่อตั้งด้วยกันเอง',
 
 	'QUICK_TOOLS'			=> 'เครื่องมือลัด',

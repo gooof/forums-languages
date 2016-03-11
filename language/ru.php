@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 #######language/en/app.php#######
 
@@ -6,7 +6,7 @@ $lang = array_merge($lang, array(
 	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
 	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
 	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
-	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller “<strong>%s</strong>” is not defined in ./config/services.yml.',
 ));
 
 #######language/en/calendar.php#######
@@ -6199,7 +6199,7 @@ $lang = array_merge($lang, array(
 	'ALBUM_COPY_PERMISSIONS_ADD_EXPLAIN'	=> 'If you select to copy permissions, the album will have the same permissions as the one you select here. If no album is selected you need to set the permissions afterwards.',
 	'COPY_PERMISSIONS_ALBUM_FROM_EXPLAIN'	=> 'The source album you want to copy permissions from.',
 	'COPY_PERMISSIONS_ALBUM_TO_EXPLAIN'		=> 'The destination albums you want the copied permissions applied to.',
-	'COPY_PERMISSIONS_CONFIRM'		=> 'Вы действительно хотите выполнить это действие? Помните, что это действие перезапишет все имеющиеся права выбранных форумов.',
+	'COPY_PERMISSIONS_CONFIRM'		=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'ALBUM_COPY_PERMISSIONS_EDIT_EXPLAIN'	=> 'If you select to copy permissions, the album will have the same permissions as the one you select here. This will overwrite any permissions you have previously set for this album with the permissions of the album you select here. If no album is selected the current permissions will be kept.',
 	'COPY_PERMISSIONS_FROM'			=> 'Копировать права из форума',
 	'COPY_PERMISSIONS_SUCCESSFUL'	=> 'Copied permissions successful to target albums.',
@@ -6466,7 +6466,7 @@ $lang = array_merge($lang, array(
 	'SELECTED_ALBUMS'				=> 'Selected albums',
 	'SELECTED_GROUPS'				=> 'Selected groups',
 	'SELECTED_PERM_SYS'				=> 'Selected permission-system',
-	'SET_PERMISSIONS'				=> 'Установить права',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SHORTED_IMAGENAMES'			=> 'Shorten Imagenames',
 	'SHORTED_IMAGENAMES_EXP'		=> 'If the name of an image is to long and doesn’t include spaces, the layout maybe destroyed.',
 	'SORRY_NO_STATISTIC'			=> 'Sorry, this statistic-value is not yet available.',
@@ -14112,7 +14112,7 @@ $lang = array_merge($lang, array(
 	'APPLY_PERMISSIONS_EXPLAIN'	=> 'Права и роль, указанные для этого элемента, будут применены к этому элементу и к отмеченным элементам.',
 	'AUTH_UPDATED'				=> 'Права доступа обновлены.',
 
-	'COPY_PERMISSIONS_CONFIRM'				=> 'Вы действительно хотите выполнить это действие? Помните, что это действие перезапишет все имеющиеся права выбранных форумов.',
+	'COPY_PERMISSIONS_CONFIRM'				=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'COPY_PERMISSIONS_FORUM_FROM_EXPLAIN'	=> 'Исходный форум, из которого вы хотите скопировать права доступа.',
 	'COPY_PERMISSIONS_FORUM_TO_EXPLAIN'		=> 'Конечные форумы, к которым вы хотите применить скопированные права доступа.',
 	'COPY_PERMISSIONS_FROM'					=> 'Копировать права из форума',
@@ -14225,7 +14225,7 @@ $lang = array_merge($lang, array(
 	'SELECT_FORUM_SUBFORUM_EXPLAIN'	=> 'Выбранный здесь форум будет включать все подфорумы.',
 	'SELECT_ROLE'					=> 'Выбор роли…',
 	'SELECT_TYPE'					=> 'Выберите тип',
-	'SET_PERMISSIONS'				=> 'Установить права',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SET_ROLE_PERMISSIONS'			=> 'Установить права для роли',
 	'SET_USERS_PERMISSIONS'			=> 'Установить пользовательские права',
 	'SET_USERS_FORUM_PERMISSIONS'	=> 'Установить локальные права',
@@ -14365,6 +14365,7 @@ $lang = array_merge($lang, array(
 	'ACL_F_POST'		=> 'Can start new topics',
 	'ACL_F_STICKY'		=> 'Can post stickies',
 	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_ANNOUNCE_GLOBAL'	=> 'Can post global announcements',
 	'ACL_F_REPLY'		=> 'Can reply to topics',
 	'ACL_F_EDIT'		=> 'Can edit own posts',
 	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
@@ -14402,6 +14403,7 @@ $lang = array_merge($lang, array(
 
 	'ACL_M_INFO'	=> 'Can view post details',
 	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_PM_REPORT'	=> 'Can close and delete reports of private messages<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 ));
 

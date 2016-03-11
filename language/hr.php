@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 #######language/en/app.php#######
 
@@ -6,7 +6,7 @@ $lang = array_merge($lang, array(
 	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
 	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
 	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
-	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller “<strong>%s</strong>” is not defined in ./config/services.yml.',
 ));
 
 #######language/en/calendar.php#######
@@ -2649,7 +2649,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'Donje je upozorenje koje ti je dao/la administrator(ica)/moderator(ica) foruma.[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'Upozorenje od strane administratora(ice)/moderatora(ice) foruma',
 	'WARNING_POST_DEFAULT'	=> 'Ovo je upozorenje vezano uz tvoj post: %s.',
-	'NO_WARNINGS'	=> 'Nema postojećih upozorenja.',
+	'NO_WARNINGS'	=> 'Nema upozorenja.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Izabrao/la si temu broj %d: %s.',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -6199,7 +6199,7 @@ $lang = array_merge($lang, array(
 	'ALBUM_COPY_PERMISSIONS_ADD_EXPLAIN'	=> 'If you select to copy permissions, the album will have the same permissions as the one you select here. If no album is selected you need to set the permissions afterwards.',
 	'COPY_PERMISSIONS_ALBUM_FROM_EXPLAIN'	=> 'The source album you want to copy permissions from.',
 	'COPY_PERMISSIONS_ALBUM_TO_EXPLAIN'		=> 'The destination albums you want the copied permissions applied to.',
-	'COPY_PERMISSIONS_CONFIRM'		=> 'Jesi li siguran/na da želiš provesti ovu radnju? Ovo će zamijeniti sva postojeća dopuštenja na odabranim mjestima.',
+	'COPY_PERMISSIONS_CONFIRM'		=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'ALBUM_COPY_PERMISSIONS_EDIT_EXPLAIN'	=> 'If you select to copy permissions, the album will have the same permissions as the one you select here. This will overwrite any permissions you have previously set for this album with the permissions of the album you select here. If no album is selected the current permissions will be kept.',
 	'COPY_PERMISSIONS_FROM'			=> 'Kopiraj dopuštenja od',
 	'COPY_PERMISSIONS_SUCCESSFUL'	=> 'Copied permissions successful to target albums.',
@@ -6466,7 +6466,7 @@ $lang = array_merge($lang, array(
 	'SELECTED_ALBUMS'				=> 'Selected albums',
 	'SELECTED_GROUPS'				=> 'Selected groups',
 	'SELECTED_PERM_SYS'				=> 'Selected permission-system',
-	'SET_PERMISSIONS'				=> 'Postavi dopuštenja',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SHORTED_IMAGENAMES'			=> 'Shorten Imagenames',
 	'SHORTED_IMAGENAMES_EXP'		=> 'If the name of an image is to long and doesn’t include spaces, the layout maybe destroyed.',
 	'SORRY_NO_STATISTIC'			=> 'Sorry, this statistic-value is not yet available.',
@@ -14094,7 +14094,7 @@ $lang = array_merge($lang, array(
 	'APPLY_PERMISSIONS_EXPLAIN'	=> 'Definirana dopuštenja odnosno setovi dopuštenja bit će primijenjeni na ovu te na sve označene stavke.',
 	'AUTH_UPDATED'				=> 'Dopuštenja su ažurirana.',
 
-	'COPY_PERMISSIONS_CONFIRM'				=> 'Jesi li siguran/na da želiš provesti ovu radnju? Ovo će zamijeniti sva postojeća dopuštenja na odabranim mjestima.',
+	'COPY_PERMISSIONS_CONFIRM'				=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'COPY_PERMISSIONS_FORUM_FROM_EXPLAIN'	=> 'Početni forum sa kojega želiš kopirati dopuštenja.',
 	'COPY_PERMISSIONS_FORUM_TO_EXPLAIN'		=> 'Odredišni forumi na koje želiš kopirati dopuštenja.',
 	'COPY_PERMISSIONS_FROM'					=> 'Kopiraj dopuštenja od',
@@ -14207,7 +14207,7 @@ $lang = array_merge($lang, array(
 	'SELECT_FORUM_SUBFORUM_EXPLAIN'	=> 'Uz izabran forum, bit će odabrani i svi podforumi.',
 	'SELECT_ROLE'					=> 'Izaberi set dopuštenja',
 	'SELECT_TYPE'					=> 'Izaberi tip',
-	'SET_PERMISSIONS'				=> 'Postavi dopuštenja',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SET_ROLE_PERMISSIONS'			=> 'Postavi set dopuštenja',
 	'SET_USERS_PERMISSIONS'			=> 'Postavi korisnička dopuštenja',
 	'SET_USERS_FORUM_PERMISSIONS'	=> 'Postavi forumska dopuštenja',
@@ -14347,6 +14347,7 @@ $lang = array_merge($lang, array(
 	'ACL_F_POST'		=> 'Can start new topics',
 	'ACL_F_STICKY'		=> 'Can post stickies',
 	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_ANNOUNCE_GLOBAL'	=> 'Can post global announcements',
 	'ACL_F_REPLY'		=> 'Can reply to topics',
 	'ACL_F_EDIT'		=> 'Can edit own posts',
 	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
@@ -14384,6 +14385,7 @@ $lang = array_merge($lang, array(
 
 	'ACL_M_INFO'	=> 'Can view post details',
 	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_PM_REPORT'	=> 'Can close and delete reports of private messages<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 ));
 
@@ -15588,7 +15590,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'Izaberi forum u koji želiš premjestiti sve postove korisnika/ce.',
 
 	'NO_SPECIAL_RANK'		=> 'Nije dodijeljen poseban status',
-	'NO_WARNINGS'			=> 'Nema postojećih upozorenja.',
+	'NO_WARNINGS'			=> 'Nema upozorenja.',
 	'NOT_MANAGE_FOUNDER'	=> 'Pokušao/la si promijeniti korisnički račun osnivača/ice.<br />Samo osnivači/ce mogu mijenjati korisničke račune (ostalih) osnivača/ica.',
 
 	'QUICK_TOOLS'			=> 'Brz(o)Bir',

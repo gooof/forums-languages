@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 #######language/en/app.php#######
 
@@ -6,7 +6,7 @@ $lang = array_merge($lang, array(
 	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
 	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
 	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
-	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller “<strong>%s</strong>” is not defined in ./config/services.yml.',
 ));
 
 #######language/en/calendar.php#######
@@ -2649,7 +2649,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'Următorul este un avertisment emis de un administrator sau un moderator către dumneavoastră.[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'Avertismente emise',
 	'WARNING_POST_DEFAULT'	=> 'Acesta este un avertisment asupra următorului mesaj publicat de dumneavoastră: %s',
-	'NO_WARNINGS'	=> 'Nu există avertismente',
+	'NO_WARNINGS'	=> 'Niciun avertisment.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Aţi selectat numărul subiectului %d: %s',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -6199,7 +6199,7 @@ $lang = array_merge($lang, array(
 	'ALBUM_COPY_PERMISSIONS_ADD_EXPLAIN'	=> 'If you select to copy permissions, the album will have the same permissions as the one you select here. If no album is selected you need to set the permissions afterwards.',
 	'COPY_PERMISSIONS_ALBUM_FROM_EXPLAIN'	=> 'The source album you want to copy permissions from.',
 	'COPY_PERMISSIONS_ALBUM_TO_EXPLAIN'		=> 'The destination albums you want the copied permissions applied to.',
-	'COPY_PERMISSIONS_CONFIRM'		=> 'Sunteţi sigur că doriţi să continuaţi cu această operaţiune? Reţineţi că aceasta va suprascrie orice permisiuni existente pe destinaţiile selectate.',
+	'COPY_PERMISSIONS_CONFIRM'		=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'ALBUM_COPY_PERMISSIONS_EDIT_EXPLAIN'	=> 'If you select to copy permissions, the album will have the same permissions as the one you select here. This will overwrite any permissions you have previously set for this album with the permissions of the album you select here. If no album is selected the current permissions will be kept.',
 	'COPY_PERMISSIONS_FROM'			=> 'Copiază permisiunile de la',
 	'COPY_PERMISSIONS_SUCCESSFUL'	=> 'Copied permissions successful to target albums.',
@@ -6466,7 +6466,7 @@ $lang = array_merge($lang, array(
 	'SELECTED_ALBUMS'				=> 'Selected albums',
 	'SELECTED_GROUPS'				=> 'Selected groups',
 	'SELECTED_PERM_SYS'				=> 'Selected permission-system',
-	'SET_PERMISSIONS'				=> 'Selectează permisiuni',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SHORTED_IMAGENAMES'			=> 'Shorten Imagenames',
 	'SHORTED_IMAGENAMES_EXP'		=> 'If the name of an image is to long and doesn’t include spaces, the layout maybe destroyed.',
 	'SORRY_NO_STATISTIC'			=> 'Sorry, this statistic-value is not yet available.',
@@ -14112,7 +14112,7 @@ $lang = array_merge($lang, array(
 	'APPLY_PERMISSIONS_EXPLAIN'	=> 'Rolul şi permisiunile definite pentru acest element vor fi aplicate pentru acesta dar şi pentru toate celelalte selectate.',
 	'AUTH_UPDATED'				=> 'Permisiunile au fost actualizate',
 
-	'COPY_PERMISSIONS_CONFIRM'				=> 'Sunteţi sigur că doriţi să continuaţi cu această operaţiune? Reţineţi că aceasta va suprascrie orice permisiuni existente pe destinaţiile selectate.',
+	'COPY_PERMISSIONS_CONFIRM'				=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'COPY_PERMISSIONS_FORUM_FROM_EXPLAIN'	=> 'Forumul sursă ale cărui permisiuni vreţi să le copiaţi.',
 	'COPY_PERMISSIONS_FORUM_TO_EXPLAIN'		=> 'Forumul destinaţie pe care vreţi să aplicaţi permisiunile.',
 	'COPY_PERMISSIONS_FROM'					=> 'Copiază permisiunile de la',
@@ -14225,7 +14225,7 @@ $lang = array_merge($lang, array(
 	'SELECT_FORUM_SUBFORUM_EXPLAIN'	=> 'Forumul pe care îl alegeţi aici va include toate subforumurile în această selecţie.',
 	'SELECT_ROLE'					=> 'Selectează rol',
 	'SELECT_TYPE'					=> 'Selectează tip',
-	'SET_PERMISSIONS'				=> 'Selectează permisiuni',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SET_ROLE_PERMISSIONS'			=> 'Specifică permisiuni rol',
 	'SET_USERS_PERMISSIONS'			=> 'Specifică permisiuni utilizator',
 	'SET_USERS_FORUM_PERMISSIONS'	=> 'Specifică permisiuni utilizator forum',
@@ -14365,6 +14365,7 @@ $lang = array_merge($lang, array(
 	'ACL_F_POST'		=> 'Can start new topics',
 	'ACL_F_STICKY'		=> 'Can post stickies',
 	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_ANNOUNCE_GLOBAL'	=> 'Can post global announcements',
 	'ACL_F_REPLY'		=> 'Can reply to topics',
 	'ACL_F_EDIT'		=> 'Can edit own posts',
 	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
@@ -14402,6 +14403,7 @@ $lang = array_merge($lang, array(
 
 	'ACL_M_INFO'	=> 'Can view post details',
 	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_PM_REPORT'	=> 'Can close and delete reports of private messages<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 ));
 
@@ -15606,7 +15608,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'Selectaţi forumul în care doriţi să mutaţi toate mesajele scrise de către utilizatorul selectat.',
 
 	'NO_SPECIAL_RANK'		=> 'Niciun rang special atribuit',
-	'NO_WARNINGS'			=> 'Nu există avertismente',
+	'NO_WARNINGS'			=> 'Niciun avertisment.',
 	'NOT_MANAGE_FOUNDER'	=> 'Aţi încercat să administraţi un utilizator cu statutul de fondator. Numai fondatorii sunt autorizaţi să administreze alţi fondatori.',
 
 	'QUICK_TOOLS'			=> 'Unelte rapide',

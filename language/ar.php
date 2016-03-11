@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 #######language/en/app.php#######
 
@@ -6,7 +6,7 @@ $lang = array_merge($lang, array(
 	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
 	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
 	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
-	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller “<strong>%s</strong>” is not defined in ./config/services.yml.',
 ));
 
 #######language/en/calendar.php#######
@@ -2648,7 +2648,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'الآتي عبارة عن تحذير صدر بحقك بواسطة مدير الموقع أو أحد المشرفين في هذا الموقع.[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'صدور تحذير بحقك',
 	'WARNING_POST_DEFAULT'	=> 'هذا تحذير بناءً على المشاركة الآتية الخاصة بك: %s',
-	'NO_WARNINGS'	=> 'لا يوجد تحذيرات حالياً',
+	'NO_WARNINGS'	=> 'لا يوجد تحذيرات.',
 
 	'YOU_SELECTED_TOPIC'	=> 'قمت باختيار الموضوع رقم %d: %s',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -6194,7 +6194,7 @@ $lang = array_merge($lang, array(
 	'ALBUM_COPY_PERMISSIONS_ADD_EXPLAIN'	=> 'If you select to copy permissions, the album will have the same permissions as the one you select here. If no album is selected you need to set the permissions afterwards.',
 	'COPY_PERMISSIONS_ALBUM_FROM_EXPLAIN'	=> 'The source album you want to copy permissions from.',
 	'COPY_PERMISSIONS_ALBUM_TO_EXPLAIN'		=> 'The destination albums you want the copied permissions applied to.',
-	'COPY_PERMISSIONS_CONFIRM'		=> 'هل أنت متأكد من أنك تريد القيام بهذه العملية ؟ المتابعة في هذا سيلغي الصلاحيات كلها التي أعِدّ من قبل لكل ما قد حددته الآن.',
+	'COPY_PERMISSIONS_CONFIRM'		=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'ALBUM_COPY_PERMISSIONS_EDIT_EXPLAIN'	=> 'If you select to copy permissions, the album will have the same permissions as the one you select here. This will overwrite any permissions you have previously set for this album with the permissions of the album you select here. If no album is selected the current permissions will be kept.',
 	'COPY_PERMISSIONS_FROM'			=> 'نسخ التصاريح من',
 	'COPY_PERMISSIONS_SUCCESSFUL'	=> 'Copied permissions successful to target albums.',
@@ -6461,7 +6461,7 @@ $lang = array_merge($lang, array(
 	'SELECTED_ALBUMS'				=> 'Selected albums',
 	'SELECTED_GROUPS'				=> 'Selected groups',
 	'SELECTED_PERM_SYS'				=> 'Selected permission-system',
-	'SET_PERMISSIONS'				=> 'ضبط الصلاحيات',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SHORTED_IMAGENAMES'			=> 'Shorten Imagenames',
 	'SHORTED_IMAGENAMES_EXP'		=> 'If the name of an image is to long and doesn’t include spaces, the layout maybe destroyed.',
 	'SORRY_NO_STATISTIC'			=> 'Sorry, this statistic-value is not yet available.',
@@ -14107,7 +14107,7 @@ $lang = array_merge($lang, array(
 	'APPLY_PERMISSIONS_EXPLAIN'	=> 'الصلاحيات والقوالب التي تعرّفت لهذا العنصر ستتطبَق فقط على هذا العنصر والعناصر المحددة الأخرى',
 	'AUTH_UPDATED'				=> 'تحدّثت الصلاحيات بنجاح',
 
-	'COPY_PERMISSIONS_CONFIRM'				=> 'هل أنت متأكد من أنك تريد القيام بهذه العملية ؟ المتابعة في هذا سيلغي الصلاحيات كلها التي أعِدّ من قبل لكل ما قد حددته الآن.',
+	'COPY_PERMISSIONS_CONFIRM'				=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'COPY_PERMISSIONS_FORUM_FROM_EXPLAIN'	=> 'المنتدى المُراد نسخ التصاريح منه.',
 	'COPY_PERMISSIONS_FORUM_TO_EXPLAIN'		=> 'المنتديات المُراد تطبيق التصاريح المنسوخة إليها.',
 	'COPY_PERMISSIONS_FROM'					=> 'نسخ التصاريح من',
@@ -14220,7 +14220,7 @@ $lang = array_merge($lang, array(
 	'SELECT_FORUM_SUBFORUM_EXPLAIN'	=> 'المنتدى الذي حددته هنا سيحتوي على المنتديات الفرعية كلها في التحديد',
 	'SELECT_ROLE'					=> 'اختر قالب.',
 	'SELECT_TYPE'					=> 'اختر النوع',
-	'SET_PERMISSIONS'				=> 'ضبط الصلاحيات',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SET_ROLE_PERMISSIONS'			=> 'ضبط صلاحيات القالب',
 	'SET_USERS_PERMISSIONS'			=> 'ضبط صلاحيات العضوية',
 	'SET_USERS_FORUM_PERMISSIONS'	=> 'ضبط صلاحيات الوصول للمنتدى',
@@ -14360,6 +14360,7 @@ $lang = array_merge($lang, array(
 	'ACL_F_POST'		=> 'Can start new topics',
 	'ACL_F_STICKY'		=> 'Can post stickies',
 	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_ANNOUNCE_GLOBAL'	=> 'Can post global announcements',
 	'ACL_F_REPLY'		=> 'Can reply to topics',
 	'ACL_F_EDIT'		=> 'Can edit own posts',
 	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
@@ -14397,6 +14398,7 @@ $lang = array_merge($lang, array(
 
 	'ACL_M_INFO'	=> 'Can view post details',
 	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_PM_REPORT'	=> 'Can close and delete reports of private messages<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 ));
 
@@ -15601,7 +15603,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'رجاءً اختر المنتدى الذي تريد نقل كافة مشاركات هذا العضو إليه',
 
 	'NO_SPECIAL_RANK'		=> 'لم تتعين رتبة خاصة',
-	'NO_WARNINGS'			=> 'لا يوجد تحذيرات حالياً',
+	'NO_WARNINGS'			=> 'لا يوجد تحذيرات.',
 	'NOT_MANAGE_FOUNDER'	=> 'لقد حاولت إدارة عضوية مؤسس، فقط المؤسسون هم من يستطيعون إدارة عضويات المؤسسين أمثالهم',
 
 	'QUICK_TOOLS'			=> 'أدوات سريعة',

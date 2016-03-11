@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 #######language/en/app.php#######
 
@@ -6,7 +6,7 @@ $lang = array_merge($lang, array(
 	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
 	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
 	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
-	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller “<strong>%s</strong>” is not defined in ./config/services.yml.',
 ));
 
 #######language/en/calendar.php#######
@@ -2649,7 +2649,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'Μόλις δεχτήκατε μια προειδοποίηση από κάποιον συντονιστή ή διαχειριστή αυτής της Δ. Συζήτησης.[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'Η προειδοποίηση έχει σταλεί',
 	'WARNING_POST_DEFAULT'	=> 'Αυτή είναι μια προειδοποίηση που δεχτήκατε για την δημοσίευσή σας εδώ: %s.',
-	'NO_WARNINGS'	=> 'Δεν υπάρχουν προειδοποιήσεις.',
+	'NO_WARNINGS'	=> 'Καμία προειδοποίηση.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Έχεις το θέμα με την ταυτότητα ID %d: επιλέξει %s.',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -6198,7 +6198,7 @@ $lang = array_merge($lang, array(
 	'ALBUM_COPY_PERMISSIONS_ADD_EXPLAIN'	=> 'If you select to copy permissions, the album will have the same permissions as the one you select here. If no album is selected you need to set the permissions afterwards.',
 	'COPY_PERMISSIONS_ALBUM_FROM_EXPLAIN'	=> 'The source album you want to copy permissions from.',
 	'COPY_PERMISSIONS_ALBUM_TO_EXPLAIN'		=> 'The destination albums you want the copied permissions applied to.',
-	'COPY_PERMISSIONS_CONFIRM'		=> 'Είστε σίγουροι ότι θέλετε να πραγματοποιήσει αυτήν τηνν ενέργεια? Παρακαλώ πρέπει να γνωρίζετε ότι αυτό θα αντικαταστήσει οποιαδήποτε υπάρχον δικαιώματα για τους επιλεγμένους στόχους.',
+	'COPY_PERMISSIONS_CONFIRM'		=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'ALBUM_COPY_PERMISSIONS_EDIT_EXPLAIN'	=> 'If you select to copy permissions, the album will have the same permissions as the one you select here. This will overwrite any permissions you have previously set for this album with the permissions of the album you select here. If no album is selected the current permissions will be kept.',
 	'COPY_PERMISSIONS_FROM'			=> 'Αντιγραφή δικαιωμάτων από',
 	'COPY_PERMISSIONS_SUCCESSFUL'	=> 'Copied permissions successful to target albums.',
@@ -6465,7 +6465,7 @@ $lang = array_merge($lang, array(
 	'SELECTED_ALBUMS'				=> 'Selected albums',
 	'SELECTED_GROUPS'				=> 'Selected groups',
 	'SELECTED_PERM_SYS'				=> 'Selected permission-system',
-	'SET_PERMISSIONS'				=> 'Καθορισμός δικαιωμάτων πρόσβασης',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SHORTED_IMAGENAMES'			=> 'Shorten Imagenames',
 	'SHORTED_IMAGENAMES_EXP'		=> 'If the name of an image is to long and doesn’t include spaces, the layout maybe destroyed.',
 	'SORRY_NO_STATISTIC'			=> 'Sorry, this statistic-value is not yet available.',
@@ -14113,7 +14113,7 @@ $lang = array_merge($lang, array(
 	'APPLY_PERMISSIONS_EXPLAIN'	=> 'Τα δικαιώματα πρόσβασης και ο ρόλος που καθορίζονται για αυτό το στοιχείο θα εφαρμοστούν μόνο σε αυτό το στοιχείο και όλα τα ελεγμένα στοιχεία.',
 	'AUTH_UPDATED'				=> 'Επιτυχής ενημέρωση δικαιωμάτων πρόσβασης.',
 
-	'COPY_PERMISSIONS_CONFIRM'				=> 'Είστε σίγουροι ότι θέλετε να πραγματοποιήσει αυτήν τηνν ενέργεια? Παρακαλώ πρέπει να γνωρίζετε ότι αυτό θα αντικαταστήσει οποιαδήποτε υπάρχον δικαιώματα για τους επιλεγμένους στόχους.',
+	'COPY_PERMISSIONS_CONFIRM'				=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'COPY_PERMISSIONS_FORUM_FROM_EXPLAIN'	=> 'Η πηγή φόρουμ που θέλετε να αντιγράψετε δικαιώματα από.',
 	'COPY_PERMISSIONS_FORUM_TO_EXPLAIN'		=> 'Ο προορισμός φόρουμ που θέλετε να γίνει αντιγραφή δικαιωμάτων που εφαρμόζονται για.',
 	'COPY_PERMISSIONS_FROM'					=> 'Αντιγραφή δικαιωμάτων από',
@@ -14226,7 +14226,7 @@ $lang = array_merge($lang, array(
 	'SELECT_FORUM_SUBFORUM_EXPLAIN'	=> 'Η Δ. Συζήτηση που επιλέξατε εδώ θα περιλάβει όλες τις υπό-συζητήσεις στην επιλογή.',
 	'SELECT_ROLE'					=> 'Επιλογή ρόλου…',
 	'SELECT_TYPE'					=> 'Επιλογή τύπου',
-	'SET_PERMISSIONS'				=> 'Καθορισμός δικαιωμάτων πρόσβασης',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SET_ROLE_PERMISSIONS'			=> 'Καθορισμός δικαιωμάτων ρόλου',
 	'SET_USERS_PERMISSIONS'			=> 'Καθορισμός δικαιωμάτων πρόσβασης μελών',
 	'SET_USERS_FORUM_PERMISSIONS'	=> 'Καθορισμός δικαιωμάτων πρόσβασης μελών στην Δ. Συζήτηση',
@@ -14366,6 +14366,7 @@ $lang = array_merge($lang, array(
 	'ACL_F_POST'		=> 'Can start new topics',
 	'ACL_F_STICKY'		=> 'Can post stickies',
 	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_ANNOUNCE_GLOBAL'	=> 'Can post global announcements',
 	'ACL_F_REPLY'		=> 'Can reply to topics',
 	'ACL_F_EDIT'		=> 'Can edit own posts',
 	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
@@ -14403,6 +14404,7 @@ $lang = array_merge($lang, array(
 
 	'ACL_M_INFO'	=> 'Can view post details',
 	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_PM_REPORT'	=> 'Can close and delete reports of private messages<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 ));
 
@@ -15607,7 +15609,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'Παρακαλώ επιλέξτε την Δ. Συζήτηση που επιθυμείτε να μετακινήσετε τις δημοσιεύσεις του μέλους.',
 
 	'NO_SPECIAL_RANK'		=> 'Δεν έχει οριστεί ειδικός βαθμός',
-	'NO_WARNINGS'			=> 'Δεν υπάρχουν προειδοποιήσεις.',
+	'NO_WARNINGS'			=> 'Καμία προειδοποίηση.',
 	'NOT_MANAGE_FOUNDER'	=> 'Προσπαθείτε να διαχειριστείτε την ιδιότητα ενός ιδρυτή. Μόνο ιδρυτές μπορούν να διαχειριστούν άλλους ιδρυτές.',
 
 	'QUICK_TOOLS'			=> 'Γρήγορη επιλογή',

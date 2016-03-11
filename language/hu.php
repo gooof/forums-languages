@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 #######language/en/app.php#######
 
@@ -6,7 +6,7 @@ $lang = array_merge($lang, array(
 	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
 	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
 	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
-	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller “<strong>%s</strong>” is not defined in ./config/services.yml.',
 ));
 
 #######language/en/calendar.php#######
@@ -2649,7 +2649,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'A következő figyelmeztetésben részesültél egy adminisztrátor vagy egy moderátor által:[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'Figyelmeztetés',
 	'WARNING_POST_DEFAULT'	=> 'A következő hozzászólásod miatt figyelmeztetésben részesültél: %s .',
-	'NO_WARNINGS'	=> 'Nincs figyelmeztetés.',
+	'NO_WARNINGS'	=> 'Nincs kitiltás.',
 
 	'YOU_SELECTED_TOPIC'	=> 'A %d. számú témát választottad ki: %s',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -6197,7 +6197,7 @@ $lang = array_merge($lang, array(
 	'ALBUM_COPY_PERMISSIONS_ADD_EXPLAIN'	=> 'If you select to copy permissions, the album will have the same permissions as the one you select here. If no album is selected you need to set the permissions afterwards.',
 	'COPY_PERMISSIONS_ALBUM_FROM_EXPLAIN'	=> 'The source album you want to copy permissions from.',
 	'COPY_PERMISSIONS_ALBUM_TO_EXPLAIN'		=> 'The destination albums you want the copied permissions applied to.',
-	'COPY_PERMISSIONS_CONFIRM'		=> 'Biztosan végre akarod hajtani ezt a műveletet? Kérjük, vedd figyelembe, hogy a kiválasztott célfórumok jogosultságai felülírásra kerülnek.',
+	'COPY_PERMISSIONS_CONFIRM'		=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'ALBUM_COPY_PERMISSIONS_EDIT_EXPLAIN'	=> 'If you select to copy permissions, the album will have the same permissions as the one you select here. This will overwrite any permissions you have previously set for this album with the permissions of the album you select here. If no album is selected the current permissions will be kept.',
 	'COPY_PERMISSIONS_FROM'			=> 'Fórum a másolandó jogosultságokkal',
 	'COPY_PERMISSIONS_SUCCESSFUL'	=> 'Copied permissions successful to target albums.',
@@ -6464,7 +6464,7 @@ $lang = array_merge($lang, array(
 	'SELECTED_ALBUMS'				=> 'Selected albums',
 	'SELECTED_GROUPS'				=> 'Selected groups',
 	'SELECTED_PERM_SYS'				=> 'Selected permission-system',
-	'SET_PERMISSIONS'				=> 'Jogosultságok beállítása',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SHORTED_IMAGENAMES'			=> 'Shorten Imagenames',
 	'SHORTED_IMAGENAMES_EXP'		=> 'If the name of an image is to long and doesn’t include spaces, the layout maybe destroyed.',
 	'SORRY_NO_STATISTIC'			=> 'Sorry, this statistic-value is not yet available.',
@@ -14110,7 +14110,7 @@ $lang = array_merge($lang, array(
 	'APPLY_PERMISSIONS_EXPLAIN'	=> 'Az erre az elemre meghatározott jogosultságok és szerepek csak erre és a többi kijelölt elemre kerülnek alkalmazásra.',
 	'AUTH_UPDATED'				=> 'A jogosultságok frissítésre kerültek.',
 
-	'COPY_PERMISSIONS_CONFIRM'				=> 'Biztosan végre akarod hajtani ezt a műveletet? Kérjük, vedd figyelembe, hogy a kiválasztott célfórumok jogosultságai felülírásra kerülnek.',
+	'COPY_PERMISSIONS_CONFIRM'				=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'COPY_PERMISSIONS_FORUM_FROM_EXPLAIN'	=> 'A fórum, amelyik jogosultságait le szeretnéd másolni.',
 	'COPY_PERMISSIONS_FORUM_TO_EXPLAIN'		=> 'A célfórumok, amelyeknek meg szeretnéd változtatni a jogosultságait.',
 	'COPY_PERMISSIONS_FROM'					=> 'Fórum a másolandó jogosultságokkal',
@@ -14223,7 +14223,7 @@ $lang = array_merge($lang, array(
 	'SELECT_FORUM_SUBFORUM_EXPLAIN'	=> 'Az itt kiválasztott fórum alfórumai is benne lesznek a kiválasztásban.',
 	'SELECT_ROLE'					=> 'Szerep kiválasztása…',
 	'SELECT_TYPE'					=> 'Típus kiválasztása',
-	'SET_PERMISSIONS'				=> 'Jogosultságok beállítása',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SET_ROLE_PERMISSIONS'			=> 'Szerep jogosultságok beállítása',
 	'SET_USERS_PERMISSIONS'			=> 'Felhasználói jogosultságok beállítása',
 	'SET_USERS_FORUM_PERMISSIONS'	=> 'Felhasználók fórum jogosultságainak beállítása',
@@ -14363,6 +14363,7 @@ $lang = array_merge($lang, array(
 	'ACL_F_POST'		=> 'Can start new topics',
 	'ACL_F_STICKY'		=> 'Can post stickies',
 	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_ANNOUNCE_GLOBAL'	=> 'Can post global announcements',
 	'ACL_F_REPLY'		=> 'Can reply to topics',
 	'ACL_F_EDIT'		=> 'Can edit own posts',
 	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
@@ -14400,6 +14401,7 @@ $lang = array_merge($lang, array(
 
 	'ACL_M_INFO'	=> 'Can view post details',
 	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_PM_REPORT'	=> 'Can close and delete reports of private messages<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 ));
 
@@ -15604,7 +15606,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'Kérünk, válaszd ki a fórumot, amelybe át szeretnéd mozgatni a felhasználó által küldött összes hozzászólást.',
 
 	'NO_SPECIAL_RANK'		=> 'Nincs speciális rang hozzárendelve',
-	'NO_WARNINGS'			=> 'Nincs figyelmeztetés.',
+	'NO_WARNINGS'			=> 'Nincs kitiltás.',
 	'NOT_MANAGE_FOUNDER'	=> 'Alapító státusszal rendelkező felhasználót próbáltál meg kezelni. Csak alapítók kezelhetik a többi alapítót.',
 
 	'QUICK_TOOLS'			=> 'Gyorseszközök',

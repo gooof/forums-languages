@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 #######language/en/app.php#######
 
@@ -6,7 +6,7 @@ $lang = array_merge($lang, array(
 	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
 	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
 	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
-	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller “<strong>%s</strong>” is not defined in ./config/services.yml.',
 ));
 
 #######language/en/calendar.php#######
@@ -2649,7 +2649,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'Це попередження, зроблене вам адміністратором або модератором цього сайту.[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'Вам зробили попередження',
 	'WARNING_POST_DEFAULT'	=> 'Це попередження стосується наступного повідомлення, написаного вами: %s',
-	'NO_WARNINGS'	=> 'Немає попереджень',
+	'NO_WARNINGS'	=> 'Попередження відсутні.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Ви обрали тему номер %d: %s',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -6199,7 +6199,7 @@ $lang = array_merge($lang, array(
 	'ALBUM_COPY_PERMISSIONS_ADD_EXPLAIN'	=> 'If you select to copy permissions, the album will have the same permissions as the one you select here. If no album is selected you need to set the permissions afterwards.',
 	'COPY_PERMISSIONS_ALBUM_FROM_EXPLAIN'	=> 'The source album you want to copy permissions from.',
 	'COPY_PERMISSIONS_ALBUM_TO_EXPLAIN'		=> 'The destination albums you want the copied permissions applied to.',
-	'COPY_PERMISSIONS_CONFIRM'		=> 'Ви впевнені, що хочете виконати цю дію? Майте на увазі, що ця дія перезапише всі наявні права обраних форумів.',
+	'COPY_PERMISSIONS_CONFIRM'		=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'ALBUM_COPY_PERMISSIONS_EDIT_EXPLAIN'	=> 'If you select to copy permissions, the album will have the same permissions as the one you select here. This will overwrite any permissions you have previously set for this album with the permissions of the album you select here. If no album is selected the current permissions will be kept.',
 	'COPY_PERMISSIONS_FROM'			=> 'Копіювати права з форуму',
 	'COPY_PERMISSIONS_SUCCESSFUL'	=> 'Copied permissions successful to target albums.',
@@ -6466,7 +6466,7 @@ $lang = array_merge($lang, array(
 	'SELECTED_ALBUMS'				=> 'Selected albums',
 	'SELECTED_GROUPS'				=> 'Selected groups',
 	'SELECTED_PERM_SYS'				=> 'Selected permission-system',
-	'SET_PERMISSIONS'				=> 'Встановити права доступу',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SHORTED_IMAGENAMES'			=> 'Shorten Imagenames',
 	'SHORTED_IMAGENAMES_EXP'		=> 'If the name of an image is to long and doesn’t include spaces, the layout maybe destroyed.',
 	'SORRY_NO_STATISTIC'			=> 'Sorry, this statistic-value is not yet available.',
@@ -14112,7 +14112,7 @@ $lang = array_merge($lang, array(
 	'APPLY_PERMISSIONS_EXPLAIN'	=> 'Права доступу та роль, визначені для цього елементу будуть застосовані для нього та усіх відмічених елементів.',
 	'AUTH_UPDATED'				=> 'права доступу оновлено.',
 
-	'COPY_PERMISSIONS_CONFIRM'				=> 'Ви впевнені, що хочете виконати цю дію? Майте на увазі, що ця дія перезапише всі наявні права обраних форумів.',
+	'COPY_PERMISSIONS_CONFIRM'				=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'COPY_PERMISSIONS_FORUM_FROM_EXPLAIN'	=> 'Форум, з якого ви хочете скопіювати права доступу.',
 	'COPY_PERMISSIONS_FORUM_TO_EXPLAIN'		=> 'Форуми, до яких ви хочете застосувати скопійовані права доступу.',
 	'COPY_PERMISSIONS_FROM'					=> 'Копіювати права з форуму',
@@ -14225,7 +14225,7 @@ $lang = array_merge($lang, array(
 	'SELECT_FORUM_SUBFORUM_EXPLAIN'	=> 'Форум, який ви обираєте тут, включить до вибору усі підфоруми.',
 	'SELECT_ROLE'					=> 'Оберіть роль…',
 	'SELECT_TYPE'					=> 'Оберіть тип',
-	'SET_PERMISSIONS'				=> 'Встановити права доступу',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SET_ROLE_PERMISSIONS'			=> 'Встановити рольові права доступу',
 	'SET_USERS_PERMISSIONS'			=> 'Встановити users права доступу',
 	'SET_USERS_FORUM_PERMISSIONS'	=> 'Встановити форумні права доступу користувачів',
@@ -14365,6 +14365,7 @@ $lang = array_merge($lang, array(
 	'ACL_F_POST'		=> 'Can start new topics',
 	'ACL_F_STICKY'		=> 'Can post stickies',
 	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_ANNOUNCE_GLOBAL'	=> 'Can post global announcements',
 	'ACL_F_REPLY'		=> 'Can reply to topics',
 	'ACL_F_EDIT'		=> 'Can edit own posts',
 	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
@@ -14402,6 +14403,7 @@ $lang = array_merge($lang, array(
 
 	'ACL_M_INFO'	=> 'Can view post details',
 	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_PM_REPORT'	=> 'Can close and delete reports of private messages<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 ));
 
@@ -15606,7 +15608,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'Будь-ласка, оберіть форум, до якого ви хочете перемістити усі повідомлення, написані цим користувачем.',
 
 	'NO_SPECIAL_RANK'		=> 'Спеціального звання не присвоєно',
-	'NO_WARNINGS'			=> 'Немає попереджень',
+	'NO_WARNINGS'			=> 'Попередження відсутні.',
 	'NOT_MANAGE_FOUNDER'	=> 'Ви намагались керувати користувачем з статусом засновника. Лише засновникам дозволяється керувати іншими засновниками.',
 
 	'QUICK_TOOLS'			=> 'Швидкі налаштування',

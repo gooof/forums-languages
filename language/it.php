@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 #######language/en/app.php#######
 
@@ -6,7 +6,7 @@ $lang = array_merge($lang, array(
 	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
 	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
 	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
-	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller “<strong>%s</strong>” is not defined in ./config/services.yml.',
 ));
 
 #######language/en/calendar.php#######
@@ -2649,7 +2649,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'Questo è un richiamo che ti è stato inviato da un moderatore o da un amministratore. [quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'Richiamo',
 	'WARNING_POST_DEFAULT'	=> 'Questo è un richiamo riferito al seguente messaggio: %s.',
-	'NO_WARNINGS'	=> 'Non ci sono richiami.',
+	'NO_WARNINGS'	=> 'Nessun richiamo.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Hai selezionato l’argomento numero %d: %s.',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -6198,7 +6198,7 @@ $lang = array_merge($lang, array(
 	'ALBUM_COPY_PERMISSIONS_ADD_EXPLAIN'	=> 'If you select to copy permissions, the album will have the same permissions as the one you select here. If no album is selected you need to set the permissions afterwards.',
 	'COPY_PERMISSIONS_ALBUM_FROM_EXPLAIN'	=> 'The source album you want to copy permissions from.',
 	'COPY_PERMISSIONS_ALBUM_TO_EXPLAIN'		=> 'The destination albums you want the copied permissions applied to.',
-	'COPY_PERMISSIONS_CONFIRM'		=> 'Sei sicuro di voler eseguire questa operazione? <strong>ATTENZIONE: questa operazione sovrascrive tutti i permessi esistenti in relazione alle opzioni selezionate.</strong>',
+	'COPY_PERMISSIONS_CONFIRM'		=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'ALBUM_COPY_PERMISSIONS_EDIT_EXPLAIN'	=> 'If you select to copy permissions, the album will have the same permissions as the one you select here. This will overwrite any permissions you have previously set for this album with the permissions of the album you select here. If no album is selected the current permissions will be kept.',
 	'COPY_PERMISSIONS_FROM'			=> 'Copia permessi da',
 	'COPY_PERMISSIONS_SUCCESSFUL'	=> 'Copied permissions successful to target albums.',
@@ -6465,7 +6465,7 @@ $lang = array_merge($lang, array(
 	'SELECTED_ALBUMS'				=> 'Selected albums',
 	'SELECTED_GROUPS'				=> 'Selected groups',
 	'SELECTED_PERM_SYS'				=> 'Selected permission-system',
-	'SET_PERMISSIONS'				=> 'Imposta permessi',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SHORTED_IMAGENAMES'			=> 'Shorten Imagenames',
 	'SHORTED_IMAGENAMES_EXP'		=> 'If the name of an image is to long and doesn’t include spaces, the layout maybe destroyed.',
 	'SORRY_NO_STATISTIC'			=> 'Sorry, this statistic-value is not yet available.',
@@ -14111,7 +14111,7 @@ $lang = array_merge($lang, array(
 	'APPLY_PERMISSIONS_EXPLAIN'	=> 'I permessi e i ruoli definiti per questa figura saranno applicati solo ad essa e a tutte le figure selezionate.',
 	'AUTH_UPDATED'				=> 'I permessi sono stati aggiornati.',
 
-	'COPY_PERMISSIONS_CONFIRM'				=> 'Sei sicuro di voler eseguire questa operazione? <strong>ATTENZIONE: questa operazione sovrascrive tutti i permessi esistenti in relazione alle opzioni selezionate.</strong>',
+	'COPY_PERMISSIONS_CONFIRM'				=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'COPY_PERMISSIONS_FORUM_FROM_EXPLAIN'	=> 'Il forum sorgente da cui si vogliono copiare i permessi.',
 	'COPY_PERMISSIONS_FORUM_TO_EXPLAIN'		=> 'I forum di destinazione in cui si vogliono copiare i permessi applicati.',
 	'COPY_PERMISSIONS_FROM'					=> 'Copia permessi da',
@@ -14224,7 +14224,7 @@ $lang = array_merge($lang, array(
 	'SELECT_FORUM_SUBFORUM_EXPLAIN'	=> 'Il forum che selezioni qui includerà tutti i subforum nella selezione.',
 	'SELECT_ROLE'					=> 'Seleziona ruolo…',
 	'SELECT_TYPE'					=> 'Seleziona tipo',
-	'SET_PERMISSIONS'				=> 'Imposta permessi',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SET_ROLE_PERMISSIONS'			=> 'Imposta permessi ruolo',
 	'SET_USERS_PERMISSIONS'			=> 'Imposta permessi utente',
 	'SET_USERS_FORUM_PERMISSIONS'	=> 'Imposta permessi forum utente',
@@ -14364,6 +14364,7 @@ $lang = array_merge($lang, array(
 	'ACL_F_POST'		=> 'Can start new topics',
 	'ACL_F_STICKY'		=> 'Can post stickies',
 	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_ANNOUNCE_GLOBAL'	=> 'Can post global announcements',
 	'ACL_F_REPLY'		=> 'Can reply to topics',
 	'ACL_F_EDIT'		=> 'Can edit own posts',
 	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
@@ -14401,6 +14402,7 @@ $lang = array_merge($lang, array(
 
 	'ACL_M_INFO'	=> 'Can view post details',
 	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_PM_REPORT'	=> 'Can close and delete reports of private messages<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 ));
 
@@ -15605,7 +15607,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'Seleziona il forum al quale vuoi trasportare tutti i messaggi che questo utente ha fatto.',
 
 	'NO_SPECIAL_RANK'		=> 'Nessun livello speciale assegnato',
-	'NO_WARNINGS'			=> 'Non ci sono richiami.',
+	'NO_WARNINGS'			=> 'Nessun richiamo.',
 	'NOT_MANAGE_FOUNDER'	=> 'Stai amministrando un fondatore. Solo un fondatore può amministrare altri fondatori.',
 
 	'QUICK_TOOLS'			=> 'Strumenti veloci',

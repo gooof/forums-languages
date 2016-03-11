@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 #######language/en/app.php#######
 
@@ -6,7 +6,7 @@ $lang = array_merge($lang, array(
 	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
 	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
 	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
-	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller “<strong>%s</strong>” is not defined in ./config/services.yml.',
 ));
 
 #######language/en/calendar.php#######
@@ -2649,7 +2649,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'ذیل میں‌منتظمین کی طرف سے آپکو دی جانے والی تنبیہات ہیں. [quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'بورڈ کی تنبیہ جاری کی جا چکی ہے',
 	'WARNING_POST_DEFAULT'	=> 'یہ آپکی طرف سے تحریر کیے جانے والی مراسلے پر تنبیہ ہے. %s',
-	'NO_WARNINGS'	=> 'کوئی تنبیہ موجود نہیں‌ہے.',
+	'NO_WARNINGS'	=> 'کوئی پابندی نہیں',
 
 	'YOU_SELECTED_TOPIC'	=> 'آپ نے موضوع نمبر %d: %s منتخب کیا ہے',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -6197,7 +6197,7 @@ $lang = array_merge($lang, array(
 	'ALBUM_COPY_PERMISSIONS_ADD_EXPLAIN'	=> 'If you select to copy permissions, the album will have the same permissions as the one you select here. If no album is selected you need to set the permissions afterwards.',
 	'COPY_PERMISSIONS_ALBUM_FROM_EXPLAIN'	=> 'The source album you want to copy permissions from.',
 	'COPY_PERMISSIONS_ALBUM_TO_EXPLAIN'		=> 'The destination albums you want the copied permissions applied to.',
-	'COPY_PERMISSIONS_CONFIRM'		=> 'کیا آپ واقعی یہ عمل جاری رکھنا چاہتے ہیں؟ براہ مہربانی یاد رکھیں کہ یہ عمل منتخب شدہ منزلات پر تمام اجازات کو تبدیل کر دے گا.',
+	'COPY_PERMISSIONS_CONFIRM'		=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'ALBUM_COPY_PERMISSIONS_EDIT_EXPLAIN'	=> 'If you select to copy permissions, the album will have the same permissions as the one you select here. This will overwrite any permissions you have previously set for this album with the permissions of the album you select here. If no album is selected the current permissions will be kept.',
 	'COPY_PERMISSIONS_FROM'			=> 'سے اجازات کاپی کریں',
 	'COPY_PERMISSIONS_SUCCESSFUL'	=> 'Copied permissions successful to target albums.',
@@ -6464,7 +6464,7 @@ $lang = array_merge($lang, array(
 	'SELECTED_ALBUMS'				=> 'Selected albums',
 	'SELECTED_GROUPS'				=> 'Selected groups',
 	'SELECTED_PERM_SYS'				=> 'Selected permission-system',
-	'SET_PERMISSIONS'				=> 'اجازات سیٹ کریں',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SHORTED_IMAGENAMES'			=> 'Shorten Imagenames',
 	'SHORTED_IMAGENAMES_EXP'		=> 'If the name of an image is to long and doesn’t include spaces, the layout maybe destroyed.',
 	'SORRY_NO_STATISTIC'			=> 'Sorry, this statistic-value is not yet available.',
@@ -14110,7 +14110,7 @@ PHPbb بورڈ پر اجازات بنانے سے متعلق معلومات کا 
 	'APPLY_PERMISSIONS_EXPLAIN'	=> 'اس شے کے لیے بنایا گیا کردار یا اجازات صرف اسی شے یا منتخب اشیاء پر لاگو ہونگی',
 	'AUTH_UPDATED'				=> 'اجازات کو اپ ڈیٹ کر دیا گیا ہے',
 
-	'COPY_PERMISSIONS_CONFIRM'				=> 'کیا آپ واقعی یہ عمل جاری رکھنا چاہتے ہیں؟ براہ مہربانی یاد رکھیں کہ یہ عمل منتخب شدہ منزلات پر تمام اجازات کو تبدیل کر دے گا.',
+	'COPY_PERMISSIONS_CONFIRM'				=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'COPY_PERMISSIONS_FORUM_FROM_EXPLAIN'	=> 'وہ زریع فورم جس سے آپ اجازات کاپی کرنا چاہتے ہیں',
 	'COPY_PERMISSIONS_FORUM_TO_EXPLAIN'		=> 'وہ منزل فورم جہاں‌آپ اجازات کاپی کرنا چاہتے ہیں',
 	'COPY_PERMISSIONS_FROM'					=> 'سے اجازات کاپی کریں',
@@ -14223,7 +14223,7 @@ PHPbb بورڈ پر اجازات بنانے سے متعلق معلومات کا 
 	'SELECT_FORUM_SUBFORUM_EXPLAIN'	=> 'آپ جو فورم یہاں منتخب کریں گے، اس میں تمام ذیلی فارمز بھی شامل ہونگے',
 	'SELECT_ROLE'					=> 'کردار منتخب کریں...',
 	'SELECT_TYPE'					=> 'قسم منتخب کریں',
-	'SET_PERMISSIONS'				=> 'اجازات سیٹ کریں',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SET_ROLE_PERMISSIONS'			=> 'کردار اجازات سیٹ کریں',
 	'SET_USERS_PERMISSIONS'			=> 'صارفین اجازات سیٹ کریں',
 	'SET_USERS_FORUM_PERMISSIONS'	=> 'صارفین کی فورم اجازات سیٹ کریں',
@@ -14363,6 +14363,7 @@ $lang = array_merge($lang, array(
 	'ACL_F_POST'		=> 'Can start new topics',
 	'ACL_F_STICKY'		=> 'Can post stickies',
 	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_ANNOUNCE_GLOBAL'	=> 'Can post global announcements',
 	'ACL_F_REPLY'		=> 'Can reply to topics',
 	'ACL_F_EDIT'		=> 'Can edit own posts',
 	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
@@ -14400,6 +14401,7 @@ $lang = array_merge($lang, array(
 
 	'ACL_M_INFO'	=> 'Can view post details',
 	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_PM_REPORT'	=> 'Can close and delete reports of private messages<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 ));
 
@@ -15606,7 +15608,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'اس صارف کی طرف سے مراسلات منتقل کرنے کے لیے فورم منتخب کریں',
 
 	'NO_SPECIAL_RANK'		=> 'کوئی مخصوص درجہ نہیں دیا گیا',
-	'NO_WARNINGS'			=> 'کوئی تنبیہ موجود نہیں‌ہے.',
+	'NO_WARNINGS'			=> 'کوئی پابندی نہیں',
 	'NOT_MANAGE_FOUNDER'	=> 'آپ نے بانی درجہ کے رکن کی ترمیم کرنی چاہی ہے. صرف بانی صارفین ہی ایسا کر سکتے ہیں',
 
 	'QUICK_TOOLS'			=> 'فوری آلات',

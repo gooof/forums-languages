@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 #######language/en/app.php#######
 
@@ -6,7 +6,7 @@ $lang = array_merge($lang, array(
 	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Fehlender Wert für Argument #%1$s: <strong>%3$s</strong> in Klasse <strong>%2$s</strong>',
 	'CONTROLLER_NOT_SPECIFIED'			=> 'Es wurde kein Controller (Steuerungsklasse) definiert.',
 	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'Für den Controller (Steuerungsklasse) wurde keine Methode festgelegt.',
-	'CONTROLLER_SERVICE_UNDEFINED'		=> 'Der Service für den Controller (Steuerungsklasse) "<strong>%s</strong>" ist nicht in ./config/services.yml definiert.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller “<strong>%s</strong>” is not defined in ./config/services.yml.',
 ));
 
 #######language/en/calendar.php#######
@@ -2648,7 +2648,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'Dir wurde eine Verwarnung durch einen Administrator oder Moderator dieses Forums erteilt:[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'Verwarnung erteilt.',
 	'WARNING_POST_DEFAULT'	=> 'Dies ist eine Verwarnung wegen dieses von dir erstellten Beitrags: %s.',
-	'NO_WARNINGS'	=> 'Es existieren keine Verwarnungen.',
+	'NO_WARNINGS'	=> 'Keine Verwarnungen.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Du hast das Thema mit der ID %d ausgewählt: %s.',
 	'PREFIX_MCP_CHOOSE'		=> 'Wähle einen neuen Präfix für die ausgewählten Themen',
@@ -6237,7 +6237,7 @@ $lang = array_merge($lang, array(
 	'ALBUM_COPY_PERMISSIONS_ADD_EXPLAIN'	=> 'Sobald das Album erstellt ist, wird es dieselben Berechtigungen haben wie das hier ausgewählte Album. Wenn hier kein Album gewählt wird, wird das neue Album unsichtbar bleiben, bis entsprechende Berechtigungen gesetzt wurden.',
 	'COPY_PERMISSIONS_ALBUM_FROM_EXPLAIN'	=> 'Das Album, von dem die Berechtigungen kopiert werden sollen.',
 	'COPY_PERMISSIONS_ALBUM_TO_EXPLAIN'		=> 'Die Zielalben, denen die Berechtigungen zugeordnet werden sollen.',
-	'COPY_PERMISSIONS_CONFIRM'		=> 'Bist du dir sicher, dass du diesen Vorgang durchführen möchtest? Dieser Vorgang wird alle bestehenden Berechtigungen der ausgewählten Foren überschreiben.',
+	'COPY_PERMISSIONS_CONFIRM'		=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'ALBUM_COPY_PERMISSIONS_EDIT_EXPLAIN'	=> 'Wenn du dich entscheidest, Berechtigungen zu kopieren, wird das Album dieselben Berechtigungen haben wie das von dir hier ausgewählte. Dadurch werden alle Berechtigungen, die du vorher für dieses Album gesetzt hast, durch die des ausgewählten Albums ersetzt. Wenn kein Album gewählt wird, werden die derzeitigen Berechtigungen beibehalten.',
 	'COPY_PERMISSIONS_FROM'			=> 'Kopiere Berechtigungen von',
 	'COPY_PERMISSIONS_SUCCESSFUL'	=> 'Die Berechtigungen wurden erfolgreich kopiert.',
@@ -6504,7 +6504,7 @@ $lang = array_merge($lang, array(
 	'SELECTED_ALBUMS'				=> 'Ausgewählte Alben',
 	'SELECTED_GROUPS'				=> 'Ausgewählte Gruppen',
 	'SELECTED_PERM_SYS'				=> 'Ausgewählte Berechtigungsart',
-	'SET_PERMISSIONS'				=> '<br /><a href="%s">Berechtigungen</a> jetzt vergeben.',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SHORTED_IMAGENAMES'			=> 'Bildernamen kürzen',
 	'SHORTED_IMAGENAMES_EXP'		=> 'Sollte der Name eines Bildes zu lange sein und kein Leerzeichen enthalten, kann es zu Problemen im Layout führen.',
 	'SORRY_NO_STATISTIC'			=> 'Entschuldigung, aber dieser Statistik-Wert ist noch nicht verfügbar.',
@@ -14130,7 +14130,7 @@ $lang = array_merge($lang, array(
 	'APPLY_PERMISSIONS_EXPLAIN'	=> 'Die definierten Berechtigungen und die definierte Rolle werden nur für dieses und alle markierten Objekte angewandt.',
 	'AUTH_UPDATED'				=> 'Die Berechtigungen wurden aktualisiert.',
 
-	'COPY_PERMISSIONS_CONFIRM'				=> 'Bist du dir sicher, dass du diesen Vorgang durchführen möchtest? Dieser Vorgang wird alle bestehenden Berechtigungen der ausgewählten Foren überschreiben.',
+	'COPY_PERMISSIONS_CONFIRM'				=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'COPY_PERMISSIONS_FORUM_FROM_EXPLAIN'	=> 'Das Forum, dessen Berechtigungen du kopieren möchtest.',
 	'COPY_PERMISSIONS_FORUM_TO_EXPLAIN'		=> 'Die Ziel-Foren, zu denen die Berechtigungen kopiert werden sollen.',
 	'COPY_PERMISSIONS_FROM'					=> 'Kopiere Berechtigungen von',
@@ -14243,7 +14243,7 @@ $lang = array_merge($lang, array(
 	'SELECT_FORUM_SUBFORUM_EXPLAIN'	=> 'Das ausgewählte Forum bezieht auch alle Unterforen in die Auswahl mit ein.',
 	'SELECT_ROLE'					=> 'Rolle wählen …',
 	'SELECT_TYPE'					=> 'Berechtigungs-Art',
-	'SET_PERMISSIONS'				=> '<br /><a href="%s">Berechtigungen</a> jetzt vergeben.',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SET_ROLE_PERMISSIONS'			=> 'Berechtigungen der Rolle definieren',
 	'SET_USERS_PERMISSIONS'			=> 'Benutzer-Berechtigungen festlegen',
 	'SET_USERS_FORUM_PERMISSIONS'	=> 'Benutzerspezifische Forenrechte festlegen',
@@ -14383,6 +14383,7 @@ $lang = array_merge($lang, array(
 	'ACL_F_POST'		=> 'Kann neue Themen im Forum starten',
 	'ACL_F_STICKY'		=> 'Kann wichtige Themen erstellen',
 	'ACL_F_ANNOUNCE'	=> 'Kann Bekanntmachungen erstellen',
+	'ACL_F_ANNOUNCE_GLOBAL'	=> 'Can post global announcements',
 	'ACL_F_REPLY'		=> 'Kann auf Themen antworten',
 	'ACL_F_EDIT'		=> 'Kann eigene Beiträge ändern',
 	'ACL_F_DELETE'		=> 'Kann eigene Beiträge löschen',
@@ -14420,6 +14421,7 @@ $lang = array_merge($lang, array(
 
 	'ACL_M_INFO'	=> 'Kann Beitrags-Details ansehen',
 	'ACL_M_WARN'	=> 'Kann Verwarnungen aussprechen<br /><em>Diese Berechtigung wird global und nicht forenbezogen erteilt.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_PM_REPORT'	=> 'Can close and delete reports of private messages<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 	'ACL_M_BAN'		=> 'Kann Sperren verwalten<br /><em>Diese Berechtigung wird global und nicht forenbezogen erteilt.</em>', // This moderator setting is only global (and not local)
 ));
 
@@ -15624,7 +15626,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'Bitte wähle ein Forum aus, in das alle Beiträge verschoben werden sollen, die der Benutzer erstellt hat.',
 
 	'NO_SPECIAL_RANK'		=> 'Kein spezieller Rang zugewiesen',
-	'NO_WARNINGS'			=> 'Es existieren keine Verwarnungen.',
+	'NO_WARNINGS'			=> 'Keine Verwarnungen.',
 	'NOT_MANAGE_FOUNDER'	=> 'Du hast versucht, einen Benutzer mit Gründer-Status zu verwalten. Nur Benutzer mit Gründer-Status können andere Gründer verwalten.',
 
 	'QUICK_TOOLS'			=> 'Schnellauswahl',

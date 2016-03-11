@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 #######language/en/app.php#######
 
@@ -6,7 +6,7 @@ $lang = array_merge($lang, array(
 	'CONTROLLER_ARGUMENT_VALUE_MISSING'	=> 'Missing value for argument #%1$s: <strong>%3$s</strong> in class <strong>%2$s</strong>',
 	'CONTROLLER_NOT_SPECIFIED'			=> 'No controller has been specified.',
 	'CONTROLLER_METHOD_NOT_SPECIFIED'	=> 'No method was specified for the controller.',
-	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller "<strong>%s</strong>" is not defined in ./config/services.yml.',
+	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller “<strong>%s</strong>” is not defined in ./config/services.yml.',
 ));
 
 #######language/en/calendar.php#######
@@ -2649,7 +2649,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> '以下是這個網站的系統管理員或是版面管理員給予您的警告。[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> '您已經被本討論版給予警告',
 	'WARNING_POST_DEFAULT'	=> '以下您發表的文章違反了討論版規則：%s。',
-	'NO_WARNINGS'	=> '沒有任何警告。',
+	'NO_WARNINGS'	=> '沒有警告。',
 
 	'YOU_SELECTED_TOPIC'	=> '您選擇了主題識別編號 %d：%s。',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -6199,7 +6199,7 @@ $lang = array_merge($lang, array(
 	'ALBUM_COPY_PERMISSIONS_ADD_EXPLAIN'	=> 'If you select to copy permissions, the album will have the same permissions as the one you select here. If no album is selected you need to set the permissions afterwards.',
 	'COPY_PERMISSIONS_ALBUM_FROM_EXPLAIN'	=> 'The source album you want to copy permissions from.',
 	'COPY_PERMISSIONS_ALBUM_TO_EXPLAIN'		=> 'The destination albums you want the copied permissions applied to.',
-	'COPY_PERMISSIONS_CONFIRM'		=> '您確定要進行這項行動？請知道：這將覆蓋所選擇目標，其任何已經存在的權限。',
+	'COPY_PERMISSIONS_CONFIRM'		=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'ALBUM_COPY_PERMISSIONS_EDIT_EXPLAIN'	=> 'If you select to copy permissions, the album will have the same permissions as the one you select here. This will overwrite any permissions you have previously set for this album with the permissions of the album you select here. If no album is selected the current permissions will be kept.',
 	'COPY_PERMISSIONS_FROM'			=> '複製權限自',
 	'COPY_PERMISSIONS_SUCCESSFUL'	=> 'Copied permissions successful to target albums.',
@@ -6466,7 +6466,7 @@ $lang = array_merge($lang, array(
 	'SELECTED_ALBUMS'				=> 'Selected albums',
 	'SELECTED_GROUPS'				=> 'Selected groups',
 	'SELECTED_PERM_SYS'				=> 'Selected permission-system',
-	'SET_PERMISSIONS'				=> '設定權限',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SHORTED_IMAGENAMES'			=> 'Shorten Imagenames',
 	'SHORTED_IMAGENAMES_EXP'		=> 'If the name of an image is to long and doesn’t include spaces, the layout maybe destroyed.',
 	'SORRY_NO_STATISTIC'			=> 'Sorry, this statistic-value is not yet available.',
@@ -14112,7 +14112,7 @@ $lang = array_merge($lang, array(
 	'APPLY_PERMISSIONS_EXPLAIN'	=> '為某個項目所設定的權限和角色，將只被更新到某個項目和所有已選擇的項目。',
 	'AUTH_UPDATED'				=> '權限已經更新。',
 
-	'COPY_PERMISSIONS_CONFIRM'				=> '您確定要進行這項行動？請知道：這將覆蓋所選擇目標，其任何已經存在的權限。',
+	'COPY_PERMISSIONS_CONFIRM'				=> 'Are you sure you wish to carry out this operation? Please be aware that this will overwrite any existing permissions on the selected targets.',
 	'COPY_PERMISSIONS_FORUM_FROM_EXPLAIN'	=> '您想要複製權限的來源版面。.',
 	'COPY_PERMISSIONS_FORUM_TO_EXPLAIN'		=> '您想要複製權限的目標版面。',
 	'COPY_PERMISSIONS_FROM'					=> '複製權限自',
@@ -14225,7 +14225,7 @@ $lang = array_merge($lang, array(
 	'SELECT_FORUM_SUBFORUM_EXPLAIN'	=> '您選擇的版面將包含所有的子版面',
 	'SELECT_ROLE'					=> '選擇角色...',
 	'SELECT_TYPE'					=> '選擇類型',
-	'SET_PERMISSIONS'				=> '設定權限',
+	'SET_PERMISSIONS'				=> 'Set permissions',
 	'SET_ROLE_PERMISSIONS'			=> '設定角色權限',
 	'SET_USERS_PERMISSIONS'			=> '設定會員權限',
 	'SET_USERS_FORUM_PERMISSIONS'	=> '設定會員版面權限',
@@ -14365,6 +14365,7 @@ $lang = array_merge($lang, array(
 	'ACL_F_POST'		=> 'Can start new topics',
 	'ACL_F_STICKY'		=> 'Can post stickies',
 	'ACL_F_ANNOUNCE'	=> 'Can post announcements',
+	'ACL_F_ANNOUNCE_GLOBAL'	=> 'Can post global announcements',
 	'ACL_F_REPLY'		=> 'Can reply to topics',
 	'ACL_F_EDIT'		=> 'Can edit own posts',
 	'ACL_F_DELETE'		=> 'Can permanently delete own posts',
@@ -14402,6 +14403,7 @@ $lang = array_merge($lang, array(
 
 	'ACL_M_INFO'	=> 'Can view post details',
 	'ACL_M_WARN'	=> 'Can issue warnings<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
+	'ACL_M_PM_REPORT'	=> 'Can close and delete reports of private messages<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 	'ACL_M_BAN'		=> 'Can manage bans<br /><em>This setting is only assigned globally. It is not forum based.</em>', // This moderator setting is only global (and not local)
 ));
 
@@ -15606,7 +15608,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> '請選擇您想要移動這個會員發表的所有文章的版面。',
 
 	'NO_SPECIAL_RANK'		=> '沒有指派特殊等級',
-	'NO_WARNINGS'			=> '沒有任何警告。',
+	'NO_WARNINGS'			=> '沒有警告。',
 	'NOT_MANAGE_FOUNDER'	=> '您在嘗試管理具有創始人地位的會員。只有創始人被允許管理其他創始人。',
 
 	'QUICK_TOOLS'			=> '快速工具',
