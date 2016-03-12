@@ -183,14 +183,15 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_LANG'				=> 'el',
 	'RECAPTCHA_NOT_AVAILABLE'		=> 'Για να χρησιμοποιήσετε το reCaptcha πρέπει να κάνετε εγγραφή εδώ <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 	'CAPTCHA_RECAPTCHA'				=> 'reCaptcha',
-	'RECAPTCHA_INCORRECT'			=> 'Ο κώδικας οπτικής επιβεβαίωσης που προσθέσατε ήτανε λάθος ',
+	'RECAPTCHA_INCORRECT'			=> 'The solution you provided was incorrect',
+	'RECAPTCHA_NOSCRIPT'			=> 'Please enable JavaScript in your browser to load the challenge.',
 
 	'RECAPTCHA_PUBLIC'				=> 'Δημόσιο  reCaptcha κλειδί',
-	'RECAPTCHA_PUBLIC_EXPLAIN'		=> 'Το δικό σας δημόσιο reCaptcha κλειδί. Μπορείτε να λάβετε τα κλειδιά από το <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
+	'RECAPTCHA_PUBLIC_EXPLAIN'		=> 'Your public reCaptcha key. Keys can be obtained on <a href="https://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 	'RECAPTCHA_PRIVATE'				=> 'Προσωπικό reCaptcha κλειδί',
-	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Το προσωπικό σας  reCaptcha κλειδί. Μπορείτε να λάβετε τα κλειδιά από το <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
+	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Your private reCaptcha key. Keys can be obtained on <a href="https://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 
-	'RECAPTCHA_EXPLAIN'				=> 'Σε μια προσπάθεια να αποτραπούν οι αυτόματες εγγραφές, θα πρέπει να εισάγετε και τις δύο λέξεις που παρουσιάζονται  στην εικόνα στο πεδίο κειμένου από κάτω.',
+	'RECAPTCHA_EXPLAIN'				=> 'In an effort to prevent automatic submissions, we require that you complete the following challenge.',
 	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
 ));
 
@@ -212,20 +213,36 @@ $lang = array_merge($lang, array(
 	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
 	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
 	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_LIST'					=> 'List all installed and available migrations.',
 	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DB_REVERT'					=> 'Revert a migration.',
 	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
 	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
 	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
-	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended upon.',
 	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
-	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s integer value',
 	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+
+	'CLI_DESCRIPTION_OPTION_ENV'				=> 'The Environment name.',
 	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
 	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
 	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_REPARSER_LIST'				=> 'Lists the types of text that can be reparsed.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE'			=> 'Reparses stored text with the current text_formatter services.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_ARG_1'	=> 'Type of text to reparse. Leave blank to reparse everything.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_DRY_RUN'		=> 'Do not save any changes; just print what would happen',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_MIN'	=> 'Lowest record ID to process',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_MAX'	=> 'Highest record ID to process',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_SIZE'	=> 'Approximate number of records to process at a time',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RESUME'		=> 'Start reparsing where the last execution stopped',
 	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
 	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
 	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_DESCRIPTION_THUMBNAIL_DELETE'		=> 'Delete all existing thumbnails.',
+	'CLI_DESCRIPTION_THUMBNAIL_GENERATE'	=> 'Generate all missing thumbnails.',
+	'CLI_DESCRIPTION_THUMBNAIL_RECREATE'	=> 'Recreate all thumbnails.',
 
 	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
 	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
@@ -240,6 +257,29 @@ $lang = array_merge($lang, array(
 	'CLI_EXTENSIONS_ENABLED'			=> 'Ενεργοποιημένο',
 
 	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
+
+	'CLI_MIGRATION_NAME'					=> 'Migration name, including the namespace (use forward slashes instead of backslashes to avoid problems).',
+	'CLI_MIGRATIONS_AVAILABLE'				=> 'Available migrations',
+	'CLI_MIGRATIONS_INSTALLED'				=> 'Installed migrations',
+	'CLI_MIGRATIONS_ONLY_AVAILABLE'		    => 'Show only available migrations',
+	'CLI_MIGRATIONS_EMPTY'                  => 'No migrations.',
+
+	'CLI_REPARSER_REPARSE_REPARSING'		=> 'Reparsing %1$s (range %2$d..%3$d)',
+	'CLI_REPARSER_REPARSE_REPARSING_START'	=> 'Reparsing %s...',
+	'CLI_REPARSER_REPARSE_SUCCESS'			=> 'Reparsing ended with success',
+
+	// In all the case %1$s is the logical name of the file and %2$s the real name on the filesystem
+	// eg: big_image.png (2_a51529ae7932008cf8454a95af84cacd) generated.
+	'CLI_THUMBNAIL_DELETED'		=> '%1$s (%2$s) deleted.',
+	'CLI_THUMBNAIL_DELETING'	=> 'Deleting thumbnails',
+	'CLI_THUMBNAIL_SKIPPED'		=> '%1$s (%2$s) skipped.',
+	'CLI_THUMBNAIL_GENERATED'	=> '%1$s (%2$s) generated.',
+	'CLI_THUMBNAIL_GENERATING'	=> 'Generating thumbnails',
+	'CLI_THUMBNAIL_GENERATING_DONE'	=> 'All thumbnails have been regenerated.',
+	'CLI_THUMBNAIL_DELETING_DONE'	=> 'All thumbnails have been deleted.',
+
+	'CLI_THUMBNAIL_NOTHING_TO_GENERATE'	=> 'No thumbnails to generate.',
+	'CLI_THUMBNAIL_NOTHING_TO_DELETE'	=> 'No thumbnails to delete.',
 ));
 
 #######language/en/common.php#######
@@ -285,6 +325,7 @@ $lang = array_merge($lang, array(
 	'ALL_POSTS'						=> 'Όλες τις δημοσιεύσεις',
 	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'Όλα τα θέματα',
+	'ALT_TEXT'						=> 'Alternative text',
 	'AND'							=> 'Και',
 	'ARE_WATCHING_FORUM'			=> 'Έχετε επιλέξει να ενημερώνεστε για νέες δημοσιεύσεις σε αυτήν την Δ. Συζήτηση.',
 	'ARE_WATCHING_TOPIC'			=> 'Έχετε επιλέξει να ενημερώνεστε για νέες δημοσιεύσεις σε αυτήν την Θ. Ενότητα.',
@@ -307,11 +348,13 @@ $lang = array_merge($lang, array(
 	'AVATAR_EMPTY_FILEUPLOAD'		=> 'Το φορτωμένο αρχείο άβαταρ είναι κενό.',
 	'AVATAR_INVALID_FILENAME'		=> '%s είναι ένα άκυρο όνομα αρχείου.',
 	'AVATAR_NOT_UPLOADED'			=> 'Το άβαταρ δεν μπορεί να φορτωθεί.',
+	'AVATAR_NO_TEMP_DIR'			=> 'Temporary folder could not be found or is not writable.',
 	'AVATAR_NO_SIZE'				=> 'Το πλάτος ή το ύψος του άβαταρ δεν μπορεί να καθοριστεί. Παρακαλώ εισάγετε το με το χέρι.',
 	'AVATAR_PARTIAL_UPLOAD'			=> 'Το συγκεκριμένο αρχείο φορτώθηκε μερικώς.',
 	'AVATAR_PHP_SIZE_NA'			=> 'Το μέγεθος αρχείου άβαταρ είναι πολύ μεγάλο.<br />Το μέγιστο επιτρεπτό μέγεθος στο php.ini δεν μπορεί να καθοριστεί.',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'Το άβαταρ είναι πάρα πολύ μεγάλο. Το μέγιστο μέγεθος αρχείου που επιτρέπετε στο php.ini έχει καθοριστεί %1$d %2$s. <br />Παρακαλώ αυτό έχει οριστεί στο php.ini και δεν μπορεί να αγνοηθεί.',
 	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
+	'AVATAR_PHP_UPLOAD_STOPPED'		=> 'A PHP extension has stopped the file upload.',
 	'AVATAR_URL_INVALID'			=> 'Ο συγκεκριμένος σύνδεσμος είναι άκυρος.',
 	'AVATAR_URL_NOT_FOUND'			=> 'Το συγκεκριμένο αρχείο δεν μπορεί να βρεθεί.',
 	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
@@ -418,6 +461,7 @@ $lang = array_merge($lang, array(
 	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> 'Συχνές Ερωτήσεις',
 	'FAQ_EXPLAIN'			=> 'Συχνές Ερωτήσεις',
+	'FEATURE_NOT_AVAILABLE' => 'The requested feature is not available on this board.',
 	'FILENAME'				=> 'Όνομα αρχείου',
 	'FILESIZE'				=> 'Μέγεθος αρχείου',
 	'FILEDATE'				=> 'Ημερομηνία αρχείου',
@@ -440,6 +484,7 @@ $lang = array_merge($lang, array(
 	'FORUM_LOCKED'			=> 'Κλειδωμένη Δ. Συζήτηση',
 	'FORUM_RULES'			=> 'Κανόνες Δ. Συζήτησης',
 	'FORUM_RULES_LINK'		=> 'Παρακαλώ πατήστε εδώ για να δείτε τους κανόνες της Δ. Συζήτησης',
+	'FROM'					=> 'από',
 	'FSOCK_DISABLED'		=> 'Αυτή η λειτουργία δεν μπορεί να ολοκληρωθεί επειδή η λειτουργία <var>fsockopen</var> έχει τεθεί εκτός λειτουργίας ή ο κεντρικός υπολογιστής που γίνεται η ερώτηση δεν μπορεί να ανταποκριθεί.',
 	'FSOCK_TIMEOUT'			=> 'Ένα χρονικό όριο συνέβη κατά την ανάγνωση από το  δικτύο.',
 
@@ -502,6 +547,7 @@ $lang = array_merge($lang, array(
 	'IMAGE_FILETYPE_INVALID'	=> 'Ο τύπος αρχείου εικόνας %d για το MIME-Typ %s δεν υποστηρίζεται.',
 	'IMAGE_FILETYPE_MISMATCH'	=> 'Ανακριβής τύπος αρχείου: ανάπτυξη επέκτασης %1$s όμως η επέκταση %2$s που δίνετε.',
 	'IN'						=> 'στο',
+	'INACTIVE'					=> 'Inactive',
 	'INDEX'						=> 'Ευρετήριο σελίδας', //Index page
 	'INFORMATION'				=> 'Πληροφορίες',
 	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
@@ -603,6 +649,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
 	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
 	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_METHOD_INVALID'		=> 'The method "%s" does not refer to a valid notification method.',
 	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
 	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
 	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
@@ -617,7 +664,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
 	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
 	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
-	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for deactivated or newly registered user: “%1$s”',
 	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> 'Παρακαλώ ενημερώστε τον Διαχειριστή της Δ. Συζήτησης ή τον webmaster.',
 	'NOTIFY_ADMIN_EMAIL'		=> 'Παρακαλώ ενημερώστε τον Διαχειριστή της Δ. Συζήτησης ή τον webmaster: <a href="mailto:%1$s">%1$s</a>',
@@ -803,10 +850,13 @@ $lang = array_merge($lang, array(
 	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'Ο κεντρικός υπολογιστής SMTP δεν υποστηρίζει την επικύρωση.',
 	'SORRY_AUTH_READ'			=> 'Δεν έχετε το δικαίωμα να αναγνώσετε την Δ. Συζήτηση.',
+	'SORRY_AUTH_READ_TOPIC'		=> 'You are not authorised to read this topic.',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'Δεν έχετε το δικαίωμα να μεταφορτώσετε αυτό το συνημμένο.',
 	'SORT_BY'					=> 'Ταξινόμηση ανά',
+	'SORT_DIRECTION'			=> 'Direction',
 	'SORT_JOINED'				=> 'Ημερομηνία συνένωσης',
 	'SORT_LOCATION'				=> 'Τοποθεσία',
+	'SORT_OPTIONS'				=> 'Display and sorting options',
 	'SORT_RANK'					=> 'Βαθμός',
 	'SORT_POSTS'				=> 'Δημοσιεύσεις',
 	'SORT_TOPIC_TITLE'			=> 'Τίτλος Θέματος',
@@ -860,7 +910,6 @@ $lang = array_merge($lang, array(
 	'TOO_SHORT_USERNAME'			=> 'Το όνομα μέλους που εισάγατε είναι πολύ μικρό.',
 	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
 	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
-	
 	'TOO_SMALL'						=> 'Η τιμή που προσθέσατε είναι μικρή.',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> 'Η τιμή του <strong>Μέγιστος αριθμός παραληπτών ανά προσωπικό μήνυμα</strong> που προσθέσατε στην ρύθμιση είναι πολύ μικρή.',
 
@@ -949,8 +998,8 @@ $lang = array_merge($lang, array(
 	'WHO_IS_ONLINE'		=> 'Μέλη σε σύνδεση',
 	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'Ο κωδικός που εισάγατε είναι λάθος.',
-	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 	'WRONG_DATA_JABBER'			=> 'Το όνομα που εισάγατε δεν είναι ένας έγκυρος λογαριασμός Jabber.',
 	'WRONG_DATA_LANG'			=> 'Η γλώσσα που ορίσατε δεν είναι έγκυρη.',
 	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
@@ -991,7 +1040,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'		=> 'Προβολή περισσοτέρων εικονιδίων',
 	'K_QUICK_REPLY'		=> 'Γρήγορη απάντηση',
 	'ADD_SMILIES'			=> 'Προσθήκη πολλαπλών smilies',
-	'ATTACH_SIG'			=> 'Προσάρτηση υπογραφής (η υπογραφή μπορεί να αλλάξει από τον Πίνακα Ελέγχου Μέλους)',
+	'ATTACH_SIG'			=> 'Attach a signature (signatures can be altered via the UCP)',
 	'DISABLE_BBCODE'		=> 'Απενεργοποίηση BBCode',
 	'DISABLE_MAGIC_URL'		=> 'Μην αναλύστε αυτόματα URLs',
 	'DISABLE_SMILIES'		=> 'Απενεργοποίηση εικονιδίων',
@@ -1163,7 +1212,6 @@ $lang = array_merge($lang, array(
 	'SHOP_PCS'				=> 'pcs.',
 	'SHOP_MORE_DETAIL'		=> 'Find more details and items in the ',
 
-	'FROM'			=> 'από',
 	'XMODS'				=> 'ENGLISH',
 	'SMILIES_CATS'		=> 'Smiley Categories',
 	'ARCADE_GAMETIME'	=> 'Play Time',
@@ -1255,7 +1303,7 @@ $lang = array_merge($lang, array(
 
 	'ARCADE_EXPLAIN'		=> 'Play games in the arcade',
 	'PERSONAL_ALBUM'		=> 'Personal Album',
-	'VC_REFRESH'			=> 'Ανανέωση εικόνας',
+	'VC_REFRESH'			=> 'Refresh confirmation code',
 	'VC_REFRESH_EXPLAIN'		=> 'Εάν δεν μπορείτε να διαβάσετε τον κώδικα, μπορείτε να ζητήσετε έναν νέο με το πάτημα  του κουμπιού.',
 	'CHALLANGE'			=> '1 vs. 1',
 
@@ -1642,7 +1690,7 @@ $lang = array_merge($lang, array(
 	'GROUP_JOIN_PENDING_CONFIRM'		=> 'Είστε βέβαιοι ότι εσείς θέλετε να ζητήσετε να ενταχθείτε στην επιλεγμένη ομάδα;',
 	'GROUP_JOINED'						=> 'Έχετε ενταχθεί επιτυχώς στην επιλεγμένη ομάδα.',
 	'GROUP_JOINED_PENDING'				=> 'Η αίτηση για ένταξη στην ομάδα έγινε με επιτυχία. Παρακαλώ περιμένετε έναν συντονιστή ομάδας να εγκρίνει την ιδιότητα μέλους σας.',
-	'GROUP_LIST'						=> 'Διαχείριση μέλους',
+	'GROUP_LIST'						=> 'Current members',
 	'GROUP_MEMBERS'						=> 'Διαχείριση μελών',
 	'GROUP_NAME'						=> 'Όνομα Ομάδας',
 	'GROUP_OPEN'						=> 'Ανοικτή',
@@ -1796,7 +1844,7 @@ $lang = array_merge($lang, array(
 	'DLL_XML'					=> 'Υποστήριξη XML [ Jabber ]',
 	'DLL_ZLIB'					=> 'Υποστήριξη συμπίεσης zlib [ gz, .tar.gz, .zip ]',
 	'DL_CONFIG'					=> 'Ρυθμίσεις μεταφορτώσεων',
-	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'Μεταφόρτωση',
 	'DONE'						=> 'Εντάξει',
 
@@ -1961,7 +2009,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> 'Ρυθμίσεις κεντρικού υπολογιστή',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Το ευρετήριο αναζήτησης δεν μετατράπηκε',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Το παλιό ευρετήριο αναζήτησης δεν μετατράπηκε. Η αναζήτηση θα επιστρέφει πάντα κενό αποτέλεσμα. Για τη δημιουργία νέας αναζήτησης πηγαίνετε στον Πίνακα Ελέγχου Διαχειριστή, Επιλέξετε Συντήρηση και μετά ευρετήριο Αναζήτησης από το υπό-μενού.',
-	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
+	'SELECT_FORUM_GA'			=> 'In phpBB the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> 'Λογισμικό συστήματος',
 	'SPECIFY_OPTIONS'			=> 'Καθορίστε επιλογές μετατροπής',
 	'STAGE_ADMINISTRATOR'		=> 'Λεπτομέρειες Διαχειριστή',
@@ -1969,7 +2017,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> 'Αυτές οι ρυθμίσεις είναι απαραίτητες μόνο αν γνωρίζετε οτι χρειάζεστε κάτι άλλο εκτός από τις προεπιλογές. Αν δεν είστε σίγουροι, απλά προχωρήστε στην επόμενη σελίδα, αφού αυτές οι ρυθμίσεις μπορούν να γίνουν μετά από τον Πίνακα Ελέγχου Διαχειριστή.',
 	'STAGE_CONFIG_FILE'			=> 'Αρχείο ρυθμίσεων',
 	'STAGE_CREATE_TABLE'		=> 'Δημιουργία πινάκων Β. Δεδομένων',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'Ρυθμίσεις Β. Δεδομένων',
 	'STAGE_FINAL'				=> 'Τελικό βήμα',
 	'STAGE_INTRO'				=> 'Εισαγωγή',
@@ -2276,9 +2324,23 @@ $lang = array_merge($lang, array(
 	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
 	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
 	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_INSTALLED'			=> 'The migration "%s" is not installed.',
 	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
 	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
 	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MIGRATION_REVERT_DATA_DONE'		=> 'Reverted Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_DATA_IN_PROGRESS'	=> 'Reverting Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_DATA_RUNNING'		=> 'Reverting Data: %s.',
+	'MIGRATION_REVERT_SCHEMA_DONE'		=> 'Reverted Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_SCHEMA_RUNNING'	=> 'Reverting Schema: %s.',
+
+	'MIGRATION_INVALID_DATA_MISSING_CONDITION'		=> 'A migration is invalid. An if statement helper is missing a condition.',
+	'MIGRATION_INVALID_DATA_MISSING_STEP'			=> 'A migration is invalid. An if statement helper is missing a valid call to a migration step.',
+	'MIGRATION_INVALID_DATA_CUSTOM_NOT_CALLABLE'	=> 'A migration is invalid. A custom callable function could not be called.',
+	'MIGRATION_INVALID_DATA_UNKNOWN_TYPE'			=> 'A migration is invalid. An unknown migration tool type was encountered.',
+	'MIGRATION_INVALID_DATA_UNDEFINED_TOOL'			=> 'A migration is invalid. An undefined migration tool was encountered.',
+	'MIGRATION_INVALID_DATA_UNDEFINED_METHOD'		=> 'A migration is invalid. An undefined migration tool method was encountered.',
 
 	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
 	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
@@ -2386,6 +2448,7 @@ $lang = array_merge($lang, array(
 	'LOCK_TOPICS_CONFIRM'		=> 'Είστε σίγουρος ότι θέλετε να κλειδώσετε τα επιλεγμένα θέματα;',
 	'LOGS_CURRENT_TOPIC'		=> 'Τρέχων ιστορικό από',
 	'LOGIN_EXPLAIN_MCP'			=> 'Για να συντονιστείτε αυτή την Δ. Συζήτηση πρέπει να συνδεθείτε.',
+	'LOGVIEW_VIEWPOST'			=> 'Προβολή δημοσίευσης',
 	'LOGVIEW_VIEWTOPIC'			=> 'Προβολή θέματος',
 	'LOGVIEW_VIEWLOGS'			=> 'Προβολή ιστορικού θέματος',
 	'LOGVIEW_VIEWFORUM'			=> 'Προβολή Δ. Συζήτησης',
@@ -2487,7 +2550,7 @@ $lang = array_merge($lang, array(
 	'NOTIFY_POSTER_DISAPPROVAL'		=> 'Ειδοποίηση συγγραφέα σχετικά με την απόρριψη;',
 	'NOTIFY_USER_WARN'				=> 'Ειδοποίηση μέλους σχετικά με τις προειδοποιήσεις;',
 	'NOT_MODERATOR'					=> 'Δεν είστε συντονιστής σε αυτή την Δ. Συζήτηση.',
-	'NO_DESTINATION_FORUM'			=> 'Παρακαλώ επιλέξτε μια Δ. Συζήτηση προορισμού.',
+	'NO_DESTINATION_FORUM'			=> 'You have not specified a forum to move content to.',
 	'NO_DESTINATION_FORUM_FOUND'	=> 'Δεν υπάρχει καμία διαθέσιμη Δ. Συζήτηση προορισμού.',
 	'NO_ENTRIES'					=> 'Δεν υπάρχουν στο ιστορικό εγγραφές αυτήν την περίοδο.',
 	'NO_FEEDBACK'					=> 'Καμία ανατροφοδότηση δεν υπάρχει για αυτό το μέλος.',
@@ -2739,6 +2802,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'Πρέπει να εγγραφείτε και να συνδεθείτε για να αναζητήσετε κάποιο μέλος.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'Πρέπει να εγγραφείτε και να συνδεθείτε για να δείτε το προφίλ κάποιου μέλους.',
 
+	'MANAGE_GROUP'			=> 'Manage Group',
 	'MORE_THAN'				=> 'Περισσότερο από',
 
 	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
@@ -2747,7 +2811,7 @@ $lang = array_merge($lang, array(
 	'NO_VIEW_USERS'			=> 'Δεν έχετε δικαίωμα να δείτε την λίστα μελών ή το προφίλ.',
 
 	'ORDER'					=> 'Ταξινόμηση',
-	'OTHER'					=> 'Άλλη ένδειξη',
+	'OTHER'					=> 'Other',
 
 	'POST_IP'				=> 'Δημοσίευση από IP/Ιστοσελίδα',
 
@@ -3084,7 +3148,7 @@ $lang = array_merge($lang, array(
 	'ALREADY_DELETED'			=> 'Συγγνώμη αλλά ήδη αυτό το μήνυμα έχει διαγραφεί.',
 	'ATTACH_DISK_FULL'			=> 'There is not enough free disk space to post this attachment.',
 	'ATTACH_QUOTA_REACHED'		=> 'Συγγνώμη , αλλά η ποσόστωση συνημμένων στην Δ. Συζήτηση έχει επιτευχθεί.',
-	'ATTACH_SIG'				=> 'Προσάρτηση υπογραφής (η υπογραφή μπορεί να αλλάξει από τον Πίνακα Ελέγχου Μέλους)',
+	'ATTACH_SIG'				=> 'Attach a signature (signatures can be altered via the UCP)',
 
 	'BBCODE_A_HELP'				=> 'Ενσωματωμένο αρχείο συνημμένου: [attachment=]όνομααρχείου.ext[/attachment]',
 	'BBCODE_B_HELP'				=> 'Έντονο κείμενο: [b]κείμενο[/b]',
@@ -3187,8 +3251,10 @@ $lang = array_merge($lang, array(
 	'NO_POLL_TITLE'				=> 'Πρέπει να προσθέσετε έναν τίτλο για το δημοψήφισμα.',
 	'NO_POST'					=> 'Πρέπει να επιλέξετε μια δημοσίευση για την οποία θα προειδοποιήσετε αυτό το μέλος.',
 	'NO_POST_MODE'				=> 'Κανένας τύπος δημοσίευσης δεν έχει προσδιοριστεί.',
+	'NO_TEMP_DIR'				=> 'Temporary folder could not be found or is not writable.',
 
 	'PARTIAL_UPLOAD'			=> 'Το αρχείο μόνο εν μέρει φορτώθηκε.',
+	'PHP_UPLOAD_STOPPED'		=> 'A PHP extension has stopped the file upload.',
 	'PHP_SIZE_NA'				=> 'Το μέγεθος του αρχείου είναι μεγάλο.<br />Δεν μπορεί να καθορίσει το μέγεθος που ορίστηκε από το PHP στο php.ini.',
 	'PHP_SIZE_OVERRUN'			=> 'Το μέγεθος του συνημμένου αρχείου είναι μεγάλο. Το μέγιστο μέγεθος που επιτρέπετε είναι %1$d %2$s.<br />Παρακαλώ σημειώστε ότι αυτό έχει οριστεί στο php.ini και δεν μπορεί να αγνοηθεί.',
 	'PLACE_INLINE'				=> 'Προβολή στην δημοσίευση',
@@ -3301,6 +3367,7 @@ $lang = array_merge($lang, array(
 	'NO_RECENT_SEARCHES'	=> 'Καμία αναζήτηση δεν έχει πραγματοποιηθεί πρόσφατα',
 	'NO_SEARCH'				=> 'Συγνώμη αλλά δεν σας επιτρέπετε να χρησιμοποιήσετε το σύστημα αναζήτησης.',
 	'NO_SEARCH_RESULTS'		=> 'Καμία κατάλληλη αντιστοιχία δεν βρέθηκε.',
+	'NO_SEARCH_LOAD'		=> 'Sorry but you cannot use search at this time. The server has high load. Please try again later.',
 	'NO_SEARCH_UNREADS'		=> 'Συγνώμη, η αναζήτηση για μη αναγνωσμένες δημοσιεύσεις έχει απενεργοποιηθεί σε αυτή την Δ. Συζήτηση.',
 	'WORD_IN_NO_POST'		=> 'Καμία δημοσίευση δεν βρέθηκε επειδή η λέξη <strong>%s</strong> δεν περιλαμβάνεται σε οποιαδήποτε δημοσίευση.',
 	'WORDS_IN_NO_POST'		=> 'Καμία δημοσίευση δεν βρέθηκε επειδή οι λέξεις <strong>%s</strong> δεν περιλαμβάνονται σε οποιαδήποτε δημοσίευση',
@@ -3444,7 +3511,7 @@ $lang = array_merge($lang, array(
 	'CONFIRMATION'				=> 'Επιβεβαίωση εγγραφής',
 	'CONFIRM_CHANGES'			=> 'Επιβεβαίωση αποθήκευσης αλλαγών',
 	'CONFIRM_EXPLAIN'			=> 'Για την αποφυγή αυτόματων εγγραφών η κοινότητα απαιτεί να βάλετε έναν κωδικό επιβεβαίωσης. Ο κωδικός αυτός εμφανίζεται στην κάτωθι εικόνα. Αν έχετε προβλήματα όρασης ή δεν μπορείτε για κάποιον λόγο να διαβάσετε τον κωδικό παρακαλούμε επικοινωνήστε με τον %sΔιαχειριστή αυτής της κοινότητας%s.',
-	'VC_REFRESH'				=> 'Ανανέωση εικόνας',
+	'VC_REFRESH'				=> 'Refresh confirmation code',
 	'VC_REFRESH_EXPLAIN'		=> 'Εάν δεν μπορείτε να διαβάσετε τον κώδικα, μπορείτε να ζητήσετε έναν νέο με το πάτημα  του κουμπιού.',
 
 	'CONFIRM_PASSWORD'			=> 'Επιβεβαίωση κωδικού πρόσβασης',
@@ -3617,7 +3684,8 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
 	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
 	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
-	'NOTIFICATION_METHOD_EMAIL'							=> 'Ηλεκτρονικό ταχυδρομείο',
+	'NOTIFICATION_METHOD_BOARD'							=> 'Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'Email',
 	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
 	'NOTIFICATION_TYPE'									=> 'Notification type',
 	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
@@ -3629,7 +3697,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
 	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
 	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
-	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'User requiring activation',
 
 	'NOTIFY_METHOD'					=> 'Μέθοδος ειδοποίησης',
 	'NOTIFY_METHOD_BOTH'			=> 'Και τα δυο',
@@ -7195,7 +7263,7 @@ $lang = array_merge($lang, array(
 	'KO_NEXT'							=> 'The following teams have reached the next round',
 	'KO_NEXT_CHECK'						=> 'Please, check this teams, because not all rules are considered here. ',
 
-	'MANAGE_GROUP'						=> 'Consider group ranking',
+	'MANAGE_GROUP_FOOTBALL'					=> 'Consider group ranking',
 	'MATCHDAY_NEW'						=> 'The teams qualify till matchday',
 	'MATCHDAY_TARGET'					=> 'Select target matchday',
 	'MOVE_LEAGUE'						=> 'in league',
@@ -13196,6 +13264,7 @@ $lang = array_merge($lang, array(
 	'EXTENSION_NAME'			=> 'Extension Name',
 	'EXTENSION_ACTIONS'			=> 'Ενέργειες',
 	'EXTENSION_OPTIONS'			=> 'Επιλογές',
+	'EXTENSION_INSTALL_HEADLINE'=> 'Installing an extension',
 	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
 	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
 			<li>Disable the extension</li>
@@ -13203,7 +13272,7 @@ $lang = array_merge($lang, array(
 			<li>Upload the new files</li>
 			<li>Enable the extension</li>
 		</ol>',
-	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completely removing an extension from your board',
 	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
 			<li>Disable the extension</li>
 			<li>Delete the extension’s data</li>
@@ -13354,7 +13423,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_TO'					=> 'Μετακίνηση δημοσιεύσεων στο',
 	'MOVE_SUBFORUMS_TO'				=> 'Μετακίνηση υποσυζητήσεων στο',
 
-	'NO_DESTINATION_FORUM'			=> 'Παρακαλώ επιλέξτε μια Δ. Συζήτηση προορισμού.',
+	'NO_DESTINATION_FORUM'			=> 'You have not specified a forum to move content to.',
 	'NO_FORUM_ACTION'				=> 'Δεν επιλέχτηκε κάποια ενέργεια το τι γίνει με τα περιεχόμενα της Δ. Συζήτησης.',
 	'NO_PARENT'						=> 'Κατηγορία γονέας',
 	'NO_PERMISSIONS'				=> 'Να μην γίνει αντιγραφή δικαιωμάτων',
@@ -13451,12 +13520,12 @@ $lang = array_merge($lang, array(
 	'GROUP_LEAD'					=> 'Συντονιστές ομάδας',
 	'GROUP_LEADERS_ADDED'			=> 'Νέοι συντονιστές προστέθηκαν επιτυχώς στην ομάδα.',
 	'GROUP_LEGEND'					=> 'Προβολή ομάδας στο υπόμνημα',
-	'GROUP_LIST'					=> 'Διαχείριση μέλους',
+	'GROUP_LIST'					=> 'Current members',
 	'GROUP_LIST_EXPLAIN'			=> 'Αυτή είναι η ολοκληρωμένη λίστα των μελών αυτής της ομάδας. Μπορείτε να διαγράψετε μέλη (εκτός από ειδικές ομάδες) ή να προσθέσετε νέα.',
 	'GROUP_MEMBERS'					=> 'Διαχείριση μελών',
 	'GROUP_MEMBERS_EXPLAIN'			=> 'Αυτή είναι η ολοκληρωμένη λίστα των μελών αυτής της ομάδας. Περιέχει ξεχωριστά τμήματα για συντονιστές, εκκρεμή και υπάρχοντα μέλη. Από εδώ μπορείτε να διαχειριστείτε ποιος είναι μέλος της ομάδας και τον ρόλο του σε αυτήν. Για να βγάλετε έναν συντονιστή αλλά να τον κρατήσετε στην ομάδα χρησιμοποιήστε το Υποβιβασμός αντί του Διαγραφή. Παρομοίως χρησιμοποιήστε το Προαγωγή για να κάνετε υπάρχον μέλος συντονιστή.',
 	'GROUP_MESSAGE_LIMIT'			=> 'Όριο προσωπικών μηνυμάτων ομάδας ανά φάκελο',
-	'GROUP_MESSAGE_LIMIT_EXPLAIN'	=> 'Αυτή η ρύθμιση υπερκαλύπτει το όριο του φακέλου ανά μέλος. Η τιμή 0 σημαίνει ότι θα χρησιμοποιηθεί το όριο του μέλους.',
+	'GROUP_MESSAGE_LIMIT_EXPLAIN'	=> 'This setting overrides the per-user folder message limit. The maximum for all groups of the user is used to determine the actual value.<br />Set this value to 0 to overwrite the setting for all users of this group with the board-wide setting.',
 	'GROUP_MODS_ADDED'				=> 'Νέοι συντονιστές προστέθηκαν επιτυχώς.',
 	'GROUP_MODS_DEMOTED'			=> 'Συντονιστές ομάδας υποβιβάστηκαν επιτυχώς.',
 	'GROUP_MODS_PROMOTED'			=> 'Συντονιστές ομάδας προβιβάστηκαν επιτυχώς.',
@@ -13465,7 +13534,7 @@ $lang = array_merge($lang, array(
 	'GROUP_OPEN'					=> 'Ανοικτή',
 	'GROUP_PENDING'					=> 'Εκκρεμείς συμμετοχές',
 	'GROUP_MAX_RECIPIENTS'			=> 'Μέγιστος αριθμός παραληπτών ανά προσωπικό μήνυμα ',
-	'GROUP_MAX_RECIPIENTS_EXPLAIN'	=> 'Ο μέγιστος αριθμός παραληπτών σε ένα προσωπικό μήνυμα. Εάν εισάγετε 0, θα χρησιμοποιηθεί ο πίνακας-ευρείας ρύθμισης.',
+	'GROUP_MAX_RECIPIENTS_EXPLAIN'	=> 'The maximum number of allowed recipients in a private message. The maximum for all groups of the user is used to determine the actual value.<br />Set this value to 0 to overwrite the setting for all users of this group with the board-wide setting.',
 	'GROUP_OPTIONS_SAVE'			=> 'Επιλογές για όλη την ομάδα',
 	'GROUP_PROMOTE'					=> 'Προαγωγή σε συντονιστή ομάδας',
 	'GROUP_RANK'					=> 'Βαθμός Ομάδας',
@@ -13502,6 +13571,8 @@ $lang = array_merge($lang, array(
 	'NO_USERS'					=> 'Τα ζητούμενα μέλη δεν υπάρχουν.',
 	'NO_USERS_ADDED'			=> 'Κανένα μέλος δεν προστέθηκε στην ομάδα.',
 	'NO_VALID_USERS'			=> 'Δεν έχετε εισάγει κανένα επιλεγμένο μέλος για αυτήν την ενέργεια.',
+
+	'PENDING_MEMBERS'			=> 'Pending',
 
 	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> 'Προκαθορισμένες ομάδες',
@@ -14666,7 +14737,7 @@ $lang = array_merge($lang, array(
 	'ADD_ICONS'				=> 'Προσθήκη πολλαπλών συμβόλων',
 	'AFTER_ICONS'			=> 'Μετά %s',
 	'AFTER_SMILIES'			=> 'Μετά %s',
-	'FIRST'					=> 'Στην αρχή',
+
 	'CODE'						=> 'Κώδικας',
 	'CURRENT_ICONS'				=> 'Τρέχων σύμβολα',
 	'CURRENT_ICONS_EXPLAIN'		=> 'Επιλέξτε τι θέλετε να κάνετε με τα τρέχων εγκατεστημένα σύμβολα.',
@@ -14684,6 +14755,8 @@ $lang = array_merge($lang, array(
 	'EXPORT_ICONS_EXPLAIN'		=> '%sΜε αυτόν τον σύνδεσμο μπορείτε να γράψετε τις ρυθμίσεις των εγκατεστημένων συμβόλων σε ένα αρχείο <samp>icons.pak</samp> που μόλις  μεταφορτωθεί μπορεί να χρησιμοποιηθεί για την δημιουργία ενός <samp>.zip</samp> ή <samp>.tgz</samp> αρχείου που περιέχει όλα τα σύμβολα συν το αρχείο ρυθμίσεων <samp>icons.pak</samp> %s.',
 	'EXPORT_SMILIES'			=> 'Εξαγωγή και μεταφόρτωση πακέτου smilies.pak',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sΜε αυτόν τον σύνδεσμο μπορείτε να γράψετε τις ρυθμίσεις των εγκατεστημένων συμβόλων σε ένα αρχείο <samp>smilies.pak</samp> που μόλις μεταφορτωθεί μπορεί να χρησιμοποιηθεί για την δημιουργία ενός <samp>.zip</samp> ή <samp>.tgz</samp> αρχείου που περιέχει όλα τα σύμβολα συν το αρχείο ρυθμίσεων <samp>smilies.pak</samp>%s.',
+
+	'FIRST'			=> 'Στην αρχή',
 
 	'ICONS_ADD'				=> 'Προσθέστε νέο σύμβολο θέματος',
 	'ICONS_CONFIG'			=> 'Σύμβολα ρυθμίσεις',
@@ -14713,7 +14786,8 @@ $lang = array_merge($lang, array(
 	'NO_SMILIES_EXPORT'	=> 'Δεν έχετε κανένα smiley για να δημιουργήσετε ένα πακέτο.',
 	'NO_SMILIES_PAK'	=> 'Κανένα πακέτο smilies δεν βρέθηκε.',
 
-	'PAK_FILE_NOT_READABLE'	=> 'Δεν μπορεί να διαβάσει το <samp>.pak</samp> αρχείο.',
+	'PAK_FILE_NOT_READABLE'		=> 'Δεν μπορεί να διαβάσει το <samp>.pak</samp> αρχείο.',
+
 	'REPLACE_MATCHES'		=> 'Αντικαταστήστε τις αντιστοιχίες',
 
 	'SELECT_PACKAGE'			=> 'Επιλέξτε ένα αρχείο πακέτου',
@@ -14736,7 +14810,7 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'Εικόνα προέλευσης smiley',
 	'SMILIES_WIDTH'				=> 'Πλάτος smiley',
 
-	'WRONG_PAK_TYPE'		=> 'Το υποδεδειγμένο πακέτο περιείχε άκυρα στοιχεία.',
+	'WRONG_PAK_TYPE'	=> 'Το υποδεδειγμένο πακέτο περιείχε άκυρα στοιχεία.',
 ));
 
 $lang = array_merge($lang, array(
@@ -15118,7 +15192,7 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
-	// 3.1.0
+	// 3.2.0
 	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 
 	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
@@ -15139,6 +15213,8 @@ $lang = array_merge($lang, array(
 
 	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
 	'NO_UNINSTALLED_STYLE'		=> 'Κανένα μη εγκατεστημένο στυλ εικόνων δεν βρέθηκε.',
+
+	'PURGED_CACHE2'				=> 'Cache was purged.',
 
 	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
 
@@ -15164,6 +15240,8 @@ $lang = array_merge($lang, array(
 	'STYLE_USED_BY'				=> 'Χρησιμοποιείται από  (συμπεριλαμβανομένων των robots)',
 
 	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+	'BROWSE_STYLES_DATABASE'	=> 'Browse styles database',
 
 	// 3.0.12
 	'ACP_IMAGESETS'			=> 'Σύνολα εικόνων',

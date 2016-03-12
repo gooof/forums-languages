@@ -183,14 +183,15 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_LANG'				=> '英文',
 	'RECAPTCHA_NOT_AVAILABLE'		=> '為了使用 reCaptcha，您必須要在 <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a> 註冊一個帳號。',
 	'CAPTCHA_RECAPTCHA'				=> 'reCaptcha',
-	'RECAPTCHA_INCORRECT'			=> '您輸入的確認代碼是不正確的。',
+	'RECAPTCHA_INCORRECT'			=> 'The solution you provided was incorrect',
+	'RECAPTCHA_NOSCRIPT'			=> 'Please enable JavaScript in your browser to load the challenge.',
 
 	'RECAPTCHA_PUBLIC'				=> '公開的 reCaptcha 關鍵碼',
-	'RECAPTCHA_PUBLIC_EXPLAIN'		=> '您公開的 reCaptcha 關鍵碼。此關鍵碼可以在 <a href="www.google.com/recaptcha">www.google.com/recaptcha</a> 獲得。',
+	'RECAPTCHA_PUBLIC_EXPLAIN'		=> 'Your public reCaptcha key. Keys can be obtained on <a href="https://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 	'RECAPTCHA_PRIVATE'				=> '私密的 reCaptcha 關鍵碼',
-	'RECAPTCHA_PRIVATE_EXPLAIN'		=> '您私密的 reCaptcha 關鍵碼。此關鍵碼可以在 <a href="www.google.com/recaptcha">www.google.com/recaptcha</a> 獲得。',
+	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Your private reCaptcha key. Keys can be obtained on <a href="https://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 
-	'RECAPTCHA_EXPLAIN'				=> '為了防止自動提交，我們要求您在底部欄位中，輸入顯示在其上方的兩個字詞。',
+	'RECAPTCHA_EXPLAIN'				=> 'In an effort to prevent automatic submissions, we require that you complete the following challenge.',
 	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
 ));
 
@@ -212,20 +213,36 @@ $lang = array_merge($lang, array(
 	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
 	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
 	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_LIST'					=> 'List all installed and available migrations.',
 	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DB_REVERT'					=> 'Revert a migration.',
 	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
 	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
 	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
-	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended upon.',
 	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
-	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s integer value',
 	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+
+	'CLI_DESCRIPTION_OPTION_ENV'				=> 'The Environment name.',
 	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
 	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
 	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_REPARSER_LIST'				=> 'Lists the types of text that can be reparsed.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE'			=> 'Reparses stored text with the current text_formatter services.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_ARG_1'	=> 'Type of text to reparse. Leave blank to reparse everything.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_DRY_RUN'		=> 'Do not save any changes; just print what would happen',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_MIN'	=> 'Lowest record ID to process',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_MAX'	=> 'Highest record ID to process',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_SIZE'	=> 'Approximate number of records to process at a time',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RESUME'		=> 'Start reparsing where the last execution stopped',
 	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
 	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
 	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_DESCRIPTION_THUMBNAIL_DELETE'		=> 'Delete all existing thumbnails.',
+	'CLI_DESCRIPTION_THUMBNAIL_GENERATE'	=> 'Generate all missing thumbnails.',
+	'CLI_DESCRIPTION_THUMBNAIL_RECREATE'	=> 'Recreate all thumbnails.',
 
 	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
 	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
@@ -240,6 +257,29 @@ $lang = array_merge($lang, array(
 	'CLI_EXTENSIONS_ENABLED'			=> '啟用',
 
 	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
+
+	'CLI_MIGRATION_NAME'					=> 'Migration name, including the namespace (use forward slashes instead of backslashes to avoid problems).',
+	'CLI_MIGRATIONS_AVAILABLE'				=> 'Available migrations',
+	'CLI_MIGRATIONS_INSTALLED'				=> 'Installed migrations',
+	'CLI_MIGRATIONS_ONLY_AVAILABLE'		    => 'Show only available migrations',
+	'CLI_MIGRATIONS_EMPTY'                  => 'No migrations.',
+
+	'CLI_REPARSER_REPARSE_REPARSING'		=> 'Reparsing %1$s (range %2$d..%3$d)',
+	'CLI_REPARSER_REPARSE_REPARSING_START'	=> 'Reparsing %s...',
+	'CLI_REPARSER_REPARSE_SUCCESS'			=> 'Reparsing ended with success',
+
+	// In all the case %1$s is the logical name of the file and %2$s the real name on the filesystem
+	// eg: big_image.png (2_a51529ae7932008cf8454a95af84cacd) generated.
+	'CLI_THUMBNAIL_DELETED'		=> '%1$s (%2$s) deleted.',
+	'CLI_THUMBNAIL_DELETING'	=> 'Deleting thumbnails',
+	'CLI_THUMBNAIL_SKIPPED'		=> '%1$s (%2$s) skipped.',
+	'CLI_THUMBNAIL_GENERATED'	=> '%1$s (%2$s) generated.',
+	'CLI_THUMBNAIL_GENERATING'	=> 'Generating thumbnails',
+	'CLI_THUMBNAIL_GENERATING_DONE'	=> 'All thumbnails have been regenerated.',
+	'CLI_THUMBNAIL_DELETING_DONE'	=> 'All thumbnails have been deleted.',
+
+	'CLI_THUMBNAIL_NOTHING_TO_GENERATE'	=> 'No thumbnails to generate.',
+	'CLI_THUMBNAIL_NOTHING_TO_DELETE'	=> 'No thumbnails to delete.',
 ));
 
 #######language/en/common.php#######
@@ -285,6 +325,7 @@ $lang = array_merge($lang, array(
 	'ALL_POSTS'						=> '所有文章',
 	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> '所有主題',
+	'ALT_TEXT'						=> 'Alternative text',
 	'AND'							=> '和',
 	'ARE_WATCHING_FORUM'			=> '您訂閱了這個版面，版面更新時會發送通知給您。',
 	'ARE_WATCHING_TOPIC'			=> '您訂閱了這個主題，主題更新時會發送通知給您。',
@@ -307,11 +348,13 @@ $lang = array_merge($lang, array(
 	'AVATAR_EMPTY_FILEUPLOAD'		=> '上傳的頭像檔案是空的。',
 	'AVATAR_INVALID_FILENAME'		=> '%s 是無效的檔案名稱。',
 	'AVATAR_NOT_UPLOADED'			=> '無法上傳頭像。',
+	'AVATAR_NO_TEMP_DIR'			=> 'Temporary folder could not be found or is not writable.',
 	'AVATAR_NO_SIZE'				=> '無法自動取得頭像的尺寸，請手動輸入合適的數值。',
 	'AVATAR_PARTIAL_UPLOAD'			=> '上傳的檔案只上傳了一部分。',
 	'AVATAR_PHP_SIZE_NA'			=> '頭像檔案太大。<br />無法判斷伺服器 PHP 允許的最大檔案大小限制。',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> '頭像檔案太大，伺服器允許的最大檔案大小是 %1$d %2$s。<br />請注意這個限制是根據伺服器上 php.ini 的設定，所以無法變更。',
 	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
+	'AVATAR_PHP_UPLOAD_STOPPED'		=> 'A PHP extension has stopped the file upload.',
 	'AVATAR_URL_INVALID'			=> '指定的連結無效。',
 	'AVATAR_URL_NOT_FOUND'			=> '無法找到指定的檔案。',
 	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
@@ -418,6 +461,7 @@ $lang = array_merge($lang, array(
 	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> '問答集',
 	'FAQ_EXPLAIN'			=> '問答集',
+	'FEATURE_NOT_AVAILABLE' => 'The requested feature is not available on this board.',
 	'FILENAME'				=> '檔案名稱',
 	'FILESIZE'				=> '檔案大小',
 	'FILEDATE'				=> '檔案日期',
@@ -440,6 +484,7 @@ $lang = array_merge($lang, array(
 	'FORUM_LOCKED'			=> '版面鎖定',
 	'FORUM_RULES'			=> '版面規則',
 	'FORUM_RULES_LINK'		=> '請點選這裡檢視版面規則',
+	'FROM'					=> '從',
 	'FSOCK_DISABLED'		=> '操作無法完成，因為 <var>fsockopen</var> 函數被停用或是伺服器沒有回應。',
 	'FSOCK_TIMEOUT'			=> '當從網路串流讀取時，發生逾時。',
 
@@ -502,6 +547,7 @@ $lang = array_merge($lang, array(
 	'IMAGE_FILETYPE_INVALID'	=> '不支援的圖檔類型：%d mimetype %s 。',
 	'IMAGE_FILETYPE_MISMATCH'	=> '圖檔類型不符：預期的副檔名是 %1$s ，但您提供的是 %2$s。',
 	'IN'						=> '位於',
+	'INACTIVE'					=> 'Inactive',
 	'INDEX'						=> '首頁', //Index page
 	'INFORMATION'				=> '系統訊息',
 	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
@@ -603,6 +649,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
 	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
 	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_METHOD_INVALID'		=> 'The method "%s" does not refer to a valid notification method.',
 	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
 	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
 	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
@@ -617,7 +664,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
 	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
 	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
-	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for deactivated or newly registered user: “%1$s”',
 	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> '請通知管理員或網站管理者。',
 	'NOTIFY_ADMIN_EMAIL'		=> '請通知管理員或網站管理者：<a href="mailto:%1$s">%1$s</a>',
@@ -803,10 +850,13 @@ $lang = array_merge($lang, array(
 	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'SMTP 伺服器不支援驗證',
 	'SORRY_AUTH_READ'			=> '您沒有閱讀這個版面的權限。',
+	'SORRY_AUTH_READ_TOPIC'		=> 'You are not authorised to read this topic.',
 	'SORRY_AUTH_VIEW_ATTACH'	=> '您沒有下載這個附加檔案的權限。',
 	'SORT_BY'					=> '排序',
+	'SORT_DIRECTION'			=> 'Direction',
 	'SORT_JOINED'				=> '註冊時間',
 	'SORT_LOCATION'				=> '來自',
+	'SORT_OPTIONS'				=> 'Display and sorting options',
 	'SORT_RANK'					=> '等級',
 	'SORT_POSTS'				=> '文章',
 	'SORT_TOPIC_TITLE'			=> '主題',
@@ -860,7 +910,6 @@ $lang = array_merge($lang, array(
 	'TOO_SHORT_USERNAME'			=> '您輸入的會員名稱太短了。',
 	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
 	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
-	
 	'TOO_SMALL'						=> '您輸入的值太小。',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> '這個 <strong>每個私人訊息所允許的最大收件人數</strong> 設定，您輸入的值太小。',
 
@@ -949,8 +998,8 @@ $lang = array_merge($lang, array(
 	'WHO_IS_ONLINE'		=> '誰在線上',
 	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> '您輸入了錯誤的密碼。',
-	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 	'WRONG_DATA_JABBER'			=> '您輸入的名字不是一個有效的 Jabber 帳號。',
 	'WRONG_DATA_LANG'			=> '您指定了一個無效的語言。',
 	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
@@ -991,7 +1040,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'		=> '顯示更多表情符號',
 	'K_QUICK_REPLY'		=> '快速回覆',
 	'ADD_SMILIES'			=> '增加多樣的表情符號',
-	'ATTACH_SIG'			=> '附上簽名 (簽名檔可以在會員控制台中更改)',
+	'ATTACH_SIG'			=> 'Attach a signature (signatures can be altered via the UCP)',
 	'DISABLE_BBCODE'		=> '關閉 BBCode 代碼功能',
 	'DISABLE_MAGIC_URL'		=> '關閉自動產生網址功能',
 	'DISABLE_SMILIES'		=> '關閉表情符號功能',
@@ -1163,7 +1212,6 @@ $lang = array_merge($lang, array(
 	'SHOP_PCS'				=> 'pcs.',
 	'SHOP_MORE_DETAIL'		=> 'Find more details and items in the ',
 
-	'FROM'			=> '從',
 	'XMODS'				=> 'ENGLISH',
 	'SMILIES_CATS'		=> 'Smiley Categories',
 	'ARCADE_GAMETIME'	=> 'Play Time',
@@ -1255,7 +1303,7 @@ $lang = array_merge($lang, array(
 
 	'ARCADE_EXPLAIN'		=> 'Play games in the arcade',
 	'PERSONAL_ALBUM'		=> 'Personal Album',
-	'VC_REFRESH'			=> '重新讀取確認代碼',
+	'VC_REFRESH'			=> 'Refresh confirmation code',
 	'VC_REFRESH_EXPLAIN'		=> '如果您不能正確判讀確認代碼，那麼您需要點選此按鈕以獲得一個新的確認代碼。',
 	'CHALLANGE'			=> '1 vs. 1',
 
@@ -1642,7 +1690,7 @@ $lang = array_merge($lang, array(
 	'GROUP_JOIN_PENDING_CONFIRM'		=> '您確定要申請加入已選擇的會員群組嗎？',
 	'GROUP_JOINED'						=> '您已成功加入此會員群組',
 	'GROUP_JOINED_PENDING'				=> '申請已經送出。請等待會員群組組長核准。',
-	'GROUP_LIST'						=> '管理會員',
+	'GROUP_LIST'						=> 'Current members',
 	'GROUP_MEMBERS'						=> '會員群組組員',
 	'GROUP_NAME'						=> '會員群組名稱',
 	'GROUP_OPEN'						=> '開放的',
@@ -1796,7 +1844,7 @@ $lang = array_merge($lang, array(
 	'DLL_XML'					=> 'XML 支援 [ Jabber ]',
 	'DLL_ZLIB'					=> 'zlib 支援 [ 壓縮檔案：.gz .tar .gz .zip ]',
 	'DL_CONFIG'					=> '下載設定',
-	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> '下載',
 	'DONE'						=> '完成',
 
@@ -1961,7 +2009,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> '伺服器設定',
 	'SEARCH_INDEX_UNCONVERTED'	=> '搜尋索引沒有被轉換',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> '您的舊搜尋索引沒有轉換。搜尋將總是得到空的結果。如果要建立一個新索引，請到管理員控制台，選擇維護，然後從子功能表中選擇搜尋索引。',
-	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
+	'SELECT_FORUM_GA'			=> 'In phpBB the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> '討論區軟體',
 	'SPECIFY_OPTIONS'			=> '設定轉換選項',
 	'STAGE_ADMINISTRATOR'		=> '管理員詳細資料',
@@ -1969,7 +2017,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> '只有您知道需要一些非預設設定時，您才有必要更改此頁的內容。如果您不確定，請繼續至下一頁，因為這些設定可以隨時在管理員控制台中更改。',
 	'STAGE_CONFIG_FILE'			=> '設定檔案',
 	'STAGE_CREATE_TABLE'		=> '建立資料表',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> '資料庫設定',
 	'STAGE_FINAL'				=> '完成',
 	'STAGE_INTRO'				=> '簡介',
@@ -2276,9 +2324,23 @@ $lang = array_merge($lang, array(
 	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
 	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
 	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_INSTALLED'			=> 'The migration "%s" is not installed.',
 	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
 	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
 	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MIGRATION_REVERT_DATA_DONE'		=> 'Reverted Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_DATA_IN_PROGRESS'	=> 'Reverting Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_DATA_RUNNING'		=> 'Reverting Data: %s.',
+	'MIGRATION_REVERT_SCHEMA_DONE'		=> 'Reverted Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_SCHEMA_RUNNING'	=> 'Reverting Schema: %s.',
+
+	'MIGRATION_INVALID_DATA_MISSING_CONDITION'		=> 'A migration is invalid. An if statement helper is missing a condition.',
+	'MIGRATION_INVALID_DATA_MISSING_STEP'			=> 'A migration is invalid. An if statement helper is missing a valid call to a migration step.',
+	'MIGRATION_INVALID_DATA_CUSTOM_NOT_CALLABLE'	=> 'A migration is invalid. A custom callable function could not be called.',
+	'MIGRATION_INVALID_DATA_UNKNOWN_TYPE'			=> 'A migration is invalid. An unknown migration tool type was encountered.',
+	'MIGRATION_INVALID_DATA_UNDEFINED_TOOL'			=> 'A migration is invalid. An undefined migration tool was encountered.',
+	'MIGRATION_INVALID_DATA_UNDEFINED_METHOD'		=> 'A migration is invalid. An undefined migration tool method was encountered.',
 
 	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
 	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
@@ -2386,6 +2448,7 @@ $lang = array_merge($lang, array(
 	'LOCK_TOPICS_CONFIRM'		=> '您確定要鎖定這些主題嗎？',
 	'LOGS_CURRENT_TOPIC'		=> '目前正在檢視的記錄:',
 	'LOGIN_EXPLAIN_MCP'			=> '您必須登入後才能管理這個版面。',
+	'LOGVIEW_VIEWPOST'			=> '檢視文章',
 	'LOGVIEW_VIEWTOPIC'			=> '檢視主題',
 	'LOGVIEW_VIEWLOGS'			=> '檢視主題記錄',
 	'LOGVIEW_VIEWFORUM'			=> '檢視版面',
@@ -2487,7 +2550,7 @@ $lang = array_merge($lang, array(
 	'NOTIFY_POSTER_DISAPPROVAL'		=> '通知發表人文章未核准的訊息嗎？',
 	'NOTIFY_USER_WARN'				=> '通知會員遭到警告的訊息嗎？',
 	'NOT_MODERATOR'					=> '您不是這個版面的版主。',
-	'NO_DESTINATION_FORUM'			=> '請選擇一個目標版面。',
+	'NO_DESTINATION_FORUM'			=> 'You have not specified a forum to move content to.',
 	'NO_DESTINATION_FORUM_FOUND'	=> '沒有可用的目標版面。',
 	'NO_ENTRIES'					=> '這段時間內沒有記錄。',
 	'NO_FEEDBACK'					=> '沒有關於這名會員的意見/反應。',
@@ -2739,6 +2802,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> '您必須註冊並且登入後才能搜尋會員。',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> '您必須註冊並且登入後才能檢視個人資料。',
 
+	'MANAGE_GROUP'			=> 'Manage Group',
 	'MORE_THAN'				=> '多於',
 
 	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
@@ -2747,7 +2811,7 @@ $lang = array_merge($lang, array(
 	'NO_VIEW_USERS'			=> '您沒有檢視會員列表或個人資料的權限。',
 
 	'ORDER'					=> '順序',
-	'OTHER'					=> '其他',
+	'OTHER'					=> 'Other',
 
 	'POST_IP'				=> 'IP/網域名稱',
 
@@ -3084,7 +3148,7 @@ $lang = array_merge($lang, array(
 	'ALREADY_DELETED'			=> '很抱歉！內容已經被刪除了。',
 	'ATTACH_DISK_FULL'			=> '沒有足夠的硬碟空間可以發表這個附加檔案。',
 	'ATTACH_QUOTA_REACHED'		=> '很抱歉！您的附加檔案配額已滿。',
-	'ATTACH_SIG'				=> '附上簽名 (簽名檔可以在會員控制台中更改)',
+	'ATTACH_SIG'				=> 'Attach a signature (signatures can be altered via the UCP)',
 
 	'BBCODE_A_HELP'				=> '將附加檔案加入文章內：[attachment=]filename.ext[/attachment]',
 	'BBCODE_B_HELP'				=> '粗體：[b]text[/b]',
@@ -3187,8 +3251,10 @@ $lang = array_merge($lang, array(
 	'NO_POLL_TITLE'				=> '您必須設定票選標題。',
 	'NO_POST'					=> '您必須選擇一個文章做為警告會員的依據。',
 	'NO_POST_MODE'				=> '沒有指定文章類型。',
+	'NO_TEMP_DIR'				=> 'Temporary folder could not be found or is not writable.',
 
 	'PARTIAL_UPLOAD'			=> '上傳的檔案僅部分上傳成功。',
+	'PHP_UPLOAD_STOPPED'		=> 'A PHP extension has stopped the file upload.',
 	'PHP_SIZE_NA'				=> '上傳的附加檔案太大了。<br />無法取得 php.ini 中設定的最大允許上傳檔案大小。',
 	'PHP_SIZE_OVERRUN'			=> '上傳的附加檔案太大了，php.ini 中設定的最大允許上傳檔案大小是 %1$d %2$s。<br />請注意這個數值是在 php.ini 內設定的，無法在此修改。',
 	'PLACE_INLINE'				=> '將附加檔案加入文章內',
@@ -3301,6 +3367,7 @@ $lang = array_merge($lang, array(
 	'NO_RECENT_SEARCHES'	=> '最近沒有人使用過搜尋系統。',
 	'NO_SEARCH'				=> '很抱歉！您不被允許使用搜尋系統。',
 	'NO_SEARCH_RESULTS'		=> '沒有搜尋到符合的結果。',
+	'NO_SEARCH_LOAD'		=> 'Sorry but you cannot use search at this time. The server has high load. Please try again later.',
 	'NO_SEARCH_UNREADS'		=> '很抱歉！這個論壇禁止搜尋未閱讀文章。',
 	'WORD_IN_NO_POST'		=> '沒有文章被搜尋到，因為這個關鍵字 <strong>%s</strong> 不被包含在任何文章中。',
 	'WORDS_IN_NO_POST'		=> '沒有文章被搜尋到，因為這些關鍵字 <strong>%s</strong> 不被包含在任何文章中。',
@@ -3445,7 +3512,7 @@ $lang = array_merge($lang, array(
 	'CONFIRMATION'				=> '註冊確認',
 	'CONFIRM_CHANGES'			=> '確認修改',
 	'CONFIRM_EXPLAIN'			=> '為了避免機器人式的大量註冊，討論區需要您輸入一組確認代碼。您可以在下方的圖片中找到這組確認代碼。如果你有視覺的障礙或無法觀看代碼，請聯絡 %s管理員%s 尋求協助。',
-	'VC_REFRESH'				=> '重新讀取確認代碼',
+	'VC_REFRESH'				=> 'Refresh confirmation code',
 	'VC_REFRESH_EXPLAIN'		=> '如果您不能正確判讀確認代碼，那麼您需要點選此按鈕以獲得一個新的確認代碼。',
 
 	'CONFIRM_PASSWORD'			=> '再次確認密碼',
@@ -3618,7 +3685,8 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
 	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
 	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
-	'NOTIFICATION_METHOD_EMAIL'							=> 'E-mail',
+	'NOTIFICATION_METHOD_BOARD'							=> 'Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'Email',
 	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
 	'NOTIFICATION_TYPE'									=> 'Notification type',
 	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
@@ -3630,7 +3698,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
 	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
 	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
-	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'User requiring activation',
 
 	'NOTIFY_METHOD'					=> '通知方式',
 	'NOTIFY_METHOD_BOTH'			=> '全部',
@@ -7196,7 +7264,7 @@ $lang = array_merge($lang, array(
 	'KO_NEXT'							=> 'The following teams have reached the next round',
 	'KO_NEXT_CHECK'						=> 'Please, check this teams, because not all rules are considered here. ',
 
-	'MANAGE_GROUP'						=> 'Consider group ranking',
+	'MANAGE_GROUP_FOOTBALL'					=> 'Consider group ranking',
 	'MATCHDAY_NEW'						=> 'The teams qualify till matchday',
 	'MATCHDAY_TARGET'					=> 'Select target matchday',
 	'MOVE_LEAGUE'						=> 'in league',
@@ -13196,6 +13264,7 @@ $lang = array_merge($lang, array(
 	'EXTENSION_NAME'			=> 'Extension Name',
 	'EXTENSION_ACTIONS'			=> '動作',
 	'EXTENSION_OPTIONS'			=> '選項',
+	'EXTENSION_INSTALL_HEADLINE'=> 'Installing an extension',
 	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
 	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
 			<li>Disable the extension</li>
@@ -13203,7 +13272,7 @@ $lang = array_merge($lang, array(
 			<li>Upload the new files</li>
 			<li>Enable the extension</li>
 		</ol>',
-	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completely removing an extension from your board',
 	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
 			<li>Disable the extension</li>
 			<li>Delete the extension’s data</li>
@@ -13353,7 +13422,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_TO'					=> '移動文章到',
 	'MOVE_SUBFORUMS_TO'				=> '移動子版面到',
 
-	'NO_DESTINATION_FORUM'			=> '請選擇一個目標版面。',
+	'NO_DESTINATION_FORUM'			=> 'You have not specified a forum to move content to.',
 	'NO_FORUM_ACTION'				=> '沒有在目的版面中定義動作',
 	'NO_PARENT'						=> '沒有父版面',
 	'NO_PERMISSIONS'				=> '不複製權限',
@@ -13450,12 +13519,12 @@ $lang = array_merge($lang, array(
 	'GROUP_LEAD'					=> '會員群組組長',
 	'GROUP_LEADERS_ADDED'			=> '增加新群組組長成功。',
 	'GROUP_LEGEND'					=> '在首頁「顏色說明」中顯示',
-	'GROUP_LIST'					=> '管理會員',
+	'GROUP_LIST'					=> 'Current members',
 	'GROUP_LIST_EXPLAIN'			=> '會員群組目前所有的組員完整列表。您可以刪除組員 (除了一些特殊會員群組) 或增加您認為合適的新組員。',
 	'GROUP_MEMBERS'					=> '會員群組組員',
 	'GROUP_MEMBERS_EXPLAIN'			=> '會員群組所有的組員完整列表。包含了群組組長、等待核准的組員和存在的組員。在這裡，您可以管理這個群組中的組員角色。如果需要移除群組組長身份但是保留在組中，請使用群組組長降級而不是刪除。同樣的可以選擇一個存在的組員升級為群組組長。',
 	'GROUP_MESSAGE_LIMIT'			=> '會員群組私人訊息數量限制',
-	'GROUP_MESSAGE_LIMIT_EXPLAIN'	=> '這個設定會覆蓋會員的私人訊息數量限制。如果設成 0 將使用會員的預設設定。',
+	'GROUP_MESSAGE_LIMIT_EXPLAIN'	=> 'This setting overrides the per-user folder message limit. The maximum for all groups of the user is used to determine the actual value.<br />Set this value to 0 to overwrite the setting for all users of this group with the board-wide setting.',
 	'GROUP_MODS_ADDED'				=> '增加新群組組長成功。',
 	'GROUP_MODS_DEMOTED'			=> '群組組長降級成功。',
 	'GROUP_MODS_PROMOTED'			=> '群組組員升級成功。',
@@ -13464,7 +13533,7 @@ $lang = array_merge($lang, array(
 	'GROUP_OPEN'					=> '開放的',
 	'GROUP_PENDING'					=> '等待審核的群組',
 	'GROUP_MAX_RECIPIENTS'			=> '每則私人訊息允許收件人的最大數量',
-	'GROUP_MAX_RECIPIENTS_EXPLAIN'	=> '在每則私人訊息中，允許收件人的最大數量。如果輸入 0，那麼將以論壇的預設值為標準。',
+	'GROUP_MAX_RECIPIENTS_EXPLAIN'	=> 'The maximum number of allowed recipients in a private message. The maximum for all groups of the user is used to determine the actual value.<br />Set this value to 0 to overwrite the setting for all users of this group with the board-wide setting.',
 	'GROUP_OPTIONS_SAVE'			=> '群組普遍的選項',
 	'GROUP_PROMOTE'					=> '升級為群組組長',
 	'GROUP_RANK'					=> '會員群組等級',
@@ -13501,6 +13570,8 @@ $lang = array_merge($lang, array(
 	'NO_USERS'					=> '該會員不存在。',
 	'NO_USERS_ADDED'			=> '沒有會員被加入此群組。',
 	'NO_VALID_USERS'			=> '您沒有輸入任何符合那個動作的會員。',
+
+	'PENDING_MEMBERS'			=> 'Pending',
 
 	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> '預設的會員群組',
@@ -14665,7 +14736,7 @@ $lang = array_merge($lang, array(
 	'ADD_ICONS'				=> '增加多樣的圖示',
 	'AFTER_ICONS'			=> '在 %s 之後',
 	'AFTER_SMILIES'			=> '在 %s 之後',
-	'FIRST'					=> '第一個',
+
 	'CODE'						=> '代碼',
 	'CURRENT_ICONS'				=> '目前的圖示',
 	'CURRENT_ICONS_EXPLAIN'		=> '選擇如何處理目前安裝的圖示',
@@ -14683,6 +14754,8 @@ $lang = array_merge($lang, array(
 	'EXPORT_ICONS_EXPLAIN'		=> '%s點選這個連結，您安裝的圖示設定，將被打包輸出為 <samp>icons.pak</samp>；一旦要下載，可用於建立一個 <samp>.zip</samp> 或 <samp>.tgz</samp> 檔案，這個檔案包含所有您的圖示加上這個 <samp>icons.pak</samp> 設定檔案%s。',
 	'EXPORT_SMILIES'			=> '匯出以及下載 smilies.pak',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%s點選這個連結，您安裝的表情符號設定，將被打包輸出為 <samp>smilies.pak</samp>；一旦要下載，可用於建立一個 <samp>.zip</samp> 或 <samp>.tgz</samp> 檔案，這個檔案包含所有您的表情符號加上這個 <samp>smilies.pak</samp> 設定檔案%s。',
+
+	'FIRST'			=> '第一個',
 
 	'ICONS_ADD'				=> '增加新圖示',
 	'ICONS_CONFIG'			=> '圖示設定',
@@ -14712,7 +14785,8 @@ $lang = array_merge($lang, array(
 	'NO_SMILIES_EXPORT'	=> '您沒有表情符號可建立表情符號包。',
 	'NO_SMILIES_PAK'	=> '沒有找到表情符號包。',
 
-	'PAK_FILE_NOT_READABLE'	=> '無法讀取 <samp>.pak</samp> 檔案。',
+	'PAK_FILE_NOT_READABLE'		=> '無法讀取 <samp>.pak</samp> 檔案。',
+
 	'REPLACE_MATCHES'		=> '取代符合者',
 
 	'SELECT_PACKAGE'			=> '選擇一個表情符號包檔案',
@@ -14735,7 +14809,7 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> '表情符號圖案',
 	'SMILIES_WIDTH'				=> '表情符號寬度',
 
-	'WRONG_PAK_TYPE'		=> '指定的檔案包中沒有包含合適的資料。',
+	'WRONG_PAK_TYPE'	=> '指定的檔案包中沒有包含合適的資料。',
 ));
 
 $lang = array_merge($lang, array(
@@ -15117,7 +15191,7 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
-	// 3.1.0
+	// 3.2.0
 	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 
 	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
@@ -15138,6 +15212,8 @@ $lang = array_merge($lang, array(
 
 	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
 	'NO_UNINSTALLED_STYLE'		=> '沒有檢測到未安裝的風格',
+
+	'PURGED_CACHE2'				=> 'Cache was purged.',
 
 	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
 
@@ -15163,6 +15239,8 @@ $lang = array_merge($lang, array(
 	'STYLE_USED_BY'				=> '已使用 (包含機器人)',
 
 	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+	'BROWSE_STYLES_DATABASE'	=> 'Browse styles database',
 
 	// 3.0.12
 	'ACP_IMAGESETS'			=> '圖檔組',

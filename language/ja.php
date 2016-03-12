@@ -183,14 +183,15 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_LANG'				=> 'ja',
 	'RECAPTCHA_NOT_AVAILABLE'		=> 'reCaptcha を利用するには <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a> でアカウントを作成する必要があります',
 	'CAPTCHA_RECAPTCHA'				=> 'reCaptcha',
-	'RECAPTCHA_INCORRECT'			=> '入力した 認証コード が間違っています',
+	'RECAPTCHA_INCORRECT'			=> 'The solution you provided was incorrect',
+	'RECAPTCHA_NOSCRIPT'			=> 'Please enable JavaScript in your browser to load the challenge.',
 
 	'RECAPTCHA_PUBLIC'				=> 'reCaptcha 公開キー',
-	'RECAPTCHA_PUBLIC_EXPLAIN'		=> 'reCaptcha 公開キー は <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a> から入手できます',
+	'RECAPTCHA_PUBLIC_EXPLAIN'		=> 'Your public reCaptcha key. Keys can be obtained on <a href="https://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 	'RECAPTCHA_PRIVATE'				=> 'reCaptcha 非公開キー',
-	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'reCaptcha 非公開キー は <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a> から入手できます',
+	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Your private reCaptcha key. Keys can be obtained on <a href="https://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 
-	'RECAPTCHA_EXPLAIN'				=> '不正プログラムによるアクセスを防ぐため、reCaptcha 認証コードの入力を強制しています。表示されている 2 つのワードをテキストフィールドにご入力ください。',
+	'RECAPTCHA_EXPLAIN'				=> 'In an effort to prevent automatic submissions, we require that you complete the following challenge.',
 	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
 ));
 
@@ -212,20 +213,36 @@ $lang = array_merge($lang, array(
 	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
 	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
 	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_LIST'					=> 'List all installed and available migrations.',
 	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DB_REVERT'					=> 'Revert a migration.',
 	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
 	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
 	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
-	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended upon.',
 	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
-	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s integer value',
 	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+
+	'CLI_DESCRIPTION_OPTION_ENV'				=> 'The Environment name.',
 	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
 	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
 	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_REPARSER_LIST'				=> 'Lists the types of text that can be reparsed.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE'			=> 'Reparses stored text with the current text_formatter services.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_ARG_1'	=> 'Type of text to reparse. Leave blank to reparse everything.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_DRY_RUN'		=> 'Do not save any changes; just print what would happen',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_MIN'	=> 'Lowest record ID to process',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_MAX'	=> 'Highest record ID to process',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_SIZE'	=> 'Approximate number of records to process at a time',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RESUME'		=> 'Start reparsing where the last execution stopped',
 	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
 	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
 	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_DESCRIPTION_THUMBNAIL_DELETE'		=> 'Delete all existing thumbnails.',
+	'CLI_DESCRIPTION_THUMBNAIL_GENERATE'	=> 'Generate all missing thumbnails.',
+	'CLI_DESCRIPTION_THUMBNAIL_RECREATE'	=> 'Recreate all thumbnails.',
 
 	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
 	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
@@ -240,6 +257,29 @@ $lang = array_merge($lang, array(
 	'CLI_EXTENSIONS_ENABLED'			=> '有効',
 
 	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
+
+	'CLI_MIGRATION_NAME'					=> 'Migration name, including the namespace (use forward slashes instead of backslashes to avoid problems).',
+	'CLI_MIGRATIONS_AVAILABLE'				=> 'Available migrations',
+	'CLI_MIGRATIONS_INSTALLED'				=> 'Installed migrations',
+	'CLI_MIGRATIONS_ONLY_AVAILABLE'		    => 'Show only available migrations',
+	'CLI_MIGRATIONS_EMPTY'                  => 'No migrations.',
+
+	'CLI_REPARSER_REPARSE_REPARSING'		=> 'Reparsing %1$s (range %2$d..%3$d)',
+	'CLI_REPARSER_REPARSE_REPARSING_START'	=> 'Reparsing %s...',
+	'CLI_REPARSER_REPARSE_SUCCESS'			=> 'Reparsing ended with success',
+
+	// In all the case %1$s is the logical name of the file and %2$s the real name on the filesystem
+	// eg: big_image.png (2_a51529ae7932008cf8454a95af84cacd) generated.
+	'CLI_THUMBNAIL_DELETED'		=> '%1$s (%2$s) deleted.',
+	'CLI_THUMBNAIL_DELETING'	=> 'Deleting thumbnails',
+	'CLI_THUMBNAIL_SKIPPED'		=> '%1$s (%2$s) skipped.',
+	'CLI_THUMBNAIL_GENERATED'	=> '%1$s (%2$s) generated.',
+	'CLI_THUMBNAIL_GENERATING'	=> 'Generating thumbnails',
+	'CLI_THUMBNAIL_GENERATING_DONE'	=> 'All thumbnails have been regenerated.',
+	'CLI_THUMBNAIL_DELETING_DONE'	=> 'All thumbnails have been deleted.',
+
+	'CLI_THUMBNAIL_NOTHING_TO_GENERATE'	=> 'No thumbnails to generate.',
+	'CLI_THUMBNAIL_NOTHING_TO_DELETE'	=> 'No thumbnails to delete.',
 ));
 
 #######language/en/common.php#######
@@ -285,6 +325,7 @@ $lang = array_merge($lang, array(
 	'ALL_POSTS'						=> '全ての投稿記事',
 	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> '全てのトピック',
+	'ALT_TEXT'						=> 'Alternative text',
 	'AND'							=> 'And',
 	'ARE_WATCHING_FORUM'			=> 'フォーラムウォッチを開始しました。新しい記事が投稿されるとあなたに通知されます。',
 	'ARE_WATCHING_TOPIC'			=> 'トピックウォッチを開始しました。新しい返信記事が投稿されるとあなたに通知されます。',
@@ -307,11 +348,13 @@ $lang = array_merge($lang, array(
 	'AVATAR_EMPTY_FILEUPLOAD'		=> 'アップロードしたアバター画像のファイルサイズが空です',
 	'AVATAR_INVALID_FILENAME'		=> '%s のファイル名が正常ではありません',
 	'AVATAR_NOT_UPLOADED'			=> 'アバター画像をアップロードできませんでした',
+	'AVATAR_NO_TEMP_DIR'			=> 'Temporary folder could not be found or is not writable.',
 	'AVATAR_NO_SIZE'				=> 'リンクされたアバター画像のサイズ （横幅 x 高さ） を取得できなかったため、画像のサイズを入力してください',
 	'AVATAR_PARTIAL_UPLOAD'			=> '指定されたファイルは一部分しかアップロードされませんでした',
 	'AVATAR_PHP_SIZE_NA'			=> 'アバター画像のファイルサイズが大きすぎます。<br />php.ini オプション upload_max_filesize の設定値を取得できませんでしたが、ファイルサイズがこの値を超えている可能性があります。',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'アバター画像のファイルサイズが大きすぎます。アップロード可能なファイルの最大サイズは %1$d %2$s です。<br />この値は php.ini で設定されており、phpBB3 がこの設定値を上書きする事はできません。',
 	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
+	'AVATAR_PHP_UPLOAD_STOPPED'		=> 'A PHP extension has stopped the file upload.',
 	'AVATAR_URL_INVALID'			=> '指定された URL が正しくありません',
 	'AVATAR_URL_NOT_FOUND'			=> '指定されたファイルが見つかりませんでした',
 	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
@@ -418,6 +461,7 @@ $lang = array_merge($lang, array(
 	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> 'FAQ',
 	'FAQ_EXPLAIN'			=> 'よくある質問',
+	'FEATURE_NOT_AVAILABLE' => 'The requested feature is not available on this board.',
 	'FILENAME'				=> 'ファイル名',
 	'FILESIZE'				=> 'サイズ',
 	'FILEDATE'				=> '日付',
@@ -440,6 +484,7 @@ $lang = array_merge($lang, array(
 	'FORUM_LOCKED'			=> '閉鎖中フォーラム',
 	'FORUM_RULES'			=> 'フォーラムルール',
 	'FORUM_RULES_LINK'		=> 'フォーラムルールを確認するにはこちらをクリックしてください',
+	'FROM'					=> 'from',
 	'FSOCK_DISABLED'		=> 'PHP関数 <var>fsockopen</var> が無効に設定されているかサーバからの応答がないため、クライアント/サーバ 間のソケット接続に失敗しました',
 	'FSOCK_TIMEOUT'			=> 'ネットワークストリーミングの最中にタイムアウトが発生しました',
 
@@ -502,6 +547,7 @@ $lang = array_merge($lang, array(
 	'IMAGE_FILETYPE_INVALID'	=> 'MIMEタイプ %s における画像ファイル形式 %d はサポート外です',
 	'IMAGE_FILETYPE_MISMATCH'	=> '画像ファイル形式が正しくありません: 正しいと思われる拡張子は 1$s であり、%2$s ではありません',
 	'IN'						=> 'in',
+	'INACTIVE'					=> 'Inactive',
 	'INDEX'						=> 'トップページ', //Index page
 	'INFORMATION'				=> 'インフォメーション',
 	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
@@ -603,6 +649,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
 	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
 	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_METHOD_INVALID'		=> 'The method "%s" does not refer to a valid notification method.',
 	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
 	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
 	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
@@ -617,7 +664,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
 	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
 	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
-	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for deactivated or newly registered user: “%1$s”',
 	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> '管理人またはウェブマスターにご連絡ください',
 	'NOTIFY_ADMIN_EMAIL'		=> '管理人またはウェブマスターにご連絡ください: <a href="mailto:%1$s">%1$s</a>',
@@ -803,10 +850,13 @@ $lang = array_merge($lang, array(
 	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'SMTPサーバ が認証をサポートしていません',
 	'SORRY_AUTH_READ'			=> 'フォーラムへ入室するにはパーミッションが必要です',
+	'SORRY_AUTH_READ_TOPIC'		=> 'You are not authorised to read this topic.',
 	'SORRY_AUTH_VIEW_ATTACH'	=> '添付ファイルをダウンロードするにはパーミッションが必要です',
 	'SORT_BY'					=> 'ソート',
+	'SORT_DIRECTION'			=> 'Direction',
 	'SORT_JOINED'				=> '登録日時',
 	'SORT_LOCATION'				=> 'お住まい',
+	'SORT_OPTIONS'				=> 'Display and sorting options',
 	'SORT_RANK'					=> 'ランク',
 	'SORT_POSTS'				=> '投稿数',
 	'SORT_TOPIC_TITLE'			=> 'トピックの件名',
@@ -860,7 +910,6 @@ $lang = array_merge($lang, array(
 	'TOO_SHORT_USERNAME'			=> '入力した ユーザー名 が短すぎます',
 	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
 	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
-	
 	'TOO_SMALL'						=> '入力した値が小さすぎます',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> '<strong>プライベートメッセージ送信先ユーザーの最大数</strong> の設定値が小さすぎます',
 
@@ -949,8 +998,8 @@ $lang = array_merge($lang, array(
 	'WHO_IS_ONLINE'		=> 'オンラインデータ',
 	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'パスワードが間違っています',
-	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 	'WRONG_DATA_JABBER'			=> '入力した Jabberアカウント名 が正しくありません',
 	'WRONG_DATA_LANG'			=> '指定した 言語 が正しくありません',
 	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
@@ -991,7 +1040,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'		=> 'スマイリーを全て表示する',
 	'K_QUICK_REPLY'		=> 'クイック返信',
 	'ADD_SMILIES'			=> 'スマイリーコードの追加',
-	'ATTACH_SIG'			=> 'サインを追加する （サインは ユーザーCP で変更できます）',
+	'ATTACH_SIG'			=> 'Attach a signature (signatures can be altered via the UCP)',
 	'DISABLE_BBCODE'		=> 'BBCode を無効にする',
 	'DISABLE_MAGIC_URL'		=> 'URL を自動的にパースしない',
 	'DISABLE_SMILIES'		=> 'スマイリーを無効にする',
@@ -1163,7 +1212,6 @@ $lang = array_merge($lang, array(
 	'SHOP_PCS'				=> 'pcs.',
 	'SHOP_MORE_DETAIL'		=> 'Find more details and items in the ',
 
-	'FROM'			=> 'from',
 	'XMODS'				=> 'ENGLISH',
 	'SMILIES_CATS'		=> 'Smiley Categories',
 	'ARCADE_GAMETIME'	=> 'Play Time',
@@ -1255,7 +1303,7 @@ $lang = array_merge($lang, array(
 
 	'ARCADE_EXPLAIN'		=> 'Play games in the arcade',
 	'PERSONAL_ALBUM'		=> 'Personal Album',
-	'VC_REFRESH'			=> 'リフレッシュ',
+	'VC_REFRESH'			=> 'Refresh confirmation code',
 	'VC_REFRESH_EXPLAIN'		=> 'もし認証コードを判読できない場合、"リフレッシュ" ボタンをクリックしてください',
 	'CHALLANGE'			=> '1 vs. 1',
 
@@ -1642,7 +1690,7 @@ $lang = array_merge($lang, array(
 	'GROUP_JOIN_PENDING_CONFIRM'		=> '選択したグループへの参加を本当に申請してもよろしいですか？',
 	'GROUP_JOINED'						=> '選択したグループへの参加に成功しました',
 	'GROUP_JOINED_PENDING'				=> 'グループ参加の申請に成功しました。グループリーダーから承認されるまでお待ちください。',
-	'GROUP_LIST'						=> 'ユーザー管理',
+	'GROUP_LIST'						=> 'Current members',
 	'GROUP_MEMBERS'						=> 'グループメンバー',
 	'GROUP_NAME'						=> 'グループ名',
 	'GROUP_OPEN'						=> '開放',
@@ -1796,7 +1844,7 @@ $lang = array_merge($lang, array(
 	'DLL_XML'					=> 'XML 拡張モジュールのサポート [ Jabber ]',
 	'DLL_ZLIB'					=> 'zlib圧縮 拡張モジュールのサポート [ gz, .tar.gz, .zip ]',
 	'DL_CONFIG'					=> 'コンフィグファイルのダウンロード',
-	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'ダウンロード',
 	'DONE'						=> '完了',
 
@@ -1974,7 +2022,7 @@ php_flag register_globals off<br />
 	'SERVER_CONFIG'				=> 'サーバ環境設定',
 	'SEARCH_INDEX_UNCONVERTED'	=> '検索インデクスをコンバートできませんでした',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> '旧掲示板システムの検索インデクスをコンバートできませんでした。検索インデクスが作成されていない状態で検索しても常に “検索結果は 0 件です” を返すだけになります。新しい検索インデクスを作成するには AdminCP へ入室し、 “メンテナンス” タブのサブメニューから “検索インデクス” を選択してください。',
-	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
+	'SELECT_FORUM_GA'			=> 'In phpBB the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> '掲示板ソフトウェア',
 	'SPECIFY_OPTIONS'			=> 'コンバートオプションの指定',
 	'STAGE_ADMINISTRATOR'		=> '管理人設定',
@@ -1982,7 +2030,7 @@ php_flag register_globals off<br />
 	'STAGE_ADVANCED_EXPLAIN'	=> 'ここでは環境設定を変更できます。デフォルト設定と違う環境設定にする必要がある場合のみ入力・変更してください。ここで表示されている各設定を理解できなくても心配せずにそのまま次のステップへ進んでください。これらの設定は後で AdminCP にて変更できます。',
 	'STAGE_CONFIG_FILE'			=> 'コンフィグファイル',
 	'STAGE_CREATE_TABLE'		=> 'データベーステーブルの作成',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'データベース設定',
 	'STAGE_FINAL'				=> '最終ステージ',
 	'STAGE_INTRO'				=> '導入',
@@ -2289,9 +2337,23 @@ $lang = array_merge($lang, array(
 	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
 	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
 	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_INSTALLED'			=> 'The migration "%s" is not installed.',
 	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
 	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
 	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MIGRATION_REVERT_DATA_DONE'		=> 'Reverted Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_DATA_IN_PROGRESS'	=> 'Reverting Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_DATA_RUNNING'		=> 'Reverting Data: %s.',
+	'MIGRATION_REVERT_SCHEMA_DONE'		=> 'Reverted Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_SCHEMA_RUNNING'	=> 'Reverting Schema: %s.',
+
+	'MIGRATION_INVALID_DATA_MISSING_CONDITION'		=> 'A migration is invalid. An if statement helper is missing a condition.',
+	'MIGRATION_INVALID_DATA_MISSING_STEP'			=> 'A migration is invalid. An if statement helper is missing a valid call to a migration step.',
+	'MIGRATION_INVALID_DATA_CUSTOM_NOT_CALLABLE'	=> 'A migration is invalid. A custom callable function could not be called.',
+	'MIGRATION_INVALID_DATA_UNKNOWN_TYPE'			=> 'A migration is invalid. An unknown migration tool type was encountered.',
+	'MIGRATION_INVALID_DATA_UNDEFINED_TOOL'			=> 'A migration is invalid. An undefined migration tool was encountered.',
+	'MIGRATION_INVALID_DATA_UNDEFINED_METHOD'		=> 'A migration is invalid. An undefined migration tool method was encountered.',
 
 	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
 	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
@@ -2399,6 +2461,7 @@ $lang = array_merge($lang, array(
 	'LOCK_TOPICS_CONFIRM'		=> '選択したトピックを本当に閉鎖してもよろしいですか？',
 	'LOGS_CURRENT_TOPIC'		=> '次のトピックのログを現在見ています:',
 	'LOGIN_EXPLAIN_MCP'			=> 'このフォーラムを管理するにはログインが必要です。',
+	'LOGVIEW_VIEWPOST'			=> '記事表示',
 	'LOGVIEW_VIEWTOPIC'			=> 'トピックを見る',
 	'LOGVIEW_VIEWLOGS'			=> 'トピックログを見る',
 	'LOGVIEW_VIEWFORUM'			=> 'フォーラムを見る',
@@ -2500,7 +2563,7 @@ $lang = array_merge($lang, array(
 	'NOTIFY_POSTER_DISAPPROVAL'		=> 'この却下を投稿者に通知する',
 	'NOTIFY_USER_WARN'				=> 'この警告をユーザーに通知する',
 	'NOT_MODERATOR'					=> 'あなたはこのフォーラムのモデレータではありません。',
-	'NO_DESTINATION_FORUM'			=> '移動先のフォーラムを選択してください',
+	'NO_DESTINATION_FORUM'			=> 'You have not specified a forum to move content to.',
 	'NO_DESTINATION_FORUM_FOUND'	=> '移動先として指定できるフォーラムがありません',
 	'NO_ENTRIES'					=> 'ログはありません',
 	'NO_FEEDBACK'					=> 'このユーザーへのフィードバックはありません',
@@ -2752,6 +2815,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'ユーザーを検索するにはユーザー登録とログインが必要です',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'プロフィールを表示するにはユーザー登録とログインが必要です',
 
+	'MANAGE_GROUP'			=> 'Manage Group',
 	'MORE_THAN'				=> 'より多い',
 
 	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
@@ -2760,7 +2824,7 @@ $lang = array_merge($lang, array(
 	'NO_VIEW_USERS'			=> 'メンバーリストまたはプロフィールを表示するにはパーミッションが必要です',
 
 	'ORDER'					=> '表示順',
-	'OTHER'					=> 'その他',
+	'OTHER'					=> 'Other',
 
 	'POST_IP'				=> '投稿 IP/ドメイン',
 
@@ -3097,7 +3161,7 @@ $lang = array_merge($lang, array(
 	'ALREADY_DELETED'			=> '記事は既に削除されています',
 	'ATTACH_DISK_FULL'			=> 'このファイルを添付するのに必要なディスクスペースがありません',
 	'ATTACH_QUOTA_REACHED'		=> '掲示板の添付ファイル保管スペースが限界に達したため、これ以上ファイルをアップロードすることはできません',
-	'ATTACH_SIG'				=> 'サインを追加する （サインは ユーザーCP で変更できます）',
+	'ATTACH_SIG'				=> 'Attach a signature (signatures can be altered via the UCP)',
 
 	'BBCODE_A_HELP'				=> '添付ファイルのインライン表示: [attachment=]filename.ext[/attachment]',
 	'BBCODE_B_HELP'				=> 'ボールド（太字）: [b]text[/b]',
@@ -3200,8 +3264,10 @@ $lang = array_merge($lang, array(
 	'NO_POLL_TITLE'				=> '投票のお題を入力してください',
 	'NO_POST'					=> '警告する記事を選択する必要があります',
 	'NO_POST_MODE'				=> '投稿モードが指定されていません',
+	'NO_TEMP_DIR'				=> 'Temporary folder could not be found or is not writable.',
 
 	'PARTIAL_UPLOAD'			=> 'ファイルは一部だけアップロードされました',
+	'PHP_UPLOAD_STOPPED'		=> 'A PHP extension has stopped the file upload.',
 	'PHP_SIZE_NA'				=> '添付ファイルのサイズが大き過ぎます。<br />PHP設定ファイル php.ini の設定オプション upload_max_filesize の値の取得に失敗しました。',
 	'PHP_SIZE_OVERRUN'			=> '添付ファイルのサイズが大き過ぎます。アップロードできるファイルの最大サイズは %1$d %2$s です。<br />PHP設定ファイル php.ini の設定オプション upload_max_filesize の値を phpBB3 が上書きすることはできません。
 ',
@@ -3315,6 +3381,7 @@ $lang = array_merge($lang, array(
 	'NO_RECENT_SEARCHES'	=> '最近検索されたキーワードはありません',
 	'NO_SEARCH'				=> '検索機能を使用するにはパーミッションが必要です',
 	'NO_SEARCH_RESULTS'		=> '検索に一致する記事が見つかりませんでした',
+	'NO_SEARCH_LOAD'		=> 'Sorry but you cannot use search at this time. The server has high load. Please try again later.',
 	'NO_SEARCH_UNREADS'		=> '未読記事を検索することはできません',
 	'WORD_IN_NO_POST'		=> '検索キーワード <strong>%s</strong> を含む記事が存在しないため検索結果は 0 件です',
 	'WORDS_IN_NO_POST'		=> '検索キーワード <strong>%s</strong> を含む記事が存在しないため検索結果は 0 件です',
@@ -3461,7 +3528,7 @@ $lang = array_merge($lang, array(
 	'CONFIRMATION'				=> '認証コードの入力',
 	'CONFIRM_CHANGES'			=> '変更の確認',
 	'CONFIRM_EXPLAIN'			=> '不正プログラムによるログインを防ぐため、ユーザー登録するには認証コードの入力が必要です。認証コードは画像に表示されています。画像が表示されない、もしくは視覚的に問題がある場合は%s管理人%sにご連絡ください。',
-	'VC_REFRESH'				=> 'リフレッシュ',
+	'VC_REFRESH'				=> 'Refresh confirmation code',
 	'VC_REFRESH_EXPLAIN'		=> 'もし認証コードを判読できない場合、"リフレッシュ" ボタンをクリックしてください',
 
 	'CONFIRM_PASSWORD'			=> 'パスワード （確認）',
@@ -3634,7 +3701,8 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
 	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
 	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
-	'NOTIFICATION_METHOD_EMAIL'							=> 'メールアドレス',
+	'NOTIFICATION_METHOD_BOARD'							=> 'Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'Email',
 	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
 	'NOTIFICATION_TYPE'									=> 'Notification type',
 	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
@@ -3646,7 +3714,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
 	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
 	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
-	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'User requiring activation',
 
 	'NOTIFY_METHOD'					=> '通知方法',
 	'NOTIFY_METHOD_BOTH'			=> '両方',
@@ -7212,7 +7280,7 @@ $lang = array_merge($lang, array(
 	'KO_NEXT'							=> 'The following teams have reached the next round',
 	'KO_NEXT_CHECK'						=> 'Please, check this teams, because not all rules are considered here. ',
 
-	'MANAGE_GROUP'						=> 'Consider group ranking',
+	'MANAGE_GROUP_FOOTBALL'					=> 'Consider group ranking',
 	'MATCHDAY_NEW'						=> 'The teams qualify till matchday',
 	'MATCHDAY_TARGET'					=> 'Select target matchday',
 	'MOVE_LEAGUE'						=> 'in league',
@@ -13212,6 +13280,7 @@ $lang = array_merge($lang, array(
 	'EXTENSION_NAME'			=> 'Extension Name',
 	'EXTENSION_ACTIONS'			=> 'アクション',
 	'EXTENSION_OPTIONS'			=> 'オプション',
+	'EXTENSION_INSTALL_HEADLINE'=> 'Installing an extension',
 	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
 	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
 			<li>Disable the extension</li>
@@ -13219,7 +13288,7 @@ $lang = array_merge($lang, array(
 			<li>Upload the new files</li>
 			<li>Enable the extension</li>
 		</ol>',
-	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completely removing an extension from your board',
 	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
 			<li>Disable the extension</li>
 			<li>Delete the extension’s data</li>
@@ -13369,7 +13438,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_TO'					=> '記事を移動する',
 	'MOVE_SUBFORUMS_TO'				=> 'サブフォーラムを移動する',
 
-	'NO_DESTINATION_FORUM'			=> '移動先のフォーラムを選択してください',
+	'NO_DESTINATION_FORUM'			=> 'You have not specified a forum to move content to.',
 	'NO_FORUM_ACTION'				=> 'アクションが指定されなかったのでフォーラムの記事に対して何も起こりませんでした',
 	'NO_PARENT'						=> '親フォーラムなし',
 	'NO_PERMISSIONS'				=> 'パーミッションをコピーしない',
@@ -13466,12 +13535,12 @@ $lang = array_merge($lang, array(
 	'GROUP_LEAD'					=> 'グループリーダー',
 	'GROUP_LEADERS_ADDED'			=> 'グループリーダーの追加に成功しました',
 	'GROUP_LEGEND'					=> 'グループ名を掲示板トップページで表示する',
-	'GROUP_LIST'					=> 'ユーザー管理',
+	'GROUP_LIST'					=> 'Current members',
 	'GROUP_LIST_EXPLAIN'			=> 'グループの全メンバーのリストです。メンバーの除名（特別グループは除く）と追加を行えます。',
 	'GROUP_MEMBERS'					=> 'グループメンバー',
 	'GROUP_MEMBERS_EXPLAIN'			=> 'ここではグループメンバーを全面的に管理する事ができます。リーダーを解任するには “除名” ではなく “解任” を実行してください。',
 	'GROUP_MESSAGE_LIMIT'			=> 'グループメンバー１人あたりのプライベートメッセージの最大保管件数',
-	'GROUP_MESSAGE_LIMIT_EXPLAIN'	=> 'この設定は “プライベートメッセージ設定” の “ユーザー１人あたりのプライベートメッセージの最大保管件数” を上書きします。0 に設定すると上書きしません。',
+	'GROUP_MESSAGE_LIMIT_EXPLAIN'	=> 'This setting overrides the per-user folder message limit. The maximum for all groups of the user is used to determine the actual value.<br />Set this value to 0 to overwrite the setting for all users of this group with the board-wide setting.',
 	'GROUP_MODS_ADDED'				=> 'グループリーダーの追加に成功しました',
 	'GROUP_MODS_DEMOTED'			=> 'グループリーダーの解任に成功しました',
 	'GROUP_MODS_PROMOTED'			=> 'グループリーダーの任命に成功しました',
@@ -13480,7 +13549,7 @@ $lang = array_merge($lang, array(
 	'GROUP_OPEN'					=> '開放',
 	'GROUP_PENDING'					=> '承認待ち',
 	'GROUP_MAX_RECIPIENTS'			=> 'プライベートメッセージ送信先ユーザーの最大数',
-	'GROUP_MAX_RECIPIENTS_EXPLAIN'	=> 'プライベートメッセージの送信先として指定できるユーザー数の上限です。0 に設定した場合、“プライベートメッセージ設定” の “送信先ユーザーの最大数” が適用されます。',
+	'GROUP_MAX_RECIPIENTS_EXPLAIN'	=> 'The maximum number of allowed recipients in a private message. The maximum for all groups of the user is used to determine the actual value.<br />Set this value to 0 to overwrite the setting for all users of this group with the board-wide setting.',
 	'GROUP_OPTIONS_SAVE'			=> 'グループ設定 [ オプション ]',
 	'GROUP_PROMOTE'					=> 'グループリーダーに任命する',
 	'GROUP_RANK'					=> 'グループランク',
@@ -13517,6 +13586,8 @@ $lang = array_merge($lang, array(
 	'NO_USERS'					=> 'そのユーザーは存在していません',
 	'NO_USERS_ADDED'			=> 'グループに追加されたユーザーはいません',
 	'NO_VALID_USERS'			=> 'アクションに有効なユーザー名を入力していません',
+
+	'PENDING_MEMBERS'			=> 'Pending',
 
 	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> '特別グループ',
@@ -14681,7 +14752,7 @@ $lang = array_merge($lang, array(
 	'ADD_ICONS'				=> 'アイコンの追加',
 	'AFTER_ICONS'			=> 'After %s',
 	'AFTER_SMILIES'			=> 'After %s',
-	'FIRST'					=> 'First',
+
 	'CODE'						=> 'コード',
 	'CURRENT_ICONS'				=> '現在使用中のアイコン',
 	'CURRENT_ICONS_EXPLAIN'		=> '現在使用しているアイコンについてどうするかを選択してください',
@@ -14699,6 +14770,8 @@ $lang = array_merge($lang, array(
 	'EXPORT_ICONS_EXPLAIN'		=> '%sこちらをクリックするとアイコンパックファイル <samp>icons.pak</samp> のダウンロードが開始されます。アイコンパックファイル <samp>icons.pak</samp> を images/icons ディレクトリにアップロードするとアイコンパックをインストールできるようになります。',
 	'EXPORT_SMILIES'			=> 'smilies.pak のエクスポート &amp; ダウンロード',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sこちらをクリックするとスマイリーパックファイル <samp>smilies.pak</samp> のダウンロードが開始されます。スマイリーパックファイル <samp>smilies.pak</samp> を images/smilies ディレクトリにアップロードするとスマイリーパックをインストールできるようになります。',
+
+	'FIRST'			=> 'First',
 
 	'ICONS_ADD'				=> 'アイコンの追加',
 	'ICONS_CONFIG'			=> 'アイコン設定',
@@ -14728,7 +14801,8 @@ $lang = array_merge($lang, array(
 	'NO_SMILIES_EXPORT'	=> 'スマイリー画像が存在しないため、スマイリーパックを作成できません',
 	'NO_SMILIES_PAK'	=> 'スマイリーパックが見つかりません',
 
-	'PAK_FILE_NOT_READABLE'	=> 'パックファイル <samp>.pak</samp> のファイルアクセス権が読み込み不可になっています',
+	'PAK_FILE_NOT_READABLE'		=> 'パックファイル <samp>.pak</samp> のファイルアクセス権が読み込み不可になっています',
+
 	'REPLACE_MATCHES'		=> '上書きする',
 
 	'SELECT_PACKAGE'			=> 'パックファイルの選択',
@@ -14751,7 +14825,7 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'スマイリー画像',
 	'SMILIES_WIDTH'				=> '画像の横幅 (pix)',
 
-	'WRONG_PAK_TYPE'		=> '指定したパック内のデータが適切なデータではありません',
+	'WRONG_PAK_TYPE'	=> '指定したパック内のデータが適切なデータではありません',
 ));
 
 $lang = array_merge($lang, array(
@@ -15135,7 +15209,7 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
-	// 3.1.0
+	// 3.2.0
 	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 
 	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
@@ -15156,6 +15230,8 @@ $lang = array_merge($lang, array(
 
 	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
 	'NO_UNINSTALLED_STYLE'		=> 'インストール可能なスタイルはありません',
+
+	'PURGED_CACHE2'				=> 'Cache was purged.',
 
 	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
 
@@ -15181,6 +15257,8 @@ $lang = array_merge($lang, array(
 	'STYLE_USED_BY'				=> '使用ユーザー数 （ボット含む）',
 
 	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+	'BROWSE_STYLES_DATABASE'	=> 'Browse styles database',
 
 	// 3.0.12
 	'ACP_IMAGESETS'			=> 'イメージセット',

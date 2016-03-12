@@ -183,14 +183,15 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_LANG'				=> 'uk',
 	'RECAPTCHA_NOT_AVAILABLE'		=> 'Для використання reCaptcha необхідно створити обліковий запис на сайті <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 	'CAPTCHA_RECAPTCHA'				=> 'reCaptcha',
-	'RECAPTCHA_INCORRECT'			=> 'Ви ввели невірний код візуального підтвердження',
+	'RECAPTCHA_INCORRECT'			=> 'The solution you provided was incorrect',
+	'RECAPTCHA_NOSCRIPT'			=> 'Please enable JavaScript in your browser to load the challenge.',
 
 	'RECAPTCHA_PUBLIC'				=> 'Публічний ключ reCaptcha',
-	'RECAPTCHA_PUBLIC_EXPLAIN'		=> 'Ваш публічний ключ reCaptcha. Ключі можна отримати на сайті <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
+	'RECAPTCHA_PUBLIC_EXPLAIN'		=> 'Your public reCaptcha key. Keys can be obtained on <a href="https://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 	'RECAPTCHA_PRIVATE'				=> 'Приватний ключ reCaptcha (Private Key)',
-	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Ваш приватний ключ reCaptcha. Ключі можна отримати на сайті <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
+	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Your private reCaptcha key. Keys can be obtained on <a href="https://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 
-	'RECAPTCHA_EXPLAIN'				=> 'З метою запобігання автоматичних реєстрацій ми вимагаємо вводу обох слів, відображених нижче, в поле для введення тексту.',
+	'RECAPTCHA_EXPLAIN'				=> 'In an effort to prevent automatic submissions, we require that you complete the following challenge.',
 	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
 ));
 
@@ -212,20 +213,36 @@ $lang = array_merge($lang, array(
 	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
 	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
 	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_LIST'					=> 'List all installed and available migrations.',
 	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DB_REVERT'					=> 'Revert a migration.',
 	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
 	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
 	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
-	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended upon.',
 	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
-	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s integer value',
 	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+
+	'CLI_DESCRIPTION_OPTION_ENV'				=> 'The Environment name.',
 	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
 	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
 	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_REPARSER_LIST'				=> 'Lists the types of text that can be reparsed.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE'			=> 'Reparses stored text with the current text_formatter services.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_ARG_1'	=> 'Type of text to reparse. Leave blank to reparse everything.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_DRY_RUN'		=> 'Do not save any changes; just print what would happen',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_MIN'	=> 'Lowest record ID to process',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_MAX'	=> 'Highest record ID to process',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_SIZE'	=> 'Approximate number of records to process at a time',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RESUME'		=> 'Start reparsing where the last execution stopped',
 	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
 	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
 	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_DESCRIPTION_THUMBNAIL_DELETE'		=> 'Delete all existing thumbnails.',
+	'CLI_DESCRIPTION_THUMBNAIL_GENERATE'	=> 'Generate all missing thumbnails.',
+	'CLI_DESCRIPTION_THUMBNAIL_RECREATE'	=> 'Recreate all thumbnails.',
 
 	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
 	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
@@ -240,6 +257,29 @@ $lang = array_merge($lang, array(
 	'CLI_EXTENSIONS_ENABLED'			=> 'Увімкнено',
 
 	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
+
+	'CLI_MIGRATION_NAME'					=> 'Migration name, including the namespace (use forward slashes instead of backslashes to avoid problems).',
+	'CLI_MIGRATIONS_AVAILABLE'				=> 'Available migrations',
+	'CLI_MIGRATIONS_INSTALLED'				=> 'Installed migrations',
+	'CLI_MIGRATIONS_ONLY_AVAILABLE'		    => 'Show only available migrations',
+	'CLI_MIGRATIONS_EMPTY'                  => 'No migrations.',
+
+	'CLI_REPARSER_REPARSE_REPARSING'		=> 'Reparsing %1$s (range %2$d..%3$d)',
+	'CLI_REPARSER_REPARSE_REPARSING_START'	=> 'Reparsing %s...',
+	'CLI_REPARSER_REPARSE_SUCCESS'			=> 'Reparsing ended with success',
+
+	// In all the case %1$s is the logical name of the file and %2$s the real name on the filesystem
+	// eg: big_image.png (2_a51529ae7932008cf8454a95af84cacd) generated.
+	'CLI_THUMBNAIL_DELETED'		=> '%1$s (%2$s) deleted.',
+	'CLI_THUMBNAIL_DELETING'	=> 'Deleting thumbnails',
+	'CLI_THUMBNAIL_SKIPPED'		=> '%1$s (%2$s) skipped.',
+	'CLI_THUMBNAIL_GENERATED'	=> '%1$s (%2$s) generated.',
+	'CLI_THUMBNAIL_GENERATING'	=> 'Generating thumbnails',
+	'CLI_THUMBNAIL_GENERATING_DONE'	=> 'All thumbnails have been regenerated.',
+	'CLI_THUMBNAIL_DELETING_DONE'	=> 'All thumbnails have been deleted.',
+
+	'CLI_THUMBNAIL_NOTHING_TO_GENERATE'	=> 'No thumbnails to generate.',
+	'CLI_THUMBNAIL_NOTHING_TO_DELETE'	=> 'No thumbnails to delete.',
 ));
 
 #######language/en/common.php#######
@@ -285,6 +325,7 @@ $lang = array_merge($lang, array(
 	'ALL_POSTS'						=> 'Усі повідомлення',
 	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'Усі теми',
+	'ALT_TEXT'						=> 'Alternative text',
 	'AND'							=> 'і',
 	'ARE_WATCHING_FORUM'			=> 'Ви підписались отримувати інформацію про надходження нових повідомлень в цей форум.',
 	'ARE_WATCHING_TOPIC'			=> 'Ви підписались отримувати інформацію про надходження нових повідомлень в цю тему.',
@@ -307,11 +348,13 @@ $lang = array_merge($lang, array(
 	'AVATAR_EMPTY_FILEUPLOAD'		=> 'Завантажений файл аватару порожній.',
 	'AVATAR_INVALID_FILENAME'		=> 'Невірне ім\'я файлу %s.',
 	'AVATAR_NOT_UPLOADED'			=> 'Не вдалось завантажити аватар.',
+	'AVATAR_NO_TEMP_DIR'			=> 'Temporary folder could not be found or is not writable.',
 	'AVATAR_NO_SIZE'				=> 'Неможливо визначити ширину або висоту віддаленого аватару, будь-ласка, введіть їх вручну.',
 	'AVATAR_PARTIAL_UPLOAD'			=> 'Файл було завантажено неповністю',
 	'AVATAR_PHP_SIZE_NA'			=> 'Розмір файлу аватара надто великий.<br />Максимально допустимий розмір, визначений PHP в php.ini, неможливо визначити.',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'Розмір файлу аватара надто великий. Максимально допустимий розмір %1$d %2$s.<br />Обмеження розміру встановлене в php.ini і не може бути перевищеним.',
 	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
+	'AVATAR_PHP_UPLOAD_STOPPED'		=> 'A PHP extension has stopped the file upload.',
 	'AVATAR_URL_INVALID'			=> 'Вказана вами адреса невірна.',
 	'AVATAR_URL_NOT_FOUND'			=> 'Вказаний файл не знайдено.',
 	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
@@ -418,6 +461,7 @@ $lang = array_merge($lang, array(
 	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> 'Допомога',
 	'FAQ_EXPLAIN'			=> 'Часті питання',
+	'FEATURE_NOT_AVAILABLE' => 'The requested feature is not available on this board.',
 	'FILENAME'				=> 'Ім\'я файлу',
 	'FILESIZE'				=> 'Розмір файлу',
 	'FILEDATE'				=> 'Дата файлу',
@@ -440,6 +484,7 @@ $lang = array_merge($lang, array(
 	'FORUM_LOCKED'			=> 'Форум закритий',
 	'FORUM_RULES'			=> 'Правила форуму',
 	'FORUM_RULES_LINK'		=> 'Натисніть тут для перегляду правил форуму',
+	'FROM'					=> 'з',
 	'FSOCK_DISABLED'		=> 'Ця операція не може бути виконана, тому що функцію <var>fsockopen</var> вимкнено або сервер недоступний.',
 	'FSOCK_TIMEOUT'			=> 'Виникла помилка під час читання потоку даних з мережі.',
 
@@ -502,6 +547,7 @@ $lang = array_merge($lang, array(
 	'IMAGE_FILETYPE_INVALID'	=> 'Тип файлу зображення %d для MIME-типу %s не підтримується.',
 	'IMAGE_FILETYPE_MISMATCH'	=> 'Тип файлу зображення не співпадає: очікуване розширення %1$s замість отриманого %2$s.',
 	'IN'						=> 'в',
+	'INACTIVE'					=> 'Inactive',
 	'INDEX'						=> 'Головна', //Index page
 	'INFORMATION'				=> 'Інформація',
 	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
@@ -603,6 +649,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
 	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
 	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_METHOD_INVALID'		=> 'The method "%s" does not refer to a valid notification method.',
 	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
 	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
 	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
@@ -617,7 +664,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
 	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
 	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
-	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for deactivated or newly registered user: “%1$s”',
 	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> 'Будь-ласка, повідомте адміністратора форуму або вебмайстра.',
 	'NOTIFY_ADMIN_EMAIL'		=> 'Будь-ласка повідомте адміністратора форуму або вебмайстра: <a href="mailto:%1$s">%1$s</a>',
@@ -803,10 +850,13 @@ $lang = array_merge($lang, array(
 	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'SMTP сервер не підтримує автентифікацію',
 	'SORRY_AUTH_READ'			=> 'Ви не авторизовані щоб читати цей форум',
+	'SORRY_AUTH_READ_TOPIC'		=> 'You are not authorised to read this topic.',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'Ви не авторизовані, щоб завантажити цей файл',
 	'SORT_BY'					=> 'Сортувати за',
+	'SORT_DIRECTION'			=> 'Direction',
 	'SORT_JOINED'				=> 'З нами з',
 	'SORT_LOCATION'				=> 'Звідки',
+	'SORT_OPTIONS'				=> 'Display and sorting options',
 	'SORT_RANK'					=> 'Статус',
 	'SORT_POSTS'				=> 'Повідомлення',
 	'SORT_TOPIC_TITLE'			=> 'Назва теми',
@@ -860,7 +910,6 @@ $lang = array_merge($lang, array(
 	'TOO_SHORT_USERNAME'			=> 'Введене вами ім\'я користувача надто коротке.',
 	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
 	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
-	
 	'TOO_SMALL'						=> 'Значення, яке ви ввели є занадто малим.',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> 'Введене вами значення налаштування <strong>Максимально дозволена кількість одержувачів приватного повідомлення</strong> є занадто малим.',
 
@@ -949,8 +998,8 @@ $lang = array_merge($lang, array(
 	'WHO_IS_ONLINE'		=> 'Хто зараз онлайн',
 	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'Ви ввели невірний пароль.',
-	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 	'WRONG_DATA_JABBER'			=> 'Введене вами ім\'я не є правильним обліковим записом jabber.',
 	'WRONG_DATA_LANG'			=> 'Вказано неправильну мову.',
 	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
@@ -991,7 +1040,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'		=> 'Більше смайликів',
 	'K_QUICK_REPLY'		=> 'Швидка відповідь',
 	'ADD_SMILIES'			=> 'Додати декілька смайликів',
-	'ATTACH_SIG'			=> 'Приєднати підпис (підписи можна змінювати в панелі керування)',
+	'ATTACH_SIG'			=> 'Attach a signature (signatures can be altered via the UCP)',
 	'DISABLE_BBCODE'		=> 'Вимкнути BBCode',
 	'DISABLE_MAGIC_URL'		=> 'Не перетворювати автоматично адреси URL в посилання',
 	'DISABLE_SMILIES'		=> 'Вимкнути смайлики',
@@ -1163,7 +1212,6 @@ $lang = array_merge($lang, array(
 	'SHOP_PCS'				=> 'pcs.',
 	'SHOP_MORE_DETAIL'		=> 'Find more details and items in the ',
 
-	'FROM'			=> 'з',
 	'XMODS'				=> 'ENGLISH',
 	'SMILIES_CATS'		=> 'Smiley Categories',
 	'ARCADE_GAMETIME'	=> 'Play Time',
@@ -1255,7 +1303,7 @@ $lang = array_merge($lang, array(
 
 	'ARCADE_EXPLAIN'		=> 'Play games in the arcade',
 	'PERSONAL_ALBUM'		=> 'Personal Album',
-	'VC_REFRESH'			=> 'Оновити код підтвердження',
+	'VC_REFRESH'			=> 'Refresh confirmation code',
 	'VC_REFRESH_EXPLAIN'		=> 'Якщо ви не можете прочитати код, ви можете надіслати запит на отримання нового, настиснувши на кнопку.',
 	'CHALLANGE'			=> '1 vs. 1',
 
@@ -1642,7 +1690,7 @@ $lang = array_merge($lang, array(
 	'GROUP_JOIN_PENDING_CONFIRM'		=> 'Ви впевнені, що хочете подати заявку на вступ до даної групи?',
 	'GROUP_JOINED'						=> 'Ви успішно вступили до даної групи',
 	'GROUP_JOINED_PENDING'				=> 'Заявка на вступ успішно відправлена. Зачекайте підтвердження від лідеру групи.',
-	'GROUP_LIST'						=> 'Керування користувачами',
+	'GROUP_LIST'						=> 'Current members',
 	'GROUP_MEMBERS'						=> 'Члени групи',
 	'GROUP_NAME'						=> 'Назва групи',
 	'GROUP_OPEN'						=> 'Відкрита група',
@@ -1796,7 +1844,7 @@ $lang = array_merge($lang, array(
 	'DLL_XML'					=> 'Підтримка XML [ Jabber ]',
 	'DLL_ZLIB'					=> 'Підтримка стиснення zlib [ gz, .tar.gz, .zip ]',
 	'DL_CONFIG'					=> 'Конфігурація завантаження',
-	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'Download',
 	'DONE'						=> 'Виконано',
 
@@ -1961,7 +2009,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> 'Конфігурація сервера',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Пошуковий індекс не було конвертовано',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Ваш старий пошуковий індекс не було конвертовано. Будь-які пошукові запити будуть видавати порожній результат. Для того, щоб створити пошуковий індекс, перейдіть в Панель адміністратора, оберіть пункт Обслуговування, а потім в підменю пункт Пошуковий індекс.',
-	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
+	'SELECT_FORUM_GA'			=> 'In phpBB the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> 'ПЗ форуму',
 	'SPECIFY_OPTIONS'			=> 'Задати налаштування конвертування',
 	'STAGE_ADMINISTRATOR'		=> 'Дані про адміністратора',
@@ -1969,7 +2017,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> 'Налаштування на цій сторінці необхідно змінювати, якщо ви впевнені, що вам не підходять налаштування за замовчуванням. Якщо ви не впевнені, просто перейдіть на наступну сторінку, усі ці налаштування можна буде змінити пізніше в Панелі адміністратора.',
 	'STAGE_CONFIG_FILE'			=> 'Файл конфігурації',
 	'STAGE_CREATE_TABLE'		=> 'Створення таблиць бази даних',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'Налаштування бази даних',
 	'STAGE_FINAL'				=> 'Завершальний етап',
 	'STAGE_INTRO'				=> 'Вступ',
@@ -2276,9 +2324,23 @@ $lang = array_merge($lang, array(
 	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
 	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
 	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_INSTALLED'			=> 'The migration "%s" is not installed.',
 	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
 	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
 	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MIGRATION_REVERT_DATA_DONE'		=> 'Reverted Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_DATA_IN_PROGRESS'	=> 'Reverting Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_DATA_RUNNING'		=> 'Reverting Data: %s.',
+	'MIGRATION_REVERT_SCHEMA_DONE'		=> 'Reverted Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_SCHEMA_RUNNING'	=> 'Reverting Schema: %s.',
+
+	'MIGRATION_INVALID_DATA_MISSING_CONDITION'		=> 'A migration is invalid. An if statement helper is missing a condition.',
+	'MIGRATION_INVALID_DATA_MISSING_STEP'			=> 'A migration is invalid. An if statement helper is missing a valid call to a migration step.',
+	'MIGRATION_INVALID_DATA_CUSTOM_NOT_CALLABLE'	=> 'A migration is invalid. A custom callable function could not be called.',
+	'MIGRATION_INVALID_DATA_UNKNOWN_TYPE'			=> 'A migration is invalid. An unknown migration tool type was encountered.',
+	'MIGRATION_INVALID_DATA_UNDEFINED_TOOL'			=> 'A migration is invalid. An undefined migration tool was encountered.',
+	'MIGRATION_INVALID_DATA_UNDEFINED_METHOD'		=> 'A migration is invalid. An undefined migration tool method was encountered.',
 
 	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
 	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
@@ -2386,6 +2448,7 @@ $lang = array_merge($lang, array(
 	'LOCK_TOPICS_CONFIRM'		=> 'Ви впевнені, що хочете закрити обрані теми?',
 	'LOGS_CURRENT_TOPIC'		=> 'Переглядає логи теми:',
 	'LOGIN_EXPLAIN_MCP'			=> 'Для модерування форуму вам необхідно залогуватись.',
+	'LOGVIEW_VIEWPOST'			=> 'Переглянути повідомлення',
 	'LOGVIEW_VIEWTOPIC'			=> 'Переглянути тему',
 	'LOGVIEW_VIEWLOGS'			=> 'Переглянути лог теми',
 	'LOGVIEW_VIEWFORUM'			=> 'Переглянути форум',
@@ -2487,7 +2550,7 @@ $lang = array_merge($lang, array(
 	'NOTIFY_POSTER_DISAPPROVAL'		=> 'Повідомити автора про відхилення?',
 	'NOTIFY_USER_WARN'				=> 'Повідомити учасника про попередження?',
 	'NOT_MODERATOR'					=> 'Ви не є модератором цього форуму',
-	'NO_DESTINATION_FORUM'			=> 'Будь-ласка, оберіть форум',
+	'NO_DESTINATION_FORUM'			=> 'You have not specified a forum to move content to.',
 	'NO_DESTINATION_FORUM_FOUND'	=> 'Форум призначення недоступний.',
 	'NO_ENTRIES'					=> 'Немає записів за цей період',
 	'NO_FEEDBACK'					=> 'Немає відгуків про цього учасника',
@@ -2739,6 +2802,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'Ви повинні бути зареєстровані та залоговані для пошуку учасників.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'Ви повинні бути зареєстровані та залоговані для перегляду профілів.',
 
+	'MANAGE_GROUP'			=> 'Manage Group',
 	'MORE_THAN'				=> 'більше за',
 
 	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
@@ -2747,7 +2811,7 @@ $lang = array_merge($lang, array(
 	'NO_VIEW_USERS'			=> 'Ви не маєте прав доступу для перегляду списку учасників або профілів.',
 
 	'ORDER'					=> 'Сортувати',
-	'OTHER'					=> 'Інший',
+	'OTHER'					=> 'Other',
 
 	'POST_IP'				=> 'Написане з IP/домену',
 
@@ -3084,7 +3148,7 @@ $lang = array_merge($lang, array(
 	'ALREADY_DELETED'			=> 'Це повідомлення вже видалене.',
 	'ATTACH_DISK_FULL'			=> 'Недостатньо вільного місця для розміщення цього приєднаного файлу.',
 	'ATTACH_QUOTA_REACHED'		=> 'Досягнуто максимально допустимий розмір приєднаних файлів.',
-	'ATTACH_SIG'				=> 'Приєднати підпис (підписи можна змінювати в панелі керування)',
+	'ATTACH_SIG'				=> 'Attach a signature (signatures can be altered via the UCP)',
 
 	'BBCODE_A_HELP'				=> 'Вставити приєднаний файл: [attachment=]filename.ext[/attachment]',
 	'BBCODE_B_HELP'				=> 'Жирний текст: [b]текст[/b]  (alt+b)',
@@ -3187,8 +3251,10 @@ $lang = array_merge($lang, array(
 	'NO_POLL_TITLE'				=> 'Ви не ввели назву опитування',
 	'NO_POST'					=> 'Вам необхідно обрати повідомлення для того, щоб попередити користувача за повідомлення',
 	'NO_POST_MODE'				=> 'Не задано режим повідомлення',
+	'NO_TEMP_DIR'				=> 'Temporary folder could not be found or is not writable.',
 
 	'PARTIAL_UPLOAD'			=> 'Файл завантажено неповністю',
+	'PHP_UPLOAD_STOPPED'		=> 'A PHP extension has stopped the file upload.',
 	'PHP_SIZE_NA'				=> 'Надто великий розмір приєднаного файлу.<br />Неможливо визначити максимально допустимий розмір, встановлений PHP в php.ini.',
 	'PHP_SIZE_OVERRUN'			=> 'Надто великий розмір приєднаного файлу, максимально допустимий розмір файлу %1$d %2$s.<br />Зауважте, ця величина встановлена в php.ini і не може бути перевищена.',
 	'PLACE_INLINE'				=> 'Вставити в текст повідомлення',
@@ -3301,6 +3367,7 @@ $lang = array_merge($lang, array(
 	'NO_RECENT_SEARCHES'	=> 'Протягом останнього часу пошукових запитів не було.',
 	'NO_SEARCH'				=> 'Вибачте, але вам заборонено користуватись пошуковою системою.',
 	'NO_SEARCH_RESULTS'		=> 'Тем або повідомлень, які відповідають вашому запиту, не знайдено.',
+	'NO_SEARCH_LOAD'		=> 'Sorry but you cannot use search at this time. The server has high load. Please try again later.',
 	'NO_SEARCH_UNREADS'		=> 'Вибачте, пошук непрочитаних повідомлень вимкнено для цього форуму.',
 	'WORD_IN_NO_POST'		=> 'Відповідних повідомлень не знайдено, тому що слово <strong>%s</strong> не зустрічається в жодному повідомленні на форумі.',
 	'WORDS_IN_NO_POST'		=> 'Відповідних повідомлень не знайдено, тому що слова <strong>%s</strong> не зустрічаються в жодному повідомленні на форумі.',
@@ -3445,7 +3512,7 @@ $lang = array_merge($lang, array(
 	'CONFIRMATION'				=> 'Підтвердження реєстрації',
 	'CONFIRM_CHANGES'			=> 'Підтвердити зміни',
 	'CONFIRM_EXPLAIN'			=> 'З метою запобігання автоматичним реєстраціям адміністратор форуму вимагає від вас вводу коду підтвердження. Код зображений на малюнку, який ви бачите внизу. Якщо ви з якихось причин не можете прочитати цей код, будь-ласка, зв\'яжіться  з %sАдміністратором форуму%s.',
-	'VC_REFRESH'				=> 'Оновити код підтвердження',
+	'VC_REFRESH'				=> 'Refresh confirmation code',
 	'VC_REFRESH_EXPLAIN'		=> 'Якщо ви не можете прочитати код, ви можете надіслати запит на отримання нового, настиснувши на кнопку.',
 
 	'CONFIRM_PASSWORD'			=> 'Підтвердження паролю',
@@ -3618,7 +3685,8 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
 	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
 	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
-	'NOTIFICATION_METHOD_EMAIL'							=> 'E-mail',
+	'NOTIFICATION_METHOD_BOARD'							=> 'Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'Email',
 	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
 	'NOTIFICATION_TYPE'									=> 'Notification type',
 	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
@@ -3630,7 +3698,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
 	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
 	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
-	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'User requiring activation',
 
 	'NOTIFY_METHOD'					=> 'Спосіб повідомлення',
 	'NOTIFY_METHOD_BOTH'			=> 'Обидва',
@@ -7196,7 +7264,7 @@ $lang = array_merge($lang, array(
 	'KO_NEXT'							=> 'The following teams have reached the next round',
 	'KO_NEXT_CHECK'						=> 'Please, check this teams, because not all rules are considered here. ',
 
-	'MANAGE_GROUP'						=> 'Consider group ranking',
+	'MANAGE_GROUP_FOOTBALL'					=> 'Consider group ranking',
 	'MATCHDAY_NEW'						=> 'The teams qualify till matchday',
 	'MATCHDAY_TARGET'					=> 'Select target matchday',
 	'MOVE_LEAGUE'						=> 'in league',
@@ -13196,6 +13264,7 @@ $lang = array_merge($lang, array(
 	'EXTENSION_NAME'			=> 'Extension Name',
 	'EXTENSION_ACTIONS'			=> 'Дії',
 	'EXTENSION_OPTIONS'			=> 'Налаштування',
+	'EXTENSION_INSTALL_HEADLINE'=> 'Installing an extension',
 	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
 	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
 			<li>Disable the extension</li>
@@ -13203,7 +13272,7 @@ $lang = array_merge($lang, array(
 			<li>Upload the new files</li>
 			<li>Enable the extension</li>
 		</ol>',
-	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completely removing an extension from your board',
 	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
 			<li>Disable the extension</li>
 			<li>Delete the extension’s data</li>
@@ -13353,7 +13422,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_TO'					=> 'Перемістити повідомлення в',
 	'MOVE_SUBFORUMS_TO'				=> 'Перемістити підфоруми в',
 
-	'NO_DESTINATION_FORUM'			=> 'Будь-ласка, оберіть форум',
+	'NO_DESTINATION_FORUM'			=> 'You have not specified a forum to move content to.',
 	'NO_FORUM_ACTION'				=> 'Не задано дію для вмісту форуму.',
 	'NO_PARENT'						=> 'Немає',
 	'NO_PERMISSIONS'				=> 'Не копіювати права доступу',
@@ -13450,12 +13519,12 @@ $lang = array_merge($lang, array(
 	'GROUP_LEAD'					=> 'Лідери групи',
 	'GROUP_LEADERS_ADDED'			=> 'Нових лідерів групи додано успішно.',
 	'GROUP_LEGEND'					=> 'Відображати групу в поясненні',
-	'GROUP_LIST'					=> 'Керування користувачами',
+	'GROUP_LIST'					=> 'Current members',
 	'GROUP_LIST_EXPLAIN'			=> 'Це повний список усіх поточних користувачів з членством в цій групі. Ви можете видаляти учасників (за винятком деяких спеціальних груп) або додавати нових.',
 	'GROUP_MEMBERS'					=> 'Члени групи',
 	'GROUP_MEMBERS_EXPLAIN'			=> 'Це повний список усіх учасників цієї групи. Він включає окремі розділи для лідерів, користувачів, які очікують на вступ та існуючих учасників. Звідси ви можете керувати усіма аспектами членства в цій групі та розподіленням ролей. Для того, щоб видалити лідера, але залишити його в групі, використовуйте "Зняти лідера групи" замість "Видалити користувача з групи". Для встановлення існуючого учасника групи лідером оберіть "Призначити лідером групи".',
 	'GROUP_MESSAGE_LIMIT'			=> 'Ліміт приватних повідомлень в кожній папці',
-	'GROUP_MESSAGE_LIMIT_EXPLAIN'	=> 'Це замінить загальний для користувачів ліміт повідомлень. Значення 0 означає, що буде використовуватись користувацький ліміт.',
+	'GROUP_MESSAGE_LIMIT_EXPLAIN'	=> 'This setting overrides the per-user folder message limit. The maximum for all groups of the user is used to determine the actual value.<br />Set this value to 0 to overwrite the setting for all users of this group with the board-wide setting.',
 	'GROUP_MODS_ADDED'				=> 'Нових лідерів групи успішно додано.',
 	'GROUP_MODS_DEMOTED'			=> 'Лідерів груп успішно знято.',
 	'GROUP_MODS_PROMOTED'			=> 'Обраних учасників групи успішно встановлено лідерами.',
@@ -13464,7 +13533,7 @@ $lang = array_merge($lang, array(
 	'GROUP_OPEN'					=> 'Відкрита група',
 	'GROUP_PENDING'					=> 'Очікує на вступ до групи',
 	'GROUP_MAX_RECIPIENTS'			=> 'Максимально дозволена кількість отримувачів для приватного повідомлення',
-	'GROUP_MAX_RECIPIENTS_EXPLAIN'	=> 'Максимально дозволена кількість отримувачів в приватному повідомлення. Якщо введено 0, буде використовуватись налаштування форуму.',
+	'GROUP_MAX_RECIPIENTS_EXPLAIN'	=> 'The maximum number of allowed recipients in a private message. The maximum for all groups of the user is used to determine the actual value.<br />Set this value to 0 to overwrite the setting for all users of this group with the board-wide setting.',
 	'GROUP_OPTIONS_SAVE'			=> 'Загальні параметри групи',
 	'GROUP_PROMOTE'					=> 'Встановити лідером групи',
 	'GROUP_RANK'					=> 'Звання групи',
@@ -13501,6 +13570,8 @@ $lang = array_merge($lang, array(
 	'NO_USERS'					=> 'Заданих користувачів не знайдено.',
 	'NO_USERS_ADDED'			=> 'Жодного користувача не було додано до групи.',
 	'NO_VALID_USERS'			=> 'Ви не задали жодного користувача, який би підходив для цієї дії.',
+
+	'PENDING_MEMBERS'			=> 'Pending',
 
 	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> 'Попередньо встановлені групи',
@@ -14665,7 +14736,7 @@ $lang = array_merge($lang, array(
 	'ADD_ICONS'				=> 'Додати декілька значків',
 	'AFTER_ICONS'			=> 'Після %s',
 	'AFTER_SMILIES'			=> 'Після %s',
-	'FIRST'					=> 'Перший',
+
 	'CODE'						=> 'Код',
 	'CURRENT_ICONS'				=> 'Встановлені значки',
 	'CURRENT_ICONS_EXPLAIN'		=> 'Оберіть дію для встановлених значків.',
@@ -14683,6 +14754,8 @@ $lang = array_merge($lang, array(
 	'EXPORT_ICONS_EXPLAIN'		=> '%sПісля натиснення на це посилання, конфігурацію встановлених значків буде запаковано в файл <samp>icons.pak</samp>, який після завантаження можна використовувати для створення архіву <samp>.zip</samp> або <samp>.tgz</samp>, який буде містити усі ваші значки та файл конфігурації <samp>icons.pak</samp>%s.',
 	'EXPORT_SMILIES'			=> 'Експортувати та завантажити smilies.pak',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sПісля натиснення на це посилання, конфігурацію встановлених смайликів буде запаковано в файл <samp>smilies.pak</samp>, який після завантаження можна використовувати для створення архіву <samp>.zip</samp> або <samp>.tgz</samp>, який буде містити усі ваші смайлики та файл конфігурації <samp>smilies.pak</samp>%s.',
+
+	'FIRST'			=> 'Перший',
 
 	'ICONS_ADD'				=> 'Додати новий значок',
 	'ICONS_CONFIG'			=> 'Конфігурація значка',
@@ -14712,7 +14785,8 @@ $lang = array_merge($lang, array(
 	'NO_SMILIES_EXPORT'	=> 'Смайлики для створення пакету відсутні.',
 	'NO_SMILIES_PAK'	=> 'Пакети смайликів не знайдено.',
 
-	'PAK_FILE_NOT_READABLE'	=> 'Не вдається прочитати файл <samp>.pak</samp>.',
+	'PAK_FILE_NOT_READABLE'		=> 'Не вдається прочитати файл <samp>.pak</samp>.',
+
 	'REPLACE_MATCHES'		=> 'Замінити matches',
 
 	'SELECT_PACKAGE'			=> 'Оберіть файл пакету',
@@ -14735,7 +14809,7 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'Файл зображення смайлика',
 	'SMILIES_WIDTH'				=> 'Ширина смайлика',
 
-	'WRONG_PAK_TYPE'		=> 'Вказаний пакет не містить відповідних даних.',
+	'WRONG_PAK_TYPE'	=> 'Вказаний пакет не містить відповідних даних.',
 ));
 
 $lang = array_merge($lang, array(
@@ -15117,7 +15191,7 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
-	// 3.1.0
+	// 3.2.0
 	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 
 	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
@@ -15138,6 +15212,8 @@ $lang = array_merge($lang, array(
 
 	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
 	'NO_UNINSTALLED_STYLE'		=> 'Невстановлених стилів не знайдено.',
+
+	'PURGED_CACHE2'				=> 'Cache was purged.',
 
 	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
 
@@ -15163,6 +15239,8 @@ $lang = array_merge($lang, array(
 	'STYLE_USED_BY'				=> 'Використовується (включаючи роботів)',
 
 	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+	'BROWSE_STYLES_DATABASE'	=> 'Browse styles database',
 
 	// 3.0.12
 	'ACP_IMAGESETS'			=> 'Набори зображень',

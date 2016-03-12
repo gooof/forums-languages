@@ -183,14 +183,15 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_LANG'				=> 'fi',
 	'RECAPTCHA_NOT_AVAILABLE'		=> 'reCaptchan käyttöä varten tarvitset käyttäjätilin. Voit rekisteröidä tilin osoitteessa <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 	'CAPTCHA_RECAPTCHA'				=> 'reCaptcha',
-	'RECAPTCHA_INCORRECT'			=> 'Antamasi visuaalinen varmennus oli väärin',
+	'RECAPTCHA_INCORRECT'			=> 'The solution you provided was incorrect',
+	'RECAPTCHA_NOSCRIPT'			=> 'Please enable JavaScript in your browser to load the challenge.',
 
 	'RECAPTCHA_PUBLIC'				=> 'Avoin reCaptcha-avain',
-	'RECAPTCHA_PUBLIC_EXPLAIN'		=> 'Avoin reCaptcha-avaimesi. Avaimia voi hankkia osoitteesta <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a></a>.',
+	'RECAPTCHA_PUBLIC_EXPLAIN'		=> 'Your public reCaptcha key. Keys can be obtained on <a href="https://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 	'RECAPTCHA_PRIVATE'				=> 'Yksityinen reCaptcha-avain',
-	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Yksityinen reCaptcha-avain. Avaimia voi hankkia osoitteesta <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
+	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Your private reCaptcha key. Keys can be obtained on <a href="https://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 
-	'RECAPTCHA_EXPLAIN'				=> 'Haluamme sinun kirjoittavan nämä kaksi sanaa vieressä olevaan laatikkoon. Tämän on tarkoitus estää automaattista roskapostitusta.',
+	'RECAPTCHA_EXPLAIN'				=> 'In an effort to prevent automatic submissions, we require that you complete the following challenge.',
 	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
 ));
 
@@ -212,20 +213,36 @@ $lang = array_merge($lang, array(
 	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
 	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
 	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_LIST'					=> 'List all installed and available migrations.',
 	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DB_REVERT'					=> 'Revert a migration.',
 	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
 	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
 	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
-	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended upon.',
 	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
-	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s integer value',
 	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+
+	'CLI_DESCRIPTION_OPTION_ENV'				=> 'The Environment name.',
 	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
 	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
 	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_REPARSER_LIST'				=> 'Lists the types of text that can be reparsed.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE'			=> 'Reparses stored text with the current text_formatter services.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_ARG_1'	=> 'Type of text to reparse. Leave blank to reparse everything.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_DRY_RUN'		=> 'Do not save any changes; just print what would happen',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_MIN'	=> 'Lowest record ID to process',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_MAX'	=> 'Highest record ID to process',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_SIZE'	=> 'Approximate number of records to process at a time',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RESUME'		=> 'Start reparsing where the last execution stopped',
 	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
 	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
 	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_DESCRIPTION_THUMBNAIL_DELETE'		=> 'Delete all existing thumbnails.',
+	'CLI_DESCRIPTION_THUMBNAIL_GENERATE'	=> 'Generate all missing thumbnails.',
+	'CLI_DESCRIPTION_THUMBNAIL_RECREATE'	=> 'Recreate all thumbnails.',
 
 	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
 	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
@@ -240,6 +257,29 @@ $lang = array_merge($lang, array(
 	'CLI_EXTENSIONS_ENABLED'			=> 'Päällä',
 
 	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
+
+	'CLI_MIGRATION_NAME'					=> 'Migration name, including the namespace (use forward slashes instead of backslashes to avoid problems).',
+	'CLI_MIGRATIONS_AVAILABLE'				=> 'Available migrations',
+	'CLI_MIGRATIONS_INSTALLED'				=> 'Installed migrations',
+	'CLI_MIGRATIONS_ONLY_AVAILABLE'		    => 'Show only available migrations',
+	'CLI_MIGRATIONS_EMPTY'                  => 'No migrations.',
+
+	'CLI_REPARSER_REPARSE_REPARSING'		=> 'Reparsing %1$s (range %2$d..%3$d)',
+	'CLI_REPARSER_REPARSE_REPARSING_START'	=> 'Reparsing %s...',
+	'CLI_REPARSER_REPARSE_SUCCESS'			=> 'Reparsing ended with success',
+
+	// In all the case %1$s is the logical name of the file and %2$s the real name on the filesystem
+	// eg: big_image.png (2_a51529ae7932008cf8454a95af84cacd) generated.
+	'CLI_THUMBNAIL_DELETED'		=> '%1$s (%2$s) deleted.',
+	'CLI_THUMBNAIL_DELETING'	=> 'Deleting thumbnails',
+	'CLI_THUMBNAIL_SKIPPED'		=> '%1$s (%2$s) skipped.',
+	'CLI_THUMBNAIL_GENERATED'	=> '%1$s (%2$s) generated.',
+	'CLI_THUMBNAIL_GENERATING'	=> 'Generating thumbnails',
+	'CLI_THUMBNAIL_GENERATING_DONE'	=> 'All thumbnails have been regenerated.',
+	'CLI_THUMBNAIL_DELETING_DONE'	=> 'All thumbnails have been deleted.',
+
+	'CLI_THUMBNAIL_NOTHING_TO_GENERATE'	=> 'No thumbnails to generate.',
+	'CLI_THUMBNAIL_NOTHING_TO_DELETE'	=> 'No thumbnails to delete.',
 ));
 
 #######language/en/common.php#######
@@ -285,6 +325,7 @@ $lang = array_merge($lang, array(
 	'ALL_POSTS'						=> 'Kaikki viestit',
 	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'Kaikki viestiketjut',
+	'ALT_TEXT'						=> 'Alternative text',
 	'AND'							=> 'ja',
 	'ARE_WATCHING_FORUM'			=> 'Olet asettanut seurantaan tälle keskustelualueelle tulevat uudet viestit.',
 	'ARE_WATCHING_TOPIC'			=> 'Olet asettanut seurantaan tähän viestiketjuun tulevat uudet viestit.',
@@ -307,11 +348,13 @@ $lang = array_merge($lang, array(
 	'AVATAR_EMPTY_FILEUPLOAD'		=> 'Siirtämäsi avatar-tiedosto on tyhjä.',
 	'AVATAR_INVALID_FILENAME'		=> '%s ei ole sallittu tiedostonimi',
 	'AVATAR_NOT_UPLOADED'			=> 'Avataria ei voitu siirtää palvelimelle.',
+	'AVATAR_NO_TEMP_DIR'			=> 'Temporary folder could not be found or is not writable.',
 	'AVATAR_NO_SIZE'				=> 'En onnistunut lukemaan linkitetyn avatarin korkeutta ja leveyttä. Ole hyvä ja lisää ne manuaalisesti.',
 	'AVATAR_PARTIAL_UPLOAD'			=> 'Tiedosto siirrettiin vain osittain',
 	'AVATAR_PHP_SIZE_NA'			=> 'Avatar-tiedoston koko on liian suuri.<br />En voinut päätellä maksimikokoa, jonka PHP on määritellyt php.ini-tiedostossa.',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'Avatar-tiedoston koko on liian suuri. Maksimi sallittu koko on %1$d %2$s.<br />Huomaa, että tämä asetetaan php.ini-tiedostossa ja sitä ei voi ohittaa.',
 	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
+	'AVATAR_PHP_UPLOAD_STOPPED'		=> 'A PHP extension has stopped the file upload.',
 	'AVATAR_URL_INVALID'			=> 'Antamasi linkki on epäkelpo.',
 	'AVATAR_URL_NOT_FOUND'			=> 'Tiedostoa ei löydy.',
 	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
@@ -418,6 +461,7 @@ $lang = array_merge($lang, array(
 	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> 'UKK',
 	'FAQ_EXPLAIN'			=> 'Usein kysyttyä',
+	'FEATURE_NOT_AVAILABLE' => 'The requested feature is not available on this board.',
 	'FILENAME'				=> 'Tiedoston nimi',
 	'FILESIZE'				=> 'Tiedoston koko',
 	'FILEDATE'				=> 'Tiedoston päivämäärä',
@@ -440,6 +484,7 @@ $lang = array_merge($lang, array(
 	'FORUM_LOCKED'			=> 'Alue on lukittu',
 	'FORUM_RULES'			=> 'Alueen säännöt',
 	'FORUM_RULES_LINK'		=> 'Paina linkkiä nähdäksesi säännöt',
+	'FROM'					=> 'Lähettäjä',
 	'FSOCK_DISABLED'		=> 'Operaatiota ei voitu suorittaa loppuun koska <var>fsockopen</var> -funktiot ovat poissa käytöstä tai pyydettyä palvelinta ei löytynyt.',
 	'FSOCK_TIMEOUT'			=> 'Verkossa tapahtui aikakatkaisu luettaessa.',
 
@@ -502,6 +547,7 @@ $lang = array_merge($lang, array(
 	'IMAGE_FILETYPE_INVALID'	=> 'Tätä kuvan tyyppiä %d mimetyypille %s ei ole tuettu.',
 	'IMAGE_FILETYPE_MISMATCH'	=> 'Kuvatyyppi ei täsmää: Odotettiin tunnistetta %1$s, mutta annettiin %2$s.',
 	'IN'						=> 'Sijainti:',
+	'INACTIVE'					=> 'Inactive',
 	'INDEX'						=> 'Etusivu', //Index page
 	'INFORMATION'				=> 'Informaatio',
 	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
@@ -603,6 +649,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
 	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
 	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_METHOD_INVALID'		=> 'The method "%s" does not refer to a valid notification method.',
 	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
 	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
 	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
@@ -617,7 +664,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
 	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
 	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
-	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for deactivated or newly registered user: “%1$s”',
 	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> 'Ole hyvä ja ilmoita tästä keskustelufoorumin ylläpitäjälle, tai webmasterille.',
 	'NOTIFY_ADMIN_EMAIL'		=> 'Ole hyvä ja ilmoita tästä keskustelufoorumin ylläpitäjälle, tai webmasterille: <a href="mailto:%1$s">%1$s</a>',
@@ -803,10 +850,13 @@ $lang = array_merge($lang, array(
 	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'SMTP-palvelin ei tue tunnistautumista',
 	'SORRY_AUTH_READ'			=> 'Sinulla ei ole tarvittavia oikeuksia tämän alueen lukemiseen',
+	'SORRY_AUTH_READ_TOPIC'		=> 'You are not authorised to read this topic.',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'Sinulla ei ole tarvittavia oikeuksia liitetiedoston lataamiseen',
 	'SORT_BY'					=> 'Järjestä',
+	'SORT_DIRECTION'			=> 'Direction',
 	'SORT_JOINED'				=> 'Liittynyt',
 	'SORT_LOCATION'				=> 'paikka',
+	'SORT_OPTIONS'				=> 'Display and sorting options',
 	'SORT_RANK'					=> 'Arvonimi',
 	'SORT_POSTS'				=> 'Viestit',
 	'SORT_TOPIC_TITLE'			=> 'Viestin otsikko',
@@ -860,7 +910,6 @@ $lang = array_merge($lang, array(
 	'TOO_SHORT_USERNAME'			=> 'Antamasi käyttäjätunnus on liian lyhyt.',
 	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
 	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
-	
 	'TOO_SMALL'						=> 'Antamasi arvo on liian pieni.',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> 'Maksimi arvo <strong>yksityisviestien vastaanottajamäärälle</strong> on liian pieni.',
 
@@ -949,8 +998,8 @@ $lang = array_merge($lang, array(
 	'WHO_IS_ONLINE'		=> 'Paikallaolijat',
 	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'Annoit väärän salasanan.',
-	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 	'WRONG_DATA_JABBER'			=> 'Antamasi nimi ei ole kelvollinen Jabber tilin nimi.',
 	'WRONG_DATA_LANG'			=> 'Antamasi kieli ei ole kelvollinen.',
 	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
@@ -991,7 +1040,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'		=> 'Lisää hymiöitä',
 	'K_QUICK_REPLY'		=> 'Pikavastaus',
 	'ADD_SMILIES'			=> 'Lisää useita hymiöitä',
-	'ATTACH_SIG'			=> 'Lisää allekirjoitus (allekirjoituksia voi muokata omissa asetuksissa)',
+	'ATTACH_SIG'			=> 'Attach a signature (signatures can be altered via the UCP)',
 	'DISABLE_BBCODE'		=> 'Älä salli BBCode:a',
 	'DISABLE_MAGIC_URL'		=> 'Älä käsittele linkkejä automaattisesti',
 	'DISABLE_SMILIES'		=> 'Älä salli hymiöitä',
@@ -1163,7 +1212,6 @@ $lang = array_merge($lang, array(
 	'SHOP_PCS'				=> 'pcs.',
 	'SHOP_MORE_DETAIL'		=> 'Find more details and items in the ',
 
-	'FROM'			=> 'Lähettäjä',
 	'XMODS'				=> 'ENGLISH',
 	'SMILIES_CATS'		=> 'Smiley Categories',
 	'ARCADE_GAMETIME'	=> 'Play Time',
@@ -1255,7 +1303,7 @@ $lang = array_merge($lang, array(
 
 	'ARCADE_EXPLAIN'		=> 'Play games in the arcade',
 	'PERSONAL_ALBUM'		=> 'Personal Album',
-	'VC_REFRESH'			=> 'Anna uusi varmistuskoodi',
+	'VC_REFRESH'			=> 'Refresh confirmation code',
 	'VC_REFRESH_EXPLAIN'		=> 'Voit pyytää uuden varmistuskuva, jos tämä on liian hankala.',
 	'CHALLANGE'			=> '1 vs. 1',
 
@@ -1642,7 +1690,7 @@ $lang = array_merge($lang, array(
 	'GROUP_JOIN_PENDING_CONFIRM'		=> 'Haluatko varmasti pyytää jäsenyyttä valitsemassasi ryhmässä?',
 	'GROUP_JOINED'						=> 'Ryhmään liittyminen onnistui',
 	'GROUP_JOINED_PENDING'				=> 'Olet pyytänyt pääsyä ryhmään. Ole hyvä ja odota, kunnes ryhmän valvoja on käsitellyt hakemuksesi.',
-	'GROUP_LIST'						=> 'Hallitse käyttäjiä',
+	'GROUP_LIST'						=> 'Current members',
 	'GROUP_MEMBERS'						=> 'Ryhmän jäsenet',
 	'GROUP_NAME'						=> 'Ryhmän nimi',
 	'GROUP_OPEN'						=> 'Avoin',
@@ -1796,7 +1844,7 @@ $lang = array_merge($lang, array(
 	'DLL_XML'					=> 'XML tuki [ Jabber ]',
 	'DLL_ZLIB'					=> 'zlib Compression tuki [ gz, .tar.gz, .zip ]',
 	'DL_CONFIG'					=> 'Lataa asetukset omalle koneellesi',
-	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'Lataa koneellesi',
 	'DONE'						=> 'Valmis',
 
@@ -1961,7 +2009,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> 'Palvelimen asetukset',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Haun sisällysluetteloa ei ole konvertoitu',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Vanhaa sisällysluetteloasi ei ole konvertoitu. Mikäli suoritat hakuja nyt, et saa tuloksia. Luodaksesi sisällysluettelon. Mene ylläpidon asetuksiin ja valitse huolto. valitse tämän jälkeen sisällysluettelo listasta.',
-	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
+	'SELECT_FORUM_GA'			=> 'In phpBB the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> 'Keskustelufoorumin ohjelmisto',
 	'SPECIFY_OPTIONS'			=> 'Määrittele konvertoinnin vaihtoehdot',
 	'STAGE_ADMINISTRATOR'		=> 'Ylläpitäjän tiedot',
@@ -1969,7 +2017,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> 'Näitä asetuksia tarvitsee muuttaa vain, jos tiedät, että oletusasetukset eivät ole oikein. Jos olet epävarma, jatka suoraan seuraavaan vaiheeseen. Nämä tiedot voi muuttaa myöhemmin ylläpidon asetuksista.',
 	'STAGE_CONFIG_FILE'			=> 'Asetustiedosto',
 	'STAGE_CREATE_TABLE'		=> 'Luo taulut tietokantaan',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'Tietokannan asetukset',
 	'STAGE_FINAL'				=> 'Viimeinen vaihe',
 	'STAGE_INTRO'				=> 'Tervetuloa',
@@ -2276,9 +2324,23 @@ $lang = array_merge($lang, array(
 	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
 	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
 	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_INSTALLED'			=> 'The migration "%s" is not installed.',
 	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
 	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
 	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MIGRATION_REVERT_DATA_DONE'		=> 'Reverted Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_DATA_IN_PROGRESS'	=> 'Reverting Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_DATA_RUNNING'		=> 'Reverting Data: %s.',
+	'MIGRATION_REVERT_SCHEMA_DONE'		=> 'Reverted Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_SCHEMA_RUNNING'	=> 'Reverting Schema: %s.',
+
+	'MIGRATION_INVALID_DATA_MISSING_CONDITION'		=> 'A migration is invalid. An if statement helper is missing a condition.',
+	'MIGRATION_INVALID_DATA_MISSING_STEP'			=> 'A migration is invalid. An if statement helper is missing a valid call to a migration step.',
+	'MIGRATION_INVALID_DATA_CUSTOM_NOT_CALLABLE'	=> 'A migration is invalid. A custom callable function could not be called.',
+	'MIGRATION_INVALID_DATA_UNKNOWN_TYPE'			=> 'A migration is invalid. An unknown migration tool type was encountered.',
+	'MIGRATION_INVALID_DATA_UNDEFINED_TOOL'			=> 'A migration is invalid. An undefined migration tool was encountered.',
+	'MIGRATION_INVALID_DATA_UNDEFINED_METHOD'		=> 'A migration is invalid. An undefined migration tool method was encountered.',
 
 	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
 	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
@@ -2386,6 +2448,7 @@ $lang = array_merge($lang, array(
 	'LOCK_TOPICS_CONFIRM'		=> 'Haluatko varmasti lukita valitut viestiketjut?',
 	'LOGS_CURRENT_TOPIC'		=> 'Katsoo lokitietoja:',
 	'LOGIN_EXPLAIN_MCP'			=> 'Sinun täytyy kirjautua sisään valvoaksesi tätä aluetta.',
+	'LOGVIEW_VIEWPOST'			=> 'Näytä viesti',
 	'LOGVIEW_VIEWTOPIC'			=> 'Katso viestiketjua',
 	'LOGVIEW_VIEWLOGS'			=> 'Katso viestiketjun lokitiedot',
 	'LOGVIEW_VIEWFORUM'			=> 'Katso alue',
@@ -2487,7 +2550,7 @@ $lang = array_merge($lang, array(
 	'NOTIFY_POSTER_DISAPPROVAL'		=> 'Ilmoita viestin kirjoittajalle hylkäyksestä?',
 	'NOTIFY_USER_WARN'				=> 'Ilmoita käyttäjälle varoituksesta?',
 	'NOT_MODERATOR'					=> 'Et ole tämän alueen valvoja',
-	'NO_DESTINATION_FORUM'			=> 'Valitse kohdealue',
+	'NO_DESTINATION_FORUM'			=> 'You have not specified a forum to move content to.',
 	'NO_DESTINATION_FORUM_FOUND'	=> 'Kohdealuetta ei ole saatavilla.',
 	'NO_ENTRIES'					=> 'Ei lokitietoja tältä ajalta',
 	'NO_FEEDBACK'					=> 'Tästä käyttäjästä ei ole viestejä',
@@ -2739,6 +2802,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'Kirjaudu sisään etsiäksesi käyttäjien tietoja.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'Kirjaudu sisään katsoaksesi tätä profiilia.',
 
+	'MANAGE_GROUP'			=> 'Manage Group',
 	'MORE_THAN'				=> 'Enemmän kuin',
 
 	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
@@ -2747,7 +2811,7 @@ $lang = array_merge($lang, array(
 	'NO_VIEW_USERS'			=> 'Sinulla ei ole oikeuksia katsoa käyttäjälistaa tai profiileja.',
 
 	'ORDER'					=> 'Järjestys',
-	'OTHER'					=> 'Muu',
+	'OTHER'					=> 'Other',
 
 	'POST_IP'				=> 'Lähetetty IP/domain alueelta',
 
@@ -3084,7 +3148,7 @@ $lang = array_merge($lang, array(
 	'ALREADY_DELETED'			=> 'Pahoittelut, mutta viesti on jo poistettu.',
 	'ATTACH_DISK_FULL'			=> 'Levyllä ei ole tarpeeksi tilaa tämän liitetiedoston tallentamiseen.',
 	'ATTACH_QUOTA_REACHED'		=> 'Pahoittelut, mutta liitetiedostojen maksimiraja on tullut vstaan.',
-	'ATTACH_SIG'				=> 'Lisää allekirjoitus (allekirjoituksia voi muokata omissa asetuksissa)',
+	'ATTACH_SIG'				=> 'Attach a signature (signatures can be altered via the UCP)',
 
 	'BBCODE_A_HELP'				=> 'Näytä liitetiedosto viestin yhteydessä: [attachment=]tiedostonimi.ext[/attachment]',
 	'BBCODE_B_HELP'				=> 'Lihavointi: [b]Teksti[/b]',
@@ -3187,8 +3251,10 @@ $lang = array_merge($lang, array(
 	'NO_POLL_TITLE'				=> 'Anna äänestykselle otsikko',
 	'NO_POST'					=> 'Valitse viesti varoittaaksesi käyttäjää sen perusteella',
 	'NO_POST_MODE'				=> 'Viestin muotoa ei ole määritelty',
+	'NO_TEMP_DIR'				=> 'Temporary folder could not be found or is not writable.',
 
 	'PARTIAL_UPLOAD'			=> 'Tiedosto siirrettiin vain osittain',
+	'PHP_UPLOAD_STOPPED'		=> 'A PHP extension has stopped the file upload.',
 	'PHP_SIZE_NA'				=> 'Liian suuri liitetiedosto.<br />En saanut PHP:n määrittelemää maksimikokoa php.ini-tiedostosta.',
 	'PHP_SIZE_OVERRUN'			=> 'Liian suuri liitetiedosto. Suurin sallittu siirrettävän tiedoston koko on %1$d %2$s.<br />Huomaa, että tämä asetetetaan php.ini-tiedostossa ja sitä ei voi ohittaa.',
 	'PLACE_INLINE'				=> 'Näytä viestin yhteydessä',
@@ -3301,6 +3367,7 @@ $lang = array_merge($lang, array(
 	'NO_RECENT_SEARCHES'	=> 'Hakuja ei ole suoritettu',
 	'NO_SEARCH'				=> 'Pahoittelut, mutta sinulla ei ole oikeuksia käyttää hakupalvelua.',
 	'NO_SEARCH_RESULTS'		=> 'Ei löytynyt.',
+	'NO_SEARCH_LOAD'		=> 'Sorry but you cannot use search at this time. The server has high load. Please try again later.',
 	'NO_SEARCH_UNREADS'		=> 'Pahoittelut, mutta viestit joita ei ole luettu ei voi etsiä tällä keskustelufoorumilla.',
 	'WORD_IN_NO_POST'		=> 'Tuloksia ei löytynyt, koska sanaa <strong>%s</strong> ei ole yhdessäkään viestissä.',
 	'WORDS_IN_NO_POST'		=> 'Tuloksia ei löytynyt, koska sanoja <strong>%s</strong> ei ole yhdessäkään viestissä.',
@@ -3445,7 +3512,7 @@ $lang = array_merge($lang, array(
 	'CONFIRMATION'				=> 'Vahvistuskoodi',
 	'CONFIRM_CHANGES'			=> 'Varmista muutokset',
 	'CONFIRM_EXPLAIN'			=> 'Keskustelufoorumin ylläpitäjät haluavat sinun syöttävän varmistuskoodin estääkseen automaattiset rekisteröitymiset. Koodi näkyy alapuolella olevassa kuvassa. Mikäli et jostain syystä näe kuvaa. Ota yhteyttä %skeskustelufoorumin ylläpitäjiin%s.',
-	'VC_REFRESH'				=> 'Anna uusi varmistuskoodi',
+	'VC_REFRESH'				=> 'Refresh confirmation code',
 	'VC_REFRESH_EXPLAIN'		=> 'Voit pyytää uuden varmistuskuva, jos tämä on liian hankala.',
 
 	'CONFIRM_PASSWORD'			=> 'Varmista salasana',
@@ -3618,7 +3685,8 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
 	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
 	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
-	'NOTIFICATION_METHOD_EMAIL'							=> 'Sähköposti',
+	'NOTIFICATION_METHOD_BOARD'							=> 'Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'Email',
 	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
 	'NOTIFICATION_TYPE'									=> 'Notification type',
 	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
@@ -3630,7 +3698,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
 	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
 	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
-	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'User requiring activation',
 
 	'NOTIFY_METHOD'					=> 'Ilmoitustapa',
 	'NOTIFY_METHOD_BOTH'			=> 'kummatkin',
@@ -7196,7 +7264,7 @@ $lang = array_merge($lang, array(
 	'KO_NEXT'							=> 'The following teams have reached the next round',
 	'KO_NEXT_CHECK'						=> 'Please, check this teams, because not all rules are considered here. ',
 
-	'MANAGE_GROUP'						=> 'Consider group ranking',
+	'MANAGE_GROUP_FOOTBALL'					=> 'Consider group ranking',
 	'MATCHDAY_NEW'						=> 'The teams qualify till matchday',
 	'MATCHDAY_TARGET'					=> 'Select target matchday',
 	'MOVE_LEAGUE'						=> 'in league',
@@ -13196,6 +13264,7 @@ $lang = array_merge($lang, array(
 	'EXTENSION_NAME'			=> 'Extension Name',
 	'EXTENSION_ACTIONS'			=> 'Toimenpiteet',
 	'EXTENSION_OPTIONS'			=> 'Vaihtoehdot',
+	'EXTENSION_INSTALL_HEADLINE'=> 'Installing an extension',
 	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
 	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
 			<li>Disable the extension</li>
@@ -13203,7 +13272,7 @@ $lang = array_merge($lang, array(
 			<li>Upload the new files</li>
 			<li>Enable the extension</li>
 		</ol>',
-	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completely removing an extension from your board',
 	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
 			<li>Disable the extension</li>
 			<li>Delete the extension’s data</li>
@@ -13353,7 +13422,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_TO'					=> 'Siirrä viestit',
 	'MOVE_SUBFORUMS_TO'				=> 'Siirrä sisäalueet',
 
-	'NO_DESTINATION_FORUM'			=> 'Valitse kohdealue',
+	'NO_DESTINATION_FORUM'			=> 'You have not specified a forum to move content to.',
 	'NO_FORUM_ACTION'				=> 'Alueen sisällölle ei ole määritelty tapahtumaa',
 	'NO_PARENT'						=> 'Ei isäntä-aluetta',
 	'NO_PERMISSIONS'				=> 'Älä kopioi oikeuksia',
@@ -13450,12 +13519,12 @@ $lang = array_merge($lang, array(
 	'GROUP_LEAD'					=> 'Ryhmän valvojat',
 	'GROUP_LEADERS_ADDED'			=> 'Ryhmälle on annettu uudet valvojat.',
 	'GROUP_LEGEND'					=> 'Näytä ryhmä selitteessä',
-	'GROUP_LIST'					=> 'Hallitse käyttäjiä',
+	'GROUP_LIST'					=> 'Current members',
 	'GROUP_LIST_EXPLAIN'			=> 'Tässä on täydellinen lista tähän ryhmään kuuluvista käyttäjistä. Voit poistaa käyttäjiä (Paitsi joistain tietyistä ryhmistä) tai tarvittaessa lisätä uusia.',
 	'GROUP_MEMBERS'					=> 'Ryhmän jäsenet',
 	'GROUP_MEMBERS_EXPLAIN'			=> 'Tässä on täydellinen lista tähän ryhmään kuuluvista käyttäjistä. valvojat, odottavat ja hyväksyty käyttäjät. Täällä voi muokata ryhmän jäsenyyksiä ja heidän rooliaan. Poistaaksesi ryhmältä valvojan, mutta pitääksesi hänet silti ryhmässä. Valitse Alenna, älä Poista. Samaten voit valita Ylennä, antaaksesi jollekin jäsenelle valvojan oikeudet ryhmään.',
 	'GROUP_MESSAGE_LIMIT'			=> 'Ryhmän yksityisviestien rajoitus per kansio',
-	'GROUP_MESSAGE_LIMIT_EXPLAIN'	=> 'Tämä asetus ohittaa käyttäjän rajoituksen yksityisviesteissä. Arvo 0 tarkoittaa, että käyttäjän oletusasetus on käytössä.',
+	'GROUP_MESSAGE_LIMIT_EXPLAIN'	=> 'This setting overrides the per-user folder message limit. The maximum for all groups of the user is used to determine the actual value.<br />Set this value to 0 to overwrite the setting for all users of this group with the board-wide setting.',
 	'GROUP_MODS_ADDED'				=> 'uudet ryhmän valvojat on määritelty.',
 	'GROUP_MODS_DEMOTED'			=> 'Ryhmän valvojat on alennettu',
 	'GROUP_MODS_PROMOTED'			=> 'Ryhmän jäsenet on ylennetty',
@@ -13464,7 +13533,7 @@ $lang = array_merge($lang, array(
 	'GROUP_OPEN'					=> 'Avoin',
 	'GROUP_PENDING'					=> 'Odottavat jäsenyydet',
 	'GROUP_MAX_RECIPIENTS'			=> 'Maksimimäärä vastaanottajia yksityisviesteille',
-	'GROUP_MAX_RECIPIENTS_EXPLAIN'	=> 'Kuinka monta vastaanottajaa yksityisviestillä voi olla. Nolla ottaa käyttöön foorumin oletusasetuksen.',
+	'GROUP_MAX_RECIPIENTS_EXPLAIN'	=> 'The maximum number of allowed recipients in a private message. The maximum for all groups of the user is used to determine the actual value.<br />Set this value to 0 to overwrite the setting for all users of this group with the board-wide setting.',
 	'GROUP_OPTIONS_SAVE'			=> 'Ryhmänlaajuiset vaihtoehdot',
 	'GROUP_PROMOTE'					=> 'Ylennä',
 	'GROUP_RANK'					=> 'Ryhmän arvonimi',
@@ -13501,6 +13570,8 @@ $lang = array_merge($lang, array(
 	'NO_USERS'					=> 'valitsemiasi käyttäjiä ei ole olemassa',
 	'NO_USERS_ADDED'			=> 'Yhtään käyttäjää ei lisätty ryhmään.',
 	'NO_VALID_USERS'			=> 'Et ole antanut yhtään soveliasta käyttäjää tälle toiminnolle.',
+
+	'PENDING_MEMBERS'			=> 'Pending',
 
 	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> 'Alustavasti määritellyt ryhmät',
@@ -14665,7 +14736,7 @@ $lang = array_merge($lang, array(
 	'ADD_ICONS'				=> 'Lisää useita kuvakkeita',
 	'AFTER_ICONS'			=> '%s jälkeen',
 	'AFTER_SMILIES'			=> '%s jälkeen',
-	'FIRST'					=> 'Ensimmäinen',
+
 	'CODE'						=> 'Koodi',
 	'CURRENT_ICONS'				=> 'Olemassaolevat kuvakkeet',
 	'CURRENT_ICONS_EXPLAIN'		=> 'Valitse mitä haluat tehdä jo asennettuna oleville kuvakkeille',
@@ -14683,6 +14754,8 @@ $lang = array_merge($lang, array(
 	'EXPORT_ICONS_EXPLAIN'		=> '%sKlikkaamalla tätä linkkiä, Käyttämiesi kuvakkeiden tiedot pakataan <samp>icons.pak</samp>-tiedostoon, jonka avulla voit luoda latauksen jälkeen <samp>.zip</samp> tai <samp>.tgz</samp> tiedoston, jossa on kaikki kuvakkeesi ja tämä <samp>icons.pak</samp> konfigurointitiedosto%s.',
 	'EXPORT_SMILIES'			=> 'Luo hymiöpaketti',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sKlikkaamalla tätä linkkiä, Käyttämiesi hymiöiden tiedot pakataan <samp>smilies.pak</samp>-tiedostoon, jonka avulla voit luoda latauksen jälkeen <samp>.zip</samp> tai <samp>.tgz</samp> tiedoston, jossa on kaikki hymiösi ja tämä <samp>smilies.pak</samp> konfigurointitiedosto',
+
+	'FIRST'			=> 'Ensimmäinen',
 
 	'ICONS_ADD'				=> 'Lisää uusi kuvake',
 	'ICONS_CONFIG'			=> 'Kuvakkeen asetukset',
@@ -14712,7 +14785,8 @@ $lang = array_merge($lang, array(
 	'NO_SMILIES_EXPORT'	=> 'Sinulla ei ole hymiöitä, joista voisi luoda paketin.',
 	'NO_SMILIES_PAK'	=> 'Hymiöpaketteja ei löytynyt.',
 
-	'PAK_FILE_NOT_READABLE'	=> '<samp>.pak</samp> tiedoston lukeminen epäonnistui',
+	'PAK_FILE_NOT_READABLE'		=> '<samp>.pak</samp> tiedoston lukeminen epäonnistui',
+
 	'REPLACE_MATCHES'		=> 'Korvaa vastaavuudet',
 
 	'SELECT_PACKAGE'			=> 'Valitse paketti tiedosto',
@@ -14735,7 +14809,7 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'Hymiöiden tiedosto',
 	'SMILIES_WIDTH'				=> 'Hymiön leveys',
 
-	'WRONG_PAK_TYPE'		=> 'Antamassasi paketissa ei ole kelvollista dataa.',
+	'WRONG_PAK_TYPE'	=> 'Antamassasi paketissa ei ole kelvollista dataa.',
 ));
 
 $lang = array_merge($lang, array(
@@ -15117,7 +15191,7 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
-	// 3.1.0
+	// 3.2.0
 	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 
 	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
@@ -15138,6 +15212,8 @@ $lang = array_merge($lang, array(
 
 	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
 	'NO_UNINSTALLED_STYLE'		=> 'En löytänyt asentamattomia tyylejä',
+
+	'PURGED_CACHE2'				=> 'Cache was purged.',
 
 	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
 
@@ -15163,6 +15239,8 @@ $lang = array_merge($lang, array(
 	'STYLE_USED_BY'				=> 'Käyttäjien lkm',
 
 	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+	'BROWSE_STYLES_DATABASE'	=> 'Browse styles database',
 
 	// 3.0.12
 	'ACP_IMAGESETS'			=> 'Kuvapaketit',

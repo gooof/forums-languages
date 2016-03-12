@@ -183,14 +183,15 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_LANG'				=> 'en',
 	'RECAPTCHA_NOT_AVAILABLE'		=> 'In order to use reCaptcha, you must create an account on <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 	'CAPTCHA_RECAPTCHA'				=> 'reCaptcha',
-	'RECAPTCHA_INCORRECT'			=> 'The visual confirmation code you submitted was incorrect',
+	'RECAPTCHA_INCORRECT'			=> 'The solution you provided was incorrect',
+	'RECAPTCHA_NOSCRIPT'			=> 'Please enable JavaScript in your browser to load the challenge.',
 
 	'RECAPTCHA_PUBLIC'				=> 'Public reCaptcha key',
-	'RECAPTCHA_PUBLIC_EXPLAIN'		=> 'Your public reCaptcha key. Keys can be obtained on <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
+	'RECAPTCHA_PUBLIC_EXPLAIN'		=> 'Your public reCaptcha key. Keys can be obtained on <a href="https://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 	'RECAPTCHA_PRIVATE'				=> 'Private reCaptcha key',
-	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Your private reCaptcha key. Keys can be obtained on <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
+	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Your private reCaptcha key. Keys can be obtained on <a href="https://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 
-	'RECAPTCHA_EXPLAIN'				=> 'In an effort to prevent automatic submissions, we require that you enter both of the words displayed into the text field underneath.',
+	'RECAPTCHA_EXPLAIN'				=> 'In an effort to prevent automatic submissions, we require that you complete the following challenge.',
 	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
 ));
 
@@ -212,20 +213,36 @@ $lang = array_merge($lang, array(
 	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
 	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
 	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_LIST'					=> 'List all installed and available migrations.',
 	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DB_REVERT'					=> 'Revert a migration.',
 	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
 	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
 	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
-	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended upon.',
 	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
-	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s integer value',
 	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+
+	'CLI_DESCRIPTION_OPTION_ENV'				=> 'The Environment name.',
 	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
 	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
 	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_REPARSER_LIST'				=> 'Lists the types of text that can be reparsed.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE'			=> 'Reparses stored text with the current text_formatter services.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_ARG_1'	=> 'Type of text to reparse. Leave blank to reparse everything.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_DRY_RUN'		=> 'Do not save any changes; just print what would happen',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_MIN'	=> 'Lowest record ID to process',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_MAX'	=> 'Highest record ID to process',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_SIZE'	=> 'Approximate number of records to process at a time',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RESUME'		=> 'Start reparsing where the last execution stopped',
 	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
 	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
 	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_DESCRIPTION_THUMBNAIL_DELETE'		=> 'Delete all existing thumbnails.',
+	'CLI_DESCRIPTION_THUMBNAIL_GENERATE'	=> 'Generate all missing thumbnails.',
+	'CLI_DESCRIPTION_THUMBNAIL_RECREATE'	=> 'Recreate all thumbnails.',
 
 	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
 	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
@@ -240,6 +257,29 @@ $lang = array_merge($lang, array(
 	'CLI_EXTENSIONS_ENABLED'			=> 'ເປີດໃຊ້',
 
 	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
+
+	'CLI_MIGRATION_NAME'					=> 'Migration name, including the namespace (use forward slashes instead of backslashes to avoid problems).',
+	'CLI_MIGRATIONS_AVAILABLE'				=> 'Available migrations',
+	'CLI_MIGRATIONS_INSTALLED'				=> 'Installed migrations',
+	'CLI_MIGRATIONS_ONLY_AVAILABLE'		    => 'Show only available migrations',
+	'CLI_MIGRATIONS_EMPTY'                  => 'No migrations.',
+
+	'CLI_REPARSER_REPARSE_REPARSING'		=> 'Reparsing %1$s (range %2$d..%3$d)',
+	'CLI_REPARSER_REPARSE_REPARSING_START'	=> 'Reparsing %s...',
+	'CLI_REPARSER_REPARSE_SUCCESS'			=> 'Reparsing ended with success',
+
+	// In all the case %1$s is the logical name of the file and %2$s the real name on the filesystem
+	// eg: big_image.png (2_a51529ae7932008cf8454a95af84cacd) generated.
+	'CLI_THUMBNAIL_DELETED'		=> '%1$s (%2$s) deleted.',
+	'CLI_THUMBNAIL_DELETING'	=> 'Deleting thumbnails',
+	'CLI_THUMBNAIL_SKIPPED'		=> '%1$s (%2$s) skipped.',
+	'CLI_THUMBNAIL_GENERATED'	=> '%1$s (%2$s) generated.',
+	'CLI_THUMBNAIL_GENERATING'	=> 'Generating thumbnails',
+	'CLI_THUMBNAIL_GENERATING_DONE'	=> 'All thumbnails have been regenerated.',
+	'CLI_THUMBNAIL_DELETING_DONE'	=> 'All thumbnails have been deleted.',
+
+	'CLI_THUMBNAIL_NOTHING_TO_GENERATE'	=> 'No thumbnails to generate.',
+	'CLI_THUMBNAIL_NOTHING_TO_DELETE'	=> 'No thumbnails to delete.',
 ));
 
 #######language/en/common.php#######
@@ -285,6 +325,7 @@ $lang = array_merge($lang, array(
 	'ALL_POSTS'						=> 'ຂໍ້ຄວາມທັງຫມົດ',
 	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'ກະທູ້ທັງຫມົດ',
+	'ALT_TEXT'						=> 'Alternative text',
 	'AND'							=> 'ແລະ',
 	'ARE_WATCHING_FORUM'			=> 'ທ່ານໄດ້ເປີດຮັບຂ່າວສານເມື່ອມີການຕອບໃຫມ່ໃນຫມວດນີ້ແລ້ວ.',
 	'ARE_WATCHING_TOPIC'			=> 'ທ່ານໄດ້ເປີດຮັບຂ່າວສານເມື່ອມີການຕອບໃຫມ່ໃນກະທູ້ນີ້ແລ້ວ.',
@@ -307,11 +348,13 @@ $lang = array_merge($lang, array(
 	'AVATAR_EMPTY_FILEUPLOAD'		=> 'ໄຟລ໌ທີ່ເລືອກເປັນຮູບປະຈຳຕົວນັ້ນວ່າງເປົ່າ.',
 	'AVATAR_INVALID_FILENAME'		=> '%s ເປັນຊື່ໄຟລ໌ທີ່ບໍ່ສາມາດໃຊ້ການໄດ້.',
 	'AVATAR_NOT_UPLOADED'			=> 'ຮູບປະຈຳຕົວບໍ່ສາມາດອັບໂຫລດໄດ້.',
+	'AVATAR_NO_TEMP_DIR'			=> 'Temporary folder could not be found or is not writable.',
 	'AVATAR_NO_SIZE'				=> 'ຄວາມກວ້າງ ຫຼືຄວາມສູງຂອງຮູບປະຈຳຕົວທີ່ເຊື່ອມຕໍ່ຫານັ້ນ ບໍ່ສາມາດຖືກລະບຸໄດ້ໂດຍອັດຕະໂນມັດ. ກະລຸນາໃສ່ຄ່າຄວາມກ້າງ ແລະຄວາມສູງດ້ວຍຕົນເອງ.',
 	'AVATAR_PARTIAL_UPLOAD'			=> 'ໄຟລ໌ທີ່ເລືອກນັ້ນຖືກອັບໂຫລດພຽວບາງສ່ວນ.',
 	'AVATAR_PHP_SIZE_NA'			=> 'ຮູບປະຈຳຕົວໃຫຍ່ເກີນໄປ.<br />ຄ່າສູງສຸດຂອງຂະຫນາດໄຟລ໌ໃນ php.ini ບໍ່ສາມາດລະບຸໄດ້.',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'ຮູບປະຈຳຕົວໃຫຍ່ເກີນໄປ. ຮູບຂະຫນາດສູງສຸດທີ່ອະນຸຍາດໃຫ້ໃຊ້ໄດ້ຄື %d MB.<br />ຫມາຍເຫດ: ຄ່ານີ້ຖືກກຳຫນົດໃນ php.ini ແລະບໍ່ສາມາດຖືກຂ້າມໄດ້.',
 	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
+	'AVATAR_PHP_UPLOAD_STOPPED'		=> 'A PHP extension has stopped the file upload.',
 	'AVATAR_URL_INVALID'			=> 'URL ທີ່ທ່ານລະບຸມາບໍ່ຖືກຕ້ອງ.',
 	'AVATAR_URL_NOT_FOUND'			=> 'ໄຟລ໌ທີ່ທ່ານລະບຸມາບໍ່ມີ.',
 	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
@@ -418,6 +461,7 @@ $lang = array_merge($lang, array(
 	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> 'ຄຳຖາມ-ຄຳຕອບ',
 	'FAQ_EXPLAIN'			=> 'ຄຳຕອບຂອງຄຳຖາມທີ່ມີຄົນຖາມຫລາຍ',
+	'FEATURE_NOT_AVAILABLE' => 'The requested feature is not available on this board.',
 	'FILENAME'				=> 'ຊື່ໄຟລ໌',
 	'FILESIZE'				=> 'ຂະໜາດໄຟລ໌',
 	'FILEDATE'				=> 'ເວລາຂອງໄຟລ໌',
@@ -440,6 +484,7 @@ $lang = array_merge($lang, array(
 	'FORUM_LOCKED'			=> 'ຫມວດທີ່ຖືກລັອກໄວ້',
 	'FORUM_RULES'			=> 'ກົດກະຕິກາ',
 	'FORUM_RULES_LINK'		=> 'ກະລຸນາຄລິກບ່ອນນີ້ເພື່ອອ່ານກົດກະຕິກາຂອງເວັບບອດ',
+	'FROM'					=> 'ຈາກ',
 	'FSOCK_DISABLED'		=> 'ຄຳສັ່ງບໍ່ສຳເລັດຜົນຍ້ອນວ່າຟັງຊັນ <var>fsockopen</var> ຖືກປິດການໃຊ້ງານ ຫຼືເຊີເວີທີ່ຖືກ query ນັ້ນບໍ່ສາມາດຕິດຕໍ່ໄດ້.',
 	'FSOCK_TIMEOUT'			=> 'A timeout occurred while reading from the network stream.',
 
@@ -502,6 +547,7 @@ $lang = array_merge($lang, array(
 	'IMAGE_FILETYPE_INVALID'	=> 'ຂໍອະໄພ, ລະບົບບໍ່ຮອງຮັບໄຟລ໌ຮູບພາບນາມສະກຸນ %d ສຳຫລັບ mimetype %s.',
 	'IMAGE_FILETYPE_MISMATCH'	=> 'ນາມສະກຸນຂອງໄຟລ໌ພາບບໍ່ກົງກັນ. ນາມສະກຸນທີ່ຄວນຈະເປັນຄື %1$s ແຕ່ສົ່ງເຂົ້າມາແມ່ນ %2$s.',
 	'IN'						=> 'ໃນ',
+	'INACTIVE'					=> 'Inactive',
 	'INDEX'						=> 'ຫນ້າຫລັກ', //Index page
 	'INFORMATION'				=> 'ຂໍ້ມູນ',
 	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
@@ -603,6 +649,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
 	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
 	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_METHOD_INVALID'		=> 'The method "%s" does not refer to a valid notification method.',
 	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
 	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
 	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
@@ -617,7 +664,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
 	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
 	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
-	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for deactivated or newly registered user: “%1$s”',
 	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> 'ກະລຸນາແຈ້ງຜູ້ເບິ່ງແຍງເວັບບອດ ຫຼືເວັບມາສເຕີ.',
 	'NOTIFY_ADMIN_EMAIL'		=> 'ກະລຸນາແຈ້ງຜູ້ເບິ່ງແຍງເວັບບອດ ຫຼືເວັບມາສເຕີ: <a href="mailto:%1$s">%1$s</a>',
@@ -803,10 +850,13 @@ $lang = array_merge($lang, array(
 	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'ເຊີບເວີ SMTP ບໍ່ຮອງຮັບການຢືນຢັນຕົວ.',
 	'SORRY_AUTH_READ'			=> 'ທ່ານບໍ່ໄດ້ຮັບອະນຸຍາດໃຫ້ເປີດອ່ານຫມວດນີ້ໄດ້.',
+	'SORRY_AUTH_READ_TOPIC'		=> 'You are not authorised to read this topic.',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'ທ່ານບໍ່ໄດ້ຮັບອະນຸຍາດໃຫ້ດາວໂຫລດໄຟລ໌ນີ້ໄດ້.',
 	'SORT_BY'					=> 'ຈັດຮຽງຕາມ',
+	'SORT_DIRECTION'			=> 'Direction',
 	'SORT_JOINED'				=> 'ເຂົ້າຮ່ວມເມື່ອ',
 	'SORT_LOCATION'				=> 'ສະຖານທີ່',
+	'SORT_OPTIONS'				=> 'Display and sorting options',
 	'SORT_RANK'					=> 'ອັນດັບ',
 	'SORT_POSTS'				=> 'ຂໍ້ຄວາມ',
 	'SORT_TOPIC_TITLE'			=> 'ຊື່ກະທູ້',
@@ -860,7 +910,6 @@ $lang = array_merge($lang, array(
 	'TOO_SHORT_USERNAME'			=> 'ຊື່ຜູ້ໃຊ້ງານຊອງທ່ານສັ້ນເກີນໄປ.',
 	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
 	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
-	
 	'TOO_SMALL'						=> 'The value you entered is too small.',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> 'The value of <strong>Maximum number of allowed recipients per private message</strong> setting you entered is too small.',
 
@@ -949,8 +998,8 @@ $lang = array_merge($lang, array(
 	'WHO_IS_ONLINE'		=> 'ສະມາຊິກທີ່ອອນໄລນ໌ຢູ່',
 	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'ທ່ານໃສ່ລະຫັດຜ່ານບໍ່ຖືກ.',
-	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 	'WRONG_DATA_JABBER'			=> 'ທ່ານໃສ່ຊື່ Jabber ບໍ່ຖືກ.',
 	'WRONG_DATA_LANG'			=> 'ບໍ່ມີພາສາທີ່ທ່ານເລືອກ.',
 	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
@@ -991,7 +1040,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'		=> 'View more smilies',
 	'K_QUICK_REPLY'		=> 'Quick Reply',
 	'ADD_SMILIES'			=> 'Add smilies',
-	'ATTACH_SIG'			=> 'Attach your signature',
+	'ATTACH_SIG'			=> 'Attach a signature (signatures can be altered via the UCP)',
 	'DISABLE_BBCODE'		=> 'Disable BBCode',
 	'DISABLE_MAGIC_URL'		=> 'Don\'t automatically parse URLs',
 	'DISABLE_SMILIES'		=> 'Disable smilies',
@@ -1163,7 +1212,6 @@ $lang = array_merge($lang, array(
 	'SHOP_PCS'				=> 'pcs.',
 	'SHOP_MORE_DETAIL'		=> 'Find more details and items in the ',
 
-	'FROM'			=> 'ຈາກ',
 	'XMODS'				=> 'ENGLISH',
 	'SMILIES_CATS'		=> 'Smiley Categories',
 	'ARCADE_GAMETIME'	=> 'Play Time',
@@ -1255,7 +1303,7 @@ $lang = array_merge($lang, array(
 
 	'ARCADE_EXPLAIN'		=> 'Play games in the arcade',
 	'PERSONAL_ALBUM'		=> 'Personal Album',
-	'VC_REFRESH'			=> 'reload image',
+	'VC_REFRESH'			=> 'Refresh confirmation code',
 	'VC_REFRESH_EXPLAIN'		=> 'If you can not read the code, then call a new image with the following Button.',
 	'CHALLANGE'			=> '1 vs. 1',
 
@@ -1642,7 +1690,7 @@ $lang = array_merge($lang, array(
 	'GROUP_JOIN_PENDING_CONFIRM'		=> 'ທ່ານແນ່ໃຈບໍ່ວ່າ ຕ້ອງການສົ່ງຄຳຂໍເຂົ້າຮ່ວມກຸ່ມ?',
 	'GROUP_JOINED'						=> 'ທ່ານເຂົ້າຮ່ວມກຸ່ມແລ້ວ',
 	'GROUP_JOINED_PENDING'				=> 'ການສົ່ງຄຳຂໍເຂົ້າຮ່ວມກຸ່ມຮຽບຮ້ອຍແລ້ວ. ກະລຸນາຖ້າຫົວໜ້າກຸ່ມຕອບຮັບການເຂົ້າຮ່ວມກຸ່ມ',
-	'GROUP_LIST'						=> 'ລາຍຊື່ສະມາຊິກກຸ່ມ',
+	'GROUP_LIST'						=> 'Current members',
 	'GROUP_MEMBERS'						=> 'ສະມາຊິກກຸ່ມ',
 	'GROUP_NAME'						=> 'ຊື່ຂອງກຸ່ມ',
 	'GROUP_OPEN'						=> 'ເປີດ',
@@ -1796,7 +1844,7 @@ $lang = array_merge($lang, array(
 	'DLL_XML'					=> 'XML support [ Jabber ]',
 	'DLL_ZLIB'					=> 'zlib compression support [ gz, .tar.gz, .zip ]',
 	'DL_CONFIG'					=> 'Download config',
-	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'Download',
 	'DONE'						=> 'Done',
 
@@ -1960,7 +2008,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> 'Server configuration',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Search index was not converted',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Your old search index was not converted. Searching will always yield an empty result. To create a new search index go to the Administration Control Panel, select Maintenance and then choose Search index from the submenu.',
-	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
+	'SELECT_FORUM_GA'			=> 'In phpBB the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> 'Board software',
 	'SPECIFY_OPTIONS'			=> 'Specify conversion options',
 	'STAGE_ADMINISTRATOR'		=> 'Administrator details',
@@ -1968,7 +2016,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> 'The settings on this page are only necessary to set if you know that you require something different from the default. If you are unsure, just proceed to the next page, as these settings can be altered from the Administration Control Panel later.',
 	'STAGE_CONFIG_FILE'			=> 'Configuration file',
 	'STAGE_CREATE_TABLE'		=> 'Create database tables',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'Database settings',
 	'STAGE_FINAL'				=> 'Final stage',
 	'STAGE_INTRO'				=> 'Introduction',
@@ -2275,9 +2323,23 @@ $lang = array_merge($lang, array(
 	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
 	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
 	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_INSTALLED'			=> 'The migration "%s" is not installed.',
 	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
 	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
 	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MIGRATION_REVERT_DATA_DONE'		=> 'Reverted Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_DATA_IN_PROGRESS'	=> 'Reverting Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_DATA_RUNNING'		=> 'Reverting Data: %s.',
+	'MIGRATION_REVERT_SCHEMA_DONE'		=> 'Reverted Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_SCHEMA_RUNNING'	=> 'Reverting Schema: %s.',
+
+	'MIGRATION_INVALID_DATA_MISSING_CONDITION'		=> 'A migration is invalid. An if statement helper is missing a condition.',
+	'MIGRATION_INVALID_DATA_MISSING_STEP'			=> 'A migration is invalid. An if statement helper is missing a valid call to a migration step.',
+	'MIGRATION_INVALID_DATA_CUSTOM_NOT_CALLABLE'	=> 'A migration is invalid. A custom callable function could not be called.',
+	'MIGRATION_INVALID_DATA_UNKNOWN_TYPE'			=> 'A migration is invalid. An unknown migration tool type was encountered.',
+	'MIGRATION_INVALID_DATA_UNDEFINED_TOOL'			=> 'A migration is invalid. An undefined migration tool was encountered.',
+	'MIGRATION_INVALID_DATA_UNDEFINED_METHOD'		=> 'A migration is invalid. An undefined migration tool method was encountered.',
 
 	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
 	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
@@ -2385,6 +2447,7 @@ $lang = array_merge($lang, array(
 	'LOCK_TOPICS_CONFIRM'		=> 'Are you sure you want to lock all selected topics?',
 	'LOGS_CURRENT_TOPIC'		=> 'Currently viewing logs of:',
 	'LOGIN_EXPLAIN_MCP'			=> 'To moderate this forum you must login.',
+	'LOGVIEW_VIEWPOST'			=> 'View post',
 	'LOGVIEW_VIEWTOPIC'			=> 'View topic',
 	'LOGVIEW_VIEWLOGS'			=> 'View topic log',
 	'LOGVIEW_VIEWFORUM'			=> 'View forum',
@@ -2486,7 +2549,7 @@ $lang = array_merge($lang, array(
 	'NOTIFY_POSTER_DISAPPROVAL'		=> 'Notify poster about disapproval?',
 	'NOTIFY_USER_WARN'				=> 'Notify user about warning?',
 	'NOT_MODERATOR'					=> 'You are not a moderator of this forum.',
-	'NO_DESTINATION_FORUM'			=> 'Please select a forum for destination.',
+	'NO_DESTINATION_FORUM'			=> 'You have not specified a forum to move content to.',
 	'NO_DESTINATION_FORUM_FOUND'	=> 'There is no destination forum available.',
 	'NO_ENTRIES'					=> 'No log entries for this period.',
 	'NO_FEEDBACK'					=> 'No feedback exists for this user.',
@@ -2738,6 +2801,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'The board requires you to be registered and logged in to search users.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'The board requires you to be registered and logged in to view profiles.',
 
+	'MANAGE_GROUP'			=> 'Manage Group',
 	'MORE_THAN'				=> 'ຫຼາຍກວ່າ',
 
 	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
@@ -2746,7 +2810,7 @@ $lang = array_merge($lang, array(
 	'NO_VIEW_USERS'			=> 'You are not authorised to view the member list or profiles.',
 
 	'ORDER'					=> 'ຄຳສັ່ງ',
-	'OTHER'					=> 'ອື່ນໆ',
+	'OTHER'					=> 'Other',
 
 	'POST_IP'				=> 'Posted from IP/domain',
 
@@ -3083,7 +3147,7 @@ $lang = array_merge($lang, array(
 	'ALREADY_DELETED'			=> 'ຂໍອະໄພຂໍ້ຄວາມໄດ້ຖືກລຶບແລ້ວ',
 	'ATTACH_DISK_FULL'			=> 'There is not enough free disk space to post this attachment.',
 	'ATTACH_QUOTA_REACHED'		=> 'ຂໍອະໄພຂໍ້ຄວາມໄດ້ຖືກລຶບແລ້ວ',
-	'ATTACH_SIG'				=> 'Attach your signature',
+	'ATTACH_SIG'				=> 'Attach a signature (signatures can be altered via the UCP)',
 
 	'BBCODE_A_HELP'				=> 'Inline uploaded attachment: [attachment=]filename.ext[/attachment]',
 	'BBCODE_B_HELP'				=> 'Bold text: [b]text[/b]',
@@ -3186,8 +3250,10 @@ $lang = array_merge($lang, array(
 	'NO_POLL_TITLE'				=> 'ທ່ານຕ້ອງໃຊ້ຊື່ ແບບສຳຫລວດ',
 	'NO_POST'					=> 'You have to select a post in order to warn the user for a post.',
 	'NO_POST_MODE'				=> 'No post mode specified.',
+	'NO_TEMP_DIR'				=> 'Temporary folder could not be found or is not writable.',
 
 	'PARTIAL_UPLOAD'			=> 'The uploaded file was only partially uploaded.',
+	'PHP_UPLOAD_STOPPED'		=> 'A PHP extension has stopped the file upload.',
 	'PHP_SIZE_NA'				=> 'The attachment’s file size is too large.<br />Could not determine the maximum size defined by PHP in php.ini.',
 	'PHP_SIZE_OVERRUN'			=> 'ຂະໜາດຂອງໄຟລ໌ໃຫຍ່ເກີນໄປ, ຂະໜາດທີ່ຮອງຮັບແມ່ນ %d MB.<br />Please note this is set in php.ini and cannot be overridden.',
 	'PLACE_INLINE'				=> 'Place inline',
@@ -3300,6 +3366,7 @@ $lang = array_merge($lang, array(
 	'NO_RECENT_SEARCHES'	=> 'No searches have been carried out recently.',
 	'NO_SEARCH'				=> 'Sorry but you are not permitted to use the search system.',
 	'NO_SEARCH_RESULTS'		=> 'ການຊອກຫາບໍ່ພົບເຫັນ.',
+	'NO_SEARCH_LOAD'		=> 'Sorry but you cannot use search at this time. The server has high load. Please try again later.',
 	'NO_SEARCH_UNREADS'		=> 'Sorry but searching for unread posts has been disabled on this board.',
 	'WORD_IN_NO_POST'		=> 'ບໍ່ພົບເຫັນເນື່ອງຈາກຄຳວ່າ <strong>%s</strong> ບໍ່ພົບໃນຂໍ້ຄວາມໃດໆ',
 	'WORDS_IN_NO_POST'		=> 'ບໍ່ພົບເຫັນເນື່ອງຈາກຄຳວ່າ <strong>%s</strong> ບໍ່ພົບໃນຂໍ້ຄວາມໃດໆເລຍ. <strong>%s</strong> ບໍ່ພົບໃນຂໍ້ຄວາມໃດໆເລຍ',
@@ -3444,7 +3511,7 @@ $lang = array_merge($lang, array(
 	'CONFIRMATION'				=> 'Confirmation of registration',
 	'CONFIRM_CHANGES'			=> 'Confirm changes',
 	'CONFIRM_EXPLAIN'			=> 'To prevent automated registrations the board requires you to enter a confirmation code. The code is displayed in the image you should see below. If you are visually impaired or cannot otherwise read this code please contact the %sBoard Administrator%s.',
-	'VC_REFRESH'				=> 'reload image',
+	'VC_REFRESH'				=> 'Refresh confirmation code',
 	'VC_REFRESH_EXPLAIN'		=> 'If you can not read the code, then call a new image with the following Button.',
 
 	'CONFIRM_PASSWORD'			=> 'Confirm password',
@@ -3617,7 +3684,8 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
 	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
 	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
-	'NOTIFICATION_METHOD_EMAIL'							=> 'ອີເມລ',
+	'NOTIFICATION_METHOD_BOARD'							=> 'Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'Email',
 	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
 	'NOTIFICATION_TYPE'									=> 'Notification type',
 	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
@@ -3629,7 +3697,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
 	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
 	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
-	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'User requiring activation',
 
 	'NOTIFY_METHOD'					=> 'Notification method',
 	'NOTIFY_METHOD_BOTH'			=> 'Both',
@@ -7195,7 +7263,7 @@ $lang = array_merge($lang, array(
 	'KO_NEXT'							=> 'The following teams have reached the next round',
 	'KO_NEXT_CHECK'						=> 'Please, check this teams, because not all rules are considered here. ',
 
-	'MANAGE_GROUP'						=> 'Consider group ranking',
+	'MANAGE_GROUP_FOOTBALL'					=> 'Consider group ranking',
 	'MATCHDAY_NEW'						=> 'The teams qualify till matchday',
 	'MATCHDAY_TARGET'					=> 'Select target matchday',
 	'MOVE_LEAGUE'						=> 'in league',
@@ -13195,6 +13263,7 @@ $lang = array_merge($lang, array(
 	'EXTENSION_NAME'			=> 'Extension Name',
 	'EXTENSION_ACTIONS'			=> 'Actions',
 	'EXTENSION_OPTIONS'			=> 'Options',
+	'EXTENSION_INSTALL_HEADLINE'=> 'Installing an extension',
 	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
 	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
 			<li>Disable the extension</li>
@@ -13202,7 +13271,7 @@ $lang = array_merge($lang, array(
 			<li>Upload the new files</li>
 			<li>Enable the extension</li>
 		</ol>',
-	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completely removing an extension from your board',
 	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
 			<li>Disable the extension</li>
 			<li>Delete the extension’s data</li>
@@ -13352,7 +13421,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_TO'					=> 'Move posts to',
 	'MOVE_SUBFORUMS_TO'				=> 'Move subforums to',
 
-	'NO_DESTINATION_FORUM'			=> 'Please select a forum for destination.',
+	'NO_DESTINATION_FORUM'			=> 'You have not specified a forum to move content to.',
 	'NO_FORUM_ACTION'				=> 'No action defined for what happens with the forum content.',
 	'NO_PARENT'						=> 'No parent',
 	'NO_PERMISSIONS'				=> 'Do not copy permissions',
@@ -13449,12 +13518,12 @@ $lang = array_merge($lang, array(
 	'GROUP_LEAD'					=> 'Group leaders',
 	'GROUP_LEADERS_ADDED'			=> 'New leaders added to group successfully.',
 	'GROUP_LEGEND'					=> 'Display group in legend',
-	'GROUP_LIST'					=> 'ລາຍຊື່ສະມາຊິກກຸ່ມ',
+	'GROUP_LIST'					=> 'Current members',
 	'GROUP_LIST_EXPLAIN'			=> 'This is a complete list of all the current users with membership of this group. You can delete members (except in certain special groups) or add new ones as you see fit.',
 	'GROUP_MEMBERS'					=> 'ສະມາຊິກກຸ່ມ',
 	'GROUP_MEMBERS_EXPLAIN'			=> 'This is a complete listing of all the members of this usergroup. It includes separate sections for leaders, pending and existing members. From here you can manage all aspects of who has membership of this group and what their role is. To remove a leader but keep them in the group use Demote rather than delete. Similarly use Promote to make an existing member a leader.',
 	'GROUP_MESSAGE_LIMIT'			=> 'Group private message limit per folder',
-	'GROUP_MESSAGE_LIMIT_EXPLAIN'	=> 'This setting overrides the per-user folder message limit. A value of 0 means the user default limit will be used.',
+	'GROUP_MESSAGE_LIMIT_EXPLAIN'	=> 'This setting overrides the per-user folder message limit. The maximum for all groups of the user is used to determine the actual value.<br />Set this value to 0 to overwrite the setting for all users of this group with the board-wide setting.',
 	'GROUP_MODS_ADDED'				=> 'New group leaders added successfully.',
 	'GROUP_MODS_DEMOTED'			=> 'Group leaders demoted successfully.',
 	'GROUP_MODS_PROMOTED'			=> 'Group members promoted successfully.',
@@ -13463,7 +13532,7 @@ $lang = array_merge($lang, array(
 	'GROUP_OPEN'					=> 'ເປີດ',
 	'GROUP_PENDING'					=> 'Pending memberships',
 	'GROUP_MAX_RECIPIENTS'			=> 'Maximum number of allowed recipients per private message',
-	'GROUP_MAX_RECIPIENTS_EXPLAIN'	=> 'The maximum number of allowed recipients in a private message. If 0 is entered, the board-wide setting is used.',
+	'GROUP_MAX_RECIPIENTS_EXPLAIN'	=> 'The maximum number of allowed recipients in a private message. The maximum for all groups of the user is used to determine the actual value.<br />Set this value to 0 to overwrite the setting for all users of this group with the board-wide setting.',
 	'GROUP_OPTIONS_SAVE'			=> 'Group wide options',
 	'GROUP_PROMOTE'					=> 'Promote to group leader',
 	'GROUP_RANK'					=> 'ອັບດັບຂອງກຸ່ມ',
@@ -13500,6 +13569,8 @@ $lang = array_merge($lang, array(
 	'NO_USERS'					=> 'ບໍ່ມີຊື່ຜູ້ໃຊ້ງານທີ່ທ່ານຊອກ.',
 	'NO_USERS_ADDED'			=> 'No users were added to the group.',
 	'NO_VALID_USERS'			=> 'You haven’t entered any users eligible for that action.',
+
+	'PENDING_MEMBERS'			=> 'Pending',
 
 	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> 'Pre-defined groups',
@@ -14664,7 +14735,7 @@ $lang = array_merge($lang, array(
 	'ADD_ICONS'				=> 'Add multiple icons',
 	'AFTER_ICONS'			=> 'After %s',
 	'AFTER_SMILIES'			=> 'After %s',
-	'FIRST'					=> 'First',
+
 	'CODE'						=> 'ໂຄດ',
 	'CURRENT_ICONS'				=> 'Current icons',
 	'CURRENT_ICONS_EXPLAIN'		=> 'Choose what to do with the currently installed icons.',
@@ -14682,6 +14753,8 @@ $lang = array_merge($lang, array(
 	'EXPORT_ICONS_EXPLAIN'		=> '%sOn clicking this link, the configuration for your installed icons will be packaged into <samp>icons.pak</samp> which once downloaded can be used to create a <samp>.zip</samp> or <samp>.tgz</samp> file containing all of your icons plus this <samp>icons.pak</samp> configuration file%s.',
 	'EXPORT_SMILIES'			=> 'Export and download smilies.pak',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sOn clicking this link, the configuration for your installed smilies will be packaged into <samp>smilies.pak</samp> which once downloaded can be used to create a <samp>.zip</samp> or <samp>.tgz</samp> file containing all of your smilies plus this <samp>smilies.pak</samp> configuration file%s.',
+
+	'FIRST'			=> 'First',
 
 	'ICONS_ADD'				=> 'Add a new icon',
 	'ICONS_CONFIG'			=> 'Icon configuration',
@@ -14711,7 +14784,8 @@ $lang = array_merge($lang, array(
 	'NO_SMILIES_EXPORT'	=> 'You have no smilies with which to create a package.',
 	'NO_SMILIES_PAK'	=> 'No smiley packages found.',
 
-	'PAK_FILE_NOT_READABLE'	=> 'Could not read <samp>.pak</samp> file.',
+	'PAK_FILE_NOT_READABLE'		=> 'Could not read <samp>.pak</samp> file.',
+
 	'REPLACE_MATCHES'		=> 'Replace matches',
 
 	'SELECT_PACKAGE'			=> 'Select a package file',
@@ -14734,7 +14808,7 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'Smiley image file',
 	'SMILIES_WIDTH'				=> 'Smiley width',
 
-	'WRONG_PAK_TYPE'		=> 'The specified package does not contain the appropriate data.',
+	'WRONG_PAK_TYPE'	=> 'The specified package does not contain the appropriate data.',
 ));
 
 $lang = array_merge($lang, array(
@@ -15116,7 +15190,7 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
-	// 3.1.0
+	// 3.2.0
 	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 
 	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
@@ -15137,6 +15211,8 @@ $lang = array_merge($lang, array(
 
 	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
 	'NO_UNINSTALLED_STYLE'		=> 'No uninstalled styles detected.',
+
+	'PURGED_CACHE2'				=> 'Cache was purged.',
 
 	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
 
@@ -15162,6 +15238,8 @@ $lang = array_merge($lang, array(
 	'STYLE_USED_BY'				=> 'Used by (including robots)',
 
 	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+	'BROWSE_STYLES_DATABASE'	=> 'Browse styles database',
 
 	// 3.0.12
 	'ACP_IMAGESETS'			=> 'Imagesets',

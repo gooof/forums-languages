@@ -183,14 +183,15 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_LANG'				=> 'sk',
 	'RECAPTCHA_NOT_AVAILABLE'		=> 'Pre použitie reCaptcha sa musíte registrovat na <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 	'CAPTCHA_RECAPTCHA'				=> 'reCaptcha',
-	'RECAPTCHA_INCORRECT'			=> 'Overovací kód, ktorý ste zadali nebol správny.',
+	'RECAPTCHA_INCORRECT'			=> 'The solution you provided was incorrect',
+	'RECAPTCHA_NOSCRIPT'			=> 'Please enable JavaScript in your browser to load the challenge.',
 
 	'RECAPTCHA_PUBLIC'				=> 'Verejný reCaptcha kľúč',
-	'RECAPTCHA_PUBLIC_EXPLAIN'		=> 'Váš verejný kľúč k službe reCAPTCHA, získate ho na <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
+	'RECAPTCHA_PUBLIC_EXPLAIN'		=> 'Your public reCaptcha key. Keys can be obtained on <a href="https://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 	'RECAPTCHA_PRIVATE'				=> 'Súkromný reCaptcha kľúč',
-	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Váš súkromný kľúč k službe reCaptcha, získáte ho na <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
+	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Your private reCaptcha key. Keys can be obtained on <a href="https://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 
-	'RECAPTCHA_EXPLAIN'				=> 'Snažíme sa obmedziť automatické registrácie. Z toho dôvodu je potrebné, aby ste napísali tieto dve slová do rámčeka pod nimi.',
+	'RECAPTCHA_EXPLAIN'				=> 'In an effort to prevent automatic submissions, we require that you complete the following challenge.',
 	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
 ));
 
@@ -212,20 +213,36 @@ $lang = array_merge($lang, array(
 	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
 	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
 	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_LIST'					=> 'List all installed and available migrations.',
 	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DB_REVERT'					=> 'Revert a migration.',
 	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
 	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
 	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
-	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended upon.',
 	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
-	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s integer value',
 	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+
+	'CLI_DESCRIPTION_OPTION_ENV'				=> 'The Environment name.',
 	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
 	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
 	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_REPARSER_LIST'				=> 'Lists the types of text that can be reparsed.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE'			=> 'Reparses stored text with the current text_formatter services.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_ARG_1'	=> 'Type of text to reparse. Leave blank to reparse everything.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_DRY_RUN'		=> 'Do not save any changes; just print what would happen',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_MIN'	=> 'Lowest record ID to process',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_MAX'	=> 'Highest record ID to process',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_SIZE'	=> 'Approximate number of records to process at a time',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RESUME'		=> 'Start reparsing where the last execution stopped',
 	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
 	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
 	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_DESCRIPTION_THUMBNAIL_DELETE'		=> 'Delete all existing thumbnails.',
+	'CLI_DESCRIPTION_THUMBNAIL_GENERATE'	=> 'Generate all missing thumbnails.',
+	'CLI_DESCRIPTION_THUMBNAIL_RECREATE'	=> 'Recreate all thumbnails.',
 
 	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
 	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
@@ -240,6 +257,29 @@ $lang = array_merge($lang, array(
 	'CLI_EXTENSIONS_ENABLED'			=> 'Povolené',
 
 	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
+
+	'CLI_MIGRATION_NAME'					=> 'Migration name, including the namespace (use forward slashes instead of backslashes to avoid problems).',
+	'CLI_MIGRATIONS_AVAILABLE'				=> 'Available migrations',
+	'CLI_MIGRATIONS_INSTALLED'				=> 'Installed migrations',
+	'CLI_MIGRATIONS_ONLY_AVAILABLE'		    => 'Show only available migrations',
+	'CLI_MIGRATIONS_EMPTY'                  => 'No migrations.',
+
+	'CLI_REPARSER_REPARSE_REPARSING'		=> 'Reparsing %1$s (range %2$d..%3$d)',
+	'CLI_REPARSER_REPARSE_REPARSING_START'	=> 'Reparsing %s...',
+	'CLI_REPARSER_REPARSE_SUCCESS'			=> 'Reparsing ended with success',
+
+	// In all the case %1$s is the logical name of the file and %2$s the real name on the filesystem
+	// eg: big_image.png (2_a51529ae7932008cf8454a95af84cacd) generated.
+	'CLI_THUMBNAIL_DELETED'		=> '%1$s (%2$s) deleted.',
+	'CLI_THUMBNAIL_DELETING'	=> 'Deleting thumbnails',
+	'CLI_THUMBNAIL_SKIPPED'		=> '%1$s (%2$s) skipped.',
+	'CLI_THUMBNAIL_GENERATED'	=> '%1$s (%2$s) generated.',
+	'CLI_THUMBNAIL_GENERATING'	=> 'Generating thumbnails',
+	'CLI_THUMBNAIL_GENERATING_DONE'	=> 'All thumbnails have been regenerated.',
+	'CLI_THUMBNAIL_DELETING_DONE'	=> 'All thumbnails have been deleted.',
+
+	'CLI_THUMBNAIL_NOTHING_TO_GENERATE'	=> 'No thumbnails to generate.',
+	'CLI_THUMBNAIL_NOTHING_TO_DELETE'	=> 'No thumbnails to delete.',
 ));
 
 #######language/en/common.php#######
@@ -285,6 +325,7 @@ $lang = array_merge($lang, array(
 	'ALL_POSTS'						=> 'Všetky príspevky',
 	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'Všetky témy',
+	'ALT_TEXT'						=> 'Alternative text',
 	'AND'							=> 'A',
 	'ARE_WATCHING_FORUM'			=> 'Ste prihlásený k sledovaniu tohto fóra',
 	'ARE_WATCHING_TOPIC'			=> 'Ste prihlásený k sledovaniu tejto témy.',
@@ -307,11 +348,13 @@ $lang = array_merge($lang, array(
 	'AVATAR_EMPTY_FILEUPLOAD'		=> 'Nahraný súbor s avatarom je prázdny.',
 	'AVATAR_INVALID_FILENAME'		=> '%s je neplatný názov súboru',
 	'AVATAR_NOT_UPLOADED'			=> 'Avatar nemôže byť nahraný na server.',
+	'AVATAR_NO_TEMP_DIR'			=> 'Temporary folder could not be found or is not writable.',
 	'AVATAR_NO_SIZE'				=> 'Nie je možné získať šírku, alebo výšku avataru, na ktorý odkazujete, zadajte šírku/výšku ručne.',
 	'AVATAR_PARTIAL_UPLOAD'			=> 'Súbor bol nahraný na server iba čiastočne',
 	'AVATAR_PHP_SIZE_NA'			=> 'Príliš veľký súbor avataru.<br />Nemôžem určiť maximálnu veľkosť, definovanú v php.ini.',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'Príliš veľký súbor avataru, maximálna veľkosť obrázku je %d %2$s.<br />Veľkosť je nastavená v súbore php.ini a nemôže byť prekročená.',
 	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
+	'AVATAR_PHP_UPLOAD_STOPPED'		=> 'A PHP extension has stopped the file upload.',
 	'AVATAR_URL_INVALID'			=> 'Zadaná URL je neplatná.',
 	'AVATAR_URL_NOT_FOUND'			=> 'Zadaný súbor nebol nájdený.',
 	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
@@ -418,6 +461,7 @@ $lang = array_merge($lang, array(
 	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> 'FAQ',
 	'FAQ_EXPLAIN'			=> 'Často kladené otázky',
+	'FEATURE_NOT_AVAILABLE' => 'The requested feature is not available on this board.',
 	'FILENAME'				=> 'Názov súboru',
 	'FILESIZE'				=> 'Veľkosť súboru',
 	'FILEDATE'				=> 'Dátum súboru',
@@ -440,6 +484,7 @@ $lang = array_merge($lang, array(
 	'FORUM_LOCKED'			=> 'Fórum je zamknuté',
 	'FORUM_RULES'			=> 'Pravidlá fóra',
 	'FORUM_RULES_LINK'		=> 'Prosím kliknite pre zobrazenie pravidiel fóra',
+	'FROM'					=> 'z',
 	'FSOCK_DISABLED'		=> 'Operácia nemohla byť dokončená, pretože funkcie <var>fsockopen</var> sú zakázané alebo hľadaný server nebol nájdený.',
 	'FSOCK_TIMEOUT'			=> 'Časový limit pre načítanie z prúdu siete vypršal.',
 
@@ -502,6 +547,7 @@ $lang = array_merge($lang, array(
 	'IMAGE_FILETYPE_INVALID'	=> 'Typ obrázku %d pre mimetype %s nie je podporovaný.',
 	'IMAGE_FILETYPE_MISMATCH'	=> 'Chybný typ obrázku: obrázok musí byť %1$s , prípona však bola %2$s .',
 	'IN'						=> 'v',
+	'INACTIVE'					=> 'Inactive',
 	'INDEX'						=> 'Obsah', //Index page
 	'INFORMATION'				=> 'Informácia',
 	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
@@ -603,6 +649,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
 	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
 	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_METHOD_INVALID'		=> 'The method "%s" does not refer to a valid notification method.',
 	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
 	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
 	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
@@ -617,7 +664,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
 	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
 	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
-	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for deactivated or newly registered user: “%1$s”',
 	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> 'Informujte prosím administrátora fóra alebo webmastera.',
 	'NOTIFY_ADMIN_EMAIL'		=> 'Informujte prosím administrátora fóra alebo webmastera: <a href="mailto:%1$s">%1$s</a>',
@@ -803,10 +850,13 @@ $lang = array_merge($lang, array(
 	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'SMTP server nepodporuje prihlásenie',
 	'SORRY_AUTH_READ'			=> 'Nie ste oprávnený čítať toto fórum',
+	'SORRY_AUTH_READ_TOPIC'		=> 'You are not authorised to read this topic.',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'Nie ste oprávnený sťahovať pripojené súbory',
 	'SORT_BY'					=> 'Zoradiť podľa',
+	'SORT_DIRECTION'			=> 'Direction',
 	'SORT_JOINED'				=> 'Dátumu registrácie',
 	'SORT_LOCATION'				=> 'Bydliska',
+	'SORT_OPTIONS'				=> 'Display and sorting options',
 	'SORT_RANK'					=> 'Hodnosti',
 	'SORT_POSTS'				=> 'Príspevky',
 	'SORT_TOPIC_TITLE'			=> 'Názvu témy',
@@ -860,7 +910,6 @@ $lang = array_merge($lang, array(
 	'TOO_SHORT_USERNAME'			=> 'Zadané užívateľské meno je príliš krátke.',
 	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
 	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
-	
 	'TOO_SMALL'						=> 'Zadaná hodnota je príliš malá.',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> 'Hodnota <strong>Maximálny počet povolených príjemcov súkromnej správy</strong> ktorú ste zadali, je príliš malá.',
 
@@ -949,8 +998,8 @@ $lang = array_merge($lang, array(
 	'WHO_IS_ONLINE'		=> 'Kto je on-line',
 	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'Zadali ste neplatné heslo.',
-	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 	'WRONG_DATA_JABBER'			=> 'Zadané meno nie je správne pre jabber účet.',
 	'WRONG_DATA_LANG'			=> 'Zadaný jazyk je neplatný.',
 	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
@@ -991,7 +1040,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'		=> 'Ďalšie smajlíky',
 	'K_QUICK_REPLY'		=> 'Rýchla odpoveď',
 	'ADD_SMILIES'			=> 'Pridať viac smajlíkov naraz',
-	'ATTACH_SIG'			=> 'Pripojiť podpis',
+	'ATTACH_SIG'			=> 'Attach a signature (signatures can be altered via the UCP)',
 	'DISABLE_BBCODE'		=> 'Zakázať BBCode',
 	'DISABLE_MAGIC_URL'		=> 'Automaticky neprevádzať odkazy',
 	'DISABLE_SMILIES'		=> 'Zakázať smajlíky',
@@ -1163,7 +1212,6 @@ $lang = array_merge($lang, array(
 	'SHOP_PCS'				=> 'pcs.',
 	'SHOP_MORE_DETAIL'		=> 'Find more details and items in the ',
 
-	'FROM'			=> 'z',
 	'XMODS'				=> 'ENGLISH',
 	'SMILIES_CATS'		=> 'Smiley Categories',
 	'ARCADE_GAMETIME'	=> 'Play Time',
@@ -1255,7 +1303,7 @@ $lang = array_merge($lang, array(
 
 	'ARCADE_EXPLAIN'		=> 'Play games in the arcade',
 	'PERSONAL_ALBUM'		=> 'Personal Album',
-	'VC_REFRESH'			=> 'Obnoviť overovací kód',
+	'VC_REFRESH'			=> 'Refresh confirmation code',
 	'VC_REFRESH_EXPLAIN'		=> 'Pokiaľ sa nedá prečítať overovací kód, vygenerujte si nový kliknutím na tlačidlo.',
 	'CHALLANGE'			=> '1 vs. 1',
 
@@ -1642,7 +1690,7 @@ $lang = array_merge($lang, array(
 	'GROUP_JOIN_PENDING_CONFIRM'		=> 'Naozaj chcete požiadať o členstvo v tejto skupine?',
 	'GROUP_JOINED'						=> 'Úspešne ste vstúpil/a do skupiny',
 	'GROUP_JOINED_PENDING'				=> 'Úspešne ste požiadal/a o členstvo v skupine. Počkajte na overenie žiadosti moderátorom skupiny.',
-	'GROUP_LIST'						=> 'Kontrolovať užívateľov',
+	'GROUP_LIST'						=> 'Current members',
 	'GROUP_MEMBERS'						=> 'Členovia skupiny',
 	'GROUP_NAME'						=> 'Názov skupiny',
 	'GROUP_OPEN'						=> 'Otvorená',
@@ -1796,7 +1844,7 @@ $lang = array_merge($lang, array(
 	'DLL_XML'					=> 'Podpora XML [ Jabber ]',
 	'DLL_ZLIB'					=> 'Podpora kompresie typu zlib [ gz, .tar.gz, .zip ]',
 	'DL_CONFIG'					=> 'Stiahnuť konfiguračný súbor',
-	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'Stiahnuť',
 	'DONE'						=> 'Hotovo',
 
@@ -1961,7 +2009,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> 'Nastavenie serveru',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Vyhľadávací index nebol prekonvertovaný',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Váš starý vyhľadávací index nebol prekonvertovaný. Vyhľadávanie bude vždy vypisovať prázdne výsledky. Pre jeho obnovenie prejdite do Ovládacieho panelu fóra, zvoľte záložku Správa a zvoľte možnosť Vytvoriť nový index.',
-	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
+	'SELECT_FORUM_GA'			=> 'In phpBB the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> 'Systém fóra',
 	'SPECIFY_OPTIONS'			=> 'Špecifikujte možnosti prenosu',
 	'STAGE_ADMINISTRATOR'		=> 'Konfiguračné detaily',
@@ -1969,7 +2017,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> 'Tieto nastavenia zmeňte iba v prípade, ak viete, že budete potrebovať iné pre chod fóra. Pokiaľ si nie ste istý, kľudne pokračujte. Tieto nastavenia sa dajú neskôr zmeniť cez Administračný panel fóra.',
 	'STAGE_CONFIG_FILE'			=> 'Konfiguračný súbor',
 	'STAGE_CREATE_TABLE'		=> 'Vytvoriť databázové tabuľky',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'Nastavenia databázy',
 	'STAGE_FINAL'				=> 'Zakončenie inštalácie',
 	'STAGE_INTRO'				=> 'Úvod',
@@ -2276,9 +2324,23 @@ $lang = array_merge($lang, array(
 	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
 	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
 	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_INSTALLED'			=> 'The migration "%s" is not installed.',
 	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
 	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
 	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MIGRATION_REVERT_DATA_DONE'		=> 'Reverted Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_DATA_IN_PROGRESS'	=> 'Reverting Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_DATA_RUNNING'		=> 'Reverting Data: %s.',
+	'MIGRATION_REVERT_SCHEMA_DONE'		=> 'Reverted Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_SCHEMA_RUNNING'	=> 'Reverting Schema: %s.',
+
+	'MIGRATION_INVALID_DATA_MISSING_CONDITION'		=> 'A migration is invalid. An if statement helper is missing a condition.',
+	'MIGRATION_INVALID_DATA_MISSING_STEP'			=> 'A migration is invalid. An if statement helper is missing a valid call to a migration step.',
+	'MIGRATION_INVALID_DATA_CUSTOM_NOT_CALLABLE'	=> 'A migration is invalid. A custom callable function could not be called.',
+	'MIGRATION_INVALID_DATA_UNKNOWN_TYPE'			=> 'A migration is invalid. An unknown migration tool type was encountered.',
+	'MIGRATION_INVALID_DATA_UNDEFINED_TOOL'			=> 'A migration is invalid. An undefined migration tool was encountered.',
+	'MIGRATION_INVALID_DATA_UNDEFINED_METHOD'		=> 'A migration is invalid. An undefined migration tool method was encountered.',
 
 	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
 	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
@@ -2386,6 +2448,7 @@ $lang = array_merge($lang, array(
 	'LOCK_TOPICS_CONFIRM'		=> 'Ste si istý, že chcete zamknúť tieto témy?',
 	'LOGS_CURRENT_TOPIC'		=> 'Zobrazené prihlásenia:',
 	'LOGIN_EXPLAIN_MCP'			=> 'Pre moderovanie tohto fóra sa musíte prihlásiť.',
+	'LOGVIEW_VIEWPOST'			=> 'Zobraziť príspevok',
 	'LOGVIEW_VIEWTOPIC'			=> 'Zobraziť tému',
 	'LOGVIEW_VIEWLOGS'			=> 'Zobraziť zápisy v téme',
 	'LOGVIEW_VIEWFORUM'			=> 'Zobraziť fórum',
@@ -2487,7 +2550,7 @@ $lang = array_merge($lang, array(
 	'NOTIFY_POSTER_DISAPPROVAL'		=> 'Upozorniť autora o neschválení?',
 	'NOTIFY_USER_WARN'				=> 'Upozorniť užívateľa o varovaní?',
 	'NOT_MODERATOR'					=> 'Nie ste moderátorom tohto fóra',
-	'NO_DESTINATION_FORUM'			=> 'Prosím vyberte nejaké fórum ako cieľové',
+	'NO_DESTINATION_FORUM'			=> 'You have not specified a forum to move content to.',
 	'NO_DESTINATION_FORUM_FOUND'	=> 'Tento cieľ cesty nie je dostupný.',
 	'NO_ENTRIES'					=> 'Tento užívateľ sa neprihlásil',
 	'NO_FEEDBACK'					=> 'Neexistuje žiadna odozva na tohto užívateľa',
@@ -2739,6 +2802,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'Pre hľadanie užívateľov musíte byť prihlásený.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'Pre prezeranie profilu musíte byť prihlásený.',
 
+	'MANAGE_GROUP'			=> 'Manage Group',
 	'MORE_THAN'				=> 'Viac ako',
 
 	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
@@ -2747,7 +2811,7 @@ $lang = array_merge($lang, array(
 	'NO_VIEW_USERS'			=> 'Nemáte oprávnenia pre prezeranie profilu užívateľov a zoznam užívateľov.',
 
 	'ORDER'					=> 'Zoradiť',
-	'OTHER'					=> 'Ostatné',
+	'OTHER'					=> 'Other',
 
 	'POST_IP'				=> 'Odoslané z ip adresy/domény',
 
@@ -3084,7 +3148,7 @@ $lang = array_merge($lang, array(
 	'ALREADY_DELETED'			=> 'Táto správa už bola vymazaná.',
 	'ATTACH_DISK_FULL'			=> 'Nie je dosť voľného miesta na disku pre poslanie tejto prílohy.',
 	'ATTACH_QUOTA_REACHED'		=> 'Bola prekročená maximálna veľkosť adresára s prílohami.',
-	'ATTACH_SIG'				=> 'Pripojiť podpis',
+	'ATTACH_SIG'				=> 'Attach a signature (signatures can be altered via the UCP)',
 
 	'BBCODE_A_HELP'				=> 'Nahraná príloha: [attachment=]filename.ext[/attachment]',
 	'BBCODE_B_HELP'				=> 'Tučné: [b]text[/b]  (alt+b)',
@@ -3187,8 +3251,10 @@ $lang = array_merge($lang, array(
 	'NO_POLL_TITLE'				=> 'Musíte zadať otázku hlasovania',
 	'NO_POST'					=> 'Musíte vybrať príspevok, aby mohol byť užívateľ varovaný za príspevok',
 	'NO_POST_MODE'				=> 'Nebol špecifikovaný žiadny mód príspevku',
+	'NO_TEMP_DIR'				=> 'Temporary folder could not be found or is not writable.',
 
 	'PARTIAL_UPLOAD'			=> 'Súbor sa nepodarilo nahrať celý, bola nahraná iba jeho časť',
+	'PHP_UPLOAD_STOPPED'		=> 'A PHP extension has stopped the file upload.',
 	'PHP_SIZE_NA'				=> 'Veľkosť príloh je príliš veľká.<br />Nemôžete prekročiť stanovenú veľkosť, ako je nastavená v php.ini.',
 	'PHP_SIZE_OVERRUN'			=> 'Veľkosť príloh je príliš veľká. Maximálna povolená veľkosť príloh je %d %2$s.<br />Toto obmedzenie je nastavené v php.ini, nemôže byť zmenené.',
 	'PLACE_INLINE'				=> 'Vložiť za sebou',
@@ -3301,6 +3367,7 @@ $lang = array_merge($lang, array(
 	'NO_RECENT_SEARCHES'	=> 'Neboli nájdené žiadne predchádzajúce vyhľadávania',
 	'NO_SEARCH'				=> 'Je nám ľúto, ale nemáte oprávnenie vyhľadávať na tomto fóre.',
 	'NO_SEARCH_RESULTS'		=> 'Neboli nájdené žiadne vhodné výsledky.',
+	'NO_SEARCH_LOAD'		=> 'Sorry but you cannot use search at this time. The server has high load. Please try again later.',
 	'NO_SEARCH_UNREADS'		=> 'Ospravedlňujeme sa, ale hľadanie nových príspevkov bolo zakázané na tomto fóre.',
 	'WORD_IN_NO_POST'		=> 'Nebol nájdený žiadny príspevok, pretože slovo %s nie je obsiahnuté v žiadnom z príspevkov.',
 	'WORDS_IN_NO_POST'		=> 'Nebol nájdený žiadny príspevok, pretože slová %s nie sú obsiahnuté v žiadnom z príspevkov.',
@@ -3445,7 +3512,7 @@ $lang = array_merge($lang, array(
 	'CONFIRMATION'				=> 'Potvrdenie registrácie',
 	'CONFIRM_CHANGES'			=> 'Potvrdiť zmeny',
 	'CONFIRM_EXPLAIN'			=> 'Pre zabránenie automatických registrácií administrátor fóra vyžaduje, aby ste vložili potvrdzovací kód. Kód je zobrazený v obrázku, ktorý by ste mali dole vidieť. Ak ste zrakovo postihnutí alebo nemôžete z iného dôvodu prečítať kód, kontaktujte, prosím, %sAdministrátora fóra%s.',
-	'VC_REFRESH'				=> 'Obnoviť overovací kód',
+	'VC_REFRESH'				=> 'Refresh confirmation code',
 	'VC_REFRESH_EXPLAIN'		=> 'Pokiaľ sa nedá prečítať overovací kód, vygenerujte si nový kliknutím na tlačidlo.',
 
 	'CONFIRM_PASSWORD'			=> 'Potvrdiť nové heslo',
@@ -3618,7 +3685,8 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
 	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
 	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
-	'NOTIFICATION_METHOD_EMAIL'							=> 'E-mailu',
+	'NOTIFICATION_METHOD_BOARD'							=> 'Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'Email',
 	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
 	'NOTIFICATION_TYPE'									=> 'Notification type',
 	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
@@ -3630,7 +3698,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
 	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
 	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
-	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'User requiring activation',
 
 	'NOTIFY_METHOD'					=> 'Metóda upozorňovania',
 	'NOTIFY_METHOD_BOTH'			=> 'Obidve',
@@ -7196,7 +7264,7 @@ $lang = array_merge($lang, array(
 	'KO_NEXT'							=> 'The following teams have reached the next round',
 	'KO_NEXT_CHECK'						=> 'Please, check this teams, because not all rules are considered here. ',
 
-	'MANAGE_GROUP'						=> 'Consider group ranking',
+	'MANAGE_GROUP_FOOTBALL'					=> 'Consider group ranking',
 	'MATCHDAY_NEW'						=> 'The teams qualify till matchday',
 	'MATCHDAY_TARGET'					=> 'Select target matchday',
 	'MOVE_LEAGUE'						=> 'in league',
@@ -13196,6 +13264,7 @@ $lang = array_merge($lang, array(
 	'EXTENSION_NAME'			=> 'Extension Name',
 	'EXTENSION_ACTIONS'			=> 'Akcie',
 	'EXTENSION_OPTIONS'			=> 'Možnosti',
+	'EXTENSION_INSTALL_HEADLINE'=> 'Installing an extension',
 	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
 	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
 			<li>Disable the extension</li>
@@ -13203,7 +13272,7 @@ $lang = array_merge($lang, array(
 			<li>Upload the new files</li>
 			<li>Enable the extension</li>
 		</ol>',
-	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completely removing an extension from your board',
 	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
 			<li>Disable the extension</li>
 			<li>Delete the extension’s data</li>
@@ -13353,7 +13422,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_TO'					=> 'Presunúť príspevky do',
 	'MOVE_SUBFORUMS_TO'				=> 'Presunúť subfóra do',
 
-	'NO_DESTINATION_FORUM'			=> 'Prosím vyberte nejaké fórum ako cieľové',
+	'NO_DESTINATION_FORUM'			=> 'You have not specified a forum to move content to.',
 	'NO_FORUM_ACTION'				=> 'Nebola definovaná akcia pre naloženie s obsahom fóra',
 	'NO_PARENT'						=> 'Nemá nadradené',
 	'NO_PERMISSIONS'				=> 'Nekopírovať oprávnenia',
@@ -13450,12 +13519,12 @@ $lang = array_merge($lang, array(
 	'GROUP_LEAD'					=> 'Lídri skupiny',
 	'GROUP_LEADERS_ADDED'			=> 'Nový lídri skupiny boli pridaní.',
 	'GROUP_LEGEND'					=> 'Zobraziť skupinu v legende',
-	'GROUP_LIST'					=> 'Kontrolovať užívateľov',
+	'GROUP_LIST'					=> 'Current members',
 	'GROUP_LIST_EXPLAIN'			=> 'Toto je kompletný zoznam členov tejto skupiny. Môžete zmazať členov (až na niektoré špeciálne skupiny) alebo ich pridať, podľa toho, ako chcete.',
 	'GROUP_MEMBERS'					=> 'Členovia skupiny',
 	'GROUP_MEMBERS_EXPLAIN'			=> 'Toto je kompletný zoznam členov tejto užívateľskej skupiny. To zahrňuje oddelené sekcie pre lídrov, čakajúcich a existujúcich členov. Tu môžete upravovať všetky aspekty toho, kto má členstvo v tejto skupine a aká je ich rola. Pre zrušenie lídra skupiny, no jeho ponechanie v skupine použite radšej možnosť degradovať lídra skupiny namiesto vymazania. Podobne môžete použiť funkciu Povýšiť na lídra skupiny.',
 	'GROUP_MESSAGE_LIMIT'			=> 'Limit súkromných správ skupiny na zložku',
-	'GROUP_MESSAGE_LIMIT_EXPLAIN'	=> 'Toto nastavenie prepíše nastavenie súkromých správ na zložku pre jednotlivých užívateľov. Hodnota 0 znamená, že sa použije predvolená hodnota pre užívateľa.',
+	'GROUP_MESSAGE_LIMIT_EXPLAIN'	=> 'This setting overrides the per-user folder message limit. The maximum for all groups of the user is used to determine the actual value.<br />Set this value to 0 to overwrite the setting for all users of this group with the board-wide setting.',
 	'GROUP_MODS_ADDED'				=> 'Nový líder skupiny bol úspešne pridaný.',
 	'GROUP_MODS_DEMOTED'			=> 'Lídri skupiny boli úspešne zrušení.',
 	'GROUP_MODS_PROMOTED'			=> 'Členovia skupiny boli úspešne povýšení.',
@@ -13464,7 +13533,7 @@ $lang = array_merge($lang, array(
 	'GROUP_OPEN'					=> 'Otvorená',
 	'GROUP_PENDING'					=> 'Nevyriešené členstvá',
 	'GROUP_MAX_RECIPIENTS'			=> 'Maximálny počet príjemcov jednej súkromnej správy',
-	'GROUP_MAX_RECIPIENTS_EXPLAIN'	=> 'Maximálny počet príjemcov jednej súkromnej správy. Nastavte 0 pre použitie globálneho nastavenia.',
+	'GROUP_MAX_RECIPIENTS_EXPLAIN'	=> 'The maximum number of allowed recipients in a private message. The maximum for all groups of the user is used to determine the actual value.<br />Set this value to 0 to overwrite the setting for all users of this group with the board-wide setting.',
 	'GROUP_OPTIONS_SAVE'			=> 'Nastavenia pre celu skupinu',
 	'GROUP_PROMOTE'					=> 'Povýšiť na lídra skupiny',
 	'GROUP_RANK'					=> 'Hodnosť skupiny',
@@ -13501,6 +13570,8 @@ $lang = array_merge($lang, array(
 	'NO_USERS'					=> 'Zadaní užívatelia neexistujú.',
 	'NO_USERS_ADDED'			=> 'Žiadni užívatelia neboli pridaní do skupiny.',
 	'NO_VALID_USERS'			=> 'Nevložili ste žiadneho užívateľa vhodného pre požadovanú akciu.',
+
+	'PENDING_MEMBERS'			=> 'Pending',
 
 	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> 'Preddefinované skupiny',
@@ -14665,7 +14736,7 @@ $lang = array_merge($lang, array(
 	'ADD_ICONS'				=> 'Pridať viac ikon naraz',
 	'AFTER_ICONS'			=> 'Za %s',
 	'AFTER_SMILIES'			=> 'Za %s',
-	'FIRST'					=> 'Prvý',
+
 	'CODE'						=> 'Kód',
 	'CURRENT_ICONS'				=> 'Súčasné ikonky',
 	'CURRENT_ICONS_EXPLAIN'		=> 'Vyberte si, čo chcete robiť s aktuálne nainštalovanými ikonkami.',
@@ -14683,6 +14754,8 @@ $lang = array_merge($lang, array(
 	'EXPORT_ICONS_EXPLAIN'		=> '%sKliknutím na tento odkaz bude konfiguračný súbor pre inštalované ikonky zabalený do súboru <samp>icons.pak</samp>, ktoré sa dá po stiahnutí použiť pre vytvorenie <samp>.zip</samp> alebo <samp>.tgz</samp> archívu obsahujúceho všetky vaše ikony a tento <samp>icons.pak</samp> konfiguračný súbor%s.',
 	'EXPORT_SMILIES'			=> 'Exportovať a stiahnuť smilies.pak',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sKliknutím na tento odkaz bude konfiguračný súbor pre inštalovaných smajlíkov zabalený do súboru <samp>smilies.pak</samp>, ktoré sa dá po stiahnutí použiť pre vytvorenie <samp>.zip</samp> alebo <samp>.tgz</samp> archívu obsahujúceho všetkých vašich smajlíkov a tento <samp>smilies.pak</samp> konfiguračný súbor%s.',
+
+	'FIRST'			=> 'Prvý',
 
 	'ICONS_ADD'				=> 'Pridať novú ikonku',
 	'ICONS_CONFIG'			=> 'Nastavenie ikoniek',
@@ -14712,7 +14785,8 @@ $lang = array_merge($lang, array(
 	'NO_SMILIES_EXPORT'	=> 'Nemáte žiadnych smajlíkov na vytvorenie balíka.',
 	'NO_SMILIES_PAK'	=> 'Nebol nájdený žiadny balík smajlíkov.',
 
-	'PAK_FILE_NOT_READABLE'	=> '<samp>.pak</samp> súbor sa nedá sa prečítať.',
+	'PAK_FILE_NOT_READABLE'		=> '<samp>.pak</samp> súbor sa nedá sa prečítať.',
+
 	'REPLACE_MATCHES'		=> 'Nahradiť odpovedajúce hodnoty',
 
 	'SELECT_PACKAGE'			=> 'Vybrať súbor balíka',
@@ -14735,7 +14809,7 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'Obrázok smajlíka',
 	'SMILIES_WIDTH'				=> 'Šírka smajlíka',
 
-	'WRONG_PAK_TYPE'		=> 'Zvolený balík neobsahuje potrebné dáta.',
+	'WRONG_PAK_TYPE'	=> 'Zvolený balík neobsahuje potrebné dáta.',
 ));
 
 $lang = array_merge($lang, array(
@@ -15117,7 +15191,7 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
-	// 3.1.0
+	// 3.2.0
 	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 
 	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
@@ -15138,6 +15212,8 @@ $lang = array_merge($lang, array(
 
 	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
 	'NO_UNINSTALLED_STYLE'		=> 'Žiadne odinštalované štýly',
+
+	'PURGED_CACHE2'				=> 'Cache was purged.',
 
 	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
 
@@ -15163,6 +15239,8 @@ $lang = array_merge($lang, array(
 	'STYLE_USED_BY'				=> 'Používa (vrátane botov)',
 
 	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+	'BROWSE_STYLES_DATABASE'	=> 'Browse styles database',
 
 	// 3.0.12
 	'ACP_IMAGESETS'			=> 'Sady obrázkov',

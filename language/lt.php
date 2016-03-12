@@ -183,14 +183,15 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_LANG'				=> 'en',
 	'RECAPTCHA_NOT_AVAILABLE'		=> 'Norėdami naudoti reCaptcha priedą turite užsiregistruoti <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a> puslapyje.',
 	'CAPTCHA_RECAPTCHA'				=> 'reCaptcha',
-	'RECAPTCHA_INCORRECT'			=> 'Vaizdinio patvirtinimo kodas, kurį įrašėte, yra neteisingas',
+	'RECAPTCHA_INCORRECT'			=> 'The solution you provided was incorrect',
+	'RECAPTCHA_NOSCRIPT'			=> 'Please enable JavaScript in your browser to load the challenge.',
 
 	'RECAPTCHA_PUBLIC'				=> 'Viešas reCaptcha raktas',
-	'RECAPTCHA_PUBLIC_EXPLAIN'		=> 'Jūsų viešas reCaptcha raktas. Raktus galite gauti iš <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
+	'RECAPTCHA_PUBLIC_EXPLAIN'		=> 'Your public reCaptcha key. Keys can be obtained on <a href="https://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 	'RECAPTCHA_PRIVATE'				=> 'Privatus reCaptcha raktas',
-	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Jūsų privatus reCaptcha raktas. Raktus galite gauti iš <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
+	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Your private reCaptcha key. Keys can be obtained on <a href="https://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 
-	'RECAPTCHA_EXPLAIN'				=> 'Norėdami apsisaugoti nuo automatinių formų užpildymo mes reikalaujame, kad į teksto lauką įrašytumėte du rodomus žodžius.',
+	'RECAPTCHA_EXPLAIN'				=> 'In an effort to prevent automatic submissions, we require that you complete the following challenge.',
 	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
 ));
 
@@ -212,20 +213,36 @@ $lang = array_merge($lang, array(
 	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
 	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
 	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_LIST'					=> 'List all installed and available migrations.',
 	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DB_REVERT'					=> 'Revert a migration.',
 	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
 	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
 	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
-	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended upon.',
 	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
-	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s integer value',
 	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+
+	'CLI_DESCRIPTION_OPTION_ENV'				=> 'The Environment name.',
 	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
 	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
 	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_REPARSER_LIST'				=> 'Lists the types of text that can be reparsed.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE'			=> 'Reparses stored text with the current text_formatter services.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_ARG_1'	=> 'Type of text to reparse. Leave blank to reparse everything.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_DRY_RUN'		=> 'Do not save any changes; just print what would happen',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_MIN'	=> 'Lowest record ID to process',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_MAX'	=> 'Highest record ID to process',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_SIZE'	=> 'Approximate number of records to process at a time',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RESUME'		=> 'Start reparsing where the last execution stopped',
 	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
 	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
 	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_DESCRIPTION_THUMBNAIL_DELETE'		=> 'Delete all existing thumbnails.',
+	'CLI_DESCRIPTION_THUMBNAIL_GENERATE'	=> 'Generate all missing thumbnails.',
+	'CLI_DESCRIPTION_THUMBNAIL_RECREATE'	=> 'Recreate all thumbnails.',
 
 	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
 	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
@@ -240,6 +257,29 @@ $lang = array_merge($lang, array(
 	'CLI_EXTENSIONS_ENABLED'			=> 'Įjungta',
 
 	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
+
+	'CLI_MIGRATION_NAME'					=> 'Migration name, including the namespace (use forward slashes instead of backslashes to avoid problems).',
+	'CLI_MIGRATIONS_AVAILABLE'				=> 'Available migrations',
+	'CLI_MIGRATIONS_INSTALLED'				=> 'Installed migrations',
+	'CLI_MIGRATIONS_ONLY_AVAILABLE'		    => 'Show only available migrations',
+	'CLI_MIGRATIONS_EMPTY'                  => 'No migrations.',
+
+	'CLI_REPARSER_REPARSE_REPARSING'		=> 'Reparsing %1$s (range %2$d..%3$d)',
+	'CLI_REPARSER_REPARSE_REPARSING_START'	=> 'Reparsing %s...',
+	'CLI_REPARSER_REPARSE_SUCCESS'			=> 'Reparsing ended with success',
+
+	// In all the case %1$s is the logical name of the file and %2$s the real name on the filesystem
+	// eg: big_image.png (2_a51529ae7932008cf8454a95af84cacd) generated.
+	'CLI_THUMBNAIL_DELETED'		=> '%1$s (%2$s) deleted.',
+	'CLI_THUMBNAIL_DELETING'	=> 'Deleting thumbnails',
+	'CLI_THUMBNAIL_SKIPPED'		=> '%1$s (%2$s) skipped.',
+	'CLI_THUMBNAIL_GENERATED'	=> '%1$s (%2$s) generated.',
+	'CLI_THUMBNAIL_GENERATING'	=> 'Generating thumbnails',
+	'CLI_THUMBNAIL_GENERATING_DONE'	=> 'All thumbnails have been regenerated.',
+	'CLI_THUMBNAIL_DELETING_DONE'	=> 'All thumbnails have been deleted.',
+
+	'CLI_THUMBNAIL_NOTHING_TO_GENERATE'	=> 'No thumbnails to generate.',
+	'CLI_THUMBNAIL_NOTHING_TO_DELETE'	=> 'No thumbnails to delete.',
 ));
 
 #######language/en/common.php#######
@@ -285,6 +325,7 @@ $lang = array_merge($lang, array(
 	'ALL_POSTS'						=> 'Visi pranešimai',
 	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'Visos temos',
+	'ALT_TEXT'						=> 'Alternative text',
 	'AND'							=> 'ir',
 	'ARE_WATCHING_FORUM'			=> 'Jūs užsisakėte gauti perspėjimus apie naujus pranešimus šiame forume.',
 	'ARE_WATCHING_TOPIC'			=> 'Jūs užsisakėte gauti perspėjimus apie naujus pranešimus šioje temoje.',
@@ -307,11 +348,13 @@ $lang = array_merge($lang, array(
 	'AVATAR_EMPTY_FILEUPLOAD'		=> 'Įkelto avataro failas yra tuščias.',
 	'AVATAR_INVALID_FILENAME'		=> 'Failo pavadinimas %s yra netinkamas.',
 	'AVATAR_NOT_UPLOADED'			=> 'Avataras neįkeltas.',
+	'AVATAR_NO_TEMP_DIR'			=> 'Temporary folder could not be found or is not writable.',
 	'AVATAR_NO_SIZE'				=> 'Nepavyko nustatyti nutolusio avataro pločio ir aukščio. Įveskite juos patys.',
 	'AVATAR_PARTIAL_UPLOAD'			=> 'Šis failas buvo tik dalinai įkeltas.',
 	'AVATAR_PHP_SIZE_NA'			=> 'Avataro failas per didelis.<br />Nepavyko nustatyti maksimalaus leistino dydžio konfigūraciniame faile php.ini.',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'Avataro failas per didelis. Maksimalus leistinas įkeliamo failo dydis yra %1$d %2$s.<br />Taip nustatyta konfigūraciniame faile php.ini.',
 	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
+	'AVATAR_PHP_UPLOAD_STOPPED'		=> 'A PHP extension has stopped the file upload.',
 	'AVATAR_URL_INVALID'			=> 'Tokio URL adreso nėra.',
 	'AVATAR_URL_NOT_FOUND'			=> 'Tokio failo nėra.',
 	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
@@ -418,6 +461,7 @@ $lang = array_merge($lang, array(
 	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> 'DUK',
 	'FAQ_EXPLAIN'			=> 'Dažnai užduodami klausimai',
+	'FEATURE_NOT_AVAILABLE' => 'The requested feature is not available on this board.',
 	'FILENAME'				=> 'Failo pavadinimas',
 	'FILESIZE'				=> 'Failo dydis',
 	'FILEDATE'				=> 'Failo data',
@@ -440,6 +484,7 @@ $lang = array_merge($lang, array(
 	'FORUM_LOCKED'			=> 'Forumas užrakintas',
 	'FORUM_RULES'			=> 'Forumo taisyklės',
 	'FORUM_RULES_LINK'		=> 'Čia galite perskaityti forumo taisykles',
+	'FROM'					=> 'iš',
 	'FSOCK_DISABLED'		=> 'Operacija neįvykdyta, nes <var>fsockopen</var> funkcija yra išjungta arba nepavyko rasti nurodyto serverio.',
 	'FSOCK_TIMEOUT'			=> 'Nepavyko perskaityti tinklo srauto.',
 
@@ -502,6 +547,7 @@ $lang = array_merge($lang, array(
 	'IMAGE_FILETYPE_INVALID'	=> 'Paveikslėlio failo išplėtimas %d tipui %s nepalaikomas.',
 	'IMAGE_FILETYPE_MISMATCH'	=> 'Nesutampa paveikslėlio tipas: tikėtasi kad failo išplėtimas bus %1$s, tačiau jis buvo %2$s.',
 	'IN'						=> 'forume',
+	'INACTIVE'					=> 'Inactive',
 	'INDEX'						=> 'Pagrindinis diskusijų puslapis', //Index page
 	'INFORMATION'				=> 'Informacija',
 	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
@@ -603,6 +649,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
 	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
 	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_METHOD_INVALID'		=> 'The method "%s" does not refer to a valid notification method.',
 	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
 	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
 	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
@@ -617,7 +664,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
 	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
 	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
-	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for deactivated or newly registered user: “%1$s”',
 	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> 'Praneškite apie tai diskusijų administratoriui.',
 	'NOTIFY_ADMIN_EMAIL'		=> 'Praneškite apie tai diskusijų administratoriui: <a href="mailto:%1$s">%1$s</a>',
@@ -803,10 +850,13 @@ $lang = array_merge($lang, array(
 	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'SMTP serveris nepalaiko autentifikacijos.',
 	'SORRY_AUTH_READ'			=> 'Jūs neturite teisės peržiūrėti šio forumo.',
+	'SORRY_AUTH_READ_TOPIC'		=> 'You are not authorised to read this topic.',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'Jūs neturite teisės atsisiųsti šio failo.',
 	'SORT_BY'					=> 'Rūšiuoti pagal',
+	'SORT_DIRECTION'			=> 'Direction',
 	'SORT_JOINED'				=> 'Registracijos datą',
 	'SORT_LOCATION'				=> 'Vietą',
+	'SORT_OPTIONS'				=> 'Display and sorting options',
 	'SORT_RANK'					=> 'Rangą',
 	'SORT_POSTS'				=> 'Pranešimų skaičių',
 	'SORT_TOPIC_TITLE'			=> 'Temos pavadinimą',
@@ -860,7 +910,6 @@ $lang = array_merge($lang, array(
 	'TOO_SHORT_USERNAME'			=> 'Vartotojo vardas yra per trumpas.',
 	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
 	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
-	
 	'TOO_SMALL'						=> 'Reikšmė, kurią įrašėte, yra per maža.',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> '<strong>Maksimalus asmeninės žinutės gavėjų skaičius</strong> nustatymo reikšmė yra per maža.',
 
@@ -949,8 +998,8 @@ $lang = array_merge($lang, array(
 	'WHO_IS_ONLINE'		=> 'Dabar prisijungę',
 	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'Jūs įvedėte neteisingą slaptažodį.',
-	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 	'WRONG_DATA_JABBER'			=> 'Jūs įvedėte neteisingą Jabber vartotojo vardą.',
 	'WRONG_DATA_LANG'			=> 'Kalba, kurią pasirinkote, yra netinkama.',
 	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
@@ -991,7 +1040,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'		=> 'Rodyti daugiau šypsenėlių',
 	'K_QUICK_REPLY'		=> 'Rodyti greitojo atsakymo lauką',
 	'ADD_SMILIES'			=> 'Pridėti keletą šypsenėlių',
-	'ATTACH_SIG'			=> 'Pridėti parašą (parašus galite keisti per vartotojo valdymo pultą)',
+	'ATTACH_SIG'			=> 'Attach a signature (signatures can be altered via the UCP)',
 	'DISABLE_BBCODE'		=> 'Išjungti BBKodą',
 	'DISABLE_MAGIC_URL'		=> 'Išjungti automatinį URL adresų apdorojimą',
 	'DISABLE_SMILIES'		=> 'Išjungti šypsenėles',
@@ -1163,7 +1212,6 @@ $lang = array_merge($lang, array(
 	'SHOP_PCS'				=> 'pcs.',
 	'SHOP_MORE_DETAIL'		=> 'Find more details and items in the ',
 
-	'FROM'			=> 'iš',
 	'XMODS'				=> 'ENGLISH',
 	'SMILIES_CATS'		=> 'Smiley Categories',
 	'ARCADE_GAMETIME'	=> 'Play Time',
@@ -1255,7 +1303,7 @@ $lang = array_merge($lang, array(
 
 	'ARCADE_EXPLAIN'		=> 'Play games in the arcade',
 	'PERSONAL_ALBUM'		=> 'Personal Album',
-	'VC_REFRESH'			=> 'Atnaujinti patvirtinimo kodą',
+	'VC_REFRESH'			=> 'Refresh confirmation code',
 	'VC_REFRESH_EXPLAIN'		=> 'Jeigu negalite perskaityti kodo, galite paprašyti naujo paspaudę mygtuką.',
 	'CHALLANGE'			=> '1 vs. 1',
 
@@ -1642,7 +1690,7 @@ $lang = array_merge($lang, array(
 	'GROUP_JOIN_PENDING_CONFIRM'		=> 'Ar tikrai norite siųsti prašymą prisijungti prie šios grupės?',
 	'GROUP_JOINED'						=> 'Jūs sėkmingai prisijungėte prie pasirinktos grupės.',
 	'GROUP_JOINED_PENDING'				=> 'Prašymas prisijungti prie grupės sėkmingai išsiųstas. Palaukite kol grupės lyderis patvirtins jūsų prašymą.',
-	'GROUP_LIST'						=> 'Valdyti vartotojus',
+	'GROUP_LIST'						=> 'Current members',
 	'GROUP_MEMBERS'						=> 'Grupės nariai',
 	'GROUP_NAME'						=> 'Grupės pavadinimas',
 	'GROUP_OPEN'						=> 'Atvira',
@@ -1796,7 +1844,7 @@ $lang = array_merge($lang, array(
 	'DLL_XML'					=> 'XML palaikymas [ Jabber ]',
 	'DLL_ZLIB'					=> 'zlib kompresijos palaikymas [ gz, .tar.gz, .zip ]',
 	'DL_CONFIG'					=> 'Konfigūracijos failo atsisiuntimas',
-	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'Atsisiųsti',
 	'DONE'						=> 'Baigta',
 
@@ -1960,7 +2008,7 @@ $lang = array_merge($lang, array(
 	'SERVER_CONFIG'				=> 'Serverio nustatymai',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Paieškos indeksas nebuvo konvertuotas',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Senas paieškos indeksas nebuvo konvertuotas. Paieška naujoje diskusijų lentoje visada gražins tuščią rezultatą. Norėdami sukurti naują paieškos indeksą, eikite į administratoriaus valdymo pultą, pasirinkite Priežiūrą ir iš submeniu pasirinkite Paieškos indekso punktą.',
-	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
+	'SELECT_FORUM_GA'			=> 'In phpBB the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> 'Diskusijų lentos programinė įranga',
 	'SPECIFY_OPTIONS'			=> 'Įveskite konversijos nustatymus',
 	'STAGE_ADMINISTRATOR'		=> 'Administratoriaus aprašymas',
@@ -1968,7 +2016,7 @@ $lang = array_merge($lang, array(
 	'STAGE_ADVANCED_EXPLAIN'	=> 'Keisti šiuos nustatymus reikia tik tada, jeigu tikrai žinote, kad jums reikia kitokių nei standartiniai nustatymų. Jeigu jūs neįsitikinę, tiesiog eikite į kitą puslapį, kadangi šiuos nustatymus visada galima pakeisti per administratoriaus valdymo pultą.',
 	'STAGE_CONFIG_FILE'			=> 'Konfigūracijos failas',
 	'STAGE_CREATE_TABLE'		=> 'Duomenų bazės lentelių kūrimas',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'Duomenų bazės nustatymai',
 	'STAGE_FINAL'				=> 'Paskutinis etapas',
 	'STAGE_INTRO'				=> 'Įžanga',
@@ -2275,9 +2323,23 @@ $lang = array_merge($lang, array(
 	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
 	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
 	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_INSTALLED'			=> 'The migration "%s" is not installed.',
 	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
 	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
 	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MIGRATION_REVERT_DATA_DONE'		=> 'Reverted Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_DATA_IN_PROGRESS'	=> 'Reverting Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_DATA_RUNNING'		=> 'Reverting Data: %s.',
+	'MIGRATION_REVERT_SCHEMA_DONE'		=> 'Reverted Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_SCHEMA_RUNNING'	=> 'Reverting Schema: %s.',
+
+	'MIGRATION_INVALID_DATA_MISSING_CONDITION'		=> 'A migration is invalid. An if statement helper is missing a condition.',
+	'MIGRATION_INVALID_DATA_MISSING_STEP'			=> 'A migration is invalid. An if statement helper is missing a valid call to a migration step.',
+	'MIGRATION_INVALID_DATA_CUSTOM_NOT_CALLABLE'	=> 'A migration is invalid. A custom callable function could not be called.',
+	'MIGRATION_INVALID_DATA_UNKNOWN_TYPE'			=> 'A migration is invalid. An unknown migration tool type was encountered.',
+	'MIGRATION_INVALID_DATA_UNDEFINED_TOOL'			=> 'A migration is invalid. An undefined migration tool was encountered.',
+	'MIGRATION_INVALID_DATA_UNDEFINED_METHOD'		=> 'A migration is invalid. An undefined migration tool method was encountered.',
 
 	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
 	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
@@ -2385,6 +2447,7 @@ $lang = array_merge($lang, array(
 	'LOCK_TOPICS_CONFIRM'		=> 'Ar tikrai norite užrakinti visas pasirinktas temas?',
 	'LOGS_CURRENT_TOPIC'		=> 'Rodomi įrašai apie:',
 	'LOGIN_EXPLAIN_MCP'			=> 'Norėdami moderuoti šį forumą, turite prisijungti.',
+	'LOGVIEW_VIEWPOST'			=> 'Rodyti pranešimą',
 	'LOGVIEW_VIEWTOPIC'			=> 'Peržiūrėti temą',
 	'LOGVIEW_VIEWLOGS'			=> 'Peržiūrėti temos veiksmų registrą',
 	'LOGVIEW_VIEWFORUM'			=> 'Peržiūrėti forumą',
@@ -2486,7 +2549,7 @@ $lang = array_merge($lang, array(
 	'NOTIFY_POSTER_DISAPPROVAL'		=> 'Ar informuoti autorių apie atmestą pranešimą?',
 	'NOTIFY_USER_WARN'				=> 'Ar informuoti vartotoją apie perspėjimą?',
 	'NOT_MODERATOR'					=> 'Jūs nesate šio forumo moderatorius.',
-	'NO_DESTINATION_FORUM'			=> 'Pasirinkite forumą į kurį norite perkelti.',
+	'NO_DESTINATION_FORUM'			=> 'You have not specified a forum to move content to.',
 	'NO_DESTINATION_FORUM_FOUND'	=> 'Tokio forumo nėra.',
 	'NO_ENTRIES'					=> 'Pasirinktu periodu nėra jokių įrašų.',
 	'NO_FEEDBACK'					=> 'Atsiliepimų apie vartotoją nėra.',
@@ -2738,6 +2801,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'Norėdami ieškoti vartotojų, turite prisijungti.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'Norėdami peržiūrėti vartotojų aprašymus, turite prisijungti.',
 
+	'MANAGE_GROUP'			=> 'Manage Group',
 	'MORE_THAN'				=> 'Daugiau nei',
 
 	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
@@ -2746,7 +2810,7 @@ $lang = array_merge($lang, array(
 	'NO_VIEW_USERS'			=> 'Jūs neturite teisių peržiūrėti diskusijų dalyvių sąrašo arba aprašymų.',
 
 	'ORDER'					=> 'Eilė',
-	'OTHER'					=> 'Kiti',
+	'OTHER'					=> 'Other',
 
 	'POST_IP'				=> 'Rašo iš IP adreso/domeno',
 
@@ -3083,7 +3147,7 @@ $lang = array_merge($lang, array(
 	'ALREADY_DELETED'			=> 'Atsiprašome, tačiau šis pranešimas jau ištrintas.',
 	'ATTACH_DISK_FULL'			=> 'Nepakanka laisvos vietos diske.',
 	'ATTACH_QUOTA_REACHED'		=> 'Atsiprašome, tačiau buvo pasiekta diskusijų lentos kvota.',
-	'ATTACH_SIG'				=> 'Pridėti parašą (parašus galite keisti per vartotojo valdymo pultą)',
+	'ATTACH_SIG'				=> 'Attach a signature (signatures can be altered via the UCP)',
 
 	'BBCODE_A_HELP'				=> 'Failo įtraukimas į pranešimą: [attachment=]failopavadinimas.gal[/attachment]',
 	'BBCODE_B_HELP'				=> 'Paryškintas tekstas: [b]tekstas[/b]',
@@ -3186,8 +3250,10 @@ $lang = array_merge($lang, array(
 	'NO_POLL_TITLE'				=> 'Jūs turite įrašyti apklausos pavadinimą.',
 	'NO_POST'					=> 'Norėdami perspėti vartotoją dėl pranešimo, turite pasirinkti pranešimą.',
 	'NO_POST_MODE'				=> 'Nepasirinktas rašymo režimas.',
+	'NO_TEMP_DIR'				=> 'Temporary folder could not be found or is not writable.',
 
 	'PARTIAL_UPLOAD'			=> 'Failas įkeltas tik dalinai.',
+	'PHP_UPLOAD_STOPPED'		=> 'A PHP extension has stopped the file upload.',
 	'PHP_SIZE_NA'				=> 'Prikabintas failas per didelis.<br />Nepavyko nustatyti maksimalaus leistino failų dydžio konfigūraciniame PHP faile php.ini.',
 	'PHP_SIZE_OVERRUN'			=> 'Prikabintas failas per didelis. Maksimalus leistinas failo dydis yra %1$d %2$s.<br />Taip nustatyta konfigūraciniame faile php.ini.',
 	'PLACE_INLINE'				=> 'Įtraukti į pranešimą',
@@ -3300,6 +3366,7 @@ $lang = array_merge($lang, array(
 	'NO_RECENT_SEARCHES'	=> 'Paskutiniu metu nevykdyta jokia paieška.',
 	'NO_SEARCH'				=> 'Atsiprašome, tačiau jūs neturite teisės naudotis paieškos sistema.',
 	'NO_SEARCH_RESULTS'		=> 'Nerastas nei vienas atitikmuo.',
+	'NO_SEARCH_LOAD'		=> 'Sorry but you cannot use search at this time. The server has high load. Please try again later.',
 	'NO_SEARCH_UNREADS'		=> 'Atsiprašome, tačiau šioje lentoje neperskaitytų pranešimų paieška yra išjungta.',
 	'WORD_IN_NO_POST'		=> 'Pranešimų nėra, kadangi žodžio <strong>%s</strong> nėra nei viename pranešime.',
 	'WORDS_IN_NO_POST'		=> 'Pranešimų nėra, kadangi žodžių <strong>%s</strong> nėra nei viename pranešime.',
@@ -3444,7 +3511,7 @@ $lang = array_merge($lang, array(
 	'CONFIRMATION'				=> 'Registracijos patvirtinimas',
 	'CONFIRM_CHANGES'			=> 'Patvirtinti pakeitimus',
 	'CONFIRM_EXPLAIN'			=> 'Patvirtinimo kodas skirtas apsaugai nuo automatinių registracijų. Patį kodą turite matyti paveikslėlyje apačioje. Jeigu blogai matote, arba dėl kokių nors kitų priežasčių negalite jo perskaityti, kreipkitės į %sdiskusijų administratorių%s.',
-	'VC_REFRESH'				=> 'Atnaujinti patvirtinimo kodą',
+	'VC_REFRESH'				=> 'Refresh confirmation code',
 	'VC_REFRESH_EXPLAIN'		=> 'Jeigu negalite perskaityti kodo, galite paprašyti naujo paspaudę mygtuką.',
 
 	'CONFIRM_PASSWORD'			=> 'Slaptažodžio patvirtinimas',
@@ -3617,7 +3684,8 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
 	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
 	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
-	'NOTIFICATION_METHOD_EMAIL'							=> 'El. paštą',
+	'NOTIFICATION_METHOD_BOARD'							=> 'Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'Email',
 	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
 	'NOTIFICATION_TYPE'									=> 'Notification type',
 	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
@@ -3629,7 +3697,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
 	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
 	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
-	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'User requiring activation',
 
 	'NOTIFY_METHOD'					=> 'Informavimo būdas',
 	'NOTIFY_METHOD_BOTH'			=> 'Abu',
@@ -7195,7 +7263,7 @@ $lang = array_merge($lang, array(
 	'KO_NEXT'							=> 'The following teams have reached the next round',
 	'KO_NEXT_CHECK'						=> 'Please, check this teams, because not all rules are considered here. ',
 
-	'MANAGE_GROUP'						=> 'Consider group ranking',
+	'MANAGE_GROUP_FOOTBALL'					=> 'Consider group ranking',
 	'MATCHDAY_NEW'						=> 'The teams qualify till matchday',
 	'MATCHDAY_TARGET'					=> 'Select target matchday',
 	'MOVE_LEAGUE'						=> 'in league',
@@ -13195,6 +13263,7 @@ $lang = array_merge($lang, array(
 	'EXTENSION_NAME'			=> 'Extension Name',
 	'EXTENSION_ACTIONS'			=> 'Veiksmai',
 	'EXTENSION_OPTIONS'			=> 'Nustatymai',
+	'EXTENSION_INSTALL_HEADLINE'=> 'Installing an extension',
 	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
 	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
 			<li>Disable the extension</li>
@@ -13202,7 +13271,7 @@ $lang = array_merge($lang, array(
 			<li>Upload the new files</li>
 			<li>Enable the extension</li>
 		</ol>',
-	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completely removing an extension from your board',
 	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
 			<li>Disable the extension</li>
 			<li>Delete the extension’s data</li>
@@ -13352,7 +13421,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_TO'					=> 'Perkelti pranešimus į',
 	'MOVE_SUBFORUMS_TO'				=> 'Perkelti subforumus į',
 
-	'NO_DESTINATION_FORUM'			=> 'Pasirinkite forumą į kurį norite perkelti.',
+	'NO_DESTINATION_FORUM'			=> 'You have not specified a forum to move content to.',
 	'NO_FORUM_ACTION'				=> 'Nenurodėte ką daryti su forumo turiniu.',
 	'NO_PARENT'						=> 'Pirmame diskusijų puslapyje',
 	'NO_PERMISSIONS'				=> 'Nekopijuoti teisių',
@@ -13449,12 +13518,12 @@ $lang = array_merge($lang, array(
 	'GROUP_LEAD'					=> 'Grupės lyderiai',
 	'GROUP_LEADERS_ADDED'			=> 'Nauji lyderiai pridėti į grupę sėkmingai.',
 	'GROUP_LEGEND'					=> 'Rodyti grupę legendoje',
-	'GROUP_LIST'					=> 'Valdyti vartotojus',
+	'GROUP_LIST'					=> 'Current members',
 	'GROUP_LIST_EXPLAIN'			=> 'Tai visas dabartinių šios grupės narių sąrašas. Jeigu reikia, čia galite ištrinti (išskyrus specialias grupes) arba pridėti naujus narius.',
 	'GROUP_MEMBERS'					=> 'Grupės nariai',
 	'GROUP_MEMBERS_EXPLAIN'			=> 'Tai visas dabartinių šios grupės narių sąrašas. Atskiruose skyriuose galite matyti grupės lyderius, vartotojus, kurių narystė dar nepatvirtinta ir esamus narius. Iš čia galite valdyti kas yra šios grupės narys ir kokia jų rolė. Norėdami pašalinti lyderį, bet vis dar išlaikyti jį grupėje netrinkite jo, o pažeminkite pareigose. Panašiai, kad padaryti grupės narį lyderiu, galite paaukštinti esamą narį pareigose.',
 	'GROUP_MESSAGE_LIMIT'			=> 'Grupės asmeninių žinučių skaičius kataloge',
-	'GROUP_MESSAGE_LIMIT_EXPLAIN'	=> 'Šis nustatymas bus naudojamas vietoj vartotojo lygio asmeninių žinučių skaičiaus kataloge nustatymo. Jeigu norite naudoti vartotojo lygio nustatymą, įrašykite 0.',
+	'GROUP_MESSAGE_LIMIT_EXPLAIN'	=> 'This setting overrides the per-user folder message limit. The maximum for all groups of the user is used to determine the actual value.<br />Set this value to 0 to overwrite the setting for all users of this group with the board-wide setting.',
 	'GROUP_MODS_ADDED'				=> 'Nauji lyderiai pridėti į grupę sėkmingai.',
 	'GROUP_MODS_DEMOTED'			=> 'Grupės lyderiai pažeminti pareigose sėkmingai.',
 	'GROUP_MODS_PROMOTED'			=> 'Grupės nariai paskelbti lyderiais sėkmingai.',
@@ -13463,7 +13532,7 @@ $lang = array_merge($lang, array(
 	'GROUP_OPEN'					=> 'Atvira',
 	'GROUP_PENDING'					=> 'Nepatvirtintas narys',
 	'GROUP_MAX_RECIPIENTS'			=> 'Maksimalus asmeninės žinutės gavėjų skaičius',
-	'GROUP_MAX_RECIPIENTS_EXPLAIN'	=> 'Maksimalus leistinas gavėjų skaičius kiekvienoje asmeninėje žinutė. Jeigu įrašysite 0, bus naudojamas bendras lentos nustatymas.',
+	'GROUP_MAX_RECIPIENTS_EXPLAIN'	=> 'The maximum number of allowed recipients in a private message. The maximum for all groups of the user is used to determine the actual value.<br />Set this value to 0 to overwrite the setting for all users of this group with the board-wide setting.',
 	'GROUP_OPTIONS_SAVE'			=> 'Grupės nustatymai',
 	'GROUP_PROMOTE'					=> 'Paskelbti grupės lyderiu',
 	'GROUP_RANK'					=> 'Grupės rangas',
@@ -13500,6 +13569,8 @@ $lang = array_merge($lang, array(
 	'NO_USERS'					=> 'Vartotojai, kurį nurodėte, neegzistuoja.',
 	'NO_USERS_ADDED'			=> 'Nepridėtas nei vienas vartotojas.',
 	'NO_VALID_USERS'			=> 'Jūs neįvedėte nei vieno vartotojo, su kuriuo galima atlikti šį veiksmą.',
+
+	'PENDING_MEMBERS'			=> 'Pending',
 
 	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> 'Specialios grupės',
@@ -14663,7 +14734,7 @@ $lang = array_merge($lang, array(
 	'ADD_ICONS'				=> 'Pridėti keletą piktogramų',
 	'AFTER_ICONS'			=> 'Po %s',
 	'AFTER_SMILIES'			=> 'Po %s',
-	'FIRST'					=> 'Pirma',
+
 	'CODE'						=> 'Kodas',
 	'CURRENT_ICONS'				=> 'Įdiegtos piktogramos',
 	'CURRENT_ICONS_EXPLAIN'		=> 'Pasirinkite ką norite daryti su dabar įdiegtomis piktogramomis.',
@@ -14681,6 +14752,8 @@ $lang = array_merge($lang, array(
 	'EXPORT_ICONS_EXPLAIN'		=> '%sKai paspausite ant šios nuorodos, visų įdiegtų piktogramų nustatymai bus supakuoti į <samp>icons.pak</samp> failą, kurį atsisiuntę galėsite sukurti <samp>.zip</samp> arba <samp>.tgz</samp> failą su visomis piktogramomis ir šiuo <samp>icons.pak</samp> nustatymų failu%s.',
 	'EXPORT_SMILIES'			=> 'Eksportuoti ir atsisiųsti smilies.pak',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sKai paspausite ant šios nuorodos, visų įdiegtų šypsenėlių nustatymai bus supakuoti į <samp>smilies.pak</samp> failą, kurį atsisiuntę galėsite sukurti <samp>.zip</samp> arba <samp>.tgz</samp> failą su visomis šypsenėlėmis ir šiuo <samp>smilies.pak</samp> nustatymų failu%s.',
+
+	'FIRST'			=> 'Pirma',
 
 	'ICONS_ADD'				=> 'Pridėti naują piktogramą',
 	'ICONS_CONFIG'			=> 'Piktogramos nustatymai',
@@ -14710,7 +14783,8 @@ $lang = array_merge($lang, array(
 	'NO_SMILIES_EXPORT'	=> 'Jūs neturite šypsenėlių, iš kurių galima sukurti paketą.',
 	'NO_SMILIES_PAK'	=> 'Šypsenėlių paketų nėra.',
 
-	'PAK_FILE_NOT_READABLE'	=> 'Nepavyko perskaityti <samp>.pak</samp> failo.',
+	'PAK_FILE_NOT_READABLE'		=> 'Nepavyko perskaityti <samp>.pak</samp> failo.',
+
 	'REPLACE_MATCHES'		=> 'Perrašyti sutampančias',
 
 	'SELECT_PACKAGE'			=> 'Pasirinkite paketo failą',
@@ -14733,7 +14807,7 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'Šypsenėlės paveikslėlio failas',
 	'SMILIES_WIDTH'				=> 'Šypsenėlės plotis',
 
-	'WRONG_PAK_TYPE'		=> 'Nurodytame pakete nėra reikiamų duomenų.',
+	'WRONG_PAK_TYPE'	=> 'Nurodytame pakete nėra reikiamų duomenų.',
 ));
 
 $lang = array_merge($lang, array(
@@ -15115,7 +15189,7 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
-	// 3.1.0
+	// 3.2.0
 	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 
 	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
@@ -15136,6 +15210,8 @@ $lang = array_merge($lang, array(
 
 	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
 	'NO_UNINSTALLED_STYLE'		=> 'Neįdiegtų stilių nėra.',
+
+	'PURGED_CACHE2'				=> 'Cache was purged.',
 
 	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
 
@@ -15161,6 +15237,8 @@ $lang = array_merge($lang, array(
 	'STYLE_USED_BY'				=> 'Naudoja vartotojų (įskaitant robotus)',
 
 	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+	'BROWSE_STYLES_DATABASE'	=> 'Browse styles database',
 
 	// 3.0.12
 	'ACP_IMAGESETS'			=> 'Paveikslėlių komplektai',

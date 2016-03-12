@@ -183,14 +183,15 @@ $lang = array_merge($lang, array(
 	'RECAPTCHA_LANG'				=> 'hr',
 	'RECAPTCHA_NOT_AVAILABLE'		=> 'Morate registrirati račun na <a href="http://recaptcha.net">reCaptcha.net</a> kako bi mogli koristiti reCaptcha.',
 	'CAPTCHA_RECAPTCHA'				=> 'reCaptcha',
-	'RECAPTCHA_INCORRECT'			=> 'Upisali ste krivi potvrdni kod',
+	'RECAPTCHA_INCORRECT'			=> 'The solution you provided was incorrect',
+	'RECAPTCHA_NOSCRIPT'			=> 'Please enable JavaScript in your browser to load the challenge.',
 
 	'RECAPTCHA_PUBLIC'				=> 'Javni reCaptcha ključ',
-	'RECAPTCHA_PUBLIC_EXPLAIN'		=> 'Tvoj javni reCaptcha ključ. Ključevi se mogu nabaviti na <a href="http://recaptcha.net">reCaptcha.net</a>.',
+	'RECAPTCHA_PUBLIC_EXPLAIN'		=> 'Your public reCaptcha key. Keys can be obtained on <a href="https://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 	'RECAPTCHA_PRIVATE'				=> 'Privatni reCaptcha kljuc',
-	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Tvoj privatni reCaptcha kljuc. Ključevi se mogu nabaviti na <a href="http://recaptcha.net">reCaptcha.net</a>.',
+	'RECAPTCHA_PRIVATE_EXPLAIN'		=> 'Your private reCaptcha key. Keys can be obtained on <a href="https://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 
-	'RECAPTCHA_EXPLAIN'				=> 'Kako bi spriječili automatsko slanje, molimo te da upišeš obje prikazane riječi u polje za upis teksta.',
+	'RECAPTCHA_EXPLAIN'				=> 'In an effort to prevent automatic submissions, we require that you complete the following challenge.',
 	'RECAPTCHA_SOCKET_ERROR'		=> 'There was a problem connecting to the RECAPTCHA service: could not open socket. Try again later.',
 ));
 
@@ -212,20 +213,36 @@ $lang = array_merge($lang, array(
 	'CLI_DESCRIPTION_CRON_LIST'					=> 'Prints a list of ready and unready cron jobs.',
 	'CLI_DESCRIPTION_CRON_RUN'					=> 'Runs all ready cron tasks.',
 	'CLI_DESCRIPTION_CRON_RUN_ARGUMENT_1'		=> 'Name of the task to be run',
+	'CLI_DESCRIPTION_DB_LIST'					=> 'List all installed and available migrations.',
 	'CLI_DESCRIPTION_DB_MIGRATE'				=> 'Updates the database by applying migrations.',
+	'CLI_DESCRIPTION_DB_REVERT'					=> 'Revert a migration.',
 	'CLI_DESCRIPTION_DELETE_CONFIG'				=> 'Deletes a configuration option',
 	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
 	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
-	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended on.',
+	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended upon.',
 	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
-	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s value',
+	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s integer value',
 	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
+
+	'CLI_DESCRIPTION_OPTION_ENV'				=> 'The Environment name.',
 	'CLI_DESCRIPTION_OPTION_SAFE_MODE'			=> 'Run in Safe Mode (without extensions).',
 	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
 	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
+	'CLI_DESCRIPTION_REPARSER_LIST'				=> 'Lists the types of text that can be reparsed.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE'			=> 'Reparses stored text with the current text_formatter services.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_ARG_1'	=> 'Type of text to reparse. Leave blank to reparse everything.',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_DRY_RUN'		=> 'Do not save any changes; just print what would happen',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_MIN'	=> 'Lowest record ID to process',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_MAX'	=> 'Highest record ID to process',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RANGE_SIZE'	=> 'Approximate number of records to process at a time',
+	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_RESUME'		=> 'Start reparsing where the last execution stopped',
 	'CLI_DESCRIPTION_RECALCULATE_EMAIL_HASH'	=> 'Recalculates the user_email_hash column of the users table.',
 	'CLI_DESCRIPTION_SET_ATOMIC_CONFIG'			=> 'Sets a configuration option’s value only if the old matches the current value',
 	'CLI_DESCRIPTION_SET_CONFIG'				=> 'Sets a configuration option’s value',
+
+	'CLI_DESCRIPTION_THUMBNAIL_DELETE'		=> 'Delete all existing thumbnails.',
+	'CLI_DESCRIPTION_THUMBNAIL_GENERATE'	=> 'Generate all missing thumbnails.',
+	'CLI_DESCRIPTION_THUMBNAIL_RECREATE'	=> 'Recreate all thumbnails.',
 
 	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
 	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
@@ -240,6 +257,29 @@ $lang = array_merge($lang, array(
 	'CLI_EXTENSIONS_ENABLED'			=> 'Omogućeno',
 
 	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
+
+	'CLI_MIGRATION_NAME'					=> 'Migration name, including the namespace (use forward slashes instead of backslashes to avoid problems).',
+	'CLI_MIGRATIONS_AVAILABLE'				=> 'Available migrations',
+	'CLI_MIGRATIONS_INSTALLED'				=> 'Installed migrations',
+	'CLI_MIGRATIONS_ONLY_AVAILABLE'		    => 'Show only available migrations',
+	'CLI_MIGRATIONS_EMPTY'                  => 'No migrations.',
+
+	'CLI_REPARSER_REPARSE_REPARSING'		=> 'Reparsing %1$s (range %2$d..%3$d)',
+	'CLI_REPARSER_REPARSE_REPARSING_START'	=> 'Reparsing %s...',
+	'CLI_REPARSER_REPARSE_SUCCESS'			=> 'Reparsing ended with success',
+
+	// In all the case %1$s is the logical name of the file and %2$s the real name on the filesystem
+	// eg: big_image.png (2_a51529ae7932008cf8454a95af84cacd) generated.
+	'CLI_THUMBNAIL_DELETED'		=> '%1$s (%2$s) deleted.',
+	'CLI_THUMBNAIL_DELETING'	=> 'Deleting thumbnails',
+	'CLI_THUMBNAIL_SKIPPED'		=> '%1$s (%2$s) skipped.',
+	'CLI_THUMBNAIL_GENERATED'	=> '%1$s (%2$s) generated.',
+	'CLI_THUMBNAIL_GENERATING'	=> 'Generating thumbnails',
+	'CLI_THUMBNAIL_GENERATING_DONE'	=> 'All thumbnails have been regenerated.',
+	'CLI_THUMBNAIL_DELETING_DONE'	=> 'All thumbnails have been deleted.',
+
+	'CLI_THUMBNAIL_NOTHING_TO_GENERATE'	=> 'No thumbnails to generate.',
+	'CLI_THUMBNAIL_NOTHING_TO_DELETE'	=> 'No thumbnails to delete.',
 ));
 
 #######language/en/common.php#######
@@ -285,6 +325,7 @@ $lang = array_merge($lang, array(
 	'ALL_POSTS'						=> 'Svi postovi',
 	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'Sve teme',
+	'ALT_TEXT'						=> 'Alternative text',
 	'AND'							=> 'i',
 	'ARE_WATCHING_FORUM'			=> 'Pretplaćeni ste na ovaj forum.',
 	'ARE_WATCHING_TOPIC'			=> 'Pretplaćeni ste na ovu temu.',
@@ -307,11 +348,13 @@ $lang = array_merge($lang, array(
 	'AVATAR_EMPTY_FILEUPLOAD'		=> 'Avatar je prazan. Pokušajte drugi ili ponovite ako smatrate da je u redu.',
 	'AVATAR_INVALID_FILENAME'		=> '%s je nedozvoljen naziv.',
 	'AVATAR_NOT_UPLOADED'			=> 'Avatar nije učitan.',
+	'AVATAR_NO_TEMP_DIR'			=> 'Temporary folder could not be found or is not writable.',
 	'AVATAR_NO_SIZE'				=> 'Širinu ili visinu ili oboje nije moguće utvrditi pokušajte ih unjeti ručno.',
 	'AVATAR_PARTIAL_UPLOAD'			=> 'Navedena datoteka je samo djelomično učitana.',
 	'AVATAR_PHP_SIZE_NA'			=> 'Veličina avatara je prevelika.<br />Najveća veličina nije mogla biti određena.',
 	'AVATAR_PHP_SIZE_OVERRUN'		=> 'Težina avatara je prevelika. Najveća dozvoljena težina je %1$d %2$s.<br />Molimo imajte na umu da je ovo postavljeno unutar php.ini i ne može biti zanemareno kao takvo.',
 	'AVATAR_REMOTE_UPLOAD_TIMEOUT'		=> 'The specified avatar could not be uploaded because the request timed out.',
+	'AVATAR_PHP_UPLOAD_STOPPED'		=> 'A PHP extension has stopped the file upload.',
 	'AVATAR_URL_INVALID'			=> 'URL koji ste naveli nije ispravan.',
 	'AVATAR_URL_NOT_FOUND'			=> 'Navedena datoteka nije pronađena.',
 	'AVATAR_WRONG_FILESIZE'			=> 'The avatar’s filesize must be between 0 and %1$d %2$s.',
@@ -418,6 +461,7 @@ $lang = array_merge($lang, array(
 	'FACEBOOK'				=> 'Facebook',
 	'FAQ'					=> 'FAQ',
 	'FAQ_EXPLAIN'			=> 'Često postavljena pitanja',
+	'FEATURE_NOT_AVAILABLE' => 'The requested feature is not available on this board.',
 	'FILENAME'				=> 'Naziv datoteke',
 	'FILESIZE'				=> 'Veličina datoteke',
 	'FILEDATE'				=> 'Datum',
@@ -440,6 +484,7 @@ $lang = array_merge($lang, array(
 	'FORUM_LOCKED'			=> 'Forum je zaključan',
 	'FORUM_RULES'			=> 'Pravila foruma',
 	'FORUM_RULES_LINK'		=> 'Pravila foruma',
+	'FROM'					=> 'od',
 	'FSOCK_DISABLED'		=> 'Funkcija <var>fsockopen</var> je onemoguća odnosno nije moguće povezati se za serverom poradi čega operaciju nije moguće izvršiti.',
 	'FSOCK_TIMEOUT'			=> 'Prilikom čitanja mrežnog protoka došlo je do istjeka vremena.',
 
@@ -502,6 +547,7 @@ $lang = array_merge($lang, array(
 	'IMAGE_FILETYPE_INVALID'	=> 'Ovaj tip slike %d kao vrsta %s nije podržana.',
 	'IMAGE_FILETYPE_MISMATCH'	=> 'Neslaganje vrsta datoteke slike: očekivana ekstenzija %1$s, dana ekstenzija %2$s.',
 	'IN'						=> 'u',
+	'INACTIVE'					=> 'Inactive',
 	'INDEX'						=> 'Početna', //Index page
 	'INFORMATION'				=> 'Informacije',
 	'INSECURE_REDIRECT'			=> 'Tried to redirect to potentially insecure url.',
@@ -603,6 +649,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_FORUM'				=> '<em>Forum:</em> %1$s',
 	'NOTIFICATION_GROUP_REQUEST'		=> '<strong>Group request</strong> from %1$s to join the group %2$s.',
 	'NOTIFICATION_GROUP_REQUEST_APPROVED'	=> '<strong>Group request approved</strong> to join the group %1$s.',
+	'NOTIFICATION_METHOD_INVALID'		=> 'The method "%s" does not refer to a valid notification method.',
 	'NOTIFICATION_PM'					=> '<strong>Private Message</strong> from %1$s:',
 	'NOTIFICATION_POST_APPROVED'		=> '<strong>Post approved</strong>:',
 	'NOTIFICATION_POST_DISAPPROVED'		=> '<strong>Post disapproved</strong>:',
@@ -617,7 +664,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_TOPIC_DISAPPROVED'	=> '<strong>Topic disapproved</strong>:',
 	'NOTIFICATION_TOPIC_IN_QUEUE'		=> '<strong>Topic approval</strong> request by %1$s:',
 	'NOTIFICATION_TYPE_NOT_EXIST'		=> 'The notification type "%s" is missing from the file system.',
-	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for newly registered user: “%1$s”',
+	'NOTIFICATION_ADMIN_ACTIVATE_USER'	=> '<strong>Activation required</strong> for deactivated or newly registered user: “%1$s”',
 	'NOTIFICATION_MANY_OTHERS'			=> 'others',
 	'NOTIFY_ADMIN'				=> 'Molim obavijesti administratora foruma.',
 	'NOTIFY_ADMIN_EMAIL'		=> 'Molim obavijesti administratora: <a href="mailto:%1$s">%1$s</a>.',
@@ -803,10 +850,13 @@ $lang = array_merge($lang, array(
 	'SKYPE'						=> 'Skype',
 	'SMTP_NO_AUTH_SUPPORT'		=> 'SMTP server ne podržava ovu autentičnost.',
 	'SORRY_AUTH_READ'			=> 'Vi nemate ovlasti za čitanje ovog foruma.',
+	'SORRY_AUTH_READ_TOPIC'		=> 'You are not authorised to read this topic.',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'Vi nemate ovlasti za preuzimanje ovog privitka.',
 	'SORT_BY'					=> 'Sortiraj po',
+	'SORT_DIRECTION'			=> 'Direction',
 	'SORT_JOINED'				=> 'Datumu pristupa',
 	'SORT_LOCATION'				=> 'Lokaciji',
+	'SORT_OPTIONS'				=> 'Display and sorting options',
 	'SORT_RANK'					=> 'Ranku',
 	'SORT_POSTS'				=> 'Postu',
 	'SORT_TOPIC_TITLE'			=> 'Naslovu teme',
@@ -860,7 +910,6 @@ $lang = array_merge($lang, array(
 	'TOO_SHORT_USERNAME'			=> 'Korisničko ime je prekratko.',
 	'TOO_SHORT_EMAIL'				=> 'The email address you entered is too short.',
 	'TOO_SHORT_EMAIL_CONFIRM'		=> 'The email address confirmation you entered is too short.',
-	
 	'TOO_SMALL'						=> 'Unešena vrijednost je premala.',
 	'TOO_SMALL_MAX_RECIPIENTS'		=> 'Vrijednost! <strong> Maksimalni broj dozvoljenih primatelja po privatnoj poruci! </ strong> Postavke koje ste unijeli su premale.',
 
@@ -949,8 +998,8 @@ $lang = array_merge($lang, array(
 	'WHO_IS_ONLINE'		=> 'Tko je online',
 	'WLM'				=> 'WLM',
 	'WRONG_PASSWORD'	=> 'Upisali ste pogrešnu lozinku.',
-	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 
+	'WRONG_DATA_COLOUR'			=> 'The colour value you entered is invalid.',
 	'WRONG_DATA_JABBER'			=> 'Ime koje ste naveli nije ispravno Jabber korisničko ime.',
 	'WRONG_DATA_LANG'			=> 'Jezik koji ste naveli nije valjan.',
 	'WRONG_DATA_POST_SD'		=> 'The post sort direction you specified is not valid.',
@@ -991,7 +1040,7 @@ $lang = array_merge($lang, array(
 	'MORE_SMILIES'		=> 'Ostali smajlići',
 	'K_QUICK_REPLY'		=> 'Brzi Odgovor',
 	'ADD_SMILIES'			=> 'Dodaj smajliće višestruko',
-	'ATTACH_SIG'			=> 'Dodaj potpis',
+	'ATTACH_SIG'			=> 'Attach a signature (signatures can be altered via the UCP)',
 	'DISABLE_BBCODE'		=> 'Onemogući BBKod',
 	'DISABLE_MAGIC_URL'		=> 'Ne prikazuj automatski URL-ove kao linkove',
 	'DISABLE_SMILIES'		=> 'Onemogući smajliće',
@@ -1163,7 +1212,6 @@ $lang = array_merge($lang, array(
 	'SHOP_PCS'				=> 'pcs.',
 	'SHOP_MORE_DETAIL'		=> 'Find more details and items in the ',
 
-	'FROM'			=> 'od',
 	'XMODS'				=> 'ENGLISH',
 	'SMILIES_CATS'		=> 'Smiley Categories',
 	'ARCADE_GAMETIME'	=> 'Play Time',
@@ -1255,7 +1303,7 @@ $lang = array_merge($lang, array(
 
 	'ARCADE_EXPLAIN'		=> 'Play games in the arcade',
 	'PERSONAL_ALBUM'		=> 'Personal Album',
-	'VC_REFRESH'			=> 'Osvježi potvrdni kod',
+	'VC_REFRESH'			=> 'Refresh confirmation code',
 	'VC_REFRESH_EXPLAIN'		=> 'Ukoliko ne možeš “pročitati“ potvrdni kod, klikom na gumb možeš zatražiti novi.',
 	'CHALLANGE'			=> '1 vs. 1',
 
@@ -1642,7 +1690,7 @@ $lang = array_merge($lang, array(
 	'GROUP_JOIN_PENDING_CONFIRM'		=> 'Jesi li siguran/na da želiš pristupiti grupi?',
 	'GROUP_JOINED'						=> 'Od sada si član/ica grupe.',
 	'GROUP_JOINED_PENDING'				=> 'Uspješno si se prijavio/la za pristupanje grupi.<br />Ostaje ti pričekati da moderatori/ca grupe odobri zahtjev.',
-	'GROUP_LIST'						=> 'Administriranje korisnika/ca',
+	'GROUP_LIST'						=> 'Current members',
 	'GROUP_MEMBERS'						=> 'Članstvo',
 	'GROUP_NAME'						=> 'Naziv',
 	'GROUP_OPEN'						=> 'Otvorena',
@@ -1796,7 +1844,7 @@ $lang = array_merge($lang, array(
 	'DLL_XML'					=> 'XML podrška [Jabber]',
 	'DLL_ZLIB'					=> 'Podrška za zlib komprimiranje [gz, .tar.gz, .zip]',
 	'DL_CONFIG'					=> 'Preuzmi config',
-	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB 3.1 root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
+	'DL_CONFIG_EXPLAIN'			=> 'You may download the complete config.php to your own PC. You will then need to upload the file manually, replacing any existing config.php in your phpBB root directory. Please remember to upload the file in ASCII format (see your FTP application documentation if you are unsure how to achieve this). When you have uploaded the config.php please click “Done” to move to the next stage.',
 	'DL_DOWNLOAD'				=> 'Preuzimanje',
 	'DONE'						=> 'Gotovo',
 
@@ -1961,7 +2009,7 @@ Sada imaš phpBB %1$s koji je uspješno instaliran. Molimo da nastaviš odabirom
 	'SERVER_CONFIG'				=> 'Konfiguracija servera',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Indeks pretraživanja nije konvertiran.',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Stari indeks pretraživanja nije konvertiran što će reći da će pretraživanje davati “prazne” rezultate, no, možeš kreirati novi indeks pretraživanja na način da odeš u <em>Administriranje foruma</em> te pod <em>Održavanjem</em> izabereš <em>Indeks(e) pretraživanja</em>.',
-	'SELECT_FORUM_GA'			=> 'In phpBB 3.1 the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
+	'SELECT_FORUM_GA'			=> 'In phpBB the global announcements are linked to forums. Select a forum for your current global announcements (can be moved later):',
 	'SOFTWARE'					=> 'Forumski softver',
 	'SPECIFY_OPTIONS'			=> 'Odredi opcije konverzije',
 	'STAGE_ADMINISTRATOR'		=> 'Detalji administratora/ice',
@@ -1969,7 +2017,7 @@ Sada imaš phpBB %1$s koji je uspješno instaliran. Molimo da nastaviš odabirom
 	'STAGE_ADVANCED_EXPLAIN'	=> 'Postavke na ovoj stranici moraš podesiti samo ako znaš da nešto moraš postaviti drugačije od zadanog. Ukoliko nisi siguran/na, (jednostavno) prijeđi na sljedeći korak jer (ove) postavke možeš naknadno izmijeniti/promijeniti u <em>Administraciji foruma</em>.',
 	'STAGE_CONFIG_FILE'			=> 'Konfiguracijska datoteka',
 	'STAGE_CREATE_TABLE'		=> 'Kreiranje tablice baze podataka',
-	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB 3.1 have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
+	'STAGE_CREATE_TABLE_EXPLAIN'	=> 'The database tables used by phpBB have been created and populated with some initial data. Proceed to the next screen to finish installing phpBB.',
 	'STAGE_DATABASE'			=> 'Postavke baze podataka',
 	'STAGE_FINAL'				=> 'Završna faza',
 	'STAGE_INTRO'				=> 'Uvod',
@@ -2276,9 +2324,23 @@ $lang = array_merge($lang, array(
 	'MIGRATION_EFFECTIVELY_INSTALLED'	=> 'Migration already effectively installed (skipped): %s',
 	'MIGRATION_EXCEPTION_ERROR'			=> 'Something went wrong during the request and an exception was thrown. The changes made before the error occurred were reversed to the best of our abilities, but you should check the board for errors.',
 	'MIGRATION_NOT_FULFILLABLE'			=> 'The migration "%1$s" is not fulfillable, missing migration "%2$s".',
+	'MIGRATION_NOT_INSTALLED'			=> 'The migration "%s" is not installed.',
 	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
 	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
 	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
+
+	'MIGRATION_REVERT_DATA_DONE'		=> 'Reverted Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_DATA_IN_PROGRESS'	=> 'Reverting Data: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_DATA_RUNNING'		=> 'Reverting Data: %s.',
+	'MIGRATION_REVERT_SCHEMA_DONE'		=> 'Reverted Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_SCHEMA_RUNNING'	=> 'Reverting Schema: %s.',
+
+	'MIGRATION_INVALID_DATA_MISSING_CONDITION'		=> 'A migration is invalid. An if statement helper is missing a condition.',
+	'MIGRATION_INVALID_DATA_MISSING_STEP'			=> 'A migration is invalid. An if statement helper is missing a valid call to a migration step.',
+	'MIGRATION_INVALID_DATA_CUSTOM_NOT_CALLABLE'	=> 'A migration is invalid. A custom callable function could not be called.',
+	'MIGRATION_INVALID_DATA_UNKNOWN_TYPE'			=> 'A migration is invalid. An unknown migration tool type was encountered.',
+	'MIGRATION_INVALID_DATA_UNDEFINED_TOOL'			=> 'A migration is invalid. An undefined migration tool was encountered.',
+	'MIGRATION_INVALID_DATA_UNDEFINED_METHOD'		=> 'A migration is invalid. An undefined migration tool method was encountered.',
 
 	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
 	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
@@ -2386,6 +2448,7 @@ $lang = array_merge($lang, array(
 	'LOCK_TOPICS_CONFIRM'		=> 'Jesi li siguran/na da želiš zaključati teme?',
 	'LOGS_CURRENT_TOPIC'		=> 'Pregledava logove od:',
 	'LOGIN_EXPLAIN_MCP'			=> 'Za moderiranje foruma, moraš se prijaviti.',
+	'LOGVIEW_VIEWPOST'			=> 'Post',
 	'LOGVIEW_VIEWTOPIC'			=> 'Pogledaj temu',
 	'LOGVIEW_VIEWLOGS'			=> 'Pogledaj logove',
 	'LOGVIEW_VIEWFORUM'			=> 'Pogledaj forum',
@@ -2487,7 +2550,7 @@ $lang = array_merge($lang, array(
 	'NOTIFY_POSTER_DISAPPROVAL'		=> 'Obavijesti autora/icu o neodobrenju.',
 	'NOTIFY_USER_WARN'				=> 'Obavijesti korisnika/cu o upozorenju.',
 	'NOT_MODERATOR'					=> 'Nisi moderator/ica ovog foruma.',
-	'NO_DESTINATION_FORUM'			=> 'Izaberi odredišni forum.',
+	'NO_DESTINATION_FORUM'			=> 'You have not specified a forum to move content to.',
 	'NO_DESTINATION_FORUM_FOUND'	=> 'Nema dostupnog odredišnog foruma.',
 	'NO_ENTRIES'					=> 'Nema logova za ovaj period.',
 	'NO_FEEDBACK'					=> 'Nema povratnih odgovora za ovog/u korisnika/cu.',
@@ -2739,6 +2802,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'Za pretraživanje Članstva, moraš se prijaviti.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'Za pregledavanje profila korisnika/ca, moraš se prijaviti.',
 
+	'MANAGE_GROUP'			=> 'Manage Group',
 	'MORE_THAN'				=> '>',
 
 	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',
@@ -2747,7 +2811,7 @@ $lang = array_merge($lang, array(
 	'NO_VIEW_USERS'			=> 'Nemaš dopuštenje za pristup popisu/profilima Članstva.',
 
 	'ORDER'					=> 'Redanje',
-	'OTHER'					=> 'Ostalo',
+	'OTHER'					=> 'Other',
 
 	'POST_IP'				=> 'Postano s IP/domene',
 
@@ -3084,7 +3148,7 @@ $lang = array_merge($lang, array(
 	'ALREADY_DELETED'			=> 'Post/poruka je već izbrisan/a.',
 	'ATTACH_DISK_FULL'			=> 'Nema dovoljno slobodnog prostora na serveru kako bi mogli dodati ovaj prilog.',
 	'ATTACH_QUOTA_REACHED'		=> 'Forumska kvota za privitke je dosegnuta.',
-	'ATTACH_SIG'				=> 'Dodaj potpis',
+	'ATTACH_SIG'				=> 'Attach a signature (signatures can be altered via the UCP)',
 
 	'BBCODE_A_HELP'				=> 'Umetanje datoteke: [attachment=]naziv_datoteke.ext[/attachment]',
 	'BBCODE_B_HELP'				=> 'Podebljanje teksta: [b]tekst[/b]',
@@ -3187,8 +3251,10 @@ $lang = array_merge($lang, array(
 	'NO_POLL_TITLE'				=> 'Unesi naslov ankete.',
 	'NO_POST'					=> 'Moraš izabrati post ukoliko želiš upozoriti korisnika/cu zbog posta.',
 	'NO_POST_MODE'				=> 'Nije određen način postanja.',
+	'NO_TEMP_DIR'				=> 'Temporary folder could not be found or is not writable.',
 
 	'PARTIAL_UPLOAD'			=> 'Poslan je samo dio datoteke, nije poslana cijela datoteka.',
+	'PHP_UPLOAD_STOPPED'		=> 'A PHP extension has stopped the file upload.',
 	'PHP_SIZE_NA'				=> 'Privitak je prevelik.<br />Ustanovljavanje maksimalne dopuštene veličine definirane PHP-om u php.ini nije uspjelo.',
 	'PHP_SIZE_OVERRUN'			=> 'Privitak je prevelik.<br />Maksimalna dopuštena veličina je %1$d %2$s.<br />Maksimalna dopuštena veličina definirana je u php.ini.',
 	'PLACE_INLINE'				=> 'Umetni',
@@ -3301,6 +3367,7 @@ $lang = array_merge($lang, array(
 	'NO_RECENT_SEARCHES'	=> 'Tražilica nije nedavno korištena.',
 	'NO_SEARCH'				=> 'Nemaš dopuštenje za korištenje Pretražnika.',
 	'NO_SEARCH_RESULTS'		=> 'Ništa nije pronađeno.',
+	'NO_SEARCH_LOAD'		=> 'Sorry but you cannot use search at this time. The server has high load. Please try again later.',
 	'NO_SEARCH_UNREADS'		=> 'Žao nam je ali pretraga novih poruka je onemogućena',
 	'WORD_IN_NO_POST'		=> 'Nije pronađen niti jedan post zato što riječ <strong>%s</strong> ne postoji u niti jednom postu.',
 	'WORDS_IN_NO_POST'		=> 'Nije pronađen niti jedan post zato što riječi <strong>%s</strong> ne postoje u niti jednom postu.',
@@ -3445,7 +3512,7 @@ $lang = array_merge($lang, array(
 	'CONFIRMATION'				=> 'Potvrda registracije',
 	'CONFIRM_CHANGES'			=> 'Potvrda promjena',
 	'CONFIRM_EXPLAIN'			=> 'Poradi sprječavanja automatskog registriranja, administrator/ica je uključio/la opciju obveznog unosa potvrdnog koda.<br />Kod je prikazan na slici koju bi trebao/la vidjeti ispod.<br />Ukoliko nikako ne možeš pročitati kod, kontaktiraj %sadministratora/icu%s.',
-	'VC_REFRESH'				=> 'Osvježi potvrdni kod',
+	'VC_REFRESH'				=> 'Refresh confirmation code',
 	'VC_REFRESH_EXPLAIN'		=> 'Ukoliko ne možeš “pročitati“ potvrdni kod, klikom na gumb možeš zatražiti novi.',
 
 	'CONFIRM_PASSWORD'			=> 'Potvrdi lozinku',
@@ -3618,7 +3685,8 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_GROUP_MODERATION'						=> 'Moderation Notifications',
 	'NOTIFICATION_GROUP_ADMINISTRATION'					=> 'Administration Notifications',
 	'NOTIFICATION_GROUP_POSTING'						=> 'Posting Notifications',
-	'NOTIFICATION_METHOD_EMAIL'							=> 'E-mail',
+	'NOTIFICATION_METHOD_BOARD'							=> 'Notifications',
+	'NOTIFICATION_METHOD_EMAIL'							=> 'Email',
 	'NOTIFICATION_METHOD_JABBER'						=> 'Jabber',
 	'NOTIFICATION_TYPE'									=> 'Notification type',
 	'NOTIFICATION_TYPE_BOOKMARK'						=> 'Someone replies to a topic you have bookmarked',
@@ -3630,7 +3698,7 @@ $lang = array_merge($lang, array(
 	'NOTIFICATION_TYPE_QUOTE'							=> 'Someone quotes you in a post',
 	'NOTIFICATION_TYPE_REPORT'							=> 'Someone reports a post',
 	'NOTIFICATION_TYPE_TOPIC'							=> 'Someone creates a topic in a forum to which you are subscribed',
-	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'Newly registered user requiring activation',
+	'NOTIFICATION_TYPE_ADMIN_ACTIVATE_USER'				=> 'User requiring activation',
 
 	'NOTIFY_METHOD'					=> 'Obavješćivanje',
 	'NOTIFY_METHOD_BOTH'			=> 'Oboje',
@@ -7196,7 +7264,7 @@ $lang = array_merge($lang, array(
 	'KO_NEXT'							=> 'The following teams have reached the next round',
 	'KO_NEXT_CHECK'						=> 'Please, check this teams, because not all rules are considered here. ',
 
-	'MANAGE_GROUP'						=> 'Consider group ranking',
+	'MANAGE_GROUP_FOOTBALL'					=> 'Consider group ranking',
 	'MATCHDAY_NEW'						=> 'The teams qualify till matchday',
 	'MATCHDAY_TARGET'					=> 'Select target matchday',
 	'MOVE_LEAGUE'						=> 'in league',
@@ -13196,6 +13264,7 @@ $lang = array_merge($lang, array(
 	'EXTENSION_NAME'			=> 'Extension Name',
 	'EXTENSION_ACTIONS'			=> 'Radnje',
 	'EXTENSION_OPTIONS'			=> 'Opcije',
+	'EXTENSION_INSTALL_HEADLINE'=> 'Installing an extension',
 	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
 	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
 			<li>Disable the extension</li>
@@ -13203,7 +13272,7 @@ $lang = array_merge($lang, array(
 			<li>Upload the new files</li>
 			<li>Enable the extension</li>
 		</ol>',
-	'EXTENSION_REMOVE_HEADLINE'	=> 'Completly removing an extension from your board',
+	'EXTENSION_REMOVE_HEADLINE'	=> 'Completely removing an extension from your board',
 	'EXTENSION_REMOVE_EXPLAIN'	=> '<ol>
 			<li>Disable the extension</li>
 			<li>Delete the extension’s data</li>
@@ -13353,7 +13422,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_TO'					=> 'Premjesti postove u',
 	'MOVE_SUBFORUMS_TO'				=> 'Premjesti podforume u',
 
-	'NO_DESTINATION_FORUM'			=> 'Izaberi odredišni forum.',
+	'NO_DESTINATION_FORUM'			=> 'You have not specified a forum to move content to.',
 	'NO_FORUM_ACTION'				=> 'Nije odabrana radnja vezana uz to što će biti sa sadržajem foruma.',
 	'NO_PARENT'						=> 'Bez krovnog foruma',
 	'NO_PERMISSIONS'				=> 'Nemoj kopirati dopuštenja',
@@ -13450,12 +13519,12 @@ $lang = array_merge($lang, array(
 	'GROUP_LEAD'					=> 'Vođe grupe',
 	'GROUP_LEADERS_ADDED'			=> 'Novi/e vođe dodani/e su grupi.',
 	'GROUP_LEGEND'					=> 'Prikaži grupu u legendi',
-	'GROUP_LIST'					=> 'Administriranje korisnika/ca',
+	'GROUP_LIST'					=> 'Current members',
 	'GROUP_LIST_EXPLAIN'			=> 'Ispod se nalazi kompletna lista svih članova/ica grupe.<br />Ovdje možeš dodavati nove članove/ice odnosno izbrisati stare [osim ukoliko se radi o određenoj specijalnoj grupi].',
 	'GROUP_MEMBERS'					=> 'Članstvo',
 	'GROUP_MEMBERS_EXPLAIN'			=> 'Ispod se nalazi kompletna lista svih članova/ica grupe.<br />Uključuje odvojene odjeljke za vođe, članove/ice “na čekanju” i (stvarne) članove/ice.<br />Odavde možeš upravljati svim aspektima (a) vezano uz to tko je korisnik/ca grupe i koju ulogu (u grupi) ima. Ukoliko vođu grupe želiš smijeniti s položaja, ali ne i isključiti iz grupe, možeš to opcijom <em>Smijeni s položaja vođe grupe</em>. Želiš li člana/icu grupe imenovati vođom grupe, možeš to opcijom <em>Postavi za vođu grupe</em>.',
 	'GROUP_MESSAGE_LIMIT'			=> 'Privatnu(e) poruku(e) grupe ograniči na mapu(e)',
-	'GROUP_MESSAGE_LIMIT_EXPLAIN'	=> 'Ove postavke prepisuju (dotadašnje) postavke korisnika/ce (a) vezane uz ograničenje(a) mapa poruka.<br />Vrijednost 0 znači da će biti korištena zadana ograničenja korisnika/ce.',
+	'GROUP_MESSAGE_LIMIT_EXPLAIN'	=> 'This setting overrides the per-user folder message limit. The maximum for all groups of the user is used to determine the actual value.<br />Set this value to 0 to overwrite the setting for all users of this group with the board-wide setting.',
 	'GROUP_MODS_ADDED'				=> 'Novi/e vođe dodani/e su grupi.',
 	'GROUP_MODS_DEMOTED'			=> 'Vođe grupe smijenjeni/e su s položaja.',
 	'GROUP_MODS_PROMOTED'			=> 'Članovi/ce grupe postavljeni su za (promovirani/e su u) vođe grupe.',
@@ -13464,7 +13533,7 @@ $lang = array_merge($lang, array(
 	'GROUP_OPEN'					=> 'Otvorena',
 	'GROUP_PENDING'					=> 'Čekaš odobrenje za pristupanje',
 	'GROUP_MAX_RECIPIENTS'			=> 'Maksimalan broj dopuštenih primatelja/ica po privatnoj poruci',
-	'GROUP_MAX_RECIPIENTS_EXPLAIN'	=> 'Maksimalan broj dopuštenih primatelja/ica po svakoj privatnoj poruci [0=bit će korištene postavke foruma].',
+	'GROUP_MAX_RECIPIENTS_EXPLAIN'	=> 'The maximum number of allowed recipients in a private message. The maximum for all groups of the user is used to determine the actual value.<br />Set this value to 0 to overwrite the setting for all users of this group with the board-wide setting.',
 	'GROUP_OPTIONS_SAVE'			=> 'Postavke grupa',
 	'GROUP_PROMOTE'					=> 'Postavi za vođu grupe',
 	'GROUP_RANK'					=> 'Status',
@@ -13501,6 +13570,8 @@ $lang = array_merge($lang, array(
 	'NO_USERS'					=> 'Korisnička imena na forumu ne postoje.',
 	'NO_USERS_ADDED'			=> 'Niti jedan/na korisnik/ca nije dodan/a grupi.',
 	'NO_VALID_USERS'			=> 'Nisi unio/la niti jednog/u korisnika/cu izaberivog/u za odabranu radnju.',
+
+	'PENDING_MEMBERS'			=> 'Pending',
 
 	'SELECT_GROUP'				=> 'Select a group',
 	'SPECIAL_GROUPS'			=> 'Pred-definirane grupe',
@@ -14647,7 +14718,7 @@ $lang = array_merge($lang, array(
 	'ADD_ICONS'				=> 'Dodaj ikone višestruko',
 	'AFTER_ICONS'			=> 'Iza %s',
 	'AFTER_SMILIES'			=> 'Iza %s',
-	'FIRST'					=> 'Prvi/a',
+
 	'CODE'						=> 'Kod',
 	'CURRENT_ICONS'				=> 'Trenutne ikone',
 	'CURRENT_ICONS_EXPLAIN'		=> 'Izaberi što želiš napraviti s trenutno instaliranim ikonama.',
@@ -14665,6 +14736,8 @@ $lang = array_merge($lang, array(
 	'EXPORT_ICONS_EXPLAIN'		=> '%sKlikom na (ovaj) link, konfiguracija instaliranih ikona bit će zapakirana u <samp>icons.pak</samp> datoteku, koja, preuzeta, može biti iskorištena za kreiranje <samp>.zip</samp> ili <samp>.tgz</samp> datoteke koja će sadržavati sve ikone plus ovu <samp>icons.pak</samp> konfiguracijsku datoteku%s.',
 	'EXPORT_SMILIES'			=> 'Eksportiraj i preuzmi smilies.pak',
 	'EXPORT_SMILIES_EXPLAIN'	=> '%sKlikom na (ovaj) link, konfiguracija instaliranih smajlića bit će zapakirana u <samp>smilies.pak</samp> datoteku, koja, preuzeta, može biti iskorištena za kreiranje <samp>.zip</samp> ili <samp>.tgz</samp> datoteke koja će sadržavati sve smajliće plus ovu <samp>smilies.pak</samp> konfiguracijsku datoteku%s.',
+
+	'FIRST'			=> 'Prvi/a',
 
 	'ICONS_ADD'				=> 'Dodaj ikonu',
 	'ICONS_CONFIG'			=> 'Konfiguracija ikone/a',
@@ -14694,7 +14767,8 @@ $lang = array_merge($lang, array(
 	'NO_SMILIES_EXPORT'	=> 'Nema smajlića pomoću kojih bi bilo moguće kreirati paket smajlića.',
 	'NO_SMILIES_PAK'	=> 'Nije pronađen niti jedan paket smajlića.',
 
-	'PAK_FILE_NOT_READABLE'	=> 'Nije moguće (pro)čitati <samp>.pak</samp> datoteku.',
+	'PAK_FILE_NOT_READABLE'		=> 'Nije moguće (pro)čitati <samp>.pak</samp> datoteku.',
+
 	'REPLACE_MATCHES'		=> 'Zamijeni podudarajuće',
 
 	'SELECT_PACKAGE'			=> 'Izaberi datoteku paketa',
@@ -14717,7 +14791,7 @@ $lang = array_merge($lang, array(
 	'SMILIES_URL'				=> 'Datoteka slike smajlića',
 	'SMILIES_WIDTH'				=> 'Širina smajlića',
 
-	'WRONG_PAK_TYPE'		=> 'Paket ne sadrži odgovarajuće podatke.',
+	'WRONG_PAK_TYPE'	=> 'Paket ne sadrži odgovarajuće podatke.',
 ));
 
 $lang = array_merge($lang, array(
@@ -15099,7 +15173,7 @@ $lang = array_merge($lang, array(
 #######language/en/acp/styles.php#######
 
 $lang = array_merge($lang, array(
-	// 3.1.0
+	// 3.2.0
 	'ACP_STYLES_EXPLAIN'	=> 'Here you can manage the available styles on your board. You may alter existing styles, delete, deactivate, reactivate, install new ones. You can also see what a style will look like using the preview function. Also listed is the total user count for each style, note that overriding user styles will not be reflected here.',
 
 	'CANNOT_BE_INSTALLED'			=> 'Cannot be installed',
@@ -15120,6 +15194,8 @@ $lang = array_merge($lang, array(
 
 	'NO_MATCHING_STYLES_FOUND'	=> 'No styles match your query.',
 	'NO_UNINSTALLED_STYLE'		=> 'Nema neinstaliranih stilova.',
+
+	'PURGED_CACHE2'				=> 'Cache was purged.',
 
 	'REQUIRES_STYLE'			=> 'This style requires the style "%s" to be installed.',
 
@@ -15145,6 +15221,8 @@ $lang = array_merge($lang, array(
 	'STYLE_USED_BY'				=> 'Koristi (uključujući robote)',
 
 	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+	'BROWSE_STYLES_DATABASE'	=> 'Browse styles database',
 
 	// 3.0.12
 	'ACP_IMAGESETS'			=> 'Setovi slika',
