@@ -1725,6 +1725,86 @@ $lang = array_merge($lang, array(
 #######language/en/install.php#######
 
 $lang = array_merge($lang, array(
+	'INSTALL_PANEL'	=> 'स्थापना पटल',
+	'SELECT_LANG'	=> 'भाषा चयन करें',
+	'STAGE_INSTALL'	=> 'Installing phpBB',
+
+	// Introduction page
+	'INTRODUCTION_TITLE'	=> 'परिचय',
+	'INTRODUCTION_BODY'		=> 'Welcome to phpBB3!<br /><br />phpBB® is the most widely used open source bulletin board solution in the world. phpBB3 is the latest installment in a package line started in 2000. Like its predecessors, phpBB3 is feature-rich, user-friendly, and fully supported by the phpBB Team. phpBB3 greatly improves on what made phpBB2 popular, and adds commonly requested features that were not present in previous versions. We hope it exceeds your expectations.<br /><br />This installation system will guide you through installing phpBB3, updating to the latest version of phpBB3 from past releases, as well as converting to phpBB3 from a different discussion board system (including phpBB2). For more information, we encourage you to read <a href="../docs/INSTALL.html">the installation guide</a>.<br /><br />To read the phpBB3 license or learn about obtaining support and our stance on it, please select the respective options from the side menu. To continue, please select the appropriate tab above.',
+
+	// Support page
+	'SUPPORT_TITLE'		=> 'सहायता',
+	'SUPPORT_BODY_INSTALL'	=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/docs/en/3.1/ug/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
+
+	// License
+	'LICENSE_TITLE'		=> 'सामान्य पब्लिक लाईसेन्स General Public License',
+
+	// Install page
+	'INSTALL_INTRO'			=> 'स्थापना में आपका स्वागत हैं',
+	'INSTALL_INTRO_BODY'	=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
+
+	<ul>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
+	</ul>
+
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
+
+	<p>phpBB3 supports the following databases:</p>
+	<ul>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
+		<li>SQLite 2.8.2+</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
+		<li>Oracle</li>
+	</ul>
+
+	<p>Only those databases supported on your server will be displayed.',
+
+	'ACP_LINK'	=> 'Take me to <a href="%1$s">the ACP</a>',
+
+	'INSTALL_PHPBB_INSTALLED'		=> 'phpBB is already installed.',
+	'INSTALL_PHPBB_NOT_INSTALLED'	=> 'phpBB is not installed yet.',
+
+
+	// Filesystem requirements
+	'FILE_NOT_EXISTS'			=> 'File not exists',
+	'FILE_NOT_EXISTS_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to exist.',
+	'FILE_NOT_WRITABLE'			=> 'File not writable',
+	'FILE_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to be writable.',
+
+	'DIRECTORY_NOT_EXISTS'				=> 'Directory not exists',
+	'DIRECTORY_NOT_EXISTS_EXPLAIN'		=> 'To be able to install phpBB the %1$s directory needs to exist.',
+	'DIRECTORY_NOT_WRITABLE'			=> 'Directory not writable',
+	'DIRECTORY_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s directory needs to be writable.',
+
+	// Server requirements
+	'PHP_VERSION_REQD'					=> 'PHP version',
+	'PHP_VERSION_REQD_EXPLAIN'			=> 'phpBB requires PHP version 5.4.0 or higher.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
+	'PCRE_UTF_SUPPORT'					=> 'PCRE UTF-8 support',
+	'PCRE_UTF_SUPPORT_EXPLAIN'			=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_JSON_SUPPORT'					=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'			=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_SUPPORTED_DB'					=> 'सर्मथित आंकड़ाकोष',
+	'PHP_SUPPORTED_DB_EXPLAIN'			=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
+
+	'RETEST_REQUIREMENTS'	=> 'Retest requirements',
+
+	'STAGE_REQUIREMENTS'	=> 'Check requirements',
+
+	'INST_ERR_MISSING_DATA'		=> 'आपको इस ब्लॉक के सभी फिल्ड भरने हैं ।',
+
+	'TIMEOUT_DETECTED_TITLE'	=> 'The installer detected a timeout',
+	'TIMEOUT_DETECTED_MESSAGE'	=> 'The installer has detected a timeout, you may try to refresh the page, which may lead to data corruption. We suggest that you either increase your timeout settings or try to use the CLI.',
+
 	'ADMIN_CONFIG'				=> 'प्रशासक विन्यास',
 	'ADMIN_PASSWORD'			=> 'प्रशासक गुप्तशब्द',
 	'ADMIN_PASSWORD_CONFIRM'	=> 'प्रशासक गुप्तशब्द की पुष्टी करें',
@@ -1788,7 +1868,7 @@ $lang = array_merge($lang, array(
 	'CONV_ERROR_INSERT_BOTGROUP'		=> 'Unable to insert bot into bots table.',
 	'CONV_ERROR_INSERT_USER_GROUP'		=> 'उपयोक्ता समूह टेबल में उपयोक्ता को लाने में असफल।',
 	'CONV_ERROR_MESSAGE_PARSER'			=> 'Message parser error',
-	'CONV_ERROR_NO_AVATAR_PATH'			=> 'Note to developer: you must specify $convertor[\'avatar_path\'] to use %s.',
+	'CONV_ERROR_NO_AVATAR_PATH'			=> 'Note to developer: you must specify convertor[avatar_path] to use %s.',
 	'CONV_ERROR_NO_FORUM_PATH'			=> 'The relative path to the source board has not been specified.',
 	'CONV_ERROR_NO_GALLERY_PATH'		=> 'Note to developer: you must specify $convertor[\'avatar_gallery_path\'] to use %s.',
 	'CONV_ERROR_NO_GROUP'				=> 'Group “%1$s” could not be found in %2$s.',
@@ -1880,65 +1960,45 @@ $lang = array_merge($lang, array(
 		<p>The phpBB Unified Convertor Framework supports the conversion of phpBB 2.0.x and other board systems to phpBB3. If you have an existing board that you wish to convert, please <a href="%2$s">proceed on to the convertor</a>.</p>
 		<h2>Go live with your phpBB3!</h2>
 		<p>Clicking the button below will take you to your Administration Control Panel (ACP). Take some time to examine the options available to you. Remember that help is available online via the <a href="http://www.phpbb.com/support/documentation/3.0/">Documentation</a> and the <a href="http://www.phpbb.com/community/viewforum.php?f=46">support forums</a>, see the <a href="%3$s">README</a> for further information.</p><p><strong>Please now delete, move or rename the install directory before you use your board. If this directory is still present, only the Administration Control Panel (ACP) will be accessible.</strong></p>',
-	'INSTALL_INTRO'				=> 'स्थापना में आपका स्वागत हैं',
 
-	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
-
-	<ul>
-		<li>The Database Type - the database you will be using.</li>
-		<li>The Database server hostname or DSN - the address of the database server.</li>
-		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
-		<li>The Database name - the name of the database on the server.</li>
-		<li>The Database username and Database password - the login data to access the database.</li>
-	</ul>
-
-	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
-
-	<p>phpBB3 supports the following databases:</p>
-	<ul>
-		<li>MySQL 3.23 or above (MySQLi supported)</li>
-		<li>PostgreSQL 8.3+</li>
-		<li>SQLite 2.8.2+</li>
-		<li>SQLite 3.6.15+</li>
-		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
-		<li>MS SQL Server 2005 or above (native)</li>
-		<li>Oracle</li>
-	</ul>
-
-	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'स्थापना प्रारम्भ करने हेतु ,कृपया निम्न बटन दबाये.',
 	'INSTALL_LOGIN'				=> 'सत्रारंभ',
 	'INSTALL_NEXT'				=> 'अगला पद',
 	'INSTALL_NEXT_FAIL'			=> 'Some tests failed and you should correct these problems before proceeding to the next stage. Failure to do so may result in an incomplete installation.',
 	'INSTALL_NEXT_PASS'			=> 'All the basic tests have been passed and you may proceed to the next stage of installation. If you have changed any permissions, modules, etc. and wish to re-test you can do so if you wish.',
-	'INSTALL_PANEL'				=> 'स्थापना पटल',
 	'INSTALL_SEND_CONFIG'		=> 'Unfortunately phpBB could not write the configuration information directly to your config.php. This may be because the file does not exist or is not writable. A number of options will be listed below enabling you to complete installation of config.php.',
 	'INSTALL_START'				=> 'स्थापना आरम्भ करें',
 	'INSTALL_TEST'				=> 'पुन: परीक्षण करें',
-	'INST_ERR'					=> 'स्थापना त्रुटि',
-	'INST_ERR_DB_CONNECT'		=> 'आंकड़ाकोष से संपर्क नहीं कर पा रहा है , नीचे दिए गए त्रुटि संदेश को देखें ।',
+
+	// Errors
+	'INST_ERR_NO_DB'			=> 'चुने हुए आंकड़ाकोष हेतु PHP मॉड्युल लोड नहीं कर सका',
+	'INST_ERR_DB_INVALID_PREFIX'	=> 'The prefix you entered is invalid. It must start with a letter and must only contain letters, numbers and underscores.',
+	'INST_ERR_PREFIX_TOO_LONG'	=> 'The table prefix you have specified is too long. The maximum length is %d characters.',
+	'INST_ERR_DB_NO_NAME'		=> 'कोई आंकड़ाकोष नाम निर्धारित नहीं है ।',
 	'INST_ERR_DB_FORUM_PATH'	=> 'The database file specified is within your board directory tree. You should put this file in a non web-accessible location.',
+	'INST_ERR_DB_CONNECT'		=> 'आंकड़ाकोष से संपर्क नहीं कर पा रहा है , नीचे दिए गए त्रुटि संदेश को देखें ।',
 	'INST_ERR_DB_NO_ERROR'		=> 'किसी त्रुटि की सुचना नहीं दी गई ',
+	'INST_ERR_PREFIX'			=> 'Tables with the specified prefix already exist, please choose an alternative.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'The version of MySQL installed on this machine is incompatible with the “MySQL with MySQLi Extension” option you have selected. Please try the “MySQL” option instead.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 2.8.2.',
 	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'The version of Oracle installed on this machine requires you to set the <var>NLS_CHARACTERSET</var> parameter to <var>UTF8</var>. Either upgrade your installation to 9.2+ or change the parameter.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'The database you have selected was not created in <var>UNICODE</var> or <var>UTF8</var> encoding. Try installing with a database in <var>UNICODE</var> or <var>UTF8</var> encoding.',
-	'INST_ERR_DB_NO_NAME'		=> 'कोई आंकड़ाकोष नाम निर्धारित नहीं है ।',
+	'INST_SCHEMA_FILE_NOT_WRITABLE'	=> 'The schema file is not writable',
+
+	'EMAIL_CONFIG'	=> 'E-mail configuration',
+
+	'INST_ERR'					=> 'स्थापना त्रुटि',
 	'INST_ERR_EMAIL_INVALID'	=> 'आपके द्वारा भरा गया ई-मेल पता सही नहीं हैं।',
 	'INST_ERR_EMAIL_MISMATCH'	=> 'आपके द्वारा भरा गया ई-मेल बेमेल हैं।',
 	'INST_ERR_FATAL'			=> 'फेटल स्थापना त्रुटि',
 	'INST_ERR_FATAL_DB'			=> 'A fatal and unrecoverable database error has occurred. This may be because the specified user does not have appropriate permissions to <code>CREATE TABLES</code> or <code>INSERT</code> data, etc. Further information may be given below. Please contact your hosting provider in the first instance or the support forums of phpBB for further assistance.',
 	'INST_ERR_FTP_PATH'			=> 'Could not change to the given directory, please check the path.',
 	'INST_ERR_FTP_LOGIN'		=> 'Could not login to FTP server, check your username and password.',
-	'INST_ERR_MISSING_DATA'		=> 'आपको इस ब्लॉक के सभी फिल्ड भरने हैं ।',
-	'INST_ERR_NO_DB'			=> 'चुने हुए आंकड़ाकोष हेतु PHP मॉड्युल लोड नहीं कर सका',
 	'INST_ERR_PASSWORD_MISMATCH'	=> 'आपके द्वारा भरा गया गुप्तशब्द बेमेल हैं।',
 	'INST_ERR_PASSWORD_TOO_LONG'	=> 'आपके द्वारा भरा गया गुप्तशब्द बहुत बड़ा है । अधिकतम् ३० अक्षर लंबा होना चाहिए ।',
 	'INST_ERR_PASSWORD_TOO_SHORT'	=> 'आपके द्वारा भरा गया गुप्तशब्द बहुत छोटा है । कम से कम ६ अक्षर लंबा होना चाहिए।',
-	'INST_ERR_PREFIX'			=> 'Tables with the specified prefix already exist, please choose an alternative.',
 	'INST_ERR_PREFIX_INVALID'	=> 'The table prefix you have specified is invalid for your database. Please try another, removing characters such as the hyphen.',
-	'INST_ERR_PREFIX_TOO_LONG'	=> 'The table prefix you have specified is too long. The maximum length is %d characters.',
 	'INST_ERR_USER_TOO_LONG'	=> 'आपके द्वारा भरा गया उपयोक्ता नाम बहुत बडा है । अधिकतम् २० अक्षर लंबा होना चाहिए।',
 	'INST_ERR_USER_TOO_SHORT'	=> 'आपके द्वारा भरा गया उपयोक्ता नाम बहुत छोटा है । कम से कम ३ अक्षर लंबा होना चाहिए।',
 	'INVALID_PRIMARY_KEY'		=> 'Invalid primary key : %s',
@@ -1973,15 +2033,15 @@ $lang = array_merge($lang, array(
 	'OVERVIEW_BODY'				=> 'Welcome to our public release candidate of the next-generation of phpBB after 2.0.x, phpBB 3.0! This release is intended for wider scale use to help us identifying last bugs and problematic areas.</p><p>Please read <a href="../docs/INSTALL.html">our installation guide</a> for more information about installing phpBB3</p><p><strong style="text-transform: uppercase;">Note:</strong> This release is <strong style="text-transform: uppercase;">still not final</strong>. You may want to wait for the full final release before running it live.</p><p>This installation system will guide you through the process of installing phpBB, converting from a different software package or updating to the latest version of phpBB. For more information on each option, select it from the menu above.',
 
 	'PCRE_UTF_SUPPORT'				=> 'PCRE UTF-8 support',
-	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB will <strong>not</strong> run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
-	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP function getimagesize() is available',
-	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Required</strong> - In order for phpBB to function correctly, the getimagesize function needs to be available.',
+	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
 	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
-	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'वैकल्पिक इकाईयाँ',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>Optional</strong> - These modules or applications are optional. However, if they are available they will enable extra features.',
 	'PHP_SUPPORTED_DB'				=> 'सर्मथित आंकड़ाकोष',
-	'PHP_SUPPORTED_DB_EXPLAIN'		=> '<strong>Required</strong> - You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
+	'PHP_SUPPORTED_DB_EXPLAIN'		=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
 	'PHP_REGISTER_GLOBALS'			=> 'PHP setting <var>register_globals</var> is disabled',
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'phpBB will still run if this setting is enabled, but if possible, it is recommended that register_globals is disabled on your PHP install for security reasons.',
 	'PHP_SAFE_MODE'					=> 'सेफ मोड़ ',
@@ -1989,7 +2049,7 @@ $lang = array_merge($lang, array(
 	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'PHP setting <var>allow_url_fopen</var> is enabled',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>Optional</strong> - This setting is optional, however certain phpBB functions like off-site avatars will not work properly without it. ',
-	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version',
 	'POST_ID'						=> 'Post ID',
 	'PREFIX_FOUND'					=> 'A scan of your tables has shown a valid installation using <strong>%s</strong> as table prefix.',
 	'PREPROCESS_STEP'				=> 'Executing pre-processing functions/queries',
@@ -2005,7 +2065,6 @@ $lang = array_merge($lang, array(
 
 	'SCRIPT_PATH'				=> 'स्क्रिप्ट पाथ',
 	'SCRIPT_PATH_EXPLAIN'		=> 'The path where phpBB is located relative to the domain name, e.g. <samp>/phpBB3</samp>.',
-	'SELECT_LANG'				=> 'भाषा चयन करें',
 	'SERVER_CONFIG'				=> 'सर्वर विन्यास',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'खोजा गया इनडेक्स नहीं बदला गया था Search index was not converted',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Your old search index was not converted. Searching will always yield an empty result. To create a new search index go to the Administration Control Panel, select Maintenance and then choose Search index from the submenu.',
@@ -2022,7 +2081,6 @@ $lang = array_merge($lang, array(
 	'STAGE_FINAL'				=> 'निर्णायक चरण ',
 	'STAGE_INTRO'				=> 'परिचय',
 	'STAGE_IN_PROGRESS'			=> 'कनवर्ज़न प्रगति मे हैं',
-	'STAGE_REQUIREMENTS'		=> 'अपेक्षाएँ',
 	'STAGE_SETTINGS'			=> 'सैटिग',
 	'STARTING_CONVERT'			=> 'कनवर्ज़न क्रिया प्रारंभ किया जा रहा हैं ',
 	'STEP_PERCENT_COMPLETED'	=> 'चरण  <strong>%d</strong> का <strong>%d</strong>',
@@ -9857,7 +9915,7 @@ $lang = array_merge($lang, array(
 	'GUEST_STYLE'					=> 'Guest style',
 	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Override user style',
-	'OVERRIDE_STYLE_EXPLAIN'		=> 'Replaces user’s style with the default.',
+	'ACP_OVERRIDE_STYLE_EXPLAIN'	=> 'Replaces user’s (and guest’s) style with the style as defined under "Default style".',
 	'SITE_DESC'						=> 'Site description',
 	'SITE_HOME_TEXT'				=> 'Main website text',
 	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
@@ -9865,8 +9923,9 @@ $lang = array_merge($lang, array(
 	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Site name',
 	'SYSTEM_TIMEZONE'				=> 'System timezone',
+	'SYSTEM_TIMEZONE_EXPLAIN'			=> 'Timezone to use for displaying times to users who are not logged in (guests, bots). Logged in users set their timezone during registration and can change it in their user control panel.',
 	'WARNINGS_EXPIRE'				=> 'Warning duration',
-	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Number of days that will elapse before the warning will automatically expire from a user’s record.',
+	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Number of days that will elapse before a warning will automatically expire from a user’s record. Set this value to 0 to make warnings permanent.',
 
 	'ACP_BOARD_FEATURES_EXPLAIN'	=> 'Here you can enable/disable several board features.',
 
@@ -9897,6 +9956,7 @@ $lang = array_merge($lang, array(
 	'ALLOW_TOPIC_NOTIFY'		=> 'Allow subscribing to topics',
 	'BOARD_PM'					=> 'Private messaging',
 	'BOARD_PM_EXPLAIN'			=> 'Enable or disable private messaging for all users.',
+	'ALLOW_BOARD_NOTIFICATIONS' => 'Allow board notifications',
 
 	'ACP_AVATAR_SETTINGS_EXPLAIN'	=> 'Avatars are generally small, unique images a user can associate with themselves. Depending on the style they are usually displayed below the username when viewing topics. Here you can determine how users can define their avatars. Please note that in order to upload avatars you need to have created the directory you name below and ensure it can be written to by the web server. Please also note that file size limits are only imposed on uploaded avatars, they do not apply to remotely linked images.',
 
@@ -10006,6 +10066,7 @@ $lang = array_merge($lang, array(
 
 	'ACC_ACTIVATION'				=> 'Account activation',
 	'ACC_ACTIVATION_EXPLAIN'		=> 'This determines whether users have immediate access to the board or if confirmation is required. You can also completely disable new registrations.',
+	'ACC_ACTIVATION_WARNING'		=> 'Please note that the currently selected activation method requires emails to be enabled, otherwise registration will be disabled. We recommend to either select a different activation method or reenable emails.',
 	'NEW_MEMBER_POST_LIMIT'			=> 'New member post limit',
 	'NEW_MEMBER_POST_LIMIT_EXPLAIN'	=> 'New members are within the <em>Newly Registered Users</em> group until they reach this number of posts. You can use this group to keep them from using the PM system or to review their posts. <strong>A value of 0 disables this feature.</strong>',
 	'NEW_MEMBER_GROUP_DEFAULT'		=> 'Set Newly Registered Users group to default',
@@ -10303,8 +10364,11 @@ $lang = array_merge($lang, array(
 
 	'TPL_ALLOW_PHP'					=> 'Allow php in templates',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'If this option is enabled, <code>PHP</code> and <code>INCLUDEPHP</code> statements will be recognised and parsed in templates.',
+	'UPLOAD_CERT_VALID'				=> 'Validate upload certificate',
+	'UPLOAD_CERT_VALID_EXPLAIN'		=> 'If enabled, certificates of remote uploads will be validated. This requires the CA bundle to be defined by the <samp>openssl.cafile</samp> or <samp>curl.cainfo</samp> setting in your php.ini.',
 
 	'ACP_EMAIL_SETTINGS_EXPLAIN'	=> 'This information is used when the board sends e-mails to your users. Please ensure the e-mail address you specify is valid, any bounced or undeliverable messages will likely be sent to that address. If your host does not provide a native (PHP based) e-mail service you can instead send messages directly using SMTP. This requires the address of an appropriate server (ask your provider if necessary). If the server requires authentication (and only if it does) enter the necessary username, password and authentication method.',
+
 	'ADMIN_EMAIL'					=> 'प्रशासक मुझे जानकारियाँ ई-डॉक कर सकते हैं',
 	'ADMIN_EMAIL_EXPLAIN'			=> 'This will be used as the return address on all e-mails, the technical contact e-mail address. It will always be used as the <samp>Return-Path</samp> and <samp>Sender</samp> address in e-mails.',
 	'BOARD_EMAIL_FORM'				=> 'Users send e-mail via board',
@@ -10323,6 +10387,8 @@ $lang = array_merge($lang, array(
 	'EMAIL_SIG_EXPLAIN'				=> 'This text will be attached to all e-mails the board sends.',
 	'ENABLE_EMAIL'					=> 'Enable board-wide e-mails',
 	'ENABLE_EMAIL_EXPLAIN'			=> 'If this is set to disabled no e-mails will be sent by the board at all.',
+	'SEND_TEST_EMAIL'				=> 'Send a test email',
+	'SEND_TEST_EMAIL_EXPLAIN'		=> 'This will send a test email to the address defined in your account.',
 	'SMTP_AUTH_METHOD'				=> 'Authentication method for SMTP',
 	'SMTP_AUTH_METHOD_EXPLAIN'		=> 'Only used if a username/password is set, ask your provider if you are unsure which method to use.',
 	'SMTP_CRAM_MD5'					=> 'CRAM-MD5',
@@ -10338,6 +10404,7 @@ $lang = array_merge($lang, array(
 	'SMTP_SETTINGS'					=> 'SMTP settings',
 	'SMTP_USERNAME'					=> 'SMTP username',
 	'SMTP_USERNAME_EXPLAIN'			=> 'Only enter a username if your SMTP server requires it.',
+	'TEST_EMAIL_SENT'				=> 'The test email has been sent.<br />If you don’t receive it, please check your emails configuration.<br /><br />If you require assistance, please visit the <a href="https://www.phpbb.com/community/">phpBB support forums</a>.',
 	'USE_SMTP'						=> 'Use SMTP server for e-mail',
 	'USE_SMTP_EXPLAIN'				=> 'Select “Yes” if you want or have to send e-mail via a named server instead of the local mail function.',
 
@@ -10567,8 +10634,7 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'आंकड़ाकोष ',
-	'ACP_CAT_DOT_MODS'			=> '.MODs',
-	'ACP_CAT_DOT_MODS'			=> '.MODs',
+	'ACP_CAT_DOT_MODS'			=> 'Extensions',
 	'ACP_CAT_FORUMS'			=> 'मंच',
 	'ACP_CAT_GENERAL'			=> 'सामान्य',
 	'ACP_CAT_MAINTENANCE'		=> 'अनुरक्षण (Maintenance)',
@@ -10733,6 +10799,9 @@ $lang = array_merge($lang, array(
 
 	'BACK'					=> 'पीछे',
 
+	'CONTAINER_EXCEPTION' => 'phpBB encountered an error building the container due to an installed extension. For this reason, all extensions have been temporarily disabled. Please try purging your forum cache. All extensions will automatically be re-enabled once the container error is resolved. If this error continues, please visit <a href="https://www.phpbb9.de">phpbb9.de</a> for support.',
+	'EXCEPTION' => 'Exception',
+
 	'COLOUR_SWATCH'			=> 'रंग पट्ट',
 	'CONFIG_UPDATED'		=> 'कान्फिगरेशन सफलतापुर्वक अपडेट हुआ।',
 	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
@@ -10743,7 +10812,7 @@ $lang = array_merge($lang, array(
 	'DEACTIVATE'				=> 'निष्क्रिय',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'The entered path “%s” does not exist.',
 	'DIRECTORY_NOT_DIR'			=> 'The entered path “%s” is not a directory.',
-	'DIRECTORY_NOT_WRITABLE'	=> 'The entered path “%s” is not writable.',
+	'DIRECTORY_NOT_WRITABLE'	=> 'Directory not writable',
 	'DISABLE'					=> 'असमर्थ',
 	'DOWNLOAD'					=> 'डाउनलोड',
 	'DOWNLOAD_AS'				=> 'ऐसे डॉउनलोड करें',
@@ -10794,10 +10863,11 @@ $lang = array_merge($lang, array(
 	'PARSE_URLS'						=> 'लिंक पार्श करें',
 	'PERMISSIONS_TRANSFERRED'			=> 'Successfully transferred permissions from <strong>%s</strong>, you are now able to browse the board with this user’s permissions.<br />Please note that admin permissions were not transferred. You are able to revert to your permission set at any time.',
 	'PERMISSIONS_TRANSFERRED_EXPLAIN'	=> 'You currently have the permissions from %1$s. You are able to browse the board with this user’s permissions, but not access the administration control panel since admin permissions were not transferred. You can <a href="%2$s"><strong>revert to your permission set</strong></a> at any time.',
-	'PIXEL'								=> 'px',
 	'PROCEED_TO_ACP'					=> '%sProceed to the ACP%s',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Announcement',
 	'REMIND'							=> 'याद दिलाएँ',
+	'REPARSE_LOCK_ERROR'				=> 'Reparsing is already in progress by another process.',
 	'RESYNC'							=> 'Resync',
 
 	'RUNNING_TASK'			=> 'Running task: %s.',
@@ -10846,11 +10916,23 @@ $lang = array_merge($lang, array(
 
 	'DATABASE_SIZE'			=> 'आंकड़ाकोष आकार',
 
+	// Enviroment configuration checks, mbstring related
+	'ERROR_MBSTRING_FUNC_OVERLOAD'					=> 'Function overloading is improperly configured',
+	'ERROR_MBSTRING_FUNC_OVERLOAD_EXPLAIN'			=> '<var>mbstring.func_overload</var> must be set to either 0 or 4. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION'			=> 'Transparent character encoding is improperly configured',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION_EXPLAIN'	=> '<var>mbstring.encoding_translation</var> must be set to 0. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_INPUT'						=> 'HTTP input character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_INPUT_EXPLAIN'				=> '<var>mbstring.http_input</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_OUTPUT'					=> 'HTTP output character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_OUTPUT_EXPLAIN'			=> '<var>mbstring.http_output</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+
 	'FILES_PER_DAY'		=> 'संलग्नक प्रतिदिन',
 	'FORUM_STATS'		=> 'बोर्ड सांख्यिकीय',
 
 	'GZIP_COMPRESSION'	=> 'GZip सम्पीड़न (compression)',
 
+	'PIXEL'								=> 'px',
+	
 	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'अनुउपलब्ध',
 	'NUMBER_FILES'		=> 'संलग्नक संख्या',
@@ -10858,6 +10940,8 @@ $lang = array_merge($lang, array(
 	'NUMBER_TOPICS'		=> 'विषय संख्या',
 	'NUMBER_USERS'		=> 'उपयोक्ता संख्या',
 	'NUMBER_ORPHAN'		=> 'असम्बन्धित (Orphan) संलग्नक',
+
+	'PHP_VERSION_OLD'	=> 'The version of PHP on this server will no longer be supported by future versions of phpBB. %sDetails%s',
 
 	'POSTS_PER_DAY'		=> 'स्तम्भ प्रतिदिन',
 
@@ -10904,10 +10988,16 @@ $lang = array_merge($lang, array(
 	'VALUE'						=> 'मूल्य',
 	'VERSIONCHECK_FAIL'			=> 'Failed to obtain latest version information.',
 	'VERSIONCHECK_FORCE_UPDATE'	=> 'Re-Check version',
+	'VERSION_CHECK'				=> 'वर्जन पता करें',
+	'VERSION_CHECK_EXPLAIN'		=> 'जाचँ हेतु कि phpBB का जो वर्ज़न चल रहा है वह नवीनतम् है या नहीं ।',
+	'VERSION_NOT_UP_TO_DATE_ACP'	=> 'आपका phpBB का वर्ज़न नवीनतम् नहीं है । <br />नीचे आप नये वर्ज़न के लिंक की जानकारी एवं कैसे अपडेट करे की जानकारी प्राप्त कर सकते हैं। ',
+	'VERSION_NOT_UP_TO_DATE_TITLE'	=> 'Your phpBB installation is not up to date.',
+	'VERSION_UP_TO_DATE_ACP'	=> 'आपका इन्सटालेशन नवीनतम् है, phpBB का कोई अपडेट वर्ज़न उपलब्ध नहीं है । आपको अपने इन्टालेशन को अपडेट करने की जरुरत नहीं है ।',
 	'VIEW_ADMIN_LOG'			=> 'प्रशासक लॉग देखें',
 	'VIEW_INACTIVE_USERS'		=> 'निष्क्रिय उपयोक्ता देखें',
 
 	'WELCOME_PHPBB'			=> 'phpBB मे आपका स्वागत हैं',
+	'WRITABLE_CONFIG'		=> 'Your config file (config.php) is currently world-writable. We strongly encourage you to change the permissions to 640 or at least to 644 (for example: <a href="http://en.wikipedia.org/wiki/Chmod" rel="external">chmod</a> 640 config.php).',
 
 	'BROWSER_LANGUAGE'			=> 'Enable Browser Language Detection',
 	'BROWSER_LANGUAGE_EXPLAIN'	=> 'Enables the browser language detection for guest users not to use the default language of the board. Choose no to disable the feature.',

@@ -1725,6 +1725,86 @@ $lang = array_merge($lang, array(
 #######language/en/install.php#######
 
 $lang = array_merge($lang, array(
+	'INSTALL_PANEL'	=> 'Diegimo pultas',
+	'SELECT_LANG'	=> 'Pasirinkite kalbą',
+	'STAGE_INSTALL'	=> 'Installing phpBB',
+
+	// Introduction page
+	'INTRODUCTION_TITLE'	=> 'Įžanga',
+	'INTRODUCTION_BODY'		=> 'Welcome to phpBB3!<br /><br />phpBB® is the most widely used open source bulletin board solution in the world. phpBB3 is the latest installment in a package line started in 2000. Like its predecessors, phpBB3 is feature-rich, user-friendly, and fully supported by the phpBB Team. phpBB3 greatly improves on what made phpBB2 popular, and adds commonly requested features that were not present in previous versions. We hope it exceeds your expectations.<br /><br />This installation system will guide you through installing phpBB3, updating to the latest version of phpBB3 from past releases, as well as converting to phpBB3 from a different discussion board system (including phpBB2). For more information, we encourage you to read <a href="../docs/INSTALL.html">the installation guide</a>.<br /><br />To read the phpBB3 license or learn about obtaining support and our stance on it, please select the respective options from the side menu. To continue, please select the appropriate tab above.',
+
+	// Support page
+	'SUPPORT_TITLE'		=> 'Palaikymas',
+	'SUPPORT_BODY_INSTALL'	=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/docs/en/3.1/ug/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
+
+	// License
+	'LICENSE_TITLE'		=> 'Bendroji Vieša Licencija',
+
+	// Install page
+	'INSTALL_INTRO'			=> 'Sveiki atvykę į diegimo proceso pradžią',
+	'INSTALL_INTRO_BODY'	=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
+
+	<ul>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
+	</ul>
+
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
+
+	<p>phpBB3 supports the following databases:</p>
+	<ul>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
+		<li>SQLite 2.8.2+</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
+		<li>Oracle</li>
+	</ul>
+
+	<p>Only those databases supported on your server will be displayed.',
+
+	'ACP_LINK'	=> 'Take me to <a href="%1$s">the ACP</a>',
+
+	'INSTALL_PHPBB_INSTALLED'		=> 'phpBB is already installed.',
+	'INSTALL_PHPBB_NOT_INSTALLED'	=> 'phpBB is not installed yet.',
+
+
+	// Filesystem requirements
+	'FILE_NOT_EXISTS'			=> 'File not exists',
+	'FILE_NOT_EXISTS_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to exist.',
+	'FILE_NOT_WRITABLE'			=> 'File not writable',
+	'FILE_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to be writable.',
+
+	'DIRECTORY_NOT_EXISTS'				=> 'Directory not exists',
+	'DIRECTORY_NOT_EXISTS_EXPLAIN'		=> 'To be able to install phpBB the %1$s directory needs to exist.',
+	'DIRECTORY_NOT_WRITABLE'			=> 'Directory not writable',
+	'DIRECTORY_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s directory needs to be writable.',
+
+	// Server requirements
+	'PHP_VERSION_REQD'					=> 'PHP version',
+	'PHP_VERSION_REQD_EXPLAIN'			=> 'phpBB requires PHP version 5.4.0 or higher.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
+	'PCRE_UTF_SUPPORT'					=> 'PCRE UTF-8 palaikymas',
+	'PCRE_UTF_SUPPORT_EXPLAIN'			=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_JSON_SUPPORT'					=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'			=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_SUPPORTED_DB'					=> 'Palaikomos duomenų bazės',
+	'PHP_SUPPORTED_DB_EXPLAIN'			=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
+
+	'RETEST_REQUIREMENTS'	=> 'Retest requirements',
+
+	'STAGE_REQUIREMENTS'	=> 'Check requirements',
+
+	'INST_ERR_MISSING_DATA'		=> 'Šiame bloge turite užpildyti visus laukus.',
+
+	'TIMEOUT_DETECTED_TITLE'	=> 'The installer detected a timeout',
+	'TIMEOUT_DETECTED_MESSAGE'	=> 'The installer has detected a timeout, you may try to refresh the page, which may lead to data corruption. We suggest that you either increase your timeout settings or try to use the CLI.',
+
 	'ADMIN_CONFIG'				=> 'Administratoriaus nustatymai',
 	'ADMIN_PASSWORD'			=> 'Administratoriaus slaptažodis',
 	'ADMIN_PASSWORD_CONFIRM'	=> 'Administratoriaus slaptažodžio patvirtinimas',
@@ -1788,7 +1868,7 @@ $lang = array_merge($lang, array(
 	'CONV_ERROR_INSERT_BOTGROUP'		=> 'Nepavyko įrašyti roboto į "bots" lentelę.',
 	'CONV_ERROR_INSERT_USER_GROUP'		=> 'Nepavyko įrašyti vartotojo į "user_group" lentelę.',
 	'CONV_ERROR_MESSAGE_PARSER'			=> 'Žinučių apdorojimo klaida',
-	'CONV_ERROR_NO_AVATAR_PATH'			=> 'Pastaba kūrėjams: norėdami naudoti %s, turite aprašyti $convertor[\'avatar_path\'].',
+	'CONV_ERROR_NO_AVATAR_PATH'			=> 'Note to developer: you must specify convertor[avatar_path] to use %s.',
 	'CONV_ERROR_NO_FORUM_PATH'			=> 'Nenurodytas kelias iki senosios diskusijų lentos.',
 	'CONV_ERROR_NO_GALLERY_PATH'		=> 'Pastaba kūrėjams: norėdami naudoti %s, turite aprašyti $convertor[\'avatar_gallery_path\'].',
 	'CONV_ERROR_NO_GROUP'				=> '%2$s nėra grupės “%1$s”.',
@@ -1879,65 +1959,45 @@ $lang = array_merge($lang, array(
 		<p>phpBB Unifikuoto Konversijos Mechanizmo pagalba galite konvertuoti tiek phpBB 2.0.x tiek kitas diskusijų lentas į phpBB3. Jeigu turite tokią diskusijų lentą, <a href="%2$s">pradėkite konversijos procesą</a>.</p>
 		<h2>Paleisti phpBB3!</h2>
 		<p>Paspaudę mygtuką apačioje pateksite į puslapį administratoriaus valdymo pulte, kur galėsite išsiųsti statistinius duomenis phpBB kūrėjams. Būtume už tai labai dėkingi. Vėliau, nepagailėkite laiko ir peržiūrėkite visus esamus nustatymus. Atsiminkite, kad pagalbą galite rasti <a href="http://www.phpbb.com/support/documentation/3.0/">dokumentacijos puslapyje</a>, <a href="%3$s">README</a> faile bei <a href="http://www.phpbb.com/community/viewforum.php?f=46">palaikymo forumuose</a>.</p><p><strong>Dabar turite ištrinti, perkelti arba pervadinti įdiegimo katalogą (install). Jeigu to nepadarysite, bus prieinamas tik administratoriaus valdymo pultas.</strong>',
-	'INSTALL_INTRO'				=> 'Sveiki atvykę į diegimo proceso pradžią',
 
-	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
-
-	<ul>
-		<li>The Database Type - the database you will be using.</li>
-		<li>The Database server hostname or DSN - the address of the database server.</li>
-		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
-		<li>The Database name - the name of the database on the server.</li>
-		<li>The Database username and Database password - the login data to access the database.</li>
-	</ul>
-
-	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
-
-	<p>phpBB3 supports the following databases:</p>
-	<ul>
-		<li>MySQL 3.23 or above (MySQLi supported)</li>
-		<li>PostgreSQL 8.3+</li>
-		<li>SQLite 2.8.2+</li>
-		<li>SQLite 3.6.15+</li>
-		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
-		<li>MS SQL Server 2005 or above (native)</li>
-		<li>Oracle</li>
-	</ul>
-
-	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'Norėdami pradėti diegimą, paspauskite mygtuką apačioje.',
 	'INSTALL_LOGIN'				=> 'Prisijungti',
 	'INSTALL_NEXT'				=> 'Kitas žingsnis',
 	'INSTALL_NEXT_FAIL'			=> 'Nepavyko atlikti kai kurių testų. Ištaisykite iškilusias problemas ir tik tada tęskite diegimo procesą. Priešingu atveju diegimas gali nepavykti.',
 	'INSTALL_NEXT_PASS'			=> 'Visi pradiniai testai atlikti. Galite tęsti diegimo procesą. Jeigu pakeitėte kokias nors teises, modulius ar panašiai ir norite dar kartą testuoti, galite tai padaryti.',
-	'INSTALL_PANEL'				=> 'Diegimo pultas',
 	'INSTALL_SEND_CONFIG'		=> 'Deja phpBB negali rašyti į config.php failą. Taip yra todėl, kad failas neegzistuoja arba nėra rašymo teisių. Apačioje galėsite matyti keletą pasirinkimų kaip baigti config.php diegimą.',
 	'INSTALL_START'				=> 'Pradėti diegimą',
 	'INSTALL_TEST'				=> 'Testuoti dar kartą',
-	'INST_ERR'					=> 'Diegimo klaida',
-	'INST_ERR_DB_CONNECT'		=> 'Nepavyko prisijungti prie duomenų bazės. Žemiau galite perskaityti klaidos pranešimą.',
+
+	// Errors
+	'INST_ERR_NO_DB'			=> 'PHP neturi reikiamo modulio pasirinktam duomenų bazės tipui.',
+	'INST_ERR_DB_INVALID_PREFIX'	=> 'The prefix you entered is invalid. It must start with a letter and must only contain letters, numbers and underscores.',
+	'INST_ERR_PREFIX_TOO_LONG'	=> 'Duomenų bazės lentelių prefiksas, kurį įrašėte, yra per ilgas. Maksimalus ilgis - %d simboliai(ių).',
+	'INST_ERR_DB_NO_NAME'		=> 'Neįrašytas duomenų bazės pavadinimas.',
 	'INST_ERR_DB_FORUM_PATH'	=> 'Nurodytas duomenų bazės failas yra jūsų diskusijų lentos katalogų medyje. Jūs turėtumėte padėti šį failą į internetiniam serveriui neprieinamą vietą.',
+	'INST_ERR_DB_CONNECT'		=> 'Nepavyko prisijungti prie duomenų bazės. Žemiau galite perskaityti klaidos pranešimą.',
 	'INST_ERR_DB_NO_ERROR'		=> 'Klaida be pranešimo.',
+	'INST_ERR_PREFIX'			=> 'Duomenų bazės lentelės su tokiu prefiksu jau egzistuoja. Įrašykite kitokį prefiksą.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'MySQL versija jūsų serveryje yra nesuderinta su “MySQL su MySQLi moduliu” nustatymu kurį pasirinkote. Bandykite pasirinkti “MySQL”.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'SQLite modulis yra per senas. Reikia bent 2.8.2 versijos.',
 	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'Šiai Oracle versijai jūsų serveryje reikia nustatyti <var>NLS_CHARACTERSET</var> parametrą į <var>UTF8</var>. Arba atnaujinkite Oracle versiją iki 9.2+, arba pakeiskite šį parametrą.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'Duomenų bazė, kurią pasirinkote, buvo sukurta ne su <var>UNICODE</var> arba <var>UTF8</var> koduote. Pabandykite pasirinkti duomenų bazę su <var>UNICODE</var> arba <var>UTF8</var> koduote.',
-	'INST_ERR_DB_NO_NAME'		=> 'Neįrašytas duomenų bazės pavadinimas.',
+	'INST_SCHEMA_FILE_NOT_WRITABLE'	=> 'The schema file is not writable',
+
+	'EMAIL_CONFIG'	=> 'E-mail configuration',
+
+	'INST_ERR'					=> 'Diegimo klaida',
 	'INST_ERR_EMAIL_INVALID'	=> 'Įrašytas el. pašto adresas yra neteisingas.',
 	'INST_ERR_EMAIL_MISMATCH'	=> 'El. pašto adresai, kuriuos įrašėte, nesutampa.',
 	'INST_ERR_FATAL'			=> 'Kritinė diegimo klaida',
 	'INST_ERR_FATAL_DB'			=> 'Įvyko kritinė ir neatstatoma duomenų bazės klaida. Taip atsitiko todėl, kad vartotojas, kurį nurodėte, neturi teisių vykdyti užklausos <code>CREATE TABLES</code> arba <code>INSERT</code> ir panašiai. Smulkesnė informacija apie klaidą rodoma žemiau. Susisiekite su savo tinklapių talpinimo paslaugų teikėju arba kreipkitės į phpBB palaikymo forumus.',
 	'INST_ERR_FTP_PATH'			=> 'Nepavyko pakeisti katalogo. Patikrinkite kelią.',
 	'INST_ERR_FTP_LOGIN'		=> 'Nepavyko prisijungti prie FTP serverio. Patikrinkite vartotojo vardą bei slaptažodį.',
-	'INST_ERR_MISSING_DATA'		=> 'Šiame bloge turite užpildyti visus laukus.',
-	'INST_ERR_NO_DB'			=> 'PHP neturi reikiamo modulio pasirinktam duomenų bazės tipui.',
 	'INST_ERR_PASSWORD_MISMATCH'	=> 'Slaptažodžiai, kuriuos įrašėte, nesutampa.',
 	'INST_ERR_PASSWORD_TOO_LONG'	=> 'Slaptažodis, kurį įrašėte, yra per ilgas. Maksimalus ilgis - 30 simbolių.',
 	'INST_ERR_PASSWORD_TOO_SHORT'	=> 'Slaptažodis, kurį įrašėte, yra per trumpas. Minimalus ilgis - 6 simboliai.',
-	'INST_ERR_PREFIX'			=> 'Duomenų bazės lentelės su tokiu prefiksu jau egzistuoja. Įrašykite kitokį prefiksą.',
 	'INST_ERR_PREFIX_INVALID'	=> 'Duomenų bazės lentelių prefiksas, kurį įrašėte, yra neleistinas jūsų duomenų bazei. Pabandykite ištrinti tokius simbolius kaip brūkšneliai ir kabutės.',
-	'INST_ERR_PREFIX_TOO_LONG'	=> 'Duomenų bazės lentelių prefiksas, kurį įrašėte, yra per ilgas. Maksimalus ilgis - %d simboliai(ių).',
 	'INST_ERR_USER_TOO_LONG'	=> 'Vartotojo vardas, kurį įrašėte, yra per ilgas. Maksimalus ilgis - 20 simbolių.',
 	'INST_ERR_USER_TOO_SHORT'	=> 'Vartotojo vardas, kurį įrašėte, yra per trumpas. Minimalus ilgis - 3 simboliai.',
 	'INVALID_PRIMARY_KEY'		=> 'Neleistinas pirminis raktas : %s',
@@ -1972,15 +2032,15 @@ $lang = array_merge($lang, array(
 	'OVERVIEW_BODY'				=> 'Sveiki atvykę į phpBB3!<br /><br />phpBB™ yra populiariausia pasaulyje atviro kodo diskusijų sistema. phpBB3 yra naujausia šios nuo 2000 metų kuriamos sistemos versija. Kaip ir ankstesnės versijos, phpBB3 turi daug galimybių, yra patogi naudojimui, o pagalbą visada suteiks phpBB Komanda. phpBB3 buvo patobulinta tai, kas padarė phpBB2 tokia populiaria, o taip pat pridėta daug dažnai prašytų papildomų galimybių, kurių nebuvo ankstesnėse versijose. Tikimės naujoji versija pateisins jūsų lūkesčius.<br /><br />Šios diegimo sistemos pagalba galėsite įdiegti phpBB3, atnaujinti ją į naujausią versiją, bei konvertuoti iš kitų diskusijų lentų programinės įrangos paketų (įskaitant phpBB2). Norėdami sužinoti daugiau apie phpBB3 diegimą, skaitykite <a href="../docs/INSTALL.html">diegimo vadovą</a>.<br /><br />Jeigu norite perskaityti licenciją arba gauti daugiau informacijos apie teikiamą pagalbą, pasirinkę reikiamą punktą iš meniu kairėje. Norėdami tęsti, pasirinkite reikiamą kortelę viršuje.',
 
 	'PCRE_UTF_SUPPORT'				=> 'PCRE UTF-8 palaikymas',
-	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB <strong>neveiks</strong> jeigu PHP PCRE modulis yra sukompiliuotas be UTF-8 palaikymo.',
-	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() funkcija',
-	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Būtina</strong> - teisingam phpBB funkcionavimui reikalinga getimagesize PHP funkcija.',
+	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
 	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
-	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'Kiti moduliai',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>Nebūtini</strong> - šie moduliai arba programinė įranga nėra būtini. Tačiau jie suteikia papildomų galimybių.',
 	'PHP_SUPPORTED_DB'				=> 'Palaikomos duomenų bazės',
-	'PHP_SUPPORTED_DB_EXPLAIN'		=> '<strong>Būtina</strong> - PHP turi palaikyti bent vieną duomenų bazę. Jeigu nerastas nei vienas modulis, susisiekite su savo tinklapių talpinimo paslaugų teikėju arba įdiegtos PHP versijos dokumentaciją.',
+	'PHP_SUPPORTED_DB_EXPLAIN'		=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
 	'PHP_REGISTER_GLOBALS'			=> 'PHP <var>register_globals</var> nustatymas yra išjungtas',
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'Jeigu šis nustatymas yra įjungtas phpBB vis tiek veiks. Tačiau, saugumo sumetimais, rekomenduojama register_globals išjungti.',
 	'PHP_SAFE_MODE'					=> 'Saugos režimas',
@@ -1988,7 +2048,7 @@ $lang = array_merge($lang, array(
 	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'PHP <var>allow_url_fopen</var> nustatymas yra įjungtas',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>Nebūtinas</strong> - šis nustatymas yra nebūtinas, tačiau kai kurios galimybės (tokios kaip nutolę avatarai) be jo neveiks.',
-	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version',
 	'POST_ID'						=> 'Pranešimo ID',
 	'PREFIX_FOUND'					=> 'Aptikta ankščiau įdiegta diskusijų lenta su duomenų bazės lentelių prefiksu <strong>%s</strong>.',
 	'PREPROCESS_STEP'				=> 'Vykdomos pirminės užklausos',
@@ -2004,7 +2064,6 @@ $lang = array_merge($lang, array(
 
 	'SCRIPT_PATH'				=> 'Skripto kelias',
 	'SCRIPT_PATH_EXPLAIN'		=> 'Kelias iki phpBB neskaitant domeno vardo, pvz.: <samp>/phpBB3</samp>.',
-	'SELECT_LANG'				=> 'Pasirinkite kalbą',
 	'SERVER_CONFIG'				=> 'Serverio nustatymai',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Paieškos indeksas nebuvo konvertuotas',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Senas paieškos indeksas nebuvo konvertuotas. Paieška naujoje diskusijų lentoje visada gražins tuščią rezultatą. Norėdami sukurti naują paieškos indeksą, eikite į administratoriaus valdymo pultą, pasirinkite Priežiūrą ir iš submeniu pasirinkite Paieškos indekso punktą.',
@@ -2021,7 +2080,6 @@ $lang = array_merge($lang, array(
 	'STAGE_FINAL'				=> 'Paskutinis etapas',
 	'STAGE_INTRO'				=> 'Įžanga',
 	'STAGE_IN_PROGRESS'			=> 'Vykdoma konversija',
-	'STAGE_REQUIREMENTS'		=> 'Reikalavimai',
 	'STAGE_SETTINGS'			=> 'Nustatymai',
 	'STARTING_CONVERT'			=> 'Pradedamas konversijos procesas',
 	'STEP_PERCENT_COMPLETED'	=> '<strong>%d</strong> etapas iš <strong>%d</strong>',
@@ -9856,7 +9914,7 @@ $lang = array_merge($lang, array(
 	'GUEST_STYLE'					=> 'Guest style',
 	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Išjungti vartotojų stilius',
-	'OVERRIDE_STYLE_EXPLAIN'		=> 'Pakeičia vartotojų stilius standartiniu stiliumi.',
+	'ACP_OVERRIDE_STYLE_EXPLAIN'	=> 'Replaces user’s (and guest’s) style with the style as defined under "Default style".',
 	'SITE_DESC'						=> 'Diskusijų lentos apibūdinimas',
 	'SITE_HOME_TEXT'				=> 'Main website text',
 	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
@@ -9864,8 +9922,9 @@ $lang = array_merge($lang, array(
 	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Diskusijų lentos pavadinimas',
 	'SYSTEM_TIMEZONE'				=> 'Svečių laiko juosta',
+	'SYSTEM_TIMEZONE_EXPLAIN'			=> 'Timezone to use for displaying times to users who are not logged in (guests, bots). Logged in users set their timezone during registration and can change it in their user control panel.',
 	'WARNINGS_EXPIRE'				=> 'Perspėjimo trukmė',
-	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Dienų skaičius, kai perspėjimas bus automatiškai ištrintas iš vartotojo įrašo. Jeigu norite, kad perspėjimai būtų nuolatiniai, įrašykite 0.',
+	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Number of days that will elapse before a warning will automatically expire from a user’s record. Set this value to 0 to make warnings permanent.',
 
 	'ACP_BOARD_FEATURES_EXPLAIN'	=> 'Čia galite įjungti/išjungti kai kurias diskusijų lentos galimybes.',
 
@@ -9896,6 +9955,7 @@ $lang = array_merge($lang, array(
 	'ALLOW_TOPIC_NOTIFY'		=> 'Leisti prenumeruoti temas',
 	'BOARD_PM'					=> 'Asmeninis susirašinėjimas',
 	'BOARD_PM_EXPLAIN'			=> 'Įjungti asmeninį susirašinėjimą visiems vartotojams.',
+	'ALLOW_BOARD_NOTIFICATIONS' => 'Allow board notifications',
 
 	'ACP_AVATAR_SETTINGS_EXPLAIN'	=> 'Avatarai dažniausiai yra maži unikalūs paveikslėliai, kurie kaip nors susiję su vartotoju. Priklausomai nuo naudojamo stiliaus, avatarai rodomi temoje po vartotojo vardu. Čia galite nustatyti kaip vartotojai nurodys savo avatarus. Atsiminkite, jog norėdami laikyti avatarus savo serveryje turėsite sukurti žemiau nurodytą katalogą ir įsitikinti kad jūsų serveris gali į jį rašyti. Tai pat įsidėmėkite, kad failo dydžio ribojimas galioja tik vietiniams avatarams, jis negalioja nutolusiems paveikslėliams.',
 
@@ -10005,6 +10065,7 @@ $lang = array_merge($lang, array(
 
 	'ACC_ACTIVATION'				=> 'Vartotojo vardo aktyvavimas',
 	'ACC_ACTIVATION_EXPLAIN'		=> 'Šis parametras nurodo ar vartotojai iš karto gali prisijungti ar naujus vartotojų vardus jiems reikia patvirtinti. Taip pat čia galite visiškai išjungti registraciją. Jeigu norite, kad registracijas patvirtintų vartotojas arba administratorius, diskusijose turi būti įjungtos el. pašto funkcijos.',
+	'ACC_ACTIVATION_WARNING'		=> 'Please note that the currently selected activation method requires emails to be enabled, otherwise registration will be disabled. We recommend to either select a different activation method or reenable emails.',
 	'NEW_MEMBER_POST_LIMIT'			=> 'Naujų dalyvių pranešimų riba',
 	'NEW_MEMBER_POST_LIMIT_EXPLAIN'	=> 'Kol nauji dalyviai nepasiekia šio pranešimų skaičiaus, jie būna priskirti <em>Naujai užsiregistravusių vartotojų</em> grupei. Jūs galite naudoti šią grupę, jeigu norite neleisti tokiems vartotojams naudotis asmeninių žinučių sistema arba norėdami patogiau peržiūrėti jų pranešimus. <strong>Jeigu norite išjungti šią funkciją, įrašykite 0.</strong>',
 	'NEW_MEMBER_GROUP_DEFAULT'		=> 'Nustatyti naujai užsiregistravusių vartotojų grupę pagrindine',
@@ -10302,8 +10363,11 @@ $lang = array_merge($lang, array(
 
 	'TPL_ALLOW_PHP'					=> 'Leisti php kalbą šablonuose',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Jeigu įjungsite šį nustatymą, šablonuose bus atpažinti ir apdoroti <code>PHP</code> ir <code>INCLUDEPHP</code> sakiniai.',
+	'UPLOAD_CERT_VALID'				=> 'Validate upload certificate',
+	'UPLOAD_CERT_VALID_EXPLAIN'		=> 'If enabled, certificates of remote uploads will be validated. This requires the CA bundle to be defined by the <samp>openssl.cafile</samp> or <samp>curl.cainfo</samp> setting in your php.ini.',
 
 	'ACP_EMAIL_SETTINGS_EXPLAIN'	=> 'Šie duomenys bus naudojami el. laiškų vartotojams siuntimo metu. Įsitikinkite kad nurodytas el. pašto adresas yra teisingas, kadangi visi nepristatyti laiškai keliaus būtent į šią pašto dėžutę. Jeigu jūsų serveris neteikia arba draudžia el. pašto siuntimą PHP pagalba, galite naudoti SMTP. Tokiu atveju turėsite įrašyti serverio adresą (jeigu reikia, pasiklauskite savo paslaugų teikėjo). Jeigu reikia autentifikuotis į serverį (ir tik tada jeigu reikia), įrašykite reikalingą vartotojo vardą ir slaptažodį. Šiuo metu yra galimybė autentifikuotis tik paprastuoju būdu.',
+
 	'ADMIN_EMAIL'					=> 'Administratoriai gali siųsti man el. laiškus',
 	'ADMIN_EMAIL_EXPLAIN'			=> 'Šis adresas bus naudojamas kaip atgalinis adresas visiems el. laiškams (techninio asmens kontaktas). Jis visada bus naudojamas <samp>Return-Path</samp> ir <samp>Sender</samp> antraštėse.',
 	'BOARD_EMAIL_FORM'				=> 'Vartotojai siunčia el. laiškus diskusijų lentos pagalba',
@@ -10322,6 +10386,8 @@ $lang = array_merge($lang, array(
 	'EMAIL_SIG_EXPLAIN'				=> 'Šis tekstas bus prikabinamas prie visų laiškų išsiųstų diskusijų lentos pagalba.',
 	'ENABLE_EMAIL'					=> 'Įjungti el. pašto funkcijas diskusijose',
 	'ENABLE_EMAIL_EXPLAIN'			=> 'Jeigu šis parametras išjungtas, el. pašto funkcionalumas diskusijose bus visiškai išjungtas. <em>Atsiminkite, kad jeigu įjungtas vartotojo arba administratoriaus vardo patvirtinimas, šis nustatymas turi būti įjungtas. Jeigu šiuo metu vartotojo vardo aktyvavimas nustatytas kaip “vartotojas” arba “administratorius”, išjungus šį nustatymą, aktyvacijos nebereikės.</em>',
+	'SEND_TEST_EMAIL'				=> 'Send a test email',
+	'SEND_TEST_EMAIL_EXPLAIN'		=> 'This will send a test email to the address defined in your account.',
 	'SMTP_AUTH_METHOD'				=> 'SMTP autentifikacijos metodas',
 	'SMTP_AUTH_METHOD_EXPLAIN'		=> 'Naudojamas tik jeigu įrašytas vartotojo vardas/slaptažodis. Jeigu neįsitikinę, kurį metodą naudoti, pasiklauskite savo paslaugų teikėjo.',
 	'SMTP_CRAM_MD5'					=> 'CRAM-MD5',
@@ -10337,6 +10403,7 @@ $lang = array_merge($lang, array(
 	'SMTP_SETTINGS'					=> 'SMTP nustatymai',
 	'SMTP_USERNAME'					=> 'SMTP vartotojo vardas',
 	'SMTP_USERNAME_EXPLAIN'			=> 'Įrašykite vartotojo vardą tik tada, jeigu jūsų SMTP serveriui jis būtinas.',
+	'TEST_EMAIL_SENT'				=> 'The test email has been sent.<br />If you don’t receive it, please check your emails configuration.<br /><br />If you require assistance, please visit the <a href="https://www.phpbb.com/community/">phpBB support forums</a>.',
 	'USE_SMTP'						=> 'El. paštui naudoti SMTP serverį',
 	'USE_SMTP_EXPLAIN'				=> 'Pasirinkite “Taip” jeigu norite ar turite el. paštą siųsti per tam tikrą serverį, o ne vietinę pašto PHP funkciją.',
 
@@ -10566,8 +10633,7 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'Duomenų bazė',
-	'ACP_CAT_DOT_MODS'			=> '.MOD`ai',
-	'ACP_CAT_DOT_MODS'			=> '.MOD`ai',
+	'ACP_CAT_DOT_MODS'			=> 'Išplėtimai',
 	'ACP_CAT_FORUMS'			=> 'Forumai',
 	'ACP_CAT_GENERAL'			=> 'Bendrai',
 	'ACP_CAT_MAINTENANCE'		=> 'Priežiūra',
@@ -10732,6 +10798,9 @@ $lang = array_merge($lang, array(
 
 	'BACK'					=> 'Atgal',
 
+	'CONTAINER_EXCEPTION' => 'phpBB encountered an error building the container due to an installed extension. For this reason, all extensions have been temporarily disabled. Please try purging your forum cache. All extensions will automatically be re-enabled once the container error is resolved. If this error continues, please visit <a href="https://www.phpbb9.de">phpbb9.de</a> for support.',
+	'EXCEPTION' => 'Exception',
+
 	'COLOUR_SWATCH'			=> 'Spalvų paletė',
 	'CONFIG_UPDATED'		=> 'Konfigūracija sėkmingai atnaujinta.',
 	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
@@ -10742,7 +10811,7 @@ $lang = array_merge($lang, array(
 	'DEACTIVATE'				=> 'Išjungti',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'Įrašytas kelias “%s” neegzistuoja.',
 	'DIRECTORY_NOT_DIR'			=> 'Įrašytas kelias “%s” nėra katalogas.',
-	'DIRECTORY_NOT_WRITABLE'	=> 'Nurodytas katalogas “%s” yra tik skaitymui.',
+	'DIRECTORY_NOT_WRITABLE'	=> 'Directory not writable',
 	'DISABLE'					=> 'Išjungti',
 	'DOWNLOAD'					=> 'Atsisiųsti',
 	'DOWNLOAD_AS'				=> 'Atsisiųsti kaip',
@@ -10793,10 +10862,11 @@ $lang = array_merge($lang, array(
 	'PARSE_URLS'						=> 'Apdoroti nuorodas',
 	'PERMISSIONS_TRANSFERRED'			=> 'Jūs perėmėte vartotojo <strong>%s</strong> teises. Dabar galite naršyti diskusijose su jo teisėmis.<br />Įsidėmėkite, kad administratoriaus teisės nebuvo perimtos. Savo teises galite susigrąžinti bet kuriuo metu.',
 	'PERMISSIONS_TRANSFERRED_EXPLAIN'	=> 'Jūs perėmėte vartotojo %1$s teises. Siu šio vartotojo teisėmis galite naršyti diskusijose tačiau negalėsite prieiti prie administratoriaus valdymo pulto, kadangi administravimo teisės nebuvo perimtos. Savo teises galite <a href="%2$s"><strong>susigrąžinti</strong></a> bet kuriuo metu.',
-	'PIXEL'								=> 'piks.',
 	'PROCEED_TO_ACP'					=> '%sEiti į administratoriaus valdymo pultą%s',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Svarbi tema',
 	'REMIND'							=> 'Priminti',
+	'REPARSE_LOCK_ERROR'				=> 'Reparsing is already in progress by another process.',
 	'RESYNC'							=> 'Sinchronizuoti',
 
 	'RUNNING_TASK'			=> 'Running task: %s.',
@@ -10845,11 +10915,23 @@ $lang = array_merge($lang, array(
 
 	'DATABASE_SIZE'			=> 'Duomenų bazės dydis',
 
+	// Enviroment configuration checks, mbstring related
+	'ERROR_MBSTRING_FUNC_OVERLOAD'					=> 'Function overloading is improperly configured',
+	'ERROR_MBSTRING_FUNC_OVERLOAD_EXPLAIN'			=> '<var>mbstring.func_overload</var> must be set to either 0 or 4. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION'			=> 'Transparent character encoding is improperly configured',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION_EXPLAIN'	=> '<var>mbstring.encoding_translation</var> must be set to 0. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_INPUT'						=> 'HTTP input character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_INPUT_EXPLAIN'				=> '<var>mbstring.http_input</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_OUTPUT'					=> 'HTTP output character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_OUTPUT_EXPLAIN'			=> '<var>mbstring.http_output</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+
 	'FILES_PER_DAY'		=> 'Prikabinti failai per dieną',
 	'FORUM_STATS'		=> 'Diskusijų statistika',
 
 	'GZIP_COMPRESSION'	=> 'GZip suspaudimas',
 
+	'PIXEL'								=> 'piks.',
+	
 	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'Nepasiekiamas',
 	'NUMBER_FILES'		=> 'Prikabintų failų skaičius',
@@ -10857,6 +10939,8 @@ $lang = array_merge($lang, array(
 	'NUMBER_TOPICS'		=> 'Temų skaičius',
 	'NUMBER_USERS'		=> 'Vartotojų skaičius',
 	'NUMBER_ORPHAN'		=> 'Pasimetę failai',
+
+	'PHP_VERSION_OLD'	=> 'The version of PHP on this server will no longer be supported by future versions of phpBB. %sDetails%s',
 
 	'POSTS_PER_DAY'		=> 'Nauji pranešimai per dieną',
 
@@ -10903,10 +10987,16 @@ $lang = array_merge($lang, array(
 	'VALUE'						=> 'Reikšmė',
 	'VERSIONCHECK_FAIL'			=> 'Nepavyko gauti naujausios versijos informacijos.',
 	'VERSIONCHECK_FORCE_UPDATE'	=> 'Patikrinti versiją',
+	'VERSION_CHECK'				=> 'Versijos patikrinimas',
+	'VERSION_CHECK_EXPLAIN'		=> 'Patikrina ar naudojate naujausią phpBB versiją.',
+	'VERSION_NOT_UP_TO_DATE_ACP'	=> 'Jūs naudojate ne naujausią phpBB versiją.<br />Apačioje rasite nuorodą į pranešimą apie naujausią leidimą. Ten pat rasite ir instrukcijas, kaip atnaujinti jūsų naudojamą versiją.',
+	'VERSION_NOT_UP_TO_DATE_TITLE'	=> 'Jūs naudojate ne naujausią phpBB versiją.',
+	'VERSION_UP_TO_DATE_ACP'	=> 'Jūs naudojate naujausią phpBB versiją. Šiuo metu atnaujinimų nėra.',
 	'VIEW_ADMIN_LOG'			=> 'Parodyti administratorių veiksmų registrą',
 	'VIEW_INACTIVE_USERS'		=> 'Parodyti neaktyvius vartotojus',
 
 	'WELCOME_PHPBB'			=> 'Sveiki atvykę į phpBB',
+	'WRITABLE_CONFIG'		=> 'Your config file (config.php) is currently world-writable. We strongly encourage you to change the permissions to 640 or at least to 644 (for example: <a href="http://en.wikipedia.org/wiki/Chmod" rel="external">chmod</a> 640 config.php).',
 
 	'BROWSER_LANGUAGE'			=> 'Enable Browser Language Detection',
 	'BROWSER_LANGUAGE_EXPLAIN'	=> 'Enables the browser language detection for guest users not to use the default language of the board. Choose no to disable the feature.',

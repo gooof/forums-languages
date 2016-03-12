@@ -1725,6 +1725,86 @@ $lang = array_merge($lang, array(
 #######language/en/install.php#######
 
 $lang = array_merge($lang, array(
+	'INSTALL_PANEL'	=> 'Instalacija',
+	'SELECT_LANG'	=> 'Izaberi jezik',
+	'STAGE_INSTALL'	=> 'Installing phpBB',
+
+	// Introduction page
+	'INTRODUCTION_TITLE'	=> 'Uvod',
+	'INTRODUCTION_BODY'		=> 'Welcome to phpBB3!<br /><br />phpBB® is the most widely used open source bulletin board solution in the world. phpBB3 is the latest installment in a package line started in 2000. Like its predecessors, phpBB3 is feature-rich, user-friendly, and fully supported by the phpBB Team. phpBB3 greatly improves on what made phpBB2 popular, and adds commonly requested features that were not present in previous versions. We hope it exceeds your expectations.<br /><br />This installation system will guide you through installing phpBB3, updating to the latest version of phpBB3 from past releases, as well as converting to phpBB3 from a different discussion board system (including phpBB2). For more information, we encourage you to read <a href="../docs/INSTALL.html">the installation guide</a>.<br /><br />To read the phpBB3 license or learn about obtaining support and our stance on it, please select the respective options from the side menu. To continue, please select the appropriate tab above.',
+
+	// Support page
+	'SUPPORT_TITLE'		=> 'Podrška',
+	'SUPPORT_BODY_INSTALL'	=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/docs/en/3.1/ug/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
+
+	// License
+	'LICENSE_TITLE'		=> 'General Public License',
+
+	// Install page
+	'INSTALL_INTRO'			=> 'Dobrodošao/la u instalaciju',
+	'INSTALL_INTRO_BODY'	=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
+
+	<ul>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
+	</ul>
+
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
+
+	<p>phpBB3 supports the following databases:</p>
+	<ul>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
+		<li>SQLite 2.8.2+</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
+		<li>Oracle</li>
+	</ul>
+
+	<p>Only those databases supported on your server will be displayed.',
+
+	'ACP_LINK'	=> 'Take me to <a href="%1$s">the ACP</a>',
+
+	'INSTALL_PHPBB_INSTALLED'		=> 'phpBB is already installed.',
+	'INSTALL_PHPBB_NOT_INSTALLED'	=> 'phpBB is not installed yet.',
+
+
+	// Filesystem requirements
+	'FILE_NOT_EXISTS'			=> 'File not exists',
+	'FILE_NOT_EXISTS_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to exist.',
+	'FILE_NOT_WRITABLE'			=> 'File not writable',
+	'FILE_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to be writable.',
+
+	'DIRECTORY_NOT_EXISTS'				=> 'Directory not exists',
+	'DIRECTORY_NOT_EXISTS_EXPLAIN'		=> 'To be able to install phpBB the %1$s directory needs to exist.',
+	'DIRECTORY_NOT_WRITABLE'			=> 'Directory not writable',
+	'DIRECTORY_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s directory needs to be writable.',
+
+	// Server requirements
+	'PHP_VERSION_REQD'					=> 'PHP version',
+	'PHP_VERSION_REQD_EXPLAIN'			=> 'phpBB requires PHP version 5.4.0 or higher.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
+	'PCRE_UTF_SUPPORT'					=> 'PCRE UTF-8 podrška',
+	'PCRE_UTF_SUPPORT_EXPLAIN'			=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_JSON_SUPPORT'					=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'			=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_SUPPORTED_DB'					=> 'Podržane baze podataka',
+	'PHP_SUPPORTED_DB_EXPLAIN'			=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
+
+	'RETEST_REQUIREMENTS'	=> 'Retest requirements',
+
+	'STAGE_REQUIREMENTS'	=> 'Check requirements',
+
+	'INST_ERR_MISSING_DATA'		=> 'Moraš ispuniti sve tražene podatke.',
+
+	'TIMEOUT_DETECTED_TITLE'	=> 'The installer detected a timeout',
+	'TIMEOUT_DETECTED_MESSAGE'	=> 'The installer has detected a timeout, you may try to refresh the page, which may lead to data corruption. We suggest that you either increase your timeout settings or try to use the CLI.',
+
 	'ADMIN_CONFIG'				=> 'Konfiguracija administracije',
 	'ADMIN_PASSWORD'			=> 'Lozinka administratora',
 	'ADMIN_PASSWORD_CONFIRM'	=> 'Potvrdi lozinku administratora',
@@ -1788,7 +1868,7 @@ $lang = array_merge($lang, array(
 	'CONV_ERROR_INSERT_BOTGROUP'		=> 'Nije moguće umetnuti robote u tablicu robota.',
 	'CONV_ERROR_INSERT_USER_GROUP'		=> 'Nije moguće umetnuti korisnika/cu u user_group tablicu.',
 	'CONV_ERROR_MESSAGE_PARSER'			=> 'Parserska greška poruke',
-	'CONV_ERROR_NO_AVATAR_PATH'			=> 'Bilješka/uputa programeru/ki: moraš odrediti $convertor[\'avatar_path\'] za uporabu %s.',
+	'CONV_ERROR_NO_AVATAR_PATH'			=> 'Note to developer: you must specify convertor[avatar_path] to use %s.',
 	'CONV_ERROR_NO_FORUM_PATH'			=> 'Nije specificirana relativna putanja do izvorišnog foruma.',
 	'CONV_ERROR_NO_GALLERY_PATH'		=> 'Bilješka/uputa programeru/ki: moraš odrediti $convertor[\'avatar_gallery_path\'] za uporabu %s.',
 	'CONV_ERROR_NO_GROUP'				=> 'Grupa “%1$s” nije pronađena u %2$s.',
@@ -1880,65 +1960,45 @@ Sada imaš phpBB %1$s koji je uspješno instaliran. Molimo da nastaviš odabirom
 		<p>phpBB Unified Convertor Framework podržava konverziju phpBB 2.0.x i drugih forumskih sistema u phpBB3. Ukoliko imaš postojeći forum, koji želiš konvertirati, molimo da <a href="%2$s">klikneš ovdje za odlazak na konverter</a>.</p>
 		<h2>Pokreni svoj phpBB3!</h2>
 		<p>Klik na donji gumb odvest će te do forme za slanje statističkih podataka phpBB-u unutar tvoje Administratorske kontrolne ploče. Bili bi zahvalni ukoliko bi nam poslao ove informacije. Nakon toga bi trebao proučiti dostupne opcije. Zapamti da ti je pomoć uvijek dostupna na <a href="http://www.phpbb.com/support/documentation/3.0/">Dokumentaciji</a>, <a href="%3$s">PROČITAJ ME</a> i <a href="http://www.phpbb.com/community/viewforum.php?f=46">Forumu za podršku korisnicima</a>.</p><p><strong>Molimo te da izbrišeš, ukloniš ili preimenuješ instalacijsku mapu prije korištenja foruma. Sve dok ona postoji, imat ćeš pristup samo Administratorskoj kontrolnoj ploči.</strong>',
-	'INSTALL_INTRO'				=> 'Dobrodošao/la u instalaciju',
 
-	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
-
-	<ul>
-		<li>The Database Type - the database you will be using.</li>
-		<li>The Database server hostname or DSN - the address of the database server.</li>
-		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
-		<li>The Database name - the name of the database on the server.</li>
-		<li>The Database username and Database password - the login data to access the database.</li>
-	</ul>
-
-	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
-
-	<p>phpBB3 supports the following databases:</p>
-	<ul>
-		<li>MySQL 3.23 or above (MySQLi supported)</li>
-		<li>PostgreSQL 8.3+</li>
-		<li>SQLite 2.8.2+</li>
-		<li>SQLite 3.6.15+</li>
-		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
-		<li>MS SQL Server 2005 or above (native)</li>
-		<li>Oracle</li>
-	</ul>
-
-	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'Kako bi mogao/la (za)početi (s) instalaciju(om), klikni na donji gumb.',
 	'INSTALL_LOGIN'				=> 'Prijava',
 	'INSTALL_NEXT'				=> 'Sljedeća faza',
 	'INSTALL_NEXT_FAIL'			=> 'Neki testovi nisu zadovoljeni što će reći da moraš ispraviti (navedene) probleme prije nastavka s/prijelaza na sljedeću fazu. Ukoliko ne ispraviš greške, a nastaviš, rezultat bi mogao biti nekompletna instalacija.',
 	'INSTALL_NEXT_PASS'			=> 'Svi osnovni testovi su zadovoljeni te možeš nastaviti s instalacijom prelaskom na sljedeću fazu. Ukoliko si promijenio/la dopuštenja/module/sl. i želiš re-testirati, možeš to (sada) učiniti.',
-	'INSTALL_PANEL'				=> 'Instalacija',
 	'INSTALL_SEND_CONFIG'		=> 'Nažalost, phpBB nije mogao zapisati konfiguracijske informacije direktno u config.php datoteku (a) razlog čega je ili nepostojanje datoteke ili (to što) datoteka nije pre(za)pisljiva. Moguće opcije bit će izlistane ispod (a) kako bi mogao/la završiti s instalacijom.',
 	'INSTALL_START'				=> 'Započni instalaciju',
 	'INSTALL_TEST'				=> 'Ponovo testiraj',
-	'INST_ERR'					=> 'Instalacijska greška',
-	'INST_ERR_DB_CONNECT'		=> 'Nije bilo moguće povezati se s bazom podataka, greška je navedena dolje.',
+
+	// Errors
+	'INST_ERR_NO_DB'			=> 'Nije moguće učitati PHP modul za izabran tip baze podataka.',
+	'INST_ERR_DB_INVALID_PREFIX'	=> 'The prefix you entered is invalid. It must start with a letter and must only contain letters, numbers and underscores.',
+	'INST_ERR_PREFIX_TOO_LONG'	=> 'Prefiks tablice/a, koji si specificirao/la, je predugačak. Maksimalna dužina je %d znakova.',
+	'INST_ERR_DB_NO_NAME'		=> 'Nije uneseno ime baze podataka.',
 	'INST_ERR_DB_FORUM_PATH'	=> 'Specificirana datoteka baze podataka nalazi se u forumskom stablu mapa. Morao/la bi staviti/premjestiti datoteku na lokaciju kojoj nije moguće pristupiti putem Weba.',
+	'INST_ERR_DB_CONNECT'		=> 'Nije bilo moguće povezati se s bazom podataka, greška je navedena dolje.',
 	'INST_ERR_DB_NO_ERROR'		=> 'Nije dana poruka greške.',
+	'INST_ERR_PREFIX'			=> 'Tablice sa specificiranim prefiksom već postoje. Izaberi alternativu.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'MySQL verzija instalirana na računalu nije kompatibilna s “MySQL sa MySQLi ekstenzijom” (a) što je opcija koju si izabrao/la. Pokušaj, umjesto toga, izabrati, “MySQL” opciju.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'Verzija SQLite ekstenzije, koju si instalirao/la, je prestara, mora biti ažurirana na, najmanje, 2.8.2.',
 	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> ' Oracle verzija instalirana na računalu zahtjeva postavljanje <var>NLS_CHARACTERSET</var> paramet(a)ra na <var>UTF8</var>. Možeš ili promijeniti parametar/re ili ažurirati instalaciju na 9.2+.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'Baza podataka koju si izabrao/la nije kreirana u <var>UNICODE</var> ili <var>UTF8</var> enkodiranju/enkodingu. Pokušaj s instalacijom baze podataka u <var>UNICODE</var> ili <var>UTF8</var> enkodiranju/enkodingu.',
-	'INST_ERR_DB_NO_NAME'		=> 'Nije uneseno ime baze podataka.',
+	'INST_SCHEMA_FILE_NOT_WRITABLE'	=> 'The schema file is not writable',
+
+	'EMAIL_CONFIG'	=> 'E-mail configuration',
+
+	'INST_ERR'					=> 'Instalacijska greška',
 	'INST_ERR_EMAIL_INVALID'	=> 'E-mail adresa koju si unio/la je neispravna.',
 	'INST_ERR_EMAIL_MISMATCH'	=> 'E-mail adrese koje si unio/la se ne podudaraju.',
 	'INST_ERR_FATAL'			=> 'Fatalna instalacijska greška',
 	'INST_ERR_FATAL_DB'			=> 'Došlo je do fatalne, nepopravljive greške s/u bazi podataka.<br />Moguće je da je do ovoga došlo jer specificirani/a korisnik/ca nema potrebna dopuštenja za <code>KREIRANJE TABLICA</code> odnosno <code>UMETANJE</code> podataka itd.<br />Eventualne daljnje informacije nalaze se dolje.<br />Bilo kako bilo, prvo kontaktiraj pružatelja usluga (a tek) potom phpBB za daljnju pomoć.',
 	'INST_ERR_FTP_PATH'			=> 'Nije bilo moguće promijeniti u zadanu mapu, provjeri putanju.',
 	'INST_ERR_FTP_LOGIN'		=> 'Nije bilo moguće prijaviti se na FTP server, provjeri korisničko ime i zaporku.',
-	'INST_ERR_MISSING_DATA'		=> 'Moraš ispuniti sve tražene podatke.',
-	'INST_ERR_NO_DB'			=> 'Nije moguće učitati PHP modul za izabran tip baze podataka.',
 	'INST_ERR_PASSWORD_MISMATCH'	=> 'Zaporke koje si unio/la se ne podudaraju.',
 	'INST_ERR_PASSWORD_TOO_LONG'	=> 'Zaporka koju si unio/la je predugačka. Može sadržavati maksimalno 30 znakova.',
 	'INST_ERR_PASSWORD_TOO_SHORT'	=> 'Zaporka koju si unio/la je prekratka. Mora sadržavati minimalno 6 znakova.',
-	'INST_ERR_PREFIX'			=> 'Tablice sa specificiranim prefiksom već postoje. Izaberi alternativu.',
 	'INST_ERR_PREFIX_INVALID'	=> 'Prefiks tablice/a, koji si specificirao/la, je neispravan za (tvoju) bazu podatka. Pokušaj s drugim, npr. izbrisivanjem znakova poput rastavnice.',
-	'INST_ERR_PREFIX_TOO_LONG'	=> 'Prefiks tablice/a, koji si specificirao/la, je predugačak. Maksimalna dužina je %d znakova.',
 	'INST_ERR_USER_TOO_LONG'	=> 'Korisničko ime koje si unio/la je predugačko. Može sadržavati maksimalno 20 znakova.',
 	'INST_ERR_USER_TOO_SHORT'	=> 'Korisničko ime koje si unio/la je prekratko. Mora sadržavati minimalno 3 znaka.',
 	'INVALID_PRIMARY_KEY'		=> 'Neispravan primaran ključ: %s.',
@@ -1973,15 +2033,15 @@ Sada imaš phpBB %1$s koji je uspješno instaliran. Molimo da nastaviš odabirom
 	'OVERVIEW_BODY'				=> 'Dobrodošao/la u phpBB3!<br /><br />phpBB™ je najrašireniji (najkorišteniji) <em>open source</em> forum na svijetu. phpBB3 je najnovije izdanje, (još) od 2000. godine postojećeg, phpBB foruma. Kao što je bilo i s prethodnim izdanjima, phpBB3 je obogaćen raznim novim mogućnostima, korisnički pristupačniji te u potpunosti podržan od strane phpBB Tima. Uvelike je poboljšano ono što je phpBB2 učinilo popularnim te su dodane učestalo tražene mogućnosti koje nisu bile implementirane u prethodna izdanja. Nadamo se da phpBB3 ispunjava očekivanja.<p>Instalacijski sistem će te voditi kroz instalacijski proces phpBB-a, konverziju iz različitog/drugog softverskog paketa odnosno nadogradnju na zadnju verziju phpBB-a. Ukoliko želiš saznati više informacija o instalaciji phpBB3-a, pročitaj <a href="../docs/INSTALL.html">instalacijski vodič</a>.<br /><br />Ukoliko želiš saznati više informacija o phpBB3 licenci odnosno dobivaju podrške, izaberi jednu od opcija s izbornika.<br /><br />Za nastavak, izaberi, iznad, odgovarajući odjeljak.',
 
 	'PCRE_UTF_SUPPORT'				=> 'PCRE UTF-8 podrška',
-	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB <strong>neće</strong> raditi ako PHP instalacija nije kompatibilna s UTF-8 podrškom u PCRE ekstenziji.',
-	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP funkcija getimagesize() je dostupna',
-	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Obvezno</strong>: kako bi phpBB funkcionirao ispravno, getimagesize funkcija mora biti dostupna.',
+	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
 	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
-	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'Opcionalni moduli',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>Opcionalno</strong>: ovi moduli/aplikacije su opcionalni/e, no, ako su dostupni/e, pružit će dodatne mogućnosti/opcije.',
 	'PHP_SUPPORTED_DB'				=> 'Podržane baze podataka',
-	'PHP_SUPPORTED_DB_EXPLAIN'		=> '<strong>Obvezno</strong>: moraš imati podršku za najmanje jednu bazu podataka kompatibilnu s PHP-om. Ukoliko niti jedan modul baze podataka nije prikazan kao dostupan, kontaktiraj davatelja usluga za savjet ili pregledaj relevantnu dokumentaciju PHP instalacije.',
+	'PHP_SUPPORTED_DB_EXPLAIN'		=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
 	'PHP_REGISTER_GLOBALS'			=> 'PHP postavka <var>register_globals</var> je onemogućena',
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'phpBB će (ipak) raditi, ukoliko je ova opcija omogućena, no, ukoliko je moguće, preporučljivo je, u PHP instalaciji, onemogućiti register_globals poradi sigurnosnih razloga.',
 	'PHP_SAFE_MODE'					=> 'Sigurnosni mod',
@@ -1989,7 +2049,7 @@ Sada imaš phpBB %1$s koji je uspješno instaliran. Molimo da nastaviš odabirom
 	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'PHP postavka <var>allow_url_fopen</var> je omogućena',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>Opcionalno</strong>: ova postavka je opcionalna, no, određene phpBB funkcije, poput off-site avatara, neće raditi ispravno bez nje.',
-	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version',
 	'POST_ID'						=> 'ID posta',
 	'PREFIX_FOUND'					=> 'Skeniranje tablica je pokazalo valjanu instalaciju koja koristi <strong>%s</strong> kao prefiks tablica.',
 	'PREPROCESS_STEP'				=> 'Izvršavanje pred-procesnih funkcija/upita',
@@ -2005,7 +2065,6 @@ Sada imaš phpBB %1$s koji je uspješno instaliran. Molimo da nastaviš odabirom
 
 	'SCRIPT_PATH'				=> 'Putanja skripte',
 	'SCRIPT_PATH_EXPLAIN'		=> 'Putanja smještaja phpBB-a relativno u odnosu na ime domene, npr. <samp>/phpBB3</samp>.',
-	'SELECT_LANG'				=> 'Izaberi jezik',
 	'SERVER_CONFIG'				=> 'Konfiguracija servera',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Indeks pretraživanja nije konvertiran.',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Stari indeks pretraživanja nije konvertiran što će reći da će pretraživanje davati “prazne” rezultate, no, možeš kreirati novi indeks pretraživanja na način da odeš u <em>Administriranje foruma</em> te pod <em>Održavanjem</em> izabereš <em>Indeks(e) pretraživanja</em>.',
@@ -2022,7 +2081,6 @@ Sada imaš phpBB %1$s koji je uspješno instaliran. Molimo da nastaviš odabirom
 	'STAGE_FINAL'				=> 'Završna faza',
 	'STAGE_INTRO'				=> 'Uvod',
 	'STAGE_IN_PROGRESS'			=> 'Konverzija u tijeku',
-	'STAGE_REQUIREMENTS'		=> 'Uvjeti',
 	'STAGE_SETTINGS'			=> 'Postavke',
 	'STARTING_CONVERT'			=> 'Započinje proces konverzije',
 	'STEP_PERCENT_COMPLETED'	=> 'Korak <strong>%d</strong> od <strong>%d</strong>',
@@ -9857,7 +9915,7 @@ $lang = array_merge($lang, array(
 	'GUEST_STYLE'					=> 'Guest style',
 	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Onemogući korisnički stil',
-	'OVERRIDE_STYLE_EXPLAIN'		=> 'Zamjenjuje korisnički stil zadanim.',
+	'ACP_OVERRIDE_STYLE_EXPLAIN'	=> 'Replaces user’s (and guest’s) style with the style as defined under "Default style".',
 	'SITE_DESC'						=> 'Opis stranica',
 	'SITE_HOME_TEXT'				=> 'Main website text',
 	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
@@ -9865,8 +9923,9 @@ $lang = array_merge($lang, array(
 	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Naziv stranica',
 	'SYSTEM_TIMEZONE'				=> 'Vremenska zona',
+	'SYSTEM_TIMEZONE_EXPLAIN'			=> 'Timezone to use for displaying times to users who are not logged in (guests, bots). Logged in users set their timezone during registration and can change it in their user control panel.',
 	'WARNINGS_EXPIRE'				=> 'Vrijeme trajanja upozorenja',
-	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Broj dana koji mora proći kako bi upozorenje automatski bilo izbrisano iz korisničke evidencije.',
+	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Number of days that will elapse before a warning will automatically expire from a user’s record. Set this value to 0 to make warnings permanent.',
 
 	'ACP_BOARD_FEATURES_EXPLAIN'	=> 'Ovdje možeš omogućiti/onemogućiti određene karakteristike/mogućnosti/funkcije.',
 
@@ -9897,6 +9956,7 @@ $lang = array_merge($lang, array(
 	'ALLOW_TOPIC_NOTIFY'		=> 'Dopusti pretplatu na teme',
 	'BOARD_PM'					=> 'Privatne poruke',
 	'BOARD_PM_EXPLAIN'			=> 'Omogući odnosno onemogući privatne poruke svim korisnicima/ama.',
+	'ALLOW_BOARD_NOTIFICATIONS' => 'Allow board notifications',
 
 	'ACP_AVATAR_SETTINGS_EXPLAIN'	=> 'Avatari su, uobičajeno, male slike, jedinstvene/osobne za svakog/u korisnika/cu. Ovisno o stilu, obično su prikazani ispod korisničkog imena prilikom pregledavanja tema.<br />Ovdje možeš odrediti kako korisnici/e mogu definirati/postaviti (svoje) avatare.<br />Za uploadiranje avatara mora biti kreirana mapa pre(za)pisljiva od strane servera.<br />Ograničenja veličine datoteka odnose se samo na uploadirane avatare, ne i na linkane.',
 
@@ -10006,6 +10066,7 @@ $lang = array_merge($lang, array(
 
 	'ACC_ACTIVATION'				=> 'Aktivacija korisničkih računa',
 	'ACC_ACTIVATION_EXPLAIN'		=> 'Način aktivacije korisničkog računa [automatsko (/), administrator/ica ili korisnik/ca] odnosno onemogućavanje registracije uopće [onemogućeno].',
+	'ACC_ACTIVATION_WARNING'		=> 'Please note that the currently selected activation method requires emails to be enabled, otherwise registration will be disabled. We recommend to either select a different activation method or reenable emails.',
 	'NEW_MEMBER_POST_LIMIT'			=> 'Limit broja postova za nove korisnike/ce',
 	'NEW_MEMBER_POST_LIMIT_EXPLAIN'	=> 'Novi/e korisnici/e se nalaze unutar grupe <em>Novo Registrirani/e Korisnici/e</em> sve dok ne napišu navedeni broj postova. Grupa se može koristiti za ograničavanje korištenja privatnih poruka ili pregledavanje postova. <strong>Vrijednost 0 isključuje ovu opciju.</strong>',
 	'NEW_MEMBER_GROUP_DEFAULT'		=> 'Postavi grupu Novo Registrirani/e Korisnici/e kao zadanu',
@@ -10303,8 +10364,11 @@ $lang = array_merge($lang, array(
 
 	'TPL_ALLOW_PHP'					=> 'Dopusti PHP u predlošcima',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Ukoliko je omogućeno, <code>PHP</code> i <code>INCLUDEPHP</code> bit će dopušteni u predlošcima.',
+	'UPLOAD_CERT_VALID'				=> 'Validate upload certificate',
+	'UPLOAD_CERT_VALID_EXPLAIN'		=> 'If enabled, certificates of remote uploads will be validated. This requires the CA bundle to be defined by the <samp>openssl.cafile</samp> or <samp>curl.cainfo</samp> setting in your php.ini.',
 
 	'ACP_EMAIL_SETTINGS_EXPLAIN'	=> 'Donjim informacija koristi(t) (će) se forum kada (će) (slati) šalje e-mailove korisnicima/ama.<br />Unesi valjanu e-mail adresu jer je će se svi neisporučeni e-mailovi vratiti na nju.<br />Ukoliko host ne podržava PHP bazirano slanje e-mailova, poruke možeš slati direktno putem SMTP-a [ovo zahtijeva adresu servera (ukoliko ne znaš koja je, pitaj pružatelja usluga); ukoliko server zahtijeva provjeru autentičnosti - (i) samo ako zahtijeva - unesi korisničko ime, lozinku i metodu provjere autentičnosti.',
+
 	'ADMIN_EMAIL'					=> 'Administratori/ce mi mogu slati info e-mailove',
 	'ADMIN_EMAIL_EXPLAIN'			=> 'Ova e-mail adresa bit će korištena kao povratna e-mail adresa na svim e-mailovima [npr. e-mailu tehničke podrške i dr.]. Bit će, uvijek, korištena kao <samp>Return-Path</samp> i <samp>Sender</samp> adresa e-mailova.',
 	'BOARD_EMAIL_FORM'				=> 'Korisnici/e mogu slati e-mailove putem foruma',
@@ -10323,6 +10387,8 @@ $lang = array_merge($lang, array(
 	'EMAIL_SIG_EXPLAIN'				=> 'Ovaj potpis bit će dodan svakoj e-mail poruci koja će biti poslana “u ime” foruma.',
 	'ENABLE_EMAIL'					=> 'Omogući slanje e-mailova putem foruma',
 	'ENABLE_EMAIL_EXPLAIN'			=> 'Ukoliko je ovo isključeno, e-mail poruke neće biti slane od strane foruma. <em>Napomena da korisnički i administratorski način aktivacije računa zahtijevaju da ova opcija bude uključena. Ukoliko se koristi korisnička ili administratorska aktivacijska opcija u aktivacijskim postavkama, isključivanje ove opcije neće zahtijevati aktivaciju novih računa.</em>',
+	'SEND_TEST_EMAIL'				=> 'Send a test email',
+	'SEND_TEST_EMAIL_EXPLAIN'		=> 'This will send a test email to the address defined in your account.',
 	'SMTP_AUTH_METHOD'				=> 'Metoda provjere autentičnosti za SMTP',
 	'SMTP_AUTH_METHOD_EXPLAIN'		=> 'Koristi se samo ako su korisničko ime i lozinka postavljeni.<br />Ukoliko nisi siguran/na  koju metodu koristiti, pitaj davatelja usluga.',
 	'SMTP_CRAM_MD5'					=> 'CRAM-MD5',
@@ -10338,6 +10404,7 @@ $lang = array_merge($lang, array(
 	'SMTP_SETTINGS'					=> 'SMTP postavke',
 	'SMTP_USERNAME'					=> 'SMTP korisničko ime',
 	'SMTP_USERNAME_EXPLAIN'			=> 'Korisničko ime unesi samo ukoliko to SMTP server zahtijeva.',
+	'TEST_EMAIL_SENT'				=> 'The test email has been sent.<br />If you don’t receive it, please check your emails configuration.<br /><br />If you require assistance, please visit the <a href="https://www.phpbb.com/community/">phpBB support forums</a>.',
 	'USE_SMTP'						=> 'Koristi SMTP server za e-mail',
 	'USE_SMTP_EXPLAIN'				=> 'Izaberi “Da” samo ukoliko želiš/moraš slati e-mail poruke putem imenovanog servera umjesto lokalne e-mail funkcije.',
 
@@ -10567,8 +10634,7 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'Baza podataka',
-	'ACP_CAT_DOT_MODS'			=> '.MODovi',
-	'ACP_CAT_DOT_MODS'			=> '.MODovi',
+	'ACP_CAT_DOT_MODS'			=> 'Ekstenzije',
 	'ACP_CAT_FORUMS'			=> 'Forumi',
 	'ACP_CAT_GENERAL'			=> 'Općenito',
 	'ACP_CAT_MAINTENANCE'		=> 'Održavanje',
@@ -10733,6 +10799,9 @@ $lang = array_merge($lang, array(
 
 	'BACK'					=> 'Natrag',
 
+	'CONTAINER_EXCEPTION' => 'phpBB encountered an error building the container due to an installed extension. For this reason, all extensions have been temporarily disabled. Please try purging your forum cache. All extensions will automatically be re-enabled once the container error is resolved. If this error continues, please visit <a href="https://www.phpbb9.de">phpbb9.de</a> for support.',
+	'EXCEPTION' => 'Exception',
+
 	'COLOUR_SWATCH'			=> 'Uzorak boje',
 	'CONFIG_UPDATED'		=> 'Ažuriranje je izvršeno.',
 	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
@@ -10743,7 +10812,7 @@ $lang = array_merge($lang, array(
 	'DEACTIVATE'				=> 'Deaktiviraj',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'Unesena putanja “%s” ne postoji.',
 	'DIRECTORY_NOT_DIR'			=> 'Unesena putanja “%s” nije mapa.',
-	'DIRECTORY_NOT_WRITABLE'	=> 'Unesena putanja “%s” nije pre(za)pisljiva.',
+	'DIRECTORY_NOT_WRITABLE'	=> 'Directory not writable',
 	'DISABLE'					=> 'Onemogući',
 	'DOWNLOAD'					=> 'Preuzmi',
 	'DOWNLOAD_AS'				=> 'Preuzmi kao',
@@ -10794,10 +10863,11 @@ $lang = array_merge($lang, array(
 	'PARSE_URLS'						=> 'Parsiraj linkove',
 	'PERMISSIONS_TRANSFERRED'			=> 'Dopuštenja korisnika/ce <strong>%s</strong> su transferirana.<br />[Sada] Možeš pregledavati forum dopuštenjima navedenog/e korisnika/ce.<br />Administratorska dopuštenja nisu transferirana.<br />Natrag na svoja dopuštenja možeš se vratiti bilo kada.',
 	'PERMISSIONS_TRANSFERRED_EXPLAIN'	=> 'Dopuštenja korisnika/ce <strong>%1$s</strong> su transferirana.<br />[Sada] Možeš pregledavati forum dopuštenjima navedenog/e korisnika/ce.<br />Administratorska dopuštenja nisu transferirana.<br /><a href="%2$s"><strong>Natrag na svoja dopuštenja</strong></a> možeš se vratiti bilo kada.',
-	'PIXEL'								=> 'px',
 	'PROCEED_TO_ACP'					=> 'Klikni %sovdje%s za odlazak u AF.',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Obavijest',
 	'REMIND'							=> 'Podsjeti',
+	'REPARSE_LOCK_ERROR'				=> 'Reparsing is already in progress by another process.',
 	'RESYNC'							=> 'Resinkroniziraj',
 
 	'RUNNING_TASK'			=> 'Running task: %s.',
@@ -10846,11 +10916,23 @@ $lang = array_merge($lang, array(
 
 	'DATABASE_SIZE'			=> 'Veličina baze',
 
+	// Enviroment configuration checks, mbstring related
+	'ERROR_MBSTRING_FUNC_OVERLOAD'					=> 'Function overloading is improperly configured',
+	'ERROR_MBSTRING_FUNC_OVERLOAD_EXPLAIN'			=> '<var>mbstring.func_overload</var> must be set to either 0 or 4. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION'			=> 'Transparent character encoding is improperly configured',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION_EXPLAIN'	=> '<var>mbstring.encoding_translation</var> must be set to 0. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_INPUT'						=> 'HTTP input character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_INPUT_EXPLAIN'				=> '<var>mbstring.http_input</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_OUTPUT'					=> 'HTTP output character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_OUTPUT_EXPLAIN'			=> '<var>mbstring.http_output</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+
 	'FILES_PER_DAY'		=> 'Privitaka dnevno',
 	'FORUM_STATS'		=> 'Statistika foruma',
 
 	'GZIP_COMPRESSION'	=> 'Gzip kompresija',
 
+	'PIXEL'								=> 'px',
+	
 	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'Nedostupno',
 	'NUMBER_FILES'		=> 'Ukupno privitaka',
@@ -10858,6 +10940,8 @@ $lang = array_merge($lang, array(
 	'NUMBER_TOPICS'		=> 'Ukupno tema',
 	'NUMBER_USERS'		=> 'Ukupno korisnika/ca',
 	'NUMBER_ORPHAN'		=> 'Ukupno bezpostnih privitaka',
+
+	'PHP_VERSION_OLD'	=> 'The version of PHP on this server will no longer be supported by future versions of phpBB. %sDetails%s',
 
 	'POSTS_PER_DAY'		=> 'Postova dnevno',
 
@@ -10904,10 +10988,16 @@ $lang = array_merge($lang, array(
 	'VALUE'						=> 'Vrijednost',
 	'VERSIONCHECK_FAIL'			=> 'Nije uspjelo pribavljanje informacija o posljednjoj verziji.',
 	'VERSIONCHECK_FORCE_UPDATE'	=> 'Ponovo provjeri verziju',
+	'VERSION_CHECK'				=> 'Provjeravanje verzije',
+	'VERSION_CHECK_EXPLAIN'		=> 'Provjeravanje da li je tvoja verzija phpBB-a <em/>up to date</em> (najnovija).',
+	'VERSION_NOT_UP_TO_DATE_ACP'	=> 'Tvoja verzija phpBB-a nije <em/>up to date</em> (najnovija).<br />Dolje možeš pronaći link do obavijesti koja sadrži informacije i upute za nadogradnju na najnoviju verziju.',
+	'VERSION_NOT_UP_TO_DATE_TITLE'	=> 'Tvoja verzija phpBB-a nije <em/>up to date</em> (najnovija).',
+	'VERSION_UP_TO_DATE_ACP'	=> 'Tvoja verzija phpBB-a je <em/>up to date</em> (najnovija). Trenutno nema novih nadogradnji.',
 	'VIEW_ADMIN_LOG'			=> 'Logovi administratora/ica',
 	'VIEW_INACTIVE_USERS'		=> 'Neaktivni/e korisnici/e',
 
 	'WELCOME_PHPBB'			=> 'Dobro došao/la na phpBB',
+	'WRITABLE_CONFIG'		=> 'Your config file (config.php) is currently world-writable. We strongly encourage you to change the permissions to 640 or at least to 644 (for example: <a href="http://en.wikipedia.org/wiki/Chmod" rel="external">chmod</a> 640 config.php).',
 
 	'BROWSER_LANGUAGE'			=> 'Enable Browser Language Detection',
 	'BROWSER_LANGUAGE_EXPLAIN'	=> 'Enables the browser language detection for guest users not to use the default language of the board. Choose no to disable the feature.',

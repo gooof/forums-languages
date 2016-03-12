@@ -1725,6 +1725,86 @@ $lang = array_merge($lang, array(
 #######language/en/install.php#######
 
 $lang = array_merge($lang, array(
+	'INSTALL_PANEL'	=> 'Πίνακας ελέγχου εγκατάστασης',
+	'SELECT_LANG'	=> 'Επιλέξτε γλώσσα',
+	'STAGE_INSTALL'	=> 'Installing phpBB',
+
+	// Introduction page
+	'INTRODUCTION_TITLE'	=> 'Εισαγωγή',
+	'INTRODUCTION_BODY'		=> 'Welcome to phpBB3!<br /><br />phpBB® is the most widely used open source bulletin board solution in the world. phpBB3 is the latest installment in a package line started in 2000. Like its predecessors, phpBB3 is feature-rich, user-friendly, and fully supported by the phpBB Team. phpBB3 greatly improves on what made phpBB2 popular, and adds commonly requested features that were not present in previous versions. We hope it exceeds your expectations.<br /><br />This installation system will guide you through installing phpBB3, updating to the latest version of phpBB3 from past releases, as well as converting to phpBB3 from a different discussion board system (including phpBB2). For more information, we encourage you to read <a href="../docs/INSTALL.html">the installation guide</a>.<br /><br />To read the phpBB3 license or learn about obtaining support and our stance on it, please select the respective options from the side menu. To continue, please select the appropriate tab above.',
+
+	// Support page
+	'SUPPORT_TITLE'		=> 'Υποστήριξη',
+	'SUPPORT_BODY_INSTALL'	=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/docs/en/3.1/ug/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
+
+	// License
+	'LICENSE_TITLE'		=> 'General Public License',
+
+	// Install page
+	'INSTALL_INTRO'			=> 'Καλώς ήρθατε στην εγκατάσταση',
+	'INSTALL_INTRO_BODY'	=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
+
+	<ul>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
+	</ul>
+
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
+
+	<p>phpBB3 supports the following databases:</p>
+	<ul>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
+		<li>SQLite 2.8.2+</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
+		<li>Oracle</li>
+	</ul>
+
+	<p>Only those databases supported on your server will be displayed.',
+
+	'ACP_LINK'	=> 'Take me to <a href="%1$s">the ACP</a>',
+
+	'INSTALL_PHPBB_INSTALLED'		=> 'phpBB is already installed.',
+	'INSTALL_PHPBB_NOT_INSTALLED'	=> 'phpBB is not installed yet.',
+
+
+	// Filesystem requirements
+	'FILE_NOT_EXISTS'			=> 'File not exists',
+	'FILE_NOT_EXISTS_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to exist.',
+	'FILE_NOT_WRITABLE'			=> 'File not writable',
+	'FILE_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to be writable.',
+
+	'DIRECTORY_NOT_EXISTS'				=> 'Directory not exists',
+	'DIRECTORY_NOT_EXISTS_EXPLAIN'		=> 'To be able to install phpBB the %1$s directory needs to exist.',
+	'DIRECTORY_NOT_WRITABLE'			=> 'Directory not writable',
+	'DIRECTORY_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s directory needs to be writable.',
+
+	// Server requirements
+	'PHP_VERSION_REQD'					=> 'PHP version',
+	'PHP_VERSION_REQD_EXPLAIN'			=> 'phpBB requires PHP version 5.4.0 or higher.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
+	'PCRE_UTF_SUPPORT'					=> 'Υποστήριξη PCRE UTF-8',
+	'PCRE_UTF_SUPPORT_EXPLAIN'			=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_JSON_SUPPORT'					=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'			=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_SUPPORTED_DB'					=> 'Υποστηριζόμενες Βάσεις Δεδομένων',
+	'PHP_SUPPORTED_DB_EXPLAIN'			=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
+
+	'RETEST_REQUIREMENTS'	=> 'Retest requirements',
+
+	'STAGE_REQUIREMENTS'	=> 'Check requirements',
+
+	'INST_ERR_MISSING_DATA'		=> 'Πρέπει να συμπληρώσετε όλα τα πεδία σε αυτό το μπλοκ.',
+
+	'TIMEOUT_DETECTED_TITLE'	=> 'The installer detected a timeout',
+	'TIMEOUT_DETECTED_MESSAGE'	=> 'The installer has detected a timeout, you may try to refresh the page, which may lead to data corruption. We suggest that you either increase your timeout settings or try to use the CLI.',
+
 	'ADMIN_CONFIG'				=> 'Ρυθμίσεις Διαχειριστή',
 	'ADMIN_PASSWORD'			=> 'Κωδικός Διαχειριστή',
 	'ADMIN_PASSWORD_CONFIRM'	=> 'Επαλήθευση κωδικού Διαχειριστή',
@@ -1788,7 +1868,7 @@ $lang = array_merge($lang, array(
 	'CONV_ERROR_INSERT_BOTGROUP'		=> 'Αδυναμία εισαγωγής bot στον πίνακα με τα bots.',
 	'CONV_ERROR_INSERT_USER_GROUP'		=> 'Αδυναμία εισαγωγής χρήστη στον πίνακα user_group.',
 	'CONV_ERROR_MESSAGE_PARSER'			=> 'Σφάλμα μηνύματος ανάλυσης',
-	'CONV_ERROR_NO_AVATAR_PATH'			=> 'Σημείωση για τους προγραμματιστές: πρέπει να καθορίσετε $convertor[\'avatar_path\'] για να χρησιμοποιήσετε %s.',
+	'CONV_ERROR_NO_AVATAR_PATH'			=> 'Note to developer: you must specify convertor[avatar_path] to use %s.',
 	'CONV_ERROR_NO_FORUM_PATH'			=> 'Η σχετική διαδρομή για το πηγαίο σύστημα δεν έχει καθοριστεί.',
 	'CONV_ERROR_NO_GALLERY_PATH'		=> 'Σημείωση για τον προγραμματιστή: πρέπει να καθορίσετε $convertor[\'avatar_gallery_path\'] για να χρησιμοποιήσετε %s.',
 	'CONV_ERROR_NO_GROUP'				=> 'Η ομάδα "%1$s" δεν βρέθηκε στο %2$s.',
@@ -1880,65 +1960,45 @@ $lang = array_merge($lang, array(
 		<p>Το phpBB Unified Convertor Framework υποστηρίζει την μετατροπή από phpBB 2.0.x και άλλα συστήματα σε phpBB3. Αν έχετε ήδη ενα σύστημα που θέλετε να μετατρέψετε, παρακαλώ <a href="%2$s">συνεχίστε με τον μετατροπέα</a>.</p>
 		<h2>Ζωντανή δοκιμή του phpBB3!</h2>
 		<p>Πατήστε το παρακάτω κουμπί για να μεταφερθείτε στον Πίνακα Ελέγχου Διαχειριστή (ACP)και να στείλετε ορισμένες πληροφορίες στατιστικών στο phpBB . Θα το εκτιμούσαμε εάν στέλνατε ορισμένες πληροφορίες.  Διαφορετικά θα πρέπει να περιμένετε λίγο μέχρι αυτές η πληροφορίες να είναι διαθέσιμες . Θυμηθείτε ότι υπάρχει διαθέσιμη βοήθεια απευθείας μέσω του <a href="http://www.phpbb.com/support/documentation/3.0/">Documentation</a>, <a href="%3$s">README</a> και των <a href="http://www.phpbb.com/community/viewforum.php?f=46">Δ. Συζητήσεων υποστήριξης</a>, για περισσότερες πληροφορίες.</p><p><strong>Παρακαλώ διαγράψτε, μετακινήστε ή μετονομάστε τον φάκελο εγκατάστασης (install) Πριν συνεχίσετε. Αν υπάρχει αυτός ο φάκελος, μόνο ο Πίνακας Ελέγχου Διαχειριστή (ACP) είναι προσβάσιμος.</strong>',
-	'INSTALL_INTRO'				=> 'Καλώς ήρθατε στην εγκατάσταση',
 
-	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
-
-	<ul>
-		<li>The Database Type - the database you will be using.</li>
-		<li>The Database server hostname or DSN - the address of the database server.</li>
-		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
-		<li>The Database name - the name of the database on the server.</li>
-		<li>The Database username and Database password - the login data to access the database.</li>
-	</ul>
-
-	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
-
-	<p>phpBB3 supports the following databases:</p>
-	<ul>
-		<li>MySQL 3.23 or above (MySQLi supported)</li>
-		<li>PostgreSQL 8.3+</li>
-		<li>SQLite 2.8.2+</li>
-		<li>SQLite 3.6.15+</li>
-		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
-		<li>MS SQL Server 2005 or above (native)</li>
-		<li>Oracle</li>
-	</ul>
-
-	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'Για την πραγματοποίηση της εγκατάστασης, παρακαλώ πατήστε το κουμπί κάτω.',
 	'INSTALL_LOGIN'				=> 'Σύνδεση',
 	'INSTALL_NEXT'				=> 'Επόμενο στάδιο',
 	'INSTALL_NEXT_FAIL'			=> 'Μερικά τεστ απέτυχαν και θα πρέπει να διορθώσετε τα σφάλματα πριν συνεχίσετε. Αποτυχία επισκευής ίσως να σημαίνει ατελή εγκατάσταση.',
 	'INSTALL_NEXT_PASS'			=> 'Όλες οι βασικές δοκιμές έχουν γίνει και μπορείτε να προχωρήσετε στο επόμενο βήμα της εγκατάστασης. Αν έχετε αλλάξει οποιαδήποτε άδεια, ενότητα, κλπ. και θέλετε να γίνει πάλι έλεγχος μπορείτε να το κάνετε.',
-	'INSTALL_PANEL'				=> 'Πίνακας ελέγχου εγκατάστασης',
 	'INSTALL_SEND_CONFIG'		=> 'Δυστυχώς το phpBB δεν μπόρεσε να εγγράψει τις ρυθμίσεις άμεσα στο config.php. Αυτό οφείλετε στο ότι δεν υπάρχει το αρχείο ή δεν είναι εγγράψιμο. Ένας αριθμός επιλογών θα εμφανιστεί παρακάτω που θα σας επιτρέψει να ολοκληρώσετε την εγκατάσταση του config.php.',
 	'INSTALL_START'				=> 'Εκκίνηση εγκατάστασης',
 	'INSTALL_TEST'				=> 'Δοκιμή ξανά',
-	'INST_ERR'					=> 'Σφάλμα εγκατάστασης',
-	'INST_ERR_DB_CONNECT'		=> 'Αδυναμία σύνδεσης με Β. Δεδομένων, δείτε το μήνυμα λάθους παρακάτω.',
+
+	// Errors
+	'INST_ERR_NO_DB'			=> 'Δεν μπορεί να φορτωθεί η ενότητα PHP για τον συγκεκριμένο τύπο Β. Δεδομένων.',
+	'INST_ERR_DB_INVALID_PREFIX'	=> 'The prefix you entered is invalid. It must start with a letter and must only contain letters, numbers and underscores.',
+	'INST_ERR_PREFIX_TOO_LONG'	=> 'Το πρόθεμα του πίνακα που επιλέξατε είναι πολύ μεγάλο. Το μεγαλύτερο μήκος είναι %d χαρακτήρες.',
+	'INST_ERR_DB_NO_NAME'		=> 'Κανένα όνομα δεν έχει καθοριστεί για την Β. Δεδομένων.',
 	'INST_ERR_DB_FORUM_PATH'	=> 'Το αρχείο της Β. Δεδομένων είναι μέσα στο φάκελο του συστήματος. Πρέπει να βάλετε αυτό το φάκελο σε τοποθεσία χωρίς πρόσβαση μέσω του ιστού.',
+	'INST_ERR_DB_CONNECT'		=> 'Αδυναμία σύνδεσης με Β. Δεδομένων, δείτε το μήνυμα λάθους παρακάτω.',
 	'INST_ERR_DB_NO_ERROR'		=> 'Κανένα μήνυμα λάθους δεν δόθηκε.',
+	'INST_ERR_PREFIX'			=> 'Πίνακες με το συγκεκριμένο πρόθεμα υπάρχουν ήδη, παρακαλώ επιλέξτε κάποιο άλλο.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'Η έκδοση της MySQL που είναι εγκατεστημένη σε αυτό το μηχάνημα δεν είναι συμβατή με “MySQL με MySQLi Extension” που επιλέξατε. Παρακαλώ δοκιμάστε την επιλογή “MySQL”.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'Η έκδοση της επέκτασης SQLite που είναι εγκατεστημένη είναι πολύ παλιά, πρέπει να αναβαθμιστεί τουλάχιστον σε 2.8.2.',
 	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'Η έκδοση του Oracle που είναι εγκατεστημένη απαιτεί να θέσετε την παράμετρο <var>NLS_CHARACTERSET</var> σε <var>UTF8</var>. Ή να αναβαθμίσετε την εγκατάσταση σε 9.2+ ή να αλλάξετε την παράμετρο.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'Η Β. Δεδομένων που επιλέξατε δεν δημιουργήθηκε σε κωδικοποίηση <var>UNICODE</var> ή σε <var>UTF8</var>. Προσπαθήστε να εγκαταστήσετε σε κωδικοποίηση <var>UNICODE</var> ή <var>UTF8</var>.',
-	'INST_ERR_DB_NO_NAME'		=> 'Κανένα όνομα δεν έχει καθοριστεί για την Β. Δεδομένων.',
+	'INST_SCHEMA_FILE_NOT_WRITABLE'	=> 'The schema file is not writable',
+
+	'EMAIL_CONFIG'	=> 'E-mail configuration',
+
+	'INST_ERR'					=> 'Σφάλμα εγκατάστασης',
 	'INST_ERR_EMAIL_INVALID'	=> 'Η διεύθυνση ηλεκτρονικού ταχυδρομείου που εισαγάγατε δεν είναι σωστή.',
 	'INST_ERR_EMAIL_MISMATCH'	=> 'Οι διευθύνσεις ηλεκτρονικού ταχυδρομείου που βάλατε δεν ταιριάζουν.',
 	'INST_ERR_FATAL'			=> 'Κρίσιμο σφάλμα εγκατάστασης',
 	'INST_ERR_FATAL_DB'			=> 'Ένα κρίσιμο και χωρίς δυνατότητα επισκευής σφάλμα στην Β. Δεδομένων έχει προκύψει. Αυτό ίσως συμβαίνει γιατί ο επιλεγμένος χρήστης δεν έχει δικαιώματα <code>CREATE TABLES</code> ή <code>INSERT</code> δεδομένων, κλπ. Περισσότερες πληροφορίες ίσως δίνονται παρακάτω. Παρακαλώ επικοινωνήστε με τον παροχέα hosting πρώτα ή στις Δ. Συζητήσεις υποστήριξης για περισσότερη βοήθεια.',
 	'INST_ERR_FTP_PATH'			=> 'Δεν μπορεί να γίνει η αλλαγή στον δοσμένο φάκελο, παρακαλώ ελέγξτε την διαδρομή.',
 	'INST_ERR_FTP_LOGIN'		=> 'Αδυναμία σύνδεσης στον FTP κεντρικό υπολογιστή, παρακαλώ ελέγξτε το όνομα χρήστη και τον κωδικό.',
-	'INST_ERR_MISSING_DATA'		=> 'Πρέπει να συμπληρώσετε όλα τα πεδία σε αυτό το μπλοκ.',
-	'INST_ERR_NO_DB'			=> 'Δεν μπορεί να φορτωθεί η ενότητα PHP για τον συγκεκριμένο τύπο Β. Δεδομένων.',
 	'INST_ERR_PASSWORD_MISMATCH'	=> 'Ο κωδικός που έχει εισαχθεί δεν ταιριάζει.',
 	'INST_ERR_PASSWORD_TOO_LONG'	=> 'Ο κωδικός που έχει εισαχθεί είναι πολύ μεγάλος. Το μεγαλύτερο μήκος είναι 30 χαρακτήρες.',
 	'INST_ERR_PASSWORD_TOO_SHORT'	=> 'Ο κωδικός που έχει εισαχθεί είναι πολύ μικρός. Το μικρότερο μήκος είναι 6 χαρακτήρες.',
-	'INST_ERR_PREFIX'			=> 'Πίνακες με το συγκεκριμένο πρόθεμα υπάρχουν ήδη, παρακαλώ επιλέξτε κάποιο άλλο.',
 	'INST_ERR_PREFIX_INVALID'	=> 'Το πρόθεμα των πινάκων που έχετε επιλέξει δεν είναι συμβατό με την Β. Δεδομένων. Παρακαλώ δοκιμάστε ένα άλλο, αφαιρώντας χαρακτήρες.',
-	'INST_ERR_PREFIX_TOO_LONG'	=> 'Το πρόθεμα του πίνακα που επιλέξατε είναι πολύ μεγάλο. Το μεγαλύτερο μήκος είναι %d χαρακτήρες.',
 	'INST_ERR_USER_TOO_LONG'	=> 'Το όνομα χρήστη που επιλέξατε είναι πολύ μεγάλο. Το μεγαλύτερο μήκος είναι 20 χαρακτήρες.',
 	'INST_ERR_USER_TOO_SHORT'	=> 'Το όνομα χρήστη που επιλέξατε είναι πολύ μικρό. Το μικρότερο μήκος είναι 3 χαρακτήρες.',
 	'INVALID_PRIMARY_KEY'		=> 'Μη διαθέσιμο πρωτεύον κλειδί : %s',
@@ -1973,15 +2033,15 @@ $lang = array_merge($lang, array(
 	'OVERVIEW_BODY'				=> 'Καλώς ήρθατε στο phpBB3!<br /><br />phpBB™ είναι η ποιο ευρύτερη χρησιμοποιημένη ανοιχτή έκδοση λογισμικού στον κόσμο. Το phpBB3 είναι η ποιο πρόσφατη έκδοση  στην πορεία που έχει ξεκινήσει από το 2000. Όπως οι προκάτοχοί του, το phpBB3 είναι πλούσιο σε χαρακτηριστικά γνωρίσματα, φιλικό προς τον χρήστη, και πλήρης υποστήριξη από την ομάδα phpBB. Το phpBB3 έχει βελτιώσει κατά πολύ αυτό που έκανε το phpbb2 δημοφιλές, και έχουν προστεθεί νέα χαρακτηριστικά γνωρίσματα που δεν υπήρχαν στις προηγούμενες εκδόσεις Ελπίζουμε ότι υπερβαίνει τις προσδοκίες σας .<br /><br />Αυτό το σύστημα εγκαταστάσεων θα σας καθοδηγήσει μέσω της εγκατάστασης phpBB3, της ενημέρωσης στην ποιο πρόσφατη έκδοση phpBB3 από τις προηγούμενες  εκδόσεις, καθώς επίσης και την μετατροπή σε phpBB3 από ένα διαφορετικό σύστημα πινάκων συζήτησης (συμπεριλαμβανομένου phpBB2) . Για  περισσότερες  πληροφορίες, σας  ενθαρρύνουμε  να διαβάσετε   <a href="../docs/INSTALL.html">τον οδηγό εγκατάστασης</a>.<br /><br />Για να διαβάσετε την άδεια phpBB3 ή να μάθετε περισσότερα για τη λήψη  υποστήριξης και της θέσης μας πάνω σε  αυτό, παρακαλώ επιλέξτε τις αντίστοιχες επιλογές από τις δευτερεύουσες επιλογές. Για να συνεχίσετε, παρακαλώ επιλέξτε την κατάλληλη ετικέτα ανωτέρω.',
 
 	'PCRE_UTF_SUPPORT'				=> 'Υποστήριξη PCRE UTF-8',
-	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'Το phpBB <strong>δεν</strong> θα λειτουργήσει αν η μονάδα PHP δεν είναι κωδικοποιημένη σε UTF-8 με υποστήριξη σε PCRE.',
-	'PHP_GETIMAGESIZE_SUPPORT'			=> 'Η λειτουργία PHP getimagesize() είναι διαθέσιμη',
-	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Απαραίτητα</strong> - Για να λειτουργεί σωστά το phpBB, η λειτουργία getimagesize πρέπει να είναι διαθέσιμη.',
+	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
 	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
-	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'Προαιρετικές μονάδες',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>Προαιρετικά</strong> - Αυτές οι μονάδες ή εφαρμογές είναι προαιρετικές. Ωστόσο, αν είναι διαθέσιμες θα ενεργοποιήσουν περισσότερες λειτουργίες.',
 	'PHP_SUPPORTED_DB'				=> 'Υποστηριζόμενες Βάσεις Δεδομένων',
-	'PHP_SUPPORTED_DB_EXPLAIN'		=> '<strong>Απαραίτητα</strong> - Πρέπει να έχετε υποστήριξη για τουλάχιστον μια συμβατή Β. Δεδομένων στο PHP. Αν καμία Β. Δεδομένων δεν εμφανίζετε ως διαθέσιμη πρέπει να επικοινωνήσετε με τον παροχέα hosting ή να δείτε το σχετικό έγγραφο εγκατάστασης του PHP για συμβουλή.',
+	'PHP_SUPPORTED_DB_EXPLAIN'		=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
 	'PHP_REGISTER_GLOBALS'			=> 'Η ρύθμιση PHP <var>register_globals</var> είναι απενεργοποιημένη',
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'Το phpBB θα συνεχίσει να λειτουργεί αν αυτό είναι ενεργοποιημένο, αλλά αν είναι δυνατόν, προτείνετε το register_globals να είναι απενεργοποιημένο στο PHP για λόγους ασφαλείας.',
 	'PHP_SAFE_MODE'					=> 'Ασφαλής λειτουργία',
@@ -1989,7 +2049,7 @@ $lang = array_merge($lang, array(
 	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'Η ρύθμιση PHP <var>allow_url_fopen</var> είναι ενεργοποιημένη',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>Προαιρετικά</strong> - Αυτή η ρύθμιση είναι προαιρετική, Ωστόσο συγκεκριμένες λειτουργίες του phpBB όπως άβαταρ εκτός σελίδας δεν θα λειτουργούν σωστά χωρίς αυτό. ',
-	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version',
 	'POST_ID'						=> 'Ταυτότητα δημοσίευσης',
 	'PREFIX_FOUND'					=> 'Μια σάρωση στους πίνακες έδειξε ότι μπορεί να γίνει ομαλή εγκατάσταση χρησιμοποιώντας <strong>%s</strong> ως πρόθεμα πινάκων.',
 	'PREPROCESS_STEP'				=> 'Εκτελούνται προ-επεξεργασμένες λειτουργίες',
@@ -2005,7 +2065,6 @@ $lang = array_merge($lang, array(
 
 	'SCRIPT_PATH'				=> 'Διαδρομή καταλόγου',
 	'SCRIPT_PATH_EXPLAIN'		=> 'Η διαδρομή που βρίσκεται το phpBB να είναι σχετικό με το όνομα domain, π.χ. <samp>/phpBB3</samp>.',
-	'SELECT_LANG'				=> 'Επιλέξτε γλώσσα',
 	'SERVER_CONFIG'				=> 'Ρυθμίσεις κεντρικού υπολογιστή',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Το ευρετήριο αναζήτησης δεν μετατράπηκε',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Το παλιό ευρετήριο αναζήτησης δεν μετατράπηκε. Η αναζήτηση θα επιστρέφει πάντα κενό αποτέλεσμα. Για τη δημιουργία νέας αναζήτησης πηγαίνετε στον Πίνακα Ελέγχου Διαχειριστή, Επιλέξετε Συντήρηση και μετά ευρετήριο Αναζήτησης από το υπό-μενού.',
@@ -2022,7 +2081,6 @@ $lang = array_merge($lang, array(
 	'STAGE_FINAL'				=> 'Τελικό βήμα',
 	'STAGE_INTRO'				=> 'Εισαγωγή',
 	'STAGE_IN_PROGRESS'			=> 'Μετατροπή σε εξέλιξη',
-	'STAGE_REQUIREMENTS'		=> 'Απαιτήσεις',
 	'STAGE_SETTINGS'			=> 'Ρυθμίσεις',
 	'STARTING_CONVERT'			=> 'Εκκίνηση διαδικασίας μετατροπής',
 	'STEP_PERCENT_COMPLETED'	=> 'Βήμα <strong>%d</strong> από <strong>%d</strong>',
@@ -9857,7 +9915,7 @@ $lang = array_merge($lang, array(
 	'GUEST_STYLE'					=> 'Guest style',
 	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Παράκαμψη στυλ μέλους',
-	'OVERRIDE_STYLE_EXPLAIN'		=> 'Παράκαμψη στυλ μελών με το προεπιλεγμένο.',
+	'ACP_OVERRIDE_STYLE_EXPLAIN'	=> 'Replaces user’s (and guest’s) style with the style as defined under "Default style".',
 	'SITE_DESC'						=> 'Περιγραφή ιστοσελίδας',
 	'SITE_HOME_TEXT'				=> 'Main website text',
 	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
@@ -9865,8 +9923,9 @@ $lang = array_merge($lang, array(
 	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Όνομα ιστοσελίδας',
 	'SYSTEM_TIMEZONE'				=> 'Μορφή ημερομηνίας επισκεπτών',
+	'SYSTEM_TIMEZONE_EXPLAIN'			=> 'Timezone to use for displaying times to users who are not logged in (guests, bots). Logged in users set their timezone during registration and can change it in their user control panel.',
 	'WARNINGS_EXPIRE'				=> 'Διάρκεια προειδοποίησης',
-	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Ο αριθμός των ημερών, των οποίων μετά θα διαγραφούν οι προειδοποιήσεις από το προφίλ του μέλους. Θέστε την τιμή 0για να μείνουν οι προειδοποιήσεις μόνιμα',
+	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Number of days that will elapse before a warning will automatically expire from a user’s record. Set this value to 0 to make warnings permanent.',
 
 	'ACP_BOARD_FEATURES_EXPLAIN'	=> 'Εδώ μπορείτε να ενεργοποιήσετε/απενεργοποιήσετε ορισμένες λειτουργίες της Δ. Συζήτησης.',
 
@@ -9897,6 +9956,7 @@ $lang = array_merge($lang, array(
 	'ALLOW_TOPIC_NOTIFY'		=> 'Επιτρέψτε την παρακολούθηση θεμάτων',
 	'BOARD_PM'					=> 'Προσωπικά μηνύματα',
 	'BOARD_PM_EXPLAIN'			=> 'Ενεργοποιήστε ή απενεργοποιήστε τα προσωπικά μηνύματα για όλα τα μέλη.',
+	'ALLOW_BOARD_NOTIFICATIONS' => 'Allow board notifications',
 
 	'ACP_AVATAR_SETTINGS_EXPLAIN'	=> 'Τα άβαταρ είναι γενικά μικρές, μοναδικές εικόνες με τις οποίες τα μέλη μπορούν να προσδιοριστούν. Ανάλογα με το στυλ επιδεικνύονται συνήθως κάτω από το όνομα χρήστη κατά την εξέταση των θεμάτων. Εδώ μπορείτε να καθορίσετε πώς οι χρήστες μπορούν να καθορίσουν τα άβαταρ τους. Παρακαλώ σημειώστε ότι προκειμένου να φορτώσετε τα άβαταρ πρέπει να έχετε δημιουργήσει τον ανάλογο φάκελο και προσθέσετε σε αυτόν τα ανάλογα δικαιώματα ώστε να είναι προσιτός. Παρακαλώ επίσης σημειώστε ότι τα όρια μεγέθους αρχείων επιβάλλονται μόνο στα φορτωμένα άβαταρ, και δεν ισχύουν για τις μακρινά συνδεδεμένες εικόνες.',
 
@@ -10006,6 +10066,7 @@ $lang = array_merge($lang, array(
 
 	'ACC_ACTIVATION'				=> 'Ενεργοποίηση λογαριασμού',
 	'ACC_ACTIVATION_EXPLAIN'		=> 'Αυτό καθορίζει εάν τα μέλη έχουν άμεση πρόσβαση στην Δ. Συζήτηση ή εάν πρώτα απαιτείται επιβεβαίωση. Μπορείτε επίσης να απενεργοποιήσετε εντελώς τις εγγραφές. "Ενεργοποιήστε τη λειτουργία ηλεκτρονικού ταχυδρομείου:" πρέπει να είναι ενεργοποιημένο για να χρησιμοποιήσετε το από μέλος ή διαχειριστή ενεργοποίηση.',
+	'ACC_ACTIVATION_WARNING'		=> 'Please note that the currently selected activation method requires emails to be enabled, otherwise registration will be disabled. We recommend to either select a different activation method or reenable emails.',
 	'NEW_MEMBER_POST_LIMIT'			=> 'Νέο μέλος όριο δημοσίευσης',
 	'NEW_MEMBER_POST_LIMIT_EXPLAIN'	=> 'Τα νέα μέλη που είναι μέσα στην <em>Πρόσφατα Εγγεγραμμένα Μέλη </em> ομάδα έως ότου φθάνουν σε αυτόν τον αριθμό δημοσιεύσεων. Μπορείτε να χρησιμοποιήσετε αυτήν την ομάδα για να μην μπορούν να χρησιμοποιήσουν  το σύστημα ΠΜ ή για να αναθεωρήσετε τις δημοσιεύσεις  τους. <strong>Εάν η τιμή είναι 0 απενεργοποιείται αυτή η λειτουργία.</strong>',
 	'NEW_MEMBER_GROUP_DEFAULT'		=> 'Θέστε πρόσφατα εγγεγραμμένα μέλη ομάδα ως προεπιλογή',
@@ -10303,8 +10364,11 @@ $lang = array_merge($lang, array(
 
 	'TPL_ALLOW_PHP'					=> 'Επιτρέψτε php στα πρότυπα',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Εάν αυτή η επιλογή είναι ενεργοποιημένη, <code>PHP</code> και <code>INCLUDEPHP</code> στα πρότυπα θα αναγνωρίζονται και εφαρμόζονται.',
+	'UPLOAD_CERT_VALID'				=> 'Validate upload certificate',
+	'UPLOAD_CERT_VALID_EXPLAIN'		=> 'If enabled, certificates of remote uploads will be validated. This requires the CA bundle to be defined by the <samp>openssl.cafile</samp> or <samp>curl.cainfo</samp> setting in your php.ini.',
 
 	'ACP_EMAIL_SETTINGS_EXPLAIN'	=> 'Αυτές οι πληροφορίες απαιτούνται, εάν η Δ. Συζήτηση στέλνει τα ηλεκτρονικά ταχυδρομεία στα μέλη σας. Σιγουρευτείτε ότι η διεύθυνση που προσθέσατε είναι έγκυρη διότι απαγορευμένα ή μη απεσταλμένα μηνύματα θα στέλνονται σε αυτήν την διεύθυνση. Εάν ο προμηθευτής Webhosting σας δεν προσφέρει την υπηρεσία αποστολής ηλεκτρονικού ταχυδρομείου μέσω PHP, μπορείτε να αποστείλετε τα μηνύματά σας επίσης άμεσα πέρα από το smtp. Αυτό απαιτεί την ένδειξη της διεύθυνσης ενός κατάλληλου κεντρικού υπολογιστή (ρωτήστε εάν δεν το ξέρετε τον προμηθευτής σας), μην χρησιμοποιήσετε οποιοδήποτε όνομα εδώ! Εάν ο κεντρικός υπολογιστής απαιτεί εξουσιοδότηση (και μόνο, εάν αυτό συμβαίνει), πληκτρολογείστε το όνομα χρήστη και τον προσωπικό κωδικό. Σημειώστε παρακαλώ ότι αυτή τη στιγμή μόνο η απλή εξουσιοδότηση είναι διαθέσιμη άλλες διαδικασίες προς στιγμήν δεν υποστηρίζονται..',
+
 	'ADMIN_EMAIL'					=> 'Οι Διαχειριστές μπορούν να μου στείλουν πληροφορίες χρησιμοποιώντας μήνυμα ηλεκτρονικού ταχυδρομείου',
 	'ADMIN_EMAIL_EXPLAIN'			=> 'Αυτή η τεχνική διεύθυνση επικοινωνιών λαμβάνεται ως διεύθυνση απάντησης για όλα τα μηνύματα ηλεκτρονικού ταχυδρομείου. Θα χρησιμοποιηθεί πάντα ως <samp>Διεύθυνση-Επιστροφής</samp> και <samp>Αποστολέας</samp> ηλεκτρονικού ταχυδρομείου.',
 	'BOARD_EMAIL_FORM'				=> 'Αποστολή ηλεκτρονικών ταχυδρομείων μέσω Δ. Συζήτησης',
@@ -10323,6 +10387,8 @@ $lang = array_merge($lang, array(
 	'EMAIL_SIG_EXPLAIN'				=> 'Αυτό το κείμενο είναι συνδεδεμένο με όλα τα ηλεκτρονικά ταχυδρομεία, τα οποία θα αποσταλούν από την Δ. Συζήτηση.',
 	'ENABLE_EMAIL'					=> 'Ενεργοποιήστε τη λειτουργία ηλεκτρονικού ταχυδρομείου',
 	'ENABLE_EMAIL_EXPLAIN'			=> 'Εάν αυτό είναι απενεργοποιημένο, κανένα ηλεκτρονικό ταχυδρομείο δεν θα αποστέλλεται από την Δ. Συζήτησης.<em>Σημείωση του “μέλους” ή του “διαχειριστή” ενεργοποίηση λογαριασμού ρυθμίσεις απαιτούν αυτή τη ρύθμιση για να ενεργοποιηθούν.</em>',
+	'SEND_TEST_EMAIL'				=> 'Send a test email',
+	'SEND_TEST_EMAIL_EXPLAIN'		=> 'This will send a test email to the address defined in your account.',
 	'SMTP_AUTH_METHOD'				=> 'Μέθοδος επικύρωσης SMTP κεντρικού υπολογιστή',
 	'SMTP_AUTH_METHOD_EXPLAIN'		=> 'Χρειάζεται μόνο όταν ένας χρήστης/κωδικός έχει πληκτρολογηθεί. Ζητήστε από τον προμηθευτή Webhosting σας, εάν δεν είστε σίγουρος ποια μέθοδο υποστηρίζει ώστε εσείς να επιλέξετε.',
 	'SMTP_CRAM_MD5'					=> 'CRAM-MD5',
@@ -10338,6 +10404,7 @@ $lang = array_merge($lang, array(
 	'SMTP_SETTINGS'					=> 'SMTP ρυθμίσεις',
 	'SMTP_USERNAME'					=> 'SMTP όνομα χρήστη',
 	'SMTP_USERNAME_EXPLAIN'			=> 'Προσθέστε μόνο τον κωδικό εάν ο SMTP κεντρικός υπολογιστής απαιτεί αυτό.',
+	'TEST_EMAIL_SENT'				=> 'The test email has been sent.<br />If you don’t receive it, please check your emails configuration.<br /><br />If you require assistance, please visit the <a href="https://www.phpbb.com/community/">phpBB support forums</a>.',
 	'USE_SMTP'						=> 'Χρησιμοποίηση SMTP κεντρικού υπολογιστή για τα ηλεκτρονικά ταχυδρομεία',
 	'USE_SMTP_EXPLAIN'				=> 'Επιλέξτε "ναι", εάν εσείς θέλετε να γίνετε η αποστολή ηλεκτρονικών ταχυδρομείων μέσω ενός SMTP κεντρικού υπολογιστή (η πρέπει), αντί της χρησιμοποίησης της λειτουργίας ηλεκτρονικού ταχυδρομείου μέσω PHP.',
 
@@ -10567,8 +10634,7 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'Βάση',
-	'ACP_CAT_DOT_MODS'			=> '.MODs',
-	'ACP_CAT_DOT_MODS'			=> '.MODs',
+	'ACP_CAT_DOT_MODS'			=> 'Επεκτάσεις',
 	'ACP_CAT_FORUMS'			=> 'Δημόσια Συζήτηση',
 	'ACP_CAT_GENERAL'			=> 'Γενικά',
 	'ACP_CAT_MAINTENANCE'		=> 'Συντήρηση',
@@ -10733,6 +10799,9 @@ $lang = array_merge($lang, array(
 
 	'BACK'					=> 'Πίσω',
 
+	'CONTAINER_EXCEPTION' => 'phpBB encountered an error building the container due to an installed extension. For this reason, all extensions have been temporarily disabled. Please try purging your forum cache. All extensions will automatically be re-enabled once the container error is resolved. If this error continues, please visit <a href="https://www.phpbb9.de">phpbb9.de</a> for support.',
+	'EXCEPTION' => 'Exception',
+
 	'COLOUR_SWATCH'			=> 'Πίνακας χρωμάτων',
 	'CONFIG_UPDATED'		=> 'Επιτυχής ενημέρωση ρυθμίσεων.',
 	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
@@ -10743,7 +10812,7 @@ $lang = array_merge($lang, array(
 	'DEACTIVATE'				=> 'Απενεργοποίηση',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'Η εισαχθείσα διαδρομή “%s” δεν υπάρχει.',
 	'DIRECTORY_NOT_DIR'			=> 'Η εισαχθείσα διαδρομή “%s” δεν αντιστοιχεί σε φάκελο.',
-	'DIRECTORY_NOT_WRITABLE'	=> 'Η εισαχθείσα διαδρομή “%s” δεν έχει δικαιώματα εγγραφής.',
+	'DIRECTORY_NOT_WRITABLE'	=> 'Directory not writable',
 	'DISABLE'					=> 'Απενεργοποίηση',
 	'DOWNLOAD'					=> 'Μεταφόρτωση',
 	'DOWNLOAD_AS'				=> 'Μεταφόρτωση ως',
@@ -10794,10 +10863,11 @@ $lang = array_merge($lang, array(
 	'PARSE_URLS'						=> 'Ανάλυση συνδέσμων',
 	'PERMISSIONS_TRANSFERRED'			=> 'Επιτυχής μεταφορά δικαιωμάτων από τον/την <strong>%s</strong>, μπορείτε τώρα να περιηγηθείτε στην κοινότητα με τα δικαιώματα αυτού του μέλους.<br />Σημειώστε ότι δικαιώματα διαχειριστή δεν είναι δυνατόν να μεταφερθούν. Μπορείτε να ανακαλέσετε αυτήν την ενέργεια οποιαδήποτε στιγμή.',
 	'PERMISSIONS_TRANSFERRED_EXPLAIN'	=> 'Αποκτήσατε προσωρινά τα δικαιώματα του %1$s. Μπορείτε τώρα να περιηγηθείτε στην Δ. Συζήτησης με τα δικαιώματα αυτού του χρήστη, αλλά δεν μπορείτε να μεταβείτε στον πίνακα ελέγχου διαχειριστή εφόσον δεν έχετε ακόμα προσβάσεις διαχειριστή. Μπορείτε να <a href="%2$s"><strong>επαναφέρετε τις προσβάσεις σας</strong></a> οποιαδήποτε στιγμή.',
-	'PIXEL'								=> 'px',
 	'PROCEED_TO_ACP'					=> '%sΜετάβαση στον Πίνακα ελέγχου διαχειριστή%s',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Ανακοίνωση',
 	'REMIND'							=> 'Υπενθύμιση',
+	'REPARSE_LOCK_ERROR'				=> 'Reparsing is already in progress by another process.',
 	'RESYNC'							=> 'Συγχρονισμός ',
 
 	'RUNNING_TASK'			=> 'Running task: %s.',
@@ -10846,11 +10916,23 @@ $lang = array_merge($lang, array(
 
 	'DATABASE_SIZE'			=> 'Μέγεθος βάσης',
 
+	// Enviroment configuration checks, mbstring related
+	'ERROR_MBSTRING_FUNC_OVERLOAD'					=> 'Function overloading is improperly configured',
+	'ERROR_MBSTRING_FUNC_OVERLOAD_EXPLAIN'			=> '<var>mbstring.func_overload</var> must be set to either 0 or 4. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION'			=> 'Transparent character encoding is improperly configured',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION_EXPLAIN'	=> '<var>mbstring.encoding_translation</var> must be set to 0. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_INPUT'						=> 'HTTP input character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_INPUT_EXPLAIN'				=> '<var>mbstring.http_input</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_OUTPUT'					=> 'HTTP output character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_OUTPUT_EXPLAIN'			=> '<var>mbstring.http_output</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+
 	'FILES_PER_DAY'		=> 'Συνημμένα ανά ημέρα',
 	'FORUM_STATS'		=> 'Στατιστικά κοινότητας',
 
 	'GZIP_COMPRESSION'	=> 'Συμπίεση GZip',
 
+	'PIXEL'								=> 'px',
+	
 	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'Μη διαθέσιμο',
 	'NUMBER_FILES'		=> 'Αριθμός συνημμένων',
@@ -10858,6 +10940,8 @@ $lang = array_merge($lang, array(
 	'NUMBER_TOPICS'		=> 'Αριθμός θεμάτων',
 	'NUMBER_USERS'		=> 'Αριθμός μελών',
 	'NUMBER_ORPHAN'		=> 'Ορφανά συνημμένα',
+
+	'PHP_VERSION_OLD'	=> 'The version of PHP on this server will no longer be supported by future versions of phpBB. %sDetails%s',
 
 	'POSTS_PER_DAY'		=> 'Δημοσιεύσεις ανά ημέρα',
 
@@ -10904,10 +10988,16 @@ $lang = array_merge($lang, array(
 	'VALUE'						=> 'Τιμή',
 	'VERSIONCHECK_FAIL'			=> 'Αποτυχία ελέγχου έκδοσης',
 	'VERSIONCHECK_FORCE_UPDATE'	=> 'Επανέλεγχος έκδοσης',
+	'VERSION_CHECK'				=> 'Έλεγχος έκδοσης',
+	'VERSION_CHECK_EXPLAIN'		=> 'Έλεγχοι για να δείτε αν η έκδοση του phpBB που έχετε είναι ενημερωμένη.',
+	'VERSION_NOT_UP_TO_DATE_ACP'	=> 'Η έκδοση του phpBB δεν είναι αναβαθμισμένη.<br />Παρακάτω θα βρείτε έναν σύνδεσμο για την ανακοίνωση για την τελευταία έκδοση όπως και οδηγίες πώς να κάνετε την αναβάθμιση.',
+	'VERSION_NOT_UP_TO_DATE_TITLE'	=> 'Η έκδοση του phpBB σας δεν είναι αναβαθμισμένη.',
+	'VERSION_UP_TO_DATE_ACP'	=> 'Η εγκατάστασή σας είναι αναβαθμισμένη, καμία αναβάθμιση δεν είναι διαθέσιμη για το phpBB. Δεν χρειάζεται να αναβαθμίσετε την εγκατάστασή σας.',
 	'VIEW_ADMIN_LOG'			=> 'Προβολή ιστορικού διαχειριστή',
 	'VIEW_INACTIVE_USERS'		=> 'Προβολή ανενεργών μελών',
 
 	'WELCOME_PHPBB'			=> 'Καλώς ήρθατε στο phpBB',
+	'WRITABLE_CONFIG'		=> 'Your config file (config.php) is currently world-writable. We strongly encourage you to change the permissions to 640 or at least to 644 (for example: <a href="http://en.wikipedia.org/wiki/Chmod" rel="external">chmod</a> 640 config.php).',
 
 	'BROWSER_LANGUAGE'			=> 'Enable Browser Language Detection',
 	'BROWSER_LANGUAGE_EXPLAIN'	=> 'Enables the browser language detection for guest users not to use the default language of the board. Choose no to disable the feature.',

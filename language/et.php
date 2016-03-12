@@ -1725,6 +1725,86 @@ $lang = array_merge($lang, array(
 #######language/en/install.php#######
 
 $lang = array_merge($lang, array(
+	'INSTALL_PANEL'	=> 'Installeerimispaneel',
+	'SELECT_LANG'	=> 'Vali keel',
+	'STAGE_INSTALL'	=> 'Installing phpBB',
+
+	// Introduction page
+	'INTRODUCTION_TITLE'	=> 'Tutvustus',
+	'INTRODUCTION_BODY'		=> 'Welcome to phpBB3!<br /><br />phpBB® is the most widely used open source bulletin board solution in the world. phpBB3 is the latest installment in a package line started in 2000. Like its predecessors, phpBB3 is feature-rich, user-friendly, and fully supported by the phpBB Team. phpBB3 greatly improves on what made phpBB2 popular, and adds commonly requested features that were not present in previous versions. We hope it exceeds your expectations.<br /><br />This installation system will guide you through installing phpBB3, updating to the latest version of phpBB3 from past releases, as well as converting to phpBB3 from a different discussion board system (including phpBB2). For more information, we encourage you to read <a href="../docs/INSTALL.html">the installation guide</a>.<br /><br />To read the phpBB3 license or learn about obtaining support and our stance on it, please select the respective options from the side menu. To continue, please select the appropriate tab above.',
+
+	// Support page
+	'SUPPORT_TITLE'		=> 'Tugi',
+	'SUPPORT_BODY_INSTALL'	=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/docs/en/3.1/ug/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
+
+	// License
+	'LICENSE_TITLE'		=> 'Üldine avalik litsents',
+
+	// Install page
+	'INSTALL_INTRO'			=> 'Teretulemast installatsiooni',
+	'INSTALL_INTRO_BODY'	=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
+
+	<ul>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
+	</ul>
+
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
+
+	<p>phpBB3 supports the following databases:</p>
+	<ul>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
+		<li>SQLite 2.8.2+</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
+		<li>Oracle</li>
+	</ul>
+
+	<p>Only those databases supported on your server will be displayed.',
+
+	'ACP_LINK'	=> 'Take me to <a href="%1$s">the ACP</a>',
+
+	'INSTALL_PHPBB_INSTALLED'		=> 'phpBB is already installed.',
+	'INSTALL_PHPBB_NOT_INSTALLED'	=> 'phpBB is not installed yet.',
+
+
+	// Filesystem requirements
+	'FILE_NOT_EXISTS'			=> 'File not exists',
+	'FILE_NOT_EXISTS_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to exist.',
+	'FILE_NOT_WRITABLE'			=> 'File not writable',
+	'FILE_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to be writable.',
+
+	'DIRECTORY_NOT_EXISTS'				=> 'Directory not exists',
+	'DIRECTORY_NOT_EXISTS_EXPLAIN'		=> 'To be able to install phpBB the %1$s directory needs to exist.',
+	'DIRECTORY_NOT_WRITABLE'			=> 'Directory not writable',
+	'DIRECTORY_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s directory needs to be writable.',
+
+	// Server requirements
+	'PHP_VERSION_REQD'					=> 'PHP version',
+	'PHP_VERSION_REQD_EXPLAIN'			=> 'phpBB requires PHP version 5.4.0 or higher.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
+	'PCRE_UTF_SUPPORT'					=> 'PCRE UTF-8 tugi',
+	'PCRE_UTF_SUPPORT_EXPLAIN'			=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_JSON_SUPPORT'					=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'			=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_SUPPORTED_DB'					=> 'Toetatud andmebaasid',
+	'PHP_SUPPORTED_DB_EXPLAIN'			=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
+
+	'RETEST_REQUIREMENTS'	=> 'Retest requirements',
+
+	'STAGE_REQUIREMENTS'	=> 'Check requirements',
+
+	'INST_ERR_MISSING_DATA'		=> 'Pead täitma kõik väljad selles osas.',
+
+	'TIMEOUT_DETECTED_TITLE'	=> 'The installer detected a timeout',
+	'TIMEOUT_DETECTED_MESSAGE'	=> 'The installer has detected a timeout, you may try to refresh the page, which may lead to data corruption. We suggest that you either increase your timeout settings or try to use the CLI.',
+
 	'ADMIN_CONFIG'				=> 'Administraatori seaded',
 	'ADMIN_PASSWORD'			=> 'Administraatori salasõna',
 	'ADMIN_PASSWORD_CONFIRM'	=> 'Kinnita administraatori salasõna',
@@ -1788,7 +1868,7 @@ $lang = array_merge($lang, array(
 	'CONV_ERROR_INSERT_BOTGROUP'		=> 'Bot\'i ei saa botitabelisse lisada.',
 	'CONV_ERROR_INSERT_USER_GROUP'		=> 'Ei saa lisada kasutajat gruppi.',
 	'CONV_ERROR_MESSAGE_PARSER'			=> 'Sõnum parseriga',
-	'CONV_ERROR_NO_AVATAR_PATH'			=> 'Teade arendajale: pead määrama $convertor[\'avatar_path\'], et kasutada %s.',
+	'CONV_ERROR_NO_AVATAR_PATH'			=> 'Note to developer: you must specify convertor[avatar_path] to use %s.',
 	'CONV_ERROR_NO_FORUM_PATH'			=> 'Suhtelist teed algfoorumile ei määratud.',
 	'CONV_ERROR_NO_GALLERY_PATH'		=> 'Teade arendajale: pead määrama $convertor[\'avatar_gallery_path\'], et kasutada %s.',
 	'CONV_ERROR_NO_GROUP'				=> 'Gruppi “%1$s” ei leitud  kohst%2$s.',
@@ -1879,65 +1959,45 @@ $lang = array_merge($lang, array(
 		<p>phpBB ühtne konverteerija raamistik toetab phpBB versioonide 2.0.x ja teiste foorumitarkvarade konverteerimist phpBB3\'e. Kui sul on olemas tingimustele vastav konverteeritav foorum, palun <a href="%2$s">mine konverteerijasse</a>.</p>
 		<h2>Avalda oma foorum internetis!</h2>
 		<p>Vajutades nuppu all, viiakse sind statistilise info phpBB\'le saatmise vormi peale Administraatori juhtpaneelis (AJP). PhpBB on tänulik selle info edastamise eest. Pärast peaksid uurima sinule pakutavaid valikuid. Abi on saadaval läbi <a href="http://www.phpbb.com/support/documentation/3.0/">dokumentatsiooni(inglise keeles)</a>, <a href="%3$s">README (inglise keeles)</a> ja <a href="http://www.phpbb.ee/foorum">tugifoorumite</a>.</p><p><strong>Ppalun kustuta, teisalda või nimeta ümber /install/ kaust enne foorumi kasutamist. Kui see kaust on olemas ja oma õige nimega, pääsed ligi vaid administratsioonile.</strong>',
-	'INSTALL_INTRO'				=> 'Teretulemast installatsiooni',
 
-	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
-
-	<ul>
-		<li>The Database Type - the database you will be using.</li>
-		<li>The Database server hostname or DSN - the address of the database server.</li>
-		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
-		<li>The Database name - the name of the database on the server.</li>
-		<li>The Database username and Database password - the login data to access the database.</li>
-	</ul>
-
-	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
-
-	<p>phpBB3 supports the following databases:</p>
-	<ul>
-		<li>MySQL 3.23 or above (MySQLi supported)</li>
-		<li>PostgreSQL 8.3+</li>
-		<li>SQLite 2.8.2+</li>
-		<li>SQLite 3.6.15+</li>
-		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
-		<li>MS SQL Server 2005 or above (native)</li>
-		<li>Oracle</li>
-	</ul>
-
-	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'Et alustada installeerimist, vajuta nuppu all.',
 	'INSTALL_LOGIN'				=> 'Logimine',
 	'INSTALL_NEXT'				=> 'Järgmine etapp',
 	'INSTALL_NEXT_FAIL'			=> 'Mõned kontrollid ebaõnnestusid ja sa peaks need parandama enne jätkamist. Nende mitteparandamine võib lõppeda mittetäieliku installeerimisega.',
 	'INSTALL_NEXT_PASS'			=> 'Kõik põhilised kontrollid õnnestusid ja saad nüüd jätkata installeerimise järgmisesse etappi. Kui oled muutnud mingeid õigusi, mooduleid vms ja soovid uuesti kontrollida, võid seda teha.',
-	'INSTALL_PANEL'				=> 'Installeerimispaneel',
 	'INSTALL_SEND_CONFIG'		=> 'PhpBB ei suutnud konfiguratsiooniinfot kirjutada config.php faili. See võib juhtuda., kui faili ei eksisteeri või tal on valed õigused. Valikud, mida edasi teha, on all.',
 	'INSTALL_START'				=> 'Alusta installeerimist',
 	'INSTALL_TEST'				=> 'Kontrolli uuesti',
-	'INST_ERR'					=> 'Installeerimise viga',
-	'INST_ERR_DB_CONNECT'		=> 'Ei suuda ühenduda andmebaasi, vaata veateadet all.',
+
+	// Errors
+	'INST_ERR_NO_DB'			=> 'Ei suuda laadida PHP moodulit valitud andmebaasitüübile.',
+	'INST_ERR_DB_INVALID_PREFIX'	=> 'The prefix you entered is invalid. It must start with a letter and must only contain letters, numbers and underscores.',
+	'INST_ERR_PREFIX_TOO_LONG'	=> 'Sisestatud tabeli eesliide on liiga pikk. Maksimumpikkus on %d sümbolit.',
+	'INST_ERR_DB_NO_NAME'		=> 'Andmebaasi nime ei sisestatud.',
 	'INST_ERR_DB_FORUM_PATH'	=> 'Valitud andmebaasifail on sinu foorumi kataloogipuus. Peaksid panema selle faili kohta, kuhuveebist ei pääse ligi.',
+	'INST_ERR_DB_CONNECT'		=> 'Ei suuda ühenduda andmebaasi, vaata veateadet all.',
 	'INST_ERR_DB_NO_ERROR'		=> 'Veateadet ei antud.',
+	'INST_ERR_PREFIX'			=> 'Tabelid valitud eesliitega on juba olemas, palun vali mõni muu eesliide.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'Installeeritud MySQL\'i versioon ei ühildu “MySQL koos MySQLi Laiendusega” valikuga, mille valisid. Proovi “MySQL” valikut.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'Installeeritud SQLite\'i versioon on liiga vana, See peab olema uuendatud vähemalt versioonile 2.8.2.',
 	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'Installeeritud Oracle\'i versioon nõuab sult <var>NLS_CHARACTERSET</var> parameetri muutmist väärtusele <var>UTF8</var>. Kas uuenda versoonile 9.2+ või muuda parameetrit',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'Valitud andmebaasi ei loodud <var>UNICODE</var> või <var>UTF8</var> kodeeringus. Proovi installeerida andmebaasi nendes kodeeringutes.',
-	'INST_ERR_DB_NO_NAME'		=> 'Andmebaasi nime ei sisestatud.',
+	'INST_SCHEMA_FILE_NOT_WRITABLE'	=> 'The schema file is not writable',
+
+	'EMAIL_CONFIG'	=> 'E-mail configuration',
+
+	'INST_ERR'					=> 'Installeerimise viga',
 	'INST_ERR_EMAIL_INVALID'	=> 'Sisestatud e-postiaadress pole korrektne.',
 	'INST_ERR_EMAIL_MISMATCH'	=> 'E-postiaadressid ei ole identsed.',
 	'INST_ERR_FATAL'			=> 'Tõsine installeerimisviga',
 	'INST_ERR_FATAL_DB'			=> 'Ilmnes tõsine ja parandamatu andmebaasi viga. See võib tuleneda sellest, e valitud kasutajal pole vajalikke õigusi <code>CREATE TABLES</code> või <code>INSERT</code> käskude täitmiseks. Edasine info võib olla antud all. Palun kontakteeru teenusepakkujaga või otsi abi phpBB tugifoorumitest.',
 	'INST_ERR_FTP_PATH'			=> 'Ei suuda muuta antud kausta, palun kontrolli teed',
 	'INST_ERR_FTP_LOGIN'		=> 'Ei suuda logida FTP serverisse, kontrolli oma kasutajanime ja parooli.',
-	'INST_ERR_MISSING_DATA'		=> 'Pead täitma kõik väljad selles osas.',
-	'INST_ERR_NO_DB'			=> 'Ei suuda laadida PHP moodulit valitud andmebaasitüübile.',
 	'INST_ERR_PASSWORD_MISMATCH'	=> 'Sisestatud paroolid ei ole identsed.',
 	'INST_ERR_PASSWORD_TOO_LONG'	=> 'Sisestatud parool on liiga pikk. Maksimumpikkus on 30 sümbolit.',
 	'INST_ERR_PASSWORD_TOO_SHORT'	=> 'Sisestatud parool on liiga lühike. Miinimumpikkus on 6 sümbolit.',
-	'INST_ERR_PREFIX'			=> 'Tabelid valitud eesliitega on juba olemas, palun vali mõni muu eesliide.',
 	'INST_ERR_PREFIX_INVALID'	=> 'Tabeli eesliide on ebakorrektne sinu andmebaasi puhul. Palun proovi muud, eemalda näiteks sidekriipsud.',
-	'INST_ERR_PREFIX_TOO_LONG'	=> 'Sisestatud tabeli eesliide on liiga pikk. Maksimumpikkus on %d sümbolit.',
 	'INST_ERR_USER_TOO_LONG'	=> 'Sisestatud kasutajanimi on liiga pikk. Maksimumpikkus on 20 sümbolit.',
 	'INST_ERR_USER_TOO_SHORT'	=> 'Sisestatud kasutajanimi on liiga lühike. Miinimumpikkus on 3 sümbolit.',
 	'INVALID_PRIMARY_KEY'		=> 'Ebakorrektne põhivõti: %s',
@@ -1972,15 +2032,15 @@ $lang = array_merge($lang, array(
 	'OVERVIEW_BODY'				=> 'Tere tulemast meie avalikule Väljalaskekandidaadile järgmisest phpBB versioonist peale 2.0.x, phpBB 3.0! See väljalase on mõeldud laiemale kasutajaskonnale viimaste vigade tuvastamiseks.</p><p>Palun loe <a href=',
 
 	'PCRE_UTF_SUPPORT'				=> 'PCRE UTF-8 tugi',
-	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB <strong>ei tööta</strong>, kui installeerimine pole läi viidud PCRE toega UTF-8 kodeeringus.',
-	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP funktsioon getimagesize() onc saadaval',
-	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Nõutud</strong> - Et phpBB funktsioneeriks korrektselt, peab getimagesize funktsioon olema saadaval.',
+	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
 	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
-	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'Valikulised moodulid',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>Valikuline</strong> -Need moodulid või programmid on valikulised. Kuid kui need on saadaval, annavad nad lisavõimalusi.',
 	'PHP_SUPPORTED_DB'				=> 'Toetatud andmebaasid',
-	'PHP_SUPPORTED_DB_EXPLAIN'		=> '<strong>Nõutud</strong> -Pead toetama vähemalt ühte sobivat andmebaasi PHP\'s. Kui ühtegi andmebaasi pole saadaval, peaksid võtma ühendust oma teenusepakkujaga või üle vaatama seotud PHP installeerimisdokumendid.',
+	'PHP_SUPPORTED_DB_EXPLAIN'		=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
 	'PHP_REGISTER_GLOBALS'			=> 'PHP seade <var>register_globals</var> on keelatud.',
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'PhpBB töötab ka siis, kui see seade on lubatud, , kuid kui võimalik, peaks see seade olema turvakaalutlustel keelatud.',
 	'PHP_SAFE_MODE'					=> 'Turvarežiim',
@@ -1988,7 +2048,7 @@ $lang = array_merge($lang, array(
 	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'PHP seade <var>allow_url_fopen</var> on lubatud',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>Valikuline</strong> - See seade on valikuline, kuid mõned foorumi funktsioonid, näiteks lingitud avatarid ei tööta korralikult ilma selleta.',
-	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version',
 	'POST_ID'						=> 'Postituse ID',
 	'PREFIX_FOUND'					=> 'Sinu tabelite skaneering näitas kehtivat installatsiooni, kasutades <strong>%s</strong> tabeli eesliitena',
 	'PREPROCESS_STEP'				=> 'Lõpetan eeltöötlemise funktsioone/käske.',
@@ -2004,7 +2064,6 @@ $lang = array_merge($lang, array(
 
 	'SCRIPT_PATH'				=> 'Skripti tee',
 	'SCRIPT_PATH_EXPLAIN'		=> 'Tee, kus phpBB asub suhtes domeeninimega, näiteks. <samp>/phpBB3</samp>.',
-	'SELECT_LANG'				=> 'Vali keel',
 	'SERVER_CONFIG'				=> 'Vali konfiguratsioon',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Otsingu indeksit ei konverditud',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Sinu vana otsingu indeksit ei konverditud. Otsimine ei anna kunagi tulemusi. Otsingu indekseid saab lisada juhtpaneelist.',
@@ -2021,7 +2080,6 @@ $lang = array_merge($lang, array(
 	'STAGE_FINAL'				=> 'Lõppetapp',
 	'STAGE_INTRO'				=> 'Tutvustus',
 	'STAGE_IN_PROGRESS'			=> 'Konverteerimine käib',
-	'STAGE_REQUIREMENTS'		=> 'Nõuded',
 	'STAGE_SETTINGS'			=> 'Seaded',
 	'STARTING_CONVERT'			=> 'Alustan konverteerimist',
 	'STEP_PERCENT_COMPLETED'	=> 'Etapp <strong>%d</strong> <strong>%d</strong>\'st.',
@@ -9847,7 +9905,7 @@ $lang = array_merge($lang, array(
 	'GUEST_STYLE'					=> 'Guest style',
 	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Muuda kasutajate valitud stiil',
-	'OVERRIDE_STYLE_EXPLAIN'		=> 'Asendab kasutajate stiili vaikimisi stiiliga.',
+	'ACP_OVERRIDE_STYLE_EXPLAIN'	=> 'Replaces user’s (and guest’s) style with the style as defined under "Default style".',
 	'SITE_DESC'						=> 'Foorumi kirjeldus',
 	'SITE_HOME_TEXT'				=> 'Main website text',
 	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
@@ -9855,8 +9913,9 @@ $lang = array_merge($lang, array(
 	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Foorumi nimi',
 	'SYSTEM_TIMEZONE'				=> 'Külaliste ajatsoon',
+	'SYSTEM_TIMEZONE_EXPLAIN'			=> 'Timezone to use for displaying times to users who are not logged in (guests, bots). Logged in users set their timezone during registration and can change it in their user control panel.',
 	'WARNINGS_EXPIRE'				=> 'Hoiatuse pikkus',
-	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Päevade arv, mille möödudes kasutaja profiilist hoiatus kaob. Sea väärtus 0\'ks, et määrata hoiatused permanentseks.',
+	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Number of days that will elapse before a warning will automatically expire from a user’s record. Set this value to 0 to make warnings permanent.',
 
 	'ACP_BOARD_FEATURES_EXPLAIN'	=> 'Siin saad sa lubada/keelata foorumi võimalusi.',
 
@@ -9887,6 +9946,7 @@ $lang = array_merge($lang, array(
 	'ALLOW_TOPIC_NOTIFY'		=> 'Luba teemade tellimine',
 	'BOARD_PM'					=> 'Privaatsõnumid',
 	'BOARD_PM_EXPLAIN'			=> 'Luba privaatsõnumid kasutajatele.',
+	'ALLOW_BOARD_NOTIFICATIONS' => 'Allow board notifications',
 
 	'ACP_AVATAR_SETTINGS_EXPLAIN'	=> 'Avatarid on üldiselt väikesed, unikaalsed pildid, mida kasutaja saab endale määrata. Sõltuvalt stiilist on nad tavaliselt kuvatud kasutajanime all. Siin saad sa määrata, kuidas kasutajad saavad avatare endale lisada. Et lubada üleslaadimist, peab sul olema selleks eraldi kaust, kuhu veebiserver saab kirjutada. Faili suuruse limiidid kehtivad vaid üleslaetud avataride puhul, limiit ei rakendu lingitud avatarile.',
 
@@ -9996,6 +10056,7 @@ $lang = array_merge($lang, array(
 
 	'ACC_ACTIVATION'				=> 'Konto aktiveerimine',
 	'ACC_ACTIVATION_EXPLAIN'		=> 'Siin saab määrata, kas kasutajad saavad kohe foorumit kasutada või peavad nad enne oma konto aktiveerima. Võid ka keelata registreerimise.',
+	'ACC_ACTIVATION_WARNING'		=> 'Please note that the currently selected activation method requires emails to be enabled, otherwise registration will be disabled. We recommend to either select a different activation method or reenable emails.',
 	'NEW_MEMBER_POST_LIMIT'			=> 'Uue kasutaja postituste arv',
 	'NEW_MEMBER_POST_LIMIT_EXPLAIN'	=> 'Uued kasutajad on grupis <em>Vastregistreerunud kasutajad</em> kuni selle arv postituste täitumiseni. Võid kasutada seda gruppi, et keelata nendel privaatsõnumid või postituste eelvaade. <strong>Väärtus "0" tühistab selle valiku.</strong>',
 	'NEW_MEMBER_GROUP_DEFAULT'		=> 'Määra Vastregistreerunud kasutajad vaikegrupiks',
@@ -10293,8 +10354,11 @@ $lang = array_merge($lang, array(
 
 	'TPL_ALLOW_PHP'					=> 'Luba php stiilides',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Kui see on lubatud, <code>PHP</code> ja <code>INCLUDEPHP</code> fraasid tuntakse ära ja analüüsitakse templeitides.',
+	'UPLOAD_CERT_VALID'				=> 'Validate upload certificate',
+	'UPLOAD_CERT_VALID_EXPLAIN'		=> 'If enabled, certificates of remote uploads will be validated. This requires the CA bundle to be defined by the <samp>openssl.cafile</samp> or <samp>curl.cainfo</samp> setting in your php.ini.',
 
 	'ACP_EMAIL_SETTINGS_EXPLAIN'	=> 'Seda infot kasutatakse, kui foorum saadab e-kirja kasutajale. Palun ole kindel, et siinsisestatud e-postiaadress on kehtiv, kõik tagasipõrkuvad või kohaletoimetamata e-kirjad lähevad sinna. Kui su teenusepakkuja ei paku kohalikku (PHP põhist) e-posti teenust , võid saata sõnumeid otse läbi SMTP. See nõuab serveri aadressi (küsi pakkujalt, kui vaja). Kui server nõuab autentimist, (ja vaid sellisel juhul) sisesta vajalik kasutajanimi, parool ja autentimismeetod.',
+
 	'ADMIN_EMAIL'					=> 'Administraatorid saavad mulle e-kirju saata',
 	'ADMIN_EMAIL_EXPLAIN'			=> 'Seda kasutatakse vastamise aadressina kõigis e-kirjades ja see on tehnilise toe aadress. Seda kasutatakse <samp>Vastamise-tee</samp> ja <samp>Saatja</samp> aadressina e-kirjades.',
 	'BOARD_EMAIL_FORM'				=> 'Kasutajad saadavad e-kirju läbi foorumi',
@@ -10313,6 +10377,8 @@ $lang = array_merge($lang, array(
 	'EMAIL_SIG_EXPLAIN'				=> 'See tekst lisatakse kõikidele e-kirjadele, mida foorum saadab',
 	'ENABLE_EMAIL'					=> 'Luba e-kirju läbi foorumi',
 	'ENABLE_EMAIL_EXPLAIN'			=> 'Kui see on keelatud, ei saadeta ühtegi e-kirja läbi foorumi. <em>Kasutajate e-kirja teel aktiveerimise töötamiseks peab see seade olema lubatud. Kui praegu on kasutusel "kasutaja" või "administraator" aktiveerimisseadetes, ei nõuta selle seade keelamisel kasutajatelt e-kirja teel aktiveerimist.</em>.',
+	'SEND_TEST_EMAIL'				=> 'Send a test email',
+	'SEND_TEST_EMAIL_EXPLAIN'		=> 'This will send a test email to the address defined in your account.',
 	'SMTP_AUTH_METHOD'				=> 'Autentimismeetod SMTP jaoks',
 	'SMTP_AUTH_METHOD_EXPLAIN'		=> 'Kasutatakse vaid siis, kui kasutajanimi/parool on määratud, küsi oma teenusepakkujalt, kui sa pole kindel, millist meetodit kasutada.',
 	'SMTP_CRAM_MD5'					=> 'CRAM-MD5',
@@ -10328,6 +10394,7 @@ $lang = array_merge($lang, array(
 	'SMTP_SETTINGS'					=> 'SMTP seaded',
 	'SMTP_USERNAME'					=> 'SMTP kasutajanimi',
 	'SMTP_USERNAME_EXPLAIN'			=> 'Sisesta kasutajanimi vaid siis, kui server seda nõuab',
+	'TEST_EMAIL_SENT'				=> 'The test email has been sent.<br />If you don’t receive it, please check your emails configuration.<br /><br />If you require assistance, please visit the <a href="https://www.phpbb.com/community/">phpBB support forums</a>.',
 	'USE_SMTP'						=> 'Kasuta SMTP serverit e-posti jaoks',
 	'USE_SMTP_EXPLAIN'				=> 'Vali “Jah”, kui soovid või pead e-maili saatma oma serverist phpBB3 e-posti funktsiooni asemel.',
 
@@ -10557,8 +10624,7 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'Andmebaas',
-	'ACP_CAT_DOT_MODS'			=> '.MODid',
-	'ACP_CAT_DOT_MODS'			=> '.MODid',
+	'ACP_CAT_DOT_MODS'			=> 'Laiendid',
 	'ACP_CAT_FORUMS'			=> 'Foorumid',
 	'ACP_CAT_GENERAL'			=> 'Üldine',
 	'ACP_CAT_MAINTENANCE'		=> 'Hooldamine',
@@ -10723,6 +10789,9 @@ $lang = array_merge($lang, array(
 
 	'BACK'					=> 'Tagasi',
 
+	'CONTAINER_EXCEPTION' => 'phpBB encountered an error building the container due to an installed extension. For this reason, all extensions have been temporarily disabled. Please try purging your forum cache. All extensions will automatically be re-enabled once the container error is resolved. If this error continues, please visit <a href="https://www.phpbb9.de">phpbb9.de</a> for support.',
+	'EXCEPTION' => 'Exception',
+
 	'COLOUR_SWATCH'			=> 'Värviskeem',
 	'CONFIG_UPDATED'		=> 'Konfiguratsioon edukalt uuendatud',
 	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
@@ -10733,7 +10802,7 @@ $lang = array_merge($lang, array(
 	'DEACTIVATE'				=> 'Deaktiveeri',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'Sisestatud “%s” ei eksisteeri.',
 	'DIRECTORY_NOT_DIR'			=> 'Sisestatud “%s” ei ole kataloog.',
-	'DIRECTORY_NOT_WRITABLE'	=> 'Sisestatud “%s” ei ole kirjutatav.',
+	'DIRECTORY_NOT_WRITABLE'	=> 'Directory not writable',
 	'DISABLE'					=> 'Keela',
 	'DOWNLOAD'					=> 'Lae alla',
 	'DOWNLOAD_AS'				=> 'Lae alla...',
@@ -10784,10 +10853,11 @@ $lang = array_merge($lang, array(
 	'PARSE_URLS'						=> 'Tunne ära lingid',
 	'PERMISSIONS_TRANSFERRED'			=> 'Õigused edukalt kopeeritud kasutajalt <strong>%s</strong>, saad nüüd sirvida foorumit selle kasutaja õigustega<br />Administraatori õigusi ei muudetud, õigused saad muuta tagasi alati.',
 	'PERMISSIONS_TRANSFERRED_EXPLAIN'	=> 'Sul on hetkel kasutaja %1$s õigused. Sa võid tema õigustega foorumit vaadata, aga sul ei ole luba siseneda administraatori juhtpaneeli, sest administraatori õiguse ei kantud üle. Võid <a href="%2$s"><strong>taasennistada oma õigused</strong></a> igal ajal.',
-	'PIXEL'								=> 'px',
 	'PROCEED_TO_ACP'					=> '%sLiigu edasi AJP%s',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Teadaanne',
 	'REMIND'							=> 'Tuleta meelde',
+	'REPARSE_LOCK_ERROR'				=> 'Reparsing is already in progress by another process.',
 	'RESYNC'							=> 'Resünkroniseeri',
 
 	'RUNNING_TASK'			=> 'Running task: %s.',
@@ -10836,11 +10906,23 @@ $lang = array_merge($lang, array(
 
 	'DATABASE_SIZE'			=> 'Andmebaasi suurus',
 
+	// Enviroment configuration checks, mbstring related
+	'ERROR_MBSTRING_FUNC_OVERLOAD'					=> 'Function overloading is improperly configured',
+	'ERROR_MBSTRING_FUNC_OVERLOAD_EXPLAIN'			=> '<var>mbstring.func_overload</var> must be set to either 0 or 4. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION'			=> 'Transparent character encoding is improperly configured',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION_EXPLAIN'	=> '<var>mbstring.encoding_translation</var> must be set to 0. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_INPUT'						=> 'HTTP input character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_INPUT_EXPLAIN'				=> '<var>mbstring.http_input</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_OUTPUT'					=> 'HTTP output character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_OUTPUT_EXPLAIN'			=> '<var>mbstring.http_output</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+
 	'FILES_PER_DAY'		=> 'Manused päevas',
 	'FORUM_STATS'		=> 'Foorumi statistika',
 
 	'GZIP_COMPRESSION'	=> 'GZip kompressioon',
 
+	'PIXEL'								=> 'px',
+	
 	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'Pole olemas',
 	'NUMBER_FILES'		=> 'Manuseid kokku',
@@ -10848,6 +10930,8 @@ $lang = array_merge($lang, array(
 	'NUMBER_TOPICS'		=> 'Teemasid kokku',
 	'NUMBER_USERS'		=> 'Kasutajaid kokku',
 	'NUMBER_ORPHAN'		=> 'Üksikuid manuseid',
+
+	'PHP_VERSION_OLD'	=> 'The version of PHP on this server will no longer be supported by future versions of phpBB. %sDetails%s',
 
 	'POSTS_PER_DAY'		=> 'Postitusi päevas',
 
@@ -10894,10 +10978,16 @@ $lang = array_merge($lang, array(
 	'VALUE'						=> 'Väärtus',
 	'VERSIONCHECK_FAIL'			=> 'PhpBB versiooni ei suudetud tuvastada.',
 	'VERSIONCHECK_FORCE_UPDATE'	=> 'Kontrolli uuesti',
+	'VERSION_CHECK'				=> 'Versiooni kontroll',
+	'VERSION_CHECK_EXPLAIN'		=> 'Kontrollib, kas installeeritud phpBB versioon on kõige uuem.',
+	'VERSION_NOT_UP_TO_DATE_ACP'	=> 'Sinu phpBB versioon pole kõige uuem.<br />Allpool leiad lingi viimase versiooni väljalaske teadaandele ja instruktsioonid uuendamiseks.',
+	'VERSION_NOT_UP_TO_DATE_TITLE'	=> 'Sinu phpBB versioon pole kõige uuem',
+	'VERSION_UP_TO_DATE_ACP'	=> 'Sinu versioon on kõige uuem, uuendusi pole saadaval. Sa ei pea versiooni uuendama.',
 	'VIEW_ADMIN_LOG'			=> 'Vaata administraatori logi',
 	'VIEW_INACTIVE_USERS'		=> 'Vaata mitteaktiivseid kasutajaid',
 
 	'WELCOME_PHPBB'			=> 'Tere Tulemast phpBB´sse',
+	'WRITABLE_CONFIG'		=> 'Your config file (config.php) is currently world-writable. We strongly encourage you to change the permissions to 640 or at least to 644 (for example: <a href="http://en.wikipedia.org/wiki/Chmod" rel="external">chmod</a> 640 config.php).',
 
 	'BROWSER_LANGUAGE'			=> 'Enable Browser Language Detection',
 	'BROWSER_LANGUAGE_EXPLAIN'	=> 'Enables the browser language detection for guest users not to use the default language of the board. Choose no to disable the feature.',

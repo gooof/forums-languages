@@ -1725,6 +1725,86 @@ $lang = array_merge($lang, array(
 #######language/en/install.php#######
 
 $lang = array_merge($lang, array(
+	'INSTALL_PANEL'	=> 'Installasjonspanel',
+	'SELECT_LANG'	=> 'Velg språk',
+	'STAGE_INSTALL'	=> 'Installing phpBB',
+
+	// Introduction page
+	'INTRODUCTION_TITLE'	=> 'Introduksjon',
+	'INTRODUCTION_BODY'		=> 'Welcome to phpBB3!<br /><br />phpBB® is the most widely used open source bulletin board solution in the world. phpBB3 is the latest installment in a package line started in 2000. Like its predecessors, phpBB3 is feature-rich, user-friendly, and fully supported by the phpBB Team. phpBB3 greatly improves on what made phpBB2 popular, and adds commonly requested features that were not present in previous versions. We hope it exceeds your expectations.<br /><br />This installation system will guide you through installing phpBB3, updating to the latest version of phpBB3 from past releases, as well as converting to phpBB3 from a different discussion board system (including phpBB2). For more information, we encourage you to read <a href="../docs/INSTALL.html">the installation guide</a>.<br /><br />To read the phpBB3 license or learn about obtaining support and our stance on it, please select the respective options from the side menu. To continue, please select the appropriate tab above.',
+
+	// Support page
+	'SUPPORT_TITLE'		=> 'Support',
+	'SUPPORT_BODY_INSTALL'	=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/docs/en/3.1/ug/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
+
+	// License
+	'LICENSE_TITLE'		=> 'General Public License',
+
+	// Install page
+	'INSTALL_INTRO'			=> 'Velkommen til installasjonen!',
+	'INSTALL_INTRO_BODY'	=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
+
+	<ul>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
+	</ul>
+
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
+
+	<p>phpBB3 supports the following databases:</p>
+	<ul>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
+		<li>SQLite 2.8.2+</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
+		<li>Oracle</li>
+	</ul>
+
+	<p>Only those databases supported on your server will be displayed.',
+
+	'ACP_LINK'	=> 'Take me to <a href="%1$s">the ACP</a>',
+
+	'INSTALL_PHPBB_INSTALLED'		=> 'phpBB is already installed.',
+	'INSTALL_PHPBB_NOT_INSTALLED'	=> 'phpBB is not installed yet.',
+
+
+	// Filesystem requirements
+	'FILE_NOT_EXISTS'			=> 'File not exists',
+	'FILE_NOT_EXISTS_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to exist.',
+	'FILE_NOT_WRITABLE'			=> 'File not writable',
+	'FILE_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to be writable.',
+
+	'DIRECTORY_NOT_EXISTS'				=> 'Directory not exists',
+	'DIRECTORY_NOT_EXISTS_EXPLAIN'		=> 'To be able to install phpBB the %1$s directory needs to exist.',
+	'DIRECTORY_NOT_WRITABLE'			=> 'Directory not writable',
+	'DIRECTORY_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s directory needs to be writable.',
+
+	// Server requirements
+	'PHP_VERSION_REQD'					=> 'PHP version',
+	'PHP_VERSION_REQD_EXPLAIN'			=> 'phpBB requires PHP version 5.4.0 or higher.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
+	'PCRE_UTF_SUPPORT'					=> 'PCRE UTF-8-støtte',
+	'PCRE_UTF_SUPPORT_EXPLAIN'			=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_JSON_SUPPORT'					=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'			=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_SUPPORTED_DB'					=> 'Databaser',
+	'PHP_SUPPORTED_DB_EXPLAIN'			=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
+
+	'RETEST_REQUIREMENTS'	=> 'Retest requirements',
+
+	'STAGE_REQUIREMENTS'	=> 'Check requirements',
+
+	'INST_ERR_MISSING_DATA'		=> 'Du må fylle ut alle feltene i denne boksen.',
+
+	'TIMEOUT_DETECTED_TITLE'	=> 'The installer detected a timeout',
+	'TIMEOUT_DETECTED_MESSAGE'	=> 'The installer has detected a timeout, you may try to refresh the page, which may lead to data corruption. We suggest that you either increase your timeout settings or try to use the CLI.',
+
 	'ADMIN_CONFIG'				=> 'Administratorkonfigurasjon',
 	'ADMIN_PASSWORD'			=> 'Administratorpassord',
 	'ADMIN_PASSWORD_CONFIRM'	=> 'Bekreft administratorpassord',
@@ -1788,7 +1868,7 @@ $lang = array_merge($lang, array(
 	'CONV_ERROR_INSERT_BOTGROUP'		=> 'Kunne ikke sette inn søkemotor til bottabell.',
 	'CONV_ERROR_INSERT_USER_GROUP'		=> 'Kunne ikke sette inn bruker til brukergruppetabellen.',
 	'CONV_ERROR_MESSAGE_PARSER'			=> 'Meldingslesefeil',
-	'CONV_ERROR_NO_AVATAR_PATH'			=> 'Melding til forfatter: Du må spesifisere $convertor[\'avatar_path\'] for å kunne bruke %s.',
+	'CONV_ERROR_NO_AVATAR_PATH'			=> 'Note to developer: you must specify convertor[avatar_path] to use %s.',
 	'CONV_ERROR_NO_FORUM_PATH'			=> 'Stien til forumet er ikke spesifisert.',
 	'CONV_ERROR_NO_GALLERY_PATH'		=> 'Melding til forfatter: Du må spesifisere $convertor[\'avatar_gallery_path\'] for å kunne bruke %s.',
 	'CONV_ERROR_NO_GROUP'				=> 'Gruppen "%1$s" kunne ikke bli funnet i %2$s.',
@@ -1875,65 +1955,45 @@ $lang = array_merge($lang, array(
 	'INITIAL_CONFIG_EXPLAIN'	=> 'Nå som installasjonen er ferdig og serveren kan kjøre phpBB, må du oppgi litt spesifikk informasjon. Hvis du ikke vet hvordan du kobler til databasen, kontakt webhotellet ditt eller phpBBs supportforum. Undersøk om innstillingene er riktige før du fortsetter.',
 	'INSTALL_CONGRATS'			=> 'Gratulerer!',
 	'INSTALL_CONGRATS_EXPLAIN'	=> '<p>Du har nå installert phpBB %1$s. Nå kan du gjøre to ting med ditt nye forum3:</p> <h2>Konverter et gammelt forum til phpBB3</h2> <p>phpBBs konverteringssystem lar deg konvertere både phpBB 2.0x og andre forumtyper til phpBB3. hvis du har et eksisterende forum som du ønsker å konvertere, gå til <a href="%2$s">konvertereren</a>.</p> <h2>Begynn å bruke phpBB3!</h2> <p>Dersom du starter et nytt forum, så er du nå ferdig. Klikk på knappen nedenfor for å gå til administratorpanelet (ACP). Bruk litt tid på å utforske alle mulighetene du har der. Husk at du alltid kan finne hjelp i <a href="http://www.phpbb.com/support/documentation/3.0/">dukumentasjonen</a> og på <a href="http://www.phpbb.com/community/viewforum.php?f=46">supportforumet</a> til phpBB.com. Du kan også besøke <a href="http://www.phpbb.no">phpBB.no</a> for å få hjelp på norsk. Se forøvrig <a href="%3$s">README</a>-filen for mer informasjon.</p><p><strong>Vennligst slett, flytt eller endre navn på installasjonsmappen (/install) før du bruker forumet ditt. Før du gjør dette er det kun administrasjonspanelet som er tilgjengelig.</strong></p>',
-	'INSTALL_INTRO'				=> 'Velkommen til installasjonen!',
 
-	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
-
-	<ul>
-		<li>The Database Type - the database you will be using.</li>
-		<li>The Database server hostname or DSN - the address of the database server.</li>
-		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
-		<li>The Database name - the name of the database on the server.</li>
-		<li>The Database username and Database password - the login data to access the database.</li>
-	</ul>
-
-	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
-
-	<p>phpBB3 supports the following databases:</p>
-	<ul>
-		<li>MySQL 3.23 or above (MySQLi supported)</li>
-		<li>PostgreSQL 8.3+</li>
-		<li>SQLite 2.8.2+</li>
-		<li>SQLite 3.6.15+</li>
-		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
-		<li>MS SQL Server 2005 or above (native)</li>
-		<li>Oracle</li>
-	</ul>
-
-	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'Klikk på knappen under for å fullføre installasjonen.',
 	'INSTALL_LOGIN'				=> 'Logg inn',
 	'INSTALL_NEXT'				=> 'Neste',
 	'INSTALL_NEXT_FAIL'			=> 'Noen undersøkelser ble ikke fullført, og du må rette dem opp før du går til neste steg. Gjør du ikke det, blir ikke installasjonen komplett.',
 	'INSTALL_NEXT_PASS'			=> 'Alle basiske undersøkelser er fullført, og du kan gå videre til neste steg. Hvis du har endret noen rettigheter, moduler eller lignende og ønsker å undersøke omigjen, kan du gjøre det.',
-	'INSTALL_PANEL'				=> 'Installasjonspanel',
 	'INSTALL_SEND_CONFIG'		=> 'PhpBB kunne ikke skrive direkte til config.php. Det kan være fordi filen ikke eksisterer eller fordi den ikke er skrivbar. Du vil nå se et visst antall alternativer angående installasjonen av config.php.',
 	'INSTALL_START'				=> 'Start installasjon',
 	'INSTALL_TEST'				=> 'Gjenta undersøkelse',
-	'INST_ERR'					=> 'Installasjonsfeil',
-	'INST_ERR_DB_CONNECT'		=> 'Kunne ikke koble til databasen, se feilmeldingen under.',
+
+	// Errors
+	'INST_ERR_NO_DB'			=> 'Kan ikke laste PHP-modulen for den valgte databasetypen.',
+	'INST_ERR_DB_INVALID_PREFIX'	=> 'The prefix you entered is invalid. It must start with a letter and must only contain letters, numbers and underscores.',
+	'INST_ERR_PREFIX_TOO_LONG'	=> 'Tabellprefiksen du har spesifisert er for lang. Den maksimale lengden er på %d tegn.',
+	'INST_ERR_DB_NO_NAME'		=> 'Ingen databasenavn ble spesifisert',
 	'INST_ERR_DB_FORUM_PATH'	=> 'Den spesifiserte databasefilen er innenfor din forummappe. Du må plassere filen i et område som ikke er tilgjengelig fra nettet.',
+	'INST_ERR_DB_CONNECT'		=> 'Kunne ikke koble til databasen, se feilmeldingen under.',
 	'INST_ERR_DB_NO_ERROR'		=> 'Ingen feilmelding er gitt.',
+	'INST_ERR_PREFIX'			=> 'Tabellen med den spesifiserte prefiksen finnes allerede, vennligst velg et annet alternativ.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'Versjonen av  MySQL på denne maskinen er inkompatibel med “MySQL med MySQLi-utvidelsen”-valget du har valgt. Vennligst prøv “MySQL”-valget istedet.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'Versjonen av SQLite-utvidelsen du har installert er for gammel, den må være minst oppgradert til versjon 2.8.2.',
 	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'Versjonen av Oracle installert på denne maskinen krever at du setter <var>NLS_CHARACTERSET</var>-parameteret til <var>UTF8</var>. Enten oppgraderer du installasjonen til 9.2+ eller skift parameteret.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'Databasen du har valgt var ikke opprettet i <var>UNICODE</var>- eller <var>UTF8</var>-koding. Prøv å installere i en database med <var>UNICODE</var>- eller <var>UTF8</var>-koding.',
-	'INST_ERR_DB_NO_NAME'		=> 'Ingen databasenavn ble spesifisert',
+	'INST_SCHEMA_FILE_NOT_WRITABLE'	=> 'The schema file is not writable',
+
+	'EMAIL_CONFIG'	=> 'E-mail configuration',
+
+	'INST_ERR'					=> 'Installasjonsfeil',
 	'INST_ERR_EMAIL_INVALID'	=> 'Epostadressene du skrev inn er ugyldige.',
 	'INST_ERR_EMAIL_MISMATCH'	=> 'Epostadressene du skrev inn stemmer ikke med hverandre.',
 	'INST_ERR_FATAL'			=> 'Fatal installasjonsfeil',
 	'INST_ERR_FATAL_DB'			=> 'En fatal databasefeil har inntruffet. Det kan være fordi brukeren ikke har rettigheter til å utføre handlingen <code>CREATE TABLES</code>, <code>INSERT</code> eller lignende. Du finner mer informasjon under. Kontakt webhotellet ditt, eller spør i phpBB.coms eller phpBB.nos supportforum hvis du skulle ha bruk for hjelp.',
 	'INST_ERR_FTP_PATH'			=> 'Kunne ikke skifte til den oppgitte mappen, vennligst undersøk stien.',
 	'INST_ERR_FTP_LOGIN'		=> 'Kunne ikke logge inn med FTP. Undersøk om brukernavnet og passordet er riktige.',
-	'INST_ERR_MISSING_DATA'		=> 'Du må fylle ut alle feltene i denne boksen.',
-	'INST_ERR_NO_DB'			=> 'Kan ikke laste PHP-modulen for den valgte databasetypen.',
 	'INST_ERR_PASSWORD_MISMATCH'	=> 'Passordene du skrev stemmer ikke med hverandre.',
 	'INST_ERR_PASSWORD_TOO_LONG'	=> 'Passordet du skrev er for langt. Den maskimale lengden er på 30 tegn.',
 	'INST_ERR_PASSWORD_TOO_SHORT'	=> 'Passordet du skrev er for kort. Minimumslengden er på 6 tegn.',
-	'INST_ERR_PREFIX'			=> 'Tabellen med den spesifiserte prefiksen finnes allerede, vennligst velg et annet alternativ.',
 	'INST_ERR_PREFIX_INVALID'	=> 'Tabellprefiksen du har spesifisert er ugyldig for denne databasen. Prøv andre tegn, for eksempel med bindestrek.',
-	'INST_ERR_PREFIX_TOO_LONG'	=> 'Tabellprefiksen du har spesifisert er for lang. Den maksimale lengden er på %d tegn.',
 	'INST_ERR_USER_TOO_LONG'	=> 'Brukernavnet du har skrevet er for langt. Den maksimale lengden er på 20 tegn.',
 	'INST_ERR_USER_TOO_SHORT'	=> 'Brukernavnet du har skrevet er for kort. Minimumslengden er på 3 tegn.',
 	'INVALID_PRIMARY_KEY'		=> 'Ugyldig hovednøkkel: %s',
@@ -1968,15 +2028,15 @@ $lang = array_merge($lang, array(
 	'OVERVIEW_BODY'				=> 'Velkommen til phpBB3!<br /><br />phpBB™ er forumsystemet som har flest brukere på verdensbasis. phpBB3 er den absolutt nyeste utgaven, og støtter seg på en syv år lang tradisjon med phpBB-oppgraderinger. Som sine forgjengere er phpBB3 funksjonsrikt, brukervennlig fullt ut støttet av phpBB-teamet. phpBB3 forbedrer alt det som gjorde phpBB2 til den suksessen det var (og er), og legger til en god del funksjoner som ikke fantes i tidligere utgaver. Vi håper det overgår dine forventninger.<br /><br />Dette installasjonssystemet vil guide deg gjennom installasjonen av phpBB3, oppdatering til siste versjon fra tidligere utgaver, samt konvertering fra andre forumsystemer (inkludert oppgradering fra phpBB2). For mer installasjon bør du lese <a href="../docs/INSTALL.html">installasjonsguiden</a>.<br /><br />For å se phpBB3s lisens eller for å finne ut hvordan du kan få hjelp med ditt forum velger du de respektive valgene i sidemenyen. For å fortsette velger du den fanen ovenfor som tilsvarer det du ønsker å gjøre.',
 
 	'PCRE_UTF_SUPPORT'				=> 'PCRE UTF-8-støtte',
-	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'PhpBB vil <strong>ikke</strong> virke hvis PHP-installasjonen ikke er avhenging av UTF-8-støtte i PCRE-utvidelsen.',
-	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP-funksjonen getimagesize() er tilgjengelig',
-	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Obligatorisk</strong> - For at phpBB skal fungere skikkelig, må getimagesize funksjonen være tilgjengelig.',
+	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
 	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
-	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'Alternative moduler',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>Alternativ</strong> - Disse modulene og applikasjonene er ikke tilgjengelige. Hadde de vært tilgjengelige, ville også forumet fått flere funksjoner.',
 	'PHP_SUPPORTED_DB'				=> 'Databaser',
-	'PHP_SUPPORTED_DB_EXPLAIN'		=> '<strong>Påkrevd</strong> - Du må ha support for minst en type database med mulighet for tilkobling via PHP. Hvis ingen databaser er tilgjengelige, bør du kontakte webhotellet ditt eller se gjennom PHP-installasjonsdokumentasjonen.',
+	'PHP_SUPPORTED_DB_EXPLAIN'		=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
 	'PHP_REGISTER_GLOBALS'			=> 'PHP-innstillingen <var>register_globals</var> er deaktivert.',
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'phpBB kan fortsatt kjøre med denne innstillingen aktivert, men hvis mulig, er det anbefalt at register_globals er deaktivert på grunn av sikkerhetsmessige årsaker.',
 	'PHP_SAFE_MODE'					=> 'Sikker modus',
@@ -1984,7 +2044,7 @@ $lang = array_merge($lang, array(
 	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'PHP-innstillingen <var>allow_url_fopen</var> er aktivert.',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>Alternativ</strong> - Denne innstillingen er alternativ, men uten den kan ikke noen brukerne linke til avatarer som ligger på andre sider.',
-	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version',
 	'POST_ID'						=> 'Post-ID',
 	'PREFIX_FOUND'					=> 'En undersøkelse av tabellene viste at den installasjonsgylige tabellprefiksen <strong>%s</strong> er benyttet.',
 	'PREPROCESS_STEP'				=> 'Oppretter preprossessfunksjoner/-spørringer',
@@ -2000,7 +2060,6 @@ $lang = array_merge($lang, array(
 
 	'SCRIPT_PATH'				=> 'Sti',
 	'SCRIPT_PATH_EXPLAIN'		=> 'Stien/mappen hvor phpBB er plassert, for eksempel <samp>phpBB3/</samp>.',
-	'SELECT_LANG'				=> 'Velg språk',
 	'SERVER_CONFIG'				=> 'Serverkonfigurasjon',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Søkeindeksen ble ikke konvertert.',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Din gamle søkeindeks ble ikke konvertert. Søking vil alltid svikte på tomt resultat. For å lage en ny søkeindeks, gå til administrasjonspanelet, velg vedlikehold og velg deretter søkeindeks i undermenyen.',
@@ -2017,7 +2076,6 @@ $lang = array_merge($lang, array(
 	'STAGE_FINAL'				=> 'Siste trinn',
 	'STAGE_INTRO'				=> 'Introduksjon',
 	'STAGE_IN_PROGRESS'			=> 'Konvertering pågår',
-	'STAGE_REQUIREMENTS'		=> 'Påkrevde detaljer',
 	'STAGE_SETTINGS'			=> 'Innstillinger',
 	'STARTING_CONVERT'			=> 'Starter konverteringsprosessen',
 	'STEP_PERCENT_COMPLETED'	=> 'Steg <strong>%d</strong> av <strong>%d</strong>',
@@ -9854,7 +9912,7 @@ $lang = array_merge($lang, array(
 	'GUEST_STYLE'					=> 'Guest style',
 	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Overskriv brukernes design',
-	'OVERRIDE_STYLE_EXPLAIN'		=> 'Erstatter brukernes design med standarddesignet.',
+	'ACP_OVERRIDE_STYLE_EXPLAIN'	=> 'Replaces user’s (and guest’s) style with the style as defined under "Default style".',
 	'SITE_DESC'						=> 'Beskrivelse',
 	'SITE_HOME_TEXT'				=> 'Main website text',
 	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
@@ -9862,8 +9920,9 @@ $lang = array_merge($lang, array(
 	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Forumnavn',
 	'SYSTEM_TIMEZONE'				=> 'Tidssone',
+	'SYSTEM_TIMEZONE_EXPLAIN'			=> 'Timezone to use for displaying times to users who are not logged in (guests, bots). Logged in users set their timezone during registration and can change it in their user control panel.',
 	'WARNINGS_EXPIRE'				=> 'Advarselsvarighet',
-	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Antall dager fra en advarsel gis til den fjernes fra brukerens profildata.',
+	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Number of days that will elapse before a warning will automatically expire from a user’s record. Set this value to 0 to make warnings permanent.',
 
 	'ACP_BOARD_FEATURES_EXPLAIN'	=> 'Her kan du aktivere/deaktivere flere av forumets funksjoner.',
 
@@ -9894,6 +9953,7 @@ $lang = array_merge($lang, array(
 	'ALLOW_TOPIC_NOTIFY'		=> 'Tillat emneovervåking',
 	'BOARD_PM'					=> 'Tillat private meldinger',
 	'BOARD_PM_EXPLAIN'			=> 'Aktiverer muligheten for private meldinger.',
+	'ALLOW_BOARD_NOTIFICATIONS' => 'Allow board notifications',
 
 	'ACP_AVATAR_SETTINGS_EXPLAIN'	=> 'Avatarer er generelt små bilder en bruker kan knytte til sin profil. Avhenger av forumets design vises disse oftest like under brukernavnet når man leser et innlegg. Herfra styrer du hvordan brukerne kan definere avataren deres. Vær oppmerksom på at for å kunne laste opp avatarer, skal du på forhånd ha opprettet en angitt mappe og sikre deg at den kan skrives til fra serveren. Begrensingene for filstørrelse brukes kun på opplastede avatarer, ikke de eksterne.',
 
@@ -10003,6 +10063,7 @@ $lang = array_merge($lang, array(
 
 	'ACC_ACTIVATION'				=> 'Kontoaktivering',
 	'ACC_ACTIVATION_EXPLAIN'		=> 'Bestemmer om brukere har øyeblikkelig adgang til forumet eller om det kreves en annen form for bekreftelse. Du kan også deaktivere muligheten for å registrere seg i forumet.',
+	'ACC_ACTIVATION_WARNING'		=> 'Please note that the currently selected activation method requires emails to be enabled, otherwise registration will be disabled. We recommend to either select a different activation method or reenable emails.',
 	'NEW_MEMBER_POST_LIMIT'			=> 'New member post limit',
 	'NEW_MEMBER_POST_LIMIT_EXPLAIN'	=> 'New members are within the <em>Newly Registered Users</em> group until they reach this number of posts. You can use this group to keep them from using the PM system or to review their posts. <strong>A value of 0 disables this feature.</strong>',
 	'NEW_MEMBER_GROUP_DEFAULT'		=> 'Set Newly Registered Users group to default',
@@ -10300,8 +10361,11 @@ $lang = array_merge($lang, array(
 
 	'TPL_ALLOW_PHP'					=> 'Tillat PHP i maler',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Hvis denne innstillingen er aktivert, vil kommandoene <code>PHP</code> og <code>INCLUDEPHP</code> i templatefilene bli gjenkjent og behandlet.',
+	'UPLOAD_CERT_VALID'				=> 'Validate upload certificate',
+	'UPLOAD_CERT_VALID_EXPLAIN'		=> 'If enabled, certificates of remote uploads will be validated. This requires the CA bundle to be defined by the <samp>openssl.cafile</samp> or <samp>curl.cainfo</samp> setting in your php.ini.',
 
 	'ACP_EMAIL_SETTINGS_EXPLAIN'	=> 'Disse innstillingene benyttes av forumet ved sending av e-post til registrerte brukere. Vær oppmerksom på at denne e-postadressen skal være gyldig, da enhver tilbakesendt eller bortkommet e-post sannsynligvis vil bli returnert til denne e-postadressen. Hvis wewbhotellet ikke lar deg bruke den innebygde (PHP-baserte) e-posttjenesten, kan du i stedet sende e-post direkte gjennom SMTP. Dette krever adressen på en passende server (spør om nødvendig webhotellet). Hvis serveren krever autentifikasjon (og kun hvis den gjør) angis det nødvendige brukernavn, passord og autentifikasjonsmetoden.',
+
 	'ADMIN_EMAIL'					=> 'Administratorer kan sende e-post til meg',
 	'ADMIN_EMAIL_EXPLAIN'			=> 'Denne e-postadressen brukes som returadresse for all e-post, det vil si e-postadressen for teknisk kontakt. Den brukes alltid som <samp>Return-Path</samp>- og <samp>Sender</samp>-adressen i e-post.',
 	'BOARD_EMAIL_FORM'				=> 'Aktiver sending av e-post via forumet',
@@ -10320,6 +10384,8 @@ $lang = array_merge($lang, array(
 	'EMAIL_SIG_EXPLAIN'				=> 'Denne teksten brukes som signatur i all e-post som blir sendt ut fra forumet.',
 	'ENABLE_EMAIL'					=> 'Aktiver forumets e-postsystem',
 	'ENABLE_EMAIL_EXPLAIN'			=> 'Hvis deaktivert, vil ikke forumet sende noen e-post i det hele tatt.',
+	'SEND_TEST_EMAIL'				=> 'Send a test email',
+	'SEND_TEST_EMAIL_EXPLAIN'		=> 'This will send a test email to the address defined in your account.',
 	'SMTP_AUTH_METHOD'				=> 'Autentifikasjonsmetode for SMTP',
 	'SMTP_AUTH_METHOD_EXPLAIN'		=> 'Brukes kun hvis et brukernavn og passord er angitt. Spør webhotellet hvis du er usikker på hvilken metode som skal brukes.',
 	'SMTP_CRAM_MD5'					=> 'CRAM-MD5',
@@ -10335,6 +10401,7 @@ $lang = array_merge($lang, array(
 	'SMTP_SETTINGS'					=> 'SMTP-innstillinger',
 	'SMTP_USERNAME'					=> 'SMTP-brukernavn',
 	'SMTP_USERNAME_EXPLAIN'			=> 'Skriv inn et brukernavn kun hvis SMTP-serveren krever det.',
+	'TEST_EMAIL_SENT'				=> 'The test email has been sent.<br />If you don’t receive it, please check your emails configuration.<br /><br />If you require assistance, please visit the <a href="https://www.phpbb.com/community/">phpBB support forums</a>.',
 	'USE_SMTP'						=> 'Bruk SMTP-server for e-post',
 	'USE_SMTP_EXPLAIN'				=> 'Velg "Ja" hvis du skal bruke en navngitt server til å sende e-post i stedet for å bruke forumets innebygde e-postfunksjon.',
 
@@ -10564,8 +10631,7 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'Database',
-	'ACP_CAT_DOT_MODS'			=> '.MODs',
-	'ACP_CAT_DOT_MODS'			=> '.MODs',
+	'ACP_CAT_DOT_MODS'			=> 'Filtyper',
 	'ACP_CAT_FORUMS'			=> 'Forumer',
 	'ACP_CAT_GENERAL'			=> 'Generelt',
 	'ACP_CAT_MAINTENANCE'		=> 'Vedlikehold',
@@ -10730,6 +10796,9 @@ $lang = array_merge($lang, array(
 
 	'BACK'					=> 'Tilbake',
 
+	'CONTAINER_EXCEPTION' => 'phpBB encountered an error building the container due to an installed extension. For this reason, all extensions have been temporarily disabled. Please try purging your forum cache. All extensions will automatically be re-enabled once the container error is resolved. If this error continues, please visit <a href="https://www.phpbb9.de">phpbb9.de</a> for support.',
+	'EXCEPTION' => 'Exception',
+
 	'COLOUR_SWATCH'			=> 'Fargevelger',
 	'CONFIG_UPDATED'		=> 'Konfigurasjonen oppdatert suksessfullt.',
 	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
@@ -10740,7 +10809,7 @@ $lang = array_merge($lang, array(
 	'DEACTIVATE'				=> 'Deaktiver',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'Den inntastede sti "%s" eksisterer ikke.',
 	'DIRECTORY_NOT_DIR'			=> 'Den inntastede sti "%s" er ikke en mappe.',
-	'DIRECTORY_NOT_WRITABLE'	=> 'Den inntastede sti "%s" er ikke skrivbar.',
+	'DIRECTORY_NOT_WRITABLE'	=> 'Directory not writable',
 	'DISABLE'					=> 'Slå av',
 	'DOWNLOAD'					=> 'Last ned',
 	'DOWNLOAD_AS'				=> 'Last ned som',
@@ -10791,10 +10860,11 @@ $lang = array_merge($lang, array(
 	'PARSE_URLS'						=> 'Analyser linker',
 	'PERMISSIONS_TRANSFERRED'			=> 'Du har nå rettigheter fra <strong>%s</strong>.<br />Merk deg at du ikke har administratorrettigheter. Du kan alltid tilbakestille rettighetene dine.',
 	'PERMISSIONS_TRANSFERRED_EXPLAIN'	=> 'Du er nå blitt tildelt rettighetene fra %1$s. og kan se på forumet med dennes rettigheter, og du kan derfor ikke få tilgang til administratorkontrolpanelet. Du kan når som helst <a href="%2$s"><strong>gå tilbake til ditt eget sett av rettigheter</strong></a>.',
-	'PIXEL'								=> 'px',
 	'PROCEED_TO_ACP'					=> '%sFortsett til administrasjonspanelet%s',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Annonsering',
 	'REMIND'							=> 'Påmind',
+	'REPARSE_LOCK_ERROR'				=> 'Reparsing is already in progress by another process.',
 	'RESYNC'							=> 'Resynkroniser',
 
 	'RUNNING_TASK'			=> 'Running task: %s.',
@@ -10846,11 +10916,23 @@ $lang = array_merge($lang, array(
 
 	'DATABASE_SIZE'			=> 'Databasestørrelse',
 
+	// Enviroment configuration checks, mbstring related
+	'ERROR_MBSTRING_FUNC_OVERLOAD'					=> 'Function overloading is improperly configured',
+	'ERROR_MBSTRING_FUNC_OVERLOAD_EXPLAIN'			=> '<var>mbstring.func_overload</var> must be set to either 0 or 4. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION'			=> 'Transparent character encoding is improperly configured',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION_EXPLAIN'	=> '<var>mbstring.encoding_translation</var> must be set to 0. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_INPUT'						=> 'HTTP input character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_INPUT_EXPLAIN'				=> '<var>mbstring.http_input</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_OUTPUT'					=> 'HTTP output character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_OUTPUT_EXPLAIN'			=> '<var>mbstring.http_output</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+
 	'FILES_PER_DAY'		=> 'Antall vedleggsfiler pr. dag',
 	'FORUM_STATS'		=> 'Forum statistikker',
 
 	'GZIP_COMPRESSION'	=> 'Gzip-komprimering',
 
+	'PIXEL'								=> 'px',
+	
 	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'Ikke tilgjengelig',
 	'NUMBER_FILES'		=> 'Antall vedleggsfiler',
@@ -10858,6 +10940,8 @@ $lang = array_merge($lang, array(
 	'NUMBER_TOPICS'		=> 'Antall emner',
 	'NUMBER_USERS'		=> 'Antall brukere',
 	'NUMBER_ORPHAN'		=> 'Bortkommne vedleggsfiler',
+
+	'PHP_VERSION_OLD'	=> 'The version of PHP on this server will no longer be supported by future versions of phpBB. %sDetails%s',
 
 	'POSTS_PER_DAY'		=> 'Innlegg pr. dag',
 
@@ -10904,10 +10988,16 @@ $lang = array_merge($lang, array(
 	'VALUE'						=> 'Verdi',
 	'VERSIONCHECK_FAIL'			=> 'Failed to obtain latest version information.',
 	'VERSIONCHECK_FORCE_UPDATE'	=> 'Re-Check version',
+	'VERSION_CHECK'				=> 'Versjonstest',
+	'VERSION_CHECK_EXPLAIN'		=> 'Undersøker om phpBB er oppdatert til nyeste versjon.',
+	'VERSION_NOT_UP_TO_DATE_ACP'	=> 'PhpBB-versjonen din er ikke oppdatert.<br />Under ser du en link til lanseringsinformasjonen for seneste versjon, og instruksjoner til hvordan du oppdaterer forumet.',
+	'VERSION_NOT_UP_TO_DATE_TITLE'	=> 'Your phpBB installation is not up to date.',
+	'VERSION_UP_TO_DATE_ACP'	=> 'Installasjonen er oppdatert, og ingen nyere versjoner er tilgjengelige for ditt phpBB-forum. Du trenger ikke å oppdatere.',
 	'VIEW_ADMIN_LOG'			=> 'Se administratorlogg',
 	'VIEW_INACTIVE_USERS'		=> 'Se inaktive brukere',
 
 	'WELCOME_PHPBB'			=> 'phpBB - administrasjonspanel',
+	'WRITABLE_CONFIG'		=> 'Your config file (config.php) is currently world-writable. We strongly encourage you to change the permissions to 640 or at least to 644 (for example: <a href="http://en.wikipedia.org/wiki/Chmod" rel="external">chmod</a> 640 config.php).',
 
 	'BROWSER_LANGUAGE'			=> 'Enable Browser Language Detection',
 	'BROWSER_LANGUAGE_EXPLAIN'	=> 'Enables the browser language detection for guest users not to use the default language of the board. Choose no to disable the feature.',

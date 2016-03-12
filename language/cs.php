@@ -1725,6 +1725,86 @@ $lang = array_merge($lang, array(
 #######language/en/install.php#######
 
 $lang = array_merge($lang, array(
+	'INSTALL_PANEL'	=> 'Instalační panel',
+	'SELECT_LANG'	=> 'Vyberte jazyk',
+	'STAGE_INSTALL'	=> 'Installing phpBB',
+
+	// Introduction page
+	'INTRODUCTION_TITLE'	=> 'Úvod',
+	'INTRODUCTION_BODY'		=> 'Welcome to phpBB3!<br /><br />phpBB® is the most widely used open source bulletin board solution in the world. phpBB3 is the latest installment in a package line started in 2000. Like its predecessors, phpBB3 is feature-rich, user-friendly, and fully supported by the phpBB Team. phpBB3 greatly improves on what made phpBB2 popular, and adds commonly requested features that were not present in previous versions. We hope it exceeds your expectations.<br /><br />This installation system will guide you through installing phpBB3, updating to the latest version of phpBB3 from past releases, as well as converting to phpBB3 from a different discussion board system (including phpBB2). For more information, we encourage you to read <a href="../docs/INSTALL.html">the installation guide</a>.<br /><br />To read the phpBB3 license or learn about obtaining support and our stance on it, please select the respective options from the side menu. To continue, please select the appropriate tab above.',
+
+	// Support page
+	'SUPPORT_TITLE'		=> 'Podpora',
+	'SUPPORT_BODY_INSTALL'	=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/docs/en/3.1/ug/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
+
+	// License
+	'LICENSE_TITLE'		=> 'General Public Licence',
+
+	// Install page
+	'INSTALL_INTRO'			=> 'Vítejte v&nbsp;instalaci',
+	'INSTALL_INTRO_BODY'	=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
+
+	<ul>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
+	</ul>
+
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
+
+	<p>phpBB3 supports the following databases:</p>
+	<ul>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
+		<li>SQLite 2.8.2+</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
+		<li>Oracle</li>
+	</ul>
+
+	<p>Only those databases supported on your server will be displayed.',
+
+	'ACP_LINK'	=> 'Take me to <a href="%1$s">the ACP</a>',
+
+	'INSTALL_PHPBB_INSTALLED'		=> 'phpBB is already installed.',
+	'INSTALL_PHPBB_NOT_INSTALLED'	=> 'phpBB is not installed yet.',
+
+
+	// Filesystem requirements
+	'FILE_NOT_EXISTS'			=> 'File not exists',
+	'FILE_NOT_EXISTS_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to exist.',
+	'FILE_NOT_WRITABLE'			=> 'File not writable',
+	'FILE_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to be writable.',
+
+	'DIRECTORY_NOT_EXISTS'				=> 'Directory not exists',
+	'DIRECTORY_NOT_EXISTS_EXPLAIN'		=> 'To be able to install phpBB the %1$s directory needs to exist.',
+	'DIRECTORY_NOT_WRITABLE'			=> 'Directory not writable',
+	'DIRECTORY_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s directory needs to be writable.',
+
+	// Server requirements
+	'PHP_VERSION_REQD'					=> 'PHP version',
+	'PHP_VERSION_REQD_EXPLAIN'			=> 'phpBB requires PHP version 5.4.0 or higher.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
+	'PCRE_UTF_SUPPORT'					=> 'Podpora PCRE UTF-8',
+	'PCRE_UTF_SUPPORT_EXPLAIN'			=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_JSON_SUPPORT'					=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'			=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_SUPPORTED_DB'					=> 'Podporované databáze',
+	'PHP_SUPPORTED_DB_EXPLAIN'			=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
+
+	'RETEST_REQUIREMENTS'	=> 'Retest requirements',
+
+	'STAGE_REQUIREMENTS'	=> 'Check requirements',
+
+	'INST_ERR_MISSING_DATA'		=> 'Musíte vyplnit všechna pole v&nbsp;této části',
+
+	'TIMEOUT_DETECTED_TITLE'	=> 'The installer detected a timeout',
+	'TIMEOUT_DETECTED_MESSAGE'	=> 'The installer has detected a timeout, you may try to refresh the page, which may lead to data corruption. We suggest that you either increase your timeout settings or try to use the CLI.',
+
 	'ADMIN_CONFIG'				=> 'Nastavení administrátora',
 	'ADMIN_PASSWORD'			=> 'Heslo administrátora',
 	'ADMIN_PASSWORD_CONFIRM'	=> 'Potvrdit heslo administrátora',
@@ -1788,7 +1868,7 @@ $lang = array_merge($lang, array(
 	'CONV_ERROR_INSERT_BOTGROUP'		=> 'Nelze vložit bota do tabulky botů.',
 	'CONV_ERROR_INSERT_USER_GROUP'		=> 'Nelze vložit uživatele do user_group tabulky.',
 	'CONV_ERROR_MESSAGE_PARSER'			=> 'Chyba v&nbsp;parseru zpráv',
-	'CONV_ERROR_NO_AVATAR_PATH'			=> 'Poznámka pro vývojáře: Musíte specifikovat $convertor[\'avatar_path\'] pro použití %s.',
+	'CONV_ERROR_NO_AVATAR_PATH'			=> 'Note to developer: you must specify convertor[avatar_path] to use %s.',
 	'CONV_ERROR_NO_FORUM_PATH'			=> 'Relativní cesta k&nbsp;zdrojovému fóru nebyla specifikována.',
 	'CONV_ERROR_NO_GALLERY_PATH'		=> 'Poznámka pro vývojáře: Musíte specifikovat $convertor[\'avatar_gallery_path\'] pro použití %s.',
 	'CONV_ERROR_NO_GROUP'				=> 'Skupina „%1$s“ nebyla nalezena v&nbsp;%2$s.',
@@ -1880,65 +1960,45 @@ $lang = array_merge($lang, array(
 		<p>phpBB je schopno převést data ze starších verzí phpBB (2.0.x) nebo jiných systémů do phpBB3. Pokud máte existující fórum, které chcete převést, <a href="%2$s">pokračujte na konvertoru</a>.</p>
 		<h2>Spustit vaše fórum!</h2>
 		<p>Následující tlačítko vás přenese na stránku, odkud budete moci odeslat statistická data na servery phpBB. Velmi oceníme, pokud nám tato anonymní data poskytnete a&nbsp;pomůžete tak vývoji phpBB. Poté se dostanete do administrace, udělejte si chvíli čas a&nbsp;porozhlédněte se, co vám phpBB3 nabízí za možnosti. Podpora online je dostupná přes <a href="http://www.phpbb.com/support/documentation/3.0/">Dokumentaci</a> a&nbsp;<a href="http://www.phpbb.com/phpBB/viewforum.php?f=46">phpBB.com fórum(ENG)</a> nebo <a href="http://www.phpbb.cz/viewforum.php?f=29">phpBB.cz fórum(CZ)</a>, nahlédněte do <a href="%3$s">README</a> pro další informace.</p><p><strong>Nyní prosím smažte, přesuňte nebo přejmenujte složku install/. Dokud tato složka bude tam, kde je nyní, bude funkční jen administrace fóra (ACP).</strong>',
-	'INSTALL_INTRO'				=> 'Vítejte v&nbsp;instalaci',
 
-	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
-
-	<ul>
-		<li>The Database Type - the database you will be using.</li>
-		<li>The Database server hostname or DSN - the address of the database server.</li>
-		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
-		<li>The Database name - the name of the database on the server.</li>
-		<li>The Database username and Database password - the login data to access the database.</li>
-	</ul>
-
-	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
-
-	<p>phpBB3 supports the following databases:</p>
-	<ul>
-		<li>MySQL 3.23 or above (MySQLi supported)</li>
-		<li>PostgreSQL 8.3+</li>
-		<li>SQLite 2.8.2+</li>
-		<li>SQLite 3.6.15+</li>
-		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
-		<li>MS SQL Server 2005 or above (native)</li>
-		<li>Oracle</li>
-	</ul>
-
-	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'Pro zahájení instalace klikněte na tlačítko níže.',
 	'INSTALL_LOGIN'				=> 'Přihlásit se',
 	'INSTALL_NEXT'				=> 'Další krok',
 	'INSTALL_NEXT_FAIL'			=> 'Některé zkoušky selhaly a&nbsp;měli byste odstranit tyto problémy před přechodem na další krok. Pokud tak neučiníte, může selhat celá instalace',
 	'INSTALL_NEXT_PASS'			=> 'Všechny základní zkoušky byly úspěšné a&nbsp;můžete pokračovat na další krok instalace. Pokud jste změnili jakékoliv oprávnění, moduly atd. můžete je nyní nastavit zpět, pokud si přejete.',
-	'INSTALL_PANEL'				=> 'Instalační panel',
 	'INSTALL_SEND_CONFIG'		=> 'Bohužel, phpBB nemohlo zapsat nastavení přímo do konfiguračního souboru. Toto může být způsobeno tím, že tento soubor neexistuje, nebo phpBB nemá dostatečná oprávnění pro zápis. Dále bude uveden seznam možností, jak dokončit instalaci tohoto souboru.',
 	'INSTALL_START'				=> 'Začít instalaci',
 	'INSTALL_TEST'				=> 'Znovu otestovat',
-	'INST_ERR'					=> 'Instalační chyba',
-	'INST_ERR_DB_CONNECT'		=> 'Nelze se připojit k&nbsp;databázi, viz zpráva o&nbsp;chybě.',
+
+	// Errors
+	'INST_ERR_NO_DB'			=> 'Nelze načíst PHP modul pro vybraný druh databáze',
+	'INST_ERR_DB_INVALID_PREFIX'	=> 'The prefix you entered is invalid. It must start with a letter and must only contain letters, numbers and underscores.',
+	'INST_ERR_PREFIX_TOO_LONG'	=> 'Předpona tabulek je příliš dlouhá, maximální délka je %d znaků.',
+	'INST_ERR_DB_NO_NAME'		=> 'Nebyl zvolen název databáze',
 	'INST_ERR_DB_FORUM_PATH'	=> 'Databázový soubor, který jste zvolili, je ve složkách fóra. Měli byste jej umístit do adresáře, který není dostupný z webu',
+	'INST_ERR_DB_CONNECT'		=> 'Nelze se připojit k&nbsp;databázi, viz zpráva o&nbsp;chybě.',
 	'INST_ERR_DB_NO_ERROR'		=> 'Žádná chybová zpráva',
+	'INST_ERR_PREFIX'			=> 'Tabulky se zvolenou předponou již v&nbsp;databázi existují, zvolte prosím jinou.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'Verze databáze MySQL instalované na tomto stroji je nekompatibilní s&nbsp;možností „MySQL s&nbsp;rozšířením MySQLi“, kterou jste vybrali. Zkuste zvolit možnost „MySQL“.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'Verze rozšíření SQLite, kterou máte nainstalovanou, je zastaralá a&nbsp;je potřeba ji aktualizovat nejméně na verzi&nbsp;2.8.2.',
 	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'Verze databáze Oracle instalované na tomto stroji vyžaduje nastavení parametru <var>NLS_CHARACTERSET</var> na <var>UTF8</var>. Buďto aktualizujte vaši instalaci na verzi 9.2+ anebo změňte tento parametr.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'Databáze, kterou jste zvolili, nebyla vytvořena v&nbsp;kódování <var>UNICODE</var> nebo <var>UTF8</var>. Zkuste instalovat do databáze, která má kódování <var>UNICODE</var> nebo <var>UTF8</var>.',
-	'INST_ERR_DB_NO_NAME'		=> 'Nebyl zvolen název databáze',
+	'INST_SCHEMA_FILE_NOT_WRITABLE'	=> 'The schema file is not writable',
+
+	'EMAIL_CONFIG'	=> 'E-mail configuration',
+
+	'INST_ERR'					=> 'Instalační chyba',
 	'INST_ERR_EMAIL_INVALID'	=> 'Zadali jste neplatný e-mail',
 	'INST_ERR_EMAIL_MISMATCH'	=> 'Zadané e-maily nesouhlasí.',
 	'INST_ERR_FATAL'			=> 'Fatální chyba instalace',
 	'INST_ERR_FATAL_DB'			=> 'Objevila se velmi závažná a&nbsp;nevratná databázová chyba. Toto může být způsobeno tím, že daný uživatel nemá příslušná práva vytvářet tabulky – <code>CREATE TABLES</code> nebo vkládat – <code>INSERT</code> data, atd. Podrobné informace mohou být uvedeny níže. Nejdříve kontaktujte vašeho poskytovatele hostingu nebo fórum podpory phpBB pro další pomoc.',
 	'INST_ERR_FTP_PATH'			=> 'Nelze změnit na danou složku, zkontrolujte zadanou cestu.',
 	'INST_ERR_FTP_LOGIN'		=> 'Nelze se přihlásit k&nbsp;FTP serveru, zkontrolujte uživatelské jméno a&nbsp;heslo',
-	'INST_ERR_MISSING_DATA'		=> 'Musíte vyplnit všechna pole v&nbsp;této části',
-	'INST_ERR_NO_DB'			=> 'Nelze načíst PHP modul pro vybraný druh databáze',
 	'INST_ERR_PASSWORD_MISMATCH'	=> 'Zadaná hesla nesouhlasí.',
 	'INST_ERR_PASSWORD_TOO_LONG'	=> 'Zadané heslo je příliš dlouhé, maximální délka je 30 znaků.',
 	'INST_ERR_PASSWORD_TOO_SHORT'	=> 'Zadané heslo je příliš krátké, minimální délka je 6 znaků.',
-	'INST_ERR_PREFIX'			=> 'Tabulky se zvolenou předponou již v&nbsp;databázi existují, zvolte prosím jinou.',
 	'INST_ERR_PREFIX_INVALID'	=> 'Zvolená předpona tabulek je neplatná. Zkuste jinou a&nbsp;vynechejte znaky, jako je spojovník.',
-	'INST_ERR_PREFIX_TOO_LONG'	=> 'Předpona tabulek je příliš dlouhá, maximální délka je %d znaků.',
 	'INST_ERR_USER_TOO_LONG'	=> 'Zadané uživatelské jméno je příliš dlouhé, maximální délka je 20 znaků.',
 	'INST_ERR_USER_TOO_SHORT'	=> 'Zadané uživatelské jméno je příliš krátké, minimální délka jsou 3 znaky.',
 	'INVALID_PRIMARY_KEY'		=> 'Neplatný primární klíč : %s',
@@ -1973,15 +2033,15 @@ $lang = array_merge($lang, array(
 	'OVERVIEW_BODY'				=> 'Vítejte v&nbsp;phpBB 3.0!<br /><br />phpBB™ je ve světě nejčastěji využívané řešení pro diskuzní fórum. phpBB verze&nbsp;3 je nejnovější vydání vycházející ze sedmiletého postupného vývoje. Stejně jako předchůdci je i phpBB3 dokonale funkční, uživatelsky přívětivé a&nbsp;má kompletní podporu vývojářského týmu phpBB. phpBB3 vysoce zdokonaluje populární rysy phpBB2 a&nbsp;navíc přidává nejčastěji žádané vlastnosti, které v&nbsp;předchozích verzích chyběly. Doufáme, že překoná vaše očekávání.<br /><br />Tento instalační systém vás provede procesem instalace phpBB, převedením jiného softwarového balíčku nebo aktualizací na poslední verzi phpBB. Pro více informací doporučujeme přečíst <a href="../docs/INSTALL.html">průvodce instalací</a>.<br /><br />Pro přečtení licence phpBB3 nebo podrobností o&nbsp;získání podpory a&nbsp;naší pozice k&nbsp;ní, prosím, vybírejte příslušné volby v&nbsp;postranním menu. Chcete-li pokračovat, zvolte, prosím, vhodnou záložku nahoře.',
 
 	'PCRE_UTF_SUPPORT'				=> 'Podpora PCRE UTF-8',
-	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB <strong>nebude</strong> běžet, pokud vaše instalace PHP není kompilovaná s&nbsp;podporou UTF-8 v&nbsp;rozšíření PCRE.',
-	'PHP_GETIMAGESIZE_SUPPORT'			=> 'Dostupnost PHP funkce getimagesize()',
-	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Povinné</strong> – Pro správný běh phpBB je nutné, aby byla dostupná funkce getimagesize.',
+	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
 	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
-	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'Volitelné moduly',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>Volitelné</strong> – Tyto moduly a&nbsp;aplikace jsou volitelné, nejsou potřeba k&nbsp;chodu phpBB 3.0. Přesto pokud je máte, poskytnou mnoho nových užitečných funkcí.',
 	'PHP_SUPPORTED_DB'				=> 'Podporované databáze',
-	'PHP_SUPPORTED_DB_EXPLAIN'		=> '<strong>Povinné</strong> – Musíte mít podporu pro alespoň jednu databázi kompatibilní s&nbsp;PHP. Pokud nejsou žádné databázové moduly ukázány jako aktivní, měli byste kontaktovat vašeho poskytovatele hostingových služeb nebo si prohlédnout odpovídající dokumentaci PHP pro další informace.',
+	'PHP_SUPPORTED_DB_EXPLAIN'		=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
 	'PHP_REGISTER_GLOBALS'			=> 'Nastavení PHP <var>register_globals</var> je vypnuto',
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'phpBB poběží i přesto, pokud je toto nastavení zapnuto, ale pokud je to možné, je doporučeno toto nastavení vypnout z bezpečnostních důvodů.',
 	'PHP_SAFE_MODE'					=> 'Safe Mode',
@@ -1989,7 +2049,7 @@ $lang = array_merge($lang, array(
 	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'PHP nastavení <var>allow_url_fopen</var>',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>Volitelné</strong> - Toto nastavení je volitelné, ale pokud je vypnuté, některé funkce, jako například vzdálené avatary, nebudou fungovat.',
-	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version',
 	'POST_ID'						=> 'ID příspěvku',
 	'PREFIX_FOUND'					=> 'Sken tabulek ukázal, že je již na serveru platná instalace s&nbsp;předponami tabulek <strong>%s</strong>.',
 	'PREPROCESS_STEP'				=> 'Spouštím přípravné funkce a&nbsp;dotazy',
@@ -2005,7 +2065,6 @@ $lang = array_merge($lang, array(
 
 	'SCRIPT_PATH'				=> 'Cesta ke skriptům',
 	'SCRIPT_PATH_EXPLAIN'		=> 'Cesta k&nbsp;phpBB relativně k&nbsp;názvu domény',
-	'SELECT_LANG'				=> 'Vyberte jazyk',
 	'SERVER_CONFIG'				=> 'Nastavení serveru',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Vyhledávací index nebyl převeden',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Váš starý index pro vyhledávání nebyl převeden. Vyhledávání bude vždy vykazovat prázdné výsledky. Pro jeho obnovení přejděte do Administrace fóra, zvolte záložku Údržba, poté možnost Vyhledávač a&nbsp;zvolte možnost Vytvořit nový index.',
@@ -2022,7 +2081,6 @@ $lang = array_merge($lang, array(
 	'STAGE_FINAL'				=> 'Poslední krok',
 	'STAGE_INTRO'				=> 'Úvod',
 	'STAGE_IN_PROGRESS'			=> 'Převod spuštěn',
-	'STAGE_REQUIREMENTS'		=> 'Požadavky',
 	'STAGE_SETTINGS'			=> 'Nastavení',
 	'STARTING_CONVERT'			=> 'Zahajuji převodní proces',
 	'STEP_PERCENT_COMPLETED'	=> 'Krok <strong>%d</strong> z&nbsp;<strong>%d</strong>',
@@ -9855,7 +9913,7 @@ $lang = array_merge($lang, array(
 	'GUEST_STYLE'					=> 'Guest style',
 	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Vždy použít výchozí styl',
-	'OVERRIDE_STYLE_EXPLAIN'		=> 'Ignoruje uživatelské nastavení vzhledu.',
+	'ACP_OVERRIDE_STYLE_EXPLAIN'	=> 'Replaces user’s (and guest’s) style with the style as defined under "Default style".',
 	'SITE_DESC'						=> 'Popis fóra',
 	'SITE_HOME_TEXT'				=> 'Main website text',
 	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
@@ -9863,8 +9921,9 @@ $lang = array_merge($lang, array(
 	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Název fóra',
 	'SYSTEM_TIMEZONE'				=> 'Časové pásmo návštěvníků',
+	'SYSTEM_TIMEZONE_EXPLAIN'			=> 'Timezone to use for displaying times to users who are not logged in (guests, bots). Logged in users set their timezone during registration and can change it in their user control panel.',
 	'WARNINGS_EXPIRE'				=> 'Doba platnosti varování',
-	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Počet dní, které musí uplynout, než se varování automaticky odstraní z uživatelského profilu. Pro nastavení trvalého varování zadejte 0.',
+	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Number of days that will elapse before a warning will automatically expire from a user’s record. Set this value to 0 to make warnings permanent.',
 
 	'ACP_BOARD_FEATURES_EXPLAIN'	=> 'Zde můžete nastavit některé funkce fóra.',
 
@@ -9895,6 +9954,7 @@ $lang = array_merge($lang, array(
 	'ALLOW_TOPIC_NOTIFY'		=> 'Povolit sledování témat',
 	'BOARD_PM'					=> 'Soukromé zprávy',
 	'BOARD_PM_EXPLAIN'			=> 'Povolit soukromé zprávy všem uživatelům.',
+	'ALLOW_BOARD_NOTIFICATIONS' => 'Allow board notifications',
 
 	'ACP_AVATAR_SETTINGS_EXPLAIN'	=> 'Avatary obecně jsou malé obrázky, které si mohou uživatelé zvolit a&nbsp;jimi se specifikovat. Zpravidla bývají zobrazeny pod uživatelským jménem u&nbsp;jejich příspěvků (záleží na grafickém stylu fóra). Zde můžete určit, jak mohou uživatelé své avatary definovat. Berte na vědomí, že pro zpřístupnění možnosti nahrávání avatarů musíte mít na serveru vytvořený adresář, kam budou nahrávány a&nbsp;do kterého má server právo zapisovat. Upozorňujeme také, že omezení velikostí souborů platí jen pro nahrávané soubory, ne pro odkazované ze vzdálených serverů.',
 
@@ -10004,6 +10064,7 @@ $lang = array_merge($lang, array(
 
 	'ACC_ACTIVATION'				=> 'Aktivace účtu',
 	'ACC_ACTIVATION_EXPLAIN'		=> 'Určuje, mají-li uživatelé okamžitý přístup k&nbsp;fóru, nebo musí registraci účtu nejprve potvrdit. Lze také zcela zakázat nové registrace.',
+	'ACC_ACTIVATION_WARNING'		=> 'Please note that the currently selected activation method requires emails to be enabled, otherwise registration will be disabled. We recommend to either select a different activation method or reenable emails.',
 	'NEW_MEMBER_POST_LIMIT'			=> 'Počet příspěvků pro nové uživatele',
 	'NEW_MEMBER_POST_LIMIT_EXPLAIN'	=> 'Nově registrovaní členové fóra jsou ve skupině <em>Noví členové fóra</em>, dokud nedosáhnou tohoto počtu příspěvků. Můžete tuto skupinu použít pro omezení posílání soukromých zpráv nebo vynucení schválení příspěvků. <strong>Pokud je počet nastaven na 0, uživatelé budou automaticky plnohodnotnými členy fóra.</strong>',
 	'NEW_MEMBER_GROUP_DEFAULT'		=> 'Nastavit skupinu Noví členové fóra jako výchozí',
@@ -10301,8 +10362,11 @@ $lang = array_merge($lang, array(
 
 	'TPL_ALLOW_PHP'					=> 'Povolit PHP v&nbsp;šablonách',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Je-li tato možnost povolena, příkazy <code>PHP</code> a&nbsp;<code>INCLUDEPHP</code> budou rozeznávány a&nbsp;zpracovány v&nbsp;šablonách.',
+	'UPLOAD_CERT_VALID'				=> 'Validate upload certificate',
+	'UPLOAD_CERT_VALID_EXPLAIN'		=> 'If enabled, certificates of remote uploads will be validated. This requires the CA bundle to be defined by the <samp>openssl.cafile</samp> or <samp>curl.cainfo</samp> setting in your php.ini.',
 
 	'ACP_EMAIL_SETTINGS_EXPLAIN'	=> 'Tyto údaje jsou použity při odesílání e-mailů uživatelům z tohoto fóra. Ujistěte se, že vámi zadaná e-mailová adresa je platná, všechny vrácené nebo nedoručitelné zprávy budou pravděpodobně doručeny na tento e-mail. Pokud váš poskytovatel neumožňuje použití nativních PHP funkcí pro e-mailové služby, můžete posílat e-maily přímo přes SMTP. To vyžaduje zadání názvu odpovídajícího serveru (v případě nutnosti se informujte u&nbsp;poskytovatele), neuvádějte zde žádné zastaralé nebo neplatné jméno! Pokud server vyžaduje přihlášení (a jen pouze pokud ano), vložte potřebné uživatelské jméno a&nbsp;heslo.',
+
 	'ADMIN_EMAIL'					=> 'Zasílat informace od administrátorů',
 	'ADMIN_EMAIL_EXPLAIN'			=> 'Tato adresa bude použita jako zpáteční adresa pro všechny e-maily, uvedená jako technická e-mailová adresa. Bude vždy použita jako adresa pro hlavičky <samp>Return-Path</samp> a&nbsp;<samp>Sender</samp>.',
 	'BOARD_EMAIL_FORM'				=> 'Uživatelé posílají zprávy přes fórum',
@@ -10321,6 +10385,8 @@ $lang = array_merge($lang, array(
 	'EMAIL_SIG_EXPLAIN'				=> 'Tento text bude připojen ke všem e-mailům odeslaným přes fórum.',
 	'ENABLE_EMAIL'					=> 'Povolit e-maily na fóru',
 	'ENABLE_EMAIL_EXPLAIN'			=> 'Je-li tato funkce zakázána, nebudou přístupné žádné funkce používající e-maily na fóru. <em>Berte na vědomí, že aktivace účtů uživatelem nebo administrátorem tuto funkci vyžadují. Pokud máte tento druh aktivace zapnutý a&nbsp;vypnete e-maily, účty už nebudou muset být aktivovány a&nbsp;budou ihned ověřené.</em>',
+	'SEND_TEST_EMAIL'				=> 'Send a test email',
+	'SEND_TEST_EMAIL_EXPLAIN'		=> 'This will send a test email to the address defined in your account.',
 	'SMTP_AUTH_METHOD'				=> 'Způsob autentifikace pro SMTP',
 	'SMTP_AUTH_METHOD_EXPLAIN'		=> 'Používá se jen, když je zadáno uživatelské jméno/heslo. Obraťte se na vašeho poskytovatele, pokud si nejste jisti nastavením.',
 	'SMTP_CRAM_MD5'					=> 'CRAM-MD5',
@@ -10336,6 +10402,7 @@ $lang = array_merge($lang, array(
 	'SMTP_SETTINGS'					=> 'Nastavení SMTP',
 	'SMTP_USERNAME'					=> 'Uživatelské jméno SMTP',
 	'SMTP_USERNAME_EXPLAIN'			=> 'Zadejte uživatelské jméno k&nbsp;SMTP serveru, pouze pokud ho server vyžaduje.',
+	'TEST_EMAIL_SENT'				=> 'The test email has been sent.<br />If you don’t receive it, please check your emails configuration.<br /><br />If you require assistance, please visit the <a href="https://www.phpbb.com/community/">phpBB support forums</a>.',
 	'USE_SMTP'						=> 'Použít SMTP server pro odesílání',
 	'USE_SMTP_EXPLAIN'				=> 'Zvolte „Ano“, pokud chcete, aby byly e-maily odeslány přes označený server místo serverové funkce e-mail.',
 
@@ -10565,8 +10632,7 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'Databáze',
-	'ACP_CAT_DOT_MODS'			=> '.Mody',
-	'ACP_CAT_DOT_MODS'			=> '.Mody',
+	'ACP_CAT_DOT_MODS'			=> 'Druhy souborů',
 	'ACP_CAT_FORUMS'			=> 'Fóra',
 	'ACP_CAT_GENERAL'			=> 'Obecné',
 	'ACP_CAT_MAINTENANCE'		=> 'Údržba',
@@ -10731,6 +10797,9 @@ $lang = array_merge($lang, array(
 
 	'BACK'					=> 'Zpět',
 
+	'CONTAINER_EXCEPTION' => 'phpBB encountered an error building the container due to an installed extension. For this reason, all extensions have been temporarily disabled. Please try purging your forum cache. All extensions will automatically be re-enabled once the container error is resolved. If this error continues, please visit <a href="https://www.phpbb9.de">phpbb9.de</a> for support.',
+	'EXCEPTION' => 'Exception',
+
 	'COLOUR_SWATCH'			=> 'Vzorník bezpečných barev',
 	'CONFIG_UPDATED'		=> 'Nastavení bylo aktualizováno.',
 	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
@@ -10741,7 +10810,7 @@ $lang = array_merge($lang, array(
 	'DEACTIVATE'				=> 'Deaktivovat',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'Zadaná cesta „%s“ neexistuje.',
 	'DIRECTORY_NOT_DIR'			=> 'Zadaná cesta „%s“ není adresář.',
-	'DIRECTORY_NOT_WRITABLE'	=> 'Do zadané cesty „%s“ nelze zapisovat.',
+	'DIRECTORY_NOT_WRITABLE'	=> 'Directory not writable',
 	'DISABLE'					=> 'Zakázat',
 	'DOWNLOAD'					=> 'Stáhnout',
 	'DOWNLOAD_AS'				=> 'Stáhnout jako',
@@ -10792,10 +10861,11 @@ $lang = array_merge($lang, array(
 	'PARSE_URLS'						=> 'Zpracovávat odkazy',
 	'PERMISSIONS_TRANSFERRED'			=> 'Pravomoci od <strong>%s</strong> byly úspěšně přeneseny. Nyní si můžete prohlížet fórum s&nbsp;oprávněními uživatele.<br />Berte na vědomí, že nebyla přenesena oprávnění administrátora. Můžete se kdykoliv vrátit k&nbsp;původním právům.',
 	'PERMISSIONS_TRANSFERRED_EXPLAIN'	=> 'Nyní máte oprávnění %1$s. Můžete procházet fórum s&nbsp;uživatelským oprávněním, ale nelze vstoupit do Administrace fóra, protože administrátorská oprávnění nebyla přenesena. K&nbsp;<a href="%2$s"><strong>vlastním oprávněním</strong></a> se můžete kdykoliv vrátit.',
-	'PIXEL'								=> 'px',
 	'PROCEED_TO_ACP'					=> '%sPokračovat na Administrační panel fóra%s',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Důležité',
 	'REMIND'							=> 'Připomenout',
+	'REPARSE_LOCK_ERROR'				=> 'Reparsing is already in progress by another process.',
 	'RESYNC'							=> 'Resynchronizace',
 
 	'RUNNING_TASK'			=> 'Running task: %s.',
@@ -10844,11 +10914,23 @@ $lang = array_merge($lang, array(
 
 	'DATABASE_SIZE'			=> 'Velikost databáze',
 
+	// Enviroment configuration checks, mbstring related
+	'ERROR_MBSTRING_FUNC_OVERLOAD'					=> 'Function overloading is improperly configured',
+	'ERROR_MBSTRING_FUNC_OVERLOAD_EXPLAIN'			=> '<var>mbstring.func_overload</var> must be set to either 0 or 4. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION'			=> 'Transparent character encoding is improperly configured',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION_EXPLAIN'	=> '<var>mbstring.encoding_translation</var> must be set to 0. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_INPUT'						=> 'HTTP input character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_INPUT_EXPLAIN'				=> '<var>mbstring.http_input</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_OUTPUT'					=> 'HTTP output character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_OUTPUT_EXPLAIN'			=> '<var>mbstring.http_output</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+
 	'FILES_PER_DAY'		=> 'Příloh za den',
 	'FORUM_STATS'		=> 'Statistiky fóra',
 
 	'GZIP_COMPRESSION'	=> 'GZip komprese',
 
+	'PIXEL'								=> 'px',
+	
 	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'Nedostupné',
 	'NUMBER_FILES'		=> 'Počet příloh',
@@ -10856,6 +10938,8 @@ $lang = array_merge($lang, array(
 	'NUMBER_TOPICS'		=> 'Počet témat',
 	'NUMBER_USERS'		=> 'Počet uživatelů',
 	'NUMBER_ORPHAN'		=> 'Nepřipojených příloh',
+
+	'PHP_VERSION_OLD'	=> 'The version of PHP on this server will no longer be supported by future versions of phpBB. %sDetails%s',
 
 	'POSTS_PER_DAY'		=> 'Příspěvků za den',
 
@@ -10902,10 +10986,16 @@ $lang = array_merge($lang, array(
 	'VALUE'						=> 'Hodnota',
 	'VERSIONCHECK_FAIL'			=> 'Nešlo zjistit informace o&nbsp;poslední verzi.',
 	'VERSIONCHECK_FORCE_UPDATE'	=> 'Znovu zkontrolovat verzi',
+	'VERSION_CHECK'				=> 'Kontrola verze',
+	'VERSION_CHECK_EXPLAIN'		=> 'Zkontroluje, jestli používáte nejnovější verzi phpBB.',
+	'VERSION_NOT_UP_TO_DATE_ACP'	=> 'Vaše verze phpBB není aktualizovaná.<br />Níže naleznete odkaz na oznámení o&nbsp;vydání poslední verze včetně instrukcí k&nbsp;provedení aktualizace.',
+	'VERSION_NOT_UP_TO_DATE_TITLE'	=> 'Používáte zastaralou verzi phpBB.',
+	'VERSION_UP_TO_DATE_ACP'	=> 'Používáte nejnovější verzi phpBB',
 	'VIEW_ADMIN_LOG'			=> 'Zobrazit administrátorský log',
 	'VIEW_INACTIVE_USERS'		=> 'Zobrazit neaktivní uživatele',
 
 	'WELCOME_PHPBB'			=> 'Vítejte v&nbsp;phpBB',
+	'WRITABLE_CONFIG'		=> 'Your config file (config.php) is currently world-writable. We strongly encourage you to change the permissions to 640 or at least to 644 (for example: <a href="http://en.wikipedia.org/wiki/Chmod" rel="external">chmod</a> 640 config.php).',
 
 	'BROWSER_LANGUAGE'			=> 'Enable Browser Language Detection',
 	'BROWSER_LANGUAGE_EXPLAIN'	=> 'Enables the browser language detection for guest users not to use the default language of the board. Choose no to disable the feature.',

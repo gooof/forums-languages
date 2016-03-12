@@ -1725,6 +1725,86 @@ $lang = array_merge($lang, array(
 #######language/en/install.php#######
 
 $lang = array_merge($lang, array(
+	'INSTALL_PANEL'	=> 'پانێڵی دامەزراندن',
+	'SELECT_LANG'	=> 'زمان دیاری بکە',
+	'STAGE_INSTALL'	=> 'Installing phpBB',
+
+	// Introduction page
+	'INTRODUCTION_TITLE'	=> 'ناساندن',
+	'INTRODUCTION_BODY'		=> 'Welcome to phpBB3!<br /><br />phpBB® is the most widely used open source bulletin board solution in the world. phpBB3 is the latest installment in a package line started in 2000. Like its predecessors, phpBB3 is feature-rich, user-friendly, and fully supported by the phpBB Team. phpBB3 greatly improves on what made phpBB2 popular, and adds commonly requested features that were not present in previous versions. We hope it exceeds your expectations.<br /><br />This installation system will guide you through installing phpBB3, updating to the latest version of phpBB3 from past releases, as well as converting to phpBB3 from a different discussion board system (including phpBB2). For more information, we encourage you to read <a href="../docs/INSTALL.html">the installation guide</a>.<br /><br />To read the phpBB3 license or learn about obtaining support and our stance on it, please select the respective options from the side menu. To continue, please select the appropriate tab above.',
+
+	// Support page
+	'SUPPORT_TITLE'		=> 'پاڵپشتی',
+	'SUPPORT_BODY_INSTALL'	=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/docs/en/3.1/ug/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
+
+	// License
+	'LICENSE_TITLE'		=> 'General Public License',
+
+	// Install page
+	'INSTALL_INTRO'			=> 'بەخێربێیت بۆ دامەزراندن',
+	'INSTALL_INTRO_BODY'	=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
+
+	<ul>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
+	</ul>
+
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
+
+	<p>phpBB3 supports the following databases:</p>
+	<ul>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
+		<li>SQLite 2.8.2+</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
+		<li>Oracle</li>
+	</ul>
+
+	<p>Only those databases supported on your server will be displayed.',
+
+	'ACP_LINK'	=> 'Take me to <a href="%1$s">the ACP</a>',
+
+	'INSTALL_PHPBB_INSTALLED'		=> 'phpBB is already installed.',
+	'INSTALL_PHPBB_NOT_INSTALLED'	=> 'phpBB is not installed yet.',
+
+
+	// Filesystem requirements
+	'FILE_NOT_EXISTS'			=> 'File not exists',
+	'FILE_NOT_EXISTS_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to exist.',
+	'FILE_NOT_WRITABLE'			=> 'File not writable',
+	'FILE_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to be writable.',
+
+	'DIRECTORY_NOT_EXISTS'				=> 'Directory not exists',
+	'DIRECTORY_NOT_EXISTS_EXPLAIN'		=> 'To be able to install phpBB the %1$s directory needs to exist.',
+	'DIRECTORY_NOT_WRITABLE'			=> 'Directory not writable',
+	'DIRECTORY_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s directory needs to be writable.',
+
+	// Server requirements
+	'PHP_VERSION_REQD'					=> 'PHP version',
+	'PHP_VERSION_REQD_EXPLAIN'			=> 'phpBB requires PHP version 5.4.0 or higher.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
+	'PCRE_UTF_SUPPORT'					=> 'PCRE UTF-8 پاڵپشتی',
+	'PCRE_UTF_SUPPORT_EXPLAIN'			=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_JSON_SUPPORT'					=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'			=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_SUPPORTED_DB'					=> 'بنکەدراوە پاڵپشکراوەکان',
+	'PHP_SUPPORTED_DB_EXPLAIN'			=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
+
+	'RETEST_REQUIREMENTS'	=> 'Retest requirements',
+
+	'STAGE_REQUIREMENTS'	=> 'Check requirements',
+
+	'INST_ERR_MISSING_DATA'		=> 'پێویستە هەموو خانەکان پڕبکەیتەوە لەو مەودایە.',
+
+	'TIMEOUT_DETECTED_TITLE'	=> 'The installer detected a timeout',
+	'TIMEOUT_DETECTED_MESSAGE'	=> 'The installer has detected a timeout, you may try to refresh the page, which may lead to data corruption. We suggest that you either increase your timeout settings or try to use the CLI.',
+
 	'ADMIN_CONFIG'				=> 'سازدانی بەڕێوەبەر',
 	'ADMIN_PASSWORD'			=> 'تێپەڕەوشەی بەڕێوەبەر',
 	'ADMIN_PASSWORD_CONFIRM'	=> 'دڵنیابوون لە تێپەڕەوشەی بەڕێوەبەر',
@@ -1788,7 +1868,7 @@ $lang = array_merge($lang, array(
 	'CONV_ERROR_INSERT_BOTGROUP'		=> 'ناتوانرێت بووت دابنرێت بۆناو خشتەی بووتەکان.',
 	'CONV_ERROR_INSERT_USER_GROUP'		=> 'ناتوانرێت بەکارهێنەر دابنرێت بۆناو خشتەی گرووپی-بەکارهێنەر.',
 	'CONV_ERROR_MESSAGE_PARSER'			=> 'هەڵەی نێوان پەیام',
-	'CONV_ERROR_NO_AVATAR_PATH'			=> 'تێبینی بۆ گەشەپێدەران: دەبێت $convertor[\'avatar_path\'] دیاریبکەیت بۆ بەکاربردنی %s .',
+	'CONV_ERROR_NO_AVATAR_PATH'			=> 'Note to developer: you must specify convertor[avatar_path] to use %s.',
 	'CONV_ERROR_NO_FORUM_PATH'			=> 'ڕێچکەی پەیوەندیدار بۆ سەرچاوەی مەکۆکە دیارینەکراوە.',
 	'CONV_ERROR_NO_GALLERY_PATH'		=> 'تێبینی بۆ گەشەپێدەران: دەبێت $convertor[\'avatar_gallery_path\'] دیاریبکەیت بۆ بەکاربردنی %s .',
 	'CONV_ERROR_NO_GROUP'				=> 'گرووپی “%1$s” ناتوانرێت بدۆزرێتەوە لە “%2$s” .',
@@ -1879,65 +1959,45 @@ $lang = array_merge($lang, array(
 	<p>گۆڕەری نەکراوەی phpBB پاڵپشتی گۆڕینی phpBB 2.0.x لەگەڵ سیستەمەکانی تری مەکۆ بۆ phpBB3 .ئەگەر تۆ مەکۆیەکی بەکار و چالاکت هەیە و خوازیاری بیگۆرێت  .تکایە <a href="%2$s">بەردەوامبە بۆ گۆڕەرەکە</a>.</p>
 		<h2>بەزیندی بڕۆ بۆ phpBB3 ـــەکەت!</h2>
 	<p>کرتەکردنی دوگمەی خوارەوە دەتبات بۆ فۆرمێک بۆ ناردنی داتای دۆخەکان بۆ phpBB لە کۆنترۆڵ پانێڵی بەڕێوەبەرایەتی ،ئێمە خوازیاردەبین کە تۆ بتوانیت یارمەتیمان بدەیت بە ناردنی ئەو زانیاریانە ،لەدوای ئەوە هەندێ کات بۆخۆت وەربگرە بۆ تاقیکردنەوەی ئەو هەڵبژاردنانەی کە بەردەستن بۆت ،لەیادت بێت کە یارمەتی سەرهێڵ بەردەستە لەڕێگای <a href="http://www.phpbb.com/support/documentation/3.0/">بەڵگەنامەیی</a>, <a href="%3$s">بمخوێنەوە</a> لەگەڵ <a href="http://www.phpbb.com/community/viewforum.php?f=46">مەکۆکانی پاڵپشتی</a>.</p><p><strong> تکایە شوێنگەی دامەزراندن بسڕەوە/بگوازەوە/ناولێبنێەوە لەپێش بەکاربردنی مەکۆکەت .چونکە لەکاتی بوونی ئەو شوێنگەیەدا تەنها دەتوانرێت دەستت بگات بە کۆنترۆڵ پانێڵێ بەڕێوەبەر</strong>.',
-	'INSTALL_INTRO'				=> 'بەخێربێیت بۆ دامەزراندن',
 
-	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
-
-	<ul>
-		<li>The Database Type - the database you will be using.</li>
-		<li>The Database server hostname or DSN - the address of the database server.</li>
-		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
-		<li>The Database name - the name of the database on the server.</li>
-		<li>The Database username and Database password - the login data to access the database.</li>
-	</ul>
-
-	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
-
-	<p>phpBB3 supports the following databases:</p>
-	<ul>
-		<li>MySQL 3.23 or above (MySQLi supported)</li>
-		<li>PostgreSQL 8.3+</li>
-		<li>SQLite 2.8.2+</li>
-		<li>SQLite 3.6.15+</li>
-		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
-		<li>MS SQL Server 2005 or above (native)</li>
-		<li>Oracle</li>
-	</ul>
-
-	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'بۆ دەستپێکردنی دامەزراندنەکە ،دوگمەی خوارەوە دابگرە.',
 	'INSTALL_LOGIN'				=> 'چوونە ژوورەوە',
 	'INSTALL_NEXT'				=> 'قۆناغی داهاتوو',
 	'INSTALL_NEXT_FAIL'			=> 'هەندێ لە تاقیکردنەوەکان سەرنەکەوتن پێویستە تۆ ئەو کێشانە ڕاستبکەیەوە پێش بەردەوامبوون بۆ قۆناغی دواتر.',
 	'INSTALL_NEXT_PASS'			=> 'هەموو تاقیکردنەوە بنچینەییەکان دەرچوون و دەتوانیت بەردەوامبیت بۆ قۆناغی دواتر لە دامەزراندنەکە ،ئەگەر هەر ڕەسەنێتییەک ،مۆدال ،..هتد گۆڕیوە  و دەخوازیت دووبارە تاقیکردنەوەکان ئەنجامبدەیت ،ئەوا ئازادیت ئەگەر خۆت وا دەخوازیت.',
-	'INSTALL_PANEL'				=> 'پانێڵی دامەزراندن',
 	'INSTALL_SEND_CONFIG'		=> 'بەداخەوە phpBB ناتوانێت زانیاری دیمەن ڕاستەوخۆ بنووسێ بۆ config.php ــەکەت .ئەمە لەوانەیە بەهۆی ئەوەبێت پەڕگەکە بوونی نەبێ یان نەنووسێن بێت ،ژمارەیەک لە هەڵبژاردن لیست دەکرێت لەخوارەوە ڕێگاتدەدات بۆ تەواوکردنی دامەزراندن لە config.php.',
 	'INSTALL_START'				=> 'دەستپێکردنی دامەزراندن',
 	'INSTALL_TEST'				=> 'دووبارە تاقی بکەوە',
-	'INST_ERR'					=> 'دامەزراندن هەڵەیە',
-	'INST_ERR_DB_CONNECT'		=> 'نەتوانرا پەیوەندی بکرێت بە بنکەدراوە ،پەیامی هاتوو ببینە.',
+
+	// Errors
+	'INST_ERR_NO_DB'			=> 'ناتوانرێت مۆدالی php باربکرێت بۆ ئەو جۆرە بنکەدراوەیە.',
+	'INST_ERR_DB_INVALID_PREFIX'	=> 'The prefix you entered is invalid. It must start with a letter and must only contain letters, numbers and underscores.',
+	'INST_ERR_PREFIX_TOO_LONG'	=> 'پێشگری خشتەی دیاریکراو زۆر درێژە ،زۆرترین دریژی بریتییە لە %d تیپ.',
+	'INST_ERR_DB_NO_NAME'		=> 'ناوی بنکەدراوە دیارینەکراوە.',
 	'INST_ERR_DB_FORUM_PATH'	=> 'پەڕگەی بنکەدراوەکە لەناو شوێنگەی مەکۆکەتە .پێویستە ئەو پەڕگەیە لە جێگایەکی بێ-دەستگەیشتراوی وێب دابنرێت.',
+	'INST_ERR_DB_CONNECT'		=> 'نەتوانرا پەیوەندی بکرێت بە بنکەدراوە ،پەیامی هاتوو ببینە.',
 	'INST_ERR_DB_NO_ERROR'		=> 'هیچ پەیامێکی هەڵە نەدراوە',
+	'INST_ERR_PREFIX'			=> 'خشتەکان لەگەڵ پێشگری دیاریکراو پێشتر هەیە ،تکایە جێگرەوەیەک هەڵبژێرە.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'وەشانی MySQL ــی دەمەزراو لەسەر ئەو ماکینەیە نەگونجاوە لەگەڵ هەڵبژاردنی "MySQL و گەیاندنی MySQLi" ــی کە تۆ هەڵتبژاردووە .تکایە هەڵبژاردنی "MySQL" لەباتی هەڵبژێرە.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'ئەو وەشانەی SQLite کە تۆ داتمەزراندووە زۆر کۆنە ،دەبێت نوێبکرێتەوە بۆ بەلایەنی کەم 2.8.2 .',
 	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'وەشانی Oracle ــی دامەزراو لەسەر ئەو ماکینەیە داوادەکات بۆ بینینی <var>NLS_CHARACTERSET</var> پارمێترەر بۆ <var>UTF8</var> ،هەروەها دامەزراندنەکەت نوێبکەوە بۆ +9.2 یان پارمێترەر بگۆڕە.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'ئەو بنکەدراوەی هەڵتبژاردووە دروستنەکرا لە <var>UNICODE</var> یان <var>UTF8</var> ،هەوڵبدە دایبمەزرێنی لەگەڵ بنکەدراوەیەک لە <var>UNICODE</var> یان <var>UTF8</var> .',
-	'INST_ERR_DB_NO_NAME'		=> 'ناوی بنکەدراوە دیارینەکراوە.',
+	'INST_SCHEMA_FILE_NOT_WRITABLE'	=> 'The schema file is not writable',
+
+	'EMAIL_CONFIG'	=> 'E-mail configuration',
+
+	'INST_ERR'					=> 'دامەزراندن هەڵەیە',
 	'INST_ERR_EMAIL_INVALID'	=> 'ئەو پۆستی ئەلیکترۆنیەی نووسیوتە نادروستە.',
 	'INST_ERR_EMAIL_MISMATCH'	=> 'ئەو پۆستی ئەلیکترۆنیانەی نووسیوتە لەگەڵیەک نایەنەوە.',
 	'INST_ERR_FATAL'			=> 'هەڵەی کۆرپەیی دامەزراندن',
 	'INST_ERR_FATAL_DB'			=> 'هەڵەیەکی بنکەدراوەی نەهێنراوە و کۆرپەیی ڕوویدا .ئەمە لەوانەیە ببێتە هۆی بەکارهێنەر دیاریکراوەکە دەسەڵاتی شیاوی نەبێت بۆ <code>CREATE TABLES</code> یان داتای <code>INSERT</code> ..هتد ،زانیاری دوورتر لەوانەیە لەخوارەوە بدرێت. تکایە پەیوەندی بگرە لەگەڵ پێدەری خانەخوێیەکەت لە یەکەم هەلدا یان مەکۆکانی پاڵپشتی phpBB بۆ یارمەتی قوڵتر.',
 	'INST_ERR_FTP_PATH'			=> 'ناتوانرێ بگۆڕدرێ بۆ شوێنگەی دراوە ،تکایە ڕێچکەکە بپشکنەوە.',
 	'INST_ERR_FTP_LOGIN'		=> 'نەتوانرا بچیتەژوورەوە لە ڕاژەی FTP ،تکایە لە ناوی بەکارهێنەر و تێپەڕەوشە دڵنیاببەوە.',
-	'INST_ERR_MISSING_DATA'		=> 'پێویستە هەموو خانەکان پڕبکەیتەوە لەو مەودایە.',
-	'INST_ERR_NO_DB'			=> 'ناتوانرێت مۆدالی php باربکرێت بۆ ئەو جۆرە بنکەدراوەیە.',
 	'INST_ERR_PASSWORD_MISMATCH'	=> 'ئەو تێپەڕەوشانەی نووسیوتە ناگونجێن.',
 	'INST_ERR_PASSWORD_TOO_LONG'	=> 'ئەو تێپەڕەوشەی نووسیوتە زۆر درێژە ،زۆرترین درێژی بریتییە لە 30 تیپ.',
 	'INST_ERR_PASSWORD_TOO_SHORT'	=> 'ئەو تێپەڕەوشەی نووسیوتە زۆر کورتە ،کەمترین درێژی بریتییە لە 6 تیپ.',
-	'INST_ERR_PREFIX'			=> 'خشتەکان لەگەڵ پێشگری دیاریکراو پێشتر هەیە ،تکایە جێگرەوەیەک هەڵبژێرە.',
 	'INST_ERR_PREFIX_INVALID'	=> 'ئەو پێشگر خشتەیەی تۆ دیاریتکردووە نادرووستە بۆ بنکەدراوەکەت .تکایە دانەیەکی تر تاقیبکەوە ،سڕینەوەی تیپەکان وەکو هێڵی پێکگەیاندنی دوو وشە.',
-	'INST_ERR_PREFIX_TOO_LONG'	=> 'پێشگری خشتەی دیاریکراو زۆر درێژە ،زۆرترین دریژی بریتییە لە %d تیپ.',
 	'INST_ERR_USER_TOO_LONG'	=> 'ئەو ناوی بەکارهێنەرەی نووسیوتە زۆر درێژە ،زۆرترین درێژی بریتییە لە 20 تیپ.',
 	'INST_ERR_USER_TOO_SHORT'	=> 'ئەو ناوی بەکارهێنەرەی نووسیوتە زۆر کورتە ،کەمترین درێژی بریتییە لە 3 تیپ.',
 	'INVALID_PRIMARY_KEY'		=> 'کلیلی سەرەتایی نادروست : %s',
@@ -1972,15 +2032,15 @@ $lang = array_merge($lang, array(
 	'OVERVIEW_BODY'				=> 'بەخێربێیت بۆ <br /><br />phpBB™ بەرفراوانترین نەرمەکاڵای بەکاربردووی سەرچاوەکراوەی مەکۆیە لە جیهاندا. phpBB3 نوێترین دامەزراوەیە کە لە ساڵی ٢٠٠٠ ـەوە دەستی پێ کردووە. وەک پێشینەکانی phpBB3 تایەتمەندی زۆرە، دۆستانەیە، و بە تەواوەتی پاڵپشتی لێ دەکرێت لە لایەن تیمی phpBB ـیەوە. phpBB3 پەرەی بەوانە داوە کە phpBB2 ـیان بەناوبانگ کرد، و تایبەتمەندییە زۆر داواکراوەکانی تیادا زیاد کراوە. کە لە وەشانی پێشتردا نەبوون. هیوادارین پێویستییەکانت جێبەجێ بکات.<br /><br />ئەم سیستەمی دامەزراندنە ڕێبەریت ئەکات بۆ دامەزراندنی phpBB،نوێکردنەوە بۆ نوێترین وەشانی phpBB3،هەروەها گۆڕین بۆ phpBB3 لە جۆرێکی تری نەرمەکاڵاوە (تەنانەت phpBB2). بۆ زانیاری زیاتر ئامۆژگاریت ئەکەین بە خوێندنەوەی <a href="../docs/INSTALL.html">ڕێبەری دامەزراندن</a>.<br /><br />بۆ خوێندنەوەی مۆڵەتی phpBB3 یان فێربوون لەسەر چۆنێتی بەدەستهێنانی هاوکاری و هەڵوێستی ئێمە، تکایە کرتە لە هەڵبژاردنەکانی مێنیوی لاتەنیشت بکە. بۆ بەردەوامبوون، کرتە لە تابی گونجاو بکە لە سەرەوە.',
 
 	'PCRE_UTF_SUPPORT'				=> 'PCRE UTF-8 پاڵپشتی',
-	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'ئەگەر دامەزراندنی PHP لەگەڵ پاڵپشتی UTF-8 نەگونجێ phpBB <strong>کارناکات</strong>.',
-	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP function getimagesize() is available',
-	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>داواکراوە</strong> - وا داوادەکرێ بۆ phpBB بۆ نەخشەی دروست ،پێویستە نەخشەی getimagesize بەردەست بێت.',
+	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
 	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
-	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'گۆڕاوەکانی هەڵبژاردنانە',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>هەڵبژاردنانە</strong> - ئەو گۆڕاوانە یان نەرمەواڵانە هەڵبژاردانەن .هەرچۆنێکە ئەگەر ئەوان بەردەستبن زۆرترین تایبەتمەندی چالاکدەکەن.',
 	'PHP_SUPPORTED_DB'				=> 'بنکەدراوە پاڵپشکراوەکان',
-	'PHP_SUPPORTED_DB_EXPLAIN'		=> '<strong>داواکراوە</strong> - پێویستە پاڵپشتیت هەبێ بەلایەنی کەم بۆ بنکەدراوەیەکی گونجێنراو لەناو PHP ،ئەگەر هیچ مۆدالێکی بنکەدراوە نیشان نەدراوە وەکو بەردەست پێویستە پەیوەندی بگریت لەگەڵ پێدەری خانەخوێییەکەت یان بە بەڵگەنامە و ڕێنوویی دەمەزراندنی PHP دا بچیتەوە.',
+	'PHP_SUPPORTED_DB_EXPLAIN'		=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
 	'PHP_REGISTER_GLOBALS'			=> 'ڕێکخستنی <var>register_globals</var> پهپ ناچالاککراوە',
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'ئەگەر ئەو ڕێکخستنە چالاککرابێت phpBB هێشتا هەر کاردەکات ،بەڵام ئەگەرهاتوو ،وا ئامۆژگاریدەکرێ کە register_globals ناچالاککرابێ لەسەر دامەزراندنی PHP فۆر هۆکارەکانی پاراستن.',
 	'PHP_SAFE_MODE'					=> 'safe mode',
@@ -1988,7 +2048,7 @@ $lang = array_merge($lang, array(
 	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'ڕێکخستنی <var>allow_url_fopen</var> لە PHP چالاککراوە',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>ئارەزوومەندانە</strong> - ئەو ڕێکخستنە ئارەزوومەندانەیە ،هەرچۆنێکە فرە نەخشەیی phpBB وەکو بێ-وێبگە وێنۆچکەکان بەتەواوی کارناکەن بەبێ ئەوە.',
-	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version',
 	'POST_ID'						=> 'ناردنی ناونیشان',
 	'PREFIX_FOUND'					=> 'پشکنینێکی خشتەکانت دامەزراندنێکی نیشاندا بەکاربردنی <strong>%s</strong> وەکو پاشگری خشتە.',
 	'PREPROCESS_STEP'				=> 'جێبەجێکاری خۆ-کردارکردنی نەخشەکان/پرسەکان',
@@ -2004,7 +2064,6 @@ $lang = array_merge($lang, array(
 
 	'SCRIPT_PATH'				=> 'ڕێچکەی پرۆگرامۆکە',
 	'SCRIPT_PATH_EXPLAIN'		=> 'ڕێچکەکە کە phpBB تێدابوو پەیوەندیدارە بۆ ناوە دۆمێینەکە ،نموونە <samp>/phpBB3</samp>.',
-	'SELECT_LANG'				=> 'زمان دیاری بکە',
 	'SERVER_CONFIG'				=> 'سازدانی ڕاژەکار',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'پێرستی گەڕان نەگۆڕدرا',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'پێڕستە کۆنەکەی گەڕانت نەگۆڕدرا ،گەڕان هەمیشە ئەنجامێکی بەتاڵ دەدات. بۆ دروستکردنی پێڕستێکی نوێی گەڕان بڕۆ بۆ کۆنترۆڵ پانێڵی بەڕێوەبەرایەتی ،چاککاری هەڵبژێرە و پاشان پێڕستی گەڕان لە ژێرمێنودا.',
@@ -2021,7 +2080,6 @@ $lang = array_merge($lang, array(
 	'STAGE_FINAL'				=> 'قۆناغی کۆتایی',
 	'STAGE_INTRO'				=> 'ناساندن',
 	'STAGE_IN_PROGRESS'			=> 'گۆڕین لە پێشکەوتندایە',
-	'STAGE_REQUIREMENTS'		=> 'پێداویستییەکان',
 	'STAGE_SETTINGS'			=> 'ڕێکخستنەکان',
 	'STARTING_CONVERT'			=> 'دەستپێکردنی پڕۆسەی گۆڕین',
 	'STEP_PERCENT_COMPLETED'	=> 'قۆناغی <strong>%d</strong> لە <strong>%d</strong>',
@@ -9856,7 +9914,7 @@ $lang = array_merge($lang, array(
 	'GUEST_STYLE'					=> 'Guest style',
 	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'هەڵوەشاندنەوەی شێوازی بەکارهێنەر',
-	'OVERRIDE_STYLE_EXPLAIN'		=> 'شێوازی بەکارهێەر لەگەڵ بنەڕەت دابنێوە',
+	'ACP_OVERRIDE_STYLE_EXPLAIN'	=> 'Replaces user’s (and guest’s) style with the style as defined under "Default style".',
 	'SITE_DESC'						=> 'پەسنی ماڵپەڕ',
 	'SITE_HOME_TEXT'				=> 'Main website text',
 	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
@@ -9864,8 +9922,9 @@ $lang = array_merge($lang, array(
 	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'ناوی ماڵپەڕ',
 	'SYSTEM_TIMEZONE'				=> 'کاتی ناوچەیی میوان',
+	'SYSTEM_TIMEZONE_EXPLAIN'			=> 'Timezone to use for displaying times to users who are not logged in (guests, bots). Logged in users set their timezone during registration and can change it in their user control panel.',
 	'WARNINGS_EXPIRE'				=> 'ماوەی ئاگاداری',
-	'WARNINGS_EXPIRE_EXPLAIN'		=> 'ژمارەی ڕۆژەکان کە ڕزگاری دەبێت پێ ئاگادارکردنەوە ،خۆکارانە لە تۆماری بەکارهێنەر بەسەردەچێت. ئەو نرخە بە 0 دابنێ بۆ دانانی بە هەمیشەیی.',
+	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Number of days that will elapse before a warning will automatically expire from a user’s record. Set this value to 0 to make warnings permanent.',
 
 	'ACP_BOARD_FEATURES_EXPLAIN'	=> 'لێرە دەتوانیت چەندین تایبەتمەندی مەکۆ چالاک/ناچالاک بکەیت.',
 
@@ -9896,6 +9955,7 @@ $lang = array_merge($lang, array(
 	'ALLOW_TOPIC_NOTIFY'		=> 'ڕێدان بە بەشداربوون لە بابەتەکان',
 	'BOARD_PM'					=> 'پەیامی تایبەت',
 	'BOARD_PM_EXPLAIN'			=> 'پەیامی تایبەت بۆ هەموو بەکارهێنەران چالاکبکە',
+	'ALLOW_BOARD_NOTIFICATIONS' => 'Allow board notifications',
 
 	'ACP_AVATAR_SETTINGS_EXPLAIN'	=> 'وێنۆچکەکان بەگشتی بچووکن، وێنەیەکە بەکارهێنەر دەتوانێ خۆی دیاریبکات بەپێی شێوازی دانراو. بەزۆری وێنۆچکە لەخوا ناوی بەکارهێنەر نیشاندەدرێت لەکاتی بینینی بابەتەکان. لێرە دەتوانی دیاریبکەی کە چۆن بەکارهێنەران وێنۆچکەکانیان پێناسەبکەن. تکایە سەرنجبدە کە بۆ بارکردنی وێنۆچکەکان پێویستە پێڕست/شوێنگە دروست کردبێت و دڵنیابیت کە دەتوانرێ بۆی بنووسرێت لەلایەن ڕاژەکاری وێب. هەروەها سەرنجی ئەوەش بدە کە سنوورەکانی قەبارەی پەڕگە تەنها بەکارە لەسەر وێنۆچکە بارکراوەکان، لەسەر وێنە بەستەر بۆ کراوەکان ناچەسپێنرێن.',
 
@@ -10005,6 +10065,7 @@ $lang = array_merge($lang, array(
 
 	'ACC_ACTIVATION'				=> 'چالاککردنی هەژمار',
 	'ACC_ACTIVATION_EXPLAIN'		=> 'ئەوە دەست گەیشتنی بەکارهێنەر بۆ مەکە دیاری دەکات. دەشتوانی بەتەواوی تۆماربوونی نوێ ناچالاک بکەیت ،"ئیمەیڵی فراوانی-مەکۆ" پێویستە پێویستە چالاک کرابێت بۆ بەکارهێنانی چالاککردنی بەکارهێنەر یان بەڕێوەبەر.',
+	'ACC_ACTIVATION_WARNING'		=> 'Please note that the currently selected activation method requires emails to be enabled, otherwise registration will be disabled. We recommend to either select a different activation method or reenable emails.',
 	'NEW_MEMBER_POST_LIMIT'			=> 'سنووری پەیامی ئەندامی نوێ',
 	'NEW_MEMBER_POST_LIMIT_EXPLAIN'	=> 'ئەندامە نوێیەکان لەناو گرووپی <em>ئەندامە تۆماربووەکان</em> ــن تاکو دەگەنە ئەو ژمارەی پەیامانە. دەتوانی ئەو گرووپە بەکاربهێنی بۆ هێشتنەوەیان لە بەکاربردنی سیستەمی پەیامی تایبەتی یان پێداچوونەوە بۆ پەیامەکانیان. <strong>نرخێکی 0 ئەو تایبەتمەندییە ناچالاک دەکات</strong>.',
 	'NEW_MEMBER_GROUP_DEFAULT'		=> 'گرووپی ئەندامە تۆماربووەکان بۆ بنەڕەت دابنێ',
@@ -10302,8 +10363,11 @@ $lang = array_merge($lang, array(
 
 	'TPL_ALLOW_PHP'					=> 'ڕێگابدە بە php لە داڕێژەکان',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'ئەگەر ئەو هەڵبژاردنە چالاککرا <code>PHP</code> لەگەڵ <code>INCLUDEPHP</code> رێکدەخرێن و دەبرێن بۆ داڕێژەکان.',
+	'UPLOAD_CERT_VALID'				=> 'Validate upload certificate',
+	'UPLOAD_CERT_VALID_EXPLAIN'		=> 'If enabled, certificates of remote uploads will be validated. This requires the CA bundle to be defined by the <samp>openssl.cafile</samp> or <samp>curl.cainfo</samp> setting in your php.ini.',
 
 	'ACP_EMAIL_SETTINGS_EXPLAIN'	=> 'ئەو زانیارییە بەکارهاتووە لەکاتێ مەکۆکە ئیمەیڵ دەنێرێ بۆ بەکارهێنەرانت. تکایە دڵنیابە ناونیشانی ئەو ئیمەیڵەی دیاریدەکەی دروستە ،هەر وریاکەرەوە و ئاگانامەیەک زۆرتر دەنێردرێت بۆ ئەو ناونیشانە. ئەگەر خانەخوێیەکەت خزمەتگوزاری ئیمەیڵێکی (بنچینەکراوی PHP) نادات دەتوانی پەیامەکان ڕاستەوخۆ بنێری بە بەکارهێنانی SMTP. ئەمە داوای ڕاژەی بەرامبەرکێ دەکات .ئەگەر ڕاژەکە داوای پەسەندکردن دەکات (وە تەنها ئەگەر کردی) ناوی بەکارهێنەری پێویست بنووسە ،تێپەڕەوشە لەگەڵ ڕێگای پەسەندکردن.',
+
 	'ADMIN_EMAIL'					=> 'ناونیشانی ئیمەیڵ بگەڕێنەوە',
 	'ADMIN_EMAIL_EXPLAIN'			=> 'ئەمە بەکاردەبرێت وەکو ناونیشانی گەڕانەوە لەسەر هەموو ئیمەیڵەکان ،ناونیشانی ئیمەیڵی تەکنیکی بۆ پەیوەندی. هەمیشە بەکاردەهێنرێت وەکو <samp>Return-Path</samp> لەگەڵ ناونیشانی <samp>Sender</samp> لە ئیمەیڵەکان.',
 	'BOARD_EMAIL_FORM'				=> 'بەکارهێنەران ئیمەیڵ لەڕێگای مەکۆ دەنێرن',
@@ -10322,6 +10386,8 @@ $lang = array_merge($lang, array(
 	'EMAIL_SIG_EXPLAIN'				=> 'ئەو دەقە هاوپێچ دەکرێت بۆ هەموو ئەو ئیمەیڵانەی مەکۆکە دەینێرێت.',
 	'ENABLE_EMAIL'					=> 'ئیمەیڵی فراوان-مەکۆ چالاکبکە',
 	'ENABLE_EMAIL_EXPLAIN'			=> 'ئەگەر ئەوە ناچالاککرا هیچ ئیمەیڵێک نانێردرێ لەلایەن مەکۆکە هەرگیز. <em>سەرنجبدە بەکارهێنەرەکە و ڕێکخستنەکان ،ناچالاککردنی ئەو ڕێکخستنە داوای هیچ چالاککردنێک ناکات بۆ هەژمارە نوێیەکان.</em>',
+	'SEND_TEST_EMAIL'				=> 'Send a test email',
+	'SEND_TEST_EMAIL_EXPLAIN'		=> 'This will send a test email to the address defined in your account.',
 	'SMTP_AUTH_METHOD'				=> 'ڕێگای پەسەندکراو بۆ SMTP',
 	'SMTP_AUTH_METHOD_EXPLAIN'		=> 'تەنها بەکاردەبرێ ئەگەر ناوی بەکارهێنەرێک/تێپەڕەوشەیەک دانرا ،لە پێشخەرەکەت بپرسە ئەگەر دڵنیانیت کام ڕێگا بەکارببەیت.',
 	'SMTP_CRAM_MD5'					=> 'CRAM-MD5',
@@ -10337,6 +10403,7 @@ $lang = array_merge($lang, array(
 	'SMTP_SETTINGS'					=> 'ڕێکخستنەکانی SMTP',
 	'SMTP_USERNAME'					=> 'ناوی بەکارهێنەری SMTP',
 	'SMTP_USERNAME_EXPLAIN'			=> 'تەنها ناوی بەکارهێنەرێک بنووسە ئەگەر ڕاژەی SMTP داوای دەکات.',
+	'TEST_EMAIL_SENT'				=> 'The test email has been sent.<br />If you don’t receive it, please check your emails configuration.<br /><br />If you require assistance, please visit the <a href="https://www.phpbb.com/community/">phpBB support forums</a>.',
 	'USE_SMTP'						=> 'ڕاژەی SMTP بەکارببە بۆ ئیمەیڵ',
 	'USE_SMTP_EXPLAIN'				=> '"بەڵێ" هەڵبژێرە ئەگەر دەتەوێ یان دەبێت ئیمەیڵ بنێریت لەڕێگای ڕاژەیەکی ناوکراو لەباتی نەخشەی ناوخۆ.',
 
@@ -10566,8 +10633,7 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'بنکەدراوە',
-	'ACP_CAT_DOT_MODS'			=> '.MODs',
-	'ACP_CAT_DOT_MODS'			=> '.MODs',
+	'ACP_CAT_DOT_MODS'			=> 'Extensions',
 	'ACP_CAT_FORUMS'			=> 'مەکۆکان',
 	'ACP_CAT_GENERAL'			=> 'گشتیی',
 	'ACP_CAT_MAINTENANCE'		=> 'چاکسازیی',
@@ -10732,6 +10798,9 @@ $lang = array_merge($lang, array(
 
 	'BACK'					=> 'دواوە',
 
+	'CONTAINER_EXCEPTION' => 'phpBB encountered an error building the container due to an installed extension. For this reason, all extensions have been temporarily disabled. Please try purging your forum cache. All extensions will automatically be re-enabled once the container error is resolved. If this error continues, please visit <a href="https://www.phpbb9.de">phpbb9.de</a> for support.',
+	'EXCEPTION' => 'Exception',
+
 	'COLOUR_SWATCH'			=> 'پارچەی ڕەنگ',
 	'CONFIG_UPDATED'		=> 'دیمەنکردن بەسەرکەوتوویی نوێکرایەوە.',
 	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
@@ -10742,7 +10811,7 @@ $lang = array_merge($lang, array(
 	'DEACTIVATE'				=> 'ناچالاککردن',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'ڕێڕەوی لێدراو “%s”بوونی نییە.',
 	'DIRECTORY_NOT_DIR'			=> 'ڕێڕەوی لێدراو “%s” بوخچە نییە.',
-	'DIRECTORY_NOT_WRITABLE'	=> 'ڕێڕەوی لێدراو “%s” توانای نووسینەوە لەسەر نییە.',
+	'DIRECTORY_NOT_WRITABLE'	=> 'Directory not writable',
 	'DISABLE'					=> 'ناچالاککردن',
 	'DOWNLOAD'					=> 'داگرتن',
 	'DOWNLOAD_AS'				=> 'داگرتن وەک',
@@ -10793,10 +10862,11 @@ $lang = array_merge($lang, array(
 	'PARSE_URLS'						=> 'شیکاری بەستەرەکان',
 	'PERMISSIONS_TRANSFERRED'			=> 'دەسەڵاتەکان گوازرانەوە',
 	'PERMISSIONS_TRANSFERRED_EXPLAIN'	=> 'تۆ ئێستا دەسەڵاتت هەیە لە %1$s. دەتوانی مەکۆکە بگەڕێی لەگەڵ دەسەڵاتی ئەو بەکارهێنەرە ،بەڵام دەسەڵاتی بەڕێوەبەر نەگوێزراوەتەوە بۆ گەیشتن بە کۆنترۆڵ پانێڵی بەڕێوەبەرایەتی .تۆ دەتوانی <a href="%2$s"><strong>بگەڕێیەوە بۆ دەسەڵاتی دانراو</strong></a> هەر کاتێک ویستت.',
-	'PIXEL'								=> 'px',
 	'PROCEED_TO_ACP'					=> '%sبڕۆ بۆ ACP%s',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'ئاگاداری',
 	'REMIND'							=> 'بیرهێنان',
+	'REPARSE_LOCK_ERROR'				=> 'Reparsing is already in progress by another process.',
 	'RESYNC'							=> 'Resync',
 
 	'RUNNING_TASK'			=> 'Running task: %s.',
@@ -10845,11 +10915,23 @@ $lang = array_merge($lang, array(
 
 	'DATABASE_SIZE'			=> 'قەبارەی بنکەدراوە',
 
+	// Enviroment configuration checks, mbstring related
+	'ERROR_MBSTRING_FUNC_OVERLOAD'					=> 'Function overloading is improperly configured',
+	'ERROR_MBSTRING_FUNC_OVERLOAD_EXPLAIN'			=> '<var>mbstring.func_overload</var> must be set to either 0 or 4. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION'			=> 'Transparent character encoding is improperly configured',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION_EXPLAIN'	=> '<var>mbstring.encoding_translation</var> must be set to 0. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_INPUT'						=> 'HTTP input character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_INPUT_EXPLAIN'				=> '<var>mbstring.http_input</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_OUTPUT'					=> 'HTTP output character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_OUTPUT_EXPLAIN'			=> '<var>mbstring.http_output</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+
 	'FILES_PER_DAY'		=> 'هاوپێچەکان بۆ هەر ڕۆژێک',
 	'FORUM_STATS'		=> 'ئامارەکانی مەکۆ',
 
 	'GZIP_COMPRESSION'	=> 'پەستاندنی GZip',
 
+	'PIXEL'								=> 'px',
+	
 	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'ئامادە نییە',
 	'NUMBER_FILES'		=> 'ژمارەی هاوپێچەکان',
@@ -10857,6 +10939,8 @@ $lang = array_merge($lang, array(
 	'NUMBER_TOPICS'		=> 'ژمارەی بابەتەکان',
 	'NUMBER_USERS'		=> 'ژمارەی بەکارهێنەران',
 	'NUMBER_ORPHAN'		=> 'هاوپێچە هەتیوەکان',
+
+	'PHP_VERSION_OLD'	=> 'The version of PHP on this server will no longer be supported by future versions of phpBB. %sDetails%s',
 
 	'POSTS_PER_DAY'		=> 'پەیامەکان بۆ هەر ڕۆژێک',
 
@@ -10903,10 +10987,16 @@ $lang = array_merge($lang, array(
 	'VALUE'						=> 'نرخ',
 	'VERSIONCHECK_FAIL'			=> 'شکستی هێنا لە بەدەستهێنانی زانیاری دوا وەشان',
 	'VERSIONCHECK_FORCE_UPDATE'	=> 'بپشکنەوە بۆ وەشان',
+	'VERSION_CHECK'				=> 'پشکنینی وەشان',
+	'VERSION_CHECK_EXPLAIN'		=> 'بزانە دامەزراندنی phpBB نوێیە.',
+	'VERSION_NOT_UP_TO_DATE_ACP'	=> 'دامەزراندنی phpBB ــەکەت نوێترین نییە. <br /> لەخوارەوە بەستەرێکە بۆ وەشێنراوە ئاشکراکان ،کە زانیاری زیاتر لەخۆی دەگرێت وەکو باشی وەک ناساندنیش بۆ نوێکردنەوە.',
+	'VERSION_NOT_UP_TO_DATE_TITLE'	=> 'دامەزراندنی phpBB ــەکەت نوێترین نییە.',
+	'VERSION_UP_TO_DATE_ACP'	=> 'دامەزراندنی phpBB ــەکەت نوێترینە ،هیچ نوێکردنەوەیەک بەردەست نییە لەم کاتەدا.',
 	'VIEW_ADMIN_LOG'			=> 'لۆگی بەڕێوەبەر ببینە',
 	'VIEW_INACTIVE_USERS'		=> 'بەکارهێنەرە ناچالاکەکان ببینە',
 
 	'WELCOME_PHPBB'			=> 'بەخێربێیت بۆ phpBB',
+	'WRITABLE_CONFIG'		=> 'Your config file (config.php) is currently world-writable. We strongly encourage you to change the permissions to 640 or at least to 644 (for example: <a href="http://en.wikipedia.org/wiki/Chmod" rel="external">chmod</a> 640 config.php).',
 
 	'BROWSER_LANGUAGE'			=> 'Enable Browser Language Detection',
 	'BROWSER_LANGUAGE_EXPLAIN'	=> 'Enables the browser language detection for guest users not to use the default language of the board. Choose no to disable the feature.',

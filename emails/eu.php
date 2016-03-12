@@ -769,6 +769,20 @@ Mezu hau jaso duzu "{SITENAME}"(e)ko "{TOPIC_TITLE}" gaira bidalitako "{POST_SUB
 
 
 $email = array_merge($email, array(
+	'email/test.txt' 		=> '{EMAILSUBJECT:} phpBB - Test mail
+
+Hello {USERNAME},
+
+Congratulations. If you received this email, phpBB is correctly configured to send emails.
+
+In case you require assistance, please visit the support forums - http://www.forums3.com/
+
+{EMAIL_SIG}',
+));
+
+
+
+$email = array_merge($email, array(
 	'email/topic_approved.txt' 		=> '{EMAILSUBJECT:} Gaia onartua - "{TOPIC_TITLE}"
 
 Kaixo {USERNAME},

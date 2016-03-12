@@ -1725,6 +1725,86 @@ $lang = array_merge($lang, array(
 #######language/en/install.php#######
 
 $lang = array_merge($lang, array(
+	'INSTALL_PANEL'	=> 'Bảng điều khiển cài đặt',
+	'SELECT_LANG'	=> 'Chọn gói ngôn ngữ',
+	'STAGE_INSTALL'	=> 'Installing phpBB',
+
+	// Introduction page
+	'INTRODUCTION_TITLE'	=> 'Giới thiệu',
+	'INTRODUCTION_BODY'		=> 'Welcome to phpBB3!<br /><br />phpBB® is the most widely used open source bulletin board solution in the world. phpBB3 is the latest installment in a package line started in 2000. Like its predecessors, phpBB3 is feature-rich, user-friendly, and fully supported by the phpBB Team. phpBB3 greatly improves on what made phpBB2 popular, and adds commonly requested features that were not present in previous versions. We hope it exceeds your expectations.<br /><br />This installation system will guide you through installing phpBB3, updating to the latest version of phpBB3 from past releases, as well as converting to phpBB3 from a different discussion board system (including phpBB2). For more information, we encourage you to read <a href="../docs/INSTALL.html">the installation guide</a>.<br /><br />To read the phpBB3 license or learn about obtaining support and our stance on it, please select the respective options from the side menu. To continue, please select the appropriate tab above.',
+
+	// Support page
+	'SUPPORT_TITLE'		=> 'Hỗ trợ',
+	'SUPPORT_BODY_INSTALL'	=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/docs/en/3.1/ug/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
+
+	// License
+	'LICENSE_TITLE'		=> 'Bản quyền GNU-GPL (General Public License)',
+
+	// Install page
+	'INSTALL_INTRO'			=> 'Chào mừng bạn đã đến với công cụ cài đặt',
+	'INSTALL_INTRO_BODY'	=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
+
+	<ul>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
+	</ul>
+
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
+
+	<p>phpBB3 supports the following databases:</p>
+	<ul>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
+		<li>SQLite 2.8.2+</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
+		<li>Oracle</li>
+	</ul>
+
+	<p>Only those databases supported on your server will be displayed.',
+
+	'ACP_LINK'	=> 'Take me to <a href="%1$s">the ACP</a>',
+
+	'INSTALL_PHPBB_INSTALLED'		=> 'phpBB is already installed.',
+	'INSTALL_PHPBB_NOT_INSTALLED'	=> 'phpBB is not installed yet.',
+
+
+	// Filesystem requirements
+	'FILE_NOT_EXISTS'			=> 'File not exists',
+	'FILE_NOT_EXISTS_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to exist.',
+	'FILE_NOT_WRITABLE'			=> 'File not writable',
+	'FILE_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to be writable.',
+
+	'DIRECTORY_NOT_EXISTS'				=> 'Directory not exists',
+	'DIRECTORY_NOT_EXISTS_EXPLAIN'		=> 'To be able to install phpBB the %1$s directory needs to exist.',
+	'DIRECTORY_NOT_WRITABLE'			=> 'Directory not writable',
+	'DIRECTORY_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s directory needs to be writable.',
+
+	// Server requirements
+	'PHP_VERSION_REQD'					=> 'PHP version',
+	'PHP_VERSION_REQD_EXPLAIN'			=> 'phpBB requires PHP version 5.4.0 or higher.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
+	'PCRE_UTF_SUPPORT'					=> 'Hỗ trợ UTF-8 trong PCRE',
+	'PCRE_UTF_SUPPORT_EXPLAIN'			=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_JSON_SUPPORT'					=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'			=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_SUPPORTED_DB'					=> 'Loại cơ sở dữ liệu được hỗ trợ',
+	'PHP_SUPPORTED_DB_EXPLAIN'			=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
+
+	'RETEST_REQUIREMENTS'	=> 'Retest requirements',
+
+	'STAGE_REQUIREMENTS'	=> 'Check requirements',
+
+	'INST_ERR_MISSING_DATA'		=> 'Bạn phải điền đầy đủ thông tin trong phần này.',
+
+	'TIMEOUT_DETECTED_TITLE'	=> 'The installer detected a timeout',
+	'TIMEOUT_DETECTED_MESSAGE'	=> 'The installer has detected a timeout, you may try to refresh the page, which may lead to data corruption. We suggest that you either increase your timeout settings or try to use the CLI.',
+
 	'ADMIN_CONFIG'				=> 'Cấu hình tài khoản quản trị viên',
 	'ADMIN_PASSWORD'			=> 'Mật khẩu của quản trị viên',
 	'ADMIN_PASSWORD_CONFIRM'	=> 'Xác nhận mật khẩu quản trị viên',
@@ -1788,7 +1868,7 @@ $lang = array_merge($lang, array(
 	'CONV_ERROR_INSERT_BOTGROUP'		=> 'Không thể chèn thêm máy tìm kiếm vào bảng dữ liệu <var>_bots</var>.',
 	'CONV_ERROR_INSERT_USER_GROUP'		=> 'Không thể chèn thêm thành viên vào bảng dữ liệu <var>_user_group</var>.',
 	'CONV_ERROR_MESSAGE_PARSER'			=> 'Lỗi phân tách nội dung bài viết',
-	'CONV_ERROR_NO_AVATAR_PATH'			=> 'Lưu ý dành cho những người phát triển: bạn phải xác định <code>$convertor[\'avatar_path\']</code> để sử dụng %s.',
+	'CONV_ERROR_NO_AVATAR_PATH'			=> 'Note to developer: you must specify convertor[avatar_path] to use %s.',
 	'CONV_ERROR_NO_FORUM_PATH'			=> 'Đường dẫn đến thư mục cài đặt hệ thống chưa được xác định.',
 	'CONV_ERROR_NO_GALLERY_PATH'		=> 'Lưu ý dành cho những người phát triển: bạn phải xác định <code>$convertor[\'avatar_gallery_path\']</code> để sử dụng %s.',
 	'CONV_ERROR_NO_GROUP'				=> 'Nhóm “%1$s” không thể tìm thấy trong %2$s.',
@@ -1880,65 +1960,45 @@ $lang = array_merge($lang, array(
 		<p>Công cụ phpBB Unified Convertor Framework hỗ trợ việc chuyển đổi dữ liệu từ bản cài đặt phpBB 2.0.x hoặc các loại hệ thống khác không phải phpBB sang phiên bản phpBB3. Nếu bạn muốn chuyển đổi dữ liệu từ một hệ thống hiện có, hãy vui lòng <a href="%2$s">tiến hành việc chuyển đổi</a>.</p>
 		<h2>Trực tiếp sử dụng bản cài đặt phpBB3 mới này!</h2>
 		<p>Bấm vào nút bên dưới, bạn sẽ được chuyển đến bảng điều khiển dành cho quản trị viên của mình. Đa số mỗi tùy chọn trong bảng điều khiển này đều có hướng dẫn giải thích cho bạn công dụng của chúng. Hãy nhớ rằng bạn luôn được hỗ trợ trực tuyến từ <a href="http://www.phpbb.com/support/documentation/3.0/">tài liệu hướng dẫn sử dụng</a> và <a href="http://www.phpbb.com/community/viewforum.php?f=46">diễn đàn hỗ trợ</a>, xem tập tin <a href="%3$s">README</a> để biết thêm thông tin.</p><p><strong>Ngay bây giờ, bạn hãy vui lòng xoá, di chuyển hoặc đổi tên thư mục <samp>install</samp> trước khi bạn bắt đầu sử dụng hệ thống này. Nếu thư mục này vẫn còn hiện hữu, bạn sẽ chỉ có thể truy cập được vào bảng điều khiển dành cho quản trị viên.</strong></p>',
-	'INSTALL_INTRO'				=> 'Chào mừng bạn đã đến với công cụ cài đặt',
 
-	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
-
-	<ul>
-		<li>The Database Type - the database you will be using.</li>
-		<li>The Database server hostname or DSN - the address of the database server.</li>
-		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
-		<li>The Database name - the name of the database on the server.</li>
-		<li>The Database username and Database password - the login data to access the database.</li>
-	</ul>
-
-	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
-
-	<p>phpBB3 supports the following databases:</p>
-	<ul>
-		<li>MySQL 3.23 or above (MySQLi supported)</li>
-		<li>PostgreSQL 8.3+</li>
-		<li>SQLite 2.8.2+</li>
-		<li>SQLite 3.6.15+</li>
-		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
-		<li>MS SQL Server 2005 or above (native)</li>
-		<li>Oracle</li>
-	</ul>
-
-	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'Để bắt đầu việc cài đặt, bạn hãy bấm vào nút chấp nhận bên dưới.',
 	'INSTALL_LOGIN'				=> 'Đăng nhập',
 	'INSTALL_NEXT'				=> 'Bước kế tiếp',
 	'INSTALL_NEXT_FAIL'			=> 'Có một vài thao tác kiểm tra thất bại và bạn nên giải quyết những rắc rối này trước khi chuyển sang bước kế tiếp. Những kiểm tra thất bại này có thể dẫn đến việc cài đặt hệ thống không thể hoàn tất hay cài đặt không trọn vẹn.',
 	'INSTALL_NEXT_PASS'			=> 'Tất cả những kiểm tra đơn giản đều hợp lệ và bạn có thể chuyển sang bước kế tiếp trong quá trình cài đặt. Nếu bạn đã thay đổi bất kỳ thiết lập cấp phép, gói thành phần chức năng… nào và bạn muốn kiểm tra lại cho chắc chắn thì bạn có thể thực hiện lại việc kiểm tra.',
-	'INSTALL_PANEL'				=> 'Bảng điều khiển cài đặt',
 	'INSTALL_SEND_CONFIG'		=> 'Thật đáng tiếc, hệ thống không thể ghi những thông tin cấu hình cài đặt đến tập tin <code>config.php</code>. Điều này xảy ra bởi vì tập tin này không tồn tại hoặc không được cấp phép có thể ghi trên máy chủ. Các tuỳ chọn được liệt kê bên dưới sẽ giúp bạn hoàn tất việc cài đặt của mình với tập tin cấu hình <code>config.php</code> này.',
 	'INSTALL_START'				=> 'Bắt đầu cài đặt',
 	'INSTALL_TEST'				=> 'Kiểm tra lại',
-	'INST_ERR'					=> 'Lỗi cài đặt',
-	'INST_ERR_DB_CONNECT'		=> 'Không thể kết nối đến cơ sở dữ liệu, bạn hãy xem thông báo lỗi bên dưới để biết nguyên nhân.',
+
+	// Errors
+	'INST_ERR_NO_DB'			=> 'Không thể nạp gói thành phần chức năng PHP cho loại cơ sở dữ liệu đã chọn.',
+	'INST_ERR_DB_INVALID_PREFIX'	=> 'The prefix you entered is invalid. It must start with a letter and must only contain letters, numbers and underscores.',
+	'INST_ERR_PREFIX_TOO_LONG'	=> 'Tiền tố đầu mỗi tên bảng dữ liệu bạn vừa xác định quá dài. Số ký tự tối đa được phép sử dụng là <strong>%d</strong> ký tự.',
+	'INST_ERR_DB_NO_NAME'		=> 'Bạn chưa nhập tên cơ sở dữ liệu.',
 	'INST_ERR_DB_FORUM_PATH'	=> 'Tập tin cơ sở dữ liệu bạn vừa chọn đang nằm trong thư mục cài đặt của hệ thống. Bạn không nên để tập tin này trong các thư mục của máy chủ.',
+	'INST_ERR_DB_CONNECT'		=> 'Không thể kết nối đến cơ sở dữ liệu, bạn hãy xem thông báo lỗi bên dưới để biết nguyên nhân.',
 	'INST_ERR_DB_NO_ERROR'		=> 'Không có thông báo lỗi nào được đưa ra.',
+	'INST_ERR_PREFIX'			=> 'Tiền tố đầu mỗi tên bảng dữ liệu bạn vừa xác định đã được sử dụng, hãy vui lòng chọn một tên khác.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'Phiên bản MySQL được cài đặt trên máy chủ không tương thích với tuỳ chọn “MySQL với phần mở rộng MySQLi” mà bạn vừa chọn. Hãy thử thay thế bằng tuỳ chọn “MySQL” để tiếp tục.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'Phiên bản phần mở rộng SQLite được cài đặt trên máy chủ đã quá cũ. Nó phải được nâng cấp ít nhất đến phiên bản 2.8.2 để sử dụng với hệ thống này.',
 	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'Phiên bản Oracle được cài đặt trên máy chủ yêu cầu bạn phải thiết lập thông số <var>NLS_CHARACTERSET</var> thành <var>UTF-8</var>. Bạn hãy vui lòng nâng cấp hệ thống lên phiên bản 9.2+ hoặc chỉ cần thay đổi lại thông số trên.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'Cơ sở dữ liệu bạn vừa chọn không được tạo ra trong chế độ mã hóa <var>UNICODE</var> hoặc <var>UTF-8</var>. Bạn hãy vui lòng cài đặt lại với một cơ sở dữ liệu được mã hóa theo <var>UNICODE</var> hoặc <var>UTF-8</var>.',
-	'INST_ERR_DB_NO_NAME'		=> 'Bạn chưa nhập tên cơ sở dữ liệu.',
+	'INST_SCHEMA_FILE_NOT_WRITABLE'	=> 'The schema file is not writable',
+
+	'EMAIL_CONFIG'	=> 'E-mail configuration',
+
+	'INST_ERR'					=> 'Lỗi cài đặt',
 	'INST_ERR_EMAIL_INVALID'	=> 'Địa chỉ Email bạn vừa nhập không hợp lệ.',
 	'INST_ERR_EMAIL_MISMATCH'	=> 'Địa chỉ Email bạn vừa nhập không phù hợp.',
 	'INST_ERR_FATAL'			=> 'Lỗi cài đặt nghiêm trọng',
 	'INST_ERR_FATAL_DB'			=> 'Một lỗi cơ sở dữ liệu nghiêm trọng và không thể phục hồi lại đã xảy ra. Lỗi này xảy ra bởi vì bạn đã xác định tên đăng nhập cơ sở dữ liệu không có quyền hạn để sử dụng các lệnh <code>CREATE TABLES</code> hay <code>INSERT</code> dữ liệu… Nhiều thông tin hơn về lỗi này được cung cấp bên dưới. Hãy liên hệ trước tiên với nhà cung cấp dịch vụ lưu trữ Web của bạn hoặc các diễn đàn hỗ trợ phpBB để nhận được nhiều sự giúp đỡ hơn.',
 	'INST_ERR_FTP_PATH'			=> 'Không thể thay đổi thư mục đã cung cấp, bạn hãy vui lòng kiểm tra lại đường dẫn.',
 	'INST_ERR_FTP_LOGIN'		=> 'Không thể kết nối đến máy chủ FTP, bạn hãy vui lòng kiểm tra lại tên đăng nhập và mật khẩu kết nối.',
-	'INST_ERR_MISSING_DATA'		=> 'Bạn phải điền đầy đủ thông tin trong phần này.',
-	'INST_ERR_NO_DB'			=> 'Không thể nạp gói thành phần chức năng PHP cho loại cơ sở dữ liệu đã chọn.',
 	'INST_ERR_PASSWORD_MISMATCH'	=> 'Mật khẩu bạn vừa nhập không phù hợp.',
 	'INST_ERR_PASSWORD_TOO_LONG'	=> 'Mật khẩu bạn vừa nhập quá dài. Mật khẩu không được phép vượt quá <strong>30</strong> ký tự.',
 	'INST_ERR_PASSWORD_TOO_SHORT'	=> 'Mật khẩu bạn vừa nhập quá ngắn. Mật khẩu không được phép ít hơn <strong>6</strong> ký tự.',
-	'INST_ERR_PREFIX'			=> 'Tiền tố đầu mỗi tên bảng dữ liệu bạn vừa xác định đã được sử dụng, hãy vui lòng chọn một tên khác.',
 	'INST_ERR_PREFIX_INVALID'	=> 'Tiền tố đầu mỗi tên bảng dữ liệu bạn vừa xác định không hợp lệ đối với cơ sở dữ liệu của bạn. Bạn hãy vui lòng chọn một tên khác hoặc gỡ bỏ một vài ký tự không được phép sử dụng như là dấu nối (-).',
-	'INST_ERR_PREFIX_TOO_LONG'	=> 'Tiền tố đầu mỗi tên bảng dữ liệu bạn vừa xác định quá dài. Số ký tự tối đa được phép sử dụng là <strong>%d</strong> ký tự.',
 	'INST_ERR_USER_TOO_LONG'	=> 'Tên thành viên bạn vừa nhập quá dài. Số ký tự tối đa được phép sử dụng là <strong>20</strong> ký tự.',
 	'INST_ERR_USER_TOO_SHORT'	=> 'Tên thành viên bạn vừa nhập quá ngắn. Số kú tự tối thiểu phải sử dụng là <strong>3</strong> ký tự.',
 	'INVALID_PRIMARY_KEY'		=> 'Khoá chính không hợp lệ: %s',
@@ -1973,15 +2033,15 @@ $lang = array_merge($lang, array(
 	'OVERVIEW_BODY'				=> 'Chào mừng bạn đã sử dụng phiên bản RC (Release Candidate) phát hành công cộng của phpBB 3.0.0 kể từ sau thế hệ phiên bản phpBB 2.x.x! Bản phát hành này dự định dành cho các thành viên có kiến thức sâu rộng về lập trình để giúp đỡ chúng tôi phát hiện các lỗi bug và các vấn đề nan giải còn tồn tại trong hệ thống.</p><p>Bạn hãy vui lòng đọc qua <a href="../docs/INSTALL.html">tài liệu cài đặt của chúng tôi</a> để biết thêm nhiều thông tin hơn về việc cài đặt phiên bản phpBB3</p><p><strong style="text-transform: uppercase;">Lưu ý:</strong> Bản phát hành này <strong style="text-transform: uppercase;">vẫn chưa phải là bản hoàn chỉnh cuối cùng</strong> của phpBB 3.0.0. Có thể bạn sẽ muốn chờ đợi cho đến khi bản hoàn chỉnh cuối cùng ra mắt để sử dụng chính thức.</p><p>Việc cài đặt hệ thống này sẽ giúp bạn làm quen trong việc cài đặt phiên bản phpBB3 mới, chuyển đổi từ một hệ thống phần mềm khác sang phiên bản phpBB3 hay cập nhật/nâng cấp lên phiên bản mới nhất. Để biết thêm nhiều thông tin về mỗi tuỳ chọn cài đặt, bạn hãy chọn trong menu bên trên.',
 
 	'PCRE_UTF_SUPPORT'				=> 'Hỗ trợ UTF-8 trong PCRE',
-	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'Hệ thống phpBB sẽ <strong>không hoạt động</strong> được nếu bản cài đặt PHP trên máy chủ của bạn không được biên dịch với phần mở rộng PCRE có hỗ trợ UTF-8.',
-	'PHP_GETIMAGESIZE_SUPPORT'			=> 'Hàm PHP <code>getimagesize()</code> có thể sử dụng',
-	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Yêu cầu bắt buộc</strong> - Để các chức năng của hệ thống phpBB hoạt động chính xác, hàm PHP <code>getimagesize()</code> cần phải được phép sử dụng trên máy chủ.',
+	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
 	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
-	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'Gói thành phần chức năng tuỳ chọn',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>Tuỳ chọn</strong> - Những gói thành phần chức năng hay ứng dụng này đều hoàn toàn tuỳ chọn. Tuy nhiên, nếu chúng được cài đặt đầy đủ trên máy chủ, bạn sẽ sử dụng được đầy đủ tất cả các chức năng của hệ thống.',
 	'PHP_SUPPORTED_DB'				=> 'Loại cơ sở dữ liệu được hỗ trợ',
-	'PHP_SUPPORTED_DB_EXPLAIN'		=> '<strong>Yêu cầu bắt buộc</strong> - Máy chủ của bạn ít nhất phải hỗ trợ một loại cơ sở dữ liệu tương thích với PHP. Nếu không có bất cứ gói thành phần chức năng cơ sở dữ liệu nào có sẵn để sử dụng, bạn nên liên hệ với nhà cung cấp dịch vụ lưu trữ Web của mình hoặc xem lại tài liệu cài đặt PHP để tìm thấy lời khuyên.',
+	'PHP_SUPPORTED_DB_EXPLAIN'		=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
 	'PHP_REGISTER_GLOBALS'			=> 'Thiết lập PHP <var>register_globals</var> đã bị vô hiệu',
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'Hê thống sẽ vẫn hoạt động nếu thiết lập này được bật, nhưng nếu có thể, chúng tôi khuyên bạn nên tắt thiết lập PHP <var>register_globals</var> vì một số nguyên nhân bảo mật.',
 	'PHP_SAFE_MODE'					=> 'Chế độ an toàn',
@@ -1989,7 +2049,7 @@ $lang = array_merge($lang, array(
 	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'Thiết lập PHP <var>allow_url_fopen</var> đã được bật',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>Tùy chọn</strong> - Thiết lập PHP này là tùy chọn, tuy nhiên chắc chắn rằng các chức năng trong hệ thống phpBB như liên kết hình đại diện từ website khác sẽ không thể hoạt động được nếu thiết lập này bị vô hiệu.',
-	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version',
 	'POST_ID'						=> 'Số ID bài viết',
 	'PREFIX_FOUND'					=> 'Tiền tố đầu mỗi tên bảng dữ liệu <strong>%s</strong> mà bạn vừa chọn đã được sử dụng trong gói cơ sở dữ liệu này.',
 	'PREPROCESS_STEP'				=> 'Đang thực thi quá trình kiểm tra trước các <var>function/query</var>',
@@ -2005,7 +2065,6 @@ $lang = array_merge($lang, array(
 
 	'SCRIPT_PATH'				=> 'Đường dẫn',
 	'SCRIPT_PATH_EXPLAIN'		=> 'Đường dẫn đến thư mục cài đặt hệ thống phpBB, xác định bởi tên miền, ví dụ như <samp>/phpBB3</samp>.',
-	'SELECT_LANG'				=> 'Chọn gói ngôn ngữ',
 	'SERVER_CONFIG'				=> 'Cấu hình máy chủ',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Chỉ mục tìm kiếm không được chuyển đổi',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Những chỉ mục tìm kiếm trong hệ thống cũ của bạn không được chuyển đổi. Chức năng tìm kiếm sẽ vô dụng nếu như không có chỉ mục tìm kiếm được lập. Để tạo lại chỉ mục tìm kiếm mới, bạn hãy chuyển đến bảng điều khiển của quản trị viên, chọn “Bảo trì” trong menu chính bên trên và sau đó chọn vào “Chỉ mục tìm kiếm” từ menu con bên trái.',
@@ -2022,7 +2081,6 @@ $lang = array_merge($lang, array(
 	'STAGE_FINAL'				=> 'Bước cuối cùng',
 	'STAGE_INTRO'				=> 'Giới thiệu',
 	'STAGE_IN_PROGRESS'			=> 'Quá trình chuyển đổi đang được tiến hành',
-	'STAGE_REQUIREMENTS'		=> 'Yêu cầu',
 	'STAGE_SETTINGS'			=> 'Thiết lập',
 	'STARTING_CONVERT'			=> 'Bắt đầu tiến hành chuyển đổi',
 	'STEP_PERCENT_COMPLETED'	=> 'Bước <strong>%d</strong> trong tổng số <strong>%d</strong> bước',
@@ -9857,7 +9915,7 @@ $lang = array_merge($lang, array(
 	'GUEST_STYLE'					=> 'Guest style',
 	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Thay thế cho giao diện lựa chọn của thành viên',
-	'OVERRIDE_STYLE_EXPLAIN'		=> 'Tuỳ chọn thay thế toàn bộ những giao diện đã được các thành viên lựa chọn bằng giao diện mặc định duy nhất của hệ thống.',
+	'ACP_OVERRIDE_STYLE_EXPLAIN'	=> 'Replaces user’s (and guest’s) style with the style as defined under "Default style".',
 	'SITE_DESC'						=> 'Giới thiệu về website',
 	'SITE_HOME_TEXT'				=> 'Main website text',
 	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
@@ -9865,8 +9923,9 @@ $lang = array_merge($lang, array(
 	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Tên website',
 	'SYSTEM_TIMEZONE'				=> 'Múi giờ hệ thống',
+	'SYSTEM_TIMEZONE_EXPLAIN'			=> 'Timezone to use for displaying times to users who are not logged in (guests, bots). Logged in users set their timezone during registration and can change it in their user control panel.',
 	'WARNINGS_EXPIRE'				=> 'Cảnh cáo trong vòng',
-	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Số ngày trải qua trước khi một cảnh cáo tự động hết hiệu lực từ bản ghi của một thành viên.',
+	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Number of days that will elapse before a warning will automatically expire from a user’s record. Set this value to 0 to make warnings permanent.',
 
 	'ACP_BOARD_FEATURES_EXPLAIN'	=> 'Với công cụ này, bạn có thể kích hoạt hay vô hiệu một vài chức năng trong hệ thống.',
 
@@ -9897,6 +9956,7 @@ $lang = array_merge($lang, array(
 	'ALLOW_TOPIC_NOTIFY'		=> 'Cho phép theo dõi chủ đề',
 	'BOARD_PM'					=> 'Cho phép gửi tin nhắn',
 	'BOARD_PM_EXPLAIN'			=> 'Tuỳ chọn kích hoạt hay vô hiệu chức năng gửi tin nhắn trong hệ thống đối với tất cả thành viên.',
+	'ALLOW_BOARD_NOTIFICATIONS' => 'Allow board notifications',
 
 	'ACP_AVATAR_SETTINGS_EXPLAIN'	=> 'Hình đại diện thường là những hình ảnh nhỏ, những hình đơn mà thành viên đính kèm trong thông tin cá nhân của mình. Tuỳ thuộc vào giao diện được sử dụng, hình đại diện thường hiển thị bên dưới tên thành viên trong phần xem chủ đề. Với công cụ này, bạn có thể thay đổi cách sử dụng hình đại diện của thành viên. Lưu ý rằng trong trường hợp bạn kích hoạt tuỳ chọn cho phép thành viên tải lên hình đại diện, bạn cần phải tạo thư mục mang tên bên dưới trong hệ thống theo đúng đường dẫn đã thiết lập và chắc chắn thiết lập cấp phép có thể ghi cho thư mục này trên máy chủ. Bạn cũng cần lưu ý rằng dung lượng tập tin hạn chế cho hình đại diện chỉ áp dụng cho những hình đại diện được tải lên và không có tác dụng đối với những hình đại diện được liên kết từ website khác.',
 
@@ -10006,6 +10066,7 @@ $lang = array_merge($lang, array(
 
 	'ACC_ACTIVATION'				=> 'Kích hoạt tài khoản',
 	'ACC_ACTIVATION_EXPLAIN'		=> 'Tuỳ chọn này cho phép bạn quyết định cách thức kích hoạt tài khoản thành viên khi đăng ký mới. Bạn cũng có thể cho ngưng đăng ký thành viên mới với tuỳ chọn này.',
+	'ACC_ACTIVATION_WARNING'		=> 'Please note that the currently selected activation method requires emails to be enabled, otherwise registration will be disabled. We recommend to either select a different activation method or reenable emails.',
 	'NEW_MEMBER_POST_LIMIT'			=> 'Giới hạn gửi bài thành viên mới',
 	'NEW_MEMBER_POST_LIMIT_EXPLAIN'	=> 'Thành viên mới trong nhóm <em>Thành viên mới đăng ký</em> cho tới khi họ đạt một số giới hạn về bài viết. Bạn có thể dùng nhóm này để hạn chế họ trong việc sử dụng Tin nhắn riêng để dễ dàng kiểm tra Tin nhắn riêng. <strong>Đặt giá trị này thành 0 để vô hiệu chức năng này.</strong>',
 	'NEW_MEMBER_GROUP_DEFAULT'		=> 'Thiết đặt nhóm Thành viên mới đăng ký thành mặc định',
@@ -10303,8 +10364,11 @@ $lang = array_merge($lang, array(
 
 	'TPL_ALLOW_PHP'					=> 'Cho phép sử dụng mã PHP trong các tập tin khuôn mẫu',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Nếu tuỳ chọn này được bật, các lệnh <code>PHP</code> và <code>INCLUDEPHP</code> sẽ có thể được sử dụng và biên dịch trong các tập tin khuôn mẫu.',
+	'UPLOAD_CERT_VALID'				=> 'Validate upload certificate',
+	'UPLOAD_CERT_VALID_EXPLAIN'		=> 'If enabled, certificates of remote uploads will be validated. This requires the CA bundle to be defined by the <samp>openssl.cafile</samp> or <samp>curl.cainfo</samp> setting in your php.ini.',
 
 	'ACP_EMAIL_SETTINGS_EXPLAIN'	=> 'Những thiết lập này được sử dụng khi hệ thống gửi Email đến các thành viên khác. Hãy chắc chắn địa chỉ Email liên hệ mà bạn nhập vào là hợp lệ, bất kỳ thư rác hay Email không gửi được nào có khả năng sẽ được gửi đến địa chỉ này. Nếu máy chủ của bạn không hỗ trợ gửi Email thông qua PHP, bạn có thể thay thế bằng cách gửi Email trực tiếp thông qua máy chủ SMTP. Điều này yêu cầu bạn phải cung cấp một địa chỉ máy chủ SMTP chính xác cho hệ thống biết. Bạn có thể hỏi nhà cung cấp dịch vụ lưu trữ Web của bạn nếu cần thiết và đừng xác định những máy chủ đã quá lạc hậu! Nếu máy chủ SMTP yêu cầu phải xác thực và chỉ khi thực sự được yêu cầu, bạn hãy cung cấp cho hệ thống biết tên tài khoản, mật khẩu đăng nhập và phương pháp xác thực của máy chủ SMTP.',
+
 	'ADMIN_EMAIL'					=> 'Nhận những thông tin qua Email từ quản trị viên',
 	'ADMIN_EMAIL_EXPLAIN'			=> 'Địa chỉ Email này được sử dụng làm địa chỉ Email của người gửi trên tất cả các Email được gửi đi và địa chỉ Email hỗ trợ kỹ thuật. Nó sẽ luôn luôn được sử dụng trong phần <samp>Địa chỉ quay về</samp> và <samp>Địa chỉ người gửi</samp> trong các Email.',
 	'BOARD_EMAIL_FORM'				=> 'Cho phép thành viên gửi Email từ website',
@@ -10323,6 +10387,8 @@ $lang = array_merge($lang, array(
 	'EMAIL_SIG_EXPLAIN'				=> 'Chữ ký được đính kèm trong tất cả các Email được gửi đi từ website.',
 	'ENABLE_EMAIL'					=> 'Bật chức năng gửi Email trong hệ thống',
 	'ENABLE_EMAIL_EXPLAIN'			=> 'Nếu tắt tuỳ chọn này, sẽ không có Email nào được gửi đi từ diễn đàn.',
+	'SEND_TEST_EMAIL'				=> 'Send a test email',
+	'SEND_TEST_EMAIL_EXPLAIN'		=> 'This will send a test email to the address defined in your account.',
 	'SMTP_AUTH_METHOD'				=> 'Chọn phương pháp xác thực cho SMTP',
 	'SMTP_AUTH_METHOD_EXPLAIN'		=> 'Chỉ sử dụng nếu tên đăng nhập/mật khẩu xác thực đã được thiết lập. Hãy yêu cầu nhà cung cấp dịch vụ lưu trữ Web của bạn nếu bạn không chắc chắn phải chọn phương pháp nào.',
 	'SMTP_CRAM_MD5'					=> 'CRAM-MD5',
@@ -10338,6 +10404,7 @@ $lang = array_merge($lang, array(
 	'SMTP_SETTINGS'					=> 'Thiết lập SMTP',
 	'SMTP_USERNAME'					=> 'Tên đăng nhập SMTP',
 	'SMTP_USERNAME_EXPLAIN'			=> 'Chỉ nhập vào tên đăng nhập nếu máy chủ SMTP của bạn yêu cầu.',
+	'TEST_EMAIL_SENT'				=> 'The test email has been sent.<br />If you don’t receive it, please check your emails configuration.<br /><br />If you require assistance, please visit the <a href="https://www.phpbb.com/community/">phpBB support forums</a>.',
 	'USE_SMTP'						=> 'Sử dụng máy chủ SMTP để gửi Email',
 	'USE_SMTP_EXPLAIN'				=> 'Bật tuỳ chọn này nếu bạn muốn gửi Email thông qua một tên miền thay cho hàm gửi Email của PHP.',
 
@@ -10567,8 +10634,7 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'Cơ sở dữ liệu',
-	'ACP_CAT_DOT_MODS'			=> 'MOD',
-	'ACP_CAT_DOT_MODS'			=> 'MOD',
+	'ACP_CAT_DOT_MODS'			=> 'Loại tập tin',
 	'ACP_CAT_FORUMS'			=> 'Chuyên mục',
 	'ACP_CAT_GENERAL'			=> 'Tổng quát',
 	'ACP_CAT_MAINTENANCE'		=> 'Bảo trì',
@@ -10733,6 +10799,9 @@ $lang = array_merge($lang, array(
 
 	'BACK'					=> 'Quay lại',
 
+	'CONTAINER_EXCEPTION' => 'phpBB encountered an error building the container due to an installed extension. For this reason, all extensions have been temporarily disabled. Please try purging your forum cache. All extensions will automatically be re-enabled once the container error is resolved. If this error continues, please visit <a href="https://www.phpbb9.de">phpbb9.de</a> for support.',
+	'EXCEPTION' => 'Exception',
+
 	'COLOUR_SWATCH'			=> 'Bảng mã màu',
 	'CONFIG_UPDATED'		=> 'Cấu hình hệ thống đã được cập nhật thành công.',
 	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
@@ -10743,7 +10812,7 @@ $lang = array_merge($lang, array(
 	'DEACTIVATE'				=> 'Ngưng kích hoạt',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'Đường dẫn bạn vừa nhập “%s” không tồn tại.',
 	'DIRECTORY_NOT_DIR'			=> 'Đường dẫn bạn vừa nhập “%s” không phải là một thư mục.',
-	'DIRECTORY_NOT_WRITABLE'	=> 'Đường dẫn bạn vừa nhập “%s” không thể ghi.',
+	'DIRECTORY_NOT_WRITABLE'	=> 'Directory not writable',
 	'DISABLE'					=> 'Vô hiệu',
 	'DOWNLOAD'					=> 'Tải về',
 	'DOWNLOAD_AS'				=> 'Tải về dưới dạng',
@@ -10794,10 +10863,11 @@ $lang = array_merge($lang, array(
 	'PARSE_URLS'						=> 'Phân tách liên kết',
 	'PERMISSIONS_TRANSFERRED'			=> 'Đã chuyển thành công cấp phép từ <strong>%s</strong>, bây giờ bạn có thể truy cập chuyên mục này với cấp phép thành viên đã chuyển đến.<br />Lưu ý rằng những cấp phép dành cho quản trị viên sẽ không được chuyển đến. Bạn có thể trả lại những thiết lập cấp phép của mình bất cứ lúc nào.',
 	'PERMISSIONS_TRANSFERRED_EXPLAIN'	=> 'Bạn hiện đang có những thiết lập cấp phép từ “%1$s”. Bạn có thể truy cập vào hệ thống với thiết lập cấp phép thành viên này nhưng không thể truy cập được vào bảng điều khiển dành cho quản trị viên bởi vì những thiết lập cấp phép dành cho người quản trị không được chuyển đến bạn. Bạn cũng có thể <a href="%2$s"><strong>phục hồi lại thiết lập cấp phép của mình</strong></a> bất cứ lúc nào bạn muốn.',
-	'PIXEL'								=> 'px',
 	'PROCEED_TO_ACP'					=> '%sChuyển đến bảng điều khiển của quản trị viên%s',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Thông báo',
 	'REMIND'							=> 'Nhắc nhở',
+	'REPARSE_LOCK_ERROR'				=> 'Reparsing is already in progress by another process.',
 	'RESYNC'							=> 'Đồng bộ',
 
 	'RUNNING_TASK'			=> 'Running task: %s.',
@@ -10846,11 +10916,23 @@ $lang = array_merge($lang, array(
 
 	'DATABASE_SIZE'			=> 'Dung lượng cơ sở dữ liệu',
 
+	// Enviroment configuration checks, mbstring related
+	'ERROR_MBSTRING_FUNC_OVERLOAD'					=> 'Function overloading is improperly configured',
+	'ERROR_MBSTRING_FUNC_OVERLOAD_EXPLAIN'			=> '<var>mbstring.func_overload</var> must be set to either 0 or 4. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION'			=> 'Transparent character encoding is improperly configured',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION_EXPLAIN'	=> '<var>mbstring.encoding_translation</var> must be set to 0. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_INPUT'						=> 'HTTP input character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_INPUT_EXPLAIN'				=> '<var>mbstring.http_input</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_OUTPUT'					=> 'HTTP output character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_OUTPUT_EXPLAIN'			=> '<var>mbstring.http_output</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+
 	'FILES_PER_DAY'		=> 'Số tập tin đính kèm/ngày',
 	'FORUM_STATS'		=> 'Thống kê hệ thống',
 
 	'GZIP_COMPRESSION'	=> 'Chế độ nén Gzip',
 
+	'PIXEL'								=> 'px',
+	
 	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'Không có sẵn',
 	'NUMBER_FILES'		=> 'Tổng số tập tin đính kèm',
@@ -10858,6 +10940,8 @@ $lang = array_merge($lang, array(
 	'NUMBER_TOPICS'		=> 'Tổng số chủ đề',
 	'NUMBER_USERS'		=> 'Tổng số thành viên',
 	'NUMBER_ORPHAN'		=> 'Tổng số tập tin đính kèm không được sử dụng',
+
+	'PHP_VERSION_OLD'	=> 'The version of PHP on this server will no longer be supported by future versions of phpBB. %sDetails%s',
 
 	'POSTS_PER_DAY'		=> 'Số bài viết/ngày',
 
@@ -10904,10 +10988,16 @@ $lang = array_merge($lang, array(
 	'VALUE'						=> 'Giá trị',
 	'VERSIONCHECK_FAIL'			=> 'Kiểm tra phiên bản thất bại.',
 	'VERSIONCHECK_FORCE_UPDATE'	=> 'Kiểm tra lại phiên bản',
+	'VERSION_CHECK'				=> 'Kiểm tra phiên bản',
+	'VERSION_CHECK_EXPLAIN'		=> 'Tiến hành kiểm tra phiên bản để chắc chắn rằng hệ thống của bạn đang sử dụng phiên bản phpBB mới nhất.',
+	'VERSION_NOT_UP_TO_DATE_ACP'	=> 'Phiên bản phpBB bạn đang sử dụng chưa được cập nhật đến phiên bản mới nhất.<br />Trong phần bên dưới, bạn sẽ tìm thấy liên kết đến thông báo phát hành của phiên bản phpBB mới nhất cùng với những hướng dẫn cách tiến hành cập nhật cho hệ thống của mình.',
+	'VERSION_NOT_UP_TO_DATE_TITLE'	=> 'Phiên bản phpBB bạn đang sử dụng chưa được cập nhật.',
+	'VERSION_UP_TO_DATE_ACP'	=> 'Phiên bản phpBB bạn đang sử dụng là phiên bản mới nhất, không có cập nhật mới nào cho phiên bản này. Bạn không cần phải tiến hành cập nhật bản cài đặt này.',
 	'VIEW_ADMIN_LOG'			=> 'Xem ghi nhận về quản trị viên',
 	'VIEW_INACTIVE_USERS'		=> 'Xem các thành viên chưa kích hoạt',
 
 	'WELCOME_PHPBB'			=> 'Chào mừng bạn đã đến với hệ thống phpBB',
+	'WRITABLE_CONFIG'		=> 'Your config file (config.php) is currently world-writable. We strongly encourage you to change the permissions to 640 or at least to 644 (for example: <a href="http://en.wikipedia.org/wiki/Chmod" rel="external">chmod</a> 640 config.php).',
 
 	'BROWSER_LANGUAGE'			=> 'Enable Browser Language Detection',
 	'BROWSER_LANGUAGE_EXPLAIN'	=> 'Enables the browser language detection for guest users not to use the default language of the board. Choose no to disable the feature.',

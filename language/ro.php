@@ -1725,6 +1725,86 @@ $lang = array_merge($lang, array(
 #######language/en/install.php#######
 
 $lang = array_merge($lang, array(
+	'INSTALL_PANEL'	=> 'Panoul de instalare',
+	'SELECT_LANG'	=> 'Selectare limbă',
+	'STAGE_INSTALL'	=> 'Installing phpBB',
+
+	// Introduction page
+	'INTRODUCTION_TITLE'	=> 'Introducere',
+	'INTRODUCTION_BODY'		=> 'Welcome to phpBB3!<br /><br />phpBB® is the most widely used open source bulletin board solution in the world. phpBB3 is the latest installment in a package line started in 2000. Like its predecessors, phpBB3 is feature-rich, user-friendly, and fully supported by the phpBB Team. phpBB3 greatly improves on what made phpBB2 popular, and adds commonly requested features that were not present in previous versions. We hope it exceeds your expectations.<br /><br />This installation system will guide you through installing phpBB3, updating to the latest version of phpBB3 from past releases, as well as converting to phpBB3 from a different discussion board system (including phpBB2). For more information, we encourage you to read <a href="../docs/INSTALL.html">the installation guide</a>.<br /><br />To read the phpBB3 license or learn about obtaining support and our stance on it, please select the respective options from the side menu. To continue, please select the appropriate tab above.',
+
+	// Support page
+	'SUPPORT_TITLE'		=> 'Suport',
+	'SUPPORT_BODY_INSTALL'	=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/docs/en/3.1/ug/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
+
+	// License
+	'LICENSE_TITLE'		=> 'Licenţa generală publică',
+
+	// Install page
+	'INSTALL_INTRO'			=> 'Bine aţi venit la instalare',
+	'INSTALL_INTRO_BODY'	=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
+
+	<ul>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
+	</ul>
+
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
+
+	<p>phpBB3 supports the following databases:</p>
+	<ul>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
+		<li>SQLite 2.8.2+</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
+		<li>Oracle</li>
+	</ul>
+
+	<p>Only those databases supported on your server will be displayed.',
+
+	'ACP_LINK'	=> 'Take me to <a href="%1$s">the ACP</a>',
+
+	'INSTALL_PHPBB_INSTALLED'		=> 'phpBB is already installed.',
+	'INSTALL_PHPBB_NOT_INSTALLED'	=> 'phpBB is not installed yet.',
+
+
+	// Filesystem requirements
+	'FILE_NOT_EXISTS'			=> 'File not exists',
+	'FILE_NOT_EXISTS_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to exist.',
+	'FILE_NOT_WRITABLE'			=> 'File not writable',
+	'FILE_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to be writable.',
+
+	'DIRECTORY_NOT_EXISTS'				=> 'Directory not exists',
+	'DIRECTORY_NOT_EXISTS_EXPLAIN'		=> 'To be able to install phpBB the %1$s directory needs to exist.',
+	'DIRECTORY_NOT_WRITABLE'			=> 'Directory not writable',
+	'DIRECTORY_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s directory needs to be writable.',
+
+	// Server requirements
+	'PHP_VERSION_REQD'					=> 'PHP version',
+	'PHP_VERSION_REQD_EXPLAIN'			=> 'phpBB requires PHP version 5.4.0 or higher.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
+	'PCRE_UTF_SUPPORT'					=> 'Suport PCRE UTF-8',
+	'PCRE_UTF_SUPPORT_EXPLAIN'			=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_JSON_SUPPORT'					=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'			=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_SUPPORTED_DB'					=> 'Baze de date suportate',
+	'PHP_SUPPORTED_DB_EXPLAIN'			=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
+
+	'RETEST_REQUIREMENTS'	=> 'Retest requirements',
+
+	'STAGE_REQUIREMENTS'	=> 'Check requirements',
+
+	'INST_ERR_MISSING_DATA'		=> 'Trebuie să completaţi toate câmpurile din acest bloc',
+
+	'TIMEOUT_DETECTED_TITLE'	=> 'The installer detected a timeout',
+	'TIMEOUT_DETECTED_MESSAGE'	=> 'The installer has detected a timeout, you may try to refresh the page, which may lead to data corruption. We suggest that you either increase your timeout settings or try to use the CLI.',
+
 	'ADMIN_CONFIG'				=> 'Configurare administrator',
 	'ADMIN_PASSWORD'			=> 'Parolă administrator',
 	'ADMIN_PASSWORD_CONFIRM'	=> 'Confirmaţi parola administratorului',
@@ -1788,7 +1868,7 @@ $lang = array_merge($lang, array(
 	'CONV_ERROR_INSERT_BOTGROUP'		=> 'Nu s-a putut insera robot în tabelul roboţilor.',
 	'CONV_ERROR_INSERT_USER_GROUP'		=> 'Nu s-a putut insera utilizator în tabelul user_group.',
 	'CONV_ERROR_MESSAGE_PARSER'			=> 'Eroare de mesaj analizată',
-	'CONV_ERROR_NO_AVATAR_PATH'			=> 'Notă către dezvoltator: trebuie să specificaţi $convertor[\'avatar_path\'] pentru a folosi %s.',
+	'CONV_ERROR_NO_AVATAR_PATH'			=> 'Note to developer: you must specify convertor[avatar_path] to use %s.',
 	'CONV_ERROR_NO_FORUM_PATH'			=> 'Calea relativă către sursa forumului nu a fost specificată.',
 	'CONV_ERROR_NO_GALLERY_PATH'		=> 'Notă către dezvoltator: trebuie să specificaţi $convertor[\'avatar_gallery_path\'] pentru a folosi %s.',
 	'CONV_ERROR_NO_GROUP'				=> 'Grupul "%1$s" nu a putut fi găsit în %2$s.',
@@ -1880,65 +1960,45 @@ $lang = array_merge($lang, array(
 		<p>Unified Convertor Framework phpBB suportă conversia phpBB 2.0.x şi a altor sisteme de forumuri la phpBB3. Dacă aveţi un forum existent pe care doriţi să-l convertiţi, vă rugăm să <a href="%2$s">continuaţi cu convertorul</a>.</p>
 		<h2>Să porniţi cu phpBB3!</h2>
 		<p>Accesând butonul de mai jos, veţi ajunge la un formular folosit pentru a trimite informaţii statistice la phpBB direct din Panoul administratorului (ACP). Acordaţi-vă puţin timp pentru a examina opţiunile disponibile. Reţineţi că ajutorul este disponibil online via <a href="http://www.phpbb.com/support/documentation/3.0/">Documentaţie</a>, <a href="%3$s">fişierul CITEŞTE-MĂ</a> şi <a href="http://www.phpbb.com/community/viewforum.php?f=46">forumurile de suport</a>.</p><p><strong>Vă rugăm să ştergeţi, să mutaţi sau să redenumiţi directorul install înainte de a accesa forumul propriu. Dacă acest director este în continuare prezent, doar Panoul administratorului (PA) va fi disponibil.</strong>',
-	'INSTALL_INTRO'				=> 'Bine aţi venit la instalare',
 
-	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
-
-	<ul>
-		<li>The Database Type - the database you will be using.</li>
-		<li>The Database server hostname or DSN - the address of the database server.</li>
-		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
-		<li>The Database name - the name of the database on the server.</li>
-		<li>The Database username and Database password - the login data to access the database.</li>
-	</ul>
-
-	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
-
-	<p>phpBB3 supports the following databases:</p>
-	<ul>
-		<li>MySQL 3.23 or above (MySQLi supported)</li>
-		<li>PostgreSQL 8.3+</li>
-		<li>SQLite 2.8.2+</li>
-		<li>SQLite 3.6.15+</li>
-		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
-		<li>MS SQL Server 2005 or above (native)</li>
-		<li>Oracle</li>
-	</ul>
-
-	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'Pentru a începe instalarea apăsaţi butonul de mai jos.',
 	'INSTALL_LOGIN'				=> 'Autentificare',
 	'INSTALL_NEXT'				=> 'Următoarea etapă',
 	'INSTALL_NEXT_FAIL'			=> 'Anumite teste au eşuat şi trebuie să corectaţi această problemă înainte de a trece la pasul următor. Eşuarea acestora ar putea rezulta printr-o instalare incompletă.',
 	'INSTALL_NEXT_PASS'			=> 'Toate testele de bază au fost efectuate cu succes şi puteţi continua cu următoarea etapă a instalării. Dacă aţi schimbat orice permisiuni, module, etc., dacă doriţi puteţi purcede la retestarea acestora.',
-	'INSTALL_PANEL'				=> 'Panoul de instalare',
 	'INSTALL_SEND_CONFIG'		=> 'Din păcate phpBB nu a putut scrie informaţiile de configurare direct în config.php. Această situaţie poate rezulta din cauză că fişierul nu este accesibil la scriere. Va fi afişat mai jos un număr de opţiuni ajutându-vă la finalizarea instalării fişierului config.php.',
 	'INSTALL_START'				=> 'Porneşte instalarea',
 	'INSTALL_TEST'				=> 'Testează din nou',
-	'INST_ERR'					=> 'Eroare la instalare',
-	'INST_ERR_DB_CONNECT'		=> 'Nu s-a putut efectua conexiunea către baza de date, consultaţi mai jos mesajul de eroare',
+
+	// Errors
+	'INST_ERR_NO_DB'			=> 'Nu s-a putut încărca modulul PHP pentru tipul bazei de date selectat',
+	'INST_ERR_DB_INVALID_PREFIX'	=> 'The prefix you entered is invalid. It must start with a letter and must only contain letters, numbers and underscores.',
+	'INST_ERR_PREFIX_TOO_LONG'	=> 'Prefixul tabelei specificat este prea lung. Lungimea maximă este de %d caractere.',
+	'INST_ERR_DB_NO_NAME'		=> 'Niciun nume specificat pentru baza de date',
 	'INST_ERR_DB_FORUM_PATH'	=> 'Fişierul bazei de date specificat este în interiorul arborelui de directoare al forumului. Ar trebui să puneţi acest fişier intr-o locaţie web neaccesibilă',
+	'INST_ERR_DB_CONNECT'		=> 'Nu s-a putut efectua conexiunea către baza de date, consultaţi mai jos mesajul de eroare',
 	'INST_ERR_DB_NO_ERROR'		=> 'Niciun mesaj de eroare',
+	'INST_ERR_PREFIX'			=> 'Tabelele cu prefixul specificat există deja, vă rugăm sa alegeţi un alt prefix.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'Versiunea MySQL instalată pe acest server este incompatibilă cu opţiunea “MySQL cu extensie MySQLi” pe care aţi selectat-o. În loc de aceasta, vă rugăm să încercaţi opţiunea “MySQL”.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'Versiunea extensiei SQLite pe care aţi instalat-o este prea veche, trebuie să fie actulizată la cel puţin 2.8.2.',
 	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'Versiunea Oracle instalată pe acest server necesită setarea valorii <var>UTF8</var> în parametrul <var>NLS_CHARACTERSET</var>. Fie actualizaţi instalarea la 9.2+ sau schimbaţi parametrii.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'Baza de date selectată nu a fost creată în codarea <var>UNICODE</var> sau <var>UTF8</var>. Încercaţi să instalaţi forumul cu baza de date în codarea <var>UNICODE</var> sau <var>UTF8</var>',
-	'INST_ERR_DB_NO_NAME'		=> 'Niciun nume specificat pentru baza de date',
+	'INST_SCHEMA_FILE_NOT_WRITABLE'	=> 'The schema file is not writable',
+
+	'EMAIL_CONFIG'	=> 'E-mail configuration',
+
+	'INST_ERR'					=> 'Eroare la instalare',
 	'INST_ERR_EMAIL_INVALID'	=> 'Adresa de email pe care aţi specificat-o este invalidă',
 	'INST_ERR_EMAIL_MISMATCH'	=> 'Adresele de email pe care le-aţi specificat nu se potrivesc.',
 	'INST_ERR_FATAL'			=> 'Eroare fatală de instalare',
 	'INST_ERR_FATAL_DB'			=> 'O eroare fatală şi nerecuperabilă a apărut în baza de date. Aceasta poate fi cauzată datorită faptului că utilizatorul specificat nu are drepturile necesare pentru comenzi de tipul <code>CREATE TABLES</code> sau <code>INSERT</code>, etc. Mai multe informaţii s-ar putea să găsiţi mai jos. Vă rugăm să contactaţi provider-ul hostului în primă instanţă sau forumurile de suport phpBB pentru asistenţă.',
 	'INST_ERR_FTP_PATH'			=> 'Nu s-a putut schimba calea către directorul specificat, verificaţi calea.',
 	'INST_ERR_FTP_LOGIN'		=> 'Nu s-a putut efectua autentificarea pe serverul FTP, verificaţi numele de utilizator şi parola',
-	'INST_ERR_MISSING_DATA'		=> 'Trebuie să completaţi toate câmpurile din acest bloc',
-	'INST_ERR_NO_DB'			=> 'Nu s-a putut încărca modulul PHP pentru tipul bazei de date selectat',
 	'INST_ERR_PASSWORD_MISMATCH'	=> 'Parolele specificate nu se potrivesc.',
 	'INST_ERR_PASSWORD_TOO_LONG'	=> 'Parola specificată este prea lungă. Lungimea maximă este de 30 de caractere.',
 	'INST_ERR_PASSWORD_TOO_SHORT'	=> 'Parola specificată este prea scurtă. Lungimea minimă este de 6 caractere.',
-	'INST_ERR_PREFIX'			=> 'Tabelele cu prefixul specificat există deja, vă rugăm sa alegeţi un alt prefix.',
 	'INST_ERR_PREFIX_INVALID'	=> 'Prefixul tabelei specificat este invalid pentru această bază de date. Vă rugăm să încercaţi alt nume, fără a mai folosi caractere precum cratima',
-	'INST_ERR_PREFIX_TOO_LONG'	=> 'Prefixul tabelei specificat este prea lung. Lungimea maximă este de %d caractere.',
 	'INST_ERR_USER_TOO_LONG'	=> 'Numele de utilizator specificat este prea lung. Lungimea maximă este de 20 de caractere.',
 	'INST_ERR_USER_TOO_SHORT'	=> 'Numele de utilizator specificat este prea scurt. Lungimea minimă este de 3 caractere.',
 	'INVALID_PRIMARY_KEY'		=> 'Cheie primară invalidă : %s',
@@ -1973,15 +2033,15 @@ $lang = array_merge($lang, array(
 	'OVERVIEW_BODY'				=> 'Bine aţi venit la phpBB3!<br /><br />phpBB™ este cea mai folosită soluţie pe scară largă de tip forum bazată pe open source. phpBB3 este ultima versiune dintr-o serie care a început în anul 2000. Ca şi predecesorii săi, phpBB3 este îmbunătăţit, uşor de utilizat şi suportat de către echipa phpBB. De asemenea, phpBB3 îmbunătăţeşte ceea ce a facut phpBB2 atât de popular şi adaugă facilităţi cerute ce nu au fost prezente în versiunile anterioare. Noi sperăm că va depăşi aşteptările dumneavoastră.<br /><br />Acest sistem de instalare vă va ghida prin procesul de instalare al phpBB3, actualizându-l la ultima versiune dintr-o versiune anterioară, putând să-l convertiţi dintr-un alt sistem de forumuri (incluzând phpBB2). Pentru mai multe informaţii, vă încurajăm să consultaţi <a href="../docs/INSTALL.html">ghidul de instalare</a>.<br /><br />Pentru a citi licenţa phpBB3 sau pentru a afla cum se obţine suportul, vă rugăm să selectaţi opţiunile potrivite din meniul de pe margine. Pentru a continua, vă rugăm să selectaţi secţiunea TAB de mai sus.',
 
 	'PCRE_UTF_SUPPORT'				=> 'Suport PCRE UTF-8',
-	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB <strong>nu</strong> va rula dacă instalarea PHP nu este compilată cu suport UTF-8 în extensia PCRE',
-	'PHP_GETIMAGESIZE_SUPPORT'			=> 'Funcţia PHP getimagesize() este disponibilă',
-	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Necesar</strong> - Pentru ca phpBB să funcţioneze corect, funcţia getimagesize trebuie să fie disponibilă.',
+	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
 	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
-	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'Module opţionale',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>Opţional</strong> - Aceste module sau aplicaţii sunt opţionale. Totuşi, dacă ele sunt disponibile, acestea vor activa funcţionalităţi suplimentare.',
 	'PHP_SUPPORTED_DB'				=> 'Baze de date suportate',
-	'PHP_SUPPORTED_DB_EXPLAIN'		=> '<strong>Cerinţe</strong> - Trebuie să aveţi suport pentru cel puţin o bază de date compatibilă cu PHP. Dacă niciun modul al bazei de date nu este afişat ca fiind disponibil, ar trebui să contactaţi provider-ul hostului sau să revizuiţi pentru ajutor documentaţia relevantă de instalare a PHP.',
+	'PHP_SUPPORTED_DB_EXPLAIN'		=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
 	'PHP_REGISTER_GLOBALS'			=> 'Setarea PHP <var>register_globals</var> este dezactivată',
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'phpBB va rula în continuare dacă această setare este activată, dar dacă este posibil, este recomandat ca register_globals să fie dezactivată din motive de securitate.',
 	'PHP_SAFE_MODE'					=> 'Mod protejat',
@@ -1989,7 +2049,7 @@ $lang = array_merge($lang, array(
 	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'Setarea PHP <var>allow_url_fopen</var> este disponibilă',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>Opţional</strong> - Această setare este opţională, oricum anumite funcţii phpBB ca avatarele la distanţă nu vor funcţiona corect fără ea.',
-	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version',
 	'POST_ID'						=> 'Identificator mesaj',
 	'PREFIX_FOUND'					=> 'O scanare a tabelelor a arătat că instalarea este validă folosind <strong>%s</strong> ca şi prefix pentru tabelă.',
 	'PREPROCESS_STEP'				=> 'Execută preprocesarea funcţiilor/interogărilor',
@@ -2005,7 +2065,6 @@ $lang = array_merge($lang, array(
 
 	'SCRIPT_PATH'				=> 'Cale script',
 	'SCRIPT_PATH_EXPLAIN'		=> 'Calea unde phpBB este localizat relativ la numele domeniului, de exemplu <samp>/phpBB3</samp>',
-	'SELECT_LANG'				=> 'Selectare limbă',
 	'SERVER_CONFIG'				=> 'Configuraţie server',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Indexul de căutare nu a fost convertit',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Vechiul index de căutare nu a fost convertit. Căutările vor genera întotdeauna rezultate goale. Pentru a crea un nou index de căutare accesaţi Panoul de control al administratorului, selectaţi Întreţinere şi alegeţi Indexul căutării din submeniu.',
@@ -2022,7 +2081,6 @@ $lang = array_merge($lang, array(
 	'STAGE_FINAL'				=> 'Ultima etapă',
 	'STAGE_INTRO'				=> 'Introducere',
 	'STAGE_IN_PROGRESS'			=> 'Conversie în progres',
-	'STAGE_REQUIREMENTS'		=> 'Cerinţe',
 	'STAGE_SETTINGS'			=> 'Setări',
 	'STARTING_CONVERT'			=> 'Începe procesul de conversie',
 	'STEP_PERCENT_COMPLETED'	=> 'Pasul <strong>%d</strong> din <strong>%d</strong>',
@@ -9857,7 +9915,7 @@ $lang = array_merge($lang, array(
 	'GUEST_STYLE'					=> 'Guest style',
 	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Suprascrie stilul utilizatorului',
-	'OVERRIDE_STYLE_EXPLAIN'		=> 'Înlocuieşte stilul utilizatorului cu cel standard.',
+	'ACP_OVERRIDE_STYLE_EXPLAIN'	=> 'Replaces user’s (and guest’s) style with the style as defined under "Default style".',
 	'SITE_DESC'						=> 'Descriere site',
 	'SITE_HOME_TEXT'				=> 'Main website text',
 	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
@@ -9865,8 +9923,9 @@ $lang = array_merge($lang, array(
 	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Nume site',
 	'SYSTEM_TIMEZONE'				=> 'Fusul orar al vizitatorului',
+	'SYSTEM_TIMEZONE_EXPLAIN'			=> 'Timezone to use for displaying times to users who are not logged in (guests, bots). Logged in users set their timezone during registration and can change it in their user control panel.',
 	'WARNINGS_EXPIRE'				=> 'Durată avertisment',
-	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Numărul zilelor ce trebuie să treacă înainte ca avertismentul să expire automat din înregistrarea unui utilizator. Setați 0 pentru a face avertismentele permanente',
+	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Number of days that will elapse before a warning will automatically expire from a user’s record. Set this value to 0 to make warnings permanent.',
 
 	'ACP_BOARD_FEATURES_EXPLAIN'	=> 'Aici puteţi activa/dezactiva mai multe funcţionalităţi ale forumului',
 
@@ -9897,6 +9956,7 @@ $lang = array_merge($lang, array(
 	'ALLOW_TOPIC_NOTIFY'		=> 'Permite abonarea la subiecte',
 	'BOARD_PM'					=> 'Mesagerie privată',
 	'BOARD_PM_EXPLAIN'			=> 'Activează mesageria privată pentru toţi utilizatorii.',
+	'ALLOW_BOARD_NOTIFICATIONS' => 'Allow board notifications',
 
 	'ACP_AVATAR_SETTINGS_EXPLAIN'	=> 'Avatar-urile sunt în general imagini mici şi unice pe care utilizatorul le poate asocia cu el însuşi. Depinzând de stil, acestea sunt în general afişate sub numele utilizatorului când se vizualizează subiectele. Aici puteţi specifica modul în care utilizatorii pot să-şi defineasca avatarurile (imaginile asociate). Ca să puteţi încărca avataruri trebuie să aveţi creat deja directorul specificat mai jos şi să vă asiguraţi că poate fi scris prin serverul web. De asemenea, reţineţi că dimensiunile limitate ale fişierelor sunt impuse doar la încărcarea avatarelor, ele nu se aplică pentru imaginile aflate la distanţă.',
 
@@ -10006,6 +10066,7 @@ $lang = array_merge($lang, array(
 
 	'ACC_ACTIVATION'				=> 'Activare cont',
 	'ACC_ACTIVATION_EXPLAIN'		=> 'Aceasta setare determină dacă utilizatorii au acces imediat la forum sau dacă este necesară o confirmare. De asemenea, puteţi dezactiva noile înregistrări. Folosirea funcției de email pe forum trebuie să fie permisă pentru a utiliza activarea de către utilizator sau administrator',
+	'ACC_ACTIVATION_WARNING'		=> 'Please note that the currently selected activation method requires emails to be enabled, otherwise registration will be disabled. We recommend to either select a different activation method or reenable emails.',
 	'NEW_MEMBER_POST_LIMIT'			=> 'Limită mesaj pentru noii membrii',
 	'NEW_MEMBER_POST_LIMIT_EXPLAIN'	=> 'Membrii noi apar în grupul <em>Utilizatori înregistraţi recent</em> până când ating acest număr de mesaje. Puteţi folosi acest grup pentru a restricţiona accesul la sistemul de mesagerie privată sau pentru a le revizui mesajele. <strong>Valoarea 0 dezactivează această facilitate.</strong>',
 	'NEW_MEMBER_GROUP_DEFAULT'		=> 'Setează ca standard grupul Utilizatori înregistraţi recent',
@@ -10303,8 +10364,11 @@ $lang = array_merge($lang, array(
 
 	'TPL_ALLOW_PHP'					=> 'Permite php în şabloane',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Dacă această opţiune este activată, <code>PHP</code> şi declaraţiile <code>INCLUDEPHP</code>  vor fi recunoscute şi analizate în şabloane.',
+	'UPLOAD_CERT_VALID'				=> 'Validate upload certificate',
+	'UPLOAD_CERT_VALID_EXPLAIN'		=> 'If enabled, certificates of remote uploads will be validated. This requires the CA bundle to be defined by the <samp>openssl.cafile</samp> or <samp>curl.cainfo</samp> setting in your php.ini.',
 
 	'ACP_EMAIL_SETTINGS_EXPLAIN'	=> 'Această informaţie este folosită când forumul trimite e-mail-uri utilizatorilor proprii. Vă rugăm să vă asiguraţi că adresa de e-mail specificată este validă, orice mesaje ignorate sau nelivrabile vor fi trimise la această adresă. Dacă serverul propriu nu vă asigură un serviciu de e-mail nativ (bazat pe PHP) puteţi trimite mesajele direct folosind SMTP. Această operaţie necesită adresa unui server corespunzător (întrebaţi providerul dacă este necesar). Dacă serverul necesită autentificare (şi numai dacă o face) specificaţi numele de utilizator, parola şi metoda de autentificare.',
+
 	'ADMIN_EMAIL'					=> 'Administratorii pot să îmi trimită informaţii prin e-mail',
 	'ADMIN_EMAIL_EXPLAIN'			=> 'Aceasta va fi folosită ca şi adresa de returnare pentru toate mesajele electronice, adresa e-mail a contactului tehnic. Va fi folosită întotdeauna ca fiind <samp>Calea de returnare</samp> şi <samp>Trimitere</samp> adreselor în e-mail-uri.',
 	'BOARD_EMAIL_FORM'				=> 'Utilizatorii trimit e-mail-uri via forum',
@@ -10323,6 +10387,8 @@ $lang = array_merge($lang, array(
 	'EMAIL_SIG_EXPLAIN'				=> 'Acest text va fi ataşat tuturor e-mail-urilor trimise de către forum.',
 	'ENABLE_EMAIL'					=> 'Activează posibilitatea forumulului să poată trimite e-mailuri',
 	'ENABLE_EMAIL_EXPLAIN'			=> 'Dacă această opţiune este setată ca fiind dezactivată, niciun e-mail nu va fi trimis de către forum. <em>Reţineţi că setările de activare ale contului de utilizator şi administrator impun ca această setare să fie activată. Dacă în secţiunea setărilor activării se foloseşte activarea de către “Utilizator” sau “Administrator”, dezactivând această setare nu va mai necesita activarea conturilor noi.</em>',
+	'SEND_TEST_EMAIL'				=> 'Send a test email',
+	'SEND_TEST_EMAIL_EXPLAIN'		=> 'This will send a test email to the address defined in your account.',
 	'SMTP_AUTH_METHOD'				=> 'Metoda de autentificare pentru SMTP',
 	'SMTP_AUTH_METHOD_EXPLAIN'		=> 'Folosită doar dacă un nume de utilizator/parolă este setat, întrebaţi provider-ul dacă nu sunteţi sigur ce metodă să folosiţi.',
 	'SMTP_CRAM_MD5'					=> 'CRAM-MD5',
@@ -10338,6 +10404,7 @@ $lang = array_merge($lang, array(
 	'SMTP_SETTINGS'					=> 'Setările SMTP',
 	'SMTP_USERNAME'					=> 'Nume de utilizator SMTP',
 	'SMTP_USERNAME_EXPLAIN'			=> 'Specificaţi un nume de utilizator doar dacă serverul SMTP îl cere.',
+	'TEST_EMAIL_SENT'				=> 'The test email has been sent.<br />If you don’t receive it, please check your emails configuration.<br /><br />If you require assistance, please visit the <a href="https://www.phpbb.com/community/">phpBB support forums</a>.',
 	'USE_SMTP'						=> 'Foloseşte serverul SMTP pentru e-mail-uri',
 	'USE_SMTP_EXPLAIN'				=> 'Selectaţi “Da” dacă doriţi să trimiteţi e-mail-uri prin intermediul unui server anume în locul funcţiei locale de mesagerie.',
 
@@ -10567,8 +10634,7 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'Baza de date',
-	'ACP_CAT_DOT_MODS'			=> '.Mod-uri',
-	'ACP_CAT_DOT_MODS'			=> '.Mod-uri',
+	'ACP_CAT_DOT_MODS'			=> 'Extensii',
 	'ACP_CAT_FORUMS'			=> 'Forumuri',
 	'ACP_CAT_GENERAL'			=> 'General',
 	'ACP_CAT_MAINTENANCE'		=> 'Întreţinere',
@@ -10733,6 +10799,9 @@ $lang = array_merge($lang, array(
 
 	'BACK'					=> 'Înapoi',
 
+	'CONTAINER_EXCEPTION' => 'phpBB encountered an error building the container due to an installed extension. For this reason, all extensions have been temporarily disabled. Please try purging your forum cache. All extensions will automatically be re-enabled once the container error is resolved. If this error continues, please visit <a href="https://www.phpbb9.de">phpbb9.de</a> for support.',
+	'EXCEPTION' => 'Exception',
+
 	'COLOUR_SWATCH'			=> 'Schimbă culoarea',
 	'CONFIG_UPDATED'		=> 'Configurarea a fost actualizată cu succes.',
 	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
@@ -10743,7 +10812,7 @@ $lang = array_merge($lang, array(
 	'DEACTIVATE'				=> 'Dezactivează',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'Calea introdusă “%s” nu există.',
 	'DIRECTORY_NOT_DIR'			=> 'Calea introdusă “%s” nu este un director.',
-	'DIRECTORY_NOT_WRITABLE'	=> 'Calea introdusă “%s” nu se poate scrie.',
+	'DIRECTORY_NOT_WRITABLE'	=> 'Directory not writable',
 	'DISABLE'					=> 'Dezactivează',
 	'DOWNLOAD'					=> 'Descarcă',
 	'DOWNLOAD_AS'				=> 'Descarcă sub un nume nou',
@@ -10794,10 +10863,11 @@ $lang = array_merge($lang, array(
 	'PARSE_URLS'						=> 'Analizează link-urile',
 	'PERMISSIONS_TRANSFERRED'			=> 'Permisiunile de la <strong>%s</strong> au fost transferate cu succes, acum puteţi navigha în forum cu permisiunile de utilizator.<br />Permisiunile de administrator nu au fost transferate. Puteţi reveni la permisiunile iniţiale oricând.',
 	'PERMISSIONS_TRANSFERRED_EXPLAIN'	=> 'Acum aveţi permisiunile de la %1$s. Puteţi să accesaţi forumul cu permisiunile utilizatorului, dar nu puteţi să accesaţi Panoul administratorului, pentru că permisiunile administrative nu au fost transferate. Puteţi să <a href="%2$s"><strong>reveniţi la setul de permisiuni ale dumneavoastră</strong></a> oricând.',
-	'PIXEL'								=> 'px',
 	'PROCEED_TO_ACP'					=> '%sContinuă cu Panoul administratorului%s',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Anunţ',
 	'REMIND'							=> 'Reaminteşte',
+	'REPARSE_LOCK_ERROR'				=> 'Reparsing is already in progress by another process.',
 	'RESYNC'							=> 'Resincronizare',
 
 	'RUNNING_TASK'			=> 'Running task: %s.',
@@ -10846,11 +10916,23 @@ $lang = array_merge($lang, array(
 
 	'DATABASE_SIZE'			=> 'Dimensiunile bazei de date',
 
+	// Enviroment configuration checks, mbstring related
+	'ERROR_MBSTRING_FUNC_OVERLOAD'					=> 'Function overloading is improperly configured',
+	'ERROR_MBSTRING_FUNC_OVERLOAD_EXPLAIN'			=> '<var>mbstring.func_overload</var> must be set to either 0 or 4. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION'			=> 'Transparent character encoding is improperly configured',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION_EXPLAIN'	=> '<var>mbstring.encoding_translation</var> must be set to 0. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_INPUT'						=> 'HTTP input character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_INPUT_EXPLAIN'				=> '<var>mbstring.http_input</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_OUTPUT'					=> 'HTTP output character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_OUTPUT_EXPLAIN'			=> '<var>mbstring.http_output</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+
 	'FILES_PER_DAY'		=> 'Fişiere ataşate pe zi',
 	'FORUM_STATS'		=> 'Statistici forum',
 
 	'GZIP_COMPRESSION'	=> 'Compresii GZip',
 
+	'PIXEL'								=> 'px',
+	
 	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'Nu este disponibil',
 	'NUMBER_FILES'		=> 'Număr de fişiere ataşate',
@@ -10858,6 +10940,8 @@ $lang = array_merge($lang, array(
 	'NUMBER_TOPICS'		=> 'Număr de subiecte',
 	'NUMBER_USERS'		=> 'Număr de utilizatori',
 	'NUMBER_ORPHAN'		=> 'Fişiere ataşate fără legături',
+
+	'PHP_VERSION_OLD'	=> 'The version of PHP on this server will no longer be supported by future versions of phpBB. %sDetails%s',
 
 	'POSTS_PER_DAY'		=> 'Mesaje pe zi',
 
@@ -10904,10 +10988,16 @@ $lang = array_merge($lang, array(
 	'VALUE'						=> 'Valoare',
 	'VERSIONCHECK_FAIL'			=> 'Eşuare la încercarea de a obţiune informaţii despre ultima versiune.',
 	'VERSIONCHECK_FORCE_UPDATE'	=> 'Reverificare versiune',
+	'VERSION_CHECK'				=> 'Verificare versiune',
+	'VERSION_CHECK_EXPLAIN'		=> 'Verifică dacă versiunea phpBB instalată este la zi.',
+	'VERSION_NOT_UP_TO_DATE_ACP'	=> 'Versiunea phpBB nu este la zi.<br />Mai jos veţi găsi un link către anunţul de lansare a ultimei versiuni, dar şi instrucţiunile pentru efectuarea actualizării.',
+	'VERSION_NOT_UP_TO_DATE_TITLE'	=> 'Versiunea phpBB instalată nu este la zi.',
+	'VERSION_UP_TO_DATE_ACP'	=> 'Instalarea este la zi, nicio actualizare nu este valabilă pentru versiunea phpBB curentă folosită.',
 	'VIEW_ADMIN_LOG'			=> 'Vezi log-ul administratorului',
 	'VIEW_INACTIVE_USERS'		=> 'Vezi utilizatori inactivi',
 
 	'WELCOME_PHPBB'			=> 'Bine aţi venit la phpBB',
+	'WRITABLE_CONFIG'		=> 'Your config file (config.php) is currently world-writable. We strongly encourage you to change the permissions to 640 or at least to 644 (for example: <a href="http://en.wikipedia.org/wiki/Chmod" rel="external">chmod</a> 640 config.php).',
 
 	'BROWSER_LANGUAGE'			=> 'Enable Browser Language Detection',
 	'BROWSER_LANGUAGE_EXPLAIN'	=> 'Enables the browser language detection for guest users not to use the default language of the board. Choose no to disable the feature.',

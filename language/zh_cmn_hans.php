@@ -1725,6 +1725,86 @@ $lang = array_merge($lang, array(
 #######language/en/install.php#######
 
 $lang = array_merge($lang, array(
+	'INSTALL_PANEL'	=> '安装面板',
+	'SELECT_LANG'	=> '选择语言',
+	'STAGE_INSTALL'	=> 'Installing phpBB',
+
+	// Introduction page
+	'INTRODUCTION_TITLE'	=> '简介',
+	'INTRODUCTION_BODY'		=> 'Welcome to phpBB3!<br /><br />phpBB® is the most widely used open source bulletin board solution in the world. phpBB3 is the latest installment in a package line started in 2000. Like its predecessors, phpBB3 is feature-rich, user-friendly, and fully supported by the phpBB Team. phpBB3 greatly improves on what made phpBB2 popular, and adds commonly requested features that were not present in previous versions. We hope it exceeds your expectations.<br /><br />This installation system will guide you through installing phpBB3, updating to the latest version of phpBB3 from past releases, as well as converting to phpBB3 from a different discussion board system (including phpBB2). For more information, we encourage you to read <a href="../docs/INSTALL.html">the installation guide</a>.<br /><br />To read the phpBB3 license or learn about obtaining support and our stance on it, please select the respective options from the side menu. To continue, please select the appropriate tab above.',
+
+	// Support page
+	'SUPPORT_TITLE'		=> '支持',
+	'SUPPORT_BODY_INSTALL'	=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/docs/en/3.1/ug/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
+
+	// License
+	'LICENSE_TITLE'		=> 'General Public License(GPL协议)',
+
+	// Install page
+	'INSTALL_INTRO'			=> '欢迎安装！',
+	'INSTALL_INTRO_BODY'	=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
+
+	<ul>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
+	</ul>
+
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
+
+	<p>phpBB3 supports the following databases:</p>
+	<ul>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
+		<li>SQLite 2.8.2+</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
+		<li>Oracle</li>
+	</ul>
+
+	<p>Only those databases supported on your server will be displayed.',
+
+	'ACP_LINK'	=> 'Take me to <a href="%1$s">the ACP</a>',
+
+	'INSTALL_PHPBB_INSTALLED'		=> 'phpBB is already installed.',
+	'INSTALL_PHPBB_NOT_INSTALLED'	=> 'phpBB is not installed yet.',
+
+
+	// Filesystem requirements
+	'FILE_NOT_EXISTS'			=> 'File not exists',
+	'FILE_NOT_EXISTS_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to exist.',
+	'FILE_NOT_WRITABLE'			=> 'File not writable',
+	'FILE_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to be writable.',
+
+	'DIRECTORY_NOT_EXISTS'				=> 'Directory not exists',
+	'DIRECTORY_NOT_EXISTS_EXPLAIN'		=> 'To be able to install phpBB the %1$s directory needs to exist.',
+	'DIRECTORY_NOT_WRITABLE'			=> 'Directory not writable',
+	'DIRECTORY_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s directory needs to be writable.',
+
+	// Server requirements
+	'PHP_VERSION_REQD'					=> 'PHP version',
+	'PHP_VERSION_REQD_EXPLAIN'			=> 'phpBB requires PHP version 5.4.0 or higher.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
+	'PCRE_UTF_SUPPORT'					=> 'PCRE UTF-8 支持',
+	'PCRE_UTF_SUPPORT_EXPLAIN'			=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_JSON_SUPPORT'					=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'			=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_SUPPORTED_DB'					=> '支持的数据库',
+	'PHP_SUPPORTED_DB_EXPLAIN'			=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
+
+	'RETEST_REQUIREMENTS'	=> 'Retest requirements',
+
+	'STAGE_REQUIREMENTS'	=> 'Check requirements',
+
+	'INST_ERR_MISSING_DATA'		=> '您必须填完此表格的全部单元',
+
+	'TIMEOUT_DETECTED_TITLE'	=> 'The installer detected a timeout',
+	'TIMEOUT_DETECTED_MESSAGE'	=> 'The installer has detected a timeout, you may try to refresh the page, which may lead to data corruption. We suggest that you either increase your timeout settings or try to use the CLI.',
+
 	'ADMIN_CONFIG'				=> '管理员设置',
 	'ADMIN_PASSWORD'			=> '管理员密码',
 	'ADMIN_PASSWORD_CONFIRM'	=> '确认管理员密码',
@@ -1788,7 +1868,7 @@ $lang = array_merge($lang, array(
 	'CONV_ERROR_INSERT_BOTGROUP'		=> '无法在bots表单中添加bot.',
 	'CONV_ERROR_INSERT_USER_GROUP'		=> '无法在用户组表单中添加用户.',
 	'CONV_ERROR_MESSAGE_PARSER'			=> '内容解析错误',
-	'CONV_ERROR_NO_AVATAR_PATH'			=> '开发者注意: 您必须指定 $convertor[\'avatar_path\'] 以使用 %s.',
+	'CONV_ERROR_NO_AVATAR_PATH'			=> 'Note to developer: you must specify convertor[avatar_path] to use %s.',
 	'CONV_ERROR_NO_FORUM_PATH'			=> '指向源论坛的相对路径未指定.',
 	'CONV_ERROR_NO_GALLERY_PATH'		=> '开发者注意: 您必须指定 $convertor[\'avatar_gallery_path\'] 以使用 %s.',
 	'CONV_ERROR_NO_GROUP'				=> '用户组 "%1$s" 在 %2$s 中无法找到.',
@@ -1880,65 +1960,45 @@ $lang = array_merge($lang, array(
 		<p>phpBB 统一转换框架支持从 phpBB 2.0.x 和其他论坛软件到 phpBB3 的转换. 如果您有一个旧的论坛需要转换, 请 <a href="%2$s">运行转换程序</a>.</p>
 		<h2>使用您的 phpBB3!</h2>
 		<p>点击下面的链接将带您到管理员控制面板 (ACP)下提交统计数据的界面. 花一些时间检查设置选项是否可用. 记住可以使用在线帮助文档位于 <a href="http://www.phpbb.com/support/documentation/3.0/">文档</a> 和 <a href="http://www.phpbb.com/community/viewforum.php?f=46">技术支持版面</a>, 查看 <a href="%3$s">README</a> 以得到更多的信息.</p><p><strong>请在使用论坛前删除, 移动或重命名install文件夹. 如果这个文件夹存在, 只有管理员控制面板才可以访问.</strong></p>',
-	'INSTALL_INTRO'				=> '欢迎安装！',
 
-	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
-
-	<ul>
-		<li>The Database Type - the database you will be using.</li>
-		<li>The Database server hostname or DSN - the address of the database server.</li>
-		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
-		<li>The Database name - the name of the database on the server.</li>
-		<li>The Database username and Database password - the login data to access the database.</li>
-	</ul>
-
-	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
-
-	<p>phpBB3 supports the following databases:</p>
-	<ul>
-		<li>MySQL 3.23 or above (MySQLi supported)</li>
-		<li>PostgreSQL 8.3+</li>
-		<li>SQLite 2.8.2+</li>
-		<li>SQLite 3.6.15+</li>
-		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
-		<li>MS SQL Server 2005 or above (native)</li>
-		<li>Oracle</li>
-	</ul>
-
-	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> '要开始安装，点击下面的按钮。',
 	'INSTALL_LOGIN'				=> '登入论坛',
 	'INSTALL_NEXT'				=> '下一步',
 	'INSTALL_NEXT_FAIL'			=> '某些检测未能通过，您应该在进行下一步之前修正这些问题，不然可能会导致安装无法完成。',
 	'INSTALL_NEXT_PASS'			=> '全部的基础检测都已经通过，您可以进行下一步了。如果您改变了一些配置比如权限、模块等等，您可以选择重新检测。',
-	'INSTALL_PANEL'				=> '安装面板',
 	'INSTALL_SEND_CONFIG'		=> '很抱歉, phpBB没能将配置信息直接写入您的 config.php 文件。这可能是由于此文件不存在或不可写入。下面将给出一些选项帮助您完成设置 config.php。',
 	'INSTALL_START'				=> '开始安装',
 	'INSTALL_TEST'				=> '重新检测',
-	'INST_ERR'					=> '安装进程出错',
-	'INST_ERR_DB_CONNECT'		=> '连接数据库失败，错误信息如下',
+
+	// Errors
+	'INST_ERR_NO_DB'			=> '无法找到指定数据库类型的 PHP 模块',
+	'INST_ERR_DB_INVALID_PREFIX'	=> 'The prefix you entered is invalid. It must start with a letter and must only contain letters, numbers and underscores.',
+	'INST_ERR_PREFIX_TOO_LONG'	=> '您指定的表格前缀过长，上限为 %d 个字符。',
+	'INST_ERR_DB_NO_NAME'		=> '没有指定数据库名称',
 	'INST_ERR_DB_FORUM_PATH'	=> '指定的数据库文件位于论坛目录内，您应该把它放在一个无法通过网络访问的位置。',
+	'INST_ERR_DB_CONNECT'		=> '连接数据库失败，错误信息如下',
 	'INST_ERR_DB_NO_ERROR'		=> '没有得到相应的错误信息',
+	'INST_ERR_PREFIX'			=> '已经存在使用指定前缀的表格，请指定另一个。',
 	'INST_ERR_DB_NO_MYSQLI'		=> '服务器内安装的 MySQL 版本与您选择的 “MySQL (使用 MySQLi 扩展)” 选项不兼容，请尝试 “MySQL” 选项。',
 	'INST_ERR_DB_NO_SQLITE'		=> '您安装的 SQLite 版本太古老，请升级至最低 2.8.2 版。',
 	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> '服务器内安装的 Oracle 版本需要您将参数 <var>NLS_CHARACTERSET</var> 设置为 <var>UTF8</var>。请设置此参数，或将 Oracle 升级至最低 9.2 版。',
 	'INST_ERR_DB_NO_POSTGRES'	=> '您选择的数据库不是 <var>UNICODE</var> 或 <var>UTF8</var> 编码，请使用 <var>UNICODE</var> 或 <var>UTF8</var> 编码的数据库。',
-	'INST_ERR_DB_NO_NAME'		=> '没有指定数据库名称',
+	'INST_SCHEMA_FILE_NOT_WRITABLE'	=> 'The schema file is not writable',
+
+	'EMAIL_CONFIG'	=> 'E-mail configuration',
+
+	'INST_ERR'					=> '安装进程出错',
 	'INST_ERR_EMAIL_INVALID'	=> '您输入的Email地址无效',
 	'INST_ERR_EMAIL_MISMATCH'	=> '您输入的两个Email地址互相不匹配',
 	'INST_ERR_FATAL'			=> '安装进程出现致命错误',
 	'INST_ERR_FATAL_DB'			=> '数据库出现了一个致命且不可恢复的错误。这可能是由于您指定的用户没有 <code>CREATE TABLES</code> 或 <code>INSERT</code> 的权限等等，下面可能会给出进一步的信息。请首先考虑联络您的服务供应商，或是访问phpBB支持论坛，以得到进一步帮助。',
 	'INST_ERR_FTP_PATH'			=> '无法转换到指定目录，请检查路径信息。',
 	'INST_ERR_FTP_LOGIN'		=> '无法登入 FTP 服务器，请检查用户名和密码。',
-	'INST_ERR_MISSING_DATA'		=> '您必须填完此表格的全部单元',
-	'INST_ERR_NO_DB'			=> '无法找到指定数据库类型的 PHP 模块',
 	'INST_ERR_PASSWORD_MISMATCH'	=> '您输入的两个密码互相不匹配。',
 	'INST_ERR_PASSWORD_TOO_LONG'	=> '您输入的密码过长，请输入最多30个字符。',
 	'INST_ERR_PASSWORD_TOO_SHORT'	=> '您输入的密码太短，请输入最少6个字符。',
-	'INST_ERR_PREFIX'			=> '已经存在使用指定前缀的表格，请指定另一个。',
 	'INST_ERR_PREFIX_INVALID'	=> '您指定的表格前缀无效，请尝试另一个，去掉诸如连字符之类的字符。',
-	'INST_ERR_PREFIX_TOO_LONG'	=> '您指定的表格前缀过长，上限为 %d 个字符。',
 	'INST_ERR_USER_TOO_LONG'	=> '您输入的用户名过长，请输入最多20个字符。',
 	'INST_ERR_USER_TOO_SHORT'	=> '您输入的用户名太短，请输入最少3个字符。',
 	'INVALID_PRIMARY_KEY'		=> '无效的主键 : %s',
@@ -1973,15 +2033,15 @@ $lang = array_merge($lang, array(
 	'OVERVIEW_BODY'				=> '欢迎安装 phpBB3!<br /><br />phpBB™ 是世界上使用最为广泛的开源论坛软件. phpBB3 是自2000年以来这一系列的最新产品. 与之前的版本相比, phpBB3 具有更丰富的功能, 更友好的操作界面, 并拥有phpBB团队的完整技术支持. phpBB3大幅提升了phpBB2受人欢迎的功能, 并且添加了众多用户迫切需要的新特性. 我们希望phpBB3能满足您的期待.<br /><br />安装模块将引导您安装的全过程, 并且指导您升级或转换不同的论坛(包括phpBB2)到phpBB3. 要获取更多的信息, 我们推荐您阅读 <a href="../docs/INSTALL.html">安装指南</a>.<br /><br />从侧面的菜单中选取不同的内容, 阅读phpBB3授权协议以了解支持和我们对此的要求. 继续下一步操作, 请从上方选择相应的页面.',
 
 	'PCRE_UTF_SUPPORT'				=> 'PCRE UTF-8 支持',
-	'PCRE_UTF_SUPPORT_EXPLAIN'		=> '如果PHP的PCRE插件不支持UTF-8，phpBB 将 <strong>无法</strong> 运行。',
-	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP 函数 getimagesize() 可用',
-	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>必须的</strong> - 为了让phpBB正常工作,  需要启用 getimagesize 函数.',
+	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
 	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
-	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> '可选模块',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>可选的</strong> - 这些模块或程序不是必需的。但如果它们可用，您将可以使用附加功能。',
 	'PHP_SUPPORTED_DB'				=> '支持的数据库',
-	'PHP_SUPPORTED_DB_EXPLAIN'		=> '<strong>必需的</strong> - 您必须为PHP提供至少一个兼容的数据库。如果下面没有可用的数据库模块，您应该联络服务供应商，或者查阅相关的PHP安装文档。',
+	'PHP_SUPPORTED_DB_EXPLAIN'		=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
 	'PHP_REGISTER_GLOBALS'			=> 'PHP 设置 <var>register_globals</var> 已禁用',
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> '如果此设置被允许，phpBB仍然会运行。但出于安全考虑，如果条件允许，建议您将 register_globals 禁用。',
 	'PHP_SAFE_MODE'					=> '安全模式',
@@ -1989,7 +2049,7 @@ $lang = array_merge($lang, array(
 	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'PHP 设定 <var>allow_url_fopen</var> 为启用状态',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>可选的</strong> - 这个设置是可选的, 不过某些phpBB的功能例如外部头像可能会因为没有它而无法正常工作。',
-	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version',
 	'POST_ID'						=> '帖子 ID',
 	'PREFIX_FOUND'					=> '对数据表的扫描显示一组有效的表格正在使用 <strong>%s</strong> 作为前缀。',
 	'PREPROCESS_STEP'				=> '正在执行转换准备操作',
@@ -2005,7 +2065,6 @@ $lang = array_merge($lang, array(
 
 	'SCRIPT_PATH'				=> '脚本路径',
 	'SCRIPT_PATH_EXPLAIN'		=> 'phpBB 根目录与域名指向目录的相对路径，例如：<samp>/phpBB3</samp>',
-	'SELECT_LANG'				=> '选择语言',
 	'SERVER_CONFIG'				=> '服务器设置',
 	'SEARCH_INDEX_UNCONVERTED'	=> '搜索索引没有转换',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> '您的旧搜索索引没有转换. 搜索将总是得到空结果. 如果需要创建一个新索引, 请到管理员控制面板, 选择维护, 然后从子菜单中选择搜索索引.',
@@ -2022,7 +2081,6 @@ $lang = array_merge($lang, array(
 	'STAGE_FINAL'				=> '完成',
 	'STAGE_INTRO'				=> '简介',
 	'STAGE_IN_PROGRESS'			=> '进行转换',
-	'STAGE_REQUIREMENTS'		=> '检测需求',
 	'STAGE_SETTINGS'			=> '设置',
 	'STARTING_CONVERT'			=> '开始转换操作',
 	'STEP_PERCENT_COMPLETED'	=> '第 <strong>%d</strong> 步 / 共 <strong>%d</strong> 步',
@@ -9857,7 +9915,7 @@ $lang = array_merge($lang, array(
 	'GUEST_STYLE'					=> 'Guest style',
 	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> '覆盖用户界面',
-	'OVERRIDE_STYLE_EXPLAIN'		=> '使用默认的风格覆盖用户所选风格.',
+	'ACP_OVERRIDE_STYLE_EXPLAIN'	=> 'Replaces user’s (and guest’s) style with the style as defined under "Default style".',
 	'SITE_DESC'						=> '站点描述',
 	'SITE_HOME_TEXT'				=> 'Main website text',
 	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
@@ -9865,8 +9923,9 @@ $lang = array_merge($lang, array(
 	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> '站点名称',
 	'SYSTEM_TIMEZONE'				=> '访客时区',
+	'SYSTEM_TIMEZONE_EXPLAIN'			=> 'Timezone to use for displaying times to users who are not logged in (guests, bots). Logged in users set their timezone during registration and can change it in their user control panel.',
 	'WARNINGS_EXPIRE'				=> '警告失效时间',
-	'WARNINGS_EXPIRE_EXPLAIN'		=> '用户记录警告自动消失的天数。设为0使警告永不过期。',
+	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Number of days that will elapse before a warning will automatically expire from a user’s record. Set this value to 0 to make warnings permanent.',
 
 	'ACP_BOARD_FEATURES_EXPLAIN'	=> '这里您可以启用/禁用几个论坛功能',
 
@@ -9897,6 +9956,7 @@ $lang = array_merge($lang, array(
 	'ALLOW_TOPIC_NOTIFY'		=> '允许订阅主题',
 	'BOARD_PM'					=> '私人短信',
 	'BOARD_PM_EXPLAIN'			=> '启用所有用户的私人短信.',
+	'ALLOW_BOARD_NOTIFICATIONS' => 'Allow board notifications',
 
 	'ACP_AVATAR_SETTINGS_EXPLAIN'	=> '头像是用户用于展示自己的一幅小图片. 根据界面有所不同, 不过它们通常显示在用户发布的帖子旁边. 这里您可以决定用户是否能和如何定义他们的头像. 请注意如果允许用户上载头像, 您必须建立下面的目录并保证这个目录对于web服务器是可写的. 同时也要注意这个文件大小只对头像上载有效, 对于链接的头像是没有限制的.',
 
@@ -10006,6 +10066,7 @@ $lang = array_merge($lang, array(
 
 	'ACC_ACTIVATION'				=> '帐号激活',
 	'ACC_ACTIVATION_EXPLAIN'		=> '这决定了用户在访问论坛之前是否需要确认。您也可以完全关闭新用户注册。为了使用用户或管理员激活功能，论坛邮件必须开启。',
+	'ACC_ACTIVATION_WARNING'		=> 'Please note that the currently selected activation method requires emails to be enabled, otherwise registration will be disabled. We recommend to either select a different activation method or reenable emails.',
 	'NEW_MEMBER_POST_LIMIT'			=> '新会员发文限制',
 	'NEW_MEMBER_POST_LIMIT_EXPLAIN'	=> '新会员会被归入 <em>新注册用户</em> 组直到其发表足够多的文章. 您可以使用此用户组的组权限来限制其使用站内短信以及方便发文审核. <strong>设置为0则不启用此项功能.</strong>',
 	'NEW_MEMBER_GROUP_DEFAULT'		=> '设置新注册用户组为默认组',
@@ -10303,8 +10364,11 @@ $lang = array_merge($lang, array(
 
 	'TPL_ALLOW_PHP'					=> '在模板中允许PHP',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> '如果启用这个选项, <code>PHP</code> 和 <code>INCLUDEPHP</code> 声明将在模板中被解析.',
+	'UPLOAD_CERT_VALID'				=> 'Validate upload certificate',
+	'UPLOAD_CERT_VALID_EXPLAIN'		=> 'If enabled, certificates of remote uploads will be validated. This requires the CA bundle to be defined by the <samp>openssl.cafile</samp> or <samp>curl.cainfo</samp> setting in your php.ini.',
 
 	'ACP_EMAIL_SETTINGS_EXPLAIN'	=> '在论坛向用户发送e-mail时将使用这个信息. 请确保e-mail地址有效, 任何被退回和无法投递的消息将很可能被发回至这个地址. 如果您的主机不提供本地(基于PHP的) email服务, 您可以使用SMTP发送消息. 这需要服务器的地址 (必要的话询问提供者). 如果服务器需要验证 (并且只有在需要时) 输入必要的用户名和密码.',
+
 	'ADMIN_EMAIL'					=> '管理员可以给我发送 Email',
 	'ADMIN_EMAIL_EXPLAIN'			=> '这将是所有email的返回地址, 技术联络email. 将显示于<samp>Return-Path</samp> 和 <samp>Sender</samp>.',
 	'BOARD_EMAIL_FORM'				=> '用户通过论坛发送email',
@@ -10323,6 +10387,8 @@ $lang = array_merge($lang, array(
 	'EMAIL_SIG_EXPLAIN'				=> '将在论坛发送的email后附加这段文字.',
 	'ENABLE_EMAIL'					=> '允许论坛发送email',
 	'ENABLE_EMAIL_EXPLAIN'			=> '如果禁用, 论坛将不会发送任何email. <em>注意会员激活需要启用此项功能. 如果当前设定为会员自行激活和管理员激活, 则停用此项功能将使会员无需激活.</em>',
+	'SEND_TEST_EMAIL'				=> 'Send a test email',
+	'SEND_TEST_EMAIL_EXPLAIN'		=> 'This will send a test email to the address defined in your account.',
 	'SMTP_AUTH_METHOD'				=> 'SMTP验证方式',
 	'SMTP_AUTH_METHOD_EXPLAIN'		=> '只有在设置过用户名/密码的场合, 询问提供者如果您不能确定使用何种方式.',
 	'SMTP_CRAM_MD5'					=> 'CRAM-MD5',
@@ -10338,6 +10404,7 @@ $lang = array_merge($lang, array(
 	'SMTP_SETTINGS'					=> 'SMTP设定',
 	'SMTP_USERNAME'					=> 'SMTP用户名',
 	'SMTP_USERNAME_EXPLAIN'			=> '只有当您的SMTP服务器需要时才要输入.',
+	'TEST_EMAIL_SENT'				=> 'The test email has been sent.<br />If you don’t receive it, please check your emails configuration.<br /><br />If you require assistance, please visit the <a href="https://www.phpbb.com/community/">phpBB support forums</a>.',
 	'USE_SMTP'						=> '使用SMTP服务器发送email',
 	'USE_SMTP_EXPLAIN'				=> '选择“是”, 如果您向通过其他服务器而不是本地mail函数发送email.',
 
@@ -10567,8 +10634,7 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> '数据库',
-	'ACP_CAT_DOT_MODS'			=> '.MODs',
-	'ACP_CAT_DOT_MODS'			=> '.MODs',
+	'ACP_CAT_DOT_MODS'			=> '扩展名',
 	'ACP_CAT_FORUMS'			=> '版面',
 	'ACP_CAT_GENERAL'			=> '综合',
 	'ACP_CAT_MAINTENANCE'		=> '维护',
@@ -10733,6 +10799,9 @@ $lang = array_merge($lang, array(
 
 	'BACK'					=> '后退',
 
+	'CONTAINER_EXCEPTION' => 'phpBB encountered an error building the container due to an installed extension. For this reason, all extensions have been temporarily disabled. Please try purging your forum cache. All extensions will automatically be re-enabled once the container error is resolved. If this error continues, please visit <a href="https://www.phpbb9.de">phpbb9.de</a> for support.',
+	'EXCEPTION' => 'Exception',
+
 	'COLOUR_SWATCH'			=> '颜色取样',
 	'CONFIG_UPDATED'		=> '配置更新完成.',
 	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
@@ -10743,7 +10812,7 @@ $lang = array_merge($lang, array(
 	'DEACTIVATE'				=> '冻结',
 	'DIRECTORY_DOES_NOT_EXIST'	=> '输入的路径 "%s" 不存在.',
 	'DIRECTORY_NOT_DIR'			=> '输入的路径 "%s" 不是目录.',
-	'DIRECTORY_NOT_WRITABLE'	=> '输入的路径 “%s” 不可写.',
+	'DIRECTORY_NOT_WRITABLE'	=> 'Directory not writable',
 	'DISABLE'					=> '禁止',
 	'DOWNLOAD'					=> '下载',
 	'DOWNLOAD_AS'				=> '下载为',
@@ -10794,10 +10863,11 @@ $lang = array_merge($lang, array(
 	'PARSE_URLS'						=> '解析链接格式',
 	'PERMISSIONS_TRANSFERRED'			=> '成功切换到 <strong>%s</strong>的权限, 您现在可以使用这个用户的权限浏览版面.<br />请注意管理员权限不会被切换. 您可以在任何时候恢复回原权限。',
 	'PERMISSIONS_TRANSFERRED_EXPLAIN'	=> '您现在使用来自于 %1$s 的权限. 您可以以这个用户的权限浏览版面但是不能访问管理员控制面板因为管理员权限没有被传递. 您可以随时 <a href="%2$s"><strong>恢复您的权限设置</strong></a>.',
-	'PIXEL'								=> '像素',
 	'PROCEED_TO_ACP'					=> '%s 进入管理员控制面板%s',
 
+	'RELEASE_ANNOUNCEMENT'		=> '公告',
 	'REMIND'							=> '提醒',
+	'REPARSE_LOCK_ERROR'				=> 'Reparsing is already in progress by another process.',
 	'RESYNC'							=> '重新同步',
 
 	'RUNNING_TASK'			=> 'Running task: %s.',
@@ -10846,11 +10916,23 @@ $lang = array_merge($lang, array(
 
 	'DATABASE_SIZE'			=> '数据库大小',
 
+	// Enviroment configuration checks, mbstring related
+	'ERROR_MBSTRING_FUNC_OVERLOAD'					=> 'Function overloading is improperly configured',
+	'ERROR_MBSTRING_FUNC_OVERLOAD_EXPLAIN'			=> '<var>mbstring.func_overload</var> must be set to either 0 or 4. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION'			=> 'Transparent character encoding is improperly configured',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION_EXPLAIN'	=> '<var>mbstring.encoding_translation</var> must be set to 0. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_INPUT'						=> 'HTTP input character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_INPUT_EXPLAIN'				=> '<var>mbstring.http_input</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_OUTPUT'					=> 'HTTP output character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_OUTPUT_EXPLAIN'			=> '<var>mbstring.http_output</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+
 	'FILES_PER_DAY'		=> '每天的附件量',
 	'FORUM_STATS'		=> '论坛统计',
 
 	'GZIP_COMPRESSION'	=> 'GZip压缩',
 
+	'PIXEL'								=> '像素',
+	
 	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> '不可用',
 	'NUMBER_FILES'		=> '附件数量',
@@ -10858,6 +10940,8 @@ $lang = array_merge($lang, array(
 	'NUMBER_TOPICS'		=> '主题数量',
 	'NUMBER_USERS'		=> '用户数量',
 	'NUMBER_ORPHAN'		=> '幽灵文件',
+
+	'PHP_VERSION_OLD'	=> 'The version of PHP on this server will no longer be supported by future versions of phpBB. %sDetails%s',
 
 	'POSTS_PER_DAY'		=> '每日帖数',
 
@@ -10904,10 +10988,16 @@ $lang = array_merge($lang, array(
 	'VALUE'						=> '值',
 	'VERSIONCHECK_FAIL'			=> '无法获取最新版本信息.',
 	'VERSIONCHECK_FORCE_UPDATE'	=> '再次检查版本',
+	'VERSION_CHECK'				=> '版本检查',
+	'VERSION_CHECK_EXPLAIN'		=> '检查您当前运行的论坛是否是最新版本.',
+	'VERSION_NOT_UP_TO_DATE_ACP'	=> '您的论坛版本不是最新的.<br />下面是最新版本的发布和更新帮助链接.',
+	'VERSION_NOT_UP_TO_DATE_TITLE'	=> '您的论坛版本不是最新的.',
+	'VERSION_UP_TO_DATE_ACP'	=> '您的版本是最新的, 没有可用的更新.',
 	'VIEW_ADMIN_LOG'			=> '查看管理员日志',
 	'VIEW_INACTIVE_USERS'		=> '查看冻结帐号',
 
 	'WELCOME_PHPBB'			=> '欢迎来到phpBB',
+	'WRITABLE_CONFIG'		=> 'Your config file (config.php) is currently world-writable. We strongly encourage you to change the permissions to 640 or at least to 644 (for example: <a href="http://en.wikipedia.org/wiki/Chmod" rel="external">chmod</a> 640 config.php).',
 
 	'BROWSER_LANGUAGE'			=> '允许浏览器语言检测',
 	'BROWSER_LANGUAGE_EXPLAIN'	=> '允许浏览器根据访客使用语言检测。选择否关闭此功能。',

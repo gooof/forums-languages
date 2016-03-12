@@ -1725,6 +1725,86 @@ $lang = array_merge($lang, array(
 #######language/en/install.php#######
 
 $lang = array_merge($lang, array(
+	'INSTALL_PANEL'	=> 'Asennuspaneeli',
+	'SELECT_LANG'	=> 'Valitse kieli',
+	'STAGE_INSTALL'	=> 'Installing phpBB',
+
+	// Introduction page
+	'INTRODUCTION_TITLE'	=> 'Tervetuloa',
+	'INTRODUCTION_BODY'		=> 'Welcome to phpBB3!<br /><br />phpBB® is the most widely used open source bulletin board solution in the world. phpBB3 is the latest installment in a package line started in 2000. Like its predecessors, phpBB3 is feature-rich, user-friendly, and fully supported by the phpBB Team. phpBB3 greatly improves on what made phpBB2 popular, and adds commonly requested features that were not present in previous versions. We hope it exceeds your expectations.<br /><br />This installation system will guide you through installing phpBB3, updating to the latest version of phpBB3 from past releases, as well as converting to phpBB3 from a different discussion board system (including phpBB2). For more information, we encourage you to read <a href="../docs/INSTALL.html">the installation guide</a>.<br /><br />To read the phpBB3 license or learn about obtaining support and our stance on it, please select the respective options from the side menu. To continue, please select the appropriate tab above.',
+
+	// Support page
+	'SUPPORT_TITLE'		=> 'Tuki',
+	'SUPPORT_BODY_INSTALL'	=> 'Full support will be provided for the current stable release of phpBB3, free of charge. This includes:</p><ul><li>installation</li><li>configuration</li><li>technical questions</li><li>problems relating to potential bugs in the software</li><li>updating from Release Candidate (RC) versions to the latest stable version</li><li>converting from phpBB 2.0.x to phpBB3</li><li>converting from other discussion board software to phpBB3 (please see the <a href="https://www.phpbb.com/community/viewforum.php?f=486">Convertors Forum</a>)</li></ul><p>We encourage users still running beta versions of phpBB3 to replace their installation with a fresh copy of the latest version.</p><h2>Extensions / Styles</h2><p>For issues relating to Extensions, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=451">Extensions Forum</a>.<br />For issues relating to styles, templates and themes, please post in the appropriate <a href="https://www.phpbb.com/community/viewforum.php?f=471">Styles Forum</a>.<br /><br />If your question relates to a specific package, please post directly in the topic dedicated to the package.</p><h2>Obtaining Support</h2><p><a href="https://www.phpbb.com/community/viewtopic.php?f=14&amp;t=571070">The phpBB Welcome Package</a><br /><a href="https://www.phpbb.com/support/">Support Section</a><br /><a href="https://www.phpbb.com/support/docs/en/3.1/ug/quickstart/">Quick Start Guide</a><br /><br />To ensure you stay up to date with the latest news and releases, why not <a href="https://www.phpbb.com/support/">subscribe to our mailing list</a>?<br /><br />',
+
+	// License
+	'LICENSE_TITLE'		=> 'General Public License',
+
+	// Install page
+	'INSTALL_INTRO'			=> 'Tervetuloa asennukseen',
+	'INSTALL_INTRO_BODY'	=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
+
+	<ul>
+		<li>The Database Type - the database you will be using.</li>
+		<li>The Database server hostname or DSN - the address of the database server.</li>
+		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
+		<li>The Database name - the name of the database on the server.</li>
+		<li>The Database username and Database password - the login data to access the database.</li>
+	</ul>
+
+	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
+
+	<p>phpBB3 supports the following databases:</p>
+	<ul>
+		<li>MySQL 3.23 or above (MySQLi supported)</li>
+		<li>PostgreSQL 8.3+</li>
+		<li>SQLite 2.8.2+</li>
+		<li>SQLite 3.6.15+</li>
+		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
+		<li>MS SQL Server 2005 or above (native)</li>
+		<li>Oracle</li>
+	</ul>
+
+	<p>Only those databases supported on your server will be displayed.',
+
+	'ACP_LINK'	=> 'Take me to <a href="%1$s">the ACP</a>',
+
+	'INSTALL_PHPBB_INSTALLED'		=> 'phpBB is already installed.',
+	'INSTALL_PHPBB_NOT_INSTALLED'	=> 'phpBB is not installed yet.',
+
+
+	// Filesystem requirements
+	'FILE_NOT_EXISTS'			=> 'File not exists',
+	'FILE_NOT_EXISTS_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to exist.',
+	'FILE_NOT_WRITABLE'			=> 'File not writable',
+	'FILE_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to be writable.',
+
+	'DIRECTORY_NOT_EXISTS'				=> 'Directory not exists',
+	'DIRECTORY_NOT_EXISTS_EXPLAIN'		=> 'To be able to install phpBB the %1$s directory needs to exist.',
+	'DIRECTORY_NOT_WRITABLE'			=> 'Directory not writable',
+	'DIRECTORY_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s directory needs to be writable.',
+
+	// Server requirements
+	'PHP_VERSION_REQD'					=> 'PHP version',
+	'PHP_VERSION_REQD_EXPLAIN'			=> 'phpBB requires PHP version 5.4.0 or higher.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
+	'PCRE_UTF_SUPPORT'					=> 'PCRE UTF-8 tuki',
+	'PCRE_UTF_SUPPORT_EXPLAIN'			=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_JSON_SUPPORT'					=> 'PHP JSON support',
+	'PHP_JSON_SUPPORT_EXPLAIN'			=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_SUPPORTED_DB'					=> 'Tuetut tietokannat',
+	'PHP_SUPPORTED_DB_EXPLAIN'			=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
+
+	'RETEST_REQUIREMENTS'	=> 'Retest requirements',
+
+	'STAGE_REQUIREMENTS'	=> 'Check requirements',
+
+	'INST_ERR_MISSING_DATA'		=> 'Nämä kaikki tiedot tulee täyttää',
+
+	'TIMEOUT_DETECTED_TITLE'	=> 'The installer detected a timeout',
+	'TIMEOUT_DETECTED_MESSAGE'	=> 'The installer has detected a timeout, you may try to refresh the page, which may lead to data corruption. We suggest that you either increase your timeout settings or try to use the CLI.',
+
 	'ADMIN_CONFIG'				=> 'Ylläpitäjän asetukset',
 	'ADMIN_PASSWORD'			=> 'Ylläpitäjän salasana',
 	'ADMIN_PASSWORD_CONFIRM'	=> 'Varmista ylläpitäjän salasana',
@@ -1788,7 +1868,7 @@ $lang = array_merge($lang, array(
 	'CONV_ERROR_INSERT_BOTGROUP'		=> 'Botin lisääminen bots tauluun epäonnistui.',
 	'CONV_ERROR_INSERT_USER_GROUP'		=> 'Käyttäjän lisääminen user_group tauluun epäonnistui.',
 	'CONV_ERROR_MESSAGE_PARSER'			=> 'Viestin jäsentäjän virhe',
-	'CONV_ERROR_NO_AVATAR_PATH'			=> 'Muistutus kehittäjälle: Sinun täytyy määritellä $convertor[\'avatar_path\'] käyttämään %s.',
+	'CONV_ERROR_NO_AVATAR_PATH'			=> 'Note to developer: you must specify convertor[avatar_path] to use %s.',
 	'CONV_ERROR_NO_FORUM_PATH'			=> 'Suhteellista polkua lähdefoorumiin ei ole määritelty.',
 	'CONV_ERROR_NO_GALLERY_PATH'		=> 'Muistutus kehittäjälle: Sinun täytyy määritellä $convertor[\'avatar_gallery_path\'] käyttämään %s.',
 	'CONV_ERROR_NO_GROUP'				=> 'Ryhmää "%1$s" ei löytynyt %2$s:sta.',
@@ -1880,65 +1960,45 @@ $lang = array_merge($lang, array(
 		<p>phpBB Unified Convertor Framework tukee konvertointia phpBB 2.0.x alustalta ja muilta ohjelmistoilta phpBB3 alustalle. Mikäli sinulla on keskustelufoorumi, jonka haluat konvertoida, voit<a href="%2$s">jatkaa konvertteriin</a>.</p>
 		<h2>Julkaise phpBB3 foorumisi!</h2>
 		<p>Linkki vie ylläpitoon, josta voit lähettää hieman tilastotietoja kehittäjille. Olisimme iloisia, jos lähetät nämä tiedot. Tämän jälkeen voisit viettää hetken aikaa tutkiaksesi ylläpitoa ja sen eri vaihtoehtoja. Muistathan, että tukea on saatavilla <a href="http://www.phpbb.com/support/documentation/3.0/">Dokumentaatiosta</a>, <a href="%3$s">README</a> ja <a href="http://www.phpbb.com/community/viewforum.php?f=46">Tukifoorumilta</a>.</p><p><strong>Ole hyvä ja poista install hakemisto. Mikäli tämä hakemisto on palvelimella, vain ylläpidon asetukset ovat käytettävissä.</strong>',
-	'INSTALL_INTRO'				=> 'Tervetuloa asennukseen',
 
-	'INSTALL_INTRO_BODY'		=> 'With this option, it is possible to install phpBB3 onto your server.</p><p>In order to proceed, you will need your database settings. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</p>
-
-	<ul>
-		<li>The Database Type - the database you will be using.</li>
-		<li>The Database server hostname or DSN - the address of the database server.</li>
-		<li>The Database server port - the port of the database server (most of the time this is not needed).</li>
-		<li>The Database name - the name of the database on the server.</li>
-		<li>The Database username and Database password - the login data to access the database.</li>
-	</ul>
-
-	<p><strong>Note:</strong> if you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</p>
-
-	<p>phpBB3 supports the following databases:</p>
-	<ul>
-		<li>MySQL 3.23 or above (MySQLi supported)</li>
-		<li>PostgreSQL 8.3+</li>
-		<li>SQLite 2.8.2+</li>
-		<li>SQLite 3.6.15+</li>
-		<li>MS SQL Server 2000 or above (directly or via ODBC)</li>
-		<li>MS SQL Server 2005 or above (native)</li>
-		<li>Oracle</li>
-	</ul>
-
-	<p>Only those databases supported on your server will be displayed.',
 	'INSTALL_INTRO_NEXT'		=> 'Paina alapuolella olevaa nappulaa aloittaaksesi asennuksen.',
 	'INSTALL_LOGIN'				=> 'kirjaudu sisään',
 	'INSTALL_NEXT'				=> 'Seuraava vaihe',
 	'INSTALL_NEXT_FAIL'			=> 'Osa tesetistä epäonnistui ja sinun tulisi korjata nämä ennen kuin jatkat eteenpäin. Mikäli et korjaa näitä tuloksena voi olla epäonnistunut asennus.',
 	'INSTALL_NEXT_PASS'			=> 'Kaikki perustestit ovat läpäisty ja voit siirtyä asennuksen seuraavaan vaiheeseen. Mikäli olet muuttanut oikeuksia, moduuleita, jne, ja haluat suorittaa testit uudelleen, voit tehdä näin.',
-	'INSTALL_PANEL'				=> 'Asennuspaneeli',
 	'INSTALL_SEND_CONFIG'		=> 'phpBB ei valitettavasti pystynyt kirjoittamaan asennustietoja suoraan config.php tiedostoon. Tämä voi johtua, koska tiedostoa ei ole olemassa tai siihen ei voida kirjoittaa. Saat listan vaihtoehdoista, jotka voit suorittaa asentaaksesi config.php tiedoston oikein.',
 	'INSTALL_START'				=> 'Aloita asennus',
 	'INSTALL_TEST'				=> 'Testaa uudelleen',
-	'INST_ERR'					=> 'Asennuksen virhe',
-	'INST_ERR_DB_CONNECT'		=> 'En saanut yhteyttä tietokantaan. Katso virheilmoitus alapuolelta',
+
+	// Errors
+	'INST_ERR_NO_DB'			=> 'En voinut ladata PHP moduulia valitulle tietokannalle',
+	'INST_ERR_DB_INVALID_PREFIX'	=> 'The prefix you entered is invalid. It must start with a letter and must only contain letters, numbers and underscores.',
+	'INST_ERR_PREFIX_TOO_LONG'	=> 'Antamasi taulun etuliite on liian pitkä. maksimi pituus saa olla %d merkkiä.',
+	'INST_ERR_DB_NO_NAME'		=> 'Tietokannan nimi puuttuu',
 	'INST_ERR_DB_FORUM_PATH'	=> 'Tietokantatiedosto on asetettu foorumin hakemistopuuhun. Tämä tiedosto kannattaisi laittaa jonnekin, mihin ei päästä internetin kautta käsiksi',
+	'INST_ERR_DB_CONNECT'		=> 'En saanut yhteyttä tietokantaan. Katso virheilmoitus alapuolelta',
 	'INST_ERR_DB_NO_ERROR'		=> 'Ei virheilmoitusta',
+	'INST_ERR_PREFIX'			=> 'Tietokannassa on tauluja, joissa on käytössä jo antamasi taulun etuliite. Ole hyvä ja käytä toista etuliitettä.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'Tällä koneella käytössä oleva MySQL versio ei ole yhteensopiva valitsemasi "MySQL, MySQLi laajennuksen tuella" vaihtoehdon kanssa. Ole hyvä ja yritä "MySQL" vaihtoehtoa.',
 	'INST_ERR_DB_NO_SQLITE'		=> 'Tällä koneella käytössä oleva SQLite laajennusosa on liian vanha. Se tulee päivittää vähintään versioon 2.8.2.',
 	'INST_ERR_DB_NO_SQLITE3'	=> 'The version of the SQLite extension you have installed is too old, it must be upgraded to at least 3.6.15.',
 	'INST_ERR_DB_NO_ORACLE'		=> 'Tällä koneella käytössä oleva Oracle vaatii asettamaan <var>NLS_CHARACTERSET</var> parametriksi <var>UTF8</var>. päivitä asennuksesi joko 9.2+ tai vaihda parametriä.',
 	'INST_ERR_DB_NO_POSTGRES'	=> 'Valitsemaasi tietokantaa ei luotu <var>UNICODE</var> tai <var>UTF8</var> muotoon. Yritä asentaa tietokanta <var>UNICODE</var> tai <var>UTF8</var> muodossa',
-	'INST_ERR_DB_NO_NAME'		=> 'Tietokannan nimi puuttuu',
+	'INST_SCHEMA_FILE_NOT_WRITABLE'	=> 'The schema file is not writable',
+
+	'EMAIL_CONFIG'	=> 'E-mail configuration',
+
+	'INST_ERR'					=> 'Asennuksen virhe',
 	'INST_ERR_EMAIL_INVALID'	=> 'Antamasi sähköpostiosoite on epäkelpo',
 	'INST_ERR_EMAIL_MISMATCH'	=> 'Antamasi sähköpostiosoitteet eivät täsmää.',
 	'INST_ERR_FATAL'			=> 'Kriittinen asennusvirhe',
 	'INST_ERR_FATAL_DB'			=> 'Tietokannassa tapahtui kriittinen ja peruuttamaton virhe. Tämä voi johtua siitä, että määritellyllä käyttäjällä ei ole tarpeeksi oikeuksia, kuten CREATE TABLES tai INSERT komentoa, jne. Lisätietoa voi olla alapuolella. Ota ensitilassa yhteyttä palveluntarjoajaasi ja sen jälkeen (jos on tarvetta) käytä phpBB tukifoorumin palveluita.',
 	'INST_ERR_FTP_PATH'			=> 'En voinut siirtyä annettuun polkuun, ole hyvä ja tarkista asetus.',
 	'INST_ERR_FTP_LOGIN'		=> 'En voinut kirjautua FTP palvelimelle, ole hyvä ja tarkista käyttäjätunnus ja salasana',
-	'INST_ERR_MISSING_DATA'		=> 'Nämä kaikki tiedot tulee täyttää',
-	'INST_ERR_NO_DB'			=> 'En voinut ladata PHP moduulia valitulle tietokannalle',
 	'INST_ERR_PASSWORD_MISMATCH'	=> 'Antamasi salasanat eivät täsmää.',
 	'INST_ERR_PASSWORD_TOO_LONG'	=> 'Antamasi salasana on liian pitkä. Maksimi pituus on 30 merkkiä.',
 	'INST_ERR_PASSWORD_TOO_SHORT'	=> 'antamasi salasana on liian lyhyt. Minimi pituus on 6 merkkiä.',
-	'INST_ERR_PREFIX'			=> 'Tietokannassa on tauluja, joissa on käytössä jo antamasi taulun etuliite. Ole hyvä ja käytä toista etuliitettä.',
 	'INST_ERR_PREFIX_INVALID'	=> 'Antamasi taulun etuliite on epäkelpo käytössä olevalle tietokannallesi. Kokeile toista etuliitettä ja poista erikoismerkit, kuten tavuviivat',
-	'INST_ERR_PREFIX_TOO_LONG'	=> 'Antamasi taulun etuliite on liian pitkä. maksimi pituus saa olla %d merkkiä.',
 	'INST_ERR_USER_TOO_LONG'	=> 'Antamasi käyttäjätunnus on liian pitkä. Maksimipituus on 20 merkkiä.',
 	'INST_ERR_USER_TOO_SHORT'	=> 'Antamasi käyttäjätunnus on liian lyhyt. Vähimmäis pituus on 3 merkkiä.',
 	'INVALID_PRIMARY_KEY'		=> 'Epäkelpo primary key : %s',
@@ -1973,15 +2033,15 @@ $lang = array_merge($lang, array(
 	'OVERVIEW_BODY'				=> 'Tervetuloa phpBB3-ohjelmaan<br /><br />phpBB™ on käytetyin avoimen lähdekoodin keskustelufoorumiohjelmisto maailmassa. phpBB3 on uusin versio seitsemän vuoden olemassaolonsa aikana. Kuten edeltäjänsäkin. phpBB3 on täynnä ominaisuuksia ja erittäin käyttäjäystävällinen. Lisäksi se on phpBB Teamin tukema. phpBB3 parantaa niitä ominaisuuksia, jotka tekivät phpBB2:sta suositun ja siihen on lisätty ominaisuuksia, joita ei ollut aiemmissa versioissa. Toivomme, että ylitämme odotuksesi.<br /><br />Tämä asennusohjelma opastaa sinua asentamaan phpBB3:n, päivittämään aiemmasta phpBB3:n versiosta uusimpaan ja myös siirtymään muista keskustelufoorumiohjelmistoista (mukaanlukien phpBB2) phpBB3:n käyttäjäksi. Saadaksesi lisätietoja ole hyvä ja lue <a href="../docs/INSTALL.html">asennusohje</a>.<br /><br />Lukeaksesi ohjelmistolisenssin tai saadaksesi tietoa käyttötuesta ja meidän roolistamme, ole hyvä ja valitse asiaankuuluva vaihtoehto sivupalkista. Jatkaaksesi eteenpäin valitse haluamasi toiminto yläpuolella olevista välilehdistä.',
 
 	'PCRE_UTF_SUPPORT'				=> 'PCRE UTF-8 tuki',
-	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB <strong>ei toimi</strong> mikäli palvelimella oleva PHP ei ole käännetty PCRE laajennusosan UTF-8 tuen kanssa.',
-	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP funktio getimagesize() on saatavilla',
-	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> '<strong>Vaadittu</strong> - Jotta phpBB voisi toimia oikein, getimagesize funktion tulee olla saatavilla.',
+	'PCRE_UTF_SUPPORT_EXPLAIN'		=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
+	'PHP_GETIMAGESIZE_SUPPORT'			=> 'PHP getimagesize() function is required',
+	'PHP_GETIMAGESIZE_SUPPORT_EXPLAIN'	=> 'In order for phpBB to function correctly, the getimagesize function needs to be available.',
 	'PHP_JSON_SUPPORT'				=> 'PHP JSON support',
-	'PHP_JSON_SUPPORT_EXPLAIN'		=> '<strong>Required</strong> - In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_JSON_SUPPORT_EXPLAIN'		=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
 	'PHP_OPTIONAL_MODULE'			=> 'Valinnaiset moduulit',
 	'PHP_OPTIONAL_MODULE_EXPLAIN'	=> '<strong>Valinnainen</strong> - Nämä moduulit tai sovellukset ovat valinnaisia. Et tarvitse näitä käyttääksesi phpBB 3.0 ohjelmistoa mutta mikäli nämä ovat saatavilla ne antavat enemmän toimintoja keskustelufoorumin käyttämiseen.',
 	'PHP_SUPPORTED_DB'				=> 'Tuetut tietokannat',
-	'PHP_SUPPORTED_DB_EXPLAIN'		=> '<strong>Pakollinen</strong> - Täytyy olla vähintää yksi PHP:n kanssa yhteensopiva tietokanta. Mikäli tässä ei näy yhtään tietokantamoduulia, sinun täytyy ottaa yhteys palveluntajoajaasi tai tutkia käyttämäsi PHP version asennusohjeita saadaksesi neuvoja.',
+	'PHP_SUPPORTED_DB_EXPLAIN'		=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
 	'PHP_REGISTER_GLOBALS'			=> 'PHP asetus "register_globals" on poissa käytöstä',
 	'PHP_REGISTER_GLOBALS_EXPLAIN'	=> 'phpBB toimii vaikka tämä asetus on käytössä, mutta mikäli on mahdollista. On suositeltavaa, että register_globals on poissa käytöstä tietoturvasyistä johtuen.',
 	'PHP_SAFE_MODE'					=> 'Safe mode',
@@ -1989,7 +2049,7 @@ $lang = array_merge($lang, array(
 	'PHP_SETTINGS_EXPLAIN'			=> '<strong>Required</strong> - You must be running at least version 5.3.3 of PHP in order to install phpBB. If <var>safe mode</var> is displayed below your PHP installation is running in that mode. This will impose limitations on remote administration and similar features.',
 	'PHP_URL_FOPEN_SUPPORT'			=> 'PHP asetus <var>allow_url_fopen</var> on päällä',
 	'PHP_URL_FOPEN_SUPPORT_EXPLAIN'	=> '<strong>Vaihtoehtoinen</strong> - Tätä asetusta ei ole vaadittu, mutta jotkin phpBB:n toiminnoista, kuten linkitetyt avatar-tiedostot eivät toimi kunnolla ilman tätä. ',
-	'PHP_VERSION_REQD'				=> 'PHP version >= 5.3.3',
+	'PHP_VERSION_REQD'				=> 'PHP version',
 	'POST_ID'						=> 'Viestin id',
 	'PREFIX_FOUND'					=> 'Asennus on löytänyt kelvollisen asennuksen tietokannasta, joka käyttää <strong>%s</strong> etuliitettä tauluissa.',
 	'PREPROCESS_STEP'				=> 'Suorittaa pre-processing funktioita/kyselyitä',
@@ -2005,7 +2065,6 @@ $lang = array_merge($lang, array(
 
 	'SCRIPT_PATH'				=> 'Ohjelmiston polku',
 	'SCRIPT_PATH_EXPLAIN'		=> 'Polku phpBB:hen suhteessa toimialueen osoitteeseen, esimerkiksi e.g. <samp>/phpBB3</samp>',
-	'SELECT_LANG'				=> 'Valitse kieli',
 	'SERVER_CONFIG'				=> 'Palvelimen asetukset',
 	'SEARCH_INDEX_UNCONVERTED'	=> 'Haun sisällysluetteloa ei ole konvertoitu',
 	'SEARCH_INDEX_UNCONVERTED_EXPLAIN'	=> 'Vanhaa sisällysluetteloasi ei ole konvertoitu. Mikäli suoritat hakuja nyt, et saa tuloksia. Luodaksesi sisällysluettelon. Mene ylläpidon asetuksiin ja valitse huolto. valitse tämän jälkeen sisällysluettelo listasta.',
@@ -2022,7 +2081,6 @@ $lang = array_merge($lang, array(
 	'STAGE_FINAL'				=> 'Viimeinen vaihe',
 	'STAGE_INTRO'				=> 'Tervetuloa',
 	'STAGE_IN_PROGRESS'			=> 'Konvertointi on käynnissä',
-	'STAGE_REQUIREMENTS'		=> 'Tarvittavat',
 	'STAGE_SETTINGS'			=> 'Asetukset',
 	'STARTING_CONVERT'			=> 'Aloitetaan konvertointia',
 	'STEP_PERCENT_COMPLETED'	=> 'Vaihe <strong>%d</strong>, <strong>%d</strong>:sta valmiina',
@@ -9857,7 +9915,7 @@ $lang = array_merge($lang, array(
 	'GUEST_STYLE'					=> 'Guest style',
 	'GUEST_STYLE_EXPLAIN'			=> 'The board style for guests.',
 	'OVERRIDE_STYLE'				=> 'Ohita käyttäjän asettama tyyli',
-	'OVERRIDE_STYLE_EXPLAIN'		=> 'Vaihtaa käyttäjän asettaman tyylin oletustylillä.',
+	'ACP_OVERRIDE_STYLE_EXPLAIN'	=> 'Replaces user’s (and guest’s) style with the style as defined under "Default style".',
 	'SITE_DESC'						=> 'Sivuston kuvaus',
 	'SITE_HOME_TEXT'				=> 'Main website text',
 	'SITE_HOME_TEXT_EXPLAIN'		=> 'This text will be displayed as a link to your website homepage in the board’s breadcrumbs. If not specified, it will default to “Home”.',
@@ -9865,8 +9923,9 @@ $lang = array_merge($lang, array(
 	'SITE_HOME_URL_EXPLAIN'			=> 'If specified, a link to this URL will be prepended to your board’s breadcrumbs and the board logo will link to this URL instead of the forum index. An absolute URL is required, e.g. <samp>http://www.phpbb.com</samp>.',
 	'SITE_NAME'						=> 'Sivuston nimi',
 	'SYSTEM_TIMEZONE'				=> 'Vierailijan aikavyöhyke',
+	'SYSTEM_TIMEZONE_EXPLAIN'			=> 'Timezone to use for displaying times to users who are not logged in (guests, bots). Logged in users set their timezone during registration and can change it in their user control panel.',
 	'WARNINGS_EXPIRE'				=> 'Varoitusten kesto',
-	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Kuinka monta päivää annettu varoitus pysyy voimassa ennen kuin se poistetaan käyttäjän tiedoista. Aseta tähän 0 pitääksesi varoitukset pysyvinä',
+	'WARNINGS_EXPIRE_EXPLAIN'		=> 'Number of days that will elapse before a warning will automatically expire from a user’s record. Set this value to 0 to make warnings permanent.',
 
 	'ACP_BOARD_FEATURES_EXPLAIN'	=> 'Täällä voit ottaa ja poistaa käytöstä useita keskustelufoorumin ominaisuuksista',
 
@@ -9897,6 +9956,7 @@ $lang = array_merge($lang, array(
 	'ALLOW_TOPIC_NOTIFY'		=> 'Salli keskusteluketjun seuraaminen',
 	'BOARD_PM'					=> 'Yksityisviestit',
 	'BOARD_PM_EXPLAIN'			=> 'Ota yksityisviestit käyttöön kaikille käyttäjille.',
+	'ALLOW_BOARD_NOTIFICATIONS' => 'Allow board notifications',
 
 	'ACP_AVATAR_SETTINGS_EXPLAIN'	=> 'Avatarit ovat yleensä pieniä ja uniikkeja kuvia, joita käyttäjä voi määritellä itsellensä. Tyylistä riippuen avatarit näytetään yleensä käyttäjätunnuksen alla viestiä luettaessa. Täällä voit määritellä kuinka käyttäjät voivat käyttää avatar-kuvia. Huomaa, mikäli sallit käyttäjän siirtää avatarin palvelimelle, niitä varten tulee luoda oma hakemisto ja palvelimen on pystyttävä kirjoittamaan siihen. Huomaa myös, että tiedostojen kokorajoitukset toimivat vain tiedostoihin, jotka ovat siirretty palvelimelle. Ne eivät toimi linkitetyissä kuvissa.',
 
@@ -10006,6 +10066,7 @@ $lang = array_merge($lang, array(
 
 	'ACC_ACTIVATION'				=> 'Käyttäjätunnusten aktivointi',
 	'ACC_ACTIVATION_EXPLAIN'		=> 'Tämä määrittelee. Pääseekö käyttäjä suoraan keskustelufoorumille vai tarvitseeko käyttäjätunnukset varmentaa ensin. Voit myös poistaa rekisteröitymisen kokonaan käytöstä. Sähköpostitoimintojen tulee olla käytössä, jos aktivoinnin suorittaa käyttäjä tai ylläpitäjä.',
+	'ACC_ACTIVATION_WARNING'		=> 'Please note that the currently selected activation method requires emails to be enabled, otherwise registration will be disabled. We recommend to either select a different activation method or reenable emails.',
 	'NEW_MEMBER_POST_LIMIT'			=> 'Uuden jäsenen viestiraja',
 	'NEW_MEMBER_POST_LIMIT_EXPLAIN'	=> 'Uudet käyttäjät ovat <em>Uudet jäsenet</em>  -ryhmässä siihen asti, kunnes ovat lähettäneet tämän verran viestejä. Tätä ryhmää voi käyttää estämään yksityisviestien lähetys ja vaatia viestien hyväksynnän valvojan toimesta ennen julkaisemista keskustelufoorumilla. <strong>Nolla poistaa asetuksen käytöstä.</strong>',
 	'NEW_MEMBER_GROUP_DEFAULT'		=> 'Aseta uudet jäsenet-ryhmä oletukseksi',
@@ -10303,8 +10364,11 @@ $lang = array_merge($lang, array(
 
 	'TPL_ALLOW_PHP'					=> 'Salli PHP:n käyttö mallineissa',
 	'TPL_ALLOW_PHP_EXPLAIN'			=> 'Mikäli tämä vaihtoehto on käytössä, <code>PHP</code> ja <code>INCLUDEPHP</code> käskyt tunnistetaan mallineissa ja suoritetaan.',
+	'UPLOAD_CERT_VALID'				=> 'Validate upload certificate',
+	'UPLOAD_CERT_VALID_EXPLAIN'		=> 'If enabled, certificates of remote uploads will be validated. This requires the CA bundle to be defined by the <samp>openssl.cafile</samp> or <samp>curl.cainfo</samp> setting in your php.ini.',
 
 	'ACP_EMAIL_SETTINGS_EXPLAIN'	=> 'Näitä asetuksia käytetään keskustelufoorumin sähköpostitoimintoihin. Varmista, että käyttämäsi sähköpostiosoite on toimiva, sillä palautettavista ja epäonnistuneista viesteistä tulee ilmoitus todennäköisesti juuri tähän osoitteeseen. Voit lähettää sähköpostia, joko PHP:n natiivilla toiminnolla, tai käyttämällä SMTP-palvelinta viestien lähettämiseen. SMTP-palvelimen käyttöön tarvittavat tunnukset saat palveluntarjoajaltasi.',
+
 	'ADMIN_EMAIL'					=> 'Ylläpitäjät voivat lähettää minulle tietoa',
 	'ADMIN_EMAIL_EXPLAIN'			=> 'Tätä käytetään kaikkien sähköpostiviestien <samp>palautusosoitteena</samp> ja <samp>lähettäjän</samp> osoitteena.',
 	'BOARD_EMAIL_FORM'				=> 'Käyttäjät voivat lähettää sähköpostia keskustelufoorumin kautta',
@@ -10323,6 +10387,8 @@ $lang = array_merge($lang, array(
 	'EMAIL_SIG_EXPLAIN'				=> 'Tämä teksti liitetään kaikkiin lähetettyihin sähköpostiviesteihin.',
 	'ENABLE_EMAIL'					=> 'Ota sähköpostitoiminnot käyttöön',
 	'ENABLE_EMAIL_EXPLAIN'			=> 'Mikäli tämä on poissa käytöstä. Keskustelufoorumi ei lähetä yhtäkään sähköpostiviestiä.',
+	'SEND_TEST_EMAIL'				=> 'Send a test email',
+	'SEND_TEST_EMAIL_EXPLAIN'		=> 'This will send a test email to the address defined in your account.',
 	'SMTP_AUTH_METHOD'				=> 'SMTP:n tunnistautumismenetelmä',
 	'SMTP_AUTH_METHOD_EXPLAIN'		=> 'Tätä käytetään vain, mikäli käyttäjätunnus/salasana on asetettu. Kysy palveluntarjoajaltasi, jos et ole varma mitä menetelmää tulisi käyttää.',
 	'SMTP_CRAM_MD5'					=> 'CRAM-MD5',
@@ -10338,6 +10404,7 @@ $lang = array_merge($lang, array(
 	'SMTP_SETTINGS'					=> 'SMTP-asetukset',
 	'SMTP_USERNAME'					=> 'SMTP-käyttäjätunnus',
 	'SMTP_USERNAME_EXPLAIN'			=> 'Laita käyttäjätunnus vain, jos palvelin sitä vaatii.',
+	'TEST_EMAIL_SENT'				=> 'The test email has been sent.<br />If you don’t receive it, please check your emails configuration.<br /><br />If you require assistance, please visit the <a href="https://www.phpbb.com/community/">phpBB support forums</a>.',
 	'USE_SMTP'						=> 'Käytä SMTP-palvelinta sähköpostin lähettämiseen',
 	'USE_SMTP_EXPLAIN'				=> 'sano "kyllä", jos haluat lähettää sähköpostit erillisen SMTP-palvelimen kautta etkä käytä paikallista sähköpostin lähetystä.',
 
@@ -10567,8 +10634,7 @@ $lang = array_merge($lang, array(
 	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
 	'ACP_CAT_DATABASE'			=> 'Tietokanta',
-	'ACP_CAT_DOT_MODS'			=> '.MODit',
-	'ACP_CAT_DOT_MODS'			=> '.MODit',
+	'ACP_CAT_DOT_MODS'			=> 'Tunnisteet',
 	'ACP_CAT_FORUMS'			=> 'Alueet',
 	'ACP_CAT_GENERAL'			=> 'Yleinen',
 	'ACP_CAT_MAINTENANCE'		=> 'Huolto',
@@ -10733,6 +10799,9 @@ $lang = array_merge($lang, array(
 
 	'BACK'					=> 'Takaisin',
 
+	'CONTAINER_EXCEPTION' => 'phpBB encountered an error building the container due to an installed extension. For this reason, all extensions have been temporarily disabled. Please try purging your forum cache. All extensions will automatically be re-enabled once the container error is resolved. If this error continues, please visit <a href="https://www.phpbb9.de">phpbb9.de</a> for support.',
+	'EXCEPTION' => 'Exception',
+
 	'COLOUR_SWATCH'			=> 'Värikartta',
 	'CONFIG_UPDATED'		=> 'Asetukset on päivitetty',
 	'CRON_LOCK_ERROR'		=> 'Could not obtain cron lock.',
@@ -10743,7 +10812,7 @@ $lang = array_merge($lang, array(
 	'DEACTIVATE'				=> 'Sulje',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'Polkua “%s” ei ole olemassa.',
 	'DIRECTORY_NOT_DIR'			=> 'Antamasi polku “%s” ei ole hakemisto.',
-	'DIRECTORY_NOT_WRITABLE'	=> 'Antamaasi polkuun “%s” ei voi kirjoittaa.',
+	'DIRECTORY_NOT_WRITABLE'	=> 'Directory not writable',
 	'DISABLE'					=> 'Poista käytöstä',
 	'DOWNLOAD'					=> 'Lataa',
 	'DOWNLOAD_AS'				=> 'Lataa muodossa',
@@ -10794,10 +10863,11 @@ $lang = array_merge($lang, array(
 	'PARSE_URLS'						=> 'Käsittele linkit',
 	'PERMISSIONS_TRANSFERRED'			=> 'Oikeudet on siirretty käyttäjältä <strong>%s</strong> ja voit nyt selata keskustelufoorumia tämän käyttäjän oikeuksilla.<br />Huomaa, että ylläpitäjän oikeuksia ei ole siirretty. Voit vaihtaa omat oikeudet takaisin koska haluat.',
 	'PERMISSIONS_TRANSFERRED_EXPLAIN'	=> 'Selaat keskustelufoorumia samoilla oikeuksilla, kuin käyttäjä %1$s. Näet keskustelufoorumin sellaisena, kuin tämä käyttäjä sen näkee. Et pääse ylläpidon asetuksiin, sillä näitä oikeuksia ei ole siirretty. Voit palauttaa <a href="%2$s"><strong>omat oikeutesi</strong></a> koska tahansa.',
-	'PIXEL'								=> 'px',
 	'PROCEED_TO_ACP'					=> '%sJatka hallintapaneeliin%s',
 
+	'RELEASE_ANNOUNCEMENT'		=> 'Tiedote',
 	'REMIND'							=> 'Muistuta',
+	'REPARSE_LOCK_ERROR'				=> 'Reparsing is already in progress by another process.',
 	'RESYNC'							=> 'Synkronoi',
 
 	'RUNNING_TASK'			=> 'Running task: %s.',
@@ -10846,11 +10916,23 @@ $lang = array_merge($lang, array(
 
 	'DATABASE_SIZE'			=> 'Tietokannan koko',
 
+	// Enviroment configuration checks, mbstring related
+	'ERROR_MBSTRING_FUNC_OVERLOAD'					=> 'Function overloading is improperly configured',
+	'ERROR_MBSTRING_FUNC_OVERLOAD_EXPLAIN'			=> '<var>mbstring.func_overload</var> must be set to either 0 or 4. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION'			=> 'Transparent character encoding is improperly configured',
+	'ERROR_MBSTRING_ENCODING_TRANSLATION_EXPLAIN'	=> '<var>mbstring.encoding_translation</var> must be set to 0. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_INPUT'						=> 'HTTP input character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_INPUT_EXPLAIN'				=> '<var>mbstring.http_input</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+	'ERROR_MBSTRING_HTTP_OUTPUT'					=> 'HTTP output character conversion is improperly configured',
+	'ERROR_MBSTRING_HTTP_OUTPUT_EXPLAIN'			=> '<var>mbstring.http_output</var> must be set to <samp>pass</samp>. You can check the current value on the <samp>PHP information</samp> page.',
+
 	'FILES_PER_DAY'		=> 'Liitetiedostoja päivässä',
 	'FORUM_STATS'		=> 'Keskustelufoorumin tilastot',
 
 	'GZIP_COMPRESSION'	=> 'Gzip-pakkaus',
 
+	'PIXEL'								=> 'px',
+	
 	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for â€œ%1$sâ€ in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'Ei saatavilla',
 	'NUMBER_FILES'		=> 'Liitetiedostojen lukumäärä',
@@ -10858,6 +10940,8 @@ $lang = array_merge($lang, array(
 	'NUMBER_TOPICS'		=> 'Viestiketjujen lukumäärä',
 	'NUMBER_USERS'		=> 'Käyttäjät',
 	'NUMBER_ORPHAN'		=> 'Orvot liitetiedostot',
+
+	'PHP_VERSION_OLD'	=> 'The version of PHP on this server will no longer be supported by future versions of phpBB. %sDetails%s',
 
 	'POSTS_PER_DAY'		=> 'Viestiä päivässä',
 
@@ -10904,10 +10988,16 @@ $lang = array_merge($lang, array(
 	'VALUE'						=> 'Arvo',
 	'VERSIONCHECK_FAIL'			=> 'Versio-informaation haku epäonnistui.',
 	'VERSIONCHECK_FORCE_UPDATE'	=> 'Tarkista versio uudelleen',
+	'VERSION_CHECK'				=> 'Versio tarkistus',
+	'VERSION_CHECK_EXPLAIN'		=> 'Tarkistaa onko keskustelufoorumisi ajantasalla.',
+	'VERSION_NOT_UP_TO_DATE_ACP'	=> 'Keskustelufoorumisi ei ole ajantasalla.<br />Alapuolella on linkki julkaisuteidotteeseen, josta saat lisää tietoa ja ohjeita.',
+	'VERSION_NOT_UP_TO_DATE_TITLE'	=> 'Keskustelufoorumisi ei ole ajantasalla.',
+	'VERSION_UP_TO_DATE_ACP'	=> 'Keskustelufoorumisi on ajantasalla. Uusia päivityksiä ei ole saatavilla.',
 	'VIEW_ADMIN_LOG'			=> 'Katso ylläpidon lokitietoja',
 	'VIEW_INACTIVE_USERS'		=> 'Näytä vahvistamattomat käyttäjät',
 
 	'WELCOME_PHPBB'			=> 'Tervetuloa phpBB:hen',
+	'WRITABLE_CONFIG'		=> 'Your config file (config.php) is currently world-writable. We strongly encourage you to change the permissions to 640 or at least to 644 (for example: <a href="http://en.wikipedia.org/wiki/Chmod" rel="external">chmod</a> 640 config.php).',
 
 	'BROWSER_LANGUAGE'			=> 'Enable Browser Language Detection',
 	'BROWSER_LANGUAGE_EXPLAIN'	=> 'Enables the browser language detection for guest users not to use the default language of the board. Choose no to disable the feature.',
