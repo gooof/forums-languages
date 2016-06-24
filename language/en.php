@@ -155,6 +155,7 @@ $lang = array_merge($lang, array(
 	'CAPTCHA_QA'				=> 'Q&amp;A',
 	'CONFIRM_QUESTION_EXPLAIN'	=> 'This question is a means of preventing automated form submissions by spambots.',
 	'CONFIRM_QUESTION_WRONG'	=> 'You have provided an invalid answer to the question.',
+	'CONFIRM_QUESTION_MISSING'	=> 'Questions for the captcha could not be retrieved. Please contact a board administrator.',
 
 	'QUESTION_ANSWERS'			=> 'Answers',
 	'ANSWERS_EXPLAIN'			=> 'Please enter valid answers to the question, one per line.',
@@ -280,6 +281,21 @@ $lang = array_merge($lang, array(
 
 	'CLI_THUMBNAIL_NOTHING_TO_GENERATE'	=> 'No thumbnails to generate.',
 	'CLI_THUMBNAIL_NOTHING_TO_DELETE'	=> 'No thumbnails to delete.',
+
+	'CLI_USER_ADD_SUCCESS'		=> 'Successfully added user %s.',
+	'CLI_USER_DELETE_CONFIRM'	=> 'Are you sure you want to delete ‘%s’? [y/N]',
+	'CLI_USER_RECLEAN_START'	=> 'Re-cleaning usernames',
+));
+
+// Additional help for commands.
+$lang = array_merge($lang, array(
+	'CLI_HELP_CRON_RUN'			=> 'Runs all ready cron tasks. Optionally you can specify a cron task name to run only the specified cron task.',
+	'CLI_HELP_USER_ACTIVATE'	=> 'Activate a user account, or deactivate an account using the <info>--deactivate</info> option.
+To optionally send an activation email to the user, use the <info>--send-email</info> option.',
+	'CLI_HELP_USER_ADD'			=> 'The <info>%command.name%</info> command adds a new user:
+If this command is run without options, you will be prompted to enter them.
+To optionally send an email to the new user, use the <info>--send-email</info> option.',
+	'CLI_HELP_USER_RECLEAN'		=> 'Re-clean usernames will check all stored usernames and ensure clean versions are also stored. Cleaned usernames are a case insensitive form, NFC normalized and transformed to ASCII.',
 ));
 
 #######language/en/common.php#######
@@ -679,7 +695,7 @@ $lang = array_merge($lang, array(
 	'NO_BIRTHDAYS'				=> 'No birthdays today',
 	'NO_EMAIL_MESSAGE'			=> 'E-mail message was blank.',
 	'NO_EMAIL_RESPONSE_CODE'	=> 'Could not get mail server response codes.',
-	'NO_EMAIL_SUBJECT'			=> 'No e-mail subject specified.',
+	'NO_EMAIL_SUBJECT'			=> 'You must specify a subject for your mail.',
 	'NO_FORUM'					=> 'The forum you selected does not exist.',
 	'NO_FORUMS'					=> 'This board has no forums.',
 	'NO_GROUP'					=> 'The requested usergroup does not exist.',
@@ -956,7 +972,7 @@ $lang = array_merge($lang, array(
 	'USERS'					=> 'Users',
 	'USE_PERMISSIONS'		=> 'Test out user’s permissions',
 
-	'USER_NEW_PERMISSION_DISALLOWED'	=> 'We are sorry, but you are not authorised to use this feature. You may have just registered here and may need to participate more to be able to use this feature.',
+	'USER_NEW_PERMISSION_DISALLOWED'	=> 'We are sorry, but you are not authorised to use this feature. You may have just registered here and may need to participate more in discussions to be able to use this feature.',
 
 	'VARIANT_DATE_SEPARATOR'	=> ' / ',	// Used in date format dropdown, eg: "Today, 13:37 / 01 Jan 2007, 13:37" ... to join a relative date with calendar date
 	'VIEWED'					=> 'Viewed',
@@ -1690,7 +1706,7 @@ $lang = array_merge($lang, array(
 	'GROUP_JOIN_PENDING_CONFIRM'		=> 'Are you sure you want to request joining the selected group?',
 	'GROUP_JOINED'						=> 'Successfully joined selected group.',
 	'GROUP_JOINED_PENDING'				=> 'Successfully requested group membership. Please wait for a group leader to approve your membership.',
-	'GROUP_LIST'						=> 'Current members',
+	'GROUP_LIST'						=> 'Manage users',
 	'GROUP_MEMBERS'						=> 'Group members',
 	'GROUP_NAME'						=> 'Group name',
 	'GROUP_OPEN'						=> 'Open',
@@ -2984,7 +3000,7 @@ $lang = array_merge($lang, array(
 	'SHADOW_TOPICS_TIME'	=> 'Hours (enter 0 for permanently)',
 	'MCP_MAIN_SHADOW_FORUM_VIEW'	=> 'View shadow topics',
 	'DELETE_TOPIC_NOTIFY'	=> 'Notify the topic starter about deleting this topic?',
-	'DELETE_REASON'			=> 'Reason for deleting this topic',
+	'DELETE_REASON'			=> 'Reason for deletion',
 	'DELETE_EXPLAIN_NOTIFY'	=> 'Fill in the reason for deleting this topic. The reason will be shown in the PM. This will only work if you have checked the checkbox above.',
 	'LOCK_TOPIC_NOTIFY'		=> 'Notify the topic starter about locking this topic?',
 	'LOCK_REASON'			=> 'Reason for locking this topic',
@@ -3453,7 +3469,7 @@ $lang = array_merge($lang, array(
 	'DELETE_POST_PERMANENTLY'	=> 'Permanently delete this post so it can not be recovered',
 	'DELETE_POSTS_CONFIRM'		=> 'Are you sure you want to delete these posts?',
 	'DELETE_POSTS_PERMANENTLY_CONFIRM'	=> 'Are you sure you want to <strong>permanently</strong> delete these posts?',
-	'DELETE_REASON'				=> 'Reason for deleting this topic',
+	'DELETE_REASON'				=> 'Reason for deletion',
 	'DELETE_REASON_EXPLAIN'		=> 'The specified reason for deletion will be visible to moderators.',
 	'DELETE_POST_WARN'			=> 'Delete this post',
 	'DELETE_TOPIC_CONFIRM'		=> 'Are you sure you want to delete this topic?',
@@ -5897,7 +5913,7 @@ $lang = array_merge($lang, array(
 	'DISPLAY_12_OR_24_HOURS_EXPLAIN'		=> 'Do you want to display the times in 12 hour mode with AM/PM or 24 hour mode? This does not effect what format the times are displayed to the user - that is set in their profile. This only effects the pulldown menu for time selection when creating/editing events and the timed headings on the view day calendar.',
 	'DISPLAY_HIDDEN_GROUPS'					=> 'Display Hidden Groups',
 	'DISPLAY_HIDDEN_GROUPS_EXPLAIN'			=> 'Do you want users to be able to see and invite members of hidden groups? If this setting is disabled, only group administrators will be able to see and invite members of the hidden group.',
-	'DISPLAY_NAME'							=> 'Disply Name (may be NULL)',
+	'DISPLAY_NAME'							=> 'Disply Name',
 	'DISPLAY_EVENTS_ONLY_1_DAY'				=> 'Display Events 1 Day',
 	'DISPLAY_EVENTS_ONLY_1_DAY_EXPLAIN'		=> 'Display events only on the day they begin (ignore their end date/time).',
 	'DISPLAY_FIRST_WEEK'					=> 'Display Current Week',
@@ -13521,7 +13537,7 @@ $lang = array_merge($lang, array(
 	'MASS_MESSAGE_EXPLAIN'	=> 'Please note that you may enter only plain text. All markup will be removed before sending.',
 
 	'NO_EMAIL_MESSAGE'		=> 'E-mail message was blank.',
-	'NO_EMAIL_SUBJECT'		=> 'No e-mail subject specified.',
+	'NO_EMAIL_SUBJECT'		=> 'You must specify a subject for your mail.',
 ));
 
 #######language/en/acp/extensions.php#######
@@ -13583,7 +13599,7 @@ $lang = array_merge($lang, array(
 	'RETURN_TO_EXTENSION_LIST'	=> 'Return to the extension list',
 
 	'EXT_DETAILS'			=> 'Extension Details',
-	'DISPLAY_NAME'			=> 'Disply Name (may be NULL)',
+	'DISPLAY_NAME'			=> 'Disply Name',
 	'CLEAN_NAME'			=> 'Clean Name',
 	'TYPE'					=> 'Type',
 	'DESCRIPTION'			=> 'Description',
@@ -13611,6 +13627,8 @@ $lang = array_merge($lang, array(
 	'VERSIONCHECK_FORCE_UPDATE_ALL'		=> 'Re-Check all versions',
 	'FORCE_UNSTABLE'					=> 'Always check for unstable versions',
 	'EXTENSIONS_VERSION_CHECK_SETTINGS'	=> 'Version check settings',
+
+	'BROWSE_EXTENSIONS_DATABASE'		=> 'Browse extensions database',
 
 	'META_FIELD_NOT_SET'	=> 'Required meta field %s has not been set.',
 	'META_FIELD_INVALID'	=> 'Meta field %s is invalid.',
@@ -13815,7 +13833,7 @@ $lang = array_merge($lang, array(
 	'GROUP_LEAD'					=> 'Group leaders',
 	'GROUP_LEADERS_ADDED'			=> 'New leaders added to group successfully.',
 	'GROUP_LEGEND'					=> 'Display group in legend',
-	'GROUP_LIST'					=> 'Current members',
+	'GROUP_LIST'					=> 'Manage users',
 	'GROUP_LIST_EXPLAIN'			=> 'This is a complete list of all the current users with membership of this group. You can delete members (except in certain special groups) or add new ones as you see fit.',
 	'GROUP_MEMBERS'					=> 'Group members',
 	'GROUP_MEMBERS_EXPLAIN'			=> 'This is a complete listing of all the members of this usergroup. It includes separate sections for leaders, pending and existing members. From here you can manage all aspects of who has membership of this group and what their role is. To remove a leader but keep them in the group use Demote rather than delete. Similarly use Promote to make an existing member a leader.',
@@ -16172,32 +16190,4 @@ $lang = array_merge($lang, array(
 	'ACP_YMSM_SYNC_AIMGMAP_PROGRESS'		=> 'Synchronized %s of %s thumbnails.',
 	'ACP_YMSM_SYNC_AIMGMAPIMP'				=> 'Attached photos import',
 	'ACP_YMSM_SYNC_AIMGMAPIMP_EXPLAIN'		=> 'Creates map markers for exisiting JPEG attachments containing EXIF GPS data. Requires extra run of "topic map marker counters" synchronization to complete the process.',
-	'ACP_YMSM_SYNC_AIMGMAPIMP_DONE'			=> 'Attached photos import completed.',
-	'ACP_YMSM_SYNC_AIMGMAPIMP_PROGRESS'		=> 'Imported %s of %s attachments.',
-	'ACP_YMSM_SYNC_TAGGEDMAPS'				=> 'Tagged map marker counters',
-	'ACP_YMSM_SYNC_TAGGEDMAPS_EXPLAIN'		=> 'Re-sync tagged map marker counters.',
-	'ACP_YMSM_SYNC_TAGGEDMAPS_DONE'			=> 'Tagged maps marker counters synchronization completed.',
-	'ACP_YMSM_SYNC_TAGGEDMAPS_PROGRESS'		=> '',
-	'YMSM_ZOOM_LEVEL0'		=> 'global setting',
-	'YMSM_ZOOM_LEVEL1'		=> '4,000 km',
-	'YMSM_ZOOM_LEVEL2'		=> '2,000 km - World',
-	'YMSM_ZOOM_LEVEL3'		=> '1,000 km',
-	'YMSM_ZOOM_LEVEL4'		=> '400 km - Continent',
-	'YMSM_ZOOM_LEVEL5'		=> '200 km',
-	'YMSM_ZOOM_LEVEL6'		=> '100 km - Country',
-	'YMSM_ZOOM_LEVEL7'		=> '50 km',
-	'YMSM_ZOOM_LEVEL8'		=> '30 km',
-	'YMSM_ZOOM_LEVEL9'		=> '15 km - Region',
-	'YMSM_ZOOM_LEVEL10'		=> '8 km',
-	'YMSM_ZOOM_LEVEL11'		=> '4 km',
-	'YMSM_ZOOM_LEVEL12'		=> '2 km - City',
-	'YMSM_ZOOM_LEVEL13'		=> '1 km',
-	'YMSM_ZOOM_LEVEL14'		=> '400 m - District',
-	'YMSM_ZOOM_LEVEL15'		=> '200 m',
-	'YMSM_ZOOM_LEVEL16'		=> '100 m',
-	'YMSM_ZOOM_LEVEL17'		=> '50 m - Street',
-	'YMSM_ZOOM_LEVEL18'		=> '20 m',
-	'YMSM_ZOOM_LEVEL19'		=> '10 m',
-	'YMSM_ZOOM_LEVEL20'		=> '5 m - House',
-	'YMSM_ZOOM_LEVEL21'		=> '2.5 m',
-));
+	'ACP_YM
