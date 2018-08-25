@@ -341,7 +341,7 @@ $lang = array_merge($lang, array(
 	'ALL_POSTS'						=> 'Alle berichten',
 	'ALL_TIMES'						=> 'All times are <abbr title="%2$s">%1$s</abbr>',
 	'ALL_TOPICS'					=> 'Alle onderwerpen',
-	'ALT_TEXT'						=> 'Alternative text',
+	'ALT_TEXT'						=> 'Alternativ tekst',
 	'AND'							=> 'En',
 	'ARE_WATCHING_FORUM'			=> 'Je wordt op de hoogte gehouden van nieuwe onderwerpen in dit forum.',
 	'ARE_WATCHING_TOPIC'			=> 'Je wordt op de hoogte gehouden van nieuwe berichten in dit onderwerp.',
