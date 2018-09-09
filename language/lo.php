@@ -181,7 +181,7 @@ $lang = array_merge($lang, array(
 #######language/en/captcha_recaptcha.php#######
 
 $lang = array_merge($lang, array(
-	'RECAPTCHA_LANG'				=> 'en',
+	'RECAPTCHA_LANG'				=> 'en-GB',
 	'RECAPTCHA_NOT_AVAILABLE'		=> 'In order to use reCaptcha, you must create an account on <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a>.',
 	'CAPTCHA_RECAPTCHA'				=> 'reCaptcha',
 	'RECAPTCHA_INCORRECT'			=> 'The solution you provided was incorrect',
@@ -221,6 +221,7 @@ $lang = array_merge($lang, array(
 	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
 	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
 	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended upon.',
+	'CLI_DESCRIPTION_FIX_LEFT_RIGHT_IDS'		=> 'Repairs the tree structure of the forums and modules.',
 	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
 	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s integer value',
 	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
@@ -230,6 +231,7 @@ $lang = array_merge($lang, array(
 	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
 	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
 	'CLI_DESCRIPTION_REPARSER_LIST'				=> 'Lists the types of text that can be reparsed.',
+	'CLI_DESCRIPTION_REPARSER_AVAILABLE'				=> 'Available reparsers:',
 	'CLI_DESCRIPTION_REPARSER_REPARSE'			=> 'Reparses stored text with the current text_formatter services.',
 	'CLI_DESCRIPTION_REPARSER_REPARSE_ARG_1'	=> 'Type of text to reparse. Leave blank to reparse everything.',
 	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_DRY_RUN'		=> 'Do not save any changes; just print what would happen',
@@ -245,19 +247,51 @@ $lang = array_merge($lang, array(
 	'CLI_DESCRIPTION_THUMBNAIL_GENERATE'	=> 'Generate all missing thumbnails.',
 	'CLI_DESCRIPTION_THUMBNAIL_RECREATE'	=> 'Recreate all thumbnails.',
 
+	'CLI_DESCRIPTION_UPDATE_CHECK'					=> 'Check if the board is up to date.',
+	'CLI_DESCRIPTION_UPDATE_CHECK_ARGUMENT_1'		=> 'Name of the extension to check (if all, checks all the extensions)',
+	'CLI_DESCRIPTION_UPDATE_CHECK_OPTION_CACHE'		=> 'Run check command with cache.',
+	'CLI_DESCRIPTION_UPDATE_CHECK_OPTION_STABILITY'	=> 'Run command choosing to check only stable or unstable versions.',
+
+	'CLI_DESCRIPTION_UPDATE_HASH_BCRYPT'		=> 'Updates outdated password hashes to be hashed with bcrypt.',
+
+	'CLI_ERROR_INVALID_STABILITY' => '"%s" needs to be set to "stable" or "unstable".',
+
+	'CLI_DESCRIPTION_USER_ACTIVATE'				=> 'Activate (or deactivate) a user account.',
+	'CLI_DESCRIPTION_USER_ACTIVATE_USERNAME'	=> 'Username of the account to activate.',
+	'CLI_DESCRIPTION_USER_ACTIVATE_DEACTIVATE'	=> 'Deactivate the user’s account',
+	'CLI_DESCRIPTION_USER_ACTIVATE_ACTIVE'		=> 'The user is already active.',
+	'CLI_DESCRIPTION_USER_ACTIVATE_INACTIVE'	=> 'The user is already inactive.',
+	'CLI_DESCRIPTION_USER_ADD'					=> 'Add a new user.',
+	'CLI_DESCRIPTION_USER_ADD_OPTION_USERNAME'	=> 'Username of the new user',
+	'CLI_DESCRIPTION_USER_ADD_OPTION_PASSWORD'	=> 'Password of the new user',
+	'CLI_DESCRIPTION_USER_ADD_OPTION_EMAIL'		=> 'E-mail address of the new user',
+	'CLI_DESCRIPTION_USER_ADD_OPTION_NOTIFY'	=> 'Send account activation email to the new user (not sent by default)',
+	'CLI_DESCRIPTION_USER_DELETE'				=> 'Delete a user account.',
+	'CLI_DESCRIPTION_USER_DELETE_USERNAME'		=> 'Username of the user to delete',
+	'CLI_DESCRIPTION_USER_DELETE_OPTION_POSTS'	=> 'Delete all posts by the user. Without this option, the user’s posts will be retained.',
+	'CLI_DESCRIPTION_USER_RECLEAN'				=> 'Re-clean usernames.',
+
 	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
 	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
+	'CLI_EXTENSION_DISABLED'			=> 'Extension %s is not enabled',
 	'CLI_EXTENSION_ENABLE_FAILURE'		=> 'Could not enable extension %s',
 	'CLI_EXTENSION_ENABLE_SUCCESS'		=> 'Successfully enabled extension %s',
+	'CLI_EXTENSION_ENABLED'				=> 'Extension %s is already enabled',
+	'CLI_EXTENSION_NOT_EXIST'			=> 'Extension %s does not exist',
 	'CLI_EXTENSION_NAME'				=> 'Name of the extension',
 	'CLI_EXTENSION_PURGE_FAILURE'		=> 'Could not purge extension %s',
 	'CLI_EXTENSION_PURGE_SUCCESS'		=> 'Successfully purged extension %s',
+	'CLI_EXTENSION_UPDATE_FAILURE'		=> 'Could not update extension %s',
+	'CLI_EXTENSION_UPDATE_SUCCESS'		=> 'Successfully updated extension %s',
 	'CLI_EXTENSION_NOT_FOUND'			=> 'No extensions were found.',
+	'CLI_EXTENSION_NOT_ENABLEABLE'		=> 'Extension %s is not enableable.',
 	'CLI_EXTENSIONS_AVAILABLE'			=> 'ໃຊ້ໄດ້',
 	'CLI_EXTENSIONS_DISABLED'			=> 'ຖືກປິດການໃຊ້ງານ',
 	'CLI_EXTENSIONS_ENABLED'			=> 'ເປີດໃຊ້',
 
+	'CLI_FIXUP_FIX_LEFT_RIGHT_IDS_SUCCESS'		=> 'Successfully repaired the tree structure of the forums and modules.',
 	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
+	'CLI_FIXUP_UPDATE_HASH_BCRYPT_SUCCESS'		=> 'Successfully updated outdated password hashes to bcrypt.',
 
 	'CLI_MIGRATION_NAME'					=> 'Migration name, including the namespace (use forward slashes instead of backslashes to avoid problems).',
 	'CLI_MIGRATIONS_AVAILABLE'				=> 'Available migrations',
@@ -356,6 +390,7 @@ $lang = array_merge($lang, array(
 	'AUTH_PROVIDER_OAUTH_SERVICE_BITLY'						=> 'Bitly',
 	'AUTH_PROVIDER_OAUTH_SERVICE_FACEBOOK'					=> 'Facebook',
 	'AUTH_PROVIDER_OAUTH_SERVICE_GOOGLE'					=> 'Google',
+	'AUTH_PROVIDER_OAUTH_SERVICE_TWITTER'					=> 'Twitter',
 	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_NOT_STORED'			=> 'OAuth token not stored.',
 	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_INCORRECTLY_STORED'	=> 'OAuth token incorrectly stored.',
 	'AVATAR_DISALLOWED_CONTENT'		=> 'The upload was rejected because the uploaded file was identified as a possible attack vector.',
@@ -391,8 +426,10 @@ $lang = array_merge($lang, array(
 	'BOARD_DISABLED'		=> 'ຂະນະນີ້ເວັບບອດຖືກປິດການໃຊ້ງານຢູ່.',
 	'BOARD_UNAVAILABLE'		=> 'ຂໍອະໄພ, ຂະນະນີ້ເວັບບອດບໍ່ສາມາດນຳໃຊ້ໄດ້ ກະລຸນາກັບເຂົ້າມາໃຫມ່ໃນພາຍຫລັງ.',
 	'BROWSING_FORUM'		=> 'ສະມາຊິກທີ່ກຳລັງເບິ່ງຫມວດນີ້ຢູ່: %1$s',
+	'BUTTON_DELETE'         => 'Delete',
 	'BUTTON_EDIT'			=> 'Edit',
 	'BUTTON_FORUM_LOCKED'	=> 'Locked',
+	'BUTTON_INFORMATION'    => 'ຂໍ້ມູນ',
 	'BUTTON_NEW_TOPIC'		=> 'New Topic',
 	'BUTTON_PM'				=> 'PM',
 	'BUTTON_PM_FORWARD'		=> 'Forward',
@@ -401,7 +438,9 @@ $lang = array_merge($lang, array(
 	'BUTTON_PM_REPLY_ALL'	=> 'Reply All',
 	'BUTTON_POST_REPLY'		=> 'Post Reply',
 	'BUTTON_QUOTE'			=> 'Quote',
+	'BUTTON_REPORT'         => 'Report',
 	'BUTTON_TOPIC_LOCKED'	=> 'Locked',
+	'BUTTON_WARN'           => 'Warn',
 	'BYTES'					=> 'Bytes',
 	'BYTES_SHORT'			=> 'B',
 
@@ -427,6 +466,10 @@ $lang = array_merge($lang, array(
 	'CONTACT'				=> 'Contact',
 	'CONTACT_USER'			=> 'Contact %s',
 	'CONTACT_US'			=> 'Contact us',
+	'COOKIE_CONSENT_INFO'	=> 'Learn more',
+	'COOKIE_CONSENT_MSG'	=> 'This website uses cookies to ensure you get the best experience on our website.',
+	'COOKIE_CONSENT_OK'		=> 'Got it!',
+	'COOKIE_CONSENT_HREF'	=> 'http://cookiesandyou.com',
 	'COOKIES_DELETED'		=> 'ຄຸກກີ້ໃນເວັບບອດຖືກລຶບອອກຫມົດແລ້ວ.',
 	'CURRENT_TIME'			=> 'ມື້ນີ້ແມ່ນວັນ %s',
 
@@ -570,6 +613,7 @@ $lang = array_merge($lang, array(
 	'INTERESTS'					=> 'ຄວາມສົນໃຈ',
 	'INVALID_DIGEST_CHALLENGE'	=> 'digest challenge ບໍ່ຖືກຕ້ອງ.',
 	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> possibly an invalid email address?',
+	'INVALID_FEED_ATTACHMENTS'	=> 'The selected feed tried fetching attachments with invalid constraints.',
 	'INVALID_PLURAL_RULE'		=> 'The chosen plural rule is invalid. Valid values are integers between 0 and 15.',
 	'IP'						=> 'IP',
 	'IP_BLACKLISTED'			=> 'IP %1$s ຂອງທ່ານເປັນ IP ທີ່ມີຢູ່ໃນບັນຊີດຳ ຈຶ່ງບໍ່ສາມາດໃຊ້ໄດ້. ກະລຸນາອ່ານຂໍ້ມູນເພີ່ມເຕີມໃນ <a href="%2$s">%2$s</a>.',
@@ -723,7 +767,7 @@ $lang = array_merge($lang, array(
 	'NO_UNREAD_POSTS'			=> 'There are no new unread posts for this topic.',
 	'NO_UPLOAD_FORM_FOUND'		=> 'ບໍ່ພົບຮູບແບບໄຟລ໌ທີ່ຮອງຮັບສຳຫລັບການອັບໂຫລດ.',
 	'NO_USER'					=> 'ບໍ່ມີຊື່ຜູ້ໃຊ້ງານທີ່ທ່ານຊອກ.',
-	'NO_USERS'					=> 'ບໍ່ມີຊື່ຜູ້ໃຊ້ງານທີ່ທ່ານຊອກ.',
+	'NO_USERS'					=> 'You haven’t entered any users or user not exist.',
 	'NO_USER_SPECIFIED'			=> 'ທ່ານຍັງບໍ່ໄດ້ລະບຸຊື່ຜູ້ໃຊ້ງານເທື່ອ.',
 
 	'OCCUPATION'				=> 'ອາຊີບ',
@@ -776,6 +820,7 @@ $lang = array_merge($lang, array(
 	'PREVIOUS'				=> 'ກັບຄືນ',		// Used in pagination
 	'PREVIOUS_STEP'			=> 'ກັບຄືນ',
 	'PRIVACY'				=> 'ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ',
+	'PRIVACY_LINK'			=> 'Privacy',
 	'PRIVATE_MESSAGE'		=> 'ຂໍ້ຄວາມສ່ວນຕົວ',
 	'PRIVATE_MESSAGES'		=> 'ຂໍ້ຄວາມສ່ວນຕົວ',
 	'PRIVATE_MESSAGING'		=> 'ຂໍ້ຄວາມສ່ວນຕົວ',
@@ -892,6 +937,7 @@ $lang = array_merge($lang, array(
 	'SUBMIT'					=> 'ສົ່ງ',
 
 	'TB'				=> 'TB',
+	'TERMS_LINK'		=> 'Terms',
 	'TERMS_USE'			=> 'ເງື່ອນໄຂການໃຊ້ບໍລິການ',
 	'TEST_CONNECTION'	=> 'ທົດສອບການເຊື່ອມຕໍ່',
 	'THE_TEAM'			=> 'ລາຍຊື່ທີມງານ',
@@ -1111,7 +1157,7 @@ $lang = array_merge($lang, array(
 	'PHOOGLE_LINK_TEXT'		=> 'Maps',
 	'PHOOGLE_SHOW_USER_TEXT'=> 'Show User on the Map',
 	'FORUM_BLOG'			=> 'Blog',
-	'PAGE_NOT_FOUND'		=> 'The selected page was not found or you have no permissions.',
+	'PAGE_NOT_FOUND'		=> 'The requested page could not be found or you have no permissions.',
 	'POINTS_DONATE'			=> '[Donate]',
 	'POINTS_MODIFY'			=> '[Modify]',
 
@@ -1768,7 +1814,7 @@ $lang = array_merge($lang, array(
 	'HELP_BBCODE_OTHERS_CUSTOM_ANSWER'	=> 'If you are an administrator on this board and have the proper permissions, you can add further BBCodes through the Custom BBCodes section.',
 	'HELP_BBCODE_OTHERS_CUSTOM_QUESTION'	=> 'Can I add my own tags?',
 
-	'HELP_BBCODE_QUOTES_CODE_ANSWER'	=> 'If you want to output a piece of code or in fact anything that requires a fixed width, e.g. Courier type font you should enclose the text in <strong>[code][/code]</strong> tags, e.g.<br /><br /><strong>[code]</strong>echo &quot;This is some code&quot;;<strong>[/code]</strong><br /><br />All formatting used within <strong>[code][/code]</strong> tags is retained when you later view it. PHP syntax highlighting can be enabled using <strong>[code=php][/code]</strong> and is recommended when posting PHP code samples as it improves readability.',
+	'HELP_BBCODE_QUOTES_CODE_ANSWER'	=> 'If you want to output a piece of code or in fact anything that requires a fixed width, e.g. Courier type font you should enclose the text in <strong>[code][/code]</strong> tags, e.g.<br /><br /><strong>[code]</strong>echo &quot;This is some code&quot;;<strong>[/code]</strong><br /><br />All formatting used within <strong>[code][/code]</strong> tags is retained when you later view it.',
 	'HELP_BBCODE_QUOTES_CODE_QUESTION'	=> 'Outputting code or fixed width data',
 	'HELP_BBCODE_QUOTES_TEXT_ANSWER'	=> 'There are two ways you can quote text, with a reference or without.<ul><li>When you utilise the Quote function to reply to a post on the board you should notice that the post text is added to the message window enclosed in a <strong>[quote=&quot;&quot;][/quote]</strong> block. This method allows you to quote with a reference to a person or whatever else you choose to put! For example to quote a piece of text Mr. Blobby wrote you would enter:<br /><br /><strong>[quote=&quot;Mr. Blobby&quot;]</strong>The text Mr. Blobby wrote would go here<strong>[/quote]</strong><br /><br />The resulting output will automatically add &quot;Mr. Blobby wrote:&quot; before the actual text. Remember you <strong>must</strong> include the quotation marks &quot;&quot; around the name you are quoting, they are not optional.</li><li>The second method allows you to blindly quote something. To utilise this enclose the text in <strong>[quote][/quote]</strong> tags. When you view the message it will simply show the text within a quotation block.</li></ul>',
 	'HELP_BBCODE_QUOTES_TEXT_QUESTION'	=> 'Quoting text in replies',
@@ -1998,13 +2044,17 @@ $lang = array_merge($lang, array(
 	// Filesystem requirements
 	'FILE_NOT_EXISTS'			=> 'File not exists',
 	'FILE_NOT_EXISTS_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to exist.',
+	'FILE_NOT_EXISTS_EXPLAIN_OPTIONAL'		=> 'It is recommended that the %1$s file exist for a better forum user experience.',
 	'FILE_NOT_WRITABLE'			=> 'File not writable',
 	'FILE_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to be writable.',
+	'FILE_NOT_WRITABLE_EXPLAIN_OPTIONAL'	=> 'It is recommended that the %1$s file be writable for a better forum user experience.',
 
 	'DIRECTORY_NOT_EXISTS'				=> 'Directory not exists',
 	'DIRECTORY_NOT_EXISTS_EXPLAIN'		=> 'To be able to install phpBB the %1$s directory needs to exist.',
+	'DIRECTORY_NOT_EXISTS_EXPLAIN_OPTIONAL'		=> 'It is recommended that the %1$s directory exist for a better forum user experience.',
 	'DIRECTORY_NOT_WRITABLE'			=> 'Directory not writable',
 	'DIRECTORY_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s directory needs to be writable.',
+	'DIRECTORY_NOT_WRITABLE_EXPLAIN_OPTIONAL'	=> 'It is recommended that the %1$s directory be writable for a better forum user experience.',
 
 	// Server requirements
 	'PHP_VERSION_REQD'					=> 'PHP version',
@@ -2015,6 +2065,8 @@ $lang = array_merge($lang, array(
 	'PCRE_UTF_SUPPORT_EXPLAIN'			=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
 	'PHP_JSON_SUPPORT'					=> 'PHP JSON support',
 	'PHP_JSON_SUPPORT_EXPLAIN'			=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_XML_SUPPORT'					=> 'PHP XML/DOM support',
+	'PHP_XML_SUPPORT_EXPLAIN'			=> 'In order for phpBB to function correctly, the PHP XML/DOM extension needs to be available.',
 	'PHP_SUPPORTED_DB'					=> 'Supported databases',
 	'PHP_SUPPORTED_DB_EXPLAIN'			=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
 
@@ -2022,10 +2074,86 @@ $lang = array_merge($lang, array(
 
 	'STAGE_REQUIREMENTS'	=> 'Check requirements',
 
+	'ALL_FILES_DIFFED'		=> 'All modified files has been diffed.',
+	'BOARD_CONFIG'		=> 'Bulletin board configuration',
+	'BOARD_DESCRIPTION'	=> 'Short description of the board',
+	'BOARD_NAME'		=> 'Title of the board',
+	'CLI_CONFIG_FILE'				=> 'Config file to use',
+	'CLI_INSTALL_BOARD'				=> 'Install phpBB',
+	'CLI_INSTALL_SHOW_CONFIG'		=> 'Show the configuration which will be used',
+	'CLI_INSTALL_VALIDATE_CONFIG'	=> 'Validate a configuration file',
+	'CLI_UPDATE_BOARD'				=> 'Update phpBB',
+	'CONFIGURATION_VALID'			=> 'The configuration file is valid',
+	'DATABASE_VERSION'		=> 'Database version',
+	'DB_OPTION_MSSQL_ODBC'	=> 'MSSQL Server 2000+ via ODBC',
+	'DB_OPTION_MSSQLNATIVE'	=> 'MSSQL Server 2005+ [ Native ]',
+	'DB_OPTION_MYSQL'		=> 'MySQL',
+	'DB_OPTION_MYSQLI'		=> 'MySQL with MySQLi Extension',
+	'DB_OPTION_ORACLE'		=> 'Oracle',
+	'DB_OPTION_POSTGRES'	=> 'PostgreSQL 7.x/8.x',
+	'DB_OPTION_SQLITE3'		=> 'SQLite 3',
+	'DEFAULT_LANGUAGE'				=> 'Default language',
+	'INSTALLER_CONFIG_NOT_WRITABLE'	=> 'The installer config file is not writable.',
+	'INSTALLER_FINISHED'	=> 'The installer has finished successfully',
+	'INVALID_YAML_FILE'				=> 'Could not parse YAML file %1$s',
+	'MENU_INTRO'		=> 'Introduction',
+	'MENU_LICENSE'		=> 'License',
+	'MENU_OVERVIEW'		=> 'Overview',
+	'MENU_SUPPORT'		=> 'Support',
+	'MISSING_DATA'					=> 'Config file is missing data or might contain invalid settings.',
+	'MISSING_FILE'					=> 'Unable to access file %1$s',
+	'MODULE_NOT_FOUND'				=> 'Module not found',
+	'MODULE_NOT_FOUND_DESCRIPTION'	=> 'A module could not be found because the service, %s, is undefined.',
+	'PACKAGE_VERSION'					=> 'Package version installed',
+	'SKIP_MODULE'	=> 'Skip “%s” module',
+	'SKIP_TASK'		=> 'Skip “%s” task',
+	'TASK_ADD_BOTS'				=> 'Registering bots',
+	'TASK_ADD_CONFIG_SETTINGS'			=> 'Adding configuration settings',
+	'TASK_ADD_DEFAULT_DATA'				=> 'Adding default settings to the database',
+	'TASK_ADD_LANGUAGES'		=> 'Installing available languages',
+	'TASK_ADD_MODULES'			=> 'Installing modules',
+	'TASK_CLASS_NOT_FOUND'				=> 'Installer task service definition is invalid. Service name “%1$s” given, the expected class namespace is “%2$s” for that. For more information please see the documentation of task_interface.',
+	'TASK_CREATE_CONFIG_FILE'	=> 'Creating configuration file',
+	'TASK_CREATE_DATABASE_SCHEMA_FILE'	=> 'Creating database schema file',
+	'TASK_CREATE_SEARCH_INDEX'	=> 'Creating search index',
+	'TASK_CREATE_TABLES'				=> 'Creating tables',
+	'TASK_INSTALL_EXTENSIONS'	=> 'Installing packaged extensions',
+	'TASK_NOT_FOUND'				=> 'Task not found',
+	'TASK_NOT_FOUND_DESCRIPTION'	=> 'A task could not be found because the service, %s, is undefined.',
+	'TASK_NOTIFY_USER'			=> 'Sending notification e-mail',
+	'TASK_POPULATE_MIGRATIONS'	=> 'Populating migrations',
+	'TASK_SERVICE_INSTALLER_MISSING'	=> 'All installer task services should start with “installer”',
+	'TASK_SETUP_DATABASE'				=> 'Setting up database',
+	'TASK_UPDATE_EXTENSIONS'	=> 'Updating extensions',
+
+	'UPDATE_CHECK_FILES'	=> 'Check files to update',
+	'UPDATE_CONTINUE_FILE_UPDATE'	=> 'Update files',
+	'UPDATE_CONTINUE_UPDATE_PROCESS'	=> 'Continue update process',
+	'UPDATE_FILE_DIFF'		=> 'Diffing changed files',
+	'UPDATE_FILE_METHOD'			=> 'File updater method',
+	'UPDATE_FILE_METHOD_DOWNLOAD'	=> 'Download modified files in an archive',
+	'UPDATE_FILE_METHOD_FILESYSTEM'	=> 'Update files via direct file access (Automatic)',
+	'UPDATE_FILE_METHOD_FTP'		=> 'Update files via FTP (Automatic)',
+	'UPDATE_FILE_METHOD_TITLE'		=> 'File updater methods',
+	'UPDATE_FILE_UPDATER_HAS_FAILED'	=> 'File updater “%1$s“ has failed. The installer will try to fallback to “%2$s“.',
+	'UPDATE_FILE_UPDATERS_HAVE_FAILED'	=> 'The file updater failed. No further fallback methods are available.',
+	'UPDATE_FILES_NOT_FOUND'	=> 'No valid update directory was found, please make sure you uploaded the relevant files.',
+	'UPDATE_INCOMPLETE'				=> 'Your phpBB installation has not been correctly updated.',
+	'UPDATE_INCOMPLETE_EXPLAIN'		=> '[lang:UPDATE_INCOMPLETE_EXPLAIN]',
+	'UPDATE_INCOMPLETE_MORE'		=> 'Please read the information below in order to fix this error.',
+	'UPDATE_TYPE'			=> 'Type of update to run',
+	'UPDATE_TYPE_ALL'		=> 'Update filesystem and database',
+	'UPDATE_TYPE_DB_ONLY'	=> 'Update database only',
+	'UPDATE_UPDATING_FILES'	=> 'Updating files',
+	'UPGRADE_INSTRUCTIONS'			=> '[lang:UPGRADE_INSTRUCTIONS]',
+	
 	'INST_ERR_MISSING_DATA'		=> 'You must fill out all fields in this block.',
 
 	'TIMEOUT_DETECTED_TITLE'	=> 'The installer detected a timeout',
 	'TIMEOUT_DETECTED_MESSAGE'	=> 'The installer has detected a timeout, you may try to refresh the page, which may lead to data corruption. We suggest that you either increase your timeout settings or try to use the CLI.',
+
+	'STAGE_OBTAIN_DATA'	=> 'Set installation data',
+	'STAGE_UPDATE_DATABASE'		=> 'Update database',
 
 	'ADMIN_CONFIG'				=> 'ຕັ້ງຄ່າຜູ້ເບິ່ງແຍງລະບົບ',
 	'ADMIN_PASSWORD'			=> 'ລະຫັດຜ່ານ',
@@ -2069,7 +2197,7 @@ $lang = array_merge($lang, array(
 	'CONTINUE_OLD_CONVERSION'	=> 'Continue previously started conversion',
 	'CONVERT'					=> 'Convert',
 	'CONVERT_COMPLETE'			=> 'Conversion completed',
-	'CONVERT_COMPLETE_EXPLAIN'	=> 'You have now successfully converted your board to phpBB 3.0. You can now login and <a href="../">access your board</a>. Please ensure that the settings were transferred correctly before enabling your board by deleting the install directory. Remember that help on using phpBB is available online via the <a href="http://www.phpbb.com/support/documentation/3.0/">Documentation</a> and the <a href="http://www.phpbb.com/community/viewforum.php?f=46">support forums</a>.',
+	'CONVERT_COMPLETE_EXPLAIN'	=> 'You have now successfully converted your board to phpBB 3.2. You can now login and <a href="../">access your board</a>. Please ensure that the settings were transferred correctly before enabling your board by deleting the install directory. Remember that help on using phpBB is available online via the <a href="http://www.phpbb.com/support/documentation/3.0/">Documentation</a> and the <a href="http://www.phpbb.com/community/viewforum.php?f=46">support forums</a>.',
 	'CONVERT_INTRO'				=> 'Welcome to the phpBB Unified Convertor Framework',
 	'CONVERT_INTRO_BODY'		=> 'From here, you are able to import data from other (installed) board systems. The list below shows all the conversion modules currently available. If there is no convertor shown in this list for the board software you wish to convert from, please check our website where further conversion modules may be available for download.',
 	'CONVERT_NEW_CONVERSION'	=> 'New conversion',
@@ -2192,12 +2320,14 @@ $lang = array_merge($lang, array(
 	'INSTALL_TEST'				=> 'Test again',
 
 	// Errors
+	'INST_ERR_DB'					=> 'Database installation error',
 	'INST_ERR_NO_DB'			=> 'Cannot load the PHP module for the selected database type.',
 	'INST_ERR_DB_INVALID_PREFIX'	=> 'The prefix you entered is invalid. It must start with a letter and must only contain letters, numbers and underscores.',
 	'INST_ERR_PREFIX_TOO_LONG'	=> 'The table prefix you have specified is too long. The maximum length is %d characters.',
 	'INST_ERR_DB_NO_NAME'		=> 'No database name specified.',
 	'INST_ERR_DB_FORUM_PATH'	=> 'The database file specified is within your board directory tree. You should put this file in a non web-accessible location.',
 	'INST_ERR_DB_CONNECT'		=> 'Could not connect to the database, see error message below.',
+	'INST_ERR_DB_NO_WRITABLE'		=> 'Both the database and the directory containing it must be writable.',
 	'INST_ERR_DB_NO_ERROR'		=> 'No error message given.',
 	'INST_ERR_PREFIX'			=> 'Tables with the specified prefix already exist, please choose an alternative.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'The version of MySQL installed on this machine is incompatible with the “MySQL with MySQLi Extension” option you have selected. Please try the “MySQL” option instead.',
@@ -2318,6 +2448,7 @@ $lang = array_merge($lang, array(
 
 	'TABLES_MISSING'			=> 'Could not find these tables<br />» <strong>%s</strong>.',
 	'TABLE_PREFIX'				=> 'Prefix for tables in database',
+	'TABLE_PREFIX_EXPLAIN'	=> 'The prefix must start with a letter and must only contain letters, numbers and underscores.',
 	'TABLE_PREFIX_SAME'			=> 'The table prefix needs to be the one used by the software you are converting from.<br />» Specified table prefix was %s.',
 	'TESTS_PASSED'				=> 'Tests passed',
 	'TESTS_FAILED'				=> 'Tests failed',
@@ -2355,7 +2486,6 @@ $lang = array_merge($lang, array(
 	'CONTINUE_UPDATE_NOW'			=> 'Continue the update process now',		// Shown within the database update script at the end if called from the updater
 	'CONTINUE_UPDATE'				=> 'Continue update now',					// Shown after file upload to indicate the update process is not yet finished
 	'CURRENT_FILE'					=> 'Beginning of current original file',
-	'CURRENT_VERSION'				=> 'Current version',
 
 	'DATABASE_TYPE'						=> 'Database type',
 	'DATABASE_UPDATE_COMPLETE'			=> 'Database updater has completed!',
@@ -2386,6 +2516,7 @@ $lang = array_merge($lang, array(
 
 	'FILE_ALREADY_UP_TO_DATE'		=> 'File is already up to date.',
 	'FILE_DIFF_NOT_ALLOWED'			=> 'File not allowed to be diffed.',
+	'FILE_DIFFER_ERROR_FILE_CANNOT_BE_READ'	=> 'The file differ failed to open %s.',
 	'FILE_USED'						=> 'Information used from',			// Single file
 	'FILES_CONFLICT'				=> 'Conflict files',
 	'FILES_CONFLICT_EXPLAIN'		=> 'The following files are modified and do not represent the original files from the old version. phpBB determined that these files create conflicts if they are tried to be merged. Please investigate the conflicts and try to manually resolve them or continue the update choosing the preferred merging method. If you resolve the conflicts manually check the files again after you modified them. You are also able to choose between the preferred merge method for every file. The first one will result in a file where the conflicting lines from your old file will be lost, the other one will result in loosing the changes from the newer file.',
@@ -2410,7 +2541,6 @@ $lang = array_merge($lang, array(
 
 	'KEEP_OLD_NAME'		=> 'Keep username',
 
-	'LATEST_VERSION'		=> 'Latest version',
 	'LINE'					=> 'Line',
 	'LINE_ADDED'			=> 'Added',
 	'LINE_MODIFIED'			=> 'Modified',
@@ -2535,6 +2665,9 @@ $lang = array_merge($lang, array(
 
 	'VERSION_CHECK'					=> 'Version check',
 	'VERSION_CHECK_EXPLAIN'			=> 'Checks to see if the version of phpBB you are currently running is up to date.',
+	'VERSIONCHECK_INVALID_ENTRY'	=> 'Latest version information contains an unsupported entry.',
+	'VERSIONCHECK_INVALID_URL'		=> 'Latest version information contains invalid URL.',
+	'VERSIONCHECK_INVALID_VERSION'	=> 'Latest version information contains an invalid version.',
 	'VERSION_NOT_UP_TO_DATE'		=> 'Your version of phpBB is not up to date. Please continue the update process.',
 	'VERSION_NOT_UP_TO_DATE_ACP'	=> 'Your version of phpBB is not up to date.<br />Below you will find a link to the release announcement for the latest version as well as instructions on how to perform the update.',
 	'VERSION_NOT_UP_TO_DATE_TITLE'	=> 'Your phpBB installation is not up to date.',
@@ -2606,12 +2739,14 @@ $lang = array_merge($lang, array(
 	'MIGRATION_NOT_INSTALLED'			=> 'The migration "%s" is not installed.',
 	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
 	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_SCHEMA_IN_PROGRESS'		=> 'Installing Schema: %1$s; Time: %2$.2f seconds',
 	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
 
 	'MIGRATION_REVERT_DATA_DONE'		=> 'Reverted Data: %1$s; Time: %2$.2f seconds',
 	'MIGRATION_REVERT_DATA_IN_PROGRESS'	=> 'Reverting Data: %1$s; Time: %2$.2f seconds',
 	'MIGRATION_REVERT_DATA_RUNNING'		=> 'Reverting Data: %s.',
 	'MIGRATION_REVERT_SCHEMA_DONE'		=> 'Reverted Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_SCHEMA_IN_PROGRESS'	=> 'Reverting Schema: %1$s; Time: %2$.2f seconds',
 	'MIGRATION_REVERT_SCHEMA_RUNNING'	=> 'Reverting Schema: %s.',
 
 	'MIGRATION_INVALID_DATA_MISSING_CONDITION'		=> 'A migration is invalid. An if statement helper is missing a condition.',
@@ -2622,9 +2757,12 @@ $lang = array_merge($lang, array(
 	'MIGRATION_INVALID_DATA_UNDEFINED_METHOD'		=> 'A migration is invalid. An undefined migration tool method was encountered.',
 
 	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
+	'MODULE_EXISTS'						=> 'A module already exists: %s',
+	'MODULE_EXIST_MULTIPLE'				=> 'Several modules with the given parent module langname already exist: %s. Try using before/after keys to clarify the module placement.',
 	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
 	'MODULE_NOT_EXIST'					=> 'A required module does not exist: %s',
 
+	'PARENT_MODULE_FIND_ERROR'			=> 'Unable to determine the parent module identifier: %s',
 	'PERMISSION_NOT_EXIST'				=> 'The permission setting "%s" unexpectedly does not exist.',
 
 	'ROLE_NOT_EXIST'					=> 'The permission role "%s" unexpectedly does not exist.',
@@ -2907,7 +3045,7 @@ $lang = array_merge($lang, array(
 	'RESTORE_TOPIC_CONFIRM'		=> 'Are you sure you want to restore this topic?',
 	'RESTORE_TOPICS'			=> 'Restore topics',
 	'RESTORE_TOPICS_CONFIRM'	=> 'Are you sure you want to restore the selected topics?',
-	'RESYNC'					=> 'Resync',
+	'RESYNC'					=> 'Resynchronise',
 	'RETURN_MESSAGE'			=> '%sReturn to the message%s',
 	'RETURN_NEW_FORUM'			=> '%sGo to the new forum%s',
 	'RETURN_NEW_TOPIC'			=> '%sGo to the new topic%s',
@@ -2991,7 +3129,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'The following is a warning which has been issued to you by an administrator or moderator of this site.[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'Board warning issued',
 	'WARNING_POST_DEFAULT'	=> 'This is a warning regarding the following post made by you: %s .',
-	'NO_WARNINGS'	=> 'No warnings.',
+	'NO_WARNINGS'	=> 'No warnings exist.',
 
 	'YOU_SELECTED_TOPIC'	=> 'You selected topic number %d: %s.',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -3033,7 +3171,6 @@ $lang = array_merge($lang, array(
 	'BEFORE'				=> 'ກ່ອນຫນ້າ',
 	'CC_EMAIL'				=> 'ກ໊ອບປີ້ເມລນີ້ແລ້ວສົ່ງໄປເມລຂອງທ່ານ',
 	'CC_SENDER'				=> 'ກ໊ອບປີ້ເມລນີ້ແລ້ວສົ່ງໄປເມລຂອງທ່ານ',
-
 	'CONTACT_ADMIN'			=> 'Contact a Board Administrator',
 
 	'DEST_LANG'				=> 'ພາສາ',
@@ -3058,6 +3195,7 @@ $lang = array_merge($lang, array(
 	'FLOOD_EMAIL_LIMIT'		=> 'You cannot send another e-mail at this time. Please try again later.',
 
 	'GROUP_LEADER'			=> 'ຫົວໜ້າກຸ່ມ',
+
 	'HIDE_MEMBER_SEARCH'	=> 'ເຊື່ອງການຫາຜູ້ໃຂ້',
 
 	'IM_ADD_CONTACT'		=> 'ເພີ່ມລາຍຊື່ຜູ້ຕິດຕໍ່',
@@ -3115,7 +3253,7 @@ $lang = array_merge($lang, array(
 
 	'USERNAME_BEGINS_WITH'	=> 'ຊື່ຜູ້ໃຊ້ຂື້ນຕົ້ນດ້ວຍ',
 	'USER_ADMIN'			=> 'ຜູ້ເບີ່ງແຍງລະບົບ',
-	'USER_BAN'				=> 'Ban one or more users by username',
+	'USER_BAN'				=> 'Banning',
 	'USER_FORUM'			=> 'User statistics',
 	'USER_ONLINE'			=> 'ອອນໄລນ໌',
 	'USER_PRESENCE'			=> 'Board presence',
@@ -3757,6 +3895,7 @@ $lang = array_merge($lang, array(
 	'AVATAR_DRIVER_UPLOAD_TITLE'	=> 'Upload avatar',
 	'AVATAR_DRIVER_UPLOAD_EXPLAIN'	=> 'Upload your own custom avatar.',
 	'AVATAR_EXPLAIN'				=> 'Maximum dimensions; width: %1$s, height: %2$s, file size: %3$.2f KiB.',
+	'AVATAR_EXPLAIN_NO_FILESIZE'	=> 'Maximum dimensions; width: %1$s, height: %2$s.',
 	'AVATAR_FEATURES_DISABLED'		=> 'The avatar functionality is currently disabled.',
 	'AVATAR_GALLERY'				=> 'Local gallery',
 	'AVATAR_GENERAL_UPLOAD_ERROR'	=> 'Could not upload avatar to %s.',
@@ -4354,6 +4493,7 @@ $lang = array_merge($lang, array(
 	'NO_NEW_POSTS_HOT'		=> 'ບໍ່ມີຂໍ້ຄວາມໃຫມ່ [ ກະທູ້ດັງ ]',	// Not used anymore
 	'NO_NEW_POSTS_LOCKED'	=> 'ບໍ່ມີຂໍ້ຄວາມໃຫມ່ [ ກະທູ້ຖືກລັອກ ]',	// Not used anymore
 	'NO_READ_ACCESS'		=> 'You do not have the required permissions to read topics within this forum.',
+	'NO_FORUMS_IN_CATEGORY'	=> 'This category has no forums.',
 	'NO_UNREAD_POSTS_HOT'		=> 'No unread posts [ Popular ]',
 	'NO_UNREAD_POSTS_LOCKED'	=> 'No unread posts [ Locked ]',
 
@@ -4919,7 +5059,7 @@ $lang = array_merge($lang, array(
 	'ABBCODES_MAX_IMAGE_WIDTH_EXPLAIN'	=> 'Image will be resized if exceed the width set here.',
 	'ABBCODES_MAX_IMAGE_HEIGHT'			=> 'Maximum image height in pixel',
 	'ABBCODES_MAX_IMAGE_HEIGHT_EXPLAIN'	=> 'Image will be resized if exceed the height set here.',
-	'ABBCODES_MAX_THUMB_WIDTH'			=> 'Maximum thumbnail width in pixel',
+	'ABBCODES_MAX_THUMB_WIDTH'			=> 'Maximum thumbnail width/height in pixel',
 	'ABBCODES_RESIZE_SIGNATURE'			=> 'Resize larger images in Signatures',
 	'ABBCODES_RESIZE_SIGNATURE_EXPLAIN'	=> 'Also resize larger images in Signatures ?',
 	'ABBCODES_SIG_IMAGE_WIDTH'			=> 'Maximum signature image width in pixel',
@@ -8827,7 +8967,7 @@ $lang = array_merge($lang, array(
 	'NO_TEAM_SHORTNAME'				=> 'Short name of the team is missing! Please enter a short name!',
 	'NO_USER'						=> 'ບໍ່ມີຊື່ຜູ້ໃຊ້ງານທີ່ທ່ານຊອກ.',
 	'NO_USERID'						=> 'The User chosen by you does not exist. ',
-	'NO_USERS'						=> 'ບໍ່ມີຊື່ຜູ້ໃຊ້ງານທີ່ທ່ານຊອກ.',
+	'NO_USERS'						=> 'You haven’t entered any users or user not exist.',
 	'NO_WIN_MATCHDAYS'				=> 'This WebTip does not contain any matchday winnings!',
 	'NO_WIN_SEASON'					=> 'This WebTip does not contain any seasonal winnings!',
 	'NOT_CLOSED'					=> 'This matchday was not closed yet!',
@@ -10084,7 +10224,7 @@ $lang = array_merge($lang, array(
 	'PERMANENT'		=> 'Permanent',
 
 	'UNTIL'						=> 'Until',
-	'USER_BAN'					=> 'Ban one or more users by username',
+	'USER_BAN'					=> 'Banning',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> 'Enable this to exclude the entered users from all current bans.',
 	'USER_BAN_EXPLAIN'			=> 'You can ban multiple users in one go by entering each name on a new line. Use the <span style="text-decoration: underline;">Find a member</span> facility to look up and add one or more users automatically.',
 	'USER_NO_BANNED'			=> 'No banned usernames',
@@ -10230,6 +10370,8 @@ $lang = array_merge($lang, array(
 	'ACP_POST_SETTINGS_EXPLAIN'			=> 'Here you can set all default settings for posting.',
 	'ALLOW_POST_LINKS'					=> 'Allow links in posts/private messages',
 	'ALLOW_POST_LINKS_EXPLAIN'			=> 'If disallowed the <code>[URL]</code> BBCode tag and automatic/magic URLs are disabled.',
+	'ALLOWED_SCHEMES_LINKS'				=> 'Allowed schemes in links',
+	'ALLOWED_SCHEMES_LINKS_EXPLAIN'		=> 'Users can only post schemeless URLs or one of the comma-separated list of allowed schemes.',
 	'ALLOW_POST_FLASH'					=> 'Allow use of <code>[FLASH]</code> BBCode tag in posts',
 	'ALLOW_POST_FLASH_EXPLAIN'			=> 'If disallowed the <code>[FLASH]</code> BBCode tag is disabled in posts. Otherwise the permission system controls which users can use the <code>[FLASH]</code> BBCode tag.',
 
@@ -10407,8 +10549,13 @@ $lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'These details define the data used to send cookies to your users browsers. In most cases the default values for the cookie settings should be sufficient. If you do need to change any do so with care, incorrect settings can prevent users logging in.',
 
 	'COOKIE_DOMAIN'				=> 'Cookie domain',
+	'COOKIE_DOMAIN_EXPLAIN'		=> 'In most cases the cookie domain is optional. Leave it blank if you are unsure.<br><br> In the case where you have a board integrated with other software or have multiple domains, then to determine the cookie domain you need to do the following. If you have something like <i>example.com</i> and <i>forums.example.com</i>, or perhaps <i>forums.example.com</i> and <i>blog.example.com</i>. Remove the subdomains until you find the common domain, <i>example.com</i>. Now add a dot in front of the common domain and you would enter .example.com (note the dot at the beginning).',
 	'COOKIE_NAME'				=> 'Cookie name',
+	'COOKIE_NAME_EXPLAIN'		=> 'This can be anything what you want, make it original. Whenever the cookie settings are changed the name of the cookie should be changed.',
+	'COOKIE_NOTICE'				=> 'Cookie notice',
+	'COOKIE_NOTICE_EXPLAIN'		=> 'If enabled a cookie notice will be displayed to users when visiting your board. This might be required by law depending on the content of your board and enabled extensions.',
 	'COOKIE_PATH'				=> 'Cookie path',
+	'COOKIE_PATH_EXPLAIN'		=> 'This will usually be the same as your script path or simply a slash to make the cookie accessible across the site domain.',
 	'COOKIE_SECURE'				=> 'Cookie secure',
 	'COOKIE_SECURE_EXPLAIN'		=> 'If your server is running via SSL set this to enabled else leave as disabled. Having this enabled and not running via SSL will result in server errors during redirects.',
 	'ONLINE_LENGTH'				=> 'View online time span',
@@ -10444,10 +10591,14 @@ $lang = array_merge($lang, array(
 	'LOAD_CPF_VIEWTOPIC'			=> 'Display custom profile fields on topic pages',
 	'LOAD_USER_ACTIVITY'			=> 'Show user’s activity',
 	'LOAD_USER_ACTIVITY_EXPLAIN'	=> 'Displays active topic/forum in user profiles and user control panel. It is recommended to disable this on boards with more than one million posts.',
+	'LOAD_USER_ACTIVITY_LIMIT'		=> 'User’s activity post limit',
+	'LOAD_USER_ACTIVITY_LIMIT_EXPLAIN'	=> 'The active topic/forum won’t be shown for users having more than this number of posts. Set to 0 to disable the limit.',
 	'READ_NOTIFICATION_EXPIRE_DAYS'	=> 'Read Notification Expiration',
 	'READ_NOTIFICATION_EXPIRE_DAYS_EXPLAIN' => 'Number of days that will elapse before a read notification will automatically be deleted. Set this value to 0 to make notifications permanent.',
 	'RECOMPILE_STYLES'				=> 'Recompile stale style components',
 	'RECOMPILE_STYLES_EXPLAIN'		=> 'Check for updated style components on filesystem and recompile.',
+	'YES_ACCURATE_PM_BUTTON'			=> 'Enable permission specific PM button in topic pages',
+	'YES_ACCURATE_PM_BUTTON_EXPLAIN'	=> 'If this setting is enabled, only post profiles of users who are permitted to read private messages will have a private message button.',
 	'YES_ANON_READ_MARKING'			=> 'Enable topic marking for guests',
 	'YES_ANON_READ_MARKING_EXPLAIN'	=> 'Stores read/unread status information for guests. If disabled posts are always read for guests.',
 	'YES_BIRTHDAYS'					=> 'Enable birthday listing',
@@ -10610,6 +10761,8 @@ $lang = array_merge($lang, array(
 	'ENABLE_EMAIL_EXPLAIN'			=> 'If this is set to disabled no e-mails will be sent by the board at all.',
 	'SEND_TEST_EMAIL'				=> 'Send a test email',
 	'SEND_TEST_EMAIL_EXPLAIN'		=> 'This will send a test email to the address defined in your account.',
+	'SMTP_ALLOW_SELF_SIGNED'		=> 'Allow self-signed SSL certificates',
+	'SMTP_ALLOW_SELF_SIGNED_EXPLAIN'=> 'Allow connections to SMTP server with self-signed SSL certificate. <br><em><strong>Warning:</strong> Allowing self-signed SSL certificates may cause security implications.</em>',
 	'SMTP_AUTH_METHOD'				=> 'Authentication method for SMTP',
 	'SMTP_AUTH_METHOD_EXPLAIN'		=> 'Only used if a username/password is set, ask your provider if you are unsure which method to use.',
 	'SMTP_CRAM_MD5'					=> 'CRAM-MD5',
@@ -10622,14 +10775,23 @@ $lang = array_merge($lang, array(
 	'SMTP_PORT'						=> 'SMTP server port',
 	'SMTP_PORT_EXPLAIN'				=> 'Only change this if you know your SMTP server is on a different port.',
 	'SMTP_SERVER'					=> 'SMTP server address',
+	'SMTP_SERVER_EXPLAIN'			=> 'Note that you have to provide the protocol that your server uses. If you are using SSL, this has to be "ssl://your.mailserver.com"',
 	'SMTP_SETTINGS'					=> 'SMTP settings',
 	'SMTP_USERNAME'					=> 'SMTP username',
 	'SMTP_USERNAME_EXPLAIN'			=> 'Only enter a username if your SMTP server requires it.',
+	'SMTP_VERIFY_PEER'				=> 'Verify SSL certificate',
+	'SMTP_VERIFY_PEER_EXPLAIN'		=> 'Require verification of SSL certificate used by SMTP server. <br><em><strong>Warning:</strong> Connecting peers with unverified SSL certificates may cause security implications.</em>',
+	'SMTP_VERIFY_PEER_NAME'			=> 'Verify SMTP peer name',
+	'SMTP_VERIFY_PEER_NAME_EXPLAIN'	=> 'Require verification of peer name for SMTP servers using SSL / TLS connections. <br><em><strong>Warning:</strong> Connecting to unverified peers may cause security implications.</em>',
 	'TEST_EMAIL_SENT'				=> 'The test email has been sent.<br />If you don’t receive it, please check your emails configuration.<br /><br />If you require assistance, please visit the <a href="https://www.phpbb.com/community/">phpBB support forums</a>.',
+
 	'USE_SMTP'						=> 'Use SMTP server for e-mail',
 	'USE_SMTP_EXPLAIN'				=> 'Select “Yes” if you want or have to send e-mail via a named server instead of the local mail function.',
 
 	'ACP_JABBER_SETTINGS_EXPLAIN'	=> 'Here you can enable and control the use of Jabber for instant messaging and board notifications. Jabber is an open source protocol and therefore available for use by anyone. Some Jabber servers include gateways or transports which allow you to contact users on other networks. Not all servers offer all transports and changes in protocols can prevent transports from operating. Please be sure to enter already registered account details - phpBB will use the details you enter here as is.',
+
+	'JAB_ALLOW_SELF_SIGNED'			=> 'Allow self-signed SSL certificates',
+	'JAB_ALLOW_SELF_SIGNED_EXPLAIN'	=> 'Allow connections to Jabber server with self-signed SSL certificate. <br><em><strong>Warning:</strong> Allowing self-signed SSL certificates may cause security implications.</em>',
 	'JAB_ENABLE'				=> 'Enable Jabber',
 	'JAB_ENABLE_EXPLAIN'		=> 'Enables use of Jabber messaging and notifications.',
 	'JAB_GTALK_NOTE'			=> 'Please note that GTalk will not work because the <samp>dns_get_record</samp> function could not be found. This function is not available in PHP4, and is not implemented on Windows platforms. It currently does not work on BSD-based systems, including Mac OS.',
@@ -10646,6 +10808,10 @@ $lang = array_merge($lang, array(
 	'JAB_USE_SSL_EXPLAIN'		=> 'If enabled a secure connection is tried to be established. The Jabber port will be modified to 5223 if port 5222 is specified.',
 	'JAB_USERNAME'				=> 'Jabber username',
 	'JAB_USERNAME_EXPLAIN'		=> 'Specify a registered username. The username will not be checked for validity.',
+	'JAB_VERIFY_PEER'				=> 'Verify SSL certificate',
+	'JAB_VERIFY_PEER_EXPLAIN'		=> 'Require verification of SSL certificate used by Jabber server. <br><em><strong>Warning:</strong> Connecting peers with unverified SSL certificates may cause security implications.</em>',
+	'JAB_VERIFY_PEER_NAME'			=> 'Verify Jabber peer name',
+	'JAB_VERIFY_PEER_NAME_EXPLAIN'	=> 'Require verification of peer name for Jabber servers using SSL / TLS connections. <br><em><strong>Warning:</strong> Connecting to unverified peers may cause security implications.</em>',
 
 	'ACP_WELCOME_PM_EXPLAIN'	=> 'Here you are able to define what message newly registered users will recieve.',
 	'WPM_SETTINGS'				=> 'Settings',
@@ -10852,8 +11018,8 @@ $lang = array_merge($lang, array(
 	'ACP_BOTS'					=> 'Spiders/Robots',
 
 	'ACP_CAPTCHA'				=> 'CAPTCHA',
-	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
+	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 	'ACP_CAT_DATABASE'			=> 'Database',
 	'ACP_CAT_DOT_MODS'			=> 'Extensions',
 	'ACP_CAT_FORUMS'			=> 'Forums',
@@ -10902,6 +11068,8 @@ $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGEMENT'			=> 'Group management',
 	'ACP_GROUPS_PERMISSIONS'		=> 'Groups’ permissions',
 	'ACP_GROUPS_POSITION'			=> 'Manage group positions',
+
+	'ACP_HELP_PHPBB'			=> 'Help support phpBB',
 
 	'ACP_ICONS'					=> 'Topic icons',
 	'ACP_ICONS_SMILIES'			=> 'Topic icons/smilies',
@@ -11020,6 +11188,16 @@ $lang = array_merge($lang, array(
 
 	'BACK'					=> 'Back',
 
+	'CANNOT_CHANGE_FILE_GROUP'	=> 'Unable to change file group',
+	'CANNOT_CHANGE_FILE_PERMISSIONS'	=> 'Unable to change file permissions',
+	'CANNOT_COPY_FILES'		=> 'Unable to copy files',
+	'CANNOT_CREATE_SYMLINK'	=> 'Unable to create a symlink',
+	'CANNOT_DELETE_FILES'	=> 'Unable to delete files from the system',
+	'CANNOT_DUMP_FILE'		=> 'Unable to dump file',
+	'CANNOT_MIRROR_DIRECTORY'	=> 'Unable to mirror directory',
+	'CANNOT_RENAME_FILE'	=> 'Unable to rename a file from the system',
+	'CANNOT_TOUCH_FILES'	=> 'Unable to determine if the file exists',
+
 	'CONTAINER_EXCEPTION' => 'phpBB encountered an error building the container due to an installed extension. For this reason, all extensions have been temporarily disabled. Please try purging your forum cache. All extensions will automatically be re-enabled once the container error is resolved. If this error continues, please visit <a href="https://www.phpbb9.de">phpbb9.de</a> for support.',
 	'EXCEPTION' => 'Exception',
 
@@ -11029,6 +11207,7 @@ $lang = array_merge($lang, array(
 	'CRON_NO_SUCH_TASK'		=> 'Could not find cron task â€œ%sâ€.',
 	'CRON_NO_TASK'			=> 'No cron tasks need to be run right now.',
 	'CRON_NO_TASKS'			=> 'No cron tasks could be found.',
+	'CURRENT_VERSION'				=> 'Current version',
 
 	'DEACTIVATE'				=> 'Deactivate',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'The entered path “%s” does not exist.',
@@ -11054,6 +11233,7 @@ $lang = array_merge($lang, array(
 	'IP'					=> 'IP',
 	'IP_HOSTNAME'			=> 'IP addresses or hostnames',
 
+	'LATEST_VERSION'		=> 'Latest version',
 	'LOAD_NOTIFICATIONS'			=> 'Display Notifications',
 	'LOAD_NOTIFICATIONS_EXPLAIN'	=> 'Display the notifications list on every page (typically in the header).',
 	'LOGGED_IN_AS'			=> 'You are logged in as:',
@@ -11089,7 +11269,7 @@ $lang = array_merge($lang, array(
 	'RELEASE_ANNOUNCEMENT'		=> 'Announcement',
 	'REMIND'							=> 'Remind',
 	'REPARSE_LOCK_ERROR'				=> 'Reparsing is already in progress by another process.',
-	'RESYNC'							=> 'Resync',
+	'RESYNC'							=> 'Resynchronise',
 
 	'RUNNING_TASK'			=> 'Running task: %s.',
 	'SELECT_ANONYMOUS'		=> 'Select anonymous user',
@@ -11109,6 +11289,10 @@ $lang = array_merge($lang, array(
 	'UCP'					=> 'User CP',
 	'USERNAMES_EXPLAIN'		=> 'Place each username on a separate line.',
 	'USER_CONTROL_PANEL'	=> 'User Control Panel',
+
+	'UPDATE_NEEDED'			=> 'The board is not up to date.',
+	'UPDATE_NOT_NEEDED'		=> 'The board is up to date.',
+	'UPDATES_AVAILABLE'		=> 'Updates available:',
 
 	'WARNING'				=> 'Warning',
 
@@ -11162,7 +11346,8 @@ $lang = array_merge($lang, array(
 	'NUMBER_USERS'		=> 'Number of users',
 	'NUMBER_ORPHAN'		=> 'Orphan attachments',
 
-	'PHP_VERSION_OLD'	=> 'The version of PHP on this server will no longer be supported by future versions of phpBB. %sDetails%s',
+	'PHP_VERSION'		=> 'PHP version',
+	'PHP_VERSION_OLD'	=> 'The version of PHP on this server (%1$s) will no longer be supported by future versions of phpBB. The minimum required version will be PHP %2$s. %3$sDetails%4$s',
 
 	'POSTS_PER_DAY'		=> 'Posts per day',
 
@@ -11299,8 +11484,10 @@ $lang = array_merge($lang, array(
 	'GO_ACP_MAIN'				=> 'Go to the ACP start page',
 	'HIDE_STATISTICS'			=> 'Hide details',
 	'SEND_STATISTICS'			=> 'Send statistical information',
+	'SEND_STATISTICS_LONG'		=> 'Send statistical information',
 	'SHOW_STATISTICS'			=> 'Show details',
 	'THANKS_SEND_STATISTICS'	=> 'Thank you for submitting your information.',
+	'FAIL_SEND_STATISTICS'		=> 'phpBB was unable to send statistics',
 	'LOG_TERM_DELETE'			=> '<strong>A word has been deleted from the lexicon</strong><br />» %s',
 
 	'LOG_ACL_ADD_USER_GLOBAL_U_'		=> '<strong>Added or edited users’ user permissions</strong><br />» %s',
@@ -11356,6 +11543,7 @@ $lang = array_merge($lang, array(
 	'LOG_BBCODE_ADD'		=> '<strong>Added new BBCode</strong><br />» %s',
 	'LOG_BBCODE_EDIT'		=> '<strong>Edited BBCode</strong><br />» %s',
 	'LOG_BBCODE_DELETE'		=> '<strong>Deleted BBCode</strong><br />» %s',
+	'LOG_BBCODE_CONFIGURATION_ERROR'	=> '<strong>Error while configuring BBCode</strong>: %1$s<br />Â» %2$s',
 
 	'LOG_BOT_ADDED'		=> '<strong>New bot added</strong><br />» %s',
 	'LOG_BOT_DELETE'	=> '<strong>Deleted bot</strong><br />» %s',
@@ -11395,6 +11583,7 @@ $lang = array_merge($lang, array(
 	'LOG_LOCK_POST'				=> '<strong>Locked post</strong><br />» %s',
 	'LOG_MERGE'					=> '<strong>Merged posts</strong> into topic<br />» %s',
 	'LOG_MOVE'					=> '<strong>Moved topic</strong><br />» from %s',
+	'LOG_MOVED_TOPIC'			=> '<strong>Moved topic</strong><br />Â» %s',
 	'LOG_PM_REPORT_CLOSED'		=> '<strong>Closed PM report</strong><br />» %s',
 	'LOG_PM_REPORT_DELETED'		=> '<strong>Deleted PM report</strong><br />» %s',
 	'LOG_POST_APPROVED'			=> '<strong>Approved post</strong><br />» %s',
@@ -11430,6 +11619,7 @@ $lang = array_merge($lang, array(
 
 	'LOG_ERROR_JABBER'		=> '<strong>Jabber error</strong><br />» %s',
 	'LOG_ERROR_EMAIL'		=> '<strong>E-mail error</strong><br />» %s',
+	'LOG_ERROR_CAPTCHA'		=> '<strong>CAPTCHA error</strong><br />Â» %s',
 
 	'LOG_FORUM_ADD'							=> '<strong>Created new forum</strong><br />» %s',
 	'LOG_FORUM_COPIED_PERMISSIONS'			=> '<strong>Copied forum permissions</strong> from %1$s<br />» %2$s',
@@ -11508,6 +11698,7 @@ $lang = array_merge($lang, array(
 	'LOG_U_ROLE_REMOVED'	=> '<strong>User role removed</strong><br />» %s',
 
 	'LOG_PLUPLOAD_TIDY_FAILED'		=> '<strong>Unable to open %1$s for tidying, check permissions.</strong><br />Exception: %2$s<br />Trace: %3$s',
+
 	'LOG_PROFILE_FIELD_ACTIVATE'	=> '<strong>Profile field activated</strong><br />» %s',
 	'LOG_PROFILE_FIELD_CREATE'		=> '<strong>Profile field added</strong><br />» %s',
 	'LOG_PROFILE_FIELD_DEACTIVATE'	=> '<strong>Profile field deactivated</strong><br />» %s',
@@ -11618,6 +11809,7 @@ $lang = array_merge($lang, array(
 	'LOG_EXT_ENABLE'	=> '<strong>Extension enabled</strong><br />Â» %s',
 	'LOG_EXT_DISABLE'	=> '<strong>Extension disabled</strong><br />Â» %s',
 	'LOG_EXT_PURGE'		=> '<strong>Extensionâ€™s data deleted</strong><br />Â» %s',
+	'LOG_EXT_UPDATE'	=> '<strong>Extension updated</strong><br />Â» %s',
 
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
@@ -13550,6 +13742,7 @@ $lang = array_merge($lang, array(
 	'EXTENSION_NOT_AVAILABLE'	=> 'The selected extension is not available for this board, please verify your phpBB and PHP versions are allowed (see the details page).',
 	'EXTENSION_DIR_INVALID'		=> 'The selected extension has an invalid directory structure and cannot be enabled.',
 	'EXTENSION_NOT_ENABLEABLE'	=> 'The selected extension cannot be enabled, please verify the extension’s requirements.',
+	'EXTENSION_NOT_INSTALLED'	=> 'The extension %s is not available. Please check that you have installed it correctly.',
 
 	'DETAILS'				=> 'Details',
 
@@ -13576,6 +13769,11 @@ $lang = array_merge($lang, array(
 	'EXTENSION_ACTIONS'			=> 'Actions',
 	'EXTENSION_OPTIONS'			=> 'Options',
 	'EXTENSION_INSTALL_HEADLINE'=> 'Installing an extension',
+	'EXTENSION_INSTALL_EXPLAIN'	=> '<ol>
+			<li>Download an extension from phpBB’s extensions database</li>
+			<li>Unzip the extension and upload it to the <samp>ext/</samp> directory of your phpBB board</li>
+			<li>Enable the extension, here in the Extensions manager</li>
+		</ol>',
 	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
 	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
 			<li>Disable the extension</li>
@@ -13610,7 +13808,7 @@ $lang = array_merge($lang, array(
 
 	'REQUIREMENTS'			=> 'Requirements',
 	'PHPBB_VERSION'			=> 'phpBB Version',
-	'PHP_VERSION'			=> 'PHP Version',
+	'PHP_VERSION'			=> 'PHP version',
 	'AUTHOR_INFORMATION'	=> 'Author Information',
 	'AUTHOR_NAME'			=> 'Name',
 	'AUTHOR_EMAIL'			=> 'Email',
@@ -13832,6 +14030,7 @@ $lang = array_merge($lang, array(
 	'GROUP_LEAD'					=> 'Group leaders',
 	'GROUP_LEADERS_ADDED'			=> 'New leaders added to group successfully.',
 	'GROUP_LEGEND'					=> 'Display group in legend',
+	'GROUP_LIST_CURRENT_MEMBERS'	=> 'Current members',
 	'GROUP_LIST'					=> 'Manage users',
 	'GROUP_LIST_EXPLAIN'			=> 'This is a complete list of all the current users with membership of this group. You can delete members (except in certain special groups) or add new ones as you see fit.',
 	'GROUP_MEMBERS'					=> 'ສະມາຊິກກຸ່ມ',
@@ -13880,7 +14079,7 @@ $lang = array_merge($lang, array(
 	'NO_GROUPS_ADDED'			=> 'No groups added yet.',
 	'NO_GROUPS_CREATED'			=> 'No groups created yet.',
 	'NO_PERMISSIONS'			=> 'Do not copy permissions',
-	'NO_USERS'					=> 'ບໍ່ມີຊື່ຜູ້ໃຊ້ງານທີ່ທ່ານຊອກ.',
+	'NO_USERS'					=> 'You haven’t entered any users or user not exist.',
 	'NO_USERS_ADDED'			=> 'No users were added to the group.',
 	'NO_VALID_USERS'			=> 'You haven’t entered any users eligible for that action.',
 
@@ -14285,6 +14484,7 @@ $lang = array_merge($lang, array(
 	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> 'Here you are able to install/remove language packs.',
 
 	'DELETE_LANGUAGE_CONFIRM'		=> 'Are you sure you wish to delete “%s”?',
+
 	'INSTALLED_LANGUAGE_PACKS'		=> 'Installed language packs',
 
 	'LANGUAGE_DETAILS_UPDATED'			=> 'Language details successfully updated.',
@@ -14489,7 +14689,8 @@ $lang = array_merge($lang, array(
 	'ALL_GROUPS'				=> 'Select all groups',
 	'ALL_NEVER'					=> 'All <samp>NEVER</samp>',
 	'ALL_NO'					=> 'All <samp>NO</samp>',
-	'SELECT_ALL_USERS'					=> 'Select all users',
+	'SELECT_ALL_USERS'			=> 'Select all users',
+	'ALL_USERS'					=> 'All users',
 	'ALL_YES'					=> 'All <samp>YES</samp>',
 	'APPLY_ALL_PERMISSIONS'		=> 'Apply all permissions',
 	'APPLY_PERMISSIONS'			=> 'Apply permissions',
@@ -14736,6 +14937,7 @@ $lang = array_merge($lang, array(
 // Forum Permissions
 $lang = array_merge($lang, array(
 	'ACL_F_LIST'		=> 'Can see forum',
+	'ACL_F_LIST_TOPICS' => 'Can see topics',
 	'ACL_F_READ'		=> 'Can read forum',
 	'ACL_F_SEARCH'		=> 'Can search the forum',
 	'ACL_F_SUBSCRIBE'	=> 'Can subscribe forum',
@@ -15999,7 +16201,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'Please select the forum to which you wish to move all the posts this user has made.',
 
 	'NO_SPECIAL_RANK'		=> 'No special rank assigned',
-	'NO_WARNINGS'			=> 'No warnings.',
+	'NO_WARNINGS'			=> 'No warnings exist.',
 	'NOT_MANAGE_FOUNDER'	=> 'You tried to manage a user with founder status. Only founders are allowed to manage other founders.',
 
 	'QUICK_TOOLS'			=> 'Quick tools',

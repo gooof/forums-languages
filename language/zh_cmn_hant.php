@@ -113,7 +113,7 @@ $lang = array_merge($lang, array(
 	'NO_EVENT'					=> 'The requested event does not exist.',
 	'NEW_EVENT'					=> 'New Event',
 	'NO_EVENT_TYPES'			=> 'The site administrator has not set up event types for this calendar. Calendar event creation has been disabled.',
-	'NO_GROUP_SELECTED'			=> '沒有指定會員群組。',
+	'NO_GROUP_SELECTED'			=> 'No group specified.',
 	'NO_POST_EVENT_MODE'		=> '沒有指定文章類型。',
 	'PM'						=> 'PM',
 	'RECURRING_EVENT'			=> 'Recurring event',
@@ -181,7 +181,7 @@ $lang = array_merge($lang, array(
 #######language/en/captcha_recaptcha.php#######
 
 $lang = array_merge($lang, array(
-	'RECAPTCHA_LANG'				=> '英文',
+	'RECAPTCHA_LANG'				=> 'en-GB',
 	'RECAPTCHA_NOT_AVAILABLE'		=> '為了使用 reCaptcha，您必須要在 <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a> 註冊一個帳號。',
 	'CAPTCHA_RECAPTCHA'				=> 'reCaptcha',
 	'RECAPTCHA_INCORRECT'			=> 'The solution you provided was incorrect',
@@ -221,6 +221,7 @@ $lang = array_merge($lang, array(
 	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Disables the specified extension.',
 	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Enables the specified extension.',
 	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended upon.',
+	'CLI_DESCRIPTION_FIX_LEFT_RIGHT_IDS'		=> 'Repairs the tree structure of the forums and modules.',
 	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gets a configuration option’s value',
 	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s integer value',
 	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Lists all extensions in the database and on the filesystem.',
@@ -230,6 +231,7 @@ $lang = array_merge($lang, array(
 	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Launch the shell.',
 	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Purges the specified extension.',
 	'CLI_DESCRIPTION_REPARSER_LIST'				=> 'Lists the types of text that can be reparsed.',
+	'CLI_DESCRIPTION_REPARSER_AVAILABLE'				=> 'Available reparsers:',
 	'CLI_DESCRIPTION_REPARSER_REPARSE'			=> 'Reparses stored text with the current text_formatter services.',
 	'CLI_DESCRIPTION_REPARSER_REPARSE_ARG_1'	=> 'Type of text to reparse. Leave blank to reparse everything.',
 	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_DRY_RUN'		=> 'Do not save any changes; just print what would happen',
@@ -245,19 +247,51 @@ $lang = array_merge($lang, array(
 	'CLI_DESCRIPTION_THUMBNAIL_GENERATE'	=> 'Generate all missing thumbnails.',
 	'CLI_DESCRIPTION_THUMBNAIL_RECREATE'	=> 'Recreate all thumbnails.',
 
+	'CLI_DESCRIPTION_UPDATE_CHECK'					=> 'Check if the board is up to date.',
+	'CLI_DESCRIPTION_UPDATE_CHECK_ARGUMENT_1'		=> 'Name of the extension to check (if all, checks all the extensions)',
+	'CLI_DESCRIPTION_UPDATE_CHECK_OPTION_CACHE'		=> 'Run check command with cache.',
+	'CLI_DESCRIPTION_UPDATE_CHECK_OPTION_STABILITY'	=> 'Run command choosing to check only stable or unstable versions.',
+
+	'CLI_DESCRIPTION_UPDATE_HASH_BCRYPT'		=> 'Updates outdated password hashes to be hashed with bcrypt.',
+
+	'CLI_ERROR_INVALID_STABILITY' => '"%s" needs to be set to "stable" or "unstable".',
+
+	'CLI_DESCRIPTION_USER_ACTIVATE'				=> 'Activate (or deactivate) a user account.',
+	'CLI_DESCRIPTION_USER_ACTIVATE_USERNAME'	=> 'Username of the account to activate.',
+	'CLI_DESCRIPTION_USER_ACTIVATE_DEACTIVATE'	=> 'Deactivate the user’s account',
+	'CLI_DESCRIPTION_USER_ACTIVATE_ACTIVE'		=> 'The user is already active.',
+	'CLI_DESCRIPTION_USER_ACTIVATE_INACTIVE'	=> 'The user is already inactive.',
+	'CLI_DESCRIPTION_USER_ADD'					=> 'Add a new user.',
+	'CLI_DESCRIPTION_USER_ADD_OPTION_USERNAME'	=> 'Username of the new user',
+	'CLI_DESCRIPTION_USER_ADD_OPTION_PASSWORD'	=> 'Password of the new user',
+	'CLI_DESCRIPTION_USER_ADD_OPTION_EMAIL'		=> 'E-mail address of the new user',
+	'CLI_DESCRIPTION_USER_ADD_OPTION_NOTIFY'	=> 'Send account activation email to the new user (not sent by default)',
+	'CLI_DESCRIPTION_USER_DELETE'				=> 'Delete a user account.',
+	'CLI_DESCRIPTION_USER_DELETE_USERNAME'		=> 'Username of the user to delete',
+	'CLI_DESCRIPTION_USER_DELETE_OPTION_POSTS'	=> 'Delete all posts by the user. Without this option, the user’s posts will be retained.',
+	'CLI_DESCRIPTION_USER_RECLEAN'				=> 'Re-clean usernames.',
+
 	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Could not disable extension %s',
 	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Successfully disabled extension %s',
+	'CLI_EXTENSION_DISABLED'			=> 'Extension %s is not enabled',
 	'CLI_EXTENSION_ENABLE_FAILURE'		=> 'Could not enable extension %s',
 	'CLI_EXTENSION_ENABLE_SUCCESS'		=> 'Successfully enabled extension %s',
+	'CLI_EXTENSION_ENABLED'				=> 'Extension %s is already enabled',
+	'CLI_EXTENSION_NOT_EXIST'			=> 'Extension %s does not exist',
 	'CLI_EXTENSION_NAME'				=> 'Name of the extension',
 	'CLI_EXTENSION_PURGE_FAILURE'		=> 'Could not purge extension %s',
 	'CLI_EXTENSION_PURGE_SUCCESS'		=> 'Successfully purged extension %s',
+	'CLI_EXTENSION_UPDATE_FAILURE'		=> 'Could not update extension %s',
+	'CLI_EXTENSION_UPDATE_SUCCESS'		=> 'Successfully updated extension %s',
 	'CLI_EXTENSION_NOT_FOUND'			=> 'No extensions were found.',
+	'CLI_EXTENSION_NOT_ENABLEABLE'		=> 'Extension %s is not enableable.',
 	'CLI_EXTENSIONS_AVAILABLE'			=> '可用',
 	'CLI_EXTENSIONS_DISABLED'			=> '停用',
 	'CLI_EXTENSIONS_ENABLED'			=> '啟用',
 
+	'CLI_FIXUP_FIX_LEFT_RIGHT_IDS_SUCCESS'		=> 'Successfully repaired the tree structure of the forums and modules.',
 	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Successfully recalculated all email hashes.',
+	'CLI_FIXUP_UPDATE_HASH_BCRYPT_SUCCESS'		=> 'Successfully updated outdated password hashes to bcrypt.',
 
 	'CLI_MIGRATION_NAME'					=> 'Migration name, including the namespace (use forward slashes instead of backslashes to avoid problems).',
 	'CLI_MIGRATIONS_AVAILABLE'				=> 'Available migrations',
@@ -356,6 +390,7 @@ $lang = array_merge($lang, array(
 	'AUTH_PROVIDER_OAUTH_SERVICE_BITLY'						=> 'Bitly',
 	'AUTH_PROVIDER_OAUTH_SERVICE_FACEBOOK'					=> 'Facebook',
 	'AUTH_PROVIDER_OAUTH_SERVICE_GOOGLE'					=> 'Google',
+	'AUTH_PROVIDER_OAUTH_SERVICE_TWITTER'					=> 'Twitter',
 	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_NOT_STORED'			=> 'OAuth token not stored.',
 	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_INCORRECTLY_STORED'	=> 'OAuth token incorrectly stored.',
 	'AVATAR_DISALLOWED_CONTENT'		=> '上傳被拒絕，因為上傳的檔案被認定具有可能的攻擊成分。',
@@ -391,8 +426,10 @@ $lang = array_merge($lang, array(
 	'BOARD_DISABLED'		=> '討論區目前關閉中。',
 	'BOARD_UNAVAILABLE'		=> '很抱歉！ 目前討論區暫時無法使用，請稍後再登入。',
 	'BROWSING_FORUM'		=> '正在瀏覽這個版面的使用者：%1$s',
+	'BUTTON_DELETE'         => '刪除',
 	'BUTTON_EDIT'			=> '編輯',
 	'BUTTON_FORUM_LOCKED'	=> '鎖定',
+	'BUTTON_INFORMATION'    => '系統訊息',
 	'BUTTON_NEW_TOPIC'		=> 'New Topic',
 	'BUTTON_PM'				=> 'PM',
 	'BUTTON_PM_FORWARD'		=> 'Forward',
@@ -401,7 +438,9 @@ $lang = array_merge($lang, array(
 	'BUTTON_PM_REPLY_ALL'	=> 'Reply All',
 	'BUTTON_POST_REPLY'		=> 'Post Reply',
 	'BUTTON_QUOTE'			=> '引言回覆',
+	'BUTTON_REPORT'         => 'Report',
 	'BUTTON_TOPIC_LOCKED'	=> '鎖定',
+	'BUTTON_WARN'           => 'Warn',
 	'BYTES'					=> 'Bytes',
 	'BYTES_SHORT'			=> 'B',
 
@@ -427,6 +466,10 @@ $lang = array_merge($lang, array(
 	'CONTACT'				=> '連絡',
 	'CONTACT_USER'			=> 'Contact %s',
 	'CONTACT_US'			=> 'Contact us',
+	'COOKIE_CONSENT_INFO'	=> 'Learn more',
+	'COOKIE_CONSENT_MSG'	=> 'This website uses cookies to ensure you get the best experience on our website.',
+	'COOKIE_CONSENT_OK'		=> 'Got it!',
+	'COOKIE_CONSENT_HREF'	=> 'http://cookiesandyou.com',
 	'COOKIES_DELETED'		=> '所有的 Cookies 都已經被清除。',
 	'CURRENT_TIME'			=> '現在的時間是 %s',
 
@@ -570,6 +613,7 @@ $lang = array_merge($lang, array(
 	'INTERESTS'					=> '興趣',
 	'INVALID_DIGEST_CHALLENGE'	=> '無效的摘要需求。',
 	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> possibly an invalid email address?',
+	'INVALID_FEED_ATTACHMENTS'	=> 'The selected feed tried fetching attachments with invalid constraints.',
 	'INVALID_PLURAL_RULE'		=> 'The chosen plural rule is invalid. Valid values are integers between 0 and 15.',
 	'IP'						=> 'IP',
 	'IP_BLACKLISTED'			=> '您的 IP %1$s 已經被封鎖，因為它在封鎖列表中。細節請參考 <a href="%2$s">%2$s</a>。',
@@ -723,7 +767,7 @@ $lang = array_merge($lang, array(
 	'NO_UNREAD_POSTS'			=> '沒有未閱讀文章',
 	'NO_UPLOAD_FORM_FOUND'		=> '上傳已經開始，但是沒有有效的上傳檔案表單。',
 	'NO_USER'					=> '該會員不存在。',
-	'NO_USERS'					=> '該會員不存在。',
+	'NO_USERS'					=> 'You haven’t entered any users or user not exist.',
 	'NO_USER_SPECIFIED'			=> '沒有指定會員名稱。',
 
 	'OCCUPATION'				=> '職業',
@@ -776,6 +820,7 @@ $lang = array_merge($lang, array(
 	'PREVIOUS'				=> '上一頁',		// Used in pagination
 	'PREVIOUS_STEP'			=> '上一步',
 	'PRIVACY'				=> '隱私政策',
+	'PRIVACY_LINK'			=> 'Privacy',
 	'PRIVATE_MESSAGE'		=> '私人訊息',
 	'PRIVATE_MESSAGES'		=> '私人訊息',
 	'PRIVATE_MESSAGING'		=> '私人訊息',
@@ -892,6 +937,7 @@ $lang = array_merge($lang, array(
 	'SUBMIT'					=> '送出',
 
 	'TB'				=> 'TB',
+	'TERMS_LINK'		=> 'Terms',
 	'TERMS_USE'			=> '使用條款',
 	'TEST_CONNECTION'	=> '連結測試',
 	'THE_TEAM'			=> '管理團隊',
@@ -1111,7 +1157,7 @@ $lang = array_merge($lang, array(
 	'PHOOGLE_LINK_TEXT'		=> 'Maps',
 	'PHOOGLE_SHOW_USER_TEXT'=> 'Show User on the Map',
 	'FORUM_BLOG'			=> 'Blog',
-	'PAGE_NOT_FOUND'		=> 'The selected page was not found or you have no permissions.',
+	'PAGE_NOT_FOUND'		=> 'The requested page could not be found or you have no permissions.',
 	'POINTS_DONATE'			=> '[Donate]',
 	'POINTS_MODIFY'			=> '[Modify]',
 
@@ -1768,7 +1814,7 @@ $lang = array_merge($lang, array(
 	'HELP_BBCODE_OTHERS_CUSTOM_ANSWER'	=> 'If you are an administrator on this board and have the proper permissions, you can add further BBCodes through the Custom BBCodes section.',
 	'HELP_BBCODE_OTHERS_CUSTOM_QUESTION'	=> 'Can I add my own tags?',
 
-	'HELP_BBCODE_QUOTES_CODE_ANSWER'	=> 'If you want to output a piece of code or in fact anything that requires a fixed width, e.g. Courier type font you should enclose the text in <strong>[code][/code]</strong> tags, e.g.<br /><br /><strong>[code]</strong>echo &quot;This is some code&quot;;<strong>[/code]</strong><br /><br />All formatting used within <strong>[code][/code]</strong> tags is retained when you later view it. PHP syntax highlighting can be enabled using <strong>[code=php][/code]</strong> and is recommended when posting PHP code samples as it improves readability.',
+	'HELP_BBCODE_QUOTES_CODE_ANSWER'	=> 'If you want to output a piece of code or in fact anything that requires a fixed width, e.g. Courier type font you should enclose the text in <strong>[code][/code]</strong> tags, e.g.<br /><br /><strong>[code]</strong>echo &quot;This is some code&quot;;<strong>[/code]</strong><br /><br />All formatting used within <strong>[code][/code]</strong> tags is retained when you later view it.',
 	'HELP_BBCODE_QUOTES_CODE_QUESTION'	=> 'Outputting code or fixed width data',
 	'HELP_BBCODE_QUOTES_TEXT_ANSWER'	=> 'There are two ways you can quote text, with a reference or without.<ul><li>When you utilise the Quote function to reply to a post on the board you should notice that the post text is added to the message window enclosed in a <strong>[quote=&quot;&quot;][/quote]</strong> block. This method allows you to quote with a reference to a person or whatever else you choose to put! For example to quote a piece of text Mr. Blobby wrote you would enter:<br /><br /><strong>[quote=&quot;Mr. Blobby&quot;]</strong>The text Mr. Blobby wrote would go here<strong>[/quote]</strong><br /><br />The resulting output will automatically add &quot;Mr. Blobby wrote:&quot; before the actual text. Remember you <strong>must</strong> include the quotation marks &quot;&quot; around the name you are quoting, they are not optional.</li><li>The second method allows you to blindly quote something. To utilise this enclose the text in <strong>[quote][/quote]</strong> tags. When you view the message it will simply show the text within a quotation block.</li></ul>',
 	'HELP_BBCODE_QUOTES_TEXT_QUESTION'	=> 'Quoting text in replies',
@@ -1998,13 +2044,17 @@ $lang = array_merge($lang, array(
 	// Filesystem requirements
 	'FILE_NOT_EXISTS'			=> 'File not exists',
 	'FILE_NOT_EXISTS_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to exist.',
+	'FILE_NOT_EXISTS_EXPLAIN_OPTIONAL'		=> 'It is recommended that the %1$s file exist for a better forum user experience.',
 	'FILE_NOT_WRITABLE'			=> 'File not writable',
 	'FILE_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to be writable.',
+	'FILE_NOT_WRITABLE_EXPLAIN_OPTIONAL'	=> 'It is recommended that the %1$s file be writable for a better forum user experience.',
 
 	'DIRECTORY_NOT_EXISTS'				=> 'Directory not exists',
 	'DIRECTORY_NOT_EXISTS_EXPLAIN'		=> 'To be able to install phpBB the %1$s directory needs to exist.',
+	'DIRECTORY_NOT_EXISTS_EXPLAIN_OPTIONAL'		=> 'It is recommended that the %1$s directory exist for a better forum user experience.',
 	'DIRECTORY_NOT_WRITABLE'			=> 'Directory not writable',
 	'DIRECTORY_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s directory needs to be writable.',
+	'DIRECTORY_NOT_WRITABLE_EXPLAIN_OPTIONAL'	=> 'It is recommended that the %1$s directory be writable for a better forum user experience.',
 
 	// Server requirements
 	'PHP_VERSION_REQD'					=> 'PHP version',
@@ -2015,6 +2065,8 @@ $lang = array_merge($lang, array(
 	'PCRE_UTF_SUPPORT_EXPLAIN'			=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
 	'PHP_JSON_SUPPORT'					=> 'PHP JSON support',
 	'PHP_JSON_SUPPORT_EXPLAIN'			=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_XML_SUPPORT'					=> 'PHP XML/DOM support',
+	'PHP_XML_SUPPORT_EXPLAIN'			=> 'In order for phpBB to function correctly, the PHP XML/DOM extension needs to be available.',
 	'PHP_SUPPORTED_DB'					=> '支援的資料庫',
 	'PHP_SUPPORTED_DB_EXPLAIN'			=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
 
@@ -2022,10 +2074,86 @@ $lang = array_merge($lang, array(
 
 	'STAGE_REQUIREMENTS'	=> 'Check requirements',
 
+	'ALL_FILES_DIFFED'		=> 'All modified files has been diffed.',
+	'BOARD_CONFIG'		=> 'Bulletin board configuration',
+	'BOARD_DESCRIPTION'	=> 'Short description of the board',
+	'BOARD_NAME'		=> 'Title of the board',
+	'CLI_CONFIG_FILE'				=> 'Config file to use',
+	'CLI_INSTALL_BOARD'				=> 'Install phpBB',
+	'CLI_INSTALL_SHOW_CONFIG'		=> 'Show the configuration which will be used',
+	'CLI_INSTALL_VALIDATE_CONFIG'	=> 'Validate a configuration file',
+	'CLI_UPDATE_BOARD'				=> 'Update phpBB',
+	'CONFIGURATION_VALID'			=> 'The configuration file is valid',
+	'DATABASE_VERSION'		=> 'Database version',
+	'DB_OPTION_MSSQL_ODBC'	=> 'MSSQL Server 2000+ via ODBC',
+	'DB_OPTION_MSSQLNATIVE'	=> 'MSSQL Server 2005+ [ Native ]',
+	'DB_OPTION_MYSQL'		=> 'MySQL',
+	'DB_OPTION_MYSQLI'		=> 'MySQL with MySQLi Extension',
+	'DB_OPTION_ORACLE'		=> 'Oracle',
+	'DB_OPTION_POSTGRES'	=> 'PostgreSQL',
+	'DB_OPTION_SQLITE3'		=> 'SQLite 3',
+	'DEFAULT_LANGUAGE'				=> '預設語言',
+	'INSTALLER_CONFIG_NOT_WRITABLE'	=> 'The installer config file is not writable.',
+	'INSTALLER_FINISHED'	=> 'The installer has finished successfully',
+	'INVALID_YAML_FILE'				=> 'Could not parse YAML file %1$s',
+	'MENU_INTRO'		=> '簡介',
+	'MENU_LICENSE'		=> '授權',
+	'MENU_OVERVIEW'		=> '全覽',
+	'MENU_SUPPORT'		=> '支援',
+	'MISSING_DATA'					=> 'Config file is missing data or might contain invalid settings.',
+	'MISSING_FILE'					=> 'Unable to access file %1$s',
+	'MODULE_NOT_FOUND'				=> 'Module not found',
+	'MODULE_NOT_FOUND_DESCRIPTION'	=> 'A module could not be found because the service, %s, is undefined.',
+	'PACKAGE_VERSION'					=> 'Package version installed',
+	'SKIP_MODULE'	=> 'Skip “%s” module',
+	'SKIP_TASK'		=> 'Skip “%s” task',
+	'TASK_ADD_BOTS'				=> 'Registering bots',
+	'TASK_ADD_CONFIG_SETTINGS'			=> 'Adding configuration settings',
+	'TASK_ADD_DEFAULT_DATA'				=> 'Adding default settings to the database',
+	'TASK_ADD_LANGUAGES'		=> 'Installing available languages',
+	'TASK_ADD_MODULES'			=> 'Installing modules',
+	'TASK_CLASS_NOT_FOUND'				=> 'Installer task service definition is invalid. Service name “%1$s” given, the expected class namespace is “%2$s” for that. For more information please see the documentation of task_interface.',
+	'TASK_CREATE_CONFIG_FILE'	=> 'Creating configuration file',
+	'TASK_CREATE_DATABASE_SCHEMA_FILE'	=> 'Creating database schema file',
+	'TASK_CREATE_SEARCH_INDEX'	=> 'Creating search index',
+	'TASK_CREATE_TABLES'				=> 'Creating tables',
+	'TASK_INSTALL_EXTENSIONS'	=> 'Installing packaged extensions',
+	'TASK_NOT_FOUND'				=> 'Task not found',
+	'TASK_NOT_FOUND_DESCRIPTION'	=> 'A task could not be found because the service, %s, is undefined.',
+	'TASK_NOTIFY_USER'			=> 'Sending notification e-mail',
+	'TASK_POPULATE_MIGRATIONS'	=> 'Populating migrations',
+	'TASK_SERVICE_INSTALLER_MISSING'	=> 'All installer task services should start with “installer”',
+	'TASK_SETUP_DATABASE'				=> 'Setting up database',
+	'TASK_UPDATE_EXTENSIONS'	=> 'Updating extensions',
+
+	'UPDATE_CHECK_FILES'	=> 'Check files to update',
+	'UPDATE_CONTINUE_FILE_UPDATE'	=> '升級檔案',
+	'UPDATE_CONTINUE_UPDATE_PROCESS'	=> '繼續升級過程',
+	'UPDATE_FILE_DIFF'		=> 'Diffing changed files',
+	'UPDATE_FILE_METHOD'			=> 'File updater method',
+	'UPDATE_FILE_METHOD_DOWNLOAD'	=> 'Download modified files in an archive',
+	'UPDATE_FILE_METHOD_FILESYSTEM'	=> 'Update files via direct file access (Automatic)',
+	'UPDATE_FILE_METHOD_FTP'		=> 'Update files via FTP (Automatic)',
+	'UPDATE_FILE_METHOD_TITLE'		=> 'File updater methods',
+	'UPDATE_FILE_UPDATER_HAS_FAILED'	=> 'File updater “%1$s“ has failed. The installer will try to fallback to “%2$s“.',
+	'UPDATE_FILE_UPDATERS_HAVE_FAILED'	=> 'The file updater failed. No further fallback methods are available.',
+	'UPDATE_FILES_NOT_FOUND'	=> 'No valid update directory was found, please make sure you uploaded the relevant files.',
+	'UPDATE_INCOMPLETE'				=> 'Your phpBB installation has not been correctly updated.',
+	'UPDATE_INCOMPLETE_EXPLAIN'		=> '[lang:UPDATE_INCOMPLETE_EXPLAIN]',
+	'UPDATE_INCOMPLETE_MORE'		=> 'Please read the information below in order to fix this error.',
+	'UPDATE_TYPE'			=> 'Type of update to run',
+	'UPDATE_TYPE_ALL'		=> 'Update filesystem and database',
+	'UPDATE_TYPE_DB_ONLY'	=> 'Update database only',
+	'UPDATE_UPDATING_FILES'	=> 'Updating files',
+	'UPGRADE_INSTRUCTIONS'			=> '[lang:UPGRADE_INSTRUCTIONS]',
+	
 	'INST_ERR_MISSING_DATA'		=> '您必須填完此表格的全部欄位。',
 
 	'TIMEOUT_DETECTED_TITLE'	=> 'The installer detected a timeout',
 	'TIMEOUT_DETECTED_MESSAGE'	=> 'The installer has detected a timeout, you may try to refresh the page, which may lead to data corruption. We suggest that you either increase your timeout settings or try to use the CLI.',
+
+	'STAGE_OBTAIN_DATA'	=> 'Set installation data',
+	'STAGE_UPDATE_DATABASE'		=> '更新資料庫',
 
 	'ADMIN_CONFIG'				=> '管理員設定',
 	'ADMIN_PASSWORD'			=> '管理員密碼',
@@ -2069,7 +2197,7 @@ $lang = array_merge($lang, array(
 	'CONTINUE_OLD_CONVERSION'	=> '繼續進行以前的轉換',
 	'CONVERT'					=> '轉換',
 	'CONVERT_COMPLETE'			=> '轉換完成',
-	'CONVERT_COMPLETE_EXPLAIN'	=> '您已經將您的討論區成功轉換為 phpBB 3.0.x，您現在可以登入以及 <a href="../">使用您的討論區</a>。請在刪除 /install/ 資料夾以啟用您的討論區前，確認所有的設定都已經被正確地轉換。請記得 phpBB 的線上使用說明位於 <a href="http：//www.phpbb.com/support/documentation/3.0/">Documentation (使用說明文件)</a> 和 <a href="http://www.phpbb.com/phpBB/viewforum.php?f=46">3.0.x Support Forum（技術支援版面）</a>。',
+	'CONVERT_COMPLETE_EXPLAIN'	=> 'You have now successfully converted your board to phpBB 3.2. You can now login and <a href="../">access your board</a>. Please ensure that the settings were transferred correctly before enabling your board by deleting the install directory. Remember that help on using phpBB is available online via the <a href="http://www.phpbb.com/support/documentation/3.0/">Documentation</a> and the <a href="http://www.phpbb.com/community/viewforum.php?f=46">support forums</a>.',
 	'CONVERT_INTRO'				=> '歡迎使用 phpBB 轉換架構',
 	'CONVERT_INTRO_BODY'		=> '這裡您可以從其它（已安裝）的討論區導入資料，下表列出的是所有可用的轉換模組。如果其中沒有您想要的轉換模組，請訪問我們的網站，那裡可能會提供更多的轉換模組下載。',
 	'CONVERT_NEW_CONVERSION'	=> '新的轉換',
@@ -2193,12 +2321,14 @@ $lang = array_merge($lang, array(
 	'INSTALL_TEST'				=> '重新檢測',
 
 	// Errors
+	'INST_ERR_DB'					=> 'Database installation error',
 	'INST_ERR_NO_DB'			=> '無法找到指定資料庫類型的 PHP 模組。',
 	'INST_ERR_DB_INVALID_PREFIX'	=> 'The prefix you entered is invalid. It must start with a letter and must only contain letters, numbers and underscores.',
 	'INST_ERR_PREFIX_TOO_LONG'	=> '您指定的資料表字首過長，上限為 %d 個字元。',
 	'INST_ERR_DB_NO_NAME'		=> '沒有指定資料庫名稱。',
 	'INST_ERR_DB_FORUM_PATH'	=> '指定的資料庫檔案位於討論區資料夾內，您應該把它放在一個無法通過網路訪問的位置。',
 	'INST_ERR_DB_CONNECT'		=> '連接資料庫失敗，錯誤訊息如下',
+	'INST_ERR_DB_NO_WRITABLE'		=> 'Both the database and the directory containing it must be writable.',
 	'INST_ERR_DB_NO_ERROR'		=> '沒有得到相關的錯誤訊息',
 	'INST_ERR_PREFIX'			=> '資料表的字首已經存在，請選擇另一個。',
 	'INST_ERR_DB_NO_MYSQLI'		=> '伺服器內安裝的 MySQL 版本與您選擇的「MySQL with MySQLi Extension」選項不相容，請嘗試「MySQL」選項。',
@@ -2319,6 +2449,7 @@ $lang = array_merge($lang, array(
 
 	'TABLES_MISSING'			=> '無法找到這些資料表<br />» <strong>%s</strong>。',
 	'TABLE_PREFIX'				=> '為資料庫中的資料表名稱加入字首',
+	'TABLE_PREFIX_EXPLAIN'	=> 'The prefix must start with a letter and must only contain letters, numbers and underscores.',
 	'TABLE_PREFIX_SAME'			=> '資料表字首需要與轉換之前所使用的相同。<br />» 之前所使用的資料表字首是 %s。',
 	'TESTS_PASSED'				=> '檢測通過',
 	'TESTS_FAILED'				=> '檢測未通過',
@@ -2356,7 +2487,6 @@ $lang = array_merge($lang, array(
 	'CONTINUE_UPDATE_NOW'			=> '現在繼續升級過程',		// Shown within the database update script at the end if called from the updater
 	'CONTINUE_UPDATE'				=> '現在繼續升級',					// Shown after file upload to indicate the update process is not yet finished
 	'CURRENT_FILE'					=> '目前原始檔案的開端',
-	'CURRENT_VERSION'				=> '目前的版本',
 
 	'DATABASE_TYPE'						=> '資料庫類型',
 	'DATABASE_UPDATE_COMPLETE'			=> 'Database updater has completed!',
@@ -2387,6 +2517,7 @@ $lang = array_merge($lang, array(
 
 	'FILE_ALREADY_UP_TO_DATE'		=> '檔案已經是最新。',
 	'FILE_DIFF_NOT_ALLOWED'			=> '檔案不允許不一樣。',
+	'FILE_DIFFER_ERROR_FILE_CANNOT_BE_READ'	=> 'The file differ failed to open %s.',
 	'FILE_USED'						=> '使用資訊從',			// Single file
 	'FILES_CONFLICT'				=> '有衝突的檔案',
 	'FILES_CONFLICT_EXPLAIN'		=> '下面的檔案已經修改過，不是舊版本的原始檔案。phpBB 認為合併這些檔案會產生衝突。請檢查衝突並嘗試手工的解決，或者選擇一種合併的方式繼續更新。如果您手工修改消除了衝突，請再次運行檔案檢查。您也可以選擇為每個檔案優先選擇合併。這將捨棄舊版本檔案的衝突代碼而遺失您於這個檔案上的修改。',
@@ -2411,7 +2542,6 @@ $lang = array_merge($lang, array(
 
 	'KEEP_OLD_NAME'		=> '保留會員名稱',
 
-	'LATEST_VERSION'		=> '最新的版本',
 	'LINE'					=> '行',
 	'LINE_ADDED'			=> '已加入',
 	'LINE_MODIFIED'			=> '已修改',
@@ -2536,6 +2666,9 @@ $lang = array_merge($lang, array(
 
 	'VERSION_CHECK'					=> '版本檢查',
 	'VERSION_CHECK_EXPLAIN'			=> '檢查您安裝的討論區是否是最新版本。',
+	'VERSIONCHECK_INVALID_ENTRY'	=> 'Latest version information contains an unsupported entry.',
+	'VERSIONCHECK_INVALID_URL'		=> 'Latest version information contains invalid URL.',
+	'VERSIONCHECK_INVALID_VERSION'	=> 'Latest version information contains an invalid version.',
 	'VERSION_NOT_UP_TO_DATE'		=> '您您安裝的討論區不是最新的，請繼續更新過程。',
 	'VERSION_NOT_UP_TO_DATE_ACP'	=> '您安裝的討論區不是最新的。<br />下面連結是最新版本的釋出公告，它包含更多的更新說明之資訊。',
 	'VERSION_NOT_UP_TO_DATE_TITLE'	=> '您安裝的討論區不是最新的。',
@@ -2607,12 +2740,14 @@ $lang = array_merge($lang, array(
 	'MIGRATION_NOT_INSTALLED'			=> 'The migration "%s" is not installed.',
 	'MIGRATION_NOT_VALID'				=> '%s is not a valid migration.',
 	'MIGRATION_SCHEMA_DONE'				=> 'Installed Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_SCHEMA_IN_PROGRESS'		=> 'Installing Schema: %1$s; Time: %2$.2f seconds',
 	'MIGRATION_SCHEMA_RUNNING'			=> 'Installing Schema: %s.',
 
 	'MIGRATION_REVERT_DATA_DONE'		=> 'Reverted Data: %1$s; Time: %2$.2f seconds',
 	'MIGRATION_REVERT_DATA_IN_PROGRESS'	=> 'Reverting Data: %1$s; Time: %2$.2f seconds',
 	'MIGRATION_REVERT_DATA_RUNNING'		=> 'Reverting Data: %s.',
 	'MIGRATION_REVERT_SCHEMA_DONE'		=> 'Reverted Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_SCHEMA_IN_PROGRESS'	=> 'Reverting Schema: %1$s; Time: %2$.2f seconds',
 	'MIGRATION_REVERT_SCHEMA_RUNNING'	=> 'Reverting Schema: %s.',
 
 	'MIGRATION_INVALID_DATA_MISSING_CONDITION'		=> 'A migration is invalid. An if statement helper is missing a condition.',
@@ -2623,9 +2758,12 @@ $lang = array_merge($lang, array(
 	'MIGRATION_INVALID_DATA_UNDEFINED_METHOD'		=> 'A migration is invalid. An undefined migration tool method was encountered.',
 
 	'MODULE_ERROR'						=> 'An error occurred while creating a module: %s',
+	'MODULE_EXISTS'						=> 'A module already exists: %s',
+	'MODULE_EXIST_MULTIPLE'				=> 'Several modules with the given parent module langname already exist: %s. Try using before/after keys to clarify the module placement.',
 	'MODULE_INFO_FILE_NOT_EXIST'		=> 'A required module info file is missing: %2$s',
 	'MODULE_NOT_EXIST'					=> 'A required module does not exist: %s',
 
+	'PARENT_MODULE_FIND_ERROR'			=> 'Unable to determine the parent module identifier: %s',
 	'PERMISSION_NOT_EXIST'				=> 'The permission setting "%s" unexpectedly does not exist.',
 
 	'ROLE_NOT_EXIST'					=> 'The permission role "%s" unexpectedly does not exist.',
@@ -2908,7 +3046,7 @@ $lang = array_merge($lang, array(
 	'RESTORE_TOPIC_CONFIRM'		=> 'Are you sure you want to restore this topic?',
 	'RESTORE_TOPICS'			=> 'Restore topics',
 	'RESTORE_TOPICS_CONFIRM'	=> 'Are you sure you want to restore the selected topics?',
-	'RESYNC'					=> '重整對應資料',
+	'RESYNC'					=> 'Resynchronise',
 	'RETURN_MESSAGE'			=> '%s回到私人訊息%s',
 	'RETURN_NEW_FORUM'			=> '%s前往新的版面%s',
 	'RETURN_NEW_TOPIC'			=> '%s前往新的主題%s',
@@ -2992,7 +3130,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> '以下是這個網站的系統管理員或是版面管理員給予您的警告。[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> '您已經被本討論版給予警告',
 	'WARNING_POST_DEFAULT'	=> '以下您發表的文章違反了討論版規則：%s。',
-	'NO_WARNINGS'	=> '沒有警告。',
+	'NO_WARNINGS'	=> '沒有任何警告。',
 
 	'YOU_SELECTED_TOPIC'	=> '您選擇了主題識別編號 %d：%s。',
 	'PREFIX_MCP_CHOOSE'		=> 'Choose a new prefix for the selected topics',
@@ -3034,7 +3172,6 @@ $lang = array_merge($lang, array(
 	'BEFORE'				=> '之前',
 	'CC_EMAIL'				=> '將這封 e-mail 的副本寄給自己。',
 	'CC_SENDER'				=> '將這封 e-mail 的副本寄給自己。',
-
 	'CONTACT_ADMIN'			=> 'Contact a Board Administrator',
 
 	'DEST_LANG'				=> '語系設定',
@@ -3059,6 +3196,7 @@ $lang = array_merge($lang, array(
 	'FLOOD_EMAIL_LIMIT'		=> '很抱歉！您現在無法再次發送電子郵件，請稍後再試。',
 
 	'GROUP_LEADER'			=> '群組組長',
+
 	'HIDE_MEMBER_SEARCH'	=> '隱藏會員搜尋',
 
 	'IM_ADD_CONTACT'		=> '新增為聯絡人',
@@ -3116,7 +3254,7 @@ $lang = array_merge($lang, array(
 
 	'USERNAME_BEGINS_WITH'	=> '帳號開始字母為 ',
 	'USER_ADMIN'			=> '管理會員',
-	'USER_BAN'				=> 'Ban one or more users by username',
+	'USER_BAN'				=> '封鎖',
 	'USER_FORUM'			=> '會員統計',
 	'USER_ONLINE'			=> '線上',
 	'USER_PRESENCE'			=> '個人頭像',
@@ -3758,6 +3896,7 @@ $lang = array_merge($lang, array(
 	'AVATAR_DRIVER_UPLOAD_TITLE'	=> 'Upload avatar',
 	'AVATAR_DRIVER_UPLOAD_EXPLAIN'	=> 'Upload your own custom avatar.',
 	'AVATAR_EXPLAIN'				=> 'Maximum dimensions; width: %1$s, height: %2$s, file size: %3$.2f KiB.',
+	'AVATAR_EXPLAIN_NO_FILESIZE'	=> 'Maximum dimensions; width: %1$s, height: %2$s.',
 	'AVATAR_FEATURES_DISABLED'		=> '個人頭像功能停止使用中。',
 	'AVATAR_GALLERY'				=> '系統相簿',
 	'AVATAR_GENERAL_UPLOAD_ERROR'	=> '無法上傳個人頭像到 %s。',
@@ -4023,7 +4162,7 @@ $lang = array_merge($lang, array(
 	'NO_FRIENDS'				=> '好友是空的',
 	'NO_FRIENDS_OFFLINE'		=> '沒有離線的好友',
 	'NO_FRIENDS_ONLINE'			=> '沒有在線上的好友',
-	'NO_GROUP_SELECTED'			=> '沒有指定會員群組。',
+	'NO_GROUP_SELECTED'			=> 'No group specified.',
 	'NO_IMPORTANT_NEWS'			=> '沒有重要的公告。',
 	'NO_MESSAGE'				=> '無法找到私人訊息。',
 	'NO_NEW_FOLDER_NAME'		=> '您必須指定一個新的資料夾名稱。',
@@ -4355,6 +4494,7 @@ $lang = array_merge($lang, array(
 	'NO_NEW_POSTS_HOT'		=> '無新文章【熱門的】',	// Not used anymore
 	'NO_NEW_POSTS_LOCKED'	=> '無新文章【鎖定的】',	// Not used anymore
 	'NO_READ_ACCESS'		=> '您沒有閱讀這個版面的主題之權限。',
+	'NO_FORUMS_IN_CATEGORY'	=> 'This category has no forums.',
 	'NO_UNREAD_POSTS_HOT'		=> '無未閱讀文章【熱門的】',
 	'NO_UNREAD_POSTS_LOCKED'	=> '無未閱讀文章【鎖定的】',
 
@@ -4920,7 +5060,7 @@ $lang = array_merge($lang, array(
 	'ABBCODES_MAX_IMAGE_WIDTH_EXPLAIN'	=> 'Image will be resized if exceed the width set here.',
 	'ABBCODES_MAX_IMAGE_HEIGHT'			=> 'Maximum image height in pixel',
 	'ABBCODES_MAX_IMAGE_HEIGHT_EXPLAIN'	=> 'Image will be resized if exceed the height set here.',
-	'ABBCODES_MAX_THUMB_WIDTH'			=> '縮圖的最大寬度 (像素)',
+	'ABBCODES_MAX_THUMB_WIDTH'			=> 'Maximum thumbnail width/height in pixel',
 	'ABBCODES_RESIZE_SIGNATURE'			=> 'Resize larger images in Signatures',
 	'ABBCODES_RESIZE_SIGNATURE_EXPLAIN'	=> 'Also resize larger images in Signatures ?',
 	'ABBCODES_SIG_IMAGE_WIDTH'			=> 'Maximum signature image width in pixel',
@@ -8828,7 +8968,7 @@ $lang = array_merge($lang, array(
 	'NO_TEAM_SHORTNAME'				=> 'Short name of the team is missing! Please enter a short name!',
 	'NO_USER'						=> '該會員不存在。',
 	'NO_USERID'						=> 'The User chosen by you does not exist. ',
-	'NO_USERS'						=> '該會員不存在。',
+	'NO_USERS'						=> 'You haven’t entered any users or user not exist.',
 	'NO_WIN_MATCHDAYS'				=> 'This WebTip does not contain any matchday winnings!',
 	'NO_WIN_SEASON'					=> 'This WebTip does not contain any seasonal winnings!',
 	'NOT_CLOSED'					=> 'This matchday was not closed yet!',
@@ -9822,7 +9962,7 @@ $lang = array_merge($lang, array(
 	'CUSTOM_PROFILE_FIELD'				=> 'Custom Profile Field',
 	'CPF_TOP_X'							=> 'Top %1$d %2$s',
 	'TOTAL_VALUES_SET_PROMPT'			=> 'Total users who have set %s',
-	'DEFAULT'							=> '預設',
+	'DEFAULT'							=> '預設字體',
 	
 	'VIEWING_STATS'						=> 'Viewing phpBB Statistics',
 	
@@ -10085,7 +10225,7 @@ $lang = array_merge($lang, array(
 	'PERMANENT'		=> '永久的',
 
 	'UNTIL'						=> '直到',
-	'USER_BAN'					=> 'Ban one or more users by username',
+	'USER_BAN'					=> '封鎖',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> '啟用這個功能由所有目前的封鎖中排除已輸入的會員名稱。',
 	'USER_BAN_EXPLAIN'			=> '要指定多個不同的會員名稱，請每一行輸入一個。使用 <span style="text-decoration: underline;">搜尋會員</span> 功能，可自動地探訪以及增加一個或更多個會員。',
 	'USER_NO_BANNED'			=> '沒有封鎖的會員名稱',
@@ -10231,6 +10371,8 @@ $lang = array_merge($lang, array(
 	'ACP_POST_SETTINGS_EXPLAIN'			=> '在這裡，您可以設定所有發表文章的預設值。',
 	'ALLOW_POST_LINKS'					=> '允許在文章/私人訊息中使用網址連結功能',
 	'ALLOW_POST_LINKS_EXPLAIN'			=> '如果不允許，那麼 <code>[URL]</code> BBCode 標籤以及超連結網址是無法使用的。',
+	'ALLOWED_SCHEMES_LINKS'				=> 'Allowed schemes in links',
+	'ALLOWED_SCHEMES_LINKS_EXPLAIN'		=> 'Users can only post schemeless URLs or one of the comma-separated list of allowed schemes.',
 	'ALLOW_POST_FLASH'					=> '允許在文章中使用 <code>[FLASH]</code> 的 BBCode 標籤',
 	'ALLOW_POST_FLASH_EXPLAIN'			=> '如果不允許，那麼 <code>[FLASH]</code> BBCode 標籤在文章中是無法使用的。否則，權限系統必須控制會員可以使用 <code>[FLASH]</code> BBCode 標籤。',
 
@@ -10408,8 +10550,13 @@ $lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> '這些細節定義發送 cookies 到會員瀏覽器的資料。在大部分情況下設定 cookie 預設值應該是足夠的。如果您需要做任何改變，那麼得謹慎，不正確的設定將使會員無法登入討論區。',
 
 	'COOKIE_DOMAIN'				=> 'Cookie 網域',
+	'COOKIE_DOMAIN_EXPLAIN'		=> 'In most cases the cookie domain is optional. Leave it blank if you are unsure.<br><br> In the case where you have a board integrated with other software or have multiple domains, then to determine the cookie domain you need to do the following. If you have something like <i>example.com</i> and <i>forums.example.com</i>, or perhaps <i>forums.example.com</i> and <i>blog.example.com</i>. Remove the subdomains until you find the common domain, <i>example.com</i>. Now add a dot in front of the common domain and you would enter .example.com (note the dot at the beginning).',
 	'COOKIE_NAME'				=> 'Cookie 名稱',
+	'COOKIE_NAME_EXPLAIN'		=> 'This can be anything what you want, make it original. Whenever the cookie settings are changed the name of the cookie should be changed.',
+	'COOKIE_NOTICE'				=> 'Cookie notice',
+	'COOKIE_NOTICE_EXPLAIN'		=> 'If enabled a cookie notice will be displayed to users when visiting your board. This might be required by law depending on the content of your board and enabled extensions.',
 	'COOKIE_PATH'				=> 'Cookie 路徑',
+	'COOKIE_PATH_EXPLAIN'		=> 'This will usually be the same as your script path or simply a slash to make the cookie accessible across the site domain.',
 	'COOKIE_SECURE'				=> 'Cookie 安全',
 	'COOKIE_SECURE_EXPLAIN'		=> '如果您的伺服器使用 SSL 機制，那麼啟用這個選項，否則請停用。如果沒有使用 SSL 機制而啟用這個選項，那麼當重新導向時將會導致伺服器錯誤。',
 	'ONLINE_LENGTH'				=> '檢視上線的時間間距',
@@ -10445,10 +10592,14 @@ $lang = array_merge($lang, array(
 	'LOAD_CPF_VIEWTOPIC'			=> '在主題頁面中顯示自訂個人資料欄位',
 	'LOAD_USER_ACTIVITY'			=> '顯示會員的活動',
 	'LOAD_USER_ACTIVITY_EXPLAIN'	=> '在會員個人資料以及會員控制台中，顯示最常討論的主題/版面。在超過百萬篇文章的討論區，建議停用此功能。',
+	'LOAD_USER_ACTIVITY_LIMIT'		=> 'User’s activity post limit',
+	'LOAD_USER_ACTIVITY_LIMIT_EXPLAIN'	=> 'The active topic/forum won’t be shown for users having more than this number of posts. Set to 0 to disable the limit.',
 	'READ_NOTIFICATION_EXPIRE_DAYS'	=> 'Read Notification Expiration',
 	'READ_NOTIFICATION_EXPIRE_DAYS_EXPLAIN' => 'Number of days that will elapse before a read notification will automatically be deleted. Set this value to 0 to make notifications permanent.',
 	'RECOMPILE_STYLES'				=> '重新編輯舊的風格組件',
 	'RECOMPILE_STYLES_EXPLAIN'		=> '檢查在檔案系統中已更新的風格組件並重新編輯。',
+	'YES_ACCURATE_PM_BUTTON'			=> 'Enable permission specific PM button in topic pages',
+	'YES_ACCURATE_PM_BUTTON_EXPLAIN'	=> 'If this setting is enabled, only post profiles of users who are permitted to read private messages will have a private message button.',
 	'YES_ANON_READ_MARKING'			=> '啟用訪客主題標示',
 	'YES_ANON_READ_MARKING_EXPLAIN'	=> '為訪客儲存已讀/未讀狀態。如果停用，那麼對於訪客而言文章總是顯示為已讀。',
 	'YES_BIRTHDAYS'					=> '啟用生日列表',
@@ -10611,6 +10762,8 @@ $lang = array_merge($lang, array(
 	'ENABLE_EMAIL_EXPLAIN'			=> '如果停用，那麼將沒有任何 e-mail 會被討論區發送。<em>注意！由會員或管理員啟用帳號的設定者，必須啟用這個設定。如果停用此設定，那麼新的帳號將不需要啟用的程序。</em>',
 	'SEND_TEST_EMAIL'				=> 'Send a test email',
 	'SEND_TEST_EMAIL_EXPLAIN'		=> 'This will send a test email to the address defined in your account.',
+	'SMTP_ALLOW_SELF_SIGNED'		=> 'Allow self-signed SSL certificates',
+	'SMTP_ALLOW_SELF_SIGNED_EXPLAIN'=> 'Allow connections to SMTP server with self-signed SSL certificate. <br><em><strong>Warning:</strong> Allowing self-signed SSL certificates may cause security implications.</em>',
 	'SMTP_AUTH_METHOD'				=> 'SMTP 驗證方式',
 	'SMTP_AUTH_METHOD_EXPLAIN'		=> '只有在設定過會員名稱/密碼時才有用，如果您不確定使用何種方式，那麼請詢問您的提供者。',
 	'SMTP_CRAM_MD5'					=> 'CRAM-MD5',
@@ -10623,14 +10776,23 @@ $lang = array_merge($lang, array(
 	'SMTP_PORT'						=> 'SMTP 伺服器連接埠',
 	'SMTP_PORT_EXPLAIN'				=> '只有在您知道您的 SMTP 伺服器運行在一個不同的連接埠時才需要變更。',
 	'SMTP_SERVER'					=> 'SMTP 伺服器位址',
+	'SMTP_SERVER_EXPLAIN'			=> 'Note that you have to provide the protocol that your server uses. If you are using SSL, this has to be "ssl://your.mailserver.com"',
 	'SMTP_SETTINGS'					=> 'SMTP 設定',
 	'SMTP_USERNAME'					=> 'SMTP 會員名稱',
 	'SMTP_USERNAME_EXPLAIN'			=> '只有當您的 SMTP 伺服器需要它時才要輸入。',
+	'SMTP_VERIFY_PEER'				=> 'Verify SSL certificate',
+	'SMTP_VERIFY_PEER_EXPLAIN'		=> 'Require verification of SSL certificate used by SMTP server. <br><em><strong>Warning:</strong> Connecting peers with unverified SSL certificates may cause security implications.</em>',
+	'SMTP_VERIFY_PEER_NAME'			=> 'Verify SMTP peer name',
+	'SMTP_VERIFY_PEER_NAME_EXPLAIN'	=> 'Require verification of peer name for SMTP servers using SSL / TLS connections. <br><em><strong>Warning:</strong> Connecting to unverified peers may cause security implications.</em>',
 	'TEST_EMAIL_SENT'				=> 'The test email has been sent.<br />If you don’t receive it, please check your emails configuration.<br /><br />If you require assistance, please visit the <a href="https://www.phpbb.com/community/">phpBB support forums</a>.',
+
 	'USE_SMTP'						=> '使用 SMTP 伺服器發送 e-mail',
 	'USE_SMTP_EXPLAIN'				=> '選擇「是」，如果您想要或必須經由 SMTP 伺服器而不是本地的信件函數發送 e-mail。',
 
 	'ACP_JABBER_SETTINGS_EXPLAIN'	=> '在這裡，您可以啟用並控制會員使用 Jabber 發送即時訊息和討論區通知。Jabber 是任何人都可以使用的開放原始碼通訊協議。某些 Jabber 包含入口或傳送的服務允許您聯絡在其他網路上的會員。並非所有的伺服器都提供所有的傳送，通訊協議上的改變將阻止傳送的操作。請確認輸入的是已經註冊的帳號細節，phpBB 將會使用您在此所輸入的資料。',
+
+	'JAB_ALLOW_SELF_SIGNED'			=> 'Allow self-signed SSL certificates',
+	'JAB_ALLOW_SELF_SIGNED_EXPLAIN'	=> 'Allow connections to Jabber server with self-signed SSL certificate. <br><em><strong>Warning:</strong> Allowing self-signed SSL certificates may cause security implications.</em>',
 	'JAB_ENABLE'				=> '啟用 Jabber',
 	'JAB_ENABLE_EXPLAIN'		=> '允許使用 Jabber 發送訊息和通知。',
 	'JAB_GTALK_NOTE'			=> '請注意！因為沒有找到 <samp>dns_get_record</samp> 函數，那個 GTalk 將無作用。這個函數在 PHP4 是無效的，並且無法在 Windows 作業平台上執行。它目前無法在 BSD-based 系統運作，包含 Mac OS。',
@@ -10647,6 +10809,10 @@ $lang = array_merge($lang, array(
 	'JAB_USE_SSL_EXPLAIN'		=> '如果啟用，那麼安全連接將試著被建立。如果 5222 已經被指定，那麼 Jabber 連接埠將修改為 5223。',
 	'JAB_USERNAME'				=> 'Jabber 會員名稱或 JID',
 	'JAB_USERNAME_EXPLAIN'		=> '請指定一個已經註冊的會員名稱或一個有效的 JID。此會員名稱將無法被檢查是否有效。如果您只有輸入會員名稱，那麼您的 JID 將是您的會員名稱以及上頭所指定的伺服器。此外，請詳述有效的 JID，例如：「user@jabber.org」。',
+	'JAB_VERIFY_PEER'				=> 'Verify SSL certificate',
+	'JAB_VERIFY_PEER_EXPLAIN'		=> 'Require verification of SSL certificate used by Jabber server. <br><em><strong>Warning:</strong> Connecting peers with unverified SSL certificates may cause security implications.</em>',
+	'JAB_VERIFY_PEER_NAME'			=> 'Verify Jabber peer name',
+	'JAB_VERIFY_PEER_NAME_EXPLAIN'	=> 'Require verification of peer name for Jabber servers using SSL / TLS connections. <br><em><strong>Warning:</strong> Connecting to unverified peers may cause security implications.</em>',
 
 	'ACP_WELCOME_PM_EXPLAIN'	=> 'Here you are able to define what message newly registered users will recieve.',
 	'WPM_SETTINGS'				=> '設定',
@@ -10853,8 +11019,8 @@ $lang = array_merge($lang, array(
 	'ACP_BOTS'					=> '管理機器人',
 
 	'ACP_CAPTCHA'				=> 'CAPTCHA',
-	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 
+	'ACP_CAT_CUSTOMISE'			=> 'Customise',
 	'ACP_CAT_DATABASE'			=> '資料庫',
 	'ACP_CAT_DOT_MODS'			=> '副檔名',
 	'ACP_CAT_FORUMS'			=> '版面',
@@ -10903,6 +11069,8 @@ $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGEMENT'			=> '群組管理',
 	'ACP_GROUPS_PERMISSIONS'		=> '群組的權限',
 	'ACP_GROUPS_POSITION'			=> 'Manage group positions',
+
+	'ACP_HELP_PHPBB'			=> 'Help support phpBB',
 
 	'ACP_ICONS'					=> '主題圖示',
 	'ACP_ICONS_SMILIES'			=> '主題圖示/表情符號',
@@ -11021,6 +11189,16 @@ $lang = array_merge($lang, array(
 
 	'BACK'					=> '後退',
 
+	'CANNOT_CHANGE_FILE_GROUP'	=> 'Unable to change file group',
+	'CANNOT_CHANGE_FILE_PERMISSIONS'	=> 'Unable to change file permissions',
+	'CANNOT_COPY_FILES'		=> 'Unable to copy files',
+	'CANNOT_CREATE_SYMLINK'	=> 'Unable to create a symlink',
+	'CANNOT_DELETE_FILES'	=> 'Unable to delete files from the system',
+	'CANNOT_DUMP_FILE'		=> 'Unable to dump file',
+	'CANNOT_MIRROR_DIRECTORY'	=> 'Unable to mirror directory',
+	'CANNOT_RENAME_FILE'	=> 'Unable to rename a file from the system',
+	'CANNOT_TOUCH_FILES'	=> 'Unable to determine if the file exists',
+
 	'CONTAINER_EXCEPTION' => 'phpBB encountered an error building the container due to an installed extension. For this reason, all extensions have been temporarily disabled. Please try purging your forum cache. All extensions will automatically be re-enabled once the container error is resolved. If this error continues, please visit <a href="https://www.phpbb9.de">phpbb9.de</a> for support.',
 	'EXCEPTION' => 'Exception',
 
@@ -11030,6 +11208,7 @@ $lang = array_merge($lang, array(
 	'CRON_NO_SUCH_TASK'		=> 'Could not find cron task â€œ%sâ€.',
 	'CRON_NO_TASK'			=> 'No cron tasks need to be run right now.',
 	'CRON_NO_TASKS'			=> 'No cron tasks could be found.',
+	'CURRENT_VERSION'				=> '目前的版本',
 
 	'DEACTIVATE'				=> '停用',
 	'DIRECTORY_DOES_NOT_EXIST'	=> '輸入的路徑「%s」不存在。',
@@ -11055,6 +11234,7 @@ $lang = array_merge($lang, array(
 	'IP'					=> 'IP',
 	'IP_HOSTNAME'			=> 'IP 位址或主機名稱',
 
+	'LATEST_VERSION'		=> '最新的版本',
 	'LOAD_NOTIFICATIONS'			=> 'Display Notifications',
 	'LOAD_NOTIFICATIONS_EXPLAIN'	=> 'Display the notifications list on every page (typically in the header).',
 	'LOGGED_IN_AS'			=> '您目前登入的帳號為:',
@@ -11090,7 +11270,7 @@ $lang = array_merge($lang, array(
 	'RELEASE_ANNOUNCEMENT'		=> '公告',
 	'REMIND'							=> '提醒',
 	'REPARSE_LOCK_ERROR'				=> 'Reparsing is already in progress by another process.',
-	'RESYNC'							=> '重整對應資料',
+	'RESYNC'							=> 'Resynchronise',
 
 	'RUNNING_TASK'			=> 'Running task: %s.',
 	'SELECT_ANONYMOUS'		=> '選擇匿名使用者',
@@ -11110,6 +11290,10 @@ $lang = array_merge($lang, array(
 	'UCP'					=> '會員控制台',
 	'USERNAMES_EXPLAIN'		=> '請每一行輸入一個會員名稱。',
 	'USER_CONTROL_PANEL'	=> '會員控制台',
+
+	'UPDATE_NEEDED'			=> 'The board is not up to date.',
+	'UPDATE_NOT_NEEDED'		=> 'The board is up to date.',
+	'UPDATES_AVAILABLE'		=> 'Updates available:',
 
 	'WARNING'				=> '警告',
 
@@ -11163,7 +11347,8 @@ $lang = array_merge($lang, array(
 	'NUMBER_USERS'		=> '會員數量',
 	'NUMBER_ORPHAN'		=> '幽靈的附加檔案',
 
-	'PHP_VERSION_OLD'	=> 'The version of PHP on this server will no longer be supported by future versions of phpBB. %sDetails%s',
+	'PHP_VERSION'		=> 'PHP version',
+	'PHP_VERSION_OLD'	=> 'The version of PHP on this server (%1$s) will no longer be supported by future versions of phpBB. The minimum required version will be PHP %2$s. %3$sDetails%4$s',
 
 	'POSTS_PER_DAY'		=> '每天的發表文章',
 
@@ -11300,8 +11485,10 @@ $lang = array_merge($lang, array(
 	'GO_ACP_MAIN'				=> '前往 ACP 首頁',
 	'HIDE_STATISTICS'			=> '隱藏細節',
 	'SEND_STATISTICS'			=> '發送統計資訊',
+	'SEND_STATISTICS_LONG'		=> '發送統計的資訊',
 	'SHOW_STATISTICS'			=> '顯示細節',
 	'THANKS_SEND_STATISTICS'	=> '感謝您送出您的資訊。',
+	'FAIL_SEND_STATISTICS'		=> 'phpBB was unable to send statistics',
 	'LOG_TERM_DELETE'			=> '<strong>A word has been deleted from the lexicon</strong><br />» %s',
 
 	'LOG_ACL_ADD_USER_GLOBAL_U_'		=> '<strong>已增加或已編輯此會員的會員權限</strong><br />» %s',
@@ -11357,6 +11544,7 @@ $lang = array_merge($lang, array(
 	'LOG_BBCODE_ADD'		=> '<strong>已增加新的 BBCode</strong><br />» %s',
 	'LOG_BBCODE_EDIT'		=> '<strong>已編輯 BBCode</strong><br />» %s',
 	'LOG_BBCODE_DELETE'		=> '<strong>已刪除 BBCode</strong><br />» %s',
+	'LOG_BBCODE_CONFIGURATION_ERROR'	=> '<strong>Error while configuring BBCode</strong>: %1$s<br />Â» %2$s',
 
 	'LOG_BOT_ADDED'		=> '<strong>已增加新的 bot</strong><br />» %s',
 	'LOG_BOT_DELETE'	=> '<strong>已刪除 bot</strong><br />» %s',
@@ -11396,6 +11584,7 @@ $lang = array_merge($lang, array(
 	'LOG_LOCK_POST'				=> '<strong>已鎖定文章</strong><br /> %s',
 	'LOG_MERGE'					=> '<strong>已合併文章</strong> 到主題<br />» %s',
 	'LOG_MOVE'					=> '<strong>已移動主題</strong><br /> 從 %1$s 到 %2$s',
+	'LOG_MOVED_TOPIC'			=> '<strong>Moved topic</strong><br />Â» %s',
 	'LOG_PM_REPORT_CLOSED'		=> '<strong>已結束 PM 檢舉</strong><br />» %s',
 	'LOG_PM_REPORT_DELETED'		=> '<strong>已刪除 PM 檢舉</strong><br />» %s',
 	'LOG_POST_APPROVED'			=> '<strong>已核准文章</strong><br />» %s',
@@ -11431,6 +11620,7 @@ $lang = array_merge($lang, array(
 
 	'LOG_ERROR_JABBER'		=> '<strong>Jabber 錯誤</strong><br />» %s',
 	'LOG_ERROR_EMAIL'		=> '<strong>E-mail 錯誤</strong><br />» %s',
+	'LOG_ERROR_CAPTCHA'		=> '<strong>CAPTCHA error</strong><br />Â» %s',
 
 	'LOG_FORUM_ADD'							=> '<strong>已建立新的版面</strong><br />» %s',
 	'LOG_FORUM_COPIED_PERMISSIONS'			=> '<strong>已複製版面權限</strong> 自 %1$s<br />» %2$s',
@@ -11509,6 +11699,7 @@ $lang = array_merge($lang, array(
 	'LOG_U_ROLE_REMOVED'	=> '<strong>已移除會員角色</strong><br />» %s',
 
 	'LOG_PLUPLOAD_TIDY_FAILED'		=> '<strong>Unable to open %1$s for tidying, check permissions.</strong><br />Exception: %2$s<br />Trace: %3$s',
+
 	'LOG_PROFILE_FIELD_ACTIVATE'	=> '<strong>已啟用個人資料欄位</strong><br />» %s',
 	'LOG_PROFILE_FIELD_CREATE'		=> '<strong>已增加個人資料欄位</strong><br />» %s',
 	'LOG_PROFILE_FIELD_DEACTIVATE'	=> '<strong>已停用個人資料欄位</strong><br />» %s',
@@ -11619,6 +11810,7 @@ $lang = array_merge($lang, array(
 	'LOG_EXT_ENABLE'	=> '<strong>Extension enabled</strong><br />Â» %s',
 	'LOG_EXT_DISABLE'	=> '<strong>Extension disabled</strong><br />Â» %s',
 	'LOG_EXT_PURGE'		=> '<strong>Extensionâ€™s data deleted</strong><br />Â» %s',
+	'LOG_EXT_UPDATE'	=> '<strong>Extension updated</strong><br />Â» %s',
 
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Topics with images resynchronized</strong>',
 	'LOG_PM_COUNT_RESET'	=> '<strong>Indicator for new / unread PMs set to 0 for</strong><br />» %s',
@@ -13551,6 +13743,7 @@ $lang = array_merge($lang, array(
 	'EXTENSION_NOT_AVAILABLE'	=> 'The selected extension is not available for this board, please verify your phpBB and PHP versions are allowed (see the details page).',
 	'EXTENSION_DIR_INVALID'		=> 'The selected extension has an invalid directory structure and cannot be enabled.',
 	'EXTENSION_NOT_ENABLEABLE'	=> 'The selected extension cannot be enabled, please verify the extension’s requirements.',
+	'EXTENSION_NOT_INSTALLED'	=> 'The extension %s is not available. Please check that you have installed it correctly.',
 
 	'DETAILS'				=> '細節',
 
@@ -13577,6 +13770,11 @@ $lang = array_merge($lang, array(
 	'EXTENSION_ACTIONS'			=> '動作',
 	'EXTENSION_OPTIONS'			=> '選項',
 	'EXTENSION_INSTALL_HEADLINE'=> 'Installing an extension',
+	'EXTENSION_INSTALL_EXPLAIN'	=> '<ol>
+			<li>Download an extension from phpBB’s extensions database</li>
+			<li>Unzip the extension and upload it to the <samp>ext/</samp> directory of your phpBB board</li>
+			<li>Enable the extension, here in the Extensions manager</li>
+		</ol>',
 	'EXTENSION_UPDATE_HEADLINE'	=> 'Updating an extension',
 	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
 			<li>Disable the extension</li>
@@ -13611,7 +13809,7 @@ $lang = array_merge($lang, array(
 
 	'REQUIREMENTS'			=> '檢測需求',
 	'PHPBB_VERSION'			=> 'phpBB Version',
-	'PHP_VERSION'			=> 'PHP Version',
+	'PHP_VERSION'			=> 'PHP version',
 	'AUTHOR_INFORMATION'	=> 'Author Information',
 	'AUTHOR_NAME'			=> '檔名',
 	'AUTHOR_EMAIL'			=> 'Email',
@@ -13833,6 +14031,7 @@ $lang = array_merge($lang, array(
 	'GROUP_LEAD'					=> '會員群組組長',
 	'GROUP_LEADERS_ADDED'			=> '增加新群組組長成功。',
 	'GROUP_LEGEND'					=> '在首頁「顏色說明」中顯示',
+	'GROUP_LIST_CURRENT_MEMBERS'	=> 'Current members',
 	'GROUP_LIST'					=> '管理會員',
 	'GROUP_LIST_EXPLAIN'			=> '會員群組目前所有的組員完整列表。您可以刪除組員 (除了一些特殊會員群組) 或增加您認為合適的新組員。',
 	'GROUP_MEMBERS'					=> '會員群組組員',
@@ -13881,7 +14080,7 @@ $lang = array_merge($lang, array(
 	'NO_GROUPS_ADDED'			=> 'No groups added yet.',
 	'NO_GROUPS_CREATED'			=> '還沒有已建立的會員群組。',
 	'NO_PERMISSIONS'			=> '不複製權限',
-	'NO_USERS'					=> '該會員不存在。',
+	'NO_USERS'					=> 'You haven’t entered any users or user not exist.',
 	'NO_USERS_ADDED'			=> '沒有會員被加入此群組。',
 	'NO_VALID_USERS'			=> '您沒有輸入任何符合那個動作的會員。',
 
@@ -14286,6 +14485,7 @@ $lang = array_merge($lang, array(
 	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> '在這裡，您可以安裝/移除語言包。預設的語言包有標記星號 (*)。',
 
 	'DELETE_LANGUAGE_CONFIRM'		=> 'Are you sure you wish to delete “%s”?',
+
 	'INSTALLED_LANGUAGE_PACKS'		=> '已安裝的語言包',
 
 	'LANGUAGE_DETAILS_UPDATED'			=> '語言細節更新成功。',
@@ -14490,7 +14690,8 @@ $lang = array_merge($lang, array(
 	'ALL_GROUPS'				=> '選擇所有的群組',
 	'ALL_NEVER'					=> '所有 <samp>從不</samp>',
 	'ALL_NO'					=> '所有 <samp>否</samp>',
-	'SELECT_ALL_USERS'					=> 'Select all users',
+	'SELECT_ALL_USERS'			=> 'Select all users',
+	'ALL_USERS'					=> '所有會員',
 	'ALL_YES'					=> '所有 <samp>是</samp>',
 	'APPLY_ALL_PERMISSIONS'		=> '更新所有的權限',
 	'APPLY_PERMISSIONS'			=> '更新權限',
@@ -14507,7 +14708,7 @@ $lang = array_merge($lang, array(
 	'CREATE_ROLE_FROM'			=> '使用設定從...',
 	'CUSTOM'					=> '自訂...',
 
-	'DEFAULT'					=> '預設',
+	'DEFAULT'					=> '預設字體',
 	'DELETE_ROLE'				=> '刪除角色',
 	'DELETE_ROLE_CONFIRM'		=> '您確定您要刪除這個角色嗎？使用這個角色的項目 <strong>不會</strong> 因此遺失它們的權限設定。',
 	'DISPLAY_ROLE_ITEMS'		=> '檢視使用這個角色的項目',
@@ -14737,6 +14938,7 @@ $lang = array_merge($lang, array(
 // Forum Permissions
 $lang = array_merge($lang, array(
 	'ACL_F_LIST'		=> 'Can see forum',
+	'ACL_F_LIST_TOPICS' => 'Can see topics',
 	'ACL_F_READ'		=> 'Can read forum',
 	'ACL_F_SEARCH'		=> 'Can search the forum',
 	'ACL_F_SUBSCRIBE'	=> 'Can subscribe forum',
@@ -16000,7 +16202,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> '請選擇您想要移動這個會員發表的所有文章的版面。',
 
 	'NO_SPECIAL_RANK'		=> '沒有指派特殊等級',
-	'NO_WARNINGS'			=> '沒有警告。',
+	'NO_WARNINGS'			=> '沒有任何警告。',
 	'NOT_MANAGE_FOUNDER'	=> '您在嘗試管理具有創始人地位的會員。只有創始人被允許管理其他創始人。',
 
 	'QUICK_TOOLS'			=> '快速工具',

@@ -113,7 +113,7 @@ $lang = array_merge($lang, array(
 	'NO_EVENT'					=> 'Der Termin existiert nicht!',
 	'NEW_EVENT'					=> 'Neuer Termin',
 	'NO_EVENT_TYPES'			=> 'Der Admin hat noch keine Termin-Typen erstellt, es können noch keine Termine angelegt werden.',
-	'NO_GROUP_SELECTED'			=> 'Keine Gruppe ausgewählt.',
+	'NO_GROUP_SELECTED'			=> 'Keine Gruppe angegeben.',
 	'NO_POST_EVENT_MODE'		=> 'Keine Post-Methode angelegt.',
 	'PM'						=> 'PN',
 	'RECURRING_EVENT'			=> 'Wiederkehrender Termin',
@@ -181,7 +181,7 @@ $lang = array_merge($lang, array(
 #######language/en/captcha_recaptcha.php#######
 
 $lang = array_merge($lang, array(
-	'RECAPTCHA_LANG'				=> 'de',
+	'RECAPTCHA_LANG'				=> 'en-GB',
 	'RECAPTCHA_NOT_AVAILABLE'		=> 'Um reCaptcha nutzen zu können, müssen Sie sich ein Konto auf <a href="http://www.google.com/recaptcha">www.google.com/recaptcha</a> anlegen.',
 	'CAPTCHA_RECAPTCHA'				=> 'reCaptcha',
 	'RECAPTCHA_INCORRECT'			=> 'The solution you provided was incorrect',
@@ -221,6 +221,7 @@ $lang = array_merge($lang, array(
 	'CLI_DESCRIPTION_DISABLE_EXTENSION'			=> 'Deaktiviert die angegebene Erweiterung.',
 	'CLI_DESCRIPTION_ENABLE_EXTENSION'			=> 'Aktiviert die angegebene Erweiterung.',
 	'CLI_DESCRIPTION_FIND_MIGRATIONS'			=> 'Finds migrations that are not depended upon.',
+	'CLI_DESCRIPTION_FIX_LEFT_RIGHT_IDS'		=> 'Repairs the tree structure of the forums and modules.',
 	'CLI_DESCRIPTION_GET_CONFIG'				=> 'Gibt den Wert einer Konfigurations-Einstellung aus',
 	'CLI_DESCRIPTION_INCREMENT_CONFIG'			=> 'Increments a configuration option’s integer value',
 	'CLI_DESCRIPTION_LIST_EXTENSIONS'			=> 'Gibt alle in der Datenbank und im Dateisystem vorhandenen Erweiterungen aus.',
@@ -230,6 +231,7 @@ $lang = array_merge($lang, array(
 	'CLI_DESCRIPTION_OPTION_SHELL'				=> 'Komandozeile starten.',
 	'CLI_DESCRIPTION_PURGE_EXTENSION'			=> 'Löscht die angegebene Erweiterung.',
 	'CLI_DESCRIPTION_REPARSER_LIST'				=> 'Lists the types of text that can be reparsed.',
+	'CLI_DESCRIPTION_REPARSER_AVAILABLE'				=> 'Available reparsers:',
 	'CLI_DESCRIPTION_REPARSER_REPARSE'			=> 'Reparses stored text with the current text_formatter services.',
 	'CLI_DESCRIPTION_REPARSER_REPARSE_ARG_1'	=> 'Type of text to reparse. Leave blank to reparse everything.',
 	'CLI_DESCRIPTION_REPARSER_REPARSE_OPT_DRY_RUN'		=> 'Do not save any changes; just print what would happen',
@@ -245,19 +247,51 @@ $lang = array_merge($lang, array(
 	'CLI_DESCRIPTION_THUMBNAIL_GENERATE'	=> 'Generate all missing thumbnails.',
 	'CLI_DESCRIPTION_THUMBNAIL_RECREATE'	=> 'Recreate all thumbnails.',
 
+	'CLI_DESCRIPTION_UPDATE_CHECK'					=> 'Check if the board is up to date.',
+	'CLI_DESCRIPTION_UPDATE_CHECK_ARGUMENT_1'		=> 'Name of the extension to check (if all, checks all the extensions)',
+	'CLI_DESCRIPTION_UPDATE_CHECK_OPTION_CACHE'		=> 'Run check command with cache.',
+	'CLI_DESCRIPTION_UPDATE_CHECK_OPTION_STABILITY'	=> 'Run command choosing to check only stable or unstable versions.',
+
+	'CLI_DESCRIPTION_UPDATE_HASH_BCRYPT'		=> 'Updates outdated password hashes to be hashed with bcrypt.',
+
+	'CLI_ERROR_INVALID_STABILITY' => '"%s" needs to be set to "stable" or "unstable".',
+
+	'CLI_DESCRIPTION_USER_ACTIVATE'				=> 'Activate (or deactivate) a user account.',
+	'CLI_DESCRIPTION_USER_ACTIVATE_USERNAME'	=> 'Username of the account to activate.',
+	'CLI_DESCRIPTION_USER_ACTIVATE_DEACTIVATE'	=> 'Deactivate the user’s account',
+	'CLI_DESCRIPTION_USER_ACTIVATE_ACTIVE'		=> 'The user is already active.',
+	'CLI_DESCRIPTION_USER_ACTIVATE_INACTIVE'	=> 'The user is already inactive.',
+	'CLI_DESCRIPTION_USER_ADD'					=> 'Add a new user.',
+	'CLI_DESCRIPTION_USER_ADD_OPTION_USERNAME'	=> 'Username of the new user',
+	'CLI_DESCRIPTION_USER_ADD_OPTION_PASSWORD'	=> 'Password of the new user',
+	'CLI_DESCRIPTION_USER_ADD_OPTION_EMAIL'		=> 'E-mail address of the new user',
+	'CLI_DESCRIPTION_USER_ADD_OPTION_NOTIFY'	=> 'Send account activation email to the new user (not sent by default)',
+	'CLI_DESCRIPTION_USER_DELETE'				=> 'Delete a user account.',
+	'CLI_DESCRIPTION_USER_DELETE_USERNAME'		=> 'Username of the user to delete',
+	'CLI_DESCRIPTION_USER_DELETE_OPTION_POSTS'	=> 'Delete all posts by the user. Without this option, the user’s posts will be retained.',
+	'CLI_DESCRIPTION_USER_RECLEAN'				=> 'Re-clean usernames.',
+
 	'CLI_EXTENSION_DISABLE_FAILURE'		=> 'Konnte Erweiterung %s nicht deaktivieren',
 	'CLI_EXTENSION_DISABLE_SUCCESS'		=> 'Erweiterung %s erfolgreich deaktiviert',
+	'CLI_EXTENSION_DISABLED'			=> 'Extension %s is not enabled',
 	'CLI_EXTENSION_ENABLE_FAILURE'		=> 'Konnte Erweiterung %s nicht aktivieren',
 	'CLI_EXTENSION_ENABLE_SUCCESS'		=> 'Erweiterung %s erfolgreich aktiviert',
+	'CLI_EXTENSION_ENABLED'				=> 'Extension %s is already enabled',
+	'CLI_EXTENSION_NOT_EXIST'			=> 'Extension %s does not exist',
 	'CLI_EXTENSION_NAME'				=> 'Name der Erweiterung',
 	'CLI_EXTENSION_PURGE_FAILURE'		=> 'Konnte Arbeitsdaten der Erweiterung %s nicht löschen',
 	'CLI_EXTENSION_PURGE_SUCCESS'		=> 'Arbeitsdaten der Erweiterung %s erfolgreich gelöscht',
+	'CLI_EXTENSION_UPDATE_FAILURE'		=> 'Could not update extension %s',
+	'CLI_EXTENSION_UPDATE_SUCCESS'		=> 'Successfully updated extension %s',
 	'CLI_EXTENSION_NOT_FOUND'			=> 'Es wurden keine Erweiterungen gefunden.',
+	'CLI_EXTENSION_NOT_ENABLEABLE'		=> 'Extension %s is not enableable.',
 	'CLI_EXTENSIONS_AVAILABLE'			=> 'Verfügbar',
 	'CLI_EXTENSIONS_DISABLED'			=> 'Deaktiviert',
 	'CLI_EXTENSIONS_ENABLED'			=> 'Aktiviert',
 
+	'CLI_FIXUP_FIX_LEFT_RIGHT_IDS_SUCCESS'		=> 'Successfully repaired the tree structure of the forums and modules.',
 	'CLI_FIXUP_RECALCULATE_EMAIL_HASH_SUCCESS'	=> 'Alle E-Mail-Hashes wurden erfolgreich neu ermittelt.',
+	'CLI_FIXUP_UPDATE_HASH_BCRYPT_SUCCESS'		=> 'Successfully updated outdated password hashes to bcrypt.',
 
 	'CLI_MIGRATION_NAME'					=> 'Migration name, including the namespace (use forward slashes instead of backslashes to avoid problems).',
 	'CLI_MIGRATIONS_AVAILABLE'				=> 'Available migrations',
@@ -356,6 +390,7 @@ $lang = array_merge($lang, array(
 	'AUTH_PROVIDER_OAUTH_SERVICE_BITLY'						=> 'Bitly',
 	'AUTH_PROVIDER_OAUTH_SERVICE_FACEBOOK'					=> 'Facebook',
 	'AUTH_PROVIDER_OAUTH_SERVICE_GOOGLE'					=> 'Google',
+	'AUTH_PROVIDER_OAUTH_SERVICE_TWITTER'					=> 'Twitter',
 	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_NOT_STORED'			=> 'Das OAuth-Token wurde nicht gespeichert.',
 	'AUTH_PROVIDER_OAUTH_TOKEN_ERROR_INCORRECTLY_STORED'	=> 'Das OAuth-Token wurde fehlerhaft gespeichert.',
 	'AVATAR_DISALLOWED_CONTENT'		=> 'Die hochgeladene Datei wurde abgewiesen, da sie als möglicher Angriffsversuch identifiziert wurde.',
@@ -391,8 +426,10 @@ $lang = array_merge($lang, array(
 	'BOARD_DISABLED'		=> 'Dieses Board ist momentan deaktiviert.',
 	'BOARD_UNAVAILABLE'		=> 'Dieses Board ist leider vorübergehend nicht verfügbar, bitte versuchen Sie es in einigen Minuten erneut.',
 	'BROWSING_FORUM'		=> 'Mitglieder in diesem Forum: %1$s',
+	'BUTTON_DELETE'         => 'Löschen',
 	'BUTTON_EDIT'			=> 'Ändern',
 	'BUTTON_FORUM_LOCKED'	=> 'Gesperrt',
+	'BUTTON_INFORMATION'    => 'Information',
 	'BUTTON_NEW_TOPIC'		=> 'Neues Thema',
 	'BUTTON_PM'				=> 'PN',
 	'BUTTON_PM_FORWARD'		=> 'Weiterleiten',
@@ -401,7 +438,9 @@ $lang = array_merge($lang, array(
 	'BUTTON_PM_REPLY_ALL'	=> 'Allen antworten',
 	'BUTTON_POST_REPLY'		=> 'Antworten',
 	'BUTTON_QUOTE'			=> 'Zitieren',
+	'BUTTON_REPORT'         => 'Report',
 	'BUTTON_TOPIC_LOCKED'	=> 'Gesperrt',
+	'BUTTON_WARN'           => 'Warn',
 	'BYTES'					=> 'Bytes',
 	'BYTES_SHORT'			=> 'B',
 
@@ -427,6 +466,10 @@ $lang = array_merge($lang, array(
 	'CONTACT'				=> 'Kontaktdaten',
 	'CONTACT_USER'			=> 'Kontaktdaten von %s',
 	'CONTACT_US'			=> 'Kontakt',
+	'COOKIE_CONSENT_INFO'	=> 'Learn more',
+	'COOKIE_CONSENT_MSG'	=> 'This website uses cookies to ensure you get the best experience on our website.',
+	'COOKIE_CONSENT_OK'		=> 'Got it!',
+	'COOKIE_CONSENT_HREF'	=> 'http://cookiesandyou.com',
 	'COOKIES_DELETED'		=> 'Alle Cookies des Boards wurden erfolgreich gelöscht.',
 	'CURRENT_TIME'			=> 'Aktuelle Zeit: %s',
 
@@ -570,6 +613,7 @@ $lang = array_merge($lang, array(
 	'INTERESTS'					=> 'Interessen',
 	'INVALID_DIGEST_CHALLENGE'	=> 'Ungültiger Digest Challenge.',
 	'INVALID_EMAIL_LOG'			=> '<strong>%s</strong> ist vermutlich eine ungültige E-Mail-Adresse.',
+	'INVALID_FEED_ATTACHMENTS'	=> 'The selected feed tried fetching attachments with invalid constraints.',
 	'INVALID_PLURAL_RULE'		=> 'Die ausgewählte Plural-Regel ist ungültig. Zulässig sind ganzzahlige Werte von 0 bis 15.',
 	'IP'						=> 'IP',
 	'IP_BLACKLISTED'			=> 'Ihre IP-Adresse %1$s wurde gesperrt, da sie auf der schwarzen Liste steht. Details finden Sie unter <a href="%2$s">%2$s</a>.',
@@ -723,7 +767,7 @@ $lang = array_merge($lang, array(
 	'NO_UNREAD_POSTS'			=> 'Keine ungelesenen Beiträge',
 	'NO_UPLOAD_FORM_FOUND'		=> 'Ein Datei-Upload wurde angestoßen, aber es wurde kein gültiges Upload-Formular gefunden.',
 	'NO_USER'					=> 'Der von Ihnen ausgewählte Benutzer existiert nicht.',
-	'NO_USERS'					=> 'Sie haben keine Benutzer angegeben.',
+	'NO_USERS'					=> 'You haven’t entered any users or user not exist.',
 	'NO_USER_SPECIFIED'			=> 'Es wurde kein Benutzername angegeben.',
 
 	'OCCUPATION'				=> 'Tätigkeit',
@@ -776,6 +820,7 @@ $lang = array_merge($lang, array(
 	'PREVIOUS'				=> 'Vorherige',		// Used in pagination
 	'PREVIOUS_STEP'			=> 'Zurück',
 	'PRIVACY'				=> 'Datenschutzrichtlinie',
+	'PRIVACY_LINK'			=> 'Privacy',
 	'PRIVATE_MESSAGE'		=> 'Private Nachricht',
 	'PRIVATE_MESSAGES'		=> 'Private Nachrichten',
 	'PRIVATE_MESSAGING'		=> 'Private Nachrichten',
@@ -892,6 +937,7 @@ $lang = array_merge($lang, array(
 	'SUBMIT'					=> 'Absenden',
 
 	'TB'				=> 'TB',
+	'TERMS_LINK'		=> 'Terms',
 	'TERMS_USE'			=> 'Nutzungsbedingungen',
 	'TEST_CONNECTION'	=> 'Verbindung testen',
 	'THE_TEAM'			=> 'Das Team',
@@ -1111,7 +1157,7 @@ $lang = array_merge($lang, array(
 	'PHOOGLE_LINK_TEXT'		=> 'Karten',
 	'PHOOGLE_SHOW_USER_TEXT'=> 'Zeige Mitglied auf der Phoogle Map',
 	'FORUM_BLOG'			=> 'Blog',
-	'PAGE_NOT_FOUND'		=> 'Die gewählte Seite existiert nicht oder Sie haben keine Berechtigung diese Seite aufzurufen.',
+	'PAGE_NOT_FOUND'		=> 'The requested page could not be found or you have no permissions.',
 	'POINTS_DONATE'			=> '[Schenken]',
 	'POINTS_MODIFY'			=> '[Ändern]',
 
@@ -1768,7 +1814,7 @@ $lang = array_merge($lang, array(
 	'HELP_BBCODE_OTHERS_CUSTOM_ANSWER'	=> 'If you are an administrator on this board and have the proper permissions, you can add further BBCodes through the Custom BBCodes section.',
 	'HELP_BBCODE_OTHERS_CUSTOM_QUESTION'	=> 'Can I add my own tags?',
 
-	'HELP_BBCODE_QUOTES_CODE_ANSWER'	=> 'If you want to output a piece of code or in fact anything that requires a fixed width, e.g. Courier type font you should enclose the text in <strong>[code][/code]</strong> tags, e.g.<br /><br /><strong>[code]</strong>echo &quot;This is some code&quot;;<strong>[/code]</strong><br /><br />All formatting used within <strong>[code][/code]</strong> tags is retained when you later view it. PHP syntax highlighting can be enabled using <strong>[code=php][/code]</strong> and is recommended when posting PHP code samples as it improves readability.',
+	'HELP_BBCODE_QUOTES_CODE_ANSWER'	=> 'If you want to output a piece of code or in fact anything that requires a fixed width, e.g. Courier type font you should enclose the text in <strong>[code][/code]</strong> tags, e.g.<br /><br /><strong>[code]</strong>echo &quot;This is some code&quot;;<strong>[/code]</strong><br /><br />All formatting used within <strong>[code][/code]</strong> tags is retained when you later view it.',
 	'HELP_BBCODE_QUOTES_CODE_QUESTION'	=> 'Outputting code or fixed width data',
 	'HELP_BBCODE_QUOTES_TEXT_ANSWER'	=> 'There are two ways you can quote text, with a reference or without.<ul><li>When you utilise the Quote function to reply to a post on the board you should notice that the post text is added to the message window enclosed in a <strong>[quote=&quot;&quot;][/quote]</strong> block. This method allows you to quote with a reference to a person or whatever else you choose to put! For example to quote a piece of text Mr. Blobby wrote you would enter:<br /><br /><strong>[quote=&quot;Mr. Blobby&quot;]</strong>The text Mr. Blobby wrote would go here<strong>[/quote]</strong><br /><br />The resulting output will automatically add &quot;Mr. Blobby wrote:&quot; before the actual text. Remember you <strong>must</strong> include the quotation marks &quot;&quot; around the name you are quoting, they are not optional.</li><li>The second method allows you to blindly quote something. To utilise this enclose the text in <strong>[quote][/quote]</strong> tags. When you view the message it will simply show the text within a quotation block.</li></ul>',
 	'HELP_BBCODE_QUOTES_TEXT_QUESTION'	=> 'Quoting text in replies',
@@ -1997,13 +2043,17 @@ $lang = array_merge($lang, array(
 	// Filesystem requirements
 	'FILE_NOT_EXISTS'			=> 'File not exists',
 	'FILE_NOT_EXISTS_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to exist.',
+	'FILE_NOT_EXISTS_EXPLAIN_OPTIONAL'		=> 'It is recommended that the %1$s file exist for a better forum user experience.',
 	'FILE_NOT_WRITABLE'			=> 'File not writable',
 	'FILE_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s file needs to be writable.',
+	'FILE_NOT_WRITABLE_EXPLAIN_OPTIONAL'	=> 'It is recommended that the %1$s file be writable for a better forum user experience.',
 
 	'DIRECTORY_NOT_EXISTS'				=> 'Directory not exists',
 	'DIRECTORY_NOT_EXISTS_EXPLAIN'		=> 'To be able to install phpBB the %1$s directory needs to exist.',
+	'DIRECTORY_NOT_EXISTS_EXPLAIN_OPTIONAL'		=> 'It is recommended that the %1$s directory exist for a better forum user experience.',
 	'DIRECTORY_NOT_WRITABLE'			=> 'Directory not writable',
 	'DIRECTORY_NOT_WRITABLE_EXPLAIN'	=> 'To be able to install phpBB the %1$s directory needs to be writable.',
+	'DIRECTORY_NOT_WRITABLE_EXPLAIN_OPTIONAL'	=> 'It is recommended that the %1$s directory be writable for a better forum user experience.',
 
 	// Server requirements
 	'PHP_VERSION_REQD'					=> 'PHP version',
@@ -2014,6 +2064,8 @@ $lang = array_merge($lang, array(
 	'PCRE_UTF_SUPPORT_EXPLAIN'			=> 'phpBB will not run if your PHP installation is not compiled with UTF-8 support in the PCRE extension.',
 	'PHP_JSON_SUPPORT'					=> 'PHP JSON-Unterstützung',
 	'PHP_JSON_SUPPORT_EXPLAIN'			=> 'In order for phpBB to function correctly, the PHP JSON extension needs to be available.',
+	'PHP_XML_SUPPORT'					=> 'PHP XML/DOM support',
+	'PHP_XML_SUPPORT_EXPLAIN'			=> 'In order for phpBB to function correctly, the PHP XML/DOM extension needs to be available.',
 	'PHP_SUPPORTED_DB'					=> 'Unterstützte Datenbanken',
 	'PHP_SUPPORTED_DB_EXPLAIN'			=> 'You must have support for at least one compatible database within PHP. If no database modules are shown as available you should contact your hosting provider or review the relevant PHP installation documentation for advice.',
 
@@ -2021,10 +2073,86 @@ $lang = array_merge($lang, array(
 
 	'STAGE_REQUIREMENTS'	=> 'Check requirements',
 
+	'ALL_FILES_DIFFED'		=> 'All modified files has been diffed.',
+	'BOARD_CONFIG'		=> 'Bulletin board configuration',
+	'BOARD_DESCRIPTION'	=> 'Short description of the board',
+	'BOARD_NAME'		=> 'Title of the board',
+	'CLI_CONFIG_FILE'				=> 'Config file to use',
+	'CLI_INSTALL_BOARD'				=> 'Install phpBB',
+	'CLI_INSTALL_SHOW_CONFIG'		=> 'Show the configuration which will be used',
+	'CLI_INSTALL_VALIDATE_CONFIG'	=> 'Validate a configuration file',
+	'CLI_UPDATE_BOARD'				=> 'Update phpBB',
+	'CONFIGURATION_VALID'			=> 'The configuration file is valid',
+	'DATABASE_VERSION'		=> 'Database version',
+	'DB_OPTION_MSSQL_ODBC'	=> 'MSSQL Server 2000+ über ODBC',
+	'DB_OPTION_MSSQLNATIVE'	=> 'MSSQL Server 2005+ [ Nativ ]',
+	'DB_OPTION_MYSQL'		=> 'MySQL',
+	'DB_OPTION_MYSQLI'		=> 'MySQL mit MySQLi-Erweiterung',
+	'DB_OPTION_ORACLE'		=> 'Oracle',
+	'DB_OPTION_POSTGRES'	=> 'PostgreSQL 7.x/8.x',
+	'DB_OPTION_SQLITE3'		=> 'SQLite 3',
+	'DEFAULT_LANGUAGE'				=> 'Standard-Sprache',
+	'INSTALLER_CONFIG_NOT_WRITABLE'	=> 'The installer config file is not writable.',
+	'INSTALLER_FINISHED'	=> 'The installer has finished successfully',
+	'INVALID_YAML_FILE'				=> 'Could not parse YAML file %1$s',
+	'MENU_INTRO'		=> 'Einführung',
+	'MENU_LICENSE'		=> 'Lizenz',
+	'MENU_OVERVIEW'		=> 'Übersicht',
+	'MENU_SUPPORT'		=> 'Support',
+	'MISSING_DATA'					=> 'Config file is missing data or might contain invalid settings.',
+	'MISSING_FILE'					=> 'Unable to access file %1$s',
+	'MODULE_NOT_FOUND'				=> 'Module not found',
+	'MODULE_NOT_FOUND_DESCRIPTION'	=> 'A module could not be found because the service, %s, is undefined.',
+	'PACKAGE_VERSION'					=> 'Package version installed',
+	'SKIP_MODULE'	=> 'Skip “%s” module',
+	'SKIP_TASK'		=> 'Skip “%s” task',
+	'TASK_ADD_BOTS'				=> 'Registering bots',
+	'TASK_ADD_CONFIG_SETTINGS'			=> 'Adding configuration settings',
+	'TASK_ADD_DEFAULT_DATA'				=> 'Adding default settings to the database',
+	'TASK_ADD_LANGUAGES'		=> 'Installing available languages',
+	'TASK_ADD_MODULES'			=> 'Installing modules',
+	'TASK_CLASS_NOT_FOUND'				=> 'Installer task service definition is invalid. Service name “%1$s” given, the expected class namespace is “%2$s” for that. For more information please see the documentation of task_interface.',
+	'TASK_CREATE_CONFIG_FILE'	=> 'Creating configuration file',
+	'TASK_CREATE_DATABASE_SCHEMA_FILE'	=> 'Creating database schema file',
+	'TASK_CREATE_SEARCH_INDEX'	=> 'Creating search index',
+	'TASK_CREATE_TABLES'				=> 'Creating tables',
+	'TASK_INSTALL_EXTENSIONS'	=> 'Installing packaged extensions',
+	'TASK_NOT_FOUND'				=> 'Task not found',
+	'TASK_NOT_FOUND_DESCRIPTION'	=> 'A task could not be found because the service, %s, is undefined.',
+	'TASK_NOTIFY_USER'			=> 'Sending notification e-mail',
+	'TASK_POPULATE_MIGRATIONS'	=> 'Populating migrations',
+	'TASK_SERVICE_INSTALLER_MISSING'	=> 'All installer task services should start with “installer”',
+	'TASK_SETUP_DATABASE'				=> 'Setting up database',
+	'TASK_UPDATE_EXTENSIONS'	=> 'Updating extensions',
+
+	'UPDATE_CHECK_FILES'	=> 'Check files to update',
+	'UPDATE_CONTINUE_FILE_UPDATE'	=> 'Dateien jetzt aktualisieren',
+	'UPDATE_CONTINUE_UPDATE_PROCESS'	=> 'Update-Prozess fortsetzen',
+	'UPDATE_FILE_DIFF'		=> 'Diffing changed files',
+	'UPDATE_FILE_METHOD'			=> 'File updater method',
+	'UPDATE_FILE_METHOD_DOWNLOAD'	=> 'Download modified files in an archive',
+	'UPDATE_FILE_METHOD_FILESYSTEM'	=> 'Update files via direct file access (Automatic)',
+	'UPDATE_FILE_METHOD_FTP'		=> 'Update files via FTP (Automatic)',
+	'UPDATE_FILE_METHOD_TITLE'		=> 'File updater methods',
+	'UPDATE_FILE_UPDATER_HAS_FAILED'	=> 'File updater “%1$s“ has failed. The installer will try to fallback to “%2$s“.',
+	'UPDATE_FILE_UPDATERS_HAVE_FAILED'	=> 'The file updater failed. No further fallback methods are available.',
+	'UPDATE_FILES_NOT_FOUND'	=> 'No valid update directory was found, please make sure you uploaded the relevant files.',
+	'UPDATE_INCOMPLETE'				=> 'Your phpBB installation has not been correctly updated.',
+	'UPDATE_INCOMPLETE_EXPLAIN'		=> '[lang:UPDATE_INCOMPLETE_EXPLAIN]',
+	'UPDATE_INCOMPLETE_MORE'		=> 'Please read the information below in order to fix this error.',
+	'UPDATE_TYPE'			=> 'Type of update to run',
+	'UPDATE_TYPE_ALL'		=> 'Update filesystem and database',
+	'UPDATE_TYPE_DB_ONLY'	=> 'Update database only',
+	'UPDATE_UPDATING_FILES'	=> 'Updating files',
+	'UPGRADE_INSTRUCTIONS'			=> '[lang:UPGRADE_INSTRUCTIONS]',
+	
 	'INST_ERR_MISSING_DATA'		=> 'Sie müssen alle Felder dieses Blocks ausfüllen.',
 
 	'TIMEOUT_DETECTED_TITLE'	=> 'The installer detected a timeout',
 	'TIMEOUT_DETECTED_MESSAGE'	=> 'The installer has detected a timeout, you may try to refresh the page, which may lead to data corruption. We suggest that you either increase your timeout settings or try to use the CLI.',
+
+	'STAGE_OBTAIN_DATA'	=> 'Set installation data',
+	'STAGE_UPDATE_DATABASE'		=> 'Datenbank jetzt aktualisieren',
 
 	'ADMIN_CONFIG'				=> 'Administrator-Konfiguration',
 	'ADMIN_PASSWORD'			=> 'Administrator-Passwort',
@@ -2068,7 +2196,7 @@ $lang = array_merge($lang, array(
 	'CONTINUE_OLD_CONVERSION'	=> 'Bereits gestartete Konvertierung fortsetzen',
 	'CONVERT'					=> 'Konvertieren',
 	'CONVERT_COMPLETE'			=> 'Konvertierung abgeschlossen',
-	'CONVERT_COMPLETE_EXPLAIN'	=> 'Sie haben nun Ihr Board erfolgreich auf phpBB 3.1 konvertiert. Sie können sich jetzt anmelden und <a href="../">Ihr Board betreten</a>. Bitte prüfe, ob alle Einstellungen richtig übernommen wurden, bevor Sie Ihr Board durch Löschen des „install“-Verzeichnisses freigibst. Hilfe zum Gebrauch von phpBB erhalten Sie online über die <a href="https://www.phpbb.com/support/documentation/3.0/">Dokumentation (englisch)</a> (<a href="https://www.phpbb.de/go/3.1/dokumentation">deutsche Übersetzung</a>) und das <a href="https://www.phpbb.com/community/viewforum.php?f=46">Support-Forum (englisch)</a> (<a href="https://www.phpbb.de/go/3.1/supportforum">deutschsprachiges Forum auf phpBB.de</a>).',
+	'CONVERT_COMPLETE_EXPLAIN'	=> 'You have now successfully converted your board to phpBB 3.2. You can now login and <a href="../">access your board</a>. Please ensure that the settings were transferred correctly before enabling your board by deleting the install directory. Remember that help on using phpBB is available online via the <a href="http://www.phpbb.com/support/documentation/3.0/">Documentation</a> and the <a href="http://www.phpbb.com/community/viewforum.php?f=46">support forums</a>.',
 	'CONVERT_INTRO'				=> 'Willkommen beim phpBB-Konvertierungs-System',
 	'CONVERT_INTRO_BODY'		=> 'Von hier aus können Sie Daten aus anderen (installierten) Boards importieren. Die unten stehende Liste zeigt alle verfügbaren Konverter-Module. Falls in dieser Liste kein Konverter für die Board-Software, von der Sie konvertieren möchten, enthalten ist, schauen Sie bitte auf unserer Website nach, wo möglicherweise weitere Konvertierungs-Module verfügbar sind.',
 	'CONVERT_NEW_CONVERSION'	=> 'Neue Konvertierung',
@@ -2192,12 +2320,14 @@ $lang = array_merge($lang, array(
 	'INSTALL_TEST'				=> 'Erneut prüfen',
 
 	// Errors
+	'INST_ERR_DB'					=> 'Database installation error',
 	'INST_ERR_NO_DB'			=> 'Kann das PHP-Modul für den gewählten Datenbank-Typ nicht laden.',
 	'INST_ERR_DB_INVALID_PREFIX'	=> 'The prefix you entered is invalid. It must start with a letter and must only contain letters, numbers and underscores.',
 	'INST_ERR_PREFIX_TOO_LONG'	=> 'Das angegebene Tabellen-Präfix ist zu lang. Die maximale Länge beträgt %d Zeichen.',
 	'INST_ERR_DB_NO_NAME'		=> 'Kein Datenbank-Name angegeben.',
 	'INST_ERR_DB_FORUM_PATH'	=> 'Die angegebene Datenbank-Datei liegt innerhalb Ihres Board-Verzeichnisses. Sie sollten sie an einem nicht über das Web zugänglichen Ort ablegen.',
 	'INST_ERR_DB_CONNECT'		=> 'Es kann keine Verbindung zur Datenbank aufgebaut werden. Details stehen in unten angezeigter Fehlermeldung.',
+	'INST_ERR_DB_NO_WRITABLE'		=> 'Both the database and the directory containing it must be writable.',
 	'INST_ERR_DB_NO_ERROR'		=> 'Es wurde keine Fehlermeldung übergeben.',
 	'INST_ERR_PREFIX'			=> 'Es existieren bereits Tabellen mit dem angegebenen Präfix, bitte wählen Sie einen alternativen.',
 	'INST_ERR_DB_NO_MYSQLI'		=> 'Die auf diesem System installierte MySQL-Version ist nicht kompatibel mit der „MySQL mit MySQLi-Erweiterung“-Option, die von Ihnen gewählt wurde. Bitte versuchen Sie es stattdessen mit der „MySQL“-Option.',
@@ -2318,6 +2448,7 @@ $lang = array_merge($lang, array(
 
 	'TABLES_MISSING'			=> 'Kann diese Tabellen nicht finden<br />» <strong>%s</strong>.',
 	'TABLE_PREFIX'				=> 'Präfix der Tabellen in der Datenbank',
+	'TABLE_PREFIX_EXPLAIN'	=> 'The prefix must start with a letter and must only contain letters, numbers and underscores.',
 	'TABLE_PREFIX_SAME'			=> 'Das Tabellen-Präfix muss mit dem übereinstimmen, das von der Software, von der Sie konvertieren möchten, genutzt wird.<br />» Das angegebene Tabellen-Präfix lautete %s.',
 	'TESTS_PASSED'				=> 'Tests bestanden',
 	'TESTS_FAILED'				=> 'Tests nicht bestanden',
@@ -2355,7 +2486,6 @@ $lang = array_merge($lang, array(
 	'CONTINUE_UPDATE_NOW'			=> 'Den Update-Prozess jetzt fortsetzen',		// Shown within the database update script at the end if called from the updater
 	'CONTINUE_UPDATE'				=> 'Update jetzt fortsetzen',					// Shown after file upload to indicate the update process is not yet finished
 	'CURRENT_FILE'					=> 'Anfang des Konflikts — Inhalt der originalen Datei vor Aktualisierung',
-	'CURRENT_VERSION'				=> 'Momentan installierte Version',
 
 	'DATABASE_TYPE'						=> 'Datenbank-Typ',
 	'DATABASE_UPDATE_COMPLETE'			=> 'Das Datenbank-Update wurde fertiggestellt!',
@@ -2386,6 +2516,7 @@ $lang = array_merge($lang, array(
 
 	'FILE_ALREADY_UP_TO_DATE'		=> 'Die Datei ist bereits auf dem neuesten Stand.',
 	'FILE_DIFF_NOT_ALLOWED'			=> 'Unterschiedsanzeige für diese Datei nicht möglich.',
+	'FILE_DIFFER_ERROR_FILE_CANNOT_BE_READ'	=> 'The file differ failed to open %s.',
 	'FILE_USED'						=> 'Informationen benutzt von',			// Single file
 	'FILES_CONFLICT'				=> 'Dateien mit Konflikten',
 	'FILES_CONFLICT_EXPLAIN'		=> 'Die folgenden Dateien wurden geändert und entsprechen nicht den Originaldateien der alten Version. phpBB hat festgestellt, dass die Dateien nicht zusammengeführt werden können, da beide Versionen verändert wurden. Bitte sieh Ihnen diese Konflikte an und versuche, sie von Hand zu lösen oder fahre mit der Aktualisierung fort, indem Sie Ihre bevorzugte Methode des Zusammenführens auswählen. Wenn Sie die Konflikte von Hand löst, prüfen Sie die Dateien nach der Bearbeitung erneut. Sie können außerdem die Zusammenführungsmethode für jede Datei getrennt angeben. Die erste Methode erzeugt eine Datei, in der die problematischen Zeilen Ihrer alten Datei verworfen werden, die andere Methode verwirft die Änderungen in der neuen Datei.',
@@ -2410,7 +2541,6 @@ $lang = array_merge($lang, array(
 
 	'KEEP_OLD_NAME'		=> 'Benutzernamen beibehalten',
 
-	'LATEST_VERSION'		=> 'Neueste Version',
 	'LINE'					=> 'Zeile',
 	'LINE_ADDED'			=> 'Hinzugefügt',
 	'LINE_MODIFIED'			=> 'Verändert',
@@ -2535,6 +2665,9 @@ $lang = array_merge($lang, array(
 
 	'VERSION_CHECK'					=> 'Versionsprüfung',
 	'VERSION_CHECK_EXPLAIN'			=> 'Prüft, ob Ihre phpBB-Installation auf dem neuesten Stand ist.',
+	'VERSIONCHECK_INVALID_ENTRY'	=> 'Latest version information contains an unsupported entry.',
+	'VERSIONCHECK_INVALID_URL'		=> 'Latest version information contains invalid URL.',
+	'VERSIONCHECK_INVALID_VERSION'	=> 'Latest version information contains an invalid version.',
 	'VERSION_NOT_UP_TO_DATE'		=> 'Ihre phpBB-Version ist nicht auf dem neuesten Stand. Bitte fahre mit der Aktualisierung fort.',
 	'VERSION_NOT_UP_TO_DATE_ACP'	=> 'Ihre phpBB-Version ist nicht auf dem neuesten Stand<br />Im Folgenden finden Sie einen Link zur Release-Ankündigung der neuesten Version, die weitere Informationen sowie Hinweise, wie Sie Ihre Version aktualisieren können, enthält.',
 	'VERSION_NOT_UP_TO_DATE_TITLE'	=> 'Ihre phpBB-Version ist nicht auf dem neuesten Stand.',
@@ -2606,12 +2739,14 @@ $lang = array_merge($lang, array(
 	'MIGRATION_NOT_INSTALLED'			=> 'The migration "%s" is not installed.',
 	'MIGRATION_NOT_VALID'				=> '%s ist keine gültige Migration.',
 	'MIGRATION_SCHEMA_DONE'				=> 'Installiertes Schema: %1$s; Dauer: %2$.2f Sekunden',
+	'MIGRATION_SCHEMA_IN_PROGRESS'		=> 'Installing Schema: %1$s; Time: %2$.2f seconds',
 	'MIGRATION_SCHEMA_RUNNING'			=> 'Installieren Sie Schema: %s.',
 
 	'MIGRATION_REVERT_DATA_DONE'		=> 'Reverted Data: %1$s; Time: %2$.2f seconds',
 	'MIGRATION_REVERT_DATA_IN_PROGRESS'	=> 'Reverting Data: %1$s; Time: %2$.2f seconds',
 	'MIGRATION_REVERT_DATA_RUNNING'		=> 'Reverting Data: %s.',
 	'MIGRATION_REVERT_SCHEMA_DONE'		=> 'Reverted Schema: %1$s; Time: %2$.2f seconds',
+	'MIGRATION_REVERT_SCHEMA_IN_PROGRESS'	=> 'Reverting Schema: %1$s; Time: %2$.2f seconds',
 	'MIGRATION_REVERT_SCHEMA_RUNNING'	=> 'Reverting Schema: %s.',
 
 	'MIGRATION_INVALID_DATA_MISSING_CONDITION'		=> 'A migration is invalid. An if statement helper is missing a condition.',
@@ -2622,9 +2757,12 @@ $lang = array_merge($lang, array(
 	'MIGRATION_INVALID_DATA_UNDEFINED_METHOD'		=> 'A migration is invalid. An undefined migration tool method was encountered.',
 
 	'MODULE_ERROR'						=> 'Bei der Erstellung eines Moduls ist ein Fehler aufgetreten: %s',
+	'MODULE_EXISTS'						=> 'A module already exists: %s',
+	'MODULE_EXIST_MULTIPLE'				=> 'Several modules with the given parent module langname already exist: %s. Try using before/after keys to clarify the module placement.',
 	'MODULE_INFO_FILE_NOT_EXIST'		=> 'Eine erforderliche Informationsdatei für ein Modul existiert nicht: %2$s',
 	'MODULE_NOT_EXIST'					=> 'Ein erforderliches Modul existiert nicht: %s',
 
+	'PARENT_MODULE_FIND_ERROR'			=> 'Unable to determine the parent module identifier: %s',
 	'PERMISSION_NOT_EXIST'				=> 'Die Berechtigungs-Einstellung „%s“ existiert unerwarteterweise nicht.',
 
 	'ROLE_NOT_EXIST'					=> 'Die Berechtigungs-Rolle „%s“ existiert unerwarteterweise nicht.',
@@ -2907,7 +3045,7 @@ $lang = array_merge($lang, array(
 	'RESTORE_TOPIC_CONFIRM'		=> 'Sind Sie sich sicher, dass Sie dieses Thema wiederherstellen möchten?',
 	'RESTORE_TOPICS'			=> 'Themen wiederherstellen',
 	'RESTORE_TOPICS_CONFIRM'	=> 'Sind Sie sich sicher, dass Sie die ausgewählten Themen wiederherstellen möchten?',
-	'RESYNC'					=> 'Resynchronisierung',
+	'RESYNC'					=> 'Synchronisieren',
 	'RETURN_MESSAGE'			=> '%sZurück zur Nachricht%s',
 	'RETURN_NEW_FORUM'			=> '%sGehen Sie in das neue Forum%s',
 	'RETURN_NEW_TOPIC'			=> '%sGehen Sie zum neuen Thema%s',
@@ -2991,7 +3129,7 @@ $lang = array_merge($lang, array(
 	'WARNING_PM_BODY'		=> 'Ihnen wurde eine Verwarnung durch einen Administrator oder Moderator dieses Forums erteilt:[quote]%s[/quote]',
 	'WARNING_PM_SUBJECT'	=> 'Verwarnung erteilt.',
 	'WARNING_POST_DEFAULT'	=> 'Dies ist eine Verwarnung wegen dieses von Ihnen erstellten Beitrags: %s.',
-	'NO_WARNINGS'	=> 'Keine Verwarnungen.',
+	'NO_WARNINGS'	=> 'Es existieren keine Verwarnungen.',
 
 	'YOU_SELECTED_TOPIC'	=> 'Sie haben das Thema mit der ID %d ausgewählt: %s.',
 	'PREFIX_MCP_CHOOSE'		=> 'Wählen Sie einen neuen Präfix für die ausgewählten Themen',
@@ -3033,7 +3171,6 @@ $lang = array_merge($lang, array(
 	'BEFORE'				=> 'Vor dem',
 	'CC_EMAIL'				=> 'Eine Kopie dieser E-Mail an Sie senden.',
 	'CC_SENDER'				=> 'Eine Kopie dieser E-Mail an Sie senden.',
-
 	'CONTACT_ADMIN'			=> 'Kontakt mit der Board-Administration aufnehmen',
 
 	'DEST_LANG'				=> 'Sprache',
@@ -3058,6 +3195,7 @@ $lang = array_merge($lang, array(
 	'FLOOD_EMAIL_LIMIT'		=> 'Sie können momentan keine weitere E-Mail versenden. Bitte versuchen Sie es später erneut.',
 
 	'GROUP_LEADER'			=> 'Gruppenleiter',
+
 	'HIDE_MEMBER_SEARCH'	=> 'Das Suchformular ausblenden',
 
 	'IM_ADD_CONTACT'		=> 'Kontakt hinzufügen',
@@ -3115,7 +3253,7 @@ $lang = array_merge($lang, array(
 
 	'USERNAME_BEGINS_WITH'	=> 'Benutzername fängt an mit',
 	'USER_ADMIN'			=> 'Benutzer administrieren',
-	'USER_BAN'				=> 'Einen oder mehrere Benutzer anhand des Benutzernamens sperren',
+	'USER_BAN'				=> 'Sperren',
 	'USER_FORUM'			=> 'Benutzer-Statistik',
 	'USER_ONLINE'			=> 'Online',
 	'USER_PRESENCE'			=> 'Anwesenheit im Board',
@@ -3796,6 +3934,7 @@ $lang = array_merge($lang, array(
 	'AVATAR_DRIVER_UPLOAD_TITLE'	=> 'Avatar hochladen',
 	'AVATAR_DRIVER_UPLOAD_EXPLAIN'	=> 'Lade Ihren persönlichen Avatar hoch.',
 	'AVATAR_EXPLAIN'				=> 'Maximale Größe: Breite: %1$s, Höhe: %2$s, Dateigröße: %3$.2f KiB.',
+	'AVATAR_EXPLAIN_NO_FILESIZE'	=> 'Maximum dimensions; width: %1$s, height: %2$s.',
 	'AVATAR_FEATURES_DISABLED'		=> 'Die Avatar-Funktion ist deaktiviert.',
 	'AVATAR_GALLERY'				=> 'Lokale Galerie',
 	'AVATAR_GENERAL_UPLOAD_ERROR'	=> 'Konnte Avatar nicht nach %s hochladen.',
@@ -4061,7 +4200,7 @@ $lang = array_merge($lang, array(
 	'NO_FRIENDS'				=> 'Es sind keine Freunde definiert',
 	'NO_FRIENDS_OFFLINE'		=> 'Keine Freunde offline',
 	'NO_FRIENDS_ONLINE'			=> 'Keine Freunde online',
-	'NO_GROUP_SELECTED'			=> 'Keine Gruppe ausgewählt.',
+	'NO_GROUP_SELECTED'			=> 'Keine Gruppe angegeben.',
 	'NO_IMPORTANT_NEWS'			=> 'Keine wichtigen Bekanntmachungen vorhanden.',
 	'NO_MESSAGE'				=> 'Keine Nachrichten vorhanden.',
 	'NO_NEW_FOLDER_NAME'		=> 'Sie müssen einen neuen Namen für den Ordner angeben.',
@@ -4393,6 +4532,7 @@ $lang = array_merge($lang, array(
 	'NO_NEW_POSTS_HOT'		=> 'Keine neuen Beiträge [ beliebt ]',	// Not used anymore
 	'NO_NEW_POSTS_LOCKED'	=> 'Keine neuen Beiträge [ gesperrt ]',	// Not used anymore
 	'NO_READ_ACCESS'		=> 'Sie haben keine ausreichenden Rechte, um Themen in diesem Forum zu lesen.',
+	'NO_FORUMS_IN_CATEGORY'	=> 'This category has no forums.',
 	'NO_UNREAD_POSTS_HOT'		=> 'Keine ungelesenen Beiträge [ beliebt ]',
 	'NO_UNREAD_POSTS_LOCKED'	=> 'Keine ungelesenen Beiträge [ gesperrt ]',
 
@@ -4958,7 +5098,7 @@ $lang = array_merge($lang, array(
 	'ABBCODES_MAX_IMAGE_WIDTH_EXPLAIN'	=> 'Das Bild wird verkleinert, wenn die hier eingestellte Breite überschritten wird.',
 	'ABBCODES_MAX_IMAGE_HEIGHT'			=> 'maximale Höhe eines Bildes',
 	'ABBCODES_MAX_IMAGE_HEIGHT_EXPLAIN'	=> 'Das Bild wird verkleinert, wenn die hier eingestellte Höhe überschritten wird.',
-	'ABBCODES_MAX_THUMB_WIDTH'			=> 'Maximale Thumbnail Breite in pixel',
+	'ABBCODES_MAX_THUMB_WIDTH'			=> 'Maximum thumbnail width/height in pixel',
 	'ABBCODES_RESIZE_SIGNATURE'			=> 'Bilder in Signaturen verkleinern',
 	'ABBCODES_RESIZE_SIGNATURE_EXPLAIN'	=> 'Verkleinert zu große Bilder in Signaturen der User?',
 	'ABBCODES_SIG_IMAGE_WIDTH'			=> 'maximale Breite einer Grafik in der Signatur',
@@ -8863,7 +9003,7 @@ $lang = array_merge($lang, array(
 	'NO_TEAM_SHORTNAME'				=> 'Kurzbezeichnung des Teams fehlt. Bitte einen Kurznamen angeben. ',
 	'NO_USER'						=> 'Der von Ihnen ausgewählte Benutzer existiert nicht.',
 	'NO_USERID'						=> 'Der von Ihnen ausgewählte Tipper existiert nicht. ',
-	'NO_USERS'						=> 'Sie haben keine Benutzer angegeben.',
+	'NO_USERS'						=> 'You haven’t entered any users or user not exist.',
 	'NO_WIN_MATCHDAYS'				=> 'In dieser Tipprunde gibt es keine Spieltagsgewinne. ',
 	'NO_WIN_SEASON'					=> 'In dieser Tipprunde gibt es keine Saisongewinne. ',
 	'NOT_CLOSED'					=> 'Dieser Spieltag wurde noch nicht geschlossen. ',
@@ -9858,7 +9998,7 @@ $lang = array_merge($lang, array(
 	'CUSTOM_PROFILE_FIELD'				=> 'Benutzerdefiniertes Profilfeld',
 	'CPF_TOP_X'							=> 'Top %1$d %2$s',
 	'TOTAL_VALUES_SET_PROMPT'			=> 'Gesamt Benutzer, die %s eingestellt haben',
-	'DEFAULT'							=> 'default',
+	'DEFAULT'							=> 'Standard',
 	
 	'VIEWING_STATS'						=> 'Betrachtet phpBB Statistics',
 	
@@ -10121,7 +10261,7 @@ $lang = array_merge($lang, array(
 	'PERMANENT'		=> 'Dauerhaft',
 
 	'UNTIL'						=> 'Bis zum',
-	'USER_BAN'					=> 'Einen oder mehrere Benutzer anhand des Benutzernamens sperren',
+	'USER_BAN'					=> 'Sperren',
 	'USER_BAN_EXCLUDE_EXPLAIN'	=> 'Aktivieren Sie diese Option, um den Namen von allen aktiven Sperren auszunehmen.',
 	'USER_BAN_EXPLAIN'			=> 'Um mehrere Benutzer auf einmal zu sperren, geben Sie jeden Namen in einer neuen Zeile ein. Benutzen Sie <span style="text-decoration: underline;">Nach einem Mitglied suchen</span>, um nach einem oder mehreren Benutzer(n) zu suchen und diese(n) der Liste hinzuzufügen.',
 	'USER_NO_BANNED'			=> 'Keine gesperrten Benutzernamen.',
@@ -10267,6 +10407,8 @@ $lang = array_merge($lang, array(
 	'ACP_POST_SETTINGS_EXPLAIN'			=> 'Hier können Sie alle Standard-Einstellungen für Beiträge vornehmen.',
 	'ALLOW_POST_LINKS'					=> 'Links in Beiträgen/Privaten Nachrichten erlauben',
 	'ALLOW_POST_LINKS_EXPLAIN'			=> '„Nein“ deaktiviert den <code>[URL]</code> BBCode-Tag und die automatische Verlinkung von URLs.',
+	'ALLOWED_SCHEMES_LINKS'				=> 'Allowed schemes in links',
+	'ALLOWED_SCHEMES_LINKS_EXPLAIN'		=> 'Users can only post schemeless URLs or one of the comma-separated list of allowed schemes.',
 	'ALLOW_POST_FLASH'					=> 'BBCode-Tag <code>[FLASH]</code> in Beiträgen erlauben',
 	'ALLOW_POST_FLASH_EXPLAIN'			=> 'Wenn deaktiviert, ist der <code>[FLASH]</code> BBCode-Tag in Beiträgen deaktiviert. Andernfalls wird durch das Berechtigungssystem festgelegt, welche Benutzer den <code>[FLASH]</code> BBCode-Tag benutzt können.',
 
@@ -10444,8 +10586,13 @@ $lang = array_merge($lang, array(
 	'ACP_COOKIE_SETTINGS_EXPLAIN'		=> 'Hier legen Sie die Einstellungen fest, die verwendet werden, um Cookies an die Browser Ihrer Benutzer zu senden. In den meisten Fällen sollten die Standardwerte ausreichend sein. Führen Sie Änderungen mit Bedacht durch, fehlerhafte Einstellungen könnten Ihre Benutzer daran hindern, sich anzumelden.',
 
 	'COOKIE_DOMAIN'				=> 'Cookie-Domain',
+	'COOKIE_DOMAIN_EXPLAIN'		=> 'In most cases the cookie domain is optional. Leave it blank if you are unsure.<br><br> In the case where you have a board integrated with other software or have multiple domains, then to determine the cookie domain you need to do the following. If you have something like <i>example.com</i> and <i>forums.example.com</i>, or perhaps <i>forums.example.com</i> and <i>blog.example.com</i>. Remove the subdomains until you find the common domain, <i>example.com</i>. Now add a dot in front of the common domain and you would enter .example.com (note the dot at the beginning).',
 	'COOKIE_NAME'				=> 'Cookie-Name',
+	'COOKIE_NAME_EXPLAIN'		=> 'This can be anything what you want, make it original. Whenever the cookie settings are changed the name of the cookie should be changed.',
+	'COOKIE_NOTICE'				=> 'Cookie notice',
+	'COOKIE_NOTICE_EXPLAIN'		=> 'If enabled a cookie notice will be displayed to users when visiting your board. This might be required by law depending on the content of your board and enabled extensions.',
 	'COOKIE_PATH'				=> 'Cookie-Pfad',
+	'COOKIE_PATH_EXPLAIN'		=> 'This will usually be the same as your script path or simply a slash to make the cookie accessible across the site domain.',
 	'COOKIE_SECURE'				=> 'Sicherer Server',
 	'COOKIE_SECURE_EXPLAIN'		=> 'Falls Ihr Server über SSL läuft, aktivieren Sie diese Option, ansonsten lassen Sie sie deaktiviert. Wenn diese Option aktiviert ist, obwohl der Server nicht über SSL aufgerufen wird, können Fehler bei der Weiterleitung auftreten.',
 	'ONLINE_LENGTH'				=> 'Zeitspanne für die Online-Anzeige',
@@ -10481,10 +10628,14 @@ $lang = array_merge($lang, array(
 	'LOAD_CPF_VIEWTOPIC'			=> 'Benutzerdefinierte Profil-Felder in der Themen-Ansicht anzeigen',
 	'LOAD_USER_ACTIVITY'			=> 'Aktivität der Mitglieder anzeigen',
 	'LOAD_USER_ACTIVITY_EXPLAIN'	=> 'Zeigt im Profil und im persönlichen Bereich an, in welchen Foren und Themen ein Mitglied am aktivsten ist. Es wird empfohlen, diese Funktion in Foren zu deaktivieren, die mehr als eine Million Beiträge haben.',
+	'LOAD_USER_ACTIVITY_LIMIT'		=> 'User’s activity post limit',
+	'LOAD_USER_ACTIVITY_LIMIT_EXPLAIN'	=> 'The active topic/forum won’t be shown for users having more than this number of posts. Set to 0 to disable the limit.',
 	'READ_NOTIFICATION_EXPIRE_DAYS'	=> 'Aufbewahrung gelesener Benachrichtungen',
 	'READ_NOTIFICATION_EXPIRE_DAYS_EXPLAIN' => 'Anzahl von Tagen, nach denen gelesene Benachrichtungen automatisch gelöscht werden. Benachrichtigungen bleiben dauerhaft erhalten, wenn 0 als Wert eingestellt wird.',
 	'RECOMPILE_STYLES'				=> 'Rekompilieren veralteter Style-Komponenten',
 	'RECOMPILE_STYLES_EXPLAIN'		=> 'Prüft auf neue Style-Komponenten und rekompiliert diese.',
+	'YES_ACCURATE_PM_BUTTON'			=> 'Enable permission specific PM button in topic pages',
+	'YES_ACCURATE_PM_BUTTON_EXPLAIN'	=> 'If this setting is enabled, only post profiles of users who are permitted to read private messages will have a private message button.',
 	'YES_ANON_READ_MARKING'			=> 'Gelesen-Markierung für Gäste',
 	'YES_ANON_READ_MARKING_EXPLAIN'	=> 'Speichert auch für Gäste, ob ein Thema gelesen oder ungelesen ist. Wenn diese Option deaktiviert ist, erscheinen Beiträge für Gäste immer als gelesen.',
 	'YES_BIRTHDAYS'					=> 'Anzeige der Geburtstage aktivieren',
@@ -10647,6 +10798,8 @@ $lang = array_merge($lang, array(
 	'ENABLE_EMAIL_EXPLAIN'			=> 'Wenn dies deaktiviert ist, werden keinerlei E-Mails vom Board versendet. <em>Wenn eine Bestätigung der Registrierung durch den Benutzer oder einen Adminstrator erforderlich sein soll, darf diese Option nicht deaktiviert sein. Ansonsten ist eine Registrierung immer ohne Bestätigung möglich.</em>',
 	'SEND_TEST_EMAIL'				=> 'Send a test email',
 	'SEND_TEST_EMAIL_EXPLAIN'		=> 'This will send a test email to the address defined in your account.',
+	'SMTP_ALLOW_SELF_SIGNED'		=> 'Allow self-signed SSL certificates',
+	'SMTP_ALLOW_SELF_SIGNED_EXPLAIN'=> 'Allow connections to SMTP server with self-signed SSL certificate. <br><em><strong>Warning:</strong> Allowing self-signed SSL certificates may cause security implications.</em>',
 	'SMTP_AUTH_METHOD'				=> 'Authentifizierungsmethode für SMTP',
 	'SMTP_AUTH_METHOD_EXPLAIN'		=> 'Nur benötigt, wenn ein Benutzername/Passwort eingegeben ist. Frage Ihren Webhosting-Provider, falls Sie nicht sicher sind, welche Methode Sie wählen sollen.',
 	'SMTP_CRAM_MD5'					=> 'CRAM-MD5',
@@ -10659,14 +10812,23 @@ $lang = array_merge($lang, array(
 	'SMTP_PORT'						=> 'SMTP-Server-Port',
 	'SMTP_PORT_EXPLAIN'				=> 'Ändern Sie diese Einstellung nur, wenn Sie wissen, dass Ihr SMTP-Server einen anderen Port nutzt.',
 	'SMTP_SERVER'					=> 'SMTP-Server-Adresse',
+	'SMTP_SERVER_EXPLAIN'			=> 'Note that you have to provide the protocol that your server uses. If you are using SSL, this has to be "ssl://your.mailserver.com"',
 	'SMTP_SETTINGS'					=> 'SMTP-Einstellungen',
 	'SMTP_USERNAME'					=> 'SMTP-Benutzername',
 	'SMTP_USERNAME_EXPLAIN'			=> 'Geben Sie nur einen Benutzernamen ein, wenn Ihr SMTP-Server dies erfordert.',
+	'SMTP_VERIFY_PEER'				=> 'Verify SSL certificate',
+	'SMTP_VERIFY_PEER_EXPLAIN'		=> 'Require verification of SSL certificate used by SMTP server. <br><em><strong>Warning:</strong> Connecting peers with unverified SSL certificates may cause security implications.</em>',
+	'SMTP_VERIFY_PEER_NAME'			=> 'Verify SMTP peer name',
+	'SMTP_VERIFY_PEER_NAME_EXPLAIN'	=> 'Require verification of peer name for SMTP servers using SSL / TLS connections. <br><em><strong>Warning:</strong> Connecting to unverified peers may cause security implications.</em>',
 	'TEST_EMAIL_SENT'				=> 'The test email has been sent.<br />If you don’t receive it, please check your emails configuration.<br /><br />If you require assistance, please visit the <a href="https://www.phpbb.com/community/">phpBB support forums</a>.',
+
 	'USE_SMTP'						=> 'SMTP-Server für E-Mail nutzen',
 	'USE_SMTP_EXPLAIN'				=> 'Wählen Sie „Ja“ aus, wenn Sie E-Mails über einen SMTP-Server senden möchten (oder müssen), anstatt die PHP-eigene Mail-Funktion zu nutzen.',
 
 	'ACP_JABBER_SETTINGS_EXPLAIN'	=> 'Hier können Sie die Nutzung von <a href="http://de.wikipedia.org/wiki/Jabber">Jabber</a> für Instant Messages und Benachrichtigungen des Boards aktivieren und kontrollieren. Jabber ist ein OpenSource-Protokoll und daher für jeden verfügbar. Einige Jabber-Server nutzen Gateways oder Transport-Dienste, die es Ihnen erlauben, Benutzer anderer Netzwerke zu kontaktieren. Nicht alle Server bieten alle Transport-Dienste an, und Änderungen an den Protokollen können Transport-Dienste am Funktionieren hindern. Stelle sicher, dass Sie die korrekten Daten eines bereits registrierten Jabber-Kontos eingeben — phpBB verwendet die Daten so, wie sie hier eingegeben sind.',
+
+	'JAB_ALLOW_SELF_SIGNED'			=> 'Allow self-signed SSL certificates',
+	'JAB_ALLOW_SELF_SIGNED_EXPLAIN'	=> 'Allow connections to Jabber server with self-signed SSL certificate. <br><em><strong>Warning:</strong> Allowing self-signed SSL certificates may cause security implications.</em>',
 	'JAB_ENABLE'				=> 'Jabber aktivieren',
 	'JAB_ENABLE_EXPLAIN'		=> 'Aktiviert die Nutzung von Jabber-Nachrichten und -Benachrichtigungen.',
 	'JAB_GTALK_NOTE'			=> 'Beachten Sie, dass GTalk nicht funktionieren wird, da die <samp>dns_get_record</samp>-Funktion nicht gefunden werden konnte. Diese Funktion ist in PHP 4 nicht verfügbar und nicht in Windows-Plattformen implementiert. Sie funktioniert im Moment nicht auf BSD-basierten Systemen inklusive Mac OS.',
@@ -10683,6 +10845,10 @@ $lang = array_merge($lang, array(
 	'JAB_USE_SSL_EXPLAIN'		=> 'Wenn aktiviert, wird versucht, eine sichere Verbindung zu verwenden. Der Jabber-Port wird auf 5223 geändert, sofern Port 5222 angegeben ist.',
 	'JAB_USERNAME'				=> 'Jabber-Benutzername oder JID',
 	'JAB_USERNAME_EXPLAIN'		=> 'Geben Sie einen bereits registrierten Benutzernamen oder eine gültige JID an. Der Benutzername wird nicht auf Gültigkeit geprüft. Wenn Sie nur einen Benutzernamen angeben, wird die JID aus dem Benutzernamen und dem oben festgelegten Server ermittelt. Geben Sie ansonsten eine gültige JID wie <samp>user@jabber.org</samp> ein.',
+	'JAB_VERIFY_PEER'				=> 'Verify SSL certificate',
+	'JAB_VERIFY_PEER_EXPLAIN'		=> 'Require verification of SSL certificate used by Jabber server. <br><em><strong>Warning:</strong> Connecting peers with unverified SSL certificates may cause security implications.</em>',
+	'JAB_VERIFY_PEER_NAME'			=> 'Verify Jabber peer name',
+	'JAB_VERIFY_PEER_NAME_EXPLAIN'	=> 'Require verification of peer name for Jabber servers using SSL / TLS connections. <br><em><strong>Warning:</strong> Connecting to unverified peers may cause security implications.</em>',
 
 	'ACP_WELCOME_PM_EXPLAIN'	=> 'Hier können Sie die Nachricht definieren, die neu registrierte Benutzer erhalten wenn diese sich das erste mal einloggen.',
 	'WPM_SETTINGS'				=> 'Einstellungen',
@@ -10889,8 +11055,8 @@ $lang = array_merge($lang, array(
 	'ACP_BOTS'					=> 'Spiders/Robots',
 
 	'ACP_CAPTCHA'				=> 'CAPTCHA',
-	'ACP_CAT_CUSTOMISE'			=> 'Anpassen',
 
+	'ACP_CAT_CUSTOMISE'			=> 'Anpassen',
 	'ACP_CAT_DATABASE'			=> 'Datenbank',
 	'ACP_CAT_DOT_MODS'			=> 'Erweiterungen',
 	'ACP_CAT_FORUMS'			=> 'Foren',
@@ -10939,6 +11105,8 @@ $lang = array_merge($lang, array(
 	'ACP_GROUPS_MANAGEMENT'			=> 'Gruppen-Verwaltung',
 	'ACP_GROUPS_PERMISSIONS'		=> 'Gruppenrechte',
 	'ACP_GROUPS_POSITION'			=> 'Gruppen-Positionierung verwalten',
+
+	'ACP_HELP_PHPBB'			=> 'Help support phpBB',
 
 	'ACP_ICONS'					=> 'Beitrags-Symbole',
 	'ACP_ICONS_SMILIES'			=> 'Beitrags-Symbole/Smilies',
@@ -11057,6 +11225,16 @@ $lang = array_merge($lang, array(
 
 	'BACK'					=> 'Zurück',
 
+	'CANNOT_CHANGE_FILE_GROUP'	=> 'Unable to change file group',
+	'CANNOT_CHANGE_FILE_PERMISSIONS'	=> 'Unable to change file permissions',
+	'CANNOT_COPY_FILES'		=> 'Unable to copy files',
+	'CANNOT_CREATE_SYMLINK'	=> 'Unable to create a symlink',
+	'CANNOT_DELETE_FILES'	=> 'Unable to delete files from the system',
+	'CANNOT_DUMP_FILE'		=> 'Unable to dump file',
+	'CANNOT_MIRROR_DIRECTORY'	=> 'Unable to mirror directory',
+	'CANNOT_RENAME_FILE'	=> 'Unable to rename a file from the system',
+	'CANNOT_TOUCH_FILES'	=> 'Unable to determine if the file exists',
+
 	'CONTAINER_EXCEPTION' => 'phpBB encountered an error building the container due to an installed extension. For this reason, all extensions have been temporarily disabled. Please try purging your forum cache. All extensions will automatically be re-enabled once the container error is resolved. If this error continues, please visit <a href="https://www.phpbb9.de">phpbb9.de</a> for support.',
 	'EXCEPTION' => 'Exception',
 
@@ -11066,6 +11244,7 @@ $lang = array_merge($lang, array(
 	'CRON_NO_SUCH_TASK'		=> 'Cron-Job „%s“ konnte nicht gefunden werden.',
 	'CRON_NO_TASK'			=> 'Momentan muss kein Cron-Job ausgeführt werden.',
 	'CRON_NO_TASKS'			=> 'Es konnten keine Cron-Jobs gefunden werden.',
+	'CURRENT_VERSION'				=> 'Momentan installierte Version',
 
 	'DEACTIVATE'				=> 'Deaktivieren',
 	'DIRECTORY_DOES_NOT_EXIST'	=> 'Der angegebene Pfad „%s“ existiert nicht.',
@@ -11091,6 +11270,7 @@ $lang = array_merge($lang, array(
 	'IP'					=> 'IP',
 	'IP_HOSTNAME'			=> 'IP-Adressen oder Hostnamen',
 
+	'LATEST_VERSION'		=> 'Neueste Version',
 	'LOAD_NOTIFICATIONS'			=> 'Benachrichtigungen anzeigen',
 	'LOAD_NOTIFICATIONS_EXPLAIN'	=> 'Zeigt die Liste der Benachrichtigungen auf jeder Seite an (üblicherweise in der Kopfzeile).',
 	'LOGGED_IN_AS'			=> 'Sie sind angemeldet als:',
@@ -11126,7 +11306,7 @@ $lang = array_merge($lang, array(
 	'RELEASE_ANNOUNCEMENT'		=> 'Bekanntmachung',
 	'REMIND'							=> 'Erinnern',
 	'REPARSE_LOCK_ERROR'				=> 'Reparsing is already in progress by another process.',
-	'RESYNC'							=> 'Resynchronisierung',
+	'RESYNC'							=> 'Synchronisieren',
 
 	'RUNNING_TASK'			=> 'Laufende Jobs: %s.',
 	'SELECT_ANONYMOUS'		=> 'Gäste-Benutzerkonto auswählen',
@@ -11146,6 +11326,10 @@ $lang = array_merge($lang, array(
 	'UCP'					=> 'Persönlicher Bereich',
 	'USERNAMES_EXPLAIN'		=> 'Verwenden Sie für jeden Benutzernamen eine neue Zeile.',
 	'USER_CONTROL_PANEL'	=> 'Persönlicher Bereich',
+
+	'UPDATE_NEEDED'			=> 'The board is not up to date.',
+	'UPDATE_NOT_NEEDED'		=> 'The board is up to date.',
+	'UPDATES_AVAILABLE'		=> 'Updates available:',
 
 	'WARNING'				=> 'Warnung',
 
@@ -11199,7 +11383,8 @@ $lang = array_merge($lang, array(
 	'NUMBER_USERS'		=> 'Anzahl Benutzer',
 	'NUMBER_ORPHAN'		=> 'Verwaiste Dateianhänge',
 
-	'PHP_VERSION_OLD'	=> 'The version of PHP on this server will no longer be supported by future versions of phpBB. %sDetails%s',
+	'PHP_VERSION'		=> 'PHP version',
+	'PHP_VERSION_OLD'	=> 'The version of PHP on this server (%1$s) will no longer be supported by future versions of phpBB. The minimum required version will be PHP %2$s. %3$sDetails%4$s',
 
 	'POSTS_PER_DAY'		=> 'Beiträge pro Tag',
 
@@ -11336,8 +11521,10 @@ $lang = array_merge($lang, array(
 	'GO_ACP_MAIN'				=> 'Zur Startseite des Administrations-Bereichs gehen',
 	'HIDE_STATISTICS'			=> 'Details verbergen',
 	'SEND_STATISTICS'			=> 'Statistische Informationen senden',
+	'SEND_STATISTICS_LONG'		=> 'Statistische Daten übermitteln',
 	'SHOW_STATISTICS'			=> 'Details anzeigen',
 	'THANKS_SEND_STATISTICS'	=> 'Vielen Dank für die Übermittlung Ihrer Informationen.',
+	'FAIL_SEND_STATISTICS'		=> 'phpBB was unable to send statistics',
 	'LOG_TERM_DELETE'			=> '<strong>Ein Wort wurde aus dem Lexikon gelöscht</strong> <br />» %s',
 
 	'LOG_ACL_ADD_USER_GLOBAL_U_'		=> '<strong>Benutzerrechte eines Benutzers hinzugefügt oder geändert</strong><br />» %s',
@@ -11393,6 +11580,7 @@ $lang = array_merge($lang, array(
 	'LOG_BBCODE_ADD'		=> '<strong>Neuen BBCode hinzugefügt</strong><br />» %s',
 	'LOG_BBCODE_EDIT'		=> '<strong>BBCode geändert</strong><br />» %s',
 	'LOG_BBCODE_DELETE'		=> '<strong>BBCode entfernt</strong><br />» %s',
+	'LOG_BBCODE_CONFIGURATION_ERROR'	=> '<strong>Error while configuring BBCode</strong>: %1$s<br />Â» %2$s',
 
 	'LOG_BOT_ADDED'		=> '<strong>Neuen Bot hinzugefügt</strong><br />» %s',
 	'LOG_BOT_DELETE'	=> '<strong>Bot entfernt</strong><br />» %s',
@@ -11432,6 +11620,7 @@ $lang = array_merge($lang, array(
 	'LOG_LOCK_POST'				=> '<strong>Beitrag gesperrt</strong><br />» %s',
 	'LOG_MERGE'					=> '<strong>Beiträge zusammengeführt</strong> in Thema<br />» %s',
 	'LOG_MOVE'					=> '<strong>Thema verschoben</strong><br />» von %1$s nach %2$s',
+	'LOG_MOVED_TOPIC'			=> '<strong>Moved topic</strong><br />Â» %s',
 	'LOG_PM_REPORT_CLOSED'		=> '<strong>Meldung zu Privater Nachricht geschlossen</strong><br />» %s',
 	'LOG_PM_REPORT_DELETED'		=> '<strong>Meldung zu Privater Nachricht gelöscht</strong><br />» %s',
 	'LOG_POST_APPROVED'			=> '<strong>Beitrag freigegeben</strong><br />» %s',
@@ -11467,6 +11656,7 @@ $lang = array_merge($lang, array(
 
 	'LOG_ERROR_JABBER'		=> '<strong>Jabber-Fehler</strong><br />» %s',
 	'LOG_ERROR_EMAIL'		=> '<strong>E-Mail-Fehler</strong><br />» %s',
+	'LOG_ERROR_CAPTCHA'		=> '<strong>CAPTCHA error</strong><br />Â» %s',
 
 	'LOG_FORUM_ADD'							=> '<strong>Forum erstellt</strong><br />» %s',
 	'LOG_FORUM_COPIED_PERMISSIONS'			=> '<strong>Foren-Berechtigungen kopiert</strong> von %1$s<br />» %2$s',
@@ -11545,6 +11735,7 @@ $lang = array_merge($lang, array(
 	'LOG_U_ROLE_REMOVED'	=> '<strong>Benutzer-Rolle entfernt</strong><br />» %s',
 
 	'LOG_PLUPLOAD_TIDY_FAILED'		=> '<strong>%1$s konnte nicht zum Aufräumen geöffnet werden. Prüfe die Berechtigungen.</strong><br />Ausnahme: %2$s<br />Stacktrace: %3$s',
+
 	'LOG_PROFILE_FIELD_ACTIVATE'	=> '<strong>Profilfeld aktiviert</strong><br />» %s',
 	'LOG_PROFILE_FIELD_CREATE'		=> '<strong>Profilfeld hinzugefügt</strong><br />» %s',
 	'LOG_PROFILE_FIELD_DEACTIVATE'	=> '<strong>Profilfeld deaktiviert</strong><br />» %s',
@@ -11655,6 +11846,7 @@ $lang = array_merge($lang, array(
 	'LOG_EXT_ENABLE'	=> '<strong>Erweiterung aktiviert</strong><br />» %s',
 	'LOG_EXT_DISABLE'	=> '<strong>Erweiterung deaktiviert</strong><br />» %s',
 	'LOG_EXT_PURGE'		=> '<strong>Daten der Erweiterung gelöscht</strong><br />» %s',
+	'LOG_EXT_UPDATE'	=> '<strong>Extension updated</strong><br />Â» %s',
 
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Themen mit Bildern resynchronisiert</strong>',
 	'LOG_PM_COUNT_RESET'	=> '<strong>Anzeige für neue / ungelesene PNs auf 0 gesetzt bei</strong><br />» %s',
@@ -13587,6 +13779,7 @@ $lang = array_merge($lang, array(
 	'EXTENSION_NOT_AVAILABLE'	=> 'Die ausgewählte Erweiterung ist nicht mit Ihrem Board kompatibel. Bitte prüfen Sie auf der Details-Seite, ob Ihre phpBB- und PHP-Version unterstützt werden.',
 	'EXTENSION_DIR_INVALID'		=> 'Die ausgewählte Erweiterung besitzt eine ungültige Verzeichnisstruktur und kann nicht aktiviert werden.',
 	'EXTENSION_NOT_ENABLEABLE'	=> 'Die ausgewählte Erweiterung kann nicht aktiviert werden. Bitte prüfen Sie die Voraussetzungen, die für die Erweiterung notwendig sind.',
+	'EXTENSION_NOT_INSTALLED'	=> 'The extension %s is not available. Please check that you have installed it correctly.',
 
 	'DETAILS'				=> 'Details',
 
@@ -13613,6 +13806,11 @@ $lang = array_merge($lang, array(
 	'EXTENSION_ACTIONS'			=> 'Vorgänge',
 	'EXTENSION_OPTIONS'			=> 'Optionen',
 	'EXTENSION_INSTALL_HEADLINE'=> 'Installing an extension',
+	'EXTENSION_INSTALL_EXPLAIN'	=> '<ol>
+			<li>Download an extension from phpBB’s extensions database</li>
+			<li>Unzip the extension and upload it to the <samp>ext/</samp> directory of your phpBB board</li>
+			<li>Enable the extension, here in the Extensions manager</li>
+		</ol>',
 	'EXTENSION_UPDATE_HEADLINE'	=> 'Eine Erweiterung aktualisieren',
 	'EXTENSION_UPDATE_EXPLAIN'	=> '<ol>
 			<li>Deaktivieren Sie die Erweiterung</li>
@@ -13647,7 +13845,7 @@ $lang = array_merge($lang, array(
 
 	'REQUIREMENTS'			=> 'Voraussetzungen',
 	'PHPBB_VERSION'			=> 'phpBB-Version',
-	'PHP_VERSION'			=> 'PHP-Version',
+	'PHP_VERSION'			=> 'PHP version',
 	'AUTHOR_INFORMATION'	=> 'Informationen zum Autor',
 	'AUTHOR_NAME'			=> 'Name',
 	'AUTHOR_EMAIL'			=> 'E-Mail',
@@ -13869,6 +14067,7 @@ $lang = array_merge($lang, array(
 	'GROUP_LEAD'					=> 'Gruppenleiter',
 	'GROUP_LEADERS_ADDED'			=> 'Neue Gruppenleiter erfolgreich hinzugefügt.',
 	'GROUP_LEGEND'					=> 'Gruppe in der Legende der Online-Liste anzeigen',
+	'GROUP_LIST_CURRENT_MEMBERS'	=> 'Current members',
 	'GROUP_LIST'					=> 'Benutzer verwalten',
 	'GROUP_LIST_EXPLAIN'			=> 'Dies ist eine komplette Liste der Benutzer, die Mitglied dieser Gruppe sind. Sie können Benutzer löschen (außer in bestimmten Systemgruppen) oder neue hinzufügen.',
 	'GROUP_MEMBERS'					=> 'Mitglieder der Gruppe',
@@ -13917,7 +14116,7 @@ $lang = array_merge($lang, array(
 	'NO_GROUPS_ADDED'			=> 'Es wurden noch keine Gruppen hinzugefügt.',
 	'NO_GROUPS_CREATED'			=> 'Es wurden bislang keine Gruppen erstellt.',
 	'NO_PERMISSIONS'			=> 'Sie haben keine Berechtigungen kopiert.',
-	'NO_USERS'					=> 'Sie haben keine Benutzer angegeben.',
+	'NO_USERS'					=> 'You haven’t entered any users or user not exist.',
 	'NO_USERS_ADDED'			=> 'Es wurden keine Benutzer der Gruppe hinzugefügt.',
 	'NO_VALID_USERS'			=> 'Sie haben keine Benutzer angegeben, für die dieser Vorgang möglich wäre.',
 
@@ -14322,6 +14521,7 @@ $lang = array_merge($lang, array(
 	'ACP_LANGUAGE_PACKS_EXPLAIN'	=> 'Hier können Sie Sprachpakete installieren und entfernen. Das Standard-Sprachpaket ist mit einem Stern (*) gekennzeichnet.',
 
 	'DELETE_LANGUAGE_CONFIRM'		=> 'Sind Sie sich sicher, dass Sie „%s“ löschen möchten?',
+
 	'INSTALLED_LANGUAGE_PACKS'		=> 'Installierte Sprachpakete',
 
 	'LANGUAGE_DETAILS_UPDATED'			=> 'Sprachdetails erfolgreich aktualisiert.',
@@ -14508,7 +14708,8 @@ $lang = array_merge($lang, array(
 	'ALL_GROUPS'				=> 'Alle Gruppen auswählen',
 	'ALL_NEVER'					=> 'Alle <strong>Nie</strong>',
 	'ALL_NO'					=> 'Alle <strong>Nein</strong>',
-	'SELECT_ALL_USERS'					=> 'Alle Benutzer wählen',
+	'SELECT_ALL_USERS'			=> 'Alle Benutzer wählen',
+	'ALL_USERS'					=> 'Alle Mitglieder',
 	'ALL_YES'					=> 'Alle <strong>Ja</strong>',
 	'APPLY_ALL_PERMISSIONS'		=> 'Alle Berechtigungen anwenden',
 	'APPLY_PERMISSIONS'			=> 'Berechtigungen anwenden',
@@ -14525,7 +14726,7 @@ $lang = array_merge($lang, array(
 	'CREATE_ROLE_FROM'			=> 'Verwenden Sie Einstellungen von …',
 	'CUSTOM'					=> 'Benutzerdefiniert …',
 
-	'DEFAULT'					=> 'default',
+	'DEFAULT'					=> 'Standard',
 	'DELETE_ROLE'				=> 'Rolle löschen',
 	'DELETE_ROLE_CONFIRM'		=> 'Sind Sie sich sicher, dass Sie diese Rolle löschen wollen? Objekte, denen diese Rolle zugewiesen wurde, werden ihre Rechte <strong>nicht</strong> verlieren.',
 	'DISPLAY_ROLE_ITEMS'		=> 'Zeige Objekte an, die diese Rolle verwenden',
@@ -14755,6 +14956,7 @@ $lang = array_merge($lang, array(
 // Forum Permissions
 $lang = array_merge($lang, array(
 	'ACL_F_LIST'		=> 'Kann Forum sehen',
+	'ACL_F_LIST_TOPICS' => 'Can see topics',
 	'ACL_F_READ'		=> 'Kann Forum lesen',
 	'ACL_F_SEARCH'		=> 'Kann das Forum durchsuchen',
 	'ACL_F_SUBSCRIBE'	=> 'Kann Forum abonnieren',
@@ -16018,7 +16220,7 @@ $lang = array_merge($lang, array(
 	'MOVE_POSTS_EXPLAIN'	=> 'Bitte wählen Sie ein Forum aus, in das alle Beiträge verschoben werden sollen, die der Benutzer erstellt hat.',
 
 	'NO_SPECIAL_RANK'		=> 'Kein spezieller Rang zugewiesen',
-	'NO_WARNINGS'			=> 'Keine Verwarnungen.',
+	'NO_WARNINGS'			=> 'Es existieren keine Verwarnungen.',
 	'NOT_MANAGE_FOUNDER'	=> 'Sie haben versucht, einen Benutzer mit Gründer-Status zu verwalten. Nur Benutzer mit Gründer-Status können andere Gründer verwalten.',
 
 	'QUICK_TOOLS'			=> 'Schnellauswahl',
