@@ -9,6 +9,37 @@ $lang = array_merge($lang, array(
 	'CONTROLLER_SERVICE_UNDEFINED'		=> 'The service for controller “<strong>%s</strong>” is not defined in ./config/services.yml.',
 ));
 
+#######language/en/contact.php#######
+
+$lang = array_merge($lang, array(
+	'CONTACT_BOARD_ADMIN'	=> 'Contact',
+	'CONTACT_ANONYM'	=> 'Anonymous',
+	'CONTACT_INFORUM'	=> 'In the forum as: ',
+	'CONTACT_CONFIRM'	=> 'Confirm',
+	'CONFIRM_CONTACT'	=> 'Confirm',
+	'CONTACT_MSG_SENT'	=> 'Your message has been sent successfully',
+	'CONTACT_MSG_BODY_EXPLAIN'	=> '<br /><span>Please use the contact form <strong><em>only</em></strong> if there is no other way to contact us.<br /><br /><span style="text-align:center;"><strong>Your IP address is being recorded and any abuse attempt will be punished.</strong></span></span>',
+	'CONTACT_NO_NAME'	=> 'You didn\'t enter a name.',
+	'CONTACT_NO_EMAIL'	=> 'You didn\'t enter an email address.',
+	'CONTACT_NO_MSG'	=> 'You didn\'t enter a message.',
+	'CONTACT_NO_SUBJ'	=> 'You didn\'t enter a subject.',
+	'CONTACT_NO_REASON'	=> 'You didn\'t enter a valid reason.',
+	'CONTACT_REASON'	=> 'Reason',
+	'CONTACT_TEMPLATE'	=> '<strong>Name:</strong> %1$s' . "\n" . '<strong>Email Address:</strong> %2$s' . "\n" . '<strong>IP:</strong> %3$s' . "\n" . '<strong>Date:</strong> %4$s' . "\n" . '<strong>Reason:</strong> %5$s' . "\n" . '<strong>Subject:</strong> %6$s' . "\n\n" . '<strong>Has entered the following message into the contact form:</strong>' . "\n" . '%7$s',
+	'CONTACT_TEMPLATE_NO_REASON'	=> '<strong>Name:</strong> %1$s' . "\n" . '<strong>Email Address:</strong> %2$s' . "\n" . '<strong>IP:</strong> %3$s' . "\n" . '<strong>Date:</strong> %4$s' . "\n" . '<strong>Subject:</strong> %5$s' . "\n\n" . '<strong>Has entered the following message into the contact form:</strong>' . "\n" . '%6$s',
+	'CONTACT_TITLE'		=> 'Contact Board Administration',
+	'CONTACT_TOO_MANY'	=> 'You have exceeded the maximum number of contact confirmation attempts for this session. Please try again later.',
+	'CONTACT_YOUR_NAME'	=> 'Your name',
+	'CONTACT_YOUR_NAME_EXPLAIN'	=> 'Please enter your name, so the message has an identity.',
+	'CONTACT_YOUR_EMAIL'	=> 'Your email address',
+	'CONTACT_YOUR_EMAIL_EXPLAIN'	=> 'Please enter a valid email address, so we can contact you.',
+	'CONTACT_YOUR_EMAIL_CONFIRM'	=> 'Reenter your email address',
+	'CONTACT_YOUR_EMAIL_CONFIRM_EXPLAIN'	=> 'Please re-enter your email address.',
+	'RETURN_CONTACT'	=> '%sReturn to the contact page%s',
+	'URL_UNAUTHED'		=> 'You can not post urls, please remove or rename:<br /><em>%1$s</em>',
+
+));
+
 #######language/en/calendar.php#######
 
 $lang = array_merge($lang, array(
@@ -1326,6 +1357,7 @@ $lang = array_merge($lang, array(
 	'RSS_1XREDIR'	=> 'This RSS feed was moved',
 	'RSS_1XREDIR_MSG'	=> 'This RSS feed was moved, you will now find it using this URL',
 	'NEWS_ARCHIVE_OF' => 'Archive %s',
+	'NOBODY' => 'nobody',
 
 	'MISSING_DIV' 		=> 'The shoutbox div cann’t be found.',
 	'LOADING' 			=> 'Loading',
@@ -1514,9 +1546,10 @@ $lang = array_merge($lang, array(
 	'DONATION_NOTIFICATION'	=> 'Donation Notification',
 	'TOPIC_AGE_WARNING'		=> 'You are attempting to reply to a topic that is %s old. Instead, please begin a new topic, or search for another related topic that may be more suitable.',
 	'TOPIC_AGE_WARNING_LOCK'	=> 'This topic is %s old. The forum administrator has chosen for old topics to be locked when a reply is attempted. Please begin a new topic or use the search feature to find a similar but newer topic.',
-	'INSTALLER_INTRO'		=> 'Intro',
-	'POINTS'						=> 'Points',
-	'POINTS_ATTACHMENT_COSTS'		=> 'The attachment <strong>%1$s</strong> is a charge of (%2$s %3$s), you do not have enough %3$s!',
+	'INSTALLER_INTRO'			=> 'Intro',
+	'POINTS'					=> 'Points',
+	'POINTS_ATTACHMENT_COSTS'	=> 'The attachment <strong>%1$s</strong> is a charge of (%2$s %3$s), you do not have enough %3$s!',
+	'API_LOAD_MORE'				=> 'Show more',
 
 	// Maps
 	'YMSM_LANGUAGE'					=> 'en-US',
@@ -1722,6 +1755,26 @@ $lang = array_merge($lang, array(
 	'FILTERS'				=> 'Filters',
 	'SEARCH_SELECT_ANY'		=> '(Any)',
 	'NOTICE'				=> '注意',
+	'POLL_MAX_OPTIONS'	=> '選項',
+	'OPEN_TRACK'		=> 'Participants publish',
+	'LASTGAMES'			=> 'My last played games',
+	'REPLY_TO_USERS'	=> 'Use as recipient',
+	'REPLY_TO_USERS_EXPLAIN'	=> 'Choose the users you want to write a message.',
+	'READ_RULES'		=> '使用條款',
+	'NO_EVENTS'		=> 'For their selection were no events found.',
+
+	'ADVENT'		=> 'Advent Calendar',
+	'TUER_DAHINTER'		=> 'Behind this door we have<br>for you ...',
+	'TUER_HABEN_DEZ'		=> '<b>We do not have<br />DECEMBER yet!!!</b>',
+	'TUER_HABEN_SCHON'		=> 'Today it\'s ',
+	'TUER_NEIN'		=> '. ???!!!<br />= No, today is the ',
+	'TUER_SCHUMMELN'		=> '. !!!<br>Cheating is not allowed! ',
+	'TUER_KL'		=> ' ',
+	'ZURUECK'		=> 'Back to the Advent Calendar',
+	'KA_TEXT_1'		=> 'Here you can - string at the 1st of December - open daily a new door. And you can expect a surprise behind evry door...',
+	'KA_TEXT_2'		=> 'I think I don\'t need to explain, how an Advent Calendar works. Have fun and a Happy Merry Christmas!',
+
+
 ));
 
 #######language/en/groups.php#######
@@ -3553,6 +3606,14 @@ $lang = array_merge($lang, array(
 	'CALENDAR'	=> 'Calendar',
 	'BOT_TRACKER'		=> 'Bot Tracker',
 
+	'BLOCK_BOT_NEVER'	=> 'never before',
+	'LOTTERY_LAST_WINNER'	=> 'The last winner was',
+	'LOTTERY_JACKPOT'	=> 'Jackpot',
+	'LOTTERY_PLAYERS'	=> 'Players so far',
+	'LOTTERY_TICKETS'	=> 'Currently sold tickets',
+	'LOTTERY_NEXT_DRAW'	=> 'The next draw is on',
+	'LOTTERY_GOTO'		=> 'to the Lottery',
+
 ));
 
 #######language/en/posting.php#######
@@ -3679,7 +3740,7 @@ $lang = array_merge($lang, array(
 	'POLL_DELETE'				=> '刪除票選活動',
 	'POLL_FOR'					=> '票選活動期限',
 	'POLL_FOR_EXPLAIN'			=> '輸入 0 或是留白，表示沒有期限的票選活動。',
-	'POLL_MAX_OPTIONS'			=> '會員複選設定',
+	'POLL_MAX_OPTIONS'			=> '選項',
 	'POLL_MAX_OPTIONS_EXPLAIN'	=> '每個會員在投票時可以選擇的最大選項數目。',
 	'POLL_OPTIONS'				=> '票選項目',
 	'POLL_QUESTION'				=> '票選問題',
@@ -3755,10 +3816,11 @@ $lang = array_merge($lang, array(
 	'FONT_TYPE'			=> 'Typeface',
 	'FONT_COLOR'			=> '顯示文字色盤',
 	'BBCODE_F_COLOR_HELP'	=> 'Default font color',
-	'BBCODE_F_TYPE_HELP'		=> 'Typeface',
+	'BBCODE_F_TYPE_HELP'	=> 'Typeface',
 	'BBCODE_TAB_HELP'		=> 'Add a Tab one (The text must also be in the [tab] ... [/ tab] to be inserted)',
 	'BBCODE_E_HELP'		=> 'List: Add list element',
 	'NO_LINKS_FOR_GUESTS'	=> 'Guests do not have permissions to post external links or email addresses and can not use BBCode [url] or [url=]. If you are posting images, you probably sent a link within. To insert images use the button in this editor or the file attachments. You are free to register any time to be able to use external links.',
+	'CREATE_EVENT_EXPLAIN'	=> 'Add a calendar event to the topic. If you not want to add an event to the topic, just leave the fields blank.',
 
 ));
 
@@ -4590,6 +4652,17 @@ $lang = array_merge($lang, array(
 	'VOTE_CONVERTED'		=> '為了轉變票選結果而改變投票選項是不被支持的。',
 
 	'SIMILAR_TOPICS'		=> 'Similar topics',
+	'BLOG_READ_FULL'		=> 'Read the story completely',
+	'BLOG_READ_HERE'		=> 'Read the whole story',
+	'BLOG_GO_TO_TOPIC'		=> 'Link to the topic',
+	'BLOG_COMMENTS'			=> 'Comments',
+	'BLOG_ARCHIVE'			=> 'Archive',
+	'BLOG_ARCHIVE_OF'		=> 'Archive %s',
+	'BLOG_NONE'				=> '<p>There are no blog entries yet.<br /><br />Start Now: </p>',
+	'BLOG_POLL'				=> 'Blog Post contains a survey',
+	'BLOG_POLL_GOTO'		=> 'Vote',
+	'JUMP_TO_LAST_POST'		=> 'Go to the latest post',
+
 ));
 
 #######language/en/mods/abbcode.php#######
@@ -4645,7 +4718,7 @@ $lang = array_merge($lang, array(
 
 	'ABBC3_ID'					=> 'Enter identifier :',
 	'ABBC3_NOID'				=> 'You did not write the identifier',
-	'ABBC3_LINK'				=> 'Enter a link for ',
+	'ABBC3_LINK'				=> 'Code for Syntax Highlighting',
 	'ABBC3_DESC'				=> 'Enter a description for ',
 	'ABBC3_NAME'				=> '版面簡介',
 	'ABBC3_NOLINK'				=> 'You did not write a link for ',
@@ -5026,6 +5099,7 @@ $lang = array_merge($lang, array(
 	'DEEZER_VIEW'				=> '[Deezer]http://www.deezer.com/track/351534[/Deezer]',
 
 	'ABBC3_UPLOAD_EXTENSION_EXPLAIN'	=> 'You can add / modify / delete of allowed file types. Separate the extension with a (,)',
+	'ABBC3_TAG'			=> '代碼',
 
 ));
 
@@ -5845,6 +5919,9 @@ Congratulations to all winners and many thanks to all players!',
 	'TOUR_NEWS_TEXT'			=> '內容',
 	'TOUR_NEWS_EXTRA'			=> 'Further informations',
 	'ARCADE_TOUR_DONE'			=> 'Back to tournament: ',
+	'LIGHTS_OFF'				=> 'Turn off the lights',
+	'LIGHTS_ON'					=> 'Turn on the lights',
+
 ));
 #######language/en/mods/arcade_challenge.php#######
 
@@ -9476,13 +9553,13 @@ $lang = array_merge($lang, array(
 	'LOTTERY_NEXT_DRAWING'				=> 'Next draw will be on',
 	'LOTTERY_NO_WINNER'					=> 'No winner this time',
 	'LOTTERY_NO_WINNERS'				=> 'Noone has won a lottery yet.',
-	'LOTTERY_PLAYERS'					=> 'Number of players up to now',
+	'LOTTERY_PLAYERS'					=> 'Players so far',
 	'LOTTERY_PM_BODY'					=> 'Congratulations! You have won %1$s in our Lottery! %2$s',
 	'LOTTERY_PM_CASH_ENABLED'			=> 'Your winnings have been deposited into your account, enjoy it!<br /><br /><i>The Lottery Management</i>',
 	'LOTTERY_PM_SUBJECT'				=> 'You won the lottery!',
 	'LOTTERY_PURCHASE_TICKET'			=> 'Buy Ticket',
 	'LOTTERY_PURCHASE_TICKETS'			=> 'Buy Tickets',
-	'LOTTERY_TICKETS'					=> 'Sold tickets up to now',
+	'LOTTERY_TICKETS'					=> 'Currently sold tickets',
 	'LOTTERY_TICKET_COST'				=> 'Ticket costs',
 	'LOTTERY_TICKET_PURCHASED'			=> 'Your ticket purchase is completed!',
 	'LOTTERY_TITLE_DESCRIPTION'			=> 'What are the rules to play?',
@@ -12525,6 +12602,8 @@ $lang = array_merge($lang, array(
 	'ACP_SUBJECT_PREFIX_ADD'			=> 'Create subject prefix',
 	'ACP_SUBJECT_PREFIX_EXPLAIN'		=> 'This page can be used to manage prefixes on a forum basis, by default all forums are collapsed to prevent this page from growing to big. Click on a forum name to display the prefixes that you\'ve set for this forum and edit them accordingly, you can also change the order in <em>(drag-drop)</em> in which they will be displayed.',
 	'ACP_SUBJECT_PREFIX_ADD_EXPLAIN'	=> 'On this page you can create new prefixes, or edit existing prefixes',
+	'PREFIX_IMG'			=> 'Prefix Image',
+	'PREFIX_IMG_EXPLAIN'		=> 'If you has been selected a graphic here, it will be used wherever possible. Where it is not possible, the title is used, for example in selection boxes. Upload new images via the Symbol Upload Center.',
 	'ACP_STATS_GENERAL_INFO'			=> '統計資料',
 	'NO_PREFIXES'		=> 'You haven\'t created any subject prefixes yet',
 	'NO_PREFIX_COLOUR'	=> 'You must provide a valid prefix colour',
@@ -13656,6 +13735,75 @@ $lang = array_merge($lang, array(
 	'ACP_GALLERY_OVERVIEW'				=> 'Gallery',
 	'TOTAL_IMAGES_OTHER'				=> 'Images total: <strong>%s</strong>',
 	'TOTAL_IMAGES_ZERO'					=> 'Images total: <strong>0</strong>',
+
+	'PREFIX_BADGE'				=> 'Show as <span class="preBadge" style="background-color:red;">badge</span>',
+	'SHOW_ALL'				=> '全部',
+	'ACP_SUBJECT_PREFIX2_EXPLAIN'				=> 'You can only delete prefixes, when its linked to at least one forum.',
+	'ACP_DIFF_TITLE'				=> 'Theme compare',
+	'ACP_DIFF_EXPLAIN'				=> 'Compare your current changed theme here with the original. You can easily correct errors or add new features.<br />On the left side you see your current theme and on the right side of the original, which is taken when sending. Copy everything that is right to keep what you want.',
+	'ACP_DIFF_TITLE_TEMPLATES'				=> 'HTML Template compare',
+	'ACP_DIFF_EXPLAIN_TEMPLATES'				=> 'Compare your current changed template here with the original. You can easily correct errors or add new features.<br />On the left side you see your current html template and on the right side of the original, which is taken when sending. Copy everything that is right to keep what you want.',
+	'TEMPLATE_DIFF_EXPLAIN'				=> 'Hier siehst du alle, von dir modifizierten Template Dateien und kannst diese einfach mit dem Original Vergleichen und so die neusten &Auml;nderungen einfach und schnell &uuml;bernehmen.',
+	'OPEN_CAT'				=> 'open category',
+
+	// acp_styles.php
+	'LINE_UNMODIFIED'		=> '未修改',
+	'LINE_ADDED'			=> '已加入',
+	'LINE_MODIFIED'			=> '已修改',
+	'LINE_REMOVED'			=> '已刪除',
+	'OLD_CODE'				=> 'Your current theme',
+	'NEW_CODE'				=> 'The original theme &amp; new saved code',
+	'NO_DIFF'				=> 'unchanged',
+	'DIFF_OP_CHANGE'		=> 'change',
+	'DIFF_OP_EDIT'			=> 'edit ',
+	'DIFF_OP_COPY'			=> 'copy',
+	'DIFF_OP_ADD'			=> 'add',
+	'DIFF_OP_DELETE'		=> 'delete',
+	'DIFF_SUBMIT'			=> 'Save Changes',
+	'DIFF_COMPARE'			=> 'Declaration of background colors:',
+	'DIFF_CONFIRM'			=> 'Did you really copy all the marked places you want to keep, to the right side?\n For safety sake, make sure you also have a styles backup: ACP -> Styles -> Themes -> Backup',
+	'DIFF_CONFIRM_FALSE'			=> 'OK, action was canceled. \n Look again if you have really copied everything from left to right, what you want to keep.',
+	'DIFF_CONFIRM_FALSE_TEMPLATE'			=> 'OK, action was canceled. \n Look again if you have really copied everything from left to right, what you want to keep.',
+	'DIFF_CONFIRM_TEMPLATE'			=> 'Did you really copy all the marked places you want to keep, to the right side?\n For safety sake, make sure you also have a styles backup: ACP -> Styles -> Templates -> Backup',
+	'COLORIZE'	 		=> 'Colorize',
+
+	'IMG_THANKS_IMG'				=> 'Thanks Thumb (in Topics)',
+	'IMG_STATS_BOOKMARKS'				=> 'Bookmarks Icon (Forum-Index)',
+	'IMG_STATS_THANKS'				=> 'Thanks/Like Icon (Forum-Index)',
+	'IMG_STATS_FOLLOWER'				=> 'Subscribers (Forum-Index)',
+	'IMG_FORUM_HAS_IMG'				=> 'Images-Icon (Forum-Index)',
+	'IMG_FORUM_POI_IMG'				=> 'Maps POI-Icon (Forum-Index)',
+	'ACP_SMILIE_CAT_SORT_TITLE'				=> 'Tipps zur Sortierung der Smilie Kategorien',
+	'ACP_SMILIE_CAT_SORT_TIP'				=> 'Trage in die Felder f&uuml,r die Sortierung eine Zahl ein um diese nach oben oder unten zu bef&ouml;rdern.<br />Je h&ouml;her die Zahl, je h&ouml;her erscheint die Kategorie.<br />Lasse zwischen den Zahlen immer einige Zahlen frei, damit du sp&auml;ter auch noch Kategorien einf&uuml;gen kannst.<br />Um eine Kategorie auszublenden, benutze das Minuszeichen z.B.: -1',
+	'POINTS_POSTING_MSG'				=> 'Verdiensthinweis nach dem Schreiben eines Beitrags anzeigen?',
+	'POINTS_POSTING_MSG_EXPLAIN'				=> 'Zeigt nach dem Absenden eines Beitrags an, wieviele Punkte verdient oder abgezogen wurden.',
+
+	'ACP_SMILIES_CATVIEW'				=> 'Smilie Kategorie Anzeige',
+	'ACP_SMILIES_CATVIEW_DESC'				=> 'Ansicht der Smilie Kategorieauswahl beim Schreiben von Beitr&auml;gen oder PNs.',
+	'ACP_SMILIES_CATVIEW_BUTTONS'				=> 'Buttons (Bild mit Text)',
+	'ACP_SMILIES_CATVIEW_DROPDOWN'				=> 'Auswahlbox (nur Text)',
+	'SMILIE_POPUP_VIEW'				=> 'Smilie Anzeige im Popup',
+	'SMILIE_POPUP_VIEW_EXPLAIN'				=> 'Gruppiert oder in Tabellenform<br />Demo: <a href="%s" onclick="popup(this.href, 500, 550, \'_phpbbsmilies\'); return false;">Popup öffnen</a>',
+	'SMILIE_POPUP_VIEW_TABLE'				=> 'Tabellenform (1 Smilie pro Zeile mit Code)',
+	'SMILIE_POPUP_VIEW_GROUP'				=> 'Gruppiert (Leerzeichen Trennung)',
+	'SMILIE_POPUP_SIZE'				=> 'Smilie Popup Größe',
+	'SMILIE_POPUP_SIZE_EXPLAIN'				=> 'Breite x Höhe (Standard 500x550)<br />Standard wird bei 0 verwendet.',
+
+	'IN_USE'				=> 'Bild wird benutzt',
+	'NOT_IN_USE'			=> 'Bild wird nicht benutzt',
+	'CREATE_EVENT'			=> 'Neuen Termin erstellen',
+	'MANAGE_EVENTS_EXPLAIN'			=> 'Hier siehst du alle angelegten Kalender Termine.<br />Alle Zeiten sind UTC + 0. Die Termine erscheinen je nach Zeitzone in der korrekten Zeit des Users.',
+
+	'ACP_WIDGETS_TITLE'				=> 'Social Plugins',
+	'ACP_PLUGIN_RECENT_POSTS'			=> 'Recent Posts',
+	'ACP_PLUGIN_FORUM'				=> 'Community Plugin',
+	'ACP_PLUGIN_COMMENTS'			=> 'Comment Plugin',
+
+	'API_ALL_DOMAINS'				=> 'Alle Domains zulassen',
+	'API_ALL_DOMAINS_EXPLAIN'		=> 'Jede Domain hat mit &quot;Ja&quot; Zugang zu den Plugins oder der Public API deines Forums. Lasse dies nur zu, wenn du auch deinen Usern erlauben willst die Plugins einzubinden.',
+	'API_ALLOWED_DOMAINS'			=> 'Erlaubte Domains (Whitelist)',
+	'API_ALLOWED_DOMAINS_EXPLAIN'	=> 'Die eigene Foren URL ist automatisch freigeschaltet. Trage hier weitere Domains ein, z.B. f&uuml;r <code>www.phpbb8.de</code> und <code>xy.phpbb8.de</code> reicht es nur <code>phpbb8.de</code> einzutragen.',
+	'ACP_WIDGETS_EXPLAIN'			=> '',
 
 ));
 
