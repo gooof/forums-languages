@@ -1942,7 +1942,7 @@ $lang = array_merge($lang, array(
 	'GALLERY_STYLE_OLD'		=> 'alte Ansicht (Tabelle)',
 	'GALLERY_STYLE_NEW'		=> 'neuer Block Style (Diashow)',
 	'ALLOW_TO_EDIT'		=> 'Verschieben der Blöcke deaktivieren?',
-	'ALLOW_TO_EDIT_EXPLAIN'		=> 'User können hiermit nicht mehr einzelne Blöcke verschieben und ausblenden, wenn Sie dies aktivieren wollen, setzen Siediese Option auf "Nein". <a href="../portal.php?iedit=1" traget="_blank">Demo (vorher aktivieren)</a>',
+	'ALLOW_TO_EDIT_EXPLAIN'		=> 'User können hiermit nicht mehr einzelne Blöcke verschieben und ausblenden, wenn Sie dies aktivieren wollen, setzen Sie diese Option auf "Nein". <a href="../portal.php?iedit=1" traget="_blank">Demo (vorher aktivieren)</a>',
 	'TOP_POSTER_AVATARS_EXPLAIN'	=> 'Statt der einheitlichen Grafik, werden die Avatare der User angezeigt',
 	'TOP_SCHNELLANTWORT'	=> 'Schnellantwort',
 	'QBOX_DIRECT'			=> 'Schnellantwort direkt anzeigen',
@@ -1965,8 +1965,8 @@ $lang = array_merge($lang, array(
 	'TUER_SCHUMMELN'		=> '. !!!<br />Also Schummeln ist hier nicht! ',
 	'TUER_KL'		=> ' ',
 	'ZURUECK'		=> 'Zurück zum Adventskalender',
-	'KA_TEXT_1'		=> ' Hier können Sie ab dem 01.12. täglich ein Türchen öffnen und Sie überraschen lassen ... ',
-	'KA_TEXT_2'		=> 'Wie ein Adventskalender funktioniert, muss Sie Ihnen nicht groß erklären. <br />Bei jedem Aufruf des Kalenders werden die Türchen neu &quot;sortiert&quot; -  Sie können also immer wieder neu suchen ;)<br />Für den Fall, das Sie eine Tür nicht findest, weil das Kalenderbild einige Türchen nicht erahnen lassen, aktualisieren Sie einfach die Seite. Frohe Weihnachten!',
+	'KA_TEXT_1'		=> 'In unserem Adventskalender erwartet sich ab dem 1. Dezember täglich ein neues Türchen und dahinter eine schöne Überraschung.',
+	'KA_TEXT_2'		=> 'Wie unser Adventskalender funktioniert: <br />Bei jedem Aufruf des Kalenders werden die Türchen neu sortiert, Sie müssen also immer wieder neu das aktuelle Türchen suchen ;)<br />Für den Fall, das Sie eine Tür nicht findest, weil das Kalenderhintergrundbild einige Türchen nicht erahnen lassen, aktualisieren Sie einfach die Seite. Wir wünschen Ihnen Frohe Weihnachten!',
 
 
 ));
@@ -8814,7 +8814,7 @@ $lang = array_merge($lang, array(
 	'EXPLAIN'					=> 'Die ist die Hauptseite für den Export bzw. Import von Hangmans.<br />Wenn Sie Hangmans importieren möchten wählen Sie die Datei aus und mittels Import werden die Hangmans importiert.<br />Wenn Sie Hangmans exportieren möchten wählen Sie von/bis Werte aus klicken Sie Export, um den Export zu starten. Wählen Sie den Speicherort und der Download des Files beginnt. Wie beim Import sollten Sie immer kleinere Pakete exportieren (max. 1000 Hangmans)!',
 	'EXPORT'					=> 'Exportieren',
 	'IMPORT'					=> 'Importieren',
-	'IMPORT_EXPLAIN'			=> 'Wenn Sie eine der nachfolgenden Eintellungen beeinfussen wollen, dann fügen Sie die Einschränkung ein und setzen Siedas Häkchen dahinter.<br /> Standardmässig werden als Ersteller <strong>Anonymous</strong> eingetragen und max. <strong>1000</strong> Hangmans importiert (mehr sollten Sie gar nicht erst versuchen, da es sonst zu Fehler kommen könnte - Zeitlimitüberschreitung oder Speicherlimit überschritten).',
+	'IMPORT_EXPLAIN'			=> 'Wenn Sie eine der nachfolgenden Eintellungen beeinfussen wollen, dann fügen Sie die Einschränkung ein und setzen Sie das Häkchen dahinter.<br /> Standardmässig werden als Ersteller <strong>Anonymous</strong> eingetragen und max. <strong>1000</strong> Hangmans importiert (mehr sollten Sie gar nicht erst versuchen, da es sonst zu Fehler kommen könnte - Zeitlimitüberschreitung oder Speicherlimit überschritten).',
 	'CHOOSEFILE'				=> 'Bitte Datei auswählen:',
 	'EXPORT_START_AT'			=> 'Ab welcher ID',
 	'EXPORT_END_AT'				=> 'Bis welche ID',
@@ -9015,7 +9015,7 @@ $lang = array_merge($lang, array(
 	'POINTS_TRANSFER_EXPLAIN'			=> 'Erlaube den Benutzern untereinander Punkte zu überweisen',
 	'POINTS_TRANSFER_PM'				=> 'Benutzer per PN informieren, wenn eine Transaktion durchgeführt wurde',
 	'POINTS_TRANSFER_PM_EXPLAIN'		=> 'Senden Sie Benutzern eine PN, wenn ihnen jemand etwas überwiesen hat',
-	'POINTS_WARN'						=> 'Kosten pro Verwarnung (setzen Sie0 zum deaktivieren)',
+	'POINTS_WARN'						=> 'Kosten pro Verwarnung (setzen Sie 0 zum deaktivieren)',
 
 	'REG_POINTS_BONUS'					=> 'Punkte Bonus für das Registrieren',
 	'RESYNC_ATTENTION'					=> 'Die folgenden Aktionen können nicht rückgängig gemacht werden!!',
@@ -9059,7 +9059,7 @@ $lang = array_merge($lang, array(
 
 	'USER_POINTS'						=> 'Benutzerpunkte',
 	'USER_POINTS_EXPLAIN'				=> 'Anzahl Punkte, die der Benutzer hat',
-	'POINTS_COST_ATTACHMENT'			=> 'Kosten pro Download eines Dateianhanges (setzen Sie0 zum deaktivieren)',
+	'POINTS_COST_ATTACHMENT'			=> 'Kosten pro Download eines Dateianhanges (setzen Sie 0 zum deaktivieren)',
 ));
 
 #######language/en/mods/lang_football.php#######
@@ -12887,7 +12887,7 @@ $lang = array_merge($lang, array(
 	'FORUM_MIN_POSTS_HIDE'		=> 'Forum im Index nicht anzeigen',
 	'FORUM_MIN_POSTS_HIDE_EXPLAIN'	=> 'Setzen Sie diese Option auf "Ja", wenn Sie das Forum für User mit zu wenig Beiträgen nicht anzeigen lassen wollen.',
 	'FORUM_MIN_POSTS'			=> 'Minimum Beiträge zum betreten',
-	'FORUM_MIN_POSTS_EXPLAIN'		=> 'Wieviele Beiträge muss ein User haben um Zugang zum diesem Forum zu haben, setzen Sieeine 0 wenn Sie kein minimum Limit wollen.',
+	'FORUM_MIN_POSTS_EXPLAIN'		=> 'Wieviele Beiträge muss ein User haben um Zugang zum diesem Forum zu haben, setzen Sie eine 0 wenn Sie kein minimum Limit wollen.',
 	'STARTPAGE'				=> 'Forum Startseite',
 	'TOO_MANY_ROWS_SELECTED'	=> 'Wählen Sie weniger als %s Zeilen. Wenn alle markiert werden sollen, wählen Sie hier nur die erste aus.',
 	'SMILIE_CAT_DELETE'			=> 'Sind Sie sicher, dass Sie diese Kategorie löschen möchten?<br /><br />Alle Smilies in der Kategorie werden dadurch gelöscht, auch wenn sich diese noch in anderen Kategorien befinden!',
@@ -15590,7 +15590,7 @@ $lang = array_merge($lang, array(
 	'BBCODE_TAG_DEF_TOO_LONG'	=> 'Die eingegebene Tag-Definition ist zu lang. Bitte kürze die Tag-Definition.',
 	'BBCODE_USAGE'				=> 'BBCode-Benutzung',
 	'BBCODE_USAGE_EXAMPLE'		=> '[highlight={COLOR}]{TEXT}[/highlight]<br /><br />[font={SIMPLETEXT1}]{SIMPLETEXT2}[/font]',
-	'BBCODE_USAGE_EXPLAIN'		=> 'Hier wird eingestellt, wie der BBCode benutzt wird. Ersetzen Sievariable Eingaben durch die entsprechenden Tokens (%ssiehe unten%s).',
+	'BBCODE_USAGE_EXPLAIN'		=> 'Hier wird eingestellt, wie der BBCode benutzt wird. Ersetzen Sie variable Eingaben durch die entsprechenden Tokens (%ssiehe unten%s).',
 
 	'EXAMPLE'						=> 'Beispiel:',
 	'EXAMPLES'						=> 'Beispiele:',
@@ -16019,7 +16019,7 @@ $lang = array_merge($lang, array(
 	'FULLTEXT_SPHINX_PORT_EXPLAIN'			=> 'Port, auf dem der Dienst/Daemon (searchd) lauscht. Lassen Sie den Eintrag leer, um den Standard-API-Port 9312 von Sphinx zu benutzt',
 	'FULLTEXT_SPHINX_WRONG_DATABASE'		=> 'Die Sphinx-Suche für phpBB unterstützt lediglich MySQL und PostgreSQL.',
 	'FULLTEXT_SPHINX_CONFIG_FILE'			=> 'Sphinx-Konfigurationsdatei',
-	'FULLTEXT_SPHINX_CONFIG_FILE_EXPLAIN'	=> 'Dies ist der generierte Inhalt für die Konfigurationsdatei von Sphinx. Dieser muss in die sphinx.conf eingefügt werden, die vom Sphinx-Suchdienst verwendet wird. Ersetzen Siedie Platzhalter <samp>[dbuser]</samp> und <samp>[dbpassword]</samp> mit den Zugangsdaten Ihrer Datenbank.',
+	'FULLTEXT_SPHINX_CONFIG_FILE_EXPLAIN'	=> 'Dies ist der generierte Inhalt für die Konfigurationsdatei von Sphinx. Dieser muss in die sphinx.conf eingefügt werden, die vom Sphinx-Suchdienst verwendet wird. Ersetzen Sie die Platzhalter <samp>[dbuser]</samp> und <samp>[dbpassword]</samp> mit den Zugangsdaten Ihrer Datenbank.',
 	'FULLTEXT_SPHINX_NO_CONFIG_DATA'		=> 'Das Daten- und Konfigurationsverzeichnis von Sphinx wurde nicht festgelegt. Bitte lege es fest, damit die Konfigurationsdatei erstellt werden kann.',
 
 	'GENERAL_SEARCH_SETTINGS'				=> 'Allgemeine Such-Einstellungen',
