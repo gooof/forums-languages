@@ -798,7 +798,7 @@ $lang = array_merge($lang, array(
 	'NO_UNREAD_POSTS'			=> 'Keine ungelesenen Beiträge',
 	'NO_UPLOAD_FORM_FOUND'		=> 'Ein Datei-Upload wurde angestoßen, aber es wurde kein gültiges Upload-Formular gefunden.',
 	'NO_USER'					=> 'Der von dir ausgewählte Benutzer existiert nicht.',
-	'NO_USERS'					=> 'Du hast keine Benutzer eingegeben oder der Benutzer sind nicht vorhanden.',
+	'NO_USERS'					=> 'Du hast keine Benutzer eingegeben oder der Benutzer ist nicht vorhanden.',
 	'NO_USER_SPECIFIED'			=> 'Es wurde kein Benutzername angegeben.',
 
 	'OCCUPATION'				=> 'Tätigkeit',
@@ -1846,7 +1846,7 @@ $lang = array_merge($lang, array(
 	'ACP_PRIVMSGS_MOD_PAGEFOOTER'			=> 'Private Messages Moderation module',
 	'ACP_PRIVMSGS_MOD_PAGETITLE'			=> 'Private Nachrichten Übersicht',
 	'ACP_PRIVMSGS_MOD_PER_PAGE_EXPLAIN'		=> 'Enter the number of private messages per page you would like to see listed on the Moderate Messages screen.',
-	'ACP_PRIVMSGS_MOD_PER_PAGE'				=> 'Nachrichten pro Seite angezeigt',
+	'ACP_PRIVMSGS_MOD_PER_PAGE'				=> 'Nachrichten die pro Seite angezeigt werden',
 	'ACP_PRIVMSGS_MOD_POPUP_CLOSE'			=> 'Fenster schließen',
 	'ACP_PRIVMSGS_MOD_POPUP_TITLE'			=> 'Private Message',
 	'ACP_PRIVMSGS_MOD_REGEXP_WARNING'		=> 'The database that you are using with phpBB does not support the use of regular expressions.  This may cause these search results to contain extra records that do not match your search criteria.',
@@ -1882,7 +1882,7 @@ $lang = array_merge($lang, array(
 	'PAGE_DISPLAY_BLOCKS'		=> 'Portal Blöcke einblenden',
 	'PAGE_DISPLAY_BLOCKS_EXPLAIN'	=> 'Wähle hier die Blöcke die auf dieser Seite angezeigt werden sollen.',
 	'PAGE_DISPLAY_HEADER'		=> 'Forum Style verwenden',
-	'PAGE_DISPLAY_HEADER_EXPLAIN'	=> 'Ist dieses Feld auf &quot;Nein&quot;, wir die Seite ohne Header und Footer angezeigt, also nur das was oben eingegeben wurde wird auf der Seite ausgegeben.',
+	'PAGE_DISPLAY_HEADER_EXPLAIN'	=> 'Ist dieses Feld auf &quot;Nein&quot;, wird die Seite ohne Header und Footer angezeigt, es wird nur angezeigt was hier eingegeben wurde.',
 	'PAGE_BLOCK_LEFT'			=> 'linke Blöcke aktivieren',
 	'PAGE_BLOCK_RIGHT'			=> 'rechte Blöcke aktivieren',
 	'PAGE_BLOCK_OVERALL'		=> 'linke und rechte Blöcke aktivieren',
@@ -1942,7 +1942,7 @@ $lang = array_merge($lang, array(
 	'GALLERY_STYLE_OLD'		=> 'alte Ansicht (Tabelle)',
 	'GALLERY_STYLE_NEW'		=> 'neuer Block Style (Diashow)',
 	'ALLOW_TO_EDIT'		=> 'Verschieben der Blöcke deaktivieren?',
-	'ALLOW_TO_EDIT_EXPLAIN'		=> 'User können so, nicht mehr einzelne Blöcke verschieben und ausblenden, wenn du dies aktivieren willst, setzte diese Option auf "Nein". <a href="../portal.php?iedit=1" traget="_blank">Demo (vorher aktivieren)</a>',
+	'ALLOW_TO_EDIT_EXPLAIN'		=> 'User können hiermit nicht mehr einzelne Blöcke verschieben und ausblenden, wenn du dies aktivieren willst, setze diese Option auf "Nein". <a href="../portal.php?iedit=1" traget="_blank">Demo (vorher aktivieren)</a>',
 	'TOP_POSTER_AVATARS_EXPLAIN'	=> 'Statt der einheitlichen Grafik, werden die Avatare der User angezeigt',
 	'TOP_SCHNELLANTWORT'	=> 'Schnellantwort',
 	'QBOX_DIRECT'			=> 'Schnellantwort direkt anzeigen',
@@ -1965,8 +1965,8 @@ $lang = array_merge($lang, array(
 	'TUER_SCHUMMELN'		=> '. !!!<br />Also Schummeln ist hier nicht! ',
 	'TUER_KL'		=> ' ',
 	'ZURUECK'		=> 'Zurück zum Adventskalender',
-	'KA_TEXT_1'		=> 'Hier kannst du ab dem 01.12. täglich ein Türchen öffnen und dich überraschen lassen ...',
-	'KA_TEXT_2'		=> 'Wie ein Adventskalender funktioniert, muss ich ja nicht groß erklären ...<br />Bei jedem Aufruf des Kalenders werden die Türchen neu &quot;sortiert&quot; -  du kannst also immer wieder neu suchen ;)<br />Für den Fall, das du eine Tür nicht findest, weil das Kalenderbild einige Türchen nicht erahnen lassen, aktualisiere einfach die Seite ... z.B. mit der Taste &quot;F5&quot;.',
+	'KA_TEXT_1'		=> ' Hier kannst du ab dem 01.12. täglich ein Türchen öffnen und dich überraschen lassen ... ',
+	'KA_TEXT_2'		=> 'Wie ein Adventskalender funktioniert, muss ich dir nicht groß erklären. <br />Bei jedem Aufruf des Kalenders werden die Türchen neu &quot;sortiert&quot; -  du kannst also immer wieder neu suchen ;)<br />Für den Fall, das du eine Tür nicht findest, weil das Kalenderbild einige Türchen nicht erahnen lassen, aktualisiere einfach die Seite. Frohe Weihnachten!',
 
 
 ));
@@ -5382,7 +5382,7 @@ $lang = array_merge($lang, array(
 
 	'ABBCODES_CONFIG'					=> 'BBCode Box Einstellungen',
 	'ABBCODES_CONFIG_EXPLAIN'			=> 'Hier können grundlegende Einstellungen des <strong>BBCode Box Editors</strong> festgelegt werden, wie auch Einstellungen zum automatischen Bildverkleinerer oder das Hintergrundbild des Editors.',
-	'ABBCODES_GROUPS_EXPLAIN'			=> 'wähle welche Gruppen diesen Button/Icon sehen dürfen',
+	'ABBCODES_GROUPS_EXPLAIN'			=> '<strong>Gruppen Verwaltung: </strong>Wenn hier keine Auswahl getroffen wurde können alle Benutzer diesen BBCode benutzen.<br />Willst du mehrere Gruppen auswählen, benutze die STRG Taste und halte diese gedrückt wärend du mit der Maus Gruppen auswählst. ',
 
 	'ABBCODES_TIP'						=> 'Tooltipp',
 	'ABBCODES_NAME'						=> 'Tag-Name',
@@ -6151,8 +6151,8 @@ Wir gratulieren den Gewinnern herzlich und danken für die Teilnahme!',
 	'TOUR_NEWS_TEXT'			=> 'Nachricht',
 	'TOUR_NEWS_EXTRA'			=> 'Weitere Informationen',
 	'ARCADE_TOUR_DONE'			=> 'Zurück zum Turnier: ',
-	'LIGHTS_OFF'				=> 'Bildschirm abdunkeln',
-	'LIGHTS_ON'					=> 'Bildschirm normalisieren',
+	'LIGHTS_OFF'				=> 'Licht ausschalten',
+	'LIGHTS_ON'					=> 'Licht einschalten',
 
 ));
 #######language/en/mods/arcade_challenge.php#######
@@ -9274,7 +9274,7 @@ $lang = array_merge($lang, array(
 	'NO_TEAM_SHORTNAME'				=> 'Kurzbezeichnung des Teams fehlt. Bitte einen Kurznamen angeben. ',
 	'NO_USER'						=> 'Der von dir ausgewählte Benutzer existiert nicht.',
 	'NO_USERID'						=> 'Der von dir ausgewählte Tipper existiert nicht. ',
-	'NO_USERS'						=> 'Du hast keine Benutzer eingegeben oder der Benutzer sind nicht vorhanden.',
+	'NO_USERS'						=> 'Du hast keine Benutzer eingegeben oder der Benutzer ist nicht vorhanden.',
 	'NO_WIN_MATCHDAYS'				=> 'In dieser Tipprunde gibt es keine Spieltagsgewinne. ',
 	'NO_WIN_SEASON'					=> 'In dieser Tipprunde gibt es keine Saisongewinne. ',
 	'NOT_CLOSED'					=> 'Dieser Spieltag wurde noch nicht geschlossen. ',
@@ -9526,7 +9526,7 @@ $lang = array_merge($lang, array(
 	'PHOOGLE_ADMIN_USERS_EXPLAIN'	=> 'Hier kannst Du alle Einstellungen aller Mitglieder ändern. \'Erlauben\' ist der Weg des Admins um zu verhindern, dass ein Ort eines Mitglieds angeziegt wird und überschreibt dessen  \'Zeige\' Einstellungen.<br />\'Zeige\' und \'Erlauben\' kann geändert werden indem man das Symbol in der Zeile klickt die geändert werden soll. Ändere die Kartenpunkte, Map Marker oder Kommentare des Mitglieds indem Du das \'Edit\' Symbol in der gewünschten Zeile klickst.',
 	'PHOOGLE_ALLOW' 				=> 'Erlaube Mitglieder Kartenpunkte zu sehen?',
 	'PHOOGLE_ALLOW_BRIEF' 			=> 'Zulassen',
-	'PHOOGLE_ALLOW_CONFIRM' 		=> 'Setzte auf Nein um die Einstellung "Zeige Meine Marker" zu überschreiben',
+	'PHOOGLE_ALLOW_CONFIRM' 		=> 'Setze dies auf "Nein" um die Einstellung "Zeige Meine Marker" zu überschreiben',
 	'PHOOGLE_ALL_MEMBERS' 			=> 'Alle Mitglieder',
 	'PHOOGLE_API' 					=> 'Google Maps API',
 	'PHOOGLE_API_KEY' 				=> 'Google Maps API Schlüssel',
@@ -11745,7 +11745,7 @@ $lang = array_merge($lang, array(
 	'AVATAR_MINI_SHOW_EXPLAIN'	=> 'Mit dieser Funktion werden die Avatare der Autoren der letzten Beiträge; zum Beispiel im Forum-Index und den Foren selbst angezeigt. <a href="http://www.phpbb9.de/neue-forum-funktionen/mini-avatar-index-forum-der-spalte-letzter-beitrag-t42836.html" target="_blank">Mehr Informationen</a>',
 	'AVATAR_MINI_SIZE'			=> 'Mini Avatar Größe (im Index oder Foren)',
 	'AVATAR_MINI_SIZE_EXPLAIN'	=> 'Maximale Höhe oder Breite in der die Avatare im Index oder den Foren-Übersichten maximal angezeigt werden sollen.',
-	'ABBCODES_GROUPS_EXPLAIN'	=> 'wähle welche Gruppen diesen Button/Icon sehen dürfen',
+	'ABBCODES_GROUPS_EXPLAIN'	=> '<strong>Gruppen Verwaltung: </strong>Wenn hier keine Auswahl getroffen wurde können alle Benutzer diesen BBCode benutzen.<br />Willst du mehrere Gruppen auswählen, benutze die STRG Taste und halte diese gedrückt wärend du mit der Maus Gruppen auswählst. ',
 	'HIDE_POLL_RESULTS'			=> 'Umfrageergebnisse verstecken',
 	'HIDE_POLL_RESULTS_EXPLAIN'	=> 'Die Ergebnisse werden erst angezeigt, wenn die Umfrage beendet ist oder bei offnen Umfragen, wenn der User abgestimmt hat, mehr <a href="http://www.phpbb9.de/neue-forum-funktionen/umfrageergebnisse-verstecken-t37450.html">Umfrageergebnisse verstecken.</a>',
 	'HIDE_LINKS'				=> 'Links vor Gästen verstecken',
@@ -12885,7 +12885,7 @@ $lang = array_merge($lang, array(
 	'SELECT_GROUP_ICON'			=> 'kein Icon',
 	'ACP_LEXICON'				=> 'Lexicon / Akronym',
 	'FORUM_MIN_POSTS_HIDE'		=> 'Forum im Index nicht anzeigen',
-	'FORUM_MIN_POSTS_HIDE_EXPLAIN'	=> 'Setzte diese Option auf ja, wenn Du das Forum für User mit zu wenig Beiträgen nicht anzeigen lassen willst.',
+	'FORUM_MIN_POSTS_HIDE_EXPLAIN'	=> 'Setze diese Option auf "Ja", wenn Du das Forum für User mit zu wenig Beiträgen nicht anzeigen lassen willst.',
 	'FORUM_MIN_POSTS'			=> 'Minimum Beiträge zum betreten',
 	'FORUM_MIN_POSTS_EXPLAIN'		=> 'Wieviele Beiträge muss ein User haben um Zugang zum diesem Forum zu haben, setze eine 0 wenn Du kein minimum Limit willst.',
 	'STARTPAGE'				=> 'Forum Startseite',
@@ -14458,7 +14458,7 @@ $lang = array_merge($lang, array(
 	'NO_GROUPS_ADDED'			=> 'Es wurden noch keine Gruppen hinzugefügt.',
 	'NO_GROUPS_CREATED'			=> 'Es wurden bislang keine Gruppen erstellt.',
 	'NO_PERMISSIONS'			=> 'Du hast keine Berechtigungen kopiert.',
-	'NO_USERS'					=> 'Du hast keine Benutzer eingegeben oder der Benutzer sind nicht vorhanden.',
+	'NO_USERS'					=> 'Du hast keine Benutzer eingegeben oder der Benutzer ist nicht vorhanden.',
 	'NO_USERS_ADDED'			=> 'Es wurden keine Benutzer der Gruppe hinzugefügt.',
 	'NO_VALID_USERS'			=> 'Du hast keine Benutzer angegeben, für die dieser Vorgang möglich wäre.',
 
@@ -16622,7 +16622,7 @@ $lang = array_merge($lang, array(
 	'USER_SIG_UPDATED'				=> 'Signatur des Benutzers erfolgreich geändert.',
 	'USER_WARNING_LOG_DELETED'		=> 'Es sind keine Informationen verfügbar. Vermutlich wurde der Eintrag im Log gelöscht.',
 	'USER_TOOLS'					=> 'Standard-Funktionen',
-	'USER_ADMIN_RESET_NEW_UNREAD_PM_COUNT'		=> 'Setzte Anzeige für neue / ungelesene PNs auf 0',
+	'USER_ADMIN_RESET_NEW_UNREAD_PM_COUNT'		=> 'Setze die Anzeige für neue / ungelesene PNs auf 0',
 ));
 
 #######language/en/acp/ymsm_acp.php#######
