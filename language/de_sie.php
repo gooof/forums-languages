@@ -1965,7 +1965,7 @@ $lang = array_merge($lang, array(
 	'TUER_SCHUMMELN'		=> '. !!!<br />Also Schummeln ist hier nicht! ',
 	'TUER_KL'		=> ' ',
 	'ZURUECK'		=> 'Zurück zum Adventskalender',
-	'KA_TEXT_1'		=> 'In unserem Adventskalender erwartet sich ab dem 1. Dezember täglich ein neues Türchen und dahinter eine schöne Überraschung.',
+	'KA_TEXT_1'		=> 'In unserem Adventskalender erwartet Sie ab dem 1. Dezember täglich ein neues Türchen und dahinter eine schöne Überraschung.',
 	'KA_TEXT_2'		=> 'Wie unser Adventskalender funktioniert: <br />Bei jedem Aufruf des Kalenders werden die Türchen neu sortiert, Sie müssen also immer wieder neu das aktuelle Türchen suchen ;)<br />Für den Fall, das Sie eine Tür nicht findest, weil das Kalenderhintergrundbild einige Türchen nicht erahnen lassen, aktualisieren Sie einfach die Seite. Wir wünschen Ihnen Frohe Weihnachten!',
 
 
