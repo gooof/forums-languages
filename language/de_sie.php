@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 #######language/en/app.php#######
 
@@ -499,7 +499,7 @@ $lang = array_merge($lang, array(
 	'CONTACT_US'			=> 'Kontakt',
 	'COOKIE_CONSENT_INFO'	=> 'Learn more',
 	'COOKIE_CONSENT_MSG'	=> 'This website uses cookies to ensure you get the best experience on our website.',
-	'COOKIE_CONSENT_OK'		=> 'Got it!',
+	'COOKIE_CONSENT_OK'		=> 'Alles klar!',
 	'COOKIE_CONSENT_HREF'	=> 'http://cookiesandyou.com',
 	'COOKIES_DELETED'		=> 'Alle Cookies des Boards wurden erfolgreich gelöscht.',
 	'CURRENT_TIME'			=> 'Aktuelle Zeit: %s',
@@ -945,7 +945,7 @@ $lang = array_merge($lang, array(
 	'SORRY_AUTH_READ_TOPIC'		=> 'Sie sind nicht berechtigt, dieses Thema zu lesen.',
 	'SORRY_AUTH_VIEW_ATTACH'	=> 'Sie haben keine Berechtigung, diesen Dateianhang herunterzuladen.',
 	'SORT_BY'					=> 'Sortieren Sie nach',
-	'SORT_DIRECTION'			=> 'Direction',
+	'SORT_DIRECTION'			=> 'Richtung',
 	'SORT_JOINED'				=> 'Registrierungsdatum',
 	'SORT_LOCATION'				=> 'Wohnort',
 	'SORT_OPTIONS'				=> 'Display and sorting options',
@@ -1312,6 +1312,81 @@ $lang = array_merge($lang, array(
 	'FORUM_LOW_POSTCOUNT'	=> 'Sie haben nicht genügend Beiträge um dieses Forum zu betreten.',
 	'TOPIC_LOW_POSTCOUNT'	=> 'Sie haben nicht genügend Beiträge um dieses Thema lesen zu können.',
 	'REPLY_TO_MESSAGE'		=> 'Antwort auf Beitrag',
+
+	// Zodiacs
+	'ZODIAC'			=> 'Sternzeichen',
+	'AQUARIUS'			=> 'Wassermann',
+	'ARIES'				=> 'Widder',
+	'CANCER'			=> 'Krebs',
+	'CAPRICORN'			=> 'Steinbock',
+	'GEMINI'			=> 'Zwillinge',
+	'LEO'				=> 'Löwe',
+	'LIBRA'				=> 'Libra',
+	'PISCES'			=> 'Fische',
+	'SAGITTARIUS'		=> 'Schütze',
+	'SCORPIO'			=> 'Skorpion',
+	'TAURUS'			=> 'Stier',
+	'VIRGO'				=> 'Jungfrau',
+
+	'XMAS_COUNT_YEARS'		=> 'Jahre',
+	'XMAS_COUNT_MONTHS'		=> 'Monate',
+	'XMAS_COUNT_WEEKS'		=> 'Wochen',
+	'XMAS_COUNT_DAYS'		=> 'Tage',
+	'XMAS_COUNT_HOURS'		=> 'Std.',
+	'XMAS_COUNT_MINUTES'	=> 'Min.',
+	'XMAS_COUNT_SECONDS'	=> 'Sekunde',
+	'XMAS_COUNT_YEAR'		=> 'Jahr',
+	'XMAS_COUNT_MONTH'		=> 'month',
+	'XMAS_COUNT_WEEK'		=> 'week',
+	'XMAS_COUNT_DAY'		=> 'Tag',
+	'XMAS_COUNT_HOUR'		=> 'Std.',
+	'XMAS_COUNT_MINUTE'		=> 'Minute',
+	'XMAS_COUNT_SECOND'		=> 'Sekunde',
+	
+	'VIEWTOPIC_BIRTHDAY'	=> 'Geburtstag',
+	'FAILED_LOGINS_COUNT'	=> 'Since your last visit there was %d failed login attempts!',
+	'ONE_FAILED_LOGIN'		=> 'Since your last visit there was one failed login attempt!',
+	'TRY_TO_LOGIN_FAIL'		=> '<strong>Failed login</strong><br />» Username: %s',
+	'REMOVE_MESSAGE'		=> 'Remove message',
+	'REMOVED_FAILED_LOGINS'	=> 'The failed logins since last visit are now no longer displayed.',
+
+	'BANNED_ERROR'		=> 'There where some error(s) banning this user',
+	'BANNED_SUCCESS'	=> 'This user was successfully banned.',
+
+	'ERROR_BAN_EMAIL'	=> 'Banning email failed.',
+	'ERROR_BAN_IP'		=> 'Banning IP failed.',
+	'ERROR_BAN_USER'	=> 'Banning user failed.',
+	'ERROR_DEL_POSTS'	=> 'Delete users posts failed.',
+	'ERROR_MOVE_GROUP'	=> 'Move user to the selected group failed.',
+
+	'BH_BAN_EMAIL'		=> 'Ban this users email address',
+	'BH_BAN_GIVE_REASON'	=> 'The reason for this ban shown to the user',
+	'BH_BAN_IP'			=> 'Ban this users IP address',
+	'BH_BAN_IP_EXPLAIN'	=> '<strong>Be careful with this.</strong> Most home users have dynamic IP addresses and only need to reboot their router to get a new IP address. The next day that IP address might be assigned to a user you want on your site. Spammers also uses internet anonymity proxies or the Tor network making a IP ban pointless.',
+	'BH_BAN_REASON'		=> 'The internal reason for this ban',
+	'BH_BAN_USER'		=> 'Ban this user',
+	'BH_BANNED'			=> 'This user is banned',
+
+	'BH_DEL_AVATAR'		=> 'Delete this users avatar',
+	'BH_DEL_PRIVMSGS'	=> 'Delete this users private messages',
+	'BH_DEL_POSTS'		=> 'Delete this users posts',
+	'BH_DEL_PROFILE'	=> 'Delete this users profile fields',
+	'BH_DEL_SIGNATURE'	=> 'Delete this users signature',
+
+	'BH_MOVE_GROUP'	=> 'Move this user to group &quot;%s&quot;',
+	'BH_REASON'		=> 'Internal reason &quot;%s&quot;',
+	'BH_REASON_USER'=> 'Reason to user &quot;%s&quot;',
+	'BH_SUBMIT_SFS'	=> 'Submit to stop forum spam',
+	'BH_THIS_USER'	=> 'Ban Hammer this user',
+	'SURE_BAN'		=> 'Are you sure you want to ban <strong>%s</strong>?',
+	'THIS_WILL'		=> 'This will',
+
+	'SFPO_MSG_REPLY'	=> 'This topic has <strong>1</strong> reply',
+	'SFPO_MSG_REPLY2'	=> 'This topic has <strong>%d</strong> replies',
+	'SFPO_MSG_REGISTER'	=> 'You must be a registered member and logged in to view the replies in this topic.',
+	'SFPO_APPEND_MESSAGE'	=> '<strong><em>...login to view the rest of this post</em></strong>',
+	'TOPIC_PREVIEW_DISPLAY'	=> 'Display topic previews',
+	'FIRST_POST'	=> 'First post',
 
 	'RSS_CHAN_LIST_TITLE'	=> 'Foren',
 	'RSS_CHAN_LIST_DESC'	=> 'Dieser Channel gibt einen Überblick über unsere RSS Feeds.',
@@ -2051,15 +2126,15 @@ $lang = array_merge($lang, array(
 	'HELP_BBCODE_INTRO_BBCODE_QUESTION'	=> 'Was ist BBCode?',
 
 	'HELP_BBCODE_LINKS_BASIC_ANSWER'	=> 'phpBB BBCode supports a number of ways of creating URIs (Uniform Resource Indicators) better known as URLs.<ul><li>The first of these uses the <strong>[url=][/url]</strong> tag, whatever you type after the = sign will cause the contents of that tag to act as a URL. For example to link to phpBB.com you could use:<br /><br /><strong>[url=https://www.phpbb.com/]</strong>Visit phpBB!<strong>[/url]</strong><br /><br />This would generate the following link, <a href="https://www.phpbb.com/">Visit phpBB!</a> Please notice that the link opens in the same window or a new window depending on the users browser preferences.</li><li>If you want the URL itself displayed as the link you can do this by simply using:<br /><br /><strong>[url]</strong>https://www.phpbb.com/<strong>[/url]</strong><br /><br />This would generate the following link, <a href="https://www.phpbb.com/">https://www.phpbb.com/</a></li><li>Additionally, phpBB features something called <i>Magic Links</i>, this will turn any syntactically correct URL into a link without you needing to specify any tags or even the leading http://. For example typing www.phpbb.com into your message will automatically lead to <a href="http://www.phpbb.com/">www.phpbb.com</a> being output when you view the message.</li><li>The same thing applies equally to email addresses, you can either specify an address explicitly for example:<br /><br /><strong>[email]</strong>no.one@domain.adr<strong>[/email]</strong><br /><br />which will output <a href="mailto:no.one@domain.adr">no.one@domain.adr</a> or you can just type no.one@domain.adr into your message and it will be automatically converted when you view.</li></ul>As with all the BBCode tags you can wrap URLs around any of the other tags such as <strong>[img][/img]</strong> (see next entry), <strong>[b][/b]</strong>, etc. As with the formatting tags it is up to you to ensure the correct open and close order is following, for example:<br /><br /><strong>[url=https://www.phpbb.com/][img]</strong>https://www.phpbb.com/theme/images/logos/blue/160x52.png<strong>[/url][/img]</strong><br /><br />is <span style="text-decoration: underline">not</span> correct which may lead to your post being deleted so take care.',
-	'HELP_BBCODE_LINKS_BASIC_QUESTION'	=> 'Linking to another site',
+	'HELP_BBCODE_LINKS_BASIC_QUESTION'	=> 'Andere Website verlinken ',
 
 	'HELP_BBCODE_LISTS_ORDERER_ANSWER'	=> 'The second type of list, an ordered list, gives you control over what is output before each item. To create an ordered list you use <strong>[list=1][/list]</strong> to create a numbered list or alternatively <strong>[list=a][/list]</strong> for an alphabetical list. As with the unordered list, items are specified using <strong>[*]</strong>. For example:<br /><br /><strong>[list=1]</strong><br /><strong>[*]</strong>Go to the shops<br /><strong>[*]</strong>Buy a new computer<br /><strong>[*]</strong>Swear at computer when it crashes<br /><strong>[/list]</strong><br /><br />will generate the following:<ol style="list-style-type: decimal;"><li>Go to the shops</li><li>Buy a new computer</li><li>Swear at computer when it crashes</li></ol>Whereas for an alphabetical list you would use:<br /><br /><strong>[list=a]</strong><br /><strong>[*]</strong>The first possible answer<br /><strong>[*]</strong>The second possible answer<br /><strong>[*]</strong>The third possible answer<br /><strong>[/list]</strong><br /><br />giving<ol style="list-style-type: lower-alpha"><li>The first possible answer</li><li>The second possible answer</li><li>The third possible answer</li></ol><br /><strong>[list=A]</strong><br /><strong>[*]</strong>The first possible answer<br /><strong>[*]</strong>The second possible answer<br /><strong>[*]</strong>The third possible answer<br /><strong>[/list]</strong><br /><br />giving<ol style="list-style-type: upper-alpha"><li>The first possible answer</li><li>The second possible answer</li><li>The third possible answer</li></ol><br /><strong>[list=i]</strong><br /><strong>[*]</strong>The first possible answer<br /><strong>[*]</strong>The second possible answer<br /><strong>[*]</strong>The third possible answer<br /><strong>[/list]</strong><br /><br />giving<ol style="list-style-type: lower-roman"><li>The first possible answer</li><li>The second possible answer</li><li>The third possible answer</li></ol><br /><strong>[list=I]</strong><br /><strong>[*]</strong>The first possible answer<br /><strong>[*]</strong>The second possible answer<br /><strong>[*]</strong>The third possible answer<br /><strong>[/list]</strong><br /><br />giving<ol style="list-style-type: upper-roman"><li>The first possible answer</li><li>The second possible answer</li><li>The third possible answer</li></ol>',
 	'HELP_BBCODE_LISTS_ORDERER_QUESTION'	=> 'Creating an Ordered list',
-	'HELP_BBCODE_LISTS_UNORDERER_ANSWER'	=> 'BBCode supports two types of lists, unordered and ordered. They are essentially the same as their HTML equivalents. An unordered list outputs each item in your list sequentially one after the other indenting each with a bullet character. To create an unordered list you use <strong>[list][/list]</strong> and define each item within the list using <strong>[*]</strong>. For example to list your favourite colours you could use:<br /><br /><strong>[list]</strong><br /><strong>[*]</strong>Red<br /><strong>[*]</strong>Blue<br /><strong>[*]</strong>Yellow<br /><strong>[/list]</strong><br /><br />This would generate the following list:<ul><li>Red</li><li>Blue</li><li>Yellow</li></ul><br />Alternatively you can specify the listâ€™s bullet style using <strong>[list=disc][/list]</strong>, <strong>[list=circle][/list]</strong>, or <strong>[list=square][/list]</strong>.',
+	'HELP_BBCODE_LISTS_UNORDERER_ANSWER'	=> 'BBCode supports two types of lists, unordered and ordered. They are essentially the same as their HTML equivalents. An unordered list outputs each item in your list sequentially one after the other indenting each with a bullet character. To create an unordered list you use <strong>[list][/list]</strong> and define each item within the list using <strong>[*]</strong>. For example to list your favourite colours you could use:<br /><br /><strong>[list]</strong><br /><strong>[*]</strong>Red<br /><strong>[*]</strong>Blue<br /><strong>[*]</strong>Yellow<br /><strong>[/list]</strong><br /><br />This would generate the following list:<ul><li>Red</li><li>Blue</li><li>Yellow</li></ul><br />Alternatively you can specify the list’s bullet style using <strong>[list=disc][/list]</strong>, <strong>[list=circle][/list]</strong>, or <strong>[list=square][/list]</strong>.',
 	'HELP_BBCODE_LISTS_UNORDERER_QUESTION'	=> 'Creating an Unordered list',
 
 	'HELP_BBCODE_OTHERS_CUSTOM_ANSWER'	=> 'If you are an administrator on this board and have the proper permissions, you can add further BBCodes through the Custom BBCodes section.',
-	'HELP_BBCODE_OTHERS_CUSTOM_QUESTION'	=> 'Can I add my own tags?',
+	'HELP_BBCODE_OTHERS_CUSTOM_QUESTION'	=> 'Kann Sie Ihre eigenen Tags hinzufügen?',
 
 	'HELP_BBCODE_QUOTES_CODE_ANSWER'	=> 'If you want to output a piece of code or in fact anything that requires a fixed width, e.g. Courier type font you should enclose the text in <strong>[code][/code]</strong> tags, e.g.<br /><br /><strong>[code]</strong>echo &quot;This is some code&quot;;<strong>[/code]</strong><br /><br />All formatting used within <strong>[code][/code]</strong> tags is retained when you later view it.',
 	'HELP_BBCODE_QUOTES_CODE_QUESTION'	=> 'Outputting code or fixed width data',
@@ -2070,7 +2145,7 @@ $lang = array_merge($lang, array(
 	'HELP_BBCODE_TEXT_BASIC_QUESTION'	=> 'How to create bold, italic and underlined text',
 	'HELP_BBCODE_TEXT_COLOR_ANSWER'	=> 'To alter the colour or size of your text the following tags can be used. Keep in mind that how the output appears will depend on the viewers browser and system: <ul><li>Changing the colour of text is achieved by wrapping it in <strong>[color=][/color]</strong>. You can specify either a recognised colour name (eg. red, blue, yellow, etc.) or the hexadecimal triplet alternative, e.g. #FFFFFF, #000000. For example, to create red text you could use:<br /><br /><strong>[color=red]</strong>Hello!<strong>[/color]</strong><br /><br />or<br /><br /><strong>[color=#FF0000]</strong>Hello!<strong>[/color]</strong><br /><br />Both will output <span style="color:red">Hello!</span></li><li>Changing the text size is achieved in a similar way using <strong>[size=][/size]</strong>. This tag is dependent on the template the user has selected but the recommended format is a numerical value representing the text size in percent, starting at 20 (very small) through to 200 (very large) by default. For example:<br /><br /><strong>[size=30]</strong>SMALL<strong>[/size]</strong><br /><br />will generally be <span style="font-size:30%;">SMALL</span><br /><br />whereas:<br /><br /><strong>[size=200]</strong>HUGE!<strong>[/size]</strong><br /><br />will be <span style="font-size:200%;">HUGE!</span></li></ul>',
 	'HELP_BBCODE_TEXT_COLOR_QUESTION'	=> 'How to change the text colour or size',
-	'HELP_BBCODE_TEXT_COMBINE_ANSWER'	=> 'Yes, of course you can, for example to get someones attention you may write:<br /><br /><strong>[size=200][color=red][b]</strong>LOOK AT ME!<strong>[/b][/color][/size]</strong><br /><br />this would output <span style="color:red;font-size:200%;"><strong>LOOK AT ME!</strong></span><br /><br />We donâ€™t recommend you output lots of text that looks like this though! Remember it is up to you, the poster, to ensure tags are closed correctly. For example the following is incorrect:<br /><br /><strong>[b][u]</strong>This is wrong<strong>[/b][/u]</strong>',
+	'HELP_BBCODE_TEXT_COMBINE_ANSWER'	=> 'Yes, of course you can, for example to get someones attention you may write:<br /><br /><strong>[size=200][color=red][b]</strong>LOOK AT ME!<strong>[/b][/color][/size]</strong><br /><br />this would output <span style="color:red;font-size:200%;"><strong>LOOK AT ME!</strong></span><br /><br />We don’t recommend you output lots of text that looks like this though! Remember it is up to you, the poster, to ensure tags are closed correctly. For example the following is incorrect:<br /><br /><strong>[b][u]</strong>This is wrong<strong>[/b][/u]</strong>',
 	'HELP_BBCODE_TEXT_COMBINE_QUESTION'	=> 'Can I combine formatting tags?',
 ));
 
@@ -2321,7 +2396,7 @@ $lang = array_merge($lang, array(
 	'STAGE_REQUIREMENTS'	=> 'Check requirements',
 
 	'ALL_FILES_DIFFED'		=> 'All modified files has been diffed.',
-	'BOARD_CONFIG'		=> 'Bulletin board configuration',
+	'BOARD_CONFIG'		=> 'Board-Konfiguration',
 	'BOARD_DESCRIPTION'	=> 'Short description of the board',
 	'BOARD_NAME'		=> 'Title of the board',
 	'CLI_CONFIG_FILE'				=> 'Config file to use',
@@ -4788,7 +4863,7 @@ $lang = array_merge($lang, array(
 	'NO_NEW_POSTS_HOT'		=> 'Keine neuen Beiträge [ beliebt ]',	// Not used anymore
 	'NO_NEW_POSTS_LOCKED'	=> 'Keine neuen Beiträge [ gesperrt ]',	// Not used anymore
 	'NO_READ_ACCESS'		=> 'Sie haben keine ausreichenden Rechte, um Themen in diesem Forum zu lesen.',
-	'NO_FORUMS_IN_CATEGORY'	=> 'This category has no forums.',
+	'NO_FORUMS_IN_CATEGORY'	=> 'Diese Kategorie hat keine Foren.',
 	'NO_UNREAD_POSTS_HOT'		=> 'Keine ungelesenen Beiträge [ beliebt ]',
 	'NO_UNREAD_POSTS_LOCKED'	=> 'Keine ungelesenen Beiträge [ gesperrt ]',
 
@@ -6362,7 +6437,7 @@ $lang = array_merge($lang, array(
 	'DISPLAY_12_OR_24_HOURS_EXPLAIN'		=> 'Sollen die Zeiten im 12-Stunden-Format mit AM/PM oder im 24-Stunden-Format angezeigt werden?  Dies betrifft nicht die Anzeige beim Benutzer - diese wird in deren Profil eingestellt.  Dies betrifft nur die Pulldown-Menus der Zeiten-Auswahl beim Anlegen/Bearbeiten von Terminen und Zeit-Felder bei der Tagesansicht.',
 	'DISPLAY_HIDDEN_GROUPS'					=> 'Zeige versteckte Gruppen',
 	'DISPLAY_HIDDEN_GROUPS_EXPLAIN'			=> 'Sollen Benutzer versteckte Benutzergruppen sehen und zu Terminen einladen können? Wenn diese Option deaktiviert ist, können nur (Gruppen-)Administratoren Mitglieder versteckter Gruppen sehen bzw. zu Terminen einladen.',
-	'DISPLAY_NAME'							=> 'Disply Name',
+	'DISPLAY_NAME'							=> 'Anzeigename',
 	'DISPLAY_EVENTS_ONLY_1_DAY'				=> 'Zeige Termine 1 Tag',
 	'DISPLAY_EVENTS_ONLY_1_DAY_EXPLAIN'		=> 'Zeige Termine nur an dem Tag, an dem sie beginnen (ignoriert das Enddatum/die Endzeit).',
 	'DISPLAY_FIRST_WEEK'					=> 'Zeige aktuelle Woche',
@@ -11512,7 +11587,7 @@ $lang = array_merge($lang, array(
 	'COLOUR_SWATCH'			=> 'Farbpalette',
 	'CONFIG_UPDATED'		=> 'Konfiguration erfolgreich aktualisiert.',
 	'CRON_LOCK_ERROR'		=> 'Konnte Sperre für Cron-Job nicht bekommen.',
-	'CRON_NO_SUCH_TASK'		=> 'Cron-Job „%s“ konnte nicht gefunden werden.',
+	'CRON_NO_SUCH_TASK'		=> 'Could not find cron task “%s”.',
 	'CRON_NO_TASK'			=> 'Momentan muss kein Cron-Job ausgeführt werden.',
 	'CRON_NO_TASKS'			=> 'Es konnten keine Cron-Jobs gefunden werden.',
 	'CURRENT_VERSION'				=> 'Momentan installierte Version',
@@ -11646,7 +11721,7 @@ $lang = array_merge($lang, array(
 
 	'PIXEL'								=> 'px',
 	
-	'NO_SEARCH_INDEX'	=> 'Das ausgewählte Such-Backend hat keinen Such-Index.<br />Bitte erstelle den Index für „%1$s“ im Bereich %2$sSuch-Indizes%3$s.',
+	'NO_SEARCH_INDEX'	=> 'The selected search backend does not have a search index.<br />Please create the index for “%1$s” in the %2$ssearch index%3$s section.',
 	'NOT_AVAILABLE'		=> 'nicht verfügbar',
 	'NUMBER_FILES'		=> 'Anzahl Dateianhänge',
 	'NUMBER_POSTS'		=> 'Anzahl Beiträge',
@@ -11671,7 +11746,7 @@ $lang = array_merge($lang, array(
 
 	'RESET_DATE'					=> 'Einrichtungsdatum des Boards zurücksetzen',
 	'RESET_DATE_CONFIRM'			=> 'Sind Sie sich sicher, dass Sie das Einrichtungsdatum des Boards zurücksetzen möchten?',
-	'RESET_DATE_SUCCESS'				=> 'Das Einrichtungsdatum des Boards wurde erfolgreich zurückgesetzt',
+	'RESET_DATE_SUCCESS'				=> 'Board’s start date reset',
 	'RESET_ONLINE'					=> 'Besucherrekord zurücksetzen',
 	'RESET_ONLINE_CONFIRM'			=> 'Sind Sie sich sicher, dass Sie den Benutzerrekord zurücksetzen möchten?',
 	'RESET_ONLINE_SUCCESS'				=> 'Der Besucherrekord wurde erfolgreich zurückgesetzt',
@@ -11773,7 +11848,7 @@ $lang = array_merge($lang, array(
 	'INACTIVE_REASON_UNKNOWN'		=> 'Unbekannt',
 	'INACTIVE_USERS'				=> 'Inaktive Benutzer',
 	'INACTIVE_USERS_EXPLAIN'		=> 'Dies ist eine Liste der Benutzer, deren Konto inaktiv ist. Sie können diese Benutzer aktivieren, löschen oder erinnern (per E-Mail).',
-	'INACTIVE_USERS_EXPLAIN_INDEX'	=> 'Dies ist eine Liste der 4 zuletzt registrierten Benutzer, deren Konto inaktiv ist. Eine vollständige Liste ist über den entsprechenden Menüeintrag oder den unten stehenden Link zugänglich, von der aus Sie diese Benutzer aktivieren, löschen oder erinnern (per E-Mail) können.',
+	'INACTIVE_USERS_EXPLAIN_INDEX'	=> 'This is a list of the last 10 registered users who have inactive accounts. Accounts are inactive either because account activation was enabled in user registration settings and these users’ accounts have not yet been activated, or because these accounts have been deactivated. A full list is available by following the link below from where you can activate, delete or remind (by sending an e-mail) these users if you wish.',
 
 	'NO_INACTIVE_USERS'	=> 'Keine inaktiven Benutzer',
 
@@ -11851,7 +11926,7 @@ $lang = array_merge($lang, array(
 	'LOG_BBCODE_ADD'		=> '<strong>Neuen BBCode hinzugefügt</strong><br />» %s',
 	'LOG_BBCODE_EDIT'		=> '<strong>BBCode geändert</strong><br />» %s',
 	'LOG_BBCODE_DELETE'		=> '<strong>BBCode entfernt</strong><br />» %s',
-	'LOG_BBCODE_CONFIGURATION_ERROR'	=> '<strong>Error while configuring BBCode</strong>: %1$s<br />Â» %2$s',
+	'LOG_BBCODE_CONFIGURATION_ERROR'	=> '<strong>Error while configuring BBCode</strong>: %1$s<br />» %2$s',
 
 	'LOG_BOT_ADDED'		=> '<strong>Neuen Bot hinzugefügt</strong><br />» %s',
 	'LOG_BOT_DELETE'	=> '<strong>Bot entfernt</strong><br />» %s',
@@ -11883,32 +11958,32 @@ $lang = array_merge($lang, array(
 
 	'LOG_APPROVE_TOPIC'			=> '<strong>Thema freigegeben</strong><br />» %s',
 	'LOG_BUMP_TOPIC'			=> '<strong>Thema als neu markiert</strong><br />» %s',
-	'LOG_DELETE_POST'			=> '<strong>Beitrag „%1$s“ (Autor: „%2$s“) gelöscht aus folgendem Grund</strong><br />» %3$s',
+	'LOG_DELETE_POST'			=> '<strong>Deleted post “%1$s” written by “%2$s” for the following reason</strong><br />» %3$s',
 	'LOG_DELETE_SHADOW_TOPIC'	=> '<strong>Link zum verschobenem Thema gelöscht</strong><br />» %s',
-	'LOG_DELETE_TOPIC'			=> '<strong>Thema „%1$s“ (Autor: „%2$s“) gelöscht aus folgendem Grund</strong><br />» %3$s',
+	'LOG_DELETE_TOPIC'			=> '<strong>Deleted topic “%1$s” written by “%2$s” for the following reason</strong><br />» %3$s',
 	'LOG_FORK'					=> '<strong>Thema dupliziert</strong><br />» von %s',
 	'LOG_LOCK'					=> '<strong>Thema gesperrt</strong><br />» %s',
 	'LOG_LOCK_POST'				=> '<strong>Beitrag gesperrt</strong><br />» %s',
 	'LOG_MERGE'					=> '<strong>Beiträge zusammengeführt</strong> in Thema<br />» %s',
 	'LOG_MOVE'					=> '<strong>Thema verschoben</strong><br />» von %1$s nach %2$s',
-	'LOG_MOVED_TOPIC'			=> '<strong>Moved topic</strong><br />Â» %s',
+	'LOG_MOVED_TOPIC'			=> '<strong>Moved topic</strong><br />» %s',
 	'LOG_PM_REPORT_CLOSED'		=> '<strong>Meldung zu Privater Nachricht geschlossen</strong><br />» %s',
 	'LOG_PM_REPORT_DELETED'		=> '<strong>Meldung zu Privater Nachricht gelöscht</strong><br />» %s',
 	'LOG_POST_APPROVED'			=> '<strong>Beitrag freigegeben</strong><br />» %s',
-	'LOG_POST_DISAPPROVED'		=> '<strong>Freigabe von Beitrag „%1$s“ (Autor: „%3$s“) verweigert aus folgendem Grund</strong><br />» %2$s',
-	'LOG_POST_EDITED'			=> '<strong>Beitrag „%1$s“ (Autor: „%2$s“) geändert aus folgendem Grund</strong><br />» %3$s',
-	'LOG_POST_RESTORED'			=> '<strong>Beitrag wiederhergestellt</strong><br />» %s',
+	'LOG_POST_DISAPPROVED'		=> '<strong>Disapproved post “%1$s” written by “%3$s” for the following reason</strong><br />» %2$s',
+	'LOG_POST_EDITED'			=> '<strong>Edited post “%1$s” written by “%2$s” for the following reason</strong><br />» %3$s',
+	'LOG_POST_RESTORED'			=> '<strong>Restored post</strong><br />» %s',
 	'LOG_REPORT_CLOSED'			=> '<strong>Meldung geschlossen</strong><br />» %s',
 	'LOG_REPORT_DELETED'		=> '<strong>Meldung gelöscht</strong><br />» %s',
-	'LOG_RESTORE_TOPIC'			=> '<strong>Thema „%1$s“ wiederhergestellt — geschrieben von</strong><br />» %2$s',
-	'LOG_SOFTDELETE_POST'		=> '<strong>Beitrag „%1$s“ (Autor: „%2$s“) als gelöscht markiert aus folgendem Grund</strong><br />» %3$s',
-	'LOG_SOFTDELETE_TOPIC'		=> '<strong>Thema „%1$s“ (Autor: „%2$s“) als gelöscht markiert aus folgendem Grund</strong><br />» %3$s',
+	'LOG_RESTORE_TOPIC'			=> '<strong>Restored topic “%1$s” written by</strong><br />» %2$s',
+	'LOG_SOFTDELETE_POST'		=> '<strong>Soft deleted post “%1$s” written by “%2$s” for the following reason</strong><br />» %3$s',
+	'LOG_SOFTDELETE_TOPIC'		=> '<strong>Soft deleted topic “%1$s” written by “%2$s” for the following reason</strong><br />» %3$s',
 	'LOG_SPLIT_DESTINATION'		=> '<strong>Abgetrennte Beiträge verschoben</strong><br />» nach %s',
 	'LOG_SPLIT_SOURCE'			=> '<strong>Beiträge abgetrennt</strong><br />» von %s',
 
 	'LOG_TOPIC_APPROVED'		=> '<strong>Thema freigegeben</strong><br />» %s',
-	'LOG_TOPIC_RESTORED'		=> '<strong>Thema wiederhergestellt</strong><br />» %s',
-	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Freigabe von Thema „%1$s“ (Autor: „%3$s“) verweigert aus folgendem Grund</strong><br />» %2$s',
+	'LOG_TOPIC_RESTORED'		=> '<strong>Restored topic</strong><br />» %s',
+	'LOG_TOPIC_DISAPPROVED'		=> '<strong>Disapproved topic “%1$s” written by “%3$s” for the following reason</strong><br />» %2$s',
 	'LOG_TOPIC_RESYNC'			=> '<strong>Thema resynchronisiert</strong><br />» %s',
 	'LOG_TOPIC_TYPE_CHANGED'	=> '<strong>Themen-Art geändert</strong><br />» %s',
 	'LOG_UNLOCK'				=> '<strong>Thema entsperrt</strong><br />» %s',
@@ -11927,7 +12002,7 @@ $lang = array_merge($lang, array(
 
 	'LOG_ERROR_JABBER'		=> '<strong>Jabber-Fehler</strong><br />» %s',
 	'LOG_ERROR_EMAIL'		=> '<strong>E-Mail-Fehler</strong><br />» %s',
-	'LOG_ERROR_CAPTCHA'		=> '<strong>CAPTCHA error</strong><br />Â» %s',
+	'LOG_ERROR_CAPTCHA'		=> '<strong>CAPTCHA error</strong><br />» %s',
 
 	'LOG_FORUM_ADD'							=> '<strong>Forum erstellt</strong><br />» %s',
 	'LOG_FORUM_COPIED_PERMISSIONS'			=> '<strong>Foren-Berechtigungen kopiert</strong> von %1$s<br />» %2$s',
@@ -12015,7 +12090,7 @@ $lang = array_merge($lang, array(
 
 	'LOG_PRUNE'					=> '<strong>Inaktive Themen gelöscht</strong><br />» %s',
 	'LOG_AUTO_PRUNE'			=> '<strong>Inaktive Themen automatisch gelöscht</strong><br />» %s',
-	'LOG_PRUNE_SHADOW'		=> '<strong>Links zu verschobenen Themen automatisch gelöscht</strong><br />» %s',
+	'LOG_PRUNE_SHADOW'		=> '<strong>Auto-pruned shadow topics</strong><br />» %s',
 	'LOG_PRUNE_USER_DEAC'		=> '<strong>Benutzer deaktiviert</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_DEL'	=> '<strong>Inaktive Benutzer mit Beiträgen gelöscht</strong><br />» %s',
 	'LOG_PRUNE_USER_DEL_ANON'	=> '<strong>Inaktive Benutzer gelöscht, Beiträge beibehalten</strong><br />» %s',
@@ -12031,7 +12106,7 @@ $lang = array_merge($lang, array(
 	'LOG_REASON_REMOVED'	=> '<strong>Meldungs-/Ablehnungs-Grund entfernt</strong><br />» %s',
 	'LOG_REASON_UPDATED'	=> '<strong>Meldungs-/Ablehnungs-Grund geändert</strong><br />» %s',
 
-	'LOG_REFERER_INVALID'		=> '<strong>Überprüfung des Referrers gescheitert</strong><br />»Referrer war „<em>%1$s</em>“. Anfrage wurde abgewiesen und Sitzung beendet.',
+	'LOG_REFERER_INVALID'		=> '<strong>Referrer validation failed</strong><br />»Referrer was “<em>%1$s</em>”. The request was rejected and the session killed.',
 	'LOG_RESET_DATE'			=> '<strong>Einrichtungsdatum zurückgesetzt</strong>',
 	'LOG_RESET_ONLINE'			=> '<strong>Besucherrekord zurückgesetzt</strong>',
 	'LOG_RESYNC_FILES_STATS'	=> '<strong>Datei-Statistiken resynchronisiert</strong>',
@@ -12041,7 +12116,7 @@ $lang = array_merge($lang, array(
 
 	'LOG_SEARCH_INDEX_CREATED'	=> '<strong>Suchindex erstellt für</strong><br />» %s',
 	'LOG_SEARCH_INDEX_REMOVED'	=> '<strong>Suchindex entfernt für</strong><br />» %s',
-	'LOG_SPHINX_ERROR'			=> '<strong>Sphinx-Fehler</strong><br />» %s',
+	'LOG_SPHINX_ERROR'			=> '<strong>Sphinx Error</strong><br />» %s',
 	'LOG_STYLE_ADD'				=> '<strong>Neuen Style hinzugefügt</strong><br />» %s',
 	'LOG_STYLE_DELETE'			=> '<strong>Style gelöscht</strong><br />» %s',
 	'LOG_STYLE_EDIT_DETAILS'	=> '<strong>Style geändert</strong><br />» %s',
@@ -12114,10 +12189,10 @@ $lang = array_merge($lang, array(
 	'LOG_WORD_DELETE'		=> '<strong>Zensiertes Wort entfernt</strong><br />» %s',
 	'LOG_WORD_EDIT'			=> '<strong>Zensiertes Wort geändert</strong><br />» %s',
 
-	'LOG_EXT_ENABLE'	=> '<strong>Erweiterung aktiviert</strong><br />» %s',
-	'LOG_EXT_DISABLE'	=> '<strong>Erweiterung deaktiviert</strong><br />» %s',
-	'LOG_EXT_PURGE'		=> '<strong>Daten der Erweiterung gelöscht</strong><br />» %s',
-	'LOG_EXT_UPDATE'	=> '<strong>Extension updated</strong><br />Â» %s',
+	'LOG_EXT_ENABLE'	=> '<strong>Extension enabled</strong><br />» %s',
+	'LOG_EXT_DISABLE'	=> '<strong>Extension disabled</strong><br />» %s',
+	'LOG_EXT_PURGE'		=> '<strong>Extension’s data deleted</strong><br />» %s',
+	'LOG_EXT_UPDATE'	=> '<strong>Extension updated</strong><br />» %s',
 
 	'RSYNC_TOPIC_IMGS'		=> '<strong>Themen mit Bildern resynchronisiert</strong>',
 	'LOG_PM_COUNT_RESET'	=> '<strong>Anzeige für neue / ungelesene PNs auf 0 gesetzt bei</strong><br />» %s',
@@ -12447,7 +12522,7 @@ $lang = array_merge($lang, array(
 	'ACP_PORTAL_WELCOME_EXPLAIN'=> '',
 	'ADM_LOGOUT'			=> 'ACP Logout',
 	'ADM_LOGGED_OUT'		=> 'Sie wurden erfolgreich vom Administrations-Bereich abgemeldet.',
-	'LOG_REFERER_INVALID'	=> '<strong>Überprüfung des Referrers gescheitert</strong><br />»Referrer war „<em>%1$s</em>“. Anfrage wurde abgewiesen und Sitzung beendet.',
+	'LOG_REFERER_INVALID'	=> '<strong>Referrer validation failed</strong><br />»Referrer was “<em>%1$s</em>”. The request was rejected and the session killed.',
 
 	'ACP_ABBCODES'			=> 'BBcode Box',
 	'LOG_CONFIG_ABBCODES'	=> '<strong>Änderte Editor Einstellungen</strong>',
@@ -13717,35 +13792,7 @@ $lang = array_merge($lang, array(
 	'ARCADE_CHECK_UPDATES'						=> 'Prüfe auf Aktualisierungen',
 	'ARCADE_VERSION_CHECK'						=> 'Versionsprüfung für die Spielhalle',
 	'ARCADE_VERSION_CHECK_EXPLAIN'				=> 'überprüft, ob Aktualisierungen für die derzeit installierte Version der Spielhalle zur Verfügung stehen.',
-	'ARCADE_UPDATE_INSTRUCTIONS'				=> '
 
-		<h1>Releaseankündigung</h1>
-
-		<p>Bitte lese <a href="%1$s" title="%1$s"><strong>die Ankündigungen für die neueste Version</strong></a>, bevor Sie mit der Aktualisierung fortfahren, sie kännten nützliche Informationen enthalten. Sie beinhalten ausserdem die Downloadlinks sowie die Liste der änderungen.</p>
-
-		<br />
-
-		<h1>Wie Sie die Spielhalle aktualisieren können</h1>
-
-		<p>Lade die neueste Version herunter. überschreibe alle alten Dateien auf dem Server mit den neuen.</p>
-
-		<ul style="margin-left: 20px; font-size: 1.1em;">
-			<li>Lade die neueste Version herunter.<br /><br /></li>
-			<li>Entpacke das Archiv.<br /><br /></li>
-			<li>Lade die neue Version in Ihr phpBB-Wurzelverzeichnis hoch (dort, wo sich die Datei config.php befindet).<br /><br /></li>
-			<li>Folge den Anweisungen in den beiliegenden ModX-Dateien im contrib-Ordner und führe die erforderlichen Bearbeitungen durch.<br /><br /></li>
-		</ul>
-
-		<p><strong><a href="%2$s" title="%2$s">Beginne nun den Aktualisierungsprozess, indem Sie in Ihrem Webbrowser das Installationsverzeichnis aufrufst</a>.</strong><br />
-		<br />
-		Wählen Sie die Aktualisierungsoption aus. Sie werden nach erfolgreicher Aktualisierung benachrichtigt.
-		</p>
-	',
-	'ARCADE_VERSION_UP_TO_DATE_ACP'			=> 'Ihre Version der Spielhalle ist aktuell, es sind keine Aktualisierungen verfügbar. Eine Aktualisierung ist daher nicht notwendig.',
-	'ARCADE_VERSION_NOT_UP_TO_DATE_ACP'		=> 'Ihre Version der Spielhalle ist nicht aktuell.<br />Unten finden Sie einen Link zu den Ankündigungen für diese Version sowie Anweisungen zur Aktualisierung.',
-));
-
-$lang = array_merge($lang, array(
 	'ARCADE_UNKNOWN'				=> 'Unbekannt',
 	'ARCADE_ERROR_SESSION'			=> 'Fehlende oder nicht übereinstimmende Sitzungs-ID',
 	'ARCADE_ERROR_GAMETYPE'			=> 'Gespeicherter und übermittelter Spieltyp stimmen nicht überein',
@@ -13953,9 +14000,132 @@ $lang = array_merge($lang, array(
 	'IPSEARCH_NA_EXP'				=>	'Nicht moeglich. Dieser Typ von Feld ist bei dem Benutzer nicht moeglich.',
 	'IPSEARCH_NO_RESOLVE'			=>	'Der Hostname,  IP Liste, IP Adresse konnte nicht aufgeloest werden, Suche abgebrochen.',
 	'IPSEARCH_ENTER_AN_IP'			=>	'Bitte geh zurueck und geben Sie eine andere IP Adresse oder einen Hostnamen ein.',
-	'IPSEARCH_BAD_CONFIG'			=>	'Nicht korrekte Konfiguration fuer Suche. Pruef acp_ip_search.php bei Suchen die eine doppelte Kategorie haben.',
-	'IPSEARCH_BAD_CONFIG_GUESTS'	=>	'Nicht korrekte Konfiguration fuer Suche. Pruef acp_ip_search.php bei Suchen die eine doppelte Kategorie haben. Die Fehlkonfiguration war bei den Gastpruefungen.',
 
+	'XMAS'	=> 'Xmas',
+	'ACP_XMAS_SETTINGS'		=> 'Xmas settings',
+	'ACP_XMAS_STYLING'		=> 'If you like to make some changes to the css you can edit this file: /ext/stoker/xmas/styles/prosilver/theme/xmas.css<br />If you want to use different images you can upload them here: /ext/stoker/xmas/styles/prosilver/theme/images and make sure to use the same name or rename them in xmas.css',
+	'ACP_ENABLE_XMAS'		=> 'Enable Xmas',
+	'ACP_ENABLE_XMAS_EXPLAIN'	=> 'Select "Yes" to enable Xmas styling on your board.',
+	'ACP_ENABLE_XMAS_STORM'		=> 'Enable Xmas Snow Storm',
+	'ACP_ENABLE_XMAS_STORM_EXPLAIN'	=> 'Select "Yes" to enable Xmas Snow Storm on your board. This can be done without enabling the Xmas styling.',
+	'ACP_XMAS_STORM_MINSIZE_TEXT'	=> 'Min size',
+	'ACP_XMAS_STORM_MINSIZE_TEXT_EXPLAIN'	=> 'Enter the min size for snowflakes.',
+	'ACP_XMAS_STORM_MAXSIZE_TEXT'	=> 'Max size',
+	'ACP_XMAS_STORM_MAXSIZE_TEXT_EXPLAIN'	=> 'Enter the min size for snowflakes.',
+	'ACP_XMAS_STORM_FLAKECOUNT_TEXT'	=> 'Flake count',
+	'ACP_XMAS_STORM_FLAKECOUNT_TEXT_EXPLAIN'	=> 'Enter the amount of flakes you want used in the snow storm.',
+	'ACP_ENABLE_XMAS_TESTMODE' 		=> 'Activate testmode',
+	'ACP_ENABLE_XMAS_TESTMODE_EXPLAIN'		=> 'If testmode is activated only admins can view the Xmas in action.',
+	'ACP_XMAS_COUNTDOWN_SETTINGS'	=> 'Xmas countdown settings',
+	'ACP_XMAS_COUNTDOWN_ENABLE'		=> 'Enable Xmas countdown. This can be done without enabling Xmas',
+	'ACP_XMAS_COUNTDOWN_ENABLE_EXPLAIN'		=> 'Enable or disable the Xmas Countdown here.',
+	'ACP_XMAS_COUNTDOWN_DIRECTION' 	=> 'Xmas countdowm direction',
+	'ACP_XMAS_COUNTDOWN_DIRECTION_EXPLAIN'	=> 'The Xmas Countdown ext. can count both up and down.',
+	'ACP_XMAS_COUNTDOWN_DATE' 		=> 'Xmas Countdown date',
+	'ACP_XMAS_COUNTDOWN_DATE_EXPLAIN'		=> 'Example: 2019/12/31 00:00:00',
+	'ACP_XMAS_COUNTDOWN_TEXT' 		=> 'Xmas Countdown text, before',
+	'ACP_XMAS_COUNTDOWN_TEXT_EXPLAIN'	=> 'Xmas Countdown text will be displayed right before the countdown.<br />HTML example: &lt;img src=\'image url\' /&gt; ',
+	'ACP_XMAS_COUNTDOWN_TEXT_AFTER'		=> 'Xmas Countdown text, after',
+	'ACP_XMAS_COUNTDOWN_TEXT_AFTER_EXPLAIN'	=> 'Xmas Countdown text will be displayed right after the countdown.<br />HTML example: &lt;img src=\'image url\' /&gt; ',
+	'ACP_XMAS_COUNTDOWN_COMPLETE'	 	=> 'Xmas Countdown complete text',
+	'ACP_XMAS_COUNTDOWN_COMPLETE_EXPLAIN'	=> 'This text will replace the Xmas countdown when complete.<br />HTML example: &lt;img src=\'image url\' /&gt; ',
+	'ACP_XMAS_COUNTDOWN_TESTMODE' 		=> 'Activate testmode',
+	'ACP_XMAS_COUNTDOWN_TESTMODE_EXPLAIN'	=> 'If testmode is activated only admins can view the countdown in action.',
+	'ACP_XMAS_COUNTDOWN_YEAR'	 	=> 'Activate years',
+	'ACP_XMAS_COUNTDOWN_YEAR_EXPLAIN'	=> 'Activate this function to enable years in the countdown. If the year count is 0 you might not want to display it.',
+	'ACP_XMAS_COUNTDOWN_MONTH'	 	=> 'Activate months',
+	'ACP_XMAS_COUNTDOWN_MONTH_EXPLAIN'	=> 'Activate this function to enable months in the countdown If the month count is 0 you might not want to display it.',
+	'ACP_XMAS_COUNTDOWN_OFFSET_ENABLE'	=> 'Enable timezone',
+	'ACP_XMAS_COUNTDOWN_OFFSET_ENABLE_EXPLAIN' 	=> 'Enable or disable the timezone here.',
+	'ACP_XMAS_COUNTDOWN_LEADING_ENABLE' 	=> 'Enable leading zero',
+	'ACP_XMAS_COUNTDOWN_LEADING_ENABLE_EXPLAIN' => 'Enable leading zero if you always want two digits. Looks better.',
+	'ACP_XMAS_COUNTDOWN_YANDM_ENABLE' 		=> 'Enable year and month',
+	'ACP_XMAS_COUNTDOWN_YANDM_ENABLE_EXPLAIN' 	=> 'If this isnt enabled, year and month wont show. Instead only days will be counted.',
+	'ACP_XMAS_COUNTDOWN_WEEK_ENABLE' 		=> 'Enable week',
+	'ACP_XMAS_COUNTDOWN_WEEK_ENABLE_EXPLAIN' 	=> 'Enable this to display weeks in the countdown.',
+	'ACP_XMAS_COUNTDOWN_OFFSET' 		=> 'Timezone settings',
+	'ACP_XMAS_COUNTDOWN_OFFSET_EXPLAIN'	=> 'If you want to use a specific timezone for all users you can type it here.<br />Like &quot;-6&quot; for Central Standard Time and &quot;4&quot; for Gulf Standard Time.',
+	'ACP_XMAS_COUNT_DOWNCOUNT'	=> 'Down',
+	'ACP_XMAS_COUNT_UPCOUNT'	=> 'Nach oben',
+
+	'ENABLE_SFPO' 		=> 'Enable show first post only to guest',
+	'ENABLE_SFPO_EXPLAIN' 	=> 'If set to yes unregistered users or guests are able to view only the first post of any topic. The rest of the posts in the topic will ask them to login or register.',
+	'SFPO_CHARACTERS'	=> 'Number of characters to display',
+	'SFPO_CHARACTERS_EXPLAIN'	=> 'Enter the number of characters to display for the first topic (default is 150). Setting the value to 0 disables this feature.',
+	'SFPO_CHARS'	=> 'Characters',
+
+	'TOPIC_PREVIEW'					=> 'Topic Preview',
+	'TOPIC_PREVIEW_EXPLAIN'			=> 'Topic Preview displays a short excerpt of text from the first post in a tooltip while the mouse hovers over a topic’s title.',
+	'TOPIC_PREVIEW_SETTINGS'		=> 'Topic preview settings',
+	'TOPIC_PREVIEW_LENGTH'			=> 'Length of topic preview text',
+	'TOPIC_PREVIEW_LENGTH_EXPLAIN'	=> 'Enter the number of characters to display in the topic preview tooltip (default is 150). Setting the value to 0 disables this feature.',
+	'TOPIC_PREVIEW_STRIP'			=> 'BBCodes to hide in topic previews',
+	'TOPIC_PREVIEW_STRIP_EXPLAIN'	=> 'List BBCodes with content you want removed from the preview (spoiler and hidden text BBCodes, for example). Separate multiple BBCodes using the | character, for example: spoiler|hide|code',
+	'TOPIC_PREVIEW_AVATARS'			=> 'Display avatars in topic previews',
+	'TOPIC_PREVIEW_LAST_POST'		=> 'Display “Last post” text in topic previews',
+	'CHARS'							=> 'Characters',
+
+	'TOPIC_PREVIEW_STYLE_SETTINGS'	=> 'Topic preview style settings',
+	'TOPIC_PREVIEW_WIDTH'			=> 'Width of topic previews (in pixels)',
+	'TOPIC_PREVIEW_DELAY'			=> 'Delay before showing topic previews (in milliseconds)',
+	'TOPIC_PREVIEW_DRIFT'			=> 'Animated drift effect (in pixels)',
+	'TOPIC_PREVIEW_DRIFT_EXPLAIN'	=> 'Amount of vertical animation on fadeout (use negative values to change direction).',
+	'TOPIC_PREVIEW_THEME'			=> 'Theme for %s',
+	'TOPIC_PREVIEW_THEME_EXPLAIN'	=> 'Choose a topic preview theme for %s.',
+	'THEME'							=> 'theme',
+	'MILLISECOND'					=> 'ms',
+
+	'ACP_BAN_EMAIL'		=> 'Ban users email address',
+	'ACP_BAN_IP'		=> 'Ban users IP address',
+	'ACP_BAN_IP_EXPLAIN'	=> '<strong>Be careful with this.</strong> Most home users have dynamic IP addresses and only need to reboot their router/modem to get a new IP address. The next day that IP address might be assigned to a user you want on your site. Spammers also use internet anonymity proxies or the Tor network making an IP ban pointless.',
+	'ACP_DEL_AVATAR'	=> 'Delete users avatar',
+	'ACP_DEL_PRIVMSGS'	=> 'Delete users private messages',
+	'ACP_DEL_POSTS'		=> 'Delete users posts',
+	'ACP_DEL_PROFILE'	=> 'Delete users profile fields',
+	'ACP_DEL_SIGNATURE'	=> 'Delete users signature',
+	'ACP_GROUP_MISSING'	=> 'The group &quot;%s&quot; does not exist.',
+	'ACP_MOVE_GROUP'			=> 'Move to group',
+	'ACP_MOVE_GROUP_EXPLAIN'	=> 'Name of the group to which banned users should be moved. This will also be their default group.<br /><strong>If nothing but <em>“No group specified.”</em> is in the drop down then you have not set up any groups.</strong>',
+
+	'ACP_BH_TITLE'		=> 'Ban Hammer',
+	'ACP_BH_SETTINGS'	=> 'Ban Hammer Settings',
+	'SETTINGS_ERROR'		=> 'There was an error saving your settings. Please submit the back trace with your error report.',
+	'SETTINGS_SUCCESS'		=> 'The settings were successfully saved',
+
+	'CRON'								=> 'Cron',
+	'CRON_LOCKED'						=> 'Cron Locked',
+	'CRON_TIME_LOCKED'					=> 'Cron time locked',
+	'ACP_CRON_STATUS_TITLE'				=> 'Cron Status',
+	'ACP_CRON_STATUS_CONFIG_TITLE'		=> 'Check Cron Status',
+	'ACP_CRON_STATUS_EXPLAIN'			=> 'Cron Status is a page of your phpBB Board where you can check if cron tasks are ready to be done. The “Auto” last task date means that the task has a specific time control option that couldn’t be recognized by Cron Status extension. A red marked task means a task which never started or which has a problem. A red lock means this task is locked by cron manager and blocks other tasks.',
+	'CRON_STATUS_REFRESH'				=> 'Seconds for refresh',
+	'CRON_TASK_LOCKED'					=> 'Cron task locked',
+	'CRON_STATUS_READY_TASKS'			=> 'Tasks ready to run',
+	'CRON_STATUS_NOT_READY_TASKS'		=> 'Not ready tasks',
+	'CRON_STATUS_NO_TASKS'				=> 'No available cron tasks',
+	'CRON_STATUS_DATE_FORMAT'			=> 'Date format for Cron Status page',
+	'CRON_STATUS_DATE_FORMAT_EXPLAIN'	=> 'Die Syntax entspricht der der <a href="http://www.php.net/date"><code>date()</code></a>-Funktion von PHP.',
+	'CRON_STATUS_MAIN_NOTICE'			=> 'Notice on the ACP index page',
+	'CRON_STATUS_MAIN_NOTICE_EXPLAIN'	=> 'Display Cron Status Notice on the ACP index page if Cron is locked.',
+	'CRON_TASK_NAME'					=> 'Task name',
+	'CRON_TASK_DATE'					=> 'Last task date',
+	'CRON_NEW_DATE'						=> 'New task date',
+	'CRON_TASK_NEVER_STARTED'			=> 'Never started',
+	'CRON_TASK_AUTO'					=> 'Automatisch',
+	'CRON_TASK_DATE_TIME'				=> 'Current date & time',
+	'CRON_STATUS_ERROR'					=> 'Refresh error',
+	'CRON_STATUS_TIMEOUT'				=> 'Refresh timeout',
+	'CRON_STATUS_ERROR_EXPLAIN'			=> 'An error occurred during refreshing the page.',
+	'CRON_STATUS_DEVELOPERS'			=> 'Developers',
+	'CRON_TASK_RUN'						=> 'Run',
+	'CRON_TASK_RUNNING'					=> 'Running...',
+	'CRONSTATUS_DESCRIPTION_PAGE'				=> 'Cron Status page',
+	'CRONSTATUS_DESCRIPTION_PAGE_OVERVIEW'		=> 'Overview of Cron Jobs (with sorting)',
+	'CRONSTATUS_DESCRIPTION_PAGE_STATUS'		=> 'Displays the status of each Cron Task',
+	'CRONSTATUS_DESCRIPTION_PAGE_ABILITY'		=> 'You can run any ready task manually',
+	'CRONSTATUS_DESCRIPTION_NOTICE'				=> 'Cron Status Notice (optional)',
+	'CRONSTATUS_DESCRIPTION_NOTICE_OVERVIEW'	=> 'Is displayed on the main page of the ACP when cron is locked',
+	'CRONSTATUS_DESCRIPTION_NOTICE_SETTINGS'	=> 'Can be switched off in Board settings',
 
 	'LOG_MODIFICATION_ADDED'			=> '<strong>Modifikation hinzugefügt</strong><br />» %s',
 	'LOG_MODIFICATION_REMOVED'			=> '<strong>Modifikation entfernt</strong><br />» %s',
@@ -14175,7 +14345,7 @@ $lang = array_merge($lang, array(
 	'RETURN_TO_EXTENSION_LIST'	=> 'Zurück zur Liste der Erweiterungen',
 
 	'EXT_DETAILS'			=> 'Informationen zur Erweiterung',
-	'DISPLAY_NAME'			=> 'Disply Name',
+	'DISPLAY_NAME'			=> 'Anzeigename',
 	'CLEAN_NAME'			=> 'Technischer Name',
 	'TYPE'					=> 'Typ',
 	'DESCRIPTION'			=> 'Beschreibung',
