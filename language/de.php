@@ -1888,7 +1888,7 @@ $lang = array_merge($lang, array(
 	'DAMAGED_POSTS'				=> 'Beschädigte Beiträge',
 	'DAMAGED_POSTS_EXPLAIN'		=> 'Die folgenden Beitrag-IDs enthalten Benutzerinformationen, die zu stark beschädigt sind um sie wiederherzustellen zu können.',
 
-	'ONLY_WITH_PREMIUM'				=> 'Diese Funktion ist nun mit aktivem Premium Paket verfügbar. <a href="https://www.phpbb8.de/management/">zum Management-Bereich</a>',
+	'ONLY_WITH_PREMIUM'				=> 'Diese Funktion ist nur mit aktivem Premium Paket verfügbar. <a href="https://www.phpbb8.de/management/">zum Management-Bereich</a>',
 	'ACP_PRIVMSGS_MOD_ALL' 					=> 'Alle',
 	'ACP_PRIVMSGS_MOD_ALL_BY_USER'		=> 'Alle privaten Nachrichten anzeigen die dieser Benutzer geschrieben hat',
 	'ACP_PRIVMSGS_MOD_ALL_TO_USER'		=> 'Alle privaten Nachrichten anzeigen die diesem Benutzer gesendet wurden',
